@@ -1,6 +1,5 @@
-MyStartingPage hier beschreiben...
+#format rst
 
-{{{#!rst 
 Holla. das ist ne Restüberschrift
 =================================
 
@@ -9,4 +8,3 @@ Holla. das ist ne Restüberschrift
 2. Dojo docs are shit hot
 
 Welcome ''dojo''
-}}}
