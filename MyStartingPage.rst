@@ -1,6 +1,6 @@
 MyStartingPage hier beschreiben...
 
-{{{ #!rst 
+{{{#!rst 
 Holla. das ist ne Restüberschrift
 =================================
 }}}
