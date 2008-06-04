@@ -1,5 +1,7 @@
 #format rst
 
+:Status: Contributed
+
 Holla. das ist ne Restüberschrift
 =================================
 
