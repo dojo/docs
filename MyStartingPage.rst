@@ -24,6 +24,6 @@ This is a link_ to Dojo's Web site (or `click on this link for more info on reST
 By using directives become easy to add images and others to your stuff:
 
 .. image:: http://www.oxull.com/ei/dojo.logo.gif
-
+   :alt: Dojo's Logo
 .. _link: http://www.dojotoolkit.com
 .. _`click on this link for more info on reST markup format`: http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html
