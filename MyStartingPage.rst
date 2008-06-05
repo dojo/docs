@@ -12,7 +12,9 @@ Holla. das ist ne Restüberschrift
 Welcome ''dojo''
 
 *Example: code block with syntax highlighting*::
-  yiha
+
+    def whatever():
+        print "whatever" 
 
 ----
 
