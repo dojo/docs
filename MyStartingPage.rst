@@ -11,7 +11,7 @@ Holla. das ist ne Restüberschrift
 
 Welcome ''dojo''
 
-*Example: code block with syntax highlighting*::
+.. code-block :: javascript
 
     def whatever():
         print "whatever" 
