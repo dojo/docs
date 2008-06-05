@@ -11,11 +11,6 @@ Holla. das ist ne Restüberschrift
 
 Welcome ''dojo''
 
-.. code-block :: javascript
-
-    def whatever():
-        print "whatever" 
-
 ----
 
 Added by RomRP 
