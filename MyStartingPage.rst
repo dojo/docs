@@ -11,6 +11,9 @@ Holla. das ist ne Restüberschrift
 
 Welcome ''dojo''
 
+*Example: code block with syntax highlighting*::
+  yiha
+
 ----
 
 Added by RomRP 
