@@ -13,4 +13,5 @@ Welcome ''dojo''
 
 ----
 
-.. _Dojo's Web Site: http://www.dojotoolkit.com
+
+Dojo's Web Site_ .. _Dojo's Web Site: http://www.dojotoolkit.com
