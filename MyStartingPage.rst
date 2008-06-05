@@ -19,9 +19,11 @@ Started on 2008-06-05 at 10:44 AM GMT-3
 
 ----
 
-This is a link_ to Dojo's Web site.
+This is a link_ to Dojo's Web site (or `click on this link for more info on reST markup format`_).
 
-   (or `click on this link for more info on reST`_)
+By using directives become easy to add images and others to your stuff:
+
+.. image:: http://www.oxull.com/ei/dojo.logo.gif
 
 .. _link: http://www.dojotoolkit.com
-.. _`click on this link for more info on reST`: http://docs.dojocampus.org/HelpOnParsers/ReStructuredText
+.. _`click on this link for more info on reST markup format`: http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html
