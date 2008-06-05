@@ -25,5 +25,6 @@ By using directives become easy to add images and others to your stuff:
 
 .. image:: http://www.oxull.com/ei/dojo.logo.gif
    :alt: Dojo's Logo
-.. _link: http://www.dojotoolkit.com
+   :target: http://www.dojotoolkit.org
+.. _link: http://www.dojotoolkit.org
 .. _`click on this link for more info on reST markup format`: http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html
