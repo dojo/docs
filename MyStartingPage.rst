@@ -10,3 +10,7 @@ Holla. das ist ne Restüberschrift
 2. Dojo docs are shit hot
 
 Welcome ''dojo''
+
+----
+
+.. _Dojo's Web Site: http://www.dojotoolkit.com
