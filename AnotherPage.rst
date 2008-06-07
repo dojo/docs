@@ -63,3 +63,6 @@ Another codeblock
             this.removeMediaMsgTitle = gettext("Delete media");
             this.removeMediaMsg = gettext("Do you really want to delete this media file?");
             this.mediaManager = dijit.byId("mediaManager");
+
+another headline
+================
