@@ -29,4 +29,4 @@ By using directives become easy to add images and others to your stuff:
 .. _link: http://www.dojotoolkit.org
 .. _`click on this link for more info on reST markup format`: http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html
 
-TestPage__
+AnotherPage_
