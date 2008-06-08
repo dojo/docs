@@ -11,9 +11,14 @@ Here is my rest syntax
 
     holla di guga
 
-.. versionadded :: 2.5
+.. seealso::
 
-   The `spam` parameter.
+   Module :mod:`zipfile`
+      Documentation of the :mod:`zipfile` standard module.
+
+   `GNU tar manual, Basic Tar Format <http://link>`_
+      Documentation for tar archive files, including GNU tar extensions.
+
 
 
 .. code-block :: javascript
