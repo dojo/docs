@@ -27,6 +27,7 @@ Here is my rest syntax
         print "whatever" 
 
 .. code-block :: php
+    :linenos:
 
     <?php
         echo("goehgoehgoeg");
@@ -43,6 +44,7 @@ Here is my rest syntax
 Another codeblock
 
 .. code-block :: javascript
+    :linenos:
 
     window.document.alert("gegeg");
 
