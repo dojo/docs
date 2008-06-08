@@ -1,9 +1,5 @@
 #format sphinx_rst
 
-:mod:`parrot` -- Dead parrot access
-===================================
-
-
 Here is my rest syntax
 ======================
 
