@@ -3,6 +3,12 @@
 Here is my rest syntax
 ======================
 
+.. highlight:: python
+   :linenothreshold: 5
+
+   def whatever:
+       print "gegegeg"
+
 .. note::
     
     was auch immer
