@@ -3,8 +3,6 @@
 Here is my rest syntax
 ======================
 
-|release|
-
 .. highlight:: python
    :linenothreshold: 5
 
