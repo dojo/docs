@@ -7,6 +7,10 @@ Here is my rest syntax
     
     was auch immer
 
+.. warning::
+
+    holla di guga
+
 .. code-block :: javascript
 
     def whatever():
