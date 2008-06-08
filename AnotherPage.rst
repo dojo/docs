@@ -11,16 +11,6 @@ Here is my rest syntax
 
     holla di guga
 
-.. productionlist::
-   try_stmt: try1_stmt | try2_stmt
-   try1_stmt: "try" ":" `suite`
-            : ("except" [`expression` ["," `target`]] ":" `suite`)+
-            : ["else" ":" `suite`]
-            : ["finally" ":" `suite`]
-   try2_stmt: "try" ":" `suite`
-            : "finally" ":" `suite`
-
-
 .. code-block :: javascript
 
     def whatever():
