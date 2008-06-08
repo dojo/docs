@@ -11,7 +11,7 @@ Here is my rest syntax
 
     holla di guga
 
-.. versionadded:: 2.5
+.. versionadded :: 2.5
 
    The `spam` parameter.
 
