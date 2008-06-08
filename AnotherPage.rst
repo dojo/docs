@@ -3,6 +3,9 @@
 Here is my rest syntax
 ======================
 
+.. note::
+    
+    was auch immer
 
 .. code-block :: javascript
 
