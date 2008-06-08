@@ -3,7 +3,7 @@
 Here is my rest syntax
 ======================
 
-|version|
+.. sectionauthor:: Guido van Rossum <guido@python.org>
 
 .. highlight:: python
    :linenothreshold: 5
