@@ -3,10 +3,6 @@
 :mod:`parrot` -- Dead parrot access
 ===================================
 
-.. module:: parrot
-   :platform: Unix, Windows
-   :synopsis: Analyze and reanimate dead parrots.
-
 
 Here is my rest syntax
 ======================
