@@ -3,15 +3,6 @@
 Here is my rest syntax
 ======================
 
-.. toctree::
-   :maxdepth: 2
-
-   intro
-   strings
-   datatypes
-   numeric
-
-
 .. highlight:: python
    :linenothreshold: 5
 
