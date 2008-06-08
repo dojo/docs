@@ -18,6 +18,12 @@ Here is my rest syntax
 
     def whatever():
         print "whatever" 
+    def move():
+        print "whatever" 
+    def print():
+        print "whatever" 
+    def whatever():
+        print "whatever" 
 
 .. code-block :: php
 
