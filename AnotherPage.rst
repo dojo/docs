@@ -11,14 +11,6 @@ Here is my rest syntax
 
     holla di guga
 
-.. seealso::
-
-   Module :mod:`zipfile`
-      Documentation of the :mod:`zipfile` standard module.
-
-   `GNU tar manual, Basic Tar Format <http://link>`_
-      Documentation for tar archive files, including GNU tar extensions.
-
 
 
 .. code-block :: javascript
