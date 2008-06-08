@@ -3,8 +3,6 @@
 Here is my rest syntax
 ======================
 
-.. sectionauthor:: Guido van Rossum <guido@python.org>
-
 .. highlight:: python
    :linenothreshold: 5
 
