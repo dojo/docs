@@ -15,6 +15,7 @@ Here is my rest syntax
     holla di guga
 
 .. code-block :: javascript
+   :linenos:5
 
     def whatever():
         print "whatever" 
