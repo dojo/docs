@@ -3,7 +3,10 @@
 Here is my rest syntax
 ======================
 
-.. toctree
+.. toctree ::
+
+   whatever
+   yeah
 
 .. highlight:: python
    :linenothreshold: 5
