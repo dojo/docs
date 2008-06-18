@@ -7,14 +7,28 @@ A dojo.Node object could be developed to be a wrapper to the standard DOM Node o
 
 This might simplify the object hierarchy by allowing dojo.NodeList to actually contain a list of dojo.Node's and most of the existing functionality of dojo.NodeList would be converted to just looping thought its internal array and calling the same function on each dojo.Node within.
 
-Since dojo.query() is already returning a dojo.NodeList object following the same logic the dojo.byId() could return a dojo.Node object. This would greatly simplify code and make the dojo.byId() quite powerful again.
-
 == Usage ==
 
-To use this object its proposed something like dojo.Node('nodeID') would return a dojo.Node. This would act like a combination constructor/dojo.byId() call, thus something like:
-{{{#!javascript
-someNode = dojo.Node('myId').hide();
-}}}
-would work.
+Creating a dojo.Node is done using the same semantics as dojo.byId(), i.e. dojo.Node('nodeID') would return a dojo.Node wrapping the DOM node with id == 'nodeID'.
 
-An accessor function to return the DOM Node would also certainly be required.
+Building additional functionality on top of dojo.Node would allow simple constructs like:
+
+{{{#!javascript
+    dojo.Node('myId').hide();
+}}}
+
+Compare this with the equivalent in today's dojo:
+
+{{{#!javascript
+    dojo.byId('myId').style.display = 'none';
+}}}
+
+While not a huge difference in the number of characters, the semantic bonuses should be pretty evident.
+
+This would enable us to fill the current gap between a Nodelist, which offers rich functionality over a list of DOM nodes with simple semantics like nodelist.highlight() and nodelist.addContent(), and the DOM:element returned by dojo.byId() which is little more than a glorified data structure.
+
+== Reasoning ==
+
+Two of the most popular javascript frameworks in use today, Prototype and jQuery, have extensions to the DOM element which enables them to be treated as first class objects with extensible functionality.  Dojo has taken the approach that doing so is bad because it pollutes the global namespace.  However, dojo already does something like this with dijit.byId(), which returns a widget instance.
+
+Javascript often involves a good amount of DOM manipulation. The harder we make it for developers to do so, the less willing they are to use our framework.
