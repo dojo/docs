@@ -12,13 +12,14 @@ Since dojo.query() is already returning a dojo.NodeList object following the sam
 == Usage ==
 
 To use this object its proposed something like dojo.Node('nodeID') would return a dojo.Node. This would act like a combination constructor/dojo.byId() call, thus something like:
-
+{{{#!javascript
 someNode = dojo.Node('myId').hide();
-
+}}}
 would work.
 
 An accessor function to return the DOM Node would also certainly be required.
 
 A similar function to dojo.query() might also be developed to return a dojo.NodeList of dojo.Node obejcts something like:
-
+{{{#!javascript
 dojo.q('someNodeID').forEach().hide(); 
+}}}
