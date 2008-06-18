@@ -7,13 +7,18 @@ A dojo.Node object could be developed to be a wrapper to the standard DOM Node o
 
 This might simplify the object hierarchy by allowing dojo.NodeList to actually contain a list of dojo.Node's and most of the existing functionality of dojo.NodeList would be converted to just looping thought its internal array and calling the same function on each dojo.Node within.
 
+Since dojo.query() is already returning a dojo.NodeList object following the same logic the dojo.byId() could return a dojo.Node object. This would greatly simplify code and make the dojo.byId() quite powerful again.
+
 == Usage ==
 
-To use this object its proposed that dojo.byId would return a dojo.Node instead of a DOM Node and the dojo.NodeList would contain a list of dojo.Node objects. If the plain DOM Node was require then perhaps an additional parameter could be added to return the plain DOM Node. An accessor function to return the DOM Node would also certainly be required.
+To use this object its proposed something like dojo.Node('nodeID') would return a dojo.Node. This would act like a combination constructor/dojo.byId() call, thus something like:
 
-Perhaps to remain backward compatible a new set of function to alias dojo.byId() and dojo.query() could be developed such as dojo.id() and dojo.q() respectively?
+someNode = dojo.Node('myId').hide();
 
+would work.
 
-== Argument ==
+An accessor function to return the DOM Node would also certainly be required.
 
-Since dojo.query() is already returning a dojo.NodeList object following the same logic the dojo.byId() could return a dojo.Node object. This would greatly simplify code and make the dojo.byId() quite powerful again.
+A similar function to dojo.query() might also be developed to return a dojo.NodeList of dojo.Node obejcts something like:
+
+dojo.q('someNodeID').forEach().hide(); 
