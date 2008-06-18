@@ -18,8 +18,3 @@ someNode = dojo.Node('myId').hide();
 would work.
 
 An accessor function to return the DOM Node would also certainly be required.
-
-A similar function to dojo.query() might also be developed to return a dojo.NodeList of dojo.Node obejcts something like:
-{{{#!javascript
-dojo.q('someNodeID').forEach().hide(); 
-}}}
