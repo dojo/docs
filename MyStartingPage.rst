@@ -17,9 +17,11 @@ Added by RomRP
 ~~~~~~~~~~~~~~
 Started on 2008-06-05 at 10:44 AM GMT-3
 
-Added by CpILL: This is great. Now some of the tutorials such as the DnD one can be updated to work in Dojo 1.0 etc. I wouldn't hold back untill its all pretty, that can happen at anytime now. Lets just get it up and started. I guess the things that have to be considered are:
+Added by CpILL 
+~~~~~~~~~~~~~~
+This is great. Now some of the tutorials such as the DnD one can be updated to work in Dojo 1.0 etc. I wouldn't hold back until its all pretty, that can happen at anytime now. Lets just get it up and started. I guess the things that have to be considered are:
 
-1. Structure, so 
+1. Structure, so:
 
   * Q.A. in the IRC can be put up quickly and in the right place. 
   * Articles/tutorials can find their place and be updated/corrected as they are used/reused. 
