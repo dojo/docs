@@ -1,7 +1,6 @@
 ## page was copied from MyStartingPage
-:Status: Contributed
 ##master-page:HomepageTemplate
-#format wiki
+
 
 = Proposal for dojo.Node object =
 
