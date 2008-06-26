@@ -2,23 +2,25 @@
 
 :Status: Contributed
 
-Holla. das ist ne Restüberschrift
-=================================
+.. image:: http://www.oxull.com/ei/dojodocs.logo.png
+   :alt: DojoDoc's Logo
+   :target: http://docs.dojocampus.org
+.. _link: http://www.dojotoolkit.org
 
 
-1. This is cool
-2. Dojo docs are shit hot
+Lets get this party started
+===========================
+So the Wiki is up the next phase would be to discuss:
 
-Welcome ''dojo''
+1. What should be on it (and write a page about it here)
+2. How it should be structured (see bellow for a beginning of this)
+3. Choose some monitors from the community to watch changes and revert destructive behaviour.
+4. Open it up to the wider community
 
-----
+Perhaps an IRC meeting to talk about each of these would be a good idea?
 
-Added by RomRP 
-~~~~~~~~~~~~~~
-Started on 2008-06-05 at 10:44 AM GMT-3
-
-Added by CpILL 
-~~~~~~~~~~~~~~
+Structure
+~~~~~~~~~
 This is great. Now some of the tutorials such as the DnD one can be updated to work in Dojo 1.0 etc. I wouldn't hold back until its all pretty, that can happen at anytime now. Lets just get it up and started. I guess the things that have to be considered are:
 
 1. Structure, so:
@@ -34,18 +36,20 @@ Perhaps ideas about these things can start to go up and then be organised into g
 
 What happened to the notes from the last temp. Wiki on structure?
 
+Index
+-----
+
+This is the start of the index:
+
+DojoBook
 
 
-----
+-----
 
 This is a link_ to Dojo's Web site (or `click on this link for more info on reST markup format`_).
 
 By using directives become easy to add images and others to your stuff:
 
-.. image:: http://www.oxull.com/ei/dojodocs.logo.png
-   :alt: DojoDoc's Logo
-   :target: http://docs.dojocampus.org
-.. _link: http://www.dojotoolkit.org
 .. _`click on this link for more info on reST markup format`: http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html
 
 AnotherPage_
