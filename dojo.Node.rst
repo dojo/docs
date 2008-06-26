@@ -2,60 +2,39 @@
 #format rst
 
 :Status: Contributed
+##master-page:HomepageTemplate
+#format wiki
 
-.. image:: http://www.oxull.com/ei/dojodocs.logo.png
-   :alt: DojoDoc's Logo
-   :target: http://docs.dojocampus.org
-.. _link: http://www.dojotoolkit.org
+= Proposal for dojo.Node object =
 
+A dojo.Node object could be developed to be a wrapper to the standard DOM Node object and add some useful extended functionality to it. This would be much like the dojo.NodeList object, which is a wrapper for the standard Array class, and extending the DOM Node '''without''' interfering with the standard Javascript namespace. The interface this object would have would be identical in as many ways as possible to the dojo.NodeList object so that learning one would be knowning the other.
 
-Lets get this party started
-===========================
-So the Wiki is up the next phase would be to discuss:
+This might simplify the object hierarchy by allowing dojo.NodeList to actually contain a list of dojo.Node's and most of the existing functionality of dojo.NodeList would be converted to just looping thought its internal array and calling the same function on each dojo.Node within.
 
-1. What should be on it (and write a page about it here)
-2. How it should be structured (see bellow for a beginning of this)
-3. Choose some monitors from the community to watch changes and revert destructive behaviour.
-4. Open it up to the wider community
+== Usage ==
 
-Perhaps an IRC meeting to talk about each of these would be a good idea?
+Creating a dojo.Node is done using the same semantics as dojo.byId(), i.e. dojo.Node('nodeID') would return a dojo.Node wrapping the DOM node with id == 'nodeID'.
 
-Structure
-~~~~~~~~~
-This is great. Now some of the tutorials such as the DnD one can be updated to work in Dojo 1.0 etc. I wouldn't hold back until its all pretty, that can happen at anytime now. Lets just get it up and started. I guess the things that have to be considered are:
+Building additional functionality on top of dojo.Node would allow simple constructs like:
 
-1. Structure, so:
+{{{#!javascript
+    dojo.Node('myId').hide();
+}}}
 
-  * Q.A. in the IRC can be put up quickly and in the right place. 
-  * Articles/tutorials can find their place and be updated/corrected as they are used/reused. 
-  * API doc/notes can find their place.
+Compare this with the equivalent in today's dojo:
 
-2. Dojo versions (so its clear what article is relavent to which verion of Dojo)
+{{{#!javascript
+    dojo.byId('myId').style('display', 'none');
+}}}
 
+While not a huge difference in the number of characters, the semantic bonuses should be pretty evident.
 
-Perhaps ideas about these things can start to go up and then be organised into groups naturally as they form instead of trying to predict how this will be used and forcing the content into some unnatural order. 
+This would enable us to fill the current gap between a Nodelist, which offers rich functionality over a list of DOM nodes with simple semantics like nodelist.highlight() and nodelist.addContent(), and the DOM:element returned by dojo.byId() which is little more than a glorified data structure.
 
-What happened to the notes from the last temp. Wiki on structure?
+== Reasoning ==
 
-Index
------
+This idea simply follows the same design idea behind dojo.query() returning a Nodelist instead of just an Array of DOM Nodes. The Nodelist has proven to be a very powerful addition to the Dojo object library and reduces the amount of code required to do the tedious everyday tasks, which is what good API design aspires to do, and less code is easier to maintain by definition.
 
-This is the start of the index:
+Two of the most popular javascript frameworks in use today, Prototype and jQuery, have extensions to the DOM element which enables them to be treated as first class objects with extensible functionality.  Dojo has taken the approach that doing so is bad because it pollutes the global namespace.  However, dojo already does something like this with dijit.byId(), which returns a widget instance. The DOM Node can be extended in the same way without changes to the global namespace and keep the developer aware that they are dealing with an extended dojo.Node type while still leaving them the option of using the original DOM Node if they so require.
 
-DojoBook_
-
-Proposals
----------
-
-
-
-
------
-
-This is a link_ to Dojo's Web site (or `click on this link for more info on reST markup format`_).
-
-By using directives become easy to add images and others to your stuff:
-
-.. _`click on this link for more info on reST markup format`: http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html
-
-AnotherPage_
+Javascript often involves a good amount of DOM manipulation. The harder we make it for developers to do so, the less willing they are to use the our framework.
