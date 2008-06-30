@@ -2,7 +2,8 @@
 
 .. codeviewer::
 
-   <div>whatever</div>
+   <script type="text/javascript">dojo.require("dijit.form.Button");</script>
+   <div dojoType="dijit.form.Button">whatever</div>
 
 Here is my rest syntax
 ======================
