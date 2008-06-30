@@ -1,5 +1,9 @@
 #format sphinx_rst
 
+.. codeviewer::
+
+   <div>whatever</div>
+
 Here is my rest syntax
 ======================
 
