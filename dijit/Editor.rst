@@ -17,7 +17,7 @@ Examples
     dojo.require("dijit._editor.plugins.LinkDialog");
   </script>
 
-  <div style="border: 1px solid black;">
+  <div style="margin-top: 5px; border: 1px solid #ccc;">
     <div dojoType="dijit.Editor" id="editor1"
       onChange="console.log('editor1 onChange handler: ' + arguments[0])">
       <p>This instance is created from a div directly with default toolbar and plugins</p>
