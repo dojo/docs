@@ -1,1 +1,1 @@
-#syntax sphinx_rst
+#format sphinx_rst
