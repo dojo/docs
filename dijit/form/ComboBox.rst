@@ -14,7 +14,7 @@ Examples
     dojo.require("dijit.form.ComboBox");
   </script>
   <div class="nihilo">
-    <label for="setvaluetest">US State test 1</label> (200% Courier font):
+    <label for="setvaluetest">US State test 1</label> 
     <select id="setvaluetest"
         name="state1"
 	dojoType="dijit.form.ComboBox"
