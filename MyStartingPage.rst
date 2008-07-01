@@ -7,6 +7,14 @@
    :target: http://docs.dojocampus.org
 .. _link: http://www.dojotoolkit.org
 
+Table of Contents
+-----------------
+
+`Dijit`_
+
+  `Dijit.form`_
+
+    `Dijit.form.ComboBox`_
 
 Lets get this party started
 ===========================
