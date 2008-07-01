@@ -10,6 +10,7 @@ Examples
 
   <script type="text/javascript">
     dojo.require("dijit.Tree");
+    dojo.require("dijit.Menu");
   </script>
 
 	<ul dojoType="dijit.Menu" id="tree_menu" style="display: none;">
