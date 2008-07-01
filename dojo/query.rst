@@ -13,7 +13,7 @@ Standard CSS3 Selectors
 Because dojo.query adopts the CSS3 standard for selecting nodes, you can use any CSS reference guide for help on choosing the right queries. Eric Meyer's CSS: The Definitive Guide is a good resource. For convenience, here's a chart of the standard CSS3 selectors, taken from the current working draft RFC.
 
 ========= ==========
-Pattern   Meaning
+Pattern	Meaning
 ========= ==========
 *	any element
 E	an element of type E
