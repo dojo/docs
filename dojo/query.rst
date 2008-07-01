@@ -15,7 +15,7 @@ Because dojo.query adopts the CSS3 standard for selecting nodes, you can use any
 ====================== ==========
 Pattern	               Meaning
 ====================== ==========
-**	               any element
+\*	               any element
 E	               an element of type E
 E[foo]	               an E element with a "foo" attribute
 E[foo="bar"]	       an E element whose "foo" attribute value is exactly equal to "bar"
