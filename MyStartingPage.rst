@@ -52,6 +52,8 @@ Questions
 1. IS there anyway to import this: http://docs.google.com/View?docid=d764479_11fcs7s397
    with like some sort of screen scrpper. Would make sucking part or all of the documentation lying around fast and easy?
 
+*Sure, we almost finished implementing inline code examples so this would be the next step*
+
 
 Index
 -----
