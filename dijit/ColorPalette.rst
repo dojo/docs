@@ -3,6 +3,9 @@
 dijit.ColorPalette
 ==================
 
+welcome
+-------
+
 Default color palette
 
 .. codeviewer::
