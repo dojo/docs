@@ -1,0 +1,1 @@
+#syntax sphinx_rst
