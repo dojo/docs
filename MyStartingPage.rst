@@ -46,6 +46,13 @@ Perhaps ideas about these things can start to go up and then be organised into g
 
 What happened to the notes from the last temp. Wiki on structure?
 
+Questions
+---------
+
+1. IS there anyway to import this: http://docs.google.com/View?docid=d764479_11fcs7s397
+   with like some sort of screen scrpper. Would make sucking part or all of the documentation lying around fast and easy?
+
+
 Index
 -----
 
@@ -57,7 +64,6 @@ Proposals
 ---------
 
 dojo.Node_ 
-
 
 -----
 
