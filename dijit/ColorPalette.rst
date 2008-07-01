@@ -3,7 +3,18 @@
 dijit.ColorPalette
 ==================
 
-welcome
+dijit.ColorPalette is a great little tool which provides a color picker for you to use in your application.
+
+Attributes
+----------
+
+========= ==========
+Parameter Value
+========= ==========
+palette   7x10 | 3x4
+
+
+Examples
 -------
 
 Default color palette
