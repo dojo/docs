@@ -16,6 +16,8 @@ Table of Contents
 
     `Dijit.form.ComboBox`_
 
+.. _`Dijit.form.ComboBox`: /dijit/form/ComboBox
+
 Lets get this party started
 ===========================
 So the Wiki is up the next phase would be to discuss:
