@@ -13,7 +13,7 @@ Examples
   <script type="text/javascript">
     dojo.require("dijit.form.ComboBox");
   </script>
-
+  <div class="nihilo">
 		<label for="setvaluetest">US State test 1</label> (200% Courier font):
 		<select id="setvaluetest"
 				name="state1"
@@ -97,3 +97,4 @@ Examples
 			<option>Wisconsin</option>
 			<option>Wyoming</option>
 		</select>
+  </div>
