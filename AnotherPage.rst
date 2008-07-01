@@ -22,6 +22,7 @@ This code example shows you how to create a widget programatically
    var widget = new foohoo({id: "test_foohoo"}, dojo.byId("fohoo"));
    </script>
    <div id="fohoo">Click Me</div>
+   <div dojoType="foohoo">Or Me</div>
 
 Here is my rest syntax
 ======================
