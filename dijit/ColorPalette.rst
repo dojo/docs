@@ -12,6 +12,7 @@ Attributes
 Parameter Value
 ========= ==========
 palette   7x10 | 3x4
+value     value of selected color
 ========= ==========
 
 Examples
