@@ -12,10 +12,10 @@ Attributes
 Parameter Value
 ========= ==========
 palette   7x10 | 3x4
-
+========= ==========
 
 Examples
--------
+--------
 
 Default color palette
 
