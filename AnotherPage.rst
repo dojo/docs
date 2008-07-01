@@ -14,7 +14,7 @@ This code example shows you how to create a widget programatically
 
    <script type="text/css">
    dojo.declare("foo", [dijit._Templated, dijit._Widget], {
-      templateString: '<div dojoAttachEvent="onclick: _foo"><div dojoAttachPoint="containerNode"></div></div>',
+      templateString: '<div dojoAttachEvent="onclick: _foo">Example: <span dojoAttachPoint="containerNode"></span></div>',
       _foo: function(){
          alert("foo");
       }
