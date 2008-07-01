@@ -13,14 +13,15 @@ This code example shows you how to create a widget programatically
 .. codeviewer::
 
    <script type="text/css">
-   dojo.declare("foo", [dijit._Templated, dijit._Widget], {
+   dojo.declare("foohoo", [dijit._Templated, dijit._Widget], {
       templateString: '<div dojoAttachEvent="onclick: _foo">Example: <span dojoAttachPoint="containerNode"></span></div>',
       _foo: function(){
          alert("foo");
       }
    });
+   var widget = new foohoo({id: "test_foohoo"}, dojo.byId("fohoo"));
    </script>
-   <div dojoType="foo">Click Me</div>
+   <div id="fohoo">Click Me</div>
 
 Here is my rest syntax
 ======================
