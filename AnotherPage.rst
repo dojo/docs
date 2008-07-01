@@ -8,7 +8,7 @@
 Here is my rest syntax
 ======================
 
-This code example shows you how to create a widget programatically
+This code example shows you how to create a widget programatically, awesome isn't it?
 
 .. codeviewer::
 
