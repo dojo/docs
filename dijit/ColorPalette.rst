@@ -1,0 +1,2 @@
+dijit.ColorPalette
+==================
