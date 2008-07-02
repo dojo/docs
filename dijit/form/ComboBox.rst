@@ -3,6 +3,10 @@
 dijit.form.ComboBox
 ===================
 
+.. note::
+
+   My big fat note!
+
 Combobox provides great functions
 
 Examples
