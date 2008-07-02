@@ -3,6 +3,8 @@
 dijit.Tree
 ==========
 
+Tree
+
 Examples
 --------
 
