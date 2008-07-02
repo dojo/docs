@@ -29,8 +29,18 @@ So the Wiki is up the next phase would be to discuss:
 
 Perhaps an IRC meeting to talk about each of these would be a good idea?
 
+
+Process before Structure proposal
+---------------------------------
+I was talking to an academic friend of mine who is doing his Ph.D on online collaboration and the business processes involved in making it happen. After much talking (and a couple of beer(s)) we got to the point of agreeing that its all well and good to setup community tech. like Wiki's and forums but there needs to be a process to make them used and effective. Its also thought that instead of imposing some artificial structure on the content of a site its better to get it all in and then when there is enough to see groups forming segment into smaller parts.
+
+So I would suggest that here we just post everything to this front page (i.e. here) to begin with and as it builds up we can see more easily what should be branched off into its own page(s) and then replace them with a link here to the new page(s). This process means we don't need to figure out how to organise the content right now and any/all can start to input content.
+
+How about it?
+
+
 Structure
-~~~~~~~~~
+---------
 This is great. Now some of the tutorials such as the DnD one can be updated to work in Dojo 1.0 etc. I wouldn't hold back until its all pretty, that can happen at anytime now. Lets just get it up and started. I guess the things that have to be considered are:
 
 1. Structure, so:
