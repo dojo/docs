@@ -7,6 +7,10 @@ dijit.form.ComboBox
 
    My big fat note!
 
+.. warning::
+
+   Now a warning
+
 Combobox provides great functions
 
 Examples
