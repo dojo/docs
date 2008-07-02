@@ -1,4 +1,4 @@
-#format sphinx_rst
+#format dojo_rst
 
 Most content copied from the dojo book chapters ( http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/selecting-dom-nodes-dojo-query ).
 
