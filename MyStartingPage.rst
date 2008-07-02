@@ -66,6 +66,8 @@ Questions
 
    (b) Ah yes, thats looking good! What that link I posted was is the "dojo.dnd 1.2 technical documentation" (which is on Google Docs for some reason?!) and I thought this would be an excellent candidate to bring in here. The on;y thing is that its a long page and has sections and other formatting that would be good to keep but copy/paste the HTML won't work in this Wiki, so whats a good way to get it in here?
 
+2. How does one create a new page, or do you have to copy another one?
+
 
 Index
 -----
