@@ -59,10 +59,12 @@ What happened to the notes from the last temp. Wiki on structure?
 Questions
 ---------
 
-1. IS there anyway to import this: http://docs.google.com/View?docid=d764479_11fcs7s397
+1. (a) IS there anyway to import this: http://docs.google.com/View?docid=d764479_11fcs7s397
    with like some sort of screen scrpper. Would make sucking part or all of the documentation lying around fast and easy?
 
    *Sure, we almost finished implementing inline code examples so this would be the next step - it might take you a few reloads until you seen an example, the implementation is still a bit buggy* http://docs.dojocampus.org/dijit/Tree
+
+   (b) Ah yes, thats looking good! What that link I posted was is the "dojo.dnd 1.2 technical documentation" (which is on Google Docs for some reason?!) and I thought this would be an excellent candidate to bring in here. The on;y thing is that its a long page and has sections and other formatting that would be good to keep but copy/paste the HTML won't work in this Wiki, so whats a good way to get it in here?
 
 
 Index
