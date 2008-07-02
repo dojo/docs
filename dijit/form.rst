@@ -1,1 +1,1 @@
-#format sphinx_rst
+#format dojo_rst
