@@ -4,7 +4,7 @@ Describe dojox/rpc here. Yes yes yes
 
 .. codeviewer::
 
-<script type="text/javascript">
+  <script type="text/javascript">
 		dojo.require("dojox.rpc.Service");
 		dojo.require("dojo.io.script");
 
@@ -96,4 +96,3 @@ Describe dojox/rpc here. Yes yes yes
 			
 			
 		</div>
-
