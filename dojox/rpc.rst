@@ -29,7 +29,7 @@ Describe dojox/rpc here. Yes yes yes
 				showLoader();
 				dojo.style("loader","visibility","visible");
 				
-				dojo.query("li","top").forEach(function(item){
+				dojo.query("li","top-results").forEach(function(item){
 					dojo.byId("archive").appendChild(item);
 				});
 
@@ -45,7 +45,7 @@ Describe dojox/rpc here. Yes yes yes
 								"<span class='summary'>" + (item.content || item.streetAddress || "unknown") + "</span>"; 
 							
 							//console.log(item);
-							dojo.byId("top").appendChild(li);
+							dojo.byId("top-results").appendChild(li);
 						});
 						hideLoader();
 					})
@@ -79,7 +79,7 @@ Describe dojox/rpc here. Yes yes yes
 		
 			<div id="current">
 				<h3>Results:</h3>
-				<ul id="top"></ul>
+				<ul id="top-results"></ul>
 			</div>
 		
 			<div id="past">
