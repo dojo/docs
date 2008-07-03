@@ -38,7 +38,7 @@ So I would suggest that here we just post everything to this front page (i.e. he
 
 How about it?
 
-  *I like the idea as a general approach. Besides that we should translate the dojo namespace into urls such as /dijit/layout/ContentPane or dojox/grid so it will be trivial for anyone to find content specifically regarding certain dojo modules. Besides that an open approach is good I think
+  *I like the idea as a general approach. Besides that we should translate the dojo namespace into urls such as /dijit/layout/ContentPane or dojox/grid so it will be trivial for anyone to find content specifically regarding certain dojo modules. Besides that an open approach is good I think*
 
 
 Structure
@@ -70,7 +70,7 @@ Questions
 
 2. How does one create a new page, or do you have to copy another one?
 
-   *Create a new page by just entering the URL you wish to use e.g. http://docs.dojocampus.org/newpage - it will show you an existing page if there, otherwise will ask you whether you want to create a new one
+   *Create a new page by just entering the URL you wish to use e.g. http://docs.dojocampus.org/newpage - it will show you an existing page if there, otherwise will ask you whether you want to create a new one*
 
 
 Index
