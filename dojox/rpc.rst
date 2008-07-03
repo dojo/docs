@@ -19,11 +19,6 @@ Describe dojox/rpc here. Yes yes yes
 		var google, showLoader, hideLoader = null;
 		function init(){
 
-			google = new dojox.rpc.Service(dojo.moduleUrl("dojox.rpc","SMDLibrary/google.smd")); 
-			
-			showLoader = dojo.hitch(dojo,"style","loader","visibility","visible");
-			hideLoader = dojo.hitch(dojo,"style","loader","visibility","hidden");
-
 			
 
 		}
