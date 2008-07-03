@@ -4,8 +4,7 @@ Describe dojox/rpc here. Yes yes yes
 
 .. codeviewer::
 
-  <script type="text/javascript" src="../../../dojo/dojo.js" djConfig="isDebug: true, parseOnLoad: true"></script>
-	<script type="text/javascript">
+  <script type="text/javascript">
 		dojo.require("dojox.rpc.Service");
 		dojo.require("dojo.io.script");
 
