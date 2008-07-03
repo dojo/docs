@@ -12,7 +12,7 @@ Table of Contents
 
 `How to become a dojo doc ninja`_
 
-.. _`How to become a dojo doc ninja`: /howto
+.. _`How to become a dojo doc ninja`: http://docs.dojocampus.org/howto
 
 `Dijit`_
 
