@@ -62,7 +62,7 @@ Describe dojox/rpc here. Yes yes yes
 	</script>
 
 		<div id="loader"></div>
-		<div id="container">
+		<div id="json-rpc-container">
 			<h2><a href="http://google.com"><img class="logo" src="http://www.google.com/logos/Logo_40wht.gif" alt="Google" /></a> Ajax API SMD</h2>
 
 			<input id="test" name="test" type="text" size="30" value="The Dojo Toolkit"/> &nbsp;
