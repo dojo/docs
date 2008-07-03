@@ -1,6 +1,12 @@
 #format dojo_rst
 
-Describe dojox/rpc here. Yes yes yes
+Dojox.rpc
+=========
+
+Examples
+--------
+
+This is an example of the Google API
 
 .. codeviewer::
 
