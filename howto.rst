@@ -3,6 +3,10 @@
 How to become a dojo doc ninja
 ==============================
 
+
+.. image:: http://media.dojocampus.org/images/docs/dojodocninja.png
+   :alt: Dojo Doc ninja
+
 Joining the Dojo doc team is easy, all you need to do is write and get familiar with a few basics you will master fast.
 
 1. Dojo Doc Syntax (reST)
