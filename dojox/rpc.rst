@@ -4,7 +4,7 @@ Describe dojox/rpc here. Yes yes yes
 
 .. codeviewer::
 
-	<script type="text/javascript" src="../../../dojo/dojo.js" djConfig="isDebug: true, parseOnLoad: true"></script>
+  <script type="text/javascript" src="../../../dojo/dojo.js" djConfig="isDebug: true, parseOnLoad: true"></script>
 	<script type="text/javascript">
 		dojo.require("dojox.rpc.Service");
 		dojo.require("dojo.io.script");
@@ -61,9 +61,7 @@ Describe dojox/rpc here. Yes yes yes
 		dojo.addOnLoad(init);
 
 	</script>
-</head>
 
-<body>
 		<div id="loader"></div>
 		<div id="container">
 			<h2><a href="http://google.com"><img class="logo" src="http://www.google.com/logos/Logo_40wht.gif" alt="Google" /></a> Ajax API SMD</h2>
