@@ -16,3 +16,10 @@ All you need to to is make sure you target a specific dojo version and note that
 3. Fame
 
 Writing docs is a lot of work and we all deserve a little portion of dojo fame. Make sure you create your own page in the Wiki with links to your personal blog, website, twitter or other sites
+
+Documentation basics
+--------------------
+
+1. Every doc should start with a header, e.g. the dojo module you are documenting.
+2. All docs have to have code examples, what use does a doc have if you can't see examples? ;)
+3. 
