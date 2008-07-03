@@ -10,9 +10,14 @@
 Table of Contents
 -----------------
 
+`How to become a dojo doc ninja`_
+.. _`How to become a dojo doc ninja`: /howto
+
 `Dijit`_
 
   `Dijit.form`_
+
+.. _`Dijit.form`: /dijit/form
 
     `Dijit.form.ComboBox`_
 
