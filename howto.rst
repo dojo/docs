@@ -22,4 +22,4 @@ Documentation basics
 
 1. Every doc should start with a header, e.g. the dojo module you are documenting.
 2. All docs have to have code examples, what use does a doc have if you can't see examples? ;)
-3. 
+3. Write
