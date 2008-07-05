@@ -21,7 +21,11 @@ This is an example of the Google API
 				this.ioArgs.json = arguments.length > 0 ? arguments : json;
 			}
 		});
+  </script>
 
+.. codeviewer::
+
+  <script type="text/javascript">
 		var google, showLoader, hideLoader = null;
 		function init(){
 
