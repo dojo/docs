@@ -23,6 +23,8 @@ This is an example of the Google API
 		});
   </script>
 
+The great thing about this is that its cool
+
 .. codeviewer::
 
   <script type="text/javascript">
@@ -70,6 +72,10 @@ This is an example of the Google API
 		dojo.addOnLoad(init);
 
 	</script>
+
+And now comes the html code
+
+.. codeviewer::
 
 		<div id="loader"></div>
 		<div id="json-rpc-container">
