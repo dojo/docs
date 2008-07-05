@@ -109,6 +109,14 @@ This part is a bit tricky
 			});
 
 		}
+
+  </script>
+
+And finally we initialize the code
+
+.. codeviewer::
+
+  <script type="text/javascript">
 		dojo.addOnLoad(init);
 
 	</script>
