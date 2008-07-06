@@ -8,7 +8,7 @@
    </div>
 
 
-.. cv-compound::
+.. codeviewer-compound::
 
   .. cv:: javascript
 
