@@ -7,6 +7,27 @@
       <div dojoType="dijit.form.Button">whatever</div>
    </div>
 
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+  <script type="text/javascript">
+  dojo.declare("foohoo", [dijit._Widget,dijit._Templated], {
+     templateString: '<div dojoAttachEvent="onclick: _foo">Example: <span dojoAttachPoint="containerNode"></span></div>',
+     _foo: function(){
+        alert("foo");
+     }
+  });
+  var widget = new foohoo({id: "test_foohoo"}, dojo.byId("fohoo"));
+  </script>
+
+  .. cv:: html
+     :label:Das ist mein HTML Code
+
+  <div id="fohoo">Click Me</div>
+  <div dojoType="foohoo">Or Me</div>
+
 Here is my rest syntax
 ======================
 
