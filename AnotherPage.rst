@@ -22,13 +22,12 @@
     var widget = new foohoo({id: "test_foohoo"}, dojo.byId("fohoo"));
     </script>
 
-hihi
-====
+  text vorm html
+  * mit ner liste
+  * gegeegge
 
   .. cv:: html
     :label: Das ist mein HTML Code
-
-
 
     <div id="fohoo">Click Me</div>
     <div dojoType="foohoo">Or Me</div>
