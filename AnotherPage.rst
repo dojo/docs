@@ -24,8 +24,8 @@
 
   .. cv:: html
     :label: Das ist mein HTML Code
-  hihi
-  ====
+    hihi
+    ====
 
     <div id="fohoo">Click Me</div>
     <div dojoType="foohoo">Or Me</div>
