@@ -9,7 +9,8 @@
 
 
 .. cv-compound::
-
+  hihihi
+  ======
   .. cv:: javascript
 
     <script type="text/javascript">
