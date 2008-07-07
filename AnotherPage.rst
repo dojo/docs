@@ -24,8 +24,8 @@
     </script>
 
   text vorm html
-  * mit ner liste
-  * gegeegge
+    * mit ner liste
+    * gegeegge
 
   .. cv:: html
     :label: Das ist mein HTML Code
