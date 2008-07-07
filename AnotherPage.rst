@@ -26,7 +26,6 @@ hihi
 ====
 
   .. cv:: html
-
     :label: Das ist mein HTML Code
 
 
