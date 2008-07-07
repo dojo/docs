@@ -22,8 +22,8 @@
     var widget = new foohoo({id: "test_foohoo"}, dojo.byId("fohoo"));
     </script>
 
-    hihi
-    ====
+  hihi
+  ====
 
   .. cv:: html
 
