@@ -23,10 +23,11 @@
     </script>
 
   .. cv:: html
-    :label: Das ist mein HTML Code
-
     hihi
     ====
+    :label: Das ist mein HTML Code
+
+
 
     <div id="fohoo">Click Me</div>
     <div dojoType="foohoo">Or Me</div>
