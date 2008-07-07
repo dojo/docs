@@ -22,9 +22,11 @@
     var widget = new foohoo({id: "test_foohoo"}, dojo.byId("fohoo"));
     </script>
 
-  .. cv:: html
     hihi
     ====
+
+  .. cv:: html
+
     :label: Das ist mein HTML Code
 
 
