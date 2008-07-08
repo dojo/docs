@@ -1,6 +1,6 @@
 #format dojo_rst
 
-<dojo/connect>_
+`Getting Started: Controller <1.0/RoughDocs/GettingStarted>`_
 
 A fine example of executed code
 -------------------------------
