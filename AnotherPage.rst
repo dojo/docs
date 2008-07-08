@@ -11,7 +11,7 @@ A fine example of executed code
     :label: The CSS
 
     <style type="text/css">
-    #fohooo { color: #15d32a; size: 16px; }
+    .fohooo { color: #15d32a; size: 16px; }
     </style>
 
   The html snippet simply defines the markup of your code. Dojo will then parse the dom nodes and create the widgets programatically. Usually the lifecycle goes as follows
@@ -22,8 +22,8 @@ A fine example of executed code
   .. cv:: html
     :label: This is the HTML of the example
 
-    <div id="fohooo">Click Me</div>
-    <div dojoType="foohooo">Or Me</div>
+    <div id="fohooo" class="fohooo">Click Me</div>
+    <div dojoType="foohooo" class="fohooo">Or Me</div>
 
   This is the jscript code of your example. Simple past both HMTL and Jscript into the browser.
 
