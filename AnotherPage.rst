@@ -31,7 +31,9 @@
           alert("foo");
        }
     });
-    var widget = new foohoo({id: "test_foohooo"}, dojo.byId("fohooo"));
+    dojo.addOnLoad(function(){
+      var widget = new foohoo({id: "test_foohooo"}, dojo.byId("fohooo"));
+    });
     </script>
 
 Here is my rest syntax
