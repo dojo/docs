@@ -4,7 +4,6 @@ A fine example of executed code
 -------------------------------
 
 .. cv-compound::
-  :code: begin
 
   First we declare the CSS
 
