@@ -9,7 +9,7 @@
 
 Syntax
 
-.. code-block::javascript
+.. code-block :: javascript
   
   dojo.connect(obj: Object, event: String, context: Object, method: String|Function, dontFix: Boolean); (view source)
 
