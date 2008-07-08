@@ -1,5 +1,10 @@
 #format dojo_rst
 
+.. inline-block::
+
+   .. cv:: css
+     :label: The CSS
+
 A fine example of executed code
 -------------------------------
 
