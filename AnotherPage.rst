@@ -29,7 +29,6 @@ A fine example of executed code
     :label: The CSS
 
     <style type="text/css">
-    @import "foo.css";
     .fohooo { color: #15d32a; font-size: 16px; }
     </style>
 
@@ -58,7 +57,7 @@ A fine example of executed code
        }
     });
     dojo.addOnLoad(function(){
-      //var widget = new foohoo({id: "test_foohooo"}, dojo.byId("fohooo"));
+      var widget = new foohoo({id: "test_foohooo"}, dojo.byId("fohooo"));
     });
     </script>
 
