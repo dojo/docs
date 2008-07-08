@@ -9,7 +9,9 @@ Examples
 This is an example of the Google API
 Lets take at our result first
 
-.. codeviewer::
+.. cv-compound::
+
+  .. cv:: html
 
 		<div id="loader"></div>
 		<div id="json-rpc-container">
@@ -45,9 +47,7 @@ Lets take at our result first
 			
 		</div>
 
-and now at the js code
-
-.. codeviewer::
+  .. cv:: javascript
 
   <script type="text/javascript">
 		dojo.require("dojox.rpc.Service");
@@ -60,13 +60,6 @@ and now at the js code
 				this.ioArgs.json = arguments.length > 0 ? arguments : json;
 			}
 		});
-  </script>
-
-This part is a bit tricky
-
-.. codeviewer::
-
-  <script type="text/javascript">
 
 		var google, showLoader, hideLoader = null;
 		function init(){
@@ -110,13 +103,6 @@ This part is a bit tricky
 
 		}
 
-  </script>
-
-And finally we initialize the code
-
-.. codeviewer::
-
-  <script type="text/javascript">
 		dojo.addOnLoad(init);
 
 	</script>
