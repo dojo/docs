@@ -58,7 +58,7 @@ A fine example of executed code
        }
     });
     dojo.addOnLoad(function(){
-      var widget = new foohoo({id: "test_foohooo"}, dojo.byId("fohooo"));
+      //var widget = new foohoo({id: "test_foohooo"}, dojo.byId("fohooo"));
     });
     </script>
 
