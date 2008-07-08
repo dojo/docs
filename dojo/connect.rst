@@ -30,6 +30,6 @@ Connecting to a button click
        alert('You pressed the button');
       }
       dojo.addOnLoad(function(){
-        dojo.connect("button1", "onclick", helloPressed);
+        dojo.connect(dojo.byId("button1"), "onclick", helloPressed);
       });
     </script>
