@@ -9,3 +9,6 @@ Examples
 --------
 
 Following examples explain the usage of dojo.connect in detail
+
+Connecting to a button click
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
