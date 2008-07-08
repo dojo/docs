@@ -2,6 +2,8 @@
 
 `dojo/connect`_
 
+`Dojo connect link mit Text <dojo/connect>`_
+
 A fine example of executed code
 -------------------------------
 
