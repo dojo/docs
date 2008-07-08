@@ -29,6 +29,7 @@ Connecting to a button click
       function helloPressed(){
        alert('You pressed the button');
       }
-
-      dojo.connect("button1", "onclick", helloPressed);
+      dojo.addOnLoad(function(){
+        dojo.connect("button1", "onclick", helloPressed);
+      });
     </script>
