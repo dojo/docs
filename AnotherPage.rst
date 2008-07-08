@@ -1,7 +1,7 @@
 #format dojo_rst
 
 :Status: Contributed
-:Status: 1.0
+:Version: 1.0
 
 `dojo/connect`_
 
