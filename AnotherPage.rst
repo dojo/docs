@@ -11,6 +11,7 @@
 .. cv-compound::
 
   The html snippet simply defines the markup of your code. Dojo will then parse the dom nodes and create the widgets programatically. Usually the lifecycle goes as follows
+    
     * Programmatic code generation
     * Dom manipulation
 
