@@ -10,6 +10,16 @@
 
 .. cv-compound::
 
+  text vorm html
+    * mit ner liste
+    * gegeegge
+
+  .. cv:: html
+    :label: Das ist mein HTML Code
+
+    <div id="fohooo">Click Me</div>
+    <div dojoType="foohooo">Or Me</div>
+
   hihihi
 
   .. cv:: javascript
@@ -23,16 +33,6 @@
     });
     var widget = new foohoo({id: "test_foohooo"}, dojo.byId("fohooo"));
     </script>
-
-  text vorm html
-    * mit ner liste
-    * gegeegge
-
-  .. cv:: html
-    :label: Das ist mein HTML Code
-
-    <div id="fohooo">Click Me</div>
-    <div dojoType="foohooo">Or Me</div>
 
 Here is my rest syntax
 ======================
