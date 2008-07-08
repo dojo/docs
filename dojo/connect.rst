@@ -12,3 +12,23 @@ Following examples explain the usage of dojo.connect in detail
 
 Connecting to a button click
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. cv-compound::
+
+  .. cv:: html
+    :label: A dojo button
+
+    <div dojoType="dijit.form.Button" id="button1">Click me!</div>
+
+  .. cv:: javascript
+    :label: The jscript to connect to an onclick event
+
+    <script language="text/javascript">
+      dojo.require("dijit.form.Button");
+
+      function helloPressed(){
+       alert('You pressed the button');
+      }
+
+      dojo.connect(dojo.byId("button1"), "onclick", helloPressed);
+    </script>
