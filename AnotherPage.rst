@@ -51,7 +51,7 @@ This code example shows you how to create a widget programatically, awesome isn'
       }
    });
    dojo.addOnLoad(function(){
-     var widget = new foohoo({id: "test_foohoo"}, dojo.byId("fohoo"));
+     var widget = new foohoo({id: "test_foohoooo"}, dojo.byId("fohoo"));
    });
    </script>
    <div id="fohoo">Click Me</div>
