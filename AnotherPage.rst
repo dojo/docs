@@ -1,12 +1,7 @@
 #format dojo_rst
 
-.. codeviewer::
-
-   <script type="text/javascript">dojo.require("dijit.form.Button");</script>
-   <div class="nihilo">
-      <div dojoType="dijit.form.Button">whatever</div>
-   </div>
-
+A fine example of executed code
+-------------------------------
 
 .. cv-compound::
 
@@ -37,6 +32,17 @@
       var widget = new foohoo({id: "test_foohooo"}, dojo.byId("fohooo"));
     });
     </script>
+
+And some normal executed code
+-----------------------------
+
+.. codeviewer::
+
+   <script type="text/javascript">dojo.require("dijit.form.Button");</script>
+   <div class="nihilo">
+      <div dojoType="dijit.form.Button">whatever</div>
+   </div>
+
 
 Here is my rest syntax
 ======================
