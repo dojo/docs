@@ -1,6 +1,6 @@
 #format dojo_rst
 
-''dojo/connect''_
+Dojo/Connect
 
 A fine example of executed code
 -------------------------------
