@@ -7,9 +7,13 @@
 
 `Dojo connect link mit Text <dojo/connect>`_
 
+Syntax
+
 .. code-block::javascript
   
   dojo.connect(obj: Object, event: String, context: Object, method: String|Function, dontFix: Boolean); (view source)
+
+was auch immer
 
 A fine example of executed code
 -------------------------------
