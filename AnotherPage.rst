@@ -8,10 +8,11 @@ A fine example of executed code
   First we declare the CSS
 
   .. cv:: css
+    :label: The CSS
 
-  <style type="text/css">
-  #fohooo { color: #15d32a; size: 16px; }
-  </style>
+    <style type="text/css">
+    #fohooo { color: #15d32a; size: 16px; }
+    </style>
 
   The html snippet simply defines the markup of your code. Dojo will then parse the dom nodes and create the widgets programatically. Usually the lifecycle goes as follows
     
