@@ -1,6 +1,6 @@
 #format dojo_rst
 
-.. inline-block::
+ein simples inline zeugs::
 
    .. cv:: css
      :label: The CSS
