@@ -7,7 +7,7 @@
 
 `Dojo connect link mit Text <dojo/connect>`_
 
-code-block::
+.. code-block::
   
   dojo.connect(obj: Object, event: String, context: Object, method: String|Function, dontFix: Boolean); (view source)
 
