@@ -3,6 +3,8 @@
 :Status: Contributed, Draft
 :Version: 1.0
 
+.. dojo-api :: dijit.form.ComboBox
+
 `dojo/connect`_
 
 `Dojo connect link mit Text <dojo/connect>`_
