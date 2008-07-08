@@ -10,8 +10,15 @@
 
 .. cv-compound::
 
+
+---- /!\ '''Edit conflict - other version:''' ----
   The html snippet simply defines the markup of your code. Dojo will then parse the dom nodes and create the widgets programatically.
   Usually the lifecycle goes as follows
+
+---- /!\ '''Edit conflict - your version:''' ----
+  The html snippet simply defines the markup of your code. Dojo will then parse the dom nodes and create the widgets programatically. Usually the lifecycle goes as follows
+
+---- /!\ '''End of edit conflict''' ----
     * Programmatic code generation
     * Dom manipulation
 
