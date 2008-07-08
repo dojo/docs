@@ -10,19 +10,21 @@
 
 .. cv-compound::
 
-  text vorm html
-    * mit ner liste
-    * gegeegge
+  The html snippet simply defines the markup of your code. Dojo will then parse the dom nodes and create the widgets programatically.
+  Usually the lifecycle goes as follows:
+    * Programmatic code generation
+    * Dom manipulation
 
   .. cv:: html
-    :label: Das ist mein HTML Code
+    :label: This is the HTML of the example
 
     <div id="fohooo">Click Me</div>
     <div dojoType="foohooo">Or Me</div>
 
-  hihihi
+  This is the jscript code of your example. Simple past both HMTL and Jscript into the browser.
 
   .. cv:: javascript
+    :label: And the jscript code
 
     <script type="text/javascript">
     dojo.declare("foohooo", [dijit._Widget,dijit._Templated], {
