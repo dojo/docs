@@ -1,10 +1,5 @@
 #format dojo_rst
 
-ein simples inline zeugs::
-
-   .. cv:: css
-     :label: The CSS
-
 A fine example of executed code
 -------------------------------
 
@@ -48,6 +43,11 @@ A fine example of executed code
       var widget = new foohoo({id: "test_foohooo"}, dojo.byId("fohooo"));
     });
     </script>
+
+ein simples inline zeugs::
+
+   .. cv:: css
+     :label: The CSS
 
 And some normal executed code
 -----------------------------
