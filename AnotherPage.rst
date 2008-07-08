@@ -1,5 +1,7 @@
 #format dojo_rst
 
+.. dojo-api :: dojo.connect
+
 :Status: Contributed, Draft
 :Version: 1.0
 
