@@ -182,3 +182,6 @@ Another codeblock
 
 another headline
 ================
+
+
+.. dojo-api :: dojo.connect
