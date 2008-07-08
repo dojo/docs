@@ -8,6 +8,7 @@
 `Dojo connect link mit Text <dojo/connect>`_
 
 Syntax
+------
 
 .. code-block :: javascript
   
