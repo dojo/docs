@@ -30,5 +30,5 @@ Connecting to a button click
        alert('You pressed the button');
       }
 
-      dojo.connect(dojo.byId("button1"), "onclick", helloPressed);
+      dojo.connect("button1", "onclick", helloPressed);
     </script>
