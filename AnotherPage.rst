@@ -1,5 +1,8 @@
 #format dojo_rst
 
+:Status: Contributed
+:Status: 1.0
+
 `dojo/connect`_
 
 `Dojo connect link mit Text <dojo/connect>`_
