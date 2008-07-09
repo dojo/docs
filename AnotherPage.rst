@@ -3,12 +3,6 @@
 :Status: Contributed, Draft
 :Version: 1.0
 
-.. dojo-api :: dijit.form.ComboBox
-
-`dojo/connect`_
-
-`Dojo connect link mit Text <dojo/connect>`_
-
 Syntax
 ------
 
@@ -16,7 +10,7 @@ Syntax
   
   dojo.connect(obj: Object, event: String, context: Object, method: String|Function, dontFix: Boolean); (view source)
 
-was auch immer
+Some text here
 
 A fine example of executed code
 -------------------------------
@@ -186,3 +180,10 @@ another headline
 
 
 .. dojo-api :: dojo.connect
+
+
+.. dojo-api :: dijit.form.ComboBox
+
+`dojo/connect`_
+
+`Dojo connect link mit Text <dojo/connect>`_
