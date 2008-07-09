@@ -178,12 +178,6 @@ Another codeblock
 another headline
 ================
 
-
-.. dojo-api :: dojo.connect
-
-
-.. dojo-api :: dijit.form.ComboBox
-
 `dojo/connect`_
 
 `Dojo connect link mit Text <dojo/connect>`_
