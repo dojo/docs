@@ -16,6 +16,8 @@ Examples
   .. cv:: javascript
     :label: The jscript, put this wherever you want the dialog creation to happen
 
+    <script type="text/javascript">
+
     dojo.require("dijit.form.Button");
     dojo.require("dijit.Dialog");
 
@@ -26,10 +28,11 @@ Examples
           refocus:false,
           title: "Programatic Dialog Creation"
 	},dojo.byId('firstDialog'));
+
       // connect t the button so we display the dialog onclick
       dojo.connect(dijit.byId("showDialog"), "onclick", thirdDlg, "show");
     });
-
+    </script>
 
 Usecases
 --------
