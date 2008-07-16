@@ -3,6 +3,8 @@
 Examples
 --------
 
+1. The first example creates a Dialog dynamically from an existing DOM node:
+
 .. cv-compound::
 
   A programmatic dialog with no content. First lets write up some simple HTML code because you need to define the place where your Dialog dhould be created.
@@ -23,12 +25,45 @@ Examples
 
     dojo.addOnLoad(function(){	
       // create the dialog
-      thirdDlg = new dijit.Dialog({
+      firstDlg = new dijit.Dialog({
           title: "Programatic Dialog Creation"
 	}, "dialogOne");
 
       // connect t the button so we display the dialog onclick
-      dojo.connect(dijit.byId("showDialog"), "onClick", thirdDlg, "show");
+      dojo.connect(dijit.byId("showDialog"), "onClick", firstDlg, "show");
+    });
+    </script>
+
+2. Now lets change the dialogs content dynamically
+
+.. cv-compound::
+
+  A programmatic dialog with no content. First lets write up some simple HTML code because you need to define the place where your Dialog dhould be created.
+  
+  .. cv:: html
+    :label: When pressing this button the dialog will popup. Notice this time there is no dom Node with content for the dialog 
+
+    <button id="showDialogTwo" dojoType="dijit.form.Button">Show me!</button>
+
+  .. cv:: javascript
+    :label: The jscript, put this wherever you want the dialog creation to happen
+
+    <script type="text/javascript">
+
+    dojo.require("dijit.form.Button");
+    dojo.require("dijit.Dialog");
+
+    dojo.addOnLoad(function(){	
+      // create the dialog
+      secondDlg = new dijit.Dialog({
+          title: "Programatic Dialog Creation"
+	});
+
+      // set the content of the dialog 
+      secondDlg.setContent("Hey, I wasn't there before!");
+
+      // connect t the button so we display the dialog onclick
+      dojo.connect(dijit.byId("showDialogTwo"), "onClick", secondDlg, "show");
     });
     </script>
 
