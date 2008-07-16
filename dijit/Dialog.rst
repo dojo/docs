@@ -34,7 +34,8 @@ Examples
 	},dojo.byId('firstDialog'));
 
       // connect t the button so we display the dialog onclick
-      dojo.connect(dijit.byId("showDialog"), "onclick", function(){
+
+      dojo.connect(dijit.byId("showDialog"), "onClick", function(){
         dijit.byId("dialog3").show();
       });
     });
