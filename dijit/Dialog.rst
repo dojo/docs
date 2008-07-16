@@ -1,5 +1,8 @@
 #format dojo_rst
 
+:Status: Contributed, Draft
+:Version: 1.0
+
 dijit.Dialog
 ============
 
