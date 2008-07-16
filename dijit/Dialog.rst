@@ -16,7 +16,7 @@ Examples
     <button id="showDialog" dojoType="dijit.form.Button">Show me!</button>
 
   .. cv:: javascript
-    :label: The jscript, put this wherever you want the dialog creation to happen
+    :label: The javascript, put this wherever you want the dialog creation to happen
 
     <script type="text/javascript">
 
@@ -46,7 +46,7 @@ Examples
     <button id="showDialogTwo" dojoType="dijit.form.Button">Show me!</button>
 
   .. cv:: javascript
-    :label: The jscript, put this wherever you want the dialog creation to happen
+    :label: The javascript, put this wherever you want the dialog creation to happen
 
     <script type="text/javascript">
 
