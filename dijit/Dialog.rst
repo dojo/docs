@@ -10,6 +10,7 @@ Examples
   .. cv:: html
     :label: When pressing this button the dialog will popup 
 
+    <div id="dialogOne">This is my dialog content</div>
     <button id="showDialog" dojoType="dijit.form.Button">Show me!</button>
 
   .. cv:: javascript
@@ -24,7 +25,7 @@ Examples
       // create the dialog
       thirdDlg = new dijit.Dialog({
           title: "Programatic Dialog Creation"
-	});
+	}, "dialogOne");
 
       // connect t the button so we display the dialog onclick
       dojo.connect(dijit.byId("showDialog"), "onClick", thirdDlg, "show");
