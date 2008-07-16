@@ -16,6 +16,9 @@ Examples
   .. cv:: javascript
     :label: The jscript, put this wherever you want the dialog creation to happen
 
+    dojo.require("dijit.form.Button");
+    dojo.require("dijit.Dialog");
+
     dojo.addOnLoad(function(){	
       // create the dialog
       thirdDlg = new dijit.Dialog({
