@@ -28,16 +28,11 @@ Examples
     dojo.addOnLoad(function(){	
       // create the dialog
       thirdDlg = new dijit.Dialog({
-          id: "dialog3",
-          refocus:false,
           title: "Programatic Dialog Creation"
 	},dojo.byId('firstDialog'));
 
       // connect t the button so we display the dialog onclick
-
-      dojo.connect(dijit.byId("showDialog"), "onClick", function(){
-        dijit.byId("dialog3").show();
-      });
+      dojo.connect(dijit.byId("showDialog"), "onClick", thirdDlg, "show");
     });
     </script>
 
