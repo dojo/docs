@@ -7,12 +7,12 @@ Examples
 
   A programmatic dialog with no content. First lets write up some simple HTML code because you need to define the place where your Dialog dhould be created.
   
-  .. cv::html
+  .. cv:: html
     :label: This you can place anywhere in your code since a dialog will always be on top of everything else 
 
     <div id="firstDialog"></div>    
 
-  .. cv::jscript
+  .. cv:: javascript
     :label: The jscript, put this wherever you want the dialog creation to happen
 
     dojo.addOnLoad(function(){
@@ -23,6 +23,7 @@ Examples
 					refocus:false,
 					title: "Programatic Dialog Creation"
 				},pane);
+      thirdDlg.show();
     });
 
 
