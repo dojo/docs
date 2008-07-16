@@ -11,19 +11,20 @@ Examples
     :label: This you can place anywhere in your code since a dialog will always be on top of everything else 
 
     <div id="firstDialog"></div>    
+    <button id="showDialog" dojoType="dijit.form.Button">Show me!</button>
 
   .. cv:: javascript
     :label: The jscript, put this wherever you want the dialog creation to happen
 
-    dojo.addOnLoad(function(){
-      var pane = dojo.byId('firstDialog');
-				pane.style.width = "300px"; 	
-				thirdDlg = new dijit.Dialog({
-					id: "dialog3",
-					refocus:false,
-					title: "Programatic Dialog Creation"
-				},pane);
-      thirdDlg.show();
+    dojo.addOnLoad(function(){	
+      // create the dialog
+      thirdDlg = new dijit.Dialog({
+          id: "dialog3",
+          refocus:false,
+          title: "Programatic Dialog Creation"
+	},dojo.byId('firstDialog'));
+      // connect t the button so we display the dialog onclick
+      dojo.connect(dijit.byId("showDialog"), "onclick", thirdDlg, "show");
     });
 
 
