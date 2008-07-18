@@ -59,7 +59,11 @@ Lets dynamically include code on button press and fire an event once the code is
     dojo.require("dijit.form.Button");
 
     // connect to button
-    dojo.connect(dojo.byId("buttonOne"), "onclick", function(){
+    dojo.addOnLoad(function(){
+      dojo.connect(dojo.byId("buttonOne"), "onclick", "loadCode");
+    });
+
+    function loadCode(){
       alert("About to dojo.require dijit.layout.BorderContainer. Currently is is: "+dijit.layout.BorderContainer);
       dojo.require("dijit.layout.BorderContainer");
       
@@ -67,6 +71,6 @@ Lets dynamically include code on button press and fire an event once the code is
       dojo.addOnLoad(function(){
         alert("This fires after BorderContainer is included. Now it is: "+dijit.layout.BorderContainer);
       });
-    });
+    }
 
     </script>
