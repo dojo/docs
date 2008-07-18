@@ -3,6 +3,7 @@
 Sooner or later, every Javascript programmer tries something like this:
 
 .. code-block :: javascript
+  :linenos:
 
   <script>
     if(dayOfWeek == "Sunday"){
@@ -18,6 +19,7 @@ It doesn't work because the "other" control is not defined yet. You can move the
 dojo.addOnLoad(...) defers script execution until all the HTML is loaded. So this code:
 
 .. code-block :: javascript
+  :linenos:
 
   function setAfrobeat(){
      document.musicPrefs.other.value="Afrobeat";
@@ -27,6 +29,7 @@ dojo.addOnLoad(...) defers script execution until all the HTML is loaded. So thi
 conveniently replaces the one above. When the function is small, you may prefer to write it inline:
 
 .. code-block :: javascript
+  :linenos:
 
   dojo.addOnLoad(
     function(){
