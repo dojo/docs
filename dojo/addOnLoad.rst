@@ -1,5 +1,8 @@
 #format dojo_rst
 
+:Status: Contributed, Draft
+:Version: 1.0
+
 Sooner or later, every Javascript programmer tries something like this:
 
 .. code-block :: javascript
