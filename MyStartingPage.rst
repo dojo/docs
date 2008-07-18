@@ -7,8 +7,20 @@
    :target: http://docs.dojocampus.org
 .. _link: http://www.dojotoolkit.org
 
-Table of Contents
------------------
+Installation
+------------
+
+* `How to Install the Dojo Toolkit <Install>`_
+
+Getting started
+---------------
+
+Documentation
+-------------
+
+* `Dojo <dojo>`_
+  * `connect <dojo/connect>`_
+
 
 `How to become a dojo doc ninja`_
 
