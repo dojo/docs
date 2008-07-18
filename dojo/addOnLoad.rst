@@ -63,7 +63,8 @@ Lets dynamically include code on button press and fire an event once the code is
       alert("About to dojo.require dijit.layout.BorderContainer. Currently is is: "+dijit.layout.BorderContainer);
       dojo.require("dijit.layout.BorderContainer");
       
-      // dojo.addOnLoad(function(){
+      // add a dojo.adOnLoad
+      dojo.addOnLoad(function(){
         alert("This fires after BorderContainer is included. Now it is: "+dijit.layout.BorderContainer);
       });
     });
