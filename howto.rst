@@ -69,8 +69,8 @@ This will result in following
 3. Executed code compounds
 Sometimes your examples need separation between CSS, JavaScript and HTML. Use the ".. cw-compound::" directive for that. Each compund can include several ".. code-viewer::" directives
 
-  .. code-block :: javascript
-    :linenos:
+.. code-block :: javascript
+  :linenos:
 
   .. cv-compound::
 
