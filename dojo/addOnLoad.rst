@@ -18,6 +18,7 @@ It doesn't work because the "other" control is not defined yet. You can move the
 dojo.addOnLoad(...) defers script execution until all the HTML is loaded. So this code:
 
 .. code-block :: javascript
+
   function setAfrobeat(){
      document.musicPrefs.other.value="Afrobeat";
   }
@@ -40,7 +41,7 @@ Examples
 
 Lets dynamically include code on button press and fire an event once the code is included
 
-.. cv-compund::
+.. cv-compound::
 
   The HTML markup is pretty simple, just a button to click on
 
