@@ -54,7 +54,7 @@ Documentation guidelines
 
 
 Other notes
-===========================
+===========
 So the Wiki is up the next phase would be to discuss:
 
 1. What should be on it (and write a page about it here)
