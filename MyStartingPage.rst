@@ -2,10 +2,8 @@
 
 :Status: Contributed
 
-.. image:: http://www.oxull.com/ei/dojodocs.logo.png
-   :alt: DojoDoc's Logo
-   :target: http://docs.dojocampus.org
-.. _link: http://www.dojotoolkit.org
+Welcome to the official documentation pages of the DojoToolkit.
+This is an open effort for anyone interested to join. All we ask is that you have filed a CLA.
 
 Installation
 ------------
@@ -15,26 +13,20 @@ Installation
 Getting started
 ---------------
 
+* `Dijit layout <quickstart/dijit/layout>`_
+
 Documentation
 -------------
 
-* `Dojo <dojo>`_
-  - `connect <dojo/connect>`_
+* `dojo <dojo>`_
+* `dojo.connect <dojo/connect>`_
+
+Documentation guidelines
+------------------------
+
+* `How to become a dojo doc ninja <howto>`_
 
 
-`How to become a dojo doc ninja`_
-
-.. _`How to become a dojo doc ninja`: http://docs.dojocampus.org/howto
-
-`Dijit`_
-
-  `Dijit.form`_
-
-.. _`Dijit.form`: /dijit/form
-
-    `Dijit.form.ComboBox`_
-
-.. _`Dijit.form.ComboBox`: /dijit/form/ComboBox
 
 Lets get this party started
 ===========================
@@ -112,3 +104,8 @@ By using directives become easy to add images and others to your stuff:
 .. _`click on this link for more info on reST markup format`: http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html
 
 AnotherPage_
+
+.. image:: http://www.oxull.com/ei/dojodocs.logo.png
+   :alt: DojoDoc's Logo
+   :target: http://docs.dojocampus.org
+.. _link: http://www.dojotoolkit.org
