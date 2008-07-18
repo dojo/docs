@@ -3,9 +3,6 @@
 :Status: Contributed, Draft
 :Version: 1.0
 
-dijit.Dialog
-============
-
 Dijit's modal Dialog Box simulates a regular GUI dialog box. The contents can be arbitrary HTML, but are most often a form or a short paragraph. The user can close the dialog box without acting by clicking on the X button in the top-right corner.
 
 Examples
