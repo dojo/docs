@@ -45,14 +45,14 @@ Lets dynamically include code on button press and fire an event once the code is
 
   The HTML markup is pretty simple, just a button to click on
 
-  .. cv-codeviewer::
+  .. cv:: html
     :label: A dijit button
 
     <button dojoType="dijit.form.Button" id="buttonOne">Click me!</button>
 
   The JavaScript code fires a dojo.require when you click the button.
 
-  .. cv-compound::
+  .. cv:: javascript
     :label: The javascript code
 
     <script type="text/javascript">
