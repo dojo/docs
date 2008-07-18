@@ -28,3 +28,14 @@ Documentation basics
 1. Every doc should start with a header, e.g. the dojo module you are documenting.
 2. All docs have to have code examples, what use does a doc have if you can't see examples? ;)
 3. Write
+
+Code examples
+-------------
+
+1. Non executed code
+If you need to give a simple source code example without it being executed use the ".. code-block ::" directive and put the code right into the next line inlined by two spaces
+
+  .. code-block :: javascript
+    :linenos:
+  
+  <script type="text/javascript">alert("Your code");</script>
