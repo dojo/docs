@@ -67,3 +67,5 @@ Lets dynamically include code on button press and fire an event once the code is
         alert("This fires after BorderContainer is included. Now it is: "+dijit.layout.BorderContainer);
       });
     });
+
+    </script>
