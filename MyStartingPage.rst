@@ -22,6 +22,7 @@ Dojo
 ~~~~
 
 * `dojo <dojo>`_
+* `dojo.byId <dojo/byId>`_
 * `dojo.connect <dojo/connect>`_
 
 Dijit
