@@ -19,7 +19,7 @@ Documentation
 -------------
 
 * `Dojo <dojo>`_
-  * `connect <dojo/connect>`_
+  - `connect <dojo/connect>`_
 
 
 `How to become a dojo doc ninja`_
