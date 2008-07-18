@@ -108,7 +108,7 @@ Sometimes your examples need separation between CSS, JavaScript and HTML. Use th
          }
       });
       dojo.addOnLoad(function(){
-        var widget = new foohoo({id: "test_foohooo"}, dojo.byId("fohooo"));
+        var widget = new foohooo({id: "test_foohooo"}, dojo.byId("fohooo"));
       });
       </script>
 
@@ -150,6 +150,6 @@ This will result in following structure
        }
     });
     dojo.addOnLoad(function(){
-      var widget = new foohoo({id: "test_foohooo"}, dojo.byId("fohooo"));
+      var widget = new foohooo({id: "test_foohooo"}, dojo.byId("fohooo"));
     });
     </script>
