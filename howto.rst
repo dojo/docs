@@ -47,7 +47,7 @@ If you need to give a simple source code example without it being executed use t
 You can add real example to the documentation by using the ".. codeviewer::" directive. The code you show can include Javascript, CSS and HTML
 
   .. code-block :: javascript
-    :linenos"
+    :linenos:
 
     .. codeviewer::
 
@@ -65,3 +65,91 @@ This will result in following
   <div class="nihilo">
      <div dojoType="dijit.form.Button">whatever</div>
   </div>
+
+3. Executed code compounds
+Sometimes your examples need separation between CSS, JavaScript and HTML. Use the ".. cw-compound::" directive for that. Each compund can include several ".. code-viewer::" directives
+
+  .. code-block :: javascript
+    :linenos:
+
+  .. cv-compound::
+
+    First we declare the CSS
+
+    .. cv:: css
+      :label: The CSS
+
+      <style type="text/css">
+      .fohooo { color: #15d32a; font-size: 16px; }
+      </style>
+
+    The html snippet simply defines the markup of your code. Dojo will then parse the dom nodes and create the widgets programatically. Usually the lifecycle goes as follows
+    
+      * Programmatic code generation
+      * Dom manipulation
+
+    .. cv:: html
+      :label: This is the HTML of the example
+
+      <div id="fohooo" class="fohooo">Click Me</div>
+      <div id="fohooooooo" class="fohooo">Don't click Me</div>
+      <div dojoType="foohooo" class="fohooo">Or Me</div>
+
+    This is the jscript code of your example. Simple past both HMTL and Jscript into the browser.
+
+    .. cv:: javascript
+      :label: And the jscript code
+
+      <script type="text/javascript">
+      dojo.declare("foohooo", [dijit._Widget,dijit._Templated], {
+         templateString: '<div dojoAttachEvent="onclick: _foo">Example: <span dojoAttachPoint="containerNode"></span></div>',
+         _foo: function(){
+            alert("foo");
+         }
+      });
+      dojo.addOnLoad(function(){
+        var widget = new foohoo({id: "test_foohooo"}, dojo.byId("fohooo"));
+      });
+      </script>
+
+This will result in following structure
+
+.. cv-compound::
+
+  First we declare the CSS
+
+  .. cv:: css
+    :label: The CSS
+
+    <style type="text/css">
+    .fohooo { color: #15d32a; font-size: 16px; }
+    </style>
+
+  The html snippet simply defines the markup of your code. Dojo will then parse the dom nodes and create the widgets programatically. Usually the lifecycle goes as follows
+    
+    * Programmatic code generation
+    * Dom manipulation
+
+  .. cv:: html
+    :label: This is the HTML of the example
+
+    <div id="fohooo" class="fohooo">Click Me</div>
+    <div id="fohooooooo" class="fohooo">Don't click Me</div>
+    <div dojoType="foohooo" class="fohooo">Or Me</div>
+
+  This is the jscript code of your example. Simple past both HMTL and Jscript into the browser.
+
+  .. cv:: javascript
+    :label: And the jscript code
+
+    <script type="text/javascript">
+    dojo.declare("foohooo", [dijit._Widget,dijit._Templated], {
+       templateString: '<div dojoAttachEvent="onclick: _foo">Example: <span dojoAttachPoint="containerNode"></span></div>',
+       _foo: function(){
+          alert("foo");
+       }
+    });
+    dojo.addOnLoad(function(){
+      var widget = new foohoo({id: "test_foohooo"}, dojo.byId("fohooo"));
+    });
+    </script>
