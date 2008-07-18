@@ -31,11 +31,12 @@ Dojo
 ~~~~
 
 * `dojo <dojo>`_
-* `dojo.byId <dojo/byId>`_
-* `dojo.require <dojo/require>`_
 * `dojo.addOnLoad <dojo/addOnLoad>`_
-* `dojo.forEach <dojo/forEach>`_
+* `dojo.byId <dojo/byId>`_
 * `dojo.connect <dojo/connect>`_
+* `dojo.forEach <dojo/forEach>`_
+* `dojo.query <dojo/query>`_
+* `dojo.require <dojo/require>`_
 
 Dijit
 ~~~~~
