@@ -4,7 +4,7 @@
 
 .. image:: http://media.dojocampus.org/images/docs/logodojocdocssmall.png
    :alt: Dojo Documentation
-   :class: imageFloatRight;
+   :class: logowelcome;
 
 Welcome to the official documentation pages of the DojoToolkit
 ==============================================================
