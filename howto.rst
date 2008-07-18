@@ -37,5 +37,4 @@ If you need to give a simple source code example without it being executed use t
 
   .. code-block :: javascript
     :linenos:
-  
   <script type="text/javascript">alert("Your code");</script>
