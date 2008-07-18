@@ -44,7 +44,7 @@ Dojox
 ~~~~~
 
 * `dojox <dojox>`_
-* `dojox.rpc <dojox.rpc>`_
+* `dojox.rpc <dojox/rpc>`_
 
 Documentation guidelines
 ------------------------
