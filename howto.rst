@@ -33,7 +33,7 @@ Code examples
 -------------
 
 1. Non executed code
-If you need to give a simple source code example without it being executed use the ".. code-block ::" directive and put the code right into the next line inlined by two spaces
+If you need to give a simple source code example without it being executed use the ".. code-block ::" directive and put the code right into the next line inlined by two spaces. If you want to display line numbers, use the "linnos" attribute.
 
   .. code-block :: javascript
     :linenos:
@@ -42,3 +42,16 @@ If you need to give a simple source code example without it being executed use t
       :linenos:
 
       <script type="text/javascript">alert("Your code");</script>
+
+2. Executed code
+You can add real example to the documentation by using the ".. codeviewer::" directive. The code you show can include Javascript, CSS and HTML
+
+  .. code-block :: javascript
+    :linenos"
+
+    .. codeviewer::
+
+   <script type="text/javascript">dojo.require("dijit.form.Button");</script>
+   <div class="nihilo">
+      <div dojoType="dijit.form.Button">whatever</div>
+   </div>
