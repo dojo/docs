@@ -1,0 +1,1 @@
+#format dojo_rst
