@@ -6,7 +6,8 @@
    :alt: Dojo Documentation
    :class: imageFloatRight;
 
-Welcome to the official documentation pages of the DojoToolkit.
+Welcome to the official documentation pages of the DojoToolkit
+==============================================================
 
 This is an open effort for anyone interested to join. If you want to contribute documentation please read the Documentation guidelines. 
 Use the search box, it is very helpful and usually brings you to the page you need. If you are for example looking for "dojo.connect" simply enter "dojo connect".
