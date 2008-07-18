@@ -2,7 +2,7 @@
 
 :Status: Contributed
 
-.. image:: http://media.dojocampus.org/images/docs/logodojocdocs.png
+.. image:: http://media.dojocampus.org/images/docs/logodojocdocssmall.png
    :alt: Dojo Documentation
    :class: imageFloatLeft;
 
