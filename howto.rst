@@ -33,6 +33,7 @@ Code examples
 -------------
 
 1. Non executed code
+~~~~~~~~~~~~~~~~~~~~
 
 If you need to give a simple source code example without it being executed use the ".. code-block ::" directive and put the code right into the next line inlined by two spaces. If you want to display line numbers, use the "linnos" attribute.
 
@@ -45,6 +46,7 @@ If you need to give a simple source code example without it being executed use t
       <script type="text/javascript">alert("Your code");</script>
 
 2. Executed code
+~~~~~~~~~~~~~~~~
 
 You can add real example to the documentation by using the ".. codeviewer::" directive. The code you show can include Javascript, CSS and HTML
 
@@ -69,6 +71,7 @@ This will result in following
   </div>
 
 3. Executed code compounds
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Sometimes your examples need separation between CSS, JavaScript and HTML. Use the ".. cw-compound::" directive for that. Each compund can include several ".. code-viewer::" directives
 
