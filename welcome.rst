@@ -10,6 +10,7 @@ Welcome to the official documentation pages of the DojoToolkit.
 
 This is an open effort for anyone interested to join. If you want to contribute documentation please read the Documentation guidelines. 
 Use the search box, it is very helpful and usually brings you to the page you need. If you are for example looking for "dojo.connect" simply enter "dojo connect".
+
 The documentation is aiming to cover all dojo modules delivered within a release. If you are missing things or have ideas, don't hesitate to contact the documentation team.
 
 Installation
