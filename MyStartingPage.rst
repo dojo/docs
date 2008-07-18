@@ -18,8 +18,23 @@ Getting started
 Documentation
 -------------
 
+Dojo
+~~~~
+
 * `dojo <dojo>`_
 * `dojo.connect <dojo/connect>`_
+
+Dijit
+~~~~~
+
+* `dijit <dijit>`_
+* `dijit.Dialog <dijit/Dialog>`_
+
+Dojox
+~~~~~
+
+* `dojox <dojox>`_
+* `dojox.rpc <dojox.rpc>`_
 
 Documentation guidelines
 ------------------------
@@ -38,7 +53,7 @@ Documentation guidelines
 
 
 
-Lets get this party started
+Other notes
 ===========================
 So the Wiki is up the next phase would be to discuss:
 
