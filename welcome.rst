@@ -26,11 +26,8 @@ Getting started
 
 * `Dijit layout <quickstart/dijit/layout>`_
 
-Documentation
--------------
-
 Dojo Base                                                   
-~~~~~~~~~
+---------
 
 * `dojo <dojo>`_
 * `dojo.addOnLoad <dojo/addOnLoad>`_
@@ -54,16 +51,16 @@ Dojo Base
 * `dojo.require <dojo/require>`_
 
 Dojo
-~~~~
+----
 
 Dijit
-~~~~~
+-----
 
 * `dijit <dijit>`_
 * `dijit.Dialog <dijit/Dialog>`_
 
 Dojox
-~~~~~
+-----
 
 * `dojox <dojox>`_
 * `dojox.rpc <dojox/rpc>`_
