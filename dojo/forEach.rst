@@ -1,3 +1,4 @@
+## page was renamed from 1.2/dojo/forEach
 #format dojo_rst
 
 dojo.forEach
