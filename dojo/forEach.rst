@@ -68,3 +68,7 @@ does the same thing. But that's not all! New in 1.0 you can collapse the functio
 Ay carumba! That's a lot of functionality in a tiny 1-line package. Once you get used to the syntax, you'll never want to go back.
 
 There's more on dojo.query in Selecting DOM Nodes with dojo.query
+
+See Also
+========
+- `dojo.NodeList <dojo/NodeList>`_ - A subclass of Array which can also have forEach applied.
