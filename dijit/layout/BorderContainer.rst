@@ -28,7 +28,7 @@ Examples
 .. cv:: html
   :label: A dijit button
 
-  <div dojoType="dijit.layout.BorderContainer" design="sidebar" style="border: 1px #ccc solid">
+  <div dojoType="dijit.layout.BorderContainer" design="sidebar" style="width: 100%; height: 400px; border: 1px #ccc solid">
     <div dojoType="dijit.layout.ContentPane" region="left">Hi</div>
     <div dojoType="dijit.layout.ContentPane" region="center">Hi</div>
   </div>
