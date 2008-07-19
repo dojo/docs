@@ -58,6 +58,8 @@ Dijit
 
 * `dijit <dijit>`_
 * `dijit.Dialog <dijit/Dialog>`_
+* `dijit.layout <dijit/layout>`_
+* `dijit.layout.BorderContainer <dijit/layout/BorderContainer>`_
 
 Dojox
 -----
