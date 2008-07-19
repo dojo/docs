@@ -65,5 +65,5 @@ So keeping those rules in mind and picking which widgets to use it will look lik
 
     * Vertical Split Container
 
-       * Content Pane #4
-       * Content Pane #5
+      * Content Pane #4
+      * Content Pane #5
