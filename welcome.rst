@@ -1,10 +1,9 @@
 #format rst
 
+:Status: Contributed
 
 Welcome to the official documentation pages of the DojoToolkit
 ==============================================================
-
-:Status: Contributed
 
 .. image:: http://media.dojocampus.org/images/docs/logodojocdocssmall.png
    :alt: Dojo Documentation
