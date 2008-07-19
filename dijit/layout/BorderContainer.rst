@@ -12,7 +12,7 @@ BorderContainer operates in a choice of two layout modes: the design attribute m
 Examples
 --------
 
-.. cv-compund::
+.. cv-compound::
 
   Lets specify a simple BorderContainer with a left and center region
 
