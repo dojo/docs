@@ -27,7 +27,7 @@ Examples
 
   .. cv:: html
 
-  <div dojoType="dijit.layout.BorderContainer" style="border: 1px #ccc solid">
+  <div dojoType="dijit.layout.BorderContainer" design="sidebar" style="border: 1px #ccc solid">
     <div dojoType="dijit.layout.ContentPane" region="left">Hi</div>
     <div dojoType="dijit.layout.ContentPane" region="center">Hi</div>
   </div>
