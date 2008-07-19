@@ -26,32 +26,33 @@ Getting started
 
 * `Dijit layout <quickstart/dijit/layout>`_
 
-Dojo Base                                                   
----------
+Dojo                                                 
+----
 
 * `dojo <dojo>`_
-* `dojo.addOnLoad <dojo/addOnLoad>`_
-* `dojo.array <dojo/array>`_
-* `dojo.browser <dojo/browser>`_
-* `dojo.Color <dojo/Color>`_
-* `dojo.declare <dojo/declare>`_
-* `dojo.Deferred <dojo/Deferred>`_
-* `dojo.event <dojo/event>`_
-* `dojo.fx <dojo/fx>`_
-* `dojo.html <dojo/html>`_
-* `dojo.json <dojo/json>`_
-* `dojo.lang <dojo/lang>`_
-* `dojo.NodeList <dojo/NodeList>`_
-* `dojo.window <dojo/window>`_
-* `dojo.xhr <dojo/xhr>`_
-* `dojo.byId <dojo/byId>`_
-* `dojo.connect <dojo/connect>`_
-* `dojo.forEach <dojo/forEach>`_
-* `dojo.query <dojo/query>`_
-* `dojo.require <dojo/require>`_
+* `dojo._base <dojo/base>`_
 
-Dojo
-----
+  * `dojo.addOnLoad <dojo/addOnLoad>`_
+  * `dojo.array <dojo/array>`_
+  * `dojo.browser <dojo/browser>`_
+  * `dojo.Color <dojo/Color>`_
+  * `dojo.declare <dojo/declare>`_
+  * `dojo.Deferred <dojo/Deferred>`_
+  * `dojo.event <dojo/event>`_
+  * `dojo.fx <dojo/fx>`_
+  * `dojo.html <dojo/html>`_
+  * `dojo.json <dojo/json>`_
+  * `dojo.lang <dojo/lang>`_
+  * `dojo.NodeList <dojo/NodeList>`_
+  * `dojo.window <dojo/window>`_
+  * `dojo.xhr <dojo/xhr>`_
+  * `dojo.byId <dojo/byId>`_
+  * `dojo.connect <dojo/connect>`_
+  * `dojo.forEach <dojo/forEach>`_
+  * `dojo.query <dojo/query>`_
+  * `dojo.require <dojo/require>`_
+
+* `dojo.fx <dojo/fx>`_
 
 Dijit
 -----
@@ -59,12 +60,16 @@ Dijit
 * `dijit <dijit>`_
 * `dijit.Dialog <dijit/Dialog>`_
 * `dijit.layout <dijit/layout>`_
-* `dijit.layout.BorderContainer <dijit/layout/BorderContainer>`_
+
+  * `dijit.layout.ContentPane <dijit/layout/ContentPane>`_
+  * `dijit.layout.BorderContainer <dijit/layout/BorderContainer>`_
+  * `dijit.layout.AccordionContainer <dijit/layout/AccordionContainer>`_
 
 Dojox
 -----
 
 * `dojox <dojox>`_
+* `dojox.grid <dojox/grid>`_
 * `dojox.rpc <dojox/rpc>`_
 
 Documentation guidelines
