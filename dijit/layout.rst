@@ -54,16 +54,16 @@ So keeping those rules in mind and picking which widgets to use it will look lik
 
 * LayoutContainer
     
-    * Toolbar
-    * Horizontal Split Container
+  * Toolbar
+  * Horizontal Split Container
 
-        * Accordion Container
+    * Accordion Container
 
-            * ContentPane #1
-            * ContentPane #2
-            * ContentPane #3
+      * ContentPane #1
+      * ContentPane #2
+      * ContentPane #3
 
-        * Vertical Split Container
+    * Vertical Split Container
 
-            * Content Pane #4
-            * Content Pane #5
+       * Content Pane #4
+       * Content Pane #5
