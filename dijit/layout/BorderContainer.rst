@@ -24,8 +24,9 @@ Examples
     </script>
 
   The markup has to look as follows
-
-  .. cv:: html
+  
+.. cv:: html
+  :label: A dijit button
 
   <div dojoType="dijit.layout.BorderContainer" design="sidebar" style="border: 1px #ccc solid">
     <div dojoType="dijit.layout.ContentPane" region="left">Hi</div>
