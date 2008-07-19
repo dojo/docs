@@ -29,16 +29,32 @@ Getting started
 Documentation
 -------------
 
-Dojo                                                   
-~~~~
+Dojo Base                                                   
+~~~~~~~~~
 
 * `dojo <dojo>`_
 * `dojo.addOnLoad <dojo/addOnLoad>`_
+* `dojo.array <dojo/array>`_
+* `dojo.browser <dojo/browser>`_
+* `dojo.Color <dojo/Color>`_
+* `dojo.declare <dojo/declare>`_
+* `dojo.Deferred <dojo/Deferred>`_
+* `dojo.event <dojo/event>`_
+* `dojo.fx <dojo/fx>`_
+* `dojo.html <dojo/html>`_
+* `dojo.json <dojo/json>`_
+* `dojo.lang <dojo/lang>`_
+* `dojo.NodeList <dojo/NodeList>`_
+* `dojo.window <dojo/window>`_
+* `dojo.xhr <dojo/xhr>`_
 * `dojo.byId <dojo/byId>`_
 * `dojo.connect <dojo/connect>`_
 * `dojo.forEach <dojo/forEach>`_
 * `dojo.query <dojo/query>`_
 * `dojo.require <dojo/require>`_
+
+Dojo
+~~~~
 
 Dijit
 ~~~~~
