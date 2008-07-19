@@ -3,14 +3,18 @@
 HTML and Layouts
 
 Typically HTML has bottom-up sizing, where a container is as big as it's contents, so that given
-<div id="outer">
+
+.. code-block :: html
+  :linenos:
+
+  <div id="outer">
     <div id="inner1">
-        Part 1
+      Part 1
     </div>
     <div id="inner2">
-        Part 2
+      Part 2
     </div>
-</div>
+  </div>
 
 inner1 is big enough to hold the text "Part 1", inner2 is big enough to hold the text "Part 2", and outer is big enough to hold the divs. And if outer is bigger than the browser's viewport, the browser window displays a scrollbar. The web page you're reading now uses that layout, and unless your monitor is 3 feet tall (in which case, we envy you!) you see the scrollbar on the right.
 
@@ -48,13 +52,13 @@ There are three types of elements in that picture:
 
 So keeping those rules in mind and picking which widgets to use it will look like:
 
-    * LayoutContainer
-          o Toolbar
-          o Horizontal Split Container
-                + Accordion Container
-                      # ContentPane #1
-                      # ContentPane #2
-                      # ContentPane #3
-                + Vertical Split Container
-                      # Content Pane #4
-                      # Content Pane #5
+* LayoutContainer
+    o Toolbar
+    o Horizontal Split Container
+        + Accordion Container
+            # ContentPane #1
+            # ContentPane #2
+            # ContentPane #3
+        + Vertical Split Container
+            # Content Pane #4
+            # Content Pane #5
