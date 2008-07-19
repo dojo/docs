@@ -1,8 +1,10 @@
-## page was renamed from dojo/forEach
 #format dojo_rst
 
 dojo.forEach
 ============
+
+:Status: Contributed, Draft
+:Version: 1.0
 
 JavaScript 1.6 has a forEach loop, where you can apply a certain function to each element of an array. Unfortunately at the time of this writing, only Firefox 2 has support for JS 1.6. But never fear! Dojo has defined one you can use in any Dojo-supported browser.
 
