@@ -1,5 +1,8 @@
 #format dojo_rst
 
+dojo.addOnLoad
+==============
+
 :Status: Contributed, Draft
 :Version: 1.0
 
