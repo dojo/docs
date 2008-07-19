@@ -19,8 +19,8 @@ Examples
   .. cv:: javascript
 
     <script type="text/javascript">
-      dojo.require("dijit.layout.BorderContainer");
       dojo.require("dijit.layout.ContentPane");
+      dojo.require("dijit.layout.BorderContainer");
     </script>
 
   The markup has to look as follows
