@@ -53,12 +53,17 @@ There are three types of elements in that picture:
 So keeping those rules in mind and picking which widgets to use it will look like:
 
 * LayoutContainer
-    o Toolbar
-    o Horizontal Split Container
-        + Accordion Container
-            # ContentPane #1
-            # ContentPane #2
-            # ContentPane #3
-        + Vertical Split Container
-            # Content Pane #4
-            # Content Pane #5
+    
+    * Toolbar
+    * Horizontal Split Container
+
+        * Accordion Container
+
+            * ContentPane #1
+            * ContentPane #2
+            * ContentPane #3
+
+        * Vertical Split Container
+
+            * Content Pane #4
+            * Content Pane #5
