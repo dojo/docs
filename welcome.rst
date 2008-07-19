@@ -14,7 +14,7 @@ Use the search box, it is very helpful and usually brings you to the page you ne
 
 The documentation is aiming to cover all dojo modules delivered within a release. If you are missing things or have ideas, don't hesitate to contact the documentation team.
 
----
+----
 
 Installation
 ------------
