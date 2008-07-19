@@ -1,5 +1,7 @@
 #format rst
 
+[[SystemInfo]]
+
 :Status: Contributed
 
 .. image:: http://media.dojocampus.org/images/docs/logodojocdocssmall.png
