@@ -28,9 +28,19 @@ Examples
   .. cv:: html
     :label: A dijit button
     
-    <div style="width: 100%; height: 400px; border: 1px #ccc solid;">
-      <div dojoType="dijit.layout.BorderContainer" design="sidebar" gutters="true" liveSplitters="true" style="width: 100%; height: 100%; border: 1px #ccc solid">
+    <div style="position: absolute; width: 100%; height: 400px; border: 1px #ccc solid;">
+      <div dojoType="dijit.layout.BorderContainer" design="sidebar" gutters="true" liveSplitters="true" id="borderContainer">
         <div dojoType="dijit.layout.ContentPane" splitter="true" region="leading" style="width: 100px;">Hi</div>
         <div dojoType="dijit.layout.ContentPane" splitter="true" region="center">Hi</div>
       </div>
     </div>
+
+  .. cv:: css
+    :label: A simple set of css rules
+
+    <style type="text/css">
+      #borderContainer {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
