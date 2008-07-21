@@ -31,6 +31,7 @@ Examples
     <div style="position: relative; width: 100%; height: 400px; border: 1px #ccc solid;">
       <div dojoType="dijit.layout.BorderContainer" design="sidebar" gutters="true" liveSplitters="true" id="borderContainer">
         <div dojoType="dijit.layout.ContentPane" splitter="true" region="leading" style="width: 100px;">Hi</div>
+        <div dojoType="dijit.layout.ContentPane" splitter="true" region="center">Hi, I'm center</div>
       </div>
     </div>
 
