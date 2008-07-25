@@ -34,7 +34,7 @@ If you pass dojo.byId a string, and no domNode is found to match, ''undefined'' 
 
 JavaScript has a fun convention for conditionals inline. Imagine wanting a domNode reference, and if not present, default to some other node:
 
-.. code-block ::javascript
+.. code-block :: javascript
 
   var othernode = dojo.byId("fallbackNode");
   var node = dojo.byId("missingNode") || othernode;
