@@ -23,7 +23,7 @@ If you pass byId a domNode reference, the same node is returned:
 
 If you pass dojo.byId a string, and no domNode is found to match, ''undefined'' is returned, which is adequate truthiness to use conditionally:
 
-.. code-block ::javascript
+.. code-block :: javascript
 
   var node = dojo.byId("fooBar");
   if(node){
