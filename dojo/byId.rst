@@ -1,5 +1,11 @@
 #format dojo_rst
 
+dojo.addOnLoad
+==============
+
+:Status: Contributed, Draft
+:Version: 1.0
+
 This is a simple alias to ''document.getElementById'', which not only is shorted to write, but fortunately works in all browsers. It turns a domNode reference to some Node byId, or the same node reference if passed a domNode. 
 
 (need help with code blocks)
@@ -15,6 +21,7 @@ dojo.byId("someNode").innerHTML = "Hello World";
 If you pass byId a domNode reference, the same node is returned:
 
 .. code-block :: javascript
+  :linenos:
 
   var node = dojo.byId("someNode");
   var other = dojo.byId(node);
