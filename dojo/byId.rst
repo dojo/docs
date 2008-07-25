@@ -14,7 +14,7 @@ dojo.byId("someNode").innerHTML = "Hello World";
 
 If you pass byId a domNode reference, the same node is returned:
 
-.. code-block ::javascript
+.. code-block :: javascript
 
   var node = dojo.byId("someNode");
   var other = dojo.byId(node);
