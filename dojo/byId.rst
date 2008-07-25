@@ -14,10 +14,10 @@ If you pass byId a domNode reference, the same node is returned:
 
 .. code-block ::javascript
     :2:
-var node = dojo.byId("someNode");
-var other = dojo.byId(node);
-console.log(node == other);
->>> true
+  var node = dojo.byId("someNode");
+  var other = dojo.byId(node);
+  console.log(node == other);
+  >>> true
 
 If you pass dojo.byId a string, and no domNode is found to match, ''undefined'' is returned, which is adequate truthiness to use conditionally:
 
