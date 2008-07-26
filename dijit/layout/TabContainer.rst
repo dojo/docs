@@ -10,7 +10,7 @@ Examples
 
 .. cv-compound::
 
-  This is a plain TabContainer with three tabs and fixed height
+  This is a plain TabContainer with three tabs and fixed height. The third tab is closable
 
   .. cv:: javascript
 
@@ -30,12 +30,12 @@ Examples
       <div dojoType="dijit.layout.ContentPane" title="My second tab">
         Lorem ipsum and all around - second...
       </div>
-      <div dojoType="dijit.layout.ContentPane" title="My last tab">
+      <div dojoType="dijit.layout.ContentPane" title="My last tab" closable="true">
         Lorem ipsum and all around - last...
       </div>
     </div>
 
-This is a plain TabContainer with three tabs and flexible height using the doLayout="false" attribute
+This is a plain TabContainer with three tabs and flexible height using the doLayout="false" attribute. The second tab is closable.
 
 .. cv-compound::
 
@@ -57,7 +57,7 @@ This is a plain TabContainer with three tabs and flexible height using the doLay
         <div dojoType="dijit.layout.ContentPane" title="My first tab" selected="true">
           Lorem ipsum and all around...
         </div>
-        <div dojoType="dijit.layout.ContentPane" title="My second tab">
+        <div dojoType="dijit.layout.ContentPane" title="My second tab" closable="true">
           Lorem ipsum and all around - second...
           <br />
           Hmmm expanding tabs......
