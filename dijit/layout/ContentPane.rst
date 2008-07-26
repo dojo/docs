@@ -13,14 +13,12 @@ Examples
 .. cv-compound::
 
   .. cv:: javascript
-    :title: A simple ContentPane
 
     <script type="text/jscript">
     dojo.require("dijit.layout.ContentPane");
     </script>
 
   .. cv:: html
-    :title: The markup
 
     <div dojoType="dijit.layout.ContentPane">
       Hi, pretty boring huh?
