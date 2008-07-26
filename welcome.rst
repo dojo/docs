@@ -61,6 +61,7 @@ Dijit
   * `dijit.layout.ContentPane <dijit/layout/ContentPane>`_
   * `dijit.layout.BorderContainer <dijit/layout/BorderContainer>`_
   * `dijit.layout.AccordionContainer <dijit/layout/AccordionContainer>`_
+  * `dijit.layout.TabContainer <dijit/layout/TabContainer>`_
 
 Dojox
 -----
