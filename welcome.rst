@@ -19,17 +19,17 @@ The documentation is aiming to cover all dojo modules delivered within a release
 Installation
 ------------
 
-* `How to Install the Dojo Toolkit <Install>`_
+* `How to Install the Dojo Toolkit <1.2/install>`_
 
 Getting started
 ---------------
 
-* `Dijit layout <quickstart/dijit/layout>`_
-* `Back buttons <quickstart/dijit/layout>`_
-* `AJAX <quickstart/dijit/layout>`_
-* `Charting <quickstart/charting>`_
-* `Data stores <quickstart/dijit/layout>`_
-* `The event system <quickstart/dijit/layout>`_
+* `Dijit layout <1.2/quickstart/dijit/layout>`_
+* `Back buttons <1.2/quickstart/dijit/layout>`_
+* `AJAX <1.2/quickstart/dijit/layout>`_
+* `Charting <1.2/quickstart/charting>`_
+* `Data stores <1.2/quickstart/dijit/layout>`_
+* `The event system <1.2/quickstart/dijit/layout>`_
 
 ----
 
