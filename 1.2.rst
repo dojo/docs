@@ -1,4 +1,4 @@
-#format #dojo_rst
+#format dojo_rst
 
 Dojo release 1.2
 ================
