@@ -24,12 +24,12 @@ Installation
 Getting started
 ---------------
 
-* `Dijit layout <1.2/quickstart/dijit/layout>`_
-* `Back buttons <1.2/quickstart/dijit/layout>`_
-* `AJAX <1.2/quickstart/dijit/layout>`_
+* `UI Development <1.2/quickstart/interfacedesign>`_
+* `Back buttons <1.2/quickstart/back>`_
+* `AJAX <1.2/quickstart/ajax>`_
 * `Charting <1.2/quickstart/charting>`_
-* `Data stores <1.2/quickstart/dijit/layout>`_
-* `The event system <1.2/quickstart/dijit/layout>`_
+* `Data stores <1.2/quickstart/data>`_
+* `The event system <1.2/quickstart/events>`_
 
 ----
 
