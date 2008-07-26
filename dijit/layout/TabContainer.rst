@@ -23,7 +23,7 @@ Examples
 
   .. cv :: html
 
-    <div dojoType="dijit.layout.TabContainer">
+    <div dojoType="dijit.layout.TabContainer" style="width: 100%; height: 100px;">
       <div dojoType="dijit.layout.ContentPane" title="My first tab" selected="true">
         Lorem ipsum and all around...
       </div>
