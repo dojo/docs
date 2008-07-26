@@ -32,8 +32,8 @@ Getting started
 
 ----
 
-Dojo                                                 
-----
+Dojo reference                                                 
+--------------
 
 * `dojo <1.2/dojo>`_
 * `dojo._base <1.2/dojo/base>`_
@@ -57,8 +57,8 @@ Dojo
 * `dojo.query <1.2/dojo/query>`_
 * `dojo.require <1.2/dojo/require>`_
 
-Dijit
------
+Dijit reference
+---------------
 
 * `dijit <1.2/dijit>`_
 * `dijit.Dialog <1.2/dijit/Dialog>`_
@@ -69,8 +69,8 @@ Dijit
   * `dijit.layout.AccordionContainer <1.2/dijit/layout/AccordionContainer>`_
   * `dijit.layout.TabContainer <1.2/dijit/layout/TabContainer>`_
 
-Dojox
------
+Dojox reference
+---------------
 
 * `dojox <1.2/dojox>`_
 * `dojox.grid <1.2/dojox/grid>`_
