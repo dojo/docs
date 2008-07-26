@@ -17,6 +17,7 @@ Examples
     </script>
 
   .. cv:: html
+
     <div style="width: 200px">
       <div dojoType="dijit.layout.AccordionContainer" style="height: 400px;">
         <div dojoType="dijit.layout.AccordionPane" title="Heeh, this is an accordion pane">
