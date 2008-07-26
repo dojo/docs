@@ -25,6 +25,10 @@ Getting started
 ---------------
 
 * `Dijit layout <quickstart/dijit/layout>`_
+* `Back buttons <quickstart/dijit/layout>`_
+* `AJAX <quickstart/dijit/layout>`_
+* `Charting <quickstart/dijit/layout>`_
+* `Data stores <quickstart/dijit/layout>`_
 
 Dojo                                                 
 ----
