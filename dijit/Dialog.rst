@@ -31,7 +31,8 @@ Examples
     dojo.addOnLoad(function(){	
       // create the dialog
       firstDlg = new dijit.Dialog({
-          title: "Programatic Dialog Creation"
+          title: "Programatic Dialog Creation",
+          style: "width: 300px",
 	}, "dialogOne");
 
       // connect t the button so we display the dialog onclick
@@ -61,7 +62,8 @@ Examples
     dojo.addOnLoad(function(){	
       // create the dialog
       secondDlg = new dijit.Dialog({
-          title: "Programatic Dialog Creation"
+          title: "Programatic Dialog Creation",
+          style: "width: 300px"
 	});
 
       // set the content of the dialog 
