@@ -21,7 +21,7 @@ Examples
 
   The html is very simple
 
-  .. cv :: html
+  .. cv:: html
 
     <div dojoType="dijit.layout.TabContainer" style="width: 100%; height: 100px;">
       <div dojoType="dijit.layout.ContentPane" title="My first tab" selected="true">
