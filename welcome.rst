@@ -27,7 +27,7 @@ Getting started
 * `Dijit layout <quickstart/dijit/layout>`_
 * `Back buttons <quickstart/dijit/layout>`_
 * `AJAX <quickstart/dijit/layout>`_
-* `Charting <quickstart/dijit/layout>`_
+* `Charting <quickstart/charting>`_
 * `Data stores <quickstart/dijit/layout>`_
 * `The event system <quickstart/dijit/layout>`_
 
