@@ -30,6 +30,8 @@ Getting started
 * `Charting <quickstart/dijit/layout>`_
 * `Data stores <quickstart/dijit/layout>`_
 
+----
+
 Dojo                                                 
 ----
 
