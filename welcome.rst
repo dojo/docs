@@ -29,6 +29,7 @@ Getting started
 * `AJAX <quickstart/dijit/layout>`_
 * `Charting <quickstart/dijit/layout>`_
 * `Data stores <quickstart/dijit/layout>`_
+* `The event system <quickstart/dijit/layout>`_
 
 ----
 
