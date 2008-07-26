@@ -35,9 +35,9 @@ Examples
       </div>
     </div>
 
-.. cv-compound::
+This is a plain TabContainer with three tabs and flexible height using the doLayout="false" attribute
 
-  This is a plain TabContainer with three tabs and flexible height using the doLayout="false" attribute
+.. cv-compound::
 
   .. cv:: javascript
 
@@ -51,7 +51,7 @@ Examples
   .. cv :: html
     
     <!-- this div is only for documentation purpose, in real development environments, just take it out -->
-    <div style="height: 50px;">
+    <div style="height: 100px;">
 
       <div dojoType="dijit.layout.TabContainer" style="width: 100%;" doLayout="false">
         <div dojoType="dijit.layout.ContentPane" title="My first tab" selected="true">
@@ -74,9 +74,9 @@ Examples
     <!-- end of the div -->
     </div>
 
-.. cv-compound::
+This is a plain TabContainer with three tabs, fixed height and a tab strip. The tabstrip is especially useful when the TabContainer is child of a BorderContainer.
 
-  This is a plain TabContainer with three tabs, fixed height and a tab strip. The tabstrip is especially useful when the TabContainer is child of a BorderContainer.
+.. cv-compound::
 
   .. cv:: javascript
 
@@ -103,9 +103,9 @@ Examples
 
 The doLayout attribute currently only works for top tabs, left/bottom/right tabs don't support it. You can set a tab strip on every tab type though. Following a few examples with left/bottom/right tabs using tabStrip here and there.
 
-.. cv-compound::
+Tabs at the right, no strip 
 
-  Tabs at the right, no strip 
+.. cv-compound::
 
   .. cv:: javascript
 
@@ -130,9 +130,9 @@ The doLayout attribute currently only works for top tabs, left/bottom/right tabs
       </div>
     </div>
 
-.. cv-compound::
+Tabs at the left, with a strip 
 
-  Tabs at the left, with a strip 
+.. cv-compound::
 
   .. cv:: javascript
 
@@ -157,9 +157,9 @@ The doLayout attribute currently only works for top tabs, left/bottom/right tabs
       </div>
     </div>
 
-.. cv-compound::
+Tabs at the bottom,with a strip 
 
-  Tabs at the bottom,with a strip 
+.. cv-compound::
 
   .. cv:: javascript
 
