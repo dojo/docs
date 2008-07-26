@@ -77,6 +77,8 @@ Dojox reference
 * `dojox.grid <1.2/dojox/grid>`_
 * `dojox.rpc <1.2/dojox/rpc>`_
 
+----
+
 Documentation guidelines
 ------------------------
 
