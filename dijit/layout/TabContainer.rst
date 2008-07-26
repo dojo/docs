@@ -49,23 +49,29 @@ Examples
   The html is very simple
 
   .. cv :: html
+    
+    <!-- this div is only for documentation purpose, in real development environments, just take it out -->
+    <div style="height: 50px;">
 
-    <div dojoType="dijit.layout.TabContainer" style="width: 100%;" doLayout="false">
-      <div dojoType="dijit.layout.ContentPane" title="My first tab" selected="true">
-        Lorem ipsum and all around...
+      <div dojoType="dijit.layout.TabContainer" style="width: 100%;" doLayout="false">
+        <div dojoType="dijit.layout.ContentPane" title="My first tab" selected="true">
+          Lorem ipsum and all around...
+        </div>
+        <div dojoType="dijit.layout.ContentPane" title="My second tab">
+          Lorem ipsum and all around - second...
+          <br />
+          Hmmm expanding tabs......
+        </div>
+        <div dojoType="dijit.layout.ContentPane" title="My last tab">
+          Lorem ipsum and all around - last...
+          <br />
+          <br />
+          <br />
+          Hmmm even more expanding tabs......
+        </div>
       </div>
-      <div dojoType="dijit.layout.ContentPane" title="My second tab">
-        Lorem ipsum and all around - second...
-        <br />
-        Hmmm expanding tabs......
-      </div>
-      <div dojoType="dijit.layout.ContentPane" title="My last tab">
-        Lorem ipsum and all around - last...
-        <br />
-        <br />
-        <br />
-        Hmmm even more expanding tabs......
-      </div>
+
+    <!-- end of the div -->
     </div>
 
 .. cv-compound::
