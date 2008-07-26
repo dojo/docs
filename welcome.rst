@@ -54,7 +54,7 @@ Dojo
 Dijit
 -----
 
-* `dijit <d1.2/ijit>`_
+* `dijit <1.2/dijit>`_
 * `dijit.Dialog <1.2/dijit/Dialog>`_
 * `dijit.layout <1.2/dijit/layout>`_
 
