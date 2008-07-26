@@ -17,15 +17,16 @@ Examples
     </script>
 
   .. cv:: html
-
-    <div dojoType="dijit.layout.AccordionContainer" style="height: 400px; width: 200px;">
-      <div dojoType="dijit.layout.AccordionPane" title="Heeh, this is an accordion pane">
-      Hi!
-      </div>
-      <div dojoType="dijit.layout.AccordionPane" title="Heeh, this is an accordion pane" selected="true">
-      Hi how are you?
-      </div>
-      <div dojoType="dijit.layout.AccordionPane" title="Heeh, this is an accordion pane">
-      Hi how are you? .....Great, thx
+    <div style="width: 200px">
+      <div dojoType="dijit.layout.AccordionContainer" style="height: 400px;">
+        <div dojoType="dijit.layout.AccordionPane" title="Heeh, this is an accordion pane">
+        Hi!
+        </div>
+        <div dojoType="dijit.layout.AccordionPane" title="This is as well" selected="true">
+        Hi how are you?
+        </div>
+        <div dojoType="dijit.layout.AccordionPane" title="This too">
+        Hi how are you? .....Great, thx
+        </div>
       </div>
     </div>
