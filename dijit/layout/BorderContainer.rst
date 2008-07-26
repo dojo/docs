@@ -63,7 +63,8 @@ Lets take a look at a more advanced example of using BorderContainer and other l
   .. cv:: html
     :label: A dijit button
 
-    <div dojoType="dijit.layout.BorderContainer" gutters=true>
+    <div style="position: relative; width: 100%; height: 400px; border: 1px #ccc solid;">
+    <div dojoType="dijit.layout.BorderContainer" gutters="true" id="borderContainerTwo" >
       <div dojoType="dijit.layout.ContentPane" region="top" splitter="false">
         This test is to make sure nested layout elements work fine in regards to double borders etc. You need a screen with a very high resolution to not get cramped tabs and other weird visual effects 
       </div>	
@@ -91,3 +92,14 @@ Lets take a look at a more advanced example of using BorderContainer and other l
         </div>
       </div>
     </div>
+    </div>
+
+  .. cv:: css
+    :label: A simple set of css rules
+
+    <style type="text/css">
+      #borderContainerTwo {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
