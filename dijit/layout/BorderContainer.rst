@@ -79,7 +79,7 @@ Lets take a look at a more advanced example of using BorderContainer and other l
           <div dojoType="dijit.layout.AccordionPane" title="Color Picker">
           </div>
         </div><!-- end AccordionContainer -->
-        <div dojoType="dijit.layout.TabContainer" region="center">
+        <div dojoType="dijit.layout.TabContainer" region="center" tabStrip="true">
           <div dojoType="dijit.layout.ContentPane" title="My first tab" selected="true">
             Lorem ipsum and all around...
           </div>
