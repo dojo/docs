@@ -1,5 +1,8 @@
 #format dojo_rst
 
+dijit.layout
+============
+
 HTML and Layouts
 
 Typically HTML has bottom-up sizing, where a container is as big as it's contents, so that given
