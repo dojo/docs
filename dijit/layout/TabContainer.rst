@@ -8,7 +8,7 @@ A TabContainer is a container that has multiple panes, but shows only one pane a
 Examples
 --------
 
-.. cv-compund::
+.. cv-compound::
 
   This is a plain TabContaienr with three tabs
 
@@ -19,7 +19,7 @@ Examples
     dojo.require("dijit.layout.ContentPane");
     </script>
 
-  The html ir very simple
+  The html is very simple
 
   .. cv :: html
 
