@@ -66,17 +66,17 @@ Lets take a look at a more advanced example of using BorderContainer and other l
     <div style="position: relative; width: 100%; height: 400px; border: 1px #ccc solid;">
     <div dojoType="dijit.layout.BorderContainer" gutters="true" id="borderContainerTwo" >
       <div dojoType="dijit.layout.ContentPane" region="top" splitter="false">
-        This test is to make sure nested layout elements work fine in regards to double borders etc. You need a screen with a very high resolution to not get cramped tabs and other weird visual effects 
+        Hi, usually here you would habe important information, maybe your company logo, or functions you need to access all the time..  
       </div>	
       <div dojoType="dijit.layout.BorderContainer" liveSplitters="false" design="sidebar" region="center" id="mainSplit">
         <div dojoType="dijit.layout.AccordionContainer" minSize="20" style="width: 300px;" id="leftAccordion" region="leading" splitter="true">
-          <div dojoType="dijit.layout.AccordionPane" title="Popups and Alerts">
+          <div dojoType="dijit.layout.AccordionPane" title="One fancy Pane">
           </div>
-          <div dojoType="dijit.layout.AccordionPane" title="Dojo Tree from Store">
+          <div dojoType="dijit.layout.AccordionPane" title="Another one">
           </div>
-          <div dojoType="dijit.layout.AccordionPane" title="Calendar" selected="true">
+          <div dojoType="dijit.layout.AccordionPane" title="Even more fancy" selected="true">
           </div>
-          <div dojoType="dijit.layout.AccordionPane" title="Color Picker">
+          <div dojoType="dijit.layout.AccordionPane" title="Last, but not least">
           </div>
         </div><!-- end AccordionContainer -->
         <div dojoType="dijit.layout.TabContainer" region="center" tabStrip="true">
