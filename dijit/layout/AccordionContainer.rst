@@ -14,19 +14,18 @@ Examples
 
     <script type"text/jkavascript">
     dojo.require("dijit.layout.AccordionContainer");
-    dojo.require("dijit.layout.ContentPane");
     </script>
 
   .. cv:: html
 
     <div dojoType="dijit.layout.AccordionContainer" style="height: 100px;">
-      <div dojoType="dijit.layout.ContentPane" title="Heeh, this is an accordion pane">
+      <div dojoType="dijit.layout.AccordionPane" title="Heeh, this is an accordion pane">
       Hi!
       </div>
-      <div dojoType="dijit.layout.ContentPane" title="Heeh, this is an accordion pane" selected="true">
+      <div dojoType="dijit.layout.AccordionPane" title="Heeh, this is an accordion pane" selected="true">
       Hi how are you?
       </div>
-      <div dojoType="dijit.layout.ContentPane" title="Heeh, this is an accordion pane">
+      <div dojoType="dijit.layout.AccordionPane" title="Heeh, this is an accordion pane">
       Hi how are you? .....Great, thx
       </div>
     </div>
