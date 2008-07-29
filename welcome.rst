@@ -24,58 +24,58 @@ Installation
 Getting started
 ---------------
 
-* `UI Development <1.2/quickstart/interfacedesign>`_
-* `Back buttons <1.2/quickstart/back>`_
-* `AJAX <1.2/quickstart/ajax>`_
-* `Charting <1.2/quickstart/charting>`_
-* `Data stores <1.2/quickstart/data>`_
-* `The event system <1.2/quickstart/events>`_
+* `UI Development <quickstart/interfacedesign>`_
+* `Back buttons <quickstart/back>`_
+* `AJAX <quickstart/ajax>`_
+* `Charting <quickstart/charting>`_
+* `Data stores <quickstart/data>`_
+* `The event system <quickstart/events>`_
 
 ----
 
 Dojo reference                                                 
 --------------
 
-* `dojo <1.2/dojo>`_
-* `dojo._base <1.2/dojo/base>`_
-* `dojo.addOnLoad <1.2/dojo/addOnLoad>`_
-* `dojo.array <1.2/dojo/array>`_
-* `dojo.browser <1.2/dojo/browser>`_
-* `dojo.Color <1.2/dojo/Color>`_
-* `dojo.declare <1.2/dojo/declare>`_
-* `dojo.Deferred <1.2/dojo/Deferred>`_
-* `dojo.event <1.2/dojo/event>`_
-* `dojo.fx <1.2/dojo/fx>`_
-* `dojo.html <1.2/dojo/html>`_
-* `dojo.json <1.2/dojo/json>`_
-* `dojo.lang <1.2/dojo/lang>`_
-* `dojo.NodeList <1.2/dojo/NodeList>`_
-* `dojo.window <1.2/dojo/window>`_
-* `dojo.xhr <1.2/dojo/xhr>`_
-* `dojo.byId <1.2/dojo/byId>`_
-* `dojo.connect <1.2/dojo/connect>`_
-* `dojo.forEach <1.2/dojo/forEach>`_
-* `dojo.query <1.2/dojo/query>`_
-* `dojo.require <1.2/dojo/require>`_
+* `dojo <dojo>`_
+* `dojo._base <dojo/base>`_
+* `dojo.addOnLoad <dojo/addOnLoad>`_
+* `dojo.array <dojo/array>`_
+* `dojo.browser <dojo/browser>`_
+* `dojo.Color <dojo/Color>`_
+* `dojo.declare <dojo/declare>`_
+* `dojo.Deferred <dojo/Deferred>`_
+* `dojo.event <dojo/event>`_
+* `dojo.fx <dojo/fx>`_
+* `dojo.html <dojo/html>`_
+* `dojo.json <dojo/json>`_
+* `dojo.lang <dojo/lang>`_
+* `dojo.NodeList <dojo/NodeList>`_
+* `dojo.window <dojo/window>`_
+* `dojo.xhr <dojo/xhr>`_
+* `dojo.byId <dojo/byId>`_
+* `dojo.connect <dojo/connect>`_
+* `dojo.forEach <dojo/forEach>`_
+* `dojo.query <dojo/query>`_
+* `dojo.require <dojo/require>`_
 
 Dijit reference
 ---------------
 
-* `dijit <1.2/dijit>`_
-* `dijit.Dialog <1.2/dijit/Dialog>`_
-* `dijit.layout <1.2/dijit/layout>`_
+* `dijit <dijit>`_
+* `dijit.Dialog <dijit/Dialog>`_
+* `dijit.layout <dijit/layout>`_
 
-  * `dijit.layout.ContentPane <1.2/dijit/layout/ContentPane>`_
-  * `dijit.layout.BorderContainer <1.2/dijit/layout/BorderContainer>`_
-  * `dijit.layout.AccordionContainer <1.2/dijit/layout/AccordionContainer>`_
-  * `dijit.layout.TabContainer <1.2/dijit/layout/TabContainer>`_
+  * `dijit.layout.ContentPane <dijit/layout/ContentPane>`_
+  * `dijit.layout.BorderContainer <dijit/layout/BorderContainer>`_
+  * `dijit.layout.AccordionContainer <dijit/layout/AccordionContainer>`_
+  * `dijit.layout.TabContainer <dijit/layout/TabContainer>`_
 
 Dojox reference
 ---------------
 
-* `dojox <1.2/dojox>`_
-* `dojox.grid <1.2/dojox/grid>`_
-* `dojox.rpc <1.2/dojox/rpc>`_
+* `dojox <dojox>`_
+* `dojox.grid <dojox/grid>`_
+* `dojox.rpc <dojox/rpc>`_
 
 ----
 
