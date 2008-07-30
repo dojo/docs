@@ -19,7 +19,7 @@ The documentation is aiming to cover all dojo modules delivered within a release
 Installation
 ------------
 
-* `How to Install the Dojo Toolkit <1.2/install>`_
+* `How to Install the Dojo Toolkit <install>`_
 
 Getting started
 ---------------
