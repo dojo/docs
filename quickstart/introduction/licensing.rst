@@ -3,8 +3,8 @@
 Dojo licensing
 ==============
 
-Status: Draft
-Version: 1.2
+:Status: Draft
+:Version: 1.2
 
 **You may use Dojo in commercial software without obtaining a separate license or incurring other obligations.**
 
@@ -18,7 +18,9 @@ The Role of the Dojo Foundation
 Dojo is Open Source software, distributed by a non-profit foundation which has been set up for the purpose of providing a vendor-neutral owner of Dojo intellectual property. In order to ensure to users of Foundation projects that there is no ambiguity or hidden liability regarding the use of Foundation code, all contributors are required to provide signed Contributor License Agreements.
 
 All committers on Dojo Foundation projects have a vote in Foundation matters. The Foundation is run by contributors, operates in a transparent way, and is funded exclusively by donations. The licensing goals of the Foundations are briefly covered on the Foundation page.
+
 Third-Party Licenses
+--------------------
 
 Dojo uses code from other open source projects, subject to the terms of their licenses. Those licenses and software copyright notices are listed below:
 
