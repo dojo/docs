@@ -144,4 +144,28 @@ The valid reST syntax has to look like following markup:
       * Programmatic code generation
       * Dom manipulation
 
+    .. cv:: html
+      :label: This is the HTML of the example
+
+      <div id="fohooo" class="fohooo">Click Me</div>
+      <div id="fohooooooo" class="fohooo">Don't click Me</div>
+      <div dojoType="foohooo" class="fohooo">Or Me</div>
+
+    This is the jscript code of your example. Simple past both HMTL and Jscript into the browser.
+
+    .. cv:: javascript
+      :label: And the jscript code
+
+      <script type="text/javascript">
+      dojo.declare("foohooo", [dijit._Widget,dijit._Templated], {
+         templateString: '<div dojoAttachEvent="onclick: _foo">Example: <span dojoAttachPoint="containerNode"></span></div>',
+         _foo: function(){
+          alert("foo");
+         }  
+      });
+      dojo.addOnLoad(function(){
+        var widget = new foohooo({id: "test_foohooo"}, dojo.byId("fohooo"));
+      });
+      </script>
+
 Hi
