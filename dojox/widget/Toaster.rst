@@ -39,7 +39,7 @@ The first example uses setContent() and show() to vary the message and display i
        dojo.require("dojo.parser");
 
        function surpriseMe() {
-          dijit.byId('toast').setContent('Twinkies are now being served in the vending machine!','fatal',500);
+          dijit.byId('toast').setContent('Twinkies are now being served in the vending machine!','fatal');
           dijit.byId('toast').show();
        }
     </script>
