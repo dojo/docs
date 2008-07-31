@@ -42,6 +42,32 @@ The first example uses setContent() and show() to vary the message and display i
           dijit.byId('toast').setContent('Twinkies are now being served in the vending machine!','fatal');
           dijit.byId('toast').show();
        }
+
+       var toast = null;
+		function showTestMessage(){
+			dojo.publish("testMessageTopic", 
+				[ "This is a message! It's kind of long to show message wrapping."]
+			);
+		}
+		function showAnotherMessage(){
+			dojo.publish("testMessageTopic", 
+				[{
+					message: "This is another message!", 
+					type: "warning", 
+					duration: 500
+				}]
+			);
+		}
+		function showYetAnotherMessage(){
+			dojo.publish("testMessageTopic", 
+				[{ message: "This is yet another message!" }]
+			);
+		}
+
+		dojo.addOnLoad(function(){
+			toast = dijit.byId("toast");
+		});
+
     </script>
 
   The html is very simple
@@ -53,3 +79,18 @@ The first example uses setContent() and show() to vary the message and display i
          positionDirection="br-left" >
     </div>
     <input type="button" onclick="surpriseMe()" value="Click here"/>
+
+     <div dojoType="dojox.widget.Toaster" id="toast" 
+		positionDirection="br-left" duration="0" 
+		messageTopic="testMessageTopic"></div>
+
+	<div dojoType="dojox.widget.Toaster" id="toast2" 
+		separator="&lt;hr&gt;" positionDirection="bl-up" 
+		messageTopic="testMessageTopic"></div>
+
+	<button type="submit" 
+		onclick="showTestMessage();">Click to show message</button>
+	<button type="submit" 
+		onclick="showAnotherMessage();">Click to show another message</button>
+	<button type="submit" 
+		onclick="showYetAnotherMessage();">Click to show yet another message</button>
