@@ -14,6 +14,8 @@ Joining the Dojo doc team is easy, all you need to do is write and get familiar 
 
 Dojo doc uses the reST syntac to describe all docs, we have implemented a few features of the great reST Sphinx extension to provide cool stuff like inline code demos (Yah, you won't believe it, but your code will just work)
 
+`Visit the official reST Quick reference <http://docutils.sourceforge.net/docs/user/rst/quickref.html#hyperlink-targets>`_.
+
 2. Versioning
 
 All you need to to is make sure you target a specific dojo version and note that at the top of the page. This project only aims to cover the latest version of Dojo
