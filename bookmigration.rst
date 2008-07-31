@@ -102,12 +102,12 @@ Dojo Book Outline
 
 * `Part 4: Testing, Tuning and Debugging <http://dojotoolkit.org/book/dojo-book-0-9/part-4-meta-dojo-0>`_.
 
-  * `Getting the Code from Source Control <http://dojotoolkit.org/book/dojo-book-0-9/part-4-meta-dojo/using-subversion>`_.
-  * `Development Tools <http://dojotoolkit.org/book/dojo-book-0-9/part-4-meta-dojo/development-tools>`_.
+  * `Getting the Code from Source Control <http://dojotoolkit.org/book/dojo-book-0-9/part-4-meta-dojo/using-subversion>`_.  maps to: `SVN <quickstart/svn>`_
+  * `Development Tools <http://dojotoolkit.org/book/dojo-book-0-9/part-4-meta-dojo/development-tools>`_.  maps to: `Tools <quickstart/tools>`_
   * `Debugging Facilities <http://dojotoolkit.org/book/dojo-book-0-9/part-4-meta-dojo/debugging-facilities>`_.
-  * `D.O.H. Unit Testing <http://dojotoolkit.org/book/dojo-book-0-9/part-4-meta-dojo/d-o-h-unit-testing>`_.
-  * `Performance Optimization <http://dojotoolkit.org/book/dojo-book-0-9/part-4-meta-dojo/performance-optimization>`_.
-  * `The Package System and Custom Builds <http://dojotoolkit.org/book/dojo-book-0-9/part-4-meta-dojo/package-system-and-custom-builds>`_.
+  * `D.O.H. Unit Testing <http://dojotoolkit.org/book/dojo-book-0-9/part-4-meta-dojo/d-o-h-unit-testing>`_.  maps to: `Unit testing <quickstart/unittesting>`_
+  * `Performance Optimization <http://dojotoolkit.org/book/dojo-book-0-9/part-4-meta-dojo/performance-optimization>`_.  maps to: `Performance <quickstart/performance>`_
+  * `The Package System and Custom Builds <http://dojotoolkit.org/book/dojo-book-0-9/part-4-meta-dojo/package-system-and-custom-builds>`_.  maps to: `Packaging <quickstart/packaging>`_
 
 * `Part 5: DojoX - Experimental and Specialized Extensions <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox-extensions-dojo-0>`_.
 
