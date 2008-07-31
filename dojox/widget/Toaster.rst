@@ -6,7 +6,7 @@ dojox.widget.Toaster
 :Status: Draft
 :Version: beta
 :Authors: Peter Higgins, ???
-:Documentation Author: Josh Trutwin
+:"Documentation Author": Josh Trutwin
 
 [http://docs.dojocampus.org/dojox/widget Back]
 ==============================================
