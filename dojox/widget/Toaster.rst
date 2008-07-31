@@ -105,17 +105,17 @@ The next example does the same thing, but uses the publish/subscribe model.  The
 Dijit Types, Attributes, Events and Methods
 -------------------------------------------
 
-=========          =========         =============  ===========
+=================  ================  =============  ===========
 Attribute          Data Type         Default Value  Explanation
-=========          =========         =============  ===========
-duration           integer           a              Duration of the message, in ms. 0 means the user must acknowledge the message by clicking on it.
+=================  ================  =============  ===========
+duration           integer           2000           Duration of the message, in ms. 0 means the user must acknowledge the message by clicking on it.
 messageTopic       String or object  -              Subscription topic to monitor. When a page publishes a message on this topic, the toaster will pop up.
 positionDirection  br-up br-left     br-up          Corner from which message slides into screen (e.g. br=bottom right) and direction of slide.
                    bl-up bl-right 
                    tr-down tr-left 
                    tl-down tl-right
 separator          html              <hr>           If more than one unacknowledged message is present separate them with this.
-=========          =========         =============  ===========
+=================  ================  =============  ===========
 
 Events
 ------
