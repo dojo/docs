@@ -37,24 +37,11 @@ As a last standard item you should insert version info::
   :Version: targeted Dojo version
   :Author: Optional mdule author
 
-
-Fame
-----
-
-Writing docs is a lot of work and we all deserve a little portion of dojo fame. Make sure you create your own page in the Wiki with links to your personal blog, website, twitter or other sites
-
-Documentation basics
---------------------
-
-1. Every doc should start with a header, e.g. the dojo module you are documenting.
-2. All docs have to have code examples, what use does a doc have if you can't see examples? ;)
-3. Write
-
 Code examples
 -------------
 
-1. Non executed code
-~~~~~~~~~~~~~~~~~~~~
+Non executed code
+~~~~~~~~~~~~~~~~~
 
 If you need to give a simple source code example without it being executed use the ".. code-block ::" directive and put the code right into the next line inlined by two spaces. If you want to display line numbers, use the "linnos" attribute.
 
@@ -66,8 +53,8 @@ If you need to give a simple source code example without it being executed use t
 
       <script type="text/javascript">alert("Your code");</script>
 
-2. Executed code
-~~~~~~~~~~~~~~~~
+Executed code
+~~~~~~~~~~~~~
 
 You can add real example to the documentation by using the ".. codeviewer::" directive. The code you show can include Javascript, CSS and HTML
 
@@ -91,8 +78,8 @@ This will result in following
      <div dojoType="dijit.form.Button">whatever</div>
   </div>
 
-3. Executed code compounds
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+Executed code compounds
+~~~~~~~~~~~~~~~~~~~~~~~
 
 Sometimes your examples need separation between CSS, JavaScript and HTML. Use the ".. cw-compound::" directive for that. Each compund can include several ".. code-viewer::" directives
 
