@@ -105,6 +105,7 @@ The next example does the same thing, but uses the publish/subscribe model.  The
 Dijit Types, Attributes, Events and Methods
 -------------------------------------------
 
+=========  =========  =============  ===========
 Attribute  Data Type  Default Value  Explanation
 =========  =========  =============  ===========
 duration  integer  2000  Duration of the message, in ms. 0 means the user must acknowledge the message by clicking on it.
