@@ -125,8 +125,9 @@ Sometimes your examples need separation between CSS, JavaScript and HTML. Use th
 
 The valid reST syntax has to look like following markup:
 
-.. code-block :: javascript
-  :linenos:
+
+  .. code-block :: javascript
+    :linenos:
 
   .. cv-compound::
 
