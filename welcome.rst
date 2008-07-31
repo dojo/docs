@@ -21,6 +21,8 @@ The documentation is aiming to cover all dojo modules delivered within a release
   section you can help migrating.
   This message will be updated regularly to reflect the current progress.
 
+  Please read the `documentation howto <howto>`_. before starting writing docs
+
 ----
 
 Installation
