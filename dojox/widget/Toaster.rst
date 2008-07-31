@@ -43,6 +43,10 @@ The first example uses setContent() and show() to vary the message and display i
           dijit.byId('toast').show();
        }
 
+       dojo.addOnLoad(function(){
+          var toassti = new dojox.widget.Toaster({id: "toast", positionDirection:"br-left", duration:"0", messageTopic:"testMessageTopic"});
+       });
+
        var toast = null;
        function showTestMessage(){
        dojo.publish("testMessageTopic", 
@@ -78,10 +82,6 @@ The first example uses setContent() and show() to vary the message and display i
          positionDirection="br-left" >
     </div>
     <input type="button" onclick="surpriseMe()" value="Click here"/>
-
-     <div dojoType="dojox.widget.Toaster" id="toast" 
-		positionDirection="br-left" duration="0" 
-		messageTopic="testMessageTopic"></div>
 
 	<div dojoType="dojox.widget.Toaster" id="toast2" 
 		separator="&lt;hr&gt;" positionDirection="bl-up" 
