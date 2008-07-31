@@ -9,5 +9,5 @@ dojox.widget
 
 This is a collection of standalone widgets for use in your website.  Each individual widget is independent of the others.
 
-`dojox.widget.Toaster <toaster>`_
-=================================
+`dojox.widget.Toaster <widget/toaster>`_
+========================================
