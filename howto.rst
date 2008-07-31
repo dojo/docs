@@ -147,5 +147,9 @@ The valid reST syntax has to look like following markup:
     .. cv:: html
       :label: This is the HTML of the example
 
+      <div id="fohooo" class="fohooo">Click Me</div>
+      <div id="fohooooooo" class="fohooo">Don't click Me</div>
+      <div dojoType="foohooo" class="fohooo">Or Me</div>
+
 
 Hi
