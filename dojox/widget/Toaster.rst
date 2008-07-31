@@ -5,11 +5,8 @@ dojox.widget.Toaster
 
 :Status: Draft
 :Version: beta
-:Authors: Peter Higgins, ???
+:Authors: Peter Higgins
 :Documentation: Josh Trutwin, Peter Higgins
-
-[http://docs.dojocampus.org/dojox/widget Back]
-==============================================
 
 A toaster is an inobtrusive mechanism for displaying messages, and has become popular in recent years. Like toast, the message "pops up" in the window corner, temporarily overlaying any content there. The message stays up for a certain duration, or until the user clicks on it.
 
