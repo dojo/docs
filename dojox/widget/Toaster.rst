@@ -102,6 +102,70 @@ The next example does the same thing, but uses the publish/subscribe model.  The
     </div>
     <input type="button" onclick="surpriseMe()" value="Click here for Publish Subscribe toaster"/>
 
+This example builds a Toaster programatically and lets you set params. 
+
+.. cv-compound::
+
+  A stylesheet is required for Toasters to render properly
+
+  .. cv:: css
+
+    <link rel="stylesheet" type="text/css" href="/moin_static163/js/dojo/trunk/dojox/widget/Toaster/Toaster.css" >
+
+  Javascript
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+       dojo.require("dojox.widget.Toaster");
+       dojo.require("dojo.parser");
+
+       function showMyToaster() {
+          toaster = dijit.byId('myToaster');
+          pos = dojo.byId('myPosition');
+          type = dojo.byId('myMessageType');
+
+          toaster.duration = dojo.byId('myDuration');
+          toaster.positionDirection = pos.options[pos.selectedIndex].value;
+          toaster.defaultType = type.options[type.selectedIndex].value;
+          toaster.setContent(dojo.byId('myToasterMsg').value, 'fatal');
+          toaster.show();
+       }
+
+       dojo.addOnLoad(function() {
+          // create a toaster
+          var myToaster = new dojox.widget.Toaster({
+             id: 'myToaster',
+          }, dojo.byId('ToasterPane'));
+       });
+    </script>
+
+  The html creates an empty div to place the new Toaster instance into.  The rest is basic form stuff to parameterize the toaster.
+
+  .. cv:: html
+
+    <div id="ToasterPane"></div>
+    </div>
+    Position: 
+    <select id="myPosition" name="myPosition">
+      <option value="br-up">br-up</option>
+      <option value="br-left">br-left</option>
+      <option value="bl-up">bl-up</option>
+      <option value="bl-right">bl-right</option>
+      <option value="tr-down">tr-down</option>
+      <option value="tr-left">tr-left</option>
+      <option value="tl-down">tl-down</option>
+      <option value="tl-right">tl-right</option>
+    </select><br />
+    <select id="myMessageType" name="myMessageType">
+      <option value="message">message</option>
+      <option value="message">warning</option>
+      <option value="error">error</option>
+      <option value="fatal">fatal</option>
+    </select><br />
+    Duration: <input type="text" id="myDuration" name="myDuration" value="2000"/><br />
+    <input type="button" onclick="showMyToaster()" value="Click here to see YOUR Toaster"/>
+
 Additional Considerations:
 
 - Toasters defined in Dialogs
