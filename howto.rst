@@ -144,6 +144,8 @@ The valid reST syntax has to look like following markup:
       * Programmatic code generation
       * Dom manipulation
 
+    .. cv:: html
+      :label: This is the HTML of the example
 
 
 Hi
