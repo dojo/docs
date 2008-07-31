@@ -22,7 +22,7 @@ Dojo Book Outline
 * `Dojo Introduction <http://dojotoolkit.org/book/dojo-book-0-9/introduction>`_.  maps to: `Introduction <quickstart/introduction>`_
 
   * `Dojo Licensing <http://dojotoolkit.org/book/dojo-book-0-9/introduction/licensing>`_.  maps to: `Licensing <quickstart/introduction/licensing>`_
-  * `History <http://dojotoolkit.org/book/dojo-book-0-9/introduction/history>`_. maps to: `History <quickstart/introduction/licensing>`_
+  * `Dojo History <http://dojotoolkit.org/book/dojo-book-0-9/introduction/history>`_. maps to: `History <quickstart/introduction/licensing>`_
   * `Why Dojo? <http://dojotoolkit.org/book/dojo-book-0-9/introduction/why-dojo>`_. maps to: `Why Dojo <quickstart/introduction/whydojo>`_
 
 * `Part 1: Life With Dojo - Dojo and Dijit Application Examples <http://dojotoolkit.org/book/dojo-book-0-9/part-1-life-dojo-0>`_.
@@ -47,7 +47,7 @@ Dojo Book Outline
     * `Textarea <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/resizeable-text-area>`_.
     * `TextBox family - Validation, Currency, Number, Date, Time <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/textbox-validating-currency-number>`_.
 
-  * `Layout <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout>`_.
+  * `Diji Layout <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout>`_.
 
     * `AccordionContainer <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout/accordion-container>`_.
     * `BorderContainer (1.1) <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout/border-container>`_.
@@ -128,7 +128,7 @@ Dojo Book Outline
   * `DojoX Grid <http://dojotoolkit.org/book/dojo-book-0-9-1-0/part-5-dojox-experimental-and-specialized-extensions/dojox-grid>`_. maps to: `Grid <dojox/grid>`_
   * `DojoX I/O <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-i-o>`_. maps to: `I/O <dojox/io>`_
   * `DojoX Image <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-image>`_. maps to: `Image <dojox/image>`_
-  * `DojoX Layout <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-layout>`_. maps to: `Layouting <dojox/layout>`_
+  * `DojoX Layout <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-layout>`_. maps to: `Layout <dojox/layout>`_
   * `DojoX Offline <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojo-offline>`_. maps to: `Offline <dojox/off>`_
   * `DojoX Presentation <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-presentation>`_. maps to: `Presentation <dojox/presentation>`_
   * `DojoX String Utilities <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-string-utilities>`_. maps to: `String <dojox/string>`_
