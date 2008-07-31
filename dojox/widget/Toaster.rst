@@ -52,7 +52,7 @@ The first example uses setContent() and show() to vary the message and display i
          id="first_toaster" 
          positionDirection="br-left" >
     </div>
-    <input type="button" onclick="surpriseMe()" value="Click here"/>
+    <input type="button" onclick="surpriseMe()" value="Click here to see Toaster"/>
 
 The next example does the same thing, but uses the publish/subscribe model.  The message coming over the topic must be of the form:
 
@@ -100,39 +100,4 @@ The next example does the same thing, but uses the publish/subscribe model.  The
          duration="0" 
          messageTopic="testMessageTopic">
     </div>
-    <input type="button" onclick="surpriseMe()" value="Click here"/>
-
-Dijit Types, Attributes, Events and Methods
--------------------------------------------
-
-=================  ================  =============  ===========
-Attribute          Data Type         Default Value  Explanation
-=================  ================  =============  ===========
-duration           integer           2000           Duration of the message, in ms. 0 means the user must acknowledge the message by clicking on it.
-messageTopic       String or object  -              Subscription topic to monitor. When a page publishes a message on this topic, the toaster will pop up.
-positionDirection  br-up br-left     br-up          Corner from which message slides into screen (e.g. br=bottom right) and direction of slide.
-                   bl-up bl-right 
-                   tr-down tr-left 
-                   tl-down tl-right
-separator          html              <hr>           If more than one unacknowledged message is present separate them with this.
-=================  ================  =============  ===========
-
-Events
-------
-
-Event Name  Description
-==========  ===========
-onSelect    called when user clicks the message to acknowledge it
-==========  ===========
-
-Methods
--------
-
-Method Name  Description
-===========  ===========
-hide()  Hide the toaster
-setContent(String message, String type, int duration)  Set the content of the message to message. type can be "message" ,"warning", "error", "fatal" and determines the color (hence the importance)of the message. Duration is in ms, like the duration attribute.
-show()  Display the toaster
-===========  ===========
-
-CSS Classes I'm not quite sure how to represent these yet. In this case, you set styles on dojoProgressBarColorLayer and set the class of the outer div to dojoProgressBarColor.
+    <input type="button" onclick="surpriseMe()" value="Click here for Publish Subscribe toaster"/>
