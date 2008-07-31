@@ -24,12 +24,19 @@ Header
 
 Every doc document has to start with wollowing first line::
 
-   #format dojo_rst
+  #format dojo_rst
 
-Versioning
-----------
+The should follow the document header for instance::
 
-All you need to to is make sure you target a specific dojo version and note that at the top of the page. This project only aims to cover the latest version of Dojo
+  dojo.module
+  ===========
+
+As a last standard item you should insert version info::
+
+  :Status: Draft|Contributed
+  :Version: targeted Dojo version
+  :Author: Optional mdule author
+
 
 Fame
 ----
