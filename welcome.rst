@@ -19,7 +19,7 @@ The documentation is aiming to cover all dojo modules delivered within a release
   To successfully migrate the current book, please create an account at this wiki, so we can track changes until LDPA is setup.
   Once you have created an account, please go to the `book outline <quickstart/interfacedesign>`_ and put your name behind the
   section you can help migrating.
-  This message will be updated regularly to reflect the current progress
+  This message will be updated regularly to reflect the current progress.
 
 ----
 
