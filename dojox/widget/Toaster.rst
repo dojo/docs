@@ -9,6 +9,6 @@ dojox.widget.Toaster
 :Documentation Author: Josh Trutwin
 
 [http://docs.dojocampus.org/dojox/widget Back]
-==============
+==============================================
 
 dojox.widget.Toaster documentation.
