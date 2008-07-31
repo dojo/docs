@@ -122,19 +122,19 @@ Dojo Book Outline
   * `DojoX Collections <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-collections>`_. maps to: `Collections <dojox/collections>`_
   * `DojoX Cryptography <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-cryptography>`_.  maps to: `Encoding/Cryptography <dojox/encoding>`_
   * `DojoX Data <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-data>`_. maps to: `Data <dojox/data>`_
-  * `DojoX DTL (Django Template Language) <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-dtl>`_.
-  * `DojoX FX <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-fx>`_.
-  * `DojoX GFX <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-gfx>`_.
-  * `DojoX Grid <http://dojotoolkit.org/book/dojo-book-0-9-1-0/part-5-dojox-experimental-and-specialized-extensions/dojox-grid>`_.
-  * `DojoX I/O <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-i-o>`_.
-  * `DojoX Image <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-image>`_.
-  * `DojoX Layout <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-layout>`_.
-  * `DojoX Offline <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojo-offline>`_.
-  * `DojoX Presentation <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-presentation>`_.
-  * `DojoX String Utilities <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-string-utilities>`_.
-  * `DojoX Timing <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-timing>`_.
-  * `DojoX UUID <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-uuid>`_.
-  * `DojoX Validate <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-validate>`_.
-  * `DojoX Widgets <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-widgets>`_.
-  * `DojoX Wire <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-wire>`_.
-  * `DojoX XML Utilities <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-xml-utilities>`_.
+  * `DojoX DTL (Django Template Language) <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-dtl>`_. maps to: `DTL <dojox/dtl>`_
+  * `DojoX FX <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-fx>`_. maps to: `Fx <dojox/fx>`_
+  * `DojoX GFX <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-gfx>`_. maps to: `Gfx <dojox/gfx>`_
+  * `DojoX Grid <http://dojotoolkit.org/book/dojo-book-0-9-1-0/part-5-dojox-experimental-and-specialized-extensions/dojox-grid>`_. maps to: `Grid <dojox/grid>`_
+  * `DojoX I/O <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-i-o>`_. maps to: `I/O <dojox/io>`_
+  * `DojoX Image <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-image>`_. maps to: `Image <dojox/image>`_
+  * `DojoX Layout <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-layout>`_. maps to: `Layout <dojox/layout>`_
+  * `DojoX Offline <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojo-offline>`_. maps to: `Offline <dojox/off>`_
+  * `DojoX Presentation <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-presentation>`_. maps to: `Presentation <dojox/presentation>`_
+  * `DojoX String Utilities <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-string-utilities>`_. maps to: `String <dojox/string>`_
+  * `DojoX Timing <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-timing>`_. maps to: `Timing <dojox/timing>`_
+  * `DojoX UUID <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-uuid>`_. maps to: `UUID <dojox/uuid>`_
+  * `DojoX Validate <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-validate>`_. maps to: `Validate <dojox/validate>`_
+  * `DojoX Widgets <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-widgets>`_. maps to: `Widgets <dojox/widget>`_
+  * `DojoX Wire <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-wire>`_. maps to: `Wire <dojox/wire>`_
+  * `DojoX XML Utilities <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-xml-utilities>`_. maps to: `XML Utilities <dojox/xml>`_
