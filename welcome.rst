@@ -85,6 +85,7 @@ Dojox reference
 * `dojox <dojox>`_
 * `dojox.grid <dojox/grid>`_
 * `dojox.rpc <dojox/rpc>`_
+* `dojox.widget.Toaster <dojox/widget/toaster>`_
 
 ----
 
