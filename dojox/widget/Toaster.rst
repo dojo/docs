@@ -8,7 +8,7 @@ dojox.widget.Toaster
 :Authors: Peter Higgins, ???
 :Documentation Author: Josh Trutwin
 
-`Back </dojox/widget>`_
-=======================
+`Back <..>`_
+============
 
 dojox.widget.Toaster documentation.
