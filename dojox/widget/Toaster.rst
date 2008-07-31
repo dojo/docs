@@ -157,6 +157,7 @@ This example builds a Toaster programatically and lets you set params.
       <option value="tl-down">tl-down</option>
       <option value="tl-right">tl-right</option>
     </select><br />
+    Message Type: 
     <select id="myMessageType" name="myMessageType">
       <option value="message">message</option>
       <option value="message">warning</option>
@@ -164,6 +165,7 @@ This example builds a Toaster programatically and lets you set params.
       <option value="fatal">fatal</option>
     </select><br />
     Duration: <input type="text" id="myDuration" name="myDuration" value="2000"/><br />
+    Message: <input type="text" id="myToasterMsg" name="myToasterMsg" size="60" value="test"/><br /><br />
     <input type="button" onclick="showMyToaster()" value="Click here to see YOUR Toaster"/>
 
 Additional Considerations:
