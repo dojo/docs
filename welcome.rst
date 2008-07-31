@@ -79,6 +79,8 @@ Dijit reference
   * `dijit.layout.AccordionContainer <dijit/layout/AccordionContainer>`_
   * `dijit.layout.TabContainer <dijit/layout/TabContainer>`_
 
+* `dijit.ProgressBar <dijit/ProgressBar>`_
+
 Dojox reference
 ---------------
 
