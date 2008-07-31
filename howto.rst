@@ -144,5 +144,3 @@ The valid reST syntax has to look like following markup:
     
       * Programmatic code generation
       * Dom manipulation
-
- 
