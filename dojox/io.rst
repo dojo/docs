@@ -17,7 +17,7 @@ multi-part requests but not using a form with a file input. Note that it does no
 allow you to send files from local disks -- a form with a file input is required
 for that use case. xhrMultipart is not useful in that use case.
 xhrPlugins.js - An adapter registry for having multiple XHR handlers (like
-	XDomainRequest, CS-XHR, proxy, and window.name)
+XDomainRequest, CS-XHR, proxy, and window.name)
 windowName.js - Cross-domain transport using window.name
 xhrWindowNamePlugin.js - window.name plugin for XHR adapter registry
 httpParse.js - HTTP message parser. Parses to an XHR like interface.
