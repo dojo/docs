@@ -24,9 +24,10 @@ Header
 
 Every doc document has to start with wollowing first line
 
-.. highlight:: 
+   .. cv:: css
+     :label: The CSS
 
-  #format dojo_rst
+   #format dojo_rst
 
 Versioning
 ----------
