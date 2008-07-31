@@ -137,6 +137,11 @@ The valid reST syntax has to look like following markup:
       :label: The CSS
       
        <style type="text/css">
+       </style>
 
+    The html snippet simply defines the markup of your code. Dojo will then parse the dom nodes and create the widgets programatically. 
+    
+      * Programmatic code generation
+      * Dom manipulation
 
 Hi
