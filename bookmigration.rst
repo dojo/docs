@@ -118,8 +118,8 @@ Dojo Book Outline
 * `Part 5: DojoX - Experimental and Specialized Extensions <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox-extensions-dojo-0>`_.
 
   * `Cometd (client) <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/cometd-client>`_. maps to: `Cometd <dojox/cometd>`_
-  * `DojoX Charting <http://dojotoolkit.org/book/book-dojo/part-5-dojox-experimental-and-specialized-extensions/dojox-charting>`_.
-  * `DojoX Collections <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-collections>`_.
+  * `DojoX Charting <http://dojotoolkit.org/book/book-dojo/part-5-dojox-experimental-and-specialized-extensions/dojox-charting>`_.  maps to: `Charting <dojox/charting>`_
+  * `DojoX Collections <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-collections>`_. maps to: `Collections <dojox/collections>`_
   * `DojoX Cryptography <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-cryptography>`_.
   * `DojoX Data <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-data>`_.
   * `DojoX DTL (Django Template Language) <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-dtl>`_.
