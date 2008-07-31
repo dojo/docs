@@ -20,9 +20,9 @@ You can either set the message programmatically, or use dojo's publish/subscribe
 Examples
 --------
 
-.. cv-compound::
+The first example uses setContent() and show() to vary the message and display it. 
 
-  The first example uses setContent() and show() to vary the message and display it. 
+.. cv-compound::
 
   A stylesheet is required for Toasters to render properly
 
