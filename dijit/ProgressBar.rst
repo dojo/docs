@@ -38,4 +38,5 @@ Examples
 
     <div dojoType="dijit.ProgressBar" style="width:300px" 
          jsId="jsProgress" id="downloadProgress"></div>
-    <input type="button" value="Go!" onclick="download();" />
+    
+    <br /><input type="button" value="Go!" onclick="download();" />
