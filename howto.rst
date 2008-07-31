@@ -24,7 +24,9 @@ Header
 
 Every doc document has to start with wollowing first line
 
-    #format dojo_rst
+.. code-block::
+
+  #format dojo_rst
 
 Versioning
 ----------
