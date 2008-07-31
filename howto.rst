@@ -136,8 +136,5 @@ The valid reST syntax has to look like following markup:
     .. cv:: css
       :label: The CSS
 
-      <style type="text/css">
-       .fohooo { color: #15d32a; font-size: 16px; }
-      </style>
 
 Hi
