@@ -128,7 +128,7 @@ Dojo Book Outline
   * `DojoX Grid <http://dojotoolkit.org/book/dojo-book-0-9-1-0/part-5-dojox-experimental-and-specialized-extensions/dojox-grid>`_. maps to: `Grid <dojox/grid>`_
   * `DojoX I/O <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-i-o>`_. maps to: `I/O <dojox/io>`_
   * `DojoX Image <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-image>`_. maps to: `Image <dojox/image>`_
-  * `DojoX Layout <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-layout>`_. maps to: `Dojox <dojox/layoutt>`_
+  * `DojoX Layout <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-layout>`_. maps to: `Dojox <dojox/layout>`_
   * `DojoX Offline <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojo-offline>`_. maps to: `Offline <dojox/off>`_
   * `DojoX Presentation <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-presentation>`_. maps to: `Presentation <dojox/presentation>`_
   * `DojoX String Utilities <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-string-utilities>`_. maps to: `String <dojox/string>`_
