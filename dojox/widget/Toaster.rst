@@ -24,6 +24,11 @@ Examples
 
   The first example uses setContent() and show() to vary the message and display it. 
 
+  .. cv:: css
+  A stylesheet is required for Toasters to render properly
+
+    <style type="text/css" src="/js/dojo/trunk/dojox/widget/Toaster/Toaster.css"></style>
+
   .. cv:: javascript
 
     <script type="text/javascript">
