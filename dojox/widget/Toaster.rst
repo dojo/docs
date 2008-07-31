@@ -58,10 +58,12 @@ The next example does the same thing, but uses the publish/subscribe model.  The
 
 - "message" : a single string with the message text
 - -OR- {message: "...", type: "...", duration: "..."}: where message is the message text, duration is as the attribute, and type is either:
+
   - fatal
   - error
   - warning
   - message
+
 -in decreasing order of severity. 
 
 .. cv-compound::
