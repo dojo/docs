@@ -25,12 +25,6 @@ Dojo Book Outline
   * `Dojo History <http://dojotoolkit.org/book/dojo-book-0-9/introduction/history>`_. maps to: `History <quickstart/introduction/history>`_
   * `Why Dojo? <http://dojotoolkit.org/book/dojo-book-0-9/introduction/why-dojo>`_. maps to: `Why Dojo <quickstart/introduction/whydojo>`_
 
-* `Part 1: Life With Dojo - Dojo and Dijit Application Examples <http://dojotoolkit.org/book/dojo-book-0-9/part-1-life-dojo-0>`_.
-
-  * `Example 1: Why Doesn't Anyone Fill Out Their Tax Forms? <http://dojotoolkit.org/node/600>`_.
-  * `Example 2: The Postman Always Clicks Twice <http://dojotoolkit.org/node/3151>`_.
-  * `Example 3: Chatting With Tech Support <http://dojotoolkit.org/book/book-dojo/part-1-life-dojo-dojo-and-dijit-application-examples/example-4-chatting-tech-support>`_.
-
 * `Part 2: Dijit - The Dojo Widget Library <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit-0>`_. maps to: `dijit <dijit>`_
 
   * `Dijit at a Glance <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/dijit-glance>`_.
@@ -138,3 +132,15 @@ Dojo Book Outline
   * `DojoX Widgets <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-widgets>`_. maps to: `Widgets <dojox/widget>`_
   * `DojoX Wire <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-wire>`_. maps to: `Wire <dojox/wire>`_
   * `DojoX XML Utilities <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-xml-utilities>`_. maps to: `XML Utilities <dojox/xml>`_
+
+
+
+----
+
+Chapters to be discussed whether they are still current enough to be ported
+
+* `Part 1: Life With Dojo - Dojo and Dijit Application Examples <http://dojotoolkit.org/book/dojo-book-0-9/part-1-life-dojo-0>`_.
+
+  * `Example 1: Why Doesn't Anyone Fill Out Their Tax Forms? <http://dojotoolkit.org/node/600>`_.
+  * `Example 2: The Postman Always Clicks Twice <http://dojotoolkit.org/node/3151>`_.
+  * `Example 3: Chatting With Tech Support <http://dojotoolkit.org/book/book-dojo/part-1-life-dojo-dojo-and-dijit-application-examples/example-4-chatting-tech-support>`_.
