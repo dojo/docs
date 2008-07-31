@@ -10,17 +10,29 @@ How to become a dojo doc ninja
 
 Joining the Dojo doc team is easy, all you need to do is write and get familiar with a few basics you will master fast.
 
-1. Dojo Doc Syntax (reST)
+Dojo Doc Syntax (reST)
+----------------------
 
-Dojo doc uses the reST syntac to describe all docs, we have implemented a few features of the great reST Sphinx extension to provide cool stuff like inline code demos (Yah, you won't believe it, but your code will just work)
+Dojo doc uses the reST syntac to describe all docs, we have implemented a few features of the great reST Sphinx extension and implemented dojo specific ones to provide cool stuff like inline code demos (Yah, you won't believe it, but your code will just work)
 
 `Visit the official reST Quick reference <http://docutils.sourceforge.net/docs/user/rst/quickref.html#hyperlink-targets>`_.
 
-2. Versioning
+Please not following topics
+
+Header
+~~~~~~
+
+Every doc document has to start with wollowing first line
+
+  #format dojo_rst
+
+Versioning
+----------
 
 All you need to to is make sure you target a specific dojo version and note that at the top of the page. This project only aims to cover the latest version of Dojo
 
-3. Fame
+Fame
+----
 
 Writing docs is a lot of work and we all deserve a little portion of dojo fame. Make sure you create your own page in the Wiki with links to your personal blog, website, twitter or other sites
 
