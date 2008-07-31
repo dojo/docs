@@ -122,7 +122,7 @@ Events
 
 Event Name  Description
 ==========  ===========
-onSelect  called when user clicks the message to acknowledge it
+onSelect    called when user clicks the message to acknowledge it
 ==========  ===========
 
 Methods
