@@ -9,11 +9,11 @@ Welcome to the official documentation pages of the DojoToolkit
    :alt: Dojo Documentation
    :class: logowelcome;
 
-
-|  To successfully migrate the current book, please create an account at this wiki, so we can track changes until LDPA is setup.
-|  Once you have created an account, please go to the `book outline <quickstart/interfacedesign>`_ and put your name behind the
-|  section you can help migrating.
-|  This message will be updated regularly to reflect the current progress
+::
+  To successfully migrate the current book, please create an account at this wiki, so we can track changes until LDPA is setup.
+  Once you have created an account, please go to the `book outline <quickstart/interfacedesign>`_ and put your name behind the
+  section you can help migrating.
+  This message will be updated regularly to reflect the current progress
 
 
 This is an open effort for anyone interested to join. If you want to contribute documentation please read the Documentation guidelines. 
