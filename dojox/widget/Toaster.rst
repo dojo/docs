@@ -28,7 +28,7 @@ The first example uses setContent() and show() to vary the message and display i
 
   .. cv:: css
 
-    <style type="text/css" src="/js/dojo/trunk/dojox/widget/Toaster/Toaster.css"></style>
+    <style type="text/css" src="/moin_static163/js/dojo/trunk/dojox/widget/Toaster/Toaster.css"></style>
 
   Javascript   
 
