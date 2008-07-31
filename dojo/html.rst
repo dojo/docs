@@ -7,4 +7,4 @@ dojo.html
 :Status: Contributed, Draft
 :Version: 1.0
 
-Self: Dojo
+["Dojo"]
