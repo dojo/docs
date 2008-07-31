@@ -3,7 +3,7 @@
 dojox.cometd
 ============
 
-:Status: Contributed, Draft
+:Status: Draft
 :Version: beta
 :Authors: Alex Russell, Greg Wilkins
 
