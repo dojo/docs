@@ -17,13 +17,13 @@ Dojo Book Outline
 
 * `Quick Installation <http://dojotoolkit.org/book/dojo-book-0-9/part-1-life-dojo/quick-installation>`_. 
   maps to: `How to Install the Dojo Toolkit <quickstart/install>`_
-* `Hello World - Dojo for the Attention-Impaired <http://dojotoolkit.org/book/dojo-book-0-9/hello-world-tutorial>`_.
-* `Debugging Tutorial <http://dojotoolkit.org/book/book-dojo/part-4-meta-dojo-making-your-dojo-code-run-faster-and-better/debugging-facilities/deb>`_.
-* `Introduction <http://dojotoolkit.org/book/dojo-book-0-9/introduction>`_.
+* `Hello World - Dojo for the Attention-Impaired <http://dojotoolkit.org/book/dojo-book-0-9/hello-world-tutorial>`_. maps to: `Hello world <quickstart/helloworld>`_
+* `Debugging Tutorial <http://dojotoolkit.org/book/book-dojo/part-4-meta-dojo-making-your-dojo-code-run-faster-and-better/debugging-facilities/deb>`_.  maps to: `Debugging <quickstart/debugging>`_
+* `Introduction <http://dojotoolkit.org/book/dojo-book-0-9/introduction>`_.  maps to: `Introduction <quickstart/introduction>`_
 
-  * `Licensing <http://dojotoolkit.org/book/dojo-book-0-9/introduction/licensing>`_.
-  * `History <http://dojotoolkit.org/book/dojo-book-0-9/introduction/history>`_.
-  * `Why Dojo? <http://dojotoolkit.org/book/dojo-book-0-9/introduction/why-dojo>`_.
+  * `Licensing <http://dojotoolkit.org/book/dojo-book-0-9/introduction/licensing>`_.  maps to: `Licensing <quickstart/introduction/licensing>`_
+  * `History <http://dojotoolkit.org/book/dojo-book-0-9/introduction/history>`_. maps to: `History <quickstart/introduction/licensing>`_
+  * `Why Dojo? <http://dojotoolkit.org/book/dojo-book-0-9/introduction/why-dojo>`_. maps to: `Why Dojo <quickstart/introduction/whydojo>`_
 
 * `Part 1: Life With Dojo - Dojo and Dijit Application Examples <http://dojotoolkit.org/book/dojo-book-0-9/part-1-life-dojo-0>`_.
 
@@ -31,11 +31,11 @@ Dojo Book Outline
   * `Example 2: The Postman Always Clicks Twice <http://dojotoolkit.org/node/3151>`_.
   * `Example 3: Chatting With Tech Support <http://dojotoolkit.org/book/book-dojo/part-1-life-dojo-dojo-and-dijit-application-examples/example-4-chatting-tech-support>`_.
 
-* `Part 2: Dijit - The Dojo Widget Library <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit-0>`_.
+* `Part 2: Dijit - The Dojo Widget Library <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit-0>`_. maps to: `dijit <dijit>`_
 
   * `Dijit at a Glance <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/dijit-glance>`_.
   * `Common Features <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/common-attributes>`_.
-  * `Form, Validation, Specialized Input <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input>`_.
+  * `Form, Validation, Specialized Input <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input>`_. maps to: `dijit.form <dijit/form>`_
 
     * `Form Widget <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/form-widget>`_.
     * `CheckBox, RadioButton, ToggleButton <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/checkbox-radiobutton>`_.
