@@ -101,3 +101,9 @@ The next example does the same thing, but uses the publish/subscribe model.  The
          messageTopic="testMessageTopic">
     </div>
     <input type="button" onclick="surpriseMe()" value="Click here for Publish Subscribe toaster"/>
+
+Additional Considerations:
+
+- Toasters defined in Dialogs
+- Creating Toaster programatically
+- Multiple Toasters
