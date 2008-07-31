@@ -132,3 +132,5 @@ The valid reST syntax has to look like following markup:
   .. cv-compound::
 
     First we declare the CSS
+
+    .. cv:: css
