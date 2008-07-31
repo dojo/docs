@@ -156,16 +156,5 @@ The valid reST syntax has to look like following markup:
     .. cv:: javascript
       :label: And the jscript code
 
-      <script type="text/javascript">
-      dojo.declare("foohooo", [dijit._Widget,dijit._Templated], {
-         templateString: '<div dojoAttachEvent="onclick: _foo">Example: <span dojoAttachPoint="containerNode"></span></div>',
-         _foo: function(){
-          alert("foo");
-         }  
-      });
-      dojo.addOnLoad(function(){
-        var widget = new foohooo({id: "test_foohooo"}, dojo.byId("fohooo"));
-      });
-      </script>
 
 Hi
