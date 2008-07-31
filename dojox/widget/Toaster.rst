@@ -128,7 +128,7 @@ This example builds a Toaster programatically and lets you set params.
           toaster.duration = dojo.byId('myDuration');
           toaster.positionDirection = pos.options[pos.selectedIndex].value;
           toaster.defaultType = type.options[type.selectedIndex].value;
-alert (toaster.defaultType);
+          alert (toaster.defaultType);
           toaster.setContent(dojo.byId('myToasterMsg').value, 'fatal');
           toaster.show();
        }
