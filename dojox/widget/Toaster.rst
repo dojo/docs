@@ -44,10 +44,10 @@ The first example uses setContent() and show() to vary the message and display i
        }
 
        var toast = null;
-		function showTestMessage(){
-			dojo.publish("testMessageTopic", 
-				[ "This is a message! It's kind of long to show message wrapping."]
-			);
+       function showTestMessage(){
+       dojo.publish("testMessageTopic", 
+              [ "This is a message! It's kind of long to show message wrapping."]
+	);
 		}
 		function showAnotherMessage(){
 			dojo.publish("testMessageTopic", 
@@ -67,7 +67,6 @@ The first example uses setContent() and show() to vary the message and display i
 		dojo.addOnLoad(function(){
 			toast = dijit.byId("toast");
 		});
-
     </script>
 
   The html is very simple
