@@ -74,7 +74,7 @@ The first example uses setContent() and show() to vary the message and display i
   .. cv:: html
 
     <div dojoType="dojox.widget.Toaster" 
-         id="toast" 
+         id="toaset" 
          positionDirection="br-left" >
     </div>
     <input type="button" onclick="surpriseMe()" value="Click here"/>
