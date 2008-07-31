@@ -83,6 +83,48 @@ Executed code compounds
 
 Sometimes your examples need separation between CSS, JavaScript and HTML. Use the ".. cw-compound::" directive for that. Each compund can include several ".. code-viewer::" directives
 
+.. cv-compound::
+
+  First we declare the CSS
+
+  .. cv:: css
+    :label: The CSS
+
+    <style type="text/css">
+    .fohooo { color: #15d32a; font-size: 16px; }
+    </style>
+
+  The html snippet simply defines the markup of your code. Dojo will then parse the dom nodes and create the widgets programatically. 
+    
+    * Programmatic code generation
+    * Dom manipulation
+
+  .. cv:: html
+    :label: This is the HTML of the example
+
+    <div id="fohooo" class="fohooo">Click Me</div>
+    <div id="fohooooooo" class="fohooo">Don't click Me</div>
+    <div dojoType="foohooo" class="fohooo">Or Me</div>
+
+  This is the jscript code of your example. Simple past both HMTL and Jscript into the browser.
+
+  .. cv:: javascript
+    :label: And the jscript code
+
+    <script type="text/javascript">
+    dojo.declare("foohooo", [dijit._Widget,dijit._Templated], {
+       templateString: '<div dojoAttachEvent="onclick: _foo">Example: <span dojoAttachPoint="containerNode"></span></div>',
+       _foo: function(){
+          alert("foo");
+       }
+    });
+    dojo.addOnLoad(function(){
+      var widget = new foohooo({id: "test_foohooo"}, dojo.byId("fohooo"));
+    });
+    </script>
+
+The valid reST syntax has to look like following markup:
+
 .. code-block :: javascript
   :linenos:
 
@@ -97,7 +139,7 @@ Sometimes your examples need separation between CSS, JavaScript and HTML. Use th
       .fohooo { color: #15d32a; font-size: 16px; }
       </style>
 
-    The html snippet simply defines the markup of your code. Dojo will then parse the dom nodes and create the widgets programatically. Usually the lifecycle goes as follows
+    The html snippet simply defines the markup of your code. Dojo will then parse the dom nodes and create the widgets programatically. 
     
       * Programmatic code generation
       * Dom manipulation
@@ -127,43 +169,3 @@ Sometimes your examples need separation between CSS, JavaScript and HTML. Use th
       </script>
 
 This will result in following structure
-
-.. cv-compound::
-
-  First we declare the CSS
-
-  .. cv:: css
-    :label: The CSS
-
-    <style type="text/css">
-    .fohooo { color: #15d32a; font-size: 16px; }
-    </style>
-
-  The html snippet simply defines the markup of your code. Dojo will then parse the dom nodes and create the widgets programatically. Usually the lifecycle goes as follows
-    
-    * Programmatic code generation
-    * Dom manipulation
-
-  .. cv:: html
-    :label: This is the HTML of the example
-
-    <div id="fohooo" class="fohooo">Click Me</div>
-    <div id="fohooooooo" class="fohooo">Don't click Me</div>
-    <div dojoType="foohooo" class="fohooo">Or Me</div>
-
-  This is the jscript code of your example. Simple past both HMTL and Jscript into the browser.
-
-  .. cv:: javascript
-    :label: And the jscript code
-
-    <script type="text/javascript">
-    dojo.declare("foohooo", [dijit._Widget,dijit._Templated], {
-       templateString: '<div dojoAttachEvent="onclick: _foo">Example: <span dojoAttachPoint="containerNode"></span></div>',
-       _foo: function(){
-          alert("foo");
-       }
-    });
-    dojo.addOnLoad(function(){
-      var widget = new foohooo({id: "test_foohooo"}, dojo.byId("fohooo"));
-    });
-    </script>
