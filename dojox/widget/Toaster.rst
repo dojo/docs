@@ -101,3 +101,34 @@ The next example does the same thing, but uses the publish/subscribe model.  The
          messageTopic="testMessageTopic">
     </div>
     <input type="button" onclick="surpriseMe()" value="Click here"/>
+
+Dijit Types, Attributes, Events and Methods
+-------------------------------------------
+
+Attribute  Data Type  Default Value  Explanation
+=========  =========  =============  ===========
+duration  integer  2000  Duration of the message, in ms. 0 means the user must acknowledge the message by clicking on it.
+messageTopic  String or object 	-  Subscription topic to monitor. When a page publishes a message on this topic, the toaster will pop up.
+positionDirection 	br-up br-left bl-up bl-right tr-down tr-left tl-down tl-right 	br-up 	Corner from which message slides into screen (e.g. br=bottom right) and direction of slide.
+separator  html  <hr>  If more than one unacknowledged message is present separate them with this.
+=========  =========  =============  ===========
+
+Events
+------
+
+Event Name  Description
+==========  ===========
+onSelect  called when user clicks the message to acknowledge it
+==========  ===========
+
+Methods
+-------
+
+Method Name  Description
+===========  ===========
+hide()  Hide the toaster
+setContent(String message, String type, int duration)  Set the content of the message to message. type can be "message" ,"warning", "error", "fatal" and determines the color (hence the importance)of the message. Duration is in ms, like the duration attribute.
+show()  Display the toaster
+===========  ===========
+
+CSS Classes I'm not quite sure how to represent these yet. In this case, you set styles on dojoProgressBarColorLayer and set the class of the outer div to dojoProgressBarColor.
