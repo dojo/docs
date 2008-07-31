@@ -15,7 +15,8 @@ Dojo Book Outline
 
 `The Book of Dojo <http://dojotoolkit.org/book/dojo-book-1-0>`_.
 
-* `Quick Installation <http://dojotoolkit.org/book/dojo-book-0-9/part-1-life-dojo/quick-installation>`_.
+* `Quick Installation <http://dojotoolkit.org/book/dojo-book-0-9/part-1-life-dojo/quick-installation>`_. 
+  maps to: `How to Install the Dojo Toolkit <install>`_
 * `Hello World - Dojo for the Attention-Impaired <http://dojotoolkit.org/book/dojo-book-0-9/hello-world-tutorial>`_.
 * `Debugging Tutorial <http://dojotoolkit.org/book/book-dojo/part-4-meta-dojo-making-your-dojo-code-run-faster-and-better/debugging-facilities/deb>`_.
 * `Introduction <http://dojotoolkit.org/book/dojo-book-0-9/introduction>`_.
