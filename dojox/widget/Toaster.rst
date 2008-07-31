@@ -108,7 +108,7 @@ Dijit Types, Attributes, Events and Methods
 =========          =========         =============  ===========
 Attribute          Data Type         Default Value  Explanation
 =========          =========         =============  ===========
-duration           integer           2000           Duration of the message, in ms. 0 means the user must acknowledge the message by clicking on it.
+duration           integer           a              Duration of the message, in ms. 0 means the user must acknowledge the message by clicking on it.
 messageTopic       String or object  -              Subscription topic to monitor. When a page publishes a message on this topic, the toaster will pop up.
 positionDirection  br-up br-left     br-up          Corner from which message slides into screen (e.g. br=bottom right) and direction of slide.
                    bl-up bl-right 
