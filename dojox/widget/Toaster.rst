@@ -122,14 +122,13 @@ This example builds a Toaster programatically and lets you set params.
 
        function showMyToaster() {
           toaster = dijit.byId('myToaster');
-          pos = dojo.byId('myPosition');
-          type = dojo.byId('myMessageType');
+          pos_fld = dojo.byId('myPosition');
+          pos = pos_fld.options[pos_fld.selectedIndex].value;
+          type_fld = dojo.byId('myMessageType');
+          msg_type = type_fld.options[type_fld.selectedIndex].value;
 
-          toaster.duration = dojo.byId('myDuration');
-          toaster.positionDirection = pos.options[pos.selectedIndex].value;
-          toaster.defaultType = type.options[type.selectedIndex].value;
-          alert (toaster.defaultType);
-          toaster.setContent(dojo.byId('myToasterMsg').value, 'fatal');
+          toaster.positionDirection = pos;
+          toaster.setContent(dojo.byId('myToasterMsg').value, msg_type, dojo.byId('myDuration'));
           toaster.show();
        }
 
