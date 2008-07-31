@@ -50,7 +50,6 @@ The first example uses setContent() and show() to vary the message and display i
 
     <div dojoType="dojox.widget.Toaster" 
          id="toast" 
-         positionDirection="br-left"  
-         style="display:hide">
+         positionDirection="br-left" >
     </div>
     <input type="button" onclick="surpriseMe()" value="Click here"/>
