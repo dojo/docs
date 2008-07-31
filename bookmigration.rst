@@ -19,9 +19,9 @@ Dojo Book Outline
   maps to: `How to Install the Dojo Toolkit <quickstart/install>`_
 * `Hello World - Dojo for the Attention-Impaired <http://dojotoolkit.org/book/dojo-book-0-9/hello-world-tutorial>`_. maps to: `Hello world <quickstart/helloworld>`_
 * `Debugging Tutorial <http://dojotoolkit.org/book/book-dojo/part-4-meta-dojo-making-your-dojo-code-run-faster-and-better/debugging-facilities/deb>`_.  maps to: `Debugging <quickstart/debugging>`_
-* `Introduction <http://dojotoolkit.org/book/dojo-book-0-9/introduction>`_.  maps to: `Introduction <quickstart/introduction>`_
+* `Dojo Introduction <http://dojotoolkit.org/book/dojo-book-0-9/introduction>`_.  maps to: `Introduction <quickstart/introduction>`_
 
-  * `Licensing <http://dojotoolkit.org/book/dojo-book-0-9/introduction/licensing>`_.  maps to: `Licensing <quickstart/introduction/licensing>`_
+  * `Dojo Licensing <http://dojotoolkit.org/book/dojo-book-0-9/introduction/licensing>`_.  maps to: `Licensing <quickstart/introduction/licensing>`_
   * `History <http://dojotoolkit.org/book/dojo-book-0-9/introduction/history>`_. maps to: `History <quickstart/introduction/licensing>`_
   * `Why Dojo? <http://dojotoolkit.org/book/dojo-book-0-9/introduction/why-dojo>`_. maps to: `Why Dojo <quickstart/introduction/whydojo>`_
 
