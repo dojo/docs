@@ -1,7 +1,7 @@
 #format dojo_rst
 
-dojox.cometd
-============
+dojox.data
+==========
 
 :Status: Draft
 :Version: beta
