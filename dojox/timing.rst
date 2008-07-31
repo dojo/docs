@@ -1,6 +1,6 @@
 #format dojo_rst
 
-dojox.cometd
+dojox.timing
 ============
 
 :Status: Draft
