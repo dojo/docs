@@ -6,7 +6,7 @@ Dojo licensing
 Status: Draft
 Version: 1.2
 
-#You may use Dojo in commercial software without obtaining a separate license or incurring other obligations.#
+**You may use Dojo in commercial software without obtaining a separate license or incurring other obligations.**
 
 The Dojo Toolkit is dual-licensed. The preferred license is the Academic Free License v2.1. It is extremely liberal, allows for commercial use, and provides for sub-licensing. All Dojo Foundation projects release their code under the terms of this license. It is almost never necessary to exercise the "dual" portion of the dual-licensing terms since the AFL is extremely permissive.
 
