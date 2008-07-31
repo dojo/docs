@@ -63,7 +63,8 @@ The next example does the same thing, but uses the publish/subscribe model.  The
   - error
   - warning
   - message
--in decreasing order of severity. 
+
+- in decreasing order of severity. 
 
 .. cv-compound::
 
