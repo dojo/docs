@@ -18,7 +18,7 @@ Toasters are preferrable to alert() boxes. Alert() must always be modal, meaning
 You can either set the message programmatically, or use dojo's publish/subscribe event feature. Publish/subscribe allows you to have several toasters, or several controls besides toasters, respond to a particular event.
 
 Examples
-========
+--------
 
 .. cv-compound::
 
