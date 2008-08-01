@@ -90,6 +90,10 @@ Dojox reference
 
   * `dojox.widget.Toaster <dojox/widget/Toaster>`_
 
+* `dojox.form <dojox/form>`_
+
+  * `dojox.form.BusyButton <dojox/form/BusyButton>`_
+
 ----
 
 Documentation guidelines
