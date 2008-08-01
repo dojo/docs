@@ -17,7 +17,7 @@ Dojo Book Outline
 
 * `Quick Installation <http://dojotoolkit.org/book/dojo-book-0-9/part-1-life-dojo/quick-installation>`_. 
   maps to: `How to Install the Dojo Toolkit <quickstart/install>`_
-* `Hello World - Dojo for the Attention-Impaired <http://dojotoolkit.org/book/dojo-book-0-9/hello-world-tutorial>`_. maps to: `Hello world <quickstart/helloworld>`_
+* `Hello World - Dojo for the Attention-Impaired <http://dojotoolkit.org/book/dojo-book-0-9/hello-world-tutorial>`_. maps to: `Hello world <quickstart/helloworld>`_ -- [[JChimene]] <<DateTime(2008-08-01T11:36:45-0700)>>
 * `Debugging Tutorial <http://dojotoolkit.org/book/book-dojo/part-4-meta-dojo-making-your-dojo-code-run-faster-and-better/debugging-facilities/deb>`_.  maps to: `Debugging <quickstart/debugging>`_
 * `Dojo Introduction <http://dojotoolkit.org/book/dojo-book-0-9/introduction>`_.  maps to: `Introduction <quickstart/introduction>`_
 
@@ -91,7 +91,7 @@ Dojo Book Outline
   * `Creating and Scripting Widgets <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/manipulating-widgets-through-code>`_.
   * `Writing Your Own Widget Class <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/manipulating-widgets-through-code/writing-your>`_.
   * `The Event System <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/event-system>`_.
-  * `XMLHttpRequest (XHR) <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/ajax-transports>`_.
+  * `XMLHttpRequest (XHR) <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/ajax-transports>`_. -- [[JChimene]] <<DateTime(2008-08-01T11:36:45-0700)>>
   * `Drag and Drop <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/drag-and-drop>`_.
   * `Using dojo.data <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/data-retrieval-dojo-data-0>`_.
   * `Selecting DOM Nodes with dojo.query <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/selecting-dom-nodes-dojo-query>`_.
