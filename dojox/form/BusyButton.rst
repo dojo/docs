@@ -79,7 +79,7 @@ In this example we will set a new label by clicking on a button (this can be a s
       @import url(/moin_static163/js/dojo/trunk/dojox/form/resources/BusyButton.css);
     </style>
 
-The last example uses a little bit of trickery to create a button which is disabled initially and enabled after the timeout. This sort of button is very hand for license agreements or times when you want to be sure the user can't submit a form (usually forcing a user to read the license agreement doesn't work, but its worth a try)
+The last example uses a little bit of trickery to create a button which is disabled initially and enabled after the timeout. This sort of button is very hand for license agreements or times when you want to be sure the user can't submit a form (usually forcing a user to read the license agreement doesn't work, but its worth a try). The chance is high that the button already is not disabled anymore - just reload the page and scroll to this example real quick.
 
 .. cv-compound::
 
