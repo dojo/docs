@@ -125,7 +125,7 @@ This example builds a Toaster programatically and lets you set params.
           msg_type = type_fld.options[type_fld.selectedIndex].value;
 
           toaster.positionDirection = pos;
-          toaster.setContent(dojo.byId('myToasterMsg').value, msg_type, dojo.byId('myDuration'));
+          toaster.setContent(dojo.byId('myToasterMsg').value, msg_type, dojo.byId('myDuration').value);
           toaster.show();
        }
 
