@@ -14,6 +14,36 @@ BusyButton provides a simple set of features for this purpose
 Examples
 --------
 
+The first example shows you how to create a nifty button programatically
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+    dojo.require("dojox.form.BusyButton");
+
+    dojo.addOnLoad(function(){
+      var button = new dojox.form.BusyButton({
+                 id: "submit",
+                 busyLabel: "Sending mail...",
+                 label: "Send mail",
+                 timeout: 5000
+      });
+    });
+    </script>
+
+  .. cv:: html
+
+    <div id="placeHolder"></div>
+
+  .. cv:: css
+
+    <style type="text/css">
+      @import url(/moin_static163/js/dojo/trunk/dojox/form/resources/BusyButton.css);
+    </style>
+
+
 This example show how to use the busy button without internal timeout. Once you receive a server response from the server (than can include a timeout from the server) you can and should change the status of the button.
 
 .. cv-compound::
@@ -34,7 +64,7 @@ This example show how to use the busy button without internal timeout. Once you 
       @import url(/moin_static163/js/dojo/trunk/dojox/form/resources/BusyButton.css);
     </style>
 
-The following example has a build-in timeout.
+The following example has a built-in timeout.
 
 .. cv-compound::
 
