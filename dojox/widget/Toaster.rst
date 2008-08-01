@@ -142,28 +142,46 @@ This example builds a Toaster programatically and lets you set params.
   .. cv:: html
 
     <div id="ToasterPane"></div>
-    </div>
-    Position: 
-    <select id="myPosition" name="myPosition">
-      <option value="br-up">br-up</option>
-      <option value="br-left">br-left</option>
-      <option value="bl-up">bl-up</option>
-      <option value="bl-right">bl-right</option>
-      <option value="tr-down">tr-down</option>
-      <option value="tr-left">tr-left</option>
-      <option value="tl-down">tl-down</option>
-      <option value="tl-right">tl-right</option>
-    </select><br />
-    Message Type: 
-    <select id="myMessageType" name="myMessageType">
-      <option value="message">message</option>
-      <option value="warning">warning</option>
-      <option value="error">error</option>
-      <option value="fatal">fatal</option>
-    </select><br />
-    Duration: <input type="text" id="myDuration" name="myDuration" value="2000"/><br />
-    Message: <input type="text" id="myToasterMsg" name="myToasterMsg" size="60" value="test"/><br /><br />
-    <input type="button" onclick="showMyToaster()" value="Click here to see YOUR Toaster"/>
+    <table>
+      <tr>
+        <td>Position:</td>
+        <td>
+         <select id="myPosition" name="myPosition">
+           <option value="br-up">br-up</option>
+           <option value="br-left">br-left</option>
+           <option value="bl-up">bl-up</option>
+           <option value="bl-right">bl-right</option>
+           <option value="tr-down">tr-down</option>
+           <option value="tr-left">tr-left</option>
+           <option value="tl-down">tl-down</option>
+           <option value="tl-right">tl-right</option>
+         </select>
+       </td>
+     </tr>
+     <tr>
+       <td>Message Type:</td>
+       <td>
+         <select id="myMessageType" name="myMessageType">
+           <option value="message">message</option>
+           <option value="warning">warning</option>
+           <option value="error">error</option>
+           <option value="fatal">fatal</option>
+         </select>
+       </td>
+     </tr>
+     <tr>
+       <td>Duration:</td>
+       <td><input type="text" id="myDuration" name="myDuration" value="2000"/></td>
+     </tr>
+     <tr>
+       <td>Message:</td>
+       <td><textarea id="myToasterMsg" name="myToasterMsg" rows="4" cols="40">Test Message</textarea></td>
+     </tr>
+     <tr>
+       <td></td>
+       <td><input type="button" onclick="showMyToaster()" value="Click here to see YOUR Toaster"/></td>
+     </tr>
+   </table>
 
 Additional Considerations:
 
