@@ -174,7 +174,7 @@ This example builds a Toaster programatically and lets you set params.
        <td><input type="text" id="myDuration" name="myDuration" size="6" value="2000"/> <small>Set to 0 to disable auto-fade</small></td>
      </tr>
      <tr>
-       <td>Message:</td>
+       <td valign="top">Message:</td>
        <td><textarea id="myToasterMsg" name="myToasterMsg" rows="4" cols="40">Test Message</textarea></td>
      </tr>
      <tr>
