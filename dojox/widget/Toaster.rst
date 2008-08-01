@@ -8,9 +8,9 @@ dojox.widget.Toaster
 :Authors: Peter Higgins
 :Documentation: Josh Trutwin, Peter Higgins
 
-A toaster is an inobtrusive mechanism for displaying messages, and has become popular in recent years. Like toast, the message "pops up" in the window corner, temporarily overlaying any content there. The message stays up for a certain duration, or until the user clicks on it.
+A toaster is an unobtrusive mechanism for displaying messages, and has become popular in recent years. Like toast, the message "pops up" in the window corner, temporarily overlaying any content there. The message stays up for a certain duration, or until the user clicks on it.
 
-Toasters are preferrable to alert() boxes. Alert() must always be modal, meaning all action on the page stops until the user clicks "OK". Toasters are non-modal, so the user can continue working and finish their thought before responding.
+Toasters are preferable to alert() boxes. Alert() must always be modal, meaning all action on the page stops until the user clicks "OK". Toasters are non-modal, so the user can continue working and finish their thought before responding.
 
 You can either set the message programmatically, or use dojo's publish/subscribe event feature. Publish/subscribe allows you to have several toasters, or several controls besides toasters, respond to a particular event.
 
@@ -142,7 +142,7 @@ This example builds a Toaster programatically and lets you set params.
   .. cv:: html
 
     <div id="ToasterPane"></div>
-    <table>
+    <table style="border: 0px">
       <tr>
         <td>Position:</td>
         <td>
