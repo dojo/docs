@@ -3,9 +3,9 @@
 dojox.form.BusyButton
 =====================
 
-Status: Draft
-Version: Beta
-Author: Nikolai Onken
+:Status: Draft
+:Version: Beta
+:Author: Nikolai Onken
 
 BusyButton is a simple widget which provides implementing more user friendly form submission.
 When a form gets submitted bu a user, many time it is recommended to disable the submit buttons to prevent double submittion.
