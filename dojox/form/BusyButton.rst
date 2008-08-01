@@ -29,7 +29,7 @@ The first example shows you how to create a nifty button programatically
                  busyLabel: "Sending mail...",
                  label: "Send mail",
                  timeout: 5000
-      });
+      }, "placeHolder");
     });
     </script>
 
