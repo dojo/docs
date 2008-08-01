@@ -31,7 +31,7 @@ This example show how to use the busy button without internal timeout. Once you 
   .. cv:: css
 
     <style type="text/css">
-    @import: url(/moin_static163/js/dojo/trunk/dojox/form/resources/BusyButton.css);
+      @import url(/moin_static163/js/dojo/trunk/dojox/form/resources/BusyButton.css);
     </style>
 
 The following example has a build-in timeout.
@@ -51,5 +51,5 @@ The following example has a build-in timeout.
   .. cv:: css
 
     <style type="text/css">
-    @import: url(/moin_static163/js/dojo/trunk/dojox/form/resources/BusyButton.css);
+      @import url(/moin_static163/js/dojo/trunk/dojox/form/resources/BusyButton.css);
     </style>
