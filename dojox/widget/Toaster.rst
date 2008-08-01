@@ -142,7 +142,7 @@ This example builds a Toaster programatically and lets you set params.
   .. cv:: html
 
     <div id="ToasterPane"></div>
-    <table style="border: 0px">
+    <table style="border: 0px" border="0">
       <tr>
         <td>Position:</td>
         <td>
@@ -174,8 +174,8 @@ This example builds a Toaster programatically and lets you set params.
        <td><input type="text" id="myDuration" name="myDuration" size="6" value="2000"/> <small>Set to 0 to disable auto-fade</small></td>
      </tr>
      <tr>
-       <td valign="top">Message:</td>
-       <td><textarea id="myToasterMsg" name="myToasterMsg" rows="4" cols="40">Test Message</textarea></td>
+       <td valign="top">Message:<br><small>HTML is accepted</small></td>
+       <td><textarea id="myToasterMsg" name="myToasterMsg" rows="4" cols="60">Test Message</textarea></td>
      </tr>
      <tr>
        <td></td>
