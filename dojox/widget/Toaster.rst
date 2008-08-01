@@ -171,7 +171,7 @@ This example builds a Toaster programatically and lets you set params.
      </tr>
      <tr>
        <td>Duration:</td>
-       <td><input type="text" id="myDuration" name="myDuration" value="2000"/></td>
+       <td><input type="text" id="myDuration" name="myDuration" size="6" value="2000"/> <small>Set to 0 to disable auto-fade</small></td>
      </tr>
      <tr>
        <td>Message:</td>
