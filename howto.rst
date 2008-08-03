@@ -35,7 +35,7 @@ As a last standard item you should insert version info::
 
   :Status: Draft|Contributed
   :Version: targeted Dojo version
-  :Author: Optional mdule author
+  :Author: Optional module author
 
 Code examples
 -------------
