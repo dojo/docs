@@ -106,7 +106,7 @@ Sometimes your examples need separation between CSS, JavaScript and HTML. Use th
     <div id="fohooooooo" class="fohooo">Don't click Me</div>
     <div dojoType="foohooo" class="fohooo">Or Me</div>
 
-  This is the JavaScript code of your example. Simple past both HMTL and JavaScript into the browser.
+  This is the JavaScript code of your example. Simply paste both HMTL and JavaScript into the browser.
 
   .. cv:: javascript
     :label: And the JavaScript code
@@ -151,7 +151,7 @@ The valid reST syntax has to look like following markup:
       <div id="fohooooooo" class="fohooo">Don't click Me</div>
       <div dojoType="foohooo" class="fohooo">Or Me</div>
 
-    This is the JavaScript code of your example. Simple past both HMTL and JavaScript into the browser.
+    This is the JavaScript code of your example. Simply paste both HMTL and JavaScript into the browser.
 
     .. cv:: javascript
       :label: And the JavaScript code
