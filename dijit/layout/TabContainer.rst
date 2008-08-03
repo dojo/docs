@@ -26,7 +26,7 @@ Basic Examples
             new dijit.layout.ContentPane({
                 title: dojo.attr(n,"title") 
             }, n);
-        });attr("dojoType","dijit.layout.ContentPane");
+        });
         var tc = new dijit.layout.TabContiner({},"tc1-prog");
         tc.startup(); 
     });
@@ -43,7 +43,7 @@ Basic Examples
       <div class="tc1cp" title="My second tab">
         Lorem ipsum and all around - second...
       </div>
-      <div class="tc1cp" title="My last tab" closable="true">
+      <div class="tc1cp" title="My last tab">
         Lorem ipsum and all around - last...
       </div>
     </div>
