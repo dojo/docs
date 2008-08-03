@@ -81,7 +81,7 @@ This will result in the following
 Executed code compounds
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Sometimes your examples need separation between CSS, JavaScript and HTML. Use the ".. cw-compound::" directive for that. Each compund can include several ".. code-viewer::" directives
+Sometimes your examples need separation between CSS, JavaScript and HTML. Use the ".. cv-compound::" directive for that. Each compund can include several ".. code-viewer::" directives
 
 .. cv-compound::
 
