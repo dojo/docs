@@ -87,16 +87,20 @@ Lets dynamically include code on button press and fire an event once the code is
 
     </script>
 
+
+FIXME: why is the above block broken!?!
+
 Another use, new in Dojo 1.2 is "embedded onLoad". We'll define an addOnLoad function (anonymous), and within that function call dojo.require() to load more components, registering a second addOnLoad function. The first will execute very quickly (assuming you are only loading dojo.js), and the second will wait until the package dependencies are complete:
 
 .. code-block :: javascript
- dojo.addOnLoad(function(){
+
+  dojo.addOnLoad(function(){
     dojo.require("dijit.Dialog");
     dojo.require("dijit.TitlePane");
     dojo.addOnLoad(function(){
         // dijit.Dialog and friends are ready, create one from a node with id="bar"
         var dialog = new dijit.Dialog({ title:"Lazy Loaded" }, "bar"); 
     });
- });
+  });
 
 If no in-flight XHR activity is found, and all dependencies have been solved, addOnLoad functions fire immediately. 
