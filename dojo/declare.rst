@@ -152,3 +152,67 @@ Why is this true for arrays and objects, but not primitives?  It's because, like
   y = x;
 
 Now *x* and *y* both refer to the same object. Modifying *x.fruit* will also affect *y.fruit*.
+
+Inheritance
+===========
+
+A person can only do so much, so let's create an Employee class that extends the Person class.The second argument in the dojo.declare() function is for extending classes.
+
+.. code-block :: javascript
+  :linenos:
+
+  dojo.declare("Employee", Person, {
+	constructor: function(name, age, currentResidence, position){
+                // remember, Person constructor is called automatically
+		this.password="";
+		this.position=position;
+	},
+
+	login: function(){
+	    if(this.password){
+		alert('you have successfully logged in');
+	    }else{
+		alert('please ask the administrator for your password');
+	    }
+        }
+  });
+
+Dojo handles all of the requirements for setting up the inheritance chain, including calling the superclass constructor automatically. Methods or variables can be overridden by setting the name to the same as it is in the parent class. The Employee class can override the Person class moveToNewState(), perhaps by letting the company pay for moving expenses.
+
+You initialize the subclass the same as the Person class with the new keyword.
+
+.. code-block :: javascript 
+
+  var kathryn = new Employee(' Kathryn ', 26, 'Minnesota', 'Designer');
+
+
+The Employee class passes the first three arguments down to the Person class, and sets the position.Kathryn has access to the login() function found in the Employee class, and also the moveToNewState() function by calling kathryn.moveToNewState("Texas"); Matt on the other hand, does not have access to the Employee login() function.
+
+Calling Superclass Methods
+--------------------------
+
+Often when you're overriding a method, you want to *add* something to the superclasses method, not totally replace it.  Dojo has helper functions to make this easy.
+
+But you don't have to worry in the constructor.  As we said above, superclass constructors are *always* called automatically, and *always* before the subclass constructor. This convention reduces boilerplate in 90% of cases.
+
+For all other methods, you can use ``inherited(arguments)`` to call the superclass method of the same name.  Take for example:
+
+.. code-block :: javascript 
+  :linenos:
+
+    someMethod: function() {
+      // call base class someMethod
+      this.inherited(arguments);
+      // now do something else
+    }
+
+
+Inherited will climb up the scope chain, from superclass to superclass and through mixin classes as well, until it finds "someMethod", then it will invoke that method.
+
+The argument is always literally ``arguments``, a special Javascript array variable which holds all the arguments (like argv in C).
+
+You can send custom parameters to the ancestor function.  Just place the extra arguments in array literal notation with brackets:
+
+.. code-block :: javascript
+
+  this.inherited(arguments, [ customArg1, customArg2 ])
