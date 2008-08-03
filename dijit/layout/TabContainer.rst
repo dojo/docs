@@ -179,7 +179,7 @@ A common action for ``closeable`` tabs is to register an ``onClose`` function on
     });
     </script>
 
-  The html is very simple
+  You can, of course, attach the onClose function directly on a pane as well:
 
   .. cv :: html
     
@@ -188,6 +188,9 @@ A common action for ``closeable`` tabs is to register an ``onClose`` function on
       <div id="onClose-ex" dojoType="dijit.layout.TabContainer" style="width: 100%;" doLayout="false">
         <div dojoType="dijit.layout.ContentPane" title="My first tab" selected="true">
           Lorem ipsum and all around...
+        </div>
+        <div dojoType="dijit.layout.ContentPane" title="Other Closable" closeable="true" onClose="return confirm('really?');">
+            ... I have an in-line onClose
         </div>
       </div>
 
