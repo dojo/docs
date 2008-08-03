@@ -156,8 +156,45 @@ the ``addChild`` method accepts a position index, telling where in the order to 
 
 This will add the new remote pane after the first pane (0).
 
+A common action for ``closeable`` tabs is to register an ``onClose`` function on the child, returning true or false to indicate weather or not the closing should take place:
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+    dojo.require("dijit.layout.TabContainer");
+    dojo.require("dijit.layout.ContentPane");
+    dojo.addOnLoad(function(){
+        var tabs = dijit.byId("onClose-ex");
+        var closablePane = new dijit.layout.ContentPane({
+            onClose: function(){
+               // confirm() returns true or false, so return that.
+               return confirm("Do you really want to Close this?");
+            }
+        });
+        tabs.addChild(closablePane);
+    });
+    </script>
+
+  The html is very simple
+
+  .. cv :: html
+    
+    <div style="height: 100px;">
+
+      <div id="onClose-ex" dojoType="dijit.layout.TabContainer" style="width: 100%;" doLayout="false">
+        <div dojoType="dijit.layout.ContentPane" title="My first tab" selected="true">
+          Lorem ipsum and all around...
+        </div>
+      </div>
+
+    </div>
 
 
+TabContainer Events
+-------------------
 
+There are two methods of observing TabContainer *shenanigans*. 
 
 
