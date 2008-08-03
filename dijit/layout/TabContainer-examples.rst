@@ -1,4 +1,4 @@
-#format dojo_rest
+#format dojo_rst
 
 More TabContainer Examples
 ==========================
