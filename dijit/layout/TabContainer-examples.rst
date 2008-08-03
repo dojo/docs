@@ -3,8 +3,8 @@
 More TabContainer Examples
 ==========================
 
-:status:Draft
-:version:1.2
+:Status: Draft
+:Version: 1.2
 
 
 This is a plain TabContainer with three tabs, fixed height and a tab strip. The tabstrip is especially useful when the TabContainer is child of a BorderContainer.
