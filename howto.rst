@@ -43,7 +43,7 @@ Code examples
 Non executed code
 ~~~~~~~~~~~~~~~~~
 
-If you need to give a simple source code example without it being executed use the ".. code-block ::" directive and put the code right into the next line inlined by two spaces. If you want to display line numbers, use the "linnos" attribute.
+If you need to give a simple source code example without it being executed use the ".. code-block ::" directive and put the code right into the next line inlined by two spaces. If you want to display line numbers, use the "linenos" attribute.
 
   .. code-block :: javascript
     :linenos:
