@@ -88,7 +88,6 @@ Lets dynamically include code on button press and fire an event once the code is
     </script>
 
 
-FIXME: why is the above block broken!?!
 
 Another use, new in Dojo 1.2 is "embedded onLoad". We'll define an addOnLoad function (anonymous), and within that function call dojo.require() to load more components, registering a second addOnLoad function. The first will execute very quickly (assuming you are only loading dojo.js), and the second will wait until the package dependencies are complete:
 
