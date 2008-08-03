@@ -12,13 +12,13 @@ The Number Spinner, a familiar widget in GUI interfaces, makes integer entry eas
 
   This number spinner holds a number from 9 to 1550.  Each up or down button click adjusts the number by 10.  
 
-  .. cv::javascript
+  .. cv:: javascript
 
       <script type="text/javascript">
         dojo.require("dijit.form.NumberSpinner");
       </script>
 
-  .. cv::html
+  .. cv:: html
 
    <input dojoType="dijit.form.NumberSpinner"
         value="1000"
