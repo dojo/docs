@@ -72,9 +72,9 @@ Dijit reference
 
 * `dijit <dijit>`_
 * `dijit.Dialog <dijit/Dialog>`_
-* `dijit.edit <dijit/edit>`_
+* `dijit.edit <dijit/form>`_
 
-  * `dijit.edit.NumberSpinner <dijit/edit/NumberSpinner>`_
+  * `dijit.form.NumberSpinner <dijit/form/NumberSpinner>`_
 
 * `dijit.layout <dijit/layout>`_
 
