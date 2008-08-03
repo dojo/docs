@@ -21,7 +21,8 @@ Setting Up Dojo
 
 First, you should create a directory on the web server.  We'll call ours HelloWorldTutorial.  Then create a directory called dojoroot underneath it.  Finally, use your favorite unzipping tool to unzip Dojo into /HelloWorldTutorial/dojoroot.  It'll look like this when you're done:
 
-[[attachment:debugging9.png|sample directory structure]]
+<<AttachList(,image/png)>>
+{{attachment:debugging9.png}}
 
 
 <h2>Getting Started</h2>
@@ -33,7 +34,7 @@ First, you should create a directory on the web server.  We'll call ours HelloWo
   <head>
     <title>Dojo: Hello World!</title>
 
-    <!-- SECTION 1 -->
+    <!-- SECTION 1 --h>
     <style type="text/css">
         @import "dojoroot/dijit/themes/tundra/tundra.css";
         @import "dojoroot/dojo/resources/dojo.css"
