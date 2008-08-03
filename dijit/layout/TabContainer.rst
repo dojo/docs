@@ -156,7 +156,10 @@ the ``addChild`` method accepts a position index, telling where in the order to 
 
 This will add the new remote pane after the first pane (0).
 
-A common action for ``closeable`` tabs is to register an ``onClose`` function on the child, returning true or false to indicate weather or not the closing should take place:
+Closing A Tab 
+-------------
+
+A common action for ``closable`` tabs is to register an ``onClose`` function on the child, returning true or false to indicate weather or not the closing should take place:
 
 .. cv-compound::
 
@@ -200,4 +203,63 @@ A common action for ``closeable`` tabs is to register an ``onClose`` function on
 TabContainer Events
 -------------------
 
-There are two methods of observing TabContainer *shenanigans*. 
+There are two methods of observing TabContainer *shenanigans*. The first, by using `dojo.subscribe </dojo/subscribe>`_. Each TabContainer `publishes </dojo/publish>`_ notices based on the *id* of the Container. Several different actions are tracked this way:
+
+.. code-block :: javascript
+  :linenos:
+
+  // assuming our tabContainer has id="bar"
+  dojo.subscribe("bar-selectChild", function(child){ 
+      console.log("A new child was selected:", child); 
+  });
+
+  dojo.subscribe("bar-addChild", function(child){
+      console.log("A child was added:", child);
+  });
+
+  dojo.subscribe("bar-removeChild", function(child){
+      console.log("Child is gone: ", child); // but not destroyed!
+  });
+
+the -selectChild subscription will not execute if the selected child is already the visible Pane. It will only publish when a *different* child is selected. Notice how this differs from our other method of wiring up TabContainer events, via `dojo.connect </dojo/connect>`_:
+
+.. code-block :: javascript
+  :linenos:
+
+  // assuming the same id="bar" TabContainer
+  var tabs = dijit.byId("bar");
+  
+  dojo.connect(tabs,"selectChild",function(child){ 
+      console.log("called anytime selectChild is");
+  });
+  dojo.connect(tabs,"addChild",function(child){
+      console.log("just added: ", child);
+  });
+
+
+This simply uses dojo.connect to listen to the native function calls. 
+
+A common request for ``selectChild`` functionality is to know both the *new* and *old* widgets being transitioned. The easiest way to accomplish this is connect to the "private" ``_transition`` method of a TabContainer:
+
+.. code-block :: javascript
+  :linenos:
+
+  var tabs = dijit.byId("tabs");
+  dojo.connect(tabs,"_transition", function(newPage, oldPage){ 
+      console.log("I was showing: ", oldPage || "nothing");
+      console.log("I am now showing: ", newPage);
+  });
+
+It is worth noting: If you need a function to be called *absolutely every* time a child is added to a TabContainer (or StackContainer), you need to listen to the ``_setupChild`` function to ensure you are notified of the children already existing in markup. This is only relevant if you are subclassing for reason:
+
+.. code-block :: javascript
+  :linenos:
+ 
+  dojo.declare("my.TabContainer", dijit.layout.TabContainer, {
+      _setupChild: function(child){ 
+           this.inherited(arguments);
+           console.log("I've seen: ", child);
+      }
+  });
+  
+This is because ``addChild`` will not be called for existing panes (in markup). 
