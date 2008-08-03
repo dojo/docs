@@ -36,7 +36,7 @@ Dojo Book Outline
     * `ComboBox <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/auto-completer>`_.
     * `FilteringSelect <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/select>`_.
     * `InlineEditBox (0.9) <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/inline-edit-box>`_.
-    * `NumberSpinner <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/number-spinner>`_.
+    * `Dijit NumberSpinner <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/number-spinner>`_. maps to `NumberSpinner <dijit/form/NumberSpinner>`_.
     * `Slider <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/slider>`_.
     * `Textarea <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/resizeable-text-area>`_.
     * `TextBox family - Validation, Currency, Number, Date, Time <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/textbox-validating-currency-number>`_.
