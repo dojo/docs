@@ -216,3 +216,44 @@ You can send custom parameters to the ancestor function.  Just place the extra a
 .. code-block :: javascript
 
   this.inherited(arguments, [ customArg1, customArg2 ])
+
+More on Mixins
+==============
+
+Just as Dojo adds class-based inheritance to JavaScript, so it adds support for *multiple inheritance*.  We do this through Dojo *mixins*.   The methods and properties of a mixed-in class are simply added to each instance. 
+
+In pure object-oriented languages like Java, you must use typecasts to make an object "act like" its mixed-in class (in Java, this is through interfaces).  Not in Dojo.  You can use the mixed-in properties directly.
+
+Suppose, for example, you have a class called VanillaSoftServe, and classes MandMs and CookieDough.  Here's how to make a Blizzard:
+
+.. code-block :: javascript 
+  :linenos:
+
+  dojo.declare("VanillaSoftServe",null, {
+    constructor: function() { console.debug ("mixing in Vanilla"); }
+  });
+
+  dojo.declare("MandMs",null, {
+    constructor: function() { console.debug("mixing in MandM's"); },
+    kind: "plain"
+  });
+
+  dojo.declare("CookieDough",null, {
+    chunkSize: "medium"
+  });
+
+  dojo.declare("Blizzard", [VanillaSoftServe, MandMs, CookieDough], {
+        constructor: function() {
+             console.debug("A blizzard with "+
+                 this.kind+" M and Ms and "+
+                 this.chunkSize+" chunks of cookie dough."
+             );
+        }
+  });
+  // make a Blizzard:
+  new Blizzard();
+
+
+This will first print "mixing in Vanilla" on the debug console because VanillaSoftServe is the superclass of Blizzard.  In fact, VanillaSoftServe is the *only* superclass of Blizzard - the first mixin is always the superclass. Next the constructors of the mixins are called, so "mixing in MandMs" will appear.  Then "A blizzard with plain M and Ms and medium chunks of cookie dough." will appear.
+
+Mixins are used a lot in defining Dijit classes, with most classes extending ``dijit._Widget`` and mixing in ``dijit._Templated``.
