@@ -27,7 +27,7 @@ Basic Examples
                 title: dojo.attr(n,"title") 
             }, n);
         });
-        var tc = new dijit.layout.TabContiner({},"tc1-prog");
+        var tc = new dijit.layout.TabContainer({},"tc1-prog");
         tc.startup(); 
     });
     </script>
