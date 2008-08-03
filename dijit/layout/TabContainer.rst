@@ -150,6 +150,8 @@ This is a plain TabContainer with three tabs, fixed height and a tab strip. The 
 
 The doLayout attribute currently only works for top tabs, left/bottom/right tabs don't support it. You can set a tab strip on every tab type though. Following a few examples with left/bottom/right tabs using tabStrip here and there.
 
+There are several more examples of basic use cases `available <-examples>`_ 
+
 Tabs at the right, no strip 
 
 .. cv-compound::
