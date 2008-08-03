@@ -38,7 +38,7 @@ The dojo.mixin call (in the constructor) then mixes the variable count into the 
 .. code-block :: javascript 
   :linenos:
 
-  dojo.decalre("my.Thinger", null, {
+  dojo.declare("my.Thinger", null, {
       count: 100,
       constructor: function(args){
          dojo.mixin(this, args);
@@ -47,3 +47,14 @@ The dojo.mixin call (in the constructor) then mixes the variable count into the 
   var thing1 = new my.Thinger(); 
   var thing2 = new my.Thinger({ count:200 }); 
   console.log(thing1.count, thing2.count);
+
+Now we have a 'base class', called my.Thinger. To show how the inheritance chain works, we will create a new class derrived from this base Class:
+
+.. code-block :: javascript
+  :linenos:
+   dojo.declare("my.OtherThinger", [my.Thinger], {
+       divisor: 5,
+       constructor: function(args){
+         console.log('OtherThinger constructor called');
+       }
+   });
