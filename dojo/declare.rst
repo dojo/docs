@@ -1,4 +1,3 @@
-## page was renamed from 1.2/dojo/declare
 #format dojo_rst
 
 dojo.declare
