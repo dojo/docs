@@ -21,7 +21,7 @@ Setting Up Dojo
 
 First, you should create a directory on the web server.  We'll call ours HelloWorldTutorial.  Then create a directory called dojoroot underneath it.  Finally, use your favorite unzipping tool to unzip Dojo into /HelloWorldTutorial/dojoroot.  It'll look like this when you're done:
 
-[inline:debugging9.png]
+{{attachment:debugging9.png|sample directory structure}}
 
 
 <h2>Getting Started</h2>
