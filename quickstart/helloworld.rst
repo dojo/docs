@@ -21,21 +21,22 @@ Setting Up Dojo
 
 First, you should create a directory on the web server.  We'll call ours HelloWorldTutorial.  Then create a directory called dojoroot underneath it.  Finally, use your favorite unzipping tool to unzip Dojo into /HelloWorldTutorial/dojoroot.  It'll look like this when you're done:
 
-<<AttachList>>
+.. image:: debugging9.png
+   :alt: server directory structure
 
-{{attachment:debugging9.png}}
+Getting Started
+---------------
 
+Once we have setup the directory and file structure for the tutorial, we will need to setup the JavaScript component of our HTML page. Have a look at the code below:
 
-<h2>Getting Started</h2>
+.. code-block:: html
+  :linenos:
 
-<p>Once we have setup the directory and file structure for the tutorial, we will need to setup the JavaScript component of our HTML page. Have a look at the code below:</p>
-
-<code lang="html4strict">
-<html>
+  <html>
   <head>
     <title>Dojo: Hello World!</title>
 
-    <!-- SECTION 1 --h>
+    <!-- SECTION 1 -->
     <style type="text/css">
         @import "dojoroot/dijit/themes/tundra/tundra.css";
         @import "dojoroot/dojo/resources/dojo.css"
@@ -46,23 +47,22 @@ First, you should create a directory on the web server.  We'll call ours HelloWo
 
   <body class="tundra">
   </body>
-</html>
-</code>
-<br/>
-<p>As it can be seen above, the page is a just a standard HTML skeleton with three things:</p>
+  </html>
 
-<ul>
-<li>A couple of CSS style sheets.  The one marked Tundra is the <i>theme</i> we will use from Dijit for this example.  There
-are other themes available.</li>
-<li>A script element inserted into the head section. This script element is responsible for loading the base Dojo script that provides access to all the other Dojo functionality that we will use.</li>
-<li>Lastly, we place the tundra CSS class in the body tag.</li>
-</ul>
+As it can be seen above, the page is a just a standard HTML skeleton with three things:
 
-<h2>Creating a Button Widget</h2>
+1. A couple of CSS style sheets. The one marked Tundra is the *theme* we will use from Dijit for this example.  There are other themes available.
 
-<p>Ok, now for the exciting part! In this example we're going to create a Button widget with the text 'Hello World!'. In the case of the Button widget, three visual states (mouseOut, mouseOver, and mouseDown) are available which means that we are able to enhance the user's experience somewhat.</p>
+#. A script element inserted into the head section. This script element is responsible for loading the base Dojo script that provides access to all the other Dojo functionality that we will use.
 
-<p>The first step in creating the widget is telling Dojo to load the appropriate modules. In the header, add another section (hereafter referred to as section 2) below section 1 as follows:
+#. Lastly, we place the Tundra CSS class in the ``BODY`` tag.
+
+Creating a Button Widget
+------------------------
+
+Ok, now for the exciting part! In this example we're going to create a Button widget with the text 'Hello World!'. In the case of the Button widget, three visual states (mouseOut, mouseOver, and mouseDown) are available which means that we are able to enhance the user's experience somewhat.
+
+The first step in creating the widget is telling Dojo to load the appropriate modules. In the header, add another section (hereafter referred to as section 2) below section 1 as follows:
 
 <code lang="html4strict">
     <!-- SECTION 2 -->
