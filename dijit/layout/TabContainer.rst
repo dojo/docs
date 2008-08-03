@@ -168,6 +168,8 @@ A common action for ``closeable`` tabs is to register an ``onClose`` function on
     dojo.addOnLoad(function(){
         var tabs = dijit.byId("onClose-ex");
         var closablePane = new dijit.layout.ContentPane({
+            title:"Close Me",
+            closable: true, 
             onClose: function(){
                // confirm() returns true or false, so return that.
                return confirm("Do you really want to Close this?");
@@ -196,5 +198,3 @@ TabContainer Events
 -------------------
 
 There are two methods of observing TabContainer *shenanigans*. 
-
-
