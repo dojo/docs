@@ -13,20 +13,20 @@ Joining the Dojo doc team is easy, all you need to do is write and get familiar 
 Dojo Doc Syntax (reST)
 ----------------------
 
-Dojo doc uses the reST syntac to describe all docs, we have implemented a few features of the great reST Sphinx extension and implemented dojo specific ones to provide cool stuff like inline code demos (Yah, you won't believe it, but your code will just work)
+Dojo doc uses the reST syntax to describe all docs, we have implemented a few features of the great reST Sphinx extension and implemented dojo specific ones to provide cool stuff like inline code demos (Yah, you won't believe it, but your code will just work)
 
 `Visit the official reST Quick reference <http://docutils.sourceforge.net/docs/user/rst/quickref.html#hyperlink-targets>`_.
 
-Please not following topics
+Please note the following topics
 
 Header
 ~~~~~~
 
-Every doc document has to start with wollowing first line::
+Every doc document has to start with following first line::
 
   #format dojo_rst
 
-The should follow the document header for instance::
+Then should follow the document header for instance::
 
   dojo.module
   ===========
@@ -56,7 +56,7 @@ If you need to give a simple source code example without it being executed use t
 Executed code
 ~~~~~~~~~~~~~
 
-You can add real example to the documentation by using the ".. codeviewer::" directive. The code you show can include Javascript, CSS and HTML
+You can add a real example to the documentation by using the ".. codeviewer::" directive. The code you show can include JavaScript, CSS and HTML
 
   .. code-block :: javascript
     :linenos:
@@ -68,7 +68,7 @@ You can add real example to the documentation by using the ".. codeviewer::" dir
        <div dojoType="dijit.form.Button">whatever</div>
     </div>
 
-This will result in following 
+This will result in the following 
 
 
 .. codeviewer::
@@ -94,7 +94,7 @@ Sometimes your examples need separation between CSS, JavaScript and HTML. Use th
     .fohooo { color: #15d32a; font-size: 16px; }
     </style>
 
-  The html snippet simply defines the markup of your code. Dojo will then parse the dom nodes and create the widgets programatically. 
+  The HTML snippet simply defines the markup of your code. Dojo will then parse the DOM nodes and create the widgets programatically. 
     
     * Programmatic code generation
     * Dom manipulation
@@ -106,10 +106,10 @@ Sometimes your examples need separation between CSS, JavaScript and HTML. Use th
     <div id="fohooooooo" class="fohooo">Don't click Me</div>
     <div dojoType="foohooo" class="fohooo">Or Me</div>
 
-  This is the jscript code of your example. Simple past both HMTL and Jscript into the browser.
+  This is the JavaScript code of your example. Simple past both HMTL and JavaScript into the browser.
 
   .. cv:: javascript
-    :label: And the jscript code
+    :label: And the JavaScript code
 
     <script type="text/javascript">
     dojo.declare("foohooo", [dijit._Widget,dijit._Templated], {
@@ -139,7 +139,7 @@ The valid reST syntax has to look like following markup:
        <style type="text/css">
        </style>
 
-    The html snippet simply defines the markup of your code. Dojo will then parse the dom nodes and create the widgets programatically. 
+    The HTML snippet simply defines the markup of your code. Dojo will then parse the DOM nodes and create the widgets programatically. 
     
       * Programmatic code generation
       * Dom manipulation
@@ -151,10 +151,10 @@ The valid reST syntax has to look like following markup:
       <div id="fohooooooo" class="fohooo">Don't click Me</div>
       <div dojoType="foohooo" class="fohooo">Or Me</div>
 
-    This is the jscript code of your example. Simple past both HMTL and Jscript into the browser.
+    This is the JavaScript code of your example. Simple past both HMTL and JavaScript into the browser.
 
     .. cv:: javascript
-      :label: And the jscript code
+      :label: And the JavaScript code
 
       <script type="text/javascript">
       dojo.declare("foohooo", [dijit._Widget,dijit._Templated], {
@@ -167,5 +167,3 @@ The valid reST syntax has to look like following markup:
         var widget = new foohooo({id: "test_foohooo"}, dojo.byId("fohooo"));
       });
       </script>
-
-Hi
