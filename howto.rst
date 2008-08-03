@@ -15,7 +15,7 @@ Dojo Doc Syntax (reST)
 
 Dojo doc uses the reST syntax to describe all docs, we have implemented a few features of the great reST Sphinx extension and implemented dojo specific ones to provide cool stuff like inline code demos (Yah, you won't believe it, but your code will just work)
 
-`Visit the official reST Quick reference <http://docutils.sourceforge.net/docs/user/rst/quickref.html#hyperlink-targets>`_.
+`Visit the official reST Quick reference <http://docutils.sourceforge.net/docs/user/rst/quickref.html>`_.
 
 Please note the following topics
 
