@@ -12,9 +12,11 @@ A TabContainer is a container that has multiple panes, but shows only one pane a
 Basic Examples
 --------------
 
-.. cv-compound::
+First, We'll demonstrate a programatic TabContainer creation from existing markup:
 
-  First, We'll demonstrate a programatic TabContainer creation from existing markup:
+.. cv-compound::
+ 
+  As a simple example, we'll use `dojo.query <dojo/query>`_ to find and create the ContentPanes used in the TabContainer
 
   .. cv:: javascript
 
@@ -39,7 +41,7 @@ Basic Examples
   .. cv:: html
 
     <div id="tc1-prog" style="width: 100%; height: 100px;">
-      <div class="tc1cp" title="My first tab" selected="true">
+      <div class="tc1cp" title="My first tab">
         Lorem ipsum and all around...
       </div>
       <div class="tc1cp" title="My second tab">
@@ -51,6 +53,7 @@ Basic Examples
     </div>
 
 
+The `parser <dojo/parser>`_ does a lot of the heavy lifting seen above in the programatic method, finding attributes on the node and passing them to the Widget being created. By using a dojoType to identify these nodes, our initial creation is very easy, as seen in the remainder of these examples: 
 
 .. cv-compound::
 
@@ -227,3 +230,42 @@ Tabs at the bottom,with a strip
         Lorem ipsum and all around - last...
       </div>
     </div>
+
+One technique to allow validation, and still use the parser would be to simply decorate the node with a dojoType attribute (after onLoad) and parse the parent node. For ease, we'll store the class name for our inner widgets in a rel="" attribute.
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+    dojo.require("dijit.layout.TabContainer");
+    dojo.require("dijit.layout.ContentPane");
+    dojo.require("dojo.parser");
+    dojo.addOnLoad(function(){
+        dojo.query("div[rel]").forEach(function(n){
+            var className = dojo.attr(n,"rel");
+            // now set it
+            dojo.attr(n, "dojoType", className);
+        });
+        dojo.parser.parse("progtabwrapper");
+    });
+    </script>
+
+
+  .. cv :: html
+
+    <div id="progtabwrapper">
+    <div rel="dijit.layout.TabContainer" style="width: 100%; height: 100px;">
+      <div rel="dijit.layout.ContentPane" title="My first tab">
+        Lorem ipsum and all around...
+      </div>
+      <div rel="dijit.layout.ContentPane" title="My second tab">
+        Lorem ipsum and all around - second...
+      </div>
+      <div rel="dijit.layout.ContentPane" title="My last tab">
+        Lorem ipsum and all around - last...
+      </div>
+    </div>
+    </div>
+
+ 
