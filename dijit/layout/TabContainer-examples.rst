@@ -35,3 +35,124 @@ This is a plain TabContainer with three tabs, fixed height and a tab strip. The 
     </div>
 
 The doLayout attribute currently only works for top tabs, left/bottom/right tabs don't support it. You can set a tab strip on every tab type though. Following a few examples with left/bottom/right tabs using tabStrip here and there.
+
+
+Tabs at the right, no strip 
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+    dojo.require("dijit.layout.TabContainer");
+    dojo.require("dijit.layout.ContentPane");
+    </script>
+
+  notice the tabPosition attribute
+
+  .. cv :: html
+
+    <div dojoType="dijit.layout.TabContainer" style="width: 100%; height: 100px;" tabPosition="right-h">
+      <div dojoType="dijit.layout.ContentPane" title="My first tab" selected="true">
+        Lorem ipsum and all around...
+      </div>
+      <div dojoType="dijit.layout.ContentPane" title="My second tab">
+        Lorem ipsum and all around - second...
+      </div>
+      <div dojoType="dijit.layout.ContentPane" title="My last tab">
+        Lorem ipsum and all around - last...
+      </div>
+    </div>
+
+Tabs at the left, with a strip 
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+    dojo.require("dijit.layout.TabContainer");
+    dojo.require("dijit.layout.ContentPane");
+    </script>
+
+  notice the tabPosition attribute
+
+  .. cv :: html
+
+    <div dojoType="dijit.layout.TabContainer" style="width: 100%; height: 100px;" tabPosition="left-h" tabStrip="true">
+      <div dojoType="dijit.layout.ContentPane" title="My first tab" selected="true">
+        Lorem ipsum and all around...
+      </div>
+      <div dojoType="dijit.layout.ContentPane" title="My second tab">
+        Lorem ipsum and all around - second...
+      </div>
+      <div dojoType="dijit.layout.ContentPane" title="My last tab">
+        Lorem ipsum and all around - last...
+      </div>
+    </div>
+
+Tabs at the bottom,with a strip 
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+    dojo.require("dijit.layout.TabContainer");
+    dojo.require("dijit.layout.ContentPane");
+    </script>
+
+  notice the tabPosition attribute
+
+  .. cv :: html
+
+    <div dojoType="dijit.layout.TabContainer" style="width: 100%; height: 100px;" tabPosition="bottom" tabStrip="true">
+      <div dojoType="dijit.layout.ContentPane" title="My first tab" selected="true">
+        Lorem ipsum and all around...
+      </div>
+      <div dojoType="dijit.layout.ContentPane" title="My second tab">
+        Lorem ipsum and all around - second...
+      </div>
+      <div dojoType="dijit.layout.ContentPane" title="My last tab">
+        Lorem ipsum and all around - last...
+      </div>
+    </div>
+
+One technique to allow validation, and still use the parser would be to simply decorate the node with a dojoType attribute (after onLoad) and parse the parent node. For ease, we'll store the class name for our inner widgets in a rel="" attribute.
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+    dojo.require("dijit.layout.TabContainer");
+    dojo.require("dijit.layout.ContentPane");
+    dojo.require("dojo.parser");
+    dojo.addOnLoad(function(){
+        dojo.query("div[rel]").forEach(function(n){
+            var className = dojo.attr(n,"rel");
+            // now set it
+            dojo.attr(n, "dojoType", className);
+        });
+        dojo.parser.parse("progtabwrapper");
+    });
+    </script>
+
+
+  .. cv :: html
+
+    <div id="progtabwrapper">
+    <div rel="dijit.layout.TabContainer" style="width: 100%; height: 100px;">
+      <div rel="dijit.layout.ContentPane" title="My first tab">
+        Lorem ipsum and all around...
+      </div>
+      <div rel="dijit.layout.ContentPane" title="My second tab">
+        Lorem ipsum and all around - second...
+      </div>
+      <div rel="dijit.layout.ContentPane" title="My last tab">
+        Lorem ipsum and all around - last...
+      </div>
+    </div>
+    </div>
+
+ 
