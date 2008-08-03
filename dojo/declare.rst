@@ -7,7 +7,7 @@ dojo.declare
 :Status: Contributed, Draft
 :Version: 1.0
 
-Javascript doesn't have a Class system like Java, though Dojo provides functionality to simulate this: dojo.declare. For some background on JavaScript and prototype-based object orientation, chapter 9 of David Flanagan's <i>JavaScript: The Definitive Guide, 5th edition</i> is a good read.  
+Javascript doesn't have a Class system like Java, though Dojo provides functionality to simulate this: dojo.declare. For some background on JavaScript and prototype-based object orientation, chapter 9 of David Flanagan's *JavaScript: The Definitive Guide, 5th edition* is a good read.  
 
 This section has some pretty abstract stuff, and you may wish to skip it on the first read.  Certainly you can do a lot with Dojo without using dojo.declare or the other object orientation functions.  But a good knowledge of it will help you program faster and smarter.
 
