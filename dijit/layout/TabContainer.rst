@@ -262,4 +262,6 @@ It is worth noting: If you need a function to be called *absolutely every* time 
       }
   });
   
-This is because ``addChild`` will not be called for existing panes (in markup). 
+This is because ``addChild`` will not be called for existing panes (in markup).
+
+ 
