@@ -189,7 +189,7 @@ A common action for ``closeable`` tabs is to register an ``onClose`` function on
         <div dojoType="dijit.layout.ContentPane" title="My first tab" selected="true">
           Lorem ipsum and all around...
         </div>
-        <div dojoType="dijit.layout.ContentPane" title="Other Closable" closeable="true" onClose="return confirm('really?');">
+        <div dojoType="dijit.layout.ContentPane" title="Other Closable" closable="true" onClose="return confirm('really?');">
             ... I have an in-line onClose
         </div>
       </div>
