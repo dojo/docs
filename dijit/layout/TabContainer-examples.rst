@@ -1,0 +1,37 @@
+#format dojo_rest
+
+More TabContainer Examples
+==========================
+
+:status:Draft
+:version:1.2
+
+
+This is a plain TabContainer with three tabs, fixed height and a tab strip. The tabstrip is especially useful when the TabContainer is child of a BorderContainer.
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+    dojo.require("dijit.layout.TabContainer");
+    dojo.require("dijit.layout.ContentPane");
+    </script>
+
+  The html is very simple
+
+  .. cv :: html
+
+    <div dojoType="dijit.layout.TabContainer" style="width: 100%; height: 100px;" tabStrip="true">
+      <div dojoType="dijit.layout.ContentPane" title="My first tab" selected="true">
+        Lorem ipsum and all around...
+      </div>
+      <div dojoType="dijit.layout.ContentPane" title="My second tab">
+        Lorem ipsum and all around - second...
+      </div>
+      <div dojoType="dijit.layout.ContentPane" title="My last tab">
+        Lorem ipsum and all around - last...
+      </div>
+    </div>
+
+The doLayout attribute currently only works for top tabs, left/bottom/right tabs don't support it. You can set a tab strip on every tab type though. Following a few examples with left/bottom/right tabs using tabStrip here and there.
