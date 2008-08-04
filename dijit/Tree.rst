@@ -12,7 +12,7 @@ Examples
 
 .. cv-compound::
 
-  cv:: javascript
+  .. cv:: javascript
 
     <script type="text/javascript">
       dojo.require("dojo.data.ItemFileReadStore");
@@ -20,7 +20,7 @@ Examples
       dojo.require("dijit.Menu");
     </script>
 
-  cv:: html
+  .. cv:: html
 
     <div dojoType="dojo.data.ItemFileReadStore" jsId="continentStore"
       url="http://docs.dojocampus.org/moin_static163/js/dojo/1.1.1/dijit/tests/_data/countries.json"></div>
