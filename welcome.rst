@@ -29,6 +29,7 @@ Installation
 ------------
 
 * `How to Install the Dojo Toolkit <quickstart/install>`_
+* `Functions used *everywhere* <quickstart/dojo-basics>`_
 
 Getting started
 ---------------
