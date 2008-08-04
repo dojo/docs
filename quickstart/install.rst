@@ -44,6 +44,6 @@ And now you've got a working Dojo! Anything can be accomplished now based on the
 Getting the Nightly Build
 -------------------------
 
-For the truly dedicated: you can get the latest and greatest code directly from the `nightly <http://archive.dojotoolkit.org/nightly/`_ archives, or directly from subversion. Simply point your ``svn`` url to:
+For the truly dedicated: you can get the latest and greatest code directly from the `nightly archives <http://archive.dojotoolkit.org/nightly/>`_, or directly from subversion. Simply point your ``svn`` url to:
 
 ``http://svn.dojotoolkit.org/src/view/anon/all/trunk``
