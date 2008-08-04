@@ -105,9 +105,9 @@ Can be written as:
   );
 
 
-we used an anonymous function here to define the operation.  This function must accept between one and three arguments. The first argument is the value of each value in the array in turn, the second is the current index or position in the array, and the third argument is the array itself.
+We used an anonymous function here to define the operation.  This function must accept between one and three arguments. The first argument is the value of each value in the array in turn, the second is the current index or position in the array, and the third argument is the array itself.
 
-For this simple loop, forEach isn't anything exciting.  But combined with other Dojo functions, especially <a href="../selecting-dom-nodes-dojo-query">dojo.query()</a>, it becomes remarkably useful.   Consider this snippet, which disables all SELECT tags on the page:</p>
+For this simple loop, forEach isn't anything exciting.  But combined with other Dojo functions, especially `dojo.query </dojo/query>`_, it becomes remarkably useful.   Consider this snippet, which disables all SELECT tags on the page:
 
 .. code-block :: javascript
 
@@ -124,11 +124,12 @@ There's no monkeying around with DOM functions, no using tedious names or id's, 
 Running dojo.forEach on a dojo.query result is so common, that Dojo defines a shortcut.  This snippet:
 
 .. code-block :: javascript 
-dojo.query("select").forEach(
+
+  dojo.query("select").forEach(
     function(selectTag) {
         selectTag.disabled = true;
     }
-);
+  );
 
 
 does the same thing.  But that's not all!  *New in 1.0*, you can collapse the function down to its body, passed in as a string like so:
@@ -139,7 +140,7 @@ does the same thing.  But that's not all!  *New in 1.0*, you can collapse the fu
   dojo.query("select", document).forEach("item.disabled = true;");
 
 
-Ay carumba!  That's a lot of functionality in a tiny 1-line package.  Once you get used to the syntax, you'll never want to go back. This only scratches the surface of how useful ``dojo.forEach`` can be. There is an excellent DojoCookie about ``forEach <http://dojocampus.org/content/2008/02/19/foreach-goodness/>`_ on DojoCampus.
+Ay carumba!  That's a lot of functionality in a tiny 1-line package.  Once you get used to the syntax, you'll never want to go back. This only scratches the surface of how useful ``dojo.forEach`` can be. There is an excellent DojoCookie about `forEach <http://dojocampus.org/content/2008/02/19/foreach-goodness/>`_ on DojoCampus.
 
 dojo.connect
 ------------
@@ -149,6 +150,7 @@ Events in JavaScript or Dojo based applications are essential to making applicat
 Below is the code in the tutorial handling events.  Here we connected the event handler, ``helloPressed``, to the ``onclick`` property of the hello button element.  When the button is clicked the funtion helloPressed will be called.
 
 .. code-block :: javascript
+
   function helloPressed(){
    alert('You pressed the button');
   }
@@ -161,6 +163,7 @@ Below is the code in the tutorial handling events.  Here we connected the event 
 It is also possible to use the Dojo event model to connect simple objects.  To demonstrate, lets define a simple object with a couple of methods:
 
 .. code-block :: javascript
+
   var exampleObj = {
       counter: 0,
       foo: function(){ 
