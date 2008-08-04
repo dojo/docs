@@ -47,3 +47,9 @@ Getting the Nightly Build
 For the truly dedicated: you can get the latest and greatest code directly from the `nightly archives <http://archive.dojotoolkit.org/nightly/>`_, or directly from subversion. Simply point your ``svn`` url to:
 
 ``http://svn.dojotoolkit.org/src/view/anon/all/trunk``
+
+The README in the link explains why the directory looks empty: It is a collection of ``svn:externals`` pointing to the various project root folders. For instance, If you desire only the Dojo project (excluding Dijit, DojoX, and util/), us the url:
+
+``http://svn.dojotoolkit.org/src/dojo/trunk``
+
+It is worth noting: when working from Subversion, the code is **not** optimized or otherwise built. For optimum performance, download the source files from SVN, and run a build. ``FIXME: link`` 
