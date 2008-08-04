@@ -195,3 +195,8 @@ The Dojo event system allows you to connect to DOM elements or nodes or plain Ja
 *note*: in the above examples, we're connecting to (the lowercase) ``onclick``, which differs from ``onClick``. If you are using ``dojo.connect`` to listen to a Dijit widget function, Dijit uses mixedCases for it's naming convention. The lowercase version is used for DOM events, and the mixedCase version is for Dijit events.
 
 ``dojo.connect`` is a *lot* more powerful than can be described on the surface. See the `full rundown </dojo/connect>`_ for more examples and use-cases.
+
+More QuickStart goodness:
+-------------------------
+
+SitePen, a major Dojo contributor, has taken the liberty of writing and maintaining a `Dojo QuickStart Guide <http://sitepen.com/labs/guides/?guide=DojoQuickStart>`_. Rather than duplicate that effort, we will simply suggest you read that exceptionally helpful guide.
