@@ -24,8 +24,7 @@ For you traditionalists out there, you can download, install and use Dojo the ol
 
 * Download the latest build from `dojo downloads <http://dojotoolkit.org/downloads>`_
 * Uncompress the files (dojo/, dijit/ dojox/ and possibly util/) into some web-accessible folder. Assuming you install it under the directory /js, when you're done, the file system should look something like this: ``FIXME``
-* With your browser, open ``http://yoursite.com/js/dijit/themes/themeTester.html`` You should see a page like this:
- ``FIXME``
+* With your browser, open ``http://yoursite.com/js/dijit/themes/themeTester.html`` You should see a page like this: ``FIXME``
 
 And now you've got a working Dojo! Anything can be accomplished now based on the inclusion of ``dojo.js`` at whatever relative position on your server it exists:
 
