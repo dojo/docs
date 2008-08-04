@@ -18,4 +18,4 @@ If you are using an un-built Dojo, the inclusion of dojo.js will trigger the inc
 
 In the above example, we are including a X-Domain version of dojo.js, which is slightly larger in filesize (29k), though allows all modules and resources to be loaded from a different domain. 
 
-Any function or class hanging off the dojo namespace is typically provided for in dojo._base. dojo.xhrGet, dojo.animateProperty, dojo.connect, and dojo.require are examples of Base functionality. 
+Any function or class hanging off the dojo namespace is typically provided for in dojo._base. dojo.xhrGet, dojo.animateProperty, `dojo.connect </dojo/connect>`_, and dojo.require are examples of Base functionality. 
