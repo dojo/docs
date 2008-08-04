@@ -9,7 +9,7 @@ Installing Dojo
 Dojo requires no special installation, or setup procedure, though comes with several "installation" options. There are three main ways to install Dojo:
 
 * Install nothing! Use Dojo from AOL's Content Distribution Network (`CDN <http://build.dojotoolkit.org>`_).
-* Install the `latest release <http://download.dojotoolkit.org/current-stable>`_on your server
+* Install the `latest release <http://download.dojotoolkit.org/current-stable>`_ on your server
 * Install directly from `source control </install/dojo-releases>`_
 
 Use Dojo from CDN
@@ -48,5 +48,3 @@ Getting the Nightly Build
 For the truly dedicated: you can get the latest and greatest code directly from the `nightly <http://archive.dojotoolkit.org/nightly/`_ archives, or directly from subversion. Simply point your ``svn`` url to:
 
 ``http://svn.dojotoolkit.org/src/view/anon/all/trunk``
-
-
