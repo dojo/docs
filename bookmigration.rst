@@ -85,7 +85,7 @@ Dojo Book Outline
 
 * `Part 3: JavaScript Programming With Dojo and Dijit <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo-0>`_.
 
-  * `Functions Used Everywhere <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/functions-used-everywhere>`_.
+  * `Functions Used Everywhere <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/functions-used-everywhere>`_. maps to: `Functions Used Everwhere </quickstart/dojo-basics>`_
   * `Object Orientation <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/object-orientation>`_. maps to: `dojo.declare <dojo/declare>`_
   * `Modules <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/modules-and-namespaces>`_.
   * `Creating and Scripting Widgets <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/manipulating-widgets-through-code>`_.
