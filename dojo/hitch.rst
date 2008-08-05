@@ -17,14 +17,16 @@ Basic Example
   Let's look at a quick example:
 
   .. cv:: javascript
-
-    var myObj = {
-      foo: "bar"
-    };
-    var func = dojo.hitch(myObj, function() {
-      console.log(this.foo);
-    });
-    func();
+    
+    <script type="text/javascript">
+      var myObj = {
+        foo: "bar"
+      };
+      var func = dojo.hitch(myObj, function() {
+        console.log(this.foo);
+      });
+      func();
+    </script>
 
   When we open up firebug, we should get "bar" printed. That's because the scope we provided in dojo.hitch was 'myObj', so inside the function, 'this' refers to 'myObj'.
 
@@ -36,28 +38,31 @@ Using Methods in the Scope
   Let's say I want to call a method in a given scope. I could do:
 
   .. cv-javascript
-    
-    var myObj = {
-      foo: "bar",
-      method: function(someArg) {
-        console.log(this.foo);
-      }
-    };
-    var func = dojo.hitch(myObj, myObj.method);
-    func();
+
+    <script type="text/javascript">
+      var myObj = {
+        foo: "bar",
+        method: function(someArg) {
+          console.log(this.foo);
+        }
+      };
+      var func = dojo.hitch(myObj, myObj.method);
+      func();
+    </script>
   
   But that is too much typing. If there's a method that you want to use that's already in the scope, you can just provide the method's name as the second argument.
 
   .. cv-javascript
-    
-    var myObj = {
-      foo: "bar",
-      method: function(someArg) {
-        console.log(this.foo);
-      }
-    };
-    var func = dojo.hitch(myObj, "method");
-    func();
+    <script type="text/javascript">
+      var myObj = {
+        foo: "bar",
+        method: function(someArg) {
+          console.log(this.foo);
+        }
+      };
+      var func = dojo.hitch(myObj, "method");
+      func();
+    </script>
 
   firebug should output "bar".
 
@@ -69,15 +74,16 @@ Providing Arguments
   You can also provide arguments to the function you're calling. Here's an example:
 
   .. cv-javascript
-    
-    var myObj = {
-      foo: "bar",
-      method: function(someArg) {
-        console.log(someArg+" "+this.foo);
-      }
-    };
-    var func = dojo.hitch(myObj, "method", "baz");
-    func();
+    <script type="text/javascript">
+      var myObj = {
+        foo: "bar",
+        method: function(someArg) {
+          console.log(someArg+" "+this.foo);
+        }
+      };
+      var func = dojo.hitch(myObj, "method", "baz");
+      func();
+    </script>
   
   The output from firebug should be "baz bar". Any arguments provided after the first two will be passed to the function.
 
@@ -90,7 +96,9 @@ Real-World Examples
 
   .. cv-javascript
 
-    document.onconextmenu = dojo.hitch(dojo, "stopEvent");
+    <script type="text/javascript">
+      document.onconextmenu = dojo.hitch(dojo, "stopEvent");
+    </script>
 
 .. cv-compound::
 
@@ -98,28 +106,32 @@ Real-World Examples
 
   .. cv-javascript
 
-    var myObj = {
-      foo: "bar",
-      method: function(someArg) {
-        console.log(this.foo+" "+data);
-      }
-    };
-   dojo.xhrGet({
-     url: "/something.php",
-     load: myObj.method
-   });
+    <script type="text/javascript">
+      var myObj = {
+        foo: "bar",
+        method: function(someArg) {
+          console.log(this.foo+" "+data);
+        }
+      };
+      dojo.xhrGet({
+        url: "/something.php",
+        load: myObj.method
+      });
+    </script>
 
   The above example won't work. If we want to access this.foo, we need to have 'method' called inside of 'myObj'. Giving myObj.method to dojo.xhrGet only passes the function. You can use dojo.hitch to get around this:
 
   .. cv-javascript
 
-    var myObj = {
-      foo: "bar",
-      method: function(data) {
-        console.log(this.foo+" "+data);
-      }
-    };
-   dojo.xhrGet({
-     url: "/something.php",
-     load: dojo.hitch(myObj, "method")
-   });
+    <script type="text/javascript">
+      var myObj = {
+        foo: "bar",
+        method: function(data) {
+          console.log(this.foo+" "+data);
+        }
+      };
+      dojo.xhrGet({
+        url: "/something.php",
+        load: dojo.hitch(myObj, "method")
+      });
+    </script>
