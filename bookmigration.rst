@@ -31,15 +31,15 @@ Dojo Book Outline
   * `Common Features <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/common-attributes>`_.
   * `Form, Validation, Specialized Input <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input>`_. maps to: `dijit.form <dijit/form>`_
 
-    * `Form Widget <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/form-widget>`_. maps to: `Form <dijit/form>`_
+    * `Form Widget <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/form-widget>`_. maps to: `Form <dijit/form>` [[CraigRiecke]]_
     * `CheckBox, RadioButton, ToggleButton <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/checkbox-radiobutton>`_. maps to: `Checkbox <dijit/form/CheckBox>`_
     * `Dijit ComboBox <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/auto-completer>`_. maps to: `ComboBox <dijit/form/ComboBox>`_
     * `Dijit FilteringSelect <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/select>`_. maps to: `FilteringSelect <dijit/form/FilteringSelect>`_
     * `Dijit InlineEditBox (0.9) <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/inline-edit-box>`_. maps to: `InlineEditBox <dijit/form/InlineEditBox>`_
-    * `Dijit NumberSpinner <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/number-spinner>`_. maps to `NumberSpinner <dijit/form/NumberSpinner>`_.
+    * `Dijit NumberSpinner <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/number-spinner>`_. maps to `NumberSpinner <dijit/form/NumberSpinner>` [[CraigRiecke]]_.
     * `Dijit Slider <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/slider>`_. maps to: `Slider <dijit/form/Slider>`_
     * `Dijit Textarea <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/resizeable-text-area>`_. maps to: `Textares <dijit/form/Textarea>`_
-    * `Dijit TextBox family - Validation, Currency, Number, Date, Time <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/textbox-validating-currency-number>`_. maps to: `Textbox <dijit/form/TextBox>`_
+    * `Dijit TextBox family - Validation, Currency, Number, Date, Time <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/textbox-validating-currency-number>`_. maps to: `Textbox <dijit/form/TextBox>` [[CraigRiecke]]_
 
   * `Dijit Layout <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout>`_.
 
