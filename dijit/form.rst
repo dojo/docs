@@ -10,13 +10,13 @@ dijit.form
 
 The following widgets can be used in a FORM tag, in a dijit.form.Form widget, or outside of a form.
 
-* dijit.form.Form
-* dijit.form.Button
+* `dijit.form.Button <dijit/form/Button>`_
 * dijit.form.CheckBox
 * dijit.form.ComboBox
 * dijit.form.CurrencyTextBox
 * dijit.form.DateTextBox
 * dijit.form.FilteringSelect
+* dijit.form.Form
 * dijit.form.MultiSelect
 * dijit.form.NumberSpinner
 * dijit.form.NumberTextBox
