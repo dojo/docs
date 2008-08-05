@@ -30,3 +30,16 @@ The first example shows how to create a button programmatically.
   .. cv:: html
 
     <button id="buttonNode" />
+
+As usual you can create the button widget using th dojoType attribute
+
+.. cv-compound::
+
+  .. cv:: javascript
+    <script type="text/javascript">
+    dojo.require("dijit.form.Button");
+    </script>
+
+  .. cv:: html
+
+    <button dojoType="dijit.form.Button">Click me too!</button>
