@@ -26,6 +26,7 @@ First, We'll demonstrate a programatic TabContainer creation from existing marku
     dojo.addOnLoad(function(){
         dojo.query(".tc1cp").forEach(function(n){
             new dijit.layout.ContentPane({
+                // just pass a title: attribute, this, we're stealing from the node
                 title: dojo.attr(n,"title") 
             }, n);
         });
