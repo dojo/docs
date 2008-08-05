@@ -25,4 +25,4 @@ Lets create a checkbox programatically
 
   .. cv:: html
  
-    <input type="checkbox" id="checkBox" value="true" /><label for "checkBox">I agree</label>
+    <input type="checkbox" id="checkBox" value="true" /> <label for="checkBox">I agree</label>
