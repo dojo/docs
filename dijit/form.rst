@@ -11,18 +11,18 @@ dijit.form
 The following widgets can be used in a FORM tag, in a dijit.form.Form widget, or outside of a form.
 
 * `dijit.form.Button <form/Button>`_
-* dijit.form.CheckBox
-* dijit.form.ComboBox
-* dijit.form.CurrencyTextBox
-* dijit.form.DateTextBox
-* dijit.form.FilteringSelect
-* dijit.form.Form
-* dijit.form.MultiSelect
-* dijit.form.NumberSpinner
-* dijit.form.NumberTextBox
-* dijit.form.SimpleTextarea
-* dijit.form.Slider
-* dijit.form.Textarea
-* dijit.form.TextBox
-* dijit.form.TimeTextBox
-* dijit.form.ValidationTextbox
+* `dijit.form.CheckBox <form/CheckBox>`_
+* `dijit.form.ComboBox <form/ComboBox>`_
+* `dijit.form.CurrencyTextBox <form/CurrencyTextBox>`_
+* `dijit.form.DateTextBox <form/DateTextBox>`_
+* `dijit.form.FilteringSelect <form/FilteringSelect>`_
+* `dijit.form.Form <form/Form>`_
+* `dijit.form.MultiSelect <form/MultiSelect>`_
+* `dijit.form.NumberSpinner <form/NumberSpinner>`_
+* `dijit.form.NumberTextBox <form/NumberTextBox>`_
+* `dijit.form.SimpleTextarea <form/SimpleTextarea>`_
+* `dijit.form.Slider <form/Slider>`_
+* `dijit.form.Textarea <form/Textarea>`_
+* `dijit.form.TextBox <form/TextBox>`_
+* `dijit.form.TimeTextBox <form/TimeTextBox>`_
+* `dijit.form.ValidationTextbox <form/ValidationTextbox>`_
