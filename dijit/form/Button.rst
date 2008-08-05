@@ -36,6 +36,7 @@ As usual you can create the button widget using th dojoType attribute
 .. cv-compound::
 
   .. cv:: javascript
+
     <script type="text/javascript">
     dojo.require("dijit.form.Button");
     </script>
