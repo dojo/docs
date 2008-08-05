@@ -19,7 +19,7 @@ Lets create a checkbox programatically
     dojo.addOnLoad(function(){
       var checkBox = new dijit.form.CheckBox({
         id: "checkBox"
-      });
+      }, "checkBox");
     });
     </script>
 
