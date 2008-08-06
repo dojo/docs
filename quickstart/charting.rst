@@ -22,6 +22,8 @@ Here is a very simple example from plain markup
     dojo.addOnLoad(function(){
       var chart3 = new dojox.charting.Chart2D("chartOne");
       chart3.addPlot("default", {type: "StackedAreas", tension:2.5})
+          .addAxis("x", {fixLower: "major", fixUpper: "major"})
+	  .addAxis("y", {vertical: true, fixLower: "major", fixUpper: "major", min: 0})
           .setTheme(dojox.charting.themes.Wetland)
           .addSeries("Series A", [1, 2, 0.5, 1.5, 1, 2.8, 0.4])
           .addSeries("Series B", [2.6, 1.8, 2, 1, 1.4, 0.7, 2])
