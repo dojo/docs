@@ -11,7 +11,7 @@ The Number Spinner, a familiar widget in GUI interfaces, makes integer entry eas
 The Basic Version
 -----------------
 
-This number spinner starts at 1000, and holds a number from 9 to 1550.  Each up or down button click adjusts the number by 10.  Note here the constraints attribute.  The options available in `dojo.number <dojo/number>`_ are available here as well.
+This number spinner starts at 1000, and holds a number from 9 to 1550.  Each up or down button click adjusts the number by 10.  Note here the constraints attribute.  The options available in `dojo.number </dojo/number>`_ are available here as well.
 
 
 .. cv-compound::
