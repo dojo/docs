@@ -55,3 +55,5 @@ The default NumberSpinner looks a bit large for numbers 9-1550.  You can set the
    .. cv:: html
 
       <div id="spinnerId"></div>
+
+__Note:__ Safari 3 appears to render the NumberSpinner as 177px, no matter what.  You can workaround this by surrounding the NumberSpinner with a <div> of size 100px.  
