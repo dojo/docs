@@ -4,12 +4,12 @@
 Dojo Charting
 =============
 
-Dojo comes with an amzing charting library.
+Dojo comes with an amazing charting library, in the form of dojox.charting.  A large number of features are supported, with new ones being added constantly.
 
 Examples
 --------
 
-Here is a very simple example from plain markup
+Here is a very simple example of a stacked area chart.
 
 .. cv-compound::
 
@@ -20,8 +20,8 @@ Here is a very simple example from plain markup
     dojo.require("dojox.charting.themes.Wetland");
 
     dojo.addOnLoad(function(){
-      var chart3 = new dojox.charting.Chart2D("chartOne");
-      chart3.addPlot("default", {type: "StackedAreas", tension:2.5})
+      var c = new dojox.charting.Chart2D("chartOne");
+      c.addPlot("default", {type: "StackedAreas", tension:3.5})
           .addAxis("x", {fixLower: "major", fixUpper: "major"})
 	  .addAxis("y", {vertical: true, fixLower: "major", fixUpper: "major", min: 0})
           .setTheme(dojox.charting.themes.Wetland)
