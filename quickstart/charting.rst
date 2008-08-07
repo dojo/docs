@@ -21,7 +21,7 @@ Here is a very simple example of a stacked area chart.
 
     dojo.addOnLoad(function(){
       var c = new dojox.charting.Chart2D("chartOne");
-      c.addPlot("default", {type: "StackedAreas", tension:3.5})
+      c.addPlot("default", {type: "StackedAreas", tension:3})
           .addAxis("x", {fixLower: "major", fixUpper: "major"})
 	  .addAxis("y", {vertical: true, fixLower: "major", fixUpper: "major", min: 0})
           .setTheme(dojox.charting.themes.Wetland)
