@@ -11,7 +11,7 @@ The Number Spinner, a familiar widget in GUI interfaces, makes integer entry eas
 Examples
 --------
 
-This number spinner holds a number from 9 to 1550.  Each up or down button click adjusts the number by 10.  
+This number spinner starts at 1000, and holds a number from 9 to 1550.  Each up or down button click adjusts the number by 10. 
 
 
 .. cv-compound::
@@ -28,5 +28,5 @@ This number spinner holds a number from 9 to 1550.  Each up or down button click
         value="1000"
         smallDelta="10"
         constraints="{min:9,max:1550,places:0}"
-        maxlength="20"
+        maxlength="4"
         id="integerspinner2"/>
