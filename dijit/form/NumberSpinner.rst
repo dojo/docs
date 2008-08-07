@@ -3,8 +3,9 @@
 dijit.form.NumberSpinner
 =============================
 
-:Status: Contributed, Draft
+:Status: Draft
 :Version: 1.0
+:Author: CraigRiecke
 
 The Number Spinner, a familiar widget in GUI interfaces, makes integer entry easier when small adjustments are required. The down and up arrow buttons "spin" the number up and down.  Furthermore, when you hold down the buttons, the spinning accelerates to make coarser adjustments easier.
 
@@ -56,4 +57,4 @@ The default NumberSpinner looks a bit large for numbers 9-1550.  You can set the
 
       <div id="spinnerId"></div>
 
-__Note:__ Safari 3 appears to render the NumberSpinner as 177px, no matter what.  You can workaround this by surrounding the NumberSpinner with a <div> of size 100px.  
+**Note:** Safari 3 appears to render the NumberSpinner as 177px, no matter what.  You can workaround this by surrounding the NumberSpinner with a <div> of size 100px.  
