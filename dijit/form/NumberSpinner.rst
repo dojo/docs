@@ -9,7 +9,7 @@ dijit.form.NumberSpinner
 The Number Spinner, a familiar widget in GUI interfaces, makes integer entry easier when small adjustments are required. The down and up arrow buttons "spin" the number up and down.  Furthermore, when you hold down the buttons, the spinning accelerates to make coarser adjustments easier.
 
 The Basic Version
---------
+-----------------
 
 This number spinner starts at 1000, and holds a number from 9 to 1550.  Each up or down button click adjusts the number by 10.  Note here the constraints attribute.  The options available in <dojo/number> are available here as well.
 
