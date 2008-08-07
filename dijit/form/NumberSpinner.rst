@@ -27,6 +27,6 @@ This number spinner starts at 1000, and holds a number from 9 to 1550.  Each up 
    <input dojoType="dijit.form.NumberSpinner"
         value="1000"
         smallDelta="10"
+        size="5"
         constraints="{min:9,max:1550,places:0}"
-        maxlength="4"
         id="integerspinner2"/>
