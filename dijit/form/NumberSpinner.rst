@@ -41,7 +41,7 @@ The default NumberSpinner looks a bit large for numbers 9-1550.  You can set the
 
   .. cv:: javascript
 
-      <script type="text/javascript">
+    <script type="text/javascript">
         dojo.require("dijit.form.NumberSpinner");
         alert("foo");
            dojo.addOnLoad(function() {
@@ -54,7 +54,7 @@ The default NumberSpinner looks a bit large for numbers 9-1550.  You can set the
               style: "width:100px"
            }, "spinnerId" );
         });
-      </script>
+    </script>
 
   .. cv:: html
 
