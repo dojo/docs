@@ -60,15 +60,31 @@ We'll go for a simple left/top/bottom interface.
       dojo.addOnLoad(function(){
         var outerBc = new dijit.layout.BorderContainer({
           "design": "sidebar",
-          "style": "height: 500px;"
+          "style": "height: 400px;"
         }, "uiContainer");
 
         var leftSidebar = new dijit.layout.ContentPane({
           "region": "leading",
-          "style": "width: 250px;"
+          "style": "width: 200px;"
         });
         outerBc.addChild(leftSidebar);
-       outerBc.startup();
+        
+        var rightContent = new dijit.layout.BorderContainer({
+          "id": "uiContent"
+        });
+        outerBc.addChild(rightContent);
+
+        var topContent = new dijit.layout.ContentPane({
+          "region": "center"
+        });
+        rightContent.addChild(topContent);
+
+        var bottomContent = new dijit.layout.ContentPane({
+          "region": "bottom",
+          "style": "height: 100px;"
+        });  
+        rightContent.addChild(bottomContent);      
+        outerBc.startup();
       });
     </script>
 
