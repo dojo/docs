@@ -24,13 +24,13 @@ Third-Party Licenses
 
 Dojo uses code from other open source projects, subject to the terms of their licenses. Those licenses and software copyright notices are listed below:
 
-    * Firebug Lite (Dojo Base): `BSD License <http://trac.dojotoolkit.org/browser/dojo/trunk/_firebug/LICENSE>`_. 
-    * Common Locale Data Repository, CLDR (Dojo Base): `Unicode License <http://trac.dojotoolkit.org/browser/dojo/trunk/cldr/LICENSE>`_. 
-    * dojo.css (Dojo Base): `BSD License <http://trac.dojotoolkit.org/browser/dojo/trunk/resources/LICENSE>`_.
-    * AES Encryption Algorithm (DojoX SQL): BSD License [http://trac.dojotoolkit.org/browser/dojo/trunk/resources/LICENSE label]
-    * MD5 and SHA1 Encruption Algorithms (DojoX Cryptography): BSD License
-    * Dojo Offline Editor Server Demo (DojoX Offline): Apache License
-    * CLDR (Dojo Utilities): Apache and Mozilla Public Licenses
-    * Packer (Dojo Utilities): MIT License
-    * DOH Sounds (Dojo Utilities): Copyright Original Authors
-    * ShrinkSafe, Rhino Interpreter (Dojo Utilities): Mozilla Public License 1.1
+    * Firebug Lite (Dojo Base): BSD License http://trac.dojotoolkit.org/browser/dojo/trunk/_firebug/LICENSE
+    * Common Locale Data Repository, CLDR (Dojo Base): Unicode License http://trac.dojotoolkit.org/browser/dojo/trunk/cldr/LICENSE> 
+    * dojo.css (Dojo Base): BSD License http://trac.dojotoolkit.org/browser/dojo/trunk/resources/LICENSE>
+    * AES Encryption Algorithm (DojoX SQL): BSD License http://trac.dojotoolkit.org/browser/dojox/trunk/_sql/LICENSE
+    * MD5 and SHA1 Encruption Algorithms (DojoX Cryptography): BSD License http://trac.dojotoolkit.org/browser/dojox/trunk/crypto/LICENSE
+    * Dojo Offline Editor Server Demo (DojoX Offline): Apache License http://trac.dojotoolkit.org/browser/dojox/trunk/off/demo/editors/server/LICENSE
+    * CLDR (Dojo Utilities): Apache and Mozilla Public Licenses http://trac.dojotoolkit.org/browser/util/trunk/buildscript/cldr/lib/LICENSE
+    * Packer (Dojo Utilities): MIT License http://trac.dojotoolkit.org/browser/util/trunk/buildscripts/jslib/packer/LICENSE
+    * DOH Sounds (Dojo Utilities): Copyright Original Authors http://trac.dojotoolkit.org/browser/util/trunk/doh/_sounds/LICENSE
+    * ShrinkSafe, Rhino Interpreter (Dojo Utilities): Mozilla Public License 1.1 http://trac.dojotoolkit.org/browser/util/trunk/shrinksafe/LICENSE
