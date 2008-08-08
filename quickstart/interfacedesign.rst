@@ -76,17 +76,16 @@ We'll go for a simple left/top/bottom interface.
         var topContent = new dijit.layout.ContentPane({
           "region": "center"
         });
-        rightContent.addChild(topContent);
+        //rightContent.addChild(topContent);
 
         var bottomContent = new dijit.layout.ContentPane({
           "region": "bottom",
           "style": "height: 100px;"
         });  
-        rightContent.addChild(bottomContent);      
+        //rightContent.addChild(bottomContent);      
 
-        rightContent.startup();
         outerBc.addChild(rightContent);
-
+        rightContent.startup();
         outerBc.startup();
       });
     </script>
