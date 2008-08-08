@@ -38,10 +38,10 @@ Basic Examples
     });
     </script>
 
-The HTML:
+  The HTML:
 
   .. cv:: html
     
-     <div id="btn0" class="browse" dojoType="dijit.form.Button">Select Images...</div>
+    <div id="btn0" class="browse" dojoType="dijit.form.Button">Select Images...</div>
 
 That's it.
