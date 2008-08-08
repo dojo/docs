@@ -48,7 +48,7 @@ The same example but with a vertical slider
       dojo.require("dijit.form.Slider");
       dojo.addOnLoad(function(){
         var slider = new dijit.form.VerticalSlider({
-          id: "slider",
+          id: "sliderTwo",
           value: 5,
           minimum: -10,
           maximum: 10,
