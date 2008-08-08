@@ -93,6 +93,6 @@ We'll go for a simple left/top/bottom interface.
 
   .. cv:: html
 
-    <div id="uiContainer"></div>
+    <div id="uiContainer" style="border: 1px solid #ccc"></div>
 
 Hi
