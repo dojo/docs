@@ -14,7 +14,7 @@ details on Cometd or on the Bayeux protocol.
 Basic Example
 -------------
 
-Using dojox.cometd to connect to a Bayeux-compliant is very straightforward:
+Using dojox.cometd to connect to a Bayeux-compliant server is very straightforward:
 
 .. cv-compound::
 
@@ -45,7 +45,7 @@ Using dojox.cometd to connect to a Bayeux-compliant is very straightforward:
     });
     </script>
 
-  The html is very simple
+  The html is a just a simple form to enter you name and message to send
 
   .. cv:: html
 
@@ -54,6 +54,3 @@ Using dojox.cometd to connect to a Bayeux-compliant is very straightforward:
     	<div>Message: <input id="sendText" type="text"><button id="send">Send Message</button></div>
     	<div id="messageLog"></div>
     </div>
-
-
-Done with example
