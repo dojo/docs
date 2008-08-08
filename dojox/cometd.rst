@@ -25,6 +25,9 @@ Using dojox.cometd to connect to a Bayeux-compliant server is very straightforwa
   .. cv:: javascript
 
     <script type="text/javascript">
+    dojo.require("dijit.form.TextBox"); // Those widgets are only included to make the example look nice
+    dojo.require("dijit.form.Button"); // Those widgets are only included to make the example look nice
+
     dojo.require("dojo.io.script");
     dojo.require("dojox.cometd");
     dojo.require("dojox.cometd.callbackPollTransport");
@@ -49,8 +52,8 @@ Using dojox.cometd to connect to a Bayeux-compliant server is very straightforwa
 
   .. cv:: html
 
-    <div id="chatroom">
-    	<div>Name: <input id="sendName" type="text"></div>
-    	<div>Message: <input id="sendText" type="text"><button id="send">Send Message</button></div>
+    <div id="chatroom"> 
+    	<div><label for="sendName" style="width: 150px;">Name:</label> <input id="sendName" type="text" dojoType="dijit.form.TextBox"></div>
+    	<div><label for="sendText" style="width: 150px;">Message:</label> <input id="sendText" type="text" dojoType="dijit.form.TextBox"><button id="send" dojoType="dijit.form.Button">Send Message</button></div>
     	<div id="messageLog"></div>
     </div>
