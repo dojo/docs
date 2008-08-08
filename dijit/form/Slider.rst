@@ -26,7 +26,7 @@ One way you could show the user the value of your Slider is to create a textbox 
           minimum: -10,
           maximum: 10,
           intermediateChanges: true,
-          style: "width: 100px",
+          style: "width: 300px",
           onChange: function(value){
             dojo.byId("sliderValue").value = value;
           }
@@ -54,7 +54,7 @@ The same example but with a vertical slider
           minimum: -10,
           maximum: 10,
           intermediateChanges: true,
-          style: "height: 100px",
+          style: "height: 300px",
           onChange: function(value){
             dojo.byId("sliderValueTwo").value = value;
           }
@@ -66,3 +66,41 @@ The same example but with a vertical slider
 
     <div id="sliderTwo"></div>
     <p><input type="text" id="sliderValueTwo" /></p>
+
+And here we create a slider declaratively
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+      dojo.require("dijit.form.Slider");
+    </script>
+
+  .. cv:: html
+
+    <div id="horizontalSlider" dojoType="dijit.form.HorizontalSlider"
+        value="5" minimum="-10" maximum="10" discreteValues="11"
+        intermediateChanges="true"
+        showButtons="true">
+      <div dojoType="dijit.form.HorizontalRuleLabels" container="topDecoration"
+          style="height:1.2em;font-size:75%;color:gray;"></div>
+        <ol dojoType="dijit.form.HorizontalRuleLabels" container="topDecoration"
+          style="height:1em;font-size:75%;color:gray;">
+          <li> </li>
+          <li>20%</li>
+          <li>40%</li>
+          <li>60%</li>
+          <li>80%</li>
+          <li> </li>
+        </ol>
+      <div dojoType="dijit.form.HorizontalRule" container="bottomDecoration"
+        count=5 style="height:5px;"></div>
+        <ol dojoType="dijit.form.HorizontalRuleLabels" container="bottomDecoration"
+          style="height:1em;font-size:75%;color:gray;">
+          <li>0%</li>
+          <li>50%</li>
+          <li>100%</li>
+      </ol>
+    </div>
+</div>
