@@ -86,8 +86,9 @@ We'll go for a simple left/top/bottom interface.
 
         outerBc.addChild(rightContent);
 
-        rightContent.startup();
         outerBc.startup();
+
+        rightContent.startup();
       });
     </script>
 
