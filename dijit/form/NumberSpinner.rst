@@ -47,11 +47,11 @@ The default NumberSpinner looks a bit large for numbers 9-1550.  You can set the
            dojo.addOnLoad(function() {
            alert("foo");
            var mySpinner = new dijit.form.NumberSpinner({
-        //      value: 1000,
-        //      smallDelta: 10,
+              value: 1000,
+              smallDelta: 10,
         //      constraints: { min:9, max:1550, places:0 }
-        //      id: "integerspinner3",
-        //      style: "width:100px"
+              id: "integerspinner3",
+              style: "width:100px"
            }, "spinnerId" );
         });
     </script>
