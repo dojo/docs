@@ -18,8 +18,22 @@ We'll enhance native radio buttons programatically
 .. cv-compound::
 
   .. cv:: javascript
+ 
+    <script type="text/javascript">
+      dojo.require("dijit.form.CheckBox");
 
+      dojo.addOnLoad(function(){
+        var radioOne = new dijit.form.RadioButton({
+          checked: true,
+          id: "tea"
+        }, "radioOne");
+        
+        var radioTwo = new dijit.form.RadioButton({
+          id: "coffee"
+        }, "radioTwo");
+      });
+    </script>
   .. cv:: html
 
-    <input type="radio" name="group" id="radioOne" /> Tea <br />
-    <input type="radio" name="group" id="radioTwo" /> Coffee <br />
+    <input type="radio" name="group" id="radioOne" /> <label for="radioOne">Tea</label> <br />
+    <input type="radio" name="group" id="radioTwo" /> <label for="radioTwo">Coffee</label> <br />
