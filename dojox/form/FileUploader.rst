@@ -18,25 +18,30 @@ Basic Examples
 
 .. cv-compound::
  
-  As a simple example, we'll use `dojo.query <dojo/query>`_ to find and create the ContentPanes used in the TabContainer
+  The JavaScript:
 
   .. cv:: javascript
 
     <script type="text/javascript">
-    dojo.require("dijit.layout.TabContainer");
-    dojo.require("dijit.layout.ContentPane");
+    dojo.require("dojox.form.FileUploader");
+    dojo.require("dijit.form.Button"); 
     dojo.addOnLoad(function(){
-        dojo.query(".tc1cp").forEach(function(n){
-            new dijit.layout.ContentPane({
-                // just pass a title: attribute, this, we're stealing from the node
-                title: dojo.attr(n,"title") 
-            }, n);
-        });
-        var tc = new dijit.layout.TabContainer({
-            style: dojo.attr("tc1-prog", "style") 
-        },"tc1-prog");
-        tc.startup(); 
+        var fileUploader = new dojox.form.FileUploader({
+		button:dijit.byId("btn0"), 
+		degradable:true,
+		uploadUrl:"../resources/UploadFile.php", 
+		uploadOnChange:false, 
+		selectMultipleFiles:true,
+		fileMask:["All Images", "*.jpg;*.jpeg;*.gif;*.png"],
+		isDebug:false
+	});
     });
     </script>
+
+The HTML:
+
+  .. cv:: html
+    
+     <div id="btn0" class="browse" dojoType="dijit.form.Button">Select Images...</div>
 
 That's it.
