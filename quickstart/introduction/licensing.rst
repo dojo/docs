@@ -27,7 +27,7 @@ Dojo uses code from other open source projects, subject to the terms of their li
     * Firebug Lite (Dojo Base): `BSD License <http://trac.dojotoolkit.org/browser/dojo/trunk/_firebug/LICENSE>`_. 
     * Common Locale Data Repository, CLDR (Dojo Base): `Unicode License <http://trac.dojotoolkit.org/browser/dojo/trunk/cldr/LICENSE>`_. 
     * dojo.css (Dojo Base): `BSD License <http://trac.dojotoolkit.org/browser/dojo/trunk/resources/LICENSE>`_.
-    * AES Encryption Algorithm (DojoX SQL): BSD License
+    * AES Encryption Algorithm (DojoX SQL): BSD License [http://trac.dojotoolkit.org/browser/dojo/trunk/resources/LICENSE label]
     * MD5 and SHA1 Encruption Algorithms (DojoX Cryptography): BSD License
     * Dojo Offline Editor Server Demo (DojoX Offline): Apache License
     * CLDR (Dojo Utilities): Apache and Mozilla Public Licenses
