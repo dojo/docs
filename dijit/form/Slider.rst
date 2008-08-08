@@ -19,6 +19,8 @@ One way you could show the user the value of your Slider is to create a textbox 
 
     <script type="text/javascript">
       dojo.require("dijit.form.Slider");
+      dojo.require("dijit.form.TextBox"); // this we only include to make the textinput look prettier
+
       dojo.addOnLoad(function(){
         var slider = new dijit.form.HorizontalSlider({
           id: "slider",
@@ -37,7 +39,7 @@ One way you could show the user the value of your Slider is to create a textbox 
   .. cv:: html
 
     <div id="slider"></div>
-    <p><input type="text" id="sliderValue" /></p>
+    <p><input type="text" id="sliderValue" dojoType="dijit.form.TextBox" /></p>
 
 The same example but with a vertical slider
 
@@ -47,6 +49,8 @@ The same example but with a vertical slider
 
     <script type="text/javascript">
       dojo.require("dijit.form.Slider");
+      dojo.require("dijit.form.TextBox"); // this we only include to make the textinput look prettier
+
       dojo.addOnLoad(function(){
         var slider = new dijit.form.VerticalSlider({
           id: "sliderTwo",
@@ -65,7 +69,7 @@ The same example but with a vertical slider
   .. cv:: html
 
     <div id="sliderTwo"></div>
-    <p><input type="text" id="sliderValueTwo" /></p>
+    <p><input type="text" id="sliderValueTwo" dojoType="dijit.form.TextBox" /></p>
 
 And here we create a slider declaratively, not that we set the value of the "discreteValues" attribute to 11, meanign that the slider will have 11 focus points
 
