@@ -68,8 +68,8 @@ Using dojox.cometd to connect to a Bayeux-compliant server is very straightforwa
       #messageLog {
         margin-top: 20px;
         padding: 5px;
-        border: 2px solid #2c4265;
-        background: #94b4e6;
-        width: 300px;
+        border: 1px solid #ddd;
+        background: #e3e3e3;
+        width: 400px;
       }
     </style>
