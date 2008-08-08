@@ -78,6 +78,10 @@ Dijit reference
 * `dijit.form <dijit/form>`_
 
   * `dijit.form.NumberSpinner <dijit/form/NumberSpinner>`_
+  * `dijit.form.RadioButton <dijit/form/RadioButton>`_
+  * `dijit.form.CheckBox <dijit/form/CheckBox>`_
+  * `dijit.form.Slider <dijit/form/Slider>`_
+  * `dijit.form.Textares <dijit/form/Textares>`_
 
 * `dijit.layout <dijit/layout>`_
 
