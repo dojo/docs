@@ -18,8 +18,10 @@ Some caveats of using DojoX:
 * Fully mature, production level code will typically remain in DojoX.
 * Not all modules in DojoX will be documented, since they are lower priority than Base and Core.  
 
-Browse the <a href="http://api.dojotoolkit.org/jsdoc/dojox/HEAD/dojox">API documentation</a> and <a href="http://svn.dojotoolkit.org/src/dojox/trunk/">repository</a> directly for a more complete list.
+Browse the `API documentation <http://api.dojotoolkit.org/jsdoc/dojox/HEAD/dojox>` and `repository <http://svn.dojotoolkit.org/src/dojox/trunk>`_ directly for a more complete list.
 
+Project Status
+--------------
 A DojoX subproject's status can be found within the README file within the top directory of the subproject.  README files are mandatory, and status changes must be approved by the DojoX BDFL.  These are the possible states for a DojoX subproject:
 
 * **experimental**. A subproject which may be new or a proof of concept.  It is somewhat functional but may also be highly unstable and subject to change or removal without notice.
