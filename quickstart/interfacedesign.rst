@@ -65,7 +65,8 @@ We'll go for a simple left/top/bottom interface.
 
         var leftSidebar = new dijit.layout.ContentPane({
           "region": "leading",
-          "style": "width: 200px;"
+          "style": "width: 200px;",
+          "splitter": true
         });
         outerBc.addChild(leftSidebar);
         
@@ -76,12 +77,14 @@ We'll go for a simple left/top/bottom interface.
 
         var topContent = new dijit.layout.ContentPane({
           "region": "center"
+          "splitter": true
         });
         rightContent.addChild(topContent);
 
         var bottomContent = new dijit.layout.ContentPane({
           "region": "bottom",
           "style": "height: 100px;"
+          "splitter": true
         });  
         rightContent.addChild(bottomContent);      
 
