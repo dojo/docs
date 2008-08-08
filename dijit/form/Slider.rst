@@ -67,7 +67,7 @@ The same example but with a vertical slider
     <div id="sliderTwo"></div>
     <p><input type="text" id="sliderValueTwo" /></p>
 
-And here we create a slider declaratively
+And here we create a slider declaratively, not that we set the value of the "discreteValues" attribute to 11, meanign that the slider will have 11 focus points
 
 .. cv-compound::
 
