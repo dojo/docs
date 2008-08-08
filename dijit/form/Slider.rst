@@ -85,22 +85,21 @@ And here we create a slider declaratively
         showButtons="true">
       <div dojoType="dijit.form.HorizontalRuleLabels" container="topDecoration"
           style="height:1.2em;font-size:75%;color:gray;"></div>
-        <ol dojoType="dijit.form.HorizontalRuleLabels" container="topDecoration"
+      <ol dojoType="dijit.form.HorizontalRuleLabels" container="topDecoration"
           style="height:1em;font-size:75%;color:gray;">
-          <li> </li>
-          <li>20%</li>
-          <li>40%</li>
-          <li>60%</li>
-          <li>80%</li>
-          <li> </li>
-        </ol>
+        <li> </li>
+        <li>20%</li>
+        <li>40%</li>
+        <li>60%</li>
+        <li>80%</li>
+        <li> </li>
+      </ol>
       <div dojoType="dijit.form.HorizontalRule" container="bottomDecoration"
         count=5 style="height:5px;"></div>
-        <ol dojoType="dijit.form.HorizontalRuleLabels" container="bottomDecoration"
+      <ol dojoType="dijit.form.HorizontalRuleLabels" container="bottomDecoration"
           style="height:1em;font-size:75%;color:gray;">
-          <li>0%</li>
-          <li>50%</li>
-          <li>100%</li>
+        <li>0%</li>
+        <li>50%</li>
+        <li>100%</li>
       </ol>
     </div>
-</div>
