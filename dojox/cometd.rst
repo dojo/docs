@@ -38,7 +38,7 @@ Using dojox.cometd to connect to a Bayeux-compliant is very straightforward:
 		});
 		dojo.connect(dojo.byId("send"),"onclick",function(){
 			dojox.cometd.publish("/demo",{
-			     from: dojo.byId("sendFrom").value, 
+			     from: dojo.byId("sendName").value, 
 			     text: dojo.byId("sendText").value
 			});
 		});
