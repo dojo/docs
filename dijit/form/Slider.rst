@@ -37,3 +37,30 @@ One way you could show the user the value of your Slider is to create a textbox 
 
     <div id="slider"></div>
     <p><input type="text" id="sliderValue" /></p>
+
+The same example but with a vertical slider
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+      dojo.require("dijit.form.Slider");
+      dojo.addOnLoad(function(){
+        var slider = new dijit.form.VerticalSlider({
+          id: "slider",
+          value: 5,
+          minimum: -10,
+          maximum: 10,
+          intermediateChanges: true,
+          onChange: function(value){
+            dojo.byId("sliderValueTwo").value = value;
+          }
+        }, "sliderTwo");
+      });
+    </script>
+
+  .. cv:: html
+
+    <div id="sliderTwo"></div>
+    <p><input type="text" id="sliderValueTwo" /></p>
