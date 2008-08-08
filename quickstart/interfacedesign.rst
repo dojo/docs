@@ -46,3 +46,31 @@ We'll also use a Tree widget to navigate through different news categories and w
 
 The interface
 -------------
+
+We'll go for a simple left/top/bottom interface. 
+
+.. cv-compound:: 
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+      dojo.require("dijit.layout.BorderContainer");
+      dojo.require("dijit.layout.ContentPane");
+      
+      dojo.addOnLoad(function(){
+        var outerBc = new dijit.layout.BorderContainer({
+          "design": "sidebar",
+          "style": "width: 100%; height: 500px;"
+        }, "container");
+
+        var leftSidebar = new dijit.layout.ContentPane({
+          "region": "leading",
+          "style": "width: 250px;"
+        });
+        outerBc.addChild(leftSidebar);
+      });
+    </script>
+
+  .. cv:: html
+
+    <div id="container"></div>
