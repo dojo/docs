@@ -70,7 +70,8 @@ We'll go for a simple left/top/bottom interface.
         outerBc.addChild(leftSidebar);
         
         var rightContent = new dijit.layout.BorderContainer({
-          "id": "uiContent"
+          "id": "uiContent",
+          "region": "center"
         });
 
         var topContent = new dijit.layout.ContentPane({
