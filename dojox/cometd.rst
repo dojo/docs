@@ -34,10 +34,13 @@ Using dojox.cometd to connect to a Bayeux-compliant is very straightforward:
 			console.log("received",message);
 			dojo.byId("messageLog").
 				appendChild(document.createElement("div")).
-				appendChild(document.createTextNode(message.data.from + ": " + message.data.content));
+				appendChild(document.createTextNode(message.data.from + ": " + message.data.text));
 		});
 		dojo.connect(dojo.byId("send"),"onclick",function(){
-			dojox.cometd.publish("/demo",dojo.byId("sendText").value);
+			dojox.cometd.publish("/demo",{
+			     from: dojo.byId("sendFrom").value, 
+			     text: dojo.byId("sendText").value
+			});
 		});
     });
     </script>
@@ -47,7 +50,7 @@ Using dojox.cometd to connect to a Bayeux-compliant is very straightforward:
   .. cv:: html
 
     <div id="chatroom">
-    	<div>Name: <input id="sendText" type="text"></div>
+    	<div>Name: <input id="sendName" type="text"></div>
     	<div>Message: <input id="sendText" type="text"><button id="send">Send Message</button></div>
     	<div id="messageLog"></div>
     </div>
