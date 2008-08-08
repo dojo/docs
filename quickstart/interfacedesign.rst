@@ -45,4 +45,4 @@ A few other helper widgets
 We'll also use a Tree widget to navigate through different news categories and we'll use a fancy set of icons (free, opensource) to make our app look like we want it to look.
 
 The interface
-=============
+-------------
