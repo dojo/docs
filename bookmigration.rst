@@ -109,7 +109,7 @@ Dojo Book Outline
   * `Performance Optimization <http://dojotoolkit.org/book/dojo-book-0-9/part-4-meta-dojo/performance-optimization>`_.  maps to: `Performance <quickstart/performance>`_
   * `The Package System and Custom Builds <http://dojotoolkit.org/book/dojo-book-0-9/part-4-meta-dojo/package-system-and-custom-builds>`_.  maps to: `Packaging <quickstart/packaging>`_
 
-* `Part 5: DojoX - Experimental and Specialized Extensions <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox-extensions-dojo-0>`_ maps to: `DojoX </dojox>`_.
+* `Part 5: DojoX - Experimental and Specialized Extensions <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox-extensions-dojo-0>`_ maps to: `DojoX <dojox>`_.
 
   * `Cometd (client) <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/cometd-client>`_. maps to: `Cometd <dojox/cometd>`_
   * `DojoX Charting <http://dojotoolkit.org/book/book-dojo/part-5-dojox-experimental-and-specialized-extensions/dojox-charting>`_.  maps to: `Charting <dojox/charting>`_
