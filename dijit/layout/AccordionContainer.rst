@@ -35,9 +35,3 @@ Examples
         </div>
       </div>
     </div>
-
-This is a link
-
-`expose decorator`_
-
-.. _expose decorator: 1.0/ExposeDecorator
