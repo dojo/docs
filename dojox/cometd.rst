@@ -59,7 +59,7 @@ Using dojox.cometd to connect to a Bayeux-compliant server is very straightforwa
     <div id="chatroom"> 
     	<div style="clear: both;"><label for="sendName" style="float: left; width: 100px; padding: 3px;">Name:</label> <input id="sendName" type="text" dojoType="dijit.form.TextBox"></div>
     	<div style="clear: both;"><label for="sendText" style="float: left; width: 100px; padding: 3px;">Message:</label> <input id="sendText" type="text" dojoType="dijit.form.TextBox"><button id="send" dojoType="dijit.form.Button">Send Message</button></div>
-    	<div id="messageLog"><p>Messages</p></div>
+    	<div id="messageLog"><strong>Messages</strong></div>
     </div>
 
   .. cv:: css
