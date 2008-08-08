@@ -18,14 +18,15 @@ And last but not least, dijit comes with different awesome themes and it is very
 
 Now if you are still doubting, lets go ahead and dive right into a simple UI we will use to retrieve the latest news from a news service provider. What will we use? 
 
-**Our ingredients**
+Our ingredients
+---------------
 
 dijit.layout
-------------
+~~~~~~~~~~~~
 
 Dijit includes a sub namespace dijit.layout which contains very powerful layouting widgets. You can use those to create complex window-style (Note, not MS Windows ;) ) UIs but also to just enhance pages with single functionality such as tabs or content panes to load content dynamically.
 
 dijit.form
-----------
+~~~~~~~~~~
 
 For all your form related needs you are best helped by dijit.form. All native form elements are covered and even more advanced elements such as a ComboBox are available in dijit.form
