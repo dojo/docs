@@ -40,7 +40,11 @@ Using dojox.cometd to connect to a Bayeux-compliant server is very straightforwa
 				appendChild(document.createTextNode(message.data.from + ": " + message.data.text));
 		});
 		dojo.connect(dojo.byId("send"),"onclick",function(){
-			dojox.cometd.publish("/demo",{
+			if (!dojo.byId("sendName").value.length || !dojo.byId("sendText").value.length) { 
+                                alert("Please enter some text"); 
+                                return;
+                        }
+                        dojox.cometd.publish("/demo",{
 			     from: dojo.byId("sendName").value, 
 			     text: dojo.byId("sendText").value
 			});
@@ -54,6 +58,6 @@ Using dojox.cometd to connect to a Bayeux-compliant server is very straightforwa
 
     <div id="chatroom"> 
     	<div><label for="sendName" style="float: left;">Name:</label> <input id="sendName" type="text" dojoType="dijit.form.TextBox" style="margin-left: 150px;"></div>
-    	<div><label for="sendText" style="float: left; margin-right: 150px;">Message:</label> <input id="sendText" type="text" dojoType="dijit.form.TextBox"><button id="send" dojoType="dijit.form.Button">Send Message</button></div>
+    	<div><label for="sendText" style="float: left;">Message:</label> <input id="sendText" type="text" dojoType="dijit.form.TextBox" style="margin-left: 150px;"><button id="send" dojoType="dijit.form.Button">Send Message</button></div>
     	<div id="messageLog"></div>
     </div>
