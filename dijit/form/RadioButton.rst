@@ -25,11 +25,11 @@ We'll enhance native radio buttons programatically
       dojo.addOnLoad(function(){
         var radioOne = new dijit.form.RadioButton({
           checked: true,
-          id: "tea"
+          id: "radioOne"
         }, "radioOne");
         
         var radioTwo = new dijit.form.RadioButton({
-          id: "coffee"
+          id: "radioTwo"
         }, "radioTwo");
       });
     </script>
