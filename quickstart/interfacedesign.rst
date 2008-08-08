@@ -60,7 +60,7 @@ We'll go for a simple left/top/bottom interface.
       dojo.addOnLoad(function(){
         var outerBc = new dijit.layout.BorderContainer({
           "design": "sidebar",
-          "style": "width: 100%; height: 500px;"
+          "style": "width: 500px; height: 500px;"
         }, "container");
 
         var leftSidebar = new dijit.layout.ContentPane({
@@ -74,3 +74,5 @@ We'll go for a simple left/top/bottom interface.
   .. cv:: html
 
     <div id="container"></div>
+
+Hi
