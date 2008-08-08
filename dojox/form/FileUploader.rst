@@ -16,5 +16,5 @@ FileUploader is a wrapper class. If the correct version of Flash Player is avail
 Properties
 ----------
 
-***degradable***:**Boolean**<br/>
+***degradable***:**Boolean**
 If true, will check if user has the correct version of the Flash Player installed, and if not, will cancel FileInputFlash and install FileInputOverlay instead. If false and user does not have the correct version of Flash, (or if user has Opera) FileInputFlash will install regardless, hopefully triggering the browser update mechanism.
