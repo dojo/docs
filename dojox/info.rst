@@ -7,7 +7,7 @@ dojox
 :Status: Contributed, Draft
 :Version: 1.0
 
-DojoX is an area for development of extensions to the Dojo toolkit.  It acts as an incubator for new ideas, a testbed for experimental additions to the main toolkit, as well as a repository for more stable and mature extensions.  Unlike Dojo and Dijit, DojoX is managed by subprojects, each of which has at least one module, a sponsor and a mission statement.  [Release cycle policy TBD]  The subprojects may have dependencies on Dojo and Dijit code or other subprojects in DojoX.  Some subprojects may choose to keep their dependencies on Dojo minimal, perhaps only depending on Dojo Base, and remain largely toolkit agnostic.  Other DojoX sub-projects directly extend Dojo or Dijit components, like the `Flickr data store </dojox/data/FlickrRestStore>`_ and `dojox.Color </dojox/color>`_.  
+DojoX is an area for development of extensions to the Dojo toolkit.  It acts as an incubator for new ideas, a testbed for experimental additions to the main toolkit, as well as a repository for more stable and mature extensions.  Unlike Dojo and Dijit, DojoX is managed by subprojects, each of which has at least one module, a sponsor and a mission statement.  [Release cycle policy TBD]  The subprojects may have dependencies on Dojo and Dijit code or other subprojects in DojoX.  Some subprojects may choose to keep their dependencies on Dojo minimal, perhaps only depending on Dojo Base, and remain largely toolkit agnostic.  Other DojoX sub-projects directly extend Dojo or Dijit components, like the `Flickr data store </dojox/data/FlickrRestStore>`_ and `dojox.Color </dojox/color>`_. ``FIXME: broken links``
 
 Some caveats of using DojoX:
 ----------------------------
@@ -18,7 +18,7 @@ Some caveats of using DojoX:
 * Fully mature, production level code will typically remain in DojoX.
 * Not all modules in DojoX will be documented, since they are lower priority than Base and Core.  
 
-Browse the `API documentation <http://api.dojotoolkit.org/jsdoc/dojox/HEAD/dojox>` and `repository <http://svn.dojotoolkit.org/src/dojox/trunk>`_ directly for a more complete list.
+Browse the `API documentation <http://api.dojotoolkit.org/jsdoc/dojox/HEAD/dojox>`_ and `repository <http://svn.dojotoolkit.org/src/dojox/trunk>`_ directly for a more complete list.
 
 Project Status
 --------------
