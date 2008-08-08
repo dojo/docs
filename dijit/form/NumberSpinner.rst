@@ -54,7 +54,7 @@ The default NumberSpinner looks a bit large for numbers 9-1550.  You can set the
         });
       </script>
 
-   .. cv:: html
+  .. cv:: html
 
       <div id="spinnerId"></div>
 
