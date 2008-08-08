@@ -59,3 +59,10 @@ The default NumberSpinner looks a bit large for numbers 9-1550.  You can set the
       <div id="spinnerId"></div>
 
 **Note:** Safari 3 appears to render the NumberSpinner as 177px, no matter what.  You can workaround this by surrounding the NumberSpinner with a <div> of size 100px.  
+
+Change Events
+-------------
+
+Like regular <input> boxes, the onChange event fires only when the box loses focus.  Just clicking on an up or down button changes the value, but the changes doesn't "stick" until you leave the box.  
+
+If you'd like to hook into TODO
