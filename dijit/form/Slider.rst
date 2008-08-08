@@ -29,7 +29,7 @@ One way you could show the user the value of your Slider is to create a textbox 
           onChange: function(value){
             dojo.byId("sliderValue").value = value;
           }
-        });
+        }, "slider");
       });
     </script>
 
