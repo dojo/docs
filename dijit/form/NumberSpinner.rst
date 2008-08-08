@@ -44,8 +44,8 @@ The default NumberSpinner looks a bit large for numbers 9-1550.  You can set the
     <script type="text/javascript">
         //dojo.require("dijit.form.NumberSpinner");
         alert("foo");
-        //   dojo.addOnLoad(function() {
-        //   alert("foo");
+           dojo.addOnLoad(function() {
+           alert("foo");
         //   var mySpinner = new dijit.form.NumberSpinner({
         //      value: 1000,
         //      smallDelta: 10,
@@ -53,7 +53,7 @@ The default NumberSpinner looks a bit large for numbers 9-1550.  You can set the
         //      id: "integerspinner3",
         //      style: "width:100px"
         //   }, "spinnerId" );
-        //});
+        });
     </script>
 
   .. cv:: html
