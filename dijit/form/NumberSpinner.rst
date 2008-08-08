@@ -48,7 +48,7 @@ The default NumberSpinner looks a bit large for numbers 9-1550.  You can set the
               value: 1000,
               smallDelta: 10,
               constraints: { min:9, max:1550, places:0 }
-              id: "integerspinner2",
+              id: "integerspinner3",
               style: "width:100px"
            }, "spinnerId" );
         });
