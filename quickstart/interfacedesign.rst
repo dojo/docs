@@ -60,7 +60,7 @@ We'll go for a simple left/top/bottom interface.
       dojo.addOnLoad(function(){
         var outerBc = new dijit.layout.BorderContainer({
           "design": "sidebar",
-          "style": "width: 500px; height: 500px;"
+          "style": "height: 500px;"
         }, "uiContainer");
 
         var leftSidebar = new dijit.layout.ContentPane({
@@ -68,6 +68,7 @@ We'll go for a simple left/top/bottom interface.
           "style": "width: 250px;"
         });
         outerBc.addChild(leftSidebar);
+       outerBc.startup();
       });
     </script>
 
