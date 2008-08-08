@@ -3,8 +3,8 @@
 dojox.form.FileUploader
 =========================
 
-:Status: Contributed, Draft
-:Version: 1.0
+:Status: Contributed, Far from finished
+:Version: 0.1
 
 Basic Description
 -----------------
