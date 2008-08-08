@@ -82,7 +82,7 @@ And here we create a slider declaratively
     <div id="horizontalSlider" dojoType="dijit.form.HorizontalSlider"
         value="5" minimum="-10" maximum="10" discreteValues="11"
         intermediateChanges="true"
-        showButtons="true">
+        showButtons="true" style="width: 400px;">
       <div dojoType="dijit.form.HorizontalRuleLabels" container="topDecoration"
           style="height:1.2em;font-size:75%;color:gray;"></div>
       <ol dojoType="dijit.form.HorizontalRuleLabels" container="topDecoration"
