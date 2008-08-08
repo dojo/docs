@@ -72,7 +72,6 @@ We'll go for a simple left/top/bottom interface.
         var rightContent = new dijit.layout.BorderContainer({
           "id": "uiContent"
         });
-        outerBc.addChild(rightContent);
 
         var topContent = new dijit.layout.ContentPane({
           "region": "center"
@@ -84,6 +83,9 @@ We'll go for a simple left/top/bottom interface.
           "style": "height: 100px;"
         });  
         rightContent.addChild(bottomContent);      
+
+        outerBc.addChild(rightContent);
+
         outerBc.startup();
       });
     </script>
