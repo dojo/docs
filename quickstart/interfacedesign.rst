@@ -100,5 +100,3 @@ We'll go for a simple left/top/bottom interface.
 
 Lets fill it up with content. Out left pane will contain a Tree which will get its data right from our service provider.
 You might have asked yourself who that service provider is, we'll use Google.
-
-*cursive* **bold**
