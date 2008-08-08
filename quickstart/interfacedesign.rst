@@ -61,7 +61,7 @@ We'll go for a simple left/top/bottom interface.
         var outerBc = new dijit.layout.BorderContainer({
           "design": "sidebar",
           "style": "width: 500px; height: 500px;"
-        }, "container");
+        }, "uiContainer");
 
         var leftSidebar = new dijit.layout.ContentPane({
           "region": "leading",
@@ -73,6 +73,6 @@ We'll go for a simple left/top/bottom interface.
 
   .. cv:: html
 
-    <div id="container"></div>
+    <div id="uiContainer"></div>
 
 Hi
