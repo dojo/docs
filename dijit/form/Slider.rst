@@ -26,6 +26,7 @@ One way you could show the user the value of your Slider is to create a textbox 
           minimum: -10,
           maximum: 10,
           intermediateChanges: true,
+          style: "width: 100px",
           onChange: function(value){
             dojo.byId("sliderValue").value = value;
           }
@@ -53,6 +54,7 @@ The same example but with a vertical slider
           minimum: -10,
           maximum: 10,
           intermediateChanges: true,
+          style: "height: 100px",
           onChange: function(value){
             dojo.byId("sliderValueTwo").value = value;
           }
