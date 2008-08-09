@@ -68,3 +68,7 @@ Date Constraints
 
 Examples
 --------
+
+.. code-block :: javascript
+:linenos:
+  <script type="text/javascript">alert("Your code");</script>
