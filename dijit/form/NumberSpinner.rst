@@ -82,5 +82,13 @@ If you'd like onChange to fire after every button click, set the attribute inter
        onChange="console.debug('spin onChange')"
     ></span>
 
-Something Else
---------------
+Mapped Text Boxes
+-----------------
+
+** May move this to another section, as it's shared by several form elements **  NumberSpinner is a '''mapped text box''', meaning it maps the human-readable value into a computer-readable value passed to the server.  It does this by inserting two <input> tags: one visible and one hidden.  The displayed value may contain locale-specific group separators (like the comma in the U.S.) and decimal points (like the period in the U.S.).  But the hidden value will always be locale-independent: that is, with no group separators and a period for a decimal point.
+
+You can see this in the Inspect tab of Firebug:
+
+-- SCREENSHOT --
+
+When the form is submitted, only the hidden value goes to the server, i.e. with whatever name attribute you specified.  
