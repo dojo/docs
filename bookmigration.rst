@@ -95,7 +95,7 @@ Dojo Book Outline
   * `Drag and Drop <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/drag-and-drop>`_.
   * `Using dojo.data <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/data-retrieval-dojo-data-0>`_.
   * `Selecting DOM Nodes with dojo.query <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/selecting-dom-nodes-dojo-query>`_.
-  * `Internationalization (i18n) <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/i18n>`_.
+  * `Internationalization (i18n) <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/i18n>`_ maps to `Formatting, Parsing, and Validating <unknown>`_ [CraigRiecke].
   * `Back Button <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/back-button-undo>`_.
   * `Other Functions <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/other-miscellaneous-function>`_.
   * `Multiple Versions of Dojo in a Page <http://dojotoolkit.org/book/book-dojo/part-3-javascript-programming-dojo-and-dijit/multiple-versions-dojo-page>`_.
