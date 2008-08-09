@@ -5,7 +5,7 @@ Parsing, Formatting, and Validating Dates and Numbers
 
 :Status: Draft
 :Version: 1.0
-:Author: CraigRiecke
+:Author: CraigRiecke, Adam Peller
 
 These widgets augment the functionality of the <code lang="javascript">&lt;INPUT type="text"&gt;</code> tag.   The base widget dijit.form.Textbox by itself can trim, change case, and require input.  dijit.form.ValidationTextbox extends this by validating the input when the box loses focus.  The other widgets further extend the validation function with range and format checking.  Internal to the MappedTextBox widget subclass are two INPUT elements.  One interacts with the user obeying local customs, the other is hidden and represents the named form element to submit data to the server using a normalized serialization.  By default, the widget will discover the appropriate locale and behavior <a href="http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/i18n/specifying-locale">as specified by Dojo</a>.
 
