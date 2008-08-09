@@ -22,10 +22,9 @@ be used if not found.
 
 == Number Pattern Characters ==
 
-======  ==================  ==========  =================================================================================================
-Symbol  Location            Localized?  Meaning
-======  ==================  ==========  =================================================================================================
-0 	Number 	            Yes 	Digit
+|| Symbol || Location || Localized? || Meaning ||;
+|| 0 || Number || Yes || Digit ||;
+
 1-9 	Number 	            Yes 	'1' through '9' indicate rounding.
 @ 	Number 	            No 	        Significant digit
 # 	Number 	            Yes 	Digit, zero shows as absent
