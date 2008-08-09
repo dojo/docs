@@ -81,3 +81,6 @@ If you'd like onChange to fire after every button click, set the attribute inter
        intermediateChanges="true"
        onChange="console.debug('spin onChange')"
     ></span>
+
+Something Else
+--------------
