@@ -65,4 +65,19 @@ Change Events
 
 Like regular <input> boxes, the onChange event fires only when the box loses focus.  Just clicking on an up or down button changes the value, but the changes doesn't "stick" until you leave the box.  
 
-If you'd like to hook into TODO
+If you'd like onChange to fire after every button click, set the attribute intermediateChanges, as in this example:
+
+.. cv-compound::
+
+  .. cv:: html
+
+<span id="spinId"
+    jsId="spinId"
+    dojoType="dijit.form.NumberSpinner"
+    value="1"
+    pattern="####0"
+    constraints="{min:1,max:9999)"
+    trim="true"
+    intermediateChanges="true"
+    onChange="console.debug('spin onChange')"
+  ></span>
