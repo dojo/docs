@@ -20,6 +20,25 @@ See http://en.wikipedia.org/wiki/ISO_4217
 be used if not found.
  *'''type''': choose a format type based on the locale from the following: decimal, scientific (not yet supported), percent, currency. decimal by default.
 
+== Number Pattern Characters ==
+
+======  ==================  ==========  =================================================================================================
+Symbol  Location            Localized?  Meaning
+======  ==================  ==========  =================================================================================================
+0 	Number 	            Yes 	Digit
+1-9 	Number 	            Yes 	'1' through '9' indicate rounding.
+@ 	Number 	            No 	        Significant digit
+# 	Number 	            Yes 	Digit, zero shows as absent
+. 	Number 	            Yes 	Decimal separator or monetary decimal separator
+- 	Number 	            Yes 	Minus sign
+, 	Number 	            Yes 	Grouping separator
+E 	Number 	            Yes 	Separates mantissa and exponent in scientific notation. Need not be quoted in prefix or suffix.
++ 	Exponent            Yes 	Prefix positive exponents with localized plus sign. Need not be quoted in prefix or suffix.
+; 	Subpattern boundary Yes 	Separates positive and negative subpatterns
+% 	Prefix or suffix    Yes 	Multiply by 100 and show as percentage
+* 	Prefix/suffix boun  Yes 	Pad escape, precedes pad character 
+======  ==================  ==========  =================================================================================================
+
 == Examples ==
 
 == Date Constraints ==
