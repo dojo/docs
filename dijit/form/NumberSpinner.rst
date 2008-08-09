@@ -71,13 +71,13 @@ If you'd like onChange to fire after every button click, set the attribute inter
 
   .. cv:: html
 
-<span id="spinId"
-    jsId="spinId"
-    dojoType="dijit.form.NumberSpinner"
-    value="1"
-    pattern="####0"
-    constraints="{min:1,max:9999)"
-    trim="true"
-    intermediateChanges="true"
-    onChange="console.debug('spin onChange')"
-  ></span>
+    <span id="spinId"
+       jsId="spinId"
+       dojoType="dijit.form.NumberSpinner"
+       value="1"
+       pattern="####0"
+       constraints="{min:1,max:9999)"
+       trim="true"
+       intermediateChanges="true"
+       onChange="console.debug('spin onChange')"
+    ></span>
