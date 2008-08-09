@@ -1,7 +1,7 @@
 #format dojo_rst
 
 Parsing, Formatting, and Validating: Dates and Numbers
-=====================================================
+======================================================
 
 :Status: Draft
 :Version: 1.0
@@ -75,4 +75,5 @@ Examples
 
 .. code-block :: javascript
   :linenos:
+
   <script type="text/javascript">alert("Your code");</script>
