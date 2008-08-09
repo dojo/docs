@@ -40,6 +40,7 @@ Getting started
 * `Charting <quickstart/charting>`_
 * `Data stores <quickstart/data>`_
 * `The event system <quickstart/events>`_
+* `Parsing, Formatting and Validating Numbers and Dates <quickstart/numbersDates>`_
 
 ----
 
