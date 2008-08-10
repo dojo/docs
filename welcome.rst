@@ -29,88 +29,88 @@ Installation
 ------------
 
 * `How to Install the Dojo Toolkit <wiki:quickstart/install>`_
-* `Functions used *everywhere* <quickstart/dojo-basics>`_
+* `Functions used *everywhere* <wiki:quickstart/dojo-basics>`_
 
 Getting started
 ---------------
 
-* `UI Development <quickstart/interfacedesign>`_
-* `Back buttons <quickstart/back>`_
-* `AJAX <quickstart/ajax>`_
-* `Charting <quickstart/charting>`_
-* `Data stores <quickstart/data>`_
-* `The event system <quickstart/events>`_
-* `Parsing, Formatting and Validating Numbers and Dates <quickstart/numbersDates>`_
+* `UI Development <wiki:quickstart/interfacedesign>`_
+* `Back buttons <wiki:quickstart/back>`_
+* `AJAX <wiki:quickstart/ajax>`_
+* `Charting <wiki:quickstart/charting>`_
+* `Data stores <wiki:quickstart/data>`_
+* `The event system <wiki:quickstart/events>`_
+* `Parsing, Formatting and Validating Numbers and Dates <wiki:quickstart/numbersDates>`_
 
 ----
 
 Dojo reference                                                 
 --------------
 
-* `dojo <dojo>`_
-* `dojo._base <dojo/base>`_
-* `dojo.addOnLoad <dojo/addOnLoad>`_
-* `dojo.array <dojo/array>`_
-* `dojo.browser <dojo/browser>`_
-* `dojo.Color <dojo/Color>`_
-* `dojo.declare <dojo/declare>`_
-* `dojo.Deferred <dojo/Deferred>`_
+* `dojo <wiki:dojo>`_
+* `dojo._base <wiki:dojo/base>`_
+* `dojo.addOnLoad <wiki:dojo/addOnLoad>`_
+* `dojo.array <wiki:dojo/array>`_
+* `dojo.browser <wiki:dojo/browser>`_
+* `dojo.Color <wiki:dojo/Color>`_
+* `dojo.declare <wiki:dojo/declare>`_
+* `dojo.Deferrewiki:d <wiki:dojo/Deferred>`_
 * `dojo.event <dojo/event>`_
-* `dojo.fx <dojo/fx>`_
-* `dojo.html <dojo/html>`_
-* `dojo.json <dojo/json>`_
-* `dojo.lang <dojo/lang>`_
-* `dojo.NodeList <dojo/NodeList>`_
-* `dojo.window <dojo/window>`_
-* `dojo.xhr <dojo/xhr>`_
-* `dojo.byId <dojo/byId>`_
-* `dojo.connect <dojo/connect>`_
-* `dojo.forEach <dojo/forEach>`_
-* `dojo.query <dojo/query>`_
-* `dojo.require <dojo/require>`_
+* `dojo.fx <wiki:dojo/fx>`_
+* `dojo.html <wiki:dojo/html>`_
+* `dojo.json <wiki:dojo/json>`_
+* `dojo.lang <wiki:dojo/lang>`_
+* `dojo.NodeList <wiki:dojo/NodeList>`_
+* `dojo.window <wiki:dojo/window>`_
+* `dojo.xhr <wiki:dojo/xhr>`_
+* `dojo.byId <wiki:dojo/byId>`_
+* `dojo.connect <wiki:dojo/connect>`_
+* `dojo.forEach <wiki:dojo/forEach>`_
+* `dojo.query <wiki:dojo/query>`_
+* `dojo.require <wiki:dojo/require>`_
 
 Dijit reference
 ---------------
 
-* `dijit <dijit>`_
-* `dijit.Dialog <dijit/Dialog>`_
-* `dijit.Editor <dijit/Editor>`_
-* `dijit.Tree <dijit/Tree>`_
-* `dijit.form <dijit/form>`_
+* `dijit <wiki:dijit>`_
+* `dijit.Dialog <wiki:dijit/Dialog>`_
+* `dijit.Editor <wiki:dijit/Editor>`_
+* `dijit.Tree <wiki:dijit/Tree>`_
+* `dijit.form <wiki:dijit/form>`_
 
-  * `dijit.form.NumberSpinner <dijit/form/NumberSpinner>`_
-  * `dijit.form.RadioButton <dijit/form/RadioButton>`_
-  * `dijit.form.CheckBox <dijit/form/CheckBox>`_
-  * `dijit.form.Slider <dijit/form/Slider>`_
-  * `dijit.form.Textares <dijit/form/Textares>`_
+  * `dijit.form.NumberSpinner <wiki:dijit/form/NumberSpinner>`_
+  * `dijit.form.RadioButton <wiki:dijit/form/RadioButton>`_
+  * `dijit.form.CheckBox <wiki:dijit/form/CheckBox>`_
+  * `dijit.form.Slider <wiki:dijit/form/Slider>`_
+  * `dijit.form.Textares <wiki:dijit/form/Textares>`_
 
-* `dijit.layout <dijit/layout>`_
+* `dijit.layout <wiki:dijit/layout>`_
 
-  * `dijit.layout.ContentPane <dijit/layout/ContentPane>`_
-  * `dijit.layout.BorderContainer <dijit/layout/BorderContainer>`_
-  * `dijit.layout.AccordionContainer <dijit/layout/AccordionContainer>`_
-  * `dijit.layout.TabContainer <dijit/layout/TabContainer>`_
+  * `dijit.layout.ContentPane <wiki:dijit/layout/ContentPane>`_
+  * `dijit.layout.BorderContainer <wiki:dijit/layout/BorderContainer>`_
+  * `dijit.layout.AccordionContainer <wiki:dijit/layout/AccordionContainer>`_
+  * `dijit.layout.TabContainer <wiki:dijit/layout/TabContainer>`_
 
-* `dijit.ProgressBar <dijit/ProgressBar>`_
+* `dijit.ProgressBar <wiki:dijit/ProgressBar>`_
 
 Dojox reference
 ---------------
 
-* `dojox <dojox>`_
-* `dojox.grid <dojox/grid>`_
-* `dojox.cometd <dojox/cometd>`_
-* `dojox.rpc <dojox/rpc>`_
+* `dojox <wiki:dojox>`_
+* `dojox.grid <wiki:dojox/grid>`_
+* `dojox.cometd <wiki:dojox/cometd>`_
+* `dojox.rpc <wiki:dojox/rpc>`_
 
-  * `dojox.widget.Toaster <dojox/widget/Toaster>`_
+  * `dojox.widget.Toaster <wiki:dojox/widget/Toaster>`_
 
-* `dojox.form <dojox/form>`_
+* `dojox.form <wiki:dojox/form>`_
 
-  * `dojox.form.BusyButton <dojox/form/BusyButton>`_
+  * `dojox.form.BusyButton <wiki:dojox/form/BusyButton>`_
 
 ----
 
 Documentation guidelines
 ------------------------
 
-* `How to become a dojo doc ninja <howto>`_
-* `Documentation internals <internals>`_
+* `How to become a dojo doc ninja <wiki:howto>`_
+* `Documentation internals <wiki:internals>`_
