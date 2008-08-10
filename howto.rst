@@ -37,6 +37,13 @@ As a last standard item you should insert version info::
   :Version: targeted Dojo version
   :Author: Optional module author
 
+Links
+-----
+
+If you want to link to wiki internal pages use following syntax::
+
+  `Your text<wiki:path/to/wiki/page`_
+
 Code examples
 -------------
 
