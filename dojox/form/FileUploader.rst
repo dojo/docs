@@ -26,7 +26,7 @@ Basic Examples
     dojo.require("dojox.form.FileUploader");
     dojo.require("dijit.form.Button"); 
     dojo.addOnLoad(function(){
-        var fileUploader = new dojox.form.FileUploader({
+        fileUploader = new dojox.form.FileUploader({
         button:dijit.byId("btn0"), 
         degradable:true,
         uploadUrl:"../resources/UploadFile.php", 
