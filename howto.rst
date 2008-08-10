@@ -58,6 +58,8 @@ My `link`_ is very cool and is my `link`_
 
 .. _link: my/link
 
+The good thing about this way of defining links is that you won't have to look in the content of your text and find all occurences of a link you might want to change. This way all your links are stored in one convenient location and if you need to change them you know where to look.
+
 Code examples
 -------------
 
