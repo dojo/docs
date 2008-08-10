@@ -7,4 +7,18 @@ dojox.image
 :Version: beta
 :Authors: Peter Higgins, Bryan Forbes, Shane O'Sullivan
 
-A class to provide a common API for images, and home for image related Widgets.
+The DojoX Image project provides a number of image-related widgets as extensions to Dijit, such as a Lightbox, SlideShow, FlickrBadge, among others. The goal is to provide a common way of handling images, though some Image project widgets are designed for edge-cases, like the Magnifier.
+
+Most widgets within this project are experimental.
+
+Components
+----------
+
+* `Badge <badge>`_
+* `FlickrBadge <FlickrBadge>`_ - an extension on dojox.image.Badge, using Flickr as a data provider.
+* `Gallery <Gallery>`_ - A combination of a SlideShow and ThumbnailPicker
+* `Lightbox <Lightbox>`_ - A widget which shows a single image (or groups of images) in a Dialog
+* `Magnifier <Magnifier>`_ - A dojox.gfx-based version of the `MagnifierLite <MagnifierLite>`_ widget.
+* `MagnifierLite <MagnifierLite>`_ - A simple hover behavior for images, showing a zoomed version of a size image.
+* SlideShow - A slideshow of images
+* ThumbnailPicker - a dojo.data-powered 
