@@ -54,8 +54,8 @@ Dojo reference
 * `dojo.browser <wiki:dojo/browser>`_
 * `dojo.Color <wiki:dojo/Color>`_
 * `dojo.declare <wiki:dojo/declare>`_
-* `dojo.Deferrewiki:d <wiki:dojo/Deferred>`_
-* `dojo.event <dojo/event>`_
+* `dojo.Deferred <wiki:dojo/Deferred>`_
+* `dojo.event <wiki:dojo/event>`_
 * `dojo.fx <wiki:dojo/fx>`_
 * `dojo.html <wiki:dojo/html>`_
 * `dojo.json <wiki:dojo/json>`_
