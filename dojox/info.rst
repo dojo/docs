@@ -7,7 +7,8 @@ DojoX - Dojo Extensions and Experiments
 :Status: Contributed, Draft
 :Version: 1.0
 
-DojoX is an area for development of extensions to the Dojo toolkit.  It acts as an incubator for new ideas, a testbed for experimental additions to the main toolkit, as well as a repository for more stable and mature extensions.  Unlike Dojo and `Dijit <dijit>`_, DojoX is managed by subprojects, each of which has at least one module, a sponsor and a mission statement.  [Release cycle policy TBD]  The subprojects may have dependencies on Dojo and Dijit code or other subprojects in DojoX.  Some subprojects may choose to keep their dependencies on Dojo minimal, perhaps only depending on Dojo Base, and remain largely toolkit agnostic. Other DojoX sub-projects directly extend Dojo or Dijit components, like the `Flickr data store <dojox/data/FlickrRestStore>`_ and `dojox.Color <dojox/color>`_. 
+DojoX is an area for development of extensions to the Dojo toolkit.  It acts as an incubator for new ideas, a testbed for experimental additions to the main toolkit, as well as a repository for more stable and mature extensions.  Unlike Dojo and `Dijit <dijit>`_, DojoX is managed by subprojects, each of which has at least one module, a sponsor and a mission statement.  [Release cycle policy TBD]  The subprojects may have dependencies on Dojo and Dijit code or other subprojects in DojoX.  Some subprojects may choose to keep their dependencies on Dojo minimal, perhaps only depending on Dojo Base, and remain largely toolkit agnostic. Other DojoX sub-projects directly extend Dojo or Dijit components, like the `Flickr data store <dojox/data/FlickrRestStore>`_ and `dojox.color <dojox/color>`_. 
+
 Some caveats of using DojoX:
 ----------------------------
 
@@ -17,7 +18,7 @@ Some caveats of using DojoX:
 * Fully mature, production level code will typically remain in DojoX.
 * Not all modules in DojoX will be documented, since they are lower priority than Base and Core.  
 
-Browse the `API documentation <http://api.dojotoolkit.org/jsdoc/dojox/HEAD/dojox>`_ and `repository <http://svn.dojotoolkit.org/src/dojox/trunk>`_ directly for a more complete list.
+Browse the `API documentation <http://api.dojotoolkit.org/jsdoc/dojox/HEAD/dojox>`_ and `subversion repository <http://svn.dojotoolkit.org/src/dojox/trunk>`_ directly for a more complete list.
 
 Project Status
 --------------
@@ -39,8 +40,8 @@ DojoX follows the same naming conventions as Dojo and Dijit, which basically con
 * No cross-namespace pollution takes place indirectly. 
 
 There is, however, a supported convention for DojoX to add or modify functionality in Dojo or Dijit: hypens. By adding a hypen to the 
-module name, it is meant to be clear the module modifies something elsewhere in Dojo. For instance, ``dojox.fx.ext-dojo.NodeList`` adds `dojox.fx </dojox/fx>`_ functionality into `dojo.NodeList </dojo/NodeList>`_, making it available from a `dojo.query </dojo/query>`_ call. 
-The rational is: Because the hypen is illegal in JavaScript variables, you will never be able to directly call an ``ext-dojo`` method directly, and the act of `requiring </dojo/require>`_ it mixes the desired functionality.
+module name, it is meant to be clear the module modifies something elsewhere in Dojo. For instance, ``dojox.fx.ext-dojo.NodeList`` adds `dojox.fx <dojox/fx>`_ functionality into `dojo.NodeList </dojo/NodeList>`_, making it available from a `dojo.query <dojo/query>`_ call. 
+The rational is: Because the hypen is illegal in JavaScript variables, you will never be able to directly call an ``ext-dojo`` method directly, and the act of `requiring <dojo/require>`_ it mixes the desired functionality.
 
 Contributing to DojoX
 ---------------------
