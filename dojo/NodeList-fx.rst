@@ -47,4 +47,4 @@ The parameters you can specify to each animation provided are identical to their
 
 There are more NodeList animations provided by the `dojox.fx.ext-dojo.NodeList <dojox/fx/NodeList>`_ module, in the ``dojox.fx`` project.
 
-.. dojo.fx: wiki:dojo/fx
+.. _dojo.fx: wiki:dojo/fx
