@@ -1,9 +1,5 @@
-#format dojo_rst
-
-
-.. contents::
-    :depth: 2
+#format rst
 
 `dojo.fx`_ is a link.
 
-.. _dojo.fx: MyFx
+.. _dojo.fx: dojo/MyFx
