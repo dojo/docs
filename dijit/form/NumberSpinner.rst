@@ -69,6 +69,12 @@ If you'd like onChange to fire after every button click, set the attribute inter
 
 .. cv-compound::
 
+  .. cv:: javascript
+
+    <script type="text/javascript">
+      dojo.require("dijit.form.NumberSpinner");
+    </script>
+
   .. cv:: html
 
     <span id="spinId"
@@ -76,7 +82,7 @@ If you'd like onChange to fire after every button click, set the attribute inter
        dojoType="dijit.form.NumberSpinner"
        value="1"
        pattern="####0"
-       constraints="{min:1,max:9999)"
+       constraints="{min:1,max:9999}"
        trim="true"
        intermediateChanges="true"
        onChange="console.debug('spin onChange')"
