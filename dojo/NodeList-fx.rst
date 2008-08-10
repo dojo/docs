@@ -45,7 +45,7 @@ The most important thing to note is NodeList animations return an instance of a 
 
 The parameters you can specify to each animation provided are identical to their `dojo.fx`_ counterparts, omitting the ``node:`` parameter, as each node in the NodeList is passed for you.
 
-There are more NodeList animations provided by the `dojox.fx.ext-dojo.NodeList <dojox/fx/NodeList>`_ module, in the ``dojox.fx``_ project.
+There are more NodeList animations provided by the `dojox.fx.ext-dojo.NodeList <dojox/fx/NodeList>`_ module, in the `dojox.fx`_ project.
 
 .. _dojo.fx: dojo/fx
 .. _dojox.fx: dojox/fx
