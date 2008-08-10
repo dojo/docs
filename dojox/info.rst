@@ -7,7 +7,7 @@ DojoX - Dojo Extensions and Experiments
 :Status: Contributed, Draft
 :Version: 1.0
 
-DojoX is an area for development of extensions to the Dojo toolkit.  It acts as an incubator for new ideas, a testbed for experimental additions to the main toolkit, as well as a repository for more stable and mature extensions.  Unlike Dojo and Dijit, DojoX is managed by subprojects, each of which has at least one module, a sponsor and a mission statement.  [Release cycle policy TBD]  The subprojects may have dependencies on Dojo and Dijit code or other subprojects in DojoX.  Some subprojects may choose to keep their dependencies on Dojo minimal, perhaps only depending on Dojo Base, and remain largely toolkit agnostic.  Other DojoX sub-projects directly extend Dojo or Dijit components, like the `Flickr data store </dojox/data/FlickrRestStore>`_ and `dojox.Color </dojox/color>`_. ``FIXME: broken links``
+DojoX is an area for development of extensions to the Dojo toolkit.  It acts as an incubator for new ideas, a testbed for experimental additions to the main toolkit, as well as a repository for more stable and mature extensions.  Unlike Dojo and Dijit, DojoX is managed by subprojects, each of which has at least one module, a sponsor and a mission statement.  [Release cycle policy TBD]  The subprojects may have dependencies on Dojo and Dijit code or other subprojects in DojoX.  Some subprojects may choose to keep their dependencies on Dojo minimal, perhaps only depending on Dojo Base, and remain largely toolkit agnostic. Other DojoX sub-projects directly extend Dojo or Dijit components, like the `Flickr data store <data/FlickrRestStore>`_ and `dojox.Color <color>`_. ``FIXME: broken links``
 
 Some caveats of using DojoX:
 ----------------------------
@@ -35,8 +35,8 @@ Naming Conventions
 DojoX follows the same naming conventions as Dojo and Dijit, which basically consists of:
 
 * Functions are mixed case, always starting with a lowercase. Eg: ``dojox.cometd.init("http://cometserver:9090/cometd");``
-* Classes are Capitalized, eg: ``new dojox.image.Lightbox``, to create a LightBox from the `dojox.image project </dojox/image>`_
-* All namespaces exist withing their project name. No classes exist in the top-level dojox namespace, with one notable exception: ``dojox.Grid``. This Grid module is deprecated, and will be gone in 2.0. It will be replaced with `dojox.grid.DataGrid </dojox/grid>`_
+* Classes are Capitalized, eg: ``new dojox.image.Lightbox``, to create a LightBox from the `dojox.image project <image>`_
+* All namespaces exist withing their project name. No classes exist in the top-level dojox namespace, with one notable exception: ``dojox.Grid``. This Grid module is deprecated, and will be gone in 2.0. It will be replaced with `dojox.grid.DataGrid <grid>`_
 * No cross-namespace pollution takes place indirectly. 
 
 There is, however, a supported convention for DojoX to add or modify functionality in Dojo or Dijit: hypens. By adding a hypen to the 
@@ -50,4 +50,3 @@ Contributing new projects, or patches for existing projects are covered under th
 it may be distributed. Accepting a new project or patch for an existing project is left to the discretion of the project "owner", or in the case of top-level project, the DojoX BDFL (currently: Adam Peller)
 
 You are obviously more than welcome to create your own projects and modules that use the Dojo Toolkit and not contribute them to directly back to DojoX. Feel free to blog, design, and otherwise innovate using the Toolkit, and release it independently, though **contact us**, as we could love to evangelize your efforts! 
-
