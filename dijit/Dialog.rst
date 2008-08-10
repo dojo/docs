@@ -94,17 +94,15 @@ Coloring the Underlay
 If you wish to alter the default color for the underlay, you do so in CSS. The underlay receives an ID to match the Dialog, sufficed with ``_underlay``, which you can define a css class for:
 
 .. cv-compound::
-
-  .. cv:: css
-    :label: Simply add a selector matching the id:
-  
-    #dialogColor_underlay {
-        background-color:green; 
-    }
-  
+ 
   .. cv:: html
     :label: When pressing this button the dialog will popup 
 
+    <style type="text/css">
+    #dialogColor_underlay {
+        background-color:green; 
+    }
+    </style>
     <div id="dialogColor" title="Colorful" dojoType="dijit.Dialog">
          My background color is Green
     </div>
