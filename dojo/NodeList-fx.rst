@@ -6,6 +6,10 @@ dojo.NodeList-fx
 :Status: Draft
 :Version: 1.2
 
+
+.. contents::
+   :depth: 2
+
 This module incorporates `dojo.fx </dojo/fx>`_ functionality into `dojo.query <query>`_ by extending the `dojo.NodeList <NodeList>`_ Class. 
 
 The first most important thing to do is require the module into your page:
