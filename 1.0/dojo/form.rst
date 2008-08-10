@@ -1,4 +1,4 @@
-#format rst
+#format sphinx_rst
 
 `dojo.fx`_ is a link.
 
