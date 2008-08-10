@@ -65,7 +65,7 @@ is identical to:
 
 The declarative method requires you include the `dojo.parser <dojo/parser>`_ and have either ``djConfig.parseOnLoad`` set to true, or you manually call ``dojo.parser.parse()`` when you would like the widgets (dijits) to be created.
 
-**note:** Dijit uses a special function for access, `dijit.byId() <dijit/byId>`_ ... This is **not** the same as `dojo.byId <dojo/byId>_`, which works exclusively on DomNodes. Dijit stores all active widgets in the `dijit.registry <dijit/registry>`_, and uses id's as unique qualifiers. dijit.byId returns the instance (widget) from a passed ID, allowing you access to all the methods and properties within:
+**note:** Dijit uses a special function for access, `dijit.byId() <dijit/byId>`_ ... This is **not** the same as `dojo.byId <dojo/byId>`_, which works exclusively on DomNodes. Dijit stores all active widgets in the `dijit.registry <dijit/registry>`_, and uses id's as unique qualifiers. dijit.byId returns the instance (widget) from a passed ID, allowing you access to all the methods and properties within:
 
 .. code-block :: html
   :linenos:
