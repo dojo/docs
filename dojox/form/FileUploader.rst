@@ -51,7 +51,7 @@ Basic Examples
         });
     });
 
-    dojo.connect(f0, "onComplete", function(data){
+    dojo.connect(fileUploader, "onComplete", function(data){
         dojo.forEach(data, function(d){
             dojo.byId("uploadedFiles").value += d.file+" \n";
         });
@@ -62,10 +62,10 @@ Basic Examples
 
   .. cv:: html
     
-    <div id="btn0" class="browse" dojoType="dijit.form.Button">Select Images...</div>
-    Files to upload:
-    <textarea cols="50" rows="6" id="fileToUpload"></textarea>
-    Uploaded Files:
-    <textarea cols="50" rows="4" id="uploadedFiles"></textarea>
+    <div id="btn0" class="browse" dojoType="dijit.form.Button">Select Images...</div><br/>
+    Files to upload:<br/>
+    <textarea cols="50" rows="6" id="fileToUpload"></textarea><br/>
+    Uploaded Files:<br/>
+    <textarea cols="50" rows="4" id="uploadedFiles"></textarea><br/>
 
 That's it.
