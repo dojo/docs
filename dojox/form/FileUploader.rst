@@ -56,7 +56,7 @@ Basic Examples
             dojo.byId("uploadedFiles").value += d.file+" \n";
         });
     });
-</script>
+    </script>
 
   The HTML:
 
