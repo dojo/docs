@@ -46,6 +46,12 @@ If you want to link to wiki internal pages use following syntax::
 
 Will create following link: `Your text <path/to/wiki/page>`_
 
+When you want to use the same link location twice you would do it like this
+
+My `link`_ is very cool and is my `link`_
+
+.. _link: my/link
+
 Code examples
 -------------
 
