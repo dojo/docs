@@ -9,7 +9,7 @@ dojox.cometd
 
 
 .. contents::
-   :depth: 3
+   :depth: 4
 
 Low-latency data transfer from servers to clients. dojox.cometd implements a
 Bayeux protocol client for use with most Bayeux servers. See cometd.com for
