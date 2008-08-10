@@ -5,26 +5,6 @@ Dijit
 
 *Dijit* is a widget system layered on top of Dojo. If you are new to the whole Dojo experience, Dijit is a good place to start. You can build amazing Web 2.0 GUI's using very little, or no, JavaScript (though having an understanding of JavaScript will take you a long way) 
 
-Dijit Basics
-------------
-
-You can use Dijit in one of two ways: **declaratively** by using special attributes inside of regular HTML tags, and **programmatically** through JavaScript. You have the same options either way. 
-
-.. code-block :: javascript
-  :linenos:
- 
-  var dialog = new dijit.Dialog({ title:"Hello Dijit!" }, "someId");
-  dialog.startup();
-
-is identical to: 
-
-.. code-block :: html
-  :linenos:
-
-  <div dojoType="dijit.Dialog" title="Hello Dijit!" id="someId"></div>
-
-The declarative method requires you include the `dojo.parser </dojo/parser>`_ and have either ``djConfig.parseOnLoad`` set to true, or you manually call ``dojo.parser.parse()`` when you would like the widgets (dijits) to be created.
-
 Themes
 ------
 
@@ -47,6 +27,7 @@ and by the addition of a theme class name on a parent element. By using the ``<b
   <body class="tundra">
       <h1>Hello, Dijit</h1>
   </body>
+  </html>
 
 It is recommended you include the theme CSS file **before** ``dojo.js`` to avoid any potential latency issues.
 
@@ -54,3 +35,89 @@ Dijit i18n/a11y
 ---------------
 
 Everything in Dijit is designed to be globally accessible -- to accommodate users with different languages and cultures as well as those with different abilities.  Language translations, bi-directional text, and cultural representation of things like numbers and dates are all encapsulated within the widgets.  Server interactions are done in a way that makes no assumptions about local conventions.  All widgets are keyboard accessible and using the standard Dijit theme, usable in high-contrast mode as well as by screen readers.  These features are baked in so that, as much as possible, all users are treated equally.
+
+Dijit Basics
+------------
+
+You can use Dijit in one of two ways: **declaratively** by using special attributes inside of regular HTML tags, and **programmatically** through JavaScript. You have the same options either way. 
+
+.. code-block :: javascript
+  :linenos:
+ 
+  var dialog = new dijit.Dialog({ title:"Hello Dijit!" }, "someId");
+  dialog.startup();
+
+is identical to: 
+
+.. code-block :: html
+  :linenos:
+
+  <div dojoType="dijit.Dialog" title="Hello Dijit!" id="someId"></div>
+
+The declarative method requires you include the `dojo.parser </dojo/parser>`_ and have either ``djConfig.parseOnLoad`` set to true, or you manually call ``dojo.parser.parse()`` when you would like the widgets (dijits) to be created.
+
+**note:** Dijit uses a special function for access, `dijit.byId() <byId>`_ ... This is **not** the same as `dojo.byId </dojo/byId>_`, which works exclusively on DomNodes. Dijit stores all active widgets in the `dijit.registry <registry>`_, and uses id's as unique qualifiers. dijit.byId returns the instance (widget) from a passed ID, allowing you access to all the methods and properties within:
+
+.. code-block :: html
+  :linenos:
+
+  <script type="text/javascript">
+     dojo.addOnLoad(function(){
+         // dojo.byId("foobar") would only be a normal domNode. 
+         var myDialog = dijit.byId("foobar");
+         // .attr() is only available in 1.2; For previous versions, use .setContent("<p>replaced!</p>");
+         myDialog.attr("content", "<p>I've been replaced!</p>"); 
+         myDialog.show();
+     });
+  </script>
+  <div id="foobar" dojoType="dijit.Dialog" title="Foo!">
+     <p>I am some content</p>
+  </div> 
+
+If you need a reference to a the actual Node used to display the widget, Dijit stores it as a property in the instance: ``.domNode``. You can use this property for styling, positioning, or other `DOM manipulation </quickstart/DomManipulation>`_:
+
+.. code-block :: javascript
+  :linenos:
+
+  var thinger = dijit.byId("foobar");
+  dojo.place(thinger.domNode, dojo.body(), "last");
+  // functionally equilivant to:
+  // dojo.body().appendChild(thinger.domNode);
+
+When creating widgets programatically, pass an id:"" parameter:
+
+.. code-block :: javascript
+  :linenos:
+
+  var dialog = new dijit.Dialog({
+     id:"myDialog",
+     title:"Programatic"
+  });
+  dialog.startup();
+  // compare them:
+  console.log(dijit.byId("myDialog") == dialog);
+
+Otherwise, a unique ID will be generated for you:
+
+.. code-block :: javascript
+  :linenos:
+
+  var dialog = new dijit.Dialog({ title:"No ID" })
+  console.log(dialog.id); 
+  
+All Dijits follow the same programatic convention. Create a new instance with the JavaScript ``new`` function, pass an object-hash of properties and functions (in this case, title:""), and supply an optional "source node reference". 
+
+.. code-block :: javascript
+  :linenos:
+
+  var node = dojo.byId("makeADialog");
+  var dialog = new dijit.Dialog({ title:"From Source Node" }, node);
+  dialog.show();
+
+This will cause the creator to use the node with id="makeADialog", and turn it into a `Dialog <Dialog>`_. You can pass a node refernece directly (as seen above), or simply pass a string id. Either way, the reference passes through dojo.byId:
+
+.. code-block :: javascript
+  :linenos:
+
+  var dialog = new dijit.Dialog({ title:"From Source byId" }, "makeADialog");
+  dialog.show();
