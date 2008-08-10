@@ -30,7 +30,7 @@ Basic Examples
         fileUploader = new dojox.form.FileUploader({
         button:dijit.byId("btn0"), 
         degradable:true,
-        uploadUrl:"../resources/UploadFile.php", 
+        uploadUrl:"http://docs.dojocampus.org/moin_static163/js/dojo/trunk/demos/uploader/UploadFile.php", 
         uploadOnChange:false, 
         selectMultipleFiles:true,
         fileMask:["All Images", "*.jpg;*.jpeg;*.gif;*.png"],
