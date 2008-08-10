@@ -13,7 +13,7 @@ details on Cometd or on the Bayeux protocol.
 
 `widgets overview`_
 
-.. _widgets overview: dojox/foo
+.. _widgets overview: wiki:dojox/foo
 
 Basic Example
 -------------
