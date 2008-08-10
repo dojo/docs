@@ -63,9 +63,9 @@ is identical to:
   </script>
   <div dojoType="dijit.Dialog" title="Hello Dijit!" id="someId"></div>
 
-The declarative method requires you include the `dojo.parser </dojo/parser>`_ and have either ``djConfig.parseOnLoad`` set to true, or you manually call ``dojo.parser.parse()`` when you would like the widgets (dijits) to be created.
+The declarative method requires you include the `dojo.parser <dojo/parser>`_ and have either ``djConfig.parseOnLoad`` set to true, or you manually call ``dojo.parser.parse()`` when you would like the widgets (dijits) to be created.
 
-**note:** Dijit uses a special function for access, `dijit.byId() <byId>`_ ... This is **not** the same as `dojo.byId </dojo/byId>_`, which works exclusively on DomNodes. Dijit stores all active widgets in the `dijit.registry <registry>`_, and uses id's as unique qualifiers. dijit.byId returns the instance (widget) from a passed ID, allowing you access to all the methods and properties within:
+**note:** Dijit uses a special function for access, `dijit.byId() <dijit/byId>`_ ... This is **not** the same as `dojo.byId <dojo/byId>_`, which works exclusively on DomNodes. Dijit stores all active widgets in the `dijit.registry <dijit/registry>`_, and uses id's as unique qualifiers. dijit.byId returns the instance (widget) from a passed ID, allowing you access to all the methods and properties within:
 
 .. code-block :: html
   :linenos:
@@ -83,7 +83,7 @@ The declarative method requires you include the `dojo.parser </dojo/parser>`_ an
      <p>I am some content</p>
   </div> 
 
-If you need a reference to a the actual Node used to display the widget, Dijit stores it as a property in the instance: ``.domNode``. You can use this property for styling, positioning, or other `DOM manipulation </quickstart/DomManipulation>`_:
+If you need a reference to a the actual Node used to display the widget, Dijit stores it as a property in the instance: ``.domNode``. You can use this property for styling, positioning, or other `DOM manipulation <quickstart/DomManipulation>`_:
 
 .. code-block :: javascript
   :linenos:
@@ -123,7 +123,7 @@ All Dijits follow the same programatic convention. Create a new instance with th
   var dialog = new dijit.Dialog({ title:"From Source Node" }, node);
   dialog.show();
 
-This will cause the creator to use the node with id="makeADialog", and turn it into a `Dialog <Dialog>`_. You can pass a node refernece directly (as seen above), or simply pass a string id. Either way, the reference passes through dojo.byId:
+This will cause the creator to use the node with id="makeADialog", and turn it into a `Dialog <dijit/Dialog>`_. You can pass a node refernece directly (as seen above), or simply pass a string id. Either way, the reference passes through dojo.byId:
 
 .. code-block :: javascript
   :linenos:
