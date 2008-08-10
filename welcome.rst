@@ -28,7 +28,7 @@ The documentation is aiming to cover all dojo modules delivered within a release
 Installation
 ------------
 
-* `How to Install the Dojo Toolkit <quickstart/install>`_
+* `How to Install the Dojo Toolkit <wiki:quickstart/install>`_
 * `Functions used *everywhere* <quickstart/dojo-basics>`_
 
 Getting started
