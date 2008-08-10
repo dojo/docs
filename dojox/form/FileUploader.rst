@@ -27,36 +27,36 @@ Basic Examples
     dojo.require("dijit.form.Button"); 
     dojo.addOnLoad(function(){
         var fileUploader = new dojox.form.FileUploader({
-		button:dijit.byId("btn0"), 
-		degradable:true,
-		uploadUrl:"../resources/UploadFile.php", 
-		uploadOnChange:false, 
-		selectMultipleFiles:true,
-		fileMask:["All Images", "*.jpg;*.jpeg;*.gif;*.png"],
-		isDebug:false
-	});
+        button:dijit.byId("btn0"), 
+        degradable:true,
+        uploadUrl:"../resources/UploadFile.php", 
+        uploadOnChange:false, 
+        selectMultipleFiles:true,
+        fileMask:["All Images", "*.jpg;*.jpeg;*.gif;*.png"],
+        isDebug:false
+    });
     });
 
     dojo.connect(fileUploader, "onChange", function(data){
-		dojo.forEach(data, function(d){
-			dojo.byId("fileToUpload").value += d.name+" "+Math.ceil(d.size*.001)+"kb \n";
-		});
-	});
+        dojo.forEach(data, function(d){
+            dojo.byId("fileToUpload").value += d.name+" "+Math.ceil(d.size*.001)+"kb \n";
+        });
+    });
 
-	dojo.connect(fileUploader, "onProgress", function(data){
-		dojo.byId("fileToUpload").value = "";
-		dojo.forEach(data, function(d){
-			dojo.byId("fileToUpload").value += "("+d.percent+"%) "+d.name+" \n";
-			
-		});
-	});
+    dojo.connect(fileUploader, "onProgress", function(data){
+        dojo.byId("fileToUpload").value = "";
+        dojo.forEach(data, function(d){
+            dojo.byId("fileToUpload").value += "("+d.percent+"%) "+d.name+" \n";
+            
+        });
+    });
 
-	dojo.connect(f0, "onComplete", function(data){
-		dojo.forEach(data, function(d){
-			dojo.byId("uploadedFiles").value += d.file+" \n";
-		});
-	});
-    </script>
+    dojo.connect(f0, "onComplete", function(data){
+        dojo.forEach(data, function(d){
+            dojo.byId("uploadedFiles").value += d.file+" \n";
+        });
+    });
+</script>
 
   The HTML:
 
