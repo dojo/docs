@@ -25,6 +25,7 @@ Basic Examples
     <script type="text/javascript">
     dojo.require("dojox.form.FileUploader");
     dojo.require("dijit.form.Button"); 
+    var fileUploader;
     dojo.addOnLoad(function(){
         fileUploader = new dojox.form.FileUploader({
         button:dijit.byId("btn0"), 
@@ -35,7 +36,7 @@ Basic Examples
         fileMask:["All Images", "*.jpg;*.jpeg;*.gif;*.png"],
         isDebug:false
     });
-    });
+    
 
     dojo.connect(fileUploader, "onChange", function(data){
     console.log("change", data)
@@ -56,6 +57,7 @@ Basic Examples
         dojo.forEach(data, function(d){
             dojo.byId("uploadedFiles").value += d.file+" \n";
         });
+    });
     });
     </script>
 
