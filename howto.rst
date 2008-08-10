@@ -42,9 +42,9 @@ Links
 
 If you want to link to wiki internal pages use following syntax::
 
-  `Your text <wiki:path/to/wiki/page`_
+  `Your text <wiki:path/to/wiki/page>`_
 
-Will create following link: `Your text <wiki:path/to/wiki/page`_
+Will create following link: `Your text <wiki:path/to/wiki/page>`_
 
 Code examples
 -------------
