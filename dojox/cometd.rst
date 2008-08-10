@@ -11,7 +11,9 @@ Low-latency data transfer from servers to clients. dojox.cometd implements a
 Bayeux protocol client for use with most Bayeux servers. See cometd.com for
 details on Cometd or on the Bayeux protocol.
 
-`test <dojox/foo>`_
+`widgets overview`_
+
+.. _widgets overview: dojox/foo
 
 Basic Example
 -------------
