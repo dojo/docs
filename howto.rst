@@ -167,3 +167,19 @@ The valid reST syntax has to look like following markup:
         var widget = new foohooo({id: "test_foohooo"}, dojo.byId("fohooo"));
       });
       </script>
+      
+Craig's Questions
+-----------------
+
+- Should all form control examples also include a dijit.form.Form tag?
+- What is the convention for attributes, methods, etc.?  These should be spelled out in the How-To or be given 
+  their own tags
+- Should we remove the remaining refs to 0.9 (like dijit.form.I nlineEdit?)
+- NumberSpinner page has an example of code examples getting mushed together.  Solution?
+- Is there a way to display REAL help underneath the editor box?  The help that sometimes appears doesn't
+  actually work.
+- There doesn't seem to be a way to link outside of the directory and its children.  /path/to/file doesn't work, and
+  though you can use ../.. the rules for how many to include don't seem to apply
+- As a general rule, do we want to factor out common concepts (like Containers, which are explained on the new
+  TabContainer page) and refer back to them?  Or explain them on each widget page?  Does it depend on the widget
+  and what concepts are most central to the widget?
