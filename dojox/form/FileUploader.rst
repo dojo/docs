@@ -3,8 +3,8 @@
 dojox.form.FileUploader
 =========================
 
-:Status: Contributed, Far from finished
-:Version: 0.1
+:Status: Contributed, Complete
+:Version: 1.0
 
 Basic Description
 -----------------
@@ -13,8 +13,8 @@ Handles file uploading to a server. It does **NOT** create a button - it transfo
 
 FileUploader is a wrapper class. If the correct version of Flash Player is available, dojox.form.FileInputFlash is used. If the **degradable** property is true, and Flash Player is not installed or is outdated, dojox.form.FileInputOverlay is used. Either of those two sub-classes could be directly, but it's easiest and best to use dojox.form.FileUploader.
 
-Basic Examples
---------------
+Example
+-------
 
 .. cv-compound::
  
@@ -68,8 +68,8 @@ Basic Examples
     <div id="btn0" class="browse" dojoType="dijit.form.Button">Select Images...</div><br/>
     Files to upload:<br/>
     <textarea cols="50" rows="2" id="fileToUpload"></textarea><br/>
-    <div id="uploadBtn" class="uploadBtn" onClick="fileUploader.upload();" dojoType="dijit.form.Button">Upload</div>
+    <div id="uploadBtn" class="uploadBtn" onClick="fileUploader.upload();" dojoType="dijit.form.Button">Upload</div><br/>
     Uploaded Files:<br/>
     <textarea cols="50" rows="2" id="uploadedFiles"></textarea><br/>
 
-That's it.
+Use *dojo.connect* to connect to the *onChange*, *onProgress* and *onComplete methods*. use *upload* to initiate the upload after files have been selected. Or set *uploadOnChange* to true to initiate upload after the selection.
