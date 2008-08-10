@@ -6,4 +6,4 @@
 
 `dojo.fx`_ is a link.
 
-.. _dojo.fx: dojox/MyFx
+.. _dojo.fx: MyFx
