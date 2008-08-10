@@ -10,7 +10,7 @@ dojo.NodeList-fx
 .. contents::
    :depth: 2
 
-This module incorporates `dojo.fx`_ functionality into `dojo.query <query>`_ by extending the `dojo.NodeList <NodeList>`_ Class. 
+This module incorporates `dojo.fx`_ functionality into `dojo.query <dojo/query>`_ by extending the `dojo.NodeList <dojo/NodeList>`_ Class. 
 
 The first most important thing to do is require the module into your page:
 
@@ -48,3 +48,4 @@ The parameters you can specify to each animation provided are identical to their
 There are more NodeList animations provided by the `dojox.fx.ext-dojo.NodeList <dojox/fx/NodeList>`_ module, in the ``dojox.fx`` project.
 
 .. _dojo.fx: dojo/fx
+.. _dojox.fx: dojox/fx
