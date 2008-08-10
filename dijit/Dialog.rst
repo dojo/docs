@@ -97,11 +97,11 @@ If you wish to alter the default color for the underlay, you do so in CSS. The u
 
   .. cv:: css
     :label: Simply add a selector matching the id:
-    <style type="text/css">
+  
     #dialogColor_underlay {
-        backround-color:green; 
+        background-color:green; 
     }
-    </style>
+  
   .. cv:: html
     :label: When pressing this button the dialog will popup 
 
