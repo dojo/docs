@@ -38,6 +38,7 @@ Basic Examples
     });
 
     dojo.connect(fileUploader, "onChange", function(data){
+    console.log("change", data)
         dojo.forEach(data, function(d){
             dojo.byId("fileToUpload").value += d.name+" "+Math.ceil(d.size*.001)+"kb \n";
         });
