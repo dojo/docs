@@ -95,7 +95,7 @@ If you wish to alter the default color for the underlay, you do so in CSS. The u
 
 .. cv-compound::
 
-  .. cs:: css
+  .. cv:: css
     :label: Simply add a selector matching the id:
 
     #dialogColor_underlay {
@@ -105,7 +105,7 @@ If you wish to alter the default color for the underlay, you do so in CSS. The u
   .. cv:: html
     :label: When pressing this button the dialog will popup 
 
-    <div id="dialogColor" dojoType="dijit.Dialog">
+    <div id="dialogColor" title="Colorful" dojoType="dijit.Dialog">
          My background color is Green
     </div>
     <button id="showDialog2" dojoType="dijit.form.Button">Show me!</button>
@@ -124,4 +124,3 @@ If you wish to alter the default color for the underlay, you do so in CSS. The u
       dojo.connect(dijit.byId("showDialog2"), "onClick", firstDlg, "show");
     });
     </script>
-
