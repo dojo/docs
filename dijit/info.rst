@@ -23,6 +23,9 @@ and by the addition of a theme class name on a parent element. By using the ``<b
       <title>Hello, Dijit</title>
       <link rel="stylesheet" href="lib/dijit/themes/tundra/tundra.css">
       <script src="lib/dojo/dojo.js"></script>
+      <script type="text/javascript">
+         dojo.require("dijit.Dialog");
+      </script>
   </head>
   <body class="tundra">
       <h1>Hello, Dijit</h1>
@@ -43,15 +46,21 @@ You can use Dijit in one of two ways: **declaratively** by using special attribu
 
 .. code-block :: javascript
   :linenos:
- 
-  var dialog = new dijit.Dialog({ title:"Hello Dijit!" }, "someId");
-  dialog.startup();
+
+  dojo.require("dijit.Dialog"); 
+  dojo.addOnLoad(function(){  
+    var dialog = new dijit.Dialog({ title:"Hello Dijit!" }, "someId");
+    dialog.startup();
+  });
 
 is identical to: 
 
 .. code-block :: html
   :linenos:
 
+  <script type="text/javascript">
+     dojo.require("dijit.Dialog");
+  </script>
   <div dojoType="dijit.Dialog" title="Hello Dijit!" id="someId"></div>
 
 The declarative method requires you include the `dojo.parser </dojo/parser>`_ and have either ``djConfig.parseOnLoad`` set to true, or you manually call ``dojo.parser.parse()`` when you would like the widgets (dijits) to be created.
