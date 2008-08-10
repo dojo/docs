@@ -25,7 +25,7 @@ Dojo Book Outline
   * `Dojo History <http://dojotoolkit.org/book/dojo-book-0-9/introduction/history>`_. maps to: `History <quickstart/introduction/history>`_
   * `Why Dojo? <http://dojotoolkit.org/book/dojo-book-0-9/introduction/why-dojo>`_. maps to: `Why Dojo <quickstart/introduction/whydojo>`_
 
-* `Part 2: Dijit - The Dojo Widget Library <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit-0>`_. maps to: `dijit <dijit>`_
+* `Part 2: Dijit - The Dojo Widget Library <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit-0>`_. maps to: `dijit <dijit>`_ (complete)
 
   * `Dijit at a Glance <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/dijit-glance>`_.
   * `Common Features <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/common-attributes>`_.
@@ -77,11 +77,11 @@ Dojo Book Outline
     * `Overriding and Combining Themes <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/themes-and-design/overriding-and-combining-themes>`_.
     * `Writing Your Own Theme <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/themes-and-design/writing-your-own-theme>`_.
 
-  * `Accessibility  <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/a11y>`_.
+  * `Accessibility  <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/a11y>`_. maps to: `dijit-a11y </dijit-a11y>`_ (complete)
 
-    * `Web Accessibility Issues <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/a11y/web-accessibility-issues>`_.
-    * `Dojo Accessibility Strategy <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/a11y/dojo-accessibility-strategy>`_.
-    * `Dojo Accessibility Resources <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/a11y/dojo-accessibility-resources>`_.
+    * `Web Accessibility Issues <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/a11y/web-accessibility-issues>`_. maps to: `dijit-a11y </dijit-a11y>`_ (complete)
+    * `Dojo Accessibility Strategy <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/a11y/dojo-accessibility-strategy>`_. (todoc)
+    * `Dojo Accessibility Resources <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/a11y/dojo-accessibility-resources>`_. (todoc)
 
 * `Part 3: JavaScript Programming With Dojo and Dijit <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo-0>`_.
 
