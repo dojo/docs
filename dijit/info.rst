@@ -45,7 +45,7 @@ Dijit Basics
 You can use Dijit in one of two ways: **declaratively** by using special attributes inside of regular HTML tags, and **programmatically** through JavaScript. You have the same options either way. 
 
 .. code-block :: html
-  :linenos:
+  :linenos:3
 
   dojo.require("dijit.Dialog"); 
   dojo.addOnLoad(function(){  
