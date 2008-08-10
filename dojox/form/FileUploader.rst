@@ -67,4 +67,5 @@ Basic Examples
     <textarea cols="50" rows="6" id="fileToUpload"></textarea>
     Uploaded Files:
     <textarea cols="50" rows="4" id="uploadedFiles"></textarea>
+
 That's it.
