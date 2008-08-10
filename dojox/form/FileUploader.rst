@@ -67,8 +67,9 @@ Basic Examples
     
     <div id="btn0" class="browse" dojoType="dijit.form.Button">Select Images...</div><br/>
     Files to upload:<br/>
-    <textarea cols="50" rows="6" id="fileToUpload"></textarea><br/>
+    <textarea cols="50" rows="2" id="fileToUpload"></textarea><br/>
+    <div id="uploadBtn" class="uploadBtn" onClick="fileUploader.upload();" dojoType="dijit.form.Button">Upload</div>
     Uploaded Files:<br/>
-    <textarea cols="50" rows="4" id="uploadedFiles"></textarea><br/>
+    <textarea cols="50" rows="2" id="uploadedFiles"></textarea><br/>
 
 That's it.
