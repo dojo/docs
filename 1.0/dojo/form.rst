@@ -1,4 +1,4 @@
-#format test_rst
+#format dojo_rst
 
 `dojo.fx`_ is a link.
 
