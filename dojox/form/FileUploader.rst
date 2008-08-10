@@ -72,4 +72,4 @@ Example
     Uploaded Files:<br/>
     <textarea cols="50" rows="2" id="uploadedFiles"></textarea><br/>
 
-Use *dojo.connect* to connect to the *onChange*, *onProgress* and *onComplete methods*. use *upload* to initiate the upload after files have been selected. Or set *uploadOnChange* to true to initiate upload after the selection.
+Use *dojo.connect* to connect to the *onChange*, *onProgress* and *onComplete* methods. Use *upload* to initiate the upload after files have been selected. Or set *uploadOnChange* to true to initiate upload after the selection.
