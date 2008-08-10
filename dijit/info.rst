@@ -1,8 +1,5 @@
 #format dojo_rst
 
-.. highlight:: javascript
-   :linenothreshold: 3
-
 Dijit
 =====
 
