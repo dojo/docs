@@ -11,7 +11,7 @@ Basic Description
 
 Handles file uploading to a server. It does **NOT** create a button - it transforms an existing button into an uploader. This can be used for toolbar buttons for example. Because of this, it only works programmatically, it does not work in markup. Use the other other DojoX FileInput files for markup solutions. 
 
-FileUploader is a wrapper class. If the correct version of Flash Player is available, dojox.form.FileInputFlash is used. If the **degradable** property is true, and Flash Player is not installed or is outdated, dojox.form.FileInputOverlay is used. Either of those two sub-classes could be directly, but it's easiest and best to use dojox.form.FileUploader.
+FileUploader is a wrapper class. If the correct version of Flash Player is available, dojox.form.FileInputFlash is used. If the *degradable* property is true, and Flash Player is not installed or is outdated, dojox.form.FileInputOverlay is used. Either of those two sub-classes could be directly, but it's easiest and best to use dojox.form.FileUploader.
 
 Example
 -------
@@ -73,3 +73,5 @@ Example
     <textarea cols="50" rows="2" id="uploadedFiles"></textarea><br/>
 
 Use *dojo.connect* to connect to the *onChange*, *onProgress* and *onComplete* methods. Use *upload* to initiate the upload after files have been selected. Or set *uploadOnChange* to true to initiate upload after the selection.
+
+This example has *selectMultipleFiles* set to true. Setting it to false restricts the user to one file selection. Multiple files are also supported in the HTML version, although only one file can be selected at a time. But after the files are selected, the will all be uploaded at once.
