@@ -33,10 +33,8 @@ Although the code for the Editor is complex, it is quite simple to implement:
     
   :label: The CSS
 
-    <style type="text/css">
-    @import "../plugins/resources/editorPlugins.css"
-    </style>
-  
+    <link href="../plugins/resources/editorPlugins.css" type="text/css" rel="stylesheet" />
+
   It's just a matter of using the proper *requires* in the JavaScript:
 
   .. cv:: javascript
