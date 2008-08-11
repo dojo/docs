@@ -8,6 +8,7 @@ A ValidatingTextBox by itself '''will not''' prevent invalid entries from submis
 
 <h4>dijit.form.TextBox</h4>
 
+
      dojo.require("dijit.form.TextBox");
      dojo.require("dijit.form.DateTextBox");
        dojo.require("dijit.form.CurrencyTextBox");
