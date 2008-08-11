@@ -33,7 +33,7 @@ Although the code for the Editor is complex, it is quite simple to implement:
 
   .. cv:: javascript
 
-  <script>
+  <script type="text/javascript">
   dojo.require("dojo.parser");
   dojo.require("dijit.Editor");
   dojo.require("dojox.editor.plugins.TablePlugins");
@@ -69,5 +69,6 @@ Although the code for the Editor is complex, it is quite simple to implement:
         </tr>
     </table> 
   </div>
+
 
 That's it.
