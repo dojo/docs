@@ -14,7 +14,7 @@ A series of plugins that give the Editor the ability to create and edit HTML tab
  - Insert Table Row Before
  - Insert Table Row After
  - Insert Table Column Before
- - Insert Table ColumnA fter
+ - Insert Table Column After
  - Delete Table Row
  - Delete Table Column
  - Color Table Cell
@@ -34,7 +34,6 @@ Although the code for the Editor is complex, it is quite simple to implement:
   .. cv:: javascript
 
   <script type="text/javascript">
-  dojo.require("dojo.parser");
   dojo.require("dijit.Editor");
   dojo.require("dojox.editor.plugins.TablePlugins");
   </script>
