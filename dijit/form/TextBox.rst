@@ -21,13 +21,11 @@ A ValidatingTextBox by itself '''will not''' prevent invalid entries from submis
 Examples
 --------
 
-..codeviewer::
-
 .. cv-compound::
 
    The following demonstrates different types of text boxes and their use.
 
-  ..cv:: javascript
+  .. cv:: javascript
   :label: After the customary require statements, the ``after5`` procedure handles some custom validation.
 
      dojo.require("dijit.form.TextBox");
@@ -45,7 +43,7 @@ Examples
 	}
 
   
-  ..cv:: html
+  .. cv:: html
   :label:
 
        <input type="text" name="firstname" value="testing testing"
