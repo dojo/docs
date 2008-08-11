@@ -6,22 +6,33 @@ TextBox provides some neat options, but what if you need none of them?  Can't yo
 
 A ValidatingTextBox by itself '''will not''' prevent invalid entries from submission.  To ensure they're not, simply surround your form with a dijit.form.Form widget
 
+
 <h4>dijit.form.TextBox</h4>
 
+.. cv-compound::
+
+The following demonstrates different types of text boxes and their use.
+
+  ..cv:: javascript
+  :label: After the customary require statements, the ``after5`` procedure handles some custom validation.
 
      dojo.require("dijit.form.TextBox");
      dojo.require("dijit.form.DateTextBox");
-       dojo.require("dijit.form.CurrencyTextBox");
-       dojo.require("dijit.form.NumberTextBox");
-       dojo.require("dijit.form.ValidationTextBox");
-	   function after5(constraints){
-		   var date=new Date();
-		   if(date.getHours() >= 17){
-			  return "\\d{5}";
-		   }else{ 
-		   	  return "\\D+";
-		   }
-		}
+     dojo.require("dijit.form.CurrencyTextBox");
+     dojo.require("dijit.form.NumberTextBox");
+     dojo.require("dijit.form.ValidationTextBox");
+     function after5(constraints){
+	   var date=new Date();
+	   if(date.getHours() >= 17){
+		  return "\\d{5}";
+	   }else{ 
+		  return "\\D+";
+	   }
+	}
+
+  
+  ..cv:: html
+  :label:
 
        <input type="text" name="firstname" value="testing testing"
 		dojoType="dijit.form.TextBox"
