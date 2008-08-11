@@ -35,7 +35,6 @@ Dojo Book Outline
     * `CheckBox, RadioButton, ToggleButton <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/checkbox-radiobutton>`_. maps to: `Checkbox <dijit/form/CheckBox>`_
     * `Dijit ComboBox <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/auto-completer>`_. maps to: `ComboBox <dijit/form/ComboBox>`_
     * `Dijit FilteringSelect <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/select>`_. maps to: `FilteringSelect <dijit/form/FilteringSelect>`_
-    * `Dijit InlineEditBox (0.9) <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/inline-edit-box>`_. maps to: `InlineEditBox <dijit/form/InlineEditBox>`_  [[CraigRiecke recommends dumping this page.]]
     * `Dijit NumberSpinner <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/number-spinner>`_. maps to `NumberSpinner <dijit/form/NumberSpinner>`_ [[CraigRiecke]].
     * `Dijit Slider <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/slider>`_. maps to: `Slider <dijit/form/Slider>`_
     * `Dijit Textarea <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/resizeable-text-area>`_. maps to: `Textares <dijit/form/Textarea>`_
@@ -44,10 +43,8 @@ Dojo Book Outline
   * `Dijit Layout <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout>`_.
 
     * `Dijit AccordionContainer <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout/accordion-container>`_. maps to: `AccordionContainer <dijit/layout/AccordionContainer>`_
-    * `Dijit BorderContainer (1.1) <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout/border-container>`_. maps to: `BorderContainer <dijit/layout/BorderContainer>`_
+    * `Dijit BorderContainer <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout/border-container>`_. maps to: `BorderContainer <dijit/layout/BorderContainer>`_
     * `ContentPane <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout/content-pane>`_.
-    * `LayoutContainer <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout/layout-container>`_.
-    * `SplitContainer <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout/split-container>`_.
     * `StackContainer <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout/stack-container>`_.
     * `Dijit TabContainer <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout/tab-container>`_. maps to: `TabContainer <dijit/layout/TabContainer>`_
 
