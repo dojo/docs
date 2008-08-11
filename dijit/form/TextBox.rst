@@ -98,7 +98,7 @@ Sending and Receiving Server Formats
 Patterns given as constraints in a DateTextBox or NumberBox only apply to the on-screen value, not the value received or sent to the server. Dojo encourages the use of standard, locale-neutral formats when marshalling data as best practice.  In some cases, the receiving application may have special requirements.  A shim on the server can do the necessary translation, but it is also possible to create a custom widget to use a different format.  For example when Oracle database processes dates, by default it insists on dd-MMM-yyyy format in English, as in 01-APR-2006.  If you wish to send it in this format, you can override the serialize method of DateTextBox.  Here's an example:
 
 .. code-block:: javascript
-:linenos:
+   :linenos:
 
        dojo.require("dijit.form.DateTextBox");
        dojo.declare("OracleDateTextBox",[dijit.form.DateTextBox], {
@@ -108,7 +108,7 @@ Patterns given as constraints in a DateTextBox or NumberBox only apply to the on
        });
 
 .. code-block:: javascript
-:linenos:
+   :linenos:
        
        <input dojoType="OracleDateTextBox" name="mydate" value="2006-04-01"/>
 
