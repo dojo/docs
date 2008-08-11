@@ -44,7 +44,6 @@ Examples
 
   
   .. cv:: html
-  :label:
 
        <input type="text" name="firstname" value="testing testing"
 		dojoType="dijit.form.TextBox"
