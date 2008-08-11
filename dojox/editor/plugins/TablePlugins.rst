@@ -29,6 +29,14 @@ Although the code for the Editor is complex, it is quite simple to implement:
 
 .. cv-compound::
 
+  .. cv:: css
+    
+  :label: The CSS
+
+    <style type="text/css">
+    @import "../plugins/resources/editorPlugins.css"
+    </style>
+  
   It's just a matter of using the proper *requires* in the JavaScript:
 
   .. cv:: javascript
