@@ -23,10 +23,7 @@ Examples
 
 .. cv-compound::
 
-   The following demonstrates different types of text boxes and their use.
-
   .. cv:: javascript
-  :label: After the customary require statements, the ``after5`` procedure handles some custom validation.
 
      dojo.require("dijit.form.TextBox");
      dojo.require("dijit.form.DateTextBox");
