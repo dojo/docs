@@ -39,7 +39,6 @@ Examples
 	   }
 	}
 
-  
   .. cv:: html
 
        <input type="text" name="firstname" value="testing testing"
