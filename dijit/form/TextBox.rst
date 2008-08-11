@@ -1,8 +1,19 @@
-= TextBox =
+#format dojo_rst
+
+dijit.form.TextBox Family
+=========================
+
+:Status: Draft
+:Version: 1.0
+:Author: CraigRiecke
+
+TextBox
+-------
 
 TextBox provides some neat options, but what if you need none of them?  Can't you just use a plain HTML &lt;input&gt; tag?  You can, but they will not follow the Dijit theme, and will stick out like a sore thumb amongst other nicely-colored widgets.  So a good rule of thumb: if you use any Dijit form controls, you should make every control a Dijit control.  It's simple to do and makes everything look nice.
 
-= ValidatingTextBox =
+ValidatingTextBox
+-----------------
 
 A ValidatingTextBox by itself '''will not''' prevent invalid entries from submission.  To ensure they're not, simply surround your form with a dijit.form.Form widget
 
@@ -11,7 +22,7 @@ A ValidatingTextBox by itself '''will not''' prevent invalid entries from submis
 
 .. cv-compound::
 
-The following demonstrates different types of text boxes and their use.
+   The following demonstrates different types of text boxes and their use.
 
   ..cv:: javascript
   :label: After the customary require statements, the ``after5`` procedure handles some custom validation.
