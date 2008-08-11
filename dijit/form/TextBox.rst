@@ -18,9 +18,10 @@ ValidatingTextBox
 A ValidatingTextBox by itself '''will not''' prevent invalid entries from submission.  To ensure they're not, simply surround your form with a dijit.form.Form widget
 
 
-<h4>dijit.form.TextBox</h4>
+Examples
+--------
 
-.. cv-compound::
+..cv-compound::
 
    The following demonstrates different types of text boxes and their use.
 
@@ -82,6 +83,7 @@ A ValidatingTextBox by itself '''will not''' prevent invalid entries from submis
 		regExpGen="after5"
 		required="true"
 		invalidMessage="Zip codes after 5, county name before then." />
+
 
 <p>The <CODE>value</CODE> attribute is a floating point number.  
 This means that you can easily build CurrencyTextBoxes for a wide range of currencies without having to set a different value for each currency format.  
