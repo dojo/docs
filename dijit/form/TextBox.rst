@@ -79,22 +79,26 @@ Examples
 		invalidMessage="Zip codes after 5, county name before then." />
 
 
-<p>The <CODE>value</CODE> attribute is a floating point number.  
+The ``value`` attribute is a floating point number.  
 This means that you can easily build CurrencyTextBoxes for a wide range of currencies without having to set a different value for each currency format.  
-<CODE>fractional</CODE> is still set to true, but it is set inside the constraints object instead of on the widget.</p>
+``fractional`` is still set to true, but it is set inside the constraints object instead of on the widget.
 
-<p>ValidationTextBoxes usually use Regular Expression validation, as in the following example:</p>
+ValidationTextBoxes usually use Regular Expression validation, as in the following example:
 
-<p>The regular expression syntax comes directly from JavaScript.  
+The regular expression syntax comes directly from JavaScript.  
 The start and ending qualifiers of the regular expression, ^ and $, are implicit - you do not need 
-to include them.  This code demonstrates a ValidationTextBox that only accepts a 5 digit zip code.</p>
+to include them.  This code demonstrates a ValidationTextBox that only accepts a 5 digit zip code.
 
-<p>ValidationTextBox also supports functions that generate regular expressions.  Having a generating function enables you to write much more dynamic Web applications.  ValidationTextBox passes its constraints object to the generating function.  The following code demonstrates a dynamic ValidationTextBox that only accepts a 5 digit zip code after 5:00PM, and only accepts a county name before then.</p>
+ValidationTextBox also supports functions that generate regular expressions.  Having a generating function enables you to write much more dynamic Web applications.  ValidationTextBox passes its constraints object to the generating function.  The following code demonstrates a dynamic ValidationTextBox that only accepts a 5 digit zip code after 5:00PM, and only accepts a county name before then.
 
 
-<h3>Sending and Receiving Server Formats</h3>
+Sending and Receiving Server Formats
+------------------------------------
 
-<p>Patterns given as constraints in a DateTextBox or NumberBox only apply to the on-screen value, not the value received or sent to the server. Dojo encourages the use of standard, locale-neutral formats when marshalling data as best practice.  In some cases, the receiving application may have special requirements.  A shim on the server can do the necessary translation, but it is also possible to create a custom widget to use a different format.  For example when Oracle database processes dates, by default it insists on dd-MMM-yyyy format in English, as in 01-APR-2006.  If you wish to send it in this format, you can override the serialize method of DateTextBox.  Here's an example:</p>
+Patterns given as constraints in a DateTextBox or NumberBox only apply to the on-screen value, not the value received or sent to the server. Dojo encourages the use of standard, locale-neutral formats when marshalling data as best practice.  In some cases, the receiving application may have special requirements.  A shim on the server can do the necessary translation, but it is also possible to create a custom widget to use a different format.  For example when Oracle database processes dates, by default it insists on dd-MMM-yyyy format in English, as in 01-APR-2006.  If you wish to send it in this format, you can override the serialize method of DateTextBox.  Here's an example:
+
+.. code-block:: javascript
+:linenos:
 
        dojo.require("dijit.form.DateTextBox");
        dojo.declare("OracleDateTextBox",[dijit.form.DateTextBox], {
@@ -103,13 +107,18 @@ to include them.  This code demonstrates a ValidationTextBox that only accepts a
            }
        });
 
+.. code-block:: javascript
+:linenos:
+       
        <input dojoType="OracleDateTextBox" name="mydate" value="2006-04-01"/>
 
-<p>You can also pull the OracleDateTextBox widget into a module and dojo.require it in your pages.  Similar customization is possible with numbers, although the default Javascript number representation tends to be less of an issue.</p>
+You can also pull the OracleDateTextBox widget into a module and dojo.require it in your pages.  Similar customization is possible with numbers, although the default Javascript number representation tends to be less of an issue.
 
-<p>Since Dojo is open source and the widgets are fully customizable, if you really want to use a custom protocol to communicate to and from a server, you can simply override the necessary methods.  Here's an example
-of a DateTextBox subclass that uses a custom date format.</p>
+Since Dojo is open source and the widgets are fully customizable, if you really want to use a custom protocol to communicate to and from a server, you can simply override the necessary methods.  Here's an example
+of a DateTextBox subclass that uses a custom date format.
 
+.. code-block:: javascript
+:linenos:
         dojo.require("dijit.form.DateTextBox");
         // subclass DateTextBox to allow the initial value to be specified
         // as MM/dd/y instead of yyyy-MM-dd in the markup
@@ -137,20 +146,25 @@ of a DateTextBox subclass that uses a custom date format.</p>
                 dojo.parser.parse();
         });
 
+.. code-block:: html
+:linenos:
+	
         <input id="markup" dojoType="altDateTextBox" value="12/31/2007">
         <button onclick="alert('value serialized to ' + dijit.byId('markup').toString());return false">Serialize</button>
 
-<h4>Screen Readers</h4>
-<p>
-If an invalid value is entered into a validating Text Box the "state" of the Text box changes, i.e. its background color changes.   To accomodate users who are blind, the Text Box's <a href="/node/1577">ARIA state</a> is changed to "invalid" so a screen reader can notify the screen reader user.  In addition to the "state" change, a pop-up appears.  When the pop-up appears screen readers should read the contents of the pop-up.  The pop-up text comes from the "invalidMessage" parameter.
-</p>
+Screen Readers
+--------------
 
-<h4>Known Issues</h4>
-<p>
+If an invalid value is entered into a validating Text Box the "state" of the Text box changes, i.e. its background color changes.   To accomodate users who are blind, the Text Box's <a href="/node/1577">ARIA state</a> is changed to "invalid" so a screen reader can notify the screen reader user.  In addition to the "state" change, a pop-up appears.  When the pop-up appears screen readers should read the contents of the pop-up.  The pop-up text comes from the "invalidMessage" parameter.
+
+
+Known Issues
+------------
+
 Sometimes the popup message supplied by invalidMessage attribute may be
 unnecessary.  For example, omitting a required field already displays an icon
 when the cursor leaves the field.  In these cases
 you can omit the "invalidMessage" parameter, but keep in mind that good labels and instructions
 are still necessary for accessibility, i.e. if the invalid popup will not be displayed then there must be clear instructional text indicating the field is required.
-</p>
-<p>UPDATED for 1.0: Window-Eyes 6.1 speaks "read only" for fields that have been marked with the ARIA property invalid=true even though the field is still editable. </p>
+
+UPDATED for 1.0: Window-Eyes 6.1 speaks "read only" for fields that have been marked with the ARIA property invalid=true even though the field is still editable. 
