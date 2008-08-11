@@ -51,7 +51,7 @@ Although the code for the Editor is complex, it is quite simple to implement:
   .. cv:: html
   
     <div class="tundra">
-    <div dojoType="dijit.Editor" plugins="[
+    <div dojoType="dijit.Editor" style="height:100px" plugins="[
         'bold','italic',
         {name: 'dojox.editor.plugins.TablePlugins', command: 'insertTable'},
         {name: 'dojox.editor.plugins.TablePlugins', command: 'modifyTable'},
