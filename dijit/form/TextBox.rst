@@ -61,18 +61,17 @@ Examples
 		constraints="{min:-20000,max:20000,places:0}"
 		promptMessage= "Enter a value between -20000 and +20000"
 		required= "true" 
-		invalidMessage= "Invalid elevation."
-		/>
+		invalidMessage= "Invalid elevation." />
 	<input type="text" name="phone" class="medium" value="someTestString"
 		dojoType="dijit.form.ValidationTextBox"
 		regExp="[\w]+"
 		required="true"
-		invalidMessage="Invalid Non-Space Text.">
+		invalidMessage="Invalid Non-Space Text." />
 	<input type="text" name="zip" value="00000"
 		dojoType="dijit.form.ValidationTextBox"
 		regExp="\d{5}"
 		required="true"
-		invalidMessage="Invalid zip code.">
+		invalidMessage="Invalid zip code." />
 	<input type="text" name="zip" value="00000"
 		dojoType="dijit.form.ValidationTextBox"
 		regExpGen="after5"
