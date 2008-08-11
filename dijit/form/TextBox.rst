@@ -21,7 +21,9 @@ A ValidatingTextBox by itself '''will not''' prevent invalid entries from submis
 Examples
 --------
 
-..cv-compound::
+..codeviewer::
+
+.. cv-compound::
 
    The following demonstrates different types of text boxes and their use.
 
