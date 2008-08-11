@@ -29,10 +29,10 @@ Although the code for the Editor is complex, it is quite simple to implement:
 
 .. cv-compound::
 
-  .. cv:: css
-    
-  :label: The CSS
+  The CSS
 
+  .. cv:: css
+  
     <link href="../plugins/resources/editorPlugins.css" type="text/css" rel="stylesheet" />
 
   It's just a matter of using the proper *requires* in the JavaScript:
