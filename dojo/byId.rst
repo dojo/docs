@@ -46,6 +46,17 @@ If you pass dojo.byId a string, and no domNode is found to match, ''undefined'' 
     console.log("no node with id='fooBar' found!");
   }
 
+Most (if not all) functions in Dojo accept either a string or DomNode as a parameter. If passed a string, the function typically calls dojo.byId(), ensuring a domNode is always the object. For instance:
+
+.. code-block :: javascript
+  :linenos:
+
+  dojo.style(dojo.byId("foo"), "opacity", 0.5);
+  // is identical to:
+  dojo.style("foo", "opacity", 0.5);
+
+The latter is preferred, as the call to dojo.byId is made in both cases. The passing of a string ID is consistent throughout the Dojo Toolkit.
+
 JavaScript has a fun convention for conditionals inline. Imagine wanting a domNode reference, and if not present, default to some other node:
 
 .. code-block :: javascript
