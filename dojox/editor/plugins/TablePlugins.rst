@@ -34,7 +34,7 @@ Although the code for the Editor is complex, it is quite simple to implement:
   .. cv:: css
   
     <style type="text/css">
-        @import "/moin_static163/js/dojo/trunk/dojox//plugins/resources/editorPlugins.css";
+        @import "http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dojox//plugins/resources/editorPlugins.css";
     </style>
 
   It's just a matter of using the proper *requires* in the JavaScript:
