@@ -42,7 +42,7 @@ Although the code for the Editor is complex, it is quite simple to implement:
 
   .. cv:: html
   
-  <div dojoType="dijit.Editor" plugins="[
+    <div dojoType="dijit.Editor" plugins="[
         'bold','italic',
         {name: 'dojox.editor.plugins.TablePlugins', command: 'insertTable'},
         {name: 'dojox.editor.plugins.TablePlugins', command: 'modifyTable'},
@@ -54,9 +54,9 @@ Although the code for the Editor is complex, it is quite simple to implement:
         {name: 'dojox.editor.plugins.TablePlugins', command: 'deleteTableColumn'},
         {name: 'dojox.editor.plugins.TablePlugins', command: 'colorTableCell'},
         {name: 'dojox.editor.plugins.TablePlugins', command: 'tableContextMenu'}
-    ]">
-    Dojo Rocks with a fox in socks. Red socks.
-    <table width="200" border="2" align="center" 
+      ]">
+      Dojo Rocks with a fox in socks. Red socks.
+      <table width="200" border="2" align="center" 
         cellpadding="2" cellspacing="2" bordercolor="#00FFFF" bgcolor="#FF0000" id="myTable">
         <tr>
             <td>&nbsp;</td>
@@ -66,8 +66,8 @@ Although the code for the Editor is complex, it is quite simple to implement:
             <td>&nbsp;</td>
             <td bgcolor="#00FFFF">&nbsp;</td>
         </tr>
-    </table> 
-  </div>
+      </table> 
+    </div>
 
 
 That's it.
