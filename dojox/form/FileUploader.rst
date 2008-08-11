@@ -3,8 +3,9 @@
 dojox.form.FileUploader
 =========================
 
-:Status: Contributed, Complete
-:Version: 1.0
+:Status: Draft | Contributed
+:Version: 1.2
+:Author: Mike Wilcox
 
 Basic Description
 -----------------
