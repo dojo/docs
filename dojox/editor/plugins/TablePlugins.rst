@@ -33,10 +33,10 @@ Although the code for the Editor is complex, it is quite simple to implement:
 
   .. cv:: javascript
   
-  <script type="text/javascript">
-  dojo.require("dijit.Editor");
-  dojo.require("dojox.editor.plugins.TablePlugins");
-  </script>
+    <script type="text/javascript">
+    dojo.require("dijit.Editor");
+    dojo.require("dojox.editor.plugins.TablePlugins");
+    </script>
 
   Slightly more difficult is the HTML. The plugins are assigned within an array. Be sure to get commas correct or you will get a parse error:
 
