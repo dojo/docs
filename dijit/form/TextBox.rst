@@ -118,7 +118,7 @@ Since Dojo is open source and the widgets are fully customizable, if you really 
 of a DateTextBox subclass that uses a custom date format.
 
 .. code-block:: javascript
-:linenos:
+   :linenos:
         dojo.require("dijit.form.DateTextBox");
         // subclass DateTextBox to allow the initial value to be specified
         // as MM/dd/y instead of yyyy-MM-dd in the markup
@@ -147,7 +147,7 @@ of a DateTextBox subclass that uses a custom date format.
         });
 
 .. code-block:: html
-:linenos:
+   :linenos:
 	
         <input id="markup" dojoType="altDateTextBox" value="12/31/2007">
         <button onclick="alert('value serialized to ' + dijit.byId('markup').toString());return false">Serialize</button>
