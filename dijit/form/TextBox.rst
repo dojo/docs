@@ -119,6 +119,7 @@ of a DateTextBox subclass that uses a custom date format.
 
 .. code-block:: javascript
    :linenos:
+
         dojo.require("dijit.form.DateTextBox");
         // subclass DateTextBox to allow the initial value to be specified
         // as MM/dd/y instead of yyyy-MM-dd in the markup
