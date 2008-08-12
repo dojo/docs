@@ -13,7 +13,7 @@ Working with the URL query
 .. codeviewer::
   
   <style type="text/css">
-    @import "/moin_static163/js/dojox/widget/DocTester/DocTester.css"; 
+    @import "/moin_static163/js/dojo/dojox/widget/DocTester/DocTester.css"; 
   </style>
   <script type="text/javascript">dojo.require("dojox.widget.DocTester");</script>
   <div dojoType="dojox.widget.DocTester">
