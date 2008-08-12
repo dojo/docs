@@ -58,3 +58,46 @@ Here is a very simple example of a stacked area chart.
   .. cv:: html
 
     <div id="chartOne" style="width: 400px; height: 240px;"></div>
+
+Here is a pie chart, with slice information shown onmouseover and a legend:
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+    dojo.require("dojox.charting.Chart2D");
+    dojo.require("dojox.charting.plot2d.Pie");
+    dojo.require("dojox.charting.action2d.Highlight");
+    dojo.require("dojox.charting.action2d.MoveSlice");
+    dojo.require("dojox.charting.action2d.Tooltip");
+    dojo.require("dojox.charting.themes.MiamiNice");
+
+    dojo.addOnLoad(function(){
+      var dc = dojox.charting;
+      var chartTwo = new dc.Chart2D("chartTwo");
+      chartTwo.setTheme(dc.themes.MiamiNice)
+         .addPlot("default", {
+            type: "Pie", 
+            font: "normal normal 11pt Tahoma", 
+            fontColor: "black", 
+            labelOffset: -30,
+            radius: 80
+      }).addSeries("Series A", [
+          {y: 4, text: "Red",   color: "red",   stroke: "black", tooltip: "Red is 50%"},
+          {y: 2, text: "Green", color: "green", stroke: "black", tooltip: "Green is 25%"},
+          {y: 1, text: "Blue",  color: "blue",  stroke: "black", tooltip: "I am feeling Blue!"},
+          {y: 1, text: "Other", color: "white", stroke: "black", tooltip: "Mighty <strong>strong</strong><br>With two lines!"}
+      ]);
+      var anim_a = new dc.action2d.MoveSlice(chartTwo, "default");
+      var anim_b = new dc.action2d.Highlight(chartTwo, "default");
+      var anim_c = new dc.action2d.Tooltip(chartTwo, "default");
+      chartTwo.render();
+      var legendTwo = new dojox.charting.widget.Legend({chart: chartTwo}, "legendTwo");
+    });
+    </script>
+
+  .. cv:: html
+
+    <div id="chartTwo" style="width: 300px; height: 300px;"></div>
+    <div id="legendTwo"></div>
