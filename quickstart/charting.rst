@@ -72,6 +72,7 @@ Here is a pie chart, with slice information shown onmouseover and a legend:
     dojo.require("dojox.charting.action2d.MoveSlice");
     dojo.require("dojox.charting.action2d.Tooltip");
     dojo.require("dojox.charting.themes.MiamiNice");
+    dojo.require("dojox.charting.widget.Legend");
 
     dojo.addOnLoad(function(){
       var dc = dojox.charting;
@@ -84,10 +85,10 @@ Here is a pie chart, with slice information shown onmouseover and a legend:
             labelOffset: -30,
             radius: 80
       }).addSeries("Series A", [
-          {y: 4, text: "Red",   color: "red",   stroke: "black", tooltip: "Red is 50%"},
-          {y: 2, text: "Green", color: "green", stroke: "black", tooltip: "Green is 25%"},
-          {y: 1, text: "Blue",  color: "blue",  stroke: "black", tooltip: "I am feeling Blue!"},
-          {y: 1, text: "Other", color: "white", stroke: "black", tooltip: "Mighty <strong>strong</strong><br>With two lines!"}
+          {y: 4, text: "Red",   stroke: "black", tooltip: "Red is 50%"},
+          {y: 2, text: "Green", stroke: "black", tooltip: "Green is 25%"},
+          {y: 1, text: "Blue",  stroke: "black", tooltip: "I am feeling Blue!"},
+          {y: 1, text: "Other", stroke: "black", tooltip: "Mighty <strong>strong</strong><br>With two lines!"}
       ]);
       var anim_a = new dc.action2d.MoveSlice(chartTwo, "default");
       var anim_b = new dc.action2d.Highlight(chartTwo, "default");
