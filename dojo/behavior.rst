@@ -5,7 +5,7 @@ dojo.behavior
 
 ``TODOC``
 
-A very simple, lightweight mechanism for applying code to existing documents, based around `dojo.query <wiki:dojo/query>`_ for node selection, and a simple two-command API: dojo.behavior.add() and dojo.behavior.apply();
+A very simple, lightweight mechanism for applying code to existing documents, based around `dojo.query <dojo/query>`_ for node selection, and a simple two-command API: dojo.behavior.add() and dojo.behavior.apply();
 
 To use, simply require in the dojo.behavior module, after ``dojo.js`` is loaded:
 
@@ -61,7 +61,7 @@ The ``found:`` function is applied to all found nodes. The ``onclick:`` identifi
 Behaviors with topics:
 ----------------------
 
-Using Dojo's `native topic system <wiki:quickstart/topics>`_, you can pass a named channel, and any node found during the apply() period will publish on that channel:
+Using Dojo's `native topic system <quickstart/topics>`_, you can pass a named channel, and any node found during the apply() period will publish on that channel:
 
 .. code-block :: javascript
 
