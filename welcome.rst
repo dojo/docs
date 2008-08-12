@@ -107,6 +107,8 @@ Dojox reference
 
   * `dojox.form.BusyButton <dojox/form/BusyButton>`_
 
+* `dojox.image <dojox/image>`_
+
 ----
 
 Documentation guidelines
