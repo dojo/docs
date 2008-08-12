@@ -18,11 +18,15 @@ Examples
     <script type="text/javascript">
     dojo.require("dijit.layout.StackContainer");
     dojo.require("dijit.layout.ContentPane");
+    dojo.require("dijit.form.Button");
     </script>
 
   .. cv:: html
+
+    <button id="previous" onClick="dijit.byId('stackContainer').back()"><</button>
+    <button id="next" onClick="dijit.byId('stackContainer').forward()">></button>
   
-    <div dojoType="dijit.layout.StackContainer">
+    <div dojoType="dijit.layout.StackContainer" id="stackContainer">
       <div dojoType="dijit.layout.ContentPane" title="Questions">
       Please answer following questions
       </div>
