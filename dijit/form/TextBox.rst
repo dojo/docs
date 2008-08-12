@@ -25,6 +25,7 @@ Examples
 
   .. cv:: javascript
 
+     <script type="text/javascript">
      dojo.require("dijit.form.TextBox");
      dojo.require("dijit.form.DateTextBox");
      dojo.require("dijit.form.CurrencyTextBox");
@@ -38,6 +39,7 @@ Examples
 		  return "\\D+";
 	   }
 	}
+     </script>
 
   .. cv:: html
 
