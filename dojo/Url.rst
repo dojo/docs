@@ -13,7 +13,7 @@ Working with the URL query
 .. codeviewer::
 
   <script type="text/javascript">dojo.require("dojox.widget.DocTester");</script>
-  <div dojoType="dojo.widget.DocTester">
+  <div dojoType="dojox.widget.DocTester">
     >>> (new dojo._Url("http://localhost/?a=1&b=2")).query
     "a=1&b=2"
   </div>
