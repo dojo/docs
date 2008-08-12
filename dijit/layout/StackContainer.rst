@@ -34,3 +34,12 @@ Examples
       Here is what you should have answered :P
       </div>
     </div>
+
+  .. cv:: css
+
+    <style type="text/css">
+      #stackContainer {
+          border: 1px solid #ccc;
+          margin-top: 10px;
+      }
+    </style>
