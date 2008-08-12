@@ -4,7 +4,23 @@
 Dojo Charting
 =============
 
-Dojo comes with an amazing charting library, in the form of dojox.charting.  A large number of features are supported, with new ones being added constantly.
+Dojo comes with an amazing charting library, in the form of dojox.charting.  A large number of features are supported, with new ones being added constantly.  At the time of writing, dojox.charting supports the following chart types:
+
+* Line charts
+* Bar charts
+* Column charts
+* Area charts
+* Scatter plots
+* Bubble plots
+* Pie charts
+* Stacked lines
+* Stacked bars
+* Stacked columns
+* Stacked areas
+
+...with more on the way.
+
+The charting library is also very flexible in terms of combining chart types, as well as multiple axes. You can set up custom labels for a specific axis, you can set up custom markers for points on a number of different types of charts, and you can even create your own themes for a chart!
 
 Examples
 --------
