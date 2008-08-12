@@ -17,8 +17,10 @@ Working with the URL query
   </style>
   <script type="text/javascript">dojo.require("dojox.widget.DocTester");</script>
   <div dojoType="dojox.widget.DocTester">
-    >>> (new dojo._Url("http://localhost/?a=1&b=2")).query
-    "a=1&b=2"
-    >>> 1+1
-    3
+    >>> var url = new dojo._Url("http://localhost/?a=1&b=2")
+    >>> query = dojo.queryToObject(url.query)
+    >>> query.a = 3
+    >>> url.query = dojo.objectToQuery(query);
+    >>> new dojo._Url(url).toString()
+    "http://localhost/?a=3&b=2"
   </div>
