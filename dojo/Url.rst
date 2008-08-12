@@ -10,7 +10,7 @@ dojo._Url
 Working with the URL query
 --------------------------
 
-.. code-block :: javascript
+.. code-block :: 
   :linenos:
   >>> (new dojo._Url("http://localhost/?a=1&b=2")).query
   "a=1&b=2"
