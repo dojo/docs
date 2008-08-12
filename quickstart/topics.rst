@@ -3,7 +3,7 @@
 Dojo Topic System
 =================
 
-Also known as Publish and Subscribe, the topic API in Dojo is very simple, though holds the same power and syntax as the event system with regard to scoping, and other magic. Publish and Subscribe are provided by Base Dojo, so no additional `dojo.require <wiki:dojo/require>`_ call is needed beyond loading `dojo.js`.
+Also known as Publish and Subscribe, the topic API in Dojo is very simple, though holds the same power and syntax as the event system with regard to scoping, and other magic. Publish and Subscribe are provided by Base Dojo, so no additional `dojo.require <dojo/require>`_ call is needed beyond loading `dojo.js`.
 
 Topics are an easy way for ambiguous objects, widgets, or code to communicate with other widgets and objects without prior knowledge of each other.
 
@@ -33,4 +33,4 @@ The named topics can be whatever syntax you choose, it is just a string:
   // publish can be an Array or Object
   dojo.publish("my-custom-topic", ["a","b","c","d"]);
 
-Topics are used in other places in the Dojo Toolkit. The `TabContainer <wiki:dijit/layout/TabContainer>`_ uses pub/sub to communicate between buttons and panes internally, and allows you to subscribe for notification, and `dojox.cometd <wiki:dojox/cometd>`_ uses topics to communicate across clients, for instance.
+Topics are used in other places in the Dojo Toolkit. The `TabContainer <dijit/layout/TabContainer>`_ uses pub/sub to communicate between buttons and panes internally, and allows you to subscribe for notification, and `dojox.cometd <dojox/cometd>`_ uses topics to communicate across clients, for instance.
