@@ -44,7 +44,7 @@ Dojo Book Outline
 
     * `Dijit AccordionContainer <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout/accordion-container>`_. maps to: `AccordionContainer <dijit/layout/AccordionContainer>`_
     * `Dijit BorderContainer <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout/border-container>`_. maps to: `BorderContainer <dijit/layout/BorderContainer>`_
-    * `ContentPane <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout/content-pane>`_.
+    * `Dijit ContentPane <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout/content-pane>`_. maps to: `ContentPane <dijit/layout/ContentPane>`_
     * `StackContainer <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout/stack-container>`_.
     * `Dijit TabContainer <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout/tab-container>`_. maps to: `TabContainer <dijit/layout/TabContainer>`_
 
