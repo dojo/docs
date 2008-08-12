@@ -41,6 +41,9 @@ Examples
       #stackContainer {
           border: 1px solid #ccc;
           margin-top: 10px;
+      }
+      
+      #stackContainer div {
           padding: 5px;
       }
     </style>
