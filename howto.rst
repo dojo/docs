@@ -88,10 +88,10 @@ You can add a real example to the documentation by using the ".. codeviewer::" d
 
     .. codeviewer::
 
-    <script type="text/javascript">dojo.require("dijit.form.Button");</script>
-    <div class="nihilo">
-       <div dojoType="dijit.form.Button">whatever</div>
-    </div>
+      <script type="text/javascript">dojo.require("dijit.form.Button");</script>
+      <div class="nihilo">
+         <div dojoType="dijit.form.Button">whatever</div>
+      </div>
 
 This will result in the following 
 
