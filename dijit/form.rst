@@ -26,3 +26,12 @@ The following widgets can be used in a FORM tag, in a dijit.form.Form widget, or
 * `dijit.form.TextBox <form/TextBox>`_
 * `dijit.form.TimeTextBox <form/TimeTextBox>`_
 * `dijit.form.ValidationTextbox <form/ValidationTextbox>`_
+
+Mapped Form Controls
+--------------------
+
+The following form controls are variations on <input type="text">.  
+
+LIST
+
+.. image:: MappedTextBox.gif
