@@ -11,6 +11,10 @@ A container that has multiple children, but shows only one child at a time (like
 Examples
 --------
 
+TODOC Programmatic examples
+
+Here you will see a declaratively created StackContainer
+
 .. cv-compound::
   
   .. cv:: javascript
