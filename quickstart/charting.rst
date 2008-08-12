@@ -22,6 +22,13 @@ Dojo comes with an amazing charting library, in the form of dojox.charting.  A l
 
 The charting library is also very flexible in terms of combining chart types, as well as multiple axes. You can set up custom labels for a specific axis, you can set up custom markers for points on a number of different types of charts, and you can even create your own themes for a chart!
 
+Updating charts and events
+--------------------------
+
+Charting was designed with periodic updating in mind.  Say you have an application that remotely monitors something: the stock market, a database server, etc.  With dojox.charting, you can set up a chart and then simply update the series on the charts--resulting in a fast, fluid monitoring experience.  In fact, charting has been used for such things as remote CPU monitoring.
+
+Coming with the Dojo 1.2 release, Charting will also support customized events, such as tooltip attachment and mouseover actions!
+
 Examples
 --------
 
