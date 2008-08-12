@@ -19,4 +19,6 @@ Working with the URL query
   <div dojoType="dojox.widget.DocTester">
     >>> (new dojo._Url("http://localhost/?a=1&b=2")).query
     "a=1&b=2"
+    >>> 1+1
+    3
   </div>
