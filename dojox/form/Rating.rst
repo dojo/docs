@@ -51,6 +51,7 @@ Customized stars
       background-image:url(/moin_static163/js/dojo/trunk/release/dojo/dijit/themes/tundra/images/dndCopy.png);
       width:16px;
       height:16px;
+      margin:0.5em;
     }
 		
     #myRating .dojoxRatingStarChecked {
