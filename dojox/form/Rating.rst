@@ -56,7 +56,7 @@ The following shows what events you can connect to and how to do this using inli
     dojo.require("dojox.form.Rating");
   </script>
   <p id="inlineEvents">
-    <span id="rating1" dojoType="dojox.form.Rating" numStars="10">
+    <span dojoType="dojox.form.Rating" numStars="10">
       <script type="dojo/event" event="onChange">
         dojo.query('#inlineEvents .value')[0].innerHTML = this.value;
       </script>
@@ -68,6 +68,32 @@ The following shows what events you can connect to and how to do this using inli
     The value is: <b><span class="value">0</span></b><br />
     The mouse is over: <b><span class="hoverValue">0</span></b>
   </p>
+
+The next example shows how you can do the same as above, just using the default connect methods, which is the most common way and probably fits best when working in big projects and when you need a separation of markup and JavaScript source code.
+
+.. codeviewer::
+  
+  <style type="text/css">
+    @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/form/resources/Rating.css"; 
+  </style>
+  <script type="text/javascript">
+    dojo.require("dojox.form.Rating");
+  </script>
+  <p id="defaultConnect">
+    <span id="connectRating" dojoType="dojox.form.Rating" numStars="10"></span>
+    <br /><br />
+    The value is: <b><span class="value">0</span></b><br />
+    The mouse is over: <b><span class="hoverValue">0</span></b>
+  </p>
+  <script type="text/javascript">
+    var widget = dijit.byId("connectRating");
+    dojo.connect(widget, "onChange", function() {
+      dojo.query('#inlineEvents .value')[0].innerHTML = widget.value;
+    });
+    dojo.connect(widget, "onMouseOver", function(evt, value) {
+        dojo.query('#inlineEvents .hoverValue')[0].innerHTML = value;
+    });
+  </script>
 
 
 Inside a dojo form
