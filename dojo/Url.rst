@@ -6,6 +6,8 @@ dojo._Url
 :Status: Contributed, Draft
 :Version: 1.2
 
+Note: Actually I would like to close http://bugs.dojotoolkit.org/ticket/6175 and http://bugs.dojotoolkit.org/ticket/5548 before writing this chapter. The result should be a dojo.Url class that can parse and build URLs. imho (Wolfram)
+
 Basics
 -------
 
