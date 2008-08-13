@@ -6,8 +6,6 @@ dojo._Url
 :Status: Contributed, Draft
 :Version: 1.2
 
-The dojo.Url class can be used for parsing and building URLs.
-
 Basics
 -------
 
