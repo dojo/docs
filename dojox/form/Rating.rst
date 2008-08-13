@@ -78,6 +78,15 @@ The next example shows how you can do the same as above, just using the default 
   </style>
   <script type="text/javascript">
     dojo.require("dojox.form.Rating");
+    dojo.addOnLoad(function() {
+      var widget = dijit.byId("connectRating");
+      dojo.connect(widget, "onChange", function() {
+        dojo.query('#defaultConnect .value')[0].innerHTML = widget.value;
+      });
+      dojo.connect(widget, "onMouseOver", function(evt, value) {
+          dojo.query('#defaultConnect .hoverValue')[0].innerHTML = value;
+      });
+    });
   </script>
   <p id="defaultConnect">
     <span id="connectRating" dojoType="dojox.form.Rating" numStars="10"></span>
@@ -85,15 +94,6 @@ The next example shows how you can do the same as above, just using the default 
     The value is: <b><span class="value">0</span></b><br />
     The mouse is over: <b><span class="hoverValue">0</span></b>
   </p>
-  <script type="text/javascript">
-    var widget = dijit.byId("connectRating");
-    dojo.connect(widget, "onChange", function() {
-      dojo.query('#inlineEvents .value')[0].innerHTML = widget.value;
-    });
-    dojo.connect(widget, "onMouseOver", function(evt, value) {
-        dojo.query('#inlineEvents .hoverValue')[0].innerHTML = value;
-    });
-  </script>
 
 
 Inside a dojo form
