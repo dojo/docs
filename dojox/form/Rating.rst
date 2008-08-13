@@ -12,7 +12,8 @@ This is a form widget, which means that you can simply embed it inside a dojo fo
 Default widget
 ---------------
 The following example shows how the default widget works, just use the attribute ``dojoType="dojox.form.Rating"`` on some standard node and you will get the following result as shown below. Make sure to import the CSS file too, otherwise it won't know how to style and what images to use.
-You can reset the number of stars to 0 by clicking on the currently selected star. For example, if two stars are currently selected click on the second star again and no star will be selected.
+
+You can **reset the number of stars to 0** by clicking on the currently selected star. For example, if two stars are currently selected click on the second star again and no star will be selected.
 
 .. codeviewer::
   
