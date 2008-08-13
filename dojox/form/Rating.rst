@@ -11,7 +11,7 @@ This is a form widget, which means that you can simply embed it inside a dojo fo
 
 Default widget
 ---------------
-
+The following example shows how the default widget works, just use the attribute ``dojoType="dojox.form.Rating"`` on some standard node and you will get the following result as shown below. Make sure to import the CSS file too, otherwise it won't know how to style and what images to use.
 .. codeviewer::
   
   <style type="text/css">
@@ -21,17 +21,12 @@ Default widget
     dojo.require("dojox.form.Rating");
   </script>
 
-  <p>
-    <div dojoType="dojox.form.Rating"></div>
-  </p>
-  <p>
-    As you can see in this example, you can also embed the <div dojoType="dojox.form.Rating"></div> into a text as if it was an inline element. This should not interfer with the layout and should be floating inside the text as if it was just a piece of text.
-  </p>
+  <div dojoType="dojox.form.Rating"></div>
 
 
 Standard options
 ----------------
-
+This example shows how to use additional attribute to parametrize the widget. The attribute ``numStars="10"`` tells the widget to show ten stars, ``value="4"`` sets the initially selected number of stars. 
 .. codeviewer::
   
   <style type="text/css">
