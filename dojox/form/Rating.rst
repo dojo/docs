@@ -51,19 +51,13 @@ Customized stars
       background-image:url(/moin_static163/js/dojo/trunk/release/dojo/dijit/themes/tundra/images/dndCopy.png);
       width:16px;
       height:16px;
-      opactiy:0.5;
-      filter:alpha(opacity=50);
     }
 		
     #myRating .dojoxRatingStarChecked {
       background-image:url(/moin_static163/js/dojo/trunk/release/dojo/dijit/themes/tundra/images/dndNoMove.png);
-      opactiy:1;
-      filter:alpha(opacity=100);
     }
     #myRating .dojoxRatingStarHover {
-      background-image:url(/moin_static163/js/dojo/trunk/release/dojo/dijit/themes/tundra/images/dndMove.png);
-      opactiy:1;
-      filter:alpha(opacity=100);
+      background-image:url(/moin_static163/js/dojo/trunk/release/dojo/dijit/themes/tundra/images/dndNoMove.png);
     }
 
   </style>
