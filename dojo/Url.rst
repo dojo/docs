@@ -17,10 +17,18 @@ Working with the URL query
   </style>
   <script type="text/javascript">dojo.require("dojox.widget.DocTester");</script>
   <div dojoType="dojox.widget.DocTester">
-    >>> var url = new dojo._Url("http://localhost/?a=1&b=2")
-    >>> query = dojo.queryToObject(url.query)
-    >>> query.a = 3
-    >>> url.query = dojo.objectToQuery(query);
-    >>> new dojo._Url(url).toString()
-    "http://localhost/?a=3&b=2"
+    >>> (new dojo._Url("http://localhost:8080/home/")).scheme
+    "http"
+    >>> (new dojo._Url("http://localhost:8080/home/")).host
+    "localhost"
+    >>> (new dojo._Url("http://localhost:8080/home/")).port
+    "8080"
+    >>> (new dojo._Url("http://localhost:8080/home/")).path
+    "/home/"
+    >>> (new dojo._Url("http://localhost:8080/home/")).authority
+    "localhost:8080"
+    >>> (new dojo._Url("http://username:pwd@localhost:8080/home/")).user
+    "username"
+    >>> (new dojo._Url("http://username:pwd@localhost:8080/home/")).password
+    "pwd"
   </div>
