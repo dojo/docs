@@ -42,8 +42,8 @@ This example shows how to use additional attribute to parametrize the widget. Th
 
   <div dojoType="dojox.form.Rating" numStars="10" value="4"></div>
 
-Events
-------
+Events via inline script
+------------------------
 
 The following shows what events you can connect to and how to do this using inline script blocks.
 
@@ -68,6 +68,9 @@ The following shows what events you can connect to and how to do this using inli
     The value is: <b><span class="value">0</span></b><br />
     The mouse is over: <b><span class="hoverValue">0</span></b>
   </p>
+
+Events via dojo.connect()
+-------------------------
 
 The next example shows how you can do the same as above, just using the default connect methods, which is the most common way and probably fits best when working in big projects and when you need a separation of markup and JavaScript source code.
 
