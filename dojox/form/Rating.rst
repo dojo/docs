@@ -37,3 +37,32 @@ Standard options
   </script>
 
   <div dojoType="dojox.form.Rating" numStars="10" value="4"></div>
+
+
+
+Standard options
+----------------
+
+.. codeviewer::
+  
+  <style type="text/css">
+    @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/form/resources/Rating.css";
+    #myRating .dojoxRatingStar{
+      background-image:url(/moin_static163/js/dojo/trunk/release/dojo/dijit/themes/tundra/images/dndCopy.png);
+    }
+		
+    #myRating .dojoxRatingStarChecked {
+      background-image:url(/moin_static163/js/dojo/trunk/release/dojo/dijit/themes/tundra/images/dndMove.png);
+    }
+    #myRating .dojoxRatingStarHover {
+      background-image:url(/moin_static163/js/dojo/trunk/release/dojo/dijit/themes/tundra/images/dndMove.png);
+      opactiy:0.5;
+      filter:alpha(opacity=50);
+    }
+
+  </style>
+  <script type="text/javascript">
+    dojo.require("dojox.form.Rating");
+  </script>
+
+  <div id="myRating" dojoType="dojox.form.Rating" numStars="6" value="2"></div>
