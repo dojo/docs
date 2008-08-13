@@ -21,7 +21,12 @@ Default widget
     dojo.require("dojox.form.Rating");
   </script>
 
-  <div dojoType="dojox.form.Rating"></div>
+  <p>
+    <div dojoType="dojox.form.Rating"></div>
+  </p>
+  <p>
+    As you can see in this example, you can also embed the <div dojoType="dojox.form.Rating"></div> into a text as if it was an inline element. This should not interfer with the layout and should be floating inside the text as if it was just a piece of text.
+  </p>
 
 
 Standard options
