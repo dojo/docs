@@ -56,12 +56,12 @@ Customized stars
     }
 		
     #myRating .dojoxRatingStarChecked {
-      background-image:url(/moin_static163/js/dojo/trunk/release/dojo/dijit/themes/tundra/images/dndMove.png);
+      background-image:url(/moin_static163/js/dojo/trunk/release/dojo/dijit/themes/tundra/images/dndNoMove.png);
       opactiy:1;
       filter:alpha(opacity=100);
     }
     #myRating .dojoxRatingStarHover {
-      background-image:url(/moin_static163/js/dojo/trunk/release/dojo/dijit/themes/tundra/images/dndNoMove.png);
+      background-image:url(/moin_static163/js/dojo/trunk/release/dojo/dijit/themes/tundra/images/dndMove.png);
       opactiy:1;
       filter:alpha(opacity=100);
     }
