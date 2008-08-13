@@ -49,9 +49,9 @@ Customized stars
     @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/form/resources/Rating.css";
     #myRating .dojoxRatingStar{
       background-image:url(/moin_static163/js/dojo/trunk/release/dojo/dijit/themes/tundra/images/dndCopy.png);
-      background-position:top center;
+      background-position:center center;
       background-repeat:no-repeat;
-      background-color:lightyellow;
+      background-color:lightgrey;
       width:16px;
       height:16px;
       padding:0.5em;
