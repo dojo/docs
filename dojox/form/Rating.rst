@@ -42,8 +42,35 @@ This example shows how to use additional attribute to parametrize the widget. Th
 
   <div dojoType="dojox.form.Rating" numStars="10" value="4"></div>
 
+Events
+------
 
-Insode a dojo form
+The following shows what events you can connect to and how to do this using inline script blocks.
+
+.. codeviewer::
+  
+  <style type="text/css">
+    @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/form/resources/Rating.css"; 
+  </style>
+  <script type="text/javascript">
+    dojo.require("dojox.form.Rating");
+  </script>
+  <p id="inlineEvents">
+    <span id="rating1" dojoType="dojox.form.Rating" numStars="10">
+      <script type="dojo/event" event="onChange">
+        dojo.query('#inlineEvents .value')[0].innerHTML = this.value;
+      </script>
+      <script type="dojo/event" event="onMouseOver" args="evt,value">
+        dojo.query('#inlineEvents .hoverValue')[0].innerHTML = value;
+      </script>
+    </span>
+    <br /><br />
+    The value is: <b><span class="value">0</span></b><br />
+    The mouse is over: <b><span class="hoverValue">0</span></b>
+  </p>
+
+
+Inside a dojo form
 ------------------
 
 .. codeviewer::
