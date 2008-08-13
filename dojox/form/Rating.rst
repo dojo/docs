@@ -40,7 +40,7 @@ Standard options
 
 
 
-Standard options
+Customized stars
 ----------------
 
 .. codeviewer::
@@ -64,5 +64,7 @@ Standard options
   <script type="text/javascript">
     dojo.require("dojox.form.Rating");
   </script>
-
-  <div id="myRating" dojoType="dojox.form.Rating" numStars="6" value="2"></div>
+ 
+  <div id="myRating">
+    <div dojoType="dojox.form.Rating" numStars="6" value="2"></div>
+  </div>
