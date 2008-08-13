@@ -106,6 +106,7 @@ Dojox reference
 * `dojox.form <dojox/form>`_
 
   * `dojox.form.BusyButton <dojox/form/BusyButton>`_
+  * `dojox.form.Rating <dojox/form/Rating>`_
 
 * `dojox.image <dojox/image>`_
 
