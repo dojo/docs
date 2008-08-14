@@ -74,29 +74,40 @@ If you'd like onChange to fire after every button click, set the attribute inter
   .. cv:: javascript
 
     <script type="text/javascript">
-      dojo.require("dijit.form.NumberSpinner");
+    dojo.require("dojo.parser");
+    dojo.require("dijit.form.NumberSpinner");
+
+    var cutoffPoints = [
+        { over:35, color:"darkred"},
+        { over:30, color:"lightred"},
+        { over:25, color:"green"},
+        { over:15, color:"lightblue"},
+        { over:-1, color:"darkblue"}
+    ];
     </script>
 
   .. cv:: html
 
-    <span id="spinId"
-       jsId="spinId"
-       dojoType="dijit.form.NumberSpinner"
-       value="1"
-       pattern="####0"
-       constraints="{min:1,max:9999}"
-       trim="true"
+  <label for="temperatureCelsius">Temperature in Celsius</label>
+  <div dojoType="dijit.form.NumberSpinner"
        intermediateChanges="true"
-       onChange="console.debug('spin onChange')"
-    ></span>
+       id="temperatureCelsius"
+       constraints="{min:0,max:40}"
+       value="15">
+    <script type="dojo/connect" event="onChange">
+      // dojo.filter() applies a boolean function to each array element
+      // and returns an array of matches.  In our case, the over:
+      // attributes are sorted downwards, so the first return element
+      // will be the lowest
+      var self=this;  // So widget is referencable in function
+      var tempColor = dojo.filter(cutoffPoints, function(temp) {
+          return self.getValue() > temp.over;
+      })[0].color;
 
-Mapped Text Boxes
------------------
-
-** May move this to another section, as it's shared by several form elements **  NumberSpinner is a '''mapped text box''', meaning it maps the human-readable value into a computer-readable value passed to the server.  It does this by inserting two <input> tags: one visible and one hidden.  The displayed value may contain locale-specific group separators (like the comma in the U.S.) and decimal points (like the period in the U.S.).  But the hidden value will always be locale-independent: that is, with no group separators and a period for a decimal point.
-
-You can see this in the Inspect tab of Firebug:
-
--- SCREENSHOT --
-
-When the form is submitted, only the hidden value goes to the server, i.e. with whatever name attribute you specified.  
+      // Lastly set the background color of the indicator box
+      dojo.style(dojo.byId("tempBox"), "backgroundColor", tempColor)
+    </script>
+  </div>
+  <span id="tempBox" >
+    &nbsp;&nbsp;&nbsp;
+  </span>
