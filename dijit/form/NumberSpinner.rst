@@ -3,7 +3,7 @@
 dijit.form.NumberSpinner
 =============================
 
-:Status: Draft
+:Status: Contributed
 :Version: 1.0
 :Author: CraigRiecke
 
