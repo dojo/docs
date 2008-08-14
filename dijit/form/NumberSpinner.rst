@@ -88,26 +88,26 @@ If you'd like onChange to fire after every button click, set the attribute inter
 
   .. cv:: html
 
-  <label for="temperatureCelsius">Temperature in Celsius</label>
-  <div dojoType="dijit.form.NumberSpinner"
+    <label for="temperatureCelsius">Temperature in Celsius</label>
+    <div dojoType="dijit.form.NumberSpinner"
        intermediateChanges="true"
        id="temperatureCelsius"
        constraints="{min:0,max:40}"
        value="15">
-    <script type="dojo/connect" event="onChange">
-      // dojo.filter() applies a boolean function to each array element
-      // and returns an array of matches.  In our case, the over:
-      // attributes are sorted downwards, so the first return element
-      // will be the lowest
-      var self=this;  // So widget is referencable in function
-      var tempColor = dojo.filter(cutoffPoints, function(temp) {
+      <script type="dojo/connect" event="onChange">
+        // dojo.filter() applies a boolean function to each array element
+        // and returns an array of matches.  In our case, the over:
+        // attributes are sorted downwards, so the first return element
+        // will be the lowest
+        var self=this;  // So widget is referencable in function
+        var tempColor = dojo.filter(cutoffPoints, function(temp) {
           return self.getValue() > temp.over;
-      })[0].color;
+        })[0].color;
 
-      // Lastly set the background color of the indicator box
-      dojo.style(dojo.byId("tempBox"), "backgroundColor", tempColor)
-    </script>
-  </div>
-  <span id="tempBox" >
-    &nbsp;&nbsp;&nbsp;
-  </span>
+        // Lastly set the background color of the indicator box
+        dojo.style(dojo.byId("tempBox"), "backgroundColor", tempColor)
+      </script>
+    </div>
+    <span id="tempBox" >
+      &nbsp;&nbsp;&nbsp;
+    </span>
