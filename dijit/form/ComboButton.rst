@@ -38,14 +38,13 @@ The first example shows how to create a menu and combo button programmatically.
                 label: "get all mail",
                 dropDown: menu
             });
-            console.log("append ", button['domNode']||'null', " to ", dojo.byId("container"));
-            dojo.byId("container").appendChild(button.domNode);
+             dojo.byId("myContainer").appendChild(button.domNode);
 	 });
        </script>
 
   .. cv:: html
 
-    <div id="container"></div>
+    <div id="myContainer"></div>
 
 As usual you can create the ComboButton widget declaratively using the dojoType attribute.
 When created declaratively the DropDownButton node has two children, one for the label of the button,
