@@ -17,7 +17,7 @@ The dijit.form widgets are:
 * Buttons:
 
   * `dijit.form.Button </Button>`_
-  * `dijit.form.DropDownButton <form/DropDownButton>`_ A button that displays a menu or some other popup when you press it.
+  * `dijit.form.DropDownButton </DropDownButton>`_ A button that displays a menu or some other popup when you press it.
   * `dijit.form.ComboButton </ComboButton>`_
   * `dijit.form.ToggleButton </ToggleButton>`_
 
