@@ -31,7 +31,7 @@ The first example shows how to create a button programmatically.
 
     <button id="buttonNode" />
 
-As usual you can create the button widget using th dojoType attribute
+As usual you can create the button widget declaratively using the dojoType attribute
 
 .. cv-compound::
 
