@@ -38,7 +38,7 @@ The first example shows how to create a menu and combo button programmatically.
                 label: "get all mail",
                 dropDown: menu
             });
-            console.log("append ", button.domNode, " to ", dojo.byId("container"));
+            console.log("append ", button, " to ", dojo.byId("container"));
             dojo.byId("container").appendChild(button.domNode);
 	 });
        </script>
