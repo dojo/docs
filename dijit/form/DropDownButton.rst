@@ -42,6 +42,7 @@ The first example shows how to create a menu and drop down button programmatical
             });
             dojo.byId("dropdownButtonContainer").appendChild(button.domNode);
 	 });
+       </script>
 
   .. cv:: html
 
