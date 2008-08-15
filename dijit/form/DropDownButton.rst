@@ -11,25 +11,41 @@ The dijit.form.DropDownButton widget is for a button that displays some kind of 
 Examples
 --------
 
-The first example shows how to create a button programmatically.
+The first example shows how to create a menu and drop down button programmatically.
 
 .. cv-compound::
 
   .. cv:: javascript
 
-    <script type="text/javascript">
-    dojo.require("dijit.form.Button");
+	<script type="text/javascript">
+        dojo.addOnLoad(function(){
+            var menu = new dijit.Menu({ style: "display: none;"});
+            var menuItem1 = new dijit.MenuItem({
+                label: "Save",
+                iconClass:"dijitEditorIcon dijitEditorIconSave",
+                onClick: function(){ alert('save'); }
+            });
+            menu.addChild(menuItem1);
 
-    dojo.addOnLoad(function(){
-      var button = new dijit.form.Button({
-                    label: "Click me!"
-      }, "buttonNode");
-    });
-    </script>
+            var menuItem2 = new dijit.MenuItem({
+                label: "Cut",
+                iconClass:"dijitEditorIcon dijitEditorIconCut",
+                onClick: function(){ alert('cut'); }
+            });
+            menu.addChild(menuItem2);
+
+            var button = new dijit.form.DropDownButton({
+                label: "hello!",
+                name: "programmatic2",
+                dropDown: menu,
+                id: "progButton"
+            });
+            dojo.byId("dropdownButtonContainer").appendChild(button.domNode);
+	    }
 
   .. cv:: html
 
-    <button id="buttonNode" />
+    <div id="dropdownButtonContainer"></div>
 
 As usual you can create the DropDown button widget declaratively using the dojoType attribute.
 When created declaratively the DropDownButton node has two children, one for the label of the button,
@@ -54,4 +70,4 @@ and the other for the drop-down widget that's displayed when you press the butto
       </div>
     </div>
 
-The end.
+.
