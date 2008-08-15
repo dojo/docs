@@ -18,6 +18,8 @@ The first example shows how to create a menu and combo button programmatically.
   .. cv:: javascript
 
 	<script type="text/javascript">
+          dojo.require("dijit.form.Button");
+          dojo.require("dijit.Menu");
           dojo.addOnLoad(function(){
             var menu = new dijit.Menu({ style: "display: none;"});
             var menuItem1 = new dijit.MenuItem({
