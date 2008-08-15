@@ -44,3 +44,19 @@ As usual you can create the button widget declaratively using the dojoType attri
   .. cv:: html
 
     <button dojoType="dijit.form.Button">Click me too!</button>
+
+Buttons can have icons and labels, and sometimes they just display an icon, but even in that case you should specify a label for a11y reasons.  Use the showLabel parameter to supress it from appearing under normal circumstances:
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+    dojo.require("dijit.form.Button");
+    </script>
+
+  .. cv:: html
+
+    <button dojoType="dijit.form.Button" iconClass="dijitEditorIcon dijitEditorIconCut" showLabel="false">cut</button>
+
+
