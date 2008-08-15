@@ -8,24 +8,51 @@ dijit.form
 :Status: Draft
 :Version: 1.2
 
-The following widgets can be used in a FORM tag, in a dijit.form.Form widget, or outside of a form.
+The dijit.form package contains "form widgets". What's a form widget? It roughly means a widget that appear inside a form, but technically we think of it as "anything that has a value".
 
-* `dijit.form.Button <form/Button>`_
-* `dijit.form.CheckBox <form/CheckBox>`_
-* `dijit.form.ComboBox <form/ComboBox>`_
-* `dijit.form.CurrencyTextBox <form/CurrencyTextBox>`_
-* `dijit.form.DateTextBox <form/DateTextBox>`_
-* `dijit.form.FilteringSelect <form/FilteringSelect>`_
-* `dijit.form.Form <form/Form>`_
-* `dijit.form.MultiSelect <form/MultiSelect>`_
-* `dijit.form.NumberSpinner <form/NumberSpinner>`_
-* `dijit.form.NumberTextBox <form/NumberTextBox>`_
-* `dijit.form.SimpleTextarea <form/SimpleTextarea>`_
-* `dijit.form.Slider <form/Slider>`_
-* `dijit.form.Textarea <form/Textarea>`_
-* `dijit.form.TextBox <form/TextBox>`_
-* `dijit.form.TimeTextBox <form/TimeTextBox>`_
-* `dijit.form.ValidationTextbox <form/ValidationTextbox>`_
+The widgets can be used in a FORM tag, in a dijit.form.Form widget, or outside of a form.
+
+The dijit.form widgets are:
+
+* Buttons:
+
+  * `dijit.form.Button <form/Button>`_
+  * `dijit.form.DropDownButton <form/DropDownButton>`_ A button that displays a menu or some other popup when you press it.
+  * `dijit.form.ComboButton <form/ComboButton>`_
+  * `dijit.form.ToggleButton <form/ToggleButton>`_
+
+* Input widgets (things that are similar to <input>):
+
+  * `dijit.form.CurrencyTextBox <form/CurrencyTextBox>`_
+  * `dijit.form.DateTextBox <form/DateTextBox>`_
+  * `dijit.form.NumberSpinner <form/NumberSpinner>`_
+  * `dijit.form.NumberTextBox <form/NumberTextBox>`_
+  * `dijit.form.TextBox <form/TextBox>`_
+  * `dijit.form.TimeTextBox <form/TimeTextBox>`_
+  * `dijit.form.ValidationTextbox <form/ValidationTextbox>`_
+
+* TextArea:
+
+  * `dijit.form.SimpleTextarea <form/SimpleTextarea>`_: simple wrapper of <textarea>; equivalent functionality
+  * `dijit.form.Textarea <form/Textarea>`_: auto expanding/contracting <textarea>
+
+* Select widgets
+
+  * `dijit.form.ComboBox <form/ComboBox>`_: this is often called "auto complete" and perhaps should be listed in the "Input widgets" section above since it allows the user to type any value and just gives suggested completions.
+  * `dijit.form.MultiSelect <form/MultiSelect>`_
+  * `dijit.form.FilteringSelect <form/FilteringSelect>`_: similar to a <select> but with type-ahead filtering of the drop down list.
+
+* Miscellaneous
+
+  * `dijit.form.Form <form/Form>`_: corresponds to a <form> itself; wraps other widgets
+  * `dijit.form.Slider <form/Slider>`_
+  * `dijit.form.CheckBox <form/CheckBox>`_
+  * `dijit.form.RadioButton <form/RadioButton>`_: to select one choice from a list
+
+There are also some notable widgets in `dojox.form </dojox/form>`_ that complement the dijit.form pieces and will probably be incorporated into dijit eventually.
+
+* TODO
+
 
 Use Dijit Form Controls All Over!
 ---------------------------------
@@ -33,23 +60,32 @@ Use Dijit Form Controls All Over!
 Because they're easy to mix and match, novice Dojo users often combine Dijit form controls with plain ol' HTML controls.  That's not good for several reasons:
 
 * The Dijit form controls follow the Dijit Theme but plain HTML controls will not.  They will stick out like a sore thumb amongst other nicely-colored widgets.  
-* TODO: Think of some other things
+* dijit.form.Form and derived controls like Dialog can only deal with dijit.form widgets.
 
 Never fear.  For every HTML control, there's a Dijit equivalent that does the same thing, and obeys most of the HTML attributes.
 
-* <input type="text"> becomes dojoType="dijit.form.TextBox"
+* <input type="text"> becomes dojoType="dijit.form.TextBox", dojoType="dijit.form.ValidationTextBox", dojoType="dijit.form.NumberTextBox", etc.
 * <input type="checkbox"> becomes dojoType="dijit.form.Checkbox"
-* <textarea> becomes dojoType="dijit.form.TextArea"
+* <textarea> becomes dojoType="dijit.form.Textarea" or dojoType="dijit.form.SimpleTextArea"
 * <select> becomes dojoType="dijit.FilteringSelect"
-* <input type="radio"> becomes TODO
+* <input type="radio"> becomes dojoType="dijit.form.RadioButton"
+* <button> (or <input type="submit"> etc.) becomes dojotype="dijit.form.Button"
 
 
 
 Mapped Form Controls
 --------------------
 
-The following form controls are variations on <input type="text">.  
+Many of the form controls have a concept of "displayed value" vs. "serialized value" (aka the "real value"), which is the value passed to the server on form submit.  For example, a NumberSpinner may be declared like
 
-LIST
+.. code-block :: html
+
+  <div dojoType=dijit.form.NumberSpinner value="1000">
+
+(note the "value" keyword).  But when it's displayed in America it looks like "1,000" (with the comma).   And if they user types in "1,234,567", it gets sent back to the server as "123456789".
+
+This is handled internally by having two <input> fields in the widget:
 
 .. image:: MappedTextBox.gif
+
+The upshot of this is that Dijit handles localization issues on the client, the server doesn't have to worry about it (except of course for translating the boilerplate text on the page, like the label for the above control).
