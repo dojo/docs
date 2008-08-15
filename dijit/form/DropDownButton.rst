@@ -18,7 +18,7 @@ The first example shows how to create a menu and drop down button programmatical
   .. cv:: javascript
 
 	<script type="text/javascript">
-        dojo.addOnLoad(function(){
+          dojo.addOnLoad(function(){
             var menu = new dijit.Menu({ style: "display: none;"});
             var menuItem1 = new dijit.MenuItem({
                 label: "Save",
@@ -41,7 +41,7 @@ The first example shows how to create a menu and drop down button programmatical
                 id: "progButton"
             });
             dojo.byId("dropdownButtonContainer").appendChild(button.domNode);
-	    }
+	 });
 
   .. cv:: html
 
