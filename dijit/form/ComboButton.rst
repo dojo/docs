@@ -34,7 +34,7 @@ The first example shows how to create a menu and combo button programmatically.
 
             var button = new dijit.form.ComboButton({
                 label: "get all mail",
-                dropDown: menu,
+                dropDown: menu
             });
             dojo.byId("container").appendChild(button.domNode);
 	 });
