@@ -17,8 +17,8 @@ Lets take at our result first
 
   .. cv:: html
 
-  <div id="loader"></div>
-  <div id="json-rpc-container">
+    <div id="loader"></div>
+    <div id="json-rpc-container">
 	<h2><a href="http://google.com"><img class="logo" src="http://www.google.com/logos/Logo_40wht.gif" alt="Google" /></a> Ajax API SMD</h2>
 	<input id="test" name="test" type="text" size="30" value="The Dojo Toolkit"/><br>
 	<select id="searchType">
@@ -41,7 +41,7 @@ Lets take at our result first
 		<h3>Old Searches:</h3>
 		<ul id="archive"></ul>
 	</div>	
-  </div>
+    </div>
 
   .. cv:: javascript
 
