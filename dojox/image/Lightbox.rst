@@ -37,16 +37,9 @@ Using Lightbox
   </style>
   <script type="text/javascript">
     dojo.require("dojox.image.Lightbox");
-    dojo.addOnLoad(function(){
-        dojo.query("[rel^='lightbox']").forEach(function(n){
-            new dojox.image.Lightbox({
-                href: dojo.attr(n,"href"),
-                title: dojo.attr(n,"title")
-            },n);
-        });
-    });
   </script>
 
   <div id="lb-one">
-     <a rel="lightbox" href="foo.png">Show Foo</a> <a rel="lightbox" href="bar.png">Show Bar</a> 
+     <a dojoType="dojox.image.Lightbox" title="foo" href="foo.png">Show Foo</a> 
+     <a dojoType="dojox.image.Lightbox" title="bar" href="bar.png">Show Bar</a> 
   </div>
