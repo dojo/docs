@@ -127,7 +127,7 @@ There are many cases when you have an array and want to filter it by a certain c
                {surname: "Smith", name: "Susan"}, 
                {surname: "Hill", name: "Strawberry"}, 
                {surname: "Washington", name: "Dan"}, 
-               {surname: "Dojo", name: "Master"},];
+               {surname: "Dojo", name: "Master"}];
 
     function filterArray(){
       var filteredArr = dojo.filter(arr, function(item){
@@ -143,6 +143,65 @@ There are many cases when you have an array and want to filter it by a certain c
       dojo.forEach(arr, function(item, i){
         var li = dojo.doc.createElement("li");
         li.innerHTML = i+1+". "+item.surname+", "+item.name;
+        dojo.byId("unFiltered-items").appendChild(li);
+      });
+    }
+    </script>
+
+  .. cv :: html
+
+    <button dojoType="dijit.form.Button" onClick="filterArray()">Filter array</button>
+    <div style="width: 300px; float: left;">
+    Filtered items<br />(only people with "Washington" as surname)
+    <ul id="filtered-items">
+
+    </ul>
+    </div>
+    <div style="width: 300px; float: left;">
+    Unfiltered items<br /> (all people are represented in the list)
+    <ul id="unFiltered-items">
+
+    </ul>
+    </div>
+
+dojo.map
+--------
+
+Another great funtion, Dojo is providing is dojo.map. dojo.map lets you run a function on all elements of an array and returns a new array with the changed values. A very good example is the "Give all my employees a 10% salary rise":
+
+.. cv-compound::
+
+  .. cv :: javascript
+
+    <script type="text/javascript">
+    dojo.require("dijit.form.Button"); // this is just to make the demo look nicer
+
+    var arr = [{surname: "Washington", name: "Paul", salary: "200"}, 
+               {surname: "Gordon", name: "Amie", salary: "350"}, 
+               {surname: "Meyer", name: "Sofie", salary: "100"}, 
+               {surname: "Jaysons", name: "Josh", salary: "2500"}, 
+               {surname: "Washington", name: "George", salary: "10"}, 
+               {surname: "Doormat", name: "Amber", salary: "320"}, 
+               {surname: "Smith", name: "Susan", salary: "3200"}, 
+               {surname: "Hill", name: "Strawberry", salary: "290"}, 
+               {surname: "Washington", name: "Dan", salary: "200"}, 
+               {surname: "Dojo", name: "Master", salary: "205"}];
+
+    function filterArray(){
+      var raisedSalaries = dojo.map(arr, function(item){
+        item.salary += 10%;
+        return item;
+      });
+
+      dojo.forEach(filteredArr, function(item, i){
+        var li = dojo.doc.createElement("li");
+        li.innerHTML = i+1+". "+item.surname+", "+item.name+". New salary: "+item.salary;
+        dojo.byId("filtered-items").appendChild(li);
+      });
+
+      dojo.forEach(arr, function(item, i){
+        var li = dojo.doc.createElement("li");
+        li.innerHTML = i+1+". "+item.surname+", "+item.name+". Old salary: "+item.salary;
         dojo.byId("unFiltered-items").appendChild(li);
       });
     }
