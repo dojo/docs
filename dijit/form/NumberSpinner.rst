@@ -14,7 +14,27 @@ The Basic Version
 
 This number spinner starts at 1000, and holds a number from 9 to 1550.  Each up or down button click adjusts the number by 10.  Note here the constraints attribute.  You have all the options available in the `Dojo constraint language <quickstart/numbersDates>`_, shared by `dijit.form.ValidationTextBox <dijit/form/ValidationTextBox>`_ and other widgets.
 
+.. cv-compound::
 
+  .. cv:: javascript
+
+      <script type="text/javascript">
+        dojo.require("dijit.form.NumberSpinner");
+        dojo.addOnLoad(function(){
+          new dijit.form.NumberSpinner({
+            value: 1000,
+            smallDelta: 10,
+            constraints: {min: 9, max: 1550, places: 0},
+            id: "integerspinner2",
+            name: "someNumber",
+        }, "originalInput");
+      </script>
+
+  .. cv:: html
+
+    <input id="originalInput">
+
+Here's the same thing using markup language:
 .. cv-compound::
 
   .. cv:: javascript
