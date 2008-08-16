@@ -67,7 +67,7 @@ Note the "i" variable which returns the current position of an iteration
     function populateData(){
       dojo.forEach(arr, function(item, i){
         var li = dojo.doc.createElement("li");
-        li.innerHTML = i+". "+item;
+        li.innerHTML = i+1+". "+item;
         dojo.byId("forEach-items").appendChild(li);
       });
     }
