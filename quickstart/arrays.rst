@@ -244,3 +244,19 @@ Now your bank policies only allows you to give each client one credit over 1 mil
 
 dojo.every
 ----------
+
+Lets get back to our bank manager. A client wants another credit, but you only allow a credit if every income transfer is at least 3000,-
+An example:
+
+.. codeviewer::
+  
+  <style type="text/css">
+    @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/widget/DocTester/DocTester.css"; 
+  </style>
+  <script type="text/javascript">dojo.require("dojox.widget.DocTester");</script>
+  <div dojoType="dojox.widget.DocTester">
+    >>> dojo.some([{'month': "january', 'income': 2000}, {'month': "february', 'income': 2200}{'month': "march', 'income': 2100}], function(item){ return item.income>=3000})
+    "false"
+    >>> dojo.some([{'month': "january', 'income': 5000}, {'month': "february', 'income': 4200}{'month': "march', 'income': 3100}], function(item){ return item.income>=3000})
+    "true"
+  </div>
