@@ -187,7 +187,7 @@ Another great funtion, Dojo is providing is dojo.map. dojo.map lets you run a fu
                {surname: "Washington", name: "Dan", salary: "200"}, 
                {surname: "Dojo", name: "Master", salary: "205"}];
 
-    function filterArray(){
+    function raiseSalary(){
       var raisedSalaries = dojo.map(arrSalary, function(item){
         item.salary += 10%;
         return item;
@@ -209,15 +209,15 @@ Another great funtion, Dojo is providing is dojo.map. dojo.map lets you run a fu
 
   .. cv :: html
 
-    <button dojoType="dijit.form.Button" onClick="filterArray()">Filter array</button>
+    <button dojoType="dijit.form.Button" onClick="raiseSalary()">Filter array</button>
     <div style="width: 300px; float: left;">
-    Filtered items<br />(only people with "Washington" as surname)
+    Peoples salaries after raise:
     <ul id="filteredSalary-items">
 
     </ul>
     </div>
     <div style="width: 300px; float: left;">
-    Unfiltered items<br /> (all people are represented in the list)
+    Peoples salaries before raise:
     <ul id="unFilteredSalary-items">
 
     </ul>
