@@ -105,3 +105,55 @@ Now lets use dojo.forEach with a list of dom nodes we retrieve using dojo.query.
     <ul id="forEachQuery-items">
 
     </ul>
+
+dojo.filter
+-----------
+
+There are many cases when you have an array and want to filter it by a certain condition, say you have an array of people with a last name. You would like to filter those having a certain last name. Lets take a look at anexample
+
+.. cv-compound::
+
+  .. cv :: javascript
+
+    <script type="text/javascript">
+    dojo.require("dijit.form.Button"); // this is just to make the demo look nicer
+
+    var arr = [{surname: "Washington", name: "Paul"}, 
+               {surname: "Gordon", name: "Amie"}, 
+               {surname: "Meyer", name: "Sofie"}, 
+               {surname: "Jaysons", name: "Josh"}, 
+               {surname: "Washington", name: "George"}, 
+               {surname: "Doormat", name: "Amber"}, 
+               {surname: "Smith", name: "Susan"}, 
+               {surname: "Hill", name: "Strawberry"}, 
+               {surname: "Washington", name: "Dan"}, 
+               {surname: "Dojo", name: "Master"},];
+
+    function filterArray(){
+      var filteredArr = dojo.filter(arr, function(item){
+        return item.surname == "Washington";
+      });
+
+      dojo.forEach(filteredArr, function(item, i){
+        var li = dojo.doc.createElement("li");
+        li.innerHTML = i+1+". "+item.innerHTML;
+        dojo.byId("filtered-items").appendChild(li);
+      });
+
+      dojo.forEach(arr, function(item, i){
+        var li = dojo.doc.createElement("li");
+        li.innerHTML = i+1+". "+item.innerHTML;
+        dojo.byId("unFiltered-items").appendChild(li);
+      });
+    }
+    </script>
+
+  .. cv :: html
+
+    <button dojoType="dijit.form.Button" onClick="filterArray()">Filter array</button>
+    <ul id="filtered-items" style="width: 200px;">
+
+    </ul>
+    <ul id="unFiltered-items" style="width: 200px; float: left;">
+
+    </ul>
