@@ -11,17 +11,21 @@ TextBox is a basic <input type="text">-style form control.  It has rudimentary t
 it does not validate the entered text.  Like all Dijit controls, TextBox inherits the design theme, so it's better to use this than an
 HTML control, even if you don't have to do any input scrubbing.  However:
 
-* If the input is a number, use `dijit.form.NumberTextBox <dijit.form.NumberTextBox>`_ or `dijit.form.NumberSpinner <dijit.form.NumberSpinner>`_.  These boxes ensure only digits, decimal points and group separators (specific to your locale) are entered.
-* If the input is currency, use `dijit.form.CurrencyTextBox <dijit.form.CurrencyTextBox>`_ instead.
-* If the input is a date, use `dijit.form.DateTextBox <dijit/form/DateTextBox>`_ which validates date input according to your locale, and
-adds a little pop-up calendar for easy selection.
+* If the input is a number, use `dijit.form.NumberTextBox <dijit/form/NumberTextBox>`_ or `dijit.form.NumberSpinner <dijit/form/NumberSpinner>`_.  
+  These boxes ensure only digits, decimal points and group separators (specific to the locale) are entered.
+* If the input is currency, use `dijit.form.CurrencyTextBox <dijit/form/CurrencyTextBox>`_ instead.
+* If the input is a date, use `dijit.form.DateTextBox <dijit/form/DateTextBox>`_ which validates date input according to the locale, and
+  adds a little pop-up calendar for easy selection.
 * If the input is a time, use `dijit.form.TimeTextBox <dijit/form/TimeTextBox>`_ which features a scrolling day-planner-like time chooser.
-* If the input is a list of values, use `dijit.form.FilteringSelect <dijit/form/FilteringSelect>`_.  If you'd like to include free-form values too, use `dijit.form.ComboBox <dijit/form/ComboBox>`_.  These two look like <select> controls but can use Dijit TextBox attributes as well.
-
+* If the input is a list of values, use `dijit.form.FilteringSelect <dijit/form/FilteringSelect>`_.  If you'd like to include free-form values too, 
+  use `dijit.form.ComboBox <dijit/form/ComboBox>`_.  These two look like <select> controls but can use Dijit TextBox attributes as well.
+* If text can be validated with a regular expression, use `dijit.form.ValidatingTextBox <dijit/form/ValidatingTextBox>`_.
 
 
 Examples
 --------
+
+TODO: Break up
 
 .. cv-compound::
 
@@ -96,66 +100,21 @@ Examples
         <label for="zip2">Also 5-Digit U.S. Zipcode only</label>
 	<br/>
 
-Sending and Receiving Server Formats
-------------------------------------
+  
+Sizing TextBoxes
+----------------
 
-Patterns given as constraints in a DateTextBox or NumberBox only apply to the on-screen value, not the value received or sent to the server. Dojo encourages the use of standard, locale-neutral formats when marshalling data as best practice.  In some cases, the receiving application may have special requirements.  A shim on the server can do the necessary translation, but it is also possible to create a custom widget to use a different format.  For example when Oracle database processes dates, by default it insists on dd-MMM-yyyy format in English, as in 01-APR-2006.  If you wish to send it in this format, you can override the serialize method of DateTextBox.  Here's an example:
+TODO
 
-.. code-block:: javascript
-   :linenos:
+Getting and Manipulating the Value
+----------------------------------
 
-       dojo.require("dijit.form.DateTextBox");
-       dojo.declare("OracleDateTextBox",[dijit.form.DateTextBox], {
-          serialize: function(d, options) {
-             return dojo.date.locale.format(d, {selector:'date', datePattern:'dd-MMM-yyyy'}).toLowerCase();
-           }
-       });
+TODO:
 
-.. code-block:: javascript
-   :linenos:
-       
-       <input dojoType="OracleDateTextBox" name="mydate" value="2006-04-01"/>
+Example: Treating ENTER as a TAB
+--------------------------------
 
-You can also pull the OracleDateTextBox widget into a module and dojo.require it in your pages.  Similar customization is possible with numbers, although the default Javascript number representation tends to be less of an issue.
-
-Since Dojo is open source and the widgets are fully customizable, if you really want to use a custom protocol to communicate to and from a server, you can simply override the necessary methods.  Here's an example
-of a DateTextBox subclass that uses a custom date format.
-
-.. code-block:: javascript
-   :linenos:
-
-        dojo.require("dijit.form.DateTextBox");
-        // subclass DateTextBox to allow the initial value to be specified
-        // as MM/dd/y instead of yyyy-MM-dd in the markup
-        dojo.addOnLoad(function(){
-                dojo.declare("altDateTextBox", dijit.form.DateTextBox, {
-                        serialize: function(value, constraints){
-                                // overrides to send the date to the server with a format of constraints.datePattern
-                                // instead of calling dojo.date.stamp.toISOString
-                                return dojo.date.locale.format(value, constraints);
-                        },
-
-                        postMixInProperties: function(){
-                                this.inherited(arguments);
-                                this.constraints.datePattern = "MM/dd/y";
-                                if(this.srcNodeRef){
-                                        // reparse the value attribute using constraints.datePattern
-                                        // instead of calling dojo.date.stamp.fromISOString
-                                        var item = this.srcNodeRef.attributes.getNamedItem('value');
-                                        if(item){
-                                                this.value = dojo.date.locale.parse(item.value, this.constraints);
-                                        }
-                                }
-                        }
-                });
-                dojo.parser.parse();
-        });
-
-.. code-block:: html
-   :linenos:
-	
-        <input id="markup" dojoType="altDateTextBox" value="12/31/2007">
-        <button onclick="alert('value serialized to ' + dijit.byId('markup').toString());return false">Serialize</button>
+TODO
 
 Screen Readers
 --------------
