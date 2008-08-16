@@ -87,7 +87,12 @@ Dijit reference
   * `dijit.form.DropDownButton <dijit/form/DropDownButton>`_
   * `dijit.form.CheckBox <dijit/form/CheckBox>`_
   * `dijit.form.Slider <dijit/form/Slider>`_
-  * `dijit.form.Textares <dijit/form/Textares>`_
+  * `dijit.form.TextBox <dijit/form/TextBox>`_
+  * `dijit.form.NumberTextBox <dijit/form/NumberTextBox>`_
+  * `dijit.form.CurrencyTextBox <dijit/form/CurrencyTextBox>`_
+  * `dijit.form.DateTextBox <dijit/form/DateTextBox>`_
+  * `dijit.form.TimeTextBox <dijit/form/TimeTextBox>`_
+  * `dijit.form.ValidationTextBox <dijit/form/ValidationTextBox>`_
 
 * `dijit.layout <dijit/layout>`_
 
