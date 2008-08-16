@@ -43,5 +43,5 @@ Using Lightbox
   </script>
 
   <div id="lb-one">
-     <a rel="lightbox" href="foo.png"><img src="foo.png"></a> <a rel="lightbox" href="bar.png"><img src="bar.png"></a> 
+     <a rel="lightbox" href="foo.png">Show Foo</a> <a rel="lightbox" href="bar.png">Show Bar</a> 
   </div>
