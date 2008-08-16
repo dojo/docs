@@ -60,6 +60,8 @@ This is a heavylifer you will use a lot when writing your apps using Dojo. dojo.
   .. cv :: javascript
 
     <script type="text/javascript">
+    dojo.require("dijit.form.Button"); // this is just to make the demo look nicer
+
     var arr = ["apples", "kiwis", "pineapples"];
     function populateData(){
       dojo.forEach(arr, function(item){
@@ -72,7 +74,7 @@ This is a heavylifer you will use a lot when writing your apps using Dojo. dojo.
 
   .. cv :: html
 
-    <button dojoType="dijit.form.Button" onClick="populateDate()">Populate data</button>
+    <button dojoType="dijit.form.Button" onClick="populateData()">Populate data</button>
     <ul id="forEach-items">
 
     </ul>
