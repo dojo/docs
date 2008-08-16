@@ -57,7 +57,7 @@ This is a heavylifer you will use a lot when writing your apps using Dojo. dojo.
 
 .. cv-compound::
 
-  .. cv::javascript
+  .. cv :: javascript
 
     <script type="text/javascript">
     var arr = ["apples", "kiwis", "pineapples"];
@@ -68,7 +68,7 @@ This is a heavylifer you will use a lot when writing your apps using Dojo. dojo.
     });
     </script>
 
-  .. cv::html
+  .. cv :: html
 
     <ul id="forEach-items">
 
