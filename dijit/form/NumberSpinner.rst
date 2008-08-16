@@ -21,13 +21,14 @@ This number spinner starts at 1000, and holds a number from 9 to 1550.  Each up 
       <script type="text/javascript">
         dojo.require("dijit.form.NumberSpinner");
         dojo.addOnLoad(function(){
-          new dijit.form.NumberSpinner({
+          var myWidget = new dijit.form.NumberSpinner({
             value: 1000,
             smallDelta: 10,
             constraints: {min: 9, max: 1550, places: 0},
             id: "integerspinner2",
             name: "someNumber",
-        }, "originalInput");
+          }, "originalInput");
+        });
       </script>
 
   .. cv:: html
@@ -35,6 +36,7 @@ This number spinner starts at 1000, and holds a number from 9 to 1550.  Each up 
     <input id="originalInput">
 
 Here's the same thing using markup language:
+
 .. cv-compound::
 
   .. cv:: javascript
