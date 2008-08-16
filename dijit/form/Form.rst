@@ -43,13 +43,13 @@ dijit.form.Form is the dijit equivalent of the <form> node, and it provides vari
 				<tr>
 					<td><label for="name">Name:</td>
 					<td>
-						<input type="text" name="dob" dojoType="dijit.form.ValidationTextBox"/>
+						<input type="text" id="name" name="name" dojoType="dijit.form.ValidationTextBox"/>
 					</td>
 				</tr>
 				<tr>
 					<td><label for="dob">Date of birth:</td>
 					<td>
-						<input type="text" name="dob" dojoType="dijit.form.DateTextBox"/>
+						<input type="text" id="dob" name="dob" dojoType="dijit.form.DateTextBox"/>
 					</td>
 				</tr>
 		</table>
