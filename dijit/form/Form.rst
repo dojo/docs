@@ -1,8 +1,9 @@
 dijit.form.Form is the dijit equivalent of the <form> node, and it provides various methods for serializing/deserializing form data, and checking whether or not a form is valid.
 
-:: cv: compound
+.. cv-compound::
 
-  ::cv: javascript
+  .. cv:: javascript
+
      <script>
          dojo.require("dijit.form.Form");
          dojo.require("dijit.form.Button");
@@ -10,7 +11,8 @@ dijit.form.Form is the dijit equivalent of the <form> node, and it provides vari
          dojo.require("dijit.form.DateTextBox");
      </script>
 
-  ::cv: html
+  .. cv:: html
+
 	<form dojoType="dijit.form.Form" id="myForm" jsId="myForm"
 		encType="multipart/form-data" action="" method="">
 		<script type="dojo/method" event="onReset">
