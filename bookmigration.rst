@@ -29,9 +29,9 @@ Dojo Book Outline
 
   * `Dijit at a Glance <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/dijit-glance>`_.
   * `Common Features <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/common-attributes>`_.
-  * `Form, Validation, Specialized Input <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input>`_. maps to: `dijit.form <dijit/form>`_
+  * `Form, Validation, Specialized Input <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input>`_. maps to: `dijit.form <dijit/form>`_ [[CraigRiecke]]
 
-    * `Form Widget <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/form-widget>`_. maps to: `Form <dijit/form>`_ [[CraigRiecke]]
+    * `Form Widget <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/form-widget>`_. maps to: `Form <dijit/form/Form>`_ 
     * `CheckBox, RadioButton, ToggleButton <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/checkbox-radiobutton>`_. maps to: `Checkbox <dijit/form/CheckBox>`_, `RadioButton <dijit/form/RadioButton>`_, `ToggleButton <dijit/form/ToggleButton>`_
     * `Dijit ComboBox <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/auto-completer>`_. maps to: `ComboBox <dijit/form/ComboBox>`_
     * `Dijit FilteringSelect <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/select>`_. maps to: `FilteringSelect <dijit/form/FilteringSelect>`_
