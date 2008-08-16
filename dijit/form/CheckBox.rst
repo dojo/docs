@@ -8,7 +8,7 @@ CheckBoxes in dijit are very intuitive and easy to use. Markup constructs for ch
 Examples
 --------
 
-Lets create a checkbox programatically
+Lets create a checkbox programatically, initially unchecked:
 
 .. cv-compound::
 
@@ -19,7 +19,8 @@ Lets create a checkbox programatically
     dojo.addOnLoad(function(){
       var checkBox = new dijit.form.CheckBox({
         id: "checkBox",
-        value: true
+        checked: false,
+        onChange: function(b){ alert('new value is ' + b); }
       }, "checkBox");
     });
     </script>
