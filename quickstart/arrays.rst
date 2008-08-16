@@ -65,11 +65,11 @@ Note the "i" variable which returns the current position of an iteration
 
     var arr = ["apples", "kiwis", "pineapples"];
     function populateData(){
-      dojo.forEach(arr, function(item){
+      dojo.forEach(arr, function(item, i){
         var li = dojo.doc.createElement("li");
         li.innerHTML = i+". "+item;
         dojo.byId("forEach-items").appendChild(li);
-      }, i);
+      });
     }
     </script>
 
