@@ -1,3 +1,6 @@
+dijit.form.Form
+===============
+
 dijit.form.Form is the dijit equivalent of the <form> node, and it provides various methods for serializing/deserializing form data, and checking whether or not a form is valid.
 
 .. cv-compound::
