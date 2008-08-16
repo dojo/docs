@@ -67,7 +67,7 @@ This is a heavylifer you will use a lot when writing your apps using Dojo. dojo.
       dojo.forEach(arr, function(item){
         var li = dojo.doc.createElement("li");
         li.innerHTML = item;
-        dojo.byId("forEach-items").addChild(li);
+        dojo.byId("forEach-items").appendChild(li);
       });
     }
     </script>
