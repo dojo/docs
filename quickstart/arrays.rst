@@ -151,9 +151,15 @@ There are many cases when you have an array and want to filter it by a certain c
   .. cv :: html
 
     <button dojoType="dijit.form.Button" onClick="filterArray()">Filter array</button>
-    <ul id="filtered-items" style="width: 200px;">
+    <div style="width: 200px; float: left;">
+    Filtered items (only people with "Washington" as surname)
+    <ul id="filtered-items">
 
     </ul>
-    <ul id="unFiltered-items" style="width: 200px; float: left;">
+    </div>
+    <div style="width: 200px; float: left;">
+    Unfiltered items
+    <ul id="unFiltered-items">
 
     </ul>
+    </div>
