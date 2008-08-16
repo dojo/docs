@@ -78,8 +78,12 @@ Dijit reference
 * `dijit.Tree <dijit/Tree>`_
 * `dijit.form <dijit/form>`_
 
+  * `dijit.form.Form <dijit/form/Form>`_
   * `dijit.form.NumberSpinner <dijit/form/NumberSpinner>`_
   * `dijit.form.RadioButton <dijit/form/RadioButton>`_
+  * `dijit.form.Button <dijit/form/Button>`_
+  * `dijit.form.ComboButton <dijit/form/ComboButton>`_
+  * `dijit.form.DropDownButton <dijit/form/DropDownButton>`_
   * `dijit.form.CheckBox <dijit/form/CheckBox>`_
   * `dijit.form.Slider <dijit/form/Slider>`_
   * `dijit.form.Textares <dijit/form/Textares>`_
@@ -88,6 +92,7 @@ Dijit reference
 
   * `dijit.layout.ContentPane <dijit/layout/ContentPane>`_
   * `dijit.layout.BorderContainer <dijit/layout/BorderContainer>`_
+  * `dijit.layout.StackContainer <dijit/layout/StackContainer>`_
   * `dijit.layout.AccordionContainer <dijit/layout/AccordionContainer>`_
   * `dijit.layout.TabContainer <dijit/layout/TabContainer>`_
 
@@ -100,6 +105,11 @@ Dojox reference
 * `dojox.grid <dojox/grid>`_
 * `dojox.cometd <dojox/cometd>`_
 * `dojox.rpc <dojox/rpc>`_
+  
+  * `dojox.rpc.SMDLibrary <dojox/rpc/SMDLibrary>`_
+  * `dojox.rpc.Service <dojox/rpc/Service>`_
+
+* `dojox.widget <dojox/widget>`_
 
   * `dojox.widget.Toaster <dojox/widget/Toaster>`_
 
@@ -109,6 +119,8 @@ Dojox reference
   * `dojox.form.Rating <dojox/form/Rating>`_
 
 * `dojox.image <dojox/image>`_
+
+  * `dojox.image.Lightbox <dojox/image/Lightbox>`_
 
 ----
 
