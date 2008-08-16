@@ -49,3 +49,27 @@ Note that the second doctest should fail since the last index of the tested elem
     >>> dojo.lastIndexOf(["foo", "hoo", "zoo", "shoe", "zoo", "nuu"], "zoo")
     "2"
   </div>
+
+dojo.forEach
+------------
+
+This is a heavylifer you will use a lot when writing your apps using Dojo. dojo.forEach lets you iterate over arrays, node lists and provides you with ways to filter your results. Lets take a look at a very basic example.
+
+.. cv-compound::
+
+  .. cv::javascript
+
+    <script type="text/javascript">
+    var arr = ["apples", "kiwis", "pineapples"];
+    dojo.forEach(arr, function(item){
+      var li = dojo.doc.createElement("li");
+      li.innerHTML = item;
+      dojo.byId("forEach-items").addChild(li);
+    });
+    </script>
+
+  .. cv::html
+
+    <ul id="forEach-items">
+
+    </ul>
