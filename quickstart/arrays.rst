@@ -136,13 +136,13 @@ There are many cases when you have an array and want to filter it by a certain c
 
       dojo.forEach(filteredArr, function(item, i){
         var li = dojo.doc.createElement("li");
-        li.innerHTML = i+1+". "+item.innerHTML;
+        li.innerHTML = i+1+". "+item.surname+", "+item.name;
         dojo.byId("filtered-items").appendChild(li);
       });
 
       dojo.forEach(arr, function(item, i){
         var li = dojo.doc.createElement("li");
-        li.innerHTML = i+1+". "+item.innerHTML;
+        li.innerHTML = i+1+". "+item.surname+", "+item.name;
         dojo.byId("unFiltered-items").appendChild(li);
       });
     }
