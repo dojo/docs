@@ -18,7 +18,7 @@ These SMD's are all available at a defined place/filename in the Dojo source arc
   dojo.require("dojo.io.script"); // x-domain RPC
   dojo.require("dojox.rpc.Service");
   dojo.addOnLoad(function(){
-    var libRoot = "dojox.rpc.SMDLibaray";
+    var libRoot = "dojox.rpc.SMDLibrary";
     var googAPI = new dojox.rpc.Service(dojo.moduleUrl(libRoot, "google.smd"));
     var dojoAPI = new dojox.rpc.Service(dojo.moduleUrl(libRoot, "dojo-api.smd"));
     var wikiAPI = new dojox.rpc.Service(dojo.moduleUrl(libRoot, "wikipedia.smd"));
