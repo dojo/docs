@@ -64,7 +64,7 @@ Lets take at our result first
 			tehLoader = dojo.hitch(dojo,"style","loader","visibility");
 
 			dojo.connect(dojo.byId("doit"),"onclick", function(e){
-
+                                console.log("click");
 				tehLoader("visible");
 				
 				dojo.query("li","top-results").forEach(function(item){
@@ -75,15 +75,13 @@ Lets take at our result first
 				google[searchType]({ q: dojo.byId("test").value,  })
 					// generic succes handler:
 					.addCallback(function(returned){
-                                                console.log(returned);
-						var info = returned.responseData.cursor; 
-						var data = returned.responseData.results || [];
+						var data = returned.responseData.results;
 						dojo.forEach(data,function(item){
 							var li = dojo.doc.createElement('li');
 							li.innerHTML = "<a target='_new' hr"+"ef='"+ (item.unescapedUrl || item.url) +"'>" + item.title + "</a><br />" +
 								"<span class='summary'>" + (item.content || item.streetAddress || "unknown") + "</span>"; 
 							
-							//console.log(item);
+							console.log(item);
 							dojo.byId("top-results").appendChild(li);
 						});
 						tehLoader("hidden");
