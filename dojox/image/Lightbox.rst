@@ -30,6 +30,8 @@ This provides both Lightbox and LightboxDialog, the latter being the widget to a
 Using Lightbox
 --------------
 
+The most basic application of a Lightbox is to convert links containing ``title`` and ``href`` attributes into a widget, preserving the Dom structure and adding basic click-handling to the links. The Link content can be anything: text, images, etc, so the styling is up to you:
+
 .. codeviewer::
   
   <style type="text/css">
@@ -43,3 +45,16 @@ Using Lightbox
      <a dojoType="dojox.image.Lightbox" title="foo" href="foo.png">Show Foo</a> 
      <a dojoType="dojox.image.Lightbox" title="bar" href="bar.png">Show Bar</a> 
   </div>
+
+You'll notice Lightbox's built in 404-handling, displaying a warning icon for images which fail to load. 
+
+Any dojox.image.Lightbox-es on the same page share an instance of a dojox.image.LightboxDialog (in versions prior to 1.2, LightboxDialog was named _LightboxDialog. It was made public for 1.2). This allows for easy grouping. Simply add a group attribute to your Lightbox instances, and they will appear in the lightbox, and enable keyboard and icon navigation through the group:
+
+.. codeviewer::
+  
+  <div id="lb-one">
+     <a dojoType="dojox.image.Lightbox" group="grouped" title="foo" href="foo.png">Show Foo</a> 
+     <a dojoType="dojox.image.Lightbox" group="grouped" title="bar" href="bar.png">Show Bar</a> 
+  </div>
+
+
