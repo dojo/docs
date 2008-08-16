@@ -79,3 +79,29 @@ Note the "i" variable which returns the current position of an iteration
     <ul id="forEach-items">
 
     </ul>
+
+Now lets use dojo.forEach with a list of dom nodes we retrieve using dojo.query
+
+.. cv-compound::
+
+  .. cv :: javascript
+
+    <script type="text/javascript">
+    dojo.require("dijit.form.Button"); // this is just to make the demo look nicer
+
+    var arr = ["apples", "kiwis", "pineapples"];
+    function populateQueryData(){
+      dojo.query("li").forEach(function(item, i){
+        var li = dojo.doc.createElement("li");
+        li.innerHTML = i+1+". "+item.innerHTML;
+        dojo.byId("forEachQuery-items").appendChild(li);
+      });
+    }
+    </script>
+
+  .. cv :: html
+
+    <button dojoType="dijit.form.Button" onClick="populateQueryData()">Populate data</button>
+    <ul id="forEachQuery-items">
+
+    </ul>
