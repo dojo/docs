@@ -25,9 +25,9 @@ This number spinner starts at 1000, and holds a number from 9 to 1550.  Each up 
             value: 1000,
             smallDelta: 10,
             constraints: {min: 9, max: 1550, places: 0},
-            id: "integerspinner2",
+            id: "integerspinner1",
             name: "someNumber"
-          }, "originalInput")
+          }, "originalInput");
         });
       </script>
 
