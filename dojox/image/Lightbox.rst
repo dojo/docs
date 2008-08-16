@@ -38,7 +38,12 @@ Using Lightbox
   <script type="text/javascript">
     dojo.require("dojox.image.Lightbox");
     dojo.addOnLoad(function(){
-        dojo.query("a[rel^='lightbox']").instantiate(dojox.image.Lightbox);
+        dojo.query("[rel^='lightbox']").forEach(function(n){
+            new dojox.image.Lightbox({
+                href: dojo.attr(n,"href"),
+                title: dojo.attr(n,"title")
+            },n);
+        });
     });
   </script>
 
