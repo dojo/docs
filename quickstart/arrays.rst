@@ -80,7 +80,7 @@ Note the "i" variable which returns the current position of an iteration
 
     </ul>
 
-Now lets use dojo.forEach with a list of dom nodes we retrieve using dojo.query
+Now lets use dojo.forEach with a list of dom nodes we retrieve using dojo.query. Note that dojo.query returns the list of dom nodes as an array. This way you can easily iterate over each dom node using dojo.forEach
 
 .. cv-compound::
 
