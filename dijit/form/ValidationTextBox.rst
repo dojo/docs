@@ -1,5 +1,11 @@
+#format dojo_rst
+
 dijit.form.ValidatingTextBox
-----------------------------
+============================
+
+:Status: Draft
+:Version: 1.0
+:Author: CraigRiecke
 
 A ValidatingTextBox by itself '''will not''' prevent invalid entries from submission.  To ensure they're not, simply surround your form with a dijit.form.Form widget
 
