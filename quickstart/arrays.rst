@@ -152,13 +152,13 @@ There are many cases when you have an array and want to filter it by a certain c
 
     <button dojoType="dijit.form.Button" onClick="filterArray()">Filter array</button>
     <div style="width: 300px; float: left;">
-    Filtered items (only people with "Washington" as surname)
+    Filtered items<br />(only people with "Washington" as surname)
     <ul id="filtered-items">
 
     </ul>
     </div>
     <div style="width: 300px; float: left;">
-    Unfiltered items (all people are represented in the list)
+    Unfiltered items<br /> (all people are represented in the list)
     <ul id="unFiltered-items">
 
     </ul>
