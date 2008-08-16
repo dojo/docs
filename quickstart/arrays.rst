@@ -176,7 +176,7 @@ Another great funtion, Dojo is providing is dojo.map. dojo.map lets you run a fu
     <script type="text/javascript">
     dojo.require("dijit.form.Button"); // this is just to make the demo look nicer
 
-    var arr = [{surname: "Washington", name: "Paul", salary: "200"}, 
+    var arrSalary = [{surname: "Washington", name: "Paul", salary: "200"}, 
                {surname: "Gordon", name: "Amie", salary: "350"}, 
                {surname: "Meyer", name: "Sofie", salary: "100"}, 
                {surname: "Jaysons", name: "Josh", salary: "2500"}, 
@@ -188,21 +188,21 @@ Another great funtion, Dojo is providing is dojo.map. dojo.map lets you run a fu
                {surname: "Dojo", name: "Master", salary: "205"}];
 
     function filterArray(){
-      var raisedSalaries = dojo.map(arr, function(item){
+      var raisedSalaries = dojo.map(arrSalary, function(item){
         item.salary += 10%;
         return item;
       });
 
-      dojo.forEach(filteredArr, function(item, i){
+      dojo.forEach(raisedSalaries, function(item, i){
         var li = dojo.doc.createElement("li");
         li.innerHTML = i+1+". "+item.surname+", "+item.name+". New salary: "+item.salary;
-        dojo.byId("filtered-items").appendChild(li);
+        dojo.byId("filteredSalary-items").appendChild(li);
       });
 
-      dojo.forEach(arr, function(item, i){
+      dojo.forEach(arrSalary, function(item, i){
         var li = dojo.doc.createElement("li");
         li.innerHTML = i+1+". "+item.surname+", "+item.name+". Old salary: "+item.salary;
-        dojo.byId("unFiltered-items").appendChild(li);
+        dojo.byId("unFilteredSalary-items").appendChild(li);
       });
     }
     </script>
@@ -212,13 +212,13 @@ Another great funtion, Dojo is providing is dojo.map. dojo.map lets you run a fu
     <button dojoType="dijit.form.Button" onClick="filterArray()">Filter array</button>
     <div style="width: 300px; float: left;">
     Filtered items<br />(only people with "Washington" as surname)
-    <ul id="filtered-items">
+    <ul id="filteredSalary-items">
 
     </ul>
     </div>
     <div style="width: 300px; float: left;">
     Unfiltered items<br /> (all people are represented in the list)
-    <ul id="unFiltered-items">
+    <ul id="unFilteredSalary-items">
 
     </ul>
     </div>
