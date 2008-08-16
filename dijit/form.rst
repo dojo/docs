@@ -72,6 +72,7 @@ Never fear.  For every HTML control, there's a Dijit equivalent that does the sa
 * <button> (or <input type="submit"> etc.) becomes dojotype="dijit.form.Button"
 
 
+.. _mapped:
 
 Mapped Form Controls
 --------------------
