@@ -226,5 +226,21 @@ Another great funtion, Dojo is providing is dojo.map. dojo.map lets you run a fu
 dojo.some
 ---------
 
+Imagine you are a manager of a famous bank. A client of you comes and visits your office asking for another million dollars as a credit.
+Now your bank policies only allows you to give each client one credit over 1 million, not two, not three - though you may have several smaller credits. Even 3 credits a 500.000 - weird bank.. anyways. dojo.some is the perfect functionto tell you whether an array has some of the asked values:
+
+.. codeviewer::
+  
+  <style type="text/css">
+    @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/widget/DocTester/DocTester.css"; 
+  </style>
+  <script type="text/javascript">dojo.require("dojox.widget.DocTester");</script>
+  <div dojoType="dojox.widget.DocTester">
+    >>> dojo.some([200000, 500000, 350000, 1000000, 75, 3], function(item){ return item>=1000000})
+    "true"
+    >>> dojo.some([200000, 500000, 350000, 100000, 75, 3], function(item){ return item>=1000000})
+    "false"
+  </div>
+
 dojo.every
 ----------
