@@ -209,7 +209,7 @@ Another great funtion, Dojo is providing is dojo.map. dojo.map lets you run a fu
 
   .. cv :: html
 
-    <button dojoType="dijit.form.Button" onClick="raiseSalary()">Filter array</button>
+    <button dojoType="dijit.form.Button" onClick="raiseSalary()">Raise the salary</button>
     <div style="width: 300px; float: left;">
     Peoples salaries after raise:
     <ul id="filteredSalary-items">
