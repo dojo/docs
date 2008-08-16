@@ -18,11 +18,12 @@ Lets create a checkbox programatically
     dojo.require("dijit.form.CheckBox");
     dojo.addOnLoad(function(){
       var checkBox = new dijit.form.CheckBox({
-        id: "checkBox"
+        id: "checkBox",
+        value: true
       }, "checkBox");
     });
     </script>
 
   .. cv:: html
  
-    <input type="checkbox" id="checkBox" value="true" /> <label for="checkBox">I agree</label>
+    <input id="checkBox"> <label for="checkBox">I agree</label>
