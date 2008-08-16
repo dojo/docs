@@ -67,7 +67,7 @@ Lets take at our result first
 
             // run the search
             var searchType = dojo.byId("searchType").value || "webSearch";
-            google[searchType]({ q: dojo.byId("test").value,  })
+            google[searchType]({ q: dojo.byId("test").value })
                 .addCallback(function(returned){
                     // create an <li> for each data part:
                     dojo.forEach(returned.responseData.results,function(item){
