@@ -41,6 +41,7 @@ Getting started
 * `Data stores <quickstart/data>`_
 * `The event system <quickstart/events>`_
 * `Parsing, Formatting and Validating Numbers and Dates <quickstart/numbersDates>`_
+* `Arrays, Node lists <quickstart/arrays>`_
 
 ----
 
