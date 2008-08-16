@@ -222,3 +222,9 @@ Another great funtion, Dojo is providing is dojo.map. dojo.map lets you run a fu
 
     </ul>
     </div>
+
+dojo.some
+---------
+
+dojo.every
+----------
