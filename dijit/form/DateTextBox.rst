@@ -7,6 +7,17 @@ dijit.form.DateTextBox
 :Version: 1.0
 :Author: CraigRiecke
 
+dijit.form.DateTextBox:
+
+* is a `mapped form control <dijit/form#mapped>`_
+* validates against locale-sepcific i18n rules
+* also validates against developer-provided constraints like min, max, valid days of the week, etc.
+
+Example
+-------
+
+TODO 
+
 
 Sending and Receiving Server Formats
 ------------------------------------
