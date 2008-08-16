@@ -1,11 +1,24 @@
 #format dojo_rst
 
-dijit.form.TextBox Family
-=========================
+dijit.form.TextBox
+==================
 
 :Status: Draft
 :Version: 1.0
 :Author: CraigRiecke
+
+TextBox is a basic <input type="text">-style form control.  It has rudimentary text-scrubbing functions that trim or proper-casify text, but
+it does not validate the entered text.  Like all Dijit controls, TextBox inherits the design theme, so it's better to use this than an
+HTML control, even if you don't have to do any input scrubbing.  However:
+
+* If the input is a number, use `dijit.form.NumberTextBox <dijit.form.NumberTextBox>`_ or `dijit.form.NumberSpinner <dijit.form.NumberSpinner>`_.  These boxes ensure only digits, decimal points and group separators (specific to your locale) are entered.
+* If the input is currency, use `dijit.form.CurrencyTextBox <dijit.form.CurrencyTextBox>`_ instead.
+* If the input is a date, use `dijit.form.DateTextBox <dijit/form/DateTextBox>`_ which validates date input according to your locale, and
+adds a little pop-up calendar for easy selection.
+* If the input is a time, use `dijit.form.TimeTextBox <dijit/form/TimeTextBox>`_ which features a scrolling day-planner-like time chooser.
+* If the input is a list of values, use `dijit.form.FilteringSelect <dijit/form/FilteringSelect>`_.  If you'd like to include free-form values too, use `dijit.form.ComboBox <dijit/form/ComboBox>`_.  These two look like <select> controls but can use Dijit TextBox attributes as well.
+
+
 
 Examples
 --------
