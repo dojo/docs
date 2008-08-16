@@ -76,8 +76,8 @@ Lets take at our result first
 					// generic succes handler:
 					.addCallback(function(returned){
                                                 console.log(returned);
-						var info = returned.cursor; 
-						var data = returned.results || [];
+						var info = returned.responseData.cursor; 
+						var data = returned.responseData.results || [];
 						dojo.forEach(data,function(item){
 							var li = dojo.doc.createElement('li');
 							li.innerHTML = "<a target='_new' hr"+"ef='"+ (item.unescapedUrl || item.url) +"'>" + item.title + "</a><br />" +
