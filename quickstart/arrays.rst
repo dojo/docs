@@ -229,6 +229,8 @@ dojo.some
 Imagine you are a manager of a famous bank. A client of you comes and visits your office asking for another million dollars as a credit.
 Now your bank policies only allows you to give each client one credit over 1 million, not two, not three - though you may have several smaller credits. Even 3 credits a 500.000 - weird bank.. anyways. dojo.some is the perfect functionto tell you whether an array has some of the asked values:
 
+*Note that we are using the doctest in this case to show you whether the client is allowed to get the credit. If the test passes he is allowed, if not he won't go home with the cash.*
+
 .. codeviewer::
   
   <style type="text/css">
@@ -237,7 +239,7 @@ Now your bank policies only allows you to give each client one credit over 1 mil
   <script type="text/javascript">dojo.require("dojox.widget.DocTester");</script>
   <div dojoType="dojox.widget.DocTester">
     >>> dojo.some([200000, 500000, 350000, 1000000, 75, 3], function(item){ return item>=1000000})
-    "true"
+    "false"
     >>> dojo.some([200000, 500000, 350000, 100000, 75, 3], function(item){ return item>=1000000})
     "false"
   </div>
@@ -247,6 +249,8 @@ dojo.every
 
 Lets get back to our bank manager. A client wants another credit, but you only allow a credit if every income transfer is at least 3000,-
 An example:
+
+*Note that we are using the doctest in this case to show you whether the client is allowed to get the credit. If the test passes he is allowed, if not he won't go home with the cash.*
 
 .. codeviewer::
   
