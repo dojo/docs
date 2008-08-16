@@ -75,6 +75,7 @@ Lets take at our result first
 				google[searchType]({ q: dojo.byId("test").value,  })
 					// generic succes handler:
 					.addCallback(function(returned){
+  console.log(returned);
 						var info = returned.cursor; 
 						var data = returned.results || [];
 						dojo.forEach(data,function(item){
