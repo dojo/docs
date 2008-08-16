@@ -255,8 +255,8 @@ An example:
   </style>
   <script type="text/javascript">dojo.require("dojox.widget.DocTester");</script>
   <div dojoType="dojox.widget.DocTester">
-    >>> dojo.every([{'month': "january', 'income': 2000}, {'month': "february', 'income': 2200}, {'month': "march', 'income': 2100}], function(item){ return item.income>=3000})
+    >>> dojo.every([{'month': 'january', 'income': 2000}, {'month': 'february', 'income': 2200}, {'month': 'march', 'income': 2100}], function(item){ return item.income>=3000})
     "true"
-    >>> dojo.every([{'month': "january', 'income': 5000}, {'month': "february', 'income': 4200}, {'month': "march', 'income': 3100}], function(item){ return item.income>=3000})
+    >>> dojo.every([{'month': 'january', 'income': 5000}, {'month': 'february', 'income': 4200}, {'month': 'march', 'income': 3100}], function(item){ return item.income>=3000})
     "true"
   </div>
