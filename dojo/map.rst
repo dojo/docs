@@ -51,7 +51,7 @@ This example shows you how to use dojo.map with a simple array. All values of th
 
     </ul>
     </div>
-    <div style="width: 300px; float: left;">
+    <div style="width: 300px; float: left; margin-top: 10px;">
     Values after running dojo.map()
     <ul id="arrValuesAfter-items">
 
@@ -102,13 +102,13 @@ This example shows you how to use dojo.map with objects. In JavaScript, objects 
   .. cv :: html
 
     <button dojoType="dijit.form.Button" onClick="raiseSalary()">Raise the salary</button>
-    <div style="width: 300px; float: left; margin-top: 10px;>
+    <div style="width: 300px; float: left; margin-top: 10px;">
     Peoples salaries after raise:
     <ul id="filteredSalary-items">
 
     </ul>
     </div>
-    <div style="width: 300px; float: left;">
+    <div style="width: 300px; float: left; margin-top: 10px;">
     Peoples salaries before raise:
     <ul id="unFilteredSalary-items">
 
