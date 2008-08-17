@@ -33,5 +33,5 @@ Wiping in a node with "display: none; height: 200px; position: absolute;"
 
     <div style="height: 250px;">
       <button dojoType="dijit.form.Button" onClick="wipeInOne">Wipe in</button>
-      <div id="wipeDisplayNode" style="height: 200px; position: absolute; top: 30px; background: #ccc; padding: 10px; display: none;">Hi friends</div>
+      <div id="wipeDisplayNode" style="height: 200px; position: absolute; top: 30px; width: 500px; background: #ccc; padding: 10px; display: none;">Hi friends</div>
     </div>
