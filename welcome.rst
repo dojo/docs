@@ -125,6 +125,10 @@ DojoX serves many purposes, and by design is difficult to document. Here, we hav
 These sections cover the available projects shipped with the Dojo Toolkit
 
 * `dojox <dojox>`_
+* `dojox.analytics <dojox/analytics>`_
+
+  * `dojox.analytics.Urchin <dojox/analytics/Urchin>`_
+
 * `dojox.grid <dojox/grid>`_
 * `dojox.cometd <dojox/cometd>`_
 * `dojox.rpc <dojox/rpc>`_
@@ -145,14 +149,16 @@ These sections cover the available projects shipped with the Dojo Toolkit
 
   * `dojox.image.Lightbox <dojox/image/Lightbox>`_
 
+* `dojox.highlight <dojox/highlight>`_
+
 ----
 
 DojoC
 -----
 
-DojoC is an svn repository used by DojoCampus for a variety of widgets, tutorials, sandbox, and other demos. You are welcome to explore and contribute, though absolutely nothing is guaranteed to work. DojoC is meant as a community workshop, and code comes and goes frequently, often times 'promoted' to `DojoX <dojox/>`_ projects. 
+DojoC is an svn repository used by DojoCampus for a variety of widgets, tutorials, sandbox, and other demos. You are welcome to explore and contribute, though absolutely nothing is guaranteed to work. DojoC is meant as a community workshop, and code comes and goes frequently, often times 'promoted' to `DojoX projects <dojox>`_. 
 
-* `More about DojoC <dojoc/>`_
+* `More about DojoC <dojoc>`_
 
 ----
 
