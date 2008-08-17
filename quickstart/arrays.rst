@@ -179,33 +179,22 @@ Another great funtion, Dojo is providing is dojo.map. dojo.map lets you run a fu
     <script type="text/javascript">
     dojo.require("dijit.form.Button"); // this is just to make the demo look nicer
 
-    var arrSalary = [{surname: "Washington", name: "Paul", salary: 200}, 
-               {surname: "Gordon", name: "Amie", salary: 350}, 
-               {surname: "Meyer", name: "Sofie", salary: 100}, 
-               {surname: "Jaysons", name: "Josh", salary: 2500}, 
-               {surname: "Washington", name: "George", salary: 10}, 
-               {surname: "Doormat", name: "Amber", salary: 320}, 
-               {surname: "Smith", name: "Susan", salary: 3200}, 
-               {surname: "Hill", name: "Strawberry", salary: 290}, 
-               {surname: "Washington", name: "Dan", salary: 200}, 
-               {surname: "Dojo", name: "Master", salary: 205}];
+    var arrSalary = [200, 300, 1500, 5, 4500];
 
     function raiseSalary(){
       var raisedSalaries = dojo.map(arrSalary, function(item){
-        var newItem = dojo.clone(item);
-        newItem.salary += (newItem.salary/100)*10;
-        return newItem;
+        return (item/100)*10;
       });
 
       dojo.forEach(raisedSalaries, function(item, i){
         var li = dojo.doc.createElement("li");
-        li.innerHTML = i+1+". "+item.surname+", "+item.name+". New salary: "+item.salary;
+        li.innerHTML = i+1+". New salary: "+item;
         dojo.byId("filteredSalary-items").appendChild(li);
       });
 
       dojo.forEach(arrSalary, function(item, i){
         var li = dojo.doc.createElement("li");
-        li.innerHTML = i+1+". "+item.surname+", "+item.name+". Old salary: "+item.salary;
+        li.innerHTML = i+1+". Old salary: "+item;
         dojo.byId("unFilteredSalary-items").appendChild(li);
       });
     }
