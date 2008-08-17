@@ -1,4 +1,4 @@
-#format #dojo_rst
+#format dojo_rst
 
 dojo.fx.wipeIn examples
 =======================
