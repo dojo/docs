@@ -11,6 +11,13 @@ dojox.grid
 :Version: beta
 :Authors: Scott J. Miles, Steve Orvell, Bryan Forbes
 
+Doj ogrid
+Dojogrid
+Dojogrid
+Dojogrid
+Dojogrid
+Dojogrid
+
 Examples
 --------
 
