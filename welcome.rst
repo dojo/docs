@@ -72,6 +72,7 @@ These pages cover both cases, and indicate how they are provided.
 * `dojo.html <dojo/html>`_
 * `dojo.json <dojo/json>`_
 * `dojo.lang <dojo/lang>`_
+* `dojo.map <dojo/map>`_
 * `dojo.NodeList <dojo/NodeList>`_
 * `dojo.window <dojo/window>`_
 * `dojo.xhr <dojo/xhr>`_
