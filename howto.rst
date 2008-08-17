@@ -39,6 +39,11 @@ As a last standard item you should insert version info::
   :Version: targeted Dojo version
   :Author: Optional module author
 
+And we should also include a TOC if our page is getting long::
+
+  .. contents::
+    :depth: 3
+
 Links
 -----
 
