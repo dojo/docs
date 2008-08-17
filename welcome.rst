@@ -151,6 +151,10 @@ These sections cover the available projects shipped with the Dojo Toolkit
 
 * `dojox.highlight <dojox/highlight>`_
 
+* `dojox.fx <dojox/fx>`_
+
+  * `dojox.fx.wipeTo <dojox.fx.wipeTo>`_
+
 ----
 
 DojoC
