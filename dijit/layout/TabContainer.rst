@@ -7,6 +7,9 @@ dijit.layout.TabContainer
 :Status: Contributed, Draft
 :Version: 1.0
 
+.. contents::
+   :depth: 3
+
 A TabContainer is a container that has multiple panes, but shows only one pane at a time. There are a set of tabs corresponding to each pane, where each tab has the title (aka label) of the pane, and optionally a close button.
 
 Basic Examples
