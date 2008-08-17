@@ -11,8 +11,8 @@ dojo.fx.wipeIn
 
 Dojox.fx.wipeTo lets you wipe the size of a node to a defined size. 
 
-Wiping in a node with "display: none; height: 200px; position: absolute;"
--------------------------------------------------------------------------
+Wiping in a node with "display: none; position: absolute;"
+----------------------------------------------------------
 
 .. cv-compound::
 
