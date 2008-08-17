@@ -6,7 +6,7 @@ Welcome to the official documentation pages of the DojoToolkit
 :Status: Draft
 
 .. contents::
-    :depth: 2
+    :depth: 3
 
 .. image:: http://media.dojocampus.org/images/docs/logodojocdocssmall.png
    :alt: Dojo Documentation
