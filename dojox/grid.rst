@@ -4,12 +4,12 @@
 dojox.grid
 ==========
 
+.. contents::
+    :depth: 2
+
 :Status: Contributed, Draft
 :Version: beta
 :Authors: Scott J. Miles, Steve Orvell, Bryan Forbes
-
-.. contents::
-    :depth: 2
 
 Examples
 --------
