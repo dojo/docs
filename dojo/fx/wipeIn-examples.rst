@@ -26,7 +26,8 @@ Wiping in a node with "display: none; height: 200px; position: absolute;"
         duration: 3000, 
         beforeBegin: function(node){
           console.log(node);
-        }
+        },
+        height: '200px',
       }).play();
     }
     </script>
