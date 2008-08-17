@@ -12,8 +12,9 @@ dojo.fx.wipeIn examples
 Wiping in a node with "display: none; position: absolute;"
 ----------------------------------------------------------
 
-When you are trying to wipe in a node to a fixed height or width you have to use `dojox.fx.wipeTo <dojox.fx.wipeTo>`_, 
-Also note that the padding of the content which gets wiped in is set on s separate inner node. This ensures that you don't get weird x-browser behaviour.
+When you are trying to wipe in a node to a fixed height or width you have to use `dojox.fx.wipeTo <dojox.fx.wipeTo>`_.
+ 
+Note that the padding of the content which gets wiped in is set on s separate inner node. This ensures that you don't get weird x-browser behaviour.
 
 .. cv-compound::
 
