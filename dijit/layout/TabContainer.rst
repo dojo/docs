@@ -15,7 +15,8 @@ A TabContainer is a container that has multiple panes, but shows only one pane a
 Basic Examples
 --------------
 
-First, We'll demonstrate a programatic TabContainer creation from existing markup:
+First, We'll demonstrate a programatic TabContainer creation from existing markup.
+Note that the tabs all have a fixed height.
 
 .. cv-compound::
  
