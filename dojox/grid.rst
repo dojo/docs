@@ -8,6 +8,9 @@ dojox.grid
 :Version: beta
 :Authors: Scott J. Miles, Steve Orvell, Bryan Forbes
 
+.. contents::
+    :depth: 2
+
 Examples
 --------
 
