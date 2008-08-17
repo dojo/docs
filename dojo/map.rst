@@ -23,7 +23,7 @@ This example shows you how to use dojo.map with a simple array. All values of th
 
     var arrValues = [1,2,3,4,5,6,7,8,9,10]
 
-    function raiseSalary(){
+    function mapArray(){
       var doubleValue = dojo.map(arrValues, function(item){
         return item*2;
       });
@@ -44,7 +44,7 @@ This example shows you how to use dojo.map with a simple array. All values of th
 
   .. cv :: html
 
-    <button dojoType="dijit.form.Button" onClick="doubleValue()">Run dojo.map()</button>
+    <button dojoType="dijit.form.Button" onClick="mapArray()">Run dojo.map()</button>
     <div style="width: 300px; float: left; margin-top: 10px;">
     Values before running dojo.map()
     <ul id="arrValues-items">
