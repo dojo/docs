@@ -9,8 +9,8 @@ dojo.fx.wipeIn examples
 :Status: Draft
 :Version: 1.2
 
-Wiping in a node with "display: none; height: 200px; position: absolute;"
--------------------------------------------------------------------------
+Wiping in a node with "display: none; position: absolute;"
+----------------------------------------------------------
 
 .. cv-compound::
 
@@ -33,7 +33,7 @@ Wiping in a node with "display: none; height: 200px; position: absolute;"
 
   .. cv:: html
 
-    <div style="height: 400px;">
+    <div style="height: 100px;">
       <button dojoType="dijit.form.Button" onClick="wipeInOne">Wipe in</button>
-      <div id="wipeDisplayNode" style="height: 200px; background: #ccc; padding: 10px; display: none;">Hi friends</div>
+      <div id="wipeDisplayNode" style="position: absolutebackground: #ccc; padding: 10px; display: none;">Hi friends</div>
     </div>
