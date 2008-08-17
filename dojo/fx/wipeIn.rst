@@ -11,3 +11,8 @@ dojo.fx.wipeIn
 
 Examples
 --------
+
+More examples
+-------------
+
+`More specific examples <dojo/fx/wipeIn-examples>`_ and use cases are available.
