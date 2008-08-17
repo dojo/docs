@@ -23,10 +23,7 @@ Wiping in a node with "display: none; position: absolute;"
     function wipeInOne(){
       dojo.fx.wipeIn({
         node: "wipeDisplayNode", 
-        duration: 300, 
-        beforeBegin: function(node){
-          console.log(node);
-        },
+        duration: 300
       }).play();
     }
     </script>
@@ -35,5 +32,5 @@ Wiping in a node with "display: none; position: absolute;"
 
     <div style="height: 100px;">
       <button dojoType="dijit.form.Button" onClick="wipeInOne">Wipe in</button>
-      <div id="wipeDisplayNode" style="position: absolute; top: 50px; background: #ccc; display: none;">Hi friends<br />We like dojofx. don't we?</div>
+      <div id="wipeDisplayNode" style="position: absolute; top: 50px; background: #ccc; display: none; padding: 10px;">Hi friends<br />We like dojofx. don't we?</div>
     </div>
