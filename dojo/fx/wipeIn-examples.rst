@@ -18,6 +18,7 @@ Wiping in a node with "display: none; height: 200px; position: absolute;"
 
     <script type="text/javascript">
     dojo.require("dojo.fx");
+    dojo.require("dijit.form.Button");
 
     function wipeInOne(){
       dojo.fx.wipeIn({node: "wipeDisplayNode"})
