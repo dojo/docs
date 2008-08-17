@@ -21,7 +21,13 @@ Wiping in a node with "display: none; height: 200px; position: absolute;"
     dojo.require("dijit.form.Button");
 
     function wipeInOne(){
-      dojo.fx.wipeIn({node: "wipeDisplayNode"})
+      dojo.fx.wipeIn({
+        node: "wipeDisplayNode", 
+        duration: 3000, 
+        beforeBegin: function(node){
+          console.log(node);
+        }
+      })
     }
     </script>
 
