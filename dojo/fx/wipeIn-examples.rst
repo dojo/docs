@@ -23,11 +23,10 @@ Wiping in a node with "display: none; height: 200px; position: absolute;"
     function wipeInOne(){
       dojo.fx.wipeIn({
         node: "wipeDisplayNode", 
-        duration: 3000, 
+        duration: 300, 
         beforeBegin: function(node){
           console.log(node);
         },
-        height: '200px',
       }).play();
     }
     </script>
