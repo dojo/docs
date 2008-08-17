@@ -183,7 +183,7 @@ Another great funtion, Dojo is providing is dojo.map. dojo.map lets you run a fu
 
     function raiseSalary(){
       var raisedSalaries = dojo.map(arrSalary, function(item){
-        return (item/100)*10;
+        return item+(item/100)*10;
       });
 
       dojo.forEach(raisedSalaries, function(item, i){
@@ -215,6 +215,8 @@ Another great funtion, Dojo is providing is dojo.map. dojo.map lets you run a fu
 
     </ul>
     </div>
+
+For complete documentation and more examples please check the `dojo.map documentation <dojo/map>`_
 
 dojo.some
 ---------
