@@ -12,6 +12,52 @@ dojo.map
 Examples
 --------
 
+This example shows you how to use dojo.map with a simple array. All values of the array will get doubled:
+
+.. cv-compound::
+
+  .. cv :: javascript
+
+    <script type="text/javascript">
+    dojo.require("dijit.form.Button"); // this is just to make the demo look nicer
+
+    var arrValues = [1,2,3,4,5,6,7,8,9,10]
+
+    function raiseSalary(){
+      var doubleValue = dojo.map(arrValues, function(item){
+        return item*2;
+      });
+
+      dojo.forEach(doubleValue, function(item){
+        var li = dojo.doc.createElement("li");
+        li.innerHTML = item;
+        dojo.byId("arrValuesAfter-items").appendChild(li);
+      });
+
+      dojo.forEach(arrValues, function(item){
+        var li = dojo.doc.createElement("li");
+        li.innerHTML = item;
+        dojo.byId("arrValues-items").appendChild(li);
+      });
+    }
+    </script>
+
+  .. cv :: html
+
+    <button dojoType="dijit.form.Button" onClick="raiseSalary()">Run dojo.map()</button>
+    <div style="width: 300px; float: left;">
+    Values before running dojo.map()
+    <ul id="arrValues-items">
+
+    </ul>
+    </div>
+    <div style="width: 300px; float: left;">
+    Values after running dojo.map()
+    <ul id="arrValuesAfter-items">
+
+    </ul>
+    </div>
+
 This example shows you how to use dojo.map with objects. In JavaScript, objects are references, so you can not just change a value of a property without modifying the object itself. Luckily Dojo provides you with a method to clone objects: `dojo.clone <dojo/clone>`_
 
 .. cv-compound::
