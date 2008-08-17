@@ -122,6 +122,9 @@ This is a plain TabContainer with three tabs and flexible height using the doLay
     <!-- end of the div -->
     </div>
 
+More examples
+-------------
+
 There are several more examples of basic use cases `available <TabContainer-examples>`_ 
 
 Like `dijit.layout.StackContainer </dijit/layout/StackContainer>`_, TabContainer works by using a simple ``.addChild``, ``.removeChild``, and ``.selectChild`` API, all accepting a widget to be acted upon. 
