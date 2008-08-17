@@ -33,6 +33,6 @@ Wiping in a node with "display: none; position: absolute;"
     <div style="height: 110px;">
       <button dojoType="dijit.form.Button" onClick="wipeInOne">Wipe in</button>
       <div id="wipeDisplayNode" style="position: absolute; top: 50px; background: #ccc; display: none;">
-        <div style=" padding: 10px;"<Hi friends<br />We like dojofx. don't we?</div>
+        <div style=" padding: 10px;">Hi friends<br />We like dojofx. don't we?</div>
       </div>
     </div>
