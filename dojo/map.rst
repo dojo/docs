@@ -12,7 +12,7 @@ dojo.map
 Examples
 --------
 
-This example shows you how to use dojo.map with objects. In JavaScript are references, so you can not just change a value of a property without modifying the object itself. Luckily Dojo provides you with a method to clone objects: `dojo.clone <dojo/clone>`_
+This example shows you how to use dojo.map with objects. In JavaScript, objects are references, so you can not just change a value of a property without modifying the object itself. Luckily Dojo provides you with a method to clone objects: `dojo.clone <dojo/clone>`_
 
 .. cv-compound::
 
