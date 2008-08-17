@@ -3,11 +3,11 @@
 dojo.fx.wipeIn examples
 =======================
 
-.. contents::
-    :depth: 3
-
 :Status: Draft
 :Version: 1.2
+
+.. contents::
+    :depth: 3
 
 Wiping in a node with "display: none; position: absolute;"
 ----------------------------------------------------------
