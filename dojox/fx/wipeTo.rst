@@ -24,6 +24,7 @@ Wiping in a node with "display: none; height: 200px; position: absolute;"
       dojox.fx.wipeTo({
         node: "wipeDisplayNode", 
         duration: 300, 
+        height: "200px",
         beforeBegin: function(node){
           console.log(node);
         },
