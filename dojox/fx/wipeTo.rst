@@ -1,13 +1,15 @@
 #format dojo_rst
 
-dojo.fx.wipeIn examples
-=======================
+dojo.fx.wipeIn
+==============
 
 .. contents::
     :depth: 3
 
 :Status: Draft
 :Version: 1.2
+
+Dojox.fx.wipeTo lets you wipe the size of a node to a defined size. 
 
 Wiping in a node with "display: none; height: 200px; position: absolute;"
 -------------------------------------------------------------------------
