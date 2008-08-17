@@ -52,3 +52,24 @@ Examples
         margin: 0;
       }
     </style>
+
+Selecting data
+--------------
+
+To get the current selection of the grid simply use following code
+
+Sorting data at the server
+--------------------------
+
+Adding, Editing, Deleting data
+------------------------------
+
+Grid allows you to edit your data easily and send the changed values back to your server
+
+Large datasets
+--------------
+
+How to retrieve large data from the server
+
+Filtering data
+--------------
