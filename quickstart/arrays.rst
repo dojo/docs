@@ -191,7 +191,7 @@ Another great funtion, Dojo is providing is dojo.map. dojo.map lets you run a fu
       var raisedSalaries = dojo.map(arrSalary, function(item){
         var newItem = dojo.clone(item);
         newItem.salary += (newItem.salary/100)*10;
-        return item;
+        return newItem;
       });
 
       dojo.forEach(raisedSalaries, function(item, i){
