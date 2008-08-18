@@ -1,6 +1,6 @@
 #format dojo_rst
 
-dijit.form.DateTextBox
+dijit.form.TimeTextBox
 ======================
 
 :Status: Draft
