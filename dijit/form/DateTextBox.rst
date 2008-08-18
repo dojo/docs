@@ -31,65 +31,53 @@ Example
 		required="true" />
         <label for="date1">Drop down Date box</label>
 
+Standard Date Format
+--------------------
+One universal problem with dates is they can be written so many different ways.  In Great Britain, "5/8/2008" means August 5th where in the U.S. 
+it means May 8th.  Fortunately, Dojo respects the browser's locale so that the date will be properly parsed.  
 
+The trouble is your application does not have a locale.  If you write the attribute ``value='5/8/2008'``, how does Dojo know what you mean?  To prevent this ambiguity, Dojo allows only one date format: the familiar UNIX date format  ``yyyy-mm-dddThh:mm:ss``.  For example:
+
+* 2007-12-25T00:00:30 means 30 seconds after midnight on December 25, 2007.
+* 2007-05-08T17:30:00 means 5:30 PM on May 8, 2007
+* 2003-04-22 means midnight April 22, 2003 
+
+UNIX date format values sort properly as strings, which make them nice for things like ``dojox.grid <dojox/grid>`_.
 
 Sending and Receiving Server Formats
 ------------------------------------
 
-Patterns given as constraints in a DateTextBox or NumberBox only apply to the on-screen value, not the value received or sent to the server. Dojo encourages the use of standard, locale-neutral formats when marshalling data as best practice.  In some cases, the receiving application may have special requirements.  A shim on the server can do the necessary translation, but it is also possible to create a custom widget to use a different format.  For example when Oracle database processes dates, by default it insists on dd-MMM-yyyy format in English, as in 01-APR-2006.  If you wish to send it in this format, you can override the serialize method of DateTextBox.  Here's an example:
+Ideally, your server application will send and receive dates in the UNIX standard format.  But you may not be in control of that piece, so how do you get around it?  For example when Oracle database processes dates, by default it insists on dd-MMM-yyyy format in English, as in 01-APR-2006.  
+
+To accept dates from the server in this format, you can create your own widget class which overrides the setValue method of DateTextBox.  (See `dijit <dijit>`_ for details on creating your own widgets).  Here's an example:
 
 .. code-block:: javascript
    :linenos:
 
-       dojo.require("dijit.form.DateTextBox");
-       dojo.declare("OracleDateTextBox",[dijit.form.DateTextBox], {
+   dojo.declare("OracleDateTextBox", [dijit.form.DateTextBox],
+      setValue: function(unparsedValue) {
+          this.value = dojo.date.locale.parse(
+              unparsedValue,
+              {selector: 'date', datePattern: 'dd-MMM-yyyy'}
+          );
+      })
+      // more to come...
+
+To do the reverse - writing back to the server in Oracle format - you override the serialize method:
+
+.. code-block:: javascript
+   :linenos:
+
           serialize: function(d, options) {
              return dojo.date.locale.format(d, {selector:'date', datePattern:'dd-MMM-yyyy'}).toLowerCase();
            }
        });
 
-.. code-block:: javascript
-   :linenos:
-       
-       <input dojoType="OracleDateTextBox" name="mydate" value="2006-04-01"/>
-
-You can also pull the OracleDateTextBox widget into a module and dojo.require it in your pages.  Similar customization is possible with numbers, although the default Javascript number representation tends to be less of an issue.
-
-Since Dojo is open source and the widgets are fully customizable, if you really want to use a custom protocol to communicate to and from a server, you can simply override the necessary methods.  Here's an example
-of a DateTextBox subclass that uses a custom date format.
-
-.. code-block:: javascript
-   :linenos:
-
-        dojo.require("dijit.form.DateTextBox");
-        // subclass DateTextBox to allow the initial value to be specified
-        // as MM/dd/y instead of yyyy-MM-dd in the markup
-        dojo.addOnLoad(function(){
-                dojo.declare("altDateTextBox", dijit.form.DateTextBox, {
-                        serialize: function(value, constraints){
-                                // overrides to send the date to the server with a format of constraints.datePattern
-                                // instead of calling dojo.date.stamp.toISOString
-                                return dojo.date.locale.format(value, constraints);
-                        },
-
-                        postMixInProperties: function(){
-                                this.inherited(arguments);
-                                this.constraints.datePattern = "MM/dd/y";
-                                if(this.srcNodeRef){
-                                        // reparse the value attribute using constraints.datePattern
-                                        // instead of calling dojo.date.stamp.fromISOString
-                                        var item = this.srcNodeRef.attributes.getNamedItem('value');
-                                        if(item){
-                                                this.value = dojo.date.locale.parse(item.value, this.constraints);
-                                        }
-                                }
-                        }
-                });
-                dojo.parser.parse();
-        });
+Finally, you can use this new widget class programmatically or declaratively
 
 .. code-block:: html
    :linenos:
-	
-        <input id="markup" dojoType="altDateTextBox" value="12/31/2007">
-        <button onclick="alert('value serialized to ' + dijit.byId('markup').toString());return false">Serialize</button>
+       
+       <input dojoType="OracleDateTextBox" name="mydate"/>
+
+In all cases, the DateTextBox looks and works exactly the same to the user.
