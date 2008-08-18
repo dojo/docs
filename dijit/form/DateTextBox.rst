@@ -42,7 +42,7 @@ The trouble is your application does not have a locale.  If you write the attrib
 * 2007-05-08T17:30:00 means 5:30 PM on May 8, 2007
 * 2003-04-22 means midnight April 22, 2003 
 
-UNIX date format values sort properly as strings, which make them nice for things like ``dojox.grid <dojox/grid>`_.
+UNIX date format values sort properly as strings, which make them nice for things like `dojox.grid <dojox/grid>`_.
 
 Sending and Receiving Server Formats
 ------------------------------------
@@ -68,16 +68,33 @@ To do the reverse - writing back to the server in Oracle format - you override t
 .. code-block:: javascript
    :linenos:
 
-          serialize: function(d, options) {
-             return dojo.date.locale.format(d, {selector:'date', datePattern:'dd-MMM-yyyy'}).toLowerCase();
-           }
-       });
+      serialize: function(d, options) {
+        return dojo.date.locale.format(d, {selector:'date', datePattern:'dd-MMM-yyyy'}).toLowerCase();
+      }
+   });
 
 Finally, you can use this new widget class programmatically or declaratively
 
 .. code-block:: html
    :linenos:
        
-       <input dojoType="OracleDateTextBox" name="mydate"/>
+   <input dojoType="OracleDateTextBox" name="mydate"/>
 
 In all cases, the DateTextBox looks and works exactly the same to the user.
+
+Changing Constraints on the Fly
+-------------------------------
+DateTextBox obeys the constraints you give, much like `dijit.form.NumberTextBox <dijit/form/NumberTextBox>`_  Sometimes you may need to change these constraints based on
+user input.  To do this, you can set new constraints on the widget, but the catch is you must use JavaScript dates.
+
+For example, this DateTextBox will not allow you to enter a day before today:
+
+.. cv-compound::
+
+Describe what you're doing.
+
+  ..cv:: javascript
+  :label: Create the DateTextBox programmatically
+
+  ..cv:: html
+  :label:
