@@ -32,8 +32,6 @@ Example
         <label for="date1">Drop down Date box</label>
 
 
-TODO 
-
 
 Sending and Receiving Server Formats
 ------------------------------------
