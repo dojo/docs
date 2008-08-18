@@ -38,7 +38,9 @@ Dojo Book Outline
     * `Dijit NumberSpinner <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/number-spinner>`_. maps to `NumberSpinner <dijit/form/NumberSpinner>`_ [[CraigRiecke]].
     * `Dijit Slider <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/slider>`_. maps to: `Slider <dijit/form/Slider>`_
     * `Dijit Textarea <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/resizeable-text-area>`_. maps to: `Textares <dijit/form/Textarea>`_
-    * `Dijit TextBox family - Validation, Currency, Number, Date, Time <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/textbox-validating-currency-number>`_. maps to: `Textbox <dijit/form/TextBox>`_  [[CraigRiecke]]
+    * `Dijit TextBox family - Validation, Currency, Number, Date, Time <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/textbox-validating-currency-number>`_. maps to: `Textbox <dijit/form/TextBox>`_,  
+       `ValidationTextbox <dijit/form/ValidationTextBox>`_, `CurrencyTextbox <dijit/form/CurrencyTextBox>`_, `NumberTextbox <dijit/form/NumberTextBox>`_,
+       `DateTextbox <dijit/form/DateTextBox>`_ and `TimeTextbox <dijit/form/TimeTextBox>`_ [[CraigRiecke]]
 
   * `Dijit Layout <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout>`_.
 
