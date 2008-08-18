@@ -11,22 +11,7 @@ dojox.grid
 :Version: beta
 :Authors: Scott J. Miles, Steve Orvell, Bryan Forbes
 
-Doj ogrid
-Dojogrid
-Dojogrid
-Dojogrid
-Dojogrid
-DojogridDoj ogrid
-Dojogrid
-Dojogrid
-Dojogrid
-Dojogrid
-DojogridDoj ogrid
-Dojogrid
-Dojogrid
-Dojogrid
-Dojogrid
-Dojogrid
+Grids are familiar in the client/server development world. Basically a grid is a kind of mini spreadsheet, commonly used to display details on master-detail forms. From HTML terms, a grid is a "super-table" with its own scrollable viewport.
 
 Examples
 --------
