@@ -3,6 +3,12 @@
 dojox.highlight
 ===============
 
+:Status: Draft
+:Version: 1.2
+
+..contents::
+  :depth: 3
+
 This project provides client-side syntax highlighting for a number of languages, and is more or less a direct port of Ivan Sagalaev's Highlight.js engine, contributed under CLA.
 
 To use the Highlight engine, require it into your page, along with any appropriate language packs:
