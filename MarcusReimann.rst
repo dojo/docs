@@ -3,7 +3,7 @@
 == Marcus Reimann ==
 
 website:
-`http://dojotoolkit-forum.de <http://dojotoolkit-forum.de>`_.
+[[http://dojotoolkit-forum.de|http://dojotoolkit-forum.de]]
 ...
 
 ----
