@@ -71,7 +71,7 @@ To get the current selection of the grid simply use following code
     <script type="text/javascript">
       dojo.require("dojox.grid.DataGrid");
       dojo.require("dojox.data.CsvStore");
-      dojo.require("dijit.from.Button");
+      dojo.require("dijit.form.Button");
     </script>
 
   .. cv:: html
