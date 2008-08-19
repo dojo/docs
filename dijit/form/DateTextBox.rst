@@ -47,8 +47,20 @@ UNIX date format values sort properly as strings, which make them nice for thing
 Sending and Receiving Server Formats
 ------------------------------------
 
-Ideally, your server application will send and receive dates in the UNIX standard format.  But you may not be in control of that piece, so how do you get around it?  For example when Oracle database processes dates, by default it insists on dd-MMM-yyyy format in English, as in 01-APR-2006.  
+Ideally, your server application will send and receive dates in the UNIX standard format.  But you may not be in control of that piece, so how do you get around it?  For example when Oracle database processes dates, by default it insists on dd-MMM-yyyy format in English, as in 01-APR-2006. 
 
+One common anti-solution is to set the datePattern constraint:
+
+.. code-block :: html
+   :linenos:
+
+   <!-- DOESN'T WORK!!  -->
+   <input dojoType="dijit.form.DateTextBox" name="effectiveDateOfChange" 
+          id="effectiveDateOfChange" constraints="{datePattern:'dd-MMM-yyyy'}"/> 
+
+Unfortunately, this only affects how the date is parsed and formatted in the box itself. As such, it's not very wise because it forces
+people from every country to use the same format, which may be totally unfamiliar.  So, bad idea.
+          
 To accept dates from the server in this format, you can create your own widget class which overrides the setValue method of DateTextBox.  (See `dijit <dijit>`_ for details on creating your own widgets).  Here's an example:
 
 .. code-block:: javascript
@@ -98,3 +110,8 @@ Describe what you're doing.
 
   ..cv:: html
   :label:
+
+Two-Digit Year Format
+---------------------
+
+TODO: http://dojotoolkit.org/forum/dijit-dijit-0-9/dijit-support/datetextbox-datepattern-constraint-2-digit-year-possible
