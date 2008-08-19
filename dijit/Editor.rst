@@ -35,3 +35,34 @@ Examples
         The following HTML should appear as source: &lt;INPUT TYPE="IMAGE" SRC="javascript:alert('no scripting attacks')"&gt;
       </div>
     </div>
+
+Available Plugins
+-----------------
+
+This is a list of built-in verbs of dijit.Editor:
+
+* "undo"
+* "redo"
+* "cut"
+* "copy"
+* "paste"
+* "selectAll"
+* "bold"
+* "italic"
+* "underline"
+* "strikethrough"
+* "subscript"
+* "superscript"
+* "removeFormat"
+* "insertOrderedList"
+* "insertUnorderedList"
+* "insertHorizontalRule"
+* "indent"
+* "outdent"
+* "justifyLeft"
+* "justifyRight"
+* "justifyCenter"
+* "justifyFull"
+* "createLink"
+* "unlink"
+* "delete" 
