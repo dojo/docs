@@ -62,7 +62,7 @@ Examples
 Selecting data
 --------------
 
-To get the current selection of the grid simply use following code
+To get the current selection of the grid you can use the method yourGrid.selection.getSelected(). You will get an array of the selected items. The following code shows an example:
 
 .. cv-compound::
 
@@ -79,6 +79,12 @@ To get the current selection of the grid simply use following code
     <span dojoType="dojox.data.CsvStore" 
       jsId="csvStore2" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/tests/support/movies.csv">
     </span>
+
+    <div>
+      Select a single row or multiple rows in the Grid (click on the Selector on the left side of each row). 
+      After that, a click on the Button "get all Selected Items" will show you each attribute/value of the
+      selected rows.
+    </div>
 
     <table dojoType="dojox.grid.DataGrid"
         store="csvStore2"
