@@ -67,6 +67,10 @@ These pages cover both cases, and indicate how they are provided.
 * `dojo.browser <dojo/browser>`_
 * `dojo.Color <dojo/Color>`_
 * `dojo.declare <dojo/declare>`_
+* `dojo.date <dojo/date>`_
+
+  * `dojo.date.locale.format <dojo/date/locale/format>`_
+
 * `dojo.Deferred <dojo/Deferred>`_
 * `dojo.event <dojo/event>`_
 * `dojo.fx <dojo/fx>`_
