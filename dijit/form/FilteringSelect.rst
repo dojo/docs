@@ -14,7 +14,7 @@ The dijit FilteringSelect is the replacement for the native <select> element. A 
 Examples
 --------
 
-Programmatic FilteringSelect using remote data
+Programmatic using remote data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. cv-compound::
@@ -34,3 +34,20 @@ Programmatic FilteringSelect using remote data
   .. cv:: html
 
     <div id="stateSelect"></div>
+
+Declarative using native select
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+      dojo.require("dijit.form.FilteringSelect");
+    </script>
+
+  .. cv:: html
+
+    <select dojoType="dijit.form.FilteringSelect" id="stateSelect">
+      <option>Apples</option>
+      <option>Peers</option>
+    </select>
