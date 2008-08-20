@@ -33,5 +33,11 @@ Following examples lists doc tests, to see the results of them click on the "Run
   </script>
   <div dojoType="dojox.widget.DocTester">
     >>> dojo.date.locale.format(new Date(2007,2,23,6,6,6), {datePattern: "yyyyMMdd", selector: "date"});
-    "20070123"
+    "20070323"
+    >>> dojo.date.locale.format(new Date(2007,2,23,6,6,6), {datePattern: "yyyy-MM-dd", selector: "date"});
+    "2007-03-23"
+    >>> dojo.date.locale.format(new Date(2007,2,23,6,6,6), {datePattern: "yyMMdd", selector: "date"});
+    "070323"
+    >>> dojo.date.locale.format(new Date(2007,2,23,6,6,6), {datePattern: "dd.MM.yy", selector: "date"});
+    "23.03.07"
   </div>
