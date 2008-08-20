@@ -85,7 +85,8 @@ To get the current selection of the grid simply use following code
         query="{ Title: '*' }"
         clientSort="true"
         style="width: 400px; height: 200px;"
-        rowSelector="20px">
+        rowSelector="20px"
+        jsId="grid2">
       <thead>
         <tr>
           <th width="300px" field="Title">Title of Movie</th>
@@ -100,7 +101,7 @@ To get the current selection of the grid simply use following code
     <div dojoType="dijit.form.Button">
       get all Selected Items
       <script type="dojo/method" event="onClick" args="evt">
-        var items = csvStore2.selection.getSelected();
+        var items = grid2.selection.getSelected();
         if(items.length){
           dojo.forEach(items, function(selectedItem) {
             if(selectedItem !== null) {
