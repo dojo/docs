@@ -92,6 +92,10 @@ Dijit is Dojo's UI Library, and lives as a separate namespace ``dijit``. Dijit r
 * `dijit.Dialog <dijit/Dialog>`_
 * `dijit.Editor <dijit/Editor>`_
 * `dijit.Tree <dijit/Tree>`_
+
+  * `dijit.tree.Model <dijit/tree/Model>`_
+  * `dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`_
+
 * `dijit.form <dijit/form>`_
 
   * `dijit.form.Form <dijit/form/Form>`_
