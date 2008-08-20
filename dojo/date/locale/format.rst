@@ -40,13 +40,13 @@ Following examples lists doc tests, to see the results of them click on the "Run
     "070323"
     >>> dojo.date.locale.format(new Date(2007,2,23,6,6,6), {datePattern: "dd.MM.yy", selector: "date"});
     "23.03.07"
-    >>> dojo.date.locale.format(new Date(2007,2,23,15,23,6), {timePattern: "hhmmss", selector: "time"});
+    >>> dojo.date.locale.format(new Date(2007,2,23,15,23,6), {timePattern: "HHmmss", selector: "time"});
     "152306"
-    >>> dojo.date.locale.format(new Date(2007,2,23,15,23,6), {datePattern: "hmmss", selector: "time"});
+    >>> dojo.date.locale.format(new Date(2007,2,23,15,23,6), {timePattern: "hmmss", selector: "time"});
     "3236"
-    >>> dojo.date.locale.format(new Date(2007,2,23,15,23,6), {datePattern: "hh:mm", selector: "time"});
+    >>> dojo.date.locale.format(new Date(2007,2,23,15,23,6), {timePattern: "HH:mm", selector: "time"});
     "15:23"
-    >>> dojo.date.locale.format(new Date(2007,2,23,15,23,6), {datePattern: "hh.mm", selector: "time"});
+    >>> dojo.date.locale.format(new Date(2007,2,23,15,23,6), {timePattern: "HH.mm", selector: "time"});
     "15.23"
     >>> dojo.date.locale.format(new Date(2007,2,23,15,23,6), {datePattern: "yyyyMMdd", timePattern: "Thhmmss"});
     "20070323T152306"
