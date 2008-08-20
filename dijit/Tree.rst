@@ -61,9 +61,14 @@ Sometimes you don't want that "Continents" top level node to show up, especially
 
   .. cv:: html
 
-    <div dojoType="dijit.Tree" id="mytree"
+    <div dojoType="dijit.Tree" id="mytree2"
       model="continentModel" showRoot="false">
     </div>
+
+
+Drag And Drop
+-------------
+TODO
 
 Icons
 -----
