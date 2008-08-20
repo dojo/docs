@@ -110,6 +110,8 @@ Dijit is Dojo's UI Library, and lives as a separate namespace ``dijit``. Dijit r
   * `dijit.form.DropDownButton <dijit/form/DropDownButton>`_
   * `dijit.form.CheckBox <dijit/form/CheckBox>`_
   * `dijit.form.Slider <dijit/form/Slider>`_
+  * `dijit.form.ComboBox <dijit/form/ComboBox>`_
+  * `dijit.form.FilteringSelect <dijit/form/FilteringSelect>`_
   * `dijit.form.TextBox <dijit/form/TextBox>`_
   * `dijit.form.NumberTextBox <dijit/form/NumberTextBox>`_
   * `dijit.form.CurrencyTextBox <dijit/form/CurrencyTextBox>`_
