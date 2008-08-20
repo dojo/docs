@@ -66,9 +66,9 @@ Note the "i" variable which returns the current position of an iteration
     <script type="text/javascript">
     dojo.require("dijit.form.Button"); // this is just to make the demo look nicer
 
-    var arr = ["apples", "kiwis", "pineapples"];
+    var arrFruit = ["apples", "kiwis", "pineapples"];
     function populateData(){
-      dojo.forEach(arr, function(item, i){
+      dojo.forEach(arrFruit, function(item, i){
         var li = dojo.doc.createElement("li");
         li.innerHTML = i+1+". "+item;
         dojo.byId("forEach-items").appendChild(li);
