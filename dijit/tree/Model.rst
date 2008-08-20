@@ -17,6 +17,18 @@ There are two model implementations included with Tree:
   * `dijit.tree.TreeStoreModel <dijit/tree/TreeStoreModel>`_: interface to a data store with a single item that represents the root of the tree.  For example, a data store of employees where the root is the CEO of the company.
   * `dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`_: interface to a data store with multiple top level items.  For example, a data store of places (countries, states, cities).  If the data store doesn't have a single root item ("world" in this example) then ForestStoreModel is the interface for it.
 
+The above models have the following functions:
+
+  * respond to queries from Tree widget about items and the hierarchy of items
+  * notify the tree when underlying items in the data store have changed; could be:
+
+    * new items
+    * deleted items
+    * changed items (for example, item name has changed)
+    * item's list of children has changed
+
+  * handle "writes" from the Tree back to the data store, by DnD.  DnD could be of items within the tree, or items dropped from an external location.
+
 Here's the API to implement your own model.
 
 .. code-block :: javascript
