@@ -10,7 +10,7 @@ dojo.date.locale.format
 .. contents::
   :depth: 3
 
-Dojo comes with a powerfule library to format your dates and times specifically to a given locale or as you would like using date/time patterns.
+Dojo comes with a powerful library to format your dates and times specifically to a given locale or as you would like using date/time patterns.
 
 Examples
 --------
