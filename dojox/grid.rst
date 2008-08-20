@@ -111,8 +111,8 @@ To get the current selection of the grid you can use the method yourGrid.selecti
         if(items.length){
           dojo.forEach(items, function(selectedItem) {
             if(selectedItem !== null) {
-              dojo.forEach(csvStore2.getAttributes(selectedItem), function(attribute) {
-                var value = csvStore2.getValues(selectedItem, attribute);
+              dojo.forEach(grid2.store.getAttributes(selectedItem), function(attribute) {
+                var value = grid2.store.getValues(selectedItem, attribute);
                 alert('attribute: ' + attribute + ', value: ' + value);
               }); // end forEach
             } // end if
