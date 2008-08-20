@@ -36,6 +36,7 @@ Programmatic using remote data
     <div id="stateSelect"></div>
 
 Declarative using native select
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. cv-compound::
 
