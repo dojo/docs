@@ -34,7 +34,7 @@ Examples
   .. cv:: html
 
     <div dojoType="dojo.data.ItemFileReadStore" jsId="continentStore"
-      url="http://docs.dojocampus.org/moin_static163/js/dojo/1.1.1/dijit/tests/_data/countries.json"></div>
+      url="http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/countries.json"></div>
     <div dojoType="dijit.tree.ForestStoreModel" jsId="continentModel" 
       store="continentStore" query="{type:'continent'}"
       rootId="continentRoot" rootLabel="Continents" childrenAttrs="children"></div>
