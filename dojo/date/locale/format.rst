@@ -48,6 +48,6 @@ Following examples lists doc tests, to see the results of them click on the "Run
     "15:23"
     >>> dojo.date.locale.format(new Date(2007,2,23,15,23,6), {timePattern: "HH.mm", selector: "time"});
     "15.23"
-    >>> dojo.date.locale.format(new Date(2007,2,23,15,23,6), {datePattern: "yyyyMMdd", timePattern: "hhmmss"});
+    >>> dojo.date.locale.format(new Date(2007,2,23,15,23,6), {datePattern: "yyyyMMdd", timePattern: "HHmmss"});
     "20070323 152306"
   </div>
