@@ -6,18 +6,17 @@ dijit.Tree
 :Status: Draft
 :Version: 1.2
 
-The trees we see in User Interfaces help sort out long, heirarchical lists. A file system is the classic example, with Windows using it in Explorer and Macintoshes with its folder windows. The Dijit tree widget is like that. The Tree widget itself is simple, but the real power comes in the data you pass - this represents the heirarchical structure of the tree. This data is fed by an implementation of the `tree model <dijit/tree/Model>`_, typically either the `TreeStoreModel <dijit/tree/TreeStoreModel>`_ or `ForestStoreModel <dijit/tree/ForestStoreModel>`_, both of which themselves interface with the powerful dojo.data API.
+The trees we see in User Interfaces help sort out long, hierarchical lists. A file system is the classic example, with Windows using it in Explorer and Macintoshes with its folder windows. The Dijit tree widget is like that. The Tree widget itself is simple, but the real power comes in the data you pass - this represents the heirarchical structure of the tree. This data is fed by an implementation of the `tree model <dijit/tree/Model>`_, typically either the `TreeStoreModel <dijit/tree/TreeStoreModel>`_ or `ForestStoreModel <dijit/tree/ForestStoreModel>`_, both of which themselves interface with the powerful dojo.data API.
 
 Dojo makes easy trees easy, and hard trees possible. In particular, you can:
 
-* Build rooted or rootless trees (forests)
-* Nest trees to an arbitrary depth ... each branch is independently expandible
+* Connect your tree to any dojo.data store implementing the Identity API,  with or without a single root item and with various ways to express parent/child relationships
+* Nest trees to an arbitrary depth ... each branch is independently expandable
 * Apply different icons to different leaf or branch classes
-* Connect your tree to any dojo.data store implementing the Identity API.
 * Attach code to events. Events fire when users expand, contract or click particular nodes.
-* Programmatically build trees. Add, remove or disable nodes programatically.
 * Manipulate the Dojo.data store directly, which manipulates the tree indirectly
 * Allow nodes to be dragged and dropped through the familiar Dojo DnD API.
+* Drag and drop onto the tree, which updates the data store indirectly
 
 
 Examples
@@ -47,3 +46,15 @@ Examples
             +", population=" + continentStore.getValue(item, "population"));
       </script>
     </div>
+
+
+Icons
+-----
+Like other dijits, the icon is expressed as a CSS class (which should load a background-image).  You specify the class per item by overriding getIconClass():
+
+  .. cv:: html
+
+		<script type="dojo/method" event="getIconClass" args="item, opened">
+  			if(item == this.model.root) return (opened ? "customFolderOpenedIcon" : "customFolderClosedIcon");
+			else return myStore.getValue(item, "type") + "Icon";
+		</script>
