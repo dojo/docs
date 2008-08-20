@@ -50,9 +50,6 @@ Examples
 
 Sometimes you don't want that "Continents" top level node to show up, especially if it's inside a TitlePane/AccordionPane/etc. with the label "Continents".  In that case you should set showRoot=false.   The item still exists in the model but it's hidden on the screen:
 
-Examples
---------
-
 .. cv-compound::
 
   .. cv:: javascript
