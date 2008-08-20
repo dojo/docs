@@ -1,8 +1,8 @@
 ## page was copied from dijit/TreeStoreModel
 #format dojo_rst
 
-dijit.TreeStoreModel
-====================
+dijit.tree.TreeStoreModel
+=========================
 
 The TreeStoreModel connects a data store with a single "root" item to a `dijit.Tree <dijit/Tree>`_.
 
