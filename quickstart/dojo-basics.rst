@@ -3,7 +3,7 @@
 Functions used Everywhere
 =========================
 
-It would be near impossible to explain any one aspect of the Dojo Toolkit without first explaining a few simple functions that appear literally *everywhere* within the codebase.  These a dojo-fundamentals, and should be memorized if possible. 
+It would be near impossible to explain any one aspect of the Dojo Toolkit without first explaining a few simple functions that appear literally *everywhere* within the codebase.  These are dojo-fundamentals, and should be memorized if possible. 
 
 dojo.require
 ------------
@@ -26,7 +26,7 @@ It may seem painful to require all modules, but Dojo rewards by:
 dojo.addOnLoad
 --------------
 
-This registers a function to be run when the document (and all `required </dojo/require>`_ dependencies) are ready. Simply pass it a function:
+This registers a function to be run when the document (and all `required <dojo/require>`_ dependencies) are ready. Simply pass it a function:
 
 .. code-block :: javascript
   
