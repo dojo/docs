@@ -35,6 +35,7 @@ If you've never used Dojo before, it is recommended you read the following secti
 
 * `How to Install the Dojo Toolkit <quickstart/install>`_
 * `Functions used *everywhere* <quickstart/dojo-basics>`_
+* `Widgets (dijit) Basics <quickstart/dijit>`_
 
 Getting started
 ---------------
