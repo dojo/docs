@@ -27,7 +27,7 @@ Programmatic FilteringSelect using remote data
 
       var store = new dojo.data.ItemFileReadStore({url: "http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/states.json"});       
       var filteringSelect = new dijit.form.FilteringSelect({id: "stateSelect", store: store}, "stateSelect");
-     </script>
+    </script>
 
   .. cv:: html
 
