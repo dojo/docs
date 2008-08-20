@@ -48,6 +48,32 @@ Examples
     </div>
 
 
+Sometimes you don't want that "Continents" top level node to show up, especially if it's inside a TitlePane/AccordionPane/etc. with the label "Continents".  In that case you should set showRoot=false.   The item still exists in the model but it's hidden on the screen:
+
+Examples
+--------
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+      dojo.require("dojo.data.ItemFileReadStore");
+      dojo.require("dijit.Tree");
+    </script>
+
+  .. cv:: html
+
+    <div dojoType="dojo.data.ItemFileReadStore" jsId="continentStore"
+      url="http://docs.dojocampus.org/moin_static163/js/dojo/1.1.1/dijit/tests/_data/countries.json"></div>
+    <div dojoType="dijit.tree.ForestStoreModel" jsId="continentModel" 
+      store="continentStore" query="{type:'continent'}"
+      rootLabel="this won't show up"></div>
+
+    <div dojoType="dijit.Tree" id="mytree"
+      model="continentModel" showRoot=false>
+    </div>
+
 Icons
 -----
 Like other dijits, the icon is expressed as a CSS class (which should load a background-image).  You specify the class per item by overriding getIconClass():
