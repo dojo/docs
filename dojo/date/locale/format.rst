@@ -42,12 +42,12 @@ Following examples lists doc tests, to see the results of them click on the "Run
     "23.03.07"
     >>> dojo.date.locale.format(new Date(2007,2,23,15,23,6), {timePattern: "HHmmss", selector: "time"});
     "152306"
-    >>> dojo.date.locale.format(new Date(2007,2,23,15,23,6), {timePattern: "hmmss", selector: "time"});
+    >>> dojo.date.locale.format(new Date(2007,2,23,15,23,6), {timePattern: "hmms", selector: "time"});
     "3236"
     >>> dojo.date.locale.format(new Date(2007,2,23,15,23,6), {timePattern: "HH:mm", selector: "time"});
     "15:23"
     >>> dojo.date.locale.format(new Date(2007,2,23,15,23,6), {timePattern: "HH.mm", selector: "time"});
     "15.23"
-    >>> dojo.date.locale.format(new Date(2007,2,23,15,23,6), {datePattern: "yyyyMMdd", timePattern: "Thhmmss"});
+    >>> dojo.date.locale.format(new Date(2007,2,23,15,23,6), {datePattern: "yyyyMMdd", timePattern: "hhmmss"});
     "20070323T152306"
   </div>
