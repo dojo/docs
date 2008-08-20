@@ -22,6 +22,12 @@ When you want to do custom formatting of dates or times you still use the dojo.d
 
 Following examples lists doc tests, to see the results of them click on the "Run tests" button just below the example.
 
+Also note that in JavaScript, counting of months starts at "0" so if you want to create following date: August 23rd 2034 you will have to do::
+
+  var myDate = new Date(2034,7,23);
+
+So don't get confused by the new Date() statements in the tests, the second parameter is the month and is always one number lower than the month you actually want.
+
 .. codeviewer::
   
   <style type="text/css">
