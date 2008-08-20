@@ -59,10 +59,10 @@ Examples
       }
     </style>
 
-Selecting data
---------------
+Working with selections
+-----------------------
 
-To get the current selection of the grid you can use the method yourGrid.selection.getSelected(). You will get an array of the selected items. The following code shows an example:
+To get the current selected rows of the grid, you can use the method yourGrid.selection.getSelected(). You will get an array of the selected items. The following code shows an example:
 
 .. cv-compound::
 
@@ -105,14 +105,26 @@ To get the current selection of the grid you can use the method yourGrid.selecti
     </table>
 
     <div dojoType="dijit.form.Button">
+      // Get all selected items from the Grid:
       get all Selected Items
       <script type="dojo/method" event="onClick" args="evt">
         var items = grid2.selection.getSelected();
         if(items.length){
+          // Iterate through the list of selected items.
+          // The current item is available in the variable 
+          // "selectedItem" within the following function:
           dojo.forEach(items, function(selectedItem) {
             if(selectedItem !== null) {
+              // Iterate through the list of attributes of each item.
+              // The current attribute is available in the variable
+              // "attribute" within the following function:
               dojo.forEach(grid2.store.getAttributes(selectedItem), function(attribute) {
+                // Get the value of the current attribute:
                 var value = grid2.store.getValues(selectedItem, attribute);
+                // Now, you can do something with this attribute/value pair.
+                // Our short example shows the attribute together
+                // with the value in an alert box, but we are sure, that
+                // you'll find a more ambitious usage in your own code:
                 alert('attribute: ' + attribute + ', value: ' + value);
               }); // end forEach
             } // end if
