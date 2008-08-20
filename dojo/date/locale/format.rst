@@ -27,7 +27,10 @@ Following examples lists doc tests, to see the results of them click on the "Run
   <style type="text/css">
     @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/widget/DocTester/DocTester.css"; 
   </style>
-  <script type="text/javascript">dojo.require("dojox.widget.DocTester");</script>
+  <script type="text/javascript">
+    dojo.require("dojox.widget.DocTester");
+    dojo.require("dojo.date.locale");
+  </script>
   <div dojoType="dojox.widget.DocTester">
     >>> dojo.date.locale.format(new Date(2007,2,23,6,6,6), {datePattern: "yyyyMMdd", selector: "date"});
     "20070123"
