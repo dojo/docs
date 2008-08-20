@@ -15,7 +15,7 @@ Examples
 --------
 
 Programmatic using remote data
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. cv-compound::
 
@@ -48,7 +48,7 @@ Declarative using native select
 
   .. cv:: html
 
-    <select dojoType="dijit.form.FilteringSelect" id="stateSelect">
+    <select dojoType="dijit.form.FilteringSelect" id="fruitSelect">
       <option>Apples</option>
       <option>Peers</option>
     </select>
