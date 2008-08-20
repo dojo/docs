@@ -92,7 +92,7 @@ To get the current selection of the grid simply use following code
           <th width="50px">Year</th>
         </tr>
         <tr>
-            <th colspan="2">Producer</th>
+          <th colspan="2">Producer</th>
         </tr> 
       </thead>
     </table>
@@ -103,9 +103,14 @@ To get the current selection of the grid simply use following code
         var items = csvStore2.selection.getSelected();
         if(items.length){
           dojo.forEach(items, function(selectedItem) {
-            console.dir(selectedItem);
-          }); 
-        }
+            if(selectedItem !== null) {
+              dojo.forEach(csvStore2.getAttributes(selectedItem), function(attribute) {
+                var value = csvStore2.getValues(selectedItem, attribute);
+                alert('attribute: ' + attribute + ', value: ' + value);
+              }); // end forEach
+            } // end if
+          }); // end forEach
+        } // end if
       </script>
     </div>
 
