@@ -100,7 +100,7 @@ To get the current selection of the grid simply use following code
     <div dojoType="dijit.form.Button">
       get all Selected Items
       <script type="dojo/method" event="onClick" args="evt">
-        var items = csvStore2.selection.getSelected();
+        var items = dijit.byId("csvStore2").selection.getSelected();
         if(items.length){
           dojo.forEach(items, function(selectedItem) {
             console.dir(selectedItem);
