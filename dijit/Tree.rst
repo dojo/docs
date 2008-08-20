@@ -52,7 +52,7 @@ Icons
 -----
 Like other dijits, the icon is expressed as a CSS class (which should load a background-image).  You specify the class per item by overriding getIconClass():
 
-  .. cv:: html
+  .. code-block ::  html
 
 		<script type="dojo/method" event="getIconClass" args="item, opened">
   			if(item == this.model.root) return (opened ? "customFolderOpenedIcon" : "customFolderClosedIcon");
