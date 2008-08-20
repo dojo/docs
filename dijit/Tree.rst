@@ -64,14 +64,8 @@ Examples
 
   .. cv:: html
 
-    <div dojoType="dojo.data.ItemFileReadStore" jsId="continentStore"
-      url="http://docs.dojocampus.org/moin_static163/js/dojo/1.1.1/dijit/tests/_data/countries.json"></div>
-    <div dojoType="dijit.tree.ForestStoreModel" jsId="continentModel" 
-      store="continentStore" query="{type:'continent'}"
-      rootLabel="this won't show up"></div>
-
     <div dojoType="dijit.Tree" id="mytree"
-      model="continentModel" showRoot=false>
+      model="continentModel" showRoot="false">
     </div>
 
 Icons
