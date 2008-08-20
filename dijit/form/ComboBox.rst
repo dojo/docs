@@ -48,7 +48,7 @@ Declarative using native select
 
   .. cv:: html
 
-    <select dojoType="dijit.form.ComboBox" id="stateSelect">
+    <select dojoType="dijit.form.ComboBox" id="fruitSelect">
       <option>Apples</option>
       <option>Peers</option>
     </select>
