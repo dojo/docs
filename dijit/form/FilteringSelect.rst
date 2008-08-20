@@ -24,9 +24,11 @@ Programmatic FilteringSelect using remote data
     <script type="text/javascript">
       dojo.require("dijit.form.FilteringSelect");
       dojo.require("dojo.data.ItemFileReadStore");
-
-      var store = new dojo.data.ItemFileReadStore({url: "http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/states.json"});       
-      var filteringSelect = new dijit.form.FilteringSelect({id: "stateSelect", store: store}, "stateSelect");
+      
+      dojo.addOnLoad(function(){
+        var store = new dojo.data.ItemFileReadStore({url: "http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/states.json"});       
+        var filteringSelect = new dijit.form.FilteringSelect({id: "stateSelect", store: store, searchAttr: "name"}, "stateSelect");
+      });
     </script>
 
   .. cv:: html
