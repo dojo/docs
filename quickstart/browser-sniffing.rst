@@ -25,7 +25,7 @@ Each variable is only defined if the specified browser is being used. For exampl
 
   if(dojo.isIE == 7){ // only IE7
     ...
-  ]
+  }
 
 Here's a live sample to show how it works:
 
