@@ -6,6 +6,9 @@ JavaScript events and Dojo
 :Status: Draft
 :Version: 1.2
 
+.. contents::
+    :depth: 3
+
 Dojo's event system offers a refreshing alternative to the normal JavaScript events. With Dojo, you connect functions to one another, creating a link that calls one function when another fires. 
 
 This means that you can connect a function of your own to:
@@ -293,3 +296,6 @@ Page Load and Unload
 Topic Based Events
 ------------------
 ``TODOC``
+
+Events with Dijit
+-----------------
