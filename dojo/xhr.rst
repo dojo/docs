@@ -26,7 +26,6 @@ dojo.xhr allows you to submit all the values of your Form without effort:
   .. cv:: javascript
 
     <script>
-        dojo.require("dojo.xhrGet");
         dojo.require("dijit.form.Form");
         dojo.require("dijit.form.Button");
         dojo.require("dijit.form.ValidationTextBox");
