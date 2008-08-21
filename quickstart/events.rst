@@ -295,7 +295,60 @@ Page Load and Unload
 
 Topic Based Events
 ------------------
-``TODOC``
+
+In addition to the simple event system created by <cite>dojo.connect</cite>, dojo offers support for anonymous publication and subscription of objects, via <cite>dojo.publish</cite> and <cite>dojo.subcribe</cite>. These methods allow a function to broadcast objects to any other function that has subscribed. This is dojo's topic system, and it makes it very easy to allow separate components to communicate without explicit knowledge of one another's internals.
+
+There are three functions that you need to understand to use dojo's topic system: <cite>dojo.publish</cite>, <cite>dojo.subscribe</cite>, and <cite>dojo.unsubscribe</cite> <cite>Dojo.publish</cite> calls any functions that are connected to the topic via <cite>dojo.subscribe</cite>, passing to those subscribed functions arguments that are published (see syntax for details). As one might expect, <cite>dojo.unsubscribe</cite> will cause a previously subscribed function to no longer be called when <cite>dojo.publish</cite> is called in the future
+
+How does it work?
+~~~~~~~~~~~~~~~~~
+
+Imagine that you run a running a conference, and there will be updates throughout the day. You could collect contact information for everyone at the beginning of the day, along with each person's interests. However, this would be a lot of logistical work. Instead, you decide to use your facility's Public Address System. When there is an update to the schedule, you announce "This is an update to the schedule: the Dojo training is full and we have added yet a third time slot for it tomorrow." When there is meal information, you announce "This is an update about food: we will be serving free ice cream in the main hall in five minutes." This way, anyone interested in your information can pay attention to any updates that could change their behavior. You don't need to know who is subscribing, and they don't need to fill out a bunch of paper work &mdash; it's a win-win.
+
+Example Code for Reference
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block :: javascript
+
+  function globalGuy(arg) { console.debug("Global Guy fired with arg " + arg); }
+    var someObject = {
+      bar: function(first, second) { console.debug("Bar fired with first of "+first+" and second of "+second); return 7; },
+    }
+  }
+
+Subscribing and Publishing Topics
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To connect globalGuy to the topic "globalEvents" and someObject.bar to "fullNames", you simply use ``dojo.subscribe``, as follows:
+
+.. code-block :: javascript
+
+  topics = [];
+  topics[0] = dojo.subscribe("globalEvents", null, globalGuy);
+  topics[1] = dojo.subscribe("fullNames", someObject, bar);
+
+Note that the following alternative form would also work:
+
+.. code-block :: javascript
+
+  topics = [];
+  topics[0] = dojo.subscribe("globalEvents", globalGuy);
+  topics[1] = dojo.subscribe("fullNames", someObject, "bar");
+
+To publish information to both of these topics, you pass ``dojo.publish`` the topic names and arrays of the arguments that you want to pass to subscribed functions, as follows
+
+.. code-block :: javascript
+
+  dojo.publish("globalEvents", ["data from an interesting source"]);
+  dojo.publish("fullNames", ["Alex", "Russell"]);
+
+To disconnect someObject.bar from its topic, you use ``dojo.unsubscribe``, just as you would ``dojo.disconnect``:
+
+.. code-block :: javascript
+  
+  dojo.unsubscribe(topics[1]);
 
 Events with Dijit
 -----------------
+
+``TODOC``
