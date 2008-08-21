@@ -18,7 +18,7 @@ Dojo provides a number of ``is`` variables, defined at runtime based on the user
     var pairs = dojo.map(["IE", "Mozilla", "FF", "Opera"], makePair);
     return "<dl>" + pairs.join() + "</dl>";
   }
-  dojo.declare("sniffer", dijit._Widget, {
+  dojo.declare("sniffer", [dijit._Widget, dijit._Templated] , {
     templateString: makeTemplate()
   });
   </script>
