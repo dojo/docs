@@ -89,7 +89,7 @@ Dojo Book Outline
   * `Modules <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/modules-and-namespaces>`_.
   * `Creating and Scripting Widgets <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/manipulating-widgets-through-code>`_.
   * `Writing Your Own Widget Class <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/manipulating-widgets-through-code/writing-your>`_.
-  * `The Event System <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/event-system>`_. maps to: `Events <quickstart/Events>`_ (complete, all children with the exception of `dojo.keys <dojo/keys>`_ being moved out)
+  * `The Event System <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/event-system>`_. maps to: `Events <quickstart/events>`_ (complete, all children with the exception of `dojo.keys <dojo/keys>`_ being moved out)
   * `XMLHttpRequest (XHR) <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/ajax-transports>`_. -- [[JChimene]] <<DateTime(2008-08-01T11:36:45-0700)>>
   * `Drag and Drop <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/drag-and-drop>`_.
   * `Using dojo.data <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/data-retrieval-dojo-data-0>`_.
