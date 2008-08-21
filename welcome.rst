@@ -183,3 +183,4 @@ Documentation guidelines
 
 * `How to become a dojo doc ninja <howto>`_
 * `Documentation internals <internals>`_
+* `A big "thank you"! <thank-you>`_
