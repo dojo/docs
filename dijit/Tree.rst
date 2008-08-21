@@ -3,8 +3,12 @@
 dijit.Tree
 ==========
 
+.. contents::
+    :depth: 2
+
 :Status: Draft
 :Version: 1.2
+:Authors: ?
 
 The trees we see in User Interfaces help sort out long, hierarchical lists. A file system is the classic example, with Windows using it in Explorer and Macintoshes with its folder windows. The Dijit tree widget is like that. The Tree widget itself is simple, but the real power comes in the data you pass - this represents the heirarchical structure of the tree. This data is fed by an implementation of the `tree model <dijit/tree/Model>`_, typically either the `TreeStoreModel <dijit/tree/TreeStoreModel>`_ or `ForestStoreModel <dijit/tree/ForestStoreModel>`_, both of which themselves interface with the powerful dojo.data API.
 
