@@ -10,6 +10,25 @@ Dojo provides a number of ``is`` variables, defined at runtime based on the user
 * dojo.isFF
 * dojo.isOpera
 
+Each variable is only defined if the specified browser is being used. For example, if you're using Internet Explorer, only dojo.isIE is defined; all the other variables are undefined. The variable holds the browser version number as a Number, so you can easily perform version checks. Additionally, since undefined always evaluates as false in if statements, you can use code like this to check for a certain browser version.
+
+.. code-block:: javascript
+  :linenos:
+  
+  if(dojo.isIE <= 6){ // only IE6 and below
+    ...
+  }
+
+  if(dojo.isFF < 3){ // only Firefox 2.x and lower
+    ...
+  }
+
+  if(dojo.isIE == 7){ // only IE7
+    ...
+  ]
+
+Here's a live sample to show how it works:
+
 .. codeviewer::
 
   <script type="text/javascript">
