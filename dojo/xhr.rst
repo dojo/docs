@@ -51,20 +51,20 @@ dojo.xhr allows you to submit all the values of your Form without effort:
                 // We are using dojo.xhrGet in this example, but
                 // you can also use dojo.xhrPost or dojo.xhrPut.
                 dojo.xhrGet({
-                    // The URL on your webserver:
+                    // The target URL on your webserver:
                     url: "#",
 
-                    // The form node, which contains the to be
-                    // transfered form elements:
+                    // The form node, which contains the
+                    // to be transfered form elements:
                     form: "myForm",
 
-                    // The used transfer protocol:
+                    // The used data format:
                     handleAs: "json",
 
                     // Timeout in milliseconds:
                     timeout: 1000,
 
-                    // Event function on successful call:
+                    // Event handler on successful call:
                     load: function(response, ioArgs) {
                         // do something
                         // ...
@@ -73,7 +73,7 @@ dojo.xhr allows you to submit all the values of your Form without effort:
                         return response;
                     },
 
-                    // Event function on errors:
+                    // Event handler on errors:
                     error: function(response, ioArgs){
                         debug.dir(response);
                     
