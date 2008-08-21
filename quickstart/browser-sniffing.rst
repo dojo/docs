@@ -9,6 +9,11 @@ Dojo provides a number of ``is`` variables, defined at runtime based on the user
 * dojo.isMozilla
 * dojo.isFF
 * dojo.isOpera
+* dojo.isSafari
+* dojo.isKhtml
+* dojo.isAIR - true if running within the Adobe AIR enviroment
+* dojo.isQuirks - is the browser in Quirks-Mode
+* dojo.isBrowser (not typically needed when only targeting browsers)
 
 Each variable is only defined if the specified browser is being used. For example, if you're using Internet Explorer, only dojo.isIE is defined; all the other variables are undefined. The variable holds the browser version number as a Number, so you can easily perform version checks. Additionally, since undefined always evaluates as false in if statements, you can use code like this to check for a certain browser version.
 
@@ -74,5 +79,3 @@ Here's a live sample to show how it works:
     <dt>Is this at least Opera 9?</dt>
     <dd id="isAtLeastOpera9"></dd>
   </dl>
-
-``TODOC: finish, and elaborate with examples``
