@@ -13,7 +13,7 @@ Dojo provides a number of ``is`` variables, defined at runtime based on the user
 .. codeviewer::
 
   <script type="text/javascript">
-  function makeAnswer(who){
+  function makeFancyAnswer(who){
     if(dojo["is" + who]){
       return "Yes, it's version " + dojo["is" + who];
     }else{ 
@@ -21,11 +21,20 @@ Dojo provides a number of ``is`` variables, defined at runtime based on the user
     }
   }
 
+  function makeAtLeastAnswer(who, version) {
+    var answer = (dojo["is" + who] >= version) ? "Yes" : "No";
+    dojo.byId("isAtLeast" + who + version).innerHTML = answer;
+  }
+
   dojo.addOnLoad(function(){
     dojo.forEach(["IE", "Mozilla", "FF", "Opera"],
                  function(n) {
-                   dojo.byId("answerIs" + n).innerHTML = makeAnswer(n);
-                 });
+                   dojo.byId("answerIs" + n).innerHTML = makeFancyAnswer(n);
+                 });    
+    makeAtLeastAnswer("IE", 7);
+    makeAtLeastAnswer("FF", 3);
+    makeAtLeastAnswer("Opera", 9);
+    
   });
   </script>
   <dl>
@@ -38,5 +47,12 @@ Dojo provides a number of ``is`` variables, defined at runtime based on the user
     <dt>Is this Opera?</dt>
     <dd id="answerIsOpera"></dd>
   </dl>
-
+  <dl>
+    <dt>Is this at least IE 7?</dt>
+    <dd id="isAtLeastIE7"></dd>
+    <dt>Is this at least Firefox 3?</dt>
+    <dd id="isAtLeastFF3"></dd>
+    <dt>Is this at least Opera 9?</dt>
+    <dd id="isAtLeastOpera9"></dd>
+  </dl>
 ``TODOC: finish, and elaborate with examples``
