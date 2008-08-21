@@ -65,6 +65,7 @@ These pages cover both cases, and indicate how they are provided.
 * `dojo.addOnLoad <dojo/addOnLoad>`_
 * `dojo.array <dojo/array>`_
 * `dojo.browser <dojo/browser>`_
+* `dojo.connect <dojo/connect>`_
 * `dojo.Color <dojo/Color>`_
 * `dojo.declare <dojo/declare>`_
 * `dojo.date <dojo/date>`_
@@ -72,10 +73,10 @@ These pages cover both cases, and indicate how they are provided.
   * `dojo.date.locale.format <dojo/date/locale/format>`_
 
 * `dojo.Deferred <dojo/Deferred>`_
-* `dojo.event <dojo/event>`_
 * `dojo.fx <dojo/fx>`_
 * `dojo.html <dojo/html>`_
 * `dojo.json <dojo/json>`_
+* `dojo.keys <dojo/keys>`_ 
 * `dojo.lang <dojo/lang>`_
 * `dojo.map <dojo/map>`_
 * `dojo.NodeList <dojo/NodeList>`_
