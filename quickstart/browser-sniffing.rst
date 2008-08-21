@@ -55,4 +55,5 @@ Dojo provides a number of ``is`` variables, defined at runtime based on the user
     <dt>Is this at least Opera 9?</dt>
     <dd id="isAtLeastOpera9"></dd>
   </dl>
+
 ``TODOC: finish, and elaborate with examples``
