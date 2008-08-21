@@ -65,6 +65,10 @@ Sometimes you don't want that "Continents" top level node to show up, especially
       model="continentModel" showRoot="false">
     </div>
 
+Unique Identifiers
+------------------
+
+Each item in your Tree needs a different identifier (the value of the identifier has to be unique). It's the same concept as a primary key in a database.
 
 Drag And Drop
 -------------
