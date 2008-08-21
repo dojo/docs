@@ -13,15 +13,27 @@ Dojo provides a number of ``is`` variables, defined at runtime based on the user
 .. codeviewer::
 
   <script type="text/javascript">
-  function makeTemplate() {
-    function makePair(n) { return "<dt>dojo.is" + n + "</dt><dd>" + (dojo["is" + n] || "undefined") + "</dd>"; }
-    var pairs = dojo.map(["IE", "Mozilla", "FF", "Opera"], makePair);
-    return "<dl>" + pairs.join("") + "</dl>";
+  function makeAnswer(who){
+    if(dojo["is" + who]) return "Yes, it's version " + dojo["is" + who];
+    else return "No";
   }
-  var sniffer = dojo.declare("sniffer", [dijit._Widget, dijit._Templated] , {
-    templateString: makeTemplate()
+
+  dojo.addOnLoad(function(){
+    dojo.forEach(["IE", "Mozilla", "FF", "Opera"],
+                 function(n) {
+                   dojo.byId("answerIs" + n).innerHTML = makeAnswer(n);
+                 });
   });
   </script>
-  <div dojoType="sniffer"></div>
+  <dl>
+    <dt>Is this Internet Explorer?</dt>
+    <dd id="answerIsIE"></dd>
+    <dt>Is this Firefox?</dt>
+    <dd id="answerIsIE"></dd>
+    <dt>Is this Mozilla?</dt>
+    <dd id="answerIsIE"></dd>
+    <dt>Is this Opera?</dt>
+    <dd id="answerIsIE"></dd>
+  </dl>
 
 ``TODOC: finish, and elaborate with examples``
