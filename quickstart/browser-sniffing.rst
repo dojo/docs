@@ -14,7 +14,7 @@ Dojo provides a number of ``is`` variables, defined at runtime based on the user
 
   <script type="text/javascript">
   function makeTemplate() {
-    function makePair(n) { return "<dt>dojo.is" + n + "</dt><dd>" + dojo["is" + n].toString() + "</dd>"; }
+    function makePair(n) { return "<dt>dojo.is" + n + "</dt><dd>" + (dojo["is" + n] || "undefined") + "</dd>"; }
     var pairs = dojo.map(["IE", "Mozilla", "FF", "Opera"], makePair);
     return "<dl>" + pairs.join() + "</dl>";
   }
