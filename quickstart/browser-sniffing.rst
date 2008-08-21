@@ -14,8 +14,11 @@ Dojo provides a number of ``is`` variables, defined at runtime based on the user
 
   <script type="text/javascript">
   function makeAnswer(who){
-    if(dojo["is" + who]) return "Yes, it's version " + dojo["is" + who];
-    else return "No";
+    if(dojo["is" + who]){
+      return "Yes, it's version " + dojo["is" + who];
+    }else{ 
+      return "No";
+    }
   }
 
   dojo.addOnLoad(function(){
@@ -29,11 +32,11 @@ Dojo provides a number of ``is`` variables, defined at runtime based on the user
     <dt>Is this Internet Explorer?</dt>
     <dd id="answerIsIE"></dd>
     <dt>Is this Firefox?</dt>
-    <dd id="answerIsIE"></dd>
+    <dd id="answerIsFF"></dd>
     <dt>Is this Mozilla?</dt>
-    <dd id="answerIsIE"></dd>
+    <dd id="answerIsMozilla"></dd>
     <dt>Is this Opera?</dt>
-    <dd id="answerIsIE"></dd>
+    <dd id="answerIsOpera"></dd>
   </dl>
 
 ``TODOC: finish, and elaborate with examples``
