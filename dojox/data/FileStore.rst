@@ -12,6 +12,7 @@ The dojox.data.FileStore is a lightweight javascript implementation for accessin
 The datastore implementation and its example PHP back-end by default do not inflate the child file objects of a DataStore file item.  This allows it to quickly return information about a file without having to return everything, while at the same time providing hooks that allow for the extra information to be gathered on-demand.  
 
 **Features**
+------------
 
 1. The client javascript and example server php script implement the following dojo.data APIs:  dojo.data.api.Read, dojo.data.api.Identity.
 2. A deliberately simple client side implementation for use as a reference when implementing other server side stores that wish to provide lazy-loading as defined by the dojo.data.api.Read spec.  The client code is deliberately small to make it easy to understand.
@@ -23,8 +24,8 @@ The datastore implementation and its example PHP back-end by default do not infl
 8. Works directly with all current data bound widgets in dijit, including dijit.Tree, dijit.form.ComboBox, and well as dojox.grid.
 
 **Item structure:**
-
-All items returned by a query to the FileStore and will generally have the following attributes accessible via FileStore.getValue(item, attribute):
+-------------------
+All items returned by a query to the FileStore and will generally have the following attributes accessible via FileStore.getValue(item, attribute) and FileStore.getValues(item, attribute):
 
 +-------------+---------------------------------------------------------------------------------------------------------+----------+
 |**Attribute**|**Description**                                                                                          |**Type**  |
