@@ -213,26 +213,31 @@ Tips and Tricks, the edge cases
 
 Many times you will encounter some question on a forum or the #dojo channel and you just want to keep a note about it with the respective answer. Those cases should be put into sub pages -tricks. 
 So if someone posts something interesting to know about the dijit.Dialog and you just want to note this for other people post it in the dijit/Dialog-tricks page. If such a page doesn't exist, feel free to create one
-      
-Craig's Questions
------------------
 
-- Should all form control examples also include a dijit.form.Form tag?
-  *nikolai: I think its a good habbit to dojoize forms as much as you can, to get the full benefit of using them, but I am not sure whether this is the way to go*
-- What is the convention for attributes, methods, etc.?  These should be spelled out in the How-To or be given 
-  their own tags
-  *nikolai: how do you mean?*
-- Should we remove the remaining refs to 0.9 (like dijit.form.I nlineEdit?)
-  * probably for now we should only document what will be in 1.2, for old docs people would have to look up the book and other resources*
-- NumberSpinner page has an example of code examples getting mushed together.  Solution?
-  * I fixed that, was a little } missing :) reST is very sensitive in regards to indenting, code, etc.
-- Is there a way to display REAL help underneath the editor box?  The help that sometimes appears doesn't
-  actually work.
-  * underneath the wiki editor? yah, will look into that :) I agree, its rather confusing*
-- There doesn't seem to be a way to link outside of the directory and its children.  /path/to/file doesn't work, and
-  though you can use ../.. the rules for how many to include don't seem to apply
-  * its fixed now, just use absolute linking without a first / - so when you are in dijit and want to link to dojox you just do `text <dojox/foo>`_ also see the `howto <howto>`_ I sortof updated the docs
-- As a general rule, do we want to factor out common concepts (like Containers, which are explained on the new
-  TabContainer page) and refer back to them?  Or explain them on each widget page?  Does it depend on the widget
-  and what concepts are most central to the widget?
-  * I'd think we should factor them out and and explain about those concepts on delegated pages, again not sure if this is the way to go though*
+Url conventions
+---------------
+
+when you find an undocumented dojo module, use the dojo namespace as the guide::
+
+dojo.declare
+
+should become::
+
+dojo/declare
+
+Or::
+
+dijit.Tree
+
+should become::
+
+dijit/Tree
+
+So be aware of case sensitiveness. 
+
+Url conventions outside the namespace
+-------------------------------------
+
+for any other part of the documentation we use lowerCamelCase::
+
+quickstart/dataPaging
