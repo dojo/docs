@@ -1,7 +1,7 @@
 #format dojo_rst
 
-dojox.data.FilStore
-===================
+dojox.data.FileStore
+====================
 
 :Status: Contributed, Draft
 :Version: 1.0
@@ -21,3 +21,31 @@ The datastore implementation and its example PHP back-end by default do not infl
 6. Support for all normal query options as defined by the dojo.data.api.Read specification.  Deep provides recursive tree searching, ignoreCase provides the ability to ignore the case sensitivity of attributes when matching, and so on.
 7. An example implementation of the back end service in PHP.  The example is documented cleanly and is less than five hundred lines of code, making it relatively easy to dissect and understand.
 8. Works directly with all current data bound widgets in dijit, including dijit.Tree, dijit.form.ComboBox, and well as dojox.grid.
+
+**Item structure:**
+
+All items returned by a query to the FileStore and will generally have the following attributes accessible via FileStore.getValue(item, attribute):
+
++-------------+---------------------------------------------------------------------------------------------------------+----------+
+|**Attribute**|**Description**                                                                                          |**Type**  |
++-------------+---------------------------------------------------------------------------------------------------------+----------+
+|name         |The name of the file.  This does not include any path information.                                       |string    |
++-------------+---------------------------------------------------------------------------------------------------------+----------+
+|path         |The full path to the file, including its name.                                                           |string    |
++-------------+---------------------------------------------------------------------------------------------------------+----------+
+|parentDir    |The parent directory name.                                                                               |string    |
++-------------+---------------------------------------------------------------------------------------------------------+----------+
+|size         |The size of the file, in bytes.                                                                          |integer   |
++-------------+---------------------------------------------------------------------------------------------------------+----------+
+|directory    |A Boolean value indicating if the file referenced is a directory or not.                                 |boolean   |
++-------------+---------------------------------------------------------------------------------------------------------+----------+
+|modified     |If it is a directory, then children is an array of child files contained within the directory.  By       |integer   |
+|             |default these will be uninflated datastore items.  Meaning isItem() returns true, but isItemLoaded()     |          |
+|             |returns false.  To load the item, it is a call to the FileStore.loadItem() api with the appropriate      |          |
+|             |callbacks.   By not inflating child files by default the store performance is greatly improved, as if you|          |
+|             |don’t care about its children, you don’t have to load them.                                              |          |
++-------------+---------------------------------------------------------------------------------------------------------+----------+
+|children     |An array of datastore items representing children files contained within the directory represented by the|array     |
+|             |containing file item .  Should be accessed using the multivalue accessor: FileStore.getValues(item,      |          |
+|             |"children");                                                                                             |          |
++-------------+---------------------------------------------------------------------------------------------------------+----------+
