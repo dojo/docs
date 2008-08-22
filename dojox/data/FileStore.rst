@@ -50,3 +50,31 @@ All items returned by a query to the FileStore and will generally have the follo
 |             |containing file item .  Should be accessed using the multivalue accessor: FileStore.getValues(item,      |          |
 |             |"children");                                                                                             |          |
 +-------------+---------------------------------------------------------------------------------------------------------+----------+
+
+
+**Query Structure**
+-------------------
+
+The dojox.data.FileStore query structure follows that of dojo.data.ItemFileReadStore.  It is an object-based query structure where the store queries for file items using patterns defined for the attributes to be matched.  For example a query object of:
+
+.. code-block :: javascript
+
+  {  
+    name: "foo*.txt"
+  }
+
+would return all files that have the name foo at the start of the name and end with the extension .txt.  Please note that the store is a hierarchical store and if you wish to query the entire file system (not just the root of it), for a file name, you must set the standard dojo.data.api.Read queryOption 'deep' to the value true.  A complete example of querying the entire filesystem scanned by the FileStore is below:
+
+.. code-block :: javascript
+
+  var fileStore = new dojox.data.FileStore({url: "myService.php"});
+    function searchDone(items, request){
+      if (items) {
+        var i;
+          for (i = 0; i < items.length; i++) {
+            console.log("Found file: " + fileStore.getValue(items[i], "name") + " in directory: " + fileStore.getValue(items[i], "parentDir"));
+          }
+      }
+    }
+    fileStore.fetch({query: {name:"foo*.txt"}, onComplete: searchDone, queryOptions: {deep:true}});
+  }
