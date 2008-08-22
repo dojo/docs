@@ -88,13 +88,13 @@ Dojo Book Outline
   * `Object Orientation <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/object-orientation>`_. maps to: `dojo.declare <dojo/declare>`_
   * `Modules <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/modules-and-namespaces>`_.
   * `Creating and Scripting Widgets <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/manipulating-widgets-through-code>`_.
-  * `Writing Your Own Widget Class <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/manipulating-widgets-through-code/writing-your>`_ maps to `Writing your own Widget <quickstart/WritingWidget>`_.
+  * `Writing Your Own Widget Class <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/manipulating-widgets-through-code/writing-your>`_ maps to `Writing your own Widget <quickstart/writingWidgets>`_.
   * `The Event System <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/event-system>`_. maps to: `Events <quickstart/events>`_ (complete, all children with the exception of `dojo.keys <dojo/keys>`_ being moved out)
   * `XMLHttpRequest (XHR) <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/ajax-transports>`_. maps to: `dojo.xhr <dojo/xhr>`_
   * `Drag and Drop <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/drag-and-drop>`_.
   * `Using dojo.data <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/data-retrieval-dojo-data-0>`_.
   * `Selecting DOM Nodes with dojo.query <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/selecting-dom-nodes-dojo-query>`_.
-  * `Internationalization (i18n) <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/i18n>`_ maps to `Formatting, Parsing, and Validating <unknown>`_ [CraigRiecke].
+  * `Internationalization (i18n) <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/i18n>`_ maps to `Formatting, Parsing, and Validating <quickstart/numberDates>`_ [CraigRiecke].
   * `Back Button <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/back-button-undo>`_.
   * `Other Functions <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/other-miscellaneous-function>`_.
   * `Multiple Versions of Dojo in a Page <http://dojotoolkit.org/book/book-dojo/part-3-javascript-programming-dojo-and-dijit/multiple-versions-dojo-page>`_.
