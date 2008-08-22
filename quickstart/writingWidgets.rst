@@ -17,6 +17,7 @@ You can also create Dijit classes from scratch. Again, you can do this either th
 - `Dijit.Declaration <quickstart/writingWidgets/dijitDeclaration>`_
 - `Direct Extension <quickstart/writingWidgets/dojoDeclare>`_
 - `The Widget Life-cycle <quickstart/writingWidgets/lifecycle>`_
+- `Widgets In Template <quickstart/writingWidgets/widgetsInTemplate>_
 - `Testing the Widget <quickstart/writingWidgets/testing>`_
 - `Example: File Upload Dialog Box <quickstart/writingWidgets/example>`_
 - `Creating Accessible Widgets <quickstart/writingWidgets/a11y>`_
