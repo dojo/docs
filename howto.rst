@@ -219,19 +219,19 @@ Url conventions
 
 when you find an undocumented dojo module, use the dojo namespace as the guide::
 
-dojo.declare
+  dojo.declare
 
 should become::
 
-dojo/declare
+  dojo/declare
 
 Or::
 
-dijit.Tree
+  dijit.Tree
 
 should become::
 
-dijit/Tree
+  dijit/Tree
 
 So be aware of case sensitiveness. 
 
@@ -240,4 +240,4 @@ Url conventions outside the namespace
 
 for any other part of the documentation we use lowerCamelCase::
 
-quickstart/dataPaging
+  quickstart/dataPaging
