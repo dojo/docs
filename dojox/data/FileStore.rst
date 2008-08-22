@@ -63,7 +63,11 @@ The dojox.data.FileStore query structure follows that of dojo.data.ItemFileReadS
     name: "foo*.txt"
   }
 
-would return all files that have the name foo at the start of the name and end with the extension .txt.  Please note that the store is a hierarchical store and if you wish to query the entire file system (not just the root of it), for a file name, you must set the standard dojo.data.api.Read queryOption 'deep' to the value true.  A complete example of querying the entire filesystem scanned by the FileStore is below:
+
+would return all files that have the name foo at the start of the name and end with the extension .txt.  
+
+Please note that the store is a hierarchical store and if you wish to query the entire file system (not just the root of it), for a file name, you must set the standard dojo.data.api.Read queryOption 'deep' to the value true.  A complete code example of querying the entire filesystem scanned by the FileStore is below:
+
 
 .. code-block :: javascript
 
