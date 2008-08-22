@@ -12,13 +12,27 @@ No problem! Dijit components are extendible, so you can make changes without tou
 
 You can also create Dijit classes from scratch. Again, you can do this either through markup - using the dijit.Declaration dojoType attribute - or through dojo.declare.
 
-- `The Template <quickstart/writingWidgets/templates>`_
-- `More on attributes <quickstart/writingWidgets/attributes>`_
-- `Dijit.Declaration <quickstart/writingWidgets/dijitDeclaration>`_
-- `Direct Extension <quickstart/writingWidgets/dojoDeclare>`_
+A simple extension
+------------------
+These pages explain the basics of templates and widget declaration by showing how to extend AccordionContainer to use images instead of text for the titles of each AccordionPane.
+
+- `Understanding templates <quickstart/writingWidgets/templates>`_
+- `Declaring a widget programatically <quickstart/writingWidgets/dojoDeclare>`_
+- `Declaring a widget in markup <quickstart/writingWidgets/dijitDeclaration>`_
+- Testing the Widget - TODO: don't create this page; tests should be rolled into above two sections
+
+More topics
+-----------
+These pages list some more information you need for writing widgets from scratch, or making more complicated changes.
+
 - `The Widget Life-cycle <quickstart/writingWidgets/lifecycle>`_
+- `More on attributes <quickstart/writingWidgets/attributes>`_
 - `Widgets In Template <quickstart/writingWidgets/widgetsInTemplate>`_
-- `Testing the Widget <quickstart/writingWidgets/testing>`_
 - `Example: File Upload Dialog Box <quickstart/writingWidgets/example>`_
+
+Accessibility
+-------------
+These pages list how to make your widgets accessible to people with poor/no vision, etc.
+
 - `Creating Accessible Widgets <quickstart/writingWidgets/a11y>`_
 - `Testing Widgets for Accessibility <quickstart/writingWidgets/a11yTesting>`_
