@@ -13,7 +13,7 @@ No problem! Dijit components are extendible, so you can make changes without tou
 You can also create Dijit classes from scratch. Again, you can do this either through markup - using the dijit.Declaration dojoType attribute - or through dojo.declare.
 
 - `The Template <quickstart/writingWidgets/templates>`_
-- `attributeMap <quickstart/writingWidgets/attributeMap>`_
+- `More on attributes <quickstart/writingWidgets/attributes>`_
 - `Dijit.Declaration <quickstart/writingWidgets/dijitDeclaration>`_
 - `Direct Extension <quickstart/writingWidgets/dojoDeclare>`_
 - `The Widget Life-cycle <quickstart/writingWidgets/lifecycle>`_
