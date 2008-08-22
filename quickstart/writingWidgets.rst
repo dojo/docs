@@ -42,4 +42,4 @@ DTL
 There's an alternate template syntax for widgets that lets you have conditional code in templates and other advanced features.
 TODO: add code from <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-dtl>`_. to under here: 
 
-- `DTL <quickstart/writingWidgets/dtl>`_  (currently the top page from the above link has been copied to `DTL <dojox/dtl>`_
+- `DTL <quickstart/writingWidgets/dtl>`_  (currently the top page from the above link has been copied to `DTL_cur <dojox/dtl>`_
