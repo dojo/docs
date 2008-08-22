@@ -7,6 +7,7 @@ Thank you!
 A big "thank you" goes to 
 
 * Peter Higgins,
+* Robertus Harmawan Johansyah,
 * Bill Keese, 
 * Tobias Klipstein, 
 * Wolfram Kriesing,
