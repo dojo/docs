@@ -184,5 +184,5 @@ Documentation guidelines
 ------------------------
 
 * `How to become a dojo doc ninja <howto>`_
-* `Documentation internals <internals>`_
+* `Behind the scenes <internals>`_
 * `A big "thank you"! <thank-you>`_
