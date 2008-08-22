@@ -1,5 +1,12 @@
 #format dojo_rst
 
+Behind the scenes
+=================
+
+``TODOC``
+
+The documentation process
+-------------------------
 
 Other notes
 -----------
