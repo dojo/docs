@@ -201,10 +201,17 @@ The valid reST syntax has to look like following markup:
       });
       </script>
 
+Images
+------
+
+To attach images, use the AttachFile option you have at the bottom of each page. Once your image is uploaded you can include it on you page using following syntax::
+
+  .. image:: yourimage.gif
+
 Tips and Tricks, the edge cases
 -------------------------------
 
-Many times you will encounter some question on a forum or the #dojo channell and you just want to keep a note about it with the respective answer. Those cases should be put into sub pages -tricks. 
+Many times you will encounter some question on a forum or the #dojo channel and you just want to keep a note about it with the respective answer. Those cases should be put into sub pages -tricks. 
 So if someone posts something interesting to know about the dijit.Dialog and you just want to note this for other people post it in the dijit/Dialog-tricks page. If such a page doesn't exist, feel free to create one
       
 Craig's Questions
