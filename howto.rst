@@ -6,6 +6,9 @@ How to become a dojo doc ninja
 :Status: Draft
 :Version: 1.2
 
+.. contents::
+  :depth: 3
+
 .. image:: http://media.dojocampus.org/images/docs/dojodocninja.png
    :alt: Dojo Doc ninja
    :class: imageFloatRight;
