@@ -88,3 +88,8 @@ Like other dijits, the icon is expressed as a CSS class (which should load a bac
   			if(item == this.model.root) return (opened ? "customFolderOpenedIcon" : "customFolderClosedIcon");
 			else return myStore.getValue(item, "type") + "Icon";
 		</script>
+
+More examples
+-------------
+
+There are `more extensive examples <dijit/Tree-examples>`_ of using the tree
