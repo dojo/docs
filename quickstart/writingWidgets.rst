@@ -12,12 +12,12 @@ No problem! Dijit components are extendible, so you can make changes without tou
 
 You can also create Dijit classes from scratch. Again, you can do this either through markup - using the dijit.Declaration dojoType attribute - or through dojo.declare.
 
-- `The Template <writingWidgets/templates>`_
-- `attributeMap <writingWidgets/attributeMap>`_
-- `Dijit.Declaration <writingWidgets/dijitDeclaration>`_
-- `Direct Extension <writingWidgets/dojoDeclare>`_
-- `The Widget Life-cycle <writingWidgets/lifecycle>`_
-- `Testing the Widget <writingWidgets/testing>`_
-- `Example: File Upload Dialog Box <writingWidgets/example>`_
-- `Creating Accessible Widgets <writingWidgets/a11y>`_
-- `Testing Widgets for Accessibility <writingWidgets/a11yTesting>`_
+- `The Template <quickstart/writingWidgets/templates>`_
+- `attributeMap <quickstart/writingWidgets/attributeMap>`_
+- `Dijit.Declaration <quickstart/writingWidgets/dijitDeclaration>`_
+- `Direct Extension <quickstart/writingWidgets/dojoDeclare>`_
+- `The Widget Life-cycle <quickstart/writingWidgets/lifecycle>`_
+- `Testing the Widget <quickstart/writingWidgets/testing>`_
+- `Example: File Upload Dialog Box <quickstart/writingWidgets/example>`_
+- `Creating Accessible Widgets <quickstart/writingWidgets/a11y>`_
+- `Testing Widgets for Accessibility <quickstart/writingWidgets/a11yTesting>`_
