@@ -74,18 +74,3 @@ Proposals
 ---------
 
 dojo.Node_ 
-
------
-
-This is a link_ to Dojo's Web site (or `click on this link for more info on reST markup format`_).
-
-By using directives become easy to add images and others to your stuff:
-
-.. _`click on this link for more info on reST markup format`: http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html
-
-AnotherPage_
-
-.. image:: http://www.oxull.com/ei/dojodocs.logo.png
-   :alt: DojoDoc's Logo
-   :target: http://docs.dojocampus.org
-.. _link: http://www.dojotoolkit.org
