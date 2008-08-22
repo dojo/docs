@@ -68,6 +68,14 @@ These pages cover both cases, and indicate how they are provided.
 * `dojo.connect <dojo/connect>`_
 * `dojo.Color <dojo/Color>`_
 * `dojo.declare <dojo/declare>`_
+* `dojo.data <dojo/data>`_
+
+  * `dojo.data.api <dojo/data/api>`_
+
+  * `dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`_
+
+  * `dojo.data.ItemFileWriteStore <dojo/data/ItemFileWriteStore>`_
+
 * `dojo.date <dojo/date>`_
 
   * `dojo.date.locale.format <dojo/date/locale/format>`_
@@ -142,6 +150,10 @@ These sections cover the available projects shipped with the Dojo Toolkit
 * `dojox.analytics <dojox/analytics>`_
 
   * `dojox.analytics.Urchin <dojox/analytics/Urchin>`_
+
+* `dojox.data <dojox/data>`_
+
+  * `dojox.data.FileStore <dojox/data/FileStore>`_
 
 * `dojox.grid <dojox/grid>`_
 * `dojox.cometd <dojox/cometd>`_
