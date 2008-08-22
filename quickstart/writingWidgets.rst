@@ -14,10 +14,10 @@ You can also create Dijit classes from scratch. Again, you can do this either th
 
 - `The Template <writingWidgets/Templated>`_
 - `attributeMap <writingWidgets/attributeMap>`_
-- `Dijit.Declaration <writingWidgets/dijit.declaration>`_
-- `Direct Extension <writingWidgets/dojo.declare>`_
+- `Dijit.Declaration <writingWidgets/dijitDeclaration>`_
+- `Direct Extension <writingWidgets/dojoDeclare>`_
 - `The Widget Life-cycle <writingWidgets/lifecycle>`_
 - `Testing the Widget <writingWidgets/testing>`_
 - `Example: File Upload Dialog Box <writingWidgets/example>`_
 - `Creating Accessible Widgets <writingWidgets/a11y>`_
-- `Testing Widgets for Accessibility <writingWidgets/a11y-testing>`_
+- `Testing Widgets for Accessibility <writingWidgets/a11yTesting>`_
