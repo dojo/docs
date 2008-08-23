@@ -56,3 +56,14 @@ Hi friend
 }}}
 ##PASSWORD *
 ##LOGINUSER TRUE
+
+
+{{{
+,0
+g228065123
+2008-08-23 07:44:22
+
+gdg gegegegeg
+}}}
+##PASSWORD muz9
+##LOGINUSER 
