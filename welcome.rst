@@ -165,6 +165,7 @@ These sections cover the available projects shipped with the Dojo Toolkit
 * `dojox.widget <dojox/widget>`_
 
   * `dojox.widget.Toaster <dojox/widget/Toaster>`_
+  * `dojox.widget.Roller <dojox/widget/Roller>`_
 
 * `dojox.form <dojox/form>`_
 
