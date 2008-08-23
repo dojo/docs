@@ -45,3 +45,14 @@ mmh
 }}}
 ##PASSWORD nib4
 ##LOGINUSER 
+
+
+{{{
+,0
+nonken
+2008-08-23 07:39:20
+
+Hi friend
+}}}
+##PASSWORD *
+##LOGINUSER TRUE
