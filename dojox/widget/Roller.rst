@@ -55,6 +55,8 @@ Or, create one entirely programatically, by passing an ``items:`` Array
  
 The Items are just the labels used when showing the item, and can contain complex markup. Styling them individually to meet your needs it your responsibility. 
 
+The Roller Class supports two basic configuration options. ``delay`` is the time between rolls (in ms), and ``autoStart`` is true or false, and determines if the widget should start rolling immediately.
+
 Adding Items
 ------------
 
