@@ -1,7 +1,5 @@
 #format rst
 
-.. macro:: PageComment2
-
 Welcome to the official documentation pages of the DojoToolkit
 ==============================================================
 
@@ -200,3 +198,6 @@ Documentation guidelines
 * `How to become a dojo doc ninja <howto>`_
 * `Behind the scenes <internals>`_
 * `A big "thank you"! <thank-you>`_
+
+.. macro:: PageComment2
+    :smileylist 0
