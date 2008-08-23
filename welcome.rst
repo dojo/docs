@@ -1,6 +1,6 @@
 #format rst
 
-.. macro:: TitleSearch 
+.. macro:: PageComment 
 
 Welcome to the official documentation pages of the DojoToolkit
 ==============================================================
