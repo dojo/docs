@@ -1,6 +1,6 @@
 #format rst
 
-[[PageComment2]] 
+.. macro:: PageComment2 
 
 Welcome to the official documentation pages of the DojoToolkit
 ==============================================================
