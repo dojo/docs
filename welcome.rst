@@ -199,5 +199,4 @@ Documentation guidelines
 * `Behind the scenes <internals>`_
 * `A big "thank you"! <thank-you>`_
 
-.. macro:: PageComment2
-    :smileylist 0
+.. macro:: PageComment2(smileylist=0)
