@@ -1,3 +1,5 @@
+[[PageComment2]] 
+
 #format rst
 
 Welcome to the official documentation pages of the DojoToolkit
