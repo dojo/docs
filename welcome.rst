@@ -1,6 +1,6 @@
 #format rst
 
-.. macro:: PageComment 
+.. macro:: PageComment2
 
 Welcome to the official documentation pages of the DojoToolkit
 ==============================================================
