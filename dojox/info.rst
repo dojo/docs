@@ -35,12 +35,12 @@ Naming Conventions
 DojoX follows the same naming conventions as Dojo and Dijit, which basically consists of:
 
 * Functions are mixed case, always starting with a lowercase. Eg: ``dojox.cometd.init("http://cometserver:9090/cometd");``
-* Classes are Capitalized, eg: ``new dojox.image.Lightbox``, to create a LightBox from the `dojox.image project <image>`_
-* All namespaces exist withing their project name. No classes exist in the top-level dojox namespace, with one notable exception: ``dojox.Grid``. This Grid module is deprecated, and will be gone in 2.0. It will be replaced with `dojox.grid.DataGrid <grid>`_
+* Classes are Capitalized, eg: ``new dojox.image.Lightbox``, to create a Lightbox from the `dojox.image project <dojox/image>`_
+* All namespaces exist withing their project name. No classes exist in the top-level dojox namespace, with one notable exception: ``dojox.Grid``. This Grid module is deprecated, and will be gone in 2.0. It will be replaced with `dojox.grid.DataGrid <dojox/grid>`_
 * No cross-namespace pollution takes place indirectly. 
 
 There is, however, a supported convention for DojoX to add or modify functionality in Dojo or Dijit: hypens. By adding a hypen to the 
-module name, it is meant to be clear the module modifies something elsewhere in Dojo. For instance, ``dojox.fx.ext-dojo.NodeList`` adds `dojox.fx <dojox/fx>`_ functionality into `dojo.NodeList </dojo/NodeList>`_, making it available from a `dojo.query <dojo/query>`_ call. 
+module name, it is meant to be clear the module modifies something elsewhere in Dojo. For instance, ``dojox.fx.ext-dojo.NodeList`` adds `dojox.fx <dojox/fx>`_ functionality into `dojo.NodeList <dojo/NodeList>`_, making it available from a `dojo.query <dojo/query>`_ call. 
 The rational is: Because the hypen is illegal in JavaScript variables, you will never be able to directly call an ``ext-dojo`` method directly, and the act of `requiring <dojo/require>`_ it mixes the desired functionality.
 
 Contributing to DojoX
