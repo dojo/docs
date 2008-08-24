@@ -13,6 +13,13 @@ dojox.grid
 
 Grids are familiar in the client/server development world. Basically a grid is a kind of mini spreadsheet, commonly used to display details on master-detail forms. From HTML terms, a grid is a "super-table" with its own scrollable viewport.
 
+Grid 1.2 Changes
+----------------
+
+With Dojo Toolkit V1.2 the Grid comes with a major redesign. This site is now waiting for the developers, to explain the choosen design decisions and the changes since Grid 1.0 in depth.
+
+The following examples are for the new Grid 1.2.
+
 Examples
 --------
 
