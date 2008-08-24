@@ -12,6 +12,11 @@ No problem! Dijit components are extendible, so you can make changes without tou
 
 You can also create Dijit classes from scratch. Again, you can do this either through markup - using the dijit.Declaration dojoType attribute - or through dojo.declare.
 
+A simple widget
+---------------
+- TODO: add simple example of new widget that extends _Widget and builds DOM by hand (custom buildRendering() function)
+- TODO: modify it to use templates
+
 A simple extension
 ------------------
 These pages explain the basics of templates and widget declaration by showing how to extend AccordionContainer to use images instead of text for the titles of each AccordionPane.
@@ -43,6 +48,10 @@ There's an alternate template syntax for widgets that lets you have conditional 
 TODO: add code from <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-dtl>`_. to under here: 
 
 - `DTL <quickstart/writingWidgets/dtl>`_  (currently the top page from the above link has been copied to `DTL_cur <dojox/dtl>`_
+
+Behavioral widgets
+------------------
+TODO: explain behavioral widgets, maybe copy first part of `what is a widget <http://dojocampus.org/content/2008/04/20/what-is-a-_widget/>`_, or do something similar
 
 See also
 --------
