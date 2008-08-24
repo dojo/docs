@@ -43,3 +43,8 @@ There's an alternate template syntax for widgets that lets you have conditional 
 TODO: add code from <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-dtl>`_. to under here: 
 
 - `DTL <quickstart/writingWidgets/dtl>`_  (currently the top page from the above link has been copied to `DTL_cur <dojox/dtl>`_
+
+See also
+--------
+- `Intro to behavioral and templated <http://dojocampus.org/content/2008/04/20/what-is-a-_widget/>` - TODO: add specific page about behavioral widgets here
+- `The Memo <http://dojotoolkit.org/book/dojo-book-0-4/part-4-more-widgets/writing-your-own-widget/memo>`_ - doc about writing a simple widget from scratch (TODO: move that here?  Before the more complex File Uploading box example?)
