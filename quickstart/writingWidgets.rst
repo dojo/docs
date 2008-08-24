@@ -51,7 +51,17 @@ TODO: add code from <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojo
 
 Behavioral widgets
 ------------------
-TODO: explain behavioral widgets, maybe copy first part of `what is a widget <http://dojocampus.org/content/2008/04/20/what-is-a-_widget/>`_, or do something similar
+TODO: explain behavioral widgets, maybe
+
+1.  adding a confirmation to anchors
+
+   this.connect(this.domNode, "onclick", function(e){ if(!confirm('leave')){ e.preventDefault(); }} }):
+
+2. a second example:  'add icon for external links'
+
+    this.domNode.appendChild(img);
+
+See also first part of `what is a widget <http://dojocampus.org/content/2008/04/20/what-is-a-_widget/>`_, but that's probably too complicated.
 
 See also
 --------
