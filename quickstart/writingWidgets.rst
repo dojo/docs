@@ -46,5 +46,5 @@ TODO: add code from <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojo
 
 See also
 --------
-- `Intro to behavioral and templated <http://dojocampus.org/content/2008/04/20/what-is-a-_widget/>`- TODO: add specific page about behavioral widgets here
+- `Intro to behavioral and templated <http://dojocampus.org/content/2008/04/20/what-is-a-_widget/>`_ - TODO: add specific page about behavioral widgets here
 - `The Memo <http://dojotoolkit.org/book/dojo-book-0-4/part-4-more-widgets/writing-your-own-widget/memo>`_ - doc about writing a simple widget from scratch (TODO: move that here?  Before the more complex File Uploading box example?)
