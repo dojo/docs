@@ -6,7 +6,7 @@
 Syntax
 ------
 
-.. _foo: code/test
+.. _hi friend: code/test
 
 this is foo_
 
