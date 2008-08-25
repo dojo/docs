@@ -6,6 +6,10 @@
 Syntax
 ------
 
+.. foo: code/test
+
+this is foo_
+
 .. code-block :: javascript
   
   dojo.connect(obj: Object, event: String, context: Object, method: String|Function, dontFix: Boolean); (view source)
