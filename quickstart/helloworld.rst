@@ -359,10 +359,13 @@ As can be seen from the code above, we've changed dojo.xhrGet to dojo.xhrPost.  
 
 As with the last section, entering your name and clicking 'Hello World!' should yield a message such as 'Hello <name>, welcome to the world of Dojo!' where <name> is the name you entered into the text box.
 
-<h3>Using a PHP Server</h3>
+Using a PHP Server
+__________________
 
-<code lang="php">
-<?php
+.. code-block:: html
+  :linenos:
+
+  <?php
   /*
   * HelloWorldResponsePOST.php
   * --------
@@ -373,14 +376,15 @@ As with the last section, entering your name and clicking 'Hello World!' should 
 
   header('Content-type: text/plain');
   print "Hello {$_POST['name']}, welcome to the world of Dojo!\n";
-?>
-</code>
+  ?>
 
+Using an ASP Server
+___________________
 
-<h3>Using an ASP Server</h3>
+.. code-block:: html
+  :linenos:
 
-<code lang="asp">
-<%
+  <%
   '
   ' HelloWorldResponsePOST.asp
   ' --------
@@ -391,14 +395,15 @@ As with the last section, entering your name and clicking 'Hello World!' should 
 
   response.ContentType="text/plain"
   response.write("Hello " & request.form("name") & ", welcome to the world of Dojo!\n")
-%>
-</code>
+  %>
 
+Using a ColdFusion Server
+_________________________
 
-<h3>Using a ColdFusion Server</h3>
+.. code-block:: html
+  :linenos:
 
-<code lang="cf">
-<!---
+  <!---
   /*
   * HelloWorldResponsePOST.cfm
   * --------
@@ -406,17 +411,18 @@ As with the last section, entering your name and clicking 'Hello World!' should 
   * Print the name that is passed in the
   * 'name' POST parameter in a sentence
   */
---->
-<cfsetting showDebugOutput="No">
-Hello, #form.name#, welcome to the world of Dojo!
-</cfsetting>
-</code>
+  --->
+  <cfsetting showDebugOutput="No">
+  Hello, #form.name#, welcome to the world of Dojo!
+  </cfsetting>
 
+Using a Java Server (JSP)
+_________________________
 
-<h3>Using a Java Server (JSP)</h3>
+.. code-block:: html
+  :linenos:
 
-<code lang="jsp">
-<%
+  <%
   /*
   ' HelloWorldResponsePOST.jsp
   ' --------
@@ -426,33 +432,33 @@ Hello, #form.name#, welcome to the world of Dojo!
   */
 
   response.setContentType("text/plain");
-%>
-Hello <%= request.getParameter("name") %> , welcome to the world of Dojo!
-</code>
+  %>
+  Hello <%= request.getParameter("name") %> , welcome to the world of Dojo!
 
+Using a Perl Server
+___________________
 
-<h3>Using a Perl Server</h3>
+.. code-block:: html
+  :linenos:
 
-<code lang="perl">
-#!/usr/bin/perl
-#
-#  ' HelloWorldResponsePOST.pl
-#  ' --------
-#  '
-#  ' Print the name that is passed in the
-#  ' 'name' POST parameter in a sentence
-#
-use strict;
-use CGI;
-my $cgi = CGI::new();
-print $cgi->header(-type => "text/html; charset=utf-8");
-print "Hello " . $cgi->param('name') . ", welcome to the world of Dojo!\n";
-</code>
+  #!/usr/bin/perl
+  #
+  #  ' HelloWorldResponsePOST.pl
+  #  ' --------
+  #  '
+  #  ' Print the name that is passed in the
+  #  ' 'name' POST parameter in a sentence
+  #
+  use strict;
+  use CGI;
+  my $cgi = CGI::new();
+  print $cgi->header(-type => "text/html; charset=utf-8");
+  print "Hello " . $cgi->param('name') . ", welcome to the world of Dojo!\n";
 
+Finding more resources
+----------------------
 
-<h2>Finding more resources</h2>
-
-<p>I hope you've enjoyed this tutorial and found it informative. No doubt though, you will need more information on Dojo and how it and it's widgets work. Below is a list of links that will point you in the right direction.
+I hope you've enjoyed this tutorial and found it informative. No doubt though, you will need more information on Dojo and how it and it's widgets work. Below is a list of links that will point you in the right direction.
 
 <ul>
 
