@@ -87,81 +87,84 @@ The key attribute of this HTML element to notice is the dojoType attribute. The 
 Connecting an Event to the Widget
 ---------------------------------
 
-<p>A button is all well and good, but what about getting it to do something when it's clicked? We could just specify an onClick event handler for the button, but there's another, more efficient way - the Dojo event system!</p>
+A button is all well and good, but what about getting it to do something when it's clicked? We could just specify an onClick event handler for the button, but there's another, more efficient way - the Dojo event system!
 
-<p>The easiest way to attach an event to a button is through a script tag.  But not just any script tag ... this one has a type of dojo/method, like this:</p>
+The easiest way to attach an event to a button is through a script tag.  But not just any script tag ... this one has a type of dojo/method, like this:
 
-<code lang="html4strict">
+.. code-block:: html
+  :linenos:
+
     <button dojoType="dijit.form.Button" id="helloButton">
         Hello World!
         <script type="dojo/method" event="onClick">
            alert('You pressed the button');
         </script>
     </button>
-    }
-</code>
-<br/>
 
-<p>Pretty simple, eh?  Putting the script inside the tag body makes a good deal of sense.  And you can harness the full power of DOM Level 2 events inside the script.  That means you can detect SHIFT and CTRL keys, get all sorts of event properties, and bubble events up through the HTML tree.  If you've ever used Level 2 events, you know how IE and Firefox use different syntax.  In Dojo, the same functions work in any supported browser.  That's powerful stuff!</p>
+Pretty simple, eh?  Putting the script inside the tag body makes a good deal of sense.  And you can harness the full power of DOM Level 2 events inside the script.  That means you can detect SHIFT and CTRL keys, get all sorts of event properties, and bubble events up through the HTML tree.  If you've ever used Level 2 events, you know how IE and Firefox use different syntax.  In Dojo, the same functions work in any supported browser.  That's powerful stuff!
 
-<h2>Reading Data from the Server</h2>
+Reading Data from the Server
+----------------------------
 
-<p>Having an alert pop up when we press the button is great, but what if we want to retrieve some data from the server? Again, Dojo comes to the rescue with an easy method of accomplishing this - dojo.xhrGet. For easy reference, the code for this section is available as HelloWorld-Section5.html and response.txt in the attachments section.</p>
+Having an alert pop up when we press the button is great, but what if we want to retrieve some data from the server? Again, Dojo comes to the rescue with an easy method of accomplishing this - dojo.xhrGet. For easy reference, the code for this section is available as HelloWorld-Section5.html and response.txt in the attachments section.
 
-<p>To get started, we first need a callback function to handle the data to be returned from the server. Insert the following code into the header:
+To get started, we first need a callback function to handle the data to be returned from the server. Insert the following code into the header:
 
-<code lang="html4strict">
-<script>
+.. code-block:: html
+  :linenos:
+
+  <script>
        function helloCallback(data,ioArgs) {
           alert(data);
        }       
        function helloError(data, ioArgs) {
           alert('Error when retrieving data from the server!');
        }
-</script>
-</code>
-<br/>
+  </script>
 
-<p>The two arguments to the functions (data, and ioArgs) are important - don't leave any of them out! The first argument (data) contains the data sent back from the server, whilst the second argument contains a Dojo I/O Bind object.  Only the first concerns us right now.</p>
+The two arguments to the functions (data, and ioArgs) are important - don't leave any of them out! The first argument (data) contains the data sent back from the server, whilst the second argument contains a Dojo I/O Bind object.  Only the first concerns us right now.
 
-<p>The next step is to link the click of the button to the server request. To do this, modify the following code:</p>
+The next step is to link the click of the button to the server request. To do this, modify the following code:
 
-<code lang="html4strict">
-<script type="dojo/method" event="onClick">
+.. code-block:: html
+  :linenos:
+
+  <script type="dojo/method" event="onClick">
     alert('You pressed the button');
-</script>
-</code>
-<br/>
+  </script>
 
-<p>To this:</p>
+To this:
 
-<code lang="html4strict">
-<script type="dojo/method" event="onClick">
+.. code-block:: html
+  :linenos:
+
+  <script type="dojo/method" event="onClick">
    dojo.xhrGet({
         url: 'response.txt',
         load: helloCallback,
         error: helloError
    });
-</script>
-</code>
-<br/>
+  </script>
 
-<p>The above code basically tells Dojo to query the URL specified by url and to use the function specified by handler to process the response from the server.</p>
+The above code basically tells Dojo to query the URL specified by url and to use the function specified by handler to process the response from the server.
 
-<p>Finally, we need to create another file in the same directory as HelloWorld.html called response.txt. In this file, place the text 'Welcome to the Dojo Hello World Tutorial'.</p>
+Finally, we need to create another file in the same directory as HelloWorld.html called response.txt. In this file, place the text 'Welcome to the Dojo Hello World Tutorial'.
 
-<p>Now, when the button is clicked, a JavaScript alert should display the text from the response.txt file. Dojo-Easy!</p>
+Now, when the button is clicked, a JavaScript alert should display the text from the response.txt file. Dojo-Easy!
 
-<p>Next, we'll look at doing something meaningful with that server request.</p>
+Next, we'll look at doing something meaningful with that server request.
 
-<h2>Sending Data to the Server Using GET</h2>
+Sending Data to the Server Using GET
+------------------------------------
 
-<p>It's all well and good retrieving static data from the server, but it is hardly a widely used situation in real life. So, instead of simply requesting data from the server we also will send it some information for it to process. In this section, we'll use the GET method whilst in the next section we'll use the POST method. For easy reference, the code for this section is available as HelloWorld-Section6.html in the attachments section. Server side code is also available as HelloWorldResponseGET.<type> where type is ASP ('.asp'), PHP ('.php'), ColdFusion ('.cfm'), or Java ('.jsp').</p>
+It's all well and good retrieving static data from the server, but it is hardly a widely used situation in real life. So, instead of simply requesting data from the server we also will send it some information for it to process. In this section, we'll use the GET method whilst in the next section we'll use the POST method. For easy reference, the code for this section is available as HelloWorld-Section6.html in the attachments section. Server side code is also available as HelloWorldResponseGET.<type> where type is ASP ('.asp'), PHP ('.php'), ColdFusion ('.cfm'), or Java ('.jsp').
 
-<p>Firstly, in the markup section of the HelloWorld.html file (i.e. the body section), we need to add another element - an input element. So, change the code in this section from:</p>
+Firstly, in the markup section of the HelloWorld.html file (i.e. the body section), we need to add another element - an input element. So, change the code in this section from:
 
-<code lang="html4strict">
-<button dojoType="Button" widgetId="helloButton">
+.. code-block:: html
+  :linenos:
+
+  <button dojoType="Button" widgetId="helloButton">
     <script type="dojo/method" event="onClick">
     dojo.xhrGet({
         url: 'response.txt',
@@ -169,13 +172,13 @@ Connecting an Event to the Widget
         error: helloError
     });
     </script>
-</button>
-</code>
-<br/>
+  </button>
 
-<p>to:</p>
+to:
 
-<code lang="html4strict">
+.. code-block:: html
+  :linenos:
+
      <button dojoType="dijit.form.Button" id="helloButton">
         Hello World!
         <script type="dojo/method" event="onClick">
@@ -188,12 +191,10 @@ Connecting an Event to the Widget
         </script>
      </button>
      Please enter your name: <input type="text" id="name">
-</code>
-<br/>
 
-<p>Before we go any further - it is important to mention that the url property in the dojo.xhrGet function call must be set to the file that is appropriate to your environment. If you are using an ASP server then the value must read 'HelloWorldResponseGET.asp' instead of 'HelloWorldResponseGET.php' Likewise, if you are using a ColdFusion server then the value must read 'HelloWorldResponseGET.cfm' instead of 'HelloWorldResponseGET.php'. Finally, if you are using a Java server (JSP) then the value must read 'HelloWorldResponseGET.jsp' instead of 'HelloWorldResponseGET.php', or if you are using a Perl server then the value must read 'HelloWorldResponseGET.pl' instead of 'HelloWorldResponseGET.pl'. The code for these files is in the sections below, and is also available as attachments to this tutorial.</p>
+Before we go any further - it is important to mention that the url property in the dojo.xhrGet function call must be set to the file that is appropriate to your environment. If you are using an ASP server then the value must read 'HelloWorldResponseGET.asp' instead of 'HelloWorldResponseGET.php' Likewise, if you are using a ColdFusion server then the value must read 'HelloWorldResponseGET.cfm' instead of 'HelloWorldResponseGET.php'. Finally, if you are using a Java server (JSP) then the value must read 'HelloWorldResponseGET.jsp' instead of 'HelloWorldResponseGET.php', or if you are using a Perl server then the value must read 'HelloWorldResponseGET.pl' instead of 'HelloWorldResponseGET.pl'. The code for these files is in the sections below, and is also available as attachments to this tutorial.
 
-<p>In the code above, you will notice that there is a new property that has been passed to the dojo.xhrGet function. This property - content - allows the programmer to send arbitary values to the server as parameters. In this case, since we are using the default method of dojo.io.bind which is GET, the server side script will have the value of the textbox available to it as a the GET parameter 'name'. It is worth mentioning that if the script expected the parameter under a different name (such as 'myName'), we would simply change the content property to be (note the change of 'name' to 'myName' on the left of the assignment operator ':'):</p>
+In the code above, you will notice that there is a new property that has been passed to the dojo.xhrGet function. This property - content - allows the programmer to send arbitary values to the server as parameters. In this case, since we are using the default method of dojo.io.bind which is GET, the server side script will have the value of the textbox available to it as a the GET parameter 'name'. It is worth mentioning that if the script expected the parameter under a different name (such as 'myName'), we would simply change the content property to be (note the change of 'name' to 'myName' on the left of the assignment operator ':'):</p>
 
 <code lang="js">
     content: {myName: dojo.byId('name').value }
