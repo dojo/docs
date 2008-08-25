@@ -308,41 +308,42 @@ Sending Data to the Server Using POST
 
 Using GET data is all well and good, but sometimes you want to use Dojo to improve the user's experience when using a traditional HTML form. As usual, Dojo has a very nice way of making this easier. Again, the code for these files is in the sections below, and are also available as attachments to this tutorial. Additionally, as with the last section, you will need to change the 'url' property to point to the file that is appropriate to your environment.
 
-<p>First, we need to change the markup in the body of HelloWorld.html from:</p>
+First, we need to change the markup in the body of HelloWorld.html from:
 
-<code lang="html4strict">
-    <br>
+.. code-block:: html
+  :linenos:
+
     Please enter your name: <input type="text" id="name">
-</code>
-<br/>
-<p>to:</p>
 
-<code lang="html4strict">
-    <br>
+to:
+
+.. code-block:: html
+  :linenos:
+
     <form id="myForm" method="POST">
       Please enter your name: <input type="text" name="name">
     </form>
-</code>
-<br/>
 
-<p>Next we need to change the dojo/method:</p>
+Next we need to change the dojo/method:
 
-<code lang="html4strict">
-<script type="dojo/method" event="onClick">
+.. code-block:: html
+  :linenos:
+
+  <script type="dojo/method" event="onClick">
         dojo.xhrGet({
            url: 'HelloWorldResponseGET.php',
            load: helloCallback,
            error: helloError,
            content: {name: dojo.byId('name').value }
         });
-</script>
-</code>
-<br/>
+  </script>
 
-<p>to:</p>
+to:
 
-<code lang="html4strict">
-<script type="dojo/method" event="onClick">
+.. code-block:: html
+  :linenos:
+
+  <script type="dojo/method" event="onClick">
    // Don't forget to replace the value for 'url' with
    // the value of appropriate file for your server
   // (i.e. 'HelloWorldResponsePOST.asp') for an ASP server
@@ -352,13 +353,11 @@ Using GET data is all well and good, but sometimes you want to use Dojo to impro
         error: helloError,
         form: 'myForm'
    });
-</script>
-</code>
-<br/>
+  </script>
 
-<p>As can be seen from the code above, we've changed dojo.xhrGet to dojo.xhrPost.  We removed the 'content' property and replaced it with a new property 'form'. This basically informs the dojo.xhrPost function that it needs to use the form 'myForm' as the source for the data in the call. </p>
+As can be seen from the code above, we've changed dojo.xhrGet to dojo.xhrPost.  We removed the 'content' property and replaced it with a new property 'form'. This basically informs the dojo.xhrPost function that it needs to use the form 'myForm' as the source for the data in the call.
 
-<p>As with the last section, entering your name and clicking 'Hello World!' should yield a message such as 'Hello <name>, welcome to the world of Dojo!' where <name> is the name you entered into the text box.</p>
+As with the last section, entering your name and clicking 'Hello World!' should yield a message such as 'Hello <name>, welcome to the world of Dojo!' where <name> is the name you entered into the text box.
 
 <h3>Using a PHP Server</h3>
 
