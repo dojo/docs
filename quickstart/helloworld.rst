@@ -464,29 +464,10 @@ I hope you've enjoyed this tutorial and found it informative. No doubt though, y
 
 #. `The Dojo event system <http://www.dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/event-system>`_. How you can link functions to the normal JS events the Dojo way.
 
-    <li><a href="http://www.dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/ajax-transports"> Dojo XmlHttpRequest</a> - The foundation for AJAX in Dojo.</li>
+#. `Dojo XmlHttpRequest <http://www.dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/ajax-transports>`_. The foundation for AJAX in Dojo.
 
-    <li><a href="http://www.dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/manipulating-widgets-through-code/writing-yo-0">The File Upload Widget</a> - Widgets! Components! Does the complete tour of the creation of a fully functional UI component and it's usage. </li>
+#. `The File Upload Widget <http://www.dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/manipulating-widgets-through-code/writing-yo-0>`_. Widgets! Components! Does the complete tour of the creation of a fully functional UI component and it's usage.
 
-    <li><a href="http://svn.dojotoolkit.org/dojo/dojo/trunk/tests/">Dojo Unit Tests</a> from current nightly build (good for learning how things work) </li>
+#. `Dojo Unit Tests <http://svn.dojotoolkit.org/dojo/dojo/trunk/tests/>`_ from current nightly build (good for learning how things work)
 
-    <li><a href="http://svn.dojotoolkit.org/dojo/dijit/trunk/tests/">Dijit Unit Tests</a> from the current nightly build (good for learning how widgets work) </li>
-</ul>
-
-<h2>Contacting the Author</h2>
-
-<p>Thinking of making modifications to this document? Want to make suggestions / constructive criticism?</p>
-
-<p>If so, please contact me (Lance Duivenbode) at dojo AT duivenbode DOT id DOT au. Feedback is always welcome since it helps me improve my documentation - both now and in the future. Thanks!</p>
-
-
-<h2>Changelog</h2>
-
-<ul>
-<li>17th November 2007 - Pulled kicking and screaming into the Dojo 1.0 era (Craig Riecke)</li>
-<li>28th June 2006 - Addition of Perl Server examples for GET and POST (courtesy of Gareth Tansey)</li>
-<li>21th June 2006 - Modification for compatibility with 0.3.x release (Bill Keese)</li>
-<li>22th May 2006 - Addition of Java Server (JSP) examples for GET and POST (courtesy of Kexi)</li>
-<li>19th May 2006 - Addition of ColdFusion examples for GET and POST (courtesy of Matthew Reinbold)</li>
-<li>8th May 2006 - Initial Public Release </li>
-</ul>
+#. `Dijit Unit Tests <http://svn.dojotoolkit.org/dojo/dijit/trunk/tests/>`_ from the current nightly build (good for learning how widgets work)
