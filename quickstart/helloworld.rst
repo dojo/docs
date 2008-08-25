@@ -64,27 +64,28 @@ Ok, now for the exciting part! In this example we're going to create a Button wi
 
 The first step in creating the widget is telling Dojo to load the appropriate modules. In the header, add another section (hereafter referred to as section 2) below section 1 as follows:
 
-<code lang="html4strict">
+.. code-block:: html
+  :linenos:
+
     <!-- SECTION 2 -->
     <script type="text/javascript">
        // Load Dojo's code relating to the Button widget
        dojo.require("dijit.form.Button");
     </script>
-</code>
-<br/>
 
-<p>The dojo.require line instructs Dojo to load the Button widget. If you were to omit this line, the markup code for the button would not be evaluated by Dojo upon loading, resulting in a plain HTML button instead of what you expect.</p>
+The dojo.require line instructs Dojo to load the Button widget. If you were to omit this line, the markup code for the button would not be evaluated by Dojo upon loading, resulting in a plain HTML button instead of what you expect.
 
-<p>After making the changes, insert the following code into the body section of the HTML:</p>
+After making the changes, insert the following code into the body section of the HTML:
 
-<code lang="html4strict">
+.. code-block:: html
+  :linenos:
+
     <button dojoType="dijit.form.Button" id="helloButton">Hello World!</button>
-</code>
 
+The key attribute of this HTML element to notice is the dojoType attribute. The dojoType attribute is responsible for instructing Dojo on how to process the element when the page is loading. In this case we've used a button element for the button though we could have used an input element - Dojo will work with either as long as the dojoType attribute is present. It is worth noting that if we did use an input element, we would have to specify the button's text by using adding a caption attribute that contained the desired text.
 
-<p>The key attribute of this HTML element to notice is the dojoType attribute. The dojoType attribute is responsible for instructing Dojo on how to process the element when the page is loading. In this case we've used a button element for the button though we could have used an input element - Dojo will work with either as long as the dojoType attribute is present. It is worth noting that if we did use an input element, we would have to specify the button's text by using adding a caption attribute that contained the desired text.</p>
-
-<h2>Connecting an Event to the Widget</h2>
+Connecting an Event to the Widget
+---------------------------------
 
 <p>A button is all well and good, but what about getting it to do something when it's clicked? We could just specify an onClick event handler for the button, but there's another, more efficient way - the Dojo event system!</p>
 
