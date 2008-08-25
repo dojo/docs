@@ -196,21 +196,24 @@ Before we go any further - it is important to mention that the url property in t
 
 In the code above, you will notice that there is a new property that has been passed to the dojo.xhrGet function. This property - content - allows the programmer to send arbitary values to the server as parameters. In this case, since we are using the default method of dojo.io.bind which is GET, the server side script will have the value of the textbox available to it as a the GET parameter 'name'. It is worth mentioning that if the script expected the parameter under a different name (such as 'myName'), we would simply change the content property to be (note the change of 'name' to 'myName' on the left of the assignment operator ':'):</p>
 
-<code lang="js">
+.. code-block:: html
+  :linenos:
+
     content: {myName: dojo.byId('name').value }
-</code>
-<br/>
 
-<p>Since we've not used it before, it is also worth noting the call dojo.byId('name').value. Quite simply, this call is a shortcut for the standard document.getElementById(..) function.</p>
+Since we've not used it before, it is also worth noting the call dojo.byId('name').value. Quite simply, this call is a shortcut for the standard document.getElementById(..) function.
 
-<p>Finally, if you enter your name into the text box and you click the 'Hello World' button, an alert box should appear with the message 'Hello <name>, welcome to the world of Dojo!' where <name> is the name you entered into the text box.</p>
+Finally, if you enter your name into the text box and you click the 'Hello World' button, an alert box should appear with the message 'Hello <name>, welcome to the world of Dojo!' where <name> is the name you entered into the text box.
 
-<p>Here are the server side scripts.  A few of them are downloadable at the bottom of this page (the website content management system doesn't allow .jsp or .cfm files).</p>
+Here are the server side scripts.  A few of them are downloadable at the bottom of this page (the website content management system doesn't allow .jsp or .cfm files).
 
-<h3>Using a PHP Server</h3>
+Using a PHP Server
+__________________
 
-<code lang="php">
-<?php
+.. code-block:: html
+  :linenos:
+
+  <?php
   /*
   * HelloWorldResponseGET.php
   * --------
@@ -221,14 +224,15 @@ In the code above, you will notice that there is a new property that has been pa
 
   header('Content-type: text/plain');
   print "Hello {$_GET['name']}, welcome to the world of Dojo!\n";
-?>
-</code>
+  ?>
 
+Using an ASP Server
+___________________
 
-<h3>Using an ASP Server</h3>
+.. code-block:: html
+  :linenos:
 
-<code lang="asp">
-<%
+  <%
   '
   ' HelloWorldResponseGET.asp
   ' --------
@@ -239,14 +243,15 @@ In the code above, you will notice that there is a new property that has been pa
 
   response.ContentType="text/plain"
   response.write("Hello " & request.querystring("name") & ", welcome to the world of Dojo!\n")
-%>
-</code>
+  %>
 
+Using a ColdFusion Server
+_________________________
 
-<h3>Using a ColdFusion Server</h3>
+.. code-block:: html
+  :linenos:
 
-<code lang="cf">
-<!---
+  <!---
   /*
   * HelloWorldResponseGET.cfm
   * --------
@@ -254,17 +259,18 @@ In the code above, you will notice that there is a new property that has been pa
   * Print the name that is passed in the
   * 'name' GET parameter in a sentence
   */
---->
-<cfsetting showDebugOutput="No">
-Hello, #url.name#, welcome to the world of Dojo!
-</cfsetting>
-</code>
+  --->
+  <cfsetting showDebugOutput="No">
+  Hello, #url.name#, welcome to the world of Dojo!
+  </cfsetting>
 
+Using a Java Server (JSP)
+_________________________
 
-<h3>Using a Java Server (JSP)</h3>
+.. code-block:: html
+  :linenos:
 
-<code lang="jsp">
-<%
+  <%
   /*
   ' HelloWorldResponseGET.jsp
   ' --------
@@ -274,33 +280,33 @@ Hello, #url.name#, welcome to the world of Dojo!
   */
 
   response.setContentType("text/plain");
-%>
-Hello <%= request.getParameter("name") %> , welcome to the world of Dojo!
-</code>
+  %>
+  Hello <%= request.getParameter("name") %> , welcome to the world of Dojo!
 
+Using a Perl Server
+___________________
 
-<h3>Using a Perl Server</h3>
+.. code-block:: html
+  :linenos:
 
-<code lang="perl">
-#!/usr/bin/perl
-#
-#  ' HelloWorldResponseGET.pl
-#  ' --------
-#  '
-#  ' Print the name that is passed in the
-#  ' 'name' GET parameter in a sentence
-#
-use strict;
-use CGI;
-my $cgi = CGI::new();
-print $cgi->header(-type => "text/html; charset=utf-8");
-print "Hello " . $cgi->param('name') . ", welcome to the world of Dojo!\n";
-</code>
+  #!/usr/bin/perl
+  #
+  #  ' HelloWorldResponseGET.pl
+  #  ' --------
+  #  '
+  #  ' Print the name that is passed in the
+  #  ' 'name' GET parameter in a sentence
+  #
+  use strict;
+  use CGI;
+  my $cgi = CGI::new();
+  print $cgi->header(-type => "text/html; charset=utf-8");
+  print "Hello " . $cgi->param('name') . ", welcome to the world of Dojo!\n";
 
+Sending Data to the Server Using POST
+-------------------------------------
 
-<h2>Sending Data to the Server Using POST</h2>
-
-<p>Using GET data is all well and good, but sometimes you want to use Dojo to improve the user's experience when using a traditional HTML form. As usual, Dojo has a very nice way of making this easier. Again, the code for these files is in the sections below, and are also available as attachments to this tutorial. Additionally, as with the last section, you will need to change the 'url' property to point to the file that is appropriate to your environment.</p>
+Using GET data is all well and good, but sometimes you want to use Dojo to improve the user's experience when using a traditional HTML form. As usual, Dojo has a very nice way of making this easier. Again, the code for these files is in the sections below, and are also available as attachments to this tutorial. Additionally, as with the last section, you will need to change the 'url' property to point to the file that is appropriate to your environment.
 
 <p>First, we need to change the markup in the body of HelloWorld.html from:</p>
 
