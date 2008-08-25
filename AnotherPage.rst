@@ -6,9 +6,10 @@
 Syntax
 ------
 
-.. _hi friend: code/test
 
-this is foo_
+.. _`hi friend`: code/test
+
+this is `hi friend`_
 
 .. code-block :: javascript
   
