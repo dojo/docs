@@ -156,3 +156,38 @@ It also supports a hash API like dojo.attr(), for setting multiple attributes:
 .. code-block :: javascript
 
   myInput.attr({ tabIndex: 3, disabled: true, value: 'hi'});
+
+Behavioral widgets
+------------------
+In general, widgets create their own DOM structure.  For example,
+
+.. code-block :: javascript
+
+  var b = new dijit.form.Button({label: "press me"})
+
+will create a new widget, where b.domNode can be inserted into the document at the appropriate point.
+
+When instantiated declaratively,
+
+.. code-block :: html
+
+   <button dojoType="dijit.form.Button">press me</button>
+
+note that the original button node is thrown away, after scanning the node for attribute settings and innerHTML.
+The new DOM automatically replaces the old button node.
+
+However, there's another type of widget called a "behavioral widget" that merely modifies the original node (called the srcNodeRef).
+
+When using behavioral widgets, you need to specify a source DOM node for them to operate on.  For example:
+
+.. code-block :: javascript
+
+   new dojox.widget.FishEyeLite({...}, "mySourceDom");
+
+This comes naturally if you are instantiating from markup.  For example, a behavioral widget to add a confirm dialog to an anchor might be used like this:
+
+.. code-block :: html
+
+   <a href="..." dojoType="dojoc.widget.ConfirmAnchor">
+
+Dijit doesn't have any behavioral widgets, given that it's meant to be able to be used in a purely programmatic setting (without requiring the developer to create any skeletal sourceDOM nodes), but it is a useful paradigm for some applications.
