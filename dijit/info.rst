@@ -130,3 +130,29 @@ This will cause the creator to use the node with id="makeADialog", and turn it i
 
   var dialog = new dijit.Dialog({ title:"From Source byId" }, "makeADialog");
   dialog.show();
+
+Attributes
+----------
+Widgets have initialization parameters and attributes that can be read/write after initialization.
+In general it's the same list, although certain attributes (like id and type) can only be set
+during initialization.
+
+This basically mirrors have vanilla HTML DOM nodes work, although the syntax is a bit different.
+Specifically, to get/set attributes after initialization, you need to use the attr() method:
+
+.. code-block :: javascript
+
+  // set title
+  myTitlePane.attr('title', 'hello world');
+
+  // find out if button is disabled
+  var dis = myButton.attr('disabled');
+
+  // set to the current date
+  myDateTextBox.attr('value', new Date());
+
+It also supports a hash API like dojo.attr(), for setting multiple attributes:
+
+.. code-block :: javascript
+
+  myInput.attr({ tabIndex: 3, disabled: true, value: 'hi'});
