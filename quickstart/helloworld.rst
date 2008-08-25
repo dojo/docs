@@ -460,11 +460,9 @@ Finding more resources
 
 I hope you've enjoyed this tutorial and found it informative. No doubt though, you will need more information on Dojo and how it and it's widgets work. Below is a list of links that will point you in the right direction.
 
-<ul>
+1. `The documentation page for Dojo <http://dojotoolkit.org/docs/>`_ with links to all documentation.
 
-    <li><a href="http://dojotoolkit.org/docs/">The documentation page</a> for Dojo. Has links to all documentation. </li>
-
-    <li><a href="http://www.dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/event-system">The Dojo event system</a>. How you can link functions to the normal JS events the Dojo way. </li>
+#. `The Dojo event system <http://www.dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/event-system>`_. How you can link functions to the normal JS events the Dojo way.
 
     <li><a href="http://www.dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/ajax-transports"> Dojo XmlHttpRequest</a> - The foundation for AJAX in Dojo.</li>
 
