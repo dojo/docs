@@ -126,5 +126,25 @@ All query information is passed as query parameters.  The list below of the quer
 |count              |How many file items to return.                                                                           |integer             |
 +-------------------+---------------------------------------------------------------------------------------------------------+--------------------+
 
-Examples of query (Return the first ten files in the file tree that begin with foo and end with .txt):
+Example query (Return the first ten files in the file tree that begin with foo and end with .txt):
   http://<remotehost>/myFileService?query={"name":"foo*.txt"}&queryOptions={"deep":true,"ignoreCase":false}&start=0&count=10
+
+Example return (Note that the protocol returns a 'total' property, which informs the store of how many matches were found, regardless of what start and count was.  This is so that onBegin of the store can be properly informed how many total matches occurred.):
+
+.. code-block :: javascript
+
+  {
+    "total": 2496,
+    "items": [
+       {"name": "foo0.txt", "parentDir": "some/dir0", "size": 1234, "modified": 1234567, "directory": false, "path": "some/dir0/foo.txt"},
+       {"name": "foo1.txt", "parentDir": "some/dir1", "size": 1234, "modified": 1234567, "directory": false, "path": "some/dir1/foo1.txt"},
+       {"name": "foo2.txt", "parentDir": "some/dir2", "size": 1234, "modified": 1234567, "directory": false, "path": "some/dir2/foo2.txt"},
+       {"name": "foo3.txt", "parentDir": "some/dir3", "size": 1234, "modified": 1234567, "directory": false, "path": "some/dir3/foo3.txt"},
+       {"name": "foo4.txt", "parentDir": "some/dir4", "size": 1234, "modified": 1234567, "directory": false, "path": "some/dir4/foo4.txt"},
+       {"name": "foo5.txt", "parentDir": "some/dir5", "size": 1234, "modified": 1234567, "directory": false, "path": "some/dir5/foo5.txt"},
+       {"name": "foo6.txt", "parentDir": "some/dir6", "size": 1234, "modified": 1234567, "directory": false, "path": "some/dir6/foo6.txt"},
+       {"name": "foo7.txt", "parentDir": "some/dir7", "size": 1234, "modified": 1234567, "directory": false, "path": "some/dir7/foo7.txt"},
+       {"name": "foofiles.txt", "parentDir": "some/dir8", "size": 1234, "modified": 1234567, "directory": true, "path": "some/dir8/foofiles.txt", "children": ["tmp1","tmp2","tmp3"]},
+       {"name": "foo9.txt", "parentDir": "some/dir9", "size": 1234, "modified": 1234567, "directory": false, "path": "some/dir9/foo9.txt"},
+    ]
+  }
