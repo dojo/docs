@@ -8,3 +8,6 @@ dojo.data
 
 .. contents:
   :depth: 3
+
+Examples
+--------
