@@ -92,7 +92,7 @@ Attaching it as the datastore for a widget works the same as it would for any wi
     dojo.require("dojox.data.FileStore");
   </script>
   <div class="tundra">
-    <div dojoType="dojox.data.FileStore" url="/moin_static163/js/dojo/trunk/release/dojox/data/demos/stores/filestore_dojotree.php" pathAsQueryParam="true" jsId="dojoFiles"></div>
+    <div dojoType="dojox.data.FileStore" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/demos/stores/filestore_dojotree.php" pathAsQueryParam="true" jsId="dojoFiles"></div>
     <div dojoType="dijit.tree.ForestStoreModel" jsId="fileModel" store="dojoFiles" query="{}" rootId="DojoFiles" rootLabel="Dojo Files" childrenAttrs="children"></div>
     <div id="tree" dojoType="dijit.Tree" model="fileModel" ></div>  
   </div>
