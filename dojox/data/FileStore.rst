@@ -108,14 +108,15 @@ The protocol used by dojox.data.FileStore to communicate with a server back end 
 
 **dojo.data.api.Read query protocol**
 All query information is passed as query parameters.  The list below of the query parameters and what is generally supported is defined below in the following table:
-+-------------+---------------------------------------------------------------------------------------------------------+--------------------+
-|**Attribute**|**Description**                                                                                          |**Type**            |
-+-------------+---------------------------------------------------------------------------------------------------------+--------------------+
-|query        |The query to run in the file store.  This is a JSON encoded javascript object of name/value pairs to     |JSON encoded object |
-|             |match against.  For example:  {"name":"foo*.txt"} will match all files that start with the name foo and  |                    |
-|             |end with .txt.   Please note that unless the queryOption deep is set true, the match only scans the root |                    |
-|             |directory.                                                                                               |                    |
-+-------------+---------------------------------------------------------------------------------------------------------+--------------------+
-|queryOptions |The options used to modify the query.  The example implementation supports the two defined dojo.data     |JSON encoded object |
-|             |query modifiers:                                                                                         |                    |
-+-------------+---------------------------------------------------------------------------------------------------------+--------------------+
+
++-------------------+---------------------------------------------------------------------------------------------------------+--------------------+
+|**Query Parameter**|**Description**                                                                                          |**Type**            |
++-------------------+---------------------------------------------------------------------------------------------------------+--------------------+
+|query              |The query to run in the file store.  This is a JSON encoded javascript object of name/value pairs to     |JSON encoded object |
+|                   |match against.  For example:  {"name":"foo*.txt"} will match all files that start with the name foo and  |                    |
+|                   |end with .txt.   Please note that unless the queryOption deep is set true, the match only scans the root |                    |
+|                   |directory.                                                                                               |                    |
++-------------------+---------------------------------------------------------------------------------------------------------+--------------------+
+|queryOptions       |The options used to modify the query.  The example implementation supports the two defined dojo.data     |JSON encoded object |
+|                   |query modifiers:                                                                                         |                    |
++-------------------+---------------------------------------------------------------------------------------------------------+--------------------+
