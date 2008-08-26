@@ -32,7 +32,8 @@ All items returned by a query to the FileStore and will generally have the follo
 +-------------+---------------------------------------------------------------------------------------------------------+----------+
 |name         |The name of the file.  This does not include any path information.                                       |string    |
 +-------------+---------------------------------------------------------------------------------------------------------+----------+
-|path         |The full path to the file, including its name.  **Note:  This is the identifier**                        |string    |
+|path         |The full path to the file, including its name.                                                           |string    |
+|             |**Note:  In the context of dojo.data.api.Identity, this is the identifier**                              |          |
 +-------------+---------------------------------------------------------------------------------------------------------+----------+
 |parentDir    |The parent directory name.                                                                               |string    |
 +-------------+---------------------------------------------------------------------------------------------------------+----------+
