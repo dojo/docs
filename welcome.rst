@@ -199,5 +199,3 @@ Documentation guidelines
 * `How to become a dojo doc ninja <howto>`_
 * `Behind the scenes <internals>`_
 * `A big "thank you"! <thank-you>`_
-
-.. macro:: PageComment2(nosmiley=1)
