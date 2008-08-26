@@ -129,7 +129,8 @@ All query information is passed as query parameters.  The list below of the quer
 Example query (Return the first ten files in the file tree that begin with foo and end with .txt):
   http://<remotehost>/myFileService?query={"name":"foo*.txt"}&queryOptions={"deep":true,"ignoreCase":false}&start=0&count=10
 
-Example return (Note that the protocol returns a 'total' property, which informs the store of how many matches were found, regardless of what start and count was.  This is so that onBegin of the store can be properly informed how many total matches occurred.):
+**Example return:**
+*(Note that the protocol returns a 'total' property, which informs the store of how many matches were found, regardless of what start and count was.  This is so that onBegin of the store can be properly informed how many total matches occurred.)*
 
 .. code-block :: javascript
 
