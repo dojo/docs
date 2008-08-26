@@ -120,8 +120,8 @@ All query information is passed as query parameters.  The list below of the quer
 |queryOptions       |The options used to modify the query.  The example implementation supports the two defined dojo.data     |JSON encoded object |
 |                   |query modifiers: *deep* and *ignoreCase*                                                                 |                    |
 +-------------------+---------------------------------------------------------------------------------------------------------+--------------------+
-|start              |In the list of matches, where to start returning file items.  Example: start: 10.  Start returning items |integer             |
-|                   | starting at the tenth file item match.                                                                  |                    |
+|start              |In the list of matches, where to start returning file items.  For example a value of 10 means start      |integer             |
+|                   | returning items starting at the tenth file item match.                                                  |                    |
 +-------------------+---------------------------------------------------------------------------------------------------------+--------------------+
 |count              |How many file items to return.                                                                           |integer             |
 +-------------------+---------------------------------------------------------------------------------------------------------+--------------------+
