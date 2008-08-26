@@ -82,3 +82,14 @@ Please note that the store is a hierarchical store and if you wish to query the 
     }
     fileStore.fetch({query: {name:"foo*.txt"}, onComplete: searchDone, queryOptions: {deep:true}});
   }
+
+**Technical/Protocol Details**
+==============================
+This section is not necessary to fully understand how to just use the existing dojox.data.FileStore back end implementation, it is intended for people who wish to implement their own back end service in another language, such as python or java.   
+
+
+**Protocol**
+------------
+The protocol used by dojox.data.FileStore to communicate with a server back end is simple.  It is effectively a  direct psuh of the client query information to the server in JSON encoding.   The protocol consists of two main flows a query flow for implementing the dojo.data.api.Read, and a n individual item lookup for implementing the dojo.data.api.Identity.  Each of these are covered in detail below:
+
+**dojo.data.api.Read query protocol**
