@@ -6,7 +6,7 @@ dojo.data
 :Status: Draft
 :Version: 1.2
 
-.. contents:
+.. contents::
   :depth: 3
 
 Examples
