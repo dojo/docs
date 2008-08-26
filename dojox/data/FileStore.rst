@@ -83,6 +83,20 @@ Please note that the store is a hierarchical store and if you wish to query the 
     fileStore.fetch({query: {name:"foo*.txt"}, onComplete: searchDone, queryOptions: {deep:true}});
   }
 
+Attaching it as the datastore for a widget works the same as it would for any widget.  For example, using it to front a dijit Tree is shown below. In the following example, dijit.Tree is being rooted so that it displays the entire dojo source tree:
+
+.. codeviewer::
+
+  <script>
+    dojo.require("dijit.Tree");
+    dojo.require("dojox.data.FileStore");
+  </script>
+  <div class="tundra">
+    <div dojoType="dojox.data.FileStore" url="/moin_static163/js/dojo/trunk/release/dojox/data/demos/stores/filestore_dojotree.php" pathAsQueryParam="true" jsId="dojoFiles"></div>
+    <div dojoType="dijit.tree.ForestStoreModel" jsId="fileModel" store="dojoFiles" query="{}" rootId="DojoFiles" rootLabel="Dojo Files" childrenAttrs="children"></div>
+    <div id="tree" dojoType="dijit.Tree" model="fileModel" ></div>  
+  </div>
+
 **Technical/Protocol Details**
 ==============================
 This section is not necessary to fully understand how to just use the existing dojox.data.FileStore back end implementation, it is intended for people who wish to implement their own back end service in another language, such as python or java.   
