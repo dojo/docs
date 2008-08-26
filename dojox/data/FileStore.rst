@@ -118,5 +118,5 @@ All query information is passed as query parameters.  The list below of the quer
 |                   |directory.                                                                                               |                    |
 +-------------------+---------------------------------------------------------------------------------------------------------+--------------------+
 |queryOptions       |The options used to modify the query.  The example implementation supports the two defined dojo.data     |JSON encoded object |
-|                   |query modifiers:                                                                                         |                    |
+|                   |query modifiers: *deep* and *ignoreCase*                                                                 |                    |
 +-------------------+---------------------------------------------------------------------------------------------------------+--------------------+
