@@ -120,11 +120,11 @@ All query information is passed as query parameters.  The list below of the quer
 |queryOptions       |The options used to modify the query.  The example implementation supports the two defined dojo.data     |JSON encoded object |
 |                   |query modifiers: *deep* and *ignoreCase*                                                                 |                    |
 +-------------------+---------------------------------------------------------------------------------------------------------+--------------------+
-|start              |In the list of matches, where to start returning file items.  For example a value of 10 means start      |integer             |
-|                   | returning items starting at the tenth file item match.                                                  |                    |
+|start              |Where in the list of matches to start returning file items.  For example a value of 10 means start       |integer             |
+|                   | returning items beginning at the tenth file item match.                                                 |                    |
 +-------------------+---------------------------------------------------------------------------------------------------------+--------------------+
 |count              |How many file items to return.                                                                           |integer             |
 +-------------------+---------------------------------------------------------------------------------------------------------+--------------------+
 
-Examples of query:
+Examples of query (Return the first ten files in the file tree that begin with foo and end with .txt):
   http://<remotehost>/myFileService?query={"name":"foo*.txt"}&queryOptions={"deep":true,"ignoreCase":false}&start=0&count=10
