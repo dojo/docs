@@ -216,8 +216,8 @@ You can send custom parameters to the ancestor function.  Just place the extra a
 
   this.inherited(arguments, [ customArg1, customArg2 ])
 
-More on Mixins
---------------
+Mixins
+------
 
 Just as Dojo adds class-based inheritance to JavaScript, so it adds support for *multiple inheritance*.  We do this through Dojo *mixins*.   The methods and properties of a mixed-in class are simply added to each instance. 
 
@@ -256,3 +256,33 @@ Suppose, for example, you have a class called VanillaSoftServe, and classes Mand
 This will first print "mixing in Vanilla" on the debug console because VanillaSoftServe is the superclass of Blizzard.  In fact, VanillaSoftServe is the *only* superclass of Blizzard - the first mixin is always the superclass. Next the constructors of the mixins are called, so "mixing in MandMs" will appear.  Then "A blizzard with plain M and Ms and medium chunks of cookie dough." will appear.
 
 Mixins are used a lot in defining Dijit classes, with most classes extending ``dijit._Widget`` and mixing in ``dijit._Templated``.
+
+Mixin inheritance chain
+-----------------------
+Given:
+
+   dojo.declare("foo", [bar, zot, nim])
+
+Then the inheritance chain looks like this:
+
+.. code-block :: html
+
+   foo -> nim -> zot -> bar
+
+It specifically does not look like this:
+
+.. code-block :: html
+
+   foo -> bar
+       -> zot
+       -> nim
+
+This can be confusing because of the nomenclature. "Mixins" sounds a lot
+like the latter, but it's really "multiple base classes with limitations".
+Sometimes we use the phrase "mixin classes" to describe it, but that's not
+ideal either.
+
+Note also that "mixin classes" can have their own arbitrarily complex
+hierarchy. So the "inherits" can also walk a tree.
+
+The upshot of this is that, in general, every mixin method should be calling this.inherited(arguments).   Of course that's assuming it'll be mixed in where the superclass has a method in the base class with the same name.
