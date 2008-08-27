@@ -132,7 +132,7 @@ Below is a simple example of how a datastore can be used to load data and how wi
 
     <script>
       dojo.require("dojox.grid.DataGrid");
-      dojo.require("dojo.data.ItemFileReadStore
+      dojo.require("dojo.data.ItemFileReadStore");
       var layoutFiles = [
         [
           { field: "abbr", name: "Abbeviation", width: 10 },
