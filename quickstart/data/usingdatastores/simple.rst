@@ -124,7 +124,7 @@ Below is a simple example of how a datastore can be used to load data and how wi
     <div dojoType="dijit.form.FilteringSelect" store="countryStore" searchAttr="name"></div>
 
 
-**Example 3:  Connecting dojox.grid.DataGrid to the above data:**
+**Example 4:  Connecting dojox.grid.DataGrid to the above data:**
 
 .. cv-compound ::
 
