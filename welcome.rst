@@ -49,7 +49,7 @@ Dojo is a very extensive library of code, most of which is optional. Here are so
 
   * `Using Datastores <quickstart/data/usingdatastores>`_
 
-    * `A Simple Data Source <quickstart/data/usingdatastores/>`_
+    * `A Simple Data Source <quickstart/data/usingdatastores/simple>`_
 
     * `Fetching Single Items and Values <quickstart/data/usingdatastores/fetchsingle>`_
 
