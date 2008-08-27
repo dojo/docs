@@ -165,7 +165,7 @@ Below is a simple example of how a datastore can be used to load data and how wi
         structure="layoutCountries" 
         queryOptions="{deep:true}"
         query="{}" 
-        sortFields="[{'attribute':'abbr', 'descending': true]"
+        sortFields="[{'attribute':'capital', 'descending': true}]"
         rowsPerPage="40">
       </div>
     </div>
