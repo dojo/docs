@@ -28,7 +28,7 @@ For the following examples, the defined JavaScript will be used.  Note that it h
 
 * The data source is the above javascript object
 * Each item is a country, and each item has three attributes, name,abbr, and capital.
-* The abbr attribute is an identifier. Each country has a different abbr to prevent confusion.
+* The abbr attribute is an identifier. Each country has a different abbr for unique look up.
 
 This is a simple, but powerful, way to represent data in the browser.  It can also be quickly converted to a test format called `JavaScript Object Notation (JSON) <http://www.json.org>`_.  The JSON format can be stored as files on your server and loaded via xhr calls.  dojo.data.ItemFileReadStore allows for the data to be defined in browser as an object such as above, or from a JSON file of the same format.  
 
