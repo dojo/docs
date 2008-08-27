@@ -60,7 +60,6 @@ Below is a simple example of how a datastore can be used to load data and how wi
 
   .. cv :: html 
 
-    <!-- Declaratively initialize the store from the global javascript object storeData -->
     <div dojoType="dojo.data.ItemFileReadStore" data="storeData" jsId="countryStore"></div>
     <div dojoType="dojo.data.ComboBox" store="countryStore" searchAttr="name"></div>
 
