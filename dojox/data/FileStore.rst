@@ -156,6 +156,20 @@ Attaching it as the datastore for a widget works the same as it would for any wi
     <div id="tree" dojoType="dijit.Tree" model="fileModel" ></div>  
   </div>
 
+**Attaching the FileStore to dijit.form.ComboBox declaratively:**
+
+.. codeviewer::
+
+  <script>
+    dojo.require("dijit.form.ComboCox");
+    dojo.require("dojox.data.FileStore");
+  </script>
+  <div class="nihilo">
+    <div dojoType="dojox.data.FileStore" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/demos/stores/filestore_dojoxdata.php" pathAsQueryParam="true" jsId="comboStore"></div>
+    <div dojoType="dijit.form.ComboBox"  store="comboStore" searchAttr="path" value="./demos"></div> 
+  </div>
+
+
 **Attaching the FileStore to dojox.grid.DataGrid declaratively:**
 
 .. cv-compound ::
