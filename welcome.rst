@@ -72,6 +72,14 @@ These pages cover both cases, and indicate how they are provided.
 
   * `dojo.data.api <dojo/data/api>`_
 
+  * `dojo.data.api.Read <dojo/data/api.Read>`_
+
+  * `dojo.data.api.Write <dojo/data/api.Write>`_
+
+  * `dojo.data.api.Identity <dojo/data/api.Identity>`_
+
+  * `dojo.data.api.Notification <dojo/data/api.Notification>`_
+
   * `dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`_
 
   * `dojo.data.ItemFileWriteStore <dojo/data/ItemFileWriteStore>`_
