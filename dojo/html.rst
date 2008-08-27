@@ -32,11 +32,16 @@ Of course, if that was all you needed to do, you'd be better of just setting inn
 
 .. codeviewer::
 
+    <button id="setbtn">Click to set content</button>
+    <table id="mytable">
+      <tr><td>Nothing here yet</td></tr>
+    </table>
+
 
     <script type="text/javascript">
     dojo.require("dojo.html");
 
-    dojo.addOnLoad(function() {
+    dojo.connect("setbtn", "onclick", function() {
 
       dojo.html.set(dojo.byId("mytable"), '<tr>'
         +'<td><label>How much?</label></td>'
@@ -56,15 +61,11 @@ Of course, if that was all you needed to do, you'd be better of just setting inn
     })
     </script>
 
-    <table id="mytable">
-      <tr><td>Loading...</td></tr>
-    </table>
-
 We're getting a lot done here. First, note that we're setting content on a table. Some browsers get very unhappy when you try and set ``innerHTML`` on tables (and other elements) - ``dojo.html.set`` handles all that for you. Also, note that the content includes a widget, and we've added a 3rd parameter to our ``set()`` call - an object with some configuration for this set operation. ``parseContent: true`` tells ``set`` that when the content has been slopped in there, it should run the parser over the element. 
 
 This is a common pattern, and yeilds a common problem - what if we haven't got the classes necessary already required? We provide an ``onBegin`` function to the set operation to first require the necessary widget. We call ``this.inherited`` just in case ``onBegin`` has other work it needs to do. But what is "``this``"? ``dojo.html.set`` makes use of a ``dojo.html._ContentSetter`` class to encapsulate the work it needs to do, so ``this`` is an instance of that class. For advanced usage like this, see the api docs and look over source code to fully understand how you can leverage the _ContentSetter class. 
 
-My use of ``dojo.addOnLoad`` to trigger the new content is purely an example, you could obviously make this call from an event handler, xhr callback, etc. There are many many possibilities - here's just a couple ideas: applying ``dojo.behavior``s to the new content, fading/animating the new content, cloning the new content into another node, escaping or performing substitutions on the content before it lands. I'll also mention here that this functionality is also made availiable for ``NodeLists`` (``dojo.query`` result objects) via the ``dojo.NodeList-html`` module
+My use of ``dojo.connect`` to trigger the new content is purely an example, you could obviously make this call from an event handler, xhr callback, etc. There are many many possibilities - here's just a couple ideas: applying ``dojo.behavior`` to the new content, fading/animating the new content, cloning the new content into another node, escaping or performing substitutions on the content before it lands. I'll also mention here that this functionality is also made availiable for ``NodeLists`` (``dojo.query`` result objects) via the ``dojo.NodeList-html`` module
 
 What else comes out of the box? set takes the following optional params to configure its behavior: 
 
