@@ -161,33 +161,49 @@ Attaching it as the datastore for a widget works the same as it would for any wi
 
 **Attaching the FileStore to dojox.grid.DataGrid declaratively:**
 
-.. codeviewer::
+.. cv-compound ::
 
-  <script>
-    dojo.require("dojox.grid.DataGrid");
-    dojo.require("dojox.data.FileStore");
-    var layoutFiles = [
-      [
-        { field: "name", name: "Filename", width: 20 },
-        { field: "size", name: "File Size (bytes)", width: 10 },
-        { field: "directory", name: "Is Directory", width: 10 },
-        { field: "path", name: "Path", width: 'auto' }
-      ]
-    ];
-  </script>
-  <div class="tundra" style="width: 100%; height: 300px;">
-    <div dojoType="dojox.data.FileStore" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/demos/stores/filestore_dojoxdata.php" pathAsQueryParam="true" jsId="fileStore">
-    </div>
-      <div id="grid" 
-        dojoType="dojox.grid.DataGrid" 
-        store="fileStore" 
-        structure="layoutFiles" 
-        queryOptions="{deep:true}"
-        query="{}" 
-        sortFields="[{'attribute':'path', 'descending': false}]"
-        rowsPerPage="40">
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojox.grid.DataGrid");
+      dojo.require("dojox.data.FileStore");
+      var layoutFiles = [
+        [
+          { field: "name", name: "Filename", width: 20 },
+          { field: "size", name: "File Size (bytes)", width: 10 },
+          { field: "directory", name: "Is Directory", width: 10 },
+          { field: "path", name: "Path", width: 'auto' }
+        ]
+      ];
+    </script>
+
+  .. cv :: html
+
+    <div class="tundra" style="width: 100%; height: 300px;">
+      <div dojoType="dojox.data.FileStore" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/demos/stores/filestore_dojoxdata.php" pathAsQueryParam="true" jsId="fileStore">
       </div>
-  </div>
+        <div id="grid" 
+          dojoType="dojox.grid.DataGrid" 
+          store="fileStore" 
+          structure="layoutFiles" 
+          queryOptions="{deep:true}"
+          query="{}" 
+          sortFields="[{'attribute':'path', 'descending': false}]"
+          rowsPerPage="40">
+        </div>
+    </div>
+
+  .. cv:: css
+
+    <style type="text/css">
+      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/resources/Grid.css";
+      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/resources/nihiloGrid.css";
+
+      .dojoxGrid table {
+        margin: 0;
+      }
+    </style>
 
 
 **Technical/Protocol Details**
