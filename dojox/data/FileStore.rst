@@ -127,13 +127,13 @@ A complete code example of querying the entire filesystem for a wildcard matched
 
 .. code-block :: javascript
 
-  var fileStore = new dojox.data.FileStore({url: "myService.php"});
+  var fileStore = new dojox.data.FileStore({url: "myService.php", pathAsQueryParam: true});
     function searchDone(items, request){
       if (items) {
         var i;
-          for (i = 0; i < items.length; i++) {
-            console.log("Found file: " + fileStore.getValue(items[i], "name") + " in directory: " + fileStore.getValue(items[i], "parentDir"));
-          }
+        for (i = 0; i < items.length; i++) {
+          console.log("Found file: " + fileStore.getValue(items[i], "name") + " in directory: " + fileStore.getValue(items[i], "parentDir"));
+        }
       }
     }
     fileStore.fetch({query: {name:"foo*.txt"}, onComplete: searchDone, queryOptions: {deep:true}});
@@ -158,7 +158,9 @@ Attaching it as the datastore for a widget works the same as it would for any wi
 
 **Technical/Protocol Details**
 ==============================
-This section is not necessary to fully understand how to just use the existing dojox.data.FileStore back end implementation, it is intended for people who wish to implement their own back end service in another language, such as python or java.   
+The following section is not necessary to fully understand how to just use the existing dojox.data.FileStore back end implementation, it is intended for people who wish to implement their own back end service in another language, such as python or java.   
+
+`Protocol Information <dojox/data/FileStore/protocol>`_
 
 
 **Protocol**
@@ -208,4 +210,47 @@ Example query (Return the first ten files in the file tree that begin with foo a
        {"name": "foofiles.txt", "parentDir": "some/dir8", "size": 1234, "modified": 1234567, "directory": true, "path": "some/dir8/foofiles.txt", "children": ["tmp1","tmp2","tmp3"]},
        {"name": "foo9.txt", "parentDir": "some/dir9", "size": 1234, "modified": 1234567, "directory": false, "path": "some/dir9/foo9.txt"},
     ]
+  }
+
+
+
+
+**dojo.data.api.Identity protocol:**
+
+The Identity protocol is very simple and is the same protocol used by loadItem() of the dojo.data.api.Read.  The identity of Files in the filestore is the 'path' attribute.  So when a url calling to a specific path is seen by the back-end FileStore service, the service knows it is a single file identity lookup and operates according.  The way the path is sent varies depending on the pathAsQueryParam option.  Examples are below:
+
+
+*pathAsQueryParam: false:**
+
+  http://<server>/<service>/some/file
+
+  When the option is false, the path is sent as part of the url.
+
+
+*pathAsQueryParam: true:**
+
+  http://<server>/<service>?path=some/file
+
+  When the option is true, the path is sent as a query parameter named 'path'.
+
+
+In either of the above cases, the expected return is a single item in JSON encoded format.  An example is below:
+
+For identity lookup for directory *some/dir8/foofiles.txt*, the url queried would be:
+
+*http://<server>/<service>/some/dir8/foofiles.txt*
+
+
+The return is expected to be like be:
+
+.. code-block :: javascript
+
+  {
+    "name": "foofiles.txt", 
+    "parentDir": "some/dir8", 
+    "size": 1234, 
+    "modified": 1234567, 
+    "directory": true, 
+    "path": "some/dir8/foofiles.txt", 
+    "children": ["tmp1","tmp2","tmp3"]
   }
