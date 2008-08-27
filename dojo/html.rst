@@ -59,7 +59,7 @@ Of course, if that was all you needed to do, you'd be better of just setting inn
       });
       dojo.disconnect(sethandle); 
       sethandle = null;
-      dojo.byId("setbrn").innerHTML = "Done"; 
+      dojo.byId("setbtn").innerHTML = "Done"; 
     })
     </script>
 
