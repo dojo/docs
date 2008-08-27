@@ -125,6 +125,7 @@ Below is a simple example of how a datastore can be used to load data and how wi
 
 
 **Example 3:  Connecting dojox.grid.DataGrid to the above data:**
+
 .. cv-compound ::
 
   .. cv :: javascript
