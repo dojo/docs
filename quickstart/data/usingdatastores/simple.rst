@@ -137,7 +137,7 @@ Below is a simple example of how a datastore can be used to load data and how wi
         [
           { field: "abbr", name: "Abbeviation", width: 10 },
           { field: "name", name: "Name", width: 10 },
-          { field: "capitol", name: "Capitol", width: 'auto' }
+          { field: "capital", name: "Capital", width: 'auto' }
         ]
       ];
 
