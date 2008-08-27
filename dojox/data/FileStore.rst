@@ -146,6 +146,9 @@ Attaching it as the datastore for a widget works the same as it would for any wi
 
 .. codeviewer::
 
+  <style>
+    @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/resources/tundraGrid.css";
+  </style>
   <script>
     dojo.require("dijit.Tree");
     dojo.require("dojox.data.FileStore");
