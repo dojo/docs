@@ -7,6 +7,22 @@ dojo.html
 :Status: Contributed, Draft
 :Version: 1.0
 
-`Visit configuration`_ is done in ``app.cfg``. The purpose of the configuration options should be pretty clear from the comments in ``app.cfg``, but here are some of the more interesting options.
+As of version 1.2, dojo.html is home to a single public helper method: dojo.html.set(). Its use is to safely and conveniently replace an element's content, while providing some hooks and options for how the replacement should be handled.
 
-.. _Visit configuration: /1.0/Configuration
+Examples: 
+---------
+
+.. codeviewer::
+
+    <script type="text/javascript">
+    dojo.require("dojo.html");
+    dojo.addOnLoad(function() {
+      // the first argument can be a string id, or a node reference
+      console.log("loaded");
+      dojo.html.set("mycontent", "loaded!");
+    })
+    </script>
+
+    <div id="mycontent">
+      Loading...
+    </div>
