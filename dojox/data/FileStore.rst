@@ -161,7 +161,7 @@ Attaching it as the datastore for a widget works the same as it would for any wi
 .. codeviewer::
 
   <script>
-    dojo.require("dijit.form.ComboCox");
+    dojo.require("dijit.form.ComboBox");
     dojo.require("dojox.data.FileStore");
   </script>
   <div class="nihilo">
