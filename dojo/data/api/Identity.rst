@@ -126,7 +126,7 @@ For all of the examples in the following sections, assume that there is a simple
 
 **The Complete Identity API**
 
-For convenience, the following Identity API was taken directly from dojo/data/api/Identity.js: 
+For convenience, the following Identity API was taken directly from dojo/data/api/Identity.js and provided below: 
 
 .. code-block :: javascript
 
