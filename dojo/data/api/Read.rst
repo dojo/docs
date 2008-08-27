@@ -122,6 +122,7 @@ For convenience, the complete Read Feature is defined below.
     //        Throws an exception if *item* is not an item, or *attribute* is not a string
     //    examples:
     //        var darthVader = store.getValue(lukeSkywalker, "father");
+
   getValues: function(/* item */ item, /* attribute-name-string */ attribute)
     //    summary:
     //         This getValues() method works just like the getValue() method, but getValues()
@@ -139,6 +140,7 @@ For convenience, the complete Read Feature is defined below.
     //
     //    exceptions:
     //        Throws an exception if *item* is not an item, or *attribute* is not a string
+
   getAttributes: function(/* item */ item)
     //    summary:
     //        Returns an array with all the attributes that this item has.  This
@@ -150,6 +152,7 @@ For convenience, the complete Read Feature is defined below.
     //
     //    exceptions:
     //        Throws an exception if *item* is not an item, or *attribute* is not a string
+
   hasAttribute: function(/* item */ item, /* attribute-name-string */ attribute)
     //    summary:
     //        Returns true if the given *item* has a value for the given *attribute*.
@@ -161,6 +164,7 @@ For convenience, the complete Read Feature is defined below.
     //
     //    exceptions:
     //        Throws an exception if *item* is not an item, or *attribute* is not a string
+
   containsValue: function(/* item */ item, /* attribute-name-string */ attribute, /* anything */ value)
     //    summary:
     //        Returns true if the given *value* is one of the values that getValues()
@@ -175,6 +179,7 @@ For convenience, the complete Read Feature is defined below.
     //
     //    exceptions:
     //        Throws an exception if *item* is not an item, or *attribute* is not a string
+
   isItem: function(/* anything */ something)
     //    summary:
     //        Returns true if *something* is an item and came from the store instance.  
@@ -184,6 +189,7 @@ For convenience, the complete Read Feature is defined below.
     //    something:
     //        Can be anything.
     //
+
   isItemLoaded: function(/* anything */ something) 
     //    summary:
     //        Returns false if isItem(something) is false.  Returns false if
@@ -194,6 +200,7 @@ For convenience, the complete Read Feature is defined below.
     //    something:
     //        Can be anything.
     //
+
   loadItem: function(/* object */ keywordArgs)
     //    summary:
     //        Given an item, this method loads the item so that a subsequent call
@@ -232,6 +239,7 @@ For convenience, the complete Read Feature is defined below.
     //        the callback functions will be called in the context of dojo.global().
     //        For example, onItem.call(scope, item, request) vs. 
     //        onItem.call(dojo.global(), item, request)
+
   fetch: function(/* Object */ keywordArgs)
     //    summary:
     //        Given a query and set of defined options, such as a start and count of items to return,
@@ -386,6 +394,7 @@ For convenience, the complete Read Feature is defined below.
     //    exceptions:
     //        Throws an exception if the query is not valid, or if the query
     //        is required but was not supplied.
+
   getFeatures: function()
     //    summary:
     //        The getFeatures() method returns an simple keyword values object 
@@ -397,6 +406,7 @@ For convenience, the complete Read Feature is defined below.
     //        A more sophisticated datastore might implement a variety of
     //        interface features, like 'dojo.data.api.Read', 'dojo.data.api.Write', 
     //        'dojo.data.api.Identity', and 'dojo.data.api.Attribution'.
+
   close: function(/*dojo.data.api.Request || keywordArgs || null */ request)
     //    summary:
     //        The close() method is intended for instructing the store to 'close' out 
@@ -416,6 +426,7 @@ For convenience, the complete Read Feature is defined below.
     //        and close out all 'open' connections.  It does not render the store unusable from
     //        there on, it merely cleans out any current data and resets the store to initial 
     //        state.
+
   getLabel: function(/* item */ item)
     //    summary:
     //        Method to inspect the item and return a user-readable 'label' for the item
@@ -439,6 +450,7 @@ For convenience, the complete Read Feature is defined below.
     //    returns: 
     //        A user-readable string representing the item or undefined if no user-readable label can 
     //        be generated.
+
   getLabelAttributes: function(/* item */ item)
     //    summary:
     //        Method to inspect the item and return an array of what attributes of the item were used 
