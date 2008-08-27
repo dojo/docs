@@ -119,7 +119,7 @@ Using the dojox.dataFileStore is generally simple.  The store takes three possib
 +---------------------+-----------------------------------------------------------------------------------------------+--------------------+
 
 
-Some usage examples for using the service in code as well as declarative markup attaching it to a widget such as dijit.Tree and dojox.grid.DataGrid is shown below.
+Some usage examples for using the service in code as well as declarative markup attaching it to a widget such as dijit.Tree, dijit.form.ComboBox, and dojox.grid.DataGrid is shown below.
 
 **Simple programmatic usage:**
 
