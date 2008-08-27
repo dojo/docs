@@ -156,6 +156,37 @@ Attaching it as the datastore for a widget works the same as it would for any wi
     <div id="tree" dojoType="dijit.Tree" model="fileModel" ></div>  
   </div>
 
+**Attaching the FileStore to dojox.grid.DataGrid declaratively:**
+
+.. codeviewer::
+
+  <script>
+    dojo.require("dojox.grid.DataGrid");
+    dojo.require("dojox.data.FileStore");
+    var layoutFiles = [
+      [
+        { field: "name", name: "Filename", width: 20 },
+        { field: "size", name: "File Size (bytes)", width: 10 },
+        { field: "directory", name: "Is Directory", width: 10 },
+        { field: "path", name: "Path", width: 'auto' }
+      ]
+    ];
+  </script>
+  <div class="tundra" style="width: 100%; height: 300px;">
+    <div dojoType="dojox.data.FileStore" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/demos/stores/filestore_dojoxdata.php" pathAsQueryParam="true" jsId="fileStore">
+    </div>
+      <div id="grid" 
+        dojoType="dojox.grid.DataGrid" 
+        store="fileStore" 
+        structure="layoutFiles" 
+        queryOptions="{deep:true}"
+        query="{}" 
+        sortFields="[{'attribute':'path', 'descending': false}]"
+        rowsPerPage="40">
+      </div>
+  </div>
+
+
 **Technical/Protocol Details**
 ==============================
 The following section is not necessary to fully understand how to just use the existing dojox.data.FileStore back end implementation, it is intended for people who wish to implement their own back end service in another language, such as python or java.   
