@@ -10,18 +10,18 @@ Before diving directly into the APIs of dojo.data, the basic concepts behind the
 ------------------------------------------------------------------------------------------------
 Data access is broken down into separate APIs because not every service or data backend is able to provide complete access and functions. So not all datastores could possibly implement functions such as read, write, identify, or notifications. To make it simple to see what features a store provides, each store must provide the 'getFeatures()' function. This function reports which APIs the store implements. The following list of basic APIs are defined:
 
-**dojo.data.api.Read** (`Reference <Read>`_)
+**dojo.data.api.Read**  (`Read API Reference <Read>`_)
 
   The ability to read data items and attributes of those data items. This also includes the ability to search, sort, and filter data items.
 
-**dojo.data.api.Write** (`Reference <Write>`_)
+**dojo.data.api.Write**  (`Write API Reference <Write>`_)
 
   The ability to create, delete, and update data items and attributes of those data items. Not all back end services allow for modification of data items. In fact, most public services like Flikr, Delicious, GoogleMaps, for example are primarily read-based data providers.
 
-**dojo.data.api.Identity** (`Reference <Identity>`_)
+**dojo.data.api.Identity**  (`Identity API Reference <Identity>`_)
   The ability to locate and look up an item based on its unique identifier, if it has one. Not all data formats have unique identifiers that can be used to look up data items.
 
-**dojo.data.api.Notification** (`Reference <Notification>`_)
+**dojo.data.api.Notification**  (`Notification API Reference <Notification>`_)
 
   The ability to notify listeners for change events on data items in a store. The basic change events for an item are create, delete, and update.  These are particularly useful for cases such as a datastore that periodically polls a back end service for data refresh.
 
