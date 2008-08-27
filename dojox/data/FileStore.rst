@@ -67,8 +67,63 @@ The dojox.data.FileStore query structure follows that of dojo.data.ItemFileReadS
 
 would return all files that have the name foo at the start of the name and end with the extension .txt.  
 
-Please note that the store is a hierarchical store and if you wish to query the entire file system (not just the root of it), for a file name, you must set the standard dojo.data.api.Read queryOption 'deep' to the value true.  A complete code example of querying the entire filesystem scanned by the FileStore is below:
+Please note that the store is a hierarchical store and if you wish to query the entire file system (not just the root of it), for a file name, you must set the standard dojo.data.api.Read queryOption 'deep' to the value true.  
 
+**Usage**
+=========
+Using the dojox.dataFileStore is generally simple.  The store takes three possible constructor options which can also be declared in markup.  These options configure the store and its operating behavior.  The options are defined below in a table.
+
+A complete code example of querying the entire filesystem scanned by the FileStore is below:
+
++---------------------+-----------------------------------------------------------------------------------------------+--------------------+
+|**Constructor param**|**Description**                                                                                |**Type**            |
++---------------------+-----------------------------------------------------------------------------------------------+--------------------+
+|url                  |The URL of the service that provides the server-side implementation that processes the queries |string              |
+|                     |returns the results.  Note that because of the same origin policy of the browser, the service  |                    |
+|                     |must reside in the same domain as the loaded page.  To access urls outside of the domain, you  |                    | 
+|                     |must use a proxy.  **This parameter is required**                                              |                    | 
++---------------------+-----------------------------------------------------------------------------------------------+--------------------+
+|pathAsQueryParam     |This parameter alters the behavior of the dojo.data.api.Identity functions.  By default it is  |boolean             |
+|                     |false.  When it is false, any request for the information of a single file theough a           |                    |
+|                     |fetchItemByIdentity call (and internally by loadItem), the url used is restful.  This means the|                    |
+|                     |url request will look like:                                                                    |                    |
+|                     |                                                                                               |                    |
+|                     |                                                                                               |                    |
+|                     |*http://<server>/<service>/some/file*.                                                         |                    |
+|                     |                                                                                               |                    |
+|                     |                                                                                               |                    |
+|                     |It is effectively url-pathing to represent the file.                                           |                    |
+|                     |                                                                                               |                    |
+|                     |                                                                                               |                    |
+|                     |This is convenient for services implemented in a java servlet.  For implementations that are   |                    |
+|                     |not convenient to work this way, such as php, you would want to set the option to true.  When  |                    |
+|                     |is set to true, the path to the file becomes a query parameter.  An example is:                |                    |
+|                     |                                                                                               |                    |
+|                     |                                                                                               |                    |
+|                     |*http://<server>/<service>?path=some/file*                                                     |                    |
++---------------------+-----------------------------------------------------------------------------------------------+--------------------+
+|options              |This is a comma separated list of options that dojox.data.FileStore will pass to the service as|string              |
+|                     |a JSON encoded string array.  These options can be used to configure certain behaviors of the  |                    |
+|                     |dojox.data.FileStore.  The example PHP implementation provided in demos supports the following |                    | 
+|                     |                                                                                               |                    |
+|                     |**expand**: This option instructs the store to inflate all child files of a directory so that  |                    |
+|                     |lazy-loading through isItemLoaded() and loadItem() is not necessary.  This options is          |                    |
+|                     |expensive to use and not recommended.  For large file systems, using this option can generate  |                    |
+|                     |huge returns.  This option is not recommended for use, but is provided as convenience          |                    |
+|                     |for small file systems and debug purposes.                                                     |                    |
+|                     |                                                                                               |                    |
+|                     |**showHiddenFiles**: This option enables returning information about hidden files.  By default |                    |
+|                     |the example implementation does not display hidden files.  Note that a hidden file follows UNIX|                    |
+|                     |of starting with a '.' character.                                                              |                    |
+|                     |                                                                                               |                    |
+|                     |**dirsOnly**: Only return file entries that are directories.  This option is useful for        |                    |
+|                     |a directory tree display.                                                                      |                    |
++---------------------+-----------------------------------------------------------------------------------------------+--------------------+
+
+
+Some usage examples for using the service in code as well as declarative markup attaching it to a widget such as dijit.Tree and dojox.grid.DataGrid is shown below.
+
+**Simple programmatic usage:**
 
 .. code-block :: javascript
 
@@ -84,7 +139,10 @@ Please note that the store is a hierarchical store and if you wish to query the 
     fileStore.fetch({query: {name:"foo*.txt"}, onComplete: searchDone, queryOptions: {deep:true}});
   }
 
+
 Attaching it as the datastore for a widget works the same as it would for any widget.  For example, using it to front a dijit Tree is shown below. In the following example, dijit.Tree is being rooted so that it displays the entire dojo source tree:
+
+**Attaching the FileStore to dijit.Tree declaratively:**
 
 .. codeviewer::
 
