@@ -6,6 +6,8 @@ dojox.data.FileStore
 :Status: Contributed, Draft
 :Version: 1.0
 :Author: Jared Jurkiewicz
+:Available Since: dojo 1.2
+
 
 The dojox.data.FileStore is a lightweight javascript implementation for accessing details about a remote FileSystem.  This includes being able to search the filesystem to locate file names, display path information, file sizes, if it’s a directory or not, and if a directory, what children files are contained within it.   The dojox.data.FileStore is also an excellent example of how DataStores can do lazy-loading.   
 
