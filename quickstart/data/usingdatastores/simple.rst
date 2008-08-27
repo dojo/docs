@@ -35,6 +35,8 @@ This is a simple, but powerful, way to represent data in the browser.  It can al
 
 Below is a simple example of how a datastore can be used to load data and how widgets that are dojo.data aware can make use of it to display it with no changes to the widgets.
 
+** Example 1:  Connecting dijit.form.ComboBox to the above data:**
+
 .. cv-compound ::
   
   .. cv :: javascript
@@ -42,8 +44,6 @@ Below is a simple example of how a datastore can be used to load data and how wi
     <script>
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.form.ComboBox");
-      dojo.require("dijit.Tree");
-      dojo.require("dijit.form.FilteringSelect");
 
       var storeData =   { identifier: 'abbr', 
         label: 'name',
@@ -63,5 +63,35 @@ Below is a simple example of how a datastore can be used to load data and how wi
     <div dojoType="dojo.data.ItemFileReadStore" data="storeData" jsId="countryStore"></div>
     <div dojoType="dijit.form.ComboBox" store="countryStore" searchAttr="name"></div>
 
+
+
+** Example 2:  Connecting dijit.Tree to the above data:**
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojo.data.ItemFileReadStore");
+      dojo.require("dijit.Tree");
+
+      var storeData =   { identifier: 'abbr', 
+        label: 'name',
+        items: [
+          { abbr:'ec', name:'Ecuador',           capital:'Quito' },
+          { abbr:'eg', name:'Egypt',             capital:'Cairo' },
+          { abbr:'sv', name:'El Salvador',       capital:'San Salvador' },
+          { abbr:'gq', name:'Equatorial Guinea', capital:'Malabo' },
+          { abbr:'er', name:'Eritrea',           capital:'Asmara' },
+          { abbr:'ee', name:'Estonia',           capital:'Tallinn' },
+          { abbr:'et', name:'Ethiopia',          capital:'Addis Ababa' }
+      ]}
+    </script>
+
+  .. cv :: html 
+
+    <div dojoType="dojo.data.ItemFileReadStore" data="storeData" jsId="countryStore"></div>
+    <div dojoType="dijit.tree.ForestStoreModel" jsId="countryModel" store="countryStore" query="{}" rootId="Countries" rootLabel="Countries"></div>
+    <div dojoType="dijit.Tree" model="countryModel"></div>
 
     
