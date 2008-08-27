@@ -150,7 +150,7 @@ Attaching it as the datastore for a widget works the same as it would for any wi
     dojo.require("dijit.Tree");
     dojo.require("dojox.data.FileStore");
   </script>
-  <div class="tundra">
+  <div>
     <div dojoType="dojox.data.FileStore" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/demos/stores/filestore_dojotree.php" pathAsQueryParam="true" jsId="dojoFiles"></div>
     <div dojoType="dijit.tree.ForestStoreModel" jsId="fileModel" store="dojoFiles" query="{}" rootId="DojoFiles" rootLabel="Dojo Files" childrenAttrs="children"></div>
     <div id="tree" dojoType="dijit.Tree" model="fileModel" ></div>  
@@ -164,7 +164,7 @@ Attaching it as the datastore for a widget works the same as it would for any wi
     dojo.require("dijit.form.ComboBox");
     dojo.require("dojox.data.FileStore");
   </script>
-  <div class="nihilo">
+  <div>
     <div dojoType="dojox.data.FileStore" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/demos/stores/filestore_dojoxdata.php" pathAsQueryParam="true" jsId="comboStore"></div>
     <div dojoType="dijit.form.ComboBox"  store="comboStore" searchAttr="path" value="./demos"></div> 
   </div>
@@ -191,7 +191,7 @@ Attaching it as the datastore for a widget works the same as it would for any wi
 
   .. cv :: html
 
-    <div class="nihilo" style="width: 400px; height: 300px;">
+    <div style="width: 400px; height: 300px;">
       <div dojoType="dojox.data.FileStore" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/demos/stores/filestore_dojoxdata.php" pathAsQueryParam="true" jsId="fileStore">
       </div>
         <div id="grid" 
