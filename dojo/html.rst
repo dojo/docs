@@ -41,7 +41,7 @@ Of course, if that was all you needed to do, you'd be better of just setting inn
     <script type="text/javascript">
     dojo.require("dojo.html");
 
-    dojo.connect(dojo.byId("setbtn"), "onclick", function() {
+    var sethandle = dojo.connect(dojo.byId("setbtn"), "onclick", function() {
 
       dojo.html.set(dojo.byId("mytable"), '<tr>'
         +'<td><label>How much?</label></td>'
@@ -57,7 +57,9 @@ Of course, if that was all you needed to do, you'd be better of just setting inn
             this.inherited("onBegin", arguments);
           }
       });
-
+      dojo.disconnect(sethandle); 
+      sethandle = null;
+      dojo.byId("setbrn").innerHTML = "Done"; 
     })
     </script>
 
