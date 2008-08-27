@@ -73,8 +73,6 @@ Please note that the store is a hierarchical store and if you wish to query the 
 =========
 Using the dojox.dataFileStore is generally simple.  The store takes three possible constructor options which can also be declared in markup.  These options configure the store and its operating behavior.  The options are defined below in a table.
 
-A complete code example of querying the entire filesystem scanned by the FileStore is below:
-
 +---------------------+-----------------------------------------------------------------------------------------------+--------------------+
 |**Constructor param**|**Description**                                                                                |**Type**            |
 +---------------------+-----------------------------------------------------------------------------------------------+--------------------+
@@ -124,6 +122,8 @@ A complete code example of querying the entire filesystem scanned by the FileSto
 Some usage examples for using the service in code as well as declarative markup attaching it to a widget such as dijit.Tree and dojox.grid.DataGrid is shown below.
 
 **Simple programmatic usage:**
+
+A complete code example of querying the entire filesystem for a wildcard matched file:
 
 .. code-block :: javascript
 
