@@ -1,0 +1,44 @@
+#format dojo_rst
+
+dojo.data.api.Read
+==================
+
+The most fundamental API of dojo.data is the Read API. All stores will implement this API because all stores need the ability to retrieve and process data items. The Read API is designed to be extremely flexible in how items are handled. The Read API provides the ability to:
+
+* Introspect any datastore to determine the APIs the datastore implements through the getFeatures() call.
+* Instrospect, On an item by item basis, what attributes each item has in a way that is agnostic to the data format.
+* Get values of attributes in a way that is agnostic to the data format.
+* Test attributes of items to see if they contain a specific value.
+* Test any JavaScript object to see if it is an item from the store.
+* Test to see if an item has been fully loaded from its source or if it is just the stub of an item that needs to be fully loaded.
+* Load stub items (lazy-loading).
+* Search for items that match a query.
+* Sort items in a search.
+* Page across items in a search.
+* Filter items by the query and wildcard matching.
+
+The following examples, guidelines, and complete API documentation provide further information on the Read API:
+
+**Example 1: Listing the APIs supported by a datastore**
+.. code-block :: javascript
+
+  var store = new some.Datastore();
+  var features = store.getFeatures();
+  for(var i in features){
+    console.log("Store supports feature: " + i);
+  }
+
+**Example 2: Testing if an object is a store item**
+.. code-block :: javascript
+
+  var store = new some.Datastore();
+  if(store.isItem(someObject)){
+    console.log("Object was an item.");
+  }else{
+    console.log("Object was NOT an item.");
+  }
+
+
+
+
+For more complete examples, review the Using Datastores section.
