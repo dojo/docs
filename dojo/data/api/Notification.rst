@@ -44,7 +44,7 @@ There are two general patterns of listening on these functions for change events
 
 **The Complete Feature:**
 
-For convenience, the complete feature is defined below:
+For convenience, the complete feature from dojo/data/api/Notification.js is defined below:
 
 .. code-block :: javascript
 
@@ -73,7 +73,7 @@ For convenience, the complete feature is defined below:
     //    returns:
     //        Nothing.
 
-  onNew: function(/* item */ newItem, /*object?*/ parentInfo){
+  onNew: function(/* item */ newItem, /*object?*/ parentInfo)
     //    summary:
     //        This function is called any time a new item is created in the store.
     //        It is called immediately after the store newItem processing has completed.
