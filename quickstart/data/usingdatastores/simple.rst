@@ -30,4 +30,30 @@ For the following examples, the defined JavaScript will be used.  Note that it h
 * Each item is a country, and each item has three attributes, name,abbr, and capital.
 * The abbr attribute is an identifier. Each country has a different abbr to prevent confusion.
 
-The easiest data store is a static one, so let's begin with that. The file in the following example has the /pantry_spices.json URL:
+This is a simple, but powerful, way to represent data in the browser.  It can also be quickly converted to a test format called `JavaScript Object Notation (JSON) <http://www.json.org>`_.  The JSON format can be stored as files on your server and loaded via xhr calls.  dojo.data.ItemFileReadStore allows for the data to be defined in browser as an object such as above, or from a JSON file of the same format.  
+
+
+Below is a simple example of how a datastore can be used to load data and how widgets that are dojo.data aware can make use of it to display it with no changes to the widgets.
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojo.data.ItemFileReadStore");
+      dojo.require("dijit.form.ComboBox");
+      dojo.require("dijit.Tree");
+      dojo.require("dijit.form.FilteringSelect");
+
+      var storeData =   { identifier: 'abbr', 
+        label: 'name',
+        items: [
+          { abbr:'ec', name:'Ecuador',           capital:'Quito' },
+          { abbr:'eg', name:'Egypt',             capital:'Cairo' },
+          { abbr:'sv', name:'El Salvador',       capital:'San Salvador' },
+          { abbr:'gq', name:'Equatorial Guinea', capital:'Malabo' },
+          { abbr:'er', name:'Eritrea',           capital:'Asmara' },
+          { abbr:'ee', name:'Estonia',           capital:'Tallinn' },
+          { abbr:'et', name:'Ethiopia',          capital:'Addis Ababa' }
+      ]}
+    </script>
