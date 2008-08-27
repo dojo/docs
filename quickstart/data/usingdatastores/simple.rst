@@ -122,3 +122,60 @@ Below is a simple example of how a datastore can be used to load data and how wi
 
     <div dojoType="dojo.data.ItemFileReadStore" data="storeData" jsId="countryStore"></div>
     <div dojoType="dijit.form.FilteringSelect" store="countryStore" searchAttr="name"></div>
+
+
+**Example 3:  Connecting dojox.grid.DataGrid to the above data:**
+.. cv-compound ::
+
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojox.grid.DataGrid");
+      dojo.require("dojo.data.ItemFileReadStore
+      var layoutFiles = [
+        [
+          { field: "abbr", name: "Abbeviation", width: 10 },
+          { field: "name", name: "Name", width: 10 },
+          { field: "capitol", name: "Capitol", width: 'auto' }
+        ]
+      ];
+
+      var storeData =   { identifier: 'abbr', 
+        label: 'name',
+        items: [
+          { abbr:'ec', name:'Ecuador',           capital:'Quito' },
+          { abbr:'eg', name:'Egypt',             capital:'Cairo' },
+          { abbr:'sv', name:'El Salvador',       capital:'San Salvador' },
+          { abbr:'gq', name:'Equatorial Guinea', capital:'Malabo' },
+          { abbr:'er', name:'Eritrea',           capital:'Asmara' },
+          { abbr:'ee', name:'Estonia',           capital:'Tallinn' },
+          { abbr:'et', name:'Ethiopia',          capital:'Addis Ababa' }
+      ]}
+
+    </script>
+
+  .. cv :: html
+
+    <div style="width: 400px; height: 300px;">
+      <div dojoType="dojo.data.ItemFileReadStore" jsId="countryStoreForGrid" data="storeData"></div>
+      <div id="grid" 
+        dojoType="dojox.grid.DataGrid" 
+        store="countryStoreForGrid" 
+        structure="layoutCountries" 
+        queryOptions="{deep:true}"
+        query="{}" 
+        sortFields="[{'attribute':'path', 'descending': false}]"
+        rowsPerPage="40">
+      </div>
+    </div>
+
+  .. cv:: css
+
+    <style type="text/css">
+      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/resources/Grid.css";
+      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/resources/nihiloGrid.css";
+
+      .dojoxGrid table {
+        margin: 0;
+      }
+    </style>
