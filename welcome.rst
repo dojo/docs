@@ -72,7 +72,7 @@ These pages cover both cases, and indicate how they are provided.
 
   * `dojo.data.api <dojo/data/api>`_
 
-  * `dojo.data.api.Read <dojo/data/api.Read>`_
+  * `dojo.data.api.Read <dojo/data/api/Read>`_
 
   * `dojo.data.api.Write <dojo/data/api/Write>`_
 
