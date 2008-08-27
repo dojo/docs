@@ -35,7 +35,7 @@ This is a simple, but powerful, way to represent data in the browser.  It can al
 
 Below is a simple example of how a datastore can be used to load data and how widgets that are dojo.data aware can make use of it to display it with no changes to the widgets.
 
-** Example 1:  Connecting dijit.form.ComboBox to the above data:**
+**Example 1:  Connecting dijit.form.ComboBox to the above data:**
 
 .. cv-compound ::
   
@@ -65,7 +65,7 @@ Below is a simple example of how a datastore can be used to load data and how wi
 
 
 
-** Example 2:  Connecting dijit.Tree to the above data:**
+**Example 2:  Connecting dijit.Tree to the above data:**
 
 .. cv-compound ::
   
