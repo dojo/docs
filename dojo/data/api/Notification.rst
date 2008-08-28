@@ -23,7 +23,8 @@ Example Usage:
 
 There are two general patterns of listening on these functions for change events. The first pattern is to use the dojo.connect() event model to bind to the function on the store and have one of your functions called whenever the store calls the onSet, onNew, and onDelete functions. The second pattern is to replace the implementation of the notification functions on the store with custom logic to do something each time the store calls the function. Example usage of such functions are provided in the following examples.
 
-**Example 1: Basic dojo.connect to a DataStore onNew**
+Example 1: Basic dojo.connect to a DataStore onNew
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block :: javascript 
 
@@ -38,7 +39,8 @@ There are two general patterns of listening on these functions for change events
   var newItem = store.newItem({foo:"bar"});
 
 
-**Example 2: Replacing the onNew function of the store with a custom one**
+Example 2: Replacing the onNew function of the store with a custom one
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block :: javascript 
 
