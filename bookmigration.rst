@@ -21,9 +21,9 @@ Dojo Book Outline
 * `Debugging Tutorial <http://dojotoolkit.org/book/book-dojo/part-4-meta-dojo-making-your-dojo-code-run-faster-and-better/debugging-facilities/deb>`_.  maps to: `Debugging <quickstart/debugging>`_ (1/2 done: sfoster)
 * `Dojo Introduction <http://dojotoolkit.org/book/dojo-book-0-9/introduction>`_.  maps to: `Introduction <quickstart/introduction>`_ (do we still need this?)
 
-  * `Dojo Licensing <http://dojotoolkit.org/book/dojo-book-0-9/introduction/licensing>`_.  maps to: `Licensing <quickstart/introduction/licensing>`_
-  * `Dojo History <http://dojotoolkit.org/book/dojo-book-0-9/introduction/history>`_. maps to: `History <quickstart/introduction/history>`_
-  * `Why Dojo? <http://dojotoolkit.org/book/dojo-book-0-9/introduction/why-dojo>`_. maps to: `Why Dojo <quickstart/introduction/whydojo>`_
+  * `Dojo Licensing <http://dojotoolkit.org/book/dojo-book-0-9/introduction/licensing>`_.  maps to: `Licensing <quickstart/introduction/licensing>`_ 
+  * `Dojo History <http://dojotoolkit.org/book/dojo-book-0-9/introduction/history>`_. maps to: `History <quickstart/introduction/history>`_ (done: sfoster)
+  * `Why Dojo? <http://dojotoolkit.org/book/dojo-book-0-9/introduction/why-dojo>`_. maps to: `Why Dojo <quickstart/introduction/whydojo>`_ (done: sfoster)
 
 * `Part 2: Dijit - The Dojo Widget Library <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit-0>`_. maps to: `dijit <dijit>`_ (complete)
 
