@@ -80,7 +80,7 @@ Dojo Book Outline
 
     * `Web Accessibility Issues <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/a11y/web-accessibility-issues>`_. maps to: `dijit-a11y <dijit-a11y>`_ (complete)
     * `Dojo Accessibility Strategy <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/a11y/dojo-accessibility-strategy>`_. maps to: `dijit-a11y-strategy <dijit-a11y-strategy>`_ (complete)
-    * `Dojo Accessibility Resources <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/a11y/dojo-accessibility-resources>`_. (todoc)
+    * `Dojo Accessibility Resources <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/a11y/dojo-accessibility-resources>`_. maps to: `dijit-a11y-resources <dijit-a11y-resources>`_ (inprogress)
 
 * `Part 3: JavaScript Programming With Dojo and Dijit <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo-0>`_.
 
