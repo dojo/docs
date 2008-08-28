@@ -88,17 +88,11 @@ These pages cover both cases, and indicate how they are provided.
 * `dojo.data <dojo/data>`_
 
   * `dojo.data.api <dojo/data/api>`_
-
   * `dojo.data.api.Read <dojo/data/api/Read>`_
-
   * `dojo.data.api.Write <dojo/data/api/Write>`_
-
   * `dojo.data.api.Identity <dojo/data/api/Identity>`_
-
   * `dojo.data.api.Notification <dojo/data/api/Notification>`_
-
   * `dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`_
-
   * `dojo.data.ItemFileWriteStore <dojo/data/ItemFileWriteStore>`_
 
 * `dojo.date <dojo/date>`_
@@ -127,6 +121,9 @@ Dijit reference
 Dijit is Dojo's UI Library, and lives as a separate namespace ``dijit``. Dijit requires Dojo Core. Each of the widgets and functionality provided by Dijit is describe in the following sections, though the aforementioned `quickstart <quickstart/>`_ guides cover some basics.  
 
 * `dijit <dijit>`_
+
+  * `Dijit a11y <dijit-a11y-strategy>`_
+
 * `dijit.Dialog <dijit/Dialog>`_
 * `dijit.Editor <dijit/Editor>`_
 * `dijit.Tree <dijit/Tree>`_
