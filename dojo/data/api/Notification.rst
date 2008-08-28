@@ -9,8 +9,8 @@ Notification API
 
 When working with data and items, sometimes it is useful to be notified when items are created, deleted, or modified within a given dojo.data datastore. The dojo.data.api.Notification feature is implemented by stores to expose such a capability. This set of functions defines monitoring for the main change events a store can see on an item: create, modify, and delete. Review the following examples, guidelines, and complete API documentation for further information on the Notification API.
 
-Notification API Requirements:
-------------------------------
+Notification API Requirements
+-----------------------------
 
 As with all DataStores, not all stores will implement this API. For stores that implement this API, the following assumptions should be made:
 
@@ -53,8 +53,9 @@ Example 2: Replacing the onNew function of the store with a custom one
   var newItem = store.newItem({foo:"bar"});
 
 
-The Complete Feature:
----------------------
+====================
+The Complete Feature
+====================
 
 For convenience, the complete feature from dojo/data/api/Notification.js is defined below:
 
