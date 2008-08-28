@@ -49,29 +49,27 @@ For convenience, the complete feature from dojo/data/api/Notification.js is defi
 .. code-block :: javascript
 
   onSet: function(/* item */ item, /* attribute-name-string */ attribute, /* object | array */ oldValue, /* object | array */ newValue)
-    //    summary:
-    //        This function is called any time an item is modified via setValue, setValues, unsetAttribute, etc.  
-    //    description:
-    //        This function is called any time an item is modified via setValue, setValues, unsetAttribute, etc.  
-    //        Its purpose is to provide a hook point for those who wish to monitor actions on items in the store 
-    //        in a simple manner.  The general expected usage is to dojo.connect() to the store's 
-    //        implementation and be called after the store function is called.
-    //
-    //    item:
-    //        The item being modified.
-    //    attribute:
-    //        The attribute being changed represented as a string name.
-    //    oldValue:
-    //        The old value of the attribute.  In the case of single value calls, such as setValue, unsetAttribute, etc,
-    //        this value will be generally be an atomic value of some sort (string, int, etc, object).  In the case of 
-    //        multi-valued attributes, it will be an array.
-    //    newValue:
-    //        The new value of the attribute.  In the case of single value calls, such as setValue, this value will be 
-    //        generally be an atomic value of some sort (string, int, etc, object).  In the case of multi-valued attributes, 
-    //        it will be an array.  In the case of unsetAttribute, the new value will be 'undefined'.
-    //
-    //    returns:
-    //        Nothing.
+
+
+summary:
+  This function is called any time an item is modified via setValue, setValues, unsetAttribute, etc.  
+description:
+  This function is called any time an item is modified via setValue, setValues, unsetAttribute, etc.  
+  Its purpose is to provide a hook point for those who wish to monitor actions on items in the store in a simple manner. The general expected usage is to dojo.connect() to the store's implementation and be called after the store function is called.
+parameters:
+  =========  =====  ===========
+  parameter  type   description
+  =========  =====  ===========
+  item              The item being modified.
+  attribute         The attribute being changed represented as a string name.
+  oldValue          The old value of the attribute.  In the case of single value calls, such as setValue, unsetAttribute, etc, this value will be generally be an atomic value of some sort (string, int, etc, object). In the case of multi-valued attributes, it will be an array.
+  newValue          The new value of the attribute.  In the case of single value calls, such as setValue, this value will be generally be an atomic value of some sort (string, int, etc, object).  In the case of multi-valued attributes, it will be an array. In the case of unsetAttribute, the new value will be 'undefined'.
+  =========  =====  ===========
+
+returns:
+  Nothing.
+
+.. code-block :: javascript
 
   onNew: function(/* item */ newItem, /*object?*/ parentInfo)
     //    summary:
