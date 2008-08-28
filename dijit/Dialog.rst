@@ -122,3 +122,10 @@ If you wish to alter the default color for the underlay, you do so in CSS. The u
       dojo.connect(dijit.byId("showDialog2"), "onClick", firstDlg, "show");
     });
     </script>
+
+Confirming Dialog Contents
+--------------------------
+
+To prevent the user from dismissing the dialog if there are errors in the form, add an onSubmit handler to your submit button:
+
+TODO: copy example from test_Dialog.html
