@@ -46,8 +46,8 @@ Now we have three options to provide the ultimate user experience when a user wa
     <script type="text/javascript">
     dojo.require("dojo.DeferredList");
     dojo.require("dijit.form.Button");
-    dojo.addOnLoad(function(){
-    function searchAmazon(){
+    
+function searchAmazon(){
       var d = new dojo.Deferred();
       setTimeout(function(){
         d.callback("We found books at amazon");
@@ -81,7 +81,6 @@ Now we have three options to provide the ultimate user experience when a user wa
         console.log(res);
       });
     }
-    });
     </script>
  
   .. cv:: html
