@@ -46,8 +46,8 @@ Now we have three options to provide the ultimate user experience when a user wa
     <script type="text/javascript">
     dojo.require("dojo.DeferredList");
     dojo.require("dijit.form.Button");
-    
-function searchAmazon(){
+    dojo.addOnLoad(function(){
+    function searchAmazon(){
       var d = new dojo.Deferred();
       setTimeout(function(){
         d.callback("We found books at amazon");
@@ -81,8 +81,11 @@ function searchAmazon(){
         console.log(res);
       });
     }
+
+    dijit.byId("search", "onClick", "search");
+    });
     </script>
  
   .. cv:: html
    
-    <button dojoType="dijit.form.Button" onClick="search()">Search</button>
+    <button dojoType="dijit.form.Button" id="search">Search</button>
