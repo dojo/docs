@@ -76,6 +76,7 @@ Now we have three options to provide the ultimate user experience when a user wa
     var d3 = searchGoogle();
 
     function search() {
+      console.log("search");
       var dl = new dojo.DeferredList([d1, d2, d3]);
       dl.addCallback(function(res){
         console.log(res);
