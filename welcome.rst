@@ -50,17 +50,11 @@ Dojo is a very extensive library of code, most of which is optional. Here are so
   * `Using Datastores <quickstart/data/usingdatastores>`_
 
     * `A Simple Data Source <quickstart/data/usingdatastores/simple>`_
-
     * `Fetching Single Items and Values <quickstart/data/usingdatastores/fetchsingle>`_
-
     * `Fetching Multiple Items and Values <quickstart/data/usingdatastores/fetchmultiple>`_
-
     * `Selecting (Filtering) Items <quickstart/data/usingdatastores/filteringitems>`_
-
     * `Nested Items and Lazy Loading <quickstart/data/usingdatastores/lazyloading>`_
-
     * `Paging data <quickstart/data/usingdatastores/pagination>`_
-
     * `Sorting Items <quickstart/data/usingdatastores/sorting>`_
 
 * `The event system <quickstart/events>`_
@@ -100,6 +94,7 @@ These pages cover both cases, and indicate how they are provided.
   * `dojo.date.locale.format <dojo/date/locale/format>`_
 
 * `dojo.Deferred <dojo/Deferred>`_
+* `dojo.DeferredList <dojo/DeferredList>`_
 * `dojo.fx <dojo/fx>`_
 * `dojo.html <dojo/html>`_
 * `dojo.json <dojo/json>`_
