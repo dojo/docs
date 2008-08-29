@@ -44,7 +44,8 @@ Now we have three options to provide the ultimate user experience when a user wa
   .. cv:: javascript
 
     <script type="text/javascript">
-    dojo.require("DeferredList");
+    dojo.require("dojo.DeferredList");
+    dojo.addOnLoad(function(){
     function searchAmazon(){
       var d = new dojo.Deferred();
       setTimeout(function(){
@@ -76,5 +77,6 @@ Now we have three options to provide the ultimate user experience when a user wa
     var dl = new dojo.DeferredList([d1, d2, d3]);
     dl.addCallback(function(res){
       console.log(res);
+    });
     });
     </script>
