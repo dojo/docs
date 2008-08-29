@@ -41,6 +41,7 @@ Now we have three options to provide the ultimate user experience when a user wa
 
 .. cv-compound::
 
+
   .. cv:: javascript
 
     <script type="text/javascript">
@@ -76,7 +77,7 @@ Now we have three options to provide the ultimate user experience when a user wa
       var d2 = searchBol();
       var d3 = searchGoogle();
 
-      dojo.byId("statusSearch").innerHTML = "Searching... please wait...";
+      dojo.byId("statusSearch").innerHTML = "Searching... this should take seven seconds.";
       var dl = new dojo.DeferredList([d1, d2, d3]);
       dl.addCallback(function(res){
         dojo.byId("statusSearch").innerHTML = "Result: "+res[0][1]+", "+res[1][1]+", "+res[2][1];
@@ -90,3 +91,5 @@ Now we have three options to provide the ultimate user experience when a user wa
    
     <button dojoType="dijit.form.Button" id="search">Search</button>
     <div style="margin: 10px;">Status: <span id="statusSearch"></span></div>
+
+Now when you look at the code, you will see that the total amount of setTimeout miliseconds is 14000 which is 14 seconds. Now since we used dojo.Deferred we were able to bring down the waiting time to 7 seconds. Thats cool isn't it?
