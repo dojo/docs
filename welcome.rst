@@ -123,6 +123,7 @@ Dijit is Dojo's UI Library, and lives as a separate namespace ``dijit``. Dijit r
 * `dijit <dijit>`_
 
   * `dijit a11y <dijit-a11y-strategy>`_
+  * `dijit a11y resources <dijit-a11y-resources>`_
 
 * `dijit.Dialog <dijit/Dialog>`_
 * `dijit.Editor <dijit/Editor>`_
