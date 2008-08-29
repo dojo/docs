@@ -49,7 +49,7 @@ Now we have three options to provide the ultimate user experience when a user wa
     function searchAmazon(){
       var d = new dojo.Deferred();
       setTimeout(function(){
-        d.success("We found books at amazon");
+        d.callback("We found books at amazon");
       }, 5000);
       return d;
     }
@@ -57,7 +57,7 @@ Now we have three options to provide the ultimate user experience when a user wa
     function searchBol(){
       var d = new dojo.Deferred();
       setTimeout(function(){
-        d.success("We found books at bol");
+        d.callback("We found books at bol");
       }, 7000);
       return d;
     }
@@ -65,7 +65,7 @@ Now we have three options to provide the ultimate user experience when a user wa
     function searchGoogle(){
       var d = new dojo.Deferred();
       setTimeout(function(){
-        d.success("We found books at google");
+        d.callback("We found books at google");
       }, 2000);
       return d;
     }
