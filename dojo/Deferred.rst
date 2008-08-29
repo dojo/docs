@@ -75,18 +75,18 @@ Now we have three options to provide the ultimate user experience when a user wa
     var d2 = searchBol();
     var d3 = searchGoogle();
 
-    function search() {
-      console.log("search");
+    dojo.connect(dijit.byId("search"), "onClick", function(){
+      dojo.byId("statusSearch").innerHTML = "Searching... please wait...";
       var dl = new dojo.DeferredList([d1, d2, d3]);
       dl.addCallback(function(res){
+        dojo.byId("statusSearch").innerHTML = "We have found sometinh";
         console.log(res);
       });
-    }
-
-    dojo.connect(dijit.byId("search"), "onClick", this, "search");
+    });
     });
     </script>
  
   .. cv:: html
    
     <button dojoType="dijit.form.Button" id="search">Search</button>
+    <div>Status: <span id="statusSearch"></span></div>
