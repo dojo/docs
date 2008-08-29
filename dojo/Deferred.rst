@@ -39,7 +39,7 @@ Now we have three options to provide the ultimate user experience when a user wa
 
 3. We use dojo.Deferreds so all requests get executed at the same time. As soon as all 3 requests have been executed we will call our server:
 
-.. cv-conpound::
+.. cv-compound::
 
   .. cv:: javascript
 
