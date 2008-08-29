@@ -4,8 +4,13 @@
 dojo.Deferred
 =============
 
-:Status: Contributed, Draft
-:Version: 1.0
+:Status: Draft
+:Version: 1.2
+
+.. contents::
+  :depth: 3
+
+``TODOC``
 
 Dojo deferreds is a feature which you will find incredible useful for your daily client side development.
 Lets start right off with an example where and why you would use dojo.Deferred.
@@ -92,4 +97,4 @@ Now we have three options to provide the ultimate user experience when a user wa
     <button dojoType="dijit.form.Button" id="search">Search</button>
     <div style="margin: 10px;">Status: <span id="statusSearch"></span></div>
 
-Now when you look at the code, you will see that the total amount of setTimeout miliseconds is 14000 which is 14 seconds. Now since we used dojo.Deferred we were able to bring down the waiting time to 7 seconds. Thats cool isn't it?
+Now when you look at the code, you will see that the total amount of setTimeout miliseconds is 14000 which is 14 seconds. Since we used dojo.Deferred we were able to bring down the waiting time to 7 seconds. Thats cool isn't it?
