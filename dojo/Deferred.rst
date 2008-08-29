@@ -83,7 +83,7 @@ Now we have three options to provide the ultimate user experience when a user wa
       });
     }
 
-    dojo.connect(dijit.byId("search"), "onClick", "search");
+    dojo.connect(dijit.byId("search"), "onClick", this, "search");
     });
     </script>
  
