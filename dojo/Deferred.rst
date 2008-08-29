@@ -71,11 +71,11 @@ Now we have three options to provide the ultimate user experience when a user wa
       return d;
     }
 
-    var d1 = searchAmazon();
-    var d2 = searchBol();
-    var d3 = searchGoogle();
-
     dojo.connect(dijit.byId("search"), "onClick", function(){
+      var d1 = searchAmazon();
+      var d2 = searchBol();
+      var d3 = searchGoogle();
+
       dojo.byId("statusSearch").innerHTML = "Searching... please wait...";
       var dl = new dojo.DeferredList([d1, d2, d3]);
       dl.addCallback(function(res){
