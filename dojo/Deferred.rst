@@ -45,6 +45,7 @@ Now we have three options to provide the ultimate user experience when a user wa
 
     <script type="text/javascript">
     dojo.require("dojo.DeferredList");
+    dojo.require("dijit.Button");
     dojo.addOnLoad(function(){
     function searchAmazon(){
       var d = new dojo.Deferred();
@@ -74,9 +75,15 @@ Now we have three options to provide the ultimate user experience when a user wa
     var d2 = searchBol();
     var d3 = searchGoogle();
 
-    var dl = new dojo.DeferredList([d1, d2, d3]);
-    dl.addCallback(function(res){
-      console.log(res);
-    });
+    function search() {
+      var dl = new dojo.DeferredList([d1, d2, d3]);
+      dl.addCallback(function(res){
+        console.log(res);
+      });
+    }
     });
     </script>
+ 
+  .. cv:: html
+   
+    <button dojoType="dijit.form.Button" onClick="search()">Search</button>
