@@ -79,7 +79,7 @@ Now we have three options to provide the ultimate user experience when a user wa
       dojo.byId("statusSearch").innerHTML = "Searching... please wait...";
       var dl = new dojo.DeferredList([d1, d2, d3]);
       dl.addCallback(function(res){
-        dojo.byId("statusSearch").innerHTML = "We have found sometinh";
+        dojo.byId("statusSearch").innerHTML = "Result: "+res[0][1]+", "+res[1][1]+", "+res[2][1];
         console.log(res);
       });
     });
@@ -89,4 +89,4 @@ Now we have three options to provide the ultimate user experience when a user wa
   .. cv:: html
    
     <button dojoType="dijit.form.Button" id="search">Search</button>
-    <div>Status: <span id="statusSearch"></span></div>
+    <div style="margin: 10px;">Status: <span id="statusSearch"></span></div>
