@@ -140,6 +140,17 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
       </script>
     </div>
 
+Grid 1.2 supports a new parameter "selectionMode" which allows you to control the behaviour of the selection functionality:
+
+'none'
+  deactivates the selection functionality
+'single'
+  let the user select only one item at the same time
+'multiple'
+  let the user selects more than one item at the same time
+'extended' (default) 
+  *not sure, what's the difference between "multiple" and "extended"*
+
 
 Sorting data at the server
 --------------------------
