@@ -217,9 +217,8 @@ Attaching the FileStore to dojox.grid.DataGrid declaratively
 
     <table dojoType="dojox.grid.DataGrid"
         store="fileStore"
-        query="{}"
+        query="{ name: '*'}"
         queryOptions="{deep:true}"
-        sortFields="[{'attribute':'path', 'descending': false}]"
         clientSort="true"
         style="width: 400px; height: 200px;">
       <thead>
