@@ -210,15 +210,16 @@ Attaching the FileStore to dojox.grid.DataGrid declaratively
   .. cv :: html
 
     <span dojoType="dojox.data.FileStore" 
-      jsId="fileStore" 
+      jsId="fileStore3" 
       url="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/demos/stores/filestore_dojoxdata.php" 
       pathAsQueryParam="true">
     </span>
 
     <table dojoType="dojox.grid.DataGrid"
-        store="fileStore"
+        store="fileStore3"
         query="{ name: '*'}"
         queryOptions="{deep:true}"
+        sortFields="[{'attribute':'path', 'descending': false}]"
         clientSort="true"
         style="width: 400px; height: 200px;">
       <thead>
