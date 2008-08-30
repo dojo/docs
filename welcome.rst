@@ -171,7 +171,15 @@ These sections cover the available projects shipped with the Dojo Toolkit
 
 * `dojox.data <dojox/data>`_
 
+  * `dojox.data.AndOrReadStore <dojox/data/AndOrReadStore>`_
+  * `dojox.data.AndOrWriteStore <dojox/data/AndOrWriteStore>`_
+  * `dojox.data.AtomReadStore <dojox/data/AtomReadStore>`_
+  * `dojox.data.CouchDBRestStore<dojox/data/CouchDBRestStore>`_
+  * `dojox.data.CssClassStore<dojox/data/CssClassStore>`_
+  * `dojox.data.CssRuleStore<dojox/data/CssRuleStore>`_
+  * `dojox.data.CsvStore<dojox/data/CsvStore>`_
   * `dojox.data.FileStore <dojox/data/FileStore>`_
+  * `dojox.data.FlickrRestStore<dojox/data/FlickrRestStore>`_
   * `dojox.data.JsonRestStore <dojox/data/JsonRestStore>`_
   * `dojox.data.ServiceStore <dojox/data/ServiceStore>`_
 
