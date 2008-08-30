@@ -6,15 +6,19 @@ dojox.data.FileStore
 :Status: Contributed, Draft
 :Version: 1.0
 :Author: Jared Jurkiewicz
-:Available Since: dojo 1.2
+:Available: since V1.2
 
+.. contents::
+    :depth: 3
 
 The dojox.data.FileStore is a lightweight javascript implementation for accessing details about a remote FileSystem.  This includes being able to search the filesystem to locate file names, display path information, file sizes, if it’s a directory or not, and if a directory, what children files are contained within it.   The dojox.data.FileStore is also an excellent example of how DataStores can do lazy-loading.   
 
 The datastore implementation and its example PHP back-end by default do not inflate the child file objects of a DataStore file item.  This allows it to quickly return information about a file without having to return everything, while at the same time providing hooks that allow for the extra information to be gathered on-demand.  
 
-**Features**
-------------
+
+========
+Features
+========
 
 1. The client javascript and example server php script implement the following dojo.data APIs:  dojo.data.api.Read, dojo.data.api.Identity.
 2. A deliberately simple client side implementation for use as a reference when implementing other server side stores that wish to provide lazy-loading as defined by the dojo.data.api.Read spec.  The client code is deliberately small to make it easy to understand.
@@ -25,8 +29,11 @@ The datastore implementation and its example PHP back-end by default do not infl
 7. An example implementation of the back end service in PHP.  The example is documented cleanly and is less than five hundred lines of code, making it relatively easy to dissect and understand.
 8. Works directly with all current data bound widgets in dijit, including dijit.Tree, dijit.form.ComboBox, and well as dojox.grid.
 
-**Item structure:**
--------------------
+
+==============
+Item structure
+==============
+
 All items returned by a query to the FileStore and will generally have the following attributes accessible via FileStore.getValue(item, attribute) and FileStore.getValues(item, attribute):
 
 +-------------+---------------------------------------------------------------------------------------------------------+----------+
@@ -55,8 +62,9 @@ All items returned by a query to the FileStore and will generally have the follo
 +-------------+---------------------------------------------------------------------------------------------------------+----------+
 
 
-**Query Structure**
--------------------
+===============
+Query Structure
+===============
 
 The dojox.data.FileStore query structure follows that of dojo.data.ItemFileReadStore.  It is an object-based query structure where the store queries for file items using patterns defined for the attributes to be matched.  For example a query object of:
 
@@ -71,8 +79,11 @@ would return all files that have the name foo at the start of the name and end w
 
 Please note that the store is a hierarchical store and if you wish to query the entire file system (not just the root of it), for a file name, you must set the standard dojo.data.api.Read queryOption 'deep' to the value true.  
 
-**Usage**
-=========
+
+========
+Examples
+========
+
 Using the dojox.dataFileStore is generally simple.  The store takes three possible constructor options which can also be declared in markup.  These options configure the store and its operating behavior.  The options are defined below in a table.
 
 +---------------------+-----------------------------------------------------------------------------------------------+--------------------+
@@ -123,7 +134,8 @@ Using the dojox.dataFileStore is generally simple.  The store takes three possib
 
 Some usage examples for using the service in code as well as declarative markup attaching it to a widget such as dijit.Tree, dijit.form.ComboBox, and dojox.grid.DataGrid are shown below.
 
-**Simple programmatic usage:**
+Simple programmatic usage
+-------------------------
 
 A complete code example of querying the entire filesystem for a wildcard matched file:
 
@@ -144,7 +156,8 @@ A complete code example of querying the entire filesystem for a wildcard matched
 
 Attaching it as the datastore for a widget works the same as it would for any widget.  For example, using it to front a dijit Tree is shown below. In the following example, dijit.Tree is being rooted so that it displays the entire dojo source tree:
 
-**Attaching the FileStore to dijit.Tree declaratively:**
+Attaching the FileStore to dijit.Tree declaratively
+---------------------------------------------------
 
 .. codeviewer::
 
@@ -158,7 +171,8 @@ Attaching it as the datastore for a widget works the same as it would for any wi
     <div id="tree" dojoType="dijit.Tree" model="fileModel" ></div>  
   </div>
 
-**Attaching the FileStore to dijit.form.ComboBox declaratively:**
+Attaching the FileStore to dijit.form.ComboBox declaratively
+------------------------------------------------------------
 
 .. codeviewer::
 
@@ -171,8 +185,8 @@ Attaching it as the datastore for a widget works the same as it would for any wi
     <div dojoType="dijit.form.ComboBox"  store="comboStore" searchAttr="path" value="./demos"></div> 
   </div>
 
-
-**Attaching the FileStore to dojox.grid.DataGrid declaratively:**
+Attaching the FileStore to dojox.grid.DataGrid declaratively
+------------------------------------------------------------
 
 .. cv-compound ::
 
@@ -219,8 +233,10 @@ Attaching it as the datastore for a widget works the same as it would for any wi
     </style>
 
 
-**Technical/Protocol Details**
-==============================
+==========================
+Technical/Protocol Details
+==========================
+
 The following section is not necessary to fully understand how to just use the existing dojox.data.FileStore back end implementation, it is intended for people who wish to implement their own back end service in another language, such as python or java.   
 
 `Protocol Information <dojox/data/FileStore/protocol>`_
