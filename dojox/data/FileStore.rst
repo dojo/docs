@@ -224,7 +224,7 @@ Attaching the FileStore to dojox.grid.DataGrid declaratively
         style="width: 400px; height: 200px;">
       <thead>
         <tr>
-          <th width="300px" field="name">Filename</th>
+          <th width="100px" field="name">Filename</th>
           <th width="100px" field="size">File Size</th>
           <th width="100px" field="directory">Is Directory</th>
           <th width="100px" field="path">Path</th>
