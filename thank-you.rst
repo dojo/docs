@@ -24,6 +24,7 @@ A big "thank you" goes to
 * Tom Trenka, 
 * Josh Trutwin, 
 * Alexander Whillas,
-* Mike Wilcox
+* Mike Wilcox,
+* Kris Zyp
 
 for their great engagement to improve the documentation of our unmatched Dojo Toolkit!
