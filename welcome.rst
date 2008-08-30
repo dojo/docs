@@ -172,6 +172,8 @@ These sections cover the available projects shipped with the Dojo Toolkit
 * `dojox.data <dojox/data>`_
 
   * `dojox.data.FileStore <dojox/data/FileStore>`_
+  * `dojox.data.JsonRestStore <dojox/data/JsonRestStore>`_
+  * `dojox.data.ServiceStore <dojox/data/ServiceStore>`_
 
 * `dojox.grid <dojox/grid>`_
 * `dojox.cometd <dojox/cometd>`_
