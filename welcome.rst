@@ -187,7 +187,16 @@ These sections cover the available projects shipped with the Dojo Toolkit
   * `dojox.data.HtmlTableStore <dojox/data/HtmlTableStore>`_
   * `dojox.data.jsonPathStore <dojox/data/jsonPathStore>`_
   * `dojox.data.JsonRestStore <dojox/data/JsonRestStore>`_
+  * `dojox.data.KeyValueStore <dojox/data/KeyValueStore>`_
+  * `dojox.data.OpmlStore <dojox/data/OpmlStore>`_
+  * `dojox.data.PersevereStore <dojox/data/PersevereStore>`_
+  * `dojox.data.PicasaStore <dojox/data/PicasaStore>`_
+  * `dojox.data.QueryReadStore <dojox/data/QueryReadStore>`_
+  * `dojox.data.S3Store <dojox/data/S3Store>`_
   * `dojox.data.ServiceStore <dojox/data/ServiceStore>`_
+  * `dojox.data.SnapLogicStore <dojox/data/SnapLogicStore>`_
+  * `dojox.data.WikipediaStore <dojox/data/WikipediaStore>`_
+  * `dojox.data.XmlStore <dojox/data/XmlStore>`_
 
 * `dojox.grid <dojox/grid>`_
 * `dojox.cometd <dojox/cometd>`_
