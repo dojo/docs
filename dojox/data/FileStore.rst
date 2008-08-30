@@ -202,34 +202,35 @@ Attaching the FileStore to dojox.grid.DataGrid declaratively
 
   .. cv :: javascript
 
-    <script>
+    <script type="text/javascript">
       dojo.require("dojox.grid.DataGrid");
       dojo.require("dojox.data.FileStore");
-      var layoutFiles = [
-        [
-          { field: "name", name: "Filename", width: 20 },
-          { field: "size", name: "File Size (bytes)", width: 10 },
-          { field: "directory", name: "Is Directory", width: 10 },
-          { field: "path", name: "Path", width: 'auto' }
-        ]
-      ];
     </script>
 
   .. cv :: html
 
-    <div style="width: 400px; height: 300px;">
-      <div dojoType="dojox.data.FileStore" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/demos/stores/filestore_dojoxdata.php" pathAsQueryParam="true" jsId="fileStore">
-      </div>
-        <div id="grid" 
-          dojoType="dojox.grid.DataGrid" 
-          store="fileStore" 
-          structure="layoutFiles" 
-          queryOptions="{deep:true}"
-          query="{}" 
-          sortFields="[{'attribute':'path', 'descending': false}]"
-          rowsPerPage="40">
-        </div>
-    </div>
+    <span dojoType="dojox.data.FileStore" 
+      jsId="fileStore" 
+      url="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/demos/stores/filestore_dojoxdata.php" 
+      pathAsQueryParam="true">
+    </span>
+
+    <table dojoType="dojox.grid.DataGrid"
+        store="fileStore"
+        query="{}"
+        queryOptions="{deep:true}"
+        sortFields="[{'attribute':'path', 'descending': false}]"
+        clientSort="true"
+        style="width: 400px; height: 200px;">
+      <thead>
+        <tr>
+          <th width="300px" field="name">Filename</th>
+          <th width="100px" field="size">File Size</th>
+          <th width="100px" field="directory">Is Directory</th>
+          <th width="100px" field="path">Path</th>
+        </tr>
+      </thead>
+    </table>
 
   .. cv:: css
 
