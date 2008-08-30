@@ -27,7 +27,7 @@ There are two general patterns of listening on these functions for change events
 Basic dojo.connect
 ------------------
 
-This example shows, how to use dojo.connect to connect the datastores onNew function with one of your own function:
+This example shows, how to use dojo.connect to connect the datastores onNew function with one of your own functions:
 
 .. code-block :: javascript 
 
