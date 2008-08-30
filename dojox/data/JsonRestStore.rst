@@ -9,8 +9,13 @@ dojox.data.JsonRestStore
 :Available Since: dojo 1.2
 
 
-dojox.data.JsonRestStore is a lightweight datastore implementation of a RESTful client. JsonRestStore provides full read, write, and notification capabilities through standards based HTTP/REST interaction with the server using GET, PUT, POST, and DELETE commands. JsonRestStore supports JSON Referencing so object can contain cyclic, multiple, cross-message, cross-table, and even cross-site references. These references are automatically resolved such that properties are accessed as normal datastore attributes. JsonRestStore also store objects in a format to ease direct property access for significant performance advantages. JsonRestStore is described in more detail here:
+dojox.data.JsonRestStore is a lightweight datastore implementation of a RESTful client. JsonRestStore provides full read, write, and notification capabilities through standards based HTTP/REST interaction with the server using GET, PUT, POST, and DELETE commands. JsonRestStore supports JSON Referencing so objects can contain cyclic, multiple, cross-message, cross-table, and even cross-site references, which can be used for lazy loading. These references are automatically resolved such that properties are accessed as normal datastore attributes. JsonRestStore also store objects in a format to ease direct property access for significant performance advantages. JsonRestStore is described in more detail here:
 http://www.sitepen.com/blog/2008/06/13/restful-json-dojo-data/
+
+You can read more about using JSON Referencing here:
+http://www.sitepen.com/blog/2008/06/17/json-referencing-in-dojo/
+
+And this article describes more about JsonRestStore and using referencing for lazy loading:
 http://blog.medryx.org/2008/07/24/jsonreststore-overview/
 
 **Features**
