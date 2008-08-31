@@ -1,7 +1,10 @@
 #format dojo_rst
 
-dojo.data.api.Read
+dojo.data Read API
 ==================
+
+.. contents::
+  :depth: 3
 
 The most fundamental API of dojo.data is the Read API. All stores will implement this API because all stores need the ability to retrieve and process data items. The Read API is designed to be extremely flexible in how items are handled. The Read API provides the ability to:
 
@@ -18,9 +21,15 @@ The most fundamental API of dojo.data is the Read API. All stores will implement
 * Filter items by the query and wildcard matching.
 * Obtain a human-readable label of the item if possible.
 
+
+========
+Examples
+========
+
 The following examples, guidelines, and complete API documentation provide further information on the Read API:
 
-**Example 1: Listing the APIs supported by a datastore**
+Listing the APIs supported by a datastore
+-----------------------------------------
 
 .. code-block :: javascript
 
@@ -30,7 +39,8 @@ The following examples, guidelines, and complete API documentation provide furth
     console.log("Store supports feature: " + i);
   }
 
-**Example 2: Testing if an object is a store item**
+Testing if an object is a store item
+------------------------------------
 
 .. code-block :: javascript
 
@@ -41,7 +51,8 @@ The following examples, guidelines, and complete API documentation provide furth
     console.log("Object was NOT an item.");
   }
 
-**Example 3: Listing the attributes of an item**
+Listing the attributes of an item
+---------------------------------
 
 .. code-block :: javascript
 
@@ -52,7 +63,8 @@ The following examples, guidelines, and complete API documentation provide furth
     console.log("Item has attribute; " + attributes[i]);
   }
 
-**Example 4: Testing an item for an attribute**
+Testing an item for an attribute
+--------------------------------
 
 .. code-block :: javascript
 
@@ -65,8 +77,8 @@ The following examples, guidelines, and complete API documentation provide furth
     console.log("item DOES NOT have attribute foo.");
   }
 
-
-**Example 5: Getting the label of an item**
+Getting the label of an item
+----------------------------
 
 .. code-block :: javascript
 
@@ -76,7 +88,8 @@ The following examples, guidelines, and complete API documentation provide furth
   var label = store.getLabel(someItem);
   console.log("item has label: " + label);
 
-**Example 6: Fetching all the items from the store**
+Fetching all the items from the store
+-------------------------------------
 
 .. code-block :: javascript
 
@@ -86,42 +99,54 @@ The following examples, guidelines, and complete API documentation provide furth
   };
   store.fetch({onComplete: gotItems});
 
-**Further examples**
+Further examples
+----------------
 
 Further examples of the API usage are covered in the Using Datastores section. Refer to it for examples on paging, sorting, selecting, and so forth. 
 
-**The complete API**
---------------------
+
+================
+The complete API
+================
+
 For convenience, the complete Read Feature is defined below.
+
+getValue
+--------
 
 .. code-block :: javascript
 
   getValue: function(/* item */ item, /* attribute-name-string */ attribute, /* value? */ defaultValue)
-    //    summary:
-    //        Returns a single attribute value.
-    //        Returns defaultValue if and only if *item* does not have a value for *attribute*.
-    //        Returns null if and only if null was explicitly set as the attribute value.
-    //        Returns undefined if and only if the item does not have a value for the given 
-    //        attribute (which is the same as saying the item does not have the attribute). 
-    // description:
-    //        Saying that an "item x does not have a value for an attribute y"
-    //        is identical to saying that an "item x does not have attribute y". 
-    //        It is an oxymoron to say "that attribute is present but has no values" 
-    //        or "the item has that attribute but does not have any attribute values".
-    //        If store.hasAttribute(item, attribute) returns false, then
-    //        store.getValue(item, attribute) will return undefined.
-    //
-    //    item:
-    //        The item to access values on.
-    //    attribute:
-    //        The attribute to access represented as a string.
-    //    defaultValue:
-    //        Optional.  A default value to use for the getValue return in the attribute does not exist or has no value.
-    //
-    //    exceptions:
-    //        Throws an exception if *item* is not an item, or *attribute* is not a string
-    //    examples:
-    //        var darthVader = store.getValue(lukeSkywalker, "father");
+  // example:
+  // var darthVader = store.getValue(lukeSkywalker, "father");
+
+summary:
+  Returns a single attribute value.
+  Returns defaultValue if and only if *item* does not have a value for *attribute*.
+  Returns null if and only if null was explicitly set as the attribute value.
+  Returns undefined if and only if the item does not have a value for the given attribute (which is the same as saying the item does not have the attribute). 
+
+description:
+  Saying that an "item x does not have a value for an attribute y" is identical to saying that an "item x does not have attribute y". It is an oxymoron to say "that attribute is present but has no values" or "the item has that attribute but does not have any attribute values".
+  If store.hasAttribute(item, attribute) returns false, then store.getValue(item, attribute) will return undefined.
+
+parameters:
+  ============  ======  ===========
+  parameter     type    description
+  ============  ======  ===========
+  item          object  The item to access values on.
+  attribute     string  The attribute to access represented as a string.
+  defaultValue          Optional. A default value to use for the getValue return in the attribute does not exist or has no value.
+  exceptions            Throws an exception if *item* is not an item, or *attribute* is not a string
+  ============  ======  ===========
+
+returns:
+  Nothing.
+
+getValues
+---------
+
+.. code-block :: javascript
 
   getValues: function(/* item */ item, /* attribute-name-string */ attribute)
     //    summary:
@@ -141,6 +166,12 @@ For convenience, the complete Read Feature is defined below.
     //    exceptions:
     //        Throws an exception if *item* is not an item, or *attribute* is not a string
 
+
+getAttributes
+-------------
+
+.. code-block :: javascript
+
   getAttributes: function(/* item */ item)
     //    summary:
     //        Returns an array with all the attributes that this item has.  This
@@ -153,6 +184,11 @@ For convenience, the complete Read Feature is defined below.
     //    exceptions:
     //        Throws an exception if *item* is not an item, or *attribute* is not a string
 
+hasAttribute
+------------
+
+.. code-block :: javascript
+
   hasAttribute: function(/* item */ item, /* attribute-name-string */ attribute)
     //    summary:
     //        Returns true if the given *item* has a value for the given *attribute*.
@@ -164,6 +200,11 @@ For convenience, the complete Read Feature is defined below.
     //
     //    exceptions:
     //        Throws an exception if *item* is not an item, or *attribute* is not a string
+
+containsValue
+-------------
+
+.. code-block :: javascript
 
   containsValue: function(/* item */ item, /* attribute-name-string */ attribute, /* anything */ value)
     //    summary:
@@ -180,6 +221,11 @@ For convenience, the complete Read Feature is defined below.
     //    exceptions:
     //        Throws an exception if *item* is not an item, or *attribute* is not a string
 
+isItem
+------
+
+.. code-block :: javascript
+
   isItem: function(/* anything */ something)
     //    summary:
     //        Returns true if *something* is an item and came from the store instance.  
@@ -189,6 +235,11 @@ For convenience, the complete Read Feature is defined below.
     //    something:
     //        Can be anything.
     //
+
+isItemLoaded
+------------
+
+.. code-block :: javascript
 
   isItemLoaded: function(/* anything */ something) 
     //    summary:
@@ -200,6 +251,11 @@ For convenience, the complete Read Feature is defined below.
     //    something:
     //        Can be anything.
     //
+
+loadItem
+--------
+
+.. code-block :: javascript
 
   loadItem: function(/* object */ keywordArgs)
     //    summary:
@@ -239,6 +295,11 @@ For convenience, the complete Read Feature is defined below.
     //        the callback functions will be called in the context of dojo.global().
     //        For example, onItem.call(scope, item, request) vs. 
     //        onItem.call(dojo.global(), item, request)
+
+fetch
+-----
+
+.. code-block :: javascript
 
   fetch: function(/* Object */ keywordArgs)
     //    summary:
@@ -395,6 +456,11 @@ For convenience, the complete Read Feature is defined below.
     //        Throws an exception if the query is not valid, or if the query
     //        is required but was not supplied.
 
+getFeatures
+-----------
+
+.. code-block :: javascript
+
   getFeatures: function()
     //    summary:
     //        The getFeatures() method returns an simple keyword values object 
@@ -406,6 +472,11 @@ For convenience, the complete Read Feature is defined below.
     //        A more sophisticated datastore might implement a variety of
     //        interface features, like 'dojo.data.api.Read', 'dojo.data.api.Write', 
     //        'dojo.data.api.Identity', and 'dojo.data.api.Attribution'.
+
+close
+-----
+
+.. code-block :: javascript
 
   close: function(/*dojo.data.api.Request || keywordArgs || null */ request)
     //    summary:
@@ -426,6 +497,11 @@ For convenience, the complete Read Feature is defined below.
     //        and close out all 'open' connections.  It does not render the store unusable from
     //        there on, it merely cleans out any current data and resets the store to initial 
     //        state.
+
+getLabel
+--------
+
+.. code-block :: javascript
 
   getLabel: function(/* item */ item)
     //    summary:
@@ -450,6 +526,11 @@ For convenience, the complete Read Feature is defined below.
     //    returns: 
     //        A user-readable string representing the item or undefined if no user-readable label can 
     //        be generated.
+
+getLabelAttributes
+------------------
+
+.. code-block :: javascript
 
   getLabelAttributes: function(/* item */ item)
     //    summary:
