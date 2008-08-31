@@ -136,9 +136,23 @@ The AlwaysShowToolbar plugin prevents that.  It's used along with setting height
 
   .. cv:: html
 
-        <div dojoType="dijit.Editor" id="editor3"
+        <div dojoType="dijit.Editor" id="editor5"
 	   extraPlugins="['dijit._editor.plugins.AlwaysShowToolbar']">
 			<p>
 				This editor is created from a div with AlwaysShowToolbar plugin (do not forget to set height="").
 			</p>
 	</div>
+
+Programmatic Creation
+---------------------
+Of course, the editor can be created programmatically in addition to declaratively,
+although even when created programatically you need to specify a source DOM node to replace:
+
+.. cv:: html
+
+	<div id="programmatic2">This div will become an auto-expanding editor.</div>
+	<button
+		id="create2"
+		onclick="new dijit.Editor({height: '', extraPlugins: ['dijit._editor.plugins.AlwaysShowToolbar']}, dojo.byId('programmatic2')); dojo.query('#create2').orphan();">
+	create expanding editor
+	</button>
