@@ -43,11 +43,8 @@ If you want to just add plugins above and beyond the standard configuration, the
 Both the "plugins" parameter and the "extraPlugins" parameter are arrays, where each element in the array can be a
 simple string or an object (if you need to set options on a plugin).
 
-This example adds the font selection widget to the editor by setting extraPlugins:
-
-TODO
-
-This example starts from scratch, thus removing some items from the toolbar (as compared to the default), like underline, and adding other features:
+This example adds the text color, background color, and font selection plugins to the editor by setting extraPlugins.
+(Technically, the FontChoice plugin provides two commands, foreground-color and highlight-color.)
 
 .. cv-compound::
 
@@ -57,14 +54,32 @@ This example starts from scratch, thus removing some items from the toolbar (as 
       dojo.require("dijit.Editor");
       dojo.require("dijit._editor.plugins.FontChoice");  // 'fontName','fontSize','formatBlock'
       dojo.require("dijit._editor.plugins.TextColor");
-      dojo.require("dijit._editor.plugins.LinkDialog");
     </script>
 
   .. cv:: html
 
       <div dojoType="dijit.Editor" id="editor2"
-	plugins="['bold','italic','|','createLink','foreColor','hiliteColor',{name:'dijit._editor.plugins.FontChoice', command:'fontName', generic:true},'fontSize','formatBlock','insertImage']"
+	extraPlugins="['foreColor','hiliteColor',{name:'dijit._editor.plugins.FontChoice', command:'fontName', generic:true},'fontSize']"
         onChange="console.log('editor2 onChange handler: ' + arguments[0])">
+        <p>This instance is created with additional toolbar/ plugins</p>
+      </div>
+
+This example starts from scratch, thus removing some items from the toolbar (as compared to the default), like underline, and adding other features, namely the LinkDialog:
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+      dojo.require("dijit.Editor");
+      dojo.require("dijit._editor.plugins.LinkDialog");
+    </script>
+
+  .. cv:: html
+
+      <div dojoType="dijit.Editor" id="editor3"
+	plugins="['bold','italic','|','createLink']"
+        onChange="console.log('editor3 onChange handler: ' + arguments[0])">
         <p>This instance is created with customized toolbar/ plugins</p>
       </div>
 
