@@ -21,8 +21,7 @@ Dijit's Rich Text editor, Dijit.Editor, is a text box on steroids. Designed to l
 
   .. cv:: html
 
-      <div dojoType="dijit.Editor" id="editor1"
-        onChange="console.log('editor1 onChange handler: ' + arguments[0])">
+      <div dojoType="dijit.Editor" id="editor1" onChange="console.log('editor1 onChange handler: ' + arguments[0])">
         <p>This instance is created from a div directly with default toolbar and plugins</p>
       </div>
 
