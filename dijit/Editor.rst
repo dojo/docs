@@ -59,7 +59,7 @@ This example adds the text color, background color, and font selection plugins t
   .. cv:: html
 
       <div dojoType="dijit.Editor" id="editor2"
-	extraPlugins="['foreColor','hiliteColor',{name:'dijit._editor.plugins.FontChoice', command:'fontName', generic:true},'fontSize']"
+	extraPlugins="['foreColor','hiliteColor',{name:'dijit._editor.plugins.FontChoice', command:'fontName', generic:true}]"
         onChange="console.log('editor2 onChange handler: ' + arguments[0])">
         <p>This instance is created with additional toolbar/ plugins</p>
       </div>
@@ -111,3 +111,34 @@ This is a list of the default commands included in the editor, that can be speci
 * "createLink"
 * "unlink"
 * "delete" 
+
+Auto-expanding editor
+---------------------
+Typically an editor has a constant height, and if there's a lot of content it gets a scrollbar.
+This is in addition to the main scrollbar for the page.
+
+Editor also has a mode like dijit.form.Textarea where the more a user types, the more the text box expands.
+
+However, that's a bit tricky because if implemented naively the toolbar would eventually scroll off the top
+of the page.
+
+The AlwaysShowToolbar plugin prevents that.  It's used along with setting height="" parameter setting.
+
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+      dojo.require("dijit.Editor");
+      dojo.require("dijit._editor.plugins.AlwaysShowToolbar");
+    </script>
+
+  .. cv:: html
+
+        <div dojoType="dijit.Editor" id="editor3"
+	   extraPlugins="['dijit._editor.plugins.AlwaysShowToolbar']">
+			<p>
+				This editor is created from a div with AlwaysShowToolbar plugin (do not forget to set height="").
+			</p>
+	</div>
