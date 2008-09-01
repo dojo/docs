@@ -30,7 +30,7 @@ By default dojo runs its animations with 100 frames/second. This can be too fast
         properties: {
           fontSize: { start: "12", end: "30" }
         },
-        rate: 1000
+        rate: 500
       }).play();
     }
 
@@ -47,5 +47,5 @@ By default dojo runs its animations with 100 frames/second. This can be too fast
 
   .. cv:: html
 
-    <p><button dojoType="dijit.form.Button" onClick="animateDefault()">Animate (default fps)</button> <button dojoType="dijit.form.Button" onClick="animateSlow()">Animate (5 fps)</button></p>
+    <p><button dojoType="dijit.form.Button" onClick="animateDefault()">Animate (default fps)</button> <button dojoType="dijit.form.Button" onClick="animateSlow()">Animate (2 fps)</button></p>
     <div id="animateProperty">This will be animated</div>
