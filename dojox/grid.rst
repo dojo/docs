@@ -173,7 +173,7 @@ First, you have to set a editor for each cell, you would like to edit:
 
   .. cv:: html
 
-    <span dojoType="dojox.data.ItemFileWriteStore" 
+    <span dojoType="dojo.data.ItemFileWriteStore" 
         jsId="store3" url="/moin_static163/js/dojo/trunk/release/dojo/dijit/tests/_data/countries.json">
     </span>
 
