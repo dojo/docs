@@ -168,7 +168,7 @@ First, you have to set a editor for each cell, you would like to edit:
 
     <script type="text/javascript">
         dojo.require("dojox.grid.DataGrid");
-        dojo.require("dojox.data.ItemFileWriteStore");
+        dojo.require("dojo.data.ItemFileWriteStore");
     </script>
 
   .. cv:: html
