@@ -192,7 +192,7 @@ First, you have to set a editor for each cell, you would like to edit:
         rowSelector="20px">
         <thead>
             <tr>
-                <th width="300px" 
+                <th width="200px" 
                     field="name">Country/Continent Name</th>
                 <th width="auto" 
                     field="type" 
