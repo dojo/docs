@@ -19,9 +19,7 @@ The documentation is aiming to cover all dojo modules delivered within a release
 
 ----
 
-  To successfully migrate the current book, please create an account at this wiki, so we can track changes until LDPA is setup.
-  Once you have created an account, please go to the `book outline <bookmigration>`_ and put your name behind the
-  section you can help migrating.
+  To successfully migrate the current book, use your dojotoolkit.org account to log in. Also take a look at the `book outline <bookmigration>`_ and put your name behind the section you can help to migrate.
   This message will be updated regularly to reflect the current progress.
 
   Please read the `documentation howto <howto>`_. before starting writing docs
