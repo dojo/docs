@@ -24,7 +24,9 @@ By default dojo runs its animations with 100 frames/second. This can be too fast
     dojo.require("dijit.form.Button"); // we require the button to make our demo look fancy
     
     function animateSlow(){
-      dojo.animateProperty({}).play();
+      dojo.animateProperty({
+        node: "animateProperty", duration: 10000
+      }).play();
     }
 
     function animateDefault(){
