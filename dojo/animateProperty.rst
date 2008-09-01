@@ -44,7 +44,8 @@ Examples
       padding: 5px;
       border: 1px solid #000;
       background: red;
-      display: inline;
+      text-align: center;
+      width: 100px;
     }
     </style>
 
