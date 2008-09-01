@@ -14,6 +14,8 @@ dojo.animateProperty is a very useful method for animating CSS properties. Useca
 Examples
 --------
 
+A simple animation changing both background color and text color.
+
 .. cv-compound::
 
   .. cv:: javascript
