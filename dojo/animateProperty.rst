@@ -25,7 +25,8 @@ Examples
       dojo.animateProperty({
         node: dojo.byId("statusCode"), duration: 2000,
         properties: {
-          backgroundColor: { start: "red", end: "green" }
+          backgroundColor: { start: "red", end: "green" },
+          fontColor: { start: "black", end: "white" },
         }
       }).play();
     }
@@ -35,6 +36,16 @@ Examples
 
     <p><button dojoType="dijit.form.Button" onClick="statusOk()">Grant access</button></p>
     <div id="statusCode">Access denied!</div>
+
+  .. cv:: css
+
+    <style type="text/css">
+    #statusCode {
+      padding: 5px;
+      border: 1px solid #000;
+      background: red;
+    }
+    </style>
 
 How can I change the framerate of an animation?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
