@@ -29,6 +29,9 @@ A simple animation changing both background color and text color.
         properties: {
           backgroundColor: { start: "red", end: "green" },
           color: { start: "black", end: "white" },
+        },
+        onEnd: function(){
+          dojo.byId("statusCode").innerHTML = "Granted";
         }
       }).play();
     }
@@ -37,7 +40,7 @@ A simple animation changing both background color and text color.
   .. cv:: html
 
     <p><button dojoType="dijit.form.Button" onClick="statusOk()">Grant access</button></p>
-    <div id="statusCode">Access stauts</div>
+    <div id="statusCode">Denied</div>
 
   .. cv:: css
 
