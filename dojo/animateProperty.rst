@@ -9,6 +9,8 @@ dojo.animateProperty
 .. contents::
   :depth: 3
 
+dojo.animateProperty is a very useful method for animation CSS properties. Usecases are for example fading a background color from red to green to indicate status changes.
+
 Examples
 --------
 
