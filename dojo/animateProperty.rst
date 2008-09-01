@@ -30,7 +30,7 @@ To change the framerate you use the rate attribute which defines the pause betwe
         properties: {
           fontSize: { start: "12", end: "30" }
         },
-        rate: 500
+        rate: 1000
       }).play();
     }
 
@@ -46,5 +46,5 @@ To change the framerate you use the rate attribute which defines the pause betwe
 
   .. cv:: html
 
-    <p><button dojoType="dijit.form.Button" onClick="animateDefault()">Animate (default fps)</button> <button dojoType="dijit.form.Button" onClick="animateSlow()">Animate (2 fps)</button></p>
+    <p><button dojoType="dijit.form.Button" onClick="animateDefault()">Animate (default fps)</button> <button dojoType="dijit.form.Button" onClick="animateSlow()">Animate (1 fps)</button></p>
     <div id="animateProperty">This will be animated</div>
