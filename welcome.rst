@@ -96,6 +96,7 @@ These pages cover both cases, and indicate how they are provided.
 * `dojo.Deferred <dojo/Deferred>`_
 * `dojo.DeferredList <dojo/DeferredList>`_
 * `dojo.fx <dojo/fx>`_
+* `dojo.animateProperty <dojo/animateProperty>`_
 * `dojo.html <dojo/html>`_
 * `dojo.json <dojo/json>`_
 * `dojo.keys <dojo/keys>`_ 
