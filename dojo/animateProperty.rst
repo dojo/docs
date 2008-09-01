@@ -23,7 +23,7 @@ Examples
     
     function statusOk(){
       dojo.animateProperty({
-        node: dojo.byId("statusCode"), duration: 2000,
+        node: dojo.byId("statusCode"), duration: 500,
         properties: {
           backgroundColor: { start: "red", end: "green" },
           fontColor: { start: "black", end: "white" },
@@ -35,7 +35,7 @@ Examples
   .. cv:: html
 
     <p><button dojoType="dijit.form.Button" onClick="statusOk()">Grant access</button></p>
-    <div id="statusCode">Access denied!</div>
+    <div id="statusCode">Access stauts</div>
 
   .. cv:: css
 
