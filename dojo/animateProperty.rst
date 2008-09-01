@@ -14,6 +14,28 @@ dojo.animateProperty is a very useful method for animating CSS properties. Useca
 Examples
 --------
 
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+    dojo.require("dijit.form.Button"); // we require the button to make our demo look fancy
+    
+    function statusOk(){
+      dojo.animateProperty({
+        node: dojo.byId("statusCode"), duration: 2000,
+        properties: {
+          backgroundColor: { start: "red", end: "green" }
+        }
+      }).play();
+    }
+    </script>
+
+  .. cv:: html
+
+    <p><button dojoType="dijit.form.Button" onClick="statusOk()">Grant access</button></p>
+    <div id="statusCode">Access denied!</div>
+
 How can I change the framerate of an animation?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 By default dojo runs its animations with 100 frames/second. This can be too fast in certain use scenarios and you want the whole animation to run lots slower. 
