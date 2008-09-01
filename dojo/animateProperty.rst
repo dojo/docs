@@ -26,7 +26,7 @@ Examples
         node: dojo.byId("statusCode"), duration: 500,
         properties: {
           backgroundColor: { start: "red", end: "green" },
-          fontColor: { start: "black", end: "white" },
+          color: { start: "black", end: "white" },
         }
       }).play();
     }
@@ -44,6 +44,7 @@ Examples
       padding: 5px;
       border: 1px solid #000;
       background: red;
+      display: inline;
     }
     </style>
 
