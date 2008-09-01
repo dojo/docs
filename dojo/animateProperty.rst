@@ -29,7 +29,16 @@ By default dojo runs its animations with 100 frames/second. This can be too fast
         properties: {
           fontSize: { start: "12px", end: "30px" }
         }
-      }, rate: 10).play ();
+      }, rate: 10).play();
+    }
+
+    function animateDefault(){
+      dojo.animateProperty({
+        node: "animateProperty", duration: 10000,
+        properties: {
+          fontSize: { start: "12px", end: "30px" }
+        }
+      }).play();
     }
     </script>
 
