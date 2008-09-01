@@ -14,7 +14,8 @@ Examples
 
 How can I change the framerate of an animation?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-By default dojo runs its animations with 100 frames/second. This can be too fast in certain use scenarios and you want the whole animation to run lots slower:
+By default dojo runs its animations with 100 frames/second. This can be too fast in certain use scenarios and you want the whole animation to run lots slower. 
+To change the framerate you use the rate attribute which defines the pause between each frame. So if you want 5 frames per secons you need a pause of 200 miliseconds between each frame.
 
 .. cv-compound::
 
@@ -24,7 +25,6 @@ By default dojo runs its animations with 100 frames/second. This can be too fast
     dojo.require("dijit.form.Button"); // we require the button to make our demo look fancy
     
     function animateSlow(){
-      alert("animate");
       dojo.animateProperty({
         node: dojo.byId("animateProperty"), duration: 10000,
         properties: {
@@ -35,7 +35,6 @@ By default dojo runs its animations with 100 frames/second. This can be too fast
     }
 
     function animateDefault(){
-      alert("animat");
       dojo.animateProperty({
         node: dojo.byId("animateProperty"), duration: 10000,
         properties: {
