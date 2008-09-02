@@ -54,7 +54,7 @@ The following example will make use of APIs defined by both `Read <dojo/data/api
            //Function to perform a lookup on the datastore on each change event of the combo box.
            function getItemFromStore () {
               function updatePrice(item, request) {
-                 var lNode = dojo.byId("isleNode");
+                 var lNode = dojo.byId("aisleNode");
                  var pNode = dojo.byId("priceNode");
                  if (!item) {
                      lNode.innerHTML = "N/A.";
@@ -79,6 +79,6 @@ The following example will make use of APIs defined by both `Read <dojo/data/api
     <br>
     <br>
     <span>
-      <b>ISLE: </b><span id="isleNode"></span><br>
-      <b>PRICE: </b><span id="isleNode"></span><br>
+      <b>AISLE: </b><span id="aisleNode"></span><br>
+      <b>PRICE: </b><span id="priceNode"></span><br>
     </span>
