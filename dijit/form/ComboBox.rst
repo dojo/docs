@@ -22,6 +22,7 @@ Programmatic using remote data
   .. cv:: javascript
 
     <script type="text/javascript">
+      dojo.require("dijit.form.Button"); // only to make the demo look fancy
       dojo.require("dijit.form.ComboBox");
       dojo.require("dojo.data.ItemFileReadStore");
       
@@ -34,7 +35,7 @@ Programmatic using remote data
   .. cv:: html
 
     <div id="stateSelect"></div>
-    <p><button dojoType="dijit.form.Button" onClick="alert(dijit.byId('stateSelect').getValue();)">Get value</button></p>
+    <p><button dojoType="dijit.form.Button" onClick="alert(dijit.byId('stateSelect').getValue())">Get value</button></p>
 
 Declarative using native select
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
