@@ -12,12 +12,12 @@ For this example, we'll assume the following simple data source:
     items: [
       { name: 'Adobo', aisle: 'Mexican', price: 3.00 },
       { name: 'Balsamic vinegar', aisle: 'Condiments', price: 4.00 },
-      { name: 'Basil', aisle: 'Spices' price: 3.59  },
+      { name: 'Basil', aisle: 'Spices', price: 3.59  },          
       { name: 'Bay leaf', aisle: 'Spices',  price: 2.00 },
       { name: 'Beef Bouillon Granules', aisle: 'Soup',  price: 5.00  },
       { name: 'Vinegar', aisle: 'Condiments',  price: 1.99  },
       { name: 'White cooking wine', aisle: 'Condiments',  price: 2.00 },
-      { name: 'Worcestershire Sauce', aisle: 'Condiments'  price: 3.99 },
+      { name: 'Worcestershire Sauce', aisle: 'Condiments',  price: 3.99 },
       { name: 'pepper', aisle: 'Spices',  price: 1.00  }
   ]}
 
@@ -53,6 +53,7 @@ The following example will make use of APIs defined by both `Read <dojo/data/api
         function init () {
            //Function to perform a lookup on the datastore on each change event of the combo box.
            function getItemFromStore () {
+alert("moo");
            }
            //Link any change events in the combo to driving the fetchItemByIdentity lookup.
            dojo.connect(combo, "onChange", getItemFromStore);
