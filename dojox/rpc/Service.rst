@@ -9,10 +9,10 @@ First, you need the code:
 
 .. code-block :: javascript
 
-  dojo.require("dojox.rpc.Service");
   dojo.require("dojo.io.script");
+  dojo.require("dojox.rpc.Service");
 
-We only need `dojo.io.script <dojo/io/script>`_ if our service is cross-domain, which the provided SMDLibrary SMD's are. If you define your own SMD with a local target endpoint, you can omit the require()
+We only need `dojo.io.script <dojo/io/script>`_ if our service is cross-domain, which the provided SMDLibrary SMD's are. If you define your own SMD with a local target endpoint, you can omit the require().
 
 Starting a Service 
 ------------------
@@ -50,8 +50,8 @@ Simply provide a ``frameDoc`` attribute and passed as an optional parameter to t
 
 .. code-block :: javascript
 
-  dojo.require("dojox.rpc.Service");
   dojo.require("dojox.io.scriptFrame");
+  dojo.require("dojox.rpc.Service");
   var goog = new dojox.rpc.Service("js/dojox/rpc/SMDLibrary/google.smd", {
       frameDoc:"someIframeID"
   });
