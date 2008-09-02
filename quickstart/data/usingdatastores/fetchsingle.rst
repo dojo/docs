@@ -58,10 +58,10 @@ The following example will make use of APIs defined by both `Read <dojo/data/api
                  var pNode = dojo.byId("priceNode");
                  if (!item) {
                      lNode.innerHTML = "N/A.";
-                     priceNode.innerHTML = "0.00";
+                     pNode .innerHTML = "0.00";
                  } else {
-                     lNode.innerHTML = foodStore.getValue(item, "isle");
-                     priceNode.innerHTML = foodStore.getValue(item, "price");
+                     lNode.innerHTML = foodStore.getValue(item, "aisle");
+                     pNode .innerHTML = foodStore.getValue(item, "price");
                  }
               }
               foodStore.fetchItemByIdentity({identity: combo.getValue(), onItem: updatePrice});
