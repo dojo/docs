@@ -34,6 +34,7 @@ Programmatic using remote data
   .. cv:: html
 
     <div id="stateSelect"></div>
+    <p><button dojoType="dijit.form.Button" onClick="alert(dijit.byId('stateSelect').getValue();)">Get value</button></p>
 
 Declarative using native select
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
