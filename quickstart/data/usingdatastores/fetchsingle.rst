@@ -82,7 +82,7 @@ The following example will make use of APIs defined by both `Read <dojo/data/api
 
   .. cv :: html 
 
-    <div dojoType="dojo.data.ItemFileReadStore" data="storeData" jsId="foodStore"></div>
+    Pick a grocery item: <div dojoType="dojo.data.ItemFileReadStore" data="storeData" jsId="foodStore"></div>
     <div dojoType="dijit.form.ComboBox" store="foodStore" searchAttr="name" jsId="combo"></div>
     <br>
     <br>
