@@ -20,3 +20,10 @@ For this example, we'll assume the following simple data source:
       { name: 'Worcestershire Sauce', aisle: 'Condiments'  price: 3.99 },
       { name: 'pepper', aisle: 'Spices',  price: 1.00  }
   ]}
+
+The following example will make use of APIs defined by both `Read <dojo/data/api/Read>`_ and `Identity <dojo/data/api/Identity>`_.  In specific, they use:
+
+**Identity**
+  fetchItemByIdentity() Fetches an item by its key value. Because the identity value of each item is unique, you are guaranteed at most one answer back. 
+**Read**
+  getValue() Takes an item and an attribute and returns the associated value
