@@ -10,15 +10,15 @@ For this example, we'll assume the following simple data source:
 
   { identifier: 'name', 
     items: [
-      { name: 'Adobo', aisle: 'Mexican', price: 3.00 },
-      { name: 'Balsamic vinegar', aisle: 'Condiments', price: 4.00 },
+      { name: 'Adobo', aisle: 'Mexican', price: 3.01 },
+      { name: 'Balsamic vinegar', aisle: 'Condiments', price: 4.01 },
       { name: 'Basil', aisle: 'Spices', price: 3.59  },          
-      { name: 'Bay leaf', aisle: 'Spices',  price: 2.00 },
-      { name: 'Beef Bouillon Granules', aisle: 'Soup',  price: 5.00  },
+      { name: 'Bay leaf', aisle: 'Spices',  price: 2.01 },
+      { name: 'Beef Bouillon Granules', aisle: 'Soup',  price: 5.01  },
       { name: 'Vinegar', aisle: 'Condiments',  price: 1.99  },
-      { name: 'White cooking wine', aisle: 'Condiments',  price: 2.00 },
+      { name: 'White cooking wine', aisle: 'Condiments',  price: 2.01 },
       { name: 'Worcestershire Sauce', aisle: 'Condiments',  price: 3.99 },
-      { name: 'pepper', aisle: 'Spices',  price: 1.00  }
+      { name: 'pepper', aisle: 'Spices',  price: 1.01 }
   ]}
 
 The following example will make use of APIs defined by both `Read <dojo/data/api/Read>`_ and `Identity <dojo/data/api/Identity>`_.  In specific, they use:
@@ -39,15 +39,15 @@ The following example will make use of APIs defined by both `Read <dojo/data/api
 
       var storeData = { identifier: 'name', 
         items: [
-          { name: 'Adobo', aisle: 'Mexican', price: 3.00 },
-          { name: 'Balsamic vinegar', aisle: 'Condiments', price: 4.00 },
+          { name: 'Adobo', aisle: 'Mexican', price: 3.01 },
+          { name: 'Balsamic vinegar', aisle: 'Condiments', price: 4.01 },
           { name: 'Basil', aisle: 'Spices', price: 3.59  },          
-          { name: 'Bay leaf', aisle: 'Spices',  price: 2.00 },
-          { name: 'Beef Bouillon Granules', aisle: 'Soup',  price: 5.00  },
+          { name: 'Bay leaf', aisle: 'Spices',  price: 2.01 },
+          { name: 'Beef Bouillon Granules', aisle: 'Soup',  price: 5.01 },
           { name: 'Vinegar', aisle: 'Condiments',  price: 1.99  },
-          { name: 'White cooking wine', aisle: 'Condiments',  price: 2.00 },
+          { name: 'White cooking wine', aisle: 'Condiments',  price: 2.01 },
           { name: 'Worcestershire Sauce', aisle: 'Condiments',  price: 3.99 },
-          { name: 'pepper', aisle: 'Spices',  price: 1.00  }
+          { name: 'pepper', aisle: 'Spices',  price: 1.01  }
         ]};
 
         //This function performs some basic dojo initialization.  In this case it connects the ComboBox
