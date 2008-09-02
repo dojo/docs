@@ -53,7 +53,18 @@ The following example will make use of APIs defined by both `Read <dojo/data/api
         function init () {
            //Function to perform a lookup on the datastore on each change event of the combo box.
            function getItemFromStore () {
-              alert("moo");
+              function updatePrice(item, request) {
+                 var lNode = dojo.byId("isleNode");
+                 var pNode = dojo.byId("priceNode");
+                 if (!item) {
+                     lNode.innerHTML = N/A.
+                     priceNode = 0.00.
+                 } else {
+                     lNode.innerHTML = foodStore.getValue(item, "isle");
+                     priceNode = foodStore.getValue(item, "price");
+                 }
+              }
+              foodStore.fetchItemByIdentity({identity: combo.getValue(), onItem: updatePrice});
            }
            //Link any change events in the combo to driving the fetchItemByIdentity lookup.
            dojo.connect(combo, "onChange", getItemFromStore);
@@ -65,7 +76,8 @@ The following example will make use of APIs defined by both `Read <dojo/data/api
 
     <div dojoType="dojo.data.ItemFileReadStore" data="storeData" jsId="foodStore"></div>
     <div dojoType="dijit.form.ComboBox" store="foodStore" searchAttr="name" jsId="combo"></div>
-
+    <br>
+    <br>
     <span>
       <b>ISLE: </b><span id="isleNode"></span><br>
       <b>PRICE: </b><span id="isleNode"></span><br>
