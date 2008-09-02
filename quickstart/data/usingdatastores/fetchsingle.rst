@@ -50,6 +50,11 @@ The following example will make use of APIs defined by both `Read <dojo/data/api
           { name: 'pepper', aisle: 'Spices',  price: 1.00  }
         ]};
 
+        //This function performs some basic dojo initialization.  In this case it connects the ComboBox
+        //onChange event to a function which invokes the fetchItemByIdentity function.  The fetchItemByIdentity
+        //function uses the value selected in the combobox to do a lookup on the datastore for an item with the 
+        //identifier that matches the combobox value.  If it gets one, the price and aisle are updated, if it 
+        //does not locate one, the then the values are set to N/A and 0.00.
         function init () {
            //Function to perform a lookup on the datastore on each change event of the combo box.
            function getItemFromStore () {
@@ -64,11 +69,14 @@ The following example will make use of APIs defined by both `Read <dojo/data/api
                      pNode .innerHTML = foodStore.getValue(item, "price");
                  }
               }
+              //Invoke the lookup.  The callback for when the lookup succeeds is the updatePrice function
+              //defined above.
               foodStore.fetchItemByIdentity({identity: combo.getValue(), onItem: updatePrice});
            }
            //Link any change events in the combo to driving the fetchItemByIdentity lookup.
            dojo.connect(combo, "onChange", getItemFromStore);
         }
+        //Set the init function to run when dojo loading and page parsing has completed.
         dojo.addOnLoad(init);
     </script>
 
