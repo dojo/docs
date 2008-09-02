@@ -91,4 +91,4 @@ The following example will make use of APIs defined by both `Read <dojo/data/api
       <b>PRICE: </b><span id="priceNode"></span><br>
     </span>
 
-**Note:**In the example, the fetchItemByIdentity makes use of a callback to pass the fetched item to.  This is because by definition, dojo.data is an asynchronous API for querying of data values. This is because many Data Stores will need to go back to a server to actually look up the data and some Ajax I/O methods do not readily allow for a synchronous call.  For example, script source IO cannot be done synchronously, nor can iFrame IO.  They must have callbacks to operate.
+**Note:** In the example, the fetchItemByIdentity makes use of a callback to pass the fetched item to.  This is because by definition, dojo.data is an asynchronous API for querying of data values. This is because many Data Stores will need to go back to a server to actually look up the data and some Ajax I/O methods do not readily allow for a synchronous call.  For example, script source IO cannot be done synchronously, nor can iFrame IO.  They must have callbacks to operate.
