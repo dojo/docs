@@ -53,7 +53,7 @@ The following example will make use of APIs defined by both `Read <dojo/data/api
         function init () {
            //Function to perform a lookup on the datastore on each change event of the combo box.
            function getItemFromStore () {
-alert("moo");
+              alert("moo");
            }
            //Link any change events in the combo to driving the fetchItemByIdentity lookup.
            dojo.connect(combo, "onChange", getItemFromStore);
