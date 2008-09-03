@@ -5,7 +5,7 @@
 
 One of the design goals of dojo.data was to handle the concept of hierarchical items.  What that means is that an item may have references to, or contain, other items.  The end result when viewed graphically is a Tree instead of a flat list.  So, this leads to the questions of how do you determine if there is hierarchy and how do you walk across it.  This is, in fact, quite easy to do using dojo.data.ItemFileReadStore as it supports data in hierarchical structure.
 
-Lets take a look at an example hierarchy built up with references in dojo.data.ItemFileReadStore.  Please take note that this information on constructing a structure that shows hierarchy is specific to dojo.data.ItemFileReadStore.  The concepts of how you then walk over the hierarchy is what is general and generic to dojo.data.  The internal format used by a store is not.
+Lets take a look at an example hierarchy built up with references in dojo.data.ItemFileReadStore.  Please take note that the example information on constructing a structure that shows hierarchy is specific to dojo.data.ItemFileReadStore.  The concepts of how you then walk over the hierarchy is what is general and generic to dojo.data.  The internal format used by a store is not.
 
 **Example data structure for ItemFileReadStore:**
 
@@ -173,3 +173,67 @@ Okay, hopefully the above example helped visually display how nested items are r
       } 
     ]
   }
+
+**Functional Example 2:  dijit.Tree displaying hierarchical data in a data store.**
+
+**Note:** *The tree model selects root nodes via a query attribute.  This query attribute is directly passed to the data store as part of the fetch made to generate the list of root items.*
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojo.data.ItemFileReadStore");
+      dojo.require("dijit.Tree");
+      var storeData2 = { identifier: 'name',
+        items: [
+          { name:'Africa', type:'continent', children:[
+            { name:'Egypt', type:'country' }, 
+            { name:'Kenya', type:'country', children:[
+            { name:'Nairobi', type:'city' },
+            { name:'Mombasa', type:'city' } ]
+            },
+            { name:'Sudan', type:'country', children:
+              { name:'Khartoum', type:'city' } 
+            } ]
+          },
+          { name:'Asia', type:'continent', children:[
+            { name:'China', type:'country' },
+            { name:'India', type:'country' },
+            { name:'Russia', type:'country' },
+            { name:'Mongolia', type:'country' } ]
+          },
+          { name:'Australia', type:'continent', population:'21 million', children:
+            { name:'Commonwealth of Australia', type:'country', population:'21 million'}
+          },
+          { name:'Europe', type:'continent', children:[
+            { name:'Germany', type:'country' },
+            { name:'France', type:'country' },
+            { name:'Spain', type:'country' },
+            { name:'Italy', type:'country' } ]
+          },
+          { name:'North America', type:'continent', children:[
+            { name:'Mexico', type:'country',  population:'108 million', area:'1,972,550 sq km', children:[
+              { name:'Mexico City', type:'city', population:'19 million', timezone:'-6 UTC'},
+              { name:'Guadalajara', type:'city', population:'4 million', timezone:'-6 UTC' } ]
+            },
+            { name:'Canada', type:'country',  population:'33 million', area:'9,984,670 sq km', children:[
+              { name:'Ottawa', type:'city', population:'0.9 million', timezone:'-5 UTC'},
+              { name:'Toronto', type:'city', population:'2.5 million', timezone:'-5 UTC' }]
+            },
+            { name:'United States of America', type:'country' } ]
+          },
+          { name:'South America', type:'continent', children:[
+            { name:'Brazil', type:'country', population:'186 million' },
+            { name:'Argentina', type:'country', population:'40 million' } ]
+          } 
+        ]
+      };
+    </script>
+
+  .. cv :: html 
+
+    <div dojoType="dojo.data.ItemFileReadStore" data="storeData2" jsId="geographyStor2e"></div>
+    <div dojoType="dijit.tree.ForestStoreModel" jsId="geographyModel" store="geographyStore2" query="{type: 'continent'}" rootId="Geography" rootLabel="Geography"></div>
+    <div dojoType="dijit.Tree" model="geographyModel"></div>
+
