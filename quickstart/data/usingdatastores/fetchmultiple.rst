@@ -76,14 +76,20 @@ That's great, but what is more useful is seeing a completely functional example.
         function init () {
            //Function to perform a fetch on the datastore when a button is clicked
            function getAllItems () {
+
+             //Callback to perform an action when the data items are starting to be returned:
+             function clearOldList {
+               if (list) { 
+                 while (list.firstChild) {
+                   list.removeChild(list.firstChild);
+                 }
+               }
+             }
   
              //Callback for processing a returned list of items.
              function gotItems(items, request) {
                var list = dojo.byId("list");
                if (list) { 
-                 while (list.firstChild) {
-                   list.removeChild(list.firstChild);
-                 }
                  var i;
                  for (i = 0; i < items.length; i++) {
                    var item = items[i];
@@ -99,7 +105,7 @@ That's great, but what is more useful is seeing a completely functional example.
              }
              
              //Fetch the data.  
-             foodStore.fetch({onComplete: gotItems, onError: fetchFailed});
+             foodStore.fetch({onBegin: clearOldList, onComplete: gotItems, onError: fetchFailed});
 
            }
            //Link the clikc event of the button to driving the fetch.
