@@ -334,8 +334,8 @@ This section covers some basic query examples to familiarize users with the gene
   .. cv :: html 
 
 
-    <b>Name:  </b><input dojoType="dijit.form.TextBox" jsId="nameBox">*</input>
-    <b>Aisle: </b><input dojoType="dijit.form.TextBox" jsId="aisleBox">*</input>
+    <b>Name:  </b><input dojoType="dijit.form.TextBox" jsId="nameBox" value="*"></input>
+    <b>Aisle: </b><input dojoType="dijit.form.TextBox" jsId="aisleBox" value="*"></input>
     <div dojoType="dojo.data.ItemFileReadStore" data="storeData3" jsId="foodStore3"></div>
     <div dojoType="dijit.form.Button" jsId="button3">Click to search!</div>
     <br>
