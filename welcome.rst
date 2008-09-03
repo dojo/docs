@@ -77,6 +77,10 @@ These pages cover both cases, and indicate how they are provided.
 * `dojo.connect <dojo/connect>`_
 * `dojo.Color <dojo/Color>`_
 * `dojo.declare <dojo/declare>`_
+
+Dojo data
+~~~~~~~~~
+
 * `dojo.data <dojo/data>`_
 
   * `dojo.data.api <dojo/data/api>`_
