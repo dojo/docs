@@ -5,27 +5,29 @@ dojo.data.api
 
 Before diving directly into the APIs of dojo.data, the basic concepts behind the APIs need to be explored because some design descisions that were made might seem odd without an explanation as to why they were chosen. Therefore, read this page in its entirety before moving onto the individual APIs.
 
+============================================================================================
+Concept 1: Data access is broken down into separate APIs that stores can choose to implement
+============================================================================================
 
-**Concept 1: Data access is broken down into separate APIs that stores can choose to implement**
-------------------------------------------------------------------------------------------------
 Data access is broken down into separate APIs because not every service or data backend is able to provide complete access and functions. So not all datastores could possibly implement functions such as read, write, identify, or notifications. To make it simple to see what features a store provides, each store must provide the 'getFeatures()' function. This function reports which APIs the store implements. The following list of basic APIs are defined:
 
-**dojo.data.api.Read**  (`Read API Reference <dojo/data/api/Read>`_)
+**dojo.data.api.Read** (`Read API Reference <dojo/data/api/Read>`_)
 
   The ability to read data items and attributes of those data items. This also includes the ability to search, sort, and filter data items.
 
-**dojo.data.api.Write**  (`Write API Reference <dojo/data/api/Write>`_)
+**dojo.data.api.Write** (`Write API Reference <dojo/data/api/Write>`_)
 
   The ability to create, delete, and update data items and attributes of those data items. Not all back end services allow for modification of data items. In fact, most public services like Flikr, Delicious, GoogleMaps, for example are primarily read-based data providers.
 
-**dojo.data.api.Identity**  (`Identity API Reference <dojo/data/api/Identity>`_)
+**dojo.data.api.Identity** (`Identity API Reference <dojo/data/api/Identity>`_)
   The ability to locate and look up an item based on its unique identifier, if it has one. Not all data formats have unique identifiers that can be used to look up data items.
 
-**dojo.data.api.Notification**  (`Notification API Reference <dojo/data/api/Notification>`_)
+**dojo.data.api.Notification** (`Notification API Reference <dojo/data/api/Notification>`_)
 
-  The ability to notify listeners for change events on data items in a store. The basic change events for an item are create, delete, and update.  These are particularly useful for cases such as a datastore that periodically polls a back end service for data refresh.
+  The ability to notify listeners for change events on data items in a store. The basic change events for an item are create, delete, and update. These are particularly useful for cases such as a datastore that periodically polls a back end service for data refresh.
 
-**Future Features**
+Future Features
+---------------
 
 There are further functions that the Dojo development community would like to define as additional features stores which might be implemented. However, they have not been completely specified yet and are a work in progress. As such, they are not currently provided in the Dojo Toolkit. Note that the list can change at any time as decisions evolve about what capabilities the dojo.data APIs should provide. The following features are functions that the Dojo development community would like to define as additional features stores to implement:
 
@@ -42,9 +44,9 @@ There are further functions that the Dojo development community would like to de
 **dojo.data.api.Derivation**
   Attributes derived from other attributes and calculated values
 
-
-**Concept 2: Items and item attributes are always accessed, modified, created, and deleted through store functions. Attributes are never directly accessed from the item object.**
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+==============================================================================================================================================================================
+Concept 2: Items and item attributes are always accessed, modified, created, and deleted through store functions. Attributes are never directly accessed from the item object.
+==============================================================================================================================================================================
 
 This concept is likely one of the aspects of dojo.data that might seem confusing at first. The following code snippet shows this concept:
 
@@ -62,7 +64,8 @@ This concept is likely one of the aspects of dojo.data that might seem confusing
 
 This example might make you wonder why attributes are not accessed as shown in one of the following examples:
 
-**Incorrect access:**
+Incorrect access:
+-----------------
 
 * var value = item["foo"]; 
 * var value = item.foo;
@@ -77,4 +80,4 @@ Why is it a requirement to use a store accessor function in dojo.data?  The reas
 * The store could use a very compact internal structure: This lessens the amount of memory required by a particular store to represent some item and its attribute values.
 
 * Going through store accessor function provides the possibility of lazy-loading in of values as well as lazy reference resolution.
-* Requiring items to be objects with accessor functions on the object for the value would be very expensive to construct, particularly for large data sets.  Therefore, it is not a requirement.
+* Requiring items to be objects with accessor functions on the object for the value would be very expensive to construct, particularly for large data sets. Therefore, it is not a requirement.
