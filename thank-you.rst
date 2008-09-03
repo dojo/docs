@@ -8,6 +8,7 @@ A big "thank you" goes to
 
 * Sam Foster,
 * Becky Gibson,
+* Mark Hays,
 * Peter Higgins,
 * Robertus Harmawan Johansyah,
 * Jared Jurkiewicz,
