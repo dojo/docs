@@ -168,8 +168,11 @@ These sections cover the available projects shipped with the Dojo Toolkit
 
   * `dojox.analytics.Urchin <dojox/analytics/Urchin>`_
 
+* `dojox.av <dojox/av>`_
+* `dojox.charting <dojox/charting>`_
+* `dojox.collections <dojox/collections>`_
+* `dojox.color <dojox/color>`_
 * `dojox.cometd <dojox/cometd>`_
-
 * `dojox.data <dojox/data>`_
 
   * `dojox.data.AndOrReadStore <dojox/data/AndOrReadStore>`_
@@ -199,6 +202,12 @@ These sections cover the available projects shipped with the Dojo Toolkit
   * `dojox.data.WikipediaStore <dojox/data/WikipediaStore>`_
   * `dojox.data.XmlStore <dojox/data/XmlStore>`_
 
+* `dojox.date <dojox/date>`_
+* `dojox.dtl <dojox/dtl>`_
+* `dojox.editor <dojox/editor>`_
+* `dojox.embed <dojox/embed>`_
+* `dojox.encoding <dojox/encoding>`_
+* `dojox.flash <dojox/flash>`_
 * `dojox.form <dojox/form>`_
 
   * `dojox.form.BusyButton <dojox/form/BusyButton>`_
@@ -208,29 +217,47 @@ These sections cover the available projects shipped with the Dojo Toolkit
 
   * `dojox.fx.wipeTo <dojox/fx/wipeTo>`_
 
-* `dojox.grid <dojox/grid>`_
-
 * `dojox.gfx <dojox/gfx>`_
-
 * `dojox.gfx3d <dojox/gfx3d>`_
-
+* `dojox.grid <dojox/grid>`_
+* `dojox.help <dojox/help>`_
 * `dojox.highlight <dojox/highlight>`_
-
+* `dojox.html <dojox/html>`_
 * `dojox.image <dojox/image>`_
 
   * `dojox.image.Lightbox <dojox/image/Lightbox>`_
 
+* `dojox.io <dojox/io>`_
+* `dojox.json <dojox/json>`_
+* `dojox.jsonPath <dojox/jsonPath>`_
+* `dojox.lang <dojox/lang>`_
+* `dojox.layout <dojox/layout>`_
+* `dojox.math <dojox/math>`_
+* `dojox.off <dojox/off>`_
+* `dojox.presentation <dojox/presentation>`_
+* `dojox.resources <dojox/resources>`_
+* `dojox.robot <dojox/robot>`_
 * `dojox.rpc <dojox/rpc>`_
   
   * `dojox.rpc.SMDLibrary <dojox/rpc/SMDLibrary>`_
   * `dojox.rpc.Service <dojox/rpc/Service>`_
 
+* `dojox.secure <dojox/secure>`_
+* `dojox.sql <dojox/sql>`_
+* `dojox.storage <dojox/storage>`_
+* `dojox.string <dojox/string>`_
+* `dojox.testing <dojox/testing>`_
+* `dojox.timing <dojox/timing>`_
+* `dojox.uuid <dojox/uuid>`_
+* `dojox.validate <dojox/validate>`_
 * `dojox.widget <dojox/widget>`_
 
   * `dojox.widget.Toaster <dojox/widget/Toaster>`_
   * `dojox.widget.Roller <dojox/widget/Roller>`_
 
-
+* `dojox.wire <dojox/wire>`_
+* `dojox.xml <dojox/xml>`_
+* `dojox.xmpp <dojox/xmpp>`_
 
 
 
