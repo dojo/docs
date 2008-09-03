@@ -58,6 +58,10 @@ Lets take a look at an example hierarchy built up with references in dojo.data.I
 
 There are two things to notice about the above structure.  The first is that yes, it is still a flat list of data items to feed to dojo.data.ItemFileReadStore.  But, as you can see, there is a special attribute, *_reference* that is used to point to another item in the list.  These references, when processed by ItemFileReadStore, will establish the relationships in the data.  This means that when you call store.getValues(item, children), the array returned is an array of the actual items pointed to.  So, if you then try to visualize it, you can see how the Tree of hierarchy is formed from the references.  Below is an example of using dijit.Tree with the above dataset to construct and display a tree.
 
+**Functional Example 1:  dijit.Tree displaying hierarchical data in a data store.**
+
+**Note:** *The tree model selects root nodes via a query attribute.  This query attribute is directly passed to the data store as part of the fetch made to generate the list of root items.*
+
 .. cv-compound ::
   
   .. cv :: javascript
