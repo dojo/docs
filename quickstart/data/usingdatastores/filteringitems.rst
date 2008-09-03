@@ -72,10 +72,16 @@ That's great, but what if I don't care about case sensitivity?  Dojo.data also p
     ...    
   });
 
+So,in general, any option that would affect the behavior of a query, such as making it case insensitive or doing a deep scan where it scans a hierarchy of items instead of just the top level items (the deep:true option), in a store belongs in the queryOptions argument.
 
-This example will match both "Black Pepper" and "white pepper."
 
-In general, any option that would affect the behavior of a query, such as making it case insensitive or doing a deep scan where it scans a hierarchy of items instead of just the top level items (the deep:true option), in a store belongs in the queryOptions argument.
-Why isn't it just SQL for a query?
+**Why isn't it just SQL for a query?  Why can each store potentially define their own query syntax?**
 
-The simple and short answer to this question is that not all datastores are backed directly by a database that handles SQL. An immediate example is ItemFileReadStore, which just uses a structured JSON list for its data. Other examples would be datastores that wrap on top of services like Flickr and Delicious, because neither of those take SQL as the syntax for their services. Therefore, the dojo.data API defines basic guidelines and syntax stores that can be easily mapped to a service (for example, attribute names can map directly to parameters in a query string). The same is true for an SQL backed datastore. The attributes become substitutions in a prepared statement that the stores use (when they pass back the query to the server) and a simple common pattern matching syntax, the * and ?, which also map easily across a wide variety of datasource query syntax.
+  The simple and short answer to this question is that not all datastores are backed directly by a database that handles SQL. An immediate example is ItemFileReadStore, which just uses a structured JSON list for its data, so its query looks like structured JSON.  Other examples would be datastores that wrap on top of services like Flickr and Delicious, because neither of those take SQL as the syntax for their services. 
+
+  Therefore, the dojo.data API defines basic guidelines and syntax stores that can be easily mapped to a service (for example, attribute names can map directly to parameters in a query string). The same is true for an SQL backed datastore. The attributes become substitutions in a prepared statement that the stores use (when they pass back the query to the server) and a simple common pattern matching syntax, the * and ?, which also map easily across a wide variety of datasource query syntax.
+
+  **Note:** What dojo.data does recommend, though, is that stores generally use the dojo.data.ItemFileReadStore syntax, because it is fairly generic, works well in javascript, and can be mapped into other native syntaxes easily.  Nearly all, if not all, datastores provided in the dojox.data module use the exact same syntax and wil under the covers map it to the native syntaxes needed by the back-end services that provide the data store query and return (for remove data stores), and in-memory datastores, such as dojo.data.ItemFileReadStore work well with the structured JavaScript format.
+
+**Examples**
+------------
