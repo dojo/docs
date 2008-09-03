@@ -109,7 +109,7 @@ That's great, but what is more useful is seeing a completely functional example.
              foodStore.fetch({onBegin: clearOldList, onComplete: gotItems, onError: fetchFailed});
 
            }
-           //Link the clikc event of the button to driving the fetch.
+           //Link the click event of the button to driving the fetch.
            dojo.connect(button, "onClick", getAllItems);
         }
         //Set the init function to run when dojo loading and page parsing has completed.
@@ -216,7 +216,7 @@ Now, to demonstrate this concept in a functional example. In the following examp
                }
              }
   
-             //Callback for processing a returned list of items.
+             //Callback for processing a single returned item.
              function gotItem(item, request) {
                var list = dojo.byId("list2");
                if (list) {
@@ -236,7 +236,7 @@ Now, to demonstrate this concept in a functional example. In the following examp
              foodStore.fetch({onBegin: clearOldList, onItem: gotItem, onError: fetchFailed});
            }
 
-           //Link the clikc event of the button to driving the fetch.
+           //Link the click event of the button to driving the fetch.
            dojo.connect(button2, "onClick", getStreamingItems);
         }
         //Set the init function to run when dojo loading and page parsing has completed.
