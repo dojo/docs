@@ -93,6 +93,10 @@ These pages cover both cases, and indicate how they are provided.
 
 * `dojo.Deferred <dojo/Deferred>`_
 * `dojo.DeferredList <dojo/DeferredList>`_
+* `dojo.dnd <dojo/dnd>`_
+
+  * `dojo.dnd.Moveable <dojo/dnd/Moveable>`_
+
 * `dojo.fx <dojo/fx>`_
 * `dojo.animateProperty <dojo/animateProperty>`_
 * `dojo.html <dojo/html>`_
