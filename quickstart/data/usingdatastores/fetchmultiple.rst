@@ -87,8 +87,8 @@ That's great, but what is more useful is seeing a completely functional example.
                  var i;
                  for (i = 0; i < items.length; i++) {
                    var item = items[i];
-                   list.appendChild(document.createTextNode(foodStore.getValue(item, "name"));
-                   list.appendChild(document.createElement("br");
+                   list.appendChild(document.createTextNode(foodStore.getValue(item, "name")));
+                   list.appendChild(document.createElement("br"));
                  }
                }
              }
