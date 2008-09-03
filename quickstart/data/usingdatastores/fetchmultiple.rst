@@ -45,7 +45,7 @@ The following example code fragment returns all items:
   });
 
 
-That's great, but what is more useful is seeing a completely functional example.  In the following example, clicking a button retrieves a list of items and displays them.
+That's great, but what is more useful is seeing a completely functional example.  In the following example, clicking a button retrieves a list of items and displays them.  Please note that this is a simple example using ItemFileReadStore, but the concepts it presents applies to all Data Stores.
 
 **Functional Example 1: Loading all items through callbacks:**
 
@@ -102,7 +102,7 @@ That's great, but what is more useful is seeing a completely functional example.
              foodStore.fetch({onComplete: gotItems, onError: fetchFailed});
 
            }
-           //Link any change events in the combo to driving the fetchItemByIdentity lookup.
+           //Link the clikc event of the button to driving the fetch.
            dojo.connect(button, "onClick", getAllItems);
         }
         //Set the init function to run when dojo loading and page parsing has completed.
