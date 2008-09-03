@@ -103,7 +103,7 @@ That's great, but what is more useful is seeing a completely functional example.
 
            }
            //Link any change events in the combo to driving the fetchItemByIdentity lookup.
-           dojo.connect(button, "onclick", getAllItems);
+           dojo.connect(button, "onClick", getAllItems);
         }
         //Set the init function to run when dojo loading and page parsing has completed.
         dojo.addOnLoad(init);
