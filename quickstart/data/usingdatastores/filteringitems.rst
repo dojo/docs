@@ -263,6 +263,7 @@ This section covers some basic query examples to familiarize users with the gene
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.form.Button");
       dojo.require("dijit.form.TextBox");
+      dojo.require("dijit.form.CheckBox");
 
       var storeData3 = { identifier: 'name', 
         items: [
@@ -357,6 +358,9 @@ This section covers some basic query examples to familiarize users with the gene
     <br>
     <br>
     <b>Aisle: </b><input dojoType="dijit.form.TextBox" jsId="aisleBox" value="*"></input>
+    <br>
+    <br>
+    <b>Case Insensitive: </b><div dojoType="dijit.form.CheckBox" checked="false" jsId="checkBox"></div>
     <br>
     <br>
     <div dojoType="dojo.data.ItemFileReadStore" data="storeData3" jsId="foodStore3"></div>
