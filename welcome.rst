@@ -97,9 +97,16 @@ Dojo data
 
 * `dojo.Deferred <dojo/Deferred>`_
 * `dojo.DeferredList <dojo/DeferredList>`_
+
+Drag and Drop
+~~~~~~~~~~~~~
+
 * `dojo.dnd <dojo/dnd>`_
 
   * `dojo.dnd.Moveable <dojo/dnd/Moveable>`_
+
+Dojo effects
+~~~~~~~~~~~~
 
 * `dojo.fx <dojo/fx>`_
 * `dojo.animateProperty <dojo/animateProperty>`_
@@ -135,6 +142,9 @@ Dijit is Dojo's UI Library, and lives as a separate namespace ``dijit``. Dijit r
   * `dijit.tree.TreeStoreModel <dijit/tree/ForestStoreModel>`_
   * `dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`_
 
+Form handling
+~~~~~~~~~~~~~
+
 * `dijit.form <dijit/form>`_
 
   * `dijit.form.Form <dijit/form/Form>`_
@@ -153,6 +163,9 @@ Dijit is Dojo's UI Library, and lives as a separate namespace ``dijit``. Dijit r
   * `dijit.form.DateTextBox <dijit/form/DateTextBox>`_
   * `dijit.form.TimeTextBox <dijit/form/TimeTextBox>`_
   * `dijit.form.ValidationTextBox <dijit/form/ValidationTextBox>`_
+
+Layout
+~~~~~~
 
 * `dijit.layout <dijit/layout>`_
 
