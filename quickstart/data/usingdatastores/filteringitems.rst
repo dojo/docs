@@ -227,7 +227,7 @@ This section covers some basic query examples to familiarize users with the gene
              //Callback for if the lookup fails.
              function fetchFailed(error, request) {
                 alert("lookup failed.");
-alert(error);
+                alert(error);
              }
              
              //Fetch the data.  
