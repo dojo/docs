@@ -71,8 +71,8 @@ That's great, but what is more useful is seeing a completely functional example.
         ]};
 
         //This function performs some basic dojo initialization.  In this case it connects the button
-        //onClick to a function which invokes the fetch().  The fetch function queries for all items and provides
-        //callbacks to use for completion of data retrieval or reporting of errors.
+        //onClick to a function which invokes the fetch().  The fetch function queries for all items 
+        //and provides callbacks to use for completion of data retrieval or reporting of errors.
         function init () {
            //Function to perform a fetch on the datastore when a button is clicked
            function getAllItems () {
@@ -200,9 +200,9 @@ Now, to demonstrate this concept in a functional example. In the following examp
         ]};
 
         //This function performs some basic dojo initialization.  In this case it connects the button
-        //onClick to a function which invokes the fetch().  The fetch function queries for all items and provides
-        //callbacks to use for completion of data retrieval or reporting of errors.
-        function init () {
+        //onClick to a function which invokes the fetch().  The fetch function queries for all items 
+        //and provides callbacks to use for completion of data retrieval or reporting of errors.
+        function init2 () {
            //Function to perform a fetch on the datastore when a button is clicked
            function getStreamingItems () {
 
@@ -240,7 +240,7 @@ Now, to demonstrate this concept in a functional example. In the following examp
            dojo.connect(button2, "onClick", getStreamingItems);
         }
         //Set the init function to run when dojo loading and page parsing has completed.
-        dojo.addOnLoad(init);
+        dojo.addOnLoad(init2);
     </script>
 
   .. cv :: html 
