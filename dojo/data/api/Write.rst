@@ -3,6 +3,9 @@
 dojo.data.api.Write
 ===================
 
+.. contents::
+  :depth: 3
+
 Some datastores provide the ability to create new items and save those items back to a service, in addition to simply reading items from a service. Stores with this capability will implement the Write API, which provides standard functions for creating new items, modifing existing items, and deleting existing items. Review the following examples, guidelines, and complete API documentation for further information on the Write API.
 
 This feature defines the API for implementing:
@@ -14,8 +17,9 @@ This feature defines the API for implementing:
 * Reverting a series of creates, deletes, and updates.
 * Determining if an item has been modified and not yet saved.
 
-**Write API requirements**
---------------------------
+======================
+Write API requirements
+======================
 
 The following list provides the requirements for the Write API that implementors of a datastore must do:
 
@@ -26,24 +30,24 @@ The following list provides the requirements for the Write API that implementors
 * Datastores, in their Save function, account for any copying of items and generation of save format required by the back end service before it enters into the asynchronous I/O with the server. This is to avoid any contention issues with modifications that are occurring while the datastore is is waiting for the server I/O to complete.
 * The parameter to newItem is a keywordArgs object. For ease of interoperability, this parameter should be constructed as a JavaScrpt object with attribute names and values that match the conceptual structure of the attribute list the item would return. For example, if the source store is an XML backed store, a call to create a new XML Element in that store with attributes foo, bar, and bit, should look like this: 
 
-.. code-block :: javascript 
+  .. code-block :: javascript 
 
-  //The store will handle constructing the actual DOMElement with the appropriate DOM attributes.
-  store.newItem({foo: "fooValue", bar: "barValue", bit: "bitValue"});
+    //The store will handle constructing the actual DOMElement with the appropriate DOM attributes.
+    store.newItem({foo: "fooValue", bar: "barValue", bit: "bitValue"});
 
 * Items returned from store.newItem() are valid items. In other words, store.isItem(item) returns true.
 * Items returned from store.newItem() are dirty items until the next save. In other words, store.isDirty(item) returns true.
 * Items deleted by store.deleteItem() are no longer valid items. In other words, store.isItem(item) returns false unless store.revert() is called and the delete is undone.
 
 
-**Example Usage**
------------------
+========
+Examples
+========
 
 The following sections provide examples of the Read API in use, as described by each example heading:
 
-
-
-**Example 1: Simple attribute modification and save**
+Simple attribute modification and save
+--------------------------------------
 
 .. code-block :: javascript
 
@@ -79,7 +83,10 @@ The following sections provide examples of the Read API in use, as described by 
   store.fetch({query: {foo:"*"}, onComplete: onCompleteFetch});
 
 
-**Example 2: Simple emit of all modified items (before a save has been called)**
+Simple emit of all modified items
+---------------------------------
+
+This example shows how to get all modified items before a save has been called.
 
 .. code-block :: javascript
 
@@ -102,13 +109,19 @@ The following sections provide examples of the Read API in use, as described by 
   store.fetch({onComplete: onCompleteFetch});
 
 
-**Further examples**
+Further examples
+----------------
 
 Further examples of the API usage are covered in the Using Datastores section. Refer to it for examples on paging, sorting, selecting, and so forth. 
 
-**The complete API**
---------------------
+================
+The complete API
+================
+
 For convenience, the complete Write Feature is defined below.
+
+newItem
+-------
 
 .. code-block :: javascript
 
@@ -144,6 +157,11 @@ For convenience, the complete Write Feature is defined below.
     //    examples:
     //        var kermit = store.newItem({name: "Kermit", color:[blue, green]});
 
+deleteItem
+----------
+
+.. code-block :: javascript
+
   deleteItem: function(/* item */ item)
     //    summary:
     //        Deletes an item from the store.
@@ -156,6 +174,11 @@ For convenience, the complete Write Feature is defined below.
     //        (if store.isItem(item) returns false).
     //    examples:
     //        var success = store.deleteItem(kermit);
+
+setValue
+--------
+
+.. code-block :: javascript
 
   setValue: function(/* item */ item, /* string */ attribute, /* almost anything */ value)
     //    summary:
@@ -175,6 +198,11 @@ For convenience, the complete Write Feature is defined below.
     //        Throws an exception if *value* is undefined.
     //    examples:
     //        var success = store.set(kermit, "color", "green");
+
+setValues
+---------
+
+.. code-block :: javascript
 
   setValues: function(/* item */ item, /* string */ attribute, /* array */ values)
     //    summary:
@@ -199,6 +227,11 @@ For convenience, the complete Write Feature is defined below.
     //        success = store.setValues(kermit, "color", []);
     //        if (success) {assert(!store.hasAttribute(kermit, "color"));}
 
+unsetAttribute
+--------------
+
+.. code-block :: javascript
+
   unsetAttribute: function(    /* item */ item, /* string */ attribute)
     //    summary:
     //        Deletes all the values of an attribute on an item.
@@ -214,6 +247,11 @@ For convenience, the complete Write Feature is defined below.
     //    examples:
     //        var success = store.unsetAttribute(kermit, "color");
     //        if (success) {assert(!store.hasAttribute(kermit, "color"));}
+
+save
+----
+
+.. code-block :: javascript
 
   save: function(/* object */ keywordArgs)
     //    summary:
@@ -260,6 +298,11 @@ For convenience, the complete Write Feature is defined below.
     //        store.save({onComplete: onSave});
     //        store.save({scope: fooObj, onComplete: onSave, onError: saveFailed});
 
+revert
+------
+
+.. code-block :: javascript
+
   revert: function()
     //    summary:
     //        Discards any unsaved changes.
@@ -268,6 +311,11 @@ For convenience, the complete Write Feature is defined below.
     //
     //    examples:
     //        var success = store.revert();
+
+isDirty
+-------
+
+.. code-block :: javascript
 
   isDirty: function(/* item? */ item)
     //    summary:
