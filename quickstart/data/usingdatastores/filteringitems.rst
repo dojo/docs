@@ -246,5 +246,5 @@ This section covers some basic query examples to familiarize users with the gene
     <div dojoType="dijit.form.Button" jsId="button2">Click to find the items in an aisle starting with C!</div>
     <br>
     <br>
-    <span id="list">
+    <span id="list2">
     </span>
