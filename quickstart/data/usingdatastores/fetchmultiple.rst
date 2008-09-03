@@ -186,7 +186,7 @@ Now, to demonstrate this concept in a functional example. In the following examp
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.form.Button");
 
-      var storeData = { identifier: 'name', 
+      var storeData2 = { identifier: 'name', 
         items: [
           { name: 'Adobo', aisle: 'Mexican', price: 3.01 },
           { name: 'Balsamic vinegar', aisle: 'Condiments', price: 4.01 },
@@ -204,11 +204,11 @@ Now, to demonstrate this concept in a functional example. In the following examp
         //callbacks to use for completion of data retrieval or reporting of errors.
         function init () {
            //Function to perform a fetch on the datastore when a button is clicked
-           function getAllItems () {
+           function getStreamingItems () {
 
              //Callback to perform an action when the data items are starting to be returned:
              function clearOldList(size, request) {
-               var list = dojo.byId("list");
+               var list = dojo.byId("list2");
                if (list) { 
                  while (list.firstChild) {
                    list.removeChild(list.firstChild);
@@ -218,7 +218,7 @@ Now, to demonstrate this concept in a functional example. In the following examp
   
              //Callback for processing a returned list of items.
              function gotItem(item, request) {
-               var list = dojo.byId("list");
+               var list = dojo.byId("list2");
                if (list) {
                  if (item) { 
                    list.appendChild(document.createTextNode(foodStore.getValue(item, "name")));
@@ -237,7 +237,7 @@ Now, to demonstrate this concept in a functional example. In the following examp
            }
 
            //Link the clikc event of the button to driving the fetch.
-           dojo.connect(button, "onClick", getAllItems);
+           dojo.connect(button2, "onClick", getStreamingItems);
         }
         //Set the init function to run when dojo loading and page parsing has completed.
         dojo.addOnLoad(init);
@@ -245,9 +245,9 @@ Now, to demonstrate this concept in a functional example. In the following examp
 
   .. cv :: html 
 
-    <div dojoType="dojo.data.ItemFileReadStore" data="storeData" jsId="foodStore"></div>
-    <div dojoType="dijit.form.Button" jsId="button">Click me for a list!</div>
+    <div dojoType="dojo.data.ItemFileReadStore" data="storeData2" jsId="foodStore2"></div>
+    <div dojoType="dijit.form.Button" jsId="button2">Click me for a list!</div>
     <br>
     <br>
-    <span id="list">
+    <span id="list2">
     </span>
