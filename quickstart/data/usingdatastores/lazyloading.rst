@@ -233,6 +233,6 @@ Okay, hopefully the above example helped visually display how nested items are r
 
   .. cv :: html 
 
-    <div dojoType="dojo.data.ItemFileReadStore" data="storeData2" jsId="geographyStore1"></div>
-    <div dojoType="dijit.tree.ForestStoreModel" jsId="geographyModel1" store="geographyStore2" query="{type: 'continent'}" rootId="Geography" rootLabel="Geography"></div>
+    <div dojoType="dojo.data.ItemFileReadStore" data="storeData2" jsId="geographyStore2"></div>
+    <div dojoType="dijit.tree.ForestStoreModel" jsId="geographyModel2" store="geographyStore2" query="{type: 'continent'}" rootId="Geography" rootLabel="Geography"></div>
     <div dojoType="dijit.Tree" model="geographyModel2"></div>
