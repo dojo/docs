@@ -9,7 +9,7 @@ dojo.require("dojox.robot.recorder");
 }}}
 You must add this line for each page of your app you want to test.
  1. Load your app.
- 1. Click inside the page and press Ctrl-Alt-Enter.
+ 1. Click inside the page and press Ctrl-Alt-Enter. You will get an alert dialog confirming that the recorder started.
  1. Interact with the page. The recorder will silently record your actions.
  1. When you are finished with the current page, before you go on to the next page, click inside the page again and press Ctrl-Alt-Enter.
  1. A box will appear on top of your page containing the auto-generated code. Highlight the code and copy it to the clipboard.
