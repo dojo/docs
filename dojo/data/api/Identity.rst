@@ -1,11 +1,16 @@
 #format dojo_rst
 
-**dojo.data.api.Identity**
-==========================
+dojo.data.api.Identity
+======================
+
+.. contents::
+  :depth: 3
 
 The dojo.data.api.Identity interface defines the set of APIs that are implemented by a datastore if a data source provides a method by which to uniquely identify each item. This API then allows users of that datastore to request a specific item without searching for an item that matches specific attributes. Review the following examples, guidelines, and complete API documentation for futher information on the Identity API.
 
-**Identity API Requirements**
+=========================
+Identity API Requirements
+=========================
 
 The following list provides the requirements for the Identity API:
 
@@ -17,8 +22,9 @@ The following list provides the requirements for the Identity API:
 * The store's getFeatures() function will return, as part of its associative map, a property with the key name of dojo.data.api.Identity. The value of the property can be anything reasonable, such as the boolean value true, the name of the attribute that represents the identity, an array of attributes, or even an object. By the mere presence of this key in the map, the store declares that it implements this API.
 * Identities should be treated as immutable.  Many widgets use the identity for caching purposes, so changing its value will break those widgets.
 
-**Examples:**
--------------
+========
+Examples
+========
 
 For all of the examples in the following sections, assume that there is a simple ItemFileReadStore instantiation from the following data in the countries.json file:
 
@@ -36,7 +42,8 @@ For all of the examples in the following sections, assume that there is a simple
       { abbr:'et', name:'Ethiopia',          capital:'Addis Ababa' }
   ]}
 
-**Example 1: Basic lookup of an item by identity**
+Basic lookup of an item by identity
+-----------------------------------
 
 .. code-block :: javascript
 
@@ -63,7 +70,8 @@ For all of the examples in the following sections, assume that there is a simple
   itemStore.fetchItemByIdentity({identity: "sv" onItem: gotItem, onError: failed});
 
 
-**Example 2: Obtaining the value of an item's identity**
+Obtaining the value of an item's identity
+-----------------------------------------
 
 .. code-block :: javascript
 
@@ -89,7 +97,8 @@ For all of the examples in the following sections, assume that there is a simple
   itemStore.fetch({query: {name:"Eritrea"}, onComplete: onComplete, onError: onError});
 
 
-**Example 3: Obtaining the list of attributes that comprise the identity of an item**
+Obtaining the list of attributes that comprise the identity of an item
+----------------------------------------------------------------------
 
 .. code-block :: javascript
 
@@ -123,10 +132,14 @@ For all of the examples in the following sections, assume that there is a simple
   //Invoke the lookup.  This is an async call as it may have to call back to a server to get data.
   itemStore.fetchItemByIdentity({identity: "sv", onItem: gotItem, onError: failed});
 
-
-**The Complete Identity API**
+=========================
+The Complete Identity API
+=========================
 
 For convenience, the following Identity API was taken directly from dojo/data/api/Identity.js and provided below: 
+
+getIdentity
+-----------
 
 .. code-block :: javascript
 
@@ -139,6 +152,11 @@ For convenience, the following Identity API was taken directly from dojo/data/ap
     //    exceptions:
     //        Conforming implementations may throw an exception or return null if
     //        item is not an item.
+
+getIdentityAttributes
+---------------------
+
+.. code-block :: javascript
 
   getIdentityAttributes: function(/* item */ item)
     //    summary:
@@ -153,6 +171,11 @@ For convenience, the following Identity API was taken directly from dojo/data/ap
     //    item:
     //        The item from the store from which to obtain the array of public attributes that 
     //        compose the identifier, if any.
+
+fetchItemByIdentity
+-------------------
+
+.. code-block :: javascript
 
   fetchItemByIdentity: function(/* object */ keywordArgs){
     //    summary:
