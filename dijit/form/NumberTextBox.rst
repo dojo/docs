@@ -1,5 +1,14 @@
 #format dojo_rst
 
+dijit.form.NumberTextBox
+========================
+
+:Status: Draft
+:Version: 1.2
+
+.. contents::
+  :depth: 3
+
 .. cv-compound::
 
   .. cv:: javascript
