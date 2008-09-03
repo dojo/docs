@@ -17,3 +17,5 @@ dijit.form.TimeTextBox
      </script>
 
   .. cv:: html
+
+     <input dojoType="dijit.form.DateTextBox" />
