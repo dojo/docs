@@ -9,6 +9,8 @@ dijit.form.TimeTextBox
 Examples
 --------
 
+The following example demonstrates how to create a date textbox programatically:
+
 .. cv-compound::
 
   .. cv:: javascript
