@@ -25,7 +25,7 @@ Lets take a look at an example hierarchy built up with references in dojo.data.I
         children:{_reference:'Khartoum'} },
       { name:'Khartoum', type:'city' },
       { name:'Asia', type:'continent',
-        children:[{_reference:'China'}, {_reference:'India'}, {_reference:'Russia'},          {_reference:'Mongolia'}] },
+        children:[{_reference:'China'}, {_reference:'India'}, {_reference:'Russia'}, {_reference:'Mongolia'}] },
       { name:'China', type:'country' },
       { name:'India', type:'country' },
       { name:'Russia', type:'country' },
@@ -65,7 +65,7 @@ There are two things to notice about the above structure.  The first is that yes
     <script>
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.Tree");
-      var storeData =  { identifier: 'name',
+      var storeData = { identifier: 'name',
         label: 'name',
         items: [
           { name:'Africa', type:'continent',
@@ -79,7 +79,7 @@ There are two things to notice about the above structure.  The first is that yes
             children:{_reference:'Khartoum'} },
           { name:'Khartoum', type:'city' },
           { name:'Asia', type:'continent',
-            children:[{_reference:'China'}, {_reference:'India'}, {_reference:'Russia'},          {_reference:'Mongolia'}] },
+            children:[{_reference:'China'}, {_reference:'India'}, {_reference:'Russia'}, {_reference:'Mongolia'}] },
           { name:'China', type:'country' },
           { name:'India', type:'country' },
           { name:'Russia', type:'country' },
@@ -108,11 +108,11 @@ There are two things to notice about the above structure.  The first is that yes
             children:[{_reference:'Brazil'}, {_reference:'Argentina'}] },
           { name:'Brazil', type:'country', population:'186 million' },
           { name:'Argentina', type:'country', population:'40 million' }
-      ]}
+      ]};
     </script>
 
   .. cv :: html 
 
     <div dojoType="dojo.data.ItemFileReadStore" data="storeData" jsId="geographyStore"></div>
-    <div dojoType="dijit.tree.ForestStoreModel" jsId="countryModel" store="grophraphyStore" query="{}" rootId="Geography" rootLabel="Geography"></div>
+    <div dojoType="dijit.tree.ForestStoreModel" jsId="geographyModel" store="grophraphyStore" query="{}" rootId="Geography" rootLabel="Geography"></div>
     <div dojoType="dijit.Tree" model="geographyModel"></div>
