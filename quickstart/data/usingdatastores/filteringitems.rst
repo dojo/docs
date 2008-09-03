@@ -23,7 +23,8 @@ Given a dataset like:
       { name: 'Vinegar', aisle: 'Condiments',  price: 1.99  },
       { name: 'White cooking wine', aisle: 'Condiments',  price: 2.01 },
       { name: 'Worcestershire Sauce', aisle: 'Condiments',  price: 3.99 },
-      { name: 'pepper', aisle: 'Spices',  price: 1.01 }
+      { name: 'white pepper', aisle: 'Spices',  price: 1.01 },
+      { name: 'Black Pepper', aisle: 'Spices',  price: 1.01 }
   ]}
 
 There are times it would be useful to only work with a subset of those items.  For example,, maybe you want to locate things only found in the spices aisle.  In other words, you want to find all items that match:
