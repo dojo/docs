@@ -23,18 +23,24 @@ dojo.dnd.Moveable
     </script>
 
   .. cv:: html
-
-    <div id="dndOne">Hi, I am moveable when you want to.</div>
+    <div id="dndArea">
+      <div id="dndOne">Hi, I am moveable when you want to.</div>
+    </div>
     <p><button dojoType="dijit.form.Button" onClick="makeMoveable('dndOne')">Make moveable</button>
 
   .. cv:: css
 
     <style type="text/css">
     #dndOne {
-      width: 200px;
-      height: 200px;
+      width: 100px;
+      height: 100px;
       padding: 10px;
       border: 1px solid #000;
       background: red;
     } 
+
+    #dndArea {
+      width: 200px;
+      height: 200px;
+    }
     </style>
