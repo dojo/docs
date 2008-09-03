@@ -286,6 +286,16 @@ This section covers some basic query examples to familiarize users with the gene
            function search() {
              var queryObj = {};
 
+             //Build up the query from the input boxes.
+             var name = nameBox.getValue();
+             if ( name && dojo.trim(name) !== "" ) {
+               queryObj["name"] = name;       
+             }
+             var aisle = aisleBox.getValue();
+             if ( aisle && dojo.trim(aisle) !== "" ) {
+               queryObj["aisle"] = aisle;       
+             }
+
              var qNode = dojo.byId("query");
              if (qNode ) {
                qNode.innerHTML = dojo.toJson(queryObj);   
@@ -336,7 +346,9 @@ This section covers some basic query examples to familiarize users with the gene
 
     <b>Name:  </b><input dojoType="dijit.form.TextBox" jsId="nameBox" value="*"></input>
     <br>
+    <br>
     <b>Aisle: </b><input dojoType="dijit.form.TextBox" jsId="aisleBox" value="*"></input>
+    <br>
     <div dojoType="dojo.data.ItemFileReadStore" data="storeData3" jsId="foodStore3"></div>
     <div dojoType="dijit.form.Button" jsId="button3">Click to search!</div>
     <br>
