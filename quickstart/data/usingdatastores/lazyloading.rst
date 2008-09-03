@@ -9,7 +9,7 @@ Lets take a look at an example hierarchy built up with references in dojo.data.I
 
 **Example data structure for ItemFileReadStore:**
 
-
+.. code-block :: javascript
 
   { identifier: 'name',
     label: 'name',
