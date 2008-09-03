@@ -301,6 +301,15 @@ This section covers some basic query examples to familiarize users with the gene
                qNode.innerHTML = dojo.toJson(queryObj);   
              }
 
+
+             //Build up query options, if any.
+             var queryOptionsObj = {};
+
+             var qoNode = dojo.byId("queryOptions");
+             if (qoNode ) {
+               qoNode.innerHTML = dojo.toJson(queryOptionsObj);   
+             }
+
              //Callback to perform an action when the data items are starting to be returned:
              function clearOldList(size, request) {
                var list = dojo.byId("list3");
@@ -331,7 +340,7 @@ This section covers some basic query examples to familiarize users with the gene
              }
              
              //Fetch the data.  
-             foodStore3.fetch({query: queryObj, onBegin: clearOldList, onComplete: gotItems, onError: fetchFailed});
+             foodStore3.fetch({query: queryObj, queryOptions: queryOptionsObj, onBegin: clearOldList, onComplete: gotItems, onError: fetchFailed});
 
            }
            //Link the click event of the button to driving the fetch.
@@ -355,6 +364,9 @@ This section covers some basic query examples to familiarize users with the gene
     <br>
     <br>
     <b>Query used: </b><span id="query"></span
+    <br>
+    <br>
+    <b>Query Options used: </b><span id="queryOptions"></span
     <br>
     <br>
     <b>Items located:</b>
