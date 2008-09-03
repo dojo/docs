@@ -281,7 +281,7 @@ This section covers some basic query examples to familiarize users with the gene
         //This function performs some basic dojo initialization.  In this case it connects the button
         //onClick to a function which invokes the fetch().  The fetch function queries for all items 
         //and provides callbacks to use for completion of data retrieval or reporting of errors.
-        function init2 () {
+        function init3 () {
            //Function to perform a fetch on the datastore when a button is clicked
            function search() {
              var queryObj = {};
@@ -308,7 +308,7 @@ This section covers some basic query examples to familiarize users with the gene
                  var i;
                  for (i = 0; i < items.length; i++) {
                    var item = items[i];
-                   list.appendChild(document.createTextNode(foodStore2.getValue(item, "name")));
+                   list.appendChild(document.createTextNode(foodStore3.getValue(item, "name")));
                    list.appendChild(document.createElement("br"));
                  }
                }
@@ -321,20 +321,21 @@ This section covers some basic query examples to familiarize users with the gene
              }
              
              //Fetch the data.  
-             foodStore2.fetch({query: queryObj, onBegin: clearOldList, onComplete: gotItems, onError: fetchFailed});
+             foodStore3.fetch({query: queryObj, onBegin: clearOldList, onComplete: gotItems, onError: fetchFailed});
 
            }
            //Link the click event of the button to driving the fetch.
            dojo.connect(button3, "onClick", search);
         }
         //Set the init function to run when dojo loading and page parsing has completed.
-        dojo.addOnLoad(init2);
+        dojo.addOnLoad(init3);
     </script>
 
   .. cv :: html 
 
 
     <b>Name:  </b><input dojoType="dijit.form.TextBox" jsId="nameBox" value="*"></input>
+    <br>
     <b>Aisle: </b><input dojoType="dijit.form.TextBox" jsId="aisleBox" value="*"></input>
     <div dojoType="dojo.data.ItemFileReadStore" data="storeData3" jsId="foodStore3"></div>
     <div dojoType="dijit.form.Button" jsId="button3">Click to search!</div>
@@ -342,6 +343,8 @@ This section covers some basic query examples to familiarize users with the gene
     <br>
     <b>Query used: </b><span id="query"></span
     <br>
+    <br>
+    <b>Items located:</b>
     <br>
     <span id="list3">
     </span>
