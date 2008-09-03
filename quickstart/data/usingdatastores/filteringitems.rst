@@ -53,6 +53,7 @@ And you don't care what the other attributes are.  For dojo.data.ItemFileReadSto
 Once we have constructed the query, we pass it to fetch() along with the other parameters as shown in the following example:
 
 .. code-block :: javascript 
+
   itemStore .fetch({ 
     query: { name: "*pepper*", aisle: "Spices" },
     onComplete: 
@@ -63,6 +64,7 @@ Once we have constructed the query, we pass it to fetch() along with the other p
 That's great, but what if I don't care about case sensitivity?  Dojo.data also provides a method for augmenting the query with options through the use of the queryOptions object.  By default, dojo.data only defines two options that datastores should honor.  They are *ignoreCase* and *deep*, and both are boolean valued.  The ignoreCase option tells the datastore to compare the attributes for matches, but do so case-insensitively. The *deep* option only applies to stores which represent hierarchical data, and it instructs the search to search all child items (as well as all root items), for a match.  So, if we take the above example and say we want to just ignore case so we get 'Black Pepper' and 'white pepper' as matches, the fetch call becomes:
 
 .. code-block :: javascript 
+
   itemStore .fetch({ 
     query: { name: "*pepper*", aisle: "Spices" },
     queryOptions: { ignoreCase: true },
