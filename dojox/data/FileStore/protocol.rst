@@ -7,7 +7,7 @@ The following section is not necessary to fully understand how to just use the e
 
 **Protocol**
 ------------
-The protocol used by dojox.data.FileStore to communicate with a server back end is simple.  It is effectively a  direct psuh of the client query information to the server in JSON encoding.   The protocol consists of two main flows a query flow for implementing the dojo.data.api.Read, and a n individual item lookup for implementing the dojo.data.api.Identity.  Each of these are covered in detail below:
+The protocol used by dojox.data.FileStore to communicate with a server back end is simple.  It is effectively a  direct push of the client query information to the server in JSON encoding.   The protocol consists of two main flows a query flow for implementing the dojo.data.api.Read, and a n individual item lookup for implementing the dojo.data.api.Identity.  Each of these are covered in detail below:
 
 **dojo.data.api.Read query protocol**
 All query information is passed as query parameters.  The list below of the query parameters and what is generally supported is defined below in the following table:
