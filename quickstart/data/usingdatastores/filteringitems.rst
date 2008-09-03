@@ -285,8 +285,8 @@ This section covers some basic query examples to familiarize users with the gene
              var queryObj = {};
 
              var qNode = dojo.byId("query");
-             if (query) {
-               query.innerHTML = dojo.toJson(queryObj);   
+             if (qNode ) {
+               qNode.innerHTML = dojo.toJson(queryObj);   
              }
 
              //Callback to perform an action when the data items are starting to be returned:
