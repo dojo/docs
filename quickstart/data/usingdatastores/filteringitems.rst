@@ -234,7 +234,7 @@ This section covers some basic query examples to familiarize users with the gene
 
            }
            //Link the click event of the button to driving the fetch.
-           dojo.connect(button, "onClick", getSpices);
+           dojo.connect(button2, "onClick", getSpices);
         }
         //Set the init function to run when dojo loading and page parsing has completed.
         dojo.addOnLoad(init2);
