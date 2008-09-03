@@ -349,6 +349,7 @@ This section covers some basic query examples to familiarize users with the gene
     <br>
     <b>Aisle: </b><input dojoType="dijit.form.TextBox" jsId="aisleBox" value="*"></input>
     <br>
+    <br>
     <div dojoType="dojo.data.ItemFileReadStore" data="storeData3" jsId="foodStore3"></div>
     <div dojoType="dijit.form.Button" jsId="button3">Click to search!</div>
     <br>
