@@ -30,7 +30,7 @@ For the following examples, the defined JavaScript will be used.  Note that it h
 * Each item is a country, and each item has three attributes, name,abbr, and capital.
 * The abbr attribute is an identifier. Each country has a different abbr for unique look up.
 
-This is a simple, but powerful, way to represent data in the browser.  It can also be quickly converted to a test format called `JavaScript Object Notation (JSON) <http://www.json.org>`_.  The JSON format can be stored as files on your server and loaded via xhr calls.  dojo.data.ItemFileReadStore allows for the data to be defined in browser as an object such as above, or from a JSON file of the same format.  
+This is a simple, but powerful, way to represent data in the browser.  It can also be quickly converted to a text format called `JavaScript Object Notation (JSON) <http://www.json.org>`_.  The JSON format can be stored as files on your server and loaded via xhr calls.  dojo.data.ItemFileReadStore allows for the data to be defined in browser as an object such as above, or from a JSON file of the same format.  
 
 
 Below is a simple example of how a datastore can be used to load the data shown above and how widgets that are dojo.data aware can make use of it to display it easily.
