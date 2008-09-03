@@ -168,6 +168,8 @@ These sections cover the available projects shipped with the Dojo Toolkit
 
   * `dojox.analytics.Urchin <dojox/analytics/Urchin>`_
 
+* `dojox.cometd <dojox/cometd>`_
+
 * `dojox.data <dojox/data>`_
 
   * `dojox.data.AndOrReadStore <dojox/data/AndOrReadStore>`_
@@ -197,8 +199,27 @@ These sections cover the available projects shipped with the Dojo Toolkit
   * `dojox.data.WikipediaStore <dojox/data/WikipediaStore>`_
   * `dojox.data.XmlStore <dojox/data/XmlStore>`_
 
+* `dojox.form <dojox/form>`_
+
+  * `dojox.form.BusyButton <dojox/form/BusyButton>`_
+  * `dojox.form.Rating <dojox/form/Rating>`_
+
+* `dojox.fx <dojox/fx>`_
+
+  * `dojox.fx.wipeTo <dojox/fx/wipeTo>`_
+
 * `dojox.grid <dojox/grid>`_
-* `dojox.cometd <dojox/cometd>`_
+
+* `dojox.gfx <dojox/gfx>`_
+
+* `dojox.gfx3d <dojox/gfx3d>`_
+
+* `dojox.highlight <dojox/highlight>`_
+
+* `dojox.image <dojox/image>`_
+
+  * `dojox.image.Lightbox <dojox/image/Lightbox>`_
+
 * `dojox.rpc <dojox/rpc>`_
   
   * `dojox.rpc.SMDLibrary <dojox/rpc/SMDLibrary>`_
@@ -209,20 +230,9 @@ These sections cover the available projects shipped with the Dojo Toolkit
   * `dojox.widget.Toaster <dojox/widget/Toaster>`_
   * `dojox.widget.Roller <dojox/widget/Roller>`_
 
-* `dojox.form <dojox/form>`_
 
-  * `dojox.form.BusyButton <dojox/form/BusyButton>`_
-  * `dojox.form.Rating <dojox/form/Rating>`_
 
-* `dojox.image <dojox/image>`_
 
-  * `dojox.image.Lightbox <dojox/image/Lightbox>`_
-
-* `dojox.highlight <dojox/highlight>`_
-
-* `dojox.fx <dojox/fx>`_
-
-  * `dojox.fx.wipeTo <dojox/fx/wipeTo>`_
 
 ----
 
