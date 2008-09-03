@@ -114,5 +114,5 @@ There are two things to notice about the above structure.  The first is that yes
   .. cv :: html 
 
     <div dojoType="dojo.data.ItemFileReadStore" data="storeData" jsId="geographyStore"></div>
-    <div dojoType="dijit.tree.ForestStoreModel" jsId="geographyModel" store="geographyStore" query="{type: 'contintent'"}" rootId="Geography" rootLabel="Geography"></div>
+    <div dojoType="dijit.tree.ForestStoreModel" jsId="geographyModel" store="geographyStore" query="{type: 'contintent'}" rootId="Geography" rootLabel="Geography"></div>
     <div dojoType="dijit.Tree" model="geographyModel"></div>
