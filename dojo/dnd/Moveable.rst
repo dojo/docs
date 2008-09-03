@@ -14,6 +14,7 @@ dojo.dnd.Moveable
   .. cv:: javascript
 
     <script type="text/javascript">
+    dojo.require("dijit.form.Button"); // this we only require to make the demo look fancy
     dojo.require("dojo.dnd.Moveable");
 
     function makeMoveable(node){
