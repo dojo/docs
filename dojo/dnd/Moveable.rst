@@ -23,6 +23,7 @@ dojo.dnd.Moveable
     </script>
 
   .. cv:: html
+
     <div id="dndArea">
       <div id="dndOne">Hi, I am moveable when you want to.</div>
     </div>
