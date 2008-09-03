@@ -4,9 +4,28 @@ dijit.form.TimeTextBox
 ======================
 
 :Status: Draft
-:Version: 1.0
-:Author: CraigRiecke
+:Version: 1.2
 
+Examples
+--------
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+     <script type="text/javascript">
+     dojo.require("dijit.form.DateTextBox");
+
+     dojo.addOnLoad(function(){
+       var dateBox = new dijit.form.DateTextBox({}, "date");
+     });
+     </script>
+
+  .. cv:: html
+
+     <input type="text" id="date" />
+
+Lets create a date textbox declaratively
 
 .. cv-compound::
 
@@ -18,4 +37,4 @@ dijit.form.TimeTextBox
 
   .. cv:: html
 
-     <input dojoType="dijit.form.DateTextBox" />
+     <input type="text" dojoType="dijit.form.DateTextBox" />
