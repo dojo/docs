@@ -252,6 +252,7 @@ This section covers some basic query examples to familiarize users with the gene
 
 
 **Example 3:  Enter your own query for name and aisle.:**
+
 *Wildcards * and ? are supported by the dojo.data.ItemFileReadStore:*
 
 .. cv-compound ::
@@ -261,6 +262,7 @@ This section covers some basic query examples to familiarize users with the gene
     <script>
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.form.Button");
+      dojo.require("dijit.form.TextBox");
 
       var storeData3 = { identifier: 'name', 
         items: [
@@ -331,6 +333,9 @@ This section covers some basic query examples to familiarize users with the gene
 
   .. cv :: html 
 
+
+    <b>Name:  </b><div dojoType="dijit.form.TextBox" jsId="nameBox">*</div>
+    <b>Aisle: </b><div dojoType="dijit.form.TextBox" jsId="aisleBox">*</div>
     <div dojoType="dojo.data.ItemFileReadStore" data="storeData3" jsId="foodStore3"></div>
     <div dojoType="dijit.form.Button" jsId="button3">Click to search!</div>
     <br>
