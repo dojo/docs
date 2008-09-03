@@ -20,7 +20,7 @@ The following list provides the requirements for the Identity API:
 * Stores that expose the identity of the store as a public attribute (or set of attributes), must return the attribute(s) identifier(s) from the getIdentityAttributes() method. If they are not exposed as public attributes, then the getIdentityAttributes() method must return a null value.
 * All identifier values must be unique and address only one item within the store.
 * The store's getFeatures() function will return, as part of its associative map, a property with the key name of dojo.data.api.Identity. The value of the property can be anything reasonable, such as the boolean value true, the name of the attribute that represents the identity, an array of attributes, or even an object. By the mere presence of this key in the map, the store declares that it implements this API.
-* Identities should be treated as immutable.  Many widgets use the identity for caching purposes, so changing its value will break those widgets.
+* Identities should be treated as immutable. Many widgets use the identity for caching purposes, so changing its value will break those widgets.
 
 ========
 Examples
@@ -66,7 +66,7 @@ Basic lookup of an item by identity
     }
   }
 
-  //Invoke the lookup.  This is an async call as it may have to call back to a server to get data.
+  //Invoke the lookup. This is an async call as it may have to call back to a server to get data.
   itemStore.fetchItemByIdentity({identity: "sv" onItem: gotItem, onError: failed});
 
 
@@ -129,7 +129,7 @@ Obtaining the list of attributes that comprise the identity of an item
     }
   }
 
-  //Invoke the lookup.  This is an async call as it may have to call back to a server to get data.
+  //Invoke the lookup. This is an async call as it may have to call back to a server to get data.
   itemStore.fetchItemByIdentity({identity: "sv", onItem: gotItem, onError: failed});
 
 =========================
@@ -145,7 +145,7 @@ getIdentity
 
   getIdentity: function(/* item */ item)
     //    summary:
-    //        Returns a unique identifier for an item.  The return value will be
+    //        Returns a unique identifier for an item. The return value will be
     //        either a string or something that has a toString() method.
     //    item:
     //        The item from the store from which to obtain its identifier.
@@ -163,8 +163,8 @@ getIdentityAttributes
     //        Returns an array of attribute names that are used to generate the identity. 
     //        For most stores, this is a single attribute, but for some complex stores
     //        such as RDB backed stores that use compound (multi-attribute) identifiers
-    //        it can be more than one.  If the identity is not composed of attributes
-    //        on the item, it will return null.  This function is intended to identify
+    //        it can be more than one. If the identity is not composed of attributes
+    //        on the item, it will return null. This function is intended to identify
     //        the attributes that comprise the identity so that so that during a render
     //        of all attributes, the UI can hide the the identity information if it 
     //        chooses.
@@ -180,14 +180,14 @@ fetchItemByIdentity
   fetchItemByIdentity: function(/* object */ keywordArgs){
     //    summary:
     //        Given the identity of an item, this method returns the item that has 
-    //        that identity through the onItem callback.  Conforming implementations 
+    //        that identity through the onItem callback. Conforming implementations 
     //        should return null if there is no item with the given identity.  
     //        Implementations of fetchItemByIdentity() may sometimes return an item 
     //        from a local cache and may sometimes fetch an item from a remote server, 
     //
     //    keywordArgs:
     //        An anonymous object that defines the item to locate and callbacks to invoke when the 
-    //        item has been located and load has completed.  The format of the object is as follows:
+    //        item has been located and load has completed. The format of the object is as follows:
     //        {
     //            identity: string|object,
     //            onItem: Function,
@@ -196,24 +196,24 @@ fetchItemByIdentity
     //        }
     //    The *identity* parameter.
     //        The identity parameter is the identity of the item you wish to locate and load
-    //        This attribute is required.  It should be a string or an object that toString() 
+    //        This attribute is required. It should be a string or an object that toString() 
     //        can be called on.
     //        
     //    The *onItem* parameter.
     //        Function(item)
-    //        The onItem parameter is the callback to invoke when the item has been loaded.  It takes only one
+    //        The onItem parameter is the callback to invoke when the item has been loaded. It takes only one
     //        parameter, the item located, or null if none found.
     //
     //    The *onError* parameter.
     //        Function(error)
-    //        The onError parameter is the callback to invoke when the item load encountered an error.  It takes only one
+    //        The onError parameter is the callback to invoke when the item load encountered an error. It takes only one
     //        parameter, the error object
     //
     //    The *scope* parameter.
     //        If a scope object is provided, all of the callback functions (onItem, 
     //        onError, etc) will be invoked in the context of the scope object.
     //        In the body of the callback function, the value of the "this"
-    //        keyword will be the scope object.   If no scope object is provided,
+    //        keyword will be the scope object. If no scope object is provided,
     //        the callback functions will be called in the context of dojo.global.
     //        For example, onItem.call(scope, item, request) vs. 
     //        onItem.call(dojo.global, item, request)
