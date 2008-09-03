@@ -47,6 +47,8 @@ The following example code fragment returns all items:
 
 That's great, but what is more useful is seeing a completely functional example.  In the following example, clicking a button retrieves a list of items and displays them.
 
+**Functional Example 1: Loading all items through callbacks:**
+
 .. cv-compound ::
   
   .. cv :: javascript
@@ -68,22 +70,37 @@ That's great, but what is more useful is seeing a completely functional example.
           { name: 'pepper', aisle: 'Spices',  price: 1.01  }
         ]};
 
-        //This function performs some basic dojo initialization.  In this case it connects the ComboBox
-        //onChange event to a function which invokes the fetchItemByIdentity function.  The fetchItemByIdentity
-        //function uses the value selected in the combobox to do a lookup on the datastore for an item with the 
-        //identifier that matches the combobox value.  If it gets one, the price and aisle are updated, if it 
-        //does not locate one, the then the values are set to N/A and 0.00.
+        //This function performs some basic dojo initialization.  In this case it connects the button
+        //onClick to a function which invokes the fetch().  The fetch function queries for all items and provides
+        //callbacks to use for completion of data retrieval or reporting of errors.
         function init () {
            //Function to perform a fetch on the datastore when a button is clicked
            function getAllItems () {
-              function gotItems(item, request) {
-                 var list = dojo.byId("list");
-                 if (list) { 
-                     while (list.firstChild) {
-                         list.removeChild(list.firstChild);
-                     }
+                
+             //Callback for processing a returned list of items.
+             function gotItems(items, request) {
+               var list = dojo.byId("list");
+               if (list) { 
+                 while (list.firstChild) {
+                   list.removeChild(list.firstChild);
                  }
-              }
+                 var i;
+                 for (i = 0; i < items.length; i++) {
+                   var item = items[i];
+                   list.appendChild(document.createTextNode(foodStore.getValue(item, "name"));
+                   list.appendChild(document.createElement("br");
+                 }
+               }
+             }
+            
+             //Callback for if the lookup fails.
+             function fetchFailed(error, request) {
+                alert("lookup failed.");
+             }
+             
+             //Fetch the data.  
+             foodStore.fetch({onComlete: gotItems, onError: fetchFailed});
+
            }
            //Link any change events in the combo to driving the fetchItemByIdentity lookup.
            dojo.connect(button, "onClick", getAllItems);
