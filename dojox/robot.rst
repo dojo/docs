@@ -5,7 +5,7 @@ dojox.robot.recorder
 :Version: 1.2
 :Author: haysmark
 
-dojox.robot is a recording module for use with the doh.robot Web UI testing framework. It has no APIs and is not a widget.
+dojox.robot.recorder is a recording module for use with the doh.robot Web UI testing framework. It has no APIs and is not a widget.
 
 Unlike the dojo.robotx and dijit.robotx, the recorder does not persist over page changes. You must add the recorder module to each page you wish to record your interaction with. Furthermore, you must stop the recorder before you change the page (form submit, click a link). Otherwise, your recording data for that page will be lost.
 
