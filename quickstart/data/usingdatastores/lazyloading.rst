@@ -120,3 +120,56 @@ There are two things to notice about the above structure.  The first is that yes
     <div dojoType="dojo.data.ItemFileReadStore" data="storeData" jsId="geographyStore"></div>
     <div dojoType="dijit.tree.ForestStoreModel" jsId="geographyModel" store="geographyStore" query="{type: 'continent'}" rootId="Geography" rootLabel="Geography"></div>
     <div dojoType="dijit.Tree" model="geographyModel"></div>
+
+
+
+Okay, hopefully the above example helped visually display how nested items are represented.  Nested items are no more than an attribute in a datastore item that has a value that is another data store item.  There is nothing more to it than that, ultimately.  If the above example was too confusing since the hierarchy was constructed through references ... another way to demonstrate hierarchy of items can be presented with dojo.data.ItemFileReadStore.  The ItemFileReadStore also supports a basic hierarchical format instead of item references.  
+
+**Example 2:  A hierarchical format without references:**
+
+.. code-block :: javascript
+
+  { identifier: 'name',
+    items: [
+      { name:'Africa', type:'continent', children:[
+        { name:'Egypt', type:'country' }, 
+        { name:'Kenya', type:'country', children:[
+        { name:'Nairobi', type:'city' },
+        { name:'Mombasa', type:'city' } ]
+        },
+        { name:'Sudan', type:'country', children:
+          { name:'Khartoum', type:'city' } 
+        } ]
+      },
+      { name:'Asia', type:'continent', children:[
+        { name:'China', type:'country' },
+        { name:'India', type:'country' },
+        { name:'Russia', type:'country' },
+        { name:'Mongolia', type:'country' } ]
+      },
+      { name:'Australia', type:'continent', population:'21 million', children:
+        { name:'Commonwealth of Australia', type:'country', population:'21 million'}
+      },
+      { name:'Europe', type:'continent', children:[
+        { name:'Germany', type:'country' },
+        { name:'France', type:'country' },
+        { name:'Spain', type:'country' },
+        { name:'Italy', type:'country' } ]
+      },
+      { name:'North America', type:'continent', children:[
+        { name:'Mexico', type:'country',  population:'108 million', area:'1,972,550 sq km', children:[
+          { name:'Mexico City', type:'city', population:'19 million', timezone:'-6 UTC'},
+          { name:'Guadalajara', type:'city', population:'4 million', timezone:'-6 UTC' } ]
+        },
+        { name:'Canada', type:'country',  population:'33 million', area:'9,984,670 sq km', children:[
+          { name:'Ottawa', type:'city', population:'0.9 million', timezone:'-5 UTC'},
+          { name:'Toronto', type:'city', population:'2.5 million', timezone:'-5 UTC' }]
+        },
+        { name:'United States of America', type:'country' } ]
+      },
+      { name:'South America', type:'continent', children:[
+        { name:'Brazil', type:'country', population:'186 million' },
+        { name:'Argentina', type:'country', population:'40 million' } ]
+      } 
+    ]
+  }
