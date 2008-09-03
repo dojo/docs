@@ -139,7 +139,7 @@ In the following examples, the code will request that all items be returned (an 
 
 The following code fragment loads all items and streams them back into the page:
 
-.. code-block || javascript
+.. code-block :: javascript
 
   var pantryStore = new dojo.data.ItemFileReadStore({url: "pantry_items.json" } );
   var body = dojo.body(); // node to put output in  
