@@ -43,5 +43,7 @@ dojo.dnd.Moveable
     #dndArea {
       width: 200px;
       height: 200px;
+      padding: 10px;
+      border: 1px solid #000;
     }
     </style>
