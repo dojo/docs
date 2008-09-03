@@ -185,7 +185,9 @@ Okay, hopefully the above example helped visually display how nested items are r
     <script>
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.Tree");
-      var storeData2 = { identifier: 'name',
+      var storeData2 = { 
+        identifier: 'name',
+        label: 'name',
         items: [
           { name:'Africa', type:'continent', children:[
             { name:'Egypt', type:'country' }, 
