@@ -218,7 +218,7 @@ This section covers some basic query examples to familiarize users with the gene
                  var i;
                  for (i = 0; i < items.length; i++) {
                    var item = items[i];
-                   list.appendChild(document.createTextNode(foodStore.getValue(item, "name")));
+                   list.appendChild(document.createTextNode(foodStore2.getValue(item, "name")));
                    list.appendChild(document.createElement("br"));
                  }
                }
