@@ -110,7 +110,8 @@ This section covers some basic query examples to familiarize users with the gene
           { name: 'Vinegar', aisle: 'Condiments',  price: 1.99  },
           { name: 'White cooking wine', aisle: 'Condiments',  price: 2.01 },
           { name: 'Worcestershire Sauce', aisle: 'Condiments',  price: 3.99 },
-          { name: 'pepper', aisle: 'Spices',  price: 1.01  }
+          { name: 'white pepper', aisle: 'Spices',  price: 1.01 },
+          { name: 'Black Pepper', aisle: 'Spices',  price: 1.01 }
         ]};
 
         //This function performs some basic dojo initialization.  In this case it connects the button
