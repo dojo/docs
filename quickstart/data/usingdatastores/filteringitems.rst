@@ -306,6 +306,10 @@ This section covers some basic query examples to familiarize users with the gene
              //Build up query options, if any.
              var queryOptionsObj = {};
 
+             if ( checkBox.getValue()) {
+               queryOptionsObj["ignoreCase"] = true;
+             }
+
              var qoNode = dojo.byId("queryOptions");
              if (qoNode ) {
                qoNode.innerHTML = dojo.toJson(queryOptionsObj);   
