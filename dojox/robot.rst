@@ -12,9 +12,11 @@ Unlike the dojo.robotx and dijit.robotx, the recorder does not persist over page
 To use the recorder:
  1. In a working copy of the app you want to write a test for, add this JavaScript:
 
-  {{{
+.. code-block:: javascript
+
   dojo.require("dojox.robot.recorder");
-  }}}
+
+
 
   You must add this line for each page of your app you want to test.
 
