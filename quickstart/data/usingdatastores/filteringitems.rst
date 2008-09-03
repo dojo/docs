@@ -148,7 +148,7 @@ This section covers some basic query examples to familiarize users with the gene
              }
              
              //Fetch the data.  
-             foodStore.fetch({query: { aisle: "Spices"}, onBegin: clearOldList, onComplete: gotSpices, onError: fetchFailed});
+             foodStore.fetch({query: { aisle: "Spices"}, onBegin: clearOldList, onComplete: gotItems, onError: fetchFailed});
 
            }
            //Link the click event of the button to driving the fetch.
