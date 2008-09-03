@@ -109,3 +109,9 @@ This is handled internally by having two <input> fields in the widget:
 .. image:: MappedTextBox.gif
 
 The upshot of this is that Dijit handles localization issues on the client, the server doesn't have to worry about it (except of course for translating the boilerplate text on the page, like the label for the above control).
+
+
+Form validation
+---------------
+
+With Dojo Toolkit V1.2 the form widgets have been enhanced so that they won't turn yellow while the user is typing because the value they have is incomplete. However they will still turn yellow instantly if the value they are typing isn't valid (and can't be made valid by typing more characters). This change should provide good feedback to users.
