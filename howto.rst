@@ -15,8 +15,9 @@ How to become a dojo doc ninja
 
 Joining the Dojo doc team is easy, all you need to do is write and get familiar with a few basics you will master fast.
 
+======================
 Dojo Doc Syntax (reST)
-----------------------
+======================
 
 Dojo doc uses the reST syntax to describe all docs, we have implemented a few features of the great reST Sphinx extension and implemented dojo specific ones to provide cool stuff like inline code demos (Yah, you won't believe it, but your code will just work)
 
@@ -25,13 +26,13 @@ Dojo doc uses the reST syntax to describe all docs, we have implemented a few fe
 Please note the following topics
 
 Header
-~~~~~~
+------
 
 Every doc document has to start with following first line::
 
   #format dojo_rst
 
-Then should follow the document header for instance::
+Then should follow the document header (<h1>) for instance::
 
   dojo.module
   ===========
@@ -47,8 +48,29 @@ And we should also include a TOC if our page is getting long::
   .. contents::
     :depth: 3
 
+Sections
+--------
+
+Each new section (<h2>) should marked with::
+
+  ===========
+  Sectionname
+  ===========
+
+Subsections (<h3>) should marked with::
+
+  Subsection
+  ----------
+
+The syntax for Subsubsections (<h4>) is::
+
+  Subsubsection
+  ~~~~~~~~~~~~~
+
+
+=====
 Links
------
+=====
 
 If you want to link to wiki internal pages use following syntax::
 
@@ -70,11 +92,12 @@ My `link`_ is very cool and is my `link`_
 
 The good thing about this way of defining links is that you won't have to look in the content of your text and find all occurences of a link you might want to change. This way all your links are stored in one convenient location and if you need to change them you know where to look.
 
+=============
 Code examples
--------------
+=============
 
 Non executed code
-~~~~~~~~~~~~~~~~~
+-----------------
 
 If you need to give a simple source code example without it being executed use the ".. code-block ::" directive and put the code right into the next line inlined by two spaces. If you want to display line numbers, use the "linenos" attribute.
 
@@ -87,7 +110,7 @@ If you need to give a simple source code example without it being executed use t
       <script type="text/javascript">alert("Your code");</script>
 
 Executed code
-~~~~~~~~~~~~~
+-------------
 
 You can add a real example to the documentation by using the ".. codeviewer::" directive. The code you show can include JavaScript, CSS and HTML
 
@@ -112,7 +135,7 @@ This will result in the following
   </div>
 
 Executed code compounds
-~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------
 
 Sometimes your examples need separation between CSS, JavaScript and HTML. Use the ".. cv-compound::" directive for that. Each compound can include several ".. code-viewer::" directives
 
@@ -201,21 +224,26 @@ The valid reST syntax has to look like following markup:
       });
       </script>
 
+======
 Images
-------
+======
 
 To attach images, use the AttachFile option you have at the bottom of each page. Once your image is uploaded you can include it on you page using following syntax::
 
   .. image:: yourimage.gif
 
+
+===============================
 Tips and Tricks, the edge cases
--------------------------------
+===============================
 
 Many times you will encounter some question on a forum or the #dojo channel and you just want to keep a note about it with the respective answer. Those cases should be put into sub pages -tricks. 
 So if someone posts something interesting to know about the dijit.Dialog and you just want to note this for other people post it in the dijit/Dialog-tricks page. If such a page doesn't exist, feel free to create one
 
+
+===============
 Url conventions
----------------
+===============
 
 when you find an undocumented dojo module, use the dojo namespace as the guide::
 
