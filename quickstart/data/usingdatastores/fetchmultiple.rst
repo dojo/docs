@@ -78,7 +78,7 @@ That's great, but what is more useful is seeing a completely functional example.
            function getAllItems () {
 
              //Callback to perform an action when the data items are starting to be returned:
-             function clearOldList() {
+             function clearOldList(size, request) {
                var list = dojo.byId("list");
                if (list) { 
                  while (list.firstChild) {
