@@ -124,3 +124,51 @@ That's great, but what is more useful is seeing a completely functional example.
     <br>
     <span id="list">
     </span>
+
+
+**Working with Lots of Items**
+
+Now that we've looked at dealing with getting a list of items in one batch, what if the list is huge? It could take a long time to get all the items, push them into an array, and then call the callback with the array of items. Wouldn't it be nice if you could stream the items in, one at a time, and do something each time a new item is available? Well, with dojo.data, you can do that! There is an alternate callback you can pass to fetch() that is called on an item by item basis. It is the onItem callback.
+
+In the following examples, the code will request that all items be returned (an empty query). As each item gets returned, it will add a textnode to the document. In this example, the Read API is used with the following values:
+
+**fetch()**
+    Asynchronous API that fetches a set of items which match a list of attributes.
+**getValue()**
+    Takes an item and an attribute and returns the associated value.
+
+The following code fragment loads all items and streams them back into the page:
+
+.. code-block || javascript
+
+  var pantryStore = new dojo.data.ItemFileReadStore({url: "pantry_items.json" } );
+  var body = dojo.body(); // node to put output in  
+  
+  // Define the onComplete callback to write
+  // COMPLETED to the page when the fetch has
+  // finished returning items.
+  var done = function(items, request){
+    body.appendChild(document.createTextNode("COMPLETED"));
+  }   
+  
+  //Define the callback that appends a textnode into the document each time an item is returned.
+  gotItem = function(item, request){
+    body.appendChild(
+      document.createTextNode(
+        pantryStore.getValue(item, "name")
+      )
+    );
+    body.appendChild(document.createElement("br"));
+  }
+  
+  //Define a simple error handler.
+  var gotError = function(error, request){
+    console.debug("The request to the store failed. " +  error);
+  }
+  
+  //Invoke the search
+  pantryStore.fetch({
+    onComplete: done,
+    onItem: gotItem,
+    onError: gotError
+  });
