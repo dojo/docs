@@ -213,7 +213,7 @@ This section covers some basic query examples to familiarize users with the gene
   
              //Callback for processing a returned list of items.
              function gotItems(items, request) {
-               var list = dojo.byId("list");
+               var list = dojo.byId("list2");
                if (list) { 
                  var i;
                  for (i = 0; i < items.length; i++) {
