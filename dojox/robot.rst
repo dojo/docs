@@ -11,14 +11,17 @@ Unlike the dojo.robotx and dijit.robotx, the recorder does not persist over page
 
 To use the recorder:
  1. In a working copy of the app you want to write a test for, add this JavaScript:
-{{{
-dojo.require("dojox.robot.recorder");
-}}}
-You must add this line for each page of your app you want to test.
- 1. Load your app.
- 1. Click inside the page and press Ctrl-Alt-Enter. You will get an alert dialog confirming that the recorder started.
- 1. Interact with the page. The recorder will silently record your actions.
- 1. When you are finished with the current page, before you go on to the next page, click inside the page again and press Ctrl-Alt-Enter.
- 1. A box will appear on top of your page containing the auto-generated code. Highlight the code and copy it to the clipboard.
+
+  {{{
+  dojo.require("dojox.robot.recorder");
+  }}}
+
+  You must add this line for each page of your app you want to test.
+
+ 2. Load your app.
+ 3. Click inside the page and press Ctrl-Alt-Enter. You will get an alert dialog confirming that the recorder started.
+ 4. Interact with the page. The recorder will silently record your actions.
+ 5. When you are finished with the current page, before you go on to the next page, click inside the page again and press Ctrl-Alt-Enter.
+ 6. A box will appear on top of your page containing the auto-generated code. Highlight the code and copy it to the clipboard.
 
 From here, you have a fully functional DOH test in your clipboard that you can put into your app for testing or in a separate file for use with the dojo.robotx.
