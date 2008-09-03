@@ -65,7 +65,6 @@ There are two things to notice about the above structure.  The first is that yes
     <script>
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.Tree");
-
       var storeData =  { identifier: 'name',
         label: 'name',
         items: [
@@ -110,7 +109,7 @@ There are two things to notice about the above structure.  The first is that yes
           { name:'Brazil', type:'country', population:'186 million' },
           { name:'Argentina', type:'country', population:'40 million' }
       ]}
-</script>
+    </script>
 
   .. cv :: html 
 
