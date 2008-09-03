@@ -18,7 +18,7 @@ dojo.dnd.Moveable
     dojo.require("dojo.dnd.Moveable");
 
     function makeMoveable(node){
-      dojo.dnd.Moveable(dojo.byId(node));
+      var dnd = new dojo.dnd.Moveable(dojo.byId(node));
     }
     </script>
 
