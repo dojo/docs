@@ -76,7 +76,7 @@ That's great, but what is more useful is seeing a completely functional example.
         function init () {
            //Function to perform a fetch on the datastore when a button is clicked
            function getAllItems () {
-             alert("Trying tp get items");   
+  
              //Callback for processing a returned list of items.
              function gotItems(items, request) {
                var list = dojo.byId("list");
@@ -99,7 +99,7 @@ That's great, but what is more useful is seeing a completely functional example.
              }
              
              //Fetch the data.  
-             foodStore.fetch({onComlete: gotItems, onError: fetchFailed});
+             foodStore.fetch({onComplete: gotItems, onError: fetchFailed});
 
            }
            //Link any change events in the combo to driving the fetchItemByIdentity lookup.
