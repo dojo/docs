@@ -251,3 +251,6 @@ Now, to demonstrate this concept in a functional example. In the following examp
     <br>
     <span id="list2">
     </span>
+
+
+**Note:** If the onItem callback is present in the parameters to fetch, then the first parameter to the onComplete callback, the items array, will always be null. Therefore, onItem is streaming only mode and does not rely on onComplete for anything other than a signal that the streaming has ended.
