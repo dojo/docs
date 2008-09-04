@@ -77,26 +77,30 @@ Constructor takes 2 parameters:
     * dropParent --- a DOM node below the main node, which serves as a physical container for data item nodes. It can be used to structure the visual design of your container.
 
 During the construction the constructor checks immediate children of "parent" member (see below) for the presence of "dojoDndItem" class. All such items are added as container's children automatically. It is assumed that you already built the visual representation of the data item, so the creator function is not involved. Instead the necessary triplet formed like that: 
-node --- the node itself. If it doesn't have an id, a unique id is generated for it.
-data --- the content of dndData member of the node. If it is missing, node.innerHTML is used instead.
-type --- the content of dndType member of the node split on "," character. If it is missing, ["text"] is used as the default type.
+
+* node --- the node itself. If it doesn't have an id, a unique id is generated for it.
+* data --- the content of dndData member of the node. If it is missing, node.innerHTML is used instead.
+* type --- the content of dndType member of the node split on "," character. If it is missing, ["text"] is used as the default type.
  
 If the creator function was not specified, a default creator is used. The default creator does following things: 
-It creates a context-appropriate node:
-If the container is <div> or <p>-based, it will create a <div> node.
-If the container is <ul> or <ol>-based, it will create a <li> node.
-If the container is <table>-based, it will create a <tr><td> group of nodes node, and it will be inserted in <tbody>.
-In all other contexts it will create a <span> node.
-If the hint is "avatar" it will create a <span> node.
-If the date item is an object, it will test for the presence of "data" member. If it is present, it will be used as a data object. Otherwise the item itself will be used as a data object.
-If the date item is an object, it will test for the presence of "type" member. If it is present, it will be used as a type object. Otherwise ["text"] will be used as a type object.
-It will set a content of the node to String(data). You can override the toString() member function of your object to change how it is converted to the string. Or specify the creator function.
-As any creator it returns a triplet object with newly created/identified node, data, and type.
+
+* It creates a context-appropriate node:
+
+  * If the container is <div> or <p>-based, it will create a <div> node. 
+  * If the container is <ul> or <ol>-based, it will create a <li> node.
+  * If the container is <table>-based, it will create a <tr><td> group of nodes node, and it will be inserted in <tbody>.
+  * In all other contexts it will create a <span> node.
+  * If the hint is "avatar" it will create a <span> node.
+* If the date item is an object, it will test for the presence of "data" member. If it is present, it will be used as a data object. Otherwise the item itself will be used as a data object.
+* If the date item is an object, it will test for the presence of "type" member. If it is present, it will be used as a type object. Otherwise ["text"] will be used as a type object.
+* It will set a content of the node to String(data). You can override the toString() member function of your object to change how it is converted to the string. Or specify the creator function.
+* As any creator it returns a triplet object with newly created/identified node, data, and type.
 
 After the creator function was called the result is post-processed: 
-If the returned node doesn't have an id, the default unique id will be generated.
-The returned node will be assigned a "dojoDndItem" class.
-If the returned type is not an array or missing, it will be replaced with ["text"].
+
+* If the returned node doesn't have an id, the default unique id will be generated.
+* The returned node will be assigned a "dojoDndItem" class.
+* If the returned type is not an array or missing, it will be replaced with ["text"].
  
 Following public methods are defined: 
 getAllNodes() --- returns a NodeList of all controlled nodes in the order they are listed in the container.
