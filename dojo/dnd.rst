@@ -146,6 +146,7 @@ Following CSS classes are used by the container object:
 * dojoDndContainerOver --- assigned when the mouse hovers over the container.
 * dojoDndItem --- assigned to every new data item node. It should be assigned to every item before the container construction, if you want it to be added automatically by the constructor.
 * dojoDndItemOver -- assigned to a data item node when the mouse hovers over the this item. This class is assigned in addition to dojoDndItem class.
+
 Partial reason to add "over" states when the mouse hovers over instead of using CSS was to support it in IE too.
 
 Selector
@@ -171,7 +172,7 @@ Following public method is redefined with new signature:
 The container object defines following public member variables:
 
 * selection --- a dictionary object keyed by ids of selected nodes. No useful payload is attached to objects in the dictionary.
-anchor --- the current anchor node or null.
+* anchor --- the current anchor node or null.
 * simpleSelection --- a flag to indicate that a singular selection is active.
 
 Following event processors are defined: onMouseDown, onMouseUp. onMouseMove is attached by onOverEvent and detached by onOutEvent dynamically.
@@ -407,13 +408,13 @@ Following specialized moveable classes are defined:
 * dojo.dnd.move.boxConstrainedMoveable --- can be used to constrain a move to a predefined box. This class is define in the dojo.dnd.move module. It is based on constrainedMoveable and accepts following additional parameters during construction:
 
   * box --- a rectangle box (see above), which defines constraint boundaries.
-constraints --- this parameter is automatically defined, do not define it yourself.
+  * constraints --- this parameter is automatically defined, do not define it yourself.
   * within --- see above for details.
 
 * dojo.dnd.move.parentConstrainedMoveable --- can be used to constrain the move by the boundaries of the node's parent. This class is define in the dojo.dnd.move module. It is based on constrainedMoveable and accepts following additional parameters during construction:
 
   * area --- a string, which defines constraint boundaries. Valid values are: "content", "padding", "border", and "margin".
-constraints --- this parameter is automatically defined, do not define it yourself.
+  * constraints --- this parameter is automatically defined, do not define it yourself.
   * within --- see above for details.
 
 * dojo.dnd.TimedMoveable --- can be used to throttle FPS while moving nodes. It is based on Moveable, and accepts following additional parameters during construction:
