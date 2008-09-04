@@ -1,11 +1,10 @@
 #format dojo_rst
 
+Selecting single items
+======================
 .. contents::
   :depth: 3
 
-
-Selecting single items
-======================
 A common desire is to retrieve a single item of data and display it in some fashion.  Dojo.data provides an API definition that can be implemented by DataStores to make this a simple operation.  The API is called the Identity API and the definition can be found `here <dojo/data/api/Identity>`_.
 
 For this example, we'll assume the following simple data source:
