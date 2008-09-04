@@ -179,5 +179,7 @@ To demonstrate the paging function, we'll assume an ItemFileReadStore with the f
     <div dojoType="dijit.form.Button" jsId="back">Click me for the previous page!</div>
     <br>
     <br>
+    <b>The current page of 2 grocery items:</b>
+    <br>
     <span id="list">
     </span>
