@@ -36,6 +36,9 @@ The following example will make use of APIs defined by both `Read <dojo/data/api
 Examples
 ========
 
+Example 1: Simple programmatic fetch by identity
+------------------------------------------------
+
 .. cv-compound ::
   
   .. cv :: javascript
