@@ -1,5 +1,8 @@
 #format dojo_rst
 
+.. contents::
+  :depth: 3
+
 **Paging Data**
 ===============
 
