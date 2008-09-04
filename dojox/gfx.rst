@@ -7,10 +7,6 @@ dojox.gfx
 :Version: beta
 :Authors: Eugene Lazutkin, Kun Xi, Chris Mitchell
 
-========
-Contents
-========
-
 .. contents::
   :depth: 3
 
@@ -360,7 +356,7 @@ Canvas doesn't implement Text and, consequently, font definitions.
 By default all shapes are created with "null" font meaning "the default".
 
 ===============================
-Coordinates and transformations
+Coordinates and Transformations
 ===============================
 
 Linear transformations are a very important part of any graphics library. We deal with 2D graphics, and we operate with 3 by 3 matrices:
@@ -452,7 +448,8 @@ In all signatures a, b, c, and e are numbers (coordinate components or scaling f
 p is a 2D coordinate, r is an angle in radians, d is an angle in degrees (positive value of an angle is CW), m is a matrix.
 
 Constants
-~~~~~~~~~
+---------
+
 identity
   A constant, which defines an identity matrix. This matrix doesn't change a picture at all.
 
@@ -470,7 +467,8 @@ flipXY
   In other words, it mirrors all points around (0, 0).
 
 Matrix creators
-~~~~~~~~~~~~~~~
+---------------
+
 translate(a, b), translate(p)
   Translates its child shapes:
 
@@ -529,7 +527,8 @@ multiply(m1, m2, ...)
   anywhere a matrix is expected, an array of matrices can be specified as well.
 
 Examples
-~~~~~~~~
+--------
+
 Rotate everything 45 degrees CW around (0, 0) and scales everything by 2 after that:
 
 .. code-block :: javascript
@@ -582,7 +581,10 @@ Now let's move our center back:
 
 You can see that this kind of transformations follow a "sandwich" pattern, where the first and the last transformation
 move an immutable point to/from the origin of coordinates. These "around the point" operations are so important that
-there are several helpers for common transformations:
+there are several helpers for common transformations.
+
+Transformations Around a Point
+------------------------------
 
 scaleAt(a, p), scaleAt(a, b, c), scaleAt(a, b, p), scaleAt(a, b, c, e)
   scale(a) around (p.x, p.y)
@@ -636,7 +638,7 @@ normalize(m)
 
   By default all shapes are created with "null" matrix meaning "the identity transformation".
 
-
+====================
 Common Shape Methods
 ====================
 
@@ -676,7 +678,7 @@ getTransformedBoundingBox()
   Returns four point array, which represents four corners of the bounding box transformed by all applicable transformations.
 
 Event processing
-================
+----------------
 
 Every shape and a surface object supports connect() and disconnect() methods, which are signature-compatible with dojo.connect() and dojo.disconnect() methods:
 
@@ -697,8 +699,8 @@ Canvas doesn't support event processing. We may implement it externally in the f
 Silverlight supports following events: onclick, onmouseenter, onmouseleave, onmousedown, onmouseup, onmousemove, onkeydown, onkeyup.
 If you want to target the broadest range of renderers, you are advised to restrict yourself to this list of events.
 
-Helpers
-=======
+Helper Methods
+--------------
 
 In general the described generic methods together with shape-specific methods are enough to do everything with your shape,
 but for convenience shape defines a helper method:
@@ -708,13 +710,14 @@ _getRealMatrix()
   The resulting matrix can be used to transform from "shape" coordinates to "surface" coordinates and back helping to process
   mouse events, or coordinating other objects outside of the surface.
 
+===========================
 Individual graphics objects
 ===========================
 
 This is a list of all important graphics objects and geometric shapes.
 
 Surface
-=======
+-------
 
 A surface is the main object, which represents a collection of shapes. No shapes can be drawn or created without a surface.
 The following functions can be used to create a surface object:
@@ -756,7 +759,7 @@ connect() and disconnect()
   See the discussion of these methods in the Event processing section above.
 
 Group
-=====
+-----
   A group is a pseudo-shape, which represents a collection of shapes.
   Transformations applied to a group applied to all shapes of that group.
   It is used to aggregate shapes constructing a more complex shape, or to manage sub-pictures.
@@ -810,7 +813,7 @@ clear()
   Removes all shapes from a surface returning the surface itself.
 
 Rectangle
-=========
+---------
   A rectangle is a basic rectangular shape with optionally rounded corners.
   It can be created by the createRect() method of a surface or a group.
   The default shape description for rectangle is defined as the dojox.gfx.defaultRect object.
@@ -829,7 +832,7 @@ Rectangle
     A radius of rounded corners. Default: 0 (no rounded corners).
 
 Circle
-======
+------
   A circle is a basic shape. It can be created by the createCircle() method of a surface or a group.
   The default shape description for circle is defined as the dojox.gfx.defaultCircle object.
   Here is a list of all properties and their defaults:
@@ -844,8 +847,8 @@ Circle
     Is a radius in pixels. Default: 100
 
 Ellipse
-=======
-  An ellipse is a basic shape. It can be created by the createEllipse() method of a surface or a group.
+-------
+  An Ellipse is a basic shape. It can be created by the createEllipse() method of a surface or a group.
   The default shape description for ellipse is defined as the dojox.gfx.defaultEllipse object.
   An ellipse can be used to emulate a circle.
   Here is a list of all properties and their defaults:
@@ -860,8 +863,8 @@ Ellipse
     Horizontal and vertical radii (respectively) in pixels. Defaults: 200, 100
 
 Line
-====
-  A line is a basic shape that connects two points. It can be created by the createLine() method of a surface or a group.
+----
+  A Line is a basic shape that connects two points. It can be created by the createLine() method of a surface or a group.
   The default shape description for line is defined as the dojox.gfx.defaultLine object.
   Here is a list of all properties and their defaults:
 
@@ -873,8 +876,8 @@ Line
     Coordinates of an end point in pixels. Defaults: 100, 100
 
 Polyline
-========
-  A polyline is a basic shape, which can be used to represent polylines and polygons.
+--------
+  A Polyline is a basic shape, which can be used to represent polylines and polygons.
   It can be created by the createPolyline() method of a surface or a group.
   The default shape description for polyline is defined as the dojox.gfx.defaultPolyline object.
   Typically a polyline is an unfilled polygon. A polyline can be "open" and "closed".
@@ -903,9 +906,9 @@ Polyline
 
 
 Path
-====
+----
 
-A path is the most versatile geometric shape, which can emulate all other geometric shapes. It can be created by the createPath() method of a surface or a group. The default shape description for path is defined as the dojox.gfx.defaultPath object. Here is a list of all properties and their defaults:
+A Path is the most versatile geometric shape, which can emulate all other geometric shapes. It can be created by the createPath() method of a surface or a group. The default shape description for path is defined as the dojox.gfx.defaultPath object. Here is a list of all properties and their defaults:
 
   type 
     Always "path".
@@ -959,7 +962,8 @@ getAbsoluteMode()
 getLastPosition() 
   Returns the last point, if there is one.
 
-**Implementation notes**
+Examples
+~~~~~~~~
 
 All parameters can be repeated, if it makes sense. 
 
@@ -1014,7 +1018,7 @@ You can specify a well-formed path string as an argument to setShape() method of
     path.setShape({path: "m 0,0 l 100, 100 e"})
 
 Image
-=====
+-----
 
 An Image is a shape that represents a resolution-independent color bitmap data. It can be created by the createImage() method of a surface or a group. The default shape description for image is defined as the dojox.gfx.defaultImage object. Here is a list of all properties and their defaults:
 
@@ -1034,9 +1038,9 @@ Changing width and height parameters you can stretch/shrink an image anisotropic
 
 
 Text
-====
+----
 
-A text is a shape that anchors a text string to a point. It can be created by the createText() method of a surface or a group. It implements an additional text-specific method:
+Text is a shape that anchors a text string to a point. It can be created by the createText() method of a surface or a group. It implements an additional text-specific method:
 
 setFont(font) 
   Sets a font object.
@@ -1089,42 +1093,45 @@ kerning
 
   false - kerning is off.
 
-**Implementation notes**
+Implementation notes
+~~~~~~~~~~~~~~~~~~~~
 
 Text properties are loosely based on properties of the SVG text element.
-IE7 broke a lot of VML stuff. Following things work in IE6 but don't work in IE7 (and there is no workaround for them):
 
-decoration 
-  Always "none".
+IE7 broke a lot of VML stuff. The following things work in IE6 but don't work in IE7 (and there is no workaround for them):
 
-rotated
-  Always false.
+  decoration 
+    Always "none".
+
+  rotated
+    Always false.
 
 FF2 and Opera9 don't support following properties:
 
-decoration
-  Always "none".
+  decoration
+    Always "none".
 
-rotated 
-  Always false.
+  rotated 
+    Always false.
 
 Silverlight has following restrictions:
 
-stroking a text is not supported - all setStroke() calls are ignored.
+  stroke
+    Not supported - all setStroke() calls are ignored.
 
-decoration 
-  only "underline" and "none" are supported, the rest is interpreted as "none".
+  decoration 
+    Only "underline" and "none" are supported, the rest is interpreted as "none".
 
-rotated and kerning properties
-  are not supported.
+  rotated and kerning properties
+    Not supported.
 
 Canvas 
-  doesn't support text at all.
+  Same as Silverlight
 
 TextPath
-========
+--------
 
-A text path is a shape that flows text along an arbitrary path. Text path properties are based on the text shape properties.
+A TextPath is a shape that flows text along an arbitrary path. TextPath properties are based on the text shape properties.
 It can be created by the createTextPath() method of a surface or a group. The TextPath shape object implements all methods of a Path shape object, and two additional methods:
 
 setFont(font) 
@@ -1182,50 +1189,61 @@ kerning
   false
     Kerning is off.
 
-**Implementation notes**
+Implementation notes
+--------------------
 
-This is a highly experimental shape, which is not recommended to be used in production unless you know what you are doing.
-Text path shape properties mirror properties of a Text shape.
-When text path object is created its path is set to dojox.gfx.defaultPath.
-IE7 broke a lot of VML stuff. Following things work in IE6 but don't work in IE7 (and there is no workaround for them):
+This is an experimental shape, which is not recommended to be used in production unless you know what you are doing.
 
-decoration
-  Always "none".
+TextPath shape properties mirror properties of a Text shape.
+When TextPath object is created its path is set to dojox.gfx.defaultPath.
 
-rotated
-  Always false.
+IE7 broke a lot of VML features. 
+  The following things work in IE6 but don't work in IE7 (and there is no workaround for them):
+
+  decoration
+    Always "none"
+
+  rotated
+    Always false
 
 FF2 and Opera9 don't support following properties:
 
-decoration 
-  Always "none".
+  decoration 
+    Always "none"
 
-rotated
-  Always false.
+  rotated
+    Always false
 
+Alignment
+~~~~~~~~~
 IE always aligns the vertical middle of the text with a path. 
+
 FF and Opera both align the baseline with a path. 
-Unfortunately they seem to ignore any other vertical alignment, which leads to a visual discrepancy 
-between SVG and VML implementations. 
-The final version of the text path object will have the IE/VML behavior (as the greater common denominator): 
-the text's middle line follows a path.
+
+  Unfortunately they seem to ignore any other vertical alignment, which leads to a visual discrepancy between SVG and VML implementations. 
+
+The final version of the TextPath object will have the IE/VML behavior (as the greater common denominator): 
+
+  The text's middle line follows a path.
 
 Silverlight and Canvas 
   don't support this shape.
 
+=========
 Utilities
 =========
+
 dojox.gfx implements several generally useful algorithms.
 
 move.js
-=======
+-------
 
 This file implements dojox.gfx.Mover and dojox.gfx.Moveable which are similar to dojo.dndMover and dojo.dnd.Moveable specifically targeting moving shapes.
 
 You can find examples in dojox/gfx/demos/circles.html, and dojox/gfx/demos/inspector.html.
 
 utils.js
-========
+--------
 
 This file implements serialization helpers:
 
@@ -1272,7 +1290,7 @@ You can find examples in dojox/gfx/demos/creator.html and dojox/gfx/demos/inspec
   dojox/gfx/demos/data/*.json.
 
 decompose.js
-============
+------------
 
 Some graphics libraries/renderers do not implement generic linear 2D transformations. They patronize developers with a "simple" subset, which typically include translation, rotation, and scaling operations. It makes next to impossible implementing compound transformations using the "sandwich" technique described above, storing transformations externally, or pre-calculating complex transformation ahead of time to improve the performance.
 
@@ -1300,7 +1318,7 @@ angle2
 Using these values the input matrix can be represented as a suporposition of "primitive" transformations: [translate(dx, dy), rotate(angle2), scale(sx, sy), rotate(angle1)].
 
 arc.js
-======
+------
 
 Some graphics libraries/renderers do not implement generic elliptic arcs or even ellipses (variant: they do but transforming them reveals multiple bugs in the underlying implementation). Both VML and Canvas are on this dishonorable list. The simplest way to deal with it is to approximate them with simple cubic Bézier curves - the Swiss-army knife of vector geometric shapes.
 This algorithm is used internally, but you are welcomed to use it for you own needs.
@@ -1333,8 +1351,10 @@ arcAsBezier(last, rx, ry, xRotg, large, sweep, x, y)
 Each cubic arc is represented as an array of six numeric values: [c1.x, c1.y, c2.x, c2.y, e.x, e.y], 
 where c1 is the first control point, c2 is the second control point, and e is the end point. All values are absolute.
 
+=====
 Demos
 =====
+
 Demos are relatively complex examples located in the demos/ sub-directory. They are used to make sure that all parts of dojox.gfx work together well, to assess the performance, and to give realistic examples to users:
 
 demos/butterfly.html, demos/lion.html, demos/tiger.html 
@@ -1350,6 +1370,7 @@ demos/clock.html, demos/clock_black.html
 demos/creator.html, demos/inspector.html, demos/beautify.html 
   Implement simple persistence mechanism using dojox.gfx.utils, and simple interaction using dojox.gfx.move.
 
+=====
 Tests
 =====
 
