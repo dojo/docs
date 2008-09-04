@@ -1,7 +1,10 @@
 #format dojo_rst
 
-**Selecting (Filtering) items**
-===============================
+Selecting (Filtering) items
+===========================
+
+.. contents:
+  :depth 3
 
 There are many times when you might not want an entire item list. Though you could fetch the entire list, and loop through to select elements, dojo.data's API definition has facilities to do the tough work for you.
 
