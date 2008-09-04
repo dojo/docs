@@ -29,6 +29,9 @@ To demonstrate the paging function, we'll assume an ItemFileReadStore with the f
       { name: 'Black Pepper', aisle: 'Spices',  price: 1.01 }
   ]}
 
+========
+Examples
+========
 
 **Sample Code 1:  Pagination general flow (returning 2 items per page)**
 ------------------------------------------------------------------------
