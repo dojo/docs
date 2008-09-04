@@ -4,6 +4,7 @@ Hierarchical data and access through dojo.data
 ==============================================
 
 .. contents::
+  
   :depth 3
 
 One of the design goals of dojo.data was to handle the concept of hierarchical items.  What that means is that an item may have references to, or contain, other items.  The end result when viewed graphically is a Tree instead of a flat list.  So, this leads to the questions of how do you determine if there is hierarchy and how do you walk across it.  This is, in fact, quite easy to do using dojo.data.ItemFileReadStore as it supports data in hierarchical structure.
