@@ -240,7 +240,9 @@ Okay, hopefully the above example helped visually display how nested items are r
     <div dojoType="dijit.Tree" model="geographyModel2"></div>
 
 
-Okay, great, two examples showing examples of hierarchical structures using one datastore, dojo.data.ItemFileReadStore, but it doesn't immediately answer how you use the dojo.data APIs to walk this.  How you do it is simple, it just uses isItem() to detect if an attribute value is also considered a data item by the store.   So ... code that would walk over an item and identify sub items would look like:
+Okay, great!  Two examples showing examples of hierarchical structures using one datastore, dojo.data.ItemFileReadStore.  But, it doesn't immediately answer how you use the dojo.data APIs to walk this.  How you do it is simple, it just uses isItem() to detect if an attribute value is also considered a data item by the store.   So ... code that would walk over an item and identify sub items would look like:
+
+**Sample code:  Detecting child items.**
 
 .. code-block :: javascript
 
@@ -263,6 +265,54 @@ Okay, great, two examples showing examples of hierarchical structures using one 
                 
           if(store.isItem(value)){
             console.log("Located a child item with label: [" + store.getLabel(value) + "]");
+          }else{
+            console.log("Attribute: [" + attributes[j] + "] has value: [" + value + "]");
+          }
+        }           
+      }
+    }
+  }
+  //Call the fetch of the toplevel continent items.
+  store.fetch({query: {type: "continent"}, onComplete: gotContinents});
+
+
+** Lazy-Loading**
+=================
+
+Okay, detecting if items contain child items looks simple; one function call to isItem().  But ... doesn't dojo.data also support lazy-loading of items to keep from having to pull down data that may never be used?  Yes, it does.  This is done through using two more functions to perform tests to see if an item is completely inflated or not, *isItemLoaded(item)* and *loadItem(keywordargs)*.  These functions provide methods for loading items tha are currently only stubs and not fully inflated.  So if we wish to make the **Sample One**, what would it look like?  See below for an example:
+
+**Sample code:  Detecting child items and lazy-loading items on demand.**
+
+.. code-block :: javascript
+
+  var store = new dojo.data.ItemFileReadStore({url: "countries.json"});
+
+  //Load completed function for walking across the attributes and child items of the
+  //located items.
+  var gotContinents = function(items, request){
+    //Cycle over all the matches.
+    for(var i = 0; i < items.length; i++){
+      var item = items[i];
+
+      //Cycle over all the attributes.
+      var attributes = store.getAttributes(item);
+      for (var j = 0; j < attributes.length; j++){
+        //Assume all attributes are multi-valued and loop over the values ...
+        var values = store.getValues(item, attributes[j]);
+        for(var k = 0; k < values.length; k++){
+          var value = values[k];
+                
+          if(store.isItem(value)){
+            //Test to see if the items data is fully loaded or needs to be demand-loaded in (the item in question is just a stub).
+            if(store.isItemLoaded(value)){
+              console.log("Located a child item with label: [" + store.getLabel(value) + "]");
+            }else{
+              //Asynchronously load in the child item using the stub data to get the real data.
+              var lazyLoadComplete = function(item){
+                console.log("Lazy-Load of item complete.  Located child item with label: [" + store.getLabel(item) + "]");
+              }
+              store.loadItem({item: value, onItem: lazyLoadComplete});
+            }
           }else{
             console.log("Attribute: [" + attributes[j] + "] has value: [" + value + "]");
           }
