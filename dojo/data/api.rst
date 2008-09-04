@@ -3,6 +3,10 @@
 dojo.data.api
 =============
 
+.. contents::
+  :depth: 3
+
+
 Before diving directly into the APIs of dojo.data, the basic concepts behind the APIs need to be explored because some design descisions that were made might seem odd without an explanation as to why they were chosen. Therefore, read this page in its entirety before moving onto the individual APIs.
 
 ============================================================================================
