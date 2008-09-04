@@ -25,3 +25,51 @@ To demonstrate the paging function, we'll assume an ItemFileReadStore with the f
       { name: 'white pepper', aisle: 'Spices',  price: 1.01 },
       { name: 'Black Pepper', aisle: 'Spices',  price: 1.01 }
   ]}
+
+
+**Sample Code 1:  Pagination general flow**
+
+.. code-block :: javascript
+  var store = new dojo.data.ItemFileReadStore({url: "pantryStore.json" });
+
+  var pageSize = 2;
+  var request = null;
+  var outOfItems = false;
+
+  //Define a function that will be connected to a 'next' button
+  var onNext = function(){
+    if(!outOfItems){
+    request.start += pageSize;
+      store.fetch(request);
+    }
+  };
+    
+  //Connect this function to the onClick event of the 'next' button
+  //Done through dojo.connect() generally.
+
+  //Define a function will be connected to a 'previous' button.
+  var onPrevious = function(){
+    if (request.start > 0){
+      request.start -= pageSize;
+        store.fetch(request);
+    }
+  };
+
+
+  //Connect this function to the onClick event of the 'previous' button
+  //Done through dojo.connect() generally.
+
+  //Define how we handle the items when we get it
+  var itemsLoaded = function(items, request){
+    if (items.length < pageSize){
+      //We have found all the items and are at the end of our set.  
+      outOfItems = true;
+    }else{
+      outOfItems = false;
+    }
+    //Display the items in a table through the use of store.getValue() on the items and attributes desired.
+    ...
+  }
+
+  //Do the initial request.  Without a query, it should just select all items.  The start and count limit the number returned.
+  request = store.fetch({onComplete: itemsLoaded, start: 0, count: pageSize});
