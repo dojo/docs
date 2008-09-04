@@ -1,7 +1,7 @@
 #format dojo_rst
 
-**Lazy Loading**
-================
+**Hierarchical data and access through dojo.data**
+==================================================
 
 One of the design goals of dojo.data was to handle the concept of hierarchical items.  What that means is that an item may have references to, or contain, other items.  The end result when viewed graphically is a Tree instead of a flat list.  So, this leads to the questions of how do you determine if there is hierarchy and how do you walk across it.  This is, in fact, quite easy to do using dojo.data.ItemFileReadStore as it supports data in hierarchical structure.
 
@@ -276,8 +276,8 @@ Okay, great!  Two examples showing examples of hierarchical structures using one
   store.fetch({query: {type: "continent"}, onComplete: gotContinents});
 
 
-** Lazy-Loading**
-=================
+**Lazy-Loading**
+================
 
 Okay, detecting if items contain child items looks simple; one function call to isItem().  But ... doesn't dojo.data also support lazy-loading of items to keep from having to pull down data that may never be used?  Yes, it does.  This is done through using two more functions to perform tests to see if an item is completely inflated or not, *isItemLoaded(item)* and *loadItem(keywordargs)*.  These functions provide methods for loading items tha are currently only stubs and not fully inflated.  So if we wish to make the **Sample One**, what would it look like?  See below for an example:
 
