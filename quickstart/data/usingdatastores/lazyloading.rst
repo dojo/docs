@@ -238,3 +238,37 @@ Okay, hopefully the above example helped visually display how nested items are r
     <div dojoType="dojo.data.ItemFileReadStore" data="storeData2" jsId="geographyStore2"></div>
     <div dojoType="dijit.tree.ForestStoreModel" jsId="geographyModel2" store="geographyStore2" query="{type: 'continent'}" rootId="Geography" rootLabel="Geography"></div>
     <div dojoType="dijit.Tree" model="geographyModel2"></div>
+
+
+Okay, great, two examples showing examples of hierarchical structures using one datastore, dojo.data.ItemFileReadStore, but it doesn't immediately answer how you use the dojo.data APIs to walk this.  How you do it is simple, it just uses isItem() to detect if an attribute value is also considered a data item by the store.   So ... code that would walk over an item and identify sub items would look like:
+
+.. code-block :: javascript
+
+  var store = new dojo.data.ItemFileReadStore({url: "countries.json"});
+
+  //Load completed function for walking across the attributes and child items of the
+  //located items.
+  var gotContinents = function(items, request){
+    //Cycle over all the matches.
+    for(var i = 0; i < items.length; i++){
+      var item = items[i];
+
+      //Cycle over all the attributes.
+      var attributes = store.getAttributes(item);
+      for (var j = 0; j < attributes.length; j++){
+        //Assume all attributes are multi-valued and loop over the values ...
+        var values = store.getValues(item, attributes[j]);
+        for(var k = 0; k < values.length; k++){
+          var value = values[k];
+                
+          if(store.isItem(value)){
+            console.log("Located a child item with label: [" + store.getLabel(value) + "]");
+          }else{
+            console.log("Attribute: [" + attributes[j] + "] has value: [" + value + "]");
+          }
+        }           
+      }
+    }
+  }
+  //Call the fetch of the toplevel continent items.
+  store.fetch({query: {type: "continent"}, onComplete: gotContinents});
