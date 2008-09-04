@@ -56,6 +56,9 @@ Concept 2: All items are operated on through store functions
 
 This concept is likely one of the aspects of dojo.data that might seem confusing at first. The following code snippet shows this concept:
 
+Correct access
+--------------
+
 .. code-block :: javascript 
 
   var store = new some.data.Store();
@@ -70,8 +73,8 @@ This concept is likely one of the aspects of dojo.data that might seem confusing
 
 This example might make you wonder why attributes are not accessed as shown in one of the following examples:
 
-Incorrect access:
------------------
+Incorrect access
+----------------
 
 * var value = item["foo"]; 
 * var value = item.foo;
