@@ -32,8 +32,11 @@ To demonstrate the paging function, we'll assume an ItemFileReadStore with the f
 Examples
 ========
 
-Sample Code 1:  Pagination general flow (returning 2 items per page)
---------------------------------------------------------------------
+Sample Code 1:  Pagination general flow 
+----------------------------------------
+
+*The sample returns 2 items per page*
+
 .. code-block :: javascript
 
   var store = new dojo.data.ItemFileReadStore({url: "pantryStore.json" });
@@ -81,8 +84,11 @@ Sample Code 1:  Pagination general flow (returning 2 items per page)
   request = store.fetch({onComplete: itemsLoaded, start: 0, count: pageSize});
 
 
-Functional Example 1: Paging over items, two at a time
-------------------------------------------------------
+Functional Example 1: Paging over items
+---------------------------------------
+
+*The sample returns 2 items per page*
+
 .. cv-compound ::
   
   .. cv :: javascript
