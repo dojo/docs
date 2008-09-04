@@ -7,23 +7,32 @@ dojox.gfx
 :Version: beta
 :Authors: Eugene Lazutkin, Kun Xi, Chris Mitchell
 
-===================
+========
+Contents
+========
+
+.. contents::
+  :depth: 3
+
+========
 Overview
-===================
+========
 
-dojox.gfx is a cross-platform declarative interactive vector graphics package. It follows loosely SVG as the underlying model.
+dojox.gfx (GFX) is a cross-platform declarative interactive vector graphics package. It loosely follows SVG as the underlying model.  GFX helps to isolate your application from the many vector graphics rendering implementation differences across all modern Browsers.  It does this by detecting the best renderer implementation for the Browser that the application is running on.  By using the GFX api's, your application can use a set of api's that don't lock you into any one particular browser (or plugin's) implementation of vector graphics.
 
-Rendering Options
------------------
+Renderer Options
+----------------
 
 At present time following rendering library adaptations are implemented:
 
-* SVG (Firefox 1.5-3.0, Safari 3.0, Opera 9.0, Chrome (beta))
+* SVG (Firefox 1.5-3.0, Safari(Webkit) 3.0, Opera 9.0, Chrome(Webkit) (beta))
 * VML (IE 6-7)
 * Silverlight (wherever it is supported by Microsoft)
 * Canvas (Firefox 2.0-3.0, Safari 3.0 including iPhone Safari, Opera 9.0)
 
-SVG and VML are considered mature implementations, while Silverlight and Canvas are considered to be experimental.
+Other renderer adaptations's could be implemented as well underneath these api's.  For example, a Flash player implementation can be built that plugs in under the GFX api's (perhaps using dojox.flash as it's bridge interface).  If you're interested in contributing other implementations, please let us know.
+
+Note that SVG & VML are "live" DOM scene graphs; whereas Canvas is an immediate mode procedural API.  When canvas is used under gfx, you gain the benefits that come with having a live scene graph (plus you can still drop down and access pixel data from the Canvas if you need to).  These benefits include being able to move groups of objects around a picture, and in the future, will allow responding to events on Shapes.
 
 Core Concepts
 -------------
@@ -281,7 +290,7 @@ By default all shapes are created with "null" fill meaning "no fill is performed
 Complex shapes with self intersections (e.g., polygons), or disjoint parts (e.g. paths) are filled using the even-odd rule.
 
 Implementation details
-----------------------
+~~~~~~~~~~~~~~~~~~~~~~
 
 The VML renderer has following restrictions:
 
@@ -304,8 +313,55 @@ SVG (Firefox 1.5-2.0)
 Canvas 
   Doesn't support the even-odd rule.
 
+Font property
+-------------
+
+Text shapes (Text and TextPath) require a font in order to be rendered. A font description follows familiar CSS conventions.
+The following properties of Font are recognized:
+
+style
+  Same as the CSS font-style property: "normal", "italic", "oblique". Default: "normal".
+variant 
+  Same as the CSS font-variant property: "normal", "small-caps". Default: "normal".
+weight 
+  Same as the CSS font-weight property: "normal", "bold", "bolder", "lighter", 100, 200, 300, 400, 500, 600, 700, 800, 900. Default: "normal".
+size
+  Same as the CSS font-size property. Default: "10pt".
+family
+  A string which defines a font family. Default: "serif".
+
+There is also a useful shortcut: you can specify a font using a string similar to the CSS font property.
+
+**Implementation notes**
+
+IE7 broke many VML features. For example, the family property doesn't work in IE7 at the moment but does work in IE6.
+  IE7 uses Arial always. Unfortunately there is no workaround for that.
+
+Silverlight has the following restrictions:
+  style 
+    Only "normal" and "italic" are supported, all other values are interpreted as "normal".
+  variant 
+    Ignored
+  weight 
+    "normal" is implemented as 400, "bold" is 700.
+  size
+    fully supported.
+  family
+    "serif" and "times" are substituted by "Times New Roman",
+ 
+    "sans-serif" and "helvetica" are substituted by "Arial",
+
+    "monotone" and "courier" are substituted by "Courier New",
+  
+  The rest is passed unchanged and will be interpreted by the underlying Silverlight renderer.
+
+Canvas doesn't implement Text and, consequently, font definitions.
+
+By default all shapes are created with "null" font meaning "the default".
+
+===============================
 Coordinates and transformations
--------------------------------
+===============================
 
 Linear transformations are a very important part of any graphics library. We deal with 2D graphics, and we operate with 3 by 3 matrices:
 
@@ -580,52 +636,6 @@ normalize(m)
 
   By default all shapes are created with "null" matrix meaning "the identity transformation".
 
-
-Font property
-=============
-
-Text shapes (Text and TextPath) require a font in order to be rendered. A font description follows familiar CSS conventions.
-The following properties of Font are recognized:
-
-style
-  Same as the CSS font-style property: "normal", "italic", "oblique". Default: "normal".
-variant 
-  Same as the CSS font-variant property: "normal", "small-caps". Default: "normal".
-weight 
-  Same as the CSS font-weight property: "normal", "bold", "bolder", "lighter", 100, 200, 300, 400, 500, 600, 700, 800, 900. Default: "normal".
-size
-  Same as the CSS font-size property. Default: "10pt".
-family
-  A string which defines a font family. Default: "serif".
-
-There is also a useful shortcut: you can specify a font using a string similar to the CSS font property.
-
-**Implementation notes**
-
-IE7 broke many VML features. For example, the family property doesn't work in IE7 at the moment but does work in IE6.
-  IE7 uses Arial always. Unfortunately there is no workaround for that.
-
-Silverlight has the following restrictions:
-  style 
-    Only "normal" and "italic" are supported, all other values are interpreted as "normal".
-  variant 
-    Ignored
-  weight 
-    "normal" is implemented as 400, "bold" is 700.
-  size
-    fully supported.
-  family
-    "serif" and "times" are substituted by "Times New Roman",
- 
-    "sans-serif" and "helvetica" are substituted by "Arial",
-
-    "monotone" and "courier" are substituted by "Courier New",
-  
-  The rest is passed unchanged and will be interpreted by the underlying Silverlight renderer.
-
-Canvas doesn't implement Text and, consequently, font definitions.
-
-By default all shapes are created with "null" font meaning "the default".
 
 Common Shape Methods
 ====================
