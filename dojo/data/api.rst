@@ -9,9 +9,9 @@ dojo.data.api
 
 Before diving directly into the APIs of dojo.data, the basic concepts behind the APIs need to be explored because some design descisions that were made might seem odd without an explanation as to why they were chosen. Therefore, read this page in its entirety before moving onto the individual APIs.
 
-============================================================================================
-Concept 1: Data access is broken down into separate APIs that stores can choose to implement
-============================================================================================
+========================================================
+Concept 1: Data access is broken down into separate APIs
+========================================================
 
 Data access is broken down into separate APIs because not every service or data backend is able to provide complete access and functions. So not all datastores could possibly implement functions such as read, write, identify, or notifications. To make it simple to see what features a store provides, each store must provide the 'getFeatures()' function. This function reports which APIs the store implements. The following list of basic APIs are defined:
 
@@ -48,9 +48,11 @@ There are further functions that the Dojo development community would like to de
 **dojo.data.api.Derivation**
   Attributes derived from other attributes and calculated values
 
-==============================================================================================================================================================================
-Concept 2: Items and item attributes are always accessed, modified, created, and deleted through store functions. Attributes are never directly accessed from the item object.
-==============================================================================================================================================================================
+============================================================
+Concept 2: All items are operated on through store functions
+============================================================
+
+**Note:** Attributes are never directly accessed from the item object.
 
 This concept is likely one of the aspects of dojo.data that might seem confusing at first. The following code snippet shows this concept:
 
