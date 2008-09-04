@@ -3,7 +3,7 @@
 dojox.gfx
 =========
 
-:Status: Draft - Needs to be split into separate pages and updated to 1.2 api's
+:Status: Draft
 :Version: beta
 :Authors: Eugene Lazutkin, Kun Xi, Chris Mitchell
 
