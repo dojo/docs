@@ -3,7 +3,12 @@
 **Fetching multiple items and values**
 ======================================
 
-**Working with Multiple Items**
+.. contents::
+  :depth: 3
+
+===========================
+Working with Multiple Items
+===========================
 
 You will likely want to access multiple items from such a data source as in the preceding example. No problem! Dojo.data Read API provides a mechanism for loading a set of items. All you have to do is provide the following information to the fetch function of the Read API:
 
@@ -47,7 +52,13 @@ The following example code fragment returns all items:
 
 That's great, but what is more useful is seeing a completely functional example.  In the following example, clicking a button retrieves a list of items and displays them.  Please note that this is a simple example using ItemFileReadStore, but the concepts it presents applies to all Data Stores.
 
-**Functional Example 1: Loading all items through callbacks:**
+===================
+Functional Examples
+===================
+
+
+Functional Example 1: Loading all items through callbacks
+---------------------------------------------------------
 
 .. cv-compound ::
   
@@ -126,7 +137,9 @@ That's great, but what is more useful is seeing a completely functional example.
     </span>
 
 
-**Working with Lots of Items**
+==========================
+Working with Lots of Items
+==========================
 
 Now that we've looked at dealing with getting a list of items in one batch, what if the list is huge? It could take a long time to get all the items, push them into an array, and then call the callback with the array of items. Wouldn't it be nice if you could stream the items in, one at a time, and do something each time a new item is available? Well, with dojo.data, you can do that! There is an alternate callback you can pass to fetch() that is called on an item by item basis. It is the onItem callback.
 
@@ -176,7 +189,12 @@ The following code fragment loads all items and streams them back into the page:
 
 Now, to demonstrate this concept in a functional example. In the following example, clicking a button retrieves a list of items and displays them.  Please note that this is a simple example using ItemFileReadStore, but the concepts it presents applies to all Data Stores.
 
-**Functional Example 2: Loading all items through the onItem callback:**
+==========================
+Functional onItem Examples
+==========================
+
+Functional Example 2: Loading all items through the onItem callback
+-------------------------------------------------------------------
 
 .. cv-compound ::
   
