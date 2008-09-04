@@ -12,7 +12,6 @@ For this example, we'll assume the following simple data source:
 .. code-block :: javascript
   :linenos:
 
-
   { identifier: 'name', 
     items: [
       { name: 'Adobo', aisle: 'Mexican', price: 3.01 },
