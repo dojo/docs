@@ -27,7 +27,7 @@ To demonstrate the paging function, we'll assume an ItemFileReadStore with the f
   ]}
 
 
-**Sample Code 1:  Pagination general flow**
+**Sample Code 1:  Pagination general flow (returning 2 items per page)**
 
 .. code-block :: javascript
 
