@@ -118,6 +118,7 @@ Dojo Book Outline
   * `DojoX DTL (Django Template Language) <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-dtl>`_. maps to: `DTL <dojox/dtl>`_ (TODO: perhaps should map to `DTL under writingWidgets <quickstart/writingWidgets/dtl>`_
   * `DojoX FX <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-fx>`_. maps to: `Fx <dojox/fx>`_
   * `DojoX GFX <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-gfx>`_. maps to: `Gfx <dojox/gfx>`_
+    Initial draft is in place, needs to be split into sub sections
   * `DojoX Grid <http://dojotoolkit.org/book/dojo-book-0-9-1-0/part-5-dojox-experimental-and-specialized-extensions/dojox-grid>`_. maps to: `Grid <dojox/grid>`_
   * `DojoX I/O <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-i-o>`_. maps to: `I/O <dojox/io>`_
   * `DojoX Image <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-image>`_. maps to: `Image <dojox/image>`_
