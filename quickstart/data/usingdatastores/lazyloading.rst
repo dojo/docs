@@ -325,4 +325,4 @@ Okay, detecting if items contain child items looks simple; one function call to 
 
 Excellent, that looks simple too.  Something to be aware of is that not all datastores support hierarchical data formats and not all support lazy-loading.  For those stores, no attribute value should return true for *isItem()* and *isItemLoaded always returns true.  So, code that is hierarchical and lazy-load aware will still work fine with those stores.  
 
-Are there examples of Lazy-Loading stores in dojo?  Yes, there is.  A great example can be found at: `dojox.data.FileStore <dojox/data/FileStore>`_.  The FileStore is designed to expose a remote file system in a lazy-load manner.  The code of the FileStore is also a great template for starting developers who want to develop their own lazy-loading data stores.
+Are there examples of Lazy-Loading stores in dojo?  Yes, there is.  A great example can be found at: `dojox.data.FileStore <dojox/data/FileStore>`_ .  The FileStore is designed to expose a remote file system in a lazy-load manner.  The code of the FileStore is also a great template for starting developers who want to develop their own lazy-loading data stores.
