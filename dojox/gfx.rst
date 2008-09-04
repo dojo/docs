@@ -128,6 +128,10 @@ Example:
 
   surface.createRect({x: 100, y: 50}).setFill("red").setStroke("blue");
 
+================================================
+Shape Properties: Colors, Strokes, Fills & Fonts
+================================================
+
 Color
 -----
 
