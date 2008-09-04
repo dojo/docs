@@ -517,7 +517,7 @@ skewY(r), skewYg(d)
   by **d** degrees
 
 Useful Matrix Operations
------------------
+------------------------
 
 invert(m)
   Inverts a matrix. This useful function calculates a matrix, which will do the opposite transformation to the m matrix effectively undoing it.
