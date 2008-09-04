@@ -10,7 +10,9 @@ A data source is what the name imples, a source that provides data to something.
 
 For the following examples, the defined JavaScript will be used.  Note that it has a defined structure which is used by the dojo.data.ItemFileReadStore.  Be aware that dojo.data does not require this format for every datastore; this is simply the format expected by dojo.data.ItemFileReadStore.
 
-**Example data:**
+============
+Example data
+============
 
 .. code-block :: javascript
 
