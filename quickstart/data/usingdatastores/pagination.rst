@@ -100,7 +100,7 @@ To demonstrate the paging function, we'll assume an ItemFileReadStore with the f
         ]};
 
         //This function performs some basic dojo initialization.  In this case it connects the button
-        //onClick to a function which invokes the fetch().  The fetch function queries for all items 
+        //onClick to a function which invokes *fetch()*es.  The fetch function queries for only a subset
         //and provides callbacks to use for completion of data retrieval or reporting of errors.
         function init () {
 
