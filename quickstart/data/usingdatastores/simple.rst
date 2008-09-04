@@ -1,10 +1,10 @@
 #format dojo_rst
 
-.. contents::
-  :depth: 3
-
 A Simple Data Source
 ====================
+
+.. contents::
+  :depth: 3
 
 A data source is what the name imples, a source that provides data to something.  In the case of a data store, a data source is where the data store obtains its data.  A data source can be a database, a REST service, to even a JSON file.  For introductory purposes, we will look at the most simple data source available, a javascript object.
 
@@ -44,8 +44,8 @@ Below is a simple example of how a datastore can be used to load the data shown 
 Examples
 ========
 
-Example 1:  Connecting dijit.form.ComboBox
-------------------------------------------
+Connecting dijit.form.ComboBox
+------------------------------
 
 .. cv-compound ::
   
@@ -75,8 +75,8 @@ Example 1:  Connecting dijit.form.ComboBox
 
 
 
-Example 2:  Connecting dijit.Tree
----------------------------------
+Connecting dijit.Tree
+---------------------
 
 .. cv-compound ::
   
@@ -106,8 +106,8 @@ Example 2:  Connecting dijit.Tree
     <div dojoType="dijit.Tree" model="countryModel"></div>
 
     
-Example 3:  Connecting dijit.form.FilteringSelect
--------------------------------------------------
+Connecting dijit.form.FilteringSelect
+-------------------------------------
 
 .. cv-compound ::
   
@@ -136,8 +136,8 @@ Example 3:  Connecting dijit.form.FilteringSelect
     <div dojoType="dijit.form.FilteringSelect" store="countryStore" searchAttr="name"></div>
 
 
-Example 4:  Connecting dojox.grid.DataGrid
-------------------------------------------
+Connecting dojox.grid.DataGrid
+------------------------------
 
 .. cv-compound ::
 
