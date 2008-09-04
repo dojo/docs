@@ -31,7 +31,7 @@ To demonstrate the paging function, we'll assume an ItemFileReadStore with the f
 
 
 **Sample Code 1:  Pagination general flow (returning 2 items per page)**
-
+------------------------------------------------------------------------
 .. code-block :: javascript
 
   var store = new dojo.data.ItemFileReadStore({url: "pantryStore.json" });
@@ -80,7 +80,7 @@ To demonstrate the paging function, we'll assume an ItemFileReadStore with the f
 
 
 **Functional Example 1: Paging over items, two at a time:**
-
+-----------------------------------------------------------
 .. cv-compound ::
   
   .. cv :: javascript
