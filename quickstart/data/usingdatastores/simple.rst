@@ -1,7 +1,7 @@
 #format dojo_rst
 
-.. contents ::
-  depth :: 3
+.. contents::
+  :depth: 3
 
 A Simple Data Source
 ====================
@@ -38,7 +38,12 @@ This is a simple, but powerful, way to represent data in the browser.  It can al
 
 Below is a simple example of how a datastore can be used to load the data shown above and how widgets that are dojo.data aware can make use of it to display it easily.
 
-**Example 1:  Connecting dijit.form.ComboBox to the above data:**
+========
+Examples
+========
+
+Example 1:  Connecting dijit.form.ComboBox
+------------------------------------------
 
 .. cv-compound ::
   
@@ -68,7 +73,8 @@ Below is a simple example of how a datastore can be used to load the data shown 
 
 
 
-**Example 2:  Connecting dijit.Tree to the above data:**
+Example 2:  Connecting dijit.Tree
+---------------------------------
 
 .. cv-compound ::
   
@@ -98,7 +104,8 @@ Below is a simple example of how a datastore can be used to load the data shown 
     <div dojoType="dijit.Tree" model="countryModel"></div>
 
     
-**Example 3:  Connecting dijit.form.FilteringSelect to the above data:**
+Example 3:  Connecting dijit.form.FilteringSelect
+-------------------------------------------------
 
 .. cv-compound ::
   
@@ -127,7 +134,8 @@ Below is a simple example of how a datastore can be used to load the data shown 
     <div dojoType="dijit.form.FilteringSelect" store="countryStore" searchAttr="name"></div>
 
 
-**Example 4:  Connecting dojox.grid.DataGrid to the above data:**
+Example 4:  Connecting dojox.grid.DataGrid
+------------------------------------------
 
 .. cv-compound ::
 
