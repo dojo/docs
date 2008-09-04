@@ -101,128 +101,161 @@ After the creator function was called the result is post-processed:
 * If the returned type is not an array or missing, it will be replaced with ["text"].
  
 Following public methods are defined: 
-getAllNodes() --- returns a NodeList of all controlled nodes in the order they are listed in the container.
-insertNodes(data, before, anchor) --- inserts data items before/after the anchor node. It returns the container object itself for easy chaining of calls.
-data --- an array of data items to be inserted. Each data item will be passed to the creator function, the result will be registered with the container, the node will be inserted according to "before" and "anchor" parameters.
-before --- a boolean flag. If it is true, nodes will be added before the anchor, and after otherwise.
-anchor --- a node to be used as a reference for the insertion. It should be an immediate child of the container node (or a child of <tbody> for the <table>-based node). If it is not specified, all items will be appended to the container node (or <tbody> for tables).
-destroy() --- prepares the container object to be garbage-collected. You cannot use the container object after it was destroyed.
+
+* getAllNodes() --- returns a NodeList of all controlled nodes in the order they are listed in the container.
+* insertNodes(data, before, anchor) --- inserts data items before/after the anchor node. It returns the container object itself for easy chaining of calls.
+
+  * data --- an array of data items to be inserted. Each data item will be passed to the creator function, the result will be registered with the container, the node will be inserted according to "before" and "anchor" parameters.
+  * before --- a boolean flag. If it is true, nodes will be added before the anchor, and after otherwise.
+  * anchor --- a node to be used as a reference for the insertion. It should be an immediate child of the container node (or a child of <tbody> for the <table>-based node). If it is not specified, all items will be appended to the container node (or <tbody> for tables).
+
+* destroy() --- prepares the container object to be garbage-collected. You cannot use the container object after it was destroyed.
 
 The container object defines following public member variables:
-current --- a DOM node, which corresponds to a child with a mouse hovering over it. If there is no such item, this variable is null.
-node --- the DOM node of the container. This node is used to set up mouse event handlers for the container.
-parent --- the DOM node, which is an immediate parent of DnD item nodes. In most cases it is the same as node, but in some cases it can be node's descendant. Example: for tables node can point to <table>, while parent points to <tbody> (DnD item nodes are <tr> nodes). You can freely change parent to achieve the desired behavior of your container by specifying as "dropParent" parameter.
-creator --- the creator function or null, if the default creator is used.
-skipForm --- the flag propagated from the initial parameters.
+
+* current --- a DOM node, which corresponds to a child with a mouse hovering over it. If there is no such item, this variable is null.
+* node --- the DOM node of the container. This node is used to set up mouse event handlers for the container.
+* parent --- the DOM node, which is an immediate parent of DnD item nodes. In most cases it is the same as node, but in some cases it can be node's descendant. Example: for tables node can point to <table>, while parent points to <tbody> (DnD item nodes are <tr> nodes). You can freely change parent to achieve the desired behavior of your container by specifying as "dropParent" parameter.
+* creator --- the creator function or null, if the default creator is used.
+* skipForm --- the flag propagated from the initial parameters.
 
 The heart of the Container is the map member:
-map --- a dictionary, which is keyed by node ids. Each registered child has an entry in the map by its node id (this is why all nodes should have unique ids). map[id] returns an object with two members:
-data --- an associated data item.
-type --- an associated array of types.
+
+* map --- a dictionary, which is keyed by node ids. Each registered child has an entry in the map by its node id (this is why all nodes should have unique ids). map[id] returns an object with two members:
+
+  * data --- an associated data item.
+  * type --- an associated array of types.
 
 It is not recommended to access map directly. There are several utility functions to access it. They can be used to virtualize the map, and you can use them with dojo.connect() so you know when DnD items are added/removed/accessed and use it to customize the behavior:
-getItem(id) --- returns an object with a dat and a type described above, which are associated with the node corresponding to that id.
-setItem(id, obj) --- associates an object "obj" with this id. "obj" should define "data" and "type" member variables.
-delItem(id) --- deletes a record of the node with this id. Warning: it does not delete the node from the container.
-clearItems() --- delete all records. Warning: it does not delete nodes from the container.
-forInItems(f, o) --- similar to dojo.forEach() but goes over all items in the map. The function "f" will be called in the context "o" for every item in the map with following parameters:
-obj --- the corresponding object with data and type defined.
-id --- the node id.
-map --- the map object itself.
+
+* getItem(id) --- returns an object with a dat and a type described above, which are associated with the node corresponding to that id.
+* setItem(id, obj) --- associates an object "obj" with this id. "obj" should define "data" and "type" member variables.
+* delItem(id) --- deletes a record of the node with this id. Warning: it does not delete the node from the container.
+* clearItems() --- delete all records. Warning: it does not delete nodes from the container.
+* forInItems(f, o) --- similar to dojo.forEach() but goes over all items in the map. The function "f" will be called in the context "o" for every item in the map with following parameters:
+
+  * obj --- the corresponding object with data and type defined.
+  * id --- the node id.
+  * map --- the map object itself.
 
 Following event processors are defined: onMouseOver, onMouseOut. Two pseudo-events are defined: onOverEvent, onOutEvent, which are cleaned up argument-less onMouseOver and onMouseOut events (otherwise they can be fired several times without actually leaving the container).
 
 Following CSS classes are used by the container object:
-dojoDndContainer --- assigned to each container node during the construction.
-dojoDndContainerOver --- assigned when the mouse hovers over the container.
-dojoDndItem --- assigned to every new data item node. It should be assigned to every item before the container construction, if you want it to be added automatically by the constructor.
-dojoDndItemOver -- assigned to a data item node when the mouse hovers over the this item. This class is assigned in addition to dojoDndItem class.
+
+* dojoDndContainer --- assigned to each container node during the construction.
+* dojoDndContainerOver --- assigned when the mouse hovers over the container.
+* dojoDndItem --- assigned to every new data item node. It should be assigned to every item before the container construction, if you want it to be added automatically by the constructor.
+* dojoDndItemOver -- assigned to a data item node when the mouse hovers over the this item. This class is assigned in addition to dojoDndItem class.
 Partial reason to add "over" states when the mouse hovers over instead of using CSS was to support it in IE too.
+
 Selector
+--------
 
 The default implementation of the selector is built on top of the container class and adds the ability to select children items. Selector inherits all Container's methods and objects. Additionally it adds a notion of an anchor. The anchor is used to specify a point of insertion of other items. The selector assumes that the container is organized in a linear fashion either vertically (e.g., embedded <div>s, lists, tables) or horizontally (e.g., <span>s). This assumption allows to implement familiar UI paradigms: selection of one element with a mouse click, selection of an additional element with ctrl+click, linear group selection from the anchor to the clicked element with shift+click, selecting an additional linear group from the anchor to the clicked element with shift+ctrl+click. Obviously if you have more complex containers, you should implement different UI actions.
 
 Constructor takes the same two parameters as the container's constructor. It understands more optional parameters and passes the rest to the underlying container. Following optional parameters are understood by the selector object: 
-singular --- a boolean flag. If it is true, the user is allowed to select just one item, otherwise any number of items can be selected. It is false by default.
+
+* singular --- a boolean flag. If it is true, the user is allowed to select just one item, otherwise any number of items can be selected. It is false by default.
 
 Following public methods are defined in addition to the container public methods:
-getSelectedNodes() --- returns a NodeList of selected nodes.
-selectNone() --- remove the selection from all items. It returns the selector object itself for easy chaining of calls.
-selectAll() --- selects all items. It returns the selector object itself for easy chaining of calls.
-deleteSelectedNodes() --- deletes all selected nodes. It returns the selector object itself for easy chaining of calls.
+
+* getSelectedNodes() --- returns a NodeList of selected nodes.
+* selectNone() --- remove the selection from all items. It returns the selector object itself for easy chaining of calls.
+* selectAll() --- selects all items. It returns the selector object itself for easy chaining of calls.
+* deleteSelectedNodes() --- deletes all selected nodes. It returns the selector object itself for easy chaining of calls.
 
 Following public method is redefined with new signature:
-insertNodes(addSelected, data, before, anchor) --- the last three parameters are the same (look up the same function in the container). The first parameter is a flag, if it is true all newly added items will be added to the selection, otherwise they will be added unselected.
+
+* insertNodes(addSelected, data, before, anchor) --- the last three parameters are the same (look up the same function in the container). The first parameter is a flag, if it is true all newly added items will be added to the selection, otherwise they will be added unselected.
 
 The container object defines following public member variables:
-selection --- a dictionary object keyed by ids of selected nodes. No useful payload is attached to objects in the dictionary.
+
+* selection --- a dictionary object keyed by ids of selected nodes. No useful payload is attached to objects in the dictionary.
 anchor --- the current anchor node or null.
-simpleSelection --- a flag to indicate that a singular selection is active.
+* simpleSelection --- a flag to indicate that a singular selection is active.
 
 Following event processors are defined: onMouseDown, onMouseUp. onMouseMove is attached by onOverEvent and detached by onOutEvent dynamically.
 
 Following CSS classes are used by the selector object in addition to classes assigned the container object:
-dojoDndItemSelected --- assigned if a data item is selected but it is not an anchor (the last selected element). This class is assigned in addition to dojoDndItem class.
-dojoDndItemAnchor --- assigned to an anchor data item. At any given time the selector can have zero or one anchor. This class is assigned in addition to dojoDndItem class. Being an anchor means that this item is selected.
+
+* dojoDndItemSelected --- assigned if a data item is selected but it is not an anchor (the last selected element). This class is assigned in addition to dojoDndItem class.
+* dojoDndItemAnchor --- assigned to an anchor data item. At any given time the selector can have zero or one anchor. This class is assigned in addition to dojoDndItem class. Being an anchor means that this item is selected.
+
 Source
+------
 
 The source object represents a source of items for drag-and-drop operations. It is used to represent DnD targets as well. In order to be compatible your custom sources should emulate the common source API. Instances of this class can be created from the HTML markup automatically by dojo.parser using dojoType="dojo.dnd.Source".
 
 The default implementation of the source is built on top of the selector class, and adds the ability to start a DnD operation, and participate in the orchestration of the DnD. Source inherits all Selector's (and Container's) methods and objects. User can initiate the DnD operation by dragging items (click and move without releasing the mouse). The DnD operation can be used to rearrange items within a single source, or items can be moved or copied between two sources. User can select whether she wants to copy or move items by pressing the Ctrl button during the operation. If it is pressed, items will be copied, otherwise they will be moved. This behavior can be overwritten programmatically.
  
 Constructor takes the same two parameters as the container's selector. It understands more optional parameters and passes the rest to the underlying selector. Following optional parameters are understood by the selector object:
-isSource --- a Boolean flag. If it is true, this object can be used to start the DnD operation, otherwise it can serve only as a target. It is true by default.
-accept --- an array of strings. It defines what types can be accepted by this object, when it is used as a target. The default is ["text"]. If the array is empty it means that this source cannot be a target.
-horizontal --- a flag. If true, the source is based on the horizontally organized list container, otherwise it is based on the vertical one. he default is false.
-copyOnly --- a flag. If true, the source doesn't allow to move items out of it, any DnD operation will copy items from such sources. By default it is false.
-withHandles --- a flag. If it is true, an item can be dragged only by a predefined node inside the item, otherwise the whole item can be used for dragging. By default it is false. The handle should be a descendant of the item node and should be marked with class dojoDndHandle.
+
+* isSource --- a Boolean flag. If it is true, this object can be used to start the DnD operation, otherwise it can serve only as a target. It is true by default.
+* accept --- an array of strings. It defines what types can be accepted by this object, when it is used as a target. The default is ["text"]. If the array is empty it means that this source cannot be a target.
+* horizontal --- a flag. If true, the source is based on the horizontally organized list container, otherwise it is based on the vertical one. he default is false.
+* copyOnly --- a flag. If true, the source doesn't allow to move items out of it, any DnD operation will copy items from such sources. By default it is false.
+* withHandles --- a flag. If it is true, an item can be dragged only by a predefined node inside the item, otherwise the whole item can be used for dragging. By default it is false. The handle should be a descendant of the item node and should be marked with class dojoDndHandle.
 
 Following public methods are defined (they can be replace to change the DnD behavior):
-checkAcceptance(source, nodes) --- returns true, if this object can accept items "nodes" from the "source". The default implementation checks item's types with accepted types of the object, and rejects the operation, if there is no full match. Such objects are marked as disabled targets and they do not participate in the current DnD operation. The source of items can always accept its items regardless of the match. It prevents the situation when user started to drag items and cannot find a suitable target, and cannot return them back. Please take it into consideration when replacing this method. This method is called on all potential targets before the DnD operation.
-source --- the source object for the dragged items.
-nodes --- a list of nodes 
-copyState(keyPressed) --- returns true if the copy operation should be performed, the move will be performed otherwise. The default implementation checks the "copyOnly" parameter described above. If it is set, this method always returns true. This method can be replaced if you want to implement a more complex logic.
-keyPressed --- a flag. If true, user pressed the "copy" key.
+
+* checkAcceptance(source, nodes) --- returns true, if this object can accept items "nodes" from the "source". The default implementation checks item's types with accepted types of the object, and rejects the operation, if there is no full match. Such objects are marked as disabled targets and they do not participate in the current DnD operation. The source of items can always accept its items regardless of the match. It prevents the situation when user started to drag items and cannot find a suitable target, and cannot return them back. Please take it into consideration when replacing this method. This method is called on all potential targets before the DnD operation.
+
+  * source --- the source object for the dragged items.
+  * nodes --- a list of nodes 
+
+* copyState(keyPressed) --- returns true if the copy operation should be performed, the move will be performed otherwise. The default implementation checks the "copyOnly" parameter described above. If it is set, this method always returns true. This method can be replaced if you want to implement a more complex logic.
+
+  * keyPressed --- a flag. If true, user pressed the "copy" key.
 
 Following topic listeners are defined: onDndSourceOver, onDndStart, onDndDrop, onDndCancel. These topics are published by the manager. If you want to override topic listeners, please read "Summary of topics" section below.
 
 Following event handlers are overloaded: onMouseDown, onMouseUp, and onMouseMove. They are used to perform additional actions required by the Source.
 
 Following CSS classes are used by the source object in addition to classes assigned by the selector and the container objects:
-dojoDndHorizontal --- assigned to the container node during the construction, if this object represents a horizontal list of dndItems --- its "horizontal" property set to true.
-dojoDndSource --- assigned to the container node during the construction, if this object can be used as a source of DnD items --- its "isSource" property set to true.
-dojoDndSourceCopied --- assigned to the container node during the active DnD operation when user copies items from it, e.g., pressed the Ctrl key while dragging. When this class is assigned to the node, dojoDndSource class is removed.
-dojoDndSourceMoved --- assigned to the container node during the active DnD operation when user moves items from it, e.g., the Ctrl key is not pressed while dragging. When this class is assigned to the node, dojoDndSource class is removed.
-dojoDndTarget --- assigned to the container node during the construction, if this object can potentially accept DnD items --- its "accept" list is not empty.
-dojoDndTargetDisabled --- assigned to the container node during the active DnD operation when this node cannot accept currently dragged items, e.g., because it doesn't accept items of these types. When this class is assigned to the node, dojoDndTarget class is removed.
-dojoDndItemBefore --- assigned to the data item node during the active DnD operation if transferred items will be inserted before this item. This class is assigned in addition to all other classes.
-dojoDndItemAfter --- assigned to the data item node during the active DnD operation if transferred items will be inserted after this item. This class is assigned in addition to all other classes.
-dojoDndHandle --- assigned to handles of item nodes. See the withHandles parameter of Source above.
+
+* dojoDndHorizontal --- assigned to the container node during the construction, if this object represents a horizontal list of dndItems --- its "horizontal" property set to true.
+* dojoDndSource --- assigned to the container node during the construction, if this object can be used as a source of DnD items --- its "isSource" property set to true.
+* dojoDndSourceCopied --- assigned to the container node during the active DnD operation when user copies items from it, e.g., pressed the Ctrl key while dragging. When this class is assigned to the node, dojoDndSource class is removed.
+* dojoDndSourceMoved --- assigned to the container node during the active DnD operation when user moves items from it, e.g., the Ctrl key is not pressed while dragging. When this class is assigned to the node, dojoDndSource class is removed.
+* dojoDndTarget --- assigned to the container node during the construction, if this object can potentially accept DnD items --- its "accept" list is not empty.
+* dojoDndTargetDisabled --- assigned to the container node during the active DnD operation when this node cannot accept currently dragged items, e.g., because it doesn't accept items of these types. When this class is assigned to the node, dojoDndTarget class is removed.
+* dojoDndItemBefore --- assigned to the data item node during the active DnD operation if transferred items will be inserted before this item. This class is assigned in addition to all other classes.
+* dojoDndItemAfter --- assigned to the data item node during the active DnD operation if transferred items will be inserted after this item. This class is assigned in addition to all other classes.
+* dojoDndHandle --- assigned to handles of item nodes. See the withHandles parameter of Source above.
 
 dojoDndSource, dojoDndSourceCopied, and dojoDndSourceMoved are mutually exclusive. dojoDndTarget, and dojoDndTargetDisabled are mutually exclusive. dojoDndSourceCopied, dojoDndSourceMoved, dojoDndTargetDisabled, dojoDndItemBefore, and dojoDndItemAfter can be assigned only during the active Dnd operation. See the manager's classes below to see what additional classes can be used for custom styling. Use dojoDndHorizontal with dojoDndItemBefore and dojoDndItemAfter to create visually appropriate insertion markers for horizontal (before, after) and vertical (above, below) containers.
+
 Target
+------
 
 Essentially it is the source class wrapped in with isSource set to false. Instances of this class can be created from the HTML markup automatically by dojo.parser using dojoType="dojo.dnd.Target".
+
 Avatar
+------
 
 Avatar is a class for an object that represents dragged items during DnD operations. You can replace it or style it if you need to customize the look of DnD.
 
 Following methods should be implemented:
-constructor(manager) --- the constructor of the class takes a single parameter --- the instance of Manager (see below), which is used to reflect the state of the DnD operation in progress visually. The constructor is called (and the avatar object is created) only when the manager decided to start a DnD operation.
-destroy() --- this method is called when the DnD operation is finished, the avatar is unneeded, and is about to be recycled.
-update() --- this method is called, when the state of the manager changes. It is used to reflect manager's changes visually.
+
+* constructor(manager) --- the constructor of the class takes a single parameter --- the instance of Manager (see below), which is used to reflect the state of the DnD operation in progress visually. The constructor is called (and the avatar object is created) only when the manager decided to start a DnD operation.
+* destroy() --- this method is called when the DnD operation is finished, the avatar is unneeded, and is about to be recycled.
+* update() --- this method is called, when the state of the manager changes. It is used to reflect manager's changes visually.
 
 The default implementation of the Avatar class does following:
-It creates an absolutely positioned table of up to 6 rows.
-The first row (the header) is populated with a text generated by _generateText() method. By default it returns the number of transferred items. You can override this method for localization purposes, or to change the text how you like it.
-Next rows are populated with DOM nodes generated by the creator function of the current source with hint "avatar" (see above the description of the creator function) for data items. Up to 5 rows are populated with decreasing opacity.
+
+* It creates an absolutely positioned table of up to 6 rows.
+* The first row (the header) is populated with a text generated by _generateText() method. By default it returns the number of transferred items. You can override this method for localization purposes, or to change the text how you like it.
+* Next rows are populated with DOM nodes generated by the creator function of the current source with hint "avatar" (see above the description of the creator function) for data items. Up to 5 rows are populated with decreasing opacity.
 
 Following CSS classes are used to style the avatar:
-dojoDndAvatar --- assigned to the avatar (the table).
-dojoDndAvatarHeader --- assigned to the first row (the header).
-dojoDndAvatarItem --- assigned to the avatar item rows.
-dojoDndAvatarCanDrop --- added to the avatar (the table) when the mouse is over a target, which can accept transferred items. Otherwise it is removed.
+
+* dojoDndAvatar --- assigned to the avatar (the table).
+* dojoDndAvatarHeader --- assigned to the first row (the header).
+* dojoDndAvatarItem --- assigned to the avatar item rows.
+* dojoDndAvatarCanDrop --- added to the avatar (the table) when the mouse is over a target, which can accept transferred items. Otherwise it is removed.
+
 Manager
+-------
 
 Manager is a small class, which implements a business logic of DnD and orchestrates the visualization of this process. It accepts events from sources/targets, creates the avatar, and checks the validity of the drop.
 
@@ -231,71 +264,90 @@ At any given moment there is only one instance of this class (the singleton patt
 This class or its instance can be monkey patched or replaced completely, if you want to change its functionality.
 
 Following public methods are defined to be called by sources:
-startDrag(source, nodes, copy) --- starts the DnD operations using the supplied source, DOM nodes (their ids will be used by the avatar and future targets), and a copy flag (true for copy, and false for move). The parameters are copied as public member variables of the manager with the same names. This method creates the avatar by calling this.makeAvatar() and assigning it to the "avatar" public member.
-stopDrag() --- resets the DnD operation by resetting all public members. It is not enough to call this method to abort the DnD. Before calling it you should publish dnd/cancel topic (or dnd/drop, if you forcing the drop). See more information on topics below.
-canDrop(flag) --- called by the current target to notify that it can accept the DnD items, if flag is true. Otherwise it refuses to accept them.
+
+* startDrag(source, nodes, copy) --- starts the DnD operations using the supplied source, DOM nodes (their ids will be used by the avatar and future targets), and a copy flag (true for copy, and false for move). The parameters are copied as public member variables of the manager with the same names. This method creates the avatar by calling this.makeAvatar() and assigning it to the "avatar" public member.
+* stopDrag() --- resets the DnD operation by resetting all public members. It is not enough to call this method to abort the DnD. Before calling it you should publish dnd/cancel topic (or dnd/drop, if you forcing the drop). See more information on topics below.
+* canDrop(flag) --- called by the current target to notify that it can accept the DnD items, if flag is true. Otherwise it refuses to accept them.
 
 Following methods deal with the avatar and can be replaced, if you want something different:
-makeAvatar() --- returns the avatar's node. By default it creates an instance of dojo.dnd.Avatar passing itself as a parameter.
-updateAvatar() --- updates avatar to reflect changes in the current DnD operation, e.g., copy vs. move, cannot drop at this point.
+
+* makeAvatar() --- returns the avatar's node. By default it creates an instance of dojo.dnd.Avatar passing itself as a parameter.
+* updateAvatar() --- updates avatar to reflect changes in the current DnD operation, e.g., copy vs. move, cannot drop at this point.
 
 If you want to use a custom avatar, you can override these methods to do whatever you like.
 
 Following public properties are defined on the manager (can be overwritten if desired):
-OFFSET_X --- the horizontal offset in pixels between the mouse pointer position and the left edge of the avatar.
-OFFSET_Y --- the vertical offset in pixels between the mouse pointer position and the top edge of the avatar.
+
+* OFFSET_X --- the horizontal offset in pixels between the mouse pointer position and the left edge of the avatar.
+* OFFSET_Y --- the vertical offset in pixels between the mouse pointer position and the top edge of the avatar.
 
 Following public properties are used by the manager during the active DnD operation:
-source --- the source of DnD items.
-nodes --- the list of transferred DnD items.
-copy --- Boolean value to track the copy/move status.
-target --- the selected target of the drop.
+
+* source --- the source of DnD items.
+* nodes --- the list of transferred DnD items.
+* copy --- Boolean value to track the copy/move status.
+* target --- the selected target of the drop.
 
 Following topic events can be generated by the manager:
-/dnd/start --- when DnD starts. Current source, nodes, and the copy flag (see startDrag() for more info) are passed as parameters of this event.
-/dnd/source/over --- when the mouse moves over a source. The source in question is passed as a parameter. The same event is raised when the mouse goes out of a source. In this case null is passed as a parameter.
-/dnd/drop/before --- raised just before the drop. It can be used to capture the drop parameters. Parameters are the same as for /dnd/start, but reflect current values.
-/dnd/drop --- raised to perform a drop. Parameters are the same as for /dnd/start. Note that during the processing of this event nodes can be already moved, or reused. If you need the original nodes, use /dnd/drop/before to capture them.
-/dnd/cancel --- when DndD was cancelled either by user (by hitting Esc), or by dropping items in illegal location.
+
+* /dnd/start --- when DnD starts. Current source, nodes, and the copy flag (see startDrag() for more info) are passed as parameters of this event.
+* /dnd/source/over --- when the mouse moves over a source. The source in question is passed as a parameter. The same event is raised when the mouse goes out of a source. In this case null is passed as a parameter.
+* /dnd/drop/before --- raised just before the drop. It can be used to capture the drop parameters. Parameters are the same as for /dnd/start, but reflect current values.
+* /dnd/drop --- raised to perform a drop. Parameters are the same as for /dnd/start. Note that during the processing of this event nodes can be already moved, or reused. If you need the original nodes, use /dnd/drop/before to capture them.
+* /dnd/cancel --- when DndD was cancelled either by user (by hitting Esc), or by dropping items in illegal location.
 
 Following events are processed by the manager to the body: onMouseMove, onMouseUp, onKeyDown, onKeyUp. These events are attached only during the active DnD operation. Following keys have a special meaning for the manager:
-Ctrl key --- when it is pressed the copy semantics is assumed. Otherwise the move is assumed.
-Esc key --- when it is pressed the DnD operation is immediately cancelled.
+
+* Ctrl key --- when it is pressed the copy semantics is assumed. Otherwise the move is assumed.
+* Esc key --- when it is pressed the DnD operation is immediately cancelled.
 
 Following CSS classes are used by the manager to style the DnD operation:
-dojoDndCopy --- assigned to the body during the copy DnD operations.
-dojoDndMove --- assigned to the body during the move DnD operations.
+
+* dojoDndCopy --- assigned to the body during the copy DnD operations.
+* dojoDndMove --- assigned to the body during the move DnD operations.
 
 No styles are assigned when there is no DnD in progress.
+
+========================
 dojo.dnd.move principals
+========================
 
 The DnD move consists of two principal classes and several specific implementations.
+
 Moveable
+--------
 
 Moveable is the main class, which is used to give the "moveable" property to a DOM node. Instances of this class can be created from the HTML markup automatically by dojo.parser using dojoType="dojo.dnd.Moveable".
 
 The constructor accepts following parameters:
-node --- a DOM node or an id (string) of such node. This node will be made moveable. "Relative" and "absolute" nodes can be moved. Their "left" and "top" are assumed to be in pixels. All other nodes are converted to "absolute" nodes on the first drag.
-params --- a dictionary object, which defines optional parameters. Following optional parameters are recognized:
-handle --- the node (or its id), which will be used as a drag handle. It should be a descendant of the node. If it is null (the default), the node itself is used for dragging.
-delay --- a number in pixels. When user started the drag we should wait for "delay" pixels before starting dragging the node. It is used to prevent accidental drags. The default is 0.
-skip --- a Boolean flag, which indicates that we should skip form elements when initiating drags, it is it true. Otherwise we drag the node no matter what. This parameter is used when we want to drag a form, but keep form elements usable, e.g., we can still select text in a text node. The default is false. When working with draggable form, the better usability-wise alternative to skip=true is to define a drag handle instead.
-mover --- the class to be used to create a mover (see Mover).
+
+* node --- a DOM node or an id (string) of such node. This node will be made moveable. "Relative" and "absolute" nodes can be moved. Their "left" and "top" are assumed to be in pixels. All other nodes are converted to "absolute" nodes on the first drag.
+* params --- a dictionary object, which defines optional parameters. Following optional parameters are recognized:
+
+  * handle --- the node (or its id), which will be used as a drag handle. It should be a descendant of the node. If it is null (the default), the node itself is used for dragging.
+  * delay --- a number in pixels. When user started the drag we should wait for "delay" pixels before starting dragging the node. It is used to prevent accidental drags. The default is 0.
+  * skip --- a Boolean flag, which indicates that we should skip form elements when initiating drags, it is it true. Otherwise we drag the node no matter what. This parameter is used when we want to drag a form, but keep form elements usable, e.g., we can still select text in a text node. The default is false. When working with draggable form, the better usability-wise alternative to skip=true is to define a drag handle instead.
+  * mover --- the class to be used to create a mover (see Mover).
 
 Following public members are available:
-node --- the node to be dragged.
+
+* node --- the node to be dragged.
 
 Following public methods are defined:
-destroy() --- should be call, when you want to remove the "moveable" behavior form the node.
+
+* destroy() --- should be call, when you want to remove the "moveable" behavior form the node.
 
 Following public methods/events are defined (they can be used with dojo.connect() or overwritten):
-onMoveStart --- called when the move is about to start. The parameter is a mover object (see below) for the current move.
-onFirstMove --- called once after processing the first onmousemove event. It uses the same parameters as onMoveStart above.
-onMove --- called on every update of node's position. Parameters:
-mover --- a mover object (see below) for the current move.
-leftTop --- an object which defines the new left and top position of the object by its subobjects "l" and "t" respectively. Both of them are numbers in pixels.
-onMoving --- called by the default implementation of onMove() method before updating the node's position. It uses the same parameters as onMove above. You can update leftTop parameter to whatever you want.
-onMoved --- called by the default implementation of onMove() method after updating the node's position. It uses the same parameters as onMove above.
+
+* onMoveStart --- called when the move is about to start. The parameter is a mover object (see below) for the current move.
+* onFirstMove --- called once after processing the first onmousemove event. It uses the same parameters as onMoveStart above.
+* onMove --- called on every update of node's position. Parameters:
+  
+  * mover --- a mover object (see below) for the current move.
+  * leftTop --- an object which defines the new left and top position of the object by its subobjects "l" and "t" respectively. Both of them are numbers in pixels.
+
+* onMoving --- called by the default implementation of onMove() method before updating the node's position. It uses the same parameters as onMove above. You can update leftTop parameter to whatever you want.
+* onMoved --- called by the default implementation of onMove() method after updating the node's position. It uses the same parameters as onMove above.
 onMoveStop --- called when move is finished. It uses the same parameters as onMoveStart above.
 
 The most important methods are onFirstMove() and onMove(). The former can be used to set up some initial parameters for the move, and possibly update some DOM nodes. The latter implements the move itself. By overriding these two methods you can implement a variety of click-drag-release operations, e.g., a resize operation, a draw operation, and so on.
