@@ -390,7 +390,7 @@ Because the third element is always 1 we "add" it virtually: {x: 12, y: 33}. The
 In order to understand transformations you need to be familiar with fundamentals of matrices (matrix multiplication, multiplication of a vector by a matrix, order of multiplications). dojox.gfx uses a mnemonic way to describe a matrix: xx scales an X component of a coordinate, yy scales a Y component, xy, and yx affect both components, dx moves an X component, and dy moves a Y component.
 
 Simple examples
-~~~~~~~~~~~~~~~
+---------------
 
 Stretch the X dimension by 2:
 
@@ -411,7 +411,7 @@ Shift an X coordinate by 5, a Y coordinate by 10:
   {dx: 5, dy: 10}
 
 More complex examples
-~~~~~~~~~~~~~~~~~~~~~
+---------------------
 
 Rotate everything by 30 degrees clockwise (CW) around point (0, 0):
 
