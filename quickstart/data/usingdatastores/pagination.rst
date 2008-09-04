@@ -1,10 +1,10 @@
 #format dojo_rst
 
-.. contents::
-  :depth: 3
-
 Paging Data
 ===========
+
+.. contents::
+  :depth: 3
 
 As shown in the other datastore sections, the fetch method of the Read API can query across and return sets of items in a variety of ways. However, there is generally only so much space on a display to list all the data returned. Certainly, an application could implement its own custom display logic for just displaying subsets of the data, but that would be inefficient because the application would have had to load all the data in the first place. And, if the data set is huge, it could severely increase the memory usage of the browser. Therefore, dojo.data provides a mechanism by which the store itself can do the paging for you. When you use the paging options of fetch, all that is returned in the callbacks for fetch is the page of data you wanted, no more. This allows the application to deal with data in small chunks, the parts currently visible to you.
 
