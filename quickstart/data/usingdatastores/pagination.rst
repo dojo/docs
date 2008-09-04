@@ -3,9 +3,8 @@
 .. contents::
   :depth: 3
 
-**Paging Data**
-===============
-
+Paging Data
+===========
 
 As shown in the other datastore sections, the fetch method of the Read API can query across and return sets of items in a variety of ways. However, there is generally only so much space on a display to list all the data returned. Certainly, an application could implement its own custom display logic for just displaying subsets of the data, but that would be inefficient because the application would have had to load all the data in the first place. And, if the data set is huge, it could severely increase the memory usage of the browser. Therefore, dojo.data provides a mechanism by which the store itself can do the paging for you. When you use the paging options of fetch, all that is returned in the callbacks for fetch is the page of data you wanted, no more. This allows the application to deal with data in small chunks, the parts currently visible to you.
 
@@ -33,8 +32,8 @@ To demonstrate the paging function, we'll assume an ItemFileReadStore with the f
 Examples
 ========
 
-**Sample Code 1:  Pagination general flow (returning 2 items per page)**
-------------------------------------------------------------------------
+Sample Code 1:  Pagination general flow (returning 2 items per page)
+--------------------------------------------------------------------
 .. code-block :: javascript
 
   var store = new dojo.data.ItemFileReadStore({url: "pantryStore.json" });
@@ -82,8 +81,8 @@ Examples
   request = store.fetch({onComplete: itemsLoaded, start: 0, count: pageSize});
 
 
-**Functional Example 1: Paging over items, two at a time:**
------------------------------------------------------------
+Functional Example 1: Paging over items, two at a time:
+-------------------------------------------------------
 .. cv-compound ::
   
   .. cv :: javascript
