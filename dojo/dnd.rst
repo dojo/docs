@@ -9,14 +9,11 @@ dojo.dnd
 .. contents::
   :depth: 3
 
-====================================
-dojo.dnd 1.2 technical documentation
-====================================
-
 *(This is a copy of dojo.dnd 1.1 technical documentation. It will be updated to 1.2 as soon as it ships.)*
 
+===================
 Underlying concepts
--------------------
+===================
 
 This package was built after we learned from mistakes made in dojo.dnd 0.4: 
 
@@ -33,7 +30,7 @@ Every DnD container and DnD item has a notion of type. The type is represented b
 The dojo.dnd supports copy and move styles of DnD out of the box.
 
 User interface
-~~~~~~~~~~~~~~
+--------------
 
 The existing implementation supports a linear container paradigm:
 
@@ -47,13 +44,14 @@ In order to show an insertion point correctly it is possible to specify if we de
 
 See the Selector discussion below for more details.
 
+===================
 dojo.dnd principals
--------------------
+===================
 
 The dnd consists of 5 classes: Container, Selector, Source, Manager, and Avatar. The former three classes are responsible for dnd sources and targets. The latter two classes are singletons responsible for orchestration of dnd on the web page.
 
 Container
-~~~~~~~~~
+---------
 
 The default implementation of Container represents a uniform collection of items. It knows when the mouse hovers over it, and when the mouse hovers over a particular item.
 
