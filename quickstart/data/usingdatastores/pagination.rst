@@ -137,16 +137,17 @@ To demonstrate the paging function, we'll assume an ItemFileReadStore with the f
              alert("lookup failed.");
            }
            
+           //Button event to page forward.
            function nextPage() {
            }
 
+           //Button event to page back;
            function previousPage() {
            }
 
            //Fetch the data.  
            foodStore.fetch({onBegin: clearOldList, onComplete: gotItems, onError: fetchFailed});
 
-           }
            //Link the click event of the button to driving the fetch.
            dojo.connect(forward, "onClick", nextPage);
            dojo.connect(back, "onClick", previousPage);
