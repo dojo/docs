@@ -229,6 +229,7 @@ Linear gradient
       A color for this stop.
 
     colors has the following default value:
+
     .. code-block :: javascript
 
       [{offset: 0, color: "black"}, {offset: 1, color: "white"}]
@@ -1255,7 +1256,7 @@ Both a Shape and a Group may contain following member variables:
 Serialization helpers can be used to implement a persistent storage of vector-based images, generation of them on the server, conversion of dojox.gfx-based pictures in other formats (e.g., to PDF), and conversion of other formats (e.g., raw SVG) to dojox.gfx. 
 
 You can find examples in dojox/gfx/demos/creator.html and dojox/gfx/demos/inspector.html. Many serialized examples can be found in 
-..
+::
 
   dojox/gfx/demos/data/*.json.
 
