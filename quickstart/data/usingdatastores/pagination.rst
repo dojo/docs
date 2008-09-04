@@ -30,6 +30,7 @@ To demonstrate the paging function, we'll assume an ItemFileReadStore with the f
 **Sample Code 1:  Pagination general flow**
 
 .. code-block :: javascript
+
   var store = new dojo.data.ItemFileReadStore({url: "pantryStore.json" });
 
   var pageSize = 2;
