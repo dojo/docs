@@ -10,6 +10,8 @@ A common desire is to retrieve a single item of data and display it in some fash
 For this example, we'll assume the following simple data source:
 
 .. code-block :: javascript
+  :linenos:
+
 
   { identifier: 'name', 
     items: [
