@@ -104,11 +104,11 @@ To demonstrate the paging function, we'll assume an ItemFileReadStore with the f
         //and provides callbacks to use for completion of data retrieval or reporting of errors.
         function init () {
 
-           var totalItems = 0;
-           var lastItem = -1;
-           var request = null;
-           var currentStart = 0;
-           currentCount = 2;
+           //These are some lage controls used to know when to disable forward/previous buttons.
+           var totalItems = 0;   //How many total items should we expect.
+           var request = null;   //Our request object we're using to hold the positions and the callbacks.
+           var currentStart = 0; //Current index into the pages.
+           currentCount = 2;     //Current size of the page.
 
            //Callback to perform an action when the data items are starting to be returned:
            function clearOldList(size, request) {
@@ -118,11 +118,13 @@ To demonstrate the paging function, we'll assume an ItemFileReadStore with the f
                  list.removeChild(list.firstChild);
                }
              }
+             //Save off the total size.  We need it to determine when to ignore the buttons.
              totalItems = size;
            }
   
            //Callback for processing a returned list of items.
            function gotItems(items, request) {
+             //Save off the current page info being displayed.
              currentStart = request.start;
              currentCount = request.count;
              var list = dojo.byId("list");
@@ -143,6 +145,7 @@ To demonstrate the paging function, we'll assume an ItemFileReadStore with the f
            
            //Button event to page forward.
            function nextPage() {
+             //If we haven't hit the end of the pages yet, allow for requesting another.
              if ((currentStart + currentCount) < totalItems ) {
                request.start += currentCount;
                request = foodStore.fetch(request);
@@ -151,6 +154,7 @@ To demonstrate the paging function, we'll assume an ItemFileReadStore with the f
 
            //Button event to page back;
            function previousPage() {
+             //If we haven't hit the beginning of the pages yet, allow for another shift backwards.
              if (currentStart > 0) {
                request.start -= currentCount;
                request = foodStore.fetch(request);
