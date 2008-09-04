@@ -328,9 +328,14 @@ family
 
 There is also a useful shortcut: you can specify a font using a string similar to the CSS font property.
 
-**Implementation notes**
+Implementation notes
+~~~~~~~~~~~~~~~~~~~~
 
-IE7 broke many VML features. For example, the family property doesn't work in IE7 at the moment but does work in IE6.
+IE7 
+  Broke many VML features. 
+
+  For example, the family property doesn't work in IE7 at the moment but does work in IE6.
+
   IE7 uses Arial always. Unfortunately there is no workaround for that.
 
 Silverlight has the following restrictions:
@@ -350,8 +355,6 @@ Silverlight has the following restrictions:
     "monotone" and "courier" are substituted by "Courier New",
   
   The rest is passed unchanged and will be interpreted by the underlying Silverlight renderer.
-
-Canvas doesn't implement Text and, consequently, font definitions.
 
 By default all shapes are created with "null" font meaning "the default".
 
@@ -387,7 +390,7 @@ Because the third element is always 1 we "add" it virtually: {x: 12, y: 33}. The
 In order to understand transformations you need to be familiar with fundamentals of matrices (matrix multiplication, multiplication of a vector by a matrix, order of multiplications). dojox.gfx uses a mnemonic way to describe a matrix: xx scales an X component of a coordinate, yy scales a Y component, xy, and yx affect both components, dx moves an X component, and dy moves a Y component.
 
 Simple examples
----------------
+~~~~~~~~~~~~~~~
 
 Stretch the X dimension by 2:
 
@@ -408,7 +411,7 @@ Shift an X coordinate by 5, a Y coordinate by 10:
   {dx: 5, dy: 10}
 
 More complex examples
----------------------
+~~~~~~~~~~~~~~~~~~~~~
 
 Rotate everything by 30 degrees clockwise (CW) around point (0, 0):
 
@@ -432,6 +435,9 @@ The way to apply a matrix to a coordinate:
 
 Where, i is an input vector (e.g., {x: 1, y: 2}), M is a transformation matrix, o is a resulting vector, and * denotes a multiplication operation.
 
+Combining Transformation Matrices
+---------------------------------
+
 Transformations can be combined together as follows:
 
 ::
@@ -447,8 +453,8 @@ Most important of them (all in dojox.gfx.matrix namespace) are listed below.
 In all signatures a, b, c, and e are numbers (coordinate components or scaling factors),
 p is a 2D coordinate, r is an angle in radians, d is an angle in degrees (positive value of an angle is CW), m is a matrix.
 
-Constants
----------
+Transformation Constants
+------------------------
 
 identity
   A constant, which defines an identity matrix. This matrix doesn't change a picture at all.
@@ -466,7 +472,7 @@ flipXY
 
   In other words, it mirrors all points around (0, 0).
 
-Matrix creators
+Matrix Creation
 ---------------
 
 translate(a, b), translate(p)
@@ -506,8 +512,9 @@ skewY(r), skewYg(d)
 
   by **d** degrees
 
-Useful operations
+Useful Matrix Operations
 -----------------
+
 invert(m)
   Inverts a matrix. This useful function calculates a matrix, which will do the opposite transformation to the m matrix effectively undoing it.
   For example, scale(2) produces a matrix to scale uniformly a picture by 2. The opposite matrix is going to be scale(0.5).
@@ -527,7 +534,7 @@ multiply(m1, m2, ...)
   anywhere a matrix is expected, an array of matrices can be specified as well.
 
 Examples
---------
+~~~~~~~~
 
 Rotate everything 45 degrees CW around (0, 0) and scales everything by 2 after that:
 
@@ -552,8 +559,6 @@ It is easy:
 
   [translate(250, 250), rotateg(-30), scale(2), translate(-250, -250)]
 
-Explanations
-~~~~~~~~~~~~
 All scaling, rotating, and skewing operations work around (0, 0) point.
 Let's begin by moving the center of our picture to (0, 0):
 
@@ -690,7 +695,8 @@ disconnect(token)
 
 See the api documentation of dojo.connect() and dojo.disconnect() for more details.
 
-**Implementation notes:**
+Implementation notes
+~~~~~~~~~~~~~~~~~~~~
 
 Shape-specific methods are used to hide the complexity of event handling for non-HTML DOM based renderers (e.g., Silverlight).
 
@@ -718,9 +724,8 @@ This is a list of all important graphics objects and geometric shapes.
 
 Surface
 -------
-
-A surface is the main object, which represents a collection of shapes. No shapes can be drawn or created without a surface.
-The following functions can be used to create a surface object:
+  A surface is the main object, which represents a collection of shapes. No shapes can be drawn or created without a surface.
+  The following functions can be used to create a surface object:
 
   dojox.gfx.createSurface(parentNode, width, height)
     Returns a newly created surface object.
@@ -729,34 +734,36 @@ The following functions can be used to create a surface object:
     Returns a re-created surface object built from an existing node.
     The node argument is assumed to be created by createSurface() function (rawNode member).
 
-A surface supports following methods:
+  A surface supports following methods:
 
-getDimensions()/setDimensions(widht, height)
-  Accesses sizes set on the surface.
+  getDimensions()/setDimensions(widht, height)
+    Accesses sizes set on the surface.
 
-createShape(shape)
-  Creates a shape out of shape description object relying on the "type" member, returns a shape object.
-  Useful for deserialization of shapes from an external source.
+  createShape(shape)
+    Creates a shape out of shape description object relying on the "type" member, returns a shape object.
 
-createPath(path), createRect(rect), createCircle(circle), createEllipse(ellipse), createLine(line), createPolyline(polyline), createImage(image), createText(text), createTextPath(textpath)
-  Create a corresponding shape returning a shape object.
-  Note: the "type" member of a shape is implied and not required.
+    Useful for deserialization of shapes from an external source.
 
-createGroup()
-  Creates a Group object.
+  createPath(path), createRect(rect), createCircle(circle), createEllipse(ellipse), createLine(line), createPolyline(polyline), createImage(image), createText(text), createTextPath(textpath)
+    Create a corresponding shape returning a shape object.
 
-add(shape)
-  Adds a **Shape** to a **Surface** returning the surface itself. Used to move shapes between groups and a surface.
+    Note: the "type" member of a shape is implied and not required.
 
-remove(shape)
-  Removes a shape from a surface returning the surface itself.
-  The shape can be added later to the same surface or a group.
+  createGroup()
+    Creates a Group object.
 
-clear()
-  Removes all shapes from a surface returning the surface itself.
+  add(shape)
+    Adds a **Shape** to a **Surface** returning the surface itself. Used to move shapes between groups and a surface.
 
-connect() and disconnect()
-  See the discussion of these methods in the Event processing section above.
+  remove(shape)
+    Removes a shape from a surface returning the surface itself.
+    The shape can be added later to the same surface or a group.
+
+  clear()
+    Removes all shapes from a surface returning the surface itself.
+
+  connect() and disconnect()
+    See the discussion of these methods in the Event processing section above.
 
 Group
 -----
@@ -767,50 +774,52 @@ Group
   It is planned to implement setting a (default) visual parameters to group's children including fill, stroke, and font properties.
   A group combines features of a shape and a surface. It shares following methods with a shape:
 
-getTransform()/setTransform(matrix)
-  Accesses a transformation matrix applied to a group.
+  getTransform()/setTransform(matrix)
+    Accesses a transformation matrix applied to a group.
 
-applyRightTransform(matrix)/applyLeftTransform(matrix)
-  Combines the existing matrix with new matrix.
-  See "Transformation matrix" for details.
+  applyRightTransform(matrix)/applyLeftTransform(matrix)
+    Combines the existing matrix with new matrix.
+    See "Transformation matrix" for details.
 
-applyTransform(matrix)
-  Is an alias for applyRightTransform(matrix). This function is defined for convenience.
+  applyTransform(matrix)
+    Is an alias for applyRightTransform(matrix). This function is defined for convenience.
 
-moveToFront()/moveToBack()
-  Changes a z-order of a group. It moves an object to the front or to the back respectively
-  of its parent container (a surface or a group).
+  moveToFront()/moveToBack()
+    Changes a z-order of a group. It moves an object to the front or to the back respectively
+    of its parent container (a surface or a group).
 
-removeShape()
-  Removes a group from its parent container.
+  removeShape()
+    Removes a group from its parent container.
 
-getParent()
-  Accesses group's parent container.
+  getParent()
+    Accesses group's parent container.
 
-connect()/disconnect()
-  Implement the event processing.
+  connect()/disconnect()
+    Implement the event processing.
 
-Group also shares the following methods with a Surface:
+  Group also shares the following methods with a Surface:
 
-createShape(shape)
-  Creates a shape out of shape description object relying on the "type" member, returns a shape object.
-  Useful for deserialization of shapes from an external source.
+  createShape(shape)
+    Creates a shape out of shape description object relying on the "type" member, returns a shape object.
 
-createPath(path), createRect(rect), createCircle(circle), createEllipse(ellipse), createLine(line), createPolyline(polyline), createImage(image), createText(text), createTextPath(textpath)
-  Create a corresponding shape returning a shape object.
-  Note: the "type" member of a shape is implied and not required.
+    Useful for deserialization of shapes from an external source.
 
-createGroup()
-  Creates a group object.
+  createPath(path), createRect(rect), createCircle(circle), createEllipse(ellipse), createLine(line), createPolyline(polyline), createImage(image), createText(text), createTextPath(textpath)
+    Create a corresponding shape returning a shape object.
 
-add(shape)
-  Adds a shape to a surface returning the surface itself. It is used to move shapes between groups and a surface.
+    Note: the "type" member of a shape is implied and not required.
 
-remove(shape)
-  Removes a shape from a surface returning the surface itself. The shape can be added later to the same surface or a group.
+  createGroup()
+    Creates a group object.
 
-clear()
-  Removes all shapes from a surface returning the surface itself.
+  add(shape)
+    Adds a shape to a surface returning the surface itself. It is used to move shapes between groups and a surface.
+
+  remove(shape)
+    Removes a shape from a surface returning the surface itself. The shape can be added later to the same surface or a group.
+
+  clear()
+    Removes all shapes from a surface returning the surface itself.
 
 Rectangle
 ---------
@@ -907,8 +916,12 @@ Polyline
 
 Path
 ----
+  A Path is the most versatile geometric shape, which can emulate all other geometric shapes. 
+  It can be created by the createPath() method of a surface or a group. 
 
-A Path is the most versatile geometric shape, which can emulate all other geometric shapes. It can be created by the createPath() method of a surface or a group. The default shape description for path is defined as the dojox.gfx.defaultPath object. Here is a list of all properties and their defaults:
+  The default shape description for path is defined as the dojox.gfx.defaultPath object. 
+
+  Here is a list of all properties and their defaults:
 
   type 
     Always "path".
@@ -916,51 +929,54 @@ A Path is the most versatile geometric shape, which can emulate all other geomet
   path 
     A string , which represents a path encoded in the SVG path language. Default: "".
 
-A path can be open or closed. The latter means that the first and the last points are the same. When filling open paths, a straight line connecting the first and the last points is assumed.
-Path supports following methods for building path segments programmatically:
+  A path can be open or closed. The latter means that the first and the last points are the same. 
 
-moveTo(x,y)
-  Starts new segment abandoning the previous segment, if any. It takes a coordinate as a parameter.
+  When filling open paths, a straight line connecting the first and the last points is assumed.
 
-lineTo(x,y) 
-  Draws a straight line from the last point to the argument (coordinate).
+  Path supports following methods for building path segments programmatically:
 
-hLineTo(x) 
-  Draws a straight horizontal line from the last point using the argument (a number) as X position.
+  moveTo(x,y)
+    Starts new segment abandoning the previous segment, if any. It takes a coordinate as a parameter.
 
-vLineTo(y) 
-  Draws a straight vertical line from the last point using the argument (a number) as Y position.
+  lineTo(x,y) 
+    Draws a straight line from the last point to the argument (coordinate).
 
-curveTo(x1,y1,x2,y2,x,y) 
-  Draws a cubic Bézier curve from the last point using arguments (two control points, and a final coordinate).
+  hLineTo(x) 
+    Draws a straight horizontal line from the last point using the argument (a number) as X position.
 
-smoothCurveTo(x2,y2,x,y) 
-  Draws a cubic Bézier curve from the last point using arguments. The difference between this method and curveTo() 
-  is that it accepts only one control point, which serves as the second control point. The first control is assumed 
-  to be a reflection of the second control point of the previous curve command.
+  vLineTo(y) 
+    Draws a straight vertical line from the last point using the argument (a number) as Y position.
 
-qCurveTo(x1,y1,x,y) 
-  Draws a quadratic Bézier curve from the last point using arguments (a control point, and a final point).
+  curveTo(x1,y1,x2,y2,x,y) 
+    Draws a cubic Bézier curve from the last point using arguments (two control points, and a final coordinate).
 
-qSmoothCurveTo(x,y) 
-  Draws a quadratic Bézier curve from the last point using arguments. The difference between this method and qCurveTo() 
-  is that it uses the reflected control point of the previous curve command.
+  smoothCurveTo(x2,y2,x,y) 
+    Draws a cubic Bézier curve from the last point using arguments. The difference between this method and curveTo() 
+    is that it accepts only one control point, which serves as the second control point. The first control is assumed 
+    to be a reflection of the second control point of the previous curve command.
 
-arcTo(rx,ry,x_axis_rotation,large_arc_flag,sweep_flag,x,y) 
-  Draws an elliptic arc from the last point using arguments (please see the above link for details).
+  qCurveTo(x1,y1,x,y) 
+    Draws a quadratic Bézier curve from the last point using arguments (a control point, and a final point).
 
-closePath()
-  Closes the segment.
+  qSmoothCurveTo(x,y) 
+    Draws a quadratic Bézier curve from the last point using arguments. The difference between this method and qCurveTo() 
+    is that it uses the reflected control point of the previous curve command.
 
-setAbsoluteMode(mode)
-  Sets an absolute or relative mode for coordinates. In the absolute mode all coordinates are assumed to be literal. 
-  In the relative mode all coordinates are offsets from the last point.
+  arcTo(rx,ry,x_axis_rotation,large_arc_flag,sweep_flag,x,y) 
+    Draws an elliptic arc from the last point using arguments (please see the above link for details).
 
-getAbsoluteMode() 
-  Returns true, if the current mode is absolute.
+  closePath()
+    Closes the segment.
 
-getLastPosition() 
-  Returns the last point, if there is one.
+  setAbsoluteMode(mode)
+    Sets an absolute or relative mode for coordinates. In the absolute mode all coordinates are assumed to be literal. 
+    In the relative mode all coordinates are offsets from the last point.
+
+  getAbsoluteMode() 
+    Returns true, if the current mode is absolute.
+
+  getLastPosition() 
+    Returns the last point, if there is one.
 
 Examples
 ~~~~~~~~
@@ -1019,94 +1035,113 @@ You can specify a well-formed path string as an argument to setShape() method of
 
 Image
 -----
+  An Image is a shape that represents a resolution-independent color bitmap data. 
+  It can be created by the createImage() method of a Surface or a Group. 
 
-An Image is a shape that represents a resolution-independent color bitmap data. It can be created by the createImage() method of a surface or a group. The default shape description for image is defined as the dojox.gfx.defaultImage object. Here is a list of all properties and their defaults:
+  The default shape description for image is defined as the dojox.gfx.defaultImage object. 
 
-type 
-  Always "image".
+  Here is a list of all properties and their defaults:
 
-x, y 
-  Coordinates of a top-left corner in pixels. Defaults: 0, 0.
+  type 
+    Always "image".
 
-width, height 
-  Dimensions in pixels. Defaults: 0, 0 - don't forget to set them to real values.
+  x, y 
+    Coordinates of a top-left corner in pixels. Defaults: 0, 0.
 
-src 
-  A URL of an image data pointing to a GIF, JPG, or PNG file. Default: "".
+  width, height 
+    Dimensions in pixels. Defaults: 0, 0 - don't forget to set them to real values.
 
-Changing width and height parameters you can stretch/shrink an image anisotropically.
+  src 
+    A URL of an image data pointing to a GIF, JPG, or PNG file. Default: "".
 
+  Changing width and height parameters you can stretch/shrink an image anisotropically.
 
 Text
 ----
+  Text is a shape that anchors a text string to a point. It can be created by the createText() method of a Surface or a Group. 
+  It implements these additional text-specific methods:
 
-Text is a shape that anchors a text string to a point. It can be created by the createText() method of a surface or a group. It implements an additional text-specific method:
+  setFont(font) 
+    Sets a font object.
 
-setFont(font) 
-  Sets a font object.
+  getFont() 
+    Returns the current font, or "null" to indicate that the default font is used.
 
-getFont() 
-  Returns the current font, or "null" to indicate that the default font is used.
+  The default shape description for text shape is defined as the dojox.gfx.defaultText object. 
+  Here is a list of all properties and their defaults:
 
-The default shape description for text shape is defined as the dojox.gfx.defaultText object. Here is a list of all properties and their defaults:
+  type
+    Always "text".
 
-type
-  Always "text".
+  x, y
+    Coordinates of a text anchor. Defaults: 0, 0.
 
-x, y
-  Coordinates of a text anchor. Defaults: 0, 0.
+  text 
+    A string of characters you want to show aligned to the anchor poistion. Default: "".
 
-text 
-  A string of characters you want to show aligned to the anchor poistion. Default: "".
+  align 
+    An alignment of a text in regards to the anchor position:
 
-align 
-  An alignment of a text in regards to the anchor position:
+    "start" 
+      A text's baseline starts at the anchor. This is the default value of the align attribute.
 
-  "start" - a text's baseline starts at the anchor. This is the default value of the align attribute.
+    "middle"
+      A text's baseline is centered on the anchor point.
 
-  "middle" - a text's baseline is centered on the anchor point.
+    "end" 
+      A text's baseline ends at the anchor point.
 
-  "end" - a text's baseline ends at the anchor point.
+  decoration 
+    A hint on how to render optional elements of a text:
 
-decoration 
-  A hint on how to render optional elements of a text:
+    "none" 
+      Text is not decorated. This is the default value.
 
-  "none" - text is not decorated. This is the default value.
+    "underline" 
+      Text is underlined.
 
-  "underline" - text is underlined.
+    "overline" 
+      Text has a line above it.
 
-  "overline" - text has a line above it.
+    "line-through"
+      Text has a line through the middle.
 
-  "line-through" - text has a line through the middle.
+  rotated 
+    A Boolean value, which indicates:
 
-rotated 
-  A Boolean value, which indicates:
+    false 
+      All glyphs are unrotated. The is the default value.
 
-  false - all glyphs are unrotated. The is the default value.
+    true 
+      All glyphs are rotated 90 degrees counter-clock-wise. This mode is useful for vertically arranged text.
 
-  true - all glyphs are rotated 90 degrees counter-clock-wise. This mode is useful for vertically arranged text.
+  kerning 
+    A Boolean value, which indicates:
 
-kerning 
-  A Boolean value, which indicates:
+    true 
+      Kerning is on. This is the default value.
 
-  true - kerning is on. This is the default value.
-
-  false - kerning is off.
+    false 
+      Kerning is off.
 
 Implementation notes
 ~~~~~~~~~~~~~~~~~~~~
 
 Text properties are loosely based on properties of the SVG text element.
 
-IE7 broke a lot of VML stuff. The following things work in IE6 but don't work in IE7 (and there is no workaround for them):
+IE7 
+  Broke a lot of VML features. 
 
-  decoration 
-    Always "none".
+  The following things work in IE6 but don't work in IE7 (and there is no workaround for them):
 
-  rotated
-    Always false.
+    decoration 
+      Always "none".
 
-FF2 and Opera9 don't support following properties:
+    rotated
+      Always false.
+
+FF2 and Opera9
+  Do not support following properties:
 
   decoration
     Always "none".
@@ -1114,7 +1149,8 @@ FF2 and Opera9 don't support following properties:
   rotated 
     Always false.
 
-Silverlight has following restrictions:
+Silverlight 
+  Has following restrictions:
 
   stroke
     Not supported - all setStroke() calls are ignored.
@@ -1130,74 +1166,89 @@ Canvas
 
 TextPath
 --------
+  A TextPath is a shape that flows text along an arbitrary path. TextPath properties are based on the text shape properties.
 
-A TextPath is a shape that flows text along an arbitrary path. TextPath properties are based on the text shape properties.
-It can be created by the createTextPath() method of a surface or a group. The TextPath shape object implements all methods of a Path shape object, and two additional methods:
+  It can be created by the createTextPath() method of a surface or a group. 
 
-setFont(font) 
-  Sets a font object.
+  The TextPath shape object implements all methods of a Path shape object, and two additional methods:
 
-getFont()
-  Returns the current font, or "null" to indicate that the default font is used.
+  setFont(font) 
+    Sets a font object.
 
-setText(text)
-  Sets a text path shape description.
+  getFont()
+    Returns the current font, or "null" to indicate that the default font is used.
 
-The default shape description for text path shape is defined as the dojox.gfx.defaultTextPath object. It resembles a lot a text description object. Here is a list of all properties and their defaults:
+  setText(text)
+    Sets a text path shape description.
 
-type 
-  Always "textpath".
+  The default shape description for text path shape is defined as the dojox.gfx.defaultTextPath object. 
 
-text
-  A string of characters you want to show on a path. Default: "".
+  It resembles the text description object. 
 
-align
-  An alignment of a text in regards to the anchor position:
+  Here is a list of all properties and their defaults:
 
-  "start" - a text starts at the beginning of the path. This is the default value of the align attribute.
+  type 
+    Always "textpath".
 
-  "middle" - a text is centered on the middle of the path.
+  text
+    A string of characters you want to show on a path. Default: "".
 
-  "end" - a text ends at the end of the path.
+  align
+    An alignment of a text in regards to the anchor position:
 
-decoration 
-  A hint on how to render optional elements of a text:
+    "start" 
+      Text starts at the beginning of the path. This is the default value of the align attribute.
 
-  "none" - text is not decorated. This is the default value.
+    "middle"
+      Text is centered on the middle of the path.
 
-  "underline" - text is underlined.
+    "end"
+      Text ends at the end of the path.
 
-  "overline" - text has a line above it.
+  decoration 
+    A hint on how to render optional elements of a text:
 
-  "line-through" - text has a line through the middle.
+    "none"
+      Text is not decorated. This is the default value.
 
-rotated 
-  A Boolean value, which indicates:
+    "underline"
+      Text is underlined.
 
-  false
-    All glyphs are unrotated. The is the default value.
+    "overline"
+      Text has a line above it.
 
-  true
-    All glyphs are rotated 90 degrees counter-clockwise. This mode is useful for vertically arranged text.
+    "line-through"
+      Text has a line through the middle.
 
-kerning
-  A Boolean value, which indicates:
+  rotated 
+    A Boolean value, which indicates:
 
-  true
-    Kerning is on. This is the default value.
+    false
+      All glyphs are unrotated. The is the default value.
 
-  false
-    Kerning is off.
+    true
+      All glyphs are rotated 90 degrees counter-clockwise. This mode is useful for vertically arranged text.
+
+  kerning
+    A Boolean value, which indicates:
+
+    true
+      Kerning is on. This is the default value.
+
+    false
+      Kerning is off.
 
 Implementation notes
---------------------
+~~~~~~~~~~~~~~~~~~~~
 
 This is an experimental shape, which is not recommended to be used in production unless you know what you are doing.
 
 TextPath shape properties mirror properties of a Text shape.
 When TextPath object is created its path is set to dojox.gfx.defaultPath.
 
-IE7 broke a lot of VML features. 
+IE7 
+  Broke a lot of VML features. 
+
   The following things work in IE6 but don't work in IE7 (and there is no workaround for them):
 
   decoration
@@ -1206,7 +1257,8 @@ IE7 broke a lot of VML features.
   rotated
     Always false
 
-FF2 and Opera9 don't support following properties:
+FF2 and Opera9
+  Do not support the following properties:
 
   decoration 
     Always "none"
@@ -1233,7 +1285,7 @@ Silverlight and Canvas
 Utilities
 =========
 
-dojox.gfx implements several generally useful algorithms.
+dojox.gfx implements several generally useful algorithms described in this section.
 
 move.js
 -------
