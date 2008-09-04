@@ -11,6 +11,7 @@ The paging mechanism is used by specifying a start parameter in the fetch argume
 To demonstrate the paging function, we'll assume an ItemFileReadStore with the following datasource:
 
 .. code-block :: javascript 
+
   { identifier: 'name',
     items: [
       { name: 'Adobo', aisle: 'Mexican', price: 3.01 },
