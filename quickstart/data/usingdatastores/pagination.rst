@@ -145,7 +145,7 @@ To demonstrate the paging function, we'll assume an ItemFileReadStore with the f
            function nextPage() {
              if ((currentStart + currentCount) < totalItems ) {
                request.start += currentCount;
-               foodStore.fetch(request);
+               request = foodStore.fetch(request);
              }
            }
 
@@ -153,12 +153,12 @@ To demonstrate the paging function, we'll assume an ItemFileReadStore with the f
            function previousPage() {
              if (currentStart > 0) {
                request.start -= currentCount;
-               foodStore.fetch(request);
+               request = foodStore.fetch(request);
              }
            }
 
            //Fetch the data.  
-           foodStore.fetch({onBegin: clearOldList, onComplete: gotItems, onError: fetchFailed, start: currentStart, count: currentCount });
+           request = foodStore.fetch({onBegin: clearOldList, onComplete: gotItems, onError: fetchFailed, start: currentStart, count: currentCount });
 
            //Link the click event of the button to driving the fetch.
            dojo.connect(forward, "onClick", nextPage);
