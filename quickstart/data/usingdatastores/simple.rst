@@ -1,7 +1,10 @@
 #format dojo_rst
 
-**A Simple Data Source**
-========================
+.. contents ::
+  depth :: 3
+
+A Simple Data Source
+====================
 
 A data source is what the name imples, a source that provides data to something.  In the case of a data store, a data source is where the data store obtains its data.  A data source can be a database, a REST service, to even a JSON file.  For introductory purposes, we will look at the most simple data source available, a javascript object.
 
