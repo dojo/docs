@@ -107,6 +107,8 @@ To demonstrate the paging function, we'll assume an ItemFileReadStore with the f
            var totalItems = 0;
            var lastItem = -1;
            var request = null;
+           var currentStart = 0;
+           currentCount = 2;
 
            //Callback to perform an action when the data items are starting to be returned:
            function clearOldList(size, request) {
@@ -121,6 +123,8 @@ To demonstrate the paging function, we'll assume an ItemFileReadStore with the f
   
            //Callback for processing a returned list of items.
            function gotItems(items, request) {
+             currentStart = request.start;
+             currentCount = request.count;
              var list = dojo.byId("list");
              if (list) { 
                var i;
@@ -139,14 +143,22 @@ To demonstrate the paging function, we'll assume an ItemFileReadStore with the f
            
            //Button event to page forward.
            function nextPage() {
+             if ((currentStart + currentCount) < totalItems ) {
+               request.start += currentCount;
+               foodStore.fetch(request);
+             }
            }
 
            //Button event to page back;
            function previousPage() {
+             if (currentStart > 0) {
+               request.start -= currentCount;
+               foodStore.fetch(request);
+             }
            }
 
            //Fetch the data.  
-           foodStore.fetch({onBegin: clearOldList, onComplete: gotItems, onError: fetchFailed});
+           foodStore.fetch({onBegin: clearOldList, onComplete: gotItems, onError: fetchFailed, start: currentStart, count: currentCount });
 
            //Link the click event of the button to driving the fetch.
            dojo.connect(forward, "onClick", nextPage);
