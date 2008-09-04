@@ -4,8 +4,11 @@ Hierarchical data and access through dojo.data
 ==============================================
 
 .. contents::
-  
-  :depth 3
+  :depth: 3
+
+=================
+Hierarchical data
+=================
 
 One of the design goals of dojo.data was to handle the concept of hierarchical items.  What that means is that an item may have references to, or contain, other items.  The end result when viewed graphically is a Tree instead of a flat list.  So, this leads to the questions of how do you determine if there is hierarchy and how do you walk across it.  This is, in fact, quite easy to do using dojo.data.ItemFileReadStore as it supports data in hierarchical structure.
 
@@ -62,7 +65,12 @@ Lets take a look at an example hierarchy built up with references in dojo.data.I
 
 There are two things to notice about the above structure.  The first is that yes, it is still a flat list of data items to feed to dojo.data.ItemFileReadStore.  But, as you can see, there is a special attribute, *_reference* that is used to point to another item in the list.  These references, when processed by ItemFileReadStore, will establish the relationships in the data.  This means that when you call store.getValues(item, children), the array returned is an array of the actual items pointed to.  So, if you then try to visualize it, you can see how the Tree of hierarchy is formed from the references.  Below is an example of using dijit.Tree with the above dataset to construct and display a tree.
 
-**Functional Example 1:  dijit.Tree displaying hierarchical data in a data store.**
+==========================
+Hierarchical data examples
+==========================
+
+Functional Example 1:  dijit.Tree displaying hierarchical data in a data store
+------------------------------------------------------------------------------
 
 **Note:** *The tree model selects root nodes via a query attribute.  This query attribute is directly passed to the data store as part of the fetch made to generate the list of root items.*
 
@@ -129,7 +137,8 @@ There are two things to notice about the above structure.  The first is that yes
 
 Okay, hopefully the above example helped visually display how nested items are represented.  Nested items are no more than an attribute in a datastore item that has a value that is another data store item.  There is nothing more to it than that, ultimately.  If the above example was too confusing since the hierarchy was constructed through references ... another way to demonstrate hierarchy of items can be presented with dojo.data.ItemFileReadStore.  The ItemFileReadStore also supports a basic hierarchical format instead of item references.  
 
-**Example 2:  A hierarchical format without references:**
+Example 2:  A hierarchical format without references
+----------------------------------------------------
 
 .. code-block :: javascript
 
@@ -178,7 +187,8 @@ Okay, hopefully the above example helped visually display how nested items are r
     ]
   }
 
-**Functional Example 2:  dijit.Tree displaying hierarchical data in a data store.**
+Functional Example 2:  dijit.Tree displaying hierarchical data in a data store
+------------------------------------------------------------------------------
 
 **Note:** *The tree model selects root nodes via a query attribute.  This query attribute is directly passed to the data store as part of the fetch made to generate the list of root items.*
 
@@ -243,10 +253,10 @@ Okay, hopefully the above example helped visually display how nested items are r
     <div dojoType="dijit.tree.ForestStoreModel" jsId="geographyModel2" store="geographyStore2" query="{type: 'continent'}" rootId="Geography" rootLabel="Geography"></div>
     <div dojoType="dijit.Tree" model="geographyModel2"></div>
 
-
 Okay, great!  Two examples showing examples of hierarchical structures using one datastore, dojo.data.ItemFileReadStore.  But, it doesn't immediately answer how you use the dojo.data APIs to walk this.  How you do it is simple, it just uses isItem() to detect if an attribute value is also considered a data item by the store.   So ... code that would walk over an item and identify sub items would look like:
 
-**Sample code:  Detecting child items.**
+Sample code:  Detecting child items
+-----------------------------------
 
 .. code-block :: javascript
 
@@ -279,13 +289,14 @@ Okay, great!  Two examples showing examples of hierarchical structures using one
   //Call the fetch of the toplevel continent items.
   store.fetch({query: {type: "continent"}, onComplete: gotContinents});
 
-
-**Lazy-Loading**
-================
+============
+Lazy-Loading
+============
 
 Okay, detecting if items contain child items looks simple; one function call to isItem().  But ... doesn't dojo.data also support lazy-loading of items to keep from having to pull down data that may never be used?  Yes, it does.  This is done through using two more functions to perform tests to see if an item is completely inflated or not, *isItemLoaded(item)* and *loadItem(keywordargs)*.  These functions provide methods for loading items tha are currently only stubs and not fully inflated.  So if we wish to make the **Sample One**, what would it look like?  See below for an example:
 
-**Sample code:  Detecting child items and lazy-loading items on demand.**
+Sample code:  Detecting child items and lazy-loading items on demand
+--------------------------------------------------------------------
 
 .. code-block :: javascript
 
