@@ -255,6 +255,7 @@ Radial gradient
       Corresponds to a circle's border.
 
     Defaults:
+
     .. code-block :: javascript
 
       [{offset: 0, color: "black"}, {offset: 1, color: "white"}]
