@@ -348,155 +348,198 @@ Following public methods/events are defined (they can be used with dojo.connect(
 
 * onMoving --- called by the default implementation of onMove() method before updating the node's position. It uses the same parameters as onMove above. You can update leftTop parameter to whatever you want.
 * onMoved --- called by the default implementation of onMove() method after updating the node's position. It uses the same parameters as onMove above.
-onMoveStop --- called when move is finished. It uses the same parameters as onMoveStart above.
+* onMoveStop --- called when move is finished. It uses the same parameters as onMoveStart above.
 
 The most important methods are onFirstMove() and onMove(). The former can be used to set up some initial parameters for the move, and possibly update some DOM nodes. The latter implements the move itself. By overriding these two methods you can implement a variety of click-drag-release operations, e.g., a resize operation, a draw operation, and so on.
 
 Following mouse event handlers are set up:
-onMouseDown
-onMouseMove --- can be set up by onMouseDown when executing the non-zero delay.
-onMouseUp --- can be set up by onMouseDown to cancel the drag while processing the non-zero delay.
+
+* onMouseDown
+* onMouseMove --- can be set up by onMouseDown when executing the non-zero delay.
+* onMouseUp --- can be set up by onMouseDown to cancel the drag while processing the non-zero delay.
 
 Additionally ondragselect and onselectstart events are cancelled by onSelectStart() method.
 
 Following topic events are raised by Moveable:
-/dnd/move/start --- published by the default implementation of onMoveStart() passing a mover as a parameter.
-/dnd/move/stop --- published by the default implementation of onMoveStop() passing a mover as a parameter.
+
+* /dnd/move/start --- published by the default implementation of onMoveStart() passing a mover as a parameter.
+* /dnd/move/stop --- published by the default implementation of onMoveStop() passing a mover as a parameter.
 
 Following CSS classes are used by the moveable:
-dojoMove --- assigned to the body when the drag is in progress.
-dojoMoveItem --- assigned to the dragged node when the drag is in progress.
+
+* dojoMove --- assigned to the body when the drag is in progress.
+* dojoMoveItem --- assigned to the dragged node when the drag is in progress.
+
 Mover
+-----
 
 Mover is a utility class, which actually handles events to move the node. Instances of this class exist only when the drag is in progress. In some cases you can use it directly.
 
 The constructor accepts following parameters:
-node --- a DOM node or an id (string) of such node. This node will be moved.
-e --- a mouse event, which actually indicated the start of the move. It is used to extract the coordinates of the mouse using pageX and pageY properties.
-host --- a host object, which will be called by the mover during the move. It should define at least two methods: onFirstMove(), and onMove, and possibly two optional methods: onMoveStart() and onMoveStop(). See Moveable for details.
+
+* node --- a DOM node or an id (string) of such node. This node will be moved.
+* e --- a mouse event, which actually indicated the start of the move. It is used to extract the coordinates of the mouse using pageX and pageY properties.
+* host --- a host object, which will be called by the mover during the move. It should define at least two methods: onFirstMove(), and onMove, and possibly two optional methods: onMoveStart() and onMoveStop(). See Moveable for details.
 
 Following public members are available:
-node --- the node being dragged.
-mouseButton --- a mouse button, which was pressed when starting the drag.
-marginBox --- an object with two integer members: "l" and "t". It is initialized by the constructor, updated by the onFirstMove() method on the mover and used later on to add to the mouse coordinates before passing them to moveable's onMove() as leftTop.
+
+* node --- the node being dragged.
+* mouseButton --- a mouse button, which was pressed when starting the drag.
+* marginBox --- an object with two integer members: "l" and "t". It is initialized by the constructor, updated by the onFirstMove() method on the mover and used later on to add to the mouse coordinates before passing them to moveable's onMove() as leftTop.
 
 Following public methods are defined:
-destroy() --- should be call, when you want to stop the move.
-onFirstMove() --- called once to finish setting up the marginBox property.
+
+* destroy() --- should be call, when you want to stop the move.
+* onFirstMove() --- called once to finish setting up the marginBox property.
 
 Following mouse event handlers are set up: onMouseMove, onMouseUp. Additionally ondragselect and onselectstart events are cancelled.
+
 Specialized Moveables
+---------------------
 
 Following specialized moveable classes are defined:
-dojo.dnd.move.constrainedMoveable --- can be used to constrained a move to a dynamically calculated box. This class is define in the dojo.dnd.move module. It is based on Moveable, and accepts following additional parameters during construction:
-constraints --- a function, which is called in the context of this moveable, with a newly created mover object, and returns a rectangle to be used for restrictions. The rectangle is an object, which defines following numeric members: "l" for left, "t" for top, "w" for width, and "h" for height. All numbers are in pixels.
-within --- a Boolean flag. When it is true, the dragged node will be moved only within the defined rectangle, and cannot go outside of it. Otherwise, the restriction applies to the left-top corner of the dragged node.
-dojo.dnd.move.boxConstrainedMoveable --- can be used to constrain a move to a predefined box. This class is define in the dojo.dnd.move module. It is based on constrainedMoveable and accepts following additional parameters during construction:
-box --- a rectangle box (see above), which defines constraint boundaries.
+
+* dojo.dnd.move.constrainedMoveable --- can be used to constrained a move to a dynamically calculated box. This class is define in the dojo.dnd.move module. It is based on Moveable, and accepts following additional parameters during construction:
+
+  * constraints --- a function, which is called in the context of this moveable, with a newly created mover object, and returns a rectangle to be used for restrictions. The rectangle is an object, which defines following numeric members: "l" for left, "t" for top, "w" for width, and "h" for height. All numbers are in pixels.
+  * within --- a Boolean flag. When it is true, the dragged node will be moved only within the defined rectangle, and cannot go outside of it. Otherwise, the restriction applies to the left-top corner of the dragged node.
+
+* dojo.dnd.move.boxConstrainedMoveable --- can be used to constrain a move to a predefined box. This class is define in the dojo.dnd.move module. It is based on constrainedMoveable and accepts following additional parameters during construction:
+
+  * box --- a rectangle box (see above), which defines constraint boundaries.
 constraints --- this parameter is automatically defined, do not define it yourself.
-within --- see above for details.
-dojo.dnd.move.parentConstrainedMoveable --- can be used to constrain the move by the boundaries of the node's parent. This class is define in the dojo.dnd.move module. It is based on constrainedMoveable and accepts following additional parameters during construction:
-area --- a string, which defines constraint boundaries. Valid values are: "content", "padding", "border", and "margin".
+  * within --- see above for details.
+
+* dojo.dnd.move.parentConstrainedMoveable --- can be used to constrain the move by the boundaries of the node's parent. This class is define in the dojo.dnd.move module. It is based on constrainedMoveable and accepts following additional parameters during construction:
+
+  * area --- a string, which defines constraint boundaries. Valid values are: "content", "padding", "border", and "margin".
 constraints --- this parameter is automatically defined, do not define it yourself.
-within --- see above for details.
-dojo.dnd.TimedMoveable --- can be used to throttle FPS while moving nodes. It is based on Moveable, and accepts following additional parameters during construction:
-timeout --- the time delay number in milliseconds. The node will not be moved for that number of milliseconds, but it will continue to accumulate changes in the mouse position.
+  * within --- see above for details.
+
+* dojo.dnd.TimedMoveable --- can be used to throttle FPS while moving nodes. It is based on Moveable, and accepts following additional parameters during construction:
+
+  * timeout --- the time delay number in milliseconds. The node will not be moved for that number of milliseconds, but it will continue to accumulate changes in the mouse position.
+
 Subclassing DnD classes
+-----------------------
 
 If you want to subclass dojo.dnd.Container, dojo.dnd.Selector, dojo.dnd.Source, dojo.dnd.Moveable, or their descendants, and you want to use the declarative markup, don't forget to implement the markupFactory() method. The reason for that is dojo.parser, which instantiates the markup, expects a very particular signature from a constructor. Dojo DnD classes predate dojo.parser, and have a non-conformant signature. dojo.parser is smart enough to use a special adapter function in such cases. See the source code for dojo.dnd.Source.markupFactory() (for the Container-Selector-Source chain), and dojo.dnd.Moveable.markupFactory() for details. The key point is to return the instance of your new class there. Otherwise the instance of your base class is going to be created, which is probably not what you want.
+
 Summary of CSS classes
+----------------------
 
 All DnD-related classes can affect 6 types of DOM nodes. All of them are collected in this section for your convenience. Using CSS classes described here you can design extremely sophisticated UI to improve usability and enhance the workflow of your applications.
+
 body
+~~~~
 
 The body node is updated only during active DnD operations. It can be used during the move to deemphasize temporarily the web page and to highlight available targets or a dragged object.
 
 Following CSS classes are used:
-dojoDndCopy --- assigned to the body during the copy DnD operations (dojo.dnd).
-dojoDndMove --- assigned to the body during the move DnD operations (dojo.dnd).
-dojoMove --- assigned to the body when the drag is in progress (dojo.dnd.move).
-Source/target (dojo.dnd)
 
+* dojoDndCopy --- assigned to the body during the copy DnD operations (dojo.dnd).
+* dojoDndMove --- assigned to the body during the move DnD operations (dojo.dnd).
+* dojoMove --- assigned to the body when the drag is in progress (dojo.dnd.move).
+
+Source/target (dojo.dnd)
+~~~~~~~~~~~~~~~~~~~~~~~~
 Source can be assigned several classes to reflect its current role. These classes can be used together with the body CSS classes described above to create CSS rules to differentiate containers visually during drags.
 
 Following CSS classes are used:
-dojoDndContainer --- assigned to each container node during the construction.
-dojoDndContainerOver --- assigned when the mouse hovers over the container.
-dojoDndHorizontal --- assigned to the container node during the construction, if this object represents a horizontal list of dndItems --- its "horizontal" property set to true.
-dojoDndSource --- assigned to the container node during the construction, if this object can be used as a source of DnD items --- its "isSource" property set to true.
-dojoDndSourceCopied --- assigned to the container node during the active DnD operation when user copies items from it, e.g., pressed the Ctrl key while dragging. When this class is assigned to the node, dojoDndSource class is removed.
-dojoDndSourceMoved --- assigned to the container node during the active DnD operation when user moves items from it, e.g., the Ctrl key is not pressed while dragging. When this class is assigned to the node, dojoDndSource class is removed.
-dojoDndTarget --- assigned to the container node during the construction, if this object can potentially accept DnD items --- its "accept" list is not empty.
-dojoDndTargetDisabled --- assigned to the container node during the active DnD operation when this node cannot accept currently dragged items, e.g., because it doesn't accept items of these types. When this class is assigned to the node, dojoDndTarget class is removed.
+
+* dojoDndContainer --- assigned to each container node during the construction.
+* dojoDndContainerOver --- assigned when the mouse hovers over the container.
+* dojoDndHorizontal --- assigned to the container node during the construction, if this object represents a horizontal list of dndItems --- its "horizontal" property set to true.
+* dojoDndSource --- assigned to the container node during the construction, if this object can be used as a source of DnD items --- its "isSource" property set to true.
+* dojoDndSourceCopied --- assigned to the container node during the active DnD operation when user copies items from it, e.g., pressed the Ctrl key while dragging. When this class is assigned to the node, dojoDndSource class is removed.
+* dojoDndSourceMoved --- assigned to the container node during the active DnD operation when user moves items from it, e.g., the Ctrl key is not pressed while dragging. When this class is assigned to the node, dojoDndSource class is removed.
+* dojoDndTarget --- assigned to the container node during the construction, if this object can potentially accept DnD items --- its "accept" list is not empty.
+* dojoDndTargetDisabled --- assigned to the container node during the active DnD operation when this node cannot accept currently dragged items, e.g., because it doesn't accept items of these types. When this class is assigned to the node, dojoDndTarget class is removed.
+
 DnD item (dojo.dnd)
+~~~~~~~~~~~~~~~~~~~
 
 DnD items can be assigned several classes to reflect their current role visually.
 
 Following CSS classes are used:
-dojoDndItem --- assigned to every new data item node. It should be assigned to every item before the container construction, if you want it to be added automatically by the constructor.
-dojoDndItemOver -- assigned to a data item node when the mouse hovers over the this item. This class is assigned in addition to dojoDndItem class.
-dojoDndItemSelected --- assigned if a data item is selected but it is not an anchor (the last selected element). This class is assigned in addition to dojoDndItem class.
-dojoDndItemAnchor --- assigned to an anchor data item. At any given time the selector can have zero or one anchor. This class is assigned in addition to dojoDndItem class. Being an anchor means that this item is selected.
-dojoDndItemBefore --- assigned to the data item node during the active DnD operation if transferred items will be inserted before this item. This class is assigned in addition to all other classes.
-dojoDndItemAfter --- assigned to the data item node during the active DnD operation if transferred items will be inserted after this item. This class is assigned in addition to all other classes.
+
+* dojoDndItem --- assigned to every new data item node. It should be assigned to every item before the container construction, if you want it to be added automatically by the constructor.
+* dojoDndItemOver -- assigned to a data item node when the mouse hovers over the this item. This class is assigned in addition to dojoDndItem class.
+* dojoDndItemSelected --- assigned if a data item is selected but it is not an anchor (the last selected element). This class is assigned in addition to dojoDndItem class.
+* dojoDndItemAnchor --- assigned to an anchor data item. At any given time the selector can have zero or one anchor. This class is assigned in addition to dojoDndItem class. Being an anchor means that this item is selected.
+* dojoDndItemBefore --- assigned to the data item node during the active DnD operation if transferred items will be inserted before this item. This class is assigned in addition to all other classes.
+* dojoDndItemAfter --- assigned to the data item node during the active DnD operation if transferred items will be inserted after this item. This class is assigned in addition to all other classes.
+
 DnD handles (dojo.dnd)
+~~~~~~~~~~~~~~~~~~~~~~
 
 DnD items can defined special handles on their descendants, which can be used for dragging. In this case the body of the DnD item cannot be used to start the drag.
 
 Following CSS classes are used:
-dojoDndHandle --- assigned to handles of item nodes. See the withHandles parameter of Source above.
+
+* dojoDndHandle --- assigned to handles of item nodes. See the withHandles parameter of Source above.
+
 Avatar (dojo.dnd)
+~~~~~~~~~~~~~~~~~
 
 The default avatar can be styled to suit your needs.
 
 Following CSS classes are used:
-dojoDndAvatar --- assigned to the avatar node (the table).
-dojoDndAvatarHeader --- assigned to the first row/the header (the first tr node).
-dojoDndAvatarItem --- assigned to the avatar item rows (tr nodes excluding the very first one).
-dojoDndAvatarCanDrop --- added to the avatar node (the table) when the mouse is over a target, which can accept transferred items. Otherwise it is removed.
+
+* dojoDndAvatar --- assigned to the avatar node (the table).
+* dojoDndAvatarHeader --- assigned to the first row/the header (the first tr node).
+* dojoDndAvatarItem --- assigned to the avatar item rows (tr nodes excluding the very first one).
+* dojoDndAvatarCanDrop --- added to the avatar node (the table) when the mouse is over a target, which can accept transferred items. Otherwise it is removed.
+
 Dragged node (dojo.dnd.move)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The dragged node can be specially styled while in move.
 
 Following CSS classes are used:
-dojoMoveItem --- assigned to the dragged node when the drag is in progress.
+
+* dojoMoveItem --- assigned to the dragged node when the drag is in progress.
+
 Summary of topics
+~~~~~~~~~~~~~~~~~
 
 While local events are the preferred way to handle state changes, in some cases topics (named global events) can simplify an application.
 
 Following topic events can be generated by dojo.dnd.Manager:
-/dnd/start --- when DnD starts. Current source, nodes, and the copy flag (see Manager.startDrag() for more info) are passed as parameters of this event.
-/dnd/source/over --- when the mouse moves over a source. The source in question is passed as a parameter. The same event is raised when the mouse goes out of a source. In this case null is passed as a parameter.
-/dnd/drop/before --- raised just before the drop. It can be used to capture the drop parameters. Parameters are the same as for /dnd/drop, but reflect current values.
-/dnd/drop --- raised to perform a drop. The first three parameters are the same as for /dnd/start. The fourth parameter is the target object. Note that during the processing of this event nodes can be already moved, or reused. If you need the original nodes, use /dnd/drop/before to capture them.
-/dnd/cancel --- when DnD was cancelled either by user (by hitting Esc), or by dropping items in illegal location.
+
+* /dnd/start --- when DnD starts. Current source, nodes, and the copy flag (see Manager.startDrag() for more info) are passed as parameters of this event.
+* /dnd/source/over --- when the mouse moves over a source. The source in question is passed as a parameter. The same event is raised when the mouse goes out of a source. In this case null is passed as a parameter.
+* /dnd/drop/before --- raised just before the drop. It can be used to capture the drop parameters. Parameters are the same as for /dnd/drop, but reflect current values.
+* /dnd/drop --- raised to perform a drop. The first three parameters are the same as for /dnd/start. The fourth parameter is the target object. Note that during the processing of this event nodes can be already moved, or reused. If you need the original nodes, use /dnd/drop/before to capture them.
+* /dnd/cancel --- when DnD was cancelled either by user (by hitting Esc), or by dropping items in illegal location.
 
 All sources subscribe to dojo.dnd.Manager's topics. Some users fail to understand that if they override, say, onDndDrop() method, which is a /dnd/drop topic listener, it will be called every time /dnd/drop is signaled. It means it will be notified even if your source was not a part of the DnD exchange --- it wasn't a source for the items, and it is not a target of the drop. If you subclass dojo.dnd.Source and override onDndDrop(), your new method will be called for every instance of your class. Do not despair --- it is very easy to filter out unneeded cases. Just use the manager to see what objects are involved.
 
 Following topic events are raised by dojo.dnd.Moveable:
-/dnd/move/start --- published by the default implementation of Moveable.onMoveStart() passing a mover as parameter.
-/dnd/move/stop --- published by the default implementation of Moveable.onMoveStop() passing a mover as parameter.
+
+* /dnd/move/start --- published by the default implementation of Moveable.onMoveStart() passing a mover as parameter.
+* /dnd/move/stop --- published by the default implementation of Moveable.onMoveStop() passing a mover as parameter.
+
 Available tests
+---------------
 
 All tests are located in the dojo/tests/dnd/ sub-directory. They are used by developers to test the conformance, and can be used by users to see how different objects and algorithms can be used. Following tests are available:
-test_dnd.html tests general DnD operations including the markup and programmatic creation, pure targets, a special representation of DnD items in the avatar, styling of different objects, complex selection of items, and topics.
-test_container.html tests the default creator function with different types of containers created programmatically.
-test_container_markup.html tests the default creator function with different types of containers created with the markup.
-test_selector.html tests the default creator function with different types of containers created programmatically.
-test_selector_markup.html tests the default creator function with different types of containers created with the markup.
-test_dnd_handles.html tests DnD handles. All objects are created with the markup.
-test_form.html tests skipping form elements.
-test_moveable.html tests moveable nodes declared moveable programmatically. Additionally it tests topics.
-test_moveable_markup.html tests moveable nodes declared moveable by the markup. Additionally it tests topics.
-test_params.html tests delay and skip parameters.
-test_box_constraints.html tests dojo.dnd.move.boxConstrainedMoveable using programmatic and markup methods.
-test_parent_constraints.html tests dojo.dnd.move.parentConstrainedMoveable with all "area" values.
-test_parent_constraints_margins.html tests dojo.dnd.move.parentConstrainedMoveable with all "within" values.
-test_custom_constraints.html tests dojo.dnd.move.constrainedMoveable implementing the "grid move" pattern.
-test_timed_moveable.html tests dojo.dnd.TimedMoveable with different timeout values.
-flickr_viewer.html implements an elaborate demo, which retrieves pictures of three types from Flickr, and allows to sort them into two bins according to their types. It demonstrates many techniques including horizontal vs. vertical containers, different representation of data items in different containers and in the avatar, and so on.
+
+* test_dnd.html tests general DnD operations including the markup and programmatic creation, pure targets, a special representation of DnD items in the avatar, styling of different objects, complex selection of items, and topics.
+* test_container.html tests the default creator function with different types of containers created programmatically.
+* test_container_markup.html tests the default creator function with different types of containers created with the markup.
+* test_selector.html tests the default creator function with different types of containers created programmatically.
+* test_selector_markup.html tests the default creator function with different types of containers created with the markup.
+* test_dnd_handles.html tests DnD handles. All objects are created with the markup.
+* test_form.html tests skipping form elements.
+* test_moveable.html tests moveable nodes declared moveable programmatically. Additionally it tests topics.
+* test_moveable_markup.html tests moveable nodes declared moveable by the markup. Additionally it tests topics.
+* test_params.html tests delay and skip parameters.
+* test_box_constraints.html tests dojo.dnd.move.boxConstrainedMoveable using programmatic and markup methods.
+* test_parent_constraints.html tests dojo.dnd.move.parentConstrainedMoveable with all "area" values.
+* test_parent_constraints_margins.html tests dojo.dnd.move.parentConstrainedMoveable with all "within" values.
+* test_custom_constraints.html tests dojo.dnd.move.constrainedMoveable implementing the "grid move" pattern.
+* test_timed_moveable.html tests dojo.dnd.TimedMoveable with different timeout values.
+* flickr_viewer.html implements an elaborate demo, which retrieves pictures of three types from Flickr, and allows to sort them into two bins according to their types. It demonstrates many techniques including horizontal vs. vertical containers, different representation of data items in different containers and in the avatar, and so on.
 
 The same directory contains a simple CSS file, which shows how you can style the DnD objects: dndDefault.css. You can see it in action in almost all tests. It can be used as a starting point for your own styling.
-
-Deze pagina bewerken (als u toestemming heeft) | Google Documenten - Online tekstverwerking, presentaties en spreadsheets.
- 
