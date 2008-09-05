@@ -98,3 +98,23 @@ All items returned from FlickrStore have the following attributes that can be ac
 +---------------+-----------------------------------------------------------------------------------------------------------------------------+
 | link          |A URL linking to the Flickr page displaying the image.                                                                       |
 +---------------+-----------------------------------------------------------------------------------------------------------------------------+
+
+Query Syntax
+------------
+
+The fetch method query syntax for FlickrStore is simple and straightforward. It allows the following attributes to be queried against:
+
++---------------+-----------------------------------------------------------------------------------------------------------------------------+
+| id            |Flickr userid to use to narrow the search scope. This is optional.                                                           |
++---------------+-----------------------------------------------------------------------------------------------------------------------------+
+| ids           |A comma separated list of IDs used to narrow search scope. This is optional.                                                 |
++---------------+-----------------------------------------------------------------------------------------------------------------------------+
+| tags          |A comma separated list of tags to search for matches on. This is optional.                                                   |
++---------------+-----------------------------------------------------------------------------------------------------------------------------+
+| tagmode       |Indicates whether all tags must match from the list or any can match from the list. Valid values are all or any and the      |
+|               |default is any.                                                                                                              |
++---------------+-----------------------------------------------------------------------------------------------------------------------------+
+| lang          |Specifies the language to return the results in. This is optional.                                                           |
++---------------+-----------------------------------------------------------------------------------------------------------------------------+
+
+**Note:** Unlike all the other example stores, the FlickrStore store cannot do wild-card matching of the attributes. This is because the Flickr public photo feed service cannot do it. In an ideal service implementation, the Flickr service would provide a mechanism by with to pass in wild cards as part of its query parameters. Also, the Flickr public feed API limits the number of returned photos to a maximum of twenty.
