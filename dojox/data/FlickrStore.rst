@@ -172,8 +172,8 @@ Sample 1:  Listing nature pictures
                  for (i = 0; i < items.length; i++) {
                    var item = items[i];
                    var image = document.createElement("img");
-                   image.setAttribute("href", flickrStore.getValue(item, "imageUrlMedium"));
                    list.appendChild(image);
+                   image.setAttribute("href", flickrStore.getValue(item, "imageUrlMedium"));
                    list.appendChild(document.createElement("br"));
                  }
                }
