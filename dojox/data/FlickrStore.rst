@@ -184,7 +184,7 @@ Sample 1:  Listing nature pictures
   .. cv :: html 
 
     <div dojoType="dojox.data.FlickrStore" jsId="flickrStore"></div>
-    <div dojoType="dijit.form.Button" jsId="button">Find all nature pictures!</div>
+    <div dojoType="dijit.form.Button" jsId="button">Find nature pictures!</div>
     <br>
     <br>
     <span id="list">
