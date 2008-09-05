@@ -1,4 +1,4 @@
-#format dojo_rst
+.#format dojo_rst
 
 Paging Data
 ===========
@@ -32,8 +32,8 @@ To demonstrate the paging function, we'll assume an ItemFileReadStore with the f
 Examples
 ========
 
-Sample Code 1:  Pagination general flow 
-----------------------------------------
+Pagination general flow 
+-----------------------
 
 *The sample returns 2 items per page*
 
@@ -80,12 +80,12 @@ Sample Code 1:  Pagination general flow
     ...
   }
 
-  //Do the initial request.  Without a query, it should just select all items.  The start and count limit the number returned.
+  //Do the initial request. Without a query, it should just select all items. The start and count limit the number returned.
   request = store.fetch({onComplete: itemsLoaded, start: 0, count: pageSize});
 
 
-Functional Example 1: Paging over items
----------------------------------------
+Paging over items
+-----------------
 
 *The sample returns 2 items per page*
 
@@ -110,8 +110,8 @@ Functional Example 1: Paging over items
           { name: 'pepper', aisle: 'Spices',  price: 1.01  }
         ]};
 
-        //This function performs some basic dojo initialization.  In this case it connects the button
-        //onClick to a function which invokes *fetch()*es.  The fetch function queries for only a subset
+        //This function performs some basic dojo initialization. In this case it connects the button
+        //onClick to a function which invokes *fetch()*es. The fetch function queries for only a subset
         //and provides callbacks to use for completion of data retrieval or reporting of errors.
         function init () {
 
@@ -129,7 +129,7 @@ Functional Example 1: Paging over items
                  list.removeChild(list.firstChild);
                }
              }
-             //Save off the total size.  We need it to determine when to ignore the buttons.
+             //Save off the total size. We need it to determine when to ignore the buttons.
              totalItems = size;
            }
   
@@ -172,7 +172,7 @@ Functional Example 1: Paging over items
              }
            }
 
-           //Fetch the data.  
+           //Fetch the data.
            request = foodStore.fetch({onBegin: clearOldList, onComplete: gotItems, onError: fetchFailed, start: currentStart, count: currentCount });
 
            //Link the click event of the button to driving the fetch.
