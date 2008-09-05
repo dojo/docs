@@ -118,3 +118,10 @@ The fetch method query syntax for FlickrStore is simple and straightforward. It 
 +---------------+-----------------------------------------------------------------------------------------------------------------------------+
 
 **Note:** Unlike all the other example stores, the FlickrStore store cannot do wild-card matching of the attributes. This is because the Flickr public photo feed service cannot do it. In an ideal service implementation, the Flickr service would provide a mechanism by with to pass in wild cards as part of its query parameters. Also, the Flickr public feed API limits the number of returned photos to a maximum of twenty.
+
+========
+Examples
+========
+
+Sample 1:  Listing nature pictures
+----------------------------------
