@@ -57,8 +57,8 @@ Functional Examples
 ===================
 
 
-Functional Example 1: Loading all items through callbacks
----------------------------------------------------------
+Loading all items through callbacks
+-----------------------------------
 
 .. cv-compound ::
   
@@ -193,8 +193,8 @@ Now, to demonstrate this concept in a functional example. In the following examp
 Functional onItem Examples
 ==========================
 
-Functional Example 2: Loading all items through the onItem callback
--------------------------------------------------------------------
+Loading all items through the onItem callback
+---------------------------------------------
 
 .. cv-compound ::
   
