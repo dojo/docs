@@ -34,3 +34,13 @@ Terminology
 |               |                              |**Note:** It is highly recommended that all stores use an object structure of attribute         |
 |               |                              |name/value pairs as thequery format for consistency between stores.                             |
 +---------------+------------------------------+------------------------------------------------------------------------------------------------+
+| dojo.data.API | JDBC or ODBC                 |The standard set of functions that datastore implements. The dojo.data.api module includes      |
+|               |                              |includes a set of APIs (such as Read and Write) and a datastore can implement one or more of the|
+|               |                              |APIs.                                                                                           |
++---------------+------------------------------+------------------------------------------------------------------------------------------------+
+| internal data |                              |The private data structures that a datastore uses to cache data in local memory                 |
+| representation|                              |(for example XML DOM nodes, anonymous JSON objects, or arrays of arrays).                       |  
++---------------+------------------------------+------------------------------------------------------------------------------------------------+
+| request       | SQL select                   |The parameters used to limit and sort a set of items. This includes the query, sorting          |
+|               |                              |attributes, upper and lower limits, and callbacks.                                              |
++---------------+------------------------------+------------------------------------------------------------------------------------------------+
