@@ -28,12 +28,12 @@ To demonstrate the paging function, we'll assume an ItemFileReadStore with the f
       { name: 'Black Pepper', aisle: 'Spices',  price: 1.01 }
   ]}
 
-========
-Examples
-========
 
+=======================
 Pagination general flow 
------------------------
+=======================
+
+The following example code fragment shows the general flow with Pagination:
 
 *The sample returns 2 items per page*
 
@@ -83,6 +83,10 @@ Pagination general flow
   //Do the initial request. Without a query, it should just select all items. The start and count limit the number returned.
   request = store.fetch({onComplete: itemsLoaded, start: 0, count: pageSize});
 
+
+===================
+Functional Examples
+===================
 
 Paging over items
 -----------------
