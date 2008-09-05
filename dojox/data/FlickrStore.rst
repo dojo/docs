@@ -61,3 +61,40 @@ Response
 	   }
         ]
   })
+
+===========
+FlickrStore
+===========
+
+FlickrStore's role is to process the query parameters passed to the dojo.data.api.Read API and generate the appropriate service URL. It then processes the response from the service and handles accessing the items returned from the query. It also provides simple attribute access to all the values.
+
+Constructor Parameters
+----------------------
+  FlickrStore does not have any constructor parameters.
+
+Item Attributes
+---------------
+All items returned from FlickrStore have the following attributes that can be accessed using the dojo.data.api.Read API to retrieve data about the item:
+
++---------------+-----------------------------------------------------------------------------------------------------------------------------+
+| title         |The title of the photo.                                                                                                      |
++---------------+-----------------------------------------------------------------------------------------------------------------------------+
+| author        |The person who published the photo to Flickr.                                                                                |
++---------------+-----------------------------------------------------------------------------------------------------------------------------+
+| description   |A description of the photo. This will generally contain HTML formatted text.                                                 |
++---------------+-----------------------------------------------------------------------------------------------------------------------------+
+| dateTaken     |A JavaScript date object representing the date the photo was taken.                                                          |
++---------------+-----------------------------------------------------------------------------------------------------------------------------+
+| datePublished |A JavaScript date object representing the date the photo was published to Flickr.                                            |
++---------------+-----------------------------------------------------------------------------------------------------------------------------+
+| tags          |The tags that are assigned to this photo. flickrStore.getValue(item, "tags") returns the first tag,                          |
+|               |flickrStore.getValues(item, "tags") returns all tags.                                                                        |
++---------------+-----------------------------------------------------------------------------------------------------------------------------+
+| imageUrl      |A URL to the full resolution photo image.                                                                                    |
++---------------+-----------------------------------------------------------------------------------------------------------------------------+
+| imageUrlSmall |A URL to the small (icon sized) resolution photo image.                                                                      |
++---------------+-----------------------------------------------------------------------------------------------------------------------------+
+| imageUrlMedium|A URL to the mid resolution photo image.                                                                                     |
++---------------+-----------------------------------------------------------------------------------------------------------------------------+
+| link          |A URL linking to the Flickr page displaying the image.                                                                       |
++---------------+-----------------------------------------------------------------------------------------------------------------------------+
