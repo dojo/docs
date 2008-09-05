@@ -73,6 +73,60 @@ This example shows how to create a simple Grid declaratively.
         }
     </style>
 
+Programmatically creating a DataGrid
+------------------------------------
+
+This example shows how to create a simple Grid programmatically.
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+      dojo.require("dojox.grid.DataGrid");
+      dojo.require("dojox.data.CsvStore");
+
+      var store1 = new dojox.data.CsvStore({ url: '/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/tests/support/movies.csv' });
+
+      var grid = null;
+
+      dojo.addOnLoad(function(){
+          var layout = [
+              { field: 'Title', name: 'Title of Movie', width: '300px' },
+              { field: 'Year', width: '50px' },
+              { field: 'Producer', width: 'auto' }
+          ];
+
+          grid = new dojox.grid.DataGrid({
+              query: { Title: '*' },
+              store: store1,
+              clientSort: true,
+              rowSelector: '20px'
+          }, 'gridNode');
+
+          grid.startup();
+      });
+    </script>
+
+  .. cv:: html
+
+    <div id="gridNode" style="width: 400px; height: 200px;"></div>
+
+  .. cv:: css
+
+    <style type="text/css">
+        @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/resources/Grid.css";
+        @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/resources/nihiloGrid.css";
+
+        .dojoxGrid table {
+            margin: 0;
+        }
+    </style>
+
+Note the grid.startup() command after constructing the DataGrid.  Earlier development
+versions of DataGrid didn't require this but as of 1.2.0b1, you must call
+startup() as you would with other dijits, or the grid will not render.
+
 Working with selections
 -----------------------
 
