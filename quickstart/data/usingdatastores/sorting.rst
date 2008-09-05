@@ -69,7 +69,7 @@ Sample 1:  Showing how sort attributes affect ordering
 
              //Callback to perform an action when the data items are starting to be returned:
              function clearSortedList(size, request) {
-               var list = dojo.byId("sortedlist");
+               var list = dojo.byId("sortedList");
                if (list) { 
                  while (list.firstChild) {
                    list.removeChild(list.firstChild);
@@ -78,7 +78,7 @@ Sample 1:  Showing how sort attributes affect ordering
              }
 
              function clearUnSortedList(size, request) {
-               var list = dojo.byId("unSortedlist");
+               var list = dojo.byId("unSortedList");
                if (list) { 
                  while (list.firstChild) {
                    list.removeChild(list.firstChild);
