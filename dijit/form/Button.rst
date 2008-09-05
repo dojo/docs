@@ -6,10 +6,15 @@ dijit.form.Button
 :Status: Draft
 :Version: 1.2
 
+.. contents::
+  :depth: 3
+
+
 The dijit.form.Button widget is a representation of a normal <button> or <input type="submit/reset" />
 
+========
 Examples
---------
+========
 
 The first example shows how to create a button programmatically.
 
@@ -58,5 +63,3 @@ Buttons can have icons and labels, and sometimes they just display an icon, but 
   .. cv:: html
 
     <button dojoType="dijit.form.Button" iconClass="dijitEditorIcon dijitEditorIconCut" showLabel="false">cut</button>
-
-
