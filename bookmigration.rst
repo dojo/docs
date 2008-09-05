@@ -10,8 +10,9 @@ The Dojo Book on dojotoolkit.org has had a lot of work poured into it, and its b
 
 ----
 
+=================
 Dojo Book Outline
-------------------
+=================
 
 `The Book of Dojo <http://dojotoolkit.org/book/dojo-book-1-0>`_.
 
