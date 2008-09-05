@@ -10,7 +10,7 @@ Dojo has several examples of browser in-memory stores, such as `dojo.data.ItemFi
 
 FlickrStore is one such store. The purpose of FlickrStore is to wrapper the public photo feed of the Flickr service. Then by simply using the FlickrStore store, as you would any data store in Dojo, you now have access to querying the vast repository of public photos made available by others on the Web.
 
-Note: While this store wraps making calls to the Flickr service, as a user, you should still verify that you agree to the terms and conditions by which you are using the public flickr photo service. Review their terms and conditions, and the API terms and conditions.
+**Note: While this store wraps making calls to the Flickr service, as a user, you should still verify that you agree to the terms and conditions by which you are using the public flickr photo service. Review their terms and conditions, and the API terms and conditions.**
 
 The Flickr service provides its data back in a wide variety of formats (for example, ATOM, RSS, and JSON) but FlickrStore only makes use of the JSON format. The following example shows a query that FlickrStore processes and the response:
 
