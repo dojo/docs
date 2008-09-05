@@ -10,7 +10,7 @@ Terminology
 + **Term**      | **Equivalent Database Term** | **Description**                                                                                | 
 +---------------+------------------------------+------------------------------------------------------------------------------------------------+
 | datastore     | cursor                       |A JavaScript object that reads data from a data source and makes that data available as data    |     
-|               |                              items using the dojo.data APIs.                                                                                                                                               |
+|               |                              items using dojo.data APIs.                                                                      |
 +---------------+------------------------------+------------------------------------------------------------------------------------------------+
 | data source   | database                     |The place that the raw data comes from. For example, in a CsvStore, the data source would be the|
 |               |                              |.csv formatted file that the store loaded. In general, the data source could be a file, a       |
