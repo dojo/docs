@@ -99,7 +99,8 @@ This example shows how to create a simple Grid programmatically.
               query: { Title: '*' },
               store: store3,
               clientSort: true,
-              rowSelector: '20px'
+              rowSelector: '20px',
+              structure: layout
           }, 'gridNode');
 
           grid.startup();
