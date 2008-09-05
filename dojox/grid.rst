@@ -17,7 +17,7 @@ Grids are familiar in the client/server development world. Basically a grid is a
 Grid 1.2 Changes
 ================
 
-With Dojo Toolkit V1.2 the Grid comes with a major redesign. This site is now waiting for the developers, to explain the choosen design decisions and the changes since Grid 1.0 in depth.
+With Dojo Toolkit V1.2 the Grid comes with a major redesign. This site is **still** waiting for the developers, to explain the choosen design decisions and the changes since Grid 1.0 in depth.
 
 ========
 Examples
