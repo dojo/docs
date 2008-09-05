@@ -28,3 +28,9 @@ Terminology
 | identity      | primary key                  |An identifier that can be used to uniquely identify an item within the context of a single      |
 |               |                              |datastore.  Note that identifiers should be immutable.                                          |
 +---------------+------------------------------+------------------------------------------------------------------------------------------------+
+| query         | WHERE clause of the SQL      | A specification or request that asks a datastore for some subset of the items it knows about. A|  
+|               | select.                      |query is often an object with a set of attribute/value pairs that define what attributes should |
+|               |                              |be matched. It is possible, however, that the query could be a string or a number.              |
+|               |                              |**Note:** It is highly recommended that all stores use an object structure of attribute         |
+|               |                              |name/value pairs as thequery format for consistency between stores.                             |
++---------------+------------------------------+------------------------------------------------------------------------------------------------+
