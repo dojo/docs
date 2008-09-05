@@ -3,7 +3,7 @@
 Sorting
 =======
 
-.. contents:
+.. contents::
   :depth: 3
 
 =============
@@ -38,4 +38,3 @@ While that seems simple, nothing is as useful as a complete example.  So, below 
 
 Sample 1:  Showing how sort attributes affect ordering
 ------------------------------------------------------
-
