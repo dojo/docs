@@ -86,9 +86,7 @@ This example shows how to create a simple Grid programmatically.
       dojo.require("dojox.grid.DataGrid");
       dojo.require("dojox.data.CsvStore");
 
-      var store1 = new dojox.data.CsvStore({ url: '/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/tests/support/movies.csv' });
-
-      var grid = null;
+      var store3 = new dojox.data.CsvStore({ url: '/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/tests/support/movies.csv' });
 
       dojo.addOnLoad(function(){
           var layout = [
@@ -97,9 +95,9 @@ This example shows how to create a simple Grid programmatically.
               { field: 'Producer', width: 'auto' }
           ];
 
-          grid = new dojox.grid.DataGrid({
+          var grid = new dojox.grid.DataGrid({
               query: { Title: '*' },
-              store: store1,
+              store: store3,
               clientSort: true,
               rowSelector: '20px'
           }, 'gridNode');
