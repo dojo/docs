@@ -109,7 +109,7 @@ This example shows how to create a simple Grid programmatically.
 
   .. cv:: html
 
-    <div id="gridNode" style="width: 400px; height: 200px;"></div>
+    <table id="gridNode" style="width: 400px; height: 200px;"></table>
 
   .. cv:: css
 
