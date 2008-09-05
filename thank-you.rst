@@ -17,6 +17,7 @@ A big "thank you" goes to
 * Wolfram Kriesing,
 * Ben Lowery,
 * Chris Mitchell,
+* Cyan Ogilvie,
 * Nikolai Onken, 
 * Rom Pereira, 
 * Marcus Reimann,
