@@ -13,15 +13,22 @@ dojox.grid
 
 Grids are familiar in the client/server development world. Basically a grid is a kind of mini spreadsheet, commonly used to display details on master-detail forms. From HTML terms, a grid is a "super-table" with its own scrollable viewport.
 
+================
 Grid 1.2 Changes
-----------------
+================
 
 With Dojo Toolkit V1.2 the Grid comes with a major redesign. This site is now waiting for the developers, to explain the choosen design decisions and the changes since Grid 1.0 in depth.
 
+========
+Examples
+========
+
 The following examples are for the new Grid 1.2.
 
-Examples
---------
+A simple Grid
+-------------
+
+This example shows how to create a simple Grid declaratively.
 
 .. cv-compound::
 
@@ -152,11 +159,15 @@ Grid 1.2 supports a new parameter "selectionMode" which allows you to control th
   *not sure, what's the difference between "multiple" and "extended"*
 
 
+==========================
 Sorting data at the server
---------------------------
+==========================
 
+TODO
+
+==============================
 Adding, Editing, Deleting data
-------------------------------
+==============================
 
 Grid allows you to edit your data easily and send the changed values back to your server
 
@@ -203,13 +214,21 @@ First, you have to set a editor for each cell, you would like to edit:
         </thead>
     </table>
 
+==============
 Large datasets
---------------
+==============
 
-How to retrieve large data from the server
+TODO: How to retrieve large data from the server
 
+==============
 Filtering data
---------------
+==============
+
+TODO
+
+====
+Tips
+====
 
 Creating a grid in a node with display: none
 --------------------------------------------
