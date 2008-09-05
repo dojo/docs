@@ -154,7 +154,7 @@ Sample 1:  Showing how sort attributes affect ordering
     <div dojoType="dijit.form.Button" jsId="button">Click me to show sorted and unsorted lists!</div>
     <br>
     <br>
-    <b>Sorted List:</b>
+    <b>Sorted List (Sorted by Aisle first and Name second):</b>
     <br>
     <span id="sortedList">
     </span>
