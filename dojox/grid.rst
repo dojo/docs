@@ -6,7 +6,7 @@ dojox.grid
 
 :Status: Contributed, Draft
 :Version: beta
-:Authors: Scott J. Miles, Steve Orvell, Bryan Forbes
+:Authors: Scott J. Miles, Steve Orvell, Bryan Forbes, Cyan Ogilvie
 
 .. contents::
     :depth: 2
@@ -91,8 +91,8 @@ This example shows how to create a simple Grid programmatically.
       dojo.addOnLoad(function(){
           var layout = [
               { field: 'Title', name: 'Title of Movie', width: '300px' },
-              { field: 'Year', width: '50px' },
-              { field: 'Producer', width: 'auto' }
+              { field: 'Year', name: 'Year', width: '50px' },
+              { field: 'Producer', name: 'Producer', width: 'auto' }
           ];
 
           var grid = new dojox.grid.DataGrid({
