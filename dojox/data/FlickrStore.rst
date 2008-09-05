@@ -14,8 +14,50 @@ Note: While this store wraps making calls to the Flickr service, as a user, you 
 
 The Flickr service provides its data back in a wide variety of formats (for example, ATOM, RSS, and JSON) but FlickrStore only makes use of the JSON format. The following example shows a query that FlickrStore processes and the response:
 
+=============================
+Brief intro to the Flickr API
+=============================
+
+Query
+-----
+
 Query (all pictures with tags animals, foxes, and cute):
 
 .. code-block :: javascript
   
   http://api.flickr.com/services/feeds/photos_public.gne?tags=animals,bats,cute&format=json&tagmode=all
+
+Response
+--------
+
+.. code-block :: javascript 
+
+  jsonFlickrFeed({
+		"title": "Photos from everyone tagged animals, foxes and cute",
+		"link": "http://www.flickr.com/photos/",
+		"description": "",
+		"modified": "2007-05-24T09:35:27Z",
+		"generator": "http://www.flickr.com/",
+		"items": [
+	   {
+			"title": "Ceramic Figures",
+			"link": "http://www.flickr.com/photos/36362445@N00/511998141/",
+			"media": {"m":"http://farm1.static.flickr.com/228/511998141_7b8398c3eb_m.jpg"},
+			"date_taken": "2006-04-04T10:21:43-08:00",
+			"description": "<p><a href="http://www.flickr.com/people/36362445@N00/">travellingcharl</a> posted a photo:</p> <p><a href="http://www.flickr.com/photos/36362445@N00/511998141/" title="Ceramic Figures"><img src="http://farm1.static.flickr.com/228/511998141_7b8398c3eb_m.jpg" width="240" height="180" alt="Ceramic Figures" /></a></p> <p>Ceramic figurines inside the Shinto shrine.</p>",
+			"published": "2007-05-24T09:35:27Z",
+			"author": "nobody@flickr.com (travellingcharl)",
+			"tags": "cute animals japan ceramic geocaching coins toyko foxes naritatbstation3"
+	   },
+	   {
+			"title": "Red Fox pup",
+			"link": "http://www.flickr.com/photos/norwick/301289990/",
+			"media": {"m":"http://farm1.static.flickr.com/104/301289990_da7413890b_m.jpg"},
+			"date_taken": "2005-06-09T16:17:49-08:00",
+			"description": "<p><a href="http://www.flickr.com/people/norwick/">bluebird's</a> posted a photo:</p> <p><a href="http://www.flickr.com/photos/norwick/301289990/" title="Red Fox pup"><img src="http://farm1.static.flickr.com/104/301289990_da7413890b_m.jpg" width="240" height="180" alt="Red Fox pup" /></a></p> <p>Are you sure it's save to come out!</p>",
+			"published": "2006-11-19T22:14:47Z",
+			"author": "nobody@flickr.com (bluebird's)",
+			"tags": "wild summer canada cute nature beauty field animals landscape tiere scenery jung wilde sommer wildlife natur young feld felder adorable peaceful canadian alberta summertime prairie aussicht prairies landschaft foxes alert tier countrylife predators kanada redfox perky okotoks junger rotfuchs kanadische foxpups roterfuchs"
+	   }
+        ]
+  })
