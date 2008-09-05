@@ -4,7 +4,19 @@
 Dojo Charting
 =============
 
-Dojo comes with an amazing charting library, in the form of dojox.charting.  A large number of features are supported, with new ones being added constantly.  At the time of writing, dojox.charting supports the following chart types:
+:Status: Draft
+:Version: 1.2
+
+.. contents::
+  :depth: 2
+
+Dojo comes with an amazing charting library, in the form of dojox.charting.  A large number of features are supported, with new ones being added constantly.
+
+=====================
+Supported chart types
+=====================
+
+At the time of writing, dojox.charting supports the following chart types:
 
 * Line charts
 * Bar charts
@@ -22,15 +34,26 @@ Dojo comes with an amazing charting library, in the form of dojox.charting.  A l
 
 The charting library is also very flexible in terms of combining chart types, as well as multiple axes. You can set up custom labels for a specific axis, you can set up custom markers for points on a number of different types of charts, and you can even create your own themes for a chart!
 
+==========================
 Updating charts and events
---------------------------
+==========================
 
-Charting was designed with periodic updating in mind.  Say you have an application that remotely monitors something: the stock market, a database server, etc.  With dojox.charting, you can set up a chart and then simply update the series on the charts--resulting in a fast, fluid monitoring experience.  In fact, charting has been used for such things as remote CPU monitoring.
+Charting was designed with periodic updating in mind.  Say you have an application that remotely monitors something: the stock market, a database server, etc. With dojox.charting, you can set up a chart and then simply update the series on the charts--resulting in a fast, fluid monitoring experience. In fact, charting has been used for such things as remote CPU monitoring.
 
 Coming with the Dojo 1.2 release, Charting will also support customized events, such as tooltip attachment and mouseover actions!
 
+==========
+Animations
+==========
+
+TODO: Explain the animation features (new since V1.2)
+
+========
 Examples
---------
+========
+
+Stacked area chart
+------------------
 
 Here is a very simple example of a stacked area chart.
 
@@ -58,6 +81,9 @@ Here is a very simple example of a stacked area chart.
   .. cv:: html
 
     <div id="chartOne" style="width: 400px; height: 240px;"></div>
+
+Pie chart
+---------
 
 Here is a pie chart, with slice information shown onmouseover and a legend:
 
@@ -102,3 +128,20 @@ Here is a pie chart, with slice information shown onmouseover and a legend:
 
     <div id="chartTwo" style="width: 300px; height: 300px;"></div>
     <div id="legendTwo"></div>
+
+Animated Chart
+--------------
+
+TODO: How to use animations.
+
+
+========
+See also
+========
+
+* `A Beginner’s Guide to Dojo Charting, Part 1 of 2 <http://www.sitepen.com/blog/2008/06/06/a-beginners-guide-to-dojo-charting-part-1-of-2/>`_
+* `A Beginner’s Guide to Dojo Charting, Part 2 of 2 <http://www.sitepen.com/blog/2008/06/16/a-beginners-guide-to-dojo-charting-part-2-of-2/>`_
+* `Dojo Charting: Widgets, Tooltips, and Legend <http://www.sitepen.com/blog/2008/06/12/dojo-charting-widgets-tooltips-and-legend/>`_
+* `Dojo Charting: Event Support Has Landed! <http://www.sitepen.com/blog/2008/05/27/dojo-charting-event-support-has-landed/>`_
+* `Zooming, Scrolling, and Panning in Dojo Charting <http://www.sitepen.com/blog/2008/05/15/zooming-scrolling-and-panning-in-dojo-charting/>`_
+* `Dojo Charting Reorganization <http://www.sitepen.com/blog/2008/05/07/dojo-charting-reorganization/>`_   
