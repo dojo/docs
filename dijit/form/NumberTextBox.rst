@@ -9,6 +9,10 @@ dijit.form.NumberTextBox
 .. contents::
   :depth: 3
 
+========
+Examples
+========
+
 .. cv-compound::
 
   .. cv:: javascript
