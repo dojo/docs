@@ -134,6 +134,47 @@ Animated Chart
 
 TODO: How to use animations.
 
+3D Chart
+--------
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+        dojo.require("dojox.charting.Chart3D");
+        dojo.require("dojox.charting.plot3d.Bars");
+
+        dojo.addOnLoad(function(){
+            var m = dojox.gfx3d.matrix;
+            var chart3d = new dojox.charting.Chart3D("chart3d", 
+                {
+                    lights:   [{direction: {x: 5, y: 5, z: -5}, color: "white"}],
+                    ambient:  {color:"white", intensity: 2},
+                    specular: "white"
+                },
+                [m.cameraRotateXg(10), m.cameraRotateYg(-10), m.scale(0.8), m.cameraTranslate(-50, -50, 0)]
+            );
+            
+            var bars3d_a = new dojox.charting.plot3d.Bars(500, 500, {gap: 10, material: "yellow"});
+            bars3d_a.setData([1,2,3,2,1,2,3,4,5]);
+            chart3d.addPlot(bars3d_a);
+            
+            var bars3d_b = new dojox.charting.plot3d.Bars(500, 500, {gap: 10, material: "red"});
+            bars3d_b.setData([2,3,4,3,2,3,4,5,5]);
+            chart3d.addPlot(bars3d_b);
+            
+            var bars3d_c = new dojox.charting.plot3d.Bars(500, 500, {gap: 10, material: "blue"});
+            bars3d_c.setData([3,4,5,4,3,4,5,5,5]);
+            chart3d.addPlot(bars3d_c);
+            
+            chart3d.generate().render();            
+        });
+    </script>
+
+  .. cv:: html
+
+    <div id="chart3d" style="width: 300px; height: 300px;"></div>
 
 ========
 See also
