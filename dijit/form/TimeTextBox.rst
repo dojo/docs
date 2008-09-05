@@ -6,8 +6,12 @@ dijit.form.TimeTextBox
 :Status: Draft
 :Version: 1.2
 
+.. contents::
+  :depth: 3
+
+========
 Examples
---------
+========
 
 The following example demonstrates how to create a date textbox programatically:
 
