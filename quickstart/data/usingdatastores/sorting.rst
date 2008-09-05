@@ -97,10 +97,12 @@ Sample 1:  Showing how sort attributes affect ordering
                    field.appendChild(document.createTextNode("Aisle: "));
                    list.appendChild(field);
                    list.appendChild(document.createTextNode(foodStore.getValue(item, "aisle")));
+                   list.appendChild(document.createTextNode("&nbsp;&nbsp;&nbsp;&nbsp;)));
                    field = document.createElement("b");
                    field.appendChild(document.createTextNode("Name: "));
                    list.appendChild(field);
                    list.appendChild(document.createTextNode(foodStore.getValue(item, "name")));
+                   list.appendChild(document.createTextNode("&nbsp;&nbsp;&nbsp;&nbsp;)));
                    list.appendChild(document.createElement("br"));
                  }
                }
@@ -117,10 +119,12 @@ Sample 1:  Showing how sort attributes affect ordering
                    field.appendChild(document.createTextNode("Aisle: "));
                    list.appendChild(field);
                    list.appendChild(document.createTextNode(foodStore.getValue(item, "aisle")));
+                   list.appendChild(document.createTextNode("&nbsp;&nbsp;&nbsp;&nbsp;)));
                    field = document.createElement("b");
                    field.appendChild(document.createTextNode("Name: "));
                    list.appendChild(field);
                    list.appendChild(document.createTextNode(foodStore.getValue(item, "name")));
+                   list.appendChild(document.createTextNode("&nbsp;&nbsp;&nbsp;&nbsp;)));
                    list.appendChild(document.createElement("br"));
                  }
                }
