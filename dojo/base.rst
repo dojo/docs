@@ -20,4 +20,4 @@ In the above example, we are including a X-Domain version of dojo.js, which is s
 
 Any function or class hanging off the dojo namespace is typically provided for in dojo._base. dojo.xhrGet, dojo.animateProperty, `dojo.connect </dojo/connect>`_, and dojo.require are examples of Base functionality. 
 
-Note that use of Dojo in non-browser environments typically requires using Dojo from source so that the package system can detect the correct operating environment and include the correct sub-set of the dojo._base functionality. The Browser-specific subset is the most common and typically the most feature-rich.
+Note that use of Dojo in non-browser environments typically requires using Dojo from source so that the package system can detect the operating environment and include the correct sub-set of the dojo._base functionality. The Browser-specific subset is the most common and typically the most feature-rich. See the documentation for `dojo.require` and `dojo.requireIf` to understand conditional loading of modules.
