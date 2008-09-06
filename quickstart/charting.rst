@@ -156,15 +156,15 @@ TODO: How to use animations.
                 [m.cameraRotateXg(10), m.cameraRotateYg(-10), m.scale(0.8), m.cameraTranslate(-50, -50, 0)]
             );
             
-            var bars3d_a = new dojox.charting.plot3d.Bars(500, 500, {gap: 10, material: "yellow"});
+            var bars3d_a = new dojox.charting.plot3d.Bars(300, 300, {gap: 10, material: "yellow"});
             bars3d_a.setData([1,2,3,2,1,2,3,4,5]);
             chart3d.addPlot(bars3d_a);
             
-            var bars3d_b = new dojox.charting.plot3d.Bars(500, 500, {gap: 10, material: "red"});
+            var bars3d_b = new dojox.charting.plot3d.Bars(300, 300, {gap: 10, material: "red"});
             bars3d_b.setData([2,3,4,3,2,3,4,5,5]);
             chart3d.addPlot(bars3d_b);
             
-            var bars3d_c = new dojox.charting.plot3d.Bars(500, 500, {gap: 10, material: "blue"});
+            var bars3d_c = new dojox.charting.plot3d.Bars(300, 300, {gap: 10, material: "blue"});
             bars3d_c.setData([3,4,5,4,3,4,5,5,5]);
             chart3d.addPlot(bars3d_c);
             
