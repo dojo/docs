@@ -75,10 +75,10 @@ This example shows how to fetch items by their identity programmatically.
                  var pNode = dojo.byId("priceNode");
                  if (!item) {
                      lNode.innerHTML = "N/A.";
-                     pNode .innerHTML = "0.00";
+                     pNode.innerHTML = "0.00";
                  } else {
                      lNode.innerHTML = foodStore.getValue(item, "aisle");
-                     pNode .innerHTML = foodStore.getValue(item, "price");
+                     pNode.innerHTML = foodStore.getValue(item, "price");
                  }
               }
               //Invoke the lookup. The callback for when the lookup succeeds is the updatePrice function
