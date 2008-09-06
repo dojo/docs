@@ -70,6 +70,10 @@ Dojo is divided into two parts: Dojo Base, and Dojo Core. Dojo Base is the funct
 
 These pages cover both cases, and indicate how they are provided. 
 
+Dojo Base
+~~~~~~~~~
+Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js in your page.
+
 * `dojo <dojo>`_
 * `dojo._base <dojo/base>`_
 * `dojo.addOnLoad <dojo/addOnLoad>`_
@@ -78,6 +82,15 @@ These pages cover both cases, and indicate how they are provided.
 * `dojo.connect <dojo/connect>`_
 * `dojo.Color <dojo/Color>`_
 * `dojo.declare <dojo/declare>`_
+* `dojo.Deferred <dojo/Deferred>`_
+* `dojo.NodeList <dojo/NodeList>`_
+* `dojo.window <dojo/window>`_
+* `dojo.xhr <dojo/xhr>`_
+* `dojo.byId <dojo/byId>`_
+* `dojo.connect <dojo/connect>`_
+* `dojo.forEach <dojo/forEach>`_
+* `dojo.query <dojo/query>`_
+* `dojo.require <dojo/require>`_
 
 Dojo data
 ~~~~~~~~~
@@ -96,7 +109,6 @@ Dojo data
 
   * `dojo.date.locale.format <dojo/date/locale/format>`_
 
-* `dojo.Deferred <dojo/Deferred>`_
 * `dojo.DeferredList <dojo/DeferredList>`_
 
 Drag and Drop
@@ -116,14 +128,6 @@ Dojo effects
 * `dojo.keys <dojo/keys>`_ 
 * `dojo.lang <dojo/lang>`_
 * `dojo.map <dojo/map>`_
-* `dojo.NodeList <dojo/NodeList>`_
-* `dojo.window <dojo/window>`_
-* `dojo.xhr <dojo/xhr>`_
-* `dojo.byId <dojo/byId>`_
-* `dojo.connect <dojo/connect>`_
-* `dojo.forEach <dojo/forEach>`_
-* `dojo.query <dojo/query>`_
-* `dojo.require <dojo/require>`_
 
 Dijit reference
 ---------------
