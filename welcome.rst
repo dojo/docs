@@ -26,16 +26,18 @@ The documentation is aiming to cover all dojo modules delivered within a release
 
 ----
 
+============
 Installation
-------------
+============
 
 If you've never used Dojo before, it is recommended you read the following sections to ensure you are 'up and running' before proceeding further into the Guides. These sections provide fundamental Dojo practices, and are invaluable in ensuring a quick start to Dojo:
 
 * `How to Install the Dojo Toolkit <quickstart/install>`_
 * `Functions used *everywhere* <quickstart/dojo-basics>`_
 
+===============
 Getting started
----------------
+===============
 
 Dojo is a very extensive library of code, most of which is optional. Here are some "Getting Started" guides that show common uses of technologies provided by the Toolkit. You can learn more about individual components in each sub-project (dojo, dijit, and dojox) in later sections, as these only skim the surface of HOWTO do things:
 
@@ -63,15 +65,16 @@ Dojo is a very extensive library of code, most of which is optional. Here are so
 
 ----
 
+==============
 Dojo reference                                                 
---------------
+==============
 
 Dojo is divided into two parts: Dojo Base, and Dojo Core. Dojo Base is the functionality provided for by just including ``dojo.js``, and Dojo Core is comprised of stable additional (optional) components. Typically, if a function or Class exists within the dojo namespace directly (eg: dojo.require(), dojo.addOnLoad()) it is part of Base Dojo. If the function or Class exists beneath the dojo namespace (eg: dojo.dnd.Mover), you will need to require the appropriate module (eg: dojo.require("dojo.dnd.Mover");) 
 
 These pages cover both cases, and indicate how they are provided. 
 
 Dojo Base
-~~~~~~~~~
+---------
 Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js in your page.
 
 * `dojo <dojo>`_
@@ -93,7 +96,7 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 * `dojo.require <dojo/require>`_
 
 Dojo data
-~~~~~~~~~
+---------
 
 * `dojo.data <dojo/data>`_
 
@@ -112,14 +115,14 @@ Dojo data
 * `dojo.DeferredList <dojo/DeferredList>`_
 
 Drag and Drop
-~~~~~~~~~~~~~
+-------------
 
 * `dojo.dnd <dojo/dnd>`_
 
   * `dojo.dnd.Moveable <dojo/dnd/Moveable>`_
 
 Dojo effects
-~~~~~~~~~~~~
+------------
 
 * `dojo.fx <dojo/fx>`_
 * `dojo.animateProperty <dojo/animateProperty>`_
@@ -129,8 +132,9 @@ Dojo effects
 * `dojo.lang <dojo/lang>`_
 * `dojo.map <dojo/map>`_
 
+===============
 Dijit reference
----------------
+===============
 
 Dijit is Dojo's UI Library, and lives as a separate namespace ``dijit``. Dijit requires Dojo Core. Each of the widgets and functionality provided by Dijit is describe in the following sections, though the aforementioned `quickstart <quickstart/>`_ guides cover some basics.  
 
@@ -148,7 +152,7 @@ Dijit is Dojo's UI Library, and lives as a separate namespace ``dijit``. Dijit r
   * `dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`_
 
 Form handling
-~~~~~~~~~~~~~
+-------------
 
 * `dijit.form <dijit/form>`_
 
@@ -170,7 +174,7 @@ Form handling
   * `dijit.form.ValidationTextBox <dijit/form/ValidationTextBox>`_
 
 Layout
-~~~~~~
+------
 
 * `dijit.layout <dijit/layout>`_
 
@@ -182,8 +186,9 @@ Layout
 
 * `dijit.ProgressBar <dijit/ProgressBar>`_
 
+===============
 DojoX reference
----------------
+===============
 
 DojoX serves many purposes, and by design is difficult to document. Here, we have an ongoing effort to document the most used, stable, reliable and powerful aspects of DojoX. DojoX contains code in alpha and experimental states, so your assistance in testing and documenting are especially helpful. 
 
@@ -289,8 +294,9 @@ These sections cover the available projects shipped with the Dojo Toolkit
 
 ----
 
+=====
 DojoC
------
+=====
 
 DojoC is an svn repository used by DojoCampus for a variety of widgets, tutorials, sandbox, and other demos. You are welcome to explore and contribute, though absolutely nothing is guaranteed to work. DojoC is meant as a community workshop, and code comes and goes frequently, often times 'promoted' to `DojoX projects <dojox>`_. 
 
@@ -298,8 +304,9 @@ DojoC is an svn repository used by DojoCampus for a variety of widgets, tutorial
 
 ----
 
+========================
 Documentation guidelines
-------------------------
+========================
 
 * `How to become a dojo doc ninja <howto>`_
 * `Behind the scenes <internals>`_
