@@ -3,10 +3,14 @@
 Functions used Everywhere
 =========================
 
+.. contents::
+  :depth: 2
+
 It would be near impossible to explain any one aspect of the Dojo Toolkit without first explaining a few simple functions that appear literally *everywhere* within the codebase.  These are dojo-fundamentals, and should be memorized if possible. 
 
+============
 dojo.require
-------------
+============
 
 This is the core of the Dojo package system, and loads functionality not provided for in the Base dojo.js. Simply pass it a string:
 
@@ -23,8 +27,9 @@ It may seem painful to require all modules, but Dojo rewards by:
 * Preventing loading dojo packages twice.  dojo.require will simply return if the package is already loaded.
 * Allowing you to build streamlined versions of Dojo.  If you use dijit.Dialog a lot, you can build a custom version of dojo that loads dijit.Dialog quickly.  ``dojo.require`` knows whether the function is already loaded, and so you don't have to change any of your code.  
 
+==============
 dojo.addOnLoad
---------------
+==============
 
 This registers a function to be run when the document (and all `required <dojo/require>`_ dependencies) are ready. Simply pass it a function:
 
@@ -45,8 +50,9 @@ That example passes an anonymous function. You can pass named functions as well:
 
 Notice we didn't call ``dojo.addOnLoad(init());`` ... The additional () causes the named-function to execute immediately, and ``dojo.addOnLoad`` expects a function.
 
+=========
 dojo.byId
----------
+=========
 
 This is more or less an alias to ``document.getElementsById``. Simple pass ``dojo.byId`` a string, and the domNode with that id is returned. Notice how we wrap the byId call in an ``addOnLoad`` function -- You cannot use or manipulate the DOM before onLoad has fired, as a general rule.
 
@@ -61,8 +67,9 @@ This is more or less an alias to ``document.getElementsById``. Simple pass ``doj
 
 Note: in some cases (in *lesser* browsers), ``document.getElementsById`` doesn't actually return the Node you desire. ``dojo.byId`` normalizes this, and is the recommended way of accessing nodes byId. ``dojo.byId`` is similar to Prototype's ``$("someId")``, and jQuery's ``$("#someId")`` syntax, though Dojo uses a safely-namespaced function for it's query engine: ``dojo.query("#someId")`` (see: `dojo.query </dojo/query>`_) to avoid conflicts.
 
+==========
 dijit.byId 
-----------
+==========
 
 ``dojo.byId`` works exclusively on Dom Elements. Dijit is Dojo's widgeting system, and builds on Core Dojo functionality. Every widget generated in a page has a unique ID, just as native Dom Elements should, though with one *huge* difference: Dijit's are objects. An excellent article articulating this difference can be found at `DojoCampus <http://dojocampus.org/content/2008/05/06/jsid-dijitbyid-and-dojobyid/>`_, but the basics are: 
 
@@ -81,8 +88,9 @@ dijit.byId
 
 ``dijit.byId`` returns an reference to that particular Dijit instance, and allows you to call methods and set properties. Each Dijit has several fundamental methods and properties defined by `dijit._Widget </dijit/_Widget>`_, and adds in additional specific methods depending on the type of Dijit. 
 
+============
 dojo.forEach
-------------
+============
 
 JavaScript 1.6 has a forEach loop, where you can apply a certain function to each element of an array.  Unfortunately at the time of this writing, only Firefox 2 has support for JS 1.6.  But never fear!  Dojo has defined one you can use in any Dojo-supported browser.  
 
@@ -142,8 +150,9 @@ does the same thing.  But that's not all!  *New in 1.0*, you can collapse the fu
 
 Ay carumba!  That's a lot of functionality in a tiny 1-line package.  Once you get used to the syntax, you'll never want to go back. This only scratches the surface of how useful ``dojo.forEach`` can be. There is an excellent DojoCookie about `forEach <http://dojocampus.org/content/2008/02/19/foreach-goodness/>`_ on DojoCampus.
 
+============
 dojo.connect
-------------
+============
 
 Events in JavaScript or Dojo based applications are essential to making applications work. Connecting an event handler (function) to an element or an object is one of the most common things you will do when developing applications using Dojo. Dojo provides a simple API for connecting events via the ``dojo.connect`` function. One important thing to note here is that events can be mapped to any property or object or element. Using this API you can wire your user interfaces together or allow for your objects to communicate. The ``dojo.connnect`` API does not require that the objects be Dojo based.  In other words, you can use this API with your existing code and interfaces.
 
@@ -196,7 +205,8 @@ The Dojo event system allows you to connect to DOM elements or nodes or plain Ja
 
 ``dojo.connect`` is a *lot* more powerful than can be described on the surface. See the `full rundown </dojo/connect>`_ for more examples and use-cases.
 
-More QuickStart goodness:
--------------------------
+========
+See also
+========
 
-SitePen, a major Dojo contributor, has taken the liberty of writing and maintaining a `Dojo QuickStart Guide <http://sitepen.com/labs/guides/?guide=DojoQuickStart>`_. Rather than duplicate that effort, we will simply suggest you read that exceptionally helpful guide.
+* SitePen, a major Dojo contributor, has taken the liberty of writing and maintaining a `Dojo QuickStart Guide <http://sitepen.com/labs/guides/?guide=DojoQuickStart>`_. Rather than duplicate that effort, we will simply suggest you read that exceptionally helpful guide.
