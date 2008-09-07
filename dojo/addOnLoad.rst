@@ -64,8 +64,9 @@ Another use is "embedded onLoad". We'll define an addOnLoad function (anonymous)
 
 If no in-flight XHR activity is found, and all dependencies have been solved, addOnLoad functions fire immediately. 
 
+========
 Examples
---------
+========
 
 Lets dynamically include code on button press and fire an event once the code is included
 
