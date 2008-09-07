@@ -43,6 +43,12 @@ At first, it may seem painful to require all modules, but Dojo rewards by:
 
 So you might wonder "So, don't I have to require the dojo module itself to use dojo.require?" Nope. Any function in the top-level package "dojo" is loaded automatically (dojo.query(), dojo.byId(), etc.). These are Dojo's Core functions, and represent the most used functions according to usage patterns in the community. This is similar to the Java package java.lang, which is automatically available to all Java programs.
 
+Cooperation with addOnLoad
+---------------------------
+
+dojo.require works directly with `dojo.addOnLoad <dojo/addOnLoad>`_. While modules are being loaded, any addOnLoad functions will wait until all dependencies are solved before firing again.
+
+
 =====
 Usage
 =====
@@ -76,9 +82,3 @@ Examples
             alert("I said, please don't click!");
         </script>
     </div>
-
-=====
-Notes
-=====
-
-dojo.require works directly with `dojo.addOnLoad <dojo/addOnLoad>`_. While modules are being loaded, any addOnLoad functions will wait until all dependencies are solved before firing again.
