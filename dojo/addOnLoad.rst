@@ -48,7 +48,7 @@ conveniently replaces the one above. When the function is small, you may prefer 
 
 This is the function literal or anonymous function construct of JavaScript. If it looks really, really wierd to you, take a peek ahead at Functions as Variables for an explanation.
 
-Another use, new in Dojo 1.2 is "embedded onLoad". We'll define an addOnLoad function (anonymous), and within that function call dojo.require() to load more components, registering a second addOnLoad function. The first will execute very quickly (assuming you are only loading dojo.js), and the second will wait until the package dependencies are complete:
+Another use, new in Dojo 1.1 is "embedded onLoad". We'll define an addOnLoad function (anonymous), and within that function call dojo.require() to load more components, registering a second addOnLoad function. The first will execute very quickly (assuming you are only loading dojo.js), and the second will wait until the package dependencies are complete:
 
 .. code-block :: javascript
   :linenos:
