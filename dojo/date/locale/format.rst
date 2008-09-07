@@ -36,8 +36,12 @@ So don't get confused by the new Date() statements in the tests, the second para
   <script type="text/javascript">
     dojo.require("dojox.widget.DocTester");
     dojo.require("dojo.date.locale");
+    
+    dojo.addOnLoad(function(){
+      var docTest = new dojox.widget.DocTester({}, "docTest");
+    });
   </script>
-  <div dojoType="dojox.widget.DocTester">
+  <div id="docTest">
     >>> dojo.date.locale.format(new Date(2007,2,23,6,6,6), {datePattern: "yyyyMMdd", selector: "date"});
     "20070323"
     >>> dojo.date.locale.format(new Date(2007,2,23,6,6,6), {datePattern: "yyyy-MM-dd", selector: "date"});
