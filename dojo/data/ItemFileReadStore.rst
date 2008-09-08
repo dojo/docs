@@ -55,27 +55,6 @@ Constructor Parameters
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
   
 
-                //      summary: constructor
-                //      keywordParameters: {url: String}
-                //      keywordParameters: {data: jsonObject}
-                //      keywordParameters: {typeMap: object)
-                //              The structure of the typeMap object is as follows:
-                //              {
-                //                      type0: function || object,
-                //                      type1: function || object,
-                //                      ...
-                //                      typeN: function || object
-                //              }
-                //              Where if it is a function, it is assumed to be an object constructor that takes the
-                //              value of _value as the initialization parameters.  If it is an object, then it is assumed
-                //              to be an object of general form:
-                //              {
-                //                      type: function, //constructor.
-                //                      deserialize:    function(value) //The function that parses the value and constructs the object defined by type appropriately.
-                //              }
-
-
-
 
 =================
 Input Data Format
@@ -145,3 +124,55 @@ Item Structure
       }
 
     When ItemFileReadStore parses that structure, it detects the JavaScript Object value for attribute *birthdate* has the special attributes *_type* and *_value*.  what it then does with this is look into the type map of the store and determines if any deserializer has been defined for the value of *_type*.  If it has, it takes the value of *_value*, and calls the deserializer function with it.  The return of the deserializer will be a Date() object.  
+
+Item Structure Example: Items with References
+---------------------------------------------
+
+.. code-block :: javascript
+
+  { 
+    'identifier': 'name',
+    'label': 'name',
+    'items': [
+      { 'name':'Africa', 'type':'continent',
+        'children':[{'_reference':'Egypt'}, {'_reference':'Kenya'}, {'_reference':'Sudan'}] },
+      { 'name':'Egypt', 'type':'country' },
+      { 'name':'Kenya', 'type':'country',
+        'children':[{'_reference':'Nairobi'}, {'_reference':'Mombasa'}] },
+      { 'name':'Nairobi', 'type':'city' },
+      { 'name':'Mombasa', 'type':'city' },
+      { 'name':'Sudan', 'type':'country',
+        'children':{'_reference':'Khartoum'} },
+      { 'name':'Khartoum', type:'city' },
+      { 'name':'Asia', 'type':'continent',
+        'children':[{'_reference':'China'}, {'_reference':'India'}, {'_reference':'Russia'}, {'_reference':'Mongolia'}] },
+      { 'name':'China', 'type':'country' },
+      { 'name':'India', 'type':'country' },
+      { 'name':'Russia', 'type':'country' },
+      { 'name':'Mongolia', 'type':'country' },
+      { 'name':'Australia', 'type':'continent', 'population':'21 million',
+        'children':{'_reference':'Commonwealth of Australia'}},
+      { 'name':'Commonwealth of Australia', 'type':'country', 'population':'21 million'},
+      { 'name':'Europe', 'type':'continent',
+        'children':[{'_reference':'Germany'}, {'_reference':'France'}, {'_reference':'Spain'}, {'_reference':'Italy'}] },
+      { 'name':'Germany', 'type':'country' },
+      { 'name':'France', 'type':'country' },
+      { 'name':'Spain', 'type':'country' },
+      { 'name':'Italy', 'type':'country' },
+      { 'name':'North America', 'type':'continent',
+        'children':[{'_reference':'Mexico'}, {'_reference':'Canada'}, {'_reference':'United States of America'}] },
+      { 'name':'Mexico', 'type':'country', 'population':'108 million', 'area':'1,972,550 sq km',
+        'children':[{'_reference':'Mexico City'}, {'_reference':'Guadalajara'}] },
+      { 'name':'Mexico City', 'type':'city', 'population':'19 million', 'timezone':'-6 UTC'},
+      { 'name':'Guadalajara', 'type':'city', 'population':'4 million', 'timezone':'-6 UTC' },
+      { 'name':'Canada', 'type':'country',  'population':'33 million', 'area':'9,984,670 sq km',
+        'children':[{'_reference':'Ottawa'}, {'_reference':'Toronto'}] },
+      { 'name':'Ottawa', 'type':'city', 'population':'0.9 million', 'timezone':'-5 UTC'},
+      { 'name':'Toronto', 'type':'city', 'population':'2.5 million', 'timezone':'-5 UTC' },
+      { 'name':'United States of America', 'type':'country' },
+      { 'name':'South America', 'type':'continent',
+        'children':[{'_reference':'Brazil'}, {'_reference':'Argentina'}] },
+      { 'name':'Brazil', 'type':'country', 'population':'186 million' },
+      { 'name':'Argentina', 'type':'country', 'population':'40 million' }
+    ]
+  }    
