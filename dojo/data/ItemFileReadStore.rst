@@ -361,7 +361,7 @@ Functional Example:  Using custom type maps with ItemFileReadStore
         ]
       };
 
-      var colorStore = new dojo.data.ItemFileReadStore({data: storeData, typeMap: {'Color': dojo.Color}}}
+      var colorStore = new dojo.data.ItemFileReadStore({data: storeData, typeMap: {'Color': dojo.Color}});
      
       //This function performs some basic dojo initialization.  In this case it connects the button
       //onClick to a function which invokes the fetch().  The fetch function queries for all items 
