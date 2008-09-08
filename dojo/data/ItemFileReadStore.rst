@@ -361,58 +361,57 @@ Functional Example:  Using custom type maps with ItemFileReadStore
         ]
       };
 
-      var colorStore = new dojo.data.ItemFileReadStore({data: storeData, typeMap: {'Color': dojo.Color}});
-     
       //This function performs some basic dojo initialization.  In this case it connects the button
       //onClick to a function which invokes the fetch().  The fetch function queries for all items 
       //and provides callbacks to use for completion of data retrieval or reporting of errors.
       function init () {
-           //Function to perform a fetch on the datastore when a button is clicked
-           function getItems () {
-
-             //Callback to perform an action when the data items are starting to be returned:
-             function clearOldList(size, request) {
-               var list = dojo.byId("list");
-               if (list) { 
-                 while (list.firstChild) {
-                   list.removeChild(list.firstChild);
-                 }
-               }
-             }
-  
-             //Callback for processing a single returned item.
-             function gotItem(item, request) {
-             var list = dojo.byId("list");
-             if (list) {
-               if (item) {
-                 var bold = document.createElement("b");
-                 bold.appendChild(document.createTextNode("Item Name: "));
-                 list.appendChild(bold);
-                 list.appendChild(document.createTextNode(colorStore.getValue(item, "name")));
-                 list.appendChild(document.createElement("br"));
-                 list.appendChild(document.createTextNode("Attribute color is of type: " + typeof colorStore.getValue(item, "color")));
-                 list.appendChild(document.createElement("br"));
-                 list.appendChild(document.createTextNode("Attribute color value is: " + colorStore.getValue(item, "color")));
-                 list.appendChild(document.createElement("br"));
-                 list.appendChild(document.createTextNode("Attribute color is instance of dojo.Color? " + (colorStore.getValue(item, "color") instanceof dojo.Color)));
-                 list.appendChild(document.createElement("br"));
-                 list.appendChild(document.createElement("br"));
-               }
-             }
-           }
+        var colorStore = new dojo.data.ItemFileReadStore({data: storeData, typeMap: {'Color': dojo.Color}});
+     
+        //Function to perform a fetch on the datastore when a button is clicked
+        function getItems () {
+          //Callback to perform an action when the data items are starting to be returned:
+          function clearOldList(size, request) {
+            var list = dojo.byId("list");
+            if (list) { 
+              while (list.firstChild) {
+                list.removeChild(list.firstChild);
+              }
+            }
+          }
+   
+          //Callback for processing a single returned item.
+          function gotItem(item, request) {
+            var list = dojo.byId("list");
+            if (list) {
+              if (item) {
+                var bold = document.createElement("b");
+                bold.appendChild(document.createTextNode("Item Name: "));
+                list.appendChild(bold);
+                list.appendChild(document.createTextNode(colorStore.getValue(item, "name")));
+                list.appendChild(document.createElement("br"));
+                list.appendChild(document.createTextNode("Attribute color is of type: " + typeof colorStore.getValue(item, "color")));
+                list.appendChild(document.createElement("br"));
+                list.appendChild(document.createTextNode("Attribute color value is: " + colorStore.getValue(item, "color")));
+                list.appendChild(document.createElement("br"));
+                list.appendChild(document.createTextNode("Attribute color is instance of dojo.Color? " + (colorStore.getValue(item, "color") instanceof dojo.Color)));
+                list.appendChild(document.createElement("br"));
+                list.appendChild(document.createElement("br"));
+              }
+            }
+          }
             
-           //Callback for if the lookup fails.
-           function fetchFailed(error, request) {
-              console.log(error);
-              alert("lookup failed.");
-           }
+          //Callback for if the lookup fails.
+          function fetchFailed(error, request) {
+             console.log(error);
+             alert("lookup failed.");
+          }
              
-           //Fetch the data.  
-           colorStore.fetch({onBegin: clearOldList, onItem: gotItem, onError: fetchFailed});
-         }
+          //Fetch the data.  
+          colorStore.fetch({onBegin: clearOldList, onItem: gotItem, onError: fetchFailed});
+        }
 
-         //Link the click event of the button to driving the fetch.
-         dojo.connect(button2, "onClick", getItems);
+        //Link the click event of the button to driving the fetch.
+        dojo.connect(button2, "onClick", getItems);
       }
       //Set the init function to run when dojo loading and page parsing has completed.
       dojo.addOnLoad(init);
