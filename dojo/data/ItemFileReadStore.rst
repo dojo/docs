@@ -21,13 +21,7 @@ Supported APIs
 The following dojo.data APIs are implemented by ItemFileReadStore
 
 
----- /!\ '''Edit conflict - other version:''' ----
   * `dojo.data.api.Read <dojo/data/api/Read>`_
-
----- /!\ '''Edit conflict - your version:''' ----
-  * `dojo.data.api.Read <dojo/data/api/Read>`_
-
----- /!\ '''End of edit conflict''' ----
   * `dojo.data.api.Identity <dojo/data/api/Identity>`_
 
 
@@ -37,33 +31,21 @@ Input Data Format
 
 While the data exposed from a data store is agnostic and consumable by many sources in an usually interchangable way, the input data formats of a data store may vary.   The ItemFileReadStore expects a specific structure to its data, as defined below:
 
-
----- /!\ '''Edit conflict - other version:''' ----
-
----- /!\ '''Edit conflict - your version:''' ----
 General Structure
 -----------------
 
 
----- /!\ '''End of edit conflict''' ----
 .. code-block :: javascript
 
   {
     "label": "some attribute",   //Optional attribute used to indicate which attribute on an item should act as a human-readable label for display purposes.
 
----- /!\ '''Edit conflict - other version:''' ----
-
 
     "identifier": "some attribute",  //Optional attribute used to indicate which attribute on an item acts as a unique identifier for that item.  If it is not defined, then the ItemFileReadStore will simply number the items and use that number as a unique index to the item.
 
 
----- /!\ '''Edit conflict - your version:''' ----
-
-
     "identifier": "some attribute",  //Optional attribute used to indicate which attribute on an item acts as a unique identifier for that item.  If it is not defined, then the ItemFileReadStore will simply number the items and use that number as a unique index to the item.
 
-
----- /!\ '''End of edit conflict''' ----
 
     "items:" [  //The array of JavaScript objects that act as the root items of the data store
       { /* Some set of name/value attributes /* },
@@ -83,6 +65,7 @@ Item Structure
     The first is the the *_reference* structure.   The *_reference* structure is a JavaScript Object with a single, special attributes of *_reference*.  Its value should always be the identity of another item.  With this structure, ItemFileReadStore can read in and set up relationships between items.   An example of such a data structure is below:
 
     .. code-block :: javascript
+
       {
         items: [
           { "name": "Bob", "spouse": {"_reference":"Sally"),  children: [ { "_reference":"Nancy"}]},
