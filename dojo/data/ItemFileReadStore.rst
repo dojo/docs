@@ -339,3 +339,7 @@ Example:  Simplified Form Type Map for dojo.Color Objects
   {
     "Color": dojo.Color
   }
+
+-------------------------------------------------------
+Example:  Using custom type maps with ItemFileReadStore
+-------------------------------------------------------
