@@ -412,7 +412,7 @@ Functional Example:  Using custom type maps with ItemFileReadStore
 
   .. cv :: html 
 
-    <div dojoType="dojo.data.ItemFileReadStore" data="storeData" jsId="colorStore"></div>
+    <div dojoType="dojo.data.ItemFileReadStore" data="storeData" typeMap="{'Color': dojo.Color}" jsId="colorStore"></div>
     <div dojoType="dijit.form.Button" jsId="button2">Click me to examine items and what the color attribute is!</div>
     <br>
     <br>
