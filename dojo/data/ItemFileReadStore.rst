@@ -383,8 +383,12 @@ Functional Example:  Using custom type maps with ItemFileReadStore
              var list = dojo.byId("list");
              if (list) {
                if (item) {
+                 var bold = document.createElement("b");
+                 bold.appendChild(document.createTextNode("Item Name: ");
+                 list.appendChild(bold);
                  list.appendChild(document.createTextNode(colorStore.getValue(item, "name")));
                  list.appendChild(document.createElement("br"));
+                 list.appendChild(document.createTextNode("Attribute color is of type: " + typeof colorStore.getValue(item, "name")));
                }
              }
            }
@@ -395,11 +399,11 @@ Functional Example:  Using custom type maps with ItemFileReadStore
            }
              
            //Fetch the data.  
-           foodStore.fetch({onBegin: clearOldList, onItem: gotItem, onError: fetchFailed});
+           colorStore.fetch({onBegin: clearOldList, onItem: gotItem, onError: fetchFailed});
          }
 
          //Link the click event of the button to driving the fetch.
-         dojo.connect(button2, "onClick", getStreamingItems);
+         dojo.connect(button2, "onClick", getItems);
       }
       //Set the init function to run when dojo loading and page parsing has completed.
       dojo.addOnLoad(init);
@@ -411,5 +415,5 @@ Functional Example:  Using custom type maps with ItemFileReadStore
     <div dojoType="dijit.form.Button" jsId="button2">Click me to examine items and what the color attribute is!</div>
     <br>
     <br>
-    <span id="list2">
+    <span id="list">
     </span>
