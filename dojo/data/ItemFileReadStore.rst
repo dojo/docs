@@ -295,3 +295,17 @@ The general case type map handles the situation where some processing on the val
       "deserialize": function(value) 
     },
   }
+
+Example:  General Case Type Map for JavaScript Date Objects
+-----------------------------------------------------------
+
+.. code-block :: javascript 
+
+  {
+    "Date": {
+      type: Date,
+      deserialize: function(value){
+        return dojo.date.stamp.fromISOString(value);
+      }
+	}
+  }
