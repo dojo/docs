@@ -384,7 +384,7 @@ Functional Example:  Using custom type maps with ItemFileReadStore
              if (list) {
                if (item) {
                  var bold = document.createElement("b");
-                 bold.appendChild(document.createTextNode("Item Name: ");
+                 bold.appendChild(document.createTextNode("Item Name: "));
                  list.appendChild(bold);
                  list.appendChild(document.createTextNode(colorStore.getValue(item, "name")));
                  list.appendChild(document.createElement("br"));
