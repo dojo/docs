@@ -20,7 +20,7 @@ Supported APIs
 
 The following dojo.data APIs are implemented by ItemFileReadStore
 
-  * `dojo.data.api.Read <dojo/data/api/Read>'_
+  * `dojo.data.api.Read <dojo/data/api/Read>`_
   * `dojo.data.api.Identity <dojo/data/api/Identity>`_
 
 
@@ -34,7 +34,10 @@ While the data exposed from a data store is agnostic and consumable by many sour
 
   {
     "label": "some attribute",   //Optional attribute used to indicate which attribute on an item should act as a human-readable label for display purposes.
+
+
     "identifier": "some attribute",  //Optional attribute used to indicate which attribute on an item acts as a unique identifier for that item.  If it is not defined, then the ItemFileReadStore will simply number the items and use that number as a unique index to the item.
+
 
     "items:" [  //The array of JavaScript objects that act as the root items of the data store
       { /* Some set of name/value attributes /* },
