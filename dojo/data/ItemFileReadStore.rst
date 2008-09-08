@@ -360,7 +360,9 @@ Functional Example:  Using custom type maps with ItemFileReadStore
           { name:'DojoBlue', color:{_type:'Color', _value:'blue'} }
         ]
       };
-      
+
+      var colorStore = new dojo.data.ItemFileReadStore({data: storeData, typeMap: {'Color': dojo.Color}}}
+     
       //This function performs some basic dojo initialization.  In this case it connects the button
       //onClick to a function which invokes the fetch().  The fetch function queries for all items 
       //and provides callbacks to use for completion of data retrieval or reporting of errors.
@@ -418,7 +420,9 @@ Functional Example:  Using custom type maps with ItemFileReadStore
 
   .. cv :: html 
 
+    <!--
     <div dojoType="dojo.data.ItemFileReadStore" data="storeData" typeMap="{'Color': dojo.Color}" jsId="colorStore"></div>
+    -->
     <div dojoType="dijit.form.Button" jsId="button2">Click me to examine items and what the color attribute is!</div>
     <br>
     <br>
