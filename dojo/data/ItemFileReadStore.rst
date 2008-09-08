@@ -62,6 +62,7 @@ Input Data Format
 
 While the data exposed from a data store is agnostic and consumable by many sources in an usually interchangable way, the input data formats of a data store may vary.   The ItemFileReadStore expects a specific structure to its data, as defined below:
 
+-----------------
 General Structure
 -----------------
 
@@ -86,6 +87,7 @@ General Structure
   }
 
 
+--------------
 Item Structure
 --------------
 
