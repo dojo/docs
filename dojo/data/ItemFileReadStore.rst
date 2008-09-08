@@ -340,6 +340,76 @@ Example:  Simplified Form Type Map for dojo.Color Objects
     "Color": dojo.Color
   }
 
--------------------------------------------------------
-Example:  Using custom type maps with ItemFileReadStore
--------------------------------------------------------
+------------------------------------------------------------------
+Functional Example:  Using custom type maps with ItemFileReadStore
+------------------------------------------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojo.data.ItemFileReadStore");
+      dojo.require("dijit.form.Button");
+
+      var storeData = { identifier: 'name', 
+        identifier:'name',
+        items: [
+          { name:'DojoRed', color:{_type:'Color', _value:'red'} },
+          { name:'DojoGreen', color:{_type:'Color', _value:'green'} },
+          { name:'DojoBlue', color:{_type:'Color', _value:'blue'} }
+        ]
+      };
+      
+      //This function performs some basic dojo initialization.  In this case it connects the button
+      //onClick to a function which invokes the fetch().  The fetch function queries for all items 
+      //and provides callbacks to use for completion of data retrieval or reporting of errors.
+      function init () {
+           //Function to perform a fetch on the datastore when a button is clicked
+           function getItems () {
+
+             //Callback to perform an action when the data items are starting to be returned:
+             function clearOldList(size, request) {
+               var list = dojo.byId("list2");
+               if (list) { 
+                 while (list.firstChild) {
+                   list.removeChild(list.firstChild);
+                 }
+               }
+             }
+  
+             //Callback for processing a single returned item.
+             function gotItem(item, request) {
+             var list = dojo.byId("list");
+             if (list) {
+               if (item) {
+                 list.appendChild(document.createTextNode(colorStore.getValue(item, "name")));
+                 list.appendChild(document.createElement("br"));
+               }
+             }
+           }
+            
+           //Callback for if the lookup fails.
+           function fetchFailed(error, request) {
+              alert("lookup failed.");
+           }
+             
+           //Fetch the data.  
+           foodStore.fetch({onBegin: clearOldList, onItem: gotItem, onError: fetchFailed});
+         }
+
+         //Link the click event of the button to driving the fetch.
+         dojo.connect(button2, "onClick", getStreamingItems);
+      }
+      //Set the init function to run when dojo loading and page parsing has completed.
+      dojo.addOnLoad(init);
+    </script>
+
+  .. cv :: html 
+
+    <div dojoType="dojo.data.ItemFileReadStore" data="storeData" jsId="colorStore"></div>
+    <div dojoType="dijit.form.Button" jsId="button2">Click me to examine items and what the color attribute is!</div>
+    <br>
+    <br>
+    <span id="list2">
+    </span>
