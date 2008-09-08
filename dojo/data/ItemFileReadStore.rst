@@ -62,8 +62,7 @@ Item Structure
 
   Aside from regular, string, boolean, integer, object, etc, types that can be assigned as attribute values, there are special structures that when detected are treated differently from regular values.  
 
-    References
-    ----------
+    **References:**
 
     The first is the the *_reference* structure.   The *_reference* structure is a JavaScript Object with a single, special attributes of *_reference*.  Its value should always be the identity of another item.  With this structure, ItemFileReadStore can read in and set up relationships between items.   An example of such a data structure is below:
 
@@ -80,8 +79,7 @@ Item Structure
     So, by calling store.getValue(bobItem, "spouse"), the return will be the datastore item identified by *Nancy*.
           
 
-    Custom Types
-    ------------
+    **Custom Types:**
 
     The other special structure is the custom type structure.  The purpose of the custom type structure is a mechanism by which you can define JavaScript Objects that you do not which to be created and handled as a data store item.  A good example of this is a JavaScript Date object.  You likely do not wish it to be treated as another item, but as simply its JavaScript object.  Another good example is the dojo.Color object.  Again, it is unlikely you would wish this to be treated as a datastore item.   So, ItemFileReadStore provides a mechanism by which these sort of objects can be represented in JSON and reconstructed back into their JavaScript equivalents.  The custom type format is defined below:
 
