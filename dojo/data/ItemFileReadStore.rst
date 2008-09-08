@@ -25,6 +25,58 @@ The following dojo.data APIs are implemented by ItemFileReadStore
   * `dojo.data.api.Identity <dojo/data/api/Identity>`_
 
 
+======================
+Constructor Parameters
+======================
+
++----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
+| **Parameter**  | **Required** | **Description**                                                                                | **Since** |
++----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
+| url            | No           |This optional parameter specifies what URL from which to load the structured JSON data.  Note   | 1.0       |
+|                |              |that this URL is only loaded one time, as this is an in-memory data store.  Only when combined  |           |
+|                |              |with parameters *clearOnClose* and *urlPreventCache*, is it possible to reload the store        |           |
+|                |              |instance with new data.                                                                         |           |
++----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
+| data           | No           |A structured JavaScript Object to use to populate the store.  This parameter can be used instead| 1.0       |
+|                |              |of *url* when you wish to load data differently then modify it to fit the expected              |           |
+|                |              |ItemFileReadStore format.  This parameter is ignored if *url* is set.                           |           |
++----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
+| typeMap        | No           |This is a JavaScript Object that defines how to deserialize custom types.  For more information | 1.0       |
+|                |              |on custom types, please refer to the section in this page on them.  They are effectively a way  |           |
+|                |              |to control how certain values of attributes are processed.                                      |           |
++----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
+| clearOnClose   | No           |This boolean parameter controls the clear() behavior of the store.  If set, calling close() will| 1.2       |
+|                |              |erase all items stored in the internal structures.  A new call to fetch will invoke the URL     |           |
+|                |              |load or reparse the data object into a new list of items.                                       |           |
++----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
+| urlPreventCache| No           |This boolean value constrols whether dojo attempts to prevent the browser caching mechanism from| 1.2       |
+|                |              |caching values loaded from a webserver.  This parameter is especially useful when combined with |           | 
+|                |              |*clearOnClose* to force a data reload.                                                          |           |
++----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
+  
+
+                //      summary: constructor
+                //      keywordParameters: {url: String}
+                //      keywordParameters: {data: jsonObject}
+                //      keywordParameters: {typeMap: object)
+                //              The structure of the typeMap object is as follows:
+                //              {
+                //                      type0: function || object,
+                //                      type1: function || object,
+                //                      ...
+                //                      typeN: function || object
+                //              }
+                //              Where if it is a function, it is assumed to be an object constructor that takes the
+                //              value of _value as the initialization parameters.  If it is an object, then it is assumed
+                //              to be an object of general form:
+                //              {
+                //                      type: function, //constructor.
+                //                      deserialize:    function(value) //The function that parses the value and constructs the object defined by type appropriately.
+                //              }
+
+
+
+
 =================
 Input Data Format
 =================
