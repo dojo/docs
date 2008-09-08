@@ -230,3 +230,33 @@ Item Structure Example: Items with Hierarchy
       } 
     ]
   }
+
+
+Item Structure Example: Items with custom types
+-----------------------------------------------
+
+.. code-block :: javascript 
+
+  {
+    'identifier': 'abbr', 
+    'label': 'name',
+    'items': [
+      { 'abbr':'ec', 'name':'Ecuador',           'capital':'Quito' },
+      { 'abbr':'eg', 'name':'Egypt',             'capital':'Cairo' },
+      { 'abbr':'sv', 'name':'El Salvador',       'capital':'San Salvador' },
+      { 'abbr':'gq', 'name':'Equatorial Guinea', 'capital':'Malabo' },
+      { 'abbr':'er',
+        'name':'Eritrea',
+        'capital':'Asmara',
+        'independence':{'_type':'Date', '_value':"1993-05-24T00:00:00Z"} 
+      },
+      { 'abbr':'ee',
+        'name':'Estonia',
+        'capital':'Tallinn',
+        'independence':{'_type':'Date', '_value':"1991-08-20T00:00:00Z"} 
+      },
+      { 'abbr':'et',
+        'name':'Ethiopia',
+        'capital':'Addis Ababa' }
+    ]
+  }
