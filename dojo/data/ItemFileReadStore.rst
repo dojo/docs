@@ -64,7 +64,7 @@ Item Structure
 
     **References:**
 
-    The first is the the *_reference* structure.   The *_reference* structure is a JavaScript Object with a single, special attributes of *_reference*.  Its value should always be the identity of another item.  With this structure, ItemFileReadStore can read in and set up relationships between items.   An example of such a data structure is below:
+    The first is the the *_reference* structure.   The *_reference* structure is a JavaScript Object with a single, special attribute of *_reference*.  Its value should always be the identity of another item.  With this structure, ItemFileReadStore can read in and set up relationships between items.   An example of such a data structure is below:
 
     .. code-block :: javascript
 
