@@ -370,7 +370,7 @@ Functional Example:  Using custom type maps with ItemFileReadStore
 
              //Callback to perform an action when the data items are starting to be returned:
              function clearOldList(size, request) {
-               var list = dojo.byId("list2");
+               var list = dojo.byId("list");
                if (list) { 
                  while (list.firstChild) {
                    list.removeChild(list.firstChild);
@@ -395,6 +395,7 @@ Functional Example:  Using custom type maps with ItemFileReadStore
             
            //Callback for if the lookup fails.
            function fetchFailed(error, request) {
+              console.log(error);
               alert("lookup failed.");
            }
              
