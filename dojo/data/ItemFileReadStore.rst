@@ -388,7 +388,13 @@ Functional Example:  Using custom type maps with ItemFileReadStore
                  list.appendChild(bold);
                  list.appendChild(document.createTextNode(colorStore.getValue(item, "name")));
                  list.appendChild(document.createElement("br"));
-                 list.appendChild(document.createTextNode("Attribute color is of type: " + typeof colorStore.getValue(item, "name")));
+                 list.appendChild(document.createTextNode("Attribute color is of type: " + typeof colorStore.getValue(item, "color")));
+                 list.appendChild(document.createElement("br"));
+                 list.appendChild(document.createTextNode("Attribute color value is: " + colorStore.getValue(item, "color")));
+                 list.appendChild(document.createElement("br"));
+                 list.appendChild(document.createTextNode("Attribute color is instance of dojo.Color? " + (colorStore.getValue(item, "color") instanceof dojo.Color)));
+                 list.appendChild(document.createElement("br"));
+                 list.appendChild(document.createElement("br"));
                }
              }
            }
