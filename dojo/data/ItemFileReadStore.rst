@@ -267,6 +267,10 @@ Custom Types
 
 As mentioned in the Item Structure section, custom types are possible to create and use as values of attributes with this store.  The caveat is, you have to tel the store, through a typeMap object, how to deserialize the cutom type value back into its object form.  This is not as difficult as it first may sound.  Below is the general structure information for creating a custom type map.  There is a general format for all cases, and a compact format when the value can be directly used as a constructor argument.
 
+**Note:** You can mix simplified form type maps with general case type maps in the same type map object.  Therefore, you can use whatever is the easiest representation required to handle the custom object construction.   
+
+**Note:** dojo.data.ItemFileReadStore implements a custom type map for JavaScript Date already.  It uses the ISO-8601 serialization format for dates to keep it consistent with other date operations in dojo.  If you wish to see how ItemFileReadStore defines it, refer to the source of dojo/data/ItemFileReadStore.js.   The type mapping occurs in the constructor function.
+
 ---------------------
 General Case Type Map
 ---------------------
@@ -293,7 +297,7 @@ The general case type map handles the situation where some processing on the val
     "typeN": {
       "type": constructorFunction(), 
       "deserialize": function(value) 
-    },
+    }
   }
 
 Example:  General Case Type Map for JavaScript Date Objects
@@ -324,7 +328,7 @@ The simplified form is more compact to write and works well when the value held 
     "type1": constructorFunction(),
     "type2": constructorFunction(),
     ...
-    "typeN": constructorFunction(),
+    "typeN": constructorFunction()
   }
 
 Example:  Simplified Form Type Map for dojo.Color Objects
