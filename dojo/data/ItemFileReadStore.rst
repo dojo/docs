@@ -232,7 +232,7 @@ Item Structure Example: Items with Hierarchy
   }
 
 
-Item Structure Example: Items with custom types
+Item Structure Example: Items with Custom Types
 -----------------------------------------------
 
 .. code-block :: javascript 
