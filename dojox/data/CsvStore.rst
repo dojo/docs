@@ -6,7 +6,7 @@ dojox.data.CsvStore
 .. contents::
   :depth: 3
 
-CsvStore is a simple read-only store provided by Dojo and contained in the DojoX project. CsvStore is a read interface that works with CSV formated data files. The CSV file format is commonly known to folks who work regularly with spread sheet data. Like ItemFileReadStore, CsvStore reads the contents from an http endpoint or a JavaScript Data object that contains CSV formatted data. The following is an example of a CSV data source:
+CsvStore is a simple read-only store provided by Dojo and contained in the DojoX project. CsvStore is a read interface that works with `CSV <http://en.wikipedia.org/wiki/Comma-separated_values>`_ formated data files. The CSV file format is commonly known to folks who work regularly with spread sheet data. Like ItemFileReadStore, CsvStore reads the contents from an http endpoint or a JavaScript Data object that contains CSV formatted data. The following is an example of a CSV data source:
 
 ::
   
@@ -38,7 +38,7 @@ Constructor Params
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
 | data           | No           |A JavaScript String of Csv formatted data to use to populate the store.  This parameter can be  | 1.0       |
 |                |              |used instead of *url*. when you wish to load data differently then modify it to fit the expected|           |
-|                |              |Csv format.                                                                                      |           |
+|                |              |Csv format.                                                                                     |           |
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
 | label          | No           |A string that identifies which column to treat as the human-readable label. It must match one of| 1.0       |
 |                |              |the column labels in the file for it to be effective.                                           |           |
