@@ -430,12 +430,31 @@ Functional Example:  Using custom type maps with ItemFileReadStore
 Query Syntax
 ============
 
-The fetch method query syntax for ItemFileReadStore is simple and straightforward. It allows a list of attributes to match against in an AND fashion. For example, a query object to locate all items with attribute foo that has value bar and attribute bit that has value bite, would look like::
+The fetch method query syntax for ItemFileReadStore is simple and straightforward. It allows a list of attributes to match against in an AND fashion. For example, a query object to locate all items with attribute foo that has value bar and attribute bit that has value bite, would look like
 
 .. code-block :: javascript
 
   { foo:"bar", bit:"bite"}
 
+Okay, easy.  Now what if I want to do a fuzzy match of items?  Can this be done?   Yes.  ItemFileReadStore supports wildcard matching.  Specifically, it supports multi-character * and single character ? as wildcards in attribute value queries.
+
+--------------
+Query Examples
+--------------
 
 
-Note that ItemFileReadStore supports the use of wild cards (multi-character * and single character ?) in its attribute value matching. 
+Query Example 1: Match all items with attribute foo that has a value starting with bar
+--------------------------------------------------------------------------------------
+
+.. code-block :: javascript
+
+  { foo:"bar*"}
+
+
+Query Example 2: Match all items with attribute foo the value of which ends with ar -----------------------------------------------------------------------------------
+
+*Note: This is doing a single character wildcard *
+
+.. code-block :: javascript
+
+  { foo:"?ar"}
