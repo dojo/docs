@@ -119,6 +119,8 @@ Examples
 Example 1:  Connecting OpmlStore to dijit.form.ComboBox
 -------------------------------------------------------
 
+*Note that dijit.form.ComboBox automatically passes the queryOption deep:true.  This is because for ComboBox, hierarchy does not make sense, so searching as a flat list is preferable*
+
 .. cv-compound ::
   
   .. cv :: javascript
