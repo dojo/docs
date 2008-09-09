@@ -5,7 +5,9 @@
 
 Datastores provide access to data through a standardized interface for talking to data services.  The most common operations performed on data are: 
 
-* `Terminology <quickstart/data/usingdatastores/terminology>`_
+* `Terminology <quickstart/data/usingdatastores/terminology>`_ - Useful definitions used throughout the documentation.
+* `A Simple Data Source and Examples <quickstart/data/usingdatastores/simple>`_ - A definition of what dtata sources are and examples of connecting data stores to widgets.
+* `Fetching data items <quickstart/data/usingdatastores/terminology>`_ - How to fetch a single data item and display attributes of that item.
 * Searching for data
 * Sorting data
 * Paging large data sets.
