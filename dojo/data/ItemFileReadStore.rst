@@ -451,9 +451,12 @@ Query Example 1: Match all items with attribute foo that has a value starting wi
   { foo:"bar*"}
 
 
+
 Query Example 2: Match all items with attribute foo the value of which ends with ar -----------------------------------------------------------------------------------
 
+
 *Note: This is doing a single character wildcard *
+
 
 .. code-block :: javascript
 
