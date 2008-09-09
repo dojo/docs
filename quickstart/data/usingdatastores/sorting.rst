@@ -33,7 +33,7 @@ For compound sorts, you can define as many sort keys as you want. The order in t
 Examples
 ========
 
-While that seems simple, nothing is as useful as a complete example.  So, below is an example that will take a simple case and show how to use the dojo.data API to sort data items.  This example uses the same data used in examples elsewhere, the simple pantry data.
+While that seems simple, nothing is as useful as a complete example.  So, below is an example that will take a simple case and show how to use the dojo.data API to sort data items.  This example uses the same data used in examples elsewhere, the simple grocery data.
 
 
 Sample 1:  Showing how sort attributes affect ordering
