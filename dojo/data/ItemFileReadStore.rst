@@ -529,3 +529,9 @@ Example 1: Connecting ItemFileReadStore to ComboBox
 ----------------------------------------
 Example 2:  Searching for all continents
 ----------------------------------------
+
+
+
+------------------------------------------------------
+Example 2:  Doing wildcard searches and option setting
+------------------------------------------------------
