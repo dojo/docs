@@ -533,5 +533,134 @@ Example 2:  Searching for all continents
 
 
 ------------------------------------------------------
-Example 2:  Doing wildcard searches and option setting
+Example 3:  Doing wildcard searches and option setting
 ------------------------------------------------------
+
+*Wildcards * and ? are supported by the dojo.data.ItemFileReadStore:*
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojo.data.ItemFileReadStore");
+      dojo.require("dijit.form.Button");
+      dojo.require("dijit.form.TextBox");
+      dojo.require("dijit.form.CheckBox");
+
+      var storeData3 = { identifier: 'name', 
+        items: [
+          { name: 'Adobo', aisle: 'Mexican', price: 3.01 },
+          { name: 'Balsamic vinegar', aisle: 'Condiments', price: 4.01 },
+          { name: 'Basil', aisle: 'Spices', price: 3.59  },          
+          { name: 'Bay leaf', aisle: 'Spices',  price: 2.01 },
+          { name: 'Beef Bouillon Granules', aisle: 'Soup',  price: 5.01 },
+          { name: 'Vinegar', aisle: 'Condiments',  price: 1.99  },
+          { name: 'White cooking wine', aisle: 'Condiments',  price: 2.01 },
+          { name: 'Worcestershire Sauce', aisle: 'Condiments',  price: 3.99 },
+          { name: 'white pepper', aisle: 'Spices',  price: 1.01 },
+          { name: 'Black Pepper', aisle: 'Spices',  price: 1.01 }
+        ]};
+
+        //This function performs some basic dojo initialization. In this case it connects the button
+        //onClick to a function which invokes the fetch(). The fetch function queries for all items 
+        //and provides callbacks to use for completion of data retrieval or reporting of errors.
+        function init3 () {
+           //Function to perform a fetch on the datastore when a button is clicked
+           function search() {
+             var queryObj = {};
+
+             //Build up the query from the input boxes.
+             var name = nameBox.getValue();
+             if ( name && dojo.trim(name) !== "" ) {
+               queryObj["name"] = name;       
+             }
+             var aisle = aisleBox.getValue();
+             if ( aisle && dojo.trim(aisle) !== "" ) {
+               queryObj["aisle"] = aisle;       
+             }
+
+             var qNode = dojo.byId("query");
+             if (qNode ) {
+               qNode.innerHTML = dojo.toJson(queryObj);   
+             }
+
+
+             //Build up query options, if any.
+             var queryOptionsObj = {};
+
+             if ( checkBox.getValue()) {
+               queryOptionsObj["ignoreCase"] = true;
+             }
+
+             var qoNode = dojo.byId("queryOptions");
+             if (qoNode ) {
+               qoNode.innerHTML = dojo.toJson(queryOptionsObj);   
+             }
+
+             //Callback to perform an action when the data items are starting to be returned:
+             function clearOldList(size, request) {
+               var list = dojo.byId("list3");
+               if (list) { 
+                 while (list.firstChild) {
+                   list.removeChild(list.firstChild);
+                 }
+               }
+             }
+  
+             //Callback for processing a returned list of items.
+             function gotItems(items, request) {
+               var list = dojo.byId("list3");
+               if (list) { 
+                 var i;
+                 for (i = 0; i < items.length; i++) {
+                   var item = items[i];
+                   list.appendChild(document.createTextNode(foodStore3.getValue(item, "name")));
+                   list.appendChild(document.createElement("br"));
+                 }
+               }
+             }
+            
+             //Callback for if the lookup fails.
+             function fetchFailed(error, request) {
+                alert("lookup failed.");
+                alert(error);
+             }
+             
+             //Fetch the data.
+             foodStore3.fetch({query: queryObj, queryOptions: queryOptionsObj, onBegin: clearOldList, onComplete: gotItems, onError: fetchFailed});
+
+           }
+           //Link the click event of the button to driving the fetch.
+           dojo.connect(button3, "onClick", search);
+        }
+        //Set the init function to run when dojo loading and page parsing has completed.
+        dojo.addOnLoad(init3);
+    </script>
+
+  .. cv :: html 
+
+
+    <b>Name:  </b><input dojoType="dijit.form.TextBox" jsId="nameBox" value="*"></input>
+    <br>
+    <br>
+    <b>Aisle: </b><input dojoType="dijit.form.TextBox" jsId="aisleBox" value="*"></input>
+    <br>
+    <br>
+    <b>Case Insensitive: </b><div dojoType="dijit.form.CheckBox" checked="false" jsId="checkBox"></div>
+    <br>
+    <br>
+    <div dojoType="dojo.data.ItemFileReadStore" data="storeData3" jsId="foodStore3"></div>
+    <div dojoType="dijit.form.Button" jsId="button3">Click to search!</div>
+    <br>
+    <br>
+    <b>Query used: </b><span id="query"></span
+    <br>
+    <br>
+    <b>Query Options used: </b><span id="queryOptions"></span
+    <br>
+    <br>
+    <b>Items located:</b>
+    <br>
+    <span id="list3">
+    </span>
