@@ -443,8 +443,10 @@ Query Examples
 --------------
 
 
-Query Example 1: Match all items with attribute foo that has a value starting with bar
---------------------------------------------------------------------------------------
+Query Example 1: Match all items with multi-character wildcard
+--------------------------------------------------------------
+
+*Matching attribute foo that has a value starting with bar*
 
 .. code-block :: javascript
 
@@ -452,10 +454,20 @@ Query Example 1: Match all items with attribute foo that has a value starting wi
 
 
 
+
+---- /!\ '''Edit conflict - other version:''' ----
 Query Example 2: Match all items with attribute foo the value of which ends with ar 
 -----------------------------------------------------------------------------------
 
 *Note: This is doing a single character wildcard.*
+
+---- /!\ '''Edit conflict - your version:''' ----
+Query Example 2: Match all items with single character wildcard
+---------------------------------------------------------------
+
+*Matching attribute foo the value of which ends with ar and starts with any character.*
+
+---- /!\ '''End of edit conflict''' ----
 
 .. code-block :: javascript
 
