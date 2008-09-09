@@ -424,3 +424,18 @@ Functional Example:  Using custom type maps with ItemFileReadStore
     <br>
     <span id="list">
     </span>
+
+
+============
+Query Syntax
+============
+
+The fetch method query syntax for ItemFileReadStore is simple and straightforward. It allows a list of attributes to match against in an AND fashion. For example, a query object to locate all items with attribute foo that has value bar and attribute bit that has value bite, would look like::
+
+.. code-block :: javascript
+
+  { foo:"bar", bit:"bite"}
+
+
+
+Note that ItemFileReadStore supports the use of wild cards (multi-character * and single character ?) in its attribute value matching. 
