@@ -443,8 +443,8 @@ Query Examples
 --------------
 
 
-Query Example 1: Match all items with multi-character wildcard
---------------------------------------------------------------
+Query Example 1: Match items with multi-character wildcard
+----------------------------------------------------------
 
 *Matching attribute foo that has a value starting with bar*
 
@@ -453,8 +453,8 @@ Query Example 1: Match all items with multi-character wildcard
   { foo:"bar*"}
 
 
-Query Example 2: Match all items with single character wildcard
----------------------------------------------------------------
+Query Example 2: Match items with single character wildcard
+-----------------------------------------------------------
 
 *Matching attribute foo the value of which ends with ar and starts with any character.*
 
@@ -464,8 +464,8 @@ Query Example 2: Match all items with single character wildcard
   { foo:"?ar"}
 
 
-Query Example 2: Match all items on multiple attributes
--------------------------------------------------------
+Query Example 2: Match items on multiple attributes
+---------------------------------------------------
 
 *Matching multiple attributes with various wildcards.*
 
