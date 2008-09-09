@@ -110,3 +110,28 @@ Dojo.data defines support for a 'queryOptions' modifier object that affects the 
 +------------+------------------------------------------------------------------------------------------------------------------------+
 | deep       |Default is *false*.  By default, only root outline tags are matched.  By setting to true, children tags are also scanned|
 +------------+------------------------------------------------------------------------------------------------------------------------+
+
+========
+Examples
+========
+
+-------------------------------------------------------
+Example 1:  Connecting OpmlStore to dijit.form.ComboBox
+-------------------------------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojox.data.OpmlStore");
+      dojo.require("dijit.form.ComboBox");
+    </script>
+
+  .. cv :: html 
+
+    <div dojoType="dojox.data.OpmlStore" url="moin_static163/js/dojo/trunk/release/dojo/dojox/data/tests/stores/geography.xml" jsId="geoStore"></div>
+    <div dojoType="dijit.form.ComboBox" store="geoStore" searchAttr="text"></div>
+
+
+
