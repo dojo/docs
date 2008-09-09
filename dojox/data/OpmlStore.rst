@@ -82,7 +82,7 @@ Constructor Params
 | url            | No           |This optional parameter specifies what URL from which to load the Opmldata Note                 | 1.0       |
 |                |              |that this URL is only loaded one time, as this is an in-memory data store.                      |           |
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
-| data           | No           |A DOM of OPPML data to use to populate the store.  This parameter can be                        | 1.0       |
+| data           | No           |A DOM of OPML data to use to populate the store.  This parameter can be                         | 1.0       |
 |                |              |used instead of *url*. when you wish to load data differently then modify it to fit the expected|           |
 |                |              |Opml format.                                                                                    |           |
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
