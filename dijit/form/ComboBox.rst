@@ -92,3 +92,25 @@ To set the default value for this example, specify the *value* attribute in the 
                 searchAttr="name"
                 name="state"
                 id="stateInput">
+
+
+Accessibility
+-------------
+
+Keyboard
+~~~~~~~~
++------------------------------------------------------+---------------+
+| **Action**                                           | **Key**       |
++------------------------------------------------------+---------------+
+| Open the menu of options (filtered by current input) | Down arrow    |
++------------------------------------------------------+---------------+
+| Navigate through the options                         | Up/Down arrow |
++------------------------------------------------------+---------------+
+| Pick an option                                       | Enter         |
++------------------------------------------------------+---------------+
+| Close the menu of options without selection          | Esc           |
++------------------------------------------------------+---------------+
+
+Known Issues
+~~~~~~~~~~~~
+JAWS 8 and Window-Eyes 6 may fail to read an option when it becomes highlighted. In Dojo 1.1 the Combobox was updated so that JAWS 9 will speak "editable combo" when the Combobox gets focus. However, there are some issues reading the highlighted choice. Generally JAWS 9 with Firefox 2 will only speak the part of the word that is currently selected in the textbox. For example, if you are working with a ComboBox containing the US state names and you type in an "I" to filter the list of states. If the user arrows down and highlights "Iowa" in the drop down list, "Iowa" will be displayed in the textbox with the "owa" portiion selected. JAWS 9 will speak, "owa" rather than "Iowa". This is not an issue with Firefox 3 and JAWS 9. 
