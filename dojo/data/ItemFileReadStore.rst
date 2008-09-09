@@ -454,20 +454,16 @@ Query Example 1: Match all items with multi-character wildcard
 
 
 
-
----- /!\ '''Edit conflict - other version:''' ----
-Query Example 2: Match all items with attribute foo the value of which ends with ar 
------------------------------------------------------------------------------------
+Query Example 2: Match all items with milti-character wildcard
+--------------------------------------------------------------
 
 *Note: This is doing a single character wildcard.*
 
----- /!\ '''Edit conflict - your version:''' ----
 Query Example 2: Match all items with single character wildcard
 ---------------------------------------------------------------
 
 *Matching attribute foo the value of which ends with ar and starts with any character.*
 
----- /!\ '''End of edit conflict''' ----
 
 .. code-block :: javascript
 
