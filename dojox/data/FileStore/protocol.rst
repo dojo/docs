@@ -34,7 +34,7 @@ All query information is passed as query parameters. The list below of the query
 |                   |query modifiers: *deep* and *ignoreCase*                                                                 |                    |
 +-------------------+---------------------------------------------------------------------------------------------------------+--------------------+
 |start              |Where in the list of matches to start returning file items. For example a value of 10 means start        |integer             |
-|                   |returning items beginning at the tenth file item match.                                                 |                    |
+|                   |returning items beginning at the tenth file item match.                                                  |                    |
 +-------------------+---------------------------------------------------------------------------------------------------------+--------------------+
 |count              |How many file items to return.                                                                           |integer             |
 +-------------------+---------------------------------------------------------------------------------------------------------+--------------------+
