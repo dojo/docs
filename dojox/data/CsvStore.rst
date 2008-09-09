@@ -102,7 +102,7 @@ Example 1:  Connecting CsvStore to dijit.form.ComboBox
 
 
 ------------------------------------------------------
-Example 1:  Connecting CsvStore to dijit.form.ComboBox
+Example 2:  Connecting CsvStore to dojox.grid.DataGrid
 ------------------------------------------------------
 
 .. cv-compound ::
