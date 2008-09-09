@@ -4,6 +4,7 @@ dojox.data.FileStore: Technical/Protocol Details
 ================================================
 
 :Status: Draft
+:Author: Jared Jurkiewicz
 :Version: 1.2
 
 .. contents::
