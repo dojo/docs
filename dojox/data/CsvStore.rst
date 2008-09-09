@@ -73,3 +73,28 @@ Examples
 ------------------------------------------------------
 Example 1:  Connecting CsvStore to dijit.form.ComboBox
 ------------------------------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojox.data.CsvStore");
+      dojo.require("dijit.form.ComboBox");
+
+      var storeData =   "firstname,lastname,age\n" +
+                        "John, Doe, 21\n" +
+                        "Jane, Doe, 22\n" +
+                        "Richard, Smith, 43\n" +
+                        "Sally, Smith, 49\n" +
+                        "Lian, Zu, 23\n" +
+                        "Ichiro, Kagetsume, 23\n"+
+                        "Umeko, Tsuguri, 18\n" + 
+                        "Alptraum, Reisender, 25\n" +
+                        "Thomas, Winthrope, 14\n"
+    </script>
+
+  .. cv :: html 
+
+    <div dojoType="dojox.data.CsvStore" data="storeData" jsId="personStore"></div>
+    <div dojoType="dijit.form.ComboBox" store="personStore" searchAttr="firstname"></div>
