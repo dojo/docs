@@ -11,8 +11,8 @@ OpmlStore is a simple read-only store provided by Dojo and contained in the Dojo
 
 The following dojo.data APIs are implemented by OpmlStore
 
-    * dojo.data.api.Read
-    * dojo.data.api.Identity
+* `dojo.data.api.Read <dojo/data/api/Read>`_
+* `dojo.data.api.Identity <dojo/data/api/Identity>`_ - *Identity is implemented as the index number of the <outline> node*
 
 The following example shows an Opml data source:
 
