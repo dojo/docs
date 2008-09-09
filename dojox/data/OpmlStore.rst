@@ -163,6 +163,8 @@ Example 2:  Connecting OpmlStore to dijit.Tree
 Example 3:  Connecting OpmlStore to dojox.grid.DataGrid
 -------------------------------------------------------
 
+*Note here that as part of the DataGrid definition, the queryOption deep is set true.  For the DataGrid, hierarchy here does not make sense*
+
 .. cv-compound ::
 
   .. cv :: javascript
