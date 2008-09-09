@@ -93,7 +93,7 @@ Example 1:  Connecting CsvStore to dijit.form.ComboBox
                         "Alptraum, Reisender, 25\n" +
                         "Thomas, Winthrope, 14\n";
 
-      var personStore = dojox.data.CsvStore({data: storeData});
+      var personStore = new dojox.data.CsvStore({data: storeData});
     </script>
 
   .. cv :: html 
