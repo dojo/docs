@@ -43,3 +43,11 @@ Constructor Params
 | label          | No           |A string that identifies which column to treat as the human-readable label. It must match one of| 1.0       |
 |                |              |the column labels in the file for it to be effective.                                           |           |
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
+
+========
+Examples
+========
+
+------------------------------------------------------
+Example 1:  Connecting CsvStore to dijit.form.ComboBox
+------------------------------------------------------
