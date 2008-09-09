@@ -492,3 +492,40 @@ Dojo.data defines support for a 'queryOptions' modifier object that affects the 
 |            |query is only applied against root items in the tree of data items.  If it is set to true, then the query is applied to |
 |            |root items and *all* child data items.  Think of it as a recursive search.                                              |
 +------------+------------------------------------------------------------------------------------------------------------------------+
+
+==============
+Usage Examples
+==============
+
+Example 1: Connecting ItemFileReadStore to ComboBox
+---------------------------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojo.data.ItemFileReadStore");
+      dojo.require("dijit.form.ComboBox");
+
+      var storeData =   { identifier: 'abbr', 
+        label: 'name',
+        items: [
+          { abbr:'ec', name:'Ecuador',           capital:'Quito' },
+          { abbr:'eg', name:'Egypt',             capital:'Cairo' },
+          { abbr:'sv', name:'El Salvador',       capital:'San Salvador' },
+          { abbr:'gq', name:'Equatorial Guinea', capital:'Malabo' },
+          { abbr:'er', name:'Eritrea',           capital:'Asmara' },
+          { abbr:'ee', name:'Estonia',           capital:'Tallinn' },
+          { abbr:'et', name:'Ethiopia',          capital:'Addis Ababa' }
+      ]}
+    </script>
+
+  .. cv :: html 
+
+    <div dojoType="dojo.data.ItemFileReadStore" data="storeData" jsId="countryStore"></div>
+    <div dojoType="dijit.form.ComboBox" store="countryStore" searchAttr="name"></div>
+
+
+Example 2:  Searching for all continents
+----------------------------------------
