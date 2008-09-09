@@ -352,7 +352,7 @@ Functional Example:  Using custom type maps with ItemFileReadStore
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.form.Button");
 
-      var storeData = { identifier: 'name', 
+      var colorData = { identifier: 'name', 
         identifier:'name',
         items: [
           { name:'DojoRed', color:{_type:'Color', _value:'red'} },
@@ -365,7 +365,7 @@ Functional Example:  Using custom type maps with ItemFileReadStore
       //onClick to a function which invokes the fetch().  The fetch function queries for all items 
       //and provides callbacks to use for completion of data retrieval or reporting of errors.
       function init () {
-        var colorStore = new dojo.data.ItemFileReadStore({data: storeData, typeMap: {'Color': dojo.Color}});
+        var colorStore = new dojo.data.ItemFileReadStore({data: colorData, typeMap: {'Color': dojo.Color}});
      
         //Function to perform a fetch on the datastore when a button is clicked
         function getItems () {
@@ -508,7 +508,7 @@ Example 1: Connecting ItemFileReadStore to ComboBox
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.form.ComboBox");
 
-      var storeData =   { identifier: 'abbr', 
+      var storeData2 =   { identifier: 'abbr', 
         label: 'name',
         items: [
           { abbr:'ec', name:'Ecuador',           capital:'Quito' },
@@ -523,7 +523,7 @@ Example 1: Connecting ItemFileReadStore to ComboBox
 
   .. cv :: html 
 
-    <div dojoType="dojo.data.ItemFileReadStore" data="storeData" jsId="countryStore"></div>
+    <div dojoType="dojo.data.ItemFileReadStore" data="storeData2" jsId="countryStore"></div>
     <div dojoType="dijit.form.ComboBox" store="countryStore" searchAttr="name"></div>
 
 ----------------------------------------
@@ -538,7 +538,7 @@ Example 2:  Searching for all continents
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.form.Button");
 
-      var storeData2 = { 
+      var geoData = { 
         'identifier': 'name',
         'label': 'name',
         'items': [
@@ -633,7 +633,7 @@ Example 2:  Searching for all continents
 
   .. cv :: html 
 
-    <div dojoType="dojo.data.ItemFileReadStore" data="storeData2" jsId="geoStore"></div>
+    <div dojoType="dojo.data.ItemFileReadStore" data="geoData" jsId="geoStore"></div>
     <div dojoType="dijit.form.Button" jsId="button2">Find continents!</div>
     <br>
     <br>
