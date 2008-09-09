@@ -496,7 +496,7 @@ Dojo.data defines support for a 'queryOptions' modifier object that affects the 
 ==============
 Usage Examples
 ==============
-
+---------------------------------------------------
 Example 1: Connecting ItemFileReadStore to ComboBox
 ---------------------------------------------------
 
@@ -526,6 +526,6 @@ Example 1: Connecting ItemFileReadStore to ComboBox
     <div dojoType="dojo.data.ItemFileReadStore" data="storeData" jsId="countryStore"></div>
     <div dojoType="dijit.form.ComboBox" store="countryStore" searchAttr="name"></div>
 
-
+----------------------------------------
 Example 2:  Searching for all continents
 ----------------------------------------
