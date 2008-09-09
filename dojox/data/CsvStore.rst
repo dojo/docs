@@ -44,6 +44,28 @@ Constructor Params
 |                |              |the column labels in the file for it to be effective.                                           |           |
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
 
+============
+Query Syntax
+============
+
+The query syntax used by dojox.data.CsvStore is identical to the query syntax used by `dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`_
+
+=============
+Query Options
+=============
+
+Dojo.data defines support for a 'queryOptions' modifier object that affects the behavior of the query.  The two defined options listed by the API are *ignoreCase* and *deep*.  CsvStore supports these options.  The affect of these options on a query is defined below.
+
++------------+------------------------------------------------------------------------------------------------------------------------+
+| **Option** | **Result**                                                                                                             |
++------------+------------------------------------------------------------------------------------------------------------------------+
+| ignoreCase |The default is **false**.  When set to true, the match on attributes is done in a case-insensitive fashion.  This means |
+|            |with ignoreCase: true, a query of A* would match *Apple* and *acorn*                                                    |
++------------+------------------------------------------------------------------------------------------------------------------------+
+| deep       |Ignored.  Csv formatted data does not not support hierarchical data.                                                    |
++------------+------------------------------------------------------------------------------------------------------------------------+
+
+
 ========
 Examples
 ========
