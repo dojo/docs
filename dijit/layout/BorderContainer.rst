@@ -73,7 +73,7 @@ Note the tabStrip attribute on the TabContainer.
     <div style="position: relative; width: 100%; height: 400px; border: 1px #ccc solid;">
     <div dojoType="dijit.layout.BorderContainer" gutters="true" id="borderContainerTwo" >
       <div dojoType="dijit.layout.ContentPane" region="top" splitter="false">
-        Hi, usually here you would habe important information, maybe your company logo, or functions you need to access all the time..  
+        Hi, usually here you would have important information, maybe your company logo, or functions you need to access all the time..  
       </div>	
       <div dojoType="dijit.layout.BorderContainer" liveSplitters="false" design="sidebar" region="center" id="mainSplit">
         <div dojoType="dijit.layout.AccordionContainer" minSize="20" style="width: 300px;" id="leftAccordion" region="leading" splitter="true">
