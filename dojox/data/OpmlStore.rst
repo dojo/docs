@@ -7,7 +7,7 @@ dojox.data.OpmlStore
   :depth: 3
 
 
-OpmlStore is a simple read-only store provided by Dojo and contained in the DojoX project. OpmlStore is a read interface to work with Opml formatted XML files. Similar to ItemFileReadStore, OpmlStore reads the contents from an http endpoint or a browser DOM object that contains Opml formatted data.
+OpmlStore is a simple read-only store provided by Dojo and contained in the DojoX project. OpmlStore is a read interface to work with `Opml <http://en.wikipedia.org/wiki/OPML>`_ formatted XML files. Similar to ItemFileReadStore, OpmlStore reads the contents from an http endpoint or a browser DOM object that contains Opml formatted data.
 
 The following dojo.data APIs are implemented by OpmlStore
 
