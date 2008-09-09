@@ -69,3 +69,44 @@ The following example shows an Opml data source:
       </outline>
     </body>
   </opml>
+
+Each data item is one of the <outline> tags.  Each attribute on the outline acts as a attribute of the data item.  For children tags, they are accessed via a special 'children' attribute.  So, as expected by dojo.data, everything can be easily accessed via csvStore.getValue's'(), which makes it pluggable into dojo.data aware widgets.
+
+==================
+Constructor Params
+==================
+
++----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
+| **Parameter**  | **Required** | **Description**                                                                                | **Since** |
++----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
+| url            | No           |This optional parameter specifies what URL from which to load the Opmldata Note                 | 1.0       |
+|                |              |that this URL is only loaded one time, as this is an in-memory data store.                      |           |
++----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
+| data           | No           |A DOM of OPPML data to use to populate the store.  This parameter can be                        | 1.0       |
+|                |              |used instead of *url*. when you wish to load data differently then modify it to fit the expected|           |
+|                |              |Opml format.                                                                                     |           |
++----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
+| label          | No           |A string that identifies which attribute to treat as the human-readable label. It must match one| 1.0       |
+|                |              |of the attributes on the <outline> tags for it to be effective.                                 |           |
++----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
+
+============
+Query Syntax
+============
+
+The query syntax used by dojox.data.OpmlStore is identical to the query syntax used by `dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`_
+
+=============
+Query Options
+=============
+
+Dojo.data defines support for a 'queryOptions' modifier object that affects the behavior of the query.  The two defined options listed by the API are *ignoreCase* and *deep*.  OpmlStore supports these options.  The affect of these options on a query is defined below.
+
++------------+------------------------------------------------------------------------------------------------------------------------+
+| **Option** | **Result**                                                                                                             |
++------------+------------------------------------------------------------------------------------------------------------------------+
+| ignoreCase |The default is **false**.  When set to true, the match on attributes is done in a case-insensitive fashion.  This means |
+|            |with ignoreCase: true, a query of A* would match *Apple* and *acorn*                                                    |
++------------+------------------------------------------------------------------------------------------------------------------------+
+| deep       |Default is *false*.  By default, only root outline tags are matched.  By setting to true, children tags are also scanned|
++------------+------------------------------------------------------------------------------------------------------------------------+
