@@ -464,7 +464,7 @@ Query Example 2: Match items with single character wildcard
   { foo:"?ar"}
 
 
-Query Example 2: Match items on multiple attributes
+Query Example 3: Match items on multiple attributes
 ---------------------------------------------------
 
 *Matching multiple attributes with various wildcards.*
@@ -473,3 +473,19 @@ Query Example 2: Match items on multiple attributes
 .. code-block :: javascript
 
   { foo:"?ar", bar:"bob", bit:"*it*"}
+
+
+=============
+Query Options
+=============
+
+Dojo.data defines support for a 'queryOptions' modifier object that affects the behavior of the query.  The two defined options listed by the API are *ignoreCase* and *deep*.  ItemFileReadStore supports these options.  The affect of these options on a query is defined below.
+
++------------+------------------------------------------------------------------------------------------------------------------------+
+| **Option** | **Result**                                                                                                             |
++------------+------------------------------------------------------------------------------------------------------------------------+
+| ignoreCase |The default is **false**.  When set to true, the match on attributes is done in a case-insensitive fashion.  This means |
+|            |with ignoreCase: true, a query of A* would match *Apple* and *acorn*                                                    |
++------------+------------------------------------------------------------------------------------------------------------------------+
+| deep       |                                                                                                                        |
++------------+------------------------------------------------------------------------------------------------------------------------+
