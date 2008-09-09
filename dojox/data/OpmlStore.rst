@@ -138,8 +138,8 @@ Example 1:  Connecting OpmlStore to dijit.form.ComboBox
 Example 2:  Connecting OpmlStore to dijit.Tree
 ----------------------------------------------
 
-*Since Opml data can be hierarchical, the Tree widget is an excellent demo for it.  A similar demo can be seen with ItemFileReadStore `here </quickstart/data/usingdatastores/simple>`_.*
-
+*Since Opml data can be hierarchical, the Tree widget is an excellent demo for it.  A similar demo can be seen with ItemFileReadStore.*
+ `here </quickstart/data/usingdatastores/simple>`_
 .. cv-compound ::
   
   .. cv :: javascript
