@@ -622,7 +622,7 @@ Example 2:  Searching for all continents
           }
              
           //Fetch the data.
-          geoStore.fetch({query: { type: "continent"}, onBegin: clearOldCList, onComplete: gotContinents, onError: fetchFailed});
+          geoStore.fetch({query: { type: "continent"}, onBegin: clearOldCList, onComplete: gotContinents, onError: fetchFailed, queryOptions: {deep:true}});
         }
         //Link the click event of the button to driving the fetch.
         dojo.connect(button2, "onClick", getContinents );
