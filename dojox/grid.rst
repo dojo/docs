@@ -109,7 +109,7 @@ This example shows how to create a simple Grid programmatically.
             // append the new grid to the div "gridContainer4":
             dojo.byId("gridContainer4").appendChild(grid4.domNode);
 
-            // Call startup, in order to 
+            // Call startup, in order to render the grid:
             grid4.startup();
         });
     </script>
