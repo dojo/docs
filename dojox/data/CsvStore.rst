@@ -30,9 +30,16 @@ The following dojo.data APIs are implemented by CsvStore
 Constructor Params
 ==================
 
-url
-    The URL from which to load the CSV data. This is optional.
-data
-    The JavaScript object which represents the stores contents as defined by the structure in the previous example. This is optional.
-label
-    A string that identifies which column to treat as the human-readable label. It must match one of the column labels in the file for it to be effective. 
++----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
+| **Parameter**  | **Required** | **Description**                                                                                | **Since** |
++----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
+| url            | No           |This optional parameter specifies what URL from which to load the Csv data Note                 | 1.0       |
+|                |              |that this URL is only loaded one time, as this is an in-memory data store.                      |           |
++----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
+| data           | No           |A JavaScript String of Csv formatted data to use to populate the store.  This parameter can be  | 1.0       |
+|                |              |used instead of *url*. when you wish to load data differently then modify it to fit the expected|           |
+|                |              |Csv format.                                                                                      |           |
++----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
+| label          | No           |A string that identifies which column to treat as the human-readable label. It must match one of| 1.0       |
+|                |              |the column labels in the file for it to be effective.                                           |           |
++----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
