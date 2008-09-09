@@ -453,12 +453,6 @@ Query Example 1: Match all items with multi-character wildcard
   { foo:"bar*"}
 
 
-
-Query Example 2: Match all items with milti-character wildcard
---------------------------------------------------------------
-
-*Note: This is doing a single character wildcard.*
-
 Query Example 2: Match all items with single character wildcard
 ---------------------------------------------------------------
 
