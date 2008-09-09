@@ -144,7 +144,7 @@ Example 2:  Connecting OpmlStore to dijit.Tree
 
     <script>
       dojo.require("dojox.data.OpmlStore");
-      dojo.require("dijit.form.ComboBox");
+      dojo.require("dijit.Tree");
     </script>
 
   .. cv :: html 
