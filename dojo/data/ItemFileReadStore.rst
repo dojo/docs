@@ -487,5 +487,8 @@ Dojo.data defines support for a 'queryOptions' modifier object that affects the 
 | ignoreCase |The default is **false**.  When set to true, the match on attributes is done in a case-insensitive fashion.  This means |
 |            |with ignoreCase: true, a query of A* would match *Apple* and *acorn*                                                    |
 +------------+------------------------------------------------------------------------------------------------------------------------+
-| deep       |                                                                                                                        |
+| deep       |This option affects searching when the structure passed to ItemFileReadStore has hierarchy.  For an example of that,    |
+|            |refer to *Item Structure Example: Items with Hierarchy*.  the default value for this option is false, which means the   |
+|            |query is only applied against root items in the tree of data items.  If it is set to true, then the query is applied to |
+|            |root items and *all* child data items.  Think of it as a recursive search.                                              |
 +------------+------------------------------------------------------------------------------------------------------------------------+
