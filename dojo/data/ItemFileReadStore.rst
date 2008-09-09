@@ -411,7 +411,7 @@ Functional Example:  Using custom type maps with ItemFileReadStore
         }
 
         //Link the click event of the button to driving the fetch.
-        dojo.connect(button2, "onClick", getItems);
+        dojo.connect(button, "onClick", getItems);
       }
       //Set the init function to run when dojo loading and page parsing has completed.
       dojo.addOnLoad(init);
@@ -419,7 +419,7 @@ Functional Example:  Using custom type maps with ItemFileReadStore
 
   .. cv :: html 
 
-    <div dojoType="dijit.form.Button" jsId="button2">Click me to examine items and what the color attribute is!</div>
+    <div dojoType="dijit.form.Button" jsId="button">Click me to examine items and what the color attribute is!</div>
     <br>
     <br>
     <span id="list">
@@ -593,7 +593,7 @@ Example 2:  Searching for all continents
         function getContinents () {
 
           //Callback to perform an action when the data items are starting to be returned:
-          function clearOldList(size, request) {
+          function clearOldCList(size, request) {
             var list = dojo.byId("list2");
             if (list) { 
               while (list.firstChild) {
@@ -603,7 +603,7 @@ Example 2:  Searching for all continents
           }
   
           //Callback for processing a returned list of items.
-          function gotItems(items, request) {
+          function gotContinents(items, request) {
             var list = dojo.byId("list2");
             if (list) { 
               var i;
@@ -622,7 +622,7 @@ Example 2:  Searching for all continents
           }
              
           //Fetch the data.
-          geoStore.fetch({query: { type: "continent"}, onBegin: clearOldList, onComplete: gotItems, onError: fetchFailed});
+          geoStore.fetch({query: { type: "continent"}, onBegin: clearOldCList, onComplete: gotContinents, onError: fetchFailed});
         }
         //Link the click event of the button to driving the fetch.
         dojo.connect(button2, "onClick", getContinents );
