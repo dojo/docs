@@ -9,13 +9,20 @@ dijit.form.ComboBox
 .. contents::
   :depth: 3
 
-The dijit ComboBox is an enhanced version of the native <select> element. ComboBox provides the user with a pre-defined selection of options, but allows the user to enter custom values as well.
+The ComboBox is a hybrid between a SELECT combo-box and an INPUT text field. Like a SELECT, you provide a list of acceptable values. Unlike SELECT, and like a INPUT, the user can type whatever they want.  Native SELECT combo-boxes always have value/description pairs, e.g. the OPTION's *value* attribute is used as the submit value and the OPTION's child text node is used as the displayed value. For ComboBox widgets, only the OPTION's child text node is used as both the submit value and the displayed value.
+
+On FORM submit, the displayed text value of a non-disabled ComboBox widget is submitted using a native INPUT text box if the *name* attribute was specified at widget creation time.
+
+ComboBox widgets are dojo.data-enabled. This means rather than embedding all the OPTION tags within the page, you can have dojo.data fetch them from a server-based store. The unified dojo.data architecture can get its data from various places such as databases and web services. See the `dojo.data <dojo/data>`_ section for complete details.
+
 
 Examples
 --------
 
-Programmatic using remote data
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Programmatic example using a data store
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To set the default value for a programmatic ComboBox, include the *value* attribute in the attribute list passed to the constructor.
 
 .. cv-compound::
 
@@ -25,20 +32,24 @@ Programmatic using remote data
       dojo.require("dijit.form.Button"); // only to make the demo look fancy
       dojo.require("dijit.form.ComboBox");
       dojo.require("dojo.data.ItemFileReadStore");
-      
+    </script>
+
+     <script type="text/javascript">     
       dojo.addOnLoad(function(){
-        var store = new dojo.data.ItemFileReadStore({url: "http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/states.json"});       
-        var filteringSelect = new dijit.form.ComboBox({id: "stateSelect", store: store, searchAttr: "name"}, "stateSelect");
+        var stateStore = new dojo.data.ItemFileReadStore({url: "http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/states.json"});       
+        var filteringSelect = new dijit.form.ComboBox({id: "stateSelect", name: "state", value: "Kentucky", store: stateStore, searchAttr: "name"}, "stateSelect");
       });
     </script>
 
   .. cv:: html
 
-    <div id="stateSelect"></div>
+    <input id="stateSelect">
     <p><button dojoType="dijit.form.Button" onClick="alert(dijit.byId('stateSelect').getValue())">Get value</button></p>
 
-Declarative using native select
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Declarative markup using native select and option tags
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To set the default value when using OPTION tags, specify the *selected* attribute on 1 of the child OPTION tags.
 
 .. cv-compound::
 
@@ -50,7 +61,34 @@ Declarative using native select
 
   .. cv:: html
 
-    <select dojoType="dijit.form.ComboBox" id="fruitSelect">
+    <select dojoType="dijit.form.ComboBox" id="fruit" name="fruit">
       <option>Apples</option>
+      <option selected>Oranges</option>
       <option>Peers</option>
     </select>
+
+
+Declarative markup using a data store
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To set the default value for this example, specify the *value* attribute in the markup.
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+      dojo.require("dijit.form.ComboBox");
+      dojo.require("dojo.data.ItemFileReadStore");
+    </script>
+
+  .. cv:: html
+
+    <div dojoType="dojo.data.ItemFileReadStore" jsId="stateStore"
+        url="http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/states.json"></div>
+    <input dojoType="dijit.form.ComboBox"
+                value="Kentucky"
+                store="stateStore"
+                searchAttr="name"
+                name="state"
+                id="stateInput">
