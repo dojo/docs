@@ -84,7 +84,7 @@ Constructor Params
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
 | data           | No           |A DOM of OPPML data to use to populate the store.  This parameter can be                        | 1.0       |
 |                |              |used instead of *url*. when you wish to load data differently then modify it to fit the expected|           |
-|                |              |Opml format.                                                                                     |           |
+|                |              |Opml format.                                                                                    |           |
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
 | label          | No           |A string that identifies which attribute to treat as the human-readable label. It must match one| 1.0       |
 |                |              |of the attributes on the <outline> tags for it to be effective.                                 |           |
