@@ -4,7 +4,6 @@ dojox.data.OpmlStore
 ====================
 
 .. contents::
-
   :depth: 3
 
 
