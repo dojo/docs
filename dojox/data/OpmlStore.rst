@@ -188,7 +188,7 @@ Example 3:  Connecting OpmlStore to dojox.grid.DataGrid
       <div id="grid" 
         dojoType="dojox.grid.DataGrid" 
         store="geoStore3" 
-        structure="layoutPeople" 
+        structure="layoutGeo" 
         query="{}"
         queryOptions="{'deep':true}" 
         rowsPerPage="40">
