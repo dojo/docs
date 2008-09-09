@@ -462,3 +462,14 @@ Query Example 2: Match all items with single character wildcard
 .. code-block :: javascript
 
   { foo:"?ar"}
+
+
+Query Example 2: Match all items on multiple attributes
+-------------------------------------------------------
+
+*Matching multiple attributes with various wildcards.*
+
+
+.. code-block :: javascript
+
+  { foo:"?ar", bar:"bob", bit:"*it*"}
