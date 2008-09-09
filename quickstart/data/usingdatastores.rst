@@ -10,16 +10,6 @@ Datastores provide access to data through a standardized interface for talking t
 * `Fetching data items <quickstart/data/usingdatastores/fetchsingle>`_ - How to fetch a single data item and display attributes of that item.
 * `Fetching multiple data items and values <quickstart/data/usingdatastores/fetchmultiple>`_ - How to fetch multiple items at once and display attribute values.
 * `Selecting subsets of data items (filtering) <quickstart/data/usingdatastores/filteringitems>`_ - How to select subsets of items through query filters.
-* Searching for data
-* Sorting data
-* Paging large data sets.
-* Lazy-Loading data.
-
-    * Terminology
-    * A Simple Data Source
-    * Fetching Single Items and Values
-    * Fetching Multiple Items and Values
-    * Selecting (Filtering) Items
-    * Nested Items and Lazy Loading
-    * Paging data
-    * Sorting Items
+* `Nested Items and Lazy Loading <quickstart/data/usingdatastores/lazyloading>`_ - How to access item attributes that have values which are other data items and how dojo.data defines lazy-loading of child items should be done.
+* `Too much data!  How to page <quickstart/data/usingdatastores/paging>`_ - How to use the dojo.data interface to access large data sets through subsets (pages).
+* `Sorting data items into defined orders <quickstart/data/usingdatastores/sorting>`_ - How to issue a fetch of data that returns data items in sorted order.
