@@ -157,3 +157,51 @@ Example 2:  Connecting OpmlStore to dijit.Tree
     <div dojoType="dojox.data.OpmlStore" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/tests/stores/geography.xml" jsId="geoStore2" label="text"></div>
     <div dojoType="dijit.tree.ForestStoreModel" jsId="geoModel" store="geoStore2" query="{}" rootId="Geography" rootLabel="Geography"></div>
     <div dojoType="dijit.Tree" model="geoModel"></div>
+
+
+-------------------------------------------------------
+Example 3:  Connecting OpmlStore to dojox.grid.DataGrid
+-------------------------------------------------------
+
+.. cv-compound ::
+
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojox.grid.DataGrid");
+      dojo.require("dojox.data.OpmlStore");
+
+      var layoutGeo = [
+        [
+          { field: "text", name: "Name", width: 10 },
+          { field: "type", name: "Geography Type", width: 10 },
+          { field: "population", name: "Population", width: 'auto' }
+        ]
+      ];
+    </script>
+
+  .. cv :: html
+
+    <div dojoType="dojox.data.OpmlStore" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/tests/stores/geography.xml" jsId="geoStore3" label="text"></div>
+
+    <div style="width: 400px; height: 300px;">
+      <div id="grid" 
+        dojoType="dojox.grid.DataGrid" 
+        store="geoStore3" 
+        structure="layoutPeople" 
+        query="{}"
+        queryOptions="{'deep':true}" 
+        rowsPerPage="40">
+      </div>
+    </div>
+
+  .. cv:: css
+
+    <style type="text/css">
+      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/resources/Grid.css";
+      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/resources/nihiloGrid.css";
+
+      .dojoxGrid table {
+        margin: 0;
+      }
+    </style>
