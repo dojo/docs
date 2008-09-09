@@ -35,8 +35,8 @@ This example shows how to create a simple Grid declaratively.
   .. cv:: javascript
 
     <script type="text/javascript">
-      dojo.require("dojox.grid.DataGrid");
-      dojo.require("dojox.data.CsvStore");
+        dojo.require("dojox.grid.DataGrid");
+        dojo.require("dojox.data.CsvStore");
     </script>
 
   .. cv:: html
@@ -83,33 +83,40 @@ This example shows how to create a simple Grid programmatically.
   .. cv:: javascript
 
     <script type="text/javascript">
-      dojo.require("dojox.grid.DataGrid");
-      dojo.require("dojox.data.CsvStore");
+        dojo.require("dojox.grid.DataGrid");
+        dojo.require("dojox.data.CsvStore");
 
-      var store3 = new dojox.data.CsvStore({ url: '/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/tests/support/movies.csv' });
+        // our test data store for this example:
+        var store4 = new dojox.data.CsvStore({ url: '/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/tests/support/movies.csv' });
 
-      dojo.addOnLoad(function(){
-          var layout = [
-              { field: 'Title', name: 'Title of Movie', width: '300px' },
-              { field: 'Year', name: 'Year', width: '50px' },
-              { field: 'Producer', name: 'Producer', width: 'auto' }
-          ];
+        dojo.addOnLoad(function(){
+            // set the layout structure:
+            var layout4 = [
+                { field: 'Title', name: 'Title of Movie', width: '300px' },
+                { field: 'Year', name: 'Year', width: '50px' },
+                { field: 'Producer', name: 'Producer', width: 'auto' }
+            ];
 
-          var grid = new dojox.grid.DataGrid({
-              query: { Title: '*' },
-              store: store3,
-              clientSort: true,
-              rowSelector: '20px',
-              structure: layout
-          }, 'gridNode');
+            // create a new grid:
+            var grid4 = new dojox.grid.DataGrid({
+                query: { Title: '*' },
+                store: store4,
+                clientSort: true,
+                rowSelector: '20px',
+                structure: layout4
+            }, document.createElement('div'));
 
-          grid.startup();
-      });
+            // append the new grid to the div "gridContainer4":
+            dojo.byId("gridContainer4").appendChild(grid4.domNode);
+
+            // Call startup, in order to 
+            grid4.startup();
+        });
     </script>
 
   .. cv:: html
 
-    <table id="gridNode" style="width: 400px; height: 200px;"></table>
+    <div id="gridContainer4" style="width: 400px; height: 200px;"></div>
 
   .. cv:: css
 
