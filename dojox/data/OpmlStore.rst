@@ -132,3 +132,23 @@ Example 1:  Connecting OpmlStore to dijit.form.ComboBox
 
     <div dojoType="dojox.data.OpmlStore" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/tests/stores/geography.xml" jsId="geoStore"></div>
     <div dojoType="dijit.form.ComboBox" store="geoStore" searchAttr="text"></div>
+
+
+----------------------------------------------
+Example 2:  Connecting OpmlStore to dijit.Tree
+----------------------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojox.data.OpmlStore");
+      dojo.require("dijit.form.ComboBox");
+    </script>
+
+  .. cv :: html 
+
+    <div dojoType="dojox.data.OpmlStore" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/tests/stores/geography.xml" jsId="geoStore2" label="text"></div>
+    <div dojoType="dijit.tree.ForestStoreModel" jsId="geoModel" store="geoStore2" query="{}" rootId="Geography" rootLabel="Geography"></div>
+    <div dojoType="dijit.Tree" model="geoModel"></div>
