@@ -99,3 +99,61 @@ Example 1:  Connecting CsvStore to dijit.form.ComboBox
   .. cv :: html 
 
     <div dojoType="dijit.form.ComboBox" store="personStore" searchAttr="firstname"></div>
+
+
+------------------------------------------------------
+Example 1:  Connecting CsvStore to dijit.form.ComboBox
+------------------------------------------------------
+
+.. cv-compound ::
+
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojox.grid.DataGrid");
+      dojo.require("dojox.data.CsvStore");
+
+      var peopleData =  "firstname,lastname,age\n" +
+                        "John, Doe, 21\n" +
+                        "Jane, Doe, 22\n" +
+                        "Richard, Smith, 43\n" +
+                        "Sally, Smith, 49\n" +
+                        "Lian, Zu, 23\n" +
+                        "Ichiro, Kagetsume, 23\n"+
+                        "Umeko, Tsuguri, 18\n" + 
+                        "Alptraum, Reisender, 25\n" +
+                        "Thomas, Winthrope, 14\n";
+
+      var personStoreForGrid= new dojox.data.CsvStore({data: peopleData});
+
+      var layoutPeople = [
+        [
+          { field: "firstname", name: "First Name", width: 10 },
+          { field: "lastname", name: "Last Name", width: 10 },
+          { field: "age", name: "Age", width: 'auto' }
+        ]
+      ];
+    </script>
+
+  .. cv :: html
+
+    <div style="width: 400px; height: 300px;">
+      <div id="grid" 
+        dojoType="dojox.grid.DataGrid" 
+        store="personStoreForGrid" 
+        structure="layoutPeople" 
+        query="{}" 
+        rowsPerPage="40">
+      </div>
+    </div>
+
+  .. cv:: css
+
+    <style type="text/css">
+      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/resources/Grid.css";
+      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/resources/nihiloGrid.css";
+
+      .dojoxGrid table {
+        margin: 0;
+      }
+    </style>
