@@ -92,7 +92,7 @@ This example shows how to create a simple Grid programmatically.
         dojo.addOnLoad(function(){
             // set the layout structure:
             var layout4 = [
-                { field: 'Title', name: 'Title of Movie', width: '300px' },
+                { field: 'Title', name: 'Title of Movie', width: '200px' },
                 { field: 'Year', name: 'Year', width: '50px' },
                 { field: 'Producer', name: 'Producer', width: 'auto' }
             ];
