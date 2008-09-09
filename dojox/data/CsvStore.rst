@@ -29,3 +29,10 @@ The following dojo.data APIs are implemented by CsvStore
 ==================
 Constructor Params
 ==================
+
+url
+    The URL from which to load the CSV data. This is optional.
+data
+    The JavaScript object which represents the stores contents as defined by the structure in the previous example. This is optional.
+label
+    A string that identifies which column to treat as the human-readable label. It must match one of the column labels in the file for it to be effective. 
