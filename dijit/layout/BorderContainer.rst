@@ -118,3 +118,5 @@ from #dojo:
 * Is it safe to allow the region="top" to determine it's own size?
   Seems to work but when the content is updated the layout overlaps.
   Should the top, left, etc regions always explicitly set their size?
+
+* like the comment above, what are the special CSS size and position constraints on the content panes for the various regions?
