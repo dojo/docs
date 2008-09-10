@@ -119,4 +119,4 @@ from #dojo:
   Seems to work but when the content is updated the layout overlaps.
   Should the top, left, etc regions always explicitly set their size?
 
-* like the comment above, what are the special CSS size and position constraints on the content panes for the various regions?
+* like the comment above, what are the special CSS size and position constraints on the content panes for the various regions?  Are there any specific CSS properties (or restrictions on properties) that need to be set on the parent node that the BorderContainer is added to, so that it appears properly?
