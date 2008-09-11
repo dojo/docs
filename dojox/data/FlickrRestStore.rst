@@ -230,7 +230,7 @@ Sample 1:  Listing nature pictures
              alert("lookup failed.");
            }
              
-           //Fetch the images.  
+           //Fetch the images.  Note the API key used is not for general usage.  It's here to demo the store, ONLY.
            flickrStore.fetch({query:{ tags: "nature", apikey: "8c6803164dbc395fb7131c9d54843627"}, onBegin: clearOldList, onComplete: gotItems, onError: fetchFailed});
          }
          //Link the click event of the button to driving the fetch.
