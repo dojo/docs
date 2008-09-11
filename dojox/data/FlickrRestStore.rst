@@ -105,3 +105,36 @@ Query the first three photos from a user
     }, 
     "stat":"ok"}
   )
+
+FlickrRestStore's role is to process the query parameters passed to the dojo.data.api.Read API and generate the appropriate service URL. It then processes the response from the service and handles accessing the items returned from the query. It also provides simple attribute access to all the values.
+
+======================
+Constructor Parameters
+======================
+
+FlickrRestStore does not have any constructor parameters.
+
+
+===============
+Item Attributes
+===============
+
++---------------+-----------------------------------------------------------------------------------------------------------------------------+
+| title         |The title of the photo.                                                                                                      |
++---------------+-----------------------------------------------------------------------------------------------------------------------------+
+| author        |The person who published the photo to Flickr.                                                                                |
++---------------+-----------------------------------------------------------------------------------------------------------------------------+
+| dateTaken     |A JavaScript date object representing the date the photo was taken.                                                          |
++---------------+-----------------------------------------------------------------------------------------------------------------------------+
+| datePublished |A JavaScript date object representing the date the photo was published to Flickr.                                            |
++---------------+-----------------------------------------------------------------------------------------------------------------------------+
+| imageUrl      |A URL to the full resolution photo image.                                                                                    |
++---------------+-----------------------------------------------------------------------------------------------------------------------------+
+| imageUrlSmall |A URL to the small (icon sized) resolution photo image.                                                                      |
++---------------+-----------------------------------------------------------------------------------------------------------------------------+
+| imageUrlMedium|A URL to the mid resolution photo image.                                                                                     |
++---------------+-----------------------------------------------------------------------------------------------------------------------------+
+| imageUrlThumb |A URL to the thumbnail sized resolution photo image.                                                                         |
++---------------+-----------------------------------------------------------------------------------------------------------------------------+
+| link          |A URL linking to the Flickr page displaying the image.                                                                       |
++---------------+-----------------------------------------------------------------------------------------------------------------------------+
