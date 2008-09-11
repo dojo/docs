@@ -181,6 +181,7 @@ sort
 Usage Examples
 ==============
 
+----------------------------------
 Sample 1:  Listing nature pictures
 ----------------------------------
 
