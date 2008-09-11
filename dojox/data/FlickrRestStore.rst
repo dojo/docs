@@ -10,7 +10,7 @@ FlickrRestStore is an implementation of the dojo.data API provides access to the
 
 Dojo has several examples of browser in-memory stores, such as dojo.data.ItemFileReadStore, dojox.data.CsvStore, and dojox.data.OmplStore. While these stores are useful and great examples of how data stores can be used to wrapper accessing data, they are not the only way data is served and processed. In many cases, data stores can wrapper external services. It is those services that perform the querying and filtering of data, and then provide only that as a subset back to the data store for presentation as items.
 
-FlickrRestStore is one such store. The purpose of FlickrRestStore is to wrapper the public photo feed of the Flickr service. Then by simply using the FlickrRestStore store, as you would any data store in Dojo, you now have access to querying the vast repository of public photos made available by others on the Web. Look at http://archive.dojotoolkit.org/nightly/dojotoolkit/dojox/data/demos/demo... to see it in action, or look here for some example usages.
+FlickrRestStore is one such store. The purpose of FlickrRestStore is to wrapper the public photo feed of the Flickr service. Then by simply using the FlickrRestStore store, as you would any data store in Dojo, you now have access to querying the vast repository of public photos made available by others on the Web. Look at this `demo <http://archive.dojotoolkit.org/nightly/dojotoolkit/dojox/data/demos/demo_FlickrRestStore.html>`_ to see it in action, or look here for some example usages.
 
 The following dojo.data APIs are implemented by FlickrRestStore
 
