@@ -176,3 +176,74 @@ sort
   * descending: If set to true, the photos are sorted in descending order. If set to false, or not specified, the photos are sorted in ascending order.
 
 **Note:** Unlike many of the other example stores, the FlickrRestStore store cannot do wild-card matching of the attributes. This is because the Flickr public photo feed service cannot do it. In an ideal service implementation, the Flickr service would provide a mechanism by with to pass in wild cards as part of its query parameters. 
+
+==============
+Usage Examples
+==============
+
+Sample 1:  Listing nature pictures
+----------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojox.data.FlickrRestStore");
+      dojo.require("dijit.form.Button");
+
+      //This function performs some basic dojo initialization.  In this case it connects the button
+      //onClick to a function which invokes the fetch().  The fetch function queries for all items 
+      //and provides callbacks to use for completion of data retrieval or reporting of errors.
+      function init () {
+         //Function to perform a fetch on the datastore when a button is clicked
+         function getAllItems () {
+
+           //Callback to perform an action when the data items are starting to be returned:
+           function clearOldList(size, request) {
+             var list = dojo.byId("list");
+             if (list) { 
+               while (list.firstChild) {
+                 list.removeChild(list.firstChild);
+               }
+             }
+           }
+  
+           //Callback for processing a returned list of items.
+           function gotItems(items, request) {
+             var list = dojo.byId("list");
+             if (list) { 
+               var i;
+               for (i = 0; i < items.length; i++) {
+                 var item = items[i];
+                 var image = document.createElement("img");
+                 list.appendChild(image);
+                 image.setAttribute("src", flickrStore.getValue(item, "imageUrlMedium"));
+                 list.appendChild(document.createElement("br"));
+               }
+             }
+           }
+          
+           //Callback for if the lookup fails.
+           function fetchFailed(error, request) {
+             alert("lookup failed.");
+           }
+             
+           //Fetch the images.  
+           flickrStore.fetch({query:{ tags: "nature"}, onBegin: clearOldList, onComplete: gotItems, onError: fetchFailed});
+         }
+         //Link the click event of the button to driving the fetch.
+         dojo.connect(button, "onClick", getAllItems);
+      }
+      //Set the init function to run when dojo loading and page parsing has completed.
+      dojo.addOnLoad(init);
+    </script>
+
+  .. cv :: html 
+
+    <div dojoType="dojox.data.FlickrRestStore" jsId="flickrStore"></div>
+    <div dojoType="dijit.form.Button" jsId="button">Find nature pictures!</div>
+    <br>
+    <br>
+    <span id="list">
+    </span>
