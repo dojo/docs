@@ -175,6 +175,4 @@ sort
 
   * descending: If set to true, the photos are sorted in descending order. If set to false, or not specified, the photos are sorted in ascending order.
 
-  *Sort is optional.*
-
 Note: Unlike many of the other example stores, the FlickrRestStore store cannot do wild-card matching of the attributes. This is because the Flickr public photo feed service cannot do it. In an ideal service implementation, the Flickr service would provide a mechanism by with to pass in wild cards as part of its query parameters. 
