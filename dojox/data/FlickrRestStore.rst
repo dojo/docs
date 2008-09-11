@@ -138,3 +138,39 @@ Item Attributes
 +---------------+-----------------------------------------------------------------------------------------------------------------------------+
 | link          |A URL linking to the Flickr page displaying the image.                                                                       |
 +---------------+-----------------------------------------------------------------------------------------------------------------------------+
+
+============
+Query Syntax
+============
+
+The fetch method query syntax for FlickrRestStore is simple and straightforward. It allows the following attributes to be set and queried against:
+
+userid
+    A Flickr userid to use to narrow the search scope, e.g. '44153025@N00'. This is required.
+apikey
+    A Flickr API key. Flickr requires clients of their REST APIs to register for an API key. This is free, and can be done at http://www.flickr.com/services/api/keys/apply/. Note: do not reuse the API key used in Dojo examples, register your own. This is required.
+setid
+    The id of a photo set to use to narrow the result data. This is optional. If not specified,
+    photos from the users primary stream are returned.
+page
+    Specifies the page of results to use. If not used, then the standard start parameter is used. This is optional.
+lang
+    Specifies the language to return the results in. This is optional.
+tags
+    Specifies the tags to search for. This can be either a comma separated list, or an array of strings. This is optional.
+text
+    The text to use in a full text search. This matches any text in the title or description of a photo. This is optional.
+sort
+    The order to sort the results in. This is a JSON object with two fields, as specified by the dojo.data API.
+
+* attribute: This specifies the name of the attribute to sort on. The supported attribute names are
+  * date-posted
+  * date-taken
+  * interestingness
+
+If an attribute is not specified, the default is date-posted
+* descending: If set to true, the photos are sorted in descending order. If set to false, or not specified, the photos are sorted in ascending order.
+
+*Sort is ptional. *
+
+Note: Unlike many of the other example stores, the FlickrRestStore store cannot do wild-card matching of the attributes. This is because the Flickr public photo feed service cannot do it. In an ideal service implementation, the Flickr service would provide a mechanism by with to pass in wild cards as part of its query parameters. 
