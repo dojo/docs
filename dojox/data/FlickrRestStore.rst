@@ -57,10 +57,9 @@ Query the first three photos from a user
 
 **URL:** http://www.flickr.com/services/rest/?format=json&method=flickr.people.getPublicPhotos&api_key=8c6803164dbc395fb7131c9d54843627&user_id=44153025%40N00&per_page=3
 
-
 **Response:**
 
-.. code-block :: javascript:
+.. code-block :: javascript
 
   jsonFlickrApi({
     "photos":{
