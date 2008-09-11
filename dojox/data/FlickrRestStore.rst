@@ -164,8 +164,11 @@ sort
     The order to sort the results in. This is a JSON object with two fields, as specified by the dojo.data API.
 
   * attribute: This specifies the name of the attribute to sort on. The supported attribute names are
+
     * date-posted
+
     * date-taken
+
     * interestingness
 
 If an attribute is not specified, the default is date-posted
