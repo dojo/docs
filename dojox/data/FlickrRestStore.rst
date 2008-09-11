@@ -14,9 +14,13 @@ FlickrRestStore is one such store. The purpose of FlickrRestStore is to wrapper 
 
 The following dojo.data APIs are implemented by FlickrRestStore
 
-* dojo.data.api.Read
-
+* `dojo.data.api.Read <dojo/data/api/Read>`_
+ 
 FlickrRestStore is built upon `FlickrStore <dojox/data/FlickrStore>`_, a store which reads from Flickr's more simplistic public API. However, FlickrRestStore provides many more features:
+
+========
+Features
+========
 
 * Build on Flickr REST API. The Flickr REST API, a much more flexible API than the one used by FlickrStore. This opens up the possibility of having a very comprehensive data store that can have a very rich querying interface.
 * Results caching. If a request is repeated, or a subset of one or more previous requests is requested, it is returned immediately.
@@ -26,6 +30,19 @@ FlickrRestStore is built upon `FlickrStore <dojox/data/FlickrStore>`_, a store w
 * Filter by Photo Set. By specifying a setid parameter on the query, you can retrieve photos only from a single set. Due to limitations of the Flickr API, using this parameter negates the use of the full text search.
 * Tag search. Passing a tags parameter to the request query searches by the given tags. This parameter can be either a comma separated string, or an array of strings. See the examples below.
 
+===========================
 Flickr Terms and Conditions
+===========================
 
 Note: While this store wraps making calls to the Flickr service, as a user, you should still verify that you agree to the terms and conditions by which you are using the public Flickr photo service. Review their terms and conditions, and the API terms and conditions, `here <http://www.flickr.com/services/api/tos/>`_.
+
+=======
+API Key
+=======
+
+Another difference between FlickrRestStore and FlickrStore is that, due to the fact that FlickrRestStore works with the Flickr REST APIs, you will need to get a free API key from Flickr. You can do so at http://www.flickr.com/services/api/keys/apply/.
+
+The Flickr service provides its data back in a wide variety of formats (for example, ATOM, RSS, and JSON) but FlickrRestStore only makes use of the JSON format. The following example shows a query that FlickrRestStore processes and the response:
+Example
+
+Query the first three photos from a user:
