@@ -231,7 +231,7 @@ Sample 1:  Listing nature pictures
            }
              
            //Fetch the images.  
-           flickrStore.fetch({query:{ tags: "nature"}, onBegin: clearOldList, onComplete: gotItems, onError: fetchFailed});
+           flickrStore.fetch({apikey: "44153025@N00", query:{ tags: "nature"}, onBegin: clearOldList, onComplete: gotItems, onError: fetchFailed});
          }
          //Link the click event of the button to driving the fetch.
          dojo.connect(button, "onClick", getAllItems);
