@@ -150,18 +150,18 @@ userid
 apikey
     A Flickr API key. Flickr requires clients of their REST APIs to register for an API key. This is free, and can be done at http://www.flickr.com/services/api/keys/apply/. Note: do not reuse the API key used in Dojo examples, register your own. This is required.
 setid
-    The id of a photo set to use to narrow the result data. This is optional. If not specified,
-    photos from the users primary stream are returned.
+  The id of a photo set to use to narrow the result data. This is optional. If not specified,
+  photos from the users primary stream are returned.
 page
-    Specifies the page of results to use. If not used, then the standard start parameter is used. This is optional.
+  Specifies the page of results to use. If not used, then the standard start parameter is used. This is optional.
 lang
-    Specifies the language to return the results in. This is optional.
+  Specifies the language to return the results in. This is optional.
 tags
-    Specifies the tags to search for. This can be either a comma separated list, or an array of strings. This is optional.
+  Specifies the tags to search for. This can be either a comma separated list, or an array of strings. This is optional.
 text
-    The text to use in a full text search. This matches any text in the title or description of a photo. This is optional.
+  The text to use in a full text search. This matches any text in the title or description of a photo. This is optional.
 sort
-    The order to sort the results in. This is a JSON object with two fields, as specified by the dojo.data API.
+  The order to sort the results in. This is a JSON object with two fields, as specified by the dojo.data API.
 
   * attribute: This specifies the name of the attribute to sort on. The supported attribute names are
 
