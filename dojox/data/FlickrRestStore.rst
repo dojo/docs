@@ -64,44 +64,44 @@ Query the first three photos from a user
 
   jsonFlickrApi({
     "photos":{
-        "page":1, 
-        "pages":98, 
-        "perpage":3,
-        "total":"489", 
-        "photo":[
-            {
-                 "id":"1352049918", 
-                 "owner":"44153025@N00", 
-                 "secret":"5636009306", 
-                 "server":"1111", 
-                 "farm":2, 
-                 "title":"The Liffey Panorama", 
-                 "ispublic":1, 
-                 "isfriend":0, 
-                 "isfamily":0
-            }, 
-            {
-                "id":"1351120079", 
-                "owner":"44153025@N00", 
-                "secret":"880bf6a003", 
-                "server":"1027", 
-                "farm":2, 
-                "title":"Many Hands make pretty flowers", 
-                "ispublic":1, 
-                "isfriend":0, 
-                "isfamily":0
-            }, 
-            {
-                "id":"1322051485", 
-                "owner":"44153025@N00", 
-                "secret":"b7c529335d", 
-                "server":"1110", 
-                "farm":2, 
-                "title":"Wok'n'Roll baby!", 
-                "ispublic":1, 
-                "isfriend":0, 
-                "isfamily":0
-            }
+      "page":1, 
+      "pages":98, 
+      "perpage":3,
+      "total":"489", 
+      "photo":[
+         {
+           "id":"1352049918", 
+           "owner":"44153025@N00", 
+           "secret":"5636009306", 
+           "server":"1111", 
+           "farm":2, 
+           "title":"The Liffey Panorama", 
+           "ispublic":1, 
+           "isfriend":0, 
+           "isfamily":0
+         }, 
+         {
+           "id":"1351120079", 
+           "owner":"44153025@N00", 
+           "secret":"880bf6a003", 
+           "server":"1027", 
+           "farm":2, 
+           "title":"Many Hands make pretty flowers", 
+           "ispublic":1, 
+           "isfriend":0, 
+           "isfamily":0
+         }, 
+         {
+           "id":"1322051485", 
+           "owner":"44153025@N00", 
+           "secret":"b7c529335d", 
+           "server":"1110", 
+           "farm":2, 
+           "title":"Wok'n'Roll baby!", 
+           "ispublic":1, 
+           "isfriend":0, 
+           "isfamily":0
+         }
        ]
     }, 
     "stat":"ok"}
