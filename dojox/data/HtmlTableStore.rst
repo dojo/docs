@@ -5,7 +5,7 @@ dojox.data.HtmlTableStore
 
 **NOTE:**   This store is deprecated.  Please use `dojox.data.HtmlStore <dojox/data/HtmlStore>`_.
 
-. contents::
+.. contents::
   :depth: 3
 
 
