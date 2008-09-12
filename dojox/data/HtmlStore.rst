@@ -185,7 +185,7 @@ Example 2:  Connecting HtmlTableStore to dojox.grid.DataGrid
   .. cv :: javascript
 
     <script>
-      dojo.require("dojox.data.HtmlTableStore");
+      dojo.require("dojox.data.HtmlStore");
       dojo.require("dojox.grid.DataGrid");
 
       var layoutBooks = [
