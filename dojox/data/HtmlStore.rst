@@ -119,9 +119,9 @@ The query syntax is identical to `dojo.data.ItemFileReadStore <dojo/data/ItemFil
 Examples
 ========
 
-------------------------------------------------------------
-Example 1:  Connecting HtmlTableStore to dijit.form.ComboBox
-------------------------------------------------------------
+-------------------------------------------------------
+Example 1:  Connecting HtmlStore to dijit.form.ComboBox
+-------------------------------------------------------
 
 .. cv-compound ::
   
@@ -176,9 +176,9 @@ Example 1:  Connecting HtmlTableStore to dijit.form.ComboBox
     <div dojoType="dijit.form.ComboBox" store="comboStore" searchAttr="isbn"></div>
 
 
-------------------------------------------------------------
-Example 2:  Connecting HtmlTableStore to dojox.grid.DataGrid
-------------------------------------------------------------
+-------------------------------------------------------
+Example 2:  Connecting HtmlStore to dojox.grid.DataGrid
+-------------------------------------------------------
 
 .. cv-compound ::
   
@@ -264,9 +264,9 @@ Example 2:  Connecting HtmlTableStore to dojox.grid.DataGrid
     </style>
 
 
-----------------------------------------------------------------------
-Example 2:  Connecting HtmlTableStore with List to dijit.form.ComboBox
-----------------------------------------------------------------------
+-----------------------------------------------------------------
+Example 3:  Connecting HtmlStore with List to dijit.form.ComboBox
+-----------------------------------------------------------------
 
 .. cv-compound ::
   
@@ -298,3 +298,38 @@ Example 2:  Connecting HtmlTableStore with List to dijit.form.ComboBox
     <b>dijit.form.ComboBox connected to the above list:</b><br> 
     <div dojoType="dojox.data.HtmlStore" dataId="myList2" jsId="comboStore2"></div>
     <div dojoType="dijit.form.ComboBox" store="comboStore2" searchAttr="name"></div>
+
+---------------------------------------------------------------------------
+Example 4:  Connecting HtmlStore with DIV collection to dijit.form.ComboBox
+---------------------------------------------------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojox.data.HtmlStore");
+      dojo.require("dojox.grid.DataGrid");
+    </script>
+
+  .. cv :: html 
+
+    <b>Standard HTML Ordered List:</b><br>
+    <div id="divList2">
+      <div>Item 1</div>
+      <div>Item 2</div>
+      <div>Item 3</div>
+      <div>Item 4</div>
+      <div>Item 5</div>
+      <div>Item 6</div>
+      <div>Item 7</div>
+      <div>Item 8</div>
+      <div>Item 9</div>
+      <div>Item 10</div>
+    </div>  
+    <br>
+    <br>
+
+    <b>dijit.form.ComboBox connected to the above list:</b><br> 
+    <div dojoType="dojox.data.HtmlStore" dataId="divList2" jsId="comboStore3"></div>
+    <div dojoType="dijit.form.ComboBox" store="comboStore3" searchAttr="name"></div>
