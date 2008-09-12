@@ -98,7 +98,7 @@ Example 1:  Connecting HtmlTableStore to dijit.form.ComboBox
 
   .. cv :: html 
 
-    <table id="myData" style="display: hidden;">
+    <table id="myData" style="display: none;">
     <thead>
         <tr>
             <th>isbn</th>
