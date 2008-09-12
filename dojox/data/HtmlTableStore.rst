@@ -5,6 +5,11 @@ dojox.data.HtmlTableStore
 
 **NOTE:**   This store is deprecated.  Please use `dojox.data.HtmlStore <dojox/data/HtmlStore>`_.
 
+:Status: Contributed, Draft
+:Version: 1.0
+:Author: Jared Jurkiewicz
+:Available: since V1.0
+
 .. contents::
   :depth: 3
 
