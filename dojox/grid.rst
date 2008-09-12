@@ -274,6 +274,14 @@ First, you have to set a editor for each cell, you would like to edit:
         </thead>
     </table>
 
+  .. cv:: css
+
+    <style type="text/css">
+	@import "/moin_static163/js/dojo/trunk/release/dojo/dijit/themes/nihilo/nihilo.css";
+	@import "/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/resources/nihiloGrid.css";
+    </style>
+
+
 ==============
 Large datasets
 ==============
