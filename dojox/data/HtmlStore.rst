@@ -314,7 +314,7 @@ Example 4:  Connecting HtmlStore with DIV collection to dijit.form.ComboBox
 
   .. cv :: html 
 
-    <b>Standard HTML Ordered List:</b><br>
+    <b>DIV collection:</b><br>
     <div id="divList2">
       <div>Item 1</div>
       <div>Item 2</div>
