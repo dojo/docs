@@ -14,8 +14,10 @@ Focusing tree nodes programatically
 
 ``TODOC``
 
-How can I make all items in a tree to appear and work like items and not items and folders?
--------------------------------------------------------------------------------------------
+How can I prevent expanding of nodes when clicking on them?
+-----------------------------------------------------------
+
+Simply set the ``openOnClick`` attribute to ``false``
 
 .. cv-compound::
 
