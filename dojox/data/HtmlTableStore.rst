@@ -156,7 +156,7 @@ Example 1:  Connecting HtmlTableStore to dijit.form.ComboBox
 
 
 ------------------------------------------------------------
-Example 1:  Connecting HtmlTableStore to dojox.grid.DataGrid
+Example 2:  Connecting HtmlTableStore to dojox.grid.DataGrid
 ------------------------------------------------------------
 
 .. cv-compound ::
