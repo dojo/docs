@@ -79,6 +79,50 @@ Input Example 1:  HTML table
 
 **Note:** The table rows in the <tbody> tag are the items.  The <thead> tag is used for defining the attribute name for each column in the table row for an item.
 
+----------------------
+Input Example 2:  List
+----------------------
+
+::
+ 
+  <ul id="myList">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+    <li>Item 6</li>
+    <li>Item 7</li>
+    <li>Item 8</li>
+    <li>Item 9</li>
+    <li>Item 10</li>
+  </ul>  
+
+**Note:** The <LI> entries are the items.  Each has a single attribute 'name' which corresponds to the text content of the <LI>.
+
+
+--------------------------------
+Input Example 3:  DIV Collection
+--------------------------------
+
+::
+ 
+  <div id="divList2">
+    <div>Item 1</div>
+    <div>Item 2</div>
+    <div>Item 3</div>
+    <div>Item 4</div>
+    <div>Item 5</div>
+    <div>Item 6</div>
+    <div>Item 7</div>
+    <div>Item 8</div>
+    <div>Item 9</div>
+    <div>Item 10</div>
+  </div>  
+
+**Note:** The <DIV> entries are the items.  Each has a single attribute 'name' which corresponds to the text content of the <DIV>.
+
+
 ==================
 Constructor params
 ==================
