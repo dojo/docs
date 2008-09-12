@@ -164,7 +164,7 @@ Example 1:  Connecting HtmlTableStore to dojox.grid.DataGrid
 
   .. cv :: html 
 
-    <b>Standard table:</b><br>
+    <b>Standard HTML table:</b><br>
     <table id="myData2">
     <thead>
         <tr>
