@@ -2,7 +2,7 @@
 #format wiki
 == James Gosnell ==
 
-Email: <<MailTo(you AT SPAMFREE example DOT com)>>
+Email: <<MailTo(jamesgosnell@gmail.com)>>
 
 ...
 
