@@ -103,8 +103,11 @@ The item attributes are defined by the type of tag set being referenced.
 HTML Table:
   The <thead>  tag of the referenced table.  Each column name becomes the attribute name for that column when generating the data store view of the data.
 
+DIV collection:
+  In a DIV collection, the attributes of the div corrispond to the attributes of the items.
 
-
+List:
+  In a list, the list items have one attribute: attributes of the div corrispond to the attributes of the items.
 
 ============
 Query Syntax
