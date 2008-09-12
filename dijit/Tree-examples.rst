@@ -13,3 +13,6 @@ Focusing tree nodes programatically
 -----------------------------------
 
 ``TODOC``
+
+How can I make all items in a tree to appear and work like items and not items and folders?
+-------------------------------------------------------------------------------------------
