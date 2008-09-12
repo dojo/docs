@@ -86,3 +86,55 @@ Examples
 ------------------------------------------------------------
 Example 1:  Connecting HtmlTableStore to dijit.form.ComboBox
 ------------------------------------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojox.data.HtmlTableStore");
+      dojo.require("dijit.form.ComboBox");
+    </script>
+
+  .. cv :: html 
+
+    <table id="myData" style="display: hidden;">
+    <thead>
+        <tr>
+            <th>isbn</th>
+            <th>title</th>
+            <th>author</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>A9B57C</td>
+            <td>Title of 1</td>
+            <td>Author of 1</td>
+        </tr>
+        <tr>
+            <td>A9B57F</td>
+            <td>Title of 2</td>
+            <td>Author of 2</td>
+        </tr>
+        <tr>
+            <td>A9B577</td>
+            <td>Title of 3</td>
+            <td>Author of 3</td>
+        </tr>
+        <tr>
+            <td>A9B574</td>
+            <td>Title of 4</td>
+            <td>Author of 4</td>
+        </tr>
+        <tr>
+            <td>A9B5CC</td>
+            <td>Title of 5</td>
+            <td>Author of 5</td>
+        </tr>
+    </tbody>
+    </table>
+
+    <b>Combo lookup of isbn</b><br> 
+    <div dojoType="dojox.data.HtmlTableStore" tableId="myData" jsId="comboStore"></div>
+    <div dojoType="dijit.form.ComboBox" store="comboStore" searchAttr="isbn"></div>
