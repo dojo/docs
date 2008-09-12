@@ -206,7 +206,7 @@ Example 1:  Connecting HtmlTableStore to dojox.grid.DataGrid
 
     <b>dojox.grid.DataGrid connected to the above table:</b><br> 
     <div dojoType="dojox.data.HtmlTableStore" tableId="myData2" jsId="gridStore"></div>
-    <div style="width: 400px; height: 300px;">
+    <div style="width: 400px; height: 200px;">
       <div id="grid" 
         dojoType="dojox.grid.DataGrid" 
         store="gridStore" 
