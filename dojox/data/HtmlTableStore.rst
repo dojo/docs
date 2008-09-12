@@ -66,6 +66,10 @@ The following example shows an HTML table that this store can read:
 
 **Note:** The table rows in the <tbody> tag are the items.  The <thead> tag is used for defining the attribute name for each column in the table row for an item.</p>
 
+==================
+Constructor params
+==================
+
 The constructor for HtmlTableStore takes the following possible parameters in its keyword arguments:
 
 +-------------+------------------------------------------------------------------------------------------+----------------------+
@@ -77,6 +81,12 @@ The constructor for HtmlTableStore takes the following possible parameters in it
 |             |the URL was passed) or in the current HTML DOM if the url parameter is null. This is      |                      |
 |             |required.                                                                                 |                      |
 +-------------+------------------------------------------------------------------------------------------+----------------------+
+
+===============
+Item Attributes
+===============
+The item attributes are defined by the <thead>  tag of the referenced table.  Each column name becomes the attribute name for that column when generating the data store view of the data.
+
 
 ============
 Query Syntax
