@@ -104,10 +104,10 @@ HTML Table:
   The <thead>  tag of the referenced table.  Each column name becomes the attribute name for that column when generating the data store view of the data.
 
 DIV collection:
-  In a DIV collection, the attributes of the div corrispond to the attributes of the items.
+  In a DIV collection, the items only contain one attribute/value pair, the text content.  Use the attribute 'name' to acquire it.
 
 List:
-  In a list, the list items have one attribute: attributes of the div corrispond to the attributes of the items.
+  In a list, the list items have one value, the text content.  Use the attribute Use the attribute 'name' to acquire it.
 
 ============
 Query Syntax
@@ -262,3 +262,39 @@ Example 2:  Connecting HtmlTableStore to dojox.grid.DataGrid
         margin: 0;
       }
     </style>
+
+
+----------------------------------------------------------------------
+Example 2:  Connecting HtmlTableStore with List to dijit.form.ComboBox
+----------------------------------------------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojox.data.HtmlStore");
+      dojo.require("dojox.grid.DataGrid");
+    </script>
+
+  .. cv :: html 
+
+    <b>Standard HTML Ordered List:</b><br>
+    <ul id="myList2">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+      <li>Item 5</li>
+      <li>Item 6</li>
+      <li>Item 7</li>
+      <li>Item 8</li>
+      <li>Item 9</li>
+      <li>Item 10</li>
+    </ul>  
+    <br>
+    <br>
+
+    <b>dijit.form.ComboBox connected to the above list:</b><br> 
+    <div dojoType="dojox.data.HtmlStore" dataId="myData2" jsId="comboStore2"></div>
+    <div dojoType="dijit.form.ComboBox" store="comboStore2" searchAttr="name"></div>
