@@ -60,9 +60,18 @@ The following example shows an HTML table that this store can read:
 
 The constructor for HtmlTableStore takes the following possible parameters in its keyword arguments:
 
-url
-    The URL from which to load the HTML file containing the HTML table. This is optional.
-tableId
-    The id of the HTML tag that contains the table to read from, in either a remote page (if the URL was passed) or in the current HTML DOM if the url parameter is null. This is required.
++-------------+------------------------------------------------------------------------------------------+----------------------+
+| **name**    | **description**                                                                          | **type**             |
++-------------+------------------------------------------------------------------------------------------+----------------------+
+|url          |The URL from which to load the HTML file containing the HTML table. This is optional.     | string               |
++-------------+------------------------------------------------------------------------------------------+----------------------+
+|tableId      |The id of the HTML tag that contains the table to read from, in either a remote page (if  | string               |
+|             |the URL was passed) or in the current HTML DOM if the url parameter is null. This is      |                      |
+|             |required.                                                                                 |                      |
++-------------+------------------------------------------------------------------------------------------+----------------------+
 
+============
 Query Syntax
+============
+
+The query syntax is identical to `dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`_.   Please refer to it for the format of the queries.
