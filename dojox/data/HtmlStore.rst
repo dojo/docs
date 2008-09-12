@@ -296,5 +296,5 @@ Example 2:  Connecting HtmlTableStore with List to dijit.form.ComboBox
     <br>
 
     <b>dijit.form.ComboBox connected to the above list:</b><br> 
-    <div dojoType="dojox.data.HtmlStore" dataId="myData2" jsId="comboStore2"></div>
+    <div dojoType="dojox.data.HtmlStore" dataId="myList2" jsId="comboStore2"></div>
     <div dojoType="dijit.form.ComboBox" store="comboStore2" searchAttr="name"></div>
