@@ -99,7 +99,7 @@ The constructor for HtmlTableStore takes the following possible parameters in it
 Item Attributes
 ===============
 The item attributes are defined by the type of tag set being referenced.
-*  HTML Table:
+HTML Table:
   <thead>  tag of the referenced table.  Each column name becomes the attribute name for that column when generating the data store view of the data.
 
 
