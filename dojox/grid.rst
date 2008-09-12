@@ -295,3 +295,12 @@ Creating a grid in a node with display: none
 
 It is not possible to create a grid as a child of a node which is set to be not displayed (display: none).
 If you need to do this though for some reason you can set the grids visibility to "hidden" and its position offscreen 
+
+Hiding the Headers of a Grid
+----------------------------
+
+You can hide the columns of a Grid by using normal css:
+
+.. code-block :: html
+
+  .dojoxGrid-header { display:none; }
