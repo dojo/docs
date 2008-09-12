@@ -138,3 +138,89 @@ Example 1:  Connecting HtmlTableStore to dijit.form.ComboBox
     <b>Combo lookup of isbn</b><br> 
     <div dojoType="dojox.data.HtmlTableStore" tableId="myData" jsId="comboStore"></div>
     <div dojoType="dijit.form.ComboBox" store="comboStore" searchAttr="isbn"></div>
+
+
+------------------------------------------------------------
+Example 1:  Connecting HtmlTableStore to dojox.grid.DataGrid
+------------------------------------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojox.data.HtmlTableStore");
+      dojo.require("dojox.grid.DataGrid");
+
+      var layoutBooks = [
+        [
+          { field: "isbn", name: "ISBN", width: 10 },
+          { field: "author", name: "Author", width: 10 },
+          { field: "title", name: "Title", width: 'auto' }
+        ]
+      ];
+
+    </script>
+
+  .. cv :: html 
+
+    <BStandard table</b><br>
+    <table id="myData2">
+    <thead>
+        <tr>
+            <th>isbn</th>
+            <th>title</th>
+            <th>author</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>A9B57C</td>
+            <td>Title of 1</td>
+            <td>Author of 1</td>
+        </tr>
+        <tr>
+            <td>A9B57F</td>
+            <td>Title of 2</td>
+            <td>Author of 2</td>
+        </tr>
+        <tr>
+            <td>A9B577</td>
+            <td>Title of 3</td>
+            <td>Author of 3</td>
+        </tr>
+        <tr>
+            <td>A9B574</td>
+            <td>Title of 4</td>
+            <td>Author of 4</td>
+        </tr>
+        <tr>
+            <td>A9B5CC</td>
+            <td>Title of 5</td>
+            <td>Author of 5</td>
+        </tr>
+    </tbody>
+    </table>
+
+    <b>Combo lookup of isbn</b><br> 
+    <div dojoType="dojox.data.HtmlTableStore" tableId="myData2" jsId="gridStore"></div>
+    <div style="width: 400px; height: 300px;">
+      <div id="grid" 
+        dojoType="dojox.grid.DataGrid" 
+        store="gridStore" 
+        structure="layoutBooks" 
+        query="{}"
+        rowsPerPage="40">
+      </div>
+    </div>
+
+  .. cv:: css
+
+    <style type="text/css">
+      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/resources/Grid.css";
+      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/resources/nihiloGrid.css";
+
+      .dojoxGrid table {
+        margin: 0;
+      }
+    </style>
