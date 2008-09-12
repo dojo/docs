@@ -64,7 +64,7 @@ The following example shows an HTML table that this store can read:
   </body>
   </html>
 
-**Note:** The table rows in the <tbody> tag are the items.  The <thead> tag is used for defining the attribute name for each column in the table row for an item.</p>
+**Note:** The table rows in the <tbody> tag are the items.  The <thead> tag is used for defining the attribute name for each column in the table row for an item.
 
 ==================
 Constructor params
