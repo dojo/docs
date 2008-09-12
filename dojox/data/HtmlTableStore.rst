@@ -5,6 +5,9 @@ dojox.data.HtmlTableStore
 
 **NOTE:**   This store is deprecated.  Please use `dojox.data.HtmlStore <dojox/data/HtmlStore>`_.
 
+. contents::
+  :depth: 3
+
 
 HtmlTableStore is a simple read-only store provided by Dojo and contained in the DojoX project. HtmlTableStore is a read interface to work with HTML tables with a generally set format. HTML tables are common ways for Web data to be displayed and they can be extremely useful as an alternate representation of data that is displayed in a charting or gauge widget. This store was created so that widgets, that can use dojo.data data stores, can read their input from HTML table data islands in the current page or in a remote page URL. This store implements both dojo.data.api.Read and dojo.data.api.Identity.
 
@@ -75,3 +78,11 @@ Query Syntax
 ============
 
 The query syntax is identical to `dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`_.   Please refer to it for the format of the queries.
+
+========
+Examples
+========
+
+------------------------------------------------------------
+Example 1:  Connecting HtmlTableStore to dijit.form.ComboBox
+------------------------------------------------------------
