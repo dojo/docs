@@ -164,7 +164,7 @@ Example 1:  Connecting HtmlTableStore to dojox.grid.DataGrid
 
   .. cv :: html 
 
-    <BStandard table</b><br>
+    <b>Standard table:</b><br>
     <table id="myData2">
     <thead>
         <tr>
@@ -201,8 +201,10 @@ Example 1:  Connecting HtmlTableStore to dojox.grid.DataGrid
         </tr>
     </tbody>
     </table>
+    <br>
+    <br>
 
-    <b>Combo lookup of isbn</b><br> 
+    <b>dojox.grid.DataGrid connected to the above table:</b><br> 
     <div dojoType="dojox.data.HtmlTableStore" tableId="myData2" jsId="gridStore"></div>
     <div style="width: 400px; height: 300px;">
       <div id="grid" 
