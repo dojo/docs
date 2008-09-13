@@ -1,9 +1,9 @@
 #format dojo_rst
 
-**Using Datastores**
-====================
+Using Datastores
+================
 
-Datastores provide access to data through a standardized interface for talking to data services.  The most common operations performed on data are: 
+Datastores provide access to data through a standardized interface for talking to data services. The most common operations performed on data are: 
 
 * `Terminology <quickstart/data/usingdatastores/terminology>`_ - Useful definitions used throughout the documentation.
 * `A Simple Data Source and Examples <quickstart/data/usingdatastores/simple>`_ - A definition of what data sources are and examples of connecting data stores to widgets.
