@@ -6,13 +6,16 @@ A Simple Data Source
 .. contents::
   :depth: 3
 
-A data source is what the name implies, a source that provides data to something.  In the case of a data store, a data source is where the data store obtains its data.  A data source can be a database, a REST service, to even a JSON file.  For introductory purposes, we will look at the most simple data source available, a javascript object.
+A data source is what the name implies, a source that provides data to something. In the case of a data store, a data source is where the data store obtains its data. A data source can be a database, a REST service, to even a JSON file. For introductory purposes, we will look at the most simple data source available, a javascript object.
 
-For the following examples, the defined JavaScript will be used.  Note that it has a defined structure which is used by the dojo.data.ItemFileReadStore.  Be aware that dojo.data does not require this format for every datastore; this is simply the format expected by dojo.data.ItemFileReadStore.
+========
+Examples
+========
 
-============
 Example data
-============
+------------
+
+For the following examples, the defined JavaScript will be used. Note that it has a defined structure which is used by the dojo.data.ItemFileReadStore. Be aware that dojo.data does not require this format for every datastore; this is simply the format expected by dojo.data.ItemFileReadStore.
 
 .. code-block :: javascript
 
@@ -29,20 +32,15 @@ Example data
   ]}
 
 
-**In this example:**
+In the following examples:
 
 * The data source is the above javascript object
 * Each item is a country, and each item has three attributes, name,abbr, and capital.
 * The abbr attribute is an identifier. Each country has a different abbr for unique look up.
 
-This is a simple, but powerful, way to represent data in the browser.  It can also be quickly converted to a text format called `JavaScript Object Notation (JSON) <http://www.json.org>`_.  The JSON format can be stored as files on your server and loaded via xhr calls.  dojo.data.ItemFileReadStore allows for the data to be defined in browser as an object such as above, or from a JSON file of the same format.  
+This is a simple, but powerful, way to represent data in the browser. It can also be quickly converted to a text format called `JavaScript Object Notation (JSON) <http://www.json.org>`_. The JSON format can be stored as files on your server and loaded via xhr calls. dojo.data.ItemFileReadStore allows for the data to be defined in browser as an object such as above, or from a JSON file of the same format. 
 
-
-Below is a simple example of how a datastore can be used to load the data shown above and how widgets that are dojo.data aware can make use of it to display it easily.
-
-========
-Examples
-========
+The following examples show how a datastore can be used to load the data shown above and how widgets that are dojo.data aware can make use of it to display it easily.
 
 Connecting dijit.form.ComboBox
 ------------------------------
@@ -72,7 +70,6 @@ Connecting dijit.form.ComboBox
 
     <div dojoType="dojo.data.ItemFileReadStore" data="storeData" jsId="countryStore"></div>
     <div dojoType="dijit.form.ComboBox" store="countryStore" searchAttr="name"></div>
-
 
 
 Connecting dijit.Tree
