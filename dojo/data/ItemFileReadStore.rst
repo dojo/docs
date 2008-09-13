@@ -15,9 +15,10 @@ Dojo core provides a implementation of a read-only datastore, ItemFileReadStore.
 
 **Points of Consideration:**
 
-1.)  The format used by ItemFileReadStore is *not* a requirement of the dojo.data API. The format it uses is designed to work well for the specific situations ItemFileReadStore is used for, which are moderately sized data sets that can be easily represented in a JavaScript Object tree. Again, please do not take the storage format used by ItemFileReadStore as a definitive format all data stores use; *it is not*. Other stores use different formats, such as CSV structured data, XML, Opml, HTML, raw text, etc. The point of a data store is to hide the internal structure and always expose the data through the same API.
+1. The format used by ItemFileReadStore is *not* a requirement of the dojo.data API. The format it uses is designed to work well for the specific situations ItemFileReadStore is used for, which are moderately sized data sets that can be easily represented in a JavaScript Object tree. 
+   Again, please do not take the storage format used by ItemFileReadStore as a definitive format all data stores use; *it is not*. Other stores use different formats, such as CSV structured data, XML, Opml, HTML, raw text, etc. The point of a data store is to hide the internal structure and always expose the data through the same API.
 
-2.)  This is an in-memory store. It is not designed to operate as a remote server store and often trying to make it work with specific remote services ends up far more work than simply implementing a completely new data store that conforms to the dojo.data APIs. So, if you find it extremely complicated to modify for your needs, take a set back and look at what you're trying to do. It may be simpler to implement the data store interface over your services.
+2. This is an in-memory store. It is not designed to operate as a remote server store and often trying to make it work with specific remote services ends up far more work than simply implementing a completely new data store that conforms to the dojo.data APIs. So, if you find it extremely complicated to modify for your needs, take a set back and look at what you're trying to do. It may be simpler to implement the data store interface over your services.
 
 ==============
 Supported APIs
@@ -25,8 +26,8 @@ Supported APIs
 
 The following dojo.data APIs are implemented by ItemFileReadStore
 
-  * `dojo.data.api.Read <dojo/data/api/Read>`_
-  * `dojo.data.api.Identity <dojo/data/api/Identity>`_
+* `dojo.data.api.Read <dojo/data/api/Read>`_
+* `dojo.data.api.Identity <dojo/data/api/Identity>`_
 
 
 ======================
@@ -91,41 +92,41 @@ General Structure
 Item Structure
 --------------
 
-  To ItemFileReadStore, any JavaScript object is treated as an item. This includes any value of an attribute that is also a JavaScript object. This allows the format to be extremely flexible in what sort of data it can represent. 
+To ItemFileReadStore, any JavaScript object is treated as an item. This includes any value of an attribute that is also a JavaScript object. This allows the format to be extremely flexible in what sort of data it can represent. 
 
-  Aside from regular, string, boolean, integer, object, etc, types that can be assigned as attribute values, there are special structures that when detected are treated differently from regular values. 
+Aside from regular, string, boolean, integer, object, etc, types that can be assigned as attribute values, there are special structures that when detected are treated differently from regular values. 
 
-    **References:**
+**References:**
 
-    The first is the the *_reference* structure. The *_reference* structure is a JavaScript Object with a single, special attribute of *_reference*. Its value should always be the identity of another item. With this structure, ItemFileReadStore can read in and set up relationships between items. An example of such a data structure is below:
+The first is the the *_reference* structure. The *_reference* structure is a JavaScript Object with a single, special attribute of *_reference*. Its value should always be the identity of another item. With this structure, ItemFileReadStore can read in and set up relationships between items. An example of such a data structure is below:
 
-    .. code-block :: javascript
+.. code-block :: javascript
 
-      {
-        items: [
-          { "name": "Bob", "spouse": {"_reference":"Sally"),  children: [ { "_reference":"Nancy"}]},
-          { "name": "Sally", "spouse": {"_reference":"Bob"),  children: [ { "_reference":"Nancy"}]},
-          { "name": "Nancy"},           
-        ]
-      }
+  {
+    items: [
+      { "name": "Bob", "spouse": {"_reference":"Sally"),  children: [ { "_reference":"Nancy"}]},
+      { "name": "Sally", "spouse": {"_reference":"Bob"),  children: [ { "_reference":"Nancy"}]},
+      { "name": "Nancy"},           
+    ]
+  }
 
-    So, by calling store.getValue(bobItem, "spouse"), the return will be the datastore item identified by *Nancy*.
-          
-
-    **Custom Types:**
-
-    The other special structure is the custom type structure. The purpose of the custom type structure is a mechanism by which you can define JavaScript Objects that you do not which to be created and handled as a data store item. A good example of this is a JavaScript Date object. You likely do not wish it to be treated as another item, but as simply its JavaScript object. Another good example is the dojo.Color object. Again, it is unlikely you would wish this to be treated as a datastore item. So, ItemFileReadStore provides a mechanism by which these sort of objects can be represented in JSON and reconstructed back into their JavaScript equivalents. The custom type format is defined below:
+So, by calling store.getValue(bobItem, "spouse"), the return will be the datastore item identified by *Nancy*.
 
 
-    .. code-block :: javascript
+**Custom Types:**
 
-      {
-        items: [
-          { "name": "Bob", birthdate: { "_type": "Date", "_value": "1965-08-20T00:00:00Z"})
-        ]
-      }
+The other special structure is the custom type structure. The purpose of the custom type structure is a mechanism by which you can define JavaScript Objects that you do not which to be created and handled as a data store item. A good example of this is a JavaScript Date object. You likely do not wish it to be treated as another item, but as simply its JavaScript object. Another good example is the dojo.Color object. Again, it is unlikely you would wish this to be treated as a datastore item. So, ItemFileReadStore provides a mechanism by which these sort of objects can be represented in JSON and reconstructed back into their JavaScript equivalents. The custom type format is defined below:
 
-    When ItemFileReadStore parses that structure, it detects the JavaScript Object value for attribute *birthdate* has the special attributes *_type* and *_value*. what it then does with this is look into the type map of the store and determines if any deserializer has been defined for the value of *_type*. If it has, it takes the value of *_value*, and calls the deserializer function with it. The return of the deserializer will be a Date() object. 
+
+.. code-block :: javascript
+
+  {
+    items: [
+      { "name": "Bob", birthdate: { "_type": "Date", "_value": "1965-08-20T00:00:00Z"})
+    ]
+  }
+
+When ItemFileReadStore parses that structure, it detects the JavaScript Object value for attribute *birthdate* has the special attributes *_type* and *_value*. what it then does with this is look into the type map of the store and determines if any deserializer has been defined for the value of *_type*. If it has, it takes the value of *_value*, and calls the deserializer function with it. The return of the deserializer will be a Date() object. 
 
 =======================
 Item Structure Examples
