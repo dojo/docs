@@ -3,7 +3,7 @@
 dojox.data.HtmlTableStore
 =========================
 
-**NOTE:**   This store is deprecated.  Please use `dojox.data.HtmlStore <dojox/data/HtmlStore>`_.
+**NOTE:**   This store is deprecated. Please use `dojox.data.HtmlStore <dojox/data/HtmlStore>`_.
 
 :Status: Contributed, Draft
 :Version: 1.0
@@ -64,7 +64,7 @@ The following example shows an HTML table that this store can read:
   </body>
   </html>
 
-**Note:** The table rows in the <tbody> tag are the items.  The <thead> tag is used for defining the attribute name for each column in the table row for an item.
+**Note:** The table rows in the <tbody> tag are the items. The <thead> tag is used for defining the attribute name for each column in the table row for an item.
 
 ==================
 Constructor params
@@ -85,22 +85,21 @@ The constructor for HtmlTableStore takes the following possible parameters in it
 ===============
 Item Attributes
 ===============
-The item attributes are defined by the <thead>  tag of the referenced table.  Each column name becomes the attribute name for that column when generating the data store view of the data.
+The item attributes are defined by the <thead>  tag of the referenced table. Each column name becomes the attribute name for that column when generating the data store view of the data.
 
 
 ============
 Query Syntax
 ============
 
-The query syntax is identical to `dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`_.   Please refer to it for the format of the queries.
+The query syntax is identical to `dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`_. Please refer to it for the format of the queries.
 
 ========
 Examples
 ========
 
-------------------------------------------------------------
-Example 1:  Connecting HtmlTableStore to dijit.form.ComboBox
-------------------------------------------------------------
+Connecting HtmlTableStore to dijit.form.ComboBox
+------------------------------------------------
 
 .. cv-compound ::
   
@@ -155,9 +154,8 @@ Example 1:  Connecting HtmlTableStore to dijit.form.ComboBox
     <div dojoType="dijit.form.ComboBox" store="comboStore" searchAttr="isbn"></div>
 
 
-------------------------------------------------------------
-Example 2:  Connecting HtmlTableStore to dojox.grid.DataGrid
-------------------------------------------------------------
+Connecting HtmlTableStore to dojox.grid.DataGrid
+------------------------------------------------
 
 .. cv-compound ::
   
