@@ -51,7 +51,6 @@ Query the first three photos from a user:
 Flickr API Example
 ==================
 
-----------------------------------------
 Query the first three photos from a user
 ----------------------------------------
 
@@ -181,9 +180,8 @@ sort
 Usage Examples
 ==============
 
-----------------------------------
-Sample 1:  Listing nature pictures
-----------------------------------
+Listing nature pictures
+-----------------------
 
 .. cv-compound ::
   
@@ -193,8 +191,8 @@ Sample 1:  Listing nature pictures
       dojo.require("dojox.data.FlickrRestStore");
       dojo.require("dijit.form.Button");
 
-      //This function performs some basic dojo initialization.  In this case it connects the button
-      //onClick to a function which invokes the fetch().  The fetch function queries for all items 
+      //This function performs some basic dojo initialization. In this case it connects the button
+      //onClick to a function which invokes the fetch(). The fetch function queries for all items 
       //and provides callbacks to use for completion of data retrieval or reporting of errors.
       function init () {
          //Function to perform a fetch on the datastore when a button is clicked
@@ -230,7 +228,7 @@ Sample 1:  Listing nature pictures
              alert("lookup failed.");
            }
              
-           //Fetch the images.  Note the API key used is not for general usage.  It's here to demo the store, ONLY.
+           //Fetch the images. Note the API key used is not for general usage. It's here to demo the store, ONLY.
            flickrStore.fetch({query:{ tags: "nature", apikey: "8c6803164dbc395fb7131c9d54843627"}, onBegin: clearOldList, onComplete: gotItems, onError: fetchFailed});
          }
          //Link the click event of the button to driving the fetch.
