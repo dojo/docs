@@ -18,7 +18,7 @@ The sort array will look something like the following example:
 
   var sortKeys = [{attribute: "aisle", descending: true}];
 
-Each sort key has an attribute, which should be an attribute in the data store item, and a descending boolean flag. If an attribute passed isn't an actual attribute of the item, it will generally be ignored by the sorting; it is treated as an undefined comparison.  You can effectively think of the sort attributes as similar to the SQL *order by* modifier.
+Each sort key has an attribute, which should be an attribute in the data store item, and a descending boolean flag. If an attribute passed isn't an actual attribute of the item, it will generally be ignored by the sorting; it is treated as an undefined comparison. You can effectively think of the sort attributes as similar to the SQL *order by* modifier.
 
 For compound sorts, you can define as many sort keys as you want. The order in the array defines which keys take priority over other keys when sorting. The following example shows this:
 
@@ -33,11 +33,10 @@ For compound sorts, you can define as many sort keys as you want. The order in t
 Examples
 ========
 
-While that seems simple, nothing is as useful as a complete example.  So, below is an example that will take a simple case and show how to use the dojo.data API to sort data items.  This example uses the same data used in examples elsewhere, the simple grocery data.
+While that seems simple, nothing is as useful as a complete example. So, below is an example that will take a simple case and show how to use the dojo.data API to sort data items. This example uses the same data used in examples elsewhere, the simple grocery data.
 
-
-Sample 1:  Showing how sort attributes affect ordering
-------------------------------------------------------
+Showing how sort attributes affect ordering
+-------------------------------------------
 
 .. cv-compound ::
   
@@ -60,8 +59,8 @@ Sample 1:  Showing how sort attributes affect ordering
           { name: 'pepper', aisle: 'Spices',  price: 1.01  }
         ]};
 
-        //This function performs some basic dojo initialization.  In this case it connects the button
-        //onClick to a function which invokes the fetch().  The fetch function queries for all items 
+        //This function performs some basic dojo initialization. In this case it connects the button
+        //onClick to a function which invokes the fetch(). The fetch function queries for all items 
         //and provides callbacks to use for completion of data retrieval or reporting of errors.
         function init () {
            //Function to perform a fetch on the datastore when a button is clicked
@@ -135,10 +134,10 @@ Sample 1:  Showing how sort attributes affect ordering
                 alert("lookup failed.");
              }
              
-             //Fetch the data in a sorted order.  
+             //Fetch the data in a sorted order. 
              foodStore.fetch({onBegin: clearSortedList, onComplete: gotSortedItems, onError: fetchFailed, sort: [{ attribute: "aisle"},{attribute: "name"}]});
 
-             //Fetch the data in an unsorted order.  
+             //Fetch the data in an unsorted order. 
              foodStore.fetch({onBegin: clearUnSortedList, onComplete: gotUnSortedItems, onError: fetchFailed});
            }
            //Link the click event of the button to driving the fetch.
