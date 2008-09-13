@@ -3,29 +3,27 @@
 dojo/data/ItemFileReadStore
 ===========================
 
-.. contents::
-  :depth: 3
-
 :Status: Contributed, Draft
 :Version: 1.2
 :Author: Jared Jurkiewicz
 :Available: since V1.0
 
+.. contents::
+  :depth: 2
 
 Dojo core provides a implementation of a read-only datastore, ItemFileReadStore. This store reads the JSON structured contents from an http endpoint (service or URL), or from an in-memory JavaScript object, and stores all the items in-memory for simple and quick access. ItemFileReadStore is designed to allow for flexibility in how it represents item hierarchy, references, and custom data types. It also provides options for which attribute can act as the unique identifier (for dojo.data.api.Identity), and which attribute can be used as a general label for an item. This store has an expectation that data is provided to in in a specific though very flexible, format. All of the examples on this page demonstrate the general format expected.
 
 **Points of Consideration:**
 
-1.)  The format used by ItemFileReadStore is *not* a requirement of the dojo.data API.  The format it uses is designed to work well for the specific situations ItemFileReadStore is used for, which are moderately sized data sets that can be easily represented in a JavaScript Object tree.  Again, please do not take the storage format used by ItemFileReadStore as a definitive format all data stores use; *it is not*.  Other stores use different formats, such as CSV structured data, XML, Opml, HTML, raw text, etc.  The point of a data store is to hide the internal structure and always expose the data through the same API.
+1.)  The format used by ItemFileReadStore is *not* a requirement of the dojo.data API. The format it uses is designed to work well for the specific situations ItemFileReadStore is used for, which are moderately sized data sets that can be easily represented in a JavaScript Object tree. Again, please do not take the storage format used by ItemFileReadStore as a definitive format all data stores use; *it is not*. Other stores use different formats, such as CSV structured data, XML, Opml, HTML, raw text, etc. The point of a data store is to hide the internal structure and always expose the data through the same API.
 
-2.)  This is an in-memory store.  It is not designed to operate as a remote server store and often trying to make it work with specific remote services ends up far more work than simply implementing a completely new data store that conforms to the dojo.data APIs.   So, if you find it extremely complicated to modify for your needs, take a set back and look at what you're trying to do.  It may be simpler to implement the data store interface over your services.
+2.)  This is an in-memory store. It is not designed to operate as a remote server store and often trying to make it work with specific remote services ends up far more work than simply implementing a completely new data store that conforms to the dojo.data APIs. So, if you find it extremely complicated to modify for your needs, take a set back and look at what you're trying to do. It may be simpler to implement the data store interface over your services.
 
 ==============
 Supported APIs
 ==============
 
 The following dojo.data APIs are implemented by ItemFileReadStore
-
 
   * `dojo.data.api.Read <dojo/data/api/Read>`_
   * `dojo.data.api.Identity <dojo/data/api/Identity>`_
@@ -38,25 +36,25 @@ Constructor Parameters
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
 | **Parameter**  | **Required** | **Description**                                                                                | **Since** |
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
-| url            | No           |This optional parameter specifies what URL from which to load the structured JSON data.  Note   | 1.0       |
-|                |              |that this URL is only loaded one time, as this is an in-memory data store.  Only when combined  |           |
+| url            | No           |This optional parameter specifies what URL from which to load the structured JSON data. Note    | 1.0       |
+|                |              |that this URL is only loaded one time, as this is an in-memory data store. Only when combined   |           |
 |                |              |with parameters *clearOnClose* and *urlPreventCache*, is it possible to reload the store        |           |
 |                |              |instance with new data.                                                                         |           |
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
-| data           | No           |A structured JavaScript Object to use to populate the store.  This parameter can be used instead| 1.0       |
+| data           | No           |A structured JavaScript Object to use to populate the store. This parameter can be used instead | 1.0       |
 |                |              |of *url* when you wish to load data differently then modify it to fit the expected              |           |
-|                |              |ItemFileReadStore format.  This parameter is ignored if *url* is set.                           |           |
+|                |              |ItemFileReadStore format. This parameter is ignored if *url* is set.                            |           |
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
-| typeMap        | No           |This is a JavaScript Object that defines how to deserialize custom types.  For more information | 1.0       |
-|                |              |on custom types, please refer to the section in this page on them.  They are effectively a way  |           |
+| typeMap        | No           |This is a JavaScript Object that defines how to deserialize custom types. For more information  | 1.0       |
+|                |              |on custom types, please refer to the section in this page on them. They are effectively a way   |           |
 |                |              |to control how certain values of attributes are processed.                                      |           |
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
-| clearOnClose   | No           |This boolean parameter controls the clear() behavior of the store.  If set, calling close() will| 1.2       |
-|                |              |erase all items stored in the internal structures.  A new call to fetch will invoke the URL     |           |
+| clearOnClose   | No           |This boolean parameter controls the clear() behavior of the store. If set, calling close() will | 1.2       |
+|                |              |erase all items stored in the internal structures. A new call to fetch will invoke the URL      |           |
 |                |              |load or reparse the data object into a new list of items.                                       |           |
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
 | urlPreventCache| No           |This boolean value constrols whether dojo attempts to prevent the browser caching mechanism from| 1.2       |
-|                |              |caching values loaded from a webserver.  This parameter is especially useful when combined with |           | 
+|                |              |caching values loaded from a webserver. This parameter is especially useful when combined with  |           | 
 |                |              |*clearOnClose* to force a data reload.                                                          |           |
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
   
@@ -66,12 +64,10 @@ Constructor Parameters
 Input Data Format
 =================
 
-While the data exposed from a data store is agnostic and consumable by many sources in an usually interchangable way, the input data formats of a data store may vary.   The ItemFileReadStore expects a specific structure to its data, as defined below:
+While the data exposed from a data store is agnostic and consumable by many sources in an usually interchangable way, the input data formats of a data store may vary. The ItemFileReadStore expects a specific structure to its data, as defined below:
 
------------------
 General Structure
 -----------------
-
 
 .. code-block :: javascript
 
@@ -79,10 +75,10 @@ General Structure
     "label": "some attribute",   //Optional attribute used to indicate which attribute on an item should act as a human-readable label for display purposes.
 
 
-    "identifier": "some attribute",  //Optional attribute used to indicate which attribute on an item acts as a unique identifier for that item.  If it is not defined, then the ItemFileReadStore will simply number the items and use that number as a unique index to the item.
+    "identifier": "some attribute",  //Optional attribute used to indicate which attribute on an item acts as a unique identifier for that item. If it is not defined, then the ItemFileReadStore will simply number the items and use that number as a unique index to the item.
 
 
-    "identifier": "some attribute",  //Optional attribute used to indicate which attribute on an item acts as a unique identifier for that item.  If it is not defined, then the ItemFileReadStore will simply number the items and use that number as a unique index to the item.
+    "identifier": "some attribute",  //Optional attribute used to indicate which attribute on an item acts as a unique identifier for that item. If it is not defined, then the ItemFileReadStore will simply number the items and use that number as a unique index to the item.
 
 
     "items:" [  //The array of JavaScript objects that act as the root items of the data store
@@ -92,18 +88,16 @@ General Structure
     ]
   }
 
-
---------------
 Item Structure
 --------------
 
-  To ItemFileReadStore, any JavaScript object is treated as an item.  This includes any value of an attribute that is also a JavaScript object.  This allows the format to be extremely flexible in what sort of data it can represent.  
+  To ItemFileReadStore, any JavaScript object is treated as an item. This includes any value of an attribute that is also a JavaScript object. This allows the format to be extremely flexible in what sort of data it can represent. 
 
-  Aside from regular, string, boolean, integer, object, etc, types that can be assigned as attribute values, there are special structures that when detected are treated differently from regular values.  
+  Aside from regular, string, boolean, integer, object, etc, types that can be assigned as attribute values, there are special structures that when detected are treated differently from regular values. 
 
     **References:**
 
-    The first is the the *_reference* structure.   The *_reference* structure is a JavaScript Object with a single, special attribute of *_reference*.  Its value should always be the identity of another item.  With this structure, ItemFileReadStore can read in and set up relationships between items.   An example of such a data structure is below:
+    The first is the the *_reference* structure. The *_reference* structure is a JavaScript Object with a single, special attribute of *_reference*. Its value should always be the identity of another item. With this structure, ItemFileReadStore can read in and set up relationships between items. An example of such a data structure is below:
 
     .. code-block :: javascript
 
@@ -120,7 +114,7 @@ Item Structure
 
     **Custom Types:**
 
-    The other special structure is the custom type structure.  The purpose of the custom type structure is a mechanism by which you can define JavaScript Objects that you do not which to be created and handled as a data store item.  A good example of this is a JavaScript Date object.  You likely do not wish it to be treated as another item, but as simply its JavaScript object.  Another good example is the dojo.Color object.  Again, it is unlikely you would wish this to be treated as a datastore item.   So, ItemFileReadStore provides a mechanism by which these sort of objects can be represented in JSON and reconstructed back into their JavaScript equivalents.  The custom type format is defined below:
+    The other special structure is the custom type structure. The purpose of the custom type structure is a mechanism by which you can define JavaScript Objects that you do not which to be created and handled as a data store item. A good example of this is a JavaScript Date object. You likely do not wish it to be treated as another item, but as simply its JavaScript object. Another good example is the dojo.Color object. Again, it is unlikely you would wish this to be treated as a datastore item. So, ItemFileReadStore provides a mechanism by which these sort of objects can be represented in JSON and reconstructed back into their JavaScript equivalents. The custom type format is defined below:
 
 
     .. code-block :: javascript
@@ -131,10 +125,14 @@ Item Structure
         ]
       }
 
-    When ItemFileReadStore parses that structure, it detects the JavaScript Object value for attribute *birthdate* has the special attributes *_type* and *_value*.  what it then does with this is look into the type map of the store and determines if any deserializer has been defined for the value of *_type*.  If it has, it takes the value of *_value*, and calls the deserializer function with it.  The return of the deserializer will be a Date() object.  
+    When ItemFileReadStore parses that structure, it detects the JavaScript Object value for attribute *birthdate* has the special attributes *_type* and *_value*. what it then does with this is look into the type map of the store and determines if any deserializer has been defined for the value of *_type*. If it has, it takes the value of *_value*, and calls the deserializer function with it. The return of the deserializer will be a Date() object. 
 
-Item Structure Example: Items with References
----------------------------------------------
+=======================
+Item Structure Examples
+=======================
+
+Items with References
+---------------------
 
 .. code-block :: javascript
 
@@ -185,8 +183,8 @@ Item Structure Example: Items with References
     ]
   }    
 
-Item Structure Example: Items with Hierarchy
---------------------------------------------
+Items with Hierarchy
+--------------------
 
 .. code-block :: javascript
 
@@ -237,9 +235,8 @@ Item Structure Example: Items with Hierarchy
     ]
   }
 
-
-Item Structure Example: Items with Custom Types
------------------------------------------------
+Items with Custom Types
+-----------------------
 
 .. code-block :: javascript 
 
@@ -271,16 +268,15 @@ Item Structure Example: Items with Custom Types
 Custom Types
 ============
 
-As mentioned in the Item Structure section, custom types are possible to create and use as values of attributes with this store.  The caveat is, you have to tel the store, through a typeMap object, how to deserialize the cutom type value back into its object form.  This is not as difficult as it first may sound.  Below is the general structure information for creating a custom type map.  There is a general format for all cases, and a compact format when the value can be directly used as a constructor argument.
+As mentioned in the Item Structure section, custom types are possible to create and use as values of attributes with this store. The caveat is, you have to tel the store, through a typeMap object, how to deserialize the cutom type value back into its object form. This is not as difficult as it first may sound. Below is the general structure information for creating a custom type map. There is a general format for all cases, and a compact format when the value can be directly used as a constructor argument.
 
-**Note:** You can mix simplified form type maps with general case type maps in the same type map object.  Therefore, you can use whatever is the easiest representation required to handle the custom object construction.   
+**Note:** You can mix simplified form type maps with general case type maps in the same type map object. Therefore, you can use whatever is the easiest representation required to handle the custom object construction. 
 
-**Note:** dojo.data.ItemFileReadStore implements a custom type map for JavaScript Date already.  It uses the ISO-8601 serialization format for dates to keep it consistent with other date operations in dojo.  If you wish to see how ItemFileReadStore defines it, refer to the source of dojo/data/ItemFileReadStore.js.   The type mapping occurs in the constructor function.
+**Note:** dojo.data.ItemFileReadStore implements a custom type map for JavaScript Date already. It uses the ISO-8601 serialization format for dates to keep it consistent with other date operations in dojo. If you wish to see how ItemFileReadStore defines it, refer to the source of dojo/data/ItemFileReadStore.js. The type mapping occurs in the constructor function.
 
----------------------
 General Case Type Map
 ---------------------
-The general case type map handles the situation where some processing on the value of an attribute must occur before it can be converted back into its Object form.  This often the case where a single value cannot be used as a constructor argument.  
+The general case type map handles the situation where some processing on the value of an attribute must occur before it can be converted back into its Object form. This often the case where a single value cannot be used as a constructor argument. 
 
 **General Form Type Map**
 
@@ -320,10 +316,10 @@ Example:  General Case Type Map for JavaScript Date Objects
 	}
   }
 
-------------------------
 Simplified Form Type Map
 ------------------------
-The simplified form is more compact to write and works well when the value held by the custom type structure can be directly passed into a constructor.back into its Object form.  This often the case where a single value cannot be used as a constructor argument.  
+
+The simplified form is more compact to write and works well when the value held by the custom type structure can be directly passed into a constructor.back into its Object form. This often the case where a single value cannot be used as a constructor argument. 
 
 **Simplified Form Type Map**
 
@@ -346,7 +342,6 @@ Example:  Simplified Form Type Map for dojo.Color Objects
     "Color": dojo.Color
   }
 
-------------------------------------------------------------------
 Functional Example:  Using custom type maps with ItemFileReadStore
 ------------------------------------------------------------------
 
@@ -367,8 +362,8 @@ Functional Example:  Using custom type maps with ItemFileReadStore
         ]
       };
 
-      //This function performs some basic dojo initialization.  In this case it connects the button
-      //onClick to a function which invokes the fetch().  The fetch function queries for all items 
+      //This function performs some basic dojo initialization. In this case it connects the button
+      //onClick to a function which invokes the fetch(). The fetch function queries for all items 
       //and provides callbacks to use for completion of data retrieval or reporting of errors.
       function init () {
         var colorStore = new dojo.data.ItemFileReadStore({data: colorData, typeMap: {'Color': dojo.Color}});
@@ -412,7 +407,7 @@ Functional Example:  Using custom type maps with ItemFileReadStore
              alert("lookup failed.");
           }
              
-          //Fetch the data.  
+          //Fetch the data. 
           colorStore.fetch({onBegin: clearOldList, onItem: gotItem, onError: fetchFailed});
         }
 
@@ -442,15 +437,14 @@ The fetch method query syntax for ItemFileReadStore is simple and straightforwar
 
   { foo:"bar", bit:"bite"}
 
-Okay, easy.  Now what if I want to do a fuzzy match of items?  Can this be done?   Yes.  ItemFileReadStore supports wildcard matching.  Specifically, it supports multi-character * and single character ? as wildcards in attribute value queries.
+Okay, easy. Now what if I want to do a fuzzy match of items?  Can this be done?   Yes. ItemFileReadStore supports wildcard matching. Specifically, it supports multi-character * and single character ? as wildcards in attribute value queries.
 
---------------
+==============
 Query Examples
---------------
+==============
 
-
-Query Example 1: Match items with multi-character wildcard
-----------------------------------------------------------
+Match items with multi-character wildcard
+-----------------------------------------
 
 *Matching attribute foo that has a value starting with bar*
 
@@ -459,8 +453,8 @@ Query Example 1: Match items with multi-character wildcard
   { foo:"bar*"}
 
 
-Query Example 2: Match items with single character wildcard
------------------------------------------------------------
+Match items with single character wildcard
+------------------------------------------
 
 *Matching attribute foo the value of which ends with ar and starts with any character.*
 
@@ -470,8 +464,8 @@ Query Example 2: Match items with single character wildcard
   { foo:"?ar"}
 
 
-Query Example 3: Match items on multiple attributes
----------------------------------------------------
+Match items on multiple attributes
+----------------------------------
 
 *Matching multiple attributes with various wildcards.*
 
@@ -485,26 +479,26 @@ Query Example 3: Match items on multiple attributes
 Query Options
 =============
 
-Dojo.data defines support for a 'queryOptions' modifier object that affects the behavior of the query.  The two defined options listed by the API are *ignoreCase* and *deep*.  ItemFileReadStore supports these options.  The affect of these options on a query is defined below.
+Dojo.data defines support for a 'queryOptions' modifier object that affects the behavior of the query. The two defined options listed by the API are *ignoreCase* and *deep*. ItemFileReadStore supports these options. The affect of these options on a query is defined below.
 
 +------------+------------------------------------------------------------------------------------------------------------------------+
 | **Option** | **Result**                                                                                                             |
 +------------+------------------------------------------------------------------------------------------------------------------------+
-| ignoreCase |The default is **false**.  When set to true, the match on attributes is done in a case-insensitive fashion.  This means |
+| ignoreCase |The default is **false**. When set to true, the match on attributes is done in a case-insensitive fashion. This means   |
 |            |with ignoreCase: true, a query of A* would match *Apple* and *acorn*                                                    |
 +------------+------------------------------------------------------------------------------------------------------------------------+
-| deep       |This option affects searching when the structure passed to ItemFileReadStore has hierarchy.  For an example of that,    |
-|            |refer to *Item Structure Example: Items with Hierarchy*.  the default value for this option is false, which means the   |
-|            |query is only applied against root items in the tree of data items.  If it is set to true, then the query is applied to |
-|            |root items and *all* child data items.  Think of it as a recursive search.                                              |
+| deep       |This option affects searching when the structure passed to ItemFileReadStore has hierarchy. For an example of that,     |
+|            |refer to *Item Structure Example: Items with Hierarchy*. the default value for this option is false, which means the    |
+|            |query is only applied against root items in the tree of data items. If it is set to true, then the query is applied to  |
+|            |root items and *all* child data items. Think of it as a recursive search.                                               |
 +------------+------------------------------------------------------------------------------------------------------------------------+
 
 ==============
 Usage Examples
 ==============
----------------------------------------------------
-Example 1: Connecting ItemFileReadStore to ComboBox
----------------------------------------------------
+
+Connecting ItemFileReadStore to ComboBox
+----------------------------------------
 
 .. cv-compound ::
   
@@ -532,9 +526,8 @@ Example 1: Connecting ItemFileReadStore to ComboBox
     <div dojoType="dojo.data.ItemFileReadStore" data="storeData2" jsId="countryStore"></div>
     <div dojoType="dijit.form.ComboBox" store="countryStore" searchAttr="name"></div>
 
-----------------------------------------
-Example 2:  Searching for all continents
-----------------------------------------
+Searching for all continents
+----------------------------
 
 .. cv-compound ::
   
@@ -646,10 +639,8 @@ Example 2:  Searching for all continents
     <span id="list2">
     </span>
 
-
-------------------------------------------------------
-Example 3:  Doing wildcard searches and option setting
-------------------------------------------------------
+Doing wildcard searches and option setting
+------------------------------------------
 
 *Wildcards * and ? are supported by the dojo.data.ItemFileReadStore:*
 
