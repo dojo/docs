@@ -12,7 +12,7 @@ dojox.data.HtmlStore
   :depth: 3
 
 
-HtmlStore is an improved version of the older `dojox.data.HtmlTableStore <dojox.data.HtmlTableStore>`_.   It is a simple read-only store provided by Dojo and contained in the DojoX project. HtmlTableStore is a read interface to work with HTML tables, Lists, and collections of DIV and SPAN tags with a generally set format. HTML tables, lists and DIV collections are common ways for Web data to be displayed.  In Ajax applications they also remain extremely useful as an alternate representation of data that is displayed in a charting, dynamic grid, or gauge widget. This store was created so that widgets, that can use dojo.data data stores, can read their input from existing HTML structures (data islands) in the current page or in a remote page URL. 
+HtmlStore is an improved version of the older `dojox.data.HtmlTableStore <dojox.data.HtmlTableStore>`_. It is a simple read-only store provided by Dojo and contained in the DojoX project. HtmlTableStore is a read interface to work with HTML tables, Lists, and collections of DIV and SPAN tags with a generally set format. HTML tables, lists and DIV collections are common ways for Web data to be displayed. In Ajax applications they also remain extremely useful as an alternate representation of data that is displayed in a charting, dynamic grid, or gauge widget. This store was created so that widgets, that can use dojo.data data stores, can read their input from existing HTML structures (data islands) in the current page or in a remote page URL. 
 
 ===========
 API Support
@@ -27,9 +27,9 @@ Example data input
 
 The following examples are HTML structures that can be easily read by HtmlStore:
 
-----------------------------
-Input Example 1:  HTML table
-----------------------------
+
+HTML table
+----------
 
 ::
 
@@ -77,11 +77,11 @@ Input Example 1:  HTML table
   </body>
   </html>
 
-**Note:** The table rows in the <tbody> tag are the items.  The <thead> tag is used for defining the attribute name for each column in the table row for an item.
+**Note:** The table rows in the <tbody> tag are the items. The <thead> tag is used for defining the attribute name for each column in the table row for an item.
 
-----------------------
-Input Example 2:  List
-----------------------
+
+List
+----
 
 ::
  
@@ -98,12 +98,11 @@ Input Example 2:  List
     <li>Item 10</li>
   </ul>  
 
-**Note:** The <LI> entries are the items.  Each has a single attribute 'name' which corresponds to the text content of the <LI>.
+**Note:** The <LI> entries are the items. Each has a single attribute 'name' which corresponds to the text content of the <LI>.
 
 
---------------------------------
-Input Example 3:  DIV Collection
---------------------------------
+DIV Collection
+--------------
 
 ::
  
@@ -120,7 +119,7 @@ Input Example 3:  DIV Collection
     <div>Item 10</div>
   </div>  
 
-**Note:** The <DIV> entries are the items.  Each has a single attribute 'name' which corresponds to the text content of the <DIV>.
+**Note:** The <DIV> entries are the items. Each has a single attribute 'name' which corresponds to the text content of the <DIV>.
 
 
 ==================
@@ -145,27 +144,26 @@ Item Attributes
 The item attributes are defined by the type of tag set being referenced.
 
 HTML Table:
-  The <thead>  tag of the referenced table.  Each column name becomes the attribute name for that column when generating the data store view of the data.
+  The <thead>  tag of the referenced table. Each column name becomes the attribute name for that column when generating the data store view of the data.
 
 DIV collection:
-  In a DIV collection, the items only contain one attribute/value pair, the text content.  Use the attribute 'name' to acquire it.
+  In a DIV collection, the items only contain one attribute/value pair, the text content. Use the attribute 'name' to acquire it.
 
 List:
-  In a list, the list items have one value, the text content.  Use the attribute Use the attribute 'name' to acquire it.
+  In a list, the list items have one value, the text content. Use the attribute Use the attribute 'name' to acquire it.
 
 ============
 Query Syntax
 ============
 
-The query syntax is identical to `dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`_.   Please refer to it for the format of the queries.
+The query syntax is identical to `dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`_. Please refer to it for the format of the queries.
 
 ========
 Examples
 ========
 
--------------------------------------------------------
-Example 1:  Connecting HtmlStore to dijit.form.ComboBox
--------------------------------------------------------
+Connecting HtmlStore to dijit.form.ComboBox
+-------------------------------------------
 
 .. cv-compound ::
   
@@ -220,9 +218,8 @@ Example 1:  Connecting HtmlStore to dijit.form.ComboBox
     <div dojoType="dijit.form.ComboBox" store="comboStore" searchAttr="isbn"></div>
 
 
--------------------------------------------------------
-Example 2:  Connecting HtmlStore to dojox.grid.DataGrid
--------------------------------------------------------
+Connecting HtmlStore to dojox.grid.DataGrid
+-------------------------------------------
 
 .. cv-compound ::
   
@@ -308,9 +305,8 @@ Example 2:  Connecting HtmlStore to dojox.grid.DataGrid
     </style>
 
 
------------------------------------------------------------------
-Example 3:  Connecting HtmlStore with List to dijit.form.ComboBox
------------------------------------------------------------------
+Connecting HtmlStore with List to dijit.form.ComboBox
+-----------------------------------------------------
 
 .. cv-compound ::
   
@@ -343,9 +339,9 @@ Example 3:  Connecting HtmlStore with List to dijit.form.ComboBox
     <div dojoType="dojox.data.HtmlStore" dataId="myList2" jsId="comboStore2"></div>
     <div dojoType="dijit.form.ComboBox" store="comboStore2" searchAttr="name"></div>
 
----------------------------------------------------------------------------
-Example 4:  Connecting HtmlStore with DIV collection to dijit.form.ComboBox
----------------------------------------------------------------------------
+
+Connecting HtmlStore with DIV collection to dijit.form.ComboBox
+---------------------------------------------------------------
 
 .. cv-compound ::
   
