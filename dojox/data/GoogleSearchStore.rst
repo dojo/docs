@@ -323,6 +323,7 @@ Searching multiple Google services at once and displaying the results in dojox.d
     </script>
 
   .. cv :: html 
+
     <div dojoType="dijit.form.TextBox" width="50" id="searchText"></div>
     <br>
     <div dojoType="dijit.form.Button" id="searchButton">Search!</div>
