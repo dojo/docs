@@ -5,7 +5,7 @@ dojox.rpc.Service
 
 :Status: Contributed, Draft
 :Version: 1.0
-:Author: ?
+:Author: ?--
 :Available: since V?
 
 .. contents::
