@@ -297,3 +297,81 @@ Example Usage
 =============
 
 The following example shows wiring Various GoogleSearchStores to dojox.data.DataGrids.  You can type in a search string in the search box and hit search.  The datagrids will then be populated with the results of the searches.
+
+--------------------------------------------------------------------------------------------
+Searching multiple Google services at once and displaying the results in dojox.data.DataGrid
+---------------------------------------------------------------------------------------------
+
+Connecting HtmlStore to dojox.grid.DataGrid
+-------------------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dijit.form.Button");
+      dojo.require("dijit.form.TextBox");
+      dojo.require("dojox.data.GoogleSearchStore");
+      dojo.require("dojox.grid.DataGrid");
+
+      var layoutResults = [
+        [
+          { field: "title", name: "Title", width: 20 },
+          { field: "url", name: "URL", width: 10 },
+          { field: "content", name: "Author", width: 'auto' }
+        ]
+      ];
+
+    </script>
+
+  .. cv :: html 
+    <div dojoType="dijit.form.TextBox" width="50" id="searchText"></div>
+    <br>
+    <div dojoType="dijit.form.Button" id="searchButton">Search!</div>
+
+    <div dojoType="dojox.data.GoogleWebSearchStore" id="webStore"></div>
+    <div dojoType="dojox.data.GoogleImageSearchStore" id="imageStore"></div>    
+    <div dojoType="dojox.data.GoogleNewsSearchStore" id="newsStore"></div>
+
+    <b>dojox.grid.DataGrid connected to the GoogleWebSearchStore:</b><br> 
+    <div style="width: 400px; height: 200px;">
+      <div id="webGrid" 
+        dojoType="dojox.grid.DataGrid" 
+        store="webStore" 
+        structure="layoutResults" 
+        rowsPerPage="40">
+      </div>
+    </div>
+
+    <b>dojox.grid.DataGrid connected to the GoogleImageSearchStore:</b><br> 
+    <div style="width: 400px; height: 200px;">
+      <div id="imageGrid" 
+        dojoType="dojox.grid.DataGrid" 
+        store="imageStore" 
+        structure="layoutResults" 
+        rowsPerPage="40">
+      </div>
+    </div>
+
+    <b>dojox.grid.DataGrid connected to the GoogleNewsSearchStore:</b><br> 
+    <div style="width: 400px; height: 200px;">
+      <div id="newsGrid" 
+        dojoType="dojox.grid.DataGrid" 
+        store="newsStore" 
+        structure="layoutResults" 
+        rowsPerPage="40">
+      </div>
+    </div>
+
+
+  .. cv:: css
+
+    <style type="text/css">
+      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/resources/Grid.css";
+      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/resources/nihiloGrid.css";
+
+      .dojoxGrid table {
+        margin: 0;
+      }
+    </style>
