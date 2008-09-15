@@ -188,7 +188,7 @@ Example 2:  Connecting key/value store to dojox.grid.DataGrid
 
 
     <b>dojox.grid.DataGrid connected to the KeyValueStore:</b><br> 
-    <div dojoType="dojox.data.KeyValueStore" dataVar="storeData2" jsId="kvStore2"></div>
+    <div dojoType="dojox.data.KeyValueStore" data="storeData2" jsId="kvStore2"></div>
     <div style="width: 400px; height: 200px;">
       <div id="grid" 
         dojoType="dojox.grid.DataGrid" 
@@ -209,4 +209,3 @@ Example 2:  Connecting key/value store to dojox.grid.DataGrid
         margin: 0;
       }
     </style>
-
