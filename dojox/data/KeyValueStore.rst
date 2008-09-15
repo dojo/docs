@@ -209,3 +209,30 @@ Example 2:  Connecting key/value store to dojox.grid.DataGrid
         margin: 0;
       }
     </style>
+
+-------------------------------------------------------------
+Example 3:  Connecting key/value store to dijit.form.ComboBox
+-------------------------------------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojox.data.HtmlStore");
+      dojo.require("dijit.form.ComboBox");
+
+      var storeData2 = [
+        { 'key1' : 'value1' },
+        { 'key2' : 'value2' },
+        { 'key3' : 'value3' },
+        { 'key4' : 'value4' },
+        { 'key5' : 'value5' }
+      ];
+    </script>
+
+  .. cv :: html 
+
+    <b>dijit.form.ComboBox connected to the KeyValueStore:</b><br> 
+    <div dojoType="dojox.data.KeyValueStore" data="storeData3" jsId="kvStore3"></div>
+    <div dojoType="dijit.form.ComboBox" store="kvStore3" searchAttr="key"></div>
