@@ -301,10 +301,6 @@ The following example shows wiring Various GoogleSearchStores to dojox.data.Data
 Searching multiple Google services at once and displaying the results in dojox.data.DataGrid
 ---------------------------------------------------------------------------------------------
 
--------------------------------------------
-Connecting HtmlStore to dojox.grid.DataGrid
--------------------------------------------
-
 .. cv-compound ::
   
   .. cv :: javascript
