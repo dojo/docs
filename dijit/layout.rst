@@ -60,80 +60,52 @@ Conceptually it's a set of containers like this:
 
 There are three types of elements in that picture:
 
-   1. containers that display all their children side by side
-   2. containers that display one child at a time
-   3. leaf nodes containing content
+   1. BorderContainer: displays all it's children at once in top/bottom/left/right/center positions
+   2. StackContainers: containers that display one child at a time
+   3. Leafs: leaf nodes containing content
 
-#1 is either LayoutContainer or SplitContainer. A LayoutContainer is used when all but one of the elements is a constant size. (In this case, the toolbar is a constant size and the the bottom section takes the rest of the screen, so we will use a LayoutContainer for that, and SplitContainers for the other parts.
+The StackContainers in dijit are the AccordionContainer, TabContainer, or StackContainer itself. They all do basically the same thing, but look different.
 
-#2 is AccordionContainer, TabContainer, or StackContainer. They all do basically the same thing, but look different.
-
-#3 is typically ContentPane but could be any widget. An important consideration is whether or not the widget's size is adjustable (like a ContentPane) or not (like a Toolbar). See #1 above.
+The leafs are typically ContentPanes but could be any widget, such as dojox.grid.Grid or dijit.Toolbar. An important consideration is whether or not the widget's size is adjustable (like a ContentPane) or not (like a Toolbar).
 
 So keeping those rules in mind and picking which widgets to use it will look like:
 
-* LayoutContainer
+* BorderContainer
     
-  * Toolbar
-  * Horizontal Split Container
-
-    * Accordion Container
+  * Toolbar (top)
+  * Accordion Container (left)
 
       * ContentPane #1
       * ContentPane #2
       * ContentPane #3
 
-    * Vertical Split Container
-
-      * Content Pane #4
-      * Content Pane #5
+  * Content Pane #4
+  * Content Pane #5
 
 And then from there it's easy to convert to HTML. Starting from the outside:
 
 .. code-block :: html
   :linenos:
 
-  <div dojoType="dijit.layout.LayoutContainer" id="mainDiv">
-    <div dojoType="dijit.Toolbar" layoutAlign="top">...</div>
-    <div dojoType="dijit.layout.SplitContainer" orientation="horizontal" layoutAlign="client">
-    see below
-    </div>
+  <div dojoType="dijit.layout.BorderContainer" id="mainDiv">
+    <div dojoType="dijit.Toolbar" region="top">...</div>
+    <div dojoType="dijit.layout.AccordionContainer" region="left">...    </div>
+    <div dojoType="dijit.layout.ContentPane" region="center">...</div>
+    <div dojoType="dijit.layout.ContentPane" region="bottom">...</div>
   </div>
 
-Note that the layoutAlign arguments on the child nodes are actually processed by the parent, but the other arguments are processed by the child. A bit confusing but that's the way it works.
+Note that the region arguments on the child nodes are actually processed by the parent, but the other arguments are processed by the child. A bit confusing but that's the way it works.
 
-The split container will look like:
+The accordion will look like:
 
 .. code-block :: html
   :linenos:
 
-  <div dojoType="dijit.layout.SplitContainer" orientation="horizontal">
-    (left part)
     <div dojoType="dijit.layout.AccordionContainer">
         <div dojoType="dijit.layout.AccordionPane" title="Mail">...</div>
         <div dojoType="dijit.layout.AccordionPane" title="News">...</div>
         <div dojoType="dijit.layout.AccordionPane" title="Alerts">...</div>
     </div>
-    (right part, see below)
-  </div>
-
-And on the right... since you want to split the screen vertically the SplitContainer would actually contain another SplitContainer:
-
-.. code-block :: html
-  :linenos:
-
-  <div dojoType="dijit.layout.SplitContainer" orientation="horizontal">
-    <div dojoType="dijit.layout.AccordionContainer">
-        <div dojoType="dijit.layout.AccordionPane" title="Mail">...</div>
-        <div dojoType="dijit.layout.AccordionPane" title="News">...</div>
-        <div dojoType="dijit.layout.AccordionPane" title="Alerts">...</div>
-    </div>
-    <div dojoType="dijit.layout.SplitContainer" orientation="vertical">
-            <div dojoType="dijit.layout.ContentPane" title="Table">...</div>
-        <div dojoType="dijit.layout.ContentPane" title="Preview">...</div>
-    </div>
-  </div>
-
 
 Tips
 ----
