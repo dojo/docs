@@ -20,3 +20,5 @@ The GoogleSearchStore is actually a collection of stores designed to work with G
 * **dojox.data.GoogleVideoSearchStore** - A store configured to search specifically against Google's Video search Ajax calls.
 * **dojox.data.GoogleBookSearchStore** - A store configured to search specifically against Google's Book search Ajax calls.
 * **dojox.data.GoogleImageSearchStore** - A store configured to search specifically against Google's Image search Ajax calls.
+
+**Note:**  These stores make use of Google's `AJAX search services. <http://code.google.com/apis/ajaxsearch/>`_.  In order to use them in your web-sites, please make sure to read `Google's terms and conditions <http://code.google.com/apis/ajaxsearch/terms.html>`_ and agree to them before using these stores.
