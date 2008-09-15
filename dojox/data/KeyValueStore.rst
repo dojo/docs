@@ -49,7 +49,7 @@ The constructor for the store can take three different parameters as a way to lo
 Item Attributes
 ===============
 
-Items from the KeyValueStore have two well-defined attribute names 'key' and 'value', as well as the value of store.getValue(item, "key").  See the table below for further details.
+Items from the KeyValueStore have two well-defined attribute names 'key' and 'value', as well as the dynamic value of store.getValue(item, "key").  See the table below for further details.
 
 +------------------------+------------------------------------------------------------------------------+------------------------------+
 |**Attribute**           |**Description**                                                               |**Type**                      |
