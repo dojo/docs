@@ -13,25 +13,12 @@ HTML and Layouts
 Typically HTML has bottom-up sizing, where a container is as big as it's contents, so that given
 
 .. cv-compound::
-
-  ..cv:: css
-    <style>
-       .inner, .outer {
-          border: solid green 1px;
-          padding: 5px;
-       }
-       .outer {
-          border: solid blue 1px;
-          margin: 5px;
-       }
-     </style>
-
   ..cv:: html
-    <div class="outer">
-      <div class="inner">
+    <div style="border: solid blue 1px; margin: 5px; padding: 5px;">
+      <div  style="border: solid green 1px; margin: 5px; padding: 5px;">
         Part 1
       </div>
-      <div class="inner">
+      <div  style="border: solid green 1px; margin: 5px; padding: 5px;">
         Part 2
       </div>
     </div>
