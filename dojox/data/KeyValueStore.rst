@@ -44,3 +44,20 @@ The constructor for the store can take three different parameters as a way to lo
 +---------------+------------------------------------------------------------------------------+------------------------------+
 |dataVar        |A JavaScript Array object of the items.                                       |JavaScript Array              |
 +---------------+------------------------------------------------------------------------------+------------------------------+
+
+===============
+Item Attributes
+===============
+
+Items from the KeyValueStore have two well-defined attribute names 'key' and 'value', as well as the value of store.getValue(item, "key").  See the table below for further details.
+
++------------------------+------------------------------------------------------------------------------+------------------------------+
+|**Attribute**           |**Description**                                                               |**Type**                      |
++------------------------+------------------------------------------------------------------------------+------------------------------+
+|key                     |The value of this attribute is the named key used in the key/value pair.      |String                        |
++------------------------+------------------------------------------------------------------------------+------------------------------+
+|value                   |The value of this attribute is the value assigned to be the key of the        |String                        |
+|                        |key/value pair.                                                               |                              |
++------------------------+------------------------------------------------------------------------------+------------------------------+
+|getValue(item, "key")   |The named key of the key/value pair.                                          |                              |
++------------------------+------------------------------------------------------------------------------+------------------------------+
