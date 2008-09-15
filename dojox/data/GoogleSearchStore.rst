@@ -314,7 +314,6 @@ Searching multiple Google services at once
 
       function hrefFormatter(value) {
         value = unescape(value);
-        console.log(value);
         return "<a href=\"" + value + "\" target=\"_blank\">Link</a>";
       };
 
