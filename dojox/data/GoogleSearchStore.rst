@@ -368,7 +368,7 @@ Searching multiple Google services at once
     <br>
     <br>
     <br>
-    <div dojoType="dijit.layout.TabContainer" style="width: 850px; height: 350px;" id="tabSearch">
+    <div dojoType="dijit.layout.TabContainer" style="width: 800px; height: 350px;" id="tabSearch">
       <div id="tab1" title="GoogleWebSearchStore" dojoType="dijit.layout.ContentPane">
         <b>dojox.grid.DataGrid connected to the GoogleWebSearchStore:</b><br> 
         <div id="webGrid" 
