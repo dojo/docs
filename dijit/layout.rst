@@ -12,19 +12,20 @@ HTML and Layouts
 
 Typically HTML has bottom-up sizing, where a container is as big as it's contents, so that given
 
-.. code-block :: html
-  :linenos:
+.. cv-compound::
 
-  <div id="outer">
-    <div id="inner1">
-      Part 1
-    </div>
-    <div id="inner2">
-      Part 2
-    </div>
-  </div>
+  .. cv:: html
 
-inner1 is big enough to hold the text "Part 1", inner2 is big enough to hold the text "Part 2", and outer is big enough to hold the inner divs. And if outer is bigger than the browser's viewport, the browser window displays a scrollbar. The web page you're reading now uses that layout, and unless your monitor is 3 feet tall (in which case, we envy you!) you see the scrollbar on the right.
+    <div id="outer" style="border: solid blue 1px;">
+      <div id="inner1" style="border: solid green 1px;">
+        Part 1
+      </div>
+      <div id="inner2" style="border: solid green 1px;">
+        Part 2
+      </div>
+    </div>
+
+The two inner (green) divs are each large enough to hold their text ("Part 1" and "Part 2"), and the outer is in turn big enough to hold the two inner divs. And if outer is bigger than the browser's viewport, the browser window displays a scrollbar. The web page you're reading now uses that layout, and unless your monitor is 3 feet tall (in which case, we envy you!) you see the scrollbar on the right.
 
 But for some web pages, you want them to work with the opposite pattern, where you start with a given size, typically the browser viewport, and then partition it into smaller sections. This is the way desktop application look, for example a mail program that has a tree on the left, a list of messages in the upper right, and the message preview on the lower right.
 
