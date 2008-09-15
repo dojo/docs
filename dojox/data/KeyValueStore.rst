@@ -10,7 +10,7 @@ dojox.data.KeyValueStore
 .. contents::
     :depth: 3
 
-This is a dojo.data store implementation. The KeyValueStore is a store that takes content in a format similar to those used by property files, such as Java, and many other languages were there are unique keys mapping to some value for display.  Think of it as an interface for reading property style files in dojo through the dojo.data interface.   
+This is a dojo.data store implementation. The KeyValueStore is a store that takes content in a format similar to those used by property files, such as Java, and many other languages were there are unique keys mapping to some value for display. Think of it as an interface for reading property style files in dojo through the dojo.data interface.
 
 ============
 Input Format
@@ -33,7 +33,7 @@ Each 'item' retrieved from this store from this store is a JS object representin
 Constructor Parameters
 ======================
 
-The constructor for the store can take three different parameters as a way to load the data; a URL to a JSON encoded file, a reference to a JavaScript object in key/value pair format, and a JSON encoded string.   The parameters are documented below:
+The constructor for the store can take three different parameters as a way to load the data; a URL to a JSON encoded file, a reference to a JavaScript object in key/value pair format, and a JSON encoded string. The parameters are documented below:
 
 +---------------+------------------------------------------------------------------------------+------------------------------+
 |**Parameter**  |**Description**                                                               |**Type**                      |
@@ -49,7 +49,7 @@ The constructor for the store can take three different parameters as a way to lo
 Item Attributes
 ===============
 
-Items from the KeyValueStore have two well-defined attribute names 'key' and 'value', as well as the dynamic value of store.getValue(item, "key").  See the table below for further details.
+Items from the KeyValueStore have two well-defined attribute names 'key' and 'value', as well as the dynamic value of store.getValue(item, "key"). See the table below for further details.
 
 +------------------------+------------------------------------------------------------------------------+------------------------------+
 |**Attribute**           |**Description**                                                               |**Type**                      |
@@ -66,9 +66,8 @@ Items from the KeyValueStore have two well-defined attribute names 'key' and 'va
 Examples
 ========
 
----------------------------------------------------------------------------
-Example 1:  List out all the attributes and values of a key/value data set.
----------------------------------------------------------------------------
+List out all the attributes and values of a key/value data set
+--------------------------------------------------------------
 
 .. cv-compound ::
   
@@ -155,9 +154,9 @@ Example 1:  List out all the attributes and values of a key/value data set.
     <span id="list">
     </span>
 
--------------------------------------------------------------
-Example 2:  Connecting key/value store to dojox.grid.DataGrid
--------------------------------------------------------------
+
+Connecting key/value store to dojox.grid.DataGrid
+-------------------------------------------------
 
 .. cv-compound ::
   
@@ -210,9 +209,9 @@ Example 2:  Connecting key/value store to dojox.grid.DataGrid
       }
     </style>
 
--------------------------------------------------------------
-Example 3:  Connecting key/value store to dijit.form.ComboBox
--------------------------------------------------------------
+
+Connecting key/value store to dijit.form.ComboBox
+-------------------------------------------------
 
 .. cv-compound ::
   
