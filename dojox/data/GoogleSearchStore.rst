@@ -324,7 +324,7 @@ Searching multiple Google services at once
 
   .. cv :: html 
 
-    <div dojoType="dijit.form.TextBox" width="50" id="searchText"></div>
+    <div dojoType="dijit.form.TextBox" width="50" id="searchText" value="Dojo"></div>
     <br>
     <div dojoType="dijit.form.Button" id="searchButton">Search!</div>
 
@@ -337,7 +337,8 @@ Searching multiple Google services at once
       <div id="webGrid" 
         dojoType="dojox.grid.DataGrid" 
         store="webStore" 
-        structure="layoutResults" 
+        structure="layoutResults"
+        query="{text:'Dojo'}" 
         rowsPerPage="40">
       </div>
     </div>
@@ -348,6 +349,7 @@ Searching multiple Google services at once
         dojoType="dojox.grid.DataGrid" 
         store="imageStore" 
         structure="layoutResults" 
+        query="{text:'Dojo'}" 
         rowsPerPage="40">
       </div>
     </div>
@@ -358,6 +360,7 @@ Searching multiple Google services at once
         dojoType="dojox.grid.DataGrid" 
         store="newsStore" 
         structure="layoutResults" 
+        query="{text:'Dojo'}" 
         rowsPerPage="40">
       </div>
     </div>
