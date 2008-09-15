@@ -337,7 +337,7 @@ Searching multiple Google services at once
               dijit.byId("imageGrid").setQuery(query); 
             }
          }
-         dojo.connect(dojit.byId("searchButton"), "onClick", search);
+         dojo.connect(dijit.byId("searchButton"), "onClick", search);
       }
       dojo.addOnLoad(init);
     </script>
