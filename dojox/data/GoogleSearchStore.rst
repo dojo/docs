@@ -315,7 +315,7 @@ Searching multiple Google services at once
       var layoutResults = [
         [
           { field: "title", name: "Title", width: 20 },
-          { field: "url", name: "URL", width: 10, formatter: function(value) { return "<a href=\"" + value + "\">Link</a>"; } },
+          { field: "url", name: "URL", width: 10, formatter: function(value) { return "<a href=\"" + value + "\" target=\"_blank\">Link</a>"; } },
           { field: "content", name: "Author", width: 'auto' }
         ]
       ];
