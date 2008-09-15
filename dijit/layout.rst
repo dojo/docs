@@ -14,29 +14,7 @@ Typically HTML has bottom-up sizing, where a container is as big as it's content
 
 .. cv-compound::
 
-
----- /!\ '''Edit conflict - other version:''' ----
-  .. cv:: html
-
-    <style>
-       .inner, .outer {
-          border: solid green 1px;
-          padding: 5px;
-       }
-       .outer {
-          border: solid blue 1px;
-          margin: 5px;
-       }
-     </style>
-    <div class="outer">
-      <div class="inner">
-        Part 1
-      </div>
-      <div class="inner">
-
----- /!\ '''Edit conflict - your version:''' ----
-  .. cv:: css
-
+  ..cv:: css
     <style>
        .inner, .outer {
           border: solid green 1px;
@@ -54,8 +32,6 @@ Typically HTML has bottom-up sizing, where a container is as big as it's content
         Part 1
       </div>
       <div class="inner">
-
----- /!\ '''End of edit conflict''' ----
         Part 2
       </div>
     </div>
