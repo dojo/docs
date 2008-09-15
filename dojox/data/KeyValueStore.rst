@@ -154,3 +154,59 @@ Example 1:  List out all the attributes and values of a key/value data set.
     <br>
     <span id="list">
     </span>
+
+-------------------------------------------------------------
+Example 2:  Connecting key/value store to dojox.grid.DataGrid
+-------------------------------------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojox.data.HtmlStore");
+      dojo.require("dojox.grid.DataGrid");
+
+      var storeData2 = [
+        { 'key1' : 'value1' },
+        { 'key2' : 'value2' },
+        { 'key3' : 'value3' },
+        { 'key4' : 'value4' },
+        { 'key5' : 'value5' }
+      ];
+
+      var layoutKeyValue = [
+        [
+          { field: "key", name: "KEY", width: 10 },
+          { field: "value", name: "VALUE", width: 'auto' }
+        ]
+      ];
+
+    </script>
+
+  .. cv :: html 
+
+
+    <b>dojox.grid.DataGrid connected to the KeyValueStore:</b><br> 
+    <div dojoType="dojox.data.KeyValueStore" dataVar="storeData2" jsId="kvStore2"></div>
+    <div style="width: 400px; height: 200px;">
+      <div id="grid" 
+        dojoType="dojox.grid.DataGrid" 
+        store="kvStore2" 
+        structure="layoutKeyValue" 
+        query="{}"
+        rowsPerPage="40">
+      </div>
+    </div>
+
+  .. cv:: css
+
+    <style type="text/css">
+      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/resources/Grid.css";
+      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/resources/nihiloGrid.css";
+
+      .dojoxGrid table {
+        margin: 0;
+      }
+    </style>
+
