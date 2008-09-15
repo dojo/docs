@@ -273,3 +273,19 @@ dojox.data.GoogleImageSearchStore
 +-------------------+---------------------------------------------------------------------------------------------------------------------+
 |contentNoFormatting|A snippet of information about the image, in plain text.                                                             |
 +-------------------+---------------------------------------------------------------------------------------------------------------------+
+
+============
+Query Syntax
+============
+
+The query syntax for all stores is simple.  It takes a single object with the attribute 'text', where the value is what text to search for.
+
+-------------
+Query Example
+-------------
+
+.. code-block :: javascript 
+ 
+  {
+    "text" : "Find me"
+  }
