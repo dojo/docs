@@ -325,6 +325,21 @@ Searching multiple Google services at once
         ]
       ];
 
+      function init() {
+         //Link button to search, where search text is drawn from the input box.
+         function search() {
+            var text = dijit.byId("searchText").getValue();
+            text = dojo.trim(text);
+            if (text !== "" ) {
+              var query = { text: text };
+              dijit.byId("webGrid").setQuery(query);           
+              dijit.byId("newsGrid").setQuery(query);
+              dijit.byId("imageGrid").setQuery(query); 
+            }
+         }
+         dojo.connect(dojit.byId("searchButton"), "onClick", search);
+      }
+      dojo.addOnLoad(init);
     </script>
 
   .. cv :: html 
