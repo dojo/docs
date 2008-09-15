@@ -269,8 +269,15 @@ These sections cover the available projects shipped with the Dojo Toolkit
 * `dojox.resources <dojox/resources>`_
 * `dojox.robot <dojox/robot>`_
 * `dojox.rpc <dojox/rpc>`_
-  
+
   * `dojox.rpc.SMDLibrary <dojox/rpc/SMDLibrary>`_
+  * `dojox.rpc.Client <dojox/rpc/Client>`_
+  * `dojox.rpc.JsonRest <dojox/rpc/JsonRest>`_
+  * `dojox.rpc.JsonRPC <dojox/rpc/JsonRPC>`_
+  * `dojox.rpc.LocalStorageRest <dojox/rpc/LocalStorageRest>`_
+  * `dojox.rpc.OfflineRest <dojox/rpc/OfflineRest>`_
+  * `dojox.rpc.ProxiedPath <dojox/rpc/ProxiedPath>`_
+  * `dojox.rpc.Rest <dojox/rpc/Rest>`_
   * `dojox.rpc.Service <dojox/rpc/Service>`_
 
 * `dojox.secure <dojox/secure>`_
