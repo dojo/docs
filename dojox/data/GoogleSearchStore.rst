@@ -360,20 +360,20 @@ Searching multiple Google services at once
     <br>
     <br>
     <div dojoType="dijit.layout.TabContainer" style="width: 850px; height: 350px;">
-
-
+      <div id="tab1" title="dojox.data.GoogleWebSearchStore" dojoType="dijit.layout.ContentPane">
+        <b>dojox.grid.DataGrid connected to the GoogleWebSearchStore:</b><br> 
+        <div style="width: 800px; height: 300px;">
+          <div id="webGrid" 
+            dojoType="dojox.grid.DataGrid" 
+            store="webStore" 
+            structure="layoutResults"
+            query="{text:'Dojo'}" 
+            rowsPerPage="40">
+          </div>
+        </div>
+      </div>
     </div> 
 
-    <b>dojox.grid.DataGrid connected to the GoogleWebSearchStore:</b><br> 
-    <div style="width: 800px; height: 300px;">
-      <div id="webGrid" 
-        dojoType="dojox.grid.DataGrid" 
-        store="webStore" 
-        structure="layoutResults"
-        query="{text:'Dojo'}" 
-        rowsPerPage="40">
-      </div>
-    </div>
     <br>
     <br>
     <br>
