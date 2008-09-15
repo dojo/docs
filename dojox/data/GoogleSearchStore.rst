@@ -22,3 +22,26 @@ The GoogleSearchStore is actually a collection of stores designed to work with G
 * **dojox.data.GoogleImageSearchStore** - A store configured to search specifically against Google's Image search Ajax calls.
 
 **Note:**  These stores make use of Google's `AJAX search services. <http://code.google.com/apis/ajaxsearch/>`_.  In order to use them in your web-sites, please make sure to read `Google's terms and conditions <http://code.google.com/apis/ajaxsearch/terms.html>`_ and agree to them before using these stores.
+
+===========
+API Support
+===========
+
+* `dojo.data.api.Read <dojo/data/api/Read>`_
+
+==================
+Constructor Params
+==================
+
+The following parameters are supported by all Google store implementations.
+
++-------------+------------------------------------------------------------------------------------------+----------------------+
+| **name**    | **description**                                                                          | **type**             |
++-------------+------------------------------------------------------------------------------------------+----------------------+
+|label        |The attribute of the search returns to use as the item's label.  Defaults to              |string                | 
+|             |titleNoFormatting.                                                                        |                      |
++-------------+------------------------------------------------------------------------------------------+----------------------+
+|key          |Your Google API key (optional)                                                            | string               |
++-------------+------------------------------------------------------------------------------------------+----------------------+
+|lang         |The language locale to use. Defaults to the browser locale.                               | string               |
++-------------+------------------------------------------------------------------------------------------+----------------------+
