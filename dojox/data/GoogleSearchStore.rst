@@ -45,3 +45,29 @@ The following parameters are supported by all Google store implementations.
 +-------------+------------------------------------------------------------------------------------------+----------------------+
 |lang         |The language locale to use. Defaults to the browser locale.                               | string               |
 +-------------+------------------------------------------------------------------------------------------+----------------------+
+
+===============
+Item Attributes
+===============
+
+Depending on which of the search stores you instantiate, the supported list of item attributes changes.  This is because each search service exposes different information, since each type of search by its nature deems specific information the key information to return.  Below you will find a list of expected attribute names for each search service and what they are:
+
+----------------------------
+dojox.data.GoogleSearchStore
+----------------------------
+
++-----------------+-----------------------------------------------------------------------------------------------------------------------------+
+|url              |The URL for the item returned by the search                                                                                  |
++-----------------+-----------------------------------------------------------------------------------------------------------------------------+
+|unescapedUrl     |The URL for the item, without URL escaping. This is often more readable.                                                     |
++-----------------+-----------------------------------------------------------------------------------------------------------------------------+
+|visibleUrl       |The URL with no protocol specified.                                                                                          |
++-----------------+-----------------------------------------------------------------------------------------------------------------------------+
+|cacheUrl         |The URL to the copy of the document cached by Google                                                                         |
++-----------------+-----------------------------------------------------------------------------------------------------------------------------+
+|title            |The page title in HTML format.                                                                                               |
++-----------------+-----------------------------------------------------------------------------------------------------------------------------+
+|titleNoFormatting|The page title in plain text                                                                                                 |
++-----------------+-----------------------------------------------------------------------------------------------------------------------------+
+|content          |A snippet of information about the page.                                                                                     |
++-----------------+-----------------------------------------------------------------------------------------------------------------------------+
