@@ -315,7 +315,7 @@ Searching multiple Google services at once
       var layoutResults = [
         [
           { field: "title", name: "Title", width: 20 },
-          { field: "url", name: "URL", width: 10 },
+          { field: "url", name: "URL", width: 10, formatter: function(value) { return "<a href=\"" + value + "\">Link</a>"; } },
           { field: "content", name: "Author", width: 'auto' }
         ]
       ];
@@ -324,7 +324,9 @@ Searching multiple Google services at once
 
   .. cv :: html 
 
-    <b>Input seatch text:</b><br>
+    <b>Input search text:</b>
+    <br>
+    <br>
     <div dojoType="dijit.form.TextBox" width="50" id="searchText" value="Dojo"></div>
     <br>
     <div dojoType="dijit.form.Button" id="searchButton">Search!</div>
