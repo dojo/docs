@@ -69,3 +69,89 @@ Examples
 ---------------------------------------------------------------------------
 Example 1:  List out all the attributes and values of a key/value data set.
 ---------------------------------------------------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojox.data.KeyValueStore");
+      dojo.require("dijit.form.Button");
+
+      var storeData = { identifier: 'name', 
+        [
+          { 'key1' : 'value1' },
+          { 'key2' : 'value2' },
+          { 'key3' : 'value3' },
+          { 'key4' : 'value4' },
+          { 'key5' : 'value5' }
+        ];
+
+        //This function performs some basic dojo initialization. In this case it connects the button
+        //onClick to a function which invokes the fetch(). The fetch function queries for all items 
+        //and provides callbacks to use for completion of data retrieval or reporting of errors.
+        function init () {
+           //Function to perform a fetch on the datastore when a button is clicked
+           function getAllItems () {
+
+             //Callback to perform an action when the data items are starting to be returned:
+             function clearList(size, request) {
+               var list = dojo.byId("list");
+               if (list) { 
+                 while (list.firstChild) {
+                   list.removeChild(list.firstChild);
+                 }
+               }
+             }
+
+             //Callback for processing a returned list of items.
+             function gotItems(items, request) {
+               var list = dojo.byId("list");
+               if (list) { 
+                 var i;
+                 for (i = 0; i < items.length; i++) {
+                   var item = items[i];
+                   var field = document.createElement("b");
+                   field.appendChild(document.createTextNode("Key: "));
+                   list.appendChild(field);
+                   list.appendChild(document.createTextNode(kvStore.getValue(item, "key")));
+                   list.appendChild(document.createTextNode("  "));
+                   field = document.createElement("b");
+                   field.appendChild(document.createTextNode("Value: "));
+                   list.appendChild(field);
+                   list.appendChild(document.createTextNode(kvStore.getValue(item, "value")));
+                   list.appendChild(document.createTextNode("  "));
+                   field = document.createElement("b");
+                   field.appendChild(document.createTextNode("Value by named key: "));
+                   list.appendChild(field);
+                   list.appendChild(document.createTextNode(kvStore.getValue(item, kvStore.getValue(item, "key"))));
+                   list.appendChild(document.createElement("br"));
+                 }
+               }
+             }
+
+             //Callback for if the lookup fails.
+             function fetchFailed(error, request) {
+                alert("lookup failed.");
+             }
+             
+             //Fetch the data in a sorted order. 
+             kvStore.fetch({onBegin: clearList, onComplete: gotItems, onError: fetchFailed});
+           }
+           //Link the click event of the button to driving the fetch.
+           dojo.connect(button, "onClick", getAllItems);
+        }
+        //Set the init function to run when dojo loading and page parsing has completed.
+        dojo.addOnLoad(init);
+    </script>
+
+  .. cv :: html 
+
+    <div dojoType="dojox.data.KeyValueStore" data="storeData" jsId="kvStore"></div>
+    <div dojoType="dijit.form.Button" jsId="button">Show me the key/value info!</div>
+    <br>
+    <br>
+    <b>List of item information:</b>
+    <br>
+    <span id="list">
+    </span>
