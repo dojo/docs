@@ -360,7 +360,7 @@ Searching multiple Google services at once
     <br>
     <br>
     <div dojoType="dijit.layout.TabContainer" style="width: 850px; height: 350px;">
-      <div id="tab1" title="dojox.data.GoogleWebSearchStore" dojoType="dijit.layout.ContentPane">
+      <div id="tab1" title="GoogleWebSearchStore" dojoType="dijit.layout.ContentPane">
         <b>dojox.grid.DataGrid connected to the GoogleWebSearchStore:</b><br> 
         <div style="width: 800px; height: 300px;">
           <div id="webGrid" 
@@ -372,32 +372,30 @@ Searching multiple Google services at once
           </div>
         </div>
       </div>
-    </div> 
-
-    <br>
-    <br>
-    <br>
-    <b>dojox.grid.DataGrid connected to the GoogleImageSearchStore:</b><br> 
-    <div style="width: 800px; height: 300px;">
-      <div id="imageGrid" 
-        dojoType="dojox.grid.DataGrid" 
-        store="imageStore" 
-        structure="layoutResults" 
-        query="{text:'Dojo'}" 
-        rowsPerPage="40">
+      <div id="tab2" title="GoogleImageSearchStore" dojoType="dijit.layout.ContentPane">
+        <b>dojox.grid.DataGrid connected to the GoogleImageSearchStore:</b><br> 
+        <div style="width: 800px; height: 300px;">
+          <div id="imageGrid" 
+            dojoType="dojox.grid.DataGrid" 
+            store="imageStore" 
+            structure="layoutResults" 
+            query="{text:'Dojo'}"   
+            rowsPerPage="40">
+          </div>
+        </div> 
       </div>
-    </div>
-    <br>
-    <br>
-    <br>
-    <b>dojox.grid.DataGrid connected to the GoogleNewsSearchStore:</b><br> 
-    <div style="width: 800px; height: 300px;">
-      <div id="newsGrid" 
-        dojoType="dojox.grid.DataGrid" 
-        store="newsStore" 
-        structure="layoutResults" 
-        query="{text:'Dojo'}" 
-        rowsPerPage="40">
+
+      <div id="tab3" title="GoogleNewsSearchStore" dojoType="dijit.layout.ContentPane">
+        <b>dojox.grid.DataGrid connected to the GoogleNewsSearchStore:</b><br> 
+        <div style="width: 800px; height: 300px;">
+          <div id="newsGrid" 
+            dojoType="dojox.grid.DataGrid" 
+            store="newsStore" 
+            structure="layoutResults" 
+            query="{text:'Dojo'}" 
+            rowsPerPage="40">
+          </div>
+        </div>
       </div>
     </div>
 
