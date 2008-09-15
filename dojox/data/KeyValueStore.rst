@@ -78,8 +78,7 @@ Example 1:  List out all the attributes and values of a key/value data set.
       dojo.require("dojox.data.KeyValueStore");
       dojo.require("dijit.form.Button");
 
-      var storeData = { identifier: 'name', 
-        [
+      var storeData = [
           { 'key1' : 'value1' },
           { 'key2' : 'value2' },
           { 'key3' : 'value3' },
