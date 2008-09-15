@@ -370,7 +370,6 @@ Searching multiple Google services at once
     <br>
     <div dojoType="dijit.layout.TabContainer" style="width: 800px; height: 350px;" id="tabSearch">
       <div id="tab1" title="GoogleWebSearchStore" dojoType="dijit.layout.ContentPane">
-        <b>dojox.grid.DataGrid connected to the GoogleWebSearchStore:</b><br> 
         <div id="webGrid" 
           style="width: 750px; height: 300px;"
           dojoType="dojox.grid.DataGrid" 
@@ -381,7 +380,6 @@ Searching multiple Google services at once
         </div>
       </div>
       <div id="tab2" title="GoogleImageSearchStore" dojoType="dijit.layout.ContentPane">
-        <b>dojox.grid.DataGrid connected to the GoogleImageSearchStore:</b><br> 
         <div style="width: 750px; height: 300px;">
           <div id="imageGrid" 
             dojoType="dojox.grid.DataGrid" 
@@ -393,7 +391,6 @@ Searching multiple Google services at once
         </div> 
       </div>
       <div id="tab3" title="GoogleNewsSearchStore" dojoType="dijit.layout.ContentPane">
-        <b>dojox.grid.DataGrid connected to the GoogleNewsSearchStore:</b><br> 
         <div id="newsGrid" 
           style="width: 750px; height: 300px;"
           dojoType="dojox.grid.DataGrid" 
