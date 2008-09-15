@@ -309,6 +309,8 @@ Searching multiple Google services at once
     <script>
       dojo.require("dijit.form.Button");
       dojo.require("dijit.form.TextBox");
+      dojo.require("dijit.layout.TabContainer");
+      dojo.require("dijit.layout.ContentPane");
       dojo.require("dojox.data.GoogleSearchStore");
       dojo.require("dojox.grid.DataGrid");
 
@@ -357,6 +359,11 @@ Searching multiple Google services at once
     <br>
     <br>
     <br>
+    <div dojoType="dijit.layout.TabContainer" style="width: 850px; height: 350px;">
+
+
+    </div> 
+
     <b>dojox.grid.DataGrid connected to the GoogleWebSearchStore:</b><br> 
     <div style="width: 800px; height: 300px;">
       <div id="webGrid" 
