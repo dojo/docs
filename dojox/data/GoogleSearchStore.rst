@@ -313,6 +313,7 @@ Searching multiple Google services at once
       dojo.require("dojox.grid.DataGrid");
 
       function hrefFormatter(value) {
+        value = unescape(value);
         console.log(value);
         return "<a href=\"" + value + "\" target=\"_blank\">Link</a>";
       };
