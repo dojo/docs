@@ -36,7 +36,7 @@ Constructor Parameters
 The constructor for the store can take three different parameters as a way to load the data; a URL to a JSON encoded file, a reference to a JavaScript object in key/value pair format, and a JSON encoded string.   The parameters are documented below:
 
 +---------------+------------------------------------------------------------------------------+------------------------------+
-|**Parameter**  |**Description                                                                 |**Type**                      |
+|**Parameter**  |**Description**                                                               |**Type**                      |
 +---------------+------------------------------------------------------------------------------+------------------------------+
 |url            |The URL from which to xhrGet load a JSON encoded file of the data.            |String                        |
 +---------------+------------------------------------------------------------------------------+------------------------------+
