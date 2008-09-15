@@ -16,11 +16,21 @@ Typically HTML has bottom-up sizing, where a container is as big as it's content
 
   .. cv:: html
 
-    <div id="outer" style="border: solid blue 1px;">
-      <div id="inner1" style="border: solid green 1px;">
+    <style>
+       .inner, .outer {
+          border: solid green 1px;
+          padding: 5px;
+       }
+       .outer {
+          border: solid blue 1px;
+          margin: 5px;
+       }
+     </style>
+    <div class="outer">
+      <div class="inner">
         Part 1
       </div>
-      <div id="inner2" style="border: solid green 1px;">
+      <div class="inner">
         Part 2
       </div>
     </div>
