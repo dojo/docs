@@ -48,10 +48,11 @@ Dijit has a number of layout widgets which can be combined in a hierarchy to ach
 
 How does this work in practice? You need to think about the application above in a top-down (or outside-in) way:
 
-   1. the screen is split into two parts. The top is a toolbar and
-   2. the bottom is split into a left section and right section
+   1. the screen is split into multiple sections (top, bottom, left, right, and center)
+   2. The top is a toolbar
    3. the left section has three panes one of which is shown at a time
-   4. the right section is split into two parts, a list of messages and a preview pane.
+   4. the center section has a list of messages
+   5. the bottom is a preview pane.
 
 Conceptually it's a set of containers like this:
 
