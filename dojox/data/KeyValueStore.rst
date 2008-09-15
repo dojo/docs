@@ -121,7 +121,7 @@ Example 1:  List out all the attributes and values of a key/value data set.
                    list.appendChild(document.createTextNode(kvStore.getValue(item, "value")));
                    list.appendChild(document.createTextNode("  "));
                    field = document.createElement("b");
-                   field.appendChild(document.createTextNode("Value by named key: "));
+                   field.appendChild(document.createTextNode("Value by named key (" + kvStore.getValue(item, "key") + "): "));
                    list.appendChild(field);
                    list.appendChild(document.createTextNode(kvStore.getValue(item, kvStore.getValue(item, "key"))));
                    list.appendChild(document.createElement("br"));
