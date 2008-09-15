@@ -53,7 +53,7 @@ Examples
 GET
 ---
 
-This will do a GET for the URL "/Project/4":
+This will do a HTTP GET for the URL "/Project/4":
 
 .. code-block :: javascript
   :linenos:
@@ -65,13 +65,35 @@ This will do a GET for the URL "/Project/4":
 PUT
 ---
 
-This will do a PUT to the URL "/Project/4" with the content of "new content":
+This will do a HTTP PUT to the URL "/Project/4" with the content of "new content":
 
 .. code-block :: javascript
   :linenos:
 
     var restService = dojox.rpc.Rest("Project");
     restService.put("4","new content");
+
+POST
+----
+
+This will do a HTTP POST to the URL "/Project/4" with the content of "new content":
+
+.. code-block :: javascript
+  :linenos:
+
+    var restService = dojox.rpc.Rest("Project");
+    restService.post("4","new content");
+
+DELETE
+------
+
+This will do a HTTP DELETE to the URL "/Project" with the content of "{item: "4"}":
+
+.. code-block :: javascript
+  :linenos:
+
+    var restService = dojox.rpc.Rest("Project");
+    restService['delete']({item: "4"});
 
 
 Using the SMD service
