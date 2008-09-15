@@ -329,6 +329,14 @@ Searching multiple Google services at once
 
       function init() {
          //Link button to search, where search text is drawn from the input box.
+ 
+         function renderGrids() {
+           dijit.byId("webGrid").render();
+           dijit.byId("newsGrid").render();
+           dijit.byId("imageGrid").render();
+         }
+         dojo.connect(dijit.byId("tabSearch"), "selectChild", renderGrids);
+
          function search() {
             var text = dijit.byId("searchText").getValue();
             text = dojo.trim(text);
@@ -359,7 +367,7 @@ Searching multiple Google services at once
     <br>
     <br>
     <br>
-    <div dojoType="dijit.layout.TabContainer" style="width: 850px; height: 350px;">
+    <div dojoType="dijit.layout.TabContainer" style="width: 850px; height: 350px;" id="tabSearch">
       <div id="tab1" title="GoogleWebSearchStore" dojoType="dijit.layout.ContentPane">
         <b>dojox.grid.DataGrid connected to the GoogleWebSearchStore:</b><br> 
         <div id="webGrid" 
