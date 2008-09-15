@@ -3,6 +3,14 @@
 dojox.rpc.Service
 =================
 
+:Status: Contributed, Draft
+:Version: 1.0
+:Author: ?
+:Available: since V?
+
+.. contents::
+    :depth: 2
+
 Service is the foundation of most `RPC <dojox/rpc>`_ transportation. To use a Service, you need an SMD. Defining the SMD is a separate discussion, so for now we'll reuse some pre-defined SMD's available in the RPC project's `SMDLibrary/ <dojox/rpc/SMDLibrary>`_ folder.
 
 First, you need the code:
@@ -14,8 +22,9 @@ First, you need the code:
 
 We only need `dojo.io.script <dojo/io/script>`_ if our service is cross-domain, which the provided SMDLibrary SMD's are. If you define your own SMD with a local target endpoint, you can omit the require().
 
+==================
 Starting a Service 
-------------------
+==================
 
 Service is a constructor, returning a pointer to the API defined in the SMD. 
 
@@ -58,8 +67,9 @@ Simply provide a ``frameDoc`` attribute and passed as an optional parameter to t
 
 An iframe will be created if one cannot be found.
 
+===============
 Using a Service 
----------------
+===============
 
 Service, like io.script, works around Dojo's built in `Deferred <dojo/Deferred>`_ system, providing asynchronous communication around a familiar API. Once we've created our Service from an SMD, the methods defined in the SMD are available through the return handle provided. 
 
