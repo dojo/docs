@@ -298,10 +298,10 @@ Example Usage
 
 The following example shows wiring Various GoogleSearchStores to dojox.data.DataGrids.  You can type in a search string in the search box and hit search.  The datagrids will then be populated with the results of the searches.
 
---------------------------------------------------------------------------------------------
 Searching multiple Google services at once and displaying the results in dojox.data.DataGrid
 ---------------------------------------------------------------------------------------------
 
+-------------------------------------------
 Connecting HtmlStore to dojox.grid.DataGrid
 -------------------------------------------
 
