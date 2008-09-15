@@ -53,7 +53,7 @@ Examples
 GET
 ---
 
-A normal GET query is done by using the service directly:
+This will do a GET for the URL "/Project/4":
 
 .. code-block :: javascript
   :linenos:
@@ -61,8 +61,6 @@ A normal GET query is done by using the service directly:
     var restService = dojox.rpc.Rest("Project");
     restService("4");
 
-
-This will do a GET for the URL "/Project/4".
 
 PUT
 ---
@@ -72,6 +70,7 @@ This will do a PUT to the URL "/Project/4" with the content of "new content":
 .. code-block :: javascript
   :linenos:
 
+    var restService = dojox.rpc.Rest("Project");
     restService.put("4","new content");
 
 
