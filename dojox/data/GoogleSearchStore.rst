@@ -328,9 +328,9 @@ Searching multiple Google services at once
     <br>
     <div dojoType="dijit.form.Button" id="searchButton">Search!</div>
 
-    <div dojoType="dojox.data.GoogleWebSearchStore" id="webStore"></div>
-    <div dojoType="dojox.data.GoogleImageSearchStore" id="imageStore"></div>    
-    <div dojoType="dojox.data.GoogleNewsSearchStore" id="newsStore"></div>
+    <div dojoType="dojox.data.GoogleWebSearchStore" jsId="webStore"></div>
+    <div dojoType="dojox.data.GoogleImageSearchStore" jsId="imageStore"></div>    
+    <div dojoType="dojox.data.GoogleNewsSearchStore" jsId="newsStore"></div>
 
     <b>dojox.grid.DataGrid connected to the GoogleWebSearchStore:</b><br> 
     <div style="width: 400px; height: 200px;">
