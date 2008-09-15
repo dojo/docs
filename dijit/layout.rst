@@ -13,7 +13,14 @@ HTML and Layouts
 Typically HTML has bottom-up sizing, where a container is as big as it's contents, so that given
 
 .. cv-compound::
-  ..cv:: html
+
+  .. cv:: javascript
+  
+     <style>
+     </style>
+
+  .. cv:: html
+
     <div style="border: solid blue 1px; margin: 5px; padding: 5px;">
       <div  style="border: solid green 1px; margin: 5px; padding: 5px;">
         Part 1
