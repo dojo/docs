@@ -323,19 +323,20 @@ Searching multiple Google services at once
         [
           { field: "title", name: "Title", width: 20 },
           { field: "url", name: "URL", width: 5, formatter: hrefFormatter},
-          { field: "content", name: "Author", width: 'auto' }
+          { field: "content", name: "Content", width: 'auto' }
         ]
       ];
 
       function init() {
          //Link button to search, where search text is drawn from the input box.
  
-         function renderGrids() {
-           dijit.byId("webGrid").render();
-           dijit.byId("newsGrid").render();
-           dijit.byId("imageGrid").render();
+         //Had to resize the grids on selection of tabs, otherwise they wouldn't always display.
+         function resizeGrids() {
+           dijit.byId("webGrid").resize();
+           dijit.byId("newsGrid").resize();
+           dijit.byId("imageGrid").resize();
          }
-         dojo.connect(dijit.byId("tabSearch"), "selectChild", renderGrids);
+         dojo.connect(dijit.byId("tabSearch"), "selectChild", resizeGrids);
 
          function search() {
             var text = dijit.byId("searchText").getValue();
