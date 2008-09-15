@@ -362,19 +362,18 @@ Searching multiple Google services at once
     <div dojoType="dijit.layout.TabContainer" style="width: 850px; height: 350px;">
       <div id="tab1" title="GoogleWebSearchStore" dojoType="dijit.layout.ContentPane">
         <b>dojox.grid.DataGrid connected to the GoogleWebSearchStore:</b><br> 
-        <div style="width: 800px; height: 300px;">
-          <div id="webGrid" 
-            dojoType="dojox.grid.DataGrid" 
-            store="webStore" 
-            structure="layoutResults"
-            query="{text:'Dojo'}" 
-            rowsPerPage="40">
-          </div>
+        <div id="webGrid" 
+          style="width: 750px; height: 300px;"
+          dojoType="dojox.grid.DataGrid" 
+          store="webStore" 
+          structure="layoutResults"
+          query="{text:'Dojo'}" 
+          rowsPerPage="40">
         </div>
       </div>
       <div id="tab2" title="GoogleImageSearchStore" dojoType="dijit.layout.ContentPane">
         <b>dojox.grid.DataGrid connected to the GoogleImageSearchStore:</b><br> 
-        <div style="width: 800px; height: 300px;">
+        <div style="width: 750px; height: 300px;">
           <div id="imageGrid" 
             dojoType="dojox.grid.DataGrid" 
             store="imageStore" 
@@ -384,17 +383,15 @@ Searching multiple Google services at once
           </div>
         </div> 
       </div>
-
       <div id="tab3" title="GoogleNewsSearchStore" dojoType="dijit.layout.ContentPane">
         <b>dojox.grid.DataGrid connected to the GoogleNewsSearchStore:</b><br> 
-        <div style="width: 800px; height: 300px;">
-          <div id="newsGrid" 
-            dojoType="dojox.grid.DataGrid" 
-            store="newsStore" 
-            structure="layoutResults" 
-            query="{text:'Dojo'}" 
-            rowsPerPage="40">
-          </div>
+        <div id="newsGrid" 
+          style="width: 750px; height: 300px;"
+          dojoType="dojox.grid.DataGrid" 
+          store="newsStore" 
+          structure="layoutResults" 
+          query="{text:'Dojo'}" 
+          rowsPerPage="40">
         </div>
       </div>
     </div>
