@@ -222,7 +222,7 @@ Example 3:  Connecting key/value store to dijit.form.ComboBox
       dojo.require("dojox.data.HtmlStore");
       dojo.require("dijit.form.ComboBox");
 
-      var storeData2 = [
+      var storeData3 = [
         { 'key1' : 'value1' },
         { 'key2' : 'value2' },
         { 'key3' : 'value3' },
