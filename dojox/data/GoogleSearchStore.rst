@@ -331,7 +331,9 @@ Searching multiple Google services at once
     <div dojoType="dojox.data.GoogleWebSearchStore" jsId="webStore"></div>
     <div dojoType="dojox.data.GoogleImageSearchStore" jsId="imageStore"></div>    
     <div dojoType="dojox.data.GoogleNewsSearchStore" jsId="newsStore"></div>
-
+    <br>
+    <br>
+    <br>
     <b>dojox.grid.DataGrid connected to the GoogleWebSearchStore:</b><br> 
     <div style="width: 800px; height: 300px;">
       <div id="webGrid" 
@@ -342,7 +344,9 @@ Searching multiple Google services at once
         rowsPerPage="40">
       </div>
     </div>
-
+    <br>
+    <br>
+    <br>
     <b>dojox.grid.DataGrid connected to the GoogleImageSearchStore:</b><br> 
     <div style="width: 800px; height: 300px;">
       <div id="imageGrid" 
@@ -353,7 +357,9 @@ Searching multiple Google services at once
         rowsPerPage="40">
       </div>
     </div>
-
+    <br>
+    <br>
+    <br>
     <b>dojox.grid.DataGrid connected to the GoogleNewsSearchStore:</b><br> 
     <div style="width: 800px; height: 300px;">
       <div id="newsGrid" 
@@ -364,7 +370,6 @@ Searching multiple Google services at once
         rowsPerPage="40">
       </div>
     </div>
-
 
   .. cv:: css
 
