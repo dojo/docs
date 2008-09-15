@@ -361,11 +361,9 @@ Searching multiple Google services at once
     <div dojoType="dijit.form.TextBox" width="50" id="searchText" value="Dojo"></div>
     <br>
     <div dojoType="dijit.form.Button" id="searchButton">Search!</div>
-
     <div dojoType="dojox.data.GoogleWebSearchStore" jsId="webStore"></div>
     <div dojoType="dojox.data.GoogleImageSearchStore" jsId="imageStore"></div>    
     <div dojoType="dojox.data.GoogleNewsSearchStore" jsId="newsStore"></div>
-    <br>
     <br>
     <br>
     <div dojoType="dijit.layout.TabContainer" style="width: 800px; height: 350px;" id="tabSearch">
