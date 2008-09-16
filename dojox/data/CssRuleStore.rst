@@ -29,3 +29,27 @@ The constructor for CssRuleStore allows for one optional parameter.
 |context   |An array of strings, each being a pattern to match on the paths of loaded stylesheets, indicating|Array        |
 |          |which rules to index.                                                                            |             |
 +----------+-------------------------------------------------------------------------------------------------+-------------+
+
+===============
+Item Attributes
+===============
+
++--------------------+-------------------------------------------------------------------------------------------------------+
+|selector            |The selector text (for example, '.class')                                                              |
++--------------------+-------------------------------------------------------------------------------------------------------+
+|classes             |An array of strings representing the classes present in this selector (for example, if the selector is |
+|                    |'.class1, .class2', the result would be ['class1', 'class2'])                                          |
++--------------------+-------------------------------------------------------------------------------------------------------+
+|rule                |The DOM Rule object as provided by the browser                                                         |
++--------------------+-------------------------------------------------------------------------------------------------------+
+|style               |The DOM CSSStyleDeclaration object as provided by the browser                                          |
++--------------------+-------------------------------------------------------------------------------------------------------+
+|cssText             |The cssText string from the Rule object, provided by the browser                                       |
++--------------------+-------------------------------------------------------------------------------------------------------+
+|styleSheet          |The DOM Stylesheet object this rule came from                                                          |
++--------------------+-------------------------------------------------------------------------------------------------------+
+|parentStyleSheet    |The parent stylesheet to the sheet this rule came from.  May be null (if the rule came from a <style>  |
+|                    |block, for instance).                                                                                  |
++--------------------+-------------------------------------------------------------------------------------------------------+
+|parentStyleSheetHref|The url to the parent stylesheet.  May be null.                                                        |
++--------------------+-------------------------------------------------------------------------------------------------------+
