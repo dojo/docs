@@ -29,7 +29,7 @@ This means that you can easily build CurrencyTextBoxes for a wide range of curre
 		required="true"
 		constraints="{fractional:true}"
 		currency="USD"
-		invalidMessage="Invalid amount.  Include dollar sign, commas, and cents." />
+		invalidMessage="Invalid amount.  Include dollar sign, commas, and cents.">
         <label for="income1">U.S. Dollars, comma is allowed</label>
 
         
