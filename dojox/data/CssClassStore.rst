@@ -46,3 +46,54 @@ Query Syntax
 ============
 
 The query syntax is identical to `dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`_. Please refer to it for the format of the queries.
+
+========
+Examples
+========
+
+-------------------------------------------------------
+Programmatic construction of a ComboBox to browse rules
+-------------------------------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojox.data.CssClassStore");
+      dojo.require("dijit.form.ComboBox");
+
+      function init() {
+        var classStore = new dojox.data.CssClassStore({'context': ['dijit/themes/nihilo/nihilo.css']});
+        var classCombo = new dijit.form.ComboBox({'store': classStore, 'searchAttr': 'classSans'}, dojo.byId('classCombo'));
+
+        function setCssText() {
+           var item = classCombo.item;
+           var text = dojo.byId("textLoc");
+           if (text) {
+             while(text.firstChild){
+               text.removeChild(text.firstChild);
+             }
+             if (item) {
+                text.innerHTML = classStore.getValue(item, "cssText");
+             }
+           }
+        }
+        dojo.connect(classCombo, "onChange", setCssText);
+      }
+      dojo.addOnLoad(init);
+    </script>
+
+  .. cv :: html 
+
+    <b>Combo lookup of selectors (scoped to nihilo.css)</b>
+    <br> 
+    <br> 
+    <div id="classCombo"></div>
+    <br>
+    <br>
+    <b>The css text associated with the class: </b>
+    <br>
+    <span id="textLoc"></span>
+    <br>
+    <br>
