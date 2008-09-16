@@ -66,34 +66,15 @@ Programmatic construction of a ComboBox to browse rules
       function init() {
         var classStore = new dojox.data.CssClassStore({'context': ['dijit/themes/nihilo/nihilo.css']});
         var classCombo = new dijit.form.ComboBox({'store': classStore, 'searchAttr': 'classSans'}, dojo.byId('classCombo'));
-
-        function setCssText() {
-           var item = classCombo.item;
-           var text = dojo.byId("textLoc");
-           if (text) {
-             while(text.firstChild){
-               text.removeChild(text.firstChild);
-             }
-             if (item) {
-                text.innerHTML = classStore.getValue(item, "cssText");
-             }
-           }
-        }
-        dojo.connect(classCombo, "onChange", setCssText);
       }
       dojo.addOnLoad(init);
     </script>
 
   .. cv :: html 
 
-    <b>Combo lookup of selectors (scoped to nihilo.css)</b>
+    <b>Combo lookup of classes(scoped to nihilo.css)</b>
     <br> 
     <br> 
     <div id="classCombo"></div>
-    <br>
-    <br>
-    <b>The css text associated with the class: </b>
-    <br>
-    <span id="textLoc"></span>
     <br>
     <br>
