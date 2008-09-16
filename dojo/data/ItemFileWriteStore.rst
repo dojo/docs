@@ -144,7 +144,7 @@ ItemFileWriteStore changes reflected in dojox.data.DataGrid
   .. cv :: javascript
 
     <script>
-      dojo.require("dojo.data.ItemFileReadStore");
+      dojo.require("dojo.data.ItemFileWriteStore");
       dojo.require("dijit.form.Button");
       dojo.require("dijit.form.TextBox");
 
@@ -193,7 +193,7 @@ ItemFileWriteStore changes reflected in dojox.data.DataGrid
             { 'name':'Argentina', 'type':'country', 'population':'40 million' } ]
           } 
         ]
-      }    
+      };    
 
       //This function performs some basic dojo initialization. In this case it connects the button
       //onClick to a function which invokes the fetch(). The fetch function queries for all items 
@@ -205,7 +205,7 @@ ItemFileWriteStore changes reflected in dojox.data.DataGrid
            //Callback for processing a returned list of items.
           function gotAll(items, request) {
             var value = spinner.getValue();
-            if ( value >== 0 ) { 
+            if ( value >= 0 ) { 
               var i;
               for (i = 0; i < items.length; i++) {
                 var item = items[i];
@@ -233,7 +233,7 @@ console.log(geoStore);
 
   .. cv :: html 
 
-    <div dojoType="dojo.data.ItemFileReadStore" data="geoData" jsId="geoStore"></div>
+    <div dojoType="dojo.data.ItemFileWriteStore" data="geoData" jsId="geoStore"></div>
     <div dojoType="dijit.form.NumberSpinner" jsId="spinner">0</div>
     <div dojoType="dijit.form.Button" jsId="button2">Find continents!</div>
     <br>
