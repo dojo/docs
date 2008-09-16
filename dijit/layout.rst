@@ -38,6 +38,33 @@ But for some web pages, you want them to work with the opposite pattern, where y
 
 .. cv-compound::
 
+  .. cv:: html
+
+        <table>
+          <tr>
+             <td colspan=3>Top Pane</td>
+          </tr>
+          <tr>
+             <td>Leading pane</td>
+             <td>Center pane</td>
+             <td>Trailing pane</td>
+          </tr>
+          <tr>
+             <td colspan=3>Bottom pane</td>
+          </tr>
+        </table>
+
+Note that in this scenario, there's no scrollbar on the browser window itself, but if any pane is too small to display all the text it contains then it gets a scroll bar.
+
+Layout like above can be done using tables or fancy CSS (see recent `A List Apart article <http://www.alistapart.com/articles/conflictingabsolutepositions>`_ about CSS sizing), but that technique has it's limits... it doesn't allow things like tabs or accordions or split containers where the user can adjust the size of each pane.
+
+Dijit Layout
+------------
+
+Dijit has a number of layout widgets which can be combined in a hierarchy to achieve that. Every layout widget contains a list of other layout widgets, except for the "leaf" nodes in the hierarchy, which are typically ContentPanes.
+
+.. cv-compound::
+
   .. cv:: javascript
 
      <script type="text/javascript">
@@ -55,14 +82,6 @@ But for some web pages, you want them to work with the opposite pattern, where y
              <div dojoType="dijit.layout.ContentPane" region="bottom">Bottom pane</div>
         </div>
 
-Note that in this scenario, there's no scrollbar on the browser window itself, but if any pane is too small to display all the text it contains then it gets a scroll bar.
-
-Layout like above can be done using tables or fancy CSS (see recent `A List Apart article <http://www.alistapart.com/articles/conflictingabsolutepositions>`_ about CSS sizing), but that technique has it's limits... it doesn't allow things like tabs or accordions or split containers where the user can adjust the size of each pane.
-
-Dijit Layout
-------------
-
-Dijit has a number of layout widgets which can be combined in a hierarchy to achieve that. Every layout widget contains a list of other layout widgets, except for the "leaf" nodes in the hierarchy, which are typically ContentPanes.
 
 How does this work in practice? You need to think about the application above in a top-down (or outside-in) way:
 
