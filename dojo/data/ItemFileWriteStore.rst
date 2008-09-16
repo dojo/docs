@@ -64,4 +64,4 @@ So, when Date objects are encountered, ItemFileWriteStore automatically serializ
 Query Syntax
 ============
 
-The query syntax for ItemFileWriteStore is identical to the query syntax of `ItemFileReadStore <dojox/data/ItemFileReadStore>`_ so see that section for more information.
+The query syntax for ItemFileWriteStore is identical to the query syntax of ItemFileReadStore so see that `section <dojox/data/ItemFileReadStore>`_  for more information.
