@@ -343,6 +343,7 @@ ItemFileWriteStore deletions reflected in dijit.Tree
 
           function gotCities(items, request) {
                 console.log("moo got items");
+                console.log(items);
 
             if (items ) {
               var i;
