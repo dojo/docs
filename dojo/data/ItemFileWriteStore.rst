@@ -129,3 +129,8 @@ The Notification API
 ====================
 
 ItemFileWriteStore supports dojo.data.api.Notification.  This means that every action through *newItem*, *setValue(s)*, *unsetAttribute*, and *deleteItem* will generate events to indicate these actions.  These events are functions on the store that widgets and user code can *dojo.connect* to.  This allows for pages to be very dynamic in that a change from one widget in a data store can be detected and reacted to in another.  For more details on Notification in general, please refer to the `Notification section <dojo/data/api/Notification>`_ of the dojo.data API.
+
+
+========
+Examples
+========
