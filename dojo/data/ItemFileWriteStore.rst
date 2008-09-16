@@ -59,3 +59,9 @@ So, when Date objects are encountered, ItemFileWriteStore automatically serializ
 .. code-block :: javascript
 
   { "_type":"Date", "value":"1993-05-24T00:00:00Z" }
+
+============
+Query Syntax
+============
+
+The query syntax for ItemFileWriteStore is identical to the query syntax of `ItemFileReadStore <dojox/data/ItemFileReadStore>`_ so see that section for more information.
