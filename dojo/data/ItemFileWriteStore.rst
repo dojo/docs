@@ -139,6 +139,8 @@ Examples
 ItemFileWriteStore changes reflected in dojox.data.DataGrid
 -----------------------------------------------------------
 
+  The following is a semi-complex example of the write API in action.  In this example, there is a number spinner, a button, and the DataGrid.  You use the number spinner to select a value.  Then by pressing the button, a query to ItemFileWriteStore is made.  The results of that query are iterated over and *setValue* is called on each item to modify its population attribute (or add it if it did not exist).  The DataGrid is used to display results.  Since the DataGrid is dojo.data.Notification aware, it binds to the DataStore and listens for change events on items.  If an item is updated, then the grid automatically reflects it in its display.   In this example, changing the population for all items should result in all rows showing a change in the population column when the button is pressed.
+
 .. cv-compound ::
   
   .. cv :: javascript
