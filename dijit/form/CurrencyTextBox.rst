@@ -7,6 +7,12 @@ dijit.form.CurrencyTextBox
 :Version: 1.0
 :Author: CraigRiecke
 
+As expected this is used to input monetary values, much like the currency type in spreadsheet programs.
+
+The ``value`` attribute is a floating point number.  
+This means that you can easily build CurrencyTextBoxes for a wide range of currencies without having to set a different value for each currency format.  
+``fractional`` is still set to true, but it is set inside the constraints object instead of on the widget.
+
 
 .. cv-compound::
 
