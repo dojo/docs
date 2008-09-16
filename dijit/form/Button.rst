@@ -34,7 +34,7 @@ The first example shows how to create a button programmatically.
 
   .. cv:: html
 
-    <button id="buttonNode" />
+    <button id="buttonNode"></button>
 
 As usual you can create the button widget declaratively using the dojoType attribute
 
