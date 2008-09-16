@@ -63,3 +63,22 @@ The query syntax is identical to `dojo.data.ItemFileReadStore <dojo/data/ItemFil
 ========
 Examples
 ========
+
+------------------------------------------------------
+Declarative construction of a ComboBox to browse rules
+------------------------------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojox.data.CssRuleStore");
+      dojo.require("dijit.form.ComboBox");
+    </script>
+
+  .. cv :: html 
+
+    <b>Combo lookup of isbn</b><br> 
+    <div dojoType="dojox.data.CssRuleStore" jsId="comboStore"></div>
+    <div dojoType="dijit.form.ComboBox" store="comboStore" searchAttr="selector"></div>
