@@ -116,8 +116,7 @@ Then you start nesting containers.  For instance, on the left you might want an 
              <div dojoType="dijit.layout.AccordionPane" title="pane #3">accordion pane #3</div>
         </div>
 
-Or a TabContainer:
-
+And a TabContainer in the middle:
 
 .. cv-compound::
 
@@ -173,18 +172,18 @@ There are three types of elements in that example:
    2. StackContainers: containers that display one child at a time
    3. Leafs: leaf nodes containing content
 
+The StackContainers in dijit are the AccordionContainer, TabContainer, or StackContainer itself. They all do basically the same thing, but look different.
+
+The leafs are typically ContentPanes but could be any widget, such as dojox.grid.Grid or dijit.Toolbar. An important consideration is whether or not the widget's size is adjustable (like a ContentPane) or not (like a Toolbar).
+
 Conceptually it looks like this:
 
 .. image:: layoutblock.png
    :alt: block diagram of container nesting
 
 
-The StackContainers in dijit are the AccordionContainer, TabContainer, or StackContainer itself. They all do basically the same thing, but look different.
-
-The leafs are typically ContentPanes but could be any widget, such as dojox.grid.Grid or dijit.Toolbar. An important consideration is whether or not the widget's size is adjustable (like a ContentPane) or not (like a Toolbar).
-
-Tips
-----
+Sizing to Viewport
+------------------
 
 Sizing to browser viewport: To make the outermost layout widget size to the browser's viewport, in your page CSS you should have:
 
@@ -201,6 +200,10 @@ where mainDiv is the id of the outermost div.
 
 Note that height=width=100% means different things depending on the browser when you have padding or border, so when using those tags it's best not to have either of those. Put your padding, border, and margin on elements inside the outer layout container.
 
+Visibility
+----------
 Restrictions about visibility: none of the layout widgets work if they are inside a hidden element. This is very important and a mistake many people make.  Dialog, etc. are created using visibility:hidden rather than display:none to avoid this problem.
 
+Programmatic Creation
+---------------------
 Startup call: when building widgets programmatically, you create the parent first, then add the children, and grandchildren... and finally call startup(). Startup() is called once on the top element in the hierarchy, after the whole hierarchy has been setup and the element inserted.
