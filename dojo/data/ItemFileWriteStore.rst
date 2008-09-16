@@ -148,6 +148,7 @@ ItemFileWriteStore changes reflected in dojox.data.DataGrid
       dojo.require("dijit.form.Button");
       dojo.require("dijit.form.NumberSpinner");
       dojo.require("dijit.form.TextBox");
+      dojo.require("dojox.grid.DataGrid");
 
       var geoData = { 
         'identifier': 'name',
@@ -195,6 +196,14 @@ ItemFileWriteStore changes reflected in dojox.data.DataGrid
           } 
         ]
       };    
+
+      var layoutGeo = [
+        [
+          { field: "text", name: "Name", width: 10 },
+          { field: "type", name: "Geography Type", width: 10 },
+          { field: "population", name: "Population", width: 'auto' }
+        ]
+      ];
 
       //This function performs some basic dojo initialization. In this case it connects the button
       //onClick to a function which invokes the fetch(). The fetch function queries for all items 
@@ -244,3 +253,13 @@ ItemFileWriteStore changes reflected in dojox.data.DataGrid
     <div dojoType="dijit.form.Button" jsId="button2">Update all geography items populations!</div>
     <br>
     <br>
+    <div style="width: 400px; height: 300px;">
+      <div id="grid" 
+        dojoType="dojox.grid.DataGrid" 
+        store="geoStore" 
+        structure="layoutGeo" 
+        query="{}"
+        queryOptions="{'deep':true}" 
+        rowsPerPage="40">
+      </div>
+    </div>
