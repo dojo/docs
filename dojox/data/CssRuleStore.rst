@@ -84,6 +84,7 @@ Declarative construction of a ComboBox to browse rules
     <div dojoType="dijit.form.ComboBox" store="selectorStore" searchAttr="selector"></div>
 
   .. cv :: css
+
     <style> 
       .selector1 {
           width: 100%;
