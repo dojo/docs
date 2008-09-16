@@ -9,9 +9,10 @@ Note that if you want your tooltip to contain a form or something that the user 
 
 Here's a tooltip created programatically:
 
-.. cv:: compound
+.. cv-compound::
 
-  ..cv:: javascript
+  .. cv:: javascript
+
         <script>
            dojo.require("dijit.Tooltip");
            dojo.addOnLoad(function(){
@@ -22,19 +23,22 @@ Here's a tooltip created programatically:
            });
         </script>
 
-  ..cv:: html
+  .. cv:: html
+
          <div id="wordOfTheDay2">Longanimity</div>
 
 And here's the same tooltip created from markup:
 
-.. cv:: compound
+.. cv-compound::
 
-  ..cv:: javascript
+  .. cv:: javascript
+
         <script>
            dojo.require("dijit.Tooltip");
         </script>
 
-  ..cv:: html
+  .. cv:: html
+
         <div dojoType="dijit.Tooltip" connectId="wordOfTheDay">
             a <i>disposition</i> to bear injuries patiently : <b>forbearance</b>
          </div>
