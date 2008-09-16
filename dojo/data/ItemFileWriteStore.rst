@@ -199,7 +199,7 @@ ItemFileWriteStore changes reflected in dojox.data.DataGrid
 
       var layoutGeo = [
         [
-          { field: "text", name: "Name", width: 10 },
+          { field: "name", name: "Name", width: 10 },
           { field: "type", name: "Geography Type", width: 10 },
           { field: "population", name: "Population", width: 'auto' }
         ]
