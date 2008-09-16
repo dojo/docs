@@ -64,51 +64,6 @@ The query syntax is identical to `dojo.data.ItemFileReadStore <dojo/data/ItemFil
 Examples
 ========
 
-------------------------------------------------------
-Declarative construction of a ComboBox to browse rules
-------------------------------------------------------
-
-.. cv-compound ::
-  
-  .. cv :: javascript
-
-    <script>
-      dojo.require("dojox.data.CssRuleStore");
-      dojo.require("dijit.form.ComboBox");
-
-      function init() {
-        var ruleCombo = new dijit.form.ComboBox({'store': ruleStore, 'searchAttr': 'selector'}, dojo.byId('ruleComboSelector'));
-      }
-      dojo.addOnLoad(init);
-
-    </script>
-
-  .. cv :: html 
-
-    <b>Combo lookup of selectors</b><br> 
-    <div dojoType="dojox.data.CssRuleStore" jsId="ruleStore"></div>
-    <div id="ruleComboSelector"></div>
-
-  .. cv :: css
-
-    <style> 
-      .selector1 {
-          width: 100%;
-          color: blue;
-      }
-
-      .selector2 {
-          width: 50%;
-          color: red;
-      }
-
-      .selector3 {
-          width: 2%;
-          color: white;
-      }
-
-    </style>
-
 -------------------------------------------------------
 Programmatic construction of a ComboBox to browse rules
 -------------------------------------------------------
@@ -122,7 +77,7 @@ Programmatic construction of a ComboBox to browse rules
       dojo.require("dijit.form.ComboBox");
 
       function init() {
-        var ruleStore = new dojox.data.CssRuleStore({});
+        var ruleStore = new dojox.data.CssRuleStore({'context': ['dijit/themes/dijit.css', 'dijit/themes/nihilo/nihilo.css']});
         var ruleCombo = new dijit.form.ComboBox({'store': ruleStore, 'searchAttr': 'selector'}, dojo.byId('ruleCombo'));
       }
       dojo.addOnLoad(init);
@@ -132,23 +87,3 @@ Programmatic construction of a ComboBox to browse rules
 
     <b>Combo lookup of selectors</b><br> 
     <div id="ruleCombo"></div>
-
-  .. cv :: css
-
-    <style> 
-      .selector1 {
-          width: 100%;
-          color: blue;
-      }
-
-      .selector2 {
-          width: 50%;
-          color: red;
-      }
-
-      .selector3 {
-          width: 2%;
-          color: white;
-      }
-
-    </style>
