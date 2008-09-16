@@ -85,5 +85,7 @@ Programmatic construction of a ComboBox to browse rules
 
   .. cv :: html 
 
-    <b>Combo lookup of selectors</b><br> 
+    <b>Combo lookup of selectors (scoped to dijit.css and nihilo.css)</b>
+    <br> 
+    <br> 
     <div id="ruleCombo"></div>
