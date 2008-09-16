@@ -354,7 +354,7 @@ ItemFileWriteStore deletions reflected in dijit.Tree
               }
             }
           }
-          geographyStore2.fetch({query:{type: "city"}, onComplete: gotCities});
+          geographyStore2.fetch({query:{type: "city"}, onComplete: gotCities, queryOptions: {deep:true}});
         }
         dojo.connect(button3, "onClick", deleteCities);
       }
