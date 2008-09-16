@@ -146,7 +146,7 @@ ItemFileWriteStore changes reflected in dojox.data.DataGrid
     <script>
       dojo.require("dojo.data.ItemFileWriteStore");
       dojo.require("dijit.form.Button");
-      dojo.require("dijit.form.Spinner");
+      dojo.require("dijit.form.NumberSpinner");
       dojo.require("dijit.form.TextBox");
 
       var geoData = { 
