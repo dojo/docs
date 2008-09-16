@@ -75,13 +75,19 @@ Declarative construction of a ComboBox to browse rules
     <script>
       dojo.require("dojox.data.CssRuleStore");
       dojo.require("dijit.form.ComboBox");
+
+      function init() {
+        var ruleCombo = new dijit.form.ComboBox({'store': ruleStore, 'searchAttr': 'selector'}, dojo.byId('ruleComboSelector'));
+      }
+      dojo.addOnLoad(init);
+
     </script>
 
   .. cv :: html 
 
     <b>Combo lookup of selectors</b><br> 
-    <div dojoType="dojox.data.CssRuleStore" jsId="selectorStore"></div>
-    <div dojoType="dijit.form.ComboBox" store="selectorStore" searchAttr="selector"></div>
+    <div dojoType="dojox.data.CssRuleStore" jsId="ruleStore"></div>
+    <div id="ruleComboSelector"></div>
 
   .. cv :: css
 
