@@ -275,3 +275,89 @@ ItemFileWriteStore changes reflected in dojox.data.DataGrid
         margin: 0;
       }
     </style>
+
+
+----------------------------------------------------
+ItemFileWriteStore deletions reflected in dijit.Tree
+----------------------------------------------------
+
+  This example demonstrates how to use a function such as *deleteItem*.  In this case dijit.Tree is used to show a hierarchy of items.  By pressing the delete button, all items that are of type city are deleted.  Since the tree is dojo.data.api.Notification aware, it catches the delete event and updates its rendering accordingly.
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojo.data.ItemFileReadStore");
+      dojo.require("dijit.Tree");
+      var storeData2 = { 
+        identifier: 'name',
+        label: 'name',
+        items: [
+          { name:'Africa', type:'continent', children:[
+            { name:'Egypt', type:'country' }, 
+            { name:'Kenya', type:'country', children:[
+            { name:'Nairobi', type:'city' },
+            { name:'Mombasa', type:'city' } ]
+            },
+            { name:'Sudan', type:'country', children:
+              { name:'Khartoum', type:'city' } 
+            } ]
+          },
+          { name:'Asia', type:'continent', children:[
+            { name:'China', type:'country' },
+            { name:'India', type:'country' },
+            { name:'Russia', type:'country' },
+            { name:'Mongolia', type:'country' } ]
+          },
+          { name:'Australia', type:'continent', population:'21 million', children:
+            { name:'Commonwealth of Australia', type:'country', population:'21 million'}
+          },
+          { name:'Europe', type:'continent', children:[
+            { name:'Germany', type:'country' },
+            { name:'France', type:'country' },
+            { name:'Spain', type:'country' },
+            { name:'Italy', type:'country' } ]
+          },
+          { name:'North America', type:'continent', children:[
+            { name:'Mexico', type:'country',  population:'108 million', area:'1,972,550 sq km', children:[
+              { name:'Mexico City', type:'city', population:'19 million', timezone:'-6 UTC'},
+              { name:'Guadalajara', type:'city', population:'4 million', timezone:'-6 UTC' } ]
+            },
+            { name:'Canada', type:'country',  population:'33 million', area:'9,984,670 sq km', children:[
+              { name:'Ottawa', type:'city', population:'0.9 million', timezone:'-5 UTC'},
+              { name:'Toronto', type:'city', population:'2.5 million', timezone:'-5 UTC' }]
+            },
+            { name:'United States of America', type:'country' } ]
+          },
+          { name:'South America', type:'continent', children:[
+            { name:'Brazil', type:'country', population:'186 million' },
+            { name:'Argentina', type:'country', population:'40 million' } ]
+          } 
+        ]
+      };
+
+      function init() {
+        function deleteCities() {
+          function gotCities(items, request) {
+            if (items ) {
+              var i;
+              for (i = 0; i < items.length; i++) {
+                var item = items[i];
+                geographyStore2.deleteItem(item);
+              }
+            }
+          }
+          geographyStore2.fetch({query:{type: "city"}, onComplete:gotCities});
+        }
+        dojo.connect(button3, "onClick", deleteCities);
+      }
+      dojo.addOnLoad(init);
+    </script>
+
+  .. cv :: html 
+
+    <div dojoType="dojo.data.ItemFileWriteStore" data="storeData2" jsId="geographyStore2"></div>
+    <div dojoType="dijit.form.Button" jsId="button3">Delete All Cities!</div>
+    <div dojoType="dijit.tree.ForestStoreModel" jsId="geographyModel2" store="geographyStore2" query="{type: 'continent'}" rootId="Geography" rootLabel="Geography"></div>
+    <div dojoType="dijit.Tree" model="geographyModel2"></div>
