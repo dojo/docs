@@ -65,3 +65,40 @@ Query Syntax
 ============
 
 The query syntax for ItemFileWriteStore is identical to the query syntax of ItemFileReadStore so see that `section <dojox/data/ItemFileReadStore>`_  for more information.
+
+==============================
+The Behavior of the save() API
+==============================
+
+Since this store implements the dojo.data.api.Write feature, it must implement the *save* function.   So, what does that do when called?  By default, it only does two things:
+
+* Clear out the record of all changed, deleted, and new items so that isDirty() will return false.
+* Commit the changes to the internal main tree of items.
+* Call any callbacks passed to the save function.
+
+Okay, so it effectively removed the ability to revert out a set of changes.  In other words, it acts like a commit.  That's great, bit all of it just happens in the browser.  What if I want to send data back to a server when save is called for persistence?  Can this be done?  The answer is **yes**.  The ItemFileWriteStore provides hook functions for users to over-ride to customize saving behavior.  This allows for you to define exactly what else you want the store to do with saved data results, other than clearing the internal modification state.  The functions you over-ride are defined below:
+
+----------------------------------------------
+Save function Extension point: _saveEverything
+----------------------------------------------
+
+The *_saveEverything* function should be defined on your store when all you want to do is get text content of the internal state back into a JSONable string so it can be sent serverside.  Effectively think of it as a way to get a JSON string back similar to the one you used to load the store.  The callbacks are the same callbacks you normally pass to the *save* function of the store.
+
+.. code-block :: javascript
+
+  _saveEverything: function(saveCompleteCallback /*Your callback to call when save is completed */, 
+                            saveFailedCallback /*Your callback to call if save fails*/, 
+                            newFileContentString /*The generated JSON data to send somewhere*/)
+
+
+------------------------------------------
+Save function Extension point: _saveCustom
+------------------------------------------
+
+The *_saveCustom* function should be defined on your store when you want to control exactly how everything gets serialized back (be it in JSON, XML, or whatnot).  The function signature is simple, it just takes the callbacks passed to the *save* API on the store.  Your implementation should introspect through the store's information, generate the save format your service desires, then send it and call the callbacks on whether it succeeds or not.  The *_saveCustom* function should be declared on the store as follows:
+
+.. code-block :: javascript
+
+  _saveCustom: function(saveCompleteCallback /*Your callback to call when save is completed */, 
+                        saveFailedCallback /*Your callback to call if save fails*/)
+  
