@@ -122,3 +122,10 @@ Referential Integrity
 As of dojo 1.1, dojo.data.ItemFileWriteStore Write actions are reference aware.  This means that if you delete an item that is referenced by other items, then those other items are also updated to remove those references.  This will also generate Notification events when it occurs.  
 
   To put it more simply, say you have Item C which is referenced by Items A and B.  If you delete Item C, a deleteItem event occurs, then two onSet notifications will occur; one for Item A and one for Item B, indicating that the attribute that referenced Item C was modified because Item C was deleted.
+
+
+====================
+The Notification API
+====================
+
+ItemFileWriteStore supports dojo.data.api.Notification.  This means that every action through *newItem*, *setValue(s)*, *unsetAttribute*, and *deleteItem* will generate events to indicate these actions.  These events are functions on the store that widgets and user code can *dojo.connect* to.  This allows for pages to be very dynamic in that a change from one widget in a data store can be detected and reacted to in another.  For more details on Notification in general, please refer to the `Notification section <dojo/data/api/Notification>`_ of the dojo.data API.
