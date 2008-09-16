@@ -178,7 +178,7 @@ The leafs are typically ContentPanes but could be any widget, such as dojox.grid
 
 Conceptually it looks like this:
 
-.. image:: layoutblock.png
+.. image:: layoutBlock.png
    :alt: block diagram of container nesting
 
 
