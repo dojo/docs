@@ -235,7 +235,12 @@ ItemFileWriteStore changes reflected in dojox.data.DataGrid
   .. cv :: html 
 
     <div dojoType="dojo.data.ItemFileWriteStore" data="geoData" jsId="geoStore"></div>
-    <div dojoType="dijit.form.NumberSpinner" jsId="spinner">0</div>
-    <div dojoType="dijit.form.Button" jsId="button2">Find continents!</div>
+    <b>Set the population to assign to all items</b>
+    <br>
+    <br>
+    <div dojoType="dijit.form.NumberSpinner" jsId="spinner" value="10,000"></div>
+    <br>
+    <br>
+    <div dojoType="dijit.form.Button" jsId="button2">Update all geography items populations!</div>
     <br>
     <br>
