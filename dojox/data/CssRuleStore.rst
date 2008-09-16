@@ -80,7 +80,7 @@ Programmatic construction of a ComboBox to browse rules
         var ruleStore = new dojox.data.CssRuleStore({'context': ['dijit/themes/dijit.css', 'dijit/themes/nihilo/nihilo.css']});
         var ruleCombo = new dijit.form.ComboBox({'store': ruleStore, 'searchAttr': 'selector'}, dojo.byId('ruleCombo'));
 
-        function onSelect() {
+        function setCssText() {
            var item = ruleCombo.item;
            var text = dojo.byId("textLoc");
            if (text) {
@@ -92,6 +92,7 @@ Programmatic construction of a ComboBox to browse rules
              }
            }
         }
+        dojo.connect(ruleCombo, "onChange", setCssText);
       }
       dojo.addOnLoad(init);
     </script>
@@ -107,3 +108,5 @@ Programmatic construction of a ComboBox to browse rules
     <b>The css text associated with the rule: </b>
     <br>
     <span id=textLoc"></span>
+    <br>
+    <br>
