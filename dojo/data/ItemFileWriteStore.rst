@@ -224,7 +224,6 @@ ItemFileWriteStore changes reflected in dojox.data.DataGrid
                 geoStore.setValue(item, "population", value);
               }
             }
-            console.log(geoStore);
           }
             
           //Callback for if the lookup fails.
