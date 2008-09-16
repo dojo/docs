@@ -48,15 +48,15 @@ But for some web pages, you want them to work with the opposite pattern, where y
 
         <table>
           <tr>
-             <td colspan=3 class=top>Top Pane</td>
+             <td colspan=3><div class=top>Top Pane</div></td>
           </tr>
           <tr>
-             <td class=leading>Leading pane</td>
-             <td class=center>Center pane</td>
-             <td class=trailing>Trailing pane</td>
+             <td><div class=leading>Leading pane</div></td>
+             <td><div class=center>Center pane</div></td>
+             <td><div class=trailing>Trailing pane</div></td>
           </tr>
           <tr>
-             <td colspan=3 class=bottom>Bottom pane</td>
+             <td colspan=3><div class=bottom>Bottom pane</div></td>
           </tr>
         </table>
 
