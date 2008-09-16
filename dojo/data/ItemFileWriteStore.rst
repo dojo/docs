@@ -339,7 +339,11 @@ ItemFileWriteStore deletions reflected in dijit.Tree
 
       function init() {
         function deleteCities() {
+                console.log("moo delete");
+
           function gotCities(items, request) {
+                console.log("moo got items");
+
             if (items ) {
               var i;
               for (i = 0; i < items.length; i++) {
@@ -349,7 +353,7 @@ ItemFileWriteStore deletions reflected in dijit.Tree
               }
             }
           }
-          geographyStore2.fetch({query:{type: "city"}, onComplete:gotCities});
+          geographyStore2.fetch({query:{type: "city"}, onComplete: gotCities});
         }
         dojo.connect(button3, "onClick", deleteCities);
       }
