@@ -68,7 +68,7 @@ The query syntax for ItemFileWriteStore is identical to the query syntax of Item
 
 =============
 The Write API
-==============
+=============
 
 The write API implementation conforms to the dojo.data specification for Write.  Ultimately, the best way to think about it is that you use functions *newItem*, *deleteItem*, *setValue(s)*, and *unsetAttribute* to modify contents of the store.  These changes can be undone all in one function call by calling the store *revert* function, or they can be committed and made unreversable by the *save* function.  Think of it as semi-transactional.
 
