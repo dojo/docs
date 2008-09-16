@@ -76,7 +76,7 @@ The write API implementation conforms to the dojo.data specification for Write. 
 The Behavior of the save() API
 ------------------------------
 
-Since this store implements the dojo.data.api.Write feature, it must implement the *save* function.   So, what does that do when called?  By default, it only does two things:
+Since this store implements the dojo.data.api.Write feature, it must implement the *save* function.   Since this is an in-memory data store, what exactly does *save* do when called?  By default, it only does two things:
 
 * Clear out the record of all changed, deleted, and new items so that isDirty() will return false.
 * Commit the changes to the internal main tree of items.
