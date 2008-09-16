@@ -15,7 +15,7 @@ Typically HTML has bottom-up sizing, where a container is as big as it's content
 .. cv-compound::
 
   .. cv:: css
-  
+
      <style type="text/css">
         .inner, .outer { margin: 5px; border: 1px solid blue; }
         .inner { border: 1px solid green; }
@@ -39,9 +39,11 @@ But for some web pages, you want them to work with the opposite pattern, where y
 .. cv-compound::
 
   .. cv:: css
+
         .top, .bottom { height: 100px; }
         .center { height: 200px; width: 300px; }
         .leading, .trailing { width: 200px; }
+
   .. cv:: html
 
         <table>
