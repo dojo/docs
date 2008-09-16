@@ -82,3 +82,22 @@ Declarative construction of a ComboBox to browse rules
     <b>Combo lookup of selectors</b><br> 
     <div dojoType="dojox.data.CssRuleStore" jsId="selectorStore"></div>
     <div dojoType="dijit.form.ComboBox" store="selectorStore" searchAttr="selector"></div>
+
+  .. cv :: css
+    <style> 
+      .selector1 {
+          width: 100%;
+          color: blue;
+      }
+
+      .selector2 {
+          width: 50%;
+          color: red;
+      }
+
+      .selector3 {
+          width: 2%;
+          color: white;
+      }
+
+    </style>
