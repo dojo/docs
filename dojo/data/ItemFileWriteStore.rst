@@ -339,17 +339,11 @@ ItemFileWriteStore deletions reflected in dijit.Tree
 
       function init() {
         function deleteCities() {
-                console.log("moo delete");
-
           function gotCities(items, request) {
-                console.log("moo got items");
-                console.log(items);
-
             if (items ) {
               var i;
               for (i = 0; i < items.length; i++) {
                 var item = items[i];
-                console.log("moo");
                 geographyStore2.deleteItem(item);
               }
             }
