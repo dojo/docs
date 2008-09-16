@@ -30,5 +30,5 @@ Examples
 		constraints="{min:-20000,max:20000,places:0}"
 		promptMessage= "Enter a value between -20000 and +20000"
 		required= "true" 
-		invalidMessage= "Invalid elevation." />
+		invalidMessage= "Invalid elevation.">
         <label for="q05">Integer between -20000 to +20000</label>
