@@ -90,7 +90,7 @@ Programmatic construction of a ComboBox to browse rules
              if (item) {
                 text.innerHTML = ruleStore.getValue(item, "cssText");
              }
-           }
+           }else {console.log("foo!")}
         }
         dojo.connect(ruleCombo, "onChange", setCssText);
       }
