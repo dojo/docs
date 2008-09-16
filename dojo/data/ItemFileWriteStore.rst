@@ -114,3 +114,11 @@ The Behavior of the revert() API
 The revert API is intended to undo changes made through calls to *newItem*, *deleteItem*, and *setValue(s)*.  What it effectively does is return the pristine data item states into the internal data array storing all the items for modified and deleted items.  For new items it removes them from the internal data array.   
 
   **Note:**  Revert does **not** generate Notification events in reverse order for every change it undoes.  To detect revert changes to react accordingly, you should *dojo.connect* to the revert function on the store.
+
+---------------------
+Referential Integrity
+---------------------
+
+As of dojo 1.1, dojo.data.ItemFileWriteStore Write actions are reference aware.  This means that if you delete an item that is referenced by other items, then those other items are also updated to remove those references.  This will also generate Notification events when it occurs.  
+
+  To put it more simply, say you have Item C which is referenced by Items A and B.  If you delete Item C, a deleteItem event occurs, then two onSet notifications will occur; one for Item A and one for Item B, indicating that the attribute that referenced Item C was modified because Item C was deleted.
