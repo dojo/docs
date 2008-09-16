@@ -102,7 +102,7 @@ Programmatic construction of a ComboBox to browse rules
     <b>Combo lookup of selectors (scoped to nihilo.css)</b>
     <br> 
     <br> 
-    <div id="ruleCombo"></div>
+    <div id="ruleCombo" style="width: 50%;"></div>
     <br>
     <br>
     <b>The css text associated with the rule: </b>
