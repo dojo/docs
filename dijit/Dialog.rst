@@ -32,7 +32,7 @@ Examples
         <div dojoType="dijit.layout.ContentPane" title="boo">Hi</div>
       </div>
     </div>
-    <button id="showDialog" dojoType="dijit.form.Button">Show me!</button>
+    <button id="buttonOne" dojoType="dijit.form.Button">Show me!</button>
 
   .. cv:: javascript
     :label: The javascript, put this wherever you want the dialog creation to happen
@@ -47,11 +47,11 @@ Examples
     dojo.addOnLoad(function(){	
       firstDlg = dijit.byId("dialogOne");
       // connect to the button so we display the dialog on click
-      dojo.connect(dijit.byId("showDialog"), "onClick", firstDlg, "show");
+      dojo.connect(dijit.byId("buttonOne"), "onClick", firstDlg, "show");
     });
     </script>
 
-2. Now lets create a dialog programmatically, and change the dialogs content dynamically
+2. Now lets create a dialog programmatically, and change the dialog's content dynamically
 
 .. cv-compound::
 
@@ -60,7 +60,7 @@ Examples
   .. cv:: html
     :label: When pressing this button the dialog will popup. Notice this time there is no dom Node with content for the dialog 
 
-    <button id="showDialogTwo" dojoType="dijit.form.Button" onClick="showDialog">Show me!</button>
+    <button id="buttonTwo" dojoType="dijit.form.Button" onClick="showDialogTwo">Show me!</button>
 
   .. cv:: javascript
     :label: The javascript, put this wherever you want the dialog creation to happen
@@ -77,9 +77,10 @@ Examples
           style: "width: 300px"
 	});
 
-      function showDialog(){
+      function showDialogTwo(){
            // set the content of the dialog
-            secondDlg.attr("content", "Hey, I wasn't there before!");
+            secondDlg.attr("content", "Hey, I wasn't there before, I was added at " + new Date() + "!");
+            secondDlg.show();
       }
     });
     </script>
@@ -107,8 +108,12 @@ Dialog will return the user data as a javascript object.
 				<td><input dojoType=dijit.form.TextBox type="text" name="loc" id="loc"></td>
 			</tr>
 			<tr>
-				<td><label for="date">Date: </label></td>
-				<td><input dojoType=dijit.form.DateTextBox type="text" name="date" id="date"></td>
+				<td><label for="date">Start date: </label></td>
+				<td><input dojoType=dijit.form.DateTextBox type="text" name="sdate" id="sdate"></td>
+			</tr>
+			<tr>
+				<td><label for="date">End date: </label></td>
+				<td><input dojoType=dijit.form.DateTextBox type="text" name="edate" id="edate"></td>
 			</tr>
 			<tr>
 				<td><label for="date">Time: </label></td>
@@ -124,7 +129,7 @@ Dialog will return the user data as a javascript object.
 			</tr>
 		</table>
 	</div>
-       <button id="showDialog" dojoType="dijit.form.Button">Show me!</button>
+       <button id="buttonThree" dojoType="dijit.form.Button">Show me!</button>
 
   .. cv:: javascript
     :label: The javascript, put this wherever you want the dialog creation to happen
@@ -140,7 +145,7 @@ Dialog will return the user data as a javascript object.
     dojo.addOnLoad(function(){	
       formDlg = dijit.byId("formDialog");
       // connect to the button so we display the dialog on click
-      dojo.connect(dijit.byId("formDialog"), "onClick", formDlg, "show");
+      dojo.connect(dijit.byId("buttonThree"), "onClick", formDlg, "show");
     });
     </script>
 
@@ -162,7 +167,7 @@ If you wish to alter the default color for the underlay, you do so in CSS. The u
     <div id="dialogColor" title="Colorful" dojoType="dijit.Dialog">
          My background color is Green
     </div>
-    <button id="showDialog2" dojoType="dijit.form.Button">Show me!</button>
+    <button id="button4" dojoType="dijit.form.Button">Show me!</button>
 
   .. cv:: javascript
 
@@ -173,9 +178,9 @@ If you wish to alter the default color for the underlay, you do so in CSS. The u
 
     dojo.addOnLoad(function(){	
       // create the dialog
-      var firstDlg = dijit.byId("dialogColor");
+      var dialogColor = dijit.byId("dialogColor");
       // connect t the button so we display the dialog onclick
-      dojo.connect(dijit.byId("showDialog2"), "onClick", firstDlg, "show");
+      dojo.connect(dijit.byId("button4"), "onClick", dialogColor, "show");
     });
     </script>
 
