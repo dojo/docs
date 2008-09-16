@@ -53,3 +53,13 @@ Item Attributes
 +--------------------+-------------------------------------------------------------------------------------------------------+
 |parentStyleSheetHref|The url to the parent stylesheet.  May be null.                                                        |
 +--------------------+-------------------------------------------------------------------------------------------------------+
+
+============
+Query Syntax
+============
+
+The query syntax is identical to `dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`_. Please refer to it for the format of the queries.
+
+========
+Examples
+========
