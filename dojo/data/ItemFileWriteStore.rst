@@ -72,8 +72,9 @@ The Write API
 
 The write API implementation conforms to the dojo.data specification for Write.  Ultimately, the best way to think about it is that you use functions *newItem*, *deleteItem*, *setValue(s)*, and *unsetAttribute* to modify contents of the store.  These changes can be undone all in one function call by calling the store *revert* function, or they can be committed and made unreversable by the *save* function.  Think of it as semi-transactional.
 
+------------------------------
 The Behavior of the save() API
-==============================
+------------------------------
 
 Since this store implements the dojo.data.api.Write feature, it must implement the *save* function.   So, what does that do when called?  By default, it only does two things:
 
@@ -83,7 +84,6 @@ Since this store implements the dojo.data.api.Write feature, it must implement t
 
 Okay, so it effectively removed the ability to revert out a set of changes.  In other words, it acts like a commit.  That's great, bit all of it just happens in the browser.  What if I want to send data back to a server when save is called for persistence?  Can this be done?  The answer is **yes**.  There are several ways to accomplish this.  The first would be to simply replace the store *save* function with a different one to do whatever you want.  However, that one ends up requiring knowing a lot about how things are stored internally, which is not always good to know about.  So, ItemFileWriteStore provides hook functions for users to over-ride to customize saving behavior without having to replace the *save* function.  This allows for you to define exactly what else you want the store to do with saved data results without having to know as much about internal representations:  The functions you can over-ride are defined below:
 
-----------------------------------------------
 Save function Extension point: _saveEverything
 ----------------------------------------------
 
@@ -96,7 +96,6 @@ The *_saveEverything* function should be defined on your store when all you want
                             newFileContentString /*The generated JSON data to send somewhere*/)
 
 
-------------------------------------------
 Save function Extension point: _saveCustom
 ------------------------------------------
 
@@ -108,8 +107,9 @@ The *_saveCustom* function should be defined on your store when you want to cont
                         saveFailedCallback /*Your callback to call if save fails*/)
   
 
+--------------------------------
 The Behavior of the revert() API
-================================
+--------------------------------
 
 The revert API is intended to undo changes made through calls to *newItem*, *deleteItem*, and *setValue(s)*.  What it effectively does is return the pristine data item states into the internal data array storing all the items for modified and deleted items.  For new items it removes them from the internal data array.   
 
