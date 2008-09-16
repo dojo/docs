@@ -146,6 +146,7 @@ ItemFileWriteStore changes reflected in dojox.data.DataGrid
     <script>
       dojo.require("dojo.data.ItemFileWriteStore");
       dojo.require("dijit.form.Button");
+      dojo.require("dijit.form.Spinner");
       dojo.require("dijit.form.TextBox");
 
       var geoData = { 
@@ -212,7 +213,7 @@ ItemFileWriteStore changes reflected in dojox.data.DataGrid
                 geoStore.setValue(item, "population", value);
               }
             }
-console.log(geoStore);
+            console.log(geoStore);
           }
             
           //Callback for if the lookup fails.
