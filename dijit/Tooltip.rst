@@ -17,7 +17,7 @@ Here's a tooltip created programatically:
            dojo.require("dijit.Tooltip");
            dojo.addOnLoad(function(){
               new dijit.Tooltip({
-                  connectId: "wordOfTheDay2",
+                  connectId: ["wordOfTheDay2"],
                   label: "a <i>disposition</i> to bear injuries patiently : <b>forbearance</b>"
               });
            });
@@ -25,7 +25,9 @@ Here's a tooltip created programatically:
 
   .. cv:: html
 
-         <div id="wordOfTheDay2">Longanimity</div>
+         <span id="wordOfTheDay2">Longanimity</span>
+
+''Note that connectId is an array, since it can contain multiple nodes to connect to.''
 
 And here's the same tooltip created from markup:
 
@@ -42,7 +44,15 @@ And here's the same tooltip created from markup:
         <div dojoType="dijit.Tooltip" connectId="wordOfTheDay">
             a <i>disposition</i> to bear injuries patiently : <b>forbearance</b>
          </div>
-         <div id="wordOfTheDay">Longanimity</div>
+         <span id="wordOfTheDay">Longanimity</span>
+
+
+Tooltip Positioning
+-------------------
+By default, dijit tries to find a place to display the tooltip to the left or the right of the target element.
+You can control the search path for positions via a global setting like:
+
+dijit.Tooltip.defaultPosition = ["above", "below"];
 
 
 Accessibility
