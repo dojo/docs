@@ -79,6 +79,6 @@ Declarative construction of a ComboBox to browse rules
 
   .. cv :: html 
 
-    <b>Combo lookup of isbn</b><br> 
-    <div dojoType="dojox.data.CssRuleStore" jsId="comboStore"></div>
-    <div dojoType="dijit.form.ComboBox" store="comboStore" searchAttr="selector"></div>
+    <b>Combo lookup of selectors</b><br> 
+    <div dojoType="dojox.data.CssRuleStore" jsId="selectorStore"></div>
+    <div dojoType="dijit.form.ComboBox" store="selectorStore" searchAttr="selector"></div>
