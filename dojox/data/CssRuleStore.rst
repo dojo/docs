@@ -122,7 +122,7 @@ Programmatic construction of a ComboBox to browse rules
       dojo.require("dijit.form.ComboBox");
 
       function init() {
-        var ruleStore = new dojox.data.CssRuleStore({'context': ['dijit/themes/dijit.css']});
+        var ruleStore = new dojox.data.CssRuleStore({});
         var ruleCombo = new dijit.form.ComboBox({'store': ruleStore, 'searchAttr': 'selector'}, dojo.byId('ruleCombo'));
       }
       dojo.addOnLoad(init);
