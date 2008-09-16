@@ -38,19 +38,23 @@ But for some web pages, you want them to work with the opposite pattern, where y
 
 .. cv-compound::
 
+  .. cv:: css
+        .top, .bottom { height: 100px; }
+        .center { height: 200px; width: 300px; }
+        .leading, .trailing { width: 200px; }
   .. cv:: html
 
         <table>
           <tr>
-             <td colspan=3>Top Pane</td>
+             <td colspan=3 class=top>Top Pane</td>
           </tr>
           <tr>
-             <td>Leading pane</td>
-             <td>Center pane</td>
-             <td>Trailing pane</td>
+             <td class=leading>Leading pane</td>
+             <td class=center>Center pane</td>
+             <td class=trailing>Trailing pane</td>
           </tr>
           <tr>
-             <td colspan=3>Bottom pane</td>
+             <td colspan=3 class=bottom>Bottom pane</td>
           </tr>
         </table>
 
