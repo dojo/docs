@@ -9,11 +9,39 @@ dijit.form.ValidatingTextBox
 
 A ValidatingTextBox by itself '''will not''' prevent invalid entries from submission.  To ensure they're not, simply surround your form with a dijit.form.Form widget
 
-The ``value`` attribute is a floating point number.  
-This means that you can easily build CurrencyTextBoxes for a wide range of currencies without having to set a different value for each currency format.  
-``fractional`` is still set to true, but it is set inside the constraints object instead of on the widget.
-
 ValidationTextBoxes usually use Regular Expression validation, as in the following example:
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+     <script type="text/javascript">
+     dojo.require("dijit.form.ValidationTextBox");
+     </script>
+
+  .. cv:: html
+
+	<input type="text" name="phone" id="phone" value="someTestString"
+		dojoType="dijit.form.ValidationTextBox"
+		regExp="[\w]+"
+		required="true"
+		invalidMessage="Invalid Non-Space Text." />
+        <label for="phone">Phone number, no spaces</label>
+	<br/>
+	<input type="text" name="zip" value="00000"
+		dojoType="dijit.form.ValidationTextBox"
+		regExp="\d{5}"
+		required="true"
+		invalidMessage="Invalid zip code." />
+        <label for="zip">Also 5-Digit U.S. Zipcode only</label>
+	<br/>
+	<input type="text" name="zip" value="00000" id="zip2"
+		dojoType="dijit.form.ValidationTextBox"
+		regExpGen="after5"
+		required="true"
+		invalidMessage="Zip codes after 5, county name before then." />
+        <label for="zip2">Also 5-Digit U.S. Zipcode only</label>
+	<br/>
 
 The regular expression syntax comes directly from JavaScript.  
 The start and ending qualifiers of the regular expression, ^ and $, are implicit - you do not need 
