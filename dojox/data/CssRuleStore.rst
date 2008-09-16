@@ -85,7 +85,7 @@ Programmatic construction of a ComboBox to browse rules
            var text = dojo.byId("textLoc");
            if (text) {
              while(text.firstChild){
-               text.removeChild(text.firsChild);
+               text.removeChild(text.firstChild);
              }
              if (item) {
                 text.innerHTML = ruleStore.getValue(item, "cssText");
