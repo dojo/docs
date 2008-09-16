@@ -17,17 +17,20 @@ The Dialog and underlay append themselves to the ``<body>`` element, which requi
 Examples
 --------
 
-1. The first example creates a Dialog dynamically from an existing DOM node:
+1. The first example creates a Dialog via markup from an existing DOM node:
 
 .. cv-compound::
 
-  A programmatic dialog with no content. First lets write up some simple HTML code because you need to define the place where your Dialog dhould be created.
+  A dialog created via markup. First let's write up some simple HTML code because you need to define the place where your Dialog sdhould be created.
   
   .. cv:: html
     :label: When pressing this button the dialog will popup 
 
     <div id="dialogOne" dojoType="dijit.Dialog">
-    <div dojoType="dijit.layout.TabContainer" style="width: 200px; height: 300px;"><div dojoType="dijit.layout.ContentPane" title="foo">Hi</div><div dojoType="dijit.layout.ContentPane" title="boo">Hi</div></div>
+      <div dojoType="dijit.layout.TabContainer" style="width: 200px; height: 300px;">
+        <div dojoType="dijit.layout.ContentPane" title="foo">Hi</div>
+        <div dojoType="dijit.layout.ContentPane" title="boo">Hi</div>
+      </div>
     </div>
     <button id="showDialog" dojoType="dijit.form.Button">Show me!</button>
 
@@ -42,28 +45,22 @@ Examples
     dojo.require("dijit.layout.ContentPane");
 
     dojo.addOnLoad(function(){	
-      // create the dialog
-      /*firstDlg = new dijit.Dialog({
-          title: "Programatic Dialog Creation",
-          style: "width: 300px",
-	}, "dialogOne");
-       */
       firstDlg = dijit.byId("dialogOne");
-      // connect t the button so we display the dialog onclick
+      // connect to the button so we display the dialog on click
       dojo.connect(dijit.byId("showDialog"), "onClick", firstDlg, "show");
     });
     </script>
 
-2. Now lets change the dialogs content dynamically
+2. Now lets create a dialog programmatically, and change the dialogs content dynamically
 
 .. cv-compound::
 
-  A programmatic dialog with no content. First lets write up some simple HTML code because you need to define the place where your Dialog dhould be created.
+  A programmatically created dialog with no content. First lets write up some simple HTML code because you need to define the place where your Dialog dhould be created.
   
   .. cv:: html
     :label: When pressing this button the dialog will popup. Notice this time there is no dom Node with content for the dialog 
 
-    <button id="showDialogTwo" dojoType="dijit.form.Button">Show me!</button>
+    <button id="showDialogTwo" dojoType="dijit.form.Button" onClick="showDialog">Show me!</button>
 
   .. cv:: javascript
     :label: The javascript, put this wherever you want the dialog creation to happen
@@ -80,11 +77,70 @@ Examples
           style: "width: 300px"
 	});
 
-      // set the content of the dialog 
-      secondDlg.setContent("Hey, I wasn't there before!");
+      function showDialog(){
+           // set the content of the dialog
+            secondDlg.attr("content", "Hey, I wasn't there before!");
+      }
+    });
+    </script>
 
-      // connect t the button so we display the dialog onclick
-      dojo.connect(dijit.byId("showDialogTwo"), "onClick", secondDlg, "show");
+Getting Dialog Results
+----------------------
+Often a Dialog is used to collect user data.   Like the Form widget,
+Dialog will return the user data as a javascript object.
+
+.. cv-compound::
+
+  
+  .. cv:: html
+    :label: When pressing this button the dialog will popup 
+
+	<div dojoType="dijit.Dialog" id="formDialog" title="Form Dialog"
+			execute="alert('submitted w/args:\n' + dojo.toJson(arguments[0], true));">
+		<table>
+			<tr>
+				<td><label for="name">Name: </label></td>
+				<td><input dojoType=dijit.form.TextBox type="text" name="name" id="name"></td>
+			</tr>
+			<tr>
+				<td><label for="loc">Location: </label></td>
+				<td><input dojoType=dijit.form.TextBox type="text" name="loc" id="loc"></td>
+			</tr>
+			<tr>
+				<td><label for="date">Date: </label></td>
+				<td><input dojoType=dijit.form.DateTextBox type="text" name="date" id="date"></td>
+			</tr>
+			<tr>
+				<td><label for="date">Time: </label></td>
+				<td><input dojoType=dijit.form.TimeTextBox type="text" name="time" id="time"></td>
+			</tr>
+			<tr>
+				<td><label for="desc">Description: </label></td>
+				<td><input dojoType=dijit.form.TextBox type="text" name="desc" id="desc"></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center">
+					<button dojoType=dijit.form.Button type="submit">OK</button></td>
+			</tr>
+		</table>
+	</div>
+       <button id="showDialog" dojoType="dijit.form.Button">Show me!</button>
+
+  .. cv:: javascript
+    :label: The javascript, put this wherever you want the dialog creation to happen
+
+    <script type="text/javascript">
+
+    dojo.require("dijit.form.Button");
+    dojo.require("dijit.Dialog");
+    dojo.require("dijit.form.TextBox");
+    dojo.require("dijit.form.DateTextBox");
+    dojo.require("dijit.form.TimeTextBox");
+
+    dojo.addOnLoad(function(){	
+      formDlg = dijit.byId("formDialog");
+      // connect to the button so we display the dialog on click
+      dojo.connect(dijit.byId("formDialog"), "onClick", formDlg, "show");
     });
     </script>
 
