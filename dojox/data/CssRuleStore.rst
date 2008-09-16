@@ -107,6 +107,6 @@ Programmatic construction of a ComboBox to browse rules
     <br>
     <b>The css text associated with the rule: </b>
     <br>
-    <span id=textLoc"></span>
+    <span id="textLoc"></span>
     <br>
     <br>
