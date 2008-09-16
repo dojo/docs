@@ -130,10 +130,73 @@ The Notification API
 
 ItemFileWriteStore supports dojo.data.api.Notification.  This means that every action through *newItem*, *setValue(s)*, *unsetAttribute*, and *deleteItem* will generate events to indicate these actions.  These events are functions on the store that widgets and user code can *dojo.connect* to.  This allows for pages to be very dynamic in that a change from one widget in a data store can be detected and reacted to in another.  For more details on Notification in general, please refer to the `Notification section <dojo/data/api/Notification>`_ of the dojo.data API.
 
+===================
+Pseudocode Examples
+===================
+For these examples, we'll assume a datasource as defined by the following example data:
 
-========
-Examples
-========
+.. code-block :: javascript
+
+  { identifier: 'abbr',
+    label: 'name',
+    items: [
+      { abbr:'ec', name:'Ecuador',           capital:'Quito' },
+      { abbr:'eg', name:'Egypt',             capital:'Cairo' },
+      { abbr:'sv', name:'El Salvador',       capital:'San Salvador' },
+      { abbr:'gq', name:'Equatorial Guinea', capital:'Malabo' },
+      { abbr:'er', name:'Eritrea',           capital:'Asmara' },
+      { abbr:'ee', name:'Estonia',           capital:'Tallinn' },
+      { abbr:'et', name:'Ethiopia',          capital:'Addis Ababa' }
+  ]}
+
+-------------------------------
+Example 1: Add in a new country
+-------------------------------
+
+.. code-block :: javascript
+
+  var store = new dojo.data.ItemFileWriteStore({url: "countries.json"});
+  var usa = store.newItem({abbr: 'us', name: 'United States of America', capital: 'Washington DC'});
+
+  function saveDone(){
+    alert("Done saving.");
+  }  
+  function saveFailed(){
+    alert("Save failed.");
+  }
+  store.save({onComplete: saveDone, onError: saveFailed});
+
+---------------------------
+Example 2: Delete a country
+---------------------------
+
+.. code-block :: javascript
+
+  var store = new dojo.data.ItemFileWriteStore({url: "countries.json"});
+
+  function saveDone(){
+    alert("Done saving.");
+  } 
+  function saveFailed(){
+    alert("Save failed.");
+  }
+  var gotNames= function(items, request){
+    for (var i = 0; i < items.length; i++){
+      console.log("Deleted country: " + store.getLabel(item);
+      store.deleteItem(items[i]);
+    }
+    store.save({onComplete: saveDone, onError: saveFailed});  
+  }
+  var request = store.fetch({query: {name:"Egypt"}, queryOptions: {ignoreCase: true}, onComplete: gotNames}
+
+
+
+
+
+
+===================
+Functional Examples
+===================
 
 -----------------------------------------------------------
 ItemFileWriteStore changes reflected in dojox.data.DataGrid
