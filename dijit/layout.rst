@@ -90,7 +90,7 @@ You typically start off the page using a BorderContainer, like this, to split th
 
   .. cv:: html
 
-        <div dojoType="dijit.layout.BorderContainer" style="width: 500px; height: 300px; border: 1px solid black;">
+        <div dojoType="dijit.layout.BorderContainer" style="width: 500px; height: 300px; border: 1px solid #ccc;">
              <div dojoType="dijit.layout.ContentPane" region="top">Top pane</div>
              <div dojoType="dijit.layout.ContentPane" region="leading">Leading pane</div>
              <div dojoType="dijit.layout.ContentPane" region="center">Center pane</div>
@@ -110,7 +110,7 @@ Then you start nesting containers.  For instance, on the left you might want an 
 
   .. cv:: html
 
-        <div dojoType="dijit.layout.AccordionContainer" style="width: 200px; height: 200px; border: 1px solid black;">
+        <div dojoType="dijit.layout.AccordionContainer" style="width: 200px; height: 200px; border: 1px solid #ccc;">
              <div dojoType="dijit.layout.AccordionPane" title="pane #1">accordion pane #1</div>
              <div dojoType="dijit.layout.AccordionPane" title="pane #2">accordion pane #2</div>
              <div dojoType="dijit.layout.AccordionPane" title="pane #3">accordion pane #3</div>
@@ -129,7 +129,7 @@ And a TabContainer in the middle:
 
   .. cv:: html
 
-        <div dojoType="dijit.layout.TabContainer" style="width: 200px; height: 200px; border: 1px solid black;">
+        <div dojoType="dijit.layout.TabContainer" style="width: 200px; height: 200px; border: 1px solid #ccc;">
              <div dojoType="dijit.layout.ContentPane" title="tab #1">tab pane #1</div>
              <div dojoType="dijit.layout.ContentPane" title="tab #2">tab pane #2</div>
              <div dojoType="dijit.layout.ContentPane" title="tab #3">tab pane #3</div>
@@ -150,7 +150,7 @@ Nesting those inside of the BorderContainer will look like this:
 
   .. cv:: html
 
-        <div dojoType="dijit.layout.BorderContainer" style="width: 500px; height: 300px; border: 1px solid black;">
+        <div dojoType="dijit.layout.BorderContainer" style="width: 500px; height: 300px; border: 1px solid #ccc;">
              <div dojoType="dijit.layout.ContentPane" region="top">Top pane</div>
              <div dojoType="dijit.layout.AccordionContainer" region="leading">
                   <div dojoType="dijit.layout.AccordionPane" title="pane #1">accordion pane #1</div>
