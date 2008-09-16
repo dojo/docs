@@ -14,18 +14,20 @@ Typically HTML has bottom-up sizing, where a container is as big as it's content
 
 .. cv-compound::
 
-  .. cv:: javascript
+  .. cv:: css
   
-     <style>
+     <style type="text/css">
+        .inner, .outer { margin: 5px; border: 1px solid blue; }
+        .inner { border: 1px solid green; }
      </style>
 
   .. cv:: html
 
-    <div style="border: solid blue 1px; margin: 5px; padding: 5px;">
-      <div  style="border: solid green 1px; margin: 5px; padding: 5px;">
+    <div class="outer">
+      <div  class="inner">
         Part 1
       </div>
-      <div  style="border: solid green 1px; margin: 5px; padding: 5px;">
+      <div class="inner">
         Part 2
       </div>
     </div>
@@ -34,12 +36,28 @@ The two inner (green) divs are each large enough to hold their text ("Part 1" an
 
 But for some web pages, you want them to work with the opposite pattern, where you start with a given size, typically the browser viewport, and then partition it into smaller sections. This is the way desktop application look, for example a mail program that has a tree on the left, a list of messages in the upper right, and the message preview on the lower right.
 
+.. cv-compound::
+
+  .. cv:: javascript
+
+     <script type="text/javascript">
+     dojo.require("dijit.layout.BorderContainer");
+     dojo.require("dijit.layout.ContentPane");
+     </script>
+
+  .. cv:: html
+
+        <div dojoType="dijit.layout.BorderContainer" style="width: 500px; height: 300px">
+             <div dojoType="dijit.layout.ContentPane" region="top">Top pane</div>
+             <div dojoType="dijit.layout.ContentPane" region="leading">Leading pane</div>
+             <div dojoType="dijit.layout.ContentPane" region="center">Center pane</div>
+             <div dojoType="dijit.layout.ContentPane" region="trailing">Trailing pane</div>
+             <div dojoType="dijit.layout.ContentPane" region="bottom">Bottom pane</div>
+        </div>
+
 Note that in this scenario, there's no scrollbar on the browser window itself, but if any pane is too small to display all the text it contains then it gets a scroll bar.
 
-.. image:: maildemo.png
-   :alt: mail demo screen shot
-
-Layout like the picture above can be done using tables or fancy CSS (see recent `A List Apart article <http://www.alistapart.com/articles/conflictingabsolutepositions>`_ about CSS sizing), but that technique has it's limits... it doesn't allow things like tabs or accordions or split containers where the user can adjust the size of each pane.
+Layout like above can be done using tables or fancy CSS (see recent `A List Apart article <http://www.alistapart.com/articles/conflictingabsolutepositions>`_ about CSS sizing), but that technique has it's limits... it doesn't allow things like tabs or accordions or split containers where the user can adjust the size of each pane.
 
 Dijit Layout
 ------------
