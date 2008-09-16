@@ -238,7 +238,7 @@ ItemFileWriteStore changes reflected in dojox.data.DataGrid
     <b>Set the population to assign to all items</b>
     <br>
     <br>
-    <div dojoType="dijit.form.NumberSpinner" jsId="spinner" value="10,000"></div>
+    <div dojoType="dijit.form.NumberSpinner" jsId="spinner" value="10000"></div>
     <br>
     <br>
     <div dojoType="dijit.form.Button" jsId="button2">Update all geography items populations!</div>
