@@ -36,13 +36,23 @@ The two inner (green) divs are each large enough to hold their text ("Part 1" an
 
 But for some web pages, you want them to work with the opposite pattern, where you start with a given size, typically the browser viewport, and then partition it into smaller sections. This is the way desktop application look, for example a mail program that has a tree on the left, a list of messages in the upper right, and the message preview on the lower right.
 
+
+.. image:: maildemo.png
+   :alt: mail demo screen shot
+
+Note that in this scenario, there's no scrollbar on the browser window itself, but if any pane is too small to display all the text it contains then it gets a scroll bar.
+
+Layout like above can be done using tables or fancy CSS (see recent `A List Apart article <http://www.alistapart.com/articles/conflictingabsolutepositions>`_ about CSS sizing):
+
 .. cv-compound::
 
   .. cv:: css
 
+      <style type="css/text">
         .top, .bottom { height: 100px; }
         .center { height: 200px; width: 300px; }
         .leading, .trailing { width: 200px; }
+      </style>
 
   .. cv:: html
 
@@ -60,14 +70,14 @@ But for some web pages, you want them to work with the opposite pattern, where y
           </tr>
         </table>
 
-Note that in this scenario, there's no scrollbar on the browser window itself, but if any pane is too small to display all the text it contains then it gets a scroll bar.
-
-Layout like above can be done using tables or fancy CSS (see recent `A List Apart article <http://www.alistapart.com/articles/conflictingabsolutepositions>`_ about CSS sizing), but that technique has it's limits... it doesn't allow things like tabs or accordions or split containers where the user can adjust the size of each pane.
+However, that technique has it's limits... it doesn't allow things like tabs or accordions or split containers where the user can adjust the size of each pane.
 
 Dijit Layout
 ------------
 
 Dijit has a number of layout widgets which can be combined in a hierarchy to achieve that. Every layout widget contains a list of other layout widgets, except for the "leaf" nodes in the hierarchy, which are typically ContentPanes.
+
+You typically start off the page using a BorderContainer, like this, to split the screen into sections:
 
 .. cv-compound::
 
@@ -80,7 +90,7 @@ Dijit has a number of layout widgets which can be combined in a hierarchy to ach
 
   .. cv:: html
 
-        <div dojoType="dijit.layout.BorderContainer" style="width: 500px; height: 300px">
+        <div dojoType="dijit.layout.BorderContainer" style="width: 500px; height: 300px; border: 1px solid black;">
              <div dojoType="dijit.layout.ContentPane" region="top">Top pane</div>
              <div dojoType="dijit.layout.ContentPane" region="leading">Leading pane</div>
              <div dojoType="dijit.layout.ContentPane" region="center">Center pane</div>
@@ -88,68 +98,90 @@ Dijit has a number of layout widgets which can be combined in a hierarchy to ach
              <div dojoType="dijit.layout.ContentPane" region="bottom">Bottom pane</div>
         </div>
 
+Then you start nesting containers.  For instance, on the left you might want an AccordionContainer:
 
-How does this work in practice? You need to think about the application above in a top-down (or outside-in) way:
+.. cv-compound::
 
-   1. the screen is split into multiple sections (top, bottom, left, right, and center)
-   2. The top is a toolbar
-   3. the left section has three panes one of which is shown at a time
-   4. the center section has a list of messages
-   5. the bottom is a preview pane.
+  .. cv:: javascript
 
-Conceptually it's a set of containers like this:
+     <script type="text/javascript">
+     dojo.require("dijit.layout.AccordionContainer");
+     </script>
 
-.. image:: layoutblock.png
-   :alt: block diagram of container nesting
+  .. cv:: html
 
-There are three types of elements in that picture:
+        <div dojoType="dijit.layout.AccordionContainer" style="width: 200px; height: 200px; border: 1px solid black;">
+             <div dojoType="dijit.layout.AccordionPane" title="pane #1">accordion pane #1</div>
+             <div dojoType="dijit.layout.AccordionPane" title="pane #2">accordion pane #2</div>
+             <div dojoType="dijit.layout.AccordionPane" title="pane #3">accordion pane #3</div>
+        </div>
+
+Or a TabContainer:
+
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+     <script type="text/javascript">
+     dojo.require("dijit.layout.TabContainer");
+     dojo.require("dijit.layout.ContentPane");
+     </script>
+
+  .. cv:: html
+
+        <div dojoType="dijit.layout.TabContainer" style="width: 200px; height: 200px; border: 1px solid black;">
+             <div dojoType="dijit.layout.ContentPane" title="tab #1">tab pane #1</div>
+             <div dojoType="dijit.layout.ContentPane" title="tab #2">tab pane #2</div>
+             <div dojoType="dijit.layout.ContentPane" title="tab #3">tab pane #3</div>
+        </div>
+
+Nesting those inside of the BorderContainer will look like this:
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+     <script type="text/javascript">
+     dojo.require("dijit.layout.BorderContainer");
+     dojo.require("dijit.layout.TabContainer");
+     dojo.require("dijit.layout.AccordionContainer");
+     dojo.require("dijit.layout.ContentPane");
+     </script>
+
+  .. cv:: html
+
+        <div dojoType="dijit.layout.BorderContainer" style="width: 500px; height: 300px; border: 1px solid black;">
+             <div dojoType="dijit.layout.ContentPane" region="top">Top pane</div>
+             <div dojoType="dijit.layout.AccordionContainer" region="leading">
+                  <div dojoType="dijit.layout.AccordionPane" title="pane #1">accordion pane #1</div>
+                  <div dojoType="dijit.layout.AccordionPane" title="pane #2">accordion pane #2</div>
+                  <div dojoType="dijit.layout.AccordionPane" title="pane #3">accordion pane #3</div>
+             </div>
+             <div dojoType="dijit.layout.TabContainer" region="center">
+                  <div dojoType="dijit.layout.ContentPane" title="tab #1">tab pane #1</div>
+                  <div dojoType="dijit.layout.ContentPane" title="tab #2">tab pane #2</div>
+                  <div dojoType="dijit.layout.ContentPane" title="tab #3">tab pane #3</div>
+             </div>
+             <div dojoType="dijit.layout.ContentPane" region="trailing">Trailing pane</div>
+             <div dojoType="dijit.layout.ContentPane" region="bottom">Bottom pane</div>
+        </div>
+
+There are three types of elements in that example:
 
    1. BorderContainer: displays all it's children at once in top/bottom/left/right/center positions
    2. StackContainers: containers that display one child at a time
    3. Leafs: leaf nodes containing content
 
+Conceptually it looks like this:
+
+.. image:: layoutblock.png
+   :alt: block diagram of container nesting
+
+
 The StackContainers in dijit are the AccordionContainer, TabContainer, or StackContainer itself. They all do basically the same thing, but look different.
 
 The leafs are typically ContentPanes but could be any widget, such as dojox.grid.Grid or dijit.Toolbar. An important consideration is whether or not the widget's size is adjustable (like a ContentPane) or not (like a Toolbar).
-
-So keeping those rules in mind and picking which widgets to use it will look like:
-
-* BorderContainer
-    
-  * Toolbar (top)
-  * Accordion Container (left)
-
-      * ContentPane #1
-      * ContentPane #2
-      * ContentPane #3
-
-  * Content Pane #4
-  * Content Pane #5
-
-And then from there it's easy to convert to HTML. Starting from the outside:
-
-.. code-block :: html
-  :linenos:
-
-  <div dojoType="dijit.layout.BorderContainer" id="mainDiv">
-    <div dojoType="dijit.Toolbar" region="top">...</div>
-    <div dojoType="dijit.layout.AccordionContainer" region="left">...    </div>
-    <div dojoType="dijit.layout.ContentPane" region="center">...</div>
-    <div dojoType="dijit.layout.ContentPane" region="bottom">...</div>
-  </div>
-
-Note that the region arguments on the child nodes are actually processed by the parent, but the other arguments are processed by the child. A bit confusing but that's the way it works.
-
-The accordion will look like:
-
-.. code-block :: html
-  :linenos:
-
-    <div dojoType="dijit.layout.AccordionContainer">
-        <div dojoType="dijit.layout.AccordionPane" title="Mail">...</div>
-        <div dojoType="dijit.layout.AccordionPane" title="News">...</div>
-        <div dojoType="dijit.layout.AccordionPane" title="Alerts">...</div>
-    </div>
 
 Tips
 ----
