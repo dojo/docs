@@ -18,10 +18,10 @@ Dojo core provides the ItemFileWriteStore store as an extension to ItemFileReadS
 API Support
 ===========
 
-* dojo.data.api.Read
-* dojo.data.api.Write
-* dojo.data.api.Identity
-* dojo.data.api.Notification
+* `dojo.data.api.Read <dojo/data/api/Read>`_
+* `dojo.data.api.Write <dojo/data/api/Write>`_
+* `dojo.data.api.Identity <dojo/data/api/Identity>`_
+* `dojo.data.api.Notification <dojo/data/api/Notification>`_
 
 ======================
 Constructor Parameters
