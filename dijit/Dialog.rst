@@ -70,6 +70,7 @@ Examples
     dojo.require("dijit.form.Button");
     dojo.require("dijit.Dialog");
 
+    var secondDlg;
     dojo.addOnLoad(function(){	
       // create the dialog
       secondDlg = new dijit.Dialog({
