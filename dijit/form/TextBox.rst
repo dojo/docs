@@ -38,7 +38,7 @@ Examples
         <input type="text" name="firstname" value="testing testing"
 		dojoType="dijit.form.TextBox"
 		trim="true" id="firstname"
-		propercase="true" />
+		propercase="true">
         <label for="firstname">Auto-trimming, Proper-casing Textbox:</label>
 
   
