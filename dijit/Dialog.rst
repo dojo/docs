@@ -188,7 +188,7 @@ To prevent the user from dismissing the dialog if there are errors in the form, 
     });
 
     function checkData(){
-        var data = formDlg.attr('values');
+        var data = formDlg.attr('value');
         console.log(data);
         if(data.sdate > data.edate){
            alert("Start date must be before end date");
