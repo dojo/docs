@@ -358,6 +358,10 @@ ItemFileWriteStore deletions reflected in dijit.Tree
   .. cv :: html 
 
     <div dojoType="dojo.data.ItemFileWriteStore" data="storeData2" jsId="geographyStore2"></div>
+    <b>Before pressing delete, be sure to expand out the tree so you can see nodes (items), being removed from it.</b>
+    <br>
     <div dojoType="dijit.form.Button" jsId="button3">Delete All Cities!</div>
+    <br>
+    <br>
     <div dojoType="dijit.tree.ForestStoreModel" jsId="geographyModel2" store="geographyStore2" query="{type: 'continent'}" rootId="Geography" rootLabel="Geography"></div>
     <div dojoType="dijit.Tree" model="geographyModel2"></div>
