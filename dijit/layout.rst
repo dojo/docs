@@ -215,7 +215,8 @@ This section discusses programmatic creation, destruction, etc.
 
 When creating widgets programmatically, you create the parent first, then add the children, and grandchildren... and finally call startup(). Startup() is called once on the top element in the hierarchy, after the whole hierarchy has been setup and the element inserted.
 
-.. codeviewer:: javascript
+.. code-block :: javascript
+  :linenos:
 
   // create a BorderContainer as the top widget in the hierarchy
   var bc = new dijit.layout.BorderContainer({style: "height: 500px; width: 800px;"});
@@ -252,17 +253,21 @@ Note that:
 
 After startup() has been called you can freely add remove children, like for example:
 
-.. codeviewer:: javascript
+.. code-block :: javascript
+  :linenos:
 
   // add a right pane to the BorderContainer
   bc.addChild(new ContentPane({region: "right", content: "...", style: "width: 100px;"}));
 
 or:
 
-.. codeviewer:: javascript
+.. code-block :: javascript
+  :linenos:
 
   // add a tab to the TabContainer
   tc.addChild( new dijit.layout.ContentPane({title: "tab 3"});
+
+Removing children is done w/the pointer to the child widget:
 
   // remove the first tab, and destroy it (and it's contents)
   tc.removeChild(tab1);
@@ -277,7 +282,7 @@ Note that:
 
 Typically you destroy a widget and all it's descendants, like this:
 
-.. codeviewer:: javascript
+.. code-block :: javascript
 
   bc.destroyRecursive();
 
