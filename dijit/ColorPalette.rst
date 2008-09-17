@@ -22,7 +22,7 @@ Default color palette, created programatically:
        dojo.addOnLoad(function(){
          new dijit.ColorPalette({
            onChange: function(val){ alert(val); }
-         }, placeHolder);
+         }, "placeHolder");
     </script>
 
   .. cv:: html
