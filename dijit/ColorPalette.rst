@@ -19,12 +19,11 @@ Default color palette, created programatically:
     <script type="text/javascript">
        dojo.require("dijit.ColorPalette");
        dojo.addOnLoad(function(){
-         console.log("start of addOnLoad");
          var myPalette = new dijit.ColorPalette({
            palette: "7x10",
            onChange: function(val){ alert(val); }
-         }, dojo.byId("placeHolder") );
-         console.log("created ", myPalette);
+         }, "placeHolder" );
+       });
     </script>
 
   .. cv:: html
