@@ -38,10 +38,10 @@ Dojo Book Outline
     * `Dijit FilteringSelect <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/select>`_. maps to: `FilteringSelect <dijit/form/FilteringSelect>`_
     * `Dijit NumberSpinner <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/number-spinner>`_. maps to `NumberSpinner <dijit/form/NumberSpinner>`_ [[CraigRiecke]].
     * `Dijit Slider <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/slider>`_. maps to: `Slider <dijit/form/Slider>`_
-    * `Dijit Textarea <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/resizeable-text-area>`_. maps to: `Textares <dijit/form/Textarea>`_
+    * `Dijit Textarea <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/resizeable-text-area>`_. maps to: `Textares <dijit/form/Textarea>`_ (complete)
     * `Dijit TextBox family - Validation, Currency, Number, Date, Time <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/textbox-validating-currency-number>`_. maps to: `Textbox <dijit/form/TextBox>`_,  
-       `ValidationTextbox <dijit/form/ValidationTextBox>`_, `CurrencyTextbox <dijit/form/CurrencyTextBox>`_, `NumberTextbox <dijit/form/NumberTextBox>`_,
-       `DateTextbox <dijit/form/DateTextBox>`_ and `TimeTextbox <dijit/form/TimeTextBox>`_ [[CraigRiecke]]
+       `ValidationTextbox <dijit/form/ValidationTextBox>`_, `CurrencyTextbox <dijit/form/CurrencyTextBox>`_, `NumberTextbox <dijit/form/NumberTextBox>`_, (all complete)
+       `DateTextbox <dijit/form/DateTextBox>`_ and `TimeTextbox <dijit/form/TimeTextBox>`_ [[CraigRiecke, complete]]
 
   * `Dijit Layout <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout>`_. maps to: `dijit.layout <dijit/layout>`_
 
@@ -54,20 +54,22 @@ Dojo Book Outline
   * `Command Control <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/command-control>`_.
 
     * `Button, ComboButton, DropDownButton <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/buttons-dropdown-combo-checkbox-ra>`_.
-    * `Menu <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/command-control/popup-menus-dijit-menu>`_.
-    * `Toolbar <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/command-control/toolbar>`_.
+    * `Menu <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/command-control/popup-menus-dijit-menu>`_. maps to: `Menu <dijit/Menu>`_
+    * `Toolbar <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/command-control/toolbar>`_. maps to: `Toolbar <dijit/Toolbar>`_
 
   * `User Assistance and Feedback <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/user-assistance-and-feedback>`_.
 
     * `Dijit ProgressBar <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/user-assistance-and-feedback/progress-bar>`_. maps to: `ProgressBar <dijit/ProgressBar>`_
     * `Dijit Tooltip <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/user-assistance-and-feedback/tooltip>`_. maps to: `Tooltip <dijit/Tooltip>`_ [[complete]]
-    * `Tijit Dialog and TooltipDialog <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout/dialog>`_. maps to: `Dialog <dijit/Dialog>`_ (done) and `TooltipDialog <dijit/TooltipDialog>`_
+    * `Dijit Dialog and TooltipDialog <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout/dialog>`_. maps to: 
+         * `Dialog <dijit/Dialog>`_ (done)
+         * and `TooltipDialog <dijit/TooltipDialog>`_
     * `Dijit TitlePane <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout/title-pane>`_. maps to: `TitlePane <dijit/TitlePane>`_
 
   * `Advanced Editing and Display <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/advanced-editing-and-display>`_.
 
-    * `ColorPalette <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/advanced-editing-and-display/color-palette>`_.
-    * `InlineEditBox (1.0) <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/advanced-editing-and-display/inlineeditbox>`_.
+    * `ColorPalette <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/advanced-editing-and-display/color-palette>`_. maps to: `ColorPalette <dijit/ColorPalette>`_
+    * `InlineEditBox (1.0) <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/advanced-editing-and-display/inlineeditbox>`_. maps to: `InlineEditBox <dijit/InlineEditBox>`_
     * `Dijit Editor <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/advanced-editing-and-display/editor-rich-text>`_. maps to `Editor <dijit/Editor>`_ [[complete]
     * `Dijit Tree <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/advanced-editing-and-display/tree>`_. maps to `Tree <dijit/Tree>`_ [[complete]]
 
