@@ -43,7 +43,7 @@ Dojo Book Outline
        `ValidationTextbox <dijit/form/ValidationTextBox>`_, `CurrencyTextbox <dijit/form/CurrencyTextBox>`_, `NumberTextbox <dijit/form/NumberTextBox>`_, (all complete)
        `DateTextbox <dijit/form/DateTextBox>`_ and `TimeTextbox <dijit/form/TimeTextBox>`_ [[CraigRiecke, complete]]
 
-  * `Dijit Layout <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout>`_. maps to: `dijit.layout <dijit/layout>`_
+  * `Dijit Layout <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout>`_. maps to: `dijit.layout <dijit/layout>`_ (complete)
 
     * `Dijit AccordionContainer <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout/accordion-container>`_. maps to: `AccordionContainer <dijit/layout/AccordionContainer>`_
     * `Dijit BorderContainer <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout/border-container>`_. maps to: `BorderContainer <dijit/layout/BorderContainer>`_
