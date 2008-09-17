@@ -7,7 +7,6 @@ dijit.ColorPalette
 
 dijit.ColorPalette is a great little tool which provides a color picker for you to use in your application.
 
-
 Examples
 --------
 
@@ -20,6 +19,7 @@ Default color palette, created programatically:
     <script type="text/javascript">
        dojo.require("dijit.ColorPalette");
        dojo.addOnLoad(function(){
+         console.log("start of addOnLoad");
          var myPalette = new dijit.ColorPalette({
            palette: "7x10",
            onChange: function(val){ alert(val); }
