@@ -7,33 +7,39 @@ dijit._LayoutWidget
 The `dijit.layout <dijit/layout/_LayoutWidget>`_ page attempts to document the contract for using layout widgets, but
 what should you do if you want to *write* a layout widget?
 
-Typically layout widgets inherit from the dijit.layout._LayoutWidget base class.  This implements addChild(), removeChild(), and resize().
+Typically layout widgets inherit from the dijit.layout._LayoutWidget base class. This implements addChild(), removeChild(), and resize().
 
 The widget is responsible for implementing some callback methods and setting some properties though:
 
+=================
 Properties to Set
 =================
 
 this.containerNode
 ------------------
+
 The widget must have a containerNode property (typically declared in the template, dojoAttachPoint="containerNode").
 All the child widgets will be put under here.
 
 baseClass
 ---------
+
 Like other widgets, you should define baseClass to be the CSS class name associated with the widget, for example "dijitTabContainer".
 
 
+====================
 Methods To Implement
 ====================
 
 layout()
 --------
-When the widget is started or resized, layout() is called.   layout()'s job is to arrange the contents of the widget according to it's [new] size.  For example, BorderContainer will set the size of the center pane to whatever space is left over after placing the top, bottom, left and right panes.   layout() can (and should) reference this._contentBox to get the size available for laying out it's children.
+
+When the widget is started or resized, layout() is called. layout()'s job is to arrange the contents of the widget according to it's [new] size. For example, BorderContainer will set the size of the center pane to whatever space is left over after placing the top, bottom, left and right panes. layout() can (and should) reference this._contentBox to get the size available for laying out it's children.
 
 _setupChild()
 -------------
-addChild() is *not* called for widgets that are in the original markup.  For example, addChild() is not called for the ContentPanes
+
+addChild() is *not* called for widgets that are in the original markup. For example, addChild() is not called for the ContentPanes
 in the markup below:
 
 .. code-block:: html
@@ -53,13 +59,15 @@ To bridge this gap and do processing common to both initial children and added c
 _setupChild() is useful for tasks like in TabContainer where it sets up a tab label for each child.
 
 
+=========
 Lifecycle
 =========
+
 The lifecycle of layout widgets is particularly complex because they
   * do sizing in javascript
   * are hierarchical: there's a relationship between parent and children widgets.
 
-At the time that postCreate() etc is called, the child widgets do not yet exist, and also the widget may not be connected to the document yet, so neither sizing nor parent/child related processing can be done.  Thus, some/most setup has to occur in startup().
+At the time that postCreate() etc is called, the child widgets do not yet exist, and also the widget may not be connected to the document yet, so neither sizing nor parent/child related processing can be done. Thus, some/most setup has to occur in startup().
 
 *Lifecycle:*
 
@@ -74,11 +82,12 @@ At the time that postCreate() etc is called, the child widgets do not yet exist,
 
 addChild()
 ----------
+
 Children can be added to a layout widget before or after it's been started (via the startup() call on it, or an ancestor in it's hierarchy). 
 Thus, addChild() and removeChild() must work before or after the widget has been started.
 They can reference the this._started field to detect this state.
 
-The distinction is important.   Consider SplitContainer's lifecycle:
+The distinction is important. Consider SplitContainer's lifecycle:
 
   1. initial children may be specified in markup
   2. or if programatic creation, addChild() is called for each (initial child)
@@ -95,5 +104,3 @@ However:
   8. SplitContainer resizes existing children to make room for new child
 
 When children are added or removed after startup(), SplitContainer must immediately do sizing.
-
-
