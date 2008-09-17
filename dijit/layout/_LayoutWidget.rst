@@ -1,8 +1,14 @@
 #format dojo_rst
 
-
 dijit._LayoutWidget
 ===================
+
+:Status: Contributed, Draft
+:Version: beta
+:Authors: ?--
+
+.. contents::
+    :depth: 2
 
 The `dijit.layout <dijit/layout/_LayoutWidget>`_ page attempts to document the contract for using layout widgets, but
 what should you do if you want to *write* a layout widget?
