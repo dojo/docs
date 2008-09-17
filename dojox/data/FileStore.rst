@@ -195,54 +195,6 @@ Attaching the FileStore to dijit.form.ComboBox declaratively
     <div dojoType="dijit.form.ComboBox"  store="comboStore" searchAttr="path" value="./demos"></div> 
   </div>
 
-Attaching the FileStore to dojox.grid.DataGrid declaratively
-------------------------------------------------------------
-
-.. cv-compound ::
-
-  .. cv :: javascript
-
-    <script type="text/javascript">
-      dojo.require("dojox.grid.DataGrid");
-      dojo.require("dojox.data.FileStore");
-    </script>
-
-  .. cv :: html
-
-    <span dojoType="dojox.data.FileStore" 
-      jsId="fileStore3" 
-      url="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/demos/stores/filestore_dojoxdata.php" 
-      pathAsQueryParam="true">
-    </span>
-
-    <table dojoType="dojox.grid.DataGrid"
-        store="fileStore3"
-        query="{}"
-        queryOptions="{deep:true}"
-        sortFields="[{'attribute':'path', 'descending': false}]"
-        clientSort="true"
-        style="width: 400px; height: 200px;">
-      <thead>
-        <tr>
-          <th width="100px" field="name">Filename</th>
-          <th width="100px" field="size">File Size</th>
-          <th width="100px" field="directory">Is Directory</th>
-          <th width="100px" field="path">Path</th>
-        </tr>
-      </thead>
-    </table>
-
-  .. cv:: css
-
-    <style type="text/css">
-      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/resources/Grid.css";
-      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/resources/nihiloGrid.css";
-
-      .dojoxGrid table {
-        margin: 0;
-      }
-    </style>
-
 
 ==========================
 Technical/Protocol Details
