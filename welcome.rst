@@ -81,6 +81,7 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 * `dojo._base <dojo/base>`_
 * `dojo.addOnLoad <dojo/addOnLoad>`_
 * `Array utilities: <dojo/array>`_  Details on dojo.every, dojo.filter, dojo.forEach, dojo.indexOf, dojo.lastIndexOf, dojo.map, and dojo.some.
+* `dojo.back <dojo/back>`_
 * `dojo.browser <dojo/browser>`_
 * `dojo.connect <dojo/connect>`_
 * `dojo.Color <dojo/Color>`_
