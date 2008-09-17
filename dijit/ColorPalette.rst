@@ -15,7 +15,7 @@ Default color palette, created programatically:
 
 .. cv-compound::
 
-  .. cv: javascript
+  .. cv:: javascript
 
     <script type="text/javascript">
        dojo.require("dijit.ColorPalette");
@@ -25,7 +25,7 @@ Default color palette, created programatically:
          }, placeHolder);
     </script>
 
-  .. cv: html
+  .. cv:: html
 
     <span id="placeHolder"></span>
 
