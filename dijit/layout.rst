@@ -317,3 +317,8 @@ If you want to notify a widget that it's size has been changed, you omit that ar
 .. code-block :: javascript
 
    bc.resize();
+
+======================
+Writing Layout Widgets
+======================
+See the `dijit.layout.LayoutWidget <dijit/layout/_LayoutWidget>`_ section for details on how to write a layout widget.
