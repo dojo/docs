@@ -16,9 +16,12 @@ dojo.back allows to update the browser history, so that it's possible to use the
 Usage
 =====
 
+Initialization
+--------------
+
 To use dojo.back:
 
-1. Define ***preventBackButtonFix: false*** in your djConfig like this:.
+1. Define **preventBackButtonFix: false** in your djConfig like this:.
 
    .. code-block :: javascript
 
@@ -50,28 +53,38 @@ To use dojo.back:
    * For receiving Back notifications: back(), backButton() or handle(type), where type will either be the string "back" or "forward".
    * For receiving Forward notifications: forward(), forwardButton() or handle(type), where type will either be the string "back" or "forward".
 
+   Example of a very simple state object:
+
+   .. code-block :: javascript
+
+       var state = {
+           back: function() { alert("Back was clicked!"); },
+           forward: function() { alert("Forward was clicked!"); }
+       };
+   ..
+
+Register a state object
+-----------------------
+
+To register a state object that represents the result of a user action, use the following call:
+
+.. code-block :: javascript
+
+  dojo.back.addToHistory(state);
+
+
+Change the URL in the location bar
+----------------------------------
+
+To change the URL in the browser's location bar, include a **changeUrl** property on the state object.
+
+* If this property is set to true, dojo.back will generate a unique value for the fragment identifier. 
+* If it is set to any other value (except undefined, null, 0 or empty string), then that value will be used as the fragment identifier. 
+
+This will allow users to bookmark the page.
+
 ========
 Examples
 ========
 
-Example of a very simple state object:
-
-.. cv-compound ::
-  
-  .. cv:: javascript
-
-    <script type="text/javascript">
-        var state = {
-            back: function() { alert("Back was clicked!"); },
-            forward: function() { alert("Forward was clicked!"); }
-        };
-    </script>
-
-
-
-
-To register a state object that represents the result of a user action, use the following call:
-
-dojo.back.addToHistory(state);
-
-To change the URL in the browser's location bar, include a changeUrl property on the state object. If this property is set to true, dojo.back will generate a unique value for the fragment identifier. If it is set to any other value (except undefined, null, 0 or empty string), then that value will be used as the fragment identifier. This will allow users to bookmark the page.
+TODO
