@@ -143,48 +143,67 @@ Dijit is Dojo's UI Library, and lives as a separate namespace ``dijit``. Dijit r
   * `dijit a11y <dijit-a11y-strategy>`_
   * `dijit a11y resources <dijit-a11y-resources>`_
 
+* `dijit.Calendar <dijit/Calendar>`_
+* `dijit.ColorPalette <dijit/ColorPalette>`_
 * `dijit.Dialog <dijit/Dialog>`_
 * `dijit.Editor <dijit/Editor>`_
+* `dijit.InlineEditBox <dijit/InlineEditBox>`_
+* `dijit.Menu <dijit/Menu>`_
+* `dijit.ProgressBar <dijit/ProgressBar>`_
+* `dijit.TitlePane <dijit/TitlePane>`_
+* `dijit.Tooltip <dijit/Tooltip>`_
+* `dijit.TooltipDialog <dijit/TooltipDialog>`_
 * `dijit.Tree <dijit/Tree>`_
 
   * `dijit.tree.Model <dijit/tree/Model>`_
   * `dijit.tree.TreeStoreModel <dijit/tree/ForestStoreModel>`_
   * `dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`_
 
+
 Form handling
 -------------
 
 * `dijit.form <dijit/form>`_
 
-  * `dijit.form.Form <dijit/form/Form>`_
-  * `dijit.form.NumberSpinner <dijit/form/NumberSpinner>`_
-  * `dijit.form.RadioButton <dijit/form/RadioButton>`_
-  * `dijit.form.Button <dijit/form/Button>`_
-  * `dijit.form.ComboButton <dijit/form/ComboButton>`_
-  * `dijit.form.DropDownButton <dijit/form/DropDownButton>`_
-  * `dijit.form.CheckBox <dijit/form/CheckBox>`_
-  * `dijit.form.Slider <dijit/form/Slider>`_
-  * `dijit.form.ComboBox <dijit/form/ComboBox>`_
-  * `dijit.form.FilteringSelect <dijit/form/FilteringSelect>`_
-  * `dijit.form.TextBox <dijit/form/TextBox>`_
-  * `dijit.form.NumberTextBox <dijit/form/NumberTextBox>`_
-  * `dijit.form.CurrencyTextBox <dijit/form/CurrencyTextBox>`_
-  * `dijit.form.DateTextBox <dijit/form/DateTextBox>`_
-  * `dijit.form.TimeTextBox <dijit/form/TimeTextBox>`_
-  * `dijit.form.ValidationTextBox <dijit/form/ValidationTextBox>`_
+  * text boxes
+
+    * `dijit.form.CurrencyTextBox <dijit/form/CurrencyTextBox>`_
+    * `dijit.form.DateTextBox <dijit/form/DateTextBox>`_
+    * `dijit.form.NumberSpinner <dijit/form/NumberSpinner>`_
+    * `dijit.form.NumberTextBox <dijit/form/NumberTextBox>`_
+    * `dijit.form.TextBox <dijit/form/TextBox>`_
+    * `dijit.form.TimeTextBox <dijit/form/TimeTextBox>`_
+    * `dijit.form.ValidationTextBox <dijit/form/ValidationTextBox>`_
+ 
+  * select type widgets
+
+    * `dijit.form.ComboBox <dijit/form/ComboBox>`_
+    * `dijit.form.FilteringSelect <dijit/form/FilteringSelect>`_
+
+  * buttons
+
+    * `dijit.form.Button <dijit/form/Button>`_
+    * `dijit.form.ComboButton <dijit/form/ComboButton>`_
+    * `dijit.form.DropDownButton <dijit/form/DropDownButton>`_
+
+  * other controls
+
+    * `dijit.form.CheckBox <dijit/form/CheckBox>`_
+    * `dijit.form.Form <dijit/form/Form>`_ (widget corresponding to the form itself)
+    * `dijit.form.RadioButton <dijit/form/RadioButton>`_
+    * `dijit.form.Slider <dijit/form/Slider>`_
 
 Layout
 ------
 
 * `dijit.layout <dijit/layout>`_
 
-  * `dijit.layout.ContentPane <dijit/layout/ContentPane>`_
-  * `dijit.layout.BorderContainer <dijit/layout/BorderContainer>`_
-  * `dijit.layout.StackContainer <dijit/layout/StackContainer>`_
   * `dijit.layout.AccordionContainer <dijit/layout/AccordionContainer>`_
+  * `dijit.layout.BorderContainer <dijit/layout/BorderContainer>`_
+  * `dijit.layout.ContentPane <dijit/layout/ContentPane>`_
+  * `dijit.layout.StackContainer <dijit/layout/StackContainer>`_
   * `dijit.layout.TabContainer <dijit/layout/TabContainer>`_
 
-* `dijit.ProgressBar <dijit/ProgressBar>`_
 
 ===============
 DojoX reference
