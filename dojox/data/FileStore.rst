@@ -169,17 +169,22 @@ Attaching it as the datastore for a widget works the same as it would for any wi
 Attaching the FileStore to dijit.Tree declaratively
 ---------------------------------------------------
 
-.. codeviewer::
+.. cv-compound ::
 
-  <script>
-    dojo.require("dijit.Tree");
-    dojo.require("dojox.data.FileStore");
-  </script>
-  <div>
-    <div dojoType="dojox.data.FileStore" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/demos/stores/filestore_dojotree.php" pathAsQueryParam="true" jsId="dojoFiles"></div>
-    <div dojoType="dijit.tree.ForestStoreModel" jsId="fileModel" store="dojoFiles" query="{}" rootId="DojoFiles" rootLabel="Dojo Files" childrenAttrs="children"></div>
-    <div id="tree" dojoType="dijit.Tree" model="fileModel" ></div>  
-  </div>
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dijit.Tree");
+      dojo.require("dojox.data.FileStore");
+    </script>
+
+  .. cv :: html
+  
+    <div>
+      <div dojoType="dojox.data.FileStore" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/demos/stores/filestore_dojotree.php" pathAsQueryParam="true" jsId="dojoFiles"></div>
+      <div dojoType="dijit.tree.ForestStoreModel" jsId="fileModel" store="dojoFiles" query="{}" rootId="DojoFiles" rootLabel="Dojo Files" childrenAttrs="children"></div>
+      <div id="tree" dojoType="dijit.Tree" model="fileModel" ></div>  
+    </div>
 
 Attaching the FileStore to dijit.form.ComboBox declaratively
 ------------------------------------------------------------
