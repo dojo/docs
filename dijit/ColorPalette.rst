@@ -5,10 +5,21 @@
 dijit.ColorPalette
 ==================
 
+:Status: Contributed, Draft
+:Version: beta
+:Authors: ?--
+
+.. contents::
+    :depth: 2
+
 dijit.ColorPalette is a great little tool which provides a color picker for you to use in your application.
 
+========
 Examples
---------
+========
+
+Default color palette
+---------------------
 
 Default color palette, created programatically:
 
@@ -29,6 +40,9 @@ Default color palette, created programatically:
   .. cv:: html
 
     <span id="placeHolder">this will be replaced</span>
+
+Small color palette
+-------------------
 
 Small color palette, created declaratively:
 
