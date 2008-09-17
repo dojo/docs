@@ -37,7 +37,7 @@ Small color palette, created declaratively:
 
       <script type="text/javascript">
         dojo.require("dijit.ColorPalette");
-     </script>
+      </script>
 
    .. cv:: html
 
