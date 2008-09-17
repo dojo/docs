@@ -190,7 +190,6 @@ Sizing to browser viewport: To make the outermost layout widget size to the brow
 .. code-block :: css
   :linenos:
 
-
   html, body, #mainDiv {
     width: 100%; height: 100%;
     border: 0; padding: 0; margin: 0;
@@ -204,6 +203,36 @@ Visibility
 ----------
 Restrictions about visibility: none of the layout widgets work if they are inside a hidden element. This is very important and a mistake many people make.  Dialog, etc. are created using visibility:hidden rather than display:none to avoid this problem.
 
-Programmatic Creation
----------------------
-Startup call: when building widgets programmatically, you create the parent first, then add the children, and grandchildren... and finally call startup(). Startup() is called once on the top element in the hierarchy, after the whole hierarchy has been setup and the element inserted.
+
+Lifecycle for Layout Widgets
+============================
+When building widgets programmatically, you create the parent first, then add the children, and grandchildren... and finally call startup(). Startup() is called once on the top element in the hierarchy, after the whole hierarchy has been setup and the element inserted.
+
+For example:
+
+.. codeviewer:: javascript
+
+  var bc = new dijit.layout.BorderContainer({style: "height: 500px; width: 800px;"});
+
+  var cp1 = new dijit.layout.ContentPane({
+     region: "top",
+     style: "height: 100px",
+     content: "hello world"
+  });
+  bc.addChild(cp1);
+  
+  var tc = new dijit.layout.TabContainer();
+  tc.addChild( new dijit.layout.ContentPane({title: "tab 1"});
+  tc.addChild( new dijit.layout.ContentPane({title: "tab 2"});
+  bc.addChild(tc);
+  
+  tc.startup();
+
+Note that:
+
+  * startup() is called once on the top most widget only
+  * (when possible) call startup last, after children have been added
+  * before startup() is called the node must be attached to the document somewhere, so that node can size itself correctly
+  * top node in the hierarchy has a specified size; other nodes typically don't have a size (except for nodes on the edges of BorderContainer) because their size is determined by the parent.
+
+TODO: More later... including adding/removing children after the fact.
