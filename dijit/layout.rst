@@ -269,6 +269,8 @@ or:
 
 Removing children is done w/the pointer to the child widget:
 
+.. code-block :: javascript
+
   // remove the first tab, and destroy it (and it's contents)
   tc.removeChild(tab1);
   tab1.destroyRecursive();
@@ -297,12 +299,12 @@ The resize function for widgets layout widgets serves two purposes:
 
 Usually you pass a size to the resize method, like:
 
-.. codeviewer:: javascript
+.. code-block :: javascript
 
    bc.resize({h: 500, w: 500});
 
 If you want to notify a widget that it's size has been changed, you omit that argument:
 
-.. codeviewer:: javascript
+.. code-block :: javascript
 
    bc.resize();
