@@ -7,10 +7,11 @@ dijit.layout
 :Version: 1.0
 
 .. contents::
-  :depth: 3
+    :depth: 2
 
+================
 HTML and Layouts
-----------------
+================
 
 Typically HTML has bottom-up sizing, where a container is as big as it's contents, so that given
 
@@ -74,8 +75,10 @@ Layout like above can be done using tables or fancy CSS (see recent `A List Apar
 
 However, that technique has it's limits... it doesn't allow things like tabs or accordions or split containers where the user can adjust the size of each pane.
 
+
+============
 Dijit Layout
-------------
+============
 
 Dijit has a number of layout widgets which can be combined in a hierarchy to achieve that. Every layout widget contains a list of other layout widgets, except for the "leaf" nodes in the hierarchy, which are typically ContentPanes.
 
@@ -184,8 +187,9 @@ Conceptually it looks like this:
    :alt: block diagram of container nesting
 
 
+==================
 Sizing to Viewport
-------------------
+==================
 
 Sizing to browser viewport: To make the outermost layout widget size to the browser's viewport, in your page CSS you should have:
 
@@ -201,11 +205,15 @@ where mainDiv is the id of the outermost div.
 
 Note that height=width=100% means different things depending on the browser when you have padding or border, so when using those tags it's best not to have either of those. Put your padding, border, and margin on elements inside the outer layout container.
 
+
+==========
 Visibility
-----------
+==========
+
 Restrictions about visibility: none of the layout widgets work if they are inside a hidden element. This is very important and a mistake many people make.  Dialog, etc. are created using visibility:hidden rather than display:none to avoid this problem.
 
 
+===================================
 Programmatic Creation and Lifecycle
 ===================================
 
@@ -288,8 +296,9 @@ Typically you destroy a widget and all it's descendants, like this:
 
   bc.destroyRecursive();
 
+========
 Resizing
---------
+========
 
 The resize function for widgets layout widgets serves two purposes:
 
