@@ -149,7 +149,7 @@ Simple programmatic usage
 
 A complete code example of querying the entire filesystem for a wildcard matched file:
 
-.. code-block :: javascript
+.. code-block :: 
 
   var fileStore = new dojox.data.FileStore({url: "myService.php", pathAsQueryParam: true});
     function searchDone(items, request){
