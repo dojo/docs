@@ -23,12 +23,13 @@ Default color palette, created programatically:
          var myPalette = new dijit.ColorPalette({
            palette: "7x10",
            onChange: function(val){ alert(val); }
-         }, "placeHolder");
+         }, dojo.byId("placeHolder") );
+         console.log("created ", myPalette);
     </script>
 
   .. cv:: html
 
-    <span id="placeHolder"></span>
+    <span id="placeHolder">this will be replaced</span>
 
 Small color palette, created declaratively:
 
