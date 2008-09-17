@@ -33,12 +33,12 @@ Small color palette, created declaratively:
 
 .. cv-compound::
 
-    .. cv:: javascript
+  .. cv:: javascript
 
       <script type="text/javascript">
         dojo.require("dijit.ColorPalette");
       </script>
 
-   .. cv:: html
+  .. cv:: html
 
      <div dojoType="dijit.ColorPalette" onChange="alert(this.value);" palette="3x4"></div>
