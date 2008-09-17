@@ -184,16 +184,21 @@ Attaching the FileStore to dijit.Tree declaratively
 Attaching the FileStore to dijit.form.ComboBox declaratively
 ------------------------------------------------------------
 
-.. codeviewer::
+.. cv-compound ::
 
-  <script>
-    dojo.require("dijit.form.ComboBox");
-    dojo.require("dojox.data.FileStore");
-  </script>
-  <div>
-    <div dojoType="dojox.data.FileStore" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/demos/stores/filestore_dojoxdata.php" pathAsQueryParam="true" jsId="comboStore"></div>
-    <div dojoType="dijit.form.ComboBox"  store="comboStore" searchAttr="path" value="./demos"></div> 
-  </div>
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dijit.form.ComboBox");
+      dojo.require("dojox.data.FileStore");
+    </script>
+
+  .. cv :: html
+
+    <div>
+      <div dojoType="dojox.data.FileStore" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/demos/stores/filestore_dojoxdata.php" pathAsQueryParam="true" jsId="comboStore"></div>
+      <div dojoType="dijit.form.ComboBox"  store="comboStore" searchAttr="path" value="./demos"></div> 
+    </div>
 
 Attaching the FileStore to dojox.grid.DataGrid declaratively
 ------------------------------------------------------------
