@@ -33,13 +33,13 @@ The constructor for ItemFileWriteStore takes the same parameters as `dojo.data.I
 Custom Types
 ============
 
-As with dojo.data.ItemFileReadStore, the ItemFileWriteStore supports using custom defined types in the data format.  Since ItemFileWriteStore supports mechanisms for serializing the store contents back out, the custom type support has been extended to allow for custom serializers so that the complex types can be converted back into their necessary encodings.  
+As with dojo.data.ItemFileReadStore, the ItemFileWriteStore supports using custom defined types in the data format. Since ItemFileWriteStore supports mechanisms for serializing the store contents back out, the custom type support has been extended to allow for custom serializers so that the complex types can be converted back into their necessary encodings.
 
 --------------------
 Custom Type Examples
 --------------------
 
-By default, ItemFileWriteStore has registered a custom type handler for JavaScript Date objects.  It uses the general case formatting option for the value, as shown below:
+By default, ItemFileWriteStore has registered a custom type handler for JavaScript Date objects. It uses the general case formatting option for the value, as shown below:
 
 .. code-block :: javascript
 
@@ -70,24 +70,24 @@ The query syntax for ItemFileWriteStore is identical to the query syntax of Item
 The Write API
 =============
 
-The write API implementation conforms to the dojo.data specification for Write.  Ultimately, the best way to think about it is that you use functions *newItem*, *deleteItem*, *setValue(s)*, and *unsetAttribute* to modify contents of the store.  These changes can be undone all in one function call by calling the store *revert* function, or they can be committed and made unreversable by the *save* function.  Think of it as semi-transactional.
+The write API implementation conforms to the dojo.data specification for Write. Ultimately, the best way to think about it is that you use functions *newItem*, *deleteItem*, *setValue(s)*, and *unsetAttribute* to modify contents of the store. These changes can be undone all in one function call by calling the store *revert* function, or they can be committed and made unreversable by the *save* function. Think of it as semi-transactional.
 
 ------------------------------
 The Behavior of the save() API
 ------------------------------
 
-Since this store implements the dojo.data.api.Write feature, it must implement the *save* function.   Since this is an in-memory data store, what exactly does *save* do when called?  By default, it only does two things:
+Since this store implements the dojo.data.api.Write feature, it must implement the *save* function. Since this is an in-memory data store, what exactly does *save* do when called?  By default, it only does two things:
 
 * Clear out the record of all changed, deleted, and new items so that isDirty() will return false.
 * Commit the changes to the internal main tree of items.
 * Call any callbacks passed to the save function.
 
-Okay, so it effectively removed the ability to revert out a set of changes.  In other words, it acts like a commit.  That's great, bit all of it just happens in the browser.  What if I want to send data back to a server when save is called for persistence?  Can this be done?  The answer is **yes**.  There are several ways to accomplish this.  The first would be to simply replace the store *save* function with a different one to do whatever you want.  However, that one ends up requiring knowing a lot about how things are stored internally, which is not always good to know about.  So, ItemFileWriteStore provides hook functions for users to over-ride to customize saving behavior without having to replace the *save* function.  This allows for you to define exactly what else you want the store to do with saved data results without having to know as much about internal representations:  The functions you can over-ride are defined below:
+Okay, so it effectively removed the ability to revert out a set of changes. In other words, it acts like a commit. That's great, bit all of it just happens in the browser. What if I want to send data back to a server when save is called for persistence?  Can this be done?  The answer is **yes**. There are several ways to accomplish this. The first would be to simply replace the store *save* function with a different one to do whatever you want. However, that one ends up requiring knowing a lot about how things are stored internally, which is not always good to know about. So, ItemFileWriteStore provides hook functions for users to over-ride to customize saving behavior without having to replace the *save* function. This allows for you to define exactly what else you want the store to do with saved data results without having to know as much about internal representations:  The functions you can over-ride are defined below:
 
 Save function Extension point: _saveEverything
 ----------------------------------------------
 
-The *_saveEverything* function should be defined on your store when all you want to do is get text content of the internal state back into a JSONable string so it can be sent serverside.  Effectively think of it as a way to get a JSON string back similar to the one you used to load the store.  The callbacks are the same callbacks you normally pass to the *save* function of the store.
+The *_saveEverything* function should be defined on your store when all you want to do is get text content of the internal state back into a JSONable string so it can be sent serverside. Effectively think of it as a way to get a JSON string back similar to the one you used to load the store. The callbacks are the same callbacks you normally pass to the *save* function of the store.
 
 .. code-block :: javascript
 
@@ -99,7 +99,7 @@ The *_saveEverything* function should be defined on your store when all you want
 Save function Extension point: _saveCustom
 ------------------------------------------
 
-The *_saveCustom* function should be defined on your store when you want to control exactly how everything gets serialized back (be it in JSON, XML, or whatnot).  The function signature is simple, it just takes the callbacks passed to the *save* API on the store.  Your implementation should introspect through the store's information, generate the save format your service desires, then send it and call the callbacks on whether it succeeds or not.  The *_saveCustom* function should be declared on the store as follows:
+The *_saveCustom* function should be defined on your store when you want to control exactly how everything gets serialized back (be it in JSON, XML, or whatnot). The function signature is simple, it just takes the callbacks passed to the *save* API on the store. Your implementation should introspect through the store's information, generate the save format your service desires, then send it and call the callbacks on whether it succeeds or not. The *_saveCustom* function should be declared on the store as follows:
 
 .. code-block :: javascript
 
@@ -111,24 +111,24 @@ The *_saveCustom* function should be defined on your store when you want to cont
 The Behavior of the revert() API
 --------------------------------
 
-The revert API is intended to undo changes made through calls to *newItem*, *deleteItem*, and *setValue(s)*.  What it effectively does is return the pristine data item states into the internal data array storing all the items for modified and deleted items.  For new items it removes them from the internal data array.   
+The revert API is intended to undo changes made through calls to *newItem*, *deleteItem*, and *setValue(s)*. What it effectively does is return the pristine data item states into the internal data array storing all the items for modified and deleted items. For new items it removes them from the internal data array.
 
-  **Note:**  Revert does **not** generate Notification events in reverse order for every change it undoes.  To detect revert changes to react accordingly, you should *dojo.connect* to the revert function on the store.
+  **Note:**  Revert does **not** generate Notification events in reverse order for every change it undoes. To detect revert changes to react accordingly, you should *dojo.connect* to the revert function on the store.
 
 ---------------------
 Referential Integrity
 ---------------------
 
-As of dojo 1.1, dojo.data.ItemFileWriteStore Write actions are reference aware.  This means that if you delete an item that is referenced by other items, then those other items are also updated to remove those references.  This will also generate Notification events when it occurs.  
+As of dojo 1.1, dojo.data.ItemFileWriteStore Write actions are reference aware. This means that if you delete an item that is referenced by other items, then those other items are also updated to remove those references. This will also generate Notification events when it occurs.
 
-  To put it more simply, say you have Item C which is referenced by Items A and B.  If you delete Item C, a deleteItem event occurs, then two onSet notifications will occur; one for Item A and one for Item B, indicating that the attribute that referenced Item C was modified because Item C was deleted.
+  To put it more simply, say you have Item C which is referenced by Items A and B. If you delete Item C, a deleteItem event occurs, then two onSet notifications will occur; one for Item A and one for Item B, indicating that the attribute that referenced Item C was modified because Item C was deleted.
 
 
 ====================
 The Notification API
 ====================
 
-ItemFileWriteStore supports dojo.data.api.Notification.  This means that every action through *newItem*, *setValue(s)*, *unsetAttribute*, and *deleteItem* will generate events to indicate these actions.  These events are functions on the store that widgets and user code can *dojo.connect* to.  This allows for pages to be very dynamic in that a change from one widget in a data store can be detected and reacted to in another.  For more details on Notification in general, please refer to the `Notification section <dojo/data/api/Notification>`_ of the dojo.data API.
+ItemFileWriteStore supports dojo.data.api.Notification. This means that every action through *newItem*, *setValue(s)*, *unsetAttribute*, and *deleteItem* will generate events to indicate these actions. These events are functions on the store that widgets and user code can *dojo.connect* to. This allows for pages to be very dynamic in that a change from one widget in a data store can be detected and reacted to in another. For more details on Notification in general, please refer to the `Notification section <dojo/data/api/Notification>`_ of the dojo.data API.
 
 ===================
 Pseudocode Examples
@@ -202,7 +202,7 @@ Functional Examples
 ItemFileWriteStore changes reflected in dojox.data.DataGrid
 -----------------------------------------------------------
 
-  The following is a semi-complex example of the write API in action.  In this example, there is a number spinner, a button, and the DataGrid.  You use the number spinner to select a value.  Then by pressing the button, a query to ItemFileWriteStore is made.  The results of that query are iterated over and *setValue* is called on each item to modify its population attribute (or add it if it did not exist).  The DataGrid is used to display results.  Since the DataGrid is dojo.data.Notification aware, it binds to the DataStore and listens for change events on items.  If an item is updated, then the grid automatically reflects it in its display.   In this example, changing the population for all items should result in all rows showing a change in the population column when the button is pressed.
+  The following is a semi-complex example of the write API in action. In this example, there is a number spinner, a button, and the DataGrid. You use the number spinner to select a value. Then by pressing the button, a query to ItemFileWriteStore is made. The results of that query are iterated over and *setValue* is called on each item to modify its population attribute (or add it if it did not exist). The DataGrid is used to display results. Since the DataGrid is dojo.data.Notification aware, it binds to the DataStore and listens for change events on items. If an item is updated, then the grid automatically reflects it in its display. In this example, changing the population for all items should result in all rows showing a change in the population column when the button is pressed.
 
 .. cv-compound ::
   
@@ -344,7 +344,7 @@ ItemFileWriteStore changes reflected in dojox.data.DataGrid
 ItemFileWriteStore deletions reflected in dijit.Tree
 ----------------------------------------------------
 
-  This example demonstrates how to use a function such as *deleteItem*.  In this case dijit.Tree is used to show a hierarchy of items.  By pressing the delete button, all items that are of type city are deleted.  Since the tree is dojo.data.api.Notification aware, it catches the delete event and updates its rendering accordingly.
+  This example demonstrates how to use a function such as *deleteItem*. In this case dijit.Tree is used to show a hierarchy of items. By pressing the delete button, all items that are of type city are deleted. Since the tree is dojo.data.api.Notification aware, it catches the delete event and updates its rendering accordingly.
 
 .. cv-compound ::
   
