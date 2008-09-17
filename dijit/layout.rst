@@ -1,4 +1,3 @@
-## page was renamed from 1.2/dijit/layout
 #format dojo_rst
 
 dijit.layout
@@ -6,6 +5,9 @@ dijit.layout
 
 :Status: Contributed, Draft
 :Version: 1.0
+
+.. contents::
+  :depth: 3
 
 HTML and Layouts
 ----------------
@@ -204,35 +206,98 @@ Visibility
 Restrictions about visibility: none of the layout widgets work if they are inside a hidden element. This is very important and a mistake many people make.  Dialog, etc. are created using visibility:hidden rather than display:none to avoid this problem.
 
 
-Lifecycle for Layout Widgets
-============================
-When building widgets programmatically, you create the parent first, then add the children, and grandchildren... and finally call startup(). Startup() is called once on the top element in the hierarchy, after the whole hierarchy has been setup and the element inserted.
+Programmatic Creation and Lifecycle
+===================================
 
-For example:
+This section discusses programmatic creation, destruction, etc.
+
+*Creation:*
+
+When creating widgets programmatically, you create the parent first, then add the children, and grandchildren... and finally call startup(). Startup() is called once on the top element in the hierarchy, after the whole hierarchy has been setup and the element inserted.
 
 .. codeviewer:: javascript
 
+  // create a BorderContainer as the top widget in the hierarchy
   var bc = new dijit.layout.BorderContainer({style: "height: 500px; width: 800px;"});
 
+  // create a ContentPane as the left pane in the BorderContainer
   var cp1 = new dijit.layout.ContentPane({
-     region: "top",
+     region: "left",
      style: "height: 100px",
      content: "hello world"
   });
   bc.addChild(cp1);
-  
-  var tc = new dijit.layout.TabContainer();
-  tc.addChild( new dijit.layout.ContentPane({title: "tab 1"});
-  tc.addChild( new dijit.layout.ContentPane({title: "tab 2"});
+
+  // create a TabContainer as the center pane in the BorderContainer,
+  // which itself contains two children
+  var tc = new dijit.layout.TabContainer({region: "center");
+  var tab1 = new dijit.layout.ContentPane({title: "tab 1"},
+      tab2 = new dijit.layout.ContentPane({title: "tab 2"};
+  tc.addChild( tab1 );
+  tc.addChild( tab2 );
   bc.addChild(tc);
-  
+
+  // put the top level widget into the document, and then call startup()
+  document.appendChild(bc.domNode);
   tc.startup();
 
 Note that:
 
   * startup() is called once on the top most widget only
   * (when possible) call startup last, after children have been added
-  * before startup() is called the node must be attached to the document somewhere, so that node can size itself correctly
-  * top node in the hierarchy has a specified size; other nodes typically don't have a size (except for nodes on the edges of BorderContainer) because their size is determined by the parent.
+  * before startup() is called the top widget's node (BorderContainer in this example) must be attached to the document somewhere, so that node can size itself correctly
+  * top node in the hierarchy  (BorderContainer in this example) has a specified size; other nodes typically don't have a size (except for nodes on the edges of BorderContainer) because their size is determined by the parent.
 
-TODO: More later... including adding/removing children after the fact.
+*Adult Life :-):*
+
+After startup() has been called you can freely add remove children, like for example:
+
+.. codeviewer:: javascript
+
+  // add a right pane to the BorderContainer
+  bc.addChild(new ContentPane({region: "right", content: "...", style: "width: 100px;"}));
+
+or:
+
+.. codeviewer:: javascript
+
+  // add a tab to the TabContainer
+  tc.addChild( new dijit.layout.ContentPane({title: "tab 3"});
+
+  // remove the first tab, and destroy it (and it's contents)
+  tc.removeChild(tab1);
+  tab1.destroyRecursive();
+
+Note that:
+
+  * you don't need to call startup() on the new children; it's called automatically when you add them to a hierarchy which has already been started.
+  * removeChild() doesn't destroy the widget, it just detaches it.
+
+*Destruction:*
+
+Typically you destroy a widget and all it's descendants, like this:
+
+.. codeviewer:: javascript
+
+  bc.destroyRecursive();
+
+Resizing
+--------
+
+The resize function for widgets layout widgets serves two purposes:
+
+  * set the size of the widget
+  * make the widget adjust the size of it's children
+  * children resize recursively
+
+Usually you pass a size to the resize method, like:
+
+.. codeviewer:: javascript
+
+   bc.resize({h: 500, w: 500});
+
+If you want to notify a widget that it's size has been changed, you omit that argument:
+
+.. codeviewer:: javascript
+
+   bc.resize();
