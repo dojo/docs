@@ -174,7 +174,7 @@ With a local custom template to change the layout (does not work against CDN)
 [experimental: 1.4+] Non-Gregorian calendars
 
 .. cv-compound::
-  :version: 1.4
+  :version: 9.99
   :height: 340
 
   .. cv:: javascript
