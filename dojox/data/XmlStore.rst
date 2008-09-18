@@ -60,29 +60,39 @@ The store is designed so that it can read generic XML and present back nodes as 
         ...
   </books>
     
-
+======================
 Constructor Parameters
+======================
 
 The constructor for XmlStore takes the following possible parameters in its keyword arguments:
 
-url
-    The URL from which to load the XML file containing the data. This URL is also the end point used for posting data base in a save. This is optional.
-sendQuery
-    Boolean option whether or not to send the query to a server for processing. The default is false.
 
-    false
-        It is assumed the server sends back the entire store dataset and the filerting and sorting must occur on the client side.
-    true
-        It is assumed the server is handling the filtering and is only sending back XML nodes that match the query. No filtering occurs clientside.
++--------------------------+--------------------------------------------------------------------------------------------------------+
+|**Parameter**             |**Description**                                                                                         |
++--------------------------+--------------------------------------------------------------------------------------------------------+
+|url                       |The URL from which to load the XML file containing the data. This URL is also the end point used for    |
+|                          |posting data base in a save. This is optional.                                                          |
++--------------------------+--------------------------------------------------------------------------------------------------------+
+|sendQuery                 |Boolean option whether or not to send the query to a server for processing. The default is false.       |
+|                          |*false                                                                                                  |
+|                          |  It is assumed the server sends back the entire store dataset and the filtering and sorting must       |
+|                          |  occur on the client side.                                                                             |
+|                          |*true                                                                                                   |
+|                          |  It is assumed the server is handling the filtering and is only sending back XML nodes that match the  |
+|                          |  query. No filtering occurs clientside.                                                                |
++--------------------------+--------------------------------------------------------------------------------------------------------+
+|rootItem                  |A tag name for root items. This is optional. If it is not provided, then the XmlStore assumes the tags  |
+|                          |under the root element of the document are the root items.                                              |
++--------------------------+--------------------------------------------------------------------------------------------------------+
+|keyAttribute              |An attribute name for a key or an indentity. This is optional.                                          |
++--------------------------+--------------------------------------------------------------------------------------------------------+
+|attributeMap              |An anonymous object that contains properties for attribute mapping, for example                         |
+|                          |{"tag_name.item_attribute_name": "@xml_attribute_name", ...}.   This is optional. This is done so that  |
+|                          |attributes which are actual XML tag attributes (and not sub-tags of an XML tag), can be referenced.     |
++--------------------------+--------------------------------------------------------------------------------------------------------+
+|label                     |The attribute of an item to use for the return of getLabel(). This is optional.                         |
++--------------------------+--------------------------------------------------------------------------------------------------------+
 
-rootItem
-    A tag name for root items. This is optional. If it is not provided, then the XmlStore assumes the tags under the root element of the document are the root items. 
-keyAttribute
-    An attribute name for a key or an indentity. This is optional.
-attributeMap
-    An anonymous object that contains properties for attribute mapping, for example {"tag_name.item_attribute_name": "@xml_attribute_name", ...} This is optional. This is done so that attributes which are actual XML tag attributes (and not sub-tags of an XML tag), can be referenced.
-label
-    The attribute of an item to use for the return of getLabel(). This is optional.
 
 Functions intended to be over-ridden to alter save behavior
 
