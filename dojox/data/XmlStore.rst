@@ -222,7 +222,7 @@ Functional Usage Examples
 
              //Build up the query from the input boxes.
              var isbn = isbnBox.getValue();
-             if ( name && dojo.trim(isbn) !== "" ) {
+             if ( isbn && dojo.trim(isbn) !== "" ) {
                queryObj["isbn"] = isbn;       
              }
 
