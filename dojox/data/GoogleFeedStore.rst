@@ -43,12 +43,6 @@ The following parameters are supported by the GoogleFeedStore implementation.
 Item Attributes
 ===============
 
-Depending on which of the search stores you instantiate, the supported list of item attributes changes.  This is because each search service exposes different information, since each type of search by its nature deems specific information the key information to return.  Below you will find a list of expected attribute names for each search service and what they are:
-
-----------------------------
-dojox.data.GoogleFeedStore
-----------------------------
-
 +-----------------+-----------------------------------------------------------------------------------------------------------------------------+
 |**Attribute**    |**Description**                                                                                                              |
 +-----------------+-----------------------------------------------------------------------------------------------------------------------------+
