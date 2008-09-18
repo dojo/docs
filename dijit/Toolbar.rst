@@ -1,7 +1,7 @@
 #format dojo_rst
 
-dijit.Menu
-==========
+dijit.Toolbar
+=============
 
 .. contents::
     :depth: 2
@@ -10,12 +10,11 @@ dijit.Menu
 :Version: 1.2
 :Authors: Bill Keese
 
-The Menu widget models a context menu, otherwise known as a right-click or popup menu, and they also appear in ComboButton and DropDownButton widgets.
+Just as dijit.Menu is a container for dijit.MenuItem's, so dijit.Toolbar is a container for buttons. Any button-based Dijit component can be placed on the toolbar, including ComboButtons and DropdownButtons.
 
-MenuItem widgets are the actual items in the menu. The PopupMenuItem is like a MenuItem, but displays a submenu or other widget to the right . A PopupMenuItem always has two child nodes: a tag with the displayed label (usually in a SPAN tag), and a widget to be popped up, typically a dijit.Menu widget.
-
-A programatically created menu
-------------------------------
+Programatic Toolbar
+-------------------
+In this example, we borrow some of the toolbar buttons from the Editor.
 
 .. cv-compound::
 
@@ -24,85 +23,79 @@ A programatically created menu
     <script type="text/javascript">
       dojo.require("dijit.Menu");
 
-      var pMenu;
+      var toolbar;
       dojo.addOnLoad(function(){
-            pMenu = new dijit.Menu({
-                targetNodeIds:["prog_menu"]
-            });
-            pMenu.addChild(new dijit.MenuItem({
-                label:"Simple menu item"
-            }));
-            pMenu.addChild(new dijit.MenuItem({
-                label:"Disabled menu item",
-                disabled: true
-            }));
-            pMenu.addChild(new dijit.MenuItem({
-                label:"Menu Item With an icon",
-                iconClass:"dijitEditorIcon dijitEditorIconCut",
-                onClick: function(){alert('i was clicked')}
-            }));
-            pMenu.addChild(new dijit.CheckedMenuItem({
-                label: "checkable menu item"
-            }));
-            pMenu.addChild(new dijit.MenuSeparator());
-
-            var pSubMenu = new dijit.Menu({
-                parentMenu: pMenu
-            });
-            pSubMenu.addChild(new dijit.MenuItem({
-                label:"Submenu item"
-            }));
-            pSubMenu.addChild(new dijit.MenuItem({
-                label:"Submenu item"
-            }));
-            pMenu.addChild(new dijit.PopupMenuItem({
-                label:"Submenu",
-                popup:pSubMenu
-            }));
-
-            pMenu.startup();
+	toolbar = new dijit.Toolbar({}, "toolbar");
+	dojo.forEach(["Cut", "Copy", "Paste"], function(label){
+		var button = new dijit.form.Button({
+                        // note: should always specify a label, for accessibility reasons.
+                        // Just set showLabel=false if you don't want it to be displayed normally
+                        label: label,
+                        showLabel: false,
+                        iconClass: "dijitEditorIcon dijitEditorIcon"+label
+                    });
+                    toolbar.addChild(button);
+		});
         });
+      });
     </script>
 
   .. cv:: html
 
-    <span id="prog_menu">Right click me to get a menu</span>
+    <span id="toolbar">toolbar will show up here</span>
 
 
 
 Creation from markup is even easier.
-This example creates a context menu for the whole window.
 
 .. cv-compound::
 
   .. cv:: javascript
 
     <script type="text/javascript">
-      dojo.require("dijit.Menu");
-      dojo.require("dijit.ColorPalette");
+      dojo.require("dijit.Toolbar");
+      dojo.require("dijit.form.Button");
     </script>
 
   .. cv:: html
 
-	<div dojoType="dijit.Menu" id="submenu1" contextMenuForWindow="true" style="display: none;">
-		<div dojoType="dijit.MenuItem" iconClass="dijitEditorIcon dijitEditorIconCut"
-			onClick="alert('not actually cutting anything, just a test!')">Cut</div>
-		<div dojoType="dijit.MenuItem" iconClass="dijitEditorIcon dijitEditorIconCopy"
-			onClick="alert('not actually copying anything, just a test!')">Copy</div>
-		<div dojoType="dijit.MenuItem" iconClass="dijitEditorIcon dijitEditorIconPaste"
-			onClick="alert('not actually pasting anything, just a test!')">Paste</div>
-		<div dojoType="dijit.MenuSeparator"></div>
-		<div dojoType="dijit.PopupMenuItem">
-			<span>Enabled Submenu</span>
-			<div dojoType="dijit.Menu" id="submenu2">
-				<div dojoType="dijit.MenuItem" onClick="alert('Submenu 1!')">Submenu Item One</div>
-				<div dojoType="dijit.MenuItem" onClick="alert('Submenu 2!')">Submenu Item Two</div>
+    <!-- Tags end on line afterwards to eliminate any whitespace -->
+    <div id="toolbar1" dojoType="dijit.Toolbar"
+        ><div dojoType="dijit.form.Button" id="toolbar1.cut" iconClass="dijitEditorIcon dijitEditorIconCut"   
+            showLabel="false">Cut</div
+        ><div dojoType="dijit.form.Button" id="toolbar1.copy" iconClass="dijitEditorIcon dijitEditorIconCopy" 
+            showLabel="false">Copy</div
+        ><div dojoType="dijit.form.Button" id="toolbar1.paste" iconClass="dijitEditorIcon dijitEditorIconPaste" 
+            showLabel="false">Paste</div
+        ><!-- The following adds a line between toolbar sections
+            --><span dojoType="dijit.ToolbarSeparator"></span
+         ><div dojoType="dijit.form.ToggleButton" id="toolbar1.bold" 
+            iconClass="dijitEditorIcon dijitEditorIconBold" showLabel="false">Bold</div>
+   </div>
+
+
+Here's a Toolbar that looks like a MenuBar.
+We haven't implemented a MenuBar for dijit yet so some people use the Toolbar as a poor-man's substitute.
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+      dojo.require("dijit.Toolbar");
+      dojo.require("dijit.form.Button");
+    </script>
+
+  .. cv:: html
+
+	<div id="menubar" dojoType="dijit.Toolbar" class="menuBar">
+		<div dojoType="dijit.form.DropDownButton">
+			<span>File</span>
+			<div dojoType="dijit.Menu">
+				<div dojoType="dijit.MenuItem">New</div>
+				<div dojoType="dijit.MenuItem">Open</div>
+				<div dojoType="dijit.MenuSeparator"></div>
+				<div dojoType="dijit.MenuItem" iconClass="dijitEditorIconSave">Save</div>
+				<div dojoType="dijit.MenuItem">Save As...</div>
 			</div>
 		</div>
-		<div dojoType="dijit.PopupMenuItem">
-			<span>Popup of something other than a menu</span>
-			<div dojoType="dijit.ColorPalette"></div>
-		</div>
-	</div>
-
-        <span> Click anywhere on the page to see this menu.</span>
