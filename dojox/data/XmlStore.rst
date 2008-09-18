@@ -24,6 +24,9 @@ The following dojo.data APIs are implemented by XmlStore
 * `dojo.data.api.Read <dojo/data/api/Read>`_
 * `dojo.data.api.Write <dojo/data/api/Write>`_
 
+=================
+Example XML Input
+=================
 
 The store is designed so that it can read generic XML and present back nodes as dojo.data items.  The following is an example of an XML document that this store can read:
 
