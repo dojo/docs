@@ -138,6 +138,24 @@ To find all items with attribute foo the value of which ends with ar and ignorin
 
 **NOTE:** Other stores should follow the same query definition semantics for consistency.
 
+=============
+Query Options
+=============
+
+Dojo.data defines support for a 'queryOptions' modifier object that affects the behavior of the query. The two defined options listed by the API are *ignoreCase* and *deep*. dojox.data.XmlStore supports these options. The affect of these options on a query is defined below.
+
++------------+------------------------------------------------------------------------------------------------------------------------+
+| **Option** | **Result**                                                                                                             |
++------------+------------------------------------------------------------------------------------------------------------------------+
+| ignoreCase |The default is **false**. When set to true, the match on attributes is done in a case-insensitive fashion. This means   |
+|            |with ignoreCase: true, a query of A* would match *Apple* and *acorn*                                                    |
++------------+------------------------------------------------------------------------------------------------------------------------+
+| deep       |This option affects searching when the structure passed to ItemFileReadStore has hierarchy. For an example of that,     |
+|            |refer to *Item Structure Example: Items with Hierarchy*. the default value for this option is false, which means the    |
+|            |query is only applied against root items in the tree of data items. If it is set to true, then the query is applied to  |
+|            |root items and *all* child data items. Think of it as a recursive search.                                               |
++------------+------------------------------------------------------------------------------------------------------------------------+
+
 ==============
 Usage Examples
 ==============
