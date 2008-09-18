@@ -67,7 +67,7 @@ Example 1: Finding all Continents and Cities
   .. cv :: javascript
 
     <script>
-      dojo.require("dojo.data.ItemFileReadStore");
+      dojo.require("dojox.data.AndOrReadStore");
       dojo.require("dijit.form.Button");
 
       var geoData = { 
@@ -115,7 +115,7 @@ Example 1: Finding all Continents and Cities
             { 'name':'Argentina', 'type':'country', 'population':'40 million' } ]
           } 
         ]
-      }    
+      };    
 
       //This function performs some basic dojo initialization. In this case it connects the button
       //onClick to a function which invokes the fetch(). The fetch function queries for all items 
@@ -154,7 +154,7 @@ Example 1: Finding all Continents and Cities
           }
              
           //Fetch the data.
-          geoStore.fetch({query: { complexQuery="type:\"continent\" OR type:\"city"}", onBegin: clearOldCList, onComplete: gotItems, onError: fetchFailed, queryOptions: {deep:true}});
+          geoStore.fetch({query: { complexQuery: "type:\"continent\" OR type:\"city\""}, onBegin: clearOldCList, onComplete: gotItems, onError: fetchFailed, queryOptions: {deep:true}});
         }
         //Link the click event of the button to driving the fetch.
         dojo.connect(button2, "onClick", getItems );
@@ -165,7 +165,7 @@ Example 1: Finding all Continents and Cities
 
   .. cv :: html 
 
-    <div dojoType="dojo.data.ItemFileReadStore" data="geoData" jsId="geoStore"></div>
+    <div dojoType="dojo.data.AndOrReadStore" data="geoData" jsId="geoStore"></div>
     <div dojoType="dijit.form.Button" jsId="button2">Find continents!</div>
     <br>
     <br>
