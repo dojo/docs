@@ -310,5 +310,5 @@ Connecting XmlStore to dijit.form.ComboBox
 
   .. cv :: html 
 
-    <div dojoType="dojox.data.XmStore" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/tests/stores/books.xml" jsId="bookStore2"></div>
+    <div dojoType="dojox.data.XmlStore" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/tests/stores/books.xml" jsId="bookStore2"></div>
     <div dojoType="dijit.form.ComboBox" store="bookStore2" searchAttr="title"></div>
