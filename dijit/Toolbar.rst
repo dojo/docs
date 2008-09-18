@@ -21,22 +21,22 @@ In this example, we borrow some of the toolbar buttons from the Editor.
   .. cv:: javascript
 
     <script type="text/javascript">
-      dojo.require("dijit.Menu");
+      dojo.require("dijit.Toolbar");
+      dojo.require("dijit.form.Button");
 
       var toolbar;
       dojo.addOnLoad(function(){
-	toolbar = new dijit.Toolbar({}, "toolbar");
-	dojo.forEach(["Cut", "Copy", "Paste"], function(label){
+	  toolbar = new dijit.Toolbar({}, "toolbar");
+	  dojo.forEach(["Cut", "Copy", "Paste"], function(label){
 		var button = new dijit.form.Button({
                         // note: should always specify a label, for accessibility reasons.
                         // Just set showLabel=false if you don't want it to be displayed normally
                         label: label,
                         showLabel: false,
                         iconClass: "dijitEditorIcon dijitEditorIcon"+label
-                    });
-                    toolbar.addChild(button);
-		});
-        });
+                });
+                toolbar.addChild(button);
+          });
       });
     </script>
 
@@ -46,6 +46,8 @@ In this example, we borrow some of the toolbar buttons from the Editor.
 
 
 
+Markup
+------
 Creation from markup is even easier.
 
 .. cv-compound::
@@ -74,6 +76,8 @@ Creation from markup is even easier.
    </div>
 
 
+Poor Man's MenuBar
+------------------
 Here's a Toolbar that looks like a MenuBar.
 We haven't implemented a MenuBar for dijit yet so some people use the Toolbar as a poor-man's substitute.
 
@@ -84,6 +88,7 @@ We haven't implemented a MenuBar for dijit yet so some people use the Toolbar as
     <script type="text/javascript">
       dojo.require("dijit.Toolbar");
       dojo.require("dijit.form.Button");
+      dojo.require("dijit.Menu");
     </script>
 
   .. cv:: html
@@ -99,3 +104,12 @@ We haven't implemented a MenuBar for dijit yet so some people use the Toolbar as
 				<div dojoType="dijit.MenuItem">Save As...</div>
 			</div>
 		</div>
+		<div dojoType="dijit.form.DropDownButton">
+			<span>Edit</span>
+			<div dojoType="dijit.Menu">
+				<div dojoType="dijit.MenuItem" iconClass="dijitEditorIconCut">Cut</div>
+				<div dojoType="dijit.MenuItem" iconClass="dijitEditorIconCopy">Copy</div>
+				<div dojoType="dijit.MenuItem" iconClass="dijitEditorIconPaste">Paste</div>
+			</div>
+		</div>
+        </div>
