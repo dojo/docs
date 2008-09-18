@@ -36,6 +36,7 @@ Query Translation
   A dojo.data request follows a specific JSON format. As an example, suppose we have a FilteringSelect which looks up states. When the user presses "A", the dojo.data request is:
 
 ::
+
   {
       query: {name: "A*"},
       queryOptions: {ignoreCase: true},
