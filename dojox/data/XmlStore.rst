@@ -75,11 +75,11 @@ The constructor for XmlStore takes the following possible parameters in its keyw
 +--------------------------+--------------------------------------------------------------------------------------------------------+
 |sendQuery                 |Boolean option whether or not to send the query to a server for processing. The default is false.       |
 |                          |                                                                                                        |
-|                          |*false                                                                                                  |
+|                          |false                                                                                                  |
 |                          |  It is assumed the server sends back the entire store dataset and the filtering and sorting must       |
 |                          |  occur on the client side.                                                                             |
 |                          |                                                                                                        |
-|                          |*true                                                                                                   |
+|                          |true                                                                                                   |
 |                          |  It is assumed the server is handling the filtering and is only sending back XML nodes that match the  |
 |                          |  query. No filtering occurs clientside.                                                                |
 +--------------------------+--------------------------------------------------------------------------------------------------------+
