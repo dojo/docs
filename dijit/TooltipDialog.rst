@@ -31,9 +31,7 @@ The first example shows how to create a TooltipDialog and DropDownButton program
  
             var button = new dijit.form.DropDownButton({
                 label: "hello!",
-                name: "programmatic2",
-                dropDown: dialog,
-                id: "progButton"
+                 dropDown: dialog
             });
             dojo.byId("dropdownButtonContainer").appendChild(button.domNode);
 	 });
@@ -64,8 +62,8 @@ Here's one displaying a TooltipDialog:
     <div dojoType="dijit.form.DropDownButton">
       <span>Register</span>
       <div dojoType="dijit.TooltipDialog">
-         <label for="name">Name:</label> <input dojoType="dijit.form.TextBox" id="name" name="name"><br>
-         <label for="hobby">Hobby:</label> <input dojoType="dijit.form.TextBox" id="hobby" name="hobby"><br>
+         <label for="name2">Name:</label> <input dojoType="dijit.form.TextBox" id="name2" name="name2"><br>
+         <label for="hobby2">Hobby:</label> <input dojoType="dijit.form.TextBox" id="hobby2" name="hobby2"><br>
          <button dojoType="dijit.form.Button" type="submit">Save</button>
       </div>
     </div>
