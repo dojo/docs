@@ -202,6 +202,10 @@ Example 2: Query for all books that start with ISBN: A9B57 Case insensitively
 Functional Usage Examples
 =========================
 
+-------------------------
+Searching node attributes
+-------------------------
+
 .. cv-compound ::
   
   .. cv :: javascript
@@ -289,3 +293,22 @@ Functional Usage Examples
     <br>
     <span id="list3">
     </span>
+
+
+------------------------------------------
+Connecting XmlStore to dijit.form.ComboBox
+------------------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojox.data.XmlStore");
+      dojo.require("dijit.form.ComboBox");
+    </script>
+
+  .. cv :: html 
+
+    <div dojoType="dojox.data.XmStore" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/tests/stores/books.xml" jsId="bookStore2"></div>
+    <div dojoType="dijit.form.ComboBox" store="bookStore2" searchAttr="title"></div>
