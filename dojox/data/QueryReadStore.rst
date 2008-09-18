@@ -54,6 +54,7 @@ Now we want to hand this off to the server. Odds are, your server doesn't recogn
 Fortunately, it's easy to translate between the two and you can quickly customize the translation by extending the class. You simply subclass QueryReadStore like this:
 
 ::
+
   dojo.provide("custom.ComboBoxReadStore");
 
   dojo.require("dojox.data.QueryReadStore");
