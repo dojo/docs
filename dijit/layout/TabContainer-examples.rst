@@ -155,4 +155,44 @@ One technique to allow validation, and still use the parser would be to simply d
     </div>
     </div>
 
+Here's an example that parses existing DOM and creates tabs,
+similar to what the parser does:
+
+.. cv-compound::
  
+  As a simple example, we'll use `dojo.query <dojo/query>`_ to find and create the ContentPanes used in the TabContainer
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+    dojo.require("dijit.layout.TabContainer");
+    dojo.require("dijit.layout.ContentPane");
+    dojo.addOnLoad(function(){
+        dojo.query(".tc1cp").forEach(function(n){
+            new dijit.layout.ContentPane({
+                // just pass a title: attribute, this, we're stealing from the node
+                title: dojo.attr(n,"title") 
+            }, n);
+        });
+        var tc = new dijit.layout.TabContainer({
+            style: dojo.attr("tc1-prog", "style") 
+        },"tc1-prog");
+        tc.startup(); 
+    });
+    </script>
+
+  The html is very simple
+
+  .. cv:: html
+
+    <div id="tc1-prog" style="width: 100%; height: 100px;">
+      <div class="tc1cp" title="My first tab">
+        Lorem ipsum and all around...
+      </div>
+      <div class="tc1cp" title="My second tab">
+        Lorem ipsum and all around - second...
+      </div>
+      <div class="tc1cp" title="My last tab">
+        Lorem ipsum and all around - last...
+      </div>
+    </div>
