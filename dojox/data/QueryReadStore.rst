@@ -69,4 +69,8 @@ Fortunately, it's easy to translate between the two and you can quickly customiz
 
 We can place this file into a folder "custom" at the same level as the dojo, dijit and dojox directories of the distribution. (See Creating Your Own Modules for a discussion and alternatives.
 
-You can download QueryReadStore.php below (it's also in /dojox/data/tests/stores/QueryReadStore.php) to run this example on a PHP server. The server portion hands over a portion of the states that fits the query. 
+==========================
+Server Side implementation
+==========================
+
+The server side is where all the heavy work of QueryReadStore occurs.  Specifically all query matching and sorting should happen here and only the items that match the parameters should be returned to the server.  To help you in development of your own remote service, dojo includes a demonstration PHP file that implements a basic version of the QueryReadStore server component.  You can find this basic implementation at: *dojox/data/tests/stores/QueryReadStore.php*.  The server portion hands over a portion of the states that fits the query. 
