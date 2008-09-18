@@ -26,8 +26,7 @@ The first example shows how to create a TooltipDialog and DropDownButton program
                content:
                  '<label for="name">Name:</label> <input dojoType="dijit.form.TextBox" id="name" name="name"><br>' +
                  '<label for="hobby">Hobby:</label> <input dojoType="dijit.form.TextBox" id="hobby" name="hobby"><br>' +
-                 '<button dojoType="dijit.form.Button" type="submit">Save</button>});',
-               parseWidgets: true
+                 '<button dojoType="dijit.form.Button" type="submit">Save</button>'
             };
  
             var button = new dijit.form.DropDownButton({
