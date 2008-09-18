@@ -35,7 +35,7 @@ Query Translation
 -----------------
   A dojo.data request follows a specific JSON format. As an example, suppose we have a FilteringSelect which looks up states. When the user presses "A", the dojo.data request is:
 
-  ::
+::
     {
       query: {name: "A*"},
       queryOptions: {ignoreCase: true},
@@ -46,13 +46,13 @@ Query Translation
 
   Now we want to hand this off to the server. Odds are, your server doesn't recognize incoming JSON, and asking it to do so is too restrictive. Instead, most server queries follow a REST pattern like this:
 
-  ::
+::
 
     states.php?q=A*
 
   Fortunately, it's easy to translate between the two and you can quickly customize the translation by extending the class. You simply subclass QueryReadStore like this:
 
-  ::
+::
     dojo.provide("custom.ComboBoxReadStore");
 
     dojo.require("dojox.data.QueryReadStore");
