@@ -196,3 +196,96 @@ Example 2: Query for all books that start with ISBN: A9B57 Case insensitively
     }
   }
   var request = store.fetch({query: {isbn:"a9b57*"}, queryOptions: {ignoreCase: true}, onComplete: gotBooks});
+
+
+=========================
+Functional Usage Examples
+=========================
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojox.data.XmlStore");
+      dojo.require("dijit.form.Button");
+      dojo.require("dijit.form.TextBox");
+      dojo.require("dijit.form.CheckBox");
+
+        //This function performs some basic dojo initialization. In this case it connects the button
+        //onClick to a function which invokes the fetch(). The fetch function queries for all items 
+        //and provides callbacks to use for completion of data retrieval or reporting of errors.
+        function init3 () {
+           //Function to perform a fetch on the datastore when a button is clicked
+           function search() {
+             var queryObj = {};
+
+             //Build up the query from the input boxes.
+             var isbn = isbnBox.getValue();
+             if ( name && dojo.trim(isbn) !== "" ) {
+               queryObj["isbn"] = ;       
+             }
+
+             var qNode = dojo.byId("query");
+             if (qNode ) {
+               qNode.innerHTML = dojo.toJson(queryObj);   
+             }
+
+
+             //Callback to perform an action when the data items are starting to be returned:
+             function clearOldList(size, request) {
+               var list = dojo.byId("list3");
+               if (list) { 
+                 while (list.firstChild) {
+                   list.removeChild(list.firstChild);
+                 }
+               }
+             }
+  
+             //Callback for processing a returned list of items.
+             function gotItems(items, request) {
+               var list = dojo.byId("list3");
+               if (list) { 
+                 var i;
+                 for (i = 0; i < items.length; i++) {
+                   var item = items[i];
+                   list.appendChild(document.createTextNode("ISBN: " + bookStore.getValue(item, "isbn") + " TITLE:" + bookStore.getValue(item, "Title")));
+                   list.appendChild(document.createElement("br"));
+                 }
+               }
+             }
+            
+             //Callback for if the lookup fails.
+             function fetchFailed(error, request) {
+                alert("lookup failed.");
+                alert(error);
+             }
+             
+             //Fetch the data.
+             bookStore.fetch({query: queryObj, onBegin: clearOldList, onComplete: gotItems, onError: fetchFailed});
+
+           }
+           //Link the click event of the button to driving the fetch.
+           dojo.connect(button3, "onClick", search);
+        }
+        //Set the init function to run when dojo loading and page parsing has completed.
+        dojo.addOnLoad(init3);
+    </script>
+
+  .. cv :: html 
+
+
+    <b>ISBN:  </b><input dojoType="dijit.form.TextBox" jsId="isbnBox" value="*"></input>
+    <br>
+    <br>
+    <div dojoType="dojox.data.XmlStore" jsId="bookStore"></div>
+    <div dojoType="dijit.form.Button" jsId="button3">Click to search!</div>
+    <br>
+    <br>
+    <b>Query used: </b><span id="query"></span
+    <br>
+    <br>
+    <b>Books located:</b>
+    <br>
+    <span id="list3">
+    </span>
