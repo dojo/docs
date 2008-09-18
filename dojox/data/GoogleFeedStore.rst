@@ -104,7 +104,7 @@ Example Usage
       var layoutResults = [
         [
           { field: "title", name: "Title", width: 20 },
-          { field: "url", name: "URL", width: 5, formatter: hrefFormatter},
+          { field: "link", name: "URL", width: 5, formatter: hrefFormatter},
           { field: "summary", name: "Summary", width: 'auto' }
         ]
       ];
@@ -132,7 +132,7 @@ Example Usage
     <b>Input feed URL here:</b>
     <br>
     <br>
-    <div dojoType="dijit.form.TextBox" width="50" id="searchText" value="Dojo">http://news.google.com/nwshp?hl=en&amp;tab=wn&amp;output=atom</div>
+    <div dojoType="dijit.form.TextBox" width="50" id="searchText" value="http://news.google.com/nwshp?hl=en&amp;tab=wn&amp;output=atom"></div>
     <br>
     <div dojoType="dijit.form.Button" id="searchButton">Search!</div>
     <div dojoType="dojox.data.GoogleFeedStore" jsId="feedStore"></div>
