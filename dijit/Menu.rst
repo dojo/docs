@@ -28,22 +28,40 @@ A programatically created menu
       dojo.addOnLoad(function(){
             console.log("in addOnLoad");
 
-            pMenu = new dijit.Menu({targetNodeIds:["prog_menu"], id:"progMenu"});
+            pMenu = new dijit.Menu({
+                targetNodeIds:["prog_menu"]
+            });
             console.log("pMenu is", pMenu);
             pMenu.addChild(new dijit.MenuSeparator());
-            pMenu.addChild(new dijit.MenuItem({label:"Simple menu item", }));
-            pMenu.addChild(new dijit.MenuItem({label:"Disabled menu item", disabled:true}));
+            pMenu.addChild(new dijit.MenuItem({
+                label:"Simple menu item"
+            }));
+            pMenu.addChild(new dijit.MenuItem({
+                label:"Disabled menu item",
+                disabled: true
+            }));
             pMenu.addChild(new dijit.MenuItem({
                 label:"Menu Item With an icon",
                 iconClass:"dijitEditorIcon dijitEditorIconCut",
                 onClick: function(){alert('i was clicked')}
             }));
-            pMenu.addChild(new dijit.CheckedMenuItem({label:"checkable menu item"}););
+            pMenu.addChild(new dijit.CheckedMenuItem({
+                label: "checkable menu item"
+            }));
 
-            var pSubMenu = new dijit.Menu({parentMenu:pMenu, id:"progSubMenu"});
-            pSubMenu.addChild(new dijit.MenuItem({label:"Submenu item"}));
-            pSubMenu.addChild(new dijit.MenuItem({label:"Submenu item"}));
-            pMenu.addChild(new dijit.PopupMenuItem({label:"Submenu", popup:pSubMenu, id:"progPopupMenuItem"}));
+            var pSubMenu = new dijit.Menu({
+                parentMenu: pMenu
+            });
+            pSubMenu.addChild(new dijit.MenuItem({
+                label:"Submenu item"
+            }));
+            pSubMenu.addChild(new dijit.MenuItem({
+                label:"Submenu item"
+            }));
+            pMenu.addChild(new dijit.PopupMenuItem({
+                label:"Submenu",
+                popup:pSubMenu
+            }));
 
             pMenu.startup();
         });
