@@ -15,6 +15,10 @@ dojox.data.XmlStore
 
 XmlStore is a store provided by Dojo that is contained in the DojoX project. XmlStore is a read and write interface to basic XML data. XML is a common data interchange format and a store that can work with fairly generic XML documents is useful. The store is designed so that you can over-ride certain functions to get specific behaviors to occur when performing reads and saves.
 
+==============
+Supported APIs
+==============
+
 The following dojo.data APIs are implemented by XmlStore
 
 * `dojo.data.api.Read <dojo/data/api/Read>`_
@@ -75,11 +79,11 @@ The constructor for XmlStore takes the following possible parameters in its keyw
 +--------------------------+--------------------------------------------------------------------------------------------------------+
 |sendQuery                 |Boolean option whether or not to send the query to a server for processing. The default is false.       |
 |                          |                                                                                                        |
-|                          |false                                                                                                  |
+|                          |false                                                                                                   |
 |                          |  It is assumed the server sends back the entire store dataset and the filtering and sorting must       |
 |                          |  occur on the client side.                                                                             |
 |                          |                                                                                                        |
-|                          |true                                                                                                   |
+|                          |true                                                                                                    |
 |                          |  It is assumed the server is handling the filtering and is only sending back XML nodes that match the  |
 |                          |  query. No filtering occurs clientside.                                                                |
 +--------------------------+--------------------------------------------------------------------------------------------------------+
