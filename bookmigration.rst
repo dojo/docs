@@ -65,10 +65,10 @@ Dojo Book Outline
   * `User Assistance and Feedback <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/user-assistance-and-feedback>`_.
 
     * `Dijit ProgressBar <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/user-assistance-and-feedback/progress-bar>`_. maps to: `ProgressBar <dijit/ProgressBar>`_ (complete)
-    * `Dijit Tooltip <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/user-assistance-and-feedback/tooltip>`_. maps to: `Tooltip <dijit/Tooltip>`_ [[complete]]
+    * `Dijit Tooltip <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/user-assistance-and-feedback/tooltip>`_. maps to: `Tooltip <dijit/Tooltip>`_ (complete)
     * `Dijit Dialog and TooltipDialog <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout/dialog>`_. maps to: 
-         * `Dialog <dijit/Dialog>`_ (done)
-         * and `TooltipDialog <dijit/TooltipDialog>`_
+         * `Dialog <dijit/Dialog>`_ (complete)
+         * and `TooltipDialog <dijit/TooltipDialog>`_ (complete)
     * `Dijit TitlePane <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout/title-pane>`_. maps to: `TitlePane <dijit/TitlePane>`_
 
   * `Advanced Editing and Display <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/advanced-editing-and-display>`_.
