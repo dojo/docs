@@ -99,8 +99,9 @@ The constructor for XmlStore takes the following possible parameters in its keyw
 |label                     |The attribute of an item to use for the return of getLabel(). This is optional.                         |
 +--------------------------+--------------------------------------------------------------------------------------------------------+
 
-
-Functions intended to be over-ridden to alter save behavior
+=================================
+User-provided function over-rides
+=================================
 
 The following functions can be over-ridden to alter save behavior, as described:
 
@@ -111,46 +112,65 @@ _getPutUrl(item)
 _getDeleteUrl(item)
     Function that can be over-ridden to alter the way the store sends a DELETE item to the service. Note that this follows the REST convention in which an HTTP DELETE is used to remove a resource.
 
+============
 Query Syntax
+============
 
-The fetch method query syntax for XmlStore is simple and straightforward. It allows for a list of attributes to match against in an AND fashion, just like ItemFileReadStore. For example, the following query object will locate all items that have attributes of those names that match both of those values:
+The fetch method query syntax for XmlStore is simple and straightforward. It allows for a list of attributes to match against in an AND fashion, just like `dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`_. For example, the following query object will locate all items that have attributes of those names that match both of those values:
 
-{ foo:"bar", bit:"bite"}
+::
+  { foo:"bar", bit:"bite"}
 
 Note that XmlStore supports the use of wild cards (multi-character * and single character ?) in its attribute value matching.
 Examples
 
 To find all items with attribute foo that start with bar, the query would be:
 
-{ foo:"bar*"}
+::
+
+  { foo:"bar*"}
 
 To find all items with attribute foo the value of which ends with ar and ignoring only the first character, the query would be:
 
-{ foo:"?ar"}
+::
+  
+  { foo:"?ar"}
 
-NOTE: Other stores should follow the same query definition semantics for consistency.
+**NOTE:** Other stores should follow the same query definition semantics for consistency.
+
+==============
 Usage Examples
+==============
 
 For these examples, we'll assume a data source as defined by the example data format in this page.
+
+----------------------------------------------------------
 Example 1: Query for all books that start with ISBN: A9B57
+----------------------------------------------------------
 
-var store = new dojox.data.XmlStore({url: "books.xml", rootItem: "book"});
-var gotBooks = function(items, request){
+.. code-block :: javascript 
+
+  var store = new dojox.data.XmlStore({url: "books.xml", rootItem: "book"});
+  var gotBooks = function(items, request){
     for (var i = 0; i < items.length; i++){
-       var item = items[i];
-       console.log("Located book: " + store.getValue(item, "title");
+      var item = items[i];
+      console.log("Located book: " + store.getValue(item, "title");
     }
-}
-var request = store.fetch({query: {isbn:"A9B57*"}, onComplete: gotBooks});
+  }
+  var request = store.fetch({query: {isbn:"A9B57*"}, onComplete: gotBooks});
 
 
+-----------------------------------------------------------------------------
 Example 2: Query for all books that start with ISBN: A9B57 Case insensitively
+-----------------------------------------------------------------------------
 
-var store = new dojox.data.XmlStore({url: "books.xml", rootItem: "book"});
-var gotBooks = function(items, request){
+.. code-block :: javascript
+
+  var store = new dojox.data.XmlStore({url: "books.xml", rootItem: "book"});
+  var gotBooks = function(items, request){
     for (var i = 0; i < items.length; i++){
-       var item = items[i];
-       console.log("Located book: " + store.getValue(item, "title");
+      var item = items[i];
+      console.log("Located book: " + store.getValue(item, "title");
     }
-}
-var request = store.fetch({query: {isbn:"a9b57*"}, queryOptions: {ignoreCase: true}, onComplete: gotBooks});
+  }
+  var request = store.fetch({query: {isbn:"a9b57*"}, queryOptions: {ignoreCase: true}, onComplete: gotBooks});
