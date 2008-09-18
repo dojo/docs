@@ -249,7 +249,7 @@ Functional Usage Examples
                  var i;
                  for (i = 0; i < items.length; i++) {
                    var item = items[i];
-                   list.appendChild(document.createTextNode("ISBN: " + bookStore.getValue(item, "isbn") + " TITLE:" + bookStore.getValue(item, "Title")));
+                   list.appendChild(document.createTextNode("ISBN: " + bookStore.getValue(item, "isbn") + " TITLE:" + bookStore.getValue(item, "title")));
                    list.appendChild(document.createElement("br"));
                  }
                }
