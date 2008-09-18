@@ -24,8 +24,12 @@ A programatically created menu:
     <script type="text/javascript">
       dojo.require("dijit.Menu");
 
+      var pMenu;
       dojo.addOnLoad(function(){
-            var pMenu = new dijit.Menu({targetNodeIds:["prog_menu"], id:"progMenu"});
+console.log("in addOnLoad");
+
+            pMenu = new dijit.Menu({targetNodeIds:["prog_menu"], id:"progMenu"});
+console.log("pMenu is", pMenu);
             pMenu.addChild(new dijit.MenuSeparator());
             pMenu.addChild(new dijit.MenuItem({label:"Simple menu item", }));
             pMenu.addChild(new dijit.MenuItem({label:"Disabled menu item", disabled:true}));
