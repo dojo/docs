@@ -7,8 +7,23 @@ dojox.data.QueryReadStore
   :depth: 2
 
 
+Here a full client program. In order for it to work:
 
-**Example HTML Usage** 
+   1. Place the following HTML in a file (call it qrs.html) on a web server that has PHP 5.2 or greater.
+
+The directory structure should look like this when you are done:
+
+--qrs.html
+--dojo
+--dijit
+--dojox
+----data
+------tests
+--------QueryReadStore.php
+
+
+
+**Example HTML** 
 
 ::
 
