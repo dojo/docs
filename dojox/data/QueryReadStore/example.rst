@@ -14,11 +14,17 @@ Here a full client program. In order for it to work:
 The directory structure should look like this when you are done:
 
 --qrs.html
+
 --dojo
+
 --dijit
+
 --dojox
+
 ----data
+
 ------tests
+
 --------QueryReadStore.php
 
 
