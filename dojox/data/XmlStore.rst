@@ -119,6 +119,7 @@ Query Syntax
 The fetch method query syntax for XmlStore is simple and straightforward. It allows for a list of attributes to match against in an AND fashion, just like `dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`_. For example, the following query object will locate all items that have attributes of those names that match both of those values:
 
 ::
+
   { foo:"bar", bit:"bite"}
 
 Note that XmlStore supports the use of wild cards (multi-character * and single character ?) in its attribute value matching.
