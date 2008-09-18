@@ -1,0 +1,140 @@
+#format dojo_rst
+
+dojox.data.XmlStore
+===================
+
+:Status: Contributed, Draft
+:Version: 1.0
+:Author: Jared Jurkiewicz
+:Available: since V1.0
+ 
+
+.. contents::
+  :depth: 3
+
+
+XmlStore is a store provided by Dojo that is contained in the DojoX project. XmlStore is a read and write interface to basic XML data. XML is a common data interchange format and a store that can work with fairly generic XML documents is useful. The store is designed so that you can over-ride certain functions to get specific behaviors to occur when performing reads and saves.
+
+The following dojo.data APIs are implemented by XmlStore
+
+* `dojo.data.api.Read <dojo/data/api/Read>`_
+* `dojo.data.api.Write <dojo/data/api/Write>`_
+
+
+The store is designed so that it can read generic XML and present back nodes as dojo.data items.  The following is an example of an XML document that this store can read:
+
+::
+
+  <?xml version="1.0" encoding="ISO-8859-1"?>
+  <books>
+	<book>
+		<isbn>1</isbn>
+		<title>Title of 1</title>
+		<author>Author of 1</author>
+	</book>
+	<book>
+		<isbn>2</isbn>
+		<title>Title of 2</title>
+		<author>Author of 2</author>
+	</book>
+	<book>
+		<isbn>3</isbn>
+		<title>Title of 3</title>
+		<author>Author of 3</author>
+	</book>
+	<book>
+		<isbn>4</isbn>
+		<title>Title of 4</title>
+		<author>Author of 4</author>
+	</book>
+	<book>
+		<isbn>5</isbn>
+		<title>Title of 5</title>
+		<author>Author of 5</author>
+	</book>
+	<book>
+		<isbn>6</isbn>
+		<title>Title of 6</title>
+		<author>Author of 6</author>
+	</book>
+        ...
+  </books>
+    
+
+Constructor Parameters
+
+The constructor for XmlStore takes the following possible parameters in its keyword arguments:
+
+url
+    The URL from which to load the XML file containing the data. This URL is also the end point used for posting data base in a save. This is optional.
+sendQuery
+    Boolean option whether or not to send the query to a server for processing. The default is false.
+
+    false
+        It is assumed the server sends back the entire store dataset and the filerting and sorting must occur on the client side.
+    true
+        It is assumed the server is handling the filtering and is only sending back XML nodes that match the query. No filtering occurs clientside.
+
+rootItem
+    A tag name for root items. This is optional. If it is not provided, then the XmlStore assumes the tags under the root element of the document are the root items. 
+keyAttribute
+    An attribute name for a key or an indentity. This is optional.
+attributeMap
+    An anonymous object that contains properties for attribute mapping, for example {"tag_name.item_attribute_name": "@xml_attribute_name", ...} This is optional. This is done so that attributes which are actual XML tag attributes (and not sub-tags of an XML tag), can be referenced.
+label
+    The attribute of an item to use for the return of getLabel(). This is optional.
+
+Functions intended to be over-ridden to alter save behavior
+
+The following functions can be over-ridden to alter save behavior, as described:
+
+_getPostUrl(item)
+    Function that can be over-ridden to alter the way the store POSTs new items to the service. Note that this follows the REST convention in which an HTTP POST is a creation of a new resource.
+_getPutUrl(item)
+    Function that can be over-ridden to alter the way the store PUTs updated items to the service. Note that this follows the REST convention in which an HTTP PUT is an update of an existing resource.
+_getDeleteUrl(item)
+    Function that can be over-ridden to alter the way the store sends a DELETE item to the service. Note that this follows the REST convention in which an HTTP DELETE is used to remove a resource.
+
+Query Syntax
+
+The fetch method query syntax for XmlStore is simple and straightforward. It allows for a list of attributes to match against in an AND fashion, just like ItemFileReadStore. For example, the following query object will locate all items that have attributes of those names that match both of those values:
+
+{ foo:"bar", bit:"bite"}
+
+Note that XmlStore supports the use of wild cards (multi-character * and single character ?) in its attribute value matching.
+Examples
+
+To find all items with attribute foo that start with bar, the query would be:
+
+{ foo:"bar*"}
+
+To find all items with attribute foo the value of which ends with ar and ignoring only the first character, the query would be:
+
+{ foo:"?ar"}
+
+NOTE: Other stores should follow the same query definition semantics for consistency.
+Usage Examples
+
+For these examples, we'll assume a data source as defined by the example data format in this page.
+Example 1: Query for all books that start with ISBN: A9B57
+
+var store = new dojox.data.XmlStore({url: "books.xml", rootItem: "book"});
+var gotBooks = function(items, request){
+    for (var i = 0; i < items.length; i++){
+       var item = items[i];
+       console.log("Located book: " + store.getValue(item, "title");
+    }
+}
+var request = store.fetch({query: {isbn:"A9B57*"}, onComplete: gotBooks});
+
+
+Example 2: Query for all books that start with ISBN: A9B57 Case insensitively
+
+var store = new dojox.data.XmlStore({url: "books.xml", rootItem: "book"});
+var gotBooks = function(items, request){
+    for (var i = 0; i < items.length; i++){
+       var item = items[i];
+       console.log("Located book: " + store.getValue(item, "title");
+    }
+}
+var request = store.fetch({query: {isbn:"a9b57*"}, queryOptions: {ignoreCase: true}, onComplete: gotBooks});
