@@ -83,3 +83,29 @@ Example Client Implementation
 =============================
 
 For a fully functional example extension of QueryReadStore, please follow this `link <dojox/data/QueryReadStore/example>`_
+
+
+===================
+Functional Examples
+===================
+
+------------------------------------------------
+Connecting QueryReadStore to dijit.form.ComboBox
+------------------------------------------------
+
+**Note:** You can watch the xhr requests to the service through firebug.
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojox.data.QueryReadStore");
+      dojo.require("dijit.form.ComboBox");
+    </script>
+
+  .. cv :: html 
+
+    <b>Combo lookup of states through QueryReadStore</b><br> 
+    <div dojoType="dojox.data.QueryReadStore" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/tests/stores/QueryReadStore.php" jsId="comboStore"></div>
+    <div dojoType="dijit.form.ComboBox" store="comboStore" searchAttr="name"></div>
