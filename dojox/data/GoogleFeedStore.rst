@@ -76,6 +76,7 @@ The query syntax for this store is simple. It takes a single object with the att
 Query Example
 -------------
 ::
+
   {
     "url" : "http://news.google.com/nwshp?hl=en&tab=wn&output=atom"
   }
@@ -110,10 +111,6 @@ Example Usage
       ];
 
       function init() {
-         //Link button to search, where search text is drawn from the input box.
- 
-         dojo.connect(dijit.byId("tabSearch"), "selectChild", resizeGrids);
-
          function search() {
             var text = dijit.byId("urlText").getValue();
             text = dojo.trim(text);
