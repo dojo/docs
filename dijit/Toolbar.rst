@@ -42,7 +42,7 @@ In this example, we borrow some of the toolbar buttons from the Editor.
 
   .. cv:: html
 
-    <span id="toolbar">toolbar will show up here</span>
+    <span id="toolbar"></span>
 
 
 
@@ -100,16 +100,16 @@ We haven't implemented a MenuBar for dijit yet so some people use the Toolbar as
 				<div dojoType="dijit.MenuItem">New</div>
 				<div dojoType="dijit.MenuItem">Open</div>
 				<div dojoType="dijit.MenuSeparator"></div>
-				<div dojoType="dijit.MenuItem" iconClass="dijitEditorIconSave">Save</div>
+				<div dojoType="dijit.MenuItem" iconClass="dijitEditorIcon dijitEditorIconSave">Save</div>
 				<div dojoType="dijit.MenuItem">Save As...</div>
 			</div>
 		</div>
 		<div dojoType="dijit.form.DropDownButton">
 			<span>Edit</span>
 			<div dojoType="dijit.Menu">
-				<div dojoType="dijit.MenuItem" iconClass="dijitEditorIconCut">Cut</div>
-				<div dojoType="dijit.MenuItem" iconClass="dijitEditorIconCopy">Copy</div>
-				<div dojoType="dijit.MenuItem" iconClass="dijitEditorIconPaste">Paste</div>
+				<div dojoType="dijit.MenuItem" iconClass="dijitEditorIcon dijitEditorIconCut">Cut</div>
+				<div dojoType="dijit.MenuItem" iconClass="dijitEditorIcon dijitEditorIconCopy">Copy</div>
+				<div dojoType="dijit.MenuItem" iconClass="dijitEditorIcon dijitEditorIconPaste">Paste</div>
 			</div>
 		</div>
         </div>
