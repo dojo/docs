@@ -53,8 +53,13 @@ Dojo Book Outline
 
   * `Command Control <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/command-control>`_.
 
-    * `Button, ComboButton, DropDownButton <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/buttons-dropdown-combo-checkbox-ra>`_.
-    * `Dijit Menu <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/command-control/popup-menus-dijit-menu>`_. maps to: `Menu <dijit/Menu>`_
+    * `Button, ComboButton, DropDownButton <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/buttons-dropdown-combo-checkbox-ra>`_. maps to 
+
+          * `Button <dijit/form/Button>`_ (complete)
+          * `DropDownButton <dijit/form/DropDownButton>`_ (complete)
+          * `ComboButton <dijit/form/ComboButton>`_ (complete)
+
+    * `Dijit Menu <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/command-control/popup-menus-dijit-menu>`_. maps to: `Menu <dijit/Menu>`_ (complete)
     * `Dijit Toolbar <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/command-control/toolbar>`_. maps to: `Toolbar <dijit/Toolbar>`_
 
   * `User Assistance and Feedback <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/user-assistance-and-feedback>`_.
@@ -68,7 +73,7 @@ Dojo Book Outline
 
   * `Advanced Editing and Display <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/advanced-editing-and-display>`_.
 
-    * `Dijit ColorPalette <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/advanced-editing-and-display/color-palette>`_. maps to: `ColorPalette <dijit/ColorPalette>`_
+    * `Dijit ColorPalette <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/advanced-editing-and-display/color-palette>`_. maps to: `ColorPalette <dijit/ColorPalette>`_ (complete)
     * `Dijit InlineEditBox (1.0) <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/advanced-editing-and-display/inlineeditbox>`_. maps to: `InlineEditBox <dijit/InlineEditBox>`_
     * `Dijit Editor <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/advanced-editing-and-display/editor-rich-text>`_. maps to `Editor <dijit/Editor>`_ [[complete]
     * `Dijit Tree <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/advanced-editing-and-display/tree>`_. maps to `Tree <dijit/Tree>`_ [[complete]]
