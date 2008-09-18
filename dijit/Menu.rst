@@ -79,6 +79,7 @@ This example creates a context menu for the whole window.
 
     <script type="text/javascript">
       dojo.require("dijit.Menu");
+      dojo.require("dijit.ColorPalette");
     </script>
 
   .. cv:: html
@@ -103,3 +104,5 @@ This example creates a context menu for the whole window.
 			<div dojoType="dijit.ColorPalette"></div>
 		</div>
 	</div>
+
+        <span> Click anywhere on the page to see this menu.</span>
