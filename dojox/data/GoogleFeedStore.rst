@@ -43,6 +43,8 @@ The following parameters are supported by the GoogleFeedStore implementation.
 Item Attributes
 ===============
 
+The following attributes are available on items returned from the GoogleFeedStore
+
 +-----------------+-----------------------------------------------------------------------------------------------------------------------------+
 |**Attribute**    |**Description**                                                                                                              |
 +-----------------+-----------------------------------------------------------------------------------------------------------------------------+
