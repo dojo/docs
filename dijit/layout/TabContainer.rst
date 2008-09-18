@@ -19,28 +19,33 @@ Examples
 A basic example
 ---------------
 
-First, We'll demonstrate a programatic TabContainer creation from existing markup.
+First, we'll demonstrate a programatic TabContainer creation.
 Note that the tabs all have a fixed height.
 
 .. cv-compound::
  
-  As a simple example, we'll use `dojo.query <dojo/query>`_ to find and create the ContentPanes used in the TabContainer
-
   .. cv:: javascript
 
     <script type="text/javascript">
     dojo.require("dijit.layout.TabContainer");
     dojo.require("dijit.layout.ContentPane");
     dojo.addOnLoad(function(){
-        dojo.query(".tc1cp").forEach(function(n){
-            new dijit.layout.ContentPane({
-                // just pass a title: attribute, this, we're stealing from the node
-                title: dojo.attr(n,"title") 
-            }, n);
-        });
         var tc = new dijit.layout.TabContainer({
-            style: dojo.attr("tc1-prog", "style") 
+            style: "height: 300px; width: 400px;"
         },"tc1-prog");
+  
+        var cp1 = new dijit.layout.ContentPane({
+             title: "tab 1",
+             content: "tab 1 content"
+        });
+        tc.addChild(cp1);
+  
+        var cp2 = new dijit.layout.ContentPane({
+             title: "tab 2",
+             content: "tab 2 content"
+        });
+        tc.addChild(cp2);
+  
         tc.startup(); 
     });
     </script>
@@ -49,18 +54,7 @@ Note that the tabs all have a fixed height.
 
   .. cv:: html
 
-    <div id="tc1-prog" style="width: 100%; height: 100px;">
-      <div class="tc1cp" title="My first tab">
-        Lorem ipsum and all around...
-      </div>
-      <div class="tc1cp" title="My second tab">
-        Lorem ipsum and all around - second...
-      </div>
-      <div class="tc1cp" title="My last tab">
-        Lorem ipsum and all around - last...
-      </div>
-    </div>
-
+    <div id="tc1-prog"></div>
 
 The `parser </dojo/parser>`_ does a lot of the heavy lifting seen above in the programatic method, finding attributes on the node and passing them to the Widget being created. By using a dojoType to identify these nodes, our initial creation is very easy, as seen in the remainder of these examples: 
 
