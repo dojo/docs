@@ -52,23 +52,28 @@ As usual you can create the DropDown button widget declaratively using the dojoT
 When created declaratively the DropDownButton node has two children, one for the label of the button,
 and the other for the drop-down widget that's displayed when you press the button.
 
+Here's one displaying a TooltipDialog:
+
 .. cv-compound::
 
   .. cv:: javascript
 
     <script type="text/javascript">
       dojo.require("dijit.form.Button");
-      dojo.require("dijit.Menu");
+      dojo.require("dijit.Dialog");
+      dojo.require("dijit.form.TextBox");
     </script>
 
   .. cv:: html
 
     <div dojoType="dijit.form.DropDownButton">
-      <span>Edit<b>!</b></span>
-      <div dojoType="dijit.Menu">
-        <div dojoType="dijit.MenuItem" onClick="console.log('hi!')">Cut</div>
-        <div dojoType="dijit.MenuItem" onClick="console.log('hi!')">Copy</div>
+      <span>Register</span>
+      <div dojoType="dijit.TooltipDialog">
+         <label for="name">Name:</label> <input dojoType="dijit.form.TextBox" id="name" name="name"><br>
+         <label for="hobby">Hobby:</label> <input dojoType="dijit.form.TextBox" id="hobby" name="hobby"><br>
+         <button dojoType="dijit.form.Button" type="submit">Save</button>
       </div>
     </div>
 
 .
+Note that DropDownButton is often used in `dijit.Toolbar </dijit/Toolbar>`_.
