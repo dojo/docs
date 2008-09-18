@@ -5,6 +5,7 @@ dojox.data.GoogleFeedStore
 
 :Status: Contributed, Draft
 :Version: 1.0
+:Author: Shane O'Sullivan
 :Available: since V1.2
 
 .. contents::
