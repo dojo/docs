@@ -83,44 +83,31 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 * `Array utilities: <dojo/array>`_  Details on dojo.every, dojo.filter, dojo.forEach, dojo.indexOf, dojo.lastIndexOf, dojo.map, and dojo.some.
 * `dojo.back <dojo/back>`_
 * `dojo.browser <dojo/browser>`_
+* `dojo.byId <dojo/byId>`_
 * `dojo.connect <dojo/connect>`_
 * `dojo.Color <dojo/Color>`_
 * `dojo.declare <dojo/declare>`_
 * `dojo.Deferred <dojo/Deferred>`_
-* `dojo.NodeList <dojo/NodeList>`_
-* `dojo.window <dojo/window>`_
-* `dojo.xhr <dojo/xhr>`_
-* `dojo.byId <dojo/byId>`_
-* `dojo.connect <dojo/connect>`_
 * `dojo.forEach <dojo/forEach>`_
+* `dojo.NodeList <dojo/NodeList>`_
 * `dojo.query <dojo/query>`_
 * `dojo.require <dojo/require>`_
+* `dojo.window <dojo/window>`_
+* `dojo.xhr <dojo/xhr>`_
 
 Dojo data
 ---------
 
-* `dojo.data <dojo/data>`_
+* `dojo.data <dojo/data>`_, `api <dojo/data/api>`_ , `api.Read <dojo/data/api/Read>`_ , `api.Write <dojo/data/api/Write>`_ , `api.Identity <dojo/data/api/Identity>`_ , `api.Notification <dojo/data/api/Notification>`_ , `ItemFileReadStore <dojo/data/ItemFileReadStore>`_ , `ItemFileWriteStore <dojo/data/ItemFileWriteStore>`_
 
-  * `dojo.data.api <dojo/data/api>`_
-  * `dojo.data.api.Read <dojo/data/api/Read>`_
-  * `dojo.data.api.Write <dojo/data/api/Write>`_
-  * `dojo.data.api.Identity <dojo/data/api/Identity>`_
-  * `dojo.data.api.Notification <dojo/data/api/Notification>`_
-  * `dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`_
-  * `dojo.data.ItemFileWriteStore <dojo/data/ItemFileWriteStore>`_
-
-* `dojo.date <dojo/date>`_
-
-  * `dojo.date.locale.format <dojo/date/locale/format>`_
+* `dojo.date <dojo/date>`_, `locale.format <dojo/date/locale/format>`_
 
 * `dojo.DeferredList <dojo/DeferredList>`_
 
 Drag and Drop
 -------------
 
-* `dojo.dnd <dojo/dnd>`_
-
-  * `dojo.dnd.Moveable <dojo/dnd/Moveable>`_
+* `dojo.dnd <dojo/dnd>`_, `Moveable <dojo/dnd/Moveable>`_
 
 Dojo effects
 ------------
@@ -139,11 +126,7 @@ Dijit reference
 
 Dijit is Dojo's UI Library, and lives as a separate namespace ``dijit``. Dijit requires Dojo Core. Each of the widgets and functionality provided by Dijit is describe in the following sections, though the aforementioned `quickstart <quickstart/>`_ guides cover some basics.  
 
-* `dijit <dijit>`_
-
-  * `dijit a11y <dijit-a11y-strategy>`_
-  * `dijit a11y resources <dijit-a11y-resources>`_
-
+* `dijit <dijit>`_, `a11y <dijit-a11y-strategy>`_, `a11y resources <dijit-a11y-resources>`_
 * `dijit.Calendar <dijit/Calendar>`_
 * `dijit.ColorPalette <dijit/ColorPalette>`_
 * `dijit.Dialog <dijit/Dialog>`_
@@ -154,11 +137,7 @@ Dijit is Dojo's UI Library, and lives as a separate namespace ``dijit``. Dijit r
 * `dijit.TitlePane <dijit/TitlePane>`_
 * `dijit.Tooltip <dijit/Tooltip>`_
 * `dijit.TooltipDialog <dijit/TooltipDialog>`_
-* `dijit.Tree <dijit/Tree>`_
-
-  * `dijit.tree.Model <dijit/tree/Model>`_
-  * `dijit.tree.TreeStoreModel <dijit/tree/ForestStoreModel>`_
-  * `dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`_
+* `dijit.Tree <dijit/Tree>`_, `Model <dijit/tree/Model>`_, `TreeStoreModel <dijit/tree/ForestStoreModel>`_, `ForestStoreModel <dijit/tree/ForestStoreModel>`_
 
 
 Form handling
