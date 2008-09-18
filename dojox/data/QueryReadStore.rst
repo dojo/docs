@@ -76,3 +76,10 @@ Server Side implementation
 The server side is where all the heavy work of QueryReadStore occurs.  Specifically all query matching and sorting should happen here and only the items that match the parameters should be returned to the server.  To help you in development of your own remote service, dojo includes a demonstration PHP file that implements a basic version of the QueryReadStore server component.  You can find this basic implementation at: *dojox/data/tests/stores/QueryReadStore.php*.  The server portion hands over a portion of the states that fits the query.  
 
 Your implementation could be similar to the sample php, or it could translate your queries to run against a database via SQL.  That decision is entirely up to you.  Another good example store to help understand how to develop server backed datastores is `dojox.data/FileStore <dojox/data/FileStore>`_
+
+
+=============================
+Example Client Implementation
+=============================
+
+For a fully functional example extension of QueryReadStore, please follow this `link <dojox/data/QueryReadStore/example>`_
