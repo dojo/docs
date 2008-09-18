@@ -165,7 +165,7 @@ Example 1: Finding all Continents and Cities
 
   .. cv :: html 
 
-    <div dojoType="dojo.data.AndOrReadStore" data="geoData" jsId="geoStore"></div>
+    <div dojoType="dojox.data.AndOrReadStore" data="geoData" jsId="geoStore"></div>
     <div dojoType="dijit.form.Button" jsId="button2">Find continents!</div>
     <br>
     <br>
