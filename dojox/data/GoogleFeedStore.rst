@@ -1,7 +1,7 @@
 #format dojo_rst
 
-dojox.data.GoogleSearchStore
-============================
+dojox.data.GoogleFeedStore
+==========================
 
 :Status: Contributed, Draft
 :Version: 1.0
