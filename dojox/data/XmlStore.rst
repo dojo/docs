@@ -312,3 +312,51 @@ Connecting XmlStore to dijit.form.ComboBox
 
     <div dojoType="dojox.data.XmlStore" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/tests/stores/books.xml" jsId="bookStore2"></div>
     <div dojoType="dijit.form.ComboBox" store="bookStore2" searchAttr="title"></div>
+
+
+------------------------------------------
+Connecting XmlStore to dojox.grid.DataGrid
+------------------------------------------
+
+.. cv-compound ::
+
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojox.grid.DataGrid");
+      dojo.require("dojox.data.XmlStore");
+
+      var layoutBooks = [
+        [
+          { field: "isbn", name: "ISBN", width: 10 },
+          { field: "author", name: "Author", width: 10 },
+          { field: "title", name: "Title", width: 'auto' }
+        ]
+      ];
+    </script>
+
+  .. cv :: html
+
+    <div dojoType="dojox.data.XmlStore" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/tests/stores/books.xml" jsId="bookStore3" label="title"></div>
+
+    <div style="width: 400px; height: 300px;">
+      <div id="grid" 
+        dojoType="dojox.grid.DataGrid" 
+        store="bookStore3" 
+        structure="layoutBooks" 
+        query="{}"
+        queryOptions="{'deep':true}" 
+        rowsPerPage="40">
+      </div>
+    </div>
+
+  .. cv:: css
+
+    <style type="text/css">
+      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/resources/Grid.css";
+      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/resources/nihiloGrid.css";
+
+      .dojoxGrid table {
+        margin: 0;
+      }
+    </style>
