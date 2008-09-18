@@ -60,7 +60,7 @@ Dojo Book Outline
           * `ComboButton <dijit/form/ComboButton>`_ (complete)
 
     * `Dijit Menu <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/command-control/popup-menus-dijit-menu>`_. maps to: `Menu <dijit/Menu>`_ (complete)
-    * `Dijit Toolbar <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/command-control/toolbar>`_. maps to: `Toolbar <dijit/Toolbar>`_
+    * `Dijit Toolbar <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/command-control/toolbar>`_. maps to: `Toolbar <dijit/Toolbar>`_ (complete)
 
   * `User Assistance and Feedback <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/user-assistance-and-feedback>`_.
 
