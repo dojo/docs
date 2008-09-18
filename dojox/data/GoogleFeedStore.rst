@@ -11,7 +11,7 @@ dojox.data.GoogleSearchStore
   :depth: 3
 
 
-The GoogleFeedStore is a store designed to work against Google's feed AJAX API.  This store is an extension of GoogleSearchStore.
+The GoogleFeedStore is a store designed to work against Google's feed reading AJAX API.  This store is an extension of GoogleSearchStore.
 
 
 **Note:**  These stores make use of Google's `AJAX search and feed services. <http://code.google.com/apis/ajaxsearch/>`_  In order to use them in your web-sites, please make sure to read `Google's terms and conditions <http://code.google.com/apis/ajaxsearch/terms.html>`_ and agree to them before using these stores.
