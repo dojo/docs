@@ -223,7 +223,7 @@ Functional Usage Examples
              //Build up the query from the input boxes.
              var isbn = isbnBox.getValue();
              if ( name && dojo.trim(isbn) !== "" ) {
-               queryObj["isbn"] = ;       
+               queryObj["isbn"] = isbn;       
              }
 
              var qNode = dojo.byId("query");
@@ -278,7 +278,7 @@ Functional Usage Examples
     <b>ISBN:  </b><input dojoType="dijit.form.TextBox" jsId="isbnBox" value="*"></input>
     <br>
     <br>
-    <div dojoType="dojox.data.XmlStore" jsId="bookStore"></div>
+    <div dojoType="dojox.data.XmlStore" jsId="bookStore" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/tests/stores/books.xml></div>
     <div dojoType="dijit.form.Button" jsId="button3">Click to search!</div>
     <br>
     <br>
