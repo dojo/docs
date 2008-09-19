@@ -150,7 +150,7 @@ dojox.data.GoogleLocalSearchStore
 +-----------------+-----------------------------------------------------------------------------------------------------------------------------+
 |country          |The country of the item                                                                                                      |
 +-----------------+-----------------------------------------------------------------------------------------------------------------------------+
-|phoneNumbers     |The phone numbers associated with this address. Can be one or more.                                                         |
+|phoneNumbers     |The phone numbers associated with this address. Can be one or more.                                                          |
 +-----------------+-----------------------------------------------------------------------------------------------------------------------------+
 |ddUrl            |A URL that can be used to provide driving directions from the center of the search results to this search results            |
 +-----------------+-----------------------------------------------------------------------------------------------------------------------------+
