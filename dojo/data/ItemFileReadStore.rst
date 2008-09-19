@@ -906,7 +906,7 @@ Demonstrating custom sorting
 
           var sortAttributes = [{attribute: "status", descending: true}, { attribute: "uniqueId", descending: true}];
           //Fetch the data.
-          sortStore.fetch({query: { type: "continent"}, onBegin: clearOldCList, onComplete: gotContinents, onError: fetchFailed, queryOptions: {deep:true}, sort: sortAttributes});
+          sortStore.fetch({query: { type: "continent"}, onBegin: clearOldCList, onComplete: gotItems, onError: fetchFailed, queryOptions: {deep:true}, sort: sortAttributes});
         }
         //Link the click event of the button to driving the fetch.
         dojo.connect(button4, "onClick", getItems );
