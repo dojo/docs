@@ -30,10 +30,10 @@ How it works
 
 QueryReadStore makes a request to the server for each sorting or query. This makes it ideal for large datasets with small windows of data, as in dijit.FilteringSelect.
 
------------------
 Query Translation
 -----------------
-  A dojo.data request follows a specific JSON format. As an example, suppose we have a FilteringSelect which looks up states. When the user presses "A", the dojo.data request is:
+
+A dojo.data request follows a specific JSON format. As an example, suppose we have a FilteringSelect which looks up states. When the user presses "A", the dojo.data request is:
 
 ::
 
@@ -89,7 +89,6 @@ For a fully functional example extension of QueryReadStore, please follow this `
 Functional Examples
 ===================
 
-------------------------------------------------
 Connecting QueryReadStore to dijit.form.ComboBox
 ------------------------------------------------
 
