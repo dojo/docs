@@ -8,7 +8,6 @@ dojox.data.XmlStore
 :Author: Jared Jurkiewicz
 :Available: since V1.0
  
-
 .. contents::
   :depth: 3
 
@@ -166,9 +165,9 @@ Usage Examples
 
 For these examples, we'll assume a data source as defined by the example data format in this page.
 
-----------------------------------------------------------
-Example 1: Query for all books that start with ISBN: A9B57
-----------------------------------------------------------
+
+Query for all books that start with ISBN: A9B57
+-----------------------------------------------
 
 .. code-block :: javascript 
 
@@ -182,9 +181,8 @@ Example 1: Query for all books that start with ISBN: A9B57
   var request = store.fetch({query: {isbn:"A9B57*"}, onComplete: gotBooks});
 
 
------------------------------------------------------------------------------
-Example 2: Query for all books that start with ISBN: A9B57 Case insensitively
------------------------------------------------------------------------------
+Query for all books that start with ISBN: A9B57 Case insensitively
+------------------------------------------------------------------
 
 .. code-block :: javascript
 
@@ -202,7 +200,7 @@ Example 2: Query for all books that start with ISBN: A9B57 Case insensitively
 Functional Usage Examples
 =========================
 
--------------------------
+
 Searching node attributes
 -------------------------
 
@@ -295,7 +293,6 @@ Searching node attributes
     </span>
 
 
-------------------------------------------
 Connecting XmlStore to dijit.form.ComboBox
 ------------------------------------------
 
@@ -314,7 +311,6 @@ Connecting XmlStore to dijit.form.ComboBox
     <div dojoType="dijit.form.ComboBox" store="bookStore2" searchAttr="title"></div>
 
 
-------------------------------------------
 Connecting XmlStore to dojox.grid.DataGrid
 ------------------------------------------
 
