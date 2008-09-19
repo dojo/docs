@@ -892,7 +892,7 @@ Demonstrating custom sorting
               var i;
               for (i = 0; i < items.length; i++) {
                 var item = items[i];
-                list.appendChild(document.createTextNode("Item ID: [" + store.getValue(items[i], "uniqueId") + "] with status: [" + store.getValue(items[i], "status") + "]");
+                list.appendChild(document.createTextNode("Item ID: [" + sortStore.getValue(items[i], "uniqueId") + "] with status: [" + sortStore.getValue(items[i], "status") + "]"));
 ;                list.appendChild(document.createElement("br"));
               }
             }
