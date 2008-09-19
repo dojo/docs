@@ -53,7 +53,7 @@ Item Attributes
 
 Depending on which of the search stores you instantiate, the supported list of item attributes changes. This is because each search service exposes different information, since each type of search by its nature deems specific information the key information to return. Below you will find a list of expected attribute names for each search service and what they are:
 
-----------------------------
+
 dojox.data.GoogleSearchStore
 ----------------------------
 
@@ -75,7 +75,7 @@ dojox.data.GoogleSearchStore
 |content          |A snippet of information about the page.                                                                                     |
 +-----------------+-----------------------------------------------------------------------------------------------------------------------------+
 
--------------------------------
+
 dojox.data.GoogleWebSearchStore
 -------------------------------
 
@@ -101,7 +101,7 @@ dojox.data.GoogleWebSearchStore
 |publishedDate    |The published date, in RFC-822 format                                                                                        |
 +-----------------+-----------------------------------------------------------------------------------------------------------------------------+
 
---------------------------------
+
 dojox.data.GoogleBlogSearchStore
 --------------------------------
 
@@ -123,7 +123,7 @@ dojox.data.GoogleBlogSearchStore
 |content          |A snippet of information about the page.                                                                                     |
 +-----------------+-----------------------------------------------------------------------------------------------------------------------------+
 
----------------------------------
+
 dojox.data.GoogleLocalSearchStore
 ---------------------------------
 
@@ -159,7 +159,7 @@ dojox.data.GoogleLocalSearchStore
 |staticMapUrl     |Link to the map for the item.                                                                                                |
 +-----------------+-----------------------------------------------------------------------------------------------------------------------------+
 
----------------------------------
+
 dojox.data.GoogleVideoSearchStore
 ---------------------------------
 
@@ -191,7 +191,7 @@ dojox.data.GoogleVideoSearchStore
 |                 |as the type attribute. If you want the video to play right away, make sure to append &autoPlay=true to the url.              |
 +-----------------+-----------------------------------------------------------------------------------------------------------------------------+
 
---------------------------------
+
 dojox.data.GoogleNewsSearchStore
 --------------------------------
 
@@ -218,7 +218,7 @@ dojox.data.GoogleNewsSearchStore
 |                 |"title", "titleNoFormatting", "url", "unescapedUrl", "publisher", "location", "publishedDate".                               |              
 +-----------------+-----------------------------------------------------------------------------------------------------------------------------+
 
---------------------------------
+
 dojox.data.GoogleBookSearchStore
 --------------------------------
 
@@ -243,7 +243,6 @@ dojox.data.GoogleBookSearchStore
 +-----------------+-----------------------------------------------------------------------------------------------------------------------------+
 
 
----------------------------------
 dojox.data.GoogleImageSearchStore
 ---------------------------------
 
@@ -281,7 +280,6 @@ Query Syntax
 
 The query syntax for all stores is simple. It takes a single object with the attribute 'text', where the value is what text to search for.
 
--------------
 Query Example
 -------------
 
@@ -299,7 +297,7 @@ Example Usage
 
 The following example shows wiring Various GoogleSearchStores to dojox.data.DataGrids. You can type in a search string in the search box and hit search. The datagrids will then be populated with the results of the searches.
 
-------------------------------------------
+
 Searching multiple Google services at once
 ------------------------------------------
 
