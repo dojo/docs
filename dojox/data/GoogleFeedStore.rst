@@ -12,7 +12,7 @@ dojox.data.GoogleFeedStore
   :depth: 3
 
 
-The GoogleFeedStore is a store designed to work against Google's feed reading AJAX API.  This store is an extension of GoogleSearchStore.
+The GoogleFeedStore is a store designed to work against Google's feed reading AJAX API. This store is an extension of GoogleSearchStore.
 
 
 **Note:**  These stores make use of Google's `AJAX search and feed services. <http://code.google.com/apis/ajaxsearch/>`_  In order to use them in your web-sites, please make sure to read `Google's terms and conditions <http://code.google.com/apis/ajaxsearch/terms.html>`_ and agree to them before using these stores.
@@ -32,7 +32,7 @@ The following parameters are supported by the GoogleFeedStore implementation.
 +-------------+------------------------------------------------------------------------------------------+----------------------+
 | **name**    | **description**                                                                          | **type**             |
 +-------------+------------------------------------------------------------------------------------------+----------------------+
-|label        |The attribute of the search returns to use as the item's label.  Defaults to              |string                | 
+|label        |The attribute of the search returns to use as the item's label. Defaults to               |string                | 
 |             |titleNoFormatting.                                                                        |                      |
 +-------------+------------------------------------------------------------------------------------------+----------------------+
 |key          |Your Google API key (optional)                                                            | string               |
@@ -69,7 +69,6 @@ Query Syntax
 
 The query syntax for this store is simple. It takes a single object with the attribute 'url', where the value of the feed to retrieve
 
--------------
 Query Example
 -------------
 ::
