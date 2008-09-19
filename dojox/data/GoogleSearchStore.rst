@@ -12,9 +12,9 @@ dojox.data.GoogleSearchStore
   :depth: 3
 
 
-The GoogleSearchStore is actually a collection of stores designed to work with Google's Ajax search services.  GoogleSearchStore is the base class  that all subclasses of GoogleSearchStore extend from.  It provides all the basics of working with Google's search API in a dojo.data compliant implementation.  The following stores are avaialble for use after dojo.require() is used to load dojox.data.GoogleSearchStore:
+The GoogleSearchStore is actually a collection of stores designed to work with Google's Ajax search services. GoogleSearchStore is the base class  that all subclasses of GoogleSearchStore extend from. It provides all the basics of working with Google's search API in a dojo.data compliant implementation. The following stores are avaialble for use after dojo.require() is used to load dojox.data.GoogleSearchStore:
 
-* **dojox.data.GoogleSearchStore** - The basic search store that all more fine-grained searches inherit from.  This store defaults to querying Google's Web-search Ajax calls.
+* **dojox.data.GoogleSearchStore** - The basic search store that all more fine-grained searches inherit from. This store defaults to querying Google's Web-search Ajax calls.
 * **dojox.data.GoogleWebSearchStore** - A store configured to search specifically against Google's Web search Ajax calls.
 * **dojox.data.GoogleBlogSearchStore** - A store configured to search specifically against Google's Blog (Web log) search Ajax calls.
 * **dojox.data.GoogleLocalSearchStore** - A store configured to search specifically against Google's Location related search Ajax calls.
@@ -22,7 +22,7 @@ The GoogleSearchStore is actually a collection of stores designed to work with G
 * **dojox.data.GoogleBookSearchStore** - A store configured to search specifically against Google's Book search Ajax calls.
 * **dojox.data.GoogleImageSearchStore** - A store configured to search specifically against Google's Image search Ajax calls.
 
-**Note:**  These stores make use of Google's `AJAX search services. <http://code.google.com/apis/ajaxsearch/>`_.  In order to use them in your web-sites, please make sure to read `Google's terms and conditions <http://code.google.com/apis/ajaxsearch/terms.html>`_ and agree to them before using these stores.
+**Note:**  These stores make use of Google's `AJAX search services. <http://code.google.com/apis/ajaxsearch/>`_. In order to use them in your web-sites, please make sure to read `Google's terms and conditions <http://code.google.com/apis/ajaxsearch/terms.html>`_ and agree to them before using these stores.
 
 ===========
 API Support
@@ -39,7 +39,7 @@ The following parameters are supported by all Google store implementations.
 +-------------+------------------------------------------------------------------------------------------+----------------------+
 | **name**    | **description**                                                                          | **type**             |
 +-------------+------------------------------------------------------------------------------------------+----------------------+
-|label        |The attribute of the search returns to use as the item's label.  Defaults to              |string                | 
+|label        |The attribute of the search returns to use as the item's label. Defaults to               |string                | 
 |             |titleNoFormatting.                                                                        |                      |
 +-------------+------------------------------------------------------------------------------------------+----------------------+
 |key          |Your Google API key (optional)                                                            | string               |
@@ -51,7 +51,7 @@ The following parameters are supported by all Google store implementations.
 Item Attributes
 ===============
 
-Depending on which of the search stores you instantiate, the supported list of item attributes changes.  This is because each search service exposes different information, since each type of search by its nature deems specific information the key information to return.  Below you will find a list of expected attribute names for each search service and what they are:
+Depending on which of the search stores you instantiate, the supported list of item attributes changes. This is because each search service exposes different information, since each type of search by its nature deems specific information the key information to return. Below you will find a list of expected attribute names for each search service and what they are:
 
 ----------------------------
 dojox.data.GoogleSearchStore
@@ -150,7 +150,7 @@ dojox.data.GoogleLocalSearchStore
 +-----------------+-----------------------------------------------------------------------------------------------------------------------------+
 |country          |The country of the item                                                                                                      |
 +-----------------+-----------------------------------------------------------------------------------------------------------------------------+
-|phoneNumbers     |The phone numbers associated with this address.  Can be one or more.                                                         |
+|phoneNumbers     |The phone numbers associated with this address. Can be one or more.                                                         |
 +-----------------+-----------------------------------------------------------------------------------------------------------------------------+
 |ddUrl            |A URL that can be used to provide driving directions from the center of the search results to this search results            |
 +-----------------+-----------------------------------------------------------------------------------------------------------------------------+
@@ -279,7 +279,7 @@ dojox.data.GoogleImageSearchStore
 Query Syntax
 ============
 
-The query syntax for all stores is simple.  It takes a single object with the attribute 'text', where the value is what text to search for.
+The query syntax for all stores is simple. It takes a single object with the attribute 'text', where the value is what text to search for.
 
 -------------
 Query Example
@@ -297,7 +297,7 @@ Query Example
 Example Usage
 =============
 
-The following example shows wiring Various GoogleSearchStores to dojox.data.DataGrids.  You can type in a search string in the search box and hit search.  The datagrids will then be populated with the results of the searches.
+The following example shows wiring Various GoogleSearchStores to dojox.data.DataGrids. You can type in a search string in the search box and hit search. The datagrids will then be populated with the results of the searches.
 
 ------------------------------------------
 Searching multiple Google services at once
