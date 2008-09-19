@@ -50,11 +50,12 @@ That example passes an anonymous function. You can pass named functions as well:
 
 Notice we didn't call ``dojo.addOnLoad(init());`` ... The additional () causes the named-function to execute immediately, and ``dojo.addOnLoad`` expects a function.
 
+
 =========
 dojo.byId
 =========
 
-This is more or less an alias to ``document.getElementsById``. Simple pass ``dojo.byId`` a string, and the domNode with that id is returned. Notice how we wrap the byId call in an ``addOnLoad`` function -- You cannot use or manipulate the DOM before onLoad has fired, as a general rule.
+This is more or less an alias to ``document.getElementsById``. Simply pass ``dojo.byId`` a string, and the domNode with that id is returned. Notice how we wrap the byId call in an ``addOnLoad`` function -- You should not use or manipulate the DOM before onLoad has fired, as a general rule.
 
 .. code-block :: javascript
 
@@ -66,6 +67,24 @@ This is more or less an alias to ``document.getElementsById``. Simple pass ``doj
 ``.innerHTML`` is a basic property of DOM Elements. Here, we're setting the content of the node with ``id="someNode"`` to say "found me!"
 
 Note: in some cases (in *lesser* browsers), ``document.getElementsById`` doesn't actually return the Node you desire. ``dojo.byId`` normalizes this, and is the recommended way of accessing nodes byId. ``dojo.byId`` is similar to Prototype's ``$("someId")``, and jQuery's ``$("#someId")`` syntax, though Dojo uses a safely-namespaced function for it's query engine: ``dojo.query("#someId")`` (see: `dojo.query </dojo/query>`_) to avoid conflicts.
+
+
+==========
+dojo.query
+==========
+
+``dojo.query()`` returns a list of DOM nodes based on a CSS selector. Users of other libraries will find the syntax very familiar:
+
+.. code-block :: javascript
+
+  dojo.addOnLoad(function(){
+    // every element in the page with the class "blueButton" assigned
+    dojo.query(".blueButton").forEach(function(node, index, arr){
+        console.debug(node.innerHTML);
+    });
+  });
+
+The returned object of a ``dojo.query()`` call is an instance of `dojo.NodeList </dojo/NodeList>`_, a subclass of Array with many convenience methods added for making DOM manipulation and event handling easier. Custom extensions of the ``dojo.NodeList`` class are supported and encouraged.
 
 ==========
 dijit.byId 
