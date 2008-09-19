@@ -836,7 +836,6 @@ Demonstrating custom sorting
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.form.Button");
 
-
       var sortData = { identifier: "uniqueId", 
         items: [ {uniqueId: 1, status:"CLOSED"},
           {uniqueId: 2,  status:"OPEN"}, 
