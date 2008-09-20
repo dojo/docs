@@ -303,8 +303,8 @@ The general case type map handles the situation where some processing on the val
     }
   }
 
-Example:  General Case Type Map for JavaScript Date Objects
------------------------------------------------------------
+Example: General Case Type Map for JavaScript Date Objects
+----------------------------------------------------------
 
 .. code-block :: javascript 
 
@@ -334,8 +334,8 @@ The simplified form is more compact to write and works well when the value held 
     "typeN": constructorFunction()
   }
 
-Example:  Simplified Form Type Map for dojo.Color Objects
----------------------------------------------------------
+Example: Simplified Form Type Map for dojo.Color Objects
+--------------------------------------------------------
 
 .. code-block :: javascript 
 
@@ -343,8 +343,8 @@ Example:  Simplified Form Type Map for dojo.Color Objects
     "Color": dojo.Color
   }
 
-Functional Example:  Using custom type maps with ItemFileReadStore
-------------------------------------------------------------------
+Functional Example: Using custom type maps with ItemFileReadStore
+-----------------------------------------------------------------
 
 .. cv-compound ::
   
@@ -431,7 +431,7 @@ Functional Example:  Using custom type maps with ItemFileReadStore
 Custom Sorting
 ==============
 
-ItemFileReadStore uses the dojo.data.util.sorter helper functions to implement item sorting.  These functions provide a mechanism by which end users can customize how attributes are sorted.  This is done by defining a *comparatorMap* on the store class.  The comparator map maps an attribute name to some sorting function.  The sorting function is expected to return 1, -1, or 0, base on whether the value for two items for the attribute was greater than, less than, or equal to, each other.  An example of a custom sorter for attribute 'foo' is shown below:
+ItemFileReadStore uses the dojo.data.util.sorter helper functions to implement item sorting. These functions provide a mechanism by which end users can customize how attributes are sorted. This is done by defining a *comparatorMap* on the store class. The comparator map maps an attribute name to some sorting function. The sorting function is expected to return 1, -1, or 0, base on whether the value for two items for the attribute was greater than, less than, or equal to, each other. An example of a custom sorter for attribute 'foo' is shown below:
 
 .. code-block :: javascript
 
