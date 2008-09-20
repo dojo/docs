@@ -229,5 +229,3 @@ See also
 ========
 
 * SitePen, a major Dojo contributor, has taken the liberty of writing and maintaining a `Dojo QuickStart Guide <http://sitepen.com/labs/guides/?guide=DojoQuickStart>`_. Rather than duplicate that effort, we will simply suggest you read that exceptionally helpful guide.
-
-.. _query: dojo/query
