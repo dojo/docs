@@ -101,7 +101,7 @@ This is a plain TabContainer with three tabs and flexible height using the doLay
   .. cv :: html
     
     <!-- this div is only for documentation purpose, in real development environments, just take it out -->
-    <div style="height: 100px;">
+    <div style="height: 105px;">
 
       <div dojoType="dijit.layout.TabContainer" style="width: 100%;" doLayout="false">
         <div dojoType="dijit.layout.ContentPane" title="My first tab" selected="true">
