@@ -12,7 +12,7 @@ dojox.data.AtomReadStore
   :depth: 3
 
 
-The AtomReadStore is a store designed to provide read-only access to `Atom XML <http://en.wikipedia.org/wiki/Atom_(standard)>`_ documents. Atom XML is a common document format for web feeds providing lists of data.  It is similar in many respects to RSS, but provides much more flexibility.
+The AtomReadStore is a store designed to provide read-only access to `Atom XML <http://en.wikipedia.org/wiki/Atom_(standard)>`_ documents. Atom XML is a common document format for web feeds providing lists of data. It is similar in many respects to RSS, but provides much more flexibility.
 
 ===========
 API Support
@@ -29,7 +29,7 @@ The following parameters are supported by the GoogleFeedStore implementation.
 +-------------+------------------------------------------------------------------------------------------+----------------------+
 | **name**    | **description**                                                                          | **type**             |
 +-------------+------------------------------------------------------------------------------------------+----------------------+
-|label        |The attribute of the search returns to use as the item's label.  Defaults to              |string                | 
+|label        |The attribute of the search returns to use as the item's label. Defaults to               |string                | 
 |             |titleNoFormatting.                                                                        |                      |
 +-------------+------------------------------------------------------------------------------------------+----------------------+
 |url          |The url to a service or an XML document that represents the store                         |string                | 
@@ -43,7 +43,7 @@ The following parameters are supported by the GoogleFeedStore implementation.
 Item Attributes
 ===============
 
-The following attributes are available on items returned from the AtomReadStore
+The following attributes are available on items returned from the AtomReadStore:
 
 +-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 |**Attribute**    |**Description**                                                                                                                                                                                                                                                                             |
@@ -52,24 +52,23 @@ The following attributes are available on items returned from the AtomReadStore
 +-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 |link             |The URL for the HTML version of the feed entry.                                                                                                                                                                                                                                             |
 +-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-|content          |The full content of the blog post.  If unescapeHTML is true, this is returned in HTML. Otherwise it is returned in plain text.                                                                                                                                                              |
+|content          |The full content of the blog post. If unescapeHTML is true, this is returned in HTML. Otherwise it is returned in plain  text.                                                                                                                                                              |
 +-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 |summary          |A snippet of information about the feed entry. If unescapeHTML is true, this is returned in HTML. Otherwise it is returned in plain text.                                                                                                                                                   |
 +-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 |published        |The string date on which the entry was published.                                                                                                                                                                                                                                           |
 +-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-|category         |An array of tags for the entry. Each category is a JSON object containing two values, 'scheme' and 'term'.  E.g. '''store.getValue(item, 'category').term''' gives the category, or tag, value.                                                                                             |
+|category         |An array of tags for the entry. Each category is a JSON object containing two values, 'scheme' and 'term'. E.g. '''store.getValue(item, 'category').term''' gives the category, or tag, value.                                                                                              |
 +-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-|author           |A JSON object containing one or two elements, '''name''' and '''uri'''.  The former is the name of the author, the latter is the authors personal uri, or web page. E.g. '''var author = store.getValue(item, 'author'); alert("Name is " + author.name + " and homepage is " + author.uri);|
+|author           |A JSON object containing one or two elements, '''name''' and '''uri'''. The former is the name of the author, the latter is the authors personal uri, or web page. E.g. '''var author = store.getValue(item, 'author'); alert("Name is " + author.name + " and homepage is " + author.uri); |
 +-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 ============
 Query Syntax
 ============
 
-The query syntax for this store is simple. If the data source is a static url, e.g. an XML file, then no query syntax is used. The store simply reads the URL specified in the constructor.  If the URL must have some parameters added to it, e.g. ''feed.php?user=1234'', then these parameters can be added in the query.
+The query syntax for this store is simple. If the data source is a static url, e.g. an XML file, then no query syntax is used. The store simply reads the URL specified in the constructor. If the URL must have some parameters added to it, e.g. ''feed.php?user=1234'', then these parameters can be added in the query.
 
---------------------------------
 Query Example With One Parameter
 --------------------------------
 ::
