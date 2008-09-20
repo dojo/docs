@@ -10,7 +10,7 @@ dojox.data.CssClassStore
 .. contents::
   :depth: 3
 
-CssClassStore is a read interface based on the CssRuleStore.  Items represent the individual classes present in the stylesheets loaded in the current page.  In other words, compared to the results of a query on the CssRuleStore, the CssClassStore generates items that may be represented by a single item in the rule store (if several classes are mentioned in a single selector) OR may occur multiple times in the rule store (for a class that's mentioned in several selectors).  Since the class store is based upon (extends) the rule store, it takes the same constructor parameters and operates very similarly.  The single biggest difference is the support for the Identity API in the CssClassStore.  The identity of an individual item is the same as it's 'class' attribute, which is the class name, including the '.' that is used to denote a class in a CSS selector.
+CssClassStore is a read interface based on the CssRuleStore. Items represent the individual classes present in the stylesheets loaded in the current page. In other words, compared to the results of a query on the CssRuleStore, the CssClassStore generates items that may be represented by a single item in the rule store (if several classes are mentioned in a single selector) OR may occur multiple times in the rule store (for a class that's mentioned in several selectors). Since the class store is based upon (extends) the rule store, it takes the same constructor parameters and operates very similarly. The single biggest difference is the support for the Identity API in the CssClassStore. The identity of an individual item is the same as it's 'class' attribute, which is the class name, including the '.' that is used to denote a class in a CSS selector.
 
 ===========
 API Support
@@ -51,7 +51,6 @@ The query syntax is identical to `dojo.data.ItemFileReadStore <dojo/data/ItemFil
 Examples
 ========
 
--------------------------------------------------------
 Programmatic construction of a ComboBox to browse rules
 -------------------------------------------------------
 
