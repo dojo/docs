@@ -10,7 +10,7 @@ dojox.data.CssRuleStore
 .. contents::
   :depth: 3
 
-CssRuleStore is a read interface to the CSS rules loaded in the current page.  Rules can be selected based on several different filterable attributes outlined below.  Which CSS rules are indexed can be determined by a context provided to the store at the time of creation.  This store is useful for reading the CSS rules that are loaded and in effect on the page.
+CssRuleStore is a read interface to the CSS rules loaded in the current page. Rules can be selected based on several different filterable attributes outlined below. Which CSS rules are indexed can be determined by a context provided to the store at the time of creation. This store is useful for reading the CSS rules that are loaded and in effect on the page.
 
 ===========
 API Support
@@ -51,7 +51,7 @@ Item Attributes
 |parentStyleSheet    |The parent stylesheet to the sheet this rule came from.  May be null (if the rule came from a <style>  |
 |                    |block, for instance).                                                                                  |
 +--------------------+-------------------------------------------------------------------------------------------------------+
-|parentStyleSheetHref|The url to the parent stylesheet.  May be null.                                                        |
+|parentStyleSheetHref|The url to the parent stylesheet. May be null.                                                         |
 +--------------------+-------------------------------------------------------------------------------------------------------+
 
 ============
@@ -64,7 +64,6 @@ The query syntax is identical to `dojo.data.ItemFileReadStore <dojo/data/ItemFil
 Examples
 ========
 
--------------------------------------------------------
 Programmatic construction of a ComboBox to browse rules
 -------------------------------------------------------
 
