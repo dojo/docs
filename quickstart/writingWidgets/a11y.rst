@@ -1,0 +1,13 @@
+#format dojo_rst
+
+Creating Accessible Widgets
+===========================
+
+:Status: Draft
+:Version: 1.2
+:Author: Becky Gibson
+
+Device Independence
+-------------------
+
+Device Independent behavior means more than just supporting the keyboard. Where ever possible use the most generic event handler available. For example, consider a widget where the down arrow key selects an element in the widget.  The selection needs to be distinguished with a specific style.  Rather than modifying the style of the element when processing the down arrow key event, focus the item from the down arrow key event handler and change the style via a focus event handler. This way, if focus is set from a means other than the keyboard such as a voice input system, the styling is properly set and does not depend solely on keyboard actions. 
