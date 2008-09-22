@@ -50,7 +50,7 @@ Search article text
 
 
 ---------------------
-Search article titles
+Load article by title
 ---------------------
 
 .. code-block :: javascript
