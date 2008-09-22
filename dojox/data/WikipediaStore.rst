@@ -104,7 +104,11 @@ Sime Demo usage of WikipediaStore
               var title = store.getValue(item, "title");
               var text = store.getValue(item, "text")["*"];
               var wikiOut = dojo.byId("wikipediaContent");
-              wikiOut.document.body.innerHTML = "<h1>" + title + "</h1>" + text;
+              try{
+                wikiOut.document.body.innerHTML = "<h1>" + title + "</h1>" + text;
+              } catch (e) {
+                console.log(e);
+              }
             }
           };
           store.fetch(request);
