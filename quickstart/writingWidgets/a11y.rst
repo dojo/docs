@@ -7,6 +7,9 @@ Creating Accessible Widgets
 :Version: 1.2
 :Author: Becky Gibson
 
+.. contents::
+  :depth: 3
+
 Device Independence
 -------------------
 
