@@ -95,7 +95,9 @@ Sime Demo usage of WikipediaStore
         var outNode = dojo.byId("output");
         outNode.innerHTML = "Searching...";	
 
-        function loadArticle(article){
+        function loadArticle(e, article){
+          e.preventDefault();
+          e.stopPropagation();
           var request = {
             query: {
             title: article
@@ -128,8 +130,8 @@ Sime Demo usage of WikipediaStore
           onItem: function(item, req){
             var node = document.createElement("a");
             node.href = "#";
-            node.onclick = function(){
-              loadArticle(this.innerHTML);
+            node.onclick = function(e){
+              loadArticle(e, this.innerHTML);
             };
             node.style.padding = "6px";
             node.style.display = "block";
