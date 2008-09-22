@@ -8,16 +8,16 @@ dojo.data FAQ
 
 This section is intended as a point to put answers to the common questions posed by users of dojo.data.  
 
-========================================================================================================
-I called fetch() on a datastore and the return value from the fetch function doesn't have my data!  Why?
-========================================================================================================
+=====================================================================================================================
+Question 1:  I called fetch() on a datastore and the return value from the fetch function doesn't have my data!  Why?
+=====================================================================================================================
 
 Because the dojo.data API is asynchronous be definition.  The return value from fetch will generally not have any data on it.  It's intended as a point for stores to store an abort() function for a request and a place for stores to put internal cache details and the like.  It is not intended to gand back data items.  Data items are always returned through the callbacks to fetch().
  
 
-===========================================================================================================================
-I introspected using javascript associative map walking items from ItemFileReadStore and it has all these _variables!  Why?
-===========================================================================================================================
+========================================================================================================================================
+Question 2:  I introspected using javascript associative map walking items from ItemFileReadStore and it has all these _variables!  Why?
+========================================================================================================================================
 
 Items from a datastore are supposed to be treated as opaque handles.  This is by definition of the API, which can be read in the `API section <dojo/data/api>`_.  dojo.data.ItemFileReadStore and dojo.data.ItemFileWriteStore store several bits of important internal information on each item, such as what store instance it came form, what its internal index is (for O(1) lookup performance), and internal maps of who has references to the item.  This is all critical information needed by the store to make item processing efficient.  It is also information that should never be relied on directly, it should only be used by the store itself.  
 
@@ -27,9 +27,9 @@ All store access should go through the `dojo.data.api.Read <dojo/data/api/Read>`
 * **store.getValue(item, attribute):** The function you use to get a single value from an attribute of a data item.  For multi-valued attributes, you should use store.getValues(item, attribute);  
 
 
-=============================================================================================================
-Okay, you say dojo.data items are opaque ... but I' like to convert them to a JSON object.  How do I do that?
-=============================================================================================================
+==========================================================================================================================
+Question 3:  Okay, you say dojo.data items are opaque ... but I' like to convert them to a JSON object.  How do I do that?
+==========================================================================================================================
 
 This is actually not difficult to do.  This is done through usage of the dojo.data.api.Read specification.  The code you would use to create a JSON structure from a dojo.data item is the following:
 
