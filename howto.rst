@@ -92,6 +92,8 @@ My `link`_ is very cool and is my `link`_
 
 The good thing about this way of defining links is that you won't have to look in the content of your text and find all occurences of a link you might want to change. This way all your links are stored in one convenient location and if you need to change them you know where to look.
 
+Note from a contributor:  The character used is the grave accent (on the key with the ~ on the left of the keyboard).  Others may find that obvious but I was very confused trying to figure out why my links wouldn't work and it was because I was using the apostrophe character (on the key with the ").
+
 =============
 Code examples
 =============
