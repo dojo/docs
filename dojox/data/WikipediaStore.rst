@@ -103,7 +103,8 @@ Sime Demo usage of WikipediaStore
             onItem: function(item, req){
               var title = store.getValue(item, "title");
               var text = store.getValue(item, "text")["*"];
-              outNode.innerHTML = "<h1>" + title + "</h1>" + text;
+              var wikiOut = dojo.byId("wikipediaContent");
+              wikiOut.document.body.innerHTML = "<h1>" + title + "</h1>" + text;
             }
           };
           store.fetch(request);
@@ -145,4 +146,5 @@ Sime Demo usage of WikipediaStore
         <button id="searchButton" dojoType="dijit.form.Button" value="store.fetch()" onclick="doSearch()">Search!</button>
       </p>
       <div id="output" style="padding:0 20px;"></div>
+      <iframe id="wikipediaContent" src=""><iframe>
     </form>
