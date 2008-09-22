@@ -107,6 +107,7 @@ Sime Demo usage of WikipediaStore
               try{
                 wikiOut.document.body.innerHTML = "<h1>" + title + "</h1>" + text;
               } catch (e) {
+                console.log(wikiOut);
                 console.log(e);
               }
             }
