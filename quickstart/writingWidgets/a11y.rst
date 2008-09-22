@@ -33,3 +33,23 @@ The ondijitclick event can also be specified in the template via the dojoAttachE
 
   <span class="dijit dijitReset dijitLeft dijitInline"
 	dojoAttachEvent="ondijitclick:_onButtonClick,onmouseenter:_onMouse,onmouseleave:_onMouse">
+
+Trapping Key Events
+-------------------
+
+When implementing keyboard navigation, first determine where in the hierarchy to trap the key events. It is generally best to trap the key events at as high a level as possible and use the event object to determine that actual source of the event and perform the necessary action.  This method prevents having to add a key handler to each individual element thus conserving the amount of markup to be generated.  However, there may be cases where the event needs to be trapped at the level of each individual element. The actual source of the event is needed in order to determine how to process the keystroke received.
+
+Once the component handles an event, it will usually stop that event from being propagated to other elements.   For example, if the down arrow key is captured and moves focus to the next item in a tree control, the event should not propagate up to the browser where it might be interpreted as a command to scroll the page.  Use the dojo.stopEvent(event) method to stop the event.
+
+In order to assist with key event handling, a generic onkeypress event has been added to Dojo to normalize key events. The appropriate key event, either onkeydown or onkeypress, will be used depending upon the browser.  The key codes have been normalized as well. See dojo.keys class in dojo._base.event.js. Add the dojo onkeypress event into the widget template or via scripting using one of the event connection apis.
+
+Tabindex and Focus
+------------------
+
+When navigating via the keyboard is it essential that the element that is navigated to receives focus.   The focus should NOT be simulated via CSS - call the focus() method on the element.  Styling can be used to enhance the visual focus or selection but should not replace actually setting focus on an element.  A screen reader will only speak information about the element when it receives focus. Screen magnifiers rely on focus to move the zoomed viewport on the screen.
+
+Use the tabindex value to provide direct or programmatic keyboard focus to an element. See the tabindex chart in the Dojo Accessibility Strategy Device Independence section.
+
+When adding support for keyboard navigation, consider the widget as a component.  The tab key can be used to navigate from component to component on a page and then the arrow and other keys should be used to navigate within the component.   Only one element in a given component should have a tabindex equal to zero at any one time.  This allows the user to navigate into and set focus within in the component using the tab key.  Then, trap the onkey events and use the arrow keys to navigate within the elements of the component. All of the elements within the component which can receive focus must have a tabindex equal to -1. When an element is programmatically given focus, its tabindex value is changed from -1 to 0 and the tabindex of the previous element with focus will be changed from 0 to -1. This will insure that only one element within the component is in the tab order of the page and that the element with tabindex = 0 is the most recently focused element in the component.
+
+For example, when creating a tree control, each tree item is represented by an element.  The first tree item in the control will be given a tabindex of 0.   All of the other elements which represent tree items and can receive focus programmatically will have a tabindex value of -1. An onkeypress handler will trap the keyboard events for the tree control.  When a tree item element is given focus via element.focus(), the element’s tabindex will be changed from -1 to 0. and it will be put into the tab order. Now if the user moves focus out of the tree control (either via a mouse click or by tabbing to the next component on the page), when the user sets focus back into the tree control using the tab key, the last focused tree item, which was given a tabindex of 0, will receive focus.  
