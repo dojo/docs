@@ -71,3 +71,12 @@ Search article text (paged)
     start: 10,
     count: 50
   },
+
+
+========
+Examples
+========
+
+-----------------------------------------------------------------------
+Connecting WikipediaStore to Grid and displaying results in ContentPane
+-----------------------------------------------------------------------
