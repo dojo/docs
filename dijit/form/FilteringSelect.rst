@@ -1,7 +1,7 @@
 #format dojo_rst
 
-dijit.form.FileringSelect
-=========================
+dijit.form.FilteringSelect
+==========================
 
 :Status: Draft
 :Version: 1.2
