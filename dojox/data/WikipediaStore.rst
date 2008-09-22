@@ -37,9 +37,9 @@ Query Syntax
 
 The query syntax for this store is extremely basic.  It takes a query object that allows you to search for text in the title or in the body of articles.  An example query is shown below:
 
-
+-------------------
 Search article text
-===================
+-------------------
 
 .. code-block :: javascript
 
@@ -49,9 +49,9 @@ Search article text
   },
 
 
-
+---------------------
 Search article titles
-=====================
+---------------------
 
 .. code-block :: javascript
 
