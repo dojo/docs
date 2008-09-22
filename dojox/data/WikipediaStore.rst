@@ -140,7 +140,7 @@ Sime Demo usage of WikipediaStore
       <p>
         Text: <input id="searchText" dojoType="dijit.form.TextBox" type="text" value="dojo toolkit">
         Count: <input id="count" dojoType="dijit.form.TextBox" type="text" value="8" size="3">
-        <input id="searchButton" dojoType="dijit.form.Button" type="button" value="store.fetch()" onclick="doSearch()">Search!</input>
+        <button id="searchButton" dojoType="dijit.form.Button" value="store.fetch()" onclick="doSearch()">Search!</button>
       </p>
       <div id="output" style="padding:0 20px;"></div>
     </form>
