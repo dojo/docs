@@ -87,6 +87,7 @@ Sime Demo usage of WikipediaStore
 
     <script>
       dojo.require("dijit.form.Button");
+      dojo.require("dijit.form.TextBox");
       dojo.require("dojox.data.WikipediaStore");
       var store = new dojox.data.WikipediaStore();
 
@@ -111,9 +112,9 @@ Sime Demo usage of WikipediaStore
         var request = {
           query: {
             action: "query", 
-            text: dojo.byId("searchText").value
+            text: dijit.byId("searchText").getValue();
           },
-          count: dojo.byId("count").value,
+          count: dijit.byId("count").getValue(),
           onBegin: function(count){
             outNode.innerHTML += " found " + count + " results.<br>Click one to load the article.";
           },
@@ -137,9 +138,9 @@ Sime Demo usage of WikipediaStore
 
     <form action="#">
       <p>
-        Text: <input id="searchText" type="text" value="dojo toolkit">
-        Count: <input id="count" type="text" value="8" size="3">
-        <input id="searchButton" dojoType="dijit.form.Button" type="button" value="store.fetch()" onclick="doSearch()">
+        Text: <input id="searchText" dojoType="dijit.form.TextBox" type="text" value="dojo toolkit">
+        Count: <input id="count" dojoType="dijit.form.TextBox" type="text" value="8" size="3">
+        <input id="searchButton" dojoType="dijit.form.Button" type="button" value="store.fetch()" onclick="doSearch()">Search!</input>
       </p>
       <div id="output" style="padding:0 20px;"></div>
     </form>
