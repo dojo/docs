@@ -27,9 +27,9 @@ All store access should go through the `dojo.data.api.Read <dojo/data/api/Read>`
 * **store.getValue(item, attribute):** The function you use to get a single value from an attribute of a data item.  For multi-valued attributes, you should use store.getValues(item, attribute);  
 
 
-==========================================================================================================================
-Question 3:  Okay, you say dojo.data items are opaque ... but I' like to convert them to a JSON object.  How do I do that?
-==========================================================================================================================
+===============================================================================================================================
+Question 3:  Okay, you say dojo.data items are opaque ... but I would like to convert them to a JSON object.  How do I do that?
+===============================================================================================================================
 
 This is actually not difficult to do.  This is done through usage of the dojo.data.api.Read specification.  The code you would use to create a JSON structure from a dojo.data item is the following:
 
