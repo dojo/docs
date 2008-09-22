@@ -86,6 +86,7 @@ Sime Demo usage of WikipediaStore
   .. cv :: javascript
 
     <script>
+      dojo.require("dijit.form.button");
       dojo.require("dojox.data.WikipediaStore");
       var store = new dojox.data.WikipediaStore();
 
@@ -130,4 +131,15 @@ Sime Demo usage of WikipediaStore
 	};
         store.fetch(request);
       }
+    </script>
 
+  .. cv :: html
+
+    <form action="#">
+      <p>
+        Text: <input id="searchText" type="text" value="dojo toolkit">
+        Count: <input id="count" type="text" value="8" size="3">
+        <input id="searchButton" dojoType="dijit.form.Button" type="button" value="store.fetch()" onclick="doSearch()">
+      </p>
+      <div id="output" style="padding:0 20px;"></div>
+    </form>
