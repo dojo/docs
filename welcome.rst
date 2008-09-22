@@ -57,6 +57,7 @@ Dojo is a very extensive library of code, most of which is optional. Here are so
     * `Nested Items and Lazy Loading <quickstart/data/usingdatastores/lazyloading>`_
     * `Paging data <quickstart/data/usingdatastores/pagination>`_
     * `Sorting Items <quickstart/data/usingdatastores/sorting>`_
+    * `FAQ (frequent questions about using dojo.data) <quickstart/data/usingdatastores/faq>`_
 
 * `The event system <quickstart/events>`_
 * `Parsing, Formatting and Validating Numbers and Dates <quickstart/numbersDates>`_
