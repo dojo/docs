@@ -77,6 +77,57 @@ Search article text (paged)
 Examples
 ========
 
------------------------------------------------------------------------
-Connecting WikipediaStore to Grid and displaying results in ContentPane
------------------------------------------------------------------------
+---------------------------------
+Sime Demo usage of WikipediaStore
+---------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojox.data.WikipediaStore");
+      var store = new dojox.data.WikipediaStore();
+
+      function doSearch(){
+        var outNode = dojo.byId("output");
+        outNode.innerHTML = "Searching...";	
+
+        function loadArticle(article){
+          var request = {
+            query: {
+            title: article
+            },
+            onItem: function(item, req){
+              var title = store.getValue(item, "title");
+              var text = store.getValue(item, "text")["*"];
+              outNode.innerHTML = "<h1>" + title + "</h1>" + text;
+            }
+          };
+          store.fetch(request);
+        }
+
+        var request = {
+          query: {
+            action: "query", 
+            text: dojo.byId("searchText").value
+          },
+          count: dojo.byId("count").value,
+          onBegin: function(count){
+            outNode.innerHTML += " found " + count + " results.<br>Click one to load the article.";
+          },
+          onItem: function(item, req){
+            var node = document.createElement("a");
+            node.href = "#";
+            node.onclick = function(){
+              loadArticle(this.innerHTML);
+            };
+            node.style.padding = "6px";
+            node.style.display = "block";
+            node.innerHTML = store.getValue(item, "title");
+            outNode.appendChild(node);
+          }
+	};
+        store.fetch(request);
+      }
+
