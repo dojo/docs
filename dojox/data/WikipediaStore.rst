@@ -9,3 +9,66 @@ dojox.data.WikipediaStore
  
 .. contents::
   :depth: 3
+
+The Wikipedia store is a datastore that extends `dojox.data.ServiceStore <dojox/data/ServiceStore>`_.  Its putpose is to expose the Wikipedia search service SMD in a datastore format.  This store is fairly simplistic in what it allows searching on, such as full title, or searching title and body text for certain keywords.  It doesn't provide facilities for doing wildcar searching, unfortunately, which does not make it terribly useful for widgets such as dijit.form.ComboBox. 
+
+==============
+Supported APIs
+==============
+
+The following dojo.data APIs are implemented by XmlStore
+
+* `dojo.data.api.Read <dojo/data/api/Read>`_
+
+
+===============
+Item Attributes
+===============
+
+All items returned from a Wikipedia search provide the following attributes you can access for additional details about the located articles.
+
++---------------+-----------------------------------------------------------------------------------------------------------------------------+
+| title         |The title of the article identified that matched the search criteria                                                         |
++---------------+-----------------------------------------------------------------------------------------------------------------------------+
+
+============
+Query Syntax
+============
+
+The query syntax for this store is extremely basic.  It takes a query object that allows you to search for text in the title or in the body of articles.  An example query is shown below:
+
+-------------------
+Search article text
+-------------------
+
+.. code-block :: javascript
+
+  query: {
+    action: "query",
+    text: "Dojo Toolkit"
+  },
+
+
+---------------------
+Search article titles
+---------------------
+
+.. code-block :: javascript
+
+  query: {
+    title: "Dojo Toolkit"
+  },
+
+---------------------------
+Search article text (paged)
+---------------------------
+
+.. code-block :: javascript
+
+  query: {
+    action: "query",
+    text: "Dojo Toolkit"
+    start: 10,
+    count: 50
+  },
+
