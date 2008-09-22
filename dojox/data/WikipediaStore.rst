@@ -86,7 +86,7 @@ Sime Demo usage of WikipediaStore
   .. cv :: javascript
 
     <script>
-      dojo.require("dijit.form.button");
+      dojo.require("dijit.form.Button");
       dojo.require("dojox.data.WikipediaStore");
       var store = new dojox.data.WikipediaStore();
 
