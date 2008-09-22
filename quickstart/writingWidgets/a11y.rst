@@ -57,7 +57,7 @@ For example, when creating a tree control, each tree item is represented by an e
 Add ARIA information
 --------------------
 
-The Accessible Rich Internet Applications Roadmap is being developed by the `W3C Web Accessibility Initiative (WAI) Protocols and Formats working group <http://www.w3.org/WAI/PF/>'_. The group is creating specifications for role and state information which can be added to markup to provide semantic information about user interface components. The browsers will translate this role and state information into the accessibility api for the platform in use. Currently Firefox 2 and later versions support this additional semantic information on the Windows platform where it converts the information into the Microsoft Active Accessibility (MSAA) api. When recent versions of the Window-Eyes (6.1) and JAWS (8 or 9) screen readers are used with Firefox, this additional information is spoken to the user.  Opera has support for ARIA beginning with version 9.5 and Internet Explorer 8 will support ARIA as well. Webkit is also adding keyboard and ARIA support.
+The Accessible Rich Internet Applications Roadmap is being developed by the `W3C Web Accessibility Initiative (WAI) Protocols and Formats working group <http://www.w3.org/WAI/PF/>`_. The group is creating specifications for role and state information which can be added to markup to provide semantic information about user interface components. The browsers will translate this role and state information into the accessibility api for the platform in use. Currently Firefox 2 and later versions support this additional semantic information on the Windows platform where it converts the information into the Microsoft Active Accessibility (MSAA) api. When recent versions of the Window-Eyes (6.1) and JAWS (8 or 9) screen readers are used with Firefox, this additional information is spoken to the user.  Opera has support for ARIA beginning with version 9.5 and Internet Explorer 8 will support ARIA as well. Webkit is also adding keyboard and ARIA support.
 
 Some HTML elements such as links and form elements have well defined roles and behaviors. Interactive controls created from generic elements can now also be identified with roles and states. When an element receives focus the role and state information provided by the developer will be made available to assistive technologies. For example, as a screen reader traverses through a dijit tree control using the arrow keys, as each tree item receives focus the title of the tree item will be spoken as well as its expanded or collapsed state if it has children. Likewise, a dijit checkbox created using <div> and <span> tags can be identified as a checkbox and its checked or unchecked state can be reported. When creating a new Dojo widget, the role of the widget must be identified and the state of the widget must be set and updated as it changes.
 
@@ -68,4 +68,12 @@ As of October, 2008, the ARIA specifications are nearing W3C Last Call status; h
 - `WAI-ARIA Primer <http://www.w3.org/WAI/PF/aria-primer/>`_
 - `WAI-ARIA Best Practices <http://www.w3.org/WAI/PF/aria-practices/>`_
 
-`Accessible Rich Internet Applications <http://developer.mozilla.org/en/Accessible_DHTML>`_ in the Mozilla Developer Center provides additional information about ARIA and includes examples of ARIA widgets as well as a table of roles and states supported in current versions of Firefox.
+Additional ARIA resources:
+
+- `Accessible Rich Internet Applications <http://developer.mozilla.org/en/Accessible_DHTML>`_ in the Mozilla Developer Center provides additional information about ARIA and includes examples of ARIA widgets as well as a table of roles and states supported in current versions of Firefox. 
+- Illinois Center for Information Technology Accessibility provides a set of `ARIA Examples <http://test.cita.uiuc.edu/aria/index.php>`_
+- `FREE-ARIA  <http://groups.google.com/group/free-aria>`_ is a google group "for people who want to help provide free tools and resources for the advancement of WAI-ARI".
+- `Code Talks <http://wiki.codetalks.org/wiki/index.php/Main_Page>`_ wiki for discussing ARIA and accessible Web 2.0 widgets
+
+
+in progress......
