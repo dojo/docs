@@ -77,9 +77,9 @@ Search article text (paged)
 Examples
 ========
 
----------------------------------
-Sime Demo usage of WikipediaStore
----------------------------------
+-----------------------------------
+Simple Demo usage of WikipediaStore
+-----------------------------------
 
 .. cv-compound ::
   
