@@ -11,3 +11,25 @@ Device Independence
 -------------------
 
 Device Independent behavior means more than just supporting the keyboard. Where ever possible use the most generic event handler available. For example, consider a widget where the down arrow key selects an element in the widget.  The selection needs to be distinguished with a specific style.  Rather than modifying the style of the element when processing the down arrow key event, focus the item from the down arrow key event handler and change the style via a focus event handler. This way, if focus is set from a means other than the keyboard such as a voice input system, the styling is properly set and does not depend solely on keyboard actions. 
+
+Determining Keyboard Behavior
+-----------------------------
+
+When implementing keyboard navigation, the ideal solution is to mimic the behavior of the operating system.  For example, the right and left arrow keys are used to expand and collapse nodes in a Windows tree control and the up and down arrow keys move between nodes in the control.   Unfortunately it is not always possible to mimic the operating system or browser behavior because the widgets may not be able to capture the necessary keys. A group of industry representatives are working to create a style guide to describe the navigation and behaviors of Web widgets. When completed, this Style Guide will be provided to open source and dijit plans to implement the recommendations.  Eventually, the Style Guide will attempt to normalize the differences between operating systems and provide a generalized solution for Web components 
+
+Within all widgets interaction with both the keyboard and the mouse is important – users may switch between using the mouse and using the keyboard at any time. A widget author can not assume only keyboard or only mouse interaction. Thus, the widget component will generally need to store information about the current item with focus.  This can also be useful when the keyboard event handler is placed on an owning object in the component hierarchy rather than the actual element generating the event – for example on the table element rather than on each td element.   Even though the event handler provides information on exactly what element generated the event, it is often necessary or easier to use the stored point of reference. In addition, the point of regard is often needed in order to update the style on the element losing focus before updating the new item irregardless or whether the mouse or the keyboard generated the event that results in a focus change.
+
+In order to support mouse click and standard enter key and space key press to activate a widget, dijit provides an ondijitclick event.  This will trap the onclick event as well as either the onkeypress or onkeydown events (depending upon the browser) for space and enter key and call the handler specified.  Thus, the basic action to activate a widget can be handled within one handler function rather than each widget having to check for the press of enter or space as well as a mouse click.  
+
+Here is an example of using widget connect to handle the ondijitclick event on the focusNode of the widget:
+
+.. code-block :: javascript
+
+  this.connect(this.focusNode, "ondijitclick", "_dijitClick");
+
+The ondijitclick event can also be specified in the template via the dojoAttachEvent mechanism:
+
+.. code-block :: javascript
+
+  <span class="dijit dijitReset dijitLeft dijitInline"
+	dojoAttachEvent="ondijitclick:_onButtonClick,onmouseenter:_onMouse,onmouseleave:_onMouse">
