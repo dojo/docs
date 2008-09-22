@@ -10,7 +10,7 @@ dojox.data.WikipediaStore
 .. contents::
   :depth: 3
 
-The Wikipedia store is a datastore that extends `dojox.data.ServiceStore <dojox/data/ServiceStore>`_.  Its putpose is to expose the Wikipedia search service SMD in a datastore format.  This store is fairly simplistic in what it allows searching on, such as full title, or searching title and body text for certain keywords.  It doesn't provide facilities for doing wildcar searching, unfortunately, which does not make it terribly useful for widgets such as dijit.form.ComboBox. 
+The Wikipedia store is a datastore that extends `dojox.data.ServiceStore <dojox/data/ServiceStore>`_.  Its putpose is to expose the Wikipedia search service SMD in a datastore format.  This store is fairly simplistic in what it allows searching on, such as full title, or searching title and body text for certain keywords.  It doesn't provide facilities for doing wildcar searching, unfortunately, which does not make it terribly useful for widgets such as dijit.form.ComboBox.
 
 ==============
 Supported APIs
@@ -103,16 +103,13 @@ Sime Demo usage of WikipediaStore
             title: article
             },
             onItem: function(item, req){
+              //We're loading all the content into an iFrame.  This is for two reasons:
+              //One is security.  No rogue script in the content will affect anything outside of the iframe
+              //Second is that it keeps docs.dojocampus.org CSS from altering the default view of the data.
               var title = store.getValue(item, "title");
               var text = store.getValue(item, "text")["*"];
               var wikiOut = dojo.byId("wikipediaContent");
-              try{
-                wikiOut.contentDocument.body.innerHTML = "<h1>" + title + "</h1>" + text;
-                dijit.scrollIntoView(wikiOut);
-              } catch (e) {
-                console.log(wikiOut);
-                console.log(e);
-              }
+              wikiOut.contentDocument.body.innerHTML = "<h1>" + title + "</h1>" + text;
             }
           };
           store.fetch(request);
