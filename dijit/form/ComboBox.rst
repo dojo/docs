@@ -9,7 +9,7 @@ dijit.form.ComboBox
 .. contents::
   :depth: 3
 
-The ComboBox is a hybrid between a SELECT combo-box and an INPUT text field.  Like a SELECT combo-box, you provide a list of acceptable values.  But like an INPUT text field, the user can also type whatever they want.  
+The ComboBox is a hybrid between a SELECT combo-box and an INPUT text field.  Like a SELECT combo-box, you provide a list of acceptable values.  But like an INPUT text field, the user can also type whatever they want.  As the user types, partially matched values will be shown in a pop-up menu below the INPUT text box.
 
 On FORM submit, the displayed text value of a non-disabled ComboBox widget is submitted using a native INPUT text box if the *name* attribute was specified at widget creation time.
 
@@ -44,7 +44,7 @@ To set the default value for a programmatic ComboBox, include the *value* attrib
   .. cv:: html
 
     <input id="stateSelect">
-    <p><button dojoType="dijit.form.Button" onClick="alert(dijit.byId('stateSelect').getValue())">Get value</button></p>
+    <p><button dojoType="dijit.form.Button" onClick="alert(dijit.byId('stateSelect').attr('value'))">Get value</button></p>
 
 Declarative markup using native select and option tags
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
