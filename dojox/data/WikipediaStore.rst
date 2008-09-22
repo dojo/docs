@@ -151,5 +151,7 @@ Simple Demo usage of WikipediaStore
         <button id="searchButton" dojoType="dijit.form.Button" value="store.fetch()" onclick="doSearch()">Search!</button>
       </p>
       <div id="output" style="padding:0 20px;"></div>
+      <br>
+      <b>IFRAME for sandboxing of results</b>
       <iframe id="wikipediaContent" src="" style="width: 100%; height: 500px;"><iframe>
     </form>
