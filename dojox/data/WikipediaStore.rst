@@ -106,6 +106,7 @@ Sime Demo usage of WikipediaStore
               var wikiOut = dojo.byId("wikipediaContent");
               try{
                 wikiOut.contentDocument.body.innerHTML = "<h1>" + title + "</h1>" + text;
+                dijit.scrollIntoView(wikiOut);
               } catch (e) {
                 console.log(wikiOut);
                 console.log(e);
@@ -129,7 +130,6 @@ Sime Demo usage of WikipediaStore
             node.href = "#";
             node.onclick = function(){
               loadArticle(this.innerHTML);
-              dijit.scrollIntoView(node);
             };
             node.style.padding = "6px";
             node.style.display = "block";
