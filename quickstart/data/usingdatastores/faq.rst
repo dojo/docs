@@ -16,7 +16,7 @@ Because the dojo.data API is asynchronous be definition.  The return value from 
  
 
 ===========================================================================================================================================
-Question 2:  I introspected using javascript associative map walking items from ItemFileReadStore and it has all these '_' variables!  Why?
+Question 2:  I introspected items from ItemFileReadStore using javascript associative map walking and it has all these '_' variables!  Why?
 ===========================================================================================================================================
 
 Items from a datastore are supposed to be treated as opaque handles.  This is by definition of the API, which can be read in the `API section <dojo/data/api>`_.  dojo.data.ItemFileReadStore and dojo.data.ItemFileWriteStore store several bits of important internal information on each item, such as what store instance it came form, what its internal index is (for O(1) lookup performance), and internal maps of who has references to the item.  This is all critical information needed by the store to make item processing efficient.  It is also information that should never be relied on directly, it should only be used by the store itself.  
