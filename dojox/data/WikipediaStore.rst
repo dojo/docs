@@ -112,7 +112,7 @@ Sime Demo usage of WikipediaStore
         var request = {
           query: {
             action: "query", 
-            text: dijit.byId("searchText").getValue();
+            text: dijit.byId("searchText").getValue()
           },
           count: dijit.byId("count").getValue(),
           onBegin: function(count){
