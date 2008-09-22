@@ -129,7 +129,7 @@ Sime Demo usage of WikipediaStore
             node.href = "#";
             node.onclick = function(){
               loadArticle(this.innerHTML);
-              dijit.scrollTo(node);
+              dijit.scrollIntoView(node);
             };
             node.style.padding = "6px";
             node.style.display = "block";
