@@ -66,7 +66,7 @@ The similar example but with a vertical slider and a simple rule (tick marks) cr
         vertical.appendChild(rulesNode);
         var sliderRules = new dijit.form.VerticalRule({
             count:11,
-            style:"width5px;"
+            style:"width:5px;"
         }, rulesNode);
         var slider = new dijit.form.VerticalSlider({
           name: "vertical",
