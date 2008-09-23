@@ -3,7 +3,7 @@
 Creating Accessible Widgets
 ===========================
 
-:Status: Draft
+:Status: Contributed
 :Version: 1.2
 :Author: Becky Gibson
 
@@ -79,14 +79,14 @@ Additional ARIA resources:
 - `Code Talks <http://wiki.codetalks.org/wiki/index.php/Main_Page>`_ wiki for discussing ARIA and accessible Web 2.0 widgets
 
 Assigning Roles
----------------
+~~~~~~~~~~~~~~~
 
 Use the tabindex to provide keyboard focus or to allow programmatic focus to an object. By adding a tabindex to an element, the element will now be included in the accessibility hierarchy of the Firefox browser. Information about elements in the accessibility hierarchy will be provided to assistive technologies. If you use a tabindex attribute on a <DIV>, <SPAN>, <IMG> or any element which has no natural role of its own then you need to provide a role. In Firefox 3 <div> elements are added into the hierarchy even if they do not have a tabindex attribute. If you are using a div as a container element it will need a role="presentation" to remove it from the accessibility hierarchy.  Any element that can receive focus must have a role, either implied, such as input elements and anchors, or specified via a role attribute. For things with an implied role such as input fields and anchors, you can use tabindex=”-1” to remove them from the tab order. You can also specify a different role for elements which already have an implied role.
 
 The role and states are added to Dojo widgets within the widget template or via the dijit.wai APIs as described in the `Dijit A11y Resources <dijit-a11y-resources>`_
 
 Providing Hierarchical Information
-----------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In order for Firefox to determine the correct parent child relationships between objects, and to communicate this via an accessibility API to assistive technologies, it is best to create components in a hierarchical fashion. For example, when creating a menubar it is best to have the components that make up the menus and menuitems of the menubar be children of the menubar. Likewise, menuitems should be children of the owning menus. This hierarchy allows Firefox to provide menu information to the assistive technologies, and for a screen reader to speak more information about the menu such as, “menu open, File, item 1 of 5” when the user opens a menu. Here is a simple pseudo code example demonstrating a hierarchical layout of elements for a menu control. This exmaple only shows the addition of role attributes and does not represent a complete menu widget. (Note: Attributes are not quoted in pseudo-code examples to help improve the readability):
 
@@ -142,7 +142,7 @@ The tree items at the same level in the hierarchy are grouped together within an
 Other items included in the hierarchy may not be essential to the component. These items can be marked with a role of presentation to eliminate them from consideration when determining information about the component.
 
 Using the Presentation Role
----------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 While it is preferable to use CSS for layout, tables are still used to quickly and easily arrange elements on a page. This is especially true of existing widgets which were originally created to work in older browsers. Putting information in tables can easily confuse the hierarchy of the component. If tables must be used, they can be marked with a role of presentation to eliminate them from the hierarchy. Here is a pseudo code example where the presentation role was used on tables within a tree component:
 
@@ -181,9 +181,9 @@ Since the table is only used for layout it is identified with a role of presenta
 And, as mentioned previously, Firefox 3 now puts all div elements into the accessibility hierarchy, so if the div is being used for layout purposes or has no other specific role, it should be marked with role=presentation.
 
 Assigning States
-----------------
+~~~~~~~~~~~~~~~~
 
-In addition to identifying the role of a widget, the state of the widget must be identified and updated. The initial state can be set within the widget template or via scripting when the widget is created. As the state changes during user interaction with the widget, the state must be updated using the dijit *WaiState apis:
+In addition to identifying the role of a widget, the state of the widget must be identified and updated. The initial state can be set within the widget template or via scripting when the widget is created. As the state changes during user interaction with the widget, the state must be updated using the dijit.xxxWaiState apis:
 
 .. code-block :: javascript
 
@@ -195,3 +195,10 @@ In addition to identifying the role of a widget, the state of the widget must be
 It is important to update the state information as it changes so assistive technology users can be made aware of the change. For example, when a treeitem is expanded, the state for the element that has been assigned role="treeitem", must be set to expanded=true. Likewise, when a treeitem is collapsed, the state for the element with the role="treeitem" must be updated to expanded=false. Be aware that some of the boolean states imply more than just a dual state. For the state attributes checked, selected and expanded a value of false indicates that the widget is capable of being checked, selected or expanded while no attribute indicates that the element is not capable of that state. For example, a tree node with children will have either a state of expanded=true or expanded=false depending upon whether the child nodes are visible or not. An end node, with no children will have no expanded state value set.
 
 Generally only items which have a role can have a state value. The role may be explicitly set by the author such as a treeitem or may be implicitly defined such as a form element or link. Items which have been added into the accessibility hierarchy via a tabindex attribute may also have properties such as desribedby, labelledby, required, invalid and others.
+
+Accommodating Low Vision
+------------------------
+
+Whenever a CSS background image is used to convey information there must be a text alternative available to display when images are turned off in the browser.  Images may be turned off by the user via a browser setting or when Windows high contrast mode is turned on. See the `Support High Contrast/Images off <dijit-a11y-strategy#id1>`_ section of Dijit A11y Strategy for how to create the text alternatives in the widget template and use CSS dijit-a11y rules to make them visible in high contrast mode.
+
+To make certain that users can adjust the font size on the page never use a px value for font-size.  Instead use ems or % which will scale properly. If the widget uses any img elements, make certain the image has an appropriate alt text value. If the image is decorative only and does not convey meaning the alt text value will be "" (empty).   If the image conveys meaning and is important to understanding the use of the widget it must have a descriptiion specified via the alt attribute.  
