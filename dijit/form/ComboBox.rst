@@ -29,7 +29,6 @@ To set the default value for a programmatic ComboBox, include the *value* attrib
   .. cv:: javascript
 
     <script type="text/javascript">
-      dojo.require("dijit.form.Button"); // only to make the demo look fancy
       dojo.require("dijit.form.ComboBox");
       dojo.require("dojo.data.ItemFileReadStore");
     </script>
@@ -44,7 +43,7 @@ To set the default value for a programmatic ComboBox, include the *value* attrib
   .. cv:: html
 
     <input id="stateSelect">
-    <p><button dojoType="dijit.form.Button" onClick="alert(dijit.byId('stateSelect').attr('value'))">Get value</button></p>
+    <p><button onClick="alert(dijit.byId('stateSelect').attr('value'))">Get value</button></p>
 
 Declarative markup using native select and option tags
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -64,7 +63,7 @@ Native SELECT combo-boxes always have value/description pairs, e.g. the OPTION's
     <select dojoType="dijit.form.ComboBox" id="fruit" name="fruit">
       <option>Apples</option>
       <option selected>Oranges</option>
-      <option>Peers</option>
+      <option>Pears</option>
     </select>
 
 
