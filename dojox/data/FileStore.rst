@@ -60,15 +60,14 @@ All items returned by a query to the FileStore and will generally have the follo
 +-------------+---------------------------------------------------------------------------------------------------------+----------+
 |directory    |A Boolean value indicating if the file referenced is a directory or not.                                 |boolean   |
 +-------------+---------------------------------------------------------------------------------------------------------+----------+
-|modified     |If it is a directory, then children is an array of child files contained within the directory. By        |integer   |
+|children     |If it is a directory, then children is an array of child files contained within the directory. By        |array     |
 |             |default these will be uninflated datastore items. Meaning isItem() returns true, but isItemLoaded()      |          |
 |             |returns false. To load the item, it is a call to the FileStore.loadItem() api with the appropriate       |          |
 |             |callbacks. By not inflating child files by default the store performance is greatly improved, as if you  |          |
-|             |don’t care about its children, you don’t have to load them.                                              |          |
+|             |don’t care about its children, you don’t have to load them.  Should be accessed by the multivalue        |          |
+|             |*getValues()* accessor.                                                                                  |          |
 +-------------+---------------------------------------------------------------------------------------------------------+----------+
-|children     |An array of datastore items representing children files contained within the directory represented by the|array     |
-|             |containing file item . Should be accessed using the multivalue accessor: FileStore.getValues(item,       |          |
-|             |"children");                                                                                             |          |
+|modified     |An intgeger indicating the last modified date.  This is the file timestamp from the system               |integer   |          
 +-------------+---------------------------------------------------------------------------------------------------------+----------+
 
 
