@@ -56,7 +56,7 @@ Note that the tabs all have a fixed height.
 
     <div id="tc1-prog"></div>
 
-The `parser </dojo/parser>`_ does a lot of the heavy lifting seen above in the programatic method, finding attributes on the node and passing them to the Widget being created. By using a dojoType to identify these nodes, our initial creation is very easy, as seen in the remainder of these examples: 
+Here are some markup examples:
 
 .. cv-compound::
 
