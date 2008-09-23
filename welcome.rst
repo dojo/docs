@@ -99,9 +99,19 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 Dojo data
 ---------
 
-* `dojo.data <dojo/data>`_, `api <dojo/data/api>`_ , `api.Read <dojo/data/api/Read>`_ , `api.Write <dojo/data/api/Write>`_ , `api.Identity <dojo/data/api/Identity>`_ , `api.Notification <dojo/data/api/Notification>`_ , `ItemFileReadStore <dojo/data/ItemFileReadStore>`_ , `ItemFileWriteStore <dojo/data/ItemFileWriteStore>`_
+* `dojo.data <dojo/data>`_
 
-* `dojo.date <dojo/date>`_, `locale.format <dojo/date/locale/format>`_
+  * `api <dojo/data/api>`_ 
+  * `api.Read <dojo/data/api/Read>`_
+  * `api.Write <dojo/data/api/Write>`_
+  * `api.Identity <dojo/data/api/Identity>`_
+  * `api.Notification <dojo/data/api/Notification>`_
+  * `ItemFileReadStore <dojo/data/ItemFileReadStore>`_
+  * `ItemFileWriteStore <dojo/data/ItemFileWriteStore>`_
+
+* `dojo.date <dojo/date>`_
+
+  * `locale.format <dojo/date/locale/format>`_
 
 * `dojo.DeferredList <dojo/DeferredList>`_
 
@@ -128,7 +138,13 @@ Dijit reference
 
 Dijit is Dojo's UI Library, and lives as a separate namespace ``dijit``. Dijit requires Dojo Core. Each of the widgets and functionality provided by Dijit is describe in the following sections, though the aforementioned `quickstart <quickstart/>`_ guides cover some basics.  
 
-* `dijit <dijit>`_, `a11y <dijit-a11y-strategy>`_, `a11y resources <dijit-a11y-resources>`_, `Creating Accessible Widgets <quickstart/writingWidgets/a11y>`_, `Testing for Accessibility <quickstart/writingWidgets/a11yTesting>`_
+* `dijit <dijit>`_
+* `a11y <dijit-a11y-strategy>`_
+
+  * `a11y resources <dijit-a11y-resources>`_
+  * `Creating Accessible Widgets <quickstart/writingWidgets/a11y>`_
+  * `Testing for Accessibility <quickstart/writingWidgets/a11yTesting>`_
+
 * `dijit.Calendar <dijit/Calendar>`_
 * `dijit.ColorPalette <dijit/ColorPalette>`_
 * `dijit.Dialog <dijit/Dialog>`_
@@ -139,7 +155,11 @@ Dijit is Dojo's UI Library, and lives as a separate namespace ``dijit``. Dijit r
 * `dijit.TitlePane <dijit/TitlePane>`_
 * `dijit.Tooltip <dijit/Tooltip>`_
 * `dijit.TooltipDialog <dijit/TooltipDialog>`_
-* `dijit.Tree <dijit/Tree>`_, `Model <dijit/tree/Model>`_, `TreeStoreModel <dijit/tree/ForestStoreModel>`_, `ForestStoreModel <dijit/tree/ForestStoreModel>`_
+* `dijit.Tree <dijit/Tree>`_
+
+  * `Model <dijit/tree/Model>`_
+  * `TreeStoreModel <dijit/tree/ForestStoreModel>`_
+  * `ForestStoreModel <dijit/tree/ForestStoreModel>`_
 
 
 Form handling
