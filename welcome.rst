@@ -114,6 +114,7 @@ Dojo effects
 ------------
 
 * `dojo.fx <dojo/fx>`_
+* `dojo.cookie <dojo/cookie>`_
 * `dojo.animateProperty <dojo/animateProperty>`_
 * `dojo.html <dojo/html>`_
 * `dojo.json <dojo/json>`_
