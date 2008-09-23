@@ -118,3 +118,9 @@ By definition, items are unique to their store instance, so you cannot generally
     }
   }
   origStore.fetch({query:{} , onComplete: onComplete});
+
+====================================================================================================
+Question 5:  With ItemFileReadStore and ItemFileWriteStore, how do I reload all the stores contents?
+====================================================================================================
+
+Use the two constructor options added in 1.2, *clearOnClose* and *urlPreventCache*.  Then when you want to reload, call close().  It will flush the internal store structures and reload everything from the server or whatnot.
