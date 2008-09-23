@@ -14,7 +14,8 @@ dojo.cookie is your one stop for handling client side cookies. Its usage is very
 Examples
 --------
 
-Set a cookie by clicking on the button, reload the page and click the "Get Cookie" button to check whether the cookie got set. Note: cookies must be enabled for this to work ;)
+Set a cookie by clicking on the button, reload the page and click the "Get Cookie" button to check whether the cookie got set. 
+*Note: cookies must be enabled for this to work ;)*
 
 .. cv-compound::
 
