@@ -13,7 +13,7 @@ Testing Widgets for Accessibility
 
 Currently the Windows operating system provides the most resources and functionality for testing for accessibility in more than one browser. Also, the majority of assistive technologies run under the Windows operating system. Test with both Firefox and Internet Explorer on at least the Windows operating system to assure at least a minimal level of accessibility.
 
-Test for full keyboard support
+Test for Full Keyboard Support
 ------------------------------
 
 All widgets must be tested for use with the keyboard only. The most stringent way to test for keyboard support is to remove the mouse from the system and interact with the widget. This assures that only the keyboard can be used for navigation and interaction. Test that all functionality of the widget can be accomplished using the keyboard only. The functionality does not necessarily have to be performed in exactly the same manner as with the mouse. For example, it is preferred that a slider can be adjusted by dragging with the mouse or focusing the slider and adjusting the value using the arrow keys or plus and minus characters on the keyboard. But if the value and position of a slider can be adjusted by entering a new value in an associated text field, the slider is keyboard accessible. Drag and drop operations are another example of behavior which may need to be supported via an alternative mechanism such as a menu bar or context menu.
@@ -69,3 +69,33 @@ When testing fully keyboard accessible Dojo widgets the screen readers must be i
 If the role and state information have been applied correctly the screen reader will hear information about the role and stated of widget elements as well as information about child objects. The image below is a simple tree control with three main nodes with titles Node1 , Node 2, and Node 3. Node 1 has no children. Node 2 is expanded and has two child nodes titled Node 2.1 and Node 2.2. Node 3 has children but is not expanded. Here is a brief example of what is spoken by Window-Eyes with focus on the Node 2 tree item within the tree control displayed in the image below, “Node 2 expanded two items, 2 of 3.”
 
 .. image:: treenode.png
+
+Test for Low Vision Support
+---------------------------
+
+Test in Windows High Contrast Mode
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The code in dijit._base.wai.js to check for high contrast mode currently only works with Firefox and Internet Explorer on the Windows Operating system. Windows comes configured with default high contrast mode settings. Turn on high contrast mode in Windows XP via the Accessibility Options dialog available from the Control Panel. From the Diplay panel check the high contrast checkbox. Press the settings button to modify the display colors and font sizes. Checking the Use shortcut checkbox from the settings dialog allows toggling high contrast mode on and off using the shift-alt-printscreen key combination. Press OK to confirm the settings and then OK again to close the dialog and turn on high contrast mode. Note, putting your system in high contrast mode will likely rearrange the desktop icons on the system due to the changes in font size.
+
+After turning on high contrast mode, test the widget in Firefox and Internet Explorer. If the widget test page was already loaded in the browser, you may need to refresh the page for the high contrast mode to take affect. When the widget is reloaded high contrast mode will be detected and the accessible version of the widget will be loaded. This version should provide visible text alternatives for CSS background images to create the look and feel of the widget user interface. Verify that all components within the widget are visible. Any components or visual effects which are created via background images or color will no longer be visible in high contrast mode. Verify that the user is able to determine where current focus is within the widget. If focus is not visually evident the widget developer may have used a background color change to indicate focus (or the browser provided focus rectangle may be hard to distinguish). Fix this by using a different styled border or other mechanism to indicate focus if the browser differentiation is not sufficient. When testing in high contrast mode it is fairly evident where the problems occur since any visual effects which rely on color or images will no longer be visible.
+
+Test for Usable Operation with Images Off
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In addition to testing for support of high contrast mode, the widgets should also work with images are turned off in the browser. Currently this mode is only detected by the dijit.wai.onload function in Firefox on Windows. Test in Firefox by turning images off via the Tools Options dialog. Test in Internet Explorer by turning on high contrast mode (so the accessible version of the Dojo widgets will be loaded) and then also turning off images in the Advanced tab of the Tools Internet Options dialog.
+
+With images turned off the widgets should still be usable. Since no images are loaded, the alt attribute of any real image elements and the text alternatives for any CSS background images should be displayed. Verify that the text alternatives provide sufficient information for the user to interact with the widget.
+
+Test for Font Size Changes
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The widgets should still be usable if the font size of the page is changed.  Each browser has a different mechanism for changing font size:
+
+- Firefox 2 - select View Text Size Increase or press ctrl + or View Text Size Decrease or press ctrl -
+- Firefox 3 - select View Zoom In or press ctrl + to increase and View Zoom Out or press ctrl - to decrease
+- IE 6 - check
+- IE 7 - check
+- Safari - select View Make Text Bigger or press ctrl + or View Make Text Smaller or press ctrl -
+
+(on the Mac use the apple key in place of the ctrl key)
