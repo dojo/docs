@@ -92,38 +92,39 @@ In order for Firefox to determine the correct parent child relationships between
 
 .. code-block :: javascript
 
-<div role="menubar">
-<div role="menuitem">A</div>
+  <div role="menubar">
+    <div role="menuitem">A</div>
       <div role="menu">
-            <div role="menuitem">A.1</div>
-            <div role="menuitem">A.2</div>
+         <div role="menuitem">A.1</div>
+         <div role="menuitem">A.2</div>
       </div>
       <div role="menuitem">B</div>
       <div role="menu">
-            <div role="menuitem">B.1</div>
-            <div role="menuitem">B.2</div>
-            <div role="menu">
-                  <div role="menuitem">B.2.1</div>
-            </div>
+        <div role="menuitem">B.1</div>
+        <div role="menuitem">B.2</div>
+        <div role="menu">
+          <div role="menuitem">B.2.1</div>
+        </div>
       </div>
-</div>
+  </div>
+
 It may not always be practical to create items via HTML in a hierarchical fashion. In that case the group role can help to associate the items properly. This is illustrated in the following simple pseudo code example of a tree hierarchy.
 
 .. code-block :: javascript
 
-<div role="tree"> 
-  <div role="treeitem">Top </div>
-  <div role="group">
-     <div role="treeitem">1</div>
-     <div role="group">
-       <div role="treeitem">1.1 </div>
-       <div role="treeitem">1.2</div>
-       <div role="treeitem">1.3</div>
-<div role="group">
-<div role="treeitem">1.3.1</div>
-         <div role="treeitem">1.3.2</div>
-         <div role="treeitem">1.3.3</div>
-         <div role="treeitem">1.3.4</div>
+  <div role="tree"> 
+    <div role="treeitem">Top </div>
+    <div role="group">
+      <div role="treeitem">1</div>
+      <div role="group">
+        <div role="treeitem">1.1 </div>
+        <div role="treeitem">1.2</div>
+        <div role="treeitem">1.3</div>
+        <div role="group">
+          <div role="treeitem">1.3.1</div>
+          <div role="treeitem">1.3.2</div>
+          <div role="treeitem">1.3.3</div>
+          <div role="treeitem">1.3.4</div>
        </div>
        <div role="treeitem">1.4</div>
      </div>
@@ -134,4 +135,47 @@ It may not always be practical to create items via HTML in a hierarchical fashio
        <div role="treeitem">">3.2</div>
      </div>
   </div>
-</div>
+  </div>
+
+The tree items at the same level in the hierarchy are grouped together within an element identified with role=group. With this organization, the assistive technologies can be provided with the information about what level and item number a particular treeitem represents. For example, in the above tree example, with focus on item 1.3.3 a screen reader might speak, “one dot three dot three item three of four, level four” or something similar.
+
+Other items included in the hierarchy may not be essential to the component. These items can be marked with a role of presentation to eliminate them from consideration when determining information about the component.
+
+Using the Presentation Role
+---------------------------
+
+While it is preferable to use CSS for layout, tables are still used to quickly and easily arrange elements on a page. This is especially true of existing widgets which were originally created to work in older browsers. Putting information in tables can easily confuse the hierarchy of the component. If tables must be used, they can be marked with a role of presentation to eliminate them from the hierarchy. Here is a pseudo code example where the presentation role was used on tables within a tree component:
+
+ .. code-block :: javascript
+
+  <div role="tree">
+      <table role="presentation">
+            <tr><td><div role="treeitem">Top</div></td></tr>
+      </table>
+      <div role="group">
+            <table role="presentation">
+                  <tr><td><span role="treeitem">1</span></td></tr>
+            </table>
+            <div role="group">
+                  <table role="presentation">
+                        <tr><td><span role="treeitem">1.1</span></td></tr>
+                  </table>
+                  <table role="presentation">
+                        <tr><td><span role="treeitem">1.2</span></td></tr>
+                  </table>
+            </div>
+            <table role="presentation">
+                  <tr><td><span role="treeitem">2</span></td></tr>
+            </table>
+      </div>
+  </div>
+
+Since the table is only used for layout it is identified with a role of presentation to remove if from the accessibility hierarchy so that information about the table is not provided to assistive technology. Other elements may need to be removed from the accessibility hierarchy as well. For example, when creating a DHTML checkbox, an image may be contained within a span element that is marked with a role of checkbox and an appropriate state of checked equals true or false. The image which represents the checkbox is contained within the span and should not contain any alt text since the role and state are managed by the surrounding span. Images are considered important elements and are normally included with the accessibility hierarchy of the browser. In order to ignore this image in the accessibility hierarchy, it is marked with a role of presentation. Here is a generic HTML representation:
+
+ .. code-block :: javascript
+
+  <span role="checkbox" checked="true">
+    <img src="checked.gif" role="presentation">
+  </span>
+
+And, as mentioned previously, Firefox 3 now puts all div elements into the accessibility hierarchy, so if the div is being used for layout purposes or has no other specific role, it should be marked with role=presentation.
