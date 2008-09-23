@@ -11,7 +11,7 @@ A Textarea widget is like a regular HTML textarea, but it dynamically resizes to
 Examples
 --------
 
-First we will create a Textarea widget programatically. Notice how we pass the *style* and *value* parameters into the object creation.
+First we will create a Textarea widget programatically. Notice how we pass the *name*, *style* and *value* parameters into the object creation.
 
 .. cv-compound::
 
@@ -21,16 +21,16 @@ First we will create a Textarea widget programatically. Notice how we pass the *
       dojo.require("dijit.form.Textarea");
       dojo.addOnLoad(function(){
         var textarea = new dijit.form.Textarea({
-          id: "textarea",
+          name: "myarea",
           value: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
           style: "width:200px;"
-        },"textarea");
+        },"myarea");
       });
     </script>
 
   .. cv:: html
 
-    <textarea id="textarea" />
+    <textarea id="myarea" />
 
 Here we'll create a Textarea widget declaratively.  In this instance, the initial *value* is the child text node of the TEXTAREA element.
 
@@ -44,4 +44,4 @@ Here we'll create a Textarea widget declaratively.  In this instance, the initia
 
   .. cv:: html
 
-    <textarea id="textareaTwo" dojoType="dijit.form.Textarea" style="width:200px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</textarea> 
+    <textarea id="textarea2" nae="textarea2" dojoType="dijit.form.Textarea" style="width:200px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</textarea> 
