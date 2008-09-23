@@ -33,7 +33,7 @@ One way you could show the user the value of your Slider is to create a textbox 
           minimum: -10,
           maximum: 10,
           intermediateChanges: true,
-          style: "width: 300px",
+          style: "width:300px;",
           onChange: function(value){
             dojo.byId("sliderValue").value = value;
           }
@@ -66,7 +66,7 @@ The similar example but with a vertical slider and a simple rule (tick marks) cr
         vertical.appendChild(rulesNode);
         var sliderRules = new dijit.form.VerticalRule({
             count:11,
-            style:"width:5px"
+            style:"width5px;"
         }, rulesNode);
         var slider = new dijit.form.VerticalSlider({
           name: "vertical",
@@ -74,10 +74,7 @@ The similar example but with a vertical slider and a simple rule (tick marks) cr
           minimum: -10,
           maximum: 10,
           intermediateChanges: true,
-          style: "height: 300px",
-          onChange: function(value){
-            dojo.byId("sliderValueTwo").value = value;
-          }
+          style: "height:300px;"
         }, vertical);
       });
     </script>
@@ -85,7 +82,6 @@ The similar example but with a vertical slider and a simple rule (tick marks) cr
   .. cv:: html
 
     <div id="vertical"></div>
-    <p><input type="text" id="sliderValueTwo" dojoType="dijit.form.TextBox" /></p>
 
 
 Declarative markup example with discrete values
