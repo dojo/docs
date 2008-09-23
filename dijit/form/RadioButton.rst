@@ -6,14 +6,15 @@ dijit.form.RadioButton
 :Status: Draft
 :Version: 1.2
 
-dijit.form.RadioButton captures binary user-choices. Unlike command buttons, which do some action on being pressed, radio buttons are more for form data. 
+RadioButton widgets capture binary user-choices unlike buttons which normally perform some action when clicked.  Normally, there are multiple RadioButton widgets assigned to a single group defined by widgets sharing the same *name* attribute.  Upon FORM submission, the 1 checked RadioButton *value* is submitted using this shared *name*. 
 
-Note: to use dijit.form.RadioButton you currently have to include dijit.form.CheckBox
+**Note:** To use the RadioButton widget, you currently have to call dojo.require("dijit.form.CheckBox")
 
-Examples
---------
 
-We'll enhance native radio buttons programatically
+Example
+-------
+
+Let's create 2 RadioButton widgets, 1 programmatically and 1 declaratively:
 
 .. cv-compound::
 
@@ -25,15 +26,31 @@ We'll enhance native radio buttons programatically
       dojo.addOnLoad(function(){
         var radioOne = new dijit.form.RadioButton({
           checked: true,
-          id: "radioOne"
+          name: "drink",
         }, "radioOne");
-        
-        var radioTwo = new dijit.form.RadioButton({
-          id: "radioTwo"
-        }, "radioTwo");
       });
     </script>
+
   .. cv:: html
 
-    <input type="radio" name="group" id="radioOne" /> <label for="radioOne">Tea</label> <br />
-    <input type="radio" name="group" id="radioTwo" /> <label for="radioTwo">Coffee</label> <br />
+    <input type="radio" name="drink" id="radioOne" checked/> <label for="radioOne">Tea</label> <br />
+    <input type="radio" dojoType="dijit.form.RadioButton" name="drink" id="radioTwo" /> <label for="radioTwo">Coffee</label> <br />
+
+
+Accessibility
+-------------
+
+Keyboard
+~~~~~~~~
++-----------------------------+---------------------+
+| **Action**                  | **Key**             |
++-----------------------------+---------------------+
+| Toggle checked state        | Spacebar            |
++-----------------------------+---------------------+
+| Focus previous radio button | up or left arrow    |
++-----------------------------+---------------------+
+| Focus next radio button     | down or right arrow |
++-----------------------------+---------------------+
+
+**Note:**
+Using the TAB key to focus a radio group will only focus the selected RadioButton in a group.
