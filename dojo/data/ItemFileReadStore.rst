@@ -83,7 +83,7 @@ General Structure
 
 
     "items:" [  //The array of JavaScript objects that act as the root items of the data store
-      { /* Some set of name/value attributes /* },
+      { /* Some set of name/value attributes */ },
       { /* ... */ },
       ...
     ]
