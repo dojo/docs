@@ -34,9 +34,9 @@ MultiSelect widgets always use a native SELECT tag and have child OPTION tags to
   .. cv:: html
 
     <select dojoType="dijit.form.MultiSelect" id="fruit" name="fruit">
-      <option value="AP" selected="true">Apples</option>
+      <option value="AP">Apples</option>
       <option value="OR">Oranges</option>
-      <option value="PE">Pears</option>
+      <option value="PE" selected>Pears</option>
     </select>
 
 
