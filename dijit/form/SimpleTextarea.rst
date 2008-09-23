@@ -27,6 +27,7 @@ First we will create a SimpleTextarea widget programatically. Notice how we pass
           value: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
           style: "width:200px;"
         },"myarea");
+        textarea.attr('value','test');
       });
     </script>
 
@@ -46,4 +47,4 @@ Here we'll create a SimpleTextarea widget declaratively.  In this instance, the 
 
   .. cv:: html
 
-    <textarea id="textarea2" nae="textarea2" dojoType="dijit.form.SimpleTextarea" rows="4" cols="50">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</textarea> 
+    <textarea id="textarea2" name="textarea2" dojoType="dijit.form.SimpleTextarea" rows="4" cols="50">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</textarea> 
