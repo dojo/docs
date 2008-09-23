@@ -6,12 +6,12 @@ dijit.form.SimpleTextarea
 :Status: Draft
 :Version: 1.2
 
-A SimpleTextarea widget is an exact replacement for the native TEXTAREA element and was created to provide a thin widget wrapper that was necessary to interact with the `Form <dijit/form/Form>`_ widget, and to provide the ability to specify *rows* and *cols* attributes which are not available in the `Textarea <dijit/form/Textarea>`_ widget.  Unlike the `Textarea <dijit/form/Textarea>`_ widget, the height of this widget does not adjust to its content. It takes nearly all the parameters (*name*, *style*, etc.) that are available with a native TEXTAREA element.  Note that when declaring a SimpleTextarea in markup you should use a <textarea> node to preserve the newline formatting.
+A SimpleTextarea widget is an exact replacement for the native TEXTAREA element and was created to provide a thin widget wrapper that was necessary to interact with the `Form <dijit/form/Form>`_ widget, and to provide the ability to specify *rows* and *cols* attributes which are not available in the `Textarea <dijit/form/Textarea>`_ widget.  Unlike the `Textarea <dijit/form/Textarea>`_ widget, the height of this widget does not adjust to its content. It takes nearly all the parameters (*name*, *style*, etc.) that are available with a native TEXTAREA element.  Note that when declaring a SimpleTextarea in markup you should use a <textarea> node to preserve the newline formatting.  When specifying the c*cols* attribute, you must also specify *style="width:auto;"* in order for the parameter to take effect.
 
 Examples
 --------
 
-First we will create a SimpleTextarea widget programatically. Notice how we pass the *name*, *rows* and *cols* parameters into the object creation.
+First we will create a SimpleTextarea widget programatically. Notice how we pass the *name*, *rows* and *cols* parameters into the object creation.  The *value* attribute can be set with the widget's attr('value', text) method.
 
 .. cv-compound::
 
@@ -24,10 +24,9 @@ First we will create a SimpleTextarea widget programatically. Notice how we pass
           name: "myarea",
           rows: "4",
           cols: "50",
-          value: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
-          style: "width:200px;"
+          style: "width:auto;"
         },"myarea");
-        textarea.attr('value','test');
+        textarea.attr('value','Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.');
       });
     </script>
 
@@ -47,4 +46,4 @@ Here we'll create a SimpleTextarea widget declaratively.  In this instance, the 
 
   .. cv:: html
 
-    <textarea id="textarea2" name="textarea2" dojoType="dijit.form.SimpleTextarea" rows="4" cols="50">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</textarea> 
+    <textarea id="textarea2" name="textarea2" dojoType="dijit.form.SimpleTextarea" rows="4" cols="50" style="width:auto;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</textarea> 
