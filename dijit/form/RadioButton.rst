@@ -36,7 +36,7 @@ Let's create 2 RadioButton widgets, 1 programmatically and 1 declaratively.  We'
 
     <form id="myform">
         <input type="radio" name="drink" id="radioOne" checked value="tea"/> <label for="radioOne">Tea</label> <br />
-        <input type="radio" _dojoType="dijit.form.RadioButton" name="drink" id="radioTwo" value="coffee"/> <label for="radioTwo">Coffee</label> <br />
+        <input type="radio" dojoType="dijit.form.RadioButton" name="drink" id="radioTwo" value="coffee"/> <label for="radioTwo">Coffee</label> <br />
     </form>
     <button onclick="with(dojo.byId('myform'))with(elements[0])with(elements[checked?0:1])alert(name+'='+value);return false">Show form submit value</button>
 
