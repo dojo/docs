@@ -24,7 +24,7 @@ Let's create a checkbox programatically, initially unchecked:
         name: "checkBox",
         value: "agreed",
         checked: false,
-        onChange: function(b){ alert('onChange called with parameter = ' + b + ', the widget value = ' + checkBox.attr('value') ); }
+        onChange: function(b){ alert('onChange called with parameter = ' + b + ', and widget value = ' + checkBox.attr('value') ); }
       }, "checkBox");
     });
     </script>
@@ -48,4 +48,16 @@ Let's create a checkbox with HTML markup, initially checked:
 
   .. cv:: html
  
-    <input id="mycheck" name="mycheck" dojoType="dijit.form.CheckBox" value="agreed" checked onChange="alert('onChange called with parameter = ' + arguments[0] + ', the widget value = ' + dijit.byId('mycheck').attr('value'))"> <label for="mycheck">I agree</label>
+    <input id="mycheck" name="mycheck" dojoType="dijit.form.CheckBox" value="agreed" checked onChange="alert('onChange called with parameter = ' + arguments[0] + ', and widget value = ' + dijit.byId('mycheck').attr('value'))"> <label for="mycheck">I agree</label>
+
+
+Accessibility
+-------------
+
+Keyboard
+~~~~~~~~
++----------------------------+-----------------+
+| **Action**                 | **Key**         |
++----------------------------+-----------------+
+| Toggle checked state       | Spacebar        | 
++----------------------------+-----------------+
