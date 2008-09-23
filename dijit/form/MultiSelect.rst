@@ -9,11 +9,11 @@ dijit.form.MultiSelect
 .. contents::
   :depth: 3
 
-The MultiSelect widget is an exact replacement for the native SELECT element and was created to provide a thin widget wrapper that was necessary to interact with the Form widget, and to provide the ability to select multiple items which is not available in the FilteringSelect widget.  Like SELECT, you provide a list of acceptable value pairs consisting of text to be displayed in the INPUT box and the hidden text value to be submitted to the server on FORM submit.  Unlike FilteringSelect, the user cannot freely type text.
+The MultiSelect widget is an exact replacement for the native SELECT element and was created to provide a thin widget wrapper that was necessary to interact with the Form widget, and to provide the ability to select multiple items which is not available in the FilteringSelect widget.  Like SELECT, you provide a list of acceptable value pairs consisting of text to be displayed and the hidden text value to be submitted with a FORM.  Unlike FilteringSelect, the user cannot freely type text.
 
 On FORM submit, the selected item's hidden text values of a non-disabled MultiSelect widget are submitted using a native SELECT element if the *name* attribute was specified at widget creation time.
 
-MultiSelect widgets are NOT dojo.data-enabled.  This means that the data must be embedded as OPTION tags, children of the parent SELECT element.  However, it is possible to create the OPTION tags dynamically at runtime.
+MultiSelect widgets are not dojo.data-enabled.  This means that the data must be embedded as OPTION tags, children of the parent SELECT element.  However, it is possible to create the OPTION tags dynamically at runtime.
 
 Examples
 --------
