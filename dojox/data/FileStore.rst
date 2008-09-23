@@ -67,7 +67,7 @@ All items returned by a query to the FileStore and will generally have the follo
 |             |don’t care about its children, you don’t have to load them.  Should be accessed by the multivalue        |          |
 |             |*getValues()* accessor.                                                                                  |          |
 +-------------+---------------------------------------------------------------------------------------------------------+----------+
-|modified     |An intgeger indicating the last modified date.  This is the file timestamp from the system               |integer   |          
+|modified     |An integer indicating the last modified date.  This is the file timestamp from the system                |integer   |          
 +-------------+---------------------------------------------------------------------------------------------------------+----------+
 
 
