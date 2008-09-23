@@ -6,7 +6,7 @@ dijit.form.Textarea
 :Status: Draft
 :Version: 1.2
 
-A Textarea widget is like a regular HTML textarea, but it dynamically resizes to fit the content of the text inside. It takes nearly all the parameters (*name*, *value*, etc.) that a vanilla textarea takes. The attribute *cols* is not supported since the width should be specified with style *width*. Also *rows* is not supported since this widget adjusts the height. It is especially useful in an `InlineEditBox <dijit/form/InlineEditBox>`_. Note that when declaring a Textarea in markup you should use a <textarea> node to preserve the newline formatting.
+A Textarea widget is like a regular HTML textarea, but it dynamically resizes to fit the content of the text inside. It takes nearly all the parameters (*name*, *value*, etc.) that a vanilla textarea takes. The attribute *cols* is not supported since the width should be specified with style *width*. Also *rows* is not supported since this widget adjusts the height. It is especially useful in an `InlineEditBox <dijit/InlineEditBox>`_. Note that when declaring a Textarea in markup you should use a <textarea> node to preserve the newline formatting.
 
 Examples
 --------
