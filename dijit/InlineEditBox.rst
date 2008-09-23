@@ -28,7 +28,7 @@ Programatic InlineEditBox
       dojo.addOnLoad(function(){
 	  eb = new dijit.InlineEditBox({
             editor: "dijit.form.Textarea",
-            autosave: false
+            autoSave: false
           }, "ieb");
       });
     </script>
@@ -63,6 +63,7 @@ Creation from markup is even easier.  Here's an example with an initial value.
 Initial blank value
 -------------------
 If the InlineEditBox has no value it displays an icon so that the user has something to click to start the edit.
+Note also that the width argument is important so to indicate the editors width, which otherwise would be undefined.
 
 .. cv-compound::
 
@@ -75,7 +76,7 @@ If the InlineEditBox has no value it displays an icon so that the user has somet
 
   .. cv:: html
 
-    <span dojoType="dijit.InlineEditBox" editor="dijit.form.NumberTextBox" title="quantity"></span>
+    <span dojoType="dijit.InlineEditBox" editor="dijit.form.NumberTextBox" title="quantity" width="70px"></span>
 
 
 Notes on i18n
