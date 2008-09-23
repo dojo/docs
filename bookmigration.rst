@@ -46,10 +46,10 @@ Dojo Book Outline
   * `Dijit Layout <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout>`_. maps to: `dijit.layout <dijit/layout>`_ (complete)
 
     * `Dijit AccordionContainer <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout/accordion-container>`_. maps to: `AccordionContainer <dijit/layout/AccordionContainer>`_
-    * `Dijit BorderContainer <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout/border-container>`_. maps to: `BorderContainer <dijit/layout/BorderContainer>`_
-    * `Dijit ContentPane <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout/content-pane>`_. maps to: `ContentPane <dijit/layout/ContentPane>`_
-    * `Dijit StackContainer <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout/stack-container>`_. maps to: `StackContainer <dijit/layout/StackContainer>`_
-    * `Dijit TabContainer <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout/tab-container>`_. maps to: `TabContainer <dijit/layout/TabContainer>`_
+    * `Dijit BorderContainer <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout/border-container>`_. maps to: `BorderContainer <dijit/layout/BorderContainer>`_ (complete)
+    * `Dijit ContentPane <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout/content-pane>`_. maps to: `ContentPane <dijit/layout/ContentPane>`_ (complete)
+    * `Dijit StackContainer <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout/stack-container>`_. maps to: `StackContainer <dijit/layout/StackContainer>`_ (complete)
+    * `Dijit TabContainer <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout/tab-container>`_. maps to: `TabContainer <dijit/layout/TabContainer>`_ (complete)
 
   * `Command Control <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/command-control>`_.
 
@@ -69,12 +69,12 @@ Dojo Book Outline
     * `Dijit Dialog and TooltipDialog <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout/dialog>`_. maps to: 
          * `Dialog <dijit/Dialog>`_ (complete)
          * and `TooltipDialog <dijit/TooltipDialog>`_ (complete)
-    * `Dijit TitlePane <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout/title-pane>`_. maps to: `TitlePane <dijit/TitlePane>`_
+    * `Dijit TitlePane <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout/title-pane>`_. maps to: `TitlePane <dijit/TitlePane>`_ (complete)
 
   * `Advanced Editing and Display <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/advanced-editing-and-display>`_.
 
     * `Dijit ColorPalette <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/advanced-editing-and-display/color-palette>`_. maps to: `ColorPalette <dijit/ColorPalette>`_ (complete)
-    * `Dijit InlineEditBox (1.0) <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/advanced-editing-and-display/inlineeditbox>`_. maps to: `InlineEditBox <dijit/InlineEditBox>`_
+    * `Dijit InlineEditBox (1.0) <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/advanced-editing-and-display/inlineeditbox>`_. maps to: `InlineEditBox <dijit/InlineEditBox>`_ (complete)
     * `Dijit Editor <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/advanced-editing-and-display/editor-rich-text>`_. maps to `Editor <dijit/Editor>`_ [[complete]
     * `Dijit Tree <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/advanced-editing-and-display/tree>`_. maps to `Tree <dijit/Tree>`_ [[complete]]
 
