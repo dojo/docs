@@ -91,7 +91,7 @@ The similar example but with a vertical slider and a simple rule (tick marks) cr
 Declarative markup example with discrete values
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-And here we create a slider declaratively. Note that we set the value of the "discreteValues" attribute to 11, meaning that the slider will have 11 focus points
+And here we create a slider declaratively. Note that we set the value of the "discreteValues" attribute to 11, meaning that the slider will have 11 focus points.  This example also shows the end buttons removed.
 
 .. cv-compound::
 
@@ -106,9 +106,7 @@ And here we create a slider declaratively. Note that we set the value of the "di
     <div id="horizontalSlider" dojoType="dijit.form.HorizontalSlider"
         value="5" minimum="-10" maximum="10" discreteValues="11"
         intermediateChanges="true"
-        showButtons="true" style="width: 400px;">
-      <div dojoType="dijit.form.HorizontalRuleLabels" container="topDecoration"
-          style="height:1.2em;font-size:75%;color:gray;"></div>
+        showButtons="false" style="width:400px;">   
       <ol dojoType="dijit.form.HorizontalRuleLabels" container="topDecoration"
           style="height:1em;font-size:75%;color:gray;">
         <li> </li>
