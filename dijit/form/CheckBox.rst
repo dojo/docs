@@ -48,4 +48,4 @@ Let's create a checkbox with HTML markup, initially checked:
 
   .. cv:: html
  
-    <input id="mycheck" name="mycheck" dojoType="dijit.form.CheckBox" value="agreed" checked onChange="alert('onchange');alert('onChange called with parameter = ' + b + ', the widget value = ' + dijit.byId('mycheck').attr('value'))"> <label for="mycheck">I agree</label>
+    <input id="mycheck" name="mycheck" dojoType="dijit.form.CheckBox" value="agreed" checked onChange="alert('onChange called with parameter = ' + arguments[0] + ', the widget value = ' + dijit.byId('mycheck').attr('value'))"> <label for="mycheck">I agree</label>
