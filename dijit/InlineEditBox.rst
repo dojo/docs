@@ -27,7 +27,8 @@ Programatic InlineEditBox
       var eb;
       dojo.addOnLoad(function(){
 	  eb = new dijit.InlineEditBox({
-            editor: "dijit.form.Textarea"
+            editor: "dijit.form.Textarea",
+            autosave: false
           }, "ieb");
       });
     </script>
@@ -39,7 +40,8 @@ Programatic InlineEditBox
       The editor's size will initially match the size of the (original) text, but will expand/contract as you type.
     </div>
 
-
+Note that it was created with autoSave=false to make save/cancel buttons appear.
+Otherwise, the return key will end the edit, which is not appropriate for a multi-line edit.
 
 Markup
 ------
@@ -57,6 +59,24 @@ Creation from markup is even easier.  Here's an example with an initial value.
   .. cv:: html
 
     <span dojoType="dijit.InlineEditBox" editor="dijit.form.NumberSpinner" editorParams="{constraints: {places:0} }" width="70px" title="quantity">15</span>
+
+Initial blank value
+-------------------
+If the InlineEditBox has no value it displays an icon so that the user has something to click to start the edit.
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+      dojo.require("dijit.InlineEditBox");
+      dojo.require("dijit.form.NumberTextBox");
+    </script>
+
+  .. cv:: html
+
+    <span dojoType="dijit.InlineEditBox" editor="dijit.form.NumberTextBox" title="quantity"></span>
+
 
 Notes on i18n
 -------------
