@@ -108,7 +108,7 @@ And here we create a slider declaratively. Note that we set the value of the "di
         intermediateChanges="true"
         showButtons="false" style="width:400px;">   
       <ol dojoType="dijit.form.HorizontalRuleLabels" container="topDecoration"
-          style="height:1em;font-size:75%;color:gray;">
+          style="height:1.5em;font-size:75%;color:gray;">
         <li> </li>
         <li>20%</li>
         <li>40%</li>
@@ -117,7 +117,7 @@ And here we create a slider declaratively. Note that we set the value of the "di
         <li> </li>
       </ol>
       <div dojoType="dijit.form.HorizontalRule" container="bottomDecoration"
-        count=5 style="height:5px;"></div>
+        count=11 style="height:5px;"></div>
       <ol dojoType="dijit.form.HorizontalRuleLabels" container="bottomDecoration"
           style="height:1em;font-size:75%;color:gray;">
         <li>0%</li>
