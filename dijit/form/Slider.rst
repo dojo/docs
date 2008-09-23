@@ -8,8 +8,12 @@ dijit.form.Slider
 
 A slider is a scale with a handle you can drag up/down or left/right to select a value. Calling dojo.require("dijit.form.Slider") provides dijit.form.HorizontalSlider, dijit.form.VerticalSlider and all the rule and label classes.
 
+
 Examples
 --------
+
+Programmatic example of a horizontal slider
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 One way you could show the user the value of your Slider is to create a textbox that the Slider fills when the user moves the Slider. The following code fills in a simple textbox called horizontalSliderValue.
 
@@ -22,8 +26,9 @@ One way you could show the user the value of your Slider is to create a textbox 
       dojo.require("dijit.form.TextBox"); // this we only include to make the textinput look prettier
 
       dojo.addOnLoad(function(){
+
         var slider = new dijit.form.HorizontalSlider({
-          id: "slider",
+          name: "slider",
           value: 5,
           minimum: -10,
           maximum: 10,
@@ -41,7 +46,11 @@ One way you could show the user the value of your Slider is to create a textbox 
     <div id="slider"></div>
     <p><input type="text" id="sliderValue" dojoType="dijit.form.TextBox" /></p>
 
-The same example but with a vertical slider
+
+Programmatic example of a vertical slider
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The similar example but with a vertical slider and a simple rule (tick marks) created programmatically.
 
 .. cv-compound::
 
@@ -52,8 +61,15 @@ The same example but with a vertical slider
       dojo.require("dijit.form.TextBox"); // this we only include to make the textinput look prettier
 
       dojo.addOnLoad(function(){
+        var vertical = dojo.byId("vertical");
+        var rulesNode = document.createElement('div');
+        vertical.appendChild(rulesNode);
+        var sliderRules = new dijit.form.VerticalRule({
+            count:11,
+            style:"width:5px"
+        }, rulesNode);
         var slider = new dijit.form.VerticalSlider({
-          id: "sliderTwo",
+          name: "vertical",
           value: 5,
           minimum: -10,
           maximum: 10,
@@ -62,16 +78,20 @@ The same example but with a vertical slider
           onChange: function(value){
             dojo.byId("sliderValueTwo").value = value;
           }
-        }, "sliderTwo");
+        }, vertical);
       });
     </script>
 
   .. cv:: html
 
-    <div id="sliderTwo"></div>
+    <div id="vertical"></div>
     <p><input type="text" id="sliderValueTwo" dojoType="dijit.form.TextBox" /></p>
 
-And here we create a slider declaratively, not that we set the value of the "discreteValues" attribute to 11, meanign that the slider will have 11 focus points
+
+Declarative markup example with discrete values
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+And here we create a slider declaratively. Note that we set the value of the "discreteValues" attribute to 11, meaning that the slider will have 11 focus points
 
 .. cv-compound::
 
@@ -107,3 +127,34 @@ And here we create a slider declaratively, not that we set the value of the "dis
         <li>100%</li>
       </ol>
     </div>
+
+
+Accessibility
+-------------
+
+Keyboard
+~~~~~~~~
++----------------------------------------------+-----------------------------------------------------------+
+| **Action**                                   | **Key**                                                   |
++----------------------------------------------+-----------------------------------------------------------+
+| Interact with the slider                     | The slider handle is in the tab order of the page.        | 
+|                                              | Press tab key to set focus to the slider handle.          |
++----------------------------------------------+-----------------------------------------------------------+
+| Increase slider value by single increment    | With focus on slider handle press right or up arrow.      |
++----------------------------------------------+-----------------------------------------------------------+
+| Decrease slider value by single increment    | With focus on slider handle press left or down arrow.     |
++----------------------------------------------+-----------------------------------------------------------+
+| Increase slider value by multiple increments | With focus on slider handle press PageUp. The amount of   |
+|                                              | increment is determined by the pageIncrement parameter.   |
++----------------------------------------------+-----------------------------------------------------------+
+| Decrease slider value by multiple increments | With focus on slider handle press PageDown. The amount    |
+|                                              | of decrement is determined by the pageIncrement parameter.|
++----------------------------------------------+-----------------------------------------------------------+
+| Set slider to minimum value                  | With focus on slider handle press Home.                   |
++----------------------------------------------+-----------------------------------------------------------+
+| Set slider to mmaximum value                 | With focus on slider handle press End.                    |
++----------------------------------------------+-----------------------------------------------------------+
+
+Known Issues
+~~~~~~~~~~~~
+Currently the text labels of a slider are not spoken by screen readers. Firefox 3 will support this type of labeling so the plan is to add support for it in the Dojo 1.2 release or beyond. Developers should take care when using text labels since a screen reader user will hear only a numeric interpretation.
