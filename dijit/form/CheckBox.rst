@@ -3,12 +3,15 @@
 dijit.form.CheckBox
 ===================
 
-CheckBoxes in dijit are very intuitive and easy to use. Markup constructs for check boxes is the same as html but dojo provides more control and styling options than a conventional check box. The following example creates a CheckBox:
+CheckBox widgets in dijit are very intuitive and easy to use. Markup constructs for check boxes resemble the same as HTML but dojo provides more control and styling options than a conventional check box.  Conceptually, native HTML checkboxes have 2 separate values; the first being the boolean checked state, and the second being the text value that is submitted with the containing FORM element if the checked state is true.  To resolve this dichotomy, the *value* of a CheckBox widget is false when unchecked, but the text value when checked.  Setting the *value* to true will check the box while false will uncheck it.  Setting the *value* to a text value will check the box and set the value to be submitted to the indicated text string.
 
 Examples
 --------
 
-Lets create a checkbox programatically, initially unchecked:
+Programmatic example
+~~~~~~~~~~~~~~~~~~~~
+
+Let's create a checkbox programatically, initially unchecked:
 
 .. cv-compound::
 
@@ -18,9 +21,10 @@ Lets create a checkbox programatically, initially unchecked:
     dojo.require("dijit.form.CheckBox");
     dojo.addOnLoad(function(){
       var checkBox = new dijit.form.CheckBox({
-        id: "checkBox",
+        name: "checkBox",
+        value: "checked",
         checked: false,
-        onChange: function(b){ alert('new value is ' + b); }
+        onChange: function(b){ alert('onChange called with parameter = ' + b + ', the widget value = ' + checkBox.attr('value') ); }
       }, "checkBox");
     });
     </script>
