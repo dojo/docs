@@ -13,7 +13,7 @@ The MultiSelect widget is an exact replacement for the native SELECT element and
 
 On FORM submit, the selected item's hidden text values of a non-disabled MultiSelect widget are submitted using a native SELECT element if the *name* attribute was specified at widget creation time.
 
-MultiSelect widgets are NOT dojo.data-enabled.  This means that the data must be embedded as OPTION tags, children of the parent SELECT element.  However, it is possible however to create the OPTION tags dynamically at runtime.
+MultiSelect widgets are NOT dojo.data-enabled.  This means that the data must be embedded as OPTION tags, children of the parent SELECT element.  However, it is possible to create the OPTION tags dynamically at runtime.
 
 Examples
 --------
@@ -33,7 +33,7 @@ MultiSelect widgets always use a native SELECT tag and have child OPTION tags to
 
   .. cv:: html
 
-    <select dojoType="dijit.form.MultiSelect" id="fruit" name="fruit">
+    <select dojoType="dijit.form.MultiSelect" id="fruit" name="fruit" value="OR">
       <option value="AP">Apples</option>
       <option value="OR" selected>Oranges</option>
       <option value="PE" >Peers</option>
@@ -65,7 +65,7 @@ Programmatic example using dynamic data
   .. cv:: html
 
     <select id="dynamic"></select>
-    <p><button dojoType="dijit.form.Button" onClick="alert(dijit.byId('dynamic').attr('value'))">Get value</button></p>
+    <p><button onClick="alert(dijit.byId('dynamic').attr('value'))">Get value</button></p>
 
 
 Accessibility
