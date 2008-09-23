@@ -118,7 +118,9 @@ Dojo data
 Drag and Drop
 -------------
 
-* `dojo.dnd <dojo/dnd>`_, `Moveable <dojo/dnd/Moveable>`_
+* `dojo.dnd <dojo/dnd>`_
+
+  * `Moveable <dojo/dnd/Moveable>`_
 
 Dojo effects
 ------------
