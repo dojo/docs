@@ -141,11 +141,12 @@ Dijit reference
 Dijit is Dojo's UI Library, and lives as a separate namespace ``dijit``. Dijit requires Dojo Core. Each of the widgets and functionality provided by Dijit is describe in the following sections, though the aforementioned `quickstart <quickstart/>`_ guides cover some basics.  
 
 * `dijit <dijit>`_
-* `a11y <dijit-a11y-strategy>`_
 
-  * `a11y resources <dijit-a11y-resources>`_
-  * `Creating Accessible Widgets <quickstart/writingWidgets/a11y>`_
-  * `Testing for Accessibility <quickstart/writingWidgets/a11yTesting>`_
+  * `a11y Strategy <dijit-a11y-strategy>`_
+
+    * `a11y Resources <dijit-a11y-resources>`_
+    * `Creating Accessible Widgets <quickstart/writingWidgets/a11y>`_
+    * `Testing for Accessibility <quickstart/writingWidgets/a11yTesting>`_
 
 * `dijit.Calendar <dijit/Calendar>`_
 * `dijit.ColorPalette <dijit/ColorPalette>`_
