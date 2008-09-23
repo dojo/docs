@@ -31,3 +31,19 @@ Resources for Navigating via the keyboard
 - `Keyboard Shortcuts for Internet Explorer 6 <http://www.microsoft.com/enable/products/KeyboardSearch_IE6.aspx>`_
 - `The Keyboard Lover’s Guide to IE7 <http://blogs.msdn.com/ie/archive/2006/02/08/527702.aspx>`_
 - `Use Opera without a Mouse <http://www.opera.com/support/tutorials/nomouse/>`_
+
+Test ARIA Support
+-----------------
+
+It is important that when an element is clicked on with the mouse or navigated to via the keyboard that the element receives actual focus. Focus must not be simulated via styles since assistive technology relies on the focus event to inform the user about the element and the role and state. Focus can be visually tested since browsers will indicate focus, however the focus border may be difficult to see or have been modified with a different style.
+
+Testing using Microsoft Inspect Objects
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The Microsoft Inspect Objects application from the Microsoft Active Accessibility SDK can be used on Windows to test for focus and also to verify the correct ARIA role and state has been set on the element. Test using Firefox version 3 since Firefox currently has the most comprehensive support for the ARIA role and state information.
+
+Download Inspect32 from `Active Accessibility 2.0 SDK Tools <http://www.microsoft.com/downloads/details.aspx?FamilyID=3755582a-a707-460a-bf21-1373316e13f0&DisplayLang=en>`_. Basic information on using the tool is provided at `Using Inspect Objects <http://msdn.microsoft.com/en-us/library/ms696079.aspx>`_.
+
+Run Inspect Objects and test the widget for focus and role and state information. Turn on Highlight Focus tracking via the Inspect Objects Options menu. This mode will display a yellow rectangle around the currently focused element. Use this rectangle to verify that the expected element is actually receiving focus. The Show Information Tooltip option may also be helpful. As you set focus to an item, Inspect Objects will display information about the role and state of the object. You can verify that the object receives focus and that the role and state information is as expected.
+
+Below is a picture of the diijt Tree with Inspect Objects running and the Show Information Tooltip and Turn On Highlight Focus options set. With focus on an expanded tree item the MS Inspect focus rectangle and role and state information is displayed within the tooltip. The role is “outline item” and the state is “focused, expanded, focusable”. This verifies that the role of treeitem (interpreted as outline item by MS Inspect) has been properly set in the dijit tree item code. The state information verifies that the element is focused and the expanded state is set. With focus on an collapsed tree item node the state would display, “focused, collapsed, focusable”, since the expanded property is set to false. Note that when the state of an element changes, focus must be removed from the element and then returned in order for Inspect Objects to update the information. Or, rather than change focus use the Inspect Objects Action Refresh command to update the information about the currently focused object.
