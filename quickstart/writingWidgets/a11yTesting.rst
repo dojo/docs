@@ -90,7 +90,9 @@ With images turned off the widgets should still be usable. Since no images are l
 Test for Font Size Changes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The widgets should still be usable if the font size of the page is changed.  Each browser has a different mechanism for changing font size:
+The widgets should still be usable if the font size of the page is changed.  Increase and decrease the font size and make certain that the widget still renders correctly.  Some problems can occur when the height or width of a widget is set using pixels.  When the font size increases it may no longer fit within the height or width specified.  One example is creating a toolbar and setting its height: 25px.  When the system is in high contrast mode, the toolbar images are replaced by text.  If that text size is increased it may not fit within the 25px toolbar height and be clipped.  Instead of setting the height using pixels use ems or % instead.  
+
+Each browser has a different mechanism for changing font size:
 
 - Firefox 2 - select View Text Size Increase or press ctrl + or View Text Size Decrease or press ctrl -
 - Firefox 3 - select View Zoom In or press ctrl + to increase and View Zoom Out or press ctrl - to decrease
