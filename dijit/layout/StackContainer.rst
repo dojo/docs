@@ -44,6 +44,7 @@ Here's an example of a progamatically created StackContainer, and associated Sta
         sc.startup();
 
         var controller = new dijit.layout.StackController({containerId: "myProgStackContainer"}, "scontroller-prog");
+        controller.startup();
     });
     </script>
 
