@@ -78,5 +78,60 @@ Additional ARIA resources:
 - `FREE-ARIA  <http://groups.google.com/group/free-aria>`_ is a google group "for people who want to help provide free tools and resources for the advancement of WAI-ARI".
 - `Code Talks <http://wiki.codetalks.org/wiki/index.php/Main_Page>`_ wiki for discussing ARIA and accessible Web 2.0 widgets
 
+Assigning Roles
+---------------
 
-in progress......
+Use the tabindex to provide keyboard focus or to allow programmatic focus to an object. By adding a tabindex to an element, the element will now be included in the accessibility hierarchy of the Firefox browser. Information about elements in the accessibility hierarchy will be provided to assistive technologies. If you use a tabindex attribute on a <DIV>, <SPAN>, <IMG> or any element which has no natural role of its own then you need to provide a role. In Firefox 3 <div> elements are added into the hierarchy even if they do not have a tabindex attribute. If you are using a div as a container element it will need a role="presentation" to remove it from the accessibility hierarchy.  Any element that can receive focus must have a role, either implied, such as input elements and anchors, or specified via a role attribute. For things with an implied role such as input fields and anchors, you can use tabindex=”-1” to remove them from the tab order. You can also specify a different role for elements which already have an implied role.
+
+The role and states are added to Dojo widgets within the widget template or via the dijit.wai APIs as described in the `Dijit A11y Resources <dijit-a11y-resources>`_
+
+Providing Hierarchical Information
+----------------------------------
+
+In order for Firefox to determine the correct parent child relationships between objects, and to communicate this via an accessibility API to assistive technologies, it is best to create components in a hierarchical fashion. For example, when creating a menubar it is best to have the components that make up the menus and menuitems of the menubar be children of the menubar. Likewise, menuitems should be children of the owning menus. This hierarchy allows Firefox to provide menu information to the assistive technologies, and for a screen reader to speak more information about the menu such as, “menu open, File, item 1 of 5” when the user opens a menu. Here is a simple pseudo code example demonstrating a hierarchical layout of elements for a menu control. This exmaple only shows the addition of role attributes and does not represent a complete menu widget. (Note: Attributes are not quoted in pseudo-code examples to help improve the readability):
+
+.. code-block :: javascript
+
+<div role="menubar">
+<div role="menuitem">A</div>
+      <div role="menu">
+            <div role="menuitem">A.1</div>
+            <div role="menuitem">A.2</div>
+      </div>
+      <div role="menuitem">B</div>
+      <div role="menu">
+            <div role="menuitem">B.1</div>
+            <div role="menuitem">B.2</div>
+            <div role="menu">
+                  <div role="menuitem">B.2.1</div>
+            </div>
+      </div>
+</div>
+It may not always be practical to create items via HTML in a hierarchical fashion. In that case the group role can help to associate the items properly. This is illustrated in the following simple pseudo code example of a tree hierarchy.
+
+.. code-block :: javascript
+
+<div role="tree"> 
+  <div role="treeitem">Top </div>
+  <div role="group">
+     <div role="treeitem">1</div>
+     <div role="group">
+       <div role="treeitem">1.1 </div>
+       <div role="treeitem">1.2</div>
+       <div role="treeitem">1.3</div>
+<div role="group">
+<div role="treeitem">1.3.1</div>
+         <div role="treeitem">1.3.2</div>
+         <div role="treeitem">1.3.3</div>
+         <div role="treeitem">1.3.4</div>
+       </div>
+       <div role="treeitem">1.4</div>
+     </div>
+     <div role="treeitem">2</div>
+     <div role="treeitem">3</div>
+     <div role="group">
+       <div role="treeitem">3.1</div>
+       <div role="treeitem">">3.2</div>
+     </div>
+  </div>
+</div>
