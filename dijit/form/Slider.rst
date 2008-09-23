@@ -70,7 +70,7 @@ The similar example but with a vertical slider and a simple rule (tick marks) cr
         }, rulesNode);
         var slider = new dijit.form.VerticalSlider({
           name: "vertical",
-          value: 5,
+          value: 6,
           minimum: -10,
           maximum: 10,
           intermediateChanges: true,
