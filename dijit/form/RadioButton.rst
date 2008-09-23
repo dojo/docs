@@ -26,6 +26,7 @@ Let's create 2 RadioButton widgets, 1 programmatically and 1 declaratively:
       dojo.addOnLoad(function(){
         var radioOne = new dijit.form.RadioButton({
           checked: true,
+          value: "coffee",
           name: "drink",
         }, "radioOne");
       });
@@ -34,7 +35,7 @@ Let's create 2 RadioButton widgets, 1 programmatically and 1 declaratively:
   .. cv:: html
 
     <form id="myform">
-        <input type="radio" name="drink" id="radioOne" checked/> <label for="radioOne">Tea</label> <br />
+        <input type="radio" name="drink" id="radioOne" checked value="tea"/> <label for="radioOne">Tea</label> <br />
         <input type="radio" dojoType="dijit.form.RadioButton" name="drink" id="radioTwo" /> <label for="radioTwo">Coffee</label> <br />
     </form>
     <button onclick="alert('drink = ' + dojo.byId('myform').elements[0].value); return false">Show form submit value</button>
