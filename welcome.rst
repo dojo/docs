@@ -104,6 +104,10 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 
       Invokes a callback function for every item in array
 
+    * `dojo.map <dojo/map>`_
+
+      Applies a callback to each element of arr and returns an Array with the results
+
   * `dojo.browser <dojo/browser>`_
 
   * `dojo.Color <dojo/Color>`_
@@ -120,6 +124,9 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 
   * `dojo.Deferred <dojo/Deferred>`_
   * `dojo.event <dojo/event>`_
+
+    * `dojo.keys <dojo/keys>`_
+
   * `dojo.fx <dojo/fx>`__
 
     Dojo effects
@@ -228,18 +235,40 @@ Dojo Core
 
 * `dojo.jaxer <dojo/jaxer>`_
 
-* nls
+* `dojo.NodeList-fx <dojo/NodeList-fx>`_
 
-* resources
+  Adds dojo.fx animation support to dojo.query()
+
+* `dojo.NodeList-html <dojo/NodeList-html>`_
+
+  Adds a chainable html method to dojo.query()
+
+* `dojo.number <dojo/number>`_
+
+  Localized formatting and parsing methods for Numbers
+
+* `dojo.parser <dojo/parser>`_
+
+  The Dom/Widget parsing package
+
+* `dojo.regexp <dojo/regexp>`_
+
+  Regular expressions and Builder resources
+
+* `dojo.robot <dojo/robot>`_
+
+  experimental module for DOH users
+
+* `dojo.robotx <dojo/robotx>`_
+
+  experimental module for DOH users
 
 * rpc
 
+* `dojo.string <dojo/string >`_
 
+  String utilities for Dojo
 
-* `dojo.json <dojo/json>`_
-* `dojo.keys <dojo/keys>`_ 
-* `dojo.lang <dojo/lang>`_
-* `dojo.map <dojo/map>`_
 
 ===============
 Dijit reference
