@@ -18,7 +18,7 @@ Dojo core provides an implementation of a read-only datastore, ItemFileReadStore
 1. The format used by ItemFileReadStore is *not* a requirement of the dojo.data API. The format it uses is designed to work well for the specific situations ItemFileReadStore is used for, which are moderately sized data sets that can be easily represented in a JavaScript Object tree. 
    Again, please do not take the storage format used by ItemFileReadStore as a definitive format all data stores use; *it is not*. Other stores use different formats, such as CSV structured data, XML, Opml, HTML, raw text, etc. The point of a data store is to hide the internal structure and always expose the data through the same API.
 
-2. This is an in-memory store. It is not designed to operate as a remote server store and often trying to make it work with specific remote services ends up far more work than simply implementing a completely new data store that conforms to the dojo.data APIs. So, if you find it extremely complicated to modify for your needs, take a set back and look at what you're trying to do. It may be simpler to implement the data store interface over your services.
+2. This is an in-memory store. It is not designed to operate as a remote server store and often trying to make it work with specific remote services ends up far more work than simply implementing a completely new data store that conforms to the dojo.data APIs. So, if you find it extremely complicated to modify for your needs, take a step back and look at what you're trying to do. It may be simpler to implement the data store interface over your services.
 
 ==============
 Supported APIs
