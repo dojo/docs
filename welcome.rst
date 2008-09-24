@@ -263,7 +263,19 @@ Dojo Core
 
   experimental module for DOH users
 
-* rpc
+* `dojo.rpc <dojo/rpc>`_
+
+  * `dojo.rpc.JsonpService <dojo/rpc/JsonpService>`_
+
+    Generic JSONP service
+
+  * `dojo.rpc.JsonService <dojo/rpc/JsonService>`_
+
+    JSON RPC service
+
+  * `dojo.rpc.RpcService <dojo/rpc/RpcService>`_
+
+    RPC service class
 
 * `dojo.string <dojo/string>`_
 
