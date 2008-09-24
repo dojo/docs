@@ -3,7 +3,7 @@
 Testing Widgets for Accessibility
 =================================
 
-:Status: Draft
+:Status: Contributed
 :Version: 1.2
 :Author: Becky Gibson
 
@@ -48,7 +48,7 @@ Run Inspect Objects and test the widget for focus and role and state information
 
 Below is a picture of the diijt Tree with Inspect Objects running and the Show Information Tooltip and Turn On Highlight Focus options set. With focus on an expanded tree item the MS Inspect focus rectangle and role and state information is displayed within the tooltip. The role is “outline item” and the state is “focused, expanded, focusable”. This verifies that the role of treeitem (interpreted as outline item by MS Inspect) has been properly set in the dijit tree item code. The state information verifies that the element is focused and the expanded state is set. With focus on an collapsed tree item node the state would display, “focused, collapsed, focusable”, since the expanded property is set to false. Note that when the state of an element changes, focus must be removed from the element and then returned in order for Inspect Objects to update the information. Or, rather than change focus use the Inspect Objects Action Refresh command to update the information about the currently focused object.
 
-.. image:: treeInspect.png
+.. image:: treeInspect.jpg
 
 Testing with Accessibility Probe (AccProbe)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -95,9 +95,11 @@ The widgets should still be usable if the font size of the page is changed.  Inc
 Each browser has a different mechanism for changing font size:
 
 - Firefox 2 - select View Text Size Increase or press ctrl + or View Text Size Decrease or press ctrl -
-- Firefox 3 - select View Zoom In or press ctrl + to increase and View Zoom Out or press ctrl - to decrease
-- IE 6 - check
-- IE 7 - check
+- Firefox 3 - select View Zoom Text Only.  Firefox 3 also will zoom the entire page, including imeages, using View Zoom In or press ctrl + to increase and View Zoom Out or press ctrl - to decrease
+- IE 6 - select View Text Size and pick from Largest, Larger, Medium, Smaller, or Smallest
+- IE 7 - select View Text Size and pick from Largest, Larger, Medium, Smaller, or Smallest.  IE 7 will also zoom the entire page using Page Zoom Zoom In or press ctrl + and Page Zoom Zoom Out or press ctrl -.  
 - Safari - select View Make Text Bigger or press ctrl + or View Make Text Smaller or press ctrl -
 
 (on the Mac use the apple key in place of the ctrl key)
+
+The page zooming features of Firefox 3 and IE 7 diminish the need to support changing text size but it is still important to support IE 6 and Firefox 2.
