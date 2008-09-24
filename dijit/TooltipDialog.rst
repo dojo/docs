@@ -10,6 +10,7 @@ A variant on Dialog Box is dijit.TooltipDialog. This displays the dialog box con
 
 Although both Dialog and TooltipDialog are modal, TooltipDialog can be closed by clicking anywhere on the screen, whereas for Dialog you must click on the [x] mark of the Dialog.
 
+Note: TooltipDialog can only be used, in it's current state, with the button drop down style
 
 Examples
 --------
