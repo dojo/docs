@@ -44,7 +44,9 @@ Constructor Parameters
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
 | data           | No           |A structured JavaScript Object to use to populate the store. This parameter can be used instead | 1.0       |
 |                |              |of *url* when you wish to load data differently then modify it to fit the expected              |           |
-|                |              |ItemFileReadStore format. This parameter is ignored if *url* is set.                            |           |
+|                |              |ItemFileReadStore format. This parameter is ignored if *url* is set.  The data object passed in |           |
+|                |              |is directly used **and** modified.  If you want to reuse a data object, make sure you copy it   |           |
+|                |              |before you pass it in.                                                                          |           |
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
 | typeMap        | No           |This is a JavaScript Object that defines how to deserialize custom types. For more information  | 1.0       |
 |                |              |on custom types, please refer to the section in this page on them. They are effectively a way   |           |
