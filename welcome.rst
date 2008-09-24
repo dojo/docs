@@ -86,27 +86,32 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 
 * `dojo <dojo>`_
 * `dojo._base <dojo/base>`_
+  * `Array utilities: <dojo/array>`_  Details on dojo.every, dojo.filter, dojo.forEach, dojo.indexOf, dojo.lastIndexOf, dojo.map, and dojo.some.
+  * `dojo.browser <dojo/browser>`_
+  * `dojo.Color <dojo/Color>`_
+  * `dojo.connect <dojo/connect>`_
+  * `dojo.declare <dojo/declare>`_
+  * `dojo.Deferred <dojo/Deferred>`_
+  * `dojo.event <dojo/event>`_
+  * `dojo.fx <dojo/fx>`_
+  * `dojo.html <dojo/html>`_
+  * `dojo.json <dojo/json>`_
+  * `dojo.lang <dojo/lang>`_
+  * `dojo.NodeList <dojo/NodeList>`_
+  * `dojo.query <dojo/query>`_
+  * `dojo.window <dojo/window>`_
+  * `dojo.xhr <dojo/xhr>`_
 
 Dojo Core
 ---------
 
 * `dojo.AdapterRegistry <dojo/AdapterRegistry>`_
 * `dojo.addOnLoad <dojo/addOnLoad>`_
-* `Array utilities: <dojo/array>`_  Details on dojo.every, dojo.filter, dojo.forEach, dojo.indexOf, dojo.lastIndexOf, dojo.map, and dojo.some.
 * `dojo.back <dojo/back>`_
 * `dojo.behavior <dojo/behavior>`_
-* `dojo.browser <dojo/browser>`_
 * `dojo.byId <dojo/byId>`_
-* `dojo.connect <dojo/connect>`_
-* `dojo.Color <dojo/Color>`_
-* `dojo.declare <dojo/declare>`_
-* `dojo.Deferred <dojo/Deferred>`_
 * `dojo.forEach <dojo/forEach>`_
-* `dojo.NodeList <dojo/NodeList>`_
-* `dojo.query <dojo/query>`_
 * `dojo.require <dojo/require>`_
-* `dojo.window <dojo/window>`_
-* `dojo.xhr <dojo/xhr>`_
 
 Dojo data
 ---------
