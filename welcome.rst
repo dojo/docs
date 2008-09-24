@@ -265,6 +265,8 @@ Dojo Core
 
 * `dojo.rpc <dojo/rpc>`_
 
+  Communicate via Remote Procedure Calls (RPC) with Backend Servers
+
   * `dojo.rpc.JsonpService <dojo/rpc/JsonpService>`_
 
     Generic JSONP service
@@ -441,6 +443,8 @@ These sections cover the available projects shipped with the Dojo Toolkit
 * `dojox.resources <dojox/resources>`_
 * `dojox.robot <dojox/robot>`_
 * `dojox.rpc <dojox/rpc>`_
+
+  Extended classes to communicate via Remote Procedure Calls (RPC) with Backend Servers
 
   * `dojox.rpc.SMDLibrary <dojox/rpc/SMDLibrary>`_
   * `dojox.rpc.Client <dojox/rpc/Client>`_
