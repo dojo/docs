@@ -270,7 +270,7 @@ Items with Custom Types
 Custom Types
 ============
 
-As mentioned in the Item Structure section, custom types are possible to create and use as values of attributes with this store. The caveat is, you have to tel the store, through a typeMap object, how to deserialize the cutom type value back into its object form. This is not as difficult as it first may sound. Below is the general structure information for creating a custom type map. There is a general format for all cases, and a compact format when the value can be directly used as a constructor argument.
+As mentioned in the Item Structure section, custom types are possible to create and use as values of attributes with this store. The caveat is, you have to tell the store, through a typeMap object, how to deserialize the cutom type value back into its object form. This is not as difficult as it first may sound. Below is the general structure information for creating a custom type map. There is a general format for all cases, and a compact format when the value can be directly used as a constructor argument.
 
 **Note:** You can mix simplified form type maps with general case type maps in the same type map object. Therefore, you can use whatever is the easiest representation required to handle the custom object construction. 
 
