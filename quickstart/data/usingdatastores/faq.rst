@@ -145,3 +145,9 @@ That should return no items but give you the size of the match.
 The reason for this is that not all stores keep every item in memory in the browser.  This would be fundamentally impossible if there was an item set of well over one million entries, which is where server backed datastores come in.  For server backed datastores, you have no possible way of knowing the size of the data set (which could be changing as operations occur from other clients in a multi-user web app) at any particular moment without a query to the server ... which naturally gets into invoking a fetch.   
 
 The data API was designed to hide whether or not all items are in memory, or are stored on some remote service.  
+
+========================================================================================
+Question 7:  Do all datastores have to use the format of data used by ItemFileReadStore?
+========================================================================================
+
+No.  A store's internal data format can be whatever is most efficient for that store to work with.  For example, dojox.data.XmlStore's input dtaa format is XML, not JSON.  The API is intended to adapt over new as well as existing, data services on the web and expose data items on a common fashion, regardless of the actual backing transport format.
