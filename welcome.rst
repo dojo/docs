@@ -112,7 +112,7 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 
   * `dojo.Color <dojo/Color>`_
 
-    Functions for setting Colors.
+    Functions for setting Colors
 
   * `dojo.connect <dojo/connect>`_
 
@@ -120,9 +120,12 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 
   * `dojo.declare <dojo/declare>`_
 
-    Creates a constructor using a compact notation for inheritance and prototype extension.
+    Creates a constructor using a compact notation for inheritance and prototype extension
 
   * `dojo.Deferred <dojo/Deferred>`_
+
+    Encapsulates a sequence of callbacks in response to a value that may not yet be available
+
   * `dojo.event <dojo/event>`_
 
     * `dojo.keys <dojo/keys>`_
