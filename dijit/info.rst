@@ -34,6 +34,8 @@ and by the addition of a theme class name on a parent element. By using the ``<b
 
 It is recommended you include the theme CSS file **before** ``dojo.js`` to avoid any potential latency issues.
 
+To learn more about themes, see `Dijit themes <dijit-themes>`_.
+
 Dijit i18n/a11y
 ---------------
 
