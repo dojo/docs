@@ -115,13 +115,11 @@ Note the tabStrip attribute on the TabContainer.
       }
     </style>
 
-====================
-TODO: Open questions
-====================
-from #dojo: 
+Setting sizes
+-------------
+Besides setting the size of the BorderContainer itself, you generally need to set the width of the leading and trailing (left and the right) panes.
+You shouldn't need to set the height of the top/bottom panes as that can be determined automatically.
 
-* Is it safe to allow the region="top" to determine it's own size?
-  Seems to work but when the content is updated the layout overlaps.
-  Should the top, left, etc regions always explicitly set their size?
-
-* like the comment above, what are the special CSS size and position constraints on the content panes for the various regions?  eg. If I set width for top/bottom in addition to height, is this invalid? Are there any specific CSS properties (or restrictions on properties) that need to be set on the parent node that the BorderContainer is added to, so that it appears properly?
+Of course, you shouldn't set the size of the center pane, since it's size is determined from whatever is left over after
+placing the left/right/top/bottom panes.
+You also shouldn't set the width of the top/bottom panes or the height of the left/right panes as that would be meaningless.
