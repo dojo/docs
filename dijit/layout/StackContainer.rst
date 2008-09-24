@@ -30,20 +30,20 @@ Here's an example of a progamatically created StackContainer, and associated Sta
         },"scontainer-prog");
   
         var cp1 = new dijit.layout.ContentPane({
-             title: "tab 1",
-             content: "tab 1 content"
+             title: "page 1",
+             content: "page 1 content"
         });
         sc.addChild(cp1);
   
         var cp2 = new dijit.layout.ContentPane({
-             title: "tab 2",
-             content: "tab 2 content"
+             title: "page 2",
+             content: "page 2 content"
         });
         sc.addChild(cp2);
   
-        sc.startup();
-
         var controller = new dijit.layout.StackController({containerId: "myProgStackContainer"}, "scontroller-prog");
+
+        sc.startup();
         controller.startup();
     });
     </script>
