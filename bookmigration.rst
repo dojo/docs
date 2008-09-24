@@ -28,8 +28,8 @@ Dojo Book Outline
 
 * `Part 2: Dijit - The Dojo Widget Library <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit-0>`_. maps to: `dijit <dijit>`_ (complete)
 
-  * `Dijit at a Glance <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/dijit-glance>`_.
-  * `Common Features <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/common-attributes>`_.
+  * `Dijit at a Glance <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/dijit-glance>`_. (N/A, covered above)
+  * `Common Features <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/common-attributes>`_. (N/A, covered above)
   * `Form, Validation, Specialized Input <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input>`_. maps to: `dijit.form <dijit/form>`_ [[CraigRiecke]]
 
     * `Form Widget <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/form-widget>`_. maps to: `Form <dijit/form/Form>`_  (complete)
@@ -45,7 +45,7 @@ Dojo Book Outline
 
   * `Dijit Layout <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout>`_. maps to: `dijit.layout <dijit/layout>`_ (complete)
 
-    * `Dijit AccordionContainer <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout/accordion-container>`_. maps to: `AccordionContainer <dijit/layout/AccordionContainer>`_
+    * `Dijit AccordionContainer <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout/accordion-container>`_. maps to: `AccordionContainer <dijit/layout/AccordionContainer>`_ (complete)
     * `Dijit BorderContainer <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout/border-container>`_. maps to: `BorderContainer <dijit/layout/BorderContainer>`_ (complete)
     * `Dijit ContentPane <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout/content-pane>`_. maps to: `ContentPane <dijit/layout/ContentPane>`_ (complete)
     * `Dijit StackContainer <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/layout/stack-container>`_. maps to: `StackContainer <dijit/layout/StackContainer>`_ (complete)
