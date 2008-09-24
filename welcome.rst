@@ -202,9 +202,26 @@ Dojo Core
 
   Effects library on top of Base animations
 
+* `dojo.gears <dojo/gears>`_
+
+  Google Gears
+
+* `dojo.html <dojo/html>`_
+
+  Inserting contents in HTML nodes
+
+* `dojo.i18n <dojo/i18n>`_
+
+  Utility classes to enable loading of resources for internationalization
+
 * io
 
   Additional I/O transports (Ajax)
+
+  * `dojo.iframe <dojo/iframe>`_
+  * `dojo.script <dojo/script>`_
+
+* `dojo.jaxer <dojo/jaxer>`_
 
 * nls
 
@@ -213,7 +230,7 @@ Dojo Core
 * rpc
 
 
-* `dojo.html <dojo/html>`_
+
 * `dojo.json <dojo/json>`_
 * `dojo.keys <dojo/keys>`_ 
 * `dojo.lang <dojo/lang>`_
