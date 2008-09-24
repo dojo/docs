@@ -124,3 +124,24 @@ Question 5:  With ItemFileReadStore and ItemFileWriteStore, how do I reload the 
 ===============================================================================================
 
 Use the two constructor options added in 1.2, *clearOnClose* and *urlPreventCache*.  Then when you want to reload, call close().  It will flush the internal store structures and reload everything from the server or whatnot.
+
+==============================================================
+Question 6:  How do I get a count of all items in a datastore?
+==============================================================
+
+You do a fetch that queries for all items, then use the onBegin callback function.  In the dojo.data.api.Read spec, the onBegin callback function's first parameter is the total size of the match, regardless of what start and count were configured to.  This is so you have a way of knowing the total match outside of the returned page so that you can configure your client side display appropriately.  The simpliets way to get a size back, but no items would be to do something like:
+
+.. code-block :: javascript
+
+  function size(size, request) {
+    //Do whatever with the size var.
+  }
+
+  store.fetch({query: {}, onBegin: size, start: 0, count: 0);
+
+
+That should return no items but give you the size of the match.
+
+The reason for this is that not all stores keep every item in memory in the browser.  This would be fundamentally impossible if there was an item set of well over one million entries, which is where server backed datastores come in.  For server backed datastores, you have no possible way of knowing the size of the data set (which could be changing as operations occur from other clients in a multi-user web app) at any particular moment without a query to the server ... which naturally gets into invoking a fetch.   
+
+The data API was designed to hide whether or not all items are in memory, or are stored on some remote service.  
