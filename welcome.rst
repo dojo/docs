@@ -112,7 +112,7 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 
   * `dojo.connect <dojo/connect>`_
 
-    Creates a link that calls one function when another executes
+    Connects events to methods
 
   * `dojo.declare <dojo/declare>`_
 
