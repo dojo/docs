@@ -5,7 +5,7 @@ dojox.io.script
 
 :Status: Contributed, Draft
 :Version: 1.0
-:Available: since V0.4
+:Available: since V0.9
 
 .. contents::
   :depth: 2
