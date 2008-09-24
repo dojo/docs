@@ -25,7 +25,7 @@ Specific arguments for dojo.io.script calls:
 * checkString: "". String. 
   A string of JavaScript that when evaluated like so: "typeof(" + checkString + ") != 'undefined'" being true means that the script fetched has been loaded. Do not use this if doing a JSONP type of call (use callbackParamName instead).
 
-  Note: "handleAs" is NOT applicable to dojo.io.script.get() calls, since it is implied by the usage of "callbackParamName" (response will be a JSONP call returning JSON) or "checkString" (response is pure JavaScript defined in the body of the script that was attached). 
+Note: "handleAs" is NOT applicable to dojo.io.script.get() calls, since it is implied by the usage of "callbackParamName" (response will be a JSONP call returning JSON) or "checkString" (response is pure JavaScript defined in the body of the script that was attached). 
 
 ========
 Examples
