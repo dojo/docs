@@ -180,8 +180,8 @@ Since the table is only used for layout it is identified with a role of presenta
 
 And, as mentioned previously, Firefox 3 now puts all div elements into the accessibility hierarchy, so if the div is being used for layout purposes or has no other specific role, it should be marked with role=presentation.
 
-Assigning States
-~~~~~~~~~~~~~~~~
+Assigning States as of 1.0 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In addition to identifying the role of a widget, the state of the widget must be identified and updated. The initial state can be set within the widget template or via scripting when the widget is created. As the state changes during user interaction with the widget, the state must be updated using the dijit.xxxWaiState apis:
 
@@ -195,6 +195,17 @@ In addition to identifying the role of a widget, the state of the widget must be
 It is important to update the state information as it changes so assistive technology users can be made aware of the change. For example, when a treeitem is expanded, the state for the element that has been assigned role="treeitem", must be set to expanded=true. Likewise, when a treeitem is collapsed, the state for the element with the role="treeitem" must be updated to expanded=false. Be aware that some of the boolean states imply more than just a dual state. For the state attributes checked, selected and expanded a value of false indicates that the widget is capable of being checked, selected or expanded while no attribute indicates that the element is not capable of that state. For example, a tree node with children will have either a state of expanded=true or expanded=false depending upon whether the child nodes are visible or not. An end node, with no children will have no expanded state value set.
 
 Generally only items which have a role can have a state value. The role may be explicitly set by the author such as a treeitem or may be implicitly defined such as a form element or link. Items which have been added into the accessibility hierarchy via a tabindex attribute may also have properties such as desribedby, labelledby, required, invalid and others.
+
+Assigning ARIA States in 0.9
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block :: javascript
+
+  dijit.wai.setAttr(/*DomNode*/node, /*String*/ ns, /*String*/ attr, /*String|Boolean*/value);
+  dijit.wai.getAttr(/*DomNode*/node, /*String*/ ns, /*String*/ attr, /*String|Boolean*/value);
+  dijit.wai.RemoveAttr(/*DomNode*/node, /*String*/ ns, /*String*/ attr, /*String|Boolean*/value);
+
+The ns value passed into these functions is either “waiState” or “waiRole”. The dijit.wai functions above are wrappers to the DOM apis to set, get and remove attributes. In browsers where namespaces are supported the setAttributeNS, getAttributeNS, and removeAttributeNS, apis are called. In other browsers the setAttribute, getAttribute and removeAttribute apis are called and the namespace is simulated. The namespace information is stored in the dijit.wai class.
 
 Accommodating Low Vision
 ------------------------
