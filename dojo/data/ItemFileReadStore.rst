@@ -321,7 +321,7 @@ Example: General Case Type Map for JavaScript Date Objects
 Simplified Form Type Map
 ------------------------
 
-The simplified form is more compact to write and works well when the value held by the custom type structure can be directly passed into a constructor.back into its Object form. This often the case where a single value cannot be used as a constructor argument. 
+The simplified form is more compact to write and works well when the value held by the custom type structure can be directly passed into a constructor to convert it back into its Object form. This often the case where a single value can be used as a constructor argument. 
 
 **Simplified Form Type Map**
 
