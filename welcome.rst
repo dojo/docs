@@ -75,26 +75,27 @@ Dojo is a very extensive library of code, most of which is optional. Here are so
 Dojo reference                                                 
 ==============
 
-Dojo is divided into two parts: Dojo Base, and Dojo Core. Dojo Base is the functionality provided for by just including ``dojo.js``, and Dojo Core is comprised of stable additional (optional) components. Typically, if a function or Class exists within the dojo namespace directly (eg: dojo.require(), dojo.addOnLoad()) it is part of Base Dojo. If the function or Class exists beneath the dojo namespace (eg: dojo.dnd.Mover), you will need to require the appropriate module (eg: dojo.require("dojo.dnd.Mover");) 
+* `dojo <dojo>`_
 
-These pages cover both cases, and indicate how they are provided. 
+  Dojo is divided into two parts: Dojo Base, and Dojo Core. Dojo Base is the functionality provided for by just including ``dojo.js``, and Dojo Core is comprised of stable additional (optional) components. Typically, if a function or Class exists within the dojo namespace directly (eg: dojo.require(), dojo.addOnLoad()) it is part of Base Dojo. If the function or Class exists beneath the dojo namespace (eg: dojo.dnd.Mover), you will need to require the appropriate module (eg: dojo.require("dojo.dnd.Mover");) 
+
+  These pages cover both cases, and indicate how they are provided. 
 
 Dojo Base
 ---------
 
 Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js in your page.
 
-* `dojo <dojo>`_
 * `dojo._base <dojo/base>`_
 
-  * `Array utilities: <dojo/array>`_  Details on dojo.every, dojo.filter, dojo.forEach, dojo.indexOf, dojo.lastIndexOf, dojo.map, and dojo.some.
+  * `dojo.array <dojo/array>`_  Array utilities: Details on dojo.every, dojo.filter, dojo.forEach, dojo.indexOf, dojo.lastIndexOf, dojo.map, and dojo.some.
   * `dojo.browser <dojo/browser>`_
   * `dojo.Color <dojo/Color>`_
   * `dojo.connect <dojo/connect>`_
   * `dojo.declare <dojo/declare>`_
   * `dojo.Deferred <dojo/Deferred>`_
   * `dojo.event <dojo/event>`_
-  * `dojo.fx <dojo/fx>`_
+  * `dojo.fx <dojo/fx>`_ Dojo effects
   * `dojo.html <dojo/html>`_
   * `dojo.json <dojo/json>`_
   * `dojo.lang <dojo/lang>`_
@@ -110,47 +111,40 @@ Dojo Core
 * `dojo.addOnLoad <dojo/addOnLoad>`_
 * `dojo.back <dojo/back>`_
 * `dojo.behavior <dojo/behavior>`_
-* `dojo.byId <dojo/byId>`_
-* `dojo.forEach <dojo/forEach>`_
-* `dojo.require <dojo/require>`_
+* `dojo.colors <dojo/colors>`_
+* `dojo.cookie <dojo/cookie>`_
+* `dojo.data <dojo/data>`_: Dojo data
 
-Dojo data
----------
-
-* `dojo.data <dojo/data>`_
-
-  * `api <dojo/data/api>`_ 
-  * `api.Read <dojo/data/api/Read>`_
-  * `api.Write <dojo/data/api/Write>`_
-  * `api.Identity <dojo/data/api/Identity>`_
-  * `api.Notification <dojo/data/api/Notification>`_
-  * `ItemFileReadStore <dojo/data/ItemFileReadStore>`_
-  * `ItemFileWriteStore <dojo/data/ItemFileWriteStore>`_
+  * `dojo.data.api <dojo/data/api>`_ 
+  * `dojo.data.api.Read <dojo/data/api/Read>`_
+  * `dojo.data.api.Write <dojo/data/api/Write>`_
+  * `dojo.data.api.Identity <dojo/data/api/Identity>`_
+  * `dojo.data.api.Notification <dojo/data/api/Notification>`_
+  * `dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`_
+  * `dojo.data.ItemFileWriteStore <dojo/data/ItemFileWriteStore>`_
 
 * `dojo.date <dojo/date>`_
 
-  * `locale.format <dojo/date/locale/format>`_
+  * `dojo.date.locale.format <dojo/date/locale/format>`_
 
 * `dojo.DeferredList <dojo/DeferredList>`_
-
-Drag and Drop
--------------
-
-* `dojo.dnd <dojo/dnd>`_
+* `dojo.dnd <dojo/dnd>`_: Drag and Drop
 
   * `Moveable <dojo/dnd/Moveable>`_
 
-Dojo effects
-------------
-
-* `dojo.fx <dojo/fx>`_
-* `dojo.cookie <dojo/cookie>`_
-* `dojo.animateProperty <dojo/animateProperty>`_
 * `dojo.html <dojo/html>`_
 * `dojo.json <dojo/json>`_
 * `dojo.keys <dojo/keys>`_ 
 * `dojo.lang <dojo/lang>`_
 * `dojo.map <dojo/map>`_
+
+TODO:
+* `dojo.byId <dojo/byId>`_
+* `dojo.forEach <dojo/forEach>`_
+* `dojo.require <dojo/require>`_
+* `dojo.animateProperty <dojo/animateProperty>`_
+
+
 
 ===============
 Dijit reference
