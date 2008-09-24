@@ -105,9 +105,19 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
       Invokes a callback function for every item in array
 
   * `dojo.browser <dojo/browser>`_
+
   * `dojo.Color <dojo/Color>`_
+
+    Functions for setting Colors.
+
   * `dojo.connect <dojo/connect>`_
+
+    Creates a link that calls one function when another executes
+
   * `dojo.declare <dojo/declare>`_
+
+    Creates a constructor using a compact notation for inheritance and prototype extension.
+
   * `dojo.Deferred <dojo/Deferred>`_
   * `dojo.event <dojo/event>`_
   * `dojo.fx <dojo/fx>`__
@@ -139,11 +149,17 @@ Dojo Core
 ---------
 
 * `dojo.AdapterRegistry <dojo/AdapterRegistry>`_
+
+  A registry to make contextual calling/searching easier
+
 * `dojo.back <dojo/back>`_
 
   Browser history management resources
 
 * `dojo.behavior <dojo/behavior>`_
+
+  Utility for unobtrusive/progressive event binding, DOM traversal, and manipulation
+
 * `dojo.cldr <dojo/cldr>`_
 
   transformation of relevant pieces of the Unicode.org Common Locale Data Repository to JSON
