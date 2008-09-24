@@ -315,7 +315,7 @@ Example: General Case Type Map for JavaScript Date Objects
       deserialize: function(value){
         return dojo.date.stamp.fromISOString(value);
       }
-	}
+    }
   }
 
 Simplified Form Type Map
