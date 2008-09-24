@@ -74,18 +74,26 @@ Dojo is a very extensive library of code, most of which is optional. Here are so
 Dojo reference                                                 
 ==============
 
-* `dojo <dojo>`_
+Dojo is divided into two parts: Dojo Base, and Dojo Core. Dojo Base is the functionality provided for by just including ``dojo.js``, and Dojo Core is comprised of stable additional (optional) components. Typically, if a function or Class exists within the dojo namespace directly (eg: dojo.require(), dojo.addOnLoad()) it is part of Base Dojo. If the function or Class exists beneath the dojo namespace (eg: dojo.dnd.Mover), you will need to require the appropriate module (eg: dojo.require("dojo.dnd.Mover");) 
 
-  Dojo is divided into two parts: Dojo Base, and Dojo Core. Dojo Base is the functionality provided for by just including ``dojo.js``, and Dojo Core is comprised of stable additional (optional) components. Typically, if a function or Class exists within the dojo namespace directly (eg: dojo.require(), dojo.addOnLoad()) it is part of Base Dojo. If the function or Class exists beneath the dojo namespace (eg: dojo.dnd.Mover), you will need to require the appropriate module (eg: dojo.require("dojo.dnd.Mover");) 
-
-  These pages cover both cases, and indicate how they are provided. 
+These pages cover both cases, and indicate how they are provided. 
 
 Dojo Base
 ---------
 
 Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js in your page.
 
+* `dojo <dojo>`_
+
 * `dojo._base <dojo/base>`_
+
+  * `dojo._base._loader <dojo/base/loader>`_
+
+    Dojo's Bootstrap
+
+    * `dojo.addOnLoad <dojo/addOnLoad>`_
+
+      Registers a function to be triggered after the DOM has finished loading and widgets declared in markup have been instantiated.
 
   * `dojo.array <dojo/array>`_
 
@@ -105,6 +113,8 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
   * `dojo.fx <dojo/fx>`__
 
     Dojo effects
+
+    * `dojo.animateProperty <dojo/animateProperty>`_
 
   * `dojo.html <dojo/html>`_
 
@@ -129,7 +139,6 @@ Dojo Core
 ---------
 
 * `dojo.AdapterRegistry <dojo/AdapterRegistry>`_
-* `dojo.addOnLoad <dojo/addOnLoad>`_
 * `dojo.back <dojo/back>`_
 
   Browser history management resources
@@ -193,15 +202,6 @@ Dojo Core
 * `dojo.keys <dojo/keys>`_ 
 * `dojo.lang <dojo/lang>`_
 * `dojo.map <dojo/map>`_
-
-TODO:
-
-
-
-
-* `dojo.animateProperty <dojo/animateProperty>`_
-
-
 
 ===============
 Dijit reference
