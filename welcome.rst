@@ -45,6 +45,11 @@ Dojo is a very extensive library of code, most of which is optional. Here are so
 * `Back buttons <quickstart/back>`_
 * `AJAX <quickstart/ajax>`_
 * `Charting <quickstart/charting>`_
+*  Widgets
+
+    *  General info: see `dijit <dijit>`_ page
+    *  `Writing Widgets <quickstart/writingWidgets>`_
+
 * `Data stores (dojo.data) <quickstart/data>`_
 
   * `Using Datastores <quickstart/data/usingdatastores>`_
