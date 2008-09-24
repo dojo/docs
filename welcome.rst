@@ -214,12 +214,17 @@ Dojo Core
 
   Utility classes to enable loading of resources for internationalization
 
-* io
+* `dojo.io <dojo/io>`_
 
   Additional I/O transports (Ajax)
 
-  * `dojo.iframe <dojo/iframe>`_
-  * `dojo.script <dojo/script>`_
+  * `dojo.io.iframe <dojo/io/iframe>`_
+
+    Creates a hidden iframe in the page. Used mostly for I/O transports (Ajax).
+
+  * `dojo.io.script <dojo/io/script>`_
+
+    Sends a Ajax GET request using a dynamically created script tag
 
 * `dojo.jaxer <dojo/jaxer>`_
 
