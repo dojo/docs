@@ -160,7 +160,7 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
   * `dojo.window <dojo/window>`_
   * `dojo.xhr <dojo/xhr>`_
 
-    Additional I/O transports (Ajax) and AJAX utility methods
+    AJAX I/O transports and utility methods
 
     * `dojo.formToJson <dojo/formToJson>`_
     * `dojo.formToObject <dojo/formToObject>`_
