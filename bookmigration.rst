@@ -78,11 +78,7 @@ Dojo Book Outline
     * `Dijit Editor <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/advanced-editing-and-display/editor-rich-text>`_. maps to `Editor <dijit/Editor>`_ [[complete]
     * `Dijit Tree <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/advanced-editing-and-display/tree>`_. maps to `Tree <dijit/Tree>`_ [[complete]]
 
-  * `Themes and Design <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/themes-and-design>`_.
-
-    * `Common Elements <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/themes-and-design/tundra-theme>`_.
-    * `Overriding and Combining Themes <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/themes-and-design/overriding-and-combining-themes>`_.
-    * `Writing Your Own Theme <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/themes-and-design/writing-your-own-theme>`_.
+  * `Themes and Design <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/themes-and-design>`_ with subpages all mapped to `Dijit Themes and Theming <dijit-themes>`_ (complete)
 
   * `Accessibility  <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/a11y>`_. maps to: `dijit-a11y <dijit-a11y>`_ (complete)
 
@@ -92,7 +88,7 @@ Dojo Book Outline
 
 * `Part 3: JavaScript Programming With Dojo and Dijit <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo-0>`_.
 
-  * `Functions Used Everywhere <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/functions-used-everywhere>`_. maps to: `Functions Used Everwhere <quickstart/dojo-basics>`_
+  * `Functions Used Everywhere <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/functions-used-everywhere>`_. maps to: `Functions Used Everwhere <quickstart/dojo-basics>`_ (complete)
   * `Object Orientation <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/object-orientation>`_. maps to: `dojo.declare <dojo/declare>`_
   * `Modules <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/modules-and-namespaces>`_.
   * `Creating and Scripting Widgets <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/manipulating-widgets-through-code>`_.
