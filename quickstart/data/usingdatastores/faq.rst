@@ -137,7 +137,7 @@ You do a fetch that queries for all items, then use the onBegin callback functio
     //Do whatever with the size var.
   }
 
-  store.fetch({query: {}, onBegin: size, start: 0, count: 0);
+  store.fetch({query: {}, onBegin: size, start: 0, count: 0});
 
 
 That should return no items but give you the size of the match.
