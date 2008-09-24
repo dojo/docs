@@ -45,9 +45,8 @@ Dojo is a very extensive library of code, most of which is optional. Here are so
 * `Back buttons <quickstart/back>`_
 * `AJAX <quickstart/ajax>`_
 * `Charting <quickstart/charting>`_
-*  Widgets
+* `Widgets <dijit>`_
 
-  *  General info: see `dijit <dijit>`_ page
   *  `Writing Widgets <quickstart/writingWidgets>`_
 
 * `Data stores (dojo.data) <quickstart/data>`_
@@ -99,7 +98,10 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
   * `dojo.declare <dojo/declare>`_
   * `dojo.Deferred <dojo/Deferred>`_
   * `dojo.event <dojo/event>`_
-  * `dojo.fx <dojo/fx>`_ Dojo effects
+  * `dojo.fx <dojo/fx>`__
+
+    Dojo effects
+
   * `dojo.html <dojo/html>`_
   * `dojo.json <dojo/json>`_
   * `dojo.lang <dojo/lang>`_
@@ -107,6 +109,8 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
   * `dojo.query <dojo/query>`_
   * `dojo.window <dojo/window>`_
   * `dojo.xhr <dojo/xhr>`_
+
+    Additional I/O transports (Ajax)
 
 Dojo Core
 ---------
@@ -133,7 +137,7 @@ Dojo Core
 
 * `dojo.data <dojo/data>`_
 
-  Dojo data
+  A uniform data access layer
 
   * `dojo.data.api <dojo/data/api>`_ 
   * `dojo.data.api.Read <dojo/data/api/Read>`_
@@ -145,6 +149,8 @@ Dojo Core
 
 * `dojo.date <dojo/date>`_
 
+  Date manipulation utilities
+
   * `dojo.date.locale.format <dojo/date/locale/format>`_
 
 * `dojo.DeferredList <dojo/DeferredList>`_
@@ -153,6 +159,21 @@ Dojo Core
   Drag and Drop
 
   * `dojo.dnd.Moveable <dojo/dnd/Moveable>`_
+
+* `dojo.fx <dojo/fx>`__
+
+  Effects library on top of Base animations
+
+* io
+
+  Additional I/O transports (Ajax)
+
+* nls
+
+* resources
+
+* rpc
+
 
 * `dojo.html <dojo/html>`_
 * `dojo.json <dojo/json>`_
