@@ -93,7 +93,11 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 
     * `dojo.addOnLoad <dojo/addOnLoad>`_
 
-      Registers a function to be triggered after the DOM has finished loading and widgets declared in markup have been instantiated.
+      Call functions after the DOM has finished loading and widgets declared in markup have been instantiated
+
+    * `dojo.addOnUnload <dojo/addOnLoad>`_
+
+      Call functions when the page unloads
 
   * `dojo.array <dojo/array>`_
 
@@ -145,6 +149,9 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
   * `dojo.json <dojo/json>`_
   * `dojo.lang <dojo/lang>`_
   * `dojo.NodeList <dojo/NodeList>`_
+
+    Syntactic sugar for chaining, common iteration operations, animation, and node manipulation
+
   * `dojo.query <dojo/query>`_
   * `dojo.require <dojo/require>`_
 
@@ -153,7 +160,17 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
   * `dojo.window <dojo/window>`_
   * `dojo.xhr <dojo/xhr>`_
 
-    Additional I/O transports (Ajax)
+    Additional I/O transports (Ajax) and AJAX utility methods
+
+    * `dojo.formToJson <dojo/formToJson>`_
+    * `dojo.formToObject <dojo/formToObject>`_
+    * `dojo.formToQuery <dojo/formToQuery>`_
+    * `dojo.objectToQuery <dojo/objectToQuery>`_
+    * `dojo.queryToObject <dojo/queryToObject>`_
+    * `dojo.xhrDelete <dojo/xhrDelete>`_
+    * `dojo.xhrGet <dojo/xhrGet>`_
+    * `dojo.rawXhrPost <dojo/rawXhrPost>`_
+    * `dojo.rawXhrPut <dojo/rawXhrPut>`_
 
 Dojo Core
 ---------
@@ -202,6 +219,9 @@ Dojo Core
   * `dojo.date.locale.format <dojo/date/locale/format>`_
 
 * `dojo.DeferredList <dojo/DeferredList>`_
+
+  Event handling for a group of Deferred objects
+
 * `dojo.dnd <dojo/dnd>`_
 
   Drag and Drop
