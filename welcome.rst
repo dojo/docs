@@ -265,7 +265,7 @@ Dojo Core
 
 * rpc
 
-* `dojo.string <dojo/string >`_
+* `dojo.string <dojo/string>`_
 
   String utilities for Dojo
 
