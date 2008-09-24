@@ -92,6 +92,10 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
     Array utilities.
     Details on dojo.every, dojo.filter, dojo.forEach, dojo.indexOf, dojo.lastIndexOf, dojo.map, and dojo.some.
 
+    * `dojo.forEach <dojo/forEach>`_
+
+      Invokes a callback function for every item in array
+
   * `dojo.browser <dojo/browser>`_
   * `dojo.Color <dojo/Color>`_
   * `dojo.connect <dojo/connect>`_
@@ -103,10 +107,19 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
     Dojo effects
 
   * `dojo.html <dojo/html>`_
+
+    * `dojo.byId <dojo/byId>`_
+
+      Returns the DOM node with the matching 'id'
+
   * `dojo.json <dojo/json>`_
   * `dojo.lang <dojo/lang>`_
   * `dojo.NodeList <dojo/NodeList>`_
   * `dojo.query <dojo/query>`_
+  * `dojo.require <dojo/require>`_
+
+    Loads a Javascript module from the appropriate URI
+
   * `dojo.window <dojo/window>`_
   * `dojo.xhr <dojo/xhr>`_
 
@@ -183,9 +196,9 @@ Dojo Core
 
 TODO:
 
-* `dojo.byId <dojo/byId>`_
-* `dojo.forEach <dojo/forEach>`_
-* `dojo.require <dojo/require>`_
+
+
+
 * `dojo.animateProperty <dojo/animateProperty>`_
 
 
