@@ -88,7 +88,11 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 
 * `dojo._base <dojo/base>`_
 
-  * `dojo.array <dojo/array>`_  Array utilities: Details on dojo.every, dojo.filter, dojo.forEach, dojo.indexOf, dojo.lastIndexOf, dojo.map, and dojo.some.
+  * `dojo.array <dojo/array>`_
+
+    Array utilities.
+    Details on dojo.every, dojo.filter, dojo.forEach, dojo.indexOf, dojo.lastIndexOf, dojo.map, and dojo.some.
+
   * `dojo.browser <dojo/browser>`_
   * `dojo.Color <dojo/Color>`_
   * `dojo.connect <dojo/connect>`_
@@ -110,10 +114,26 @@ Dojo Core
 * `dojo.AdapterRegistry <dojo/AdapterRegistry>`_
 * `dojo.addOnLoad <dojo/addOnLoad>`_
 * `dojo.back <dojo/back>`_
+
+  Browser history management resources
+
 * `dojo.behavior <dojo/behavior>`_
+* `dojo.cldr <dojo/cldr>`_
+
+  transformation of relevant pieces of the Unicode.org Common Locale Data Repository to JSON
+
 * `dojo.colors <dojo/colors>`_
+
+  Color utilities
+
 * `dojo.cookie <dojo/cookie>`_
-* `dojo.data <dojo/data>`_: Dojo data
+* `dojo.currency <dojo/currency>`_
+
+  localized formatting and parsing routines for currencies
+
+* `dojo.data <dojo/data>`_
+
+  Dojo data
 
   * `dojo.data.api <dojo/data/api>`_ 
   * `dojo.data.api.Read <dojo/data/api/Read>`_
@@ -128,9 +148,11 @@ Dojo Core
   * `dojo.date.locale.format <dojo/date/locale/format>`_
 
 * `dojo.DeferredList <dojo/DeferredList>`_
-* `dojo.dnd <dojo/dnd>`_: Drag and Drop
+* `dojo.dnd <dojo/dnd>`_
 
-  * `Moveable <dojo/dnd/Moveable>`_
+  Drag and Drop
+
+  * `dojo.dnd.Moveable <dojo/dnd/Moveable>`_
 
 * `dojo.html <dojo/html>`_
 * `dojo.json <dojo/json>`_
@@ -139,6 +161,7 @@ Dojo Core
 * `dojo.map <dojo/map>`_
 
 TODO:
+
 * `dojo.byId <dojo/byId>`_
 * `dojo.forEach <dojo/forEach>`_
 * `dojo.require <dojo/require>`_
