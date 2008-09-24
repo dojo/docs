@@ -47,8 +47,8 @@ Dojo is a very extensive library of code, most of which is optional. Here are so
 * `Charting <quickstart/charting>`_
 *  Widgets
 
-    *  General info: see `dijit <dijit>`_ page
-    *  `Writing Widgets <quickstart/writingWidgets>`_
+  *  General info: see `dijit <dijit>`_ page
+  *  `Writing Widgets <quickstart/writingWidgets>`_
 
 * `Data stores (dojo.data) <quickstart/data>`_
 
@@ -81,10 +81,15 @@ These pages cover both cases, and indicate how they are provided.
 
 Dojo Base
 ---------
+
 Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js in your page.
 
 * `dojo <dojo>`_
 * `dojo._base <dojo/base>`_
+
+Dojo Core
+---------
+
 * `dojo.AdapterRegistry <dojo/AdapterRegistry>`_
 * `dojo.addOnLoad <dojo/addOnLoad>`_
 * `Array utilities: <dojo/array>`_  Details on dojo.every, dojo.filter, dojo.forEach, dojo.indexOf, dojo.lastIndexOf, dojo.map, and dojo.some.
