@@ -68,7 +68,7 @@ When testing fully keyboard accessible Dojo widgets the screen readers must be i
 
 If the role and state information have been applied correctly the screen reader will hear information about the role and stated of widget elements as well as information about child objects. The image below is a simple tree control with three main nodes with titles Node1 , Node 2, and Node 3. Node 1 has no children. Node 2 is expanded and has two child nodes titled Node 2.1 and Node 2.2. Node 3 has children but is not expanded. Here is a brief example of what is spoken by Window-Eyes with focus on the Node 2 tree item within the tree control displayed in the image below, “Node 2 expanded two items, 2 of 3.”
 
-.. image:: treenode.png
+.. image:: treenode.jpg
 
 Test for Low Vision Support
 ---------------------------
