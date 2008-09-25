@@ -84,6 +84,8 @@ This example starts from scratch, thus removing some items from the toolbar (as 
       </div>
 
 
+Builtin Commands
+----------------
 This is a list of the default commands included in the editor, that can be specified in the plugins parameter (in addition to actual editor plugins in the editor/plugins directory or other places):
 
 * "undo"
@@ -156,3 +158,37 @@ although even when created programatically you need to specify a source DOM node
 		onclick="new dijit.Editor({height: '', extraPlugins: ['dijit._editor.plugins.AlwaysShowToolbar']}, dojo.byId('programmatic2')); dojo.query('#create2').orphan();">
 	create expanding editor
 	</button>
+
+Accessibility (Applies to 1.0 version of editor)
+================================================
+
+Keyboard for Editor
+-------------------
+
+====================================================================    ======================================================================
+Action	                                                                Key
+====================================================================    ======================================================================
+Move focus to the next widget in the tab order.	                        Tab (must press tab twice in some situations - see Known Issues below)
+Move focus to the prior widget in the tab order (the editor toolbar)	Shift+Tab (must press shift-tab twice in some situations - see Known Issues below)
+====================================================================    ======================================================================
+
+
+Keyboard for Editor Toolbar
+---------------------------
+
+====================================================================    ======================================================================
+Action	                                                                Key
+====================================================================    ======================================================================
+Move focus to the next enabled button in the toolbar.	                arrow right in left to right locales, arrow left in right to left locales
+Move focus to the previous widget in the toolbar	                arrow left in left to right locales; arrow right in right to left locales.
+====================================================================    ======================================================================
+
+The arrow keys will not work within any optional drop down lists such as ComboBox or FilteringSelect in the editor toolbar until the drop down list of choices has been activated. Use the backspace or escape key to clear the current selection in the textbox associated with the drop down. When the list of choices is not activated, the arrow keys will move between toolbar buttons rather than within the combobox or select.
+
+
+Known Issues
+------------
+
+* On Firefox, the user must press the Tab key twice before keyboard focus moves to the next widget. This is a permanent restriction on Firefox 2. The reason for this is because Firefox implements usage of the tab key within the editor to indent text and shift-tab to outdent text. There is no keyboard mechanism in Firefox to move focus out of the editor. So, the dijit editor traps the tab key in the editor and sets focus to the editor iframe. From there pressing tab again will move to the next focusable item after the editor. When shift-tab is pressed within the editor, focus is set to the toolbar associated with the editor (currently there is always a toolbar defined for a dijit editor). Even though Firefox 3 now supports the use of the contentEditable attribute to create the editor using a div element, the dijit editor is still implemented using an iframe in Firefox 3 and this tabbing issue remains. Some people are unhappy with the loss of the tab key functionality within the editor. Version 1.2 includes a plug-in option to allow the use of tab and shift-tab within the editor to indent and outdent text.
+
+* In IE6 or 7 when the editor has been created from a textarea the user must press tab twice to set focus into the editor to begin inserting or editing text. Likewise, with focus within editor text the user must press shift-tab twice to set focus back to the toolbar.
