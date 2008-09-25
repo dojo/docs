@@ -63,3 +63,30 @@ Buttons can have icons and labels, and sometimes they just display an icon, but 
   .. cv:: html
 
     <button dojoType="dijit.form.Button" iconClass="dijitEditorIcon dijitEditorIconCut" showLabel="false">cut</button>
+
+=============
+Accessibility
+=============
+
+Keyboard
+--------
+
+==========================================    =================================================
+Action                                        Key
+==========================================    =================================================
+Navigate to a button                          tab - all buttons are in the tab order
+Activate the button                           enter or space key
+==========================================    =================================================
+
+Known Issues
+------------
+
+High Contrast Mode
+~~~~~~~~~~~~~~~~~~
+
+All buttons should include a label parameter with text for the button even if the showLabel parameter is set to false. The label parameter is used to identify the button in high contrast mode when the icon for the button will no longer be displayed and is also used to identify the button to a screen reader.
+
+Screen Reader
+~~~~~~~~~~~~~
+
+In order to identify the button description to the screen reader, all buttons should include a label parameter even if the showLabel parameter is set to false.
