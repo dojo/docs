@@ -123,3 +123,20 @@ You shouldn't need to set the height of the top/bottom panes as that can be dete
 Of course, you shouldn't set the size of the center pane, since it's size is determined from whatever is left over after
 placing the left/right/top/bottom panes.
 You also shouldn't set the width of the top/bottom panes or the height of the left/right panes as that would be meaningless.
+
+=============
+Accessibility
+=============
+
+Keyboard
+--------
+
+===========================================    =================================================
+Action                                         Key
+===========================================    =================================================
+Navigate to splitters for resizable regions    tab - all resizable splitters are in the tab order
+Change the size of a vertical region           left / right arrows to decrease and increase 
+Change the size of a horizontal region         down / up arrows to decrease and increase
+===========================================    =================================================
+
+Note: The children of BorderContainer must be created in the source code in their natural tab order. Header regions should be first and footer regions last.  In Left to right locales, left regions before center and right ones.  
