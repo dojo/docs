@@ -106,19 +106,23 @@ Open the widget.                                  Enter or spacebar
 
 Note: The Esc key is ignored. 
 
-TextBox with autoSave specified and the TextBox is open:
+**TextBox with autoSave specified and the TextBox is open:**
 
-
-==============================================    ==========    =======================================
-Action                                            Key           Comments
-==============================================    ==========    =======================================
-Navigate to the next widget in the tab order.	  Tab            The data is saved and the widget closes.
-Navigate to the prior widget in the tab order.	  Shift+Tab      The data is saved and the widget closes.
-Close the TextBox, saving changes.                Enter	         Keyboard focus is on the closed InlineEditBox.
-Revert the last entry.                            Esc            If the user has not entered data, the TextBox is closed.
-Close the Textarea, discarding changes.           Esc            If the user has entered data, the Esc must be pressed two times; the 
-                                                                 first time  the data will be reverted; the second time the TextBox will close.
-==============================================    ==========    =======================================
++-----------------------------------------------+--------------+-------------------------------------------------------------+
+|  **Action**                                   | **Key**      | **Comments**                                                |
++-----------------------------------------------+--------------+-------------------------------------------------------------+
+| Navigate to the next widget in the tab order.	| Tab          | The data is saved and the widget closes.                    |
++-----------------------------------------------+--------------+-------------------------------------------------------------+
+| Navigate to the prior widget in the tab order.| Shift+Tab    |  The data is saved and the widget closes.                   |
++-----------------------------------------------+--------------+-------------------------------------------------------------+
+| Close the TextBox, saving changes..          | Enter	       | Keyboard focus is on the closed InlineEditBox.              |
++-----------------------------------------------+--------------+-------------------------------------------------------------+
+| Revert the last entry.                        | Esc          | If the user has not entered data, the Textarea is closed.   |
++-----------------------------------------------+--------------+-------------------------------------------------------------+
+| Close the Textarea, discarding changes.       | Esc          | If the user has entered data, the Esc must be pressed two   |
+|                                               |              | times; the first time the data will be reverted; the second |
+|                                               |              | time the Textarea will close.                               |    
++-----------------------------------------------+--------------+-------------------------------------------------------------+  
 
 **Textarea with autoSave specified and the Textarea is open:**
 
