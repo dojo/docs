@@ -109,5 +109,3 @@ Screen Reader
 In order to identify the button description to the screen reader, all buttons should include a label parameter even if the showLabel parameter is set to false.
 
 Even though the dropdown buttons are marked with the ARIA haspopup property, the screen readers do not indicate this to the user in Firefox 2. In Firefox 3 the dropdown and combo buttons are announced as "menu button".
-
----- /!\ '''End of edit conflict''' ----
