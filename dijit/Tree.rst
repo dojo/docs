@@ -49,7 +49,8 @@ Like other dijits, the icon is expressed as a CSS class (which should load a bac
 Accessibility
 =============
 
-Keyboard:
+Keyboard
+--------
 
 ================================    ===============
 Action	                            Key
