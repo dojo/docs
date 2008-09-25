@@ -96,3 +96,19 @@ Here you will see a declaratively created StackContainer
           padding: 5px;
       }
     </style>
+
+Accessibility
+-------------
+
+Keyboard
+~~~~~~~~
+
+==========================================    =================================================
+Action                                        Key
+==========================================    =================================================
+Navigate to next tab button                   Right arrow
+Navigate to previous tab button               Left arrow
+Navigate into page                            Tab
+Navigate to next page                         Ctrl + page down, ctrl + tab (except IE7)
+Navigate to previous page                     Ctrl + page up
+==========================================    =================================================
