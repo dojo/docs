@@ -55,7 +55,7 @@ Creation from markup is even easier.
 
 
 AccordionContainer substitute
------------------------------
+=============================
 Sometimes when developers think they want an AccordionContainer what they really want is a set of TitlePanes.
 With a set of TitlePanes the outer div doesn't have any fixed height, and you can open multiple panes at once (or close all of them).
 
@@ -82,3 +82,22 @@ For example:
         I'm pane #3
       </div>
     </div>
+
+Accessibility
+=============
+
+Keyboard
+--------
+
+Each title pane title is included in the tab order of the document.
+
+===================================     =====================================================
+Action                                  Key
+===================================     =====================================================
+toggle open/close of the title pane     enter or space key with focus on the title pane title
+Navigate into an opened title pane      tab
+===================================     =====================================================
+
+Screen Reader Information
+-------------------------
+The title pane container will have an ARIA labelledby property which points to the id of the title pane title. The title pane title has the ARIA role of button and property of haspopup=true to indicate that it controls the display of the pane. The role of button is used to indicate to the user that an action will occur when the button is activated. The tilte pane container will have an ARIA role of region which will be supported in Firefox 3 and identified by future versions of the screen readers.
