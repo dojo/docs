@@ -68,3 +68,20 @@ Here's one displaying a TooltipDialog:
          <button dojoType="dijit.form.Button" type="submit">Save</button>
       </div>
     </div>
+
+
+Accessibility
+-------------
+
+Keyboard
+~~~~~~~~
+
+============================================================    =================================================
+Action                                                          Key
+============================================================    =================================================
+Navigate to next focusable element in the tooltip dialog	tab
+Navigate to previous focusable element in the tooltip dialog	shift-tab
+Close the tooltip dialog                                        escape
+============================================================    =================================================
+
+See the detailed Keyboard Navigation Notes and Known Issues in `dijit.Dialog <dijit/Dialog#accessibility>`_
