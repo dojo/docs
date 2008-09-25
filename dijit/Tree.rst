@@ -89,6 +89,26 @@ Like other dijits, the icon is expressed as a CSS class (which should load a bac
 			else return myStore.getValue(item, "type") + "Icon";
 		</script>
 
+Accessibility
+-------------
+
+Keyboard:
+
+================================    ===============
+Action	                            Key
+================================    ===============
+Navigate to first tree item*        Tab
+Navigate to the next sibling        Down arrow
+Navigate to the previous sibling    Up arrow
+Open a subtree                      Right arrow
+Close a subtree                     Left arrow
+Navigate to open subtree            Right arrow
+Navigate to parent                  Left arrow
+Activate a tree item                Enter
+================================    ===============
+
+* Note: The last tree item focused will be in the Tab order.
+
 More examples
 -------------
 
