@@ -59,5 +59,9 @@ Keyboard
 +----------------------------+-----------------+
 | **Action**                 | **Key**         |
 +----------------------------+-----------------+
+| Navigate to a checkbox     | Tab             |
++----------------------------+-----------------+
 | Toggle checked state       | Spacebar        | 
 +----------------------------+-----------------+
+
+Checkboxes and Radio buttons are implemented using the standard input type=checkbox and type=radio elements respectively. CSS is used to overlay the unique theme over the actual input elements. Thus, the keyboard behavior of checkboxes and radio buttons mimics the behavior in the browser.
