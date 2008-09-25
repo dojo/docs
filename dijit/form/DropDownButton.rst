@@ -75,7 +75,6 @@ Here's one displaying a TooltipDialog:
       </div>
     </div>
 
-
 Note that DropDownButton is often used in `dijit.Toolbar </dijit/Toolbar>`_.
 
 Accessibility
@@ -94,6 +93,8 @@ With drop down open, navigate to the next element on page    tab will close drop
                                                              to next element
 =========================================================    =================================================
 
+In Firefox 2 with Dojo releases 1.0 through 1.0.2 the focus on a combo button is not visible. This is not an issue in Firefox 3 and has been fixed for Firefox 2 in Dojo Releases 1.1 and beyond. 
+
 Known Issues
 ------------
 
@@ -108,3 +109,5 @@ Screen Reader
 In order to identify the button description to the screen reader, all buttons should include a label parameter even if the showLabel parameter is set to false.
 
 Even though the dropdown buttons are marked with the ARIA haspopup property, the screen readers do not indicate this to the user in Firefox 2. In Firefox 3 the dropdown and combo buttons are announced as "menu button".
+
+---- /!\ '''End of edit conflict''' ----
