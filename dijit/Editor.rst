@@ -159,8 +159,8 @@ although even when created programatically you need to specify a source DOM node
 	create expanding editor
 	</button>
 
-Accessibility (Applies to 1.0 version of editor)
-================================================
+Accessibility (1.0 and later versions)
+======================================
 
 Keyboard for Editor
 -------------------
