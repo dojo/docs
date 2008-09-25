@@ -4,7 +4,7 @@ dijit.InlineEditBox
 ===================
 
 .. contents::
-    :depth: 2
+    :depth: 3
 
 :Status: Draft
 :Version: 1.2
@@ -124,11 +124,11 @@ TextBox with autoSave
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
 | Close the TextBox, saving changes..           | Enter	       | Keyboard focus is on the closed InlineEditBox.              |
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
-| Revert the last entry.                        | Esc          | If the user has not entered data, the Textarea is closed.   |
+| Revert the last entry.                        | Esc          | If the user has not entered data, the Textbox is closed.    |
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
 | Close the Textarea, discarding changes.       | Esc          | If the user has entered data, the Esc must be pressed two   |
 |                                               |              | times; the first time the data will be reverted; the second |
-|                                               |              | time the Textarea will close.                               |    
+|                                               |              | time the Textbox will close.                                |    
 +-----------------------------------------------+--------------+-------------------------------------------------------------+  
 
 
@@ -138,13 +138,13 @@ Textarea with autoSave
 |  **Action**                                   | **Key**      | **Comments**                                                |
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
 | Navigate to the next widget in the tab order.	| Tab (twice   | The data is saved and the widget closes.                    |
-|                                               | in Firefox)  |                                                             |
+|                                               | in Firefox 2)|                                                             |
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
 | Navigate to the prior widget in the tab order.| Shift+Tab    |  The data is saved and the widget closes.                   |
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
 | Enter a newline into the text.                | Enter	       | There is no equivalent to the Enter key behavior of         |
-|                                               |              | TextBoxes. The user would have to use something like Tab    |
-|                                               |              | and Shift + Tab                                             |
+|                                               |              | TextBoxes to close the textarea. The user would have to     |
+|                                               |              | use something like Tab and Shift + Tab                      |
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
 | Revert the last entry.                        | Esc          | If the user has not entered data, the Textarea is closed.   |
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
@@ -162,7 +162,7 @@ TextBox or TextArea without autoSave
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
 | Navigate to the Save or Cancel button.	| Tab (twice   | Focus changes to the Save button if the data has been       |
 |                                               | for TextArea | changed, otherwise it moves to the Cancel button.           |
-|                                               | in Firefox)  |                                                             |         
+|                                               | in Firefox 2)|                                                             |         
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
 | Navigate to the prior widget in the tab order.| Shift+Tab    | The TextBox/TextArea remains open.                          |
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
@@ -180,4 +180,14 @@ TextBox or TextArea without autoSave
 Notes:
  
 - The Enter key is ignored when focus is in the Textbox edit field.
-- In a TextArea pressing the Enter key results in a newline.  
+- In a TextArea pressing the Enter key results in a newline.
+
+Known Issues
+------------
+
+On Firefox 2, the user must press the Tab key twice with focus in an textarea before keyboard focus moves to the next widget. This is a permanent restriction on Firefox 2. This is because the Dojo text area is implemented using the Firefox editor component in an iframe. This editor component implements usage of the tab key within the editor to indent text and shift-tab to outdent text. There is no keyboard mechanism in Firefox to move focus out of the editor. So, the dijit editor traps the tab key in the editor and sets focus to the editor iframe. From there pressing tab again will move to the next focusable item after the editor.
+
+Screen Reader
+~~~~~~~~~~~~~
+
+The InlineEditBox is implemented as a button. Since these are intended to be used "in-line" within text there is often no label element associated with the underlying control. For this reason, developers are encouraged to add a title attribute to InlineEditBoxes. The Window-Eyes screen reader will speak the title as part of the button description. JAWS has an option to speak different attributes on an button. A JAWS user may need to use the insert-v command to modify the behavior to speak the button title when working with Dojo InlineEditBoxes.  
