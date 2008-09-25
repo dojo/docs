@@ -48,7 +48,7 @@ And here's the same tooltip created from markup:
 
 
 Tooltip Positioning
--------------------
+===================
 By default, dijit tries to find a place to display the tooltip to the left or the right of the target element.
 You can control the search path for positions via a global setting like:
 
@@ -56,6 +56,6 @@ dijit.Tooltip.defaultPosition = ["above", "below"];
 
 
 Accessibility
--------------
+=============
 
 Tooltips are displayed when the associated item receives focus or a mouseover event. Be careful when assigning tooltips to arbitrary elements such as spans of text which may not receive keyboard focus because users of assistive technology or keyboard only users will not benefit from the tooltip. If the tooltip information is important, make certain that the item which triggers display of the tooltip can receive focus via the keyboard. This can be accomplished by adding a tabindex="0" attribute onto the trigger element to put it into the tab order of the page.
