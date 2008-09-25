@@ -27,7 +27,7 @@ Dijit's Rich Text editor, Dijit.Editor, is a text box on steroids. Designed to l
 
 
 Plugins
--------
+=======
 
 A plugin (a.k.a. extension) is something that adds a function to the editor, or changes it's behavior.
 Dojo includes a number of editor plugins, and developers can write additional plugins on their own.
@@ -115,7 +115,7 @@ This is a list of the default commands included in the editor, that can be speci
 * "delete" 
 
 Auto-expanding editor
----------------------
+=====================
 Typically an editor has a constant height, and if there's a lot of content it gets a scrollbar.
 This is in addition to the main scrollbar for the page.
 
@@ -146,7 +146,7 @@ The AlwaysShowToolbar plugin prevents that.  It's used along with setting height
 	</div>
 
 Programmatic Creation
----------------------
+=====================
 Of course, the editor can be created programmatically in addition to declaratively,
 although even when created programatically you need to specify a source DOM node to replace:
 
