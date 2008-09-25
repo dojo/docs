@@ -58,3 +58,5 @@ Keyboard
 
 **Note:**
 Using the TAB key to focus a radio group will only focus the selected RadioButton in a group.
+
+Radio buttons are implemented using the standard input type=checkbox and type=radio elements respectively. CSS is used to overlay the unique theme over the actual input elements. Thus, the keyboard behavior of checkboxes and radio buttons mimics the behavior in the browser.
