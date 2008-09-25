@@ -10,7 +10,7 @@ dojo.io.frame
 .. contents::
   :depth: 2
 
-dojo.io.frame sends an IO call using an IFrame (for instance, to upload files).
+dojo.io.frame sends an AJAX I/O call using an IFrame (for instance, to upload files).
 
 
 =====
