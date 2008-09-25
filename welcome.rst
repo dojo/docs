@@ -250,11 +250,11 @@ Dojo Core
 
   * `dojo.io.iframe <dojo/io/iframe>`_
 
-    Creates a hidden iframe in the page. Used mostly for I/O transports (Ajax).
+    Sends an AJAX I/O call using an IFrame
 
   * `dojo.io.script <dojo/io/script>`_
 
-    Sends a Ajax GET request using a dynamically created script tag
+    Sends an JSONP request using a script tag
 
 * `dojo.jaxer <dojo/jaxer>`_
 
