@@ -14,6 +14,27 @@ dijit.ColorPalette
 
 dijit.ColorPalette is a great little tool which provides a color picker for you to use in your application.
 
+
+=============
+Accessibility
+=============
+
+Keyboard
+--------
+
+===============   ===================
+Action            Key
+===============   ===================
+Navigate colors	  Arrow keys
+Pick a color      Spacebar or enter
+===============   ===================
+
+Screen Reader
+-------------
+
+Screen readers will read the name of each color as it is highlighted. For example, "white", "seashell", "cornsilk", and so on.
+
+
 ========
 Examples
 ========
@@ -57,23 +78,3 @@ Small color palette, created declaratively:
   .. cv:: html
 
      <div dojoType="dijit.ColorPalette" onChange="alert(this.value);" palette="3x4"></div>
-
-
-=============
-Accessibility
-=============
-
-Keyboard
---------
-
-===============   ===================
-Action            Key
-===============   ===================
-Navigate colors	  Arrow keys
-Pick a color      Spacebar or enter
-===============   ===================
-
-Screen Reader
--------------
-
-Screen readers will read the name of each color as it is highlighted. For example, "white", "seashell", "cornsilk", and so on.
