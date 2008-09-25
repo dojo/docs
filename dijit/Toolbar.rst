@@ -45,6 +45,7 @@ In this example, we borrow some of the toolbar buttons from the Editor.
     <span id="toolbar"></span>
 
 
+Note that iconClass is a CSS class that's been defined by the theme, see `Themes <dijit-themes>`_ for details.
 
 Markup
 ------
@@ -77,7 +78,7 @@ Creation from markup is even easier.
 
 
 Poor Man's MenuBar
-------------------
+==================
 Here's a Toolbar that looks like a MenuBar.
 We haven't implemented a MenuBar for dijit yet so some people use the Toolbar as a poor-man's substitute.
 
@@ -113,3 +114,18 @@ We haven't implemented a MenuBar for dijit yet so some people use the Toolbar as
 			</div>
 		</div>
         </div>
+
+Accessibility
+=============
+Keyboard
+--------
+
+===========================================    ==========================
+Action                                         Key
+===========================================    ==========================
+Move focus between widgets in the toolbar      Left and right arrow keys
+===========================================    ==========================
+
+Known Issues
+------------
+In hign contrast mode when a toggle button is checked an html entity charcter (✓) is displayed since the CSS background image icon for the checked state is no longer visible. When the toggle button is part of a toolbar the checkmark character does not display properly in IE6. In IE6 with high contrast mode turned on, a checked toggle button in a toolbar displays as two vertical bars rather than the checkmark character.
