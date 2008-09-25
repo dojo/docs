@@ -106,6 +106,7 @@ Open the widget.                                  Enter or spacebar
 
 Note: The Esc key is ignored. 
 
+
 **TextBox with autoSave specified and the TextBox is open:**
 
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
@@ -115,7 +116,7 @@ Note: The Esc key is ignored.
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
 | Navigate to the prior widget in the tab order.| Shift+Tab    |  The data is saved and the widget closes.                   |
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
-| Close the TextBox, saving changes..          | Enter	       | Keyboard focus is on the closed InlineEditBox.              |
+| Close the TextBox, saving changes..           | Enter	       | Keyboard focus is on the closed InlineEditBox.              |
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
 | Revert the last entry.                        | Esc          | If the user has not entered data, the Textarea is closed.   |
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
@@ -123,6 +124,7 @@ Note: The Esc key is ignored.
 |                                               |              | times; the first time the data will be reverted; the second |
 |                                               |              | time the Textarea will close.                               |    
 +-----------------------------------------------+--------------+-------------------------------------------------------------+  
+
 
 **Textarea with autoSave specified and the Textarea is open:**
 
@@ -144,26 +146,32 @@ Note: The Esc key is ignored.
 |                                               |              | times; the first time the data will be reverted; the second |
 |                                               |              | time the Textarea will close.                               |    
 +-----------------------------------------------+--------------+-------------------------------------------------------------+   
+
                                                                
-**TextBox without autoSave specified, the TextBox is open, keyboard focus is in the edit field:**
+**TextBox or TextAreawithout autoSave specified, the TextBox/TextArea is open, keyboard focus is in the edit field:**
 
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
 |  **Action**                                   | **Key**      | **Comments**                                                |
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
-| Navigate to the Save or Cancel button.	| Tab          | Focus changes to the Save button if the data has been       |
-|                                               |              | changed, otherwise it moves to the Cancel button.           |
+| Navigate to the Save or Cancel button.	| Tab (twice   | Focus changes to the Save button if the data has been       |
+|                                               | for TextArea | changed, otherwise it moves to the Cancel button.           |
+|                                               | in Firefox)  |                                                             |         
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
-| Navigate to the prior widget in the tab order.| Shift+Tab    | The TextBox remains open.                                   |
+| Navigate to the prior widget in the tab order.| Shift+Tab    | The TextBox/TextArea remains open.                          |
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
-| Close the TextBox, saving changes.            | Tab to save  | Keyboard focus is on the closed InlineEditBox.              |
+| Close the TextBox/TextArea, saving changes.   | Tab to save  | Keyboard focus is on the closed InlineEditBox.              |
 |                                               | button and   |                                                             |
 |                                               | press Enter  |                                                             |
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
 | Revert the last entry.                        | Esc          | If the user has not entered data, the escape key is ignored.|
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
-| Close the Textarea, discarding changes.       | Tab to cancel| Keyboard focus is on the closed InlineEditBox.              |
+| Close the Textbox/TextArea, discarding changes| Tab to cancel| Keyboard focus is on the closed InlineEditBox.              |
 |                                               | button and   |                                                             |
 |                                               | press Enter  |                                                             |    
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
 
-Note: The Enter key is ignored when focus is in the edit field. 
+Notes:
+ 
+- The Enter key is ignored when focus is in the Textbox edit field.
+- In a TextArea pressing the Enter key results in a newline.  
+
