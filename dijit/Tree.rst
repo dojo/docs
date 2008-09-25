@@ -23,51 +23,26 @@ Dojo makes easy trees easy, and hard trees possible. In particular, you can:
 * Drag and drop onto the tree, which updates the data store indirectly
 
 
-==================
+=====
+Usage
+=====
+
 Unique Identifiers
-==================
+------------------
 
 Each item in your Tree needs a different identifier (the value of the identifier has to be unique). It's the same concept as a primary key in a database.
 
-
-
-=====
 Icons
-=====
+-----
 
 Like other dijits, the icon is expressed as a CSS class (which should load a background-image). You specify the class per item by overriding getIconClass():
 
   .. code-block ::  html
 
-		<script type="dojo/method" event="getIconClass" args="item, opened">
-  			if(item == this.model.root) return (opened ? "customFolderOpenedIcon" : "customFolderClosedIcon");
-			else return myStore.getValue(item, "type") + "Icon";
-		</script>
-
-
-=============
-Accessibility
-=============
-
-Keyboard
---------
-
-================================    ===============
-Action	                            Key
-================================    ===============
-Navigate to first tree item*        Tab
-Navigate to the next sibling        Down arrow
-Navigate to the previous sibling    Up arrow
-Open a subtree                      Right arrow
-Close a subtree                     Left arrow
-Navigate to open subtree            Right arrow
-Navigate to parent                  Left arrow
-Activate a tree item                Enter
-================================    ===============
-
-* Note: The last tree item focused will be in the Tab order.
-
-
+    <script type="dojo/method" event="getIconClass" args="item, opened">
+        if(item == this.model.root) return (opened ? "customFolderOpenedIcon" : "customFolderClosedIcon");
+        else return myStore.getValue(item, "type") + "Icon";
+    </script>
 
 ========
 Examples
@@ -130,3 +105,26 @@ More examples
 -------------
 
 There are `more extensive examples <dijit/Tree-examples>`_ of using the tree
+
+
+=============
+Accessibility
+=============
+
+Keyboard
+--------
+
+================================    ===============
+Action	                            Key
+================================    ===============
+Navigate to first tree item*        Tab
+Navigate to the next sibling        Down arrow
+Navigate to the previous sibling    Up arrow
+Open a subtree                      Right arrow
+Close a subtree                     Left arrow
+Navigate to open subtree            Right arrow
+Navigate to parent                  Left arrow
+Activate a tree item                Enter
+================================    ===============
+
+* Note: The last tree item focused will be in the Tab order.
