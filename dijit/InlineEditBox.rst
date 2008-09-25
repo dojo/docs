@@ -83,3 +83,39 @@ Notes on i18n
 -------------
 Note that the web server is responsible for the initial formatting of the data.
 For example, if you are display a large number, it would be formatted as 123,456,789.55 in the United States but as 123.456.789,00 in some European countries.   InlineEditBox expects the number to be formatted in the page's locale and will fail if it can't parse it according to that locale.
+
+Accessibility
+-------------
+
+General Behavior
+~~~~~~~~~~~~~~~~
+When InlineEditBoxes are "closed" they appear as text but are tab stops in the keyboard focus ring and have an accessible role of button. They can have autoSave or non-autoSave behavior. When an non-autoSave InlineEditBox is open it has associated Save and Cancel buttons. An autoSave InlineEditBox does not have these buttons and they act like miniature forms or dialogs, i.e pressing the Esc key will close the widget and pressing the Enter key will close the widget, saving and displaying the text.
+Note that since InlineEditBoxes may be used on the page without a traditional label element, the developer should add a title attribute in order to provide a description that is available to screen reader users. The title will also be displayed by the browser when the user places the mouse over the element.
+
+Keyboard
+~~~~~~~~
+Widget is closed (not being edited)
+
+==============================================    =================================================
+Action                                            Key
+==============================================    =================================================
+Navigate to the next widget in the tab order.     Tab
+Navigate to the prior widget in the tab order.    Shift+Tab
+Open the widget.                                  Enter or spacebar
+==============================================    =================================================
+
+Note: The Esc key is ignored. 
+
+TextBox with autoSave specified and the TextBox is open:
+
+
+==============================================    ==========    =======================================
+Action                                            Key           Comments
+==============================================    ==========    =======================================
+Navigate to the next widget in the tab order.	  Tab            The data is saved and the widget closes.
+Navigate to the prior widget in the tab order.	  Shift+Tab      The data is saved and the widget closes.
+Close the TextBox, saving changes.                Enter	         Keyboard focus is on the closed InlineEditBox.
+Revert the last entry.                            Esc            If the user has not entered data, the TextBox is closed.
+Close the Textarea, discarding changes.           Esc            If the user has entered data, the Esc must be pressed two times; the 
+                                                                 first time  the data will be reverted; the second time the TextBox will close.
+==============================================    ==========    =======================================
