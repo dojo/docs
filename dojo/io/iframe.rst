@@ -20,9 +20,11 @@ Usage
 Specific arguments for dojo.io.iframe calls:
 
 * method: "POST". 
+
   What type of HTTP method to use for the request. Valid values are "POST" (default) or "GET".
 
-* handleAs: Valid values are text, html, javascript, and json. 
+* handleAs: Valid values are "text", "html", "xml", "json" and "javascript. 
+
   IMPORTANT: For all values EXCEPT html, The server response should be an HTML file with a textarea element. The response data should be inside the textarea element. Using an HTML document the only reliable, cross-browser way this transport can know when the response has loaded. For the text/html mimetype, just return a normal HTML document. NOTE: text/xml or any other XML type is NOT supported by this transport.
 
 
@@ -74,7 +76,7 @@ Gather all parameters from a form
   </script>
 
 
-Pass in Parameters manually
+Pass in parameters manually
 ---------------------------
 
 .. code-block :: javascript
