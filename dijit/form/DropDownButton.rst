@@ -93,8 +93,6 @@ With drop down open, navigate to the next element on page    tab will close drop
                                                              to next element
 =========================================================    =================================================
 
-In Firefox 2 with Dojo releases 1.0 through 1.0.2 the focus on a combo button is not visible. This is not an issue in Firefox 3 and has been fixed for Firefox 2 in Dojo Releases 1.1 and beyond. 
-
 Known Issues
 ------------
 
