@@ -3,10 +3,18 @@
 Dijit
 =====
 
+:Status: Contributed, Draft
+:Version: 1.0
+:Available: since V0.3
+
+.. contents::
+  :depth: 2
+
 *Dijit* is a widget system layered on top of Dojo. If you are new to the whole Dojo experience, Dijit is a good place to start. You can build amazing Web 2.0 GUI's using very little, or no, JavaScript (though having an understanding of JavaScript will take you a long way) 
 
+======
 Themes
-------
+======
 
 Dijit comes bundled with three themes: Tundra, Soria, and Nihilo. Themes are collections of images and CSS, and brings a common design and color scheme to all the widgets. You can override the theme by container or by element to add nuance and flair. Themes must be included by the inclusion of the theme's root file from the relative position in the source tree:
 
@@ -36,13 +44,17 @@ It is recommended you include the theme CSS file **before** ``dojo.js`` to avoid
 
 To learn more about themes, see `Dijit themes <dijit-themes>`_.
 
+
+===============
 Dijit i18n/a11y
----------------
+===============
 
 Everything in Dijit is designed to be globally accessible -- to accommodate users with different languages and cultures as well as those with different abilities.  Language translations, bi-directional text, and cultural representation of things like numbers and dates are all encapsulated within the widgets.  Server interactions are done in a way that makes no assumptions about local conventions.  All widgets are keyboard accessible and using the standard Dijit theme, usable in high-contrast mode as well as by screen readers.  These features are baked in so that, as much as possible, all users are treated equally.
 
+
+============
 Dijit Basics
-------------
+============
 
 You can use Dijit in one of two ways: **declaratively** by using special attributes inside of regular HTML tags, and **programmatically** through JavaScript. You have the same options either way. 
 
@@ -133,8 +145,11 @@ This will cause the creator to use the node with id="makeADialog", and turn it i
   var dialog = new dijit.Dialog({ title:"From Source byId" }, "makeADialog");
   dialog.show();
 
+
+==========
 Attributes
-----------
+==========
+
 Widgets have initialization parameters and attributes that can be read/write after initialization.
 In general it's the same list, although certain attributes (like id and type) can only be set
 during initialization.
@@ -159,8 +174,11 @@ It also supports a hash API like dojo.attr(), for setting multiple attributes:
 
   myInput.attr({ tabIndex: 3, disabled: true, value: 'hi'});
 
+
+==================
 Behavioral widgets
-------------------
+==================
+
 In general, widgets create their own DOM structure.  For example,
 
 .. code-block :: javascript
