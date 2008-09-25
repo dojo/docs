@@ -271,4 +271,20 @@ It is worth noting: If you need a function to be called *absolutely every* time 
   
 This is because ``addChild`` will not be called for existing panes (in markup).
 
- 
+=============
+Accessibility
+=============
+
+Keyboard
+--------
+
+==========================================    =================================================
+Action                                        Key
+==========================================    =================================================
+Navigate to next tab button                   Right arrow
+Navigate to previous tab button               Left arrow
+Navigate into page                            Tab
+Navigate to next page                         Ctrl + page down, ctrl + tab (except IE7)
+Navigate to previous page                     Ctrl + page up
+Delete a tab                                  With focus on the tab title of the tab to delete, press Delete or ctrl + w. Note that the tab must have been created with deletion enabled via the closable attribute. For 1.1 and later releases, pressing shift-F10 with focus on the tab title or right mouse clicking on the tab title will bring up a context menu with the option to Close the tab. This provides a mechanism to determine if the tab is closable.
+==========================================    =================================================
