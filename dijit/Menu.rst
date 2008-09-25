@@ -106,3 +106,26 @@ This example creates a context menu for the whole window.
 	</div>
 
         <span> Click anywhere on the page to see this menu.</span>
+
+Accessibility
+=============
+
+Keyboard
+--------
+
+==========================================    =================================================
+Action                                        Key
+==========================================    =================================================
+Open a context menu                           On Windows: shift-f10 or the Windows context menu key
+                                              On Firefox on the Macintosh: ctrl-space
+Navigate menu items                           Up and down arrow keys
+Activate a menu item                          Spacebar or enter
+Open a submenu                                Spacebar, enter, or right arrow
+Close a context menu or submenu               Esc or left arrow
+Close a context menu and all open submenus    Tab
+==========================================    =================================================
+
+Known Issues
+------------
+
+When reading a menu item on Firefox 2, JAWS 8 may say "submenu" for an item that does not have a submenu. This will be fixed in Firefox 3.
