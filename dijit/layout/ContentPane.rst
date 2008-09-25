@@ -32,3 +32,8 @@ Href
 ----
 One big use for ContentPanes is to load content dynamically through an href (see the href parameter).
 However, note that the href must access data on the same domain since it's served via XHR.
+
+Accessibility
+-------------
+
+The developer is responsible for determining if the ContentPane should be in the tab order of the page or not. If the ContentPane is not likely to have a focusable item within the contents, the developer may want to add tabindex=""0" onto the ContentPane element. This will put the ContentPane into the tab order so if someone is using the tab key to navigate through the elements on the page, the ContentPane itself will get focus. Having focus go to the ContentPane itself can be helpful for users of assistive technology to be able to navigate to an area that may not have any focusable elements within it such as a preview pane for mail messages or a page footer containing important information.
