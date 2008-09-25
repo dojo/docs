@@ -254,7 +254,7 @@ Dojo Core
 
   * `dojo.io.script <dojo/io/script>`_
 
-    Sends an JSONP request using a script tag
+    Sends a JSONP request using a script tag
 
 * `dojo.jaxer <dojo/jaxer>`_
 
