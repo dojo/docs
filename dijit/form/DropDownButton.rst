@@ -75,5 +75,36 @@ Here's one displaying a TooltipDialog:
       </div>
     </div>
 
-.
+
 Note that DropDownButton is often used in `dijit.Toolbar </dijit/Toolbar>`_.
+
+Accessibility
+=============
+
+Keyboard
+--------
+
+=========================================================    =================================================
+Action                                                       Key
+=========================================================    =================================================
+Navigate to a button                                         tab - all buttons are in the tab order
+Activate the button to display the drop down menu            enter or space key
+Close an open drop down                                      escape key - focus returns to button
+With drop down open, navigate to the next element on page    tab will close drop down and set focus back to the button, tab again to navigate
+                                                             to next element
+=========================================================    =================================================
+
+Known Issues
+------------
+
+High Contrast Mode
+~~~~~~~~~~~~~~~~~~
+
+All buttons should include a label parameter with text for the button even if the showLabel parameter is set to false. The label parameter is used to identify the button in high contrast mode when the icon for the button will no longer be displayed and is also used to identify the button to a screen reader.
+
+Screen Reader
+~~~~~~~~~~~~~
+
+In order to identify the button description to the screen reader, all buttons should include a label parameter even if the showLabel parameter is set to false.
+
+Even though the dropdown buttons are marked with the ARIA haspopup property, the screen readers do not indicate this to the user in Firefox 2. In Firefox 3 the dropdown and combo buttons are announced as "menu button".
