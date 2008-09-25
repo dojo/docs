@@ -37,12 +37,18 @@ Icons
 
 Like other dijits, the icon is expressed as a CSS class (which should load a background-image). You specify the class per item by overriding getIconClass():
 
-  .. code-block ::  html
+.. code-block :: javascript
+  :linenos:
 
-    <script type="dojo/method" event="getIconClass" args="item, opened">
-        if(item == this.model.root) return (opened ? "customFolderOpenedIcon" : "customFolderClosedIcon");
-        else return myStore.getValue(item, "type") + "Icon";
-    </script>
+
+  <script type="dojo/method" event="getIconClass" args="item, opened">
+      if(item == this.model.root) {
+          return (opened ? "customFolderOpenedIcon" : "customFolderClosedIcon");
+      } else {
+          return myStore.getValue(item, "type") + "Icon";
+      }
+  </script>
+
 
 ========
 Examples
