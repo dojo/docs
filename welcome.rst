@@ -145,7 +145,45 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
       Returns the DOM node with the matching 'id'
 
   * `dojo.json <dojo/json>`_
+
+    JSON helpers
+
+    * `dojo.fromJson <dojo/fromJson>`_
+
+      Parses a JSON string to return a JavaScript object
+
+    * `dojo.toJson <dojo/toJson>`_
+
+      Returns a JSON serialization of an object
+
   * `dojo.lang <dojo/lang>`_
+
+    Support for Polymorphism
+
+    * `dojo.isString <dojo/isString>`_
+
+      Checks if the parameter is a String
+
+    * `dojo.isArray <dojo/isArray>`_
+
+      Checks if the parameter is an Array
+
+    * `dojo.isFunction <dojo/isFunction>`_
+
+      Checks if the parameter is a Function
+
+    * `dojo.isObject <dojo/isObject>`_
+
+      Checks if the parameter is a Object
+
+    * `dojo.isArrayLike <dojo/isArrayLike>`_
+
+      Checks if the parameter is like a Array
+
+    * `dojo.isAlien <dojo/isAlien>`_
+
+      Checks if the parameter is a built-in function
+
   * `dojo.NodeList <dojo/NodeList>`_
 
     Syntactic sugar for chaining, common iteration operations, animation, and node manipulation
