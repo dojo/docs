@@ -246,7 +246,7 @@ Dojo Core
 
 * `dojo.io <dojo/io>`_
 
-  Additional I/O transports (Ajax)
+  Additional AJAX I/O transports
 
   * `dojo.io.iframe <dojo/io/iframe>`_
 
