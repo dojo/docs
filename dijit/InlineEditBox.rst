@@ -14,7 +14,7 @@ InlineEditBox is best described as a behavior on some text on the page, such tha
 
 
 Programatic InlineEditBox
--------------------------
+=========================
 
 .. cv-compound::
 
@@ -44,7 +44,8 @@ Note that it was created with autoSave=false to make save/cancel buttons appear.
 Otherwise, the return key will end the edit, which is not appropriate for a multi-line edit.
 
 Markup
-------
+======
+
 Creation from markup is even easier.  Here's an example with an initial value.
 
 .. cv-compound::
@@ -61,7 +62,8 @@ Creation from markup is even easier.  Here's an example with an initial value.
     <span dojoType="dijit.InlineEditBox" editor="dijit.form.NumberSpinner" editorParams="{constraints: {places:0} }" width="70px" title="quantity">15</span>
 
 Initial blank value
--------------------
+===================
+
 If the InlineEditBox has no value it displays an icon so that the user has something to click to start the edit.
 Note also that the width argument is important so to indicate the editors width, which otherwise would be undefined.
 
@@ -80,20 +82,23 @@ Note also that the width argument is important so to indicate the editors width,
 
 
 Notes on i18n
--------------
+=============
+
 Note that the web server is responsible for the initial formatting of the data.
 For example, if you are display a large number, it would be formatted as 123,456,789.55 in the United States but as 123.456.789,00 in some European countries.   InlineEditBox expects the number to be formatted in the page's locale and will fail if it can't parse it according to that locale.
 
 Accessibility
--------------
+=============
 
 General Behavior
-~~~~~~~~~~~~~~~~
+----------------
+
 When InlineEditBoxes are "closed" they appear as text but are tab stops in the keyboard focus ring and have an accessible role of button. They can have autoSave or non-autoSave behavior. When an non-autoSave InlineEditBox is open it has associated Save and Cancel buttons. An autoSave InlineEditBox does not have these buttons and they act like miniature forms or dialogs, i.e pressing the Esc key will close the widget and pressing the Enter key will close the widget, saving and displaying the text.
 Note that since InlineEditBoxes may be used on the page without a traditional label element, the developer should add a title attribute in order to provide a description that is available to screen reader users. The title will also be displayed by the browser when the user places the mouse over the element.
 
 Keyboard
-~~~~~~~~
+--------
+
 Widget is closed (not being edited)
 
 ==============================================    =================================================
@@ -107,7 +112,8 @@ Open the widget.                                  Enter or spacebar
 Note: The Esc key is ignored. 
 
 
-**TextBox with autoSave specified and the TextBox is open:**
+TextBox with autoSave 
+~~~~~~~~~~~~~~~~~~~~~
 
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
 |  **Action**                                   | **Key**      | **Comments**                                                |
@@ -126,8 +132,8 @@ Note: The Esc key is ignored.
 +-----------------------------------------------+--------------+-------------------------------------------------------------+  
 
 
-**Textarea with autoSave specified and the Textarea is open:**
-
+Textarea with autoSave 
+~~~~~~~~~~~~~~~~~~~~~~
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
 |  **Action**                                   | **Key**      | **Comments**                                                |
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
@@ -148,7 +154,8 @@ Note: The Esc key is ignored.
 +-----------------------------------------------+--------------+-------------------------------------------------------------+   
 
                                                                
-**TextBox or TextAreawithout autoSave specified, the TextBox/TextArea is open, keyboard focus is in the edit field:**
+TextBox or TextArea without autoSave
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
 |  **Action**                                   | **Key**      | **Comments**                                                |
@@ -174,4 +181,3 @@ Notes:
  
 - The Enter key is ignored when focus is in the Textbox edit field.
 - In a TextArea pressing the Enter key results in a newline.  
-
