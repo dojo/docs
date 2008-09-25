@@ -14,6 +14,7 @@ dijit.ColorPalette
 
 dijit.ColorPalette is a great little tool which provides a color picker for you to use in your application.
 
+========
 Examples
 ========
 
@@ -58,6 +59,7 @@ Small color palette, created declaratively:
      <div dojoType="dijit.ColorPalette" onChange="alert(this.value);" palette="3x4"></div>
 
 
+=============
 Accessibility
 =============
 
