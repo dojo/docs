@@ -20,57 +20,6 @@ Usage
 The Dialog and underlay append themselves to the ``<body>`` element, which requires you apply your theme className there (as no other elements parent the Dialog.domNode). You need ``<body class="tundra">`` (or some other applicable theme name) in order for the Dialog to be styled.
 
 
-=============
-Accessibility
-=============
-
-Keyboard
---------
-
-====================================================    =================================================
-Action                                                  Key
-====================================================    =================================================
-Navigate to next focusable element in the dialog	tab
-Navigate to previous focusable element in the dialog	shift-tab
-Close the dialog                                        escape
-====================================================    =================================================
-
-Keyboard Navigation in Release 1.1 and later
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-When a dialog is opened focus goes to the first focusable element within the dialog. The first focusable element may be an element which appears in the tab order by default such as a form field or link, an element with a tabindex attribute value of 0 or an element with a tabindex value greater than 0. Elements with a tabindex value greater than 0 will appear in the tab order before elements with a tabindex of 0 or those in the tab order by default. If the dialog does not contain a focusable item, focus will be set to the dialog container element when the dialog is opened. The same focus behavior has been implemented for tooltip dialog
-
-When focus is in a dialog, pressing the tab key will move focus forward to each focusable element within the dialog. When focus reaches the last focusable element in the dialog, pressing tab will cycle focus back to the first focusable item. Pressing shift-tab will move focus backwards through focusable elements within the dialog. When the first focusable item is reached, pressing shift-tab will move focus to the last focusable item in the dialog.
-
-Keyboard Navigation Previous to Release 1.1
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-When a dialog is opened focus goes to the title section of the dialog. This was implemented to provide screen reader support to speak the title of the dialog when it is opened. Likewise, when a tooltip dialog is opened, focus is placed on the container of the tooltip dialog. In future versions of the dialog and tooltip dialog widgets, focus will go to the first item in the dialog or tooltip dialog.
-
-When focus is in a dialog, pressing the tab key will move focus forward to each focusable element within the dialog. When focus reaches the last focusable element in the dialog, pressing tab will cycle focus back to the dialog title. Pressing shift-tab will move focus backwards through focusable elements within the dialog until the dialog title is reached. If focus has previous cycled forward through all of the elements, pressing shift-tab with focus on the dialog title will move focus to the last element in the dialog. If focus has not previously been cycled through all of the focusable elements in the dialog using the tab key, pressing shift-tab with focus on the dialog title will leave focus in the title. The same focus cycling applies to the tooltip dialog as well with focus being set to the tooltip dialog container since there is no dialog title.
-
-Known Issues
-------------
-
-- On Windows, In Firefox 2, when in High Contrast mode, the dialog with display correctly, but the underlying page will not be seen.
-- Dialogs with an input type=file as the only focusable element will not work with the keyboard. This is because input type=file
-  elements require   two tab stops - one in the textbox and the other on the "Browse" button. Rather than clutter the dialog box
-  widget with code to special case for this one condition, dialog boxes with an input type=file as the only focusable element are not supported.
-- Dialogs with an input type=file element as the first focusable element in Firefox (and there are additional focusable elements).
-  Programmatically setting focus to an input type=file element behaves oddly in Firefox. In this case the focus is set onto the
-  textbox field and then immediately moved onto the browse button of the input type=file field. This causes problems in Firefox
-  when setting focus to an input type=file element as the first element as a dialog. For this reason, in Firefox if the first
-  focusable item in a dialog is an input type=file, focus will be set onto the dialog container rather than the input element.
-  For these reasons it is recommended that input type=file elements not be added as the only or first focusable item within a dialog in Firefox.
-- Even though the dialog is marked with the proper ARIA role of dialog, JAWS 9 does not speak "dialog" when the dialog is opened.
-  In Firefox 2 even though the focus is on the first focusable item in the dialog, the information about that item is also not spoken.
-  Thus, it is important that the instructions or label for a trigger element that opens a dialog to indicate via text that a dialog will
-  be opened. In Firefox 3 the dialog is also not announced but the information about the item in the dialog which gets focus is spoken.
-  This will hopefully be corrected in a future release of JAWS.
-- There are focus issues when the dialog is created via an href. Due to timing issues focus may not be properly set nor properly trapped
-  in the dialog. For accessibility reasons, dialogs created via href are not recommended. This issue will be addressed in a future release.
-
-
 ========
 Examples
 ========
@@ -262,3 +211,54 @@ To prevent the user from dismissing the dialog if there are errors in the form, 
         }
     }
     </script>
+
+
+=============
+Accessibility
+=============
+
+Keyboard
+--------
+
+====================================================    =================================================
+Action                                                  Key
+====================================================    =================================================
+Navigate to next focusable element in the dialog	tab
+Navigate to previous focusable element in the dialog	shift-tab
+Close the dialog                                        escape
+====================================================    =================================================
+
+Keyboard Navigation in Release 1.1 and later
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When a dialog is opened focus goes to the first focusable element within the dialog. The first focusable element may be an element which appears in the tab order by default such as a form field or link, an element with a tabindex attribute value of 0 or an element with a tabindex value greater than 0. Elements with a tabindex value greater than 0 will appear in the tab order before elements with a tabindex of 0 or those in the tab order by default. If the dialog does not contain a focusable item, focus will be set to the dialog container element when the dialog is opened. The same focus behavior has been implemented for tooltip dialog
+
+When focus is in a dialog, pressing the tab key will move focus forward to each focusable element within the dialog. When focus reaches the last focusable element in the dialog, pressing tab will cycle focus back to the first focusable item. Pressing shift-tab will move focus backwards through focusable elements within the dialog. When the first focusable item is reached, pressing shift-tab will move focus to the last focusable item in the dialog.
+
+Keyboard Navigation Previous to Release 1.1
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When a dialog is opened focus goes to the title section of the dialog. This was implemented to provide screen reader support to speak the title of the dialog when it is opened. Likewise, when a tooltip dialog is opened, focus is placed on the container of the tooltip dialog. In future versions of the dialog and tooltip dialog widgets, focus will go to the first item in the dialog or tooltip dialog.
+
+When focus is in a dialog, pressing the tab key will move focus forward to each focusable element within the dialog. When focus reaches the last focusable element in the dialog, pressing tab will cycle focus back to the dialog title. Pressing shift-tab will move focus backwards through focusable elements within the dialog until the dialog title is reached. If focus has previous cycled forward through all of the elements, pressing shift-tab with focus on the dialog title will move focus to the last element in the dialog. If focus has not previously been cycled through all of the focusable elements in the dialog using the tab key, pressing shift-tab with focus on the dialog title will leave focus in the title. The same focus cycling applies to the tooltip dialog as well with focus being set to the tooltip dialog container since there is no dialog title.
+
+Known Issues
+------------
+
+- On Windows, In Firefox 2, when in High Contrast mode, the dialog with display correctly, but the underlying page will not be seen.
+- Dialogs with an input type=file as the only focusable element will not work with the keyboard. This is because input type=file
+  elements require   two tab stops - one in the textbox and the other on the "Browse" button. Rather than clutter the dialog box
+  widget with code to special case for this one condition, dialog boxes with an input type=file as the only focusable element are not supported.
+- Dialogs with an input type=file element as the first focusable element in Firefox (and there are additional focusable elements).
+  Programmatically setting focus to an input type=file element behaves oddly in Firefox. In this case the focus is set onto the
+  textbox field and then immediately moved onto the browse button of the input type=file field. This causes problems in Firefox
+  when setting focus to an input type=file element as the first element as a dialog. For this reason, in Firefox if the first
+  focusable item in a dialog is an input type=file, focus will be set onto the dialog container rather than the input element.
+  For these reasons it is recommended that input type=file elements not be added as the only or first focusable item within a dialog in Firefox.
+- Even though the dialog is marked with the proper ARIA role of dialog, JAWS 9 does not speak "dialog" when the dialog is opened.
+  In Firefox 2 even though the focus is on the first focusable item in the dialog, the information about that item is also not spoken.
+  Thus, it is important that the instructions or label for a trigger element that opens a dialog to indicate via text that a dialog will
+  be opened. In Firefox 3 the dialog is also not announced but the information about the item in the dialog which gets focus is spoken.
+  This will hopefully be corrected in a future release of JAWS.
+- There are focus issues when the dialog is created via an href. Due to timing issues focus may not be properly set nor properly trapped
+  in the dialog. For accessibility reasons, dialogs created via href are not recommended. This issue will be addressed in a future release.
