@@ -151,4 +151,4 @@ Keyboard
 
 Known Issues
 ~~~~~~~~~~~~
-Currently the text labels of a slider are not spoken by screen readers. Firefox 3 will support this type of labeling so the plan is to add support for it in the Dojo 1.2 release or beyond. Developers should take care when using text labels since a screen reader user will hear only a numeric interpretation.
+Currently the text labels of a slider are not spoken by screen readers. Firefox 3 will support this type of labeling so support will be added for this in a future Dojo release. Developers should take care when using text labels since a screen reader user will hear only a numeric interpretation.
