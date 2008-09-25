@@ -41,12 +41,34 @@ Gather all parameters from a form
 
     // gather all parameters from a form:
     dojo.io.iframe.send({
-        // ID of the form:
-        form: "idOfForm",
+        // The target URL on your webserver:
+        url: "iframeHandler.php",
 
-        // callback for successful response:
-        load: function(data){
-            console.debug(data); 
+        // The HTTP method to use:
+        method: "GET",
+
+        // The form node, which contains the
+        // to be transfered form elements:
+        form: "myForm",
+
+        // The used data format:
+        handleAs: "json",
+
+        // Callback on successful call:
+        load: function(response, ioArgs) {
+            // do something
+            // ...
+                    
+            // return the response for succeeding callbacks
+            return response;
+        },
+
+        // Callback on errors:
+        error: function(response, ioArgs){
+            debug.dir(response);
+                    
+            // return the response for succeeding callbacks
+            return response;
         }
     });
   </script>
@@ -63,8 +85,11 @@ Pass in Parameters manually
 
     // pass in all of the parameters manually:
     dojo.io.iframe.send({
-        method: "GET",
+        // The target URL on your webserver:
         url: "iframeHandler.php",
+
+        // The HTTP method to use:
+        method: "GET",
 
         // the content to submit:
         content: {
@@ -72,9 +97,24 @@ Pass in Parameters manually
             param2: "my poor electrons!",
         },
 
-        // callback for successful response:
-        load: function(data){
-            console.debug(data);
+        // The used data format:
+        handleAs: "json",
+
+        // Callback on successful call:
+        load: function(response, ioArgs) {
+            // do something
+            // ...
+                    
+            // return the response for succeeding callbacks
+            return response;
+        },
+
+        // Callback on errors:
+        error: function(response, ioArgs){
+            debug.dir(response);
+                    
+            // return the response for succeeding callbacks
+            return response;
         }
     });
   </script>
