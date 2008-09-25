@@ -181,7 +181,7 @@ Dojo Core
 
 * `dojo.back <dojo/back>`_
 
-  Browser history management resources
+  Browser history management resources (Back button functionality)
 
 * `dojo.behavior <dojo/behavior>`_
 
@@ -189,16 +189,19 @@ Dojo Core
 
 * `dojo.cldr <dojo/cldr>`_
 
-  transformation of relevant pieces of the Unicode.org Common Locale Data Repository to JSON
+  A Common Locale Data Repository (CLDR) implementation
 
 * `dojo.colors <dojo/colors>`_
 
-  Color utilities
+  CSS color manipulation functions
 
 * `dojo.cookie <dojo/cookie>`_
+
+  Simple HTTP cookie manipulation
+
 * `dojo.currency <dojo/currency>`_
 
-  localized formatting and parsing routines for currencies
+  Localized formatting and parsing routines for currency data
 
 * `dojo.data <dojo/data>`_
 
@@ -268,7 +271,7 @@ Dojo Core
 
 * `dojo.number <dojo/number>`_
 
-  Localized formatting and parsing methods for Numbers
+  Localized formatting and parsing methods for number data
 
 * `dojo.parser <dojo/parser>`_
 
