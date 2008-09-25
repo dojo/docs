@@ -213,7 +213,7 @@ Action                                                  Key
 ====================================================    =================================================
 Navigate to next focusable element in the dialog	tab
 Navigate to previous focusable element in the dialog	shift-tab
-Close the dialog/tooltip dialog                         escape
+Close the dialog                                        escape
 ====================================================    =================================================
 
 Keyboard Navigation in Release 1.1 and later
