@@ -119,3 +119,25 @@ Revert the last entry.                            Esc            If the user has
 Close the Textarea, discarding changes.           Esc            If the user has entered data, the Esc must be pressed two times; the 
                                                                  first time  the data will be reverted; the second time the TextBox will close.
 ==============================================    ==========    =======================================
+
+**Textarea with autoSave specified and the Textarea is open:**
+
++-----------------------------------------------+--------------+-------------------------------------------------------------+
+|  **Action**                                   | **Key**      | **Comments**                                                |
++-----------------------------------------------+--------------+-------------------------------------------------------------+
+| Navigate to the next widget in the tab order.	| Tab (twice   | The data is saved and the widget closes.                    |
+|                                               | in Firefox)  |                                                             |
++-----------------------------------------------+--------------+-------------------------------------------------------------+
+| Navigate to the prior widget in the tab order.| Shift+Tab    |  The data is saved and the widget closes.                   |
++-----------------------------------------------+--------------+-------------------------------------------------------------+
+| Enter a newline into the text.                | Enter	       | There is no equivalent to the Enter key behavior of         |
+|                                               |              | TextBoxes. The user would have to use something like Tab    |
+|                                               |              | and Shift + Tab                                             |
++-----------------------------------------------+--------------+-------------------------------------------------------------+
+| Revert the last entry.                        | Esc          | If the user has not entered data, the Textarea is closed.   |
++-----------------------------------------------+--------------+-------------------------------------------------------------+
+| Close the Textarea, discarding changes.       | Esc          | If the user has entered data, the Esc must be pressed two   |
+|                                               |              | times; the first time the data will be reverted; the second |
+|                                               |              | time the Textarea will close.                               |    
++-----------------------------------------------+--------------+-------------------------------------------------------------+   
+                                                               
