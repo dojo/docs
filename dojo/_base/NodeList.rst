@@ -6,7 +6,7 @@ dojo._base.NodeList
 :Status: Draft
 :Version: 1.0
 :Authors: Marcus Reimann
-:Developers: ?-
+:Developers: James Burke, Peter Higgins, Eugene Lazutkin, Adam Peller, Neil Roberts, Alex Russell, Dylan Schiemann
 :Available: since V?
 
 .. contents::
