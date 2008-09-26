@@ -180,7 +180,7 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 
       Returns the DOM node with the matching 'id'
 
-  * `dojo.json <dojo/json>`_
+  * `dojo._base.json <dojo/_base/json>`_
 
     JSON helpers
 
@@ -192,7 +192,7 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 
       Returns a JSON serialization of an object
 
-  * `dojo.lang <dojo/lang>`_
+  * `dojo._base.lang <dojo/_base/lang>`_
 
     Support for Polymorphism
 
