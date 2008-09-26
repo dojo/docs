@@ -18,7 +18,18 @@ Dojo's Event System is an abstraction of JavaScript's Event System.
 Features
 ========
 
-* TODO: explain DOM event listener 
+* TODO: explain DOM event listener in detail
+* dojo.fixEvent
+
+  normalizes properties on the event object including event bubbling methods, keystroke normalization, and x/y positions
+
+* dojo.stopEvent
+
+  prevents propagation and clobbers the default action of the passed event
+
+* dojo.keys
+
+  definitions for common key values
 
 ================
 Migration issues
