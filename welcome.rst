@@ -130,7 +130,11 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 
   * `dojo.event <dojo/event>`_
 
+    Dojo's Event System - an abstraction of JavaScript's Event System
+
     * `dojo.keys <dojo/keys>`_
+
+      Definitions for common key values
 
   * `dojo.fx <dojo/fx>`__
 
