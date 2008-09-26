@@ -4,13 +4,20 @@
 dojo.html
 =========
 
-:Status: Contributed, Draft
+:Status: Draft
 :Version: 1.0
+:Authors: ?--
+:Developers: ?-
+:Available: since V?
+
+.. contents::
+    :depth: 2
  
 As of version 1.2, dojo.html is home to a single public helper method: dojo.html.set(). It is used to safely and conveniently replace an element's content, while providing some hooks and options for how the replacement should be handled.
 
-Examples: 
----------
+========
+Examples
+========
 
 .. codeviewer::
 
@@ -90,7 +97,8 @@ What else comes out of the box? set takes the following optional params to confi
     This event is called if an error is caught while inserting the new content. A typical example might be if you attempt to inject a ``div`` into a ``tr`` or similar. 
 
 
+==========
 Background
-----------
+==========
 
 If all of this seems a little familiar to you, its because this functionality previously lived inside the `ContentPane <dijit/layout/ContentPane>`_ widget (since dojo's early days). The goal of ``dojo.html.set``, the ``_ContentSetter`` and the helper methods it employs were to make this functionality available outside of the dijit context, and promote code reuse both across the toolkit and in your code. Some of the other options you may have used in 0.4, or `dojox.layout.ContentPane <dojox/layout/ContentPane>`_ are destined to live in a dojox counterpart to this module, and should be available by 1.2's release.   
