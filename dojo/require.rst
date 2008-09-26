@@ -4,21 +4,21 @@
 dojo.require
 ============
 
-:Status: Contributed, Draft
+:Status: Draft
 :Version: 1.0
+:Authors: ?--
+:Developers: ?-
+:Available: since V?
 
 .. contents::
-  :depth: 2
-
-============
-dojo.require
-============
+    :depth: 2
 
 Loads a Dojo module, by name.
 
-========
-Overview
-========
+
+============
+Introduction
+============
 
 In order to use a Dojo module or widget, you have to load the module with dojo.require('modulename'). If you don't do that, your scripts will throw a "dojo.some not defined" or "dojo.some.randomFunction not defined". There are a few exceptions to this rule, which are explained below.
 
@@ -59,6 +59,7 @@ Simply pass it a string:
 
   dojo.require("dojo.fx"); // load dojo/fx.js
   dojo.require("dojox.widget.Toaster"); // load dojox/widget/Toaster.js
+
 
 ========
 Examples
