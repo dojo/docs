@@ -29,8 +29,13 @@ Usage
 TODO: how to use the component/class/method
 
 .. code-block :: javascript
-  
-  dojo.connect(obj: Object, event: String, context: Object, method: String|Function, dontFix: Boolean);
+  :linenos:
+
+  <script type="text/javascript">
+    var deferred = new dojo.Deferred();
+    setTimeout(function(){deferred.callback({success: true}); }, 1000);
+    return deferred;
+  </script>
 
 
 ========
