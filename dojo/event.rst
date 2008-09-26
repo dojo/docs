@@ -12,6 +12,8 @@ dojo.event
 .. contents::
   :depth: 2
 
+Dojo's Event System is an abstraction of JavaScript's Event System.
+
 ========
 Features
 ========
