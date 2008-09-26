@@ -15,6 +15,10 @@ dojo._base.declare
 **dojo._base.declare** contains functions to define classes.
 
 
+========
+Features
+========
+
 * `dojo.declare <dojo/declare>`_
 
   Creates a constructor using a compact notation for inheritance and prototype extension
