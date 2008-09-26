@@ -12,7 +12,7 @@ dojo._base.json
 .. contents::
     :depth: 2
 
-**dojo._base.json** contains functions for handling with JSON data.
+**dojo._base.json** contains functions to deal with JSON data.
 
 As with all dojo._base components, this functions are included within Dojo Base. You get this functionality by just including dojo.js or dojo.xd.js in your page.
 
