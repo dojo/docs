@@ -4,10 +4,15 @@ dojox.widget
 ============
 
 :Status: Draft
-:Version: beta
-:Authors: Shane O'Sullivan, Peter Higgins, Nathan Toone, Karl Tiedt, Alex Russell, Nikolai Onken, Adam Peller
+:Version: 1.0
+:Authors: Peter Higgins, Nikolai Onken, Marcus Reimann, Josh Trutwin
+:Developers: Shane O'Sullivan, Peter Higgins, Nathan Toone, Karl Tiedt, Alex Russell, Nikolai Onken, Adam Peller
+:Available: since V?
 
-This is a collection of standalone widgets for use in your website.  Each individual widget is independent of the others, and carries it's own level of completeness, stability, and documentation, and don't typically fall into any other classification of use, like `dojox.form <form/>`_ or `dojox.layout <layout/>`_
+.. contents::
+    :depth: 2
+
+This is a collection of standalone widgets for use in your website. Each individual widget is independent of the others, and carries it's own level of completeness, stability, and documentation, and don't typically fall into any other classification of use, like `dojox.form <form/>`_ or `dojox.layout <layout/>`_
 
 
 =================
