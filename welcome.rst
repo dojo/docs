@@ -126,7 +126,7 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 
   * `dojo.Deferred <dojo/Deferred>`_
 
-    Encapsulates a sequence of callbacks in response to a value that may not yet be available
+    Communication between threads
 
   * `dojo.event <dojo/event>`_
 
