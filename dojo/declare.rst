@@ -5,7 +5,7 @@ dojo.declare
 
 :Status: Draft
 :Version: 1.0
-:Authors: ?--
+:Authors: Peter Higgins, Bill Keese, Nikolai Onken, Marcus Reimann
 :Developers: ?--
 :Available: since V0.?
 
