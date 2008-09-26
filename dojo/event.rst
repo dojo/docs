@@ -18,7 +18,7 @@ Dojo's Event System is an abstraction of JavaScript's Event System.
 Features
 ========
 
-* Dojo's Event Listener
+* Dojo's DOM Event Listener
 
   TODO: explain DOM event listener in detail
 
