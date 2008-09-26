@@ -4,8 +4,9 @@
 dojo.event
 ==========
 
-:Status: Contributed, Draft
+:Status: Draft
 :Version: 1.2
+:Authors: ?--
 :Developers: ?-
 :Available: since V0.3
 
