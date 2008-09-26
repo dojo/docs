@@ -18,9 +18,9 @@ dojo._base.Color
 As with all dojo._base components, this functions are included within Dojo Base. You get this functionality by just including dojo.js or dojo.xd.js in your page.
 
 
-=========
-Functions
-=========
+========
+Features
+========
 
 * dojo.Color.named
 
