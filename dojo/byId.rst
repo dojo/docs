@@ -4,8 +4,14 @@
 dojo.byId
 =========
 
-:Status: Contributed, Draft
+:Status: Draft
 :Version: 1.0
+:Authors: ?--
+:Developers: ?-
+:Available: since V?
+
+.. contents::
+    :depth: 2
 
 This is a simple alias to ''document.getElementById'', which not only is shorted to write, but fortunately works in all browsers. It turns a domNode reference to some Node byId, or the same node reference if passed a domNode. 
 
@@ -68,8 +74,13 @@ JavaScript has a fun convention for conditionals inline. Imagine wanting a domNo
 
 Above, if the node id="missingNode" is in fact missing, the logical OR will continue, and use othernode as the value of node.
 
+
+========
 Examples
---------
+========
+
+Fade-out a node
+---------------
 
 The following example lets a node by id dissapear from the screen
 
