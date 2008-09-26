@@ -7,7 +7,7 @@ dojo.event
 :Status: Contributed, Draft
 :Version: 1.2
 :Developers: ?-
-:Available: since V1.0
+:Available: since V0.3
 
 .. contents::
   :depth: 2
