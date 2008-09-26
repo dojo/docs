@@ -152,9 +152,9 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 
     Communication between threads
 
-  * `dojo.event <dojo/event>`_
+  * `dojo._base.event <dojo/_base/event>`_
 
-    Dojo's Event System - an abstraction of JavaScript's Event System
+    DOM Events
 
   * `dojo.fx <dojo/fx>`__
 
