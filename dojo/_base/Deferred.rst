@@ -15,6 +15,10 @@ dojo._base.Deferred
 **dojo._base.Deferred** contains a function to manage communication between asynchronous threads (Callbacks).
 
 
+========
+Features
+========
+
 * `dojo.Deferred <dojo/Deferred>`_
 
   Communication between threads
