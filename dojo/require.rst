@@ -57,8 +57,11 @@ Simply pass it a string:
 
 .. code-block :: javascript
 
-  dojo.require("dojo.fx"); // load dojo/fx.js
-  dojo.require("dojox.widget.Toaster"); // load dojox/widget/Toaster.js
+  // load dojo/fx.js:
+  dojo.require("dojo.fx");
+
+  // load dojox/widget/Toaster.js:
+  dojo.require("dojox.widget.Toaster");
 
 
 ========
