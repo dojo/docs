@@ -99,7 +99,7 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 
       Call functions when the page unloads
 
-  * `dojo.array <dojo/array>`_
+  * `dojo._base.array <dojo/_base/array>`_
 
     Array utilities.
     Details on dojo.every, dojo.filter, dojo.forEach, dojo.indexOf, dojo.lastIndexOf, dojo.map, and dojo.some.
