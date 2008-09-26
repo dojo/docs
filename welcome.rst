@@ -116,9 +116,33 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 
     Functions for setting Colors
 
-  * `dojo.connect <dojo/connect>`_
+  * `dojo._base.connect <dojo/_base/connect>`_
 
-    Connects events to methods
+    Connecting events to objects
+
+    * `dojo.connect <dojo/connect>`_
+
+      Connects events to methods
+
+    * `dojo.disconnect <dojo/disconnect>`_
+
+      Remove linked events
+
+    * `dojo.subscribe <dojo/subscribe>`_
+
+      Attach a listener to a named topic
+
+    * `dojo.unsubscribe <dojo/unsubscribe>`_
+
+      Remove a topic listener
+
+    * `dojo.publish <dojo/publish>`_
+
+      Publish an event to all subscribers of a topic
+
+    * `dojo.connectPublisher <dojo/connectPublisher>`_
+
+      Ensure that everytime an event is called, a message is published on the topic.
 
   * `dojo.declare <dojo/declare>`_
 
@@ -178,7 +202,7 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 
     * `dojo.isArrayLike <dojo/isArrayLike>`_
 
-      Checks if the parameter is like a Array
+      Checks if the parameter is like an Array
 
     * `dojo.isAlien <dojo/isAlien>`_
 
