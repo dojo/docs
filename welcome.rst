@@ -112,7 +112,7 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 
       Applies a callback to each element of arr and returns an Array with the results
 
-  * `dojo.Color <dojo/Color>`_
+  * `dojo._base.Color <dojo/_base/Color>`_
 
     Functions for setting Colors
 
