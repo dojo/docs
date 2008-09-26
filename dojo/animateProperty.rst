@@ -5,14 +5,21 @@ dojo.animateProperty
 
 :Status: Draft
 :Version: 1.2
+:Authors: Nikolai Onken
+:Developers: ?-
+:Available: since V?
 
 .. contents::
-  :depth: 3
+    :depth: 2
 
 dojo.animateProperty is a very useful method for animating CSS properties. Usecases are for example fading a background color from red to green to indicate status changes.
 
+========
 Examples
---------
+========
+
+A simple animation
+------------------
 
 A simple animation changing both background color and text color.
 
@@ -55,7 +62,8 @@ A simple animation changing both background color and text color.
     </style>
 
 How can I change the framerate of an animation?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------------------------
+
 By default dojo runs its animations with 100 frames/second. This can be too fast in certain use scenarios and you want the whole animation to run lots slower. 
 To change the framerate you use the rate attribute which defines the pause between each frame. So if you want 5 frames per second you need a rate of 200 (miliseconds between each frame)
 
