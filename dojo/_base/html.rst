@@ -12,7 +12,12 @@ dojo._base.html
 .. contents::
     :depth: 2
  
-dojo._base.html contains basic DOM handling functions:
+dojo._base.html contains basic DOM handling functions.
+
+
+========
+Features
+========
 
 * `dojo.byId <dojo/byId>`_
 
