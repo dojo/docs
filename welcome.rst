@@ -189,6 +189,9 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
     Syntactic sugar for chaining, common iteration operations, animation, and node manipulation
 
   * `dojo.query <dojo/query>`_
+
+    A relatively full-featured CSS3 query library
+
   * `dojo.require <dojo/require>`_
 
     Loads a Javascript module from the appropriate URI
