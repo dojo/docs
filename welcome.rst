@@ -176,9 +176,11 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 
   * `dojo._base.html <dojo/_base/html>`_
 
+    Basic DOM handling functions
+
     * `dojo.byId <dojo/byId>`_
 
-      Returns the DOM node with the matching 'id'
+      Select a DOM node by 'id'
 
   * `dojo._base.json <dojo/_base/json>`_
 
@@ -220,9 +222,13 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 
       Checks if the parameter is a built-in function
 
-  * `dojo.NodeList <dojo/NodeList>`_
+  * `dojo._base.NodeList <dojo/_base/NodeList>`_
 
     Syntactic sugar for chaining, common iteration operations, animation, and node manipulation
+
+    * `dojo.NodeList <dojo/NodeList>`_
+
+      A class to handle a list of DOM nodes
 
   * `dojo.query <dojo/query>`_
 
