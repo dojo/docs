@@ -27,21 +27,23 @@ Dojo's event system is flexible and gives you a few options for connecting your 
 * how to connect functions with topics and even publish your own objects to the topic
 * how to enjoy event-based programming
 
-Simple Connections
-------------------
 
-Dojo provides a pair of functions to handle many of your event-handling needs: <cite>dojo.connect</cite> and <cite>dojo.disconnect</cite>. With `dojo.connect <dojo/connect>`_, you can link one function to fire when another does, handling DOM events and custom functions with a single mechanism. Additionally, `dojo.connect <dojo/connect>`_ allows you to connect as many functions to an event as necessary. With `dojo.disconnect <dojo/disconnect>`_, you can cancel a connection, assuming you've kept some reference to it. 
+==================
+Simple Connections
+==================
+
+Dojo provides a pair of functions to handle many of your event-handling needs: ``dojo.connect`` and ``dojo.disconnect``. With `dojo.connect <dojo/connect>`_, you can link one function to fire when another does, handling DOM events and custom functions with a single mechanism. Additionally, `dojo.connect <dojo/connect>`_ allows you to connect as many functions to an event as necessary. With `dojo.disconnect <dojo/disconnect>`_, you can cancel a connection, assuming you've kept some reference to it. 
 
 How does it work?
-~~~~~~~~~~~~~~~~~
+-----------------
 
 Imagine that you're hungry and have decided to cook a pizza in your oven. The pizza will take 17 minutes, so you set a timer. You have better things to do than sit around your kitchen hanging out by the timer though, so you get your brother and tell him, "When you hear the oven timer, take the pizza out of the oven and bring me a slice." Your brother can only keep track of one thing at a time, and you don't want your house to burn down, so you tell your sister, "When you hear the over timer, turn off the oven." Because you're a little worried that your dirty oven might start to smoke, you tell them both, "If you hear the smoke alarm, come get me and then go outside." After you get your pizza, you tell your brother and sister that they don't have to worry about the oven alarm now and that they can go play until you call for them again. You then set the oven alarm to wake you up from a nap.
 
 In this example, your siblings are functions. Your telling them to respond to certain events, such as "onPizzaDone" and "onHouseOnFire" performs the same function as `dojo.connect <dojo/connect>`_ - it sets up your siblings (functions) to listen for an event and perform their tasks when they receive notice. The various alarms are similar to event objects; they inform your siblings of important details about the situation (such as what is beeping). Telling your siblings that they don't need to worry about the oven alarm anymore is similar to `dojo.disconnect <dojo/disconnect>`_; the next time the oven alarm goes off, it means that you need to wake up, and you don't want your brother hunting for a pizza needlessly, so you've told him to stop listening to that event.
 
 Syntax
-~~~~~~
-`dojo.connect <dojo/connect>`_ takes a variety of forms of arguments, depending on how you are planning to use it.  This section will cover those various forms, based on use cases for them. You can think of it as a more in-depth version of the overview from the introdction provided in `Functions Used Everywhere <quickstart/dojo-basics#dojo-connect>`_.
+------
+`dojo.connect <dojo/connect>`_ takes a variety of forms of arguments, depending on how you are planning to use it. This section will cover those various forms, based on use cases for them. You can think of it as a more in-depth version of the overview from the introdction provided in `Functions Used Everywhere <quickstart/dojo-basics#dojo-connect>`_.
 
 dojo.connect has the following signature (acceptable types in square brackets):
 
@@ -52,7 +54,7 @@ dojo.connect has the following signature (acceptable types in square brackets):
 All of the options for calling ``dojo.connect`` are explored further below.
 
 Example Code for Reference
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------
 
 Sometimes, it is easier to see an example first:
 
@@ -81,7 +83,7 @@ Sometimes, it is easier to see an example first:
      </html>
 
 Connecting to a DOM Event
-~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------
 
 To connect a function to a DOM event with Dojo, you first need to get the node that you want to connect to. Here, I'll use the venerable 
 `dojo.byId <dojo/byId>`_.
@@ -130,7 +132,7 @@ To stop listening to all the registered event handlers stored in ``firstLinkConn
 *note:* Notice the lack of () on dojo.disconnect. Here, we've passed ``forEach`` a function *reference*, which will be called forEach value in the Array. 
 
 Events available for Connection
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------------
 
 Using dojo.connect on Dom Events is only the beginning or the power contained within. As a convenience, here is a quick list of normalized Dom Events
 
@@ -173,7 +175,7 @@ The big difference being dojo.byId versus dijit.byId -- dojo.connect can connect
 **A note about return values:** Any value returned by a function called by ``dojo.connect`` will be lost.
 
 Connecting to MouseWheel events
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------------
 
 One event not mentioned above, though entirely useful: onmousewheel (okay, it's two events, which is the reason for pointing this out ... )
 All Mozilla based browsers use ``DOMMouseScroll``, and the rest ``onmousewheel`` ... You can quickly connect to whichever is needed using Dojo's `isSomething <quickstart/browser-sniffing>`_ variables:
@@ -190,7 +192,7 @@ All Mozilla based browsers use ``DOMMouseScroll``, and the rest ``onmousewheel``
 Here we've fixed the event based on the Event Object provided, and are returning a number greater than 1 for scrolling up, and a negative value for scrolling down. 
 
 Connecting Functions to One Another
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------------
 
 Connecting functions to one another is even simpler than connecting them to DOM events; because you already have a reference to the function, you don't need to do any byId or query work. To have anotherObject.afterBaz fire after someObject.baz fires, use the following:
 
@@ -213,7 +215,7 @@ Now, whenever foo is called, globalGuy will also fire. As you might expect, conn
   objectConnections[3] = dojo.connect(someObject, "baz", globalGuy);
 
 Disconnecting
-~~~~~~~~~~~~~
+-------------
 
 To disconnect listeners from events, you simply pass the connection handle (the return value of ``dojo.connect`` to ``dojo.disconnect``. To disconnect globalGuy from someObject.baz, I use the following code:
 
@@ -227,8 +229,10 @@ Or, by using `dojo.forEach <dojo/forEach>`_, passing dojo.disconnect as a functi
  
   dojo.forEach(objectConnections, dojo.disconnect);
 
+
+================
 The Event Object
-----------------
+================
 
 When you connect a function to a DOM event with <cite>dojo.connect</cite>, Dojo passes your function a **normalized** event object. This means that, regardless of the client's browser, you can count on a set of standard attributes about the event and a set of methods to manipulate the event.
 
@@ -261,7 +265,7 @@ Dojo normalizes the following methods with an event object:
 Additionally, `dojo.stopEvent(event) <dojo/stopEvent>`_ will prevent both default behavior any any propagation (bubbling) of an event.
 
 Using a Dojo Event Object
-~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------
 
 In the example code, we have two functions that are connected to two different events. Echo sends the key code of any key typed in the text input field to the console. It does so by using the ``charCode`` property of the normalized event object. Foo is connected to the #link and cause it to send "The link was clicked" to the console instead of changing the browser's location; by using the preventDefault method of the normalized event object, connections to change the default behavior of DOM objects.
 
@@ -289,24 +293,29 @@ Using the new charOrCode, you can get a keys value directly with no need for che
 
 *note:* We've used ``event``, ``evt``, and ``e`` for our event name in the callback function. You can name it whatever you like, it is the same object either way.
 
+
+====================
 Page Load and Unload
---------------------
+====================
+
 ``TODOC``
 
+
+==================
 Topic Based Events
-------------------
+==================
 
 In addition to the simple event system created by <cite>dojo.connect</cite>, dojo offers support for anonymous publication and subscription of objects, via <cite>dojo.publish</cite> and <cite>dojo.subcribe</cite>. These methods allow a function to broadcast objects to any other function that has subscribed. This is dojo's topic system, and it makes it very easy to allow separate components to communicate without explicit knowledge of one another's internals.
 
 There are three functions that you need to understand to use dojo's topic system: <cite>dojo.publish</cite>, <cite>dojo.subscribe</cite>, and <cite>dojo.unsubscribe</cite> <cite>Dojo.publish</cite> calls any functions that are connected to the topic via <cite>dojo.subscribe</cite>, passing to those subscribed functions arguments that are published (see syntax for details). As one might expect, <cite>dojo.unsubscribe</cite> will cause a previously subscribed function to no longer be called when <cite>dojo.publish</cite> is called in the future
 
 How does it work?
-~~~~~~~~~~~~~~~~~
+-----------------
 
 Imagine that you run a running a conference, and there will be updates throughout the day. You could collect contact information for everyone at the beginning of the day, along with each person's interests. However, this would be a lot of logistical work. Instead, you decide to use your facility's Public Address System. When there is an update to the schedule, you announce "This is an update to the schedule: the Dojo training is full and we have added yet a third time slot for it tomorrow." When there is meal information, you announce "This is an update about food: we will be serving free ice cream in the main hall in five minutes." This way, anyone interested in your information can pay attention to any updates that could change their behavior. You don't need to know who is subscribing, and they don't need to fill out a bunch of paper work &mdash; it's a win-win.
 
 Example Code for Reference
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------
 
 .. code-block :: javascript
 
@@ -317,7 +326,7 @@ Example Code for Reference
   }
 
 Subscribing and Publishing Topics
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------------
 
 To connect globalGuy to the topic "globalEvents" and someObject.bar to "fullNames", you simply use ``dojo.subscribe``, as follows:
 
@@ -348,7 +357,9 @@ To disconnect someObject.bar from its topic, you use ``dojo.unsubscribe``, just 
   
   dojo.unsubscribe(topics[1]);
 
+
+=================
 Events with Dijit
------------------
+=================
 
 ``TODOC``
