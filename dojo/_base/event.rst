@@ -13,7 +13,8 @@ dojo._base.event
 .. contents::
   :depth: 2
 
-dojo._base.event contains functions to handle DOM events
+**dojo._base.event** contains functions to handle DOM events
+
 
 ========
 Features
