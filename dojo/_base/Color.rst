@@ -24,6 +24,8 @@ Functions
 
 * dojo.Color.named
 
+  An array of named Colors.
+
 * dojo.blendColors
 
   blend colors end and start with weight from 0 to 1, 0.5 being a 50/50 blend, can reuse a previously allocated dojo.Color object for the result
