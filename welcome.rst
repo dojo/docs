@@ -174,7 +174,7 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 
     * `dojo.animateProperty <dojo/animateProperty>`_
 
-  * `dojo.html <dojo/html>`_
+  * `dojo._base.html <dojo/_base/html>`_
 
     * `dojo.byId <dojo/byId>`_
 
