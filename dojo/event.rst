@@ -19,24 +19,17 @@ Features
 ========
 
 * TODO: explain DOM event listener in detail
-* dojo.fixEvent
+* `dojo.fixEvent <dojo/fixEvent>`_
 
   Normalizes properties on the event object including event bubbling methods, keystroke normalization, and x/y positions
 
-* dojo.stopEvent
+* `dojo.stopEvent <dojo/stopEvent>`_
 
   Prevents propagation and clobbers the default action of the passed event
 
 * `dojo.keys <dojo/keys>`_
 
   Definitions for common key values
-
-
-========
-Examples
-========
-
-TODO
 
 
 ================
