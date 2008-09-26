@@ -6,7 +6,7 @@ dojo.declare
 :Status: Draft
 :Version: 1.0
 :Authors: Peter Higgins, Bill Keese, Nikolai Onken, Marcus Reimann
-:Developers: ?--
+:Developers: Adam Peller, Neil Roberts, Alex Russell, Dylan Schiemann, sjmiles
 :Available: since V0.?
 
 .. contents::
