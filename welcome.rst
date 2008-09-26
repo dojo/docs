@@ -168,9 +168,9 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 
     DOM Events
 
-  * `dojo.fx <dojo/fx>`__
+  * `dojo._base.fx <dojo/_base/fx>`__
 
-    Dojo effects
+    Dojo animation effects
 
     * `dojo.animateProperty <dojo/animateProperty>`_
 
