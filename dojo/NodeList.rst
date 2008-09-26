@@ -4,10 +4,21 @@
 dojo.NodeList
 =============
 
-:Status: Contributed, Draft
+:Status: Draft
 :Version: 1.0
+:Authors: Peter Higgins
+:Developers: ?-
+:Available: since V?
 
-A NodeList is a standard Array, decorated with several very helpful functions.  
+.. contents::
+    :depth: 2
+
+A **NodeList** is a standard Array, decorated with several very helpful functions.  
+
+
+============
+Introduction
+============
 
 `dojo.query <dojo/query>`_ returns a instance of a dojo.NodeList, though you can use them standalone. 
 
@@ -25,8 +36,10 @@ The helper functions attached to the NodeList typically return the same instance
       dojo.query(e.target).style({ opacity:1 }).toggleClass("clicked");
   });
 
+
+=========================
 Common NodeList Functions
--------------------------
+=========================
 
 The `entire NodeList API <http://api.dojotoolkit.org/jsdoc/dojo/HEAD/dojo.NodeList>`_ is rather extensive, so just we're covering the most common functions here.
 
@@ -50,8 +63,10 @@ For instance, `dojo.style() <dojo/style>`_ styles a single Node around a defined
    
 As is the case for .removeClass, .addClass, .place, and most other dom-related functions in NodeList. All return the instance of the same NodeList, and allow for chaining. 
 
+
+=====================
 Events with NodeLists
----------------------
+=====================
 
 NodeList.connect() is provided as a way to add event handlers to all Nodes in the list, matching the `dojo.connect <dojo/connect>`_ API, assuming again the node to connect to is the current item in the list
 
@@ -100,8 +115,10 @@ The Event object is the same as Dojo's normalized event when using dojo.connect.
 
 Here, we've prevent a normal form from submitting, and use Ajax to send the data to the form's action="" url in an unobtrusive manner.
 
+
+==================
 Extending NodeList
-------------------
+==================
 
 Or, Writing Your Own Plugins: Adding your own code to the dojo.NodeList class makes them available to dojo.query calls. Simply use `dojo.extend <dojo/extend>`_ to mix in new functionality into the prototype:
 
@@ -116,8 +133,10 @@ Or, Writing Your Own Plugins: Adding your own code to the dojo.NodeList class ma
 
 The import part being 'return this', ensuring any following chains will work. 
 
+
+===================
 NodeList extensions
--------------------
+===================
 
 To keep the Base size to a minimum, some NodeList functionality is provided by external modules. For instance, dojo.NodeList-fx add all the required FX/Animation code to NodeList, dojox.fx.ext-dojo.NodeList provides the animation functionality from dojox.fx, and dojo.NodeList-html adds advanced HTML manipulation functions. The hyphen in the filename is meant to indicate the module being loaded modifies an existing Class, as you won't be able to call hyphenated functions directly. Simply require in the the necessary code:
 
