@@ -12,7 +12,7 @@ dojo._base.fx
 .. contents::
     :depth: 2
 
-**dojo._base.fx** contains the basic animation functions, which are available with Dojo Base (dojo.js).
+**dojo._base.fx** contains the basic animation functions, which are available with Dojo Base (included in dojo.js).
 
 
 ============
@@ -27,5 +27,3 @@ Functions
 =========
 
 * `dojo.animateProperty <dojo/animateProperty>`_
-
-
