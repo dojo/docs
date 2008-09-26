@@ -156,9 +156,13 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 
       Multiple inheritance
 
-  * `dojo.Deferred <dojo/Deferred>`_
+  * `dojo._base.Deferred <dojo/_base/Deferred>`_
 
-    Communication between threads
+    Managing Callbacks
+
+    * `dojo.Deferred <dojo/Deferred>`_
+
+      Communication between threads
 
   * `dojo._base.event <dojo/_base/event>`_
 
