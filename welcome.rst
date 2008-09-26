@@ -118,7 +118,7 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 
   * `dojo._base.connect <dojo/_base/connect>`_
 
-    Connecting events to objects
+    Functions for connecting methods to events and to subscribe and publish events
 
     * `dojo.connect <dojo/connect>`_
 
@@ -126,11 +126,11 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 
     * `dojo.disconnect <dojo/disconnect>`_
 
-      Remove linked events
+      Disconnects methods from linked topics
 
     * `dojo.subscribe <dojo/subscribe>`_
 
-      Attach a listener to a named topic
+      Linked a listener to a named topic
 
     * `dojo.unsubscribe <dojo/unsubscribe>`_
 
