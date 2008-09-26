@@ -144,9 +144,17 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 
       Ensure that everytime an event is called, a message is published on the topic.
 
-  * `dojo.declare <dojo/declare>`_
+  * `dojo._base.declare <dojo/_base/declare>`_
 
-    Creates a constructor using a compact notation for inheritance and prototype extension
+    Defining Classes
+
+    * `dojo.declare <dojo/declare>`_
+
+      Creates a constructor using a compact notation for inheritance and prototype extension
+
+    * `dojo.mixin <dojo/mixin>`_
+
+      Multiple inheritance
 
   * `dojo.Deferred <dojo/Deferred>`_
 
