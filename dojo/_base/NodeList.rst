@@ -1,0 +1,27 @@
+#format dojo_rst
+
+dojo._base.NodeList
+===================
+
+:Status: Draft
+:Version: 1.0
+:Authors: Marcus Reimann
+:Developers: ?-
+:Available: since V?
+
+.. contents::
+    :depth: 2
+
+
+**dojo._base.NodeList ** contains syntactic sugar for chaining, common iteration operations, animation, and node manipulation.
+
+As with all dojo._base components, this functions are included within Dojo Base. You get this functionality by just including dojo.js or dojo.xd.js in your page.
+
+
+========
+Features
+========
+
+* `dojo.NodeList <dojo/NodeList>`_
+
+  A class to handle a list of DOM nodes
