@@ -4,8 +4,17 @@ dojox.io
 ========
 
 :Status: Draft
-:Version: beta
-:Authors: Bryan Forbes, Kris Zyp, James Burke
+:Version: 1.0
+:Authors: ?-
+:Developers: Bryan Forbes, Kris Zyp, James Burke
+:Available: since V?
+
+.. contents::
+    :depth: 2
+
+========
+Features
+========
 
 * dojox.io.httpParse
 
