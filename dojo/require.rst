@@ -6,7 +6,7 @@ dojo.require
 
 :Status: Draft
 :Version: 1.0
-:Authors: ?--
+:Authors: Peter Higgins, Nikolai Onken, Marcus Reimann
 :Developers: ?-
 :Available: since V?
 
