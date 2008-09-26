@@ -22,8 +22,8 @@ Introduction
 TODO: introduce the basic animation functions
 
 
-=========
-Functions
-=========
+========
+Features
+========
 
 * `dojo.animateProperty <dojo/animateProperty>`_
