@@ -3,15 +3,23 @@
 dojo.declare
 ============
 
-:Status: Contributed, Draft
+:Status: Draft
 :Version: 1.0
+:Authors: ?--
+:Developers: ?--
+:Available: since V0.?
+
+.. contents::
+    :depth: 2
+
 
 Javascript doesn't have a Class system like Java, though Dojo provides functionality to simulate this: dojo.declare. For some background on JavaScript and prototype-based object orientation, chapter 9 of David Flanagan's *JavaScript: The Definitive Guide, 5th edition* is a good read.  
 
 This section has some pretty abstract stuff, and you may wish to skip it on the first read.  Certainly you can do a lot with Dojo without using dojo.declare or the other object orientation functions.  But a good knowledge of it will help you program faster and smarter.
 
+===========
 Basic Usage
------------
+===========
 
 dojo.declare accepts three arguments. The first is the name of the Class to declare, and is a string representation of the name. The second is either an object or an array of objects, each mixed into your Class in order from left to right. The third is an object hash of properties to be mixed in after all other inheritance has been solved. 
 
@@ -107,8 +115,10 @@ Note the use of anonymous functions here.  You are passing to dojo.declare an as
 
 In pure JavaScript, this is handled by a prototype function named after the class - for example, Person.prototype.  Dojo wires in your constructor as a part of the prototype, but then adds extra goodies like calling the superclass constructor and initializing extra properties.
 
+
+======================================
 Arrays and Objects as member variables
---------------------------------------
+======================================
 
 If your class contains arrays or other objects, they should be declared in the constructor so that each instance gets it's own copy. Simple types (literal strings and numbers) and are fine to declare in the class directly.
 
@@ -152,8 +162,10 @@ Why is this true for arrays and objects, but not primitives?  It's because, like
 
 Now *x* and *y* both refer to the same object. Modifying *x.fruit* will also affect *y.fruit*.
 
+
+===========
 Inheritance
------------
+===========
 
 A person can only do so much, so let's create an Employee class that extends the Person class.The second argument in the dojo.declare() function is for extending classes.
 
@@ -188,7 +200,7 @@ You initialize the subclass the same as the Person class with the new keyword.
 The Employee class passes the first three arguments down to the Person class, and sets the position.Kathryn has access to the login() function found in the Employee class, and also the moveToNewState() function by calling kathryn.moveToNewState("Texas"); Matt on the other hand, does not have access to the Employee login() function.
 
 Calling Superclass Methods
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------
 
 Often when you're overriding a method, you want to *add* something to the superclasses method, not totally replace it.  Dojo has helper functions to make this easy.
 
@@ -216,8 +228,10 @@ You can send custom parameters to the ancestor function.  Just place the extra a
 
   this.inherited(arguments, [ customArg1, customArg2 ])
 
+
+======
 Mixins
-------
+======
 
 Just as Dojo adds class-based inheritance to JavaScript, so it adds support for *multiple inheritance*.  We do this through Dojo *mixins*.   The methods and properties of a mixed-in class are simply added to each instance. 
 
@@ -257,8 +271,11 @@ This will first print "mixing in Vanilla" on the debug console because VanillaSo
 
 Mixins are used a lot in defining Dijit classes, with most classes extending ``dijit._Widget`` and mixing in ``dijit._Templated``.
 
+
+=======================
 Mixin inheritance chain
------------------------
+=======================
+
 Given:
 
    dojo.declare("foo", [bar, zot, nim])
