@@ -99,6 +99,10 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 
       Call functions when the page unloads
 
+    * `dojo.require <dojo/require>`_
+
+      Loads a Javascript module from the appropriate URI
+
   * `dojo._base.array <dojo/_base/array>`_
 
     Array utilities.
@@ -230,15 +234,31 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 
       A class to handle a list of DOM nodes
 
-  * `dojo.query <dojo/query>`_
+  * `dojo._base.query <dojo/_base/query>`_
 
     A relatively full-featured CSS3 query library
 
-  * `dojo.require <dojo/require>`_
+    * `dojo.query <dojo/query>`_
 
-    Loads a Javascript module from the appropriate URI
+      The swiss army knife of DOM node manipulation in Dojo
 
-  * `dojo.window <dojo/window>`_
+  * `dojo._base.window <dojo/_base/window>`_
+
+    * `dojo.window <dojo/window>`_
+
+    * `dojo.doc <dojo/doc>`_
+
+      Alias for the current document
+
+    * `dojo.body <dojo/body>`_
+
+      Return the body element of the document
+
+    * `dojo.setContext <dojo/setContext>`_
+
+      Changes the behavior of many core Dojo functions that deal with namespace and DOM lookup
+
+
   * `dojo.xhr <dojo/xhr>`_
 
     AJAX I/O transports and utility methods
