@@ -34,6 +34,10 @@ Features
 
   Call functions when window.onunload fires
 
+* `dojo.mixin <dojo/mixin>`_
+
+  Multiple inheritance
+
 * `dojo.require <dojo/require>`_
 
   Loads a Javascript module from the appropriate URI
