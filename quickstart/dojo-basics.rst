@@ -116,6 +116,8 @@ dojo.query
 
 The returned object of a ``dojo.query()`` call is an instance of `dojo.NodeList <dojo/NodeList>`_, a subclass of Array with many convenience methods added for making DOM manipulation and event handling easier. Custom extensions of the ``dojo.NodeList`` class are supported and encouraged.
 
+Read more about `dojo.query <dojo/query>`__...
+
 
 ============
 dojo.forEach
