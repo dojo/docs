@@ -3,9 +3,21 @@
 dojo.behavior
 =============
 
-``TODOC``
+:Status: Draft
+:Version: 1.0
+:Authors: Nikolai Onken
+:Developers: ?-
+:Available: since V?
+
+.. contents::
+    :depth: 2
 
 A very simple, lightweight mechanism for applying code to existing documents, based around `dojo.query <dojo/query>`_ for node selection, and a simple two-command API: dojo.behavior.add() and dojo.behavior.apply();
+
+
+=====
+Usage
+=====
 
 To use, simply require in the dojo.behavior module, after ``dojo.js`` is loaded:
 
@@ -29,8 +41,10 @@ As a shorthand, if a function is passed (instead of an object) to a selector, it
 
 Calling ``.apply()`` applies all the added behaviors.
 
+
+=====================
 Behaviors with events
----------------------
+=====================
 
 Beyond simple application, we can bind selectors to Dom Events, and more, using an Object hash. Simply pass the selector and object with named events, and functions as handlers. 
 
@@ -58,8 +72,10 @@ Beyond simple application, we can bind selectors to Dom Events, and more, using 
 
 The ``found:`` function is applied to all found nodes. The ``onclick:`` identifier will bind an onlick function to all found nodes. You can use any Dom Event name, such as ``onclick``, ``onmouseenter``, ``onmouseleave``, ``onblur``, etc. 
 
-Behaviors with topics:
-----------------------
+
+=====================
+Behaviors with topics
+=====================
 
 Using Dojo's `native topic system <quickstart/topics>`_, you can pass a named channel, and any node found during the apply() period will publish on that channel:
 
