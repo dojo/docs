@@ -252,6 +252,8 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 
   * `dojo._base.window <dojo/_base/window>`_
 
+    Functions for dealing with the document-wide DOM and context related stuff
+
     * `dojo.doc <dojo/doc>`_
 
       Alias for the current document
