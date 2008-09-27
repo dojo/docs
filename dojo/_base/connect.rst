@@ -15,7 +15,7 @@ dojo._base.connect
 
 **dojo._base.connect** contains functions for connecting methods to events and to subscribe and publish events.
 
-As with all dojo._base components, this functions are included within Dojo Base. You get this functionality by just including dojo.js or dojo.xd.js in your page.
+As with all dojo._base components, these functions are included within Dojo Base. You get this functionality by just including dojo.js or dojo.xd.js in your page.
 
 
 ========
