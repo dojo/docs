@@ -22,3 +22,11 @@ Features
 * `dojo.byId <dojo/byId>`_
 
   Returns the DOM node with the matching 'id'
+
+
+See also
+========
+
+* `dojo.html <dojo/html>`__
+
+  dojo.html.set() to inserts (replaces) the given content into the given node
