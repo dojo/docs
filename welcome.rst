@@ -272,7 +272,6 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 
       Call callback with documentObject as dojo.doc
 
-
   * `dojo.xhr <dojo/xhr>`_
 
     AJAX I/O transports and utility methods
