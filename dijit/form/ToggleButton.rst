@@ -25,13 +25,13 @@ Let's create a ToggleButton widget programatically, initially unchecked:
         checked: false,
         onChange: function(val){this.attr('label','checked: '+val)},
         label: "checked: false" 
-      }, "toggle");
+      }, "programmatic");
     });
     </script>
 
   .. cv:: html
  
-    <button id="toggle"><button>
+    <button id="programmatic"><button>
 
 Declarative example
 ~~~~~~~~~~~~~~~~~~~
@@ -48,7 +48,7 @@ Now let's create a ToggleButton widget with HTML markup, initially checked:
 
   .. cv:: html
  
-    <button id=toggle dojoType="dijit.form.ToggleButton" checked iconClass="dijitCheckBoxIcon">
+    <button dojoType="dijit.form.ToggleButton" checked iconClass="dijitCheckBoxIcon">
         Toggle me
     </button>
 
