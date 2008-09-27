@@ -6,7 +6,7 @@ dojo.html
 
 :Status: Draft
 :Version: 1.0
-:Authors: ?--
+:Authors: Sam Foster, Nikolai Onken, Marcus Reimann
 :Developers: ?-
 :Available: since V?
 
