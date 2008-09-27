@@ -78,24 +78,6 @@ Note: in some cases (in *lesser* browsers), ``document.getElementsById`` doesn't
 
 
 ==========
-dojo.query
-==========
-
-``dojo.query()`` returns a list of DOM nodes based on a CSS selector. Users of other libraries will find the syntax very familiar:
-
-.. code-block :: javascript
-
-  dojo.addOnLoad(function(){
-    // every element in the page with the class "blueButton" assigned
-    dojo.query(".blueButton").forEach(function(node, index, arr){
-        console.debug(node.innerHTML);
-    });
-  });
-
-The returned object of a ``dojo.query()`` call is an instance of `dojo.NodeList <dojo/NodeList>`_, a subclass of Array with many convenience methods added for making DOM manipulation and event handling easier. Custom extensions of the ``dojo.NodeList`` class are supported and encouraged.
-
-
-==========
 dijit.byId
 ==========
 
@@ -115,6 +97,24 @@ dijit.byId
   }
 
 ``dijit.byId`` returns an reference to that particular Dijit instance, and allows you to call methods and set properties. Each Dijit has several fundamental methods and properties defined by `dijit._Widget </dijit/_Widget>`_, and adds in additional specific methods depending on the type of Dijit. 
+
+
+==========
+dojo.query
+==========
+
+``dojo.query()`` returns a list of DOM nodes based on a CSS selector. Users of other libraries will find the syntax very familiar:
+
+.. code-block :: javascript
+
+  dojo.addOnLoad(function(){
+    // every element in the page with the class "blueButton" assigned
+    dojo.query(".blueButton").forEach(function(node, index, arr){
+        console.debug(node.innerHTML);
+    });
+  });
+
+The returned object of a ``dojo.query()`` call is an instance of `dojo.NodeList <dojo/NodeList>`_, a subclass of Array with many convenience methods added for making DOM manipulation and event handling easier. Custom extensions of the ``dojo.NodeList`` class are supported and encouraged.
 
 
 ============
