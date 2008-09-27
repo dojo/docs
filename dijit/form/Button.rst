@@ -10,7 +10,7 @@ dijit.form.Button
   :depth: 3
 
 
-The dijit.form.Button widget is a representation of a normal <button> or <input type="submit/reset" />
+The dijit.form.Button widget is a representation of a normal <button> or <input type="submit/reset/button" />
 
 ========
 Examples
