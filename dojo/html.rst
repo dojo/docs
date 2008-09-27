@@ -109,4 +109,5 @@ See also
 ========
 
 * `dojo._base.html <dojo/_base/html>`__
-  Basic HTML functions, included in Dojo Base
+
+  Basic DOM handling functions, included in Dojo Base
