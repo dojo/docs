@@ -4,15 +4,23 @@
 dojo.fx
 =======
 
-:Status: Contributed, Draft
+:Status: Draft
 :Version: 1.0
+:Authors: ?-
+:Developers: ?-
+:Available: since V?
 
 .. contents::
-    :depth: 3
+    :depth: 2
 
-Dojo provides a host of animation functionality in both Base Dojo (dojo.js) and as Extensions, available in dojox.fx
+Dojo provides a host of animation functionality in both `Dojo Base <dojo/_base/fx>`__ and as Extensions, available in `dojox.fx <dojox/fx>`__.
 
-Components
-----------
 
-* `dojo.fx.wipeIn <dojo/fx/wipeIn>`_ - to wipe in a node
+========
+Features
+========
+
+* `dojo.animateProperty <dojo/animateProperty>`_
+
+* `dojo.fx.wipeIn <dojo/fx/wipeIn>`_
+  To wipe in a node
