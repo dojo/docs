@@ -103,6 +103,10 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 
       Call functions when window.onunload fires
 
+    * `dojo.deprecated <dojo/deprecated>`_
+
+      Log a debug message to indicate that a behavior has been deprecated
+
     * `dojo.exists <dojo/exists>`_
 
       Determine if an object supports a given method
