@@ -6,7 +6,7 @@ dojo._base.html
 :Status: Draft
 :Version: 1.0
 :Authors: Marcus Reimann
-:Developers: ?-
+:Developers: ?--
 :Available: since V?
 
 .. contents::
