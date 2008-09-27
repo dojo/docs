@@ -20,7 +20,5 @@ Dojo provides a host of animation functionality in both `Dojo Base <dojo/_base/f
 Features
 ========
 
-* `dojo.animateProperty <dojo/animateProperty>`_
-
 * `dojo.fx.wipeIn <dojo/fx/wipeIn>`_
   To wipe in a node
