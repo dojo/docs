@@ -29,3 +29,15 @@ Features
 * `dojo.addOnUnload <dojo/addOnLoad>`_
 
   Call functions when the page unloads
+
+* `dojo.addOnWindowUnload <dojo/addOnWindowUnload>`_
+
+  Call functions when window.onunload fires
+
+* `dojo.require <dojo/require>`_
+
+  Loads a Javascript module from the appropriate URI
+
+* `dojo.windowUnloaded <dojo/windowUnloaded>`_
+
+  Signal fired by impending window destruction
