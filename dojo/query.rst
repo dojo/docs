@@ -6,7 +6,7 @@ dojo.query
 
 :Status: Draft
 :Version: 1.0
-:Authors: Nikolai Onken, Craig Riecke
+:Authors: Nikolai Onken, Craig Riecke, Marcus Reimann
 :Developers: ?-
 :Available: since V?
 
@@ -20,7 +20,7 @@ dojo.query
 Introduction
 ============
 
-XHR is half of the Ajax story. Once you make a request for data and receive it via XHR, you must change the page - display the new data in a panel, turn an indicator from red to green, or whatever . Changing HTML is, in turn, dependent on locating nodes.
+XHR is half of the AJAX story. Once you make a request for data and receive it via `dojo.xhr <dojo/_base/xhr>`__, you must change the page - display the new data in a panel, turn an indicator from red to green, or whatever. Changing HTML is, in turn, dependent on locating nodes.
 
 =====
 Usage
