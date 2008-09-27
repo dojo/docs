@@ -23,3 +23,15 @@ Features
 * `dojo.fx.wipeIn <dojo/fx/wipeIn>`_
 
   To wipe in a node
+
+========
+See also
+========
+
+* `dojo._base.fx <dojo/_base/fx>`_
+
+  Basic animation functions in Dojo Base
+
+* `dojox.fx <dojox/fx>`_
+
+  More advanced animation functions in dojox.fx
