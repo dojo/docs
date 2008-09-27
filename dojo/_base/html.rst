@@ -12,7 +12,10 @@ dojo._base.html
 .. contents::
     :depth: 2
  
-dojo._base.html contains basic DOM handling functions.
+
+**dojo._base.html** contains basic DOM handling functions.
+
+As with all dojo._base components, these functions are included within Dojo Base. You get this functionality by just including dojo.js or dojo.xd.js in your page.
 
 
 ========
