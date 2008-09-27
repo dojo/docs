@@ -1,15 +1,15 @@
 #format dojo_rst
 
-dijit.form.ValidatingTextBox
+dijit.form.ValidationTextBox
 ============================
 
 :Status: Draft
 :Version: 1.0
 :Author: CraigRiecke
 
-A ValidatingTextBox by itself '''will not''' prevent invalid entries from submission.  To ensure they're not, simply surround your form with a dijit.form.Form widget
+A ValidationTextBox by itself '''will not''' prevent invalid entries from submission.  To ensure they're not, simply surround your form with a dijit.form.Form widget
 
-ValidationTextBoxes usually use Regular Expression validation, as in the following examples:
+ValidationTextBox widgets usually use Regular Expression validation, as in the following examples:
 
 .. cv-compound::
 
