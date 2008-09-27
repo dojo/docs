@@ -103,13 +103,29 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 
       Call functions when window.onunload fires
 
+    * `dojo.exists <dojo/exists>`_
+
+      Determine if an object supports a given method
+
+    * `dojo.getObject <dojo/getObject>`_
+
+      Get a property from a dot-separated string, such as "A.B.C"
+
     * `dojo.global <dojo/global>`_
 
       Alias for the global scope
 
+    * `dojo.mixin <dojo/mixin>`_
+
+      Multiple inheritance
+
     * `dojo.require <dojo/require>`_
 
       Loads a Javascript module from the appropriate URI
+
+    * `dojo.setObject <dojo/setObject>`_
+
+      Set a property from a dot-separated string, such as "A.B.C"
 
     * `dojo.version <dojo/version>`_
 
@@ -171,10 +187,6 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
     * `dojo.declare <dojo/declare>`_
 
       Creates a constructor using a compact notation for inheritance and prototype extension
-
-    * `dojo.mixin <dojo/mixin>`_
-
-      Multiple inheritance
 
   * `dojo._base.Deferred <dojo/_base/Deferred>`_
 
