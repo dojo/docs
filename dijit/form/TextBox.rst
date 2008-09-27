@@ -19,7 +19,7 @@ HTML control, even if you don't have to do any input scrubbing.  However:
 * If the input is a time, use `dijit.form.TimeTextBox <dijit/form/TimeTextBox>`_ which features a scrolling day-planner-like time chooser.
 * If the input is a list of values, use `dijit.form.FilteringSelect <dijit/form/FilteringSelect>`_.  If you'd like to include free-form values too, 
   use `dijit.form.ComboBox <dijit/form/ComboBox>`_.  These two look like <select> controls but can use Dijit TextBox attributes as well.
-* If text can be validated with a regular expression, use `dijit.form.ValidatingTextBox <dijit/form/ValidatingTextBox>`_.
+* If text can be validated with a regular expression, use `dijit.form.ValidationTextBox <dijit/form/ValidationTextBox>`_.
 
 
 Examples
