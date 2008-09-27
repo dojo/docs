@@ -14,12 +14,7 @@ dojo._base.fx
 
 **dojo._base.fx** contains the basic animation functions, which are available with Dojo Base (included in dojo.js).
 
-
-============
-Introduction
-============
-
-TODO: introduce the basic animation functions
+As with all dojo._base components, these functions are included within Dojo Base. You get this functionality by just including dojo.js or dojo.xd.js in your page.
 
 
 ========
