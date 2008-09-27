@@ -6,7 +6,7 @@ dojo.query
 
 :Status: Draft
 :Version: 1.0
-:Authors: Nikolai Onken
+:Authors: Nikolai Onken, Craig Riecke
 :Developers: ?-
 :Available: since V?
 
@@ -15,6 +15,12 @@ dojo.query
 
 ``dojo.query()`` returns a list of DOM nodes based on a CSS selector. 
 
+
+============
+Introduction
+============
+
+XHR is half of the Ajax story. Once you make a request for data and receive it via XHR, you must change the page - display the new data in a panel, turn an indicator from red to green, or whatever . Changing HTML is, in turn, dependent on locating nodes.
 
 =====
 Usage
