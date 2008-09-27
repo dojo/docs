@@ -99,9 +99,17 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 
       Call functions when the page unloads
 
+    * `dojo.addOnWindowUnload <dojo/addOnWindowUnload>`_
+
+      Call functions when window.onunload fires
+
     * `dojo.require <dojo/require>`_
 
       Loads a Javascript module from the appropriate URI
+
+    * `dojo.windowUnloaded <dojo/windowUnloaded>`_
+
+      Signal fired by impending window destruction
 
   * `dojo._base.array <dojo/_base/array>`_
 
