@@ -13,7 +13,7 @@ dojo.query
 .. contents::
     :depth: 2
 
-``dojo.query()`` returns a list of DOM nodes based on a CSS selector. 
+**dojo.query()** returns a list of DOM nodes based on a CSS selector. 
 
 
 ============
@@ -31,11 +31,14 @@ To select HTML elements in JavaScript, you can use the browser's native DOM API,
   :linenos:
 
   <script type="text/javascript">
+    // list every node with the class "progressIndicator":
     var list = [];
     var nodes = document.getElementsByTagName("*");
     // iterate over every node in the document....SLOOOW
     for(var x = 0; x < nodes.length; x++){
+        // only nodes with the class "progressIndicator":
         if(nodes[x].className == "progressIndicator"){
+            // add to array:
             list.push(nodes[x]);
         }
     }
@@ -54,6 +57,7 @@ Better and faster: dojo.query
   :linenos:
 
   <script type="text/javascript">
+    // list every node with the class "progressIndicator":
     console.dir( dojo.query(".progressIndicator") );
   </script>
 
