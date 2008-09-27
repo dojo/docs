@@ -5,7 +5,7 @@ dojo.behavior
 
 :Status: Draft
 :Version: 1.0
-:Authors: Nikolai Onken
+:Authors: Peter Higgins, Nikolai Onken
 :Developers: ?-
 :Available: since V?
 
