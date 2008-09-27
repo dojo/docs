@@ -21,4 +21,5 @@ Features
 ========
 
 * `dojo.fx.wipeIn <dojo/fx/wipeIn>`_
+
   To wipe in a node
