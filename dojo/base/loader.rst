@@ -34,6 +34,22 @@ Features
 
   Call functions when window.onunload fires
 
+* `dojo.deprecated <dojo/deprecated>`_
+
+  Log a debug message to indicate that a behavior has been deprecated
+
+* `dojo.exists <dojo/exists>`_
+
+  Determine if an object supports a given method
+
+* `dojo.getObject <dojo/getObject>`_
+
+  Get a property from a dot-separated string, such as "A.B.C"
+
+* `dojo.global <dojo/global>`_
+
+  Alias for the global scope
+
 * `dojo.mixin <dojo/mixin>`_
 
   Multiple inheritance
@@ -41,6 +57,14 @@ Features
 * `dojo.require <dojo/require>`_
 
   Loads a Javascript module from the appropriate URI
+
+* `dojo.setObject <dojo/setObject>`_
+
+  Set a property from a dot-separated string, such as "A.B.C"
+
+* `dojo.version <dojo/version>`_
+
+  The current version number of Dojo
 
 * `dojo.windowUnloaded <dojo/windowUnloaded>`_
 
