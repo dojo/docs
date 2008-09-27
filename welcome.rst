@@ -244,8 +244,6 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 
   * `dojo._base.window <dojo/_base/window>`_
 
-    * `dojo.window <dojo/window>`_
-
     * `dojo.doc <dojo/doc>`_
 
       Alias for the current document
@@ -257,6 +255,14 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
     * `dojo.setContext <dojo/setContext>`_
 
       Changes the behavior of many core Dojo functions that deal with namespace and DOM lookup
+
+    * `dojo.withGlobal <dojo/withGlobal>`_
+
+      Call callback with globalObject as dojo.global and globalObject.document as dojo.doc
+
+    * `dojo.withDoc <dojo/withDoc>`_
+
+      Call callback with documentObject as dojo.doc
 
 
   * `dojo.xhr <dojo/xhr>`_
