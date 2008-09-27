@@ -3,10 +3,17 @@
 Functions used Everywhere
 =========================
 
+:Status: Draft
+:Version: 1.0
+:Authors: ?-
+:Developers: ?-
+:Available: since V?
+
 .. contents::
-  :depth: 2
+    :depth: 2
 
 It would be near impossible to explain any one aspect of the Dojo Toolkit without first explaining a few simple functions that appear literally *everywhere* within the codebase. These are dojo-fundamentals, and should be memorized if possible. 
+
 
 ============
 dojo.require
@@ -26,6 +33,7 @@ It may seem painful to require all modules, but Dojo rewards by:
 * Loading any dependent scripts for you. If dijit.Dialog requires dojo.math, you still need only require dijit.Dialog.
 * Preventing loading dojo packages twice. dojo.require will simply return if the package is already loaded.
 * Allowing you to build streamlined versions of Dojo. If you use dijit.Dialog a lot, you can build a custom version of dojo that loads dijit.Dialog quickly. ``dojo.require`` knows whether the function is already loaded, and so you don't have to change any of your code.
+
 
 ==============
 dojo.addOnLoad
@@ -86,6 +94,7 @@ dojo.query
 
 The returned object of a ``dojo.query()`` call is an instance of `dojo.NodeList <dojo/NodeList>`_, a subclass of Array with many convenience methods added for making DOM manipulation and event handling easier. Custom extensions of the ``dojo.NodeList`` class are supported and encouraged.
 
+
 ==========
 dijit.byId
 ==========
@@ -106,6 +115,7 @@ dijit.byId
   }
 
 ``dijit.byId`` returns an reference to that particular Dijit instance, and allows you to call methods and set properties. Each Dijit has several fundamental methods and properties defined by `dijit._Widget </dijit/_Widget>`_, and adds in additional specific methods depending on the type of Dijit. 
+
 
 ============
 dojo.forEach
@@ -169,6 +179,7 @@ does the same thing. But that's not all!  *New in 1.0*, you can collapse the fun
 
 Ay carumba!  That's a lot of functionality in a tiny 1-line package. Once you get used to the syntax, you'll never want to go back. This only scratches the surface of how useful ``dojo.forEach`` can be. There is an excellent DojoCookie about `forEach <http://dojocampus.org/content/2008/02/19/foreach-goodness/>`_ on DojoCampus.
 
+
 ============
 dojo.connect
 ============
@@ -224,8 +235,11 @@ The Dojo event system allows you to connect to DOM elements or nodes or plain Ja
 
 ``dojo.connect`` is a *lot* more powerful than can be described on the surface. See the `full rundown <dojo/connect>`_ for more examples and use-cases.
 
+
 ========
 See also
 ========
 
-* SitePen, a major Dojo contributor, has taken the liberty of writing and maintaining a `Dojo QuickStart Guide <http://sitepen.com/labs/guides/?guide=DojoQuickStart>`_. Rather than duplicate that effort, we will simply suggest you read that exceptionally helpful guide.
+* `Dojo QuickStart Guide <http://sitepen.com/labs/guides/?guide=DojoQuickStart>`_
+
+  A good tutorial for starting with Dojo Toolkit
