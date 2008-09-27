@@ -52,4 +52,5 @@ Since V0.9 most of the functionality from the dojo.event package has moved to do
 See also
 ========
 
-* `dojo.behavior with Events <dojo/behavior#Behaviors with events>`__
+* `Dojo's Event System <quickstart/events>`__
+* `dojo.behavior with Events <dojo/behavior#behaviors-with-events>`__
