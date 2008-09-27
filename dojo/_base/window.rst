@@ -15,7 +15,7 @@ dojo._base.window
 
 **dojo._base.window** contains functions for dealing with the document-wide DOM and context related stuff.
 
-As with all dojo._base components, this functions are included within Dojo Base. You get this functionality by just including dojo.js or dojo.xd.js in your page.
+As with all dojo._base components, these functions are included within Dojo Base. You get this functionality by just including dojo.js or dojo.xd.js in your page.
 
 
 ========
