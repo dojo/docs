@@ -20,11 +20,11 @@ Let's create a ToggleButton widget programatically, initially unchecked:
     <script type="text/javascript">
     dojo.require("dijit.form.Button");
     dojo.addOnLoad(function(){
-      new dijit.form.Togglebutton({
-        showLabel:true,
+      new dijit.form.ToggleButton({
+        showLabel: true,
         checked: false,
-        onChange:function(val){this.attr('label','checked: '+val)},
-        label:"checked: false" 
+        onChange: function(val){this.attr('label','checked: '+val)},
+        label: "checked: false" 
       }, "toggle");
     });
     </script>
