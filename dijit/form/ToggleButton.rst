@@ -3,7 +3,7 @@
 dijit.form.ToggleButton
 =======================
 
-ToggleButton widgets are a cross between Button and CheckBox widgets. They are created like Button widgets, but like CheckBox widgets, they maintain a *checked* boolean attribute (settable/gettable) that toggles on each click action.  Unlike CheckBox widgets however, ToggleButton widgets do not submit any value on FORM submit.  They are used solely for client-side processing where the user is toggle between 2 states.
+ToggleButton widgets are a cross between Button and CheckBox widgets. They are created like Button widgets, but like CheckBox widgets, they maintain a *checked* boolean attribute (settable/gettable) that toggles on each click action.  Unlike CheckBox widgets however, ToggleButton widgets do not submit any value on FORM submit.  They are used solely for client-side processing where the user can toggle between 2 states before performing some additional action.
 
 Examples
 --------
@@ -23,8 +23,8 @@ Let's create a ToggleButton widget programatically, initially unchecked:
       new dijit.form.ToggleButton({
         showLabel: true,
         checked: false,
-        onChange: function(val){this.attr('label','checked: '+val)},
-        label: "checked: false" 
+        onChange: function(val){this.attr('label',val)},
+        label: "false" 
       }, "programmatic");
     });
     </script>
