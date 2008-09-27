@@ -27,3 +27,16 @@ Features
 ========
 
 * `dojo.animateProperty <dojo/animateProperty>`_
+
+
+========
+See also
+========
+
+* `dojo.fx <dojo/fx>`_
+
+  Advanced animation functions in dojo.fx
+
+* `dojox.fx <dojox/fx>`_
+
+  More advanced animation functions in dojox.fx
