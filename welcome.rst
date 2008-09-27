@@ -103,9 +103,17 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 
       Call functions when window.onunload fires
 
+    * `dojo.global <dojo/global>`_
+
+      Alias for the global scope
+
     * `dojo.require <dojo/require>`_
 
       Loads a Javascript module from the appropriate URI
+
+    * `dojo.version <dojo/version>`_
+
+      The current version number of Dojo
 
     * `dojo.windowUnloaded <dojo/windowUnloaded>`_
 
