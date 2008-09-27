@@ -6,12 +6,12 @@ dojo._base.html
 :Status: Draft
 :Version: 1.0
 :Authors: Marcus Reimann
-:Developers: ?--
+:Developers: ?-
 :Available: since V?
 
 .. contents::
     :depth: 2
- 
+
 
 **dojo._base.html** contains basic DOM handling functions.
 
@@ -27,6 +27,7 @@ Features
   Returns the DOM node with the matching 'id'
 
 
+========
 See also
 ========
 
