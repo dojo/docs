@@ -6,7 +6,7 @@ dojo.fx
 
 :Status: Draft
 :Version: 1.0
-:Authors: Peter Higgins, Nikolai Onken
+:Authors: Peter Higgins, Nikolai Onken, Marcus Reimann
 :Developers: ?-
 :Available: since V?
 
