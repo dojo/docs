@@ -33,7 +33,7 @@ Dojo Book Outline
   * `Form, Validation, Specialized Input <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input>`_. maps to: `dijit.form <dijit/form>`_ [[CraigRiecke]]
 
     * `Form Widget <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/form-widget>`_. maps to: `Form <dijit/form/Form>`_  (complete)
-    * `CheckBox, RadioButton, ToggleButton <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/checkbox-radiobutton>`_. maps to: `Checkbox <dijit/form/CheckBox>`_, `RadioButton <dijit/form/RadioButton>`_, `ToggleButton <dijit/form/ToggleButton>`_
+    * `CheckBox, RadioButton, ToggleButton <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/checkbox-radiobutton>`_. maps to: `Checkbox <dijit/form/CheckBox>`_, `RadioButton <dijit/form/RadioButton>`_, `ToggleButton <dijit/form/ToggleButton>`_ (done: doughays)
     * `Dijit ComboBox <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/auto-completer>`_. maps to: `ComboBox <dijit/form/ComboBox>`_ (done: doughays)
     * `Dijit FilteringSelect <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/select>`_. maps to: `FilteringSelect <dijit/form/FilteringSelect>`_ (done: doughays)
     * `Dijit NumberSpinner <http://dojotoolkit.org/book/dojo-book-0-9/part-2-dijit/form-validation-specialized-input/number-spinner>`_. maps to `NumberSpinner <dijit/form/NumberSpinner>`_ [[CraigRiecke]].
