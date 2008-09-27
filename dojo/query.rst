@@ -22,6 +22,42 @@ Introduction
 
 XHR is half of the AJAX story. Once you make a request for data and receive it via `dojo.xhr <dojo/_base/xhr>`__, you must change the page - display the new data in a panel, turn an indicator from red to green, or whatever. Changing HTML is, in turn, dependent on locating nodes.
 
+A bad solution: using the DOM API
+---------------------------------
+
+To select HTML elements in JavaScript, you can use the browser's native DOM API, but they're verbose and hard to work with...not to mention slow. For example, retrieving all nodes with the class "progressIndicator" uses this code:
+
+.. code-block :: javascript
+  :linenos:
+
+  <script type="text/javascript">
+    var list = [];
+    var nodes = document.getElementsByTagName("*");
+    // iterate over every node in the document....SLOOOW
+    for(var x = 0; x < nodes.length; x++){
+        if(nodes[x].className == "progressIndicator"){
+            list.push(nodes[x]);
+        }
+    }
+    console.dir(list);
+  </script>
+
+Oy! That's a lot of code for what should be very simple. It's also very slow. 
+
+Better and faster: dojo.query
+-----------------------------
+
+**dojo.query** gives us a more compact way to do it, and it's often faster, particularly as we ask for more sophisticated kinds of relationships. The following is exactly equivalent to our first example:
+
+
+.. code-block :: javascript
+  :linenos:
+
+  <script type="text/javascript">
+    console.dir( dojo.query(".progressIndicator") );
+  </script>
+
+
 =====
 Usage
 =====
@@ -37,7 +73,14 @@ Users of other libraries will find the syntax very familiar:
     });
   });
 
-The returned object of a ``dojo.query()`` call is an instance of `dojo.NodeList <dojo/NodeList>`_, a subclass of Array with many convenience methods added for making DOM manipulation and event handling easier. Custom extensions of the ``dojo.NodeList`` class are supported and encouraged.
+The returned object of a **dojo.query()** call is an instance of `dojo.NodeList <dojo/NodeList>`_, a subclass of Array with many convenience methods added for making DOM manipulation and event handling easier. Custom extensions of the **dojo.NodeList** class are supported and encouraged.
+
+
+========
+Examples
+========
+
+TODO
 
 
 =======================
@@ -93,10 +136,3 @@ E > F	               an F element child of an E element
 E + F	               an F element immediately preceded by an E element
 E ~ F	               an F element preceded by an E element
 ====================== ==========
-
-
-========
-Examples
-========
-
-TODO
