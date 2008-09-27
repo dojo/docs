@@ -21,3 +21,23 @@ As with all dojo._base components, this functions are included within Dojo Base.
 ========
 Features
 ========
+
+* `dojo.doc <dojo/doc>`_
+
+  Alias for the current document
+
+* `dojo.body <dojo/body>`_
+
+  Return the body element of the document
+
+* `dojo.setContext <dojo/setContext>`_
+
+  Changes the behavior of many core Dojo functions that deal with namespace and DOM lookup
+
+* `dojo.withGlobal <dojo/withGlobal>`_
+
+  Call callback with globalObject as dojo.global and globalObject.document as dojo.doc
+
+* `dojo.withDoc <dojo/withDoc>`_
+
+  Call callback with documentObject as dojo.doc
