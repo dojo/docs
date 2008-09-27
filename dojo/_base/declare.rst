@@ -22,7 +22,3 @@ Features
 * `dojo.declare <dojo/declare>`_
 
   Creates a constructor using a compact notation for inheritance and prototype extension
-
-* `dojo.mixin <dojo/mixin>`_
-
-  Multiple inheritance
