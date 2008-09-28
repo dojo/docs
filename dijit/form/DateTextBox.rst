@@ -35,16 +35,19 @@ Example
 
 Standard Date Format
 --------------------
-One universal problem with dates is they can be written so many different ways.  In Great Britain, "5/8/2008" means August 5th where in the U.S. 
+One universal problem with specifying dates as text strings is they can be written so many different ways.  In Great Britain, "5/8/2008" means August 5th where in the U.S. 
 it means May 8th.  Fortunately, Dojo respects the browser's locale so that the date will be properly parsed.  
 
-The trouble is your application does not have a locale.  If you write the attribute ``value='5/8/2008'``, how does DateTextBox know what you mean?  To prevent this ambiguity, DateTextBox allows only one date format: the familiar UNIX date format  ``yyyy-mm-dddThh:mm:ss``.  For example:
+The trouble is your application does not have a locale.  If you write the attribute ``value='5/8/2008'``, how does DateTextBox know what you mean?  To prevent this ambiguity, DateTextBox allows only one date format when specified declaratively in HTML markup: the familiar UNIX date format  ``yyyy-mm-dddThh:mm:ss``.  For example:
 
 * 2007-12-25T00:00:30 means 30 seconds after midnight on December 25, 2007.
 * 2007-05-08T17:30:00 means 5:30 PM on May 8, 2007
 * 2003-04-22 means midnight April 22, 2003 
 
 UNIX date format values sort properly as strings, which make them nice for things like `dojox.grid <dojox/grid>`_.
+
+However, when you get the widget's current ``value`` programmatically, the returned value will be the native JavaScript Date object.
+The time portion of this value should be ignored.
 
 Sending and Receiving Server Formats
 ------------------------------------
