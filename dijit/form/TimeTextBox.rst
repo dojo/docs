@@ -4,43 +4,40 @@ dijit.form.TimeTextBox
 ======================
 
 :Status: Draft
-:Version: 1.2
+:Version: 1.0
 
-.. contents::
-  :depth: 3
+TimeTextBox widgets are handy, easy-to-use time entry controls that allow either typing or choosing a time from any time-picker widget.
 
-========
-Examples
-========
+``dijit.form.TimeTextBox``:
 
-The following example demonstrates how to create a date textbox programatically:
+* is a `mapped form control <dijit/form#mapped>`_
+* validates against locale-sepcific `i18n <dojo/i18n>`_ rules
+* also validates against developer-provided ``constraints`` like ``min``, ``max``, etc.
 
-.. cv-compound::
-
-  .. cv:: javascript
-
-     <script type="text/javascript">
-     dojo.require("dijit.form.DateTextBox");
-
-     dojo.addOnLoad(function(){
-       var dateBox = new dijit.form.DateTextBox({}, "date");
-     });
-     </script>
-
-  .. cv:: html
-
-     <input type="text" id="date" />
-
-Lets create a date textbox declaratively
+Example
+-------
 
 .. cv-compound::
 
   .. cv:: javascript
 
      <script type="text/javascript">
-     dojo.require("dijit.form.DateTextBox");
+     dojo.require("dijit.form.TimeTextBox");
      </script>
 
   .. cv:: html
 
-     <input type="text" dojoType="dijit.form.DateTextBox" />
+	<input type="text" name="date1" id="time1" value="T15:00:00"
+		dojoType="dijit.form.TimeTextBox"
+		required="true" />
+        <label for="time1">Drop down Time box.  Click inside to display the time picker.</label>
+
+Standard Time Format
+--------------------
+
+To prevent this ambiguity in specifying time formats, TimeTextBox allows only one time format ``THH:MM:SS`` when specifying times declaritively in HTML markup or when communicating with a server:
+
+* T00:00:30 means 30 seconds after midnight
+* T17:30:00 means 5:30 PM
+
+However, when you get the widget's current ``value`` programmatically on the client, the returned value will be the native JavaScript Date object.  The date portion of this value should be ignored.
