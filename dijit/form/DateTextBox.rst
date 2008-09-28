@@ -99,17 +99,8 @@ Changing Constraints on the Fly
 DateTextBox obeys the constraints you give, much like `dijit.form.NumberTextBox <dijit/form/NumberTextBox>`_  Sometimes you may need to change these constraints based on
 user input.  To do this, you can set new constraints on the widget, but the catch is you must use JavaScript dates.
 
-For example, this DateTextBox will not allow you to enter a day before today:
+TODO: For example, this DateTextBox will not allow you to enter a day before today:
 
-.. cv-compound::
-
-Describe what you're doing.
-
-  .. cv:: javascript
-  :label: Create the DateTextBox programmatically
-
-  .. cv:: html
-  :label:
 
 Two-Digit Year Format
 ---------------------
