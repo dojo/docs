@@ -32,7 +32,7 @@ Example
                 onChange="dojo.byId('val').value=arguments[0].toString().replace(/.*1970\s(\S+).*/,'T$1')"
 		required="true" />
         <label for="time1">Drop down Time box.  Click inside to display the time picker.</label>
-        <br>string value: <input readonly disabled id='val' value='blur widget to set' />
+        <br>string value: <input readonly disabled id='val' value='value not changed' />
 
 
 Standard Time Format
