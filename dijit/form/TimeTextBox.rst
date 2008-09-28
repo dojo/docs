@@ -51,10 +51,10 @@ Programmatic
 
   .. cv:: html
 
-     <input id="programmatic" />
+     <input id="programmatic">
      <script type="text/javascript">
        dojo.addOnLoad(function(){
-         new dijit.form.TimeTextBox({name:"programmatic", value:new Date()},"programmatic");
+         new dijit.form.TimeTextBox({name:"programmatic", value:new Date()},dojo.byId("programmatic"));
        });
      </script>
 
