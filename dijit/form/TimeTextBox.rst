@@ -50,12 +50,13 @@ Programmatic
        dojo.addOnLoad(function(){
          new dijit.form.TimeTextBox({ 
            name: 'programmatic', value: new Date()
-       }, "programmatic");
+         }, "programmatic");
+       });
      </script>
 
   .. cv:: html
 
-     <input type="text" id="programmatic" />
+     <input id="programmatic" />
 
 
 Standard Time Format
