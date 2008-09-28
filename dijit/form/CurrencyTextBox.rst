@@ -7,7 +7,7 @@ dijit.form.CurrencyTextBox
 :Version: 1.0
 :Author: CraigRiecke
 
-CurrencyTextBox widgets inherit all the attributes and behaviors of the `NumberTextBox <dijit/form/NumberTextBox>`_ widget but is specialized for input monetary values, much like the currency type in spreadsheet programs.
+CurrencyTextBox widgets inherit all the attributes and behaviors of the `NumberTextBox <dijit/form/NumberTextBox>`_ widget but are specialized for input monetary values, much like the currency type in spreadsheet programs.
 
 The ``value`` attribute is a native JavaScript floating point number.  
 This means that you can easily build CurrencyTextBox widgets for a wide range of currencies without having to set a different value for each currency format.  
