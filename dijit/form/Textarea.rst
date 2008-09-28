@@ -45,3 +45,24 @@ Here we'll create a Textarea widget declaratively.  In this instance, the initia
   .. cv:: html
 
     <textarea id="textarea2" nae="textarea2" dojoType="dijit.form.Textarea" style="width:200px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</textarea> 
+
+Accessibility
+=============
+
+Keyboard
+--------
+
+================================================  ==========   ===============
+Action	                                          Key	       Comments
+================================================  ==========   ===============
+Move focus to the next widget in the tab order.   Tab
+Move focus to the prior widget in the tab order.  Shift+Tab
+Enter a newline into the text.                    Enter
+Revert the last entry.                            Esc          If the user has not entered data, the Esc key is ignored.
+================================================  ==========   ===============
+
+
+Known Issues
+------------
+
+    * On Firefox 2, the user must press the Tab key twice before keyboard focus moves to the next widget. (There is no problem when using Shift+Tab.) This is a permanent restriction on Firefox 2.
