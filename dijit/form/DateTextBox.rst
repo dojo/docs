@@ -105,10 +105,10 @@ For example, this DateTextBox will not allow you to enter a day before today:
 
 Describe what you're doing.
 
-  ..cv:: javascript
+  .. cv:: javascript
   :label: Create the DateTextBox programmatically
 
-  ..cv:: html
+  .. cv:: html
   :label:
 
 Two-Digit Year Format
