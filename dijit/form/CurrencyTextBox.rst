@@ -29,7 +29,7 @@ The optional boolean ``fractional`` property of the ``constraints`` object attri
 		required="true"
 		constraints="{fractional:true}"
 		currency="USD"
-		invalidMessage="Invalid amount.  Include dollar sign, commas, and cents.">
-        <label for="income1">U.S. Dollars, comma is allowed</label>
+		invalidMessage="Invalid amount.  Cents are required.">
+        <label for="income1">U.S. Dollars</label>
 
         
