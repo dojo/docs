@@ -17,11 +17,11 @@ Quick Start
 -----------
 The following example shows how the default widget works. Make it work by
 
-#. use the attribute ``dojoType="dojox.form.Rating"`` on the node that shall represent the rating widget
+#. using the attribute ``dojoType="dojox.form.Rating"`` on the node that shall contain the rating widget
 #. require the code by adding ``dojo.require("dojox.form.Rating");`` in your JS code
-#. import the CSS file, ``<style type="text/css">@import "dojox/form/resources/Rating.css";</style>`` otherwise it won't know how to style and what images to use.
+#. import the CSS file ``<style type="text/css">@import "dojox/form/resources/Rating.css";</style>``, otherwise it won't know how to style and what images to use.
 
-You can **reset the number of stars to 0** by clicking on the currently selected star. For example, if two stars are currently selected click on the second star again and no star will be selected.
+Now you are set and the rating widget should render and be useable.
 
 .. codeviewer::
   
@@ -34,10 +34,12 @@ You can **reset the number of stars to 0** by clicking on the currently selected
 
   <div dojoType="dojox.form.Rating"></div>
 
+You can **reset the number of stars to 0** by clicking on the currently selected star. For example, if two stars are currently selected click on the second star again and no star will be selected.
+
 
 Standard options
 ----------------
-This example shows how to use additional attribute to parametrize the widget. The attribute ``numStars="10"`` tells the widget to show ten stars, ``value="4"`` sets the initially selected number of stars. 
+This example shows how to use additional attributes to customize the widget. The attribute ``numStars="10"`` tells the widget to show ten stars, ``value="4"`` sets the initially selected number of stars. 
 
 .. codeviewer::
   
