@@ -45,7 +45,7 @@ This is actually not difficult to do.  This is done through usage of the dojo.da
     var json = {};
     if (item && store) {
       //Determine the attributes we need to process.
-      var attributes = store.getAttributes();
+      var attributes = store.getAttributes(item);
       if (attributes && attributes.length > 0) {
         var i;
         for (i = 0; i < attributes.length; i++) {
