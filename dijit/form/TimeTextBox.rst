@@ -14,25 +14,48 @@ TimeTextBox widgets are handy, easy-to-use time entry controls that allow either
 * validates against locale-sepcific `i18n <dojo/i18n>`_ rules
 * also validates against developer-provided ``constraints`` like ``min``, ``max``, etc.
 
-Example
--------
+Examples
+--------
+
+Declarative
+~~~~~~~~~~~
 
 .. cv-compound::
 
   .. cv:: javascript
 
      <script type="text/javascript">
-     dojo.require("dijit.form.TimeTextBox");
+       dojo.require("dijit.form.TimeTextBox");
      </script>
 
   .. cv:: html
 
-	<input type="text" name="date1" id="time1" value="T15:00:00"
-		dojoType="dijit.form.TimeTextBox"
-                onChange="dojo.byId('val').value=arguments[0].toString().replace(/.*1970\s(\S+).*/,'T$1')"
-		required="true" />
-        <label for="time1">Drop down Time box.  Click inside to display the time picker.</label>
-        <br>string value: <input readonly disabled id='val' value='value not changed' />
+     <input type="text" name="date1" id="time1" value="T15:00:00"
+       dojoType="dijit.form.TimeTextBox"
+       onChange="dojo.byId('val').value=arguments[0].toString().replace(/.*1970\s(\S+).*/,'T$1')"
+       required="true" />
+     <label for="time1">Drop down Time box.  Click inside to display the time picker.</label>
+     <br>string value: <input readonly disabled id='val' value='value not changed' />
+
+
+Programmatic
+~~~~~~~~~~~~
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+     <script type="text/javascript">
+       dojo.require("dijit.form.TimeTextBox");
+       dojo.addOnLoad(function(){
+         new dijit.form.TimeTextBox({ 
+           name: 'programmatic', value: new Date()
+       }, "programmatic");
+     </script>
+
+  .. cv:: html
+
+     <input type="text" id="programmatic" />
 
 
 Standard Time Format
