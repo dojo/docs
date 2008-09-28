@@ -48,16 +48,16 @@ Programmatic
      <script type="text/javascript">
        dojo.require("dijit.form.TimeTextBox");
        dojo.addOnLoad(function(){
-         new dijit.form.TimeTextBox({name:"programmatic", value:new Date(),
+         new dijit.form.TimeTextBox({name:"prog_val", value:new Date(),
            constraints:{timePattern:'HH:mm:ss', clickableIncrement:'T00:15:00', visibleIncrement:'T00:15:00', visibleRange:'T01:00:00'}
-         }, "programmatic");
+         }, "prog_val");
        });
      </script>
 
   .. cv:: html
 
-     <input id="programmatic"/>
-     <label for="programmatic">Drop down Time box.  Click inside to display the time picker.</label>
+     <input id="prog_val"/>
+     <label for="prog_val">Drop down Time box.  Click inside to display the time picker.</label>
 
 
 Standard Time Format
