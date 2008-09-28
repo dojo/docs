@@ -40,7 +40,7 @@ All Widgets, that are similar to <input>:
 * `dijit.form.NumberTextBox </NumberTextBox>`_
 * `dijit.form.TextBox </TextBox>`_
 * `dijit.form.TimeTextBox </TimeTextBox>`_
-* `dijit.form.ValidationTextbox </ValidationTextbox>`_
+* `dijit.form.ValidationTextBox </ValidationTextBox>`_
 
 TextArea
 --------
