@@ -7,11 +7,13 @@ dijit.form.DateTextBox
 :Version: 1.0
 :Author: CraigRiecke
 
-DateTextBox is a handy, easy-to-use date entry control.  It allows typing or choosing a date from a drop-down calendar.  ``dijit.form.DateTextBox``:
+DateTextBox widgets are handy, easy-to-use date entry controls that allow either typing or choosing a date from any calendar widget.
+
+``dijit.form.DateTextBox``:
 
 * is a `mapped form control <dijit/form#mapped>`_
 * validates against locale-sepcific `i18n <dojo/i18n>`_ rules
-* also validates against developer-provided constraints like min, max, valid days of the week, etc.
+* also validates against developer-provided ``constraints`` like ``min``, ``max``, valid days of the week, etc.
 
 Example
 -------
