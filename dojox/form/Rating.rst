@@ -1,17 +1,25 @@
 #format dojo_rst
 
+.. contents::
+    :depth: 3
+
 dojox.widget.Rating
 ===================
 
 :Status: Contributed, Draft
 :Version: 1.2
 
-This widget allows users to rate items. By default it shows three stars, that are provided with dojox. 
-This is a form widget, which means that you can simply embed it inside a dojo form, which submits the value automatically too.
+This widget allows users to rate items. By default it shows three stars. The star images are provided with dojox. 
+This is a form widget, which means that you can simply embed it inside a dojo form, which submits the value automatically too. 
+But it doesn't require to be inside a form.
 
-Default widget
----------------
-The following example shows how the default widget works, just use the attribute ``dojoType="dojox.form.Rating"`` on some standard node and you will get the following result as shown below. Make sure to import the CSS file too, otherwise it won't know how to style and what images to use.
+Quick Start
+-----------
+The following example shows how the default widget works. Make it work by
+
+#. use the attribute ``dojoType="dojox.form.Rating"`` on the node that shall represent the rating widget
+#. require the code by adding ``dojo.require("dojox.form.Rating");`` in your JS code
+#. import the CSS file, ``<style type="text/css">@import "dojox/form/resources/Rating.css";</style>`` otherwise it won't know how to style and what images to use.
 
 You can **reset the number of stars to 0** by clicking on the currently selected star. For example, if two stars are currently selected click on the second star again and no star will be selected.
 
