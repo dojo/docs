@@ -48,9 +48,7 @@ Programmatic
      <script type="text/javascript">
        dojo.require("dijit.form.TimeTextBox");
        dojo.addOnLoad(function(){
-         new dijit.form.TimeTextBox({ 
-           name: 'programmatic', value: new Date()
-         }, "programmatic");
+         new dijit.form.TimeTextBox({name:"programmatic", value:new Date()},"programmatic");
        });
      </script>
 
