@@ -49,7 +49,7 @@ Programmatic
        dojo.require("dijit.form.TimeTextBox");
        dojo.addOnLoad(function(){
          new dijit.form.TimeTextBox({name:"programmatic", value:new Date(),
-           constraints={timePattern:'HH:mm:ss', clickableIncrement:'T00:15:00', visibleIncrement:'T00:15:00', visibleRange:'T01:00:00'}
+           constraints:{timePattern:'HH:mm:ss', clickableIncrement:'T00:15:00', visibleIncrement:'T00:15:00', visibleRange:'T01:00:00'}
          }, "programmatic");
        });
      </script>
