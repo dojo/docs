@@ -3,7 +3,23 @@
 dijit.form.Form
 ===============
 
-dijit.form.Form is the dijit equivalent of the <form> node, and it provides various methods for serializing/deserializing form data, and checking whether or not a form is valid.
+:Status: Draft
+:Version: 1.0
+:Authors: ?--
+:Developers: ?-
+:Available: since V?
+
+.. contents::
+    :depth: 2
+
+**dijit.form.Form** is the dijit equivalent of the <form> node, and it provides various methods for serializing/deserializing form data, and checking whether or not a form is valid.
+
+========
+Examples
+========
+
+Declarative example
+-------------------
 
 .. cv-compound::
 
