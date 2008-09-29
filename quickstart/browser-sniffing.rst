@@ -22,12 +22,7 @@ Dojo provides a number of ``is`` variables, defined at runtime based on the user
 * dojo.isQuirks - is the browser in Quirks-Mode
 * dojo.isBrowser (not typically needed when only targeting browsers)
 
-Each variable is only defined if the specified browser is being used. For example, if you're using Internet Explorer, only dojo.isIE is defined; all the other variables are undefined. The variable holds the browser version number as a Number, so you can easily perform version checks. Additionally, since undefined always evaluates as false in if statements, you can use code like this to check for a certain browser version.
-
-
-=====
-Usage
-=====
+Each variable is only defined if the specified browser is being used. For example, if you're using Internet Explorer, only dojo.isIE is defined; all the other variables are undefined. The variable holds the browser version number as a Number, so you can easily perform version checks. Additionally, since undefined always evaluates as false in if statements, you can use code like this to check for a certain browser version:
 
 .. code-block:: javascript
   :linenos:
