@@ -34,13 +34,13 @@ The first example shows how to create a button programmatically.
     dojo.addOnLoad(function(){
       var button = new dijit.form.Button({
                     label: "Click me!"
-      }, "buttonNode");
+      }, "progButtonNode");
     });
     </script>
 
   .. cv:: html
 
-    <button id="buttonNode"></button>
+    <button id="progButtonNode"></button>
 
 Declarative example
 -------------------
