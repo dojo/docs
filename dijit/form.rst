@@ -66,22 +66,7 @@ Miscellaneous
 * `dijit.form.CheckBox </CheckBox>`_
 * `dijit.form.RadioButton </RadioButton>`_: to select one choice from a list
 
-There are also some notable widgets in `dojox.form <dojox/form>`_ that complement the dijit.form pieces and will probably be incorporated into dijit eventually:
-
-* BusyButton
-* CheckedMultiSelect
-* DateTextBox
-* DropDownSelect
-* DropDownStack
-* FileInput (base, Auto, and Blind)
-* FilePickerTextBox
-* `FileUploader <form/FileUploader>`_
-* MultiComboBox
-* PasswordValidator
-* RadioStack
-* RangeSliders
-* Rating
-* TimeSpinner
+There are also some notable widgets in `dojox.form <dojox/form>`_ and `dojox.widget <dojox/widget>`_ that complement the dijit.form pieces and will probably be incorporated into dijit eventually.
 
 
 ===============
