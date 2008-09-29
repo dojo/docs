@@ -4,13 +4,24 @@
 dijit.layout.TabContainer
 =========================
 
-:Status: Contributed, Draft
+:Status: Draft
 :Version: 1.0
+:Authors: ?--
+:Developers: ?-
+:Available: since V?
 
 .. contents::
-   :depth: 3
+    :depth: 2
 
-A TabContainer is a container that has multiple panes, but shows only one pane at a time. There are a set of tabs corresponding to each pane, where each tab has the title (aka label) of the pane, and optionally a close button. You can use tabs in your own application and style them as you want, but they also fit perfectly into the dijit.layout system. 
+A TabContainer is a container that has multiple panes, but shows only one pane at a time. There are a set of tabs corresponding to each pane, where each tab has the title (aka label) of the pane, and optionally a close button.
+
+
+=====
+Usage
+=====
+
+You can use tabs in your own application and style them as you want, but they also fit perfectly into the dijit.layout system. 
+
 
 ========
 Examples
@@ -123,6 +134,7 @@ This is a plain TabContainer with three tabs and flexible height using the doLay
 
     <!-- end of the div -->
     </div>
+
 
 =============
 More examples
@@ -270,6 +282,7 @@ It is worth noting: If you need a function to be called *absolutely every* time 
   });
   
 This is because ``addChild`` will not be called for existing panes (in markup).
+
 
 =============
 Accessibility
