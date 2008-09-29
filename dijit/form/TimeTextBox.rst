@@ -5,7 +5,7 @@ dijit.form.TimeTextBox
 
 :Status: Draft
 :Version: 1.0
-:Authors: ?--
+:Authors: Mark Hays, Nikolai Onken, Marcus Reimann, Craig Riecke
 :Developers: ?-
 :Available: since V?
 
