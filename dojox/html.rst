@@ -46,4 +46,6 @@ Features
 See also
 ========
 
-* `dojo.html.set <dojo/html/set>`_
+* `dojo.html <dojo/html>`_
+
+  Inserting contents in HTML nodes
