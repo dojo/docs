@@ -32,7 +32,7 @@ Usage
 Standard Time Format
 --------------------
 
-To prevent this ambiguity in specifying time formats, TimeTextBox allows only one time format ``THH:MM:SS`` when specifying times declaritively in HTML markup or when communicating with a server:
+To prevent the ambiguity in specifying time formats, TimeTextBox allows only one time format ``THH:MM:SS`` when specifying times declaritively in HTML markup or when communicating with a server:
 
 * T00:00:30 means 30 seconds after midnight
 * T17:30:00 means 5:30 PM
