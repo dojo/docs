@@ -594,6 +594,21 @@ These sections cover the available projects shipped with the Dojo Toolkit
 * `dojox.help <dojox/help>`_
 * `dojox.highlight <dojox/highlight>`_
 * `dojox.html <dojox/html>`_
+
+  Offers additional HTML helper functions
+
+  * `dojox.html.set <dojox/html/set>`_
+
+    A generic content setter, including adding new stylesheets and evaluating scripts (was part of ContentPane loaders, now separated for generic usage)
+
+  * `dojox.html.metrics <dojox/html/metrics>`_
+
+    Functions to translate CSS values to pixel values, calculate scrollbar sizes and font resizes
+
+  * `dojox.html.styles <dojox/html/styles>`_
+
+    Insert, remove and toggle CSS rules as well as search document for style sheets
+
 * `dojox.image <dojox/image>`_
 
   * `dojox.image.Lightbox <dojox/image/Lightbox>`_
