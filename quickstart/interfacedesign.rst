@@ -4,16 +4,19 @@ UI Development with the Dojo Toolkit
 ====================================
 
 :Status: Draft
-:Version: 1.2
+:Version: 1.0
+:Authors: Peter Higgins, Nikolai Onken
 
 .. contents::
-    :depth: 3
+    :depth: 2
 
 The Dojo Toolkit comes with many amaing modules which all are trying to make your live as a developer many times easier.
 This short introduction to UI Development will introduce you to the main Dojo layout and form widgets.
 
+
+===================
 Why use Dojo/Dijit?
--------------------
+===================
 
 One of the great features of dijit is the fact that it is all ready for a11y (accesibility) and i18n (internationalisation).
 Imagine you are working on a new product, your current market is the one of your country and you are not too concerned about delivering your product in several different languages. Thinking about making your product accessible for people with disabilities is way down the list of your priorities. 
@@ -24,31 +27,35 @@ And last but not least, dijit comes with different awesome themes and it is very
 
 Now if you are still doubting, lets go ahead and dive right into a simple UI we will use to retrieve the latest news from a news service provider. What will we use? 
 
+
+===============
 Our ingredients
----------------
+===============
 
 dijit.layout
-~~~~~~~~~~~~
+------------
 
 Dijit includes a sub namespace dijit.layout which contains very powerful layouting widgets. You can use those to create complex window-style (Note, not MS Windows ;) ) UIs but also to just enhance pages with single functionality such as tabs or content panes to load content dynamically.
 
 dijit.form
-~~~~~~~~~~
+----------
 
 For all your form related needs you are best helped by dijit.form. All native form elements are covered and even more advanced elements such as a ComboBox are available in dijit.form
 
 dojox.grid
-~~~~~~~~~~
+----------
 
 The grid is the ultimate data visualizer. We can retrieve thousands of results, display them, filter them, sort them, and of course view their contents.
 
 A few other helper widgets
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------
 
 We'll also use a Tree widget to navigate through different news categories and we'll use a fancy set of icons (free, opensource) to make our app look like we want it to look.
 
+
+=============
 The interface
--------------
+=============
 
 We'll go for a simple left/top/bottom interface. 
 
