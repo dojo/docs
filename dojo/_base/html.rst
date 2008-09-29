@@ -34,3 +34,7 @@ See also
 * `dojo.html <dojo/html>`__
 
   dojo.html.set() to inserts (replaces) the given content into the given node
+
+* `dojox.html <dojox/html>`__
+
+  Additional HTML helper functions
