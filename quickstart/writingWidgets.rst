@@ -4,7 +4,7 @@ Writing Your Own Widget
 =======================
 :Status: Draft
 :Version: 1.0
-:Authors: ?--
+:Authors: Bill Keese,
 
 .. contents::
     :depth: 2
