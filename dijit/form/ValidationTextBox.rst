@@ -5,7 +5,7 @@ dijit.form.ValidationTextBox
 
 :Status: Draft
 :Version: 1.0
-:Authors: Mark Hays, Bill Keese, Craig Riecke
+:Authors: Doug Hays, Bill Keese, Craig Riecke
 :Developers: ?-
 :Available: since V?
 
