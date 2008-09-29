@@ -7,7 +7,7 @@ Arrays and Dojo
 
 :Status: Draft
 :Version: 1.0
-:Authors: ?--
+:Authors: Nikolai Onken
 :Developers: ?-
 :Available: since V?
 
