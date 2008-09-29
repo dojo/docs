@@ -19,11 +19,11 @@ dojox.html
 Features
 ========
 
-* dojox.html
+* `dojox.html.set <dojox/html/set>`_
 
   A generic content setter, including adding new stylesheets and evaluating scripts (was part of ContentPane loaders, now separated for generic usage)
 
-* dojox.html.metrics
+* `dojox.html.metrics <dojox/html/metrics>`_
 
   * Formerly private to dojox.gfx, now available in dojox.html
   * Includes translation of relative CSS values (such as medium, small, x-small, etc.) to actual pixel values
@@ -31,7 +31,7 @@ Features
   * Scrollbar sizes (width and height)
   * Ability to detect font resizing
 
-* dojox.html.styles
+* `dojox.html.styles <dojox/html/styles>`_
 
   * Insert and remove CSS rules.
   * Search document for style sheets.
