@@ -6,7 +6,7 @@ dijit.layout.ContentPane
 
 :Status: Draft
 :Version: 1.0
-:Authors: ?--
+:Authors: Becky Gibson, Bill Keese, Nikolai Onken
 :Developers: ?-
 :Available: since V?
 
