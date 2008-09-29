@@ -4,8 +4,10 @@ dijit.Tree
 ==========
 
 :Status: Draft
-:Version: 1.2
+:Version: 1.0
 :Authors: ?--
+:Developers: ?-
+:Available: since V?
 
 .. contents::
     :depth: 2
