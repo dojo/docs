@@ -5,9 +5,9 @@ dojox.widget.Rating
 
 :Status: Draft
 :Version: 1.0
-:Authors: ?--
-:Developers: ?-
-:Available: since V?
+:Authors: Wolfram Kriesing
+:Developers: Wolfram Kriesing
+:Available: since V1.2
 
 .. contents::
     :depth: 2
