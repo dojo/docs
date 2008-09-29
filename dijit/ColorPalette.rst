@@ -5,9 +5,11 @@
 dijit.ColorPalette
 ==================
 
-:Status: Contributed, Draft
-:Version: beta
+:Status: Draft
+:Version: 1.0
 :Authors: ?--
+:Developers: ?-
+:Available: since V?
 
 .. contents::
     :depth: 2
