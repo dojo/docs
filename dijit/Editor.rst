@@ -7,7 +7,7 @@ dijit.Editor
 
 :Status: Draft
 :Version: 1.0
-:Authors: ?--
+:Authors: Becky Gibson, Bill Keese, Nikolai Onken, Marcus Reimann
 :Developers: ?-
 :Available: since V?
 
