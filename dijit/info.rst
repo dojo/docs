@@ -5,7 +5,7 @@ Dijit
 
 :Status: Draft
 :Version: 1.0
-:Authors: ?--
+:Authors: Peter Higgins, Bill Keese, Tobias Klipstein, Nikolai Onken
 
 .. contents::
     :depth: 2
