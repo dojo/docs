@@ -5,10 +5,11 @@ Dojo Charting
 =============
 
 :Status: Draft
-:Version: 1.2
+:Version: 1.0
+:Authors: ?--
 
 .. contents::
-  :depth: 2
+    :depth: 2
 
 Dojo comes with an amazing charting library, in the form of dojox.charting.  A large number of features are supported, with new ones being added constantly.
 
