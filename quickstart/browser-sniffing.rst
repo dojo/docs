@@ -5,7 +5,7 @@ Browser Sniffing
 
 :Status: Draft
 :Version: 1.0
-:Authors: ?--
+:Authors: Peter Higgins, Ben Lowery
 
 .. contents::
     :depth: 2
