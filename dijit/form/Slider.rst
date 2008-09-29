@@ -4,16 +4,30 @@ dijit.form.Slider
 =================
 
 :Status: Draft
-:Version: 1.2
+:Version: 1.0
+:Authors: ?--
+:Developers: ?-
+:Available: since V?
 
-A slider is a scale with a handle you can drag up/down or left/right to select a value. Calling dojo.require("dijit.form.Slider") provides dijit.form.HorizontalSlider, dijit.form.VerticalSlider and all the rule and label classes.
+.. contents::
+    :depth: 2
+
+A **dijit.form.Slider** is a scale with a handle you can drag up/down or left/right to select a value. 
 
 
+=====
+Usage
+=====
+
+Calling dojo.require("dijit.form.Slider") provides dijit.form.HorizontalSlider, dijit.form.VerticalSlider and all the rule and label classes.
+
+
+========
 Examples
---------
+========
 
 Programmatic example of a horizontal slider
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------------------------
 
 One way you could show the user the value of your Slider is to create a textbox that the Slider fills when the user moves the Slider. The following code fills in a simple textbox called horizontalSliderValue.
 
@@ -48,7 +62,7 @@ One way you could show the user the value of your Slider is to create a textbox 
 
 
 Programmatic example of a vertical slider
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------------------
 
 The similar example but with a vertical slider and a simple rule (tick marks) created programmatically.
 
@@ -85,7 +99,7 @@ The similar example but with a vertical slider and a simple rule (tick marks) cr
 
 
 Declarative markup example with discrete values
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------------------------
 
 And here we create a slider declaratively. Note that we set the value of the "discreteValues" attribute to 11, meaning that the slider will have 11 focus points.  This example also shows the end buttons removed.
 
@@ -123,11 +137,13 @@ And here we create a slider declaratively. Note that we set the value of the "di
     </div>
 
 
+=============
 Accessibility
--------------
+=============
 
 Keyboard
-~~~~~~~~
+--------
+
 +----------------------------------------------+-----------------------------------------------------------+
 | **Action**                                   | **Key**                                                   |
 +----------------------------------------------+-----------------------------------------------------------+
@@ -150,5 +166,6 @@ Keyboard
 +----------------------------------------------+-----------------------------------------------------------+
 
 Known Issues
-~~~~~~~~~~~~
+------------
+
 Currently the text labels of a slider are not spoken by screen readers. Firefox 3 provides the infrastructure necessary for spoken text labels so the slider will be updated to support them in a future Dojo release. Developers should take care when using text labels since a screen reader user will hear only a numeric interpretation.
