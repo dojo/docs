@@ -4,17 +4,33 @@ dijit.form.RadioButton
 ======================
 
 :Status: Draft
-:Version: 1.2
+:Version: 1.0
+:Authors: ?--
+:Developers: ?-
+:Available: since V?
 
-RadioButton widgets capture binary user-choices unlike buttons which normally perform some action when clicked.  Normally, there are multiple RadioButton widgets assigned to a single group defined by widgets sharing the same *name* attribute.  Upon FORM submission, the 1 checked RadioButton *value* is submitted using this shared *name*. 
+.. contents::
+    :depth: 2
+
+RadioButton widgets capture binary user-choices unlike buttons which normally perform some action when clicked. 
+
+=====
+Usage
+=====
+
+Normally, there are multiple RadioButton widgets assigned to a single group defined by widgets sharing the same *name* attribute. Upon FORM submission, the 1 checked RadioButton *value* is submitted using this shared *name*. 
 
 **Note:** To use the RadioButton widget, you currently have to call dojo.require("dijit.form.CheckBox")
 
 
-Example
--------
+========
+Examples
+========
 
-Let's create 2 RadioButton widgets, 1 programmatically and 1 declaratively.  We'll wrap both inside a FORM to illustrate what happens on submit.
+Programmatic and declarative example
+------------------------------------
+
+Let's create 2 RadioButton widgets, 1 programmatically and 1 declaratively. We'll wrap both inside a FORM to illustrate what happens on submit.
 
 .. cv-compound::
 
@@ -41,11 +57,13 @@ Let's create 2 RadioButton widgets, 1 programmatically and 1 declaratively.  We'
     <button onclick="with(dojo.byId('myform'))with(elements[0])with(elements[checked?0:1])alert(name+'='+value);return false">Show form submit value</button>
 
 
+=============
 Accessibility
--------------
+=============
 
 Keyboard
-~~~~~~~~
+--------
+
 +-----------------------------+---------------------+
 | **Action**                  | **Key**             |
 +-----------------------------+---------------------+
