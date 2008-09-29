@@ -5,7 +5,7 @@ dijit.form.NumberTextBox
 
 :Status: Draft
 :Version: 1.0
-:Authors: Mark Hays, Bill Keese, Nikolai Onken, Marcus Reimann, Craig Riecke
+:Authors: Doug Hays, Bill Keese, Nikolai Onken, Marcus Reimann, Craig Riecke
 :Developers: ?-
 :Available: since V?
 
