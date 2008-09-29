@@ -25,6 +25,8 @@ Features
 
 * `dojox.html.metrics <dojox/html/metrics>`_
 
+  Translate CSS values to pixel values, calculate scrollbar sizes and font resizes
+
   * Formerly private to dojox.gfx, now available in dojox.html
   * Includes translation of relative CSS values (such as medium, small, x-small, etc.) to actual pixel values
   * Translate other CSS units (such as em, pt) to pixel values
@@ -32,6 +34,8 @@ Features
   * Ability to detect font resizing
 
 * `dojox.html.styles <dojox/html/styles>`_
+
+  Insert, remove and toggle CSS rules as well as search document for style sheets
 
   * Insert and remove CSS rules.
   * Search document for style sheets.
