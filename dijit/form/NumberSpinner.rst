@@ -12,7 +12,16 @@ dijit.form.NumberSpinner
 .. contents::
     :depth: 2
 
-The NumberSpinner is similar to `dijit.form.NumberTextBox <dijit/form/NumberTextBox>`_, but makes integer entry easier when small adjustments are required. The down and up arrow buttons "spin" the number up and down. Furthermore, when you hold down the buttons, the spinning accelerates to make coarser adjustments easier.
+The NumberSpinner is similar to `dijit.form.NumberTextBox <dijit/form/NumberTextBox>`_, but makes integer entry easier when small adjustments are required. 
+
+
+=====
+Usage
+=====
+
+* The down and up arrow buttons "spin" the number up and down. 
+* Furthermore, when you hold down the buttons, the spinning accelerates to make coarser adjustments easier.
+
 
 ========
 Examples
