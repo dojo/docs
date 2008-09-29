@@ -4,13 +4,24 @@
 dijit.layout.AccordionContainer
 ===============================
 
-:Status: Contributed, Draft
+:Status: Draft
 :Version: 1.0
+:Authors: ?--
+:Developers: ?-
+:Available: since V?
+
+.. contents::
+    :depth: 2
 
 Like StackContainer and TabContainer, an AccordionContainer holds a set of panes whose titles are all visible, but only one pane's content is visible at a time. Clicking on a pane title slides the currently-displayed one away, similar to a garage door.
 
+
+========
 Examples
---------
+========
+
+Declarative example
+-------------------
 
 .. cv-compound::
 
@@ -36,6 +47,8 @@ Examples
       </div>
     </div>
 
+
+=============
 Accessibility
 =============
 
