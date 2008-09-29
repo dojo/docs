@@ -5,7 +5,7 @@ dijit.form.CheckBox
 
 :Status: Draft
 :Version: 1.0
-:Authors: Becky Gibson, Mark Hays, Bill Keese, Nikolai Onken
+:Authors: Doug Gibson, Mark Hays, Bill Keese, Nikolai Onken
 :Developers: ?-
 :Available: since V?
 
