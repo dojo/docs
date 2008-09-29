@@ -5,7 +5,7 @@ dijit.form.ToggleButton
 
 :Status: Draft
 :Version: 1.0
-:Authors: Mark Hays
+:Authors: Doug Hays
 :Developers: ?-
 :Available: since V?
 
