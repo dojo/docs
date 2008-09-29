@@ -620,6 +620,10 @@ These sections cover the available projects shipped with the Dojo Toolkit
 
 * `dojox.image <dojox/image>`_
 
+  * `dojox.image.Badge <dojox/image/Badge>`__
+
+    Attach images or background images, and let them loop
+
   * `dojox.image.Lightbox <dojox/image/Lightbox>`_
 
 * `dojox.io <dojox/io>`_
