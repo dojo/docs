@@ -221,8 +221,9 @@ Sizing the Dialog
 A dialog by default sizes itself according to it's content, just like a plain <div>.
 If you want a scroll bar on a dialog, then you need to add width/height to a div *inside* the dialog, like this:
 
+.. cv-compound::
+
   .. cv:: javascript
-    :label: The javascript, put this wherever you want the dialog creation to happen
 
     <script type="text/javascript">
       dojo.require("dijit.form.Button");
@@ -230,11 +231,18 @@ If you want a scroll bar on a dialog, then you need to add width/height to a div
     </script>
 
   .. cv:: html
-    :label: When pressing this button the dialog will popup 
+    :label: When pressing this button the dialog will popup (with a scrollbar
 
     <div id="sized" dojoType="dijit.Dialog" title="My scrolling dialog">
-      <div style="width: 200px; height: 300px; overflow: scroll;">
-        This has a scrollbar.
+      <div style="width: 200px; height: 100px; overflow: auto;">
+		<p>
+		Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+		semper sagittis velit. Cras in mi. Duis porta mauris ut ligula. Proin
+		porta rutrum lacus. Etiam consequat scelerisque quam. Nulla facilisi.
+		Maecenas luctus venenatis nulla. In sit amet dui non mi semper iaculis.
+		Sed molestie tortor at ipsum. Morbi dictum rutrum magna. Sed vitae
+		risus.
+		</p>
       </div>
     </div>
     <button dojoType="dijit.form.Button" onClick="dijit.byId('sized').show();">Show me!</button>
