@@ -22,18 +22,21 @@ Usage
 
 Note that there can be at most one child marked for each region.
 
-Sizes are specified for the edge regions in pixels or percentage using CSS -- height to top and bottom, width for the sides. You might specify a top region of height:100px and a left region of width:50%. The center typically does not have any dimensions specified in CSS and resizes automatically to fill the remaining space.
-
-BorderContainer operates in a choice of two layout modes: the design attribute may be set to "headline" (by default) or "sidebar". With the "headline" layout, the top and bottom sections extend the entire width of the box and the remaining regions are placed in the middle. With the "sidebar" layout, the side panels take priority, extending the full height of the box.
-
 Setting sizes
 -------------
+Sizes are specified for the edge regions in pixels or percentage using CSS -- height to top and bottom, width for the sides. You might specify a top region of height:100px and a left region of width:50%. The center typically does not have any dimensions specified in CSS and resizes automatically to fill the remaining space.
+
 Besides setting the size of the BorderContainer itself, you generally need to set the width of the leading and trailing (left and the right) panes.
 You shouldn't need to set the height of the top/bottom panes as that can be determined automatically.
 
 Of course, you shouldn't set the size of the center pane, since it's size is determined from whatever is left over after
 placing the left/right/top/bottom panes.
 You also shouldn't set the width of the top/bottom panes or the height of the left/right panes as that would be meaningless.
+
+Layout modes
+------------
+
+BorderContainer operates in a choice of two layout modes: the design attribute may be set to "headline" (by default) or "sidebar". With the "headline" layout, the top and bottom sections extend the entire width of the box and the remaining regions are placed in the middle. With the "sidebar" layout, the side panels take priority, extending the full height of the box.
 
 
 ========
