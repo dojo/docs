@@ -5,7 +5,7 @@ UI Development with the Dojo Toolkit
 
 :Status: Draft
 :Version: 1.0
-:Authors: Peter Higgins, Nikolai Onken
+:Authors: Nikolai Onken
 
 .. contents::
     :depth: 2
