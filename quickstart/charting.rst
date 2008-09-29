@@ -6,7 +6,7 @@ Dojo Charting
 
 :Status: Draft
 :Version: 1.0
-:Authors: ?--
+:Authors: Nikolai Onken, Marcus Reimann, Tom Trenka
 
 .. contents::
     :depth: 2
