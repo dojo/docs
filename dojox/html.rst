@@ -40,3 +40,10 @@ Features
   * Insert and remove CSS rules.
   * Search document for style sheets.
   * Toggle sheets on and off (based on the W3C spec).
+
+
+========
+See also
+========
+
+* `dojo.html.set <dojo/html/set>`_
