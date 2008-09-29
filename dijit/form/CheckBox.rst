@@ -5,14 +5,14 @@ dijit.form.CheckBox
 
 :Status: Draft
 :Version: 1.0
-:Authors: ?--
+:Authors: Becky Gibson, Mark Hays, Bill Keese, Nikolai Onken
 :Developers: ?-
 :Available: since V?
 
 .. contents::
     :depth: 2
 
-*dijit.form.CheckBox* is nearly the same as an HTML checkbox, but with fancy styling.
+**dijit.form.CheckBox** is nearly the same as an HTML checkbox, but with fancy styling.
 
 =====
 Usage
