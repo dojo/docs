@@ -6,7 +6,7 @@ dojox.image
 :Status: Draft
 :Version: 1.0
 :Authors: Peter Higgins, Nikolai Onken, Marcus Reimann
-:Developers: Peter Higgins, Bryan Forbes, Shane O'Sullivan
+:Developers: Bryan Forbes, Peter Higgins, Jared Jurkiewicz, Heng Liu, Shane O'Sullivan, Adam Peller, Alex Russell, Nathan Toone
 :Available: since V1.2
 
 .. contents::
