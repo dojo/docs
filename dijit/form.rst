@@ -7,7 +7,7 @@ dijit.form
 
 :Status: Draft
 :Version: 1.0
-:Authors: Mark Hays, Mark Hays, Bill Keese, Nikolai Onken, Marcus Reimann, Craig Riecke
+:Authors: Doug Hays, Bill Keese, Nikolai Onken, Marcus Reimann, Craig Riecke
 :Developers: ?-
 :Available: since V?
 
