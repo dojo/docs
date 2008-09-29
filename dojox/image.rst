@@ -5,9 +5,9 @@ dojox.image
 
 :Status: Draft
 :Version: 1.0
-:Authors: Peter Higgins, Bryan Forbes, Shane O'Sullivan
-:Developers: ?-
-:Available: since V?
+:Authors: Peter Higgins, Nikolai Onken, Marcus Reimann
+:Developers: Peter Higgins, Bryan Forbes, Shane O'Sullivan
+:Available: since V1.2
 
 .. contents::
     :depth: 2
