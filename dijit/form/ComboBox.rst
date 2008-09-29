@@ -2,6 +2,7 @@
 
 dijit.form.ComboBox
 ===================
+
 :Status: Draft
 :Version: 1.0
 :Authors: Mark Hays, Nikolai Onken
