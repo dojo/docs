@@ -5,7 +5,7 @@ dijit.form.Form
 
 :Status: Draft
 :Version: 1.0
-:Authors: ?--
+:Authors: Bill Keese
 :Developers: ?-
 :Available: since V?
 
