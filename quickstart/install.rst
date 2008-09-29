@@ -6,8 +6,14 @@
 Installing Dojo
 ===============
 
+:Status: Draft
+:Version: 1.0
+:Authors: ?--
+:Developers: ?-
+:Available: since V?
+
 .. contents::
-  :depth: 2
+    :depth: 2
 
 Dojo requires no special installation, or setup procedure, though comes with several "installation" options. There are three main ways to install Dojo:
 
