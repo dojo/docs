@@ -5,7 +5,7 @@ dijit.form.ComboButton
 
 :Status: Draft
 :Version: 1.0
-:Authors: ?--
+:Authors: Becky Gibson, Bill Keese
 :Developers: ?-
 :Available: since V?
 
