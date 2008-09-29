@@ -3,6 +3,13 @@
 Browser Sniffing
 ================
 
+:Status: Draft
+:Version: 1.0
+:Authors: ?--
+
+.. contents::
+    :depth: 2
+
 Dojo provides a number of ``is`` variables, defined at runtime based on the users current browser.
 
 * dojo.isIE
@@ -16,6 +23,11 @@ Dojo provides a number of ``is`` variables, defined at runtime based on the user
 * dojo.isBrowser (not typically needed when only targeting browsers)
 
 Each variable is only defined if the specified browser is being used. For example, if you're using Internet Explorer, only dojo.isIE is defined; all the other variables are undefined. The variable holds the browser version number as a Number, so you can easily perform version checks. Additionally, since undefined always evaluates as false in if statements, you can use code like this to check for a certain browser version.
+
+
+=====
+Usage
+=====
 
 .. code-block:: javascript
   :linenos:
@@ -31,6 +43,11 @@ Each variable is only defined if the specified browser is being used. For exampl
   if(dojo.isIE == 7){ // only IE7
     ...
   }
+
+
+========
+Examples
+========
 
 Here's a live sample to show how it works:
 
