@@ -8,12 +8,20 @@ dojo.html
 :Version: 1.0
 :Authors: Sam Foster, Nikolai Onken, Marcus Reimann
 :Developers: Sam Foster, Alex Russell, Dylan Schiemann
-:Available: since V?
+:Available: since V1.2
 
 .. contents::
     :depth: 2
  
-As of version 1.2, dojo.html is home to a single public helper method: dojo.html.set(). It is used to safely and conveniently replace an element's content, while providing some hooks and options for how the replacement should be handled.
+As of version 1.2, **dojo.html** is home to a single public helper method: **dojo.html.set()**. It is used to safely and conveniently replace an element's content, while providing some hooks and options for how the replacement should be handled.
+
+
+=====
+Usage
+=====
+
+You can think of dojo.html.set() like the good old `ContentPane <dijit/layout/ContentPane>`__, but outside of a "Pane".
+
 
 ========
 Examples
