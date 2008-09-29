@@ -5,7 +5,7 @@ dijit.form.DropDownButton
 
 :Status: Draft
 :Version: 1.0
-:Authors: ?--
+:Authors: Becky Gibson, Doug Hays, Bill Keese
 :Developers: ?-
 :Available: since V?
 
