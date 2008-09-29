@@ -5,14 +5,32 @@ dijit.form.CurrencyTextBox
 
 :Status: Draft
 :Version: 1.0
-:Author: CraigRiecke
+:Authors: Craig Riecke
+:Developers: ?-
+:Available: since V?
+
+.. contents::
+    :depth: 2
 
 CurrencyTextBox widgets inherit all the attributes and behaviors of the `NumberTextBox <dijit/form/NumberTextBox>`_ widget but are specialized for input monetary values, much like the currency type in spreadsheet programs.
 
-The ``value`` attribute is a native JavaScript floating point number.  
-This means that you can easily build CurrencyTextBox widgets for a wide range of currencies without having to set a different value for each currency format.  
-The optional boolean ``fractional`` property of the ``constraints`` object attribute can be set to require/refuse fractional input.
+=====
+Usage
+=====
 
+* The ``value`` attribute is a native JavaScript floating point number.
+
+  This means that you can easily build CurrencyTextBox widgets for a wide range of currencies without having to set a different value for each currency format.
+
+* The optional boolean ``fractional`` property of the ``constraints`` object attribute can be set to require/refuse fractional input.
+
+
+========
+Examples
+========
+
+Declarative example
+-------------------
 
 .. cv-compound::
 
@@ -31,5 +49,3 @@ The optional boolean ``fractional`` property of the ``constraints`` object attri
 		currency="USD"
 		invalidMessage="Invalid amount.  Cents are required.">
         <label for="income1">U.S. Dollars</label>
-
-        
