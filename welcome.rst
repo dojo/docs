@@ -582,7 +582,14 @@ These sections cover the available projects shipped with the Dojo Toolkit
 * `dojox.form <dojox/form>`_
 
   * `dojox.form.BusyButton <dojox/form/BusyButton>`_
+
+    A new Button with progresss indicator built in, for indicating processing after you press the button
+
   * `dojox.form.Rating <dojox/form/Rating>`_
+
+  * `dojox.form.FileUploader <dojox.form.FileUploader>`_
+
+    A new multi-file uploader that shows progress as the files are uploading.
 
 * `dojox.fx <dojox/fx>`_
 
