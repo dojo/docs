@@ -5,16 +5,21 @@
 Arrays and Dojo
 ===============
 
-:Status: Contributed, Draft
+:Status: Draft
 :Version: 1.0
+:Authors: ?--
+:Developers: ?-
+:Available: since V?
 
 .. contents::
-    :depth: 3
+    :depth: 2
 
 Dojo comes with a bunch of useful methods to deal with arrays, a few more than you get from your browser by default.
 
+
+============
 dojo.indexOf
-------------
+============
 
 dojo.indexOf lets you easily determine the index of an element in an array.
 Included are a few doctests which will either pass or fail depending on the expected result.
@@ -33,8 +38,10 @@ Note that the second test should fail, since the value of the passed array at po
     "3"
   </div>
 
+
+================
 dojo.lastIndexOf
-----------------
+================
 
 dojo.lastIndexOf lets you easily determine the last index of an element in an array.
 Included are a few doctests which will either pass or fail depending on the expected result.
@@ -53,8 +60,10 @@ Note that the second doctest should fail since the last index of the tested elem
     "2"
   </div>
 
+
+============
 dojo.forEach
-------------
+============
 
 This is a heavylifer you will use a lot when writing your apps using Dojo. dojo.forEach lets you iterate over arrays, node lists and provides you with ways to filter your results. Lets take a look at a very basic example.
 Note the "i" variable which returns the current position of an iteration
@@ -109,8 +118,10 @@ Now lets use dojo.forEach with a list of dom nodes we retrieve using dojo.query.
 
     </ul>
 
+
+===========
 dojo.filter
------------
+===========
 
 There are many cases when you have an array and want to filter it by a certain condition, say you have an array of people with a last name. You would like to filter those having a certain last name. Lets take a look at anexample
 
@@ -167,8 +178,9 @@ There are many cases when you have an array and want to filter it by a certain c
     </ul>
     </div>
 
+========
 dojo.map
---------
+========
 
 Another great funtion, Dojo is providing is dojo.map. dojo.map lets you run a function on all elements of an array and returns a new array with the changed values. A very good example is the "Give all my employees a 10% salary rise":
 
@@ -218,8 +230,10 @@ Another great funtion, Dojo is providing is dojo.map. dojo.map lets you run a fu
 
 For complete documentation and more examples please check the `dojo.map documentation <dojo/map>`_
 
+
+=========
 dojo.some
----------
+=========
 
 Imagine you are a manager of a famous bank. A client of you comes and visits your office asking for another million dollars as a credit.
 Now your bank policies only allows you to give each client one credit over 1 million, not two, not three - though you may have several smaller credits. Even 3 credits a 500.000 - weird bank.. anyways. dojo.some is the perfect functionto tell you whether an array has some of the asked values:
@@ -239,8 +253,10 @@ Now your bank policies only allows you to give each client one credit over 1 mil
     "false"
   </div>
 
+
+==========
 dojo.every
-----------
+==========
 
 Lets get back to our bank manager. A client wants another credit, but you only allow a credit if every income transfer is at least 3000,-
 An example:
