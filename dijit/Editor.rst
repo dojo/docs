@@ -6,10 +6,22 @@ dijit.Editor
 ============
 
 :Status: Draft
-:Version: 1.2
+:Version: 1.0
+:Authors: ?--
+:Developers: ?-
+:Available: since V?
+
+.. contents::
+    :depth: 2
 
 Dijit's Rich Text editor, Dijit.Editor, is a text box on steroids. Designed to look and work like a word processor. The editor features a toolbar, HTML output, and a plugin architecture that supports new commands, new buttons and other new features.
 
+========
+Examples
+========
+
+Declarative example
+-------------------
 
 .. cv-compound::
 
@@ -25,7 +37,23 @@ Dijit's Rich Text editor, Dijit.Editor, is a text box on steroids. Designed to l
         <p>This instance is created from a div directly with default toolbar and plugins</p>
       </div>
 
+Programmatic example
+--------------------
 
+Of course, the editor can be created programmatically in addition to declaratively,
+although even when created programatically you need to specify a source DOM node to replace:
+
+.. cv:: html
+
+	<div id="programmatic2">This div will become an auto-expanding editor.</div>
+	<button
+		id="create2"
+		onclick="new dijit.Editor({height: '', extraPlugins: ['dijit._editor.plugins.AlwaysShowToolbar']}, dojo.byId('programmatic2')); dojo.query('#create2').orphan();">
+	create expanding editor
+	</button>
+
+
+=======
 Plugins
 =======
 
@@ -84,8 +112,10 @@ This example starts from scratch, thus removing some items from the toolbar (as 
       </div>
 
 
+================
 Builtin Commands
-----------------
+================
+
 This is a list of the default commands included in the editor, that can be specified in the plugins parameter (in addition to actual editor plugins in the editor/plugins directory or other places):
 
 * "undo"
@@ -114,8 +144,10 @@ This is a list of the default commands included in the editor, that can be speci
 * "unlink"
 * "delete" 
 
+=====================
 Auto-expanding editor
 =====================
+
 Typically an editor has a constant height, and if there's a lot of content it gets a scrollbar.
 This is in addition to the main scrollbar for the page.
 
@@ -125,7 +157,6 @@ However, that's a bit tricky because if implemented naively the toolbar would ev
 of the page.
 
 The AlwaysShowToolbar plugin prevents that.  It's used along with setting height="" parameter setting.
-
 
 .. cv-compound::
 
@@ -145,20 +176,8 @@ The AlwaysShowToolbar plugin prevents that.  It's used along with setting height
 			</p>
 	</div>
 
-Programmatic Creation
-=====================
-Of course, the editor can be created programmatically in addition to declaratively,
-although even when created programatically you need to specify a source DOM node to replace:
 
-.. cv:: html
-
-	<div id="programmatic2">This div will become an auto-expanding editor.</div>
-	<button
-		id="create2"
-		onclick="new dijit.Editor({height: '', extraPlugins: ['dijit._editor.plugins.AlwaysShowToolbar']}, dojo.byId('programmatic2')); dojo.query('#create2').orphan();">
-	create expanding editor
-	</button>
-
+======================================
 Accessibility (1.0 and later versions)
 ======================================
 
