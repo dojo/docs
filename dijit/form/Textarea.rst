@@ -5,7 +5,7 @@ dijit.form.Textarea
 
 :Status: Draft
 :Version: 1.0
-:Authors: ?--
+:Authors: Mark Hays, Bill Keese, Nikolai Onken
 :Developers: ?-
 :Available: since V?
 
