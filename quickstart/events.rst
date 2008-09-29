@@ -5,7 +5,7 @@ JavaScript events and Dojo
 
 :Status: Draft
 :Version: 1.0
-:Authors: Matt Bowen, Nikolai Onken
+:Authors: Matt Bowen, Peter Higgins, Nikolai Onken
 :Developers: ?-
 :Available: since V?
 
