@@ -5,8 +5,18 @@ dijit.form.TimeTextBox
 
 :Status: Draft
 :Version: 1.0
+:Authors: ?--
+:Developers: ?-
+:Available: since V?
+
+.. contents::
+    :depth: 2
 
 TimeTextBox widgets are handy, easy-to-use time entry controls that allow either typing or choosing a time from any time-picker widget.
+
+============
+Introduction
+============
 
 ``dijit.form.TimeTextBox``:
 
@@ -14,32 +24,12 @@ TimeTextBox widgets are handy, easy-to-use time entry controls that allow either
 * validates against locale-sepcific `i18n <dojo/i18n>`_ rules
 * also validates against developer-provided ``constraints`` like ``min``, ``max``, etc.
 
+========
 Examples
---------
+========
 
-Declarative
-~~~~~~~~~~~
-
-.. cv-compound::
-
-  .. cv:: javascript
-
-     <script type="text/javascript">
-       dojo.require("dijit.form.TimeTextBox");
-     </script>
-
-  .. cv:: html
-
-     <input type="text" name="date1" id="time1" value="T15:00:00"
-       dojoType="dijit.form.TimeTextBox"
-       onChange="dojo.byId('val').value=arguments[0].toString().replace(/.*1970\s(\S+).*/,'T$1')"
-       required="true" />
-     <label for="time1">Drop down Time box.  Click inside to display the time picker.</label>
-     <br>string value: <input readonly disabled id='val' value='value not changed' />
-
-
-Programmatic
-~~~~~~~~~~~~
+Programmatic example
+--------------------
 
 .. cv-compound::
 
@@ -57,7 +47,27 @@ Programmatic
   .. cv:: html
 
      <input id="prog_val"/>
-     <label for="prog_val">Drop down Time box.  Click inside to display the time picker.</label>
+     <label for="prog_val">Drop down Time box. Click inside to display the time picker.</label>
+
+Declarative example
+-------------------
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+     <script type="text/javascript">
+       dojo.require("dijit.form.TimeTextBox");
+     </script>
+
+  .. cv:: html
+
+     <input type="text" name="date1" id="time1" value="T15:00:00"
+       dojoType="dijit.form.TimeTextBox"
+       onChange="dojo.byId('val').value=arguments[0].toString().replace(/.*1970\s(\S+).*/,'T$1')"
+       required="true" />
+     <label for="time1">Drop down Time box. Click inside to display the time picker.</label>
+     <br>string value: <input readonly disabled id='val' value='value not changed' />
 
 
 Standard Time Format
@@ -68,4 +78,4 @@ To prevent this ambiguity in specifying time formats, TimeTextBox allows only on
 * T00:00:30 means 30 seconds after midnight
 * T17:30:00 means 5:30 PM
 
-However, when you get the widget's current ``value`` programmatically on the client, the returned value will be the native JavaScript Date object.  The date portion of this value should be ignored.
+However, when you get the widget's current ``value`` programmatically on the client, the returned value will be the native JavaScript Date object. The date portion of this value should be ignored.
