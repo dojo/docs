@@ -581,6 +581,8 @@ These sections cover the available projects shipped with the Dojo Toolkit
 * `dojox.flash <dojox/flash>`_
 * `dojox.form <dojox/form>`_
 
+  Additional form-related widgets beyond `dijit.form <dijit/form>`__ functionality
+
   * `dojox.form.BusyButton <dojox/form/BusyButton>`_
 
     A new Button with progresss indicator built in, for indicating processing after you press the button
@@ -589,7 +591,7 @@ These sections cover the available projects shipped with the Dojo Toolkit
 
   * `dojox.form.FileUploader <dojox.form.FileUploader>`_
 
-    A new multi-file uploader that shows progress as the files are uploading.
+    A new multi-file uploader that shows progress as the files are uploading
 
 * `dojox.fx <dojox/fx>`_
 
