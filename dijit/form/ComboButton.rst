@@ -4,14 +4,24 @@ dijit.form.ComboButton
 ======================
 
 :Status: Draft
-:Version: 1.2
+:Version: 1.0
+:Authors: ?--
+:Developers: ?-
+:Available: since V?
+
+.. contents::
+    :depth: 2
 
 The dijit.form.ComboButton widget has a regular button on the left, and on the right has an arrow to show a drop down (often a menu).
 
+========
 Examples
---------
+========
 
-The first example shows how to create a menu and combo button programmatically.
+Programmatic example
+--------------------
+
+This example shows how to create a menu and combo button programmatically.
 
 .. cv-compound::
 
@@ -69,8 +79,8 @@ and the other for the drop-down widget that's displayed when you press the butto
       </div>
     </div>
 
-.
 
+=============
 Accessibility
 =============
 
