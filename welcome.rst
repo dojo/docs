@@ -618,13 +618,39 @@ These sections cover the available projects shipped with the Dojo Toolkit
 
     Insert, remove and toggle CSS rules as well as search document for style sheets
 
-* `dojox.image <dojox/image>`_
+  * `dojox.image <dojox/image>`_
 
-  * `dojox.image.Badge <dojox/image/Badge>`__
+    * `dojox.image.Badge <dojox/image/Badge>`_
 
-    Attach images or background images, and let them loop
+      Attach images or background images, and let them loop
 
-  * `dojox.image.Lightbox <dojox/image/Lightbox>`_
+    * `dojox.image.FlickrBadge <dojox/image/FlickrBadge>`_
+
+      An extension on dojox.image.Badge, using Flickr as a data provider
+
+    * `dojox.image.Gallery <dojox/image/Gallery>`_
+
+      A combination of a SlideShow and ThumbnailPicker
+
+    * `dojox.image.Lightbox <dojox/image/Lightbox>`_
+
+      A widget which shows a single image (or groups of images) in a Dialog
+
+    * `dojox.image.Magnifier <dojox/image/Magnifier>`_
+
+      A dojox.gfx-based version of the `MagnifierLite <dojox/image/MagnifierLite>`__ widget
+
+    * `dojox.image.MagnifierLite <dojox/image/MagnifierLite>`__
+
+      A simple hover behavior for images, showing a zoomed version of a size image
+
+    * `dojox.image.SlideShow <dojox/image/SlideShow>`_
+
+      A slideshow of images
+
+    * `dojox.image.ThumbnailPicker <dojox/image/ThumbnailPicker>`_
+
+      A dojo.data-powered ThumbnailPicker
 
 * `dojox.io <dojox/io>`_
 * `dojox.json <dojox/json>`_
