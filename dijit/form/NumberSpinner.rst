@@ -5,7 +5,7 @@ dijit.form.NumberSpinner
 
 :Status: Draft
 :Version: 1.0
-:Authors: Craig Riecke
+:Authors: Bill Keese, Nikolai Onken, Craig Riecke
 :Developers: ?-
 :Available: since V?
 
