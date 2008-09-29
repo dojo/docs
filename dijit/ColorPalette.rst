@@ -7,7 +7,7 @@ dijit.ColorPalette
 
 :Status: Draft
 :Version: 1.0
-:Authors: ?--
+:Authors: Bill Keese, Nikolai Onken
 :Developers: ?-
 :Available: since V?
 
