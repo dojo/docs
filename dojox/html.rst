@@ -12,7 +12,7 @@ dojox.html
 .. contents::
     :depth: 2
 
-**dojox.html** contains of additional HTML helper functions.
+**dojox.html** contains additional HTML helper functions.
 
 
 ========
