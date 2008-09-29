@@ -5,7 +5,12 @@ dijit.form.ValidationTextBox
 
 :Status: Draft
 :Version: 1.0
-:Author: CraigRiecke
+:Authors: Craig Riecke
+:Developers: ?-
+:Available: since V?
+
+.. contents::
+    :depth: 2
 
 A ValidationTextBox by itself '''will not''' prevent invalid entries from submission. To ensure they're not, simply surround your form with a dijit.form.Form widget.
 
