@@ -4,12 +4,23 @@ dijit.form.DropDownButton
 =========================
 
 :Status: Draft
-:Version: 1.2
+:Version: 1.0
+:Authors: ?--
+:Developers: ?-
+:Available: since V?
+
+.. contents::
+    :depth: 2
 
 The dijit.form.DropDownButton widget is for a button that displays some kind of drop down, often a menu, when you press it.
 
+
+========
 Examples
---------
+========
+
+Programmatic example
+--------------------
 
 The first example shows how to create a menu and drop down button programmatically.
 
@@ -52,6 +63,9 @@ The first example shows how to create a menu and drop down button programmatical
 
     <div id="dropdownButtonContainer"></div>
 
+Declarative example
+-------------------
+
 As usual you can create the DropDown button widget declaratively using the dojoType attribute.
 When created declaratively the DropDownButton node has two children, one for the label of the button,
 and the other for the drop-down widget that's displayed when you press the button.
@@ -81,6 +95,8 @@ Here's one displaying a TooltipDialog:
 
 Note that DropDownButton is often used in `dijit.Toolbar </dijit/Toolbar>`_.
 
+
+=============
 Accessibility
 =============
 
