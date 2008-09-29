@@ -4,17 +4,23 @@ dijit.form.Button
 =================
 
 :Status: Draft
-:Version: 1.2
+:Version: 1.0
+:Authors: ?--
+:Developers: ?-
+:Available: since V?
 
 .. contents::
-  :depth: 3
-
+    :depth: 2
 
 The dijit.form.Button widget is a representation of a normal <button> or <input type="submit/reset/button" />
+
 
 ========
 Examples
 ========
+
+Programmatic example
+--------------------
 
 The first example shows how to create a button programmatically.
 
@@ -36,6 +42,9 @@ The first example shows how to create a button programmatically.
 
     <button id="buttonNode"></button>
 
+Declarative example
+-------------------
+
 As usual you can create the button widget declaratively using the dojoType attribute
 
 .. cv-compound::
@@ -50,7 +59,10 @@ As usual you can create the button widget declaratively using the dojoType attri
 
     <button dojoType="dijit.form.Button">Click me too!</button>
 
-Buttons can have icons and labels, and sometimes they just display an icon, but even in that case you should specify a label for a11y reasons.  Use the showLabel parameter to supress it from appearing under normal circumstances:
+Show only the icon
+------------------
+
+Buttons can have icons and labels, and sometimes they just display an icon, but even in that case you should specify a label for a11y reasons. Use the showLabel parameter to supress it from appearing under normal circumstances:
 
 .. cv-compound::
 
@@ -63,6 +75,7 @@ Buttons can have icons and labels, and sometimes they just display an icon, but 
   .. cv:: html
 
     <button dojoType="dijit.form.Button" iconClass="dijitEditorIcon dijitEditorIconCut" showLabel="false">cut</button>
+
 
 =============
 Accessibility
