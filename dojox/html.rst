@@ -49,3 +49,7 @@ See also
 * `dojo.html <dojo/html>`_
 
   Inserting contents in HTML nodes
+
+* `dojo._base.html <dojo/_base/html>`__
+
+  Basic DOM handling functions, included in Dojo Base
