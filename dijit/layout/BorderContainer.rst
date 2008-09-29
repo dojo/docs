@@ -4,21 +4,44 @@
 dijit.layout.BorderContainer
 ============================
 
-:Status: Contributed, Draft
+:Status: Draft
 :Version: 1.0
+:Authors: ?--
+:Developers: ?-
+:Available: since V?
 
 .. contents::
     :depth: 2
 
-This widget is a container partitioned into up to five regions: left (or leading), right (or trailing), top, and bottom with a mandatory center to fill in any remaining space. Each edge region may have an optional splitter user interface for manual resizing. Note that there can be at most one child marked for each region.
+This widget is a container partitioned into up to five regions: left (or leading), right (or trailing), top, and bottom with a mandatory center to fill in any remaining space. Each edge region may have an optional splitter user interface for manual resizing. 
+
+
+=====
+Usage
+=====
+
+Note that there can be at most one child marked for each region.
 
 Sizes are specified for the edge regions in pixels or percentage using CSS -- height to top and bottom, width for the sides. You might specify a top region of height:100px and a left region of width:50%. The center typically does not have any dimensions specified in CSS and resizes automatically to fill the remaining space.
 
 BorderContainer operates in a choice of two layout modes: the design attribute may be set to "headline" (by default) or "sidebar". With the "headline" layout, the top and bottom sections extend the entire width of the box and the remaining regions are placed in the middle. With the "sidebar" layout, the side panels take priority, extending the full height of the box.
 
+Setting sizes
+-------------
+Besides setting the size of the BorderContainer itself, you generally need to set the width of the leading and trailing (left and the right) panes.
+You shouldn't need to set the height of the top/bottom panes as that can be determined automatically.
+
+Of course, you shouldn't set the size of the center pane, since it's size is determined from whatever is left over after
+placing the left/right/top/bottom panes.
+You also shouldn't set the width of the top/bottom panes or the height of the left/right panes as that would be meaningless.
+
+
 ========
 Examples
 ========
+
+Declarative example
+-------------------
 
 .. cv-compound::
 
@@ -52,6 +75,9 @@ Examples
         height: 100%;
       }
     </style>
+
+More advanced example
+---------------------
 
 Lets take a look at a more advanced example of using BorderContainer and other layout widgets.
 This example uses two BorderContainers to allow to, left and right content areas. 
@@ -115,14 +141,6 @@ Note the tabStrip attribute on the TabContainer.
       }
     </style>
 
-Setting sizes
--------------
-Besides setting the size of the BorderContainer itself, you generally need to set the width of the leading and trailing (left and the right) panes.
-You shouldn't need to set the height of the top/bottom panes as that can be determined automatically.
-
-Of course, you shouldn't set the size of the center pane, since it's size is determined from whatever is left over after
-placing the left/right/top/bottom panes.
-You also shouldn't set the width of the top/bottom panes or the height of the left/right panes as that would be meaningless.
 
 =============
 Accessibility
@@ -139,4 +157,4 @@ Change the size of a vertical region           left / right arrows to decrease a
 Change the size of a horizontal region         down / up arrows to decrease and increase
 ===========================================    =================================================
 
-Note: The children of BorderContainer must be created in the source code in their natural tab order. Header regions should be first and footer regions last.  In Left to right locales, left regions before center and right ones.  
+Note: The children of BorderContainer must be created in the source code in their natural tab order. Header regions should be first and footer regions last. In Left to right locales, left regions before center and right ones.
