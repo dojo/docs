@@ -5,7 +5,7 @@ dijit.form.TextBox
 
 :Status: Draft
 :Version: 1.0
-:Authors: Craig Riecke
+:Authors: Mark Hays, Bill Keese, Nikolai Onken, Marcus Reimann, Craig Riecke
 :Developers: ?-
 :Available: since V?
 
