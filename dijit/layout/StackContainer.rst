@@ -4,15 +4,30 @@ dijit.layout.StackContainer
 ===========================
 
 :Status: Draft
-:Version: 1.2
+:Version: 1.0
+:Authors: ?--
+:Developers: ?-
+:Available: since V?
+
+.. contents::
+    :depth: 2
 
 A container that has multiple children, but shows only one child at a time (like looking at the pages in a book one by one). This container is good for wizards, slide shows, and long lists or text blocks.
 
-StackContainer's current pane can be set via the selectChild() method, or it can be controlled from a StackController.  StackController
+=====
+Usage
+=====
+
+StackContainer's current pane can be set via the selectChild() method, or it can be controlled from a StackController. StackController
 is a controller not in the MVC send of the word, but like a TV remote control... it's sets which page the StackController is tuned to.
 
+
+========
 Examples
---------
+========
+
+Programmatic example
+--------------------
 
 Here's an example of a progamatically created StackContainer, and associated StackController:
 
@@ -56,6 +71,8 @@ Here's an example of a progamatically created StackContainer, and associated Sta
     <div id="scontroller-prog"></div>
 
 
+Declarative example
+-------------------
 
 Here you will see a declaratively created StackContainer
 
@@ -97,11 +114,13 @@ Here you will see a declaratively created StackContainer
       }
     </style>
 
+
+=============
 Accessibility
--------------
+=============
 
 Keyboard
-~~~~~~~~
+--------
 
 ==========================================    =================================================
 Action                                        Key
