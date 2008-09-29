@@ -21,34 +21,34 @@ Most widgets within this project are experimental.
 Features
 ========
 
-* `Badge <dojox/image/Badge>`_
+* `dojox.image.Badge <dojox/image/Badge>`_
 
   Attach images or background images, and let them loop
 
-* `FlickrBadge <dojox/image/FlickrBadge>`_
+* `dojox.image.FlickrBadge <dojox/image/FlickrBadge>`_
 
   An extension on dojox.image.Badge, using Flickr as a data provider
 
-* `Gallery <dojox/image/Gallery>`_
+* `dojox.image.Gallery <dojox/image/Gallery>`_
 
   A combination of a SlideShow and ThumbnailPicker
 
-* `Lightbox <dojox/image/Lightbox>`_
+* `dojox.image.Lightbox <dojox/image/Lightbox>`_
 
   A widget which shows a single image (or groups of images) in a Dialog
 
-* `Magnifier <dojox/image/Magnifier>`_
+* `dojox.image.Magnifier <dojox/image/Magnifier>`_
 
   A dojox.gfx-based version of the `MagnifierLite <dojox/image/MagnifierLite>`__ widget
 
-* `MagnifierLite <dojox/image/MagnifierLite>`__
+* `dojox.image.MagnifierLite <dojox/image/MagnifierLite>`__
 
   A simple hover behavior for images, showing a zoomed version of a size image
 
-* `SlideShow <dojox/image/SlideShow>`_
+* `dojox.image.SlideShow <dojox/image/SlideShow>`_
 
   A slideshow of images
 
-* `ThumbnailPicker <dojox/image/ThumbnailPicker>`_
+* `dojox.image.ThumbnailPicker <dojox/image/ThumbnailPicker>`_
 
   A dojo.data-powered ThumbnailPicker
