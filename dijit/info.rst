@@ -3,14 +3,15 @@
 Dijit
 =====
 
-:Status: Contributed, Draft
+:Status: Draft
 :Version: 1.0
-:Available: since V0.3
+:Authors: ?--
 
 .. contents::
-  :depth: 2
+    :depth: 2
 
 *Dijit* is a widget system layered on top of Dojo. If you are new to the whole Dojo experience, Dijit is a good place to start. You can build amazing Web 2.0 GUI's using very little, or no, JavaScript (though having an understanding of JavaScript will take you a long way) 
+
 
 ======
 Themes
