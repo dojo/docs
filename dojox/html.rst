@@ -6,7 +6,7 @@ dojox.html
 :Status: Draft
 :Version: 1.0
 :Authors: Marcus Reimann
-:Developers: ?-
+:Developers: Bryan Forbes, Sam Foster, Mike Wilcox
 :Available: since V1.2
 
 .. contents::
