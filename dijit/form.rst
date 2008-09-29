@@ -6,10 +6,13 @@ dijit.form
 ==========
 
 :Status: Draft
-:Version: 1.2
+:Version: 1.0
+:Authors: Mark Hays, Mark Hays, Bill Keese, Nikolai Onken, Marcus Reimann, Craig Riecke
+:Developers: ?-
+:Available: since V?
 
 .. contents::
-    :depth: 3
+    :depth: 2
 
 The dijit.form package contains "form widgets". What's a form widget? It roughly means a widget that appear inside a form, but technically we think of it as "anything that has a value".
 
