@@ -7,7 +7,14 @@ dijit.form.ValidationTextBox
 :Version: 1.0
 :Author: CraigRiecke
 
-A ValidationTextBox by itself '''will not''' prevent invalid entries from submission.  To ensure they're not, simply surround your form with a dijit.form.Form widget
+A ValidationTextBox by itself '''will not''' prevent invalid entries from submission. To ensure they're not, simply surround your form with a dijit.form.Form widget.
+
+========
+Examples
+========
+
+Declarative example
+-------------------
 
 ValidationTextBox widgets usually use Regular Expression validation, as in the following examples:
 
@@ -28,9 +35,10 @@ ValidationTextBox widgets usually use Regular Expression validation, as in the f
 		invalidMessage="Invalid Non-Space Text.">
         <label for="phone">Phone number, no spaces</label>
 
-The regular expression syntax comes directly from JavaScript.  
-The start and ending qualifiers of the regular expression, ^ and $, are implicit - you do not need 
-to include them.  This code demonstrates a ValidationTextBox that only accepts a 5 digit zip code.
+Using regular expressions
+-------------------------
+
+The regular expression syntax comes directly from JavaScript. The start and ending qualifiers of the regular expression, ^ and $, are implicit - you do not need to include them. This code demonstrates a ValidationTextBox that only accepts a 5 digit zip code.
 
 .. cv-compound::
 
@@ -49,7 +57,10 @@ to include them.  This code demonstrates a ValidationTextBox that only accepts a
 		invalidMessage="Invalid zip code.">
         <label for="zip">Also 5-Digit U.S. Zipcode only</label>
 
-ValidationTextBox also supports functions that generate regular expressions.  Having a generating function enables you to write much more dynamic Web applications.  ValidationTextBox passes its constraints object to the generating function.  The following code demonstrates a dynamic ValidationTextBox that only accepts a 5 digit zip code after 5:00PM, and only accepts a county name before then.
+Generate regular expressions
+----------------------------
+
+ValidationTextBox also supports functions that generate regular expressions. Having a generating function enables you to write much more dynamic Web applications. ValidationTextBox passes its constraints object to the generating function. The following code demonstrates a dynamic ValidationTextBox that only accepts a 5 digit zip code after 5:00PM, and only accepts a county name before then.
 
 .. cv-compound::
 
