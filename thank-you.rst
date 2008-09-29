@@ -9,6 +9,7 @@ A big "thank you" goes to
 * Sam Foster,
 * Becky Gibson,
 * James Gosnell,
+* Doug Hays,
 * Mark Hays,
 * Peter Higgins,
 * Robertus Harmawan Johansyah,
