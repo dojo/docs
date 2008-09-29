@@ -4,7 +4,7 @@ dijit.form.ComboBox
 ===================
 :Status: Draft
 :Version: 1.0
-:Authors: ?--
+:Authors: Mark Hays, Nikolai Onken
 :Developers: ?-
 :Available: since V?
 
