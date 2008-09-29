@@ -595,7 +595,7 @@ These sections cover the available projects shipped with the Dojo Toolkit
 * `dojox.highlight <dojox/highlight>`_
 * `dojox.html <dojox/html>`_
 
-  Offers additional HTML helper functions
+  Additional HTML helper functions
 
   * `dojox.html.set <dojox/html/set>`_
 
@@ -603,7 +603,7 @@ These sections cover the available projects shipped with the Dojo Toolkit
 
   * `dojox.html.metrics <dojox/html/metrics>`_
 
-    Functions to translate CSS values to pixel values, calculate scrollbar sizes and font resizes
+    Translate CSS values to pixel values, calculate scrollbar sizes and font resizes
 
   * `dojox.html.styles <dojox/html/styles>`_
 
