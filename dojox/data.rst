@@ -38,7 +38,15 @@ Features
 
 * `dojox.data.GoogleSearchStore <dojox/data/GoogleSearchStore>`_
 
-  Several data stores to interface Google's AJAX search services
+  Several data stores to interface Google's AJAX search services:
+
+    * `dojox.data.GoogleWebSearchStore <dojox/data/GoogleWebSearchStore>`_
+    * `dojox.data.GoogleBlogSearchStore <dojox/data/GoogleBlogSearchStore>`_
+    * `dojox.data.GoogleLocalSearchStore <dojox/data/GoogleLocalSearchStore>`_
+    * `dojox.data.GoogleVideoSearchStore <dojox/data/GoogleVideoSearchStore>`_
+    * `dojox.data.GoogleNewsSearchStore <dojox/data/GoogleNewsSearchStore>`_
+    * `dojox.data.GoogleBookSearchStore <dojox/data/GoogleBookSearchStore>`_
+    * `dojox.data.GoogleImageSearchStore <dojox/data/GoogleImageSearchStore>`_
 
 * `dojox.data.HtmlStore <dojox/data/HtmlStore>`_
 * `dojox.data.HtmlTableStore <dojox/data/HtmlTableStore>`_
