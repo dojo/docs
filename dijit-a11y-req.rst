@@ -83,7 +83,7 @@ This requirement is intended to target low vision users who may have special dis
 
 In Windows High Contrast mode any action or function that is differentiated by color or via a CSS background image is no longer visible. Using a background color to distinguish the active tab within a tab container which meets the first requirement does not meet this requirement since there is no longer any color differentiation for the user to comprehend. An additional means of identifying the active tab, such as a different outline around the tab or underlining the tab title must be provided for this mode. Icons and visual elements created via CSS background images are no longer visible and a real <img> element or text equivalent must be provided.
 
-This requirement will take additional styles in order to meet. Dijit has code to detect high contrast mode and add a dijit-a11y class to the body element of the page. This will trigger additional styles to enable text equivalents, underlining, borders or other visual clues to make the components usable in high contrast mode. See High Contrast/Images Off in the 'Dijit Accessibility Strategy <dijit/a11y-strategy>`_ section for more implementation details. Some of the mechanisms to visually identify elements in high contrast mode are to add a different border or outline, increase the border width, or add an underline or overline to text. Background-images can be replaced by text or <img> elements (but the <img> elements must also have text alternatives). Examples in the Dojo widgets include:
+This requirement will take additional styles in order to meet. Dijit has code to detect high contrast mode and add a dijit-a11y class to the body element of the page. This will trigger additional styles to enable text equivalents, underlining, borders or other visual clues to make the components usable in high contrast mode. See High Contrast/Images Off in the 'Dijit Accessibility Strategy <dijit/a11y>`_ section for more implementation details. Some of the mechanisms to visually identify elements in high contrast mode are to add a different border or outline, increase the border width, or add an underline or overline to text. Background-images can be replaced by text or <img> elements (but the <img> elements must also have text alternatives). Examples in the Dojo widgets include:
 
 **a dotted border on the tab title of the active tab container**
 
@@ -196,7 +196,7 @@ More Details
 
 See the following resources for more details on ARIA
 
-  +`A recorded demo of using the Dijit Demo Mail app with a screen reader <http://weba11y.com/demos/DojoMailDemo/lib/playback.html>`_
-  +`W3C Protocols and Formats Working Group Page <http://www.w3.org/WAI/PF/>`_ (the group developing the ARIA spec)
-  +`ARIA: Accessible Rich Internet Applications <http://developer.mozilla.org/en/Accessible_DHTML>`_ in the Mozilla Developer Center
-  +`Various Presentations on Dojo and ARIA <http://www.weba11y.com/Presentations/presentations.html>`_
+  + `A recorded demo of using the Dijit Demo Mail app with a screen reader <http://weba11y.com/demos/DojoMailDemo/lib/playback.html>`_
+  + `W3C Protocols and Formats Working Group Page <http://www.w3.org/WAI/PF/>`_ (the group developing the ARIA spec)
+  + `ARIA: Accessible Rich Internet Applications <http://developer.mozilla.org/en/Accessible_DHTML>`_ in the Mozilla Developer Center
+  + `Various Presentations on Dojo and ARIA <http://www.weba11y.com/Presentations/presentations.html>`_
