@@ -128,3 +128,35 @@ If you'd like onChange to fire after every button click, set the attribute inter
     <span id="tempBox" >
       &nbsp;&nbsp;&nbsp;
     </span>
+
+=============
+Accessibility
+=============
+
+Keyboard
+--------
+
++-------------------------------------------------------+----------------------------------------------+
+| **Action**                                            | **Key**                                      |
++-------------------------------------------------------+----------------------------------------------+
+| Interact with the number spinner                      | The textbox for the number spinner is in the |
+|                                                       | tab order of the page.                       |
++-------------------------------------------------------+--------------------------------------------- +
+| Increase the number spinner value by single increment | With focus in the number spinner textbox     |
+|                                                       | press the up arrow                           |
++-------------------------------------------------------+--------------------------------------------- +
+| Decrease the number spinner value by single increment | With focus in the number spinner textbox     |
+|                                                       | press the down arrow                         |
++-------------------------------------------------------+--------------------------------------------- +                                                          
+| Increase number spinner value the by large increment  | With focus in the number spinner textbox     |
+| specified by largeDelta parameter (default = 10)      | press page up key                            |
++-------------------------------------------------------+--------------------------------------------- +
+| Decrease number spinner value by the large increment  | With focus in the number spinner textbox     |
+| specified by largeDelta parameter (default = 10)      | press page down key                          |
++-------------------------------------------------------+--------------------------------------------- +
+| Set the minimum value (min parameter must have been   | With focus in the number spinner textbox     |
+| provided)                                             | press the Home key                           |
++-------------------------------------------------------+--------------------------------------------- +
+| Set the maximum value (max parameter must have been   | With focus in the number spinner textbox     |
+| provided)                                             | press the End key                            |
++-------------------------------------------------------+--------------------------------------------- +
