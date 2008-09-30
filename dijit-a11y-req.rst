@@ -181,3 +181,22 @@ When creating a new component for use on the Web follow any existing keyboard co
 
 Enabled for assistive technology
 --------------------------------
+
+People who use screen readers and other assistive technology need additional information about the user interface components such as the type and current state. The Accessible Rich Internet Applications specification from the W3C describes the roles and states which can be applied to scripted user interface controls. The browser interprets this addition semantic information and provides it to assistive technologies via the Accessibility API of the operating system. ARIA has been implemented in all of the widgets in the Dojo core widget set - dijit. See the Implement ARIA Specification material in the `Dijit Accessibility Strategy <dijit/a11y-strategy>`_ section.
+
+Since ARIA is still new, assistance from a developer familiar with ARIA and assisitive technology will be needed to implement and test this feature. However, any developer can implement and test the basic ARIA roles and state. The `Dijit Accessibility Resources <dijit/a11y-resources>`_ section of the book provides details on the api's that Dojo developers can use to implement ARIA. The Add ARIA Information part of the Creating Accessible Widgets section of the book has more details on implementing ARIA when creating a widget.
+
+How to Test
+~~~~~~~~~~~
+
+The ARIA specification is currently only implemented on Windows in Firefox 2 and works with the Window-Eyes and JAWS screen readers. Firefox 3 will support ARIA on Windows and Linux. ARIA support is being added to IE 8, Opera 9.5 and a post 3.0 version of Safari. The Testing Widgets for Accessibility section has information on how to test ARIA. Anyone can perform basic ARIA testing using the MS Inspect or ACCProbe tools. For complete testing screen reeder skills are required. If a developer requires assistance creating or verifying ARIA implementation, create a Dojo Trac ticket with the component set to a11y - review. Please try to do as much ARIA implementation and testing as possible on your own and don't just throw the work at an accessibility person. Engage accessibility help before the widget is complete so accessibility can be included in the design process.
+
+More Details
+~~~~~~~~~~~~
+
+See the following resources for more details on ARIA
+
+  +`A recorded demo of using the Dijit Demo Mail app with a screen reader
+  +`W3C Protocols and Formats Working Group Page (the group developing the ARIA spec)
+  +`ARIA: Accessible Rich Internet Applicationsin the Mozilla Developer Center
+  +`Various Presentations on Dojo and ARIA
