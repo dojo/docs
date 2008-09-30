@@ -105,6 +105,8 @@ Features
 
 * `dojox.data.PicasaStore <dojox/data/PicasaStore>`_
 
+  A data store interface to one of the basic services of the Picasa service, the public photo feed
+
 * `dojox.data.QueryReadStore <dojox/data/QueryReadStore>`_
 
   A read-only store, which makes a request to the server for each sorting or query in order to work with big datasets
