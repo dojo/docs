@@ -8,7 +8,7 @@ A11y Requirements
 :Author: Becky Gibson
 
 .. contents::
-  :depth: 3
+  :depth: 2
 
 ===================
 5 A11y Requirements
@@ -44,19 +44,19 @@ This is perhaps the most confusing requirement and most difficult to describe. I
 
 Here is a dojo tab container displayed using the blue soria theme. The first tab is active and has a darker blue background color. The non-active tabs are displayed in the lighter blue. Since there is a difference in contrast, the use of the background color is acceptable. 
 
-.. image:: 
+.. image:: soriatabcontainer.png
 
 If color is removed, the difference between the active and non-active tabs can still be distinguished as demonstrated in the image below. 
 
-.. image::
+.. image:: soriatabcontainergrey.png
 
 The following two images show another example using the dojo menu in the tundra theme. A blue background is applied to to the menu item with focus. 
 
-.. image::
+.. image:: tundramenu.png
 
 This background is still apparent when color (but not contrast) is removed.
 
-.. image::
+.. image:: tundramenugrey.png
 
 How to Test
 ~~~~~~~~~~~
