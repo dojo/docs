@@ -84,3 +84,11 @@ Declarative example
        required="true" />
      <label for="time1">Drop down Time box. Click inside to display the time picker.</label>
      <br>string value: <input readonly disabled id='val' value='value not changed' />
+
+=============
+Accessibility
+=============
+
+See the Accessibility Section in `dijit.form.ValidationTextBox <dijit/form/ValidationTextBox>`_
+
+The time picker popup associated with the TimeTextBox is not yet fully accessible.  However, the TimeTextBox will still meet accessibility requirments as long as the developer provides the validation parameters promptMessage and invalidMessage when creating the TimeTextBox.  These messages are implemented in a format that is accessible to all users.   
