@@ -125,6 +125,19 @@ standard display
 
 high contrast (black on white)
 
+In addition to high contrast mode, the UI must also be usable if images are turned off. Turning images off in the browser will prevent <img> elements and CSS background images from being displayed but colors and styles will still be visible. If you have properly supported high contrast mode, text alternatives will exist for the CSS background images. If any <img> elements have been used and they convey meaning within the UI, they must have alt and title attributes. An image conveys meaning when it must be present in order to access the functionality. For example, an image on a toolbar button conveys meaning if without the image displayed the user will have no way to determine the button's function.
+
+How to Test
+~~~~~~~~~~~
+
+In order to completely test this requirement you will need to use Windows and turn on high contrast mode. The `Widgets and High Contast Mode <http://www.dojotoolkit.org/2007/03/30/widgets-and-high-contrast-mode>`_ post has instructions for enabling high contrast mode. With high contrast mode turned on verify that all of the visual elements of the component can be seen and identified. Perform all actions associated with the component such as selection, focus, and activation and verify that all are visually identifiable. Note that browser provided focus indication is sufficient - you don't need to add additional styles to enhance focus.
+
+In High Contrast mode <img> elements will still be displayed. To confirm that text alternatives have been provided for <img> elements turn display of images off in the browser. Verify that an appropriate text alternative is provided for any images which are essential to the UI.
+
+More Details
+~~~~~~~~~~~~
+
+This requirement comes from the WCAG 2.0 guideline Text Alternatives: `Provide text alternatives for any non-text content so that it can be changed into other forms people need, such as large print, braille, speech, symbols or simpler language <http://www.w3.org/TR/WCAG20/#text-equiv>`_. If there are images that have meaning they must have text alternatives. The color requirements are stricter interpretations of Use of Color: `Color is not used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element <http://www.w3.org/TR/WCAG20/#visual-audio-contrast-without-color>`_.
 
 Visible at various font sizes
 -----------------------------
