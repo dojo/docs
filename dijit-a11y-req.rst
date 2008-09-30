@@ -3,7 +3,7 @@
 A11y Requirements
 =================
 
-:Status: Draft
+:Status: Contributed
 :Version: 1.2
 :Author: Becky Gibson
 
