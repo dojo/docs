@@ -18,7 +18,7 @@ Below are the 5 basic Dojo Accessibility requirements which must be met when cre
 
 **Visual**
 
-  + `Identification and interaction with visual elements does not rely on color alone <dijit-a11y-req#interaction-does-NOT-rely-on-color-alone>`_
+  + `Identification and interaction with visual elements does not rely on color alone <dijit-a11y-req#interaction-does-not-rely-on-color-alone>`_
   + `All functionality is perceivable without color or Images <dijit-a11y-req#perceivable-without-color-or-images>`_
   + `All functionality is visible and usable at various font sizes <dijit-a11y-req#visible-at-various-font-sizes>`_
 
