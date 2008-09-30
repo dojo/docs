@@ -56,6 +56,9 @@ Features
   Provides access to the Flickr photo sharing site's REST API
 
 * `dojox.data.FlickrStore <dojox/data/FlickrStore>`_
+
+  A wrapper to the public photo feed of the Flickr service
+
 * `dojox.data.GoogleFeedStore <dojox/data/GoogleFeedStore>`_
 
   A Google AJAX API powered data store for retrieving RSS and Atom feeds from Google
