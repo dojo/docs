@@ -50,3 +50,9 @@ Declarative example
 		required= "true" 
 		invalidMessage= "Invalid elevation.">
         <label for="q05">Integer between -20000 to +20000</label>
+
+=============
+Accessibility
+=============
+
+See the Accessibility Section in `dijit.form.ValidationTextBox <dijit/form/ValidationTextBox>`_
