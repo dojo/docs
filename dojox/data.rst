@@ -28,6 +28,9 @@ Features
   A clone of `dojo.data.ItemFileWriteStore <dojo.data.ItemFileWriteStore>`__, which supports more complex qyeries than the simple AND format property matching
 
 * `dojox.data.AtomReadStore <dojox/data/AtomReadStore>`_
+
+  A store designed to provide read-only access to Atom XML documents
+
 * `dojox.data.CouchDBRestStore <dojox/data/CouchDBRestStore>`_
 
   An extension of `dojox.data.JsonRestStore <dojox/data/JsonRestStore>`__ to handle CouchDB's idiosyncrasies, special features, and deviations from standard HTTP Rest
