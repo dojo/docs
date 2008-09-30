@@ -24,6 +24,9 @@ Features
   A clone of `dojo.data.ItemFileReadStore <dojo.data.ItemFileReadStore>`__, which supports more complex qyeries than the simple AND format property matching
 
 * `dojox.data.AndOrWriteStore <dojox/data/AndOrWriteStore>`_
+
+  A clone of `dojo.data.ItemFileWriteStore <dojo.data.ItemFileWriteStore>`__, which supports more complex qyeries than the simple AND format property matching
+
 * `dojox.data.AtomReadStore <dojox/data/AtomReadStore>`_
 * `dojox.data.CouchDBRestStore <dojox/data/CouchDBRestStore>`_
 
