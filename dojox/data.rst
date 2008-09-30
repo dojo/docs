@@ -85,6 +85,8 @@ Features
 
 * `dojox.data.jsonPathStore <dojox/data/jsonPathStore>`_
 
+  A local (in memory) store which can attach a dojo.data interface to each javascript object and uses jsonPath as the query language
+
 * `dojox.data.JsonRestStore <dojox/data/JsonRestStore>`_
 
   A lightweight data store implementation of a RESTful client
