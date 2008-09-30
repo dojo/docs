@@ -142,12 +142,42 @@ This requirement comes from the WCAG 2.0 guideline Text Alternatives: `Provide t
 Visible at various font sizes
 -----------------------------
 
+Some users set their browser to use larger font sizes. All of the Dojo components should render and work properly at larger and smaller font sizes. In order for the user's font size preference to work, Dojo should use relative font sizes with em and % units, and avoid fixed font sizes such as 12px or 10pt. Items such as the size of the color palette square or checkbox and radio button may be defined using fixed sizes since they do not need to change in response to larger font sizes. While fixed sizes can be used for margins and padding, note that the margin or padding will no longer change in relation to the font size which may affect the overall visual look and feel. In addition, larger or smaller fonts may cause line wrapping within components so keep that in mind when implementing specific layouts and placement. Make certain that any parameters to widgets that are used to specify height and width can accept and respond to relative sizes.
+
+How to Test
+~~~~~~~~~~~
+
+IE, Firefox, and Safari all have a mechanism to increase text size. IE 7, Firefox 3 and Opera provide a mechanism to zoom the entire page - text and images. When a View text size option is selected in IE 6 & 7, text with explicit sizes will not scale. This is a great way to check whether or not you have incorrectly set any font sizes to a specific value - if the text doesn't change size in IE 6 & 7 when you select view text size largest you need to make changes to the style of that text.
+
+To check for proper layout, select View Text Size largest in IE 6 & 7 or increase the text size two or three times in Firefox 2 or Safari. Reload your test page and verify that any components are rendered in a manner that is still usable. Items may wrap (such as a large set of tabs in a tab container) but the functionality should still be understandable.
+
+More Details
+~~~~~~~~~~~~
+
+This requirement comes from WCAG 2.0 Resize text: `Text (but not images of text) can be resized without assistive technology up to 200 percent without loss of content or functionality <http://www.w3.org/TR/WCAG20/#visual-audio-contrast-scale>`_. This is not a top level requirement but is important in order to properly support IE 6. The advent of the Zoom feature in IE 7, Firefox 3 and Opera negate the need for ensuring that font sizes are relative since the entire page gets uniformly scaled. But as long as IE 6 is supported fixed font sizes can be an issue.
+
 ==========
 Functional
 ==========
 
 Usable via the mouse and keyboard
 ---------------------------------
+
+Not all users want or are able to use a mouse for navigation so a keyboard mechanism to access all of the functionality on a page must be provided. This does not mean that every visual element must be capable of receiving focus and activation via the keyboard! Rather, it means that the same functionality is provided via that keyboard as can be achieved with the mouse. For example, Dojo dialogs have a close icon in the upper corner of the dialog title bar. The user can click on this icon to cancel the dialog. The keyboard user can not tab to that icon but pressing escape with focus in the dialog performs the same cancel function. Thus, the keyboard version of the functionality to cancel a dialog has been provided.
+
+How to Test
+~~~~~~~~~~~
+
+Break free from your mouse! Any developer can test using just the keyboard. You may have to learn a few basic keystrokes for general navigation within your browser. There are some references for general keyboard usage in the Testing Widgets For Accessibility section of the Dojo Book. Make certain that all functionality of the component can be accessed via the keyboard. The keyboard usage of all existing dijit widgets are documented on the book page for each widget in Part 2: Dijit.
+
+More Details
+~~~~~~~~~~~~
+
+This requirement comes from a WCAG 2.0 guideline: `Keyboard Accessible: Make all functionality available from a keyboard <http://www.w3.org/TR/WCAG20/#keyboard-operation>`_.
+
+By default browsers provide focus to form fields and links. The user can use the tab key to move focus within these items on a page. With many sophisticated UI components on a page, tabbing to interact within all of these items would be tedious. Thus, it is recommended, and Dijit has implemented, arrow key and other keyboard navigation within widgets. There are various Dojo and dijit functions to make implementation of keyboard support easier. See the Creating Accessible Widgets section of the Dojo Book.
+
+When creating a new component for use on the Web follow any existing keyboard conventions of a similar Desktop component. There is a group working on a `DHTML Style Guide <http://dev.aol.com/dhtml_style_guide>`_ to define the keystrokes and behaviors to implement for Web components. As of October, 2008, this document is still in draft stage but is a good reference for implementing keyboard support.
 
 Enabled for assistive technology
 --------------------------------
