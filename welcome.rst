@@ -463,6 +463,8 @@ Dijit is Dojo's UI Library, and lives as a separate namespace ``dijit``. Dijit r
     * `a11y Resources <dijit-a11y-resources>`_
     * `Creating Accessible Widgets <quickstart/writingWidgets/a11y>`_
     * `Testing for Accessibility <quickstart/writingWidgets/a11yTesting>`_
+    * `a11y Requirements <dijit-a11y-req>`_
+    * `a11y Statement <dijit-a11y-statement>`_
 
 * `dijit.Calendar <dijit/Calendar>`_
 * `dijit.ColorPalette <dijit/ColorPalette>`_
