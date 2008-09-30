@@ -79,7 +79,7 @@ WCAG 2.0 has some specific requirements about the contrast ratio of text and ima
 Perceivable without color or images
 -----------------------------------
 
-This requirement is intended to target low vision users who may have special display settings to help with a specific visual impairment. It can often get confused with the requirement that "Identification and interaction with visual elements does not rely on color alone" which must be met for the default display mode seen by the majority of users. Low Vision users often use a display setting referred to as High Contrast Mode. In Windows, this setting removes all colors and background images from Web pages. See `Widgets and High Contast Mode <http://www.dojotoolkit.org/2007/03/30/widgets-and-high-contrast-mode>`_for a more complete description.
+This requirement is intended to target low vision users who may have special display settings to help with a specific visual impairment. It can often get confused with the requirement that "Identification and interaction with visual elements does not rely on color alone" which must be met for the default display mode seen by the majority of users. Low Vision users often use a display setting referred to as High Contrast Mode. In Windows, this setting removes all colors and background images from Web pages. See `Widgets and High Contast Mode <http://www.dojotoolkit.org/2007/03/30/widgets-and-high-contrast-mode>`_ for a more complete description.
 
 In Windows High Contrast mode any action or function that is differentiated by color or via a CSS background image is no longer visible. Using a background color to distinguish the active tab within a tab container which meets the first requirement does not meet this requirement since there is no longer any color differentiation for the user to comprehend. An additional means of identifying the active tab, such as a different outline around the tab or underlining the tab title must be provided for this mode. Icons and visual elements created via CSS background images are no longer visible and a real <img> element or text equivalent must be provided.
 
@@ -87,27 +87,43 @@ This requirement will take additional styles in order to meet. Dijit has code to
 
 **a dotted border on the tab title of the active tab container**
 
-.. image:: tab.png  standard display
+.. image:: tab.png
 
-.. image:: tabHC.png high contrast (yellow on black)
+standard display
+
+.. image:: tabHC.png
+
+high contrast (yellow on black)
 
 **a wide border to represent the progress within a progress bar**
 
-.. image:: progress.png  standard display
+.. image:: progress.png
 
-.. image:: progressHC.png high contrast (white on black)
+standard display
+
+.. image:: progressHC.png
+
+high contrast (white on black)
 
 **an overline on the selected date in the calendar**
 
-.. image:: calendar.png standard display
+.. image:: calendar.png
 
-.. image:: calendarHC.png high contrast (yellow on black)
+standard display
+
+.. image:: calendarHC.png
+
+high contrast (yellow on black)
 
 **text alternatives for the editor toolbar buttons**
 
-.. image:: toolbar.png standard display
+.. image:: toolbar.png
 
-.. image:: toolbarHC.png high contrast (black on white)
+standard display
+
+.. image:: toolbarHC.png
+
+high contrast (black on white)
 
 
 Visible at various font sizes
