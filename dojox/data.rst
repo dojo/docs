@@ -89,6 +89,9 @@ Features
   A lightweight data store implementation of a RESTful client
 
 * `dojox.data.KeyValueStore <dojox/data/KeyValueStore>`_
+
+  An interface for reading property style files (key/value pairs)
+
 * `dojox.data.OpmlStore <dojox/data/OpmlStore>`_
 * `dojox.data.PersevereStore <dojox/data/PersevereStore>`_
 
