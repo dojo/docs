@@ -5,7 +5,7 @@ dojox.rpc.Rest
 
 :Status: Draft
 :Version: 1.0
-:Authors: Kris Zyp
+:Authors: Marcus Reimann, Kris Zyp
 :Developers: Bryan Forbes, Dustin Machi, Kris Zyp
 :Available: since V1.2
 
