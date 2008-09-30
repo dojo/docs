@@ -3,14 +3,17 @@
 dojox.rpc.Rest
 ==============
 
-:Status: Contributed, Draft
-:Version: beta
-:Authors: ?--
+:Status: Draft
+:Version: 1.0
+:Authors: Kris Zyp
+:Developers: Bryan Forbes, Dustin Machi, Kris Zyp
+:Available: since V1.2
 
 .. contents::
-    :depth: 2
+   :depth: 2
 
 dojox.rpc.Rest provides a HTTP REST service with full range REST verbs include GET, PUT, POST and DELETE.
+
 
 =====
 Usage
@@ -45,6 +48,7 @@ You can also use the SMD service to generate a REST service:
 
 
 Note: dojox.rpc.Rest doesn't require dojox.rpc.Service, and if you want it you must require it yourself, and you must load it prior to dojox.rpc.Rest.
+
 
 ========
 Examples
