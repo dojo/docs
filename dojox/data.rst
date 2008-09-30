@@ -58,9 +58,15 @@ Features
 * `dojox.data.KeyValueStore <dojox/data/KeyValueStore>`_
 * `dojox.data.OpmlStore <dojox/data/OpmlStore>`_
 * `dojox.data.PersevereStore <dojox/data/PersevereStore>`_
+
+  An extension of `dojox.data.JsonRestStore <dojox/data/JsonRestStore>`__ to handle Persevere's special features
+
 * `dojox.data.PicasaStore <dojox/data/PicasaStore>`_
 * `dojox.data.QueryReadStore <dojox/data/QueryReadStore>`_
 * `dojox.data.S3Store <dojox/data/S3Store>`_
+
+  An extension of `dojox.data.JsonRestStore <dojox/data/JsonRestStore>`__ to handle Amazon's S3 service using JSON data
+
 * `dojox.data.ServiceStore <dojox/data/ServiceStore>`_
 * `dojox.data.SnapLogicStore <dojox/data/SnapLogicStore>`_
 * `dojox.data.WikipediaStore <dojox/data/WikipediaStore>`_
