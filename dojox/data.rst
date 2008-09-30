@@ -121,6 +121,8 @@ Features
 
 * `dojox.data.SnapLogicStore <dojox/data/SnapLogicStore>`_
 
+  A data store interface to use the SnapLogic framework
+
 * `dojox.data.WikipediaStore <dojox/data/WikipediaStore>`_
 
   An extension of `dojox.data.ServiceStore <dojox/data/ServiceStore>`__ to use Wikipedia's search service
