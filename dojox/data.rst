@@ -36,6 +36,9 @@ Features
   An extension of `dojox.data.JsonRestStore <dojox/data/JsonRestStore>`__ to handle CouchDB's idiosyncrasies, special features, and deviations from standard HTTP Rest
 
 * `dojox.data.CssClassStore <dojox/data/CssClassStore>`_
+
+  A read interface based on the CssRuleStore
+
 * `dojox.data.CssRuleStore <dojox/data/CssRuleStore>`_
 * `dojox.data.CsvStore <dojox/data/CsvStore>`_
 * `dojox.data.FileStore <dojox/data/FileStore>`_
