@@ -175,7 +175,7 @@ More Details
 
 This requirement comes from a WCAG 2.0 guideline: `Keyboard Accessible: Make all functionality available from a keyboard <http://www.w3.org/TR/WCAG20/#keyboard-operation>`_.
 
-By default browsers provide focus to form fields and links. The user can use the tab key to move focus within these items on a page. With many sophisticated UI components on a page, tabbing to interact within all of these items would be tedious. Thus, it is recommended, and Dijit has implemented, arrow key and other keyboard navigation within widgets. There are various Dojo and dijit functions to make implementation of keyboard support easier. See the Creating Accessible Widgets section of the Dojo Book.
+By default browsers provide focus to form fields and links. The user can use the tab key to move focus within these items on a page. With many sophisticated UI components on a page, tabbing to interact within all of these items would be tedious. Thus, it is recommended, and Dijit has implemented, arrow key and other keyboard navigation within widgets. There are various Dojo and dijit functions to make implementation of keyboard support easier. See the `Creating Accessible Widgets <quickstart/writingWidgets/a11y>`_ section.
 
 When creating a new component for use on the Web follow any existing keyboard conventions of a similar Desktop component. There is a group working on a `DHTML Style Guide <http://dev.aol.com/dhtml_style_guide>`_ to define the keystrokes and behaviors to implement for Web components. As of October, 2008, this document is still in draft stage but is a good reference for implementing keyboard support.
 
