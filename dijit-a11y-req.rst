@@ -63,16 +63,17 @@ How to Test
 
 If you are developing on the Mac the simplest way to test for this is to open Universal Access from System Properties, pick the Seeing panel and click on "Use grayscale". If you can still detect the contrast difference in modes, you have met the a11y requirement. Even better if you can increase the contrast on the "Enhance Contrast" slider and still see the difference. Try to be reasonable about the contrast level - if it isn't obvious or you have to ask for a second opinion the contrast probably isn't sufficent. If you have an image editing program you can capture an image of the component, load it into your editing program, reduce the saturation and make sure you can still perceive a contrast difference. Hey, anyone should be able to test for this!
 
-If you want examples of contrast ratios for different background and foreground colors see Gez Lemon's Example Luminosity Contrast Ratios or pick your own colors and use his Luminosity Contrast Ratio Analyser.
+If you want examples of contrast ratios for different background and foreground colors see Gez Lemon's `Example Luminosity Contrast Ratios <http://juicystudio.com/services/coloursaferatio.php>`_ or pick your own colors and use his `Luminosity Contrast Ratio Analyser <http://juicystudio.com/services/luminositycontrastratio.php>`_.
 
 More Details
 ~~~~~~~~~~~~
-This requirement comes from the W3C Web Content Accessibility Guidelines (WCAG) 2.0; Use of Color: Color is not used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element. The more contrast that the color difference provides, the better.
+This requirement comes from the W3C Web Content Accessibility Guidelines (WCAG) 2.0; Use of Color: `Color is not used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element <http://www.w3.org/TR/WCAG20/#visual-audio-contrast-without-color>`_. The more contrast that the color difference provides, the better.
 
 WCAG 2.0 has techniques demonstrating the proper use of color:
 
-C15: Using CSS to change the presentation of a user interface component when it receives focus.
-C16: Changing the background color or border of the element with hover and focus
+  + `C15: Using CSS to change the presentation of a user interface component when it receives focus <http://www.w3.org/TR/2008/WD-WCAG20-TECHS-20080430/C15.html>`_.
+  + `C16: Changing the background color or border of the element with hover and focus <http://www.w3.org/TR/2008/WD-WCAG20-TECHS-20080430/C16.html>`_
+
 WCAG 2.0 has some specific requirements about the contrast ratio of text and images of text to the background but that doesn't generally apply to Dijit UI where text within the widgets is kept to a minimum. There are formulas for determining the color contrast as well as testing tools - see the How to Test section.
 
 Perceivable without color or images
