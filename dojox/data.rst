@@ -77,7 +77,7 @@ Features
 
     * `dojox.data.GoogleLocalSearchStore <dojox/data/GoogleLocalSearchStore>`_
 
-      A data store for retrieving search results from Google Local Search for Maps
+      A data store for retrieving search results from Google Location Search
 
     * `dojox.data.GoogleVideoSearchStore <dojox/data/GoogleVideoSearchStore>`_
 
