@@ -20,6 +20,9 @@ Features
 ========
 
 * `dojox.data.AndOrReadStore <dojox/data/AndOrReadStore>`_
+
+  A clone of `dojo.data.ItemFileReadStore <dojo.data.ItemFileReadStore>`__, which supports more complex qyeries than the simple AND format property matching
+
 * `dojox.data.AndOrWriteStore <dojox/data/AndOrWriteStore>`_
 * `dojox.data.AtomReadStore <dojox/data/AtomReadStore>`_
 * `dojox.data.CouchDBRestStore <dojox/data/CouchDBRestStore>`_
