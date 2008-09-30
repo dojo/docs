@@ -44,8 +44,17 @@ Features
   A read interface to the CSS rules loaded in the current page
 
 * `dojox.data.CsvStore <dojox/data/CsvStore>`_
+
+  A read interface that works with CSV formated data files
+
 * `dojox.data.FileStore <dojox/data/FileStore>`_
+
+  A lightweight data store implementation for accessing details about a remote FileSystem
+
 * `dojox.data.FlickrRestStore <dojox/data/FlickrRestStore>`_
+
+  Provides access to the Flickr photo sharing site's REST API
+
 * `dojox.data.FlickrStore <dojox/data/FlickrStore>`_
 * `dojox.data.GoogleFeedStore <dojox/data/GoogleFeedStore>`_
 
