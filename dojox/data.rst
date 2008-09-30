@@ -76,7 +76,13 @@ Features
     * `dojox.data.GoogleImageSearchStore <dojox/data/GoogleImageSearchStore>`_
 
 * `dojox.data.HtmlStore <dojox/data/HtmlStore>`_
+
+  A read interface to work with HTML tables, lists, and collections of DIV and SPAN tags
+
 * `dojox.data.HtmlTableStore <dojox/data/HtmlTableStore>`_
+
+  A read interface to work with HTML tables
+
 * `dojox.data.jsonPathStore <dojox/data/jsonPathStore>`_
 * `dojox.data.JsonRestStore <dojox/data/JsonRestStore>`_
 
