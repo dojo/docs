@@ -168,7 +168,7 @@ Not all users want or are able to use a mouse for navigation so a keyboard mecha
 How to Test
 ~~~~~~~~~~~
 
-Break free from your mouse! Any developer can test using just the keyboard. You may have to learn a few basic keystrokes for general navigation within your browser. There are some references for general keyboard usage in the Testing Widgets For Accessibility section of the Dojo Book. Make certain that all functionality of the component can be accessed via the keyboard. The keyboard usage of all existing dijit widgets are documented on the book page for each widget in Part 2: Dijit.
+Break free from your mouse! Any developer can test using just the keyboard. You may have to learn a few basic keystrokes for general navigation within your browser. There are some references for general keyboard usage in the `Testing Widgets For Accessibility <quickstart/writingWidgets/a11yTesting>`_ section. Make certain that all functionality of the component can be accessed via the keyboard. The keyboard usage of all existing dijit widgets are documented on the book page for each widget in Part 2: Dijit.
 
 More Details
 ~~~~~~~~~~~~
