@@ -91,3 +91,31 @@ ValidationTextBox also supports functions that generate regular expressions. Hav
 		required="true"
 		invalidMessage="Zip codes after 5, county name before then.">
         <label for="zip2">Also 5-Digit U.S. Zipcode only</label>
+
+=============
+Accessibility
+=============
+
+Keyboard
+--------
+
+================================================    =================================================
+Action                                              Key
+================================================    =================================================
+Move focus to the next widget in the tab order.	    Tab
+Move focus to the prior widget in the tab order.    Shift+Tab
+Submit the form.                                    Enter
+Revert the last entry.                              Esc If the user has not entered data, the Esc key is ignored.
+================================================    =================================================
+
+Screen Readers
+--------------
+
+If an invalid value is entered into a validating Text Box the "state" of the Text box changes, i.e. its background color changes. To accomodate users who are blind, the Text Box's ARIA state is changed to "invalid" so a screen reader can notify the screen reader user. In addition to the "state" change, a pop-up appears. When the pop-up appears screen readers should read the contents of the pop-up. The pop-up text comes from the "invalidMessage" parameter.
+
+Known Issues
+------------
+
+Sometimes the popup message supplied by invalidMessage attribute may be unnecessary. For example, omitting a required field already displays an icon when the cursor leaves the field. In these cases you can omit the "invalidMessage" parameter, but keep in mind that good labels and instructions are still necessary for accessibility, i.e. if the invalid popup will not be displayed then there must be clear instructional text indicating the field is required.
+
+As of the Dojo 1.0 release and beyond: Window-Eyes 6.1 speaks "read only" for fields that have been marked with the ARIA property invalid=true even though the field is still editable.
