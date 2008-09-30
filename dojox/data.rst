@@ -84,6 +84,7 @@ Features
   A read interface to work with HTML tables
 
 * `dojox.data.jsonPathStore <dojox/data/jsonPathStore>`_
+
 * `dojox.data.JsonRestStore <dojox/data/JsonRestStore>`_
 
   A lightweight data store implementation of a RESTful client
@@ -93,12 +94,19 @@ Features
   An interface for reading property style files (key/value pairs)
 
 * `dojox.data.OpmlStore <dojox/data/OpmlStore>`_
+
+  A read-only store to work with Opml formatted XML files
+
 * `dojox.data.PersevereStore <dojox/data/PersevereStore>`_
 
   An extension of `dojox.data.JsonRestStore <dojox/data/JsonRestStore>`__ to handle Persevere's special features
 
 * `dojox.data.PicasaStore <dojox/data/PicasaStore>`_
+
 * `dojox.data.QueryReadStore <dojox/data/QueryReadStore>`_
+
+  A read-only store, which makes a request to the server for each sorting or query in order to work with big datasets
+
 * `dojox.data.S3Store <dojox/data/S3Store>`_
 
   An extension of `dojox.data.JsonRestStore <dojox/data/JsonRestStore>`__ to handle Amazon's S3 service using JSON data
@@ -108,5 +116,11 @@ Features
   ServiceStore and it's subclasses are a generalized dojo.data implementation for any webservice
 
 * `dojox.data.SnapLogicStore <dojox/data/SnapLogicStore>`_
+
 * `dojox.data.WikipediaStore <dojox/data/WikipediaStore>`_
+
+  An extension of `dojox.data.ServiceStore <dojox/data/ServiceStore>`__ to use Wikipedia's search service
+
 * `dojox.data.XmlStore <dojox/data/XmlStore>`_
+
+  A read and write interface to basic XML data
