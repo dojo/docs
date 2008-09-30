@@ -49,3 +49,9 @@ Declarative example
 		currency="USD"
 		invalidMessage="Invalid amount.  Cents are required.">
         <label for="income1">U.S. Dollars</label>
+
+=============
+Accessibility
+=============
+
+See the Accessibility Section in `dijit.form.ValidationTextBox <dijit/form/ValidationTextBox>`_
