@@ -67,33 +67,33 @@ Features
 
   Several data stores to interface Google's AJAX search services:
 
-    * `dojox.data.GoogleWebSearchStore <dojox/data/GoogleWebSearchStore>`_
+  * `dojox.data.GoogleWebSearchStore <dojox/data/GoogleWebSearchStore>`_
 
-      A data store for retrieving search results from Google
+    A data store for retrieving search results from Google
 
-    * `dojox.data.GoogleBlogSearchStore <dojox/data/GoogleBlogSearchStore>`_
+  * `dojox.data.GoogleBlogSearchStore <dojox/data/GoogleBlogSearchStore>`_
 
-      A data store for retrieving search results from Google Blogs
+    A data store for retrieving search results from Google Blogs
 
-    * `dojox.data.GoogleLocalSearchStore <dojox/data/GoogleLocalSearchStore>`_
+  * `dojox.data.GoogleLocalSearchStore <dojox/data/GoogleLocalSearchStore>`_
 
-      A data store for retrieving search results from Google Location Search
+    A data store for retrieving search results from Google Location Search
 
-    * `dojox.data.GoogleVideoSearchStore <dojox/data/GoogleVideoSearchStore>`_
+  * `dojox.data.GoogleVideoSearchStore <dojox/data/GoogleVideoSearchStore>`_
 
-      A data store for retrieving search results from Google Video
+    A data store for retrieving search results from Google Video
 
-    * `dojox.data.GoogleNewsSearchStore <dojox/data/GoogleNewsSearchStore>`_
+  * `dojox.data.GoogleNewsSearchStore <dojox/data/GoogleNewsSearchStore>`_
 
-      A data store for retrieving search results from Google News
+    A data store for retrieving search results from Google News
 
-    * `dojox.data.GoogleBookSearchStore <dojox/data/GoogleBookSearchStore>`_
+  * `dojox.data.GoogleBookSearchStore <dojox/data/GoogleBookSearchStore>`_
 
-      A data store for retrieving search results from Google Book
+    A data store for retrieving search results from Google Book
 
-    * `dojox.data.GoogleImageSearchStore <dojox/data/GoogleImageSearchStore>`_
+  * `dojox.data.GoogleImageSearchStore <dojox/data/GoogleImageSearchStore>`_
 
-      A data store for retrieving search results from Google Image
+    A data store for retrieving search results from Google Image
 
 * `dojox.data.HtmlStore <dojox/data/HtmlStore>`_
 
