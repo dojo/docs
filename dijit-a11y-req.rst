@@ -18,14 +18,14 @@ Below are the 5 basic Dojo Accessibility requirements which must be met when cre
 
 **Visual**
 
-  + `Identification and interaction with visual elements does not rely on color alone <#interaction-does-NOT-rely-on-color-alone>`_
-  + `All functionality is perceivable without color or Images <#perceivable-without-color-or-images>`_
-  + `All functionality is visible and usable at various font sizes <#visible-at-various-font-sizes>`_
+  + `Identification and interaction with visual elements does not rely on color alone <dijit-a11y-req#interaction-does-NOT-rely-on-color-alone>`_
+  + `All functionality is perceivable without color or Images <dijit-a11y-req#perceivable-without-color-or-images>`_
+  + `All functionality is visible and usable at various font sizes <dijit-a11y-req#visible-at-various-font-sizes>`_
 
 **Functional**
 
-  + `All functionality is usable via the mouse and keyboard <#usable-via-the-mouse-and-keyboard>`_
-  + `All functionality is enabled for assistive technology <#enabled-for-assistive-technology>`_
+  + `All functionality is usable via the mouse and keyboard <dijit-a11y-req#usable-via-the-mouse-and-keyboard>`_
+  + `All functionality is enabled for assistive technology <dijit-a11y-req#enabled-for-assistive-technology>`_
 
 Note that this is not a comprehensive list of Web Accessibility requirements, just the list of items most likely to be encountered by a Dojo Designer or Developer. For complete Accessibility Guidelines see:
 
