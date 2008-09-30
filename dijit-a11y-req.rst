@@ -184,7 +184,7 @@ Enabled for assistive technology
 
 People who use screen readers and other assistive technology need additional information about the user interface components such as the type and current state. The Accessible Rich Internet Applications specification from the W3C describes the roles and states which can be applied to scripted user interface controls. The browser interprets this addition semantic information and provides it to assistive technologies via the Accessibility API of the operating system. ARIA has been implemented in all of the widgets in the Dojo core widget set - dijit. See the Implement ARIA Specification material in the `Dijit Accessibility Strategy <dijit/a11y-strategy>`_ section.
 
-Since ARIA is still new, assistance from a developer familiar with ARIA and assisitive technology will be needed to implement and test this feature. However, any developer can implement and test the basic ARIA roles and state. The `Dijit Accessibility Resources <dijit/a11y-resources>`_ section of the book provides details on the api's that Dojo developers can use to implement ARIA. The Add ARIA Information part of the Creating Accessible Widgets section of the book has more details on implementing ARIA when creating a widget.
+Since ARIA is still new, assistance from a developer familiar with ARIA and assisitive technology will be needed to implement and test this feature. However, any developer can implement and test the basic ARIA roles and state. The `Dijit Accessibility Resources <dijit/a11y-resources>`_ section provides details on the api's that Dojo developers can use to implement ARIA. The `Add ARIA Information <quickstart/writingWidgets/a11y#assigning-aria-states>`_ part of the `Creating Accessible Widgets <quickstart/writingWidgets/a11y>`_ section has more details on implementing ARIA when creating a widget.
 
 How to Test
 ~~~~~~~~~~~
@@ -196,7 +196,7 @@ More Details
 
 See the following resources for more details on ARIA
 
-  +`A recorded demo of using the Dijit Demo Mail app with a screen reader
-  +`W3C Protocols and Formats Working Group Page (the group developing the ARIA spec)
-  +`ARIA: Accessible Rich Internet Applicationsin the Mozilla Developer Center
-  +`Various Presentations on Dojo and ARIA
+  +`A recorded demo of using the Dijit Demo Mail app with a screen reader <http://weba11y.com/demos/DojoMailDemo/lib/playback.html>`_
+  +`W3C Protocols and Formats Working Group Page <http://www.w3.org/WAI/PF/>`_ (the group developing the ARIA spec)
+  +`ARIA: Accessible Rich Internet Applications <http://developer.mozilla.org/en/Accessible_DHTML>`_ in the Mozilla Developer Center
+  +`Various Presentations on Dojo and ARIA <http://www.weba11y.com/Presentations/presentations.html>`_
