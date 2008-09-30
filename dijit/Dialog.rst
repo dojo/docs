@@ -6,7 +6,7 @@ dijit.Dialog
 
 :Status: Draft
 :Version: 1.0
-:Authors: Becky Gibson, Peter Higgins, Nikolai Onken
+:Authors: Becky Gibson, Peter Higgins, Bill Keese, Nikolai Onken
 :Developers: ?-
 :Available: since V?
 
