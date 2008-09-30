@@ -123,3 +123,11 @@ Two-Digit Year Format
 ---------------------
 
 TODO: http://dojotoolkit.org/forum/dijit-dijit-0-9/dijit-support/datetextbox-datepattern-constraint-2-digit-year-possible
+
+=============
+Accessibility
+=============
+
+See the Accessibility Section in `dijit.form.ValidationTextBox <dijit/form/ValidationTextBox>`_
+
+The calendar popup associated with the DateTextBox is not yet keyboard accessible.  However, the DateTextBox will still meet accessibility requirments as long as the developer provides the validation parameters promptMessage and invalidMessage when creating the DateTextBox.  These messages are implemented in a format that is accessible to all users.   
