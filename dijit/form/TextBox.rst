@@ -70,6 +70,19 @@ TODO
 Accessibility
 =============
 
+Keyboard
+--------
+
+================================================    =================================================
+Action                                              Key
+================================================    =================================================
+Move focus to the next widget in the tab order.	    Tab
+Move focus to the prior widget in the tab order.    Shift+Tab
+Submit the form.                                    Enter
+Revert the last entry.                              Esc If the user has not entered data, the Esc key is ignored.
+================================================    =================================================
+
+
 Screen Readers
 --------------
 
