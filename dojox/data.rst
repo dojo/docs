@@ -37,9 +37,12 @@ Features
 
 * `dojox.data.CssClassStore <dojox/data/CssClassStore>`_
 
-  A read interface based on the CssRuleStore
+  A read interface based on the `dojox.data.CssRuleStore <dojox/data/CssRuleStore>`__
 
 * `dojox.data.CssRuleStore <dojox/data/CssRuleStore>`_
+
+  A read interface to the CSS rules loaded in the current page
+
 * `dojox.data.CsvStore <dojox/data/CsvStore>`_
 * `dojox.data.FileStore <dojox/data/FileStore>`_
 * `dojox.data.FlickrRestStore <dojox/data/FlickrRestStore>`_
