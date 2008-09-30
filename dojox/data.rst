@@ -68,6 +68,9 @@ Features
   An extension of `dojox.data.JsonRestStore <dojox/data/JsonRestStore>`__ to handle Amazon's S3 service using JSON data
 
 * `dojox.data.ServiceStore <dojox/data/ServiceStore>`_
+
+  ServiceStore and it's subclasses are a generalized dojo.data implementation for any webservice
+
 * `dojox.data.SnapLogicStore <dojox/data/SnapLogicStore>`_
 * `dojox.data.WikipediaStore <dojox/data/WikipediaStore>`_
 * `dojox.data.XmlStore <dojox/data/XmlStore>`_
