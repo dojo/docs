@@ -77,7 +77,7 @@ Features
 
 * `dojox.data.HtmlStore <dojox/data/HtmlStore>`_
 
-  A read interface to work with HTML tables, lists, and collections of DIV and SPAN tags
+  An extension of `dojox.data.HtmlTableStore <dojox/data/HtmlTableStore>`__ to work with HTML tables, lists, and collections of DIV and SPAN tags
 
 * `dojox.data.HtmlTableStore <dojox/data/HtmlTableStore>`_
 
