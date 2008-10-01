@@ -143,8 +143,8 @@ Using dojo.connect on Dom Events is only the beginning or the power contained wi
 * onfocus - a node received focus
 * onblur - a node was 'blurred', or otherwise lost focus
 * onchange - an input value was changed
-* onkeypress -
-* onkeydown - fired when the user presses a key
+* onkeypress - fired when the user presses a key
+* onkeydown - shouldn't be necessary to be used... all key presses go to onkeypress
 * onkeyup - fired when the user releases a key
 * onmouseover - a node was hovered (*warning:* may fire more than you'd like because of bubbling)
 * onmouseout - a node was un-hovered
@@ -193,6 +193,15 @@ All Mozilla based browsers use ``DOMMouseScroll``, and the rest ``onmousewheel``
   });
 
 Here we've fixed the event based on the Event Object provided, and are returning a number greater than 1 for scrolling up, and a negative value for scrolling down.
+
+Connecting To Keyboard Events
+-----------------------------
+With dojo's event system you can setup an onkeypress handler to monitor both printable and non-printable keys.  For browsers that don't generate onkeypress events for non-printable keys, dojo synthesizes them.
+
+Unprintable characters events define a keyCode.  For example, if you press the left arrow then event.keyCode == dojo.keys.LEFT_ARROW
+
+Printable character events define a keyChar.  For example, if you press the 'a' key than evt.keyChar == 'a'.  If you press SHIFT-A then evt.keyChar == 'A'.
+
 
 Connecting Functions to One Another
 -----------------------------------
