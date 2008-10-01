@@ -103,7 +103,8 @@ Note in this example that we've explicitly set a locale for this dojo instance (
 
 When creating a custom build it is possible to include the djConfig object into the build via the scopeDjConfig parameter. The `Dojo Toolbox Builder <http://www.sitepen.com/labs/toolbox/>`_ provides a GUI interface via which to do this. The text box for filling in the djConfig object is on the "Advanced Config" tab:
 
-<img src="DojoToolboxBuilder_djConfig.jpg" width="542" height="548" alt="Dojo Toolbox Builder djConfig setting" />
+.. image:: DojoToolboxBuilder_djConfig.jpg
+  :alt: Dojo Toolbox Builder djConfig setting;
 
 Note that if you click on the "Command" button at the top of the window, you can see that filling in the djConfig object box sets the scopeDjConfig variable. You can learn more about the scopeDjConfig parameter in the `Dojo Book page on custom builds <http://dojotoolkit.org/book/dojo-book-0-9/part-4-meta-dojo/package-system-and-custom-builds>`_ [except I think this page needs to be updated]. The SitePen blog also has a `good introductory tutorial on using the Dojo Toolbox Builder <http://www.sitepen.com/blog/2008/07/08/dojo-toolbox-first-look/>`__.
 
