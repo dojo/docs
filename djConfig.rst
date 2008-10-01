@@ -30,7 +30,7 @@ TODO: how to use the component/class/method
 
 .. code-block :: javascript
   
- dojo.connect(obj: Object, event: String, context: Object, method: String|Function, dontFix: Boolean);
+ djConfig(...);
 
 
 ========
