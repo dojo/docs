@@ -91,6 +91,10 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 
     Dojo's Bootstrap
 
+    * `djConfig <djConfig>`_
+
+      Configuring Dojo with djConfig
+
     * `dojo.addOnLoad <dojo/addOnLoad>`_
 
       Call functions after the DOM has finished loading and widgets declared in markup have been instantiated
