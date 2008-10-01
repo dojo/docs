@@ -44,11 +44,10 @@ Examples
 Programmatic example
 --------------------
 
+TODO: example
+
 Declarative example
 -------------------
-
-TODO: short header
-------------------
 
 TODO: example
 
