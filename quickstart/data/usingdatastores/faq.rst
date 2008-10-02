@@ -150,7 +150,7 @@ The data API was designed to hide whether or not all items are in memory, or are
 Question 7:  Do all datastores have to use the format of data used by ItemFileReadStore?
 ========================================================================================
 
-No. A store's internal data format can be whatever is most efficient for that store to work with. For example, dojox.data.XmlStore's input dtaa format is XML, not JSON. The API is intended to adapt over new as well as existing, data services on the web and expose data items on a common fashion, regardless of the actual backing transport format.
+No. A store's internal data format can be whatever is most efficient for that store to work with. For example, dojox.data.XmlStore's input data format is XML, not JSON. The API is intended to adapt over new as well as existing, data services on the web and expose data items on a common fashion, regardless of the actual backing transport format.
 
 ==============================================================================================================
 Question 8:  I want to save my data with ItemFileWriteStore, but it doesn't send the data to the server.  Why?
