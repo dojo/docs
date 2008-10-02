@@ -156,4 +156,4 @@ No. A store's internal data format can be whatever is most efficient for that st
 Question 8:  I want to save my data with ItemFileWriteStore, but it doesn't send the data to the server.  Why?
 ==============================================================================================================
 
-Because it doesn't now how to send it to your specific server/service implementation.  dojo.data.ItemFileWriteStore's default save behavior is to commit data into internal memory structures only.  It provivers over-ridable hook functions that users must provide in order to send data to an external service.  See the `Write Section </dojo/data/ItemFileWriteStore#the-write-api>`_ of the ItemFileWriteStore docs.
+Because it doesn't now how to send it to your specific server/service implementation.  dojo.data.ItemFileWriteStore's default save behavior is to commit data into internal memory structures only.  It provivers over-ridable hook functions that users must provide in order to send data to an external service.  See the `Write Section <dojo/data/ItemFileWriteStore#the-write-api>`_ of the ItemFileWriteStore docs.
