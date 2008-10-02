@@ -182,7 +182,7 @@ If you are developing a widget or otherwise providing an API not available in Do
 
 This creates a `new` configuration parameter named ``myCustomVariable``. To use this in your application code or widgets, use the ``dojo.config`` member. For instance, a simple `dojo.declare <dojo/declare>`_ call:
 
-.. code-block 
+.. code-block :: javascript
   :linenos:
 
   dojo.declare("my.Thinger", null, {
