@@ -4,20 +4,35 @@
 dojox.grid
 ==========
 
-:Status: Contributed, Draft
-:Version: beta
-:Authors: Scott J. Miles, Steve Orvell, Bryan Forbes, Cyan Ogilvie
+:Status: Draft
+:Version: 1.0
+:Authors: Cyan Ogilvie
+:Developers: Scott J. Miles, Steve Orvell, Bryan Forbes
+:Available: since V1.2
 
 .. contents::
-    :depth: 2
+   :depth: 2
 
 Grids are familiar in the client/server development world. Basically a grid is a kind of mini spreadsheet, commonly used to display details on master-detail forms. From HTML terms, a grid is a "super-table" with its own scrollable viewport.
 
-================
+============
+Introduction
+============
+
+TODO: introduce the component/class/method
+
 Grid 1.2 Changes
-================
+----------------
 
 ``TODOC``
+
+
+=====
+Usage
+=====
+
+TODO: how to use the component/class/method
+
 
 ========
 Examples
