@@ -1,6 +1,6 @@
 #format dojo_rst
 
-dojos.data.jsonPathStore
+dojox.data.jsonPathStore
 ========================
 
 :Status: Draft
