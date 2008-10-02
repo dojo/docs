@@ -6,7 +6,8 @@ dojo
 
 :Status: Draft
 :Version: 1.0
-:Authors: ?--
+:Authors: Peter Higgins, Nikolai Onken, Marcus Reimann
+:Developers: various developers
 :Available: since ever
 
 .. contents::
