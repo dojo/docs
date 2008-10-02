@@ -166,3 +166,30 @@ There is one final way in which djConfig is used, and that is to set preferences
   :linenos:
 
   var djConfig = { disableWhatWGStorage: true }
+
+
+Using djConfig in your Code
+---------------------------
+
+The ambiguity of djConfig is very helpful. You can provide functionality and configuration options for users through the pattern outlined by this doc.
+
+If you are developing a widget or otherwise providing an API not available in Dojo, you are still able to utilize the global nature of the djConfig variable with one minor caveat: After dojo.js is loaded on a page, the settings passed to djConfig (as outlined above) are moved to: `dojo.config`. This is an artifact of the scopeName changing capabilities of Dojo. 
+
+.. code-block :: javascript
+  :linenos:
+
+  var djConfig = { parseOnLoad:true, myCustomVariable:true }
+
+This creates a `new` configuration parameter named ``myCustomVariable``. To use this in your application code or widgets, use the ``dojo.config`` member. For instance, a simple `dojo.declare <dojo/declare>`_ call:
+
+.. code-block 
+  :linenos:
+
+  dojo.declare("my.Thinger", null, {
+      thingerColor: (dojo.config.myCustomVariable ? "wasTrue" : "wasFalse"),
+      constructor: function(){
+         if(dojo.config.myCustomVaraible){ ... }
+      }  
+  });
+
+By referencing `dojo.config.myCustomVariable` as opposed to relying on `djConfig.myCustomVariable` you will be able to utilize the variable safely in built versions using an alternate scopeName
