@@ -1,5 +1,7 @@
 #format dojo_rst
 
+.. _test
+
 Dijit
 =====
 
