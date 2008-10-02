@@ -499,6 +499,7 @@ Form handling
     * `dijit.form.DateTextBox <dijit/form/DateTextBox>`_
     * `dijit.form.NumberSpinner <dijit/form/NumberSpinner>`_
     * `dijit.form.NumberTextBox <dijit/form/NumberTextBox>`_
+    * `dijit.form.Textarea <dijit/form/Textarea>`_
     * `dijit.form.TextBox <dijit/form/TextBox>`_
     * `dijit.form.TimeTextBox <dijit/form/TimeTextBox>`_
     * `dijit.form.ValidationTextBox <dijit/form/ValidationTextBox>`_
