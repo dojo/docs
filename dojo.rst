@@ -13,6 +13,7 @@ dojo
    :depth: 2
 
 The Dojo Toolkit is three individual projects: 
+
 * Dojo Core, 
 * Dijit, and 
 * DojoX. 
