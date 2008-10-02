@@ -18,6 +18,7 @@ A big "thank you" goes to
 * Tobias Klipstein, 
 * Wolfram Kriesing,
 * Ben Lowery,
+* Dustin Machi,
 * Chris Mitchell,
 * Cyan Ogilvie,
 * Nikolai Onken, 
