@@ -10,7 +10,7 @@ UI Development with the Dojo Toolkit
 .. contents::
     :depth: 2
 
-The Dojo Toolkit comes with many amaing modules which all are trying to make your live as a developer many times easier.
+The Dojo Toolkit comes with many amazing modules which all are trying to make your live as a developer many times easier.
 This short introduction to UI Development will introduce you to the main Dojo layout and form widgets.
 
 
