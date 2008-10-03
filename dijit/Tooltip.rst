@@ -59,3 +59,8 @@ Accessibility
 =============
 
 Tooltips are displayed when the associated item receives focus or a mouseover event. Be careful when assigning tooltips to arbitrary elements such as spans of text which may not receive keyboard focus because users of assistive technology or keyboard only users will not benefit from the tooltip. If the tooltip information is important, make certain that the item which triggers display of the tooltip can receive focus via the keyboard. This can be accomplished by adding a tabindex="0" attribute onto the trigger element to put it into the tab order of the page.
+
+Known Issues
+------------
+
+When using Firefox 2 with JAWS 9, the tooltip text is spoken twice. This has been fixed in Firefox 3. 
