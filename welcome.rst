@@ -558,11 +558,11 @@ These sections cover the available projects shipped with the Dojo Toolkit
 
   * `dojox.data.AndOrReadStore <dojox/data/AndOrReadStore>`_
 
-    A clone of `dojo.data.ItemFileReadStore <dojo.data.ItemFileReadStore>`_, which supports more complex queries than the simple AND format property matching
+    A clone of `dojo.data.ItemFileReadStore <dojo.data.ItemFileReadStore>`__, which supports more complex queries than the simple AND format property matching
 
   * `dojox.data.AndOrWriteStore <dojox/data/AndOrWriteStore>`_
 
-    A clone of `dojo.data.ItemFileWriteStore <dojo.data.ItemFileWriteStore>`_, which supports more complex queries than the simple AND format property matching
+    A clone of `dojo.data.ItemFileWriteStore <dojo.data.ItemFileWriteStore>`__, which supports more complex queries than the simple AND format property matching
 
   * `dojox.data.AtomReadStore <dojox/data/AtomReadStore>`_
 
@@ -815,7 +815,7 @@ These sections cover the available projects shipped with the Dojo Toolkit
 
   * `dojox.widget.Dialog <dojox/widget/Dialog>`_
 
-    An extension to `dijit.Dialog </dijit/Dialog>`_
+    An extension to `dijit.Dialog </dijit/Dialog>`__
 
   * `dojox.widget.DocTester <dojox/widget/DocTester>`_
 
