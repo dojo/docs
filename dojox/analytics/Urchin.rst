@@ -23,7 +23,7 @@ You can define your account number as a djConfig parameter ``urchin``. Simply in
   <script type="text/javascript">
      var djConfig = { urchin: "UA-12345-67" };
   </script>
-  <script src="http://o.aolcdn.com/dojo/1.1/dojo/dojo.xs.js"></script>
+  <script src="http://o.aolcdn.com/dojo/1.2/dojo/dojo.xd.js"></script>
 
 or directly on the djConfig attribute of your ``dojo.js`` script tag:
 
