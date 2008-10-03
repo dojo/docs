@@ -208,7 +208,7 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 
     DOM Events
 
-  * `dojo._base.fx <dojo/_base/fx>`__
+  * `dojo._base.fx <dojo/_base/fx>`_
 
     Dojo animation effects
 
@@ -375,7 +375,7 @@ Dojo Core
 
   * `dojo.dnd.Moveable <dojo/dnd/Moveable>`_
 
-* `dojo.fx <dojo/fx>`__
+* `dojo.fx <dojo/fx>`_
 
   Effects library on top of Base animations
 
@@ -558,11 +558,11 @@ These sections cover the available projects shipped with the Dojo Toolkit
 
   * `dojox.data.AndOrReadStore <dojox/data/AndOrReadStore>`_
 
-    A clone of `dojo.data.ItemFileReadStore <dojo.data.ItemFileReadStore>`__, which supports more complex queries than the simple AND format property matching
+    A clone of `dojo.data.ItemFileReadStore <dojo.data.ItemFileReadStore>`_, which supports more complex queries than the simple AND format property matching
 
   * `dojox.data.AndOrWriteStore <dojox/data/AndOrWriteStore>`_
 
-    A clone of `dojo.data.ItemFileWriteStore <dojo.data.ItemFileWriteStore>`__, which supports more complex queries than the simple AND format property matching
+    A clone of `dojo.data.ItemFileWriteStore <dojo.data.ItemFileWriteStore>`_, which supports more complex queries than the simple AND format property matching
 
   * `dojox.data.AtomReadStore <dojox/data/AtomReadStore>`_
 
@@ -570,11 +570,11 @@ These sections cover the available projects shipped with the Dojo Toolkit
 
   * `dojox.data.CouchDBRestStore <dojox/data/CouchDBRestStore>`_
 
-    An extension of `dojox.data.JsonRestStore <dojox/data/JsonRestStore>`__ to handle CouchDB's idiosyncrasies, special features, and deviations from standard HTTP Rest
+    An extension of `dojox.data.JsonRestStore <dojox/data/JsonRestStore>`_ to handle CouchDB's idiosyncrasies, special features, and deviations from standard HTTP Rest
 
   * `dojox.data.CssClassStore <dojox/data/CssClassStore>`_
 
-    A read interface based on the `dojox.data.CssRuleStore <dojox/data/CssRuleStore>`__
+    A read interface based on the `dojox.data.CssRuleStore <dojox/data/CssRuleStore>`_
 
   * `dojox.data.CssRuleStore <dojox/data/CssRuleStore>`_
 
@@ -634,7 +634,7 @@ These sections cover the available projects shipped with the Dojo Toolkit
 
   * `dojox.data.HtmlStore <dojox/data/HtmlStore>`_
 
-    An extension of `dojox.data.HtmlTableStore <dojox/data/HtmlTableStore>`__ to work with HTML tables, lists, and collections of DIV and SPAN tags
+    An extension of `dojox.data.HtmlTableStore <dojox/data/HtmlTableStore>`_ to work with HTML tables, lists, and collections of DIV and SPAN tags
 
   * `dojox.data.HtmlTableStore <dojox/data/HtmlTableStore>`_
 
@@ -658,7 +658,7 @@ These sections cover the available projects shipped with the Dojo Toolkit
 
   * `dojox.data.PersevereStore <dojox/data/PersevereStore>`_
 
-    An extension of `dojox.data.JsonRestStore <dojox/data/JsonRestStore>`__ to handle Persevere's special features
+    An extension of `dojox.data.JsonRestStore <dojox/data/JsonRestStore>`_ to handle Persevere's special features
 
   * `dojox.data.PicasaStore <dojox/data/PicasaStore>`_
 
@@ -670,7 +670,7 @@ These sections cover the available projects shipped with the Dojo Toolkit
 
   * `dojox.data.S3Store <dojox/data/S3Store>`_
 
-    An extension of `dojox.data.JsonRestStore <dojox/data/JsonRestStore>`__ to handle Amazon's S3 service using JSON data
+    An extension of `dojox.data.JsonRestStore <dojox/data/JsonRestStore>`_ to handle Amazon's S3 service using JSON data
 
   * `dojox.data.ServiceStore <dojox/data/ServiceStore>`_
 
@@ -682,7 +682,7 @@ These sections cover the available projects shipped with the Dojo Toolkit
 
   * `dojox.data.WikipediaStore <dojox/data/WikipediaStore>`_
 
-    An extension of `dojox.data.ServiceStore <dojox/data/ServiceStore>`__ to use Wikipedia's search service
+    An extension of `dojox.data.ServiceStore <dojox/data/ServiceStore>`_ to use Wikipedia's search service
 
   * `dojox.data.XmlStore <dojox/data/XmlStore>`_
 
@@ -696,7 +696,7 @@ These sections cover the available projects shipped with the Dojo Toolkit
 * `dojox.flash <dojox/flash>`_
 * `dojox.form <dojox/form>`_
 
-  Additional form-related widgets beyond `dijit.form <dijit/form>`__ functionality
+  Additional form-related widgets beyond `dijit.form <dijit/form>`_ functionality
 
   * `dojox.form.BusyButton <dojox/form/BusyButton>`_
 
@@ -753,9 +753,9 @@ These sections cover the available projects shipped with the Dojo Toolkit
 
   * `dojox.image.Magnifier <dojox/image/Magnifier>`_
 
-    A dojox.gfx-based version of the `MagnifierLite <dojox/image/MagnifierLite>`__ widget
+    A dojox.gfx-based version of the `MagnifierLite <dojox/image/MagnifierLite>`_ widget
 
-  * `dojox.image.MagnifierLite <dojox/image/MagnifierLite>`__
+  * `dojox.image.MagnifierLite <dojox/image/MagnifierLite>`_
 
     A simple hover behavior for images, showing a zoomed version of a size image
 
@@ -815,7 +815,7 @@ These sections cover the available projects shipped with the Dojo Toolkit
 
   * `dojox.widget.Dialog <dojox/widget/Dialog>`_
 
-    An extension to `dijit.Dialog </dijit/Dialog>`__
+    An extension to `dijit.Dialog </dijit/Dialog>`_
 
   * `dojox.widget.DocTester <dojox/widget/DocTester>`_
 
@@ -843,7 +843,7 @@ These sections cover the available projects shipped with the Dojo Toolkit
 
   * `dojox.widget.Pager <dojox/widget/Pager>`_
 
-    A `dojo.data <dojo/data>`__ powered Pager Widget, displaying a few items in a horizontal or vertical UI
+    A `dojo.data <dojo/data>`_ powered Pager Widget, displaying a few items in a horizontal or vertical UI
 
   * `dojox.widget.PlaceholderMenuItem <dojox/widget/PlaceholderMenuItem>`_
 
