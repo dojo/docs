@@ -538,9 +538,16 @@ Form handling
       A representation of a normal <button> or <input type="submit/reset/button" />
 
     * `dijit.form.ComboButton <dijit/form/ComboButton>`_
+
+      A button with an arrow to show a drop down (often a menu)
+
     * `dijit.form.DropDownButton <dijit/form/DropDownButton>`_
 
       A button that displays a menu or some other popup when you press it
+
+    * `dijit.form.ToggleButton <dijit/form/ToggleButton>`_
+
+      A cross between a Button and a Checkbox widget
 
   * other controls
 
