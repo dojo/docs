@@ -523,6 +523,10 @@ Form handling
 
       A "auto complete", which allows the user to type any value and just gives suggested completions
 
+    * `dijit.form.MultiSelect <dijit/form/MultiSelect>`_
+
+      The MultiSelect widget allows the selection of multiple items
+
     * `dijit.form.FilteringSelect <dijit/form/FilteringSelect>`_
 
       Similar to a <select> but with type-ahead filtering of the drop down list
