@@ -41,9 +41,15 @@ Input widgets
 All Widgets, that are similar to <input>:
 
 * `dijit.form.CurrencyTextBox </CurrencyTextBox>`_
+
+  A specialized input widget for monetary values, much like the currency type in spreadsheet programs
+
 * `dijit.form.DateTextBox </DateTextBox>`_
 * `dijit.form.NumberSpinner </NumberSpinner>`_
 * `dijit.form.NumberTextBox </NumberTextBox>`_
+
+  A input widget which restricts input to numeric input
+
 * `dijit.form.TextBox </TextBox>`_
 * `dijit.form.TimeTextBox </TimeTextBox>`_
 * `dijit.form.ValidationTextBox </ValidationTextBox>`_
