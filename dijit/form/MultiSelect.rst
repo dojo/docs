@@ -23,8 +23,8 @@ MultiSelect widgets are not dojo.data-enabled. This means that the data must be 
 Examples
 ========
 
-Declarative markup using native select and option tags
-------------------------------------------------------
+Declarative example
+-------------------
 
 MultiSelect widgets always use a native SELECT tag and have child OPTION tags to describe selection choices, e.g. the OPTION's *value* attribute is used as the submit value and the OPTION's child text node is used as the displayed value. The OPTION's child text node is used as the displayed value and the OPTION's *value* attribute is used as the hidden submit value. To set the default value when using OPTION tags, specify the *selected* attribute on 1 of the child OPTION tags.
 
@@ -45,8 +45,8 @@ MultiSelect widgets always use a native SELECT tag and have child OPTION tags to
     </select>
 
 
-Programmatic example using dynamic data
----------------------------------------
+Programmatic example
+--------------------
 
 .. cv-compound::
 
