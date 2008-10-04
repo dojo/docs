@@ -57,7 +57,7 @@ TextArea
 
 * `dijit.form.Textarea </Textarea>`_
 
-  A auto expanding/contracting <textarea>
+  An auto expanding/contracting <textarea>
 
 Select widgets
 --------------
