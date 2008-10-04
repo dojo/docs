@@ -3,12 +3,13 @@
 A11y Requirements
 =================
 
-:Status: Contributed
-:Version: 1.2
-:Author: Becky Gibson
+:Status: Draft
+:Version: 1.0
+:Authors: Becky Gibson
 
 .. contents::
-  :depth: 2
+   :depth: 2
+
 
 ===================
 5 A11y Requirements
@@ -32,6 +33,7 @@ Note that this is not a comprehensive list of Web Accessibility requirements, ju
   + `W3C Web Content Accessibility Guidelines 2.0 <http://www.w3.org/WAI/GL/>`_
   + `US Section 508 of the Rehabilitation Act <http://www.section508.gov/>`_
   + `W3C provided list of accessibility policies around the world <http://www.w3.org/WAI/Policy/>`_
+
 
 ======
 Visual
@@ -155,6 +157,7 @@ More Details
 ~~~~~~~~~~~~
 
 This requirement comes from WCAG 2.0 Resize text: `Text (but not images of text) can be resized without assistive technology up to 200 percent without loss of content or functionality <http://www.w3.org/TR/WCAG20/#visual-audio-contrast-scale>`_. This is not a top level requirement but is important in order to properly support IE 6. The advent of the Zoom feature in IE 7, Firefox 3 and Opera negate the need for ensuring that font sizes are relative since the entire page gets uniformly scaled. But as long as IE 6 is supported fixed font sizes can be an issue.
+
 
 ==========
 Functional
