@@ -5,7 +5,7 @@ A11y Requirements
 
 :Status: Draft
 :Version: 1.0
-:Authors: Becky Gibson
+:Author: Becky Gibson
 
 .. contents::
    :depth: 2
