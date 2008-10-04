@@ -505,9 +505,13 @@ Form handling
 
       A input widget which restricts input to numeric input
 
+    * `dijit.form.SimpleTextarea <dijit/form/SimpleTextarea>`_
+
+      A simple wrapper of <textarea>; equivalent functionality
+
     * `dijit.form.Textarea <dijit/form/Textarea>`_
 
-      A auto expanding/contracting <textarea>
+      An auto expanding/contracting <textarea>
 
     * `dijit.form.TextBox <dijit/form/TextBox>`_
     * `dijit.form.TimeTextBox <dijit/form/TimeTextBox>`_
@@ -534,6 +538,9 @@ Form handling
   * other controls
 
     * `dijit.form.CheckBox <dijit/form/CheckBox>`_
+
+      Nearly the same as an HTML checkbox, but with fancy styling
+
     * `dijit.form.Form <dijit/form/Form>`_
 
       Corresponds to a <form> itself; wraps other widgets
