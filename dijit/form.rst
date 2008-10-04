@@ -28,6 +28,9 @@ Buttons
 -------
 
 * `dijit.form.Button </Button>`_
+
+  A representation of a normal <button> or <input type="submit/reset/button" />
+
 * `dijit.form.DropDownButton </DropDownButton>`_ 
 
   A button that displays a menu or some other popup when you press it
