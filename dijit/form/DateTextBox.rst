@@ -5,7 +5,7 @@ dijit.form.DateTextBox
 
 :Status: Draft
 :Version: 1.0
-:Authors: Doug Hays, Craig Riecke
+:Authors: Becky Gibson, Doug Hays, Craig Riecke
 :Developers: ?-
 :Available: since V?
 
