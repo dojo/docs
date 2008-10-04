@@ -12,6 +12,13 @@ dijit.form.MultiSelect
 .. contents::
    :depth: 2
 
+The MultiSelect widget allows the selection of multiple items.
+
+
+============
+Introduction
+============
+
 The MultiSelect widget is an exact replacement for the native SELECT element and was created to provide a thin widget wrapper that was necessary to interact with the Form widget, and to provide the ability to select multiple items which is not available in the FilteringSelect widget.  Like SELECT, you provide a list of acceptable value pairs consisting of text to be displayed and the hidden text value to be submitted with a FORM. Unlike FilteringSelect, the user cannot freely type text.
 
 On FORM submit, the selected item's hidden text values of a non-disabled MultiSelect widget are submitted using a native SELECT element if the *name* attribute was specified at widget creation time.
