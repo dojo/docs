@@ -5,7 +5,7 @@ dijit.form.TextBox
 
 :Status: Draft
 :Version: 1.0
-:Authors: Doug Hays, Bill Keese, Nikolai Onken, Marcus Reimann, Craig Riecke
+:Authors: Becky Gibson, Doug Hays, Bill Keese, Nikolai Onken, Marcus Reimann, Craig Riecke
 :Developers: ?-
 :Available: since V?
 
