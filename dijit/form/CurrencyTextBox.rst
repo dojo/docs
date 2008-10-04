@@ -5,7 +5,7 @@ dijit.form.CurrencyTextBox
 
 :Status: Draft
 :Version: 1.0
-:Authors: Doug Hays, Bill Keese, Craig Riecke
+:Authors: Becky Gibson, Doug Hays, Bill Keese, Craig Riecke
 :Developers: ?-
 :Available: since V?
 
@@ -13,6 +13,7 @@ dijit.form.CurrencyTextBox
     :depth: 2
 
 CurrencyTextBox widgets inherit all the attributes and behaviors of the `NumberTextBox <dijit/form/NumberTextBox>`_ widget but are specialized for input monetary values, much like the currency type in spreadsheet programs.
+
 
 =====
 Usage
@@ -49,6 +50,7 @@ Declarative example
 		currency="USD"
 		invalidMessage="Invalid amount.  Cents are required.">
         <label for="income1">U.S. Dollars</label>
+
 
 =============
 Accessibility
