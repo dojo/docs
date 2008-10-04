@@ -12,7 +12,7 @@ dijit.form.TimeTextBox
 .. contents::
     :depth: 2
 
-TimeTextBox widgets are handy, easy-to-use time entry controls that allow either typing or choosing a time from any time-picker widget.
+TimeTextBox widgets are time input controls that allow either typing or choosing a time from any time-picker widget.
 
 ============
 Introduction
