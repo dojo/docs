@@ -5,7 +5,7 @@ dijit.form.NumberTextBox
 
 :Status: Draft
 :Version: 1.0
-:Authors: Doug Hays, Bill Keese, Nikolai Onken, Marcus Reimann, Craig Riecke
+:Authors: Becky Gibson, Doug Hays, Bill Keese, Nikolai Onken, Marcus Reimann, Craig Riecke
 :Developers: ?-
 :Available: since V?
 
@@ -13,6 +13,7 @@ dijit.form.NumberTextBox
     :depth: 2
 
 NumberTextBox widgets are used when user input is restricted to numeric input.
+
 
 ============
 Introduction
@@ -23,6 +24,7 @@ By default, the widget will discover the appropriate locale and behavior as spec
 When the user edits the value, or when sending data to the server, or when retreiving the ``value`` attribute programmatically, numbers are represented simply as JavaScript numbers, formatted with a period for decimal and no thousands separators. This representation is unambiguous, so other applications may interact with this data without assuming any locale-specific behavior. When specifying the ``constraints`` attribute, you have all the options available in the `Dojo constraint language <quickstart/numbersDates>`_. 
 
 To further restrict/validate user input, this widget makes additional numeric ``constraints`` properties (``min`` and ``max``) available to the developer.
+
 
 ========
 Examples
@@ -50,6 +52,7 @@ Declarative example
 		required= "true" 
 		invalidMessage= "Invalid elevation.">
         <label for="q05">Integer between -20000 to +20000</label>
+
 
 =============
 Accessibility
