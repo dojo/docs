@@ -565,6 +565,8 @@ Form handling
 
     * `dijit.form.Slider <dijit/form/Slider>`_
 
+      A scale with a handle you can drag up/down or left/right to select a value
+
 Layout
 ------
 
