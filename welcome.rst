@@ -534,6 +534,9 @@ Form handling
   * buttons
 
     * `dijit.form.Button <dijit/form/Button>`_
+
+      A representation of a normal <button> or <input type="submit/reset/button" />
+
     * `dijit.form.ComboButton <dijit/form/ComboButton>`_
     * `dijit.form.DropDownButton <dijit/form/DropDownButton>`_
 
