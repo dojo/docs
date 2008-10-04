@@ -36,7 +36,12 @@ Buttons
   A button that displays a menu or some other popup when you press it
 
 * `dijit.form.ComboButton </ComboButton>`_
+
+  A button with an arrow to show a drop down (often a menu)
+
 * `dijit.form.ToggleButton </ToggleButton>`_
+
+  A cross between a Button and a Checkbox widget
 
 Input widgets 
 -------------
