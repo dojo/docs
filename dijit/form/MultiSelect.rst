@@ -7,7 +7,7 @@ dijit.form.MultiSelect
 :Version: 1.0
 :Authors: Doug Hays
 :Developers: Doug Hays, Peter Higgins, Bill Keese, Nathan Toone
-:Available: since V1.2
+:Available: since V?
 
 .. contents::
    :depth: 2
