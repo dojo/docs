@@ -67,6 +67,9 @@ Select widgets
   This is often called "auto complete" and perhaps should be listed in the "Input widgets" section above since it allows the user to type any value and just gives suggested completions
 
 * `dijit.form.MultiSelect </MultiSelect>`_
+
+  The MultiSelect widget allows the selection of multiple items
+
 * `dijit.form.FilteringSelect </FilteringSelect>`_
 
   Similar to a <select> but with type-ahead filtering of the drop down list
