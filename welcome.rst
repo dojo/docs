@@ -501,7 +501,7 @@ Form handling
 
     * `dijit.form.DateTextBox <dijit/form/DateTextBox>`_
 
-      An easy-to-use date entry control that allows either typing or choosing a date from any calendar widget
+      An easy-to-use date entry control which allows either typing or choosing a date from any calendar widget
 
     * `dijit.form.NumberSpinner <dijit/form/NumberSpinner>`_
 
@@ -520,7 +520,13 @@ Form handling
       An auto expanding/contracting <textarea>
 
     * `dijit.form.TextBox <dijit/form/TextBox>`_
+
+      A basic <input type="text">-style form control
+
     * `dijit.form.TimeTextBox <dijit/form/TimeTextBox>`_
+
+      A time input control which allows either typing or choosing a time from any time-picker widget
+
     * `dijit.form.ValidationTextBox <dijit/form/ValidationTextBox>`_
  
   * select type widgets
@@ -549,7 +555,7 @@ Form handling
 
     * `dijit.form.DropDownButton <dijit/form/DropDownButton>`_
 
-      A button that displays a menu or some other popup when you press it
+      A button which displays a menu or some other popup when you press it
 
     * `dijit.form.ToggleButton <dijit/form/ToggleButton>`_
 
