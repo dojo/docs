@@ -80,6 +80,9 @@ Miscellaneous
 
 * `dijit.form.Slider </Slider>`_
 * `dijit.form.CheckBox </CheckBox>`_
+
+  Nearly the same as an HTML checkbox, but with fancy styling
+
 * `dijit.form.RadioButton </RadioButton>`_
 
   To select one choice from a list
