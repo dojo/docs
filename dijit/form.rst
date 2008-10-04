@@ -96,6 +96,9 @@ Miscellaneous
   Corresponds to a <form> itself; wraps other widgets
 
 * `dijit.form.Slider </Slider>`_
+
+  A scale with a handle you can drag up/down or left/right to select a value
+
 * `dijit.form.CheckBox </CheckBox>`_
 
   Nearly the same as an HTML checkbox, but with fancy styling
