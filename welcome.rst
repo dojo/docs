@@ -506,6 +506,9 @@ Form handling
       A input widget which restricts input to numeric input
 
     * `dijit.form.Textarea <dijit/form/Textarea>`_
+
+      A auto expanding/contracting <textarea>
+
     * `dijit.form.TextBox <dijit/form/TextBox>`_
     * `dijit.form.TimeTextBox <dijit/form/TimeTextBox>`_
     * `dijit.form.ValidationTextBox <dijit/form/ValidationTextBox>`_
@@ -513,7 +516,12 @@ Form handling
   * select type widgets
 
     * `dijit.form.ComboBox <dijit/form/ComboBox>`_
+
+      A "auto complete", which allows the user to type any value and just gives suggested completions
+
     * `dijit.form.FilteringSelect <dijit/form/FilteringSelect>`_
+
+      Similar to a <select> but with type-ahead filtering of the drop down list
 
   * buttons
 
@@ -521,11 +529,19 @@ Form handling
     * `dijit.form.ComboButton <dijit/form/ComboButton>`_
     * `dijit.form.DropDownButton <dijit/form/DropDownButton>`_
 
+      A button that displays a menu or some other popup when you press it
+
   * other controls
 
     * `dijit.form.CheckBox <dijit/form/CheckBox>`_
-    * `dijit.form.Form <dijit/form/Form>`_ (widget corresponding to the form itself)
+    * `dijit.form.Form <dijit/form/Form>`_
+
+      Corresponds to a <form> itself; wraps other widgets
+
     * `dijit.form.RadioButton <dijit/form/RadioButton>`_
+
+      To select one choice from a list
+
     * `dijit.form.Slider <dijit/form/Slider>`_
 
 Layout
