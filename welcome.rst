@@ -496,9 +496,15 @@ Form handling
   * text boxes
 
     * `dijit.form.CurrencyTextBox <dijit/form/CurrencyTextBox>`_
+
+      A specialized input widget for monetary values, much like the currency type in spreadsheet programs
+
     * `dijit.form.DateTextBox <dijit/form/DateTextBox>`_
     * `dijit.form.NumberSpinner <dijit/form/NumberSpinner>`_
     * `dijit.form.NumberTextBox <dijit/form/NumberTextBox>`_
+
+      A input widget which restricts input to numeric input
+
     * `dijit.form.Textarea <dijit/form/Textarea>`_
     * `dijit.form.TextBox <dijit/form/TextBox>`_
     * `dijit.form.TimeTextBox <dijit/form/TimeTextBox>`_
