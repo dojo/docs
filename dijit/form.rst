@@ -53,7 +53,13 @@ All Widgets, that are similar to <input>:
   A specialized input widget for monetary values, much like the currency type in spreadsheet programs
 
 * `dijit.form.DateTextBox </DateTextBox>`_
+
+  An easy-to-use date entry control that allows either typing or choosing a date from any calendar widget
+
 * `dijit.form.NumberSpinner </NumberSpinner>`_
+
+  A input widget which restricts input to numeric input and offers down and up arrow buttons to "spin" the number up and down
+
 * `dijit.form.NumberTextBox </NumberTextBox>`_
 
   A input widget which restricts input to numeric input
