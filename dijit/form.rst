@@ -28,7 +28,10 @@ Buttons
 -------
 
 * `dijit.form.Button </Button>`_
-* `dijit.form.DropDownButton </DropDownButton>`_ A button that displays a menu or some other popup when you press it.
+* `dijit.form.DropDownButton </DropDownButton>`_ 
+
+  A button that displays a menu or some other popup when you press it
+
 * `dijit.form.ComboButton </ComboButton>`_
 * `dijit.form.ToggleButton </ToggleButton>`_
 
@@ -48,23 +51,38 @@ All Widgets, that are similar to <input>:
 TextArea
 --------
 
-* `dijit.form.SimpleTextarea </SimpleTextarea>`_: simple wrapper of <textarea>; equivalent functionality
-* `dijit.form.Textarea </Textarea>`_: auto expanding/contracting <textarea>
+* `dijit.form.SimpleTextarea </SimpleTextarea>`_
+
+  A simple wrapper of <textarea>; equivalent functionality
+
+* `dijit.form.Textarea </Textarea>`_
+
+  A auto expanding/contracting <textarea>
 
 Select widgets
 --------------
 
-* `dijit.form.ComboBox </ComboBox>`_: this is often called "auto complete" and perhaps should be listed in the "Input widgets" section above since it allows the user to type any value and just gives suggested completions.
+* `dijit.form.ComboBox </ComboBox>`_
+
+  This is often called "auto complete" and perhaps should be listed in the "Input widgets" section above since it allows the user to type any value and just gives suggested completions
+
 * `dijit.form.MultiSelect </MultiSelect>`_
-* `dijit.form.FilteringSelect </FilteringSelect>`_: similar to a <select> but with type-ahead filtering of the drop down list.
+* `dijit.form.FilteringSelect </FilteringSelect>`_
+
+  Similar to a <select> but with type-ahead filtering of the drop down list
 
 Miscellaneous
 -------------
 
-* `dijit.form.Form </Form>`_: corresponds to a <form> itself; wraps other widgets
+* `dijit.form.Form </Form>`_
+
+  Corresponds to a <form> itself; wraps other widgets
+
 * `dijit.form.Slider </Slider>`_
 * `dijit.form.CheckBox </CheckBox>`_
-* `dijit.form.RadioButton </RadioButton>`_: to select one choice from a list
+* `dijit.form.RadioButton </RadioButton>`_
+
+  To select one choice from a list
 
 There are also some notable widgets in `dojox.form <dojox/form>`_ and `dojox.widget <dojox/widget>`_ that complement the dijit.form pieces and will probably be incorporated into dijit eventually.
 
