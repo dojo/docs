@@ -34,7 +34,7 @@ Buttons
 
 * `dijit.form.DropDownButton </DropDownButton>`_ 
 
-  A button that displays a menu or some other popup when you press it
+  A button which displays a menu or some other popup when you press it
 
 * `dijit.form.ComboButton </ComboButton>`_
 
@@ -55,7 +55,7 @@ All Widgets, that are similar to <input>:
 
 * `dijit.form.DateTextBox </DateTextBox>`_
 
-  An easy-to-use date entry control that allows either typing or choosing a date from any calendar widget
+  An easy-to-use date entry control which allows either typing or choosing a date from any calendar widget
 
 * `dijit.form.NumberSpinner </NumberSpinner>`_
 
@@ -66,7 +66,13 @@ All Widgets, that are similar to <input>:
   A input widget which restricts input to numeric input
 
 * `dijit.form.TextBox </TextBox>`_
+
+  A basic <input type="text">-style form control
+
 * `dijit.form.TimeTextBox </TimeTextBox>`_
+
+  A time input control which allows either typing or choosing a time from any time-picker widget
+
 * `dijit.form.ValidationTextBox </ValidationTextBox>`_
 
 TextArea
