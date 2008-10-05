@@ -151,8 +151,8 @@ Finding Resources in Non-Standard Locations
 
 On occasion, developers may choose not to locate dojo resources in the standard location (i.e. relative to the dojo/dojo.js core file). In such cases it is necessary to tell dojo where to find those resources. The djConfig parameters available for this are as follows:
 
-baseUrl: '/assets/mydojo/mydojo.js'
-  When using multiple versions of dojo in parallel in a given site, or if the core dojo.js file has been renamed when creating a custom build, the baseUrl parameter should be used to indicate where the dojo core is located. This may also be necessary for sites that use the <base> tag which can confuse some browsers (e.g. IE6).
+baseUrl: '/assets/mydojo/'
+  When using multiple versions of dojo in parallel in a given site, or if the core dojo.js file has been renamed when creating a custom build, the baseUrl parameter should be used to indicate where the dojo core is located. This may also be necessary for sites that use the <base> tag which can confuse some browsers (e.g. IE6). The value for baseUrl should be the directory that contains the dojo.js or dojo.xd.js file. The value should always be defined with an ending slash (/) character.
 
 modulePaths: {'foo': '../../bar'}
   Using this parameter is the equivalent of calling dojo.registerModulePath('foo','../../bar') and is necessary to allow dojo to locate custom modules. For more information on creating and using custom modules, [link?].
