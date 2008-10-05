@@ -56,14 +56,12 @@ To make a live-result-set data store from an existing data store:
 .. code-block :: javascript
  :linenos:
 
- <script type="text/javascript">
-   dojo.declare("dojox.data.MyLiveDataStore",
-       dojox.data.MyDataStore,
-       // subclass LiveResultSets if available:
-       dojox.data.LiveResultSets],
-       {}
-   );
- </script>
+ dojo.declare("dojox.data.MyLiveDataStore",
+     dojox.data.MyDataStore,
+     // subclass LiveResultSets if available:
+     dojox.data.LiveResultSets],
+     {}
+ );
 
 
 Use the ClientFilter with a data store
@@ -74,6 +72,10 @@ To use the ClientFilter with a data store which offers optional support of Clien
 1. include dojox.data.ClientFilter
 2. include the data store
 3. set queryOptions:{cache:true} in the request
+
+   or use a Widget with a option to cache each request (for example the Grid with the queryOptions attribute:
+
+   <table queryOptions="{cache:true}" dojoType="dojox.grid.DataGrid" ...)
 
 .. code-block :: javascript
  :linenos:
@@ -86,7 +88,6 @@ To use the ClientFilter with a data store which offers optional support of Clien
 
    // ... later:
    // set queryOptions:{cache:true} in the request:
-   // ... TODO
  </script>
 
 
