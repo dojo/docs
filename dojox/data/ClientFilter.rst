@@ -40,13 +40,16 @@ matchesQuery(item, request)
 
 You can define a property on this object instance "**cacheByDefault**" to a value of true that will cause all queries to be cached by default unless the cache queryOption is explicitly set to false. This can be defined in the constructor options for ServiceStore/JsonRestStore and subtypes. 
 
+  **Important**:
+  You must load ClientFilter (with dojo.require('dojox.data.ClientFilter');) before you dojo.require a store.
+
 
 ========
 Examples
 ========
 
-Programmatic example
---------------------
+Make a live-result-set data store
+---------------------------------
 
 To make a live-result-set data store from an existing data store:
 
@@ -60,6 +63,30 @@ To make a live-result-set data store from an existing data store:
        dojox.data.LiveResultSets],
        {}
    );
+ </script>
+
+
+Use the ClientFilter with a data store
+--------------------------------------
+
+To use the ClientFilter with a data store it's important to keep the correct order:
+
+1. include dojox.data.ClientFilter
+2. include the data store
+3. set queryOptions:{cache:true} in the request
+
+.. code-block :: javascript
+ :linenos:
+
+ <script type="text/javascript">
+   // first include ClientFilter:
+   dojo.require('dojox.data.ClientFilter');
+   // now include the data store:
+   // ... TODO
+
+   // ... later:
+   // set queryOptions:{cache:true} in the request:
+   // ... TODO
  </script>
 
 
