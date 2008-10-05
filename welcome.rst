@@ -611,7 +611,7 @@ These sections cover the available projects shipped with the Dojo Toolkit
 * `dojox.cometd <dojox/cometd>`_
 * `dojox.data <dojox/data>`_
 
-  Additional data stores
+  Additional data stores and data store helpers
 
   * `dojox.data.AndOrReadStore <dojox/data/AndOrReadStore>`_
 
