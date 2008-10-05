@@ -214,6 +214,8 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 
     * `dojo.animateProperty <dojo/animateProperty>`_
 
+      A very useful method for animating CSS properties
+
   * `dojo._base.html <dojo/_base/html>`_
 
     Basic DOM handling functions
