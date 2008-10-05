@@ -1,11 +1,11 @@
 #format dojo_rst
 
 dojo.registerModulePath
-========
+=======================
 
 :Status: Draft
 :Version: 1.0
-:Authors: 
+:Authors: James Burke
 :Developers: ?-
 :Available: since V0.9
 
