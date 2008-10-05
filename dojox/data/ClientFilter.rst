@@ -61,3 +61,12 @@ To make a live-result-set data store from an existing data store:
        {}
    );
  </script>
+
+
+========
+See also
+========
+
+* `#7743 <http://bugs.dojotoolkit.org/ticket/7743>`_
+
+  Some further explanations which should be included into this documentation page
