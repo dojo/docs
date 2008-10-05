@@ -40,9 +40,6 @@ matchesQuery(item, request)
 
 You can define a property on this object instance "**cacheByDefault**" to a value of true that will cause all queries to be cached by default unless the cache queryOption is explicitly set to false. This can be defined in the constructor options for ServiceStore/JsonRestStore and subtypes. 
 
-  **Important**:
-  You must load ClientFilter (with dojo.require('dojox.data.ClientFilter');) before you dojo.require a store.
-
 
 ========
 Examples
@@ -76,6 +73,8 @@ To use the ClientFilter with a data store which offers optional support of Clien
    or use a Widget with a option to cache each request (for example the Grid with the queryOptions attribute:
 
    <table queryOptions="{cache:true}" dojoType="dojox.grid.DataGrid" ...)
+
+The important note is, that you must load ClientFilter before you dojo.require a store.
 
 .. code-block :: javascript
  :linenos:
