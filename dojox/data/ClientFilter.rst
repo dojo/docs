@@ -30,7 +30,7 @@ To update a result set after a notification (onNew, onSet, and onDelete), widget
 
 This module will use the best available information to update result sets, using query attribute objects to determine if items are in a result set, and using the sort arrays to maintain sort information. However, queries can be opaque strings, and this module can not update results by itself in this case. In this situations, data stores can provide a **isUpdateable(request)** function and **matchesQuery(item, request)** function. If a data store can handle a query, it can return true from isUpdateable and if an item matches a query, it can return true from matchesQuery. 
 
-Here is definition of isUpdateable and matchesQuery
+Here is definition of isUpdateable and matchesQuery:
 
 isUpdateable(request)
   request is the keywords arguments as is passed to the fetch function.
