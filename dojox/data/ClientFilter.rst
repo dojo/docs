@@ -74,7 +74,7 @@ To use the ClientFilter with a data store which offers optional support of Clien
 
    <table queryOptions="{cache:true}" dojoType="dojox.grid.DataGrid" ...)
 
-The important note is that you must first load ClientFilter before you dojo.require a store.
+The important note is that you must load ClientFilter before you dojo.require a store.
 
 .. code-block :: javascript
  :linenos:
