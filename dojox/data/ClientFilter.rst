@@ -69,7 +69,7 @@ To make a live-result-set data store from an existing data store:
 Use the ClientFilter with a data store
 --------------------------------------
 
-To use the ClientFilter with a data store it's important to observe the correct sequence:
+To use the ClientFilter with a data store which offers optional support of ClientFilter (like dojox.data.ServiceStore and dojox.data.JsonRestStore), it's important to observe the correct sequence:
 
 1. include dojox.data.ClientFilter
 2. include the data store
