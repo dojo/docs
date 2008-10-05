@@ -625,6 +625,10 @@ These sections cover the available projects shipped with the Dojo Toolkit
 
     A store designed to provide read-only access to Atom XML documents
 
+  * `dojox.data.ClientFilter <dojox/data/ClientFilter>`_
+
+    An abstract data store module for adding updateable result set functionality to an existing data store class
+
   * `dojox.data.CouchDBRestStore <dojox/data/CouchDBRestStore>`_
 
     An extension of `dojox.data.JsonRestStore <dojox/data/JsonRestStore>`_ to handle CouchDB's idiosyncrasies, special features, and deviations from standard HTTP Rest
