@@ -12,7 +12,7 @@ dojox.data.ClientFilter
 .. contents::
    :depth: 2
 
-This is an abstract data store module for adding updateable result set functionality to an existing data store class.
+An abstract data store module for adding updateable result set functionality to an existing data store class.
 
 
 ============
@@ -38,7 +38,7 @@ isUpdateable(request)
 matchesQuery(item,request)
   item is the item to test, and request is the value arguments object for the fetch function.
 
-You can define a property on this object instance "cacheByDefault" to a value of true that will cause all queries to be cached by default unless the cache queryOption is explicitly set to false. This can be defined in the constructor options for ServiceStore/JsonRestStore and subtypes. 
+You can define a property on this object instance "**cacheByDefault**" to a value of true that will cause all queries to be cached by default unless the cache queryOption is explicitly set to false. This can be defined in the constructor options for ServiceStore/JsonRestStore and subtypes. 
 
 
 ========
