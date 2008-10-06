@@ -41,10 +41,11 @@ To create an instance of a ServiceStore, simply instantiate providing the servic
 When extending this class, if you would like to create lazy objects, you can follow the example from dojox.data.tests.stores.ServiceStore:
 .. code-block :: javascript
  :linenos:
-var lazyItem = {
-	_loadObject: function(callback){
-		this.name="loaded";
-		delete this._loadObject;
-		callback(this);
-	}
-};
+
+ var lazyItem = {
+   _loadObject: function(callback){
+     this.name="loaded";
+     delete this._loadObject;
+     callback(this);
+   }
+ };
