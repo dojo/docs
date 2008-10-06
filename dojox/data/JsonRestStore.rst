@@ -63,13 +63,13 @@ The *service* parameter
 This is the service object that is used to retrieve lazy data and save results
 The function should be directly callable with a single parameter of an object id to be loaded
 The function should also have the following methods:
-	put(id,value) - puts the value at the given id
-	post(id,value) - posts (appends) the value at the given id
-	delete(id) - deletes the value corresponding to the given id
+* put(id,value) - puts the value at the given id
+* post(id,value) - posts (appends) the value at the given id
+* delete(id) - deletes the value corresponding to the given id
 Note that it is critical that the service parses responses as JSON.
 If you are using dojox.rpc.Service, the easiest way to make sure this 
 happens is to make the responses have a content type of 
-application/json.
+application/json. If you are creating your own service, make sure you use handleAs: "json" with your XHR requests.
 
 The *target* parameter
 This is the target URL for this Service store. This may be used in place
@@ -86,7 +86,7 @@ will generate an id for it and add it to the index.
 The *syncMode* parameter
 Setting this to true will set the store to using synchronous calls by default.
 Sync calls return their data immediately from the calling function, so
-callbacks are unnecessary
+callbacks are unnecessary.
 
 ========
 Examples
