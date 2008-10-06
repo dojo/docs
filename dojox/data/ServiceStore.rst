@@ -39,8 +39,6 @@ To create an instance of a ServiceStore, simply instantiate providing the servic
  </script>
 
 When extending this class, if you would like to create lazy objects, you can follow the example from dojox.data.tests.stores.ServiceStore:
-.. code-block :: javascript
- :linenos:
 
  <script type="text/javascript">
    var lazyItem = {
