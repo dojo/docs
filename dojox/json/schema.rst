@@ -12,7 +12,7 @@ dojox.json.schema
 .. contents::
     :depth: 3
 
-**dojox.json.schema** implements [[JSON Schema|http://json-schema.org]] to provide data validation against JSON Schemas.
+**dojox.json.schema** implements JSON Schema <http://json-schema.org> to provide data validation against JSON Schemas.
 
 ============
 Introduction
