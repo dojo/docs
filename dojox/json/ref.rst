@@ -14,6 +14,7 @@ dojox.json.ref
 
 **dojox.json.ref** implements JSON Referencing to provide serialization, deserialization, and indexing of complex object graphs with circular, multiple, cross-message, cross-store, and cross-site referencing.
 
+
 ============
 Introduction
 ============
@@ -23,14 +24,14 @@ JSON Referencing provides for id-based, path-based, and combined referencing. Wi
 .. code-block :: javascript
 
  {
-  “name”:”Kris Zyp”,
-  “id”:”kriszyp”,
-  “children”:[{“id”:”jennikazyp”,“name”:”Jennika Zyp”}],
-  “spouse”:{
-    “name”:”Nicole Zyp”,
-    “spouse”:{“$ref”:”kriszyp”},
-    “children”:[{“$ref”:”jennikazyp”}]
-  }
+   "name":"Kris Zyp",
+   "id":"kriszyp",
+   "children":[{"id":"jennikazyp","name":"Jennika Zyp"}],
+   "spouse":{
+       "name":"Nicole Zyp",
+       "spouse":{"$ref":"kriszyp"},
+       "children":[{"$ref":"jennikazyp"}]
+   }
  }
 
 Path-based referencing works by specifying a JSON value by it's location within the object structure. With path-based referencing the # symbol should be used to denote the root of the current object structure. dojox.json.ref also supports $ and *this* to reference the root. With path-based referencing, any JSON value may be referenced, not just objects. For example:
@@ -38,13 +39,13 @@ Path-based referencing works by specifying a JSON value by it's location within 
 .. code-block :: javascript
 
  {
-  “name”:”Kris Zyp”,
-  “children”:[{“name”:”Jennika Zyp”}],
-  “spouse”:{
-    “name”:”Nicole Zyp”,
-    “spouse”:{“$ref”:”#”},
-    “children”:{“$ref”:”#.children”}
-  }
+   "name":"Kris Zyp",
+   "children":[{"name":"Jennika Zyp"}],
+   "spouse":{
+       "name":"Nicole Zyp",
+       "spouse":{"$ref":"#"},
+       "children":{"$ref":"#.children"}
+   }
  }
 
 Id and path-based referencing can also be combined; a path can be postpended to an id reference. For example:
@@ -52,13 +53,14 @@ Id and path-based referencing can also be combined; a path can be postpended to 
 .. code-block :: javascript
 
  {
-  “name”:”Kris Zyp”,
-  “id”:”kriszyp”,
-  “children”:[{“name”:”Jennika Zyp”}],
-  “friends”:[{“$ref”:”jesse#.spouse”}]
+   "name":"Kris Zyp",
+   "id":"kriszyp",
+   "children":[{"name":"Jennika Zyp"}],
+   "friends":[{"$ref":"jesse#.spouse"}]
  }
 
-<http://www.sitepen.com/blog/2008/06/17/json-referencing-in-dojo/> provides more in-depth overview of dojox.json.ref. dojox.json.ref is used by the JsonRestStore for reference resolution and indexing.
+`This tutorial <http://www.sitepen.com/blog/2008/06/17/json-referencing-in-dojo/>`_ provides more in-depth overview of dojox.json.ref. dojox.json.ref is used by the JsonRestStore for reference resolution and indexing.
+
 
 ========
 Features
@@ -69,6 +71,7 @@ Features
 2. Utilizes the standard relative URL scheme as the basis for referencing.
 
 3. Id-based, path-based, and combined referencing is supported
+
 
 =====
 Usage
