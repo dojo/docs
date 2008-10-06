@@ -45,23 +45,23 @@ You can define a property on this object instance "**cacheByDefault**" to a valu
 Examples
 ========
 
-Make a live-result-set data store
+Making an updatable-result-set data store
 ---------------------------------
 
-To make a live-result-set data store from an existing data store:
+To make a updatable-result-set data store from an existing data store:
 
 .. code-block :: javascript
  :linenos:
 
- dojo.declare("dojox.data.MyLiveDataStore",
+ dojo.declare("dojox.data.MyUpdatableDataStore",
      dojox.data.MyDataStore,
-     // subclass LiveResultSets if available:
-     dojox.data.LiveResultSets],
+     // subclass ClientFilter if available:
+     dojox.data.ClientFilter],
      {}
  );
 
 
-Use the ClientFilter with a data store
+Using the ClientFilter with a data store
 --------------------------------------
 
 To use the ClientFilter with a data store which offers optional support of ClientFilter (like dojox.data.ServiceStore and dojox.data.JsonRestStore), it's important to observe the correct sequence:
@@ -83,7 +83,7 @@ The important note is that you must load ClientFilter before you dojo.require a 
    // first include ClientFilter:
    dojo.require('dojox.data.ClientFilter');
    // now include the data store:
-   // ... TODO
+   dojo.require("dojox.data.JsonRestStore");
 
    // ... later:
    // set queryOptions:{cache:true} in the request:
