@@ -1,7 +1,7 @@
 #format dojo_rst
 
 dojox.io.xhrPlugins
-==============
+===================
 
 :Status: Draft
 :Version: 1.0
