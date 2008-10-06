@@ -1,7 +1,7 @@
 #format dojo_rst
 
 dojox.json.query
-==============
+================
 
 :Status: Draft
 :Version: 1.0
