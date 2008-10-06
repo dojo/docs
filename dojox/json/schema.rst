@@ -18,7 +18,7 @@ dojox.json.schema
 Introduction
 ============
 
-JSON Schema can used to define the structure of data, constraints, and structural information using JSON. JSON Schema is used for type definitions in Service Mapping Description (SMD) used by the web services. JSON Schema is also supported in the JsonRestStore. Current development of JSON Schema is taking place in the [[JSON Schema Discussion Group|http://groups.google.com/group/json-schema?pli=1]].
+JSON Schema can used to define the structure of data, constraints, and structural information using JSON. JSON Schema is used for type definitions in Service Mapping Description (SMD) used by the web services. JSON Schema is also supported in the JsonRestStore. Current development of JSON Schema is taking place in the JSON Schema Discussion Group <http://groups.google.com/group/json-schema?pli=1>.
 
 =====
 Usage
