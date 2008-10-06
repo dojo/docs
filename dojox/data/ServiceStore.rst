@@ -49,3 +49,29 @@ When extending this class, if you would like to create lazy objects, you can fol
      }
    };
  </script>
+
+
+dojox.data.ServiceStore should be instantiated with a single argument that is an object that can have any of these properties:
+
+The *schema* parameter
+
+This is a schema object for this store. This should be JSON Schema format.
+
+The *service* parameter
+
+This is the service object that is used to retrieve lazy data and save results 
+The function should be directly callable with a single parameter of an object id to be loaded
+
+The *idAttribute* parameter
+
+Defaults to 'id'. The name of the attribute that holds an objects id.
+This can be a preexisting id provided by the server.  
+If an ID isn't already provided when an object
+is fetched or added to the store, the autoIdentity system
+will generate an id for it and add it to the index. 
+
+The *syncMode* parameter
+
+Setting this to true will set the store to using synchronous calls by default.
+Sync calls return their data immediately from the calling function, so
+callbacks are unnecessary. This will only work with a synchronous capable service.
