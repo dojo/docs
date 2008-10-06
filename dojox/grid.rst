@@ -322,7 +322,7 @@ The Grid offers a filter() method, to filter data from the current query (client
     </span>
 
     <div>
-        Click on the button to filter the current data (only Movies with ... will be visible).
+        Click on the button to filter the current data (only Movies with title "T*" will be visible).
     </div>
 
     <table dojoType="dojox.grid.DataGrid"
@@ -347,7 +347,15 @@ The Grid offers a filter() method, to filter data from the current query (client
         filter Items
         <script type="dojo/method" event="onClick" args="evt">
             // Filter the movies from the data store:
-            grid3.filter({Year: "2008"});
+            grid3.filter({Title: "T*"});
+        </script>
+    </div>
+
+    <div dojoType="dijit.form.Button">
+        show all Items
+        <script type="dojo/method" event="onClick" args="evt">
+            // reset the filter:
+            grid3.filter({Title: "*"});
         </script>
     </div>
 
