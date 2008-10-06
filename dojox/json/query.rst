@@ -14,11 +14,13 @@ dojox.json.query
 
 **dojox.json.query** implements JSONQuery to provide comprehensive data querying capabilities.
 
+
 ============
 Introduction
 ============
 
-JSONQuery is an extended version of JSONPath with additional features for security, ease of use, and comprehensive querying capabilities including sorting, mapping, and well-defined expressions. JSONQuery is described in more detail here: <http://www.sitepen.com/blog/2008/07/16/jsonquery-data-querying-beyond-jsonpath/>
+JSONQuery is an extended version of JSONPath with additional features for security, ease of use, and comprehensive querying capabilities including sorting, mapping, and well-defined expressions. JSONQuery is described in more detail `here <http://www.sitepen.com/blog/2008/07/16/jsonquery-data-querying-beyond-jsonpath/>`_.
+
 
 =====
 Usage
