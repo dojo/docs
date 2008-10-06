@@ -322,7 +322,8 @@ The Grid offers a filter() method, to filter data from the current query (client
     </span>
 
     <div>
-        Click on the button to filter the current data (only Movies with title "T*" will be visible).
+        Click on the button "filter movies" to filter the current data (only movies with title "T*" will be visible).
+        Click on the button "show all movies" to remove the filter.
     </div>
 
     <table dojoType="dojox.grid.DataGrid"
@@ -344,7 +345,7 @@ The Grid offers a filter() method, to filter data from the current query (client
     </table>
 
     <div dojoType="dijit.form.Button">
-        filter Items
+        filter movies
         <script type="dojo/method" event="onClick" args="evt">
             // Filter the movies from the data store:
             grid3.filter({Title: "T*"});
@@ -352,7 +353,7 @@ The Grid offers a filter() method, to filter data from the current query (client
     </div>
 
     <div dojoType="dijit.form.Button">
-        show all Items
+        show all movies
         <script type="dojo/method" event="onClick" args="evt">
             // reset the filter:
             grid3.filter({Title: "*"});
