@@ -22,6 +22,10 @@ As with all dojo._base components, these functions are included within Dojo Base
 Features
 ========
 
+* `djConfig <djConfig>`_
+
+  Configuring Dojo with djConfig
+
 * `dojo.addOnLoad <dojo/addOnLoad>`_
 
   Call functions after the DOM has finished loading and widgets declared in markup have been instantiated
@@ -53,6 +57,10 @@ Features
 * `dojo.mixin <dojo/mixin>`_
 
   Multiple inheritance
+
+* `dojo.registerModulePath <dojo/registerModulePath>`_
+
+  Maps module name to a path
 
 * `dojo.require <dojo/require>`_
 
