@@ -81,9 +81,6 @@ General Structure
     "identifier": "some attribute",  //Optional attribute used to indicate which attribute on an item acts as a unique identifier for that item. If it is not defined, then the ItemFileReadStore will simply number the items and use that number as a unique index to the item.
 
 
-    "identifier": "some attribute",  //Optional attribute used to indicate which attribute on an item acts as a unique identifier for that item. If it is not defined, then the ItemFileReadStore will simply number the items and use that number as a unique index to the item.
-
-
     "items:" [  //The array of JavaScript objects that act as the root items of the data store
       { /* Some set of name/value attributes */ },
       { /* ... */ },
