@@ -1,3 +1,4 @@
+##master-page:SUPERDUPERTemplate
 #format dojo_rst
 
 dojo.modulename
