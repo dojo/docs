@@ -12,7 +12,7 @@ dojox.data.CouchDBRestStore
 .. contents::
     :depth: 3
 
-**dojox.data.CouchDBRestStore** is a subclass of JsonRestStore <dojox/data/JsonRestStore> for connecting to CouchDB <http://couchdb.org/>.
+**dojox.data.CouchDBRestStore** is a subclass of `JsonRestStore <dojo/data/JsonRestStore>` for connecting to CouchDB <http://couchdb.org/>.
 
 
 ============
