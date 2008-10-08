@@ -44,4 +44,4 @@ See also
 
 * PersevereStore is described in more detail here: http://www.sitepen.com/blog/2008/07/23/getting-started-with-persevere-using-dojo/
 
-* JsonRestStore is described in more detail here: http://www.sitepen.com/blog/2008/06/13/restful-json-dojo-data/
+* The functionality provided by JsonRestStore is described in more detail here: http://www.sitepen.com/blog/2008/06/13/restful-json-dojo-data/
