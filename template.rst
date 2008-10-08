@@ -5,8 +5,7 @@ dojo.modulename
 
 :Status: Draft
 :Version: 1.0
-:Authors: ?--
-:Developers: ?-
+:Project owner: ?--
 :Available: since V?
 
 .. contents::
