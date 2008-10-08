@@ -1,8 +1,3 @@
-## Please edit system and help pages ONLY in the moinmaster wiki! For more
-## information, please see MoinMaster:MoinPagesEditorGroup.
-##master-page:HollaTemplate
-##master-date:Unknown-Date
-#language en
 #format dojo_rst
 
 dojo.modulename
