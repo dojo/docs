@@ -163,6 +163,6 @@ Question 9:  In one of my items in ItemFileReadStore I defined an attribute valu
 =================================================================================================================================================================================
 
 This is because child objects (non-atomic values such as int, string, etc), are automatically treated as data store items by dojo.data.ItemFileReadStore.  So, when it processes that attribute, it updates it into ItemFileReadStore internal format and therefore
-should then be accessed through store functions, such as getValue().  This is easily detectable by using the ItemFileReadStore's isItem() function.
+attributes on it should also be accessed through store functions, such as getValue().  This is easily detectable by using the ItemFileReadStore's isItem() function.
 
-If you want to prevent ItemFileReadStore from converting complex types into data store items, you will need to use a custom type map, and define your object as a specific type that can be serialized to and from JSON using the custom type format.  See the `custom types <dojo/data/ItemFileReadStore#items-with-custom-types>`_ documentation for more details.
+If you want to prevent ItemFileReadStore from converting Object types into data store items, you will need to use a custom type map, and define your object as a specific type that can be serialized to and from JSON using the custom type formatters.  See the `custom types <dojo/data/ItemFileReadStore#items-with-custom-types>`_ documentation for more details.
