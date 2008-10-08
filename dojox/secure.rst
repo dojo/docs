@@ -1,7 +1,7 @@
 #format dojo_rst
 
-dojox.data
-==========
+dojox.secure
+============
 
 :Status: Draft
 :Version: 1.0
