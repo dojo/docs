@@ -37,4 +37,6 @@ This will return a object where each property name is the name of the store, and
 See also
 ========
 
+* CouchDBRestStore is described in more detail here: http://www.sitepen.com/blog/2008/09/26/couchdbreststore/
+
 * JsonRestStore is described in more detail here: http://www.sitepen.com/blog/2008/06/13/restful-json-dojo-data/
