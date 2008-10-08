@@ -29,7 +29,7 @@ You can create a set of stores for all available CouchDB tables/databases:
 
 .. code-block :: javascript
 
- myStoresdojox.data.CouchDBRestStore.getStores("http://192.168.0.68:5984/_utils/");
+ myStores = dojox.data.CouchDBRestStore.getStores("http://192.168.0.68:5984/_utils/");
 
 This will return a object where each property name is the name of the store, and each value is the actual store for interacting with the CouchDB database.
 
