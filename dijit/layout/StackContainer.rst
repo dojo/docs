@@ -5,9 +5,7 @@ dijit.layout.StackContainer
 
 :Status: Draft
 :Version: 1.0
-:Authors: Becky Gibson, Bill Keese, Nikolai Onken
-:Developers: ?-
-:Available: since V?
+:Available: since 1.0
 
 .. contents::
     :depth: 2
@@ -131,3 +129,16 @@ Navigate into page                            Tab
 Navigate to next page                         Ctrl + page down, ctrl + tab (except IE7)
 Navigate to previous page                     Ctrl + page up
 ==========================================    =================================================
+
+===
+FAQ
+===
+
+Retrieving the currently selected Container
+-------------------------------------------
+
+To retrieve the currently selected container use following attribute
+
+.. code::
+
+  yourContainer.selectedChildWidget
