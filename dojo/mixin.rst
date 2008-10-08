@@ -3,7 +3,7 @@
 dojo.mixin
 ==========
 
-dojo.mixin is a simple utility function for mixing objects together. Mixin combines two objects from right to left, overwriting the left-most object, and returning the newly mixed object for use. 
+dojo.mixin is a simple utility function for mixing objects together. Mixin combines two objects from right to left, overwriting the left-most object, and returning the newly mixed object for use. Dojo mixin is very similar to `dojo.extend <dojo/extend>`_ but only works on objects, whereas extend explicitly extends an object.prototype. 
 
 Simple Mixes
 ------------
