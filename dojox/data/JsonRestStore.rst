@@ -80,15 +80,12 @@ service
   Note that it is critical that the service parses responses as JSON. If you are using dojox.rpc.Service, the easiest way to make sure this happens is to make the responses have a content type of application/json. If you are creating your own service, make sure you use handleAs: "json" with your XHR requests.
 
 target
-
   This is the target URL for this Service store. This may be used in place of a service parameter to connect directly to RESTful URL without using a dojox.rpc.Service object.
 
 idAttribute
-
   Defaults to 'id'. The name of the attribute that holds an objects id. This can be a preexisting id provided by the server. If an ID isn't already provided when an object is fetched or added to the store, the autoIdentity system will generate an id for it and add it to the index.
 
 syncMode
-
   Setting this to true will set the store to using synchronous calls by default. Sync calls return their data immediately from the calling function, so callbacks are unnecessary.
 
 
