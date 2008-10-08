@@ -57,46 +57,40 @@ Usage
 
 dojox.data.JsonRestStore should be instantiated with a single argument that is an object that can have any of these properties:
 
-The *schema* parameter
+schema
+  This is a schema object for this store. This should be JSON Schema format.
 
-This is a schema object for this store. This should be JSON Schema format.
+service
+  This is the service object that is used to retrieve lazy data and save results.
 
-The *service* parameter
+  The function should be directly callable with a single parameter of an object id to be loaded. The function should also have the following methods:
 
-This is the service object that is used to retrieve lazy data and save results
-The function should be directly callable with a single parameter of an object id to be loaded
-The function should also have the following methods:
+  * **put(id,value)**
 
-* put(id,value) - puts the value at the given id
+    puts the value at the given id
 
-* post(id,value) - posts (appends) the value at the given id
+  * **post(id,value)**
 
-* delete(id) - deletes the value corresponding to the given id
+    posts (appends) the value at the given id
 
-Note that it is critical that the service parses responses as JSON.
-If you are using dojox.rpc.Service, the easiest way to make sure this 
-happens is to make the responses have a content type of 
-application/json. If you are creating your own service, make sure you use handleAs: "json" with your XHR requests.
+  * **delete(id)**
 
-The *target* parameter
+    deletes the value corresponding to the given id
 
-This is the target URL for this Service store. This may be used in place
-of a service parameter to connect directly to RESTful URL without
-using a dojox.rpc.Service object.
+  Note that it is critical that the service parses responses as JSON. If you are using dojox.rpc.Service, the easiest way to make sure this happens is to make the responses have a content type of application/json. If you are creating your own service, make sure you use handleAs: "json" with your XHR requests.
 
-The *idAttribute* parameter
+target
 
-Defaults to 'id'. The name of the attribute that holds an objects id.
-This can be a preexisting id provided by the server.
-If an ID isn't already provided when an object
-is fetched or added to the store, the autoIdentity system
-will generate an id for it and add it to the index.
+  This is the target URL for this Service store. This may be used in place of a service parameter to connect directly to RESTful URL without using a dojox.rpc.Service object.
 
-The *syncMode* parameter
+idAttribute
 
-Setting this to true will set the store to using synchronous calls by default.
-Sync calls return their data immediately from the calling function, so
-callbacks are unnecessary.
+  Defaults to 'id'. The name of the attribute that holds an objects id. This can be a preexisting id provided by the server. If an ID isn't already provided when an object is fetched or added to the store, the autoIdentity system will generate an id for it and add it to the index.
+
+syncMode
+
+  Setting this to true will set the store to using synchronous calls by default. Sync calls return their data immediately from the calling function, so callbacks are unnecessary.
+
 
 ========
 Examples
