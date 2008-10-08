@@ -158,10 +158,10 @@ Question 8:  I want to save my data with ItemFileWriteStore, but it doesn't send
 
 Because it doesn't know how to send it to your specific server/service implementation.  dojo.data.ItemFileWriteStore's default save behavior is to commit data into internal memory structures only.  It provivers over-ridable hook functions that users must provide in order to send data to an external service.  See the `Write Section <dojo/data/ItemFileWriteStore#the-write-api>`_ of the ItemFileWriteStore docs.
 
-==============================================================================================================
-Question 9:  In one of my items in ItemFileReadStore I defined an attribute value as a JavaScript object.  
-When I access it through store.getValue(), it has been modified.  Why?
-==============================================================================================================
+================================================================================================================================================================================
+Question 9:  In one of my items in ItemFileReadStore I defined an attribute value as a JavaScript object.  When I access it through 
+store.getValue(), it has been modified.  Why?
+================================================================================================================================================================================
 
 This is because child objects (non-atomic values such as int, string, etc), are automatically treated as data store items by dojo.data.ItemFileReadStore.  So, when it processes that attribute, it updates it into ItemFileReadStore internal format and therefore
 should then be accessed through store functions, such as getValue().  This is easily detectable by using the ItemFileReadStore's isItem() function.
