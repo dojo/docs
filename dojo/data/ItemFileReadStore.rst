@@ -1,6 +1,6 @@
 #format dojo_rst
 
-dojo/data/ItemFileReadStore
+dojo.data.ItemFileReadStore
 ===========================
 
 :Status: Contributed, Draft
