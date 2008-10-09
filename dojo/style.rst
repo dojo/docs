@@ -28,7 +28,7 @@ Usage
  :linenos:
 
  <script type="text/javascript">
-   dojo.style = function( node, style, value)
+   dojo.style( node, style, value);
  </script>
 
 node
