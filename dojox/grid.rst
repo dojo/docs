@@ -15,13 +15,13 @@ dojox.grid
 
 Grids are familiar in the client/server development world. Basically a grid is a kind of mini spreadsheet, commonly used to display details on master-detail forms. From HTML terms, a grid is a "super-table" with its own scrollable viewport.
 
+
 ============
 Introduction
 ============
 
 TODO: introduce the component/class/method
 
-`Introducing the 1.2 DataGrid <http://www.sitepen.com/blog/2008/07/14/dojo-12-grid/>`_
 
 Grid 1.2 Changes
 ----------------
@@ -362,6 +362,7 @@ The Grid offers a filter() method, to filter data from the current query (client
         </script>
     </div>
 
+
 ====
 Tips
 ====
@@ -380,3 +381,10 @@ You can hide the columns of a Grid by using normal css:
 .. code-block :: html
 
   .dojoxGrid-header { display:none; }
+
+
+========
+See also
+========
+
+* `Introducing the 1.2 DataGrid <http://www.sitepen.com/blog/2008/07/14/dojo-12-grid/>`_
