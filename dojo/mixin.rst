@@ -3,10 +3,19 @@
 dojo.mixin
 ==========
 
+:Status: Draft
+:Version: 1.0
+:Available: since V?
+
+.. contents::
+   :depth: 2
+
 dojo.mixin is a simple utility function for mixing objects together. Mixin combines two objects from right to left, overwriting the left-most object, and returning the newly mixed object for use. Dojo mixin is very similar to `dojo.extend <dojo/extend>`_ but only works on objects, whereas extend explicitly extends an object.prototype. 
 
+
+============
 Simple Mixes
-------------
+============
 
 .. code-block :: javascript
   :linenos:
@@ -26,8 +35,10 @@ This example overwrites the "d" member from the second object, leaving the varia
  
 This will create and play a fadeIn animation passing and onEnd function and node, using a default duration.
 
+
+====================
 Creating new Objects
---------------------
+====================
 
 Mixin modifies the first object in the list, mixing in second object. If you wish to make an entirely new object from the mixed results, you have a couple options. First, clone the existing object with dojo.clone, then mix:
 
@@ -50,8 +61,10 @@ Alternatly, you can pass an empty object as the first mix, and mix another objec
 
 Just remember the object instance in the first position will always be overwritten, and the right-most object will take precedence in the mix. 
 
+
+===================
 Mixins with Classes
--------------------
+===================
 
 A common pattern when creating class objects is to pass an object-hash of properties to the constructor. dojo.mixin provides a technique for easy over-ride of default in you own classes. Consider the follow class declaration:
 
@@ -71,9 +84,11 @@ Now, any time we create a new instance of a my.Thinger, it will have a member va
   :linenos:
 
   var thing = new my.Thinger({ defaultValue:"blue" });
- 
+
+
+===================== 
 Mixing into instances
----------------------
+=====================
 
 Sometimes is it useful to mix custom variables and members into instances of widgets and other objects. Mixing into an instance allows you to easily add arbitrary references or overwrite functionality after instantiation.
 
