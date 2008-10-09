@@ -58,15 +58,24 @@ Passing only an ID or node returns the computed style object of the node:
          .style1 { color: red }
      </style>
 
-  .. cv:: html
-
-    <div id="fohooo" class="style1">Don't look at me - I'm just a poor DOM node.</div>
-
   .. cv:: javascript
 
     <script type="text/javascript">
-        dojo.style("thinger");
+        dojo.require("dijit.form.Button");
     </script>
+
+  .. cv:: html
+
+    <div id="poorboy" class="style1">Don't look at me - I'm just a poor DOM node.</div>
+
+    <div dojoType="dijit.form.Button">
+        get the current style
+        <script type="dojo/method" event="onClick" args="evt">
+            // Get the style from DOM node "poorboy":
+            alert(dojo.style("poorboy"));
+        </script>
+    </div>
+
 
 
 example:
