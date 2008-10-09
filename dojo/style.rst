@@ -159,6 +159,7 @@ Passing a node, an object-style style property sets each of the values in turn a
 
      <style type="text/css">
          .style4 { color: black; padding: 10px; border: 1px black solid; }
+         .nib { font-size: 5em; }
      </style>
 
   .. cv:: javascript
@@ -169,7 +170,7 @@ Passing a node, an object-style style property sets each of the values in turn a
 
   .. cv:: html
 
-    <div id="poorboy4" class="style4">NIB<br/>NODE IN BLACK</div>
+    <div id="poorboy4" class="style4"><span class="nib">NIB</span><br/>NODE IN BLACK</div>
 
     <div dojoType="dijit.form.Button">
         set multiple style properties
