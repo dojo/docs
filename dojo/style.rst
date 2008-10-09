@@ -77,7 +77,7 @@ Passing only an ID or node returns the computed style object of the node:
             var s = dojo.style("poorboy");
             for(var i in s){ 
                 var n = dojo.doc.createElement('li');
-                n.innerHTML = i + " = " + s[i] + " ";
+                n.innerHTML = i + " = " + s[i] + ", ";
                 dojo.place(n, "poorboy_styles", "first");
             }
         </script>
@@ -241,6 +241,10 @@ Tips
 ========
 See also
 ========
+
+* `Dojo’s got style <http://dojocampus.org/content/2008/04/01/dojos-got-style/>`_
+
+  dojo.style() tutorial from Peter Higgins
 
 * `dojo.query <dojo/query>`_
 * `dojo.NodeList <dojo/NodeList>`_
