@@ -708,9 +708,9 @@ These sections cover the available projects shipped with the Dojo Toolkit
 
     An enhanced replacement for `dojox.data.HtmlTableStore <dojox/data/HtmlTableStore>`_ to work with HTML tables, lists, and collections of DIV and SPAN tags.
 
-  * `dojox.data.HtmlTableStore <dojox/data/HtmlTableStore>`_
+  * `dojox.data.HtmlTableStore <dojox/data/HtmlTableStore>`_ (*deprecated*)
 
-    *deprecated* A read interface to work with HTML tables
+    A read interface to work with HTML tables
 
   * `dojox.data.jsonPathStore <dojox/data/jsonPathStore>`_
 
