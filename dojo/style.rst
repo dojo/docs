@@ -108,12 +108,37 @@ Passing a node and a style property returns the current normalized, computed val
         </script>
     </div>
 
-TODO
-----
+Set a style property
+--------------------
 
 Passing a node, a style property, and a value changes the current display of the node and returns the new computed value:
 
-dojo.style("thinger", "opacity", 0.5); // == 0.5
+.. cv-compound::
+
+  .. cv:: css
+
+     <style type="text/css">
+         .style3 { color: green }
+     </style>
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+        dojo.require("dijit.form.Button");
+    </script>
+
+  .. cv:: html
+
+    <div id="poorboy3" class="style13">I don't like this green</div>
+
+    <div dojoType="dijit.form.Button">
+        give me another color
+        <script type="dojo/method" event="onClick" args="evt">
+            // Set the color 'grey' to DOM node "poorboy3":
+            dojo.style("poorboy3", "color", "grey");
+        </script>
+    </div>
+
 
 TODO
 ----
