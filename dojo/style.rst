@@ -45,8 +45,8 @@ value
 Examples
 ========
 
-Get the style object of the DOM node:
--------------------------------------
+Get the style of a DOM node
+---------------------------
 
 Passing only an ID or node returns the computed style object of the node:
 
@@ -77,11 +77,42 @@ Passing only an ID or node returns the computed style object of the node:
     </div>
 
 
+Get a single style property of a DOM node
+-----------------------------------------
 
-example:
-  Passing a node and a style property returns the current
-  normalized, computed value for that property:
+Passing a node and a style property returns the current normalized, computed value for that property:
 |	dojo.style("thinger", "opacity"); // 1 by default
+
+
+.. cv-compound::
+
+  .. cv:: css
+
+     <style type="text/css">
+         .style2 { color: blue }
+     </style>
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+        dojo.require("dijit.form.Button");
+    </script>
+
+  .. cv:: html
+
+    <div id="poorboy2" class="style1">I will tell you anything...</div>
+
+    <div dojoType="dijit.form.Button">
+        give me the color
+        <script type="dojo/method" event="onClick" args="evt">
+            // Get the color property from DOM node "poorboy2":
+            alert(dojo.style("poorboy", "color"));
+        </script>
+    </div>
+
+
+
+
     //
 example:
   Passing a node, a style property, and a value changes the
