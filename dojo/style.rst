@@ -179,17 +179,7 @@ Passing a node, an object-style style property sets each of the values in turn a
 Use dojo.style() with a list of nodes
 -------------------------------------
 
-dojo.NodeList implements .style() using the same syntax, omitting the "node" parameter, calling dojo.style() on every element of the list. 
-
-dojo.query(".someClassName").style("visibility","hidden");
-
-or
-
-dojo.query("#baz > div").style({
-    opacity:0.75,
-    fontSize:"13pt"
-});
-
+dojo.NodeList implements .style() using the same syntax, omitting the "node" parameter, calling dojo.style() on every element of the list.
 
 .. cv-compound::
 
@@ -234,9 +224,11 @@ dojo.query("#baz > div").style({
 Tips
 ====
 
-* When the CSS style property is hyphenated, the JavaScript property is camelCased. font-size becomes fontSize, and so on.
+* If the CSS style property is hyphenated, the JavaScript property is camelCased. 
 
-* You will get a "TypeError: n is null", if you call dojo.query() on a not existent DOM node. It's more safe to use dojo.query("#a").style("b","c"); 
+  for example: "font-size" becomes "fontSize", and so on
+
+* You will get a "TypeError: n is null", if you call dojo.query() on a non existent DOM node. It's more safe to use dojo.query("#a").style("b","c"); 
 
 
 ========
