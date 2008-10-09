@@ -33,6 +33,18 @@ Of course, you shouldn't set the size of the center pane, since it's size is det
 placing the left/right/top/bottom panes.
 You also shouldn't set the width of the top/bottom panes or the height of the left/right panes as that would be meaningless.
 
+``note:`` In order to set the overall size of a BorderContainer to the full size of the viewport, the `<body>` element needs an explicit size set as well as a size on the BorderContainer itself:
+
+.. code-block :: html
+  :linenos:
+
+    <style type="text/css">
+    body, html { width:100%; height:100%; margin:0; padding:0 } 
+    #borderContainer { width:100%; height:100% } 
+    </style>
+
+Otherwise, the computed style of the BorderContainer will report 0 rather than the browser-calculated size of the viewport.
+
 Layout modes
 ------------
 
