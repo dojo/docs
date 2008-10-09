@@ -228,6 +228,11 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 
       Select a DOM node by 'id'
 
+
+    * `dojo.style <dojo/style>`_
+
+      TODO: a short explanation of dojo.style
+
   * `dojo._base.json <dojo/_base/json>`_
 
     JSON helpers
