@@ -13,7 +13,6 @@ dojo.style
 A getter/setter for styles on a DOM node.
 
 
-
 ============
 Introduction
 ============
@@ -24,6 +23,13 @@ Accesses styles on a node. If 2 arguments are passed, acts as a getter. If 3 arg
 =====
 Usage
 =====
+
+.. code-block :: javascript
+ :linenos:
+
+ <script type="text/javascript">
+   dojo.style = function( node, style, value)
+ </script>
 
 node
   id or reference of the DOM node to get/set style for
@@ -36,12 +42,7 @@ value
 
 
 
-.. code-block :: javascript
- :linenos:
 
- <script type="text/javascript">
-   // your code
- </script>
 
 
 
