@@ -12,7 +12,7 @@ Simple Mixes
   :linenos:
 
   var a = { b:"c", d:"e" };
-  dojo.mixin(a, { d:"f", g:"h" };
+  dojo.mixin(a, { d:"f", g:"h" });
   console.log(a); // b:c, d:f, g:h
 
 This example overwrites the "d" member from the second object, leaving the variable "a" with three members: b, d, and g. To expand on this, we can illustrate how to use mixin to overwrite defaults for some function:
