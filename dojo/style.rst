@@ -159,7 +159,7 @@ Passing a node, an object-style style property sets each of the values in turn a
 
      <style type="text/css">
          .style4 { color: black; padding: 10px; border: 1px black solid; }
-         .nib { font-size: 5em; }
+         .nib { font-size: 3.8em; }
      </style>
 
   .. cv:: javascript
