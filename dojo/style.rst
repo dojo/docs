@@ -28,7 +28,7 @@ Usage
  :linenos:
 
  <script type="text/javascript">
-   dojo.style( node, style, value);
+   dojo.style(node, style, value);
  </script>
 
 node
@@ -140,15 +140,40 @@ Passing a node, a style property, and a value changes the current display of the
     </div>
 
 
-TODO
-----
+Set multiple style properties at once
+-------------------------------------
 
 Passing a node, an object-style style property sets each of the values in turn and returns the computed style object of the node:
-dojo.style("thinger", {
-    "opacity": 0.5,
-    "border": "3px solid black",
-    "height": 300
-});
+
+.. cv-compound::
+
+  .. cv:: css
+
+     <style type="text/css">
+         .style4 { color: black }
+     </style>
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+        dojo.require("dijit.form.Button");
+    </script>
+
+  .. cv:: html
+
+    <div id="poorboy4" class="style3">NIB - the Node in black</div>
+
+    <div dojoType="dijit.form.Button">
+        set multiple style properties
+        <script type="dojo/method" event="onClick" args="evt">
+            // Set the color to 'red', opacity to 0.5, border to "3px solid black" to DOM node "poorboy4":
+            dojo.style("poorboy4", {
+                "color": "red",
+                "opacity": 0.5,
+                "border": "3px solid black"
+            });
+        </script>
+    </div>
 
 
 TODO
@@ -174,6 +199,13 @@ dojo.query("#baz > div").style({
     opacity:0.75,
     fontSize:"13pt"
 });
+
+
+====
+Tips
+====
+
+You will get a "TypeError: n is null", if you call dojo.query() on a not existent DOM node. It's more safe to use dojo.query("#a").style("b","c"); 
 
 
 ========
