@@ -57,6 +57,7 @@ Passing only an ID or node returns the computed style object of the node:
      <style type="text/css">
          .style1 { color: red; padding: 10px; border: 1px red solid; }
          #poorboy_styles li { display:inline; }
+         #poorboy_styles li .prop { display:inline; }
      </style>
 
   .. cv:: javascript
@@ -77,8 +78,8 @@ Passing only an ID or node returns the computed style object of the node:
             var s = dojo.style("poorboy");
             for(var i in s){ 
                 var n = dojo.doc.createElement('li');
-                n.innerHTML = i + " = " + s[i] + ", ";
-                dojo.place(n, "poorboy_styles", "first");
+                n.innerHTML = i + " = <span class='prop'>" + s[i] + "</span>, ";
+                dojo.place(n, "poorboy_styles", "last");
             }
         </script>
     </div>
