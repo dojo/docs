@@ -129,13 +129,13 @@ Passing a node, a style property, and a value changes the current display of the
 
   .. cv:: html
 
-    <div id="poorboy3" class="style13">I don't like this green</div>
+    <div id="poorboy3" class="style3">I don't like this green</div>
 
     <div dojoType="dijit.form.Button">
         give me another color
         <script type="dojo/method" event="onClick" args="evt">
-            // Set the color 'grey' to DOM node "poorboy3":
-            dojo.style("poorboy3", "color", "grey");
+            // Set the color 'red' to DOM node "poorboy3":
+            dojo.style("poorboy3", "color", "red");
         </script>
     </div>
 
