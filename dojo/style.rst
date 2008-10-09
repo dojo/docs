@@ -98,7 +98,7 @@ Passing a node and a style property returns the current normalized, computed val
 
   .. cv:: html
 
-    <div id="poorboy2" class="style12">I will tell you anything...</div>
+    <div id="poorboy2" class="style2">I will tell you anything...</div>
 
     <div dojoType="dijit.form.Button">
         give me the color
