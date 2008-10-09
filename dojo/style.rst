@@ -41,23 +41,34 @@ value
   If passed, sets value on the node for style, handling cross-browser concerns.
 
 
-
-
-
-
-
 ========
 Examples
 ========
 
-Programmatic example
---------------------
+Get the style object of the DOM node:
+-------------------------------------
 
-TODO: example
-example:
-  Passing only an ID or node returns the computed style object of
-  the node:
-|	dojo.style("thinger");
+Passing only an ID or node returns the computed style object of the node:
+
+.. cv-compound::
+
+  .. cv:: css
+
+     <style type="text/css">
+         .style1 { font-color: red }
+     </style>
+
+  .. cv:: html
+
+    <div id="fohooo" class="style1">Don't look at me - I'm just a poor DOM node.</div>
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+        dojo.style("thinger");
+    </script>
+
+
 example:
   Passing a node and a style property returns the current
   normalized, computed value for that property:
