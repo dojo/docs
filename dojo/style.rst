@@ -169,7 +169,7 @@ Passing a node, an object-style style property sets each of the values in turn a
 
   .. cv:: html
 
-    <div id="poorboy4" class="style4">NIB - the Node in black</div>
+    <div id="poorboy4" class="style4">NIB<br/>NODE IN BLACK</div>
 
     <div dojoType="dijit.form.Button">
         set multiple style properties
