@@ -1,6 +1,6 @@
 #format rst
 
-Welcome to the official documentation pages of the DojoToolkit
+Welcome do the official documentation pages of the DojoToolkit
 ==============================================================
 
 :Status: Draft
@@ -228,10 +228,9 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 
       Select a DOM node by 'id'
 
-
     * `dojo.style <dojo/style>`_
 
-      TODO: a short explanation of dojo.style
+      A getter/setter for styles on a DOM node
 
   * `dojo._base.json <dojo/_base/json>`_
 
