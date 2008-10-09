@@ -161,35 +161,25 @@ Passing a node, an object-style style property sets each of the values in turn a
 
   .. cv:: html
 
-    <div id="poorboy4" class="style3">NIB - the Node in black</div>
+    <div id="poorboy4" class="style4">NIB - the Node in black</div>
 
     <div dojoType="dijit.form.Button">
         set multiple style properties
         <script type="dojo/method" event="onClick" args="evt">
-            // Set the color to 'red', opacity to 0.5, border to "3px solid black" to DOM node "poorboy4":
+            // Set the color to 'white', background-color to "black", padding to "20px" to DOM node "poorboy4":
             dojo.style("poorboy4", {
                 "backgroundColor": "black",
                 "color": "white",
-                "padding": "10px"
+                "padding": "20px"
             });
         </script>
     </div>
 
 
-TODO
-----
+Use dojo.style() with a list of nodes
+-------------------------------------
 
-When the CSS style property is hyphenated, the JavaScript property is camelCased. font-size becomes fontSize, and so on.
-
-dojo.style("thinger",{
-    fontSize:"14pt",
-    letterSpacing:"1.2em"
-});
-
-TODO
-----
-
-dojo.NodeList implements .style() using the same syntax, omitting the "node" parameter, calling dojo.style() on every element of the list. See: dojo.query and dojo.NodeList
+dojo.NodeList implements .style() using the same syntax, omitting the "node" parameter, calling dojo.style() on every element of the list. 
 
 dojo.query(".someClassName").style("visibility","hidden");
 
@@ -201,15 +191,57 @@ dojo.query("#baz > div").style({
 });
 
 
+.. cv-compound::
+
+  .. cv:: css
+
+     <style type="text/css">
+         .style5 { color: black; padding: 10px; border: 1px black solid; }
+         .sweet { color: #FF8C8C; }
+     </style>
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+        dojo.require("dijit.form.Button");
+    </script>
+
+  .. cv:: html
+
+    <div id="poorboy5" class="style5">
+        <p>The different faces of dojo.style():</p>
+        <ul>
+            <li class="sweet">dojo.style(node);</li>
+            <li class="sweet">dojo.style(node, property);</li>
+            <li class="sweet">dojo.style(node, property, value);</li>
+            <li class="sweet">dojo.style(node, object);</li>
+        </ul>
+    </div>
+
+    <div dojoType="dijit.form.Button">
+        change the style for each point
+        <script type="dojo/method" event="onClick" args="evt">
+            // Set the color to 'red', opacity to 0.5, border to "3px solid black" to DOM node "poorboy4":
+            dojo.query(".sweet").style({
+                "backgroundColor": "#B822B0",
+                "color": "#FFFF00"
+            });
+        </script>
+    </div>
+
+
 ====
 Tips
 ====
 
-You will get a "TypeError: n is null", if you call dojo.query() on a not existent DOM node. It's more safe to use dojo.query("#a").style("b","c"); 
+* When the CSS style property is hyphenated, the JavaScript property is camelCased. font-size becomes fontSize, and so on.
+
+* You will get a "TypeError: n is null", if you call dojo.query() on a not existent DOM node. It's more safe to use dojo.query("#a").style("b","c"); 
 
 
 ========
 See also
 ========
 
-* TODO: links to other related articles
+* `dojo.query <dojo/query>`_
+* `dojo.NodeList <dojo/NodeList>`_
