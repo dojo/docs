@@ -55,7 +55,7 @@ Passing only an ID or node returns the computed style object of the node:
   .. cv:: css
 
      <style type="text/css">
-         .style1 { font-color: red }
+         .style1 { color: red }
      </style>
 
   .. cv:: html
