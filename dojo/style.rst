@@ -57,7 +57,7 @@ Passing only an ID or node returns the computed style object of the node:
      <style type="text/css">
          .style1 { color: red; padding: 10px; border: 1px red solid; }
          #poorboy_styles li { display:inline; }
-         #poorboy_styles li .prop { display:inline; }
+         #poorboy_styles li .prop { color: blue; }
      </style>
 
   .. cv:: javascript
