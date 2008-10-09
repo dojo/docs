@@ -67,12 +67,18 @@ Passing only an ID or node returns the computed style object of the node:
   .. cv:: html
 
     <div id="poorboy" class="style1">Don't look at me - I'm just a poor DOM node.</div>
+    <ul id="poorboy_styles"></ul>
 
     <div dojoType="dijit.form.Button">
         get the current style
         <script type="dojo/method" event="onClick" args="evt">
             // Get the style from DOM node "poorboy":
-            alert(dojo.style("poorboy"));
+            var s = dojo.style("poorboy");
+            for(var i in s){ 
+                var n = dojo.doc.createElement('li');
+                n.innerHTML = i + " = " + s[i];
+                dojo.place(n, "poorboy_styles", "first");
+            }
         </script>
     </div>
 
