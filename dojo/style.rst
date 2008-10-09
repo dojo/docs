@@ -168,7 +168,7 @@ Passing a node, an object-style style property sets each of the values in turn a
         <script type="dojo/method" event="onClick" args="evt">
             // Set the color to 'red', opacity to 0.5, border to "3px solid black" to DOM node "poorboy4":
             dojo.style("poorboy4", {
-                "background-color": "black",
+                "backgroundColor": "black",
                 "color": "white",
                 "padding": "10px"
             });
