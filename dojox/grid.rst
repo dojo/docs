@@ -21,6 +21,8 @@ Introduction
 
 TODO: introduce the component/class/method
 
+`Introducing the 1.2 DataGrid <http://www.sitepen.com/blog/2008/07/14/dojo-12-grid/>`_
+
 Grid 1.2 Changes
 ----------------
 
