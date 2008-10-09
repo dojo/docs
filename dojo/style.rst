@@ -228,7 +228,7 @@ Tips
 
   for example: "font-size" becomes "fontSize", and so on
 
-* You will get a "TypeError: n is null", if you call dojo.query() on a non existent DOM node. It's more safe to use dojo.query("#a").style("b","c"); 
+* You will get a "TypeError: n is null", if you call dojo.style() on a non existent DOM node. It's more safe to use dojo.query("#a").style("b","c"); 
 
 
 ========
