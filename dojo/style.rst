@@ -81,8 +81,6 @@ Get a single style property of a DOM node
 -----------------------------------------
 
 Passing a node and a style property returns the current normalized, computed value for that property:
-|	dojo.style("thinger", "opacity"); // 1 by default
-
 
 .. cv-compound::
 
@@ -100,7 +98,7 @@ Passing a node and a style property returns the current normalized, computed val
 
   .. cv:: html
 
-    <div id="poorboy2" class="style1">I will tell you anything...</div>
+    <div id="poorboy2" class="style12">I will tell you anything...</div>
 
     <div dojoType="dijit.form.Button">
         give me the color
@@ -110,48 +108,47 @@ Passing a node and a style property returns the current normalized, computed val
         </script>
     </div>
 
+TODO
+----
+
+Passing a node, a style property, and a value changes the current display of the node and returns the new computed value:
+
+dojo.style("thinger", "opacity", 0.5); // == 0.5
+
+TODO
+----
+
+Passing a node, an object-style style property sets each of the values in turn and returns the computed style object of the node:
+dojo.style("thinger", {
+    "opacity": 0.5,
+    "border": "3px solid black",
+    "height": 300
+});
 
 
+TODO
+----
 
-    //
-example:
-  Passing a node, a style property, and a value changes the
-  current display of the node and returns the new computed value
-|	dojo.style("thinger", "opacity", 0.5); // == 0.5
-    //
-example:
-  Passing a node, an object-style style property sets each of the values in turn and returns the computed style object of the node:
-|	dojo.style("thinger", {
-|		"opacity": 0.5,
-|		"border": "3px solid black",
-|		"height": 300
-|	});
-    //
-    // 	example:
-  When the CSS style property is hyphenated, the JavaScript property is camelCased.
-  font-size becomes fontSize, and so on.
-|	dojo.style("thinger",{
-|		fontSize:"14pt",
-|		letterSpacing:"1.2em"
-|	});
-    //
-example:
-  dojo.NodeList implements .style() using the same syntax, omitting the "node" parameter, calling
-  dojo.style() on every element of the list. See: dojo.query and dojo.NodeList
-|	dojo.query(".someClassName").style("visibility","hidden");
-|	// or
-|	dojo.query("#baz > div").style({
-|		opacity:0.75,
-|		fontSize:"13pt"
-|	});
+When the CSS style property is hyphenated, the JavaScript property is camelCased. font-size becomes fontSize, and so on.
 
+dojo.style("thinger",{
+    fontSize:"14pt",
+    letterSpacing:"1.2em"
+});
 
+TODO
+----
 
+dojo.NodeList implements .style() using the same syntax, omitting the "node" parameter, calling dojo.style() on every element of the list. See: dojo.query and dojo.NodeList
 
-Declarative example
--------------------
+dojo.query(".someClassName").style("visibility","hidden");
 
-TODO: example
+or
+
+dojo.query("#baz > div").style({
+    opacity:0.75,
+    fontSize:"13pt"
+});
 
 
 ========
