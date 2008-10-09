@@ -55,7 +55,7 @@ Passing only an ID or node returns the computed style object of the node:
   .. cv:: css
 
      <style type="text/css">
-         .style1 { color: red }
+         .style1 { color: red; padding: 10px; border-color: red }
      </style>
 
   .. cv:: javascript
@@ -87,7 +87,7 @@ Passing a node and a style property returns the current normalized, computed val
   .. cv:: css
 
      <style type="text/css">
-         .style2 { color: blue }
+         .style2 { color: blue; padding: 10px; border-color: blue }
      </style>
 
   .. cv:: javascript
@@ -118,7 +118,7 @@ Passing a node, a style property, and a value changes the current display of the
   .. cv:: css
 
      <style type="text/css">
-         .style3 { color: green }
+         .style3 { color: green; padding: 10px; border-color: green }
      </style>
 
   .. cv:: javascript
@@ -150,7 +150,7 @@ Passing a node, an object-style style property sets each of the values in turn a
   .. cv:: css
 
      <style type="text/css">
-         .style4 { color: black }
+         .style4 { color: black; padding: 10px; border-color: black }
      </style>
 
   .. cv:: javascript
