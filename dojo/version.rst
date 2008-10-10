@@ -1,7 +1,16 @@
 #format dojo_rst
 
 dojo.version
-------------
+============
+
+:Status: Draft
+:Version: 1.0
+:Authors: ?--
+:Developers: ?-
+:Available: since V?
+
+.. contents::
+   :depth: 2
 
 An object describing the current version of dojo.js
 
