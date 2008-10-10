@@ -58,6 +58,7 @@ The default implementation of Container represents a uniform collection of items
 The draggable item is represented by an abstract data object, which can be anything. There is a function "creator", which is called when we need to visualize a data item for the container, or for the avatar. It allows us to have different representations of the same data item in different containers and in the avatar. More on that later.
 
 Constructor takes 2 parameters: 
+
 * node --- a DOM node or an id (string) of such node. This node represents a container. All draggable items will be direct descendants of this node (the important exception: a <table> node, in this case items will be direct descendants of the embedded <tbody> node).
 * params --- a dictionary object, which defines optional parameters. Following optional parameters are recognized:
 
