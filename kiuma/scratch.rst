@@ -32,9 +32,9 @@ If you have not to do particular requirements, you'll use this class most of the
     dojo.require("dojo.dnd.Source");
   </script>
   <div dojoType="dojo.dnd.Source">
-    <div class="dragItem">item1</div>
-    <div class="dragItem">item2</div>
-    <div class="dragItem">item3</div>
+    <div class="dojoDndItem">item1</div>
+    <div class="dojoDndItem">item2</div>
+    <div class="dojoDndItem">item3</div>
   </div>
 
 voo
