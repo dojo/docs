@@ -28,13 +28,35 @@ If you have not to do particular requirements, you'll use this class most of the
 
 .. codeviewer::
 
+
+---- /!\ '''Edit conflict - other version:''' ----
+
+---- /!\ '''Edit conflict - your version:''' ----
+  <style type="text/css">
+     .dndContainer {
+        border: 1px solid gray;
+     }
+  </style> 
+
+---- /!\ '''End of edit conflict''' ----
   <script type="text/javascript">
     dojo.require("dojo.dnd.Source");
   </script>
   <div dojoType="dojo.dnd.Source">
+
+---- /!\ '''Edit conflict - other version:''' ----
     <div class="dojoDndItem">item1</div>
     <div class="dojoDndItem">item2</div>
     <div class="dojoDndItem">item3</div>
   </div>
 
 voo
+
+---- /!\ '''Edit conflict - your version:''' ----
+    <div class="dojoDndItem">item1</div>
+    <div class="dojoDndItem">item2</div>
+    <div class="dojoDndItem">item3</div>
+  </div>
+
+
+---- /!\ '''End of edit conflict''' ----
