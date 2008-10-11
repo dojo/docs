@@ -33,6 +33,7 @@ If you have not to do particular requirements, you'll use this class most of the
         border: 1px solid gray;
         width: 120px;
         padding: 3px;
+        height: 200px;
      }
   </style> 
   <script type="text/javascript">
