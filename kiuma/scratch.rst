@@ -31,6 +31,8 @@ If you have not to do particular requirements, you'll use this class most of the
   <style type="text/css">
      .dndContainer {
         border: 1px solid gray;
+        width: 120px;
+        padding: 3px;
      }
   </style> 
   <script type="text/javascript">
