@@ -67,14 +67,12 @@ So let's keep with another example:
   <div class="userRoleContainer"
     <fieldset class="dndContainer availableRoles" dojoType="dojo.dnd.Source">
       <legend>Available roles</legend>
-      <div class="dojoDndItem">item1</div>
-      <div class="dojoDndItem">item2</div>
-      <div class="dojoDndItem">item3</div>
+      <div class="dojoDndItem">admin</div>
+      <div class="dojoDndItem">guest</div>
+      <div class="dojoDndItem">publisher</div>
     </fieldset>
     <fieldset class="dndContainer assignedRoles" dojoType="dojo.dnd.Source">
       <legend>Assigned roles</legend>
-      <div class="dojoDndItem">item1</div>
-      <div class="dojoDndItem">item2</div>
-      <div class="dojoDndItem">item3</div>
+      <div class="dojoDndItem">user</div>
     </fieldset>
   </div>
