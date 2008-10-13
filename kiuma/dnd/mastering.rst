@@ -125,3 +125,5 @@ So you'll have to mark a Source container with an accept tag attribute (comma se
       <legend>Paiment basket</legend>
     </fieldset>
   </div>
+
+Nearly good, ...nearly! The cart is not really correct, infact we are moving items, while the correct behaviour should be to copy them to the cart. Also, we don't want a single item to be duplicated inside the cart, but more precisely want so see only how many 'oranges' we have into it.
