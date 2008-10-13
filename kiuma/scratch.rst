@@ -93,8 +93,8 @@ So you'll have to mark a Source container with an accept tag attribute (comma se
         float: left;
         margin-right: 5px;
      }
-     .basketPoints {
-       margin-left: 20px;
+     .paymentContainer {
+       margin-left: 50px;
      }
   </style> 
   <script type="text/javascript">
