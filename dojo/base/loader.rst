@@ -54,6 +54,43 @@ Features
 
   Alias for the global scope
 
+* `dojo.isBrowser <dojo/isBrowser>`_
+
+  Returns true if the client is a web-browser
+
+* `dojo.isChrome <dojo/isChrome>`_ (new in V1.3)
+
+  Returns the version number of the browser, if the client is a Chrome-Browser, otherwise *undefined*
+
+* `dojo.isFF <dojo/isFF>`_
+
+  Returns the version number of the browser, if the client is a Mozilla FireFox-Browser, otherwise *undefined*
+
+* `dojo.isIE <dojo/isIE>`_
+
+  Returns the version number of the browser, if the client is a MS Internet Explorer-Browser, otherwise *undefined*
+
+* `dojo.isKhtml <dojo/isKhtml>`_
+
+  Returns the version number of the browser, if the client is a KHTML browser, otherwise *undefined*
+
+* `dojo.isMozilla <dojo/isMozilla>`_
+
+  Returns the version number of the browser, if the client is a Mozilla-based browser (Firefox, SeaMonkey), otherwise *undefined*
+
+* `dojo.isOpera <dojo/isOpera>`_
+
+  Returns the version number of the browser, if the client is a Opera-Browser, otherwise *undefined*
+
+* `dojo.isSafari <dojo/isSafari>`_
+
+  Returns the version number of the browser, if the client is is Safari or iPhone, otherwise *undefined*
+
+* `dojo.isWebKit <dojo/isWebKit>`_ (new in V1.3)
+
+  Returns the version number of the browser, if the client is a WebKit-derived browser (Konqueror, Safari, Chrome, etc.), otherwise *undefined*
+
+
 * `dojo.mixin <dojo/mixin>`_
 
   Multiple inheritance
