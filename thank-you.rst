@@ -6,6 +6,7 @@ Thank you!
 
 A big "thank you" goes to 
 
+* Andrea Chiumenti,
 * Sam Foster,
 * Becky Gibson,
 * James Gosnell,
