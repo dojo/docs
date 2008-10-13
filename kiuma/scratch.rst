@@ -77,6 +77,46 @@ So let's keep with another example:
     </fieldset>
   </div>
 
-This is all good, but suppose that your bage has two kind of d&d, a cart-basket and a coupon-basket used to pay via coupon.
+This is all good, but suppose that your page has two kind of d&d, a cart-basket and a coupon-basket used to pay via coupon.
 So,what you don't want is to put a coupon into the cart-basket and a product into the coupons one, suppose also that the coupon basket accepts card poins (yes youo provide a customer with a recharceable card.
 So you'll have to mark a Source container with an accept tag attribute (comma separated) to accepts particular items, and you have to mark every draggable item with the appropriate type using dndType tag attribute.
+
+.. codeviewer::
+
+  <style type="text/css">
+     fieldset.dndContainer {
+        border: 1px solid gray;
+        width: 120px;
+        padding: 3px;
+        height: 200px;
+        position: relative;
+        float: left;
+        margin-right: 5px;
+     }
+  </style> 
+  <script type="text/javascript">
+    dojo.require("dojo.dnd.Source");
+  </script>
+  <div class="cartContainer"
+    <fieldset class="dndContainer products" dojoType="dojo.dnd.Source" accept="product">
+      <legend>Items</legend>
+      <div class="dojoDndItem" dndType="product">apple</div>
+      <div class="dojoDndItem" dndType="product">pear</div>
+      <div class="dojoDndItem" dndType="product">orange</div>
+    </fieldset>
+    <fieldset class="dndContainer basket" dojoType="dojo.dnd.Source" accept="product">
+      <legend>Cart</legend>
+    </fieldset>
+  </div>
+  <div class="paymentContainer"
+    <fieldset class="dndContainer couponsAndPoints" dojoType="dojo.dnd.Source" accept="coupon, point">
+      <legend>Items</legend>
+      <div class="dojoDndItem" dndType="coupon">$ 10.00</div>
+      <div class="dojoDndItem" dndType="coupon">$ 5.00</div>
+      <div class="dojoDndItem" dndType="point">1 points ($ 1.00)</div>
+      <div class="dojoDndItem" dndType="point">2 points ($ 2.00)</div>
+    </fieldset>
+    <fieldset class="dndContainer basket" dojoType="dojo.dnd.Source" accept="coupon, point">
+      <legend>Paiment basket</legend>
+    </fieldset>
+  </div>
