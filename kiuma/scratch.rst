@@ -94,6 +94,8 @@ So you'll have to mark a Source container with an accept tag attribute (comma se
         margin-right: 5px;
      }
      .paymentContainer {
+       position: relative;
+       float: left;
        margin-left: 50px;
      }
   </style> 
