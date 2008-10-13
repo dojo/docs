@@ -1,6 +1,6 @@
 #format rst
 
-Welcome to the official documentation pages of the DojoToolkit
+Welcome to the official documentation pages of the Dojo Toolkit
 ==============================================================
 
 :Status: Draft
