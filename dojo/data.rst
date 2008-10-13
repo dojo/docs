@@ -40,4 +40,4 @@ Basic store usage consists primarily of creating stores from which items are fet
 See also
 ========
 
-* `Quickstart Tutorial: Using Dojo Data <http://docs.dojocampus.org/quickstart/data/usingdatastores>`_
+* `Quickstart Tutorial: Using Dojo Data <quickstart/data/usingdatastores>`_
