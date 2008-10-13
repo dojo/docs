@@ -93,6 +93,9 @@ So you'll have to mark a Source container with an accept tag attribute (comma se
         float: left;
         margin-right: 5px;
      }
+     .basketPoints {
+       margin-left: 20px;
+     }
   </style> 
   <script type="text/javascript">
     dojo.require("dojo.dnd.Source");
@@ -116,7 +119,7 @@ So you'll have to mark a Source container with an accept tag attribute (comma se
       <div class="dojoDndItem" dndType="point">1 points ($ 1.00)</div>
       <div class="dojoDndItem" dndType="point">2 points ($ 2.00)</div>
     </fieldset>
-    <fieldset class="dndContainer basket" dojoType="dojo.dnd.Source" accept="coupon, point">
+    <fieldset class="dndContainer basketPoints" dojoType="dojo.dnd.Source" accept="coupon, point">
       <legend>Paiment basket</legend>
     </fieldset>
   </div>
