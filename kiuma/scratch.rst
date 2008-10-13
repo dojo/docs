@@ -78,7 +78,7 @@ So let's keep with another example:
   </div>
 
 This is all good, but suppose that your page has two kind of d&d, a cart-basket and a coupon-basket used to pay via coupon.
-So,what you don't want is to put a coupon into the cart-basket and a product into the coupons one, suppose also that the coupon basket accepts card poins (yes youo provide a customer with a recharceable card.
+So,what you don't want is to put a coupon into the cart-basket and a product into the coupons one, suppose also that the coupon basket accepts card points (yes youo provide a customer with a recharceable card.
 So you'll have to mark a Source container with an accept tag attribute (comma separated) to accepts particular items, and you have to mark every draggable item with the appropriate type using dndType tag attribute.
 
 .. codeviewer::
