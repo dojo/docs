@@ -34,3 +34,10 @@ Basic store usage consists primarily of creating stores from which items are fet
 * `dojo.data.api.Notification <dojo/data/api/Notification>`_
 * `dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`_
 * `dojo.data.ItemFileWriteStore <dojo/data/ItemFileWriteStore>`_
+
+
+========
+See also
+========
+
+* `Quickstart Tutorial: Using Dojo Data <http://docs.dojocampus.org/quickstart/data/usingdatastores>`_
