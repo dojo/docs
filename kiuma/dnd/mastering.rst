@@ -351,3 +351,5 @@ This a very simple usage
     </div>
     <div dojotype="dijit.form.Button" onclick='sample.updateNumberDragging()'>Generate random content</div>
   </div>
+
+....
