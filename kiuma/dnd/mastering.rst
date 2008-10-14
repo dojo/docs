@@ -155,7 +155,7 @@ The example below shows what just explained:
     dojo.require("dojo.dnd.Source");
   </script>
   <div class="cartContainer"
-    <fieldset class="dndContainer products" dojoType="dojo.dnd.Source" accept="cartItem">
+    <fieldset id="items" class="dndContainer products" dojoType="dojo.dnd.Source" accept="cartItem">
       <script type="dojo/connect" event="onDndDrop" args="source, nodes, copy, target">
           var basket = dojo.byId('basket'); 
           if ((target != source) && (target.node.id == 'items')) {
@@ -186,7 +186,14 @@ The example below shows what just explained:
       <div dndType="cartItem" class="dojoDndItem" title="apple" quantity="0"><span class="quantity"></span> apple</div>
       <div dndType="cartItem" class="dojoDndItem" title="pear" quantity="0"><span class="quantity"></span> pear</div>
     </fieldset>
+
+---- /!\ '''Edit conflict - other version:''' ----
     <fieldset id="basket" class="dndContainer basket" dojoType="dojo.dnd.Source" accept="cartItem">
+
+---- /!\ '''Edit conflict - your version:''' ----
+    <fieldset id="basket" class="dndContainer basket" dojoType="dojo.dnd.Source" accept="cartItem">
+
+---- /!\ '''End of edit conflict''' ----
       <script type="dojo/connect" event="onDndDrop" args="source, nodes, copy, target">
           var basket = dojo.byId('basket');  
           if ((target != source) && (target.node.id == 'basket')) { 
