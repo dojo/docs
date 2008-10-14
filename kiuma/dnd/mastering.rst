@@ -261,7 +261,7 @@ In addiction the initialize (and the destroy too) method doesn't behave like you
 
   <script type="text/javascript">
     dojo.require('dijit.form.Button');
-    if (sample == undefined) {
+    //if (sample == undefined) {
       sampe = {};
       sample.dnd = {};
     
@@ -332,15 +332,15 @@ In addiction the initialize (and the destroy too) method doesn't behave like you
         for (var i = 0; i < 6; i++) {
           content += "<div dndType='number' class='dojoDndItem'>" + (i+randomNum) + "</div>";
         }
-        content += "</div><div dojotype="dijit.form.Button" onclick=''>Generate random content</div>";
+        content += "</div><div dojotype="dijit.form.Button" onclick='sample.updateNumberDragging()'>Generate random content</div>";
       }
       sample.updateNumberDragging = function() {
         var el = dojo.byId('numberDragging');
         el.innerHTML = sample._randomContent();
         dojo.parser.parse(el, true);
       }
-    }
-    dojo.addOnLoad(function () {sample.updateNumberDragging()});
+    //}
+    
   </script>
   <div id="numberDragging">
     <div dojotype='sample.dnd.Sounrce' accept='number'>
@@ -349,5 +349,5 @@ In addiction the initialize (and the destroy too) method doesn't behave like you
       <div dndType='number' class='dojoDndItem'>3</div>
       <div dndType='number' class='dojoDndItem'>4</div>
     </div>
-    <div dojotype="dijit.form.Button" onclick=''>Generate random content</div>
+    <div dojotype="dijit.form.Button" onclick='sample.updateNumberDragging()'>Generate random content</div>
   </div>
