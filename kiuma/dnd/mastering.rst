@@ -127,3 +127,115 @@ So you'll have to mark a Source container with an accept tag attribute (comma se
   </div>
 
 Nearly good, ...nearly! The cart is not really correct, infact we are moving items, while the correct behaviour should be to copy them to the cart. Also, we don't want a single item to be duplicated inside the cart, but more precisely want so see only how many 'oranges' we have into it.
+Moreover in a cart you don't want to move items from available ones, you'd prefer copy them from the items container to the basket/cart, we'll set the copyOnly property to true for available items.
+We also don't want to duplicates items for the cart, but only set 'how many oranges' we are going to checkout and also we want to remove 'oranges' one at a time and delete the cart item only when quantity reaches 0.
+For this purpose we'll connecto to the onDndDrop event.
+This event is fired both for the source and the target of the dnd action, so be careful to what they are.
+The example below shows what just explained:
+
+.. codeviewer::
+
+  <style type="text/css">
+     fieldset.dndContainer {
+        border: 1px solid gray;
+        width: 120px;
+        padding: 3px;
+        height: 200px;
+        position: relative;
+        float: left;
+        margin-right: 5px;
+     }
+     .paymentContainer {
+       position: relative;
+       float: left;
+       margin-left: 50px;
+     }
+  </style> 
+  <script type="text/javascript">
+    dojo.require("dojo.dnd.Source");
+  </script>
+  <div class="cartContainer"
+    <fieldset class="dndContainer products" dojoType="dojo.dnd.Source" accept="cartItem">
+      <script type="dojo/connect" event="onDndDrop" args="source, nodes, copy, target">
+          var basket = dojo.byId('basket'); 
+          if ((target != source) && (target.node.id == 'items')) {
+              dojo.forEach(nodes, function(node){
+                var nodeTitle = node.title;
+                var basketItemsToRemove = dojo.query('[title=' + nodeTitle + ']', target.node);
+                var removeItemSize = basketItemsToRemove.length;
+                var basketItem = dojo.query('[title=' + nodeTitle + ']', basket)[0];
+                for(var i = removeItemSize-1;i>=0;i--){                 
+                  if (dojo.attr(basketItemsToRemove[i], 'quantity') != '0') {
+                    basketItemsToRemove[i].parentNode.removeChild(basketItemsToRemove[i]);                    
+                    target.delItem(node.id);
+                    dojo.attr(basketItem, 'quantity', parseInt(dojo.attr(basketItem, 'quantity')) -1);
+                    dojo.forEach(dojo.query('span', basketItem), function(qt) {                   
+                      qt.innerHTML = dojo.attr(basketItem, 'quantity');
+                    });
+                    if (dojo.attr(basketItem, 'quantity') == '0') {
+                      basketItem.parentNode.removeChild(basketItem);
+                    }
+                  }
+                }
+              });
+            
+          }
+      </script>
+      <legend>Stock items</legend>
+      <div dndType="cartItem" class="dojoDndItem" title="orange" quantity="0"><span class="quantity"></span> orange</div>
+      <div dndType="cartItem" class="dojoDndItem" title="apple" quantity="0"><span class="quantity"></span> apple</div>
+      <div dndType="cartItem" class="dojoDndItem" title="pear" quantity="0"><span class="quantity"></span> pear</div>
+    </fieldset>
+    <fieldset class="dndContainer basket" dojoType="dojo.dnd.Source" accept="cartItem">
+      <script type="dojo/connect" event="onDndDrop" args="source, nodes, copy, target">
+          var basket = dojo.byId('basket');  
+          if ((target != source) && (target.node.id == 'basket')) { 
+              dojo.forEach(nodes, function(node){
+                var nodeTitle = node.title;
+                var nodeId = node.id;              
+                var basketItems = dojo.query('[title=' + nodeTitle + ']', basket);
+                
+                if ( basketItems.length == 1) {
+                  dojo.forEach(dojo.query('.quantity', basketItems[0]), function(qt) {                    
+                      qt.innerHTML = 1;                    
+                      dojo.attr(basketItems[0], 'quantity', qt.innerHTML);
+                  });                    
+                } else {                
+                  var basketItemsToRemove = dojo.query('[title=' + nodeTitle + ']', basket);
+                  var addItemSize = basketItemsToRemove.length;
+                  var incSize = 0;
+                  var currentItem = null;   
+                  for(var i = addItemSize-1;i>=0;i--){                  
+                    if (dojo.attr(basketItemsToRemove[i], 'quantity') == '0') {
+                      basketItemsToRemove[i].parentNode.removeChild(basketItemsToRemove[i]);
+                      incSize++;
+                      target.delItem(node.id);
+                    } else {
+                      currentItem = basketItemsToRemove[i];
+                    }
+                  }
+                   if (currentItem) {
+                    dojo.attr(currentItem, 'quantity', parseInt(dojo.attr(currentItem, 'quantity')) + incSize);
+                    dojo.forEach(dojo.query('span', currentItem), function(qt) {                    
+                       qt.innerHTML = dojo.attr(currentItem, 'quantity');
+                    });
+                  }                                  
+                }            
+              });            
+          } 
+        </script>
+      <legend>Cart</legend>
+    </fieldset>
+  </div>
+  <div class="paymentContainer"
+    <fieldset class="dndContainer couponsAndPoints" dojoType="dojo.dnd.Source" accept="coupon, point">
+      <legend>Cart</legend>
+      <div class="dojoDndItem" dndType="coupon">$ 10.00</div>
+      <div class="dojoDndItem" dndType="coupon">$ 5.00</div>
+      <div class="dojoDndItem" dndType="point">1 points ($ 1.00)</div>
+      <div class="dojoDndItem" dndType="point">2 points ($ 2.00)</div>
+    </fieldset>
+    <fieldset class="dndContainer basketPoints" dojoType="dojo.dnd.Source" accept="coupon, point">
+      <legend>Paiment basket</legend>
+    </fieldset>
+  </div>
