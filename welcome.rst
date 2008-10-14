@@ -844,7 +844,7 @@ These sections cover the available projects shipped with the Dojo Toolkit
 * `dojox.lang <dojox/lang>`_
 * `dojox.layout <dojox/layout>`_
 
-  Provides experimental and additional extensions to `Dijit Layout <dijit/layout>`__ Widgets
+  Experimental and additional extensions to `Dijit Layout <dijit/layout>`__ Widgets
 
   * `dojox.layout.ContentPane <dojox/layout/ContentPane>`_
 
