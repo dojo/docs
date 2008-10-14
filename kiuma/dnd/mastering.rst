@@ -337,7 +337,7 @@ In addiction the initialize (and the destroy too) method doesn't behave like you
     
   </script>
   <div id="numberDragging">
-    <div dojotype='sample.dnd.Sounrce' accept='number'>
+    <div dojotype='sample.dnd.Source' accept='number'>
       <div dndType='number' class='dojoDndItem'>1</div>
       <div dndType='number' class='dojoDndItem'>2</div>
       <div dndType='number' class='dojoDndItem'>3</div>
