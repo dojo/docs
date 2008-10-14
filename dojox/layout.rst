@@ -12,13 +12,42 @@ The Layout project provides experimental and additional extensions to `Dijit Lay
 Layout Widgets
 --------------
 
-* ContentPane - an extension to dijit.layout.ContentPane providing script execution, among other things.
-* DragPane - provides drag-based scrolling for divs with overflow
-* ExpandoPane - a self-collapsing widget for use in a `BorderContainer <dijit/layout/BorderContainer>`_
-* FloatingPane - an experimental floating window
-* GridContainer - a panel-like layout mechanism, allowing Drag and Drop between regions
-* RadioGroup - a variety of `StackContainer <dijit/layout/StackContainer>`_ enhancements providing animated transitions
-* ResizeHandle - a small widget to provide resizing of a parent node
-* RotatorContainer - an extended StackContainer suited for presentational purposes.
-* ScrollPane - an interesting UI, scrolling an overflowed div based on mouse position, either vertical or horizontal.
-* ToggleSplitter - a custom Splitter for use in a BorderContainer, providing a lightweight way to collapse the associated child.
+* dojox.layout.ContentPane
+
+  An extension to dijit.layout.ContentPane providing script execution, among other things
+
+* dojox.layout.DragPane
+
+  Provides drag-based scrolling for divs with overflow
+
+* dojox.layout.ExpandoPane
+
+  A self-collapsing widget for use in a `BorderContainer <dijit/layout/BorderContainer>`_
+
+* dojox.layout.FloatingPane
+
+  An experimental floating window
+
+* dojox.layout.GridContainer
+
+  A panel-like layout mechanism, allowing Drag and Drop between regions
+
+* dojox.layout.RadioGroup
+
+  A variety of `StackContainer <dijit/layout/StackContainer>`_ enhancements providing animated transitions
+
+* dojox.layout.ResizeHandle
+
+  A small widget to provide resizing of a parent node
+
+* dojox.layout.RotatorContainer
+
+  An extended StackContainer suited for presentational purposes
+
+* dojox.layout.ScrollPane
+
+  An interesting UI, scrolling an overflowed div based on mouse position, either vertical or horizontal
+
+* dojox.layout.ToggleSplitter
+
+  A custom Splitter for use in a BorderContainer, providing a lightweight way to collapse the associated child
