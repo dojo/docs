@@ -260,6 +260,7 @@ In addiction the initialize (and the destroy too) method doesn't behave like you
 .. codeviewer::
 
   <script type="text/javascript">
+    dojo.require('dijit.form.Button');
     if (sample == undefined) {
       sampe = {};
       sample.dnd = {};
@@ -298,30 +299,49 @@ In addiction the initialize (and the destroy too) method doesn't behave like you
           dojo.dnd.Source.prototype.destroy.call(this);
         }
       });
+
+      dojo.declare("sample.dnd.Source",[dojo.dnd.Source,claw.dnd._DndMixin], {
+        markupFactory: function(params, node){
+	  params._skipStartup = true; 
+          return new sample.dnd.Source(node, params);
+        }
+      });
+      dojo.declare("sample.dnd.Container",[dojo.dnd.Container,claw.dnd._DndMixin], {
+        markupFactory: function(params, node){ 
+          params._skipStartup = true;
+	  return new sample.dnd.Container(node, params);
+        }
+      });
+      dojo.declare("sample.dnd.Selector",[dojo.dnd.Selector,claw.dnd._DndMixin], {
+        markupFactory: function(params, node){
+	  params._skipStartup = true;
+	  return new sample.dnd.Selector(node, params);
+        }
+      });
+      dojo.declare("sample.dnd.Container",[dojo.dnd.Container,claw.dnd._DndMixin], {
+        markupFactory: function(params, node){
+  	  params._skipStartup = true;
+	  return new sample.dnd.Container(node, params);
+        }
+      });
+    
+      // a fuzzy function
+      sample._randomContent = function() {
+        var randomNum = Math.ceil(Math.reandom() * 100);
+        var content = "<div dojotype='sample.dnd.Sounrce' accept='number'>";
+        for (var i = 0; i < 6; i++) {
+          content += "<div dndType='number' class='dojoDndItem'>" + (i+randomNum) + "</div>";
+        }
+        content += "</div><div dojotype="dijit.form.Button" onclick=''>Generate random content</div>";
+      }
+      sample.updateNumberDragging = function() {
+        var el = dojo.byId('numberDragging');
+        el.innerHTML = sample._randomContent();
+        dojo.parser.parse(el, true);
+      }
     }
-    dojo.declare("sample.dnd.Source",[dojo.dnd.Source,claw.dnd._DndMixin], {
-      markupFactory: function(params, node){
-	params._skipStartup = true;
-	return new sample.dnd.Source(node, params);
-      }
-    });
-    dojo.declare("sample.dnd.Container",[dojo.dnd.Container,claw.dnd._DndMixin], {
-      markupFactory: function(params, node){
-	params._skipStartup = true;
-	return new sample.dnd.Container(node, params);
-      }
-    });
-    dojo.declare("sample.dnd.Selector",[dojo.dnd.Selector,claw.dnd._DndMixin], {
-      markupFactory: function(params, node){
-	params._skipStartup = true;
-	return new sample.dnd.Selector(node, params);
-      }
-    });
-    dojo.declare("sample.dnd.Container",[dojo.dnd.Container,claw.dnd._DndMixin], {
-      markupFactory: function(params, node){
-	params._skipStartup = true;
-	return new sample.dnd.Container(node, params);
-      }
-    });
+    dojo.addOnLoad(function () {sample.updateNumberDragging()});
   </script>
-  <div>foo</div>
+  <div id="numberDragging">
+
+  </div>
