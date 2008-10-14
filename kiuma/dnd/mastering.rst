@@ -258,6 +258,7 @@ inside the window.document.
 In addiction the initialize (and the destroy too) method doesn't behave like you might expect as described here http://docs.dojocampus.org/dojo/dnd#subclassing-dnd-classes
 
 .. codeviewer::
+  <script type="text/javascript">
   if (sample == undefined) {
     sampe = {};
     sample.dnd = {};
@@ -296,4 +297,5 @@ In addiction the initialize (and the destroy too) method doesn't behave like you
         dojo.dnd.Source.prototype.destroy.call(this);
       }
     });
-}
+  }
+  </script>
