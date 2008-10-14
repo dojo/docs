@@ -299,5 +299,29 @@ In addiction the initialize (and the destroy too) method doesn't behave like you
         }
       });
     }
+    dojo.declare("sample.dnd.Source",[dojo.dnd.Source,claw.dnd._DndMixin], {
+      markupFactory: function(params, node){
+	params._skipStartup = true;
+	return new sample.dnd.Source(node, params);
+      }
+    });
+    dojo.declare("sample.dnd.Container",[dojo.dnd.Container,claw.dnd._DndMixin], {
+      markupFactory: function(params, node){
+	params._skipStartup = true;
+	return new sample.dnd.Container(node, params);
+      }
+    });
+    dojo.declare("sample.dnd.Selector",[dojo.dnd.Selector,claw.dnd._DndMixin], {
+      markupFactory: function(params, node){
+	params._skipStartup = true;
+	return new sample.dnd.Selector(node, params);
+      }
+    });
+    dojo.declare("sample.dnd.Container",[dojo.dnd.Container,claw.dnd._DndMixin], {
+      markupFactory: function(params, node){
+	params._skipStartup = true;
+	return new sample.dnd.Container(node, params);
+      }
+    });
   </script>
   <div>foo</div>
