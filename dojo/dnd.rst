@@ -5,6 +5,7 @@ dojo.dnd
 
 :Status: Draft
 :Version: 1.2
+:Available: since V?
 
 .. contents::
   :depth: 3
