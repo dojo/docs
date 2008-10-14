@@ -257,7 +257,10 @@ inside the window.document.
 
 In addiction the initialize (and the destroy too) method doesn't behave like you might expect as described here http://docs.dojocampus.org/dojo/dnd#subclassing-dnd-classes
 
-.. codeviewer::
+.. cv-compound::
+ 
+  .. cv:: javascript
+
 
   <script type="text/javascript">
     dojo.require('dijit.form.Button');
@@ -336,6 +339,9 @@ In addiction the initialize (and the destroy too) method doesn't behave like you
     }
     
   </script>
+
+  .. cv:: html
+
   <div id="numberDragging">
     <div dojotype='sample.dnd.Source' accept='number'>
       <div dndType='number' class='dojoDndItem'>1</div>
