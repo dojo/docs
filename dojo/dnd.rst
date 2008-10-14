@@ -545,3 +545,10 @@ All tests are located in the dojo/tests/dnd/ sub-directory. They are used by dev
 * flickr_viewer.html implements an elaborate demo, which retrieves pictures of three types from Flickr, and allows to sort them into two bins according to their types. It demonstrates many techniques including horizontal vs. vertical containers, different representation of data items in different containers and in the avatar, and so on.
 
 The same directory contains a simple CSS file, which shows how you can style the DnD objects: dndDefault.css. You can see it in action in almost all tests. It can be used as a starting point for your own styling.
+
+
+====
+Tips
+====
+
+* In order to limit the maximum items in a DnD Source, you can override the checkAcceptance() method on your source, and return "false", when you reached your limit.
