@@ -256,3 +256,44 @@ First, once attacched to a tag element via dojotype tag attribute, you are not a
 inside the window.document.
 
 In addiction the initialize (and the destroy too) method doesn't behave like you might expect as described here http://docs.dojocampus.org/dojo/dnd#subclassing-dnd-classes
+
+.. codeviewer::
+  if (sample == undefined) {
+    sampe = {};
+    sample.dnd = {};
+    
+    sample.dnd._map = {};
+    
+    sample.dnd._cache = {'clawDnd': 0};
+    
+    sample.dnd.byId = function(id){
+      // summary: returns the dojo.dnd instance bound to a HTML object element
+      return claw.dnd._map[id]; // assume it's a node
+    };
+    
+    
+    dojo.declare("sample.dnd._DndMixin", null, {
+      id: "",
+      _putInCache: function (node) {
+        this.id = dojo.attr(node, "dndId");
+        if(!this.id) {
+            this.id = dojo.attr(node, "id");
+            if (!this.id) {
+                var index = sample.dnd._cache._clawDnd;
+                sample.dnd._cache._clawDnd = index++;
+                this.id = "sampleDnd" + index;
+            }
+            dojo.attr(node, "dndId", this.id);
+        }
+        sample.dnd._map[this.id] = this;
+      },
+      constructor: function (node, params) {
+        this._putInCache(this.node);
+      },
+      destroy: function() {
+        // summary: warning. Like dojo.dnd.Container destroy method, but cleans up claw.dnd._map. Remember to eventually remove its node.
+        delete sample.dnd._map[this.id];
+        dojo.dnd.Source.prototype.destroy.call(this);
+      }
+    });
+}
