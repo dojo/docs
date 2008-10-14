@@ -186,7 +186,7 @@ The example below shows what just explained:
       <div dndType="cartItem" class="dojoDndItem" title="apple" quantity="0"><span class="quantity"></span> apple</div>
       <div dndType="cartItem" class="dojoDndItem" title="pear" quantity="0"><span class="quantity"></span> pear</div>
     </fieldset>
-    <fieldset class="dndContainer basket" dojoType="dojo.dnd.Source" accept="cartItem">
+    <fieldset id="basket" class="dndContainer basket" dojoType="dojo.dnd.Source" accept="cartItem">
       <script type="dojo/connect" event="onDndDrop" args="source, nodes, copy, target">
           var basket = dojo.byId('basket');  
           if ((target != source) && (target.node.id == 'basket')) { 
