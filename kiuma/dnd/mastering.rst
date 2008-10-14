@@ -126,11 +126,19 @@ So you'll have to mark a Source container with an accept tag attribute (comma se
     </fieldset>
   </div>
 
-Nearly good, ...nearly! The cart is not really correct, infact we are moving items, while the correct behaviour should be to copy them to the cart. Also, we don't want a single item to be duplicated inside the cart, but more precisely want so see only how many 'oranges' we have into it.
-Moreover in a cart you don't want to move items from available ones, you'd prefer copy them from the items container to the basket/cart, we'll set the copyOnly property to true for available items.
-We also don't want to duplicates items for the cart, but only set 'how many oranges' we are going to checkout and also we want to remove 'oranges' one at a time and delete the cart item only when quantity reaches 0.
-For this purpose we'll connecto to the onDndDrop event.
+Nearly good, ...nearly! 
+
+The cart is not really correct, infact we are moving items, while the correct behaviour should be to copy them to the cart. Also, we don't want a single item to be duplicated inside the cart, but more precisely want so see only how many 'oranges' we have into our basket.
+
+Moreover in a cart you don't want to move items from our stock, you'd prefer to copy them from the items container to the basket/cart, so we'll set the copyOnly property to true for available items.
+
+We also don't want to duplicate items into our basket, but only set how many of the same type we are going to checkout and also we want to remove items one at a time and delete the cart item only when quantity reaches 0.
+
+For this purpose we'll connect to the onDndDrop event.
 This event is fired both for the source and the target of the dnd action, so be careful to what they are.
+
+And yes, we need a bit of javascript now!
+
 The example below shows what just explained:
 
 .. codeviewer::
