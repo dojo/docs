@@ -122,7 +122,7 @@ So you'll have to mark a Source container with an accept tag attribute (comma se
       <div class="dojoDndItem" dndType="point">2 points ($ 2.00)</div>
     </fieldset>
     <fieldset class="dndContainer basketPoints" dojoType="dojo.dnd.Source" accept="coupon, point">
-      <legend>Paiment basket</legend>
+      <legend>Payment basket</legend>
     </fieldset>
   </div>
 
@@ -236,6 +236,6 @@ The example below shows what just explained:
       <div class="dojoDndItem" dndType="point">2 points ($ 2.00)</div>
     </fieldset>
     <fieldset class="dndContainer basketPoints" dojoType="dojo.dnd.Source" accept="coupon, point">
-      <legend>Paiment basket</legend>
+      <legend>Payment basket</legend>
     </fieldset>
   </div>
