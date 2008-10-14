@@ -2,7 +2,7 @@
 #format wiki
 == Steve Peart ==
 
-Email: <<MailTo(steve AAT peartenterprises NOSPAM com)>>
+Email: steve AAT peartenterprises NOSPAM com
 
 ...
 
