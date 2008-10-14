@@ -1,6 +1,6 @@
 ##master-page:HomepageTemplate
 #format wiki
-== Your Name ==
+== Steve Peart ==
 
 Email: <<MailTo(steve AT peartenterprises DOT com)>>
 
