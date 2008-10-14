@@ -11,7 +11,7 @@ dojox.layout.ExpandoPane
 .. contents::
    :depth: 2
 
-dojox.layout.ExpandoPane is a self-collapsing widget for use in a `BorderContainer <dijit/layout/BorderContainer>`_
+dojox.layout.ExpandoPane is a self-collapsing widget for use in a `BorderContainer <dijit/layout/BorderContainer>`_.
 
 
 ============
