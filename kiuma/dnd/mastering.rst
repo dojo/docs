@@ -247,3 +247,12 @@ The example below shows what just explained:
       <legend>Payment basket</legend>
     </fieldset>
   </div>
+
+Finished? ...not yet!
+
+dojo.dnd.Source and its parents dojo.dnd.Selector and dojo.dnd.Container are a little strange classes.
+
+First, once attacched to a tag element via dojotype tag attribute, you are not able to get the dojo.dndSource instance anymore, it will be 'lost'
+inside the window.document.
+
+In addction the initialize (and the destroy too) methods doesn't behave like you might expect as described here http://docs.dojocampus.org/dojo/dnd#id14
