@@ -258,6 +258,7 @@ inside the window.document.
 In addiction the initialize (and the destroy too) method doesn't behave like you might expect as described here http://docs.dojocampus.org/dojo/dnd#subclassing-dnd-classes
 
 .. codeviewer::
+
   <script type="text/javascript">
     if (sample == undefined) {
       sampe = {};
@@ -265,7 +266,7 @@ In addiction the initialize (and the destroy too) method doesn't behave like you
     
       sample.dnd._map = {};
     
-      sample.dnd._cache = {'clawDnd': 0};
+      sample.dnd._cache = {'sampleDnd': 0};
     
       sample.dnd.byId = function(id){
         // summary: returns the dojo.dnd instance bound to a HTML object element
