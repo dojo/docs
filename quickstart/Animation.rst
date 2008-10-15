@@ -3,6 +3,12 @@
 Animations with Dojo
 ====================
 
+:Status: Draft
+:Version: 1.0
+
+.. contents::
+   :depth: 2
+
 Dojo provides several layers of Animation helpers, starting with Base Dojo (dojo.js), and adding in levels of incremental additions through the module system. All Animations in Dojo revolve around a single class: dojo._Animation. The underscore denotes a private constructor, and is not meant to be created directly, but rather used as the underlying control mechanism for the flexible FX API Dojo provides.
 
 
