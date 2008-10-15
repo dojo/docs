@@ -36,10 +36,11 @@ All Animations in Dojo (with the exception of dojo.anim, introduced in Dojo 1.2)
 	var target = dojo.byId("someId").parentNode;
 	dojo.fadeOut({ node: target }).play();
 
-Animation Options, or "Magic Object"
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Animation Options, or "The Magic Object"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
+`TODOC:` node, delay, duration, rate, easing, events (onEnd, etc), repeat, curve
+`API reference for _Animation <http://api.dojotoolkit.org/jsdoc/dojo/1.2/dojo._Animation>`_
 
 Animation Events
 ~~~~~~~~~~~~~~~~
@@ -79,10 +80,157 @@ You can define them as part of the "magic object" used to define the animation i
 for the function calls.
 
 .. code-block :: javascript
-
+	:linenos:
+	
 	var animation = dojo.fadeOut({ node:"someNodebyId" });
 	dojo.connect(animation, "onEnd", function(){
 	 	// connect externally to this animation instance's onEnd function
 	});
 	animation.play(); // start it up
 	
+Base Animations
+---------------
+
+Base Dojo provides the animation framework as well as several simple helper animations for fading, and one incredibly useful function `dojo.animateProperty` (the workhorse of most CSS-based animations). All use the same "magic object" for definition, though introduces several optioned in advanced cases. 
+
+Fading Example
+~~~~~~~~~~~~~~
+
+To fade out a node, alter it's contents, and fade it back in:
+
+.. code-block :: javascript
+	:linenos:
+	
+	var node = dojo.byId("someId");
+	dojo.fadeOut({
+		node: node,
+		onEnd: function(){
+			node.innerHTML = "<p>Like magic!</p>"
+			dojo.fadeIn({
+				node: node
+			}).play()
+		}
+	}).play();
+
+Here, we've created a fadeOut animation, and run it immediately. At the end of the animation (set here to use the default duration by omitting the `duration:` parameter), we set the node reference's `.innerHTML` property to something new, and fade it back in, again using the default duration. 
+
+animateProperty Intro
+~~~~~~~~~~~~~~~~~~~~~
+
+`TODOC`
+
+Core Animations: Advanced helpers
+---------------------------------
+
+Above the Base Animations (those contained entirely within dojo.js), there are several modules 
+available within the toolkit for advanced animation control. 
+
+To use these extended functions, you must include the `dojo.fx` module:
+
+.. code-block :: javascript
+	:linenos:
+	
+	dojo.require("dojo.fx");
+
+The namespace `dojo.fx` has been reserved for all these animation, including `dojo.fx.chain` and `dojo.fx.combine`. 
+
+Chaining and Combining Animations
+---------------------------------
+
+Two convenience functions provided in the `dojo.fx` module named `combine` and `chain` create an animation from a series of Animations in an array. 
+
+`combine` merges the array of animations them into one `dojo._Animation` instance to control them all in parallel, whereas `chain` merges the animations into a single `dojo._Animation`, playing back each of the animations in series, or one right after the other.
+
+To fade out two nodes simultaneously:
+
+.. code-block :: javascript
+	:linenos:
+	
+	dojo.require("dojo.fx");
+	dojo.addOnLoad(function(){
+		// create two animations
+		var anim1 = dojo.fadeOut({ node: "someId" });
+		var anim2 = dojo.fadeOut({ node: "someOtherId" });
+		// and play them at the same moment
+		dojo.fx.combine([anim1, anim2]).play();
+	});
+
+(Notice we wraped the animation call in and addOnLoad function this time. This is required always, as you cannot modify the DOM before the DOM is ready, which `addOnLoad <dojo/addOnLoad>`_ alerts us to. Also, we need to ensure the `dojo.fx` module has been loaded properly)
+
+Javascript is rather flexible about return values and where functions are called. The above example can be written in a shorthand like:
+
+.. code-block :: javascript
+	:linenos:
+
+	dojo.require("dojo.fx");
+	dojo.addOnLoad(function(){
+		// create and play two fade animations at the same moment
+		dojo.fx.combine([
+			dojo.fadeOut({ node: "someId" }),
+			dojo.fadeOut({ node: "someOtherId" })
+		]).play();
+	});
+
+The same rules apply to a combined animation as do a normal _Animation, though with no direct way to mix event callbacks into the combine() call, you are left using the `dojo.connect` method to attach event handlers:
+
+.. code-block :: javascript
+	:linenos:
+	
+	var anim = dojo.fx.combine([
+		dojo.fadeOut({ node: "id", duration:1000 }),
+		dojo.fadeIn({ node: "otherId", duration:2000 })
+	]);
+	dojo.connect(anim, "onEnd", function(){
+		// fired after the full 2000ms
+	});
+
+Alternately, you can mix event handler into your individual animations passed to dojo.fx.combine:
+
+.. code-block :: javascript
+	:linenos:
+	
+	var animA = dojo.fadeOut({
+		node:"someNode",
+		duration: 500,
+		onEnd: function(){
+			// fired after 500ms
+		}
+	});
+	var animB = dojo.fadeIn({ node:"otherNode" });
+	dojo.fx.combine([animA, animB]).play();
+
+Chain works in much the same way - though plays each animation one right after the other:
+
+.. code-block :: javascript
+	:linenos:
+	
+	dojo.fx.chain([
+		dojo.fadeIn({ node: "foo" }), 
+		dojo.fadeIn({ node: "bar" })
+	]).play();
+
+All of the same patterns apply to chain as to other dojo._Animation instances. A good article covering `advanced usage of combine and chain <http://dojocampus.org/content/2008/04/11/staggering-animations/>`_ is available at DojoCampus. 
+
+combine and chain accept an Array, and will work on a one-element array. This is interesting because you can manually create animations, pushing each into the array, and chain or combine the resulting set of animations. This is useful when you need to conditionally exclude some Animations from being created:
+
+.. code-block :: javascript
+	:linenos:
+	
+	// create the array
+	var anims = [];
+	// simulated condition, an array of id's:
+	dojo.forEach(["one", "two", "three"], function(id){
+		if(id !== "two"){
+			// only animate id="one" and id="three"
+			anims.push(dojo.fadeOut({ node: id }));
+		}
+	});
+	// combine and play any available animations waiting
+	dojo.fx.combine(anims).play();
+
+Obviously, any logic for determining if a node should participate in an Animation sequence is in the realm of the developer, but the syntax should be clear. Create an empty Array, push whichever style and types of animations you want into the Array, and call combine() on the list. 
+
+Animation Easing
+----------------
+
+`TODOC`
