@@ -5,8 +5,6 @@ dojo.registerModulePath
 
 :Status: Draft
 :Version: 1.0
-:Authors: James Burke
-:Developers: ?-
 :Available: since V0.9
 
 .. contents::
