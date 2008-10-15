@@ -5,13 +5,10 @@ dojo._base.loader
 
 :Status: Draft
 :Version: 1.0
-:Authors: Marcus Reimann
-:Developers: ?-
 :Available: since V?
 
 .. contents::
     :depth: 2
-
 
 **dojo._base.loader** is a bootstrap module which contains all of the package loading methods.
 
