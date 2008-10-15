@@ -342,7 +342,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
     <div dojoType="dijit.form.Button">
         Add Row
         <script type="dojo/method" event="onClick" args="evt">
-            var myNewItem = {type = "country" , name="Fill this country name"}; 
+            var myNewItem = {type : "country" , name:"Fill this country name"}; 
             store5.newItem(myNewItem);
         </script>
     </div>
