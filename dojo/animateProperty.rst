@@ -14,6 +14,42 @@ dojo.animateProperty
 
 dojo.animateProperty is a very useful method for animating CSS properties. Usecases are for example fading a background color from red to green to indicate status changes.
 
+======
+Syntax
+======
+
+animateProperty, like all other dojo._Animations, use a "magic object" (or "property bag") to define the base functionality, though introduces a new identifier named ``properties:`` to define which CSS properties to animate.
+
+The syntax follows a simple pattern. The ``properties:`` key is an object hash of css properties to manipulate. The values of those keys have a number of ways of definition. 
+
+.. code-block :: javascript
+  :linenos:
+
+  dojo.animateProperty({ 
+    node:"someId",
+    properties: {
+        width: 300
+    }
+  }).play();
+
+The above example will animate a node with id="someId" to width:300px from it's current size. Multiple CSS properties can be animated within the object hash:
+
+.. code-block :: javascript
+  :linenos:
+
+  dojo.animateProperty({ 
+    node:"someId",
+    properties: {
+        width: 300,
+        height: { end: 400, start:100 },
+        fontSize: { end:14, unit:"pt" } // beware of stray comma's
+    }
+  }).play();
+
+As seen, we simply add new keys to the ``properties:`` hash. The above example introduces each of the available syntax options for the value of each property. The ``width`` property have an integer value, which is assumed to be the ``end:`` value, with a ``unit:`` of "px". The ``height`` key is another object hash, defining ``end`` and ``start`` values as integers. Passing a start value will cause the property to go immediately to the value, and animate to to end value, again assuming "px". The ``fontSize`` object hash omits a ``start:`` value, defaulting to the current calculated value, and introduces the ``unit:`` identifier, used to set the measurement to something other than the default "px". 
+
+It is also worth noting: when animating multi-word CSS properties such as ``font-size``, Javascript requires they be converted to the mixed-case: ``fontSize``. 
+
 ========
 Examples
 ========
