@@ -44,6 +44,7 @@ Dojo is a very extensive library of code, most of which is optional. Here are so
 * `UI Development <quickstart/interfacedesign>`_
 * `Back buttons <quickstart/back>`_
 * `AJAX <quickstart/ajax>`_
+* `FX / Animations <quickstart/Animation>`_
 * `Charting <quickstart/charting>`_
 * `Widgets <dijit>`_
 
