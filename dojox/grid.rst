@@ -6,8 +6,7 @@ dojox.grid
 
 :Status: Draft
 :Version: 1.0
-:Authors: Cyan Ogilvie, Nikolai Onken, Marcus Reimann
-:Developers: Scott J. Miles, Steve Orvell, Bryan Forbes
+:Project owners: Scott J. Miles, Steve Orvell, Bryan Forbes
 :Available: since V1.2
 
 .. contents::
