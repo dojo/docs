@@ -295,6 +295,85 @@ First, you have to set a editor for each cell, you would like to edit:
 	@import "/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/resources/nihiloGrid.css";
     </style>
 
+If you want to add (remove) data programatically, you just have to add (remove) it from the underlying data store.
+Since DataGrid is "DataStoreAware", changes made to the store will be reflected automatically in the DataGrid.
+ 
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+        dojo.require("dojox.grid.DataGrid");
+        dojo.require("dojo.data.ItemFileWriteStore");
+    </script>
+
+  .. cv:: html
+
+    <span dojoType="dojo.data.ItemFileWriteStore" 
+        jsId="store5" url="/moin_static163/js/dojo/trunk/release/dojo/dijit/tests/_data/countries.json">
+    </span>
+
+    <div>
+        This example shows, how to add/remove rows
+    </div>
+
+    <table dojoType="dojox.grid.DataGrid"
+        jsId="grid5"
+        store="store5"
+        query="{ name: '*' }"
+        rowsPerPage="20"
+        clientSort="true"
+        style="width: 400px; height: 200px;"
+        rowSelector="20px">
+        <thead>
+            <tr>
+                <th width="200px" 
+                    field="name">Country/Continent Name</th>
+                <th width="auto" 
+                    field="type" 
+                    cellType="dojox.grid.cells.Select" 
+                    options="country,city,continent" 
+                    editable="true">Type</th>
+            </tr>
+        </thead>
+    </table>
+
+    <div dojoType="dijit.form.Button">
+        Add Row
+        <script type="dojo/connect" event="onClick">
+            var myNewItem = {type = "country" , name="Fill this country name"}; 
+            store5.newItem(myNewItem);
+        </script>
+    </div>
+
+    
+    <div dojoType="dijit.form.Button">
+        Remove Selected Rows
+        <script type="dojo/method" event="onClick" args="evt">
+            // Get all selected items from the Grid:
+            var items = grid5.selection.getSelected();
+            if(items.length){
+                // Iterate through the list of selected items.
+                // The current item is available in the variable 
+                // "selectedItem" within the following function:
+                dojo.forEach(items, function(selectedItem) {
+                    if(selectedItem !== null) {
+                        store5.deleteItem(selectedItem);
+                    } // end if
+                }); // end forEach
+            } // end if
+        </script>
+    </div>
+
+ 
+
+
+  .. cv:: css
+
+    <style type="text/css">
+	@import "/moin_static163/js/dojo/trunk/release/dojo/dijit/themes/nihilo/nihilo.css";
+	@import "/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/resources/nihiloGrid.css";
+    </style>
+
 Large datasets
 --------------
 
