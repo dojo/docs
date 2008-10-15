@@ -5,8 +5,6 @@ djConfig
 
 :Status: Draft
 :Version: 1.0
-:Authors: Morgan Benton
-:Developers: ?-
 :Available: since V0.4
 
 .. contents::
