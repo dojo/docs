@@ -84,7 +84,131 @@ The returned object of a **dojo.query()** call is an instance of `dojo.NodeList 
 Examples
 ========
 
-TODO
+
+Simple Queries
+---------------
+
+.. code-block :: javascript
+
+  dojo.query('h3')  
+  dojo.query('h3:first-child')
+  dojo.query('#main')
+  dojo.query('#main h3')
+  dojo.query('div#main')
+  dojo.query('div#main h3')
+  dojo.query('#main div > h3')
+  dojo.query('.foo')
+  dojo.query('.foo.bar')
+  dojo.query('.baz')
+  dojo.query('#main > h3')
+
+
+Immediate Child Elements
+------------------------
+
+.. code-block :: javascript
+
+  dojo.query('#main > *')
+  dojo.query('#main >')
+  dojo.query('.foo >')
+  dojo.query('.foo > *')
+
+
+Queries rooted at a given element
+----------------------------------
+
+.. code-block :: javascript
+
+  dojo.query('> *', dojo.byId('container'))
+  dojo.query('> h3', 'main')
+
+Compound queries
+---------------------
+
+Combining 2 or more selectors to produce one resultset
+
+.. code-block :: javascript
+
+  dojo.query('.foo, .bar')
+
+
+Multiple class attribute values
+---------------------------------
+
+.. code-block :: javascript
+
+  dojo.query('.foo.bar')
+
+
+Using attribute selectors
+-------------------------
+
+Picking out elements with particular attributes/values
+
+.. code-block :: javascript
+
+  dojo.query('[foo]')
+  dojo.query('[foo$=\"thud\"]')
+  dojo.query('[foo$=thud]')
+  dojo.query('[foo$=\"thudish\"]')
+  dojo.query('#main [foo$=thud]')
+  dojo.query('#main [ title $= thud ]')
+  dojo.query('#main span[ title $= thud ]')
+  dojo.query('[foo|=\"bar\"]')
+  dojo.query('[foo|=\"bar-baz\"]')
+  dojo.query('[foo|=\"baz\"]')
+  dojo.query('.foo:nth-child(2)')
+
+
+Descendant selectors
+------------------------
+
+.. code-block :: javascript
+
+  dojo.query('>', 'container')
+  dojo.query('> *', 'container')
+  dojo.query('> [qux]', 'container')
+
+Sibling selectors
+--------------------
+
+.. code-block :: javascript
+
+  dojo.query('.foo + span')
+  dojo.query('.foo ~ span')
+  dojo.query('#foo ~ *')
+  dojo.query('#foo ~')
+
+Sub-selectors, using not()
+-------------------------------
+
+.. code-block :: javascript
+
+  dojo.query('#main span.foo:not(span:first-child)')
+  dojo.query('#main span.foo:not(:first-child)')
+
+Nth-child 
+----------
+
+.. code-block :: javascript
+
+  dojo.query('#main > h3:nth-child(odd)'
+  dojo.query('#main h3:nth-child(odd)'
+  dojo.query('#main h3:nth-child(2n+1)'
+  dojo.query('#main h3:nth-child(even)'
+  dojo.query('#main h3:nth-child(2n)'
+  dojo.query('#main h3:nth-child(2n+3)'
+  dojo.query('#main > *:nth-child(2n-5)'
+
+
+Using pseudo-selectors
+-----------------------
+
+.. code-block :: javascript
+
+  dojo.query('#main2 > :checked')
+  dojo.query('#main2 > input[type=checkbox]:checked')
+  dojo.query('#main2 > input[type=radio]:checked')
 
 
 =======================
