@@ -477,15 +477,15 @@ To use it, you just have to override default behavior by yours.
 	     //	-- selected: wether the row is selected
 	     //	-- over : wether the mouse is over this row
 	     //	-- odd : wether this row index is odd.
-	     var item = grid.getItem(row.index);
+	     var item = grid6.getItem(row.index);
 	     if(item){
 		var type = jsonStore.getValue(item,"type",null);
 		if(type == "continent"){
 		    row.customStyles += "color:red;";
 	        }
 	     }
-	     grid.focus.styleRow(row);
-	     grid.edit.styleRow(row);
+	     grid6.focus.styleRow(row);
+	     grid6.edit.styleRow(row);
 	</script>
         <thead>
             <tr>
