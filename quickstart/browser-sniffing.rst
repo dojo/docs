@@ -91,3 +91,10 @@ Here's a live sample to show how it works:
     <dt>Is this at least Opera 9?</dt>
     <dd id="isAtLeastOpera9"></dd>
   </dl>
+
+
+========
+See also
+========
+
+* `dojo._base.loader, the bootstrap module and home of the discussed variables <http://docs.dojocampus.org/dojo/base/loader>`_
