@@ -313,7 +313,8 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
 
   .. cv:: html
 
-    <!-- We use store3 from the example above as data store -->
+    <!-- We use store3 from the example above as data store.
+    See the HTML code above, in order to learn how to define a data store. -->
 
     <div>
         This example shows, how to add/remove rows
@@ -343,7 +344,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
     <div dojoType="dijit.form.Button">
         Add Row
         <script type="dojo/method" event="onClick" args="evt">
-            // set the properties for the new Item:
+            // set the properties for the new item:
             var myNewItem = {type: "country", name: "Fill this country name"}; 
             // Insert the new item into the store:
             // (we use store3 from the example above in this example)
@@ -362,6 +363,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
                 // "selectedItem" within the following function:
                 dojo.forEach(items, function(selectedItem) {
                     if(selectedItem !== null) {
+                        // Delete the item from the data store:
                         store3.deleteItem(selectedItem);
                     } // end if
                 }); // end forEach
