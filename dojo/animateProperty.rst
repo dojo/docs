@@ -134,3 +134,5 @@ To change the framerate you use the rate attribute which defines the pause betwe
 
     <p><button dojoType="dijit.form.Button" onClick="animateDefault()">Animate (default fps)</button> <button dojoType="dijit.form.Button" onClick="animateSlow()">Animate (1 fps)</button></p>
     <div id="animateProperty">This will be animated</div>
+
+For more on Animations overall, see the `FX User Guide <quickstart/Animation>`_
