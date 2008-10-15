@@ -453,17 +453,16 @@ To use it, you just have to override default behavior by yours.
 
 .. cv-compound::
 
- .. cv:: javascript
+  .. cv:: javascript
 
     <script type="text/javascript">
         dojo.require("dojox.grid.DataGrid");
         dojo.require("dojo.data.ItemFileWriteStore");
-        dojo.require("dijit.form.Button");
     </script>
 
   .. cv:: html
 
-<table dojoType="dojox.grid.DataGrid"
+    <table dojoType="dojox.grid.DataGrid"
         jsId="grid6"
         store="store3"
         query="{ name: '*' }"
@@ -499,7 +498,7 @@ To use it, you just have to override default behavior by yours.
                     editable="true">Type</th>
             </tr>
         </thead>
-</table>
+    </table>
 
 
 
