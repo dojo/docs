@@ -1,13 +1,14 @@
 #format dojo_rst
 
-====================
 Animations with Dojo
 ====================
 
 Dojo provides several layers of Animation helpers, starting with Base Dojo (dojo.js), and adding in levels of incremental additions through the module system. All Animations in Dojo revolve around a single class: dojo._Animation. The underscore denotes a private constructor, and is not meant to be created directly, but rather used as the underlying control mechanism for the flexible FX API Dojo provides.
 
+
+===============================
 Getting to know dojo._Animation
--------------------------------
+===============================
 
 As mentioned, dojo._Animation is the foundation for all Dojo Animations. It provides several simple methods good for controlling your animation, such as `play`, `pause`, `stop`, and `gotoPercent`. The most simple, and required of all animations is `play`:
 
@@ -37,13 +38,13 @@ All Animations in Dojo (with the exception of dojo.anim, introduced in Dojo 1.2)
 	dojo.fadeOut({ node: target }).play();
 
 Animation Options, or "The Magic Object"
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------------------
 
 `TODOC:` node, delay, duration, rate, easing, events (onEnd, etc), repeat, curve
 `API reference for _Animation <http://api.dojotoolkit.org/jsdoc/dojo/1.2/dojo._Animation>`_
 
 Animation Events
-~~~~~~~~~~~~~~~~
+----------------
 
 The next most important public-facing aspect of the "private" _Animation class is the event handling: stub functions fired at various stages of an animation's life-cycle. 
 
@@ -87,14 +88,16 @@ for the function calls.
 	 	// connect externally to this animation instance's onEnd function
 	});
 	animation.play(); // start it up
-	
+
+
+===============	
 Base Animations
----------------
+===============
 
 Base Dojo provides the animation framework as well as several simple helper animations for fading, and one incredibly useful function `dojo.animateProperty` (the workhorse of most CSS-based animations). All use the same "magic object" for definition, though introduces several optioned in advanced cases. 
 
 Fading Example
-~~~~~~~~~~~~~~
+--------------
 
 To fade out a node, alter it's contents, and fade it back in:
 
@@ -115,12 +118,14 @@ To fade out a node, alter it's contents, and fade it back in:
 Here, we've created a fadeOut animation, and run it immediately. At the end of the animation (set here to use the default duration by omitting the `duration:` parameter), we set the node reference's `.innerHTML` property to something new, and fade it back in, again using the default duration. 
 
 animateProperty Intro
-~~~~~~~~~~~~~~~~~~~~~
+---------------------
 
 `TODOC`
 
+
+=================================
 Core Animations: Advanced helpers
----------------------------------
+=================================
 
 Above the Base Animations (those contained entirely within dojo.js), there are several modules 
 available within the toolkit for advanced animation control. 
@@ -134,8 +139,10 @@ To use these extended functions, you must include the `dojo.fx` module:
 
 The namespace `dojo.fx` has been reserved for all these animation, including `dojo.fx.chain` and `dojo.fx.combine`. 
 
+
+=================================
 Chaining and Combining Animations
----------------------------------
+=================================
 
 Two convenience functions provided in the `dojo.fx` module named `combine` and `chain` create an animation from a series of Animations in an array. 
 
@@ -230,7 +237,9 @@ combine and chain accept an Array, and will work on a one-element array. This is
 
 Obviously, any logic for determining if a node should participate in an Animation sequence is in the realm of the developer, but the syntax should be clear. Create an empty Array, push whichever style and types of animations you want into the Array, and call combine() on the list. 
 
+
+================
 Animation Easing
-----------------
+================
 
 `TODOC`
