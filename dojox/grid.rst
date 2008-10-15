@@ -240,8 +240,8 @@ Sorting data at the server
 
 TODO
 
-Adding, Editing, Deleting data
-------------------------------
+Editing data
+------------
 
 Grid allows you to edit your data easily and send the changed values back to your server
 
@@ -295,6 +295,10 @@ First, you have to set a editor for each cell, you would like to edit:
 	@import "/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/resources/nihiloGrid.css";
     </style>
 
+
+Adding and Deleting data
+------------------------
+
 If you want to add (remove) data programatically, you just have to add (remove) it from the underlying data store.
 Since DataGrid is "DataStoreAware", changes made to the store will be reflected automatically in the DataGrid.
  
@@ -310,9 +314,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
 
   .. cv:: html
 
-    <span dojoType="dojo.data.ItemFileWriteStore" 
-        jsId="store5" url="/moin_static163/js/dojo/trunk/release/dojo/dijit/tests/_data/countries.json">
-    </span>
+    <!-- We use store3 from the example above as data store -->
 
     <div>
         This example shows, how to add/remove rows
@@ -320,7 +322,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
 
     <table dojoType="dojox.grid.DataGrid"
         jsId="grid5"
-        store="store5"
+        store="store3"
         query="{ name: '*' }"
         rowsPerPage="20"
         clientSort="true"
@@ -342,11 +344,13 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
     <div dojoType="dijit.form.Button">
         Add Row
         <script type="dojo/method" event="onClick" args="evt">
-            var myNewItem = {type : "country" , name:"Fill this country name"}; 
-            store5.newItem(myNewItem);
+            // set the properties for the new Item:
+            var myNewItem = {type: "country", name: "Fill this country name"}; 
+            // Insert the new item into the store:
+            // (we use store3 from the example above in this example)
+            store3.newItem(myNewItem);
         </script>
     </div>
-
     
     <div dojoType="dijit.form.Button">
         Remove Selected Rows
@@ -359,15 +363,12 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
                 // "selectedItem" within the following function:
                 dojo.forEach(items, function(selectedItem) {
                     if(selectedItem !== null) {
-                        store5.deleteItem(selectedItem);
+                        store3.deleteItem(selectedItem);
                     } // end if
                 }); // end forEach
             } // end if
         </script>
     </div>
-
- 
-
 
   .. cv:: css
 
