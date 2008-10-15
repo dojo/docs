@@ -298,6 +298,7 @@ First, you have to set a editor for each cell, you would like to edit:
 If you want to add (remove) data programatically, you just have to add (remove) it from the underlying data store.
 Since DataGrid is "DataStoreAware", changes made to the store will be reflected automatically in the DataGrid.
  
+.. cv-compound::
 
   .. cv:: javascript
 
