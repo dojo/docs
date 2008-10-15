@@ -97,4 +97,4 @@ Here's a live sample to show how it works:
 See also
 ========
 
-* `dojo._base.loader, the bootstrap module and home of the discussed variables <http://docs.dojocampus.org/dojo/base/loader>`_
+* `dojo._base.loader, the bootstrap module and home of the discussed variables <dojo/base/loader>`_
