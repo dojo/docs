@@ -304,6 +304,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
     <script type="text/javascript">
         dojo.require("dojox.grid.DataGrid");
         dojo.require("dojo.data.ItemFileWriteStore");
+        dojo.require("dijit.form.Button");
     </script>
 
   .. cv:: html
@@ -339,7 +340,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
 
     <div dojoType="dijit.form.Button">
         Add Row
-        <script type="dojo/connect" event="onClick">
+        <script type="dojo/connect" event="onClick" args="evt">
             var myNewItem = {type = "country" , name="Fill this country name"}; 
             store5.newItem(myNewItem);
         </script>
