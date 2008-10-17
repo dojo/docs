@@ -29,7 +29,7 @@ Usage
   </style>
   <script type="text/javascript">
     dojo.require("dojox.widget.DocTester");
-    dojo.require("dojo.date.locale");
+    dojo.require("dojo.date");
     
     dojo.addOnLoad(function(){
       var docTest = new dojox.widget.DocTester({}, "docTest");
