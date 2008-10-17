@@ -30,3 +30,4 @@ See Also
 
 * `dojo.date.locale.* <dojo/date/locale>`_
 * `dojo.date.stamp.* <dojo/date/stamp>`_
+* `Dojo Cookie: Dates to Remember <http://dojocampus.org/content/2008/07/03/dates-to-remember/>`_
