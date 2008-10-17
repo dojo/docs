@@ -38,8 +38,7 @@ Usage
   <div id="docTest">
     >>> var date1 = new Date(2000, 2, 1); date1.toUTCString();
     "Wed, 01 Mar 2000 05:00:00 GMT"
-    >>> date2 = dojo.date.add(date1, "month", -1);
-    >>> date2.toUTCString();
+    >>> var date2 = dojo.date.add(date1, "month", -1); date2.toUTCString();
     "Tue, 01 Feb 2000 05:00:00 GMT"
     >>> dojo.date.difference(date1, date2, "day")
     -29
