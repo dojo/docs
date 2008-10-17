@@ -36,7 +36,7 @@ Usage
     });
   </script>
   <div id="docTest">
-    >>> var date1 = new Date(2000, 2, 1); date1.toUTCString();
+    >>> var date1 = new Date(2000, 2, 1); date1.toUTCString(); // note that even toUTCString output is implementation-dependent
     "Wed, 01 Mar 2000 05:00:00 GMT"
     >>> var date2 = dojo.date.add(date1, "month", -1); date2.toUTCString();
     "Tue, 01 Feb 2000 05:00:00 GMT"
