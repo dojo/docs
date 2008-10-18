@@ -1,7 +1,7 @@
 #format dojo_rst
 
-dojo.date
-=========
+dojo.date.stamp
+===============
 
 :Status: Draft
 :Version: 1.2
@@ -50,5 +50,5 @@ See Also
 ========
 
 * `dojo.date.* <dojo/date>`_
-* `dojo.date.stamp.* <dojo/date/stamp>`_
+* `dojo.date.locale.* <dojo/date/locale>`_
 * `Dojo Cookie: Dates to Remember <http://dojocampus.org/content/2008/07/03/dates-to-remember/>`_
