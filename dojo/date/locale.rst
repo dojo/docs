@@ -38,7 +38,7 @@ When you want to present dates or times to the user, Javascript only knows how t
   </script>
   <div id="docTest">
     >>> dojo.date.locale.format(new Date(2007,2,23,6,6,6), {formatLength: "short", locale: "en"});
-    "3/23/07 6:06 AM"
+    "3/23/07 6:06 a.m."
     >>> dojo.date.locale.format(new Date(2007,2,23,6,6,6), {selector: "date", formatLength: "short", locale: "en"});
     "3/23/07"
     >>> dojo.date.locale.format(new Date(2007,2,23,6,6,6), {selector: "date", formatLength: "long", locale: "en"});
