@@ -43,7 +43,6 @@ When you want to present dates or times to the user, Javascript only knows how t
     "March 23, 2007"
     >>> dojo.date.locale.format(new Date(2007,2,23,6,6,6), {selector: "date", formatLength: "long", locale: "zh"});
     "2007年3月23日"
-    "3/23/07"
     >>> dojo.date.locale.format(new Date(2007,2,23,6,6,6), {datePattern: "yyyyMMdd", selector: "date"});
     "20070323"
     >>> dojo.date.locale.format(new Date(2007,2,23,6,6,6), {datePattern: "yyyy-MM-dd", selector: "date"});
