@@ -10,7 +10,7 @@ dojo.date.locale
 .. contents::
   :depth: 3
 
-Dojo comes with a powerful library to format your dates and times specifically to a given locale or as you would like using date/time patterns.
+Dojo comes with a powerful library to format and parse dates and times using local language and conventions, from your choice of hundreds of locales, or as you would like using custom date/time patterns.
 
 Examples
 --------
@@ -18,15 +18,7 @@ Examples
 Formatting dates and times using custom patterns
 ------------------------------------------------
 
-When you want to do custom formatting of dates or times you still use the dojo.date.locale.format method, but instead of passing a locale you pass a datePattern or timePattern. Lets dive right in and format the current Date in several ways.
-
-Following examples lists doc tests, to see the results of them click on the "Run tests" button just below the example.
-
-Also note that in JavaScript, counting of months starts at "0" so if you want to create following date: August 23rd 2034 you will have to do::
-
-  var myDate = new Date(2034,7,23);
-
-So don't get confused by the new Date() statements in the tests, the second parameter is the month and is always one number lower than the month you actually want.
+When you want to present dates or times to the user, Javascript only knows how to handle a single locale and language, and the actual format is implementation-dependent, and your web application has no control over these choices.  By simply passing a Javascript Date object to dojo.date.locale.format, Dojo will use the locale passed as djConfig.locale or the browser's default to handle the formats, and you may choose from a variety of formats: short, medium, full, or long.  Various other optins are available.  You may choose to process the only the date, only the time, or both, and you may decide to use your own custom datePattern or timePattern. Lets dive right in and format the current Date in several ways.
 
 .. codeviewer::
   
