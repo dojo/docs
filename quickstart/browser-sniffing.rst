@@ -10,7 +10,7 @@ Browser Sniffing
 .. contents::
     :depth: 2
 
-Dojo provides a number of ``is`` variables, defined at runtime based on the users current browser.
+You should try to use capability detection (http://dev.opera.com/articles/view/using-capability-detection/) when possible. When that is not an option, Dojo provides a number of ``is`` variables for browser detection, defined at runtime based on the users current browser.
 
 * dojo.isIE
 * dojo.isMozilla
@@ -21,6 +21,11 @@ Dojo provides a number of ``is`` variables, defined at runtime based on the user
 * dojo.isAIR - true if running within the Adobe AIR enviroment
 * dojo.isQuirks - is the browser in Quirks-Mode
 * dojo.isBrowser (not typically needed when only targeting browsers)
+
+For Dojo 1.3, the following were added:
+
+* dojo.isWebKit
+* dojo.isChrome
 
 Each variable is only defined if the specified browser is being used. For example, if you're using Internet Explorer, only dojo.isIE is defined; all the other variables are undefined. The variable holds the browser version number as a Number, so you can easily perform version checks. Additionally, since undefined always evaluates as false in if statements, you can use code like this to check for a certain browser version:
 
@@ -63,7 +68,7 @@ Here's a live sample to show how it works:
   }
 
   dojo.addOnLoad(function(){
-    dojo.forEach(["IE", "Mozilla", "FF", "Opera"],
+    dojo.forEach(["IE", "Mozilla", "FF", "Opera", "WebKit", "Chrome"],
                  function(n) {
                    dojo.byId("answerIs" + n).innerHTML = makeFancyAnswer(n);
                  });    
