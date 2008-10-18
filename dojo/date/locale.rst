@@ -18,7 +18,7 @@ Examples
 Formatting dates and times using custom patterns
 ------------------------------------------------
 
-When you want to present dates or times to the user, Javascript only knows how to handle a single locale and language, and the actual format is implementation-dependent, and your web application has no control over these choices.  By simply passing a Javascript Date object to dojo.date.locale.format, Dojo will use the locale passed as djConfig.locale or the browser's default to handle the formats, and you may choose from a variety of formats: short, medium, full, or long.  Various other optins are available.  You may choose to process the only the date, only the time, or both, and you may decide to use your own custom datePattern or timePattern. Lets dive right in and format the current Date in several ways.
+When you want to present dates or times to the user, Javascript only knows how to handle a single locale and language, and the actual format is implementation-dependent, and your web application has no control over these choices.  By simply passing a Javascript Date object to dojo.date.locale.format, Dojo will use the locale passed as djConfig.locale or the browser's default to handle the formats, and you may choose from a variety of formats: short, medium, full, or long.  Various other optins are available.  You may choose to process the only the date, only the time, or both, and you may decide to use your own custom datePattern or timePattern. Lets dive right in and render the current Date in several ways using format().  The inverse operation to take the String and return a Date object is parse().
 
 .. codeviewer::
   
@@ -37,6 +37,8 @@ When you want to present dates or times to the user, Javascript only knows how t
     });
   </script>
   <div id="docTest">
+    >>> dojo.date.locale.format(new Date(2007,2,23,6,6,6), {formatLength: "short", locale: "en"});
+    "3/23/07 6:06 AM"
     >>> dojo.date.locale.format(new Date(2007,2,23,6,6,6), {selector: "date", formatLength: "short", locale: "en"});
     "3/23/07"
     >>> dojo.date.locale.format(new Date(2007,2,23,6,6,6), {selector: "date", formatLength: "long", locale: "en"});
