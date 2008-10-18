@@ -338,6 +338,11 @@ In addiction the initialize (and the destroy too) method doesn't behave like you
     }    
     </script>
 
+
+Let's use it nio
+
+.. cv-compound::
+
   .. cv:: html
 
     <div id="numberDragging">
