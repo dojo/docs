@@ -37,7 +37,9 @@ When you want to present dates or times to the user, Javascript only knows how t
     });
   </script>
   <div id="docTest">
-    >>> dojo.date.locale.format(new Date(2007,2,23,6,6,6), {selector: "date", locale: "en"});
+    >>> dojo.date.locale.format(new Date(2007,2,23,6,6,6), {selector: "date", formatLength: "short", locale: "en"});
+    "3/23/07"
+    >>> dojo.date.locale.format(new Date(2007,2,23,6,6,6), {selector: "date", formatLength: "long", locale: "en"});
     "March 23, 2007"
     >>> dojo.date.locale.format(new Date(2007,2,23,6,6,6), {datePattern: "yyyyMMdd", selector: "date"});
     "20070323"
