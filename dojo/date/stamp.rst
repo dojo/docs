@@ -42,6 +42,8 @@ Usage
     "2008-10-17"
     >>> dojo.date.stamp.fromISOString("2008-10-17T00:00:00Z").toGMTString(); // note toGMTString output is implementation-dependent
     "Fri, 17 Oct 2008 00:00:00 GMT"
+    >>> dojo.date.stamp.fromISOString("T23:59:59.999-04:00", new Date(2008,9,17)).toGMTString();
+"Sat, 18 Oct 2008 03:59:59 GMT"
   </div>
 
 
