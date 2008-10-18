@@ -87,6 +87,10 @@ Here's a live sample to show how it works:
     <dd id="answerIsMozilla"></dd>
     <dt>Is this Opera?</dt>
     <dd id="answerIsOpera"></dd>
+    <dt>Is this WebKit? (Dojo 1.3)</dt>
+    <dd id="answerIsWebKit"></dd>
+    <dt>Is this Chrome? (Dojo 1.3)</dt>
+    <dd id="answerIsChrome"></dd>
   </dl>
   <dl>
     <dt>Is this at least IE 7?</dt>
