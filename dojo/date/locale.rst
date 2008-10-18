@@ -26,7 +26,7 @@ When you want to present dates or times to the user, Javascript only knows how t
     @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/widget/DocTester/DocTester.css"; 
   </style>
   <script type="text/javascript">
-    djConfig.locale = 'en'; djConfig.extraLocale = 'zh';
+    djConfig.locale = 'en'; djConfig.extraLocale = ['es', 'zh'];
   </script>
   <script type="text/javascript">
     dojo.require("dojox.widget.DocTester");
@@ -37,10 +37,10 @@ When you want to present dates or times to the user, Javascript only knows how t
     });
   </script>
   <div id="docTest">
-    >>> dojo.date.locale.format(new Date(2007,2,23,6,6,6), {formatLength: "short", locale: "en"});
-    "3/23/07 6:06 a.m."
-    >>> dojo.date.locale.format(new Date(2007,2,23,6,6,6), {selector: "date", formatLength: "short", locale: "en"});
-    "3/23/07"
+    >>> dojo.date.locale.format(new Date(2007,2,23,6,6,6), {formatLength: "short", locale: "es"}); // locale must match an identifier provided in djConfig; normally not specified here
+    "23/03/07 06:06"
+    >>> dojo.date.locale.format(new Date(2007,2,23,6,6,6), {selector: "date", formatLength: "short", locale: "es"});
+    "23/03/07"
     >>> dojo.date.locale.format(new Date(2007,2,23,6,6,6), {selector: "date", formatLength: "long", locale: "en"});
     "March 23, 2007"
     >>> dojo.date.locale.format(new Date(2007,2,23,6,6,6), {selector: "date", formatLength: "long", locale: "zh"});
