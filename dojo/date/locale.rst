@@ -26,6 +26,9 @@ When you want to present dates or times to the user, Javascript only knows how t
     @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/widget/DocTester/DocTester.css"; 
   </style>
   <script type="text/javascript">
+    djConfig.locale = 'en'; djConfig.extraLocale = 'zh';
+  </script>
+  <script type="text/javascript">
     dojo.require("dojox.widget.DocTester");
     dojo.require("dojo.date.locale");
     
@@ -34,6 +37,8 @@ When you want to present dates or times to the user, Javascript only knows how t
     });
   </script>
   <div id="docTest">
+    >>> dojo.date.locale.format(new Date(2007,2,23,6,6,6), {selector: "date", locale: "en"});
+    "March 23, 2007"
     >>> dojo.date.locale.format(new Date(2007,2,23,6,6,6), {datePattern: "yyyyMMdd", selector: "date"});
     "20070323"
     >>> dojo.date.locale.format(new Date(2007,2,23,6,6,6), {datePattern: "yyyy-MM-dd", selector: "date"});
