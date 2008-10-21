@@ -1407,6 +1407,14 @@ arcAsBezier(last, rx, ry, xRotg, large, sweep, x, y)
 Each cubic arc is represented as an array of six numeric values: [c1.x, c1.y, c2.x, c2.y, e.x, e.y], 
 where c1 is the first control point, c2 is the second control point, and e is the end point. All values are absolute.
 
+==========================
+Considerations and Caveats 
+==========================
+
+The GFX system uses a series of underlying renderers for whichever browser loads the API. The renderer is determined at load time, and defines the entire API using whatever the browser is capable of: Silverlight or VML in IE, SVG in iPhone, Firefox and Safari, and a light-weight canvas variant are available. 
+
+``It is important to note:`` there isn't currently a way to include all the required renderers in a single file (such as a layer created by a custom Dojo Build). Not only would the size be prohibitive, each of the renderers re-defining the API would cause severe errors.
+
 =====
 Demos
 =====
