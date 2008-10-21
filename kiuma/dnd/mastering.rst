@@ -342,7 +342,7 @@ In addiction the initialize (and the destroy too) method doesn't behave like you
   .. cv:: html
 
     <div id="numberDragging">      
-      <div onclick='sample.updateNumberDragging()'>Generate random content</div>
+      <div dojotype='dijit.form.Button' onclick='sample.updateNumberDragging()'>Generate random content</div>
     </div>
 
 ok....
