@@ -263,7 +263,7 @@ In addiction the initialize (and the destroy too) method doesn't behave like you
 
     <script type="text/javascript">
     dojo.require('dijit.form.Button');
-      alert(1);
+      dojo.addOnLoad(function () {
       dojo.provide('sample');
       var sample = {};
       sample.dnd = {};
@@ -336,7 +336,7 @@ In addiction the initialize (and the destroy too) method doesn't behave like you
         el.innerHTML = sample._randomContent();
         dojo.parser.parse(el, true);
       }
-
+    });
     </script>
 
   .. cv:: html
