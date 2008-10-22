@@ -263,7 +263,7 @@ In addiction the initialize (and the destroy too) method doesn't behave like you
 
     <script type="text/javascript">
     dojo.require('dijit.form.Button');
-      
+    alert(1);
     </script>
 
   .. cv:: html
