@@ -108,7 +108,7 @@ Placing a node under another node at the end
     </div>
       <div>One</div>
       <div>Two</div>
-      <div id="exampleThree">Three</div>
+      <div id="exampleThreeThree">Three</div>
       <div>Four</div>
       <div>Five</div>
     </div>
