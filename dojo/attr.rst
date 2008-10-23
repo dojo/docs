@@ -32,7 +32,7 @@ Examples
         dojo.connect(dijit.byId("buttonOne"), "onClick", function(){
           var node = dojo.byId("testNode");
           
-          onOver = function(evt){console.warn('OVER');}
+          onOver = function(evt){alert('OVER');}
  
           dojo.attr(node, "onmouseover", onOver);
           dojo.attr(node, "tabindex", 1);
