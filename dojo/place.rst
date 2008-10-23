@@ -60,7 +60,7 @@ Placing a node after another node
     dojo.require("dijit.form.Button"); // you don't need this, its for the looks
 
     dojo.addOnLoad(function(){
-      dojo.connect(dojo.byId("buttonTwo"), "onclick", function(){
+      dojo.connect(dijit.byId("buttonTwo"), "onClick", function(){
         var node = dojo.doc.createElement("div");
         node.innerHTML = "New Node, placed after 'Three'!";
 
@@ -92,7 +92,7 @@ Placing a node under another node at the end
     dojo.require("dijit.form.Button"); // you don't need this, its for the looks
 
     dojo.addOnLoad(function(){
-      dojo.connect(dojo.byId("buttonThree"), "onclick", function(){
+      dojo.connect(dijit.byId("buttonThree"), "onClick", function(){
         var node = dojo.doc.createElement("div");
         node.innerHTML = "New Node, placed under 'Three' at the end!";
 
@@ -125,7 +125,7 @@ Placing a node under another node at he beginning
     dojo.require("dijit.form.Button"); // you don't need this, its for the looks
 
     dojo.addOnLoad(function(){
-      dojo.connect(dojo.byId("buttonFour"), "onclick", function(){
+      dojo.connect(dijit.byId("buttonFour"), "onClick", function(){
         var node = dojo.doc.createElement("div");
         node.innerHTML = "New Node, placed under 'Three' at the beginning!";
 
