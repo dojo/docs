@@ -29,6 +29,7 @@ Placing a node before another node
 
     dojo.addOnLoad(function(){
       dojo.connect(dojo.byId("buttonOne"), "onClick", function(){
+        alert("fds");
         var node = dojo.doc.createElement("div");
         node.innerHTML = "New Node!";
 
