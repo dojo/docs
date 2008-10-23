@@ -29,9 +29,8 @@ Placing a node before another node
 
     dojo.addOnLoad(function(){
       dojo.connect(dojo.byId("buttonOne"), "onclick", function(){
-        alert("fds");
         var node = dojo.doc.createElement("div");
-        node.innerHTML = "New Node!";
+        node.innerHTML = "New Node, placed before 'Three'!";
 
         dojo.place(node, dojo.byId("exampleThree"), "before");
       });
@@ -53,10 +52,96 @@ Placing a node before another node
 Placing a node after another node
 ---------------------------------
 
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+    dojo.require("dijit.form.Button"); // you don't need this, its for the looks
+
+    dojo.addOnLoad(function(){
+      dojo.connect(dojo.byId("buttonTwo"), "onclick", function(){
+        var node = dojo.doc.createElement("div");
+        node.innerHTML = "New Node, placed after 'Three'!";
+
+        dojo.place(node, dojo.byId("exampleTwoThree"), "after");
+      });
+    });
+    </script>
+
+  .. cv:: html
+
+    <button dojoType="dijit.form.Button" id="buttonTwo">Add node</button>
+
+    </div>
+      <div>One</div>
+      <div>Two</div>
+      <div id="exampleTwoThree">Three</div>
+      <div>Four</div>
+      <div>Five</div>
+    </div>
 
 Placing a node under another node at the end
 --------------------------------------------
 
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+    dojo.require("dijit.form.Button"); // you don't need this, its for the looks
+
+    dojo.addOnLoad(function(){
+      dojo.connect(dojo.byId("buttonThree"), "onclick", function(){
+        var node = dojo.doc.createElement("div");
+        node.innerHTML = "New Node, placed under 'Three' at the end!";
+
+        dojo.place(node, dojo.byId("exampleThreeThree"), "last");
+      });
+    });
+    </script>
+
+  .. cv:: html
+
+    <button dojoType="dijit.form.Button" id="buttonThree">Add node</button>
+
+    </div>
+      <div>One</div>
+      <div>Two</div>
+      <div id="exampleThree">Three</div>
+      <div>Four</div>
+      <div>Five</div>
+    </div>
+
 
 Placing a node under another node at he beginning
 -------------------------------------------------
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+    dojo.require("dijit.form.Button"); // you don't need this, its for the looks
+
+    dojo.addOnLoad(function(){
+      dojo.connect(dojo.byId("buttonFour"), "onclick", function(){
+        var node = dojo.doc.createElement("div");
+        node.innerHTML = "New Node, placed under 'Three' at the beginning!";
+
+        dojo.place(node, dojo.byId("exampleFourThree"), "first");
+      });
+    });
+    </script>
+
+  .. cv:: html
+
+    <button dojoType="dijit.form.Button" id="buttonFour">Add node</button>
+
+    </div>
+      <div>One</div>
+      <div>Two</div>
+      <div id="exampleFourThree">Three</div>
+      <div>Four</div>
+      <div>Five</div>
+    </div>
