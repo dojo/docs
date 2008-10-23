@@ -108,6 +108,10 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 
       Call functions when window.onunload fires
 
+    * `dojo.attr <dojo/attr>`_
+
+      Modifying DOM node attributes
+
     * `dojo.deprecated <dojo/deprecated>`_
 
       Log a debug message to indicate that a behavior has been deprecated
@@ -127,6 +131,10 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
     * `dojo.mixin <dojo/mixin>`_
 
       Multiple inheritance
+
+    * `dojo.place <dojo/place>`_
+
+      Place DOM nodes relative to others
 
     * `dojo.registerModulePath <dojo/registerModulePath>`_
 
