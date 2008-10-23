@@ -54,4 +54,4 @@ TODO: example
 See also
 ========
 
-* TODO: links to other related articles
+* `Executing JavaScript inside Content Panes <http://dojocampus.org/content/2008/07/30/executing-javascript-inside-content-panes/>`_
