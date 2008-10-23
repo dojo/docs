@@ -27,7 +27,7 @@ Declarative example
 
   .. cv:: javascript
 
-    <script type"text/jkavascript">
+    <script type"text/javascript">
     dojo.require("dijit.layout.AccordionContainer");
     </script>
 
