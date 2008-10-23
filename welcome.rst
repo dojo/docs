@@ -815,6 +815,8 @@ These sections cover the available projects shipped with the Dojo Toolkit
 
 * `dojox.image <dojox/image>`_
 
+  Provides a number of image-related widgets
+
   * `dojox.image.Badge <dojox/image/Badge>`_
 
     Attach images or background images, and let them loop
