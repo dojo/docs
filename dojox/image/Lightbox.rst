@@ -3,10 +3,20 @@
 dojox.image.Lightbox
 ====================
 
+:Status: Draft
+:Version: 1.0
+:Project owner: ?--
+:Available: since V?
+
+.. contents::
+   :depth: 2
+
 The Lightbox is a nice way to show images centered on the screen. It works in a variety of ways: programmatic, from dojo.data, or inline. The Lightbox is currently labeled *experimental*, and may change to become a more consistent API.
 
-Project Requirements
---------------------
+
+============
+Introduction
+============
 
 Being a subclass of dijit.Dialog, you will need to include the relevant dijit-css, and the Lightbox CSS. For example:
 
@@ -30,8 +40,10 @@ You also need to require the Lightbox module:
 
 This provides both Lightbox and LightboxDialog, the latter being the widget to actually *display* the image, the former being a lightweight wrapper for anchor tags, converting links into Lightboxes progressively. 
 
-Using Lightbox
---------------
+
+=====
+Usage
+=====
 
 The most basic application of a Lightbox is to convert links containing ``title`` and ``href`` attributes into a widget, preserving the Dom structure and adding basic click-handling to the links. The Link content can be anything: text, images, etc, so the styling is up to you:
 
@@ -79,8 +91,10 @@ A Lightbox instance has a .show() method, which tells the shared 'MasterDialog' 
 
 Here, the two images will be added in the same group, and the first image will be visible. Should you call lb2.show(), the same group of images would be displayed, though starting with the second.
 
+
+==================
 The LightboxDialog
-------------------
+==================
 
 While the basic Lightbox works in simple cases and progressively, you may want to simply display arbitrary images. If there are existing Lightbox'es on a page, there will likely be a MasterDialog available to use, Or you can simply create one:
 
@@ -116,13 +130,17 @@ To close a dialog programatically, simply call .hide()
 
   dijit.byId("dojoxLightboxDialog").hide();
 
+
+=======================
 Lightbox from dojo.data
------------------------
+=======================
 
 ``TODOC``
 
+
+==================
 Styling The Dialog
-------------------
+==================
 
 LightboxDialog extends `dijit.Dialog <dijit/Dialog>`_, so the same 'rule' applies concerning the underlay. The Widget used to block the background page while the Dialog is visible receives an ``id`` based on the Dialog itself. For instance, the MasterDialog used has an id of ``dojoxLightboxDialog``, causing the underlay id to become ``dojoxLightboxDialog_underlay``. You can use plain CSS targeting that id:
 
@@ -134,8 +152,10 @@ LightboxDialog extends `dijit.Dialog <dijit/Dialog>`_, so the same 'rule' applie
 
 The part ``_underlay`` is added to whatever id the LightboxDialog is created with, so if you create an additional LightboxDialog (not reusing the 'Master'), you can color it by using the id you define.
 
+
+====
 a11y
-----
+====
 
 Lightbox and LightboxDialog are not fully accessible, though provide basic keyboard navigation. 
 
@@ -143,8 +163,10 @@ Lightbox and LightboxDialog are not fully accessible, though provide basic keybo
 * Right, Up - go to the next image in the group
 * Left, Down - go to the previous image in the group
 
+
+=============
 Tips & Tricks
--------------
+=============
 
 By using a 'private' method, you can programatically control the LightboxDialog when displaying groups of images. The functions are named _nextImage(), and _prevImage(), though may later become public as .next() and .prev().  
 
