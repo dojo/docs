@@ -30,9 +30,8 @@ Examples
     <script type="text/javascript">
       dojo.addOnLoad(function(){
         dojo.connect(dijit.byId("buttonOne"), "onClick", function(){
-          var node = dojo.byId("testDiv");
-          dojo.byId("containerNode").appendChild(node);
-
+          var node = dojo.byId("testNode");
+          
           onOver = function(evt){console.warn('OVER');}
  
           dojo.attr(node, "onmouseover", onOver);
@@ -47,4 +46,4 @@ Examples
   .. cv:: html
 
     <button dojoType="dijit.form.Button" id="buttonOne">Create node</button>
-    <div id="containerNode"></div>
+    <div id="testNode"></div>
