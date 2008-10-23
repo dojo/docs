@@ -1,7 +1,7 @@
 #format dojo_rst
 
-dojo.modulename
-===============
+dojo.place
+==========
 
 :Status: Draft
 :Version: 1.0
@@ -28,7 +28,7 @@ Placing a node before another node
     dojo.require("dijit.form.Button"); // you don't need this, its for the looks
 
     dojo.addOnLoad(function(){
-      dojo.connect(dojo.byId("buttonOne"), "onclick", function(){
+      dojo.connect(dijit.byId("buttonOne"), "onClick", function(){
         var node = dojo.doc.createElement("div");
         node.innerHTML = "New Node, placed before 'Three'!";
 
