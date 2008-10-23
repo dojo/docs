@@ -28,8 +28,15 @@ Placing a node before another node
     dojo.require("dijit.form.Button"); // you don't need this, its for the looks
 
     dojo.addOnLoad(function(){
-      dojo.connect(dojo.byId("buttonOne"), "onClick", function(){
+      dojo.connect(dojo.byId("buttonOne"), "onclick", function(){
         alert("fds");
+
+---- /!\ '''Edit conflict - other version:''' ----
+        alert("fds");
+
+---- /!\ '''Edit conflict - your version:''' ----
+
+---- /!\ '''End of edit conflict''' ----
         var node = dojo.doc.createElement("div");
         node.innerHTML = "New Node!";
 
