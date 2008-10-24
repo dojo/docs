@@ -68,6 +68,7 @@ Dojo is a very extensive library of code, most of which is optional. Here are so
 * `Parsing, Formatting and Validating Numbers and Dates <quickstart/numbersDates>`_
 * `Arrays, Node lists <quickstart/arrays>`_
 * `Browser Sniffing <quickstart/browser-sniffing>`_
+* `Custom Builds <quickstart/custom-builds>`_
 
 ----
 
