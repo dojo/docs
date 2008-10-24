@@ -4,7 +4,7 @@
 The Dojo Build System
 =====================
 
-``TODOC: everything. outline here:`
+``TODOC: everything. outline here:``
 
 
 * summary
