@@ -250,7 +250,7 @@ The example below shows what just explained:
 
 
 Now we may want to get back our "dojo.dnd.Source", suppose infact that you are performing an xhr call, and you want to replace the content of an element where there is a dojo.dnd.Source.
-For example we might want to use the innerHTML property to replace such content, then we'll need to reparse the element content with the dojo parser. An option is to provide the tag containing 
+For example we might want to use the innerHTML property to replace such content, then we'll need to reparse the element content with the dojo parser. We can then use the jsId dojo tag attribute, that maps a 
 
 
 
