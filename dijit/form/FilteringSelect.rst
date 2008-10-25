@@ -26,7 +26,7 @@ On FORM submit, the hidden text value associated with the displayed value of a n
 FilteringSelect widgets are dojo.data-enabled. This means rather than embedding all the OPTION tags within the page, you can have dojo.data fetch them from a server-based store. The unified dojo.data architecture can get its data from various places such as databases and web services. See the `dojo.data <dojo/data>`_ section for complete details.
 
 `note:` When using a DataStore with FilteringSelect, the store must implement the `Identity API <dojo/data/api/Identity>`_
-
+`note:` FilteringSelect differs from a `ComboBox <dijit/form/ComboBox>`_ in that the displayed value and hidden value are always the same. the value of the OPTION tag is ignored. 
 
 ========
 Examples
