@@ -248,6 +248,12 @@ The example below shows what just explained:
     </fieldset>
   </div>
 
+
+Now we may want to get back our "dojo.dnd.Source", suppose infact that you are performing an xhr call, and you want to replace the content of an element where there is a dojo.dnd.Source.
+For example we might want to use the innerHTML property to replace such content, then we'll need to reparse the element content with the dojo parser. An option is to provide the tag containing 
+
+
+
 Finished? ...not yet!
 
 dojo.dnd.Source and its parents dojo.dnd.Selector and dojo.dnd.Container are a little strange classes.
@@ -263,7 +269,7 @@ In addiction the initialize (and the destroy too) method doesn't behave like you
 
     <script type="text/javascript">
     dojo.require('dijit.form.Button');
-    alert(1);
+ 
     </script>
 
   .. cv:: html
