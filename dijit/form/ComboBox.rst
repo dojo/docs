@@ -24,6 +24,7 @@ On FORM submit, the displayed text value of a non-disabled ComboBox widget is su
 
 ComboBox widgets are dojo.data-enabled. This means rather than embedding all the OPTION tags within the page, you can have dojo.data fetch them from a server-based store. The unified dojo.data architecture can get its data from various places such as databases and web services. See the `dojo.data <dojo/data>`_ section for complete details.
 
+`note:` ComboBox differs from a `FilteringSelect <dijit/form/FilteringSelect>`_ in that the displayed value and hidden value are always the same. the value of the OPTION tag is ignored when used in a degradable manner.  
 
 ========
 Examples
