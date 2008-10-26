@@ -249,8 +249,10 @@ The example below shows what just explained:
   </div>
 
 
-Now we may want to get back our "dojo.dnd.Source", suppose infact that you are performing an xhr call, and you want to replace the content of an element where there is a dojo.dnd.Source.
-For example we might want to use the innerHTML property to replace such content, then we'll need to reparse the element content with the dojo parser. We can then use the jsId dojo tag attribute, that allow us to map a global variavle provided by jsId over our dojo.dnd.Source, see http://dojocampus.org/content/2008/05/06/jsid-dijitbyid-and-dojobyid/ for more info.
+Now we may want to get back our "dojo.dnd.Source" reference, suppose infact that we are performing an xhr call, and we want to replace the content of an element where there is a dojo.dnd.Source.
+For example we might want to use the innerHTML property to replace such content, then we'll need to reparse the element content with the dojo parser. 
+
+
 
 .. cv-compound::
  
@@ -262,9 +264,10 @@ For example we might want to use the innerHTML property to replace such content,
       var strartPoint = Math.floor(Math.random()*10);
       var htmlContent = "<div dojotype='dijit.form.Button' onclick='sample.updateNumberDragging()'>Generate random content</div>\n";
       htmlContent += "<fieldset class='dndContainer numbers' dojoType='dojo.dnd.Source' accept='number'>\n"; 
+      htmlContent += "<script type='dojo/connect' event='onDndDrop' args='source, nodes, copy, target'>\nconsole.debug('dropping ' + nodes[0] + '...');\n</script>\n"; 
       htmlContent += "<legend>Numbers</legend>\n"; 
       for (int i = strartPoint; i < strartPoint + 10; i++) {
-        htmlContent += "<div class="dojoDndItem" dndType="number">"+i+"</div>\n"; 
+        htmlContent += "<div class='dojoDndItem' dndType='number'>"+i+"</div>\n"; 
       } 
       htmlContent += "</fieldset></div>\n"; 
     }
@@ -275,6 +278,9 @@ For example we might want to use the innerHTML property to replace such content,
     <div id="numberDragging">      
       <div dojotype='dijit.form.Button' onclick='generateRandomContent();'>Generate random content</div>
       <fieldset class='dndContainer numbers' dojoType='dojo.dnd.Source' accept='number'>
+        <script type="dojo/connect" event="onDndDrop" args="source, nodes, copy, target">
+          console.debug("zdropping " + nodes[0] + "...");
+        </script>
         <legend>Numbers</legend>
         <div class="dojoDndItem" dndType="number">1</div>
         <div class="dojoDndItem" dndType="number">2</div>
@@ -288,6 +294,9 @@ For example we might want to use the innerHTML property to replace such content,
         <div class="dojoDndItem" dndType="number">10</div>
       </fieldset>
     </div>
+
+
+We can then use the jsId dojo tag attribute, that allow us to map a global variavle provided by jsId over our dojo.dnd.Source, see http://dojocampus.org/content/2008/05/06/jsid-dijitbyid-and-dojobyid/ for more info.
 
 
 
