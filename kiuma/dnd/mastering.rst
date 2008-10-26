@@ -274,7 +274,11 @@ For example we might want to use the innerHTML property to replace such content,
       } 
       htmlContent += "</fieldset></div>\n"; 
       var numberDragging = dojo.byId('numberDragging');
-      //dojo.forEach
+      dojo.forEach(
+        dojo.query(['widgetid']).map(dijit.byNode),
+        function (widget) {
+          if (widget) {widget.destroy();}
+        });
       numberDragging.innerHTML = htmlContent;
       dojo.parser.parse(numberDragging);
     }
