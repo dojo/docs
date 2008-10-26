@@ -284,6 +284,7 @@ For example we might want to use the innerHTML property to replace such content,
                    generateRandomContent);
     };
     dojo.addOnLoad(function () {
+      alert(1);
       dojo.connect(dojo.byId('buttonGenerator'),
                    'onclick',
                    generateRandomContent);
