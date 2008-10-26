@@ -254,9 +254,7 @@ For example we might want to use the innerHTML property to replace such content,
 
 
 
-.. cv-compound::
- 
-  .. cv:: javascript
+.. codeviewer::
 
     <script type="text/javascript">
     //<!--
@@ -284,9 +282,6 @@ For example we might want to use the innerHTML property to replace such content,
     }
     //-->
     </script>
-
-  .. cv:: html
-    
     <div id="numberDragging">      
       <div id="buttonGenerator" dojotype='dijit.form.Button' onclick='generateRandomContent();'>Generate random content</div>
       <fieldset class='dndContainer numbers' dojoType='dojo.dnd.Source' accept='number'>
