@@ -259,6 +259,7 @@ For example we might want to use the innerHTML property to replace such content,
   .. cv:: javascript
 
     <script type="text/javascript">
+    //<!--
     dojo.require('dijit.form.Button');
     function generateRandomContent() {
       var strartPoint = Math.floor(Math.random()*10);
@@ -266,11 +267,15 @@ For example we might want to use the innerHTML property to replace such content,
       htmlContent += "<fieldset class='dndContainer numbers' dojoType='dojo.dnd.Source' accept='number'>\n"; 
       htmlContent += "<script type='dojo/connect' event='onDndDrop' args='source, nodes, copy, target'>\nconsole.debug('dropping ' + nodes[0] + '...');\n</script>\n"; 
       htmlContent += "<legend>Numbers</legend>\n"; 
-      for (int i = strartPoint; i < strartPoint + 10; i++) {
+      for (var i = strartPoint; i < strartPoint + 10; i++) {
         htmlContent += "<div class='dojoDndItem' dndType='number'>"+i+"</div>\n"; 
       } 
       htmlContent += "</fieldset></div>\n"; 
+      var numberDragging = dojo.byId('numberDragging');
+      numberDragging.innerHTML = htmlContent;
+      dojo.parser.parse(numberDragging);
     }
+    //-->
     </script>
 
   .. cv:: html
