@@ -252,16 +252,16 @@ The example below shows what just explained:
 Now we may want to get back our "dojo.dnd.Source" reference, suppose infact that we are performing an xhr call, and we want to replace the content of an element where there is a dojo.dnd.Source.
 For example we might want to use the innerHTML property to replace such content, then we'll need to reparse the element content with the dojo parser. 
 
-
-
-.. codeviewer::
+.. cv-compound::
+ 
+  .. cv:: javascript
 
     <script type="text/javascript">
     //<!--
     dojo.require('dijit.form.Button');
     dojo.require('dojo.parser');
     dojo.require('dojo.dnd.Source');
-    function generateRandomContent() {
+    generateRandomContent = function () {
       var strartPoint = Math.floor(Math.random()*10);
       var htmlContent = "<div dojotype='dijit.form.Button' onclick='sample.updateNumberDragging()'>Generate random content</div>\n";
       htmlContent += "<fieldset class='dndContainer numbers' dojoType='dojo.dnd.Source' accept='number'>\n"; 
@@ -279,11 +279,22 @@ For example we might want to use the innerHTML property to replace such content,
         });
       numberDragging.innerHTML = htmlContent;
       dojo.parser.parse(numberDragging);
+      dojo.connect(dojo.byId('buttonGenerator'),
+                   'onclick',
+                   generateRandomContent);
+    };
+    dojo.addOnLoad(function () {
+      dojo.connect(dojo.byId('buttonGenerator'),
+                   'onclick',
+                   generateRandomContent);
     }
     //-->
     </script>
+
+  .. cv:: html
+
     <div id="numberDragging">      
-      <div id="buttonGenerator" dojotype='dijit.form.Button' onclick='generateRandomContent();'>Generate random content</div>
+      <div id="buttonGenerator" dojotype='dijit.form.Button'>Generate random content</div>
       <fieldset class='dndContainer numbers' dojoType='dojo.dnd.Source' accept='number'>
         <script type="dojo/connect" event="onDndDrop" args="source, nodes, copy, target">
           console.debug("dropping " + nodes[0].innerHTML + "...");
