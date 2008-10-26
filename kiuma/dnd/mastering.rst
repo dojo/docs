@@ -279,7 +279,7 @@ For example we might want to use the innerHTML property to replace such content,
       <div dojotype='dijit.form.Button' onclick='generateRandomContent();'>Generate random content</div>
       <fieldset class='dndContainer numbers' dojoType='dojo.dnd.Source' accept='number'>
         <script type="dojo/connect" event="onDndDrop" args="source, nodes, copy, target">
-          console.debug("zdropping " + nodes[0] + "...");
+          console.debug("dropping " + nodes[0] + "...");
         </script>
         <legend>Numbers</legend>
         <div class="dojoDndItem" dndType="number">1</div>
