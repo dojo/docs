@@ -250,7 +250,44 @@ The example below shows what just explained:
 
 
 Now we may want to get back our "dojo.dnd.Source", suppose infact that you are performing an xhr call, and you want to replace the content of an element where there is a dojo.dnd.Source.
-For example we might want to use the innerHTML property to replace such content, then we'll need to reparse the element content with the dojo parser. We can then use the jsId dojo tag attribute, that maps a 
+For example we might want to use the innerHTML property to replace such content, then we'll need to reparse the element content with the dojo parser. We can then use the jsId dojo tag attribute, that allow us to map a global variavle provided by jsId over our dojo.dnd.Source, see http://dojocampus.org/content/2008/05/06/jsid-dijitbyid-and-dojobyid/ for more info.
+
+.. cv-compound::
+ 
+  .. cv:: javascript
+
+    <script type="text/javascript">
+    dojo.require('dijit.form.Button');
+    function generateRandomContent() {
+      var strartPoint = Math.floor(Math.random()*10);
+      var htmlContent = "<div dojotype='dijit.form.Button' onclick='sample.updateNumberDragging()'>Generate random content</div>\n";
+      htmlContent += "<fieldset class='dndContainer numbers' dojoType='dojo.dnd.Source' accept='number'>\n"; 
+      htmlContent += "<legend>Numbers</legend>\n"; 
+      for (int i = strartPoint; i < strartPoint + 10; i++) {
+        htmlContent += "<div class="dojoDndItem" dndType="number">"+i+"</div>\n"; 
+      } 
+      htmlContent += "</fieldset></div>\n"; 
+    }
+    </script>
+
+  .. cv:: html
+    
+    <div id="numberDragging">      
+      <div dojotype='dijit.form.Button' onclick='generateRandomContent();'>Generate random content</div>
+      <fieldset class='dndContainer numbers' dojoType='dojo.dnd.Source' accept='number'>
+        <legend>Numbers</legend>
+        <div class="dojoDndItem" dndType="number">1</div>
+        <div class="dojoDndItem" dndType="number">2</div>
+        <div class="dojoDndItem" dndType="number">3</div>
+        <div class="dojoDndItem" dndType="number">4</div>
+        <div class="dojoDndItem" dndType="number">5</div>
+        <div class="dojoDndItem" dndType="number">6</div>
+        <div class="dojoDndItem" dndType="number">7</div>
+        <div class="dojoDndItem" dndType="number">8</div>
+        <div class="dojoDndItem" dndType="number">9</div>
+        <div class="dojoDndItem" dndType="number">10</div>
+      </fieldset>
+    </div>
 
 
 
@@ -274,7 +311,7 @@ In addiction the initialize (and the destroy too) method doesn't behave like you
 
   .. cv:: html
     
-    <div id="numberDragging">      
+    <div id="numberDragging2">      
       <div onclick="alert(sample);">show sample</div> 
       <div dojotype='dijit.form.Button' onclick='sample.updateNumberDragging()'>Generate random content</div>
     </div>
