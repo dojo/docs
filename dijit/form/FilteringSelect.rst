@@ -40,21 +40,31 @@ To set the default value for a programmatic FilteringSelect, include the *value*
   .. cv:: javascript
 
     <script type="text/javascript">
-      dojo.require("dijit.form.FilteringSelect");
-      dojo.require("dojo.data.ItemFileReadStore");
+        dojo.require("dijit.form.FilteringSelect");
+        dojo.require("dojo.data.ItemFileReadStore");
     </script>
 
-     <script type="text/javascript">     
-      dojo.addOnLoad(function(){
-        var stateStore = new dojo.data.ItemFileReadStore({url: "http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/states.json"});       
-        var filteringSelect = new dijit.form.FilteringSelect({id: "stateSelect", name: "state", value: "KY", store: stateStore, searchAttr: "name"}, "stateSelect");
-      });
+    <script type="text/javascript">     
+        dojo.addOnLoad(function(){
+            var stateStore = new dojo.data.ItemFileReadStore({
+                url: "http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/states.json"
+            });
+            var filteringSelect = new dijit.form.FilteringSelect({
+                id: "stateSelect", 
+                name: "state", 
+                value: "KY", 
+                store: stateStore, 
+                searchAttr: "name"
+            }, "stateSelect");
+        });
     </script>
 
   .. cv:: html
 
     <input id="stateSelect">
-    <p><button onClick="alert(dijit.byId('stateSelect').attr('value'))">Get value</button></p>
+    <p>
+        <button onClick="alert(dijit.byId('stateSelect').attr('value'))">Get value</button>
+    </p>
 
 Declarative markup using native select and option tags
 ------------------------------------------------------
@@ -66,15 +76,15 @@ Native SELECT combo-boxes always have value/description pairs, e.g. the OPTION's
   .. cv:: javascript
 
     <script type="text/javascript">
-      dojo.require("dijit.form.FilteringSelect");
+        dojo.require("dijit.form.FilteringSelect");
     </script>
 
   .. cv:: html
 
     <select dojoType="dijit.form.FilteringSelect" id="fruit" name="fruit">
-      <option value="AP">Apples</option>
-      <option value="OR" selected>Oranges</option>
-      <option value="PE" >Pears</option>
+        <option value="AP">Apples</option>
+        <option value="OR" selected>Oranges</option>
+        <option value="PE" >Pears</option>
     </select>
 
 
@@ -88,20 +98,21 @@ To set the default value for this example, specify the *value* attribute (the hi
   .. cv:: javascript
 
     <script type="text/javascript">
-      dojo.require("dijit.form.FilteringSelect");
-      dojo.require("dojo.data.ItemFileReadStore");
+        dojo.require("dijit.form.FilteringSelect");
+        dojo.require("dojo.data.ItemFileReadStore");
     </script>
 
   .. cv:: html
 
-    <div dojoType="dojo.data.ItemFileReadStore" jsId="stateStore"
+    <div dojoType="dojo.data.ItemFileReadStore" 
+        jsId="stateStore"
         url="http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/states.json"></div>
     <input dojoType="dijit.form.FilteringSelect"
-                value="KY"
-                store="stateStore"
-                searchAttr="name"
-                name="state"
-                id="stateInput">
+        value="KY"
+        store="stateStore"
+        searchAttr="name"
+        name="state"
+        id="stateInput">
 
 
 =============
