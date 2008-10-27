@@ -31,7 +31,7 @@ The simplest way to use dojo.getObject is to pass a dot-separated string as show
    dojo.getObject("foo.bar");  // returns "some value"
  </script>
 
-dojo.getObject also takes an optional boolean parameter which, if `true`, will create the property if it does not exist.  The default is `false`.
+dojo.getObject also takes an optional boolean parameter which, if `true`, will create the property if it does not exist.  Any other properties along the path will also be created along the way.  The default value is `false`.
 
 .. code-block :: javascript
  :linenos:
@@ -52,7 +52,7 @@ dojo.getObject also takes an optional boolean parameter which, if `true`, will c
    */
  </script>
 
-You can also pass an object as the third parameter.  This will define the context in which to search for the property.  By default, the context is dojo.global and `null` may be passed in.
+You can also pass an object as the third parameter.  This will define the context in which to search for the property.  By default, the context is `dojo.global <dojo.global>`_ and `null` may be passed in.
 
 .. code-block :: javascript
  :linenos:
