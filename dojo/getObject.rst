@@ -52,7 +52,7 @@ dojo.getObject also takes an optional boolean parameter which, if `true`, will c
    */
  </script>
 
-You can also pass an object as the third parameter.  This will define the context in which to search for the property.  By default, the context is `dojo.global <dojo.global>`_ and `null` may be passed in.
+You can also pass an object as the third parameter.  This will define the context in which to search for the property.  By default, the context is `dojo.global <dojo.global>`_.
 
 .. code-block :: javascript
  :linenos:
