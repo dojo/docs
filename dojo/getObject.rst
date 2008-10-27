@@ -16,7 +16,7 @@ dojo.getObject returns the property of an object from a dot-separated string suc
 Usage
 =====
 
-The simplest way to use dojo.getObject is shown below:
+The simplest way to use dojo.getObject is to pass a dot-separated string as shown below:
 
 .. code-block :: javascript
  :linenos:
