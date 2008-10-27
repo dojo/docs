@@ -1,6 +1,6 @@
 #format dojo_rst
 
-dojo.deprecated
+dojo.getObject
 ===============
 
 :Status: Draft
