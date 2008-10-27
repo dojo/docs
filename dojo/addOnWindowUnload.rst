@@ -31,13 +31,14 @@ Usage
    // declare a function to do the unload work
    var unLoad = function() {
      // do some unload stuff
+     alert("unloading...");
    }
    // pass a function pointer
    dojo.addOnWindowUnload(unLoad);
 
    // call a method of an object
-   dojo.addOnWindowUnload(obj, "methodName");
+   dojo.addOnWindowUnload(window, "unLoad");
 
    // pass an object and an anonymous function
-   dojo.addOnWindowUnload(obj, function() {/* do stuff */});
+   dojo.addOnWindowUnload(window, function() {alert("we're out of here!");});
  </script>
