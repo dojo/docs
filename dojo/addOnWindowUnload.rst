@@ -10,48 +10,34 @@ dojo.addOnWindowUnload
 .. contents::
    :depth: 2
 
-TODO: short summary of the component/class/method
+dojo.addOnWindowUnload registers a function to be triggered when window.onunload fires.
 
 
 ============
 Introduction
 ============
 
-TODO: introduce the component/class/method
+When a user exits the page to visit another page, the page is unloaded and a `window.onunload` event handler is fired.  During this phase of page loading, it is not recommended that you try to modify the DOM or access JavaScript properties since they may not be available.  You should consider using `dojo.addOnUnload <dojo/addOnUnload>`_ if you need to modify the DOM or do heavy JavaScript work since it triggers functions during the `window.onbeforeunload`.
 
 
 =====
 Usage
 =====
 
-TODO: how to use the component/class/method
-
 .. code-block :: javascript
  :linenos:
 
  <script type="text/javascript">
-   // your code
+   // declare a function to do the unload work
+   var unLoad = function() {
+     // do some unload stuff
+   }
+   // pass a function pointer
+   dojo.addOnWindowUnload(unLoad);
+
+   // call a method of an object
+   dojo.addOnWindowUnload(obj, "methodName");
+
+   // pass an object and an anonymous function
+   dojo.addOnWindowUnload(obj, function() {/* do stuff */});
  </script>
-
-
-
-========
-Examples
-========
-
-Programmatic example
---------------------
-
-TODO: example
-
-Declarative example
--------------------
-
-TODO: example
-
-
-========
-See also
-========
-
-* TODO: links to other related articles
