@@ -10,48 +10,59 @@ dojo.getObject
 .. contents::
    :depth: 2
 
-TODO: short summary of the component/class/method
-
-
-============
-Introduction
-============
-
-TODO: introduce the component/class/method
-
+dojo.getObject returns the property of an object from a dot-separated string such as "A.B.C"
 
 =====
 Usage
 =====
 
-TODO: how to use the component/class/method
+The simplest way to use dojo.getObject is shown below:
 
 .. code-block :: javascript
  :linenos:
 
  <script type="text/javascript">
-   // your code
+   // define an object
+   var foo = {
+     bar: "some value"
+   };
+
+   // get the "foo.bar" property
+   dojo.getObject("foo.bar");  // returns "some value"
  </script>
 
+dojo.getObject also takes an optional boolean parameter which, if `true`, will create the property if it does not exist.  The default is `false`.
 
+.. code-block :: javascript
+ :linenos:
 
-========
-Examples
-========
+ <script type="text/javascript">
+   // define an object
+   var foo = {
+     bar: "some value"
+   };
 
-Programmatic example
---------------------
+   // get the "foo.baz" property, create it if it doesn't exist
+   dojo.getObject("foo.baz", true); // returns foo.baz - an empty object {}
+   /*
+     foo == {
+       bar: "some value",
+       baz: {}
+     }
+   */
+ </script>
 
-TODO: example
+You can also pass an object as the third parameter.  This will define the context in which to search for the property.  By default, the context is dojo.global and `null` may be passed in.
 
-Declarative example
--------------------
+.. code-block :: javascript
+ :linenos:
 
-TODO: example
+ <script type="text/javascript">
+   // define an object
+   var foo = {
+     bar: "some value"
+   };
 
-
-========
-See also
-========
-
-* TODO: links to other related articles
+   // get the "bar" property of the foo object
+   dojo.getObject("bar", false, foo); // returns "some value"
+ </script>
