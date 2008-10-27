@@ -10,48 +10,4 @@ dojo.global
 .. contents::
    :depth: 2
 
-TODO: short summary of the component/class/method
-
-
-============
-Introduction
-============
-
-TODO: introduce the component/class/method
-
-
-=====
-Usage
-=====
-
-TODO: how to use the component/class/method
-
-.. code-block :: javascript
- :linenos:
-
- <script type="text/javascript">
-   // your code
- </script>
-
-
-
-========
-Examples
-========
-
-Programmatic example
---------------------
-
-TODO: example
-
-Declarative example
--------------------
-
-TODO: example
-
-
-========
-See also
-========
-
-* TODO: links to other related articles
+dojo.global is an alias for the global scope.  In a browser environment, dojo.global is the window object.  You should refer to dojo.global rather than window so that your code will run correctly in other contexts (e.g. Rhino on a server).
