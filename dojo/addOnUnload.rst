@@ -51,7 +51,7 @@ Usage
 Examples
 ========
 
-This example demonstrates how an a `javascript:` link will trigger a `dojo.addOnUnload`.
+This example demonstrates how a `javascript:` link will trigger a `dojo.addOnUnload`.
 
 .. cv-compound::
 
