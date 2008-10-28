@@ -40,28 +40,26 @@ The first example creates a Dialog via markup from an existing DOM node:
     :label: When pressing this button the dialog will popup 
 
     <div id="dialogOne" dojoType="dijit.Dialog" title="My Dialog Title">
-      <div dojoType="dijit.layout.TabContainer" style="width: 200px; height: 300px;">
-        <div dojoType="dijit.layout.ContentPane" title="foo">Hi</div>
-        <div dojoType="dijit.layout.ContentPane" title="boo">Hi</div>
-      </div>
+        <div dojoType="dijit.layout.TabContainer" style="width: 200px; height: 300px;">
+            <div dojoType="dijit.layout.ContentPane" title="foo">Hi</div>
+            <div dojoType="dijit.layout.ContentPane" title="boo">Hi</div>
+        </div>
     </div>
-    <button id="buttonOne" dojoType="dijit.form.Button">Show me!</button>
+    <button id="buttonOne" dojoType="dijit.form.Button">Show me!
+        <script type="dojo/method" event="onClick" args="evt">
+            // Show the Dialog:
+            dijit.byId("dialogOne").show();
+        </script>
+    </button>
 
   .. cv:: javascript
     :label: The javascript, put this wherever you want the dialog creation to happen
 
     <script type="text/javascript">
-
-    dojo.require("dijit.form.Button");
-    dojo.require("dijit.Dialog");
-    dojo.require("dijit.layout.TabContainer");
-    dojo.require("dijit.layout.ContentPane");
-
-    dojo.addOnLoad(function(){	
-      firstDlg = dijit.byId("dialogOne");
-      // connect to the button so we display the dialog on click
-      dojo.connect(dijit.byId("buttonOne"), "onClick", firstDlg, "show");
-    });
+        dojo.require("dijit.form.Button");
+        dojo.require("dijit.Dialog");
+        dojo.require("dijit.layout.TabContainer");
+        dojo.require("dijit.layout.ContentPane");
     </script>
 
 Dialog programmatically
