@@ -41,8 +41,8 @@ The first example creates a Dialog via markup from an existing DOM node:
 
     <div id="dialogOne" dojoType="dijit.Dialog" title="My Dialog Title">
         <div dojoType="dijit.layout.TabContainer" style="width: 200px; height: 300px;">
-            <div dojoType="dijit.layout.ContentPane" title="foo">Hi</div>
-            <div dojoType="dijit.layout.ContentPane" title="boo">Hi</div>
+            <div dojoType="dijit.layout.ContentPane" title="foo">Content of Tab "foo"</div>
+            <div dojoType="dijit.layout.ContentPane" title="boo">Hi, I'm Tab "boo"</div>
         </div>
     </div>
     <button id="buttonOne" dojoType="dijit.form.Button">Show me!
