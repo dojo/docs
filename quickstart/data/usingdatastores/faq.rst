@@ -205,6 +205,4 @@ OR:
 
 OR:
 
-  * Use a custom type map to make the ItemFile*Store treat the joining field value as a straight value and not a data store item. 
-
-
+  * Use a custom type map to make the ItemFile*Store treat the complex object field value as a straight value and not a data store item. 
