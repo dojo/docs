@@ -67,7 +67,7 @@ Examples
 
   .. cv:: html
 
-    This <a href="javascript:unLoad()">link</a> has an `href="javascript:unLoad()" which fires dojo.addOnUnload but won't destroy the page.
+    This <a href="javascript:unLoad()">link</a> has an `href="javascript:unLoad()"` which fires dojo.addOnUnload but won't destroy the page.
 
 ========
 See also
