@@ -12,27 +12,37 @@ dojo.addOnUnload
 .. contents::
    :depth: 2
 
-TODO: short summary of the component/class/method
+dojo.addOnUnload registers a function to be called when the page unloads.
 
 
 ============
 Introduction
 ============
 
-TODO: introduce the component/class/method
+Since working with the DOM or JavaScript during a `window.onunload` event is not recommended, dojo.addOnUnload is triggered during `window.onbeforeunload`.  However, you need to be careful about what work you do during `window.onbeforeunload` since this event can be triggered  if the user clicks a link to download a file or a `javascript:` link.  In these cases, the `document` will not be destroyed and so any destructive operations done during a `dojo.addOnUnload` callback may be premature.
 
 
 =====
 Usage
 =====
 
-TODO: how to use the component/class/method
-
 .. code-block :: javascript
  :linenos:
 
  <script type="text/javascript">
-   // your code
+   // declare a function to do the unload work
+   var unLoad = function() {
+     // do some unload stuff
+     alert("unloading...");
+   }
+   // pass a function pointer
+   dojo.addOnUnload(unLoad);
+
+   // call a method of an object
+   dojo.addOnUnload(window, "unLoad");
+
+   // pass an object and an anonymous function
+   dojo.addOnUnload(window, function() {alert("we're out of here!");});
  </script>
 
 
@@ -41,16 +51,23 @@ TODO: how to use the component/class/method
 Examples
 ========
 
-Programmatic example
---------------------
+.. cv-compound::
 
-TODO: example
+  .. cv:: javascript
 
-Declarative example
--------------------
+    <script type="text/javascript">
+      // declare a function to do the unload work
+      var unLoad = function() {
+        // do some unload stuff
+        alert("unloading...");
+      }
+      // pass a function pointer
+      dojo.addOnUnload(unLoad);
+    </script>
 
-TODO: example
+  .. cv:: html
 
+    <a href="javascript: unload()">This link fires dojo.addOnUnload</a>
 
 ========
 See also
