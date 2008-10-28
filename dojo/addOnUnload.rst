@@ -67,7 +67,7 @@ Examples
 
   .. cv:: html
 
-    <a href="javascript:unload()">This link fires dojo.addOnUnload</a>
+    <a href="javascript:unLoad()">This link fires dojo.addOnUnload</a>
 
 ========
 See also
