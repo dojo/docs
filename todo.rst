@@ -29,53 +29,23 @@ Top priority: Dojo Base
 
 * `dojo.windowUnloaded <dojo/windowUnloaded>`_
 
+* `dojo._base.Color <dojo/_base/Color>`_
+
+  needed: Examples
+
+* `dojo.disconnect <dojo/disconnect>`_
+
+* `dojo.subscribe <dojo/subscribe>`_
+
+* `dojo.unsubscribe <dojo/unsubscribe>`_
+
+* `dojo.publish <dojo/publish>`_
+
+* `dojo.connectPublisher <dojo/connectPublisher>`_
 
 ----
 
-  * `dojo._base.array <dojo/_base/array>`_
 
-    Array utilities.
-    Details on dojo.every, dojo.filter, dojo.forEach, dojo.indexOf, dojo.lastIndexOf, dojo.map, and dojo.some.
-
-    * `dojo.forEach <dojo/forEach>`_
-
-      Invokes a callback function for every item in array
-
-    * `dojo.map <dojo/map>`_
-
-      Applies a callback to each element of arr and returns an Array with the results
-
-  * `dojo._base.Color <dojo/_base/Color>`_
-
-    Functions for setting Colors
-
-  * `dojo._base.connect <dojo/_base/connect>`_
-
-    Functions for connecting methods to events and to subscribe and publish events
-
-    * `dojo.connect <dojo/connect>`_
-
-      Connects events to methods
-
-    * `dojo.disconnect <dojo/disconnect>`_
-
-      Disconnects methods from linked topics
-
-    * `dojo.subscribe <dojo/subscribe>`_
-
-      Linked a listener to a named topic
-
-    * `dojo.unsubscribe <dojo/unsubscribe>`_
-
-      Remove a topic listener
-
-    * `dojo.publish <dojo/publish>`_
-
-      Publish an event to all subscribers of a topic
-
-    * `dojo.connectPublisher <dojo/connectPublisher>`_
-
-      Ensure that everytime an event is called, a message is published on the topic.
 
   * `dojo._base.declare <dojo/_base/declare>`_
 
