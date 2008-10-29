@@ -5,13 +5,10 @@ dojo._base.window
 
 :Status: Draft
 :Version: 1.0
-:Authors: Marcus Reimann
-:Developers: ?-
 :Available: since V?
 
 .. contents::
     :depth: 2
-
 
 **dojo._base.window** contains functions for dealing with the document-wide DOM and context related stuff.
 
