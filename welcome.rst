@@ -36,4 +36,4 @@ Welcome to the official documentation pages of the Dojo Toolkit
 `Community <community>`_
 =========================
 
-* `Behind the scenes, Documentation guidelines <community>`_
+* `Behind the scenes <community>`_
