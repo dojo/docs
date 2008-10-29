@@ -5,8 +5,6 @@ dojo.animateProperty
 
 :Status: Draft
 :Version: 1.2
-:Authors: Nikolai Onken
-:Developers: ?-
 :Available: since V?
 
 .. contents::
