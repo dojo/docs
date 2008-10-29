@@ -5,8 +5,6 @@ dojo._base.json
 
 :Status: Draft
 :Version: 1.0
-:Authors: Marcus Reimann
-:Developers: Bryan Forbes, ilia, Bill Keese, Heng Liu, Dustin Machi, owen, psowden, Adam Peller, Neil Roberts, Alex Russell, Dylan Schiemann, Kris Zyp
 :Available: since V?
 
 .. contents::
