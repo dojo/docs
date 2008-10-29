@@ -24,3 +24,4 @@ Documentation guidelines
 ========================
 
 * `How to become a dojo doc ninja <howto>`_
+* `ToDo list <todo>`_
