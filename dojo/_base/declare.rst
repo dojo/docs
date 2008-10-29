@@ -5,8 +5,6 @@ dojo._base.declare
 
 :Status: Draft
 :Version: 1.2
-:Authors: Marcus Reimann
-:Developers: Adam Peller, Neil Roberts, Alex Russell, Dylan Schiemann, sjmiles
 :Available: since V?
 
 .. contents::
