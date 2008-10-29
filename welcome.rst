@@ -11,9 +11,9 @@ Welcome to the official documentation pages of the Dojo Toolkit
    :class: logowelcome;
 
 
-==================
-`Welcome <about>`_
-==================
+================
+`About <about>`_
+================
 
 * `All about Dojo Toolkits new official documentation pages <about>`_
 
