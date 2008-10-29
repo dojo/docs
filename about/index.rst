@@ -3,9 +3,6 @@
 About the new Docu Wiki
 =======================
 
-:Status: Draft
-:Version: 1.0
-
 .. contents::
    :depth: 2
 
