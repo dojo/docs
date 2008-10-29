@@ -43,37 +43,16 @@ Top priority: Dojo Base
 
 * `dojo.connectPublisher <dojo/connectPublisher>`_
 
+* `dojo.Deferred <dojo/Deferred>`_
+
+  needed: Introduction, Usage, Examples
+
+* `dojo._base.event <dojo/_base/event>`_
+
+  needed: explain DOM event listener in detail
+
+
 ----
-
-
-
-  * `dojo._base.declare <dojo/_base/declare>`_
-
-    Defining Classes
-
-    * `dojo.declare <dojo/declare>`_
-
-      Creates a constructor using a compact notation for inheritance and prototype extension
-
-  * `dojo._base.Deferred <dojo/_base/Deferred>`_
-
-    Managing Callbacks
-
-    * `dojo.Deferred <dojo/Deferred>`_
-
-      Communication between threads
-
-  * `dojo._base.event <dojo/_base/event>`_
-
-    DOM Events
-
-  * `dojo._base.fx <dojo/_base/fx>`_
-
-    Dojo animation effects
-
-    * `dojo.animateProperty <dojo/animateProperty>`_
-
-      A very useful method for animating CSS properties
 
   * `dojo._base.html <dojo/_base/html>`_
 
