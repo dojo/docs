@@ -6,6 +6,10 @@ Dojo Toolkit Community
 .. contents::
    :depth: 2
 
+.. image:: http://media.dojocampus.org/images/docs/logodojocdocssmall.png
+   :alt: Dojo Documentation
+   :class: logowelcome;
+
 
 =================
 Behind the scenes
