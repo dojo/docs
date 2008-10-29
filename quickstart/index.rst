@@ -7,12 +7,12 @@ Quickstart
 .. contents::
     :depth: 2
 
+If you've never used Dojo before, it is recommended you read the following sections to ensure you are 'up and running' before proceeding further into the Guides. These sections provide fundamental Dojo practices, and are invaluable in ensuring a quick start to Dojo.
+
 
 ============
 Installation
 ============
-
-If you've never used Dojo before, it is recommended you read the following sections to ensure you are 'up and running' before proceeding further into the Guides. These sections provide fundamental Dojo practices, and are invaluable in ensuring a quick start to Dojo:
 
 * `How to Install the Dojo Toolkit <quickstart/install>`_
 * `Functions used *everywhere* <quickstart/dojo-basics>`_
