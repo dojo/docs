@@ -10,7 +10,7 @@ dojo.setObject
 .. contents::
    :depth: 2
 
-TODO: short summary of the component/class/method
+Set a property from a dot-separated string, such as "A.B.C".
 
 
 ============
