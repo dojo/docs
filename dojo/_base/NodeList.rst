@@ -5,13 +5,10 @@ dojo._base.NodeList
 
 :Status: Draft
 :Version: 1.0
-:Authors: Marcus Reimann
-:Developers: James Burke, Peter Higgins, Eugene Lazutkin, Adam Peller, Neil Roberts, Alex Russell, Dylan Schiemann
 :Available: since V?
 
 .. contents::
     :depth: 2
-
 
 **dojo._base.NodeList** contains syntactic sugar for chaining, common iteration operations, animation, and node manipulation.
 
