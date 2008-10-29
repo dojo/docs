@@ -27,7 +27,7 @@ Features
 
   Call functions after the DOM has finished loading and widgets declared in markup have been instantiated
 
-* `dojo.addOnUnload <dojo/addOnLoad>`_
+* `dojo.addOnUnload <dojo/addOnUnload>`_
 
   Call functions when the page unloads
 
