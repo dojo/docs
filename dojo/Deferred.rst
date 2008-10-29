@@ -6,14 +6,13 @@ dojo.Deferred
 
 :Status: Draft
 :Version: 1.2
-:Authors: ?--
-:Developers: James Burke, Peter Higgins, Dustin Machi, Neil Roberts, Alex Russell, Dylan Schiemann
 :Available: since V?
 
 .. contents::
     :depth: 2
 
 dojo.Deferred manages the communication between asynchronous threads (Callbacks). dojo.Deferred encapsulates a sequence of callbacks in response to a value that may not yet be available.
+
 
 ============
 Introduction
