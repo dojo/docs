@@ -4,7 +4,7 @@ Welcome to the official documentation pages of the Dojo Toolkit
 ===============================================================
 
 .. contents::
-    :depth: 3
+    :depth: 2
 
 .. image:: http://media.dojocampus.org/images/docs/logodojocdocssmall.png
    :alt: Dojo Documentation
