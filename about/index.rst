@@ -22,6 +22,15 @@ Search the docs
 Use the search box, it is very helpful and usually brings you to the page you need. If you are for example looking for "dojo.data.ItemFileReadStore" simply enter "itemfilereadstore".
 
 
+========================
+Documentation guidelines
+========================
+
+* `How to become a dojo doc ninja <howto>`_
+* `Behind the scenes <internals>`_
+* `A big "thank you"! <thank-you>`_
+
+
 ======================================
 Migration of the old Dojo Toolkit book
 ======================================
