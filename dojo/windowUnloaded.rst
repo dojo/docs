@@ -10,7 +10,7 @@ dojo.windowsUnloaded
 .. contents::
    :depth: 2
 
-TODO: short summary of the component/class/method
+Signal fired by impending window destruction.
 
 
 ============
