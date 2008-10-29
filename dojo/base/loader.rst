@@ -5,7 +5,7 @@ dojo._base.loader
 
 :Status: Draft
 :Version: 1.0
-:Available: since V?
+:Available: since V0.8
 
 .. contents::
     :depth: 2
