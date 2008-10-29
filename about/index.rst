@@ -29,4 +29,4 @@ Use the search box, it is very helpful and usually brings you to the page you ne
 Migration of the old Dojo Toolkit book
 ======================================
 
-To successfully migrate the current book, use your dojotoolkit.org account to log in. Also take a look at the `book outline <bookmigration>`_ and put your name behind the section you can help to migrate.
+To successfully migrate the old book, use your dojotoolkit.org account to log in. Also take a look at the `book outline <bookmigration>`_ and put your name behind the section you can help to migrate.
