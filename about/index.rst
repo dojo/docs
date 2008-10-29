@@ -1,7 +1,7 @@
 #format dojo_rst
 
-About docs.dojocampus.org
-=========================
+About the new Docu Wiki
+=======================
 
 :Status: Draft
 :Version: 1.0
