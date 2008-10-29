@@ -6,8 +6,6 @@ dojo.query
 
 :Status: Draft
 :Version: 1.0
-:Authors: Nikolai Onken, Craig Riecke, Marcus Reimann
-:Developers: ?-
 :Available: since V?
 
 .. contents::
