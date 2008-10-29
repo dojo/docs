@@ -67,48 +67,17 @@ Top priority: Dojo Base
 
 * `dojo.isAlien <dojo/isAlien>`_
 
+* `dojo.doc <dojo/doc>`_
+
+* `dojo.body <dojo/body>`_
+
+* `dojo.setContext <dojo/setContext>`_
+
+* `dojo.withGlobal <dojo/withGlobal>`_
+
+* `dojo.withDoc <dojo/withDoc>`_
+
 ----
-
-  * `dojo._base.NodeList <dojo/_base/NodeList>`_
-
-    Syntactic sugar for chaining, common iteration operations, animation, and node manipulation
-
-    * `dojo.NodeList <dojo/NodeList>`_
-
-      A class to handle a list of DOM nodes
-
-  * `dojo._base.query <dojo/_base/query>`_
-
-    A relatively full-featured CSS3 query library
-
-    * `dojo.query <dojo/query>`_
-
-      The swiss army knife of DOM node manipulation in Dojo
-
-  * `dojo._base.window <dojo/_base/window>`_
-
-    Functions for dealing with the document-wide DOM and context related stuff
-
-    * `dojo.doc <dojo/doc>`_
-
-      Alias for the current document
-
-    * `dojo.body <dojo/body>`_
-
-      Return the body element of the document
-
-    * `dojo.setContext <dojo/setContext>`_
-
-      Changes the behavior of many core Dojo functions that deal with namespace and DOM lookup
-
-    * `dojo.withGlobal <dojo/withGlobal>`_
-
-      Call callback with globalObject as dojo.global and globalObject.document as dojo.doc
-
-    * `dojo.withDoc <dojo/withDoc>`_
-
-      Call callback with documentObject as dojo.doc
-
   * `dojo._base.xhr <dojo/_base/xhr>`_
 
     AJAX I/O transports and utility methods
