@@ -5,8 +5,6 @@ dojo._base.Deferred
 
 :Status: Draft
 :Version: 1.2
-:Authors: Marcus Reimann
-:Developers: James Burke, Peter Higgins, Dustin Machi, Neil Roberts, Alex Russell, Dylan Schiemann
 :Available: since V?
 
 .. contents::
