@@ -15,7 +15,11 @@ Top priority: Dojo Base
 
 * `dojo.attr <dojo/attr>`_
 
+  needed: full page
+
 * `dojo.exists <dojo/exists>`_
+
+  needed: full page
 
 * `dojo.registerModulePath <dojo/registerModulePath>`_
 
@@ -23,11 +27,15 @@ Top priority: Dojo Base
 
 * `dojo.setObject <dojo/setObject>`_
 
+  needed: full page
+
 * `dojo.version <dojo/version>`_
 
   needed: Examples
 
 * `dojo.windowUnloaded <dojo/windowUnloaded>`_
+
+  needed: full page
 
 * `dojo._base.Color <dojo/_base/Color>`_
 
@@ -35,13 +43,23 @@ Top priority: Dojo Base
 
 * `dojo.disconnect <dojo/disconnect>`_
 
+  needed: full page
+
 * `dojo.subscribe <dojo/subscribe>`_
+
+  needed: full page
 
 * `dojo.unsubscribe <dojo/unsubscribe>`_
 
+  needed: full page
+
 * `dojo.publish <dojo/publish>`_
 
+  needed: full page
+
 * `dojo.connectPublisher <dojo/connectPublisher>`_
+
+  needed: full page
 
 * `dojo.Deferred <dojo/Deferred>`_
 
@@ -53,46 +71,95 @@ Top priority: Dojo Base
 
 * `dojo.fromJson <dojo/fromJson>`_
 
+  needed: full page
+
 * `dojo.toJson <dojo/toJson>`_
+
+  needed: full page
 
 * `dojo.isString <dojo/isString>`_
 
+  needed: full page
+
 * `dojo.isArray <dojo/isArray>`_
+
+  needed: full page
 
 * `dojo.isFunction <dojo/isFunction>`_
 
+  needed: full page
+
 * `dojo.isObject <dojo/isObject>`_
+
+  needed: full page
 
 * `dojo.isArrayLike <dojo/isArrayLike>`_
 
+  needed: full page
+
 * `dojo.isAlien <dojo/isAlien>`_
+
+  needed: full page
 
 * `dojo.doc <dojo/doc>`_
 
+  needed: full page
+
 * `dojo.body <dojo/body>`_
+
+  needed: full page
 
 * `dojo.setContext <dojo/setContext>`_
 
+  needed: full page
+
 * `dojo.withGlobal <dojo/withGlobal>`_
+
+  needed: full page
 
 * `dojo.withDoc <dojo/withDoc>`_
 
-----
-  * `dojo._base.xhr <dojo/_base/xhr>`_
+  needed: full page
 
-    AJAX I/O transports and utility methods
+* `dojo._base.xhr <dojo/_base/xhr>`_
 
-    * `dojo.formToJson <dojo/formToJson>`_
-    * `dojo.formToObject <dojo/formToObject>`_
-    * `dojo.formToQuery <dojo/formToQuery>`_
-    * `dojo.objectToQuery <dojo/objectToQuery>`_
-    * `dojo.queryToObject <dojo/queryToObject>`_
-    * `dojo.xhrDelete <dojo/xhrDelete>`_
-    * `dojo.xhrGet <dojo/xhrGet>`_
-    * `dojo.rawXhrPost <dojo/rawXhrPost>`_
-    * `dojo.rawXhrPut <dojo/rawXhrPut>`_
+  Should we move the current example to another page?
 
+* `dojo.formToJson <dojo/formToJson>`_
 
+  needed: full page
+
+* `dojo.formToObject <dojo/formToObject>`_
+
+  needed: full page
+
+* `dojo.formToQuery <dojo/formToQuery>`_
+
+  needed: full page
+
+* `dojo.objectToQuery <dojo/objectToQuery>`_
+
+  needed: full page
+
+* `dojo.queryToObject <dojo/queryToObject>`_
+
+  needed: full page
+
+* `dojo.xhrDelete <dojo/xhrDelete>`_
+
+  needed: full page
+
+* `dojo.xhrGet <dojo/xhrGet>`_
+
+  needed: full page
+
+* `dojo.rawXhrPost <dojo/rawXhrPost>`_
+
+  needed: full page
+
+* `dojo.rawXhrPut <dojo/rawXhrPut>`_
+
+  needed: full page
 
 
 =====================
