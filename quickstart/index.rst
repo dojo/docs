@@ -15,7 +15,6 @@ Installation
 ============
 
 * `How to Install the Dojo Toolkit <quickstart/install>`_
-* `Functions used *everywhere* <quickstart/dojo-basics>`_
 
 
 =========
@@ -24,6 +23,7 @@ Tutorials
 
 Dojo is a very extensive library of code, most of which is optional. Here are some "Getting Started" guides that show common uses of technologies provided by the Toolkit. You can learn more about individual components in each sub-project (dojo, dijit, and dojox) in later sections, as these only skim the surface of HOWTO do things:
 
+* `Functions used *everywhere* <quickstart/dojo-basics>`_
 * `UI Development <quickstart/interfacedesign>`_
 * `Back buttons <quickstart/back>`_
 * `AJAX <quickstart/ajax>`_
