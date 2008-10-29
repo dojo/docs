@@ -51,60 +51,23 @@ Top priority: Dojo Base
 
   needed: explain DOM event listener in detail
 
+* `dojo.fromJson <dojo/fromJson>`_
+
+* `dojo.toJson <dojo/toJson>`_
+
+* `dojo.isString <dojo/isString>`_
+
+* `dojo.isArray <dojo/isArray>`_
+
+* `dojo.isFunction <dojo/isFunction>`_
+
+* `dojo.isObject <dojo/isObject>`_
+
+* `dojo.isArrayLike <dojo/isArrayLike>`_
+
+* `dojo.isAlien <dojo/isAlien>`_
 
 ----
-
-  * `dojo._base.html <dojo/_base/html>`_
-
-    Basic DOM handling functions
-
-    * `dojo.byId <dojo/byId>`_
-
-      Select a DOM node by 'id'
-
-    * `dojo.style <dojo/style>`_
-
-      A getter/setter for styles on a DOM node
-
-  * `dojo._base.json <dojo/_base/json>`_
-
-    JSON helpers
-
-    * `dojo.fromJson <dojo/fromJson>`_
-
-      Parses a JSON string to return a JavaScript object
-
-    * `dojo.toJson <dojo/toJson>`_
-
-      Returns a JSON serialization of an object
-
-  * `dojo._base.lang <dojo/_base/lang>`_
-
-    Support for Polymorphism
-
-    * `dojo.isString <dojo/isString>`_
-
-      Checks if the parameter is a String
-
-    * `dojo.isArray <dojo/isArray>`_
-
-      Checks if the parameter is an Array
-
-    * `dojo.isFunction <dojo/isFunction>`_
-
-      Checks if the parameter is a Function
-
-    * `dojo.isObject <dojo/isObject>`_
-
-      Checks if the parameter is a Object
-
-    * `dojo.isArrayLike <dojo/isArrayLike>`_
-
-      Checks if the parameter is like an Array
-
-    * `dojo.isAlien <dojo/isAlien>`_
-
-      Checks if the parameter is a built-in function
 
   * `dojo._base.NodeList <dojo/_base/NodeList>`_
 
