@@ -75,4 +75,4 @@ This example demonstrates how a `javascript:` link will trigger a `dojo.addOnUnl
 See also
 ========
 
-`dojo.addOnWindowUnload <dojo/addOnWindowUnload>`_
+* `dojo.addOnWindowUnload <dojo/addOnWindowUnload>`_
