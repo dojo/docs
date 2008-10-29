@@ -6,8 +6,6 @@ dojo._base.event
 
 :Status: Draft
 :Version: 1.2
-:Authors: Marcus Reimann
-:Developers: James Burke, Bill Keese, Adam Peller, sjmiles
 :Available: since V0.3
 
 .. contents::
