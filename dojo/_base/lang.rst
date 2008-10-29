@@ -5,8 +5,6 @@ dojo._base.lang
 
 :Status: Draft
 :Version: 1.0
-:Authors: Marcus Reimann
-:Developers: James Burke, Eugene Lazutkin, Adam Peller, Neil Roberts, Alex Russell, sjmiles
 :Available: since V?
 
 .. contents::
