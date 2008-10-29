@@ -5,8 +5,6 @@ dojo._base.fx
 
 :Status: Draft
 :Version: 1.0
-:Authors: Marcus Reimann
-:Developers: ?--
 :Available: since V?
 
 .. contents::
