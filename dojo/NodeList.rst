@@ -6,8 +6,6 @@ dojo.NodeList
 
 :Status: Draft
 :Version: 1.0
-:Authors: Peter Higgins
-:Developers: James Burke, Peter Higgins, Eugene Lazutkin, Adam Peller, Neil Roberts, Alex Russell, Dylan Schiemann
 :Available: since V?
 
 .. contents::
