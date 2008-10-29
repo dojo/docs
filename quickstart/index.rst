@@ -4,8 +4,6 @@
 Quickstart
 ==========
 
-:Status: Draft
-
 .. contents::
     :depth: 2
 
