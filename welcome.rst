@@ -32,18 +32,16 @@ The documentation is aiming to cover all dojo modules delivered within a release
 
 * `Installation instructions & Tutorials <quickstart>`_
 
+
 ===========================
 `Reference Guide <manual>`_
 ===========================
 
 * `Manual for Dojo, Dijit, DojoX with more than nnn examples <manual>`_
 
-----
 
-========================
-Documentation guidelines
-========================
+=========================
+`Community <community>`_
+=========================
 
-* `How to become a dojo doc ninja <howto>`_
-* `Behind the scenes <internals>`_
-* `A big "thank you"! <thank-you>`_
+* `Behind the scenes, Documentation guidelines <community>`_
