@@ -6,6 +6,10 @@ About the new Docu Wiki
 .. contents::
    :depth: 2
 
+.. image:: http://media.dojocampus.org/images/docs/logodojocdocssmall.png
+   :alt: Dojo Documentation
+   :class: logowelcome;
+
 Welcome to Dojo Toolkits new official documentation pages.
 
 The documentation is aiming to cover all dojo modules delivered within a release. 
