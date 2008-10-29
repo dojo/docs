@@ -15,7 +15,7 @@ The documentation is aiming to cover all dojo modules delivered within a release
 
 This is an open effort for anyone interested to join. If you are missing things or have ideas, don't hesitate to contact the documentation team or - better - read the Documentation guidelines and start to insert your own bits of knowledge.
 
-  Please read the `documentation howto <howto>`_. before starting writing docs
+Please read the `documentation howto <howto>`_. before starting writing docs
 
 
 ===============
