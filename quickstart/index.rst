@@ -7,6 +7,10 @@ Quickstart
 .. contents::
     :depth: 2
 
+.. image:: http://media.dojocampus.org/images/docs/logodojocdocssmall.png
+   :alt: Dojo Documentation
+   :class: logowelcome;
+
 If you've never used Dojo before, it is recommended you read the following sections to ensure you are 'up and running' before proceeding further into the Guides. These sections provide fundamental Dojo practices, and are invaluable in ensuring a quick start to Dojo.
 
 
