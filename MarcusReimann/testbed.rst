@@ -12,17 +12,29 @@ test bed
 
 This is a test page.
 
+====================
+`Welcome <welcome>`_
+====================
 
-==========
-QuickStart
-==========
-
-
-=========
-Tutorials
-=========
+* All about Dojo Toolkits new official documentation pages
 
 
-===============
-Reference Guide
-===============
+==========================
+`QuickStart <quickstart>`_
+==========================
+
+* Installation instructions & Tutorials
+
+
+===========================
+`Reference Guide <manual>`_
+===========================
+
+* Manual for Dojo, Dijit, DojoX with more than 100 examples
+
+
+=========================
+`Community <community>`_
+=========================
+
+* Behind the scenes, Documentation guidelines
