@@ -31,11 +31,9 @@ Dialog via markup
 The first example creates a Dialog via markup from an existing DOM node:
 
 .. cv-compound::
-
-  A dialog created via markup. 
   
   .. cv:: html
-    :label: First let's write up some simple HTML code because you need to define the place where your Dialog sdhould be created.
+    :label: A dialog created via markup. First let's write up some simple HTML code because you need to define the place where your Dialog sdhould be created.
 
     <div id="dialogOne" dojoType="dijit.Dialog" title="My Dialog Title">
         <div dojoType="dijit.layout.TabContainer" style="width: 200px; height: 300px;">
