@@ -10,14 +10,45 @@ dijit.layout.StackContainer
 .. contents::
     :depth: 2
 
-A container that has multiple children, but shows only one child at a time (like looking at the pages in a book one by one). This container is good for wizards, slide shows, and long lists or text blocks.
+A container that has multiple children, but shows only one child at a time (like looking at the pages in a book one by one). 
+
+
+============
+Introduction
+============
+
+This container is good for wizards, slide shows, and long lists or text blocks.
+
 
 =====
 Usage
 =====
 
+.. code-block :: javascript
+ :linenos:
+
+ <script type="text/javascript">
+   var foo = new dijit.layout.StackContainer(params, srcNodeRef);
+ </script>
+
+parameters:
+  ==========  ===============  ===========
+  parameter   type             description
+  ==========  ===============  ===========
+  params      object           Optional.
+  srcNodeRef  DomNode|String   
+  ==========  ===============  ===========
+
+
+
 StackContainer's current pane can be set via the selectChild() method, or it can be controlled from a StackController. StackController
 is a controller not in the MVC send of the word, but like a TV remote control... it's sets which page the StackController is tuned to.
+
+StackContainer publishes topics 
+
+* [widgetId]-**addChild**, 
+* [widgetId]-**removeChild**, and 
+* [widgetId]-**selectChild**.
 
 
 ========
