@@ -35,7 +35,6 @@ The first example creates a Dialog via markup from an existing DOM node:
   A dialog created via markup. First let's write up some simple HTML code because you need to define the place where your Dialog sdhould be created.
   
   .. cv:: html
-    :label: When pressing this button the dialog will popup 
 
     <div id="dialogOne" dojoType="dijit.Dialog" title="My Dialog Title">
         <div dojoType="dijit.layout.TabContainer" style="width: 200px; height: 300px;">
@@ -43,6 +42,7 @@ The first example creates a Dialog via markup from an existing DOM node:
             <div dojoType="dijit.layout.ContentPane" title="boo">Hi, I'm Tab "boo"</div>
         </div>
     </div>
+    <p>When pressing this button the dialog will popup:</p>
     <button id="buttonOne" dojoType="dijit.form.Button">Show me!
         <script type="dojo/method" event="onClick" args="evt">
             // Show the Dialog:
