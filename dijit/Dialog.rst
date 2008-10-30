@@ -32,7 +32,7 @@ The first example creates a Dialog via markup from an existing DOM node:
 
 .. cv-compound::
 
-  A dialog created via markup. First let's write up some simple HTML code because you need to define the place where your Dialog sdhould be created.
+  :label: A dialog created via markup. First let's write up some simple HTML code because you need to define the place where your Dialog sdhould be created.
   
   .. cv:: html
 
