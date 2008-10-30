@@ -90,14 +90,14 @@ You can change an icon of a Button using its iconClass attribute. Following exam
 
     var toggled = false;
     dojo.connect(dijit.byId("toggleButton"), "onClick", function(){
-      dijit.byId("toggleButton").attr("iconClass", toggled ? "dijitEditorIconCut" : "dijitEditorIconPaste");
+      dijit.byId("toggleButton").attr("iconClass", toggled ? "dijitEditorIcon dijitEditorIconCut" : "dijitEditorIcon dijitEditorIconPaste");
       toggled != toggled;
     });
     </script>
 
   .. cv:: html
 
-    <button dojoType="dijit.form.Button" id="toggleButton" iconClass="dijitEditorIconCut">Click me!</button>
+    <button dojoType="dijit.form.Button" id="toggleButton" iconClass="dijitEditorIcon dijitEditorIconCut">Click me!</button>
 
 
 =============
