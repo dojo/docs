@@ -46,6 +46,18 @@ Set the current pane
 StackContainer's current pane can be set via the selectChild() method, or it can be controlled from a StackController. StackController
 is a controller not in the MVC send of the word, but like a TV remote control... it's sets which page the StackController is tuned to.
 
+Retrieving the currently selected Container
+-------------------------------------------
+
+To retrieve the currently selected container use following attribute
+
+.. code-block :: javascript
+ :linenos:
+
+  var selectedContainer = yourContainer.selectedChildWidget
+
+*yourContainer* has to be a reference (for example: dijit.byId("myStackContainer")) to the ContainerWidget, meaning the StackContainer or any widgets inheriting from StackContainer
+
 Set the size of the pane
 ------------------------
 
@@ -170,19 +182,3 @@ Navigate into page                            Tab
 Navigate to next page                         Ctrl + page down, ctrl + tab (except IE7)
 Navigate to previous page                     Ctrl + page up
 ==========================================    =================================================
-
-===
-FAQ
-===
-
-Retrieving the currently selected Container
--------------------------------------------
-
-To retrieve the currently selected container use following attribute
-
-.. code-block :: javascript
- :linenos:
-
-  var selectedContainer = yourContainer.selectedChildWidget
-
-*yourContainer* has to be a reference (for example: dijit.byId("myStackContainer")) to the ContainerWidget, meaning the StackContainer or any widgets inheriting from StackContainer
