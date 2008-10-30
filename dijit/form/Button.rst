@@ -76,6 +76,29 @@ Buttons can have icons and labels, and sometimes they just display an icon, but 
 
     <button dojoType="dijit.form.Button" iconClass="dijitEditorIcon dijitEditorIconCut" showLabel="false">cut</button>
 
+Change the icon
+---------------
+
+You can change an icon of a Button using its iconClass attribute. Following example toggles the icon if the button:
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+    dojo.require("dijit.form.Button");
+
+    var toggled = false;
+    dojo.connect(dojo.byId("toggleButton"), "onClick", function(){
+      dojo.byId("toggleButton").attr("iconClass" toggled ? "dijitEditorIconCut" : "dijitEditorIconPaste");
+      toggled != toggled;
+    });
+    </script>
+
+  .. cv:: html
+
+    <button dojoType="dijit.form.Button" id="toggleButton" iconClass="dijitEditorIconCut">Click me!</button>
+
 
 =============
 Accessibility
