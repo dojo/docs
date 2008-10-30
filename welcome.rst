@@ -18,9 +18,9 @@ Welcome to the official documentation pages of the Dojo Toolkit
 * `All about Dojo Toolkits new official documentation pages <about>`_
 
 
-==========================
-`QuickStart <quickstart>`_
-==========================
+===============================
+`Getting started <quickstart>`_
+===============================
 
 * `Installation instructions & Tutorials <quickstart>`_
 
