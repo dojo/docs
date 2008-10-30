@@ -40,9 +40,19 @@ parameters:
   ==========  ===============  ===========
 
 
+Set the current pane
+--------------------
 
 StackContainer's current pane can be set via the selectChild() method, or it can be controlled from a StackController. StackController
 is a controller not in the MVC send of the word, but like a TV remote control... it's sets which page the StackController is tuned to.
+
+Set the size of the pane
+------------------------
+
+doLayout="false" sets the size of the StackContainer to the size of his child panes.
+
+Published topics
+----------------
 
 StackContainer publishes topics 
 
