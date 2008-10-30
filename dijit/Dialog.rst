@@ -70,8 +70,8 @@ Now lets create a dialog programmatically, and change the dialog's content dynam
   A programmatically created dialog with no content. First lets write up some simple HTML code because you need to define the place where your Dialog dhould be created.
   
   .. cv:: html
-    :label: When pressing this button the dialog will popup. Notice this time there is no DOM node with content for the dialog 
-
+    
+    <p>When pressing this button the dialog will popup. Notice this time there is no DOM node with content for the dialog:</p>
     <button id="buttonTwo" dojoType="dijit.form.Button" onClick="showDialogTwo();">Show me!</button>
 
   .. cv:: javascript
