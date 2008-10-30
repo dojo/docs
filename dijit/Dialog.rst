@@ -216,8 +216,9 @@ To prevent the user from dismissing the dialog if there are errors in the form, 
 
 Sizing the Dialog
 -----------------
+
 A dialog by default sizes itself according to it's content, just like a plain <div>.
-If you want a scroll bar on a dialog, then you need to add width/height to a div *inside* the dialog, like this:
+If you want a scrollbar on a dialog, then you need to add width/height to a div *inside* the dialog, like this:
 
 .. cv-compound::
 
@@ -241,7 +242,7 @@ If you want a scroll bar on a dialog, then you need to add width/height to a div
         </div>
     </div>
 
-    <p>When pressing this button the dialog will popup (with a scrollbar:</p>
+    <p>When pressing this button the dialog will popup (with a scrollbar):</p>
     <button dojoType="dijit.form.Button" onClick="dijit.byId('sized').show();">Show me!</button>
 
 
