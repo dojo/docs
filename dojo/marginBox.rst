@@ -1,6 +1,6 @@
 #format dojo_rst
 
-dojo.modulename
+dojo.marginBox
 ===============
 
 :Status: Draft
