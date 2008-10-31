@@ -153,25 +153,25 @@ Question 7:  Do all datastores have to use the format of data used by ItemFileRe
 No. A store's internal data format can be whatever is most efficient for that store to work with. For example, dojox.data.XmlStore's input data format is XML, not JSON. The API is intended to adapt over new as well as existing, data services on the web and expose data items on a common fashion, regardless of the actual backing transport format.
 
 ==============================================================================================================
-Question 8:  I want to save my data with ItemFileWriteStore, but it doesn't send the data to the server.  Why?
+Question 8:  I want to save my data with ItemFileWriteStore, but it doesn't send the data to the server. Why?
 ==============================================================================================================
 
-Because it doesn't know how to send it to your specific server/service implementation.  dojo.data.ItemFileWriteStore's default save behavior is to commit data into internal memory structures only.  It provivers over-ridable hook functions that users must provide in order to send data to an external service.  See the `Write Section <dojo/data/ItemFileWriteStore#the-write-api>`_ of the ItemFileWriteStore docs.
+Because it doesn't know how to send it to your specific server/service implementation. dojo.data.ItemFileWriteStore's default save behavior is to commit data into internal memory structures only. It provides over-ridable hook functions that users must provide in order to send data to an external service. See the `Write Section <dojo/data/ItemFileWriteStore#the-write-api>`_ of the ItemFileWriteStore docs.
 
 =================================================================================================================================================================================
-Question 9:  In one of my items in ItemFileReadStore I defined an attribute value as a JavaScript object.  When I access it through store.getValue(), it has been modified.  Why?
+Question 9:  In one of my items in ItemFileReadStore I defined an attribute value as a JavaScript object. When I access it through store.getValue(), it has been modified. Why?
 =================================================================================================================================================================================
 
-This is because child objects (non-atomic values such as int, string, etc), are automatically treated as data store items by dojo.data.ItemFileReadStore.  So, when it processes that attribute, it updates it into ItemFileReadStore internal format and therefore
-attributes on it should also be accessed through store functions, such as getValue().  This is easily detectable by using the ItemFileReadStore's isItem() function.
+This is because child objects (non-atomic values such as int, string, etc), are automatically treated as data store items by dojo.data.ItemFileReadStore. So, when it processes that attribute, it updates it into ItemFileReadStore internal format and therefore
+attributes on it should also be accessed through store functions, such as getValue(). This is easily detectable by using the ItemFileReadStore's isItem() function.
 
-If you want to prevent ItemFileReadStore from converting Object types into data store items, you will need to use a custom type map, and define your object as a specific type that can be serialized to and from JSON using the custom type formatters.  See the `custom types <dojo/data/ItemFileReadStore#items-with-custom-types>`_ documentation for more details.
+If you want to prevent ItemFileReadStore from converting Object types into data store items, you will need to use a custom type map, and define your object as a specific type that can be serialized to and from JSON using the custom type formatters. See the `custom types <dojo/data/ItemFileReadStore#items-with-custom-types>`_ documentation for more details.
 
 ==================================================================================================================================================================================================================================
-Question 10:  In one of my items in ItemFileReadStore I defined an attribute value as a JavaScript object, but I didn't set an identifier.  The store blows up with an error about no identifier when fetching.  Why does it care? 
+Question 10:  In one of my items in ItemFileReadStore I defined an attribute value as a JavaScript object, but I didn't set an identifier. The store blows up with an error about no identifier when fetching. Why does it care? 
 ==================================================================================================================================================================================================================================
 
-This question is easier to understand with a bit of sample ItemFile*Store input.  Consider the following:
+This question is easier to understand with a bit of sample ItemFile*Store input. Consider the following:
 
 .. code-block :: javascript
 
@@ -188,14 +188,13 @@ This question is easier to understand with a bit of sample ItemFile*Store input.
     ]
   }
 
-Note above that the child object nested off someValue doesn't have a *myid* attribute.  Why does this cause ItemFile*Store an issue.  This is effectively answered by question 9 on this page.  This is because child objects (non-atomic values such as int, string, etc), are automatically treated as data store items by dojo.data.ItemFileReadStore.
+Note above that the child object nested off someValue doesn't have a *myid* attribute. Why does this cause ItemFile*Store an issue. This is effectively answered by question 9 on this page. This is because child objects (non-atomic values such as int, string, etc), are automatically treated as data store items by dojo.data.ItemFileReadStore.
 
-Because it is treated as a datastore item, it must have an identifier to comply with the needs of the `dojo.data.api.Identity <dojo/data/api/Identity>`_ specification.  Identity requires that all items be able to be uniquely looked up by an identifier.  It does not state in a hierarchy of items only root items can be looked up by an identifier.  Therefore, for ItemFile*Store, if you define the *identifier* option of the data set, you must make sure that all child items have unqiue identifiers as well so the Identity API implementation can be satisfied.  
+Because it is treated as a datastore item, it must have an identifier to comply with the needs of the `dojo.data.api.Identity <dojo/data/api/Identity>`_ specification. Identity requires that all items be able to be uniquely looked up by an identifier. It does not state in a hierarchy of items only root items can be looked up by an identifier. Therefore, for ItemFile*Store, if you define the *identifier* option of the data set, you must make sure that all child items have unqiue identifiers as well so the Identity API implementation can be satisfied.
 
-This is also necessary for support for widgets like dijit.Tree, when write support is required.  It needs the capability of looking up an item from a store by its identifier, regardless of its position (root item or child of another item).  Effectively, if an object in a datastore is identifiable as a datastore item (store.isItem(possibleItem)), and that store implements the Identity API, then that item must return a value for 
-store.getIdentity(possibleItem).  In other words, Hierarchy is irrelevant to whether or not an item has an identifier.  All data store items in an Identity implementing store must return a value that can then be used to look the item back up later.
+This is also necessary for support for widgets like dijit.Tree, when write support is required. It needs the capability of looking up an item from a store by its identifier, regardless of its position (root item or child of another item). Effectively, if an object in a datastore is identifiable as a datastore item (store.isItem(possibleItem)), and that store implements the Identity API, then that item must return a value for store.getIdentity(possibleItem). In other words, Hierarchy is irrelevant to whether or not an item has an identifier. All data store items in an Identity implementing store must return a value that can then be used to look the item back up later.
 
-You have options with ItemFile*Store in how it handles nested/child objects.  They are as follows:
+You have options with ItemFile*Store in how it handles nested/child objects. They are as follows:
 
   * Apply identifier attribute that is unique to ALL JavaScript objects in the data you are passing as data store items.
 
