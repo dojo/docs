@@ -161,6 +161,14 @@ Top priority: Dojo Base
 
   needed: full page
 
+* `dojo.marginBox <dojo/marginBox>`_ 
+
+  needed: examples
+
+* `dojo.contentBox <dojo/contentBox>`_
+
+  needed: examples
+
 
 =====================
 Priority 2: Dojo Core
