@@ -17,7 +17,9 @@ A getter/setter for styles on a DOM node.
 Introduction
 ============
 
-Accesses styles on a node. If 2 arguments are passed, acts as a getter. If 3 arguments are passed, acts as a setter.
+Accesses styles on a node. If 2 arguments are passed, acts as a getter. If 3 arguments are passed, acts as a setter. 
+
+See the Tips section below for caveats on getting style information, like when using a compound style value (like background or border), and getting node dimensions.
 
 
 =====
@@ -238,6 +240,12 @@ Tips
   for example: "font-size" becomes "fontSize", and so on
 
 * You will get a "TypeError: n is null", if you call dojo.style() on a non existent DOM node. It's more safe to use dojo.query("#a").style("b","c"); 
+
+* dojo.style uses getComputedStyle to get the style value, so the value will be a calculated value, not just the immediate node.style value.
+
+* Getting the value for a compound style value (like background or border): you need to ask for specific properties, like bottomBorderWidth. Getting the "background" compound value is not reflected in the way you might think when using getComputedStyle.
+
+* For getting a node's dimensions, use `dojo.marginBox <dojo/marginBox>`_ or `dojo.contentBox <dojo/contentBox>`_: the .width and .style properties are not accurate from getComputedStyle.
 
 
 ========
