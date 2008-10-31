@@ -184,6 +184,14 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 
       A getter/setter for styles on a DOM node
 
+    * `dojo.marginBox <dojo/marginBox>`_
+
+      Getter/setter for the margin-box of node
+
+    * `dojo.contentBox <dojo/contentBox>`_
+
+      Getter/setter for the content-box of node
+
   * `dojo._base.json <dojo/_base/json>`_
 
     JSON helpers
