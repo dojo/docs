@@ -27,6 +27,14 @@ On top of that several browsers deal with attribute setting and getting in diffe
 
 for instance won't work in IE. 
 
+In Dojo you can do the same thing workin gin all browsers using following method
+
+
+.. code-block :: javascript
+ :linenos:
+
+  dojo.setAttribute(node, "style", "border:1px solid #ff0033;");
+
 ========
 Examples
 ========
@@ -129,3 +137,9 @@ The following example will set the "style" attribute of the given dom node. It i
 
     <button dojoType="dijit.form.Button" id="buttonFour">Change style</button>
     <div id="testNodeThree">Hi, change my style</div>
+
+========
+See also
+========
+
+* `DOM Attributes and The Dojo Toolkit 1.2 <http://www.sitepen.com/blog/2008/10/23/dom-attributes-and-the-dojo-toolkit-12/>`_
