@@ -115,5 +115,5 @@ The following example will set the "style" attribute of the given dom node. It i
 
   .. cv:: html
 
-    <button dojoType="dijit.form.Button" id="buttonThree">Change style</button>
+    <button dojoType="dijit.form.Button" id="buttonFour">Change style</button>
     <div id="testNodeThree">Hi, try the events</div>
