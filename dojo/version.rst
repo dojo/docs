@@ -25,4 +25,20 @@ Usage
   >>> dojo.version.toString();
   "0.0.0dev (15278)"
 
-0.0.0 indicated a "trunk" release. Typically you will see a real version, such as "1.2.0"
+0.0.0 indicates a "trunk" release, a non-complied version of Dojo. Typically you will see a real version, such as "1.2.0"
+
+The members of the `dojo.version` object are integers, and can be checked individually:
+
+.. code-block :: javascript
+
+  var v = dojo.version;
+  if(v.major > 1){ 
+    // this is dojo 2.x
+  }else{
+    // this id dojo 1.x
+    switch(v.minor){ 
+       case 1: console.log("1.1.x specific code"); break;
+       case 2: console.log("1.2.x specific code"); break;
+       case 9: console.log("this is 0.9, as major is less than 1, but not 1"); break;
+    }
+  }
