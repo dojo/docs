@@ -101,10 +101,6 @@ Top priority: Dojo Base
 
   needed: full page
 
-* `dojo.body <dojo/body>`_
-
-  needed: full page
-
 * `dojo.setContext <dojo/setContext>`_
 
   needed: full page
