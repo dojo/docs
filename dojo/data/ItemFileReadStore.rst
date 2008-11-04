@@ -102,8 +102,8 @@ The first is the the *_reference* structure. The *_reference* structure is a Jav
 .. code-block :: javascript
 
   {
-    identifier: "name",
-    items: [
+    "identifier": "name",
+    "items": [
       { "name": "Bob", "spouse": {"_reference":"Sally"),  children: [ { "_reference":"Nancy"}]},
       { "name": "Sally", "spouse": {"_reference":"Bob"),  children: [ { "_reference":"Nancy"}]},
       { "name": "Nancy"},           
@@ -121,7 +121,7 @@ The other special structure is the custom type structure. The purpose of the cus
 .. code-block :: javascript
 
   {
-    items: [
+    "items": [
       { "name": "Bob", birthdate: { "_type": "Date", "_value": "1965-08-20T00:00:00Z"})
     ]
   }
