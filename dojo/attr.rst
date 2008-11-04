@@ -20,7 +20,10 @@ Introduction
 dojo.atr() gives you a unified api to deal with attribute modifications. Attributes such as "style" and "onclick" or other event attributes are not real attributes but shortcuts to their respective objects or event handlers.
 On top of that several browsers deal with attribute setting and getting in different ways
 
-node.setAttribute("style", "border:1px solid #ff0033;");
+.. code-block :: javascript
+ :linenos:
+
+  node.setAttribute("style", "border:1px solid #ff0033;");
 
 for instance won't work in IE. 
 
@@ -55,7 +58,7 @@ The following example will set several attributes such as the "tabindex" and "na
           str += "name: "+dojo.attr(node, "name")+"\n";
           str += "innerHTML: "+dojo.attr(node, "innerHTML")+"\n";
 
-          alert(str);
+          dojo.attr(dojo.byId("console"), "innerHTML", str);
         });
       });
     </script>
@@ -65,11 +68,12 @@ The following example will set several attributes such as the "tabindex" and "na
     <button dojoType="dijit.form.Button" id="buttonOne">Set attributes</button>
     <button dojoType="dijit.form.Button" id="buttonTwo">Get attributes</button>
     <div id="testNode">Hi friends :)</div>
+    <div id="console"></div>
 
 Setting events
 --------------
 
-This example will demonstrate how you can set events using dojo.attr(), still concider using dojo.connect when you are dealin gwith events since you are getting lots more possibilities and granularitiy with using dojo.connect
+This example will demonstrate how you can set events using dojo.attr(), still concider using `dojo.connect <dojo/connect>`_ when you are dealing with events since you are getting lots more possibilities and granularitiy with using `dojo.connect <dojo/connect>`_
 
 .. cv-compound::
 
@@ -80,8 +84,13 @@ This example will demonstrate how you can set events using dojo.attr(), still co
         dojo.connect(dijit.byId("buttonThree"), "onClick", function(){
           var node = dojo.byId("testNodeTwo");
           
-          onOver = function(evt){alert('OVER');}
-          onClick = function(evt){alert('CLICK');}
+          onOver = function(evt){
+            dojo.attr(dojo.byId("consoleOne"), "innerHTML", "The mouse is over");
+          }
+
+          onClick = function(evt){
+            dojo.attr(dojo.byId("consoleOne"), "innerHTML", "The mouse is clicked");
+          }
  
           dojo.attr(node, "onmouseover", onOver);
           dojo.attr(node, "onclick", onClick);
@@ -94,11 +103,12 @@ This example will demonstrate how you can set events using dojo.attr(), still co
 
     <button dojoType="dijit.form.Button" id="buttonThree">Set events</button>
     <div id="testNodeTwo">Hi, try the events! Click me or hover me.</div>
+    <div id="consoleOne"></div>
 
 Setting styles
 --------------
 
-The following example will set the "style" attribute of the given dom node. It is recommended to use dojo.style if you want to do more complex style modifications.
+The following example will set the "style" attribute of the given dom node. It is recommended to use `dojo.style <dojo/style>`_ if you want to do more complex style modifications.
 
 .. cv-compound::
 
