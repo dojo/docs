@@ -122,7 +122,7 @@ The other special structure is the custom type structure. The purpose of the cus
 
   {
     "items": [
-      { "name": "Bob", birthdate: { "_type": "Date", "_value": "1965-08-20T00:00:00Z"})
+      { "name": "Bob", "birthdate": { "_type": "Date", "_value": "1965-08-20T00:00:00Z"})
     ]
   }
 
