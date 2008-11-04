@@ -193,9 +193,9 @@ Items with Hierarchy
     'identifier': 'name',
     'label': 'name',
     'items': [
-      { 'name':'Africa', 'type':'continent', children:[
+      { 'name':'Africa', 'type':'continent', 'children':[
         { 'name':'Egypt', 'type':'country' }, 
-        { 'name':'Kenya', 'type':'country', children:[
+        { 'name':'Kenya', 'type':'country', 'children':[
           { 'name':'Nairobi', 'type':'city' },
           { 'name':'Mombasa', 'type':'city' } ]
         },
@@ -229,7 +229,7 @@ Items with Hierarchy
         },
         { 'name':'United States of America', 'type':'country' } ]
       },
-      { 'name':'South America', 'type':'continent', children:[
+      { 'name':'South America', 'type':'continent', 'children':[
         { 'name':'Brazil', 'type':'country', 'population':'186 million' },
         { 'name':'Argentina', 'type':'country', 'population':'40 million' } ]
       } 
