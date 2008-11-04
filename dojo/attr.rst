@@ -40,6 +40,8 @@ The following example will set several attributes such as the "tabindex" and "na
     <script type="text/javascript">
       dojo.addOnLoad(function(){
         dojo.connect(dijit.byId("buttonOne"), "onClick", function(){
+          var node = dojo.byId("testNode");
+          
           dojo.attr(node, "tabindex", 1);
           dojo.attr(node, "name", "nameAtt");
           dojo.attr(node, "innerHTML", "New Content");
@@ -50,8 +52,8 @@ The following example will set several attributes such as the "tabindex" and "na
           var str = "";
 
           str += "tabindex: "+dojo.attr(node, "tabindex")+"\n";
-          str += "tabindex: "+dojo.attr(node, "name")+"\n";
-          str += "tabindex: "+dojo.attr(node, "innerHTML")+"\n";
+          str += "name: "+dojo.attr(node, "name")+"\n";
+          str += "innerHTML: "+dojo.attr(node, "innerHTML")+"\n";
 
           alert(str);
         });
@@ -82,7 +84,7 @@ This example will demonstrate how you can set events using dojo.attr(), still co
           onClick = function(evt){alert('CLICK');}
  
           dojo.attr(node, "onmouseover", onOver);
-          dojo.attr(node, "onmouseclick", onClick);
+          dojo.attr(node, "onclick", onClick);
           
         });
       });
@@ -91,7 +93,7 @@ This example will demonstrate how you can set events using dojo.attr(), still co
   .. cv:: html
 
     <button dojoType="dijit.form.Button" id="buttonThree">Set events</button>
-    <div id="testNodeTwo">Hi, try the events</div>
+    <div id="testNodeTwo">Hi, try the events! Click me or hover me.</div>
 
 Setting styles
 --------------
@@ -116,4 +118,4 @@ The following example will set the "style" attribute of the given dom node. It i
   .. cv:: html
 
     <button dojoType="dijit.form.Button" id="buttonFour">Change style</button>
-    <div id="testNodeThree">Hi, try the events</div>
+    <div id="testNodeThree">Hi, change my style</div>
