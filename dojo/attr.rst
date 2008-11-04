@@ -33,7 +33,7 @@ In Dojo you can do the same thing workin gin all browsers using following method
 .. code-block :: javascript
  :linenos:
 
-  dojo.setAttribute(node, "style", "border:1px solid #ff0033;");
+  dojo.attr(node, "style", "border:1px solid #ff0033;");
 
 ========
 Examples
