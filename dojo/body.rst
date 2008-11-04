@@ -10,48 +10,41 @@ dojo.body
 .. contents::
    :depth: 2
 
-Return the body element of the document.
+Returns the body element of the document.
 
 
 ============
 Introduction
 ============
 
-TODO: introduce the component/class/method
+This is a shorthand ``method`` for accessing the `<body>` element within the document. Not only is it shorter, it returns the `current` body of the current context. It also allows Dojo to use the call in non-browser environments by overloading the function to return an appropriate element. 
 
+`dojo.body` is a very simple function with one purpose:
 
 =====
 Usage
 =====
 
-TODO: how to use the component/class/method
+The most important item to remember is dojo.body is a function, and needs to be executed to get the value:
 
 .. code-block :: javascript
- :linenos:
 
- <script type="text/javascript">
-   // your code
- </script>
+  console.log( dojo.body() );
 
+This is an example, which is shorter, safer to write than:
 
+.. code-block :: javascript
+  
+  var b = document.getElementsByTagName("body")[0];
+  console.log(b);
 
-========
-Examples
-========
+Actually using the `<body>` element is an exercise left to the developer. There are several utility functions in Dojo to do common tasks on DomNodes, and `<body>` is just another:
 
-Programmatic example
---------------------
-
-TODO: example
-
-Declarative example
--------------------
-
-TODO: example
-
-
-========
-See also
-========
-
-* TODO: links to other related articles
+.. code-block :: javascript
+  
+  // set the background color:
+  dojo.style(dojo.body(), "backgroundColor", "green");
+  // place a node with id="foo" as the last-child of body:
+  dojo.place("foo", dojo.body());
+  // place id="foo" as a first-child of body:
+  dojo.place("foo", dojo.body(), "first");
