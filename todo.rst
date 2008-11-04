@@ -29,10 +29,6 @@ Top priority: Dojo Base
 
   needed: full page
 
-* `dojo.version <dojo/version>`_
-
-  needed: Examples
-
 * `dojo.windowUnloaded <dojo/windowUnloaded>`_
 
   needed: full page
