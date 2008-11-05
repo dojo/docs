@@ -73,6 +73,13 @@ Writing Widgets
 * `Using Datastores <quickstart/data/usingdatastores>`_
 
 
+=============
+Drag and Drop
+=============
+
+* is the DnD tutorial ready for take off?
+
+
 ========
 Charting
 ========
