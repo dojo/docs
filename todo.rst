@@ -163,3 +163,14 @@ Priority 4: DojoX
 * `dojox.grid <dojox/grid>`_
 
   needed: Introduction, Grid 1.2 Changes, Usage, Parameter "selection mode", Example "sorting data at the server", Example "Large datasets", Tips
+
+
+==================================
+New features for Dojo Toolkit V1.3
+==================================
+
+With V1.3 no new feature without documentation will be included in DojoToolkit. The documentation of the following new components must be completed:
+
+* `dojox.form.Manager <dojox/form/Manager>`_
+
+  needed: full page
