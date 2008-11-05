@@ -108,7 +108,7 @@ properties
 
 
 =============================
-Testing, Tuning and Debugging
+Testing, Debugging and Tuning
 =============================
 
 Testing
@@ -117,7 +117,7 @@ Testing
 Debugging
 ---------
 
-Custom Builds
--------------
+Tuning
+------
 
-* `Custom Builds <quickstart/custom-builds>`_
+* `Tuning your installation with Custom Builds <quickstart/custom-builds>`_
