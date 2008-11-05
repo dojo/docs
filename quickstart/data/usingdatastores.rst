@@ -36,3 +36,5 @@ Datastores provide access to data through a standardized interface for talking t
 * `Sorting data items into defined orders <quickstart/data/usingdatastores/sorting>`_
 
   How to issue a fetch of data that returns data items in sorted order.
+
+* `FAQ (frequent questions about using dojo.data) <quickstart/data/usingdatastores/faq>`_
