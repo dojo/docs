@@ -169,7 +169,7 @@ Priority 4: DojoX
 New features for Dojo Toolkit V1.3
 ==================================
 
-With V1.3 no new feature without documentation will be included in DojoToolkit. The documentation of the following new components must be completed:
+With V1.3 each new feature needs a proper documentation at docs.dojocampus.org - otherwise it will not be included in DojoToolkit.
 
 * `dojox.form.Manager <dojox/form/Manager>`_
 
