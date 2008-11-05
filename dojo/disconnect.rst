@@ -24,7 +24,7 @@ Usage
 
 disconnect() accepts a specially-crafted parameter as it's only argument which, coincidentally, is the return value from ``dojo.connect``. 
 
-For example, to setup a function to fun when a node is clicked, then remove it after the first time it is clicked:
+For example, to setup a function to run when a node is clicked, then remove it after the first time it is clicked:
 
 .. code-block :: javascript
  :linenos:
