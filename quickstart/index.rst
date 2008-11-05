@@ -45,6 +45,8 @@ AJAX
 Layout
 ------
 
+* `UI Development <quickstart/interfacedesign>`_
+
 Theming
 -------
 
@@ -52,7 +54,6 @@ Writing Widgets
 ---------------
 
 * `Writing Widgets <quickstart/writingWidgets>`_
-* `UI Development <quickstart/interfacedesign>`_
 
 
 ===========
