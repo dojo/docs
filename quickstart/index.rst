@@ -56,23 +56,21 @@ Writing Widgets
 * `Writing Widgets <quickstart/writingWidgets>`_
 
 
-===========
-Data stores
-===========
+============================================
+`Data stores (dojo.data) <quickstart/data>`_
+============================================
 
-* `Data stores (dojo.data) <quickstart/data>`_
+* `Using Datastores <quickstart/data/usingdatastores>`_
 
-  * `Using Datastores <quickstart/data/usingdatastores>`_
-
-    * `Terminology <quickstart/data/usingdatastores/terminology>`_
-    * `A Simple Data Source <quickstart/data/usingdatastores/simple>`_
-    * `Fetching Single Items and Values <quickstart/data/usingdatastores/fetchsingle>`_
-    * `Fetching Multiple Items and Values <quickstart/data/usingdatastores/fetchmultiple>`_
-    * `Selecting (Filtering) Items <quickstart/data/usingdatastores/filteringitems>`_
-    * `Nested Items and Lazy Loading <quickstart/data/usingdatastores/lazyloading>`_
-    * `Paging data <quickstart/data/usingdatastores/pagination>`_
-    * `Sorting Items <quickstart/data/usingdatastores/sorting>`_
-    * `FAQ (frequent questions about using dojo.data) <quickstart/data/usingdatastores/faq>`_
+  * `Terminology <quickstart/data/usingdatastores/terminology>`_
+  * `A Simple Data Source <quickstart/data/usingdatastores/simple>`_
+  * `Fetching Single Items and Values <quickstart/data/usingdatastores/fetchsingle>`_
+  * `Fetching Multiple Items and Values <quickstart/data/usingdatastores/fetchmultiple>`_
+  * `Selecting (Filtering) Items <quickstart/data/usingdatastores/filteringitems>`_
+  * `Nested Items and Lazy Loading <quickstart/data/usingdatastores/lazyloading>`_
+  * `Paging data <quickstart/data/usingdatastores/pagination>`_
+  * `Sorting Items <quickstart/data/usingdatastores/sorting>`_
+  * `FAQ (frequent questions about using dojo.data) <quickstart/data/usingdatastores/faq>`_
 
 
 ================
