@@ -41,18 +41,6 @@ Top priority: Dojo Base
 
   needed: full page
 
-* `dojo.subscribe <dojo/subscribe>`_
-
-  needed: full page
-
-* `dojo.unsubscribe <dojo/unsubscribe>`_
-
-  needed: full page
-
-* `dojo.publish <dojo/publish>`_
-
-  needed: full page
-
 * `dojo.connectPublisher <dojo/connectPublisher>`_
 
   needed: full page
