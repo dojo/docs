@@ -80,30 +80,18 @@ Charting
 * `dojox.charting <dojox/charting>`_
 
 
-==========================
-Object oriented JavaScript
-==========================
-
-JavaScript extensions
----------------------
+=====================
+JavaScript Extensions
+=====================
 
 * `Functions used *everywhere* <quickstart/dojo-basics>`_
 * `Browser Sniffing <quickstart/browser-sniffing>`_
 * `Arrays, Node lists <quickstart/arrays>`_
 * `Parsing, Formatting and Validating Numbers and Dates <quickstart/numbersDates>`_
 * `The event system <quickstart/events>`_
-
-classes
--------
-
-inheritance
------------
-
-mixins
-------
-
-properties
-----------
+* Todo: classes
+* Todo: inheritance
+* Todo: mixins
 
 
 =============================
