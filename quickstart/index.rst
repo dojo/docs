@@ -36,11 +36,20 @@ AJAX
 * `Back buttons <quickstart/back>`_
 
 
+=============
+DOM utilities
+=============
+
+* Dojo.query
+* `FX / Animations <quickstart/Animation>`_
+
+
 ===================
 `Widgets <dijit>`_
 ===================
 
 * `Dijit, Dojo Toolkits Widget Library <dijit>`_
+* `Charting <quickstart/charting>`_
 
 Layout
 ------
@@ -73,14 +82,6 @@ Writing Widgets
   * `Paging data <quickstart/data/usingdatastores/pagination>`_
   * `Sorting Items <quickstart/data/usingdatastores/sorting>`_
   * `FAQ (frequent questions about using dojo.data) <quickstart/data/usingdatastores/faq>`_
-
-
-================
-Enhanced Widgets
-================
-
-* `FX / Animations <quickstart/Animation>`_
-* `Charting <quickstart/charting>`_
 
 
 ==========================
