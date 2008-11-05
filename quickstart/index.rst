@@ -72,15 +72,12 @@ Writing Widgets
 
 * `Using Datastores <quickstart/data/usingdatastores>`_
 
-  * `Terminology <quickstart/data/usingdatastores/terminology>`_
-  * `A Simple Data Source <quickstart/data/usingdatastores/simple>`_
-  * `Fetching Single Items and Values <quickstart/data/usingdatastores/fetchsingle>`_
-  * `Fetching Multiple Items and Values <quickstart/data/usingdatastores/fetchmultiple>`_
-  * `Selecting (Filtering) Items <quickstart/data/usingdatastores/filteringitems>`_
-  * `Nested Items and Lazy Loading <quickstart/data/usingdatastores/lazyloading>`_
-  * `Paging data <quickstart/data/usingdatastores/pagination>`_
-  * `Sorting Items <quickstart/data/usingdatastores/sorting>`_
-  * `FAQ (frequent questions about using dojo.data) <quickstart/data/usingdatastores/faq>`_
+
+========
+Charting
+========
+
+* `dojox.charting <dojox/charting>`_
 
 
 ==========================
