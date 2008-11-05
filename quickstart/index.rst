@@ -1,8 +1,8 @@
 ## page was renamed from 1.2/quickstart
 #format dojo_rst
 
-Quickstart
-==========
+Getting started
+===============
 
 .. contents::
     :depth: 2
@@ -21,21 +21,99 @@ Installation
 * `How to Install the Dojo Toolkit <quickstart/install>`_
 
 
+=========================
+Dojo Toolkit Architecture
+=========================
+
+* Todo
+
+
+====
+AJAX
+====
+
+* `AJAX <quickstart/ajax>`_
+* `Back buttons <quickstart/back>`_
+
+
+===================
+`Widgets <dijit>`_
+===================
+
+* `Dojo Toolkit Widget Library <dijit>`_
+
+Layout
+------
+
+Theming
+-------
+
+Writing Widgets
+---------------
+
+* `Writing Widgets <quickstart/writingWidgets>`_
+* `UI Development <quickstart/interfacedesign>`_
+
+
+==========
+Animations
+==========
+
+* `FX / Animations <quickstart/Animation>`_
+
+
+==========================
+Object oriented JavaScript
+==========================
+
+* `Functions used *everywhere* <quickstart/dojo-basics>`_
+
+classes
+-------
+
+inheritance
+-----------
+
+mixins
+------
+
+interfaces
+----------
+
+properties
+----------
+
+namespaces
+----------
+
+
+=============================
+Testing, Tuning and Debugging
+=============================
+
+Testing
+-------
+
+Debugging
+---------
+
+Custom Builds
+-------------
+
+* `Custom Builds <quickstart/custom-builds>`_
+
+
 =========
 Tutorials
 =========
 
 Dojo is a very extensive library of code, most of which is optional. Here are some "Getting Started" guides that show common uses of technologies provided by the Toolkit. You can learn more about individual components in each sub-project (dojo, dijit, and dojox) in later sections, as these only skim the surface of HOWTO do things:
 
-* `Functions used *everywhere* <quickstart/dojo-basics>`_
-* `UI Development <quickstart/interfacedesign>`_
-* `Back buttons <quickstart/back>`_
-* `AJAX <quickstart/ajax>`_
-* `FX / Animations <quickstart/Animation>`_
-* `Charting <quickstart/charting>`_
-* `Widgets <dijit>`_
 
-  *  `Writing Widgets <quickstart/writingWidgets>`_
+
+
+
+* `Charting <quickstart/charting>`_
 
 * `Data stores (dojo.data) <quickstart/data>`_
 
@@ -55,4 +133,3 @@ Dojo is a very extensive library of code, most of which is optional. Here are so
 * `Parsing, Formatting and Validating Numbers and Dates <quickstart/numbersDates>`_
 * `Arrays, Node lists <quickstart/arrays>`_
 * `Browser Sniffing <quickstart/browser-sniffing>`_
-* `Custom Builds <quickstart/custom-builds>`_
