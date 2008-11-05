@@ -13,10 +13,6 @@ The following pages needs more love:
 Top priority: Dojo Base
 =======================
 
-* `dojo.attr <dojo/attr>`_
-
-  needed: full page
-
 * `dojo.exists <dojo/exists>`_
 
   needed: full page
