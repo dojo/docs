@@ -36,11 +36,10 @@ AJAX
 * `Back buttons <quickstart/back>`_
 
 
-=============
-DOM utilities
-=============
+==========
+Animations
+==========
 
-* Dojo.query
 * `FX / Animations <quickstart/Animation>`_
 
 
