@@ -48,7 +48,8 @@ Animations
 ===================
 
 * `Dijit, Dojo Toolkits Widget Library <dijit>`_
-* `Charting <quickstart/charting>`_
+* `DojoX <dojox>*_
+  * `Charting <quickstart/charting>`_
 
 Layout
 ------
