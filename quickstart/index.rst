@@ -91,6 +91,7 @@ JavaScript extensions
 ---------------------
 
 * `Functions used *everywhere* <quickstart/dojo-basics>`_
+* `Browser Sniffing <quickstart/browser-sniffing>`_
 * `Arrays, Node lists <quickstart/arrays>`_
 * `Parsing, Formatting and Validating Numbers and Dates <quickstart/numbersDates>`_
 * `The event system <quickstart/events>`_
@@ -108,7 +109,6 @@ properties
 ----------
 
 
-
 =============================
 Testing, Tuning and Debugging
 =============================
@@ -123,12 +123,3 @@ Custom Builds
 -------------
 
 * `Custom Builds <quickstart/custom-builds>`_
-
-
-=========
-Tutorials
-=========
-
-Dojo is a very extensive library of code, most of which is optional. Here are some "Getting Started" guides that show common uses of technologies provided by the Toolkit. You can learn more about individual components in each sub-project (dojo, dijit, and dojox) in later sections, as these only skim the surface of HOWTO do things:
-
-* `Browser Sniffing <quickstart/browser-sniffing>`_
