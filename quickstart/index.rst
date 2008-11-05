@@ -40,7 +40,7 @@ AJAX
 `Widgets <dijit>`_
 ===================
 
-* `Dojo Toolkit Widget Library <dijit>`_
+* `Dijit, Dojo Toolkits Widget Library <dijit>`_
 
 Layout
 ------
@@ -49,6 +49,8 @@ Layout
 
 Theming
 -------
+
+* `Themes and Theming <dijit-themes>`_
 
 Writing Widgets
 ---------------
