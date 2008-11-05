@@ -55,18 +55,44 @@ Writing Widgets
 * `UI Development <quickstart/interfacedesign>`_
 
 
-==========
-Animations
-==========
+===========
+Data stores
+===========
+
+* `Data stores (dojo.data) <quickstart/data>`_
+
+  * `Using Datastores <quickstart/data/usingdatastores>`_
+
+    * `Terminology <quickstart/data/usingdatastores/terminology>`_
+    * `A Simple Data Source <quickstart/data/usingdatastores/simple>`_
+    * `Fetching Single Items and Values <quickstart/data/usingdatastores/fetchsingle>`_
+    * `Fetching Multiple Items and Values <quickstart/data/usingdatastores/fetchmultiple>`_
+    * `Selecting (Filtering) Items <quickstart/data/usingdatastores/filteringitems>`_
+    * `Nested Items and Lazy Loading <quickstart/data/usingdatastores/lazyloading>`_
+    * `Paging data <quickstart/data/usingdatastores/pagination>`_
+    * `Sorting Items <quickstart/data/usingdatastores/sorting>`_
+    * `FAQ (frequent questions about using dojo.data) <quickstart/data/usingdatastores/faq>`_
+
+
+================
+Enhanced Widgets
+================
 
 * `FX / Animations <quickstart/Animation>`_
+* `Charting <quickstart/charting>`_
 
 
 ==========================
 Object oriented JavaScript
 ==========================
 
+JavaScript extensions
+---------------------
+
 * `Functions used *everywhere* <quickstart/dojo-basics>`_
+* `Arrays, Node lists <quickstart/arrays>`_
+* `Parsing, Formatting and Validating Numbers and Dates <quickstart/numbersDates>`_
+* `The event system <quickstart/events>`_
 
 classes
 -------
@@ -77,14 +103,9 @@ inheritance
 mixins
 ------
 
-interfaces
-----------
-
 properties
 ----------
 
-namespaces
-----------
 
 
 =============================
@@ -109,27 +130,4 @@ Tutorials
 
 Dojo is a very extensive library of code, most of which is optional. Here are some "Getting Started" guides that show common uses of technologies provided by the Toolkit. You can learn more about individual components in each sub-project (dojo, dijit, and dojox) in later sections, as these only skim the surface of HOWTO do things:
 
-
-
-
-
-* `Charting <quickstart/charting>`_
-
-* `Data stores (dojo.data) <quickstart/data>`_
-
-  * `Using Datastores <quickstart/data/usingdatastores>`_
-
-    * `Terminology <quickstart/data/usingdatastores/terminology>`_
-    * `A Simple Data Source <quickstart/data/usingdatastores/simple>`_
-    * `Fetching Single Items and Values <quickstart/data/usingdatastores/fetchsingle>`_
-    * `Fetching Multiple Items and Values <quickstart/data/usingdatastores/fetchmultiple>`_
-    * `Selecting (Filtering) Items <quickstart/data/usingdatastores/filteringitems>`_
-    * `Nested Items and Lazy Loading <quickstart/data/usingdatastores/lazyloading>`_
-    * `Paging data <quickstart/data/usingdatastores/pagination>`_
-    * `Sorting Items <quickstart/data/usingdatastores/sorting>`_
-    * `FAQ (frequent questions about using dojo.data) <quickstart/data/usingdatastores/faq>`_
-
-* `The event system <quickstart/events>`_
-* `Parsing, Formatting and Validating Numbers and Dates <quickstart/numbersDates>`_
-* `Arrays, Node lists <quickstart/arrays>`_
 * `Browser Sniffing <quickstart/browser-sniffing>`_
