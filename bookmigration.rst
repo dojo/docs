@@ -110,7 +110,7 @@ Dojo Book Outline
   * `Debugging Facilities <http://dojotoolkit.org/book/dojo-book-0-9/part-4-meta-dojo/debugging-facilities>`_.
   * `D.O.H. Unit Testing <http://dojotoolkit.org/book/dojo-book-0-9/part-4-meta-dojo/d-o-h-unit-testing>`_.  maps to: `Unit testing <quickstart/unittesting>`_
   * `Performance Optimization <http://dojotoolkit.org/book/dojo-book-0-9/part-4-meta-dojo/performance-optimization>`_.  maps to: `Performance <quickstart/performance>`_
-  * `The Package System and Custom Builds <http://dojotoolkit.org/book/dojo-book-0-9/part-4-meta-dojo/package-system-and-custom-builds>`_.  maps to: `Packaging <quickstart/packaging>`_
+  * `The Package System and Custom Builds <http://dojotoolkit.org/book/dojo-book-0-9/part-4-meta-dojo/package-system-and-custom-builds>`_.  maps to: `Packaging <quickstart/custom-builds>`_
 
 * `Part 5: DojoX - Extensions <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox-extensions-dojo-0>`_ maps to: `DojoX <dojox>`_.
 
