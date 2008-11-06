@@ -1,5 +1,6 @@
 #format dojo_rst
 
+This page is in place to personally thank each and every document contributor. It is a huge effort, and would never succeed with the time donated by the following individuals:
 
 Thank you!
 ----------
@@ -38,3 +39,5 @@ A big "thank you" goes to
 * Kris Zyp
 
 for their great engagement to improve the documentation of our unmatched Dojo Toolkit!
+
+As this expands, more information will be available about each contributor, but for now it is just a list. 
