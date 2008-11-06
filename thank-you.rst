@@ -7,6 +7,8 @@ Thank you!
 A big "thank you" goes to 
 
 * Andrea Chiumenti,
+* Chris Barber,
+* James Burke,
 * Sam Foster,
 * Becky Gibson,
 * James Gosnell,
