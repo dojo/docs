@@ -118,7 +118,7 @@ This example displays the return values of dojo.marginBox on a nested node.
 Setting margin box I.
 ---------------------
 
-This example displays the return values of dojo.marginBox on a nested node. 
+This example is showcasing the usage of dojo.marginBox as a setter, take a look at the JavaScript code to see what the code does.
 
 .. cv-compound::
 
