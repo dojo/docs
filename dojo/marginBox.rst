@@ -5,7 +5,6 @@ dojo.marginBox
 
 :Status: Draft
 :Version: 1.0
-:Project owner: ?--
 :Available: since 1.0
 
 .. contents::
