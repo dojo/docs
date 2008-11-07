@@ -55,7 +55,7 @@ Geting margin box I.
       dojo.addOnLoad(function(){
         var marginBox = dojo.marginBox(dojo.byId("marginNodeOne"));
 
-        dojo.byId("resultOne").innerHTML = "Top: "marginBox.t+"<br />Left: "marginBox.l+"<br />Width: "marginBox.w+"<br />Height: "marginBox.h+"<br />";
+        dojo.byId("resultOne").innerHTML = "Top: "+marginBox.t+"<br />Left: "+marginBox.l+"<br />Width: "+marginBox.w+"<br />Height: "+marginBox.h+"<br />";
       });
     </script>
 
