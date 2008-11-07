@@ -45,7 +45,7 @@ Examples
 ========
 
 Getting margin box I.
---------------------
+---------------------
 
 This example displays the return values of dojo.marginBox on a node. 
 
@@ -83,7 +83,7 @@ This example displays the return values of dojo.marginBox on a node.
     </style>
 
 Getting margin box I.
---------------------
+---------------------
 
 This example displays the return values of dojo.marginBox on a nested node. 
 
@@ -123,16 +123,24 @@ This example displays the return values of dojo.marginBox on a nested node.
       }
     </style>
 
-TODO: example
+Setting margin box I.
+---------------------
 
-Declarative example
--------------------
+This example displays the return values of dojo.marginBox on a nested node. 
 
-TODO: example
+.. cv-compound::
 
+  .. cv:: javascript
 
-========
-See also
-========
+    <script type="text/javascript">
+      dojo.addOnLoad(function(){
+        var marginBox = dojo.marginBox(dojo.byId("marginNodeThree"), {t: 20, l: 30, h: 100, w: 100});
+      });
+    </script>
 
-* TODO: links to other related articles
+  .. cv:: html
+
+    <div>
+      Hi I am nested
+      <div id="marginNodeThree">Hi, I am a marginNode, really!</div>
+    </div>
