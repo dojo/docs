@@ -44,8 +44,10 @@ TODO: how to use the component/class/method
 Examples
 ========
 
-Geting margin box I.
+Getting margin box I.
 --------------------
+
+This example displays the return values of dojo.marginBox on a node. 
 
 .. cv-compound::
 
@@ -69,6 +71,47 @@ Geting margin box I.
     <style type="text/css">
       #marginNodeOne {
         width: 200px;
+        height: 200px;
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid #ccc;
+      }
+
+      #resultOne {
+        
+      }
+    </style>
+
+Getting margin box I.
+--------------------
+
+This example displays the return values of dojo.marginBox on a nested node. 
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+      dojo.addOnLoad(function(){
+        var marginBox = dojo.marginBox(dojo.byId("marginNodeTwo"));
+
+        dojo.byId("resultTwo").innerHTML = "Top: "+marginBox.t+"<br />Left: "+marginBox.l+"<br />Width: "+marginBox.w+"<br />Height: "+marginBox.h+"<br />";
+      });
+    </script>
+
+  .. cv:: html
+
+    <div>
+      Hi I am nested
+      <div id="marginNodeTwo">Hi, I am a marginNode, really!</div>
+    </div>
+    <div id="resultTwo"></div>
+    
+  .. cv:: css
+
+    <style type="text/css">
+      #marginNodeTwo {
+        width: 300px;
         height: 200px;
         padding: 10px;
         margin: 10px;
