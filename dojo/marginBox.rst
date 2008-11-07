@@ -35,7 +35,7 @@ TODO: how to use the component/class/method
  :linenos:
 
  <script type="text/javascript">
-   // your code
+   var marginBox = dojo.marginBox(domNode);
  </script>
 
 
@@ -44,8 +44,41 @@ TODO: how to use the component/class/method
 Examples
 ========
 
-Programmatic example
+Geting margin box I.
 --------------------
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+      dojo.addOnLoad(function(){
+        var marginBox = dojo.marginBox(dojo.byId("marginNodeOne"));
+
+        dojo.byId("resultOne").innerHTML = "Top: "marginBox.t+"<br />Left: "marginBox.l+"<br />Width: "marginBox.w+"<br />Height: "marginBox.h+"<br />";
+      });
+    </script>
+
+  .. cv:: html
+
+    <div id="marginNodeOne">Hi, I am a marginNode, really!</div>
+    <div id="resultOne"></div>
+    
+  .. cv:: css
+
+    <style type="text/css">
+      #marginNodeOne {
+        width: 200px;
+        height: 200px;
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid #ccc;
+      }
+
+      #resultOne {
+        
+      }
+    </style>
 
 TODO: example
 
