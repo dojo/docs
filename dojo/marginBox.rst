@@ -28,8 +28,6 @@ for a node offset from its parent 50px to the left, 200px from the top with a ma
 Usage
 =====
 
-TODO: how to use the component/class/method
-
 .. code-block :: javascript
  :linenos:
 
