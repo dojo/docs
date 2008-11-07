@@ -76,10 +76,6 @@ This example displays the return values of dojo.marginBox on a node.
         margin: 10px;
         border: 1px solid #ccc;
       }
-
-      #resultOne {
-        
-      }
     </style>
 
 Getting margin box I.
@@ -117,10 +113,6 @@ This example displays the return values of dojo.marginBox on a nested node.
         margin: 10px;
         border: 1px solid #ccc;
       }
-
-      #resultOne {
-        
-      }
     </style>
 
 Setting margin box I.
@@ -134,7 +126,7 @@ This example displays the return values of dojo.marginBox on a nested node.
 
     <script type="text/javascript">
       dojo.addOnLoad(function(){
-        var marginBox = dojo.marginBox(dojo.byId("marginNodeThree"), {t: 20, l: 30, h: 100, w: 100});
+        var marginBox = dojo.marginBox(dojo.byId("marginNodeThree"), {t: 20, l: 30, h: 300, w: 300});
       });
     </script>
 
@@ -144,3 +136,17 @@ This example displays the return values of dojo.marginBox on a nested node.
       Hi I am nested
       <div id="marginNodeThree">Hi, I am a marginNode, really!</div>
     </div>
+
+  .. cv:: css
+
+    <style type="text/css">
+      #marginNodeThree {
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid #ccc;
+      }
+
+      #resultOne {
+        
+      }
+    </style>
