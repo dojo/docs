@@ -264,4 +264,4 @@ This comes naturally if you are instantiating from markup.  For example, a behav
 
    <a href="..." dojoType="dojoc.widget.ConfirmAnchor">
 
-Dijit doesn't have any behavioral widgets, given that it's meant to be able to be used in a purely programmatic setting (without requiring the developer to create any skeletal sourceDOM nodes), but it is a useful paradigm for some applications.
+Dijit doesn't have any behavioral widgets, given that it's meant to be able to be used in a purely programmatic setting (without requiring the developer to create any skeletal sourceDOM nodes), but it is a useful paradigm for some applications, and is supported by Dijit. 
