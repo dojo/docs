@@ -10,7 +10,7 @@ Dijit
 .. contents::
     :depth: 2
 
-*Dijit* is a widget system layered on top of Dojo. If you are new to the whole Dojo experience, Dijit is a good place to start. You can build amazing Web 2.0 GUI's using very little, or no, JavaScript (though having an understanding of JavaScript will take you a long way)
+*Dijit* is a widget system layered on top of Dojo. If you are new to the whole Dojo experience, Dijit is a good place to start. You can build amazing Web 2.0 GUI's using very little, or no, JavaScript (though having an understanding of JavaScript will take you a long way, as will a good understanding of HTML). 
 
 ======
 Themes
@@ -22,7 +22,7 @@ Dijit comes bundled with three themes: Tundra, Soria, and Nihilo. Themes are col
 
   <link rel="stylesheet" href="lib/dijit/themes/tundra/tundra.css">
 
-and by the addition of a theme class name on a parent element. By using the ``<body>`` tag, we are able to ensure all widgets in the page have the same CSS rules:
+and by the addition of a theme class name on a parent element. By using the ``<body>`` tag, we are able to ensure all widgets in the page have the same CSS rules (some widgdet's like `Dialog <dijit/Dialog>`_ intentionally attach themsevles to the ``<body>`` element, so no styling is present if the class identifier is on some child node):
 
 .. code-block :: html
 
@@ -56,7 +56,7 @@ Everything in Dijit is designed to be globally accessible -- to accommodate user
 Dijit Basics
 ============
 
-You can use Dijit in one of two ways: **declaratively** by using special attributes inside of regular HTML tags, and **programmatically** through JavaScript. You have the same options either way. 
+You can use Dijit in one of two ways: **declaratively** by using special attributes inside of regular HTML tags, and **programmatically** through JavaScript (you are welcome to mix-and-match the two styles as you see fit). You have the same options either way. 
 
 .. code-block :: html
   :linenos:
@@ -137,7 +137,7 @@ All Dijits follow the same programatic convention. Create a new instance with th
   var dialog = new dijit.Dialog({ title:"From Source Node" }, node);
   dialog.show();
 
-This will cause the creator to use the node with id="makeADialog", and turn it into a `Dialog <dijit/Dialog>`_. You can pass a node refernece directly (as seen above), or simply pass a string id. Either way, the reference passes through dojo.byId:
+This will cause the creator to use the node with id="makeADialog", and turn it into a `Dialog <dijit/Dialog>`_. You can pass a node reference directly (as seen above), or simply pass a string id. Either way, the reference passes through dojo.byId:
 
 .. code-block :: javascript
   :linenos:
@@ -149,9 +149,6 @@ Locating Widgets
 ----------------
 
 There are many ways to locate a widget in a page, and access a reference to that Widget. Widget's are Objects: collections of attributes and DomNode references. Once you have a reference to a widget, you can use that object (or any of it's member properties) through that widget. There are three "main" ways to access a widget:
-
-byId
-~~~~
 
 The most simple of methods to access a widget is `dijit.byId <dijit/byId>`_. When the widget is created, if the Node used to create the widget (eg: srcNodeRef) had a DOM attribute ``id``, that becomes the widget's id in the `dijit.regsitry <dijit/registry>`_.
 
@@ -228,6 +225,28 @@ It also supports a hash API like dojo.attr(), for setting multiple attributes:
 
   myInput.attr({ tabIndex: 3, disabled: true, value: 'hi'});
 
+Common Attributes of Dijits
+---------------------------
+
+There are several attributes common to (most) all Dijit instances. These appear as members to a widget instance, and can be accessed once you have a reference to the widget by one of the methods mentioned above.  Some of the more popular are:
+
+* .domNode - The top-level node in the widget. All widgets have a DOM Node attached to them, either through the srcNodeRef passed during instantiation, or a one created by the widget framework when declaring one programatically. This is a `real` DOM Node, and is common in all Dijits. If you wish to show or hide a widget, for example, you would modify the CSS property ``display`` for the .domNode:
+
+.. code-block :: javascript
+ :linenos:
+
+  // hide a widget with id="myThiner"
+  dojo.style(dijit.byId("myThinger").domNode, "display", "none"); 
+
+* .containerNode - If a widget uses a template to create complex markup and has inner markup to be displayed within the widget, the containerNode member is a reference to the node where to content was moved to. For example with a `dijit.Dialog <dijit/Dialog>`_ only the surrounding domNode is used to create the widget, and any contents of that node are set inside the template's `containerNode`. When using .attr() to set and load content, this is the node that will be targeted for that content.
+
+* declaredClass - this is actually a relic of `dojo.declare <dojo/declare>`_, which is how widgets are defined. The declaredClass is a string equal to the fully qualified name of the widget class.
+
+.. code-block :: javascript
+ :linenos:
+
+  var dialog = new dijit.Dialog({ title:"foo" }, "bar");
+  dialog.declaredClass == "dijit.Dialog" // true
 
 ==================
 Behavioral widgets
