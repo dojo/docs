@@ -15,15 +15,15 @@ Installing Dojo
 
 Dojo requires no special installation, or setup procedure, though comes with several "installation" options. There are three main ways to install Dojo:
 
-* Install nothing! Use Dojo from AOL's Content Distribution Network (`CDN <http://build.dojotoolkit.org>`_).
+* Install nothing! Use Dojo from AOL's Content Distribution Network (`CDN <http://dev.aol.com/dojo>`_) or from the `CDN of Google <http://code.google.com/apis/ajaxlibs/documentation/index.html#dojo>`.
 * Install the `latest release <http://download.dojotoolkit.org/current-stable>`_ on your server
-* Install directly from `source control </install/dojo-releases>`_
+* Install directly from `source control </install/dojo-releases>`_ ``FIXME``
 
 =================
 Use Dojo from CDN
 =================
 
-This method is quick and painless! You simply load Dojo through ``<script>`` tags pointing to the AOL CDN. You don't need to invest any of your own server disk space or resources nor will you need to install Dojo locally in many cases. Instructions are available on using Dojo from the CDN.
+This method is quick and painless! You simply load Dojo through ``<script>`` tags pointing to the AOL (or Google) CDN. You don't need to invest any of your own server disk space or resources nor will you need to install Dojo locally in many cases. Instructions are available on using Dojo from the CDN.
 
 =============================
 Use Dojo from your Own Server
