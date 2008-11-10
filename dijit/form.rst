@@ -28,19 +28,19 @@ The dijit.form widgets are:
 Buttons
 -------
 
-* `dijit.form.Button </Button>`_
+* `dijit.form.Button <dijit/form/Button>`_
 
   A representation of a normal <button> or <input type="submit/reset/button" />
 
-* `dijit.form.DropDownButton </DropDownButton>`_ 
+* `dijit.form.DropDownButton <dijit/form/DropDownButton>`_ 
 
   A button which displays a menu or some other popup when you press it
 
-* `dijit.form.ComboButton </ComboButton>`_
+* `dijit.form.ComboButton <dijit/form/ComboButton>`_
 
   A button with an arrow to show a drop down (often a menu)
 
-* `dijit.form.ToggleButton </ToggleButton>`_
+* `dijit.form.ToggleButton <dijit/form/ToggleButton>`_
 
   A cross between a Button and a Checkbox widget
 
@@ -49,74 +49,74 @@ Input widgets
 
 All Widgets, that are similar to <input>:
 
-* `dijit.form.CurrencyTextBox </CurrencyTextBox>`_
+* `dijit.form.CurrencyTextBox <dijit/form/CurrencyTextBox>`_
 
   A specialized input widget for monetary values, much like the currency type in spreadsheet programs
 
-* `dijit.form.DateTextBox </DateTextBox>`_
+* `dijit.form.DateTextBox <dijit/form/DateTextBox>`_
 
   An easy-to-use date entry control which allows either typing or choosing a date from any calendar widget
 
-* `dijit.form.NumberSpinner </NumberSpinner>`_
+* `dijit.form.NumberSpinner <dijit/form/NumberSpinner>`_
 
   A input widget which restricts input to numeric input and offers down and up arrow buttons to "spin" the number up and down
 
-* `dijit.form.NumberTextBox </NumberTextBox>`_
+* `dijit.form.NumberTextBox <dijit/form/NumberTextBox>`_
 
   A input widget which restricts input to numeric input
 
-* `dijit.form.TextBox </TextBox>`_
+* `dijit.form.TextBox <dijit/form/TextBox>`_
 
   A basic <input type="text">-style form control
 
-* `dijit.form.TimeTextBox </TimeTextBox>`_
+* `dijit.form.TimeTextBox <dijit/form/TimeTextBox>`_
 
   A time input control which allows either typing or choosing a time from any time-picker widget
 
-* `dijit.form.ValidationTextBox </ValidationTextBox>`_
+* `dijit.form.ValidationTextBox <dijit/form/ValidationTextBox>`_
 
 TextArea
 --------
 
-* `dijit.form.SimpleTextarea </SimpleTextarea>`_
+* `dijit.form.SimpleTextarea <dijit/form/SimpleTextarea>`_
 
   A simple wrapper of <textarea>; equivalent functionality
 
-* `dijit.form.Textarea </Textarea>`_
+* `dijit.form.Textarea <dijit/form/Textarea>`_
 
   An auto expanding/contracting <textarea>
 
 Select widgets
 --------------
 
-* `dijit.form.ComboBox </ComboBox>`_
+* `dijit.form.ComboBox <dijit/form/ComboBox>`_
 
   This is often called "auto complete" and perhaps should be listed in the "Input widgets" section above since it allows the user to type any value and just gives suggested completions
 
-* `dijit.form.MultiSelect </MultiSelect>`_
+* `dijit.form.MultiSelect <dijit/form/MultiSelect>`_
 
   The MultiSelect widget allows the selection of multiple items
 
-* `dijit.form.FilteringSelect </FilteringSelect>`_
+* `dijit.form.FilteringSelect <dijit/form/FilteringSelect>`_
 
   Similar to a <select> but with type-ahead filtering of the drop down list
 
 Miscellaneous
 -------------
 
-* `dijit.form.Form </Form>`_
+* `dijit.form.Form <dijit/form/Form>`_
 
   Corresponds to a <form> itself; wraps other widgets
 
-* `dijit.form.Slider </Slider>`_
+* `dijit.form.Slider <dijit/form/Slider>`_
 
   A scale with a handle you can drag up/down or left/right to select a value
 
-* `dijit.form.CheckBox </CheckBox>`_
+* `dijit.form.CheckBox <dijit/form/CheckBox>`_
 
   Nearly the same as an HTML checkbox, but with fancy styling
 
-* `dijit.form.RadioButton </RadioButton>`_
+* `dijit.form.RadioButton <dijit/form/RadioButton>`_
 
   To select one choice from a list
 
