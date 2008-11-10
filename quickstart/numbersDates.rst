@@ -65,7 +65,7 @@ Date Constraints
 
 - ``am,pm``: override strings for am/pm in times
 - ``clickableIncrement`` (TimeTextBox): ISO-8601 string representing the amount by which every clickable element in the time picker increases. Set in non-Zulu time, without a time zone. Example: "T00:15:00" creates 15 minute increments. Must divide visibleIncrement evenly.
-- ``datePattern,timePattern``: override localized convention with this pattern.  As a result, all users will see the same behavior, regardless of locale, and your application may not be globalized.  See http://www.unicode.org/reports/tr35/#Date_Format_Patterns
+- ``datePattern,timePattern``: override localized convention with this pattern.  As a result, all users will see the same behavior, regardless of locale, and your application may not be globalized.  See `<http://www.unicode.org/reports/tr35/#Date_Format_Patterns>`_
 - ``formatLength``: choose from formats appropriate to the locale -- long, short, medium or full (plus any custom additions).  Defaults to 'short'
 - ``locale``:  override the locale on this widget only, choosing from djConfig.extraLocale
 - ``selector``: choice of 'time', 'date' (default: date and time)
