@@ -96,7 +96,7 @@ dijit.byId
      dialog.show();
   }
 
-``dijit.byId`` returns an reference to that particular Dijit instance, and allows you to call methods and set properties. Each Dijit has several fundamental methods and properties defined by `dijit._Widget </dijit/_Widget>`_, and adds in additional specific methods depending on the type of Dijit. 
+``dijit.byId`` returns an reference to that particular Dijit instance, and allows you to call methods and set properties. Each Dijit has several fundamental methods and properties defined by `dijit._Widget <dijit/_Widget>`_, and adds in additional specific methods depending on the type of Dijit. 
 
 
 ==========
