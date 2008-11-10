@@ -26,10 +26,10 @@ Number Constraints
 ------------------
 
 - ``currency``: (currency only) the ISO-4217 currency code, a three letter sequence like "USD"
-  See <http://en.wikipedia.org/wiki/ISO_4217>_ for a current list.
+  See `<http://en.wikipedia.org/wiki/ISO_4217>`_ for a current list.
 - ``fractional``:  (currency only) where places are implied by pattern or explicit 'places' parameter, whether to include the fractional portion.
 - ``locale``:  override the locale on this widget only, choosing from djConfig.extraLocale
-- ``pattern``:  override localized convention with this pattern.  As a result, all users will see the same behavior, regardless of locale, and your application may not be globalized.  See <http://www.unicode.org/reports/tr35/#Number_Format_Patterns>_.
+- ``pattern``:  override localized convention with this pattern.  As a result, all users will see the same behavior, regardless of locale, and your application may not be globalized.  See `<http://www.unicode.org/reports/tr35/#Number_Format_Patterns>`_.
 - ``places``:  number of decimal places to accept.
 - ``strict``:  strict parsing, false by default.  When strict mode is false, certain allowances are made to be more tolerant of user input, such as 'am' instead of 'a.m.', some white space may be optional, etc.
 - ``symbol``:  (currency only) override currency symbol. Normally, will be looked up in localized table of supported currencies (dojo.cldr) 3-letter ISO 4217 currency code will
