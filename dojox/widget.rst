@@ -35,7 +35,7 @@ Here is an up to date list of dojox.widget components. Note: Some of these are n
 
 * `dojox.widget.Dialog <dojox/widget/Dialog>`_
 
-  An extension to `dijit.Dialog </dijit/Dialog>`_
+  An extension to `dijit.Dialog <dijit/Dialog>`_
 
 * `dojox.widget.DocTester <dojox/widget/DocTester>`_
 
