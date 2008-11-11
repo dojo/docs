@@ -46,9 +46,69 @@ Setting the parser behavior
 Instantiating a Node
 --------------------
 
-``todoc: attributes on nodes required in class prior, _private class members``
+HTML sets all attributes on nodes as strings.  However, when the parser instantiates your nodes, it looks at the prototype of the class you are trying to instantiate (via dojoType attribute) and trys to make a "best guess" at what type your value should be.  This requires that all attributes you want to be passed in via the parser have a corresponding empty class member in the class you are trying to instantiate.
 
-``todoc: parser calls .startup() ``
+Empty values of types are as follows:
+  * 0 = an integer
+  * "" = a string
+  * null = an object
+  * [] = an array
+
+
+Private members (those that begin with an underscore (_) ) are not mapped in from the source node.
+
+For example, given the class:
+
+.. code-block :: javascript
+
+  dojo.declare("my.custom.type", null, {
+    name: "",
+    value: 0,
+    objectVal: null,
+    anotherObject: null,
+    arrayVal: [],
+    typedArray: null,
+    _privateVal: 0
+  });
+
+And HTML node:
+
+.. code-block :: html
+
+  <div dojoType="my.custom.type" name="nm" value="5" objectVal="{a: 1, b:'c'}" 
+         anotherObject="namedObj" arrayVal="a,b,c,1,2" typedArray="['a','b','c',1,2]"
+         _privateVal="5" anotherValue="more"></div>
+
+The parser would create an object and pass it paramaters of:
+
+.. code-block :: javascript
+
+  {
+    name: "nm",                                 // Just a simple string
+    value: 5,                                   // Typed to an integer
+    objectVal: {a: 1, b:'c'},                   // Typed to an object
+    anotherObject: dojo.getObject("namedObj"),  // For strings, try getting the object via dojo.getObject
+    arrayVal: ["a","b","c","1","2"],            // When typing to an array, all entries are strings
+    typedArray: ["a", "b", "c", 1, 2]           // To get a "typed" array, treat it like an object instead
+  }
+
+Note that _privateVal is not passed in (since it is private), and anotherValue is not passed in either (since it does not exist in the prototype of the class).
+
+The parser automatically will call the startup() function of all nodes when it is finished parsing (if the function exists, ie for dijit widgets)
+
+``NEW in 1.3:``  Beginning in release 1.3 of dojo, you can manually call dojo.parser.instantiate on any node - and pass in an additional mixin to specify options, such as dojoType, etc.  The values in the mixin would override any values in your node.  For example:
+
+.. code-block :: html
+
+  <div id="myDiv" name="ABC" value="1"></div>
+
+You can manually call the parser's instantiate function (which does the "Magical Typing") by doing:
+
+.. code-block :: javascript
+
+  dojo.parser.instantiate(dojo.byId("myDiv"), {dojoType: "my.custom.type});
+
+Calling instantiate in this way will return to you a list of instances that were created.
 
 Caveats
 -------
