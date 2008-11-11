@@ -138,3 +138,8 @@ Known Issues
 ------------
 
 JAWS 8 and Window-Eyes 6 may fail to read an option when it becomes highlighted. In Dojo 1.1 the FilteringSelect was updated so that JAWS 9 will speak "editable combo" when the FilteringSelect gets focus. However, there are some issues reading the highlighted choice. Generally JAWS 9 with Firefox 2 will only speak the part of the word that is currently selected in the textbox. For example, if you are working with a FilteringSelect containing the US state names and you type in an "I" to filter the list of states. If the user arrows down and highlights "Iowa" in the drop down list, "Iowa" will be displayed in the textbox with the "owa" portiion selected. JAWS 9 will speak, "owa" rather than "Iowa". This is not an issue with Firefox 3 and JAWS 9. 
+
+See Also
+--------
+
+ * There's a `DropDown Select <dojox/form/DropDownSelect>`_ widget in the `dojox.form <dojox/form>`_ project that's similar to FilteringSelect but without the search ability.  It can support rich text in both the drop down and in a closed state (to display the selected item).
