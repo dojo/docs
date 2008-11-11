@@ -51,17 +51,22 @@ This example displays the return values of dojo.marginBox on a node.
   .. cv:: javascript
 
     <script type="text/javascript">
-      dojo.addOnLoad(function(){
+      dojo.require("dijit.form.Button"); // only for the beauty :)
+
+      getMarginBoxOne = function(){
         var marginBox = dojo.marginBox(dojo.byId("marginNodeOne"));
 
+        console.log("dojo.marginBox() returning:");
         console.log("Top: "+marginBox.t);
         console.log("Left: "+marginBox.l);
         console.log("Width: "+marginBox.w);
         console.log("Height: "+marginBox.h);
-      });
+      };
     </script>
 
   .. cv:: html
+
+    <button dojoType="dijit.form.Button" onClick="getMarginBoxOne()">Get margin box</button>
 
     <div id="marginNodeOne">Hi, I am a marginNode, really!</div>
     
@@ -87,17 +92,22 @@ This example displays the return values of dojo.marginBox on a nested node.
   .. cv:: javascript
 
     <script type="text/javascript">
-      dojo.addOnLoad(function(){
+      dojo.require("dijit.form.Button"); // only for the beauty :)
+
+      getMarginBoxTwo = function(){
         var marginBox = dojo.marginBox(dojo.byId("marginNodeTwo"));
 
+        console.log("dojo.marginBox() returning:");
         console.log("Top: "+marginBox.t);
         console.log("Left: "+marginBox.l);
         console.log("Width: "+marginBox.w);
         console.log("Height: "+marginBox.h);
-      });
+      };
     </script>
 
   .. cv:: html
+
+    <button dojoType="dijit.form.Button" onClick="getMarginBoxTwo()">Get margin box</button>
 
     <div>
       Hi I am nested
