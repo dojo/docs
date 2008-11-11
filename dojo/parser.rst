@@ -106,9 +106,9 @@ You can manually call the parser's instantiate function (which does the "Magical
 
 .. code-block :: javascript
 
-  dojo.parser.instantiate(dojo.byId("myDiv"), {dojoType: "my.custom.type});
+  dojo.parser.instantiate([dojo.byId("myDiv")], {dojoType: "my.custom.type});
 
-Calling instantiate in this way will return to you a list of instances that were created.
+Calling instantiate in this way will return to you a list of instances that were created.  Note that the first parameter to instantiate is an array of nodes...even if it's one-element you need to wrap it in an array
 
 Caveats
 -------
