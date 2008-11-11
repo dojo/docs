@@ -54,14 +54,16 @@ This example displays the return values of dojo.marginBox on a node.
       dojo.addOnLoad(function(){
         var marginBox = dojo.marginBox(dojo.byId("marginNodeOne"));
 
-        dojo.byId("resultOne").innerHTML = "Top: "+marginBox.t+"<br />Left: "+marginBox.l+"<br />Width: "+marginBox.w+"<br />Height: "+marginBox.h+"<br />";
+        console.log("Top: "+marginBox.t);
+        console.log("Left: "+marginBox.l);
+        console.log("Width: "+marginBox.w);
+        console.log("Height: "+marginBox.h);
       });
     </script>
 
   .. cv:: html
 
     <div id="marginNodeOne">Hi, I am a marginNode, really!</div>
-    <div id="resultOne"></div>
     
   .. cv:: css
 
@@ -88,7 +90,10 @@ This example displays the return values of dojo.marginBox on a nested node.
       dojo.addOnLoad(function(){
         var marginBox = dojo.marginBox(dojo.byId("marginNodeTwo"));
 
-        dojo.byId("resultTwo").innerHTML = "Top: "+marginBox.t+"<br />Left: "+marginBox.l+"<br />Width: "+marginBox.w+"<br />Height: "+marginBox.h+"<br />";
+        console.log("Top: "+marginBox.t);
+        console.log("Left: "+marginBox.l);
+        console.log("Width: "+marginBox.w);
+        console.log("Height: "+marginBox.h);
       });
     </script>
 
@@ -98,7 +103,6 @@ This example displays the return values of dojo.marginBox on a nested node.
       Hi I am nested
       <div id="marginNodeTwo">Hi, I am a marginNode, really!</div>
     </div>
-    <div id="resultTwo"></div>
     
   .. cv:: css
 
@@ -141,9 +145,5 @@ This example is showcasing the usage of dojo.marginBox as a setter, take a look 
         padding: 10px;
         margin: 10px;
         border: 1px solid #ccc;
-      }
-
-      #resultOne {
-        
       }
     </style>
