@@ -56,7 +56,6 @@ This example displays the return values of dojo.marginBox on a node.
       getMarginBoxOne = function(){
         var marginBox = dojo.marginBox(dojo.byId("marginNodeOne"));
 
-        console.log("dojo.marginBox() returning:");
         console.log("Top: "+marginBox.t);
         console.log("Left: "+marginBox.l);
         console.log("Width: "+marginBox.w);
@@ -97,7 +96,6 @@ This example displays the return values of dojo.marginBox on a nested node.
       getMarginBoxTwo = function(){
         var marginBox = dojo.marginBox(dojo.byId("marginNodeTwo"));
 
-        console.log("dojo.marginBox() returning:");
         console.log("Top: "+marginBox.t);
         console.log("Left: "+marginBox.l);
         console.log("Width: "+marginBox.w);
