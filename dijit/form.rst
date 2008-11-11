@@ -101,6 +101,8 @@ Select widgets
 
   Similar to a <select> but with type-ahead filtering of the drop down list
 
+There are also some select widgets in the `dojox.form <dojox/form>`_ project.
+
 Miscellaneous
 -------------
 
