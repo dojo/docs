@@ -500,11 +500,57 @@ is displayed in an alert.
       //onClick to a function which invokes the fetch(). The fetch function queries for all items 
       //and provides callbacks to use for completion of data retrieval or reporting of errors.
       function init3 () {
+
+        function itemToJS(store, item) {
+          // summary: Function to convert an item into a simple JS object.
+          // store:
+          //    The datastore the item came from.
+          // item:
+          //    The item in question.
+          var js = {};
+          if (item && store) {
+            //Determine the attributes we need to process.
+            var attributes = store.getAttributes(item);
+            if (attributes && attributes.length > 0) {
+              var i;
+              for (i = 0; i < attributes.length; i++) {
+                var values = store.getValues(item, attributes[i]);
+                if (values) {
+                  //Handle multivalued and single-valued attributes.
+                  if (values.length > 1 ) {
+                    var j;
+                    js[attributes[i]] = [];
+                    for (j = 0; j < values.length; j++ ) {
+                      var value = values[j];
+                      //Check that the value isn't another item. If it is, process it as an item.
+                      if (store.isItem(value)) {
+                        js[attributes[i]].push(itemToJS(store, value)));
+                      } else {
+                        js[attributes[i]].push(value);
+                      }
+                    }
+                  } else {
+                    if (store.isItem(values[0])) {
+                      js[attributes[i]] = dojo.fromJson(itemToJSON(store, values[0]));
+                    } else {
+                      js[attributes[i]] = values[0];
+                    }
+                  }
+                }
+              }
+            }
+          }
+          return js;
+        }
+
         geoStore2._saveCustom = function(saveComplete, saveFailed) {
            var changeSet  = geoStore2._pending;
+           var changes = {};
+           var changes.modified = {};
            for (var i in changeSet._modifiedItems) {
-              console.log(i);
+              changes.modified[i] = itemtoJS(geoStore2, changeSet._modifiedItems[i]);
            }
+           alert(dojo.toJson(changes, true);
            saveComplete();
         };
 
