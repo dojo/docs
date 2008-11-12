@@ -517,7 +517,7 @@ is displayed in an alert.
               var i;
               for (i = 0; i < items.length; i++) {
                 var item = items[i];
-                geoStore.setValue(item, "population", value);
+                geoStore2.setValue(item, "population", value);
               }
             }
           }
@@ -529,7 +529,7 @@ is displayed in an alert.
           }
              
           //Fetch the data.
-          geoStore.fetch({query: {}, onComplete: gotAll, onError: fetchFailed, queryOptions: {deep:true}});
+          geoStore2.fetch({query: {}, onComplete: gotAll, onError: fetchFailed, queryOptions: {deep:true}});
         }
         //Link the click event of the button to driving the fetch.
         dojo.connect(button3, "onClick", updateAll);
