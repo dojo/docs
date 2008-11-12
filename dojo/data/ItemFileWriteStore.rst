@@ -423,3 +423,152 @@ This example demonstrates how to use a function such as *deleteItem*. In this ca
     <br>
     <div dojoType="dijit.tree.ForestStoreModel" jsId="geographyModel2" store="geographyStore2" query="{type: 'continent'}" rootId="Geography" rootLabel="Geography"></div>
     <div dojoType="dijit.Tree" model="geographyModel2"></div>
+
+ItemFileWriteStore changes reflected in dojox.data.DataGrid and caught/serialized via a _saveCustom function
+------------------------------------------------------------------------------------------------------------
+
+The following is a semi-complex example of the write API in action. In this example, there is a number spinner, a button, and the DataGrid. You use the number spinner to select a value. Then by pressing the button, a query to ItemFileWriteStore is made. The results of that query are iterated over and *setValue* is called on each item to modify its population attribute (or add it if it did not exist). The DataGrid is used to display results. Since the DataGrid is dojo.data.Notification aware, it binds to the DataStore and listens for change events on items. If an item is updated, then the grid automatically reflects it in its display. In this example, changing the population for all items should result in all rows showing a change in the population column when the button is pressed.  In addition, save() is called on the store, which in turn invokes a custom save handler.  This custom save handler generated a serialized view of the changes to send back to some location.  This view
+is displayed in an alert.
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojo.data.ItemFileWriteStore");
+      dojo.require("dijit.form.Button");
+      dojo.require("dijit.form.NumberSpinner");
+      dojo.require("dijit.form.TextBox");
+      dojo.require("dojox.grid.DataGrid");
+
+      var geoData = { 
+        'identifier': 'name',
+        'label': 'name',
+        'items': [
+          { 'name':'Africa', 'type':'continent', children:[
+            { 'name':'Egypt', 'type':'country' }, 
+            { 'name':'Kenya', 'type':'country', children:[
+              { 'name':'Nairobi', 'type':'city' },
+              { 'name':'Mombasa', 'type':'city' } ]
+            },
+            { 'name':'Sudan', 'type':'country', 'children':
+              { 'name':'Khartoum', 'type':'city' } 
+            } ]
+          },
+          { 'name':'Asia', 'type':'continent', 'children':[
+            { 'name':'China', 'type':'country' },
+            { 'name':'India', 'type':'country' },
+            { 'name':'Russia', 'type':'country' },
+            { 'name':'Mongolia', 'type':'country' } ]
+          },
+          { 'name':'Australia', 'type':'continent', 'population':'21 million', 'children':
+            { 'name':'Commonwealth of Australia', 'type':'country', 'population':'21 million'}
+          },
+          { 'name':'Europe', 'type':'continent', 'children':[
+            { 'name':'Germany', 'type':'country' },
+            { 'name':'France', 'type':'country' },
+            { 'name':'Spain', 'type':'country' },
+            { 'name':'Italy', 'type':'country' } ]
+          },
+          { 'name':'North America', 'type':'continent', 'children':[
+            { 'name':'Mexico', 'type':'country',  'population':'108 million', 'area':'1,972,550 sq km', 'children':[
+              { 'name':'Mexico City', 'type':'city', 'population':'19 million', 'timezone':'-6 UTC'},
+              { 'name':'Guadalajara', 'type':'city', 'population':'4 million', 'timezone':'-6 UTC' } ]
+            },
+            { 'name':'Canada', 'type':'country', 'population':'33 million', 'area':'9,984,670 sq km', 'children':[
+              { 'name':'Ottawa', 'type':'city', 'population':'0.9 million', 'timezone':'-5 UTC'},
+              { 'name':'Toronto', 'type':'city', 'population':'2.5 million', 'timezone':'-5 UTC' }]
+            },
+            { 'name':'United States of America', 'type':'country' } ]
+          },
+          { 'name':'South America', 'type':'continent', children:[
+            { 'name':'Brazil', 'type':'country', 'population':'186 million' },
+            { 'name':'Argentina', 'type':'country', 'population':'40 million' } ]
+          } 
+        ]
+      };    
+
+      var layoutGeo = [
+        [
+          { field: "name", name: "Name", width: 10 },
+          { field: "type", name: "Geography Type", width: 10 },
+          { field: "population", name: "Population", width: 'auto' }
+        ]
+      ];
+
+      //This function performs some basic dojo initialization. In this case it connects the button
+      //onClick to a function which invokes the fetch(). The fetch function queries for all items 
+      //and provides callbacks to use for completion of data retrieval or reporting of errors.
+      function init2 () {
+        geoStore._saveCustom = function(saveComplete, saveFailed) {
+           var changeSet  = geoStore._pending;
+           console.log(changeSet);
+           saveComplete();
+        };
+
+
+        //Function to perform a fetch on the datastore when a button is clicked
+        function updateAll() {
+
+           //Callback for processing a returned list of items.
+          function gotAll(items, request) {
+            var value = spinner.getValue();
+            if ( value >= 0 ) { 
+              var i;
+              for (i = 0; i < items.length; i++) {
+                var item = items[i];
+                geoStore.setValue(item, "population", value);
+              }
+            }
+          }
+            
+          //Callback for if the lookup fails.
+          function fetchFailed(error, request) {
+            alert("lookup failed.");
+            alert(error);
+          }
+             
+          //Fetch the data.
+          geoStore.fetch({query: {}, onComplete: gotAll, onError: fetchFailed, queryOptions: {deep:true}});
+        }
+        //Link the click event of the button to driving the fetch.
+        dojo.connect(button2, "onClick", updateAll);
+        dojo.connect(button2, "onClick", geoStore, "save");
+      }
+      //Set the init function to run when dojo loading and page parsing has completed.
+      dojo.addOnLoad(init2);
+    </script>
+
+  .. cv :: html 
+
+    <div dojoType="dojo.data.ItemFileWriteStore" data="geoData" jsId="geoStore"></div>
+    <b>Set the population to assign to all items</b>
+    <br>
+    <br>
+    <div dojoType="dijit.form.NumberSpinner" jsId="spinner" value="10000"></div>
+    <br>
+    <br>
+    <div dojoType="dijit.form.Button" jsId="button2">Update all geography items populations!</div>
+    <br>
+    <br>
+    <div style="width: 400px; height: 300px;">
+      <div id="grid" 
+        dojoType="dojox.grid.DataGrid" 
+        store="geoStore" 
+        structure="layoutGeo" 
+        query="{}"
+        queryOptions="{'deep':true}" 
+        rowsPerPage="40">
+      </div>
+    </div>
+
+  .. cv:: css
+
+    <style type="text/css">
+      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/resources/Grid.css";
+      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/resources/nihiloGrid.css";
+
+      .dojoxGrid table {
+        margin: 0;
+      }
+    </style>
