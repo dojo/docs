@@ -424,7 +424,7 @@ This example demonstrates how to use a function such as *deleteItem*. In this ca
     <div dojoType="dijit.tree.ForestStoreModel" jsId="geographyModel2" store="geographyStore2" query="{type: 'continent'}" rootId="Geography" rootLabel="Geography"></div>
     <div dojoType="dijit.Tree" model="geographyModel2"></div>
 
-ItemFileWriteStore changes reflected in dojox.data.DataGrid (w _saveCustom)
+ItemFileWriteStore changes reflected in dojox.data.DataGrid (with _saveCustom)
 ---------------------------------------------------------------------------
 
 The following is a semi-complex example of the write API in action. In this example, there is a number spinner, a button, and the DataGrid. You use the number spinner to select a value. Then by pressing the button, a query to ItemFileWriteStore is made. The results of that query are iterated over and *setValue* is called on each item to modify its population attribute (or add it if it did not exist). The DataGrid is used to display results. Since the DataGrid is dojo.data.Notification aware, it binds to the DataStore and listens for change events on items. If an item is updated, then the grid automatically reflects it in its display. In this example, changing the population for all items should result in all rows showing a change in the population column when the button is pressed.  In addition, save() is called on the store, which in turn invokes a custom save handler.  This custom save handler generated a serialized view of the changes to send back to some location.  This view
@@ -501,7 +501,7 @@ is displayed in an alert.
       //and provides callbacks to use for completion of data retrieval or reporting of errors.
       function init3 () {
         geoStore2._saveCustom = function(saveComplete, saveFailed) {
-           var changeSet  = geoStore._pending;
+           var changeSet  = geoStore2._pending;
            for (var i in changeSet._modifiedItems) {
               console.log(i);
            }
