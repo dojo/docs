@@ -441,7 +441,7 @@ is displayed in an alert.
       dojo.require("dijit.form.TextBox");
       dojo.require("dojox.grid.DataGrid");
 
-      var geoData = { 
+      var geoData2 = { 
         'identifier': 'name',
         'label': 'name',
         'items': [
@@ -488,7 +488,7 @@ is displayed in an alert.
         ]
       };    
 
-      var layoutGeo = [
+      var layoutGeo2 = [
         [
           { field: "name", name: "Name", width: 10 },
           { field: "type", name: "Geography Type", width: 10 },
@@ -499,8 +499,8 @@ is displayed in an alert.
       //This function performs some basic dojo initialization. In this case it connects the button
       //onClick to a function which invokes the fetch(). The fetch function queries for all items 
       //and provides callbacks to use for completion of data retrieval or reporting of errors.
-      function init2 () {
-        geoStore._saveCustom = function(saveComplete, saveFailed) {
+      function init3 () {
+        geoStore2._saveCustom = function(saveComplete, saveFailed) {
            var changeSet  = geoStore._pending;
            console.log(changeSet);
            saveComplete();
@@ -512,7 +512,7 @@ is displayed in an alert.
 
            //Callback for processing a returned list of items.
           function gotAll(items, request) {
-            var value = spinner.getValue();
+            var value = spinner2.getValue();
             if ( value >= 0 ) { 
               var i;
               for (i = 0; i < items.length; i++) {
@@ -532,30 +532,30 @@ is displayed in an alert.
           geoStore.fetch({query: {}, onComplete: gotAll, onError: fetchFailed, queryOptions: {deep:true}});
         }
         //Link the click event of the button to driving the fetch.
-        dojo.connect(button2, "onClick", updateAll);
-        dojo.connect(button2, "onClick", geoStore, "save");
+        dojo.connect(button3, "onClick", updateAll);
+        dojo.connect(button3, "onClick", geoStore, "save");
       }
       //Set the init function to run when dojo loading and page parsing has completed.
-      dojo.addOnLoad(init2);
+      dojo.addOnLoad(init3);
     </script>
 
   .. cv :: html 
 
-    <div dojoType="dojo.data.ItemFileWriteStore" data="geoData" jsId="geoStore"></div>
+    <div dojoType="dojo.data.ItemFileWriteStore" data="geoData2" jsId="geoStore2"></div>
     <b>Set the population to assign to all items</b>
     <br>
     <br>
-    <div dojoType="dijit.form.NumberSpinner" jsId="spinner" value="10000"></div>
+    <div dojoType="dijit.form.NumberSpinner" jsId="spinner2" value="10000"></div>
     <br>
     <br>
-    <div dojoType="dijit.form.Button" jsId="button2">Update all geography items populations!</div>
+    <div dojoType="dijit.form.Button" jsId="button3">Update all geography items populations!</div>
     <br>
     <br>
     <div style="width: 400px; height: 300px;">
-      <div id="grid" 
+      <div id="grid2" 
         dojoType="dojox.grid.DataGrid" 
-        store="geoStore" 
-        structure="layoutGeo" 
+        store="geoStore2" 
+        structure="layoutGeo2" 
         query="{}"
         queryOptions="{'deep':true}" 
         rowsPerPage="40">
