@@ -531,7 +531,7 @@ is displayed in an alert.
           }
              
           //Fetch the data.
-          geoStore2.fetch({query: {}, onComplete: gotAll, onError: fetchFailed, queryOptions: {deep:true}});
+          geoStore2.fetch({query: {type:"city"}, onComplete: gotAll, onError: fetchFailed, queryOptions: {deep:true}});
         }
         //Link the click event of the button to driving the fetch.
         dojo.connect(button3, "onClick", updateAll);
@@ -550,7 +550,7 @@ is displayed in an alert.
     <div dojoType="dijit.form.NumberSpinner" jsId="spinner2" value="10000"></div>
     <br>
     <br>
-    <div dojoType="dijit.form.Button" jsId="button3">Update all geography items populations!</div>
+    <div dojoType="dijit.form.Button" jsId="button3">Update all geography items of type city with a new population!</div>
     <br>
     <br>
     <div style="width: 400px; height: 300px;">
