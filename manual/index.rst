@@ -877,6 +877,14 @@ These sections cover the available projects shipped with the Dojo Toolkit
 * `dojox.validate <dojox/validate>`_
 * `dojox.widget <dojox/widget>`_
 
+  * `dojox.widget.AnalogGauge <dojox/widget/AnalogGauge>`_
+
+    A circular gauge with a variety of indicators, used to display numerical data.
+
+  * `dojox.widget.BarGauge <dojox/widget/BarGauge>`_
+
+    A horizontal bar gauge with a few indicators, used to display numerical data.
+
   * `dojox.widget.Calendar <dojox/widget/Calendar>`_
 
     An extended dijit._Calendar
