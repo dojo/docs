@@ -501,7 +501,7 @@ is displayed in an alert.
       //and provides callbacks to use for completion of data retrieval or reporting of errors.
       function init3 () {
 
-        function itemToJS(store, item) {
+        var itemToJS = function(store, item) {
           // summary: Function to convert an item into a simple JS object.
           // store:
           //    The datastore the item came from.
@@ -524,14 +524,14 @@ is displayed in an alert.
                       var value = values[j];
                       //Check that the value isn't another item. If it is, process it as an item.
                       if (store.isItem(value)) {
-                        js[attributes[i]].push(itemToJS(store, value)));
+                        js[attributes[i]].push(itemToJS(store, value));
                       } else {
                         js[attributes[i]].push(value);
                       }
                     }
                   } else {
                     if (store.isItem(values[0])) {
-                      js[attributes[i]] = dojo.fromJson(itemToJSON(store, values[0]));
+                      js[attributes[i]] = itemToJS(store, values[0]);
                     } else {
                       js[attributes[i]] = values[0];
                     }
@@ -541,14 +541,14 @@ is displayed in an alert.
             }
           }
           return js;
-        }
+        };
 
         geoStore2._saveCustom = function(saveComplete, saveFailed) {
            var changeSet  = geoStore2._pending;
            var changes = {};
            var changes.modified = {};
            for (var i in changeSet._modifiedItems) {
-              changes.modified[i] = itemtoJS(geoStore2, changeSet._modifiedItems[i]);
+              changes.modified[i] = itemToJS(geoStore2, changeSet._modifiedItems[i]);
            }
            alert(dojo.toJson(changes, true);
            saveComplete();
