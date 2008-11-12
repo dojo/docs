@@ -502,7 +502,7 @@ is displayed in an alert.
       function init3 () {
         geoStore2._saveCustom = function(saveComplete, saveFailed) {
            var changeSet  = geoStore._pending;
-           console.log(changeSet);
+           console.debug(changeSet);
            saveComplete();
         };
 
