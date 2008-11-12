@@ -603,7 +603,7 @@ is displayed in an alert.
   .. cv :: html 
 
     <div dojoType="dojo.data.ItemFileWriteStore" data="geoData2" jsId="geoStore2"></div>
-    <b>Set the population to assign to all items</b>
+    <b>Set the population to assign to all items of type city</b>
     <br>
     <br>
     <div dojoType="dijit.form.NumberSpinner" jsId="spinner2" value="10000"></div>
