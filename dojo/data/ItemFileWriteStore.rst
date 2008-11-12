@@ -502,7 +502,16 @@ is displayed in an alert.
       function init3 () {
         geoStore2._saveCustom = function(saveComplete, saveFailed) {
            var changeSet  = geoStore._pending;
+
+---- /!\ '''Edit conflict - other version:''' ----
            console.debug(changeSet);
+
+---- /!\ '''Edit conflict - your version:''' ----
+           for (var i in changeSet._modifiedItems) {
+              console.log(i);
+           }
+
+---- /!\ '''End of edit conflict''' ----
            saveComplete();
         };
 
