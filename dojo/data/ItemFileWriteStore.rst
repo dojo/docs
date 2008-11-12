@@ -549,7 +549,7 @@ is displayed in an alert.
            //    a block of JSON text.
            var changeSet  = geoStore2._pending;
            var changes = {};
-           changes.modified = {};
+           changes.modified = [];
            for (var i in changeSet._modifiedItems) {
               //Use the identity to look up the current version of the item from the store's array
               //Can't use the object IN the modified items array because it is the saved state before modification.
@@ -561,7 +561,7 @@ is displayed in an alert.
               } else {
                  item = geoStore2._arrayOfAllItems[i];
               }
-              changes.modified[i] = itemToJS(geoStore2, item);
+              changes.modified.push(itemToJS(geoStore2, item));
            }
            alert(dojo.toJson(changes, true));
            saveComplete();
