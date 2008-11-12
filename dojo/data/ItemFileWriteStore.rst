@@ -546,11 +546,11 @@ is displayed in an alert.
         geoStore2._saveCustom = function(saveComplete, saveFailed) {
            var changeSet  = geoStore2._pending;
            var changes = {};
-           var changes.modified = {};
+           changes.modified = {};
            for (var i in changeSet._modifiedItems) {
               changes.modified[i] = itemToJS(geoStore2, changeSet._modifiedItems[i]);
            }
-           alert(dojo.toJson(changes, true);
+           alert(dojo.toJson(changes, true));
            saveComplete();
         };
 
