@@ -193,7 +193,7 @@ Example 1:  A partial circle gauge with two indicators and a set of gradient ran
       </div>
       <div dojoType="dojox.widget.AnalogLineIndicator"
         id="target"
-        value="6"
+        value="52"
         color="#D00000"
         width="3"
         hover="Target: 52"
