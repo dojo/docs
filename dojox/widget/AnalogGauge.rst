@@ -383,11 +383,11 @@ Example 3:  Tachometer style gauge with arc indicator.
   .. cv :: html 
 
     <div dojoType="dojox.widget.AnalogGauge"
-      width="650"
-      height="550"
-      cx="320"
-      cy="310"
-      radius="300"
+      width="450"
+      height="300"
+      cx="225"
+      cy="110"
+      radius="150"
       startAngle="-135"
       endAngle="135"
       useRangeStyles="0"
