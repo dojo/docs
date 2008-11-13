@@ -420,4 +420,12 @@ Example 3:  Tachometer style gauge with arc indicator.
         title="arc"
         hover="Arc: 80">
       </div>
+      <div dojoType="dojox.widget.NeedleIndicator"
+        value="100"
+        width="8"
+        length="150"
+        color="red"   
+        title="Needle"
+        hover="Needle: 100">
+      </div>
     </div>
