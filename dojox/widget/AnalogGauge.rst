@@ -227,7 +227,7 @@ Example 2:  A half circle gauge with two indicators overlay graphic.
 
     <div dojoType="dojox.widget.AnalogGauge"
       width="350"
-      height="275"
+      height="225"
       cx="175"
       cy="175"
       radius="125"
