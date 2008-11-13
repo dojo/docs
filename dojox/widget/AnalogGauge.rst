@@ -24,3 +24,13 @@ Examples
 ===============================================================
 Example 1:  A simple full circle gauge with a single indicator.
 ===============================================================
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojox.widget.AnalogGauge");
+    </script>
+
+  .. cv :: html 
