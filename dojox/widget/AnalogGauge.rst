@@ -42,8 +42,8 @@ Example 1:  A simple full circle gauge with a single indicator.
 	cx="175"
 	cy="175"
 	radius="135"
-	startAngle="-90"
-	endAngle="270"
+	startAngle="-105"
+	endAngle="105"
 	useRangeStyles="0"
 	hideValues="true"
 	majorTicks="{length: 5, offset: 145, interval: 5}">
