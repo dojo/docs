@@ -392,6 +392,7 @@ Example 3:  Tachometer style gauge with arc indicator.
       endAngle="135"
       useRangeStyles="0"
       hideValues="true"
+      color: "white"
       majorTicks="{length: 10, offset: 105, interval: 10, color: 'gray'}"
       minorTicks="{length: 5, offset: 105, interval: 5, color: 'gray'}">
       <div dojoType="dojox.widget.Range"
@@ -417,7 +418,7 @@ Example 3:  Tachometer style gauge with arc indicator.
         width="10"
         offset="150"
         color="blue"   
-        title="arc"
+        title="Arc"
         hover="Arc: 80">
       </div>
       <div dojoType="dojox.widget.NeedleIndicator"
