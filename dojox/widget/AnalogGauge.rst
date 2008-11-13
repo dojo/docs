@@ -386,7 +386,7 @@ Example 3:  Tachometer style gauge with arc indicator.
       width="450"
       height="300"
       cx="225"
-      cy="110"
+      cy="150"
       radius="150"
       startAngle="-135"
       endAngle="135"
@@ -407,7 +407,7 @@ Example 3:  Tachometer style gauge with arc indicator.
       <div dojoType="dojox.widget.ArcIndicator"
         value="200"
         width="20"
-        offset="280"
+        offset="180"
         color="fill"   
         noChange="true"
         hideValues="true">
@@ -415,7 +415,7 @@ Example 3:  Tachometer style gauge with arc indicator.
       <div dojoType="dojox.widget.ArcIndicator"
         value="80"
         width="10"
-        offset="280"
+        offset="180"
         color="blue"   
         title="arc"
         hover="Arc: 80">
