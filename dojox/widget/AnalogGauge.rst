@@ -209,3 +209,194 @@ Example 1:  A partial circle gauge with two indicators and a set of gradient ran
         title="Value">
       </div>
     </div>
+
+
+====================================================================
+Example 2:  A half circle gauge with two indicators overlay graphic.
+====================================================================
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojox.widget.AnalogGauge");
+    </script>
+
+  .. cv :: html 
+
+    <div dojoType="dojox.widget.AnalogGauge"
+	id="declarativeGauge"
+	width="350"
+	height="275"
+	cx="175"
+	cy="175"
+	radius="135"
+	startAngle="-120"
+	endAngle="120"
+	useRangeStyles="0"
+	hideValues="true"
+	majorTicks="{length: 5, offset: 145, interval: 5}"
+        image="/moin_static163/js/dojo/trunk/release/dojo/dojox/widget/tests/images/gaugeOverlay.png">
+      <div dojoType="dojox.widget.Gradient"
+	id="gradient"
+	type="linear"
+	x1="0"
+	x2="0"
+	y2="0">
+        <div dojoType="dojox.widget.GradientColor"
+          id="gradientColor0"
+  	  offset="0"
+          color="#ECECEC">
+        </div>
+        <div dojoType="dojox.widget.GradientColor"
+          id="gradientColor1"
+          offset="1"
+          color="white">
+        </div>
+      </div>
+      <div dojoType="dojox.widget.Range"
+        low="0"
+	high="10"
+	hover="0 - 10">
+        <div dojoType="dojox.widget.Gradient" type="linear">
+          <div dojoType="dojox.widget.GradientColor"
+            offset="0"
+            color="#606060">
+          </div>
+          <div dojoType="dojox.widget.GradientColor"
+            offset="1"
+            color="#707070">
+          </div>
+        </div>
+      </div>
+      <div dojoType="dojox.widget.Range"
+        id="range1"
+        low="10"
+        high="20"
+        hover="10 - 20">
+        <div dojoType="dojox.widget.Gradient"type="linear">
+          <div dojoType="dojox.widget.GradientColor"
+            offset="0"
+            color="#707070">
+          </div>
+          <div dojoType="dojox.widget.GradientColor" 
+            offset="1"
+            color="#808080">
+          </div>
+        </div>
+      </div>
+      <div  dojoType="dojox.widget.Range"
+        id="range2"
+        low="20"
+        high="30"
+        hover="20 - 30">
+        <div dojoType="dojox.widget.Gradient" type="linear">
+          <div dojoType="dojox.widget.GradientColor"
+            offset="0"
+            color="#808080">
+          </div>
+          <div dojoType="dojox.widget.GradientColor"
+            offset="1"
+            color="#909090">
+          </div>
+        </div>
+      </div>
+      <div dojoType="dojox.widget.Range"
+        id="range3"
+        low="30"
+        high="40"
+        hover="30 - 40">
+        <div dojoType="dojox.widget.Gradient" type="linear">
+          <div dojoType="dojox.widget.GradientColor"
+            offset="0"
+            color="#909090">
+          </div>
+          <div dojoType="dojox.widget.GradientColor"
+            offset="1"
+            color="#A0A0A0">
+          </div>
+        </div>
+      </div>
+      <div dojoType="dojox.widget.Range"
+         id="range4"
+         low="40"
+         high="50"
+         hover="40 - 50">
+         <div dojoType="dojox.widget.Gradient" type="linear">
+           <div dojoType="dojox.widget.GradientColor"
+             offset="0"
+             color="#A0A0A0">
+           </div>
+           <div dojoType="dojox.widget.GradientColor"
+             offset="1"
+             color="#B0B0B0">
+           </div>
+        </div>
+      </div>
+      <div dojoType="dojox.widget.Range"
+        id="range5"
+        low="50"
+        high="60"
+        hover="50 - 60">
+        <div dojoType="dojox.widget.Gradient" type="linear">
+          <div dojoType="dojox.widget.GradientColor"
+            offset="0"
+            color="#B0B0B0">
+          </div>
+          <div dojoType="dojox.widget.GradientColor"
+            offset="1"
+            color="#C0C0C0">
+          </div>
+        </div>
+      </div>
+      <div dojoType="dojox.widget.Range" 
+        id="range6"
+        low="60"
+        high="70"
+        hover="60 - 70">
+        <div dojoType="dojox.widget.Gradient" type="linear">
+          <div dojoType="dojox.widget.GradientColor"
+            offset="0"
+            color="#C0C0C0">
+          </div>
+          <div dojoType="dojox.widget.GradientColor"
+            offset="1"
+            color="#D0D0D0">
+          </div>
+        </div>
+      </div>
+      <div dojoType="dojox.widget.Range"
+        id="range7"
+        low="70"
+        high="75"
+        hover="70 - 75">
+        <div dojoType="dojox.widget.Gradient" type="linear">
+          <div dojoType="dojox.widget.GradientColor"
+            offset="0"
+            color="#D0D0D0">
+          </div>
+          <div dojoType="dojox.widget.GradientColor"
+            offset="1"
+            color="#E0E0E0">
+          </div>
+        </div>
+      </div>
+      <div dojoType="dojox.widget.AnalogLineIndicator"
+        id="target"
+        value="52"
+        color="#D00000"
+        width="3"
+        hover="Target: 52"
+        title="Target">
+      </div>
+      <div dojoType="dojox.widget.ArrowIndicator"
+        id="value"
+        value="17"
+        type="arrow"
+        length="135"
+        width="3"
+        hover="Value: 17"
+        title="Value">
+      </div>
+    </div>
