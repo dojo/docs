@@ -226,17 +226,17 @@ Example 2:  A half circle gauge with two indicators overlay graphic.
   .. cv :: html 
 
     <div dojoType="dojox.widget.AnalogGauge"
-	width="350"
-	height="275"
-	cx="175"
-	cy="175"
-	radius="135"
-	startAngle="-90"
-	endAngle="90"
-	useRangeStyles="0"
-	hideValues="true"
-	majorTicks="{length: 5, offset: 145, interval: 5}"
-        image="{url:'/moin_static163/js/dojo/trunk/release/dojo/dojox/widget/tests/images/gaugeOverlay.png',width: 280,height: 155,x: 10, y: 38,overlay: true)">
+      width="350"
+      height="275"
+      cx="175"
+      cy="175"
+      radius="125"
+      startAngle="-90"
+      endAngle="90"
+      useRangeStyles="0"
+      hideValues="true"
+      majorTicks="{length: 5, offset: 135, interval: 5}"
+      image="{url:'dojox/widget/tests/images/gaugeOverlay.png', width: 280, height: 155,x: 35, y: 38,overlay: true}">
       <div dojoType="dojox.widget.Gradient"
 	type="linear"
 	x1="0"
@@ -381,7 +381,7 @@ Example 2:  A half circle gauge with two indicators overlay graphic.
       <div dojoType="dojox.widget.ArrowIndicator"
         value="17"
         type="arrow"
-        length="135"
+        length="125"
         width="3"
         hover="Value: 17"
         title="Value">
