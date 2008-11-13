@@ -376,7 +376,7 @@ Example 3:  Tachometer style gauge with arc indicator.
         'y1': 50,
         'x2': 550,
         'y2': 550,
-         'colors': [{offset: 0, color: 'black'}, {offset: 0.5, color: 'black'}, {offset: 0.75, color: 'yellow'}, {offset: 1, color: 'red'}]
+        'colors': [{offset: 0, color: 'black'}, {offset: 0.5, color: 'black'}, {offset: 0.75, color: 'yellow'}, {offset: 1, color: 'red'}]
       };
     </script>
 
@@ -392,8 +392,8 @@ Example 3:  Tachometer style gauge with arc indicator.
       endAngle="135"
       useRangeStyles="0"
       hideValues="true"
-      majorTicks="{length: 10, offset: 235, interval: 10 color: 'gray'}"
-      minorTicks="{length: 5, offset: 235, interval: 5 color: 'gray'}">
+      majorTicks="{length: 10, offset: 235, interval: 10, color: 'gray'}"
+      minorTicks="{length: 5, offset: 235, interval: 5, color: 'gray'}">
       <div dojoType="dojox.widget.Range"
         low="0"
 	high="100"
