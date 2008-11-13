@@ -38,7 +38,7 @@ Example 1:  A partial circle gauge with two indicators and a set of gradient ran
     <div dojoType="dojox.widget.AnalogGauge"
 	id="declarativeGauge"
 	width="350"
-	height="350"
+	height="275"
 	cx="175"
 	cy="175"
 	radius="135"
