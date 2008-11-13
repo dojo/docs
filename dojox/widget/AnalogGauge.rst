@@ -386,7 +386,7 @@ Example 3:  Tachometer style gauge with arc indicator.
       width="450"
       height="300"
       cx="225"
-      cy="170"
+      cy="175"
       radius="150"
       startAngle="-135"
       endAngle="135"
