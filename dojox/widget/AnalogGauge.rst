@@ -219,7 +219,7 @@ Example 2:  A half circle gauge with two indicators overlay graphic.
       useRangeStyles="0"
       hideValues="true"
       majorTicks="{length: 5, offset: 125, interval: 5}"
-      image="{url:'dojox/widget/tests/images/gaugeOverlay.png', width: 280, height: 155,x: 35, y: 38,overlay: true}">
+      image="{url:'/moin_static163/js/dojo/trunk/release/dojo/dojox/widget/tests/images/gaugeOverlay.png', width: 280, height: 155,x: 35, y: 38,overlay: true}">
       <div dojoType="dojox.widget.Range"
         low="0"
 	high="10"
