@@ -226,7 +226,6 @@ Example 2:  A half circle gauge with two indicators overlay graphic.
   .. cv :: html 
 
     <div dojoType="dojox.widget.AnalogGauge"
-	id="declarativeGauge"
 	width="350"
 	height="275"
 	cx="175"
@@ -239,7 +238,6 @@ Example 2:  A half circle gauge with two indicators overlay graphic.
 	majorTicks="{length: 5, offset: 145, interval: 5}"
         image="/moin_static163/js/dojo/trunk/release/dojo/dojox/widget/tests/images/gaugeOverlay.png">
       <div dojoType="dojox.widget.Gradient"
-	id="gradient"
 	type="linear"
 	x1="0"
 	x2="0"
@@ -271,7 +269,6 @@ Example 2:  A half circle gauge with two indicators overlay graphic.
         </div>
       </div>
       <div dojoType="dojox.widget.Range"
-        id="range1"
         low="10"
         high="20"
         hover="10 - 20">
@@ -287,7 +284,6 @@ Example 2:  A half circle gauge with two indicators overlay graphic.
         </div>
       </div>
       <div  dojoType="dojox.widget.Range"
-        id="range2"
         low="20"
         high="30"
         hover="20 - 30">
@@ -303,7 +299,6 @@ Example 2:  A half circle gauge with two indicators overlay graphic.
         </div>
       </div>
       <div dojoType="dojox.widget.Range"
-        id="range3"
         low="30"
         high="40"
         hover="30 - 40">
@@ -319,7 +314,6 @@ Example 2:  A half circle gauge with two indicators overlay graphic.
         </div>
       </div>
       <div dojoType="dojox.widget.Range"
-         id="range4"
          low="40"
          high="50"
          hover="40 - 50">
@@ -335,7 +329,6 @@ Example 2:  A half circle gauge with two indicators overlay graphic.
         </div>
       </div>
       <div dojoType="dojox.widget.Range"
-        id="range5"
         low="50"
         high="60"
         hover="50 - 60">
@@ -351,7 +344,6 @@ Example 2:  A half circle gauge with two indicators overlay graphic.
         </div>
       </div>
       <div dojoType="dojox.widget.Range" 
-        id="range6"
         low="60"
         high="70"
         hover="60 - 70">
@@ -367,7 +359,6 @@ Example 2:  A half circle gauge with two indicators overlay graphic.
         </div>
       </div>
       <div dojoType="dojox.widget.Range"
-        id="range7"
         low="70"
         high="75"
         hover="70 - 75">
@@ -383,7 +374,6 @@ Example 2:  A half circle gauge with two indicators overlay graphic.
         </div>
       </div>
       <div dojoType="dojox.widget.AnalogLineIndicator"
-        id="target"
         value="52"
         color="#D00000"
         width="3"
@@ -391,7 +381,6 @@ Example 2:  A half circle gauge with two indicators overlay graphic.
         title="Target">
       </div>
       <div dojoType="dojox.widget.ArrowIndicator"
-        id="value"
         value="17"
         type="arrow"
         length="135"
