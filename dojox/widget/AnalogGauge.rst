@@ -47,23 +47,6 @@ Example 1:  A partial circle gauge with two indicators and a set of gradient ran
 	useRangeStyles="0"
 	hideValues="true"
 	majorTicks="{length: 5, offset: 135, interval: 5}">
-      <div dojoType="dojox.widget.Gradient"
-	id="gradient"
-	type="linear"
-	x1="0"
-	x2="0"
-	y2="0">
-        <div dojoType="dojox.widget.GradientColor"
-          id="gradientColor0"
-  	  offset="0"
-          color="#ECECEC">
-        </div>
-        <div dojoType="dojox.widget.GradientColor"
-          id="gradientColor1"
-          offset="1"
-          color="white">
-        </div>
-      </div>
       <div dojoType="dojox.widget.Range"
         low="0"
 	high="10"
@@ -237,20 +220,6 @@ Example 2:  A half circle gauge with two indicators overlay graphic.
       hideValues="true"
       majorTicks="{length: 5, offset: 125, interval: 5}"
       image="{url:'dojox/widget/tests/images/gaugeOverlay.png', width: 280, height: 155,x: 35, y: 38,overlay: true}">
-      <div dojoType="dojox.widget.Gradient"
-	type="linear"
-	x1="0"
-	x2="0"
-	y2="0">
-        <div dojoType="dojox.widget.GradientColor"
-  	  offset="0"
-          color="#ECECEC">
-        </div>
-        <div dojoType="dojox.widget.GradientColor"
-          offset="1"
-          color="white">
-        </div>
-      </div>
       <div dojoType="dojox.widget.Range"
         low="0"
 	high="10"
