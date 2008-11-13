@@ -408,7 +408,7 @@ Example 3:  Tachometer style gauge with arc indicator.
         value="200"
         width="20"
         offset="150"
-        color="fill"   
+        color="black"   
         noChange="true"
         hideValues="true">
       </div>
