@@ -37,16 +37,16 @@ Example 1:  A simple full circle gauge with a single indicator.
 
     <div dojoType="dojox.widget.AnalogGauge"
 	id="declarativeGauge"
-	width="450"
-	height="450"
-	cx="225"
-	cy="225"
+	width="350"
+	height="350"
+	cx="175"
+	cy="175"
 	radius="135"
 	startAngle="-90"
 	endAngle="270"
 	useRangeStyles="0"
 	hideValues="true"
-	majorTicks="{length: 5, offset: 135, interval: 5}">
+	majorTicks="{length: 5, offset: 145, interval: 5}">
       <div dojoType="dojox.widget.Gradient"
 	id="gradient"
 	type="linear"
