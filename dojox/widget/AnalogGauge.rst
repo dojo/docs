@@ -243,12 +243,10 @@ Example 2:  A half circle gauge with two indicators overlay graphic.
 	x2="0"
 	y2="0">
         <div dojoType="dojox.widget.GradientColor"
-          id="gradientColor0"
   	  offset="0"
           color="#ECECEC">
         </div>
         <div dojoType="dojox.widget.GradientColor"
-          id="gradientColor1"
           offset="1"
           color="white">
         </div>
