@@ -196,7 +196,7 @@ Example 1:  A partial circle gauge with two indicators and a set of gradient ran
         value="6"
         color="#D00000"
         width="3"
-        hover="Target: 6"
+        hover="Target: 52"
         title="Target">
       </div>
       <div dojoType="dojox.widget.ArrowIndicator"
