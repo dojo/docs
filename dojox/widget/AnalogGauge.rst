@@ -21,9 +21,9 @@ The analog gauge widget is entirely built upon the dojox.gfx package and as such
 Examples
 ========
 
-===============================================================
-Example 1:  A simple full circle gauge with a single indicator.
-===============================================================
+====================================================================================
+Example 1:  A partial circle gauge with two indicators and a set of gradient ranges.
+====================================================================================
 
 .. cv-compound ::
   
@@ -42,8 +42,8 @@ Example 1:  A simple full circle gauge with a single indicator.
 	cx="175"
 	cy="175"
 	radius="135"
-	startAngle="-105"
-	endAngle="105"
+	startAngle="-120"
+	endAngle="120"
 	useRangeStyles="0"
 	hideValues="true"
 	majorTicks="{length: 5, offset: 145, interval: 5}">
