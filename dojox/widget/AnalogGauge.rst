@@ -356,3 +356,68 @@ Example 2:  A half circle gauge with two indicators overlay graphic.
         title="Value">
       </div>
     </div>
+
+
+======================================================
+Example 3:  Tachometer style gauge with arc indicator.
+======================================================
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojox.widget.AnalogGauge");
+
+      // Used for a gradient arc indicator below:
+      var fill = {
+        'type': 'linear',
+        'x1': 50,
+        'y1': 50,
+        'x2': 550,
+        'y2': 550,
+         'colors': [{offset: 0, color: 'black'}, {offset: 0.5, color: 'black'}, {offset: 0.75, color: 'yellow'}, {offset: 1, color: 'red'}]
+      };
+    </script>
+
+  .. cv :: html 
+
+    <div dojoType="dojox.widget.AnalogGauge"
+      width="650"
+      height="550"
+      cx="320"
+      cy="310"
+      radius="300"
+      startAngle="-135"
+      endAngle="135"
+      useRangeStyles="0"
+      hideValues="true"
+      majorTicks="{length: 10, offset: 235, interval: 10 color: 'gray'}"
+      minorTicks="{length: 5, offset: 235, interval: 5 color: 'gray'}">
+      <div dojoType="dojox.widget.Range"
+        low="0"
+	high="100"
+        color="black">
+      </div>
+      <div dojoType="dojox.widget.Range"
+        low="100"
+	high="200"
+        color="black">
+      </div>
+      <div dojoType="dojox.widget.ArcIndicator"
+        value="200"
+        width="20"
+        offset="280"
+        color="fill"   
+        noChange="true"
+        hideValues="true">
+      </div>
+      <div dojoType="dojox.widget.ArcIndicator"
+        value="80"
+        width="10"
+        offset="280"
+        color="blue"   
+        title="arc"
+        hover="Arc: 80">
+      </div>
+    </div>
