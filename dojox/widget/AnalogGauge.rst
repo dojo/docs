@@ -386,14 +386,14 @@ Example 3:  Tachometer style gauge with arc indicator.
       width="450"
       height="300"
       cx="225"
-      cy="160"
+      cy="170"
       radius="150"
       startAngle="-135"
       endAngle="135"
       useRangeStyles="0"
       hideValues="true"
-      majorTicks="{length: 10, offset: 115, interval: 10, color: 'gray'}"
-      minorTicks="{length: 5, offset: 115, interval: 5, color: 'gray'}">
+      majorTicks="{length: 10, offset: 105, interval: 10, color: 'gray'}"
+      minorTicks="{length: 5, offset: 105, interval: 5, color: 'gray'}">
       <div dojoType="dojox.widget.Range"
         low="0"
 	high="100"
