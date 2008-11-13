@@ -46,7 +46,7 @@ Example 1:  A partial circle gauge with two indicators and a set of gradient ran
 	endAngle="120"
 	useRangeStyles="0"
 	hideValues="true"
-	majorTicks="{length: 5, offset: 145, interval: 5}">
+	majorTicks="{length: 5, offset: 135, interval: 5}">
       <div dojoType="dojox.widget.Gradient"
 	id="gradient"
 	type="linear"
@@ -235,7 +235,7 @@ Example 2:  A half circle gauge with two indicators overlay graphic.
       endAngle="90"
       useRangeStyles="0"
       hideValues="true"
-      majorTicks="{length: 5, offset: 135, interval: 5}"
+      majorTicks="{length: 5, offset: 125, interval: 5}"
       image="{url:'dojox/widget/tests/images/gaugeOverlay.png', width: 280, height: 155,x: 35, y: 38,overlay: true}">
       <div dojoType="dojox.widget.Gradient"
 	type="linear"
