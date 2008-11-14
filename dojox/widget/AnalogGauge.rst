@@ -48,41 +48,36 @@ A partial circle gauge with two indicators (programmatic)
           {low:60, high:70, hover:'60 - 70'},
           {low:70, high:75, hover:'70 - 75'}
         ];
-        gauge = dojo.byId("defaultGauge");
-        gauge = new dojox.widget.AnalogGauge({
+        gauge = dojo.byId('defaultGauge');
+        gauge = new dojox.widget.BarGauge({
           id: "defaultGauge",
           width: 300,
-          height: 200,
-          cx: 150,
-          cy: 175,
-          radius: 125,
+          height: 55,
+          dataHeight: 25,
+          dataWidth: 275,
+          dataY: 25,
+          dataX: 10,
           ranges: ranges1,
-          minorTicks: {
-            offset: 125,
-            interval: 5,
-            length: 5,
-            color: 'gray'
-          },
           majorTicks: {
-            offset: 125,
-            interval: 10,
-            length: 10
+            length: 5,
+            width: 1,
+            offset: -5,
+            interval: 5
           },
           indicators: [
-            new dojox.widget.ArrowIndicator({
-              value:17, 
-              width: 3,
-              hover:'Value: 17', 
+            new dojox.widget.BarIndicator({
+              value:17,
+              width: 7,
+              hover:'Value: 17',
               title: 'Value'
-           }),
-           new dojox.widget.AnalogLineIndicator({
-             value:6, 
-             color:'#D00000',
-             width: 3,
-             hover:'Target: 6',
-             title: 'Target'
-           })
-          ]
+            }),
+            new dojox.widget.BarLineIndicator({
+              value:6,
+              color:'#D00000',
+              hover:'Target: 6',
+              title: 'Target'
+            })
+          ]  
         }, gauge);
         gauge.startup();
       }
