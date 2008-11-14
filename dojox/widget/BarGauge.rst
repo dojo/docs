@@ -26,8 +26,8 @@ The bar gauge widget is entirely built upon the dojox.gfx package and as such, w
 Examples
 ========
 
-A partial circle gauge with two indicators (programmatic)
----------------------------------------------------------
+A bar gauge with two indicators (programmatic)
+----------------------------------------------
 
 .. cv-compound::
 
