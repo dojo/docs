@@ -1,7 +1,7 @@
 #format dojo_rst
 
-dojox.widget.AnalogGauge
-========================
+dojox.widget.BarGauge
+=====================
 
 :Status: Draft
 :Version: 1.2
@@ -11,8 +11,7 @@ dojox.widget.AnalogGauge
 .. contents::
    :depth: 2
 
-A circular gauge with a variety of indicators, used to display numerical data.
-
+A horizontal bar gauge with a variety of indicators, used to display numerical data.
 
 ============
 Introduction
