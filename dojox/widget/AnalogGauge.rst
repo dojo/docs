@@ -11,7 +11,7 @@ dojox.widget.AnalogGauge
 .. contents::
    :depth: 2
 
-TODO: short summary of the component/class/method
+A circular gauge with a variety of indicators, used to display numerical data.
 
 
 ============
