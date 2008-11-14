@@ -3,37 +3,42 @@
 dojox.widget.AnalogGauge
 ========================
 
-:Status: Contributed, Draft
-:Version: 1.3
-:Author: Benjamin Schell
+:Status: Draft
+:Version: 1.2
+:Project owner: Benjamin Schell
 :Available: since V1.3
 
 .. contents::
-  :depth: 2
+   :depth: 2
+
+TODO: short summary of the component/class/method
+
+
+============
+Introduction
+============
+
+The analog gauge widget provides a way to display data on a circular, or semi-circular gauge, such as a speedometer or a pressure gauge, for displaying a finite data value at a point in time. This UI paradigm has been around for a very long time and is quite common in most devices that people are familiar with, such as the dashboard of an automobile.
+
+The analog gauge widget is entirely built upon the dojox.gfx package and as such, works extremely well across many browsers. The way to conceptually understand how the analog gauge widget works is that it is effectively a layering of a background shape, a circle or semi-circle, with a series of indicators for denoting values on the gauge face. An optional capability of the analog gauge is that the values for each indicator can be displayed beneath the gauge (and are by default). This makes the gauge accessible-compliant.
+
 
 ========
-Overview
-========
-The analog gauge widget provides a way to display data on a circular, or semi-circular gauge, such as a speedometer or a pressure gauge, for displaying a finite data value at a point in time.  This UI paradigm has been around for a very long time and is quite common in most devices that people are familiar with, such as the dashboard of an automobile.  
-
-The analog gauge widget is entirely built upon the dojox.gfx package and as such, works extremely well across many browsers.  The way to conceptually understand how the analog gauge widget works is that it is effectively a layering of a background shape, a circle or semi-circle, with a series of indicators for denoting values on the gauge face.  An optional capability of the analog gauge is that the values for each indicator can be displayed beneath the gauge (and are by default).  This makes the gauge accessible-compliant.  
-
 Examples
 ========
 
-====================================================================================
-Example 1:  A partial circle gauge with two indicators and a set of gradient ranges.
-====================================================================================
+A partial circle gauge with two indicators and a set of gradient ranges
+-----------------------------------------------------------------------
 
-.. cv-compound ::
-  
-  .. cv :: javascript
+.. cv-compound::
+
+  .. cv:: javascript
 
     <script>
       dojo.require("dojox.widget.AnalogGauge");
     </script>
 
-  .. cv :: html 
+  .. cv:: html
 
     <div dojoType="dojox.widget.AnalogGauge"
 	id="declarativeGauge"
@@ -72,7 +77,7 @@ Example 1:  A partial circle gauge with two indicators and a set of gradient ran
             offset="0"
             color="#707070">
           </div>
-          <div dojoType="dojox.widget.GradientColor" 
+          <div dojoType="dojox.widget.GradientColor"
             offset="1"
             color="#808080">
           </div>
@@ -142,7 +147,7 @@ Example 1:  A partial circle gauge with two indicators and a set of gradient ran
           </div>
         </div>
       </div>
-      <div dojoType="dojox.widget.Range" 
+      <div dojoType="dojox.widget.Range"
         id="range6"
         low="60"
         high="70"
@@ -194,19 +199,18 @@ Example 1:  A partial circle gauge with two indicators and a set of gradient ran
     </div>
 
 
-====================================================================
-Example 2:  A half circle gauge with two indicators overlay graphic.
-====================================================================
+A half circle gauge with two indicators overlay graphic
+-------------------------------------------------------
 
-.. cv-compound ::
-  
-  .. cv :: javascript
+.. cv-compound::
+
+  .. cv:: javascript
 
     <script>
       dojo.require("dojox.widget.AnalogGauge");
     </script>
 
-  .. cv :: html 
+  .. cv:: html
 
     <div dojoType="dojox.widget.AnalogGauge"
       width="350"
@@ -244,7 +248,7 @@ Example 2:  A half circle gauge with two indicators overlay graphic.
             offset="0"
             color="#707070">
           </div>
-          <div dojoType="dojox.widget.GradientColor" 
+          <div dojoType="dojox.widget.GradientColor"
             offset="1"
             color="#808080">
           </div>
@@ -310,7 +314,7 @@ Example 2:  A half circle gauge with two indicators overlay graphic.
           </div>
         </div>
       </div>
-      <div dojoType="dojox.widget.Range" 
+      <div dojoType="dojox.widget.Range"
         low="60"
         high="70"
         hover="60 - 70">
@@ -358,13 +362,12 @@ Example 2:  A half circle gauge with two indicators overlay graphic.
     </div>
 
 
-======================================================
-Example 3:  Tachometer style gauge with arc indicator.
-======================================================
+Tachometer style gauge with arc indicator
+-----------------------------------------
 
-.. cv-compound ::
-  
-  .. cv :: javascript
+.. cv-compound::
+
+  .. cv:: javascript
 
     <script>
       dojo.require("dojox.widget.AnalogGauge");
@@ -380,7 +383,7 @@ Example 3:  Tachometer style gauge with arc indicator.
       };
     </script>
 
-  .. cv :: html 
+  .. cv:: html
 
     <div dojoType="dojox.widget.AnalogGauge"
       width="450"
@@ -409,7 +412,7 @@ Example 3:  Tachometer style gauge with arc indicator.
         value="200"
         width="20"
         offset="150"
-        color="black"   
+        color="black"
         noChange="true"
         hideValues="true">
       </div>
@@ -417,7 +420,7 @@ Example 3:  Tachometer style gauge with arc indicator.
         value="80"
         width="10"
         offset="150"
-        color="blue"   
+        color="blue"
         title="Arc"
         hover="Arc: 80">
       </div>
@@ -425,7 +428,7 @@ Example 3:  Tachometer style gauge with arc indicator.
         value="100"
         width="8"
         length="150"
-        color="red"   
+        color="red"
         title="Needle"
         hover="Needle: 100">
       </div>
