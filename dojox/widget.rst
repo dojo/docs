@@ -6,7 +6,7 @@ dojox.widget
 :Status: Draft
 :Version: 1.0
 :Authors: Peter Higgins, Nikolai Onken, Marcus Reimann, Josh Trutwin
-:Developers: Shane O'Sullivan, Peter Higgins, Nathan Toone, Karl Tiedt, Alex Russell, Nikolai Onken, Adam Peller
+:Developers: Shane O'Sullivan, Peter Higgins, Nathan Toone, Karl Tiedt, Alex Russell, Nikolai Onken, Adam Peller, Benjamin Schell
 :Available: since V?
 
 .. contents::
@@ -20,6 +20,14 @@ Available Widgets
 =================
 
 Here is an up to date list of dojox.widget components. Note: Some of these are newly added, and appear in different versions of Dojo, so may simply be unavailable in older versions:
+
+* `dojox.widget.AnalogGauge <dojox/widget/AnalogGauge>`_
+
+   A circular gauge with a variety of indicators, used to display numerical data
+
+* `dojox.widget.BarGauge <dojox/widget/BarGauge>`_
+
+  A horizontal bar gauge with a few indicators, used to display numerical data
 
 * `dojox.widget.Calendar <dojox/widget/Calendar>`_
 
