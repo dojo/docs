@@ -362,8 +362,8 @@ A half circle gauge with two indicators overlay graphic
     </div>
 
 
-Tachometer style gauge with arc indicator
------------------------------------------
+Speedometer style gauge with arc indicator and needle indicator
+---------------------------------------------------------------
 
 .. cv-compound::
 
