@@ -27,6 +27,63 @@ The analog gauge widget is entirely built upon the dojox.gfx package and as such
 Examples
 ========
 
+A partial circle gauge with two indicators (programmatic)
+---------------------------------------------------------
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script>
+      dojo.require("dojox.widget.AnalogGauge");
+
+      function init() {
+        gauge = dojo.byId("defaultGauge");
+        gauge = new dojox.widget.AnalogGauge({
+          id: "defaultGauge",
+          width: 300,
+          height: 200,
+          cx: 150,
+          cy: 175,
+          radius: 125,
+          ranges: ranges1,
+          minorTicks: {
+            offset: 125,
+            interval: 5,
+            length: 5,
+            color: 'gray'
+          },
+          majorTicks: {
+            offset: 125,
+            interval: 10,
+            length: 10
+          },
+          indicators: [
+            new dojox.widget.ArrowIndicator({
+              value:17, 
+              width: 3,
+              hover:'Value: 17', 
+              title: 'Value'
+           }),
+           new dojox.widget.AnalogLineIndicator({
+             value:6, 
+             color:'#D00000',
+             width: 3,
+             hover:'Target: 6',
+             title: 'Target'
+           })
+          ]
+        }, gauge);
+        gauge.startup();
+      }
+      dojo.addOnLoad(init);
+
+    </script>
+
+  .. cv:: html
+
+    <div id="defaultGauge"></div>
+
 A partial circle gauge with two indicators and a set of gradient ranges
 -----------------------------------------------------------------------
 
