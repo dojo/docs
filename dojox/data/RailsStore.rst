@@ -1,58 +1,41 @@
 #format dojo_rst
 
-dojo.modulename
-===============
+dojox.data.RailsStore
+=====================
 
 :Status: Draft
 :Version: 1.0
-:Project owner: ?--
-:Available: since V?
+:Project owner: Kris Zyp
+:Available: since 1.3
 
 .. contents::
    :depth: 2
 
-TODO: short summary of the component/class/method
+RailsStore extends the JsonRestStore to interact properly with Ruby on Rail's REST interface.
 
 
 ============
 Introduction
 ============
 
-TODO: introduce the component/class/method
-
+RailsStore provides the same functionality as the JsonRestStore except that it formats the request URLs to Rail's specifications, post-pending URLs with .json extension to indicate that JSON format is being requested. It will also translate Dojo Data sort attributes to query parameters for Rail's will_paginate module.
 
 =====
 Usage
 =====
 
-TODO: how to use the component/class/method
-
-.. code-block :: javascript
- :linenos:
-
- <script type="text/javascript">
-   // your code
- </script>
-
-
+See dojox/data/JsonRestStore for usage from Dojo. For setting up the REST interaction from Ruby on Rail's see the attached Ruby code.
 
 ========
 Examples
 ========
 
-Programmatic example
---------------------
-
-TODO: example
-
-Declarative example
--------------------
-
-TODO: example
-
+See dojox/data/JsonRestStore for examples of Dojo usage. The attached Ruby code should contain examples on how to setup Rails.
 
 ========
 See also
 ========
 
-* TODO: links to other related articles
+http://www.sitepen.com/blog/2008/06/13/restful-json-dojo-data/
+http://www.sitepen.com/blog/?p=565
+http://docs.dojocampus.org/dojox/data/JsonRestStore
