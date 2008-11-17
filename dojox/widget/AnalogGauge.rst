@@ -35,6 +35,7 @@ Indicators
 ==========
 
 There are 4 indicators included as a part of the Analog Gauge widget:
+
 * AnalogLineIndicator - Is used to create the tick marks (with an offset from the middle).  Can also be used as a value indicator (without the offset).  See first example.
 * ArrowIndicator - Behaves and looks similar to the line indicator, but has an arrow head at the end.
 * NeedleIndicator - An indicator similar to the needle on a variety of gauges.  Has a central circular hub and a triangular shaft that tapers to a point.
