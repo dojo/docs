@@ -28,6 +28,17 @@ Usage
 
 As demonstrated in the examples below, creating an analog gauge widget requires a few attributes: width and height of the gauge surface, the center of the gauge, the radius of the gauge, and a start and end angle.  Angles can be negative and the default start/end is -90/90 degrees. A gauge can have a few advanced features, such as an image overlaid on top of the gauge, a gradient background, and CSS styled ranges.  CSS styled ranges are used by setting the 'useRangeStyles' attribute to the number of CSS classes that have been created for this purpose, then creating those classes as .dojoxGaugeRangeN where N is the number of the range.  CSS styled ranges are not available when the renderer is VML.
 
+Indicators can be handled separate of the gauge.  In other words, once an indicator has been created and added to the gauge, one can update the value of the indicator by simply calling the update function on the indicator (rather than having to have a handle on the gauge itself).  New indicators can be created by inheriting from dojox.widget._Indicator and overriding the appropriate functions (draw is the most important).
+
+==========
+Indicators
+==========
+
+There are 4 indicators included as a part of the Analog Gauge widget:
+* AnalogLineIndicator - Is used to create the tick marks (with an offset from the middle).  Can also be used as a value indicator (without the offset).  See first example.
+* ArrowIndicator - Behaves and looks similar to the line indicator, but has an arrow head at the end.
+* NeedleIndicator - An indicator similar to the needle on a variety of gauges.  Has a central circular hub and a triangular shaft that tapers to a point.
+* ArcIndicator - Draws an arc around the center of the gauge.  Can be made wider or narrower by varying the width.  Useful for making a gradient track towards the end of a gauge (see test file).
 
 ========
 Examples
