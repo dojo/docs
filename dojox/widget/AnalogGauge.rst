@@ -22,6 +22,12 @@ The analog gauge widget provides a way to display data on a circular, or semi-ci
 
 The analog gauge widget is entirely built upon the dojox.gfx package and as such, works extremely well across many browsers. The way to conceptually understand how the analog gauge widget works is that it is effectively a layering of a background shape, a circle or semi-circle, with a series of indicators for denoting values on the gauge face. An optional capability of the analog gauge is that the values for each indicator can be displayed beneath the gauge (and are by default). This makes the gauge accessibility compliant.
 
+=====
+Usage
+=====
+
+As demonstrated in the examples below, creating an analog gauge widget requires a few attributes: width and height of the gauge surface, the center of the gauge, the radius of the gauge, and a start and end angle.  Angles can be negative and the default start/end is -90/90 degrees. A gauge can have a few advanced features, such as an image overlaid on top of the gauge, a gradient background, and CSS styled ranges.  CSS styled ranges are used by setting the 'useRangeStyles' attribute to the number of CSS classes that have been created for this purpose, then creating those classes as .dojoxGaugeRangeN where N is the number of the range.  CSS styled ranges are not available when the renderer is VML.
+
 
 ========
 Examples
