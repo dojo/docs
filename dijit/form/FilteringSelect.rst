@@ -145,3 +145,10 @@ See Also
 ========
 
 * There's a `DropDown Select <dojox/form/DropDownSelect>`_ widget in the `dojox.form <dojox/form>`_ project that's similar to FilteringSelect but without the search ability. It can support rich text in both the drop down and in a closed state (to display the selected item).
+
+=====
+TODOC
+=====
+
+* custom labels (example using labelFunc)
+* custom displayedValues (how?)
