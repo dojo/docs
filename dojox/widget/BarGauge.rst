@@ -21,6 +21,22 @@ The bar gauge widget provides a way to display data on a horizontal bar gauge.  
 
 The bar gauge widget is entirely built upon the dojox.gfx package and as such, works extremely well across many browsers. The way to conceptually understand how the bar gauge widget works is that it is effectively a layering indicators over a set of ranges along a horizontal axis.  Tick marks are displayed above the gauge ranges.   An optional capability of the bar gauge is that the values for each indicator can be displayed beneath the gauge (and are by default). This makes the gauge accessibility compliant.
 
+=====
+Usage
+=====
+
+As demonstrated in the examples below, creating a bar gauge widget requires a few attributes: width and height of the gauge surface, width and height of the area the ranges should cover, and an x/y location for the placement of the range areas. Ranges can either be added in the constructor or after creation using the addRange[s] functions.  A gauge can have a few advanced features, such as an image overlaid on top of the gauge, a gradient background, and CSS styled ranges. CSS styled ranges are used by setting the 'useRangeStyles' attribute to the number of CSS classes that have been created for this purpose, then creating those classes as .dojoxGaugeRangeN where N is the number of the range. CSS styled ranges are not available when the renderer is VML.
+
+Indicators can be handled separate of the gauge. In other words, once an indicator has been created and added to the gauge, one can update the value of the indicator by simply calling the update function on the indicator (rather than having to have a handle on the gauge itself). New indicators can be created by inheriting from dojox.widget._Indicator and overriding the appropriate functions (draw is the most important).
+
+==========
+Indicators
+==========
+
+There are 2 indicators provided by default for use with the Bar Gauge widget:
+
+* BarLineIndicator - The default indicator for the Bar Gauge, it can be used to create tick marks (with an offset) or to indicate a value on the gauge as a vertical line
+* BarIndicator - A bar that extends from the minimum edge of the gauge to it's current value.  It is 'resized' rather than 'moved' to change the value.
 
 ========
 Examples
@@ -72,6 +88,7 @@ A bar gauge with two indicators (programmatic)
             }),
             new dojox.widget.BarLineIndicator({
               value:6,
+              width: 5,
               color:'#D00000',
               hover:'Target: 6',
               title: 'Target'
