@@ -49,25 +49,19 @@ Examples
 A simple rolling list pulling data from a read store
 ---------------------------------------------------------
 
-
 .. cv-compound ::
 
   .. cv :: javascript
 
-    <script type="text/javascript">
-      dojo.require("dojo.data.ItemFileReadStore");
-      dojo.require("dojox.widget.RollingList");
-
-      dojo.declare("dojox.widget.RollingStore", dojo.data.ItemFileWriteStore, {
-            getLabel: function(item){
-                  return this.inherited(arguments) + " (" + this.getValue(item, "type") + ")";
-            }
-      });
+    <script>
+      dojo.require("dijit.Tree");
+      dojo.require("dojox.data.FileStore");
     </script>
 
   .. cv :: html
-
-    <div dojoType="dojox.widget.RollingStore" jsId="continentStore" 
-        url="/moin_static163/js/dojo/trunk/release/dojo/dijit/tests/_data/countries.json"></div>
-    <div dojoType="dojox.widget.RollingList" jsId="myList" id="myList" store="continentStore"
-        query="{type:'continent'}"></div>
+  
+    <div>
+      <div dojoType="dojox.data.FileStore" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/demos/stores/filestore_dojotree.php" pathAsQueryParam="true" jsId="dojoFiles"></div>
+      <div dojoType="dijit.tree.ForestStoreModel" jsId="fileModel" store="dojoFiles" query="{}" rootId="DojoFiles" rootLabel="Dojo Files" childrenAttrs="children"></div>
+      <div id="tree" dojoType="dijit.Tree" model="fileModel" ></div>  
+    </div>
