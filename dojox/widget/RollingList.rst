@@ -35,6 +35,7 @@ Other options that you may find useful:
  * **queryOptions** any query options you want to pass on as well when fetching
  * **childrenAttrs** an array of attributes to use as "children" nodes
  * **parentAttr** an optional attribute to use as a pointer to the parent of a node.  If this is not specified, then the parent will be determined by finding the first element whose children attribute contains the node in question.
+ * ``New in 1.3`` **preloadItems** either a boolean (true/false) or a number indicating the number of items that we are willing to preload.  This exists to make it easier to load items with large numbers of children lazily.
 
 ==========
 Panes
