@@ -5,7 +5,7 @@ dojox.rpc.Service
 
 :Status: Contributed, Draft
 :Version: 1.0
-:Author: ?--
+:Author: Kris Zyp and Dustin Machi
 :Available: since V?
 
 .. contents::
@@ -17,10 +17,14 @@ First, you need the code:
 
 .. code-block :: javascript
 
-  dojo.require("dojo.io.script");
   dojo.require("dojox.rpc.Service");
 
-We only need `dojo.io.script <dojo/io/script>`_ if our service is cross-domain, which the provided SMDLibrary SMD's are. If you define your own SMD with a local target endpoint, you can omit the require().
+There are several transports/envelopes that are defined in separate modules to minimize the size of dojox.rpc.Service. These must also be loaded if their used by the SMD:
+* JSONP Transport requires `dojo.io.script <dojo/io/script>`_
+* REST transport requires `dojox.rpc.Rest <dojox/rpc/Rest>`_
+* JSON-RPC-2.0 and JSON-RPC-1.0 envelopes require `dojox.rpc.JsonRPC <dojox/rpc/JsonRPC>`_  
+
+All of the provided SMDLibrary SMD's are based on JSONP, and consequently require `dojo.io.script <dojo/io/script>`_. If you define your own SMD with a local target endpoint, `dojo.io.script <dojo/io/script>`_ is not needed.
 
 ==================
 Starting a Service 
