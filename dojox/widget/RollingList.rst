@@ -49,10 +49,19 @@ Examples
 A simple rolling list pulling data from a read store
 ---------------------------------------------------------
 
+
+---- /!\ '''Edit conflict - other version:''' ----
 .. cv-compound ::
+
+---- /!\ '''Edit conflict - your version:''' ----
+.. cv-compound ::
+
+---- /!\ '''End of edit conflict''' ----
 
   .. cv :: javascript
 
+
+---- /!\ '''Edit conflict - other version:''' ----
     <script type="text/javascript">
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dojox.widget.RollingList");
@@ -64,6 +73,20 @@ A simple rolling list pulling data from a read store
       });
     </script>
 
+---- /!\ '''Edit conflict - your version:''' ----
+    <script type="text/javascript">
+      dojo.require("dojo.data.ItemFileReadStore");
+      dojo.require("dojox.widget.RollingList");
+
+      dojo.declare("dojox.widget.RollingStore", dojo.data.ItemFileWriteStore, {
+            getLabel: function(item){
+                  return this.inherited(arguments) + " (" + this.getValue(item, "type") + ")";
+            }
+      });
+    </script>
+
+---- /!\ '''End of edit conflict''' ----
+
   .. cv :: html
 
     <div dojoType="dojox.widget.RollingStore" jsId="continentStore" 
@@ -71,7 +94,13 @@ A simple rolling list pulling data from a read store
     <div dojoType="dojox.widget.RollingList" jsId="myList" id="myList" store="continentStore"
         query="{type:'continent'}"></div>
 
+---- /!\ '''Edit conflict - other version:''' ----
+
 
 ==========================
 Technical/Protocol Details
 ==========================
+
+---- /!\ '''Edit conflict - your version:''' ----
+
+---- /!\ '''End of edit conflict''' ----
