@@ -58,6 +58,12 @@ A simple rolling list pulling data from a read store
       dojo.require("dojox.data.FileStore");
       dojo.require("dojo.data.ItemFileWriteStore");
       dojo.require("dojox.widget.RollingList");
+
+      dojo.declare("dojox.widget.RollingStore", dojo.data.ItemFileWriteStore, {
+          getLabel: function(item){
+              return this.inherited(arguments) + " (" + this.getValue(item, "type") + ")";
+          }
+      });
     </script>
 
   .. cv :: html
