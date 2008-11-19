@@ -70,3 +70,10 @@ A simple rolling list pulling data from a read store
         url="/moin_static163/js/dojo/trunk/release/dojo/dijit/tests/_data/countries.json"></div>
     <div dojoType="dojox.widget.RollingList" jsId="myList" id="myList" store="continentStore"
         query="{type:'continent'}"></div>
+
+  .. cv:: css
+
+    <style type="text/css">
+      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/widget/RollingList/RollingList.css";
+    </style>
+
