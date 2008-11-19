@@ -69,7 +69,7 @@ A simple rolling list pulling data from a read store
     <div dojoType="dojox.widget.RollingStore" jsId="continentStore"
         url="/moin_static163/js/dojo/trunk/release/dojo/dijit/tests/_data/countries.json"></div>
     <div dojoType="dojox.widget.RollingList" jsId="myList" id="myList" store="continentStore"
-        query="{type:'continent'}" style="height:150px; width: 300px;"></div>
+        query="{type:'continent'}" style="height:150px;"></div>
 
   .. cv:: css
 
