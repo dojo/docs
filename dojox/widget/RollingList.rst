@@ -68,6 +68,8 @@ A simple rolling list pulling data from a read store
 
   .. cv :: html
   
+    <div dojoType="dojox.widget.RollingStore" jsId="continentStore"
+        url="/moin_static163/js/dojo/trunk/release/dojo/dijit/tests/_data/countries.json"></div>
     <div>
       <div dojoType="dojox.data.FileStore" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/demos/stores/filestore_dojotree.php" pathAsQueryParam="true" jsId="dojoFiles"></div>
       <div dojoType="dijit.tree.ForestStoreModel" jsId="fileModel" store="dojoFiles" query="{}" rootId="DojoFiles" rootLabel="Dojo Files" childrenAttrs="children"></div>
