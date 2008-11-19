@@ -56,6 +56,8 @@ A simple rolling list pulling data from a read store
     <script>
       dojo.require("dijit.Tree");
       dojo.require("dojox.data.FileStore");
+      dojo.require("dojo.data.ItemFileWriteStore");
+      dojo.require("dojox.widget.RollingList");
     </script>
 
   .. cv :: html
