@@ -20,8 +20,11 @@ First, you need the code:
   dojo.require("dojox.rpc.Service");
 
 There are several transports/envelopes that are defined in separate modules to minimize the size of dojox.rpc.Service. These must also be loaded if their used by the SMD:
+
 * JSONP Transport requires `dojo.io.script <dojo/io/script>`_
+
 * REST transport requires `dojox.rpc.Rest <dojox/rpc/Rest>`_
+
 * JSON-RPC-2.0 and JSON-RPC-1.0 envelopes require `dojox.rpc.JsonRPC <dojox/rpc/JsonRPC>`_  
 
 All of the provided SMDLibrary SMD's are based on JSONP, and consequently require `dojo.io.script <dojo/io/script>`_. If you define your own SMD with a local target endpoint, `dojo.io.script <dojo/io/script>`_ is not needed.
@@ -93,4 +96,8 @@ This will trigger a web search for the phrase "Dojo Toolkit", and fire your call
 
 If you are unfamiliar with `Deferreds <dojo/Deferred>`_, you should dig deeper. You will thank us later. 
 
-``todoc: defining a SMD``
+=====================
+Creating your own SMD
+=====================
+
+Please see http://groups.google.com/group/json-schema/web/service-mapping-description-proposal for a definition of the SMD format and how to define your own.
