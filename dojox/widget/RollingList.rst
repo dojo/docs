@@ -49,18 +49,20 @@ Examples
 A simple rolling list pulling data from a read store
 ---------------------------------------------------------
 
-.. cv-compound::
+.. cv-compound ::
 
   .. cv :: javascript
 
-    dojo.require("dojo.data.ItemFileReadStore");
-    dojo.require("dojox.widget.RollingList");
+    <script type="text/javascript">
+      dojo.require("dojo.data.ItemFileReadStore");
+      dojo.require("dojox.widget.RollingList");
 
-    dojo.declare("dojox.widget.RollingStore", dojo.data.ItemFileWriteStore, {
-          getLabel: function(item){
-                return this.inherited(arguments) + " (" + this.getValue(item, "type") + ")";
-          }
-    });
+      dojo.declare("dojox.widget.RollingStore", dojo.data.ItemFileWriteStore, {
+            getLabel: function(item){
+                  return this.inherited(arguments) + " (" + this.getValue(item, "type") + ")";
+            }
+      });
+    </script>
 
   .. cv :: html
 
@@ -69,4 +71,7 @@ A simple rolling list pulling data from a read store
     <div dojoType="dojox.widget.RollingList" jsId="myList" id="myList" store="continentStore"
         query="{type:'continent'}"></div>
 
- 
+
+==========================
+Technical/Protocol Details
+==========================
