@@ -42,7 +42,7 @@ Examples
 ========
 
 A simple file picker text box pulling data from a dojox.data.FileStore
--------------------------------------------------------------
+----------------------------------------------------------------------
 
 .. cv-compound ::
 
