@@ -1,7 +1,7 @@
 #format dojo_rst
 
 dojox.form.FilePickerTextBox
-========================
+============================
 
 :Status: Draft
 :Version: 1.2
