@@ -36,6 +36,7 @@ Other options that you may find useful:
  * **childrenAttrs** an array of attributes to use as "children" nodes
  * **parentAttr** an optional attribute to use as a pointer to the parent of a node.  If this is not specified, then the parent will be determined by finding the first element whose children attribute contains the node in question.
  * ``New in 1.3`` **preloadItems** either a boolean (true/false) or a number indicating the number of items that we are willing to preload.  This exists to make it easier to load items with large numbers of children lazily.
+ * ``New in 1.3`` **executeOnDblClick** set to true (the default) to call onExecute() when the user double-clicks an item.  Set to false if your popup will call onExecute() on its own.
 
 ==========
 Panes
