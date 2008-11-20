@@ -75,6 +75,8 @@ Controlling A Roller
 
 The Roller instance responds to several simple methods being called. ``.stop()`` will stop the animation in place, and ``.start()`` will start or resume the Roller. The configuration parameter ``autoStart`` (which defaults to 'true') causes ``.start()`` to be called upon instantiation. 
 
+The default behavior to locate items in a declarative list is to locate first-children LI items. This can be changed by modifying the ``itemSelector`` attribute, which defaults to ``"> li"``.
+
 Roller from dojo.data
 ---------------------
 
