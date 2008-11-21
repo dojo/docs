@@ -39,6 +39,7 @@ Other options that you may find useful:
  * ``New in 1.3`` **executeOnDblClick** set to true (the default) to call onExecute() when the user double-clicks an item.  Set to false if your popup will call onExecute() on its own.
  * ``New in 1.3`` **showButtons** set to true to show "OK" and "Cancel" button that call onExecute and onCancel, respectively (default false)
  * ``New in 1.3`` **okButtonLabel** and **cancelButtonLabel** set to a string you want the ok (or cancel) button to use.  By default, the localized "OK" and "Cancel" strings will be used.
+ * ``New in 1.3`` **minPaneWidth** the minimum width (in pixels) that each pane must be.  The panes are expanded to be this width if they are any narrower than it
 
 
 ==========
