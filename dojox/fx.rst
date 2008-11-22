@@ -39,3 +39,23 @@ The DojoX FX project also contains additional functions, group by role.
 * dojox.fx.scroll - Provides window and node scrolling animation: dojox.fx.smoothScroll
 * dojox.fx.Shadow - An experimental cross-browser drop-shadow
 * dojox.fx.style - An experimental API to animate the effects of adding, toggling, and removing class names from nodes.
+ 
+  * dojox.fx.addClass
+  * dojox.fx.removeClass
+  * dojox.fx.toggleClass 
+
+* dojox.fx.flip - An experimental simulated 3d effect API
+* dojox.fx.split - A series of animations for breaking nodes into parts, and transitioning them
+* dojox.fx.text - An extension of fx.split, which works exclusively on text nodes. 
+
+NodeList Supplements
+--------------------
+
+A cross-namespace module which mixes all the Core dojox.fx animations into `dojo.NodeList <dojo/NodeList>`_ is available with the module:
+
+.. code-block :: javascript
+
+  dojo.require("dojox.fx.ext-dojo.NodeList");
+
+This allows you to use `dojo.query <dojo/query>`_ to select groups of nodes and create animation instances from them.
+
