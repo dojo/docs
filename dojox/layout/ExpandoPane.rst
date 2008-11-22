@@ -18,8 +18,7 @@ dojox.layout.ExpandoPane is a self-collapsing widget for use in a `BorderContain
 Introduction
 ============
 
-TODO: introduce the component/class/method
-
+This is a (currently) experimental widget which provides Expando-like capabilities to a region in a Dijit `BorderContainer <dijit/layout/BorderContainer>`_. The use is able to single-click an icon to open or close the region. 
 
 =====
 Usage
