@@ -54,6 +54,18 @@ Cooperation with addOnLoad
 
 dojo.require works directly with `dojo.addOnLoad <dojo/addOnLoad>`_. While modules are being loaded, any addOnLoad functions will wait until all dependencies are solved before firing again.
 
+Additionally, you can re-call addOnLoad anytime you immediately call dojo.require, in order to ensure the modules and dependencies are ready. Even after page load!
+
+.. code-block :: javascript
+  :linenos:
+
+  dojo.require("dojo.fx");
+  dojo.addOnLoad(function(){
+      dojo.require("dijit.form.Button");
+      dojo.addOnLoad(function(){
+           new dijit.form.Button({}).placeAt(dojo.body()); 
+      });
+  });
 
 =====
 Usage
@@ -69,6 +81,7 @@ Simply pass it a string:
   // load dojox/widget/Toaster.js:
   dojo.require("dojox.widget.Toaster");
 
+Throughout Dojo, the pattern above remains consistent. However, by using `dojo.registerModulePath <dojo/registerModulePath>`_ in your code, you are able to redefine the meaning of parts of namespaces. 
 
 ========
 Examples
