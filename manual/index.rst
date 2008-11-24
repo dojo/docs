@@ -454,7 +454,7 @@ Dijit is Dojo's UI Library, and lives as a separate namespace ``dijit``. Dijit r
 * `dijit.Tree <dijit/Tree>`_
 
   * `Model <dijit/tree/Model>`_
-  * `TreeStoreModel <dijit/tree/ForestStoreModel>`_
+  * `TreeStoreModel <dijit/tree/TreeStoreModel>`_
   * `ForestStoreModel <dijit/tree/ForestStoreModel>`_
 
 
