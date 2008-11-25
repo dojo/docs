@@ -49,10 +49,6 @@ Top priority: Dojo Base
 
   needed: full page
 
-* `dojo.isArray <dojo/isArray>`_
-
-  needed: full page
-
 * `dojo.isFunction <dojo/isFunction>`_
 
   needed: full page
@@ -125,10 +121,6 @@ Top priority: Dojo Base
 
   needed: full page
 
-* `dojo.marginBox <dojo/marginBox>`_ 
-
-  needed: examples
-
 * `dojo.contentBox <dojo/contentBox>`_
 
   needed: examples
@@ -168,7 +160,7 @@ Priority 4: DojoX
 
   needed: full page
 
-* `dojox.grid <dojox/grid>`_
+* `dojox.grid <dojox/grid>`_ ``bforbes, toonetown``
 
   needed: Introduction, Grid 1.2 Changes, Usage, Parameter "selection mode", Example "sorting data at the server", Example "Large datasets", Tips
 
