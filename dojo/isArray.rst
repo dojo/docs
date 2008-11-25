@@ -5,53 +5,64 @@ dojo.isArray
 
 :Status: Draft
 :Version: 1.0
-:Available: since V?
+:Available: since 0.9
 
 .. contents::
    :depth: 2
 
-Checks if the parameter is an Array.
-
+Checks if the passed parameter is an Array.
 
 ============
 Introduction
 ============
 
-TODO: introduce the component/class/method
-
+A simple utility function to check if an object is truly and array.
 
 =====
 Usage
 =====
 
-TODO: how to use the component/class/method
+isArray returns a Boolean you can use directly in conditionals:
 
 .. code-block :: javascript
  :linenos:
 
- <script type="text/javascript">
-   // your code
- </script>
+  if(dojo.isArray(someVariable)){
+    // do something
+  }
 
+Anything that is an Array can be iterated over by using `dojo.forEach <dojo.forEach>`_
 
+.. code-block :: javascript
+
+  if(dojo.isArray(list)){
+    dojo.forEach(list, function(item, i){
+        // each item in list
+    });
+  }else{
+    // something went wrong? we wanted an array here
+  }
 
 ========
 Examples
 ========
 
-Programmatic example
---------------------
+.. code-block :: javascript
+  :linenos:
 
-TODO: example
+  console.log( dojo.isArray([1,2,3]) );
+  >>> true
 
-Declarative example
--------------------
+  console.log( dojo.isArray(new dojo.NodeList()) );
+  >>> true
 
-TODO: example
+  console.log( dojo.isArray( { "a":1 } );
+  >>> false
 
 
 ========
 See also
 ========
 
-* TODO: links to other related articles
+* `dojo.isArrayLike <dojo.isArrayLike>`_
+* `dojo.isFunction <dojo.isFunction>`_, `dojo.isString <dojo.isString>`_, `dojo.isObject <dojo.isObject>`_
