@@ -5,7 +5,7 @@ dojox.form.Manager
 
 :Status: Draft
 :Version: 1.0
-:Project owner: ?--
+:Project owner: Eugene Lazutkin
 :Available: since 1.3
 
 .. contents::
