@@ -160,6 +160,14 @@ Priority 3: Dijit
 Priority 4: DojoX
 =================
 
+* `dojox.analytics <dojox/analytics>`_
+
+  needed: examples or subpages?
+
+* `dojox.av <dojox/av>`_
+
+  needed: full page
+
 * `dojox.grid <dojox/grid>`_
 
   needed: Introduction, Grid 1.2 Changes, Usage, Parameter "selection mode", Example "sorting data at the server", Example "Large datasets", Tips
