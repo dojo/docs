@@ -31,7 +31,7 @@ isArray returns a Boolean you can use directly in conditionals:
     // do something
   }
 
-Anything that is an Array can be iterated over by using `dojo.forEach <dojo.forEach>`_
+Anything that is an Array can be iterated over by using `dojo.forEach <dojo/forEach>`_
 
 .. code-block :: javascript
 
@@ -64,5 +64,5 @@ Examples
 See also
 ========
 
-* `dojo.isArrayLike <dojo.isArrayLike>`_
-* `dojo.isFunction <dojo.isFunction>`_, `dojo.isString <dojo.isString>`_, `dojo.isObject <dojo.isObject>`_
+* `dojo.isArrayLike <dojo/isArrayLike>`_
+* `dojo.isFunction <dojo/isFunction>`_, `dojo.isString <dojo/isString>`_, `dojo.isObject <dojo/isObject>`_
