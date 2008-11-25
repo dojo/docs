@@ -49,10 +49,6 @@ Top priority: Dojo Base
 
   needed: full page
 
-* `dojo.isFunction <dojo/isFunction>`_
-
-  needed: full page
-
 * `dojo.isObject <dojo/isObject>`_
 
   needed: full page
