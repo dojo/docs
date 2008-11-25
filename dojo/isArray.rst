@@ -34,6 +34,7 @@ isArray returns a Boolean you can use directly in conditionals:
 Anything that is an Array can be iterated over by using `dojo.forEach <dojo/forEach>`_
 
 .. code-block :: javascript
+  :linenos: 
 
   if(dojo.isArray(list)){
     dojo.forEach(list, function(item, i){
