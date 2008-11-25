@@ -5,54 +5,34 @@ dojo.toJson
 
 :Status: Draft
 :Version: 1.0
-:Project owner: ?--
-:Available: since V?
+:Available: since 0.9
 
 .. contents::
    :depth: 2
 
 Returns a JSON serialization of an object.
 
-
 ============
 Introduction
 ============
 
-TODO: introduce the component/class/method
-
-
-=====
-Usage
-=====
-
-TODO: how to use the component/class/method
-
-.. code-block :: javascript
- :linenos:
-
- <script type="text/javascript">
-   // your code
- </script>
-
-
+This function takes an object and converts it to a String serialization of that object.
 
 ========
 Examples
 ========
 
-Programmatic example
---------------------
+.. code-block :: javascript
+ :linenos:
 
-TODO: example
+  // a simple object
+  var obj = { a:"one", b:3, c:true };
 
-Declarative example
--------------------
+  // convert it to a string:
+  var data = dojo.toJson(obj);
+  console.log(data, typeof data);
+  >>> {"a":"one","b":3,"c":true} string
 
-TODO: example
+TODOC: Date objects in objects
 
-
-========
-See also
-========
-
-* TODO: links to other related articles
+See Also: `dojo.objectToQuery <dojo.objectToQuery>`_, `dojo.fromJson <dojo.fromJson>`_ 
