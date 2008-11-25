@@ -33,10 +33,6 @@ Top priority: Dojo Base
 
   needed: Examples
 
-* `dojo.disconnect <dojo/disconnect>`_
-
-  needed: full page
-
 * `dojo.connectPublisher <dojo/connectPublisher>`_
 
   needed: full page
@@ -48,14 +44,6 @@ Top priority: Dojo Base
 * `dojo._base.event <dojo/_base/event>`_
 
   needed: explain DOM event listener in detail
-
-* `dojo.fromJson <dojo/fromJson>`_
-
-  needed: full page
-
-* `dojo.toJson <dojo/toJson>`_
-
-  needed: full page
 
 * `dojo.isString <dojo/isString>`_
 
@@ -160,11 +148,11 @@ Priority 3: Dijit
 Priority 4: DojoX
 =================
 
-* `dojox.analytics <dojox/analytics>`_
+* `dojox.analytics <dojox/analytics>`_ ``dmachi, phiggins``
 
   needed: examples or subpages?
 
-* `dojox.av <dojox/av>`_
+* `dojox.av <dojox/av>`_ ``ttrenka, mwilcox``
 
   needed: full page
 
