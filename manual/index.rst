@@ -576,6 +576,9 @@ These sections cover the available projects shipped with the Dojo Toolkit
 
 * `dojox.av <dojox/av>`_
 * `dojox.charting <dojox/charting>`_
+
+  Amazing charting library
+
 * `dojox.collections <dojox/collections>`_
 * `dojox.color <dojox/color>`_
 * `dojox.cometd <dojox/cometd>`_
