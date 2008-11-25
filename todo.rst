@@ -176,6 +176,10 @@ Priority 4: DojoX
 
   needed: full page
 
+* `dojox.color <dojox/color>`_
+
+  needed: full page
+
 * `dojox.grid <dojox/grid>`_
 
   needed: Introduction, Grid 1.2 Changes, Usage, Parameter "selection mode", Example "sorting data at the server", Example "Large datasets", Tips
