@@ -168,6 +168,10 @@ Priority 4: DojoX
 
   needed: full page
 
+* `dojox.charting <dojox/charting>`_
+
+  needed: some more content from the linked tutorials
+
 * `dojox.grid <dojox/grid>`_
 
   needed: Introduction, Grid 1.2 Changes, Usage, Parameter "selection mode", Example "sorting data at the server", Example "Large datasets", Tips
