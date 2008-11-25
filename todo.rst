@@ -172,6 +172,10 @@ Priority 4: DojoX
 
   needed: some more content from the linked tutorials
 
+* `dojox.collections <dojox/collections>`_
+
+  needed: full page
+
 * `dojox.grid <dojox/grid>`_
 
   needed: Introduction, Grid 1.2 Changes, Usage, Parameter "selection mode", Example "sorting data at the server", Example "Large datasets", Tips
