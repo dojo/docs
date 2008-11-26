@@ -283,6 +283,7 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
     * `dojo.queryToObject <dojo/queryToObject>`_
     * `dojo.xhrDelete <dojo/xhrDelete>`_
     * `dojo.xhrGet <dojo/xhrGet>`_
+    * `dojo.xhrPost <dojo/xhrPost>`_
     * `dojo.rawXhrPost <dojo/rawXhrPost>`_
     * `dojo.rawXhrPut <dojo/rawXhrPut>`_
 
