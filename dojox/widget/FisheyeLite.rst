@@ -106,4 +106,4 @@ This widget is one of the few official widgets which utilize the optional parame
 See also
 ========
 
-* `FisheyeList <dojox/widget/FisheyeList>`_ is a heaver, more-Dock-like variation on this widget.
+* `FisheyeList <dojox/widget/FisheyeList>`_ is a heavier, more-Dock-like variation on this widget.
