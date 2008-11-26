@@ -906,7 +906,7 @@ These sections cover the available projects shipped with the Dojo Toolkit
 
   * `dojox.widget.Dialog <dojox/widget/Dialog>`_
 
-    An extension to `dijit.Dialog </dijit/Dialog>`__
+    An extension to `dijit.Dialog </dijit/Dialog>`__ which provides additional sizing options, animations, and styling
 
   * `dojox.widget.DocTester <dojox/widget/DocTester>`_
 
