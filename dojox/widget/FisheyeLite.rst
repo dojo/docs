@@ -74,7 +74,18 @@ Simply add a ``dojoType``:
        <li dojoType="dojox.widget.FisheyeLite" properties="left:10">hi</li>
     </ul>
 
-When instantiating, either programatically or declaratively, the source DOM Node (with the dojoType, or the widget.domNode member) becomes the target node for the animations. Alternately, you can supply a target somewhere within the sourceNode by adding a class ``dojoxFisheyeTarget`` to some node. 
+When instantiating, either programatically or declaratively, the source DOM Node (with the dojoType, or the widget.domNode member) becomes the target node for the animations. Alternately, you can supply a target somewhere within the sourceNode by adding a class ``fisheyeTarget`` to some node. 
+
+.. code-block :: html
+  :linenos:
+  
+    <ul>
+       <li dojoType="dojox.widget.FisheyeLite" properties="height:10">
+           <p>Content</p><div class="fisheyeTarget">target for animations</div>
+       </li>
+    </ul>
+
+This will cause the inner DIV to be the target of the animations when the LI is hovered.
 
 Behavioral Widget
 -----------------
