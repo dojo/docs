@@ -58,6 +58,7 @@ Declarative example
 
     <div dojoType="dojox.widget.ColorPicker" id="picker"></div>
 
+=====
 Notes
 =====
 
