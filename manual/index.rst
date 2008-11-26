@@ -930,7 +930,7 @@ These sections cover the available projects shipped with the Dojo Toolkit
 
   * `dojox.widget.Loader <dojox/widget/Loader>`_
 
-    A small experimental Ajax Activity indicator
+    A small experimental Ajax Activity indicator (deprecated, will be moved to dojo-c)
 
   * `dojox.widget.Pager <dojox/widget/Pager>`_
 
