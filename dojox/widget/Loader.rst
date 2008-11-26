@@ -1,7 +1,7 @@
 #format dojo_rst
 
-dojo.widget.Loader
-==================
+dojox.widget.Loader
+===================
 
 :Status: Draft
 :Version: 1.0
