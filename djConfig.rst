@@ -155,6 +155,23 @@ baseUrl: '/assets/mydojo/'
 modulePaths: {'foo': '../../bar'}
   Using this parameter is the equivalent of calling dojo.registerModulePath('foo','../../bar') and is necessary to allow dojo to locate custom modules. For more information on creating and using custom modules, [link?].
 
+Other Options
+-------------
+
+afterOnLoad: true 
+  (defaults to false). Set to true if you are attempting to inject dojo.js into the page after the initial page load has occurred. 
+
+.. code-block :: html
+
+    <script type="text/javascript"> 
+      var djConfig = { afterOnLoad:true }; 
+      window.onload = function(){
+           var d = document.getElementsByTagName("head")[0].appendChild(document.createElement('script'));
+           d.src = "my/dojo.js";
+           d.type = "text/javascript";
+      }
+    </script>
+
 Configuring dojox Modules
 -------------------------
 
