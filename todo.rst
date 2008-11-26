@@ -131,9 +131,6 @@ Priority 2: Dojo Core
 Priority 3: Dijit
 =================
 
-* `dijit.getUniqueId <dijit/getUniqueId>`_
-
-  needed: full page
 
 =================
 Priority 4: DojoX
