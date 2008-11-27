@@ -5,7 +5,7 @@ dojo.isArray
 
 :Status: Draft
 :Version: 1.0
-:Available: since 0.9
+:Available: since V0.9
 
 .. contents::
    :depth: 2
@@ -48,19 +48,6 @@ Anything that is an Array can be iterated over by using `dojo.forEach <dojo/forE
 Examples
 ========
 
-.. code-block :: javascript
-  :linenos:
-
-  console.log( dojo.isArray([1,2,3]) );
-  >>> true
-
-  console.log( dojo.isArray(new dojo.NodeList()) );
-  >>> true
-
-  console.log( dojo.isArray( { "a":1 } );
-  >>> false
-
-
 .. cv-compound::
 
   .. cv:: css
@@ -73,7 +60,6 @@ Examples
 
     <script type="text/javascript">
         dojo.require("dijit.form.Button");
-        dojo.require("dojo.fx");
 
         // test variable t:
         var t;
@@ -81,11 +67,6 @@ Examples
         function testIt() {
             // resultDiv is the spanning DIV around the result:
             var resultDiv = dojo.byId('resultDiv');
-            // resultNode is the SPAN tag, in which we will write the result:
-            var resultNode = dojo.byId('result');
-
-            // wipeOut resultDiv:
-            dojo.fx.wipeOut({ node: resultDiv, duration: 0 }).play();
 
             // Here comes the test:
             // Is t an Array?
@@ -100,9 +81,6 @@ Examples
                     "No chance, 't' can't be an array with such a value.<br />Try another button.");
                 dojo.attr(resultDiv, "style", "background-color: #e67272;");
             }
-
-            // wipeIn resultDiv:
-            dojo.fx.wipeIn({ node: resultDiv, duration: 300 }).play();
         }
     </script>
 
