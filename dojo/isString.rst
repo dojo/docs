@@ -152,4 +152,8 @@ Test against isString()
 See also
 ========
 
-* TODO: links to other related articles
+* `dojo.isArray <dojo/isArray>`_ - Checks if the parameter is an Array
+* `dojo.isFunction <dojo/isFunction>`_ - Checks if the parameter is a Function
+* `dojo.isObject <dojo/isObject>`_ - Checks if the parameter is an Object
+* `dojo.isArrayLike <dojo/isArrayLike>`_ - Checks if the parameter is like an Array
+* `dojo.isAlien <dojo/isAlien>`_ - Checks if the parameter is a built-in function
