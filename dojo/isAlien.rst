@@ -12,6 +12,8 @@ dojo.isAlien
 
 Checks if the parameter is a built-in function.
 
+As with all dojo._base components, these functions are included within Dojo Base. You get this functionality by just including dojo.js or dojo.xd.js in your page.
+
 
 ============
 Introduction
@@ -32,7 +34,6 @@ TODO: how to use the component/class/method
  <script type="text/javascript">
    // your code
  </script>
-
 
 
 ========
