@@ -76,7 +76,7 @@ Test against isArray()
             if (dojo.isArray(t)) {
                 // dojooo: t is an array!
                 dojo.attr(resultDiv, "innerHTML", 
-                    "Yes, 't' is an array.<br />Try another button.");
+                    "Yes, good choice: 't' is an array.<br />Try another button.");
                 dojo.attr(resultDiv, "style", "color: black; background-color: #a4e672;");
             } else {
                 // no chance, this can't be an array:
