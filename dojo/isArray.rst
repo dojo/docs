@@ -12,11 +12,15 @@ dojo.isArray
 
 Checks if the passed parameter is an Array.
 
+As with all dojo._base components, these functions are included within Dojo Base. You get this functionality by just including dojo.js or dojo.xd.js in your page.
+
+
 ============
 Introduction
 ============
 
 A simple utility function to check if an object is truly and array.
+
 
 =====
 Usage
@@ -43,6 +47,7 @@ Anything that is an Array can be iterated over by using `dojo.forEach <dojo/forE
   }else{
     // something went wrong? we wanted an array here
   }
+
 
 ========
 Examples
