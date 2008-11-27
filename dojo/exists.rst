@@ -10,48 +10,57 @@ dojo.exists
 .. contents::
    :depth: 2
 
-TODO: short summary of the component/class/method
+Check if all objects in a dot-seperated string object path exist, such as ``"A.B.C"``.
 
 
 ============
 Introduction
 ============
 
-TODO: introduce the component/class/method
+``dojo.exists`` is a convenience function, particularly useful for testing long object paths. It takes a string, and walks down the path it represents. You can provide a root for the path as a second parameter, otherwise it will use the global object. Each portion of the '.' delimited string is tested for defined-ness, returning true only if they all exist.
 
 
 =====
 Usage
 =====
 
-TODO: how to use the component/class/method
+dojo.exists accepts a string, optional root object and returns true/false. 
 
 .. code-block :: javascript
  :linenos:
 
  <script type="text/javascript">
-   // your code
+   if( dojo.exists("myns.widget.Foo") ){
+     console.log("myns.widget.Foo exists");
+   }
  </script>
 
 
+The second ``root`` parameter is optional, ``dojo.exists`` will use the value of ``dojo.global`` by default (which is usually the current ``window``). You can use it to root the path in a different window object, or a particular namespace: 
 
-========
-Examples
-========
+.. code-block :: javascript
+ :linenos:
 
-Programmatic example
---------------------
+ <script type="text/javascript">
+   // check if a widget class is available
 
-TODO: example
+   var widgetType = "form.Button";
+   var myNamespace = docs; 
 
-Declarative example
--------------------
-
-TODO: example
+   if( dojo.exists(widgetType, myNamespace) ){
+     console.log( "There's a docs.form.Button available");
+   } else if( dojo.exists(widgetType, dijit) ){
+     console.log( "Dijits form.Button class is available");
+   } else {
+     console.log( "No form.Button classes are available");
+   }
+   
+ </script>
 
 
 ========
 See also
 ========
 
-* TODO: links to other related articles
+* dojo.getObject_
+* dojo.setObject_
