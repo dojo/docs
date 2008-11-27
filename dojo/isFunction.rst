@@ -169,4 +169,9 @@ Test against isFunction()
 See also
 ========
 
-* `dojo.getObject <dojo/getObject>`_
+* `dojo.getObject <dojo/getObject>`_ - Returns the property of an object from a dot-separated string such as "A.B.C"
+* `dojo.isString <dojo/isString>`_ - Checks if the parameter is a String
+* `dojo.isArray <dojo/isArray>`_ - Checks if the parameter is an Array
+* `dojo.isObject <dojo/isObject>`_ - Checks if the parameter is an Object
+* `dojo.isArrayLike <dojo/isArrayLike>`_ - Checks if the parameter is like an Array
+* `dojo.isAlien <dojo/isAlien>`_ - Checks if the parameter is a built-in function
