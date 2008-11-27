@@ -161,7 +161,8 @@ Test against isArray()
 See also
 ========
 
-* `dojo.isArrayLike <dojo/isArrayLike>`_
-* `dojo.isFunction <dojo/isFunction>`_
-* `dojo.isString <dojo/isString>`_
-* `dojo.isObject <dojo/isObject>`_
+* `dojo.isString <dojo/isString>`_ - Checks if the parameter is a String
+* `dojo.isFunction <dojo/isFunction>`_ - Checks if the parameter is a Function
+* `dojo.isObject <dojo/isObject>`_ - Checks if the parameter is an Object
+* `dojo.isArrayLike <dojo/isArrayLike>`_ - Checks if the parameter is like an Array
+* `dojo.isAlien <dojo/isAlien>`_ - Checks if the parameter is a built-in function
