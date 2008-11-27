@@ -57,7 +57,7 @@ Examples
 ========
 
 Test against isFunction()
-----------------------
+-------------------------
 
 .. cv-compound::
 
