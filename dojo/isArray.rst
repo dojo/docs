@@ -117,15 +117,41 @@ Examples
                 testIt();
             </script>
         </button>
+        <button dojoType="dijit.form.Button">
+            t = "text";
+            <script type="dojo/method" event="onClick" args="evt">
+                // Set t:
+                t = "text";
+
+                // Test the type of t:
+                testIt();
+            </script>
+        </button>
+        <button dojoType="dijit.form.Button">
+            t = [1, 2, 3];
+            <script type="dojo/method" event="onClick" args="evt">
+                // Set t:
+                t = [1, 2, 3];
+
+                // Test the type of t:
+                testIt();
+            </script>
+        </button>
+        <button dojoType="dijit.form.Button">
+            t = { "property": 'value' };
+            <script type="dojo/method" event="onClick" args="evt">
+                // Set t:
+                t = { "property": 'value' };
+
+                // Test the type of t:
+                testIt();
+            </script>
+        </button>
 
         <div id="resultDiv" class="style1">
             <span id="result">Click on a button, to test the associated value.</span>
         </div>
     </div>
-
-
-
-
 
 ========
 See also
