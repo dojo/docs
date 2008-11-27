@@ -91,14 +91,14 @@ Examples
             // Is t an Array?
             if (dojo.isArray(t)) {
                 // dojooo: t is an array!
-                dojo.attr(resultNode, "innerHTML", 
+                dojo.attr(resultDiv, "innerHTML", 
                     "Yes, 't' is an array.<br />Try another button.");
-                dojo.attr(resultNode, "style", "backgroundColor: #a4e672;");
+                dojo.attr(resultDiv, "style", "backgroundColor: #a4e672;");
             } else {
                 // no chance, this can't be an array:
-                dojo.attr(resultNode, "innerHTML", 
+                dojo.attr(resultDiv, "innerHTML", 
                     "No chance, 't' can't be an array with such a value.<br />Try another button.");
-                dojo.attr(resultNode, "style", "backgroundColor: #e67272;");
+                dojo.attr(resultDiv, "style", "backgroundColor: #e67272;");
             }
 
             // wipeIn resultDiv:
@@ -151,7 +151,7 @@ Examples
         </button>
 
         <div id="resultDiv" class="style1">
-            <span id="result">Click on a button, to test the associated value.</span>
+            Click on a button, to test the associated value.
         </div>
     </div>
 
