@@ -85,7 +85,7 @@ Examples
             var resultNode = dojo.byId('result');
 
             // wipeOut resultDiv:
-            dojo.fx.wipeOut({ node: resultDiv, duration: 300 }).play();
+            dojo.fx.wipeOut({ node: resultDiv, duration: 0 }).play();
 
             // Here comes the test:
             // Is t an Array?
