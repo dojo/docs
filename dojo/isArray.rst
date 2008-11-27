@@ -48,6 +48,9 @@ Anything that is an Array can be iterated over by using `dojo.forEach <dojo/forE
 Examples
 ========
 
+Test different values against isArray()
+---------------------------------------
+
 .. cv-compound::
 
   .. cv:: css
@@ -86,7 +89,7 @@ Examples
 
   .. cv:: html
 
-    <div style="height: 110px;">
+    <div>
         <button dojoType="dijit.form.Button">
             t = 1000;
             <script type="dojo/method" event="onClick" args="evt">
@@ -122,6 +125,16 @@ Examples
             <script type="dojo/method" event="onClick" args="evt">
                 // Set t:
                 t = { "property": 'value' };
+
+                // Test the type of t:
+                testIt();
+            </script>
+        </button>
+        <button dojoType="dijit.form.Button">
+            t = function(a, b){ return a };
+            <script type="dojo/method" event="onClick" args="evt">
+                // Set t:
+                t = function(a, b){ return a } ;
 
                 // Test the type of t:
                 testIt();
