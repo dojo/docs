@@ -93,12 +93,12 @@ Examples
                 // dojooo: t is an array!
                 dojo.attr(resultDiv, "innerHTML", 
                     "Yes, 't' is an array.<br />Try another button.");
-                dojo.attr(resultDiv, "style", "backgroundColor: #a4e672;");
+                dojo.attr(resultDiv, "style", "background-color: #a4e672;");
             } else {
                 // no chance, this can't be an array:
                 dojo.attr(resultDiv, "innerHTML", 
                     "No chance, 't' can't be an array with such a value.<br />Try another button.");
-                dojo.attr(resultDiv, "style", "backgroundColor: #e67272;");
+                dojo.attr(resultDiv, "style", "background-color: #e67272;");
             }
 
             // wipeIn resultDiv:
