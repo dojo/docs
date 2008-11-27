@@ -86,7 +86,7 @@ Test against isArray()
             } else {
                 // no chance, this can't be an array:
                 dojo.attr(resultDiv, "innerHTML", 
-                    "No chance, 't' can't be an array with such a value.<br />Try another button.");
+                    "No chance: 't' can't be an array with such a value.<br />Try another button.");
 
                 // Change the backgroundColor:
                 dojo.style(resultDiv, {
@@ -155,6 +155,7 @@ Test against isArray()
             Click on a button, to test the associated value.
         </div>
     </div>
+
 
 ========
 See also
