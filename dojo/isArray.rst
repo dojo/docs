@@ -89,7 +89,7 @@ Test different values against isArray()
 
   .. cv:: html
 
-    <div>
+    <div style="height: 120px;">
         <button dojoType="dijit.form.Button">
             t = 1000;
             <script type="dojo/method" event="onClick" args="evt">
