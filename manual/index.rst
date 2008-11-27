@@ -222,7 +222,7 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 
     * `dojo.isObject <dojo/isObject>`_
 
-      Checks if the parameter is a Object
+      Checks if the parameter is an Object
 
     * `dojo.isArrayLike <dojo/isArrayLike>`_
 
