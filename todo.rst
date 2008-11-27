@@ -47,19 +47,19 @@ Top priority: Dojo Base
 
 * `dojo.isString <dojo/isString>`_
 
-  needed: full page
+  needed: Introduction, Usage
 
 * `dojo.isObject <dojo/isObject>`_
 
-  needed: full page
+  needed: Introduction, Usage
 
 * `dojo.isArrayLike <dojo/isArrayLike>`_
 
-  needed: full page
+  needed: Introduction, Usage
 
 * `dojo.isAlien <dojo/isAlien>`_
 
-  needed: full page
+  needed: Introduction, Usage
 
 * `dojo.doc <dojo/doc>`_
 
