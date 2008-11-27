@@ -15,7 +15,7 @@ Top priority: Dojo Base
 
 * `dojo.exists <dojo/exists>`_
 
-  needed: full page
+  needed: review of draft
 
 * `dojo.registerModulePath <dojo/registerModulePath>`_
 
