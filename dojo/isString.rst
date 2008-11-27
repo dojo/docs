@@ -40,7 +40,7 @@ Examples
 ========
 
 Test against isString()
-----------------------
+-----------------------
 
 .. cv-compound::
 
