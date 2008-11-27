@@ -66,7 +66,7 @@ Examples
   .. cv:: css
 
      <style type="text/css">
-         .style1 { position: absolute; top: 50px; background: #ccc; padding: 10px; }
+         .style1 { position: absolute; top: 50px; background: #f1f1f1; padding: 10px; }
      </style>
 
   .. cv:: javascript
@@ -93,10 +93,12 @@ Examples
                 // dojooo: t is an array!
                 dojo.attr(resultNode, "innerHTML", 
                     "Yes, 't' is an array.<br />Try another button.");
+                dojo.attr(resultNode, "style", "backgroundColor: #a4e672;");
             } else {
                 // no chance, this can't be an array:
                 dojo.attr(resultNode, "innerHTML", 
                     "No chance, 't' can't be an array with such a value.<br />Try another button.");
+                dojo.attr(resultNode, "style", "backgroundColor: #e67272;");
             }
 
             // wipeIn resultDiv:
@@ -158,4 +160,6 @@ See also
 ========
 
 * `dojo.isArrayLike <dojo/isArrayLike>`_
-* `dojo.isFunction <dojo/isFunction>`_, `dojo.isString <dojo/isString>`_, `dojo.isObject <dojo/isObject>`_
+* `dojo.isFunction <dojo/isFunction>`_
+* `dojo.isString <dojo/isString>`_
+* `dojo.isObject <dojo/isObject>`_
