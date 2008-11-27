@@ -81,7 +81,7 @@ Test against isArray()
                 // Change the backgroundColor:
                 dojo.style(resultDiv, {
                     "backgroundColor": "#a4e672",
-                    "color": "white"
+                    "color": "black"
                 });
             } else {
                 // no chance, this can't be an array:
@@ -99,7 +99,7 @@ Test against isArray()
 
   .. cv:: html
 
-    <div style="height: 110px;">
+    <div style="height: 100px;">
         <button dojoType="dijit.form.Button">
             t = 1000;
             <script type="dojo/method" event="onClick" args="evt">
