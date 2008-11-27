@@ -61,6 +61,72 @@ Examples
   >>> false
 
 
+.. cv-compound::
+
+  .. cv:: css
+
+     <style type="text/css">
+         .style1 { position: absolute; top: 50px; background: #ccc; padding: 10px; }
+     </style>
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+        dojo.require("dijit.form.Button");
+        dojo.require("dojo.fx");
+
+        // test variable t:
+        var t;
+
+        function testIt() {
+            // resultDiv is the spanning DIV around the result:
+            var resultDiv = dojo.byId('resultDiv');
+            // resultNode is the SPAN tag, in which we will write the result:
+            var resultNode = dojo.byId('result');
+
+            // wipeOut resultDiv:
+            dojo.fx.wipeOut({ node: resultDiv, duration: 300 }).play();
+
+            // Here comes the test:
+            // Is t an Array?
+            if (dojo.isArray(t)) {
+                // dojooo: t is an array!
+                dojo.attr(resultNode, "innerHTML", 
+                    "Yes, 't' is an array.<br />Try another button.");
+            } else {
+                // no chance, this can't be an array:
+                dojo.attr(resultNode, "innerHTML", 
+                    "No chance, 't' can't be an array with such a value.<br />Try another button.");
+            }
+
+            // wipeIn resultDiv:
+            dojo.fx.wipeIn({ node: resultDiv, duration: 300 }).play();
+        }
+    </script>
+
+  .. cv:: html
+
+    <div style="height: 110px;">
+        <button dojoType="dijit.form.Button">
+            t = 1000;
+            <script type="dojo/method" event="onClick" args="evt">
+                // Set t:
+                t = 1000;
+
+                // Test the type of t:
+                testIt();
+            </script>
+        </button>
+
+        <div id="resultDiv" class="style1">
+            <span id="result">Click on a button, to test the associated value.</span>
+        </div>
+    </div>
+
+
+
+
+
 ========
 See also
 ========
