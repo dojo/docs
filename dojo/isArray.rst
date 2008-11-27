@@ -56,7 +56,7 @@ Test against isArray()
   .. cv:: css
 
      <style type="text/css">
-         .style1 { position: absolute; top: 50px; background: #f1f1f1; padding: 10px; }
+         .style1 { background: #f1f1f1; padding: 10px; }
      </style>
 
   .. cv:: javascript
