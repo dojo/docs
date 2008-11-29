@@ -79,7 +79,7 @@ Test against isString()
             } else {
                 // no chance, this can't be an array:
                 dojo.attr(resultDiv, "innerHTML", 
-                    "No chance: 't' can't be a string with such a value.<br />It seems to be a " 
+                    "No chance: 't' can't be a string with such a value.<br />'t' seems to be a " 
                      + typeof t + ".<br />Try another button.");
 
                 // Change the backgroundColor:
