@@ -78,8 +78,9 @@ Test against isAlien()
             } else {
                 // no chance, this can't be an array:
                 dojo.attr(resultDiv, "innerHTML", 
-                    "No chance: 't' can't be a built-in function with such a value.<br />Try another button.");
-
+                    "No chance: 't' can't be a built-in function with such a value " 
+                     + "('t' seems to be a " + typeof t + ").<br />"
+                     + "Try another button.");
                 // Change the backgroundColor:
                 dojo.style(resultDiv, {
                     "backgroundColor": "#e67272",
