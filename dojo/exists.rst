@@ -5,7 +5,7 @@ dojo.exists
 
 :Status: Draft
 :Version: 1.0
-:Available: since V?
+:Available: since V0.9
 
 .. contents::
    :depth: 2
@@ -17,14 +17,14 @@ Check if all objects in a dot-seperated string object path exist, such as ``"A.B
 Introduction
 ============
 
-``dojo.exists`` is a convenience function, particularly useful for testing long object paths. It takes a string, and walks down the path it represents. You can provide a root for the path as a second parameter, otherwise it will use the global object. Each portion of the '.' delimited string is tested for defined-ness, returning true only if they all exist.
+``dojo.exists`` is a convenience function, particularly useful for testing long object paths. It accepts a string as its first parameter, and walks down the path it represents. You can optionally provide a root for the path as a second parameter, otherwise it will use a default value of the global object. Each portion of the '.' delimited string is tested for defined-ness, returning true only if each object exists as defined in the strong.
 
 
 =====
 Usage
 =====
 
-dojo.exists accepts a string, optional root object and returns true/false. 
+dojo.exists accepts a string as its first parameter, and the root object as its second parameter, and returns true/false. 
 
 .. code-block :: javascript
  :linenos:
