@@ -23,6 +23,7 @@ The following dojo.data APIs are implemented by XmlStore
 * `dojo.data.api.Read <dojo/data/api/Read>`_
 * `dojo.data.api.Write <dojo/data/api/Write>`_
 * `dojo.data.api.Identity <dojo/data/api/Identity>`_  
+
   * **New for dojo 1.3!**  Identity API has been implemented.  The store wil return xpath for an item, or it will return the value of a key attribute you specified.  Specifying keyAttribute is not needed for client-side query and filtering case, but it is required for server-side query handling and update.
 
 
