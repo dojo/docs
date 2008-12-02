@@ -22,7 +22,7 @@ The following dojo.data APIs are implemented by XmlStore
 
 * `dojo.data.api.Read <dojo/data/api/Read>`_
 * `dojo.data.api.Write <dojo/data/api/Write>`_
-* `dojo.data.api.Identity <dojo/data/api/Identity>`_  *New for 1.3!*  Identity API has been implemented.  The store wil return xpath for an item, or it will return the value of a key attribute you specified.  Specifying keyAttribute is not needed for client-side query and filtering case, but it is required for server-side query handling and update.
+* `dojo.data.api.Identity <dojo/data/api/Identity>`_  **New for dojo 1.3!**  Identity API has been implemented.  The store wil return xpath for an item, or it will return the value of a key attribute you specified.  Specifying keyAttribute is not needed for client-side query and filtering case, but it is required for server-side query handling and update.
 
 
 =================
@@ -94,7 +94,7 @@ The constructor for XmlStore takes the following possible parameters in its keyw
 |rootItem                  |A tag name for root items. This is optional. If it is not provided, then the XmlStore assumes the tags  |
 |                          |under the root element of the document are the root items.                                              |
 +--------------------------+--------------------------------------------------------------------------------------------------------+
-|keyAttribute              |An attribute name for a key or an identity. This is optional.                                          |
+|keyAttribute              |An attribute name for a key or an identity. This is optional unless server-side qurey handling is used. |
 +--------------------------+--------------------------------------------------------------------------------------------------------+
 |attributeMap              |An anonymous object that contains properties for attribute mapping, for example                         |
 |                          |{"tag_name.item_attribute_name": "@xml_attribute_name", ...}.   This is optional. This is done so that  |
