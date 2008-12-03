@@ -39,7 +39,7 @@ Because JavaScript Number uses binary floating point, it is not always possible 
 >>> 1.1+2.2
 3.3000000000000003
 
-This is commonly reported as a bug (https://bugzilla.mozilla.org/show_bug.cgi?id=5856) but in fact it is just an artifact of the way Numbers are stored in Javascript, rounded to the nearest IEEE double value, which can give unexpected results for even the most common calculations.  dojo.number.round does its rounding and accomodates numbers just a tiny bit below what would normally be the 'round up' point.  This is cheating, since mathematically, a full precision may have been expected.  A real solution to this problem would involve Decimal floating point arithmetic (see IEEE-754r)
+This is commonly reported as a bug (https://bugzilla.mozilla.org/show_bug.cgi?id=5856) but in fact it is just an artifact of the way Numbers are stored in Javascript, rounded to the nearest IEEE double value, which can give unexpected results for even the most common calculations.  dojo.number.round accomodates numbers just a tiny bit below what would normally be the 'round up' point.  This is cheating, since a calculation based on full precision may have been expected and the results are not mathematically correct.  A real solution to this problem would involve Decimal floating point arithmetic (see IEEE-754r)
 
 dojo.number.round also works around a bug in Internet Explorer with Number.toFixed()
 
