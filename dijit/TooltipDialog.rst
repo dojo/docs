@@ -87,6 +87,7 @@ It is also possible to display a dijit.TooltipDialog without a button.  This exa
                  '<label for="hobby">Hobby:</label> <input dojoType="dijit.form.TextBox" id="hobby" name="hobby"><br>' +
                  '<button dojoType="dijit.form.Button" type="submit" onClick="dijit.popup.close(dialog)">Save</button>'
             });
+            dialog.startup();
  
             dojo.byId("target").onmouseover = function(e){
                 dijit.popup.open({
