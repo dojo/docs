@@ -96,7 +96,7 @@ The constructor for XmlStore takes the following possible parameters in its keyw
 |rootItem                  |A tag name for root items. This is optional. If it is not provided, then the XmlStore assumes the tags  |
 |                          |under the root element of the document are the root items.                                              |
 +--------------------------+--------------------------------------------------------------------------------------------------------+
-|keyAttribute              |An attribute name for a key or an identity. This is optional unless server-side qurey handling is used. |
+|keyAttribute              |An attribute name for a key or an identity. This is optional unless server-side query handling is used. |
 +--------------------------+--------------------------------------------------------------------------------------------------------+
 |attributeMap              |An anonymous object that contains properties for attribute mapping, for example                         |
 |                          |{"tag_name.item_attribute_name": "@xml_attribute_name", ...}.   This is optional. This is done so that  |
