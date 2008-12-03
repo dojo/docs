@@ -76,6 +76,9 @@ It is also possible to display a dijit.TooltipDialog without a button.  This exa
   .. cv:: javascript
 
 	<script type="text/javascript">
+          dojo.require("dijit.form.Button");
+          dojo.require("dijit.Dialog");
+          dojo.require("dijit.form.TextBox");
           var dialog; // scoped globally so it can be closed
           dojo.addOnLoad(function(){
             dialog = new dijit.TooltipDialog({
