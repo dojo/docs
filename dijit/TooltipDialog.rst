@@ -69,6 +69,34 @@ Here's one displaying a TooltipDialog:
       </div>
     </div>
 
+It is also possible to display a dijit.TooltipDialog without a button.  This example shows how to display one when using the onmouseover event of a span element.
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+	<script type="text/javascript">
+          var dialog; // scoped globally so it can be closed
+          dojo.addOnLoad(function(){
+            var dialog = new dijit.TooltipDialog({
+               content:
+                 '<label for="name">Name:</label> <input dojoType="dijit.form.TextBox" id="name" name="name"><br>' +
+                 '<label for="hobby">Hobby:</label> <input dojoType="dijit.form.TextBox" id="hobby" name="hobby"><br>' +
+                 '<button dojoType="dijit.form.Button" type="submit" onClick="dijit.popup.close(dialog)">Save</button>'
+            });
+ 
+            dojo.byId("target").onmouseover = function(e){
+                dijit.popup.open({
+                    popup: dialog,
+                    around: e.target
+                });
+            };
+	 });
+       </script>
+
+  .. cv:: html
+
+    <span id="target">Hover over me to display a dijit.TooltipDialog</span>
 
 Accessibility
 -------------
