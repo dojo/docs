@@ -78,7 +78,7 @@ It is also possible to display a dijit.TooltipDialog without a button.  This exa
 	<script type="text/javascript">
           var dialog; // scoped globally so it can be closed
           dojo.addOnLoad(function(){
-            var dialog = new dijit.TooltipDialog({
+            dialog = new dijit.TooltipDialog({
                content:
                  '<label for="name">Name:</label> <input dojoType="dijit.form.TextBox" id="name" name="name"><br>' +
                  '<label for="hobby">Hobby:</label> <input dojoType="dijit.form.TextBox" id="hobby" name="hobby"><br>' +
