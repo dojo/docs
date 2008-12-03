@@ -52,4 +52,5 @@ See Also
 ========
 
  * dojo.currency
+
 TODO: add references to CLDR, setting locale in Dojo, binary floating point issues
