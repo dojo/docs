@@ -215,66 +215,83 @@ Following CSS classes are used by the selector object in addition to classes ass
 Source
 ------
 
-The source object represents a source of items for drag-and-drop operations. It is used to represent DnD targets as well. In order to be compatible your custom sources should emulate the common source API. Instances of this class can be created from the HTML markup automatically by dojo.parser using dojoType="dojo.dnd.Source".
+The source object represents a source of items for drag-and-drop operations. It is used to represent DnD targets as well. In order to be compatible your custom sources should emulate the common source API. Instances of this class can be created from the HTML markup automatically by ``dojo.parser`` using ``dojoType="dojo.dnd.Source"``.
 
-The default implementation of the source is built on top of the selector class, and adds the ability to start a DnD operation, and participate in the orchestration of the DnD. Source inherits all Selector's (and Container's) methods and objects. User can initiate the DnD operation by dragging items (click and move without releasing the mouse). The DnD operation can be used to rearrange items within a single source, or items can be moved or copied between two sources. User can select whether she wants to copy or move items by pressing the Ctrl button during the operation. If it is pressed, items will be copied, otherwise they will be moved. This behavior can be overwritten programmatically.
+The default implementation of the source is built on top of Selector_, and adds the ability to start a DnD operation, and participate in the orchestration of the DnD. Source_ inherits all Selector_'s (and Container_'s) methods and objects. User can initiate the DnD operation by dragging items (click and move without releasing the mouse). The DnD operation can be used to rearrange items within a single source, or items can be moved or copied between two sources. User can select whether she wants to copy or move items by pressing the Ctrl button during the operation. If it is pressed, items will be copied, otherwise they will be moved. This behavior can be overwritten programmatically.
 
 Constructor
 ~~~~~~~~~~~
 
-Constructor takes the same two parameters as the container's selector. It understands more optional parameters and passes the rest to the underlying selector. Following optional parameters are understood by the selector object:
+Constructor takes the same two parameters as the container's selector_. It understands more optional parameters and passes the rest to the underlying selector_. Following optional parameters are understood by the source object:
 
-* isSource --- a Boolean flag. If it is true, this object can be used to start the DnD operation, otherwise it can serve only as a target. It is true by default.
-* accept --- an array of strings. It defines what types can be accepted by this object, when it is used as a target. The default is ["text"]. If the array is empty it means that this source cannot be a target.
-* horizontal --- a flag. If true, the source is based on the horizontally organized list container, otherwise it is based on the vertical one. he default is false.
-* copyOnly --- a flag. If true, the source doesn't allow to move items out of it, any DnD operation will copy items from such sources. By default it is false.
-* withHandles --- a flag. If it is true, an item can be dragged only by a predefined node inside the item, otherwise the whole item can be used for dragging. By default it is false. The handle should be a descendant of the item node and should be marked with class dojoDndHandle.
+* ``isSource`` --- a Boolean flag. If it is ``true``, this object can be used to start the DnD operation, otherwise it can serve only as a target. It is ``true`` by default.
+* ``accept`` --- an array of strings. It defines what types can be accepted by this object, when it is used as a target. The default is ``["text"]``. If the array is empty it means that this source cannot be a target.
+* ``horizontal`` --- a Boolean flag. If ``true``, the source is based on the horizontally organized list container, otherwise it is based on the vertical one. The default is ``false``.
+* ``withHandles`` --- a Boolean flag. If ``true``, an item can be dragged only by a predefined node inside the item, otherwise the whole item can be used for dragging. By default it is ``false``. The handle should be a descendant of the item node and should be marked with class ``dojoDndHandle``.
+* ``copyOnly`` --- a Boolean flag. If ``true``, the source doesn't allow to move items out of it, any DnD operation will copy items from such sources. By default it is ``false``.
+* ``selfCopy`` --- *(new in 1.2.2)* a Boolean flag. If ``true``, the source copies items by default when dropping on itself. It is ``false`` by default. This flag has meaning only if ``copyOnly`` is ``true``.
+* ``selfAccept`` --- *(new in 1.2.2)* a Boolean flag. If ``true``, the source accepts its own items. It is ``true`` by default. This flag has meaning only if ``copyOnly`` is ``true``.
+* ``delay`` --- *(new in 1.2.2)* a number, which defines the move delay in pixels before detecting a drag; 0 (no delay) by default.
 
 Public methods and attributes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Following public methods are defined (they can be replace to change the DnD behavior):
 
-* checkAcceptance(source, nodes) --- returns true, if this object can accept items "nodes" from the "source". The default implementation checks item's types with accepted types of the object, and rejects the operation, if there is no full match. Such objects are marked as disabled targets and they do not participate in the current DnD operation. The source of items can always accept its items regardless of the match. It prevents the situation when user started to drag items and cannot find a suitable target, and cannot return them back. Please take it into consideration when replacing this method. This method is called on all potential targets before the DnD operation.
+* ``checkAcceptance(source, nodes)`` --- returns ``true``, if this object can accept ``nodes`` from ``source``. The default implementation checks item's types with accepted types of the object, and rejects the operation, if there is no full match. Such objects are marked as disabled targets and they do not participate in the current DnD operation. The source of items can always accept its items regardless of the match (for exceptions see the definition of ``selfAccept`` above) preventing the situation when user started to drag items and cannot find a suitable target, and cannot return them back. Please take it into consideration when replacing this method. Target's ``checkAcceptance()`` is called during the DnD in progress when user hovers above it. Following parameters are passed to the method:
 
-  * source --- the source object for the dragged items.
-  * nodes --- a list of nodes
+  * ``source`` --- the source object for the dragged items.
+  * ``nodes`` --- a list of nodes.
 
-* copyState(keyPressed) --- returns true if the copy operation should be performed, the move will be performed otherwise. The default implementation checks the "copyOnly" parameter described above. If it is set, this method always returns true. This method can be replaced if you want to implement a more complex logic.
+* ``copyState(keyPressed)`` --- returns ``true`` if the copy operation should be performed, the move will be performed otherwise. The default implementation checks the ``copyOnly`` and ``selfCopy`` parameters described above. This method can be replaced if you want to implement a more complex logic. Following parameters are passed in:
 
-  * keyPressed --- a flag. If true, user pressed the "copy" key.
+  * ``keyPressed`` --- a Boolean flag. If ``true``, user pressed the ``copy`` key.
+  * ``self`` --- a Boolean flag. If it is ``true``, we are about to drop items on itself.
 
 Event processors
 ~~~~~~~~~~~~~~~~
 
-Following event handlers are overloaded: onMouseDown, onMouseUp, and onMouseMove. They are used to perform additional actions required by the Source.
+Following event handlers are overloaded: ``onMouseDown``, ``onMouseUp``, and ``onMouseMove``. They are used to perform additional actions required by Source_.
+
+Following local events are defined by Source_, which are meant to be overridden or connected with ``dojo.connect()``:
+
+* ``onDrop(source, nodes, copy)`` --- *(new in 1.2.2)* this method is called when DnD items is dropped in this target. The default implementation calls ``onDropExternal()`` or ``onDropInternal()`` based on the value of ``source`` (see below). Following parameters are passed in:
+  * ``source`` --- the source of events, can be the same object as the target.
+  * ``nodes`` --- the array of DnD items to be dropped.
+  * ``copy`` --- the Boolean flag. If ``true``, the target is requested to copy items, otherwise the target should move items.
+* ``onDropExternal(source, nodes, copy)`` --- *(new in 1.2.2)* this method is called by the default implementation of ``onDrop()`` only if we have an external drop meaning that the source is different from the target. All parameters are the same as in ``onDrop()``. The default implementation performs the drop as instructed.
+* ``onDropInternal(nodes, copy)`` --- *(new in 1.2.2)* this method is called by the default implementation of ``onDrop()`` only if we have an internal drop meaning that the source is the same as the target. All parameters are the same as in ``onDrop()``, but ``source`` parameter is skipped as redundant (it is the same as ``this``). The default implementation performs the drop as instructed.
+* ``onDraggingOver()`` --- this method is called during the DnD operation in progress when the mouse is over this target, and it is not disabled for any reasons. The default implementation does nothing.
+* ``onDraggingOut()`` --- this method is called during the DnD operation in progress when the mouse went out this target, and it is not disabled for any reasons. The default implementation does nothing.
 
 Topic processors
 ~~~~~~~~~~~~~~~~
 
-Following topic listeners are defined: onDndSourceOver, onDndStart, onDndDrop, onDndCancel. These topics are published by the manager. If you want to override topic listeners, please read "Summary of topics" section below.
+Following topic listeners are defined: ``onDndSourceOver``, ``onDndStart``, ``onDndDrop``, ``onDndCancel``. These topics are published by the manager_. If you want to override topic listeners, please read `Summary of topics`_. 
+
+**Warning: in most cases you want to use events. Topics are low-level constructs, which are used internally.**
 
 CSS classes
 ~~~~~~~~~~~
 
-Following CSS classes are used by the source object in addition to classes assigned by the selector and the container objects:
+Following CSS classes are used by the source object in addition to classes assigned by Selector_ and Container_ objects:
 
-* dojoDndHorizontal --- assigned to the container node during the construction, if this object represents a horizontal list of dndItems --- its "horizontal" property set to true.
-* dojoDndSource --- assigned to the container node during the construction, if this object can be used as a source of DnD items --- its "isSource" property set to true.
-* dojoDndSourceCopied --- assigned to the container node during the active DnD operation when user copies items from it, e.g., pressed the Ctrl key while dragging. When this class is assigned to the node, dojoDndSource class is removed.
-* dojoDndSourceMoved --- assigned to the container node during the active DnD operation when user moves items from it, e.g., the Ctrl key is not pressed while dragging. When this class is assigned to the node, dojoDndSource class is removed.
-* dojoDndTarget --- assigned to the container node during the construction, if this object can potentially accept DnD items --- its "accept" list is not empty.
-* dojoDndTargetDisabled --- assigned to the container node during the active DnD operation when this node cannot accept currently dragged items, e.g., because it doesn't accept items of these types. When this class is assigned to the node, dojoDndTarget class is removed.
-* dojoDndItemBefore --- assigned to the data item node during the active DnD operation if transferred items will be inserted before this item. This class is assigned in addition to all other classes.
-* dojoDndItemAfter --- assigned to the data item node during the active DnD operation if transferred items will be inserted after this item. This class is assigned in addition to all other classes.
-* dojoDndHandle --- assigned to handles of item nodes. See the withHandles parameter of Source above.
+* ``dojoDndHorizontal`` --- assigned to the container node during the construction, if this object represents a horizontal list of ``dndItems`` --- its ``horizontal`` property set to ``true``.
+* ``dojoDndSource`` --- assigned to the container node during the construction, if this object can be used as a source of DnD items --- its ``isSource`` property set to true.
+* ``dojoDndSourceCopied`` --- assigned to the container node during the active DnD operation when user copies items from it, e.g., pressed the Ctrl key while dragging. When this class is assigned to the node, ``dojoDndSource`` class is removed.
+* ``dojoDndSourceMoved`` --- assigned to the container node during the active DnD operation when user moves items from it, e.g., the Ctrl key is not pressed while dragging. When this class is assigned to the node, ``dojoDndSource`` class is removed.
+* ``dojoDndTarget`` --- assigned to the container node during the construction, if this object can potentially accept DnD items --- its ``accept`` list is not empty.
+* ``dojoDndTargetDisabled`` --- assigned to the container node during the active DnD operation when this node cannot accept currently dragged items, e.g., because it doesn't accept items of these types. When this class is assigned to the node, ``dojoDndTarget`` class is removed.
+* ``dojoDndItemBefore`` --- assigned to the data item node during the active DnD operation if transferred items will be inserted before this item. This class is assigned in addition to all other classes.
+* ``dojoDndItemAfter`` --- assigned to the data item node during the active DnD operation if transferred items will be inserted after this item. This class is assigned in addition to all other classes.
+* ``dojoDndHandle`` --- assigned to handles of item nodes. See ``withHandles`` parameter of Source_ above.
 
-dojoDndSource, dojoDndSourceCopied, and dojoDndSourceMoved are mutually exclusive. dojoDndTarget, and dojoDndTargetDisabled are mutually exclusive. dojoDndSourceCopied, dojoDndSourceMoved, dojoDndTargetDisabled, dojoDndItemBefore, and dojoDndItemAfter can be assigned only during the active Dnd operation. See the manager's classes below to see what additional classes can be used for custom styling. Use dojoDndHorizontal with dojoDndItemBefore and dojoDndItemAfter to create visually appropriate insertion markers for horizontal (before, after) and vertical (above, below) containers.
+``dojoDndSource``, ``dojoDndSourceCopied``, and ``dojoDndSourceMoved`` are mutually exclusive. ``dojoDndTarget``, and ``dojoDndTargetDisabled`` are mutually exclusive. ``dojoDndSourceCopied``, ``dojoDndSourceMoved``, ``dojoDndTargetDisabled``, ``dojoDndItemBefore``, and ``dojoDndItemAfter`` can be assigned only during the active Dnd operation. See the manager's classes below to see what additional classes can be used for custom styling. Use ``dojoDndHorizontal`` with ``dojoDndItemBefore`` and ``dojoDndItemAfter`` to create visually appropriate insertion markers for horizontal (before, after) and vertical (above, below) containers.
 
 Target
 ------
 
-Essentially it is the source class wrapped in with isSource set to false. Instances of this class can be created from the HTML markup automatically by dojo.parser using dojoType="dojo.dnd.Target".
+Essentially it is Source_ wrapped in with ``isSource`` set to ``false``. Instances of this class can be created from the HTML markup automatically by ``dojo.parser`` using ``dojoType="dojo.dnd.Target"``.
 
 Avatar
 ------
