@@ -170,47 +170,47 @@ Partial reason to add "over" states when the mouse hovers over instead of using 
 Selector
 --------
 
-The default implementation of the selector is built on top of the container class and adds the ability to select children items. Selector inherits all Container's methods and objects. Additionally it adds a notion of an anchor. The anchor is used to specify a point of insertion of other items. The selector assumes that the container is organized in a linear fashion either vertically (e.g., embedded <div>s, lists, tables) or horizontally (e.g., <span>s). This assumption allows to implement familiar UI paradigms: selection of one element with a mouse click, selection of an additional element with ctrl+click, linear group selection from the anchor to the clicked element with shift+click, selecting an additional linear group from the anchor to the clicked element with shift+ctrl+click. Obviously if you have more complex containers, you should implement different UI actions.
+The default implementation of Selector is built on top of Container_ and adds the ability to select children items. Selector inherits all Container_'s methods and objects. Additionally it adds a notion of an anchor. The anchor is used to specify a point of insertion of other items. The selector assumes that the container is organized in a linear fashion either vertically (e.g., embedded ``<div>``\s, lists, tables) or horizontally (e.g., ``<span>``\s). This assumption allows to implement familiar UI paradigms: selection of one element with a mouse click, selection of an additional element with ctrl+click, linear group selection from the anchor to the clicked element with shift+click, selecting an additional linear group from the anchor to the clicked element with shift+ctrl+click. Obviously if you have more complex containers, you should implement different UI actions.
 
 Constructor
 ~~~~~~~~~~~
 
-Constructor takes the same two parameters as the container's constructor. It understands more optional parameters and passes the rest to the underlying container. Following optional parameters are understood by the selector object:
+Constructor takes the same two parameters as the Container_'s constructor. It understands more optional parameters and passes the rest to the underlying container. Following optional parameters are understood by the selector object:
 
-* singular --- a boolean flag. If it is true, the user is allowed to select just one item, otherwise any number of items can be selected. It is false by default.
+* ``singular`` --- a Boolean flag. If it is ``true``, the user is allowed to select just one item, otherwise any number of items can be selected. It is ``false`` by default.
+* ``autoSync`` --- a Boolean flag. If it is ``true``, Selector calls Container_'s ``sync()`` method for every ``onMouseDown``. It helps when you add/remove DnD items using HTML DOM API, but can be taxing for containers with large number of DnD items. In order to be more efficient consider calling ``sync()`` method after the manipulations were done, or (even more efficient) adding new DnD items using ``insertNodes()`` method. The default value of this parameter is ``false``.
 
 Public methods and attributes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Following public methods are defined in addition to the container public methods:
 
-* getSelectedNodes() --- returns a NodeList of selected nodes.
-* selectNone() --- remove the selection from all items. It returns the selector object itself for easy chaining of calls.
-* selectAll() --- selects all items. It returns the selector object itself for easy chaining of calls.
-* deleteSelectedNodes() --- deletes all selected nodes. It returns the selector object itself for easy chaining of calls.
+* ``getSelectedNodes()`` --- returns a ``NodeList`` of selected nodes.
+* ``selectNone()`` --- remove the selection from all items. It returns the selector object itself for easy chaining of calls.
+* ``selectAll()`` --- selects all items. It returns the selector object itself for easy chaining of calls.
+* ``deleteSelectedNodes()`` --- deletes all selected nodes. It returns the selector object itself for easy chaining of calls.
 
 Following public method is redefined with new signature:
 
-* insertNodes(addSelected, data, before, anchor) --- the last three parameters are the same (look up the same function in the container). The first parameter is a flag, if it is true all newly added items will be added to the selection, otherwise they will be added unselected.
+* ``insertNodes(addSelected, data, before, anchor)`` --- the last three parameters are the same as in Container_. The first parameter is a flag, if it is ``true`` all newly added items will be added as selected, otherwise they will be added unselected.
 
 The container object defines following public attributes:
 
-* selection --- a dictionary object keyed by ids of selected nodes. No useful payload is attached to objects in the dictionary.
-* anchor --- the current anchor node or null.
-* simpleSelection --- a flag to indicate that a singular selection is active.
+* ``selection`` --- a dictionary object keyed by ids of selected nodes. No useful payload is attached to objects in the dictionary.
+* ``anchor`` --- the current anchor node or ``null``.
 
 Event processors
 ~~~~~~~~~~~~~~~~
 
-Following event processors are defined: onMouseDown, onMouseUp. onMouseMove is attached by onOverEvent and detached by onOutEvent dynamically.
+Following event processors are defined: ``onMouseDown``, ``onMouseUp``. ``onMouseMove`` is attached by ``onOverEvent`` and detached by ``onOutEvent`` dynamically.
 
 CSS classes
 ~~~~~~~~~~~
 
 Following CSS classes are used by the selector object in addition to classes assigned the container object:
 
-* dojoDndItemSelected --- assigned if a data item is selected but it is not an anchor (the last selected element). This class is assigned in addition to dojoDndItem class.
-* dojoDndItemAnchor --- assigned to an anchor data item. At any given time the selector can have zero or one anchor. This class is assigned in addition to dojoDndItem class. Being an anchor means that this item is selected.
+* ``dojoDndItemSelected`` --- assigned if a data item is selected but it is not an anchor (the last selected element). This class is assigned in addition to ``dojoDndItem`` class.
+* ``dojoDndItemAnchor`` --- assigned to an anchor data item. At any given time the selector can have zero or one anchor. This class is assigned in addition to ``dojoDndItem`` class. Being an anchor means that this item is selected.
 
 Source
 ------
