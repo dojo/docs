@@ -1,162 +1,163 @@
 #format dojo_rst
 
-dojo.dnd
-========
+dojo.dnd package
+================
 
 :Status: Draft
-:Version: 1.2
-:Available: since V?
+:Version: 1.2.2
+:Available: since 1.0
 
 .. contents::
   :depth: 3
 
 *(This is a copy of dojo.dnd 1.1 technical documentation. It will be updated to 1.2 as soon as it ships.)*
 
-===================
-Underlying concepts
-===================
+========================================
+Underlying concepts and historical notes
+========================================
 
-This package was built after we learned from mistakes made in dojo.dnd 0.4: 
+This package was built after we learned from mistakes made in ``dojo.dnd 0.4``:
 
-* The old package relied on position calculations, which fail in many corner cases (the browsers are to blame), and potentially can consume a lot of CPU cycles depending on complexity of the underlying HTML (deeper embedding means more time spent going over parent chains). The new package doesn't do any position calculations instead relying on mouse events "onmouseover" and "onmouseout". In order to do that we had to change the visual metaphor: the old DnD was dragging the object directly (it doesn't make much sense when dragging several objects), the new one uses an avatar to represent dragged objects. The avatar is shifted, so it doesn't obscure objects under the mouse giving the better visibility. Additionally it is possible to represent objects in the avatar differently. More on that later.
+* The old package relied on position calculations, which fail in many corner cases (the browsers are to blame), and potentially can consume a lot of CPU cycles depending on complexity of the underlying HTML (deeper embedding means more time spent going over parent chains). The new package doesn't do any position calculations instead relying on mouse events ``onmouseover`` and ``onmouseout``. In order to do that we had to change the visual metaphor: the old DnD was dragging the object directly (it doesn't make much sense when dragging several objects), the new one uses an avatar to represent dragged objects. The avatar is shifted, so it doesn't obscure objects under the mouse giving the better visibility. Additionally it is possible to represent objects in the avatar differently. More on that later.
 
 * The old package attached event handlers to all draggable items, which slowed down the browser in case of a lot of objects. The new package works with containers, which are responsible for individual items. It scales much better.
- 
-The old style dragging is useful in some cases, mostly because it looks intuitive for dragging single items. The new DnD accommodates it with a special sub-package dojo.dnd.move (see below).
 
-The DnD (both dojo.dnd and dojo.dnd.move packages) is implemented as a state machine, which reflects its state by adding and removing classes to relevant objects, which gives an ultimate flexibility over customizing the look-and-feel.
+The old style dragging is useful in some cases, mostly because it looks intuitive for dragging single items. The new DnD accommodates it with a special sub-package `dojo.dnd.move`_.
 
-Every DnD container and DnD item has a notion of type. The type is represented by a unique text string. Every container and item has an array of types assigned to them. In order to transfer (drop) items on a container they should have at least one type in common. When transferring a group of items to a container all items should have at least one type in common with the container. Otherwise the transfer is denied. If the list of types is not specified ["text"] is assumed.
+The DnD (both `dojo.dnd`_ and `dojo.dnd.move`_ packages) is implemented as state machines, which reflect their state by adding and removing classes to relevant objects, which gives the ultimate flexibility over customizing the look-and-feel.
 
-The dojo.dnd supports copy and move styles of DnD out of the box.
+Every DnD container and DnD item has a notion of type. The type is represented by a unique text string. Every container and item has an array of types assigned to them. In order to transfer (drop) items on a container they should have at least one type in common. When transferring a group of items to a container all items should have at least one type in common with the container. Otherwise the transfer is denied. If the list of types is not specified ``["text"]`` is assumed.
+
+The `dojo.dnd`_ supports copy and move styles of DnD out of the box.
 
 User interface
 --------------
 
-The existing implementation supports a linear container paradigm:
+The existing implementation supports a *linear* container paradigm:
 
 * Selection of an item on a mouse click.
 * Adding an item to the existing selection by ctrl+click.
 * Selecting a range of items by shift+click.
 * Adding a range of items by ctrl+shift+click.
 
-(On Macintosh the Meta key is used instead of Ctrl.)
+(On Macintosh the Meta key is used instead of the Ctrl.)
 In order to show an insertion point correctly it is possible to specify if we deal with a vertical or horizontal container.
 
-See the Selector discussion below for more details.
+See Selector_ for more details.
 
-===================
-dojo.dnd principals
-===================
+======================
+_`dojo.dnd` principals
+======================
 
-The dnd consists of 5 classes: Container, Selector, Source, Manager, and Avatar. The former three classes are responsible for dnd sources and targets. The latter two classes are singletons responsible for orchestration of dnd on the web page.
+The ``dojo.dnd`` consists of 5 classes: Container_, Selector_, Source_, Manager_, and Avatar_. The former three classes are responsible for DnD sources and targets. The latter two classes are singletons responsible for orchestration of DnD on the web page.
 
 Container
 ---------
 
-The default implementation of Container represents a uniform collection of items. It knows when the mouse hovers over it, and when the mouse hovers over a particular item.
+The default implementation of ``dojo.dnd.Container`` represents a uniform linear collection of items. It knows when the mouse hovers over it, and when the mouse hovers over a particular item.
 
-The draggable item is represented by an abstract data object, which can be anything. There is a function "creator", which is called when we need to visualize a data item for the container, or for the avatar. It allows us to have different representations of the same data item in different containers and in the avatar. More on that later.
+The draggable item is represented by an abstract data object, which can be anything. There is a function ``creator``, which is called when we need to visualize a data item for the container_, or for the avatar_. It allows us to have different representations of the same data item in different containers and in the avatar_. More on that later.
 
-Constructor takes 2 parameters: 
+Constructor takes 2 parameters:
 
-* node --- a DOM node or an id (string) of such node. This node represents a container. All draggable items will be direct descendants of this node (the important exception: a <table> node, in this case items will be direct descendants of the embedded <tbody> node).
-* params --- a dictionary object, which defines optional parameters. Following optional parameters are recognized:
+* ``node`` --- a DOM node or an id (string) of such node. This node represents a container. All draggable items will be direct descendants of this node (the important exception: a ``<table>`` node, in this case items will be direct descendants of the embedded ``<tbody>`` node). If you want to override this default behavior, use ``dropParent`` attribute of ``params`` (see below).
+* ``params`` --- a dictionary object, which defines optional parameters. Following optional parameters are recognized:
 
-  * creator(item, hint) --- a creator function, which is used to build a representation of the data item.
+  * ``creator(item, hint)`` --- a creator function, which is used to build a representation of the data item.
 
-    * item --- a data item (an abstract object), which defines a draggable object. The creator function is solely responsible for the interpretation of this item.
-    * hint --- an optional string, which hints at the purpose of the call. The creator function can use it to produce different visual representations. At the moment only one value is defined: "avatar". When hint == "avatar" the creator can produce a special version for the avatar.
+    * ``item`` --- a data item (an abstract object), which defines a draggable object. The creator function is solely responsible for the interpretation of this item.
+    * ``hint`` --- an optional string, which hints at the purpose of the call. The creator function can use it to produce different visual representations. At the moment only one value is defined: ``"avatar"``. When ``hint == "avatar"`` the creator can produce a special version for the avatar.
     * It should return an object with following members:
 
-      * node --- a DOM representation of the data item built by the creator. This node should have a unique id. If no id was assigned, it will be generated and assigned later by the container. This id will be used to identify this item everywhere.
-      * data --- a data item itself. The creator can "massage" or even replace it.
-      * type --- an array of strings, which identify the type of this item. It is used during the DnD operation to select compatible targets.
+      * ``node`` --- a DOM representation of the data item built by the creator. This node should have a unique id. If no id was assigned, it will be generated and assigned later by the container. This id will be used to identify this item everywhere.
+      * ``data`` --- a data item itself. The creator can "massage" or even replace it.
+      * ``type`` --- an array of strings, which identify the type of this item. It is used during the DnD operation to select compatible targets.
 
-    * skipForm --- a Boolean flag. If it is true, the container passes selection and dragging operations to the browser, otherwise it suppresses them. By default it is false.
-    * dropParent --- a DOM node below the main node, which serves as a physical container for data item nodes. It can be used to structure the visual design of your container.
+  * ``skipForm`` --- a Boolean flag. If it is true, the container passes selection and dragging operations to the browser, otherwise it suppresses them. By default it is false.
+  * ``dropParent`` --- a DOM node below the main node, which serves as a physical container for data item nodes. It can be used to structure the visual design of your container. This value will be assigned to ``parent`` attribute of the container (see below).
 
-During the construction the constructor checks immediate children of "parent" member (see below) for the presence of "dojoDndItem" class. All such items are added as container's children automatically. It is assumed that you already built the visual representation of the data item, so the creator function is not involved. Instead the necessary triplet formed like that: 
+During the construction the constructor checks immediate children of ``parent`` member (see below) for the presence of ``dojoDndItem`` class. All such items are added as container's children automatically. It is assumed that you already built the visual representation of the data item, so the creator function is not involved. Instead the necessary triplet formed like that:
 
-* node --- the node itself. If it doesn't have an id, a unique id is generated for it.
-* data --- the content of dndData member of the node. If it is missing, node.innerHTML is used instead.
-* type --- the content of dndType member of the node split on "," character. If it is missing, ["text"] is used as the default type.
- 
-If the creator function was not specified, a default creator is used. The default creator does following things: 
+* ``node`` --- the node itself. If it doesn't have an id, a unique id is generated for it.
+* ``data`` --- the content of ``dndData`` member of the node. If it is missing, ``node.innerHTML`` is used instead.
+* ``type`` --- the content of ``dndType`` member of the node split on "," character. If it is missing, ``["text"]`` is used as the default type.
+
+If the creator function was not specified, a default creator is used. The default creator does following things:
 
 * It creates a context-appropriate node:
 
-  * If the container is <div> or <p>-based, it will create a <div> node. 
-  * If the container is <ul> or <ol>-based, it will create a <li> node.
-  * If the container is <table>-based, it will create a <tr><td> group of nodes node, and it will be inserted in <tbody>.
-  * In all other contexts it will create a <span> node.
-  * If the hint is "avatar" it will create a <span> node.
-* If the date item is an object, it will test for the presence of "data" member. If it is present, it will be used as a data object. Otherwise the item itself will be used as a data object.
-* If the date item is an object, it will test for the presence of "type" member. If it is present, it will be used as a type object. Otherwise ["text"] will be used as a type object.
-* It will set a content of the node to String(data). You can override the toString() member function of your object to change how it is converted to the string. Or specify the creator function.
-* As any creator it returns a triplet object with newly created/identified node, data, and type.
+  * If the container is ``<div>`` or ``<p>``-based, it will create a ``<div>`` node.
+  * If the container is ``<ul>`` or ``<ol>``-based, it will create a ``<li>`` node.
+  * If the container is ``<table>``-based, it will create a ``<tr><td>`` group of nodes, and it will be inserted in ``<tbody>``.
+  * In all other contexts it will create a ``<span>`` node.
+  * If the ``hint`` is ``"avatar"`` it will create a ``<span>`` node.
+* If the date item is an object, it will test for the presence of ``data`` member. If it is present, it will be used as a data object. Otherwise the item itself will be used as a data object.
+* If the date item is an object, it will test for the presence of ``type`` member. If it is present, it will be used as a type object. Otherwise ``["text"]`` will be used as a type object.
+* It will set a content of the node to ``String(data)``. You can override the ``toString()`` member function of your object to change how it is converted to the string. Or specify the ``creator`` function.
+* As any creator it returns a triplet object with newly created/identified ``node``, ``data``, and ``type``.
 
-After the creator function was called the result is post-processed: 
+After the creator function was called the result is post-processed:
 
-* If the returned node doesn't have an id, the default unique id will be generated.
-* The returned node will be assigned a "dojoDndItem" class.
-* If the returned type is not an array or missing, it will be replaced with ["text"].
- 
-Following public methods are defined: 
+* If the returned node doesn't have an ``id``, the default unique id will be generated.
+* The returned node will be assigned a ``dojoDndItem`` class.
+* If the returned ``type`` is not an array or missing, it will be replaced with ``["text"]``.
 
-* getAllNodes() --- returns a NodeList of all controlled nodes in the order they are listed in the container.
-* insertNodes(data, before, anchor) --- inserts data items before/after the anchor node. It returns the container object itself for easy chaining of calls.
+Following public methods are defined:
 
-  * data --- an array of data items to be inserted. Each data item will be passed to the creator function, the result will be registered with the container, the node will be inserted according to "before" and "anchor" parameters.
-  * before --- a boolean flag. If it is true, nodes will be added before the anchor, and after otherwise.
-  * anchor --- a node to be used as a reference for the insertion. It should be an immediate child of the container node (or a child of <tbody> for the <table>-based node). If it is not specified, all items will be appended to the container node (or <tbody> for tables).
+* ``getAllNodes()`` --- returns a ``NodeList`` of all controlled nodes in the order they are listed in the container.
+* ``insertNodes(data, before, anchor)`` --- inserts data items before/after the anchor node. It returns the container object itself for easy chaining of calls.
 
-* destroy() --- prepares the container object to be garbage-collected. You cannot use the container object after it was destroyed.
+  * ``data`` --- an array of data items to be inserted. Each data item will be passed to the creator function, the result will be registered with the container, the node will be inserted according to ``before`` and ``anchor`` parameters.
+  * ``before`` --- a boolean flag. If it is ``true``, nodes will be added before the ``anchor``, and after otherwise.
+  * ``anchor`` --- a node to be used as a reference for the insertion. It should be an immediate child of the container node (or a child of ``<tbody>`` for the ``<table>``-based node). If it is not specified, all items will be appended to the container node (or ``<tbody>`` for tables).
+
+* ``destroy()`` --- prepares the container object to be garbage-collected. You cannot use the container object after it was destroyed.
+* ``sync()`` --- *(new in 1.2.2)* inspects all controlled DOM nodes updating internal structures by removing information of removed nodes, and adding newly added DOM nodes marked with ``dojoDndItem`` class.
 
 The container object defines following public member variables:
 
-* current --- a DOM node, which corresponds to a child with a mouse hovering over it. If there is no such item, this variable is null.
-* node --- the DOM node of the container. This node is used to set up mouse event handlers for the container.
-* parent --- the DOM node, which is an immediate parent of DnD item nodes. In most cases it is the same as node, but in some cases it can be node's descendant. Example: for tables node can point to <table>, while parent points to <tbody> (DnD item nodes are <tr> nodes). You can freely change parent to achieve the desired behavior of your container by specifying as "dropParent" parameter.
-* creator --- the creator function or null, if the default creator is used.
-* skipForm --- the flag propagated from the initial parameters.
+* ``current`` --- a DOM node, which corresponds to a child with a mouse hovering over it. If there is no such item, this variable is null.
+* ``node`` --- the DOM node of the container. This node is used to set up mouse event handlers for the container.
+* ``parent`` --- the DOM node, which is an immediate parent of DnD item nodes. In most cases it is the same as node, but in some cases it can be node's descendant. Example: for tables ``node`` can point to ``<table>``, while ``parent`` points to ``<tbody>`` (DnD item nodes are ``<tr>`` nodes). You can freely change parent to achieve the desired behavior of your container by specifying ``dropParent`` parameter.
+* ``creator`` --- the creator function or ``null``, if the default creator is used.
+* ``skipForm`` --- the flag propagated from the initial parameters.
 
-The heart of the Container is the map member:
+The heart of the Container is the ``map`` attribute:
 
-* map --- a dictionary, which is keyed by node ids. Each registered child has an entry in the map by its node id (this is why all nodes should have unique ids). map[id] returns an object with two members:
+* ``map`` --- a dictionary, which is keyed by node ids. Each registered child has an entry in the ``map`` by its node id (this is why all nodes should have unique ids). ``map[id]`` returns an object with two attributes:
 
-  * data --- an associated data item.
-  * type --- an associated array of types.
+  * ``data`` --- an associated data item.
+  * ``type`` --- an associated array of types.
 
-It is not recommended to access map directly. There are several utility functions to access it. They can be used to virtualize the map, and you can use them with dojo.connect() so you know when DnD items are added/removed/accessed and use it to customize the behavior:
+It is not recommended to access ``map`` directly. There are several utility functions to access it. They can be used to virtualize the map, and you can use them with ``dojo.connect()`` so you know when DnD items are added/removed/accessed and use it to customize the behavior:
 
-* getItem(id) --- returns an object with a dat and a type described above, which are associated with the node corresponding to that id.
-* setItem(id, obj) --- associates an object "obj" with this id. "obj" should define "data" and "type" member variables.
-* delItem(id) --- deletes a record of the node with this id. Warning: it does not delete the node from the container.
-* clearItems() --- delete all records. Warning: it does not delete nodes from the container.
-* forInItems(f, o) --- similar to dojo.forEach() but goes over all items in the map. The function "f" will be called in the context "o" for every item in the map with following parameters:
+* ``getItem(id)`` --- returns an object with ``data`` and ``type`` described above, which are associated with the node corresponding to that ``id``.
+* ``setItem(id, obj)`` --- associates an object ``obj`` with this ``id``. ``obj`` should define ``data`` and ``type`` attributes.
+* ``delItem(id)`` --- deletes a record of the node with this ``id``. *Warning: it does not delete the node from the container.*
+* ``clearItems()`` --- delete all records. *Warning: it does not delete nodes from the container.*
+* ``forInItems(f, o)`` --- similar to ``dojo.forEach()`` but goes over all items in the map. The function ``f`` will be called in the context ``o`` for every item in the ``map`` with following parameters:
 
-  * obj --- the corresponding object with data and type defined.
-  * id --- the node id.
-  * map --- the map object itself.
+  * ``obj`` --- the corresponding object with ``data`` and ``type`` defined.
+  * ``id`` --- the node id.
+  * ``map`` --- the map object itself.
 
-Following event processors are defined: onMouseOver, onMouseOut. Two pseudo-events are defined: onOverEvent, onOutEvent, which are cleaned up argument-less onMouseOver and onMouseOut events (otherwise they can be fired several times without actually leaving the container).
+Following event processors are defined: ``onMouseOver``, ``onMouseOut``. Two pseudo-events are defined: ``onOverEvent``, ``onOutEvent``, which are cleaned up argument-less ``onMouseOver`` and ``onMouseOut`` events (otherwise they can be fired several times without actually leaving the container).
 
 Following CSS classes are used by the container object:
 
-* dojoDndContainer --- assigned to each container node during the construction.
-* dojoDndContainerOver --- assigned when the mouse hovers over the container.
-* dojoDndItem --- assigned to every new data item node. It should be assigned to every item before the container construction, if you want it to be added automatically by the constructor.
-* dojoDndItemOver -- assigned to a data item node when the mouse hovers over the this item. This class is assigned in addition to dojoDndItem class.
+* ``dojoDndContainer`` --- assigned to each container node during the construction.
+* ``dojoDndContainerOver`` --- assigned when the mouse hovers over the container.
+* ``dojoDndItem`` --- assigned to every new data item node. It should be assigned to every item before the container construction, if you want it to be added automatically by the constructor.
+* ``dojoDndItemOver`` -- assigned to a data item node when the mouse hovers over the this item. This class is assigned in addition to ``dojoDndItem`` class.
 
-Partial reason to add "over" states when the mouse hovers over instead of using CSS was to support it in IE too.
+Partial reason to add "over" states when the mouse hovers over instead of using CSS was to support it in Internet Explorer too.
 
 Selector
 --------
 
 The default implementation of the selector is built on top of the container class and adds the ability to select children items. Selector inherits all Container's methods and objects. Additionally it adds a notion of an anchor. The anchor is used to specify a point of insertion of other items. The selector assumes that the container is organized in a linear fashion either vertically (e.g., embedded <div>s, lists, tables) or horizontally (e.g., <span>s). This assumption allows to implement familiar UI paradigms: selection of one element with a mouse click, selection of an additional element with ctrl+click, linear group selection from the anchor to the clicked element with shift+click, selecting an additional linear group from the anchor to the clicked element with shift+ctrl+click. Obviously if you have more complex containers, you should implement different UI actions.
 
-Constructor takes the same two parameters as the container's constructor. It understands more optional parameters and passes the rest to the underlying container. Following optional parameters are understood by the selector object: 
+Constructor takes the same two parameters as the container's constructor. It understands more optional parameters and passes the rest to the underlying container. Following optional parameters are understood by the selector object:
 
 * singular --- a boolean flag. If it is true, the user is allowed to select just one item, otherwise any number of items can be selected. It is false by default.
 
@@ -190,7 +191,7 @@ Source
 The source object represents a source of items for drag-and-drop operations. It is used to represent DnD targets as well. In order to be compatible your custom sources should emulate the common source API. Instances of this class can be created from the HTML markup automatically by dojo.parser using dojoType="dojo.dnd.Source".
 
 The default implementation of the source is built on top of the selector class, and adds the ability to start a DnD operation, and participate in the orchestration of the DnD. Source inherits all Selector's (and Container's) methods and objects. User can initiate the DnD operation by dragging items (click and move without releasing the mouse). The DnD operation can be used to rearrange items within a single source, or items can be moved or copied between two sources. User can select whether she wants to copy or move items by pressing the Ctrl button during the operation. If it is pressed, items will be copied, otherwise they will be moved. This behavior can be overwritten programmatically.
- 
+
 Constructor takes the same two parameters as the container's selector. It understands more optional parameters and passes the rest to the underlying selector. Following optional parameters are understood by the selector object:
 
 * isSource --- a Boolean flag. If it is true, this object can be used to start the DnD operation, otherwise it can serve only as a target. It is true by default.
@@ -204,7 +205,7 @@ Following public methods are defined (they can be replace to change the DnD beha
 * checkAcceptance(source, nodes) --- returns true, if this object can accept items "nodes" from the "source". The default implementation checks item's types with accepted types of the object, and rejects the operation, if there is no full match. Such objects are marked as disabled targets and they do not participate in the current DnD operation. The source of items can always accept its items regardless of the match. It prevents the situation when user started to drag items and cannot find a suitable target, and cannot return them back. Please take it into consideration when replacing this method. This method is called on all potential targets before the DnD operation.
 
   * source --- the source object for the dragged items.
-  * nodes --- a list of nodes 
+  * nodes --- a list of nodes
 
 * copyState(keyPressed) --- returns true if the copy operation should be performed, the move will be performed otherwise. The default implementation checks the "copyOnly" parameter described above. If it is set, this method always returns true. This method can be replaced if you want to implement a more complex logic.
 
@@ -311,9 +312,9 @@ Following CSS classes are used by the manager to style the DnD operation:
 
 No styles are assigned when there is no DnD in progress.
 
-========================
-dojo.dnd.move principals
-========================
+===========================
+_`dojo.dnd.move` principals
+===========================
 
 The DnD move consists of two principal classes and several specific implementations.
 
@@ -345,7 +346,7 @@ Following public methods/events are defined (they can be used with dojo.connect(
 * onMoveStart --- called when the move is about to start. The parameter is a mover object (see below) for the current move.
 * onFirstMove --- called once after processing the first onmousemove event. It uses the same parameters as onMoveStart above.
 * onMove --- called on every update of node's position. Parameters:
-  
+
   * mover --- a mover object (see below) for the current move.
   * leftTop --- an object which defines the new left and top position of the object by its subobjects "l" and "t" respectively. Both of them are numbers in pixels.
 
@@ -426,7 +427,7 @@ Following specialized moveable classes are defined:
 Subclassing DnD classes
 -----------------------
 
-If you want to subclass dojo.dnd.Container, dojo.dnd.Selector, dojo.dnd.Source, dojo.dnd.Moveable, or their descendants, and you want to use the declarative markup, don't forget to implement the markupFactory() method. The reason for that is dojo.parser, which instantiates the markup, expects a very particular signature from a constructor. Dojo DnD classes predate dojo.parser, and have a non-conformant signature. dojo.parser is smart enough to use a special adapter function in such cases. See the source code for dojo.dnd.Source.markupFactory() (for the Container-Selector-Source chain), and dojo.dnd.Moveable.markupFactory() for details. The key point is to return the instance of your new class there. Otherwise the instance of your base class is going to be created, which is probably not what you want.
+If you want to subclass Container_, Selector_, Source_, Moveable_, or their descendants, and you want to use the declarative markup, don't forget to implement the ``markupFactory()`` method. The reason for that is ``dojo.parser``, which instantiates the markup, expects a very particular signature from a constructor. Dojo DnD classes predate ``dojo.parser``, and have a non-conformant signature. ``dojo.parser`` is smart enough to use a special adapter function in such cases. See the source code for ``dojo.dnd.Source.markupFactory()`` (for the Container_-Selector_-Source_ chain), and ``dojo.dnd.Moveable.markupFactory()`` for details. The key point is to return the instance of your new class there. Otherwise the instance of your base class is going to be created, which is probably not what you want.
 
 Summary of CSS classes
 ----------------------
