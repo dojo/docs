@@ -40,3 +40,7 @@ Features
 * dojox.io.xhrWindowNamePlugin
 
   window.name plugin for XHR adapter registry
+
+* dojox.io.OAuth 
+
+  Helper class to assemble OAuth URL parameters.
