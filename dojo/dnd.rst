@@ -8,7 +8,7 @@ dojo.dnd package
 :Available: since 1.0
 
 .. contents::
-  :depth: 3
+  :depth: 2
 
 *(This is a copy of dojo.dnd 1.1 technical documentation. It will be updated to 1.2 as soon as it ships.)*
 
@@ -58,6 +58,9 @@ The default implementation of ``dojo.dnd.Container`` represents a uniform linear
 
 The draggable item is represented by an abstract data object, which can be anything. There is a function ``creator``, which is called when we need to visualize a data item for the container_, or for the avatar_. It allows us to have different representations of the same data item in different containers and in the avatar_. More on that later.
 
+Constructor
+~~~~~~~~~~~
+
 Constructor takes 2 parameters:
 
 * ``node`` --- a DOM node or an id (string) of such node. This node represents a container. All draggable items will be direct descendants of this node (the important exception: a ``<table>`` node, in this case items will be direct descendants of the embedded ``<tbody>`` node). If you want to override this default behavior, use ``dropParent`` attribute of ``params`` (see below).
@@ -76,11 +79,14 @@ Constructor takes 2 parameters:
   * ``skipForm`` --- a Boolean flag. If it is true, the container passes selection and dragging operations to the browser, otherwise it suppresses them. By default it is false.
   * ``dropParent`` --- a DOM node below the main node, which serves as a physical container for data item nodes. It can be used to structure the visual design of your container. This value will be assigned to ``parent`` attribute of the container (see below).
 
-During the construction the constructor checks immediate children of ``parent`` member (see below) for the presence of ``dojoDndItem`` class. All such items are added as container's children automatically. It is assumed that you already built the visual representation of the data item, so the creator function is not involved. Instead the necessary triplet formed like that:
+During the construction the constructor checks immediate children of ``parent`` attribute (see below) for the presence of ``dojoDndItem`` class. All such items are added as container's children automatically. It is assumed that you already built the visual representation of the data item, so the creator function is not involved. Instead the necessary triplet formed like that:
 
 * ``node`` --- the node itself. If it doesn't have an id, a unique id is generated for it.
 * ``data`` --- the content of ``dndData`` member of the node. If it is missing, ``node.innerHTML`` is used instead.
 * ``type`` --- the content of ``dndType`` member of the node split on "," character. If it is missing, ``["text"]`` is used as the default type.
+
+Default creator
+~~~~~~~~~~~~~~~
 
 If the creator function was not specified, a default creator is used. The default creator does following things:
 
@@ -102,6 +108,9 @@ After the creator function was called the result is post-processed:
 * The returned node will be assigned a ``dojoDndItem`` class.
 * If the returned ``type`` is not an array or missing, it will be replaced with ``["text"]``.
 
+Public methods and attributes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Following public methods are defined:
 
 * ``getAllNodes()`` --- returns a ``NodeList`` of all controlled nodes in the order they are listed in the container.
@@ -114,7 +123,7 @@ Following public methods are defined:
 * ``destroy()`` --- prepares the container object to be garbage-collected. You cannot use the container object after it was destroyed.
 * ``sync()`` --- *(new in 1.2.2)* inspects all controlled DOM nodes updating internal structures by removing information of removed nodes, and adding newly added DOM nodes marked with ``dojoDndItem`` class.
 
-The container object defines following public member variables:
+The container object defines following public attributes:
 
 * ``current`` --- a DOM node, which corresponds to a child with a mouse hovering over it. If there is no such item, this variable is null.
 * ``node`` --- the DOM node of the container. This node is used to set up mouse event handlers for the container.
@@ -141,7 +150,13 @@ It is not recommended to access ``map`` directly. There are several utility func
   * ``id`` --- the node id.
   * ``map`` --- the map object itself.
 
+Event processors
+~~~~~~~~~~~~~~~~
+
 Following event processors are defined: ``onMouseOver``, ``onMouseOut``. Two pseudo-events are defined: ``onOverEvent``, ``onOutEvent``, which are cleaned up argument-less ``onMouseOver`` and ``onMouseOut`` events (otherwise they can be fired several times without actually leaving the container).
+
+CSS classes
+~~~~~~~~~~~
 
 Following CSS classes are used by the container object:
 
@@ -157,9 +172,15 @@ Selector
 
 The default implementation of the selector is built on top of the container class and adds the ability to select children items. Selector inherits all Container's methods and objects. Additionally it adds a notion of an anchor. The anchor is used to specify a point of insertion of other items. The selector assumes that the container is organized in a linear fashion either vertically (e.g., embedded <div>s, lists, tables) or horizontally (e.g., <span>s). This assumption allows to implement familiar UI paradigms: selection of one element with a mouse click, selection of an additional element with ctrl+click, linear group selection from the anchor to the clicked element with shift+click, selecting an additional linear group from the anchor to the clicked element with shift+ctrl+click. Obviously if you have more complex containers, you should implement different UI actions.
 
+Constructor
+~~~~~~~~~~~
+
 Constructor takes the same two parameters as the container's constructor. It understands more optional parameters and passes the rest to the underlying container. Following optional parameters are understood by the selector object:
 
 * singular --- a boolean flag. If it is true, the user is allowed to select just one item, otherwise any number of items can be selected. It is false by default.
+
+Public methods and attributes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Following public methods are defined in addition to the container public methods:
 
@@ -172,13 +193,19 @@ Following public method is redefined with new signature:
 
 * insertNodes(addSelected, data, before, anchor) --- the last three parameters are the same (look up the same function in the container). The first parameter is a flag, if it is true all newly added items will be added to the selection, otherwise they will be added unselected.
 
-The container object defines following public member variables:
+The container object defines following public attributes:
 
 * selection --- a dictionary object keyed by ids of selected nodes. No useful payload is attached to objects in the dictionary.
 * anchor --- the current anchor node or null.
 * simpleSelection --- a flag to indicate that a singular selection is active.
 
+Event processors
+~~~~~~~~~~~~~~~~
+
 Following event processors are defined: onMouseDown, onMouseUp. onMouseMove is attached by onOverEvent and detached by onOutEvent dynamically.
+
+CSS classes
+~~~~~~~~~~~
 
 Following CSS classes are used by the selector object in addition to classes assigned the container object:
 
@@ -192,6 +219,9 @@ The source object represents a source of items for drag-and-drop operations. It 
 
 The default implementation of the source is built on top of the selector class, and adds the ability to start a DnD operation, and participate in the orchestration of the DnD. Source inherits all Selector's (and Container's) methods and objects. User can initiate the DnD operation by dragging items (click and move without releasing the mouse). The DnD operation can be used to rearrange items within a single source, or items can be moved or copied between two sources. User can select whether she wants to copy or move items by pressing the Ctrl button during the operation. If it is pressed, items will be copied, otherwise they will be moved. This behavior can be overwritten programmatically.
 
+Constructor
+~~~~~~~~~~~
+
 Constructor takes the same two parameters as the container's selector. It understands more optional parameters and passes the rest to the underlying selector. Following optional parameters are understood by the selector object:
 
 * isSource --- a Boolean flag. If it is true, this object can be used to start the DnD operation, otherwise it can serve only as a target. It is true by default.
@@ -199,6 +229,9 @@ Constructor takes the same two parameters as the container's selector. It unders
 * horizontal --- a flag. If true, the source is based on the horizontally organized list container, otherwise it is based on the vertical one. he default is false.
 * copyOnly --- a flag. If true, the source doesn't allow to move items out of it, any DnD operation will copy items from such sources. By default it is false.
 * withHandles --- a flag. If it is true, an item can be dragged only by a predefined node inside the item, otherwise the whole item can be used for dragging. By default it is false. The handle should be a descendant of the item node and should be marked with class dojoDndHandle.
+
+Public methods and attributes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Following public methods are defined (they can be replace to change the DnD behavior):
 
@@ -211,9 +244,18 @@ Following public methods are defined (they can be replace to change the DnD beha
 
   * keyPressed --- a flag. If true, user pressed the "copy" key.
 
-Following topic listeners are defined: onDndSourceOver, onDndStart, onDndDrop, onDndCancel. These topics are published by the manager. If you want to override topic listeners, please read "Summary of topics" section below.
+Event processors
+~~~~~~~~~~~~~~~~
 
 Following event handlers are overloaded: onMouseDown, onMouseUp, and onMouseMove. They are used to perform additional actions required by the Source.
+
+Topic processors
+~~~~~~~~~~~~~~~~
+
+Following topic listeners are defined: onDndSourceOver, onDndStart, onDndDrop, onDndCancel. These topics are published by the manager. If you want to override topic listeners, please read "Summary of topics" section below.
+
+CSS classes
+~~~~~~~~~~~
 
 Following CSS classes are used by the source object in addition to classes assigned by the selector and the container objects:
 
@@ -251,6 +293,9 @@ The default implementation of the Avatar class does following:
 * The first row (the header) is populated with a text generated by _generateText() method. By default it returns the number of transferred items. You can override this method for localization purposes, or to change the text how you like it.
 * Next rows are populated with DOM nodes generated by the creator function of the current source with hint "avatar" (see above the description of the creator function) for data items. Up to 5 rows are populated with decreasing opacity.
 
+CSS classes
+~~~~~~~~~~~
+
 Following CSS classes are used to style the avatar:
 
 * dojoDndAvatar --- assigned to the avatar (the table).
@@ -266,6 +311,9 @@ Manager is a small class, which implements a business logic of DnD and orchestra
 At any given moment there is only one instance of this class (the singleton pattern), which can be accessed by dojo.dnd.manager() function.
 
 This class or its instance can be monkey patched or replaced completely, if you want to change its functionality.
+
+Public methods and attributes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Following public methods are defined to be called by sources:
 
@@ -292,6 +340,17 @@ Following public properties are used by the manager during the active DnD operat
 * copy --- Boolean value to track the copy/move status.
 * target --- the selected target of the drop.
 
+Event processors
+~~~~~~~~~~~~~~~~
+
+Following events are processed by the manager to the body: onMouseMove, onMouseUp, onKeyDown, onKeyUp. These events are attached only during the active DnD operation. Following keys have a special meaning for the manager:
+
+* Ctrl key --- when it is pressed the copy semantics is assumed. Otherwise the move is assumed.
+* Esc key --- when it is pressed the DnD operation is immediately cancelled.
+
+Topic processors
+~~~~~~~~~~~~~~~~
+
 Following topic events can be generated by the manager:
 
 * /dnd/start --- when DnD starts. Current source, nodes, and the copy flag (see startDrag() for more info) are passed as parameters of this event.
@@ -300,10 +359,8 @@ Following topic events can be generated by the manager:
 * /dnd/drop --- raised to perform a drop. Parameters are the same as for /dnd/start. Note that during the processing of this event nodes can be already moved, or reused. If you need the original nodes, use /dnd/drop/before to capture them.
 * /dnd/cancel --- when DndD was cancelled either by user (by hitting Esc), or by dropping items in illegal location.
 
-Following events are processed by the manager to the body: onMouseMove, onMouseUp, onKeyDown, onKeyUp. These events are attached only during the active DnD operation. Following keys have a special meaning for the manager:
-
-* Ctrl key --- when it is pressed the copy semantics is assumed. Otherwise the move is assumed.
-* Esc key --- when it is pressed the DnD operation is immediately cancelled.
+CSS classes
+~~~~~~~~~~~
 
 Following CSS classes are used by the manager to style the DnD operation:
 
@@ -424,18 +481,20 @@ Following specialized moveable classes are defined:
 
   * timeout --- the time delay number in milliseconds. The node will not be moved for that number of milliseconds, but it will continue to accumulate changes in the mouse position.
 
+=======================
 Subclassing DnD classes
------------------------
+=======================
 
 If you want to subclass Container_, Selector_, Source_, Moveable_, or their descendants, and you want to use the declarative markup, don't forget to implement the ``markupFactory()`` method. The reason for that is ``dojo.parser``, which instantiates the markup, expects a very particular signature from a constructor. Dojo DnD classes predate ``dojo.parser``, and have a non-conformant signature. ``dojo.parser`` is smart enough to use a special adapter function in such cases. See the source code for ``dojo.dnd.Source.markupFactory()`` (for the Container_-Selector_-Source_ chain), and ``dojo.dnd.Moveable.markupFactory()`` for details. The key point is to return the instance of your new class there. Otherwise the instance of your base class is going to be created, which is probably not what you want.
 
+======================
 Summary of CSS classes
-----------------------
+======================
 
 All DnD-related classes can affect 6 types of DOM nodes. All of them are collected in this section for your convenience. Using CSS classes described here you can design extremely sophisticated UI to improve usability and enhance the workflow of your applications.
 
 body
-~~~~
+----
 
 The body node is updated only during active DnD operations. It can be used during the move to deemphasize temporarily the web page and to highlight available targets or a dragged object.
 
@@ -446,7 +505,8 @@ Following CSS classes are used:
 * dojoMove --- assigned to the body when the drag is in progress (dojo.dnd.move).
 
 Source/target (dojo.dnd)
-~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------
+
 Source can be assigned several classes to reflect its current role. These classes can be used together with the body CSS classes described above to create CSS rules to differentiate containers visually during drags.
 
 Following CSS classes are used:
@@ -461,7 +521,7 @@ Following CSS classes are used:
 * dojoDndTargetDisabled --- assigned to the container node during the active DnD operation when this node cannot accept currently dragged items, e.g., because it doesn't accept items of these types. When this class is assigned to the node, dojoDndTarget class is removed.
 
 DnD item (dojo.dnd)
-~~~~~~~~~~~~~~~~~~~
+-------------------
 
 DnD items can be assigned several classes to reflect their current role visually.
 
@@ -475,7 +535,7 @@ Following CSS classes are used:
 * dojoDndItemAfter --- assigned to the data item node during the active DnD operation if transferred items will be inserted after this item. This class is assigned in addition to all other classes.
 
 DnD handles (dojo.dnd)
-~~~~~~~~~~~~~~~~~~~~~~
+----------------------
 
 DnD items can defined special handles on their descendants, which can be used for dragging. In this case the body of the DnD item cannot be used to start the drag.
 
@@ -484,7 +544,7 @@ Following CSS classes are used:
 * dojoDndHandle --- assigned to handles of item nodes. See the withHandles parameter of Source above.
 
 Avatar (dojo.dnd)
-~~~~~~~~~~~~~~~~~
+-----------------
 
 The default avatar can be styled to suit your needs.
 
@@ -496,7 +556,7 @@ Following CSS classes are used:
 * dojoDndAvatarCanDrop --- added to the avatar node (the table) when the mouse is over a target, which can accept transferred items. Otherwise it is removed.
 
 Dragged node (dojo.dnd.move)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------
 
 The dragged node can be specially styled while in move.
 
@@ -504,8 +564,9 @@ Following CSS classes are used:
 
 * dojoMoveItem --- assigned to the dragged node when the drag is in progress.
 
+=================
 Summary of topics
-~~~~~~~~~~~~~~~~~
+=================
 
 While local events are the preferred way to handle state changes, in some cases topics (named global events) can simplify an application.
 
@@ -524,8 +585,9 @@ Following topic events are raised by dojo.dnd.Moveable:
 * /dnd/move/start --- published by the default implementation of Moveable.onMoveStart() passing a mover as parameter.
 * /dnd/move/stop --- published by the default implementation of Moveable.onMoveStop() passing a mover as parameter.
 
+===============
 Available tests
----------------
+===============
 
 All tests are located in the dojo/tests/dnd/ sub-directory. They are used by developers to test the conformance, and can be used by users to see how different objects and algorithms can be used. Following tests are available:
 
