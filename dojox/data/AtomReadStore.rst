@@ -109,13 +109,7 @@ Example Usage
 
       function init() {
         var grid = dijit.byId("feedGrid");
-        grid.setStore(feedStore);
-        grid.setQuery({});
-        
-          query: {},
-          count: 5,
-          onComplete: printResults
-        });
+        grid.setStore(feedStore, {});
       }
       dojo.addOnLoad(init);
     </script>
