@@ -56,9 +56,6 @@ Sizing TextBoxes
 
 Sizing a text box is done through the CSS width on the textbox node.  Typically this is done by specifying thw width in ems.  Please see the following for an example:
 
-Connecting CsvStore to dojox.grid.DataGrid
-------------------------------------------
-
 .. cv-compound ::
 
   .. cv :: javascript
@@ -69,9 +66,9 @@ Connecting CsvStore to dojox.grid.DataGrid
 
   .. cv :: html
 
-    <div style="width: 50em;" dojoType="dijit.form.TextBox"></div>
+    <b>A large textbox:</b> <div style="width: 50em;" dojoType="dijit.form.TextBox"></div>
     <br>
-    <div style="width: 10em;" dojoType="dijit.form.TextBox"></div>
+    <b>A small textbox:</b> <div style="width: 10em;" dojoType="dijit.form.TextBox"></div>
     <br>
 
   .. cv:: css
