@@ -108,7 +108,14 @@ Example Usage
       ];
 
       function init() {
-        dijit.byId("feedGrid").setQuery({});
+        var grid = dijit.byId("feedGrid");
+        grid.setStore(feedStore);
+        grid.setQuery({});
+        
+          query: {},
+          count: 5,
+          onComplete: printResults
+        });
       }
       dojo.addOnLoad(init);
     </script>
