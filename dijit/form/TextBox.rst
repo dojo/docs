@@ -126,11 +126,6 @@ Getting and manipulating the value is a trivial matter.  It is done through the 
     </style>
 
 
-
-
-
-TODO
-
 Example: Treating ENTER as a TAB
 --------------------------------
 
