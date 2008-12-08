@@ -12,9 +12,9 @@ dojo.dnd package
 
 *(This is a copy of dojo.dnd 1.1 technical documentation. It will be updated to 1.2 as soon as it ships.)*
 
-========================================
-Underlying concepts and historical notes
-========================================
+===================
+Underlying concepts
+===================
 
 This package was built after we learned from mistakes made in ``dojo.dnd 0.4``:
 
@@ -680,7 +680,11 @@ The same directory contains a simple CSS file, which shows how you can style the
 External tutorials and documentation
 ====================================
 
+`Dojo Drag and Drop, Part 1: dojo.dnd <http://www.sitepen.com/blog/2008/06/10/dojo-drag-and-drop-1/>`_ by Revin Guillen at `SitePen <http://www.sitepen.com/>`_.
+  The comprehensive explanation of dojo.dnd, and how to leverage it in real applications. The author build the "shopping cart" in several iterations commenting code snippets and providing full source code for all examples. The only drawback is: this article uses topic handlers, because it was published before the introduction of local events.
 
+`Inside Dojo DnD: Drag Handles <http://www.sitepen.com/blog/2008/10/24/inside-dojo-dnd-drag-handles/>`_ by `Eugene Lazutkin <http://lazutkin.com/>`_ at `SitePen <http://www.sitepen.com/>`_.
+  The article explains a frequently overlooked and underused feature of Dojo’s Drag-and-Drop (DnD) module: drag handles. It features several simple examples and clarifies some fine points.
 
 ====
 Tips
