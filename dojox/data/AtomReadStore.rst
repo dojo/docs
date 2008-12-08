@@ -95,40 +95,34 @@ Example Usage
       dojo.require("dojox.grid.DataGrid");
 
       function hrefFormatter(value) {
-        value = unescape(value);
-        return "<a href=\"" + value + "\" target=\"_blank\">Link</a>";
+        return "<a href=\"" + value["href"] + "\" target=\"_blank\">Link</a>";
       };
+			function textFormatter(value) {
+				return value["text"];
+			}
 
       var layoutResults = [
         [
-          { field: "title", name: "Title", width: 20 },
+          { field: "title", name: "Title", width: 20 , formatter: textFormatter},
           { field: "link", name: "URL", width: 5, formatter: hrefFormatter},
-          { field: "summary", name: "Summary", width: 'auto' }
+          { field: "summary", name: "Summary", width: 'auto' , formatter: textFormatter}
         ]
       ];
-
-      function init() {
-        var grid = dijit.byId("feedGrid");
-        grid.setStore(feedStore, {});
-      }
-      dojo.addOnLoad(init);
     </script>
 
   .. cv :: html 
 
-    <br>
-    <div dojoType="dojox.data.AtomReadStore" jsId="feedStore" url="http://dojocampus.org/explorer/featureexplorer/Dojo/Data/AtomReadStore/atom1.xml"></div>
-    <br>
-    <br>
+    <div dojoType="dojox.data.AtomReadStore" jsId="feedStore" url="../dojox/data/tests/stores/atom1.xml"></div>
     <div style="width: 750px; height: 300px;">
       <div id="feedGrid" 
+			  jsId="feedGrid"
         dojoType="dojox.grid.DataGrid" 
         store="feedStore" 
         structure="layoutResults" 
-        query="{url:'http://news.google.com/nwshp?hl=en&tab=wn&output=atom'}"   
+        query="{}"   
         rowsPerPage="40">
       </div>
-    </div> 
+    </div>
 
   .. cv:: css
 
