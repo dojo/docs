@@ -32,7 +32,7 @@ Example 1:  Look up a positioned DOM node and calculate its coordinates
 -----------------------------------------------------------------------
 
 --------------------------------------------------------------------
-Example 1:  Look up a positioned dijit and calculate its coordinates
+Example 2:  Look up a positioned dijit and calculate its coordinates
 --------------------------------------------------------------------
 
 
