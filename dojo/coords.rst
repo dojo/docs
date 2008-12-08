@@ -22,3 +22,9 @@ The dojo coords function is used to obtain a plethora of coordinate information 
 { l: 50, t: 200, w: 300: h: 150, x: 700, y: 900, }
 
 for a node offset from its parent 50px to the left, 200px from the top with a margin width of 300px and a margin-height of 150px, with page absolute coordinates of 700px on the x axis and 900px on the y axis.
+
+
+=====
+Notes
+=====
+* For dom nodes with border styles, on Internet Explorer the absolute coordinates (x and y axis), do not include the border position, so you may have to adjust for that depending on what your indented usage of the information is.
