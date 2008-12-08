@@ -28,6 +28,18 @@ It can take in either a Javascript array, JSON string, or URL as the data source
 
 Each 'item' retrieved from this store from this store is a JS object representing a key-value pair. If an item in the above array has more than one key/value pair, only the first will be used/accessed.
 
+Such a construct can be formed from a JS object of the form { k1:v1, k2:v2, ... } with code like
+
+.. code-block :: javascript
+
+  var myVar={"key1": "value1" , "key2": "value2", ... };
+  var myStore=[];
+  for (var p in myVar) {
+    var t={};
+    t[p]=myVar[p];
+    myStore.push(t);
+  }
+
 
 ======================
 Constructor Parameters
