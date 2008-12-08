@@ -62,6 +62,12 @@ Sizing a text box is done through the CSS width on the text box dom node.  Typic
 
     <script>
       dojo.require("dijit.form.TextBox");
+
+      function init() {
+        var box = dijit.byId("progBox");
+        dojo.style(box.domNode, "width", "5em");
+      }
+      dojo.addOnLoad(init);
     </script>
 
   .. cv :: html
@@ -72,6 +78,10 @@ Sizing a text box is done through the CSS width on the text box dom node.  Typic
     <br>
     <b>A small textbox:</b> <div style="width: 10em;" dojoType="dijit.form.TextBox"></div>
     <br>
+
+    <b>A programmatically set textbox:</b> <div id="progBox" dojoType="dijit.form.TextBox"></div>
+    <br>
+
 
   .. cv:: css
 
