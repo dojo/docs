@@ -31,7 +31,7 @@ Dojo Base refers to a small portion of Core Dojo and provides all baseline funct
 Dojo Core
 ---------
 
-Dojo Core is the most tired-and-true available components of the Dojo Toolkit. 
+Dojo Core is the most tried-and-true available components of the Dojo Toolkit. 
 
 
 ========
