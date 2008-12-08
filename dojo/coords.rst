@@ -31,6 +31,21 @@ Usage Examples
 Example 1:  Look up a positioned DOM node and calculate its coordinates
 -----------------------------------------------------------------------
 
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      var node = dojo.byId("box");
+      var coords = dojo.coords(node);
+
+    </script>
+
+  .. cv :: html 
+
+    <div id="box" style="width: 100px; height: 100px, background-color: darkgray;"></div>
+
+
 --------------------------------------------------------------------
 Example 2:  Look up a positioned dijit and calculate its coordinates
 --------------------------------------------------------------------
