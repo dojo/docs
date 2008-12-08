@@ -10,8 +10,6 @@ dojo.dnd package
 .. contents::
   :depth: 2
 
-*(This is a copy of dojo.dnd 1.1 technical documentation. It will be updated to 1.2 as soon as it ships.)*
-
 ===================
 Underlying concepts
 ===================
@@ -655,26 +653,26 @@ Following topic events are raised by Moveable_:
 Available tests
 ===============
 
-All tests are located in the dojo/tests/dnd/ sub-directory. They are used by developers to test the conformance, and can be used by users to see how different objects and algorithms can be used. Following tests are available:
+All tests are located in the ``dojo/tests/dnd/`` sub-directory. They are used by developers to test the conformance, and can be used by users to see how different objects and algorithms can be used. Following tests are available (these are external links to Dojo Nightlies, which are are not set up for speed but for debugging):
 
-* test_dnd.html tests general DnD operations including the markup and programmatic creation, pure targets, a special representation of DnD items in the avatar, styling of different objects, complex selection of items, and topics.
-* test_container.html tests the default creator function with different types of containers created programmatically.
-* test_container_markup.html tests the default creator function with different types of containers created with the markup.
-* test_selector.html tests the default creator function with different types of containers created programmatically.
-* test_selector_markup.html tests the default creator function with different types of containers created with the markup.
-* test_dnd_handles.html tests DnD handles. All objects are created with the markup.
-* test_form.html tests skipping form elements.
-* test_moveable.html tests moveable nodes declared moveable programmatically. Additionally it tests topics.
-* test_moveable_markup.html tests moveable nodes declared moveable by the markup. Additionally it tests topics.
-* test_params.html tests delay and skip parameters.
-* test_box_constraints.html tests dojo.dnd.move.boxConstrainedMoveable using programmatic and markup methods.
-* test_parent_constraints.html tests dojo.dnd.move.parentConstrainedMoveable with all "area" values.
-* test_parent_constraints_margins.html tests dojo.dnd.move.parentConstrainedMoveable with all "within" values.
-* test_custom_constraints.html tests dojo.dnd.move.constrainedMoveable implementing the "grid move" pattern.
-* test_timed_moveable.html tests dojo.dnd.TimedMoveable with different timeout values.
-* flickr_viewer.html implements an elaborate demo, which retrieves pictures of three types from Flickr, and allows to sort them into two bins according to their types. It demonstrates many techniques including horizontal vs. vertical containers, different representation of data items in different containers and in the avatar, and so on.
+* `test_dnd.html <http://archive.dojotoolkit.org/nightly/dojotoolkit/dojo/tests/dnd/test_dnd.html>`_ tests general DnD operations including the markup and programmatic creation, pure targets, a special representation of DnD items in the avatar, styling of different objects, complex selection of items, and topics.
+* `test_container.html <http://archive.dojotoolkit.org/nightly/dojotoolkit/dojo/tests/dnd/test_container.html>`_ tests the default creator function with different types of containers created programmatically.
+* `test_container_markup.html <http://archive.dojotoolkit.org/nightly/dojotoolkit/dojo/tests/dnd/test_container_markup.html>`_ tests the default creator function with different types of containers created with the markup.
+* `test_selector.html <http://archive.dojotoolkit.org/nightly/dojotoolkit/dojo/tests/dnd/test_selector.html>`_ tests the default creator function with different types of containers created programmatically.
+* `test_selector_markup.html <http://archive.dojotoolkit.org/nightly/dojotoolkit/dojo/tests/dnd/test_selector_markup.html>`_ tests the default creator function with different types of containers created with the markup.
+* `test_dnd_handles.html <http://archive.dojotoolkit.org/nightly/dojotoolkit/dojo/tests/dnd/test_dnd_handles.html>`_ tests DnD handles. All objects are created with the markup.
+* `test_form.html <http://archive.dojotoolkit.org/nightly/dojotoolkit/dojo/tests/dnd/test_form.html>`_ tests skipping form elements.
+* `test_moveable.html <http://archive.dojotoolkit.org/nightly/dojotoolkit/dojo/tests/dnd/test_moveable.html>`_ tests moveable nodes declared moveable programmatically. Additionally it tests topics.
+* `test_moveable_markup.html <http://archive.dojotoolkit.org/nightly/dojotoolkit/dojo/tests/dnd/test_moveable_markup.html>`_ tests moveable nodes declared moveable by the markup. Additionally it tests topics.
+* `test_params.html <http://archive.dojotoolkit.org/nightly/dojotoolkit/dojo/tests/dnd/test_params.html>`_ tests delay and skip parameters.
+* `test_box_constraints.html <http://archive.dojotoolkit.org/nightly/dojotoolkit/dojo/tests/dnd/test_box_constraints.html>`_ tests dojo.dnd.move.boxConstrainedMoveable using programmatic and markup methods.
+* `test_parent_constraints.html <http://archive.dojotoolkit.org/nightly/dojotoolkit/dojo/tests/dnd/test_parent_constraints.html>`_ tests dojo.dnd.move.parentConstrainedMoveable with all "area" values.
+* `test_parent_constraints_margins.html <http://archive.dojotoolkit.org/nightly/dojotoolkit/dojo/tests/dnd/test_parent_constraints_margins.html>`_ tests dojo.dnd.move.parentConstrainedMoveable with all "within" values.
+* `test_custom_constraints.html <http://archive.dojotoolkit.org/nightly/dojotoolkit/dojo/tests/dnd/test_custom_constraints.html>`_ tests dojo.dnd.move.constrainedMoveable implementing the "grid move" pattern.
+* `test_timed_moveable.html <http://archive.dojotoolkit.org/nightly/dojotoolkit/dojo/tests/dnd/test_timed_moveable.html>`_ tests dojo.dnd.TimedMoveable with different timeout values.
+* `flickr_viewer.html <http://archive.dojotoolkit.org/nightly/dojotoolkit/dojo/tests/dnd/flickr_viewer.html>`_ implements an elaborate demo, which retrieves pictures of three types from Flickr, and allows to sort them into two bins according to their types. It demonstrates many techniques including horizontal vs. vertical containers, different representation of data items in different containers and in the avatar, and so on.
 
-The same directory contains a simple CSS file, which shows how you can style the DnD objects: dndDefault.css. You can see it in action in almost all tests. It can be used as a starting point for your own styling.
+The same directory contains a simple CSS file, which shows how you can style the DnD objects: `dndDefault.css <http://archive.dojotoolkit.org/nightly/dojotoolkit/dojo/tests/dnd/dndDefault.css>`_. You can see it in action in almost all tests. It can be used as a starting point for your own styling.
 
 ====================================
 External tutorials and documentation
@@ -685,6 +683,9 @@ External tutorials and documentation
 
 `Inside Dojo DnD: Drag Handles <http://www.sitepen.com/blog/2008/10/24/inside-dojo-dnd-drag-handles/>`_ by `Eugene Lazutkin <http://lazutkin.com/>`_ at `SitePen <http://www.sitepen.com/>`_.
   The article explains a frequently overlooked and underused feature of Dojo’s Drag-and-Drop (DnD) module: drag handles. It features several simple examples and clarifies some fine points.
+
+`dojo.dnd 1.1 technical documentation <http://docs.google.com/Edit?tab=view&docid=d764479_20ghbr97c8>`_ by `Eugene Lazutkin <http://lazutkin.com/>`_
+  This is the technical documentation for Dojo DnD 1.1 listed here only as a historic reference. This document is based on it.
 
 ====
 Tips
