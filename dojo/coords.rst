@@ -38,12 +38,17 @@ Example 1:  Look up a positioned DOM node and calculate its coordinates
     <script>
       var node = dojo.byId("box");
       var coords = dojo.coords(node);
+      var info = dojo.byId("info");
+
+      info.appendChild(document.createTextNode("Width: " + coords.w + "px.   Height: " + coords.h + "px.  Relative top: " + coords.t + "px");
+       
 
     </script>
 
   .. cv :: html 
 
     <div id="box" style="width: 100px; height: 100px; background-color: darkgray;"></div>
+    <span id="info"></span>
 
 
 --------------------------------------------------------------------
