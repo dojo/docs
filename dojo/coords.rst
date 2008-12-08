@@ -40,7 +40,7 @@ Example 1:  Look up a positioned DOM node and calculate its coordinates
       var coords = dojo.coords(node);
       var info = dojo.byId("info");
 
-      info.appendChild(document.createTextNode("Width: " + coords.w + "px.   Height: " + coords.h + "px.  Relative top: " + coords.t + "px");
+      info.appendChild(document.createTextNode("Width: " + coords.w + "px.   Height: " + coords.h + "px.  Relative top: " + coords.t + "px"));
        
 
     </script>
