@@ -113,7 +113,7 @@ Public methods and attributes
 
 Following public methods are defined:
 
-* ``getAllNodes()`` --- returns a ``NodeList`` of all controlled nodes in the order they are listed in the container.
+* ``getAllNodes()`` --- returns a ``NodeList`` of all controlled DOM nodes in the order they are listed in the container.
 * ``insertNodes(data, before, anchor)`` --- inserts data items before/after the anchor node. It returns the container object itself for easy chaining of calls.
 
   * ``data`` --- an array of data items to be inserted. Each data item will be passed to the creator function, the result will be registered with the container, the node will be inserted according to ``before`` and ``anchor`` parameters.
@@ -127,7 +127,7 @@ The container object defines following public attributes:
 
 * ``current`` --- a DOM node, which corresponds to a child with a mouse hovering over it. If there is no such item, this variable is null.
 * ``node`` --- the DOM node of the container. This node is used to set up mouse event handlers for the container.
-* ``parent`` --- the DOM node, which is an immediate parent of DnD item nodes. In most cases it is the same as node, but in some cases it can be node's descendant. Example: for tables ``node`` can point to ``<table>``, while ``parent`` points to ``<tbody>`` (DnD item nodes are ``<tr>`` nodes). You can freely change parent to achieve the desired behavior of your container by specifying ``dropParent`` parameter.
+* ``parent`` --- the DOM node, which is an immediate parent of DnD item nodes. In most cases it is the same as node, but in some cases it can be node's descendant. Example: for tables ``node`` can point to ``<table>``, while ``parent`` points to ``<tbody>`` (DnD item nodes will be ``<tr>`` nodes). You can freely change parent to achieve the desired behavior of your container by specifying ``dropParent`` parameter.
 * ``creator`` --- the creator function or ``null``, if the default creator is used.
 * ``skipForm`` --- the flag propagated from the initial parameters.
 
@@ -185,7 +185,7 @@ Public methods and attributes
 
 Following public methods are defined in addition to the container public methods:
 
-* ``getSelectedNodes()`` --- returns a ``NodeList`` of selected nodes.
+* ``getSelectedNodes()`` --- returns a ``NodeList`` of selected DOM nodes.
 * ``selectNone()`` --- remove the selection from all items. It returns the selector object itself for easy chaining of calls.
 * ``selectAll()`` --- selects all items. It returns the selector object itself for easy chaining of calls.
 * ``deleteSelectedNodes()`` --- deletes all selected nodes. It returns the selector object itself for easy chaining of calls.
@@ -241,7 +241,7 @@ Following public methods are defined (they can be replace to change the DnD beha
 * ``checkAcceptance(source, nodes)`` --- returns ``true``, if this object can accept ``nodes`` from ``source``. The default implementation checks item's types with accepted types of the object, and rejects the operation, if there is no full match. Such objects are marked as disabled targets and they do not participate in the current DnD operation. The source of items can always accept its items regardless of the match (for exceptions see the definition of ``selfAccept`` above) preventing the situation when user started to drag items and cannot find a suitable target, and cannot return them back. Please take it into consideration when replacing this method. Target's ``checkAcceptance()`` is called during the DnD in progress when user hovers above it. Following parameters are passed to the method:
 
   * ``source`` --- the source object for the dragged items.
-  * ``nodes`` --- a list of nodes.
+  * ``nodes`` --- a list of DOM nodes.
 
 * ``copyState(keyPressed)`` --- returns ``true`` if the copy operation should be performed, the move will be performed otherwise. The default implementation checks the ``copyOnly`` and ``selfCopy`` parameters described above. This method can be replaced if you want to implement a more complex logic. Following parameters are passed in:
 
@@ -256,8 +256,8 @@ Following event handlers are overloaded: ``onMouseDown``, ``onMouseUp``, and ``o
 Following local events are defined by Source_, which are meant to be overridden or connected with ``dojo.connect()``:
 
 * ``onDrop(source, nodes, copy)`` --- *(new in 1.2.2)* this method is called when DnD items is dropped in this target. The default implementation calls ``onDropExternal()`` or ``onDropInternal()`` based on the value of ``source`` (see below). Following parameters are passed in:
-  * ``source`` --- the source of events, can be the same object as the target.
-  * ``nodes`` --- the array of DnD items to be dropped.
+  * ``source`` --- the source of dragged items, can be the same object as the target.
+  * ``nodes`` --- the array of DOM nodes to be dropped. Their ids can be used to access associated types and data.
   * ``copy`` --- the Boolean flag. If ``true``, the target is requested to copy items, otherwise the target should move items.
 * ``onDropExternal(source, nodes, copy)`` --- *(new in 1.2.2)* this method is called by the default implementation of ``onDrop()`` only if we have an external drop meaning that the source is different from the target. All parameters are the same as in ``onDrop()``. The default implementation performs the drop as instructed.
 * ``onDropInternal(nodes, copy)`` --- *(new in 1.2.2)* this method is called by the default implementation of ``onDrop()`` only if we have an internal drop meaning that the source is the same as the target. All parameters are the same as in ``onDrop()``, but ``source`` parameter is skipped as redundant (it is the same as ``this``). The default implementation performs the drop as instructed.
@@ -267,7 +267,7 @@ Following local events are defined by Source_, which are meant to be overridden 
 Topic processors
 ~~~~~~~~~~~~~~~~
 
-Following topic listeners are defined: ``onDndSourceOver``, ``onDndStart``, ``onDndDrop``, ``onDndCancel``. These topics are published by the manager_. If you want to override topic listeners, please read `Summary of topics`_. 
+Following topic listeners are defined: ``onDndSourceOver``, ``onDndStart``, ``onDndDrop``, ``onDndCancel``. These topics are published by the manager_. If you want to override topic listeners, please read `Summary of topics`_.
 
 **Warning: in most cases you want to use events. Topics are low-level constructs, which are used internally.**
 
@@ -296,36 +296,37 @@ Essentially it is Source_ wrapped in with ``isSource`` set to ``false``. Instanc
 Avatar
 ------
 
-Avatar is a class for an object that represents dragged items during DnD operations. You can replace it or style it if you need to customize the look of DnD.
+Avatar is a class for the object (the singleton pattern) that represents dragged items during DnD operations. You can replace it or style it if you need to customize the look of DnD.
 
 Following methods should be implemented:
 
-* constructor(manager) --- the constructor of the class takes a single parameter --- the instance of Manager (see below), which is used to reflect the state of the DnD operation in progress visually. The constructor is called (and the avatar object is created) only when the manager decided to start a DnD operation.
-* destroy() --- this method is called when the DnD operation is finished, the avatar is unneeded, and is about to be recycled.
-* update() --- this method is called, when the state of the manager changes. It is used to reflect manager's changes visually.
+* ``constructor(manager)`` --- the constructor of the class takes a single parameter --- the instance of Manager_, which is used to reflect the state of the DnD operation in progress visually. The constructor is called (and the avatar object is created) only when the manager decided to start a DnD operation. In this case Manager_ calls its method ``makeAvatar()``. By default Avatar constructs ``<table>``.
+* ``destroy()`` --- this method is called when the DnD operation is finished, the avatar is unneeded, and is about to be recycled.
+* ``update()`` --- this method is called, when the state of the manager changes. It is used to reflect manager's changes visually. Usually this method is called by Manager_ automatically.
+* ``_generateText()`` --- semi-public method, which is called by ``update()`` to render the header test. The default implementation returns a number of dragged items as a string. You can override this method for localization purposes, or to change the text how you like it.
 
 The default implementation of the Avatar class does following:
 
 * It creates an absolutely positioned table of up to 6 rows.
-* The first row (the header) is populated with a text generated by _generateText() method. By default it returns the number of transferred items. You can override this method for localization purposes, or to change the text how you like it.
+* The first row (the header) is populated with a text generated by ``_generateText()`` method.
 * Next rows are populated with DOM nodes generated by the creator function of the current source with hint "avatar" (see above the description of the creator function) for data items. Up to 5 rows are populated with decreasing opacity.
+
+If you want to override the avatar with something totally custom, the best way to do it is to override Manager_'s ``makeAvatar()`` to return your own instance.
 
 CSS classes
 ~~~~~~~~~~~
 
 Following CSS classes are used to style the avatar:
 
-* dojoDndAvatar --- assigned to the avatar (the table).
-* dojoDndAvatarHeader --- assigned to the first row (the header).
-* dojoDndAvatarItem --- assigned to the avatar item rows.
-* dojoDndAvatarCanDrop --- added to the avatar (the table) when the mouse is over a target, which can accept transferred items. Otherwise it is removed.
+* ``dojoDndAvatar`` --- assigned to the avatar (the table).
+* ``dojoDndAvatarHeader`` --- assigned to the first row (the header).
+* ``dojoDndAvatarItem`` --- assigned to the avatar item rows.
+* ``dojoDndAvatarCanDrop`` --- added to the avatar (the table) when the mouse is over a target, which can accept transferred items. Otherwise it is removed.
 
 Manager
 -------
 
-Manager is a small class, which implements a business logic of DnD and orchestrates the visualization of this process. It accepts events from sources/targets, creates the avatar, and checks the validity of the drop.
-
-At any given moment there is only one instance of this class (the singleton pattern), which can be accessed by dojo.dnd.manager() function.
+Manager is a small class, which implements a business logic of DnD and orchestrates the visualization of this process. It accepts events from sources/targets, creates the avatar, and checks the validity of the drop. At any given moment there is only one instance of this class (the singleton pattern), which can be accessed by ``dojo.dnd.manager()`` function. User does not need to instantiate this object explicitly. It is done automatically when DnD modules are included.
 
 This class or its instance can be monkey patched or replaced completely, if you want to change its functionality.
 
@@ -334,55 +335,60 @@ Public methods and attributes
 
 Following public methods are defined to be called by sources:
 
-* startDrag(source, nodes, copy) --- starts the DnD operations using the supplied source, DOM nodes (their ids will be used by the avatar and future targets), and a copy flag (true for copy, and false for move). The parameters are copied as public member variables of the manager with the same names. This method creates the avatar by calling this.makeAvatar() and assigning it to the "avatar" public member.
-* stopDrag() --- resets the DnD operation by resetting all public members. It is not enough to call this method to abort the DnD. Before calling it you should publish dnd/cancel topic (or dnd/drop, if you forcing the drop). See more information on topics below.
-* canDrop(flag) --- called by the current target to notify that it can accept the DnD items, if flag is true. Otherwise it refuses to accept them.
+* ``startDrag(source, nodes, copy)`` --- starts the DnD operations. The parameters are copied as public member variables of the manager with the same names. This method creates the avatar by calling ``this.makeAvatar()`` and assigning it to the ``avatar`` public member. Information on parameters:
+  * ``source`` --- the source of dragged items, can be the same object as the target.
+  * ``nodes`` --- the array of DOM nodes to be dropped. Their ids can be used to access associated types and data.
+  * ``copy`` --- the Boolean flag. If ``true``, the target is requested to copy items, otherwise the target should move items.
+* ``stopDrag()`` --- resets the DnD operation by resetting all public members. It is not enough to call this method to abort the DnD. Before calling it you should publish dnd/cancel topic (or dnd/drop, if you forcing the drop). See more information on topics below.
+* ``canDrop(flag)`` --- called by the current target to notify that it can accept the DnD items, if flag is ``true``. Otherwise it refuses to accept them.
 
-Following methods deal with the avatar and can be replaced, if you want something different:
+Following methods deal with the avatar and can be overridden, if you want something different:
 
-* makeAvatar() --- returns the avatar's node. By default it creates an instance of dojo.dnd.Avatar passing itself as a parameter.
-* updateAvatar() --- updates avatar to reflect changes in the current DnD operation, e.g., copy vs. move, cannot drop at this point.
+* ``makeAvatar()`` --- returns the avatar's node. By default it creates an instance of Avatar_ passing itself as a parameter.
+* ``updateAvatar()`` --- updates avatar to reflect changes in the current DnD operation, e.g., copy vs. move, cannot drop at this point.
 
 If you want to use a custom avatar, you can override these methods to do whatever you like.
 
 Following public properties are defined on the manager (can be overwritten if desired):
 
-* OFFSET_X --- the horizontal offset in pixels between the mouse pointer position and the left edge of the avatar.
-* OFFSET_Y --- the vertical offset in pixels between the mouse pointer position and the top edge of the avatar.
+* ``OFFSET_X`` --- the horizontal offset in pixels between the mouse pointer position and the left edge of the avatar.
+* ``OFFSET_Y`` --- the vertical offset in pixels between the mouse pointer position and the top edge of the avatar.
 
 Following public properties are used by the manager during the active DnD operation:
 
-* source --- the source of DnD items.
-* nodes --- the list of transferred DnD items.
-* copy --- Boolean value to track the copy/move status.
-* target --- the selected target of the drop.
+* ``source`` --- the source of DnD items.
+* ``nodes`` --- the list of transferred DnD items.
+* ``copy`` --- Boolean value to track the copy/move status.
+* ``target`` --- the selected target of the drop.
 
 Event processors
 ~~~~~~~~~~~~~~~~
 
-Following events are processed by the manager to the body: onMouseMove, onMouseUp, onKeyDown, onKeyUp. These events are attached only during the active DnD operation. Following keys have a special meaning for the manager:
+Following events are processed by the manager to the body: ``onMouseMove``, ``onMouseUp``, ``onKeyDown``, ``onKeyUp``. These events are attached only during the active DnD operation. Following keys have a special meaning for the manager:
 
 * Ctrl key --- when it is pressed the copy semantics is assumed. Otherwise the move is assumed.
-* Esc key --- when it is pressed the DnD operation is immediately cancelled.
+* Esc key --- when it is pressed the DnD operation is immediately canceled.
 
 Topic processors
 ~~~~~~~~~~~~~~~~
 
 Following topic events can be generated by the manager:
 
-* /dnd/start --- when DnD starts. Current source, nodes, and the copy flag (see startDrag() for more info) are passed as parameters of this event.
-* /dnd/source/over --- when the mouse moves over a source. The source in question is passed as a parameter. The same event is raised when the mouse goes out of a source. In this case null is passed as a parameter.
-* /dnd/drop/before --- raised just before the drop. It can be used to capture the drop parameters. Parameters are the same as for /dnd/start, but reflect current values.
-* /dnd/drop --- raised to perform a drop. Parameters are the same as for /dnd/start. Note that during the processing of this event nodes can be already moved, or reused. If you need the original nodes, use /dnd/drop/before to capture them.
-* /dnd/cancel --- when DndD was cancelled either by user (by hitting Esc), or by dropping items in illegal location.
+* ``/dnd/start`` --- when DnD starts. Current ``source``, ``nodes``, and the ``copy`` flag (see ``startDrag()`` for more info) are passed as parameters of this event.
+* ``/dnd/source/over`` --- when the mouse moves over a source. The source in question is passed as a parameter. The same event is raised when the mouse goes out of a source. In this case ``null`` is passed as a parameter.
+* ``/dnd/drop/before`` --- raised just before the drop. It can be used to capture the drop parameters. Parameters are the same as for ``/dnd/start``, but reflect current values.
+* ``/dnd/drop`` --- raised to perform a drop. Parameters are the same as for ``/dnd/start`` and one additional parameter is ``target`` (the object where items are dropped).
+* ``/dnd/cancel`` --- when DnD was canceled either by user (by hitting Esc), or by dropping items in illegal location.
+
+**During the processing of topics any listener can change the original parameters.** It can be done by the target processing ``/dnd/drop``. In most cases you want to use events local to sources/targets, instead of processing topics. See Source_'s ``onDrop`` for more details.
 
 CSS classes
 ~~~~~~~~~~~
 
 Following CSS classes are used by the manager to style the DnD operation:
 
-* dojoDndCopy --- assigned to the body during the copy DnD operations.
-* dojoDndMove --- assigned to the body during the move DnD operations.
+* ``dojoDndCopy`` --- assigned to ``body`` during the copy DnD operations.
+* ``dojoDndMove`` --- assigned to ``body`` during the move DnD operations.
 
 No styles are assigned when there is no DnD in progress.
 
