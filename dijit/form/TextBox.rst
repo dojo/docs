@@ -79,7 +79,7 @@ Sizing a text box is done through the CSS width on the text box dom node.  Typic
     <b>A small textbox:</b> <div style="width: 10em;" dojoType="dijit.form.TextBox"></div>
     <br>
 
-    <b>A programmatically set textbox:</b> <div id="progBox" dojoType="dijit.form.TextBox"></div>
+    <b>A programmatically sized textbox:</b> <div id="progBox" dojoType="dijit.form.TextBox"></div>
     <br>
 
 
@@ -92,6 +92,39 @@ Sizing a text box is done through the CSS width on the text box dom node.  Typic
 
 Getting and Manipulating the Value
 ----------------------------------
+
+Getting and manipulating the value is a trivial matter.  It is done through the attr() function of the widget.  Please see the following example for more detail:
+
+.. cv-compound ::
+
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dijit.form.TextBox");
+
+      function init() {
+        var box0 = dijit.byId("value0Box");
+        var box1 = dijit.byId("value1Box");
+        box1.attr("value", box0.attr("value") + " modified");
+      }
+      dojo.addOnLoad(init);
+    </script>
+
+  .. cv :: html
+
+    <b>A textbox with a value:</b> <input id="value0Box" dojoType="dijit.form.TextBox" value="Some value"></input>
+    <br>
+    <b>A textbox set with a value from the above textbox:</b> <input id="value1Box" dojoType="dijit.form.TextBox" value="Some value"></input>
+    <br>
+
+  .. cv:: css
+
+    <style type="text/css">
+    </style>
+
+
+
+
 
 TODO
 
