@@ -184,6 +184,10 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 
       A getter/setter for styles on a DOM node
 
+    * `dojo.coords <dojo/coords>`_
+
+      Getter for the coordinates (relative to parent and absolute) of a dom node.
+
     * `dojo.marginBox <dojo/marginBox>`_
 
       Getter/setter for the margin-box of node
