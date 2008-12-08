@@ -36,11 +36,14 @@ Example 1:  Look up a positioned DOM node and calculate its coordinates
   .. cv :: javascript
 
     <script>
-      var node = dojo.byId("box");
-      var coords = dojo.coords(node);
-      var info = dojo.byId("info");
+      function init() {
+        var node = dojo.byId("box");
+        var coords = dojo.coords(node);
+        var info = dojo.byId("info");
 
-      info.appendChild(document.createTextNode("Width: " + coords.w + "px.   Height: " + coords.h + "px.  Relative top: " + coords.t + "px"));
+        info.appendChild(document.createTextNode("Width: " + coords.w + "px.   Height: " + coords.h + "px.  Relative top: " + coords.t + "px"));
+      }
+      dojo.addOnLoad(init);
        
 
     </script>
