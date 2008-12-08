@@ -68,7 +68,7 @@ Example 2:  Look up a positioned dijit and calculate its coordinates
       dojo.require("dijit.form.TextBox");
       function init() {
         var node = dijit.byId("textbox").domNode;
-        var coords = dojo.coords(tb);
+        var coords = dojo.coords(node);
         var info = dojo.byId("infoSpan");
 
         info.appendChild(document.createTextNode("Width: " + coords.w + "px.   Height: " + coords.h + "px.  Relative top: " + coords.t + 
