@@ -83,6 +83,7 @@ Example 2:  Look up a positioned dijit and calculate its coordinates
 
     <div id="textbox" dojoType="dijit.form.TextBox"></div>
     <br>
+    <br>
     <span id="infoSpan"></span>
 
 
