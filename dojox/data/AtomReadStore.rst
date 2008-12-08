@@ -116,7 +116,7 @@ Example Usage
   .. cv :: html 
 
     <br>
-    <div dojoType="dojox.data.AtomReadStore" jsId="feedStore" url="/explorer/featureexplorer/Dojo/Data/AtomReadStore/atom1.xml"></div>
+    <div dojoType="dojox.data.AtomReadStore" jsId="feedStore" url="http://dojocampus.org/explorer/featureexplorer/Dojo/Data/AtomReadStore/atom1.xml"></div>
     <br>
     <br>
     <div style="width: 750px; height: 300px;">
