@@ -66,6 +66,8 @@ Sizing a text box is done through the CSS width on the textbox node.  Typically 
 
   .. cv :: html
 
+    <b>A default textbox:</b> <div dojoType="dijit.form.TextBox"></div>
+    <br>
     <b>A large textbox:</b> <div style="width: 50em;" dojoType="dijit.form.TextBox"></div>
     <br>
     <b>A small textbox:</b> <div style="width: 10em;" dojoType="dijit.form.TextBox"></div>
