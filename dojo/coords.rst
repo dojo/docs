@@ -88,3 +88,4 @@ Example 2:  Look up a positioned dijit and calculate its coordinates
 Notes
 =====
 * For dom nodes with border styles, on Internet Explorer the absolute coordinates (x and y axis), do not include the border position, so you may have to adjust for that depending on what your indented usage of the information is.
+* Remember that page coordinates start as the top leftmost of the page is 0px, 0px
