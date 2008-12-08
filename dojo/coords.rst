@@ -1,7 +1,7 @@
 #format dojo_rst
 
-dojo.marginBox
-===============
+dojo.coords
+===========
 
 :Status: Draft
 :Version: 1.0
