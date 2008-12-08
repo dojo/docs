@@ -43,7 +43,7 @@ Example 1:  Look up a positioned DOM node and calculate its coordinates
 
   .. cv :: html 
 
-    <div id="box" style="width: 100px; height: 100px, background-color: darkgray;"></div>
+    <div id="box" style="width: 100px; height: 100px; background-color: darkgray;"></div>
 
 
 --------------------------------------------------------------------
