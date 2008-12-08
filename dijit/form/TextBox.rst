@@ -105,6 +105,7 @@ Getting and manipulating the value is a trivial matter.  It is done through the 
       function init() {
         var box0 = dijit.byId("value0Box");
         var box1 = dijit.byId("value1Box");
+        box1.attr("value", box0.attr("value") + " modified");
         dojo.connect(box0, "onChange", function(){
            box1.attr("value", box0.attr("value") + " modified");
         });
@@ -116,7 +117,7 @@ Getting and manipulating the value is a trivial matter.  It is done through the 
 
     <b>A textbox with a value:</b> <input id="value0Box" dojoType="dijit.form.TextBox" value="Some value" intermediateChanges="true"></input>
     <br>
-    <b>A textbox set with a value from the above textbox:</b> <input id="value1Box" dojoType="dijit.form.TextBox" value="Some value"></input>
+    <b>A textbox set with a value from the above textbox:</b> <input id="value1Box" dojoType="dijit.form.TextBox"></input>
     <br>
 
   .. cv:: css
