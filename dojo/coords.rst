@@ -60,6 +60,32 @@ Example 1:  Look up a positioned DOM node and calculate its coordinates
 Example 2:  Look up a positioned dijit and calculate its coordinates
 --------------------------------------------------------------------
 
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dijit.form.TextBox");
+      function init() {
+        var node = dijit.byId("textbox").domNode;
+        var coords = dojo.coords(tb);
+        var info = dojo.byId("infoSpan");
+
+        info.appendChild(document.createTextNode("Width: " + coords.w + "px.   Height: " + coords.h + "px.  Relative top: " + coords.t + 
+        "px Relative left: " + coords.l + "px.  Absolute top: " + coords.y + "px.  Absolute left: " + coords.x + "px."));
+      }
+      dojo.addOnLoad(init);
+       
+
+    </script>
+
+  .. cv :: html 
+
+    <div id="textbox" dojoType="dijit.form.TextBox"></div>
+    <br>
+    <span id="infoSpan"></span>
+
+
 
 =====
 Notes
