@@ -401,69 +401,99 @@ The DnD move consists of two principal classes and several specific implementati
 Moveable
 --------
 
-Moveable is the main class, which is used to give the "moveable" property to a DOM node. Instances of this class can be created from the HTML markup automatically by dojo.parser using dojoType="dojo.dnd.Moveable".
+Moveable is the main class, which is used to give the "moveable" property to a DOM node. Instances of this class can be created from the HTML markup automatically by ``dojo.parser`` using ``dojoType="dojo.dnd.Moveable"``.
+
+Constructor
+~~~~~~~~~~~
 
 The constructor accepts following parameters:
 
-* node --- a DOM node or an id (string) of such node. This node will be made moveable. "Relative" and "absolute" nodes can be moved. Their "left" and "top" are assumed to be in pixels. All other nodes are converted to "absolute" nodes on the first drag.
-* params --- a dictionary object, which defines optional parameters. Following optional parameters are recognized:
+* ``node`` --- a DOM node or an id (string) of such node. This node will be made moveable. Both ``relative`` and ``absolute`` nodes can be moved. Their ``left`` and ``top`` are assumed to be in pixels. All other nodes are converted to ``absolute`` nodes on the first drag.
+* ``params`` --- a dictionary object, which defines optional parameters. Following optional parameters are recognized:
 
-  * handle --- the node (or its id), which will be used as a drag handle. It should be a descendant of the node. If it is null (the default), the node itself is used for dragging.
-  * delay --- a number in pixels. When user started the drag we should wait for "delay" pixels before starting dragging the node. It is used to prevent accidental drags. The default is 0.
-  * skip --- a Boolean flag, which indicates that we should skip form elements when initiating drags, it is it true. Otherwise we drag the node no matter what. This parameter is used when we want to drag a form, but keep form elements usable, e.g., we can still select text in a text node. The default is false. When working with draggable form, the better usability-wise alternative to skip=true is to define a drag handle instead.
-  * mover --- the class to be used to create a mover (see Mover).
+  * ``handle`` --- the node (or its id), which will be used as a drag handle. It should be a descendant of ``node``. If it is ``null`` (the default), the ``node`` itself is used for dragging.
+  * ``delay`` --- a number in pixels. When user started the drag we should wait for ``delay`` pixels before starting dragging the node. It is used to prevent accidental drags. The default is 0 (no delay).
+  * ``skip`` --- a Boolean flag, which indicates that we should skip form elements when initiating drags, it is it ``true``. Otherwise we drag the node no matter what. This parameter is used when we want to drag a form, but keep form elements usable, e.g., we can still select text in a text node. The default is ``false``. When working with draggable form, the better lternative to ``skip=true`` is to define a drag handle instead.
+  * ``mover`` --- the class to be used to create a mover (see Mover_).
+
+Public methods and attributes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Following public members are available:
 
-* node --- the node to be dragged.
+* ``node`` --- the node to be dragged.
 
 Following public methods are defined:
 
-* destroy() --- should be call, when you want to remove the "moveable" behavior form the node.
+* ``destroy()`` --- should be call, when you want to remove the "moveable" behavior form the node.
 
-Following public methods/events are defined (they can be used with dojo.connect() or overwritten):
+Event processors
+~~~~~~~~~~~~~~~~
 
-* onMoveStart --- called when the move is about to start. The parameter is a mover object (see below) for the current move.
-* onFirstMove --- called once after processing the first onmousemove event. It uses the same parameters as onMoveStart above.
-* onMove --- called on every update of node's position. Parameters:
+Following public methods/events are defined (they can be used with ``dojo.connect()`` or overridden):
 
-  * mover --- a mover object (see below) for the current move.
-  * leftTop --- an object which defines the new left and top position of the object by its subobjects "l" and "t" respectively. Both of them are numbers in pixels.
+* ``onDragDetected(evt)`` --- called when the drag is detected. The default implementation creates a mover_. Parameters:
 
-* onMoving --- called by the default implementation of onMove() method before updating the node's position. It uses the same parameters as onMove above. You can update leftTop parameter to whatever you want.
-* onMoved --- called by the default implementation of onMove() method after updating the node's position. It uses the same parameters as onMove above.
-* onMoveStop --- called when move is finished. It uses the same parameters as onMoveStart above.
+  * ``evt`` --- the event object, which triggered the drag.
 
-The most important methods are onFirstMove() and onMove(). The former can be used to set up some initial parameters for the move, and possibly update some DOM nodes. The latter implements the move itself. By overriding these two methods you can implement a variety of click-drag-release operations, e.g., a resize operation, a draw operation, and so on.
+* ``onFirstMove(mover)`` --- called once after processing the first move event. The default implementation does nothing. Parameters:
+
+  * ``mover`` --- the mover_ object used to drag the node
+
+* ``onMoveStart(mover)`` --- called when the move is about to start. The parameter is a mover_ object just like in ``onFirstMove()``. The default implementation publishes the topic ``/dnd/move/start``, adds ``dojoMove`` class to ``body`` node, and ``dojoMoveItem`` class to the moved node.
+* ``onMoveStop(mover)`` --- called when the move is finished. The parameter is a mover_ object just like in ``onFirstMove()``. The default implementation publishes the topic ``/dnd/move/stop``, removes ``dojoMove`` class from ``body`` node, and ``dojoMoveItem`` class from the moved node.
+* ``onMove(mover, leftTop)`` --- called on every update of ``node``'s position. The default implementation calls ``onMoving()``, sets new position of the ``node`` using ``style``, and calls ``onMoved()``. Parameters:
+
+  * ``mover`` --- the mover_ object for the current move.
+  * ``leftTop`` --- ``{l, t}`` --- an object which defines the new left and top position of the object by its attributes ``l`` and ``t`` respectively. Both of them are numbers in pixels.
+
+* ``onMoving(mover, leftTop)`` --- called by the default implementation of ``onMove()`` before updating the ``node``'s position. It uses the same parameters as ``onMove()`` above. You can update ``leftTop`` parameter to whatever you want. The default implementation does nothing.
+* ``onMoved(mover, leftTop)`` --- called by the default implementation of ``onMove()`` after updating the ``node``'s position. It uses the same parameters as ``onMove()`` above. The default implementation does nothing.
+
+The most important events are ``onFirstMove()`` and ``onMove()``. The former can be used to set up some initial parameters for the move, and possibly update some DOM nodes. The latter implements the move itself. By overriding these two methods you can implement a variety of click-drag-release operations, e.g., a resize operation, a draw operation, and so on.
+
+As you can see ``onMoving()``, ``onMove()``, and ``onMoved()`` fit the classic AOP before/after pattern. ``onMoving()`` can be used to actively modify move parameters, while ``onMoved()`` can be used for book-keeping. You may consider to override ``onMove()`` for your own purposes and use ``dojox.lang.aop`` to augment it however you like.
 
 Following mouse event handlers are set up:
 
-* onMouseDown
-* onMouseMove --- can be set up by onMouseDown when executing the non-zero delay.
-* onMouseUp --- can be set up by onMouseDown to cancel the drag while processing the non-zero delay.
+* ``onMouseDown``
+* ``onMouseMove`` --- can be set up by ``onMouseDown`` when executing the non-zero delay.
+* ``onMouseUp`` --- can be set up by ``onMouseDown`` to cancel the drag while processing the non-zero delay.
 
-Additionally ondragselect and onselectstart events are cancelled by onSelectStart() method.
+Additionally ``ondragselect`` and ``onselectstart`` events are canceled by ``onSelectStart()`` handler.
 
-Following topic events are raised by Moveable:
+Topic processors
+~~~~~~~~~~~~~~~~
 
-* /dnd/move/start --- published by the default implementation of onMoveStart() passing a mover as a parameter.
-* /dnd/move/stop --- published by the default implementation of onMoveStop() passing a mover as a parameter.
+Following topic events are raised by Moveable_:
 
-Following CSS classes are used by the moveable:
+* ``/dnd/move/start`` --- published by the default implementation of ``onMoveStart()`` passing the mover_ object as a parameter.
+* ``/dnd/move/stop`` --- published by the default implementation of ``onMoveStop()`` passing the mover_ as a parameter.
 
-* dojoMove --- assigned to the body when the drag is in progress.
-* dojoMoveItem --- assigned to the dragged node when the drag is in progress.
+CSS classes
+~~~~~~~~~~~
+
+Following CSS classes are used by Moveable_:
+
+* ``dojoMove`` --- assigned to ``body`` when the move is in progress.
+* ``dojoMoveItem`` --- assigned to the moved node when the move is in progress.
 
 Mover
 -----
 
 Mover is a utility class, which actually handles events to move the node. Instances of this class exist only when the drag is in progress. In some cases you can use it directly.
 
+Constructor
+~~~~~~~~~~~
+
 The constructor accepts following parameters:
 
 * node --- a DOM node or an id (string) of such node. This node will be moved.
 * e --- a mouse event, which actually indicated the start of the move. It is used to extract the coordinates of the mouse using pageX and pageY properties.
 * host --- a host object, which will be called by the mover during the move. It should define at least two methods: onFirstMove(), and onMove, and possibly two optional methods: onMoveStart() and onMoveStop(). See Moveable for details.
+
+Public methods and attributes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Following public members are available:
 
@@ -475,6 +505,9 @@ Following public methods are defined:
 
 * destroy() --- should be call, when you want to stop the move.
 * onFirstMove() --- called once to finish setting up the marginBox property.
+
+Event processors
+~~~~~~~~~~~~~~~~
 
 Following mouse event handlers are set up: onMouseMove, onMouseUp. Additionally ondragselect and onselectstart events are cancelled.
 
