@@ -41,7 +41,8 @@ Example 1:  Look up a positioned DOM node and calculate its coordinates
         var coords = dojo.coords(node);
         var info = dojo.byId("info");
 
-        info.appendChild(document.createTextNode("Width: " + coords.w + "px.   Height: " + coords.h + "px.  Relative top: " + coords.t + "px"));
+        info.appendChild(document.createTextNode("Width: " + coords.w + "px.   Height: " + coords.h + "px.  Relative top: " + coords.t + 
+        "px Relative left: " + coords.l + "px.  Absolute top: " + coords.y + "px.  Absolute left: " + coords.x + "px."));
       }
       dojo.addOnLoad(init);
        
@@ -51,6 +52,7 @@ Example 1:  Look up a positioned DOM node and calculate its coordinates
   .. cv :: html 
 
     <div id="box" style="width: 100px; height: 100px; background-color: darkgray;"></div>
+    <br>
     <span id="info"></span>
 
 
