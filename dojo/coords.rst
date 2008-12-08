@@ -45,8 +45,6 @@ Example 1:  Look up a positioned DOM node and calculate its coordinates
         "px Relative left: " + coords.l + "px.  Absolute top: " + coords.y + "px.  Absolute left: " + coords.x + "px."));
       }
       dojo.addOnLoad(init);
-       
-
     </script>
 
   .. cv :: html 
@@ -75,8 +73,6 @@ Example 2:  Look up a positioned dijit and calculate its coordinates
         "px Relative left: " + coords.l + "px.  Absolute top: " + coords.y + "px.  Absolute left: " + coords.x + "px."));
       }
       dojo.addOnLoad(init);
-       
-
     </script>
 
   .. cv :: html 
