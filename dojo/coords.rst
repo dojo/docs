@@ -23,6 +23,14 @@ The dojo coords function is used to obtain a plethora of coordinate information 
 
 for a node offset from its parent 50px to the left, 200px from the top with a margin width of 300px and a margin-height of 150px, with page absolute coordinates of 700px on the x axis and 900px on the y axis.
 
+==============
+Usage Examples
+==============
+
+Example 1:  Look up a positioned DOM node and calculate its coordinates
+=======================================================================
+
+
 
 =====
 Notes
