@@ -115,12 +115,7 @@ Example Usage
 
   .. cv :: html 
 
-    <b>Input feed URL here:</b>
     <br>
-    <br>
-    <input dojoType="dijit.form.TextBox" style="width:50em;" id="urlText" value="http://news.google.com/nwshp?hl=en&amp;tab=wn&amp;output=atom"></input>
-    <br>
-    <div dojoType="dijit.form.Button" id="searchButton">Search!</div>
     <div dojoType="dojox.data.AtomReadStore" jsId="feedStore" url="/explorer/featureexplorer/Dojo/Data/AtomReadStore/atom1.xml"></div>
     <br>
     <br>
