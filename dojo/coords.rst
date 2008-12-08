@@ -27,9 +27,13 @@ for a node offset from its parent 50px to the left, 200px from the top with a ma
 Usage Examples
 ==============
 
+-----------------------------------------------------------------------
 Example 1:  Look up a positioned DOM node and calculate its coordinates
-=======================================================================
+-----------------------------------------------------------------------
 
+--------------------------------------------------------------------
+Example 1:  Look up a positioned dijit and calculate its coordinates
+--------------------------------------------------------------------
 
 
 =====
