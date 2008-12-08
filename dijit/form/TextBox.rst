@@ -53,8 +53,12 @@ Declarative example
   
 Sizing TextBoxes
 ----------------
+Sizing a text box is done through the CSS width on the textbox node.  Typically this is done by specifying thw width in ems.  Please see the following for an example:
 
-TODO
+------------------------------------
+Example:  Sizing a dijit.form.TexBox
+------------------------------------
+
 
 Getting and Manipulating the Value
 ----------------------------------
