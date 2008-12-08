@@ -33,11 +33,11 @@ Such a construct can be formed from a JS object of the form { k1:v1, k2:v2, ... 
 .. code-block :: javascript
 
   var myVar={"key1": "value1" , "key2": "value2", ... };
-  var myStore=[];
+  var myData=[];
   for (var p in myVar) {
     var t={};
     t[p]=myVar[p];
-    myStore.push(t);
+    myData.push(t);
   }
 
 
