@@ -1,6 +1,6 @@
 #format dojo_rst
 
-dojox.data.AndOrReadtore
+dojox.data.AndOrReadStore
 ==========================
 
 :Status: Draft
