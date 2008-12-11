@@ -14,34 +14,65 @@ This styleguide will give you in depth information on how Dojo and Dijits CSS Cl
 Introduction
 ============
 
-Dijit comes with a very powerful themeing system.
+Dijit comes with a very powerful theming system.
+
+baseClass
+---------
+All dijit widgets have a baseClass atttribute which can be specified (overridden) as an initialization parameter.  For example,
+
+.. code-block ::
+
+   <div dojoType=dijit.layout.TabContainer baseClass=myTabContainer>
+
+This lets the designer completely override the style of the widget because none of the CSS rules in dijit.css, tundra.css etc. are applied, since the patterns reference .dijitTabContainer.
+
 
 ======
 Layout
 ======
 
-baseClass
+Nesting
 ---------
 
-All dijit layout widgets have defined a baseClass which can be overwritten on instantiation.
-The baseClass is there to allow you more flexibility when nesting layout widgets.
-When having for instance a BorderContainer with a ContentPane inside the baseClass of ContentPane is dijitContentPane and from BorderContainer is dijitBorderContainer. Therefore ContentPane will have `dijitBorderContainer-dijitContentPane` set on its domNode.
+Layout widgets set special classes on their children.   For example, when having a BorderContainer with a ContentPane inside, the ContentPane will have `dijitBorderContainer-dijitContentPane` set on its domNode, in addition to dijitContentPane.
 
-child
------
+This allows special styling for children, specifically doing things like adding borders on ContentPanes inside of BorderContainers.
 
-All children of a layoutwidget (BorderContainer, StackContainer) set a class on their children such as `dijitBorderContainer-child`. This allows a flexible way of customizing nested layouts
+Note that BorderContainer expects the panes it contains to have borders; the draggable splitters between the panes don't have borders, although visually it seems that way (due to the borders on the panes).
 
-=================
-State inheritance
-=================
+TODO: in the future BorderContainer will also set a dijitBorderContainer-child class on all it's children.
 
-In Dijit, nodes never inherit state from their child nodes. Lets look at an example:
 
-When looking at a numberspinner you will see two buttons at the right of the numberspinner. When you set focus on the form element all childnodes will inherit from dijitFocus whereas when you click the up or down button the dijitActive class will only affect the button and not the entire numberspinner.
+==================
+Form Widget States
+==================
+A form widget like spinner will have various classes applied to it's domNode depending on it's state.  For example:
 
-In the case that you need a parent node inherit state from a childnode - e.g. change the bordercolor of the forminput when the user clicks the up or down button = you need to do this when you instantiate the widget and add a custom event listener which adds or removes a class.
+  - dijitSpinner
+  - dijitSpinnerDisabled
+  - dijitSpinnerHover  (mouse is over it)
+  - dijitSpinnerFocused
 
+It even has combinations of those for special styling needs, like:
+
+  - dijitSpinnerFocusedHover  (TODO: check this)
+
+
+Button type-widgets have an active state when they are being depressed:
+
+  - dijitComboButtonActive
+
+Note that we don't use :hover and :active since on IE they only work on <button> and <a> nodes.
+
+=========================
+Buttons inside of widgets
+=========================
+
+When looking at a numberspinner you will see two buttons at the right of the numberspinner.
+
+In the current code, clicking one of the buttons will change the class of the NumberSpinner domNode itself, to something like .dijitNumberSpinnerUpArrowActive.
+
+However, we plan to change this so it just sets a class on the button node itself. 
 
 ========
 See also
