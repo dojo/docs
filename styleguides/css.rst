@@ -16,6 +16,21 @@ Introduction
 
 Dijit comes with a very powerful themeing system.
 
+======
+Layout
+======
+
+baseClass
+---------
+
+All dijit layout widgets have defined a baseClass which can be overwritten on instantiation.
+The baseClass is there to allow you more flexibility when nesting layout widgets.
+When having for instance a BorderContainer with a ContentPane inside the baseClass of ContentPane is dijitContentPane and from BorderContainer is dijitBorderContainer. Therefore ContentPane will have dijitBorderContainer-dijitContentPane set on its domNode.
+
+child
+-----
+
+All children of a layoutwidget (BorderContainer, StackContainer) set a class on their children such as dijitBorderContainer-child. This allows a flexible way of customizing nexted layouts
 
 =================
 State inheritance
