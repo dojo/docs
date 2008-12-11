@@ -988,4 +988,4 @@ DojoC is an svn repository used by DojoCampus for a variety of widgets, tutorial
 CSS
 ===
 
-* `CSS reference <css/styleguide>`_
+* `CSS reference <styleguides/css>`_
