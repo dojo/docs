@@ -3,9 +3,9 @@
 dojo.dnd package
 ================
 
-:Status: Draft
-:Version: 1.2.2
-:Available: since 1.0
+:Status: Release
+:Version: 1.2.2 (current)
+:Available: since 0.9
 
 .. contents::
   :depth: 2
