@@ -24,7 +24,7 @@ This is a plain TabContainer with three tabs, fixed height and a tab strip. The 
 
   .. cv :: html
 
-    <div dojoType="dijit.layout.TabContainer" style="width: 100%; height: 100px;" tabStrip="true">
+    <div dojoType="dijit.layout.TabContainer" style="width: 400px; height: 100px;" tabStrip="true">
       <div dojoType="dijit.layout.ContentPane" title="My first tab" selected="true">
         Lorem ipsum and all around...
       </div>
@@ -56,7 +56,7 @@ Tabs at the right, no strip
 
   .. cv :: html
 
-    <div dojoType="dijit.layout.TabContainer" style="width: 100%; height: 100px;" tabPosition="right-h">
+    <div dojoType="dijit.layout.TabContainer" style="width: 400px; height: 100px;" tabPosition="right-h">
       <div dojoType="dijit.layout.ContentPane" title="My first tab" selected="true">
         Lorem ipsum and all around...
       </div>
@@ -85,7 +85,7 @@ Tabs at the left, with a strip
 
   .. cv :: html
 
-    <div dojoType="dijit.layout.TabContainer" style="width: 100%; height: 100px;" tabPosition="left-h" tabStrip="true">
+    <div dojoType="dijit.layout.TabContainer" style="width: 400px; height: 100px;" tabPosition="left-h" tabStrip="true">
       <div dojoType="dijit.layout.ContentPane" title="My first tab" selected="true">
         Lorem ipsum and all around...
       </div>
@@ -114,7 +114,7 @@ Tabs at the bottom,with a strip
 
   .. cv :: html
 
-    <div dojoType="dijit.layout.TabContainer" style="width: 100%; height: 100px;" tabPosition="bottom" tabStrip="true">
+    <div dojoType="dijit.layout.TabContainer" style="width: 400px; height: 100px;" tabPosition="bottom" tabStrip="true">
       <div dojoType="dijit.layout.ContentPane" title="My first tab" selected="true">
         Lorem ipsum and all around...
       </div>
@@ -150,7 +150,7 @@ One technique to allow validation, and still use the parser would be to simply d
   .. cv :: html
 
     <div id="progtabwrapper">
-    <div rel="dijit.layout.TabContainer" style="width: 100%; height: 100px;">
+    <div rel="dijit.layout.TabContainer" style="width: 400px; height: 100px;">
       <div rel="dijit.layout.ContentPane" title="My first tab">
         Lorem ipsum and all around...
       </div>
@@ -195,7 +195,7 @@ similar to what the parser does:
 
   .. cv:: html
 
-    <div id="tc1-prog" style="width: 100%; height: 100px;">
+    <div id="tc1-prog" style="width: 400px; height: 100px;">
       <div class="tc1cp" title="My first tab">
         Lorem ipsum and all around...
       </div>
@@ -224,7 +224,7 @@ Often sites will have two levels of tabs.  This is supported by using two TabCon
 
   .. cv :: html
 
-    <div dojoType="dijit.layout.TabContainer" style="width: 100%; height: 100px;">
+    <div dojoType="dijit.layout.TabContainer" style="width: 400px; height: 100px;">
       <div dojoType="dijit.layout.TabContainer" title="Tab 1" nested="true">
         <div dojoType="dijit.layout.ContentPane" title="My first inner tab" selected="true">
           Lorem ipsum and all around...
