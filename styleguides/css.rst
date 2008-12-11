@@ -30,7 +30,7 @@ When having for instance a BorderContainer with a ContentPane inside the baseCla
 child
 -----
 
-All children of a layoutwidget (BorderContainer, StackContainer) set a class on their children such as `dijitBorderContainer-child`. This allows a flexible way of customizing nexted layouts
+All children of a layoutwidget (BorderContainer, StackContainer) set a class on their children such as `dijitBorderContainer-child`. This allows a flexible way of customizing nested layouts
 
 =================
 State inheritance
