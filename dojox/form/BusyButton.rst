@@ -84,7 +84,7 @@ The following example has a built-in timeout.
       @import url(/moin_static163/js/dojo/trunk/dojox/form/resources/BusyButton.css);
     </style>
 
-In this example we will set a new label by clicking on a button (this can be a server response as well). Se first state will not have a timeout, the second state will have a timeout of 2 seconds
+In this example we will set a new label by clicking on a button (this can be a server response as well). The first state will not have a timeout, the second state will have a timeout of 2 seconds
 
 .. cv-compound::
 
