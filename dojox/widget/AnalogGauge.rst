@@ -336,7 +336,7 @@ A half circle gauge with two indicators overlay graphic
 		'colors': [{'offset': 0, 'color': '#D0D0D0'}, {'offset': 1, 'color': '#E0E0E0'}]
 	}">
       </div>
-      <div dojoType="dojox.widget.AnalogLineIndicator"
+      <div dojoType="dojox.widget.gauge.AnalogLineIndicator"
         value="52"
         color="{'color': '#D00000'}"
         width="3"
