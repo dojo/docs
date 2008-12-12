@@ -1,10 +1,10 @@
 #format dojo_rst
 
-dojox.widget.AnalogGauge
-========================
+dojox.widget.Standby
+====================
 
 :Status: Draft
-:Version: 1.2
+:Version: 1.3
 :Project owner: Jared Jurkiewicz
 :Available: since V1.3
 
