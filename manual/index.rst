@@ -957,6 +957,10 @@ These sections cover the available projects shipped with the Dojo Toolkit
 
     A small sortable unordered-list
 
+  * `dojox.widget.Standby <dojox/widget/Standby>`_
+
+    A small widget that can be used to mark sections of a page as busy, processing, unavailable, etc.
+
   * `dojox.widget.Toaster <dojox/widget/Toaster>`_
 
     A message display system, showing warnings, errors and other messages unobtrusively
