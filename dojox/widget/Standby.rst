@@ -47,7 +47,7 @@ Example 1: Basic usage
 
   .. cv :: html 
 
-    <div id="basic" style="width: 200px; height: 150px; background-color: lightyellow;"></div>
+    <div id="basic" style="width: 300px; height: 150px; background-color: yellow;"></div>
     <div jsId="basicStandby1" dojoType="dojox.widget.Standby" target="basic"></div>
 
   .. cv:: css
