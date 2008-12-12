@@ -58,5 +58,5 @@ Example 1: Basic usage
   .. cv:: css
 
     <style type="text/css">
-      @import "/moin_static163/js/dojo/trunk/release/dojox/widget/Standby/Standby.css";
+      @import "/moin_static163/js/dojo/release/dojox/widget/Standby/Standby.css";
     </style>
