@@ -80,7 +80,7 @@ Example 2: Programmatic creation
 
       function init(){
          var standby = new dojox.widget.Standby({target: "basic2"});
-         document.body.appendChild(standBy.domNode);
+         document.body.appendChild(standby.domNode);
          standby.startup();
          dojo.connect(b3, "onClick", function(){standby.show();});
          dojo.connect(b4, "onClick", function(){standby.hide();});
