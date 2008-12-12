@@ -54,6 +54,8 @@ A partial circle gauge with two indicators (programmatic)
 
     <script>
       dojo.require("dojox.widget.AnalogGauge");
+      dojo.require("dojox.widget.gauge.AnalogArrowIndicator");
+
 
       function init() {
         var gauge;
@@ -121,6 +123,7 @@ A partial circle gauge with two indicators and a set of gradient ranges
 
     <script>
       dojo.require("dojox.widget.AnalogGauge");
+      dojo.require("dojox.widget.gauge.AnalogArrowIndicator");
     </script>
 
   .. cv:: html
@@ -244,6 +247,7 @@ A half circle gauge with two indicators overlay graphic
 
     <script>
       dojo.require("dojox.widget.AnalogGauge");
+      dojo.require("dojox.widget.gauge.AnalogArrowIndicator");
     </script>
 
   .. cv:: html
@@ -358,6 +362,8 @@ Speedometer style gauge with arc indicator and needle indicator
 
     <script>
       dojo.require("dojox.widget.AnalogGauge");
+      dojo.require("dojox.widget.gauge.AnalogArcIndicator");
+      dojo.require("dojox.widget.gauge.AnalogNeedleIndicator");
 
       // Used for a gradient arc indicator below:
       var fill = {
