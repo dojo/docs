@@ -692,3 +692,5 @@ Tips
 ====
 
 In order to limit the maximum number of items in a DnD source, you can override the checkAcceptance() method on your source, and return ``false``, when you reached your limit.
+
+The DnD itself uses ``onmousedown``/``onmousemove``/``onmouseup`` to operate. If you want to process ``onclick``, be warned that this is the synthetic event: essentially it is ``onmousedown + onmouseup``, which occurred within some predefined time interval (usually settable on the OS level), or using other criteria. Some browsers generate ``onclick`` on every ``onmouseup``. Working with DnD you will get plenty of false ``onclick`` events. Some of them happen naturally, when user decided to drag but changed her mind clicking the mouse button generating ``onclick``. *Be extra careful when processing* ``onclick`` *on DnD sources!*
