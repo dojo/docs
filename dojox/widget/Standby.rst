@@ -49,9 +49,6 @@ Example 1: Basic usage
          document.body.appendChild(basicStandby1.domNode);
          dojo.connect(b1, "onClick", function(){basicStandby1.show();});
          dojo.connect(b2, "onClick", function(){basicStandby1.hide();});
-         console.log(dojo.coords(dojo.byId("basic")).x);
-         console.log(dojo.coords(dojo.byId("basic")).y);
-         console.log(basicStandby1);
       }
       dojo.addOnLoad(init);
     </script>
@@ -62,6 +59,39 @@ Example 1: Basic usage
     <button jsId="b2" dojoType="dijit.form.Button">Hide Standby widget</button>
     <div id="basic" style="width: 300px; height: 150px; background-color: yellow; border-style: solid; border-width: 2px;"></div>
     <div jsId="basicStandby1" dojoType="dojox.widget.Standby" target="basic"></div>
+
+  .. cv:: css
+
+    <style type="text/css">
+      @import "/moin_static163/js/dojo/release/dojox/widget/Standby/Standby.css";
+    </style>
+
+
+Example 2: Programmatic creation
+--------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojox.widget.Standby");
+      dojo.require("dijit.form.Button");
+
+      function init(){
+         var standby = new dojox.widget.Standby({target: "basic2"}, document.body);
+         standby.startup();
+         dojo.connect(b3, "onClick", function(){standby.show();});
+         dojo.connect(b4, "onClick", function(){standby.hide();});
+      }
+      dojo.addOnLoad(init);
+    </script>
+
+  .. cv :: html 
+
+    <button jsId="b3" dojoType="dijit.form.Button">Show Standby widget</button>
+    <button jsId="b4" dojoType="dijit.form.Button">Hide Standby widget</button>
+    <div id="basic2" style="width: 300px; height: 150px; background-color: yellow; border-style: solid; border-width: 2px;"></div>
 
   .. cv:: css
 
