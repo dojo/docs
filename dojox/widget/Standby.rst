@@ -21,7 +21,7 @@ Known issues
 ============
 
 * It does not lay out correctly on Google Chrome.  This is caused by the dojo.coords() function not returning the correct value for the width of the target node.
-
+  
 
 * When creating the widget programmatically, make sure to either pass document.body as its attach point in the document, or assign the domNode into the tree before calling startup().  The widget will reparent itself to document.body if it detects it isn't there.  The reason for this is that if the widget gets attached under nodes with relative position, the overlay does not position correctly.  The simplest method to deal with that was to always put the widget domNode onto the document.body, where it will not have to deal with relative versus absolute issues.
 
