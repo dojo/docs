@@ -29,3 +29,6 @@ Usage
 Using the widget is simple.  At its most basic form, all you have to provide the widget on construction is a value for 'target', the id of a DOM noe or widget, or a direct reference to the dom node you want to overlay.  When you want it to appear, you invoke the 'show' function of the widget.  When you want it to hide, you invoke the 'hide' function.  That's all there is to it.
 
 For more custom control, you can also set the 'color' attribute on the widget to a color to use for the overlay as well as an 'image' attribute with the location/url of an image to center in the middle of the widget.  Its default image is the same one that dojox.image.Lightbox uses, a basic spinner/busy animated gif.
+
+Example 1: Basic usage
+----------------------
