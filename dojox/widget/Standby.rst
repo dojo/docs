@@ -44,6 +44,9 @@ Example 1: Basic usage
       function init(){
          dojo.connect(b1, "onClick", function(){basicStandby1.show();});
          dojo.connect(b2, "onClick", function(){basicStandby1.hide();});
+         console.log(dojo.coords(dojo.byId("basic")).x);
+         console.log(dojo.coords(dojo.byId("basic")).y);
+         console.log(basicStandby1);
       }
       dojo.addOnLoad(init);
     </script>
