@@ -37,9 +37,9 @@ Indicators
 There are 4 indicators included as a part of the Analog Gauge widget:
 
 * AnalogLineIndicator - Is used to create the tick marks (with an offset from the middle).  Can also be used as a value indicator (without the offset).  See first example.
-* ArrowIndicator - Behaves and looks similar to the line indicator, but has an arrow head at the end.
-* NeedleIndicator - An indicator similar to the needle on a variety of gauges.  Has a central circular hub and a triangular shaft that tapers to a point.
-* ArcIndicator - Draws an arc around the center of the gauge.  Can be made wider or narrower by varying the width.  Useful for making a gradient track towards the end of a gauge (see test file).
+* AnalogArrowIndicator - Behaves and looks similar to the line indicator, but has an arrow head at the end.
+* AnalogNeedleIndicator - An indicator similar to the needle on a variety of gauges.  Has a central circular hub and a triangular shaft that tapers to a point.
+* AnalogArcIndicator - Draws an arc around the center of the gauge.  Can be made wider or narrower by varying the width.  Useful for making a gradient track towards the end of a gauge (see test file).
 
 ========
 Examples
@@ -87,7 +87,7 @@ A partial circle gauge with two indicators (programmatic)
             length: 10
           },
           indicators: [
-            new dojox.widget.gauge.ArrowIndicator({
+            new dojox.widget.gauge.AnalogArrowIndicator({
               value:17, 
               width: 3,
               hover:'Value: 17', 
@@ -224,10 +224,9 @@ A partial circle gauge with two indicators and a set of gradient ranges
         hover="Target: 52"
         title="Target">
       </div>
-      <div dojoType="dojox.widget.gauge.ArrowIndicator"
+      <div dojoType="dojox.widget.gauge.AnalogArrowIndicator"
         id="value"
         value="17"
-        type="arrow"
         length="135"
         width="3"
         hover="Value: 17"
@@ -340,9 +339,8 @@ A half circle gauge with two indicators overlay graphic
         hover="Target: 52"
         title="Target">
       </div>
-      <div dojoType="dojox.widget.ArrowIndicator"
+      <div dojoType="dojox.widget.AnalogArrowIndicator"
         value="17"
-        type="arrow"
         length="125"
         width="3"
         hover="Value: 17"
@@ -397,7 +395,7 @@ Speedometer style gauge with arc indicator and needle indicator
 	high="200"
         color="{'color': 'black'}">
       </div>
-      <div dojoType="dojox.widget.gauge.ArcIndicator"
+      <div dojoType="dojox.widget.gauge.AnalogArcIndicator"
         value="200"
         width="20"
         offset="150"
@@ -405,7 +403,7 @@ Speedometer style gauge with arc indicator and needle indicator
         noChange="true"
         hideValues="true">
       </div>
-      <div dojoType="dojox.widget.gauge.ArcIndicator"
+      <div dojoType="dojox.widget.gauge.AnalogArcIndicator"
         value="80"
         width="10"
         offset="150"
@@ -413,7 +411,7 @@ Speedometer style gauge with arc indicator and needle indicator
         title="Arc"
         hover="Arc: 80">
       </div>
-      <div dojoType="dojox.widget.gauge.NeedleIndicator"
+      <div dojoType="dojox.widget.gauge.AnalogNeedleIndicator"
         value="100"
         width="8"
         length="150"
