@@ -343,7 +343,7 @@ A half circle gauge with two indicators overlay graphic
         hover="Target: 52"
         title="Target">
       </div>
-      <div dojoType="dojox.widget.AnalogArrowIndicator"
+      <div dojoType="dojox.widget.gauge.AnalogArrowIndicator"
         value="17"
         length="125"
         width="3"
