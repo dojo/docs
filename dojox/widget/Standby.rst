@@ -42,6 +42,8 @@ Example 1: Basic usage
       dojo.require("dijit.form.Button");
 
       function init(){
+         basicOverlay1.domNode.parentNode.removeChild(basicOverlay1.domNode);
+         document.body.appendChild(basicOverlay1.domNode);
          dojo.connect(b1, "onClick", function(){basicStandby1.show();});
          dojo.connect(b2, "onClick", function(){basicStandby1.hide();});
          console.log(dojo.coords(dojo.byId("basic")).x);
