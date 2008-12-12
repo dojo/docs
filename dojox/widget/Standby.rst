@@ -32,3 +32,26 @@ For more custom control, you can also set the 'color' attribute on the widget to
 
 Example 1: Basic usage
 ----------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojox.widget.Standby");
+
+      function init(){
+      }
+      dojo.addOnLoad(init);
+    </script>
+
+  .. cv :: html 
+
+    <div id="basic" style="width: 200px, height: 150px; background-color: lightyellow;"></div>
+    <div jsId="basicStandby1" dojoType="dojox.widget.Standby" target="basic"></div>
+
+  .. cv:: css
+
+    <style type="text/css">
+      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/widget/Standby/Standby.css";
+    </style>
