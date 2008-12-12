@@ -87,13 +87,13 @@ A partial circle gauge with two indicators (programmatic)
             length: 10
           },
           indicators: [
-            new dojox.widget.ArrowIndicator({
+            new dojox.widget.gauge.ArrowIndicator({
               value:17, 
               width: 3,
               hover:'Value: 17', 
               title: 'Value'
            }),
-           new dojox.widget.AnalogLineIndicator({
+           new dojox.widget.gauge.AnalogLineIndicator({
              value:6, 
              color:'#D00000',
              width: 3,
@@ -137,142 +137,94 @@ A partial circle gauge with two indicators and a set of gradient ranges
 	useRangeStyles="0"
 	hideValues="true"
 	majorTicks="{length: 5, offset: 135, interval: 5}">
-      <div dojoType="dojox.widget.Range"
+      <div dojoType="dojox.widget.gauge.Range"
         low="0"
 	high="10"
-	hover="0 - 10">
-        <div dojoType="dojox.widget.Gradient" type="linear">
-          <div dojoType="dojox.widget.GradientColor"
-            offset="0"
-            color="#606060">
-          </div>
-          <div dojoType="dojox.widget.GradientColor"
-            offset="1"
-            color="#707070">
-          </div>
-        </div>
+	hover="0 - 10"
+	color="{
+		'type': 'linear',
+		'colors': [{'offset': 0, 'color': '#606060'}, {'offset': 1, 'color': '#707070'}]
+	}">
       </div>
-      <div dojoType="dojox.widget.Range"
+      <div dojoType="dojox.widget.gauge.Range"
         id="range1"
         low="10"
         high="20"
-        hover="10 - 20">
-        <div dojoType="dojox.widget.Gradient"type="linear">
-          <div dojoType="dojox.widget.GradientColor"
-            offset="0"
-            color="#707070">
-          </div>
-          <div dojoType="dojox.widget.GradientColor"
-            offset="1"
-            color="#808080">
-          </div>
-        </div>
+        hover="10 - 20"
+	color="{
+		'type': 'linear',
+		'colors': [{'offset': 0, 'color': '#707070'}, {'offset': 1, 'color': '#808080'}]
+	}">
       </div>
-      <div  dojoType="dojox.widget.Range"
+      <div  dojoType="dojox.widget.gauge.Range"
         id="range2"
         low="20"
         high="30"
-        hover="20 - 30">
-        <div dojoType="dojox.widget.Gradient" type="linear">
-          <div dojoType="dojox.widget.GradientColor"
-            offset="0"
-            color="#808080">
-          </div>
-          <div dojoType="dojox.widget.GradientColor"
-            offset="1"
-            color="#909090">
-          </div>
-        </div>
+        hover="20 - 30"
+	color="{
+		'type': 'linear',
+		'colors': [{'offset': 0, 'color': '#808080'}, {'offset': 1, 'color': '#909090'}]
+	}">
       </div>
-      <div dojoType="dojox.widget.Range"
+      <div dojoType="dojox.widget.gauge.Range"
         id="range3"
         low="30"
         high="40"
-        hover="30 - 40">
-        <div dojoType="dojox.widget.Gradient" type="linear">
-          <div dojoType="dojox.widget.GradientColor"
-            offset="0"
-            color="#909090">
-          </div>
-          <div dojoType="dojox.widget.GradientColor"
-            offset="1"
-            color="#A0A0A0">
-          </div>
-        </div>
+        hover="30 - 40"
+	color="{
+		'type': 'linear',
+		'colors': [{'offset': 0, 'color': '#909090'}, {'offset': 1, 'color': '#A0A0A0'}]
+	}">
       </div>
-      <div dojoType="dojox.widget.Range"
+      <div dojoType="dojox.widget.gauge.Range"
          id="range4"
          low="40"
          high="50"
-         hover="40 - 50">
-         <div dojoType="dojox.widget.Gradient" type="linear">
-           <div dojoType="dojox.widget.GradientColor"
-             offset="0"
-             color="#A0A0A0">
-           </div>
-           <div dojoType="dojox.widget.GradientColor"
-             offset="1"
-             color="#B0B0B0">
-           </div>
-        </div>
+         hover="40 - 50"
+	color="{
+		'type': 'linear',
+		'colors': [{'offset': 0, 'color': '#A0A0A0'}, {'offset': 1, 'color': '#B0B0B0'}]
+	}">
       </div>
-      <div dojoType="dojox.widget.Range"
+      <div dojoType="dojox.widget.gauge.Range"
         id="range5"
         low="50"
         high="60"
-        hover="50 - 60">
-        <div dojoType="dojox.widget.Gradient" type="linear">
-          <div dojoType="dojox.widget.GradientColor"
-            offset="0"
-            color="#B0B0B0">
-          </div>
-          <div dojoType="dojox.widget.GradientColor"
-            offset="1"
-            color="#C0C0C0">
-          </div>
-        </div>
+        hover="50 - 60"
+	color="{
+		'type': 'linear',
+		'colors': [{'offset': 0, 'color': '#B0B0B0'}, {'offset': 1, 'color': '#C0C0C0'}]
+	}">
       </div>
-      <div dojoType="dojox.widget.Range"
+      <div dojoType="dojox.widget.gauge.Range"
         id="range6"
         low="60"
         high="70"
-        hover="60 - 70">
-        <div dojoType="dojox.widget.Gradient" type="linear">
-          <div dojoType="dojox.widget.GradientColor"
-            offset="0"
-            color="#C0C0C0">
-          </div>
-          <div dojoType="dojox.widget.GradientColor"
-            offset="1"
-            color="#D0D0D0">
-          </div>
-        </div>
+        hover="60 - 70"
+	color="{
+		'type': 'linear',
+		'colors': [{'offset': 0, 'color': '#C0C0C0'}, {'offset': 1, 'color': '#D0D0D0'}]
+	}">
       </div>
-      <div dojoType="dojox.widget.Range"
+      <div dojoType="dojox.widget.gauge.Range"
         id="range7"
         low="70"
         high="75"
-        hover="70 - 75">
-        <div dojoType="dojox.widget.Gradient" type="linear">
-          <div dojoType="dojox.widget.GradientColor"
-            offset="0"
-            color="#D0D0D0">
-          </div>
-          <div dojoType="dojox.widget.GradientColor"
-            offset="1"
-            color="#E0E0E0">
-          </div>
-        </div>
+        hover="70 - 75"
+	color="{
+		'type': 'linear',
+		'colors': [{'offset': 0, 'color': '#D0D0D0'}, {'offset': 1, 'color': '#E0E0E0'}]
+	}">
       </div>
-      <div dojoType="dojox.widget.AnalogLineIndicator"
+      <div dojoType="dojox.widget.gauge.AnalogLineIndicator"
         id="target"
         value="52"
-        color="#D00000"
+        color="{'color': '#D00000'}"
         width="3"
         hover="Target: 52"
         title="Target">
       </div>
-      <div dojoType="dojox.widget.ArrowIndicator"
+      <div dojoType="dojox.widget.gauge.ArrowIndicator"
         id="value"
         value="17"
         type="arrow"
@@ -309,129 +261,81 @@ A half circle gauge with two indicators overlay graphic
       hideValues="true"
       majorTicks="{length: 5, offset: 125, interval: 5}"
       image="{url:'/moin_static163/js/dojo/trunk/release/dojo/dojox/widget/tests/images/gaugeOverlay.png', width: 280, height: 155,x: 35, y: 38,overlay: true}">
-      <div dojoType="dojox.widget.Range"
+      <div dojoType="dojox.widget.gauge.Range"
         low="0"
 	high="10"
-	hover="0 - 10">
-        <div dojoType="dojox.widget.Gradient" type="linear">
-          <div dojoType="dojox.widget.GradientColor"
-            offset="0"
-            color="#606060">
-          </div>
-          <div dojoType="dojox.widget.GradientColor"
-            offset="1"
-            color="#707070">
-          </div>
-        </div>
+	hover="0 - 10"
+	color="{
+		'type': 'linear',
+		'colors': [{'offset': 0, 'color': '#606060'}, {'offset': 1, 'color': '#707070'}]
+	}">
       </div>
-      <div dojoType="dojox.widget.Range"
+      <div dojoType="dojox.widget.gauge.Range"
         low="10"
         high="20"
-        hover="10 - 20">
-        <div dojoType="dojox.widget.Gradient"type="linear">
-          <div dojoType="dojox.widget.GradientColor"
-            offset="0"
-            color="#707070">
-          </div>
-          <div dojoType="dojox.widget.GradientColor"
-            offset="1"
-            color="#808080">
-          </div>
-        </div>
+        hover="10 - 20"
+	color="{
+		'type': 'linear',
+		'colors': [{'offset': 0, 'color': '#707070'}, {'offset': 1, 'color': '#808080'}]
+	}">
       </div>
-      <div  dojoType="dojox.widget.Range"
+      <div  dojoType="dojox.widget.gauge.Range"
         low="20"
         high="30"
-        hover="20 - 30">
-        <div dojoType="dojox.widget.Gradient" type="linear">
-          <div dojoType="dojox.widget.GradientColor"
-            offset="0"
-            color="#808080">
-          </div>
-          <div dojoType="dojox.widget.GradientColor"
-            offset="1"
-            color="#909090">
-          </div>
-        </div>
+        hover="20 - 30"
+	color="{
+		'type': 'linear',
+		'colors': [{'offset': 0, 'color': '#808080'}, {'offset': 1, 'color': '#909090'}]
+	}">
       </div>
-      <div dojoType="dojox.widget.Range"
+      <div dojoType="dojox.widget.gauge.Range"
         low="30"
         high="40"
-        hover="30 - 40">
-        <div dojoType="dojox.widget.Gradient" type="linear">
-          <div dojoType="dojox.widget.GradientColor"
-            offset="0"
-            color="#909090">
-          </div>
-          <div dojoType="dojox.widget.GradientColor"
-            offset="1"
-            color="#A0A0A0">
-          </div>
-        </div>
+        hover="30 - 40"
+	color="{
+		'type': 'linear',
+		'colors': [{'offset': 0, 'color': '#909090'}, {'offset': 1, 'color': '#A0A0A0'}]
+	}">
       </div>
-      <div dojoType="dojox.widget.Range"
+      <div dojoType="dojox.widget.gauge.Range"
          low="40"
          high="50"
-         hover="40 - 50">
-         <div dojoType="dojox.widget.Gradient" type="linear">
-           <div dojoType="dojox.widget.GradientColor"
-             offset="0"
-             color="#A0A0A0">
-           </div>
-           <div dojoType="dojox.widget.GradientColor"
-             offset="1"
-             color="#B0B0B0">
-           </div>
-        </div>
+         hover="40 - 50"
+	color="{
+		'type': 'linear',
+		'colors': [{'offset': 0, 'color': '#A0A0A0'}, {'offset': 1, 'color': '#B0B0B0'}]
+	}">
       </div>
-      <div dojoType="dojox.widget.Range"
+      <div dojoType="dojox.widget.gauge.Range"
         low="50"
         high="60"
-        hover="50 - 60">
-        <div dojoType="dojox.widget.Gradient" type="linear">
-          <div dojoType="dojox.widget.GradientColor"
-            offset="0"
-            color="#B0B0B0">
-          </div>
-          <div dojoType="dojox.widget.GradientColor"
-            offset="1"
-            color="#C0C0C0">
-          </div>
-        </div>
+        hover="50 - 60"
+	color="{
+		'type': 'linear',
+		'colors': [{'offset': 0, 'color': '#B0B0B0'}, {'offset': 1, 'color': '#C0C0C0'}]
+	}">
       </div>
-      <div dojoType="dojox.widget.Range"
+      <div dojoType="dojox.widget.gauge.Range"
         low="60"
         high="70"
-        hover="60 - 70">
-        <div dojoType="dojox.widget.Gradient" type="linear">
-          <div dojoType="dojox.widget.GradientColor"
-            offset="0"
-            color="#C0C0C0">
-          </div>
-          <div dojoType="dojox.widget.GradientColor"
-            offset="1"
-            color="#D0D0D0">
-          </div>
-        </div>
+        hover="60 - 70"
+	color="{
+		'type': 'linear',
+		'colors': [{'offset': 0, 'color': '#C0C0C0'}, {'offset': 1, 'color': '#D0D0D0'}]
+	}">
       </div>
-      <div dojoType="dojox.widget.Range"
+      <div dojoType="dojox.widget.gauge.Range"
         low="70"
         high="75"
-        hover="70 - 75">
-        <div dojoType="dojox.widget.Gradient" type="linear">
-          <div dojoType="dojox.widget.GradientColor"
-            offset="0"
-            color="#D0D0D0">
-          </div>
-          <div dojoType="dojox.widget.GradientColor"
-            offset="1"
-            color="#E0E0E0">
-          </div>
-        </div>
+        hover="70 - 75"
+	color="{
+		'type': 'linear',
+		'colors': [{'offset': 0, 'color': '#D0D0D0'}, {'offset': 1, 'color': '#E0E0E0'}]
+	}">
       </div>
       <div dojoType="dojox.widget.AnalogLineIndicator"
         value="52"
-        color="#D00000"
+        color="{'color': '#D00000'}"
         width="3"
         hover="Target: 52"
         title="Target">
@@ -483,37 +387,37 @@ Speedometer style gauge with arc indicator and needle indicator
       color: "white"
       majorTicks="{length: 10, offset: 105, interval: 10, color: 'gray'}"
       minorTicks="{length: 5, offset: 105, interval: 5, color: 'gray'}">
-      <div dojoType="dojox.widget.Range"
+      <div dojoType="dojox.widget.gauge.Range"
         low="0"
 	high="100"
-        color="black">
+        color="{'color': 'black'}">
       </div>
-      <div dojoType="dojox.widget.Range"
+      <div dojoType="dojox.widget.gauge.Range"
         low="100"
 	high="200"
-        color="black">
+        color="{'color': 'black'}">
       </div>
-      <div dojoType="dojox.widget.ArcIndicator"
+      <div dojoType="dojox.widget.gauge.ArcIndicator"
         value="200"
         width="20"
         offset="150"
-        color="black"
+        color="{'color': 'black'}"
         noChange="true"
         hideValues="true">
       </div>
-      <div dojoType="dojox.widget.ArcIndicator"
+      <div dojoType="dojox.widget.gauge.ArcIndicator"
         value="80"
         width="10"
         offset="150"
-        color="blue"
+        color="{'color': 'blue'}"
         title="Arc"
         hover="Arc: 80">
       </div>
-      <div dojoType="dojox.widget.NeedleIndicator"
+      <div dojoType="dojox.widget.gauge.NeedleIndicator"
         value="100"
         width="8"
         length="150"
-        color="red"
+        color="{'color': 'red'}"
         title="Needle"
         hover="Needle: 100">
       </div>
