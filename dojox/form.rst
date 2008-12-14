@@ -12,7 +12,8 @@ The dojox.form project provides additional form-related widgets beyond `dijit.fo
 * DropDownStack
 * FileInput (base, Auto, and Blind)
 * FilePickerTextBox
-* `FileUploader <form/FileUploader>`_
+* `FileUploader <dojox/form/FileUploader>`_
+* `manager <dojox/form/manager>`_
 * MultiComboBox
 * PasswordValidator
 * RadioStack
