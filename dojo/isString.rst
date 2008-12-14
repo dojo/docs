@@ -15,25 +15,17 @@ Checks if the parameter is a String.
 As with all dojo._base components, these functions are included within Dojo Base. You get this functionality by just including dojo.js or dojo.xd.js in your page.
 
 
-============
-Introduction
-============
-
-TODO: introduce the component/class/method
-
-
 =====
 Usage
 =====
 
-TODO: how to use the component/class/method
+Use this to test if a variable is a string
 
 .. code-block :: javascript
  :linenos:
 
- <script type="text/javascript">
-   // your code
- </script>
+  if(dojo.isString(foo)){ ...
+
 
 
 
