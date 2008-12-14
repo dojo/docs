@@ -23,7 +23,7 @@ Top priority: Dojo Base
 
 * `dojo.setObject <dojo/setObject>`_
 
-  needed: full page
+  needed: review of draft
 
 * `dojo.windowUnloaded <dojo/windowUnloaded>`_
 
