@@ -6,6 +6,7 @@ dojo.dnd package
 :Status: Release
 :Version: 1.2.2 (current)
 :Available: since 0.9
+:Author: Eugene Lazutkin
 
 .. contents::
   :depth: 2
