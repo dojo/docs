@@ -51,14 +51,15 @@ Examples
             dojo.require("dijit.form.Button");
 
             // This object is initially empty, and we'll use setObject to populate it
-            var obj = {};
+            obj = {};
         </script>
 
   .. cv:: html
 
+        <p>Click button to insert nested value into obj</p>
         <button dojoType="dijit.form.Button">
             <script type="dojo/method" event="onClick">
-                dojo.setObject('x.y.z', obj);
+                dojo.setObject('x.y.z', "hi!", obj);
                  dojo.byId('resultDiv').innerHTML = dojo.toJson(obj, true);
             </script>
             x.y.z
