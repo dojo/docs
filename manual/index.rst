@@ -18,9 +18,9 @@ Dojo Toolkit Reference Guide
 Dojo
 ====
 
-Dojo is divided into two parts: Dojo Base, and Dojo Core. Dojo Base is the functionality provided for by just including ``dojo.js``, and Dojo Core is comprised of stable additional (optional) components. Typically, if a function or Class exists within the dojo namespace directly (eg: dojo.require(), dojo.addOnLoad()) it is part of Base Dojo. If the function or Class exists beneath the dojo namespace (eg: dojo.dnd.Mover), you will need to require the appropriate module (eg: dojo.require("dojo.dnd.Mover");) 
+Dojo is divided into two parts: Dojo Base, and Dojo Core. Dojo Base is the functionality provided for by just including ``dojo.js``, and Dojo Core is comprised of stable additional (optional) components. Typically, if a function or Class exists within the dojo namespace directly (eg: dojo.require(), dojo.addOnLoad()) it is part of Base Dojo. If the function or Class exists beneath the dojo namespace (eg: dojo.dnd.Mover), you will need to require the appropriate module (eg: dojo.require("dojo.dnd.Mover");)
 
-These pages cover both cases, and indicate how they are provided. 
+These pages cover both cases, and indicate how they are provided.
 
 Dojo Base
 ---------
@@ -326,7 +326,7 @@ Dojo Core
 
   A uniform data access layer
 
-  * `dojo.data.api <dojo/data/api>`_ 
+  * `dojo.data.api <dojo/data/api>`_
   * `dojo.data.api.Read <dojo/data/api/Read>`_
   * `dojo.data.api.Write <dojo/data/api/Write>`_
   * `dojo.data.api.Identity <dojo/data/api/Identity>`_
@@ -433,7 +433,7 @@ Dojo Core
 Dijit
 =====
 
-Dijit is Dojo's UI Library, and lives as a separate namespace ``dijit``. Dijit requires Dojo Core. Each of the widgets and functionality provided by Dijit is describe in the following sections, though the aforementioned `quickstart <quickstart/>`_ guides cover some basics.  
+Dijit is Dojo's UI Library, and lives as a separate namespace ``dijit``. Dijit requires Dojo Core. Each of the widgets and functionality provided by Dijit is describe in the following sections, though the aforementioned `quickstart <quickstart/>`_ guides cover some basics.
 
 * `dijit <dijit>`_
 
@@ -503,7 +503,7 @@ Form handling
       A time input control which allows either typing or choosing a time from any time-picker widget
 
     * `dijit.form.ValidationTextBox <dijit/form/ValidationTextBox>`_
- 
+
   * select type widgets
 
     * `dijit.form.ComboBox <dijit/form/ComboBox>`_
@@ -570,7 +570,7 @@ Layout
 DojoX
 =====
 
-DojoX serves many purposes, and by design is difficult to document. Here, we have an ongoing effort to document the most used, stable, reliable and powerful aspects of DojoX. DojoX contains code in alpha and experimental states, so your assistance in testing and documenting are especially helpful. 
+DojoX serves many purposes, and by design is difficult to document. Here, we have an ongoing effort to document the most used, stable, reliable and powerful aspects of DojoX. DojoX contains code in alpha and experimental states, so your assistance in testing and documenting are especially helpful.
 
 These sections cover the available projects shipped with the Dojo Toolkit
 
@@ -745,11 +745,15 @@ These sections cover the available projects shipped with the Dojo Toolkit
 
   * `dojox.form.FilePickerTextBox <dojox.form.FilePickerTextBox>`_
 
-    A dijit._FormWidget that adds a dojox.widget.FilePicker to a text box as a dropdown  
+    A dijit._FormWidget that adds a dojox.widget.FilePicker to a text box as a dropdown
 
   * `dojox.form.FileUploader <dojox.form.FileUploader>`_
 
     A new multi-file uploader that shows progress as the files are uploading
+
+  * `dojox.form.manager <dojox.form.manager>`_
+
+    A widget and a collection of mxinis to manage complex event-driven dynamic forms.
 
 * `dojox.fx <dojox/fx>`_
 
@@ -981,7 +985,7 @@ These sections cover the available projects shipped with the Dojo Toolkit
 DojoC
 =====
 
-DojoC is an svn repository used by DojoCampus for a variety of widgets, tutorials, sandbox, and other demos. You are welcome to explore and contribute, though absolutely nothing is guaranteed to work. DojoC is meant as a community workshop, and code comes and goes frequently, often times 'promoted' to `DojoX projects <dojox>`_. 
+DojoC is an svn repository used by DojoCampus for a variety of widgets, tutorials, sandbox, and other demos. You are welcome to explore and contribute, though absolutely nothing is guaranteed to work. DojoC is meant as a community workshop, and code comes and goes frequently, often times 'promoted' to `DojoX projects <dojox>`_.
 
 * `More about DojoC <dojoc>`_
 
