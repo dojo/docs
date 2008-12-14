@@ -66,6 +66,13 @@ Examples
             </script>
             x.y.z
         </button>
+        <button dojoType="dijit.form.Button">
+            <script type="dojo/method" event="onClick">
+                dojo.setObject('p.d.q', "world!", obj);
+                 dojo.byId('resultDiv').innerHTML = dojo.toJson(obj, true);
+            </script>
+            p.d.q
+        </button>
 
         <p>Obj:</p>
         <div id="resultDiv" class="style1">
