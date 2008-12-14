@@ -17,9 +17,9 @@ Set a property from a dot-separated string, such as "A.B.C".
 Usage
 =====
 
-In javascript, a dot separated string like A.B.C refers to an item called C inside an object called B which is itself inside an object called A.
+In javascript, a dot separated string like obj.parent.child refers to an item called child inside an object called parent inside of obj.
 
-setObject will let you set the value of C, creating the intermediate A and B objects if they don't exist.
+setObject will let you set the value of child, creating the intermediate parent object(s) if they don't exist.
 
 Without `dojo.setObject`, we often see code like this:
 
@@ -52,6 +52,7 @@ Examples
 
             // This object is initially empty, and we'll use setObject to populate it
             obj = {};
+            console.log("in head");
         </script>
 
   .. cv:: html
