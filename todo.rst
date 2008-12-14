@@ -13,25 +13,13 @@ The following pages needs more love:
 Top priority: Dojo Base
 =======================
 
-* `dojo.exists <dojo/exists>`_
-
-  needed: review of draft
-
 * `dojo.registerModulePath <dojo/registerModulePath>`_
 
   needed: Examples
 
-* `dojo.setObject <dojo/setObject>`_
-
-  needed: review of draft
-
 * `dojo.windowUnloaded <dojo/windowUnloaded>`_
 
   needed: full page
-
-* `dojo._base.Color <dojo/_base/Color>`_
-
-  needed: Examples
 
 * `dojo.connectPublisher <dojo/connectPublisher>`_
 
@@ -44,10 +32,6 @@ Top priority: Dojo Base
 * `dojo._base.event <dojo/_base/event>`_
 
   needed: explain DOM event listener in detail
-
-* `dojo.isString <dojo/isString>`_
-
-  needed: Introduction, Usage
 
 * `dojo.isObject <dojo/isObject>`_
 
