@@ -61,10 +61,75 @@ The DOM nodes of the 3rd class are not considered to be form fields automaticall
 * Use ``dojoAttachPoint`` on such node so it'll be promoted to widget attributes.
 * Mark this node with a CSS class ``dojoFormValue``. This class indicates that you opt-in this node as a value node.
 
+Example:
+
+.. code-block :: html
+  :linenos:
+
+  <div dojoType="dojox.form.Manager">
+    <input type="checkbox" dojoType="dijit.form.CheckBox" name="w01" value="w01">
+    <input type="text" name="e03" value="e03">
+    <span dojoAttachPoint="n01" class="dojoFormValue">&nbsp;</span>
+    <span dojoAttachPoint="n02">test</span>
+  </div>
+
+This fictitious form demonstrates following:
+
+* The form manager widget is created in line #1. Note that this example doesn't use the ``<form>`` tag.
+* The form widget on line #2 will be automatically recognized as a controlled element. It can be accessed as ``"w01"``.
+* The form node on line #3 will be automatically recognized as a controlled element, if node processing is added like in this example. It cn be accessed as ``"e03"``.
+* The span node on line #4 will be automatically recognized as a controlled element. Its value can be read/written because it is marked with the CSS class ``dojoFormValue``.
+* The span node on line #5 will be automatically recognized as a controlled element. Its value **cannot** be read/written because it is **not** marked with the CSS class ``dojoFormValue``. All other operations will work as normal.
+
 Event processing
 ----------------
 
-The form manager normalizes change events on all form widgets and HTML form elements. In order to get those events
+The form manager normalizes change events on all form widgets and HTML form elements. In order to request this special event processing, add ``observer`` attribute to a form widget or an HTML form element. The value of ``observer`` is a string that lists event handler names using comma to separate them.
+
+In a radio button group all observers are pooled together regardless of what element of the group they are attached to and attached to the whole group as the single form widget.
+
+Observers cannot be attached to non-form elements for obvious reasons (no way to deduce the change event). Use ``dojoAttachEvent`` for that.
+
+An observer method is a method on the current form manager. They can be added by adding them to the form manager object using common JavaScript methods, or added dynamically with `dojo.parser() <dojo/parser>`_.
+
+When the change event is triggered each relevant observer will be called in the context of the form manager with following parameters:
+
+* ``value`` --- the new value of form widget or form element.
+* ``name`` --- the name of form widget or form element. This parameter is useful when you attach the same observer to different form elements.
+* ``element`` --- the widget object for widgets, or a DOM node for form nodes. This parameter is rarely used but can be helpful for some advanced processing.
+* ``evt`` --- the original event object. This parameter is rarely used but can be helpful for some advanced processing.
+
+Example:
+
+.. code-block :: html
+  :linenos:
+
+  <div dojoType="dojox.form.Manager">
+    <input type="checkbox" dojoType="dijit.form.CheckBox" name="w01" value="w01" observer="log">
+    <input type="text" name="e03" value="e03" observer="log,disabler">
+    <span dojoAttachPoint="n01" class="dojoFormValue">&nbsp;</span>
+    <span dojoAttachPoint="n02" dojoAttachEvent="onclick: clicked">test</span>
+    <script type="dojo/method" event="log" args="value,name">
+      console.log(name, " = ", value);
+    </script>
+    <script type="dojo/method" event="disabler" args="value,name">
+      if(value.length > 5){
+        this.disable([name]);
+      }
+    </script>
+    <script type="dojo/method" event="clicked">
+      console.log("we got clicked!");
+    </script>
+  </div>
+
+We extended the previous example with observers and included required observers inline using ``dojo/method``. Let's go over new additions line by line:
+
+* On line #2 we added an observer named ``log``. It will be called on every value change of the widget ``"w01"``.
+* On line #3 we added two observers named ``log`` and ``disabler``. They both will be called on every value change of the widget ``"e03"``.
+* On line #5 we added a simple ``onclick`` event handler named ``clicked``. It will be called when user clicks this DOM node.
+* Lines ##6-8 define ``log()`` observer. It uses two parameters ``value`` and ``name`` ignoring the rest. When it is called it prints the name and the new value of the form widget or form node it is observing.
+* Lines ##9-13 define ``disabler()`` observer. Just like ``log()`` it uses the same two parameters. It will disable the controlled widget/node when the length of its text value exceeds 5. Note that on line #11 it uses ``this``, which is the form manager object of that form.
+* Lines ##14-16 define a simple event handler ``clicked()``, which doesn't use any parameters, and prints a static text.
 
 =====
 Usage
