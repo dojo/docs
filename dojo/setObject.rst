@@ -41,6 +41,27 @@ Wheras with `dojo.setObject`, we can shorten that to:
 
 
 ========
+Examples
+========
+
+.. cv-compound::
+
+  .. cv:: html
+
+        <button dojoType="dijit.form.Button">
+            <script type="dojo/method" event="onClick">
+                dojo.setObject('x.y.z', obj);
+                 dojo.byId('resultDiv').innerHTML = dojo.toJson(obj, true);
+            </script>
+            x.y.z
+        </button>
+
+        <div id="resultDiv" class="style1">
+            Click on a button, to test the associated value.
+        </div>
+
+
+========
 See also
 ========
 
