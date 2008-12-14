@@ -13,20 +13,13 @@ dojo.marginBox
 Getter/setter for the margin-box of node.
 
 
-============
-Introduction
-============
+======================
+Introduction and Usage
+======================
 
-Returns an object in the expected format of box (regardless if box is passed). The object might look like:
+See the `CSS spec <http://www.w3.org/TR/CSS2/box.html>`_ for details on box model and what margin-box means.
 
-{ l: 50, t: 200, w: 300: h: 150 }
-
-for a node offset from its parent 50px to the left, 200px from the top with a margin width of 300px and a margin-height of 150px.
-
-
-=====
-Usage
-=====
+This method will either return the margin-box size of a node:
 
 .. code-block :: javascript
  :linenos:
@@ -35,6 +28,21 @@ Usage
    var marginBox = dojo.marginBox(domNode);
  </script>
 
+... or set the node's width/height such that it's margin-box size becomes as specified:
+
+.. code-block :: javascript
+ :linenos:
+
+ <script type="text/javascript">
+    // 300px x 150px
+    dojo.marginBox(domNode, {w: 300, h: 400});
+ </script>
+
+In either usage it returns an object in the expected format of box. The object might look like:
+
+{ l: 50, t: 200, w: 300: h: 150 }
+
+for a node offset from its parent 50px to the left, 200px from the top with a margin width of 300px and a margin-height of 150px.
 
 
 ========
@@ -81,8 +89,8 @@ This example displays the return values of dojo.marginBox on a node.
       }
     </style>
 
-Getting margin box I.
----------------------
+Getting margin box II.
+----------------------
 
 This example displays the return values of dojo.marginBox on a nested node. 
 
