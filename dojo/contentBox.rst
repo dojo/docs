@@ -61,7 +61,7 @@ This example displays the return values of dojo.contentBox on a node.
       dojo.require("dijit.form.Button"); // only for the beauty :)
 
       getContentBox = function(){
-        var contentBox = dojo.contentBox(dojo.byId("nodeOne"));
+        var contentBox = dojo.contentBox("nodeOne");
 
         console.log("Top: "+contentBox.t);
         console.log("Left: "+contentBox.l);
@@ -73,8 +73,7 @@ This example displays the return values of dojo.contentBox on a node.
   .. cv:: html
 
     <button dojoType="dijit.form.Button" onClick="getContentBox()">Get content box</button>
-
-    <div id="nodeOne" style="margin: 10px; border: 10px solid black; padding: 10px">Hi!</div>
+    <div id="nodeOne" style="margin: 10px; border: 10px solid black; padding: 10px; width: 100px; height: 30px;">Hi!</div>
 
 Setting content box
 --------------------
