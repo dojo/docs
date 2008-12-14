@@ -52,22 +52,22 @@ Examples
 
 All these expressions result in the same value, a dojo.Color object representing red with no transparency (full opacity):
 
-.code-block:: javascript
+..code-block:: javascript
 
   dojo.colorFromHex("#FF0000")
 
-.code-block:: javascript
+..code-block:: javascript
 
   dojo.colorFromHex("#F00")
 
-.code-block:: javascript
+..code-block:: javascript
 
   dojo.colorFromArray([255, 0, 0])
 
-.code-block:: javascript
+..code-block:: javascript
 
   dojo.colorFromString("red")
 
-.code-block:: javascript
+..code-block:: javascript
 
   dojo.colorFromRgba("rgba(255, 0, 0, 1)")
