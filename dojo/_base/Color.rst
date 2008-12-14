@@ -54,8 +54,20 @@ All these expressions result in the same value, a dojo.Color object representing
 
 .code-block:: javascript
 
-  dojo.colorFromHex("#FF0000");
-  dojo.colorFromHex("#F00");
-  dojo.colorFromArray([255, 0, 0]);
-  dojo.colorFromString("red");
-  dojo.colorFromRgba("rgba(255, 0, 0, 1)");
+  dojo.colorFromHex("#FF0000")
+
+.code-block:: javascript
+
+  dojo.colorFromHex("#F00")
+
+.code-block:: javascript
+
+  dojo.colorFromArray([255, 0, 0])
+
+.code-block:: javascript
+
+  dojo.colorFromString("red")
+
+.code-block:: javascript
+
+  dojo.colorFromRgba("rgba(255, 0, 0, 1)")
