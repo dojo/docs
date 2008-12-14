@@ -5,7 +5,7 @@ dojo._base.Color
 
 :Status: Draft
 :Version: 1.0
-:Authors: Marcus Reimann
+:Authors: Marcus Reimann, Bill Keese
 :Developers: Eugene Lazutkin, Adam Peller, Alex Russell
 :Available: since V?
 
@@ -45,3 +45,17 @@ Features
 * dojo.colorFromString
 
   parses str for a color value
+
+========
+Examples
+========
+
+All these expressions result in the same value, a dojo.Color object representing red with no transparency (full opacity):
+
+.code-block:: javascript
+
+  dojo.colorFromHex("#FF0000");
+  dojo.colorFromHex("#F00");
+  dojo.colorFromArray([255, 0, 0]);
+  dojo.colorFromString("red");
+  dojo.colorFromRgba("rgba(255, 0, 0, 1)");
