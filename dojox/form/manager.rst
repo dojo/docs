@@ -139,32 +139,34 @@ The form manager package consists of the main widget: `Manager <dojox/form/Manag
 
 * `_Mixin <dojox/form/manager/_Mixin>`_
 
-  The main mixin, which should be always included. Handles form widgets, ``dojoAttachPoint``-s, and *observers* directly.
+  The main mixin, which should be always included. It provides the initialization and handles form widgets, ``dojoAttachPoint``-s, and *observers* directly.
 
 * `_NodeMixin <dojox/form/manager/_NodeMixin>`_
 
-  Responsible for working with HTML form elements.
+  *Optional.* It plugs into `_Mixin <dojox/form/manager/_Mixin>`_ extending it with new methods and ability to handle HTML form nodes.
 
 * `_FormMixin <dojox/form/manager/_FormMixin>`_
 
-  Helpful when you top element is a <form>. In this case it provides ``onReset()`` and ``onSubmit()`` functionality with reasonable defaults. Additionally it provides ``isValid()`` method, which validates all form widgets individually.
+  *Optional.* Helpful when you top element is a <form>. In this case it provides ``onReset()`` and ``onSubmit()`` functionality with reasonable defaults. Additionally it provides ``isValid()`` method, which validates all form widgets individually. Essentially it mirrors `dijit.formForm <dijit/form/Form>`_.
 
 * `_ValueMixin <dojox/form/manager/_ValueMixin>`_
 
-  Provides a unified way to access (get/set) a value of any controlled element. Provides group-get/set functionality as well.
+  *Optional.* Provides a unified way to access (get/set) a value of any controlled element. Provides group-get/set functionality as well. This is one of the most popular mixins.
 
 * `_EnableMixin <dojox/form/manager/_EnableMixin>`_
 
-  Provides a unified way to access (get/set) an ``enable`` state of any controlled element with a group-get/set functionality as well.
+  *Optional.* Provides a unified way to access (get/set) an ``enable`` state of any controlled element with a group-get/set functionality as well.
 
 * `_DisplayMixin <dojox/form/manager/_DisplayMixin>`_
 
-  Provides a unified way to access (get/set) an ``display`` state of any controlled HTML element with a group-get/set functionality as well.
+  *Optional.* Provides a unified way to access (get/set) an ``display`` state of any controlled HTML element with a group-get/set functionality as well.
 
 * `_ClassMixin <dojox/form/manager/_ClassMixin>`_
 
-  Provides a unified way to add/remove a CSS class on any controlled element with a group-get/set functionality as well.
+  *Optional.* Provides a unified way to add/remove a CSS class on any controlled element with a group-get/set functionality as well.
 
-The mixins provides for utmost flexibility. All functionality is in mixins, and users can mix and match only necessary features. Writing additional mixins is supported and actively encouraged!
+The mixins provide for ultimate flexibility. All functionality is in mixins, and users can mix and match only necessary features conserving the downloadable bytes, if needed. Writing additional mixins is supported and actively encouraged!
 
 `Manager <dojox/form/Manager>`_ is a simple widget that includes all above listed mixins, and treats its body as a template. Using it you don't need to put the template in the separate file but can do it completely inline. It allows to use normal template-specific directives for `dojo.parser() <dojo/parser>`_: ``dojoAttachPoint``, ``dojoAttachEvent``, and a special directive used in the form manager: ``observer`` to designate methods to be called for all high-level change events on this element (a form widget or an HTML form element).
+
+Please refer to documentation of individual mixins and the widget for details of their API.
