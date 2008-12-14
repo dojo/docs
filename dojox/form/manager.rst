@@ -135,7 +135,7 @@ We extended the previous example with observers and included required observers 
 Usage
 =====
 
-The form manager package consists of the main widget: `Manager <dojox/form/Manager>`_ and a set of mixins (don't mind the leading underscore):
+The form manager package consists of the main widget: `dojox.form.Manager <dojox/form/Manager>`_ and a set of mixins (don't mind the leading underscore) located in ``/dojox/form/manager``:
 
 * `_Mixin <dojox/form/manager/_Mixin>`_
 
@@ -165,8 +165,10 @@ The form manager package consists of the main widget: `Manager <dojox/form/Manag
 
   *Optional.* Provides a unified way to add/remove a CSS class on any controlled element with a group-get/set functionality as well.
 
-The mixins provide for ultimate flexibility. All functionality is in mixins, and users can mix and match only necessary features conserving the downloadable bytes, if needed. Writing additional mixins is supported and actively encouraged!
+You don't need to use `Manager <dojox/form/Manager>`_ directly. In many cases it is more beneficial to add form manager mixins directly to your custom widget adding a required functionality. Think of mixins as "plugins" for other widgets.
 
-`Manager <dojox/form/Manager>`_ is a simple widget that includes all above listed mixins, and treats its body as a template. Using it you don't need to put the template in the separate file but can do it completely inline. It allows to use normal template-specific directives for `dojo.parser() <dojo/parser>`_: ``dojoAttachPoint``, ``dojoAttachEvent``, and a special directive used in the form manager: ``observer`` to designate methods to be called for all high-level change events on this element (a form widget or an HTML form element).
+This architecture provides for ultimate flexibility. All functionality is in mixins, and users can mix and match only necessary features conserving the downloadable bytes, if needed. Writing additional mixins is supported and actively encouraged!
 
-Please refer to documentation of individual mixins and the widget for details of their API.
+`Manager <dojox/form/Manager>`_ is a simple widget that includes all above listed mixins, and treats its body as a template. Using it you don't need to put the template in the separate file but can do it completely inline. It allows to use normal template-specific directives for `dojo.parser() <dojo/parser>`_: ``dojoAttachPoint``, ``dojoAttachEvent``, and a special directive used in the form manager: ``observer`` to designate methods to be called for all high-level change events on this element (a form widget or an HTML form element). You can use it as is, or as a sample code for your own custom widgets.
+
+Please refer to documentation of individual mixins and the widget for details of their API and implementation.
