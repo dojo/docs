@@ -33,7 +33,7 @@ The form manager helps to do following common tasks:
 * Orchestration of I/O.
 * Form support on the level of `dijit.form.Form <dijit/form/Form>`_.
 
-In general the form manager shields programmers and designers from dealing with specific form elements. It is quite possible for a designer to use a text input widget for some field, rearrange the HTML later changing the field to a select node, and then change it to a group of radio buttons --- all without changing a single line in the form-handling code. All event processing, value access, enable/disable functionality, and so on will work regardless of those changes.
+In general the form manager shields programmers and designers from dealing with specific form elements. It is quite possible for a designer to use a text input widget for some field, rearrange the HTML later changing the field to a select node, and then change it to a group of radio buttons --- all without changing a single line in the form-handling code. All event processing, value access, enable/disable functionality, and so on will continue working regardless of those changes.
 
 Controlled elements
 -------------------
