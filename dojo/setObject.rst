@@ -47,11 +47,12 @@ Examples
 .. cv-compound::
 
   .. cv:: javascript
+
         <script>
             dojo.require("dijit.form.Button");
 
             // This object is initially empty, and we'll use setObject to populate it
-            obj = {};
+            var obj = {};
             console.log("in head");
         </script>
 
