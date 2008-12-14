@@ -11,9 +11,9 @@ dojo.dnd package
 .. contents::
   :depth: 2
 
-===================
-Underlying concepts
-===================
+============
+Introduction
+============
 
 This package was built after we learned from mistakes made in ``dojo.dnd 0.4``:
 
