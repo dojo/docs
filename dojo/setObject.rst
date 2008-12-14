@@ -13,45 +13,36 @@ dojo.setObject
 Set a property from a dot-separated string, such as "A.B.C".
 
 
-============
-Introduction
-============
-
-TODO: introduce the component/class/method
-
-
 =====
 Usage
 =====
 
-TODO: how to use the component/class/method
+In javascript, a dot separated string like A.B.C refers to an item called C inside an object called B which is itself inside an object called A.
 
-.. code-block :: javascript
- :linenos:
+setObject will let you set the value of C, creating the intermediate A and B objects if they don't exist.
 
- <script type="text/javascript">
-   // your code
- </script>
+Without `dojo.setObject`, we often see code like this:
+
+.. code-block:: javascript
+
+  // ensure that intermediate objects are available
+  if(!obj["parent"]){ obj.parent = {}; }
+  if(!obj.parent["child"]){ obj.parent.child= {}; }
+  
+  // now we can safely set the property
+  obj.parent.child.prop = "some value";
 
 
+Wheras with `dojo.setObject`, we can shorten that to:
 
-========
-Examples
-========
+.. code-block:: javascript
 
-Programmatic example
---------------------
-
-TODO: example
-
-Declarative example
--------------------
-
-TODO: example
+  dojo.setObject("parent.child.prop", "some value", obj);
 
 
 ========
 See also
 ========
 
-* TODO: links to other related articles
+* dojo.exists_
+* dojo.getObject_
