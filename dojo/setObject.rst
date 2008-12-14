@@ -46,6 +46,14 @@ Examples
 
 .. cv-compound::
 
+  .. cv:: javascript
+        <script>
+            dojo.require("dijit.form.Button");
+
+            // This object is initially empty, and we'll use setObject to populate it
+            var obj = {};
+        </script>
+
   .. cv:: html
 
         <button dojoType="dijit.form.Button">
@@ -56,8 +64,9 @@ Examples
             x.y.z
         </button>
 
+        <p>Obj:</p>
         <div id="resultDiv" class="style1">
-            Click on a button, to test the associated value.
+            {}
         </div>
 
 
