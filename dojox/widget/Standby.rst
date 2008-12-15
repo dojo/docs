@@ -166,7 +166,7 @@ Example 4: Changing overlay color and image
     </style>
 
 
-Example 4: Showing curved border cloning (works on Firefix and Safari only)
+Example 5: Showing curved border cloning (works on Firefix and Safari only)
 ---------------------------------------------------------------------------
 
 .. cv-compound ::
@@ -178,19 +178,19 @@ Example 4: Showing curved border cloning (works on Firefix and Safari only)
       dojo.require("dijit.form.Button");
 
       function init(){
-         document.body.appendChild(basicStandby4.domNode);
-         dojo.connect(b7, "onClick", function(){basicStandby4.show();});
-         dojo.connect(b8, "onClick", function(){basicStandby4.hide();});
+         document.body.appendChild(basicStandby5.domNode);
+         dojo.connect(b9, "onClick", function(){basicStandby5.show();});
+         dojo.connect(b10, "onClick", function(){basicStandby5.hide();});
       }
       dojo.addOnLoad(init);
     </script>
 
   .. cv :: html 
 
-    <button jsId="b7" dojoType="dijit.form.Button">Show Standby widget</button>
-    <button jsId="b8" dojoType="dijit.form.Button">Hide Standby widget</button>
-    <div id="basic4" style="width: 200px; height: 200px; background-color: yellow; border-style: solid; border-width: 2px; -moz-border-radius: 20px; -webkit-border-radius: 20px;"></div>
-    <div jsId="basicStandby4" dojoType="dojox.widget.Standby" target="basic4" color="lightgray"></div>
+    <button jsId="b9" dojoType="dijit.form.Button">Show Standby widget</button>
+    <button jsId="b10" dojoType="dijit.form.Button">Hide Standby widget</button>
+    <div id="basic5" style="width: 200px; height: 200px; background-color: yellow; border-style: solid; border-width: 2px; -moz-border-radius: 20px; -webkit-border-radius: 20px;"></div>
+    <div jsId="basicStandby5" dojoType="dojox.widget.Standby" target="basic5" color="lightgray"></div>
 
   .. cv:: css
 
