@@ -189,7 +189,7 @@ Example 4: Showing curved border cloning (works on Firefix and Safari only)
 
     <button jsId="b7" dojoType="dijit.form.Button">Show Standby widget</button>
     <button jsId="b8" dojoType="dijit.form.Button">Hide Standby widget</button>
-    <div id="basic4" style="width: 200px; height: 200px; background-color: yellow; border-style: solid; border-width: 2px; -moz-border-radius: 10px; -webkit-border-radius: 10px;"></div>
+    <div id="basic4" style="width: 200px; height: 200px; background-color: yellow; border-style: solid; border-width: 2px; -moz-border-radius: 20px; -webkit-border-radius: 20px;"></div>
     <div jsId="basicStandby4" dojoType="dojox.widget.Standby" target="basic4" color="lightgray"></div>
 
   .. cv:: css
