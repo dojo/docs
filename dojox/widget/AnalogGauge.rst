@@ -367,7 +367,6 @@ Speedometer style gauge with arc indicator and needle indicator
 
       dojo.addOnLoad(function(){
 	  var gauge = dijit.byId('speedo');
-	  console.debug(gauge);
 	  // Used for a gradient arc indicator below:
 	  var fill = {
 	    'type': 'linear',
@@ -393,7 +392,14 @@ Speedometer style gauge with arc indicator and needle indicator
 	    'title': 'Arc',
 	    'hover': 'Arc: 80'
 	  }));
-      </div>
+          gauge.addIndicator(new dojox.widget.gauge.AnalogNeedleIndicator({
+            'value': 100,
+            'width': 8,
+            'length': 150,
+            'color': 'red',
+            'title': 'Needle',
+            'hover': 'Needle: 100'
+          }));
       });
     </script>
 
