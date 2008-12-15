@@ -5,7 +5,7 @@ dojox.form project
 
 The dojox.form project provides additional form-related widgets beyond `dijit.form <dijit/form>`_ functionality. 
 
-* `dojox.form.BusyButton` <dojox/form/BusyButton>
+* `dojox.form.BusyButton <dojox/form/BusyButton>`_
 
   A new Button with progresss indicator built in, for indicating processing after you press the button
 
