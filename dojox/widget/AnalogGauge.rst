@@ -122,7 +122,9 @@ A partial circle gauge with two indicators and a set of gradient ranges
   .. cv:: javascript
 
     <script>
+      console.debug('require');
       dojo.require("dojox.widget.AnalogGauge");
+      console.debug('require2');
       dojo.require("dojox.widget.gauge.AnalogArrowIndicator");
       console.debug('addonloaddddd');
       dojo.addOnLoad(function(){
