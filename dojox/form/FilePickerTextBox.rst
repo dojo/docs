@@ -9,7 +9,7 @@ dojox.form.FilePickerTextBox
 :Available: since V1.3
 
 .. contents::
-   :depth: 1
+   :depth: 2
 
 A dijit._FormWidget that adds a dojox.widget.FilePicker to a text box as a dropdown
 
@@ -39,10 +39,8 @@ Creating a file picker is similar to creating a rolling list. In addition to the
 
 * ``New in 1.3`` **numPanes** The number of panes to display across the width of the picker. Only used if you do not specify a minPaneWidth in the constraints for the picker. Defaults to 2.25.
 
-
-=====================
 Additional attr value
-=====================
+---------------------
 
 You can call widget.attr("pathValue") to get (or set) the value of the widget - using "string" format (ie. "/path/to/file.txt") instead of using the item. Items in the "constraints" parameter will be passed in to the file picker as creation parameters.
 
@@ -51,8 +49,10 @@ You can call widget.attr("pathValue") to get (or set) the value of the widget - 
 Examples
 ========
 
-A simple file picker text box pulling data from a dojox.data.FileStore
-----------------------------------------------------------------------
+A simple file picker
+--------------------
+
+This example shows a simple file picker text box pulling data from a dojox.data.FileStore
 
 .. cv-compound ::
 
