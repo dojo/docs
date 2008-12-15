@@ -124,7 +124,7 @@ A partial circle gauge with two indicators and a set of gradient ranges
     <script>
       dojo.require("dojox.widget.AnalogGauge");
       dojo.require("dojox.widget.gauge.AnalogArrowIndicator");
-
+console.debug('addonloaddddd');
       dojo.addOnLoad(function(){
         var gauge = dijit.byId('declarativeGauge');
         console.debug(gauge);
