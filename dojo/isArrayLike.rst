@@ -15,25 +15,27 @@ Checks if the parameter is like an Array.
 As with all dojo._base components, these functions are included within Dojo Base. You get this functionality by just including dojo.js or dojo.xd.js in your page.
 
 
-============
-Introduction
-============
-
-TODO: introduce the component/class/method
-
-
 =====
 Usage
 =====
 
-TODO: how to use the component/class/method
+Use this to test if a variable is like an Array.
+Similar to `dojo.isArray() <dojo/isArray>`_ but more permissive.
 
 .. code-block :: javascript
- :linenos:
+  :linenos:
 
- <script type="text/javascript">
-   // your code
- </script>
+  dojo.isArrayLike(foo) 
+
+Returns true if it is like an Array.
+
+.. code-block :: javascript
+  :linenos:
+
+  // Check, if variable "foo" is like an array:
+  if(dojo.isArrayLike(foo)){ 
+      // do something...
+  }
 
 
 ========
