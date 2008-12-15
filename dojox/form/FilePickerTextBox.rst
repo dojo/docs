@@ -26,11 +26,17 @@ Usage
 =====
 
 Creating a file picker is similar to creating a rolling list. In addition to the options for rolling list, you can specify the following:
+
 * **pathSeparator** The path separator to use - it will be guessed if not provided
+
 * **topDir** the top-level directory to provide access to - it will be guessed if not provided
+
 * **pathAttr** the attribute to read for getting the full path of the file
+
 * ``New in 1.3`` **selectDirectories** whether or not you want to allow selecting of directories
+
 * ``New in 1.3`` **selectFiles** whether or not you want to allow selecting of files
+
 * ``New in 1.3`` **numPanes** The number of panes to display across the width of the picker. Only used if you do not specify a minPaneWidth in the constraints for the picker. Defaults to 2.25.
 
 
