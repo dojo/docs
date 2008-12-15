@@ -35,7 +35,7 @@ Top priority: Dojo Base
 
 * `dojo.isAlien <dojo/isAlien>`_
 
-  needed: Introduction, Usage
+  needed: a proper test against isAlien() (in the example)
 
 * `dojo.doc <dojo/doc>`_
 
