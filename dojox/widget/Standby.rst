@@ -121,8 +121,8 @@ Example 3: Changing overlay color
 
   .. cv :: html 
 
-    <button jsId="b1" dojoType="dijit.form.Button">Show Standby widget</button>
-    <button jsId="b2" dojoType="dijit.form.Button">Hide Standby widget</button>
+    <button jsId="b5" dojoType="dijit.form.Button">Show Standby widget</button>
+    <button jsId="b6" dojoType="dijit.form.Button">Hide Standby widget</button>
     <div id="basic3" style="width: 300px; height: 150px; background-color: yellow; border-style: solid; border-width: 2px;"></div>
     <div jsId="basicStandby3" dojoType="dojox.widget.Standby" target="basic3" color="red"></div>
 
