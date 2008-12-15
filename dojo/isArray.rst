@@ -31,7 +31,7 @@ isArray returns a Boolean you can use directly in conditionals:
 .. code-block :: javascript
  :linenos:
 
-  if(dojo.isArray(someVariable)){
+  if(dojo.isArray(someVariable)) {
     // do something
   }
 
@@ -40,11 +40,11 @@ Anything that is an Array can be iterated over by using `dojo.forEach <dojo/forE
 .. code-block :: javascript
   :linenos: 
 
-  if(dojo.isArray(list)){
-    dojo.forEach(list, function(item, i){
+  if(dojo.isArray(list)) {
+    dojo.forEach(list, function(item, i) {
         // each item in list
     });
-  }else{
+  } else {
     // something went wrong? we wanted an array here
   }
 
