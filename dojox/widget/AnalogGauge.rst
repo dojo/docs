@@ -365,20 +365,41 @@ Speedometer style gauge with arc indicator and needle indicator
       dojo.require("dojox.widget.gauge.AnalogArcIndicator");
       dojo.require("dojox.widget.gauge.AnalogNeedleIndicator");
 
-      // Used for a gradient arc indicator below:
-      var fill = {
-        'type': 'linear',
-        'x1': 50,
-        'y1': 50,
-        'x2': 550,
-        'y2': 550,
-        'colors': [{offset: 0, color: 'black'}, {offset: 0.5, color: 'black'}, {offset: 0.75, color: 'yellow'}, {offset: 1, color: 'red'}]
-      };
+      dojo.addOnLoad(function(){
+	  var gauge = dijit.byId('speedo');
+	  console.debug(gauge);
+	  // Used for a gradient arc indicator below:
+	  var fill = {
+	    'type': 'linear',
+	    'x1': 50,
+	    'y1': 50,
+	    'x2': 350,
+	    'y2': 350,
+	    'colors': [{offset: 0, color: 'black'}, {offset: 0.5, color: 'black'}, {offset: 0.75, color: 'yellow'}, {offset: 1, color: 'red'}]
+	  };
+	  gauge.addIndicator(new dojox.widget.gauge.AnalogArcIndicator({
+	    'value': 200,
+	    'width': 20,
+	    'offset': 150,
+	    'color': fill,
+	    'noChange': true,
+	    'hideValues': true
+	  }));
+	  gauge.addIndicator(new dojox.widget.gauge.AnalogArcIndicator({
+	    'value': 80,
+	    'width': 10,
+	    'offset': 150,
+	    'color': 'blue',
+	    'title': 'Arc',
+	    'hover': 'Arc: 80'
+	  }));
+      });
     </script>
 
   .. cv:: html
 
     <div dojoType="dojox.widget.AnalogGauge"
+      id='speedo'
       width="450"
       height="300"
       cx="225"
@@ -400,22 +421,6 @@ Speedometer style gauge with arc indicator and needle indicator
         low="100"
 	high="200"
         color="{'color': 'black'}">
-      </div>
-      <div dojoType="dojox.widget.gauge.AnalogArcIndicator"
-        value="200"
-        width="20"
-        offset="150"
-        color="black"
-        noChange="true"
-        hideValues="true">
-      </div>
-      <div dojoType="dojox.widget.gauge.AnalogArcIndicator"
-        value="80"
-        width="10"
-        offset="150"
-        color="blue"
-        title="Arc"
-        hover="Arc: 80">
       </div>
       <div dojoType="dojox.widget.gauge.AnalogNeedleIndicator"
         value="100"
