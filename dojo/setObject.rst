@@ -84,5 +84,5 @@ Examples
 See also
 ========
 
-* dojo.exists_
-* dojo.getObject_
+* `dojo.exists <dojo/exists>`_
+* `dojo.getObject <dojo/getObject>`_
