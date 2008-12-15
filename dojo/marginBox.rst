@@ -163,3 +163,10 @@ This example is showcasing the usage of dojo.marginBox as a setter, take a look 
         border: 1px solid #ccc;
       }
     </style>
+
+
+========
+See also
+========
+
+* `dojo.contentBox <dojo/contentBox>`_
