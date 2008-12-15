@@ -45,6 +45,75 @@ There are 4 indicators included as a part of the Analog Gauge widget:
 Examples
 ========
 
+A partial circle gauge with two indicators (programmatic)
+---------------------------------------------------------
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script>
+      dojo.require("dojox.widget.AnalogGauge");
+      dojo.require("dojox.widget.gauge.AnalogArrowIndicator");
+
+
+      function init() {
+        var gauge;
+        var ranges1 = [ {low:5, high:10, hover:'5 - 10'},
+          {low:10, high:20, hover:'10 - 20'},
+          {low:20, high:30, hover:'20 - 30'},
+          {low:30, high:40, hover:'30 - 40'},
+          {low:40, high:50, hover:'40 - 50'},
+          {low:50, high:60, hover:'50 - 60'},
+          {low:60, high:70, hover:'60 - 70'},
+          {low:70, high:75, hover:'70 - 75'}
+        ];
+        gauge = dojo.byId('defaultGauge');
+        gauge = new dojox.widget.AnalogGauge({
+          id: "defaultGauge",
+          width: 300,
+          height: 200,
+          cx: 150,
+          cy: 175,
+          radius: 125,
+          ranges: ranges1,
+          minorTicks: {
+            offset: 125,
+            interval: 5,
+            length: 5,
+            color: 'gray'
+          },
+          majorTicks: {
+            offset: 125,
+            interval: 10,
+            length: 10
+          },
+          indicators: [
+            new dojox.widget.gauge.AnalogArrowIndicator({
+              value:17, 
+              width: 3,
+              hover:'Value: 17', 
+              title: 'Value'
+           }),
+           new dojox.widget.gauge.AnalogLineIndicator({
+             value:6, 
+             color:'#D00000',
+             width: 3,
+             hover:'Target: 6',
+             title: 'Target'
+           })
+          ]
+        }, gauge);
+        gauge.startup();
+      }
+      dojo.addOnLoad(init);
+
+    </script>
+
+  .. cv:: html
+
+    <div id="defaultGauge"></div>
+
 A partial circle gauge with two indicators and a set of gradient ranges
 -----------------------------------------------------------------------
 
@@ -165,5 +234,195 @@ A partial circle gauge with two indicators and a set of gradient ranges
         width="3"
         hover="Value: 17"
         title="Value">
+      </div>
+    </div>
+
+
+A half circle gauge with two indicators overlay graphic
+-------------------------------------------------------
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script>
+      dojo.require("dojox.widget.AnalogGauge");
+      dojo.require("dojox.widget.gauge.AnalogArrowIndicator");
+    </script>
+
+  .. cv:: html
+
+    <div dojoType="dojox.widget.AnalogGauge"
+      width="350"
+      height="225"
+      cx="175"
+      cy="175"
+      radius="125"
+      startAngle="-90"
+      endAngle="90"
+      useRangeStyles="0"
+      hideValues="true"
+      majorTicks="{length: 5, offset: 125, interval: 5}"
+      image="{url:'/moin_static163/js/dojo/trunk/release/dojo/dojox/widget/tests/images/gaugeOverlay.png', width: 280, height: 155,x: 35, y: 38,overlay: true}">
+      <div dojoType="dojox.widget.gauge.Range"
+        low="0"
+	high="10"
+	hover="0 - 10"
+	color="{
+		'type': 'linear',
+		'colors': [{'offset': 0, 'color': '#606060'}, {'offset': 1, 'color': '#707070'}]
+	}">
+      </div>
+      <div dojoType="dojox.widget.gauge.Range"
+        low="10"
+        high="20"
+        hover="10 - 20"
+	color="{
+		'type': 'linear',
+		'colors': [{'offset': 0, 'color': '#707070'}, {'offset': 1, 'color': '#808080'}]
+	}">
+      </div>
+      <div  dojoType="dojox.widget.gauge.Range"
+        low="20"
+        high="30"
+        hover="20 - 30"
+	color="{
+		'type': 'linear',
+		'colors': [{'offset': 0, 'color': '#808080'}, {'offset': 1, 'color': '#909090'}]
+	}">
+      </div>
+      <div dojoType="dojox.widget.gauge.Range"
+        low="30"
+        high="40"
+        hover="30 - 40"
+	color="{
+		'type': 'linear',
+		'colors': [{'offset': 0, 'color': '#909090'}, {'offset': 1, 'color': '#A0A0A0'}]
+	}">
+      </div>
+      <div dojoType="dojox.widget.gauge.Range"
+         low="40"
+         high="50"
+         hover="40 - 50"
+	color="{
+		'type': 'linear',
+		'colors': [{'offset': 0, 'color': '#A0A0A0'}, {'offset': 1, 'color': '#B0B0B0'}]
+	}">
+      </div>
+      <div dojoType="dojox.widget.gauge.Range"
+        low="50"
+        high="60"
+        hover="50 - 60"
+	color="{
+		'type': 'linear',
+		'colors': [{'offset': 0, 'color': '#B0B0B0'}, {'offset': 1, 'color': '#C0C0C0'}]
+	}">
+      </div>
+      <div dojoType="dojox.widget.gauge.Range"
+        low="60"
+        high="70"
+        hover="60 - 70"
+	color="{
+		'type': 'linear',
+		'colors': [{'offset': 0, 'color': '#C0C0C0'}, {'offset': 1, 'color': '#D0D0D0'}]
+	}">
+      </div>
+      <div dojoType="dojox.widget.gauge.Range"
+        low="70"
+        high="75"
+        hover="70 - 75"
+	color="{
+		'type': 'linear',
+		'colors': [{'offset': 0, 'color': '#D0D0D0'}, {'offset': 1, 'color': '#E0E0E0'}]
+	}">
+      </div>
+      <div dojoType="dojox.widget.gauge.AnalogLineIndicator"
+        value="52"
+        color="{'color': '#D00000'}"
+        width="3"
+        hover="Target: 52"
+        title="Target">
+      </div>
+      <div dojoType="dojox.widget.gauge.AnalogArrowIndicator"
+        value="17"
+        length="125"
+        width="3"
+        hover="Value: 17"
+        title="Value">
+      </div>
+    </div>
+
+
+Speedometer style gauge with arc indicator and needle indicator
+---------------------------------------------------------------
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script>
+      dojo.require("dojox.widget.AnalogGauge");
+      dojo.require("dojox.widget.gauge.AnalogArcIndicator");
+      dojo.require("dojox.widget.gauge.AnalogNeedleIndicator");
+
+      // Used for a gradient arc indicator below:
+      var fill = {
+        'type': 'linear',
+        'x1': 50,
+        'y1': 50,
+        'x2': 550,
+        'y2': 550,
+        'colors': [{offset: 0, color: 'black'}, {offset: 0.5, color: 'black'}, {offset: 0.75, color: 'yellow'}, {offset: 1, color: 'red'}]
+      };
+    </script>
+
+  .. cv:: html
+
+    <div dojoType="dojox.widget.AnalogGauge"
+      width="450"
+      height="300"
+      cx="225"
+      cy="175"
+      radius="150"
+      startAngle="-135"
+      endAngle="135"
+      useRangeStyles="0"
+      hideValues="true"
+      color: "white"
+      majorTicks="{length: 10, offset: 105, interval: 10, color: 'gray'}"
+      minorTicks="{length: 5, offset: 105, interval: 5, color: 'gray'}">
+      <div dojoType="dojox.widget.gauge.Range"
+        low="0"
+	high="100"
+        color="{'color': 'black'}">
+      </div>
+      <div dojoType="dojox.widget.gauge.Range"
+        low="100"
+	high="200"
+        color="{'color': 'black'}">
+      </div>
+      <div dojoType="dojox.widget.gauge.AnalogArcIndicator"
+        value="200"
+        width="20"
+        offset="150"
+        color="{'color': 'black'}"
+        noChange="true"
+        hideValues="true">
+      </div>
+      <div dojoType="dojox.widget.gauge.AnalogArcIndicator"
+        value="80"
+        width="10"
+        offset="150"
+        color="{'color': 'blue'}"
+        title="Arc"
+        hover="Arc: 80">
+      </div>
+      <div dojoType="dojox.widget.gauge.AnalogNeedleIndicator"
+        value="100"
+        width="8"
+        length="150"
+        color="{'color': 'red'}"
+        title="Needle"
+        hover="Needle: 100">
       </div>
     </div>
