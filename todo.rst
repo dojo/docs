@@ -33,10 +33,6 @@ Top priority: Dojo Base
 
   needed: explain DOM event listener in detail
 
-* `dojo.isObject <dojo/isObject>`_
-
-  needed: Introduction, Usage
-
 * `dojo.isArrayLike <dojo/isArrayLike>`_
 
   needed: Introduction, Usage
