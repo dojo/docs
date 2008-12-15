@@ -222,7 +222,7 @@ A partial circle gauge with two indicators and a set of gradient ranges
       <div dojoType="dojox.widget.gauge.AnalogLineIndicator"
         id="target"
         value="52"
-        color="{'color': '#D00000'}"
+        color="#D00000"
         width="3"
         hover="Target: 52"
         title="Target">
@@ -338,7 +338,7 @@ A half circle gauge with two indicators overlay graphic
       </div>
       <div dojoType="dojox.widget.gauge.AnalogLineIndicator"
         value="52"
-        color="{'color': '#D00000'}"
+        color="#D00000"
         width="3"
         hover="Target: 52"
         title="Target">
@@ -405,7 +405,7 @@ Speedometer style gauge with arc indicator and needle indicator
         value="200"
         width="20"
         offset="150"
-        color="{'color': 'black'}"
+        color="black"
         noChange="true"
         hideValues="true">
       </div>
@@ -413,7 +413,7 @@ Speedometer style gauge with arc indicator and needle indicator
         value="80"
         width="10"
         offset="150"
-        color="{'color': 'blue'}"
+        color="blue"
         title="Arc"
         hover="Arc: 80">
       </div>
@@ -421,7 +421,7 @@ Speedometer style gauge with arc indicator and needle indicator
         value="100"
         width="8"
         length="150"
-        color="{'color': 'red'}"
+        color="red"
         title="Needle"
         hover="Needle: 100">
       </div>
