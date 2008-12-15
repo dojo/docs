@@ -113,4 +113,4 @@ This example is showcasing the usage of dojo.contentBox as a setter, take a look
 See also
 ========
 
-* `dojo.marginBox <dojo/marginBox`_
+* `dojo.marginBox <dojo/marginBox>`_
