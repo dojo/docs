@@ -108,7 +108,6 @@ This example is showcasing the usage of dojo.contentBox as a setter, take a look
     </style>
 
 
-
 ========
 See also
 ========
