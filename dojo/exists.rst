@@ -62,5 +62,5 @@ The second ``root`` parameter is optional, ``dojo.exists`` will use the value of
 See also
 ========
 
-* `dojo.getObject <dojo/getObject>_`
-* `dojo.setObject <dojo/setObject>_`
+* `dojo.getObject <dojo/getObject>`_
+* `dojo.setObject <dojo/setObject>`_
