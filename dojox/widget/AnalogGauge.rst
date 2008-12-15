@@ -124,6 +124,26 @@ A partial circle gauge with two indicators and a set of gradient ranges
     <script>
       dojo.require("dojox.widget.AnalogGauge");
       dojo.require("dojox.widget.gauge.AnalogArrowIndicator");
+
+      dojo.addOnLoad(function(){
+        var gauge = dijit.byId('declarativeGauge');
+        gauge.addIndicator(new dojox.widget.gauge.AnalogLineIndicator({
+          'id': 'target',
+          'value': '52,
+          'color': '#D00000',
+          'width': 3,
+          'hover': 'Target: 52',
+          'title': 'Target'
+        }));
+        gauge.addIndicator(new dojox.widget.gauge.AnalogArrowIndicator({
+          'id': 'value',
+          'value': 17,
+          'length': 135,
+          'width': 3,
+          'hover': 'Value: 17',
+          'title': 'Value'
+        }));
+      });
     </script>
 
   .. cv:: html
@@ -219,22 +239,6 @@ A partial circle gauge with two indicators and a set of gradient ranges
 		'colors': [{'offset': 0, 'color': '#D0D0D0'}, {'offset': 1, 'color': '#E0E0E0'}]
 	}">
       </div>
-      <div dojoType="dojox.widget.gauge.AnalogLineIndicator"
-        id="target"
-        value="52"
-        color="#D00000"
-        width="3"
-        hover="Target: 52"
-        title="Target">
-      </div>
-      <div dojoType="dojox.widget.gauge.AnalogArrowIndicator"
-        id="value"
-        value="17"
-        length="135"
-        width="3"
-        hover="Value: 17"
-        title="Value">
-      </div>
     </div>
 
 
@@ -248,11 +252,30 @@ A half circle gauge with two indicators overlay graphic
     <script>
       dojo.require("dojox.widget.AnalogGauge");
       dojo.require("dojox.widget.gauge.AnalogArrowIndicator");
+
+      dojo.addOnLoad(function(){
+        var gauge = dijit.byId('halfCircle');
+        gauge.addIndicator(new dojox.widget.gauge.AnalogLineIndicator({
+          'value': 52,
+          'color': '#D00000,
+          'width': 3,
+          'hover': 'Target: 52',
+          'title': 'Target'
+        }));
+        gauge.addIndicator(new dojox.widget.gauge.AnalogArrowIndicator({
+          'value': 17,
+          'length': 125,
+          'width': 3,
+          'hover': 'Value: 17',
+          'title': 'Value'
+        }));
+      });
     </script>
 
   .. cv:: html
 
     <div dojoType="dojox.widget.AnalogGauge"
+      id="halfCircle"
       width="350"
       height="225"
       cx="175"
@@ -335,20 +358,6 @@ A half circle gauge with two indicators overlay graphic
 		'type': 'linear',
 		'colors': [{'offset': 0, 'color': '#D0D0D0'}, {'offset': 1, 'color': '#E0E0E0'}]
 	}">
-      </div>
-      <div dojoType="dojox.widget.gauge.AnalogLineIndicator"
-        value="52"
-        color="#D00000"
-        width="3"
-        hover="Target: 52"
-        title="Target">
-      </div>
-      <div dojoType="dojox.widget.gauge.AnalogArrowIndicator"
-        value="17"
-        length="125"
-        width="3"
-        hover="Value: 17"
-        title="Value">
       </div>
     </div>
 
