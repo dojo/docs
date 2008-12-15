@@ -1,6 +1,6 @@
 #format dojo_rst
 
-dojox.form.Manager
+dojox.form.manager
 ==================
 
 :Status: Draft
