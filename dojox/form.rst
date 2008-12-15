@@ -29,11 +29,11 @@ The dojox.form project provides additional form-related widgets beyond `dijit.fo
 
   description?
 
-* `dojox.form.FilePickerTextBox <dojox.form.FilePickerTextBox>`_
+* `dojox.form.FilePickerTextBox <dojox/form/FilePickerTextBox>`_
 
   A dijit._FormWidget that adds a dojox.widget.FilePicker to a text box as a dropdown
 
-* `dojox.form.FileUploader <dojox.form.FileUploader>`_
+* `dojox.form.FileUploader <dojox/form/FileUploader>`_
 
   A new multi-file uploader that shows progress as the files are uploading
 
