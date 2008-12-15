@@ -145,4 +145,4 @@ With V1.3 each new feature needs a proper documentation at docs.dojocampus.org -
 
 * `dojox.form.Manager <dojox/form/Manager>`_
 
-  needed: full page
+  needed: examples?
