@@ -15,25 +15,26 @@ Checks if the parameter is a built-in function.
 As with all dojo._base components, these functions are included within Dojo Base. You get this functionality by just including dojo.js or dojo.xd.js in your page.
 
 
-============
-Introduction
-============
-
-TODO: introduce the component/class/method
-
-
 =====
 Usage
 =====
 
-TODO: how to use the component/class/method
+Use this to test if a variable is a built-in function.
 
 .. code-block :: javascript
- :linenos:
+  :linenos:
 
- <script type="text/javascript">
-   // your code
- </script>
+  dojo.isAlien(foo) 
+
+Returns true if it is a built-in function or some other kind of oddball that *should* report as a function but doesn't.
+
+.. code-block :: javascript
+  :linenos:
+
+  // Check, if variable "foo" is a built-in function:
+  if(dojo.isAlien(foo)){ 
+      // do something...
+  }
 
 
 ========
@@ -65,8 +66,8 @@ Test against isAlien()
 
             // Here comes the test:
             // Is t an built-in function?
-            if (dojo.isArray(t)) {
-                // dojooo: t is an array!
+            if (dojo.isAlien(t)) {
+                // dojooo: t is a built-in function!
                 dojo.attr(resultDiv, "innerHTML", 
                     "Yes, good choice: 't' is a built-in function.<br />Try another button.");
 
@@ -76,7 +77,7 @@ Test against isAlien()
                     "color": "black"
                 });
             } else {
-                // no chance, this can't be an array:
+                // no chance, this can't be a built-in function:
                 dojo.attr(resultDiv, "innerHTML", 
                     "No chance: 't' can't be a built-in function with such a value " 
                      + "('t' seems to be a " + typeof t + ").<br />"
