@@ -127,6 +127,7 @@ A partial circle gauge with two indicators and a set of gradient ranges
 
       dojo.addOnLoad(function(){
         var gauge = dijit.byId('declarativeGauge');
+        console.debug(gauge);
         gauge.addIndicator(new dojox.widget.gauge.AnalogLineIndicator({
           'id': 'target',
           'value': '52,
@@ -255,6 +256,7 @@ A half circle gauge with two indicators overlay graphic
 
       dojo.addOnLoad(function(){
         var gauge = dijit.byId('halfCircle');
+        console.debug(gauge);
         gauge.addIndicator(new dojox.widget.gauge.AnalogLineIndicator({
           'value': 52,
           'color': '#D00000,
