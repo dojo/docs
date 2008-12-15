@@ -15,25 +15,26 @@ Checks if the parameter is an Object.
 As with all dojo._base components, these functions are included within Dojo Base. You get this functionality by just including dojo.js or dojo.xd.js in your page.
 
 
-============
-Introduction
-============
-
-TODO: introduce the component/class/method
-
-
 =====
 Usage
 =====
 
-TODO: how to use the component/class/method
+Use this to test if a variable is an object
 
 .. code-block :: javascript
- :linenos:
+  :linenos:
 
- <script type="text/javascript">
-   // your code
- </script>
+  dojo.isObject(foo) 
+
+Returns true if it is a JavaScript object (or an Array, a Function or null).
+
+.. code-block :: javascript
+  :linenos:
+
+  // Check, if variable "foo" is an object:
+  if(dojo.isObject(foo)){ 
+      // do something...
+  }
 
 
 ========
