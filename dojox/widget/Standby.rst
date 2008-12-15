@@ -11,7 +11,7 @@ dojox.widget.Standby
 .. contents::
    :depth: 2
 
-Ever want to mark a widget as busy?  Ever have a time it was taking a grid a bit to fetch data?  Ever want to verlay some progress information on top of a login widget?  Well, this little widget solves all those scenarios!  The dojox.widget.Standby widget is designed as a 'overlay' style widget that will position a translucent overlay in a color of your choice with a graphic of your choice ontop of of any visible DOM node in your page.  The widget overlay blocks access to the underlying DOM node and will even track the DOM node's position so that if it moves, the overlay will shift its position to match.  It's very simple and easy to use!  
+Ever want to mark a widget as busy?  Ever have a time it was taking a grid a bit to fetch data?  Ever want to overlay some progress information on top of a login widget?  Well, this little widget solves all those scenarios!  The dojox.widget.Standby widget is designed as a 'overlay' style widget that will position a translucent overlay in a color of your choice with a graphic of your choice on top of of any visible DOM node in your page.  The widget overlay blocks access to the underlying DOM node and will even track the DOM node's position so that if it moves, the overlay will shift its position to match.  It's very simple and easy to use!  
 
 **Note:** There have been several examples of this style of widget around, including one done by Peter Higgins as an example of writing a dojo widget.  None of them, though, handle all the cases this one does.  It will mirror over any CSS applied curved borders in Firefox and Safari, as well as any CSS3 compliant broswer, it will track position and update if the target node moves.  It will also rescale itself should the target rescale as well as try to adapt for any margins applied to the target.
 
@@ -29,7 +29,7 @@ Known issues
 Usage
 =====
 
-Using the widget is simple.  At its most basic form, all you have to provide the widget on construction is a value for 'target', the id of a DOM noe or widget, or a direct reference to the dom node you want to overlay.  When you want it to appear, you invoke the 'show' function of the widget.  When you want it to hide, you invoke the 'hide' function.  That's all there is to it.
+Using the widget is simple.  At its most basic form, all you have to provide the widget on construction is a value for 'target', the id of a DOM node or widget, or a direct reference to the dom node you want to overlay.  When you want it to appear, you invoke the 'show' function of the widget.  When you want it to hide, you invoke the 'hide' function.  That's all there is to it.
 
 For more custom control, you can also set the 'color' attribute on the widget to a color to use for the overlay as well as an 'image' attribute with the location/url of an image to center in the middle of the widget.  Its default image is the same one that dojox.image.Lightbox uses, a basic spinner/busy animated gif.
 
@@ -45,7 +45,6 @@ Example 1: Basic usage
       dojo.require("dijit.form.Button");
 
       function init(){
-         basicStandby1.domNode.parentNode.removeChild(basicStandby1.domNode);
          document.body.appendChild(basicStandby1.domNode);
          dojo.connect(b1, "onClick", function(){basicStandby1.show();});
          dojo.connect(b2, "onClick", function(){basicStandby1.hide();});
@@ -93,6 +92,39 @@ Example 2: Programmatic creation
     <button jsId="b3" dojoType="dijit.form.Button">Show Standby widget</button>
     <button jsId="b4" dojoType="dijit.form.Button">Hide Standby widget</button>
     <div id="basic2" style="width: 300px; height: 150px; background-color: yellow; border-style: solid; border-width: 2px;"></div>
+
+  .. cv:: css
+
+    <style type="text/css">
+      @import "/moin_static163/js/dojo/release/dojox/widget/Standby/Standby.css";
+    </style>
+
+
+Example 3: Changing overlay color
+---------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojox.widget.Standby");
+      dojo.require("dijit.form.Button");
+
+      function init(){
+         document.body.appendChild(basicStandby3.domNode);
+         dojo.connect(b5, "onClick", function(){basicStandby3.show();});
+         dojo.connect(b6, "onClick", function(){basicStandby3.hide();});
+      }
+      dojo.addOnLoad(init);
+    </script>
+
+  .. cv :: html 
+
+    <button jsId="b1" dojoType="dijit.form.Button">Show Standby widget</button>
+    <button jsId="b2" dojoType="dijit.form.Button">Hide Standby widget</button>
+    <div id="basic3" style="width: 300px; height: 150px; background-color: yellow; border-style: solid; border-width: 2px;"></div>
+    <div jsId="basicStandby3" dojoType="dojox.widget.Standby" target="basic3" color="red"></div>
 
   .. cv:: css
 
