@@ -212,6 +212,10 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 
     Support for Polymorphism
 
+    * `dojo.hitch <dojo/hitch>`_
+
+      Function that generates a wrapper function that ensures a function that will only ever execute in a defined scope.
+
     * `dojo.isString <dojo/isString>`_
 
       Checks if the parameter is a String
