@@ -156,7 +156,7 @@ Example 5: Changing overlay color and image
 
     <button jsId="b7" dojoType="dijit.form.Button">Show Standby widget</button>
     <button jsId="b8" dojoType="dijit.form.Button">Hide Standby widget</button>
-    <div id="basic4" style="width: 300px; height: 150px; background-color: yellow; border-style: solid; border-width: 2px;"></div>
+    <div id="basic4" style="width: 400px; height: 400px; background-color: yellow; border-style: solid; border-width: 2px;"></div>
     <div jsId="basicStandby4" dojoType="dojox.widget.Standby" target="basic4" color="darkred" image="/moin_static163/js/dojo/release/dojox/widget/tests/images/busy.gif"></div>
 
   .. cv:: css
