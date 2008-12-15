@@ -27,8 +27,6 @@ Use this to test if a variable is a string
   if(dojo.isString(foo)){ ...
 
 
-
-
 ========
 Examples
 ========
