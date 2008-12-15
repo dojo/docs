@@ -37,7 +37,7 @@ The dojox.form project provides additional form-related widgets beyond `dijit.fo
 
   A new multi-file uploader that shows progress as the files are uploading
 
-* `dojox.form.Manager <dojox/form/manager>`_
+* `dojox.form.Manager <dojox/form/Manager>`_
 
   A widget and a collection of mxinis to manage complex event-driven dynamic forms
 
