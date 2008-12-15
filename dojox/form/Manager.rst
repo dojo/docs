@@ -11,7 +11,6 @@ dojox.form.Manager
 .. contents::
    :depth: 2
 
-
 ============
 Introduction
 ============
