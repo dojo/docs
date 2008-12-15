@@ -393,6 +393,15 @@ Speedometer style gauge with arc indicator and needle indicator
 	    'title': 'Arc',
 	    'hover': 'Arc: 80'
 	  }));
+          gauge.addIndicator(new dojox.widget.gauge.AnalogNeedleIndicator({
+            'value': 100,
+            'width': 8,
+            'length': 150,
+            'color': 'red',
+            'title': 'Needle',
+            'hover': 'Needle: 100'
+          }));
+      </div>
       });
     </script>
 
@@ -421,13 +430,5 @@ Speedometer style gauge with arc indicator and needle indicator
         low="100"
 	high="200"
         color="{'color': 'black'}">
-      </div>
-      <div dojoType="dojox.widget.gauge.AnalogNeedleIndicator"
-        value="100"
-        width="8"
-        length="150"
-        color="red"
-        title="Needle"
-        hover="Needle: 100">
       </div>
     </div>
