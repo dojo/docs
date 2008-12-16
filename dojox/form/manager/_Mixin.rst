@@ -52,7 +52,7 @@ Example:
 Value access
 ------------
 
-Methods in this category provides primitives for low-level access to values of individual form elements. For high-level access to values use `_ValueMixin <dojox/form/manager/_ValueMixin>`_.
+Methods in this category provide primitives for low-level access to values of individual form elements. For high-level access to values use `_ValueMixin <dojox/form/manager/_ValueMixin>`_.
 
 formWidgetValue
 ~~~~~~~~~~~~~~~
@@ -76,17 +76,132 @@ The returned value is:
 formPointValue
 ~~~~~~~~~~~~~~
 
+This method is similar to formWidgetValue_ method but works on `nodes attached to the widget itself <dojox/form/manager#controlled-elements>`_:
+
+.. code-block :: javascript
+
+  // reading the value
+  var value = fm.formPointValue("firstName");
+  // writing the value
+  fm.formPointValue("lastName", "Jane");
+
+Usage and syntax is exactly the same as for formWidgetValue_.
+
 Inspection
 ----------
+
+Methods in this category provide primitives to iterate over controlled elements. These methods are major building blocks for all other mixins. In most cases you should avoid using them directly relying on more high-level methods of other mixins. Do use them if you write your own mixins.
 
 inspectFormWidgets
 ~~~~~~~~~~~~~~~~~~
 
+This method iterates over controlled elements:
+
+.. code-block :: javascript
+
+  var inspector = function(name, widget, value){
+    var oldValue = this.formWidgetValue(name);
+    this.formWidgetValue(name, value);
+    return oldValue;
+  };
+  
+  var state = ["firstName", "lastName"];
+  
+  var defaultValue = "X";
+  
+  fm.inspectFormWidgets(inspector, state, defaultValue);
+
+There are three ways to use this method:
+
+1. ``state`` is an array of form names. In this case ``inspector`` is called with with the same 3rd parameter ``defaultValue`` for every widget in the array. The above example uses this form of inspection: both ``lastName`` and ``firstName`` will be set to ``"X"``.
+
+2. ``state`` is an object. In this case keys of the object are form names, while corresponding values are actual values to be passed to ``inspector`` as the 3rd parameter (in this case ``defaultValue`` is not used):
+
+  .. code-block :: javascript
+
+    var state = {
+      firstName: "Jill",
+      lastName:  "Taylor"
+    };
+    fm.inspectFormWidgets(inspector, state);
+
+  The above example sets ``lastName`` to ``"Taylor"`` and ``firstName`` to ``"Jill"``.
+
+3. ``state`` is ``null`` or missing. In this case the method will iterate over all controlled widgets passing ``defaultValue`` as the value parameter to ``inspector``.
+
+  .. code-block :: javascript
+
+    fm.inspectFormWidgets(inspector, null, "X");
+
+  The above example sets all controlled widgets to ``"X"``.
+
+While iterating the method collects all returned values of ``inspector`` in an object keyed by corresponding widget names, and returns it as the result.
+
+.. code-block :: javascript
+
+  var state = {
+    firstName: "Jill",
+    lastName:  "Taylor"
+  };
+  var result = fm.inspectFormWidgets(inspector, state);
+  
+  console.log(result.firstName);                // Jane
+  console.log(result.lastName);                 // Smith
+  
+  console.log(fm.formWidgetValue("firstName")); // Jill
+  console.log(fm.formWidgetValue("lastName"));  // Taylor
+
+``inspector`` function is called for every inspected widget in the context of the form manager. It has following signature:
+
+.. code-block :: javascript
+
+  var inspector = function(name, widget, value){
+    // ...
+    return someValue;
+  };
+
+``name`` is the name of the inspected widget, ``widget`` is the widget itself (or an array of widgets for radio button widgets), ``value`` is the value passed to the function according to the above described rules. ``inspector``'s return value will be collected and returned as a part of the result object as described above.
+
+What ``inspector`` does is up to you. It can modify or just read widget values. It can return something meaningful or nothing at all. It is strongly suggested to use other form manager's methods to get/set widget values rather than doing it manually.
+
 inspectAttachedPoints
 ~~~~~~~~~~~~~~~~~~~~~
 
+This method is similar to inspectFormWidgets_ method but works on `nodes attached to the widget itself <dojox/form/manager#controlled-elements>`_. The only difference is the inspector signature, which uses a DOM node instead of a widget:
+
+.. code-block :: javascript
+
+  var inspector = function(name, node, value){
+    // ...
+    return someValue;
+  };
+
+Everything else is the same. Example:
+
+.. code-block :: javascript
+
+  var inspector = function(name){
+    return this.formPointValue(name);
+  };
+  
+  // collect all current values of attached nodes
+  var result = fm.inspectAttachedPoints(inspector);
+
 inspect
 ~~~~~~~
+
+This is the high-level method, which has the same signature as inspectFormWidgets_ and inspectAttachedPoints_. The major difference is: it iterates over widgets **and** attached nodes **and** form nodes (for the last one you have to include `_NodeMixin <dojox/form/manager/_NodeMixin>`_):
+
+.. code-block :: javascript
+
+  var inspector = function(name){
+    return this.formPointValue(name);
+  };
+  
+  // collect all current values of attached nodes
+  var result = fm.inspect(inspector);
+
+``inspector``'s signature is similar to inspectFormWidgets_'s ``inspector``, but the 2nd argument will be a form widget for widgets, a DOM node for attached nodes and form nodes, or an array of widgets or DOM nodes for radio buttons.
 
 Registration
 ------------
