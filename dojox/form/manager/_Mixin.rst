@@ -133,7 +133,7 @@ There are three ways to use this method:
 
   The above example sets ``lastName`` to ``"Taylor"`` and ``firstName`` to ``"Jill"``.
 
-3. ``state`` is ``null`` or missing. In this case the method will iterate over all controlled widgets passing ``defaultValue`` as the value parameter to ``inspector``.
+3. ``state`` is ``null`` or missing. In this case the method will iterate over all controlled widgets passing ``defaultValue`` as the ``value`` parameter to ``inspector``.
 
   .. code-block :: javascript
 
