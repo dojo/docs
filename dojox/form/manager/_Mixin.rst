@@ -17,6 +17,8 @@ Introduction
 
 This class is the main component of the form manager, which provides the initialization and core functionality. It can be used on its own as a mixin to other widgets, or as a part of `dojox.form.Manager <dojox/form/Manager>`_. All other form manager mixins require this class to be mixed in as well.
 
+On startup this mixin inspects its body and registers all found form widgets, and attached nodes (by ``dojoAttachPoint``).
+
 ======================
 Methods and properties
 ======================
@@ -53,6 +55,8 @@ Value access
 ------------
 
 Methods in this category provide primitives for low-level access to values of individual form elements. For high-level access to values use `_ValueMixin <dojox/form/manager/_ValueMixin>`_.
+
+Note: `_NodeMixin <dojox/form/manager/_NodeMixin>`_ implements a complimentary method: `formNodeValue <dojox/form/manager/_NodeMixin#formNodeValue>`_.
 
 formWidgetValue
 ~~~~~~~~~~~~~~~
@@ -91,6 +95,8 @@ Inspection
 ----------
 
 Methods in this category provide primitives to iterate over controlled elements. These methods are major building blocks for all other mixins. In most cases you should avoid using them directly relying on more high-level methods of other mixins. Do use them if you write your own mixins.
+
+Note: `_NodeMixin <dojox/form/manager/_NodeMixin>`_ implements a complimentary method: `inspectFormNodes <dojox/form/manager/_NodeMixin#inspectFormNodes>`_.
 
 inspectFormWidgets
 ~~~~~~~~~~~~~~~~~~
@@ -206,20 +212,76 @@ This is the high-level method, which has the same signature as inspectFormWidget
 Registration
 ------------
 
+These functions can register/unregister widgets. In most cases these methods are not used directly because `dojox.form.manager._Mixin`_ registers all children form widgets automatically. But if you create/delete widgets dynamically, you should register/unregister them manually.
+
+Note: `_NodeMixin <dojox/form/manager/_NodeMixin>`_ implements complimentary methods: `registerNode <dojox/form/manager/_NodeMixin#registerNode>`_, `unregisterNode <dojox/form/manager/_NodeMixin#unregisterNode>`_, `registerNodeDescendants <dojox/form/manager/_NodeMixin#registerNodeDescendants>`_, `unregisterNodeDescendants <dojox/form/manager/_NodeMixin#unregisterNodeDescendants>`_.
+
 registerWidget
 ~~~~~~~~~~~~~~
+
+This method registers a form widget with a form manager, and connects its observers. This widget is not required to be a descendant of the form manager it is being registered with. Three signatures are recognized:
+
+1. Register by widget id:
+
+  .. code-block :: javascript
+
+    fm.registerWidget(id);
+
+2. Register by widget's DOM node:
+
+  .. code-block :: javascript
+
+    fm.registerWidget(node);
+
+3. Register a widget object:
+
+  .. code-block :: javascript
+
+    fm.registerWidget(widget);
 
 unregisterWidget
 ~~~~~~~~~~~~~~~~
 
+This method disconnects widget's observers, and removes it from internal structures of a form manager. The only way to unregister a widget is by its form name:
+
+.. code-block :: javascript
+
+  fm.unregisterWidget(name);
+
 registerWidgetDescendants
 ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This method calls registerWidget_ for every descendant form widget of a given widget (usually a layout widget). This method is useful when you add several widgets dynamically. These widgets do not need to be descendants of the form manager they are being registered with. For example you can register a dialog widget, which is attached directly to the ``body`` element.
+
+Like with registerWidget_ widget three signatures are recognized:
+
+1. Register by widget id:
+
+  .. code-block :: javascript
+
+    fm.registerWidgetDescendants(id);
+
+2. Register by widget's DOM node:
+
+  .. code-block :: javascript
+
+    fm.registerWidgetDescendants(node);
+
+3. Register by specifying a widget object:
+
+  .. code-block :: javascript
+
+    fm.registerWidgetDescendants(widget);
 
 unregisterWidgetDescendants
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+This method calls unregisterWidget_ for every descendant form widget of a given widget (usually a layout widget). Its signature is the same as registerWidgetDescendants_'s signature (all three variants).
+
 Lifecycle
 ---------
+
+Lifecycle methods are part of every widget. They are used to initialize and destroy a widget. If you mix `dojox.form.manager._Mixin`_ in your own widget, make sure that this methods are not overwritten. If you overwrite them, make sure to call ``this.inherited(arguments)`` at the appropriate place, so they can initialize/destroy the widget properly.
 
 startup
 ~~~~~~~
@@ -244,4 +306,4 @@ dojox.form.manager._keys
 Technical notes
 ===============
 
-`_Mixin`_ extends `dijit._Widget <dijit/_Widget>`_ with an extra attribute: observer. It makes this attribute valid for all widgets. You can read more on observers in the `dojox.form.manager event processing documentation <dojox/form/manager#event-processing>`_.
+`_Mixin`_ extends `dijit._Widget <dijit/_Widget>`_ with an extra attribute: ``observer``. It makes this attribute valid for all widgets. You can read more on observers in the `dojox.form.manager event processing documentation <dojox/form/manager#event-processing>`_.
