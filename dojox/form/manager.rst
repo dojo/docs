@@ -151,7 +151,7 @@ The form manager package consists of the main widget: `dojox.form.Manager <dojox
 
 * `_ValueMixin <dojox/form/manager/_ValueMixin>`_
 
-  *Optional.* Provides a unified way to access (get/set) a value of any controlled element. Provides group-get/set functionality as well. This is one of the most popular mixins.
+  *Optional.* Provides a unified way to access (get/set) a value of any controlled element. Provides group-get/set functionality as well. This is one of the most useful mixins.
 
 * `_EnableMixin <dojox/form/manager/_EnableMixin>`_
 
