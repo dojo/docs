@@ -1,7 +1,7 @@
 #format dojo_rst
 
 dojox.form.manager._FormMixin
-=========================
+=============================
 
 :Status: Draft
 :Version: 1.3 (trunk)
