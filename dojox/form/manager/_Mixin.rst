@@ -69,6 +69,7 @@ This method allows to get/set values of controlled form widgets. It can be used 
 The first parameter is a name of `a controlled form element <dojox/form/manager#controlled-elements>`_ (a string). The optional second parameter is a value to be set. It is usually a string too.
 
 The returned value is:
+
 * A form element's value for the getter version.
 * The form manager itself for the setter version providing easy chaining.
 
