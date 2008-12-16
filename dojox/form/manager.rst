@@ -167,7 +167,7 @@ The form manager package consists of the main widget: `dojox.form.Manager <dojox
 
 You don't have to use `Manager <dojox/form/Manager>`_ directly. In many cases it is more beneficial to add form manager mixins directly to your custom widget adding a required functionality. Think of mixins as "plugins" for other widgets.
 
-This architecture provides for ultimate flexibility. All functionality is in mixins, and users can mix and match only necessary features conserving the downloadable bytes, if needed. Writing additional mixins is supported and actively encouraged!
+This architecture provides for ultimate flexibility. All functionality is in mixins, and user can mix and match only necessary features conserving the downloadable bytes, if needed. Writing additional mixins is supported and actively encouraged!
 
 `Manager <dojox/form/Manager>`_ is a simple widget that includes all above listed mixins, and treats its body as a template. Using it you don't need to put the template in the separate file but can do it completely inline. It allows to use normal template-specific directives for `dojo.parser() <dojo/parser>`_: ``dojoAttachPoint``, ``dojoAttachEvent``, and a special directive used in the form manager: ``observer`` to designate methods to be called for all high-level change events on this element (a form widget or an HTML form element). You can use it as is, or as a sample code for your own custom widgets.
 
