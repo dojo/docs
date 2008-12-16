@@ -54,7 +54,7 @@ Inspection
 
 Methods in this category provide primitives to iterate over controlled elements. These methods are major building blocks for all other mixins. In most cases you should avoid using them directly relying on more high-level methods of other mixins. Do use them if you write your own mixins.
 
-Note: this section is similar to 
+Note: this section is similar to
 This method allows to get/set values of controlled form nodes. It is modeled after `dojox.form.manager._Mixin's inspectFormWidget() <dojox/form/manager/_Mixin#inspection>`_.
 
 inspectFormNodes
@@ -206,3 +206,13 @@ Additional functions
 
 dojox.form.manager.changeEvent
 ------------------------------
+
+This is the low-level helper function, which returns an appropriate change event for a give DOM node.
+
+.. code-block :: javascript
+
+  var button = dojo.doc.createElement("button"),
+      select = dojo.doc.createElement("select");
+
+  console.log(dojox.form.manager.changeEvent(button)); // onclick
+  console.log(dojox.form.manager.changeEvent(select)); // onchange
