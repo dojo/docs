@@ -165,7 +165,7 @@ The form manager package consists of the main widget: `dojox.form.Manager <dojox
 
   *Optional.* Provides a unified way to add/remove a CSS class on any controlled element with a group-get/set functionality as well.
 
-You don't need to use `Manager <dojox/form/Manager>`_ directly. In many cases it is more beneficial to add form manager mixins directly to your custom widget adding a required functionality. Think of mixins as "plugins" for other widgets.
+You don't have to use `Manager <dojox/form/Manager>`_ directly. In many cases it is more beneficial to add form manager mixins directly to your custom widget adding a required functionality. Think of mixins as "plugins" for other widgets.
 
 This architecture provides for ultimate flexibility. All functionality is in mixins, and users can mix and match only necessary features conserving the downloadable bytes, if needed. Writing additional mixins is supported and actively encouraged!
 
