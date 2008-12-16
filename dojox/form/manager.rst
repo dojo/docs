@@ -75,7 +75,7 @@ Example:
 
 This fictitious form demonstrates following:
 
-* The form manager widget is created in line #1. Note that this example doesn't use the ``<form>`` tag.
+* The form manager widget is created on line #1. Note that this example doesn't use the ``<form>`` tag.
 * The form widget on line #2 will be automatically recognized as a controlled element. It can be accessed as ``"w01"``.
 * The form node on line #3 will be automatically recognized as a controlled element, if node processing is added like in this example. It cn be accessed as ``"e03"``.
 * The span node on line #4 will be automatically recognized as a controlled element. Its value can be read/written because it is marked with the CSS class ``dojoFormValue``.
