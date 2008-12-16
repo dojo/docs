@@ -327,7 +327,7 @@ This is a slightly different adapter for arrays versus widgets/nodes. The differ
   var adapted = dojox.form.manager.inspectorAdapter(inspector);
   fm.inspect(adapted);
 
-This adapter is useful when you want to do a uniform inspection o form elements, e.g., reading and returning their values.
+This adapter is useful when you want to do a uniform inspection of form elements, e.g., reading and returning their values.
 
 dojox.form.manager._keys
 ------------------------
