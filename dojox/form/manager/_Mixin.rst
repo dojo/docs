@@ -110,11 +110,11 @@ This method iterates over controlled elements:
     this.formWidgetValue(name, value);
     return oldValue;
   };
-  
+
   var state = ["firstName", "lastName"];
-  
+
   var defaultValue = "X";
-  
+
   fm.inspectFormWidgets(inspector, state, defaultValue);
 
 There are three ways to use this method:
@@ -150,10 +150,10 @@ While iterating the method collects all returned values of ``inspector`` in an o
     lastName:  "Taylor"
   };
   var result = fm.inspectFormWidgets(inspector, state);
-  
+
   console.log(result.firstName);                // Jane
   console.log(result.lastName);                 // Smith
-  
+
   console.log(fm.formWidgetValue("firstName")); // Jill
   console.log(fm.formWidgetValue("lastName"));  // Taylor
 
@@ -189,7 +189,7 @@ Everything else is the same. Example:
   var inspector = function(name){
     return this.formPointValue(name);
   };
-  
+
   // collect all current values of attached nodes
   var result = fm.inspectAttachedPoints(inspector);
 
@@ -203,7 +203,7 @@ This is the high-level method, which has the same signature as inspectFormWidget
   var inspector = function(name){
     return this.formPointValue(name);
   };
-  
+
   // collect all current values of attached nodes
   var result = fm.inspect(inspector);
 
@@ -286,21 +286,53 @@ Lifecycle methods are part of every widget. They are used to initialize and dest
 startup
 ~~~~~~~
 
+This is the standard method of any widget. It is responsible for starting up the widget after it was created and the DOM was parsed. For more details, see `dijit._Widget <dijit/_Widget>`_.
+
 destroy
 ~~~~~~~
+
+This is the standard method of any widget. It is responsible for tearing up internal widget structures preparing the widget for the garbage collection. Usually it detaches event handlers, and kills references to DOM nodes. For more details, see `dijit._Widget <dijit/_Widget>`_.
 
 ====================
 Additional functions
 ====================
 
+For writers of additional mixins, this module provides several helper functions.
+
 dojox.form.manager.actionAdapter
 --------------------------------
+
+As described above the inspector can receive a widget/node as the 2nd parameter, or an array of widgets/nodes. This adapter checks the 2nd value and applies the inspector directly, if it was called with a widget/node. If it was called with the array, the adapter will apply the inspector to all elements of the array.
+
+.. code-block :: javascript
+
+  var inspector = function(name, elem, value){
+    // ...
+  };
+  var adapted = dojox.form.manager.actionAdapter(inspector);
+  fm.inspect(adapted);
+
+This adapter is useful when you want to do a uniform processing of form elements, e.g., disabling them, or adding a CSS class.
 
 dojox.form.manager.inspectorAdapter
 -----------------------------------
 
+This is a slightly different adapter for arrays versus widgets/nodes. The difference with `dojox.form.manager.actionAdapter`_ is in case of arrays it applies the inspector only to the first element of the array.
+
+.. code-block :: javascript
+
+  var inspector = function(name){
+    // ...
+  };
+  var adapted = dojox.form.manager.inspectorAdapter(inspector);
+  fm.inspect(adapted);
+
+This adapter is useful when you want to do a uniform inspection o form elements, e.g., reading and returning their values.
+
 dojox.form.manager._keys
 ------------------------
+
+This function takes an object and returns an array of all keys. It is very similar to `dojox.lang.functional.object.keys() <dojox/lang/functional/object#keys>`_. It is defined there only to reduce the dependency on other packages.
 
 ===============
 Technical notes
