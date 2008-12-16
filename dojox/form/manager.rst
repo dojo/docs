@@ -147,7 +147,7 @@ The form manager package consists of the main widget: `dojox.form.Manager <dojox
 
 * `_FormMixin <dojox/form/manager/_FormMixin>`_
 
-  *Optional.* Helpful when thr top element of the widget is a ``<form>``. In this case it provides ``onReset()`` and ``onSubmit()`` functionality with reasonable defaults. Additionally it provides ``isValid()`` method, which validates all form widgets individually. Essentially it mirrors `dijit.formForm <dijit/form/Form>`_.
+  *Optional.* Helpful when thr top element of the widget is a ``<form>``. In this case it provides ``onReset()`` and ``onSubmit()`` functionality with reasonable defaults. Additionally it provides ``isValid()`` method, which validates all form widgets individually. Essentially it mirrors `dijit.form.Form <dijit/form/Form>`_.
 
 * `_ValueMixin <dojox/form/manager/_ValueMixin>`_
 
