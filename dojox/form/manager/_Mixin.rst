@@ -166,7 +166,7 @@ While iterating the method collects all returned values of ``inspector`` in an o
     return someValue;
   };
 
-``name`` is the name of the inspected widget, ``widget`` is the widget itself (or an array of widgets for radio button widgets), ``value`` is the value passed to the function according to the above described rules. ``inspector``'s return value will be collected and returned as a part of the result object as described above.
+``name`` is the name of the inspected widget, ``widget`` is the widget itself, or an array of widgets for radio button widgets, ``value`` is the value passed to the function according to the above described rules. ``inspector``'s return value will be collected and returned as a part of the result object as described above.
 
 What ``inspector`` does is up to you. It can modify or just read widget values. It can return something meaningful or nothing at all. It is strongly suggested to use other form manager's methods to get/set widget values rather than doing it manually.
 
