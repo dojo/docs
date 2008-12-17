@@ -17,7 +17,7 @@ Introduction
 
 This class is the widget implementing the form manager. It includes all available mixins and "inverts" its template so developers can use template-specific directives inline.
 
-This is a high-level widget placed directly in ``/dojox/form/`` directory. Other form manager's components (mixins) are located in ``/dojox/form/manger/`` directory.
+This is a high-level widget placed directly in ``/dojox/form/`` directory. Other form manager's components (mixins) are located in ``/dojox/form/manager/`` directory.
 
 ======================
 Methods and properties
