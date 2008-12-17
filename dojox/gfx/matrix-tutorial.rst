@@ -20,3 +20,5 @@ The way to apply a matrix to a coordinate (to multiply a coordinate by a
 matrix):
 
 * ``o = M * i`` --- where, ``i`` is an input vector (e.g., ``{x: 1, y: 2}``), ``M`` is a transformation matrix, ``o`` is a resulting vector, and ``*`` denotes a multiplication operation:
+
+  The matrix multiplication can be written like this:
