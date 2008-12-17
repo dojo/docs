@@ -4,7 +4,7 @@ Cross-Domain Dojo
 =================
 
 :Status: Draft
-:Version: 0.1
+:Version: 0.2
 :Project owner: Victor Danilchenko
 :Available: since 1.0
 
