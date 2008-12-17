@@ -172,3 +172,11 @@ This architecture provides for ultimate flexibility. All functionality is in mix
 `Manager <dojox/form/Manager>`_ is a simple widget that includes all above listed mixins, and treats its body as a template. Using it you don't need to put the template in the separate file but can do it completely inline. It allows to use normal template-specific directives for `dojo.parser() <dojo/parser>`_: ``dojoAttachPoint``, ``dojoAttachEvent``, and a special directive used in the form manager: ``observer`` to designate methods to be called for all high-level change events on this element (a form widget or an HTML form element). You can use it as is, or as a sample code for your own custom widgets.
 
 Please refer to documentation of individual mixins and the widget for details of their API and implementation.
+
+===============
+Available tests
+===============
+
+All tests are located in the ``dojox/form/tests/`` sub-directory. They are used by developers to test the conformance, and can be used by users to see how different objects and algorithms can be used. Following tests are available (these are external links to Dojo Nightlies, which are are not set up for speed but for debugging):
+
+* `test_Manager1.html <http://archive.dojotoolkit.org/nightly/dojotoolkit/dojox/form/tests/test_Manager1.html>`_ tests all available classes of the form manager.
