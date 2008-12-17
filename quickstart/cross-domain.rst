@@ -1,18 +1,14 @@
 #format dojo_rst
 
 Cross-Domain Dojo
-====================================
+=================
 
 :Status: Draft
 :Version: 0.1
 :Project owner: Victor Danilchenko
 :Available: since 1.0
 
-.. contents::
-   :depth: 4
-
 How to use Dojo's cross-domain distributions
-
 
 ============
 Introduction
