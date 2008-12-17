@@ -8,6 +8,10 @@ Cross-Domain Dojo
 :Project owner: Victor Danilchenko
 :Available: since 1.0
 
+
+.. contents::
+   :depth: 4
+
 How to use Dojo's cross-domain distributions
 
 ============
