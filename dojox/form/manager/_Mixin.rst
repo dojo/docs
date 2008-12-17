@@ -93,7 +93,7 @@ Inspection
 
 Methods in this category provide primitives to iterate over controlled elements. These methods are major building blocks for all other mixins. In most cases you should avoid using them directly relying on more high-level methods of other mixins. Do use them if you write your own mixins.
 
-Note: `_NodeMixin <dojox/form/manager/_NodeMixin>`_ implements a complimentary method: `inspectFormNodes <dojox/form/manager/_NodeMixin#inspectFormNodes>`_.
+Note: `_NodeMixin <dojox/form/manager/_NodeMixin>`_ implements a complimentary method: `inspectFormNodes <dojox/form/manager/_NodeMixin#inspectformnodes>`_.
 
 inspectFormWidgets
 ~~~~~~~~~~~~~~~~~~
