@@ -137,7 +137,7 @@ There are three ways to use this method:
   .. code-block :: javascript
 
     var state = {firstName: true, lastName: false};
-    fm.enable(state);
+    fm.disable(state);
 
   The example above enables ``"firstName"`` and disables ``"lastName"``.
 
