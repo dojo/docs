@@ -98,9 +98,9 @@ Usage example
 
 .. code-block :: html
 
-  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/dojo/1.2.3/dijit/themes/tundra/tundra.css" />
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/dojo/1.2/dijit/themes/tundra/tundra.css" />
   <script src="http://www.google.com/jsapi"></script>
-  <script>google.load("dojo", "1.2.3");</script>
+  <script>google.load("dojo", "1.2");</script>
   <script>
       function loader () {
           dojo.require ("dijit.Editor");
