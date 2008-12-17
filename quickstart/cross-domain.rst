@@ -42,7 +42,7 @@ There is really no right answer. A CDN distribution delivers geographic caching 
 
 Available CDNs
 ______________
-In the examples below, 'VERSION' is the Dojo version you want to use, e.g. "1.2.3".
+In the examples below, 'VERSION' is the Dojo version you want to use, e.g. "1.2". While you can specify a more specific version, such as "1.2.3", it is recommended you use a major version number (1.2) -- newer dot-releases will be pushed to the /1.2/ URL automatically. 
 
 Google
 ~~~~~~
