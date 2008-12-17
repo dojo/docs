@@ -9,7 +9,7 @@ dojox.form.manager
 :Available: since 1.3
 
 .. contents::
-   :depth: 2
+   :depth: 3
 
 ============
 Introduction
@@ -131,9 +131,9 @@ We extended the previous example with observers and included required observers 
 * Lines ##9-13 define ``disabler()`` observer. Just like ``log()`` it uses the same two parameters. It will disable the controlled widget/node when the length of its text value exceeds 5. Note that on line #11 it uses ``this``, which is the form manager object of that form.
 * Lines ##14-16 define a simple event handler ``clicked()``, which doesn't use any parameters, and prints a static text.
 
-=====
-Usage
-=====
+==========
+Components
+==========
 
 The form manager package consists of the main widget: `dojox.form.Manager <dojox/form/Manager>`_ and a set of mixins (don't mind the leading underscore) located in ``/dojox/form/manager``:
 
