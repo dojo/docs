@@ -292,6 +292,11 @@ Target
 
 Essentially it is Source_ wrapped in with ``isSource`` set to ``false``. Instances of this class can be created from the HTML markup automatically by ``dojo.parser`` using ``dojoType="dojo.dnd.Target"``.
 
+AutoSource
+----------
+
+Essentially it is Source_ wrapped in with ``autoSync`` set to ``true``. Instances of this class can be created from the HTML markup automatically by ``dojo.parser`` using ``dojoType="dojo.dnd.AutoSource"``.
+
 Avatar
 ------
 
