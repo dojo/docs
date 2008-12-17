@@ -211,7 +211,7 @@ Registration
 
 These functions can register/unregister widgets. In most cases these methods are not used directly because `dojox.form.manager._Mixin`_ registers all children form widgets automatically. But if you create/delete widgets dynamically, you should register/unregister them manually.
 
-Note: `_NodeMixin <dojox/form/manager/_NodeMixin>`_ implements complimentary methods: `registerNode <dojox/form/manager/_NodeMixin#registerNode>`_, `unregisterNode <dojox/form/manager/_NodeMixin#unregisterNode>`_, `registerNodeDescendants <dojox/form/manager/_NodeMixin#registerNodeDescendants>`_, `unregisterNodeDescendants <dojox/form/manager/_NodeMixin#unregisterNodeDescendants>`_.
+Note: `_NodeMixin <dojox/form/manager/_NodeMixin>`_ implements complimentary methods: `registerNode <dojox/form/manager/_NodeMixin#registernode>`_, `unregisterNode <dojox/form/manager/_NodeMixin#unregisternode>`_, `registerNodeDescendants <dojox/form/manager/_NodeMixin#registernodedescendants>`_, `unregisterNodeDescendants <dojox/form/manager/_NodeMixin#unregisternodedescendants>`_.
 
 registerWidget
 ~~~~~~~~~~~~~~
