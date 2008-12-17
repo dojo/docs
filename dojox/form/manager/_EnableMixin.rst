@@ -28,7 +28,7 @@ This section describes all public methods and properties of `dojox.form.manager.
 gatherEnableState
 ~~~~~~~~~~~~~~~~~
 
-This method collects enable/disable state information in a dictionary object as Boolean values (``true`` means enabled). It is modeled after `_valueMixin's gatherFromValues() <dojox/form/manager/_ValueMixin#gatherformvalues>`_.
+This method collects enable/disable state information in a dictionary object as Boolean values (``true`` means enabled). It is modeled after `_ValueMixin's gatherFromValues() <dojox/form/manager/_ValueMixin#gatherformvalues>`_.
 
 There are three ways to use this method:
 
