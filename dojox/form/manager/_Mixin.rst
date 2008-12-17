@@ -119,7 +119,7 @@ This method iterates over controlled elements:
 
 There are three ways to use this method:
 
-1. ``state`` is an array of form names. In this case ``inspector`` is called with with the same 3rd parameter ``defaultValue`` for every widget in the array. The above example uses this form of inspection: both ``lastName`` and ``firstName`` will be set to ``"X"``.
+1. ``state`` is an array of form names. In this case ``inspector`` is called with the same 3rd parameter ``defaultValue`` for every widget in the array. The above example uses this form of inspection: both ``lastName`` and ``firstName`` will be set to ``"X"``.
 
 2. ``state`` is an object. In this case keys of the object are form names, while corresponding values are actual values to be passed to ``inspector`` as the 3rd parameter (in this case ``defaultValue`` is not used):
 
