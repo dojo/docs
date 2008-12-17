@@ -1501,3 +1501,12 @@ test_textpath.html
 
 test_transform.html 
   Tests the transformation applied to groups and individual shapes.
+
+====
+TODO
+====
+
+Temporary list of new subpages:
+
+* `Matrix tutorial <dojox/gfx/matrix-tutorial>`_
+* `Visual properties <dojox/gfx-visual-properties>`_
