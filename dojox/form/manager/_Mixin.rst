@@ -17,7 +17,7 @@ Introduction
 
 This class is the main component of the form manager, which provides the initialization and core functionality. It can be used on its own as a mixin to other widgets, or as a part of `dojox.form.Manager <dojox/form/Manager>`_. All other form manager mixins require this class to be mixed in as well.
 
-On startup this mixin inspects its body and registers all found form widgets, and attached nodes (by ``dojoAttachPoint``).
+On startup this mixin inspects its body and registers all found form widgets, and attached nodes (by ``dojoAttachPoint``). Additionally it provides some low-level properties and methods to handle controlled elements.
 
 ======================
 Methods and properties
