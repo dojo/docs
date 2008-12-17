@@ -48,7 +48,7 @@ The form manager works with following elements (inspected on instantiation):
 
 * HTML form elements.
 
-  All HTML form elements (``<input>``, ``<select>``, ``<textarea>``, ``<button>``) are recognized automatically, if `_nodeMixin <dojox/form/manager/_NodeMixin>`_ is included. A value of the ``name`` attribute of form element is used as a unique identifier for this widget.
+  All HTML form elements (``<input>``, ``<select>``, ``<textarea>``, ``<button>``) are recognized automatically, if `_NodeMixin <dojox/form/manager/_NodeMixin>`_ is included. A value of the ``name`` attribute of form element is used as a unique identifier for this widget.
 
   *Important exception: radio buttons all share the same name and grouped as a single complex widget.*
 
