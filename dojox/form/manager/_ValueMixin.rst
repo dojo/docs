@@ -94,7 +94,11 @@ This method is complimentary to gatherFormValues_. It uses the same dictionary f
   var values = {firstName: "Jane", lastName: "Smith"};
   fm.setFormValues(values);
 
-More elaborate example:
+=====
+Usage
+=====
+
+All methods are designed to work together:
 
 .. code-block :: javascript
 
