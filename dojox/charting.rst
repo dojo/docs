@@ -49,6 +49,8 @@ Updating charts and events
 
 Charting was designed with periodic updating in mind. Say you have an application that remotely monitors something: the stock market, a database server, etc. With dojox.charting, you can set up a chart and then simply update the series on the charts--resulting in a fast, fluid monitoring experience. In fact, charting has been used for such things as remote CPU monitoring.
 
+TODO: please explain more. How does this work? Show an example.
+
 Coming with the Dojo 1.2 release, Charting will also support customized events, such as tooltip attachment and mouseover actions!
 
 Animations
