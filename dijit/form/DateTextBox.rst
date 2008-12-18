@@ -5,14 +5,14 @@ dijit.form.DateTextBox
 
 :Status: Draft
 :Version: 1.0
-:Authors: Becky Gibson, Doug Hays, Craig Riecke
-:Developers: ?-
-:Available: since V?
+:Authors: Becky Gibson, Doug Hays, Craig Riecke, Adam Peller
+:Developers: Doug Hays
+:Available: since 0.9
 
 .. contents::
     :depth: 2
 
-DateTextBox widgets are handy, easy-to-use date entry controls that allow either typing or choosing a date from any calendar widget.
+DateTextBox widgets are easy-to-use date entry controls that allow either typing or choosing a date from any calendar widget.
 
 
 ============
@@ -22,7 +22,7 @@ Introduction
 ``dijit.form.DateTextBox``:
 
 * is a `mapped form control <dijit/form#mapped>`_
-* validates against locale-sepcific `i18n <dojo/i18n>`_ rules
+* validates against locale-specific `i18n <dojo/i18n>`_ rules
 * also validates against developer-provided ``constraints`` like ``min``, ``max``, valid days of the week, etc.
 
 
@@ -53,19 +53,18 @@ Standard Date Format
 
 One universal problem with specifying dates as text strings is they can be written so many different ways. In Great Britain, "5/8/2008" means August 5th where in the U.S. it means May 8th. Fortunately, Dojo respects the browser's locale so that the date will be properly parsed.
 
-The trouble is your application does not have a locale. If you write the attribute ``value='5/8/2008'``, how does DateTextBox know what you mean?  To prevent this ambiguity, DateTextBox allows only one date format when specified declaratively in HTML markup: the familiar UNIX date format ``yyyy-mm-dd``. For example:
+The trouble is your application may interact with users in different locales, and the server data is expected to work for all of them. If you write the attribute ``value='5/8/2008'``, how does DateTextBox know what you mean?  You could write your application to assume US conventions, as Javascript often does, but that programming practice will not work well in other parts of the world.  To prevent this ambiguity, DateTextBox expects dates to be formatted using ISO8601/RFC3339 format ``yyyy-mm-dd`` when specified declaratively in HTML markup.  This is both neutral to cultural formatting conventions as well as to time zones.  For example:
 
 * 2007-12-25 means December 25, 2007.
 
-UNIX date format values sort properly as strings, which make them nice for things like `dojox.grid <dojox/grid>`_.
+ISO date format values sort properly as strings and are lighter-weight than Javascript Date objects, which make them convenient for programming.
 
-However, when you get the widget's current ``value`` programmatically, the returned value will be the native JavaScript Date object.
-The time portion of this value should be ignored.
+However, when you get or set the DateTextBox ``value`` attribute programmatically, you must use a native Javascript Date object, e.g. new Date(2007, 11, 25)  The time portion of this value should be ignored for this purpose.
 
 Sending and Receiving Server Formats
 ------------------------------------
 
-Ideally, your server application will send and receive dates in the UNIX standard format. But you may not be in control of that piece, so how do you get around it?  For example when Oracle database processes dates, by default it insists on dd-MMM-yyyy format in English, as in 01-APR-2006. 
+Ideally, your server application will send and receive dates in the ISO standard format.  Dojo recommends it as a best practice, but your data may not conform.  For example when Oracle database processes dates, by default it insists on dd-MMM-yyyy format in English, as in 01-APR-2006.  Perhaps you do not control the database or cannot write a shim to convert the dates server side.  How do you get around it?  
 
 To accept dates from the server in this format, you can create your own widget class which overrides the setValue method of DateTextBox. (See `dijit <dijit>`_ for details on creating your own widgets). Here's an example:
 
@@ -91,6 +90,9 @@ To do the reverse - writing back to the server in Oracle format - you override t
       }
    });
 
+TODO: you also have to hard code the 'en' locale, or this could serialize in the wrong language.
+TODO: do we really want to override setValue and not use postMixInProperties as done in the book?
+
 Finally, you can use this new widget class programmatically or declaratively
 
 .. code-block:: html
@@ -112,6 +114,8 @@ One common anti-solution is to set the datePattern constraint:
 Unfortunately, this only affects how the date is parsed and formatted in the box itself. As such, it's not very wise because it forces
 people from every country to use the same format, which may be totally unfamiliar. So, bad idea.
 
+TODO: the idea of the code in the book was to make a textbox which used local conventions but communicated to/from the server (only) in this format
+
 Changing Constraints on the Fly
 -------------------------------
 DateTextBox obeys the constraints you give, much like `dijit.form.NumberTextBox <dijit/form/NumberTextBox>`_  Sometimes you may need to change these constraints based on user input. To do this, you can set new constraints on the widget, but the catch is you must use JavaScript dates.
@@ -130,4 +134,4 @@ Accessibility
 
 See the Accessibility Section in `dijit.form.ValidationTextBox <dijit/form/ValidationTextBox>`_
 
-The calendar popup associated with the DateTextBox is not yet keyboard accessible.  However, the DateTextBox will still meet accessibility requirments as long as the developer provides the validation parameters promptMessage and invalidMessage when creating the DateTextBox.  These messages are implemented in a format that is accessible to all users.   
+The calendar popup associated with the DateTextBox is not yet keyboard accessible.  However, the DateTextBox will still meet accessibility requirments as long as the developer provides the validation parameters promptMessage and invalidMessage when creating the DateTextBox.  [TODO: there are default messages; this should not be required]  These messages are implemented in a format that is accessible to all users.   
