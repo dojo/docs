@@ -1510,3 +1510,4 @@ Temporary list of new subpages:
 
 * `Matrix tutorial <dojox/gfx/matrix-tutorial>`_
 * `Visual properties <dojox/gfx-visual-properties>`_
+* `Geometric properties <dojox/gfx-geometric-properties>`_
