@@ -61,71 +61,113 @@ Canvas ignores the line style. All lines are drawn solid.
 Fill property
 =============
 
-A fill property is an object that defines how to fill a shape. It is not supported by an image and a group shapes. Four types of fills can be used:
+A fill property is an object that defines how to fill a shape. It is not supported by an image and a group shapes.
 
-* Solid color fill. It is in effect when a color was specified as a fill property.
+By default all shapes are created with ``null`` fill meaning "no fill is performed". Complex shapes with self intersections (e.g., polygons), or disjoint parts (e.g. paths) are filled using the even-odd rule.
 
-* Linear gradient defines a smooth transition between a set of colors (so-called "stops") on a line. Following properties are recognized:
+Four types of fills can be used.
 
-  type
-    always ``"linear"``.
+Solid color fill
+----------------
 
-  x1
-    defines the ``X`` component of a start point of a linear gradient. Default: 0.
+It is in effect when a color was specified as a fill property.
 
-  y1
-    defines the ``Y`` component of a start point of a linear gradient. Default: 0.
+Linear gradient
+---------------
 
-  x2
-    defines the ``X`` component of an end point of a linear gradient. Default: 100.
+Linear gradient defines a smooth transition between a set of colors (so-called "stops") on a line. Following properties are recognized:
 
-  y2
-    defines the ``Y`` component of an end point of a linear gradient. Default: 100.
+type
+  always ``"linear"``.
 
-  colors
-    defines an array of stop objects, which have following structure:
+x1
+  defines the ``X`` component of a start point of a linear gradient. Default: 0.
 
-      offset
-        a number from 0 to 1, which defines a position of a color on our line. 0 corresponds to ``(x1, y1)`` point. 1 corresponds to ``(x2, y2)`` point. 0.5 will be directly in the middle of a line.
+y1
+  defines the ``Y`` component of a start point of a linear gradient. Default: 0.
 
-      color
-        a color for this stop.
+x2
+  defines the ``X`` component of an end point of a linear gradient. Default: 100.
 
-  The colors member has a following default value: ``[{offset: 0, color: "black"}, {offset: 1, color: "white"}]``.
+y2
+  defines the ``Y`` component of an end point of a linear gradient. Default: 100.
 
-* Radial gradient defines a smooth transition between stops on a circle. Following properties are recognized:
+colors
+  defines an array of stop objects, which have following structure:
 
-  type
-    always ``"radial"``.
+    offset
+      a number from 0 to 1, which defines a position of a color on our line. 0 corresponds to ``(x1, y1)`` point. 1 corresponds to ``(x2, y2)`` point. 0.5 will be directly in the middle of a line.
 
-  cx
-    defines the ``X`` component of a center of a radial gradient. Default: 0.
+    color
+      a color for this stop.
 
-  cy
-    defines the ``Y`` component of a center of a radial gradient. Default: 0.
+The colors member has a following default value: ``[{offset: 0, color: "black"}, {offset: 1, color: "white"}]``.
 
-  r
-    defines a radius of a radial gradient.
+Radial gradient
+---------------
 
-  colors
-    defines an array of stops in the same way as a linear gradient object. 0 corresponds to the center. 1 corresponds to the circle’s border. Defaults: ``[{offset: 0, color: "black"}, {offset: 1, color: "white"}]``.
+Radial gradient defines a smooth transition between stops on a circle. Following properties are recognized:
 
-* Pattern defines an infinite tiling of an image. Following properties are recognized:
+type
+  always ``"radial"``.
 
-  type
-    always ``"pattern"``.
+cx
+  defines the ``X`` component of a center of a radial gradient. Default: 0.
 
-  x
-    defines the ``X`` component of an offset of a reference rectangle for an image. Default: 0.
+cy
+  defines the ``Y`` component of a center of a radial gradient. Default: 0.
 
-  y
-    defines the ``Y`` component of an offset of a reference rectangle for an image. Default: 0.
+r
+  defines a radius of a radial gradient.
 
-  width
-    defines the width of a reference rectangle. Default: 0 --- *don’t forget to set it to the real value!*
+colors
+  defines an array of stops in the same way as a linear gradient object. 0 corresponds to the center. 1 corresponds to the circle’s border. Defaults: ``[{offset: 0, color: "black"}, {offset: 1, color: "white"}]``.
 
-  height
-    defines the height of a reference rectangle. Default: 0 --- *don’t forget to set it to the real value!*
+Pattern
+-------
 
-  src
-    defines a URL of an image to be tiled.
+Pattern defines an infinite tiling of an image. Following properties are recognized:
+
+type
+  always ``"pattern"``.
+
+x
+  defines the ``X`` component of an offset of a reference rectangle for an image. Default: 0.
+
+y
+  defines the ``Y`` component of an offset of a reference rectangle for an image. Default: 0.
+
+width
+  defines the width of a reference rectangle. Default: 0 --- *don’t forget to set it to the real value!*
+
+height
+  defines the height of a reference rectangle. Default: 0 --- *don’t forget to set it to the real value!*
+
+src
+  defines a URL of an image to be tiled.
+
+An image will be fit into the defined reference rectangle using scaling.
+
+Implementation details
+----------------------
+
+VML
+~~~
+
+VML renderer has following restrictions:
+
+* Linear gradient should start and stop on a border of a shape. All other line definitions will be visually incompatible with the SVG implementation of the linear gradient.
+
+* Radial gradient repeats the shape of an object. It means that the only way to define a compatible radial gradient for SVG and VML renderers is to define it from a center of a circle shape.
+
+* Transparency (the alpha channel) is not supported for gradient fills.
+
+SVG
+~~~
+
+SVG on Firefox 1.5-2.0 doesn’t support the pattern fill.
+
+Canvas
+~~~~~~
+
+Canvas renderer doesn’t support the even-odd rule.
