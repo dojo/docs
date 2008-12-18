@@ -1,6 +1,6 @@
 #format dojo_rst
 
-Visual properties
+Properties
 =================
 
 :Status: Draft
@@ -11,15 +11,57 @@ Visual properties
 .. contents::
   :depth: 3
 
+============
+Introduction
+============
+
+In general ``dojox.gfx`` is built on using duck-typing to specify any visual or geometric properties. You don't need to create objects of a special class, you just use objects with the right set of properties. If some properties are missing they will be copied from the predefined default object for this property.
+
+For example, this is the default stroke object:
+
+.. code-block :: javascript
+
+  dojox.gfx.defaultStroke = {type: "stroke", color: "black", style: "solid", width: 1, cap: "butt", join: 4};
+
+If you supply an object as the stroke, and some of its properties are missing, the missing properties will be copied from ``defaultStroke``. Example:
+
+.. code-block :: javascript
+
+  shape.setStroke({color: "#ff0", width: 3});
+
+The effect will be the same as if we specified it like this:
+
+.. code-block :: javascript
+
+  shape.setStroke({type: "stroke", color: "#ff0", style: "solid", width: 3, cap: "butt", join: 4});
+
+This rule works for strokes, linear and radial gradients, patterns and fonts.
+
+If we want to use the default, we can do it like that:
+
+.. code-block :: javascript
+
+  shape.setStroke({});
+
+But the most efficient way to do that is to pass ``null`` as a property value:
+
+.. code-block :: javascript
+
+  shape.setStroke(null);
+
+Newly created shapes use ``null`` for all their visual and geometric properties effectively using all default property objects.
+
 =====
 Color
 =====
+
+Color is the fundamental property in HTML and graphics. Dojo handles colors as a part of the base. See details in `dojo.Color <dojo/Color>`_. The additional module of `dojo.colors <dojo/colors>`_ adds CSS3 color goodies: a huge list of named colors, HSL color space, a grayscale helper.
 
 Anywhere color is accepted following objects can be used to define it:
 
 * A valid color name, like: ``"white"``, ``"black"``, ``"red"``, ``"green"``, ``"lime"``, ``"blue"``, ``"navy"``, ``"gray"``, ``"silver"``.
 
-  If you want to support all CSS3 color names, don’t forget to require `dojo.colors <dojo/colors>`_ module, which provides all necessary CSS3 compatibility.
+  If you want to support all CSS3 color names, don’t forget to require `dojo.colors <dojo/colors>`_ module.
 
 * A valid CSS color code, e.g., ``"#FF0000"`` or ``"#f00"``.
 
@@ -50,10 +92,29 @@ join
 
 By default all shapes are created with null stroke meaning “no stroke is performed”.
 
-Stroke can be defined by specifying a color as a string: ``shape.setStroke("black")`` is equivalent to ``shape.setStroke({color: "black"})``.
+This is the definition of the default stroke from ``/dojox/gfx/_base.js``:
+
+.. code-block :: javascript
+
+  dojox.gfx.defaultStroke = {type: "stroke", color: "black", style: "solid", width: 1, cap: "butt", join: 4};
+
+As a convenience a stroke can be defined by specifying a color as a string:
+
+.. code-block :: javascript
+
+  shape.setStroke("black");
+
+It is equivalent to:
+
+.. code-block :: javascript
+
+  shape.setStroke({color: "black"});
 
 Implementation details
 ----------------------
+
+Canvas
+~~~~~~
 
 Canvas ignores the line style. All lines are drawn solid.
 
