@@ -46,7 +46,7 @@ Usage
 
    // E.g. if dojo lives at /somepath/dojotoolkit/dojo/dojo.js
    // then baseURL is "/somepath/dojotoolkit/dojo/"
-   // and "lib" module path refers to "/somepath/lib"
+   // and "lib" module path refers to "/somepath/lib/"
 
    // lib.foo is required from /somepath/lib/foo.js
    dojo.require("lib.foo"); 
@@ -56,8 +56,8 @@ Usage
    
    // module paths can be overridden, e.g.
    dojo.registerModulePath("lib.css", "../../css/");
-   // module "lib" is generally unchanged, but "lib.css"
-   // now refers to "/somepath/css"
+   // module "lib" is unchanged except that "lib.css"
+   // now refers to "/somepath/css/"
 
    // we can set an absolute path by prefixing it with "/" or "http:"
    dojo.registerModulePath("aoldojo", "http://o.aolcdn.com/dojo/1.2.3/dojo/");
