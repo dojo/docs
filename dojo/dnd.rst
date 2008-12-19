@@ -255,9 +255,11 @@ Following event handlers are overloaded: ``onMouseDown``, ``onMouseUp``, and ``o
 Following local events are defined by Source_, which are meant to be overridden or connected with ``dojo.connect()``:
 
 * ``onDrop(source, nodes, copy)`` --- *(new in 1.2.2)* this method is called when DnD items is dropped in this target. The default implementation calls ``onDropExternal()`` or ``onDropInternal()`` based on the value of ``source`` (see below). Following parameters are passed in:
+
   * ``source`` --- the source of dragged items, can be the same object as the target.
   * ``nodes`` --- the array of DOM nodes to be dropped. Their ids can be used to access associated types and data.
   * ``copy`` --- the Boolean flag. If ``true``, the target is requested to copy items, otherwise the target should move items.
+
 * ``onDropExternal(source, nodes, copy)`` --- *(new in 1.2.2)* this method is called by the default implementation of ``onDrop()`` only if we have an external drop meaning that the source is different from the target. All parameters are the same as in ``onDrop()``. The default implementation performs the drop as instructed.
 * ``onDropInternal(nodes, copy)`` --- *(new in 1.2.2)* this method is called by the default implementation of ``onDrop()`` only if we have an internal drop meaning that the source is the same as the target. All parameters are the same as in ``onDrop()``, but ``source`` parameter is skipped as redundant (it is the same as ``this``). The default implementation performs the drop as instructed.
 * ``onDraggingOver()`` --- this method is called during the DnD operation in progress when the mouse is over this target, and it is not disabled for any reasons. The default implementation does nothing.
