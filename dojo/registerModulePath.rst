@@ -68,3 +68,4 @@ See Also
 ========
 
 * `djConfig.modulePaths <http://docs.dojocampus.org/djConfig?highlight=(modulePaths)>`_
+* `dojo.moduleUrl <dojo/moduleUrl>`_
