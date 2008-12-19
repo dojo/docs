@@ -32,3 +32,39 @@ Note that the path given to dojo.registerModulePath is always assumed to be rela
 =====
 Usage
 =====
+
+.. code-block :: javascript
+ :linenos:
+
+ <script type="text/javascript">
+   // register "lib" to be a peer to Dojo's parent folder
+   dojo.registerModulePath("lib", "../../lib/");
+
+   // This module path is relative to the dojo baseUrl,
+   // so we can find resources without knowing details
+   // of the file structure.
+
+   // E.g. if dojo lives at /somepath/dojotoolkit/dojo/dojo.js
+   // then baseURL is "/somepath/dojotoolkit/dojo/"
+   // and "lib" module path refers to "/somepath/lib"
+
+   // lib.foo is required from /somepath/lib/foo.js
+   dojo.require("lib.foo"); 
+
+   // get a dojo.URI that points to "/somepath/lib/foo/images/"
+   var images = dojo.moduleUrl("lib.foo.images");
+   
+   // module paths can be overridden, e.g.
+   dojo.registerModulePath("lib.css", "../../css/");
+   // module "lib" is generally unchanged, but "lib.css"
+   // now refers to "/somepath/css"
+
+   // we can set an absolute path by prefixing it with "/" or "http:"
+   dojo.registerModulePath("aoldojo", "http://o.aolcdn.com/dojo/1.2.3/dojo/");
+ </script>
+
+========
+See Also
+========
+
+* `djConfig.modulePaths <http://docs.dojocampus.org/djConfig?highlight=(modulePaths)>`_
