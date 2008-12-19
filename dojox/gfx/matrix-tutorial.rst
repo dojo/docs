@@ -24,7 +24,7 @@ The way to apply a matrix to a coordinate (to multiply a coordinate by a matrix)
 
 .. image :: attachment:matrix03.png
 
-The matrix multiplication can be written like this:
+The matrix multiplication can be written like this (``*`` is omitted in this equation like in regular math to conserve space):
 
 .. image :: attachment:matrix04a.png
 .. image :: attachment:matrix04b.png
