@@ -1,7 +1,7 @@
 #format dojo_rst
 
-Geometric properties
-====================
+dojox.gfx.matrix
+================
 
 :Status: Draft
 :Version: 1.3
@@ -29,39 +29,100 @@ Simple examples:
 
 * ``{xx: 0, xy: 1, yx: −1, yy: 0, dx: 100}`` --- rotates everything by 90 degrees CW around ``(0, 0)``, and moves things right by 100.
 
-Don’t worry, in most cases you don’t need to calculate all members of a transformation matrix directly. As you can see not all members of matrix should be specified --- all skipped members going to be copied from the identity matrix. There is a shortcut for scaling --- if a number N is used instead of a matrix, it is assumed that it represents a uniform scaling matrix ``{xx: N, yy: N}``.
+Don’t worry, in most cases you don’t need to calculate all members of a transformation matrix directly. As you can see not all members of matrix should be specified --- all skipped members going to be copied from the identity matrix.
+
+There is a shortcut for scaling --- if a number N is used instead of a matrix, it is assumed that it represents a uniform scaling matrix ``{xx: N, yy: N}``.
+
+There is a shortcut for multiplication (see multiply_ for details) --- is an array is used it is treated as an array of matrices, and all matrices will be multiplied to produce the final matrix.
 
 `dojox.gfx.matrix <dojox/gfx/matrix>`_ defines ``Matrix2D`` class, as well as numerous helpers (``Matrix2D`` is propagated to ``dojox.gfx`` namespace for convenience). Most important of them (all in ``dojox.gfx.matrix`` namespace) are listed below.
+
+Matrix2D and normalization
+--------------------------
+
+As you can see developers can specify matrices in a variety of ways. But for performance reasons internally it is always converted to ``Matrix2D``, which has all proper attributes defined. You can achieve this normalization by instantiating Matrix2D_ object or by invoking a creator function called normalize_.
+
+Matrix2D
+~~~~~~~~
+
+Matrix2D is the class for our 2 by 3 matrix. You can always use it to normalize your matrix expression to the canonical representation. It is available in both namespaces: ``dojox.gfx`` and ``dojox.gfx.matrix``.
+
+Examples:
+
+.. code-block :: javascript
+
+  // identity {xx: 1, xy: 0, dx: 0, yx: 0, yy: 1, dy: 0}
+  var m1 = new dojox.gfx.Matrix2D();
+
+  // shift down {xx: 1, xy: 0, dx: 0, yx: 0, yy: 1, dy: 10}
+  var m2 = new dojox.gfx.Matrix2D({dy: 10});
+
+  // scale by 2 {xx: 2, xy: 0, dx: 0, yx: 0, yy: 2, dy: 0}
+  var m3 = new dojox.gfx.Matrix2D(2);
+
+  // scale by 2 and shift down {xx: 2, xy: 0, dx: 0, yx: 0, yy: 2, dy: 10}
+  var m3 = new dojox.gfx.Matrix2D([{dy: 10}, 2]);
+
+normalize
+~~~~~~~~~
+
+There is one more useful function: ``normalize(m)``, which returns Matrix2D:
+
+* ``normalize(2)`` returns ``{xx: 2, xy: 0, yx: 0, yy: 2, dx: 0, dy: 0}``.
+
+* ``normalize({dy: 5})`` returns ``{xx: 1, xy: 0, yx: 0, yy: 1, dx: 0, dy: 5}``.
+
+* ``normalize([scale(2), translate(100, 200)])`` returns ``{xx: 2, xy: 0, yx: 0, yy: 2, dx: 200, dy: 400}``.
+
+The same normalization effect can be achieved with creating a matrix directly.
 
 Constants
 ---------
 
+Some operations do not require any parameters and implemented as predefined constants.
+
 identity
-  an identity matrix. This matrix doesn’t change a picture at all.
+~~~~~~~~
+
+The identity matrix. This matrix doesn’t change a picture at all.
 
 flipX
-  changes a sign of all ``X`` coordinates. This matrix mirrors the picture around the ``Y`` axis.
+~~~~~
+
+Changes the sign of all ``X`` coordinates. This matrix mirrors the picture around the ``Y`` axis.
 
 flipY
-  changes a sign of all ``Y`` coordinates. This matrix mirrors the picture around the ``X`` axis.
+~~~~~
+
+Changes the sign of all ``Y`` coordinates. This matrix mirrors the picture around the ``X`` axis.
 
 flipXY
-  changes a sign of all coordinates. This matrix rotates the picture by 180 degrees around ``(0, 0)`` point. Another way to say it: it mirrors all points around ``(0, 0)``.
+~~~~~~
+
+Changes the sign of all coordinates. This matrix rotates the picture by 180 degrees around ``(0, 0)`` point. Another way to say it: it mirrors all points around ``(0, 0)``.
 
 Matrix creators
 ---------------
 
+Matrices can be used to express any linear transformation of coordinates. To simplify the task of creating matrices for common operations numerous matrix creators are provided.
+
 In all signatures ``a``, ``b``, ``c``, and ``e`` are numbers (coordinate components or scaling factors), ``p`` is a 2D coordinate, ``r`` is an angle in radians, ``d`` is an angle in degrees (positive value of an angle is CW), ``m`` is a matrix.
 
-translate(a, b), translate(p)
-  shifts everything:
+If a function accepts an angle value, there are two versions of this function: with radians, and with degrees. The latter will be denoted with ``g`` suffix. Example: ``rotate(r)`` accepts radians, while ``rotateg(d)`` accepts degrees.
+
+translate
+~~~~~~~~~
+
+Signatures: ``translate(a, b)``, ``translate(p)``. Shifts everything:
 
   * by ``{dx: a, dy: b}``
 
   * by ``{dx: p.x, dy: p.y}``
 
-scale(a, b), scale(a), scale(p)
-  scales a picture:
+scale
+~~~~~
+
+Signatures: ``scale(a, b)``, ``scale(a)``, ``scale(p)``. Scales a picture:
 
   * by ``{xx: a, yy: b}``
 
@@ -69,36 +130,46 @@ scale(a, b), scale(a), scale(p)
 
   * by ``{xx: p.x, yy: p.y}``
 
-rotate(r), rotateg(d)
-  rotates a picture around ``(0, 0)``:
+rotate
+~~~~~~
+
+Signatures: ``rotate(r)``, ``rotateg(d)``. Rotates a picture around ``(0, 0)``:
 
   * by ``r`` radians
 
   * by ``d`` degrees
 
-skewX(r), skewXg(d)
-  skews a picture around ``(0, 0)`` in the ``X`` dimension:
+skewX
+~~~~~
+
+Signatures: ``skewX(r)``, ``skewXg(d)``. Skews a picture around ``(0, 0)`` in the ``X`` dimension:
 
   * by ``r`` radians
 
   * by ``d`` degrees
 
-skewY(r), skewYg(d)
-  skews a picture around ``(0, 0)`` in the ``Y`` dimension:
+skewY
+~~~~~
+
+Signatures: ``skewY(r)``, ``skewYg(d)``. Skews a picture around ``(0, 0)`` in the ``Y`` dimension:
 
   * by ``r`` radians
 
   * by ``d`` degrees
 
-reflect(a, b), reflect(p)
-  reflects points around a line that goes through the origin ``(0, 0)``:
+reflect
+~~~~~~~
+
+Signatures: ``reflect(a, b)``, ``reflect(p)``. Reflects points around a line that goes through the origin ``(0, 0)``:
 
   * around the line ``[(0, 0), (a, b)]``
 
   * around the line ``[(0, 0), (p.x, p.y)]``
 
-project(a, b), project(p)
-  projects points on a line that goes through the origin ``(0, 0)``:
+project
+~~~~~~~
+
+Signatures: ``project(a, b)``, ``project(p)``. Projects points on a line that goes through the origin ``(0, 0)``:
 
   * on the line ``[(0, 0), (a, b)]``
 
@@ -109,19 +180,27 @@ General operations
 
 In all signatures ``a``, ``b``, ``c``, and ``e`` are numbers (coordinate components or scaling factors), ``p`` is a 2D coordinate, ``r`` is an angle in radians, ``d`` is an angle in degrees (positive value of an angle is CW), ``m`` is a matrix.
 
-invert(m)
-  inverts a matrix. This useful function calculates a matrix, which will do the opposite transformation to the m matrix effectively undoing it. For example, ``scale(2)`` produces a matrix to scale uniformly a picture by 2. The opposite matrix is going to be ``scale(0.5)``. We can produce the same result with ``invert(scale(2))``. While it seems complicated for this simple case, frequently it is the only way to calculate an inverted matrix for complex transformation, especially when we don’t know how it was produced initially.
+invert
+~~~~~~
 
-clone(m)
-  creates a copy of the m matrix.
+Signatures: ``invert(m)``. Inverts a matrix. This useful function calculates a matrix, which will do the opposite transformation to the m matrix effectively undoing it. For example, ``scale(2)`` produces a matrix to scale uniformly a picture by 2. The opposite matrix is going to be ``scale(0.5)``. We can produce the same result with ``invert(scale(2))``. While it seems complicated for this simple case, frequently it is the only way to calculate an inverted matrix for complex transformation, especially when we don’t know how it was produced initially.
 
-multiplyPoint(m, a, b), multiplyPoint(m, p)
-  applies a transformation to a coordinate.
+clone
+~~~~~
 
-multiply(m1, m2, ...)
-  multiplies all its parameters to create a single matrix.
+Signatures: ``clone(m)``. Creates a copy of the ``m`` matrix.
 
-The last function is extremely useful and there is a shortcut for it: anywhere a matrix is expected, an array of matrices can be specified as well. Examples:
+multiplyPoint
+~~~~~~~~~~~~~
+
+Signatures: ``multiplyPoint(m, a, b)``, ``multiplyPoint(m, p)``. Applies a transformation to a coordinate.
+
+multiply
+~~~~~~~~
+
+Signatures: ``multiply(m1, m2, ...)``. Multiplies all its parameters to create a single matrix.
+
+This function is extremely useful and there is a shortcut for it: anywhere a matrix is expected, an array of matrices can be specified as well. Examples:
 
 * ``[2, rotateg(45)]`` --- rotates everything 45 degrees CW around ``(0, 0)`` and scales everything by 2 after that.
 
@@ -142,118 +221,84 @@ You can see that this kind of transformations follow a ``"sandwich"`` pattern, w
 "Sandwich" helpers
 ------------------
 
-These "around the point" operations are so important that ``dojox.gfx`` provides several helpers for common transformations.
+These "around the point" operations are so important that ``dojox.gfx`` provides several helpers for common transformations. Usually they are named like their middle "meaty" part with the suffix ``At``. Example: ``scale(a)`` => ``scaleAt(a, p)``.
 
 In all signatures ``a``, ``b``, ``c``, and ``e`` are numbers (coordinate components or scaling factors), ``p`` is a 2D coordinate, ``r`` is an angle in radians, ``d`` is an angle in degrees (positive value of an angle is CW), ``m`` is a matrix.
 
-scaleAt(a, p)
-  ``scale(a)`` around ``(p.x, p.y)``
+If a function accepts an angle value, there are two versions of this function: with radians, and with degrees. The latter will be denoted with ``g`` suffix. Example: ``rotate(r)`` accepts radians, while ``rotateg(d)`` accepts degrees.
 
-scaleAt(a, b, c)
-  ``scale(a)`` around ``(b, c)``
+scaleAt
+~~~~~~~
 
-scaleAt(a, b, p)
-  ``scale(a, b)`` around ``(p.x, p.y)``
+Applies scale_ with the center at the given point.
 
-scaleAt(a, b, c, e)
-  ``scale(a, b)`` around ``(c, e)``
+Signatures:
 
-rotateAt(r, p)
-  ``rotate(r)`` at ``(p.x, p.y)``
+* ``scaleAt(a, p)``
+    ``scale(a)`` around ``(p.x, p.y)``
 
-rotateAt(r, a, b)
-  ``rotate(r)`` at ``(a, b)``
+* ``scaleAt(a, b, c)``
+    ``scale(a)`` around ``(b, c)``
 
-rotategAt(d, p)
-  ``rotateg(d)`` at ``(p.x, p.y)``
+* ``scaleAt(a, b, p)``
+    ``scale(a, b)`` around ``(p.x, p.y)``
 
-rotategAt(d, a, b)
-  ``rotateg(d)`` at ``(a, b)``
+* ``scaleAt(a, b, c, e)``
+    ``scale(a, b)`` around ``(c, e)``
 
-skewXAt(r, p)
-  ``skewX(r)`` at ``(p.x, p.y)``
+rotateAt
+~~~~~~~~
 
-skewXAt(r, a, b)
-  ``skewX(r)`` at ``(a, b)``
+Applies rotate_ with the center at the given point.
 
-skewXgAt(d, p)
-  ``skewXg(d)`` at ``(p.x, p.y)``
+Signatures:
 
-skewXgAt(d, a, b)
-  ``skewXg(d)`` at ``(a, b)``
+* ``rotateAt(r, p)``
+    ``rotate(r)`` at ``(p.x, p.y)``
 
-skewYAt(r, p)
-  ``skewY(r)`` at ``(p.x, p.y)``
+* ``rotateAt(r, a, b)``
+    ``rotate(r)`` at ``(a, b)``
 
-skewYAt(r, a, b)
-  ``skewY(r)`` at ``(a, b)``
+* ``rotategAt(d, p)``
+    ``rotateg(d)`` at ``(p.x, p.y)``
 
-skewYgAt(d, p)
-  ``skewYg(d)`` at ``(p.x, p.y)``
+* ``rotategAt(d, a, b)``
+    ``rotateg(d)`` at ``(a, b)``
 
-skewYgAt(d, a, b)
-  ``skewYg(d)`` at ``(a, b)``
+skewXAt
+~~~~~~~
 
-Normalization
--------------
+Applies skewX_ with the center at the given point.
 
-There is one more useful function: ``normalize(m)``, which returns a matrix in its canonical representation:
+Signatures:
 
-* ``normalize(2)`` returns ``{xx: 2, xy: 0, yx: 0, yy: 2, dx: 0, dy: 0}``.
+* ``skewXAt(r, p)``
+    ``skewX(r)`` at ``(p.x, p.y)``
 
-* ``normalize({dy: 5})`` returns ``{xx: 1, xy: 0, yx: 0, yy: 1, dx: 0, dy: 5}``.
+* ``skewXAt(r, a, b)``
+    ``skewX(r)`` at ``(a, b)``
 
-* ``normalize([scale(2), translate(100, 200)])`` returns ``{xx: 2, xy: 0, yx: 0, yy: 2, dx: 200, dy: 400}``.
+* ``skewXgAt(d, p)``
+    ``skewXg(d)`` at ``(p.x, p.y)``
 
-The same effect can be achieved with creating a matrix directly: ``new dojox.gfx.Matrix2D(m)``.
+* ``skewXgAt(d, a, b)``
+    ``skewXg(d)`` at ``(a, b)``
 
-=============
-Font property
-=============
+skewYAt
+~~~~~~~
 
-Text shapes (Text and TextPath) require a font in order to be rendered. A font description follows familiar CSS conventions. Following properties of font are recognized:
+Applies skewY_ with the center at the given point.
 
-style
-  the same as the CSS ``font-style`` property: ``"normal"``, ``"italic"``, ``"oblique"``. Default: ``"normal"``.
+Signatures:
 
-variant
-  the same as the CSS ``font-variant`` property: ``"normal"``, ``"small-caps"``. Default: ``"normal"``.
+* ``skewYAt(r, p)``
+    ``skewY(r)`` at ``(p.x, p.y)``
 
-weight
-  the same as the CSS ``font-weight`` property: ``"normal"``, ``"bold"``, ``"bolder"``, ``"lighter"``, 100, 200, 300, 400, 500, 600, 700, 800, 900. Default: ``"normal"``.
+* ``skewYAt(r, a, b)``
+    ``skewY(r)`` at ``(a, b)``
 
-size
-  the same as the CSS ``font-size`` property. Default: ``"10pt"``.
+* ``skewYgAt(d, p)``
+    ``skewYg(d)`` at ``(p.x, p.y)``
 
-family
-  a string which defines a font family. Default: ``"serif"``.
-
-There is a useful shortcut: you can specify a font using a string similar to the CSS font property.
-
-Implementation notes
---------------------
-
-VML
-~~~
-
-IE7 broke a lot of VML stuff. The family property doesn’t work in IE7 at the moment but does work in IE6. IE7 uses Arial always. Unfortunately there is no workaround for that.
-
-Silverlight
-~~~~~~~~~~~
-
-Silverlight has following restrictions:
-
-* ``style``: only ``"normal"`` and ``"italic"`` are supported, all other values are interpreted as ``"normal"``.
-
-* ``variant``: ignored.
-
-* ``weight``: ``"normal"`` is implemented as 400, ``"bold"`` is 700, ``"bolder"`` and ``"lighter"`` are not supported.
-
-* ``size``: fully supported.
-
-* ``family``: ``"serif"`` and ``"times"`` are substituted by ``"Times New Roman"``, ``"sans-serif"`` and ``"helvetica"`` are substituted by ``"Arial"``, ``"monotone"`` and ``"courier"`` are substituted by ``"Courier New"``, the rest is passed unchanged and will be interpreted by the underlying Silverlight renderer.
-
-Canvas
-~~~~~~
-
-Canvas doesn’t implement text and, consequently, font definitions.
+* ``skewYgAt(d, a, b)``
+    ``skewYg(d)`` at ``(a, b)``
