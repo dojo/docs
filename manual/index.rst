@@ -773,9 +773,13 @@ These sections cover the available projects shipped with the Dojo Toolkit
 
     A new multi-file uploader that shows progress as the files are uploading
 
-  * `dojox.form.Manager <dojox/form/Manager>`_
+  * `dojox.form.manager (the package) <dojox/form/manager>`_
 
-    A widget and a collection of mxinis to manage complex event-driven dynamic forms
+    A collection of mixins to manage complex event-driven dynamic forms
+
+    * `dojox.form.Manager (the widget) <dojox/form/Manager>`_
+
+      A simple widget based on `dojox.form.manager <dojox/form/manager>`_ package.
 
   * dojox.form.MultiComboBox
 
