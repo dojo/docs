@@ -87,7 +87,6 @@ Effectively all transformations are always applied from right to left sequential
 
 * ``invert(M)`` creates an inverted matrix to "undo" the parameter ``M``:
 
-  .. image :: attachment:matrix16.png
 
   Inverse matrices have a very useful property (where ``M`` is a matrix, ``I`` is an identity matrix):
 
