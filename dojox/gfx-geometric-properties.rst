@@ -37,13 +37,14 @@ There is a shortcut for multiplication (see multiply_ for details) --- is an arr
 
 `dojox.gfx.matrix <dojox/gfx/matrix>`_ defines ``Matrix2D`` class, as well as numerous helpers (``Matrix2D`` is propagated to ``dojox.gfx`` namespace for convenience). Most important of them (all in ``dojox.gfx.matrix`` namespace) are listed below.
 
+==========================
 Matrix2D and normalization
---------------------------
+==========================
 
 As you can see developers can specify matrices in a variety of ways. But for performance reasons internally it is always converted to ``Matrix2D``, which has all proper attributes defined. You can achieve this normalization by instantiating Matrix2D_ object or by invoking a creator function called normalize_.
 
 Matrix2D
-~~~~~~~~
+--------
 
 Matrix2D is the class for our 2 by 3 matrix. You can always use it to normalize your matrix expression to the canonical representation. It is available in both namespaces: ``dojox.gfx`` and ``dojox.gfx.matrix``.
 
@@ -64,9 +65,9 @@ Examples:
   var m3 = new dojox.gfx.Matrix2D([{dy: 10}, 2]);
 
 normalize
-~~~~~~~~~
+---------
 
-There is one more useful function: ``normalize(m)``, which returns Matrix2D:
+There is one more useful function: ``normalize(m)``, which returns Matrix2D_:
 
 * ``normalize(2)`` returns ``{xx: 2, xy: 0, yx: 0, yy: 2, dx: 0, dy: 0}``.
 
@@ -76,33 +77,35 @@ There is one more useful function: ``normalize(m)``, which returns Matrix2D:
 
 The same normalization effect can be achieved with creating a matrix directly.
 
+=========
 Constants
----------
+=========
 
 Some operations do not require any parameters and implemented as predefined constants.
 
 identity
-~~~~~~~~
+--------
 
 The identity matrix. This matrix doesn’t change a picture at all.
 
 flipX
-~~~~~
+-----
 
 Changes the sign of all ``X`` coordinates. This matrix mirrors the picture around the ``Y`` axis.
 
 flipY
-~~~~~
+-----
 
 Changes the sign of all ``Y`` coordinates. This matrix mirrors the picture around the ``X`` axis.
 
 flipXY
-~~~~~~
+------
 
 Changes the sign of all coordinates. This matrix rotates the picture by 180 degrees around ``(0, 0)`` point. Another way to say it: it mirrors all points around ``(0, 0)``.
 
+===============
 Matrix creators
----------------
+===============
 
 Matrices can be used to express any linear transformation of coordinates. To simplify the task of creating matrices for common operations numerous matrix creators are provided.
 
@@ -111,7 +114,7 @@ In all signatures ``a``, ``b``, ``c``, and ``e`` are numbers (coordinate compone
 If a function accepts an angle value, there are two versions of this function: with radians, and with degrees. The latter will be denoted with ``g`` suffix. Example: ``rotate(r)`` accepts radians, while ``rotateg(d)`` accepts degrees.
 
 translate
-~~~~~~~~~
+---------
 
 Signatures: ``translate(a, b)``, ``translate(p)``. Shifts everything:
 
@@ -120,7 +123,7 @@ Signatures: ``translate(a, b)``, ``translate(p)``. Shifts everything:
   * by ``{dx: p.x, dy: p.y}``
 
 scale
-~~~~~
+-----
 
 Signatures: ``scale(a, b)``, ``scale(a)``, ``scale(p)``. Scales a picture:
 
@@ -131,7 +134,7 @@ Signatures: ``scale(a, b)``, ``scale(a)``, ``scale(p)``. Scales a picture:
   * by ``{xx: p.x, yy: p.y}``
 
 rotate
-~~~~~~
+------
 
 Signatures: ``rotate(r)``, ``rotateg(d)``. Rotates a picture around ``(0, 0)``:
 
@@ -140,7 +143,7 @@ Signatures: ``rotate(r)``, ``rotateg(d)``. Rotates a picture around ``(0, 0)``:
   * by ``d`` degrees
 
 skewX
-~~~~~
+-----
 
 Signatures: ``skewX(r)``, ``skewXg(d)``. Skews a picture around ``(0, 0)`` in the ``X`` dimension:
 
@@ -149,7 +152,7 @@ Signatures: ``skewX(r)``, ``skewXg(d)``. Skews a picture around ``(0, 0)`` in th
   * by ``d`` degrees
 
 skewY
-~~~~~
+-----
 
 Signatures: ``skewY(r)``, ``skewYg(d)``. Skews a picture around ``(0, 0)`` in the ``Y`` dimension:
 
@@ -158,7 +161,7 @@ Signatures: ``skewY(r)``, ``skewYg(d)``. Skews a picture around ``(0, 0)`` in th
   * by ``d`` degrees
 
 reflect
-~~~~~~~
+-------
 
 Signatures: ``reflect(a, b)``, ``reflect(p)``. Reflects points around a line that goes through the origin ``(0, 0)``:
 
@@ -167,7 +170,7 @@ Signatures: ``reflect(a, b)``, ``reflect(p)``. Reflects points around a line tha
   * around the line ``[(0, 0), (p.x, p.y)]``
 
 project
-~~~~~~~
+-------
 
 Signatures: ``project(a, b)``, ``project(p)``. Projects points on a line that goes through the origin ``(0, 0)``:
 
@@ -175,28 +178,29 @@ Signatures: ``project(a, b)``, ``project(p)``. Projects points on a line that go
 
   * on the line ``[(0, 0), (p.x, p.y)]``
 
+==================
 General operations
-------------------
+==================
 
 In all signatures ``a``, ``b``, ``c``, and ``e`` are numbers (coordinate components or scaling factors), ``p`` is a 2D coordinate, ``r`` is an angle in radians, ``d`` is an angle in degrees (positive value of an angle is CW), ``m`` is a matrix.
 
 invert
-~~~~~~
+------
 
 Signatures: ``invert(m)``. Inverts a matrix. This useful function calculates a matrix, which will do the opposite transformation to the m matrix effectively undoing it. For example, ``scale(2)`` produces a matrix to scale uniformly a picture by 2. The opposite matrix is going to be ``scale(0.5)``. We can produce the same result with ``invert(scale(2))``. While it seems complicated for this simple case, frequently it is the only way to calculate an inverted matrix for complex transformation, especially when we don’t know how it was produced initially.
 
 clone
-~~~~~
+-----
 
 Signatures: ``clone(m)``. Creates a copy of the ``m`` matrix.
 
 multiplyPoint
-~~~~~~~~~~~~~
+-------------
 
 Signatures: ``multiplyPoint(m, a, b)``, ``multiplyPoint(m, p)``. Applies a transformation to a coordinate.
 
 multiply
-~~~~~~~~
+--------
 
 Signatures: ``multiply(m1, m2, ...)``. Multiplies all its parameters to create a single matrix.
 
@@ -218,8 +222,9 @@ More complex example: imagine you have a surface 500 by 500 pixels, and you want
 
 You can see that this kind of transformations follow a ``"sandwich"`` pattern, where the first and the last transformation move an immutable point to/from the origin of coordinates before performing other origin-based operations. The first operation is usually a translation to the origin, and the last is the inverse of the same translation.
 
+==================
 "Sandwich" helpers
-------------------
+==================
 
 These "around the point" operations are so important that ``dojox.gfx`` provides several helpers for common transformations. Usually they are named like their middle "meaty" part with the suffix ``At``. Example: ``scale(a)`` => ``scaleAt(a, p)``.
 
@@ -228,7 +233,7 @@ In all signatures ``a``, ``b``, ``c``, and ``e`` are numbers (coordinate compone
 If a function accepts an angle value, there are two versions of this function: with radians, and with degrees. The latter will be denoted with ``g`` suffix. Example: ``rotate(r)`` accepts radians, while ``rotateg(d)`` accepts degrees.
 
 scaleAt
-~~~~~~~
+-------
 
 Applies scale_ with the center at the given point.
 
@@ -247,7 +252,7 @@ Signatures:
     ``scale(a, b)`` around ``(c, e)``
 
 rotateAt
-~~~~~~~~
+--------
 
 Applies rotate_ with the center at the given point.
 
@@ -266,7 +271,7 @@ Signatures:
     ``rotateg(d)`` at ``(a, b)``
 
 skewXAt
-~~~~~~~
+-------
 
 Applies skewX_ with the center at the given point.
 
@@ -285,7 +290,7 @@ Signatures:
     ``skewXg(d)`` at ``(a, b)``
 
 skewYAt
-~~~~~~~
+-------
 
 Applies skewY_ with the center at the given point.
 
