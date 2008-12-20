@@ -232,3 +232,54 @@ Canvas
 ~~~~~~
 
 Canvas renderer doesn’t support the even-odd rule.
+
+=============
+Font property
+=============
+
+Text shapes (Text and TextPath) require a font in order to be rendered. A font description follows familiar CSS conventions. Following properties of font are recognized:
+
+style
+  the same as the CSS ``font-style`` property: ``"normal"``, ``"italic"``, ``"oblique"``. Default: ``"normal"``.
+
+variant
+  the same as the CSS ``font-variant`` property: ``"normal"``, ``"small-caps"``. Default: ``"normal"``.
+
+weight
+  the same as the CSS ``font-weight`` property: ``"normal"``, ``"bold"``, ``"bolder"``, ``"lighter"``, 100, 200, 300, 400, 500, 600, 700, 800, 900. Default: ``"normal"``.
+
+size
+  the same as the CSS ``font-size`` property. Default: ``"10pt"``.
+
+family
+  a string which defines a font family. Default: ``"serif"``.
+
+There is a useful shortcut: you can specify a font using a string similar to the CSS font property.
+
+Implementation notes
+--------------------
+
+VML
+~~~
+
+IE7 broke a lot of VML stuff. The family property doesn’t work in IE7 at the moment but does work in IE6. IE7 uses Arial always. Unfortunately there is no workaround for that.
+
+Silverlight
+~~~~~~~~~~~
+
+Silverlight has following restrictions:
+
+* ``style``: only ``"normal"`` and ``"italic"`` are supported, all other values are interpreted as ``"normal"``.
+
+* ``variant``: ignored.
+
+* ``weight``: ``"normal"`` is implemented as 400, ``"bold"`` is 700, ``"bolder"`` and ``"lighter"`` are not supported.
+
+* ``size``: fully supported.
+
+* ``family``: ``"serif"`` and ``"times"`` are substituted by ``"Times New Roman"``, ``"sans-serif"`` and ``"helvetica"`` are substituted by ``"Arial"``, ``"monotone"`` and ``"courier"`` are substituted by ``"Courier New"``, the rest is passed unchanged and will be interpreted by the underlying Silverlight renderer.
+
+Canvas
+~~~~~~
+
+Canvas doesn’t implement text and, consequently, font definitions.
