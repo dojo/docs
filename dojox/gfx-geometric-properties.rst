@@ -69,11 +69,14 @@ normalize
 
 There is one more useful function: ``normalize(m)``, which returns Matrix2D_:
 
-* ``normalize(2)`` returns ``{xx: 2, xy: 0, yx: 0, yy: 2, dx: 0, dy: 0}``.
+.. code-block :: javascript
 
-* ``normalize({dy: 5})`` returns ``{xx: 1, xy: 0, yx: 0, yy: 1, dx: 0, dy: 5}``.
-
-* ``normalize([scale(2), translate(100, 200)])`` returns ``{xx: 2, xy: 0, yx: 0, yy: 2, dx: 200, dy: 400}``.
+  var m1 = normalize(2);        // => {xx: 2, xy: 0, yx: 0, yy: 2, dx: 0, dy: 0}
+  
+  var m2 = normalize({dy: 10}); // => {xx: 1, xy: 0, yx: 0, yy: 1, dx: 0, dy: 5}
+  
+  var m3 = normalize([scale(2), translate(100, 200)]);
+                                // => {xx: 2, xy: 0, yx: 0, yy: 2, dx: 200, dy: 400}
 
 The same normalization effect can be achieved with creating a matrix directly.
 
