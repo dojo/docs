@@ -1,7 +1,7 @@
 #format dojo_rst
 
-Properties
-=================
+Shape properties
+================
 
 :Status: Draft
 :Version: 1.3
