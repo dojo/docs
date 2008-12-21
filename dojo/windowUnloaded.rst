@@ -61,4 +61,5 @@ TODO: example
 See also
 ========
 
-* TODO: links to other related articles
+ * http://docs.dojocampus.org/dojo/addOnWindowUnload - method to add functions to the execution stack
+ * http://docs.dojocampus.org/dojo/addOnUnload - similar to addOnWindUnload but for the onbeforeunload event.
