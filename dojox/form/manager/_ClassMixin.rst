@@ -99,7 +99,7 @@ Example:
 Tips
 ====
 
-Note that the dictionary form of methods always ignores values. While there is a way to collect the presence of a class, there is no direct way to reflect it back. If you want to do that you can use `inspect() <dojox/form/manager/_Mixin#inspect>`_ method of `_Mixin <dojox/form/manager/_Mixin>`_:
+Note that the dictionary form of addClass_ and removeClass_ methods always ignores values. While there is a way to collect the presence of a class, there is no direct way to reflect it back. If you want to do that you can use `inspect() <dojox/form/manager/_Mixin#inspect>`_ method of `_Mixin <dojox/form/manager/_Mixin>`_:
 
 .. code-block :: javascript
 
