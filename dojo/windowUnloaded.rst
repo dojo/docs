@@ -17,20 +17,18 @@ Signal fired by impending window destruction.
 Introduction
 ============
 
-TODO: introduce the component/class/method
-
+The dojo.windowUnloaded function is triggered on the onwindowunload browser event.
+It executes all the functions contained in an existing array. To add a function to this array use dojo.addOnWindowUnload.  
 
 =====
 Usage
 =====
 
-TODO: how to use the component/class/method
-
 .. code-block :: javascript
  :linenos:
 
  <script type="text/javascript">
-   // your code
+   dojo.addOnWindowUnload(function(){ alert('Bye :)'); })
  </script>
 
 
