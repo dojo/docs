@@ -19,7 +19,7 @@ Top priority: Dojo Base
 
 * `dojo.windowUnloaded <dojo/windowUnloaded>`_
 
-  needed: full page
+  needed: Declarative example. add event that triggers this function.
 
 * `dojo.connectPublisher <dojo/connectPublisher>`_
 
