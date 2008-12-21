@@ -18,7 +18,10 @@ Introduction
 ============
 
 The dojo.windowUnloaded function is triggered on the onwindowunload browser event.
-It executes all the functions contained in an existing array. To add a function to this array use dojo.addOnWindowUnload.  
+
+It executes all the functions contained in an existing private array.
+
+To add a function to this array use dojo.addOnWindowUnload.  
 
 =====
 Usage
@@ -40,7 +43,13 @@ Examples
 Programmatic example
 --------------------
 
-TODO: example
+.. code-block :: javascript
+ :lineos:
+
+ <script>
+  dojo.addOnWindowUnload(function(){ alert('Bye'); });
+  dojo.addOnWindowUnload(function(){ alert('Bye again'); });
+ </script>
 
 Declarative example
 -------------------
