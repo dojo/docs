@@ -4,7 +4,7 @@ dojo.windowUnloaded
 ===================
 
 :Status: Draft
-:Version: 1.0
+:Version: 1.2.3
 :Available: since V?
 
 .. contents::
@@ -17,7 +17,7 @@ Signal fired by impending window destruction.
 Introduction
 ============
 
-The dojo.windowUnloaded function is triggered on the onwindowunload browser event.
+The dojo.windowUnloaded function is triggered on the onwindowunload browser event. This event is triggered when the user is leaving the current page.
 
 It executes all the functions contained in an existing private array.
 
@@ -44,9 +44,9 @@ Programmatic example
 --------------------
 
 .. code-block :: javascript
- :lineos:
 
- <script>
+
+ <script type="text/javascript">
   dojo.addOnWindowUnload(function(){ alert('Bye'); });
   dojo.addOnWindowUnload(function(){ alert('Bye again'); });
  </script>
