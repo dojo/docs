@@ -1,7 +1,7 @@
 #format dojo_rst
 
 Cross-Domain Dojo
-=================
+==============================================
 
 :Status: Draft
 :Version: 1.0
