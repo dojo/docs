@@ -14,6 +14,21 @@ Toasters are preferable to alert() boxes. Alert() must always be modal, meaning 
 
 You can either set the message programmatically, or use dojo's publish/subscribe event feature. Publish/subscribe allows you to have several toasters, or several controls besides toasters, respond to a particular event.
 
+To load a Toaster, issue the call:
+
+.. code-block :: javascript
+  :linenos:
+
+  dojo.require("dojox.widget.Toaster");
+
+And include the CSS somewhere in your page:
+
+.. code-block :: html
+  :linenos:
+
+    <link rel="styleheet" href="dojotoolkit/dojox/widget/Toaster/Toaster.css" />
+
+
 Examples
 --------
 
