@@ -5,7 +5,7 @@ Cross-Domain Dojo
 
 :Status: Draft
 :Version: 1.0
-:Project owner: Victor Danilchenko
+:Author: Victor Danilchenko
 :Available: since 1.0
 
 
@@ -21,14 +21,14 @@ Introduction
 A cross-domain Dojo build is one which can be loaded from the server other than the one where the application deployment occurs. It can be a `custom build <quickstart/custom-builds>`_ or a `CDN <http://en.wikipedia.org/wiki/Content_Delivery_Network>`_ distribution.
 
 Advantages
-__________
+----------
 #. You get more connections in MSIE, since you can load from another domain. Faster loading.
 #. You get increased cacheability/startup if many of your applications use the same installation.
 #. Resource loading does not block the rest of the page from filling in as with Dojo's normal, synchronous loading.
 #. With a local install, your ISP may otherwise charge you for all of those Dojo bits that you are serving.
 
 Disadvantages
-_____________
+-------------
 #. You have to use a cross-domain build of Dojo. All CDN-hosted distributions are already XDified, but if you are using your own servers, you have to `build a custom Dojo distribution <quickstart/custom-builds>`_ for it.
 #. The coding gets a little more complicated, as some things don't work the same in an XD build as in a local one. See 'Caveats and Gotchas' below.
 #. You become dependent on the CDN's status. CDNs don't go down often, but when they do, your Dojo application may be impaired or even rendered temporarily useless.
@@ -37,11 +37,11 @@ _____________
 Using a cross-domain Dojo distribution
 ======================================
 CDN or a custom build?
-______________________
+----------------------
 There is really no right answer. A CDN distribution delivers geographic caching of the Dojo files, allowing the user to retrieve them from a nearby location, which speeds up loading. A custom build, however, allows you to create layers (bundles of classes), also speeding up loading.
 
 Available CDNs
-______________
+--------------
 In the examples below, 'VERSION' is the Dojo version you want to use, e.g. "1.2". While you can specify a more specific version, such as "1.2.3", it is recommended you use a major version number (1.2) -- newer dot-releases will be pushed to the /1.2/ URL automatically. 
 
 Google
@@ -73,12 +73,12 @@ AOL `also hosts a cross-domain Dojo distribution <http://dev.aol.com/dojo>`_. To
   <script type="text/javascript" src="http://o.aolcdn.com/dojo/VERSION/dojo/dojo.xd.js"></script> 
 
 Making a custom build
-_____________________
+---------------------
 See the `custom builds <quickstart/custom-builds>`_ page.
 
 
 Caveats and Gotchas
-___________________
+-------------------
 **Asynchronous loading**. You **must** use dojo.addOnLoad() to register a callback function to get notification of package loading. This can be used even after the initial page load. Just do the dojo.require()s that you need, and then call dojo.addOnLoad() with a callback function, and once those new packages are loaded (or if they are already loaded), then the callback will be called.
 
 **Local blank page**. You have to save a local copy of a blank HTML page to location specified via 'dojoBlankHtmlUrl' configuration parameter, e.g.:
