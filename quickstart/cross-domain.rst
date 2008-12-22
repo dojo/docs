@@ -4,7 +4,7 @@ Cross-Domain Dojo
 =================
 
 :Status: Draft
-:Version: 0.2
+:Version: 1.0
 :Project owner: Victor Danilchenko
 :Available: since 1.0
 
@@ -18,7 +18,7 @@ How to use Dojo's cross-domain distributions
 Introduction
 ============
 
-A cross-domain Dojo build is one which can be loaded from the server other than the one where the application deployment occurs. It can be a `custom build <custom-builds>`_ or a `CDN <http://en.wikipedia.org/wiki/Content_Delivery_Network>`_ distribution.
+A cross-domain Dojo build is one which can be loaded from the server other than the one where the application deployment occurs. It can be a `custom build <quickstart/custom-builds>`_ or a `CDN <http://en.wikipedia.org/wiki/Content_Delivery_Network>`_ distribution.
 
 Advantages
 __________
@@ -29,7 +29,7 @@ __________
 
 Disadvantages
 _____________
-#. You have to use a cross-domain build of Dojo. All CDN-hosted distributions are already XDified, but if you are using your own servers, you have to `build a custom Dojo distribution <custom-builds>`_ for it.
+#. You have to use a cross-domain build of Dojo. All CDN-hosted distributions are already XDified, but if you are using your own servers, you have to `build a custom Dojo distribution <quickstart/custom-builds>`_ for it.
 #. The coding gets a little more complicated, as some things don't work the same in an XD build as in a local one. See 'Caveats and Gotchas' below.
 #. You become dependent on the CDN's status. CDNs don't go down often, but when they do, your Dojo application may be impaired or even rendered temporarily useless.
 
@@ -74,7 +74,7 @@ AOL `also hosts a cross-domain Dojo distribution <http://dev.aol.com/dojo>`_. To
 
 Making a custom build
 _____________________
-See the `custom builds <custom-builds>`_ page.
+See the `custom builds <quickstart/custom-builds>`_ page.
 
 
 Caveats and Gotchas
