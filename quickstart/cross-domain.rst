@@ -1,7 +1,7 @@
 #format dojo_rst
 
 Cross-Domain Dojo
-==============================================
+=================
 
 :Status: Draft
 :Version: 1.0
@@ -93,6 +93,7 @@ Multiple modules (dojo.io.iframe, dijit.Editor, dojo.back) require this to prope
 
 **dojox.flash.Info()**: It uses document.write() which will cause problems if dojox.flash is loaded via dojo.require().
 
+=============
 Usage example
 =============
 
