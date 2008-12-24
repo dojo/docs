@@ -25,25 +25,42 @@ Host widget always controls
 It's important to note that the host widget both opens '''and closes''' the popup.
 Even for something like dijit.TooltipDialog, the host widget is responsible for closing it.
 
-Here's some example code from PopupMenuItem about how it opens and closes a submenu or other widget (like a ColorPicker):
+Here's some example code from DropDownButton about how it opens and closes it's drop down:
 
 .. code-block :: javascript
 
-		var savedFocus = dijit.getFocus(this);
-		function closeAndRestoreFocus(){
-			// user has clicked on a menu or popup
-			dijit.focus(savedFocus);
-			dijit.popup.close(self);
-		}
 		dijit.popup.open({
-			popup: this,
-			x: x,
-			y: y,
-			onExecute: closeAndRestoreFocus,
-			onCancel: closeAndRestoreFocus,
-			orient: this.isLeftToRight() ? 'L' : 'R'
+			parent: this,
+			popup: dropDown,
+			around: this.domNode,
+			orient:
+				// TODO: add user-defined positioning option, like in Tooltip.js
+				this.isLeftToRight() ? {'BL':'TL', 'BR':'TR', 'TL':'BL', 'TR':'BR'}
+				: {'BR':'TR', 'BL':'TL', 'TR':'BR', 'TL':'BL'},
+			onExecute: function(){
+				self._closeDropDown(true);
+			},
+			onCancel: function(){
+				self._closeDropDown(true);
+			},
+			onClose: function(){
+				dropDown.domNode.style.width = oldWidth;
+				self.popupStateNode.removeAttribute("popupActive");
+				self._opened = false;
+			}
 		});
-		this.focus();
+     
+The closeDropDown method is implemented as:
+
+.. code-block :: javascript
+
+	_closeDropDown: function(/*Boolean*/ focus){
+		if(this._opened){
+			dijit.popup.close(this.dropDown);
+			if(focus){ this.focus(); }
+			this._opened = false;			
+		}
+	}
 
 Note that Menu is responsible for calling both dijit.popup.open() and dijit.popup.close().
 
@@ -77,8 +94,10 @@ In summary, here is the lifecycle:
    * [User enters input into the popup]
    * User clicks something in the popup widget, either a "submit"/"cancel" button or maybe just a color (in the case of the ColorPicker)
    * Popup widget calls this.onExecute() or this.onCancel()
-   * Dijit.popup code notices the onCancel() call and informs host widget
-   * Host widget closes the popup widget and restores focus to whatever previously had focus
+   * Dijit.popup code notices the popupWidget.onExecute() / popupWidget.onCancel() call and informs host widget, by calling the onExecute() defined in the dijit.popup.open() call 
+   * Host widget calls dijit.popup.close(), closing the popup widget
+   * Dijit.popup.close() calls onClose() handler defined in dijit.popup.open() code.
+   * Host widget probably restores focus to whatever had focus before.
    * Popup widget executes.   Note that if the popup widget is something like an editor dialog, it now can access whatever previously had focus.  Part of the execution is likely calling this.onClick() so that any onClick handlers will be called.
 
 If the user clicks a blank section of the screen in order to close the popup, then the ending steps of the lifecycle are slightly different:
