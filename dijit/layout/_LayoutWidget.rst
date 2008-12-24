@@ -4,16 +4,13 @@ dijit._LayoutWidget
 ===================
 
 :Status: Contributed, Draft
-:Version: beta
+:Version: finished
 :Authors: ?--
 
 .. contents::
     :depth: 2
 
-The `dijit.layout <dijit/layout/_LayoutWidget>`_ page attempts to document the contract for using layout widgets, but
-what should you do if you want to *write* a layout widget?
-
-Typically layout widgets inherit from the dijit.layout._LayoutWidget base class. This implements addChild(), removeChild(), and resize().
+Typically layout widgets inherit from the dijit.layout._LayoutWidget base class. This implements addChild(), removeChild(), startup(), and resize().
 
 The widget is responsible for implementing some callback methods and setting some properties though:
 
@@ -85,6 +82,8 @@ At the time that postCreate() etc is called, the child widgets do not yet exist,
   6. widget.domNode into the document's DOM tree (by the user)
   7. user calls startup()
   8. layout() is called (widget should position it's children correctly, and do other initialization that depends on calls to marginBox() etc here)
+
+See also the `Widget lifecycle <quickstart/writingWidgets/lifecycle>`_ page.
 
 addChild()
 ----------
