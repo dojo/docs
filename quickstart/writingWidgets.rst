@@ -46,6 +46,8 @@ These pages list some more information you need for writing widgets from scratch
 * `More on attributes <quickstart/writingWidgets/attributes>`_
 * `Widgets In Template <quickstart/writingWidgets/widgetsInTemplate>`_
 * `Example: File Upload Dialog Box <quickstart/writingWidgets/example>`_
+* `Dropdowns and Popups <quickstart/writingWidgets/popups>`_
+
 
 
 =============
