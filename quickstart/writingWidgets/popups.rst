@@ -47,8 +47,6 @@ Here's some example code from DropDownButton about how it opens and closes it's 
      
 Popup points to a dijit.ColorPicker, dijit.Menu, etc.... it can be any widget.
 
-Note that the parent widget is responsible for calling both dijit.popup.open() and dijit.popup.close().
-
 
 Popup Widget
 ------------
@@ -70,6 +68,20 @@ widget that it's ready to be closed:
 
 dijit.popup will monitor calls to these two methods and inform the parent widget.
 
+Here's some example code from a popup widget showing what it does when it's been clicked:
+
+.. code-block :: javascript
+
+	onItemClick: function(/*Widget*/ item, /*Event*/ evt){
+		...
+		// before calling user defined handler, close hierarchy of menus
+		// and restore focus to place it was when menu was opened
+		this.onExecute();
+
+		// user defined handler for click
+		item.onClick(evt);
+		...
+	}
 
 Lifecycle
 ---------
@@ -92,21 +104,17 @@ If the user clicks a blank section of the screen in order to close the popup, th
    * Dijit.popup code doesn't close the popup widget directly, but rather calls the onCancel callback specified in the dijit.popup.open() call
    * Host widget closes the popup and restores focus to whatever previously had focus
 
+Stacks
+------
+DropDowns can open other drop downs.   This is particularly leveraged by the Menu widget.
 
-Example code
-------------
+dijit.popup() keeps track of the stack of open widgets.
 
-Here's some example code from a popup widget showing what it does when it's been clicked:
 
-.. code-block :: javascript
+Keyboard handling
+-----------------
+dijit.popup() automatically monitors for the ESC key as a way to cancel the current popup.   It treats it the same way as clicking on the blank area of the screen.
 
-	onItemClick: function(/*Widget*/ item, /*Event*/ evt){
-		...
-		// before calling user defined handler, close hierarchy of menus
-		// and restore focus to place it was when menu was opened
-		this.onExecute();
+It also monitors for the TAB key, and if it sees it, it cancels the whole stack of popups (in the case of menus, where one popup has opened another and so forth).
 
-		// user defined handler for click
-		item.onClick(evt);
-		...
-	},
+Note that in neither of these cases does the dijit.popup code directly close the popup(s).  Rather, it just calls the onCancel() callback defined on the dijit.popup.open() call.   That callback then presumably calls dijit.popup.close().   This architecture was designed so that the parent widget always knows whether it's child popup is open or not, and also so that it can do any cleanup etc.
