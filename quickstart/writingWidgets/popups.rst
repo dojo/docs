@@ -35,29 +35,20 @@ Here's some example code from DropDownButton about how it opens and closes it's 
 			around: this.domNode,
 			orient: {'BR':'TR', 'BL':'TL', 'TR':'BR', 'TL':'BL'},
 			onExecute: function(){
-				self._closeDropDown(true);
+				dijit.popup.close(dropDown);
 			},
 			onCancel: function(){
-				self._closeDropDown(true);
+				dijit.popup.close(dropDown);
 			},
 			onClose: function(){
 				...
 			}
 		});
      
-The closeDropDown method is implemented as:
+Popup points to a dijit.ColorPicker, dijit.Menu, etc.... it can be any widget.
 
-.. code-block :: javascript
+Note that the parent widget is responsible for calling both dijit.popup.open() and dijit.popup.close().
 
-	_closeDropDown: function(/*Boolean*/ focus){
-		if(this._opened){
-			dijit.popup.close(this.dropDown);
-			if(focus){ this.focus(); }
-			this._opened = false;			
-		}
-	}
-
-Note that DropDownButton is responsible for calling both dijit.popup.open() and dijit.popup.close().
 
 Popup Widget
 ------------
