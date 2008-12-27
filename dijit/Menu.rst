@@ -107,6 +107,8 @@ This example creates a context menu for the whole window.
 
         <span> Click anywhere on the page to see this menu.</span>
 
+Note that popup menus should be hidden via specifying style="display: none".  Hiding the menu indirectly via a class won't work (in that the menu will remain invisible even when it's supposed to be displayed).
+
 Accessibility
 =============
 
