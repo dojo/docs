@@ -163,6 +163,9 @@ Placing a node under another node at he beginning
       <div>Five</div>
     </div>
 
+Alternate Reference Nodes
+-------------------------
+
 These examples all use id's for the reference node. The node passed as the reference node can be a string ID or DomNode reference, such a node you create which is already in the DOM, or a node found via `dojo.query <dojo/query>`_:
 
 .. code-block :: javascript
@@ -177,6 +180,10 @@ These examples all use id's for the reference node. The node passed as the refer
 
   // place a newly created node in the found node (for Dojo < 1.3)
   dojo.place(dojo.doc.createElement('div'), n);
+
+
+Place using create()
+--------------------
 
 Though the above example uses dojo.create as an alias to dojo.doc.createElement, `dojo.create <dojo/create>`_ can also act as a shorthand for dojo.place() in this scenario. This is limited, however, to Dojo 1.3 or higher.
 
