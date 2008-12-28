@@ -135,14 +135,31 @@ There are three parts to form validation:
 
 * validation tooltips:
 
-  * optionally on focus/mouse over  (the promptMessage).  Note that this is not recommended from a Ux perspective as it might make the user think they've done something wrong.
-  * when the value is invalid (the invalidMessage)
-  * when the value is outside a min/max range (rangeMessage)
-
 * prevention of form submit: using the `dijit.form.Form <dijit/form/Form>`_ widget you can prevent form submission if any of the fields are invalid
 
-With Dojo Toolkit V1.2 the form widgets have been enhanced so that they won't turn yellow while the user is typing because the value they have is incomplete. However they will still turn yellow instantly if the value they are typing isn't valid (and can't be made valid by typing more characters). This change should provide good feedback to users.
+Color change
+------------
+The form widgets turn yellow and display an icon when the value is invalid, or a required field is blank.
 
+In general the color change is deferred until the field is blurred. I.e. the field won't turn yellow while the user is typing because the value they have is incomplete. However, the field will still turn yellow instantly if the value the user is typing isn't valid (and can't be made valid by typing more characters). This change should provide good feedback to users.
+
+For number fields, the field will also turn yellow instantly if the user has entered a value that is out of range (like 1000 for a field with max=999), assuming that the value can't be made in range by typing more characters (ex: "1" in a field with a min of 1000).
+
+Validation Tooltips
+-------------------
+You can define the following types of messages for the widgets:
+  * promptMessage: hint message on focus/mouse over.  Note that this is not recommended from a Ux perspective as it might make the user think they've done something wrong.
+  * invalidMessage: when the value is invalid.
+  * missingMessage: when a required value is missing
+  * rangeMessage: when the value is outside a min/max range
+
+If you don't define a message then dijit uses built-in generic messages, except for the promptMessage, which just isn't displayed.
+
+The validation tooltips are only displayed while the field is focused (and after dijit has decided that there is indeed an error, see above section).
+
+Prevent form submission
+-----------------------
+Using the `dijit.form.Form <dijit/form/Form>`_ widget you can prevent form submission if any of the fields are invalid.  Dijit provides hooks so you can either disable the submit button, or popup an error message when the user tries to submit, or even focus on the invalid field.
 
 =================================
 Use Dijit Form Controls All Over!
