@@ -35,6 +35,11 @@ AJAX
 * `AJAX <quickstart/ajax>`_
 * `Back buttons <quickstart/back>`_
 
+================
+DOM Manipulation
+================
+
+* `Overview <quickstart/dom>`_
 
 ==========
 Animations
