@@ -133,13 +133,13 @@ There are three parts to form validation:
 
 * color change / icon: fields turn yellow and display an icon when they have an invalid value, or when a required field is empty
 
-* validation tooltips:
+* validation tooltips
 
 * prevention of form submit: using the `dijit.form.Form <dijit/form/Form>`_ widget you can prevent form submission if any of the fields are invalid
 
 Color change
 ------------
-The form widgets turn yellow and display an icon when the value is invalid, or a required field is blank.
+The input-type form widgets (including ComboBox and FilteringSelect, but excluding Textarea) turn yellow and display an icon when the value is invalid, or a required field is blank.
 
 In general the color change is deferred until the field is blurred. I.e. the field won't turn yellow while the user is typing because the value they have is incomplete. However, the field will still turn yellow instantly if the value the user is typing isn't valid (and can't be made valid by typing more characters). This change should provide good feedback to users.
 
@@ -147,7 +147,8 @@ For number fields, the field will also turn yellow instantly if the user has ent
 
 Validation Tooltips
 -------------------
-You can define the following types of messages for the widgets:
+You can define the following types of tooltip prompts for the input type form widgets (same list as above):
+
   * promptMessage: hint message on focus/mouse over.  Note that this is not recommended from a Ux perspective as it might make the user think they've done something wrong.
   * invalidMessage: when the value is invalid.
   * missingMessage: when a required value is missing
