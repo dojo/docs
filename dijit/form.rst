@@ -131,12 +131,15 @@ Form validation
 
 There are three parts to form validation:
 
- * color change / icon: fields turn yellow and display an icon when they have an invalid value, or when a required field is empty
- * validation tooltips.  fields display a tooltip:
-       * optionally on focus/mouse over  (the promptMessage).  Note that this is not recommended from a Ux perspective as it might make the user think they've done something wrong.
-       * when the value is invalid (the invalidMessage)
-       * when the value is outside a min/max range (rangeMessage)
- * prevention of form submit: using the `dijit.form.Form <dijit/form/Form>`_ widget you can prevent form submission if any of the fields are invalid
+* color change / icon: fields turn yellow and display an icon when they have an invalid value, or when a required field is empty
+
+* validation tooltips:
+
+  * optionally on focus/mouse over  (the promptMessage).  Note that this is not recommended from a Ux perspective as it might make the user think they've done something wrong.
+  * when the value is invalid (the invalidMessage)
+  * when the value is outside a min/max range (rangeMessage)
+
+* prevention of form submit: using the `dijit.form.Form <dijit/form/Form>`_ widget you can prevent form submission if any of the fields are invalid
 
 With Dojo Toolkit V1.2 the form widgets have been enhanced so that they won't turn yellow while the user is typing because the value they have is incomplete. However they will still turn yellow instantly if the value they are typing isn't valid (and can't be made valid by typing more characters). This change should provide good feedback to users.
 
