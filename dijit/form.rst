@@ -16,7 +16,9 @@ dijit.form
 
 The dijit.form package contains "form widgets". What's a form widget? It roughly means a widget that appear inside a form, but technically we think of it as "anything that has a value".
 
-The widgets can be used in a FORM tag, in a dijit.form.Form widget, or outside of a form.
+The widgets can be used in a FORM tag, in a `dijit.form.Form <dijit/form/Form>`_ widget, or outside of a form.
+
+Note not to confuse the dijit.form module with the dijit.form.Form widget.
 
 
 ======================
@@ -149,7 +151,7 @@ Validation Tooltips
 -------------------
 You can define the following types of tooltip prompts for the input type form widgets (same list as above):
 
-  * promptMessage: hint message on focus/mouse over.  Note that this is not recommended from a Ux perspective as it might make the user think they've done something wrong.
+  * promptMessage: hint message on focus/mouse over of an empty field.  Note that this is not recommended from a Ux perspective as it might make the user think they've done something wrong.
   * invalidMessage: when the value is invalid.
   * missingMessage: when a required value is missing
   * rangeMessage: when the value is outside a min/max range
