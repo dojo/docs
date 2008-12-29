@@ -30,6 +30,20 @@ Example
 
   .. cv:: html
     
+    <style type="text/css">
+        .TextArea{
+            border:#cccccc 1px solid;
+            width:420px;
+            margin-bottom:20px;
+        }
+        .noticeMessage {
+            color:#093669;
+            font-size:0.95em;
+            margin-left:0.5em;
+            display:block;
+        }
+    </style>
+
     <span class="noticeMessage"> ValidationTextarea, Attributes: {maxLength:20, required:false, promptMessage:no}</span>
     <textarea dojoType="dojox.form.ValidationTextarea" class="TextArea" maxLength="20" value="0123456789012345678"></textarea>
     <span class="noticeMessage"> ValidationTextarea, Attributes: {maxLength:20, required:true, promptMessage:yes}</span>
