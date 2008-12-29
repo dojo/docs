@@ -22,6 +22,8 @@ This is a very small class component which adds behavior to some node. This is a
 
 This widget currently works by passing key/value pairs of css properties and ratios to a properties: object declared for the instance. The default is ``fontSize:1.25``, which will cause the calculated ``font-size`` CSS property to scale to 1.25 times the original size on mouseover, and restore the font to the original place onmouseout. 
 
+In Dojo 1.3, passing an object as a named property allows better definition of the end values. The default behavior is still to multiply by ratio, but now one is able to specify a fixed end:, start: or unit: value to be passed directly to the animation.
+
 =====
 Usage
 =====
@@ -61,6 +63,21 @@ You can also instantiate a FisheyeLite as you would any standard Dijit:
   :linenos:
 
   var fish = new dojox.widget.FisheyeLite({ properties:{ top:5 } }, "someNode");
+
+The previous examples used a multiplier value (10 and 5, respectively). Passing an object for each property allows you to simply "animate to some point":
+
+.. code-block :: javascript
+  :linenos:
+
+   var fish = new dojox.widget.FisheyeLite({
+       properties:{
+           height:{
+              end:200, unit:"px"
+           }
+       }
+   }, "someId");
+
+This will animate a node from it's natural height to 200px (on hover), then back to natural on leave.
 
 Declarative example
 -------------------
