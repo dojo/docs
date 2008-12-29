@@ -56,6 +56,42 @@ Like other dijits, the icon is expressed as a CSS class (which should load a bac
 Examples
 ========
 
+A programmatic tree
+-------------------
+
+Creating a programmatic tree is very simple. Note that the childrenAttrs value has to be an array.
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+      dojo.require("dojo.data.ItemFileReadStore");
+      dojo.require("dijit.Tree");
+
+      dojo.addOnLoad(function(){
+        var store = new dojo.data.ItemFileReadStore({
+            url: "http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/countries.json" 
+        });
+        
+        var treeModel = new dijit.tree.ForestStoreModel({
+            store: store,
+            query: {"type": "continent"},
+            rootId: "root",
+            rootLabel: "Continents",
+            childrenAttrs: ["children"]
+        });
+        
+        new dijit.Tree({
+            model: treeModel    
+        }, "treeOne");
+      });
+    </script>
+
+  .. cv:: html
+
+    <div id="treeOne"></div>
+
 A simple tree
 -------------
 
