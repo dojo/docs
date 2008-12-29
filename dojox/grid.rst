@@ -523,6 +523,17 @@ You can hide the columns of a Grid by using normal css:
   .dojoxGrid-header { display:none; }
 
 
+Refreshing the content of a grid
+--------------------------------
+There are times when you may wish to update the content of the grid.  For example, a button on the screen may cause an xhrGet to retrieve a new set of information that you want to display in the table.  The following code snippet can be used to update the grid:
+
+.. code-block :: javascript
+
+  var newStore = new dojo.data.ItemFileReadStore({data: {... some data ...});
+  var grid = dijit.byId("gridId");
+  newStore.fetch();
+  grid.setStore(newStore);
+
 ========
 See also
 ========
