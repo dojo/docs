@@ -20,7 +20,7 @@ Introduction
 ============
 
 TODO: introduce the component/class/method
-
+A structure is an array of views and a view is an array of cells.
 
 Grid 1.2 Changes
 ----------------
@@ -537,6 +537,9 @@ There are times when you may wish to update the content of the grid.  For exampl
 ========
 See also
 ========
+Here are a related links to other Dojo Grid pages on the Web:
 
 * `Introducing the 1.2 DataGrid <http://www.sitepen.com/blog/2008/07/14/dojo-12-grid/>`_
 * `New Features in Dojo Grid 1.2 <http://www.sitepen.com/blog/2008/10/22/new-features-in-dojo-grid-12/>`_
+* `Dojo Grids: Diving Deeper <http://www.sitepen.com/blog/2007/11/13/dojo-grids-diving-deeper/>`_
+* `Simple Dojo Grids <http://www.sitepen.com/blog/2007/11/06/simple-dojo-grids/>`_
