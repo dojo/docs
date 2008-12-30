@@ -23,7 +23,7 @@ XHR Options
 All `XHR` functions follow the same pattern in the `property-bag` configuration options, passed to whichever function is called. They include:
 
 * url - the endpoint to connect to and load data from. This must be on the same host and port as the serving page, a security limitation of XHR.
-* handleAs - describes which formatter to use on the incoming data. Defaults to 'text', so any response data comes back as a plain string. Available options out of the box are: "json" (to convert the data to a JSON object), "javascript" (to load and execute JS fragments), "json-comment-optional" (to deprecate warnings about the poor security of client-side JSON parsing)
+* handleAs - describes which formatter to use on the incoming data. Defaults to 'text', so any response data comes back as a plain string. Available options out of the box are: "json" (to convert the data to a JSON object), "javascript" (to load and execute JS fragments), "json-comment-optional" (to deprecate warnings about the poor security of client-side JSON parsing) and xml.
 * timeout - a time in MS to wait before giving up the XHR call, and throwing an error to the error callback.
 * sync - a boolean to determine if the XHR call should be synchronous or asynchronous. Setting sync:true will cause the browser to stop the chain of execution until the data is returned. Defaults to ``false``.
 * form - a DOM Node of a ``<form>`` element, or a string ID of a ``<form>`` element, used to collect data to be sent along with the request. The form is passed through `dojo.formToObject <dojo/formToObject>`_ and is mixed into the content: attribute of the XHR call
