@@ -22,6 +22,8 @@ Introduction
 TODO: introduce the component/class/method
 A structure is an array of views and a view is an array of cells.
 
+This Widget inherits from dojo.grid._Grid and hence all methods and properties pertaining to that Widget also apply here.
+
 Grid 1.2 Changes
 ----------------
 
