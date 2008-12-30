@@ -37,9 +37,15 @@ To load this widget code:
 
 ``note:`` NO CSS is required for this widget to operate. You must style your own nodes. This effect is behavioral.
 
-Any CSS properties can be modified, but only in multipliers. Some CSS "setup" is required in order to properly utilize this widget. For instance, if a series of list-items in an unorder-list have position:absolute, left:2px in their 'natural' state, a ``properties:{ left:10 }`` parameter passed would cause the left value to be 20px when moused over. 
+Any CSS properties can be modified, by default in multipliers. Some CSS "setup" is required in order to properly utilize this widget. For instance, if a series of list-items in an unorder-list have position:absolute, left:2px in their 'natural' state, a ``properties:{ left:10 }`` parameter passed would cause the left value to be 20px when moused over. 
 
-``note:`` the 'multipliers-only`` issue is limiting, and planned to be addressed, while still retaining the original functionality of the widget. 
+New in Dojo 1.3, you can optionally specify an object (instead of a multiplier) of values to pass directly to the animation. You are still required to style the nodes accordingly for the 'natural' state, but can specify direct end: values for a property. eg 'left':
+
+.. code-block :: javascript
+  :linenos:
+
+  new dojox.widget.FishseyeLite({ properties: { left: { end:100, unit:"px" } } }, "someNode");
+
 
 ========
 Examples
