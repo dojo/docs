@@ -23,7 +23,8 @@ For example, respectively, dijit.form.DropDownButton and dijit.ColorPicker.
 Parent widget always controls
 -----------------------------
 It's important to note that the parent widget both opens and closes the popup.
-Even for something like dijit.TooltipDialog, the host widget is responsible for closing it.
+Even for something like dijit.TooltipDialog, the host DropDownButton widget is responsible for closing it.
+This architecture was chosen so that the parent widget always knows whether it's child popup is open or not, and also so that it can do any cleanup etc.
 
 Here's some example code from DropDownButton about how it opens and closes it's drop down:
 
@@ -46,6 +47,12 @@ Here's some example code from DropDownButton about how it opens and closes it's 
 		});
      
 Popup points to a dijit.ColorPicker, dijit.Menu, etc.... it can be any widget.
+
+The parent code should also call dijit.popup.prepare() to hide the popup widget and to get it ready for dijit.popup.open() calls:
+
+.. code-block :: javascript
+
+  dijit.popup.prepare(dropDown);
 
 
 Popup Widget
@@ -110,11 +117,21 @@ DropDowns can open other drop downs.   This is particularly leveraged by the Men
 
 dijit.popup() keeps track of the stack of open widgets.
 
+Note that when clicking on the blank area of the screen, the stack of active popups should all close.  This isn't handled by the dijit.popup package directly.   Rather, the top parent widget should connect to _onBlur(), which will be called (only) when focus is removed from the top parent widget *and* it's descendant submenus.   In this case, the top parent widget should call dijit.popup.close() on the top popup, which will close the stack of open popups.
+
 
 Keyboard handling
 -----------------
-dijit.popup() automatically monitors for the ESC key as a way to cancel the current popup.   It treats it the same way as clicking on the blank area of the screen.
+dijit.popup() automatically monitors for the ESC key as a way to cancel the current popup, and return to the parent node (which may itself be a popup).  It calls the onCancel() callback in this case.
 
 It also monitors for the TAB key, and if it sees it, it cancels the whole stack of popups (in the case of menus, where one popup has opened another and so forth).
 
-Note that in neither of these cases does the dijit.popup code directly close the popup(s).  Rather, it just calls the onCancel() callback defined on the dijit.popup.open() call.   That callback then presumably calls dijit.popup.close().   This architecture was designed so that the parent widget always knows whether it's child popup is open or not, and also so that it can do any cleanup etc.
+Note that in neither of these cases does the dijit.popup code directly close the popup(s).  Rather, it just calls the onCancel() callback defined on the dijit.popup.open() call.   That callback then presumably calls dijit.popup.close().
+
+Popup DOM node positioning
+--------------------------
+dijit.popup.prepare() should be called on any nodes that will be used as popups.   It's main function, besides hiding the node, is to attach it as a direct child of <body>.  The reason we do this is so that the node doesn't get cut off if it's inside a <div> with a short height.  (For example, a button inside a TabContainer... the popup might want to overflow past the bottom of the TabContainer.)
+
+Note that this design decision makes TAB key handling particularly difficult, and it's not handled perfectly: if a user hits the TAB key while on a submenu from a MenuBar, or any drop down from a DropDownButton, they probably expect the focus to go to the next element after the MenuBar/DropDownButton.   However, since the drop down has actually been repositioned as the last element in &lt;body&gt;, just letting the browser handle the tab key won't do what the user expects.
+
+As a compromise, the TAB key (while on a popup) will re-focus on the DropDownButton/MenuBarItem that spawned the top popup.   This is handled by the code that calls dijit.popup.open(), in the return handler for onCancel().   See DropDownButton for an example.  (Note though that the _onBlur() handler mentioned above, for handling clicking on a blank area of the screen, should not refocus to the parent widget, as that would interefere if the user had clicked on, for example, a random <input> on the page and wants the focus to go there.)
