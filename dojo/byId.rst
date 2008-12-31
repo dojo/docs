@@ -119,6 +119,9 @@ The following example lets a node by id dissapear from the screen
       }
     </style>
 
+See Also
+========
+- `dijit.byId <dijit/byId>`_ - Accessing a Dijit widget by id.
 
 References
 ==========
