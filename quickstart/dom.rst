@@ -21,7 +21,7 @@ Dojo provides a host of DOM utility functions. This guide covers combined usage 
 Locating and Using Nodes
 ========================
 
-All of these functions work by doing work on a passed DomNode reference, or an element in the page (such as a div, li, a tag). In order to work with these nodes, we first must locate them in the Document Object Model (DOM). The most important note to get started is all DOM activity must be done after "onload" fired, or the DOM is otherwise "ready". This can be achieved by `dojo.addOnLoad <dojo/addOnLoad>`_
+All of these functions work by doing work on a passed DomNode reference (an element in the page (such as a div, li, a tag)). In order to work with these nodes, we first must locate them in the Document Object Model (DOM). The most important note to get started is all DOM activity must be done after "onload" fired, or the DOM is otherwise "ready". This can be achieved by `dojo.addOnLoad <dojo/addOnLoad>`_
 
 .. code-block :: javascript
   :linenos:
@@ -35,7 +35,7 @@ Once we've ensured our code will only execute after the DOM is ready, we can mov
 Using ID's
 ----------
 
-The fastest, and most common, way of locating an element is by it's {{{id}}} attribute. Dojo provides `dojo.byId <dojo/byId>`_ - a shorter, safer version of {{{document.getElementsById}}}:
+The fastest, and most common, way of locating an element is by it's {{id}} attribute. Dojo provides `dojo.byId <dojo/byId>`_ - a shorter, safer version of {{document.getElementsById}}:
 
 .. code-block :: javascript
   :linenos:
@@ -82,7 +82,9 @@ In this example, we are locating the same node found by dojo.byId previously, bu
 
   });
 
-The query method is convenience, and more compact, but carries the overhead of instantiating a new array and querying the Dom. Both code snippets have identical results. There are a number of handy CSS selectors to use for locating special DomNodes. 
+The query method is convenient and more compact, but carries the overhead of instantiating a new array and querying the Dom. Both code snippets have identical results. 
+
+There are a number of handy CSS selectors to use for locating special DomNodes. 
 
 .. code-block :: javascript
   :linenos:
