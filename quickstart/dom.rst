@@ -107,11 +107,31 @@ Finding nodes via dojo.query is very helpful, though the same rules apply to eit
 The <body> element
 ------------------
 
-All DOM's should contain a <body> element
+All DOM's should contain a <body> element. This element is a DomNode like any other, and is considered the top most DomNode in a document's visible content. This node is cleverly available via dojo.query:
+
+.. code-block :: javascript
+  :linenos:
+
+  dojo.addOnLoad(function(){ dojo.query("body").addClass("tundra") });
+
+or more quickly available as a function call:
+
+.. code-block :: javascript
+  :linenos:
+
+  dojo.addOnLoad(function(){ 
+      dojo.addClass(dojo.body(), "tundra");
+  });
+
+By wrapping <body> lookup in the {{{dojo.body()}}} function, we are able to redefine the meaning of the <body> element on the fly. The dojo.query method is limited to browser-only use cases, while the dojo.body() approach allows one to write portable code that will still execute in environments where the <body> element might not exist. 
+
+The <body> element is a particularly convenient node to access, especially for small examples.
 
 ==================
 Manipulating Nodes
 ==================
+
+Once you are comfortable with the various ways of finding nodes in the DOM, applying the actions on them are somewhat trivial. 
 
 Node attributes
 ---------------
