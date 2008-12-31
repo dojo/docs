@@ -26,7 +26,7 @@ Href
 ----
 
 One big use for ContentPanes is to load content dynamically through an href (see the href parameter).
-However, note that the href must access data on the same domain since it's served via XHR.
+However, note that the href must access data on the same domain since it's served via XHR.  To change the content of the content pane without performing an Ajax load, the content attribute can be set to the new HTML values.
 
 Callbacks
 ---------
