@@ -66,7 +66,7 @@ Here's an example of declaring and instantiating the widget, both with and witho
   .. cv:: javascript
 
 		dojo.require("dijit._Widget");
-
+    
 		dojo.declare("MyFirstWidget",
 			[dijit._Widget], {
 				// text: String
