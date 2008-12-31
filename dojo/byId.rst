@@ -118,3 +118,8 @@ The following example lets a node by id dissapear from the screen
         margin: 10px;
       }
     </style>
+
+
+References
+==========
+- `DOM <http://www.w3.org/DOM/DOMTR>`_ - Official documentation on the Document Object Model.
