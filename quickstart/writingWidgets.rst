@@ -16,9 +16,9 @@ No problem! Dijit components are extendible, so you can make changes without tou
 You can also create Dijit classes from scratch. Again, you can do this either through markup - using the dijit.Declaration dojoType attribute - or through dojo.declare.
 
 
-=======
-_Widget
-=======
+=================
+Extending _Widget
+=================
 
 Let's look at how to create a widget from scratch, built directly on top of the _Widget base class.
 
@@ -49,53 +49,8 @@ Let's look at how to create a widget from scratch, built directly on top of the 
 
 	<span dojoType="MyFirstWidget">i'll be replaced</span>
 
-This widget doesn't do much, but it does show the minimum requirements for a widget: create a DOM tree and insert into into the document
+This widget doesn't do much, but it does show the minimum requirements for a widget: create a DOM tree and inserts it into into the document.  (Technically speaking, widgets don't even need to create a DOM tree, if they are *behavioral*, i.e., if they require this.srcNodeRef to be set... they can just set this.domNode to this.srcNodeRef.)
 
-Now let's modify the widget to take an input parameter.  Input parameters must be declared in the prototype along with a value.  The value serves both as a default value (if the caller doesn't specify a value), and also as a hint to the parser so it knows the data type of the parameter.  In this case we are declaring a string parameter:
-
-.. code-block:: javascript
-
-				// text: String
-				//		This is an widget parameter
-				text: "push me",
-
-Here's an example of declaring and instantiating the widget, both with and without specifying the parameter:
-
-.. cv-compound::
-
-  .. cv:: javascript
-
-		dojo.require("dijit._Widget");
-    
-		dojo.declare("MyFirstWidget",
-			[dijit._Widget], {
-				// text: String
-				//		This is an widget parameter
-				text: "push me",
-
-				buildRendering: function(){
-					// create the DOM for this widget
-					this.domNode = dojo.create("button", {innerHTML: this.text});
-
-					// swap out the original source DOM w/the DOM for this widget
-					var source = this.srcNodeRef;
-					if(source && source.parentNode){
-						source.parentNode.replaceChild(this.domNode, source);
-					}
-				 }
-			});
-		dojo.require("dojo.parser");
-		
-		dojo.addOnLoad(function(){
-			// Create the widget programatically
-			new MyFirstWidget({text: "i was created programatically"}).placeAt(dojo.body());
-		});
-
-
-  .. cv:: html
-
-	<span dojoType="MyFirstWidget">i'll be replaced</span>
-	<span dojoType="MyFirstWidget" text="me too">i'll be replaced</span>
 
 Now let's write a widget that performs some javascript.   We'll setup an onclick handler on a button node which will increment a counter:
 
@@ -104,7 +59,6 @@ Now let's write a widget that performs some javascript.   We'll setup an onclick
   .. cv:: javascript
 
 		dojo.require("dijit._Widget");
-
 		dojo.declare("Counter",
 			[dijit._Widget], {
 				// counter
@@ -136,23 +90,25 @@ Now let's write a widget that performs some javascript.   We'll setup an onclick
 
 	<span dojoType="Counter"></span>
 
+postCreate() is called after buildRendering() is finished, and is typically used for connections etc. that can't be done until the DOM tree has been created.   We don't put that code into buildRendering() because (as documented below), the _Templated mixin defines buildRendering() for you.
+
 
 ==========
 _Templated
 ==========
-OK, we've seen how to create a widget based directly on the _Widget class.  In practice though, this isn't done very often, as it's rather cumbersome to create a complicated DOM structure by hand.   There's a class called _Templated that makes all of this easier.  _Templated implements buildRendering() for you, and all you have to do is specify a template i.e, an HTML fragment, that specifies the DOM for the widget.
+OK, we've seen how to create a widget based directly on the _Widget class.  In practice though, this isn't done very often, as it's rather cumbersome to create a complicated DOM structure by hand.   There's a mixin called _Templated that makes all of this easier.  _Templated implements buildRendering() for you, and all you have to do is specify a template i.e, an HTML fragment, that specifies the DOM for the widget.
 
 Let's start using templates by expanding on our counter example, but making it a little more complicated.  The user will be able to specify a label for the button, and the count will be printed after the button.  The user will also be able to specify a label for the counter.
 
 The code to instantiate will look like this:
 
-.. code-block :: html
+.. code-block:: html
 
   <div dojoType="Counter" label="counter label">button label</div>
 
 The first thing to do is to create some plain HTML to show you want the widget to look like:
 
-.. cv :: html
+.. cv:: html
 
   <div>
 	<button>press me</button>
@@ -163,18 +119,15 @@ Note that the template should have a single top level root node.
 
 Next, we modify the template above with some commands for _Templated:
 
-.. code-block :: html
+.. code-block:: html
 
   <div>
-	<button dojoAttachEvent='onclick: increment' dojoAttachPoint='containerNode'></button>
-	&nbsp;${label}: <span dojoAttachPoint='counter'>0</span>"
+	<button dojoAttachEvent='onclick: increment'>press me</button>
+	&nbsp;count: <span dojoAttachPoint='counter'>0</span>"
   </div>
 
 There are a few things to note here:
 
-Substitution variables
-----------------------
-The ${label} substitution variable will automatically plugin the "label" input parameter specified to the widget, avoiding having to set foo.innerHTML = ....
 
 dojoAttachPoint
 ---------------
@@ -194,42 +147,149 @@ dojoAttachEvent
 ---------------
 dojoAttachEvent will automatically setup a connection from an event on the DOM node (onclick in this case) to call a method in the widget (in this case increment().
 
-containerNode
--------------
-containerNode is a special variable name that copies the innerHTML from the source HTML into the template.
+
+==========
+Attributes
+==========
+
+All widgets have attributes that can be set on widget creation, or changed during the use of the widget, much like DOM nodes have attributes.   The main difference is that to get/set widget attributes after creation, you need to call the attr() method.
+
+But how do you as a widget writer make your widget have attributes, and handle when the caller changes their value?
+
+Declaring attributes
+--------------------
+As a widget writer, you need to declare all your widget parameters in the prototype, along with a value.  The value serves both as a default value (if no value was specified on instantiation), and also tells the parser the data type of the parameter.  In this case we are declaring a string parameter:
+
+.. code-block:: javascript
+
+				// text: String
+				//		This is an widget parameter
+				text: "push me",
+
+Note that all the documentation for an attribute needs to go next
+to the attribute definition, even when you need special documentation about how attr() performs for that
+widget.  For example:
+
+.. code-block:: javascript
+
+  // value: Date
+  //     The date picked on the date picker, as a Date Object.
+  //     When setting the date on initialization (ex: new DateTextBox({value: "2008-1-1"})
+  //     or changing it (ex: attr('value', "2008-1-1")), you  can specify either a Date object or
+  //     a string in ISO format
+  value: new Date()
+
+
+attributeMap
+------------
+Commonly, widget attributes are mapped into the widget's DOM.   For example, a TitlePane has a "title" parameter which becomes the innerHTML of the TitlePane.titleNode DOM node (where titleNode is defined as a dojoAttachPoint, see above).
+
+You might think that that mapping would be specified inside of the widget's template, but actually it's specified in something called the "attributeMap".  attributeMap can map widget attributes to DOM node attributes, innerHTML, or class.
+
+That explanation is confusing, but an example will help.  You can see this in action for TitlePane:
+
+.. code-block :: javascript
+
+	attributeMap: dojo.delegate(dijit.layout.ContentPane.prototype.attributeMap, {
+		title: { node: "titleNode", type: "innerHTML" }
+	}),
+
+The widget's title attribute becomes the innerHTML of TitlePane.titleNode.
+
+(The fancy delegate stuff is so TitlePane's attributeMap has everything that ContentPane has,
+plus this additional command.  BTW, that's the reason that attributeMap is declared inside the javascript file rather than as part of the template.)
+
+To map a widget attribute to a DOM node attribute, you do:
+
+.. code-block :: javascript
+
+  attributeMap: {
+        disabled: {node: "focusNode", type: "attribute" }
+  }),
+
+or alternately just
+
+.. code-block :: javascript
+
+  attributeMap: {
+        disabled: "focusNode"
+  }),
+
+Both code blocks copy the widget's "disabled" attribute onto the focusNode DOM node in the template.
+
+attributeMap also supports class attributes like iconClass.  See dijit.Menu for an example of all of these in action:
+
+.. code-block :: javascript
+
+	attributeMap: dojo.delegate(dijit._Widget.prototype.attributeMap, {
+		label: { node: "containerNode", type: "innerHTML" },
+		iconClass: { node: "iconNode", type: "class" },
+		disabled: {node: "focusNode", type: "attribute" }
+	}),
+
+
+Substitution variables
+----------------------
+Note that if you are extending from _Templated, you can alternately use substitution variables like ${label} inside your template.   However, this is not recommended, as (due to implementation details) it only handles setting of the title on widget instantiation.   In other words, myWidget.attr('title', 'My new title') won't work if you use substitution variables.
+
+
+Custom setters/getters
+----------------------
+
+When you have an attribute where setting/getting it is more complicated than attributeMap can
+handle, you need to write custom getters/setters for it. The naming convention (for an attribute named foo) is _setFooAttr() and
+_getFooAttr(). attr() will automatically detect and call these custom setters.
+
+Custom setters are quite common. Usually you don't need a custom getter (as the default action
+for attr('foo') is to access Widget.foo), but for something like Editor where it's impractical to constantly
+keep Editor.value up to date, writing a custom _getValueAttr() accessor makes sense.
+
+Life cycle
+----------
+The custom setters listed above, plus every attribute listed in attributeMap, is applied during
+widget creation (in addition to whenever someone calls attr('name', value)).
+
+Note that the application happens after buildRendering() but before postCreate(), so
+you need to make sure that none of that code is dependent on something that happens
+in postCreate(), or later. This in particular is an issue for any widgets that depend on timeouts
+for setup, which need to have special code to handle when _setDisabledAttr() etc. is
+called during startup.
+
+==========
+Containers
+==========
+
+Often a widget declared in markup will have contents, i.e. it will contain some other DOM.   For example:
+
+.. code-block:: html
+
+  <button dojoType="dijit.form.Button">press me</button>
+
+In the common case of non-behavioral widgets (that create a new DOM tree to replace the <button> node in the above example), the widgets need to copy the DOM tree inside of the <button> declaration to the widget's new DOM tree.
+
+The attach point where that input is copied is called containerNode.   In other words, if you check myButton.containerNode.innerHTML in the above example, it will be "press me".
+
+For widgets that mixin _Templated, that is handled automatically, as long as the template specifies dojoAttachPoint="containerNode".
 
 
 Having said all that, now we define the widget, referencing this template.  We can either reference it via templatePath, or templateString.   For this demo we'll inline it into the javascript with templateString, although usually it's loaded indirectly from a file (via templatePath).
 
-.. cv-compound ::
+.. cv-compound::
 
-  .. cv :: javascript
+  .. cv:: javascript
 
 		dojo.require("dijit._Widget");
 		dojo.require("dijit._Templated");
-		dojo.declare("Counter",
+		dojo.declare("MyButton",
 			[dijit._Widget, dijit._Templated], {
-				// counter
-				_i: 0,
-				
-				// label for counter
-				label: "total",
-
 				templateString:
-					"<div>" +
-						"<button dojoAttachEvent='onclick: increment' dojoAttachPoint='containerNode'></button>" +
-						"&nbsp; ${label}: <span dojoAttachPoint='counter'>0</span>" +
-					"</div>",
-				 
-				 increment: function(){
-				 	this.counter.innerHTML = ++this._i;
-				 }
+				    "<button dojoAttachPoint='containerNode'></button>"
 			});
 		dojo.require("dojo.parser");
 
-  .. cv :: html
+  .. cv:: html
 
-	<button dojoType="Counter">press me</button>
+	<button dojoType="MyButton">press me</button>
 
 
 =========================
@@ -317,7 +377,7 @@ These pages list some more information you need for writing widgets from scratch
 * `Declaring a widget programatically <quickstart/writingWidgets/dojoDeclare>`_ (TODO: same here?)
 * `Declaring a widget in markup <quickstart/writingWidgets/dijitDeclaration>`_
 * `The Widget Life-cycle <quickstart/writingWidgets/lifecycle>`_
-* `More on attributes <quickstart/writingWidgets/attributes>`_
+* `More on attributes <quickstart/writingWidgets/attributes>`_  (TODO: remove; already documented above)
 * `Widgets In Template <quickstart/writingWidgets/widgetsInTemplate>`_
 * `Example: File Upload Dialog Box <quickstart/writingWidgets/example>`_
 * `Dropdowns and Popups <quickstart/writingWidgets/popups>`_
