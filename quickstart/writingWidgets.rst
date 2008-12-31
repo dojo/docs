@@ -4,7 +4,7 @@ Writing Your Own Widget
 =======================
 :Status: Draft
 :Version: 1.0
-:Authors: Bill Keese,
+:Authors: Bill Keese,=
 
 .. contents::
     :depth: 2
@@ -19,6 +19,32 @@ You can also create Dijit classes from scratch. Again, you can do this either th
 ===============
 A simple widget
 ===============
+
+Let's look at how to create a widget from scratch.   Here's a simple widget that's built directly on top of the _Widget base class.
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+		dojo.declare("MyFirstWidget",
+			[dijit._Widget], {
+				buildRendering: function(){
+					// create the DOM for this widget
+					this.domNode = dojo.create("button", {innerHTML: "push me"});
+
+					// swap out the original source DOM w/the DOM for this widget
+					var source = this.srcNodeRef;
+					if(source && source.parentNode){
+						source.parentNode.replaceChild(this.domNode, source);
+					}
+				 }
+			});
+
+  ..cv:: html
+
+	<span dojoType="MyFirstWidget">i'll be replaced</span>
+
+This widget doesn't do much (as a matter of fact there's really no useful effect from the javascript at all)  TO BE CONTINUED...
 
 * TODO: add simple example of new widget that extends _Widget and builds DOM by hand (custom buildRendering() function)
 * TODO: modify it to use templates
