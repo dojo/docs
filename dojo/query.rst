@@ -88,16 +88,25 @@ Simple Queries
 
 .. code-block :: javascript
 
+  // all <h3> elements
   dojo.query('h3')  
+  // the first-child of all <h3> elements
   dojo.query('h3:first-child')
+  // a node with id="main"
   dojo.query('#main')
+  // all <h3> elements within a node with id="main"
   dojo.query('#main h3')
+  // a <div> with an id="main"
   dojo.query('div#main')
+  // all <h3> elements withing a div with id="main"
   dojo.query('div#main h3')
+  // all <h3> elements that are first children of a <div>, within node with id="main"
   dojo.query('#main div > h3')
+  // all nodes with class="foo"
   dojo.query('.foo')
+  // all nodes with classes "foo" and "bar"
   dojo.query('.foo.bar')
-  dojo.query('.baz')
+  // all <h3> elements that are first-children of a node with id="main"
   dojo.query('#main > h3')
 
 
