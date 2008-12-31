@@ -35,7 +35,7 @@ Once we've ensured our code will only execute after the DOM is ready, we can mov
 Using ID's
 ----------
 
-The fastest, and most common, way of locating an element is by it's {{id}} attribute. Dojo provides `dojo.byId <dojo/byId>`_ - a shorter, safer version of {{document.getElementsById}}:
+The fastest, and most common, way of locating an element is by it's {{id}} attribute. Dojo provides `dojo.byId <dojo/byId>`_ - a shorter, safer version of {{document.getElementById}}:
 
 .. code-block :: javascript
   :linenos:
@@ -107,7 +107,7 @@ Finding nodes via dojo.query is very helpful, though the same rules apply to eit
 The <body> element
 ------------------
 
-
+All DOM's should contain a <body> element
 
 ==================
 Manipulating Nodes
