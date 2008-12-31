@@ -16,11 +16,11 @@ No problem! Dijit components are extendible, so you can make changes without tou
 You can also create Dijit classes from scratch. Again, you can do this either through markup - using the dijit.Declaration dojoType attribute - or through dojo.declare.
 
 
-===============
-A simple widget
-===============
+=======
+_Widget
+=======
 
-Let's look at how to create a widget from scratch.   Here's a simple widget that's built directly on top of the _Widget base class.
+Let's look at how to create a widget from scratch, built directly on top of the _Widget base class.
 
 .. cv-compound::
 
@@ -40,15 +40,103 @@ Let's look at how to create a widget from scratch.   Here's a simple widget that
 				 }
 			});
 
-  ..cv:: html
+		dojo.addOnLoad(function(){
+			// Create the widget programatically
+			new MyFirstWidget({}).placeAt(dojo.body());
+		});
+
+  .. cv:: html
 
 	<span dojoType="MyFirstWidget">i'll be replaced</span>
 
-This widget doesn't do much (as a matter of fact there's really no useful effect from the javascript at all)  TO BE CONTINUED...
+This widget doesn't do much, but it does show the minimum requirements for a widget: create a DOM tree and insert into into the document
 
-* TODO: add simple example of new widget that extends _Widget and builds DOM by hand (custom buildRendering() function)
-* TODO: modify it to use templates
+Now let's modify the widget to take an input parameter.  Input parameters must be declared in the prototype along with a value.  The value serves both as a default value (if the caller doesn't specify a value), and also as a hint to the parser so it knows the data type of the parameter.  In this case we are declaring a string parameter:
 
+.. code-block: javascript
+
+				// text: String
+				//		This is an widget parameter
+				text: "push me",
+
+Here's an example of declaring and instantiating the widget, both with and without specifying the parameter:
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+		dojo.require("dijit._Widget");
+
+		dojo.declare("MyFirstWidget",
+			[dijit._Widget], {
+				// text: String
+				//		This is an widget parameter
+				text: "push me",
+
+				buildRendering: function(){
+					// create the DOM for this widget
+					this.domNode = dojo.create("button", {innerHTML: this.text});
+
+					// swap out the original source DOM w/the DOM for this widget
+					var source = this.srcNodeRef;
+					if(source && source.parentNode){
+						source.parentNode.replaceChild(this.domNode, source);
+					}
+				 }
+			});
+		dojo.require("dojo.parser");
+		
+		dojo.addOnLoad(function(){
+			// Create the widget programatically
+			new MyFirstWidget({text: "i was created programatically"}).placeAt(dojo.body());
+		});
+
+
+Now let's write a widget that performs some javascript.   We'll setup an onclick handler on a button node which will increment a counter:
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+		dojo.require("dijit._Widget");
+
+		dojo.declare("Counter",
+			[dijit._Widget], {
+				// counter
+				_i: 0,
+
+				buildRendering: function(){
+					// create the DOM for this widget
+					this.domNode = dojo.create("button", {innerHTML: this._i});
+
+					// swap out the original source DOM w/the DOM for this widget
+					var source = this.srcNodeRef;
+					if(source && source.parentNode){
+						source.parentNode.replaceChild(this.domNode, source);
+					}
+				 },
+				 
+				 postCreate: function(){
+				 	// every time the user clicks the button, increment the counter
+				 	this.connect(this.domNode, "onclick", "increment");
+				 },
+				 
+				 increment: function(){
+				 	this.domNode.innerHTML = ++this._i;
+				 }
+			});
+		dojo.require("dojo.parser");
+
+.. cv :: html
+
+	<span dojoType="Counter"></span>
+
+==========
+_Templated
+==========
+OK, we've seen how to create a widget based directly on the _Widget class.  In practice though, this isn't done very often, as it's rather cumbersome to create a complicated DOM structure by hand.   There's a class called _Templated that makes all of this easier.  _Templated implements buildRendering() for you, and all you have to do is specify a template i.e, an HTML fragment, that specifies the DOM for the widget.
+
+TO BE CONTINUED...
 
 ==================
 A simple extension
