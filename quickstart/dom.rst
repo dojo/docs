@@ -133,14 +133,63 @@ Manipulating Nodes
 
 Once you are comfortable with the various ways of finding nodes in the DOM, applying the actions on them are somewhat trivial. 
 
-Node attributes
----------------
-
 Node styles
 -----------
 
+TODOC: see `dojo.style <dojo/style>`_
+
+Node attributes
+---------------
+
+Each DomNode has a series of attributes available for setting and getting. A lot of times, you can access these properties knowing you are working with a native DomNode:
+
+.. code-block :: javascript
+  :linenos:
+
+  var n = dojo.byId("foo");
+  console.log(n.id == "foo"); // true
+
+Though for full cross browser compatibility and convenience, it is recommended you access and set attributes through `dojo.attr <dojo/attr>`_. The API for dojo.attr is straightforward:
+
+.. code-block :: javascript
+  :linenos:
+
+  // set some node to have a new id
+  dojo.attr(someNode, "id", "newId");
+
+  // get the id of a node reference
+  var id = dojo.attr(someNode, "id"); 
+
+  // set multiple attributes at once:
+  dojo.attr(someNode, {
+      id:"newId", 
+      onclick: function(e){ /* handler code */ }
+  });
+
+The ``style`` attribute is special. One can set an "inline style" by setting an attribute on the DomNode directly:
+
+.. code-block :: html
+  :linenos:
+
+     <div style="padding:3px; color:red; height:123px">Lorem, baby!</div>
+
+Though this isn't an ``attribute`` per se. Just as `dojo.style <dojo/style>`_ (described above) accepts an object-hash of style properties, you can pass a style:{} pair to dojo.attr, and set styles in a dojo.attr call:
+
+.. code-block :: javascript
+  :linenos:
+
+  dojo.attr(someNode, {
+      name:"bar",
+      style:{
+          color:"#ededed", fontSize:"13pt"
+      },
+      id:"newId"
+  });
+ 
 Node placement
 --------------
+
+Where a node exists in the DOM is important. 
 
 ==============
 Creating Nodes
