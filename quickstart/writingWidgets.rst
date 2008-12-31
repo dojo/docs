@@ -53,7 +53,7 @@ This widget doesn't do much, but it does show the minimum requirements for a wid
 
 Now let's modify the widget to take an input parameter.  Input parameters must be declared in the prototype along with a value.  The value serves both as a default value (if the caller doesn't specify a value), and also as a hint to the parser so it knows the data type of the parameter.  In this case we are declaring a string parameter:
 
-.. code-block: javascript
+.. code-block:: javascript
 
 				// text: String
 				//		This is an widget parameter
@@ -92,6 +92,11 @@ Here's an example of declaring and instantiating the widget, both with and witho
 		});
 
 
+  .. cv:: html
+
+	<span dojoType="MyFirstWidget">i'll be replaced</span>
+	<span dojoType="MyFirstWidget" text="me too">i'll be replaced</span>
+
 Now let's write a widget that performs some javascript.   We'll setup an onclick handler on a button node which will increment a counter:
 
 .. cv-compound::
@@ -127,9 +132,10 @@ Now let's write a widget that performs some javascript.   We'll setup an onclick
 			});
 		dojo.require("dojo.parser");
 
-.. cv :: html
+  .. cv:: html
 
 	<span dojoType="Counter"></span>
+
 
 ==========
 _Templated
