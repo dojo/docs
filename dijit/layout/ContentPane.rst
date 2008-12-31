@@ -28,6 +28,29 @@ Href
 One big use for ContentPanes is to load content dynamically through an href (see the href parameter).
 However, note that the href must access data on the same domain since it's served via XHR.
 
+Callbacks
+---------
+When content is loaded through href, a number of callbacks are available which can be configured.  These are executed at different phases of the loading of the content:
+
+onDownloadStart
+  Called before the download of the content begins.
+
+onDownloadEnd
+  Called when the content has completed loading.
+
+onDownloadError(error)
+  Called if there was an error with the download.
+
+An example of using a callback might be as follows:
+
+.. code-block :: javascript
+
+  var myCp= dijit.byId("myContentPane");
+  myCp.attr("onDownloadEnd", function(){
+    console.log("Download complete!");
+  });
+  myCp.attr("href", "myHtml.html");
+
 
 ========
 Examples
