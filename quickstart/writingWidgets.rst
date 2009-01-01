@@ -29,6 +29,7 @@ Technically speaking, the simplest widget you can create is a *behavioral* widge
 
   .. cv:: javascript
 
+    <script>
 	dojo.require("dijit._Widget");
 	dojo.declare("MyFirstBehavioralWidget", [dijit._Widget], {
 		buildRendering: function(){
@@ -38,6 +39,7 @@ Technically speaking, the simplest widget you can create is a *behavioral* widge
 		}
 	});
 	dojo.require("dojo.parser");
+    </script>
 
   .. cv:: html
 
@@ -61,6 +63,7 @@ Here's a simple example of a widget that creates it's own DOM tree, and replaces
 
   .. cv:: javascript
 
+    <script>
 	dojo.declare("MyFirstWidget",[dijit._Widget], {
 		buildRendering: function(){
 			// create the DOM for this widget
@@ -77,6 +80,7 @@ Here's a simple example of a widget that creates it's own DOM tree, and replaces
 			// Create the widget programatically
 			new MyFirstWidget({}).placeAt(dojo.body());
 		});
+    </script>
 
   .. cv:: html
 
@@ -91,6 +95,7 @@ Now let's write a widget that performs some javascript.   We'll setup an onclick
 
   .. cv:: javascript
 
+    <script>
 		dojo.require("dijit._Widget");
 		dojo.declare("Counter", [dijit._Widget], {
 			// counter
@@ -117,6 +122,7 @@ Now let's write a widget that performs some javascript.   We'll setup an onclick
 			}
 		});
 		dojo.require("dojo.parser");
+    </script>
 
   .. cv:: html
 
@@ -310,6 +316,7 @@ Having said all that, now we define the widget, referencing this template.  We c
 
   .. cv:: javascript
 
+    <script>
 		dojo.require("dijit._Widget");
 		dojo.require("dijit._Templated");
 		dojo.declare("MyButton",
@@ -318,6 +325,7 @@ Having said all that, now we define the widget, referencing this template.  We c
 				    "<button dojoAttachPoint='containerNode'></button>"
 			});
 		dojo.require("dojo.parser");
+    </script>
 
   .. cv:: html
 
