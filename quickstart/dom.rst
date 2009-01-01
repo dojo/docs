@@ -127,11 +127,32 @@ By wrapping <body> lookup in the {{{dojo.body()}}} function, we are able to rede
 
 The <body> element is a particularly convenient node to access, especially for small examples.
 
+document vs. dojo.doc
+---------------------
+
+It is very common to see the special global 'document' used throughout JavaScript code. When using Dojo, one should reference reference the global `dojo.doc <dojo/doc>`_ when accessing the current document. For instance:
+
+.. code-block :: javascript
+  :linenos:
+
+  // use
+  dojo.doc.createElement("div");
+  var h = dojo.doc.getElementsByTagNam("head")[0];
+
+  // instead of
+  document.createElement("div");
+  var s = dojo.doc.getElementsByTagNam("head")[0];
+
+  // though, to just create, this is best:
+  dojo.create("div");
+
+They have identical length in characters, but by using dojo.doc you are able to ensure your code will execute in alternate environments (provided the environment has an 'document' implementation) as well as allow your widgets and code to execute in switched contexts, such as iframes and popups. dojo.doc is provided to allow for this, and its use is strongly suggested for writing portable code.
+
 ==================
 Manipulating Nodes
 ==================
 
-Once you are comfortable with the various ways of finding nodes in the DOM, applying the actions on them are somewhat trivial. 
+Once you are comfortable with the various ways of finding nodes in the DOM, applying the actions on them are somewhat trivial. Each of the DOM manipulation functions accept a String ID or a DomNode reference as the first parameter, and apply some action on that node. 
 
 Node styles
 -----------
