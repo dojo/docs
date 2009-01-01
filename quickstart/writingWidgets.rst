@@ -4,7 +4,7 @@ Writing Your Own Widget
 =======================
 :Status: Draft
 :Version: 1.0
-:Authors: Bill Keese,=
+:Authors: Bill Keese
 
 .. contents::
     :depth: 2
@@ -22,24 +22,57 @@ Extending _Widget
 
 Let's look at how to create a widget from scratch, built directly on top of the _Widget base class.
 
+Technically speaking, the simplest widget you can create is a *behavioral* widget, i.e., a widget that just uses the DOM tree passed into it rather than creating a DOM tree.
+
+
 .. cv-compound::
 
   .. cv:: javascript
 
-		dojo.declare("MyFirstWidget",
-			[dijit._Widget], {
-				buildRendering: function(){
-					// create the DOM for this widget
-					this.domNode = dojo.create("button", {innerHTML: "push me"});
+	dojo.require("dijit._Widget");
+	dojo.declare("MyFirstBehavioralWidget", [dijit._Widget], {
+		buildRendering: function(){
+			// the DOM for this widget is whatever the user passed in
+			// (user is required to pass something in)
+			this.domNode = this.srcNodeRef;
+		}
+	});
+	dojo.require("dojo.parser");
 
-					// swap out the original source DOM w/the DOM for this widget
-					var source = this.srcNodeRef;
-					if(source && source.parentNode){
-						source.parentNode.replaceChild(this.domNode, source);
-					}
-				 }
-			});
+  .. cv:: html
 
+	<span dojoType="MyFirstBehavioralWidget">hi</span>
+
+This is merely creating a javascript object (of type MyFirstBehavioralWidget) associated with the <span> in the original markup.
+
+This kind of behavioral widget is useful in some cases, but it has severe limitations, namely that the user must supply a DOM tree.   Normally, widgets create their own DOM tree, replacing a simple <span> or <button> node with a complex DOM tree.  (Note that sometimes, if the user just calls
+
+.. code-block:: javascript
+
+  new MyWidget({})
+
+there isn't even a DOM node to replace at all.
+
+
+Here's a simple example of a widget that creates it's own DOM tree, and replaces the source DOM node with it's DOM tree:
+
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+	dojo.declare("MyFirstWidget",[dijit._Widget], {
+		buildRendering: function(){
+			// create the DOM for this widget
+			this.domNode = dojo.create("button", {innerHTML: "push me"});
+     
+				// swap out the original source DOM w/the DOM for this widget
+				var source = this.srcNodeRef;
+				if(source && source.parentNode){
+					source.parentNode.replaceChild(this.domNode, source);
+				}
+			}
+		});
 		dojo.addOnLoad(function(){
 			// Create the widget programatically
 			new MyFirstWidget({}).placeAt(dojo.body());
@@ -49,7 +82,7 @@ Let's look at how to create a widget from scratch, built directly on top of the 
 
 	<span dojoType="MyFirstWidget">i'll be replaced</span>
 
-This widget doesn't do much, but it does show the minimum requirements for a widget: create a DOM tree and inserts it into into the document.  (Technically speaking, widgets don't even need to create a DOM tree, if they are *behavioral*, i.e., if they require this.srcNodeRef to be set... they can just set this.domNode to this.srcNodeRef.)
+This widget doesn't do much, but it does show the minimum requirements for a (non-behavioral) widget: create a DOM tree and inserts it into into the document.
 
 
 Now let's write a widget that performs some javascript.   We'll setup an onclick handler on a button node which will increment a counter:
@@ -59,31 +92,30 @@ Now let's write a widget that performs some javascript.   We'll setup an onclick
   .. cv:: javascript
 
 		dojo.require("dijit._Widget");
-		dojo.declare("Counter",
-			[dijit._Widget], {
-				// counter
-				_i: 0,
-
-				buildRendering: function(){
-					// create the DOM for this widget
-					this.domNode = dojo.create("button", {innerHTML: this._i});
-
-					// swap out the original source DOM w/the DOM for this widget
-					var source = this.srcNodeRef;
-					if(source && source.parentNode){
-						source.parentNode.replaceChild(this.domNode, source);
-					}
-				 },
+		dojo.declare("Counter", [dijit._Widget], {
+			// counter
+			_i: 0,
+     
+			buildRendering: function(){
+				// create the DOM for this widget
+				this.domNode = dojo.create("button", {innerHTML: this._i});
+    
+				// swap out the original source DOM w/the DOM for this widget
+				var source = this.srcNodeRef;
+				if(source && source.parentNode){
+					source.parentNode.replaceChild(this.domNode, source);
+				}
+			},
 				 
-				 postCreate: function(){
-				 	// every time the user clicks the button, increment the counter
-				 	this.connect(this.domNode, "onclick", "increment");
-				 },
+			postCreate: function(){
+			 	// every time the user clicks the button, increment the counter
+			 	this.connect(this.domNode, "onclick", "increment");
+			 },
 				 
-				 increment: function(){
-				 	this.domNode.innerHTML = ++this._i;
-				 }
-			});
+			increment: function(){
+				 this.domNode.innerHTML = ++this._i;
+			}
+		});
 		dojo.require("dojo.parser");
 
   .. cv:: html
