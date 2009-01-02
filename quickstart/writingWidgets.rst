@@ -16,15 +16,24 @@ No problem! Dijit components are extendible, so you can make changes without tou
 You can also create Dijit classes from scratch. Again, you can do this either through markup - using the dijit.Declaration dojoType attribute - or through dojo.declare.
 
 
-=================
-Extending _Widget
-=================
+=====================
+Starting From Scratch
+=====================
 
-Let's look at how to create a widget from scratch, built directly on top of the _Widget base class.
+Let's look at how to create a widget from scratch.
 
-Technically speaking, the simplest widget you can create is a *behavioral* widget, i.e., a widget that just uses the DOM tree passed into it rather than creating a DOM tree.
+Technically, a widget can be any javascript "class" that implements a constructor taking parameters and a srcNodeRef (a pointer to a source DOM node).
 
-TODO: add example not extending from _Widget, just defining constructor.
+.. code-block:: javascript
+
+  constructor: function(params, srcNodeRef){
+       console.log("creating widget with params " + dojo.toJson(params) + " on node " + srcNodeRef);
+  }
+
+
+However, all the widgets in dijit and dojox, are built on top of the _Widget base class.
+
+The simplest widget you can create is a *behavioral* widget, i.e., a widget that just uses the DOM tree passed into it rather than creating a DOM tree.
 
 .. cv-compound::
 
@@ -33,11 +42,7 @@ TODO: add example not extending from _Widget, just defining constructor.
     <script>
 	dojo.require("dijit._Widget");
 	dojo.declare("MyFirstBehavioralWidget", [dijit._Widget], {
-		buildRendering: function(){
-			// the DOM for this widget is whatever the user passed in
-			// (user is required to pass something in)
-			this.domNode = this.srcNodeRef;
-		}
+             // put methods, attributes, etc. here
 	});
 	dojo.require("dojo.parser");
     </script>
@@ -46,9 +51,9 @@ TODO: add example not extending from _Widget, just defining constructor.
 
 	<span dojoType="MyFirstBehavioralWidget">hi</span>
 
-This is merely creating a javascript object (of type MyFirstBehavioralWidget) associated with the <span> in the original markup.
+This is merely creating a javascript object (of type MyFirstBehavioralWidget) associated with the <span> in the original markup.  You would create a postCreate() method referencing this.domNode that did connections, etc. to do something interesting w/that DOM node.
 
-This kind of behavioral widget is useful in some cases, but it has severe limitations, namely that the user must supply a DOM tree.   Normally, widgets create their own DOM tree, replacing a simple <span> or <button> node with a complex DOM tree.  (Note that sometimes, if the user just calls
+This kind of behavioral widget is useful in some cases, but it has severe limitations, namely that the widget user must supply a DOM tree.   Normally, widgets create their own DOM tree, replacing a simple <span> or <button> node with a complex DOM tree.  Note that sometimes, if the user just calls
 
 .. code-block:: javascript
 
@@ -70,17 +75,17 @@ Here's a simple example of a widget that creates it's own DOM tree, and replaces
 			// create the DOM for this widget
 			this.domNode = dojo.create("button", {innerHTML: "push me"});
      
-				// swap out the original source DOM w/the DOM for this widget
-				var source = this.srcNodeRef;
-				if(source && source.parentNode){
-					source.parentNode.replaceChild(this.domNode, source);
-				}
+			// swap out the original source DOM w/the DOM for this widget
+			var source = this.srcNodeRef;
+			if(source && source.parentNode){
+				source.parentNode.replaceChild(this.domNode, source);
 			}
-		});
-		dojo.addOnLoad(function(){
-			// Create the widget programatically
-			new MyFirstWidget({}).placeAt(dojo.body());
-		});
+		}
+	});
+	dojo.addOnLoad(function(){
+		// Create the widget programatically
+		new MyFirstWidget({}).placeAt(dojo.body());
+	});
     </script>
 
   .. cv:: html
@@ -88,7 +93,6 @@ Here's a simple example of a widget that creates it's own DOM tree, and replaces
 	<span dojoType="MyFirstWidget">i'll be replaced</span>
 
 This widget doesn't do much, but it does show the minimum requirements for a (non-behavioral) widget: create a DOM tree and inserts it into into the document.
-
 
 Now let's write a widget that performs some javascript.   We'll setup an onclick handler on a button node which will increment a counter:
 
@@ -129,12 +133,12 @@ Now let's write a widget that performs some javascript.   We'll setup an onclick
 
 	<span dojoType="Counter"></span>
 
-postCreate() is called after buildRendering() is finished, and is typically used for connections etc. that can't be done until the DOM tree has been created.   We don't put that code into buildRendering() because (as documented below), the _Templated mixin defines buildRendering() for you.
+postCreate() is called after buildRendering() is finished, and is typically used for connections etc. that can't be done until the DOM tree has been created.
 
 
-==========
-_Templated
-==========
+=================
+Templated Widgets
+=================
 OK, we've seen how to create a widget based directly on the _Widget class.  In practice though, this isn't done very often, as it's rather cumbersome to create a complicated DOM structure by hand.   There's a mixin called _Templated that makes all of this easier.  _Templated implements buildRendering() for you, and all you have to do is specify a template i.e, an HTML fragment, that specifies the DOM for the widget.
 
 Let's start using templates by expanding on our counter example, but making it a little more complicated.  The user will be able to specify a label for the button, and the count will be printed after the button.  The user will also be able to specify a label for the counter.
