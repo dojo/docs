@@ -11,25 +11,44 @@ dojo.NodeList
 .. contents::
     :depth: 2
 
-A **NodeList** is a standard Array, decorated with several very helpful functions.  
+A **NodeList** is a standard Array, decorated with several very helpful functions which act on each Node in the list.  
 
 
 ============
 Introduction
 ============
 
-`dojo.query <dojo/query>`_ returns a instance of a dojo.NodeList, though you can use them standalone. 
+This Class is most comm`dojo.query <dojo/query>`_ which returns a instance of a dojo.NodeList: 
 
 .. code-block :: javascript
+  :linenos:
 
   // create an instance of a NodeList
   var nl = dojo.query(".selectable");
+  // however many nodes with class="selectable" that exist:
   console.log(nl.length);
 
-The helper functions attached to the NodeList typically return the same instance of a NodeList, allowing for chaining:
+  // hide each element
+  nl.style("display","none");
+
+You can, however, create a NodeList manually. It ultimately is "just an Array", so you can work with it as such: 
 
 .. code-block :: javascript
+  :linenos:
+
+  // create an instance of a NodeList
+  var nl = dojo.NodeList();
+  nl.push(dojo.byId("someId"));
+  nl.push(dojo.byId("someOtherId"));
+  
+  // hide both
+  nl.style("display", "none");
  
+The helper functions attached to the NodeList typically return the same instance of the NodeList, allowing for chaining:
+
+.. code-block :: javascript
+  :linenos:
+
   dojo.query("#ul > li").style({ opacity:0.5, visibility:"visible" }).onclick(function(e){
       dojo.query(e.target).style({ opacity:1 }).toggleClass("clicked");
   });
@@ -59,7 +78,16 @@ For instance, `dojo.style() <dojo/style>`_ styles a single Node around a defined
    // all elements with class="hidden"
    dojo.query(".hidden").style({ opacity:0, visibility:"visible" }).removeClass("hidden").addClass("readyToFade");
    
-As is the case for .removeClass, .addClass, .place, and most other dom-related functions in NodeList. All return the instance of the same NodeList, and allow for chaining. 
+As is the case for .removeClass, .addClass, .place, and most other dom-related functions in NodeList. All return the instance of the same NodeList, and allow for chaining. An exception is .coords, which returns an array of the coordinate values of the matched nodes.
+
+.. code-block :: javascript
+  :linenos:
+
+  var nl = dojo.query(".foo"); // an array of nodes, NodeList
+  var coords = nl.coords(); // an array of objects { w, h, t, l }
+  nl.forEach(function(n, i){
+     console.log(n, "has", coords[i].w, "width");
+  });
 
 
 =====================
