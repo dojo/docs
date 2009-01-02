@@ -357,6 +357,34 @@ When you have an attribute where setting/getting it is more complicated than att
 handle, you need to write custom getters/setters for it. The naming convention (for an attribute named foo) is _setFooAttr() and
 _getFooAttr(). attr() will automatically detect and call these custom setters.
 
+Here's an example of a behavioral widget (it uses the DOM node from the supplied markup) that has an "open" attribute that controls whether the widget is hidden or shown:
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+	<script type="text/javascript">
+		dojo.require("dijit._Widget");
+		dojo.require("dijit._Templated");
+		dojo.declare("HidePane",
+			[dijit._Widget], {
+				// parameters
+				open: true,
+				
+				_setOpenAttr: function(/*Boolean*/ open){
+					this.open = open;
+					dojo.style(this.domNode, "display", open ? "block" : "none");
+				}
+			});
+		dojo.require("dojo.parser");
+	</script>
+
+  .. cv:: html
+
+	<span dojoType="HidePane" open="false" jsId="pane">This pane is initially hidden</span>
+	<button onclick="pane.attr('open', true);">show</button>
+	<button onclick="pane.attr('open', false);">hide</button>
+
 Custom setters are quite common. Usually you don't need a custom getter (as the default action
 for attr('foo') is to access Widget.foo), but for something like Editor where it's impractical to constantly
 keep Editor.value up to date, writing a custom _getValueAttr() accessor makes sense.
