@@ -277,6 +277,7 @@ Here's a simple widget for displaying a business card.  The widget has 3 paramet
 
 
 Each parameter is specified in the attributeMap to say how it relates to the template:
+
 .. cv-compound::
 
   .. cv:: javascript
