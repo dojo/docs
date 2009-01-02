@@ -142,7 +142,7 @@ The code to instantiate will look like this:
 
 .. code-block:: html
 
-  <div dojoType="Counter" label="counter label">button label</div>
+  <div dojoType="FancyCounter" label="counter label">button label</div>
 
 The first thing to do is to create some plain HTML to show you want the widget to look like:
 
@@ -185,6 +185,36 @@ dojoAttachEvent
 ---------------
 dojoAttachEvent will automatically setup a connection from an event on the DOM node (onclick in this case) to call a method in the widget (in this case increment().
 
+So, putting that all together the source becomes:
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+	<script type="text/javascript">
+		dojo.require("dijit._Widget");
+		dojo.require("dijit._Templated");
+		dojo.declare("FancyCounter",
+			[dijit._Widget, dijit._Templated], {
+				// counter
+				_i: 0,
+
+				templateString:
+					"<div>" +
+						"<button dojoAttachEvent='onclick: increment'>press me</button>" +
+						"&nbsp; count: <span dojoAttachPoint='counter'>0</span>" +
+					"</div>",
+				 
+				 increment: function(){
+				 	this.counter.innerHTML = ++this._i;
+				 }
+			});
+		dojo.require("dojo.parser");
+	</script>
+
+  .. cv:: html
+
+	<span dojoType="FancyCounter">press me</span>
 
 ==========
 Attributes
