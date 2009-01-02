@@ -1415,7 +1415,7 @@ The GFX system uses a series of underlying renderers for whichever browser loads
 
 To define specifically which renderers can be used, and their relative priority, set the 'gfxRenderer' value in djConfig as an array of string values, e.g. to specify that only SVG, Silverlight and VML should be used, and not Canvas, use:
 
-<script type="text/javascript" src="dojo/dojo.js" djConfig="parseOnLoad:true,gfxRenderer:['svg','silverlight','vml']"
+<script type="text/javascript" src="dojo/dojo.js" djConfig="parseOnLoad:true,gfxRenderer:['svg','silverlight','vml']"></script>
 
 ``It is important to note:`` there isn't currently a way to include all the required renderers in a single file (such as a layer created by a custom Dojo Build). Not only would the size be prohibitive, each of the renderers re-defining the API would cause severe errors.
 
