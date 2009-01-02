@@ -6,20 +6,20 @@ dojox.data.JsonRestStore
 :Status: Draft
 :Version: 1.0
 :Authors: Kris Zyp
-:Developers: Bryan Forbes, Kris Zyp
+:Developers: Kris Zyp
 :Available: since V1.2
 
 .. contents::
     :depth: 3
 
-**dojox.data.JsonRestStore** is a lightweight datastore implementation of a RESTful client.
+**dojox.data.JsonRestStore** is a lightweight datastore implementation of an HTTP-based (RFC 2616) client with RESTful data interaction capabilities.
 
 
 ============
 Introduction
 ============
 
-JsonRestStore provides full read, write, and notification capabilities through standards based HTTP/REST interaction with the server using GET, PUT, POST, and DELETE commands. 
+JsonRestStore provides full read, write, and notification capabilities through standards based HTTP/REST interaction with the server using GET, PUT, POST, and DELETE commands. This data store allows you to communicate with server side database/persistent data storage using the Dojo Data API with JavaScript and efficiently handles create, read, update, and delete (CRUD) operations. This can greatly simplify client server communication, interacting can be done simply using straightforward JavaScript instead of having to build your communication for CRUD actions. In addition, Dojo data stores can plugin to many Dojo widgets (Dijits).
 
 JsonRestStore supports JSON Referencing so objects can contain cyclic, multiple, cross-message, cross-table, and even cross-site references, which can be used for `lazy loading <quickstart/data/usingdatastores/lazyloading>`_. These references are automatically resolved such that properties are accessed as normal datastore attributes. 
 
@@ -30,7 +30,7 @@ JsonRestStore also store objects in a format to ease direct property access for 
 Features
 ========
 
-1. The datastore implement the following dojo.data APIs:  
+1. The datastore implements the following dojo.data APIs:  
 
    - `dojo.data.api.Read <dojo/data/api/Read>`_, 
    - `dojo.data.api.Identity <dojo/data/api/Identity>`_, 
@@ -100,6 +100,30 @@ Examples
  ... or ...
  store = new dojox.data.JsonRestStore({service:myService, syncMode: true});
 
+==========================
+Implementing a REST Server
+==========================
+The JsonRestStore follows RFC 2616 whenever possible to define to interaction with server. JsonRestStore uses an HTTP GET request to retrieve data, a PUT request to change items, a DELETE request to delete items, and a POST request to create new items. It is recommended that the server follow a URL structure for resources:
+
+ /Table/{id}
+
+This URL will be used to retrieve items by identity and make modifications (PUT and DELETE). It is also recommended that a /Table/ URL is used to represent the collection of items for the store. The store will POST to that URL to create new items.
+
+When creating new items, the JsonRestStore will POST to the target URL for the store. If your server wants to assign the URL/location for the newly created item, it can do so by including a Location header in the response:
+
+ Location: http://mysite.com/Table/newid
+
+The server can also assign or change properties of the object (such an id or default values) in the response to a POST (or any other request), by simply returning the updated JSON representation of the item in the body of the response.
+
+Note that in PHP, sometimes setting the Location will erroneously trigger a 302 status code which will cause JsonRestStore to fail. Per RFC 2616, the correct response to a POST that creates a new resource is to return a 201 status code with the Location header. In PHP, you must set the status code as well as the Location header if you want to avoid a 302 response.
+
+============
+Transactions
+============
+
+JsonRestStore provides transaction state information so that servers can implement transactions that correspond to the Dojo Data it saves if desired (this is not necessary for a server to implement in order to support REST). Transactions are indicated by a X-Transaction header in the modifications requests. If the X-Transaction header has a value of open, this means that further requests will be delivered that should be included in the current transaction. Once a request is received without an X-Transaction header of open, the server can commit all the changes from the current request and the previous requests that indicated an open transaction. It is recommended that you utilize deterministic request ordering and page sessions if you implement JsonRestStore directed transactions on the server.
+
+JsonRestStore also features a shared repository of transactional data between all JsonRestStore instances. Therefore, if you save a change, all the JsonRestStore data store’s unsaved data will be committed. This means that you don’t have to track which data stores have modified data, and it also means that you transactions can involve modifications across multiple data stores and corresponding server tables.
 
 ========
 See also
@@ -110,3 +134,5 @@ See also
 * You can read more about using JSON Referencing here: http://www.sitepen.com/blog/2008/06/17/json-referencing-in-dojo/
 
 * And this article describes more about JsonRestStore and using referencing for lazy loading: http://blog.medryx.org/2008/07/24/jsonreststore-overview/
+
+* In a .NET environment, http://msdn.microsoft.com/en-us/library/bb412170.aspx has useful information about JSON serialization
