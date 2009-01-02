@@ -24,6 +24,7 @@ Let's look at how to create a widget from scratch, built directly on top of the 
 
 Technically speaking, the simplest widget you can create is a *behavioral* widget, i.e., a widget that just uses the DOM tree passed into it rather than creating a DOM tree.
 
+TODO: add example not extending from _Widget, just defining constructor.
 
 .. cv-compound::
 
@@ -230,9 +231,21 @@ As a widget writer, you need to declare all your widget parameters in the protot
 
 .. code-block:: javascript
 
-				// text: String
-				//		This is an widget parameter
-				text: "push me",
+				// label: String
+				//		Button label
+				label: "push me"
+
+.. code-block:: javascript
+
+				// duration: Integer
+				//		Milliseconds to fade in/out
+				duration: 100
+
+.. code-block:: javascript
+
+				// open: Boolean
+				//		Whether pane is visible or hidden
+				open: true
 
 Note that all the documentation for an attribute needs to go next
 to the attribute definition, even when you need special documentation about how attr() performs for that
@@ -250,22 +263,67 @@ widget.  For example:
 
 attributeMap
 ------------
-Commonly, widget attributes are mapped into the widget's DOM.   For example, a TitlePane has a "title" parameter which becomes the innerHTML of the TitlePane.titleNode DOM node (where titleNode is defined as a dojoAttachPoint, see above).
+Often widget attributes are mapped into the widget's DOM.   For example, a TitlePane has a "title" parameter which becomes the innerHTML of the TitlePane.titleNode DOM node (where titleNode is defined as a dojoAttachPoint, see above).
 
 You might think that that mapping would be specified inside of the widget's template, but actually it's specified in something called the "attributeMap".  attributeMap can map widget attributes to DOM node attributes, innerHTML, or class.
 
-That explanation is confusing, but an example will help.  You can see this in action for TitlePane:
+That explanation is confusing, but an example will help.  
 
-.. code-block :: javascript
+Here's a simple widget for displaying a business card.  The widget has 3 parameters:
 
-	attributeMap: dojo.delegate(dijit.layout.ContentPane.prototype.attributeMap, {
-		title: { node: "titleNode", type: "innerHTML" }
-	}),
+  * name
+  * phone number
+  * CSS class name to apply to name
 
-The widget's title attribute becomes the innerHTML of TitlePane.titleNode.
 
-(The fancy delegate stuff is so TitlePane's attributeMap has everything that ContentPane has,
-plus this additional command.  BTW, that's the reason that attributeMap is declared inside the javascript file rather than as part of the template.)
+Each parameter is specified in the attributeMap to say how it relates to the template:
+.. cv-compound::
+
+  .. cv:: javascript
+
+	<script type="text/javascript">
+		dojo.require("dijit._Widget");
+		dojo.require("dijit._Templated");
+		dojo.declare("BusinessCard",
+			[dijit._Widget, dijit._Templated], {
+				// Initialization parameters
+				name: "unknown",
+				nameClass: "employeeName",
+				phone: "unknown",
+
+				templateString:
+					"<div class='businessCard'>" +
+						"<div>Name: <span dojoAttachPoint='nameNode'></span></div>" +
+						"<div>Phone #: <span dojoAttachPoint='phoneNode'></span></div>" +
+					"</div>",
+
+				attributeMap: {
+					name: { node: "nameNode", type: "innerHTML" },
+					nameClass: { node: "nameNode", type: "class" },
+					phone: { node: "phoneNode", type: "innerHTML" },
+				}
+			});
+		dojo.require("dojo.parser");
+	</script>
+
+  .. cv:: html
+
+	<style>
+		.businessCard {
+			border: 3px inset gray;
+			margin: 1em;
+		}
+		.employeeName {
+			color: blue;
+		}
+		.specialEmployeeName {
+			color: red;
+		}
+	</style>
+	<span dojoType="BusinessCard" name="John Smith" phone="(800) 555-1212"></span>
+	<span dojoType="BusinessCard" name="Jack Bauer" nameClass="specialEmployeeName" phone="(800) CALL-CTU"></span>
+
+Also note how the first example uses the default value of nameClass whereas the second example uses a custom value.   We could also have made a parameter called "class", and mapped it to this.domNode.   Note though that you need to put quotes around the name as it's a reserved word in javascript.
 
 To map a widget attribute to a DOM node attribute, you do:
 
@@ -284,16 +342,6 @@ or alternately just
   }),
 
 Both code blocks copy the widget's "disabled" attribute onto the focusNode DOM node in the template.
-
-attributeMap also supports class attributes like iconClass.  See dijit.Menu for an example of all of these in action:
-
-.. code-block :: javascript
-
-	attributeMap: dojo.delegate(dijit._Widget.prototype.attributeMap, {
-		label: { node: "containerNode", type: "innerHTML" },
-		iconClass: { node: "iconNode", type: "class" },
-		disabled: {node: "focusNode", type: "attribute" }
-	}),
 
 
 Substitution variables
