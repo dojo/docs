@@ -78,6 +78,33 @@ In all cases its good practice to assume that you are overriding a method that m
      this.inherited(arguments);
   }
 
+==========
+Attributes
+==========
+Perhaps the most important feature of _Widget is the ability to set attributes at widget initialization, or to change their valuse later on in the widget's lifecycle.
+
+dijit._Widget implements the attr() method to do this.  For example, this call will set a DateTextBox's value to the current date:
+
+.. code-block:: javascript
+
+   myDateTextBox.attr('value', new Date())
+
+This call will tell us if a TitlePane is opened or closed:
+
+.. code-block:: javascript
+
+   myTitlePane.attr('open')
+
+attr() makes use of:
+
+  * the attributeMap
+  * custom setters/getters
+
+The attributeMap specifies a mapping of widget attributes into the DOM tree for the widget.  It can map a TitlePane's title to the DOM node listing the title, for example.
+
+The custom setters/getters can perform any needed operation for setting/resetting a value.   They are used when attributeMap won't do the job.
+
+For more details on both attributeMap and custom setters/getters, see the `Writing Widgets <gettingStarted/writingWidgets>`_ guide.
 
 ========
 See also
