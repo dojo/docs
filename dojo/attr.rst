@@ -56,13 +56,14 @@ The following example will set several attributes such as the "tabindex" and "na
                     innerHTML: "New Content"
           });
       }
-
+      
       function displayAttributes(){
           dojo.attr("console", "innerHTML", 
              "tabindex: "+dojo.attr("testNode", "tabindex")+"\n" +
              "name: "+dojo.attr("testNode", "name")+"\n" +
              "innerHTML: "+dojo.attr("testNode", "innerHTML")+"\n"
-        }
+          );
+      }
     </script>
 
   .. cv:: html
@@ -83,19 +84,14 @@ This example will demonstrate how you can set events using dojo.attr().  You sho
 
     <script type="text/javascript">
       function setupHandlers(){
-          onOver = function(evt){
+          dojo.attr("testNodeTwo", "onmouseover", function(evt){
             dojo.attr("consoleOne", "innerHTML", "The mouse is over");
-          }
-
-          onClick = function(evt){
+          });
+   
+          dojo.attr("testNodeTwo", "onclick", function(evt){
             dojo.attr("consoleOne", "innerHTML", "The mouse was clicked");
-          }
- 
-          dojo.attr("testNodeTwo", "onmouseover", onOver);
-          dojo.attr("testNodeTwo", "onclick", onClick);
-          
-        });
-      });
+          });
+      }
     </script>
 
   .. cv:: html
