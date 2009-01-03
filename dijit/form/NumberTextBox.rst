@@ -43,20 +43,19 @@ Declarative example
 
   .. cv:: html
 
+        <label for="q05">Integer between -20000 to +20000:</label>
 	<input id="q05" type="text"
 		dojoType="dijit.form.NumberTextBox"
 		name= "elevation"
 		value="3000"
 		constraints="{min:-20000,max:20000,places:0}"
-		promptMessage= "Enter a value between -20000 and +20000"
 		required= "true" 
 		invalidMessage= "Invalid elevation.">
-        <label for="q05">Integer between -20000 to +20000</label>
 
 
 Formatting
 ----------
-The (so called) constraints attribute can also contain formatting information.  The example below always makes sure that the field shows four zeros:
+The (so called) constraints attribute can also contain formatting information.  The example below always makes sure that the field shows three digits after the decimal point, and has a +/- sign.   Try entering a simple value like "-3" and then tab away to see the effect.
 
 .. cv-compound::
 
@@ -70,13 +69,11 @@ The (so called) constraints attribute can also contain formatting information.  
 
 	<input id="zeroPadded" type="text"
 		dojoType="dijit.form.NumberTextBox"
-		name= "elevation"
+		name= "decimal"
 		value="0"
-		constraints="{min:-20000, max:20000, places:0, pattern: '0000'}"
-		promptMessage= "Enter a value between -20000 and +20000"
-		required="true" 
-		invalidMessage="Invalid elevation.">
-        <label for="zeroPadded">Integer between -20000 to +20000</label>
+		constraints="{pattern: '+0.000'}"
+		required="true">
+        <label for="zeroPadded">Fractional value:</label>
 
 
 =============
