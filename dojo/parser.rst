@@ -139,3 +139,11 @@ Delay page-level parsing until after some custom code (having set parseOnLoad:fa
        // do something();
        dojo.parser.parse();
   });
+
+
+
+========
+See Also
+========
+
+- `Understanding The Parser <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/understanding-parser>`_ - Part of "The book of Dojo 0.9"
