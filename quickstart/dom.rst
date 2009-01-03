@@ -218,6 +218,24 @@ Creating Nodes
 
 Basic Nodes
 -----------
+The DOM document contains functions for creating each of the basic DOM node types.
+
+========= ======================
+Type      Function
+========= ======================
+element   createElement(tagName)
+text      createTextNode(data)
+comment   createComment(data)
+attribute createAttribute(name)
+========= ======================
+
+For example, the following fragment will create a new DOM node of for the HTML DIV tag.
+
+.. code-block :: javascript
+  :linenos:
+
+  dojo.doc.createElement("DIV");
+
 
 Scripts
 -------
@@ -227,3 +245,10 @@ Cross-browser Considerations
 
 Destroying Nodes
 ----------------
+
+========
+See Also
+========
+Here are a list of Web references on the subject of DOM
+
+- `Document Object Model (DOM) Technical Reports <http://www.w3.org/DOM/DOMTR>`_ - The official specifications from the W3 on the DOM.
