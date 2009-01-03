@@ -493,24 +493,6 @@ Closing words:
 2) How can you find the plain old js methods to override or "connect" to (in the dojo sense of dojo.connect)? Well, that can be painful. First, you have to look inside the widget. Or inside its ancestors/superclasses. Or theirs. Or theirs. Not fun. Second, they aren't named consistenly. Sometimes _ means private, sometimes it means protected. (TODO: move to separate page?)
 
 
-
-===========
-More topics
-===========
-
-These pages list some more information you need for writing widgets from scratch, or making more complicated changes.
-
-* `Understanding templates <quickstart/writingWidgets/templates>`_  (TODO: remove; already documented above)
-* `Declaring a widget programatically <quickstart/writingWidgets/dojoDeclare>`_ (TODO: same here?)
-* `Declaring a widget in markup <quickstart/writingWidgets/dijitDeclaration>`_
-* `The Widget Life-cycle <quickstart/writingWidgets/lifecycle>`_
-* `More on attributes <quickstart/writingWidgets/attributes>`_  (TODO: remove; already documented above)
-* `Widgets In Template <quickstart/writingWidgets/widgetsInTemplate>`_
-* `Example: File Upload Dialog Box <quickstart/writingWidgets/example>`_
-* `Dropdowns and Popups <quickstart/writingWidgets/popups>`_
-
-
-
 =============
 Accessibility
 =============
@@ -520,36 +502,23 @@ These pages list how to make your widgets accessible to people with poor/no visi
 * `Creating Accessible Widgets <quickstart/writingWidgets/a11y>`_
 * `Testing Widgets for Accessibility <quickstart/writingWidgets/a11yTesting>`_
 
-
 ===
 DTL
 ===
 
-There's an alternate template syntax for widgets that lets you have conditional code in templates and other advanced features.
-TODO: add code from <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-dtl>`_. to under here: 
+There's an alternate template syntax for widgets which lets you have conditional code in templates and other advanced features.
 
-* `DTL <quickstart/writingWidgets/dtl>`_  (currently the top page from the above link has been copied to `DTL_cur <dojox/dtl>`_
+* `DTL manual from 1.2 <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-dtl>`_
+* `DTL <quickstart/writingWidgets/dtl>`_  (currently the top page from the above link has been copied to `DTL_cur <dojox/dtl>`_)
 
-
-==================
-Behavioral widgets
-==================
-
-TODO: explain behavioral widgets, maybe
-
-1.  adding a confirmation to anchors
-
-   this.connect(this.domNode, "onclick", function(e){ if(!confirm('leave')){ e.preventDefault(); }} }):
-
-2. a second example:  'add icon for external links'
-
-    this.domNode.appendChild(img);
-
-See also first part of `what is a widget <http://dojocampus.org/content/2008/04/20/what-is-a-_widget/>`_, but that's probably too complicated.
 
 ========
 See also
 ========
 
-* `Intro to behavioral and templated <http://dojocampus.org/content/2008/04/20/what-is-a-_widget/>`_ - TODO: add specific page about behavioral widgets here
-* `The Memo <http://dojotoolkit.org/book/dojo-book-0-4/part-4-more-widgets/writing-your-own-widget/memo>`_ - doc about writing a simple widget from scratch (TODO: move that here?  Before the more complex File Uploading box example?)
+* `Declaring a widget in markup <dijit/Declaration>`_
+* Widgets in templates are discussed on the `dijit._Templated <dijit/_Templated>`_ page
+* `Example: File Upload Dialog Box <quickstart/writingWidgets/example>`_
+* `Dropdowns and Popups <quickstart/writingWidgets/popups>`_
+* `Intro to behavioral and templated <http://dojocampus.org/content/2008/04/20/what-is-a-_widget/>`_
+* `The Memo <http://dojotoolkit.org/book/dojo-book-0-4/part-4-more-widgets/writing-your-own-widget/memo>`_ - doc about writing a simple widget from scratch
