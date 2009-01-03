@@ -67,14 +67,15 @@ The (so called) constraints attribute can also contain formatting information.  
 
   .. cv:: html
 
-	<input id="zeroPadded" type="text"
+       <label for="zeroPadded">Fractional value:</label>
+       <input id="zeroPadded" type="text"
 		dojoType="dijit.form.NumberTextBox"
 		name= "decimal"
 		value="0"
 		constraints="{pattern: '+0.000'}"
 		required="true">
-        <label for="zeroPadded">Fractional value:</label>
-
+       <button>dummy button (tab to here)</button>
+ 
 
 =============
 Accessibility
