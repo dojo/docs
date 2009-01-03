@@ -54,6 +54,31 @@ Declarative example
         <label for="q05">Integer between -20000 to +20000</label>
 
 
+Formatting
+----------
+The (so called) constraints attribute can also contain formatting information.  The example below always makes sure that the field shows four zeros:
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+     <script type="text/javascript">
+     dojo.require("dijit.form.NumberTextBox");
+     </script>
+
+  .. cv:: html
+
+	<input id="zeroPadded" type="text"
+		dojoType="dijit.form.NumberTextBox"
+		name= "elevation"
+		value="0"
+		constraints="{min:-20000, max:20000, places:0, pattern: '0000'}"
+		promptMessage= "Enter a value between -20000 and +20000"
+		required="true" 
+		invalidMessage="Invalid elevation.">
+        <label for="zeroPadded">Integer between -20000 to +20000</label>
+
+
 =============
 Accessibility
 =============
