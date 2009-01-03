@@ -12,7 +12,15 @@ dijit.form.ValidationTextBox
 .. contents::
     :depth: 2
 
-A ValidationTextBox by itself '''will not''' prevent invalid entries from submission. To ensure they're not, simply surround your form with a dijit.form.Form widget.
+============
+Introduction
+============
+
+A ValidationTextBox is an <input>-like widget that checks to make sure the user's input is valid (according to a specified criterion).  It flags invalid input by changing the box color, showing an icon, and displaying a tooltip detailing the error.  
+
+Note that a ValidationTextBox by itself *will not* prevent invalid entries from submission. To ensure they're not, simply surround your form with a `dijit.form.Form <dijit.form.Form>`_ widget.
+
+ValidationTextBox (and the widgets that extend it) also provide  the ability to display a "promptMessage", a tooltip that appears whenever the field is empty.
 
 ========
 Examples
@@ -21,7 +29,7 @@ Examples
 Declarative example
 -------------------
 
-ValidationTextBox widgets usually use Regular Expression validation, as in the following examples:
+ValidationTextBox widgets usually use Regular Expression validation, as in the following example:
 
 .. cv-compound::
 
