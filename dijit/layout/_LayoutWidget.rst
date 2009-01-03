@@ -83,7 +83,7 @@ At the time that postCreate() etc is called, the child widgets do not yet exist,
   7. user calls startup()
   8. layout() is called (widget should position it's children correctly, and do other initialization that depends on calls to marginBox() etc here)
 
-See also the `Widget lifecycle <quickstart/writingWidgets/lifecycle>`_ page.
+See also the lifecycle of a standard widget in `dijit._Widget <dijit/_Widget>`_.
 
 addChild()
 ----------
