@@ -1,6 +1,8 @@
 #format dojo_rst
 
 
+TODO: REMOVE;  MOVED TO `dijit._Templated <dijit/_Templated>`-.
+
 Widgets inside the Template
 ===========================
 So what if we want the widget to have a widget inside of it, as in ...:
