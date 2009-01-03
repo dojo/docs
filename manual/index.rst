@@ -442,6 +442,9 @@ Dijit is Dojo's UI Library, and lives as a separate namespace ``dijit``. Dijit r
 
 * `dijit <dijit>`_
 
+* `dijit._Templated <dijit/_Templated>`_
+* `dijit._Widget <dijit/_Widget>`_
+
   * `a11y  <dijit-a11y>`_
 
     * `a11y Strategy <dijit-a11y-strategy>`_
@@ -564,6 +567,7 @@ Layout
 
 * `dijit.layout <dijit/layout>`_
 
+  * `dijit.layout._LayoutWidget <dijit/layout/_LayoutWidget>`_
   * `dijit.layout.AccordionContainer <dijit/layout/AccordionContainer>`_
   * `dijit.layout.BorderContainer <dijit/layout/BorderContainer>`_
   * `dijit.layout.ContentPane <dijit/layout/ContentPane>`_
