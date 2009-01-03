@@ -31,7 +31,7 @@ Technically, a widget can be any javascript "class" that implements a constructo
   }
 
 
-However, all the widgets in dijit and dojox, are built on top of the _Widget base class.
+However, all the widgets in dijit and dojox, are built on top of the `dijit._Widget <dijit/_Widget>`_ base class.
 
 The simplest widget you can create is a *behavioral* widget, i.e., a widget that just uses the DOM tree passed into it rather than creating a DOM tree.
 
@@ -139,7 +139,7 @@ postCreate() is called after buildRendering() is finished, and is typically used
 =================
 Templated Widgets
 =================
-OK, we've seen how to create a widget based directly on the _Widget class.  In practice though, this isn't done very often, as it's rather cumbersome to create a complicated DOM structure by hand.   There's a mixin called _Templated that makes all of this easier.  _Templated implements buildRendering() for you, and all you have to do is specify a template i.e, an HTML fragment, that specifies the DOM for the widget.
+OK, we've seen how to create a widget based directly on the `dijit._Widget <dijit/_Widget>`_ class.  In practice though, this isn't done very often, as it's rather cumbersome to create a complicated DOM structure by hand.   There's a mixin called `dijit._Templated <dijit/_Templated>`_ that makes all of this easier.  _Templated implements buildRendering() for you, and all you have to do is specify a template i.e, an HTML fragment, that specifies the DOM for the widget.
 
 Let's start using templates by expanding on our counter example, but making it a little more complicated.  The user will be able to specify a label for the button, and the count will be printed after the button.  The user will also be able to specify a label for the counter.
 
@@ -169,26 +169,7 @@ Next, we modify the template above with some commands for _Templated:
 	&nbsp;count: <span dojoAttachPoint='counter'>0</span>"
   </div>
 
-There are a few things to note here:
-
-
-dojoAttachPoint
----------------
-In the JavaScript of a widget, you often might wish to refer to some of its html template's dom nodes directly. In this case the widget will need to access the <span> with the count in order to change the value.
-
-You might think the widget author could just use ids in the html template, and then dojo.byId() in the widget's js. But if she does, then if two or more widget instances are created, they'll all have the same ids!  Obviously code will blow up then.
-
-Instead, you the widget author do the following:
-
-1. In your widget template's html, for every node that these variables are supposed to correspond to (eg point to), you add the attribute: dojoAttachPoint="yourVariableNameHere".
-
-2. In your widget's js, you use (without declaring them) variables for these nodes. In this case you will access this.counter.
-
-The reason the variables are undeclared is that when the code in _Templated scans the html in step 1, and it finds the variables in the dojoAttachPoint attribute, it adds those variables to your widget class, dynamically.
-
-dojoAttachEvent
----------------
-dojoAttachEvent will automatically setup a connection from an event on the DOM node (onclick in this case) to call a method in the widget (in this case increment().
+dojoAttachPoint and dojoAttachEvent are documented in detail on the `dijit._Templated <dijit/_Templated>`_ page, but the important thing to note is that dojoAttachEvent sets up a listener for events on the DOM nodes, and dojoAttachPoint sets up a pointer to the DOM nodes.
 
 So, putting that all together the source becomes:
 
@@ -347,11 +328,6 @@ or alternately just
   }),
 
 Both code blocks copy the widget's "disabled" attribute onto the focusNode DOM node in the template.
-
-
-Substitution variables
-----------------------
-Note that if you are extending from _Templated, you can alternately use substitution variables like ${label} inside your template.   However, this is not recommended, as (due to implementation details) it only handles setting of the title on widget instantiation.   In other words, myWidget.attr('title', 'My new title') won't work if you use substitution variables.
 
 
 Custom setters/getters
