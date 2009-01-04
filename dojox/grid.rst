@@ -45,16 +45,28 @@ width
 cellType
   The type of cell in the column.  Allowable cell types include
 
+* ``dojox.grid.cells.Bool``
 * ``dojox.grid.cells.Select``
 
+
 options
-  Used when cellType is ``dojox.grid.cells.ComboBox`` or ``dojox.grid.cells.Select`` to name the allowable options
+  Used when cellType is ``dojox.grid.cells.Select`` to name the allowable options
 editable
   A boolean value that declares whether or not the cell is editable
 
 The value of the text between a ``<th>`` and ``</th>`` is used as the header label for the column.
 
+Editing cells
+-------------
+A cell can be defined as editable by setting its ``editable`` flag to be ``true``.  In the markup, this is achieved by adding the attribute ``editable="true"`` to the ``<th>`` definition.
 
+If a cell is editable and no ``cellType`` is supplied, then double clicking on the cell will provide an in-place text editor to change its value.
+
+If the type of the cell is a boolean, then its value is displayed as either the string ``true`` or ``false``.  If a check box is desired, setting the ``cellType`` to be ``dojox.grid.cells.Bool`` and marking it as editable will make a checkbox appear.
+
+If the cell type is defined to be ``dojox.grid.cells.Select`` then a combo-box/pulldown is available showing allowable options.
+
+.. Question: How to make a checkbox appear when we don't want the cell to be editable?
 
 ========
 Examples
@@ -552,7 +564,6 @@ There are times when you may wish to update the content of the grid.  For exampl
 
   var newStore = new dojo.data.ItemFileReadStore({data: {... some data ...});
   var grid = dijit.byId("gridId");
-  newStore.fetch();
   grid.setStore(newStore);
 
 ========
