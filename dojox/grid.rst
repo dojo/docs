@@ -395,8 +395,8 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
   .. cv:: css
 
     <style type="text/css">
-	@import "/moin_static163/js/dojo/trunk/release/dojo/dijit/themes/nihilo/nihilo.css";
-	@import "/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/resources/nihiloGrid.css";
+	@import "/moin_static163/js/dojo/trunk/dijit/themes/nihilo/nihilo.css";
+	@import "/moin_static163/js/dojo/trunk/dojox/grid/resources/nihiloGrid.css";
     </style>
 
 Large datasets
