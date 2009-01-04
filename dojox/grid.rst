@@ -43,9 +43,12 @@ field
 width
   The width of the column
 cellType
-  The type of cell in the column
+  The type of cell in the column.  Allowable cell types include
+
+* ``dojox.grid.cells.Select``
+
 options
-  Used when cellType is ``dojox.grid.cells.ComboBox`` to name the allowable options
+  Used when cellType is ``dojox.grid.cells.ComboBox`` or ``dojox.grid.cells.Select`` to name the allowable options
 editable
   A boolean value that declares whether or not the cell is editable
 
