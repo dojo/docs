@@ -25,3 +25,4 @@ Documentation guidelines
 
 * `How to become a dojo doc ninja <howto>`_
 * `ToDo list <todo>`_
+* `Dojo hosted at DojoCampus <hosted_dojo>`_ - Notes on the instance of Dojo hosted at Dojo Campus
