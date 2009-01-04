@@ -60,7 +60,7 @@ This example shows how to create a simple Grid declaratively.
   .. cv:: html
 
     <span dojoType="dojox.data.CsvStore" 
-        jsId="store1" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/tests/support/movies.csv">
+        jsId="store1" url="/moin_static163/js/dojo/trunk/dojox/grid/tests/support/movies.csv">
     </span>
 
     <table dojoType="dojox.grid.DataGrid"
