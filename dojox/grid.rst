@@ -36,6 +36,22 @@ Usage
 
 TODO: how to use the component/class/method
 
+In the ``<th>`` tag in a declarative definition of a DataGrid, the following attributes are permitted
+
+field
+  The name of the field in the store data
+width
+  The width of the column
+cellType
+  The type of cell in the column
+options
+  Used when cellType is ``dojox.grid.cells.ComboBox`` to name the allowable options
+editable
+  A boolean value that declares whether or not the cell is editable
+
+The value of the text between a ``<th>`` and ``</th>`` is used as the header label for the column.
+
+
 
 ========
 Examples
