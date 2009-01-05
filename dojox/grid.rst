@@ -34,7 +34,20 @@ Grid 1.2 Changes
 Usage
 =====
 
-TODO: how to use the component/class/method
+At a high level, a DataGrid can be defined either delcaratively in HTML markup or programatically in JavaScript.  In markup, the following high level structure is defined:
+
+.. code-block :: html
+
+  <table dojoType="dojox.grid.DataGrid" >
+    <thead>
+      <tr>
+        <th field="fieldName" width="200px">Column Name</th>
+        <th field="fieldName" width="200px">Column Name</th>
+      </tr>
+    </thead>
+  </table>
+
+The ``<table>`` tag defines that a DataGrid is being created.  The nested ``<th>`` tags define the columns on the table.
 
 In the ``<th>`` tag in a declarative definition of a DataGrid, the following attributes are permitted
 
@@ -53,8 +66,35 @@ options
   Used when cellType is ``dojox.grid.cells.Select`` to name the allowable options
 editable
   A boolean value that declares whether or not the cell is editable
+formatter
+  A JavaScript function that is called which returns the value to be shown in the cell.  The value from the data store is passed as a parameter to the function.
+get
+  A JavaScript function that is called which returns the value to be shown in the cell.  The function is passed two parameters.  The first is the row index in the DataGrid.  The second is the DataStore record/item.  Given these two parameters, the function is expected to know what to return.
+hidden
+  This boolean property can be used to hide a column in the table.  If its value is ``true`` the column is hidden.  If ``false`` the column is displayed.
 
 The value of the text between a ``<th>`` and ``</th>`` is used as the header label for the column.
+
+The structure of the table can also be set programatically.  The ``<table>`` attribute called ``structure`` can name an object that defines the cell structure.
+
+DataGrid options
+----------------
+In addition to the options for the columns, there are also options available for the DataGrid itself.
+
+rowSelector
+  Specifying this table option adds a selection area on the left of the table to make row selection easier.  The value of this option is a width to be used for the selector.
+selectionMode
+  This option defines how row selection is handled.  Available options are:
+
+* none - No row selection.
+* single - Only single row selection.
+* multiple - Multiple explicit row selection.  A single click selects a row a second single click deselects the row.
+* extended - Multiple row selection including ranges (default).
+
+columnReordering
+  This boolean property allows columns to be dynamically reordered.  When enabled, a column header can be dragged and dropped at a new location causing the column to be moved.
+headerMenu
+  A menu can be associated with a header.  This attribute names a ``dijit.Menu`` which is displayed when the header is clicked.
 
 Editing cells
 -------------
@@ -67,6 +107,60 @@ If the type of the cell is a boolean, then its value is displayed as either the 
 If the cell type is defined to be ``dojox.grid.cells.Select`` then a combo-box/pulldown is available showing allowable options.
 
 .. Question: How to make a checkbox appear when we don't want the cell to be editable?
+
+Data for the grid
+-----------------
+Data for the grid comes from a data store.  The data can be specified declaratively using the ``store="name"`` attribute where ``name`` is the name of a global JavaScript object that represents a DataStore.  This could previously have been created as follows:
+
+.. code-block :: html
+
+  <span dojoType="dojo.data.ItemFileWriteStore" 
+     jsId="myStore" url="/myData.json">
+  </span>
+
+Programatically, a store can be assigned to a DataGrid with the ``setStore(myStore)`` method call.
+
+
+Locking columns from horizontal scrolling
+-----------------------------------------
+A set of columns can be *locked* to prevent them from scrolling horizontally while allows other columns to continue to scroll.  To achieve this, the ``<colgroup>`` tags can be inserted before the ``<thead>`` tag.  For example, if a DataGrid has four columns, the following will lock the first column but allow the remaining columns the ability to scroll horizontally:
+
+.. code-block :: html
+
+  <colgroup span="1" noscroll="true"></colgroup>
+  <colgroup span="3"></colgroup>
+
+Multi-rowed *rows*
+------------------
+We are used to a row in a table being a single line of data.  DataGrid provides the ability for a single logical row to contain multiple lines of data.  This can be achieved by adding additional ``<tr>`` tags into the DataGrid declaration.
+
+For example:
+
+.. code-block :: javascript
+
+  <table dojoType="dojox.grid.DataGrid" store="myTestStore" style="width: 800px; height: 300px;">
+    <thead>
+      <tr>
+        <th field="A" width="200px">Col1</th>
+        <th field="B" width="200px">Col2</th>
+        <th field="C" width="200px">Col3</th>
+      </tr>
+      <tr>
+        <th field="D" colspan="3">Col4</th>
+      </tr>
+    </thead>
+  </table>
+
+Results in a grid with columns A, B and C and a fourth *column* called D which exists on the same row of data.
+
+Unknown at this time
+--------------------
+Here are some undocumented (here) components:
+
+* elasticView - An attribute on the table
+* rowsPerPage - An attribute on the table
+* query - An attribute on the table
+* clientSort - An attribute on the table
 
 ========
 Examples
