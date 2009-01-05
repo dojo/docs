@@ -9,6 +9,8 @@ Dijit
 
 Dijit is Dojo's UI Library, and lives as a separate namespace ``dijit``. Dijit requires Dojo Core. Each of the widgets and functionality provided by Dijit is describe in the following sections, though the aforementioned `quickstart <quickstart/>`_ guides cover some basics.
 
+* `Information <dijit/info>`_
+
 * `dijit._Templated <dijit/_Templated>`_
 * `dijit._Widget <dijit/_Widget>`_
 
