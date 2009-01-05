@@ -7,6 +7,8 @@ DojoX serves many purposes, and by design is difficult to document. Here, we hav
 
 These sections cover the available projects shipped with the Dojo Toolkit
 
+* `Information <dojox/info>`_
+
 * `dojox <dojox>`_
 * `dojox.analytics <dojox/analytics>`_
 
