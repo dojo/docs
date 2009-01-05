@@ -426,14 +426,13 @@ Dojo Core
 
   String utilities for Dojo
 
-========
 See also
-========
+--------
 
-* `Dijit <dijit/index>`__
+* `dijit <dijit/index>`__
 
   The widget system layered on top of Dojo
 
-* `DojoX <dojox/index>`__
+* `dojoX <dojox/index>`__
 
   An area for development of extensions to the Dojo toolkit
