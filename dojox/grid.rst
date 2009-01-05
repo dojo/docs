@@ -95,6 +95,14 @@ columnReordering
   This boolean property allows columns to be dynamically reordered.  When enabled, a column header can be dragged and dropped at a new location causing the column to be moved.
 headerMenu
   A menu can be associated with a header.  This attribute names a ``dijit.Menu`` which is displayed when the header is clicked.
+autoHeight
+  A value that defines the height of the table in rows.
+singleClickEdit
+  A boolean value that defines whether a single or double click is needed to enter cell editing mode.
+loadingMessage
+  The message to show while the content of the grid is loading.
+errorMessage
+  The message to show if an error has occurred loading the data.
 
 Editing cells
 -------------
