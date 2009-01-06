@@ -88,17 +88,10 @@ Example 2: Generic XML DOM to JS Object parser
          var jsdom = dojox.xml.DomParser.parse(xml);
 
          console.debug(jsdom);
-  
-         //Display the JS DOM as JSOM text.
-         var ap = dojo.byId("xmlContent2");
-         var pre = document.createElement("pre");
-         console.log(jsdom);
-         //pre.innerHTML = dojo.toJson(jsdom , true);
-         ap.appendChild(pre);
       }
       dojo.addOnLoad(init);
     </script>
 
   .. cv :: html 
-
-    <div id="xmlContent2"></div>
+ 
+    Look in the console for debug statements showing the constructed JS DOM like structure.
