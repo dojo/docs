@@ -34,7 +34,7 @@ Example 1: Generic XML DOM Parser
          var xml = "<tnode><node>Some Text<node><node>Some Other Text</node></tnode> 
          var dom = dojox.xml.parser.parse(xml);
 
-alert(dom);
+         alert(dom);
   
          var ap = dojo.byId("content");
          var docNode = dom.documentElement;
