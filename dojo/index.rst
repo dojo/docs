@@ -1,7 +1,7 @@
 ## page was renamed from 1.2/dojo
 #format dojo_rst
 
-dojo
+Dojo
 ====
 
 :Status: Draft
