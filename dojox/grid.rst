@@ -258,6 +258,13 @@ Examples
 The following examples are for the new Grid 1.2.
 
 * `A Simple Grid <dojox/grid/example_simple_grid>`_
+* `Programmatically creating a DataGrid <dojox/grid/example_Programmatically_creating_a_DataGrid>`_
+* `Working with selections <dojox/grid/example_Working_with_selections>`_
+* `Editing data <dojox/grid/example_Editing_data>`_
+* `Adding and deleteing data <dojox/grid/example_Adding_and_deleting_data>`_
+* `Filtering data <dojox/grid/example_Filtering_data>`_
+* `Grid styling : Rows <dojox/grid/example_grid_styling_rows>`_
+
 
 A simple Grid
 -------------
