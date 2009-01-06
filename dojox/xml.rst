@@ -43,6 +43,12 @@ Example 1: Generic XML DOM Parser
 
          ap.appendChild(document.createTextNode("Document contains: " + docNode.childNodes.length + " elements"));
          ap.appendChild(document.createElement("br"));
+         ap.appendChild(document.createElement("br"));
+
+         for (int i = 0; i < docNode.childNodes.length; i++) {
+           ap.appendChild(document.createTextNode("Element: [" + i + "] contains text: " + dojox.xml.parser.textContent(docNode.childNodes[i]));
+           ap.appendChild(document.createElement("br"));
+         } 
 
       }
       dojo.addOnLoad(init);
@@ -50,8 +56,4 @@ Example 1: Generic XML DOM Parser
 
   .. cv :: html 
 
-    <span id="content">
-    </span>
-
-
-  .. cv:: css
+    <div id="content"></div>
