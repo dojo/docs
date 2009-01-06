@@ -33,6 +33,8 @@ Example 1: Generic XML DOM Parser
       function init() {
          var xml = "<tnode><node>Some Text<node><node>Some Other Text</node></tnode> 
          var dom = dojox.xml.parser.parse(xml);
+
+alert(dom);
   
          var ap = dojo.byId("content");
          var docNode = dom.documentElement;
@@ -51,5 +53,3 @@ Example 1: Generic XML DOM Parser
 
 
   .. cv:: css
-
-
