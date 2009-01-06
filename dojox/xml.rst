@@ -80,7 +80,7 @@ Example 2: Generic XML DOM to JS Object parser
   .. cv :: javascript
 
     <script>
-      dojo.require("dojox.xml.parser");
+      dojo.require("dojox.xml.DomParser");
 
       function init() {
          //Parse text and generate an JS DOM
