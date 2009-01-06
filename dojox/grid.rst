@@ -77,6 +77,24 @@ The value of the text between a ``<th>`` and ``</th>`` is used as the header lab
 
 The structure of the table can also be set programatically.  The ``<table>`` attribute called ``structure`` can name an object that defines the cell structure.
 
+Event handling
+--------------
+Event handlers can be associated with the DataGrid.  The following handlers are defined:
+
+onStyleRow(inRow)
+   TBD
+onMouseOver(e)
+   Fired when the mouse is over the grid.  The event contains references to the grid, cell and rowIndex.
+onMouseOut(e)
+   Fired when the mouse is leaves the grid.  The event contains references to the grid, cell and rowIndex.
+onRowClick(e)
+   Fired when a row is clicked.  The event contains references to the grid, cell and rowIndex.
+onRowDblClick(e)
+   Fired when a row is double clicked.  The event contains references to the grid, cell and rowIndex.
+
+And many more ...
+
+
 DataGrid options
 ----------------
 In addition to the options for the columns, there are also options available for the DataGrid itself.
