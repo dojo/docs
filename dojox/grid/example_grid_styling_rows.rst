@@ -58,6 +58,6 @@ To use it, you just have to override default behavior by yours.
   .. cv:: css
 
     <style type="text/css">
-	@import "/moin_static163/js/dojo/trunk/dijit/themes/nihilo/nihilo.css";
-	@import "/moin_static163/js/dojo/trunk/dojox/grid/resources/nihiloGrid.css";
+        @import "/moin_static163/js/dojo/trunk/dojox/grid/resources/Grid.css";
+        @import "/moin_static163/js/dojo/trunk/dojox/grid/resources/nihiloGrid.css";
     </style>
