@@ -81,6 +81,10 @@ DataGrid options
 ----------------
 In addition to the options for the columns, there are also options available for the DataGrid itself.
 
+jsid
+  The name of a JavaScript variable that will be created that will hold the grid object.  This can then be referenced in scripts.
+store
+  The name of JavaScript variable that holds the store object used to get data for the grid.
 rowSelector
   Specifying this table option adds a selection area on the left of the table to make row selection easier.  The value of this option is a width to be used for the selector.
 selectionMode
