@@ -55,7 +55,7 @@ Example 1: Generic XML DOM Parser and utilities
 
          //Write out the XML text obtained from converting the DOM back.
          ap.appendChild(document.createElement("br"));
-         ap.appendChild(document.createTextNode("Document XML: " + dojox.xml.parser.innerXML(docNode));
+         ap.appendChild(document.createTextNode("Document XML: " + dojox.xml.parser.innerXML(docNode)));
          ap.appendChild(document.createElement("br"));
          ap.appendChild(document.createElement("br"));
      }
