@@ -17,6 +17,10 @@ To use it, you just have to override default behavior by yours.
 
   .. cv:: html
 
+    <span dojoType="dojo.data.ItemFileWriteStore" 
+        jsId="store3" url="http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/countries.json">
+    </span>
+
     <table dojoType="dojox.grid.DataGrid"
         jsId="grid6"
         store="store3"
