@@ -104,7 +104,7 @@ profileFile
   A file path to the the profile file. Use this if your profile is outside of the profiles directory. Do not specify the "profile" build option if you use "profileFile" Default: ""
 
 action
-  The build action(s) to run. Can be a comma-separated list, like action=clean,release. The possible build actions are: clean, release Default: "help"
+  The build action(s) to run. Can be a comma-separated list, like action=clean,release. The possible build actions are: clean, release Default: "help".  Note:  release action automatically implies the clean action, *except* when you have used the advanced parameter ''buildLayers'' in your profile.
 
 version
   The build will be stamped with this version string Default: "0.0.0.dev"
