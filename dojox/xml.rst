@@ -41,7 +41,7 @@ Example 1: Generic XML DOM Parser and utilities
          var dom = dojox.xml.parser.parse(xml);
   
          //Walk DOM and attach into the display how many child nodes were parsed out.
-         var ap = dojo.byId("content");
+         var ap = dojo.byId("xmlContent");
          var docNode = dom.documentElement;
          ap.appendChild(document.createTextNode("Document contains: " + docNode.childNodes.length + " elements"));
          ap.appendChild(document.createElement("br"));
@@ -64,7 +64,7 @@ Example 1: Generic XML DOM Parser and utilities
 
   .. cv :: html 
 
-    <div id="content"></div>
+    <div id="xmlContent"></div>
 
 ========================================
 Generic XML DOM to JS Object tree parser
@@ -86,9 +86,11 @@ Example 2: Generic XML DOM to JS Object parser
          //Parse text and generate an JS DOM
          var xml = "<tnode><node>Some Text</node><node>Some Other Text</node></tnode>";
          var jsdom = dojox.xml.DomParser.parse(xml);
+
+console.log(jsdom);
   
          //Display the JS DOM as JSOM text.
-         var ap = dojo.byId("content2");
+         var ap = dojo.byId("xmlContent2");
          var pre = document.createElement("pre");
          pre.innerHTML = dojo.toJson(jsdom , true);
       }
@@ -97,4 +99,4 @@ Example 2: Generic XML DOM to JS Object parser
 
   .. cv :: html 
 
-    <div id="content2"></div>
+    <div id="xmlContent"></div>
