@@ -257,6 +257,8 @@ Examples
 
 The following examples are for the new Grid 1.2.
 
+* `A Simple Grid <dojox/grid/example_simple_grid>`_
+
 A simple Grid
 -------------
 
