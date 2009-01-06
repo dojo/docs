@@ -31,8 +31,10 @@ Example 1: Generic XML DOM Parser
       dojo.require("dojox.xml.parser");
 
       function init() {
-         var xml = "<tnode><node>Some Text<node><node>Some Other Text</node></tnode> 
+         alert("foo");
+         var xml = "<tnode><node>Some Text</node><node>Some Other Text</node></tnode> 
          var dom = dojox.xml.parser.parse(xml);
+         alert("bar");
 
          alert(dom);
   
