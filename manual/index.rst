@@ -37,7 +37,7 @@ Dijit is Dojo's UI Library, and lives as a separate namespace ``dijit``. Dijit r
 DojoX
 =====
 
-DojoX serves many purposes, and by design is difficult to document. Here, we have an ongoing effort to document the most used, stable, reliable and powerful aspects of DojoX. DojoX contains code in alpha and experimental states, so your assistance in testing and documenting are especially helpful.
+DojoX serves many purposes, and by design is difficult to document. Here, we have an ongoing effort to document the most used, stable, reliable and powerful aspects of DojoX. DojoX stands for Dojo eXtensions and contains code in a variety of states, from very stable and robust, to alpha and experimental, so your assistance in testing and documenting are especially helpful.
 
 * `dojox <dojox/index>`_
 
