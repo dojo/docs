@@ -94,6 +94,24 @@ onRowDblClick(e)
 
 And many more ...
 
+For the above, an event contains the normal DOM Events plus
+
+cell
+  TBD
+cellIndex
+  TBD
+cellNode
+  TBD
+grid
+  The DataGrid that caused the event
+rowIndex
+  The row index in the grid
+rowNode
+  TBD
+sourceView
+  TBD
+
+
 
 DataGrid options
 ----------------
@@ -197,6 +215,32 @@ Some style sheets supplied with the Dojo distribution are required:
       margin: 0;
     }
   </style>
+
+
+DataGrid object functions
+-------------------------
+
+getItem(idx)
+  Returns the store ``item`` at the given row index.
+getItemIndex(item)
+  Returns the row index for the given store ``item``.
+setStore
+  TBD
+setQuery
+  TBD
+setItems
+  TBD
+filter
+  TBD
+sort
+  TBD
+canSort
+  TBD
+getSortProps
+  TBD
+removeSelectedRows
+  TBD
+
 
 Unknown at this time
 --------------------
@@ -673,7 +717,13 @@ To use it, you just have to override default behavior by yours.
     </table>
 
 
+Getting a value from a row knowing the row index
+------------------------------------------------
+Assume that you know the row index and the name of the column whos value you wish to retrieve, you can obtain that value using the following snippet:
 
+.. code-block :: javascript
+
+  var value = grid.store.getValue(grid.getItem(rowIndex), name);
 
 ====
 Tips
