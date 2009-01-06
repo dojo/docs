@@ -37,11 +37,30 @@ You need the following installed on your computer to run Dojo's build system:
 * `Java <http://java.sun.com/>`_ 1.4.2 or later (Java 1.5 recommended).
 * A source build of Dojo, which you can obtain at http://download.dojotoolkit.org/.  The source builds are suffixed with "-src". If you want to download the latest code from the Subversion code repository, see the `Using Subversion <http://dojotoolkit.org/book/dojo-book-0-9/part-4-meta-dojo/get-code-subversion>`_ page.
 
+Profiles and Command Line Parameters
+------------------------------------
 
-Creating a Custom Profile
--------------------------
+The build system is driven by the ``build.sh`` script (or ``build.bat`` batch file for Windows based hosts), which accepts several parameters on the command line, one of which should indicate which build profile to use to drive the build.  The parameters specified on the command line and in the profile are combined to one set of parameters to drive the build.
 
-In the util/buildscripts/profiles directory, you will create a profile build file called foo.profile.js like this:
+In Dojo versions 1.X CHECK FACT and later, if parameter values from the profile override parameters of the same name on the command line.  Prior to version 1.X CHECK FACT, parameters on the command line override parameters of the same name from the profile.
+
+Where should profiles be placed?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The default directory for profiles, when you specify the profile name with the ``profile`` parameter is ``util/buildscripts/profiles``.
+
+If you do not want your profiles to be within the Dojo directory structure (which is a best practice, so that you can use them with subsequent versions of Dojo), you can use the ``profileFile`` parameter instead to point to your profile anywhere within the file system.
+
+Naming profiles
+~~~~~~~~~~~~~~~
+
+Your profiles should always be files named in the format ``name.profile.js``.   The ``profile`` parameter automatically appends ``profile.js`` to whatever string is specified to determine the actual file name.
+
+
+Example:  Creating a Custom Profile
+-----------------------------------
+
+In this example, in the util/buildscripts/profiles directory, you will create a profile build file called foo.profile.js like this:
 
 .. code-block :: javascript
  :linenos:
@@ -104,7 +123,9 @@ profileFile
   A file path to the the profile file. Use this if your profile is outside of the profiles directory. Do not specify the "profile" build option if you use "profileFile" Default: ""
 
 action
-  The build action(s) to run. Can be a comma-separated list, like action=clean,release. The possible build actions are: clean, release Default: "help".  Note:  release action automatically implies the clean action, *except* when you have used the advanced parameter ''buildLayers'' in your profile.
+  The build action(s) to run. Can be a comma-separated list, like action=clean,release. The possible build actions are: clean, release Default: "help".  
+
+  Note:  the ''release'' action automatically implies the ''clean'' action, *except* when you have used the advanced parameter ''buildLayers'' in your profile.
 
 version
   The build will be stamped with this version string Default: "0.0.0.dev"
@@ -123,6 +144,8 @@ internStrings
 
 optimize
   Specifies how to optimize module files. If "comments" is specified, then code comments are stripped. If "shrinksafe" is specified, then the Dojo compressor will be used on the files, and line returns will be removed. If "shrinksafe.keepLines" is specified, then the Dojo compressor will be used on the files, and line returns will be preserved. If "packer" is specified, Then Dean Edwards' Packer will be used Default: ""
+
+  Note:  using the ''packer'' option is discouraged in most environments.  In environments where the http server supports gzip compression automatically, ''shrinksafe'' will provide better performance.  ''packer'' also does more transformations to the underlying source code.
 
 layerOptimize
   Specifies how to optimize the layer files. If "comments" is specified, then code comments are stripped. If "shrinksafe" is specified, then the Dojo compressor will be used on the files, and line returns will be removed. If "shrinksafe.keepLines" is specified, then the Dojo compressor will be used on the layer files, and line returns will be preserved. If "packer" is specified, Then Dean Edwards' Packer will be used Default: "shrinksafe"
