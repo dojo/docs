@@ -165,6 +165,21 @@ For example:
 
 Results in a grid with columns A, B and C and a fourth *column* called D which exists on the same row of data.
 
+Required CSS
+------------
+Some style sheets supplied with the Dojo distribution are required:
+
+.. code-block :: html
+
+  <style type="text/css">
+    @import "/dojox/grid/resources/Grid.css";
+    @import "/dojox/grid/resources/tundraGrid.css";
+
+    .dojoxGrid table {
+      margin: 0;
+    }
+  </style>
+
 Unknown at this time
 --------------------
 Here are some undocumented (here) components:
