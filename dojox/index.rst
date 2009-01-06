@@ -244,6 +244,9 @@ These sections cover the available projects shipped with the Dojo Toolkit
 * `dojox.gfx <dojox/gfx>`_
 * `dojox.gfx3d <dojox/gfx3d>`_
 * `dojox.grid <dojox/grid>`_
+
+  A visual grid/table much like a spreadsheet
+
 * `dojox.help <dojox/help>`_
 * `dojox.highlight <dojox/highlight>`_
 * `dojox.html <dojox/html>`_
