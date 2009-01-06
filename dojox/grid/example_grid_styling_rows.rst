@@ -61,3 +61,5 @@ To use it, you just have to override default behavior by yours.
         @import "/moin_static163/js/dojo/trunk/dojox/grid/resources/Grid.css";
         @import "/moin_static163/js/dojo/trunk/dojox/grid/resources/nihiloGrid.css";
     </style>
+
+end
