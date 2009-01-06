@@ -18,8 +18,10 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
 
   .. cv:: html
 
-    <!-- We use store3 from the example above as data store.
-    See the HTML code above, in order to learn how to define a data store. -->
+    <span dojoType="dojo.data.ItemFileWriteStore" 
+        jsId="store3" url="http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/countries.json">
+    </span>
+
 
     <div>
         This example shows, how to add/remove rows
