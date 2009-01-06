@@ -6,7 +6,7 @@ Grid styling : Rows
 The DataGrid provides extension points which allows you to apply custom css classes or styles to a row, depending on different parameters.
 To use it, you just have to override default behavior by yours.
 
-... cv-compound::
+.. cv-compound::
 
   .. cv:: javascript
 
