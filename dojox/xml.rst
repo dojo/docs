@@ -85,7 +85,8 @@ Example 2: Generic XML DOM to JS Object parser
       function init() {
          //Parse text and generate an JS DOM
          var xml = "<tnode><node>Some Text</node><node>Some Other Text</node></tnode>";
-         var jsdom = dojox.xml.DomParser.parse(xml);
+         var parser = dojox.xml.DomParser();
+         var jsdom = parser.parse(xml);
   
          //Display the JS DOM as JSOM text.
          var ap = dojo.byId("content2");
