@@ -48,8 +48,8 @@ This example shows how to create a simple Grid programmatically.
   .. cv:: css
 
     <style type="text/css">
-        @import "/moin_static163/js/dojo/trunk/dojo/dojox/grid/resources/Grid.css";
-        @import "/moin_static163/js/dojo/trunk/dojo/dojox/grid/resources/nihiloGrid.css";
+        @import "/moin_static163/js/dojo/trunk/dojox/grid/resources/Grid.css";
+        @import "/moin_static163/js/dojo/trunk/dojox/grid/resources/nihiloGrid.css";
 
         .dojoxGrid table {
             margin: 0;
