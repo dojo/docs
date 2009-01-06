@@ -22,7 +22,6 @@ One of the very useful functions is the helper function that can convert a strin
 Example 1: Generic XML DOM Parser
 ---------------------------------
 
-
 .. cv-compound ::
   
   .. cv :: javascript
@@ -42,7 +41,7 @@ Example 1: Generic XML DOM Parser
          ap.appendChild(document.createElement("br"));
 
          for (var i = 0; i < docNode.childNodes.length; i++) {
-           ap.appendChild(document.createTextNode("Element: [" + i + "] contains text: " + dojox.xml.parser.textContent(docNode.childNodes[i]));
+           ap.appendChild(document.createTextNode("Element: [" + i + "] contains text: " + dojox.xml.parser.textContent(docNode.childNodes[i])));
            ap.appendChild(document.createElement("br"));
          } 
 
