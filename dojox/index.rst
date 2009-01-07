@@ -162,6 +162,28 @@ These sections cover the available projects shipped with the Dojo Toolkit
 
     A read and write interface to basic XML data
 
+  * `dojox.data.dom <dojox/data/dom>`_
+
+    * `dojox.data.dom.createDocument <dojox/data/dom/createDocument>`_
+
+      Cross-browser implementation of creating an XML document object.
+
+    * `dojox.data.dom.innerXML <dojox/data/dom/innerXML>`_
+
+      XML document serializer.
+
+    * `dojox.data.dom.removeChildren <dojox/data/dom/removeChildren>`_
+
+      Removes all children from node and returns the count of children removed.
+
+    * `dojox.data.dom.replaceChildren <dojox/data/dom/replaceChildren>`_
+
+      Removes all children of node and appends newChild.
+
+    * `dojox.data.dom.textContext <dojox/data/dom/textContext>`_
+
+      Implementation of the DOM Level 3 attribute; scan node for text
+
 * `dojox.date <dojox/date>`_
 * `dojox.dtl <dojox/dtl>`_
 * `dojox.editor <dojox/editor>`_
