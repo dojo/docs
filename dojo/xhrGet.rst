@@ -44,6 +44,8 @@ load
   This is a callback function that is invoked when the data is received from the server.  It has one parameter which is the data returned from the server.
 error
   This is a callback function that is invoked if there is an error on the received data.  It has two parameters.  The first is the data returned from the server while the second is of type ``dojo.__IoCallbackArgs``.
+preventCache
+  A boolean value.  When set to true, caching is prevented.
 
 There are more properties than these.
 
