@@ -23,7 +23,6 @@ Dojo is divided into two parts: Dojo Base, and Dojo Core. Dojo Base is the funct
 
 * `dojo <dojo/index>`_
 
-
 =====
 Dijit
 =====
@@ -31,7 +30,6 @@ Dijit
 Dijit is Dojo's UI Library, and lives as a separate namespace ``dijit``. Dijit requires Dojo Core. Each of the widgets and functionality provided by Dijit is describe in the following sections, though the aforementioned `quickstart <quickstart/index>`_ guides cover some basics.
 
 * `dijit <dijit/index>`_
-
 
 =====
 DojoX
@@ -59,3 +57,11 @@ Dojo Styleguides
 ================
 
 * `Styleguides <styleguides/index>`_
+
+===========================
+Utilities and Miscellaneous
+===========================
+
+The Dojo build system is used to create efficient Dojo packages customized for a given application or website.
+
+* `Dojo Build System <build/index>`_
