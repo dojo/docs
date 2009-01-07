@@ -79,7 +79,9 @@ The structure of the table can also be set programatically.  The ``<table>`` att
 
 Event handling
 --------------
-Event handlers can be associated with the DataGrid.  The following handlers are defined:
+Event handlers can be associated with the DataGrid.  Many of these events are expected to be handled by the DataGrid itself.  Grabbing these events without passing the event on to the grid can cause unexpected results.  As such, it is wise to add an event handler as opposed to replace the event handler.   Consider using `dojo.connect() <dojo/connect>`_.
+
+The following handlers are defined:
 
 onStyleRow(inRow)
    TBD
