@@ -119,6 +119,19 @@ The server can also assign or change properties of the object (such an id or def
 
 Note that in PHP, sometimes setting the Location will erroneously trigger a 302 status code which will cause JsonRestStore to fail. Per RFC 2616, the correct response to a POST that creates a new resource is to return a 201 status code with the Location header. In PHP, you must set the status code as well as the Location header if you want to avoid a 302 response.
 
+======
+Paging
+======
+
+JsonRestStore uses HTTP's Range header to perform paging. When a request is made for a range of items, JsonRestStore will include a Range header with an items range unit specifying the range:
+
+ Range: items=0-24
+
+The server should respond with a Content-Range header to indicate how many items are being returned and how many total items exist:
+
+ Content-Range: items 0-24/66
+
+
 ============
 Transactions
 ============
