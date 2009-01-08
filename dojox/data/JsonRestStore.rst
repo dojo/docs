@@ -129,7 +129,9 @@ JsonRestStore also features a shared repository of transactional data between al
 See also
 ========
 
-* JsonRestStore is described in more detail here: http://www.sitepen.com/blog/2008/06/13/restful-json-dojo-data/
+* More information about techniques for lazy loading and optimal loading can be found here: http://www.sitepen.com/blog/2008/11/21/effective-use-of-jsonreststore-referencing-lazy-loading-and-more/
+
+* Other aspects of JsonRestStore are described in more detail here: http://www.sitepen.com/blog/2008/06/13/restful-json-dojo-data/
 
 * You can read more about using JSON Referencing here: http://www.sitepen.com/blog/2008/06/17/json-referencing-in-dojo/
 
