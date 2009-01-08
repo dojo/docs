@@ -21,7 +21,9 @@ Introduction
 
 JsonRestStore provides full read, write, and notification capabilities through standards based HTTP/REST interaction with the server using GET, PUT, POST, and DELETE commands. This data store allows you to communicate with server side database/persistent data storage using the Dojo Data API with JavaScript and efficiently handles create, read, update, and delete (CRUD) operations. This can greatly simplify client server communication, interacting can be done simply using straightforward JavaScript instead of having to build your communication for CRUD actions. In addition, Dojo data stores can plugin to many Dojo widgets (Dijits).
 
-JsonRestStore supports JSON Referencing so objects can contain cyclic, multiple, cross-message, cross-table, and even cross-site references, which can be used for `lazy loading <quickstart/data/usingdatastores/lazyloading>`_. These references are automatically resolved such that properties are accessed as normal datastore attributes. 
+JsonRestStore supports JSON Referencing so objects can contain cyclic, multiple, cross-message, cross-table, and even cross-site references, which can be used for `lazy loading <quickstart/data/usingdatastores/lazyloading>`_. These references are automatically resolved such that properties are accessed as normal datastore attributes.
+
+JsonRestStore caches objects that have been retrieved from the server locally in memory. This allows object identity to be preserved even if an object is loaded from the server multiple times (the target object will be updated rather than a new object created). Also fetching an item by identity will attempt to look in the local cache first before requesting the item from the server.
 
 JsonRestStore also store objects in a format to ease direct property access for significant performance advantages. 
 
