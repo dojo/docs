@@ -51,18 +51,18 @@ Declarative example
 Standard Date Format
 --------------------
 
-One universal problem with specifying dates as text strings is they can be written so many different ways. In Great Britain, "5/8/2008" means August 5th where in the U.S. it means May 8th. Fortunately, Dojo respects the browser's locale so that the date will be properly parsed.
+One universal problem with specifying dates as text strings is they can be written so many different ways. In Great Britain, "5/8/2008" means August 5th where in the U.S. it means May 8th. Fortunately, Dojo respects the cultural conventions so that the date will be properly parsed when interacting with the user.  Routines in the `dojo.date.locale <dojo/date/locale>`_ package are used against the setting of djConfig.locale or the locale of the user's browser to determine the appropriate behavior. 
 
-The trouble is your application may interact with users in different locales, and the server data is expected to work for all of them. If you write the attribute ``value='5/8/2008'``, how does DateTextBox know what you mean?  You could write your application to assume US conventions, as Javascript often does, but that programming practice will not work well in other parts of the world.  To prevent this ambiguity, DateTextBox expects dates to be formatted using ISO8601/RFC3339 format ``yyyy-mm-dd`` when specified declaratively in HTML markup.  This is both neutral to cultural formatting conventions as well as to time zones.  For example:
+Another problem is that your application may interact with various users in different locales, and the same server interaction is expected to work for all of them. If your widget markup specifies the attribute ``value='5/8/2008'``, how does DateTextBox know what you mean? You could write your application to assume US-English conventions, as Javascript often does, but that programming practice will not be well understood in other parts of the world and may cause problems interacting with other software.  To prevent this ambiguity, DateTextBox uses ISO8601/RFC3339 format ``yyyy-mm-dd`` to specify dates when communicating outside the Javascript realm.  This format is both neutral to cultural formatting conventions as well as to time zones. For example:
 
 * 2007-12-25 means December 25, 2007.
 
-ISO date format values sort properly as strings and are lighter-weight than Javascript Date objects, which make them convenient for programming.
+ISO formatted date values sort properly as strings and are lighter-weight than Javascript Date objects, which make them convenient for programming.
 
-However, when you get or set the DateTextBox ``value`` attribute programmatically, you must use a native Javascript Date object, e.g. new Date(2007, 11, 25)  The time portion of this value should be ignored for this purpose.
+Setting and Retrieving Dates
+----------------------------
 
-Sending and Receiving Server Formats
-------------------------------------
+Dijit uses the ISO format for dates which are specified declaratively in widget markup and also for submission back to the server.  The DateTextBox widget uses a hidden form element with the *NAME* of the original tag to submit the ISO data; the form element provided for user interaction is an additional form element instantiated only for this purpose.  When you access the DateTextBox value attribute programmatically from the widget using JavaScript, you must use a native Javascript Date object, e.g. new Date(2007, 11, 25) The time portion of the Date object is ignored.
 
 Ideally, your server application will send and receive dates in the ISO standard format.  Dojo recommends it as a best practice, but your data may not conform.  For example when Oracle database processes dates, by default it insists on dd-MMM-yyyy format in English, as in 01-APR-2006.  Perhaps you do not control the database or cannot write a shim to convert the dates server side.  How do you get around it?  
 
