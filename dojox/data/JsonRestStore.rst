@@ -107,9 +107,9 @@ Implementing a REST Server
 ==========================
 The JsonRestStore follows RFC 2616 whenever possible to define to interaction with server. JsonRestStore uses an HTTP GET request to retrieve data, a PUT request to change items, a DELETE request to delete items, and a POST request to create new items. It is recommended that the server follow a URL structure for resources:
 
- /Table/{id}
+ /{Table}/{id}
 
-This URL will be used to retrieve items by identity and make modifications (PUT and DELETE). It is also recommended that a /Table/ URL is used to represent the collection of items for the store. The store will POST to that URL to create new items.
+This URL will be used to retrieve items by identity and make modifications (PUT and DELETE). It is also recommended that a /{Table}/ URL is used to represent the collection of items for the store. When a query is performed, any query string is appended to the target URL to retrieve the results of the query. The JsonRestStore expects the results to be returned in an array (not in an object with an items property like some stores). The store will also POST to that URL to create new items.
 
 When creating new items, the JsonRestStore will POST to the target URL for the store. If your server wants to assign the URL/location for the newly created item, it can do so by including a Location header in the response:
 
