@@ -115,7 +115,7 @@ To validate a form you use the `isValid()` function. Lets take at a simple examp
                     <label for="name">Name:
                 </td>
                 <td>
-                    <input type="text" name="name" dojoType="dijit.form.ValidationTextBox"/>
+                    <input type="text" name="name" required="true" dojoType="dijit.form.ValidationTextBox"/>
                 </td>
             </tr>
             <tr>
