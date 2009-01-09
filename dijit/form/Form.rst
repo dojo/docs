@@ -132,3 +132,64 @@ To validate a form you use the `isValid()` function. Lets take at a simple examp
         <button dojoType="dijit.form.Button" type="submit" name="submitButtonTwo" value="Submit">Submit</button>
         <button dojoType="dijit.form.Button" type="reset">Reset</button>
     </form>
+
+Using native form elements
+--------------------------
+
+dijit.form.Form can also handle any type of naive form element, though you have to do validation yourself
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script>
+        dojo.require("dijit.form.Form");
+        dojo.require("dijit.form.Button");
+        dojo.require("dijit.form.ValidationTextBox");
+        dojo.require("dijit.form.DateTextBox");
+
+        dojo.addOnLoad(function(){
+            var myForm = dijit.byId("myFormTwo");
+            dojo.connect(myForm, "onSubmit", function(e){
+                e.preventDefault();
+                alert("Ready to submit data: "+dojo.toJson(myForm.attr("value")) );
+            });
+        });
+    </script>
+
+  .. cv:: html
+
+    <form dojoType="dijit.form.Form" id="myFormThree" jsId="myFormTwo"
+    encType="multipart/form-data" action="" method="">
+        <table style="border: 1px solid #9f9f9f;" cellspacing="10">
+            <tr>
+                <td>
+                    <label for="name">Name:
+                </td>
+                <td>
+                    <input type="text" name="name" required="true" dojoType="dijit.form.ValidationTextBox"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="dob">Date of birth:
+                </td>
+                <td>
+                    <input type="text" name="dob" dojoType="dijit.form.DateTextBox"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="dob">Order
+                </td>
+                <td>
+                    <input type="radio" name="order" value="Food"> Food  
+                    <input type="radio" name="order" value="Drinks" checked> Drinks
+                </td>
+            </tr>
+        </table>
+
+        <button dojoType="dijit.form.Button" onClick="console.log(myFormThree.attr("value"))">Get Values from form!</button>
+        <button dojoType="dijit.form.Button" type="submit" name="submitButtonTwo" value="Submit">Submit</button>
+        <button dojoType="dijit.form.Button" type="reset">Reset</button>
+    </form>
