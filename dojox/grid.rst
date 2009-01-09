@@ -51,6 +51,8 @@ The ``<table>`` tag defines that a DataGrid is being created.  The nested ``<th>
 
 In the ``<th>`` tag in a declarative definition of a DataGrid, the following attributes are permitted
 
+*note:* the ``<thead>`` element is *required* in order for the DataGrid to read this markup as the layout. 
+
 field
   The name of the field in the store data
 width
