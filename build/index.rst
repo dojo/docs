@@ -17,32 +17,74 @@ The Dojo build system is used to create efficient versions of Dojo customized fo
 Introduction
 ============
 
-Dojo, in its default distribution, contains thousands of separate files and resources which may be used in any given web site or application. Each dojo.require statement on a source page can result in a synchronous call to the server to download the file containing that resource, if it has not already been loaded in the current web site.  This can substantially impair performance.
+Dojo, in its default distribution, contains thousands of separate files and resources which may be used in any given web site or application. Each "`dojo.require <dojo/require>`_" statement on a given web page results a synchronous HTTP call to the web server to download the file containing that resource (dojo.require does check if the resource has already been loaded on the page, but every resource will need to be loaded once).  
 
-Dojo does not include a single file containing every possible dojo function; instead, the build system allows the creation of customized Dojo builds that combine the resources needed for the application or web site.
+Because browsers wait for each synchronous web call to finish before contacting the web server with the next synchronous call, this can substantially impair performance.  It can make your web page appear to take a very long time to load, or flash and redraw several times as Dojo resources are downloaded to the browser.
+
+Furthermore, in the default distribution, most of the files are not `minified <http://en.wikipedia.org/wiki/Minify>`_, and larger files require more time and bandwidth to download to the page.
+
+Dojo does not include a single file containing every possible dojo function, since this would very large (especially with optional modules from Dijit and Dojox); instead, the build system allows the creation of customized Dojo builds tailored to the needs of your particular web site.
 
 What is a layer?
 ----------------
 
-A *layer* produced by the Dojo build system is a single, usually compressed, JavaScript file which aggregates multiple JavaScript functions from the base Dojo distribution into a single file.  This file can then be included on the site using standard HTML ``script`` tags which download the entire file asynchronously (and quite possibly from browser cache) thus substantially improving performance of the web site.
+A *layer* is a single, usually minified, JavaScript file which all of the JavaScript code from multiple JavaScript files from the base Dojo distribution (as well as possibly your custom JavaScript code).  This single JavaScript layer file can then be included on the site using standard HTML ``script`` tags.  
 
-When you dojo.require a resource that has already been included in a layer on the page, no additional HTML call to the web server will be required, because the resource is already in memory.
+You load a layer file into your web page using the normal <script> tags on your page, similar to:
+
+<script src="/custombuild/dojo/mylayer.js"></script>
+
+JavaScript files specified in script tags download asynchronously from the web server, so more than one download can be in progress at once, making pages load faster.  Furthermore, since extra HTTP calls to the server are usually the single biggest factor in slow page loads, loading only one larger file (quite possibly from browser cache) instead of multiple little files makes your web page load much faster.
+
+You can (and should) still use dojo.require to specify every Dojo module that you use in your web page.  Since dojo.require checks if the module has already been downloaded, a module will not be downloaded again if it was included in a layer on the page.
 
 What should go in layers?
 -------------------------
 
-You should build layers appropriate to your application or web site, including the resources that are used on *most* of the pages *most* of the time.
+You should build layers appropriate to your application or web site, including the resources that are used on *most* of the pages *most* of the time.  For a simple web site, you can build a single layer file containing all of the most common resources, both from Dojo (including Dijit and Dojox).
 
-You can have different layers for different purposes, if you have collections of pages with differing Dojo resource requirements.  It is not necessary to include absolutely every Dojo resource possible--instead, the goal is to include the most commonly used resources.  Any resources not available to a web page from one of the layers included on the page will be loaded synchronously by dojo.require.
+More complicated websites can have multiple layers for different purposes.  Layers can include custom code from your own modules as well as those from the Dojo distribution.
 
-Via the build profile, you specify exactly which resources to include in the layers that you build.  You should balance what is included in each layer, thus increasing its size, against how often the resources is used in your site.  Frequently used resources should be placed in a layer; rarely used resources do not need to be put in a layer.
+It is not necessary to include absolutely every Dojo resource possible--instead, the goal is to include the most commonly used resources.  Any resources not available to a web page from one of the layers included on the page will be loaded synchronously by dojo.require.
 
-Layers can be minified
-----------------------
+You specify, via a build profile, exactly which resources to include in the layers that you build.  You should balance what is included in each layer, thus increasing its size, against how often the resources is used in your site.  Frequently used resources should be placed in a layer; rarely used resources do not need to be put in a layer.
 
-The Dojo build system can (and will by default) compress each layer with Shrinksafe, which provides a very effective minification of the source JavaScript code that contributes to the layer, while still exactly preserving all public names.
+Minification
+------------
 
-By using Shrinksafe, the size of the layer file is substantially reduced, thus enhancing download speed.
+The Dojo build system can (and will by default) compress each layer with Shrinksafe, which provides a very effective minification.
+
+Minificatation takes your JavaScript code and makes it smaller by, for example:
+
+   * Removing all extra spaces and blank lines   
+   * Removing comments
+   * Making internal variable names (inside of functions, which are not visible to the caller of a function) shorter
+
+Since layers can be large files, the minification can provide significant help in making them load faster--and, since they are smaller, they take less time for the browser's JavaScript engine to parse.
+
+=============================
+What does the build system do
+=============================
+
+The primary purpose of the build system is to create the layer files.  Overall, the build system does four things to enhance performance:
+
+   1. First, it groups together modules into ''layers''
+   2. Second, it ''interns'' external non-JavaScript files. This is most important for Dijit templates, which are kept in a separate HTML file. Interning pulls the entire file in and assigns it to a string.
+   3. Third, it minifies the layer with ShrinkSafe. ShrinkSafe removes unneeded whitepsace and comments, and compacts variable names down to smaller ones. This file downloads and parses faster than the original.
+   4. Finally, it copies all non-layered scripts to the appropriate places. While this doesn't speed anything up, it ensures that all Dojo modules can be loaded, even if not present in a layer. If you use a particular module only once or twice, keeping it out of the layers makes those layers load faster.
+
+=============
+Prerequisites
+=============
+
+To use the build system, you must have the following:
+
+    1.  A source code version of Dojo, which you can download from XXXXXXXXXXXXXXXXXXXXXX.  (An alternative choice is to use Subversion to download directly from the source code tree.
+    2.  A Java runtime envionment on the machine you will use to create your custom build.
+    3,  Optionally, the source code tree for any custom built resources (JavaScript modules, CSS files, Dojo widgets, and so on) that you would like built into your custom build.
+    3.  A profile, which you create, that controls how the build system creates your custom build.
+
+
 
 TODOC: everything. outline here:
 
