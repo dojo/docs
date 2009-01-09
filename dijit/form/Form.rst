@@ -149,7 +149,7 @@ dijit.form.Form can also handle any type of naive form element, though you have 
         dojo.require("dijit.form.DateTextBox");
 
         dojo.addOnLoad(function(){
-            var myForm = dijit.byId("myFormTwo");
+            var myForm = dijit.byId("myFormThree");
             dojo.connect(myForm, "onSubmit", function(e){
                 e.preventDefault();
                 alert("Ready to submit data: "+dojo.toJson(myForm.attr("value")) );
