@@ -96,9 +96,9 @@ To validate a form you use the `isValid()` function. Lets take at a simple examp
 
         dojo.addOnLoad(function(){
             var myForm = dijit.byId("myFormTwo");
-            dojo.connect(addOnLoad, "onSubmit", function(e){
+            dojo.connect(myForm, "onSubmit", function(e){
                 e.preventDefault();
-                if (dijit.byId("myFormTwo").isValid()){
+                if (myForm.isValid()){
                     alert("Ready to submit data: "+dojo.toJson(myForm.attr("value")) );
                 }
             });
