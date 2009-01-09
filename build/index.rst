@@ -99,7 +99,13 @@ TODOC: everything. outline here:
 
 link to full docs to cover:
 
-    * excludeStart/Stop
+=====================
+Advanced Build Topics
+=====================
+
+The following build topics are for expert users, and not needed for routine builds:
+
+    * conditional inclusion via the `excludeStart and exludeStop <dojo/build/exclude>`_ pragmas
     * restoreRequire
     * layerDependencies
     * discard
