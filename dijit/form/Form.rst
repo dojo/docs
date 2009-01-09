@@ -78,3 +78,67 @@ Declarative example
         <button dojoType="dijit.form.Button" type="submit" name="submitButton" value="Submit">Submit</button>
         <button dojoType="dijit.form.Button" type="reset">Reset</button>
     </form>
+
+Validating a form
+-----------------
+
+To validate a form you use the `isValid()` function. Lets take at a simple example using a declaratively created form:
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script>
+        dojo.require("dijit.form.Form");
+        dojo.require("dijit.form.Button");
+        dojo.require("dijit.form.ValidationTextBox");
+        dojo.require("dijit.form.DateTextBox");
+    </script>
+
+  .. cv:: html
+
+    <form dojoType="dijit.form.Form" id="myFormTwo" jsId="myFormTwo"
+    encType="multipart/form-data" action="" method="">
+        <script type="dojo/method" event="onReset">
+            return confirm('Press OK to reset widget values');
+        </script>
+
+        <script type="dojo/method" event="onSubmit">
+            console.debug('Attempting to submit form w/values:\n', 
+                dojo.toJson(this.attr("value"), true));
+            if(this.validate()){
+                return confirm('Form is valid, press OK to submit');
+            } else {
+                alert('Form contains invalid data.  Please correct first');
+                return false;
+            }
+            return true;
+        </script>
+
+        <script type="dojo/method" event="onReset">
+            return confirm('reset Form?');
+        </script>
+
+        <table style="border: 1px solid #9f9f9f;" cellspacing="10">
+            <tr>
+                <td>
+                    <label for="name">Name:
+                </td>
+                <td>
+                    <input type="text" id="name" name="name" dojoType="dijit.form.ValidationTextBox"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="dob">Date of birth:
+                </td>
+                <td>
+                    <input type="text" id="dob" name="dob" dojoType="dijit.form.DateTextBox"/>
+                </td>
+            </tr>
+        </table>
+
+        <button dojoType="dijit.form.Button" onClick="console.log(myFormTwo.attr("value"))">Get Values from form!</button>
+        <button dojoType="dijit.form.Button" type="submit" name="submitButton" value="Submit">Submit</button>
+        <button dojoType="dijit.form.Button" type="reset">Reset</button>
+    </form>
