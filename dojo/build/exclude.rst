@@ -1,7 +1,7 @@
 #format dojo_rst
 
-dojo.modulename
-===============
+Dojo build system:  conditional exclusions
+==========================================
 
 :Status: Draft
 :Version: 1.0
