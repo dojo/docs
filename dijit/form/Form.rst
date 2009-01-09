@@ -159,7 +159,7 @@ dijit.form.Form can also handle any type of naive form element, though you have 
 
   .. cv:: html
 
-    <form dojoType="dijit.form.Form" id="myFormThree" jsId="myFormTwo"
+    <form dojoType="dijit.form.Form" id="myFormThree" jsId="myFormThree"
     encType="multipart/form-data" action="" method="">
         <table style="border: 1px solid #9f9f9f;" cellspacing="10">
             <tr>
@@ -190,6 +190,6 @@ dijit.form.Form can also handle any type of naive form element, though you have 
         </table>
 
         <button dojoType="dijit.form.Button" onClick="console.log(myFormThree.attr("value"))">Get Values from form!</button>
-        <button dojoType="dijit.form.Button" type="submit" name="submitButtonTwo" value="Submit">Submit</button>
+        <button dojoType="dijit.form.Button" type="submit" name="submitButtonThree" value="Submit">Submit</button>
         <button dojoType="dijit.form.Button" type="reset">Reset</button>
     </form>
