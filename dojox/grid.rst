@@ -49,9 +49,9 @@ At a high level, a DataGrid can be defined either delcaratively in HTML markup o
 
 The ``<table>`` tag defines that a DataGrid is being created.  The nested ``<th>`` tags define the columns on the table.
 
-In the ``<th>`` tag in a declarative definition of a DataGrid, the following attributes are permitted
-
 *note:* the ``<thead>`` element is *required* in order for the DataGrid to read this markup as the layout. 
+
+In the ``<th>`` tag in a declarative definition of a DataGrid, the following attributes are permitted
 
 field
   The name of the field in the store data
