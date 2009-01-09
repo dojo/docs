@@ -28,11 +28,13 @@ Dojo does not include a single file containing every possible dojo function, sin
 What is a layer?
 ----------------
 
-A *layer* is a single, usually minified, JavaScript file which all of the JavaScript code from multiple JavaScript files from the base Dojo distribution (as well as possibly your custom JavaScript code).  This single JavaScript layer file can then be included on the site using standard HTML ``script`` tags.  
+A *layer* is a single, usually minified, JavaScript file which combines all of the JavaScript code from multiple JavaScript files from the base Dojo distribution (as well as possibly your custom JavaScript code).  This single JavaScript layer file can then be included on the site using standard HTML ``script`` tags.  
 
-You load a layer file into your web page using the normal <script> tags on your page, similar to:
+You load a layer file into your web page using the normal <script> tags, similar to:
 
-<script src="/custombuild/dojo/mylayer.js"></script>
+.. codeviewer::
+
+  <script type="text/javascript" src="/custombuild/dojo/mylayer.js"></script>
 
 JavaScript files specified in script tags download asynchronously from the web server, so more than one download can be in progress at once, making pages load faster.  Furthermore, since extra HTTP calls to the server are usually the single biggest factor in slow page loads, loading only one larger file (quite possibly from browser cache) instead of multiple little files makes your web page load much faster.
 
