@@ -175,7 +175,7 @@ dijit.form.Form can also handle any type of naive form element, though you have 
                     <label for="dob">Date of birth:
                 </td>
                 <td>
-                    <input type="text" name="dob" dojoType="dijit.form.DateTextBox"/>
+                    <input type="text" name="dob" dojoType="dijit.form.DateTextBox" />
                 </td>
             </tr>
             <tr>
