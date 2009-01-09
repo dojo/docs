@@ -9,9 +9,8 @@ Dojo build system:  conditional exclusions
 :Available: 1.0?
 
 .. contents::
-   :depth: 2
+   :depth: 3
 
-The Dojo build system permits special directives to be passed to the builder via comments within JavaScript source code (pragmas), to conditionally include or exclude certain parts of the source file from the built version of the file.
 
 ============
 Introduction
@@ -19,10 +18,15 @@ Introduction
 
 In very advanced situations, you may wish to have certain source code excluded from the built version of the file, based on some condition that is evaluated during the build itself.
 
-For example, you might wish to strip a profiling module from a release build.
+The Dojo build system permits special directives (known as pragmas) to be passed to the builder via comments within JavaScript source code  that it is processing,  The existing pramas allow the builder to conditionally include or exclude certain parts of the source file from the as-built version of the file.
 
+This is somewhat analogous to the use of ``#ifdef`` pragmas within the C pre-processor.
+
+For example, you might wish to strip a profiling module from a release build but include it in a development build.
+
+======
 Syntax
-------
+======
 
 This feature is implemented by creating exclusion regions bracketed by start and end pragmas, as follows:
 
@@ -52,20 +56,23 @@ where
 
 Note:  the tag for the startExclude pragma must be equal to the tag for the stopExclude pragma.
 
-Conditional Exclusion
-=====================
+=========
+Condition
+=========
 
 The builder evaluates the condition in the startExclude pramga *at build time* to determine whether or not to exclude the region from the as-built file.
 
 This parameter is actually JavaScript code which is evaluated by the builder at the time it encounters the pragma against the builder's own executing JavaScript context.  Therefore, the expression can access objects which exist within the builder.
 
-The object you most commonly will evaluate against is ``kwArgs`` which is where the builder stores its profile (technically, it stores all of its parameters, whether they originate in the profile, on the build command line, or from the builders' built in defaults).
+The object you most commonly will evaluate against is ``kwArgs`` which is where the builder stores its profile (it actually stores all of its parameters there, whether they originate in the profile, on the build command line, or from the builders' built in defaults).
 
+===============
 Builder Objects
 ===============
 
 TODOC:  Document builder objects of interest
 
+============================
 Nesting conditional excludes
 ============================
 
@@ -88,7 +95,6 @@ If you do nest, the exclusion regions must be fully and properly nested.  Thus, 
   //>>stopExclude("BBB")
 
 because the named regions overlap.
-
 
 ========
 See also
