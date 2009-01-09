@@ -81,8 +81,8 @@ To use the build system, you must have the following:
 
     1.  A source code version of Dojo, which you can download from XXXXXXXXXXXXXXXXXXXXXX.  (An alternative choice is to use Subversion to download directly from the source code tree.
     2.  A Java runtime envionment on the machine you will use to create your custom build.
-    3,  Optionally, the source code tree for any custom built resources (JavaScript modules, CSS files, Dojo widgets, and so on) that you would like built into your custom build.
-    3.  A profile, which you create, that controls how the build system creates your custom build.
+    3.  Optionally, the source code tree for any custom built resources (JavaScript modules, CSS files, Dojo widgets, and so on) that you would like built into your custom build.
+    4.  A profile, which you create, that controls how the build system creates your custom build.
 
 
 
