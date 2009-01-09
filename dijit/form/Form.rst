@@ -79,8 +79,8 @@ Declarative example
         <button dojoType="dijit.form.Button" type="reset">Reset</button>
     </form>
 
-Validating a form
------------------
+Preparing and validating a form for XHR requests
+------------------------------------------------
 
 To validate a form you use the `isValid()` function. Lets take at a simple example using a declaratively created form:
 
@@ -95,11 +95,12 @@ To validate a form you use the `isValid()` function. Lets take at a simple examp
         dojo.require("dijit.form.DateTextBox");
 
         dojo.addOnLoad(function(){
-            dojo.connect(dijit.byId("myFormTwo"), "onSubmit", function(e){
+            var myForm = dijit.byId("myFormTwo");
+            dojo.connect(addOnLoad, "onSubmit", function(e){
+                e.preventDefault();
                 if (dijit.byId("myFormTwo").isValid()){
-                    return true;
+                    alert("Ready to submit data: "+dojo.toJson(myForm.attr("value")) );
                 }
-                return false;
             });
         });
     </script>
