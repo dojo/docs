@@ -61,7 +61,7 @@ Declarative example
                     <label for="name">Name:
                 </td>
                 <td>
-                    <input type="text" id="name" name="name" dojoType="dijit.form.ValidationTextBox"/>
+                    <input type="text" id="name" name="name" required="true" dojoType="dijit.form.ValidationTextBox"/>
                 </td>
             </tr>
             <tr>
@@ -125,7 +125,7 @@ To validate a form you use the `isValid()` function. Lets take at a simple examp
                     <label for="name">Name:
                 </td>
                 <td>
-                    <input type="text" id="name" name="name" dojoType="dijit.form.ValidationTextBox"/>
+                    <input type="text" name="name" dojoType="dijit.form.ValidationTextBox"/>
                 </td>
             </tr>
             <tr>
@@ -133,12 +133,12 @@ To validate a form you use the `isValid()` function. Lets take at a simple examp
                     <label for="dob">Date of birth:
                 </td>
                 <td>
-                    <input type="text" id="dob" name="dob" dojoType="dijit.form.DateTextBox"/>
+                    <input type="text" name="dob" dojoType="dijit.form.DateTextBox"/>
                 </td>
             </tr>
         </table>
 
         <button dojoType="dijit.form.Button" onClick="console.log(myFormTwo.attr("value"))">Get Values from form!</button>
-        <button dojoType="dijit.form.Button" type="submit" name="submitButton" value="Submit">Submit</button>
+        <button dojoType="dijit.form.Button" type="submit" name="submitButtonTwo" value="Submit">Submit</button>
         <button dojoType="dijit.form.Button" type="reset">Reset</button>
     </form>
