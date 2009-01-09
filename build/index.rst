@@ -32,7 +32,7 @@ A *layer* is a single, usually minified, JavaScript file which combines all of t
 
 You load a layer file into your web page using the normal <script> tags, similar to:
 
-.. codeviewer::
+.. code-block :: html
 
   <script type="text/javascript" src="/custombuild/dojo/mylayer.js"></script>
 
