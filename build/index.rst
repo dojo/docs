@@ -129,5 +129,5 @@ The following build topics are for expert users, and not needed for routine buil
     * layerDependencies
     * discard
     * .uncompressed.js
-    * customBase
+    * create extremely small custom base ``Dojo.js`` builds with `customBase <build/customBase>`_
     * more...
