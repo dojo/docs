@@ -105,6 +105,17 @@ To use the build system, you must have the following:
 
     4.  **A profile**, which you create, that controls how the build system creates your custom build.  For details on this, see the `build profiles page <build/profiles>`_.
 
+========
+Profiles
+========
+
+The profile is a file which defines exactly what the build system will include in your built version of dojo.  For a detailed discussion of the profile and all of its options, see `profiles <build/profiles>`_.
+
+The profile should be a file named *something*\.profile\.js, and it contains a single JavaScript object called ``dependencies``.  The main property within ``dependencies`` is ``layers``, which is an array of definitions of the layers that should be built.
+
+Here is a sample profile from the Dojo 1.2.3 release directory tree, ``/utils/buildscripts/profiles/layers.profile.js``:
+
+
 
 
 TODOC: everything. outline here:
