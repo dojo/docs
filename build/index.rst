@@ -113,11 +113,106 @@ The profile is a file which defines exactly what the build system will include i
 
 The profile should be a file named *something*\.profile\.js, and it contains a single JavaScript object called ``dependencies``.  The main property within ``dependencies`` is ``layers``, which is an array of definitions of the layers that should be built.
 
-Here is a sample profile from the Dojo 1.2.3 release directory tree, ``/utils/buildscripts/profiles/layers.profile.js``:
+Here is a sample profile from the Dojo 1.2.3 release directory tree, ``/utils/buildscripts/profiles/layers.profile.js`` (many build profiles will not need all of the options and complexity that this one includes, but it shows the major features of the profile):
+
+.. code-block :: javascript
+   
+	//This profile is used just to illustrate the layout of a layered build.
+	//All layers have an implicit dependency on dojo.js.
+	
+	//Normally you should not specify a layer object for dojo.js. It is normally
+	//implicitly built containing the dojo "base" functionality (dojo._base).
+	//However, if you prefer the Dojo 0.4.x build behavior, you can specify a
+	//"dojo.js" layer to get that behavior. It is shown below, but the normal
+	//0.9 approach is to *not* specify it.
+	
+	//
+	
+	dependencies = {
+		layers: [
+			{
+				//For 0.9 you normally do not specify a dojo.js layer.
+				//Note that you do not need to specify dojo.js as a dependency for
+				//other layers -- it is always an implicit dependency.
+				name: "dojo.js",
+				dependencies: [
+					"dojo.parser"
+				]
+			},
+			{
+				//This layer will be discarded, it is just used
+				//to specify some modules that should not be included
+				//in a later layer, but something that should not be
+				//saved as an actual layer output. The important property
+				//is the "discard" property. If set to true, then the layer
+				//will not be a saved layer in the release directory.
+				name: "string.discard",
+				resourceName: "string.discard",
+				discard: true,
+				//Path to the copyright file must be relative to
+				//the util/buildscripts directory, or an absolute path.
+				copyrightFile: "myCopyright.txt",
+				dependencies: [
+					"dojo.string"
+				]
+			},
+			{
+				name: "../dijit/dijit.js",
+				resourceName: "dijit.dijit",
+				layerDependencies: [
+				"string.discard"
+				],
+				dependencies: [
+					"dijit.dijit"
+				]
+			}
+		],
+	
+		prefixes: [
+			[ "dijit", "../dijit" ],
+			[ "dojox", "../dojox" ]
+		]
+	}
+	
+	//If you choose to optimize the JS files in a prefix directory (via the optimize= build parameter),
+	//you can choose to have a custom copyright text prepended to the optimized file. To do this, specify
+	//the path to a file tha contains the copyright info as the third array item in the prefixes array. For
+	//instance:
+	//	prefixes: [
+	//		[ "mycompany", "/path/to/mycompany", "/path/to/mycompany/copyright.txt"]
+	//	]
+	//
+	//	If no copyright is specified in this optimize case, then by default, the dojo copyright will be used.
+
+============
+Build Script
+============
+
+To actually begin your build, you use the ``build.sh`` (for unix type environments) or ``build.bat`` file for Windows type environments.
+
+A typical build invocation looks something like this:
+
+.. code-block :: batch
+
+build profile=layers action=release releaseDir=../../../Built- version=0.9.0
+
+This illustrates the most important command line parameters to the build system:
+
+``profile=``*profileFileName``
+   The profile to be used for the build.  ``.profile.js`` is appended automatically.  The default directory is the ``/util/buildscripts/profiles`` directory within the Dojo source distribution.  However, most often you will want to reference a profile not within the source tree.
 
 
+   
 
 
+see `profiles <build/profiles>`_.
+
+The profile should be a file named *something*\.profile\.js, and it contains a single JavaScript object called ``dependencies``.  The main property within ``dependencies`` is ``layers``, which is an array of definitions of the layers that should be built.
+
+Here is a sample profile from the Dojo 1.2.3 release directory tree, ``/utils/buildscripts/profiles/layers.profile.js`` (many build profiles will not need all of the options and complexity that this one includes, but it shows the major features of the profile):
+
+
+	
 TODOC: everything. outline here:
 
     * summary
