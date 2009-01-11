@@ -100,4 +100,4 @@ because the named regions overlap.
 See also
 ========
 
-* Main page for the build system <build/exclude>`_
+* Main page for the `build system <build/exclude>`_
