@@ -81,22 +81,36 @@ Prerequisites
 
 To use the build system, you must have the following:
 
-    1.  A *source code version* of Dojo, which you can download from `download.dojotoolkit.org <http://download.dojotoolkit.org/>`_.  
+    1.  **A *source code version* of Dojo.**
 
-        Choose any release of Dojo (usually, you will choose the most recent), and be sure to select the source code build, which has `-src` in its file name.
+        You can download one from `download.dojotoolkit.org <http://download.dojotoolkit.org/>`_.  
+
+        Choose any release of Dojo (usually, you will choose the most recent), and be sure to select the source code build, which has `-src` in its file name:
+
+        .. image :: dojo-download-src.png
 
         You can also obtain a source build of dojo from the Subversion source code tree.  TODOC:  Link to subversion page when it is available.
 
-    2.  A Java runtime envionment on the machine you will use to create your custom build.
+    2.  **A Java runtime envionment, version 1.4.2 or higher** on the machine you will use to create your custom build.  
+
+        This is necessary because the builder, although written in JavaScript, requires the Rhino implementation of JavaScript to run it, and Rhino is built with Java.
+
+        At a minimum, you must use Java 1.4.2; Java 1.5 or higher is recommended.
+
+        You can download a Java runtime environment from `Sun's Java download page <http://www.java.com/en/download/index.jsp>`_.  At the time of this writing, this was at least Java 1.6.
+
     3.  Optionally, the source code tree for any custom built resources (JavaScript modules, CSS files, Dojo widgets, and so on) that you would like built into your custom build.
-    4.  A profile, which you create, that controls how the build system creates your custom build.
+
+        As a best practice, your source tree should *not* be under your Dojo distribution's source tree.  By keeping it independent, you make it easier to make new builds when new versions of Dojo are available.
+
+    4.  **A profile**, which you create, that controls how the build system creates your custom build.  For details on this, see the `build profiles page <build/profiles>`_.
 
 
 
 TODOC: everything. outline here:
 
     * summary
-    * requirements / setup
+    * requirements / setup DONE
     * creating a profile
     * command line arguments
     * special builds: * layers * css
@@ -111,7 +125,7 @@ Advanced Build Topics
 The following build topics are for expert users, and not needed for routine builds:
 
     * conditional inclusion via the `excludeStart and exludeStop <build/exclude>`_ pragmas
-    * restoreRequire
+    * prevent inlining of a resource named in a dojo.require with `restoreRequire <build/restoreRequire>`_
     * layerDependencies
     * discard
     * .uncompressed.js
