@@ -81,9 +81,11 @@ Prerequisites
 
 To use the build system, you must have the following:
 
-    1.  A *source code version* of Dojo, which you can download from `download.dojotoolkit.org <http://download.dojotoolkit.org/>`_.  (An alternative choice is to use Subversion to download directly from the source code tree.
+    1.  A *source code version* of Dojo, which you can download from `download.dojotoolkit.org <http://download.dojotoolkit.org/>`_.  
 
         Choose any release of Dojo (usually, you will choose the most recent), and be sure to select the source code build, which has `-src` in its file name.
+
+        You can also obtain a source build of dojo from the Subversion source code tree.  TODOC:  Link to subversion page when it is available.
 
     2.  A Java runtime envionment on the machine you will use to create your custom build.
     3.  Optionally, the source code tree for any custom built resources (JavaScript modules, CSS files, Dojo widgets, and so on) that you would like built into your custom build.
