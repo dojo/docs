@@ -27,10 +27,11 @@ However, in some complex web sites built with multiple layers that have shared d
 * **Layer B**, which depends on module M
 * **Module M**
 * Some set of pages which will load both layers A and B
+* Some set of pages which will load either A or B, but not both
 
-In this case, the standard build would include the dependent resources for M in both the A and B layers.  If M were very large, this could be a signficant increase in the code size of layers A and B.
+In this case, the standard build would include the dependent resources for M in both the A and B layers.  If M were very large, this could be a significant increase in the code size of layers A and B.
 
-In that case, you might wish to tell the build system *not* to include module M in the build for layer A or layer B, or both.  This is the purpose of the ``restoreRequire`` option.
+In that case, you might wish to tell the build system *not* to include module M in the build for layer A or layer B, or both, so that it is not downloaded to some pages twice.  This is the purpose of the ``restoreRequire`` option. 
 
 However, the penalty for doing so is that the module would be downloaded at runtime from a web page, rather than prebuilt into a layer. Most of the time, the size penalty in the layers for having a module twice is less of a performance impairment than the extra round trip to the server, so use this feature with care.
 
