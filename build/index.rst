@@ -188,31 +188,26 @@ Here is a sample profile from the Dojo 1.2.3 release directory tree, ``/utils/bu
 Build Script
 ============
 
-To actually begin your build, you use the ``build.sh`` (for unix type environments) or ``build.bat`` file for Windows type environments.
+To actually begin your build, you use the ``build.sh`` (for unix type environments) or ``build.bat`` file for Windows type environments.  For full details on the arguments to build, see `profiles <build/profiles>`_.
 
 A typical build invocation looks something like this:
 
-.. code-block :: batch
+.. code-block :: text
 
-build profile=layers action=release releaseDir=../../../Built- version=0.9.0
+  build profile=layers action=release version=0.9.0
 
 This illustrates the most important command line parameters to the build system:
 
-``profile=``*profileFileName``
+
+``profile`` 
    The profile to be used for the build.  ``.profile.js`` is appended automatically.  The default directory is the ``/util/buildscripts/profiles`` directory within the Dojo source distribution.  However, most often you will want to reference a profile not within the source tree.
 
+``action`` 
+   The action the build is to perform.  The most common one is ``release`` to build a release build, doing the common behaviors.  Another option is ``clean`` to remove a build.
 
+``version`` 
+   The version number of the build.
    
-
-
-see `profiles <build/profiles>`_.
-
-The profile should be a file named *something*\.profile\.js, and it contains a single JavaScript object called ``dependencies``.  The main property within ``dependencies`` is ``layers``, which is an array of definitions of the layers that should be built.
-
-Here is a sample profile from the Dojo 1.2.3 release directory tree, ``/utils/buildscripts/profiles/layers.profile.js`` (many build profiles will not need all of the options and complexity that this one includes, but it shows the major features of the profile):
-
-
-	
 TODOC: everything. outline here:
 
     * summary
