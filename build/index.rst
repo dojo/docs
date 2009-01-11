@@ -188,7 +188,7 @@ Here is a sample profile from the Dojo 1.2.3 release directory tree, ``/utils/bu
 Build Script
 ============
 
-To actually begin your build, you use the ``build.sh`` (for unix type environments) or ``build.bat`` file for Windows type environments.  For full details on the arguments to build, see `profiles <build/profiles>`_.
+To actually begin your build, you use the ``build.sh`` (for unix type environments) or ``build.bat`` file for Windows type environments.  For full details on the arguments to ``build``, see `build script <build/buildScript>`_.
 
 A typical build invocation looks something like this:
 
