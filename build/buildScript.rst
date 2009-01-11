@@ -23,7 +23,7 @@ Note:  For advanced users, the command line arguments to the script are passed i
 Usage
 =====
 
-The parameters to build are (the value after the equal sign is the default value, if one exists):
+The parameters to build are (the value after the equal sign is the default value, if one exists, as of Dojo 1.2.3):
 
 cssImportIgnore=
   If using cssOptimize="comments", then you can force the @import inlining step to ignore a set of files by using this option. The value of this option should be a comma separated list of CSS files names to ignore. The file names should match whatever strings are used for the @import calls.
@@ -43,11 +43,26 @@ localeList=ar,ca,cs,da,de-de,el,en-gb,en-us,es-es,fi-fi,fr-fr,he-il,hu,it-it,ja-
 releaseDir=../../release/
   The top level release directory where builds end up. The 'releaseName' directories will  be placed inside this directory.
 
+  Note:  the default value of ``releaseDir`` will place the built Dojo directory tree *within* the source Dojo distribution tree that the buildscripts directory is a part of.  This is normally not a good behavior if you are including any custom source code modules; in these cases, you will want to override the default with a location outside the source tree.
+
+
 copyTests=true
-  Turn on or off copying of test files.
+  Turn on or off copying of test files.  
+
+  When off (any non-truthy value--however ``false`` is your clearest choice), the Dojo test directory is not copied into your release distribution.  This can reduce the overall size of your distribution.
 
 action=help
   The build action(s) to run. Can be a comma-separated list, like action=clean,release. The possible build actions are: clean, release.
+
+  clean
+     Remove the releaseDir and any contents it may have.
+
+  release
+     Build the release directories.  
+
+  Note:  when you specify ``release``, the ``clean`` option is implied automatically, *unless* you use the ``buildLayers`` option.
+
+  Most of the time, you will specify ``action=release``.
 
 symbol=
   Inserts function symbols as global references so that anonymous functions will show up in all debuggers (esp. IE which does not attempt to infer function names from the context of their definition). Valid values are "long" and "short". If "short" is used, then a symboltables.txt file will be generated in each module prefix's release directory which maps the short symbol names to more descriptive names.
@@ -55,14 +70,36 @@ symbol=
 internStrings=true
   Turn on or off widget template file interning.
 
+  Normally, during the build process, one of the things that the builder does is take the separate HTML template files used by templated Dojo widgets (there are many of these in `Dijit <dijit\index>`_) and convert them to inline string values within the as-built source file for the widget (as well as any layers that widget is built into).  
+
 scopeMap=
   Change the default dojo, dijit and dojox scope names to something else. Useful if you want to use Dojo as part of a JS library, but want to make a self-contained library with no external dojo/dijit/dojox references. Format is a string that contains no spaces, and is similar to the djConfig.scopeMap value (note that the backslashes below are required to avoid shell escaping): ``scopeMap=[[\"dojo\",\"mydojo\"],[\"dijit\",\"mydijit\"],[\"dojox\",\"mydojox\"]]``
 
 mini=false
   Removes files like tests, demos dijit/bench, unfinished themes, and interned Dijit templates from the build. Overrides the value set for copyTests.
 
+  When ``mini=true`` is specified, the smallest possible version of Dojo is generated given the other parameters.  Mini versions are built without the following resources:
+
+    * tests
+    * demonstrations
+    * partial (unfinished themes)
+    * original template files (since they would have been interned)
+
 optimize=
   Specifies how to optimize module files. If "comments" is specified, then code comments are stripped. If "shrinksafe" is specified, then Dojo Shrinksafe will be used on the files, and line returns will be removed. If "shrinksafe.keepLines" is specified, then Dojo Shrinksafe will be used on the files, and line returns will be preserved. If "packer" is specified, Then Dean Edwards' Packer will be used.
+
+  Possible values for this parameter are:
+
+  shrinksafe
+     Use Shrinksafe in its default mode, where it strips both comments and blank lines
+
+  shrinksafe.keepLines
+     Use Shrinksafe to remove comments, but leave line breaks as-is, to facilitate human reading of the file (usually for debugging)
+
+  packer
+     Use Dean Edward's Packer to minify, rather than Shrinksafe.
+
+     Note: the Shrinksafe minification that is used by default is much more effective in most contexts than the Packer minification.  Use this parameter only on servers which do not do their own automatic gzip compression of files being sent.  The packer minification does more extensive name mangling than Shrinksafe and so may cause difficulty in debugging. 
 
 loader=default
   The type of dojo loader to use. "default" or "xdomain" are acceptable values.
