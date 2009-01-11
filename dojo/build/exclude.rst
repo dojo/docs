@@ -33,34 +33,34 @@ This feature is implemented by creating exclusion regions bracketed by start and
 .. code-block :: javascript
   :linenos:
 
-  //>>startExclude("Tag", kwArgs.layers.length > 1)
+  //>>excludeStart("Tag", kwArgs.layers.length > 1)
 
   ... code within the region here
 
-  //>>stopExclude("Tag")
+  //>>excludeStop("Tag")
 
 Lines 1 and 5, beginning with ``//>>`` are the pramas.  The ``//`` makes the lines comments in JavaScript, so they will not cause errors.  The full ``//>>`` is the symbol that the builder is looking for to tell it there is a pragma.
 
-The pragmas ``startExclude`` and ``stopExclude`` work together to create the exclusion region:  the region begins with the startExclude, and ends with the matching stopExclude pragma.
+The pragmas ``startExclude`` and ``stopExclude`` work together to create the exclusion region:  the region begins with the excludeStart, and ends with the matching excludeStop pragma.
 
 The syntax of the pragma itself is equivalent to a JavaScript function call.  The parameters of the conditional inclusion pragmas are:
 
-``startExclude(`` *tag* ``, `` *condition* ``)``
+``excludeStart(`` *tag* ``, `` *condition* ``)``
 
-``stopExclude(`` *tag* ``)``
+``excludeStop(`` *tag* ``)``
 
 where
 
-  * *tag* is a string (usually a string literal) naming the pair.  This permits matching startExclude and stopExclude tags to be determined. 
+  * *tag* is a string (usually a string literal) naming the pair.  This permits matching excludeStart and excludeStop tags to be determined. 
   * *condition* is a condition indicating when the text within the exclusion region should not be included in the as-built version of the JavaScript file.  That is, if the condition evaluates to true, none of the text from the exclusion region is copied into the as-built file.
 
-Note:  the tag for the startExclude pragma must be equal to the tag for the stopExclude pragma.
+Note:  the tag for the excludeStart pragma must be equal to the tag for the excludeStop pragma.
 
 =========
 Condition
 =========
 
-The builder evaluates the condition in the startExclude pramga *at build time* to determine whether or not to exclude the region from the as-built file.
+The builder evaluates the condition in the excludeStart pramga *at build time* to determine whether or not to exclude the region from the as-built file.
 
 This parameter is actually JavaScript code which is evaluated by the builder at the time it encounters the pragma against the builder's own executing JavaScript context.  Therefore, the expression can access objects which exist within the builder.
 
@@ -83,16 +83,16 @@ If you do nest, the exclusion regions must be fully and properly nested.  Thus, 
 .. code-block :: javascript
   :linenos:
 
-  //>>startExclude("AAA", kwArgs.layers.length > 1)
+  //>>excludeStart("AAA", kwArgs.layers.length > 1)
 
   ...
 
-  //>>startExclude("BBB", kwArgs.layers.indexOf("dojo") == 1)
+  //>>excludeStart("BBB", kwArgs.layers.indexOf("dojo") == 1)
 
   ...
 
-  //>>stopExclude("AAA")
-  //>>stopExclude("BBB")
+  //>>excludeStop("AAA")
+  //>>excludeStop("BBB")
 
 because the named regions overlap.
 
