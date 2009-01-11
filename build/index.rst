@@ -9,7 +9,7 @@ Dojo Build System
 :Available: since 1.0
 
 .. contents::
-   :depth: 2
+   :depth: 3
 
 The Dojo build system is used to create efficient versions of Dojo customized for a particular application or web site.
 
@@ -232,3 +232,56 @@ The following build topics are for expert users, and not needed for routine buil
     * .uncompressed.js
     * create extremely small custom base ``Dojo.js`` builds with `customBase <build/customBase>`_
     * more...
+
+=======================
+Build Build Scenarios
+=======================
+
+TODOC:  All of the following, with both build invocation command line and profile
+
+Basic Scenarios
+---------------
+
+Base Build
+~~~~~~~~~~
+
+A simple default build that creates the basic distribution tree from the source tree:  `base build <build/scenario-base>`_
+
+Dojo Core Only Build
+~~~~~~~~~~~~~~~~~~~~
+
+A small Dojo build which only builds the Dojo core into a layer, without dijit and the other name spaces:  `core build <build/scenario-core>`_
+
+* Simple one-layer build of all required Dojo resources, including other dijit and dojox namespaces
+* Single layer containing required resources from a custom namespace in addition to Dojo namespaces
+* Simple cross-domain build
+* Custom namespace build that works in conjunction with a cross-domain build without duplicating resources
+
+Basic Cross Domain Build
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+A basic cross-domain build of Dojo and some required components from dijit: `Basic cross domain build <build/scenario-xDomain>`_
+
+Custom Namespace Scenarios
+--------------------------
+
+Same Domain
+~~~~~~~~~~~
+
+A same domain build creating a layer including both Dojo and custom namespace components:  `Custom module build <build/scenario-customModule`_
+
+Cross Domain 
+~~~~~~~~~~~~
+
+A custom name space build which uses a cross domain built Dojo distribution for Dojo, dijit, and dojox resources, and a local file system build of the custom namespace for custom resources:  `Cross domain custom name space build <build/scenario-xDomainCustomModule>`_
+
+
+Advanced and Special Purpose Scenarios
+--------------------------------------
+
+Micro Build
+~~~~~~~~~~~
+
+An absolutely minimal build of Dojo containing just the most essential core elements, suitable for smart phones and other resource-limited hosts:  Micro-build <build/scenario-micro>
+
+* Others?
