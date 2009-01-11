@@ -17,7 +17,7 @@ Introduction
 
 This is a very advanced feature, and if you think you need to use it, you should think carefully first.  If after careful consideration, you still want to use this feature, be very, very careful and document it thoroughly for your own understanding.
 
-The very essence of the build system is that when it builds a layer, every Dojo (or custom) module in that layer's dependency list are copied into the layer file.  Similarly, every Dojo (or custom) resource that are referenced by ``dojo.require`` within the dependency list are copied into the layer file, and so on recursively, to include all necessary resources.
+The very essence of the build system is that when it builds a layer, every Dojo (or custom) module that is in that layer's dependency list are copied into the layer file.  Similarly, every Dojo (or custom) resource that are referenced by ``dojo.require`` within the dependency list are copied into the layer file, and so on recursively, to include all necessary resources.
 
 In almost every case, this is the desired behavior.  
 
