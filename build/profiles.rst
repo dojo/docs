@@ -59,7 +59,7 @@ prefixes
 Layers
 ======
 
-Each member of the top level ``layers`` array is an object similar to:
+Each member of the top level ``layers`` array is an object similar to (in many builds, only a few of these options will be used):
 
 .. code-block :: javascript
 
