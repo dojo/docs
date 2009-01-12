@@ -20,6 +20,7 @@ Installation
 ============
 
 * `How to Install the Dojo Toolkit <quickstart/install>`_
+* `Configuring Dojo <djConfig>`_
 
 
 =========================
