@@ -102,15 +102,18 @@ dependencies
 
    Advanced note:  the advanced `keepRequires <build/keepRequires>`_ option changes the behavior of the dependency list, by causing specified ``dojo.require`` statements found within the dependent modules to not be included in the layer build.  
 
+layerDependencies
+   TODO:  FIND OUT WHAT THIS DOES EXACTLY
+
 keepRequires
    Optional.  Changes the behavior of the layer dependency list, by causing specified ``dojo.require`` statements found within the dependent modules to not be included in the layer build.  
 
-   See the `detailed description <build/keepRequires>`_.
+   See the `keepRequires detailed description <build/keepRequires>`_.
 
 customBase
    Optional.  Used to build exceptionally small ``dojo.js`` layer, not including all of the standard Dojo Base.
 
-   See the `detailed description <build/customBase>`_.
+   See the `customBase detailed description <build/customBase>`_.
 
 TODO: how to use the component/class/method
 
