@@ -21,6 +21,8 @@ The builder reads its parameters from a profile, which is a JavaScript file name
 
 The builder automatically appends ``.profile.js`` to the name of the profile specified on the build command line, so this naming convention is mandatory.
 
+Note:  throughout the various options described below, file system paths are often specified.  Even on Windows based hosts, use forward slashes (akin to Unix) as directory separators, instead of the Windows native backslash.
+
 ==============
 Empty Profiles
 ==============
@@ -128,7 +130,7 @@ TODO: how to use the component/class/method
 Prefixes
 ========
 
-An array of prefix descriptors, where each prefix descriptor is a length=2 array of strings, similar to this:
+An array of prefix descriptors, where each prefix descriptor is a length == 2 array of strings, similar to this:
 
 .. code-block :: javascript
 
@@ -141,10 +143,10 @@ Each prefix describes where to find a top level namespace relative to the ``/uti
 
 Within each prefix descriptor, the members are:
 
-first member
+first member (module name)
   String.  The name of a top-level module.
 
-second member
+second member (path)
   String.  The path to that module's *directory* relative to the source ``/util`` directory.
 
 Note:  If you have a custom module namespace outside of the Dojo source distribution tree, you will need to specify it in the prefix list as similarly to:
@@ -154,6 +156,7 @@ Note:  If you have a custom module namespace outside of the Dojo source distribu
         prefixes: [
                 [ "dijit", "../dijit" ],
                 [ "dojox", "../dojox" ],
+                // Unix style, in the user's home directory, for example
                 [ "myNamespace", "~/src/myNamespace" ]
                 // For Windows OS, this might be something like [ "myNamespace", "M:/myNamespace" ]
         ]
