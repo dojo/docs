@@ -93,17 +93,24 @@ dependencies
    Optional, array of string.  A list of Dojo resources that this this layer relies on.  Normally, they are to be included in the layer.  The builder will locate and include each of the resources listed in the ``dependencies`` array, then locate and include each resource referenced within those resources with a ``dojo.require`` statement, and so on recursively until all modules required to actually implement all of the layer dependencies are built into the layer. 
 
    No module will be included in the layer more than once, even if it is referenced at multiple locations within the web of resources the layer uses.
+
+   TODOC:  HOW DOES THIS INTERACT WITH PREVIOUS LAYERS?  HOW ARE EXCLUSIONS DONE.
  
    Note:  it is not an error that this property has the same name as the top level object.
 
    Hint:  It may be more effective to create  a dummy JavaScript file with multiple ``dojo.require`` statements in the source tree, and simply list it as a dependency rather than try to maintain a detailed dependency list within the profile.
 
-   Advanced note:  the advanced ` ``keepRequires`` <build/keepRequires>`_ option changes the behavior of the dependency list, by causing certain dojo.require statements in the dependency list to not be included in the layer build.  
+   Advanced note:  the advanced `keepRequires <build/keepRequires>`_ option changes the behavior of the dependency list, by causing specified ``dojo.require`` statements found within the dependent modules to not be included in the layer build.  
 
 keepRequires
+   Optional.  Changes the behavior of the layer dependency list, by causing specified ``dojo.require`` statements found within the dependent modules to not be included in the layer build.  
+
    See the `detailed description <build/keepRequires>`_.
 
-   TODOC:  HOW DOES THIS INTERACT WITH PREVIOUS LAYERS?  HOW ARE EXCLUSIONS DONE.
+customBase
+   Optional.  Used to build exceptionally small ``dojo.js`` layer, not including all of the standard Dojo Base.
+
+   See the `detailed description <build/customBase>`_.
 
 TODO: how to use the component/class/method
 
