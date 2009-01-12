@@ -124,6 +124,42 @@ TODO: how to use the component/class/method
    // your code
  </script>
 
+========
+Prefixes
+========
+
+An array of prefix descriptors, where each prefix descriptor is a length=2 array of strings, similar to this:
+
+.. code-block :: javascript
+
+        prefixes: [
+                [ "dijit", "../dijit" ],
+                [ "dojox", "../dojox" ]
+        ]
+
+Each prefix describes where to find a top level namespace relative to the ``/util`` directory of the source tree.  As the builder finds modules which are required for a layer, it uses the prefix list to determine where to locate the module's files within the source tree.
+
+Within each prefix descriptor, the members are:
+
+first member
+  String.  The name of a top-level module.
+
+second member
+  String.  The path to that module's *directory* relative to the source ``/util`` directory.
+
+Note:  If you have a custom module namespace outside of the Dojo source distribution tree, you will need to specify it in the prefix list as similarly to:
+
+.. code-block :: javascript
+
+        prefixes: [
+                [ "dijit", "../dijit" ],
+                [ "dojox", "../dojox" ],
+                [ "myNamespace", "~/src/myNamespace" ]
+                // For Windows OS, this might be something like [ "myNamespace", "M:/myNamespace" ]
+        ]
+
+This permits you to build into your distribution private namespace resources which are not within the Dojo distrubtion directory tree.
+
 
 
 ========
