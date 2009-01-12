@@ -80,7 +80,7 @@ The build system will build one layer file for each member object within the top
 name
    The path to and file name of the file that will be built for the layer.  
 
-   This path is actually relative to ``/utils``.  Therefore, to specify a layer file that will be created  in the dijit directory, you would specify ``../dijit/layerfilename.js``. 
+   This path is actually relative to ``/util``.  Therefore, to specify a layer file that will be created  in the dijit directory, you would specify ``../dijit/layerfilename.js``. 
 
 resourceName
    Optional, String.  The name of the resource module to be provided by the layer.  If this is specified, the layer file will contain a ``dojo.provide`` statement specifying the resourceName.  TODOC:  VERIFY THIS FACT
