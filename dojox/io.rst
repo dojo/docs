@@ -41,6 +41,7 @@ Features
 
   window.name plugin for XHR adapter registry
 
-* `dojox.io.OAuth<dojox/io/OAuth>`
+* `dojox.io.OAuth`_
 
   Helper class to assemble OAuth URL parameters.
+.. _dojox.io.OAuth: dojox/io/OAuth
