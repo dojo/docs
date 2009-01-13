@@ -116,6 +116,9 @@ By default, the resiable will be constrained to a minimum size of 100px x 100px,
 
 If you would like to define maximum constraints, use the ``maxWidth`` and ``maxHeight`` properties, though you must explicitly set ``constrainMax`` to "true" to enable this feature.
 
+.. code-block :: javascript
+  :linenos:
+
   new dojox.layout.ResizeHandle({
      targetId:"foo",
      constrainMax:true, 
