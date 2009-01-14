@@ -56,6 +56,7 @@ Caveats
 It is important to understand that dojo.isArray checks to see if the provided value is an instance of *the* Array constructor from the current frame. If an array is passed in from a different frame, it is not an instance of the current frame's Array and therefore dojo.isArray will properly return false. Also, the arguments variable is not considered an array. One can test for these array like entities with dojo.isArrayLike(value). If you want to dojo.isArray to work on array instances from any frame, it is possible to monkey patch it with something like:
 
 .. code-block :: javascript
+
  dojo.isArray = function(it){
     return it && Object.prototype.toString.call(it)=="[object Array]";
  });
