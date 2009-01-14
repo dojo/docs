@@ -147,6 +147,8 @@ loadingMessage
   The message to show while the content of the grid is loading.
 errorMessage
   The message to show if an error has occurred loading the data.
+``New in 1.3`` selectable
+  Set to true if you want to enable text selection on your grid.
 
 Editing cells
 -------------
