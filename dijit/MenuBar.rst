@@ -19,7 +19,9 @@ There's also a MenuBarItem widget if you need an entry in your MenuBar that *doe
 A programatically created MenuBar
 ---------------------------------
 
-.. cv:: javascript
+.. cv-compound::
+
+  .. cv:: javascript
 
     <script type="text/javascript">
       dojo.require("dijit.MenuBar");
@@ -57,10 +59,14 @@ A programatically created MenuBar
                 popup:pSubMenu2
             }));
 
+             pMenuBar.placeAt("wrapper");
              pMenuBar.startup();
         });
     </script>
 
+  .. cv:: html
+
+     <div id="wrapper"></div>
 
 Creation from markup is even easier.
 
