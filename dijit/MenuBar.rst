@@ -42,7 +42,7 @@ A programatically created MenuBar
             pSubMenu.addChild(new dijit.MenuItem({
                 label:"File item #2"
             }));
-            pMenu.addChild(new dijit.PopupMenuBarItem({
+            pMenuBar.addChild(new dijit.PopupMenuBarItem({
                 label:"File",
                 popup:pSubMenu
             }));
@@ -54,7 +54,7 @@ A programatically created MenuBar
             pSubMenu2.addChild(new dijit.MenuItem({
                 label:"Edit item #2"
             }));
-            pMenu.addChild(new dijit.PopupMenuBarItem({
+            pMenuBar.addChild(new dijit.PopupMenuBarItem({
                 label:"Edit",
                 popup:pSubMenu2
             }));
@@ -92,8 +92,6 @@ Creation from markup is even easier.
 				<div dojoType="dijit.MenuItem" onClick="alert('file 2')">File #2</div>
 			</div>
 		</div>
-	</div>
-	<div dojoType="dijit.MenuBar" id="navMenu">
 		<div dojoType="dijit.PopupMenuBarItem">
 			<span>Edit</span>
 			<div dojoType="dijit.Menu" id="editMenu">
