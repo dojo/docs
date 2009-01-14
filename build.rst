@@ -1,1 +1,1 @@
-#REDIRECT /build/index
+#REDIRECT build/index
