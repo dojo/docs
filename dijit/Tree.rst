@@ -254,13 +254,13 @@ In addition, to enable DnD on the Tree you must dojo.require("dijit._tree.dndSou
         new dijit.Tree({
             model: treeModel,
             dndController: "dijit._tree.dndSource"
-        }, "treeOne");
+        }, "treeThree");
       });
     </script>
 
   .. cv:: html
 
-    <div id="treeOne"></div>
+    <div id="treeThree"></div>
 
 
 You can also specify custom checkAcceptance() and checkItemAcceptance() to accept/reject items to the tree.   (The former function operates at the Tree level, and the latter operates per Tree node, allowing things like rejecting dropping items onto leaf nodes.)
