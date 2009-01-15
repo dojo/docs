@@ -114,7 +114,7 @@ By default, the resiable will be constrained to a minimum size of 100px x 100px,
      minHeight:200
   }).placeAt("foo");
 
-If you would like to define maximum constraints, use the ``maxWidth`` and ``maxHeight`` properties, though you must explicitly set ``constrainMax`` to "true" to enable this feature.
+In Dojo 1.3 or higher, if you would like to define maximum constraints, use the ``maxWidth`` and ``maxHeight`` properties, though you must explicitly set ``constrainMax`` to "true" to enable this feature. 
 
 .. code-block :: javascript
   :linenos:
