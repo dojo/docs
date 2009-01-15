@@ -75,7 +75,6 @@ The (so called) constraints attribute can also contain formatting information.  
 		constraints="{pattern: '+0.000;-0.000'}"
 		required="true">
        <button>dummy button (tab to here)</button>
- 
 
 =============
 Accessibility
