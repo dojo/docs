@@ -50,9 +50,7 @@ A programatically created menu
             }));
             pMenu.addChild(new dijit.MenuSeparator());
 
-            var pSubMenu = new dijit.Menu({
-                parentMenu: pMenu
-            });
+            var pSubMenu = new dijit.Menu();
             pSubMenu.addChild(new dijit.MenuItem({
                 label:"Submenu item"
             }));
