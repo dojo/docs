@@ -6,8 +6,8 @@ dijit.Tree
 :Status: Draft
 :Version: 1.0
 :Authors: Bill Keese, Nikolai Onken, Marcus Reimann
-:Developers: ?-
-:Available: since V?
+:Developers: Bill Keese
+:Available: since 0.9
 
 .. contents::
     :depth: 2
@@ -214,7 +214,76 @@ People often ask how to lazy-load a tree, but this question is really unrelated 
 Drag And Drop
 =============
 
-TODO
+Tree's support drag and drop, meaning that a user can:
+
+  * drop an item onto the tree
+  * drag an item from the tree
+  * move items within the tree
+
+In the first and last case (ie, when an item is dropped onto the tree), the drop is processed by the model, which in turn sends it to the data store (updating the underlying data).   Thus:
+
+  * the model must implement the pasteItem() method
+  * the store must implement the `dojo.data.api.Write <dojo/data/api/Write>`_ interface
+
+In addition, to enable DnD on the Tree you must dojo.require("dijit._tree.dndSource"); and the dndController="dijit._tree.dndSource" parameter must be specified to the tree
+
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+      dojo.require("dojo.data.ItemFileWriteStore");
+      dojo.require("dijit.tree.ForestStoreModel");
+      dojo.require("dijit._tree.dndSource");
+      dojo.require("dijit.Tree");
+
+      dojo.addOnLoad(function(){
+        var store = new dojo.data.ItemFileReadStore({
+            url: "http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/countries.json" 
+        });
+        
+        var treeModel = new dijit.tree.ForestStoreModel({
+            store: store,
+            query: {"type": "continent"},
+            rootId: "root",
+            rootLabel: "Continents",
+            childrenAttrs: ["children"]
+        });
+        
+        new dijit.Tree({
+            model: treeModel,
+            dndController: "dijit._tree.dndSource"
+        }, "treeOne");
+      });
+    </script>
+
+  .. cv:: html
+
+    <div id="treeOne"></div>
+
+
+You can also specify custom checkAcceptance() and checkItemAcceptance() to accept/reject items to the tree.   (The former function operates at the Tree level, and the latter operates per Tree node, allowing things like rejecting dropping items onto leaf nodes.)
+
+
+betweenThreshold
+----------------
+If between threshold is set to a positive integer value like 5 (which represents 5 pixels), then when dragging within 5px of the top or bottom of a tree node, it's interpreted as trying to make the drag source the previous or next sibling of the drop target, rather than the child of the drop target.  This is useful for when a user can control the order of the children of a node
+
+
+Behind the scenes
+-----------------
+What happens when a user moves an item from one position in a tree to another?   It's actually quite complicated...
+
+1. The Tree widget does not change it's display at all.  Rather, it notifies the model of the paste operation.
+2. The model updates the store.
+3. The store notifies the model that the data has been changed.
+4. The model notifies the tree of the change (presumably the children list of nodeA is one shorter, and the children list of nodeB has a new entry)
+5. The Tree updates it's display.
+
+In this way, the Tree, Model, and data store are always in sync.
+
+
 
 =============
 More examples
