@@ -239,7 +239,7 @@ In addition, to enable DnD on the Tree you must dojo.require("dijit._tree.dndSou
       dojo.require("dijit.Tree");
 
       dojo.addOnLoad(function(){
-        var store = new dojo.data.ItemFileReadStore({
+        var store = new dojo.data.ItemFileWriteStore({
             url: "http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/countries.json" 
         });
         
