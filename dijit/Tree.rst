@@ -268,7 +268,32 @@ You can also specify custom checkAcceptance() and checkItemAcceptance() to accep
 
 betweenThreshold
 ----------------
-If between threshold is set to a positive integer value like 5 (which represents 5 pixels), then when dragging within 5px of the top or bottom of a tree node, it's interpreted as trying to make the drag source the previous or next sibling of the drop target, rather than the child of the drop target.  This is useful for when a user can control the order of the children of a node
+If between threshold is set to a positive integer value like 5 (which represents 5 pixels), then when dragging within 5px of the top or bottom of a tree node, it's interpreted as trying to make the drag source the previous or next sibling of the drop target, rather than the child of the drop target.  This is useful for when a user can control the order of the children of the child nodes:
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+      dojo.require("dojo.data.ItemFileWriteStore");
+      dojo.require("dijit.tree.ForestStoreModel");
+      dojo.require("dijit._tree.dndSource");
+      dojo.require("dijit.Tree");
+    </script>
+
+  .. cv:: html
+
+    <div dojoType="dojo.data.ItemFileWriteStore" jsId="continentStore5"
+      url="http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/countries.json"></div>
+    
+    <div dojoType="dijit.tree.ForestStoreModel" jsId="continentModel5" 
+      store="continentStore5" query="{type:'continent'}"
+      rootId="continentRoot" rootLabel="Continents" childrenAttrs="children"></div>
+    
+    <div dojoType="dijit.Tree" id="mytree5"
+      dndController="dijit._tree.dndSource" betweenThreshold="5" showRoot="false"
+      model="continentModel5" openOnClick="true">
+    </div>
 
 
 Behind the scenes
