@@ -374,11 +374,33 @@ Life cycle
 The custom setters listed above, plus every attribute listed in attributeMap, is applied during
 widget creation (in addition to whenever someone calls attr('name', value)).
 
-Note that the application happens after buildRendering() but before postCreate(), so
+Note that the application happens after ``buildRendering()`` but before ``postCreate()``, so
 you need to make sure that none of that code is dependent on something that happens
 in postCreate(), or later. This in particular is an issue for any widgets that depend on timeouts
 for setup, which need to have special code to handle when _setDisabledAttr() etc. is
 called during startup.
+
+eg:
+
+.. code-block :: javascript
+  :linenos:
+
+  dojo.declare("my.Thinger", dijit._Widget, {
+       
+       value:9,
+ 
+       buildRendering: function(){
+            this.inherited(arguments);
+            this.multiplier = 3;
+       },
+
+       _setValueAttr: function(value){
+           this.value = value * this.multiplier;
+       }
+
+  });
+
+Had the ``multiplier`` member been defined in ``postCreate``, the initial automated value setting done by attr() would fail.
 
 ==========
 Containers
