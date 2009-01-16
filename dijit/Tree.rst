@@ -345,7 +345,7 @@ Tree has no built-in support for context menus, but you can use the Menu widget 
 		model="menuContinentModel" showRoot="false" openOnClick="true">
                  
 		<script type="dojo/connect">
-			var menu = dijit.byId("tree_Menu");
+			var menu = dijit.byId("tree_menu");
 			// when we right-click anywhere on the tree, make sure we open the menu
 			menu.bindDomNode(this.domNode);
                         
