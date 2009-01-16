@@ -231,6 +231,7 @@ The following build topics are for expert users, and not needed for routine buil
     * discard
     * .uncompressed.js
     * create extremely small custom base ``Dojo.js`` builds with `customBase <build/customBase>`_
+    * Faster loading of layer files by reducing dojo.provide usage with the `expandProvide <build/expand-provide>`_ parameter
     * more...
 
 =======================
@@ -283,10 +284,5 @@ Micro Build
 ~~~~~~~~~~~
 
 An absolutely minimal build of Dojo containing just the most essential core elements, suitable for smart phones and other resource-limited hosts:  Micro-build <build/scenario-micro>
-
-Faster Processing
-~~~~~~~~~~~~~~~~~
-
-A build focused on reducing the processing time needed to load a particular layer into memory by expanding `dojo.provide <dojo/provide>`_ calls into their shortest plain JavaScript equivalents. <build/scenario-provide>
 
 * Others?
