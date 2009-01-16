@@ -203,3 +203,66 @@ This is handled internally by having two <input> fields in the widget:
 .. image:: MappedTextBox.gif
 
 The upshot of this is that Dijit handles localization issues on the client, the server doesn't have to worry about it (except of course for translating the boilerplate text on the page, like the label for the above control).
+
+========================
+Styling of Form Controls
+========================
+
+To style any of the form controls, the first thing to do is to look at the template of the form control, for example, Button.html:
+
+.. code-block:: html
+
+  <span class="dijit dijitReset dijitLeft dijitInline"
+	dojoAttachEvent="ondijitclick:_onButtonClick,onmouseenter:_onMouse,onmouseleave:_onMouse,onmousedown:_onMouse"
+	><span class="dijitReset dijitRight dijitInline"
+		><span class="dijitReset dijitInline dijitButtonNode"
+			><button class="dijitReset dijitStretch dijitButtonContents"
+				dojoAttachPoint="titleNode,focusNode" 
+				name="${name}" type="${type}" value="${value}" waiRole="button" waiState="labelledby-${id}_label"
+				><span class="dijitReset dijitInline" dojoAttachPoint="iconNode" 
+					><span class="dijitReset dijitToggleButtonIconChar">&#10003;</span 
+				></span 
+				><span class="dijitReset dijitInline dijitButtonText" 
+					id="${id}_label"  
+					dojoAttachPoint="containerNode"
+				></span
+			></button
+		></span
+	></span
+  ></span>
+
+And then to look in firebug to see it in action.
+
+The template, however, does not tell the whole story.  Each form widget (and many other widgets too) have something called a "baseClass", which is applied to the root node of the widget.   In Button's case, the baseClass is called "dijitButton".  Also, depending on the *state* of the widget, additional classes are applied to the widget's DOM node.  The additional classes are a combination of baseClass and various keywords:
+
+  * Focused
+  * Active  (when pressing the button)
+  * Hover   (when hovering over the button)
+  * Checked (for toggle-type widgets like CheckBox)
+  * Selected (button for currently selected pane/tab)
+  * Disabled
+  * ReadOnly
+
+For example, a dormant button will have the class:
+
+  * dijitButton
+
+When the user hovers over it, the classes will become:
+
+  * dijitButton
+  * dijitButtonHover
+
+There are also combination classes that are applied.  For example, if a user focuses and hovers over a button, the classes become:
+
+  * dijitButton
+  * dijitButtonHover
+  * dijitButtonFocused
+  * dijitButtonFocusedHover
+
+Using the classes defined on the DOM node you can affect the styling of any sub-nodes within the widget.   For example:
+
+.. code-block:: css
+
+  .dijitButtonFocused .dijitButtonContents {
+       color: red;
+   }
