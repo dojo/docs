@@ -43,7 +43,7 @@ Or mix the option into your profile:
 
 	dependencies = {
 		// expand dojo.provide calls
-		excludeProvide: true,
+		expandProvide: true,
 
 		// rest of profile:
 		layers: [{ /* ... */ }],
