@@ -35,6 +35,10 @@ Tree
 ----
 The Tree widget itself is merely a view of the data.   It's in charge of displaying the data and handling user events only.
 
+The Tree is a black-box in the sense that the developer generally won't be dealing with individual nodes of the Tree.   Rather, there are just onClick() etc. notifications, which refer to the *item* that was clicked.   Item is usually an item in the dojo.data store that the tree is connected to.
+
+Note also that a Tree has an idea of a currently selected item, such as the currently opened folder in a mail program.
+
 Model
 -----
 The real power comes in the `tree model <dijit/tree/Model>`_, which represents the hierarchical data that the tree will display.   Tree can interface to any class implementing the model API, but typically either the `TreeStoreModel <dijit/tree/TreeStoreModel>`_ or `ForestStoreModel <dijit/tree/ForestStoreModel>`_ are used, both of which themselves interface with the powerful dojo.data API.
@@ -48,18 +52,15 @@ Note also that each item in your Tree needs a different identifier (the value of
 
 Data Stores
 -----------
-Although not required, usually the model interfaces with a dojo.data store.  In this case, every node in the Tree will represent an '''item''' in the data store.  The idea of items is pervasive in the Tree.  For example, when any tree node is clicked, the event handler called with the item as it's primary argument:
-
-.. code-block:: javascript
-
-	onClick: function(/* dojo.data */ item, /*TreeNode*/ node){
-		// summary: user overridable function for executing a tree item
-	},
-
-From the Tree's perspective, the item is a black box that can be accessed through getLabel(), getChildren() etc. methods on the model.
+Although not required, usually the model interfaces with a dojo.data store.
 
 There can be many different types of stores, such as stores that work from XML vs. stores that work from JSON, stores that execute on the client vs. stores that pass through to the server, stores that load data as it's needed or stores that load all the data on initialization, etc.  All the stores, though, have the same API, so they can be connected to with either `TreeStoreModel <dijit/tree/TreeStoreModel>`_ or `ForestStoreModel <dijit/tree/ForestStoreModel>`_, depending on whether there is a single or multiple top level item in the store.
 
+One might wonder why Tree doesn't interface directly with a dojo.data store.   There are a number of reasons:
+
+  * The parent-child relationship of items in the store might not be expressed by a children attribute on the parent item.  For relational databases it's the other way around, where the child points to the parent.  The dijit.tree.Model code specifies how to trace parent-child relationships for a given data store.
+  * The interface of dojo.data to load children is rather cumbersome... must call _loadItem() on each item in the children[] array, which means that any item in the store needs to know the list of id's of it's children at any time.  It's more efficient to not require that, and to lookup children only when they are needed (when the user clicks the expando icon to open the node).
+  * Sometimes developers might use a custom model that doesn't connect to a data store at all.
 
 Relationship
 ------------
