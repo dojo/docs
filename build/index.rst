@@ -284,4 +284,9 @@ Micro Build
 
 An absolutely minimal build of Dojo containing just the most essential core elements, suitable for smart phones and other resource-limited hosts:  Micro-build <build/scenario-micro>
 
+Faster Processing
+~~~~~~~~~~~~~~~~~
+
+A build focused on reducing the processing time needed to load a particular layer into memory by expanding `dojo.provide <dojo/provide>`_ calls into their shortest plain JavaScript equivalents. <build/scenario-provide>
+
 * Others?
