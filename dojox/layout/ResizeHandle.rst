@@ -125,7 +125,23 @@ In Dojo 1.3 or higher, if you would like to define maximum constraints, use the 
      maxHeight:500, maxWidth:300
   }).placeAt("foo");
 
-Experimental, and available in Dojo 1.3 is a ``fixedAspect`` boolean property, which will attempt to retain a resizeable node's aspect ratio while resizing. It currently only works with 1:1 aspect ratios. 
+By specifying a maxHeight/maxWidth at startup, a special instance object is created: ``maxSize``, with "w" and "h" properties. If you wish to dynamically adjust the constraints of the target. Some pseudo-code, illustrating a draggable object within some imaginary constraint:
+
+.. code-block :: javascript
+  :linenos:
+
+  var handle = dijit.byId("thatHandle");
+  dojo.subscribe("/dojo/dnd/stop", function(n){
+      var xy = dojo.coords(handle.targetContainer);
+      handle.maxSize = {
+          // calculate new max based on where we are
+          w: xy.w - offset, h: xy.w - offset
+      }
+  }); 
+
+This will adjust the constraints when a node is finished moving, and has had it's position changed.
+
+Experimental, and available in Dojo 1.3 is a ``fixedAspect`` boolean property, which will attempt to retain a resizeable node's aspect ratio while resizing. The ratio is determined when resizing begins, so if the target was resized by another means, the handle will retain whichever current aspect ratio is used. 
 
 Resize Notification
 -------------------
