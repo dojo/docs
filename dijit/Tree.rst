@@ -318,6 +318,7 @@ Tree has no built-in support for context menus, but you can use the Menu widget 
 .. cv-compound::
 
   .. cv:: javascript
+
         <script>
             dojo.require("dijit.Menu");
             dojo.require("dijit.MenuItem");
