@@ -115,7 +115,7 @@ Creating a programmatic tree is very simple:
 Note that the childrenAttrs parameter to TreeStoreModel/ForestStoreModel is an array since it can list multiple attributes in the store.
 
 
-A simple tree
+A markup tree
 -------------
 
 .. cv-compound::
@@ -309,7 +309,60 @@ What happens when a user moves an item from one position in a tree to another?  
 
 In this way, the Tree, Model, and data store are always in sync.
 
+============
+Context Menu
+============
 
+Tree has no built-in support for context menus, but you can use the Menu widget in conjunction with the Tree
+
+.. cv-compound::
+
+  .. cv:: javascript
+        <script>
+            dojo.require("dijit.Menu");
+            dojo.require("dijit.MenuItem");
+            dojo.require("dijit.tree.ForestStoreModel");
+            dojo.require("dojo.data.ItemFileReadStore");
+            dojo.require("dijit.Tree");
+        </script>
+
+  .. cv:: html
+
+	<ul dojoType="dijit.Menu" id="tree_menu" style="display: none;">
+		<li dojoType="dijit.MenuItem" onClick="alert('Hello world');">Item #1</li>
+		<li dojoType="dijit.MenuItem">Item #2</li>
+	</ul>
+        
+        <div dojoType="dojo.data.ItemFileReadStore" jsId="menuContinentStore"
+             url="http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/countries.json"></div>
+        
+        <div dojoType="dijit.tree.ForestStoreModel" jsId="menuContinentModel" 
+             store="menuContinentStore" query="{type:'continent'}"
+             rootId="continentRoot" rootLabel="Continents" childrenAttrs="children"></div>
+            
+	<div dojoType="dijit.Tree" id="menuTree"
+		model="menuContinentModel" showRoot="false" openOnClick="true">
+                 
+		<script type="dojo/connect">
+			var menu = dijit.byId("tree_Menu");
+			// when we right-click anywhere on the tree, make sure we open the menu
+			menu.bindDomNode(this.domNode);
+                        
+			dojo.connect(menu, "_openMyself", this, function(e){
+				// get a hold of, and log out, the tree node that was the source of this open event
+				var tn = dijit.getEnclosingWidget(e.target);
+				console.debug(tn);
+                                
+				// now inspect the data store item that backs the tree node:
+				console.debug(tn.item);
+                               
+				// contrived condition: if this tree node doesn't have any children, disable all of the menu items
+				menu.getChildren().forEach(function(i){ i.attr('disabled', !tn.item.children); });
+                                
+				// IMPLEMENT CUSTOM MENU BEHAVIOR HERE
+			});
+		</script>
+        </div>
 
 =============
 More examples
