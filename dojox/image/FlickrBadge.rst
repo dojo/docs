@@ -11,7 +11,7 @@ dojox.image.FlickrBadge
 .. contents::
    :depth: 2
 
-An extension on `dojox.image.Badge <dojox.image.Badge>`_, using Flickr as a data provider.
+An extension on `dojox.image.Badge <dojox/image/Badge>`_, using Flickr as a data provider.
 
 
 ============
