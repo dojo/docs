@@ -54,7 +54,6 @@ If ``pos`` is a number, the node will be placed as a child of the reference node
           var pos = dojo.query("> option", dojo.byId("posNumber")).
                       filter(function(opt){ return opt.selected; }).
                       map(function(opt){ return opt.value; })[0];
-          alert("at " + pos + " of " + dojo.byId("refNumber").childNodes.length);
           dojo.place("<div class='node'>new node #" + (++n) + "</div>", "refNumber", parseInt(pos));
         });
         // let's add nodes manually to ensure their number
@@ -94,6 +93,27 @@ If ``pos`` is a number, the node will be placed as a child of the reference node
       div.child   { background-color: #ffc; }
       div.ref div { margin-left: 3em; }
     </style>
+
+Notes
+~~~~~
+
+This placement method is especially useful when you know how many children the reference node has, and what they are. Do not forget that text nodes (even empty ones) are counted as children too:
+
+.. code-block :: html
+  :linenos:
+
+  <p>
+    <span>1</span>
+  </p>
+
+In the fragment above the <p> node will have 3 children: a text node (spaces and a newline), the <span> node, and another text node (spaces and a newline). Be careful when using markup. For example the next fragment will have just one <span> node as a child:
+
+.. code-block :: html
+  :linenos:
+
+  <p><span>1</span></p>
+
+Or you can construct DOM programmatically.
 
 Place "before"
 --------------
