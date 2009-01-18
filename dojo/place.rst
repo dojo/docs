@@ -48,14 +48,10 @@ Place "before"
   .. cv:: javascript
 
     <script>
-      dojo.addOnload(function(){
-        alert(1);
+      dojo.addOnLoad(function(){
+        var n = 0;
         dojo.connect(dojo.byId("placeBefore"), "onclick", function(){
-          alert(2);
-          dojo.place("nodeBefore", "refBefore", "before");
-        });
-        dojo.connect(dojo.byId("resetBefore"), "onclick", function(){
-          dojo.place("nodeBefore", "parentBefore");
+          dojo.place("<div class='node'>new node #" + (++n) + "</div>", "refBefore", "before");
         });
       });
     </script>
@@ -64,10 +60,6 @@ Place "before"
 
     <p>
       <button id="placeBefore">Place node</button>
-      <button id="resetBefore">Reset</button>
-    </p>
-    <p id="parentBefore">
-      <div id="nodeBefore" class="node">the placed node</div>
     </p>
     <p>
       <div>before: 1st</div>
@@ -85,9 +77,10 @@ Place "before"
   .. cv:: css
 
     <style>
-      div.ref   { background-color: #fcc; }
-      div.node  { background-color: #cfc; }
-      div.child { background-color: #ffc; margin-left: 1em; }
+      div.ref     { background-color: #fcc; }
+      div.node    { background-color: #cfc; }
+      div.child   { background-color: #ffc; }
+      div.ref div { margin-left: 1em; }
     </style>
 
 ========
