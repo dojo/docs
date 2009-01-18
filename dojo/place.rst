@@ -41,7 +41,7 @@ Below is the full list of placement options with examples illustrating their use
 Place "before"
 --------------
 
-"before" places a node right before the reference node.
+"before" places a node right before the reference node in the list of children of the reference node's parent.
 
 .. cv-compound::
 
@@ -82,6 +82,143 @@ Place "before"
       div.child   { background-color: #ffc; }
       div.ref div { margin-left: 1em; }
     </style>
+
+Place "after"
+--------------
+
+"after" places a node right after the reference node in the list of children of the reference node's parent.
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script>
+      dojo.addOnLoad(function(){
+        var n = 0;
+        dojo.connect(dojo.byId("placeAfter"), "onclick", function(){
+          dojo.place("<div class='node'>new node #" + (++n) + "</div>", "refAfter", "after");
+        });
+      });
+    </script>
+
+  .. cv:: html
+
+    <p>
+      <button id="placeAfter">Place node</button>
+    </p>
+    <p>
+      <div>before: 1st</div>
+      <div>before: 2nd</div>
+      <div id="refAfter" class="ref">
+        the reference node
+        <div class="child">child #1</div>
+        <div class="child">child #2</div>
+        <div class="child">child #3</div>
+      </div>
+      <div>after: 1st</div>
+      <div>after: 2nd</div>
+    </p>
+
+  .. cv:: css
+
+    <style>
+      div.ref     { background-color: #fcc; }
+      div.node    { background-color: #cfc; }
+      div.child   { background-color: #ffc; }
+      div.ref div { margin-left: 1em; }
+    </style>
+
+Place "replace"
+--------------
+
+"replace" replaces a reference node with a node.
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script>
+      dojo.addOnLoad(function(){
+        var n = 0;
+        dojo.connect(dojo.byId("placeReplace"), "onclick", function(){
+          dojo.place("<div class='node'>new node #" + (++n) + "</div>", "refReplace", "replace");
+          dojo.attr("placeReplace", "disabled", "disabled");
+        });
+      });
+    </script>
+
+  .. cv:: html
+
+    <p>
+      <button id="placeReplace">Place node</button>
+    </p>
+    <p>
+      <div>before: 1st</div>
+      <div>before: 2nd</div>
+      <div id="refReplace" class="ref">
+        the reference node
+        <div class="child">child #1</div>
+        <div class="child">child #2</div>
+        <div class="child">child #3</div>
+      </div>
+      <div>after: 1st</div>
+      <div>after: 2nd</div>
+    </p>
+
+  .. cv:: css
+
+    <style>
+      div.ref     { background-color: #fcc; }
+      div.node    { background-color: #cfc; }
+      div.child   { background-color: #ffc; }
+      div.ref div { margin-left: 1em; }
+    </style>
+
+Place "only"
+--------------
+
+"only" replaces all children of a reference node with a node.
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script>
+      dojo.addOnLoad(function(){
+        var n = 0;
+        dojo.connect(dojo.byId("placeOnly"), "onclick", function(){
+          dojo.place("<div class='node'>new node #" + (++n) + "</div>", "refOnly", "only");
+        });
+      });
+    </script>
+
+  .. cv:: html
+
+    <p>
+      <button id="placeOnly">Place node</button>
+    </p>
+    <p>
+      <div>before: 1st</div>
+      <div>before: 2nd</div>
+      <div id="refOnly" class="ref">
+        the reference node
+        <div class="child">child #1</div>
+        <div class="child">child #2</div>
+        <div class="child">child #3</div>
+      </div>
+      <div>after: 1st</div>
+      <div>after: 2nd</div>
+    </p>
+
+  .. cv:: css
+
+    <style>
+      div.ref     { background-color: #fcc; }
+      div.node    { background-color: #cfc; }
+      div.child   { background-color: #ffc; }
+      div.ref div { margin-left: 1em; }
+    </style>
+
 
 ========
 Examples
