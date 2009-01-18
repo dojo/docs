@@ -34,11 +34,67 @@ refNode
   Can be a string (interpreted as an id of a DOM node) or a DOM node.
 
 pos
-  Optional argument. Can be one of the following strings: "before", "after", "replace", "only", "first", or "last". If omitted, "last" is assumed.
+  Optional argument. Can be a number or one of the following strings: "before", "after", "replace", "only", "first", or "last". If omitted, "last" is assumed. The number indicates that the node should be inserted as a child of ``refNode`` with this number.
 
 The function returns a node it placed, or ``null`` if the placement failed. In case of an HTML fragment, the returned node can be of type 1 (``nodeType`` is ``ELEMENT_NODE``, example: "<div>42</div>"), type 3 (``nodeType`` is ``TEXT_NODE``, example: "Hello, world!"), or type 11 (``nodeType`` is ``DOCUMENT_FRAGMENT``, example: "<p>1st paragraph</p><p>2nd paragraph</p>").
 
 Below is the full list of placement options with examples illustrating their use.
+
+Place by numbers
+----------------
+
+If ``pos`` is a number, the node will be placed as a child of the reference node with this number. For example, if 3 is specified, the node will be placed as the 3rd child assuming that the reference node has at least three existing children. If the number is more than number of children, the node will be appended to the reference node. If the number is less than 0, the node will be placed as the first child of the reference node.
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script>
+      dojo.addOnLoad(function(){
+        var n = 0;
+        dojo.connect(dojo.byId("placeNumber"), "onclick", function(){
+          var pos = dojo.query("> option", dojo.byId("posNumber")).
+                      filter(function(opt){ return opt.selected; }).
+                      map(function(opt){ return opt.value; })[0];
+          dojo.place("<div class='node'>new node #" + (++n) + "</div>", "refNumber", parseInt(pos));
+        });
+      });
+    </script>
+
+  .. cv:: html
+
+    <p>
+      <button id="placeNumber">Place node</button>
+      as child
+      <select id="posNumber">
+        <option value="0">#0</option>
+        <option value="1">#1</option>
+        <option value="2">#2</option>
+        <option value="3">#3</option>
+        <option value="4">#4</option>
+        <option value="5">#5</option>
+      </select>
+    </p>
+    <p>
+      <div>before: 1st</div>
+      <div>before: 2nd</div>
+      <div id="refNumber" class="ref">
+        <div class="child">the reference node's child #1</div>
+        <div class="child">the reference node's child #2</div>
+        <div class="child">the reference node's child #3</div>
+      </div>
+      <div>after: 1st</div>
+      <div>after: 2nd</div>
+    </p>
+
+  .. cv:: css
+
+    <style>
+      div.ref     { background-color: #fcc; }
+      div.node    { background-color: #cfc; }
+      div.child   { background-color: #ffc; }
+      div.ref div { margin-left: 3em; }
+    </style>
 
 Place "before"
 --------------
