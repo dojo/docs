@@ -49,7 +49,9 @@ Place "before"
 
     <script>
       dojo.addOnload(function(){
+        alert(1);
         dojo.connect(dojo.byId("placeBefore"), "onclick", function(){
+          alert(2);
           dojo.place("nodeBefore", "refBefore", "before");
         });
         dojo.connect(dojo.byId("resetBefore"), "onclick", function(){
