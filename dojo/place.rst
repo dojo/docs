@@ -52,52 +52,10 @@ The function returns a node it placed. In case of an HTML fragment, if it has ju
 
 Below is the full list of placement options with live examples illustrating their use.
 
-Place "before"
---------------
+Place "before" or "after"
+-------------------------
 
 "before" places the node right before the reference node in the list of children of the reference node's parent.
-
-.. cv-compound::
-
-  .. cv:: javascript
-
-    <script>
-      dojo.addOnLoad(function(){
-        var n = 0;
-        dojo.connect(dojo.byId("placeBefore"), "onclick", function(){
-          dojo.place("<div class='node'>new node #" + (++n) + "</div>", "refBefore", "before");
-        });
-      });
-    </script>
-
-  .. cv:: html
-
-    <p>
-      <button id="placeBefore">Place node</button>
-    </p>
-    <p>
-      <div>before: 1st</div>
-      <div>before: 2nd</div>
-      <div id="refBefore" class="ref">
-        <div class="child">the reference node's child #0</div>
-        <div class="child">the reference node's child #1</div>
-        <div class="child">the reference node's child #2</div>
-      </div>
-      <div>after: 1st</div>
-      <div>after: 2nd</div>
-    </p>
-
-  .. cv:: css
-
-    <style>
-      div.ref     { background-color: #fcc; }
-      div.node    { background-color: #cfc; }
-      div.child   { background-color: #ffc; }
-      div.ref div { margin-left: 3em; }
-    </style>
-
-Place "after"
--------------
 
 "after" places the node right after the reference node in the list of children of the reference node's parent.
 
@@ -108,8 +66,9 @@ Place "after"
     <script>
       dojo.addOnLoad(function(){
         var n = 0;
-        dojo.connect(dojo.byId("placeAfter"), "onclick", function(){
-          dojo.place("<div class='node'>new node #" + (++n) + "</div>", "refAfter", "after");
+        dojo.connect(dojo.byId("placeBA"), "onclick", function(){
+          dojo.place("<div class='node'>new node #" + (++n) + "</div>", "refBA",
+            dojo.byId("posBA").value); // before/after
         });
       });
     </script>
@@ -117,12 +76,16 @@ Place "after"
   .. cv:: html
 
     <p>
-      <button id="placeAfter">Place node</button>
+      <button id="placeBA">Place node</button>
+      <select id="posBA">
+        <option value="before">before</option>
+        <option value="after">after</option>
+      </select>
     </p>
     <p>
       <div>before: 1st</div>
       <div>before: 2nd</div>
-      <div id="refAfter" class="ref">
+      <div id="refBA" class="ref">
         <div class="child">the reference node's child #0</div>
         <div class="child">the reference node's child #1</div>
         <div class="child">the reference node's child #2</div>
@@ -185,8 +148,12 @@ Place "replace"
       div.ref div { margin-left: 3em; }
     </style>
 
-Place "only"
-------------
+Place as "first", "last", or "only"
+-----------------------------------
+
+"first" places the node as the first child of the reference node.
+
+"last" places the node as the last child of the reference node. This is **the default**, if nothing is specified.
 
 "only" replaces all children of the reference node with the node.
 
@@ -197,8 +164,9 @@ Place "only"
     <script>
       dojo.addOnLoad(function(){
         var n = 0;
-        dojo.connect(dojo.byId("placeOnly"), "onclick", function(){
-          dojo.place("<div class='node'>new node #" + (++n) + "</div>", "refOnly", "only");
+        dojo.connect(dojo.byId("placeFLO"), "onclick", function(){
+          dojo.place("<div class='node'>new node #" + (++n) + "</div>", "refFLO",
+            dojo.byId("posFLO").value); // first/last/only
         });
       });
     </script>
@@ -206,100 +174,17 @@ Place "only"
   .. cv:: html
 
     <p>
-      <button id="placeOnly">Place node</button>
+      <button id="placeFLO">Place node</button>
+      <select id="posFLO">
+        <option value="first">first</option>
+        <option value="last">last</option>
+        <option value="only">only</option>
+      </select>
     </p>
     <p>
       <div>before: 1st</div>
       <div>before: 2nd</div>
-      <div id="refOnly" class="ref">
-        <div class="child">the reference node's child #0</div>
-        <div class="child">the reference node's child #1</div>
-        <div class="child">the reference node's child #2</div>
-      </div>
-      <div>after: 1st</div>
-      <div>after: 2nd</div>
-    </p>
-
-  .. cv:: css
-
-    <style>
-      div.ref     { background-color: #fcc; }
-      div.node    { background-color: #cfc; }
-      div.child   { background-color: #ffc; }
-      div.ref div { margin-left: 3em; }
-    </style>
-
-Place "first"
--------------
-
-"first" places the node as the first child of the reference node.
-
-.. cv-compound::
-
-  .. cv:: javascript
-
-    <script>
-      dojo.addOnLoad(function(){
-        var n = 0;
-        dojo.connect(dojo.byId("placeFirst"), "onclick", function(){
-          dojo.place("<div class='node'>new node #" + (++n) + "</div>", "refFirst", "first");
-        });
-      });
-    </script>
-
-  .. cv:: html
-
-    <p>
-      <button id="placeFirst">Place node</button>
-    </p>
-    <p>
-      <div>before: 1st</div>
-      <div>before: 2nd</div>
-      <div id="refFirst" class="ref">
-        <div class="child">the reference node's child #0</div>
-        <div class="child">the reference node's child #1</div>
-        <div class="child">the reference node's child #2</div>
-      </div>
-      <div>after: 1st</div>
-      <div>after: 2nd</div>
-    </p>
-
-  .. cv:: css
-
-    <style>
-      div.ref     { background-color: #fcc; }
-      div.node    { background-color: #cfc; }
-      div.child   { background-color: #ffc; }
-      div.ref div { margin-left: 3em; }
-    </style>
-
-Place "last" (default)
-----------------------
-
-"last" places the node as the last child of the reference node.
-
-.. cv-compound::
-
-  .. cv:: javascript
-
-    <script>
-      dojo.addOnLoad(function(){
-        var n = 0;
-        dojo.connect(dojo.byId("placeLast"), "onclick", function(){
-          dojo.place("<div class='node'>new node #" + (++n) + "</div>", "refLast", "last");
-        });
-      });
-    </script>
-
-  .. cv:: html
-
-    <p>
-      <button id="placeLast">Place node</button>
-    </p>
-    <p>
-      <div>before: 1st</div>
-      <div>before: 2nd</div>
-      <div id="refLast" class="ref">
+      <div id="refFLO" class="ref">
         <div class="child">the reference node's child #0</div>
         <div class="child">the reference node's child #1</div>
         <div class="child">the reference node's child #2</div>
@@ -330,9 +215,6 @@ If ``pos`` is a number, the node will be placed as a child of the reference node
       dojo.addOnLoad(function(){
         var n = 0;
         dojo.connect(dojo.byId("placeNumber"), "onclick", function(){
-          var pos = dojo.query("> option", dojo.byId("posNumber")).
-                      filter(function(opt){ return opt.selected; }).
-                      map(function(opt){ return opt.value; })[0];
           dojo.place("<div class='node'>new node #" + (++n) + "</div>", "refNumber", parseInt(dojo.byId("posNumber").value));
         });
         // let's add nodes manually to ensure their number
