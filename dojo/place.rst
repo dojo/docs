@@ -10,6 +10,8 @@ dojo.place
 .. contents::
    :depth: 2
 
+*Warning: not finished yet!*
+
 ``dojo.place()`` is a useful DOM Node placement utility function. It comes in very handy when you need to place nodes as siblings or children of other nodes.
 
 The function takes up to three arguments:
@@ -65,10 +67,9 @@ Place "before"
       <div>before: 1st</div>
       <div>before: 2nd</div>
       <div id="refBefore" class="ref">
-        the reference node
-        <div class="child">child #1</div>
-        <div class="child">child #2</div>
-        <div class="child">child #3</div>
+        <div class="child">the reference node's child #1</div>
+        <div class="child">the reference node's child #2</div>
+        <div class="child">the reference node's child #3</div>
       </div>
       <div>after: 1st</div>
       <div>after: 2nd</div>
@@ -80,7 +81,7 @@ Place "before"
       div.ref     { background-color: #fcc; }
       div.node    { background-color: #cfc; }
       div.child   { background-color: #ffc; }
-      div.ref div { margin-left: 1em; }
+      div.ref div { margin-left: 3em; }
     </style>
 
 Place "after"
@@ -110,10 +111,9 @@ Place "after"
       <div>before: 1st</div>
       <div>before: 2nd</div>
       <div id="refAfter" class="ref">
-        the reference node
-        <div class="child">child #1</div>
-        <div class="child">child #2</div>
-        <div class="child">child #3</div>
+        <div class="child">the reference node's child #1</div>
+        <div class="child">the reference node's child #2</div>
+        <div class="child">the reference node's child #3</div>
       </div>
       <div>after: 1st</div>
       <div>after: 2nd</div>
@@ -125,7 +125,7 @@ Place "after"
       div.ref     { background-color: #fcc; }
       div.node    { background-color: #cfc; }
       div.child   { background-color: #ffc; }
-      div.ref div { margin-left: 1em; }
+      div.ref div { margin-left: 3em; }
     </style>
 
 Place "replace"
@@ -156,10 +156,9 @@ Place "replace"
       <div>before: 1st</div>
       <div>before: 2nd</div>
       <div id="refReplace" class="ref">
-        the reference node
-        <div class="child">child #1</div>
-        <div class="child">child #2</div>
-        <div class="child">child #3</div>
+        <div class="child">the reference node's child #1</div>
+        <div class="child">the reference node's child #2</div>
+        <div class="child">the reference node's child #3</div>
       </div>
       <div>after: 1st</div>
       <div>after: 2nd</div>
@@ -171,7 +170,7 @@ Place "replace"
       div.ref     { background-color: #fcc; }
       div.node    { background-color: #cfc; }
       div.child   { background-color: #ffc; }
-      div.ref div { margin-left: 1em; }
+      div.ref div { margin-left: 3em; }
     </style>
 
 Place "only"
@@ -201,10 +200,9 @@ Place "only"
       <div>before: 1st</div>
       <div>before: 2nd</div>
       <div id="refOnly" class="ref">
-        the reference node
-        <div class="child">child #1</div>
-        <div class="child">child #2</div>
-        <div class="child">child #3</div>
+        <div class="child">the reference node's child #1</div>
+        <div class="child">the reference node's child #2</div>
+        <div class="child">the reference node's child #3</div>
       </div>
       <div>after: 1st</div>
       <div>after: 2nd</div>
@@ -216,7 +214,7 @@ Place "only"
       div.ref     { background-color: #fcc; }
       div.node    { background-color: #cfc; }
       div.child   { background-color: #ffc; }
-      div.ref div { margin-left: 1em; }
+      div.ref div { margin-left: 3em; }
     </style>
 
 Place "first"
@@ -246,10 +244,9 @@ Place "first"
       <div>before: 1st</div>
       <div>before: 2nd</div>
       <div id="refFirst" class="ref">
-        the reference node
-        <div class="child">child #1</div>
-        <div class="child">child #2</div>
-        <div class="child">child #3</div>
+        <div class="child">the reference node's child #1</div>
+        <div class="child">the reference node's child #2</div>
+        <div class="child">the reference node's child #3</div>
       </div>
       <div>after: 1st</div>
       <div>after: 2nd</div>
@@ -261,7 +258,7 @@ Place "first"
       div.ref     { background-color: #fcc; }
       div.node    { background-color: #cfc; }
       div.child   { background-color: #ffc; }
-      div.ref div { margin-left: 1em; }
+      div.ref div { margin-left: 3em; }
     </style>
 
 Place "last" (default)
@@ -291,10 +288,9 @@ Place "last" (default)
       <div>before: 1st</div>
       <div>before: 2nd</div>
       <div id="refLast" class="ref">
-        the reference node
-        <div class="child">child #1</div>
-        <div class="child">child #2</div>
-        <div class="child">child #3</div>
+        <div class="child">the reference node's child #1</div>
+        <div class="child">the reference node's child #2</div>
+        <div class="child">the reference node's child #3</div>
       </div>
       <div>after: 1st</div>
       <div>after: 2nd</div>
@@ -306,7 +302,7 @@ Place "last" (default)
       div.ref     { background-color: #fcc; }
       div.node    { background-color: #cfc; }
       div.child   { background-color: #ffc; }
-      div.ref div { margin-left: 1em; }
+      div.ref div { margin-left: 3em; }
     </style>
 
 Alternate Reference Nodes
