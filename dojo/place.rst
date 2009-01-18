@@ -34,9 +34,13 @@ refNode
 pos
   Optional argument. Can be a number or one of the following strings: "before", "after", "replace", "only", "first", or "last". If omitted, "last" is assumed. The number indicates that the node should be inserted as a child of ``refNode`` with this number (counting from 0).
 
-The function returns a node it placed, or ``null`` if the placement failed. In case of an HTML fragment, the returned node can be of type 1 (``nodeType`` is ``ELEMENT_NODE``, example: "<div>42</div>"), type 3 (``nodeType`` is ``TEXT_NODE``, example: "Hello, world!"), or type 11 (``nodeType`` is ``DOCUMENT_FRAGMENT``, example: "<p>1st paragraph</p><p>2nd paragraph</p>").
+The function returns a node it placed. In case of an HTML fragment, if it has just one root element, that element is returned directly. Otherwise a document fragment is returned. The returned node can be:
 
-Below is the full list of placement options with examples illustrating their use.
+- A regular DOM element node: ``nodeType`` is 1 for ``ELEMENT_NODE`` , example: "<div>42</div>". See `DOM Core Level 1: Element <http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-745549614>`_ for more details.
+- A text node: ``nodeType`` is 3 for ``TEXT_NODE``, example: "Hello, world!". See `DOM Core Level 1: Text <http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-1312295772>`_ for more details.
+- A document fragment representing a group of nodes: ``nodeType`` is 11 for ``DOCUMENT_FRAGMENT``, example: "<p>1st paragraph</p><p>2nd paragraph</p>". See `DOM Core Level 1: DocumentFragment <http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-B63ED1A3>`_ for more details. The document fragment is a very useful tool to work with a group of elements, because standard DOM methods can work with it as with a regular node operating on the whole group, e.g., inserting or appending it as a whole.
+
+Below is the full list of placement options with live examples illustrating their use.
 
 Place by numbers
 ----------------
@@ -97,7 +101,7 @@ If ``pos`` is a number, the node will be placed as a child of the reference node
 Notes
 ~~~~~
 
-This placement method is especially useful when you know how many children the reference node has, and what they are. Do not forget that text nodes (even empty ones) are counted as children too:
+This placement method is useful when you know how many children the reference node has, and what they are. **Do not forget that text nodes (even empty ones) are counted as children too:**
 
 .. code-block :: html
   :linenos:
@@ -106,7 +110,7 @@ This placement method is especially useful when you know how many children the r
     <span>1</span>
   </p>
 
-In the fragment above the <p> node will have 3 children: a text node (spaces and a newline), the <span> node, and another text node (spaces and a newline). Be careful when using markup. For example the next fragment will have just one <span> node as a child:
+In the fragment above the <p> node will have 3 children: a text node (spaces and a newline), the <span> node, and another text node (spaces and a newline). **Be careful when using markup like that!** For example the next fragment will have just one <span> node as a child:
 
 .. code-block :: html
   :linenos:
