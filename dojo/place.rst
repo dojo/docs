@@ -55,9 +55,7 @@ Below is the full list of placement options with live examples illustrating thei
 Place "before" or "after"
 -------------------------
 
-"before" places the node right before the reference node in the list of children of the reference node's parent.
-
-"after" places the node right after the reference node in the list of children of the reference node's parent.
+This two options position the node in the reference node's parent children list. "before" places the node right before the reference node, and "after" places the node right after the reference node.
 
 .. cv-compound::
 
@@ -151,11 +149,9 @@ Place "replace"
 Place as "first", "last", or "only"
 -----------------------------------
 
-"first" places the node as the first child of the reference node.
+These three options position the node as a child of the reference node. "first" places the node as the first child, "last" places the node as the last child, and "only" replaces all children of the reference node with the node.
 
-"last" places the node as the last child of the reference node. This is **the default**, if nothing is specified.
-
-"only" replaces all children of the reference node with the node.
+If no position is specified, or position is not recognized, "last" is assumed as the default.
 
 .. cv-compound::
 
