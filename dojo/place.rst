@@ -34,7 +34,7 @@ refNode
   Can be a string (interpreted as an id of a DOM node) or a DOM node.
 
 pos
-  Optional argument. Can be a number or one of the following strings: "before", "after", "replace", "only", "first", or "last". If omitted, "last" is assumed. The number indicates that the node should be inserted as a child of ``refNode`` with this number.
+  Optional argument. Can be a number or one of the following strings: "before", "after", "replace", "only", "first", or "last". If omitted, "last" is assumed. The number indicates that the node should be inserted as a child of ``refNode`` with this number (counting from 0).
 
 The function returns a node it placed, or ``null`` if the placement failed. In case of an HTML fragment, the returned node can be of type 1 (``nodeType`` is ``ELEMENT_NODE``, example: "<div>42</div>"), type 3 (``nodeType`` is ``TEXT_NODE``, example: "Hello, world!"), or type 11 (``nodeType`` is ``DOCUMENT_FRAGMENT``, example: "<p>1st paragraph</p><p>2nd paragraph</p>").
 
@@ -43,7 +43,7 @@ Below is the full list of placement options with examples illustrating their use
 Place by numbers
 ----------------
 
-If ``pos`` is a number, the node will be placed as a child of the reference node with this number. For example, if 3 is specified, the node will be placed as the 3rd child assuming that the reference node has at least three existing children. If the number is more than number of children, the node will be appended to the reference node. If the number is less than 0, the node will be placed as the first child of the reference node.
+If ``pos`` is a number, the node will be placed as a child of the reference node with this number (counting from 0). For example, if 3 is specified, the node will be placed as the 3rd child (0, 1, 2, and 3 will be our node) assuming that the reference node has at least three existing children. If the number is more than number of children, the node will be appended to the reference node making it the last child. If the number is less than 0, the node will be placed at position 0 making it the first child of the reference node.
 
 .. cv-compound::
 
