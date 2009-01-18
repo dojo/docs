@@ -99,16 +99,16 @@ There are three ways to use this method:
 
   The example above enables ``"firstName"`` and disables ``"lastName"``.
 
-3. The ``state`` parameter is ``null``, or ``undefined``, or missing. In this case states of all known form elements will be enabled or disabled according to the value of ``defaultState``:
+3. The ``state`` parameter is ``null``, or ``undefined``. In this case states of all known form elements will be enabled or disabled according to the value of ``defaultState``:
 
   .. code-block :: javascript
 
     var defaultState = true;
-    fm.enable(defaultState);
+    fm.enable(null, defaultState);
 
   The code above enables all known form elements.
 
-  ``defaultState`` can be omitted. In this case it is assumed to be ``true``:
+  ``defaultState`` can be omitted too. In this case it is assumed to be ``true``:
 
   .. code-block :: javascript
 
@@ -119,7 +119,7 @@ There are three ways to use this method:
 disable
 ~~~~~~~
 
-This method is complimentary to enable_. Just like enable_ it takes a state object but it always uses ``false`` (for "disable") as the default state. It can take 0, or 1 parameter described below, and returns the form manager itself for easy chaining.
+This method is complimentary to enable_. Just like enable_ it takes a state object but it always uses ``false`` (for "disable") as the default state. It can take 0, or 1 parameter described below, and returns the previous enable/disable state just like gatherEnableState_.
 
 There are three ways to use this method:
 
@@ -128,7 +128,7 @@ There are three ways to use this method:
   .. code-block :: javascript
 
     var names = ["firstName", "lastName"];
-    fm.disable(names);
+    var oldState = fm.disable(names);
 
   All form elements with supplied names will be disabled.
 
@@ -137,7 +137,7 @@ There are three ways to use this method:
   .. code-block :: javascript
 
     var state = {firstName: true, lastName: false};
-    fm.disable(state);
+    var oldState = fm.disable(state);
 
   The example above enables ``"firstName"`` and disables ``"lastName"``.
 
@@ -163,6 +163,22 @@ All three methods are designed to work together:
   // disable all form elements so user cannot change them
   // until we are finished with I/O
   fm.disable();
+
+  // ... performing I/O ...
+
+  // we got the response back => revert to the old state
+  fm.enable(state);
+
+or it can be done like that:
+
+.. code-block :: javascript
+
+  // prepare to submit the form asynchronously
+
+  // collect the previous state of all form elements and
+  // disable all form elements so user cannot change them
+  // until we are finished with I/O
+  var state = fm.disable();
 
   // ... performing I/O ...
 
