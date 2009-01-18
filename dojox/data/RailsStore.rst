@@ -5,7 +5,7 @@ dojox.data.RailsStore
 
 :Status: Draft
 :Version: 1.0
-:Project owner: Kris Zyp
+:Project owner: Kris Zyp, Travis Tilley
 :Available: since 1.3
 
 .. contents::
