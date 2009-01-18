@@ -58,6 +58,9 @@ Methods in this category provide primitives for low-level access to values of in
 
 Note: `_NodeMixin <dojox/form/manager/_NodeMixin>`_ implements a complimentary method: `formNodeValue <dojox/form/manager/_NodeMixin#formnodevalue>`_.
 
+formWidgetValue
+~~~~~~~~~~~~~~~
+
 This method allows to get/set values of controlled form widgets. It can be used two ways: with one parameter to get the value, and with two parameters to set the value:
 
 .. code-block :: javascript
