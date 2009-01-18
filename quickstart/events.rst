@@ -152,7 +152,12 @@ Using dojo.connect on Dom Events is only the beginning or the power contained wi
 * onmouseleave - a normalized version of onmouseout that *wont* fire more than you'd like (only once when leaving)
 * onsubmit - a form has been submitted
 
-``TODOC: more?``
+All of these events are also mapped into `dojo.NodeList <dojo/NodeList>`_ as direct methods. To register an onclick event for many nodes at once:
+
+.. code-block :: javascript
+  :linenos:
+
+  dojo.query(".foo").onclick(function(e){ /* handle the event */ }).onmouseenter(function(e){ /* handle event */ });
 
 *A note about the event names:* Event names now are lower case, except in special cases (e.g., some Mozilla DOM events). Dojo will add "on" to your event name if you leave it off (e.g., 'click' and 'onclick' are the same thing to dojo). This differs from **Widget Events** in the sense Dijit uses mixedCase event names, to avoid potential conflicts.
 
