@@ -10,8 +10,6 @@ dojo.place
 .. contents::
    :depth: 2
 
-*Warning: not finished yet!*
-
 ``dojo.place()`` is a useful DOM Node placement utility function. It comes in very handy when you need to place nodes as siblings or children of other nodes.
 
 The function takes up to three arguments:
@@ -56,6 +54,7 @@ If ``pos`` is a number, the node will be placed as a child of the reference node
           var pos = dojo.query("> option", dojo.byId("posNumber")).
                       filter(function(opt){ return opt.selected; }).
                       map(function(opt){ return opt.value; })[0];
+          alert("at " + pos + " of " + dojo.byId("refNumber").childNodes.length);
           dojo.place("<div class='node'>new node #" + (++n) + "</div>", "refNumber", parseInt(pos));
         });
       });
