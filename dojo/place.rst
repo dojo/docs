@@ -43,39 +43,50 @@ Place "before"
 
 "before" places a node right before the reference node.
 
-.. codeviewer::
+.. cv-compound::
 
-  <style>
-    div.ref   { background-color: #fcc; }
-    div.node  { background-color: #cfc; }
-    div.child { background-color: #ffc; margin-left: 3em; }
-  </style>
-  <script>
-    dojo.addOnload(function(){
-      dojo.connect(dojo.byId("placeBefore"), "onclick", function(){
-        dojo.place("nodeBefore", "refBefore", "before");
+  .. cv:: javascript
+
+    <script>
+      dojo.addOnload(function(){
+        dojo.connect(dojo.byId("placeBefore"), "onclick", function(){
+          dojo.place("nodeBefore", "refBefore", "before");
+        });
+        dojo.connect(dojo.byId("resetBefore"), "onclick", function(){
+          dojo.place("nodeBefore", "parentBefore");
+        });
       });
-      dojo.connect(dojo.byId("resetBefore"), "onclick", function(){
-        dojo.place("nodeBefore", "parentBefore");
-      });
-    });
-  </script>
-  <p<button id="placeBefore">Place node</button>&nbsp;<button id="resetBefore">Reset</button></p>
-  <p id="parentBefore">
-    <div id="nodeBefore" class="node">the placed node</div>
-  </p>
-  <p>
-    <div>before: 1st</div>
-    <div>before: 2nd</div>
-    <div id="refBefore" class="ref">
-      the reference node
-      <div class="child">child #1</div>
-      <div class="child">child #2</div>
-      <div class="child">child #3</div>
-    </div>
-    <div>after: 1st</div>
-    <div>after: 2nd</div>
-  </p>
+    </script>
+
+  .. cv:: html
+
+    <p>
+      <button id="placeBefore">Place node</button>
+      <button id="resetBefore">Reset</button>
+    </p>
+    <p id="parentBefore">
+      <div id="nodeBefore" class="node">the placed node</div>
+    </p>
+    <p>
+      <div>before: 1st</div>
+      <div>before: 2nd</div>
+      <div id="refBefore" class="ref">
+        the reference node
+        <div class="child">child #1</div>
+        <div class="child">child #2</div>
+        <div class="child">child #3</div>
+      </div>
+      <div>after: 1st</div>
+      <div>after: 2nd</div>
+    </p>
+
+  .. cv:: css
+
+    <style>
+      div.ref   { background-color: #fcc; }
+      div.node  { background-color: #cfc; }
+      div.child { background-color: #ffc; margin-left: 1em; }
+    </style>
 
 ========
 Examples
