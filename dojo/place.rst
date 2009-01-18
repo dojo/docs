@@ -48,16 +48,22 @@ Place "before"
   <style>
     div.ref   { background-color: #fcc; }
     div.node  { background-color: #cfc; }
-    div.child { background-color: #ffc; left-margin: 3em; }
+    div.child { background-color: #ffc; margin-left: 3em; }
   </style>
   <script>
     dojo.addOnload(function(){
-      dojo.connect(dojo.byId("buttonBefore"), "onclick", function(){
-        dojo.place("<div class='node'>the placed node</div>", "refBefore", "before");
+      dojo.connect(dojo.byId("placeBefore"), "onclick", function(){
+        dojo.place("nodeBefore", "refBefore", "before");
+      });
+      dojo.connect(dojo.byId("resetBefore"), "onclick", function(){
+        dojo.place("nodeBefore", "parentBefore");
       });
     });
   </script>
-  <p<button id="buttonBefore">Place node</button></p>
+  <p<button id="placeBefore">Place node</button>&nbsp;<button id="resetBefore">Reset</button></p>
+  <p id="parentBefore">
+    <div id="nodeBefore" class="node">the placed node</div>
+  </p>
   <p>
     <div>before: 1st</div>
     <div>before: 2nd</div>
