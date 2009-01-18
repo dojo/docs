@@ -24,7 +24,7 @@ RailsStore provides the same functionality as the JsonRestStore except that it f
 Usage
 =====
 
-See dojox/data/JsonRestStore for usage from Dojo. For setting up the REST interaction from Ruby on Rail's see the attached Ruby code.
+See dojox/data/JsonRestStore for usage from Dojo. For setting up the REST interaction from Ruby on Rail's see Ruby code that is available here: http://github.com/ttilley/railsstore/tree/master.
 
 ========
 Examples
