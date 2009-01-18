@@ -10,27 +10,87 @@ dojo.place
 .. contents::
    :depth: 2
 
-Place is a useful DOM Node placement utility function. 
-dojo.place() comes in very handy when you need to place nodes as siblings or children of other nodes.
+``dojo.place()`` is a useful DOM Node placement utility function. It comes in very handy when you need to place nodes as siblings or children of other nodes.
+
+The function takes up to three arguments:
+
+.. code-block :: javascript
+
+  dojo.place(node, refNode, pos);
+
+Here is the definition of arguments:
+
+node
+  Can be a string or a DOM node. If it is a string starting with "<", it is assumed to be an HTML fragment, which will be instantiated. Otherwise it is assumed to be an id of a DOM node.
+
+  Notes:
+
+  - An HTML fragment can have more than one top node.
+  - In the case of an invalid HTML fragment the result of instantiation is undefined.
+
+refNode
+  Can be a string (interpreted as an id of a DOM node) or a DOM node.
+
+pos
+  Optional argument. Can be one of the following strings: "before", "after", "replace", "only", "first", or "last". If omitted, "last" is assumed.
+
+The function returns a node it placed, or ``null`` if the placement failed. In case of an HTML fragment, the returned node can be of type 1 (``nodeType`` is ``ELEMENT_NODE``, example: "<div>42</div>"), type 3 (``nodeType`` is ``TEXT_NODE``, example: "Hello, world!"), or type 11 (``nodeType`` is ``DOCUMENT_FRAGMENT``, example: "<p>1st paragraph</p><p>2nd paragraph</p>").
+
+Below is the full list of placement options with examples illustrating their use.
+
+Place "before"
+--------------
+
+"before" places a node right before the reference node.
+
+.. codeviewer::
+
+  <style>
+    div.ref   { background-color: #fcc; }
+    div.node  { background-color: #cfc; }
+    div.child { background-color: #ffc; left-margin: 3em; }
+  </style>
+  <script>
+    dojo.addOnload(function(){
+      dojo.connect(dojo.byId("buttonBefore"), "onclick", function(){
+        dojo.place("<div class='node'>the placed node</div>", "refBefore", "before");
+      });
+    });
+  </script>
+  <p<button id="buttonBefore">Place node</button></p>
+  <p>
+    <div>before: 1st</div>
+    <div>before: 2nd</div>
+    <div id="refBefore" class="ref">
+      the reference node
+      <div class="child">child #1</div>
+      <div class="child">child #2</div>
+      <div class="child">child #3</div>
+    </div>
+    <div>after: 1st</div>
+    <div>after: 2nd</div>
+  </p>
 
 ========
 Examples
 ========
 
-There is only one way to use dojo.place. Place "a node" relative to "some other node". By default, the moving node is placed "last" in the reference node. Calling these two functions have the same results:
+dojo.place places "a node" relative to "some other node". By default, the moving node is placed "last" in the reference node. Calling these two functions have the same results:
 
 .. code-block :: javascript
   :linenos:
 
   // recommended:
   dojo.place("someId", "someOtherId");
-  // much longer, but identical: 
+  // much longer, but identical:
   dojo.byId("someOtherId").appendChild(dojo.byId("someId");
 
-Here we place the node with id="someId" as the "last" node of the reference node (id="someOtherId"). Place accepts one of four positional arguments: "before", "after", "first", and "last". "last" is the default, and can be omitted. "first" and "last" place the node inside the reference node, "before" and "after" place the node as a sibling relative to the reference node. 
+Here we place the node with id="someId" as the "last" node of the reference node (id="someOtherId").
 
-Place "last" (default)
-----------------------
+Place accepts one of six positional arguments: "before", "after", "replace", "only", "first", and "last". "last" is the default, and can be omitted. "first" and "last" place the node inside the reference node, "before" and "after" place the node as a sibling relative to the reference node, "replace" replaces the reference node with the new node, and "only" replaces all children of the reference node.
+
+1Place "last" (default)
+-----------------------
 
 .. cv-compound::
 
@@ -61,10 +121,10 @@ Place "last" (default)
       <div>Five</div>
     </div>
 
-Place "before"
---------------
+1Place "before"
+---------------
 
-This inserts the moving node into the DOM immediately "before" the passed reference node, making it a sibling. 
+This inserts the moving node into the DOM immediately "before" the passed reference node, making it a sibling.
 
 .. cv-compound::
 
@@ -95,8 +155,8 @@ This inserts the moving node into the DOM immediately "before" the passed refere
       <div>Five</div>
     </div>
 
-Place "after"
--------------
+1Place "after"
+--------------
 
 This inserts a node "after" the reference node in the DOM, making it a sibling of the reference node.
 
@@ -129,8 +189,8 @@ This inserts a node "after" the reference node in the DOM, making it a sibling o
       <div>Five</div>
     </div>
 
-Place "first"
--------------
+1Place "first"
+--------------
 
 Placing a node under another node at he beginning
 
@@ -187,10 +247,9 @@ Place using create()
 
 Though the above example uses dojo.create as an alias to dojo.doc.createElement, `dojo.create <dojo/create>`_ can also act as a shorthand for dojo.place() in this scenario. This is limited, however, to Dojo 1.3 or higher.
 
-.. code-block :: javascript 
+.. code-block :: javascript
   :linenos:
 
-  // the third and fourth options are passed to dojo.place() 
+  // the third and fourth options are passed to dojo.place()
   // create a div, and place(n, dojo.body(), "first");
   dojo.create("div", null, dojo.body(), "first");
-  
