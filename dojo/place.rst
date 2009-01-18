@@ -41,7 +41,7 @@ Below is the full list of placement options with examples illustrating their use
 Place "before"
 --------------
 
-"before" places a node right before the reference node in the list of children of the reference node's parent.
+"before" places the node right before the reference node in the list of children of the reference node's parent.
 
 .. cv-compound::
 
@@ -84,9 +84,9 @@ Place "before"
     </style>
 
 Place "after"
---------------
+-------------
 
-"after" places a node right after the reference node in the list of children of the reference node's parent.
+"after" places the node right after the reference node in the list of children of the reference node's parent.
 
 .. cv-compound::
 
@@ -129,9 +129,9 @@ Place "after"
     </style>
 
 Place "replace"
---------------
+---------------
 
-"replace" replaces a reference node with a node.
+"replace" replaces the reference node with the node.
 
 .. cv-compound::
 
@@ -175,9 +175,9 @@ Place "replace"
     </style>
 
 Place "only"
---------------
+------------
 
-"only" replaces all children of a reference node with a node.
+"only" replaces all children of the reference node with the node.
 
 .. cv-compound::
 
@@ -219,158 +219,95 @@ Place "only"
       div.ref div { margin-left: 1em; }
     </style>
 
+Place "first"
+-------------
 
-========
-Examples
-========
-
-dojo.place places "a node" relative to "some other node". By default, the moving node is placed "last" in the reference node. Calling these two functions have the same results:
-
-.. code-block :: javascript
-  :linenos:
-
-  // recommended:
-  dojo.place("someId", "someOtherId");
-  // much longer, but identical:
-  dojo.byId("someOtherId").appendChild(dojo.byId("someId");
-
-Here we place the node with id="someId" as the "last" node of the reference node (id="someOtherId").
-
-Place accepts one of six positional arguments: "before", "after", "replace", "only", "first", and "last". "last" is the default, and can be omitted. "first" and "last" place the node inside the reference node, "before" and "after" place the node as a sibling relative to the reference node, "replace" replaces the reference node with the new node, and "only" replaces all children of the reference node.
-
-1Place "last" (default)
------------------------
+"first" places the node as the first child of the reference node.
 
 .. cv-compound::
 
   .. cv:: javascript
 
-    <script type="text/javascript">
-    dojo.require("dijit.form.Button"); // you don't need this, its for the looks
-
-    dojo.addOnLoad(function(){
-      dojo.connect(dijit.byId("buttonThree"), "onClick", function(){
-        var node = dojo.doc.createElement("div");
-        node.innerHTML = "New Node, placed under 'Three' at the end!";
-
-        dojo.place(node, "exampleThreeThree");
+    <script>
+      dojo.addOnLoad(function(){
+        var n = 0;
+        dojo.connect(dojo.byId("placeFirst"), "onclick", function(){
+          dojo.place("<div class='node'>new node #" + (++n) + "</div>", "refFirst", "first");
+        });
       });
-    });
     </script>
 
   .. cv:: html
 
-    <button dojoType="dijit.form.Button" id="buttonThree">Add node</button>
+    <p>
+      <button id="placeFirst">Place node</button>
+    </p>
+    <p>
+      <div>before: 1st</div>
+      <div>before: 2nd</div>
+      <div id="refFirst" class="ref">
+        the reference node
+        <div class="child">child #1</div>
+        <div class="child">child #2</div>
+        <div class="child">child #3</div>
+      </div>
+      <div>after: 1st</div>
+      <div>after: 2nd</div>
+    </p>
 
-    </div>
-      <div>One</div>
-      <div>Two</div>
-      <div id="exampleThreeThree">Three</div>
-      <div>Four</div>
-      <div>Five</div>
-    </div>
+  .. cv:: css
 
-1Place "before"
----------------
+    <style>
+      div.ref     { background-color: #fcc; }
+      div.node    { background-color: #cfc; }
+      div.child   { background-color: #ffc; }
+      div.ref div { margin-left: 1em; }
+    </style>
 
-This inserts the moving node into the DOM immediately "before" the passed reference node, making it a sibling.
+Place "last" (default)
+----------------------
+
+"last" places the node as the last child of the reference node.
 
 .. cv-compound::
 
   .. cv:: javascript
 
-    <script type="text/javascript">
-    dojo.require("dijit.form.Button"); // you don't need this, its for the looks
-
-    dojo.addOnLoad(function(){
-      dojo.connect(dijit.byId("buttonOne"), "onClick", function(){
-        var node = dojo.create("div");
-        node.innerHTML = "New Node, placed before 'Three'!";
-
-        dojo.place(node, "exampleThree", "before");
+    <script>
+      dojo.addOnLoad(function(){
+        var n = 0;
+        dojo.connect(dojo.byId("placeLast"), "onclick", function(){
+          dojo.place("<div class='node'>new node #" + (++n) + "</div>", "refLast", "last");
+        });
       });
-    });
     </script>
 
   .. cv:: html
 
-    <button dojoType="dijit.form.Button" id="buttonOne">Add node</button>
+    <p>
+      <button id="placeLast">Place node</button>
+    </p>
+    <p>
+      <div>before: 1st</div>
+      <div>before: 2nd</div>
+      <div id="refLast" class="ref">
+        the reference node
+        <div class="child">child #1</div>
+        <div class="child">child #2</div>
+        <div class="child">child #3</div>
+      </div>
+      <div>after: 1st</div>
+      <div>after: 2nd</div>
+    </p>
 
-    </div>
-      <div>One</div>
-      <div>Two</div>
-      <div id="exampleThree">Three</div>
-      <div>Four</div>
-      <div>Five</div>
-    </div>
+  .. cv:: css
 
-1Place "after"
---------------
-
-This inserts a node "after" the reference node in the DOM, making it a sibling of the reference node.
-
-.. cv-compound::
-
-  .. cv:: javascript
-
-    <script type="text/javascript">
-    dojo.require("dijit.form.Button"); // you don't need this, its for the looks
-
-    dojo.addOnLoad(function(){
-      dojo.connect(dijit.byId("buttonTwo"), "onClick", function(){
-        var node = dojo.doc.createElement("div");
-        node.innerHTML = "New Node, placed after 'Three'!";
-
-        dojo.place(node, dojo.byId("exampleTwoThree"), "after");
-      });
-    });
-    </script>
-
-  .. cv:: html
-
-    <button dojoType="dijit.form.Button" id="buttonTwo">Add node</button>
-
-    </div>
-      <div>One</div>
-      <div>Two</div>
-      <div id="exampleTwoThree">Three</div>
-      <div>Four</div>
-      <div>Five</div>
-    </div>
-
-1Place "first"
---------------
-
-Placing a node under another node at he beginning
-
-.. cv-compound::
-
-  .. cv:: javascript
-
-    <script type="text/javascript">
-    dojo.require("dijit.form.Button"); // you don't need this, its for the looks
-
-    dojo.addOnLoad(function(){
-      dojo.connect(dijit.byId("buttonFour"), "onClick", function(){
-        var node = dojo.doc.createElement("div");
-        node.innerHTML = "New Node, placed under 'Three' at the beginning!";
-
-        dojo.place(node, "exampleFourThree", "first");
-      });
-    });
-    </script>
-
-  .. cv:: html
-
-    <button dojoType="dijit.form.Button" id="buttonFour">Add node</button>
-
-    </div>
-      <div>One</div>
-      <div>Two</div>
-      <div id="exampleFourThree">Three</div>
-      <div>Four</div>
-      <div>Five</div>
-    </div>
+    <style>
+      div.ref     { background-color: #fcc; }
+      div.node    { background-color: #cfc; }
+      div.child   { background-color: #ffc; }
+      div.ref div { margin-left: 1em; }
+    </style>
 
 Alternate Reference Nodes
 -------------------------
