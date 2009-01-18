@@ -57,6 +57,10 @@ If ``pos`` is a number, the node will be placed as a child of the reference node
           alert("at " + pos + " of " + dojo.byId("refNumber").childNodes.length);
           dojo.place("<div class='node'>new node #" + (++n) + "</div>", "refNumber", parseInt(pos));
         });
+        // let's add nodes manually to ensure their number
+        for(var i = 0; i < 3; ++i){
+          dojo.place("<div class='child'>the reference node's child #" + i + "</div>", "refNumber");
+        }
       });
     </script>
 
@@ -77,11 +81,7 @@ If ``pos`` is a number, the node will be placed as a child of the reference node
     <p>
       <div>before: 1st</div>
       <div>before: 2nd</div>
-      <div id="refNumber" class="ref">
-        <div class="child">the reference node's child #1</div>
-        <div class="child">the reference node's child #2</div>
-        <div class="child">the reference node's child #3</div>
-      </div>
+      <div id="refNumber" class="ref"></div>
       <div>after: 1st</div>
       <div>after: 2nd</div>
     </p>
@@ -122,9 +122,9 @@ Place "before"
       <div>before: 1st</div>
       <div>before: 2nd</div>
       <div id="refBefore" class="ref">
+        <div class="child">the reference node's child #0</div>
         <div class="child">the reference node's child #1</div>
         <div class="child">the reference node's child #2</div>
-        <div class="child">the reference node's child #3</div>
       </div>
       <div>after: 1st</div>
       <div>after: 2nd</div>
@@ -166,9 +166,9 @@ Place "after"
       <div>before: 1st</div>
       <div>before: 2nd</div>
       <div id="refAfter" class="ref">
+        <div class="child">the reference node's child #0</div>
         <div class="child">the reference node's child #1</div>
         <div class="child">the reference node's child #2</div>
-        <div class="child">the reference node's child #3</div>
       </div>
       <div>after: 1st</div>
       <div>after: 2nd</div>
@@ -211,9 +211,9 @@ Place "replace"
       <div>before: 1st</div>
       <div>before: 2nd</div>
       <div id="refReplace" class="ref">
+        <div class="child">the reference node's child #0</div>
         <div class="child">the reference node's child #1</div>
         <div class="child">the reference node's child #2</div>
-        <div class="child">the reference node's child #3</div>
       </div>
       <div>after: 1st</div>
       <div>after: 2nd</div>
@@ -255,9 +255,9 @@ Place "only"
       <div>before: 1st</div>
       <div>before: 2nd</div>
       <div id="refOnly" class="ref">
+        <div class="child">the reference node's child #0</div>
         <div class="child">the reference node's child #1</div>
         <div class="child">the reference node's child #2</div>
-        <div class="child">the reference node's child #3</div>
       </div>
       <div>after: 1st</div>
       <div>after: 2nd</div>
@@ -299,9 +299,9 @@ Place "first"
       <div>before: 1st</div>
       <div>before: 2nd</div>
       <div id="refFirst" class="ref">
+        <div class="child">the reference node's child #0</div>
         <div class="child">the reference node's child #1</div>
         <div class="child">the reference node's child #2</div>
-        <div class="child">the reference node's child #3</div>
       </div>
       <div>after: 1st</div>
       <div>after: 2nd</div>
@@ -343,9 +343,9 @@ Place "last" (default)
       <div>before: 1st</div>
       <div>before: 2nd</div>
       <div id="refLast" class="ref">
+        <div class="child">the reference node's child #0</div>
         <div class="child">the reference node's child #1</div>
         <div class="child">the reference node's child #2</div>
-        <div class="child">the reference node's child #3</div>
       </div>
       <div>after: 1st</div>
       <div>after: 2nd</div>
@@ -362,6 +362,8 @@ Place "last" (default)
 
 Place using create()
 --------------------
+
+*TODO: revise and expand this section.*
 
 Alternative way to place (and create) a node is `dojo.create <dojo/create>`_.
 
