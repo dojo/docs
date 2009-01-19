@@ -10,7 +10,7 @@ dojo.place
 .. contents::
    :depth: 2
 
-``dojo.place()`` is a useful DOM Node placement utility function. It comes in very handy when you need to place nodes as siblings or children of other nodes.
+``dojo.place()`` is a useful DOM Node placement utility function. It comes in very handy when you need to create and place nodes as siblings or children of other nodes or replace other nodes. It is very useful when working with existing nodes too, because it encapsulates all necessary boilerplate code required to place a node correctly.
 
 The function takes up to three arguments:
 
