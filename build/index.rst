@@ -232,6 +232,7 @@ The following build topics are for expert users, and not needed for routine buil
     * .uncompressed.js
     * create extremely small custom base ``Dojo.js`` builds with `customBase <build/customBase>`_
     * Faster loading of layer files by reducing dojo.provide usage with the `expandProvide <build/expand-provide>`_ parameter
+    * Minimizing ``dojo.js`` for mobile platforms with the `webkitMobile <build/webkit-mobile>`_ parameter
     * more...
 
 =======================
