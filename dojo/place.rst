@@ -27,6 +27,7 @@ node
 
   - An HTML fragment can have more than one top node.
   - In the case of an invalid HTML fragment the result of instantiation is undefined.
+  - When instantiating an HTML fragment the owner document of the reference node is used.
 
 refNode
   Can be a string (interpreted as an id of a DOM node) or a DOM node.
