@@ -17,6 +17,8 @@ Introduction
 
 The dojo.xhrGet() function is the cornerstone function of AJAX development.  Its purpose is to provide an easy to use and consistent interface to making asynchronous calls to retrieve data.  This API is an abstraction atop the browser's XMLHttpRequest object and makes usage the same regardless of which browser your application is running on.  This makes it much simpler to write cross-browser compatible AJAX style applications.  This function, in essence, implements making an HTTP 'GET' call.
 
+The following information should get you up and going with dojo.xhrGet().  As with all dojo functions, always refer to the API docs for detailed information.
+
 ===========
 Limitations
 ===========
