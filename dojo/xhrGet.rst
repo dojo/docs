@@ -110,6 +110,7 @@ Handling Status Codes
 ---------------------
 
 There are times where knowing of a request was 'good' or 'bad' isn't really enough.  There are, in fact, many successful status codes that mean the request was completed successfully, but have specific meaning in how it was completed.  This situation often comes up in REST based implementations with server status codes like: 
+
 * 201: (Created)
 * 202 (Accepted), 
 * 203: (Non-Authoritative Information)
