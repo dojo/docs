@@ -49,15 +49,19 @@ The xhrGet() function takes an object as its parameter.  This object defines how
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
 |**sync**          |A boolean value that says whether or not the xhrGet() function should block until data is returned or return immediately and|
 |                  |rely on callbacks for data handling.  The default value is *false*                                                          |
+|                  |**This parameter is optional**                                                                                              |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
 |**preventCache**  |A boolean value that tells dojo.xhrGet to append a unique query parameter to each request.  The purpose of this  parameter  |
 |                  |is to keep the browser from caching the results.  While it is generally good practice to let the server tell your browser   |
 |                  |how to cache and when to clear, sometimes it is necessary to force the browser to not cache.                                |
+|                  |**This parameter is optional**                                                                                              |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
 |**content**       |A JavaScript object of name/string value pairs.  These items are converted to query parameters and passed on as part of the |
-|                  |url.  Example request made by the browser:  <url>?key1=value1&key2=value2&key3=value3...                                    |
+|                  |url.  Example request made by the browser:  <url>?key1=value1&key2=value2&key3=value3..                                     |
+|                  |**This parameter is optional**                                                                                              |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
 |**timeout**       |Number of milliseconds to wait until timing out the request.  Default is unlimited.                                         |
+|                  |**This parameter is optional**                                                                                              |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
 |**load**          |The function dojo.xhrGet should invoke when the data is returned from the server.  The function should expect to receive at |
 |                  |at least one parameter, the data returned from the url.  The format of the data is controlled by the previously mentioned   |
