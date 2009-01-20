@@ -81,23 +81,29 @@ Example 1: dojo.xhrGet call to fetch the dojo license.
 
     <script>
       function getLicense() {
+        //Look up the node we'll stick the text under.
         var targetNode = dojo.byId("licenseContainer");
-
+        
+        //The parameters to pass to xhrGet, the url, how to handle it, and the callbacks.
         var xhrArgs = {
           url: "/moin_static163/js/dojo/trunk/dojo/LICENSE",
           handleAs: "text",
           load: function(data){
-
+            //Replace newlines with nice HTML tags.
+            data = data.replace(/\\n/g, "<br>");
+            //Replace tabs with spacess.
+            data = data.replace(/\\t/g, "&nbsp;&nbsp;&nbsp;");
             targetNode.innerHTML = data;
           },
           error: function(error){
             targetNode.innerHTML = "An unexpected error occurred: " + error;
           }
         }
+
+        //Call the synchronous xhrGet
         var deferred = dojo.xhrGet(xhrArgs);  
       }
       dojo.addOnLoad(getLicense);
-
     </script>
 
   .. cv :: html 
