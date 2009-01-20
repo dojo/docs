@@ -266,9 +266,9 @@ Example 5: dojo.xhrGet call with 'content' (query params).
           handleAs: "text",
           preventCache: true,
           content: {
-            key1="value1",
-            key2="value2",
-            key3="value3"
+            key1: "value1",
+            key2: "value2",
+            key3: "value3"
           },
           load: function(data){
             //Replace newlines with nice HTML tags.
