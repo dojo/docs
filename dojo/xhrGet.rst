@@ -47,6 +47,21 @@ The xhrGet() function takes an object as its parameter.  This object defines how
 |                  |* javascript                                                                                                                |
 |                  |* xml                                                                                                                       |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
+|**sync**          |A boolean value that says whether or not the xhrGet() function should block until data is returned or return immediately and|
+|                  |rely on callbacks for data handling.  The default value is *false*                                                          |
++------------------+----------------------------------------------------------------------------------------------------------------------------+
+|**preventCache**  |A boolean value that tells dojo.xhrGet to append a unique query parameter to each request.  The purpose of this  parameter  |
+|                  |is to keep the browser from caching the results.  While it is generally good practice to let the server tell your browser   |
+|                  |how to cache and when to clear, sometimes it is necessary to force the browser to not cache.                                |
++------------------+----------------------------------------------------------------------------------------------------------------------------+
+|**load**          |The function dojo.xhrGet should invoke when the data is returned from the server.  The function should expect to recieve at |
+|                  |at least one parameter, the data returned from the url.  The format of the data is controlled by the previously mentioned   |
+|                  |*handleAs* parameter.                                                                                                       |
++------------------+----------------------------------------------------------------------------------------------------------------------------+
+|**error**         |Sometimes xhrGet calls will fail.  Often these are 404 errors or server errors such as 500.  The error parameter is another |
+|                  |callback function that is only invoked when an error occurs.  This allows you to control what happens when an error occurs  |
+|                  |without having to put a lot of logic into your load function to check for error conditions.                                 |
++------------------+----------------------------------------------------------------------------------------------------------------------------+
 
 are:
 
