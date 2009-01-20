@@ -120,7 +120,7 @@ There are also many status codes in the 3XX range that have specific meaning as 
 
   **The answer is:  Yes.**
 
-A second parameter is always passed to the 'load' function and 'error' function.  This is the 'ioargs' parameter.  You can access the actual status code off that parameter via: 'ioargs.xhr.status'.  Please see Example 6 for further details.
+A second parameter is always passed to the 'load' and 'error' functions.  This parameter is the 'ioargs' parameter.  It contains a lot of detail about the xhr request, including a reference to the actual native xhr object.  You can access the status code off that object via: 'ioargs.xhr.status'.  Please see Example 6 for a usage example of doing that.
 
 For specific examples of how to use dojo.xhrGet, please refer to the next section.  You can use Firebug with Firefox to see dojo making the xhr requests.
 
