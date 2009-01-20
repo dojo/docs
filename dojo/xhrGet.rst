@@ -109,7 +109,15 @@ For both the synchronous and asynchronous cases, the dojo.xhrGet() call will ret
 Handling Status Codes
 ---------------------
 
-There are times where knowing of a request was 'good' or 'bad' isn't really enough.  There are, in fact, many successful status codes that mean the request was completed successfully, but have specific meaning in how it was completed.  This situation often comes up in REST based implementations with server status codes like: '201' (Created), '202' (Accepted), '203' (Non-Authoritative Information) and '204' (No Content).  There are also many status codes in the 3XX range that have specific meaning as well.  So ... can dojo.xhrGet (And the others xhrPut, xhrDelete, etcera), provide the status code so a 'load' function can do something based on the status code?  The answer is:  Yes.
+There are times where knowing of a request was 'good' or 'bad' isn't really enough.  There are, in fact, many successful status codes that mean the request was completed successfully, but have specific meaning in how it was completed.  This situation often comes up in REST based implementations with server status codes like: 
+* 201: (Created)
+* 202 (Accepted), 
+* 203: (Non-Authoritative Information)
+* 204: (No Content).  
+
+There are also many status codes in the 3XX range that have specific meaning as well.  So ... can dojo.xhrGet (And the others xhrPut, xhrDelete, etcera), provide the status code so a 'load' function can do something based on the status code?  
+
+  **The answer is:  Yes.**
 
 A second parameter is always passed to the 'load' function and 'error' function.  This is the 'ioargs' parameter.  You can access the actual status code off that parameter via: 'ioargs.xhr.status'.  Please see Example 6 for further details.
 
