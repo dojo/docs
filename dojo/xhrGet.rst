@@ -256,7 +256,7 @@ Example 5: dojo.xhrGet call with 'content' (query params).
   .. cv :: javascript
 
     <script>
-      function getLicensePreventCache() {
+      function getLicenseQueryParams() {
         //Look up the node we'll stick the text under.
         var targetNode = dojo.byId("getLicenseQueryParams");
         
