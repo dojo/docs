@@ -179,7 +179,7 @@ Example 3: dojo.xhrGet call that errors.
             targetNode.innerHTML = "Odd.  We should not see this text, an error should have occurred";
           },
           error: function(error){
-            targetNode.innerHTML = "An expected error occurred for referencing of unavailable file: " + error;
+            targetNode.innerHTML = "An expected error occurred for referencing of unavailable file: <br>&nbsp;&nbsp;&nbsp;" + error;
           }
         }
 
