@@ -369,7 +369,7 @@ Example 6: dojo.xhrGet call and checking the xhr 'status' code
 
   .. cv :: html 
 
-    <div id="getLicenseStatus" style="height: 200px;"></div>
+    <div id="getLicenseStatus" style="height: 100px;"></div>
 
 ========
 See also
