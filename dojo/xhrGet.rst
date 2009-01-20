@@ -66,22 +66,84 @@ The xhrGet() function takes an object as its parameter.  This object defines how
 
 For both the synchronous and asynchronous cases, the dojo.xhrGet() call will return a 'dojo.Deferred' object.  This object allows you to define additional callbacks for success and error conditions.  It can also be used in place of defining 'load' and error' functions in your request parameters for dojo.xhrGet().
 
-For specific examples of how to use dojo.xhrGet, please refer to the next section.
-
+For specific examples of how to use dojo.xhrGet, please refer to the next section.  You can use Firebug with Firefox to see dojo making the xhr requests.
 
 ========
 Examples
 ========
 
-Simple dojo.xhrGet call to fetch the dojo license.
---------------------------------------------------
+Example 1: dojo.xhrGet call to fetch the dojo license.
+------------------------------------------------------
 
-Simple dojo.xhrGet call that errors.
-------------------------------------
+.. cv-compound ::
+  
+  .. cv :: javascript
 
-Alternate way to pass callbacks.
---------------------------------
+    <script>
+      function getLicense() {
+      }
+      dojo.addOnLoad(getLicense);
 
+    </script>
+
+  .. cv :: html 
+
+    <div id="licenseContainer></div>
+
+
+Example 2: dojo.xhrGet call to fetch the dojo license with preventCache.
+------------------------------------------------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      function getLicensePreventCache() {
+      }
+      dojo.addOnLoad(getLicense);
+
+    </script>
+
+  .. cv :: html 
+
+    <div id="licenseContainerPreventCache></div>
+
+
+Example 3: dojo.xhrGet call that errors.
+----------------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      function callError() {
+      }
+      dojo.addOnLoad(callError);
+
+    </script>
+
+  .. cv :: html 
+
+
+Example 4: Alternate way to pass callbacks.
+-------------------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      function getLicenseAlternateCB() {
+      }
+      dojo.addOnLoad(getLicenseAlternateCB);
+
+    </script>
+
+  .. cv :: html 
+
+    <div id="licenseContainerAlternateCB></div>
 
 ========
 See also
