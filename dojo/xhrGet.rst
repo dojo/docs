@@ -111,7 +111,7 @@ Example 1: dojo.xhrGet call to fetch the dojo license.
   .. cv :: html 
 
     <b>The Dojo License:</b>
-    <div id="licenseContainer></div>
+    <div id="licenseContainer" style="height: 200px;"></div>
 
 
 Example 2: dojo.xhrGet call to fetch the dojo license with preventCache.
@@ -155,7 +155,7 @@ Example 2: dojo.xhrGet call to fetch the dojo license with preventCache.
 
   .. cv :: html 
 
-    <div id="licenseContainerPreventCache></div>
+    <div id="licenseContainerPreventCache" style="height: 200px;"></div>
 
 
 Example 3: dojo.xhrGet call that errors.
