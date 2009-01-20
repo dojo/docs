@@ -81,6 +81,20 @@ Example 1: dojo.xhrGet call to fetch the dojo license.
 
     <script>
       function getLicense() {
+        var targetNode = dojo.byId("licenseContainer");
+
+        var xhrArgs = {
+          url: "",
+          handleAs: "text",
+          load: function(data){
+
+            targetNode.innerHTML = data;
+          },
+          error: function(error){
+            targetNode.innerHTML = "An unexpected error occurred: " + error;
+          }
+        }
+        var deferred = dojo.xhrGet(xhrArgs);  
       }
       dojo.addOnLoad(getLicense);
 
@@ -88,6 +102,7 @@ Example 1: dojo.xhrGet call to fetch the dojo license.
 
   .. cv :: html 
 
+    <b>The Dojo License:</b>
     <div id="licenseContainer></div>
 
 
