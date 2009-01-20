@@ -52,6 +52,8 @@ The xhrGet() function takes an object as its parameter.  This object defines how
 |**sync**          |A boolean value that says whether or not the xhrGet() function should block until data is returned or return immediately and|
 |                  |rely on callbacks for data handling.  The default value is *false*                                                          |
 |                  |                                                                                                                            |
+|                  |**Note:** As a matter of best practice, you should avoid using synchronized xhr calls unless there is no alternative.       |
+|                  |Synchronized xhr calls block all other activity in the browser and can make it appear hung.                                 |                                     |                  |                                                                                                                            |
 |                  |**This parameter is optional**                                                                                              |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
 |**preventCache**  |A boolean value that tells dojo.xhrGet to append a unique query parameter to each request.  The purpose of this  parameter  |
@@ -65,7 +67,7 @@ The xhrGet() function takes an object as its parameter.  This object defines how
 |                  |                                                                                                                            |
 |                  |**This parameter is optional**                                                                                              |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
-|**timeout**       |Number of milliseconds to wait until timing out the request.  Default is unlimited.                                         |
+|**timeout**       |Number of milliseconds to wait until timing out the request.  Default is '0', which means infinite (no timeout).            |
 |                  |                                                                                                                            |
 |                  |**This parameter is optional**                                                                                              |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
