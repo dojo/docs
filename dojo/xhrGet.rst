@@ -84,7 +84,7 @@ Example 1: dojo.xhrGet call to fetch the dojo license.
         var targetNode = dojo.byId("licenseContainer");
 
         var xhrArgs = {
-          url: "",
+          url: "/moin_static163/js/dojo/trunk/dojo/LICENSE",
           handleAs: "text",
           load: function(data){
 
