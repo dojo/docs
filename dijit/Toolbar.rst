@@ -77,10 +77,9 @@ Creation from markup is even easier.
    </div>
 
 
-Poor Man's MenuBar
-==================
-Here's a Toolbar that looks like a MenuBar.
-We haven't implemented a MenuBar for dijit yet so some people use the Toolbar as a poor-man's substitute.
+Drop Downs
+==========
+By using `dijit.form.DropDownButton <dijit/form/DropDownButton>`_ and `dijit.form.ComboButton <dijit/form/ComboButton>`_ you can make a toolbar with drop downs.
 
 .. cv-compound::
 
@@ -88,35 +87,35 @@ We haven't implemented a MenuBar for dijit yet so some people use the Toolbar as
 
     <script type="text/javascript">
       dojo.require("dijit.Toolbar");
-      dojo.require("dijit.form.Button");
-      dojo.require("dijit.Menu");
+      dojo.require("dijit.form.DropDownButton");
+      dojo.require("dijit.ColorPalette");
+      dojo.require("dijit.TooltipDialog");
+      dojo.require("dijit.form.TextBox");
     </script>
 
   .. cv:: html
 
-	<div id="menubar" dojoType="dijit.Toolbar" class="menuBar">
-		<div dojoType="dijit.form.DropDownButton">
-			<span>File</span>
-			<div dojoType="dijit.Menu">
-				<div dojoType="dijit.MenuItem">New</div>
-				<div dojoType="dijit.MenuItem">Open</div>
-				<div dojoType="dijit.MenuSeparator"></div>
-				<div dojoType="dijit.MenuItem" iconClass="dijitEditorIcon dijitEditorIconSave">Save</div>
-				<div dojoType="dijit.MenuItem">Save As...</div>
-			</div>
+	<div id="fancy" dojoType="dijit.Toolbar">
+		<div dojoType="dijit.form.DropDownButton" iconClass="dijitEditorIcon dijitEditorIconBold" showLabel="false">
+			<span>Color</span>
+			<div dojoType="dijit.ColorPalette"></div>
 		</div>
-		<div dojoType="dijit.form.DropDownButton">
-			<span>Edit</span>
-			<div dojoType="dijit.Menu">
-				<div dojoType="dijit.MenuItem" iconClass="dijitEditorIcon dijitEditorIconCut">Cut</div>
-				<div dojoType="dijit.MenuItem" iconClass="dijitEditorIcon dijitEditorIconCopy">Copy</div>
-				<div dojoType="dijit.MenuItem" iconClass="dijitEditorIcon dijitEditorIconPaste">Paste</div>
+		<div dojoType="dijit.form.DropDownButton "iconClass="dijitEditorIcon dijitEditorIconItalic" showLabel="false">
+			<span>Dialog</span>
+			<div dojoType="dijit.TooltipDialog">
+				<label for="first">First name:</label> <input dojoType="dijit.form.TextBox" name="first" id="first"/>
+				<label for="last">Last name:</label> <input dojoType="dijit.form.TextBox" name="last" id="last"/>
 			</div>
 		</div>
         </div>
 
+(The icons are no good but hopefully convey the idea.)
+
 Accessibility
 =============
+
+Note the use of showLabel="false" above.   We've specified a label but then hidden it.  This is important for accessibility reasons, so that users that can't see the icon still know what the button does.
+
 Keyboard
 --------
 
@@ -129,3 +128,7 @@ Move focus between widgets in the toolbar      Left and right arrow keys
 Known Issues
 ------------
 In hign contrast mode when a toggle button is checked an html entity charcter (✓) is displayed since the CSS background image icon for the checked state is no longer visible. When the toggle button is part of a toolbar the checkmark character does not display properly in IE6. In IE6 with high contrast mode turned on, a checked toggle button in a toolbar displays as two vertical bars rather than the checkmark character.
+
+See Also
+========
+ * `dijit.MenuBar <dijit/MenuBar>`_
