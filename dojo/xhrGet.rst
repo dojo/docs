@@ -15,7 +15,7 @@ dojo.xhrGet
 Introduction
 ============
 
-The dojo.xhrGet() function is the cornerstone function of AJAX development.  Its purpose is to provide an easy to use and consistent interface to making asynchronous calls to retrieve data.  This API is an abstraction atop the browser's XMLHttpRequest object and makes usage the same regardless of which browser your application is running on.  This makes it much simpler to write cross-browser compatible AJAX style applications.
+The dojo.xhrGet() function is the cornerstone function of AJAX development.  Its purpose is to provide an easy to use and consistent interface to making asynchronous calls to retrieve data.  This API is an abstraction atop the browser's XMLHttpRequest object and makes usage the same regardless of which browser your application is running on.  This makes it much simpler to write cross-browser compatible AJAX style applications.  This function, in essence, implements making an HTTP 'GET' call.
 
 ===========
 Limitations
@@ -60,63 +60,35 @@ The xhrGet() function takes an object as its parameter.  This object defines how
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
 |**error**         |Sometimes xhrGet calls will fail.  Often these are 404 errors or server errors such as 500.  The error parameter is another |
 |                  |callback function that is only invoked when an error occurs.  This allows you to control what happens when an error occurs  |
-|                  |without having to put a lot of logic into your load function to check for error conditions.                                 |
+|                  |without having to put a lot of logic into your load function to check for error conditions.  The first parameter passed to  |
+|                  |the error function is a JavaScript Error object indicating what the failure was.                                            |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
 
-are:
+For both the synchronous and asynchronous cases, the dojo.xhrGet() call will return a 'dojo.Deferred' object.  This object allows you to define additional callbacks for success and error conditions.  It can also be used in place of defining 'load' and error' functions in your request parameters for dojo.xhrGet().
 
-url
-  The URL to the source of the data.  This must be on the same server as the original page was loaded.
-sync
-  A boolean value that says whether or not the xhrGet() function should block or return immediately
-handleAs
-  This is an indicator to xhrGet() on how to handle the response data.  Supported types include:
-
-* text (default)
-* json
-* json-comment-optional
-* json-comment-filtered
-* javascript
-* xml
-
-load
-  This is a callback function that is invoked when the data is received from the server.  It has one parameter which is the data returned from the server.
-error
-  This is a callback function that is invoked if there is an error on the received data.  It has two parameters.  The first is the data returned from the server while the second is of type ``dojo.__IoCallbackArgs``.
-preventCache
-  A boolean value.  When set to true, caching is prevented.
-
-There are more properties than these.
-
-
-TODO: how to use the component/class/method
-
-.. code-block :: javascript
- :linenos:
-
- <script type="text/javascript">
-   // your code
- </script>
-
+For specific examples of how to use dojo.xhrGet, please refer to the next section.
 
 
 ========
 Examples
 ========
 
-Programmatic example
---------------------
+Simple dojo.xhrGet call to fetch the dojo license.
+--------------------------------------------------
 
-TODO: example
+Simple dojo.xhrGet call that errors.
+------------------------------------
 
-Declarative example
--------------------
-
-TODO: example
+Alternate way to pass callbacks.
+--------------------------------
 
 
 ========
 See also
 ========
 
-* TODO: links to other related articles
+* `dojo.xhrPut <dojo/xhrPut>`_
+* `dojo.rawXhrPut <dojo/rawXhrPut>`_
+* `dojo.xhrPost <dojo/xhrPost>`_
+* `dojo.rawXhrPost <dojo/rawXhrPost>`_
+* `dojo.xhrDelete <dojo/xhrDelete>`_
