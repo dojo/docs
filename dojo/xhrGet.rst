@@ -5,26 +5,41 @@ dojo.xhrGet
 
 :Status: Draft
 :Version: 1.0
-:Available: since V?
+:Available: since V0.9
 
 .. contents::
    :depth: 2
-
-TODO: short summary of the component/class/method
 
 
 ============
 Introduction
 ============
 
-`xhrGet() <http://api.dojotoolkit.org/jsdoc/dojo/HEAD/dojo.xhrGet>`_ executes an Ajax request to a server and retrieves data from that server.
+The dojo.xhrGet() function is the cornerstone function of AJAX development.  Its purpose is to provide an easy to use and consistent interface to making asynchronous calls to retrieve data.  This API is an abstraction atop the browser's XMLHttpRequest object and makes usage the same regardless of which browser your application is running on.  This makes it much simpler to write cross-browser compatible AJAX style applications.
+
+===========
+Limitations
+===========
+
+Keep in mind that since dojo.xhrGet (and other functions in the same line: dojo.xhrPost, dojo.xhrDelete, dojo.xhrPut), are bound by the 'same domain' security policy of the browser.  This means that they can only establish a connection back to the same server that served the HTML page.  If you wish to use this API to talk to servers other than the one that originated your page, then you will have to use a proxy on your originating server and have it forward the requests.  The only other solution to working around the same domain restriction is to use alternate IO methods, such as dojo.io.script.
 
 
 =====
 Usage
 =====
 
-The xhrGet() function taks a dojo._IoArgs object as a parameter.   This object declares how the xhrGet() function should operate.  The core properties of the object are:
+The xhrGet() function takes an object as its parameter.  This object defines how the xhrGet should operate.  Minimally, this object must contain a 'url' attribute so that the function knows where to send the request.   Having just a 'url' attribute isn't the most useful approach to calling the function, though.  You can also embed information such as how to handle the return data (As XML, JSON, or text), and what do do when it completes.  It also accepts other useful parameters such as 'preventCache', and 'sync', which alter its behavior slightly.  For a reasonable list of all the options it supports, see the following table:
+
++------------------+----------------------------------------------------------------------------------------------------------------------------+
+|**url**           | The URL to request data from.  This URL must go to the same server that originated the page or it will fail the load.  This|
+|                  | is due to the same domain browser security restriction.                                                                    +
++------------------+----------------------------------------------------------------------------------------------------------------------------+
+|**handleAs**      | This parameter specifies how to handle the data returned from the browser.  It usually takes values of 'text', 'xml', or   |
+|                  | 'json'.  What those values do is instruct it to try and hand the data to the asynchronous callback functions in those      |
+|                  | Naturally if you specify a format that doesn't match what the server sends you will likely get an error.                   |
++------------------+----------------------------------------------------------------------------------------------------------------------------+
+
+are:
 
 url
   The URL to the source of the data.  This must be on the same server as the original page was loaded.
