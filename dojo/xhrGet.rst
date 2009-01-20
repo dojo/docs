@@ -246,6 +246,57 @@ Example 4: Alternate way to pass callbacks.
 
     <div id="getLicenseAlternateCB" style="height: 200px;"></div>
 
+Example 5: dojo.xhrGet call with 'content' (query params).
+----------------------------------------------------------
+
+*Note:  You will need to use firebug or a proxy to see the query params appended to the url*
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      function getLicensePreventCache() {
+        //Look up the node we'll stick the text under.
+        var targetNode = dojo.byId("getLicenseQueryParams");
+        
+        //The parameters to pass to xhrGet, the url, how to handle it, and the callbacks.
+        var xhrArgs = {
+          url: "/moin_static163/js/dojo/trunk/dojo/LICENSE",
+          handleAs: "text",
+          preventCache: true,
+          content: {
+            key1="value1",
+            key2="value2",
+            key3="value3"
+          },
+          load: function(data){
+            //Replace newlines with nice HTML tags.
+            data = data.replace(/\n/g, "<br>");
+
+            //Replace tabs with spacess.
+            data = data.replace(/\t/g, "&nbsp;&nbsp;&nbsp;");
+
+            targetNode.innerHTML = data;
+          },
+          error: function(error){
+            targetNode.innerHTML = "An unexpected error occurred: " + error;
+          }
+        }
+
+        //Call the asynchronous xhrGet
+        var deferred = dojo.xhrGet(xhrArgs);  
+      }
+      dojo.addOnLoad(getLicenseQueryParams);
+    </script>
+
+  .. cv :: html 
+
+    <div id="getLicenseQueryParams" style="height: 100px;"></div>
+
+
+
+
 ========
 See also
 ========
