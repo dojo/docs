@@ -59,7 +59,7 @@ The xhrGet() function takes an object as its parameter.  This object defines how
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
 |**timeout**       |Number of milliseconds to wait until timing out the request.  Default is unlimited.                                         |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
-|**load**          |The function dojo.xhrGet should invoke when the data is returned from the server.  The function should expect to recieve at |
+|**load**          |The function dojo.xhrGet should invoke when the data is returned from the server.  The function should expect to receive at |
 |                  |at least one parameter, the data returned from the url.  The format of the data is controlled by the previously mentioned   |
 |                  |*handleAs* parameter.                                                                                                       |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
