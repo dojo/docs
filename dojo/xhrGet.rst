@@ -106,6 +106,13 @@ The xhrGet() function takes an object as its parameter.  This object defines how
 
 For both the synchronous and asynchronous cases, the dojo.xhrGet() call will return a 'dojo.Deferred' object.  This object allows you to define additional callbacks for success and error conditions.  It can also be used in place of defining 'load' and error' functions in your request parameters for dojo.xhrGet().
 
+Handling Status Codes
+---------------------
+
+There are times where knowing of a request was 'good' or 'bad' isn't really enough.  There are, in fact, many successful status codes that mean the request was completed successfully, but have specific meaning in how it was completed.  This situation often comes up in REST based implementations with server status codes like: '201' (Created), '202' (Accepted), '203' (Non-Authoritative Information) and '204' (No Content).  There are also many status codes in the 3XX range that have specific meaning as well.  So ... can dojo.xhrGet (And the others xhrPut, xhrDelete, etcera), provide the status code so a 'load' function can do something based on the status code?  The answer is:  Yes.
+
+A second parameter is always passed to the 'load' function and 'error' function.  This is the 'ioargs' parameter.  You can access the actual status code off that parameter via: 'ioargs.xhr.status'.  Please see Example 6 for further details.
+
 For specific examples of how to use dojo.xhrGet, please refer to the next section.  You can use Firebug with Firefox to see dojo making the xhr requests.
 
 ========
@@ -327,8 +334,42 @@ Example 5: dojo.xhrGet call with 'content' (query params).
 
   .. cv :: html 
 
-    <div id="getLicenseQueryParams" style="height: 100px;"></div>
+    <div id="getLicenseQueryParams" style="height: 200px;"></div>
 
+Example 6: dojo.xhrGet call and checking the xhr 'status' code
+--------------------------------------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      function getLicenseStatus() {
+        //Look up the node we'll stick the text under.
+        var targetNode = dojo.byId("getLicenseStatus");
+        
+        //The parameters to pass to xhrGet, the url, how to handle it, and the callbacks.
+        var xhrArgs = {
+          url: "/moin_static163/js/dojo/trunk/dojo/LICENSE",
+          handleAs: "text",
+          preventCache: true,
+          load: function(data, ioargs){
+            targetNode.innerHTML = "XHR returned HTTP status: " + ioargs.xhr.status;
+          },
+          error: function(error, ioargs){
+            targetNode.innerHTML = "An unexpected error occurred: " + error;
+          }
+        }
+
+        //Call the asynchronous xhrGet
+        var deferred = dojo.xhrGet(xhrArgs);  
+      }
+      dojo.addOnLoad(getLicenseStatus);
+    </script>
+
+  .. cv :: html 
+
+    <div id="getLicenseStatus" style="height: 200px;"></div>
 
 ========
 See also
