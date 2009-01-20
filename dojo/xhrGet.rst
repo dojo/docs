@@ -90,9 +90,15 @@ Example 1: dojo.xhrGet call to fetch the dojo license.
           handleAs: "text",
           load: function(data){
             //Replace newlines with nice HTML tags.
-            data = data.replace(/\\n/g, "<br>");
+            data = data.replace(/\n/g, "<br>");
+            //Replace newlines with nice HTML tags.
+            data = data.replace(/\r/g, "<br>");
+            //Replace newlines with nice HTML tags.
+            data = data.replace(/\f/g, "<br>");
+
             //Replace tabs with spacess.
-            data = data.replace(/\\t/g, "&nbsp;&nbsp;&nbsp;");
+            data = data.replace(/\t/g, "&nbsp;&nbsp;&nbsp;");
+
             targetNode.innerHTML = data;
           },
           error: function(error){
