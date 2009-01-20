@@ -38,7 +38,7 @@ The xhrGet() function takes an object as its parameter.  This object defines how
 |                  |'json'.  What those values do is instruct it to try and hand the data to the asynchronous callback functions in those       |
 |                  |Naturally if you specify a format that doesn't match what the server sends you will likely get an error.                    |
 |                  |                                                                                                                            |
-|                  |The currently supported options are:                                                                                       |
+|                  |The currently supported options are:                                                                                        |
 |                  |                                                                                                                            |
 |                  |* text (default)                                                                                                            |
 |                  |* json                                                                                                                      |
