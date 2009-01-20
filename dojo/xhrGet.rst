@@ -62,6 +62,7 @@ The xhrGet() function takes an object as its parameter.  This object defines how
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
 |**content**       |A JavaScript object of name/string value pairs.  These items are converted to query parameters and passed on as part of the |
 |                  |url.  Example request made by the browser:  <url>?key1=value1&key2=value2&key3=value3..                                     |
+|                  |                                                                                                                            |
 |                  |**This parameter is optional**                                                                                              |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
 |**timeout**       |Number of milliseconds to wait until timing out the request.  Default is unlimited.                                         |
@@ -69,12 +70,12 @@ The xhrGet() function takes an object as its parameter.  This object defines how
 |                  |**This parameter is optional**                                                                                              |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
 |**user**          |If your end point requires BASIC web authentication, then use can pass the user name using this parameter in the xhr request|
-|                  |options.  Note:  This does work for FORM based authentication.                                                              |                                                                                                                   
+|                  |options.  Note:  This does **NOT** work for FORM based authentication.                                                      |                                                                                                                   
 |                  |                                                                                                                            |
 |                  |**This parameter is optional**                                                                                              |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
 |**password**      |If your end point requires BASIC web authentication, then use can pass the password using this parameter in the xhr request |
-|                  |options.  Note:  This does work for FORM based authentication.                                                              | 
+|                  |options.  Note:  This does **NOT** work for FORM based authentication.                                                      | 
 |                  |                                                                                                                            |
 |                  |**This parameter is optional**                                                                                              |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
