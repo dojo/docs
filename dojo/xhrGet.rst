@@ -37,7 +37,7 @@ The xhrGet() function takes an object as its parameter.  This object defines how
 |                  |is due to the same domain browser security restriction.                                                                     +
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
 |**handleAs**      |This parameter specifies how to handle the data returned from the browser.  It usually takes values of 'text', 'xml', or    |
-|                  |'json'.  What those values do is instruct it to try and hand the data to the asynchronous callback functions in those       |
+|                  |'json'.  What those values do is instruct it to try and hand the data to the asynchronous callback functions in that format.|
 |                  |Naturally if you specify a format that doesn't match what the server sends you will likely get an error.                    |
 |                  |                                                                                                                            |
 |                  |The currently supported options are:                                                                                        |
