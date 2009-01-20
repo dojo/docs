@@ -68,6 +68,14 @@ The xhrGet() function takes an object as its parameter.  This object defines how
 |                  |                                                                                                                            |
 |                  |**This parameter is optional**                                                                                              |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
+|**user**          |If your end point requires BASIC web authentication, then use can pass the user name using this parameter in the xhr request|
+|                  |options.  Note:  This does work for FORM based authentication.                                                              |                                                                                                                    |                  |                                                                                                                            |
+|                  |**This parameter is optional**                                                                                              |
++------------------+----------------------------------------------------------------------------------------------------------------------------+
+|**user**          |If your end point requires BASIC web authentication, then use can pass the password using this parameter in the xhr request |
+|                  |options.  Note:  This does work for FORM based authentication.                                                              | |                  |                                                                                                                            |
+|                  |**This parameter is optional**                                                                                              |
++------------------+----------------------------------------------------------------------------------------------------------------------------+
 |**load**          |The function dojo.xhrGet should invoke when the data is returned from the server.  The function should expect to receive at |
 |                  |at least one parameter, the data returned from the url.  The format of the data is controlled by the previously mentioned   |
 |                  |*handleAs* parameter.                                                                                                       |
