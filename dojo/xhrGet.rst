@@ -52,8 +52,10 @@ The xhrGet() function takes an object as its parameter.  This object defines how
 |**sync**          |A boolean value that says whether or not the xhrGet() function should block until data is returned or return immediately and|
 |                  |rely on callbacks for data handling.  The default value is *false*                                                          |
 |                  |                                                                                                                            |
+|                  |                                                                                                                            |
 |                  |**Note:** As a matter of best practice, you should avoid using synchronized xhr calls unless there is no alternative.       |
 |                  |Synchronized xhr calls block all other activity in the browser and can make it appear hung.                                 |                                    
+|                  |                                                                                                                            |
 |                  |                                                                                                                            |
 |                  |**This parameter is optional**                                                                                              |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
