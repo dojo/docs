@@ -100,10 +100,11 @@ By using `dijit.form.DropDownButton <dijit/form/DropDownButton>`_ and `dijit.for
 			<span>Color</span>
 			<div dojoType="dijit.ColorPalette"></div>
 		</div>
-		<div dojoType="dijit.form.DropDownButton "iconClass="dijitEditorIcon dijitEditorIconItalic" showLabel="false">
+		<div dojoType="dijit.form.DropDownButton" iconClass="dijitEditorIcon dijitEditorIconItalic" showLabel="false">
 			<span>Dialog</span>
 			<div dojoType="dijit.TooltipDialog">
 				<label for="first">First name:</label> <input dojoType="dijit.form.TextBox" name="first" id="first"/>
+                                <br/>
 				<label for="last">Last name:</label> <input dojoType="dijit.form.TextBox" name="last" id="last"/>
 			</div>
 		</div>
