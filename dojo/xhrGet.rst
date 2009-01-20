@@ -102,7 +102,7 @@ Example 1: dojo.xhrGet call to fetch the dojo license.
           }
         }
 
-        //Call the synchronous xhrGet
+        //Call the asynchronous xhrGet
         var deferred = dojo.xhrGet(xhrArgs);  
       }
       dojo.addOnLoad(getLicense);
@@ -145,9 +145,8 @@ Example 2: dojo.xhrGet call to fetch the dojo license with preventCache.
           }
         }
 
-        //Call the synchronous xhrGet
+        //Call the asynchronous xhrGet
         var deferred = dojo.xhrGet(xhrArgs);  
-
       }
       dojo.addOnLoad(getLicensePreventCache);
 
@@ -179,11 +178,11 @@ Example 3: dojo.xhrGet call that errors.
             targetNode.innerHTML = "Odd.  We should not see this text, an error should have occurred";
           },
           error: function(error){
-            targetNode.innerHTML = "An expected error occurred for referencing of unavailable file: <br>&nbsp;&nbsp;&nbsp;" + error;
+            targetNode.innerHTML = "An expected error occurred for referencing of unavailable file (404): <br>&nbsp;&nbsp;&nbsp;" + error;
           }
         }
 
-        //Call the synchronous xhrGet
+        //Call the asynchronous xhrGet
         var deferred = dojo.xhrGet(xhrArgs);  
 
       }
@@ -205,6 +204,34 @@ Example 4: Alternate way to pass callbacks.
 
     <script>
       function getLicenseAlternateCB() {
+        //Look up the node we'll stick the text under.
+        var targetNode = dojo.byId("getLicenseAlternateCB");
+        
+        //The parameters to pass to xhrGet, the url, how to handle it, and the callbacks.
+        var xhrArgs = {
+          url: "/moin_static163/js/dojo/trunk/dojo/LICENSE",
+          handleAs: "text",
+          preventCache: true
+        }
+
+        //Call the asynchronous xhrGet
+        var deferred = dojo.xhrGet(xhrArgs);  
+
+        //Now add the callbacks
+        deferred.addCallback(function(data) {
+          //Replace newlines with nice HTML tags.
+          data = data.replace(/\n/g, "<br>");
+
+          //Replace tabs with spacess.
+          data = data.replace(/\t/g, "&nbsp;&nbsp;&nbsp;");
+  
+          targetNode.innerHTML = data;
+        });
+
+        deferred.addErrback(function(error){
+          targetNode.innerHTML = "An unexpected error occurred: " + error;
+        });
+
       }
       dojo.addOnLoad(getLicenseAlternateCB);
 
@@ -212,7 +239,7 @@ Example 4: Alternate way to pass callbacks.
 
   .. cv :: html 
 
-    <div id="licenseContainerAlternateCB></div>
+    <div id="getLicenseAlternateCB" style="height: 200px;"></div>
 
 ========
 See also
