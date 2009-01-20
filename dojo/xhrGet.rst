@@ -295,8 +295,6 @@ Example 5: dojo.xhrGet call with 'content' (query params).
     <div id="getLicenseQueryParams" style="height: 100px;"></div>
 
 
-
-
 ========
 See also
 ========
