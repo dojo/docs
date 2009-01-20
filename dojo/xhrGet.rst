@@ -192,7 +192,7 @@ Example 3: dojo.xhrGet call that errors.
 
   .. cv :: html 
 
-    <div id="errorContainer" style="height: 200px;"></div>
+    <div id="errorContainer" style="height: 100px;"></div>
 
 
 Example 4: Alternate way to pass callbacks.
