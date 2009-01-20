@@ -49,11 +49,13 @@ The xhrGet() function takes an object as its parameter.  This object defines how
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
 |**sync**          |A boolean value that says whether or not the xhrGet() function should block until data is returned or return immediately and|
 |                  |rely on callbacks for data handling.  The default value is *false*                                                          |
+|                  |                                                                                                                            |
 |                  |**This parameter is optional**                                                                                              |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
 |**preventCache**  |A boolean value that tells dojo.xhrGet to append a unique query parameter to each request.  The purpose of this  parameter  |
 |                  |is to keep the browser from caching the results.  While it is generally good practice to let the server tell your browser   |
 |                  |how to cache and when to clear, sometimes it is necessary to force the browser to not cache.                                |
+|                  |                                                                                                                            |
 |                  |**This parameter is optional**                                                                                              |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
 |**content**       |A JavaScript object of name/string value pairs.  These items are converted to query parameters and passed on as part of the |
@@ -61,16 +63,21 @@ The xhrGet() function takes an object as its parameter.  This object defines how
 |                  |**This parameter is optional**                                                                                              |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
 |**timeout**       |Number of milliseconds to wait until timing out the request.  Default is unlimited.                                         |
+|                  |                                                                                                                            |
 |                  |**This parameter is optional**                                                                                              |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
 |**load**          |The function dojo.xhrGet should invoke when the data is returned from the server.  The function should expect to receive at |
 |                  |at least one parameter, the data returned from the url.  The format of the data is controlled by the previously mentioned   |
 |                  |*handleAs* parameter.                                                                                                       |
+|                  |                                                                                                                            |
+|                  |**This parameter is optional**                                                                                              |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
 |**error**         |Sometimes xhrGet calls will fail.  Often these are 404 errors or server errors such as 500.  The error parameter is another |
 |                  |callback function that is only invoked when an error occurs.  This allows you to control what happens when an error occurs  |
 |                  |without having to put a lot of logic into your load function to check for error conditions.  The first parameter passed to  |
 |                  |the error function is a JavaScript Error object indicating what the failure was.                                            |
+|                  |                                                                                                                            |
+|                  |**This parameter is optional**                                                                                              |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
 
 For both the synchronous and asynchronous cases, the dojo.xhrGet() call will return a 'dojo.Deferred' object.  This object allows you to define additional callbacks for success and error conditions.  It can also be used in place of defining 'load' and error' functions in your request parameters for dojo.xhrGet().
