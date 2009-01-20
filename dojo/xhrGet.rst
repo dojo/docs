@@ -31,14 +31,14 @@ Usage
 The xhrGet() function takes an object as its parameter.  This object defines how the xhrGet should operate.  Minimally, this object must contain a 'url' attribute so that the function knows where to send the request.   Having just a 'url' attribute isn't the most useful approach to calling the function, though.  You can also embed information such as how to handle the return data (As XML, JSON, or text), and what do do when it completes.  It also accepts other useful parameters such as 'preventCache', and 'sync', which alter its behavior slightly.  For a reasonable list of all the options it supports, see the following table:
 
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
-|**url**           | The URL to request data from.  This URL must go to the same server that originated the page or it will fail the load.  This|
-|                  | is due to the same domain browser security restriction.                                                                    +
+|**url**           |The URL to request data from.  This URL must go to the same server that originated the page or it will fail the load.  This |
+|                  |is due to the same domain browser security restriction.                                                                     +
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
-|**handleAs**      | This parameter specifies how to handle the data returned from the browser.  It usually takes values of 'text', 'xml', or   |
-|                  | 'json'.  What those values do is instruct it to try and hand the data to the asynchronous callback functions in those      |
-|                  | Naturally if you specify a format that doesn't match what the server sends you will likely get an error.                   |
+|**handleAs**      |This parameter specifies how to handle the data returned from the browser.  It usually takes values of 'text', 'xml', or    |
+|                  |'json'.  What those values do is instruct it to try and hand the data to the asynchronous callback functions in those       |
+|                  |Naturally if you specify a format that doesn't match what the server sends you will likely get an error.                    |
 |                  |                                                                                                                            |
-|                  | The currently supported options are:                                                                                       |
+|                  |The currently supported options are:                                                                                       |
 |                  |                                                                                                                            |
 |                  |* text (default)                                                                                                            |
 |                  |* json                                                                                                                      |
