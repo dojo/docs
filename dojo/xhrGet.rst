@@ -167,12 +167,33 @@ Example 3: dojo.xhrGet call that errors.
 
     <script>
       function callError() {
+        //Look up the node we'll stick the text under.
+        var targetNode = dojo.byId("errorContainer");
+        
+        //The parameters to pass to xhrGet, the url, how to handle it, and the callbacks.
+        var xhrArgs = {
+          url: "/moin_static163/js/dojo/trunk/dojo/NoSuchFile",
+          handleAs: "text",
+          preventCache: true,
+          load: function(data){
+            targetNode.innerHTML = "Odd.  We should not see this text, an error should have occurred";
+          },
+          error: function(error){
+            targetNode.innerHTML = "An expected error occurred for referencing of unavailable file: " + error;
+          }
+        }
+
+        //Call the synchronous xhrGet
+        var deferred = dojo.xhrGet(xhrArgs);  
+
       }
       dojo.addOnLoad(callError);
 
     </script>
 
   .. cv :: html 
+
+    <div id="errorContainer" style="height: 200px;"></div>
 
 
 Example 4: Alternate way to pass callbacks.
