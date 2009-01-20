@@ -78,14 +78,15 @@ The xhrGet() function takes an object as its parameter.  This object defines how
 |                  |options.                                                                                                                    |
 |                  |                                                                                                                            |
 |                  |  **Note:**  This does **NOT** work for FORM based authentication. FORM based authentication is a use of POST, where the    |
-|                  |  POST body contains the credentials.  FOM authentication is server implementation specific.                                | |                  |                                                                                                                            |
+|                  |  POST body contains the credentials.  FOM authentication is server implementation specific.                                | 
+|                  |                                                                                                                            |
 |                  |**This parameter is optional**                                                                                              |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
 |**password**      |If your end point requires BASIC web authentication, then use can pass the password using this parameter in the xhr request |
 |                  |options.                                                                                                                    |
 |                  |                                                                                                                            |
 |                  |  **Note:**  This does **NOT** work for FORM based authentication. FORM based authentication is a use of POST, where the    |
-|                  |  POST body contains the credentials.  FOM authentication is server implementation specific.                                | 
+|                  |  POST body contains the credentials.  FOM authentication is server implementation specific.                                |
 |                  |                                                                                                                            |
 |                  |**This parameter is optional**                                                                                              |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
