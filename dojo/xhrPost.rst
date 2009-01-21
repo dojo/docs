@@ -83,9 +83,24 @@ Example 1: dojo.xhrPost call to send a form
         var button = dijit.byId("submitButton");
 
         dojo.connect(button, "onClick", function(event){
+           //Stop the submit event since we want to control form submission.
            event.preventDefault();
            event.stopPropagation();
            alert("Meow");
+
+        //The parameters to pass to xhrPost, the url, how to handle it, and the callbacks.
+        var xhrArgs = {
+          form: dojo.byId("myform");
+          handleAs: "text",
+          load: function(data){
+          },
+          error: function(error){
+             alert(error);
+          }
+        }
+        //Call the asynchronous xhrPost
+        var deferred = dojo.xhrPost(xhrArgs);  
+
         });
       }
       dojo.addOnLoad(sendForm);
@@ -94,7 +109,7 @@ Example 1: dojo.xhrPost call to send a form
   .. cv :: html 
 
     <b>Simple Form:</b>
-    <form action=postIt">
+    <form action=postIt" id="myform">
       <input type="text" dojoType="dijit.form.TextBox"></input>
       <button type="submit" dojoType="dijit.form.Button" id="submitButton">Send it!</button>
     </form>
