@@ -68,46 +68,34 @@ Examples
 
 For specific examples of how to use dojo.xhrPost, please refer to the following.  You can use Firebug with Firefox to see dojo making the xhr requests.
 
-Example 1: dojo.xhrGet call to fetch the dojo license.
-------------------------------------------------------
+Example 1: dojo.xhrPost call to send a form
+-------------------------------------------
 
 .. cv-compound ::
   
   .. cv :: javascript
 
     <script>
-      function getLicense() {
-        //Look up the node we'll stick the text under.
-        var targetNode = dojo.byId("licenseContainer");
-        
-        //The parameters to pass to xhrGet, the url, how to handle it, and the callbacks.
-        var xhrArgs = {
-          url: "/moin_static163/js/dojo/trunk/dojo/LICENSE",
-          handleAs: "text",
-          load: function(data){
-            //Replace newlines with nice HTML tags.
-            data = data.replace(/\n/g, "<br>");
+      function sendForm() {
+        var button = dijit.byId("submitButton");
 
-            //Replace tabs with spacess.
-            data = data.replace(/\t/g, "&nbsp;&nbsp;&nbsp;");
-
-            targetNode.innerHTML = data;
-          },
-          error: function(error){
-            targetNode.innerHTML = "An unexpected error occurred: " + error;
-          }
-        }
-
-        //Call the asynchronous xhrGet
-        var deferred = dojo.xhrGet(xhrArgs);  
+        dojo.connect(button, "onClick", function(event){
+           event.preventDefault();
+           event.stopPropagation();
+           alert("Meow");
+        });
       }
-      dojo.addOnLoad(getLicense);
+      dojo.addOnLoad(sendForm);
     </script>
 
   .. cv :: html 
 
-    <b>The Dojo License:</b>
-    <div id="licenseContainer" style="height: 200px;"></div>
+    <b>Simple Form:</b>
+    <form action=postIt">
+      <input type="text" dojoType="dijit.form.TextBox"></input>
+      <button type="submit" dojoType="dijit.form.Button" id="submitButton">Send it!</button>
+    </form>
+
 
 
 ========
