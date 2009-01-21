@@ -23,8 +23,7 @@ The following information should get you up and going with dojo.xhrPost().  As w
 Limitations
 ===========
 
-dojo.xhrPost (and other functions in the same line: dojo.xhrGet, dojo.xhrDelete, dojo.xhrPut), are bound by the 'same domain' security policy of the browser.  This means that they can only establish a connection back to the same server that served the HTML page.  If you wish to use this API to talk to servers other than the one that originated your page, then you will have to use a proxy on your originating server and have it forward the requests.  The only other solution to working around the same domain restriction is to use alternate IO methods, such as dojo.io.script.
-
+The limitations are the same as `dojo.xhrGet <dojo/xhrGet>`_
 
 =====
 Usage
