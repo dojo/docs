@@ -86,9 +86,11 @@ Example 1: dojo.xhrPost call to send a form
           //Stop the submit event since we want to control form submission.
           event.preventDefault();
           event.stopPropagation();
-          alert("Meow");
 
-          //The parameters to pass to xhrPost, the url, how to handle it, and the callbacks.
+          //The parameters to pass to xhrPost, the form, how to handle it, and the callbacks.
+          //Note that there isn't a url passed.  xhrPost will extract the url to call from the form's
+          //'action' attribute.  You could also leave off the action attribute and set the url of the xhrPost object
+          //either should work.
           var xhrArgs = {
             form: dojo.byId("myform"),
             handleAs: "text",
