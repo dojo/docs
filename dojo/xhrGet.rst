@@ -78,7 +78,7 @@ The xhrGet() function takes an object as its parameter.  This object defines how
 |                  |options.                                                                                                                    |
 |                  |                                                                                                                            |
 |                  |  **Note:**  This does **NOT** work for FORM based authentication. FORM based authentication is a use of POST, where the    |
-|                  |  POST body contains the credentials.  FORM authentication is server implementation specific.                                | 
+|                  |  POST body contains the credentials.  FORM authentication is server implementation specific.                               | 
 |                  |                                                                                                                            |
 |                  |**This parameter is optional**                                                                                              |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
@@ -86,7 +86,7 @@ The xhrGet() function takes an object as its parameter.  This object defines how
 |                  |options.                                                                                                                    |
 |                  |                                                                                                                            |
 |                  |  **Note:**  This does **NOT** work for FORM based authentication. FORM based authentication is a use of POST, where the    |
-|                  |  POST body contains the credentials.  FORM authentication is server implementation specific.                                |
+|                  |  POST body contains the credentials.  FORM authentication is server implementation specific.                               |
 |                  |                                                                                                                            |
 |                  |**This parameter is optional**                                                                                              |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
