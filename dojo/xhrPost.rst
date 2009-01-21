@@ -43,7 +43,7 @@ All of the dojo.xhrGet `object properties <dojo/xhrGet#dojo-xhrget-supported-obj
 |                  |                                                                                                                            |
 |                  |**This parameter is optional**                                                                                              |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
-|**postContent**   |A string of data you wish to send as the post body.  dojo.xhrPost (and dojo.rawXhrPost), do not do any processing of this   |
+|**postData**      |A string of data you wish to send as the post body.  dojo.xhrPost (and dojo.rawXhrPost), do not do any processing of this   |
 |                  |It is merely passed through as the POST body.                                                                               |
 |                  |                                                                                                                            |
 |                  |                                                                                                                            |
@@ -139,7 +139,7 @@ Example 2: dojo.xhrPost call to send some text data
           //Also, how to handle the return and callbacks.
           var xhrArgs = {
             url: "postIt",
-            postContent: "Some random text",
+            postData: "Some random text",
             handleAs: "text",
             load: function(data){
               dojo.byId("response2").innerHTML = "Message posted.";
