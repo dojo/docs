@@ -74,7 +74,7 @@ dojo.xhrGet supported object properties
 |                  |**This parameter is optional**                                                                                              |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
 |**headers**       |A JavaScript object of name/string value pairs.  These are the headers to send as part of the request.  For example, you can|
-|                  |use the headers option to set the content-type or content-encoding header of the HTTP request.                              |
+|                  |use the headers option to set the Content-Type, X-Method-Override, or Content-Encoding headers of the HTTP request.         |
 |                  |                                                                                                                            |
 |                  |**This parameter is optional**                                                                                              |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
@@ -465,7 +465,8 @@ Example 5: dojo.xhrGet call with headers
           preventCache: true,
           headers: {
             "Content-Type": "text/plain",
-            "Content-Encoding": "ISO-8859-1"
+            "Content-Encoding": "ISO-8859-1",
+            "X-Method-Override": "FANCY-GET"
           },
           load: function(data){
             //Replace newlines with nice HTML tags.
