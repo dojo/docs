@@ -131,7 +131,7 @@ Example 2: dojo.xhrPost call to send some text data
       dojo.require("dijit.form.Button");
 
       function sendText() {
-        var button = dijit.byId("submitButton");
+        var button = dijit.byId("submitButton2");
 
         dojo.connect(button, "onClick", function(event){
           //The parameters to pass to xhrPost, the message, and the url to send it to
@@ -141,12 +141,12 @@ Example 2: dojo.xhrPost call to send some text data
             postContent: "Some random text",
             handleAs: "text",
             load: function(data){
-              dojo.byId("response").innerHTML = "Message posted.";
+              dojo.byId("response2").innerHTML = "Message posted.";
             },
             error: function(error){
               //We'll 404 in the demo, but that's okay.  We don't have a 'postIt' service on the 
               //docs server.
-              dojo.byId("response").innerHTML = "Message posted.";
+              dojo.byId("response2").innerHTML = "Message posted.";
             }
           }
           //Call the asynchronous xhrPost
