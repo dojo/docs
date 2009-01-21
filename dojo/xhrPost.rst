@@ -29,7 +29,7 @@ The limitations are the same as `dojo.xhrGet <dojo/xhrGet>`_
 Usage
 =====
 
-The xhrPost() function takes an object as its parameter.  This object defines how the xhrPost should operate.  Like its counterpart, dojo.xhrGet,  this object must contain a 'url' attribute so that the function knows where to send the request.  Additionally, all the `dojo.xhrGet parameters <dojo/xhrGet#dojo-xhrget-supported-object-properties>`_ are valid, including how to set the load and errors handlers.  So, for specific information about those parameters, please refer to dojo.xhrGet.  This page only lists out the parameters which are usually only used in conjunction with with a POST.
+The xhrPost() function takes an object as its parameter.  This object defines how the xhrPost should operate.  All the `dojo.xhrGet parameters <dojo/xhrGet#dojo-xhrget-supported-object-properties>`_ are valid, including how to set the load and errors handlers.  So, for specific information about those parameters, please refer to dojo.xhrGet.  This page only lists out the parameters which are usually only used in conjunction with with a POST.
 
 dojo.xhrPost supported object properties
 ----------------------------------------
@@ -38,8 +38,8 @@ All of the dojo.xhrGet `object properties <dojo/xhrGet#dojo-xhrget-supported-obj
 
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
 |**form**          |For posting FORM data, you can provide a either the DOM node of your form or the ID of the form.  The xhrPost will convert  |
-|                  |this into proper POST format and send it with the post data.                                                                |
-|                  |                                                                                                                            |
+|                  |this into proper POST format and send it with the post data.  If a url is not set in the args to dojo.xhrPost, then it tries|
+|                  |to extract the url from the form 'action' attribute.                                                                        |
 |                  |                                                                                                                            |
 |                  |**This parameter is optional**                                                                                              |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
