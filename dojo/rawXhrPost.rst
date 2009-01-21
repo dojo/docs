@@ -5,49 +5,12 @@ dojo.rawXhrPost
 
 :Status: Draft
 :Version: 1.0
-:Available: since V?
+:Available: since V0.9
 
 .. contents::
    :depth: 2
 
-TODO: short summary of the component/class/method
-
-
-============
-Introduction
-============
-
-TODO: introduce the component/class/method
-
-
-=====
-Usage
-=====
-
-TODO: how to use the component/class/method
-
-.. code-block :: javascript
- :linenos:
-
- <script type="text/javascript">
-   // your code
- </script>
-
-
-
-========
-Examples
-========
-
-Programmatic example
---------------------
-
-TODO: example
-
-Declarative example
--------------------
-
-TODO: example
+The original purpose of dojo.rawXhrPost was a method that could be sued to send a raw post body to the server.  As of 1.3, this function is common with dojo.xhrPost().  So, for usage of dojo.rawXhrPost(), see `dojo.xhrPost() <dojo/xhrPost>`_
 
 
 ========
