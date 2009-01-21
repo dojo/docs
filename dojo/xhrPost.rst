@@ -94,15 +94,16 @@ Example 1: dojo.xhrPost call to send a form
             form: dojo.byId("myform"),
             handleAs: "text",
             load: function(data){
-              dojo.byId("response").innerHTML = "Message posted.";
+              dojo.byId("response").innerHTML = "Form posted.";
             },
             error: function(error){
               //We'll 404 in the demo, but that's okay.  We don't have a 'postIt' service on the 
               //docs server.
-              dojo.byId("response").innerHTML = "Message posted.";
+              dojo.byId("response").innerHTML = "Form posted.";
             }
           }
           //Call the asynchronous xhrPost
+          dojo.byId("response").innerHTML = "Form being sent..."
           var deferred = dojo.xhrPost(xhrArgs);  
         });
       }
@@ -149,6 +150,7 @@ Example 2: dojo.xhrPost call to send some text data
               dojo.byId("response2").innerHTML = "Message posted.";
             }
           }
+          dojo.byId("response2").innerHTML = "Message being sent..."
           //Call the asynchronous xhrPost
           var deferred = dojo.xhrPost(xhrArgs);  
         });
