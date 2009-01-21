@@ -115,12 +115,13 @@ Example 1: dojo.xhrPost call to send a form
 
     <b>Simple Form:</b>
     <br>
-    <form action=postIt" id="myform">
-      Text: <input type="text" dojoType="dijit.form.TextBox" name="formInput" value="Some text"></input><br><br>
-      Checkbox: <input type="checkbox" dojoType="dijit.form.CheckBox" name="checkboxInput" value="checked"></input><br><br>
-      <button type="submit" dojoType="dijit.form.Button" id="submitButton">Send it!</button>
-    </form>
-    <br>
+    <blockquote>
+      <form action=postIt" id="myform">
+        Text: <input type="text" dojoType="dijit.form.TextBox" name="formInput" value="Some text"></input><br><br>
+        Checkbox: <input type="checkbox" dojoType="dijit.form.CheckBox" name="checkboxInput" value="checked"></input><br><br>
+        <button type="submit" dojoType="dijit.form.Button" id="submitButton">Send it!</button>
+      </form>
+    </blockquote>
     <br>
     <b>Result</b>
     <div id="response"></div>
