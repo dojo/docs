@@ -55,7 +55,7 @@ All of the dojo.xhrGet `object properties <dojo/xhrGet#dojo-xhrget-supported-obj
 Return type (dojo.Deferred)
 ---------------------------
 
-The return type is the same as dojo.xhrGet.  Please refer to the `return type <dojo/xhrGet#dojo-xhrget-supported-object-properties>` documentation for details.
+The return type is the same as dojo.xhrGet.  Please refer to the `return type <dojo/xhrGet#dojo-xhrget-supported-object-properties>`_ documentation for details.
 
 Handling Status Codes
 ---------------------
