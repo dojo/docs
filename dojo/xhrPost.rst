@@ -111,7 +111,7 @@ Example 1: dojo.xhrPost call to send a form
 
     <b>Simple Form:</b>
     <form action=postIt" id="myform">
-      <input type="text" dojoType="dijit.form.TextBox"></input>
+      <input type="text" dojoType="dijit.form.TextBox" name="formInput"></input>
       <button type="submit" dojoType="dijit.form.Button" id="submitButton">Send it!</button>
     </form>
 
