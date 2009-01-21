@@ -100,8 +100,6 @@ Example 1: dojo.xhrPost call to send a form
         }
         //Call the asynchronous xhrPost
         var deferred = dojo.xhrPost(xhrArgs);  
-
-        });
       }
       dojo.addOnLoad(sendForm);
     </script>
