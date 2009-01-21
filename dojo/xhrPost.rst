@@ -30,7 +30,7 @@ dojo.xhrPost (and other functions in the same line: dojo.xhrGet, dojo.xhrDelete,
 Usage
 =====
 
-The xhrPst() function takes an object as its parameter.  This object defines how the xhrPost should operate.  Like its counterpart, dojo.xhrGet,  this object must contain a 'url' attribute so that the function knows where to send the request.  Additionally, all the dojo.xhrGet parameters are valid, including how to set the load and errors handlers.  So, for specific information about those parameters, please refer to dojo.xhrGet.  This page only lists out the parameters which are usually only used in conjunction with with a POST.
+The xhrPost() function takes an object as its parameter.  This object defines how the xhrPost should operate.  Like its counterpart, dojo.xhrGet,  this object must contain a 'url' attribute so that the function knows where to send the request.  Additionally, all the `dojo.xhrGet parameters <dojo/xhrGet#dojo-xhrget-supported-object-properties>`_ are valid, including how to set the load and errors handlers.  So, for specific information about those parameters, please refer to dojo.xhrGet.  This page only lists out the parameters which are usually only used in conjunction with with a POST.
 
 dojo.xhrPost supported object properties
 ----------------------------------------
