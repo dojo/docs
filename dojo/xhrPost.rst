@@ -160,7 +160,9 @@ Example 2: dojo.xhrPost call to send some text data
 
     <b>Push the button to POST some text.</b>
     <br>
+    <br>
     <button dojoType="dijit.form.Button" id="submitButton2">Send it!</button>
+    <br>
     <br>
     <b>Result</b>
     <div id="response2"></div>
