@@ -73,6 +73,11 @@ dojo.xhrGet supported object properties
 |                  |                                                                                                                            |
 |                  |**This parameter is optional**                                                                                              |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
+|**headers**       |A JavaScript object of name/string value pairs.  These are the headers to send as part of the request.  For example, you can|
+|                  |use the headers option to set the content-type or content-encoding header of the HTTP request.                              |
+|                  |                                                                                                                            |
+|                  |**This parameter is optional**                                                                                              |
++------------------+----------------------------------------------------------------------------------------------------------------------------+
 |**timeout**       |Number of milliseconds to wait until timing out the request.  Default is '0', which means infinite (no timeout).            |
 |                  |                                                                                                                            |
 |                  |**This parameter is optional**                                                                                              |
@@ -437,6 +442,55 @@ Example 7: dojo.xhrGet call and checking the xhr 'status' code in error handler
   .. cv :: html 
 
     <div id="getLicenseErrorStatus" style="height: 100px;"></div>
+
+
+Example 5: dojo.xhrGet call with headers
+----------------------------------------
+
+*Note:  You will need to use firebug or a proxy to see the headers set in the request*
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      function getLicenseHeaders() {
+        //Look up the node we'll stick the text under.
+        var targetNode = dojo.byId("getLicenseHeaders");
+        
+        //The parameters to pass to xhrGet, the url, how to handle it, and the callbacks.
+        var xhrArgs = {
+          url: "/moin_static163/js/dojo/trunk/dojo/LICENSE",
+          handleAs: "text",
+          preventCache: true,
+          headers: {
+            "Content-Type": "text/plain",
+            "Content-Encoding": "ISO-8859-1"
+          },
+          load: function(data){
+            //Replace newlines with nice HTML tags.
+            data = data.replace(/\n/g, "<br>");
+
+            //Replace tabs with spacess.
+            data = data.replace(/\t/g, "&nbsp;&nbsp;&nbsp;");
+
+            targetNode.innerHTML = data;
+          },
+          error: function(error){
+            targetNode.innerHTML = "An unexpected error occurred: " + error;
+          }
+        }
+
+        //Call the asynchronous xhrGet
+        var deferred = dojo.xhrGet(xhrArgs);  
+      }
+      dojo.addOnLoad(getLicenseHeaders);
+    </script>
+
+  .. cv :: html 
+
+    <div id="getLicenseHeaders" style="height: 200px;"></div>
+
 
 
 ========
