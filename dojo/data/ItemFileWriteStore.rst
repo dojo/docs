@@ -72,8 +72,8 @@ The Write API
 
 The write API implementation conforms to the dojo.data specification for Write. Ultimately, the best way to think about it is that you use functions *newItem*, *deleteItem*, *setValue(s)*, and *unsetAttribute* to modify contents of the store. These changes can be undone all in one function call by calling the store *revert* function, or they can be committed and made unreversable by the *save* function. Think of it as semi-transactional.
 
-newItem(), save() and identities
---------------------------------
+newItem(), deleteItem, save() and identities
+--------------------------------------------
 
 Care must be taken when defining an attribute that acts as an identifier for ItemFileWriteStore.  By defining it, you are in control of ensuring it remains unique.  This particularly matters with newItem and deleteItem.  ItemFileWriteStore uses the identifier to track changes.  This means that even if you delete an item, the identity of that item remains reserved and 'in use'.  So, if you go call newItem() and try to reuse the identifier you will get an exception.  The way to clear this issue and reuse the identifier is to commit your changes by calling save().  Save will apply all current changes and clear any pending state, including reserved identifiers. 
 
