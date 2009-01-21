@@ -113,12 +113,57 @@ Example 1: dojo.xhrPost call to send a form
 
     <b>Simple Form:</b>
     <form action=postIt" id="myform">
-      <input type="text" dojoType="dijit.form.TextBox" name="formInput"></input>
+      <input type="text" dojoType="dijit.form.TextBox" name="formInput" value="Some text"></input>
       <button type="submit" dojoType="dijit.form.Button" id="submitButton">Send it!</button>
     </form>
     <br>
     <b>Result</b>
     <div id="response"></div>
+
+Example 2: dojo.xhrPost call to send some text data
+---------------------------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dijit.form.Button");
+
+      function sendText() {
+        var button = dijit.byId("submitButton");
+
+        dojo.connect(button, "onClick", function(event){
+          //The parameters to pass to xhrPost, the message, and the url to send it to
+          //Also, how to handle the return and callbacks.
+          var xhrArgs = {
+            url: "postIt",
+            postContent: "Some random text",
+            handleAs: "text",
+            load: function(data){
+              dojo.byId("response").innerHTML = "Message posted.";
+            },
+            error: function(error){
+              //We'll 404 in the demo, but that's okay.  We don't have a 'postIt' service on the 
+              //docs server.
+              dojo.byId("response").innerHTML = "Message posted.";
+            }
+          }
+          //Call the asynchronous xhrPost
+          var deferred = dojo.xhrPost(xhrArgs);  
+        });
+      }
+      dojo.addOnLoad(sendText);
+    </script>
+
+  .. cv :: html 
+
+    <b>Push the button to POST some text.</b>
+    <br>
+    <button dojoType="dijit.form.Button" id="submitButton2">Send it!</button>
+    <br>
+    <b>Result</b>
+    <div id="response2"></div>
 
 ========
 See also
