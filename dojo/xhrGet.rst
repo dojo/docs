@@ -444,7 +444,7 @@ Example 7: dojo.xhrGet call and checking the xhr 'status' code in error handler
     <div id="getLicenseErrorStatus" style="height: 100px;"></div>
 
 
-Example 5: dojo.xhrGet call with headers
+Example 8: dojo.xhrGet call with headers
 ----------------------------------------
 
 *Note:  You will need to use firebug or a proxy to see the headers set in the request*
