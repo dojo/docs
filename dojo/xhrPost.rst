@@ -59,7 +59,7 @@ The return type is the same as dojo.xhrGet.  Please refer to the `return type <d
 Handling Status Codes
 ---------------------
 
-Handling status codes for xhrPost is the same as handling them for xhrGet.  Please refer to the `status code documentation <dojo/xhrGet#handling-status-codes>`_ for details.
+Handling status codes for xhrPost is the same as handling them for xhrGet.  Please refer to the dojo.xhrGet `status code documentation <dojo/xhrGet#handling-status-codes>`_ for details.
 
 ========
 Examples
