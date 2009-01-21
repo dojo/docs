@@ -95,9 +95,12 @@ Example 1: dojo.xhrPost call to send a form
             form: dojo.byId("myform"),
             handleAs: "text",
             load: function(data){
+              dojo.byId("response").innerHTML = "Message posted.";
             },
             error: function(error){
-               alert(error);
+              //We'll 404 in the demo, but that's okay.  We don't have a 'postIt' service on the 
+              //docs server.
+              dojo.byId("response").innerHTML = "Message posted.";
             }
           }
           //Call the asynchronous xhrPost
@@ -110,13 +113,12 @@ Example 1: dojo.xhrPost call to send a form
   .. cv :: html 
 
     <b>Simple Form:</b>
-    <!-- Setting a dummy action location to a file.  This is so we don't get a 404 error in the example." -->
-    <form action=/moin_static163/js/dojo/trunk/dojo/LICENSE" id="myform">
+    <form action=postIt" id="myform">
       <input type="text" dojoType="dijit.form.TextBox" name="formInput"></input>
       <button type="submit" dojoType="dijit.form.Button" id="submitButton">Send it!</button>
     </form>
-
-
+    <b>Result</b>
+    <div id="response"></div>
 
 ========
 See also
