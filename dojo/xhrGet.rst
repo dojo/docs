@@ -107,6 +107,9 @@ dojo.xhrGet supported object properties
 |                  |**This parameter is optional**                                                                                              |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
 
+Return type (dojo.Deferred)
+---------------------------
+
 For both the synchronous and asynchronous cases, the dojo.xhrGet() call will return a 'dojo.Deferred' object.  This object allows you to define additional callbacks for success and error conditions.  It can also be used in place of defining 'load' and error' functions in your request parameters for dojo.xhrGet().  See Example 4 for details on how to use the dojo.Deferred object to set your load and error handlers.
 
 Handling Status Codes
