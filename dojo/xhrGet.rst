@@ -443,8 +443,8 @@ Example 7: dojo.xhrGet call and checking the xhr 'status' code in error handler
 See also
 ========
 
-* `dojo.xhrPut <dojo/xhrPut>`_
-* `dojo.rawXhrPut <dojo/rawXhrPut>`_
 * `dojo.xhrPost <dojo/xhrPost>`_
 * `dojo.rawXhrPost <dojo/rawXhrPost>`_
+* `dojo.xhrPut <dojo/xhrPut>`_
+* `dojo.rawXhrPut <dojo/rawXhrPut>`_
 * `dojo.xhrDelete <dojo/xhrDelete>`_
