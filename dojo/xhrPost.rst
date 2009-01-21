@@ -77,6 +77,7 @@ Example 1: dojo.xhrPost call to send a form
     <script>
       dojo.require("dijit.form.Button");
       dojo.require("dijit.form.TextBox");
+      dojo.require("dijit.form.CheckBox");
 
       function sendForm() {
         var button = dijit.byId("submitButton");
@@ -115,6 +116,7 @@ Example 1: dojo.xhrPost call to send a form
     <b>Simple Form:</b>
     <form action=postIt" id="myform">
       <input type="text" dojoType="dijit.form.TextBox" name="formInput" value="Some text"></input>
+      <input type="checkbox" dojoType="dijit.form.CheckBox" name="checkboxInput" value="checked"></input>
       <button type="submit" dojoType="dijit.form.Button" id="submitButton">Send it!</button>
     </form>
     <br>
