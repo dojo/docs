@@ -78,7 +78,7 @@ The xhrGet() function takes an object as its parameter.  This object defines how
 |                  |options.                                                                                                                    |
 |                  |                                                                                                                            |
 |                  |  **Note:**  This does **NOT** work for FORM based authentication. FORM based authentication is a use of POST, where the    |
-|                  |  POST body contains the credentials.  FOM authentication is server implementation specific.                                | 
+|                  |  POST body contains the credentials.  FORM authentication is server implementation specific.                                | 
 |                  |                                                                                                                            |
 |                  |**This parameter is optional**                                                                                              |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
@@ -86,7 +86,7 @@ The xhrGet() function takes an object as its parameter.  This object defines how
 |                  |options.                                                                                                                    |
 |                  |                                                                                                                            |
 |                  |  **Note:**  This does **NOT** work for FORM based authentication. FORM based authentication is a use of POST, where the    |
-|                  |  POST body contains the credentials.  FOM authentication is server implementation specific.                                |
+|                  |  POST body contains the credentials.  FORM authentication is server implementation specific.                                |
 |                  |                                                                                                                            |
 |                  |**This parameter is optional**                                                                                              |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
@@ -379,6 +379,57 @@ Example 6: dojo.xhrGet call and checking the xhr 'status' code
   .. cv :: html 
 
     <div id="getLicenseStatus" style="height: 100px;"></div>
+
+Example 7: dojo.xhrGet call and checking the xhr 'status' code in error handler
+-------------------------------------------------------------------------------
+*Note: This ust shows using switch in an error handler to display some message based on a particular failure.*
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      function getLicenseErrorStatus() {
+        //Look up the node we'll stick the text under.
+        var targetNode = dojo.byId("getLicenseErrorStatus");
+        
+        //The parameters to pass to xhrGet, the url, how to handle it, and the callbacks.
+        var xhrArgs = {
+          url: "/moin_static163/js/dojo/trunk/dojo/LICENSE_NOT_THERE",
+          handleAs: "text",
+          preventCache: true,
+          load: function(data, ioargs){
+            targetNode.innerHTML = "XHR returned HTTP status: " + ioargs.xhr.status;
+          },
+          error: function(error, ioargs){
+            var message = "";
+            switch(ioargs.xhr.status){
+               case 404:
+                 message = "The requested page was not found";
+                 break;
+               case 500:
+                 message = "The server reported an error.";
+                 break;
+               case 407:
+                 message = "You need to authenticate with a proxy.";
+                 break;
+               default:
+                 message = "Unknown error.";
+            }
+            targetNode.innerHTML = message;
+          }
+        }
+
+        //Call the asynchronous xhrGet
+        var deferred = dojo.xhrGet(xhrArgs);  
+      }
+      dojo.addOnLoad(getLicenseErrorStatus);
+    </script>
+
+  .. cv :: html 
+
+    <div id="getLicenseErrorStatus" style="height: 100px;"></div>
+
 
 ========
 See also
