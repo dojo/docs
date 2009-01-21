@@ -65,8 +65,8 @@ Handling status codes for xhrPost is the same as handling them for xhrGet.  Plea
 Examples
 ========
 
-For specific examples of how to use dojo.xhrPost, please refer to the following.  You can use Firebug with Firefox to see dojo making the xhr requests and the generated POST data.
-
+For specific examples of how to use dojo.xhrPost, please refer to the following.  You can use Firebug with Firefox to see dojo making the xhr requests and the generated POST data.  For Internet Explorer, you will need to use a debugging proxy like 'Charles'.
+ 
 Example 1: dojo.xhrPost call to send a form
 -------------------------------------------
 
