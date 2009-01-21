@@ -114,7 +114,7 @@ Example 1: dojo.xhrGet call to fetch the dojo license.
 See also
 ========
 
-* `dojo.xhrGet <dojo/xhrPost>`_
+* `dojo.xhrGet <dojo/xhrGet>`_
 * `dojo.xhrPut <dojo/xhrPut>`_
 * `dojo.rawXhrPut <dojo/rawXhrPut>`_
 * `dojo.xhrDelete <dojo/xhrDelete>`_
