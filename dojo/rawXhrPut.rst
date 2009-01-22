@@ -5,53 +5,19 @@ dojo.rawXhrPut
 
 :Status: Draft
 :Version: 1.0
-:Available: since V?
+:Available: since V0.9
 
 .. contents::
    :depth: 2
 
-TODO: short summary of the component/class/method
-
-
-============
-Introduction
-============
-
-TODO: introduce the component/class/method
-
-
-=====
-Usage
-=====
-
-TODO: how to use the component/class/method
-
-.. code-block :: javascript
- :linenos:
-
- <script type="text/javascript">
-   // your code
- </script>
-
-
-
-========
-Examples
-========
-
-Programmatic example
---------------------
-
-TODO: example
-
-Declarative example
--------------------
-
-TODO: example
+The original purpose of dojo.rawXhrPut was a method that could be used to send a raw post body to the server.  As of 1.3, this function is common with dojo.xhrPut().  So, for usage of dojo.rawXhrPut(), see `dojo.xhrPut() <dojo/xhrPut>`_
 
 
 ========
 See also
 ========
 
-* TODO: links to other related articles
+* `dojo.xhrGet <dojo/xhrGet>`_
+* `dojo.xhrPost <dojo/xhrPost>`_
+* `dojo.rawXhrPost <dojo/rawXhrPost>`_
+* `dojo.xhrDelete <dojo/xhrDelete>`_
