@@ -63,8 +63,12 @@ Pseudocode Example 2:  Assigning callbacks to fire when a deferred fires.
 Examples
 ========
 
+Example 1: Creating a deferred and adding callbacks
+---------------------------------------------------
 
-TODO: short header
-------------------
 
-TODO: example
+========
+See Also
+========
+
+* `dojo.xhrGet() <dojo/xhrGet>`_
