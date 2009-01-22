@@ -274,9 +274,7 @@ Or you can construct DOM programmatically.
 Place using create()
 --------------------
 
-*TODO: revise and expand this section.*
-
-Alternative way to place (and create) a node is `dojo.create <dojo/create>`_. It is a simple helper that creates a node with a given tag (or uses the existing node), and applies optionally `dojo.attr <dojo/attr>`_ and `dojo.place <dojo/place>`_ to it. While its creation part is not as rich, it allows to set complex attributes and styles dynamically without messy string manipulations. The additional benefit of `dojo.create <dojo/create>`_ is that by using `dojo.attr <dojo/attr>`_ all attributes will be applied in a browser-independent way eliminating possible differences.
+Alternative way to place (and create) a node is `dojo.create <dojo/create>`_. It is a simple helper that creates a node with a given tag (or uses the existing node), and applies optionally `dojo.attr <dojo/attr>`_ and `dojo.place <dojo/place>`_ to it. While its creation part is not as rich, it allows to set complex attributes and styles dynamically without messy string manipulations. The additional benefit of `dojo.create <dojo/create>`_ is that by using `dojo.attr <dojo/attr>`_ all attributes will be applied in a browser-independent way avoiding possible differences.
 
 .. code-block :: javascript
   :linenos:
