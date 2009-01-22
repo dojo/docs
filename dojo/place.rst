@@ -41,15 +41,11 @@ The function returns a node it placed. In case of an HTML fragment, if it has ju
 
   See `DOM Core Level 1: Element <http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-745549614>`_ for more details.
 
-- A text node: ``nodeType`` is 3 for ``TEXT_NODE``, example: "Hello, world!".
-
-  See `DOM Core Level 1: Text <http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-1312295772>`_ for more details.
-
 - A document fragment representing a group of nodes: ``nodeType`` is 11 for ``DOCUMENT_FRAGMENT``, example: "<p>1st paragraph</p><p>2nd paragraph</p>".
 
   See `DOM Core Level 1: DocumentFragment <http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-B63ED1A3>`_ for more details.
 
-  The document fragment is a very useful tool to work with a group of elements, because standard DOM methods can work with it as with a regular node operating on the whole group, e.g., inserting or appending it as a whole.
+  The document fragment is a very useful tool to work with a group of elements, because standard DOM methods can work with it as with a regular node operating on the whole group, e.g., inserting or appending it as a whole. Note that DocumentFragment is a Node, but not an Element, e.g., obviously it doesn't support ``innerHTML``, ``style``, or any other familiar attributes of the element.
 
 Below is the full list of placement options with live examples illustrating their use.
 
