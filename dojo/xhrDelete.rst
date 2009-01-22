@@ -15,7 +15,7 @@ dojo.xhrDelete
 Introduction
 ============
 
-The dojo.xhrDelete() function is is a lesser used, but still important, function for doing asynchronous actions to a server.  This function is mostly used in REST style environments, where an application wishes to delete a resource on the server   This function, in essence, implements making an asynchronous HTTP 'DELETE' call.  You can refer to the `HTTP spec <http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html>1_ for more information on what is defined and expected for a DELETE operation.
+The dojo.xhrDelete() function is is a lesser used, but still important, function for doing asynchronous actions to a server.  This function is mostly used in REST style environments, where an application wishes to delete a resource on the server   This function, in essence, implements making an asynchronous HTTP 'DELETE' call.  You can refer to the `HTTP spec <http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html>`_ for more information on what is defined and expected for a DELETE operation.
 
 The following information should get you up and going with dojo.xhrDelete().  As with all dojo functions, always refer to the API docs for detailed information.
 
