@@ -34,21 +34,22 @@ JSON Referencing provides for id-based, path-based, and combined referencing. Wi
    }
  }
 
-Path-based referencing works by specifying a JSON value by it's location within the object structure. With path-based referencing the # symbol should be used to denote the root of the current object structure. dojox.json.ref also supports $ and *this* to reference the root. With path-based referencing, any JSON value may be referenced, not just objects. For example:
+Path-based referencing works by specifying a JSON value by it's location within the object structure. With path-based referencing the # symbol should be used to denote the root of the current object structure and to separate. A path reference consists of dot delimited property names or array index numbers. dojox.json.ref also supports $ and *this* to reference the root. With path-based referencing, any JSON value may be referenced, not just objects. For example:
 
 .. code-block :: javascript
 
  {
    "name":"Kris Zyp",
-   "children":[{"name":"Jennika Zyp"}],
+   "children":[{"name":"Jennika Zyp"},{"name":"Korban Zyp"}],
    "spouse":{
        "name":"Nicole Zyp",
        "spouse":{"$ref":"#"},
-       "children":{"$ref":"#.children"}
-   }
+       "children":{"$ref":"#children"}
+   },
+   "oldestChild":{"$ref":"#children.0"}
  }
 
-Id and path-based referencing can also be combined; a path can be postpended to an id reference. For example:
+Id and path-based referencing can also be combined; a path can be postpended to an id reference. The # separates the id from the path portion and the path operates on the object referred by the id. For example:
 
 .. code-block :: javascript
 
@@ -56,7 +57,7 @@ Id and path-based referencing can also be combined; a path can be postpended to 
    "name":"Kris Zyp",
    "id":"kriszyp",
    "children":[{"name":"Jennika Zyp"}],
-   "friends":[{"$ref":"jesse#.spouse"}]
+   "friends":[{"$ref":"jesse#spouse"}]
  }
 
 `This tutorial <http://www.sitepen.com/blog/2008/06/17/json-referencing-in-dojo/>`_ provides more in-depth overview of dojox.json.ref. dojox.json.ref is used by the JsonRestStore for reference resolution and indexing.
@@ -71,6 +72,8 @@ Features
 2. Utilizes the standard relative URL scheme as the basis for referencing.
 
 3. Id-based, path-based, and combined referencing is supported
+
+4. Useful exceptions when parsing fails
 
 
 =====
