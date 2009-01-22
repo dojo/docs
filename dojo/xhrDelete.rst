@@ -104,6 +104,7 @@ See also
 ========
 
 * `dojo.xhrGet <dojo/xhrGet>`_
+* `dojo.xhrPost <dojo/xhrPost>`_
+* `dojo.rawXhrPost <dojo/rawXhrPost>`_
 * `dojo.xhrPut <dojo/xhrPut>`_
 * `dojo.rawXhrPut <dojo/rawXhrPut>`_
-* `dojo.xhrDelete <dojo/xhrDelete>`_
