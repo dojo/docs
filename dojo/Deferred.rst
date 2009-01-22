@@ -30,7 +30,7 @@ Usage
 
 Using a dojo.Deferred is simple.  When you are presented with one from another function call as the return, you simply invoke 'addCallback' and hand if a function to execute when the Deferred is fired.  Now, if you are creating a deferred for some purpose, you simply instantiate one and return it to the caller.  When the task you want to associate with the deferred is complete, you invoke the 'callback' or errback' functions to signal the completion.  This in turn will invoke any other callback and errback functions that have been associated with the deferred.  See below for details:
 
-Psuedocode Example 1:  Creating and calling a deferred.
+Pseudocode Example 1:  Creating and calling a deferred.
 -------------------------------------------------------
 
 .. code-block :: javascript
@@ -42,7 +42,7 @@ Psuedocode Example 1:  Creating and calling a deferred.
     return deferred;
   </script>
 
-Psuedocode Example 2:  Assigning callbacks to fire when a deferred fires.
+Pseudocode Example 2:  Assigning callbacks to fire when a deferred fires.
 -------------------------------------------------------------------------
 
 .. code-block :: javascript
