@@ -96,12 +96,11 @@ Alternately, you can "use plain `Deferred's <dojo/Deferred>`_" to register callb
 dojo.xhrGet
 ===========
 
-xhrGet will create an Ajax request using the HTTP GET method, returning some data to a callback. The callback is defined as a member of the object used to create the request (the property-bag), or by using the _dojo.Deferred .addCallback method.
-
 .. _dojo.Deferred: dojo/Deferred
 
-For complete details and examples, see the `dojo.xhrGet documentation <dojo/xhrGet>`_.
+xhrGet will create an Ajax request using the HTTP GET method, returning some data to a callback. The callback is defined as a member of the object used to create the request (the property-bag), or by using the dojo.Deferred_ .addCallback method.
 
+For complete details and examples, see the `dojo.xhrGet documentation <dojo/xhrGet>`_.
 
 ============
 dojo.xhrPost
