@@ -34,7 +34,7 @@ tag
 attrs
   A dictionary of attributes to be set on ``node``. This parameter is passed to `dojo.attr <dojo/attr>`_ unmodified after the node is created.
 
-  Can be ``null`` meaning "don't set any attributes".
+  Can be ``null`` or undefined meaning "don't set any attributes". You should always specify it (as ``null``) if you want to specify the rest of arguments.
 
 refNode
   A string (interpreted as an id of a DOM node) or a DOM node. This parameter is passed to `dojo.place <dojo/place>`_ unmodified after the node is created, and attributes are set.
