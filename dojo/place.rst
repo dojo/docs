@@ -12,6 +12,8 @@ dojo.place
 
 ``dojo.place()`` is a useful DOM Node placement utility function. It comes in very handy when you need to create and place nodes as siblings or children of other nodes or replace other nodes. It is very useful when working with existing nodes too, because it encapsulates all necessary boilerplate code required to place a node correctly.
 
+To see this utility in context, read the `DOM Quick Start <quickstart/dom>`_ first.
+
 The function takes up to three arguments:
 
 .. code-block :: javascript
