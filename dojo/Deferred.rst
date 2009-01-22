@@ -66,6 +66,42 @@ Examples
 Example 1: Creating a deferred and adding callbacks
 ---------------------------------------------------
 
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dijit.form.Button");
+
+      function createDeferred() {
+        var button = dijit.byId("deferredButton");
+        dojo.connect(button, "onClick", function(event){
+          //Create a deferred and set it to fire in 1 second.
+          var deferred = new dojo.Deferred();
+          setTimeout(function(){deferred.callback({called: true})}, 1000);
+          dojo.byId("response").innerHTML = "Created a deferred.";
+ 
+          //Add a callback that changes the displayed message after it fires.
+          deferred.addCallback(function(){
+            dojo.byId("response").innerHTML = "Deferred has fired.";   
+          });
+        });
+      }
+      dojo.addOnLoad(createDeferred);
+    </script>
+
+  .. cv :: html 
+
+    <b>Push the button to create a deferred and set up an async callback</B>
+    <br>
+    <br>
+    <button dojoType="dijit.form.Button" id="deferredButton">Create deferred!</button>
+    <br>
+    <br>
+    <b>Result</b>
+    <div id="response"></div>
+
+
 
 ========
 See Also
