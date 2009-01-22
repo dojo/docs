@@ -69,7 +69,7 @@ Example 1: dojo.xhrDelete call to request a 'delete' of a URI
           //The parameters to pass to xhrPost, the message, and the url to send it to
           //Also, how to handle the return and callbacks.
           var xhrArgs = {
-            url: "postIt",
+            url: "deleteIt",
             handleAs: "text",
             load: function(data){
               dojo.byId("response2").innerHTML = "Delete completed";
@@ -93,7 +93,7 @@ Example 1: dojo.xhrDelete call to request a 'delete' of a URI
     <b>Push the button to request a DELETE via xhr.</b>
     <br>
     <br>
-    <button dojoType="dijit.form.Button" id="deletetButton">Call DELETE!</button>
+    <button dojoType="dijit.form.Button" id="deleteButton">Call DELETE!</button>
     <br>
     <br>
     <b>Result</b>
