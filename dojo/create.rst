@@ -10,7 +10,7 @@ dojo.create
 .. contents::
    :depth: 2
 
-A convenient DOM creation, manipulation and placement utility shorthand. It is designed to simplify the frequently used sequence of DOM manipulation: create a node, set attributes on it, and place it in the DOM. It can be used with existing nodes too, if you want assing new attributes and place them afterwards.
+A convenient DOM creation, manipulation and placement utility shorthand. It is designed to simplify the frequently used sequence of DOM manipulation: create a node, set attributes on it, and place it in the DOM. It can be used with existing nodes too, if you want to assign new attributes and place it afterwards.
 
 To see this utility in context, read the `DOM Quick Start <quickstart/dom>`_ first.
 
@@ -34,7 +34,7 @@ tag
 attrs
   A dictionary of attributes to be set on ``node``. This parameter is passed to `dojo.attr <dojo/attr>`_ unmodified after the node is created.
 
-  Can be ``null`` or undefined meaning "don't set any attributes". You should always specify it (as ``null``) if you want to specify the rest of arguments.
+  Can be ``null`` or undefined meaning "don't set any attributes". You should always specify it explicitly (as ``null``) if you want to specify the rest of arguments.
 
 refNode
   A string (interpreted as an id of a DOM node) or a DOM node. This parameter is passed to `dojo.place <dojo/place>`_ unmodified after the node is created, and attributes are set.
@@ -55,7 +55,7 @@ Create a <div>:
 .. code-block :: javascript
   :linenos:
 
-  var n = dojo.create("div", null);
+  var n = dojo.create("div");
 
 Create a <div> with content:
 
