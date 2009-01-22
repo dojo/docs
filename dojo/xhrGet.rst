@@ -39,7 +39,7 @@ dojo.xhrGet supported object properties
 |**url**           |The URL to request data from.  This URL must go to the same server that originated the page or it will fail the load.  This |
 |                  |is due to the same domain browser security restriction.                                                                     +
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
-|**handleAs**      |This parameter specifies how to handle the data returned from the browser.  It usually takes values of 'text', 'xml', or    |
+|**handleAs**      |This parameter specifies how to handle the data returned from the server.  It usually takes values of 'text', 'xml', or     |
 |                  |'json'.  What those values do is instruct it to try and hand the data to the asynchronous callback functions in that format.|
 |                  |Naturally if you specify a format that doesn't match what the server sends you will likely get an error.                    |
 |                  |                                                                                                                            |
