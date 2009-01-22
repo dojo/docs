@@ -45,7 +45,9 @@ The function returns a node it placed. In case of an HTML fragment, if it has ju
 
   See `DOM Core Level 1: DocumentFragment <http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-B63ED1A3>`_ for more details.
 
-  The document fragment is a very useful tool to work with a group of elements, because standard DOM methods can work with it as with a regular node operating on the whole group, e.g., inserting or appending it as a whole. Note that DocumentFragment is a Node, but not an Element, e.g., obviously it doesn't support ``innerHTML``, ``style``, or any other familiar attributes of the element.
+  The document fragment is a very useful tool to work with a group of arbitrary nodes, because standard DOM methods can work with it as with a regular node operating on the whole group, e.g., inserting or appending it as a whole.
+
+  Note that DocumentFragment is a Node, but not an Element, e.g., obviously it doesn't support ``innerHTML``, ``style``, or any other familiar attributes of the element.
 
 Below is the full list of placement options with live examples illustrating their use.
 
