@@ -58,6 +58,7 @@ You can do this as often as you like during the lifetime of a single page view.
 **NOTE**: The initial page view is tracked as part of the ``GAonLoad`` event fired, so there is no need to do it manually. You will not, however, be able to call trackPageView() until after GAonLoad has fired.
 
 .. code-block :: javascript
+  :linenos:
 
    var tracker = new dojox.ananlytics.Urchin({ acct:"UA-12345-67" });
    dojo.connect(tracker, "GAonLoad", function(){
@@ -65,3 +66,15 @@ You can do this as often as you like during the lifetime of a single page view.
    });
 
 This is provided only as a convenience, and to have a reliable way of being alerted when Google Ananlytics is ready. 
+
+You can also do this as a shorthand, too. If you want to prevent the automatic tracking, and only track a custom-ajax page onload:
+
+.. code-block :: javascript
+  :linenos:
+
+  new dojox.analytics.Urchin({ acct:"UA-12345-67", 
+     GAonLoad: function(){
+         this.trackPageView("/special/pageload")
+     }
+  });
+  
