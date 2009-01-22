@@ -8,11 +8,15 @@ dojo.place
 :Available: since 1.2
 
 .. contents::
-   :depth: 2
+   :depth: 3
 
 ``dojo.place()`` is a useful DOM Node placement utility function. It comes in very handy when you need to create and place nodes as siblings or children of other nodes or replace other nodes. It is very useful when working with existing nodes too, because it encapsulates all necessary boilerplate code required to place a node correctly.
 
 To see this utility in context, read the `DOM Quick Start <quickstart/dom>`_ first.
+
+========
+Overview
+========
 
 The function takes up to three arguments:
 
@@ -52,6 +56,10 @@ The function returns a node it placed. In case of an HTML fragment, if it has ju
   Note that DocumentFragment is a Node, but not an Element, e.g., obviously it doesn't support ``innerHTML``, ``style``, or any other familiar attributes of the element.
 
 Below is the full list of placement options with live examples illustrating their use.
+
+=================
+Placement options
+=================
 
 Place "before" or "after"
 -------------------------
@@ -273,8 +281,12 @@ In the fragment above the <p> node will have 3 children: a text node (spaces and
 
 Or you can construct DOM programmatically.
 
-Place using create()
---------------------
+============
+Alternatives
+============
+
+Place using dojo.create()
+-------------------------
 
 Alternative way to place (and create) a node is `dojo.create <dojo/create>`_. It is a simple helper that creates a node with a given tag (or uses the existing node), and applies optionally `dojo.attr <dojo/attr>`_ and `dojo.place <dojo/place>`_ to it. While its creation part is not as rich, it allows to set complex attributes and styles dynamically without messy string manipulations. The additional benefit of `dojo.create <dojo/create>`_ is that by using `dojo.attr <dojo/attr>`_ all attributes will be applied in a browser-independent way avoiding possible differences.
 
