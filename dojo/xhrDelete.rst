@@ -62,7 +62,7 @@ Example 1: dojo.xhrDelete call to request a 'delete' of a URI
     <script>
       dojo.require("dijit.form.Button");
 
-      function delete() {
+      function deleteUri() {
         var button = dijit.byId("deleteButton");
 
         dojo.connect(button, "onClick", function(event){
@@ -72,20 +72,20 @@ Example 1: dojo.xhrDelete call to request a 'delete' of a URI
             url: "deleteIt",
             handleAs: "text",
             load: function(data){
-              dojo.byId("response2").innerHTML = "Delete completed";
+              dojo.byId("response").innerHTML = "Delete completed";
             },
             error: function(error){
               //We'll 404 in the demo, but that's okay.  We don't have a 'postIt' service on the 
               //docs server.  This is fine.  Just treat it as a success for purposes of the example.
-              dojo.byId("response2").innerHTML = "Delete completed";
+              dojo.byId("response").innerHTML = "Delete completed";
             }
           }
-          dojo.byId("response2").innerHTML = "Delete requested..."
+          dojo.byId("response").innerHTML = "Delete requested..."
           //Call the asynchronous xhrDelete
           var deferred = dojo.xhrDelete(xhrArgs);  
         });
       }
-      dojo.addOnLoad(delete);
+      dojo.addOnLoad(deleteUri);
     </script>
 
   .. cv :: html 
@@ -97,7 +97,7 @@ Example 1: dojo.xhrDelete call to request a 'delete' of a URI
     <br>
     <br>
     <b>Result</b>
-    <div id="response2"></div>
+    <div id="response"></div>
 
 ========
 See also
