@@ -1,7 +1,7 @@
 #format dojo_rst
 
-dojo.xhrPost
-============
+dojo.xhrPut
+===========
 
 :Status: Draft
 :Version: 1.0
@@ -77,21 +77,21 @@ Example 1: dojo.xhrPut call to send some text data
           //The parameters to pass to xhrPost, the message, and the url to send it to
           //Also, how to handle the return and callbacks.
           var xhrArgs = {
-            url: "postIt",
-            postData: "Some random text",
+            url: "putIt",
+            putData: "Some random text",
             handleAs: "text",
             load: function(data){
-              dojo.byId("response2").innerHTML = "Message posted.";
+              dojo.byId("response2").innerHTML = "Message put.";
             },
             error: function(error){
               //We'll 404 in the demo, but that's okay.  We don't have a 'postIt' service on the 
               //docs server.
-              dojo.byId("response2").innerHTML = "Message posted.";
+              dojo.byId("response2").innerHTML = "Message put.";
             }
           }
           dojo.byId("response2").innerHTML = "Message being sent..."
           //Call the asynchronous xhrPost
-          var deferred = dojo.xhrPost(xhrArgs);  
+          var deferred = dojo.xhrPut(xhrArgs);  
         });
       }
       dojo.addOnLoad(sendText);
