@@ -77,22 +77,6 @@ Top priority: Dojo Base
 
   needed: full page
 
-* `dojo.xhrDelete <dojo/xhrDelete>`_
-
-  Completed:  Needs review.
-
-* `dojo.xhrGet <dojo/xhrGet>`_
-
-  Completed:  Needs review.
-
-* `dojo.rawXhrPost <dojo/rawXhrPost>`_
-
-  Completed:  Needs review.
-
-* `dojo.rawXhrPut <dojo/rawXhrPut>`_
-
-  Completed:  Needs review.
-
 * `dojo.contentBox <dojo/contentBox>`_
 
   needed: examples
