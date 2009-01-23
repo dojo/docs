@@ -201,4 +201,4 @@ Also note that a widget's getChildren() method and similar methods will *not* in
 See also
 ========
 
-* `Writing Widgets <gettingStarted/writingWidgets>`_
+* `Writing Widgets <quickstart/writingWidgets>`_
