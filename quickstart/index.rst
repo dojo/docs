@@ -117,8 +117,13 @@ Testing, Debugging and Tuning
 Testing
 -------
 
+* TODOC: doh, unit tests
+* TODOC: doh.robot
+
 Debugging
 ---------
+
+* TODOC: firebug lite, isDebug, debugAtAllCosts, console.*
 
 Tuning
 ------
