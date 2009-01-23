@@ -11,7 +11,7 @@ Custom Builds
 .. contents::
    :depth: 4
 
-How to use Dojo's custom build system to package your code for optimal runtime performance.
+How to use Dojo's custom build system to package your code for optimal runtime performance. This guide briefly covers many common usages and parameters. See the `full build documentation <build/index>`_ for all the details.
 
 
 ============
