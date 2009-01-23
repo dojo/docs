@@ -62,6 +62,8 @@ Dojo Styleguides
 Utilities and Miscellaneous
 ===========================
 
-The Dojo build system is used to create efficient Dojo packages customized for a given application or website.
+There are several Dojo-related sub-projects, utilities, and helpers shipped with Dojo:
 
-* `Dojo Build System <build/index>`_
+* `Dojo Build System <build/index>`_ - The Dojo build system is used to create efficient optimized packages of JavaScript and CSS, customized for a given application or website.
+
+* `The Dojo API Doc System <util/doctools>`_ - Dojo uses a custom inline comment syntax which produces well structured xml, and powers the official `API Docs <http://api.dojotoolkit.org>`_ . 
