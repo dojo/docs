@@ -1,15 +1,15 @@
 #format dojo_rst
 
+dojox.analytics.Urchin
+======================
+
 :Status: Draft
 :Version: 1.0
-:Project owner: ?--
-:Available: since V?
+:Project owner: Peter Higgins
+:Available: since V1.2
 
 .. contents::
    :depth: 2
-
-dojox.analytics.Urchin
-======================
 
 This class is used to delay loading of the popular `Google Analytics <http://google.com/analytics>`_ Tracker, formerly known as Urchin. The synchronous nature of ``<script>`` tags causes page rendering to stall until loading of remote files has completed, and this module alleviates that. 
 
@@ -48,7 +48,13 @@ Being a Class constructor, you can also use Urchin with a ``dojoType``. Assuming
 Optional Parameters
 -------------------
 
-There is only one optional parameter: ``loadInterval``. This defines the time in ms to repoll for the availability of the Google tracker. Set to a higher number for less processing, and a lower number for more frequent checks. Default is 400.
+There is only one optional parameter: ``loadInterval``. This defines the time in ms to repoll for the availability of the Google tracker. Set to a higher number for less processing, and a lower number for more frequent checks. Default is 420 in Dojo 1.2, and 42 in Dojo versions 1.3 and higher.
+
+The reduction in default interval time is the result of implementing a decaying timer, to ensure the analyitics tracker was loaded as quickly as possible, without continually running in the event the tracker is never resolved. These options are defined by the ``decay``, ``timeout``, and ``loadInterval`` parameters. ``timeout`` defines the time in ms the ``loadInterval`` can become before quitting, and the ``decay`` defines a float to increment the ``loadInterval`` by. The default ``decay`` is 0.5, incrementing the interval by 50% on each iteration. eg:
+
+100, 150, 225, 345 ...
+
+When the ``timeout`` is reached, the tracker fails. ``GAonLoad`` will not fire, so ensure you do not call a reference to the tracker until after GAonLoad fires.
 
 Ajax-API
 --------
