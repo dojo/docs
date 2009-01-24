@@ -1,5 +1,13 @@
 #format dojo_rst
 
+:Status: Draft
+:Version: 1.0
+:Project owner: ?--
+:Available: since V?
+
+.. contents::
+   :depth: 2
+
 dojox.analytics.Urchin
 ======================
 
