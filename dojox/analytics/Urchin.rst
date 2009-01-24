@@ -16,6 +16,7 @@ This class is used to delay loading of the popular `Google Analytics <http://goo
 To use, require the Urchin module into your page, and create a new instance:
 
 .. code-block :: javascript
+  :linenos:
 
   dojo.require("dojox.analytics.Urchin");
   dojo.addOnLoad(function(){
