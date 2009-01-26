@@ -219,6 +219,7 @@ Example 6: Overlaying a dijit.form.TextBox
 
     <button jsId="b11" dojoType="dijit.form.Button">Show Standby widget</button>
     <button jsId="b12" dojoType="dijit.form.Button">Hide Standby widget</button>
+    <br><br>
     <input type="text" dojoType="dijit.form.TextBox" id="dijitWidget"></input>
     <div jsId="basicStandby6" dojoType="dojox.widget.Standby" target="dijitWidget"></div>
 
