@@ -62,7 +62,7 @@ This kind of behavioral widget is useful in some cases, but it has severe limita
 there isn't even a DOM node to replace at all.
 
 
-Here's a simple example of a widget that creates it's own DOM tree, and replaces the source DOM node with it's DOM tree:
+Here's a simple example of a widget that creates it's own DOM tree:
 
 
 .. cv-compound::
@@ -74,12 +74,6 @@ Here's a simple example of a widget that creates it's own DOM tree, and replaces
 		buildRendering: function(){
 			// create the DOM for this widget
 			this.domNode = dojo.create("button", {innerHTML: "push me"});
-     
-			// swap out the original source DOM w/the DOM for this widget
-			var source = this.srcNodeRef;
-			if(source && source.parentNode){
-				source.parentNode.replaceChild(this.domNode, source);
-			}
 		}
 	});
 	dojo.addOnLoad(function(){
@@ -92,7 +86,7 @@ Here's a simple example of a widget that creates it's own DOM tree, and replaces
 
 	<span dojoType="MyFirstWidget">i'll be replaced</span>
 
-This widget doesn't do much, but it does show the minimum requirements for a (non-behavioral) widget: create a DOM tree and inserts it into into the document.
+This widget doesn't do much, but it does show the minimum requirements for a (non-behavioral) widget: create a DOM tree.
 
 Now let's write a widget that performs some javascript.   We'll setup an onclick handler on a button node which will increment a counter:
 
@@ -109,12 +103,6 @@ Now let's write a widget that performs some javascript.   We'll setup an onclick
 			buildRendering: function(){
 				// create the DOM for this widget
 				this.domNode = dojo.create("button", {innerHTML: this._i});
-    
-				// swap out the original source DOM w/the DOM for this widget
-				var source = this.srcNodeRef;
-				if(source && source.parentNode){
-					source.parentNode.replaceChild(this.domNode, source);
-				}
 			},
 				 
 			postCreate: function(){
