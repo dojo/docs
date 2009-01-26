@@ -20,9 +20,6 @@ Ever want to mark a widget as busy?  Ever have a time it was taking a grid a bit
 Known issues
 ============
 
-* It does not lay out correctly on Google Chrome.  This is caused by the dojo.coords() function not returning the correct value for the width of the target node.
-  
-
 * When creating the widget programmatically, make sure to either pass document.body as its attach point in the document, or assign the domNode into the tree before calling startup().  The widget will reparent itself to document.body if it detects it isn't there.  The reason for this is that if the widget gets attached under nodes with relative position, the overlay does not position correctly.  The simplest method to deal with that was to always put the widget domNode onto the document.body, where it will not have to deal with relative versus absolute issues.
 
 =====
@@ -191,6 +188,39 @@ Example 5: Showing curved border cloning (works on Firefix and Safari only)
     <button jsId="b10" dojoType="dijit.form.Button">Hide Standby widget</button>
     <div id="basic5" style="width: 200px; height: 200px; background-color: yellow; border-style: solid; border-width: 2px; -moz-border-radius: 20px; -webkit-border-radius: 20px;"></div>
     <div jsId="basicStandby5" dojoType="dojox.widget.Standby" target="basic5" color="lightgray"></div>
+
+  .. cv:: css
+
+    <style type="text/css">
+      @import "/moin_static163/js/dojo/release/dojox/widget/Standby/Standby.css";
+    </style>
+
+Example 6: Overlaying a dijit.form.TextBox
+------------------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojox.widget.Standby");
+      dojo.require("dijit.form.Button");
+      dojo.require("dijit.form.TextBox");
+
+      function init(){
+         document.body.appendChild(basicStandby6.domNode);
+         dojo.connect(b11, "onClick", function(){basicStandby6.show();});
+         dojo.connect(b12, "onClick", function(){basicStandby6.hide();});
+      }
+      dojo.addOnLoad(init);
+    </script>
+
+  .. cv :: html 
+
+    <button jsId="b11" dojoType="dijit.form.Button">Show Standby widget</button>
+    <button jsId="b12" dojoType="dijit.form.Button">Hide Standby widget</button>
+    <input type="text" dojoType="dijit.form.TextBox" id="dijitWidget"></input>
+    <div jsId="basicStandby6" dojoType="dojox.widget.Standby" target="dijitWidget"></div>
 
   .. cv:: css
 
