@@ -295,7 +295,6 @@ Known Issues
 * Even though the dialog is marked with the proper ARIA role of dialog, JAWS 9 does not speak "dialog" when the dialog is opened.
   In Firefox 2 even though the focus is on the first focusable item in the dialog, the information about that item is also not spoken.
   Thus, it is important that the instructions or label for a trigger element that opens a dialog to indicate via text that a dialog will
-  be opened. In Firefox 3 the dialog is also not announced but the information about the item in the dialog which gets focus is spoken.
-  This will hopefully be corrected in a future release of JAWS.
+  be opened. In Firefox 3 with JAWS 9 the dialog is also not announced but the information about the item in the dialog which gets focus is spoken. The issue has been fixed in JAWS 10 with Firefox 3.
 * There are focus issues when the dialog is created via an href. Due to timing issues focus may not be properly set nor properly trapped
   in the dialog. For accessibility reasons, dialogs created via href are not recommended. This issue will be addressed in a future release.
