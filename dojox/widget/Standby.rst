@@ -20,7 +20,7 @@ Ever want to mark a widget as busy?  Ever have a time it was taking a grid a bit
 Known issues
 ============
 
-* When creating the widget programmatically, make sure to either pass document.body as its attach point in the document, or assign the domNode into the tree before calling startup().  The widget will reparent itself to document.body if it detects it isn't there.  The reason for this is that if the widget gets attached under nodes with relative position, the overlay does not position correctly.  The simplest method to deal with that was to always put the widget domNode onto the document.body, where it will not have to deal with relative versus absolute issues.
+* When creating the widget programmatically, make sure to either have its parent node rooted as a direct child of document.body, or assign the domNode into the tree before calling startup().  The widget will reparent itself to document.body if it detects it isn't there.  The reason for this is that if the widget gets attached under nodes with relative position, the overlay does not position correctly.  The simplest method to deal with that was to always put the widget domNode onto the document.body, where it will not have to deal with relative versus absolute issues.
 
 =====
 Usage
@@ -29,6 +29,8 @@ Usage
 Using the widget is simple.  At its most basic form, all you have to provide the widget on construction is a value for 'target', the id of a DOM node or widget, or a direct reference to the dom node you want to overlay.  When you want it to appear, you invoke the 'show' function of the widget.  When you want it to hide, you invoke the 'hide' function.  That's all there is to it.
 
 For more custom control, you can also set the 'color' attribute on the widget to a color to use for the overlay as well as an 'image' attribute with the location/url of an image to center in the middle of the widget.  Its default image is the same one that dojox.image.Lightbox uses, a basic spinner/busy animated gif.
+
+Also ... please remember to import the dojox/widget/Standby/Standby.css into your page.  The CSS contains specific positioning details for the divs in the template that are needed for it to display properly.
 
 Example 1: Basic usage
 ----------------------
