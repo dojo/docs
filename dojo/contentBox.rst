@@ -60,7 +60,7 @@ This example displays the return values of dojo.contentBox on a node.
     <script type="text/javascript">
       dojo.require("dijit.form.Button"); // only for the beauty :)
 
-      getContentBox = function(){
+      function getContentBox(){
         var contentBox = dojo.contentBox("nodeOne");
 
         var info = dojo.byId("boxInfo");
