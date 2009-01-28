@@ -28,7 +28,7 @@ Usage is simple and straightforward, you pass the object you wish converted to a
  :linenos:
 
  <script type="text/javascript">
-   var uri = "http://some.server.org/somecontext/
+   var uri = "http://some.server.org/somecontext/";
    var query = {
      foo: ["bar", "baz"],
      bit: "byte"     
