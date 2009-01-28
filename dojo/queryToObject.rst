@@ -95,10 +95,10 @@ Example 2: Using queryToObject to alter query strings
 
            //Lets make some changes.
            query.foo = "alteredFoo";
-           query.newParam = "I'm new!"
+           query.newParam = "I'm new!";
 
            //Write the new URI out.
-           dojo.byId("alteredQuery").innerHTML = uri.substring(0, uri.indexOf("?") + 1)) + dojo.objectToQuery(query);
+           dojo.byId("alteredQuery").innerHTML = uri.substring(0, uri.indexOf("?") + 1) + dojo.objectToQuery(query);
         });
       }
       dojo.addOnLoad(alterQuery);
