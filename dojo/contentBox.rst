@@ -63,10 +63,18 @@ This example displays the return values of dojo.contentBox on a node.
       getContentBox = function(){
         var contentBox = dojo.contentBox("nodeOne");
 
-        console.log("Top: "+contentBox.t);
-        console.log("Left: "+contentBox.l);
-        console.log("Width: "+contentBox.w);
-        console.log("Height: "+contentBox.h);
+        var info = dojo.byId("boxInfo");
+        while(info.firstChild){
+          info.removeChild(info.firstChild);  
+        }
+        info.appendChild(document.createTextNode("Top: "+contentBox.t));
+        info.appendChild(document.createElement("br");
+        info.appendChild(document.createTextNode("Left: "+contentBox.l));
+        info.appendChild(document.createElement("br");
+        info.appendChild(document.createTextNode("Width: "+contentBox.w));
+        info.appendChild(document.createElement("br");
+        info.appendChild(document.createTextNode("Height: "+contentBox.h));
+        info.appendChild(document.createElement("br");
       };
     </script>
 
@@ -74,6 +82,9 @@ This example displays the return values of dojo.contentBox on a node.
 
     <button dojoType="dijit.form.Button" onClick="getContentBox()">Get content box</button>
     <div id="nodeOne" style="margin: 10px; border: 10px solid black; padding: 10px; width: 100px; height: 30px;">Hi!</div>
+
+    <div id="boxInfo">
+    </div>
 
 Setting content box
 --------------------
