@@ -45,7 +45,38 @@ Usage is simple and straightforward, you pass the query string of the URI as the
 Examples
 ========
 
-Programmatic example
+Example 1: Using queryToObject to create a JavaScript form of a query
+---------------------------------------------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      function convertQuery() {
+        dojo.connect(dijit.byId("convertQuery"), "onClick", function(){
+           var uri =  "http://uri.some.org/context?foo=bar&foo=bar2&bit=byte";
+
+           //Isolate the query portion of the URI and convert it.
+           var query = uri.substring(uri.indexOf("?") + 1, uri.length);
+           query = dojo.queryToObject(query);
+
+           //Attach it into the don as pretty-printed text.
+           dojo.byId("query").innerHTML = dojo.toJson(query, true);
+        });
+      }
+      dojo.addOnLoad(convertQuery);
+    </script>
+
+  .. cv :: html 
+
+    <button id="convertQuery" dojoType="dijit.form.Button">Click to convert query portion of URI"></button>
+    <b>The URI</b><br>
+    http://uri.some.org/context?foo=bar&foo=bar2&bit=byte
+    <br>
+    <b>The Query converted to a JavaScript Object:</b>
+    <pre id="query"></pre>
+
 --------------------
 
 TODO: example
