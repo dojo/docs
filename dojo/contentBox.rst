@@ -50,6 +50,8 @@ for a node offset from its parent 50px to the left, 200px from the top with a co
 Examples
 ========
 
+Example 1: Getting the content box
+----------------------------------
 
 This example displays the return values of dojo.contentBox on a node. 
 
@@ -86,8 +88,8 @@ This example displays the return values of dojo.contentBox on a node.
     <div id="boxInfo">
     </div>
 
-Setting content box
---------------------
+Example 2: Setting content box
+------------------------------
 
 This example is showcasing the usage of dojo.contentBox as a setter, take a look at the JavaScript code to see what the code does.
 
