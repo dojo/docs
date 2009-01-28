@@ -96,12 +96,17 @@ This example is showcasing the usage of dojo.contentBox as a setter, take a look
   .. cv:: javascript
 
     <script type="text/javascript">
+      dojo.require("dijit.form.Button"); // only for the beauty :)
       dojo.addOnLoad(function(){
-        var contentBox = dojo.marginBox(dojo.byId("node2"), {t: 20, l: 30, h: 300, w: 300});
+        dojo.connect(dijit.byId("cButton"), "onClick", function(){
+          var contentBox = dojo.marginBox(dojo.byId("node2"), {t: 20, l: 30, h: 300, w: 300});
+        });
       });
     </script>
 
   .. cv:: html
+
+    <button id="cButton" dojoType="dijit.form.Button">Click to alter the content box</button>
 
     <div>
       Hi I am nested
