@@ -5,32 +5,38 @@ dojo.queryToObject
 
 :Status: Draft
 :Version: 1.0
-:Available: since V?
+:Available: since V0.9
 
 .. contents::
    :depth: 2
 
-TODO: short summary of the component/class/method
-
+Helper function for converting a URI query string to a JavaScript Object
 
 ============
 Introduction
 ============
 
-TODO: introduce the component/class/method
-
+This function is one of many helpers used by the dojo Xhr subsystem for handling AJAX style requests.  This particular function takes the query portion of a URI and returns a JavaScript object of the name/value pairs.  It handles both single and myylti-valued query parameters.
 
 =====
 Usage
 =====
 
-TODO: how to use the component/class/method
+Usage is simple and straightforward, you pass the query string of the URI as the parameter to the function and it will return it in JavaScript object form.
 
 .. code-block :: javascript
  :linenos:
 
  <script type="text/javascript">
-   // your code
+   var uri = "http://some.server.org/somecontext/?foo=bar&foo=bar2&bit=bye
+   var query = uri.substring(uri.indexOf("?") + 1, uri.length);
+   var queryObject = dojo.queryToObject(query);
+
+   //The structur of queryObject will be:
+   // {
+   //   foo: ["bar", "bar2],
+   //   bit: "byte"
+   // }
  </script>
 
 
