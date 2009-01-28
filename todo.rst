@@ -65,14 +65,6 @@ Top priority: Dojo Base
 
   needed: full page
 
-* `dojo.objectToQuery <dojo/objectToQuery>`_
-
-  needed: full page
-
-* `dojo.queryToObject <dojo/queryToObject>`_
-
-  needed: full page
-
 
 =====================
 Priority 2: Dojo Core
