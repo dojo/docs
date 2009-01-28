@@ -101,7 +101,7 @@ Example 2: Using queryToObject to alter query strings
            dojo.byId("alteredQuery").innerHTML = uri.substring(0, uri.indexOf("?") + 1)) + dojo.objectToQuery(query);
         });
       }
-      dojo.addOnLoad(convertQuery);
+      dojo.addOnLoad(alterQuery);
     </script>
 
   .. cv :: html 
@@ -110,7 +110,7 @@ Example 2: Using queryToObject to alter query strings
     <b>The URI</b><br><br>
     http://uri.some.org/context?foo=bar&foo=bar2&bit=byte
     <br><br>
-    <b>The Query converted to a JavaScript Object (click the button!):</b>
+    <b>The modified query string in the URI:</b>
     <div id="alteredQuery"></div>
 
 ========
