@@ -112,6 +112,7 @@ Example 2: Using queryToObject to alter query strings
     <br><br>
     <b>The Query converted to a JavaScript Object (click the button!):</b>
     <div id="altereredQuery"></div>
+
 ========
 See also
 ========
