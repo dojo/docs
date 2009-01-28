@@ -16,7 +16,7 @@ Helper function for converting a URI query string to a JavaScript Object
 Introduction
 ============
 
-This function is one of many helpers used by the dojo Xhr subsystem for handling AJAX style requests.  This particular function takes the query portion of a URI and returns a JavaScript object of the name/value pairs.  It handles both single and myylti-valued query parameters.
+This function is one of many helpers used by the dojo Xhr subsystem for handling AJAX style requests.  This particular function takes the query portion of a URI and returns a JavaScript object of the name/value pairs.  It handles both single and multi-valued query parameters.  This function is useful in deconstructing URIs for display in page forms and the like.  It can also be used as a way to modify a query by converting to to JavaScript, making changes to parameters, then converting it back to a query string via `dojo.objectToQuery <dojo/objectToQuery>`_
 
 =====
 Usage
@@ -32,7 +32,7 @@ Usage is simple and straightforward, you pass the query string of the URI as the
    var query = uri.substring(uri.indexOf("?") + 1, uri.length);
    var queryObject = dojo.queryToObject(query);
 
-   //The structur of queryObject will be:
+   //The structure of queryObject will be:
    // {
    //   foo: ["bar", "bar2],
    //   bit: "byte"
