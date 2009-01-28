@@ -25,10 +25,6 @@ Top priority: Dojo Base
 
   needed: full page
 
-* `dojo.Deferred <dojo/Deferred>`_
-
-  needed: Introduction, Usage, Examples
-
 * `dojo._base.event <dojo/_base/event>`_
 
   needed: explain DOM event listener in detail
