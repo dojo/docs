@@ -25,25 +25,23 @@ Usage
 Usage is simple and straightforward, you pass the object you wish converted to a query string and the function will return the query string.
 
 .. code-block :: javascript
-
  :linenos:
 
-  <script type="text/javascript">
-    var uri = "http://some.server.org/somecontext/
-    var query = {
-      foo: ["bar", "baz"],
-      bit: "byte"     
-    };
+ <script type="text/javascript">
+   var uri = "http://some.server.org/somecontext/
+   var query = {
+     foo: ["bar", "baz"],
+     bit: "byte"     
+   };
 
-    //Assemble the new uri with its query string attached.
-    var queryStr = dojo.objectToQuery(query);
-    uri = uri + "?" + queryStr;
+   //Assemble the new uri with its query string attached.
+   var queryStr = dojo.objectToQuery(query);
+   uri = uri + "?" + queryStr;
 
-    //The uri should look like:
-    //
-    // http://some.server.org/somecontext/?foo=bar&foo=bar2&bit=byte
-  </script>
-
+   //The uri should look like:
+   //
+   // http://some.server.org/somecontext/?foo=bar&foo=bar2&bit=byte
+ </script>
 
 ========
 Examples
@@ -86,47 +84,11 @@ Example 1: Using dojo.objectToQuery to create a query string and assign it to a 
     <b>The modified URI with a query string.:</b>
     <pre id="query"></pre>
 
-Example 2: Using queryToObject to alter query strings
------------------------------------------------------
-
-.. cv-compound ::
-  
-  .. cv :: javascript
-
-    <script>
-      function alterQuery() {
-        dojo.connect(dijit.byId("alterQuery"), "onClick", function(){
-           var uri =  "http://uri.some.org/context?foo=bar&foo=bar2&bit=byte";
-
-           //Isolate the query portion of the URI and convert it.
-           var query = uri.substring(uri.indexOf("?") + 1, uri.length);
-           query = dojo.queryToObject(query);
-
-           //Lets make some changes.
-           query.foo = "alteredFoo";
-           query.newParam = "I'm new!";
-
-           //Write the new URI out.
-           dojo.byId("alteredQuery").innerHTML = uri.substring(0, uri.indexOf("?") + 1) + dojo.objectToQuery(query);
-        });
-      }
-      dojo.addOnLoad(alterQuery);
-    </script>
-
-  .. cv :: html 
-
-    <button id="alterQuery" dojoType="dijit.form.Button">Click to alter the query string</button><br><br>
-    <b>The URI</b><br><br>
-    http://uri.some.org/context?foo=bar&foo=bar2&bit=byte
-    <br><br>
-    <b>The modified query string in the URI:</b>
-    <div id="alteredQuery"></div>
-
 ========
 See also
 ========
 
-* `dojo.objectToQuery <dojo/objectToQuery>`_
+* `dojo.queryToObject <dojo/queryToObject>`_
 * `dojo.formToQuery <dojo/formToQuery>`_
 * `dojo.formToObject <dojo/formToObject>`_
 * `dojo.formToJson <dojo/formToJson>`_
