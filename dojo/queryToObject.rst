@@ -117,4 +117,7 @@ Example 2: Using queryToObject to alter query strings
 See also
 ========
 
-* TODO: links to other related articles
+* `dojo.objectToQuery <dojo/objectToQuery>`_
+* `dojo.formToQuery <dojo/formToQuery>`_
+* `dojo.formToObject <dojo/formToObject>`_
+* `dojo.formToJson <dojo/formToJson>`_
