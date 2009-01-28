@@ -27,7 +27,7 @@ Usage is simple and straightforward, you pass the object you wish converted to a
 .. code-block :: javascript
  :linenos:
 
- <script type="text/javascript">
+  <script type="text/javascript">
     var uri = "http://some.server.org/somecontext/
     var query = {
       foo: ["bar", "baz"],
@@ -38,10 +38,10 @@ Usage is simple and straightforward, you pass the object you wish converted to a
     var queryStr = dojo.objectToQuery(query);
     uri = uri + "?" + queryStr;
 
-   //The uri should look like:
-   //
-   // http://some.server.org/somecontext/?foo=bar&foo=bar2&bit=byte
- </script>
+    //The uri should look like:
+    //
+    // http://some.server.org/somecontext/?foo=bar&foo=bar2&bit=byte
+  </script>
 
 
 ========
