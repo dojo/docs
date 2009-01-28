@@ -58,7 +58,7 @@ Example 1: Using dojo.objectToQuery to create a query string and assign it to a 
     <script>
       function convertQuery() {
         dojo.connect(dijit.byId("convertQuery"), "onClick", function(){
-           var uri =  "http://uri.some.org/context
+           var uri =  "http://uri.some.org/context";
            var query = {
               foo: ["bar","bar2"],
               bit: "byte"
@@ -80,7 +80,7 @@ Example 1: Using dojo.objectToQuery to create a query string and assign it to a 
 
     <button id="convertQuery" dojoType="dijit.form.Button">Click to update the URI with a query generated from an object</button><br><br>
     <b>The URI</b><br><br>
-    http://uri.some.org/context?foo=bar&foo=bar2&bit=byte
+    http://uri.some.org/context
     <br><br>
     <b>The modified URI with a query string.:</b>
     <pre id="query"></pre>
