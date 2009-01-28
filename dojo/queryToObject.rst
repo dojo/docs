@@ -28,7 +28,7 @@ Usage is simple and straightforward, you pass the query string of the URI as the
  :linenos:
 
  <script type="text/javascript">
-   var uri = "http://some.server.org/somecontext/?foo=bar&foo=bar2&bit=bye
+   var uri = "http://some.server.org/somecontext/?foo=bar&foo=bar2&bit=byte";
    var query = uri.substring(uri.indexOf("?") + 1, uri.length);
    var queryObject = dojo.queryToObject(query);
 
