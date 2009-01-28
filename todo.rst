@@ -73,10 +73,6 @@ Top priority: Dojo Base
 
   needed: full page
 
-* `dojo.contentBox <dojo/contentBox>`_
-
-  needed: examples
-
 
 =====================
 Priority 2: Dojo Core
