@@ -106,8 +106,8 @@ This example is showcasing the usage of dojo.contentBox as a setter, take a look
 
   .. cv:: html
 
-    <button id="cButton" dojoType="dijit.form.Button">Click to alter the content box</button>
-
+    <button id="cButton" dojoType="dijit.form.Button">Click to alter the content box of 'node 2'</button>
+    <br>
     <div>
       Hi I am nested
       <div id="node2">Hi!</div>
