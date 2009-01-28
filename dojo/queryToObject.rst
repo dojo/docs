@@ -77,16 +77,41 @@ Example 1: Using queryToObject to create a JavaScript form of a query
     <b>The Query converted to a JavaScript Object (click the button!):</b>
     <pre id="query"></pre>
 
---------------------
+Example 2: Using queryToObject to alter query strings
+-----------------------------------------------------
 
-TODO: example
+.. cv-compound ::
+  
+  .. cv :: javascript
 
-Declarative example
--------------------
+    <script>
+      function alterQuery() {
+        dojo.connect(dijit.byId("alterQuery"), "onClick", function(){
+           var uri =  "http://uri.some.org/context?foo=bar&foo=bar2&bit=byte";
 
-TODO: example
+           //Isolate the query portion of the URI and convert it.
+           var query = uri.substring(uri.indexOf("?") + 1, uri.length);
+           query = dojo.queryToObject(query);
 
+           //Lets make some changes.
+           query.foo = "alteredFoo";
+           query.newParam = "I'm new!"
 
+           //Write the new URI out.
+           dojo.byId("alteredQuery").innerHTML = uri.substring(0, uri.indexOf("?") + 1)) + dojo.objectToQuery(query);
+        });
+      }
+      dojo.addOnLoad(convertQuery);
+    </script>
+
+  .. cv :: html 
+
+    <button id="alterQuery" dojoType="dijit.form.Button">Click to alter the query string</button><br><br>
+    <b>The URI</b><br><br>
+    http://uri.some.org/context?foo=bar&foo=bar2&bit=byte
+    <br><br>
+    <b>The Query converted to a JavaScript Object (click the button!):</b>
+    <div id="altereredQuery"></div>
 ========
 See also
 ========
