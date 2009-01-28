@@ -68,13 +68,13 @@ This example displays the return values of dojo.contentBox on a node.
           info.removeChild(info.firstChild);  
         }
         info.appendChild(document.createTextNode("Top: "+contentBox.t));
-        info.appendChild(document.createElement("br");
+        info.appendChild(document.createElement("br"));
         info.appendChild(document.createTextNode("Left: "+contentBox.l));
-        info.appendChild(document.createElement("br");
+        info.appendChild(document.createElement("br"));
         info.appendChild(document.createTextNode("Width: "+contentBox.w));
-        info.appendChild(document.createElement("br");
+        info.appendChild(document.createElement("br"));
         info.appendChild(document.createTextNode("Height: "+contentBox.h));
-        info.appendChild(document.createElement("br");
+        info.appendChild(document.createElement("br"));
       };
     </script>
 
