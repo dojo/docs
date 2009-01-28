@@ -25,7 +25,9 @@ Usage
 Usage is simple and straightforward, you pass the object you wish converted to a query string and the function will return the query string.
 
 .. code-block :: javascript
+
  :linenos:
+
   <script type="text/javascript">
     var uri = "http://some.server.org/somecontext/
     var query = {
