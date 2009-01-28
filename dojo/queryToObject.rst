@@ -111,7 +111,7 @@ Example 2: Using queryToObject to alter query strings
     http://uri.some.org/context?foo=bar&foo=bar2&bit=byte
     <br><br>
     <b>The Query converted to a JavaScript Object (click the button!):</b>
-    <div id="altereredQuery"></div>
+    <div id="alteredQuery"></div>
 
 ========
 See also
