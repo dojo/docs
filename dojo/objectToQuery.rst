@@ -39,7 +39,6 @@ Usage is simple and straightforward, you pass the object you wish converted to a
    uri = uri + "?" + queryStr;
 
    //The uri should look like:
-   //
    // http://some.server.org/somecontext/?foo=bar&foo=bar2&bit=byte
  </script>
 
@@ -67,7 +66,6 @@ Example 1: Using dojo.objectToQuery to create a query string and assign it to a 
            //Assemble the new URI.
            var queryStr = dojo.objectToQuery(query);
            uri = uri + "?" + queryStr;
-
 
            //Attach it into the dom
            dojo.byId("query").innerHTML = uri;
