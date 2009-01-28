@@ -67,3 +67,5 @@ There are several Dojo-related sub-projects, utilities, and helpers shipped with
 * `Dojo Build System <build/index>`_ - The Dojo build system is used to create efficient optimized packages of JavaScript and CSS, customized for a given application or website.
 
 * `The Dojo API Doc System <util/doctools>`_ - Dojo uses a custom inline comment syntax which produces well structured xml, and powers the official `API Docs <http://api.dojotoolkit.org>`_ . 
+
+* `ShrinkSafe <shrinksafe/index>`_ - A standalone utility for compressing JavaScript, used by the Dojo Build System as an optional compression step, though can be used on individual files manually.
