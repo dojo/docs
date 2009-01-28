@@ -78,13 +78,19 @@ The following operators are new in JSONQuery:
 
     * [?expression] - This will perform a filter operation on an array, returning all the items in an array that match the provided expression. This operator does not need to be in brackets, you can simply use ?expression, but since it does not have any containment, no operators can be used afterward when used without brackets. The following JSONQuery will find all the array items that have a price less than 15:
 
+.. code-block :: javascript
+
       [?price < 15]
 
       And to add a condition for the rating property to be greater than 3 (and omit the brackets):
 
+.. code-block :: javascript
+
       ?price < 15 & rating > 3
 
     * [/expression], [\expression], [/expression, /expression] - This performs a sort operation on an array, with sort based on the provide expression. Multiple comma delimited sort expressions can be provided for multiple sort orders (first being highest priority). / indicates ascending order and \ indicates descending order. For example to sort an array by lastName first and then firstName as the second priority:
+
+.. code-block :: javascript
 
       [/lastName,/firstName]
 
@@ -94,23 +100,33 @@ The following operators are new in JSONQuery:
 
       You can also use object literals and and create a new array of objects that with a name and price properties generated from the source array:
 
+.. code-block :: javascript
+
       [={price:price,name:firstName + " " + lastName}]
 
     * expr = expr - Performs a comparison (like JavaScript’s ==). When comparing to a string, the comparison string may contain wildcards * (matches any number of characters) and ? (matches any single character). For example to find all objects in an array where the name starts with “Mr”, one could use the query:
 
+.. code-block :: javascript
+
       [?name='Mr*']
 
     * expr ~ expr - Performs a string comparison with case insensitivity. For example to find all objects in an array with the word “the” in the description regardless of case:
+
+.. code-block :: javascript
 
       [?description~'*the*']
 
     * ..[?expression] - This will perform a deep search filter operation on all the objects and subobjects of the current data. Rather than only searching an array, this will search property values, arrays, and their children.
     * $1, $2, $3... - This can be used to reference additional parameters passed to the query call. For example:
 
+.. code-block :: javascript
+
       results = dojox.json.query("[?firstName=$1&amp;lastName=$2]",
       					myData,"John","Doe");
 
       or it can be applied to the evaluator function:
+
+.. code-block :: javascript
 
       evaluator = dojox.json.query("[?firstName=$1&amp;lastName=$2]");
       results = evaluator(myData,"John","Doe");
@@ -125,6 +141,8 @@ The following operators from JSONPath are also supported:
     * .* or [*] - Returns the values of all the properties of the current object.
     * $ - This is the root object.
     * @ - This is the current object in filter, sort, and map expressions. Note that names are auto-converted to property references of the current object in expressions, but @ can be used for index access on the current object. The following queries are identical:
+
+.. code-block :: javascript
 
       [?name='Fred']
       [?@.name='Fred']
