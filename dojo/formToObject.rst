@@ -1,37 +1,48 @@
 #format dojo_rst
 
 dojo.formToObject
-=================
+==================
 
 :Status: Draft
 :Version: 1.0
-:Project owner: ?--
-:Available: since V?
+:Available: since V0.9
 
 .. contents::
    :depth: 2
 
-TODO: short summary of the component/class/method
-
+Helper function for converting a URI query string to a JavaScript Object
 
 ============
 Introduction
 ============
 
-TODO: introduce the component/class/method
-
+This function is one of many helpers used by the dojo Xhr subsystem for handling AJAX style requests.  This particular function takes a HTML form node and converts the form elements into a JavaScript object of name/value pairs.  Disabled form elements, buttons, and other non-valued HTML elements are skipped. This function, for example, is useful in creating the Object form of an in-page form, which can then be converted to a query string via `dojo.objectToQuery <dojo/objectToQuery`_.
 
 =====
 Usage
 =====
 
-TODO: how to use the component/class/method
+Usage is simple and straightforward, you pass the form node or the string id of a form node to convert.  The function will hand back a JavaScript object of the name/value pairs from the form elements.
 
 .. code-block :: javascript
  :linenos:
 
  <script type="text/javascript">
-   // your code
+   var formId = "myId";
+   var formObj = dojo.formToObject(formObj);
+
+   //Assuming a form of:
+   // <form id="myform">
+   //    <input type="text" name="field1" value="value1">
+   //    <input type="text" name="field2" value="value2">
+   //    <input type="button" name="someButton" value="someValue">
+   // </form>
+   //
+   //The structure of formObj will be:
+   // {
+   //   field1: "value1",
+   //   field2: "value2"
+   // }
  </script>
 
 
@@ -40,19 +51,79 @@ TODO: how to use the component/class/method
 Examples
 ========
 
-Programmatic example
---------------------
+Example 1: Using queryToObject to create a JavaScript form of a query
+---------------------------------------------------------------------
 
-TODO: example
+.. cv-compound ::
+  
+  .. cv :: javascript
 
-Declarative example
--------------------
+    <script>
+      function convertQuery() {
+        dojo.connect(dijit.byId("convertQuery"), "onClick", function(){
+           var uri =  "http://uri.some.org/context?foo=bar&foo=bar2&bit=byte";
 
-TODO: example
+           //Isolate the query portion of the URI and convert it.
+           var query = uri.substring(uri.indexOf("?") + 1, uri.length);
+           query = dojo.queryToObject(query);
 
+           //Attach it into the don as pretty-printed text.
+           dojo.byId("query").innerHTML = dojo.toJson(query, true);
+        });
+      }
+      dojo.addOnLoad(convertQuery);
+    </script>
+
+  .. cv :: html 
+
+    <button id="convertQuery" dojoType="dijit.form.Button">Click to convert query portion of URI</button><br><br>
+    <b>The URI</b><br><br>
+    http://uri.some.org/context?foo=bar&foo=bar2&bit=byte
+    <br><br>
+    <b>The Query converted to a JavaScript Object (click the button!):</b>
+    <pre id="query"></pre>
+
+Example 2: Using queryToObject to alter query strings
+-----------------------------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      function alterQuery() {
+        dojo.connect(dijit.byId("alterQuery"), "onClick", function(){
+           var uri =  "http://uri.some.org/context?foo=bar&foo=bar2&bit=byte";
+
+           //Isolate the query portion of the URI and convert it.
+           var query = uri.substring(uri.indexOf("?") + 1, uri.length);
+           query = dojo.queryToObject(query);
+
+           //Lets make some changes.
+           query.foo = "alteredFoo";
+           query.newParam = "I'm new!";
+
+           //Write the new URI out.
+           dojo.byId("alteredQuery").innerHTML = uri.substring(0, uri.indexOf("?") + 1) + dojo.objectToQuery(query);
+        });
+      }
+      dojo.addOnLoad(alterQuery);
+    </script>
+
+  .. cv :: html 
+
+    <button id="alterQuery" dojoType="dijit.form.Button">Click to alter the query string</button><br><br>
+    <b>The URI</b><br><br>
+    http://uri.some.org/context?foo=bar&foo=bar2&bit=byte
+    <br><br>
+    <b>The modified query string in the URI:</b>
+    <div id="alteredQuery"></div>
 
 ========
 See also
 ========
 
-* TODO: links to other related articles
+* `dojo.objectToQuery <dojo/objectToQuery>`_
+* `dojo.formToQuery <dojo/formToQuery>`_
+* `dojo.formToObject <dojo/formToObject>`_
+* `dojo.formToJson <dojo/formToJson>`_
