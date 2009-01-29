@@ -52,7 +52,7 @@ dojo.io.iframe supported object properties
 |                  |**This parameter is optional**                                                                                              |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
 |**form**          |For posting FORM data, you can provide a either the DOM node of your form or the ID of the form.  The dojo.io.iframe call   |
-|                  | will convert this into proper POST format (query params or form content) and send it via the iframe                         |
+|                  |will convert this into proper POST format (query params or form content) and send it via the iframe                         |
 |                  |                                                                                                                            |
 |                  |**This parameter is optional**                                                                                              |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
