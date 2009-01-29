@@ -56,8 +56,8 @@ Usage is simple and straightforward, you pass the form node or the string id of 
 Examples
 ========
 
-Example 1: Using formToObject to create an object version of a form
--------------------------------------------------------------------
+Example 1: Using formToJson to create an JSON version of a form
+---------------------------------------------------------------
 
 .. cv-compound ::
   
@@ -66,10 +66,10 @@ Example 1: Using formToObject to create an object version of a form
     <script>
       function convertForm() {
         dojo.connect(dijit.byId("convertForm"), "onClick", function(){
-           var formObject =  dojo.formToObject("myform");
+           var formJson=  dojo.formToObject("myform");
 
            //Attach it into the dom as pretty-printed text.
-           dojo.byId("formObject").innerHTML = dojo.toJson(formObject, true);
+           dojo.byId("formObject").innerHTML = formJson;
         });
       }
       dojo.addOnLoad(convertForm);
@@ -88,8 +88,8 @@ Example 1: Using formToObject to create an object version of a form
     <b>The form as an object:</b>
     <pre id="formObject"></pre>
 
-Example 2: Using formToObject to create an object version of a form with dijit widgets
---------------------------------------------------------------------------------------
+Example 2: Using formToJson to create a JSON version of a form with dijit widgets
+---------------------------------------------------------------------------------
 
 .. cv-compound ::
   
@@ -100,10 +100,10 @@ Example 2: Using formToObject to create an object version of a form with dijit w
       dojo.require("dijit.form.Button");
       function convertFormDigits() {
         dojo.connect(dijit.byId("convertFormDigits"), "onClick", function(){
-           var formObject =  dojo.formToObject("myform");
+           var formJson=  dojo.formToJson("myform");
 
            //Attach it into the dom as pretty-printed text.
-           dojo.byId("formObject2").innerHTML = dojo.toJson(formObject, true);
+           dojo.byId("formObject2").innerHTML = formJson;
         });
       }
       dojo.addOnLoad(convertFormDigits);
@@ -130,4 +130,4 @@ See also
 * `dojo.objectToQuery <dojo/objectToQuery>`_
 * `dojo.queryToObject <dojo/queryToObject>`_
 * `dojo.formToQuery <dojo/formToQuery>`_
-* `dojo.formToJson <dojo/formToJson>`_
+* `dojo.formToObject <dojo/formToObject >`_
