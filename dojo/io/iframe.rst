@@ -44,7 +44,7 @@ dojo.xhrGet supported object properties
 |**content**       |A JavaScript object of name/string value pairs.  These items are normally converted to query parameters and passed on as    |
 |                  |part of the url.  The caveat to this is if you also specify a 'form' argument.  If a form  argument was also provided, then |
 |                  |then the parameters of 'content' are merged into the values from the form and the whole thing is send as a multi-part form  |
-|                  |post.  
+|                  |post.                                                                                                                       |
 |                  |                                                                                                                            |
 |                  |**This parameter is optional**                                                                                              |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
