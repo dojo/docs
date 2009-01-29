@@ -39,7 +39,7 @@ Specific arguments for dojo.io.iframe calls:
   </html>
 
 
-  Is because the most flexible is accessing the DOM in the iframe and extracting data from it.  A textarea provides a fixed container that dojo can locate in the iframe DOM and extract the contents from.  And since it is a text area, it can contain JSON, XML, Text, etc.  Once the data is obtained, the usual data handlers from dojo can process it and pass it back through the usual callbacks. 
+Is because the most flexible is accessing the DOM in the iframe and extracting data from it.  A textarea provides a fixed container that dojo can locate in the iframe DOM and extract the contents from.  And since it is a text area, it can contain JSON, XML, Text, etc.  Once the data is obtained, the usual data handlers from dojo can process it and pass it back through the usual callbacks. 
 
 
 ========
