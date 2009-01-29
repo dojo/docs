@@ -94,8 +94,39 @@ Other that the reason noted above about reliability (getting proper events indic
 Examples
 ========
 
+
 Gather all parameters from a form
 ---------------------------------
+
+.. code-block :: javascript
+  :linenos:
+
+  <script type="text/javascript">
+    dojo.require("dojo.io.iframe");
+
+    // gather all parameters from a form:
+    dojo.io.iframe.send({
+        // The form node, which contains the
+        // data. We also pull the URL and METHOD from it:
+        form: "myForm",
+
+        // The used data format:
+        handleAs: "json",
+
+        // Callback on successful call:
+        load: function(response, ioArgs) {
+            // do something
+            // ...
+                    
+            // return the response for succeeding callbacks
+            return response;
+        }
+    });
+  </script>
+
+
+Gather all parameters from a form, over-riding some
+----------------------------------------------------
 
 .. code-block :: javascript
   :linenos:
@@ -108,7 +139,7 @@ Gather all parameters from a form
         // The target URL on your webserver:
         url: "iframeHandler.php",
 
-        // The HTTP method to use:
+        // The HTTP method to use, form specified POST:
         method: "GET",
 
         // The form node, which contains the
