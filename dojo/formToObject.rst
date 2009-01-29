@@ -43,6 +43,7 @@ Usage is simple and straightforward, you pass the form node or the string id of 
    //   field1: "value1",
    //   field2: "value2"
    // }
+   //Note the button was skipped.
  </script>
 
 
@@ -51,37 +52,37 @@ Usage is simple and straightforward, you pass the form node or the string id of 
 Examples
 ========
 
-Example 1: Using queryToObject to create a JavaScript form of a query
----------------------------------------------------------------------
+Example 1: Using formToObject to create an object version of a form
+-------------------------------------------------------------------
 
 .. cv-compound ::
   
   .. cv :: javascript
 
     <script>
-      function convertQuery() {
+      function convertForm() {
         dojo.connect(dijit.byId("convertQuery"), "onClick", function(){
-           var uri =  "http://uri.some.org/context?foo=bar&foo=bar2&bit=byte";
+           var formObject =  dojo.formToObject("myForm");
 
-           //Isolate the query portion of the URI and convert it.
-           var query = uri.substring(uri.indexOf("?") + 1, uri.length);
-           query = dojo.queryToObject(query);
-
-           //Attach it into the don as pretty-printed text.
-           dojo.byId("query").innerHTML = dojo.toJson(query, true);
+           //Attach it into the dom as pretty-printed text.
+           dojo.byId("formObject").innerHTML = dojo.toJson(formObject, true);
         });
       }
-      dojo.addOnLoad(convertQuery);
+      dojo.addOnLoad(convertForm);
     </script>
 
   .. cv :: html 
 
-    <button id="convertQuery" dojoType="dijit.form.Button">Click to convert query portion of URI</button><br><br>
-    <b>The URI</b><br><br>
-    http://uri.some.org/context?foo=bar&foo=bar2&bit=byte
+    <button id="convertQuery" dojoType="dijit.form.Button">Click to convert the form to an object</button><br><br>
+    <b>The FORM</b><br><br>
+    <form id="myform">
+       <input type="text" name="field1" value="value1">
+       <input type="text" name="field2" value="value2">
+       <input type="button" name="someButton" value="someValue">
+    </form>
     <br><br>
-    <b>The Query converted to a JavaScript Object (click the button!):</b>
-    <pre id="query"></pre>
+    <b>The form as an object:</b>
+    <pre id="formObject"></pre>
 
 Example 2: Using queryToObject to alter query strings
 -----------------------------------------------------
