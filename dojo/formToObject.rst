@@ -94,20 +94,20 @@ Example 2: Using formToObject to create an object version of a form with dijit w
     <script>
       dojo.require("dijit.form.TextBox");
       dojo.require("dijit.form.Button");
-      function convertForm() {
-        dojo.connect(dijit.byId("convertForm"), "onClick", function(){
+      function convertFormDigits() {
+        dojo.connect(dijit.byId("convertFormDigits"), "onClick", function(){
            var formObject =  dojo.formToObject("myform");
 
            //Attach it into the dom as pretty-printed text.
-           dojo.byId("formObject").innerHTML = dojo.toJson(formObject, true);
+           dojo.byId("formObject2").innerHTML = dojo.toJson(formObject, true);
         });
       }
-      dojo.addOnLoad(convertForm);
+      dojo.addOnLoad(convertFormDigits);
     </script>
 
   .. cv :: html 
 
-    <button id="convertForm" dojoType="dijit.form.Button">Click to convert the form to an object</button><br><br>
+    <button id="convertFormDigits" dojoType="dijit.form.Button">Click to convert the form to an object</button><br><br>
     <b>The FORM</b><br><br>
     <form id="myform">
        <input type="text" dojoType="dijit.form.TextBox" name="field1" value="value1">
@@ -116,7 +116,7 @@ Example 2: Using formToObject to create an object version of a form with dijit w
     </form>
     <br><br>
     <b>The form as an object:</b>
-    <pre id="formObject"></pre>
+    <pre id="formObject2"></pre>
 
 
 ========
