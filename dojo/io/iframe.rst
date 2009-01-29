@@ -27,15 +27,17 @@ Specific arguments for dojo.io.iframe calls:
 
 **IMPORTANT:** For all values EXCEPT html, The server response should be an HTML file with a textarea element. The response data should be inside the textarea element. Using an HTML document the only reliable, cross-browser way this transport can know when the response has loaded. For the text/html mimetype, just return a normal HTML document. NOTE: text/xml or any other XML type is NOT supported by this transport.
 
-This is because there are limited ways that data can be retrieved (by security design), using an iframe to proxy an IO call.  The reason for being structured as:
+This is because there are limited ways that data can be retrieved (by security design), using an iframe to proxy an IO call.  Dojo chose a generic mechanism that users of iframe.js should be able to easily implement.  In essence, the users should ensure the service they call via dojo.io.iframe return their data (for json, xml, and text paylods) as:
 
 .. code-block :: javascript
   :linenos:
 
   <html>
-    <textarea>
-      Your stuff
-    </textarea>
+    <body>
+      <textarea>
+        payload
+      </textarea>
+    </body>
   </html>
 
 
