@@ -31,7 +31,7 @@ Specific arguments for dojo.io.iframe calls:
 
   <html>
     <textarea>
-      //Your stuff
+      Your stuff
     </textarea>
   </html>
 
