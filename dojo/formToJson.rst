@@ -66,7 +66,7 @@ Example 1: Using formToJson to create an JSON version of a form
     <script>
       function convertForm() {
         dojo.connect(dijit.byId("convertForm"), "onClick", function(){
-           var formJson=  dojo.formToObject("myform");
+           var formJson = dojo.formToJson("myform");
 
            //Attach it into the dom as pretty-printed text.
            dojo.byId("formObject").innerHTML = formJson;
@@ -85,7 +85,7 @@ Example 1: Using formToJson to create an JSON version of a form
        <input type="button" name="someButton" value="someValue">
     </form>
     <br><br>
-    <b>The form as an object:</b>
+    <b>The form as JSON:</b>
     <pre id="formObject"></pre>
 
 Example 2: Using formToJson to create a JSON version of a form with dijit widgets
@@ -119,7 +119,7 @@ Example 2: Using formToJson to create a JSON version of a form with dijit widget
        <button dojoType="dijit.form.Button" name="someButton" value="someValue">someValue</button>
     </form>
     <br><br>
-    <b>The form as an object:</b>
+    <b>The form as JSON:</b>
     <pre id="formObject2"></pre>
 
 
