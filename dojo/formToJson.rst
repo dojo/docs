@@ -43,10 +43,7 @@ Usage is simple and straightforward, you pass the form node or the string id of 
    // </form>
    //
    //The structure of formJson will be:
-   // {
-   //   "field1": "value1",
-   //   "field2": "value2"
-   // }
+   // {"field1": "value1", "field2": "value2"}
    //Note the button was skipped.
  </script>
 
