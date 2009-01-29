@@ -25,6 +25,8 @@ The iframe IO functions are intended to handle complex IO operations that cannot
 Usage
 =====
 
+Usage is similar to `dojo.xhrGet <dojo/xhrGet>`_ and `dojo.xhrPost <dojo/xhrPost>`_.  Please see below for information on specific properties that are accepted by the dojo.io.iframe functions and what they control.
+
 dojo.io.iframe supported object properties
 -------------------------------------------
 
@@ -60,6 +62,8 @@ dojo.io.iframe supported object properties
 
 Important usage notes
 ---------------------
+
+dojo.io.iframe calls cannot be made synchronous; therefore trying to set the 'sync' parameter (as shown in dojo.xhrGet()) will do nothing.  
 
 **IMPORTANT:** For all values EXCEPT html, The server response should be an HTML file with a textarea element. The response data should be inside the textarea element. Using an HTML document the only reliable, cross-browser way this transport can know when the response has loaded. For the text/html mimetype, just return a normal HTML document. NOTE: text/xml or any other XML type is NOT supported by this transport.  In other words, your services for XML, JSON, and Text formats should return the data wrapped as the following:
 
