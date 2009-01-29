@@ -29,6 +29,9 @@ Specific arguments for dojo.io.iframe calls:
 
   This is because there are limited ways that data can be retrieved (by security design), using an iframe to proxy an IO call.  The reason for being structured as:
 
+.. code-block :: javascript
+  :linenos:
+
   <html>
     <textarea>
       Your stuff
