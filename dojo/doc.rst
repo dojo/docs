@@ -42,6 +42,23 @@ Examples
 Example usage of dojo.doc as replacement for document calls
 -----------------------------------------------------------
 
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      function addText() {
+        dojo.connect(dijit.byId("addTextButton"), "onClick", function(){
+           var newText = dojo.doc.createTextNode("New Text!");
+           dojo.doc.body.appendChild(newText);
+        });
+      }
+      dojo.addOnLoad(addText);
+    </script>
+
+  .. cv :: html 
+
+    <button id="addTextButton" dojoType="dijit.form.Button">Click me to add 'New Text!' to the page</button><br><br>
 
 ========
 See also
