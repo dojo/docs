@@ -26,13 +26,16 @@ ShrinkSafe comes bundled with the ``-src`` releases of the Dojo Toolkit in the f
 Usage
 =====
 
+Shrinksafe can operate on a list of file or urls, or if none are specified it will use stdin.  Output goes to stdout, which may be redirected
+to a file or process.
+
 .. code-block :: javascript
 
   java -jar shrinksafe.jar bigcode.js > smallercode.js   Compresses bigcode.js to smallercode.js
 
   java -jar shrinksafe.jar file1.js file2.js file3.js > combined.js   Compresses three files into one
 
-  cat /mydir/*.js | java -jar shrinksafe.jar
+  mygeneratorscript | java -jar shrinksafe.jar
 
   java -jar shrinksafe.jar http://myhost/mypath/foo.js > bar.js
 
