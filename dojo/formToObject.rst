@@ -124,6 +124,6 @@ See also
 ========
 
 * `dojo.objectToQuery <dojo/objectToQuery>`_
-* `dojo.queryToObject <dojo/queryToObject >`_
+* `dojo.queryToObject <dojo/queryToObject>`_
 * `dojo.formToQuery <dojo/formToQuery>`_
 * `dojo.formToJson <dojo/formToJson>`_
