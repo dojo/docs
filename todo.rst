@@ -39,7 +39,7 @@ Top priority: Dojo Base
 
 * `dojo.withGlobal <dojo/withGlobal>`_
 
-  needed: full page
+  needed: Review and additional use causes.  Very spartan right now.
 
 * `dojo.withDoc <dojo/withDoc>`_
 
