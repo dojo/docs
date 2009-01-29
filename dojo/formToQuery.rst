@@ -97,7 +97,7 @@ Example 2: Using formToQuery to create a query string version of a form with dij
       dojo.require("dijit.form.Button");
       function convertFormDigits() {
         dojo.connect(dijit.byId("convertFormDigits"), "onClick", function(){
-           var formQuery=  dojo.formToQuery("myform");
+           var formQuery=  dojo.formToQuery("myform2");
 
            //Attach it into the dom as pretty-printed text.
            dojo.byId("formQuery2").innerHTML = formQuery;
@@ -110,7 +110,7 @@ Example 2: Using formToQuery to create a query string version of a form with dij
 
     <button id="convertFormDigits" dojoType="dijit.form.Button">Click to convert the form to an object</button><br><br>
     <b>The FORM</b><br><br>
-    <form id="myform">
+    <form id="myform2">
        <input type="text" dojoType="dijit.form.TextBox" name="field1" value="value1">
        <input type="text" dojoType="dijit.form.TextBox" name="field2" value="value2">
        <button dojoType="dijit.form.Button" name="someButton" value="someValue">someValue</button>
