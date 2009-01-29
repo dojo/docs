@@ -26,6 +26,7 @@ ShrinkSafe comes bundled with the ``-src`` releases of the Dojo Toolkit in the f
 Usage
 =====
 
+.. code-block :: javascript
 
   java -jar shrinksafe.jar bigcode.js > smallercode.js   Compresses bigcode.js to smallercode.js
 
