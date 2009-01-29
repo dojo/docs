@@ -39,19 +39,13 @@ Use this variable in place of calls to window.document.  That way you are assure
 Examples
 ========
 
-Programmatic example
---------------------
-
-TODO: example
-
-Declarative example
--------------------
-
-TODO: example
+Example usage of dojo.doc as replacement for document calls
+-----------------------------------------------------------
 
 
 ========
 See also
 ========
 
-* TODO: links to other related articles
+* dojo.withDoc <dojo/withDoc>`_
+* dojo.setContext <dojo/setContext>`_
