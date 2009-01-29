@@ -51,6 +51,11 @@ dojo.io.iframe supported object properties
 |                  |                                                                                                                            |
 |                  |**This parameter is optional**                                                                                              |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
+|**form**          |For posting FORM data, you can provide a either the DOM node of your form or the ID of the form.  The dojo.io.iframe call   |
+|                  | will convert this into proper POST format (query params or form content) and send it via the iframe                         |
+|                  |                                                                                                                            |
+|                  |**This parameter is optional**                                                                                              |
++------------------+----------------------------------------------------------------------------------------------------------------------------+
 |**content**       |A JavaScript object of name/string value pairs.  These items are normally converted to query parameters and passed on as    |
 |                  |part of the url.  The caveat to this is if you also specify a 'form' argument.  If a form  argument was also provided, then |
 |                  |then the parameters of 'content' are merged into the values from the form and the whole thing is send as a multi-part form  |
