@@ -65,8 +65,8 @@ dojo.io.iframe supported object properties
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
 
 
-Important usage notes
----------------------
+Additional Information
+----------------------
 
 dojo.io.iframe calls cannot be made synchronous; therefore trying to set the 'sync' parameter (as shown in dojo.xhrGet()) will do nothing.  
 
