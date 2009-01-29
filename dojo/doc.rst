@@ -51,6 +51,7 @@ Example usage of dojo.doc as replacement for document calls
         dojo.connect(dijit.byId("addTextButton"), "onClick", function(){
            var newText = dojo.doc.createTextNode("New Text!");
            dojo.doc.body.appendChild(newText);
+           dojo.doc.body.appendChild(dojo.doc.createElement("br"));
         });
       }
       dojo.addOnLoad(addText);
@@ -59,6 +60,7 @@ Example usage of dojo.doc as replacement for document calls
   .. cv :: html 
 
     <button id="addTextButton" dojoType="dijit.form.Button">Click me to add 'New Text!' to the page</button><br><br>
+    <b>Click the button several times, then scroll down to see the appended text.</b>
 
 
 ========
