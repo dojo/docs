@@ -52,7 +52,7 @@ Constructor Parameters
 |                |              |on custom types, please refer to the section in this page on them. They are effectively a way   |           |
 |                |              |to control how certain values of attributes are processed.                                      |           |
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
-| clearOnClose   | No           |This boolean parameter controls the clear() behavior of the store. If set, calling close() will | 1.2       |
+| clearOnClose   | No           |This boolean parameter controls the close() behavior of the store. If set, calling close() will | 1.2       |
 |                |              |erase all items stored in the internal structures. A new call to fetch will invoke the URL      |           |
 |                |              |load or reparse the data object into a new list of items.                                       |           |
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
