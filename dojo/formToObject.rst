@@ -112,7 +112,7 @@ Example 2: Using formToObject to create an object version of a form with dijit w
     <form id="myform">
        <input type="text" dojoType="dijit.form.TextBox" name="field1" value="value1">
        <input type="text" dojoType="dijit.form.TextBox" name="field2" value="value2">
-       <input type="button" dojoType="dijit.form.Button" name="someButton" value="someValue">
+       <input type="button" dojoType="dijit.form.Button" name="someButton" value="someValue">someValue</input>
     </form>
     <br><br>
     <b>The form as an object:</b>
