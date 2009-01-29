@@ -25,7 +25,17 @@ Specific arguments for dojo.io.iframe calls:
 
 * handleAs: Valid values are "text", "html", "xml", "json" and "javascript. 
 
-  IMPORTANT: For all values EXCEPT html, The server response should be an HTML file with a textarea element. The response data should be inside the textarea element. Using an HTML document the only reliable, cross-browser way this transport can know when the response has loaded. For the text/html mimetype, just return a normal HTML document. NOTE: text/xml or any other XML type is NOT supported by this transport.
+  **IMPORTANT:** For all values EXCEPT html, The server response should be an HTML file with a textarea element. The response data should be inside the textarea element. Using an HTML document the only reliable, cross-browser way this transport can know when the response has loaded. For the text/html mimetype, just return a normal HTML document. NOTE: text/xml or any other XML type is NOT supported by this transport.
+
+  This is because there are limited ways that data can be retrieved (by security design), using an iframe to proxy an IO call.  The reason for being structured as:
+
+  <html>
+    <textarea>
+      //Your stuff
+    </textarea>
+  </html>
+
+  Is because the most flexible is accessing the DOM in the iframe and extracting data from it.  A textarea provides a fixed container that dojo can DOM locate and extract the contents from.  And since it is a text area, it can contain JSON, XML, Text, etc.  Once the data is obtained, the usual data handlers from dojo can process it and pass it back through the usual callbacks. 
 
 
 ========
