@@ -29,7 +29,7 @@ Use this variable in place of calls to window.document.  That way you are assure
  :linenos:
 
  <script type="text/javascript">
-   var currentBody = dojo.doc.body;
+   var currentBody = dojo.doc.body;  //You can also use: dojo.body() to get the current document body.
    var newText = dojo.doc.createTextNode("Some text");
    currentBody.appendChild(newText);
  </script>
