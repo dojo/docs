@@ -10,13 +10,14 @@ dojo.doc
 .. contents::
    :depth: 2
 
-Alias for the current document.
+Alias for the current document.  This is normally the value of window["document"];
 
 
 ============
 Introduction
 ============
 
+The purpose of this class is twofold.  First, it provides a shorter reference to getting along of the current document.  Second, all references that make use of it can have its document scope altered temporarily by calls to the function `dojo.withDoc() <dojo/doc>`_.
 TODO: introduce the component/class/method
 
 
