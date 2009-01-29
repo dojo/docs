@@ -85,8 +85,8 @@ Example 1: Using formToQuery to create an query string version of a form
     <b>The form as a query string:</b>
     <pre id="formQueryString"></pre>
 
-Example 2: Using formToJson to create a JSON version of a form with dijit widgets
----------------------------------------------------------------------------------
+Example 2: Using formToQuery to create a query string version of a form with dijit widgets
+------------------------------------------------------------------------------------------
 
 .. cv-compound ::
   
@@ -97,10 +97,10 @@ Example 2: Using formToJson to create a JSON version of a form with dijit widget
       dojo.require("dijit.form.Button");
       function convertFormDigits() {
         dojo.connect(dijit.byId("convertFormDigits"), "onClick", function(){
-           var formJson=  dojo.formToJson("myform");
+           var formQuery=  dojo.formToQuery("myform");
 
            //Attach it into the dom as pretty-printed text.
-           dojo.byId("formObject2").innerHTML = formJson;
+           dojo.byId("formQuery2").innerHTML = formQuery;
         });
       }
       dojo.addOnLoad(convertFormDigits);
@@ -116,8 +116,8 @@ Example 2: Using formToJson to create a JSON version of a form with dijit widget
        <button dojoType="dijit.form.Button" name="someButton" value="someValue">someValue</button>
     </form>
     <br><br>
-    <b>The form as JSON:</b>
-    <pre id="formObject2"></pre>
+    <b>The form as a query string:</b>
+    <pre id="formQuery2"></pre>
 
 
 ========
