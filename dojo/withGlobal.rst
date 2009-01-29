@@ -16,7 +16,7 @@ dojo.withGlobal provides a mechanism by with a particular function can have its 
 Introduction
 ============
 
-This function provides a quick way to alter both the dojo.global scope and the dojo.doc document scope with a dingle call.  This call makes it possible for widgets that are dojo.global and dojo.doc scope-control away to have their scopes changed temporarily in a function call without affecting the rest of the page.
+This function provides a quick way to alter both the dojo.global scope and the dojo.doc document scope with a single call.  This call makes it possible for widgets that are dojo.global and dojo.doc scope-control away to have their scopes changed temporarily in a function call without affecting the rest of the page.
 
 =====
 Usage
