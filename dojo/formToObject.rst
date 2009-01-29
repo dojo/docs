@@ -61,8 +61,8 @@ Example 1: Using formToObject to create an object version of a form
 
     <script>
       function convertForm() {
-        dojo.connect(dijit.byId("convertQuery"), "onClick", function(){
-           var formObject =  dojo.formToObject("myForm");
+        dojo.connect(dijit.byId("convertForm"), "onClick", function(){
+           var formObject =  dojo.formToObject("myform");
 
            //Attach it into the dom as pretty-printed text.
            dojo.byId("formObject").innerHTML = dojo.toJson(formObject, true);
@@ -73,7 +73,7 @@ Example 1: Using formToObject to create an object version of a form
 
   .. cv :: html 
 
-    <button id="convertQuery" dojoType="dijit.form.Button">Click to convert the form to an object</button><br><br>
+    <button id="convertForm" dojoType="dijit.form.Button">Click to convert the form to an object</button><br><br>
     <b>The FORM</b><br><br>
     <form id="myform">
        <input type="text" name="field1" value="value1">
