@@ -33,10 +33,6 @@ Top priority: Dojo Base
 
   needed: a proper test against isAlien() (in the example)
 
-* `dojo.doc <dojo/doc>`_
-
-  needed: full page
-
 * `dojo.setContext <dojo/setContext>`_
 
   needed: full page
