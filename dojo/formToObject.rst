@@ -29,7 +29,7 @@ Usage is simple and straightforward, you pass the form node or the string id of 
 
  <script type="text/javascript">
    var formId = "myId";
-   var formObj = dojo.formToObject(formObj);
+   var formObj = dojo.formToObject(formId);
 
    //Assuming a form of:
    // <form id="myform">
