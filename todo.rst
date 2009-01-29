@@ -53,18 +53,6 @@ Top priority: Dojo Base
 
   Should we move the current example to another page?
 
-* `dojo.formToJson <dojo/formToJson>`_
-
-  needed: full page
-
-* `dojo.formToObject <dojo/formToObject>`_
-
-  needed: full page
-
-* `dojo.formToQuery <dojo/formToQuery>`_
-
-  needed: full page
-
 
 =====================
 Priority 2: Dojo Core
