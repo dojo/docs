@@ -12,13 +12,21 @@ dojo.io.frame
 
 dojo.io.frame sends an AJAX I/O call using an IFrame (for instance, to upload files).
 
+============
+Introduction
+============
+
+The iframe IO class is intended to handle complex IO operations that cannot be done through a basic dojo.xhr*() call.  These situations are fairly common and include the following:
+
+* Calling a service on a server other than the one that originated the calling page (cross-domain request).
+* Uploading files from a form (File Input controls).  The normal XHR mechanism cannot access file data referenced by file selection tags as a security measure.  An iframe, however, can, so by proxying those calls through an iframe make it possible to still do file uploads in an asynchronous manner.
 
 =====
 Usage
 =====
 
-dojo.xhrGet supported object properties
----------------------------------------
+dojo.io.iframe supported object properties
+-------------------------------------------
 
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
 |**url**           |The URL to make the iframe request to.  This URL can refer to servers other than the one that originated the calling page.  | 
