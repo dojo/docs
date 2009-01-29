@@ -16,7 +16,11 @@ Helper function for converting a HTML form to a JSON string
 Introduction
 ============
 
-This function is one of many helpers used by the dojo Xhr subsystem for handling AJAX style requests.  This particular function takes a HTML form node and converts the form elements into a JSON string.  This function is identical to doing the operation: *dojo.toJson(dojo.formToObject("formid"));*.  You can refer to the `dojo.formToObject <dojo/formToObject>`_ documentation for more details.
+This function is one of many helpers used by the dojo Xhr subsystem for handling AJAX style requests.  This particular function takes a HTML form node and converts the form elements into a JSON string.  This function is identical to doing the operation: 
+
+*dojo.toJson(dojo.formToObject("formid"));*.  
+
+You can refer to the `dojo.formToObject <dojo/formToObject>`_ documentation for more details.
 
 =====
 Usage
