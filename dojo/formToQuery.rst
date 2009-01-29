@@ -20,7 +20,7 @@ This function is one of many helpers used by the dojo Xhr subsystem for handling
 
 *dojo.objectToQuery(dojo.formToObject("formid"));*  
 
-You can refer to the `dojo.formToObject <dojo/formToObject>`_ and `dojo.objectToQuery<dojo/objectToQuery>`_ documentation for more details on the general behavior.
+You can refer to the `dojo.formToObject <dojo/formToObject>`_ and `dojo.objectToQuery <dojo/objectToQuery>`_ documentation for more details on the general behavior.
 
 =====
 Usage
