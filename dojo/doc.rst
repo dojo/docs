@@ -47,5 +47,5 @@ Example usage of dojo.doc as replacement for document calls
 See also
 ========
 
-* dojo.withDoc <dojo/withDoc>`_
-* dojo.setContext <dojo/setContext>`_
+* `dojo.withDoc <dojo/withDoc>`_
+* `dojo.setContext <dojo/setContext>`_
