@@ -5,32 +5,45 @@ dojo.formToJson
 
 :Status: Draft
 :Version: 1.0
-:Available: since V?
+:Available: since V0.9
 
 .. contents::
    :depth: 2
 
-TODO: short summary of the component/class/method
-
+Helper function for converting a HTML form to a JSON string
 
 ============
 Introduction
 ============
 
-TODO: introduce the component/class/method
-
+This function is one of many helpers used by the dojo Xhr subsystem for handling AJAX style requests.  This particular function takes a HTML form node and converts the form elements into a JSON string.  This function is identical to doing the operation: *dojo.toJson(dojo.formToObject("formid"));*.  You can refer to the `dojo.formToObject <dojo/formToObject>`_ documentation for more details.
 
 =====
 Usage
 =====
 
-TODO: how to use the component/class/method
+Usage is simple and straightforward, you pass the form node or the string id of a form node to convert.  The function will hand back a JSON string of the name/value pairs from the form elements.
 
 .. code-block :: javascript
  :linenos:
 
  <script type="text/javascript">
-   // your code
+   var formId = "myId";
+   var formJSON = dojo.formToJson(formId);
+
+   //Assuming a form of:
+   // <form id="myform">
+   //    <input type="text" name="field1" value="value1">
+   //    <input type="text" name="field2" value="value2">
+   //    <input type="button" name="someButton" value="someValue">
+   // </form>
+   //
+   //The structure of formJson will be:
+   // {
+   //   "field1": "value1",
+   //   "field2": "value2"
+   // }
+   //Note the button was skipped.
  </script>
 
 
@@ -39,19 +52,78 @@ TODO: how to use the component/class/method
 Examples
 ========
 
-Programmatic example
---------------------
+Example 1: Using formToObject to create an object version of a form
+-------------------------------------------------------------------
 
-TODO: example
+.. cv-compound ::
+  
+  .. cv :: javascript
 
-Declarative example
--------------------
+    <script>
+      function convertForm() {
+        dojo.connect(dijit.byId("convertForm"), "onClick", function(){
+           var formObject =  dojo.formToObject("myform");
 
-TODO: example
+           //Attach it into the dom as pretty-printed text.
+           dojo.byId("formObject").innerHTML = dojo.toJson(formObject, true);
+        });
+      }
+      dojo.addOnLoad(convertForm);
+    </script>
+
+  .. cv :: html 
+
+    <button id="convertForm" dojoType="dijit.form.Button">Click to convert the form to an object</button><br><br>
+    <b>The FORM</b><br><br>
+    <form id="myform">
+       <input type="text" name="field1" value="value1">
+       <input type="text" name="field2" value="value2">
+       <input type="button" name="someButton" value="someValue">
+    </form>
+    <br><br>
+    <b>The form as an object:</b>
+    <pre id="formObject"></pre>
+
+Example 2: Using formToObject to create an object version of a form with dijit widgets
+--------------------------------------------------------------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dijit.form.TextBox");
+      dojo.require("dijit.form.Button");
+      function convertFormDigits() {
+        dojo.connect(dijit.byId("convertFormDigits"), "onClick", function(){
+           var formObject =  dojo.formToObject("myform");
+
+           //Attach it into the dom as pretty-printed text.
+           dojo.byId("formObject2").innerHTML = dojo.toJson(formObject, true);
+        });
+      }
+      dojo.addOnLoad(convertFormDigits);
+    </script>
+
+  .. cv :: html 
+
+    <button id="convertFormDigits" dojoType="dijit.form.Button">Click to convert the form to an object</button><br><br>
+    <b>The FORM</b><br><br>
+    <form id="myform">
+       <input type="text" dojoType="dijit.form.TextBox" name="field1" value="value1">
+       <input type="text" dojoType="dijit.form.TextBox" name="field2" value="value2">
+       <button dojoType="dijit.form.Button" name="someButton" value="someValue">someValue</button>
+    </form>
+    <br><br>
+    <b>The form as an object:</b>
+    <pre id="formObject2"></pre>
 
 
 ========
 See also
 ========
 
-* TODO: links to other related articles
+* `dojo.objectToQuery <dojo/objectToQuery>`_
+* `dojo.queryToObject <dojo/queryToObject>`_
+* `dojo.formToQuery <dojo/formToQuery>`_
+* `dojo.formToJson <dojo/formToJson>`_
