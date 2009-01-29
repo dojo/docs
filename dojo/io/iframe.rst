@@ -21,7 +21,7 @@ The iframe IO functions are intended to handle complex IO operations that cannot
 * Calling a service on a server other than the one that originated the calling page (cross-domain request).
 * Uploading files from a form (File Input controls).  The normal XHR mechanism cannot access file data referenced by file selection tags as a security measure.  An iframe, however, can, so by proxying those calls through an iframe make it possible to still do file uploads in an asynchronous manner.
 
-It also retains much of the same operating semantics as dojo.xhrGet with regards to how you get the response from the service.  All results are response data is returned through callbacks.  There is a caveat to this; it requires the server to send the responese back in a very specific format, please refer to the `Additional Information <dojo/io/iframe>`_ section.
+It also retains much of the same operating semantics as dojo.xhrGet with regards to how you get the response from the service.  All results are response data is returned through callbacks.  There is a caveat to this; it requires the server to send the responese back in a very specific format, please refer to the `Additional Information <dojo/io/iframe#id1>`_ section.
 
 =====
 Usage
