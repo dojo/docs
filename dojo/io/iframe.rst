@@ -17,13 +17,41 @@ dojo.io.frame sends an AJAX I/O call using an IFrame (for instance, to upload fi
 Usage
 =====
 
-Specific arguments for dojo.io.iframe calls:
+dojo.xhrGet supported object properties
+---------------------------------------
 
-* method: "POST". 
++------------------+----------------------------------------------------------------------------------------------------------------------------+
+|**url**           |The URL to make the iframe request to.  This URL can refer to servers other than the one that originated the calling page.  | 
++------------------+----------------------------------------------------------------------------------------------------------------------------+
+|**handleAs**      |This parameter specifies how to handle the data returned from the server.  It usually takes values of 'text', 'xml', or     |
+|                  |'json'.  What those values do is instruct it to try and hand the data to the asynchronous callback functions in that format.|
+|                  |Naturally if you specify a format that doesn't match what the server sends you will likely get an error.                    |
+|                  |                                                                                                                            |
+|                  |The currently supported options are:                                                                                        |
+|                  |                                                                                                                            |
+|                  |* text (default)                                                                                                            |
+|                  |* json                                                                                                                      |
+|                  |* xml                                                                                                                       |
+|                  |* html                                                                                                                      |
+|                  |                                                                                                                            |
+|                  |**This parameter is optional**                                                                                              |
++------------------+----------------------------------------------------------------------------------------------------------------------------+
+|**method**        |The HTTP method to use when sending the iframe IO request.  It can be either **GET** or **POST** with the value of POST as  |
+|                  |the default.                                                                                                                |
+|                  |                                                                                                                            |
+|                  |**This parameter is optional**                                                                                              |
++------------------+----------------------------------------------------------------------------------------------------------------------------+
+|**content**       |A JavaScript object of name/string value pairs.  These items are normally converted to query parameters and passed on as    |
+|                  |part of the url.  The caveat to this is if you also specify a 'form' argument.  If a form  argument was also provided, then |
+|                  |then the parameters of 'content' are merged into the values from the form and the whole thing is send as a multi-part form  |
+|                  |post.  
+|                  |                                                                                                                            |
+|                  |**This parameter is optional**                                                                                              |
++------------------+----------------------------------------------------------------------------------------------------------------------------+
 
-  What type of HTTP method to use for the request. Valid values are "POST" (default) or "GET".
 
-* handleAs: Valid values are "text", "html", "xml", "json" and "javascript. 
+Important usage notes
+---------------------
 
 **IMPORTANT:** For all values EXCEPT html, The server response should be an HTML file with a textarea element. The response data should be inside the textarea element. Using an HTML document the only reliable, cross-browser way this transport can know when the response has loaded. For the text/html mimetype, just return a normal HTML document. NOTE: text/xml or any other XML type is NOT supported by this transport.  In other words, your services for XML, JSON, and Text formats should return the data wrapped as the following:
 
