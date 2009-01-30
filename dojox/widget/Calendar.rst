@@ -164,7 +164,7 @@ This example shows how to construct a Calendar declaratively, which only shows t
 Creating A Custom Calendar
 ==========================
 
-As the calendar consists of a combination of views, it is possible to mix these any way you like.  The example below shows how to create a calendar that contains a Daily and Yearly view.
+As the calendar consists of a combination of views, it is possible to mix these any way you like.  The example below shows how to create a calendar that contains a Daily and Yearly view.  You must always include ''dojox.widget._CalendarBase'' and one other view, otherwise you can include whatever views you like.
 
 .. cv-compound::
   
