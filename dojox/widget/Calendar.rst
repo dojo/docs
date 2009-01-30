@@ -51,8 +51,10 @@ As shown in the example above, the ''dojox/widget/Calendar/Calendar.css'' CSS fi
 Examples
 ========
 
-Programmatic example
+Programmatic examples
 --------------------
+
+This example shows the standard calendar being created from code.  Include the Calendar.css file, define a HTML node where the calendar is to be placed, load the dojox/widget/Calendar.js file using ''dojo.require'', then instantiate the widget. 
 
 .. cv-compound::
 
@@ -75,6 +77,32 @@ Programmatic example
         dojo.addOnLoad(function(){	
             // create the dialog:
             var cal_1 = new dojox.widget.Calendar({}, dojo.byId("cal_1"));
+        });
+    </script>
+
+
+
+.. cv-compound::
+
+  This example shows just the daily calendar being instantiated, with no month or year options.  
+  
+  .. cv:: html
+
+    <style type="text/css">
+      @import "/moin_static163/js/dojo/trunk/dojox/widget/Calendar/Calendar.css";
+    </style>
+    <div id="cal_2"></div>
+    <div id="cal_2_report"></div>
+
+  .. cv:: javascript
+    :label: The javascript, put this wherever you want the dialog creation to happen
+
+    <script type="text/javascript">
+        dojo.require("dojox.widget.DailyCalendar");
+
+        dojo.addOnLoad(function(){	
+            // create the dialog:
+            var cal_2 = new dojox.widget.Calendar({}, dojo.byId("cal_2"));
         });
     </script>
 
