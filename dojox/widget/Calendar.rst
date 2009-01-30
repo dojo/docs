@@ -198,3 +198,4 @@ See also
 ========
 
 * http://shaneosullivan.wordpress.com/2008/03/24/sexy-new-calendar-widget-for-dojo/
+* http://archive.dojotoolkit.org/nightly/dojotoolkit/dojox/widget/tests/test_Calendar.html
