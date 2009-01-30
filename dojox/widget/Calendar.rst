@@ -61,7 +61,7 @@ Programmatic example
   .. cv:: html
 
     <style type="text/css">
-      @import "dojox/widget/Calendar/Calendar.css";
+      @import "/moin_static163/js/dojo/trunk/dojox/widget/Calendar/Calendar.css";
     </style>
     <div id="cal_1"></div>
     <div id="cal_1_report"></div>
