@@ -15,7 +15,6 @@ dijit.layout.ContentPane
 
 A Content Pane is the most basic layout tile. Conceptually, it's like the content boxes in portals like MyYahoo. A content pane resembles an iframe, but contains extra design features, fits in with the current theme, and renders widgets properly.
 
-
 =====
 Usage
 =====
@@ -27,6 +26,8 @@ Href
 
 One big use for ContentPanes is to load content dynamically through an href (see the href parameter).
 However, note that the href must access data on the same domain since it's served via XHR.  To change the content of the content pane without performing an Ajax load, the content attribute can be set to the new HTML values.
+
+ContentPane acts as a base class for a number of widgets (such as `Dialog <dijit/Dialog>`_). These documents apply in most cases to all widgets that inherit this code. For instance, Dialog's href="" attributes is identical to ContentPane. 
 
 Callbacks
 ---------
@@ -71,6 +72,53 @@ Declarative example
 
     <div dojoType="dijit.layout.ContentPane">
       Hi, pretty boring huh?
+    </div>
+
+Programmatic example
+--------=-----------
+
+Create a ContentPane from an existing DIV, and replace it's content:
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+      dojo.require("dijit.layout.ContentPane");
+      dojo.addOnLoad(function(){
+          new dijit.layout.ContentPane({
+              content:"<p>Optionally set new content now</p>",
+              style:"height:125px"
+          }, "targetID");
+      });
+    </script>
+
+  .. cv:: html
+
+    <div id="targetID">
+      I get replaced.
+    </div>
+
+Create an entirely new ContentPane from no DOM, and place in Some node byID:
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+      dojo.require("dijit.layout.ContentPane");
+      dojo.addOnLoad(function(){
+          new dijit.layout.ContentPane({
+              content:"<p>I am initial content</p>",
+              style:"height:125px"
+          }).placeAt("targetIDtoo");
+      });
+    </script>
+
+  .. cv:: html
+
+    <div id="targetIDtoo">
+      A contentPane will appear here:
     </div>
 
 
