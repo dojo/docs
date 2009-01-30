@@ -53,8 +53,26 @@ TODO: example
 
 Declarative example
 -------------------
+.. cv-compound::
 
-TODO: example
+  A Calendar created from markup
+  
+  .. cv:: html
+
+    <div id="cal_1" dojoType="dojox.widget.Calendar"></div>
+
+    <div id="cal_1_report"></div>
+
+  .. cv:: javascript
+    :label: The javascript, put this wherever you want the Calendar creation to happen
+
+    <script type="text/javascript">
+        dojo.require("dojox.widget.Calendar");
+
+        dojo.connect(dijit.byId("cal_1", "onValueSelected", function(date){
+          dojo.byId("cal_1_report").innerHTML = date;
+        });
+    </script>
 
 
 ========
