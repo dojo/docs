@@ -54,7 +54,26 @@ Examples
 Programmatic example
 --------------------
 
-TODO: example
+.. cv-compound::
+
+  A programmatically created Calendar. First lets write up some simple HTML code because you need to define the place where your Calendar should be created.
+  
+  .. cv:: html
+    
+    <div id="cal_1"></div>
+    <div id="cal_1_report"></div>
+
+  .. cv:: javascript
+    :label: The javascript, put this wherever you want the dialog creation to happen
+
+    <script type="text/javascript">
+        dojo.require("dojox.widget.Calendar");
+
+        dojo.addOnLoad(function(){	
+            // create the dialog:
+            var cal_1 = new dojox.widget.Calendar({}, dojo.byId("cal_1"));
+        });
+    </script>
 
 Declarative example
 -------------------
