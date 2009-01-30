@@ -113,7 +113,28 @@ This example shows just the daily calendar being instantiated, with no month or 
 Declarative example
 -------------------
 
-TODO: example
+This example shows how to construct a standard Calendar declaratively.
+
+.. cv-compound::
+  
+  .. cv:: html
+
+    <style type="text/css">
+      @import "/moin_static163/js/dojo/trunk/dojox/widget/Calendar/Calendar.css";
+    </style>
+    <div id="cal_3">
+      <script type="text/connect" args="date">
+        dojo.byId("cal_3_report").innerHTML = date;
+      </script>
+    </div>
+    <div id="cal_3_report"></div>
+
+  .. cv:: javascript
+    :label: The javascript, put this wherever you want the dialog creation to happen
+
+    <script type="text/javascript">
+        dojo.require("dojox.widget.Calendar");
+    </script>
   
 
 
