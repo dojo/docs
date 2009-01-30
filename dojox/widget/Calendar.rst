@@ -57,13 +57,7 @@ Declarative example
 
   A Calendar created from markup
   
-  .. cv:: html
-
-    <div id="cal_1" dojoType="dojox.widget.Calendar"></div>
-
-    <div id="cal_1_report"></div>
-
-  .. cv:: javascript
+.. cv:: javascript
     :label: The javascript, put this wherever you want the Calendar creation to happen
 
     <script type="text/javascript">
@@ -73,6 +67,14 @@ Declarative example
           dojo.byId("cal_1_report").innerHTML = date;
         });
     </script>
+
+  .. cv:: html
+
+    <div id="cal_1" dojoType="dojox.widget.Calendar"></div>
+
+    <div id="cal_1_report"></div>
+
+  
 
 
 ========
