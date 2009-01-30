@@ -11,7 +11,7 @@ ShrinkSafe
 .. contents::
    :depth: 2
 
-ShrinkSafe is a standalone Java-based JavaScript compressor which utilizes Rhino to parse code and safely shorten the results.  ShrinkSafe renames local references to short names prefixed with an underscore.  This saves bytes on the wire and also provides some obfuscation of the code.  It also eliminates whitespace and comments when generating the new code.  Global references and property names remain unchanged such that external file references to the compressed code should be safe.
+ShrinkSafe is a standalone Java-based JavaScript compressor which utilizes Rhino to parse code and safely shorten the results.  ShrinkSafe renames local references to short names prefixed with an underscore.  This saves bytes on the wire and also provides some obfuscation of the code.  It also eliminates whitespace and comments when generating the new code.  Global references and property names remain unchanged such that external references to the compressed code should be safe.
 
 ================
 Getting the Code
@@ -46,15 +46,16 @@ to a file or process.
 Developer information
 =====================
 
-ShrinkSafe has its own jar file, ``shrinksafe.jar``, which utilizes an unmodified Rhino jar, ``js.jar``.  Note that the linkage requiresr the same version of Rhino used to build the shrinksafe.jar.  In versions prior to Dojo 1.3, ShrinkSafe was bundled into Rhino by way of patch, and shipped as ``custom_rhino.jar``. 
+ShrinkSafe has its own jar file, ``shrinksafe.jar``, which utilizes an unmodified Rhino jar, ``js.jar``.  Note that the linkage requires the same version of Rhino used to build the shrinksafe.jar.  In versions prior to Dojo 1.3, ShrinkSafe was bundled into Rhino by way of patch, and shipped as ``custom_rhino.jar``. 
 
 
 ==========
 Known bugs
 ==========
-Shrinksafe removes comments containing IE's propietary conditional compilation code `ticket #2298 <http://bugs.dojotoolkit.org/ticket/2298>`_
-Forward references are not always resolved properly.  See `ticket #3241 <http://bugs.dojotoolkit.org/ticket/3241>`_
-ShrinkSafe appears to not handle '$super' in this code.  See `ticket #5436 <http://bugs.dojotoolkit.org/ticket/5436>`_
+
+* Shrinksafe removes comments containing IE's propietary conditional compilation code `ticket #2298 <http://bugs.dojotoolkit.org/ticket/2298>`_
+* Forward references are not always resolved properly.  See `ticket #3241 <http://bugs.dojotoolkit.org/ticket/3241>`_
+* ShrinkSafe appears to not handle '$super' in this code.  See `ticket #5436 <http://bugs.dojotoolkit.org/ticket/5436>`_
 
 ========
 See also
