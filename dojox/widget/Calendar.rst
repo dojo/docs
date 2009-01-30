@@ -197,4 +197,4 @@ As the calendar consists of a combination of views, it is possible to mix these 
 See also
 ========
 
-* TODO: links to other related articles
+* http://shaneosullivan.wordpress.com/2008/03/24/sexy-new-calendar-widget-for-dojo/
