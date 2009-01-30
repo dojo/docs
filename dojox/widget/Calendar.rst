@@ -80,11 +80,9 @@ This example shows the standard calendar being created from code.  Include the C
         });
     </script>
 
-
+This example shows just the daily calendar being instantiated, with no month or year options.  
 
 .. cv-compound::
-
-  This example shows just the daily calendar being instantiated, with no month or year options.  
   
   .. cv:: html
 
