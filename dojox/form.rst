@@ -25,9 +25,9 @@ The dojox.form project provides additional form-related widgets beyond `dijit.fo
 
   description?
 
-* dojox.form.FileInput (base, Auto, and Blind)
+* `dojox.form.FileInput <dojox/form/FileInput>`_ (covers base, Auto, and Blind)
 
-  description?
+  A series of experimental Vanilla input type="file" widgets for uploading files. See also `FileUploader <dojox/form/FileUploader>`_
 
 * `dojox.form.FilePickerTextBox <dojox/form/FilePickerTextBox>`_
 
