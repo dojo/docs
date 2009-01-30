@@ -78,9 +78,9 @@ Declarative example
 Programmatic example
 --------------------
 
-Create a ContentPane from an existing DIV, and replace it's content:
-
 .. cv-compound::
+  
+  Create a ContentPane from an existing DIV, and replace it's content:
 
   .. cv:: javascript
 
@@ -100,9 +100,10 @@ Create a ContentPane from an existing DIV, and replace it's content:
       I get replaced.
     </div>
 
-Create an entirely new ContentPane from no DOM, and place in Some node byID:
 
 .. cv-compound::
+
+   Create an entirely new ContentPane from no DOM, and place in Some node byID:
 
   .. cv:: javascript
 
