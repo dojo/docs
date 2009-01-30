@@ -77,6 +77,10 @@ This example shows the standard calendar being created from code.  Include the C
         dojo.addOnLoad(function(){	
             // create the dialog:
             var cal_1 = new dojox.widget.Calendar({}, dojo.byId("cal_1"));
+            dojo.connect(cal_1, "onValueSelected", function(date){
+              dojo.byId("cal_1_report").innerHTML = date;
+            });
+
         });
     </script>
 
