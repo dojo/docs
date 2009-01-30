@@ -213,3 +213,12 @@ Pass in parameters manually
         }
     });
   </script>
+
+========
+See Also
+========
+
+A common use of dojo.io.iframe is for uploading files in an Ajax-like manner. There are prefabricated widgets to do this as well, some using iframe transports, some using flash 9+
+
+* `File Uploader <dojox/form/FileUploader>`_
+* `File Input <dojox/form/FileInput>`_
