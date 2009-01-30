@@ -123,7 +123,7 @@ This example shows how to construct a standard Calendar declaratively.
       @import "/moin_static163/js/dojo/trunk/dojox/widget/Calendar/Calendar.css";
     </style>
     <div id="cal_3" dojoType="dojox.widget.Calendar">
-      <script type="text/connect" event="onValueSelected" args="date">
+      <script type="dojo/connect" event="onValueSelected" args="date">
         dojo.byId("cal_3_report").innerHTML = date;
       </script>
     </div>
