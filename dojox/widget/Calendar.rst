@@ -68,7 +68,7 @@ Declarative example
         });
     </script>
 
-  .. cv:: html
+.. cv:: html
 
     <div id="cal_1" dojoType="dojox.widget.Calendar"></div>
 
