@@ -159,6 +159,40 @@ This example shows how to construct a Calendar declaratively, which only shows t
         dojo.require("dojox.widget.Calendar");
     </script>
 
+
+==========================
+Creating A Custom Calendar
+==========================
+
+As the calendar consists of a combination of views, it is possible to mix these any way you like.  The example below shows how to create a calendar that contains a Daily and Yearly view.
+
+.. cv-compound::
+  
+  .. cv:: html
+
+    <style type="text/css">
+      @import "/moin_static163/js/dojo/trunk/dojox/widget/Calendar/Calendar.css";
+    </style>
+    <div id="cal_5" dojoType="dojox.widget.CustomDayAndYearCalendar">
+      <script type="dojo/connect" event="onValueSelected" args="date">
+        dojo.byId("cal_5_report").innerHTML = date;
+      </script>
+    </div>
+    <div id="cal_5_report"></div>
+
+  .. cv:: javascript
+    :label: The javascript, put this wherever you want the dialog creation to happen
+
+    <script type="text/javascript">
+        dojo.require("dojox.widget.Calendar");
+
+        dojo.declare("dojox.widget.CustomDayAndYearCalendar", 
+	  [dojox.widget._CalendarBase,
+	   dojox.widget._CalendarDay,
+	   dojox.widget._CalendarYear], {});
+    </script>
+
+
 ========
 See also
 ========
