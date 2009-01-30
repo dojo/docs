@@ -63,8 +63,8 @@ Declarative example
 
   .. cv:: javascript
 
-    <script type="text/jscript">
-    dojo.require("dijit.layout.ContentPane");
+    <script type="text/javascript">
+      dojo.require("dijit.layout.ContentPane");
     </script>
 
   .. cv:: html
