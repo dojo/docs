@@ -52,7 +52,7 @@ Examples
 ========
 
 Programmatic examples
---------------------
+---------------------
 
 This example shows the standard calendar being created from code.  Include the Calendar.css file, define a HTML node where the calendar is to be placed, load the dojox/widget/Calendar.js file using ''dojo.require'', then instantiate the widget. 
 
