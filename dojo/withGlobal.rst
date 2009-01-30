@@ -1,7 +1,7 @@
 #format dojo_rst
 
-dojo.doc
-========
+dojo.withGlobal
+===============
 
 :Status: Draft
 :Version: 1.0
