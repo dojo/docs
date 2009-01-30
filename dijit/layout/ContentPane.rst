@@ -74,8 +74,9 @@ Declarative example
       Hi, pretty boring huh?
     </div>
 
+
 Programmatic example
---------=-----------
+--------------------
 
 Create a ContentPane from an existing DIV, and replace it's content:
 
