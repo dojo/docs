@@ -59,6 +59,7 @@ Programmatic example
   A programmatically created Calendar. First lets write up some simple HTML code because you need to define the place where your Calendar should be created.
   
   .. cv:: html
+
     <style type="text/css">
       @import "dojox/widget/Calendar/Calendar.css";
     </style>
