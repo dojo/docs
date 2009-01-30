@@ -136,7 +136,28 @@ This example shows how to construct a standard Calendar declaratively.  Note the
         dojo.require("dojox.widget.Calendar");
     </script>
   
+This example shows how to construct a Calendar declaratively, which only shows the Daily view.  Note the ''<script type="dojo/connect" '' used to listen for events.  This can be used instead of calls to ''dojo.connect'' for listening to function calls and events on widgets.
 
+.. cv-compound::
+  
+  .. cv:: html
+
+    <style type="text/css">
+      @import "/moin_static163/js/dojo/trunk/dojox/widget/Calendar/Calendar.css";
+    </style>
+    <div id="cal_3" dojoType="dojox.widget.DailyCalendar">
+      <script type="dojo/connect" event="onValueSelected" args="date">
+        dojo.byId("cal_3_report").innerHTML = date;
+      </script>
+    </div>
+    <div id="cal_3_report"></div>
+
+  .. cv:: javascript
+    :label: The javascript, put this wherever you want the dialog creation to happen
+
+    <script type="text/javascript">
+        dojo.require("dojox.widget.Calendar");
+    </script>
 
 ========
 See also
