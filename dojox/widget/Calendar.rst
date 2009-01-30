@@ -98,11 +98,11 @@ This example shows the standard calendar being created from code.  Include the C
     :label: The javascript, put this wherever you want the dialog creation to happen
 
     <script type="text/javascript">
-        dojo.require("dojox.widget.DailyCalendar");
+        dojo.require("dojox.widget.Calendar");
 
         dojo.addOnLoad(function(){	
             // create the dialog:
-            var cal_2 = new dojox.widget.Calendar({}, dojo.byId("cal_2"));
+            var cal_2 = new dojox.widget.DailyCalendar({}, dojo.byId("cal_2"));
         });
     </script>
 
