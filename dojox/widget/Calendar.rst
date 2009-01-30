@@ -145,12 +145,12 @@ This example shows how to construct a Calendar declaratively, which only shows t
     <style type="text/css">
       @import "/moin_static163/js/dojo/trunk/dojox/widget/Calendar/Calendar.css";
     </style>
-    <div id="cal_3" dojoType="dojox.widget.DailyCalendar">
+    <div id="cal_4" dojoType="dojox.widget.DailyCalendar">
       <script type="dojo/connect" event="onValueSelected" args="date">
-        dojo.byId("cal_3_report").innerHTML = date;
+        dojo.byId("cal_4_report").innerHTML = date;
       </script>
     </div>
-    <div id="cal_3_report"></div>
+    <div id="cal_4_report"></div>
 
   .. cv:: javascript
     :label: The javascript, put this wherever you want the dialog creation to happen
