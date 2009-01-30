@@ -36,10 +36,15 @@ Usage
 .. code-block :: javascript
  :linenos:
 
+ <style type="text/css">
+   @import "dojox/widget/Calendar/Calendar.css";
+ </style>
  <script type="text/javascript">
    dojo.require("dojox.widget.Calendar");
  </script>
  <div dojoType="dojox.widget.Calendar"></div>
+
+As shown in the example above, the ''dojox/widget/Calendar/Calendar.css'' CSS file must be included on the page, the JavaScript can be loaded using ''dojo.require("dojox.widget.Calendar")'', and a calendar can be placed on the page using the ''dojoType'' attribute.
 
 
 ========
