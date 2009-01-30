@@ -113,7 +113,7 @@ This example shows just the daily calendar being instantiated, with no month or 
 Declarative example
 -------------------
 
-This example shows how to construct a standard Calendar declaratively.
+This example shows how to construct a standard Calendar declaratively.  Note the ''<script type="dojo/connect" '' used to listen for events.  This can be used instead of calls to ''dojo.connect'' for listening to function calls and events on widgets.
 
 .. cv-compound::
   
