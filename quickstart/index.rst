@@ -23,14 +23,6 @@ Installation
 * `Configuring Dojo <djConfig>`_
 * `Using Dojo from a CDN <quickstart/cross-domain>`_
 
-
-=========================
-Dojo Toolkit Architecture
-=========================
-
-* Todo
-
-
 ====
 AJAX
 ====
@@ -38,9 +30,9 @@ AJAX
 * `AJAX <quickstart/ajax>`_
 * `Back buttons <quickstart/back>`_
 
-================
-DOM Manipulation
-================
+==============================
+DOM Manipulation & CSS Queries
+==============================
 
 * `Overview <quickstart/dom>`_
 
@@ -108,6 +100,13 @@ JavaScript Extensions
 * Todo: classes
 * Todo: inheritance
 * Todo: mixins
+
+
+=========================
+Dojo Toolkit Architecture
+=========================
+
+* Todo
 
 
 =============================
