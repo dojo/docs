@@ -112,13 +112,13 @@ Finding nodes via ``dojo.query`` is very helpful, though the same rules apply to
 The <body> element
 ------------------
 
-All DOM's should contain a <body> element. This element is a DomNode like any other, and is considered the top most DomNode in a document's visible content. This node is cleverly available via ``dojo.query``:
+All DOM's should contain a <body> element. This element is a DomNode like any other, and is considered the top most DOM Node in a document's visible content. This node is available via ``dojo.query``:
 
 .. code-block :: javascript
   :linenos:
 
   dojo.addOnLoad(function(){
-      dojo.query("body").addClass("tundra")
+      dojo.query("body").addClass("tundra");
   });
 
 or more quickly available as a function call:
@@ -130,9 +130,16 @@ or more quickly available as a function call:
       dojo.addClass(dojo.body(), "tundra");
   });
 
-By wrapping <body> lookup in the {{{dojo.body()}}} function, we are able to redefine the meaning of the <body> element on the fly. The {{{dojo.query}}} method is limited to browser-only use cases, while the dojo.body() approach allows one to write portable code that will still execute in environments where the <body> element might not exist. 
+By wrapping <body> lookup in the ``dojo.body()`` function, we are able to redefine the meaning of the <body> element on the fly. This is useful for situations where your script might be working with multiple documents, such as the content of an iframe or a parent window. You can change the scope of a ``dojo.query`` by passing a different document as the context (second) argument: 
 
-The <body> element is a particularly convenient node to access, especially for small examples.
+.. code-block :: javascript
+  :linenos:
+
+  dojo.addOnLoad(function(){
+      var ifr = document.getElementById("anIframe");
+      dojo.query("body", ifr.documentElement).addClass("tundra")
+  });
+
 
 document vs. dojo.doc
 ---------------------
@@ -144,16 +151,16 @@ It is very common to see the special global 'document' used throughout JavaScrip
 
   // use
   dojo.doc.createElement("div");
-  var h = dojo.doc.getElementsByTagNam("head")[0];
+  var h = dojo.doc.getElementsByTagName("head")[0];
 
   // instead of
   document.createElement("div");
-  var s = dojo.doc.getElementsByTagNam("head")[0];
+  var s = document.getElementsByTagName("head")[0];
 
   // though, to just create, this is best:
   dojo.create("div");
 
-They have identical length in characters, but by using dojo.doc you are able to ensure your code will execute in alternate environments (provided the environment has an 'document' implementation) as well as allow your widgets and code to execute in switched contexts, such as iframes and popups. dojo.doc is provided to allow for this, and its use is strongly suggested for writing portable code.
+They have identical length in characters, but by using ``dojo.doc`` you are able to ensure your code will execute in switched contexts, such as iframes and popups. To switch the context for code that uses ``dojo.doc``, ``dojo.body()``, and ``dojo.global`` see the documentation for `dojo.setContext <dojo/setContext>`_.
 
 ==================
 Manipulating Nodes
