@@ -222,51 +222,6 @@ This example shows how to add your own custom view to the calendar.  This exampl
       dojo.require("dijit.form.NumberSpinner");
       dojo.require("dijit.form.Button");
 
-      dojo.declare("CustomTimeCalendarContainer", null, {
-        // summary: Mixin class for adding a view showing the hour and minute
-        //   dojox.widget._CalendarBase
-
-        constructor: function(){
-          // summary: Adds a dojox.widget._CalendarMonthView view to the calendar widget.
-          this._addView(CustomTimeCalendarView);
-        }
-      });
-
-      dojo.declare("CustomTimeCalendarView",
-          [dojox.widget._CalendarView, dijit._Templated], {
-
-        templateString: "<div>Hour: <input dojoType='dijit.form.NumberSpinner' dojoAttachPoint='hourDijit' min='0' max='23'>"
-              + " Minute: <input dojoType='dijit.form.NumberSpinner' dojoAttachPoint='minuteDijit' min='0' max='59'>"
-              + "<button dojoType='dijit.form.Button' dojoAttachEvent='onClick:onOk'>OK</button>'</div>",
-
-        widgetsInTemplate: true,
-
-        postCreate: function(){
-          // Get the date value
-          var value = this.attr('value');
-          console.log("value = " , value);
-
-
-          this.hourDijit.attr('value', value.getHours());
-          this.minuteDijit.attr('value', value.getMinutes());
-        },
-
-        onOk: function(){
-          var date = this.attr('value');
-          date.setHours(this.hourDijit.attr('value'));
-          date.setMinutes(this.minuteDijit.attr('value'));
-          this.onValueSelected(date);
-        },
-
-        _setValueAttr: function(value) {
-          console.log("got value", value);
-          this.hourDijit.attr('value', value.getHours());
-          this.minuteDijit.attr('value', value.getMinutes());
-
-          this.header.innerHTML = dojo.date.locale.format(value, {selector:'date', formatLength: "medium"});
-        }
-      });
-
       dojo.declare("CustomTimeCalendar", [
         dojox.widget._CalendarBase,
         dojox.widget._CalendarDay,
