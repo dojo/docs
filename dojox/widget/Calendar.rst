@@ -216,7 +216,6 @@ This example shows how to add your own custom view to the calendar.  This exampl
     :label: The javascript, put this wherever you want the dialog creation to happen
 
     <script type="text/javascript">
-        dojo.require("dijit.dijit");
       dojo.require("dojo.date.locale");
       dojo.require("dojox.widget.Calendar");
 
@@ -271,8 +270,8 @@ This example shows how to add your own custom view to the calendar.  This exampl
       dojo.declare("CustomTimeCalendar", [
         dojox.widget._CalendarBase,
         CustomTimeCalendarContainer,
-         dojox.widget._CalendarDay,
-         dojox.widget._CalendarMonthYear],{});
+        dojox.widget._CalendarDay,
+        dojox.widget._CalendarMonthYear],{});
     </script>
 
 ========
