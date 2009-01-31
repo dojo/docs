@@ -245,11 +245,9 @@ This example shows how to add your own custom view to the calendar.  This exampl
         postCreate: function(){
           // Get the date value
           var value = this.attr('value');
-          console.log("value = " , value);
-
-
-          this.hourDijit.attr('value', value.getHours());
-          this.minuteDijit.attr('value', value.getMinutes());
+          
+          this.hourDijit.attr('value', value ? value.getHours() : 0);
+          this.minuteDijit.attr('value', value ? value.getMinutes() : 0);
         },
 
         onOk: function(){
