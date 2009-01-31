@@ -5,7 +5,7 @@ dojox.widget
 
 :Status: Draft
 :Version: 1.0
-:Authors: Peter Higgins, Nikolai Onken, Marcus Reimann, Josh Trutwin, Benjamin Schell
+:Authors: Peter Higgins, Nikolai Onken, Marcus Reimann, Josh Trutwin, Benjamin Schell, Shane O'Sullivan
 :Developers: Shane O'Sullivan, Peter Higgins, Nathan Toone, Karl Tiedt, Alex Russell, Nikolai Onken, Adam Peller, Benjamin Schell
 :Available: since V?
 
