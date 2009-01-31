@@ -160,9 +160,9 @@ This example shows how to construct a Calendar declaratively, which only shows t
     </script>
 
 
-==========================
-Creating A Custom Calendar
-==========================
+==========================================
+Creating A Custom Calendar By Mixing Views
+==========================================
 
 As the calendar consists of a combination of views, it is possible to mix these any way you like.  The example below shows how to create a calendar that contains a Daily and Yearly view.  You must always include ''dojox.widget._CalendarBase'' and one other view, otherwise you can include whatever views you like.
 
@@ -192,6 +192,88 @@ As the calendar consists of a combination of views, it is possible to mix these 
 	   dojox.widget._CalendarYear], {});
     </script>
 
+====================================================
+Creating A Custom Calendar By Creating Your Own View
+====================================================
+
+This example shows how to add your own custom view to the calendar.  This example shows how to create a simple templated widget that contains two dijit.NumberSpinner widgets, one for hour, the other for time.  This widget is them mixed in with the normal calendar to create a new Time/Day/Month-Year calendar
+
+.. cv-compound::
+  
+  .. cv:: html
+
+    <style type="text/css">
+      @import "/moin_static163/js/dojo/trunk/dojox/widget/Calendar/Calendar.css";
+    </style>
+    <div id="cal_6" dojoType="CustomTimeCalendar">
+      <script type="dojo/connect" event="onValueSelected" args="date">
+        dojo.byId("cal_6_report").innerHTML = date;
+      </script>
+    </div>
+    <div id="cal_6_report"></div>
+
+  .. cv:: javascript
+    :label: The javascript, put this wherever you want the dialog creation to happen
+
+    <script type="text/javascript">
+        dojo.require("dijit.dijit");
+      dojo.require("dojo.date.locale");
+      dojo.require("dojox.widget.Calendar");
+
+      dojo.require("dijit.form.NumberSpinner");
+      dojo.require("dijit.form.Button");
+
+      dojo.declare("CustomTimeCalendarContainer", null, {
+        // summary: Mixin class for adding a view showing the hour and minute
+        //   dojox.widget._CalendarBase
+
+        constructor: function(){
+          // summary: Adds a dojox.widget._CalendarMonthView view to the calendar widget.
+          this._addView(CustomTimeCalendarView);
+        }
+      });
+
+      dojo.declare("CustomTimeCalendarView",
+          [dojox.widget._CalendarView, dijit._Templated], {
+
+        templateString: "<div>Hour: <input dojoType='dijit.form.NumberSpinner' dojoAttachPoint='hourDijit' min='0' max='23'>"
+              + " Minute: <input dojoType='dijit.form.NumberSpinner' dojoAttachPoint='minuteDijit' min='0' max='59'>"
+              + "<button dojoType='dijit.form.Button' dojoAttachEvent='onClick:onOk'>OK</button>'</div>",
+
+        widgetsInTemplate: true,
+
+        postCreate: function(){
+          // Get the date value
+          var value = this.attr('value');
+          console.log("value = " , value);
+
+
+          this.hourDijit.attr('value', value.getHours());
+          this.minuteDijit.attr('value', value.getMinutes());
+        },
+
+        onOk: function(){
+          var date = this.attr('value');
+          date.setHours(this.hourDijit.attr('value'));
+          date.setMinutes(this.minuteDijit.attr('value'));
+          this.onValueSelected(date);
+        },
+
+        _setValueAttr: function(value) {
+          console.log("got value", value);
+          this.hourDijit.attr('value', value.getHours());
+          this.minuteDijit.attr('value', value.getMinutes());
+
+          this.header.innerHTML = dojo.date.locale.format(value, {selector:'date', formatLength: "medium"});
+        }
+      });
+
+      dojo.declare("CustomTimeCalendar", [
+        dojox.widget._CalendarBase,
+        CustomTimeCalendarContainer,
+         dojox.widget._CalendarDay,
+         dojox.widget._CalendarMonthYear],{});
+    </script>
 
 ========
 See also
