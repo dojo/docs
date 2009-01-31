@@ -227,7 +227,7 @@ This example shows how to add your own custom view to the calendar.  This exampl
         dojox.widget._CalendarBase,
         dojox.widget._CalendarDay,
         dojox.widget._CalendarMonth,
-        dojox.widget._CalendarMonth],{});
+        dojox.widget._CalendarYear],{});
     </script>
 
 ========
