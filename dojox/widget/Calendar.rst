@@ -221,7 +221,7 @@ This example shows how to add your own custom view to the calendar.  This exampl
 
       dojo.require("dijit.form.NumberSpinner");
       dojo.require("dijit.form.Button");
-/*
+
       dojo.declare("CustomTimeCalendarContainer", null, {
         // summary: Mixin class for adding a view showing the hour and minute
         //   dojox.widget._CalendarBase
@@ -266,11 +266,12 @@ This example shows how to add your own custom view to the calendar.  This exampl
           this.header.innerHTML = dojo.date.locale.format(value, {selector:'date', formatLength: "medium"});
         }
       });
-*/
+
       dojo.declare("CustomTimeCalendar", [
         dojox.widget._CalendarBase,
         dojox.widget._CalendarDay,
-        dojox.widget._CalendarMonthYear],{});
+        dojox.widget._CalendarMonth,
+        dojox.widget._CalendarMonth],{});
     </script>
 
 ========
