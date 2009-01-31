@@ -238,7 +238,7 @@ This example shows how to add your own custom view to the calendar.  This exampl
 
         templateString: "<div>Hour: <input dojoType='dijit.form.NumberSpinner' dojoAttachPoint='hourDijit' min='0' max='23'>"
               + " Minute: <input dojoType='dijit.form.NumberSpinner' dojoAttachPoint='minuteDijit' min='0' max='59'>"
-              + "<button dojoType='dijit.form.Button' dojoAttachEvent='onClick:onOk'>OK</button>'</div>",
+              + "<button dojoAttachEvent='onClick:onOk'>OK</button>'</div>",
 
         widgetsInTemplate: true,
 
