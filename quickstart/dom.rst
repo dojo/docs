@@ -35,7 +35,7 @@ Once we've ensured our code will only execute after the DOM is ready, we can mov
 Using ID's
 ----------
 
-The fastest, and most common, way of locating an element is by it's {{id}} attribute. Dojo provides `dojo.byId <dojo/byId>`_ - a shorter, safer version of {{document.getElementById}}:
+The fastest, and most common, way of locating an element is by it's ``id`` attribute. Dojo provides `dojo.byId <dojo/byId>`_ - a shorter to write, safer to use version of ``document.getElementById``:
 
 .. code-block :: javascript
   :linenos:
@@ -45,7 +45,7 @@ The fastest, and most common, way of locating an element is by it's {{id}} attri
       n.innerHTML = "Hi, World";
   }); 
 
-Here, we locate a node with id="someId", and set it's innerHTML to new content. If a node is not found, dojo.byId returns undefined, and is falsy enough to work as a conditional:
+Here, we locate a node with id="someId", and set it's ``innerHTML`` to new content. If a node is not found, dojo.byId returns undefined, and is falsy enough to work as a conditional:
 
 .. code-block :: javascript
   :linenos:
@@ -56,7 +56,7 @@ Here, we locate a node with id="someId", and set it's innerHTML to new content. 
 CSS Selectors
 -------------
 
-It is not always practical to attach id's to elements you intend to modify, which is why Dojo provides `dojo.query <dojo/query>`_ - a CSS3 query selector. It will locate nodes that match a passed CSS selector, and return a specialized Array named `dojo.NodeList <dojo/NodeList>`_. 
+It is not always practical to attach id's to elements you intend to modify, which is why Dojo provides `dojo.query <dojo/query>`_ - a CSS3 selector engine. It will locate nodes that match a passed CSS selector, and return a specialized Array type - `dojo.NodeList <dojo/NodeList>`_ - that has oodles of useful DOM manipulation functions easily available. 
 
 .. code-block :: javascript
   :linenos:
@@ -65,7 +65,7 @@ It is not always practical to attach id's to elements you intend to modify, whic
       var list = dojo.query("#someId");
   });
 
-In this example, we are locating the same node found by dojo.byId previously, but using the CSS selector to do so. The query() call returns a found list of nodes (in this case, a single element as id's are unique in the DOM). This list is a standard JavaScript Array, decorated with a number of functions common throughout Dojo, most of which have single-node variants where applicable. This will be illustrated further in this document, but consider the following examples:
+In this example, we locate the same node found by ``dojo.byId`` before, but using the CSS selector to do so. The ``query()`` call returns a found list of nodes (in this case, a single element as id's are unique in the DOM). This list is a standard JavaScript Array, decorated with functions common throughout Dojo, most of which have single-node variants elsewhere in the toolkit. As we'll see, the more of the Core Dojo APIs you learn, the more powerful ``NodeList`` instances are:
 
 .. code-block :: javascript
   :linenos:
@@ -82,37 +82,44 @@ In this example, we are locating the same node found by dojo.byId previously, bu
 
   });
 
-The query method is convenient and more compact, but carries the overhead of instantiating a new array and querying the Dom. Both code snippets have identical results. 
+The query method is convenient and more compact and both code snippets have identical results. There is some slight additional overhead to the convenience that ``dojo.query`` provides, but in general using ``dojo.query`` can save you time make your code easier to read.
 
-There are a number of handy CSS selectors to use for locating special DomNodes. 
+CSS selectors are a handy and powerful way to find most kinds of elements in a page.
 
 .. code-block :: javascript
   :linenos:
-
+  
   // by class
   dojo.query(".someClass");
+  
   // by attributes
   dojo.query("[name^='link']");
+  
   // by tag type
   dojo.query("div");
+  
   // first-children
   dojo.query("ul > li");
+  
   // odd table rows:
   dojo.query("table tr:nth-child(odd)");
+  
   // scoped to some other node as parent
   dojo.query("a.link", "someNode"); 
 
-Finding nodes via dojo.query is very helpful, though the same rules apply to either "lists of nodes" or single nodes, as found by dojo.byId. 
+Finding nodes via ``dojo.query`` is very helpful, though the same rules apply to either "lists of nodes" or single nodes, as found by dojo.byId.  We won't cover it here, but you can even use ``dojo.query`` to search XML documents!
 
 The <body> element
 ------------------
 
-All DOM's should contain a <body> element. This element is a DomNode like any other, and is considered the top most DomNode in a document's visible content. This node is cleverly available via dojo.query:
+All DOM's should contain a <body> element. This element is a DomNode like any other, and is considered the top most DomNode in a document's visible content. This node is cleverly available via ``dojo.query``:
 
 .. code-block :: javascript
   :linenos:
 
-  dojo.addOnLoad(function(){ dojo.query("body").addClass("tundra") });
+  dojo.addOnLoad(function(){
+      dojo.query("body").addClass("tundra")
+  });
 
 or more quickly available as a function call:
 
@@ -123,7 +130,7 @@ or more quickly available as a function call:
       dojo.addClass(dojo.body(), "tundra");
   });
 
-By wrapping <body> lookup in the {{{dojo.body()}}} function, we are able to redefine the meaning of the <body> element on the fly. The dojo.query method is limited to browser-only use cases, while the dojo.body() approach allows one to write portable code that will still execute in environments where the <body> element might not exist. 
+By wrapping <body> lookup in the {{{dojo.body()}}} function, we are able to redefine the meaning of the <body> element on the fly. The {{{dojo.query}}} method is limited to browser-only use cases, while the dojo.body() approach allows one to write portable code that will still execute in environments where the <body> element might not exist. 
 
 The <body> element is a particularly convenient node to access, especially for small examples.
 
