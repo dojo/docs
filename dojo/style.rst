@@ -40,7 +40,7 @@ style
   the style property to set in DOM-accessor format ("borderWidth", not "border-width") or an object with key/value pairs suitable for setting each property.
 
 value
-  If passed, sets value on the node for style, handling cross-browser concerns.
+  If passed, sets value on the node for style, handling cross-browser concerns.  When setting a pixel value, be sure to include "px" in the value. For instance, top: "200px". Otherwise, in some cases, some browsers will not apply the style.
 
 
 ========
