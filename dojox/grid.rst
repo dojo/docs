@@ -24,11 +24,6 @@ A structure is an array of views and a view is an array of cells.
 
 This Widget inherits from dojo.grid._Grid and hence all methods and properties pertaining to that Widget also apply here.
 
-Grid 1.2 Changes
-----------------
-
-``TODOC``
-
 
 =====
 Usage
@@ -60,9 +55,8 @@ width
 cellType
   The type of cell in the column.  Allowable cell types include
 
-* ``dojox.grid.cells.Bool``
-* ``dojox.grid.cells.Select``
-
+  * ``dojox.grid.cells.Bool``
+  * ``dojox.grid.cells.Select``
 
 options
   Used when cellType is ``dojox.grid.cells.Select`` to name the allowable options
