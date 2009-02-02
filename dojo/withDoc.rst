@@ -29,6 +29,7 @@ Use this function to replace the dojo.doc for a function . Only during the funct
 
  <script type="text/javascript">
    var iframeDoc = frames['myIframe'];
+   console.log(iframeDoc);
 
    //Call a callback with different 'global' values and context. 
    dojo.withDoc(iframeDoc  function() {
