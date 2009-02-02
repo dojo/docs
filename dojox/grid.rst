@@ -124,10 +124,10 @@ rowSelector
 selectionMode
   This option defines how row selection is handled.  Available options are:
 
-* none - No row selection.
-* single - Only single row selection.
-* multiple - Multiple explicit row selection.  A single click selects a row a second single click deselects the row.
-* extended - Multiple row selection including ranges (default).
+  * none - No row selection.
+  * single - Only single row selection.
+  * multiple - Multiple explicit row selection.  A single click selects a row a second single click deselects the row.
+  * extended - Multiple row selection including ranges (default).
 
 columnReordering
   This boolean property allows columns to be dynamically reordered.  When enabled, a column header can be dragged and dropped at a new location causing the column to be moved.
