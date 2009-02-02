@@ -21,6 +21,7 @@ A big "thank you" goes to
 * Jared Jurkiewicz,
 * Bill Keese, 
 * Tobias Klipstein, 
+* kolban,
 * Wolfram Kriesing,
 * Ben Lowery,
 * Dustin Machi,
