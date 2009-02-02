@@ -64,7 +64,7 @@ Example 1: Using dojo.withDoc alter documents in an iFrame.
            var tds= dojo.query("td");
            console.debug(tds);
            dojo.forEach(tds, function(cell) {
-             dojo.style(cell, "color", "red");
+             dojo.style(cell, "fontStyle", "italic");
            }, this);
            console.debug("Blah");
          });
