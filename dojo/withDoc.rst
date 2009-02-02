@@ -62,8 +62,11 @@ Example 1: Using dojo.withDoc alter documents in an iFrame.
          dojo.withDoc(frameDoc, function() {
            console.debug(dojo.doc);
            var table = dojo.byId("books");
-           console.debug(table);
-           dojo.style(table, "color", "red");
+           var tds = dojo.query("td");
+           dojo.forEach(tds, function(cell){
+             console.debug(cell);
+             dojo.style(cell, "color", "red");
+           }, this);
          });
         });
       }
