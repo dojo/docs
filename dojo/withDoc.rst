@@ -59,7 +59,7 @@ Example 1: Using dojo.withDoc alter documents in an iFrame.
 
         dojo.connect(button, "onClick", function() {
          var frameDoc = dojo.byId("myFrame").document;
-         console.debug(frameDoc);
+         console.debug(dojo.byId("myFrame"));
          dojo.withDoc(frameDoc, function() {
            console.debug(dojo.doc);
            var tds= dojo.query("td");
