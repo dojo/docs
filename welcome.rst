@@ -29,7 +29,7 @@ Welcome to the official documentation pages of the Dojo Toolkit
 `Reference Guide <manual>`_
 ===========================
 
-* `Manual for Dojo, Dijit, DojoX with more than nnn examples <manual/index>`_
+* `Manual for Dojo, Dijit, DojoX with more than 300 examples <manual/index>`_
 
 
 =========================
