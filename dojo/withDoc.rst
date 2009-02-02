@@ -68,8 +68,8 @@ Example 1: Using dojo.withDoc alter documents in an iFrame.
            }, this);
            console.debug("Blah");
          });
-         dojo.style(dojo.byId("myFrame"), "width", "600px");
-         dojo.style(dojo.byId("myFrame"), "height", 600px");
+         dojo.style(dojo.byId("myFrame"), "width","600px");
+         dojo.style(dojo.byId("myFrame"), "height", "600px");
         });
       }
       dojo.addOnLoad(changeStyles);
