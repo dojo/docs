@@ -129,7 +129,7 @@ Use the two constructor options added in 1.2, *clearOnClose* and *urlPreventCach
 Question 6:  How do I get a count of all items in a datastore?
 ==============================================================
 
-You do a fetch that queries for all items, then use the onBegin callback function. In the dojo.data.api.Read spec, the onBegin callback function's first parameter is the total size of the match, regardless of what start and count were configured to. This is so you have a way of knowing the total match outside of the returned page so that you can configure your client side display appropriately. The simpliets way to get a size back, but no items would be to do something like:
+You do a fetch that queries for all items, then use the onBegin callback function. In the dojo.data.api.Read spec, the onBegin callback function's first parameter is the total size of the match, regardless of what start and count were configured to. This is so you have a way of knowing the total match outside of the returned page so that you can configure your client side display appropriately. The simplest way to get a size back, but no items would be to do something like:
 
 .. code-block :: javascript
 
