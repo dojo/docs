@@ -40,13 +40,13 @@ This allows special styling for children, specifically doing things like adding 
 
 Note that BorderContainer expects the panes it contains to have borders; the draggable splitters between the panes don't have borders, although visually it seems that way (due to the borders on the panes).
 
-TODO: in the future BorderContainer will also set a dijitBorderContainer-child class on all it's children.
+TODO: in the future BorderContainer will also set a dijitBorderContainer-child class on all its children.
 
 
 ==================
 Form Widget States
 ==================
-A form widget like spinner will have various classes applied to it's domNode depending on it's state.  For example:
+A form widget like spinner will have various classes applied to its domNode depending on its state.  For example:
 
   - dijitSpinner
   - dijitSpinnerDisabled
