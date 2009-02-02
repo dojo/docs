@@ -28,8 +28,7 @@ Use this function to replace the dojo.doc for a function . Only during the funct
  :linenos:
 
  <script type="text/javascript">
-   var iframeDoc = frames['myIframe'].document;
-   console.log(iframeDoc);
+   var iframeDoc = dojo.byId("someFrameId").contentWindow.document;
 
    //Call a callback with different 'global' values and context. 
    dojo.withDoc(iframeDoc  function() {
