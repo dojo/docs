@@ -28,6 +28,7 @@ A big "thank you" goes to
 * Wolfram Kriesing,
 * Ben Lowery,
 * Dustin Machi,
+* mcoquet,
 * Chris Mitchell,
 * neonstalwart,
 * Cyan Ogilvie,
