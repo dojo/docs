@@ -64,6 +64,7 @@ Example 1: Using dojo.withDoc alter documents in an iFrame.
            var table= dojo.query("table");
            console.debug(table);
            dojo.style(table, "color", "red");
+           console.debug("Blah");
          });
         });
       }
