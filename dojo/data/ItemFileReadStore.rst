@@ -547,11 +547,6 @@ Dojo.data defines support for a 'queryOptions' modifier object that affects the 
 |            |root items and *all* child data items. Think of it as a recursive search.                                               |
 +------------+------------------------------------------------------------------------------------------------------------------------+
 
-========
-See Also
-========
-
-* `Refeshing an ItemFileReadStore <http://dojocampus.org/content/2009/01/31/refeshing-an-itemfilereadstore>`_ - 2009-01-31 - How do you clear out the existing Data in a store, and populate it with new Data in Dojo 1.2?
 
 ==============
 Usage Examples
@@ -929,3 +924,10 @@ Demonstrating custom sorting
     <br>
     <span id="list4">
     </span>
+
+
+========
+See Also
+========
+
+* `Refeshing an ItemFileReadStore <http://dojocampus.org/content/2009/01/31/refeshing-an-itemfilereadstore>`_ - 2009-01-31 - How do you clear out the existing Data in a store, and populate it with new Data in Dojo 1.2?
