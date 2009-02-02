@@ -58,7 +58,7 @@ Example 1: Using dojo.withDoc alter documents in an iFrame.
         var button = dijit.byId("changeStyles");
 
         dojo.connect(button, "onClick", function() {
-         var frameDoc = frames['myFrame'];
+         var frameDoc = frames['myFrame'].document;
 
          alert(frameDoc);
 
