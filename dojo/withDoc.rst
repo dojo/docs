@@ -58,8 +58,7 @@ Example 1: Using dojo.withDoc alter documents in an iFrame.
         var button = dijit.byId("changeStyles");
 
         dojo.connect(button, "onClick", function() {
-         var frameDoc = window.frames["myFrame"].document;
-         console.debug(frames);
+         var frameDoc = window.frames["simpleFrame"].document;
          dojo.withDoc(frameDoc, function() {
            var tds= dojo.query("td");
            console.debug(tds);
@@ -68,9 +67,9 @@ Example 1: Using dojo.withDoc alter documents in an iFrame.
            }, this);
            console.debug("Blah");
          });
-         console.debug(dojo.byId("myFrame"));
-         dojo.style(dojo.byId("myFrame"), "display", "none");
-         dojo.style(dojo.byId("myFrame"), "display", "block");
+         console.debug(dojo.byId("simpleFrame"));
+         dojo.style(dojo.byId("simpleFrame"), "display", "none");
+         dojo.style(dojo.byId("simpleFrame"), "display", "block");
         });
       }
       dojo.addOnLoad(changeStyles);
@@ -80,7 +79,7 @@ Example 1: Using dojo.withDoc alter documents in an iFrame.
 
     <button id="changeStyles" dojoType="dijit.form.Button">Change Text Color in iFrame</button>
     <br><br>
-    <iframe id="myFrame" name="myFrame" src="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/tests/stores/books.html" style="width: 500px; height: 500px;">
+    <iframe id="simpleFrame" name="simpleFrame" src="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/tests/stores/books.html" style="width: 500px; height: 500px;">
     </iframe>
 
 
