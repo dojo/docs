@@ -16,9 +16,16 @@ Dojo Toolkit Reference Guide
 Dojo
 ====
 
-Dojo is divided into two parts: Dojo Base, and Dojo Core. Dojo Base is the functionality provided for by just including ``dojo.js``, and Dojo Core is comprised of stable additional (optional) components. Typically, if a function or Class exists within the dojo namespace directly (eg: dojo.require(), dojo.addOnLoad()) it is part of Base Dojo. If the function or Class exists beneath the dojo namespace (eg: dojo.dnd.Mover), you will need to require the appropriate module (eg: dojo.require("dojo.dnd.Mover");)
+Dojo is divided into two parts: Dojo Base, and Dojo Core.
 
-* `dojo <dojo/index>`_
+* `Dojo Base <dojo/index#dojo-base>`_
+
+  The base functionality of the Dojo Toolkit, provided for by just including ``dojo.js``.
+
+* `Dojo Core <dojo/index#dojo-core>`_
+
+  Additional stable (but optional) components.
+
 
 =====
 Dijit
@@ -26,7 +33,7 @@ Dijit
 
 Dijit is Dojo's UI Library, and lives as a separate namespace ``dijit``. Dijit requires Dojo Core. Each of the widgets and functionality provided by Dijit is describe in the following sections, though the aforementioned `quickstart <quickstart/index>`_ guides cover some basics.
 
-* `dijit <dijit/index>`_
+* `Dijit Reference <dijit/index>`_
 
 =====
 DojoX
@@ -34,11 +41,8 @@ DojoX
 
 DojoX serves many purposes, and by design is difficult to document. Here, we have an ongoing effort to document the most used, stable, reliable and powerful aspects of DojoX. DojoX stands for Dojo eXtensions and contains code in a variety of states, from very stable and robust, to alpha and experimental, so your assistance in testing and documenting are especially helpful.
 
-* `dojox <dojox/index>`_
+* `DojoX Reference <dojox/index>`_
 
-
-
-----
 
 =====
 DojoC
@@ -55,14 +59,21 @@ Dojo Styleguides
 
 * `Styleguides <styleguides/index>`_
 
+
 ===========================
 Utilities and Miscellaneous
 ===========================
 
 There are several Dojo-related sub-projects, utilities, and helpers shipped with Dojo:
 
-* `Dojo Build System <build/index>`_ - The Dojo build system is used to create efficient optimized packages of JavaScript and CSS, customized for a given application or website.
+* `Dojo Build System <build/index>`_
 
-* `The Dojo API Doc System <util/doctools>`_ - Dojo uses a custom inline comment syntax which produces well structured xml, and powers the official `API Docs <http://api.dojotoolkit.org>`_ . 
+  The Dojo build system is used to create efficient optimized packages of JavaScript and CSS, customized for a given application or website.
 
-* `ShrinkSafe <shrinksafe/index>`_ - A standalone utility for compressing JavaScript, used by the Dojo Build System as an optional compression step, though can be used on individual files manually.
+* `The Dojo API Doc System <util/doctools>`_
+
+  Dojo uses a custom inline comment syntax which produces well structured xml, and powers the official `API Docs <http://api.dojotoolkit.org>`_ . 
+
+* `ShrinkSafe <shrinksafe/index>`_
+
+  A standalone utility for compressing JavaScript, used by the Dojo Build System as an optional compression step, though can be used on individual files manually.
