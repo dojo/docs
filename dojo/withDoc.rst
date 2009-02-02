@@ -70,7 +70,7 @@ Example 1: Using dojo.withDoc alter documents in an iFrame.
   .. cv :: html 
 
     <button id="changeStyles" dojoTyoe="dijit.form.Button">Change Text Color in iFrame</button>
-    <iframe name="myFrame" src="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/demos/stores/books2.html" width="500", height="500">
+    <iframe name="myFrame" src="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/tests/stores/books.html" width="500", height="500">
     </iframe>
 
 
