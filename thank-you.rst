@@ -1,9 +1,9 @@
 #format dojo_rst
 
-This page is in place to personally thank each and every document contributor. It is a huge effort, and would never succeed with the time donated by the following individuals:
-
 Thank you!
 ----------
+
+This page is in place to personally thank each and every document contributor. It is a huge effort, and would never succeed with the time donated by the following individuals. 
 
 A big "thank you" goes to 
 
