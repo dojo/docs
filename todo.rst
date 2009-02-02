@@ -41,10 +41,6 @@ Top priority: Dojo Base
 
   needed: Review and additional use causes.  Very spartan right now.
 
-* `dojo.withDoc <dojo/withDoc>`_
-
-  needed: full page
-
 * `dojo._base.xhr <dojo/_base/xhr>`_
 
   Should we move the current example to another page?
