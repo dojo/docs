@@ -39,6 +39,43 @@ Use this function to replace the dojo.doc for a function . Only during the funct
 
 
 ========
+Examples
+========
+
+Example 1: Using dojo.withDoc alter documents in an iFrame.
+-----------------------------------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dijit.form.Button");
+
+      function changeStyles() {
+        //Look up the node we'll stick the text under.
+        var button = dijit.byId("changeStyles");
+
+        dojo.connect(button, "onClick", function() {
+         var frameDoc = frames['myFrame'];
+         dojo.withDoc(frameDoc, function() {
+           var table = dojo.byId("books");
+           dojo.style(table, "color", "red");
+         });
+        });
+      }
+      dojo.addOnLoad(changeStyles);
+    </script>
+
+  .. cv :: html 
+
+    <button id="changeStyles" dojoTyoe="dijit.form.Button">Change Text Color in iFrame</button>
+    <iframe name="myFrame" src="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/demos/stores/books2.html" width="500", height="500">
+    </iframe>
+
+
+
+========
 See also
 ========
 
