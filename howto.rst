@@ -19,7 +19,7 @@ Joining the Dojo doc team is easy, all you need to do is write and get familiar 
 Dojo Doc Syntax (reST)
 ======================
 
-Dojo doc uses the reST syntax to describe all docs, we have implemented a few features of the great reST Sphinx extension and implemented dojo specific ones to provide cool stuff like inline code demos (Yah, you won't believe it, but your code will just work)
+Dojo doc uses the reST syntax to describe all docs, we have implemented a few features of the great reST Sphinx extension and implemented dojo-specific ones to provide cool stuff like inline code demos (Yah, you won't believe it, but your code will just work).
 
 `Visit the official reST Quick reference <http://docutils.sourceforge.net/docs/user/rst/quickref.html>`_.
 
@@ -90,7 +90,7 @@ My `link`_ is very cool and is my `link`_
 
 .. _link: my/link
 
-The good thing about this way of defining links is that you won't have to look in the content of your text and find all occurences of a link you might want to change. This way all your links are stored in one convenient location and if you need to change them you know where to look.
+The good thing about this way of defining links is that you won't have to look in the content of your text and find all occurrences of a link you might want to change. This way all your links are stored in one convenient location and if you need to change them you know where to look.
 
 Note from a contributor:  The character used is the grave accent (on the key with the ~ on the left of the keyboard).  Others may find that obvious but I was very confused trying to figure out why my links wouldn't work and it was because I was using the apostrophe character (on the key with the ").
 
@@ -101,7 +101,7 @@ Code examples
 Non executed code
 -----------------
 
-If you need to give a simple source code example without it being executed use the ".. code-block ::" directive and put the code right into the next line inlined by two spaces. If you want to display line numbers, use the "linenos" attribute.
+If you need to give a simple source code example without it being executed use the ".. code-block ::" directive and put the code right into the next line indented by two spaces. If you want to display line numbers, use the "linenos" attribute.
 
   .. code-block :: javascript
     :linenos:
@@ -239,8 +239,8 @@ To attach images, use the AttachFile option you have at the bottom of each page.
 Tips and Tricks, the edge cases
 ===============================
 
-Many times you will encounter some question on a forum or the #dojo channel and you just want to keep a note about it with the respective answer. Those cases should be put into sub pages -tricks. 
-So if someone posts something interesting to know about the dijit.Dialog and you just want to note this for other people post it in the dijit/Dialog-tricks page. If such a page doesn't exist, feel free to create one
+Many times you will encounter some question on a forum or the #dojo channel and you just want to keep a note about it with the respective answer. Those cases should be put into subpages suffixed with ``-tricks``. 
+So, if someone posts something interesting to know about the dijit.Dialog, and you just want to note this for other people, post it in the dijit/Dialog-tricks page. If such a page doesn't exist, feel free to create one.
 
 
 ===============
@@ -263,11 +263,11 @@ should become::
 
   dijit/Tree
 
-So be aware of case sensitiveness. 
+So be aware of case-sensitivity. 
 
 Url conventions outside the namespace
 -------------------------------------
 
-for any other part of the documentation we use lowerCamelCase::
+For any other part of the documentation we use lowerCamelCase::
 
   quickstart/dataPaging
