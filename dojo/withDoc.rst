@@ -59,7 +59,9 @@ Example 1: Using dojo.withDoc alter documents in an iFrame.
 
         dojo.connect(button, "onClick", function() {
          var frameDoc = frames['myFrame'];
-         console.log(frameDoc);
+
+         alert(frameDoc);
+
          dojo.withDoc(frameDoc, function() {
            var table = dojo.byId("books");
            dojo.style(table, "color", "red");
