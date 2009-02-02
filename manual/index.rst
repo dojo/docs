@@ -31,7 +31,7 @@ Dojo is divided into two parts: Dojo Base, and Dojo Core.
 Dijit
 =====
 
-Dijit is Dojo's UI Library, and lives as a separate namespace ``dijit``. Dijit requires Dojo Core. Each of the widgets and functionality provided by Dijit is describe in the following sections, though the aforementioned `quickstart <quickstart/index>`_ guides cover some basics.
+Dijit is Dojo's UI Library, and lives as a separate namespace ``dijit``. Dijit requires Dojo Core. Each of the widgets and functionality provided by Dijit is described in the following sections, though the aforementioned `quickstart <quickstart/index>`_ guides cover some basics.
 
 * `Dijit Reference <dijit/index>`_
 
