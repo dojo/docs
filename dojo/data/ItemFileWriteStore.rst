@@ -1,6 +1,6 @@
 #format dojo_rst
 
-dojo/data/ItemFileWriteStore
+dojo.data.ItemFileWriteStore
 ============================
 
 :Status: Contributed, Draft
