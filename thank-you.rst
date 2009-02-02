@@ -36,6 +36,7 @@ A big "thank you" goes to
 * Craig Riecke, 
 * Will Riley, 
 * Alex Russell,
+* Benjamin Schell,
 * Dylan Schiemann, 
 * Tom Trenka, 
 * Josh Trutwin, 
