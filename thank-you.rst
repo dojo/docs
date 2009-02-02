@@ -17,6 +17,7 @@ A big "thank you" goes to
 * Mark Hays,
 * Peter Higgins,
 * Robertus Harmawan Johansyah,
+* Olle Jonsson
 * Jared Jurkiewicz,
 * Bill Keese, 
 * Tobias Klipstein, 
