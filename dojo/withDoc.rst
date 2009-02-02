@@ -69,6 +69,8 @@ Example 1: Using dojo.withDoc alter documents in an iFrame.
            console.debug("Blah");
          });
         });
+        dojo.style(dojo.byId("myFrame"), "width: 500px;");
+        dojo.style(dojo.byId("myFrame"), "height: 500px;");
       }
       dojo.addOnLoad(changeStyles);
     </script>
@@ -77,7 +79,7 @@ Example 1: Using dojo.withDoc alter documents in an iFrame.
 
     <button id="changeStyles" dojoType="dijit.form.Button">Change Text Color in iFrame</button>
     <br><br>
-    <iframe name="myFrame" src="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/tests/stores/books.html" width="500", height="500">
+    <iframe id="myFrame" name="myFrame" src="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/tests/stores/books.html" style="width: 500px; height: 500px;">
     </iframe>
 
 
