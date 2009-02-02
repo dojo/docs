@@ -1,57 +1,45 @@
 #format dojo_rst
 
 dojo.withDoc
-============
+===============
 
 :Status: Draft
 :Version: 1.0
-:Available: since V?
+:Available: since V0.9
 
 .. contents::
    :depth: 2
 
-Call callback with documentObject as dojo.doc.
-
+dojo.withDocl provides a mechanism by which a function can have the document root temporarily changed for the execution of the function.  This allows document scope changes without affecting other items in the current dojo application.
 
 ============
 Introduction
 ============
 
-TODO: introduce the component/class/method
-
+This function provides a quick way to alter the 'document' root as seen by dojo for specific operations.  This is most notably useful when iframes are involved and you want to use a core dojo function, such as dojo.query or dojo.style against contents of that iframe.  
 
 =====
 Usage
 =====
 
-TODO: how to use the component/class/method
+Use this function to replace the dojo.doc for a function . Only during the function execution, dojo.doc is assigned the values you specify.
 
 .. code-block :: javascript
  :linenos:
 
  <script type="text/javascript">
-   // your code
+   var iframeDoc = frames['myIframe'];
+
+   //Call a callback with different 'global' values and context. 
+   dojo.withDoc(iframeDoc  function() {
+     var someDiv = dojo.query("someDiv");
+     dojo.style(someDiv, "color", "red");
+   }, this)); 
  </script>
-
-
-
-========
-Examples
-========
-
-Programmatic example
---------------------
-
-TODO: example
-
-Declarative example
--------------------
-
-TODO: example
 
 
 ========
 See also
 ========
 
-* TODO: links to other related articles
+* `dojo.doc <dojo/doc>`_
