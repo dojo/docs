@@ -55,20 +55,16 @@ Example 1: Using dojo.withDoc alter documents in an iFrame.
       function changeStyles() {
         //Look up the node we'll stick the text under.
         var button = dijit.byId("changeStyles");
-
+        var tds= dojo.query("td");
+        console.debug(tds);
         dojo.connect(button, "onClick", function() {
          var frameDoc = dojo.byId("simpleFrame").contentWindow.document;
          dojo.withDoc(frameDoc, function() {
            var tds= dojo.query("td");
-           console.debug(tds);
            dojo.forEach(tds, function(cell) {
              dojo.style(cell, "color", "red");
            }, this);
-           console.debug("Blah");
          });
-         console.debug(dojo.byId("simpleFrame"));
-         dojo.style(dojo.byId("simpleFrame"), "display", "none");
-         dojo.style(dojo.byId("simpleFrame"), "display", "block");
         });
       }
       dojo.addOnLoad(changeStyles);
