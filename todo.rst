@@ -6,7 +6,7 @@ Docu Wiki ToDo
 .. contents::
    :depth: 2
 
-The following pages needs more love:
+The following pages need more love:
 
 
 =======================
