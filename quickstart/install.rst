@@ -53,12 +53,12 @@ And now you've got a working Dojo! Anything can be accomplished now based on the
 Getting the Nightly Build
 =========================
 
-For the truly dedicated: you can get the latest and greatest code directly from the `nightly archives <http://archive.dojotoolkit.org/nightly/>`_, or directly from subversion. Simply point your ``svn`` url to:
+For the truly dedicated: you can get the latest and greatest code directly from the `nightly archives <http://archive.dojotoolkit.org/nightly/>`_, or directly from the Subversion repository. Use this repository URL: ``http://svn.dojotoolkit.org/src/view/anon/all/trunk``, like this:
 
-``http://svn.dojotoolkit.org/src/view/anon/all/trunk``
+``svn checkout http://svn.dojotoolkit.org/src/view/anon/all/trunk dojo-toolkit-readonly``
 
-The README in the link explains why the directory looks empty: It is a collection of ``svn:externals`` pointing to the various project root folders. For instance, If you desire only the Dojo project (excluding Dijit, DojoX, and util/), us the url:
+The README in the link explains why the directory looks empty: It is a collection of ``svn:externals`` pointing to the various project root folders. For instance, if you desire only the Dojo project (excluding Dijit, DojoX, and util/), use this URL ``http://svn.dojotoolkit.org/src/dojo/trunk``:
 
-``http://svn.dojotoolkit.org/src/dojo/trunk``
+``svn checkout http://svn.dojotoolkit.org/src/dojo/trunk dojo-only-readonly``
 
 It is worth noting: when working from Subversion, the code is **not** optimized or otherwise built. For optimum performance, download the source files from SVN, and run a build. ``FIXME: link`` 
