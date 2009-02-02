@@ -23,7 +23,7 @@ Dijit comes bundled with three themes: Tundra, Soria, and Nihilo. Themes are col
 
   <link rel="stylesheet" href="lib/dijit/themes/tundra/tundra.css">
 
-and by the addition of a theme class name on a parent element. By using the ``<body>`` tag, we are able to ensure all widgets in the page have the same CSS rules (some widgdet's like `Dialog <dijit/Dialog>`_ intentionally attach themsevles to the ``<body>`` element, so no styling is present if the class identifier is on some child node):
+and by the addition of a theme class name on a parent element. By using the ``<body>`` tag, we are able to ensure all widgets in the page have the same CSS rules (some widgets like `Dialog <dijit/Dialog>`_ intentionally attach themselves to the ``<body>`` element, so no styling is present if the class identifier is on some child node):
 
 .. code-block :: html
 
@@ -129,7 +129,7 @@ Otherwise, a unique ID will be generated for you:
   var dialog = new dijit.Dialog({ title:"No ID" })
   console.log(dialog.id); 
   
-All Dijits follow the same programatic convention. Create a new instance with the JavaScript ``new`` function, pass an object-hash of properties and functions (in this case, title:""), and supply an optional "source node reference". 
+All Dijits follow the same programmatic convention. Create a new instance with the JavaScript ``new`` function, pass an object-hash of properties and functions (in this case, title:""), and supply an optional "source node reference". 
 
 .. code-block :: javascript
   :linenos:
@@ -149,9 +149,9 @@ This will cause the creator to use the node with id="makeADialog", and turn it i
 Locating Widgets
 ----------------
 
-There are many ways to locate a widget in a page, and access a reference to that Widget. Widget's are Objects: collections of attributes and DomNode references. Once you have a reference to a widget, you can use that object (or any of it's member properties) through that widget. There are three "main" ways to access a widget:
+There are many ways to locate a widget in a page, and access a reference to that Widget. Widget's are Objects: collections of attributes and DomNode references. Once you have a reference to a widget, you can use that object (or any of its member properties) through that widget. There are three "main" ways to access a widget:
 
-The most simple of methods to access a widget is `dijit.byId <dijit/byId>`_. When the widget is created, if the Node used to create the widget (eg: srcNodeRef) had a DOM attribute ``id``, that becomes the widget's id in the `dijit.regsitry <dijit/registry>`_.
+The simplest way to access a widget is `dijit.byId <dijit/byId>`_. When the widget is created, if the Node used to create the widget (eg: srcNodeRef) had a DOM attribute ``id``, that becomes the widget's id in the `dijit.regsitry <dijit/registry>`_.
 
 With the following markup:
 
@@ -167,7 +167,7 @@ The Dialog instance would be available through the byId call to `myDialog`:
 
   dijit.byId("myDialog").show(); // show my dialog instance
 
-If the ID is unknown for some reason, the function ``dijit.getEnclosingWidget <dijit/getEnclosingWidget>`_ can be used by passing any child DOM Node reference. Again using the above markup, if we pass a reference to the ``p`` element inside the widget to `getEnclosingWidget`, we will again be returned a reference to the Dialog:
+If the ID is unknown for some reason, the function `dijit.getEnclosingWidget <dijit/getEnclosingWidget>`_ can be used by passing any child DOM Node reference. Again using the above markup, if we pass a reference to the ``p`` element inside the widget to ``getEnclosingWidget``, we will again be returned a reference to the Dialog:
 
 .. code-block :: javascript
   :linenos:
@@ -176,7 +176,7 @@ If the ID is unknown for some reason, the function ``dijit.getEnclosingWidget <d
   var w = dijit.getEnclosingWidget(node); // find the widget this node is in
   w.show();
 
-The last most common method is a lot like `getEnclosingWidget`, though only works if the node passed is the widget's .domNode member (aka: the top level node in the template, or the node used to create the widget instance):
+The last, most common method, is a lot like ``getEnclosingWidget``, though it only works if the node passed is the widget's ``.domNode`` member (aka: the top-level node in the template, or the node used to create the widget instance):
 
 .. code-block :: javascript
   :linenos:
@@ -186,7 +186,7 @@ The last most common method is a lot like `getEnclosingWidget`, though only work
   var widget = dijit.byNode(node); // now, w == widget 
   widget.show(); 
 
-Note: it typically doesn't take that many lines to use `dijit.byNode <dijit/byNode>`_, this was a crafted example to illustrate the relationship between widgets and it's domNode property. Most typically one would use `byNode` in some kind of event handler outside of the widget code:
+Note: it typically doesn't take that many lines to use `dijit.byNode <dijit/byNode>`_, this was a crafted example to illustrate the relationship between widgets and its ``domNode`` property. Most typically one would use ``byNode`` in some kind of event handler outside of the widget code:
 
 .. code-block :: javascript
   :linenos:
@@ -206,8 +206,8 @@ Widgets have initialization parameters and attributes that can be read/write aft
 In general it's the same list, although certain attributes (like id and type) can only be set
 during initialization.
 
-This basically mirrors have vanilla HTML DOM nodes work, although the syntax is a bit different.
-Specifically, to get/set attributes after initialization, you need to use the attr() method:
+This basically mirrors how vanilla HTML DOM nodes work, although the syntax is a bit different.
+Specifically, to get/set attributes after initialization, you need to use the ``attr()`` method:
 
 .. code-block :: javascript
 
@@ -267,10 +267,10 @@ When instantiated declaratively,
 
    <button dojoType="dijit.form.Button">press me</button>
 
-note that the original button node is thrown away, after scanning the node for attribute settings and innerHTML.
+Note that the original button node is thrown away, after scanning the node for attribute settings and innerHTML.
 The new DOM automatically replaces the old button node.
 
-However, there's another type of widget called a "behavioral widget" that merely modifies the original node (called the srcNodeRef).
+However, there's another type of widget called a "behavioral widget" that merely modifies the original node (called the ``srcNodeRef``).
 
 When using behavioral widgets, you need to specify a source DOM node for them to operate on.  For example:
 
@@ -284,4 +284,4 @@ This comes naturally if you are instantiating from markup.  For example, a behav
 
    <a href="..." dojoType="dojoc.widget.ConfirmAnchor">
 
-Dijit doesn't have any behavioral widgets, given that it's meant to be able to be used in a purely programmatic setting (without requiring the developer to create any skeletal sourceDOM nodes), but it is a useful paradigm for some applications, and is supported by Dijit. 
+Dijit doesn't have any behavioral widgets, given that it's meant to be able to be used in a purely programmatic setting (without requiring the developer to create any skeletal ``sourceDOM`` nodes), but it is a useful paradigm for some applications, and is supported by Dijit. 
