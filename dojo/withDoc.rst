@@ -22,7 +22,7 @@ This function provides a quick way to alter the 'document' root as seen by dojo 
 Usage
 =====
 
-Use this function to replace the dojo.doc for a function . Only during the function execution, dojo.doc is assigned the values you specify.
+Use this function to replace the dojo.doc reference for a specific function call. Only during that specific function execution is dojo.doc assigned the document you specify.  The below example demonstrates how to use it against an iframe document to query into the iframe and make updates.
 
 .. code-block :: javascript
  :linenos:
