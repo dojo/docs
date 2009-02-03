@@ -359,7 +359,7 @@ Array Methods
   var hasFoo = dojo.query("a").some("return item.innerHTML == 'foo';");
 
 :every:
-  like `dojo.some <dojo/some>`_ and `Array.every <http://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:every>`_. Returns a boolean value indicating whether every item in the list matches the filter function (does not chain).
+  like `dojo.every <dojo/every>`_ and `Array.every <http://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:every>`_. Returns a boolean value indicating whether every item in the list matches the filter function (does not chain).
 
 .. code-block :: javascript
   :linenos:
