@@ -25,13 +25,6 @@ Welcome to the official documentation pages of the Dojo Toolkit
 `The programmers manual for Dojo, Dijit, DojoX with more than 300 examples <manual/index>`_
 
 
-=========================
-`Community <community>`_
-=========================
-
-`Behind the scenes <community/index>`_ - Information about the DojoCampus documentation project.
-
-
 ================
 `About <about>`_
 ================
