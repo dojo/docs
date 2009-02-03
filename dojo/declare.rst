@@ -301,3 +301,9 @@ Note also that "mixin classes" can have their own arbitrarily complex
 hierarchy. So the "inherits" can also walk a tree.
 
 The upshot of this is that, in general, every mixin method should be calling this.inherited(arguments).   Of course that's assuming it'll be mixed in where the superclass has a method in the base class with the same name.
+
+========
+See Also
+========
+
+* `Understanding dojo.declare, dojo.require, and dojo.provide <http://dojocampus.org/content/2008/06/03/understanding-dojodeclare-dojorequire-and-dojoprovide/>`_ - 2008-06-03 - Dojo Cookie article
