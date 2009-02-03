@@ -429,10 +429,10 @@ Dojo Core
 See also
 --------
 
-* `dijit <dijit/index>`__
+* `Dijit <dijit/index>`__
 
   The widget system layered on top of Dojo
 
-* `dojoX <dojox/index>`__
+* `DojoX <dojox/index>`__
 
   An area for development of extensions to the Dojo toolkit
