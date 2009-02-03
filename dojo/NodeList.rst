@@ -199,3 +199,255 @@ To keep the Base size to a minimum, some NodeList functionality is provided by e
   }); 
 
 The NodeList animations do *not* return the NodeList instance. Instead, they return the created ``_Animation`` object, which you have to explictly call ``.play()`` on.
+
+===========
+API Details
+===========
+
+Array Methods
+-------------
+
+:at:
+  Returns one (or more) elements from the list in a new ``NodeList`` based on integer index. This is a fast way to wrap elements in a ``NodeList``, exposing all the manipulation and DOM conveniences easily (can be chained):
+
+.. code-block :: javascript
+  :linenos:
+
+  // we only want to style the first one
+  dojo.query("a").at(0).style("fontWeight", "bold");
+
+  // get the 3rd and 5th elements:
+  var ofInterest = dojo.query(".stories").at(2, 4);
+
+:forEach:
+  like `dojo.forEach <dojo/forEach>`_ but with current list as the first parameter. Has the same API as `Array.forEach <https://developer.mozilla.org/en/Core_JavaScript_1.5_Reference/Objects/Array/forEach>`_ in browsers that support it. Returns the source NodeList (can be chained).
+
+.. code-block :: javascript
+  :linenos:
+
+  dojo.query("a").
+    forEach(function(node, idx, arr){
+      console.debug(node);
+    });
+
+  // alternately, use second param to provide the scope:
+  dojo.query("a").
+    forEach(console.debug, console);
+
+  // or using the special shortened syntax from dojo.forEach:
+  dojo.query("a").forEach("console.debug(item);");
+
+:map:
+  like `dojo.map <dojo/map>`_ with the current list as the array or `Array.map <https://developer.mozilla.org/en/Core_JavaScript_1.5_Reference/Objects/Array/map>`_ in browsers that support it.  Returns a new ``dojo.NodeList`` with the mapped-in elements (can be chained).
+
+.. code-block :: javascript
+  :linenos:
+
+  var parents = dojo.query("a").
+    map(function(node){
+      return node.parentNode;
+    });
+
+  // or using the string version:
+  var parents = dojo.query("a").some("return item.parentNode;");
+
+:slice:
+  Used for grabbing only some of the elements in the list. Like `Array.slice <http://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:slice>`_, returns a new ``dojo.NodeList`` from a subset of the current list (can be chained).
+
+.. code-block :: javascript
+  :linenos:
+
+  // style all but the first and last:
+  dojo.query("a").slice(1, -1).addClass("emphasis");
+
+:splice:
+  Useful for changing a list in-place instead of making a new copy. Like `Array.splice <http://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:splice>`_, returns a new ``dojo.NodeList`` containing the elements removed from the list (can be chained).
+
+.. code-block :: javascript
+  :linenos:
+
+  var anchors = dojo.query("a");
+
+  // remove 3, starting with the second
+  var removed = anchors.splice(1, 3);
+
+  // ... and since we return a NodeList, style them:
+  removed.style("opacity", 0.5);
+
+  // bold the remaining anchors
+  anchors.style("fontWeight", "bold");
+
+
+:concat:
+  Joins other lists to the current list. Like `Array.concat <http://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:concat>`_, returns a new ``dojo.NodeList`` containing both the original elements and the new items (can be chained).
+
+.. code-block :: javascript
+  :linenos:
+
+  var anchors = dojo.query("a");
+  var bolds = dojo.query("b");
+  var boldsAndAnchors = anchors.concat(bolds);
+
+:push:
+  Like `Array.push <http://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:push>`_, ``push`` adds items to the ``NodeList``. Can be used to add multiple items at once. Returns the new list length (does not chain).
+
+.. code-block :: javascript
+  :linenos:
+
+  var anchors = dojo.query("a");
+  var a = dojo.doc.createElement("a");
+  // add "a" and 2 copies
+  anchors.push(a, a.cloneNode(), a.cloneNode());
+
+:pop:
+  Like `Array.pop <http://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:pop>`_, removes the last item from the ``NodeList`` (does not chain).
+
+.. code-block :: javascript
+  :linenos:
+
+  var anchors = dojo.query("a");
+  // remove the last item from the list
+  var a = anchors.pop();
+  dojo.style(a, "fontWeight", "bold");
+
+:shift:
+  Like `Array.shift <http://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:shift>`_. Works like ``pop``, but instead pulls the *first* element from the list instead of the last (does not chain):
+
+.. code-block :: javascript
+  :linenos:
+
+  var anchors = dojo.query("a");
+  // remove the first item from the list
+  var a = anchors.shift();
+  dojo.style(a, "fontWeight", "bold");
+
+:unshift:
+  Like `Array.unshift <http://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:shift>`_. Similar to ``push``, but instead puts elements at the *front* of the list. Returns the new length of the ``NodeList`` (does not chain):
+
+.. code-block :: javascript
+  :linenos:
+
+  var anchors = dojo.query("a");
+  var a = dojo.doc.createElement("a");
+  var howMany = anchors.unshift(a);
+
+:indexOf:
+  Like `Array.indexOf <http://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:indexOf>`_ (where supported) or `dojo.indexOf <dojo/indexOf>`_. Returns integer index if the tested element is found, ``-1`` if not found (does not chain).
+
+.. code-block :: javascript
+  :linenos:
+
+  var anchors = dojo.query("a");
+  var tested = dojo.byId("tested");
+  console.debug("is it in the list?", ( anchors.indexOf(tested) != -1 ) );
+
+:lastIndexOf:
+  Like `Array.lastIndexOf <http://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:lastIndexOf>`_ (where supported) or `dojo.lastIndexOf <dojo/lastIndexOf>`_. Returns integer index of the tested element found closest to the end of the list, ``-1`` if not found (does not chain).
+
+:some:
+  like `dojo.some <dojo/some>`_ and `Array.some <http://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:some>`_. Returns a boolean value indicating whether any of the items in the list match the filter function (does not chain).
+
+.. code-block :: javascript
+  :linenos:
+
+  var hasFoo = dojo.query("a").
+    some(function(node){
+      return node.innerHTML == "foo";
+    });
+
+  // or using the string version:
+  var hasFoo = dojo.query("a").some("return item.innerHTML == 'foo';");
+
+:every:
+  like `dojo.some <dojo/every>`_ and `Array.every <http://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:every>`_. Returns a boolean value indicating whether every item in the list matches the filter function (does not chain).
+
+.. code-block :: javascript
+  :linenos:
+
+  var areOnlyChildren = dojo.query("a").
+    every(function(node){
+      return node.parentNode.childNodes.length == 1;
+    });
+
+  // or using the string version:
+  var hasFoo = dojo.query("a").some("return item.parentNode.childNodes.length == 1;");
+
+
+:filter:
+  Like `dojo.filter <dojo/filter>`_ and `Array.filter <http://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:filter>`_. A new form of filter is added to support testing against simple CSS class matches. Returns a subset of the items in the list that pass the test (can be chained).
+
+.. code-block :: javascript
+  :linenos:
+
+  // a list of anchors that are only children
+  var onlyChildren = dojo.query("a").
+    filter(function(node){
+      return node.parentNode.childNodes.length == 1;
+    });
+
+  // anchors that also have the class ``foo`` and an attribute ``bar``:
+  var fooBarAnchors = dojo.query("a").filter(".foo[bar]");
+
+
+:query:
+  Searches under all of the nodes in this list for nodes that match the passed query. Returns a flattened ``NodeList`` of all matching elements (can be chained).
+
+.. code-block :: javascript
+  :linenos:
+
+  // search for all anchor tags under several nodes:
+  var anchors = dojo.query("#foo, #bar").query("a");
+
+DOM Methods
+-----------
+
+:attr:
+  TODOC
+:style:
+  TODOC
+:addClass:
+  TODOC
+:removeClass:
+  TODOC
+:toggleClass:
+  TODOC
+:place:
+  TODOC
+:orphan:
+  TODOC
+:adopt:
+  TODOC
+:addContent:
+  TODOC
+:empty:
+  TODOC
+:coords:
+  TODOC
+
+Event Methods
+-------------
+
+:connect:
+  TODOC
+
+Other events methods that do what you think: ``onblur``, ``onfocus``, ``onchange``, ``onclick``, ``onerror``, ``onkeydown``, ``onkeypress``, ``onkeyup``, ``onload``, ``onmousedown``, ``onmouseenter``, ``onmouseleave``, ``onmousemove``, ``onmouseout``, ``onmouseover``, ``onmouseup``, and ``onsubmit``.
+
+Animation
+---------
+
+Adding animation to lists of nodes requires including the module ``dojo.NodeList-fx`` which adds the required methods to instances of ``dojo.NodeList``. They are:
+
+:anim:
+  TODOC
+:fadeIn:
+  TODOC
+:fadeOut:
+  TODOC
+:slideTo:
+  TODOC
+:wipeIn:
+  TODOC
+:wipeOut:
+  TODOC
+:animateProperty:
+  TODOC
