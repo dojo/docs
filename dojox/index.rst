@@ -5,9 +5,9 @@ DojoX
 
 DojoX serves many purposes, and by design is difficult to document. Here, we have an ongoing effort to document the most used, stable, reliable and powerful aspects of DojoX. DojoX contains code in alpha and experimental states, so your assistance in testing and documenting are especially helpful.
 
-These sections cover the available projects shipped with the Dojo Toolkit
+These sections cover the available projects shipped with the Dojo Toolkit.
 
-* `Information <dojox/info>`_
+* `About DojoX <dojox/info>`_
 * `dojox.analytics <dojox/analytics>`_
 
   * `dojox.analytics.Urchin <dojox/analytics/Urchin>`_
