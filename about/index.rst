@@ -37,6 +37,7 @@ Documentation guidelines
 
 * `How to become a dojo doc ninja <howto>`_
 * `Behind the scenes <internals>`_
+* `Dojo hosted at DojoCampus <hosted_dojo>`_ - Notes on the instance of Dojo hosted at Dojo Campus
 * `A big "thank you"! <thank-you>`_
 
 
