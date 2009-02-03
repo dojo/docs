@@ -11,29 +11,29 @@ Welcome to the official documentation pages of the Dojo Toolkit
    :class: logowelcome;
 
 
-================
-`About <about>`_
-================
-
-* `All about Dojo Toolkits new official documentation pages <about/index>`_
-
-
 ===============================
 `Getting started <quickstart>`_
 ===============================
 
-* `Installation instructions & Tutorials <quickstart/index>`_
+`Installation instructions & Tutorials <quickstart/index>`_
 
 
 ===========================
 `Reference Guide <manual>`_
 ===========================
 
-* `Manual for Dojo, Dijit, DojoX with more than 300 examples <manual/index>`_
+`The programmers manual for Dojo, Dijit, DojoX with more than 300 examples <manual/index>`_
 
 
 =========================
 `Community <community>`_
 =========================
 
-* `Behind the scenes <community/index>`_ - Information about the DojoCampus documentation project.
+Behind the scenes <community/index>`_ - Information about the DojoCampus documentation project.
+
+
+================
+`About <about>`_
+================
+
+`All about Dojo Toolkits new official documentation pages <about/index>`_ and how you can contribute. It's a wiki, so dive in help us make it awesome!
