@@ -20,8 +20,6 @@ dojo.js
 
 Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js in your page.
 
-* `dojo <dojo>`_
-
 * `dojo._base <dojo/base>`_
 
   * `dojo._base._loader <dojo/base/loader>`_
