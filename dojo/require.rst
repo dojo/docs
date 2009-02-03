@@ -105,3 +105,10 @@ Examples
             alert("I said, please don't click!");
         </script>
     </div>
+
+
+========
+See Also
+========
+
+* `Understanding dojo.declare, dojo.require, and dojo.provide <http://dojocampus.org/content/2008/06/03/understanding-dojodeclare-dojorequire-and-dojoprovide/>`_ - 2008-06-03 - Dojo Cookie article
