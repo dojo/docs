@@ -29,7 +29,7 @@ Welcome to the official documentation pages of the Dojo Toolkit
 `Community <community>`_
 =========================
 
-Behind the scenes <community/index>`_ - Information about the DojoCampus documentation project.
+`Behind the scenes <community/index>`_ - Information about the DojoCampus documentation project.
 
 
 ================
