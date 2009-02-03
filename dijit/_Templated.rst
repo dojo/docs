@@ -196,6 +196,23 @@ The widgetsInTemplate feature does not support adding layout widgets as children
 
 Also note that a widget's getChildren() method and similar methods will *not* include the widgets declared in the template, but rather just the widgets inside the containerNode.   This is because the widgets declared in the template are internal objects, effectively hidden from widget users.  In other words, only the developer of the widget knows that it internally contains widgets.
 
+=====================
+Templated Particulars
+=====================
+
+_Templated used *both* ``templateString`` and ``templatePath``. In cases where the parent widget has defined a ``templateString``, and you wish to define a ``templatePath`` in a subclass, you must null the original ``templateString``:
+
+.. code-block :: javascript
+
+   dojo.declare("Thinger", [dijit._Widget, dijit._Templated], {
+       // parent has a templateString
+       templateString:null,
+       templatePath: dojo.moduleUrl("foo", "bar.html")
+   });
+
+Most widgets do *not* define a ``templateString``. When using a built or released Dijit tree, the build will ``internStrings``, converting the contents of the templatePath into a templateString variable in the built code. 
+
+*note:* define ``templateString`` *first*, should you need to define both at all. If you define the path first, and supply a string, that string will always be used, and will throw errors after running through the build system.
 
 ========
 See also
