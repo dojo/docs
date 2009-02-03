@@ -6,17 +6,17 @@ Dojo
 
 :Status: Draft
 :Version: 1.0
-:Available: since ever
+:Available: since version 0.9
 
 .. contents::
    :depth: 2
 
-Dojo is divided into two parts: Dojo Base, and Dojo Core. Dojo Base is the functionality provided for by just including ``dojo.js``, and Dojo Core is comprised of stable additional (optional) components. Typically, if a function or Class exists within the dojo namespace directly (eg: dojo.require(), dojo.addOnLoad()) it is part of Base Dojo. If the function or Class exists beneath the dojo namespace (eg: dojo.dnd.Mover), you will need to require the appropriate module (eg: dojo.require("dojo.dnd.Mover");)
+Dojo is divided into two parts: ``dojo.js``, and the rest of Dojo Core. Typically, if a function or Class exists within the dojo namespace directly (eg: ``dojo.require()``, ``dojo.addOnLoad()``) it is provided directly by ``dojo.js``. If the function or Class exists beneath the dojo namespace (eg: ``dojo.dnd.Mover``), you will need to require the appropriate module (eg: ``dojo.require("dojo.dnd.Mover");``)
 
 These pages cover both cases, and indicate how they are provided.
 
-Dojo Base
----------
+dojo.js
+-------
 
 Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js in your page.
 
