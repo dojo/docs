@@ -16,7 +16,7 @@ Dojo Toolkit Reference Guide
 Dojo
 ====
 
-* `dojo.js <dojo/index#dojo-base>`_
+* `dojo.js <dojo/index#dojo-js>`_
 
   The base functionality of the Dojo Toolkit, provided by just including ``dojo.js``. This includes tons of features like CSS-based queries, event handling, animations, Ajax, class-based programming, and a package system that makes getting access to the rest of Dojo a snap.
 
