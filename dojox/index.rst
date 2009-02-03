@@ -1,6 +1,6 @@
 #format dojo_rst
 
-Dojox
+DojoX
 =====
 
 DojoX serves many purposes, and by design is difficult to document. Here, we have an ongoing effort to document the most used, stable, reliable and powerful aspects of DojoX. DojoX contains code in alpha and experimental states, so your assistance in testing and documenting are especially helpful.
