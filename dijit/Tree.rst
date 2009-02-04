@@ -365,6 +365,51 @@ Tree has no built-in support for context menus, but you can use the Menu widget 
 		</script>
         </div>
 
+=======
+Styling
+=======
+
+Grid lines
+----------
+
+If you don't want to display the grid lines for a Tree then simply write CSS rules to override the theme and hide the relevant background images.  The pertinent lines from tundra are:
+
+.. code-block:: css
+
+  .tundra .dijitTreeNode {
+    background-image : url('images/i.gif');
+    ...
+  }
+  
+  /* left vertical line (grid) for all nodes */
+  .tundra .dijitTreeIsLast {
+    background: url('images/i_half.gif') no-repeat;
+    ...
+  
+  .tundra .dijitTreeExpandoLeaf {
+       background-image:url(images/treeExpand_leaf.gif);
+  }
+
+
+Hover effect
+------------
+
+Due to implementation details, the hover effect for tree nodes is done with a near-transparent image:
+
+.. code-block:: css
+
+  .tundra .dijitTreeNodeHover {
+	/*background-color: #f6f9fa !important;*/
+	/* using a transparent png so that we can still see grid lines, which are (unfortunately) behind the dijitRowNode that we are hovering over */
+	background-image: url(images/treeHover.png);
+	background-repeat: repeat;
+	background-color: none !important;
+  }
+
+So in order to change the hover effect you would need to create a new image (with for example 95% transparency), and write a CSS rule to override the one above.
+
+You can also remove the hover effect altogether by just writing a CSS rule that sets background-image to none, overriding the above rule.
+
 =============
 More examples
 =============
