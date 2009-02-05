@@ -68,8 +68,8 @@ See Also
 - `dojo.map <dojo/map>`_ - The Dojo version of Array.map
 - `dojo.filter <dojo/filter>`_ - Helps you narrow down the items in a list
 - `dojo.some <dojo/some>`_ - Does any item in the list meet your critera?
-- `dojo.some <dojo/every>`_ - Do *all* items in the list meet your critera?
-- `dojo.some <dojo/indexOf>`_ - Find something in a list easily
-- `dojo.some <dojo/lastIndexOf>`_ - Find something in the list easily, but starting from the back
+- `dojo.every <dojo/every>`_ - Do *all* items in the list meet your critera?
+- `dojo.indexOf <dojo/indexOf>`_ - Find something in a list easily
+- `dojo.lastIndexOf <dojo/lastIndexOf>`_ - Find something in the list easily, but starting from the back
 - `dojo.query <dojo/query>`_ - A CSS query engine that returns instances of ``dojo.NodeList``
 - `dojo.NodeList <dojo/NodeList>`_ - A subclass of Array which can also have forEach applied.
