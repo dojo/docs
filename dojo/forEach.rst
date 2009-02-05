@@ -7,15 +7,15 @@ dojo.forEach
 :Status: Contributed, Draft
 :Version: 1.0
 
-JavaScript 1.6 has a forEach loop, where you can apply a certain function to each element of an array. Unfortunately at the time of this writing, only Firefox 2 has support for JS 1.6. But never fear! Dojo has defined one you can use in any Dojo-supported browser.
+Since it's not supported natively on every browser, ``dojo.forEach`` provides the standard JavaScript 1.6 forEach construct everywhere. ``dojo.forEach`` lets you apply a function to each element of an array, emulating a ``for`` loop, but with fewer scoping compliations. 
 
-Foreach is syntactic sugar for a regular ol' for loop. So for example:
+``forEach`` is syntactic sugar for a regular 'ol for loop:
 
 .. code-block :: javascript
   :linenos:
 
-  for(var i in queueEntries){
-    console.debug(queueEntries[i]);
+  for(var i=0; i<queueEntries.length; i++){
+    console.debug(queueEntries[i], "at index", i);
   }
 
 Can be written as:
@@ -23,21 +23,19 @@ Can be written as:
 .. code-block :: javascript
   :linenos:
 
-  dojo.forEach(queueEntries,
-    function(oneEntry, index, array) {
-      console.debug(oneEntry + " at index " + index);
-    }
-  );
+  dojo.forEach(queueEntries, function(entry, i){
+    console.debug(entry, "at index", i);
+  });
 
-Like dojo.connect, we use an anonymous function here to define the operation. This function must accept between one and three arguments. The first argument is the value of each value in the array in turn, the second is the current index or position in the array, and the third argument is the array itself.
+We use an anonymous function to define the operation. This function is always passed 3 arguments: the current item value, the index in the list being iterated over, an a reference to the list itself.
 
-For this simple loop, forEach isn't anything exciting. But combined with other Dojo functions, especially dojo.query(), it becomes remarkably useful. Consider this snippet, which disables all SELECT tags on the page:
+For this simple loop, `dojo.forEach` isn't anything exciting. But combined with other Dojo functions, especially `dojo.query() <dojo/query>`_, it becomes remarkably useful. Consider this snippet, which disables all ``<select>`` tags on the page:
 
 .. code-block :: javascript
   :linenos:
 
   dojo.forEach(
-    dojo.query("select", document),
+    dojo.query("select"),
     function(selectTag) {
       selectTag.disabled = true;
     }
@@ -45,16 +43,14 @@ For this simple loop, forEach isn't anything exciting. But combined with other D
 
 How cool is that? (Answer: very!) There's no monkeying around with DOM functions, no using tedious names or id's, and it continues to work even when you add new SELECT tags.
 
-Running dojo.forEach on a dojo.query result is so common, that Dojo defines a shortcut. This snippet:
+Running ``dojo.forEach`` on a ``dojo.query`` result is so common, that Dojo defines a shortcut:
 
 .. code-block :: javascript
   :linenos:
 
-  dojo.query("select", document).forEach(
-    function(selectTag) {
+  dojo.query("select").forEach(function(selectTag){
       selectTag.disabled = true;
-    }
-  );
+  });
 
 does the same thing. But that's not all! New in 1.0 you can collapse the function down to its body, passed in as a string like so:
 
@@ -63,12 +59,17 @@ does the same thing. But that's not all! New in 1.0 you can collapse the functio
 .. code-block :: javascript
   :linenos:
   
-  dojo.query("select", document).forEach("item.disabled = true;");
+  dojo.query("select").forEach("item.disabled = true;");
 
 Ay carumba! That's a lot of functionality in a tiny 1-line package. Once you get used to the syntax, you'll never want to go back.
 
-There's more on dojo.query in Selecting DOM Nodes with dojo.query
-
 See Also
 ========
+- `dojo.map <dojo/map>`_ - The Dojo version of Array.map
+- `dojo.filter <dojo/filter>`_ - Helps you narrow down the items in a list
+- `dojo.some <dojo/some>`_ - Does any item in the list meet your critera?
+- `dojo.some <dojo/every>`_ - Do *all* items in the list meet your critera?
+- `dojo.some <dojo/indexOf>`_ - Find something in a list easily
+- `dojo.some <dojo/lastIndexOf>`_ - Find something in the list easily, but starting from the back
+- `dojo.query <dojo/query>`_ - A CSS query engine that returns instances of ``dojo.NodeList``
 - `dojo.NodeList <dojo/NodeList>`_ - A subclass of Array which can also have forEach applied.
