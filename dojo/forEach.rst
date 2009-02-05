@@ -7,7 +7,7 @@ dojo.forEach
 :Status: Contributed, Draft
 :Version: 1.0
 
-Since it's not supported natively on every browser, ``dojo.forEach`` provides the standard JavaScript 1.6 forEach construct everywhere. ``dojo.forEach`` lets you apply a function to each element of an array, emulating a ``for`` loop, but with fewer scoping compliations. 
+Since it's not supported natively on every browser, ``dojo.forEach`` provides the `standard JavaScript 1.6 forEach construct <https://developer.mozilla.org/En/Core_JavaScript_1.5_Reference:Objects:Array:forEach>`_ everywhere. ``dojo.forEach`` lets you apply a function to each element of an array, emulating a ``for`` loop, but with fewer scoping compliations. 
 
 ``forEach`` is syntactic sugar for a regular 'ol for loop:
 
