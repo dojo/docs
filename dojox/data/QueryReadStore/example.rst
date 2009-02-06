@@ -6,6 +6,8 @@ dojox.data.QueryReadStore
 .. contents::
   :depth: 2
 
+This page is out-dated/unfinished.
+
 
 Here a full client program. In order for it to work:
 
