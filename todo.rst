@@ -108,4 +108,4 @@ With V1.3 each new feature needs a proper documentation at docs.dojocampus.org -
 Unfinished/out-dated pages
 ==========================
 
-* 'dojox/data/Query Read Store/example <dojox/data/Query Read Store/example>`_
+* `dojox/data/Query Read Store/example <dojox/data/Query Read Store/example>`_
