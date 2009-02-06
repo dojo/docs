@@ -27,6 +27,10 @@ Features
 
   A clone of `dojo.data.ItemFileWriteStore <dojo/data/ItemFileWriteStore>`__, which supports more complex queries than the simple AND format property matching
 
+* `dojox.data.AppStore <dojox/data/AppStore>`_
+
+  A store implementing an Atom store with complete ATOM Publishing Protocol support. Allows reading and writing of ATOM formatted feeds.
+
 * `dojox.data.AtomReadStore <dojox/data/AtomReadStore>`_
 
   A store designed to provide read-only access to Atom XML documents
