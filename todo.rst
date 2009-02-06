@@ -84,6 +84,10 @@ Priority 4: DojoX
 
   needed: Introduction, Grid 1.2 Changes, Usage, Parameter "selection mode", Example "sorting data at the server", Example "Large datasets", Tips
 
+* `dojox.widget/FisheyeList <dojox/widget/FisheyeList>`_ 
+
+  needed: full page
+
 
 ==================================
 New features for Dojo Toolkit V1.3
