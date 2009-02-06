@@ -80,6 +80,10 @@ Priority 4: DojoX
 
   needed: full page
 
+* `dojox/data/Query Read Store/example <dojox/data/Query Read Store/example>`_
+
+  This example is unfinished, should we delete it?
+
 * `dojox.grid <dojox/grid>`_ ``bforbes, toonetown``
 
   needed: Introduction, Grid 1.2 Changes, Usage, Parameter "selection mode", Example "sorting data at the server", Example "Large datasets", Tips
@@ -102,10 +106,3 @@ With V1.3 each new feature needs a proper documentation at docs.dojocampus.org -
 * `dojox.data.AppStore <dojox/data/AppStore>`_
 
   needed: full page
-
-
-==========================
-Unfinished/out-dated pages
-==========================
-
-* `dojox/data/Query Read Store/example <dojox/data/Query Read Store/example>`_
