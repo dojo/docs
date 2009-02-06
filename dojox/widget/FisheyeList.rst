@@ -55,4 +55,4 @@ TODO: example
 See also
 ========
 
-* `dojox.widget.FisheyesLite <dojox/widget/FisheyeLite>`_
+* `dojox.widget.FisheyeLite <dojox/widget/FisheyeLite>`_
