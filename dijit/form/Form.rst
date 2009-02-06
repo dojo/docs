@@ -33,7 +33,7 @@ Declarative example
 
   .. cv:: html
 
-    <form dojoType="dijit.form.Form" id="myForm" jsId="myForm"
+    <div dojoType="dijit.form.Form" id="myForm" jsId="myForm"
     encType="multipart/form-data" action="" method="">
         <script type="dojo/method" event="onReset">
             return confirm('Press OK to reset widget values');
@@ -77,7 +77,9 @@ Declarative example
         <button dojoType="dijit.form.Button" onClick="console.log(myForm.getValues())">Get Values from form!</button>
         <button dojoType="dijit.form.Button" type="submit" name="submitButton" value="Submit">Submit</button>
         <button dojoType="dijit.form.Button" type="reset">Reset</button>
-    </form>
+    </div>
+
+Note that it's using a &lt;div&gt; node instead of the obvious choice of a &lt;form&gt; node because of some <a href="http://bugs.dojotoolkit.org/ticket/8424">IE issues</a>.
 
 Preparing and validating a form for XHR requests
 ------------------------------------------------
@@ -107,7 +109,7 @@ To validate a form you use the `isValid()` function. Lets take at a simple examp
 
   .. cv:: html
 
-    <form dojoType="dijit.form.Form" id="myFormTwo" jsId="myFormTwo"
+    <div dojoType="dijit.form.Form" id="myFormTwo" jsId="myFormTwo"
     encType="multipart/form-data" action="" method="">
         <table style="border: 1px solid #9f9f9f;" cellspacing="10">
             <tr>
@@ -131,7 +133,7 @@ To validate a form you use the `isValid()` function. Lets take at a simple examp
         <button dojoType="dijit.form.Button" onClick="console.log(myFormTwo.attr("value"))">Get Values from form!</button>
         <button dojoType="dijit.form.Button" type="submit" name="submitButtonTwo" value="Submit">Submit</button>
         <button dojoType="dijit.form.Button" type="reset">Reset</button>
-    </form>
+    </div>
 
 Using native form elements
 --------------------------
@@ -159,7 +161,7 @@ dijit.form.Form can also handle any type of naive form element, though you have 
 
   .. cv:: html
 
-    <form dojoType="dijit.form.Form" id="myFormThree" jsId="myFormThree"
+    <div dojoType="dijit.form.Form" id="myFormThree" jsId="myFormThree"
     encType="multipart/form-data" action="" method="">
         <table style="border: 1px solid #9f9f9f;" cellspacing="10">
             <tr>
@@ -192,4 +194,4 @@ dijit.form.Form can also handle any type of naive form element, though you have 
         <button dojoType="dijit.form.Button" onClick="console.log(myFormThree.attr("value"))">Get Values from form!</button>
         <button dojoType="dijit.form.Button" type="submit" name="submitButtonThree" value="Submit">Submit</button>
         <button dojoType="dijit.form.Button" type="reset">Reset</button>
-    </form>
+    </div>
