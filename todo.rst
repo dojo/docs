@@ -68,9 +68,9 @@ Priority 4: DojoX
 
   needed: full page
 
-* `dojox.charting <dojox/charting>`_
+* `dojox.charting <dojox/charting>`_ ``ttrenka``
 
-  needed: some more content from the linked tutorials
+  needed: explanation about preiodic updating
 
 * `dojox.collections <dojox/collections>`_
 
