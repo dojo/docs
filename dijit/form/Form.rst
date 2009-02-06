@@ -79,7 +79,7 @@ Declarative example
         <button dojoType="dijit.form.Button" type="reset">Reset</button>
     </div>
 
-Note that it's using a &lt;div&gt; node instead of the obvious choice of a &lt;form&gt; node because of some <a href="http://bugs.dojotoolkit.org/ticket/8424">IE issues</a>.
+Note that it's using a &lt;div&gt; node instead of the obvious choice of a &lt;form&gt; node because of some `IE issues <http://bugs.dojotoolkit.org/ticket/8424>`_
 
 Preparing and validating a form for XHR requests
 ------------------------------------------------
