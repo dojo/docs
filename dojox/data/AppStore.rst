@@ -1,6 +1,6 @@
 #format dojo_rst
 
-dojox.data/AppStore
+dojox.data.AppStore
 ===================
 
 :Status: Draft
