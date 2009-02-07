@@ -27,7 +27,13 @@ Href
 One big use for ContentPanes is to load content dynamically through an href (see the href parameter).
 However, note that the href must access data on the same domain since it's served via XHR.  To change the content of the content pane without performing an Ajax load, the content attribute can be set to the new HTML values.
 
-ContentPane acts as a base class for a number of widgets (such as `Dialog <dijit/Dialog>`_). These documents apply in most cases to all widgets that inherit this code. For instance, Dialog's href="" attributes is identical to ContentPane. 
+ContentPane acts as a base class for a number of widgets (such as `Dialog <dijit/Dialog>`_). These documents apply in most cases to all widgets that inherit this code. For instance, Dialog's href="" attributes is identical to ContentPane.
+
+Loading Message
+---------------
+
+The loading message that's displayed while content is being fetched can be changed by changing the loadingMessage attribute of the ContentPane.  The default value of the loadingMessage attribute is "<span class='dijitContentPaneLoading'>${loadingState}</span>" so, you can change the look of the message by applying css to the .dijitContentPaneLoading class. 
+ 
 
 Callbacks
 ---------
