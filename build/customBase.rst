@@ -80,7 +80,7 @@ Including Specific Resources
 To include specific dojo base resources in your minimal build, use the dependencies list for the dojo.js layer.  
 
 For example, if you specify ``customBase: true``, but want a particular ``dojo/_base``
-module, say just the array help functions and ``dojo.Deferred``, your profile would
+module, say just the array help functions and ``dojo.Deferred``, your profile ``dojo.js`` layer would
 look like this:
 
 .. code-block :: javascript
@@ -94,3 +94,32 @@ look like this:
                   "dojo._base.array"
           ]
    }
+
+
+===================
+Caveats
+===================
+
+If you use ``customBase: true``, then the build system will use
+regular expressions to see if any of the modules in the build (dojo, dijit, dojox,
+your custom namespaces) use any ``dojo._base methods``, and if they detect
+a usage, it will inject ``dojo.require`` calls into the built modules. 
+
+This helps avoid issues where you use a module that needs a ``dojo._base``
+module that you did not include in your ``dojo.js``. However since it is
+using regular expressions, you may get more ``dojo.require`` calls for ``dojo._base``
+modules than necessary. The idea was to have the detection be very lax
+in what it matches to avoid run time errors. 
+
+Example: if the build
+finds "indexOf" in the module, it will add in a
+``dojo.require("dojo._base.array")``, but that ``indexOf`` in the module could
+have been a String method call.
+
+================
+Known Bugs
+================
+``customBase: true`` should not be used with ``djConfig.require``. There is a
+bug where the ``djConfig.require`` will not be included correctly
+depending on if you leave out ``dojo._base.browser``:
+http://bugs.dojotoolkit.org/ticket/7756
