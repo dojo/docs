@@ -5,7 +5,7 @@ Dojo Build System
 
 :Status: Draft
 :Version: 1.0
-:Project owner: Scott Jenkins
+:Project owner: (docs) Scott Jenkins
 :Available: since 1.0
 
 .. contents::
