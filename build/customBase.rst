@@ -5,15 +5,13 @@ build customBase
 
 :Status: Draft
 :Version: 1.0
-:Project owner: ?--
+:Project owner: (docs) Scott Jenkins
 :Available: since V?
 
 .. contents::
    :depth: 2
 
-THIS IS JUST PLACEHOLDER NOTES BASED ON CONVERSATION WITH PHIGGINS
-
-Custom base makes really really small dojo.js
+Custom base is used to make an extremely small file size version of dojo.js.
 
 
 
@@ -27,13 +25,13 @@ However, in some cases, such as creating web applications intended for use on sm
 
 This is a very advanced feature, and if you think you need to use it, you should think carefully first. If after careful consideration, you still want to use this feature, be very, very careful and document it thoroughly for your own understanding.
 
-=================
-Function Stubbing
-=================
+===============================
+dojo.require for base functions
+===============================
 
 When you use the ``customBase`` option, some base Dojo functions are not copied into your ``dojo.js`` file, in order to reduce the file size.
 
-Instead, a stub is put into the file so that if a function that was not included is called, it can be `lazily loaded <http://en.wikipedia.org/wiki/Lazy_initialization>`_, essentially by a synchronous call to the server with ``dojo.require``.  
+Instead, a ``dojo.require`` statement is generated for each base resource that the builder identifies as being used in your module.  This identification is done with regular expression matching, and is by design somewhat lax to ensure it catches all resources that are needed.
 
 This allows you to still use the entire base API, but at the cost of additional an additional round trip to the server *at the time a function not in base is first called*.
 
@@ -59,25 +57,40 @@ In the profile for your build, specify the following for your dojo layer (note t
 
   ]
 
+If, as shown in this example, you specify ``customBase: true``, but do not specify any dependencies
+for the ``dojo.js`` layer, then then *none* of ``dojo._base`` gets added to
+``dojo.js``. 
+
+You just end up with the following from ``dojo/_base/_loader``, basically, just bare utilities for browser detection:
+
+   * ``dojo.addOnLoad``
+   * ``addOnUnload``
+   * ``dojo.require``
+   * ``dojo.provide``
+   * ``bootstrap.js``
+   * ``hostenv_browser.js``
+   * ``loader.js``
 
 
-========
-Examples
-========
 
-Programmatic example
---------------------
+============================
+Including Specific Resources
+============================
 
-TODO: example
+To include specific dojo base resources in your minimal build, use the dependencies list for the dojo.js layer.  
 
-Declarative example
--------------------
+For example, if you specify ``customBase: true``, but want a particular ``dojo/_base``
+module, say just the array help functions and ``dojo.Deferred``, your profile would
+look like this:
 
-TODO: example
+.. code-block :: javascript
+ :linenos:
 
-
-========
-See also
-========
-
-* TODO: links to other related articles
+   {
+          name: "dojo.js",
+          customBase: true
+          dependencies: [
+                  "dojo._base.Deferred",
+                  "dojo._base.array"
+          ]
+   }
