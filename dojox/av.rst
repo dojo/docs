@@ -22,6 +22,6 @@ http://docs.dojocampus.org/dojox/av
 
 http://docs.dojocampus.org/dojox/av/FLAudio
 
-http://docs.dojocampus.org/dojox/av/FLZVideo
+http://docs.dojocampus.org/dojox/av/FLVideo
 
 http://docs.dojocampus.org/dojox/av/widget
