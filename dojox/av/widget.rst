@@ -19,14 +19,12 @@ dojox.av.widget provides base player control widgets for building a media player
 Introduction
 ============
 
-This package includes a PlayButton, VoumeButton, ProgressSlider, Status container, and the Player container. These widgets were built primarilly for use with dojox.av.FLVideo, but could also be used to create plyers of other media types, including dojox.av.FLAudio.
+This package includes a PlayButton, VolumeButton, ProgressSlider, Status container, and the Player container. These widgets were built primarily for use with dojox.av.FLVideo, but could also be used to create players of other media types, including dojox.av.FLAudio.
 
 
 =====
 Usage
 =====
-
-TODO: how to use the component/class/method
 
 .. code-block :: javascript
  :linenos:
