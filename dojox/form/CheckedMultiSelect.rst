@@ -54,6 +54,12 @@ This example shows a simple CheckedMultiSelect widget - converted from a select 
           <option value="CA">California</option>
      </select>
 
+  .. cv:: css
+
+    <style type="text/css">
+      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/form/resources/CheckedMultiSelect.css";
+    </style>
+
 A radio-based CheckedMultiSelect
 --------------------------------
 
@@ -75,4 +81,10 @@ By not specifying "multiple=true" in your widget, you will create a widget using
           <option value="WA">Washington</option>
           <option value="FL">Florida</option>
           <option value="CA">California</option>
-     </select>
+    </select>
+
+  .. cv:: css
+
+    <style type="text/css">
+      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/form/resources/CheckedMultiSelect.css";
+    </style>
