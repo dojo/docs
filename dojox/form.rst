@@ -9,21 +9,21 @@ The dojox.form project provides additional form-related widgets beyond `dijit.fo
 
   A new Button with progresss indicator built in, for indicating processing after you press the button
 
-* dojox.form.CheckedMultiSelect
+* `dojox.form.CheckedMultiSelect <dojox/form/CheckedMultiSelect>`_
 
-  description?
+  A multi-select widget (similar to html select with multiple=true) that uses check boxes
 
 * dojox.form.DateTextBox
 
   description?
 
-* dojox.form.DropDownSelect
+* `dojox.form.DropDownSelect <dojox/form/DropDownSelect>`_
 
-  description?
+  A styleable drop down select box (similar to html select element)
 
-* dojox.form.DropDownStack
+* `dojox.form.DropDownStack <dojox/form/DropDownStack>`_
 
-  description?
+  A widget for enabling/disabling parts of a form based on a selection
 
 * `dojox.form.FileInput <dojox/form/FileInput>`_ (covers base, Auto, and Blind)
 
@@ -49,13 +49,13 @@ The dojox.form project provides additional form-related widgets beyond `dijit.fo
 
   description?
 
-* dojox.form.PasswordValidator
+* `dojox.form.PasswordValidator <dojox/form/PasswordValidator>`_
 
-  description?
+  A widget that simplifies the "Old/New/Verify" password construct used on many web pages.
 
-* dojox.form.RadioStack
+* `dojox.form.RadioStack <dojox/form/RadioStack>`_
 
-  description?
+  A widget for enabling/disabling parts of a form based on a selection
 
 * dojox.form.RangeSliders
 
