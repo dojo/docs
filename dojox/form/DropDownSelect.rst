@@ -54,6 +54,12 @@ This example shows a simple DropDownSelect widget - converted from a select tag.
         <option value="CA">California</option>
     </select>
 
+  .. cv:: css
+
+    <style type="text/css">
+      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/form/resources/DropDownSelect.css";
+    </style>
+
 A "styled" DropDownSelect
 -------------------------
 
@@ -81,5 +87,6 @@ When styling the entries of a DropDownSelect, you must use div and span tags, in
   .. cv:: css
 
     <style type="text/css">
+      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/form/resources/DropDownSelect.css";
       .ark { text-decoration: underline; }
     </style>
