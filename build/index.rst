@@ -241,6 +241,11 @@ Build Build Scenarios
 
 TODOC:  All of the following, with both build invocation command line and profile
 
+Directory Layout
+----------------
+
+See `possible directory layout <build/directoryLayout>`_ for the directory scheme used in these example scenarios.  This layout is designed to allow Dojo and private namespaces to work together without mixing source file trees.
+
 Basic Scenarios
 ---------------
 
