@@ -33,28 +33,13 @@ There are also a large amount of events that are triggered. These events can be 
 
 Example
 -------
-
-.. cv-compound::
- 
-  The JavaScript:
-
-  .. cv:: javascript
-
-    <script type="text/javascript">
-    dojo.require("dojox.av.FLVideo");
-    dojo.require("dojo.parser");
-    new dojox.av.FLVideo({initialVolume:.1, mediaUrl:"http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dojox/av/tests/video/Grog.flv", autoPlay:true, isDebug:false}, "vid");
-    </script>
-
-  The HTML:
-
-  .. cv:: html
-    
-    <div id="vid" style="height:100%;"></div>
+For examples, please refer to the test file in the SDK: dojoz/av/tests/testFLVideo.html
 
 
 ========
 See also
 ========
 
-* TODO: links to other related articles
+http://docs.dojocampus.org/dojox/av
+http://docs.dojocampus.org/dojox/av/FLAudio
+http://docs.dojocampus.org/dojox/av/widget
