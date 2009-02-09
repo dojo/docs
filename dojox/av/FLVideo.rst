@@ -33,7 +33,7 @@ There are also a large amount of events that are triggered. These events can be 
 
 Example
 -------
-For examples, please refer to the test file in the SDK: dojoz/av/tests/testFLVideo.html
+For examples, please refer to the test file in the SDK: dojox/av/tests/testFLVideo.html
 
 
 ========
