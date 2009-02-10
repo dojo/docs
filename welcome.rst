@@ -34,9 +34,8 @@ Dojo's now included on your page, no install, no fuss. So what do you get for al
         dojo.addOnLoad(function(){
             dojo.query("#showMe").onclick(function(e){
                 dojo.anim(e.target, {
-                    backgroundColor: "yellow",
-                    color: "white",
-                    paddingWidth: 10
+                    backgroundColor: "#1a1a1a",
+                    color: "#f7f7f7",
                 });
             });
         });
