@@ -10,9 +10,10 @@ dojo.place
 .. contents::
    :depth: 3
 
-``dojo.place()`` is a useful DOM node placement utility function. It comes in very handy when you need to create and place nodes as siblings or children of other nodes or replace other nodes. It is very useful when working with existing nodes too, because it encapsulates all necessary boilerplate code required to place a node correctly.
-
 To see this utility in context, read the `DOM Quick Start <quickstart/dom>`_ first.
+
+``dojo.place()`` is a useful DOM node placement utility function. It can be used to place existing nodes somewhere in an HTML document as well as create new nodes and immediately position them in the document. It encapsulates all necessary boilerplate code required to place a node correctly, and
+take special cross-browser consideration when creating and placing the nodes. 
 
 ========
 Overview
@@ -21,17 +22,17 @@ Overview
 The function takes up to three arguments:
 
 .. code-block :: javascript
+  :linenose:
 
   dojo.place(node, refNode, pos);
 
-Here is the definition of arguments:
 
 node
-  Can be a string or a DOM node. If it is a string starting with "<", it is assumed to be an HTML fragment, which will be instantiated. Otherwise it is assumed to be an id of a DOM node.
+  Can be a String or a DOM node. If it is a string starting with "<", it is assumed to be an HTML fragment, which will be created. Otherwise it is assumed to be an id of a DOM node. 
 
-  Notes:
+  Note:
 
-  - An HTML fragment can have more than one top node.
+  - An HTML fragment can have more than one top node. 
   - In the case of an invalid HTML fragment the result of instantiation is undefined.
   - When instantiating an HTML fragment the owner document of the reference node is used.
 
@@ -39,9 +40,17 @@ refNode
   Can be a string (interpreted as an id of a DOM node) or a DOM node.
 
 pos
-  Optional argument. Can be a number or one of the following strings: "before", "after", "replace", "only", "first", or "last". If omitted, "last" is assumed. The number indicates that the node should be inserted as a child of ``refNode`` with this number (counting from 0).
+  Optional argument. Can be a number or one of the following strings: "before", "after", "replace", "only", "first", or "last". If omitted, "last" is assumed. If the position argument is a number, it indicates that the node should be inserted as a child of ``refNode`` with this number (counting from 0).
 
-The function returns a node it placed. In case of an HTML fragment, if it has just one root element, that element is returned directly. Otherwise a document fragment is returned. The returned node can be:
+.. code-block :: javascript
+  :linenos:
+
+  dojo.place("someId", "someOtherId", "first"); // add someId to the node someOtherId as the first-child
+
+The naming of the positions are intentionally concise.
+
+
+``place`` returns the node it placed. In case of an HTML fragment, if it has just one root element, that element is returned directly. Otherwise a document fragment is returned. The returned node can be:
 
 - A regular DOM element node: ``nodeType`` is 1 for ``ELEMENT_NODE`` , example: "<div>42</div>".
 
@@ -53,13 +62,14 @@ The function returns a node it placed. In case of an HTML fragment, if it has ju
 
   The document fragment is a very useful tool to work with a group of arbitrary nodes, because standard DOM methods can work with it as with a regular node operating on the whole group, e.g., inserting or appending it as a whole.
 
-  Note that DocumentFragment is a Node, but not an Element, e.g., obviously it doesn't support ``innerHTML``, ``style``, or any other familiar attributes of the element.
+  Note that DocumentFragment is a Node, but not an Element. It does not support ``innerHTML``, ``style``, or any other familiar attributes of the element. 
 
-Below is the full list of placement options with live examples illustrating their use.
 
 =================
 Placement options
 =================
+
+Below is the full list of placement options with live examples illustrating their use.
 
 Place "before" or "after"
 -------------------------
@@ -288,7 +298,7 @@ Alternatives
 Place using dojo.create()
 -------------------------
 
-Alternative way to place (and create) a node is `dojo.create <dojo/create>`_. It is a simple helper that creates a node with a given tag (or uses the existing node), and applies optionally `dojo.attr <dojo/attr>`_ and `dojo.place <dojo/place>`_ to it. While its creation part is not as rich, it allows to set complex attributes and styles dynamically without messy string manipulations. The additional benefit of `dojo.create <dojo/create>`_ is that by using `dojo.attr <dojo/attr>`_ all attributes will be applied in a browser-independent way avoiding possible differences.
+An alternative way to place (and create) a node is `dojo.create <dojo/create>`_. It is a simple helper that creates a node with a given tag (or uses the existing node), and applies optionally `dojo.attr <dojo/attr>`_ and `dojo.place <dojo/place>`_ to it. While its creation part is not as rich, it allows to set complex attributes and styles dynamically without messy string manipulations. The additional benefit of `dojo.create <dojo/create>`_ is that by using `dojo.attr <dojo/attr>`_ all attributes will be applied in a browser-independent way avoiding possible differences.
 
 .. code-block :: javascript
   :linenos:
