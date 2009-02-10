@@ -33,9 +33,16 @@ Dojo's now included on your page, no install, no fuss. So what do you get for al
     <script>
         dojo.addOnLoad(function(){
             dojo.query("#showMe").onclick(function(e){
-                dojo.anim(e.target, {
+                var node = e.target;
+
+                var a = dojo.anim(node, {
                     backgroundColor: "#363636",
-                    color: "#f7f7f7",
+                    color: "#f7f7f7"
+                }, 1000);
+
+                dojo.connect(a, "onEnd", function(){
+                    dojo.anim(node, { color: "#363636" });
+                    node.innerHTML = "wow, that was easy!";
                 });
             });
         });
