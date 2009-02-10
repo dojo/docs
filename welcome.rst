@@ -1,7 +1,7 @@
 #format rst
 
-Welcome to the official documentation pages of the Dojo Toolkit
-===============================================================
+The Official Dojo Documentation
+===============================
 
 .. contents::
     :depth: 2
@@ -14,6 +14,46 @@ Welcome to the official documentation pages of the Dojo Toolkit
 ===============================
 `Getting started <quickstart>`_
 ===============================
+
+Getting up-and-running with Dojo couldn't be easier. Just include this line in your web page:
+
+.. code-block :: html
+
+    <script type="text/javascript"
+        src="http://ajax.googleapis.com/ajax/libs/dojo/1.2/dojo/dojo.xd.js">
+    </script>   
+
+
+Dojo's now included on your page, no install, no fuss. So what do you get for all that had work? 
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script>
+        dojo.addOnLoad(function(){
+            dojo.query("#showMe").onclick(function(e){
+                dojo.anim(e.target, {
+                    backgroundColor: "yellow",
+                    color: "white",
+                    padding: "10px"
+                });
+            });
+        });
+    </script>
+
+  .. cv:: html
+
+    <div id="showMe">
+        click here to see how it works
+    </div>
+
+  .. cv:: css
+
+    <style>
+        div#showMe { }
+    </style>
+
 
 `Installation instructions & Tutorials <quickstart/index>`_
 
