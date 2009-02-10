@@ -36,7 +36,7 @@ Dojo's now included on your page, no install, no fuss. So what do you get for al
                 dojo.anim(e.target, {
                     backgroundColor: "yellow",
                     color: "white",
-                    padding: "10px"
+                    paddingWidth: 10
                 });
             });
         });
@@ -47,12 +47,6 @@ Dojo's now included on your page, no install, no fuss. So what do you get for al
     <div id="showMe">
         click here to see how it works
     </div>
-
-  .. cv:: css
-
-    <style>
-        div#showMe { }
-    </style>
 
 
 `Installation instructions & Tutorials <quickstart/index>`_
