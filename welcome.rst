@@ -34,6 +34,7 @@ Dojo's now included on your page, no install, no fuss. So what do you get for al
         dojo.addOnLoad(function(){
             dojo.query("#showMe").onclick(function(e){
                 dojo.anim(e.target, {
+                    padding: "10px",
                     backgroundColor: "#363636",
                     color: "#f7f7f7",
                 });
