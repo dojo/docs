@@ -43,6 +43,7 @@ Dojo's now included on your page, no install, no fuss. So what do you get for al
                 dojo.connect(a, "onEnd", function(){
                     dojo.anim(node, { color: "#363636" }, null, null, function(){
                         node.innerHTML = "wow, that was easy!";
+                        dojo.anim(node, { color: "white" });
                     });
                 });
             });
