@@ -22,7 +22,7 @@ Overview
 The function takes up to three arguments:
 
 .. code-block :: javascript
-  :linenose:
+  :linenos:
 
   dojo.place(node, refNode, pos);
 
