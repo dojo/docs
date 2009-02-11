@@ -34,7 +34,7 @@ Directory Layout
 
 Here is a sample directory layout (from a Windows operating system, but the concepts would be the same for a unix-type operating system):
 
-.. image :: build-directory-layout.png
+.. image :: build-directory-layout2.png
 
 
 
