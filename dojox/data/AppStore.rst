@@ -288,6 +288,46 @@ Example 2: Programmatic instantiation and querying of ATOM Feed Entry titles.
     </span>
 
 
+Example 3: Connecting AppStore to DataGrid
+------------------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojox.data.AppStore");
+      dojo.require("dojox.data.DataGrid");
+
+      var layout = [
+        [
+          { field: "title", name: "Title", width: 15 },
+          { field: "link", name: "Link", width: 5, formatter: function(value) { return "<a href=\"" + value + "\">Link</a>"}},
+          { field: "updated", name: "Last Modified", width: 'auto' }
+        ]
+      ];
+    </script>
+
+  .. cv :: html 
+
+    <div dojoType="dojox.data.AppStore" jsId="appStore" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/atom/tests/widget/samplefeedEdit.xml"></div>
+    <div dojoType="dojox.data.DataGrid" store="appStore" query="{}" structure="layout"></div>
+    <br>
+    <br>
+    <span id="list2">
+    </span>
+
+  .. cv:: css
+
+    <style type="text/css">
+      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/resources/Grid.css";
+      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/resources/nihiloGrid.css";
+
+      .dojoxGrid table {
+        margin: 0;
+      }
+    </style>
+
 
 Programmatic example
 --------------------
