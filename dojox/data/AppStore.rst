@@ -334,20 +334,8 @@ Example 3: Connecting AppStore to DataGrid
       }
     </style>
 
-
-Programmatic example
---------------------
-
-TODO: example
-
-Declarative example
--------------------
-
-TODO: example
-
-
 ========
 See also
 ========
 
-* TODO: links to other related articles
+* `dojox.atom <dojox.atom>`_
