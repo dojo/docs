@@ -119,15 +119,14 @@ Example Usage of using AtomReadStore with a DataGrid
   .. cv :: html 
 
     <div dojoType="dojox.data.AtomReadStore" jsId="feedStore" url="../dojox/data/tests/stores/atom1.xml"></div>
-    <div style="width: 750px; height: 300px;">
-      <div id="feedGrid" 
-			  jsId="feedGrid"
-        dojoType="dojox.grid.DataGrid" 
-        store="feedStore" 
-        structure="layoutResults" 
-        query="{}"   
-        rowsPerPage="40">
-      </div>
+    <div id="feedGrid" 
+      jsId="feedGrid"
+      style="width: 750px; height: 300px;">
+      dojoType="dojox.grid.DataGrid" 
+      store="feedStore" 
+      structure="layoutResults" 
+      query="{}"   
+      rowsPerPage="40">
     </div>
 
   .. cv:: css
