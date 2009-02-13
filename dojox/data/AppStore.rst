@@ -127,7 +127,11 @@ Example 1: Programmatic instantiation and querying of ATOM Feeds.
 
       //This function performs some basic dojo initialization and will do the fetch calling for this example
       function initSimple () {
-        var appStore = new dojox.data.AppStore({url:});
+        var appStore = new dojox.data.AppStore({url:"/moin_static163/js/dojo/trunk/release/dojo/dojox/atom/tests/widget/samplefeedEdit.xml"});
+
+        dojo.connect(dijit.byId("simpleFetchButton"), "onClick", function() {
+            appStore.fetch({});
+        });
       }
       //Set the init function to run when dojo loading and page parsing has completed.
       dojo.addOnLoad(initSimple);
@@ -135,7 +139,7 @@ Example 1: Programmatic instantiation and querying of ATOM Feeds.
 
   .. cv :: html 
 
-    <div dojoType="dijit.form.Button" jsId="button">Click me to search the store and display feed titles</div>
+    <div dojoType="dijit.form.Button" id="simpleFetchButton">Click me to search the store and display feed titles</div>
     <br>
     <br>
     <span id="list">
