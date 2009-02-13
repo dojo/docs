@@ -37,8 +37,9 @@ There is also volume() which is used as a getter/setter.
 There are also a large amount of events that are triggered. These events can be viewed in the base class of dojox.av._Media. Ky events are: onLoad() for when the SWF is ready, onBuffer() which is checking if there is enough video downloaded to play, onDownloaded() for the amount of the movie downloaded, onMetaData() which contains the video properties, and onPlay(), onStart(), onEnd(), etc. See the source code or http://api.dojotoolkit.org/jsdoc/dojox/1.2/dojox.av.FLVideo for full details.
 
 
-Example
--------
+========
+Examples
+========
 
 For examples, please refer to the test file in the SDK: dojox/av/tests/testFLVideo.html
 
