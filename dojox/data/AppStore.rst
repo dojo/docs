@@ -147,11 +147,7 @@ An ATOM entry is comprised of attributes that define the details of the entry, s
 Query Syntax
 ============
 
-============
-Query Syntax
-============
-
-The fetch method query syntax for AppStore is the same as ITemFilereadStore. It allows a list of attributes to match against in an AND fashion. For example, a query object to locate all items with attribute foo that has value bar and attribute bit that has value bite, would look like
+The fetch method query syntax for AppStore is the same as `ItemFilereadStore <dojo/data/ItemFileReadStore>`_. It allows a list of attributes to match against in an AND fashion. For example, a query object to locate all items with attribute foo that has value bar and attribute bit that has value bite, would look like
 
 .. code-block :: javascript
 
