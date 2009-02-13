@@ -45,7 +45,7 @@ The dojox.form project provides additional form-related widgets beyond `dijit.fo
 
   A widget that uses `dojox.form.manager <dojox/form/manager>`_ to handle dynamic forms.
 
-* dojox.form.MultiComboBox
+* `dojox.form.MultiComboBox <dojox/form/MultiComboBox>`_
 
   description?
 
