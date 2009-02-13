@@ -90,6 +90,6 @@ Programmatic example
 See also
 ========
 
-http://docs.dojocampus.org/dojox/av
-
-http://docs.dojocampus.org/dojox/av/FLVideo
+* `dojox.av <dojox/av>`_
+* `dojox.av.FLVideo <dojox/av/FLVideo>`_
+* `dojox.av.widget <dojox/av/widget>`_
