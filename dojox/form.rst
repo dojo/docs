@@ -5,6 +5,11 @@ dojox.form project
 
 The dojox.form project provides additional form-related widgets beyond `dijit.form <dijit/form>`_ functionality.
 
+
+=================
+Available Widgets
+=================
+
 * `dojox.form.BusyButton <dojox/form/BusyButton>`_
 
   A new Button with progresss indicator built in, for indicating processing after you press the button
@@ -57,14 +62,14 @@ The dojox.form project provides additional form-related widgets beyond `dijit.fo
 
   A widget for enabling/disabling parts of a form based on a selection
 
-* dojox.form.RangeSliders
+* `dojox.form.RangeSliders <dojox/form/RangeSliders>`_
 
   description?
 
-* dojox.form.Rating
+* `dojox.form.Rating <dojox/form/Rating>`_
 
   description?
 
-* dojox.form.TimeSpinner
+* `dojox.form.TimeSpinner <dojox/form/TimeSpinner>`_
 
   description?
