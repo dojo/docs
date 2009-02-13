@@ -259,7 +259,7 @@ Example 2: Programmatic instantiation and querying of ATOM Feed Entry titles.
           function gotEntries(items, request) {
             if(items){
               //Got the items, lets attach in the results (title, date updated).
-              var list = dojo.byId("list");
+              var list = dojo.byId("list2");
               for(i = 0; i < items.length; i++){
                 var e = items[i];
                 var title = appStore.getValue(e, "title");
@@ -284,7 +284,7 @@ Example 2: Programmatic instantiation and querying of ATOM Feed Entry titles.
     <div dojoType="dijit.form.Button" id="simpleFetchButton2">Click me to search the entries for titles with 'Editable'</div>
     <br>
     <br>
-    <span id="list">
+    <span id="list2">
     </span>
 
 
