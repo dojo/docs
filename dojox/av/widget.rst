@@ -54,8 +54,6 @@ See the test file in the SDK for more information.
 See also
 ========
 
-http://docs.dojocampus.org/dojox/av
-
-http://docs.dojocampus.org/dojox/av/FLVideo
-
-http://docs.dojocampus.org/dojox/av/FLAudio
+* `dojox.av <dojox/av>`_
+* `dojox.av.FLAudio <dojox/av/FLAudio>`_
+* `dojox.av.FLVideo <dojox/av/FLVideo>`_
