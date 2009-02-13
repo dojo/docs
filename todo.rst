@@ -64,9 +64,9 @@ Priority 4: DojoX
 
   needed: examples or subpages?
 
-* `dojox.av <dojox/av>`_ ``ttrenka, mwilcox``
+* `dojox.av.FLAudio <dojox/av/FLAudio>`_
 
-  needed: full page
+  needed: errors in the example, no audio directory within tests available on the server
 
 * `dojox.charting <dojox/charting>`_ ``ttrenka``
 
