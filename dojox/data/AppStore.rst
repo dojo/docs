@@ -143,8 +143,56 @@ An ATOM entry is comprised of attributes that define the details of the entry, s
 | published     |The date the entry was published.                                                                                            |
 +---------------+-----------------------------------------------------------------------------------------------------------------------------+
 
+============
+Query Syntax
+============
+
+============
+Query Syntax
+============
+
+The fetch method query syntax for AppStore is the same as ITemFilereadStore. It allows a list of attributes to match against in an AND fashion. For example, a query object to locate all items with attribute foo that has value bar and attribute bit that has value bite, would look like
+
+.. code-block :: javascript
+
+  { title:"bar", subtitle:"bite"}
+
+Okay, easy. Now what if I want to do a fuzzy match of items?  Can this be done?   Yes. AppStore supports wildcard matching. Specifically, it supports multi-character * and single character ? as wildcards in attribute value queries.
+
+==============
+Query Examples
+==============
+
+Match items with multi-character wildcard
+-----------------------------------------
+
+*Matching attribute title that has a value starting with bar*
+
+.. code-block :: javascript
+
+  { title:"bar*"}
 
 
+Match items with single character wildcard
+------------------------------------------
+
+*Matching attribute title the value of which ends with ar and starts with any character.*
+
+
+.. code-block :: javascript
+
+  { title:"?ar"}
+
+
+Match items on multiple attributes
+----------------------------------
+
+*Matching multiple attributes with various wildcards.*
+
+
+.. code-block :: javascript
+
+  { title:"?ar", subtitle:"bob", category:"*it*"}
 
 
 ========
