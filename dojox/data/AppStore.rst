@@ -297,7 +297,7 @@ Example 3: Connecting AppStore to DataGrid
 
     <script>
       dojo.require("dojox.data.AppStore");
-      dojo.require("dojox.data.DataGrid");
+      dojo.require("dojox.grid.DataGrid");
 
       var layout = [
         [
@@ -311,7 +311,7 @@ Example 3: Connecting AppStore to DataGrid
   .. cv :: html 
 
     <div dojoType="dojox.data.AppStore" jsId="appStore" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/atom/tests/widget/samplefeedEdit.xml"></div>
-    <div dojoType="dojox.data.DataGrid" store="appStore" query="{}" structure="layout"></div>
+    <div dojoType="dojox.grid.DataGrid" store="appStore" query="{}" structure="layout"></div>
     <br>
     <br>
     <span id="list2">
