@@ -146,7 +146,7 @@ Example 1: Programmatic instantiation and querying of ATOM Feeds.
               }
             }
           } 
-          appStore.fetch({onComplete: getItems});
+          appStore.fetch({onComplete: gotEntries});
         });
       }
       //Set the init function to run when dojo loading and page parsing has completed.
