@@ -48,7 +48,7 @@ Available Widgets
 
 * `dojox.form.Manager (widget) <dojox/form/Manager>`_
 
-  A widget that uses `dojox.form.manager <dojox/form/manager>`_ to handle dynamic forms.
+  A widget that uses `dojox.form.manager <dojox/form/manager>`_ to handle dynamic forms
 
 * `dojox.form.MultiComboBox <dojox/form/MultiComboBox>`_
 
@@ -56,7 +56,7 @@ Available Widgets
 
 * `dojox.form.PasswordValidator <dojox/form/PasswordValidator>`_
 
-  A widget that simplifies the "Old/New/Verify" password construct used on many web pages.
+  A widget that simplifies the "Old/New/Verify" password construct used on many web pages
 
 * `dojox.form.RadioStack <dojox/form/RadioStack>`_
 
@@ -68,7 +68,7 @@ Available Widgets
 
 * `dojox.form.Rating <dojox/form/Rating>`_
 
-  description?
+  A widget that allows users to rate items
 
 * `dojox.form.TimeSpinner <dojox/form/TimeSpinner>`_
 
