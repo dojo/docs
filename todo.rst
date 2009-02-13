@@ -50,6 +50,10 @@ Top priority: Dojo Base
 Priority 2: Dojo Core
 =====================
 
+* `dojo.rpc <dojo/rpc>`_
+
+  needed: Everything (docs, examples, etc).
+
 
 =================
 Priority 3: Dijit
@@ -80,7 +84,7 @@ Priority 4: DojoX
 
   needed: full page
 
-* `dojox/data/Query Read Store/example <dojox/data/Query Read Store/example>`_
+* `dojox/data/QueryReadStore/example <dojox/data/QueryReadStore/example>`_
 
   This example is unfinished, should we delete it?
 
@@ -107,6 +111,10 @@ Priority 4: DojoX
 * `dojox.widget/FisheyeList <dojox/widget/FisheyeList>`_ 
 
   needed: full page
+
+* `dojox.atom <dojox/atom>`_
+
+  needed: Everything (docs, examples, etc).
 
 
 ==================================
