@@ -339,15 +339,13 @@ Connecting XmlStore to dojox.grid.DataGrid
 
     <div dojoType="dojox.data.XmlStore" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/tests/stores/books.xml" jsId="bookStore3" label="title"></div>
 
-    <div style="width: 400px; height: 300px;">
-      <div id="grid" 
-        dojoType="dojox.grid.DataGrid" 
-        store="bookStore3" 
-        structure="layoutBooks" 
-        query="{}"
-        queryOptions="{'deep':true}" 
-        rowsPerPage="40">
-      </div>
+    <div id="grid" style="width: 400px; height: 300px;"
+      dojoType="dojox.grid.DataGrid" 
+      store="bookStore3" 
+      structure="layoutBooks" 
+      query="{}"
+      queryOptions="{'deep':true}" 
+      rowsPerPage="40">
     </div>
 
   .. cv:: css
