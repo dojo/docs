@@ -344,7 +344,6 @@ Connecting XmlStore to dojox.grid.DataGrid
       store="bookStore3" 
       structure="layoutBooks" 
       query="{}"
-      queryOptions="{'deep':true}" 
       rowsPerPage="40">
     </div>
 
