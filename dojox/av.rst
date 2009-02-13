@@ -18,7 +18,6 @@ DojoX A/V aims to bring audio and video capabilities to the Open Web, first by w
 See also
 ========
 
-* `dojox.av <dojox/av>`_
 * `dojox.av.FLAudio <dojox/av/FLAudio>`_
 * `dojox.av.FLVideo <dojox/av/FLVideo>`_
 * `dojox.av.widget <dojox/av/widget>`_
