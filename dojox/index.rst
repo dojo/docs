@@ -14,6 +14,23 @@ These sections cover the available projects shipped with the Dojo Toolkit:
   * `dojox.analytics.Urchin <dojox/analytics/Urchin>`_
 
 * `dojox.av <dojox/av>`_
+
+  Brings audio and video capabilities to the Open Web
+
+  * `dojox.av.FLAudio <dojox/av/FLAudio>`_
+
+    Provides the ability of implementing MP3 sounds into your dojo applications
+
+
+  * `dojox.av.FLVideo <dojox/av/FLVideo>`_
+
+    Provides the ability to play Flash movie files (FLVs) within the dojo environment
+
+
+  * `dojox.av.widget <dojox/av/widget>`_
+
+    Provides base player control widgets for building a media player
+
 * `dojox.charting <dojox/charting>`_
 
   Amazing charting library
