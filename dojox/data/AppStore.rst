@@ -109,13 +109,36 @@ The input data format is the standard `ATOM <http://en.wikipedia.org/wiki/Atom_(
 Usage
 =====
 
-The AppStore conforms to the dojo.data APIs and all example usage scenarios for them apply here as well  Please refer to the `dojo.data API <dojo/data/api>`_ page for more details.  In general, since it conforms to the dojo.data API, all databound widgets in dijit can connect to, and make us of, the ATOM data.  Please refer to the examples section for more usage details.
+The AppStore conforms to the dojo.data APIs and all example usage scenarios for them apply here as well  Please refer to the `dojo.data API <dojo/data/api>`_ page for more details.  In general, since it conforms to the dojo.data API, all data-bound widgets in dijit can connect to, and make us of, the ATOM data.  Please refer to the examples section for more usage details.
 
 
 Attribute List
 --------------
 
-An ATOM entry is comprised of attributes that define the details of the entry, such as its title, date updated, summary information, content, and so on.  Below is the table list defining what attributes are valid to look up data for in an item from this store.
+An ATOM entry is comprised of attributes that define the details of the entry, such as its title, date updated, summary information, content, and so on.  Below is the table list defining what the common attributes are valid to use with the data store getValue(s) and setValue(s) functions of the data store APIs for data access.   The list is not complete, but the attributes not listed are not commonly used by feed consumers.
+
++---------------+-----------------------------------------------------------------------------------------------------------------------------+
+| title         |The title of the entry.                                                                                                      |
++---------------+-----------------------------------------------------------------------------------------------------------------------------+
+| subtitle      |The sub-title of the entry.                                                                                                  |
++---------------+-----------------------------------------------------------------------------------------------------------------------------+
+| summary       |The summary of the entry.                                                                                                    |
++---------------+-----------------------------------------------------------------------------------------------------------------------------+
+| content       |The entry content.                                                                                                           |
++---------------+-----------------------------------------------------------------------------------------------------------------------------+
+| author        |The person who published the entry (multi valued field).                                                                     |
++---------------+-----------------------------------------------------------------------------------------------------------------------------+
+| contributor   |Contributors to the entry content. (multi valued field).                                                                     |
++---------------+-----------------------------------------------------------------------------------------------------------------------------+
+| id            |The unique ID for this entry in the feed.                                                                                    |
++---------------+-----------------------------------------------------------------------------------------------------------------------------+
+| updated       |The last date the entry was updated.                                                                                         |
++---------------+-----------------------------------------------------------------------------------------------------------------------------+
+| published     |The date the entry was published.                                                                                            |
++---------------+-----------------------------------------------------------------------------------------------------------------------------+
+
+
+
 
 
 ========
