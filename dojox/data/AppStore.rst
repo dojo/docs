@@ -54,7 +54,6 @@ The input data format is the standard `ATOM <http://en.wikipedia.org/wiki/Atom_(
 
 .. code-block :: javascript
  :linenos:
-
   <?xml version='1.0' encoding='utf-8'?>
   <feed xmlns='http://www.w3.org/2005/Atom' xml:lang='en-US'>
 	<title>Example.com</title>
