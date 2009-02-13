@@ -12,6 +12,8 @@ Getting started
    :alt: Dojo Documentation
    :class: logowelcome;
 
+* `Getting started with some simple steps <quickstart/gettingstarted>`_
+
 ============
 Installation
 ============
