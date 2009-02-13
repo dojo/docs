@@ -15,59 +15,23 @@ The Official Dojo Documentation
 `Getting started <quickstart>`_
 ===============================
 
-Getting up-and-running with Dojo couldn't be easier. Just include this line in your web page:
+* `Getting started with some simple steps <quickstart/gettingstarted>`_
 
-.. code-block :: html
+* `Installation instructions & Tutorials <quickstart/index>`_
 
-    <script type="text/javascript"
-        src="http://ajax.googleapis.com/ajax/libs/dojo/1.2/dojo/dojo.xd.js">
-    </script>   
-
-
-Dojo's now included on your page, no install, no fuss. So what do you get for all that had work? 
-
-.. cv-compound::
-
-  .. cv:: javascript
-
-    <script>
-        dojo.addOnLoad(function(){
-            dojo.query("#showMe").onclick(function(e){
-                var node = e.target;
-
-                var a = dojo.anim(node, {
-                    backgroundColor: "#363636",
-                    color: "#f7f7f7"
-                }, 1000);
-
-                dojo.connect(a, "onEnd", function(){
-                    dojo.anim(node, { color: "#363636" }, null, null, function(){
-                        node.innerHTML = "wow, that was easy!";
-                        dojo.anim(node, { color: "white" });
-                    });
-                });
-            });
-        });
-    </script>
-
-  .. cv:: html
-
-    <div id="showMe" style="padding: 10px;">
-        click here to see how it works
-    </div>
-
-`Installation instructions & Tutorials <quickstart/index>`_
 
 
 ===========================
 `Reference Guide <manual>`_
 ===========================
 
-`The programmers manual for Dojo, Dijit, DojoX with more than 300 examples <manual/index>`_
+* `The programmers manual for Dojo, Dijit, DojoX with more than 300 examples <manual/index>`_
 
 
 ================
 `About <about>`_
 ================
 
-`All about Dojo Toolkits new official documentation pages <about/index>`_ and how you can contribute. It's a wiki, so dive in help us make it awesome!
+* `All about Dojo Toolkits new official documentation pages <about/index>`_ and how you can contribute. 
+
+  It's a wiki, so dive in help us make it awesome!
