@@ -306,12 +306,18 @@ Example 3: Connecting AppStore to DataGrid
           { field: "updated", name: "Last Modified", width: 'auto' }
         ]
       ];
+
+      function resizeGrid() {
+          grid.resize();
+      }
+      dojo.addOnLoad(resizeGrid)
+
     </script>
 
   .. cv :: html 
 
     <div dojoType="dojox.data.AppStore" jsId="appStore" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/atom/tests/widget/samplefeedEdit.xml"></div>
-    <div dojoType="dojox.grid.DataGrid" store="appStore" query="{}" structure="layout"></div>
+    <div jsId="grid" dojoType="dojox.grid.DataGrid" store="appStore" query="{}" structure="layout"></div>
     <br>
     <br>
     <span id="list2">
