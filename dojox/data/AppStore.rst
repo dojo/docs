@@ -115,6 +115,32 @@ The AppStore conforms to the dojo.data APIs and all example usage scenarios for 
 Examples
 ========
 
+Example 1: Programmatic instantiation and querying of ATOM Feeds.
+-----------------------------------------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojox.data.AppStore");
+
+      //This function performs some basic dojo initialization and will do the fetch calling for this example
+      function initSimple () {
+        var appStore = new dojox.data.AppStore({url:});
+      }
+      //Set the init function to run when dojo loading and page parsing has completed.
+      dojo.addOnLoad(initSimple);
+    </script>
+
+  .. cv :: html 
+
+    <div dojoType="dijit.form.Button" jsId="button">Click me to search the store and display feed titles</div>
+    <br>
+    <br>
+    <span id="list">
+    </span>
+
 Programmatic example
 --------------------
 
