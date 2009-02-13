@@ -241,6 +241,54 @@ Example 1: Programmatic instantiation and querying of ATOM Feeds.
     <span id="list">
     </span>
 
+Example 2: Programmatic instantiation and querying of ATOM Feed Entry titles.
+-----------------------------------------------------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojox.data.AppStore");
+
+      //This function performs some basic dojo initialization and will do the fetch calling for this example
+      function initSimple2 () {
+        var appStore = new dojox.data.AppStore({url:"/moin_static163/js/dojo/trunk/release/dojo/dojox/atom/tests/widget/samplefeedEdit.xml"});
+
+        dojo.connect(dijit.byId("simpleFetchButton2"), "onClick", function() {
+          function gotEntries(items, request) {
+            if(items){
+              //Got the items, lets attach in the results (title, date updated).
+              var list = dojo.byId("list");
+              for(i = 0; i < items.length; i++){
+                var e = items[i];
+                var title = appStore.getValue(e, "title");
+                var updated = appStore.getValue(e, "updated");
+                list.appendChild(dojo.doc.createTextNode(title));
+                list.appendChild(dojo.doc.createElement("br"));
+                list.appendChild(dojo.doc.createTextNode(updated));
+                list.appendChild(dojo.doc.createElement("br"));
+                list.appendChild(dojo.doc.createElement("br"));                
+              }
+            }
+          } 
+          appStore.fetch({query: {title: "*Editable*"}, onComplete: gotEntries});
+        });
+      }
+      //Set the init function to run when dojo loading and page parsing has completed.
+      dojo.addOnLoad(initSimple2);
+    </script>
+
+  .. cv :: html 
+
+    <div dojoType="dijit.form.Button" id="simpleFetchButton2">Click me to search the entries for titles with 'Editable'</div>
+    <br>
+    <br>
+    <span id="list">
+    </span>
+
+
+
 Programmatic example
 --------------------
 
