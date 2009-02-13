@@ -302,7 +302,7 @@ Example 3: Connecting AppStore to DataGrid
       var layout = [
         [
           { field: "title", name: "Title", width: 15 },
-          { field: "link", name: "Link", width: 5, formatter: function(value) { console.debug(value); return "<a href=\"" + value.href + "\" target=\"_blank\">Link</a>"}},
+          { field: "link", name: "Link", width: 5, formatter: function(value) { return "<a href=\"" + value.href + "\" target=\"_blank\">Link</a>"}},
           { field: "updated", name: "Last Modified", width: 'auto' }
         ]
       ];
