@@ -130,7 +130,23 @@ Example 1: Programmatic instantiation and querying of ATOM Feeds.
         var appStore = new dojox.data.AppStore({url:"/moin_static163/js/dojo/trunk/release/dojo/dojox/atom/tests/widget/samplefeedEdit.xml"});
 
         dojo.connect(dijit.byId("simpleFetchButton"), "onClick", function() {
-            appStore.fetch({});
+          function gotEntries(items, request) {
+            if(items){
+              //Got the items, lets attach in the results (title, date updated).
+              var list = dojo.byId("list");
+              for(i = 0; i < items.length; i++){
+                var e = items[i];
+                var title = appStore.getValue(e, "title");
+                var updated = appStore.getValue(e, "updated");
+                list.appendChild(dojo.doc.createTextNode(title));
+                list.appendChild(dojo.doc.createElement("br"));
+                list.appendChild(dojo.doc.createTextNode(updated));
+                list.appendChild(dojo.doc.createElement("br"));
+                list.appendChild(dojo.doc.createElement("br"));                
+              }
+            }
+          } 
+          appStore.fetch({onComplete: getItems});
         });
       }
       //Set the init function to run when dojo loading and page parsing has completed.
