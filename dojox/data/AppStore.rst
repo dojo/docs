@@ -317,7 +317,7 @@ Example 3: Connecting AppStore to DataGrid
   .. cv :: html 
 
     <div dojoType="dojox.data.AppStore" jsId="appStore" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/atom/tests/widget/samplefeedEdit.xml"></div>
-    <div jsId="grid" dojoType="dojox.grid.DataGrid" store="appStore" query="{}" structure="layout"></div>
+    <div jsId="grid" dojoType="dojox.grid.DataGrid" store="appStore" query="{}" structure="layout" style="width: 800px; height: 400px;"></div>
     <br>
     <br>
     <span id="list2">
