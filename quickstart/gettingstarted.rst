@@ -61,4 +61,5 @@ Example
 See also
 ========
 
+* `Using Dojo from a CDN <quickstart/cross-domain>`_
 * `Installation instructions & Tutorials <quickstart/index>`_
