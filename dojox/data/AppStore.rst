@@ -339,3 +339,4 @@ See also
 ========
 
 * `dojox.atom <dojox.atom>`_
+* `dojox.data.AtomReadStore <dojox.data.AtomReadStore>`_
