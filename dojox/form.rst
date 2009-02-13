@@ -13,7 +13,7 @@ The dojox.form project provides additional form-related widgets beyond `dijit.fo
 
   A multi-select widget (similar to html select with multiple=true) that uses check boxes
 
-* dojox.form.DateTextBox
+* `dojox.form.DateTextBox <dojox/form/DateTextBox>`_
 
   description?
 
