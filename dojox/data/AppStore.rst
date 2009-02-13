@@ -113,7 +113,7 @@ The AppStore conforms to the dojo.data APIs and all example usage scenarios for 
 
 
 Attribute List
-==============
+--------------
 
 An ATOM entry is comprised of attributes that define the details of the entry, such as its title, date updated, summary information, content, and so on.  Below is the table list defining what attributes are valid to look up data for in an item from this store.
 
