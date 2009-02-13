@@ -62,7 +62,7 @@ Available Widgets
 
   A widget for enabling/disabling parts of a form based on a selection
 
-* `dojox.form.RangeSliders <dojox/form/RangeSliders>`_
+* `dojox.form.RangeSlider <dojox/form/RangeSlider>`_
 
   description?
 
