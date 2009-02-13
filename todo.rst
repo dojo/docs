@@ -84,6 +84,10 @@ Priority 4: DojoX
 
   This example is unfinished, should we delete it?
 
+* `dojox.form.DateTextBox <dojox/form/DateTextBox>`_
+
+  needed: full page
+
 * `dojox.grid <dojox/grid>`_ ``bforbes, toonetown``
 
   needed: Introduction, Grid 1.2 Changes, Usage, Parameter "selection mode", Example "sorting data at the server", Example "Large datasets", Tips
