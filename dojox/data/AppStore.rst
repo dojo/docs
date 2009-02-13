@@ -111,9 +111,9 @@ Usage
 
 The AppStore conforms to the dojo.data APIs and all example usage scenarios for them apply here as well  Please refer to the `dojo.data API <dojo/data/api>`_ page for more details.  In general, since it conforms to the dojo.data API, all databound widgets in dijit can connect to, and make us of, the ATOM data.  Please refer to the examples section for more usage details.
 
---------------
+
 Attribute List
---------------
+==============
 
 An ATOM entry is comprised of attributes that define the details of the entry, such as its title, date updated, summary information, content, and so on.  Below is the table list defining what attributes are valid to look up data for in an item from this store.
 
