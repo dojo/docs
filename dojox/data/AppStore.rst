@@ -338,5 +338,5 @@ Example 3: Connecting AppStore to DataGrid
 See also
 ========
 
-* `dojox.atom <dojox.atom>`_
-* `dojox.data.AtomReadStore <dojox.data.AtomReadStore>`_
+* `dojox.atom <dojox/atom>`_
+* `dojox.data.AtomReadStore <dojox/data/AtomReadStore>`_
