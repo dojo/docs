@@ -92,7 +92,7 @@ Priority 4: DojoX
 
   needed: full page
 
-* `dojox.form.RangeSliders <dojox/form/RangeSliders>`_
+* `dojox.form.RangeSlider <dojox/form/RangeSlider>`_
 
   needed: full page
 
