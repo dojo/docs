@@ -11,7 +11,7 @@ dojox.rpc.Service
 .. contents::
     :depth: 2
 
-Service is the foundation of most `RPC <dojox/rpc>`_ transportation. To use a Service, you need an SMD. Defining the SMD is a separate discussion, so for now we'll reuse some pre-defined SMD's available in the RPC project's `SMDLibrary/ <dojox/rpc/SMDLibrary>`_ folder.
+dojox.rpc.Service is the foundation of most `RPC <dojox/rpc>`_ transportation. To use a Service, you need an SMD. Defining the SMD is a separate discussion, so for now we'll reuse some pre-defined SMD's available in the RPC project's `SMDLibrary/ <dojox/rpc/SMDLibrary>`_ folder.
 
 First, you need the code:
 
@@ -19,7 +19,7 @@ First, you need the code:
 
   dojo.require("dojox.rpc.Service");
 
-There are several transports/envelopes that are defined in separate modules to minimize the size of dojox.rpc.Service. These must also be loaded if their used by the SMD:
+There are several transports/envelopes that are defined in separate modules to minimize the size of dojox.rpc.Service. These must also be loaded if they are used by the SMD:
 
 * JSONP Transport requires `dojo.io.script <dojo/io/script>`_
 
