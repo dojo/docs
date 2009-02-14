@@ -17,7 +17,7 @@ A store implementing an Atom store with complete ATOM Publishing Protocol suppor
 Introduction
 ============
 
-The dojox.data.AppStore is data store implementation of the ATOM Publishing Protocol (APP).  It makes use of the dojox.atom subproject for handling ATOM feeds and entries.  
+The dojox.data.AppStore is an data store implementation of the ATOM Publishing Protocol (APP).  It makes use of the dojox.atom subproject for handling ATOM feeds and entries.  
 
 ===========
 Limitations
