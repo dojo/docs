@@ -137,7 +137,10 @@ releaseName
   The name of the release. A directory inside 'releaseDir' will be created with this name Default: "dojo"
 
 releaseDir
-  The top level release directory where builds end up. The 'releaseName' directories will be placed inside this directory Default: "../../release/" loader. The type of dojo loader to use. "default" or "xdomain" are acceptable values." defaultValue: "default"
+  The top level release directory where builds end up. The 'releaseName' directories will be placed inside this directory Default: "../../release/" 
+
+loader
+  The type of dojo loader to use. "default" or "xdomain" are acceptable values." defaultValue: "default"
 
 internStrings
   Turn on or off widget template/dojo.uri.cache() file interning Default: true
