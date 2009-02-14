@@ -11,7 +11,7 @@ dojo.rpc
 .. contents::
    :depth: 2
 
-Communicate via Remote Procedure Calls (RPC) with Backend Servers.
+dojo.rpc offers methods to communicate via Remote Procedure Calls (RPC) with Backend Servers.
 
 
 ============
