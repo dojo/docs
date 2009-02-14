@@ -9,9 +9,9 @@ Docu Wiki ToDo
 The following pages need more love:
 
 
-=======================
-Top priority: Dojo Base
-=======================
+=====================
+Top priority: dojo.js
+=====================
 
 * `dojo.registerModulePath <dojo/registerModulePath>`_
 
