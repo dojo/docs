@@ -20,8 +20,8 @@ Introduction
 
 TODO: introduce the component/class/method
 
-Available components
---------------------
+Available Services
+------------------
 
 * `dojo.rpc.JsonpService <dojo/rpc/JsonpService>`_
 
