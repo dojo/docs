@@ -71,6 +71,6 @@ See also
 ========
 
 * `dojox.rpc <dojox/rpc>`_
-* `dojox.rpc.Service <dojox/rpc/Service`_
-* `dojox.rpc.Rest <dojox/rpc/Rest`_
-* `dojox.rpc.OfflineRest <dojox/rpc/OfflineRest`_
+* `dojox.rpc.Service <dojox/rpc/Service>`_
+* `dojox.rpc.Rest <dojox/rpc/Rest>`_
+* `dojox.rpc.OfflineRest <dojox/rpc/OfflineRest>`_
