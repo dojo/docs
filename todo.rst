@@ -54,6 +54,18 @@ Priority 2: Dojo Core
 
   needed: Everything (docs, examples, etc).
 
+* `dojo.rpc.JsonpService <dojo/rpc/JsonpService>`_
+
+  needed: full page
+
+* `dojo.rpc.JsonService <dojo/rpc/JsonService>`_
+
+  needed: full page
+
+* `dojo.rpc.RpcService <dojo/rpc/RpcService>`_
+
+  needed: full page
+
 
 =================
 Priority 3: Dijit
@@ -67,6 +79,10 @@ Priority 4: DojoX
 * `dojox.analytics <dojox/analytics>`_ ``dmachi, phiggins``
 
   needed: examples or subpages?
+
+* `dojox.atom <dojox/atom>`_
+
+  needed: Everything (docs, examples, etc).
 
 * `dojox.av.FLAudio <dojox/av/FLAudio>`_
 
@@ -111,10 +127,6 @@ Priority 4: DojoX
 * `dojox.widget/FisheyeList <dojox/widget/FisheyeList>`_ 
 
   needed: full page
-
-* `dojox.atom <dojox/atom>`_
-
-  needed: Everything (docs, examples, etc).
 
 
 ==================================
