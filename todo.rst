@@ -108,6 +108,10 @@ Priority 4: DojoX
 
   needed: full page
 
+* `dojox.form.DropDownStack <dojox/form/DropDownStack>`_
+
+  needed: full page
+
 * `dojox.form.MultiComboBox <dojox/form/MultiComboBox>`_
 
   needed: full page
