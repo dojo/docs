@@ -29,7 +29,7 @@ The AppStore makes use of dojo.xhr to get and modify feeds and entries.  Because
 Supported APIs
 ==============
 
-The following dojo.data APIs are implemented by AppStore
+The following dojo.data APIs are implemented by AppStore:
 
 * `dojo.data.api.Read <dojo/data/api/Read>`_
 * `dojo.data.api.Write <dojo/data/api/Write>`_
