@@ -11,7 +11,7 @@ dojox.data.OpenSearchStore
 .. contents::
    :depth: 2
 
-A store implementing the dojo.data.Read API for talking to OpenSearch based search providing services.  
+A store implementing the dojo.data.Read API for talking to OpenSearch based search providing services.  For specific information on the concepts of dojo.data and its APIs please refer to the `API documentation <dojo/data/api>`.
 
 ============
 Introduction
