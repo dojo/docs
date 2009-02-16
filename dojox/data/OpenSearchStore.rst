@@ -99,8 +99,10 @@ Example 1: Programmatic instantiation and querying through OpenSearch
         dojo.connect(dijit.byId("simpleFetchButton"), "onClick", function() {
           function gotResults(items, request) {
             if(items){
-              //Got the items, lets attach in the results (title, date updated).
+              //Got the items, lets attach in the search results.
               var list = dojo.byId("list");
+              list.innerHTML = "";
+              dojo.style(list, "height", "400px;");
               for(i = 0; i < items.length; i++){
                 var e = items[i];
 
