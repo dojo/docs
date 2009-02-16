@@ -38,7 +38,7 @@ Limitations
 Supported APIs
 ==============
 
-The following dojo.data APIs are implemented by AppStore:
+The following dojo.data APIs are implemented by OpenSearchStore:
 
 * `dojo.data.api.Read <dojo/data/api/Read>`_
 
