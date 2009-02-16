@@ -109,7 +109,7 @@ The input data format is the standard `ATOM <http://en.wikipedia.org/wiki/Atom_(
 Usage
 =====
 
-The AppStore conforms to the dojo.data APIs and all example usage scenarios for them apply here as well  Please refer to the `dojo.data API <dojo/data/api>`_ page for more details.  In general, since it conforms to the dojo.data API, all data-bound widgets in dijit can connect to, and make us of, the ATOM data.  Please refer to the examples section for more usage details.
+The AppStore conforms to the dojo.data APIs and all example usage scenarios for them apply here as well.  Please refer to the `dojo.data API <dojo/data/api>`_ page for more details.  In general, since it conforms to the dojo.data API, all data-bound widgets in dijit can connect to, and make us of, the ATOM data.  Please refer to the examples section for more usage details.
 
 
 Attribute List
