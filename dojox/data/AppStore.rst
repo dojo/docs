@@ -115,7 +115,7 @@ The AppStore conforms to the dojo.data APIs and all example usage scenarios for 
 Attribute List
 --------------
 
-An ATOM entry is comprised of attributes that define the details of the entry, such as its title, date updated, summary information, content, and so on.  Below is the table list defining what the common attributes are valid to use with the data store getValue(s) and setValue(s) functions of the data store APIs for data access.   The list is not complete, but the attributes not listed are not commonly used by feed consumers.
+An ATOM entry is comprised of attributes that define the details of the entry, such as its title, date updated, summary information, content, and so on.  Below is the table list defining what the common attributes are valid to use with the data store getValue(s) and setValue(s) functions of the data store APIs for data access.   The list is not complete, but the attributes not listed are not commonly used by feed consumers.  Certain properties return complex objects instead of strings, these are identified in the type field.  For more specific information on the structure of that complex property, see the table below the attribute list.
 
 +---------------+------------------------------------------------------------------------------------------------------+----------------------+
 | **Attribute** | **Description**                                                                                      | **Type**             |
@@ -144,6 +144,22 @@ An ATOM entry is comprised of attributes that define the details of the entry, s
 +---------------+------------------------------------------------------------------------------------------------------+----------------------+
 | published     | The date the entry was published.                                                                    | string               |
 +---------------+------------------------------------------------------------------------------------------------------+----------------------+
+
+**Complex Properties**
+
+Complex properties are those that require more than a simple string to represent their values.  The current items in the ATOM feed entry that are represented this way are 'Author', 'Contributor' and 'Link'.  All of these have either sub-tags or attributes that are important information.  These attributes are modeled as their own classes in dojox.atom.io.model.js.  The information about each is below:
+
++---------------+------------------------------------------------------------------------------------+----------------------------------------+
+| **Attribute** | **Implementing Class**                                                             | **Properties**                         |
++---------------+------------------------------------------------------------------------------------+----------------------------------------+
+| author        | dojox.atom.io.model.Person                                                         | name (The name of the person)          |
+|               |                                                                                    | email (The email address of the person |
+|               |                                                                                    | uri (The person's web address, if any) |
++---------------+------------------------------------------------------------------------------------+----------------------------------------+
+| contributor   | dojox.atom.io.model.Person                                                         | name (The name of the person)          |
+|               |                                                                                    | email (The email address of the person |
+|               |                                                                                    | uri (The person's web address, if any) |
++---------------+------------------------------------------------------------------------------------+----------------------------------------+
 
 ============
 Query Syntax
