@@ -120,29 +120,29 @@ An ATOM entry is comprised of attributes that define the details of the entry, s
 +---------------+-----------------------------------------------------------------------------------------------------------------------------+
 | **attribute** | **description**                                                                                      | **Type**             |
 +---------------+-----------------------------------------------------------------------------------------------------------------------------+
-| title         |The title of the entry.                                                                               | string               |
+| title         | The title of the entry.                                                                              | string               |
 +---------------+-----------------------------------------------------------------------------------------------------------------------------+
-| subtitle      |The sub-title of the entry.                                                                           | string               |
+| subtitle      | The sub-title of the entry.                                                                          | string               |
 +---------------+-----------------------------------------------------------------------------------------------------------------------------+
-| summary       |The summary of the entry.                                                                             | string               |
+| summary       | The summary of the entry.                                                                            | string               |
 +---------------+-----------------------------------------------------------------------------------------------------------------------------+
-| content       |The entry content.                                                                                    | string               |
+| content       | The entry content.                                                                                   | string               |
 +---------------+-----------------------------------------------------------------------------------------------------------------------------+
-| category      |The category this entry is cataloged under.  'Entertainment, News, Sports', etc.                      | string               |
+| category      | The category this entry is cataloged under.  'Entertainment, News, Sports', etc.                     | string               |
 +---------------+-----------------------------------------------------------------------------------------------------------------------------+
-| author        |The person who published the entry (multi valued field).                                              | object/object array  |
+| author        | The person who published the entry (multi valued field).                                             | object/object array  |
 +---------------+-----------------------------------------------------------------------------------------------------------------------------+
-| contributor   |Contributors to the entry content. (multi valued field).                                              | object/object array  |
+| contributor   | Contributors to the entry content. (multi valued field).                                             | object/object array  |
 +---------------+-----------------------------------------------------------------------------------------------------------------------------+
-| link          |The direct link to the ATOM entry.                                                                    | object               |
+| link          | The direct link to the ATOM entry.                                                                   | object               |
 +---------------+-----------------------------------------------------------------------------------------------------------------------------+
-| rights        |The copyright statement of the entry.                                                                 | string               |
+| rights        | The copyright statement of the entry.                                                                | string               |
 +---------------+-----------------------------------------------------------------------------------------------------------------------------+
-| id            |The unique ID for this entry in the feed.                                                             | string               |
+| id            | The unique ID for this entry in the feed.                                                            | string               |
 +---------------+-----------------------------------------------------------------------------------------------------------------------------+
-| updated       |The last date the entry was updated.                                                                  | string               |
+| updated       | The last date the entry was updated.                                                                 | string               |
 +---------------+-----------------------------------------------------------------------------------------------------------------------------+
-| published     |The date the entry was published.                                                                     | string               |
+| published     | The date the entry was published.                                                                    | string               |
 +---------------+-----------------------------------------------------------------------------------------------------------------------------+
 
 ============
