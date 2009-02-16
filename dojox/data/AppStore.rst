@@ -42,8 +42,11 @@ Constructor Parameters
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
 | **Parameter**  | **Required** | **Description**                                                                                | **Since** |
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
-| url            | No           |This parameter specifies what URL from which to load the ATOM feed document, and is also the    |1.3        |
+| url            | yes          |This parameter specifies what URL from which to load the ATOM feed document, and is also the    |1.3        |
 |                |              |base url used for publishing new feed entries if the feed supports it.                          |           |
++----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
+| urlPreventCache| No           |This parameter tells the AppStore whether or not to append a query param to the URL to prevent  |1.3        |
+|                |              |the browser from caching the feed url.                                                          |           |
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
 
 =================
