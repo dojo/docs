@@ -111,7 +111,7 @@ Example 1: Programmatic instantiation and querying through OpenSearch
                 list.appendChild(cDiv);                
 
                 cDiv.appendChild(tDiv);
-                cDiv.appendChild(Div);
+                cDiv.appendChild(div);
 
                 //Put a border around the content container.
                 dojo.style(cDiv, "borderStyle", "solid");
