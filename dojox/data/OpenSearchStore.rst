@@ -111,7 +111,7 @@ Example 1: Programmatic instantiation and querying through OpenSearch
               }
             }
           } 
-          appStore.fetch({onComplete: gotResults});
+          openSearchStore.fetch({query: {searchTerms: "dojo"}, onComplete: gotResults});
         });
       }
       //Set the init function to run when dojo loading and page parsing has completed.
@@ -120,7 +120,7 @@ Example 1: Programmatic instantiation and querying through OpenSearch
 
   .. cv :: html 
 
-    <div dojoType="dijit.form.Button" id="simpleFetchButton">Click me to search the Interwingly Blog Service</div>
+    <div dojoType="dijit.form.Button" id="simpleFetchButton">Click me to search for 'dojo on the Interwingly Blog Service</div>
     <br>
     <br>
     <span id="list">
