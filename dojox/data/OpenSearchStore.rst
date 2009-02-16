@@ -148,5 +148,4 @@ Example 1: Programmatic instantiation and querying through OpenSearch
     <div dojoType="dijit.form.Button" id="simpleFetchButton">Click me to search for 'dojo on the Interwingly Blog Service</div>
     <br>
     <br>
-    <span id="list">
-    </span>
+    <div id="list"></div>
