@@ -172,7 +172,7 @@ Complex properties are those that require more than a simple string to represent
 |               |                                                                                    |                                        |
 |               |                                                                                    | type: The type of the link             |
 |               |                                                                                    |                                        |
-|               |                                                                                    | rel:How the link relates to the entry  |
+|               |                                                                                    | rel: How the link relates to the entry |
 +---------------+------------------------------------------------------------------------------------+----------------------------------------+
 
 
