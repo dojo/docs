@@ -118,29 +118,31 @@ Attribute List
 An ATOM entry is comprised of attributes that define the details of the entry, such as its title, date updated, summary information, content, and so on.  Below is the table list defining what the common attributes are valid to use with the data store getValue(s) and setValue(s) functions of the data store APIs for data access.   The list is not complete, but the attributes not listed are not commonly used by feed consumers.
 
 +---------------+-----------------------------------------------------------------------------------------------------------------------------+
-| title         |The title of the entry.                                                                                                      |
+| **attribute** |**description**                                                                                       |**Type**              |
 +---------------+-----------------------------------------------------------------------------------------------------------------------------+
-| subtitle      |The sub-title of the entry.                                                                                                  |
+| title         |The title of the entry.                                                                               |string                |
 +---------------+-----------------------------------------------------------------------------------------------------------------------------+
-| summary       |The summary of the entry.                                                                                                    |
+| subtitle      |The sub-title of the entry.                                                                           |string                |
 +---------------+-----------------------------------------------------------------------------------------------------------------------------+
-| content       |The entry content.                                                                                                           |
+| summary       |The summary of the entry.                                                                             |string                |
 +---------------+-----------------------------------------------------------------------------------------------------------------------------+
-| category      |The category this entry is cataloged under.  'Entertainment, News, Sports', etc.                                             |
+| content       |The entry content.                                                                                    |string                |
 +---------------+-----------------------------------------------------------------------------------------------------------------------------+
-| author        |The person who published the entry (multi valued field).                                                                     |
+| category      |The category this entry is cataloged under.  'Entertainment, News, Sports', etc.                      |string                |
 +---------------+-----------------------------------------------------------------------------------------------------------------------------+
-| contributor   |Contributors to the entry content. (multi valued field).                                                                     |
+| author        |The person who published the entry (multi valued field).                                              |object/object array   |
 +---------------+-----------------------------------------------------------------------------------------------------------------------------+
-| link          |The direct link to the ATOM entry.                                                                                           |
+| contributor   |Contributors to the entry content. (multi valued field).                                              |object/object array   |
 +---------------+-----------------------------------------------------------------------------------------------------------------------------+
-| rights        |The copyright statement of the entry.                                                                                        |
+| link          |The direct link to the ATOM entry.                                                                    |object                |
 +---------------+-----------------------------------------------------------------------------------------------------------------------------+
-| id            |The unique ID for this entry in the feed.                                                                                    |
+| rights        |The copyright statement of the entry.                                                                 |string                |
 +---------------+-----------------------------------------------------------------------------------------------------------------------------+
-| updated       |The last date the entry was updated.                                                                                         |
+| id            |The unique ID for this entry in the feed.                                                             |string                |
 +---------------+-----------------------------------------------------------------------------------------------------------------------------+
-| published     |The date the entry was published.                                                                                            |
+| updated       |The last date the entry was updated.                                                                  |string                |
++---------------+-----------------------------------------------------------------------------------------------------------------------------+
+| published     |The date the entry was published.                                                                     |string                |
 +---------------+-----------------------------------------------------------------------------------------------------------------------------+
 
 ============
