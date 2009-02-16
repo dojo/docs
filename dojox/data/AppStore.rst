@@ -368,7 +368,6 @@ Example 4: Write example: Changing Title and showing in DataGrid
                  }
                  //Requery to reload grid.  This is needed as this store does not currently implement the notification API.
                  grid2.setQuery({});
-                 appStore2.save();
                }
              }
              appStore2.fetch({onComplete: gotAllItems});
