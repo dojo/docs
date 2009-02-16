@@ -320,15 +320,14 @@ The following is a semi-complex example of the write API in action. In this exam
     <div dojoType="dijit.form.Button" jsId="button2">Update all geography items populations!</div>
     <br>
     <br>
-    <div style="width: 400px; height: 300px;">
-      <div id="grid" 
-        dojoType="dojox.grid.DataGrid" 
-        store="geoStore" 
-        structure="layoutGeo" 
-        query="{}"
-        queryOptions="{'deep':true}" 
-        rowsPerPage="40">
-      </div>
+    <div id="grid"  
+      style="width: 400px; height: 300px;"
+      dojoType="dojox.grid.DataGrid" 
+      store="geoStore" 
+      structure="layoutGeo" 
+      query="{}"
+      queryOptions="{'deep':true}" 
+      rowsPerPage="40">
     </div>
 
   .. cv:: css
