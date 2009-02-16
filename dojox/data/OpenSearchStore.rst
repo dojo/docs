@@ -91,6 +91,8 @@ Example 1: Programmatic instantiation and querying through OpenSearch
 
     <script>
       dojo.require("dojox.data.OpenSearchStore");
+      dojo.require("dijit.form.Button");
+      dojo.require("dijit.form.TextBox");
 
       //This function performs some basic dojo initialization and will do the fetch calling for this example
       function initSimple () {
@@ -135,7 +137,7 @@ Example 1: Programmatic instantiation and querying through OpenSearch
           function err(e) {
             console.debug(e);
           } 
-          openSearchStore.fetch({query: {searchTerms: "dojo"}, onComplete: gotResults, onError: err});
+          openSearchStore.fetch({query: {searchTerms: dijit.byId("searchBox").attr("value")}, onComplete: gotResults, onError: err});
         });
       }
       //Set the init function to run when dojo loading and page parsing has completed.
@@ -144,7 +146,8 @@ Example 1: Programmatic instantiation and querying through OpenSearch
 
   .. cv :: html 
 
-    <div dojoType="dijit.form.Button" id="simpleFetchButton">Click me to search for 'dojo on the Interwingly Blog Service</div>
+    <input id="searchBox" type="text" dojoType="dijit.form.TextBox" value="dojo"></input>
+    <div dojoType="dijit.form.Button" id="simpleFetchButton">Click me to search the Interwingly Blog Service</div>
     <br>
     <br>
     <div id="list"></div>
