@@ -115,12 +115,12 @@ Example 1: Programmatic instantiation and querying through OpenSearch
                 dojo.style(cDiv, "borderStyle", "solid");
                 dojo.style(cDiv, "borderWidth", "1px");
                 dojo.style(cDiv, "borderColor", "darkblue");
-                dojo.style(cDiv, "width" "100%")
+                dojo.style(cDiv, "width", "100%");
                 
                 //Style a 'title bar'.
                 dojo.style(tDiv, "backgroundColor", "darkblue");
                 dojo.style(tDiv, "color", "white");
-                dojo.style(tDiv, "width" "100%")
+                dojo.style(tDiv, "width", "100%");
                 tDiv.innerHTML = "Search result: [" + i + "]";
 
                 div.innerHTML = openSearchStore.getValue(e, "content");
