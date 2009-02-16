@@ -152,21 +152,22 @@ Complex properties are those that require more than a simple string to represent
 +---------------+------------------------------------------------------------------------------------+----------------------------------------+
 | **Attribute** | **Implementing Class**                                                             | **Properties**                         |
 +---------------+------------------------------------------------------------------------------------+----------------------------------------+
-| author        | dojox.atom.io.model.Person                                                         | name (The name of the person)          |
+| author        | dojox.atom.io.model.Person                                                         | name: The name of the person           |
 |               |                                                                                    |                                        |
-|               |                                                                                    | email (The email address of the person |
+|               |                                                                                    | email: The email address of the person |
 |               |                                                                                    |                                        |
-|               |                                                                                    | uri (The person's web address, if any) |
+|               |                                                                                    | uri  The person's web address, if any  |
 +---------------+------------------------------------------------------------------------------------+----------------------------------------+
-| contributor   | dojox.atom.io.model.Person                                                         | name (The name of the person)          |
+| contributor   | dojox.atom.io.model.Person                                                         | name: The name of the person           |
 |               |                                                                                    |                                        |
-|               |                                                                                    | email (The email address of the person |
+|               |                                                                                    | email: The email address of the person |
 |               |                                                                                    |                                        |
-|               |                                                                                    | uri (The person's web address, if any) |
+|               |                                                                                    | uri  The person's web address, if any  |
 +---------------+------------------------------------------------------------------------------------+----------------------------------------+
 | link          | dojox.atom.io.model.Link                                                           | href: The web address the link goes to |
 |               |                                                                                    |                                        |
-|               |                                                                                    | hrefLang: The language the href goes to|                                                                                    |               |                                                                                    |                                        |
+|               |                                                                                    | hrefLang: The language the href goes to|                                                                                   
+|               |                                                                                    |                                        |
 |               |                                                                                    | title: The title of the link           |
 |               |                                                                                    |                                        |
 |               |                                                                                    | type: The type of the link             |
