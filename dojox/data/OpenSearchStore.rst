@@ -105,27 +105,27 @@ Example 1: Programmatic instantiation and querying through OpenSearch
                 var e = items[i];
 
                 //Build some divs to contain and style the contents a bit...
-                var div = dojo.doc.createElement("div");
+                var content = dojo.doc.createElement("div");
                 var cDiv = dojo.doc.createElement("div");
                 var tDiv = dojo.doc.createElement("div");
                 list.appendChild(cDiv);                
 
                 cDiv.appendChild(tDiv);
-                cDiv.appendChild(div);
+                cDiv.appendChild(content);
 
                 //Put a border around the content container.
                 dojo.style(cDiv, "borderStyle", "solid");
                 dojo.style(cDiv, "borderWidth", "1px");
-                dojo.style(cDiv, "borderColor", "darkblue");
+                dojo.style(cDiv, "borderColor", "darkgreen");
                 dojo.style(cDiv, "width", "100%");
                 
                 //Style a 'title bar'.
-                dojo.style(tDiv, "backgroundColor", "darkblue");
+                dojo.style(tDiv, "backgroundColor", "darkgreen");
                 dojo.style(tDiv, "color", "white");
                 dojo.style(tDiv, "width", "100%");
                 tDiv.innerHTML = "Search result: [" + i + "]";
 
-                div.innerHTML = openSearchStore.getValue(e, "content");
+                content.innerHTML = openSearchStore.getValue(e, "content");
                 list.appendChild(dojo.doc.createElement("br"));
                 list.appendChild(dojo.doc.createElement("br"));                
               }
