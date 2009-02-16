@@ -305,7 +305,7 @@ Example 3: Connecting AppStore to DataGrid
         [
           { field: "title", name: "Title", width: 15 },
           { field: "link", name: "Link", width: 5, formatter: function(value) { return "<a href=\"" + value.href + "\" target=\"_blank\">Link</a>"}},
-          { field: "author", name: "Author", width: '10' },
+          { field: "author", name: "Author", width: '10', formatter: function(value){console.debug(value); return value;} },
           { field: "updated", name: "Last Modified", width: 'auto' }
         ]
       ];
