@@ -76,3 +76,52 @@ The fetch method query syntax for OpenSearchStore is limited to what the OpenSea
   var fetchArgs = {query: { searchTerms: "Some random terms"}, onComplete: function(items) { /* do something */});
   openSearchStore.fetch(fetchArgs);
   
+
+========
+Examples
+========
+
+Example 1: Programmatic instantiation and querying through OpenSearch
+---------------------------------------------------------------------
+*Note that this makes use of a pseudo-proxy to handle dealing with xhr limitations.  This proxy is not intended for commercial use, it is only used here to facilitate showing working examples.*
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojox.data.OpenSearchStore");
+
+      //This function performs some basic dojo initialization and will do the fetch calling for this example
+      function initSimple () {
+        var openSearchStore = new dojox.data.OpenSearchStore({url:"/moin_static163/js/dojo/trunk/release/dojo/dojox/data/demos/opensSearchProxy.php?osd=true&url=http://intertwingly.net/search/"});
+
+        dojo.connect(dijit.byId("simpleFetchButton"), "onClick", function() {
+          function gotResults(items, request) {
+            if(items){
+              //Got the items, lets attach in the results (title, date updated).
+              var list = dojo.byId("list");
+              for(i = 0; i < items.length; i++){
+                var e = items[i];
+                var div = dojo.doc.createElement("br");
+                div.innerHTML = openSearchStore.getValue(e, "content");
+                list.appendChild(div);
+                list.appendChild(dojo.doc.createElement("br"));
+                list.appendChild(dojo.doc.createElement("br"));                
+              }
+            }
+          } 
+          appStore.fetch({onComplete: gotResults});
+        });
+      }
+      //Set the init function to run when dojo loading and page parsing has completed.
+      dojo.addOnLoad(initSimple);
+    </script>
+
+  .. cv :: html 
+
+    <div dojoType="dijit.form.Button" id="simpleFetchButton">Click me to search the Interwingly Blog Service</div>
+    <br>
+    <br>
+    <span id="list">
+    </span>
