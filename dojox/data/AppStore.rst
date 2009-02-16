@@ -336,6 +336,55 @@ Example 3: Connecting AppStore to DataGrid
       }
     </style>
 
+Example 4: Write example: Changing Title and showing in DataGrid
+----------------------------------------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dijit.form.Button");
+      dojo.require("dojox.data.AppStore");
+      dojo.require("dojox.grid.DataGrid");
+
+      var layout2 = [
+        [
+          { field: "title", name: "Title", width: 15 },
+          { field: "link", name: "Link", width: 5, formatter: function(value) { return "<a href=\"" + value.href + "\" target=\"_blank\">Link</a>"}},
+          { field: "updated", name: "Last Modified", width: 'auto' }
+        ]
+      ];
+
+      function initGrid() {
+          grid.resize();
+          dojo.connect(dijit.byId("changeTitleButton"), "onClick", function(){
+          });
+      }
+      dojo.addOnLoad(initGrid)
+
+    </script>
+
+  .. cv :: html 
+
+    <div dojoType="dojox.data.AppStore" jsId="appStore2" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/atom/tests/widget/samplefeedEdit.xml"></div>
+    <div jsId="grid2" dojoType="dojox.grid.DataGrid" store="appStore2" query="{}" structure="layout2" style="width: 600px; height: 200px;"></div>
+    <br>
+    <br>
+    <button id="changeTitleButton" dojoType="dijit.form.Button">Change all titles!</button> 
+  
+  .. cv:: css
+
+    <style type="text/css">
+      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/resources/Grid.css";
+      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/resources/nihiloGrid.css";
+
+      .dojoxGrid table {
+        margin: 0;
+      }
+    </style>
+
+
 ========
 See also
 ========
