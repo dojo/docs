@@ -366,7 +366,7 @@ Example 4: Write example: Changing Title and showing in DataGrid
                  for(i = 0; i < items.length; i++){
                    console.debug("Changing title for item: " + i);
                    console.debug(items);
-                   appStore2.setValue(items[i], "This is new title #" + i);
+                   appStore2.setValue(items[i], "title", "This is new title #" + i);
                  }
                  //Requery to reload grid.  This is needed as this store does not currently implement the notification API.
                  grid.setQuery({});
