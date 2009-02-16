@@ -103,7 +103,7 @@ Example 1: Programmatic instantiation and querying through OpenSearch
               var list = dojo.byId("list");
               for(i = 0; i < items.length; i++){
                 var e = items[i];
-                var div = dojo.doc.createElement("br");
+                var div = dojo.doc.createElement("div");
                 div.innerHTML = openSearchStore.getValue(e, "content");
                 list.appendChild(div);
                 list.appendChild(dojo.doc.createElement("br"));
