@@ -129,8 +129,11 @@ Example 1: Programmatic instantiation and querying through OpenSearch
                 list.appendChild(dojo.doc.createElement("br"));                
               }
             }
+          }
+          function err(e) {
+            console.debug(e);
           } 
-          openSearchStore.fetch({query: {searchTerms: "dojo"}, onComplete: gotResults});
+          openSearchStore.fetch({query: {searchTerms: "dojo"}, onComplete: gotResults, onError: err});
         });
       }
       //Set the init function to run when dojo loading and page parsing has completed.
