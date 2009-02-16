@@ -619,15 +619,14 @@ is displayed in an alert.
     <div dojoType="dijit.form.Button" jsId="button3">Update all geography items of type city with a new population!</div>
     <br>
     <br>
-    <div style="width: 400px; height: 300px;">
-      <div id="grid2" 
-        dojoType="dojox.grid.DataGrid" 
-        store="geoStore2" 
-        structure="layoutGeo2" 
-        query="{}"
-        queryOptions="{'deep':true}" 
-        rowsPerPage="40">
-      </div>
+    <div id="grid2"   
+      style="width: 400px; height: 300px;"
+      dojoType="dojox.grid.DataGrid" 
+      store="geoStore2" 
+      structure="layoutGeo2" 
+      query="{}"
+      queryOptions="{'deep':true}" 
+      rowsPerPage="40">
     </div>
 
   .. cv:: css
