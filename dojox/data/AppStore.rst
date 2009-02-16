@@ -359,6 +359,18 @@ Example 4: Write example: Changing Title and showing in DataGrid
       function initGrid() {
           grid.resize();
           dojo.connect(dijit.byId("changeTitleButton"), "onClick", function(){
+             function gotAllItems(items, request){
+               if(items){
+                 var i;
+                 //Change all the titles.
+                 for(i = 0; i < items.length; i++){
+                   appStore2.setValue(items[i], "This is new title #" + i);
+                 }
+                 //Requery to reload grid.  This is needed as this store does not currently implement the notification API.
+                 grid.setQuery({});
+               }
+             }
+             appStore.fetch({onComplete: gotAllItems});
           });
       }
       dojo.addOnLoad(initGrid)
