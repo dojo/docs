@@ -134,7 +134,7 @@ An ATOM entry is comprised of attributes that define the details of the entry, s
 +---------------+------------------------------------------------------------------------------------------------------+----------------------+
 | contributor   | Contributors to the entry content. (multi valued field).                                             | object/object array  |
 +---------------+------------------------------------------------------------------------------------------------------+----------------------+
-| link          | The direct link to the ATOM entry.                                                                   | object               |
+| link          | The direct link to the ATOM entry.                                                                   | object/object array  |
 +---------------+------------------------------------------------------------------------------------------------------+----------------------+
 | rights        | The copyright statement of the entry.                                                                | string               |
 +---------------+------------------------------------------------------------------------------------------------------+----------------------+
