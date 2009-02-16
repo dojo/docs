@@ -53,3 +53,26 @@ Constructor Parameters
 |                |              |from.  This is required as the OSD file contains all the information required to configure the  |           |
 |                |              |store to issue queries.                                                                         |           |
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
+
+Attribute List
+--------------
+
+An OpenSearch search result is a simplistic data item.  It contains very few attributes that are accessible.  Please refer to the table below for what current attributes are accessible via the getValue(s) functions of the dojo.data.Read API
+
++---------------+------------------------------------------------------------------------------------------------------+----------------------+
+| **Attribute** | **Description**                                                                                      | **Type**             |
++---------------+------------------------------------------------------------------------------------------------------+----------------------+
+| content       | The content/text returned for the search result                                                      | string               |
++---------------+------------------------------------------------------------------------------------------------------+----------------------+
+
+============
+Query Syntax
+============
+
+The fetch method query syntax for OpenSearchStore is limited to what the OpenSearch specification allows, which is a single parameter called 'searchTerms'.  The OpenSearchStore expects this parameter to be part of the query arguement of its fetch object as a name/value key set in JavaScript object.  For an example, see below:
+
+.. code-block :: javascript
+
+  var fetchArgs = {query: { searchTerms: "Some random terms"}, onComplete: function(items) { /* do something */});
+  openSearchStore.fetch(fetchArgs);
+  
