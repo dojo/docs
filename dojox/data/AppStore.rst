@@ -173,7 +173,6 @@ Complex properties are those that require more than a simple string to represent
 |               |                                                                                    |                                        |
 |               |                                                                                    | rel:                                   |
 +---------------+------------------------------------------------------------------------------------+----------------------------------------+
-this.href = href; this.hrefLang = hrefLang; this.rel = rel; this.title = title;this.type = type;
 
 
 ============
