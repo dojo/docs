@@ -147,7 +147,7 @@ An ATOM entry is comprised of attributes that define the details of the entry, s
 
 **Complex Properties**
 
-Complex properties are those that require more than a simple string to represent their values.  The current items in the ATOM feed entry that are represented this way are 'Author', 'Contributor' and 'Link'.  All of these have either sub-tags or attributes that are important information.  These attributes are modeled as their own classes in dojox.atom.io.model.js.  The information about each is below:
+Complex properties are those that require more than a simple string to represent their values.  The current items in the ATOM feed entry that are represented this way are 'Author', 'Contributor' and 'Link'.  All of these have either sub-tags or attributes that are important information.  These attributes are modeled as their own classes in `dojox.atom.io.model.js <dojox/atom/io/model>`_.  The information about each is below:
 
 +---------------+------------------------------------------------------------------------------------+----------------------------------------+
 | **Attribute** | **Implementing Class**                                                             | **Properties**                         |
