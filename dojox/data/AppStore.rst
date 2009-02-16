@@ -375,7 +375,7 @@ Example 4: Write example: Changing Title and showing in DataGrid
                  grid.setQuery({});
                }
              }
-             appStore.fetch({onComplete: gotAllItems});
+             appStore2.fetch({onComplete: gotAllItems});
           });
       }
       dojo.addOnLoad(initGrid)
