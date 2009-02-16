@@ -118,7 +118,7 @@ Attribute List
 An ATOM entry is comprised of attributes that define the details of the entry, such as its title, date updated, summary information, content, and so on.  Below is the table list defining what the common attributes are valid to use with the data store getValue(s) and setValue(s) functions of the data store APIs for data access.   The list is not complete, but the attributes not listed are not commonly used by feed consumers.
 
 +---------------+-----------------------------------------------------------------------------------------------------------------------------+
-| **attribute** |**description**                                                                                       |**Type**              |
+| **attribute** | **description**                                                                                      | **Type**             |
 +---------------+-----------------------------------------------------------------------------------------------------------------------------+
 | title         |The title of the entry.                                                                               | string               |
 +---------------+-----------------------------------------------------------------------------------------------------------------------------+
