@@ -100,3 +100,9 @@ Below are all the functions implemented by this model class.
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 | undefined         | destroy()                                            | Deletes all variables associated with this item             |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
+
+=========
+See Also: 
+=========
+
+* `dojox.atom.io.model <dojox/atom/io/model>`_
