@@ -98,5 +98,5 @@ Below are all the functions implemented by this model class.
 | undefined         | removeExtensions(String name_space, String name)     | Removes all extensions matching the given name_space and    |
 |                   |                                                      | name                                                        |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
-| void              | destroy()                                            | Deletes all variables associated with this item             |
+| undefined         | destroy()                                            | Deletes all variables associated with this item             |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
