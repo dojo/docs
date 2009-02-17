@@ -23,16 +23,13 @@ This module handles the parsing of the ATOM XML into a JavaScript structure that
 Classes defined in the model
 ============================
 
-When the model file is loaded, several classes are defined that represent ATOM tags.  Please refer to the following table for the class names and a description of what they represent:
+When the model file is loaded, several classes are defined that represent ATOM tags.  Please refer to the following table for the class names and a description of what they represent.  Each entry in the class name table also acts as a link to specific documentation about that class and what core functions it provides.
 
 +-----------------------------------------------------+----------------------------------------------------------------------------------------+
 | **Class Name**                                      | **Description**                                                                        |
 +-----------------------------------------------------+----------------------------------------------------------------------------------------+
-| dojox.atom.io.model.Node                            | A generic superclass that represents nodes in an ATOM XML document.  All other model   |
-|                                                     | classes inherit from this.                                                             |
-+-----------------------------------------------------+----------------------------------------------------------------------------------------+
-| dojox.atom.io.model.AtomItem                        | Another superclass used to represent specific ATOM details that are common for all ATOM|
-|                                                     | tags                                                                                   |
+| dojox.atom.io.model.AtomItem                        | A generic superclass used to represent specific ATOM details that are common for all   |
+|                                                     | ATOM tags.                                                                             |
 +-----------------------------------------------------+----------------------------------------------------------------------------------------+
 | dojox.atom.io.model.Category                        | Model to represent the Category tag of an ATOM document.  Contains all Category        |
 |                                                     | properties and a toString function for serializing it back to XML                      |
@@ -42,6 +39,24 @@ When the model file is loaded, several classes are defined that represent ATOM t
 |                                                     | words, it represents any element that can contain Test, HTML, XHTML, etc as content    |
 |                                                     | format.  It also has a toString function used to generate the corresponding XML tag    |
 +-----------------------------------------------------+----------------------------------------------------------------------------------------+
+| dojox.atom.io.model.Link                            |	Atom link element.  Used for representing link attributes/  Handles multiple link types|
+|                                                     | (edit, alt, etc.)                                                                      |
++-----------------------------------------------------+----------------------------------------------------------------------------------------+
+| dojox.atom.io.model.Person                          | Atom person element. Used to represent authors and contributors.                       |
++-----------------------------------------------------+----------------------------------------------------------------------------------------+
+| dojox.atom.io.model.Entry                           | Atom entry element. Represents an Atom entry, including storing the authors,           |
+|                                                     | contributors, title, content, and so on.                                               |
++-----------------------------------------------------+----------------------------------------------------------------------------------------+
+| dojox.atom.io.model.Feed                            | Atom feed element. Represents an Atom Feed, including the feed elements such as the    |
+|                                                     | title and author, and also represents the entry list.                                  | 
++-----------------------------------------------------+----------------------------------------------------------------------------------------+
+| dojox.atom.io.model.Service                         |	Atom service element                                                                   |
++-----------------------------------------------------+----------------------------------------------------------------------------------------+
+| dojox.atom.io.model.Workspace                       |	Atom workspace element                                                                 |
++-----------------------------------------------------+----------------------------------------------------------------------------------------+
+| dojox.atom.io.model.Collection                      |	Atom collection element                                                                |
++-----------------------------------------------------+----------------------------------------------------------------------------------------+
+
 
 =====
 Usage
