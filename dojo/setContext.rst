@@ -60,6 +60,9 @@ Counting Links
 
 Here is a simple example that counts the links in the current page as well as the links in an embedded iframe, via dojo.setContext.
 
+HTML
+~~~~
+
 .. code-block :: html
   :linenos:
 
@@ -77,6 +80,10 @@ Here is a simple example that counts the links in the current page as well as th
     
     <!-- We have to count the links AFTER the iframe has loaded -->
     <iframe src="resources/links.html" id="iframe" onload="countLinks();"></iframe>
+
+
+JavaScript
+~~~~~~~~~~
 
 .. code-block :: javascript
  :linenos:
