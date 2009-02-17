@@ -55,4 +55,4 @@ TODO: example
 See also
 ========
 
-* Please see `this tutorial <http://www.sitepen.com/blog/2008/07/31/cross-site-xhr-plugin-registry/>`_ for a full description of this module.
+* `Tutorial Cross-Site XHR Plugin Registry <http://www.sitepen.com/blog/2008/07/31/cross-site-xhr-plugin-registry/>`_
