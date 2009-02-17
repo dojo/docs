@@ -73,17 +73,15 @@ Custom Button
 The following example uses a custom button for a "span".
 Note: The custom button is simply an extension of "dijit.form.Button".
 
-.. cv-compound::
 
-  .. cv:: javascript
 
-    <script src="http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dojo/dojo.js" type="text/javascript" charset="utf-8"></script>
-    // Manually including my.form.Button for this *example only*.
-    <script src="[[attachment:Button.js]]" type="text/javascript" charset="utf-8"></script>
+.. code-block :: javascript
+
+    <script src="scripts/dojotoolkit/dojo/dojo.js" type="text/javascript" charset="utf-8"></script>
 
     <script type="text/javascript" charset="utf-8">
-      // Paths default to dojo.baseUrl ("dojo/trunk/dojo/"),
-      // so we point any module beginning with "my" to another path (relative to the dojo.baseUrl)
+      // Paths default to dojo.baseUrl ("scripts/dojotoolkit/dojo/"),
+      // so we point any module beginning with "my" to the path "scripts/my/"
       dojo.registerModulePath('my', '../../my');
         
       // Now that the path is set, load my new button class
@@ -96,7 +94,7 @@ Note: The custom button is simply an extension of "dijit.form.Button".
       });
     </script>
 
-  .. cv:: css
+.. code-block :: css
 
     <style type="text/css" media="screen">
       .red {
@@ -105,7 +103,7 @@ Note: The custom button is simply an extension of "dijit.form.Button".
       }
     </style>
 
-  .. cv:: html
+.. code-block :: html
 
     <span dojoType="my.form.Button">my.form.button</span>
 
