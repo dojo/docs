@@ -76,7 +76,6 @@ Note: The custom button is simply an extension of "dijit.form.Button".
 .. cv-compound::
 
   .. cv:: javascript
-    :label: JavaScript
 
     <script src="../scripts/dojotoolkit/dojo/dojo.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript" charset="utf-8">
@@ -95,7 +94,6 @@ Note: The custom button is simply an extension of "dijit.form.Button".
     </script>
 
   .. cv:: css
-    :label: CSS
 
     <style type="text/css" media="screen">
       .red {
@@ -105,7 +103,6 @@ Note: The custom button is simply an extension of "dijit.form.Button".
     </style>
 
   .. cv:: html
-    :label: HTML
 
     <span dojoType="my.form.Button">my.form.button</span>
 
