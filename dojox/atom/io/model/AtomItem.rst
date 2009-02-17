@@ -13,7 +13,9 @@ dojox.atom.io.model.AtomItem
 
 The AtomItem class is generally not used independently.  It is AtomItem class is the base class for Atom feed and entry objects, because they share some common components (title, subtitle, icon, arrays of authors, contributors, and links).
 
+====================================
 Public properties (and their types):
+====================================
 
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
 | **Type**                   | **Property**    | **Description**                                                                             |
@@ -46,6 +48,10 @@ Public properties (and their types):
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
 | Array                      | entries         | Array of dojox.atom.io.model.Entry objects for this item                                    |
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
+
+==========================================
+Public functions (and their return types):
+==========================================
 
 
 Object Functions
