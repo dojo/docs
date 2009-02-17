@@ -128,6 +128,42 @@ Priority 4: DojoX
 
   needed: Introduction, Grid 1.2 Changes, Usage, Parameter "selection mode", Example "sorting data at the server", Example "Large datasets", Tips
 
+* `dojox.image.Badge <dojox/image/Badge>`_
+
+  needed: full page
+
+* `dojox.image.FlickrBadge <dojox/image/FlickrBadge>`_
+
+  needed: full page
+
+* `dojox.image.Gallery <dojox/image/Gallery>`_
+
+  needed: full page
+
+* `dojox.image.Lightbox <dojox/image/Lightbox>`_
+
+  needed: examples don't load images
+
+* `dojox.image.LightboxNano <dojox/image/LightboxNano>`_ 
+
+  needed: working examples instead of source code
+
+* `dojox.image.Magnifier <dojox/image/Magnifier>`_
+
+  needed: full page
+
+* `dojox.image.MagnifierLite <dojox/image/MagnifierLite>`__
+
+  needed: full page
+
+* `dojox.image.SlideShow <dojox/image/SlideShow>`_
+
+  needed: full page
+
+* `dojox.image.ThumbnailPicker <dojox/image/ThumbnailPicker>`_
+
+  needed: full page
+
 * `dojox.widget/FisheyeList <dojox/widget/FisheyeList>`_ 
 
   needed: full page
