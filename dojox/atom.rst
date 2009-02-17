@@ -36,7 +36,10 @@ Available Sub-projects
 Usage
 =====
 
-For specific usage, please see each module's documentation page.
+For specific usage, please see each module's documentation page:
+
+* `dojox.atom.io.model <dojox/atom/io/model>`_
+* `dojox.atom.io.Connection <dojox/atom/io/model>`_
 
 ========
 See Also
