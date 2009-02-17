@@ -16,19 +16,19 @@ The AtomItem class is generally not used independently.  It is AtomItem class is
 Public properties (and their types):
 
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
-| **Type**                   | **Property**    | **Description                                                                                                                                                                                                |
+| **Type**                   | **Property**    | **Description                                                                               |
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
-| String                     | ATOM_URI        | The URI of the Atom namespace                                                               |                                                                  
+| String                     | ATOM_URI        | The URI of the Atom namespace                                                               |                                                                 
 +----------------------------+-----------------+----=----------------------------------------------------------------------------------------+
 | Array                      | links           | Houses multiple dojox.atom.io.model.Link objects of the links associated with this Atom item|
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
 | Array                      | authors         | Houses the dojox.atom.io.model.Person objects of the authors                                |
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
-| Array                      | categories      | Houses the dojox.atom.io.model.Category objects associated with this Atom item                                    |
+| Array                      | categories      | Houses the dojox.atom.io.model.Category objects associated with this Atom item              |
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
 | Array                      | contributors    | Houses the idojox.atom.io.model.Person objects of the contributors                          |
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+ 
-| String                     | icon            | The URL to the icon for this item.                                                                                                                           |
+| String                     | icon            | The URL to the icon for this item.                                                          |
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
 | String                     | id              | The ID of this item                                                                         |
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
