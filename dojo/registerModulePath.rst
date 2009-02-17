@@ -66,6 +66,13 @@ Usage
 ========
 Example
 ========
+
+Custom Button
+---------------
+
+The following example uses a custom button for a "span".
+Note: The custom button is simply an extension of "dijit.form.Button".
+
 .. cv-compound::
 
   .. cv:: javascript
