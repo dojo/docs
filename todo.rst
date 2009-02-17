@@ -164,7 +164,35 @@ Priority 4: DojoX
 
   needed: full page
 
-* `dojox.widget/FisheyeList <dojox/widget/FisheyeList>`_ 
+* `dojox.io.httpParse <dojox/io/httpParse>`_
+
+  needed: full page
+
+* `dojox.io.OAuth <dojox/io/OAuth>`_
+
+  needed: usage, examples
+
+* `dojox.io.scriptFrame <dojox/io/scriptFrame>`_
+
+  needed: full page
+
+* `dojox.io.windowName <dojox/io/windowName>`_
+
+  needed: full page
+
+* `dojox.io.xhrMultiPart <dojox/io/xhrMultiPart>`_
+
+  needed: full page
+
+* `dojox.io.xhrPlugins <dojox/io/xhrPlugins>`_
+
+  needed: usage, examples
+
+* `dojox.io.xhrWindowNamePlugin <dojox/io/xhrWindowNamePlugin>`_
+
+  needed: full page
+
+* `dojox.widget.FisheyeList <dojox/widget/FisheyeList>`_ 
 
   needed: full page
 
