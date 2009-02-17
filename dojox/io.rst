@@ -5,7 +5,6 @@ dojox.io
 
 :Status: Draft
 :Version: 1.0
-:Authors: Nikolai Onken
 :Developers: Bryan Forbes, Kris Zyp, James Burke, Tom Trenka
 :Available: since V?
 
