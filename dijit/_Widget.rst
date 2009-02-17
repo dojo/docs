@@ -110,4 +110,4 @@ For more details on both attributeMap and custom setters/getters, see the `Writi
 See also
 ========
 
-* `Writing Widgets <gettingStarted/writingWidgets>`_
+* `Writing Widgets <quickstart/writingWidgets>`_
