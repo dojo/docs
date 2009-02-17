@@ -17,7 +17,7 @@ The *dojox.atom.io.model* module is a JavaScript model of an ATOM feed.
 Introduction
 ============
 
-This module handles the parsing of the ATOM XML into a JavaScript structure that can be easily modified and then serialized out as XML.  This class handles browser idiosyncrasies when parsing the XML, making it very cross-browser compatible and is far simpler to work with than using DOM apis to walk the ATOM XML document.
+This module handles the parsing of the ATOM XML into a JavaScript structure that can be easily modified and then serialized out as XML.  This set of classes handles browser idiosyncrasies when parsing the XML, making it very cross-browser compatible and is far simpler to work with than using DOM apis to walk the ATOM XML document.
 
 ============================
 Classes defined in the model
