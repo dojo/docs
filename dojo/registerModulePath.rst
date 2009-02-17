@@ -64,6 +64,45 @@ Usage
  </script>
 
 ========
+Example
+========
+.. cv-compound::
+
+  .. cv:: javascript
+    :label: JavaScript
+
+    <script src="../scripts/dojotoolkit/dojo/dojo.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+      // Paths default to dojo.baseUrl ("../scripts/dojotoolkit/dojo/"),
+      // so we point any module beginning with "my" to "../scripts/my/"
+      dojo.registerModulePath('my', '../../my');
+        
+      // Now that the path is set, load my new button class
+      dojo.require('my.form.Button');
+        
+      // Parse the declarative markup
+      dojo.require('dojo.parser');
+      dojo.addOnLoad(function() {
+        dojo.parser.parse();
+      });
+    </script>
+
+  .. cv:: css
+    :label: CSS
+
+    <style type="text/css" media="screen">
+      .red {
+        color: red;
+        background: black;
+      }
+    </style>
+
+  .. cv:: html
+    :label: HTML
+
+    <span dojoType="my.form.Button">my.form.button</span>
+
+========
 See Also
 ========
 
