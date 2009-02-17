@@ -18,7 +18,7 @@ dojox.io.xhrPlugins provides a registry of alternate transports that can be used
 Introduction
 ============
 
-Traditionally, XHR can only be used for same-origin requests. Alternate techniques are generally necessary for cross-site requests. dojox.io.xhrPlugins provides a means for registering server support for different transports so dojo.xhr can still be used for cross-site requests to maintain consistent call-site syntax. Please see `this tutorial <http://www.sitepen.com/blog/2008/07/31/cross-site-xhr-plugin-registry/>`_ for a full description of this module.
+Traditionally, XHR can only be used for same-origin requests. Alternate techniques are generally necessary for cross-site requests. dojox.io.xhrPlugins provides a means for registering server support for different transports so dojo.xhr can still be used for cross-site requests to maintain consistent call-site syntax.
 
 
 =====
@@ -55,4 +55,4 @@ TODO: example
 See also
 ========
 
-* TODO: links to other related articles
+* Please see `this tutorial <http://www.sitepen.com/blog/2008/07/31/cross-site-xhr-plugin-registry/>`_ for a full description of this module.
