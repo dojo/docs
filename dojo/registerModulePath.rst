@@ -77,11 +77,11 @@ Note: The custom button is simply an extension of "dijit.form.Button".
 
   .. cv:: javascript
 
-    <script src="../scripts/dojotoolkit/dojo/dojo.js" type="text/javascript" charset="utf-8"></script>
+    <script src="http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dojo/dojo.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript" charset="utf-8">
-      // Paths default to dojo.baseUrl ("../scripts/dojotoolkit/dojo/"),
-      // so we point any module beginning with "my" to "../scripts/my/"
-      dojo.registerModulePath('my', '../../my');
+      // Paths default to dojo.baseUrl ("dojo/trunk/dojo/"),
+      // so we point any module beginning with "my" to "http://www.smarterspam.com/dojo/scripts/my"
+      dojo.registerModulePath('my', 'http://www.smarterspam.com/dojo/scripts/my');
         
       // Now that the path is set, load my new button class
       dojo.require('my.form.Button');
