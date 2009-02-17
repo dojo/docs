@@ -57,6 +57,29 @@ When the model file is loaded, several classes are defined that represent ATOM t
 | dojox.atom.io.model.Collection                      |	Atom collection element                                                                |
 +-----------------------------------------------------+----------------------------------------------------------------------------------------+
 
+=================
+Utility Functions
+=================
+
+There are also several utility functions defined by the model.  These functions are used by all of the subclasses and can be useful in standalone cases as well.  Please refer to the following table for function name and description:
+
++-----------------------------------------------------+----------------------------------------------------------------------------------------+
+| **Function**                                        | **Description**                                                                        |
++-----------------------------------------------------+----------------------------------------------------------------------------------------+
+| dojox.atom.io.model.util.createDate(DOMNode)        | A function for parsing the text content of a DOM node and creating a Date object from  |
+|                                                     | it.                                                                                    |
++-----------------------------------------------------+----------------------------------------------------------------------------------------+
+| dojox.atom.io.model.util.escapeHtml(String)         | A function for escaping HTML control and entity characters in a string so that it can  |
+|                                                     | be handled as text without the markup affecting the XML document.                      |
++-----------------------------------------------------+----------------------------------------------------------------------------------------+
+| dojox.atom.io.model.util.unEscapeHtml(String)       | A function for restoring the HTML control and tag characters to a string.  Useful when |
+|                                                     | you wish to unEscape the content of an entry and display it in a Content Pane.         |
++-----------------------------------------------------+----------------------------------------------------------------------------------------+
+| dojox.atom.io.model.util.getNodename(Node)          | A function for getting the node name of an XML node.  This function exists to handle   |
+|                                                     | browser quirks.  Specifically things such as Internet Explorer's poor namespace        |
+|                                                     | handling.                                                                              |
++-----------------------------------------------------+----------------------------------------------------------------------------------------+
+
 
 =====
 Usage
