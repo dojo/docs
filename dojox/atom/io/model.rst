@@ -44,7 +44,7 @@ When the model file is loaded, several classes are defined that represent ATOM t
 | `dojox.atom.io.model.Link <dojox/atom/io/model/Link>`_            | Atom link element.  Used for representing link attributes.  Handles      |
 |                                                                   | multiple link types (edit, alt, etc.)                                    |     
 +-------------------------------------------------------------------+--------------------------------------------------------------------------+
-| `dojox.atom.io.model.Person  <dojox/atom/io/model/Person>`_       | Atom person element. Used to represent authors and contributors.                                            |
+| `dojox.atom.io.model.Person  <dojox/atom/io/model/Person>`_       | Atom person element. Used to represent authors and contributors.         |
 +-------------------------------------------------------------------+--------------------------------------------------------------------------+
 | `dojox.atom.io.model.Entry <dojox/atom/io/model/Entry>`_          | Atom entry element. Represents an Atom entry, including storing the      |
 |                                                                   | authors, contributors, title, content, and so on.                        |
@@ -54,7 +54,7 @@ When the model file is loaded, several classes are defined that represent ATOM t
 +-------------------------------------------------------------------+--------------------------------------------------------------------------+
 | `dojox.atom.io.model.Service <dojox/atom/io/model/Service>`_      | Atom service element                                                     |
 +-------------------------------------------------------------------+--------------------------------------------------------------------------+
-| `dojox.atom.io.model.Workspace <dojox/atom/io/model/Workspace>`_  | Atom workspace element                                                                                                                                        |
+| `dojox.atom.io.model.Workspace <dojox/atom/io/model/Workspace>`_  | Atom workspace element                                                   |
 +-------------------------------------------------------------------+--------------------------------------------------------------------------+
 | `dojox.atom.io.model.Collection <dojox/atom/io/model/Workspace>`_ | Atom collection element                                                  |
 +-------------------------------------------------------------------+--------------------------------------------------------------------------+
