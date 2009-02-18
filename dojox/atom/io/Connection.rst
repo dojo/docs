@@ -119,6 +119,70 @@ Example 1: Load an ATOM Feed
     </span>
 
 
+Example 2: Update an entry in a Feed
+------------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojox.atom.io.model");
+      dojo.require("dojox.atom.io.Connection");
+
+      //This function performs some basic dojo initialization and will do the load calling for this example
+      function initUpdateAtom () {
+        var conn = new dojox.atom.io.Connection();
+
+        conn.getFeed("/moin_static163/js/dojo/trunk/release/dojo/dojox/atom/tests/widget/samplefeedEdit.xml",
+          function(feed) {
+           //Emit both the XML (As reconstructed from the Feed object and as a JSON form.
+           var xml = dojo.byId("simplePristineAtomXml");
+           xml.innerHTML = ""; 
+           xml.appendChild(dojo.doc.createTextNode(feed.toString()));
+
+           //Now get an entry for mod.
+           var entry = feed.getFirstEntry();
+
+           //Make this updateable by pointing it to the app test pho script so it can properly post.
+           var entry.setEditHref("/moin_static163/js/dojo/trunk/release/dojo/dojox/atom/tests/io/app.php");
+           entry.updated = new Date();
+           entry.setTitle('<h1>New Editable Title!</h1>', 'xhtml');
+           conn.updateEntry(entry, function() {
+               var xml = dojo.byId("simpleModifiedAtomXml");
+               xml.innerHTML = ""; 
+               xml.appendChild(dojo.doc.createTextNode(feed.toString()));
+             },
+             function(err){
+               console.debug(err);
+             }
+           );
+          },
+          function(err) {
+            console.debug(err);
+          }
+        );   
+      }
+      //Set the init function to run when dojo loading and page parsing has completed.
+      dojo.addOnLoad(initUpdateAtom );
+    </script>
+
+  .. cv :: html 
+
+    <div style="height: 400px; overflow: auto;">
+      <b>XML of Feed (before change)</b>
+      <pre id="simplePristineAtomXml">
+      </pre>
+      <br>
+      <br>
+      <b>As XML (After modification)</b>
+      <pre id="simpleModifiedAtomXml">
+      </pre>
+    </span>
+
+
+
+
 
 ========
 See Also
