@@ -95,6 +95,49 @@ The model is intended for creating, parsing, and working with ATOM feeds in Java
 Examples
 ========
 
+Example 1: Create an ATOM Feed model from an existing ATOM document
+-------------------------------------------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojox.atom.io.model");
+
+      //This function performs some basic dojo initialization and will do the fetch calling for this example
+      function initSimpleAtom () {
+        var xhrArgs = { 
+           url: "/moin_static163/js/dojo/trunk/release/dojo/dojox/atom/tests/widget/samplefeedEdit.xml",
+           preventCache: true,
+           handleAx: "xml"
+        }
+ 
+        var deferred = dojo.xhrGet(xhrArgs);
+       
+        //Okay, on success we'll process the ATOM doc and generate the JavaScript model
+        deferred.addOnLoad(function(xmlDoc, ioargs){
+           var feed = new dojox.io.atom.Feed();
+           feed.buildFromDom(xmlDoc);
+           var display = dojo.byId("simpleAtom");
+           console.debug(feed);
+           console.debug(display);
+        });
+      }
+      //Set the init function to run when dojo loading and page parsing has completed.
+      dojo.addOnLoad(initSimpleAtom);
+    </script>
+
+  .. cv :: html 
+
+    <button dojoType="dijit.form.Button" id="simpleFetchButton">Click me to load an ATOM document and parse it into a model</button >
+    <br>
+    <br>
+    <span>
+      <pre id="simpleAtom">
+      </pre>
+    </span>
+
 
 
 ========
