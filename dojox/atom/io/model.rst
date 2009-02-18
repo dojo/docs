@@ -169,11 +169,27 @@ Example 2: Create a new ATOM Feed
 
       //This function performs some basic dojo initialization and will do the fetch calling for this example
       function initSimpleCreateAtom () {
+        //Create a feed with some basic attributes set.
         var feed = new dojox.atom.io.model.Feed();
         feed.id = "This_Is_A_New_Feed_0";
         feed.addAuthor("John Doe", "johndoe@nowhere.org", "http://johndoeshomepage.org");
-        feed.addLink("http://someurl", "alternate", "en_US", "The primary ATOM link", "http://johndoeshomepage.org");
         feed.rights = "Copyright Dojo";
+        feed.updated = new Date();
+        feed.published = new Date();        
+        var fTitle = new dojox.atom.io.model.Content();
+        fTitle.tagName = "title";
+        fTitle.value = "This <i>is</i> my Feed title!";
+        fTitle.type = "xml";
+        feed.title = fTitle;
+
+        //Add an entry
+        var entry = feed.createEntry();
+        entry.addAuthor("Jane Doe", "janedoe@nowhere.org", "http://johndoeshomepage.org");
+        var eTitle = new dojox.atom.io.model.Content();
+        eTitle.tagName = "title";
+        eTitle.value = "This <i>is</i> my entry title!";
+        eTitle.type = "xml";
+        entry.title = eTitle;
 
         //Emit The XML form of the feed.
          var xml = dojo.byId("simpleAtomCreate");
@@ -187,7 +203,7 @@ Example 2: Create a new ATOM Feed
   .. cv :: html 
 
     <div style="height: 400px; overflow: auto;">
-      <b>As JSON (To show that it is creating a JS structure)</b>
+      <b>As XML</b>
       <pre id="simpleAtomCreate">
       </pre>
     </span>
