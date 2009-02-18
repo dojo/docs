@@ -123,9 +123,8 @@ Example 1: Create an ATOM Feed model from an existing ATOM document
            console.debug("Now Here.");
            var feed = new dojox.atom.io.Feed();
            feed.buildFromDom(feedRoot[0]);
-           var display = dojo.byId("simpleAtom");
+           var display = dojo.byId("simpleAtomText");
            console.debug(feed);
-           console.debug(display);
         });
  
         deferred.addErrback(function(error){
@@ -142,7 +141,7 @@ Example 1: Create an ATOM Feed model from an existing ATOM document
     <br>
     <br>
     <span>
-      <pre id="simpleAtom">
+      <pre id="simpleAtomText">
       </pre>
     </span>
 
