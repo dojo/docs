@@ -116,7 +116,7 @@ Example 1: Create an ATOM Feed model from an existing ATOM document
         var deferred = dojo.xhrGet(xhrArgs);
        
         //Okay, on success we'll process the ATOM doc and generate the JavaScript model
-        deferred.addOnLoad(function(xmlDoc, ioargs){
+        deferred.addCallback(function(xmlDoc, ioargs){
            var feed = new dojox.io.atom.Feed();
            feed.buildFromDom(xmlDoc);
            var display = dojo.byId("simpleAtom");
