@@ -58,7 +58,7 @@ When the model file is loaded, several classes are defined that represent ATOM t
 +-------------------------------------------------------------------+--------------------------------------------------------------------------+
 | `dojox.atom.io.model.Workspace <dojox/atom/io/model/Workspace>`_  | Atom workspace element                                                   |
 +-------------------------------------------------------------------+--------------------------------------------------------------------------+
-| `dojox.atom.io.model.Collection <dojox/atom/io/model/Workspace>`_ | Atom collection element                                                  |
+| `dojox.atom.io.model.Collection <dojox/atom/io/model/Collection>`_| Atom collection element                                                  |
 +-------------------------------------------------------------------+--------------------------------------------------------------------------+
 
 =================
