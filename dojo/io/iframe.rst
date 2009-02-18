@@ -87,7 +87,7 @@ dojo.io.iframe calls cannot be made synchronous; therefore trying to set the 'sy
   </html>
 
 
-Other that the reason noted above about reliability (getting proper events indicating data retrieved), the choice of using textarea was because a textarea provides a fixed container that dojo can locate in the iframe DOM and extract the contents from.  And since it is a text area, it can contain JSON, XML, Text, etc.  Once the data is obtained, the usual data handlers from dojo process it and pass it back through the callbacks specified by the user.
+Other than the reason noted above about reliability (getting proper events indicating data retrieved), the choice of using textarea was because a textarea provides a fixed container that dojo can locate in the iframe DOM and extract the contents from.  And since it is a text area, it can contain JSON, XML, Text, etc.  Once the data is obtained, the usual data handlers from dojo process it and pass it back through the callbacks specified by the user.
 
 
 ========
@@ -189,7 +189,7 @@ Pass in parameters manually
         // the content to submit:
         content: {
             param1: "la dee dah",
-            param2: "my poor electrons!",
+            param2: "my poor electrons!"
         },
 
         // The used data format:
