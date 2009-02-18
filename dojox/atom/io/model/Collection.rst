@@ -1,7 +1,7 @@
 #format dojo_rst
 
-dojox.atom.io.model.Workspace
-=============================
+dojox.atom.io.model.Collection
+==============================
 
 :Status: Draft
 :Version: 1.0
