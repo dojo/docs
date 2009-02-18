@@ -121,16 +121,17 @@ Example 1: Create an ATOM Feed model from an existing ATOM document
            console.debug("Here.");
            var feedRoot = xmlDoc.getElementsByTagName("feed");
            console.debug("Now Here.");
-           try{
            var feed = new dojox.atom.io.model.Feed();
            feed.buildFromDom(xmlDoc.documentElement);
-           var display = dojo.byId("simpleAtomText");
-           display.innerHTML = ""; 
-           display.appendChild(dojo.doc.createTextNode(feed.toString()));
-           console.debug("Meow");
-           } catch (e) {
-             console.debug(e);
-           }
+
+           //Emit both the XML (As reconstructed from the Feed object and as a JSON form.
+           var xml = dojo.byId("simpleAtomXml");
+           xml.innerHTML = ""; 
+           xml.appendChild(dojo.doc.createTextNode(feed.toString()));
+
+           var json = dojo.byId("simpleAtomJson");
+           json.innerHTML = ""; 
+           json.appendChild(dojo.doc.createTextNode(dojo.toJson(feed, true)));
         });
  
         deferred.addErrback(function(error){
@@ -147,7 +148,13 @@ Example 1: Create an ATOM Feed model from an existing ATOM document
     <br>
     <br>
     <span>
-      <pre id="simpleAtomText">
+      <b>As JSON (To show that it is creating a JS structure)</b>
+      <pre id="simpleAtomJson">
+      </pre>
+      <br>
+      <br>
+      <b>As XML (Showing toString() returning the XML version)</b>
+      <pre id="simpleAtomXml">
       </pre>
     </span>
 
