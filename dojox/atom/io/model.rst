@@ -190,9 +190,10 @@ Example 2: Create a new ATOM Feed
         eTitle.value = "This <i>is</i> my entry title!";
         eTitle.type = "xml";
         entry.title = eTitle;
+        entry.id="entry_1";
 
         //Add the feed entry to the current feed.
-//        feed.addEntry(entry);
+        feed.addEntry(entry);
 
         //Emit The XML form of the feed.
         var xml = dojo.byId("simpleAtomCreate");
