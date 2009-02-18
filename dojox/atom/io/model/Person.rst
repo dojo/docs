@@ -17,11 +17,6 @@ This object represents a person object, which is used for the author and contrib
 Public properties (and their types):
 ====================================
 
-String  	personType  	The type of person this object represents, typically either author or contributor.
-String 	name 	The name of this person object
-String 	email 	This email address of this person
-String 	uri 	This URI of this person
-
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
 | **Type**                   | **Property**    | **Description**                                                                             |
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
