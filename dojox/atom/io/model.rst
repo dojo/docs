@@ -192,12 +192,12 @@ Example 2: Create a new ATOM Feed
         entry.title = eTitle;
 
         //Add the feed entry to the current feed.
-        feed.addEntry(entry);
+//        feed.addEntry(entry);
 
         //Emit The XML form of the feed.
-         var xml = dojo.byId("simpleAtomCreate");
-         xml.innerHTML = ""; 
-         xml.appendChild(dojo.doc.createTextNode(feed.toString()));
+        var xml = dojo.byId("simpleAtomCreate");
+        xml.innerHTML = ""; 
+        xml.appendChild(dojo.doc.createTextNode(feed.toString()));
       }
       //Set the init function to run when dojo loading and page parsing has completed.
       dojo.addOnLoad(initSimpleCreateAtom );
