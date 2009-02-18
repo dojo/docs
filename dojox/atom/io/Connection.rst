@@ -64,6 +64,60 @@ Functions
 | deleteEntry(entry,callback,errorCallback,xmethod,scope)      | Function to delete an entry in a feed via APP (DELETE of an exisiting entry |
 +--------------------------------------------------------------+-----------------------------------------------------------------------------+
 
+========
+Examples
+========
+
+Example 1: Load an ATOM Feed
+----------------------------
+
+*Note that this demonstrates that the XML document is converted into a JS object structure as shown by displaying the 'feed' by converting it to JSON.  The XML form is also displayed underneath it, demonstrating toString() rebuilding the XML form for submission or whatnot.*
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojox.atom.io.model");
+      dojo.require("dojox.atom.io.Connection");
+
+      //This function performs some basic dojo initialization and will do the load calling for this example
+      function initSimpleAtom () {
+        var conn = new dojox.atom.io.Connection();
+
+        conn.getFeed("/moin_static163/js/dojo/trunk/release/dojo/dojox/atom/tests/widget/samplefeedEdit.xml",
+          function(feed) {
+           //Emit both the XML (As reconstructed from the Feed object and as a JSON form.
+           var xml = dojo.byId("simpleAtomXml");
+           xml.innerHTML = ""; 
+           xml.appendChild(dojo.doc.createTextNode(feed.toString()));
+
+           var json = dojo.byId("simpleAtomJson");
+           json.innerHTML = ""; 
+           json.appendChild(dojo.doc.createTextNode(dojo.toJson(feed, true)));
+          },
+          function(err) {
+            console.debug(err);
+          }
+        );   
+      }
+      //Set the init function to run when dojo loading and page parsing has completed.
+      dojo.addOnLoad(initSimpleAtom);
+    </script>
+
+  .. cv :: html 
+
+    <div style="height: 400px; overflow: auto;">
+      <b>As JSON (To show that it is creating a JS structure)</b>
+      <pre id="simpleAtomJson">
+      </pre>
+      <br>
+      <br>
+      <b>As XML (Showing toString() returning the XML version)</b>
+      <pre id="simpleAtomXml">
+      </pre>
+    </span>
+
 
 
 ========
