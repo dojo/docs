@@ -122,6 +122,8 @@ Example 1: Load an ATOM Feed
 Example 2: Update an entry in a Feed
 ------------------------------------
 
+*Note that to see the PUT, you can use firebug.  But to see the PUT contents, you will need a debugging proxy like Charles*
+
 .. cv-compound ::
   
   .. cv :: javascript
