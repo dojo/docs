@@ -237,12 +237,18 @@ Example 3: Modify a loaded feed
            var feed = new dojox.atom.io.model.Feed();
            feed.buildFromDom(xmlDoc.documentElement);
 
+           //Emit XML of the modified feed.
+           var xml = dojo.byId("simpleAtomXmlPristine");
+           xml.innerHTML = ""; 
+           xml.appendChild(dojo.doc.createTextNode(feed.toString()));
+
+           //Remove an entry.
            var entry = feed.getFirstEntry();
            feed.removeEntry(entry);
            feed.updated = new Date();
 
            //Emit XML of the modified feed.
-           var xml = dojo.byId("simpleAtomXmlModified");
+           xml = dojo.byId("simpleAtomXmlModified");
            xml.innerHTML = ""; 
            xml.appendChild(dojo.doc.createTextNode(feed.toString()));
         });
@@ -258,7 +264,12 @@ Example 3: Modify a loaded feed
   .. cv :: html 
 
     <div style="height: 400px; overflow: auto;">
-      <b>As XML</b>
+      <b>Pristine XML</b>
+      <pre id="simpleAtomXmlPristine">
+      </pre>
+      <br>
+      <br>
+      <b>Modified XML</b>
       <pre id="simpleAtomXmlModified">
       </pre>
     </span>
