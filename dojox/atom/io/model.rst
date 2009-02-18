@@ -110,7 +110,7 @@ Example 1: Create an ATOM Feed model from an existing ATOM document
         var xhrArgs = { 
            url: "/moin_static163/js/dojo/trunk/release/dojo/dojox/atom/tests/widget/samplefeedEdit.xml",
            preventCache: true,
-           handleAx: "xml"
+           handleAs: "xml"
         }
  
         var deferred = dojo.xhrGet(xhrArgs);
