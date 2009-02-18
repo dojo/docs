@@ -175,20 +175,12 @@ Example 2: Create a new ATOM Feed
         feed.rights = "Copyright Dojo";
         feed.updated = new Date();
         feed.published = new Date();        
-        var fTitle = new dojox.atom.io.model.Content();
-        fTitle.tagName = "title";
-        fTitle.value = "This <i>is</i> my Feed title!";
-        fTitle.type = "xml";
-        feed.title = fTitle;
+        feed.setTitle("This <i>is</i> my Feed title!", "xhtml");
 
         //Create an entry
         var entry = feed.createEntry();
         entry.addAuthor("Jane Doe", "janedoe@nowhere.org", "http://johndoeshomepage.org");
-        var eTitle = new dojox.atom.io.model.Content();
-        eTitle.tagName = "title";
-        eTitle.value = "This <i>is</i> my entry title!";
-        eTitle.type = "xml";
-        entry.title = eTitle;
+        entry.setTitle("This <i>is</i> my entry title!", "xhtml");
         entry.id="entry_1";
 
         //Add the feed entry to the current feed.
