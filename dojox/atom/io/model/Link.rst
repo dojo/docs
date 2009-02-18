@@ -17,13 +17,6 @@ This object represents Link elements of the Atom specification.
 Public properties (and their types):
 ====================================
 
-String  	href  	The URL for this link
-String 	hrefLang 	The hrefLang attribute
-String 	rel 	The rel attribute, describing the relation of this link to the parent item
-String 	title 	The title of this link
-String 	type 	The type of link
-
-
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
 | **Type**                   | **Property**    | **Description**                                                                             |
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
