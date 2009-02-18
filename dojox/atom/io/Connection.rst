@@ -39,3 +39,11 @@ Constructor Parameters
 | preventCache   | No           |This parameter tells the Connection whether or not to append a query param to the URL to prevent|1.3        |
 |                |              |the browser from caching the results of the IO call.  The default is false.                     |           |
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
+
+
+========
+See Also
+========
+
+* `dojox.atom.io.model <dojox/atom/io/model>`_: The backing model for the Feed used by this connection API.
+* `dojox.data.AppStore <dojox/data/AppStore>`_: A datastore built ontop of this API.  Provides full APP support.
