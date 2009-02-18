@@ -98,6 +98,8 @@ Examples
 Example 1: Create an ATOM Feed model from an existing ATOM document
 -------------------------------------------------------------------
 
+*Note that this demonstrates that the XML document is converted into a JS object structure as shown by displaying the 'feed' by converting it to JSON.  The XML form is also displayed underneath it, demonstrating toString() rebuilding the XML form for submission or whatnot.*
+
 .. cv-compound ::
   
   .. cv :: javascript
