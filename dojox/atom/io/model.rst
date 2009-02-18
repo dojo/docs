@@ -52,6 +52,8 @@ When the model file is loaded, several classes are defined that represent ATOM t
 | `dojox.atom.io.model.Feed <dojox/atom/io/model/Feed>`_            | Atom feed element. Represents an Atom Feed, including the feed elements  |
 |                                                                   | such as the title and author, and also represents the entry list.        |
 +-------------------------------------------------------------------+--------------------------------------------------------------------------+
+| `dojox.atom.io.model.Generator <dojox/atom/io/model/Generator>`_  | Atom generator element                                                   |
++-------------------------------------------------------------------+--------------------------------------------------------------------------+
 | `dojox.atom.io.model.Service <dojox/atom/io/model/Service>`_      | Atom service element                                                     |
 +-------------------------------------------------------------------+--------------------------------------------------------------------------+
 | `dojox.atom.io.model.Workspace <dojox/atom/io/model/Workspace>`_  | Atom workspace element                                                   |
