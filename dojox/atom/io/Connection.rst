@@ -183,7 +183,7 @@ Example 2: Update an entry in a Feed
     </span>
 
 
-
+**Note:** You can see more example usage in the tests file at: dojox/atom/tests/io/module.js
 
 
 ========
