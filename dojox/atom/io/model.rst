@@ -119,8 +119,6 @@ Example 1: Create an ATOM Feed model from an existing ATOM document
        
         //Okay, on success we'll process the ATOM doc and generate the JavaScript model
         deferred.addCallback(function(xmlDoc, ioargs){
-           console.debug(xmlDoc);
-           console.debug("Here.");
            var feedRoot = xmlDoc.getElementsByTagName("feed");
            console.debug("Now Here.");
            var feed = new dojox.atom.io.model.Feed();
@@ -137,7 +135,7 @@ Example 1: Create an ATOM Feed model from an existing ATOM document
         });
  
         deferred.addErrback(function(error){
-           //console.debug(e);
+           console.debug(e);
         });
       }
       //Set the init function to run when dojo loading and page parsing has completed.
@@ -146,8 +144,6 @@ Example 1: Create an ATOM Feed model from an existing ATOM document
 
   .. cv :: html 
 
-    <br>
-    <br>
     <div style="height: 400px; overflow: auto;">
       <b>As JSON (To show that it is creating a JS structure)</b>
       <pre id="simpleAtomJson">
@@ -159,7 +155,42 @@ Example 1: Create an ATOM Feed model from an existing ATOM document
       </pre>
     </span>
 
+Example 2: Create a new ATOM Feed
+---------------------------------
 
+*Note that this demonstrates using the model to create a new Feed document with a single entry*
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojox.atom.io.model");
+
+      //This function performs some basic dojo initialization and will do the fetch calling for this example
+      function initSimpleCreateAtom () {
+        var feed = new dojox.atom.io.model.Feed();
+        feed.id = "This_Is_A_New_Feed_0";
+        feed.addAuthor("John Doe", "johndoe@nowhere.org", "http://johndoeshomepage.org");
+        feed.addLink("http://someurl", "alternate", "en_US", "The primary ATOM link", "http://johndoeshomepage.org");
+        feed.rights = "Copyright Dojo";
+
+        //Emit The XML form of the feed.
+         var xml = dojo.byId("simpleAtomCreate");
+         xml.innerHTML = ""; 
+         xml.appendChild(dojo.doc.createTextNode(feed.toString()));
+      }
+      //Set the init function to run when dojo loading and page parsing has completed.
+      dojo.addOnLoad(initSimpleCreateAtom );
+    </script>
+
+  .. cv :: html 
+
+    <div style="height: 400px; overflow: auto;">
+      <b>As JSON (To show that it is creating a JS structure)</b>
+      <pre id="simpleAtomCreate">
+      </pre>
+    </span>
 
 ========
 See Also
