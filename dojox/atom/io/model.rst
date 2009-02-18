@@ -130,7 +130,7 @@ Example 1: Create an ATOM Feed model from an existing ATOM document
         });
  
         deferred.addErrback(function(error){
-//           console.debug(e);
+           //console.debug(e);
         });
       }
       //Set the init function to run when dojo loading and page parsing has completed.
