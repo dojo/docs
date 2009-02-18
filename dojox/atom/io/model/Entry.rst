@@ -17,7 +17,9 @@ This object represents a Entry tag in an ATOM feed, the core container object of
 Public properties (and their types):
 ====================================
 
-This function extends from `dojox.atom.io.model.AtomItem <dojox/atom/io/model/AtomItem>`_ so please refer to it for lists of properties and functions it inherits.
+This function extends from `dojox.atom.io.model.AtomItem <dojox/atom/io/model/AtomItem>`_ so please refer to it for the list of properties it inherits.
+
+Below are the additional properties defined by this model class:
 
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
 | **Type**                   | **Property**    | **Description**                                                                             |
@@ -29,15 +31,15 @@ This function extends from `dojox.atom.io.model.AtomItem <dojox/atom/io/model/At
 Public functions (and their return types):
 ==========================================
 
-Below are all the functions implemented by this model class.
+This function extends from `dojox.atom.io.model.AtomItem <dojox/atom/io/model/AtomItem>`_ so please refer to it for the list of functions it inherits.
+
+Below are all the additional functions implemented by this model class.
 
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 | **Return Type**   | **Function**                                         | **Description**                                             |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 | Boolean           | accept(String)                                       | Returns whether this item accepts the given tag name.       |
 |                   |                                                      | Overriden by child classes                                  |
-+-------------------+------------------------------------------------------+-------------------------------------------------------------+
-| undefined         | buildFromDom(DOMNode)                                | Builds this Entry from a given DOMNode.                     |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 | String            | toString()                                           | Return the XML representation of the Entry                  |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
