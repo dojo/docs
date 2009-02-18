@@ -27,6 +27,14 @@ Public properties (and their types):
 | String                     | src             | The URL that contains the value of this element                                             |
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
 | String                     | type            | The type of content stored in this element. Acceptable values are listed below.             |
+|                            |                 |                                                                                             |
+|                            |                 |  * HTML                                                                                     |
+|                            |                 |  * TEXT                                                                                     |
+|                            |                 |  * XHTML                                                                                    |
+|                            |                 |  * XML                                                                                      |
++----------------------------+-----------------+---------------------------------------------------------------------------------------------+
+| String                     | xmlLang         | The language of the content. This language is included in the output if this element is put |
+|                            |                 | to a string.                                                                                |
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
 
 Object Variables
