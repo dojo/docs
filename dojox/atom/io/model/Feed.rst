@@ -27,10 +27,6 @@ This function extends from `dojox.atom.io.model.AtomItem <dojox/atom/io/model/At
 
 Below are all the additional functions implemented by this model class.
 
-
-String 	()
-
-
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 | **Return Type**   | **Function**                                         | **Description**                                             |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
