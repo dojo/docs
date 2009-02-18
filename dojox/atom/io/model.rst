@@ -144,10 +144,9 @@ Example 1: Create an ATOM Feed model from an existing ATOM document
 
   .. cv :: html 
 
-    <button dojoType="dijit.form.Button" id="simpleFetchButton">Click me to load an ATOM document and parse it into a model</button >
     <br>
     <br>
-    <span>
+    <div style="height: 400px; overflow: auto;">
       <b>As JSON (To show that it is creating a JS structure)</b>
       <pre id="simpleAtomJson">
       </pre>
