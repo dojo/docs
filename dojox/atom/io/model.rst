@@ -119,7 +119,7 @@ Example 1: Create an ATOM Feed model from an existing ATOM document
         deferred.addCallback(function(xmlDoc, ioargs){
            console.debug(xmlDoc);
            var feed = new dojox.io.atom.Feed();
-           feed.buildFromDom(xmlDoc);
+           feed.buildFromDom(xmlDoc.documentElement);
            var display = dojo.byId("simpleAtom");
            console.debug(feed);
            console.debug(display);
