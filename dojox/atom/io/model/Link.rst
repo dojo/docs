@@ -44,16 +44,15 @@ Public functions (and their return types):
 
 Below are all the functions implemented by this model class.
 
-
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 | **Return Type**   | **Function**                                         | **Description**                                             |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 | Boolean           | accept(String)                                       | Returns whether this item accepts the given tag name.       |
 |                   |                                                      | Overriden by child classes                                  |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
-| undefined         | buildFromDom(DOMNode)                                | Builds this Content from a given DOMNode.                   |
+| undefined         | buildFromDom(DOMNode)                                | Builds this Link from a given DOMNode.                      |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
-| String            | toString()                                           | Return the XML representation of the Content                |
+| String            | toString()                                           | Return the XML representation of the Link                   |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 
 =========
