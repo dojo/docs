@@ -17,18 +17,21 @@ This object represents a person object, which is used for the author and contrib
 Public properties (and their types):
 ====================================
 
+String  	personType  	The type of person this object represents, typically either author or contributor.
+String 	name 	The name of this person object
+String 	email 	This email address of this person
+String 	uri 	This URI of this person
+
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
 | **Type**                   | **Property**    | **Description**                                                                             |
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
-| String                     | href            | The URL for the Link                                                                        |                                                               
+| String                     | personType      | The type of person this object represents, typically either author or contributor.          |
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
-| String                     | hrefLang        | The hrefLang attribute, specifying what language the target link is in.                     |
+| String                     | name            | The name of this person object                                                              |
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
-| String                     | rel             | The rel attribute, describing the relation of this link to the parent item                  |
+| String                     | email           | This email address of this person                                                           |
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
-| String                     | title 	       | The title of the Link                                                                       |
-+----------------------------+-----------------+---------------------------------------------------------------------------------------------+
-| String                     | type            | The type of Link                                                                            |
+| String                     | uri             | The URI of this person, such as a website, etc.                                             |
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
 
 ==========================================
@@ -44,9 +47,9 @@ Below are all the functions implemented by this model class.
 | Boolean           | accept(String)                                       | Returns whether this item accepts the given tag name.       |
 |                   |                                                      | Overriden by child classes                                  |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
-| undefined         | buildFromDom(DOMNode)                                | Builds this Content from a given DOMNode.                   |
+| undefined         | buildFromDom(DOMNode)                                | Builds this Person from a given DOMNode.                    |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
-| String            | toString()                                           | Return the XML representation of the Content                |
+| String            | toString()                                           | Return the XML representation of the Person                 |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 
 =========
