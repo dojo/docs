@@ -123,18 +123,14 @@ Example 1: Create an ATOM Feed model from an existing ATOM document
            console.debug("Now Here.");
            try{
  
-           var feed = new dojox.io.atom.Feed();
+           var feed = new dojox.atom.io.Feed();
            feed.buildFromDom(feedRoot[0]);
-           console.debug("Now now Here.");
-           } catch (e){
-              console.debug(e);
-           }
            var display = dojo.byId("simpleAtom");
            console.debug(feed);
            console.debug(display);
         });
  
-        deferred.addCallback(function(error){
+        deferred.addErrback(function(error){
            console.debug(e);
         });
       }
