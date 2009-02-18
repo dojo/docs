@@ -36,9 +36,9 @@ Below are all the functions implemented by this model class.
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 | **Return Type**   | **Function**                                         | **Description**                                             |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
-| undefined         | buildFromDom(DOMNode)                                | Builds this Category from a given DOMNode.                  |
+| undefined         | buildFromDom(DOMNode)                                | Builds this Generator from a given DOMNode.                 |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
-| String            | toString()                                           | Return the XML representation of the Category               |
+| String            | toString()                                           | Return the XML representation of the Generator              |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 
 =========
