@@ -182,7 +182,7 @@ Example 2: Create a new ATOM Feed
         fTitle.type = "xml";
         feed.title = fTitle;
 
-        //Add an entry
+        //Create an entry
         var entry = feed.createEntry();
         entry.addAuthor("Jane Doe", "janedoe@nowhere.org", "http://johndoeshomepage.org");
         var eTitle = new dojox.atom.io.model.Content();
@@ -190,6 +190,9 @@ Example 2: Create a new ATOM Feed
         eTitle.value = "This <i>is</i> my entry title!";
         eTitle.type = "xml";
         entry.title = eTitle;
+
+        //Add the feed entry to the current feed.
+        feed.addEntry(entry);
 
         //Emit The XML form of the feed.
          var xml = dojo.byId("simpleAtomCreate");
