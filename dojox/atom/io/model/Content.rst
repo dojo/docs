@@ -26,6 +26,8 @@ Public properties (and their types):
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
 | String                     | src             | The URL that contains the value of this element                                             |
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
+| String                     | type            | The type of content stored in this element. Acceptable values are listed below.             |
++----------------------------+-----------------+---------------------------------------------------------------------------------------------+
 
 Object Variables
 String 	type 	The type of content stored in this element. Acceptable values are listed below.
