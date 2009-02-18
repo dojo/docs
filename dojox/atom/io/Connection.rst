@@ -28,3 +28,14 @@ Since this module uses the core `dojo.xhr <dojo/xhr>`_ functions for performing 
 ======================
 Constructor Parameters
 ======================
+
++----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
+| **Parameter**  | **Required** | **Description**                                                                                | **Since** |
++----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
+| sync           | no           |This parameter configures the instance of Connection to issue its requests using the xhr 'sync' | 1.3       |
+|                |              |option.  If it is set to true, then all calls will block until the data is returned.  This is   |           |
+|                |              |not recommended, but available as an option.  The default is false.                             |           |
++----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
+| preventCache   | No           |This parameter tells the Connection whether or not to append a query param to the URL to prevent|1.3        |
+|                |              |the browser from caching the results of the IO call.  The default is false.                     |           |
++----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
