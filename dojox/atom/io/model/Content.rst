@@ -37,16 +37,6 @@ Public properties (and their types):
 |                            |                 | to a string.                                                                                |
 +----------------------------+-----------------+---------------------------------------------------------------------------------------------+
 
-Object Variables
-String 	type 	The type of content stored in this element. Acceptable values are listed below.
-String 	xmlLang 	The language of the content. This language is included in the output if this element is put to a string.
-String 	HTML 	A string representing the HTML type
-String 	TEXT 	A string representing the text type
-String 	XHTML 	A string representing the XHTML type
-String 	XML 	A string representing the XML type
-
-
-
 ==========================================
 Public functions (and their return types):
 ==========================================
@@ -60,9 +50,9 @@ Below are all the functions implemented by this model class.
 | Boolean           | accept(String)                                       | Returns whether this item accepts the given tag name.       |
 |                   |                                                      | Overriden by child classes                                  |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
-| undefined         | buildFromDom(DOMNode)                                | Builds this Category from a given DOMNode.                  |
+| undefined         | buildFromDom(DOMNode)                                | Builds this Content from a given DOMNode.                   |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
-| String            | toString()                                           | Return the XML representation of the Category               |
+| String            | toString()                                           | Return the XML representation of the Content                |
 +-------------------+------------------------------------------------------+-------------------------------------------------------------+
 
 =========
