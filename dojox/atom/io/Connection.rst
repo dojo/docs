@@ -45,12 +45,19 @@ Functions
 =========
 
 +--------------------------------------------------------------+-----------------------------------------------------------------------------+
-| **Function**                                                 | **Descriptions**                                                                                                                                 |
+| **Function**                                                 | **Descriptions**                                                            |
 +--------------------------------------------------------------+-----------------------------------------------------------------------------+
-| getFeed: function(url, callback, errorCallback, scope)       | Function to load a feed from a URL                                          |
+| getFeed(url, callback, errorCallback, scope)                 | Function to load a feed from a URL                                          |
 +--------------------------------------------------------------+-----------------------------------------------------------------------------+
-
-
+| getService(url, callback, errorCallback, scope)              | Function to load an ATOM service document from a URL                        |
++--------------------------------------------------------------+-----------------------------------------------------------------------------+
+| getEntry(url, callback, errorCallback, scope)                | Function to load an ATOM entry from an ATOM feed                            |
++--------------------------------------------------------------+-----------------------------------------------------------------------------+
+| getEntry(url, callback, errorCallback, scope)                | Function to load an ATOM entry from an ATOM feed                            |
++--------------------------------------------------------------+-----------------------------------------------------------------------------+
+| updateEntry(entry, callback, errorCallback,                  | Function to update an entry via APP (PUT of a modified entry                |
+| retrieveUpdated, xmethod, scope)                             |                                                                             |
++--------------------------------------------------------------+-----------------------------------------------------------------------------+
 
 ========
 See Also
