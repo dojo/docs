@@ -145,7 +145,7 @@ Example 2: Update an entry in a Feed
            var entry = feed.getFirstEntry();
 
            //Make this updateable by pointing it to the app test pho script so it can properly post.
-           var entry.setEditHref("/moin_static163/js/dojo/trunk/release/dojo/dojox/atom/tests/io/app.php");
+           entry.setEditHref("/moin_static163/js/dojo/trunk/release/dojo/dojox/atom/tests/io/app.php");
            entry.updated = new Date();
            entry.setTitle('<h1>New Editable Title!</h1>', 'xhtml');
            conn.updateEntry(entry, function() {
