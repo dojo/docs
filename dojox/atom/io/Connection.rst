@@ -58,6 +58,13 @@ Functions
 | updateEntry(entry, callback, errorCallback,                  | Function to update an entry via APP (PUT of a modified entry                |
 | retrieveUpdated, xmethod, scope)                             |                                                                             |
 +--------------------------------------------------------------+-----------------------------------------------------------------------------+
+| addEntry(entry, url, callback, errorCallback,                | Function to add an entry to a feed via APP (POST of a new entry)            |
+| retrieveEntry, scope)                                        |                                                                             |
++--------------------------------------------------------------+-----------------------------------------------------------------------------+
+| deleteEntry(entry,callback,errorCallback,xmethod,scope)      | Function to delete an entry in a feed via APP (DELETE of an exisiting entry |
++--------------------------------------------------------------+-----------------------------------------------------------------------------+
+
+
 
 ========
 See Also
