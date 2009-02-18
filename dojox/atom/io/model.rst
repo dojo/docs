@@ -280,4 +280,5 @@ Example 3: Modify a loaded feed
 See Also
 ========
 
+* `dojox.atom.io.Connection <dojox/atom/io/Connection>`_: An IO class that simplifies doing APP for an ATOM feed.
 * `dojox.data.AppStore <dojox/data/AppStore>`_: A datastore built upon the *io* modules and provides full APP support.
