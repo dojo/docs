@@ -123,6 +123,10 @@ Example 1: Create an ATOM Feed model from an existing ATOM document
            console.debug(feed);
            console.debug(display);
         });
+ 
+        deferred.addCallback(function(error){
+           console.debug(e);
+        });
       }
       //Set the init function to run when dojo loading and page parsing has completed.
       dojo.addOnLoad(initSimpleAtom);
