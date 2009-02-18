@@ -121,12 +121,16 @@ Example 1: Create an ATOM Feed model from an existing ATOM document
            console.debug("Here.");
            var feedRoot = xmlDoc.getElementsByTagName("feed");
            console.debug("Now Here.");
+           try{
            var feed = new dojox.atom.io.Feed();
            feed.buildFromDom(xmlDoc.documentElement);
            var display = dojo.byId("simpleAtomText");
            display.innerHTML = ""; 
            display.appendChild(dojo.doc.createTextNode(feed.toString()));
            console.debug("Meow");
+           } catch (e) {
+             console.debug(e);
+           }
         });
  
         deferred.addErrback(function(error){
