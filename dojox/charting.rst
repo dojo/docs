@@ -181,10 +181,215 @@ One last feature I’d like to touch on is adding multiple plots to the same cha
 
 The charting library is also very flexible in terms of combining chart types, as well as multiple axes. You can set up custom labels for a specific axis, you can set up custom markers for points on a number of different types of charts, and you can even create your own themes for a chart!
 
+START:
 
-=====
-Usage
-=====
+Accessing the Axis
+------------------
+
+The addAxis() call on a chart has several options for defining axes. Similar to addPlot(), this call takes two parameters, a name and an options array. You will need to use “x” and “y” as your axes names unless you gave them custom names in your addPlot() call. Additionally, you don’t have to define the axes if you wish to create charts with one or zero axes. You can also make charts with more than two axes by adding a second plot and attaching axes to it. Using this approach, you can display up to four different axes, two vertical and two horizontal, using two to four plots. Also, a single axis can be shared by more than one plot, meaning you could have two plots that use the same horizontal axis, but have different vertical axes. Let’s look at all the addPlot() options that make this and more possible.
+
+The first option is vertical, this determines if the axis is vertical or horizontal, it defaults to false for a horizontal axis. Make sure that your alignment matches with values set for hAxis and vAxis, which are “x” and “y” by default, on your plot or your chart will not render.
+
+.. code-block :: javascript
+
+  chart1.addPlot("default", {type: "Lines", hAxis: "x", vAxis: "y"});
+  chart1.addAxis("x"); 
+  chart1.addAxis("y", {vertical: true});
+
+Next we have the fixUpper and fixLower options, which align the ticks and have 4 available options; major, minor, micro, and none. These default to none, and when set will force the end bounds to align to the corresponding tick division. If none is chosen, the end bounds will be the highest and lowest values in your data set. Another related option is the includeZero option, which will make your lower bound be zero. If your lowest data value is negative the includeZero option has no effect.
+
+.. code-block :: javascript
+
+  chart1.addAxis("x", {fixUpper: "major", fixLower:"minor"});
+  chart1.addAxis("y", {vertical: true, fixUpper: "major", includeZero: true});
+
+Now let’s examine the leftBottom option. This option defaults to true, and along with the vertical option determines the side of the chart the axis is placed. At the end of Part 1 we examined adding a second plot to our chart. Let’s use that sample and give the second plot its own set of axes and anchor them on the top and right using leftBottom.
+
+.. code-block :: javascript
+
+  var chart1 = new dojox.charting.Chart2D("simplechart");
+  chart1.addPlot("default", {type: "Lines"});
+  chart1.addPlot("other", {type: "Areas", hAxis: "other x", vAxis: "other y"});
+  chart1.addAxis("x");
+  chart1.addAxis("y", {vertical: true});
+  chart1.addAxis("other x", {leftBottom: false});
+  chart1.addAxis("other y", {vertical: true, leftBottom: false});
+  chart1.addSeries("Series 1", [1, 2, 2, 3, 4, 5, 5, 7]);
+  chart1.addSeries("Series 2", [1, 1, 4, 2, 1, 6, 4, 3], 
+          {plot: "other", stroke: {color:"blue"}, fill: "lightblue"}
+  );
+  chart1.render();
+
+Multiple Axes
+-------------
+
+The one thing you may have noticed is that using multiple axes changes the perspective because the second data set is now charted against a different axis. You are in luck because you have full control to adjust the axis in almost every way possible. For example, you can set min and max options.
+
+.. code-block :: javascript
+
+  min: 0
+  max: 7
+
+Enabling and disabling tick marks
+---------------------------------
+
+You can turn on and off the tick marks at the minor and micro level, and turn labels on and off for the major and minor levels
+
+.. code-block :: javascript
+
+  majorLabels: true
+  minorTicks: true
+  minorLabels: true
+  microTicks: false
+
+Natural & Fixed Precision Axis
+------------------------------
+
+The natural property forces all ticks to be on natural numbers, and fixed which will fix the precision on labels and can be specifid as follows.
+
+.. code-block :: javascript
+
+  natural: false		
+  fixed: true
+
+Axis Stepping
+------------------------------
+
+Defining the step between ticks can be specified as follows.
+
+.. code-block :: javascript
+
+  majorTickStep: 4
+  minorTickStep: 2
+  microTickStep: 1
+
+Axis Colors and Styles
+----------------------
+
+The color of the axis, the color and length of your tick marks and the font and color of your labels can be specified as follows.
+
+.. code-block :: javascript
+
+  chart1.addAxis("other y", {vertical: true, 
+	leftBottom: false, 
+	max: 7,
+	stroke: "green",
+	font: "normal normal bold 14pt Tahoma", 
+	fontColor: "red",
+	majorTick: {color: "red", length: 6},
+	minorTick: {stroke: "black", length: 3}
+});
+
+TODO: Axis Properties Example
+
+Adding a Background Grid Plot
+-----------------------------
+
+You can also add a grid at your tick marks to your entire chart by adding a Grid plot. The grid plot allows you to turn the grid on and off for major and minor ticks in both directions, and you can assign axes names if you have multiple axes. Let’s add a grid to the other axes in our above example.
+
+.. code-block :: javascript
+
+  chart1.addPlot("Grid", {type: "Grid",
+  	hAxis: "other x",
+  	vAxis: "other y",
+  	hMajorLines: true,	
+  	hMinorLines: false,	
+  	vMajorLines: true,	
+  	vMinorLines: false,	
+  });
+
+TODO: Grid Plot Example
+
+Using Custom Axis Labels
+------------------------
+
+Dojo Charts provide the ability to assign custom labels to any axis. Make sure to allow sufficient space in your div for the text to display properly. 
+Here is an example using abbreviated month names with a Columns plot.
+
+.. code-block :: javascript
+
+  chart1.addAxis("x", { 
+  	labels: [{value: 1, text: "Jan"}, {value: 2, text: "Feb"}, 
+  		{value: 3, text: "Mar"}, {value: 4, text: "Apr"}, 
+  		{value: 5, text: "May"}, {value: 6, text: "Jun"},
+  		{value: 7, text: "Jul"}, {value: 8, text: "Aug"},
+  		{value: 9, text: "Sep"}, {value: 10, text: "Oct"},
+  		{value: 11, text: "Nov"}, {value: 12, text: "Dec"}]
+  	});
+
+TODO: Month Labels Example
+
+Connecting Charts to Data and Specifying a Data Series
+------------------------------------------------------
+
+Using addSeries(), you can define the data sets that will be displayed on our chart. addSeries() accepts three parameters, a name, a data array and an options array. There is also an updateSeries() call that takes a name and data array for when you want to refresh your data. Let’s run through the options available in the addSeries() call, then look at the data array.
+
+There are only a few options to cover for the addSeries() call. First up is stroke, which covers the color and width of your line or the border of your bar and column type graphs.Along with stroke we have fill, and it determines the color of the fill area under the line in area type line graphs and determines the bar fill color for bar and column type graphs. If you are familiar with SVG or dojox.gfx, stroke and fill should be very familiar.
+
+.. code-block :: javascript
+
+  chart1.addSeries("Series 1", [1, 2, 4, 5, 5, 7], {stroke: {color: "blue", width: 2}, 
+  	fill: "lightblue"});
+
+The other option is marker and it allows you to define custom markers using SVG path segments. Here are some of marker types as defined in the Dojo Charting source code. Note that each is just defined internally as an SVG path:
+
+.. code-block :: javascript
+
+  CIRCLE:		"m-3,0 c0,-4 6,-4 6,0 m-6,0 c0,4 6,4 6,0", 
+  SQUARE:		"m-3,-3 l0,6 6,0 0,-6 z", 
+  DIAMOND:	"m0,-3 l3,3 -3,3 -3,-3 z", 
+  CROSS:		"m0,-3 l0,6 m-3,-3 l6,0", 
+  X:		"m-3,-3 l6,6 m0,-6 l-6,6", 
+  TRIANGLE:	"m-3,3 l3,-6 3,6 z", 
+  TRIANGLE_INVERTED:"m-3,-3 l3,6 3,-6 z"
+
+Now take a look at these options in action using our above example:
+
+TODO: Example Series Options
+
+The data array, is just an array of data. All plot types can accept a one dimensional array, but there are some additional format options available based on the type of chart. With a one-dimensional array for line type graphs the X axis will be integers; 1,2,3… and the data will be the Y axis. For bar type plots the data is the length of the bar and the choice between column or bar type determines the orientation. And for pie type charts the sum of the array is your whole pie. All the plot types except pie can have multiple series.
+
+.. code-block :: javascript
+
+  chart1.addSeries("Series A", [1, 2, 3, 4, 5]);
+
+For any non “stacked” line plot type you can specify coordinate pairs. You need to use keys that correspond to the hAxis and vAxis parameters defined in the addPlot() call. These default to x and y.
+
+  chart1.addSeries("Series A", [{x: 1, y: 5}, {x: 1.5, y: 1.7}, 
+  	{x: 2, y: 9}, {x: 5, y: 3}]);
+  chart1.addSeries("Series B", [{x: 3, y: 8.5}, {x: 4.2, y: 6}, {x: 5.4, y: 2}]);
+
+Here is an example of using coordinate pairs with a scatter plot:
+
+TODO: Example Coordinate Pairs
+
+With any of the stacked plot types each data set added with addSeries() is placed relative to the previous set. Here is a simple example that shows this concept. Instead of the second data set being a straight line across at 1, all the points are 1 above the point from the first data set.
+
+.. code-block :: javascript
+
+  chart1.addSeries("Series 1", [1, 2, 3, 4, 5]);
+  chart1.addSeries("Series 2", [1, 1, 1, 1, 1], {stroke: {color: "red"}});
+
+TODO: Example Stacked Data Series
+
+For pie type charts you can specify additional information: the text label for each slice, the color of the slice and even a font color that overrides the font color definable in the addPlot() call.
+
+.. code-block :: javascript
+
+  chart1.addSeries("Series A", [
+  	{y: 4, color: "red"},
+  	{y: 2, color: "green"},
+  	{y: 1, color: "blue"},
+  	{y: 1, text: "Other", color: "white", fontColor: "red"}
+  ]);
+
+Changing Color Themes
+---------------------
+Under dojox.charting.themes, you will find a variety of predefined color themes for use with Dojo Charting.  Just make sure to require the theme you want to use, and then set the theme on your chart as follows:
+
+.. code-block :: javascript
+
+  chart1.setTheme(dojox.charting.themes.PlotKit.blue);
 
 Updating charts and events
 --------------------------
@@ -344,7 +549,7 @@ See also
 Credits
 =======
 
-Much of the information in the above article originally appeared in the following articles and excerpts have been used with permission from Sitepen.
+Much of the information in the above article originally appeared first in the following articles, and excerpts have been used with permission from Sitepen.
 
 * `A Beginner’s Guide to Dojo Charting, Part 1 of 2 <http://www.sitepen.com/blog/2008/06/06/a-beginners-guide-to-dojo-charting-part-1-of-2/>`_ by Doug McMaster
 * `A Beginner’s Guide to Dojo Charting, Part 2 of 2 <http://www.sitepen.com/blog/2008/06/16/a-beginners-guide-to-dojo-charting-part-2-of-2/>`_ by Doug McMaster
