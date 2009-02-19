@@ -345,5 +345,6 @@ Credits
 =======
 
 Much of the information in the above article originally appeared in the following articles and excerpts have been used with permission from Sitepen.
+
 * `A Beginner’s Guide to Dojo Charting, Part 1 of 2 <http://www.sitepen.com/blog/2008/06/06/a-beginners-guide-to-dojo-charting-part-1-of-2/>`_ by Doug McMaster
 * `A Beginner’s Guide to Dojo Charting, Part 2 of 2 <http://www.sitepen.com/blog/2008/06/16/a-beginners-guide-to-dojo-charting-part-2-of-2/>`_ by Doug McMaster
