@@ -491,17 +491,172 @@ TODO: please explain more. How does this work? Show an example.
 
 Coming with the Dojo 1.2 release, Charting will also support customized events, such as tooltip attachment and mouseover actions!
 
-Animations & Actions
---------------------
+==========================
+Actions & Animated Effects
+==========================
 
-TODO: Explain the animation features (new since V1.2)
+Actions are self-contained objects, which use events to implement certain effects when users interact with a chart. In general they are designed to attract attention and indicate which charting element is selected, or to show additional information.
+
+While you can create your own actions, we took liberty to package some generally useful actions. The default library contains five classes: Highlight, Magnify, MoveSlice, Shake, and Tooltip. All of them take advantage of the Dojo animation support. It is the best to see them live on the demo page (it demonstrates examples of legends as well).
+
+All actions except Tooltip support the following common keyword parameters:
++--------+--------+--------------------------+------------------------------------------------------------------------------+
+| Name   | Type   | Default                  | Description                                                                  |
++--------+--------+--------------------------+------------------------------------------------------------------------------+
+|duration|Number  |400 	                     |The time of effect in milliseconds.                                           |
++--------+--------+--------------------------+------------------------------------------------------------------------------+
+|easing  |Function|dojox.fx.easing.elasticOut|The easing function that specifies how controlled parameter changes over time.|
++--------+--------+--------------------------+------------------------------------------------------------------------------+
+
+You can further experiment with easing functions at DojoCampus.
+
+Highlight
+---------
+
+This action highlights (changes a color by modifying a fill) individual elements of a chart, when a user hovers over an element with the mouse. Affected elements include: markers, columns, bars, circles, and pie slices.
+
+Highlight supports one additional parameter:
++---------+-------------------------------+------------------------------+---------------------------------------------------------------------------+
+| Name    | Type                          | Default                      | Description                                                               |
++---------+-------------------------------+------------------------------+---------------------------------------------------------------------------+
+|highlight|String, dojo.Color, or Function|The default highlight function|This parameter defines the highlight color for an individual element.      |
++---------+-------------------------------+------------------------------+---------------------------------------------------------------------------+
+
+The parameter can be any valid value for a color, e.g., “red”, “#FF0000″, “#F00″, [255, 0, 0], {r: 255, g: 0, b: 0}, and so on. In this case this color will be used to fill an element.
+
+If the parameter is a function, it receives a charting event object (see the previous article for details), and should return a valid color.
+
+The default highlight function uses special heuristics to select the highlight color. It makes it fully saturated, and light for dark colors, or dark for light colors. In many cases this default is more than adequate. But if you feel a need to implement a custom highlighting scheme, you can easily create your own function.
+
+The picture below demonstrates Highlight (with a constant color) and Tooltip actions.
+
+TODO: Highlight and Tooltip Example
+
+Magnify
+-------
+
+This action magnifies an individual element of a chart, when users hover over them with the mouse. Affected elements include markers and circles.
+
+Magnify supports one additional parameter:
+
++------+------+---------+---------------------------------------------------------------------------+
+| Name | Type | Default | Description                                                               |
++------+------+---------+---------------------------------------------------------------------------+
+|scale |Number|2 	|The value to scale an element.                                             |
++------+------+---------+---------------------------------------------------------------------------+
+
+The picture below demonstrates Magnify and Tooltip actions.
+
+TODO: Example Magnify and Tooltip
+
+MoveSlice
+---------
+
+This action moves slices out from a pie chart, when users hover an element with the mouse.
+
+MoveSlice supports the following parameters:
++------+------+---------+---------------------------------------------------------------------------+
+| Name | Type | Default | Description                                                               |
++------+------+---------+---------------------------------------------------------------------------+
+|scale |Number|1.5      |The value to scale an element.                                             |
++------+------+---------+---------------------------------------------------------------------------+
+|shift |Number|7 	|The value in pixels to move an element from the center.                    |
++------+------+---------+---------------------------------------------------------------------------+ 
+
+The picture below demonstrates MoveSlice, Highlight (with default highlighting parameter), and Tooltip actions.
+
+TODO: MoveSlice, Highlight, and Tooltip Examples
+
+Shake
+-----
+
+This action shakes charting elements, when users hover over an element with the mouse. Affected elements include markers, columns, bars, circles, and pie slices.
+
+Shake supports the following parameters:
++------+------+---------+---------------------------------------------------------------------------+
+| Name | Type | Default | Description                                                               |
++------+------+---------+---------------------------------------------------------------------------+
+|shiftX|Number|3 	|The maximal value in pixels to move an element horizontally during a shake.|
++------+------+---------+---------------------------------------------------------------------------+
+|shiftY|Number|3 	|The maximal value in pixels to move an element vertically during a shake.  |
++------+------+---------+---------------------------------------------------------------------------+
+
+Shake is a highly dynamic effect, so a picture cannot do a justice for it. Please go to the demo page and see it in action.
+
+TODO: Shake Example
+
+Tooltip
+-------
+
+This action shows a Tooltip, when users hover over a charting element with the mouse. Affected elements include markers, columns, bars, circles, and pie slices.
+
+Tooltip supports the following keyword parameters:
++------+--------+-------------------------+---------------------------------------------------------------------------+
+| Name | Type   | Default                 | Description                                                               |
++------+--------+-------------------------+---------------------------------------------------------------------------+
+|text  |Function|The default text function|The function to produce a Tooltip text.                                    |
++------+--------+-------------------------+---------------------------------------------------------------------------+
+
+The default text function checks if a data point is an object, and uses an optional “Tooltip” member if available — this is a provision for custom Tooltips. Otherwise, it uses a numeric value. Tooltip text can be any valid HTML, so you can specify rich text multi-line Tooltips if desired.
+
+The picture below demonstrates Tooltip, and Highlight actions.
+
+TODO: Example Tooltip and Highlight
+
+Using Actions
+-------------
+
+All action objects implement the following methods (no parameters are expected by these methods):
++------------+------------------------------------------------------------------------------------------------------------------------------+
+| Name       | Description                                                                                                                  |
++------------+------------------------------------------------------------------------------------------------------------------------------+
+| connect()  |Connect and start handling events. By default, when an action is created, it is connected.                                    | 
+|            |You may need to call fullRender() on your chart object to activate the sending of messages.                                   |
+|            |Typically you create an action object after you define plots, but before the first render() call; it takes care of everything.|
++------------+------------------------------------------------------------------------------------------------------------------------------+
+|disconnect()|Disconnect the event handler.                                                                                                 |
++------------+------------------------------------------------------------------------------------------------------------------------------+
+|destroy()   |Call this method when you want to dispose of your action. It disconnects from its event source and destroys all internal      |
+|            |structures, if any, preparing to be garbage-collected.                                                                        |
++------------+------------------------------------------------------------------------------------------------------------------------------+
+
+All actions can be constructed like this:
+
+.. code-block :: javascript
+
+  var a = new dojox.charting.action2d.Magnify(
+    chart1, 
+    "default", 
+    {duration: 200, scale: 1.1});
+
+The first parameter is a chart. The second parameter is the name of a plot. The third parameter is an object (property bag) with all relevant keyword parameters.
+
+As you can see from the example above you can mixin several actions. In order to avoid unnecessary interference between actions, use your best judgment when selecting them. Try to avoid actions that modify the same visual attributes, like geometry. You can safely mix Tooltip, Highlight, and one geometric action (Magnify, MoveSlice, or Shake).
 
 The Chart Widget
 ----------------
 
+One of the easiest ways to use Dojo Charting is is to use the Chart2D widget. The example below is taken from the Dojo Chart2D widget test:
+
+.. code-block :: html
+  <div dojoType="dojox.charting.widget.Chart2D" id="chart4"
+      theme="dojox.charting.themes.PlotKit.green"
+      style="width: 300px; height: 300px;">
+    <div class="plot" name="default" type="Pie" radius="100"
+        fontColor="black" labelOffset="-20"></div>
+    <div class="series" name="Series C" store="tableStore" 
+        valueFn="Number(x)"></div>
+    <div class="action" type="Tooltip"></div>
+    <div class="action" type="MoveSlice" shift="2"></div>
+  </div>
+
+Yes, it is that simple! just define a <div> with the class “action” and supply the type. If you want to specify a plot’s name, use the “plot” parameter: plot=”Plot1″. By default it will connect to the plot named “default”. If you want to change default keyword parameters, just add them to the <div>, e.g., duration=”500″.
+
 The Chart Legend Widget
 -----------------------
+You can add a legend widget to your charts using dojox.charting.widget.Legend.  The legend automatically takes on the shape markers and colors of the chart to which it is attached. By default the Legend widget uses the “legend” parameter of a series. It reverts to the “name” parameter if legend is not specified.
 
+For a pie chart, the behavior of a Legend is different: if the chart was specified with an array of numbers, it will use numbers. Otherwise it will check object properties in the following order: “legend”, “text”, and the numeric value.
 
 ========
 Examples
