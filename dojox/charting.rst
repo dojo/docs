@@ -55,8 +55,8 @@ This source code produces the following simple chart.
 
 TODO: Live chart example
 
-Simple Chart
-------------
+Simple Charts
+-------------
 
 In the above example you can see that most of the work in defining the chart is done in the addPlot(), addAxis(), and addSeries() functions. The next section examines the addPlot(), addAxis() and addSeries() api's in more detail.
 
@@ -542,11 +542,11 @@ This action magnifies an individual element of a chart, when users hover over th
 
 Magnify supports one additional parameter:
 
-+------+------+---------+---------------------------------------------------------------------------+
++----------+----------+-------------+-------------------------------------------------------------------------------+
 | **Name** | **Type** | **Default** | **Description**                                                               |
-+------+------+---------+---------------------------------------------------------------------------+
-|scale |Number|2 	|The value to scale an element.                                             |
-+------+------+---------+---------------------------------------------------------------------------+
++----------+----------+-------------+-------------------------------------------------------------------------------+
+|scale     |Number    |2 	    |The value to scale an element.                                                 |
++----------+----------+-------------+-------------------------------------------------------------------------------+
 
 The picture below demonstrates Magnify and Tooltip actions.
 
@@ -559,13 +559,13 @@ This action moves slices out from a pie chart, when users hover an element with 
 
 MoveSlice supports the following parameters:
 
-+------+------+---------+---------------------------------------------------------------------------+
++----------+----------+-------------+-------------------------------------------------------------------------------+
 | **Name** | **Type** | **Default** | **Description**                                                               |
-+------+------+---------+---------------------------------------------------------------------------+
-|scale |Number|1.5      |The value to scale an element.                                             |
-+------+------+---------+---------------------------------------------------------------------------+
-|shift |Number|7 	|The value in pixels to move an element from the center.                    |
-+------+------+---------+---------------------------------------------------------------------------+ 
++----------+----------+-------------+-------------------------------------------------------------------------------+
+|scale     |Number    |1.5          |The value to scale an element.                                                 |
++----------+----------+-------------+-------------------------------------------------------------------------------+
+|shift     |Number    |7 	    |The value in pixels to move an element from the center.                        |
++----------+----------+-------------+-------------------------------------------------------------------------------+
 
 The picture below demonstrates MoveSlice, Highlight (with default highlighting parameter), and Tooltip actions.
 
@@ -578,13 +578,13 @@ This action shakes charting elements, when users hover over an element with the 
 
 Shake supports the following parameters:
 
-+------+------+---------+---------------------------------------------------------------------------+
++----------+----------+-------------+-------------------------------------------------------------------------------+
 | **Name** | **Type** | **Default** | **Description**                                                               |
-+------+------+---------+---------------------------------------------------------------------------+
-|shiftX|Number|3 	|The maximal value in pixels to move an element horizontally during a shake.|
-+------+------+---------+---------------------------------------------------------------------------+
-|shiftY|Number|3 	|The maximal value in pixels to move an element vertically during a shake.  |
-+------+------+---------+---------------------------------------------------------------------------+
++----------+----------+-------------+-------------------------------------------------------------------------------+
+|shiftX    |Number    |3 	    |The maximal value in pixels to move an element horizontally during a shake.    |
++----------+----------+-------------+-------------------------------------------------------------------------------+
+|shiftY    |Number    |3 	    |The maximal value in pixels to move an element vertically during a shake.      |
++----------+----------+-------------+-------------------------------------------------------------------------------+
 
 Shake is a highly dynamic effect, so a picture cannot do a justice for it. Please go to the demo page and see it in action.
 
@@ -597,11 +597,11 @@ This action shows a Tooltip, when users hover over a charting element with the m
 
 Tooltip supports the following keyword parameters:
 
-+------+--------+-------------------------+---------------------------------------------------------------------------+
++----------+------------+-----------------------------+-------------------------------------------------------------------------------+
 | **Name** | **Type**   | **Default**                 | **Description**                                                               |
-+------+--------+-------------------------+---------------------------------------------------------------------------+
-|text  |Function|The default text function|The function to produce a Tooltip text.                                    |
-+------+--------+-------------------------+---------------------------------------------------------------------------+
++----------+------------+-----------------------------+-------------------------------------------------------------------------------+
+|text      |Function    |The default text function    |The function to produce a Tooltip text.                                        |
++----------+------------+-----------------------------+-------------------------------------------------------------------------------+
 
 The default text function checks if a data point is an object, and uses an optional “Tooltip” member if available — this is a provision for custom Tooltips. Otherwise, it uses a numeric value. Tooltip text can be any valid HTML, so you can specify rich text multi-line Tooltips if desired.
 
@@ -614,18 +614,18 @@ Using Actions
 
 All action objects implement the following methods (no parameters are expected by these methods):
 
-+------------+------------------------------------------------------------------------------------------------------------------------------+
++----------------+----------------------------------------------------------------------------------------------------------------------------------+
 | **Name**       | **Description**                                                                                                                  |
-+------------+------------------------------------------------------------------------------------------------------------------------------+
-| connect()  |Connect and start handling events. By default, when an action is created, it is connected.                                    | 
-|            |You may need to call fullRender() on your chart object to activate the sending of messages.                                   |
-|            |Typically you create an action object after you define plots, but before the first render() call; it takes care of everything.|
-+------------+------------------------------------------------------------------------------------------------------------------------------+
-|disconnect()|Disconnect the event handler.                                                                                                 |
-+------------+------------------------------------------------------------------------------------------------------------------------------+
-|destroy()   |Call this method when you want to dispose of your action. It disconnects from its event source and destroys all internal      |
-|            |structures, if any, preparing to be garbage-collected.                                                                        |
-+------------+------------------------------------------------------------------------------------------------------------------------------+
++----------------+----------------------------------------------------------------------------------------------------------------------------------+
+| connect()      |Connect and start handling events. By default, when an action is created, it is connected.                                        | 
+|                |You may need to call fullRender() on your chart object to activate the sending of messages.                                       |
+|                |Typically you create an action object after you define plots, but before the first render() call; it takes care of everything.    |
++----------------+----------------------------------------------------------------------------------------------------------------------------------+
+|disconnect()    |Disconnect the event handler.                                                                                                     |
++----------------+----------------------------------------------------------------------------------------------------------------------------------+
+|destroy()       |Call this method when you want to dispose of your action. It disconnects from its event source and destroys all internal          |
+|                |structures, if any, preparing to be garbage-collected.                                                                            |
++----------------+----------------------------------------------------------------------------------------------------------------------------------+
 
 All actions can be constructed like this:
 
