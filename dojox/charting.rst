@@ -500,13 +500,14 @@ Actions are self-contained objects, which use events to implement certain effect
 While you can create your own actions, we took liberty to package some generally useful actions. The default library contains five classes: Highlight, Magnify, MoveSlice, Shake, and Tooltip. All of them take advantage of the Dojo animation support. It is the best to see them live on the demo page (it demonstrates examples of legends as well).
 
 All actions except Tooltip support the following common keyword parameters:
-+--------+--------+--------------------------+------------------------------------------------------------------------------+
-| Name   | Type   | Default                  | Description                                                                  |
-+--------+--------+--------------------------+------------------------------------------------------------------------------+
-|duration|Number  |400 	                     |The time of effect in milliseconds.                                           |
-+--------+--------+--------------------------+------------------------------------------------------------------------------+
-|easing  |Function|dojox.fx.easing.elasticOut|The easing function that specifies how controlled parameter changes over time.|
-+--------+--------+--------------------------+------------------------------------------------------------------------------+
+
++----------+----------+--------------------------+----------------------------------------------------------------------------------+
+| **Name** | **Type** | **Default**              | **Description**                                                                  |
++----------+----------+--------------------------+----------------------------------------------------------------------------------+
+| duration | Number   | 400 	                 |The time of effect in milliseconds.                                               |
++----------+----------+--------------------------+----------------------------------------------------------------------------------+
+| easing   | Function |dojox.fx.easing.elasticOut|The easing function that specifies how controlled parameter changes over time.    |
++----------+----------+--------------------------+----------------------------------------------------------------------------------+
 
 You can further experiment with easing functions at DojoCampus.
 
@@ -516,11 +517,13 @@ Highlight
 This action highlights (changes a color by modifying a fill) individual elements of a chart, when a user hovers over an element with the mouse. Affected elements include: markers, columns, bars, circles, and pie slices.
 
 Highlight supports one additional parameter:
-+---------+-------------------------------+------------------------------+---------------------------------------------------------------------------+
-| Name    | Type                          | Default                      | Description                                                               |
-+---------+-------------------------------+------------------------------+---------------------------------------------------------------------------+
-|highlight|String, dojo.Color, or Function|The default highlight function|This parameter defines the highlight color for an individual element.      |
-+---------+-------------------------------+------------------------------+---------------------------------------------------------------------------+
+
++-----------+-----------------------------------+----------------------------------+-------------------------------------------------------------------+
+| **Name**  | **Type**                          | **Default**                      | **Description**                                                   |
++-----------+-----------------------------------+----------------------------------+-------------------------------------------------------------------+
+| highlight | String, dojo.Color, or Function   | The default highlight function   | This parameter defines the highlight color for an individual      |
+|           |                                   |                                  | element.                                                          |
++-----------+-----------------------------------+----------------------------------+-------------------------------------------------------------------+
 
 The parameter can be any valid value for a color, e.g., “red”, “#FF0000″, “#F00″, [255, 0, 0], {r: 255, g: 0, b: 0}, and so on. In this case this color will be used to fill an element.
 
@@ -555,6 +558,7 @@ MoveSlice
 This action moves slices out from a pie chart, when users hover an element with the mouse.
 
 MoveSlice supports the following parameters:
+
 +------+------+---------+---------------------------------------------------------------------------+
 | Name | Type | Default | Description                                                               |
 +------+------+---------+---------------------------------------------------------------------------+
@@ -573,6 +577,7 @@ Shake
 This action shakes charting elements, when users hover over an element with the mouse. Affected elements include markers, columns, bars, circles, and pie slices.
 
 Shake supports the following parameters:
+
 +------+------+---------+---------------------------------------------------------------------------+
 | Name | Type | Default | Description                                                               |
 +------+------+---------+---------------------------------------------------------------------------+
@@ -591,6 +596,7 @@ Tooltip
 This action shows a Tooltip, when users hover over a charting element with the mouse. Affected elements include markers, columns, bars, circles, and pie slices.
 
 Tooltip supports the following keyword parameters:
+
 +------+--------+-------------------------+---------------------------------------------------------------------------+
 | Name | Type   | Default                 | Description                                                               |
 +------+--------+-------------------------+---------------------------------------------------------------------------+
@@ -607,6 +613,7 @@ Using Actions
 -------------
 
 All action objects implement the following methods (no parameters are expected by these methods):
+
 +------------+------------------------------------------------------------------------------------------------------------------------------+
 | Name       | Description                                                                                                                  |
 +------------+------------------------------------------------------------------------------------------------------------------------------+
@@ -639,6 +646,7 @@ The Chart Widget
 One of the easiest ways to use Dojo Charting is is to use the Chart2D widget. The example below is taken from the Dojo Chart2D widget test:
 
 .. code-block :: html
+
   <div dojoType="dojox.charting.widget.Chart2D" id="chart4"
       theme="dojox.charting.themes.PlotKit.green"
       style="width: 300px; height: 300px;">
