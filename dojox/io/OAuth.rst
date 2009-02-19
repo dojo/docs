@@ -171,7 +171,7 @@ Example 1
 
 TODO: example
 
-=======
+
 Credits
 =======
 The contents of this article are excerpts used with permission from an original article by Tom Trenka at Sitepen:
