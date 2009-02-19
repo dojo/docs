@@ -403,7 +403,7 @@ Chart events allow you to attach behavior to various chart features, such as mar
 
 The following events are supported: onclick, onmouseover, and onmouseout.
 
-Users can attach event handlers to individual plots of a chart:
+Event handlers can be attached to individual plots of a chart:
 
 .. code-block :: javascript
 
@@ -650,3 +650,4 @@ Much of the information in the above article originally appeared first in the fo
 
 * `A Beginner’s Guide to Dojo Charting, Part 1 of 2 <http://www.sitepen.com/blog/2008/06/06/a-beginners-guide-to-dojo-charting-part-1-of-2/>`_ by Doug McMaster
 * `A Beginner’s Guide to Dojo Charting, Part 2 of 2 <http://www.sitepen.com/blog/2008/06/16/a-beginners-guide-to-dojo-charting-part-2-of-2/>`_ by Doug McMaster
+* `Dojo Charting: Event Support Has Landed! <http://www.sitepen.com/blog/2008/05/27/dojo-charting-event-support-has-landed/>`_ by Eugene Latzukin
