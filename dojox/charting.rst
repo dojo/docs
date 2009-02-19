@@ -485,10 +485,6 @@ Dojo Charting provides methods to control arbitrary zooming to drill down to the
 |                                   |All chart's axes (and, by extension, plots) will be affected)                                                  |
 +-----------------------------------+---------------------------------------------------------------------------------------------------------------+
 
-       o The dx parameter specifies the offset of horizontal axes in pixels. It should be >= 0.
-          o The dy parameter specifies the offset of vertical axes in pixels. It should be >= 0.
-          o All chart’s axes (and, by extension, plots) will be affected.
-
 Both methods on Chart perform sanity checks, and won't allow you to scroll outside of axis’ boundaries, or zoom out too far.
 
 Updating Charts and Events
