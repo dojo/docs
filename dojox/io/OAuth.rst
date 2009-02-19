@@ -55,4 +55,4 @@ TODO: example
 ========
 See also
 ========
-* `Introducing OAuth in Dojox <http://www.sitepen.com/blog/2009/02/19/introducing-oauth-in-dojox/>`
+* `Introducing OAuth in Dojox <http://www.sitepen.com/blog/2009/02/19/introducing-oauth-in-dojox/>`_
