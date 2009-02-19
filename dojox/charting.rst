@@ -467,16 +467,25 @@ Zooming, Scrolling, and Panning
 
 Dojo Charting provides methods to control arbitrary zooming to drill down to the smallest details of your chart, scrolling, and panning (moving the chart with you mouse in two dimensions). Note that the latter functionality can be taxing on the browser, but the new generation of browsers (Firefox 3, Safari 3, Opera 9.5) are up to the task.
 
-    * chart.setAxisWindow(name, scale, offset) — Defines a window on the named axis with a scale factor, which starts at the set offset in data coordinates.
-          o The scale parameter must be >= 1.
-          o The offset parameter should be >= 0.
-          o For example if I have an array of 10 numeric values, and I want to show them ##3-8, chart.setWindow(”x”, 3, 2) will do the trick.
-          o This call affects only plots attached to the named axis, other plots are unaffected.
++-----------------------------------+---------------------------------------------------------------------------------------------------------------+
+| **Name**                          | **Description**                                                                                               |
++-----------------------------------+---------------------------------------------------------------------------------------------------------------+
+| setAxisWindow(name, scale, offset)|Defines a window on the named axis with a scale factor.                                                        | 
+|                                   |**scale** must be >= 1.                                                                                        |
+|                                   |**offset** should be >= 0.                                                                                     |
+|                                   |For example if I have an array of 10 numeric values, and I want to show them ##3-8,                            |
+|                                   |chart.setWindow(”x”, 3, 2) will do the trick.                                                                  |
+|                                   |This call affects only plots attached to the named axis, other plots are unaffected.                           |
++-----------------------------------+---------------------------------------------------------------------------------------------------------------+
+| setWindow(sx, sy, dx, dy)         |Sets scale and offsets on all plots of the chart.                                                              | 
+|                                   |**sx** specifies the magnification factor on horizontal axes. It should be >= 1.                               |
+|                                   |**sy** specifies the magnification factor on vertical axes. It should be >= 1.                                 |
+|                                   |**dx** specifies the offset of the horizontal axes in pixels. It should be >= 0.                               |
+|                                   |**dy** specifies the offset of the vertical axes. It should be >= 0.                                           |
+|                                   |All chart's axes (and, by extension, plots) will be affected)                                                  |
++-----------------------------------+---------------------------------------------------------------------------------------------------------------+
 
-    * chart.setWindow(sx, sy, dx, dy) — Sets scale and offsets on all plots of the chart.
-          o The sx parameter specifies the magnification factor on horizontal axes. It should be >= 1.
-          o The sy parameter specifies the magnification factor on vertical axes. It should be >= 1.
-          o The dx parameter specifies the offset of horizontal axes in pixels. It should be >= 0.
+       o The dx parameter specifies the offset of horizontal axes in pixels. It should be >= 0.
           o The dy parameter specifies the offset of vertical axes in pixels. It should be >= 0.
           o All chart’s axes (and, by extension, plots) will be affected.
 
