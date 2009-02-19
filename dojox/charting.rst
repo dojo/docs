@@ -543,7 +543,7 @@ This action magnifies an individual element of a chart, when users hover over th
 Magnify supports one additional parameter:
 
 +------+------+---------+---------------------------------------------------------------------------+
-| Name | Type | Default | Description                                                               |
+| **Name** | **Type** | **Default** | **Description**                                                               |
 +------+------+---------+---------------------------------------------------------------------------+
 |scale |Number|2 	|The value to scale an element.                                             |
 +------+------+---------+---------------------------------------------------------------------------+
@@ -560,7 +560,7 @@ This action moves slices out from a pie chart, when users hover an element with 
 MoveSlice supports the following parameters:
 
 +------+------+---------+---------------------------------------------------------------------------+
-| Name | Type | Default | Description                                                               |
+| **Name** | **Type** | **Default** | **Description**                                                               |
 +------+------+---------+---------------------------------------------------------------------------+
 |scale |Number|1.5      |The value to scale an element.                                             |
 +------+------+---------+---------------------------------------------------------------------------+
@@ -579,7 +579,7 @@ This action shakes charting elements, when users hover over an element with the 
 Shake supports the following parameters:
 
 +------+------+---------+---------------------------------------------------------------------------+
-| Name | Type | Default | Description                                                               |
+| **Name** | **Type** | **Default** | **Description**                                                               |
 +------+------+---------+---------------------------------------------------------------------------+
 |shiftX|Number|3 	|The maximal value in pixels to move an element horizontally during a shake.|
 +------+------+---------+---------------------------------------------------------------------------+
@@ -598,7 +598,7 @@ This action shows a Tooltip, when users hover over a charting element with the m
 Tooltip supports the following keyword parameters:
 
 +------+--------+-------------------------+---------------------------------------------------------------------------+
-| Name | Type   | Default                 | Description                                                               |
+| **Name** | **Type**   | **Default**                 | **Description**                                                               |
 +------+--------+-------------------------+---------------------------------------------------------------------------+
 |text  |Function|The default text function|The function to produce a Tooltip text.                                    |
 +------+--------+-------------------------+---------------------------------------------------------------------------+
@@ -615,7 +615,7 @@ Using Actions
 All action objects implement the following methods (no parameters are expected by these methods):
 
 +------------+------------------------------------------------------------------------------------------------------------------------------+
-| Name       | Description                                                                                                                  |
+| **Name**       | **Description**                                                                                                                  |
 +------------+------------------------------------------------------------------------------------------------------------------------------+
 | connect()  |Connect and start handling events. By default, when an action is created, it is connected.                                    | 
 |            |You may need to call fullRender() on your chart object to activate the sending of messages.                                   |
