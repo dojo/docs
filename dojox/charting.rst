@@ -181,10 +181,8 @@ One last feature I’d like to touch on is adding multiple plots to the same cha
 
 The charting library is also very flexible in terms of combining chart types, as well as multiple axes. You can set up custom labels for a specific axis, you can set up custom markers for points on a number of different types of charts, and you can even create your own themes for a chart!
 
-START:
-
-Accessing the Axis
-------------------
+Specifying Axes
+---------------
 
 The addAxis() call on a chart has several options for defining axes. Similar to addPlot(), this call takes two parameters, a name and an options array. You will need to use “x” and “y” as your axes names unless you gave them custom names in your addPlot() call. Additionally, you don’t have to define the axes if you wish to create charts with one or zero axes. You can also make charts with more than two axes by adding a second plot and attaching axes to it. Using this approach, you can display up to four different axes, two vertical and two horizontal, using two to four plots. Also, a single axis can be shared by more than one plot, meaning you could have two plots that use the same horizontal axis, but have different vertical axes. Let’s look at all the addPlot() options that make this and more possible.
 
@@ -278,7 +276,7 @@ The color of the axis, the color and length of your tick marks and the font and 
 	fontColor: "red",
 	majorTick: {color: "red", length: 6},
 	minorTick: {stroke: "black", length: 3}
-});
+  });
 
 TODO: Axis Properties Example
 
@@ -355,6 +353,8 @@ The data array, is just an array of data. All plot types can accept a one dimens
 
 For any non “stacked” line plot type you can specify coordinate pairs. You need to use keys that correspond to the hAxis and vAxis parameters defined in the addPlot() call. These default to x and y.
 
+.. code-block :: javascript
+
   chart1.addSeries("Series A", [{x: 1, y: 5}, {x: 1.5, y: 1.7}, 
   	{x: 2, y: 9}, {x: 5, y: 3}]);
   chart1.addSeries("Series B", [{x: 3, y: 8.5}, {x: 4.2, y: 6}, {x: 5.4, y: 2}]);
@@ -383,6 +383,11 @@ For pie type charts you can specify additional information: the text label for e
   	{y: 1, text: "Other", color: "white", fontColor: "red"}
   ]);
 
+Using dojo.data Data Sources with Charts
+----------------------------------------
+
+TODO
+
 Changing Color Themes
 ---------------------
 Under dojox.charting.themes, you will find a variety of predefined color themes for use with Dojo Charting.  Just make sure to require the theme you want to use, and then set the theme on your chart as follows:
@@ -391,7 +396,93 @@ Under dojox.charting.themes, you will find a variety of predefined color themes 
 
   chart1.setTheme(dojox.charting.themes.PlotKit.blue);
 
-Updating charts and events
+Chart Events
+------------
+
+Chart events allow you to attach behavior to various chart features, such as markers in response to user actions.
+
+The following events are supported: onclick, onmouseover, and onmouseout.
+
+Users can attach event handlers to individual plots of a chart:
+
+.. code-block :: javascript
+
+  chart.connectToPlot(
+      plotName,    // the unique plot name you specified when creating a plot
+      object,      // both object and method are the same used by dojo.connect()
+      method       // you can supply a function without an object
+  );
+
+The event handler receives one argument. While it tries to unify information for different charts, its exact layout depends on the chart type:
+
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| **Attribute**  | **Expected Value**                      | **Description**                                                               | **Since** |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| type           | “onclick”, “onmouseover”, “onmouseout”  |differentiate between different types of events.                               | 1.0       |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| element        | "marker","bar","column","circle","slice"|Indicates what kind of element has sent the event.                             | 1.0       |
+|                |                                         |Can be used to define highlighting or animation strategies.                    |           |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| x              | number                                  |The “x” value of the point. Can be derived from the index (depends on a chart).| 1.0       |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| y              | number                                  |The “y” value of the point. Can be derived from the index (depends on a chart).| 1.0       |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| index          | number                                  |The index of a data point that caused the event.                               | 1.0       |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| run            | object                                  |The data run object that represents a data series.                             | 1.0       |
+|                |                                         |Example: o.run.data[o.index]                                                   |           |
+|                |                                         |returns the original data point value for the event                            |           |
+|                |                                         |(o is an event handler’s argument).                                            |           |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| plot           | object                                  |The plot object that hosts the event’s data point.                             | 1.0       |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| hAxis          | object                                  |The axis object that is used as a horizontal axis by the plot.                 | 1.0       |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| vAxis          | object                                  |The axis object that is used as a vertical axis by the plot.                   | 1.0       |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| event          | object                                  |The original mouse event that started the event processing.                    | 1.0       |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| shape          | object                                  |The gfx shape object that represents a data point.                             | 1.0       |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| outline        | object                                  |The gfx shape object that represents an outline (a cosmetic shape).            | 1.0       |
+|                |                                         |Can be null or undefined.                                                      |           |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| shadow         | object                                  |The gfx shape object that represents a shadow (cosmetic shape).                | 1.0       |
+|                |                                         |Can be null or undefined.                                                      |           |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| cx             | number                                  |The “x” component of the visual center of a shape in pixels.                   | 1.0       |
+|                |                                         |Supplied only for “marker”, “circle”, and “slice” elements.                    |           |
+|                |                                         |Undefined for all other elements                                               |           |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| cy             | number                                  |The “y” component of the visual center of a shape in pixels.                   | 1.0       |
+|                |                                         |Supplied only for “marker”, “circle”, and “slice” elements.                    |           |
+|                |                                         |Undefined for all other elements                                               |           |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| cr             | number                                  |The radius in pixels of a “circle”, or a “slice” element.                      | 1.0       |
+|                |                                         |Undefined for all other elements                                               |           |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+
+Zooming, Scrolling, and Panning
+-------------------------------
+
+Dojo Charting provides methods to control arbitrary zooming to drill down to the smallest details of your chart, scrolling, and panning (moving the chart with you mouse in two dimensions). Note that the latter functionality can be taxing on the browser, but the new generation of browsers (Firefox 3, Safari 3, Opera 9.5) are up to the task.
+
+    * chart.setAxisWindow(name, scale, offset) — Defines a window on the named axis with a scale factor, which starts at the set offset in data coordinates.
+          o The scale parameter must be >= 1.
+          o The offset parameter should be >= 0.
+          o For example if I have an array of 10 numeric values, and I want to show them ##3-8, chart.setWindow(”x”, 3, 2) will do the trick.
+          o This call affects only plots attached to the named axis, other plots are unaffected.
+
+    * chart.setWindow(sx, sy, dx, dy) — Sets scale and offsets on all plots of the chart.
+          o The sx parameter specifies the magnification factor on horizontal axes. It should be >= 1.
+          o The sy parameter specifies the magnification factor on vertical axes. It should be >= 1.
+          o The dx parameter specifies the offset of horizontal axes in pixels. It should be >= 0.
+          o The dy parameter specifies the offset of vertical axes in pixels. It should be >= 0.
+          o All chart’s axes (and, by extension, plots) will be affected.
+
+Both methods on Chart perform sanity checks, and won't allow you to scroll outside of axis’ boundaries, or zoom out too far.
+
+Updating Charts and Events
 --------------------------
 
 Charting was designed with periodic updating in mind. Say you have an application that remotely monitors something: the stock market, a database server, etc. With dojox.charting, you can set up a chart and then simply update the series on the charts--resulting in a fast, fluid monitoring experience. In fact, charting has been used for such things as remote CPU monitoring.
@@ -400,10 +491,16 @@ TODO: please explain more. How does this work? Show an example.
 
 Coming with the Dojo 1.2 release, Charting will also support customized events, such as tooltip attachment and mouseover actions!
 
-Animations
-----------
+Animations & Actions
+--------------------
 
 TODO: Explain the animation features (new since V1.2)
+
+The Chart Widget
+----------------
+
+The Chart Legend Widget
+-----------------------
 
 
 ========
