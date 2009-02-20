@@ -1,7 +1,7 @@
 #format dojo_rst
 
 dojox.io.OAuth
-===============
+==============
 
 :Status: Draft
 :Version: 1.0
@@ -88,7 +88,7 @@ Once all of the parameters of the request are provided, the signature process do
    1. Assembles all of the parameters of the request in alphabetical order, and concatenates them with the & character;
    2. Prepends the HTTP method and the URL-encoded URI to the list, also using the & character;
    3. Generates a signature using the specified signature method;
-   4. Appends the signature to the URI request using the oauth_signature parameter. 
+   4. Appends the signature to the URI request using the oauth_signature parameter.
 
 The OAuth protocol supports three signature methods: PLAINTEXT, HMAC-SHA1, and RSA-SHA1. The PLAINTEXT method simply passes back the consumer and user token secrets; for obvious reasons, this signature method is not recommended. Both the HMAC and RSA methods use their respective encryption algorithms to generate a digest. The most common method used is HMAC-SHA1, since this method does not require the exchange of private keys.
 
@@ -172,7 +172,10 @@ Example 1
 TODO: example
 
 
+=======
 Credits
 =======
+
 The contents of this article are excerpts used with permission from an original article by Tom Trenka at Sitepen:
+
 * `Introducing OAuth in Dojox <http://www.sitepen.com/blog/2009/02/19/introducing-oauth-in-dojox/>`_
