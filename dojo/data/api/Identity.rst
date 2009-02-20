@@ -55,7 +55,7 @@ Basic lookup of an item by identity
 
   function gotItem(item) {
     if (itemStore.isItem(item)){
-      if(!(itemStore.getValue(item,"name") === "El Salvador")){{
+      if(!(itemStore.getValue(item,"name") === "El Salvador")){
         failed(new Error("The item loaded does not have the attribute value for attribute [name] expected."));
       }else{
         ... //Do something with it.
@@ -67,7 +67,7 @@ Basic lookup of an item by identity
   }
 
   //Invoke the lookup. This is an async call as it may have to call back to a server to get data.
-  itemStore.fetchItemByIdentity({identity: "sv" onItem: gotItem, onError: failed});
+  itemStore.fetchItemByIdentity({identity: "sv", onItem: gotItem, onError: failed});
 
 
 Obtaining the value of an item's identity
