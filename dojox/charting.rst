@@ -58,7 +58,7 @@ TODO: Live chart example
 Charting Basics
 ---------------
 
-As part of configur any Chart, you'll need to define Plots, Axes and Series data. Plots describe how data is to be visualized.  Axes describe the dimensions of data that are being visualized and includes things like specifying labels.  Series describes the Data itself that the chart will visualize.
+As part of configuring any Chart, you'll need to define Plots, Axes and Series data. Plots describe how data is to be visualized.  Axes describe the dimensions of data that are being visualized and includes things like specifying labels.  Series describes the Data itself that the chart will visualize.
 
 Adding Plots
 ------------
