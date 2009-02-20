@@ -55,22 +55,21 @@ This source code produces the following simple chart.
 
 TODO: Live chart example
 
-Simple Charts
--------------
+Charting Basics
+---------------
 
-In the above example you can see that most of the work in defining the chart is done in the addPlot(), addAxis(), and addSeries() functions. The next section examines the addPlot(), addAxis() and addSeries() api's in more detail.
+As part of configur any Chart, you'll need to define Plots, Axes and Series data. Plots describe how data is to be visualized.  Axes describe the dimensions of data that are being visualized and includes things like specifying labels.  Series describes the Data itself that the chart will visualize.
 
-Got Plot?
----------
+Adding Plots
+------------
 
-The addPlot() call determines what type of chart you are going to produce, and there are a variety of options to select. Here are a few examples:
+The addPlot() call is used to determine what type of chart you are going to produce, and there are a variety of options to select. Here are a few examples:
 
-Some Chart Types
-----------------
+TODO: Examples of Different Chart Plot Types
 
-addPlot() accepts 2 parameters, a name and an arguments array. The name is important if you want to have more than 1 plot type on your chart, a concept we will cover shortly. The arguments array contains your options, and these may vary depending on the type of plot you use. Note that your choice of plot type may define appropriate default options.
+addPlot() accepts 2 parameters, a name and an arguments array. The name is important if you want to have more than one plot type on your chart. The arguments array contains your plot options, and these may vary depending on the type of plot you use. Note that your choice of plot type may define appropriate default options.
 
-Let’s examine our options. Type is the main option, and the default value is a basic line chart.
+**type** is the main option, with a default value being a basic line chart.
 
 .. code-block :: javascript
 
@@ -78,31 +77,31 @@ Let’s examine our options. Type is the main option, and the default value is a
 
 Available 2D chart types include:
 
-  * Areas - Area under data line(s) will be filled
-  * Bars - Horizontal bars.
-  * ClusteredBars - Horizontal bars with clustered data sets
-  * ClusteredColumns - Vertical bars with clustered data sets
-  * Columns - Vertical bars
-  * Grid - For adding a grid layer to you chart
-  * Lines - Basic line chart
-  * Markers - Lines with markers
-  * MarkersOnly - Markers, sans lines
-  * Pie - Goes great with punch!
-  * Scatter - Cooler name for MarkersOnly
-  * Stacked - Data sets charted in relation to the previous data set.
-  * StackedAreas - Stacked data sets with filled areas under chart lines
-  * StackedBars - Stacked data sets with horizontal bars
-  * StackedColumns - Stacked data sets with vertical bars
-  * StackedLines - Stacked data sets using lines
+  * **Areas** - Area under data line(s) will be filled
+  * **Bars** - Horizontal bars.
+  * **ClusteredBars** - Horizontal bars with clustered data sets
+  * **ClusteredColumns** - Vertical bars with clustered data sets
+  * **Columns** - Vertical bars
+  * **Grid** - For adding a grid layer to you chart
+  * **Lines** - Basic line chart
+  * **Markers** - Lines with markers
+  * **MarkersOnly** - Markers, sans lines
+  * **Pie** - Goes great with punch!
+  * **Scatter** - Cooler name for MarkersOnly
+  * **Stacked** - Data sets charted in relation to the previous data set.
+  * **StackedAreas** - Stacked data sets with filled areas under chart lines
+  * **StackedBars** - Stacked data sets with horizontal bars
+  * **StackedColumns** - Stacked data sets with vertical bars
+  * **StackedLines** - Stacked data sets using lines
 
-With any of the lines, areas or markers types you have 5 specific options. First, there are three options for controlling aspects of lines, areas, and markers. These are often defined by the chosen plot type, but can be changed to get other behaviors. The lines option determines whether or not lines are used to connect data points. If the areas type is selected, the area below the data line will be filled. The markers option will determine if markers are placed at data points.
+With any of the lines, areas or markers types you have five specific options. First, there are three options for controlling aspects of **lines**, **areas**, and **markers**. These are often defined by the chosen plot type, but can be changed to get other behaviors. The lines option determines whether or not lines are used to connect data points. If the areas type is selected, the area below the data line will be filled. The markers option will determine if markers are placed at data points.
 
 .. code-block :: javascript
 
   chart1.addPlot("default", {type: "StackedAreas", lines: true, areas: true, 
   	markers: false});
 
-There are also two graphical options, tension and shadows. Tension allows you to add some curve to the lines on you plot. By default this option is set to 0 which is off. A tension in the range from 2 to 4 should be a good range for natural looking curves. For some crazy effects try setting the tension to values < 1 or negative. Shadows allow you to add a shadow effect, and consists of an array of three parameters, dx, dy and dw, which represent the offset to the right, the offset down, and the width of the shadow line, respectively. Negative values can be specified for the dx and dy parameters to produce a shadow that is to the left or above the chart line.
+There are also two graphical options, **tension** and **shadows**. Tension allows you to add some curve to the lines on you plot. By default this option is set to 0 which is off. A tension in the range from 2 to 4 should be a good range for natural looking curves. For some crazy effects try setting the tension to values < 1 or negative. Shadows allow you to add a shadow effect, and consists of an array of three parameters, dx, dy and dw, which represent the offset to the right, the offset down, and the width of the shadow line, respectively. Negative values can be specified for the dx and dy parameters to produce a shadow that is to the left or above the chart line.
 
 .. code-block :: javascript
 
