@@ -80,9 +80,9 @@ Priority 4: DojoX
 
   needed: examples or subpages?
 
-* `dojox.atom <dojox/atom>`_
+* `dojox.atom <dojox/atom/widget>`_
 
-  needed: Everything (docs, examples, etc).
+  needed: Document the widgets.  The IO layer is already documented.
 
 * `dojox.av.FLAudio <dojox/av/FLAudio>`_
 
