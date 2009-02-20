@@ -159,10 +159,7 @@ Shadows and curve can be added to the lines, and markers on data points as follo
 
 The resulting chart looks like this:
 
-TODO: Example
-
-Some Chart Types
-----------------
+TODO: Example Chart
 
 One last feature I’d like to touch on is adding multiple plots to the same chart. Multiple plots can be of differing types and can all be configured separately. Each plot you add with addPlot() will be layered behind the previous plot. In addition, plots can have their own axes or share them with other plots on the chart. Now, if we add an areas plot to our lines example, we can create the following effect.
 
