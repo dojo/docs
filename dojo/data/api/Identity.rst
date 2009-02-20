@@ -47,7 +47,7 @@ Basic lookup of an item by identity
 
 .. code-block :: javascript
 
-  var itemStore = new dojo.data.ItemFileReadStore({url: countries.json});
+  var itemStore = new dojo.data.ItemFileReadStore({url: 'countries.json'});
 
   function failed(error) {
     ... //Do something with the provided error.
@@ -75,7 +75,7 @@ Obtaining the value of an item's identity
 
 .. code-block :: javascript
 
-  var itemStore = new dojo.data.ItemFileReadStore({url: countries.json});
+  var itemStore = new dojo.data.ItemFileReadStore({url: 'countries.json'});
   ...
   function onError(error, request){
     ... //Do something with the provided error.
@@ -102,7 +102,7 @@ Obtaining the list of attributes that comprise the identity of an item
 
 .. code-block :: javascript
 
-  var itemStore = new dojo.data.ItemFileReadStore({url: countries.json});
+  var itemStore = new dojo.data.ItemFileReadStore({url: 'countries.json'});
 
   function failed(error) {
     ... //Do something with the provided error.
