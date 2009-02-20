@@ -35,7 +35,7 @@ Top priority: dojo.js
 
 * `dojo.setContext <dojo/setContext>`_
 
-  needed: full page
+  needed: Review.  Fill out TODOs or remove.
 
 * `dojo.withGlobal <dojo/withGlobal>`_
 
