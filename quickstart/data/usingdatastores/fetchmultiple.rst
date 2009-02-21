@@ -16,7 +16,7 @@ You will likely want to access multiple items from such a data source as in the 
 * Do this if there is an error
 * Do that when everything is loaded
 
-If this sounds like it might be event-driven, that's because it is.  Most I/O methods in Ajax must perform operations asynchronously, so results and errors have to be returned through events (commonly called callbacks).  Because of the asynchronous requirements of the I/O methods, the dojo.data API was designed to operate in an asynchronous manner and use events for item retrieval.  Obtaining multiple items is one o the primary operations of dojo.data that people will use and first experience the necessities of callbacks.   
+If this sounds like it might be event-driven, that's because it is.  Most I/O methods in Ajax must perform operations asynchronously, so results and errors have to be returned through events (commonly called callbacks).  Because of the asynchronous requirements of the I/O methods, the dojo.data API was designed to operate in an asynchronous manner and use events for item retrieval.  Obtaining multiple items is one of the primary operations of dojo.data that people will use and first experience the necessities of callbacks.   
 
 This page demonstrates the absolute basics of obtaining multiple items in one request.  The prime method called is the  dojo.data.api.Read.fetch()
 
