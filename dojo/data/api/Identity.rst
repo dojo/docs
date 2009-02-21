@@ -76,10 +76,11 @@ Obtaining the value of an item's identity
 .. code-block :: javascript
 
   var itemStore = new dojo.data.ItemFileReadStore({url: 'countries.json'});
-  ...
+
   function onError(error, request){
     ... //Do something with the provided error.
   }
+
   function onComplete(items, request) {
     if(items.length === 1){
       var identifier = itemStore.getIdentity(items[0]);
