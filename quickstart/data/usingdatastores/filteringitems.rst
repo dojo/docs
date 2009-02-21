@@ -12,7 +12,7 @@ Querying
 
 There are many times when you might not want an entire item list. Though you could fetch the entire list, and loop through to select elements, dojo.data's API definition has facilities to do the tough work for you.
 
-Selecting subsets of items requires a query. A query can be anything from a String to a a JavaScript object that has attributes which look a lot like the attributes of the data store. In the case of a JavaScript object it's a kind of query-by-example. Most datastores in dojo and dojox implement their query function this way, so it will be used for this example. Just be aware it is possible for a datastore to provide alternate query syntaxes, such as a straight string.
+Selecting subsets of items requires a query. A query can be anything from a String to a JavaScript object that has attributes which look a lot like the attributes of the data store. In the case of a JavaScript object it's a kind of query-by-example. Most datastores in dojo and dojox implement their query function this way, so it will be used for this example. Just be aware it is possible for a datastore to provide alternate query syntaxes, such as a straight string.
 
 In any event, on to what querying is all about:
 
