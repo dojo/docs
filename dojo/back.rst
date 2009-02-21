@@ -5,7 +5,7 @@ dojo.back
 
 :Status: Contributed, Draft
 :Version: 1.0
-:Available: since V0.4
+:Available: 1.0
 
 .. contents::
     :depth: 2
@@ -21,25 +21,14 @@ Initialization
 
 To use dojo.back:
 
-1. Define **preventBackButtonFix: false** in your djConfig like this:.
-
-   .. code-block :: javascript
-
-      <script type="text/javascript"  src="../dojo.js"
-          djConfig="preventBackButtonFix: false">
-      </script>
-   ..
-
-   This allows the hidden iframe to be added to the current page via a document.write(). If you don't do this, dojo.back will not work correctly.
-
-2. Add the appropriate require statement:
+1. Add the appropriate require statement:
 
    .. code-block :: javascript
 
       dojo.require("dojo.back");
    ..
 
-3. Register the initial state of the page by calling:
+2. Register the initial state of the page by calling:
 
    .. code-block :: javascript
 
@@ -62,6 +51,18 @@ To use dojo.back:
            forward: function() { alert("Forward was clicked!"); }
        };
    ..
+
+3. Call dojo.back.init(); inside a script tag that is inside the <body> tag:
+
+   .. code-block :: javascript
+
+       <body>
+         <script type="text/javascript">dojo.back.init();</script>
+         (rest of the body here)
+       </body>
+
+   ..
+
 
 Register a state object
 -----------------------
