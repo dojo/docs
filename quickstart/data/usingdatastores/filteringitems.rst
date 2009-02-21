@@ -388,10 +388,10 @@ Enter your own query for name and aisle
     <div dojoType="dijit.form.Button" jsId="button3">Click to search!</div>
     <br>
     <br>
-    <b>Query used: </b><span id="query"></span
+    <b>Query used: </b><span id="query"></span>
     <br>
     <br>
-    <b>Query Options used: </b><span id="queryOptions"></span
+    <b>Query Options used: </b><span id="queryOptions"></span>
     <br>
     <br>
     <b>Items located:</b>
