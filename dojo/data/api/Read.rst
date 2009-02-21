@@ -362,7 +362,7 @@ fetch
     //        an attribute named attrFoo, with a value that starts with 'value'.
     //
     //    The *queryOptions* parameter
-    //        The queryOptions parameter is an optional parameter used to specify optiosn that may modify
+    //        The queryOptions parameter is an optional parameter used to specify options that may modify
     //        the query in some fashion, such as doing a case insensitive search, or doing a deep search
     //        where all items in a hierarchical representation of data are scanned instead of just the root 
     //        items.  It currently defines two options that all datastores should attempt to honor if possible:
