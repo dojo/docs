@@ -111,14 +111,14 @@ Obtaining the list of attributes that comprise the identity of an item
 
   function gotItem(item) {
     if (itemStore.isItem(item)){
-      if(!(itemStore .getValue(item,"name") === "El Salvador")){{
+      if(!(itemStore .getValue(item,"name") === "El Salvador")){
         failed(new Error("The item loaded does not have the attribute value for attribute [name] expected."));
       }else{
         var identityAttributes = itemStore.getIdentityAttributes(item);
         if(identityAttributes !== null){
           for(var i = 0; i < identityAttributes.length; i++){
             var identifier = identityAttributes[i];
-            ... //Do something with 'identifier'.
+            //Do something with 'identifier'.
           }
         }else{
           failed(new Error("Unable to locate the list of attributes comprising the identity."));
