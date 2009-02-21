@@ -34,7 +34,7 @@ Given a dataset like:
       { name: 'Black Pepper', aisle: 'Spices',  price: 1.01 }
   ]}
 
-There are times it would be useful to only work with a subset of those items. For example,, maybe you want to locate things only found in the spices aisle. In other words, you want to find all items that match:
+There are times it would be useful to only work with a subset of those items. For example, maybe you want to locate things only found in the spices aisle. In other words, you want to find all items that match:
 
 .. code-block :: javascript 
   
