@@ -293,7 +293,7 @@ Sample code:  Detecting child items
 Lazy-Loading
 ============
 
-Okay, detecting if items contain child items looks simple; one function call to isItem().  But ... doesn't dojo.data also support lazy-loading of items to keep from having to pull down data that may never be used?  Yes, it does.  This is done through using two more functions to perform tests to see if an item is completely inflated or not, *isItemLoaded(item)* and *loadItem(keywordargs)*.  These functions provide methods for loading items tha are currently only stubs and not fully inflated.  So if we wish to make the **Sample One**, what would it look like?  See below for an example:
+Okay, detecting if items contain child items looks simple; one function call to isItem().  But ... doesn't dojo.data also support lazy-loading of items to keep from having to pull down data that may never be used?  Yes, it does.  This is done through using two more functions to perform tests to see if an item is completely inflated or not, *isItemLoaded(item)* and *loadItem(keywordargs)*.  These functions provide methods for loading items that are currently only stubs and not fully inflated.  So if we wish to make the **Sample One**, what would it look like?  See below for an example:
 
 Sample code:  Detecting child items and lazy-loading items on demand
 --------------------------------------------------------------------
