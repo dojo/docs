@@ -103,7 +103,7 @@ By definition, items are unique to their store instance, so you cannot generally
             var newItem = {};
             var values = origStore.getValues(item, attributes[j]);
 
-            //Be careful here. If you reference other items then those too have to be cloned over in a similar manner (iterating over the             attributes and building up a structure for a newItem call. This pseudocode doesn't really take that into accoumt.
+            //Be careful here. If you reference other items then those too have to be cloned over in a similar manner (iterating over the attributes and building up a structure for a newItem call. This pseudocode doesn't really take that into accoumt.
             if (values) {
               if (values.length > 1) {
                 //Create a copy.
