@@ -69,7 +69,7 @@ The Dojo build system is used to create efficient optimized packages of JavaScri
 `The Dojo API Doc System <util/doctools>`_
 -------------------------------------------
 
-Dojo uses a custom inline comment syntax which produces well structured xml, and powers the official `API Docs <http://api.dojotoolkit.org>`_ . 
+Dojo uses a custom inline comment syntax which produces well structured xml, and powers the official `API Docs <http://api.dojocampus.org/>`_ . 
 
 `ShrinkSafe <shrinksafe/index>`_
 ---------------------------------
