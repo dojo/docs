@@ -83,7 +83,7 @@ This is actually not difficult to do. This is done through usage of the dojo.dat
 Question 4:  Okay, I want to copy items from one store to another, but if I directly pass items I get errors. What do I do?
 ===========================================================================================================================
 
-By definition, items are unique to their store instance, so you cannot generally pass an item from store A to store B without getting errors. What you must do is copy the data from one store to another. The technique for this is actually very similar to the technique described in question 3. You must iterate over the items attributes, buld a JavaScript Objetc of them, then on the target store, call 'newItem' to create the copy of the item. Psuedocode for this would be like:
+By definition, items are unique to their store instance, so you cannot generally pass an item from store A to store B without getting errors. What you must do is copy the data from one store to another. The technique for this is actually very similar to the technique described in question 3. You must iterate over the items attributes, build a JavaScript Object of them, then on the target store, call 'newItem' to create the copy of the item. Psuedocode for this would be like:
 
 .. code-block :: javascript
 
