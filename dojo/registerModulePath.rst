@@ -21,7 +21,7 @@ Dojo maps module names used in dojo.require calls to paths names. By default, Do
 
 The first part is dojo.baseUrl: the path to the Dojo directory. For example, assume the path to dojo.js is "/web/scripts/dojo-1.2/dojo/dojo.js". The baseUrl is "/web/scripts/dojo-1.2/dojo/". Dojo automatically determines this path, but you can explicitly set it via djConfig.baseUrl.  
 
-Next, Dojo assumes the the path for any module names that start with a prefix other than "dojo" are in a sibling directory to the dojo directory.
+Next, Dojo assumes that the path for any module names that start with a prefix other than "dojo" are in a sibling directory to the dojo directory.
 
 For instance, if "/web/scripts/dojo-1.2/dojo/dojo.js" is the path to dojo.js, and you do dojo.require("some.module"), Dojo will try to load the JavaScript file using the path "/web/scripts/dojo-1.2/some/module.js".
 
