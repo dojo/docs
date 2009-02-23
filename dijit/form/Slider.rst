@@ -12,14 +12,8 @@ dijit.form.Slider
 .. contents::
     :depth: 2
 
-A **dijit.form.Slider** is a scale with a handle you can drag up/down or left/right to select a value. 
+A **dijit.form.HorizontalSlider** or **dijit.form.VerticalSlider**is a scale with a handle you can drag up/down or left/right to select a value. 
 
-
-=====
-Usage
-=====
-
-Calling dojo.require("dijit.form.Slider") provides dijit.form.HorizontalSlider, dijit.form.VerticalSlider and all the rule and label classes.
 
 
 ========
