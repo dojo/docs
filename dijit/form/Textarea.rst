@@ -41,7 +41,7 @@ First we will create a Textarea widget programatically. Notice how we pass the *
 
   .. cv:: html
 
-    <textarea id="myarea" />
+    <textarea id="myarea"></textarea>
 
 Declarative example
 -------------------
