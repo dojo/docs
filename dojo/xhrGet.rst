@@ -498,6 +498,56 @@ Example 8: dojo.xhrGet call with headers
     <div id="getLicenseHeaders" style="height: 200px;"></div>
 
 
+Example 9: dojo.xhrGet call and checking the xhr 'status' code in 'handle'
+--------------------------------------------------------------------------
+*Note: This shows using switch in a generic handle function to error display some message based on a particular failure or success.*
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      function getLicenseErrorStatusWithHandle() {
+        //Look up the node we'll stick the text under.
+        var targetNode = dojo.byId("getLicenseErrorStatusWithHandle");
+        
+        //The parameters to pass to xhrGet, the url, how to handle it, and the callbacks.
+        var xhrArgs = {
+          url: "/moin_static163/js/dojo/trunk/dojo/LICENSE_NOT_THERE",
+          handleAs: "text",
+          preventCache: true,
+          handle: function(error, ioargs){
+            var message = "";
+            switch(ioargs.xhr.status){
+               case 200: 
+                 message = "Good request.";
+                 break;
+               case 404:
+                 message = "The requested page was not found";
+                 break;
+               case 500:
+                 message = "The server reported an error.";
+                 break;
+               case 407:
+                 message = "You need to authenticate with a proxy.";
+                 break;
+               default:
+                 message = "Unknown error.";
+            }
+            targetNode.innerHTML = message;
+          }
+        }
+
+        //Call the asynchronous xhrGet
+        var deferred = dojo.xhrGet(xhrArgs);  
+      }
+      dojo.addOnLoad(getLicenseErrorStatusWithHandle);
+    </script>
+
+  .. cv :: html 
+
+    <div id="getLicenseErrorStatusWithHandle" style="height: 100px;"></div>
+
 
 ========
 See also
