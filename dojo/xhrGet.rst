@@ -113,7 +113,8 @@ dojo.xhrGet supported object properties
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
 |**handle*         |Sometimes you want to do something regardless of whether a call completes or fails.  Thats where handle comes it, it will be|
 |                  |invoked by xhr regardless.  The first parameter passed to this callback is the response (or error) and the second parameter |
-|                  |is the IO args object, from which you can get the status code and determine success or failure.                             |                             |                  |                                                                                                                            |
+|                  |is the IO args object, from which you can get the status code and determine success or failure.                             |                            
+|                  |                                                                                                                            |
 |                  |**This parameter is optional**                                                                                              |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
 
@@ -136,7 +137,7 @@ There are also many status codes in the 3XX range that have specific meaning as 
 
   **The answer is:  Yes.**
 
-A second parameter is always passed to the 'load' and 'error' functions.  This parameter is the 'ioargs' parameter.  It contains a lot of detail about the xhr request, including a reference to the actual native xhr object.  You can access the status code off that object via: 'ioargs.xhr.status'.  Please see Examples 6 and 76 for a usage example of doing that.  
+A second parameter is always passed to the 'load', 'error', and 'handle' functions.  This parameter is the 'ioargs' parameter.  It contains a lot of detail about the xhr request, including a reference to the actual native xhr object.  You can access the status code off that object via: 'ioargs.xhr.status'.  Please see Examples 6, 7, and 9 for a usage example of doing that.  
 
 By making use of this status check, you can implement handling for authentication, proxy authentication, and myraid of other items you may need to react to, to make your application dynamic and user friendly.
 
