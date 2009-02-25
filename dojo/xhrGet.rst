@@ -111,6 +111,11 @@ dojo.xhrGet supported object properties
 |                  |                                                                                                                            |
 |                  |**This parameter is optional**                                                                                              |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
+|**handle*         |Sometimes you want to do something regardless of whether a call completes or fails.  Thats where handle comes it, it will be|
+|                  |invoked by xhr regardless.  The first parameter passed to this callback is the response (or error) and the second parameter |
+|                  |is the IO args object, from which you can get the status code and determine success or failure.                             |                             |                  |                                                                                                                            |
+|                  |**This parameter is optional**                                                                                              |
++------------------+----------------------------------------------------------------------------------------------------------------------------+
 
 Return type (dojo.Deferred)
 ---------------------------
