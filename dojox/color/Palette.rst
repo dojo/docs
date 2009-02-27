@@ -67,7 +67,8 @@ model in question.  For example, to increase the hue on all colors in a palette,
   });
 
 This will shift all colors in the palette using the HSV model (Hue/Saturation/Value), and add 20 degrees
-to the hue angle of the color in question.
+to the hue angle of the color in question.  Note that the ``.transform`` method returns a new instance
+of dojox.color.Palette, and leaves the original alone.
 
 In addition, all Palettes can be cloned using the ``.clone`` method:
 
