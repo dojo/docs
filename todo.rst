@@ -98,9 +98,13 @@ Priority 4: DojoX
 
   needed: errors in the example, no audio directory within tests available on the server
 
+* `dojox.gfx <dojox/gfx>`_ 
+
+  needed: split apart into multiple pages for each major concept, add inline gfx demos
+
 * `dojox.charting <dojox/charting>`_ ``ttrenka``
 
-  needed: explanation about preiodic updating
+  needed: explanation about periodic updating, split apart into multiple pages for each major concept, add inline chart demos, add chart and legend widget properties/events table
 
 * `dojox.collections <dojox/collections>`_
 
