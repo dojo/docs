@@ -49,7 +49,7 @@ Top priority: dojo.js
 
   needed: dojo.empty("nodeId"); // deletes all children but keeps node there
 
-* `dojo.empty <dojo/destroy>`_
+* `dojo.destroy <dojo/destroy>`_
 
   needed dojo.destroy("nodeId"); // deletes all children and the node itself
   Group DOM Query & Manipulation related pages into a book section
