@@ -150,12 +150,24 @@ Stroke property
 ---------------
 
 A stroke property is an object that defines how to draw an outline of a shape. It is not supported by an image and a group shapes. Following properties are recognized:
-
-color 
-  Defines a color of an outline. Default: "black".
-
-style
-  Defines a dash pattern.
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| **Attribute**  | **Expected Value**                      | **Description**                                                               | **Since** |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| color          | SVG color value (string)                |Defines a color of an outline. Default: "black".                               | 1.0       |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| style          | "Solid"                                 |Defines a dash pattern.                                                        | 1.0       |
+|                | "ShortDash"                             |                                                                               | 1.0       |
+|                | "ShortDot"                              |                                                                               | 1.0       |
+|                | "ShortDashDot"                          |                                                                               | 1.0       |
+|                | "ShortDashDotDot"                       |                                                                               | 1.0       |
+|                | "Dot"                                   |                                                                               | 1.0       |
+|                | "Dash"                                  |                                                                               | 1.0       |
+|                | "LongDash"                              |                                                                               | 1.0       |
+|                | "DashDot"                               |                                                                               | 1.0       |
+|                | "LongDashDot"                           |                                                                               | 1.0       |
+|                | "LongDashDotDot"                        |                                                                               | 1.0       |
+|                | "none"                                  | Same as "Solid"                                                               | 1.0       |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
 
   Accepted values: "Solid", "ShortDash", "ShortDot", "ShortDashDot", "ShortDashDotDot", "Dot", "Dash", "LongDash", "DashDot", "LongDashDot", "LongDashDotDot", and "none" (the same as "Solid"). 
 
