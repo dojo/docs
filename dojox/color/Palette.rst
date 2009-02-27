@@ -33,7 +33,7 @@ method of the palette.  The keyword arguments object takes the form of:
       use: "rgb" || "rgba" || "hsl" || "hsv" || "cmy" || "cmyk",
       dr, dg, db, da,
       dc, dm, dy, dk,
-      dh, ds, hl, dv
+      dh, ds, dl, dv
   };
 
 All keywords are optional, including the ``use`` keyword--though you'll probably want to pass it
