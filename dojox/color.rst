@@ -5,54 +5,15 @@ dojox.color
 
 :Status: Draft
 :Version: 1.0
-:Project owner: ?--
-:Available: since V?
+:Project owner: Tom Trenka, Cal Henderson
+:Available: 1.0+
 
-.. contents::
-   :depth: 2
+The DojoX Color project both adds functionality to dojo.color and includes a pair of modules for
+generating color palettes (``dojox.color.Palette``) as well as advanced colorspace functions
+(``dojox.color.Colorspace``), making more advanced functionality available for use.
 
-TODO: short summary of the component/class/method
+`dojox.color.Palette <dojox/color/Palette>`_ will generate a set of colors based on a single color
+and a chosen color theory rule.
 
-
-============
-Introduction
-============
-
-TODO: introduce the component/class/method
-
-
-=====
-Usage
-=====
-
-TODO: how to use the component/class/method
-
-.. code-block :: javascript
- :linenos:
-
- <script type="text/javascript">
-   // your code
- </script>
-
-
-
-========
-Examples
-========
-
-Programmatic example
---------------------
-
-TODO: example
-
-Declarative example
--------------------
-
-TODO: example
-
-
-========
-See also
-========
-
-* TODO: links to other related articles
+`dojox.color.Colorspace <dojox/color/Colorspace>`_ provides a slew of functionality to convert
+colors to various advanced models, such as 
