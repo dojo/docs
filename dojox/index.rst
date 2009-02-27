@@ -188,6 +188,9 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 * `dojox.editor <dojox/editor>`_
 * `dojox.embed <dojox/embed>`_
 * `dojox.encoding <dojox/encoding>`_
+
+  All sorts of string encoding algorithms, including compression, crypto and more.
+
 * `dojox.flash <dojox/flash>`_
 * `dojox.form <dojox/form>`_
 
