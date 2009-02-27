@@ -13,7 +13,7 @@ for this are because of eventual plans to use this implementation (modified from
 Brad Neuberg for `dojox.off <dojox/off>`_ (within the "private" `dojox.sql <dojox/sql>`_ project) to refactor
 and replace dojox.sql.
 
-This implementation differs from the dojox.sql in the following ways:
+This implementation differs from the dojox.sql implementation in the following ways:
 
 1. The dojox.encoding.crypto version uses Hex encoding (2 numbers for every byte in the cipher text); the
    dojox.sql version uses straight String encoding, which can be problematic for a number of reasons.
