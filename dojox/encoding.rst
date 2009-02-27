@@ -7,4 +7,8 @@ dojox.encoding
 :Version: experimental
 :Authors: Eugene Lazutkin, Tom Trenka
 
-DojoX Encoding provides a set of routines for common encoding algorithms.
+The DojoX Encoding project is a repository for various types of encoding algorithms,
+including compression, digest generation (such as MD5 and SHA) and cryptography.
+
+.. contents::
+  :depth: 3
