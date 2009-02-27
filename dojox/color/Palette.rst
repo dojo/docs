@@ -13,6 +13,9 @@ single base color and a color theory, or a set of passed colors.  In addition to
 generating a color palette, it can also *transform* the colors in that palette,
 similar to the way one can transform graphics using dojox.gfx.
 
+Within DojoX, the Palette is used extensively within the `dojox.charting <dojox/charting>`_
+project for themes.
+
 To create a Palette based on a set of colors, simply pass them into the constructor:
 
 .. code-block :: javascript
