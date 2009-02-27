@@ -150,49 +150,36 @@ Stroke property
 ---------------
 
 A stroke property is an object that defines how to draw an outline of a shape. It is not supported by an image and a group shapes. Following properties are recognized:
+
 +----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
 | **Attribute**  | **Expected Value**                      | **Description**                                                               | **Since** |
 +----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
 | color          | SVG color value (string)                |Defines a color of an outline. Default: "black".                               | 1.0       |
 +----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
-| style          | "Solid"                                 |Defines a dash pattern.                                                        | 1.0       |
-|                | "ShortDash"                             |                                                                               | 1.0       |
-|                | "ShortDot"                              |                                                                               | 1.0       |
-|                | "ShortDashDot"                          |                                                                               | 1.0       |
-|                | "ShortDashDotDot"                       |                                                                               | 1.0       |
-|                | "Dot"                                   |                                                                               | 1.0       |
-|                | "Dash"                                  |                                                                               | 1.0       |
-|                | "LongDash"                              |                                                                               | 1.0       |
-|                | "DashDot"                               |                                                                               | 1.0       |
-|                | "LongDashDot"                           |                                                                               | 1.0       |
-|                | "LongDashDotDot"                        |                                                                               | 1.0       |
-|                | "none"                                  | Same as "Solid"                                                               | 1.0       |
+| style          | "Solid"                                 | Defines a dash pattern.                                                       | 1.0       |
+|                | "ShortDash"                             | These values have been modeled after VML's dashStyle parameter,               |           |
+|                | "ShortDot"                              | and behave similarly (dash pattern is specified in terms of line width).      |           |
+|                | "ShortDashDot"                          | "none" is the same as "Solid"                                                 |           |
+|                | "ShortDashDotDot"                       |                                                                               |           |
+|                | "Dot"                                   |                                                                               |           |
+|                | "Dash"                                  |                                                                               |           |
+|                | "LongDash"                              |                                                                               |           |
+|                | "DashDot"                               |                                                                               |           |
+|                | "LongDashDot"                           |                                                                               |           |
+|                | "LongDashDotDot"                        |                                                                               |           |
+|                | "none"                                  |                                                                               |           |
 +----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
-
-  Accepted values: "Solid", "ShortDash", "ShortDot", "ShortDashDot", "ShortDashDotDot", "Dot", "Dash", "LongDash", "DashDot", "LongDashDot", "LongDashDotDot", and "none" (the same as "Solid"). 
-
-  These values have been modeled after VML's dashStyle parameter, and behave similarly (dash pattern is specified in terms of line width). 
-
-width
-  Defines a width of a stroke in pixels. It should be a positive number. 
-
-  Default: 1.
-
-cap
-  Defines a shape of opening and closing of a line.   
-
-  Accepted values: "butt", "round", "square" (see SVG 1.1 'stroke-linecap' definition for details).
-
-  Default: "butt" 
-
-join
-  Defines a shape of joints.
-
-  Accepted values: "round", "bevel", or a positive number.
-  In case of a number a "miter" style is used with the number defining a miter limit
-  (see SVG 1.1 'stroke-linejoin' definition and SVG 1.1 'stroke-miterlimit' definition for details).
-
-  Default: 4  
+| width          | positive number                         |Defines a width of a stroke in pixels. Default: 1                              | 1.0       |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| cap            | "butt"                                  | Defines a shape of opening and closing of a line.                             | 1.0       |
+|                | "round"                                 | see SVG 1.1 'stroke-linecap' definition for details.                          |           |
+|                | "square"                                | Default: "butt"                                                               |           |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| join           | "round"                                 | Defines a shape of joints.                                                    | 1.0       |
+|                | "bevel"                                 | see SVG 1.1 'stroke-linejoin' definition and SVG 1.1 'stroke-miterlimit'      |           |
+|                | positive number                         | When number, a "miter" style is used with the number defining a miter limit   |           |
+|                |                                         | Default: 4                                                                    |           |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
 
 By default all shapes are created with "null" stroke meaning "no stroke is performed".
 
@@ -223,80 +210,76 @@ Solid color fill
 Linear gradient
   Defines a smooth transition between a set of colors (so-called "stops") on a line. Following properties are recognized:
 
-  type
-    Always "linear"
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| **Attribute**  | **Expected Value**                      | **Description**                                                               | **Since** |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| type           | "linear"                                |Always "linear"                                                                | 1.0       |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| x1             | number                                  |Define x start point of linear gradient. Defaults: 0                           | 1.0       |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| y1             | number                                  |Define y start point of linear gradient. Defaults: 0                           | 1.0       |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| x2             | number                                  |Define x end point of linear gradient. Defaults: 100                           | 1.0       |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| y2             | number                                  |Define y end point of linear gradient. Defaults: 100                           | 1.0       |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| colors         | array[Object]                           |Defines an array of stop objects.  See stop object properties below.           | 1.0       |
+|                |                                         |Default: [{offset: 0, color: "black"}, {offset: 1, color: "white"}]            |           |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
 
-  x1, y1
-    Define a start point of linear gradient. Defaults: 0, 0
+These are the properties of Stop objects (for LinearGradient.colors property array entries)
 
-  x2, y2
-    Define an end point of a linear gradient. Defaults: 100, 100
-
-  colors
-    Defines an array of stop objects, which have following structure:
-
-    offset
-      A number from 0 to 1, which defines a position of a color on our line.
-
-      0 
-        Corresponds to x1, y1 point
-      1 
-        Corresponds to x2, y2 point
-
-      0.5 
-        Will be directly in the middle of a line
-
-    color 
-      A color for this stop.
-
-    colors has the following default value:
-
-    .. code-block :: javascript
-
-      [{offset: 0, color: "black"}, {offset: 1, color: "white"}]
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| **Attribute**  | **Expected Value**                      | **Description**                                                               | **Since** |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| offset         | number [0..1]                           |A number from 0 to 1 which defines a position of color on our line.            | 1.0       |
+|                |                                         |0 corresponds to x1, y1 point                                                  |           |
+|                |                                         |1 corresponds to x2, y2 point                                                  |           |
+|                |                                         |0.5 corresponds to midpoint                                                    |           |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| color          | string (SVG color value)                |A color for this stop.                                                         | 1.0       |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
 
 Radial gradient
-  Defines a smooth transition between stops on a circle. Following properties are recognized:
+  Defines a smooth transition between stops on a circle. The following properties are recognized:
 
-  type 
-    Always "radial"
-
-  cx, cy
-    Define a center of a radial gradient. Defaults: 0, 0
-
-  r
-    Defines a radius of a radial gradient.
-
-  colors
-    Defines an array of stops in the same way as a linear gradient object.
-
-    0 
-      Corresponds to a center of a circle.
-    1 
-      Corresponds to a circle's border.
-
-    Defaults:
-
-    .. code-block :: javascript
-
-      [{offset: 0, color: "black"}, {offset: 1, color: "white"}]
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| **Attribute**  | **Expected Value**                      | **Description**                                                               | **Since** |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| type           | "radial"                                |Always "radial"                                                                | 1.0       |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| cx             | number                                  |Define x of center point. Defaults: 0                                          | 1.0       |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| cy             | number                                  |Define y of center point. Defaults: 0                                          | 1.0       |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| r              | positive number                         |Defines a radius of a radial gradient.                                         | 1.0       |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| colors         | array[Object]                           |Defines an array of stop objects.  See stop object properties above.           | 1.0       |
+|                |                                         |Default: [{offset: 0, color: "black"}, {offset: 1, color: "white"}].           |           |
+|                |                                         |offset of 0 corresponds to center of the circle.                               |           |
+|                |                                         |offset of 1 corresponds to border of the circle.                               |           |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
 
 Pattern
-  Defines an infinite tiling of an image. Following properties are recognized:
+  Defines an infinite tiling of an image. The following properties are recognized:
 
-  type
-    Always "pattern"
-
-  x, y
-    Define an offset of a reference rectangle for an image. Defaults: 0, 0.
-
-  width, height
-    Define a size of a reference rectangle.
-
-    An image will be fit into this reference rectangle using scaling. Defaults: 0, 0.
-
-  src
-    Defines a URL of an image to be tiled.
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| **Attribute**  | **Expected Value**                      | **Description**                                                               | **Since** |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| type           | "pattern"                               |Always "pattern"                                                               | 1.0       |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| x              | number                                  |Define x of offset of a reference rectangle for an image. Defaults: 0          | 1.0       |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| y              | number                                  |Define y of offset of a reference rectangle for an image. Defaults: 0          | 1.0       |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| width          | positive number                         |Defines width of the reference rectangle that the image will be scaled to.     | 1.0       |
+|                |                                         |Defaults: 0                                                                    |           |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| height         | positive number                         |Defines height of the reference rectangle that the image will be scaled to.    | 1.0       |
+|                |                                         |Defaults: 0                                                                    |           |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| src            | array[Object]                           |Defines a URL of the image to be tiled.                                        | 1.0       |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
 
 By default all shapes are created with "null" fill meaning "no fill is performed".
 Complex shapes with self intersections (e.g., polygons), or disjoint parts (e.g. paths) are filled using the even-odd rule.
