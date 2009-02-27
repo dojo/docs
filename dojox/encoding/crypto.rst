@@ -4,7 +4,7 @@ dojox.encoding.crypto
 =====================
 
 :Status: Draft
-:Version: DojoX 1.0+
+:Version: Dojo Toolkit 1.0+
 :Author: Tom Trenka
 
 The crypto module of DojoX Encoding brings common symmetrical cryptography to your application/web pages.
