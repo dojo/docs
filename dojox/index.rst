@@ -38,6 +38,13 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
 * `dojox.collections <dojox/collections>`_
 * `dojox.color <dojox/color>`_
+
+  Extends dojo.color/dojo.Color and adds advanced color model/matching functionality
+
+  * `dojox.color.Palette <dojox/color/Palette>`_
+
+    A color palette generator and handler (used extensively in `dojox.charting <dojox/charting>`_
+
 * `dojox.cometd <dojox/cometd>`_
 * `dojox.data <dojox/data>`_
 
