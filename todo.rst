@@ -104,7 +104,7 @@ Priority 4: DojoX
 
 * `dojox.charting <dojox/charting>`_ ``ttrenka``
 
-  needed: explanation about periodic updating, split apart into multiple pages for each major concept, add inline chart demos, add chart and legend widget properties/events table
+  needed: explanation about periodic updating, split apart into multiple pages for each major concept, add inline chart demos, add chart and legend widget properties/events table, using dojo data sources with charts/chart widgets
 
 * `dojox.collections <dojox/collections>`_
 
