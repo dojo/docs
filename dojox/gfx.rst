@@ -278,7 +278,7 @@ Pattern
 | height         | positive number                         |Defines height of the reference rectangle that the image will be scaled to.    | 1.0       |
 |                |                                         |Defaults: 0                                                                    |           |
 +----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
-| src            | array[Object]                           |Defines a URL of the image to be tiled.                                        | 1.0       |
+| src            | string (url)                            |Defines a URL of the image to be tiled.                                        | 1.0       |
 +----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
 
 By default all shapes are created with "null" fill meaning "no fill is performed".
