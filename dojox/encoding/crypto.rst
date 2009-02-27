@@ -8,7 +8,7 @@ dojox.encoding.crypto
 :Author: Tom Trenka
 
 The crypto module of DojoX Encoding brings common symmetrical cryptography to your application/web pages.
-At the time of writing, 2 algorithms are available:
+At the time of writing (Dojo Toolkit 1.3 release), 2 algorithms are available:
 
 * Blowfish
 * SimpleAES
