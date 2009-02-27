@@ -26,6 +26,16 @@ To create a Palette based on a set of colors, simply pass them into the construc
   var p = new dojox.color.Palette(myColor);  // instanceof dojo.Color
   var p1 = new dojox.color.Palette(p);       // clone the last palette
 
+To access the colors in the palette, simply iterate through the ``.colors`` property:
+
+.. code-block :: javascript
+  :linenos:
+
+  var p = dojox.color.Palette.generate("#789abc", "splitComplimentary");
+  dojo.forEach(p.colors, function(c){
+      // do something with each dojo.Color object
+  });
+
 To perform a *translation* on a palette, pass a keyword arguments object to the ``transform``
 method of the palette.  The keyword arguments object takes the form of:
 
