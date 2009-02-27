@@ -10,8 +10,8 @@ dojox.encoding.crypto
 The crypto module of DojoX Encoding brings common symmetrical cryptography to your application/web pages.
 At the time of writing (Dojo Toolkit 1.3 release), 2 algorithms are available:
 
-* Blowfish
-* SimpleAES
+* dojox.encoding.crypto.Blowfish
+* `dojox.encoding.crypto.SimpleAES <dojox/encoding/crypto/SimpleAES>`_
 
 However, more are planned for future releases, including the following:
 
