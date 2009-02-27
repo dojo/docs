@@ -34,7 +34,7 @@ keyword arguments object passed. For example:
 
 In general, the returned text is encoded using the base64 algorithm; however, SimpleAES is hard-coded
 to only return Hex-formatted strings (there is a reason for this, please see the `SimpleAES <dojox/encoding/crypto/SimpleAES>`_
-page.
+page).
 
 As with `dojox.encoding.digests <dojox/encoding/digests>`_, there is a common arguments object that all implementations within
 crypto should allow for.  This object takes the following form:
