@@ -314,16 +314,20 @@ Font property
 Text shapes (Text and TextPath) require a font in order to be rendered. A font description follows familiar CSS conventions.
 The following properties of Font are recognized:
 
-style
-  Same as the CSS font-style property: "normal", "italic", "oblique". Default: "normal".
-variant 
-  Same as the CSS font-variant property: "normal", "small-caps". Default: "normal".
-weight 
-  Same as the CSS font-weight property: "normal", "bold", "bolder", "lighter", 100, 200, 300, 400, 500, 600, 700, 800, 900. Default: "normal".
-size
-  Same as the CSS font-size property. Default: "10pt".
-family
-  A string which defines a font family. Default: "serif".
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| **Attribute**  | **Expected Value**                      | **Description**                                                               | **Since** |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| style          | "normal","italic","oblique"             |Same as the CSS font-style property.   Default: "normal"                       | 1.0       |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| variant        | "normal","small-caps"                   |Same as the CSS font-variant property.   Default: "normal"                     | 1.0       |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| weight         | "normal","nold","bolder","lighter",     |Same as the CSS font-weight property.   Default: "normal"                      | 1.0       |
+|                | 100,200,300,400,500,600,700,800,900     |                                                                               | 1.0       |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| size           | css font size value                     |Same as the CSS font-size property.   Default: "10pt"                          | 1.0       |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
+| family         | css font family value                   |Same as the CSS font-family property.   Default: "serif"                       | 1.0       |
++----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
 
 There is also a useful shortcut: you can specify a font using a string similar to the CSS font property.
 
