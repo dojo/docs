@@ -91,7 +91,7 @@ Shapes support two types of properties:
 
   * Fill (interior of a shape).
 
-Shapes are stacked from bottom to top in an order of their definition. This z-order can be changed dynamically.
+Shapes are stacked from bottom to top in the order they are added. This z-order can be changed dynamically after a shape has been added using functions on Shape such as moveToFront().
 
 Groups
 ------
