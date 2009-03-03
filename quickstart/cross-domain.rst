@@ -116,3 +116,34 @@ Usage example
   </script>
 
   <div id="editorNode" class="tundra">Hello, world!</div>
+
+============================
+Using CDN with Local modules
+============================
+
+To use Dojo from a CDN alongside your own local/custom namespace, you must register the module path via djConfig:
+
+.. code-block :: html
+  :linenos:
+
+        <script type="text/javascript">
+          djConfig={
+            parseOnLoad: true, 
+            isDebug: true,
+            baseUrl: "./",
+            modulePaths: { my: "relative/path/to/local/dijits" }
+          };
+      </script>
+      
+      <!-- Bootstrap Dojo From AOL's CDN-->
+      <script 
+          type="text/javascript"
+          src="http://o.aolcdn.com/dojo/1.2/dojo/dojo.xd.js">
+      </script>
+
+      <script type="text/javascript">
+          dojo.require("my.FooWidget");
+      </script>
+
+
+the file FooWidget.js would live in the path "relative/path/to/local/dijits/my/FooWidget.js"
