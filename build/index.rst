@@ -11,34 +11,79 @@ Dojo Build System
 .. contents::
    :depth: 3
 
-The Dojo build system is used to create efficient versions of Dojo customized for a particular application or web site.
+The Dojo build system creates efficient versions of Dojo and application modules for deployment.
 
 ============
 Introduction
 ============
 
-Dojo, in its default distribution, contains thousands of separate files and resources which may be used in any given web site or application. Each "`dojo.require <dojo/require>`_" statement on a given web page results a synchronous HTTP call to the web server to download the file containing that resource (dojo.require does check if the resource has already been loaded on the page, but every resource will need to be loaded once).  
+Dojo, in its source distribution, contains thousands of separate files and resources which are available to any app via the package system. Normally each "`dojo.require <dojo/require>`_" statement results a synchronous HTTP call to the server to retreive a resource (`dojo.require` avoids re-requesting resources that have already been loaded, but module needs to be loaded before it can be used).  
 
-Because browsers wait for each synchronous web call to finish before contacting the web server with the next synchronous call, this can substantially impair performance.  It can make your web page appear to take a very long time to load, or flash and redraw several times as Dojo resources are downloaded to the browser.
+Because browsers wait for each synchronous web call to finish before allowing anything else to happen, this can substantially impair performance. Large apps that have many dependencies can take a very long time to load when a build isn't used, or flash and redraw several times.
 
-Furthermore, in the default distribution, most of the files are not `minified <http://en.wikipedia.org/wiki/Minify>`_, and larger files require more time and bandwidth to download to the page.
+Furthermore, in the source distribution, files are not `minified <http://en.wikipedia.org/wiki/Minify>`_, and larger files require more time and bandwidth to download to the page.
 
-Dojo does not include a single file containing every possible dojo function, since this would very large (especially with optional modules from Dijit and Dojox); instead, the build system allows the creation of customized Dojo builds tailored to the needs of your particular web site.
+Dojo does not include a single file containing every possible dojo function, since this would very large (especially with optional modules from Dijit and Dojox); instead, the build system allows the creation of customized Dojo builds tailored to the needs of your particular web site. Better yet, the build system works with the packaging tools to allow you to make *your* modules faster too.
 
 What is a layer?
 ----------------
 
-A *layer* is a single, usually minified, JavaScript file which combines all of the JavaScript code from multiple JavaScript files from the base Dojo distribution (as well as possibly your custom JavaScript code).  This single JavaScript layer file can then be included on the site using standard HTML ``script`` tags.  
+A *layer* is a single, minified JavaScript file which combines all of the JavaScript code from multiple source files, including dependencies. This file can then be included on the site using standard HTML ``script`` tags.
 
-You load a layer file into your web page using the normal <script> tags, similar to:
+You load a layer file into your web page using the normal `<script>` tags, similar to:
 
 .. code-block :: html
 
-  <script type="text/javascript" src="/custombuild/dojo/mylayer.js"></script>
+  <!-- dojo.js always provides the package system and base utilities -->
+  <script type="text/javascript" src="/js/src/dojo/dojo.js"></script>
+  
+  <!-- we want dijit.js to be treated like a layer of its own -->
+  <script type="text/javascript" src="/js/src/dijit/dijit.js"></script>
+  
+  <!-- include the rest of the modules we need -->
+  <script type="text/javascript" src="/js/src/acme/mylayer.js"></script>
 
-JavaScript files specified in script tags download asynchronously from the web server, so more than one download can be in progress at once, making pages load faster.  Furthermore, since extra HTTP calls to the server are usually the single biggest factor in slow page loads, loading only one larger file (quite possibly from browser cache) instead of multiple little files makes your web page load much faster.
+JavaScript files specified in script tags download asynchronously from the web server, but in modern browsers execution order is gauranteed, so more than one download can be in progress at once, making pages load faster. Since extra HTTP calls to the server are usually the single biggest factor in slow page loads, loading only one larger file (quite possibly from browser cache) instead of multiple little files makes your web page load much faster.
 
-You can (and should) still use dojo.require to specify every Dojo module that you use in your web page.  Since dojo.require checks if the module has already been downloaded, a module will not be downloaded again if it was included in a layer on the page.
+We use ``dojo.require`` to specify modules that an apps needs, but larger Dojo apps put this list of requirements into a single file that *only* includes a list of dependencies. The source version of ``mylayer.js`` might read like this:
+
+.. code-block :: javascript
+   
+   // this file is located at:
+   //
+   //   <server_root>/js/src/acme/mylayer.js
+   
+    // This is a layer file. It's like any other Dojo module, except that we
+    // don't put any code other than require/provide statements in it. When we
+    // make a build, this will be replaced by a single minified copy of all
+    // the modules listed below, as well as their dependencies, all in the
+    // right order:
+    
+    dojo.provide("acme.mylayer");
+    
+    // some basics
+    dojo.require("dojo.parser");
+    dojo.require("dijit.dijit");
+    dojo.require("dojo.NodeList-fx");
+    
+    // it's a pretty sophisticated app, needs grids and border containers
+    dojo.require("dojox.grid.DataGrid");
+    dojo.require("dijit.layout.BorderContainer");
+    
+    // we need the full suite of django templating
+    dojo.require("dojox.dtl");
+    dojo.require("dojox.dtl.tag.logic");
+    dojo.require("dojox.dtl.filter.misc");
+    dojo.require("dojox.dtl.filter.logic");
+    dojo.require("dojox.dtl.Context");
+    dojo.require("dojox.dtl._Templated");
+    
+    // finally, some app-specific modules
+    dojo.require("acme.base");
+    dojo.require("acme.controllers");
+    dojo.require("acme.CustomDataStore");
+
+Since ``dojo.require`` checks if the module has already been downloaded, a module will not be downloaded again if it was included in a layer on the page.
 
 What should go in layers?
 -------------------------
@@ -49,12 +94,12 @@ More complicated websites can have multiple layers for different purposes.  Laye
 
 It is not necessary to include absolutely every Dojo resource possible--instead, the goal is to include the most commonly used resources.  Any resources not available to a web page from one of the layers included on the page will be loaded synchronously by dojo.require.
 
-You specify, via a build profile, exactly which resources to include in the layers that you build.  You should balance what is included in each layer, thus increasing its size, against how often the resources is used in your site.  Frequently used resources should be placed in a layer; rarely used resources do not need to be put in a layer.
+You specify, via a build profile, exactly which resources to include in the layers that you build.  You should balance what is included in each layer, thus increasing its size, against how often the resources is used in your site.  Frequently used resources should be placed in a layer; rarely used resources may not need to be put in a layer. Think of it as a dial you can turn depending on the performance vs. maintainability constraints of your application.
 
 Minification
 ------------
 
-The Dojo build system can (and will by default) compress each layer with Shrinksafe, which provides a very effective minification.
+The Dojo build system compresses each layer with Shrinksafe, which provides a very effective minification.
 
 Minificatation takes your JavaScript code and makes it smaller by, for example:
 
@@ -71,7 +116,7 @@ What does the build system do
 The primary purpose of the build system is to create the layer files.  Overall, the build system does four things to enhance performance:
 
    1. First, it groups together modules into ''layers''
-   2. Second, it ''interns'' external non-JavaScript files. This is most important for Dijit templates, which are kept in a separate HTML file. Interning pulls the entire file in and assigns it to a string.
+   2. Second, it ''interns'' external non-JavaScript files, such as widget templates which are kept in a separate HTML file during development. Interning makes the file contents a string in the resulting script. 
    3. Third, it minifies the layer with ShrinkSafe. ShrinkSafe removes unneeded whitepsace and comments, and compacts variable names down to smaller ones. This file downloads and parses faster than the original.
    4. Finally, it copies all non-layered scripts to the appropriate places. While this doesn't speed anything up, it ensures that all Dojo modules can be loaded, even if not present in a layer. If you use a particular module only once or twice, keeping it out of the layers makes those layers load faster.
 
@@ -97,7 +142,7 @@ To use the build system, you must have the following:
 
         At a minimum, you must use Java 1.4.2; Java 1.5 or higher is recommended.
 
-        You can download a Java runtime environment from `Sun's Java download page <http://www.java.com/en/download/index.jsp>`_.  At the time of this writing, this was at least Java 1.6.
+        You can download a Java runtime environment from `Sun's Java download page <http://www.java.com/en/download/index.jsp>`_.
 
     3.  Optionally, the source code tree for any custom built resources (JavaScript modules, CSS files, Dojo widgets, and so on) that you would like built into your custom build.
 
@@ -117,97 +162,142 @@ Here is a sample profile from the Dojo 1.2.3 release directory tree, ``/utils/bu
 
 .. code-block :: javascript
    
-	//This profile is used just to illustrate the layout of a layered build.
-	//All layers have an implicit dependency on dojo.js.
-	
-	//Normally you should not specify a layer object for dojo.js. It is normally
-	//implicitly built containing the dojo "base" functionality (dojo._base).
-	//However, if you prefer the Dojo 0.4.x build behavior, you can specify a
-	//"dojo.js" layer to get that behavior. It is shown below, but the normal
-	//0.9 approach is to *not* specify it.
-	
-	//
+    // this file is located at:
+    //
+    //      <server root>/js/src/mylayer.profile.js
+    //
+	// This profile is used just to illustrate the layout of a layered build.
+	// All layers have an implicit dependency on dojo.js.
+    //	
+    // Normally you should not specify a layer object for dojo.js, as it will
+    // be built by default with the right options. Custom dojo.js files are 
+    // possible, but not recommended for most apps.
 	
 	dependencies = {
 		layers: [
 			{
-				//For 0.9 you normally do not specify a dojo.js layer.
-				//Note that you do not need to specify dojo.js as a dependency for
-				//other layers -- it is always an implicit dependency.
-				name: "dojo.js",
-				dependencies: [
-					"dojo.parser"
-				]
-			},
-			{
-				//This layer will be discarded, it is just used
-				//to specify some modules that should not be included
-				//in a later layer, but something that should not be
-				//saved as an actual layer output. The important property
-				//is the "discard" property. If set to true, then the layer
-				//will not be a saved layer in the release directory.
-				name: "string.discard",
-				resourceName: "string.discard",
+				// This layer will be discarded, it is just used
+				// to specify some modules that should not be included
+				// in a later layer, but something that should not be
+				// saved as an actual layer output. The important property
+				// is the "discard" property. If set to true, then the layer
+				// will not be a saved layer in the release directory.
+				name: "acme.discard",
+				resourceName: "acme.discard",
 				discard: true,
-				//Path to the copyright file must be relative to
-				//the util/buildscripts directory, or an absolute path.
+				// Path to the copyright file must be relative to
+				// the util/buildscripts directory, or an absolute path.
 				copyrightFile: "myCopyright.txt",
 				dependencies: [
 					"dojo.string"
 				]
 			},
 			{
+                // one of the stock layers. It builds a "roll up" for
+                // dijit.dijit which includes most of the infrastructure needed to
+                // build widgets in a single file. We explicitly ignore the string
+                // stuff via the previous exclude layer.
+                
+                // where the output file goes, relative to the dojo dir
 				name: "../dijit/dijit.js",
+                // what the module's name will be, i.e., what gets generated
+                // for dojo.provide(<name here>);
 				resourceName: "dijit.dijit",
+                // modules not to include code for
 				layerDependencies: [
-				"string.discard"
+                    "string.discard"
 				],
+                // modules to use as the "source" for this layer
 				dependencies: [
 					"dijit.dijit"
 				]
-			}
-		],
+			},
+            {
+                // where to put the output relative to the Dojo root in a build
+                name: "../acme/mylayer.js"
+                // what to name it (redundant w/ or example layer)
+                resourceName: "acme.mylayer",
+                // what other layers to assume will have already been loaded
+                // specifying modules here prevents them from being included in
+                // this layer's output file
+				layerDependencies: [
+                    "dijit.dijit"
+				],
+                // which modules to pull in. All of the depedencies not
+                // provided by dojo.js or other items in the "layerDependencies"
+                // array are also included.
+				dependencies: [
+                    // our acme.mylayer specifies all the stuff our app will
+                    // need, so we don't need to list them all out here.
+                    "acme.mylayer"
+                ]
+            }
+        ],
 	
-		prefixes: [
-			[ "dijit", "../dijit" ],
-			[ "dojox", "../dojox" ]
-		]
-	}
+        prefixes: [
+            // the system knows where to find the "dojo/" directory, but we
+            // need to tell it about everything else. Directories listed here
+            // are, at a minimum, copied to the build directory.
+            [ "dijit", "../dijit" ],
+            [ "dojox", "../dojox" ],
+            [ "acme", "../acme" ]
+        ]
+    }
 	
-	//If you choose to optimize the JS files in a prefix directory (via the optimize= build parameter),
-	//you can choose to have a custom copyright text prepended to the optimized file. To do this, specify
-	//the path to a file tha contains the copyright info as the third array item in the prefixes array. For
-	//instance:
+    // If you choose to optimize the JS files in a prefix directory (via the
+    // optimize= build parameter), you can choose to have a custom copyright
+    // text prepended to the optimized file. To do this, specify the path to a
+    // file tha contains the copyright info as the third array item in the
+    // prefixes array. For instance:
 	//	prefixes: [
-	//		[ "mycompany", "/path/to/mycompany", "/path/to/mycompany/copyright.txt"]
+	//		[ "acme", "/path/to/acme", "/path/to/acme/copyright.txt"]
 	//	]
 	//
-	//	If no copyright is specified in this optimize case, then by default, the dojo copyright will be used.
+    // NOTE: 
+    //    If no copyright is specified in this optimize case, then by default,
+    //    the Dojo copyright will be used.
 
 ============
 Build Script
 ============
 
-To actually begin your build, you use the ``build.sh`` (for unix type environments) or ``build.bat`` file for Windows type environments.  For full details on the arguments to ``build``, see `build script <build/buildScript>`_.
+To actually begin your build, you use the ``build.sh`` (or ``build.bat`` on Windows).  For full details on the arguments to ``build``, see `build script <build/buildScript>`_.
 
-A typical build invocation looks something like this:
+A typical build command looks something like this:
 
 .. code-block :: text
 
-  build profile=layers action=release version=0.9.0
+  build profileFile=../../../js/mylayer action=clean,release version=1.3.0beta3 releaseName=
 
 This illustrates the most important command line parameters to the build system:
 
-
 ``profile`` 
-   The profile to be used for the build.  ``.profile.js`` is appended automatically.  The default directory is the ``/util/buildscripts/profiles`` directory within the Dojo source distribution.  However, most often you will want to reference a profile not within the source tree.
+   The profile to be used for the build. ``.profile.js`` is appended automatically. The default directory is the ``<dojo root>/util/buildscripts/profiles`` directory within the Dojo source distribution, so if your build task specifies ``profile=thinger``, the system will search for ``<dojo root>/util/build/scripts/profiles/thinger.profile.js``.  However, most often you will want to reference a profile not within the source tree. To do this, you can specify a ``profileFile`` parameter which specifies a path from the current working directory (note, ``.profile.js`` is still appended to this file name!). 
 
 ``action`` 
-   The action the build is to perform.  The most common one is ``release`` to build a release build, doing the common behaviors.  Another option is ``clean`` to remove a build.
+   The list of actions to perform. The most common one is ``release`` which does the default build magic.  The ``clean`` option removes previous build artifacts.
 
 ``version`` 
-   The version number of the build.
+   Optional. The version number to "bake in" to the build. When you interrogate ``dojo.version``, this is the number that will be reported.
    
+``releaseName``
+    By specifying an empty ``releaseName`` parameter, we over-rid the default of ``dojo``, clobbering the generation of a named sub-directory in the output ``/js/release/`` directory. This makes it somewhat simpler to deal with paths at development time, but if you are creating versioned builds, you may chose to specify something like ``r1234`` to indicate a unique build number which you can then check in. Note that specifying a blank ``releaseName`` does not work in version of Dojo prior to 1.3.
+
+Once we've run the build script, all we need to do to use our new-fangled, much-faster layer file is to change the directory we point our ``<script>`` tags at. Intead of using the source files located in ``/js/src/<modulename>``, we now look for them in ``/js/release/<modulename>``:
+
+.. code-block :: html
+
+  <!-- dojo.js always provides the package system and base utilities -->
+  <script type="text/javascript" src="/js/release/dojo/dojo.js"></script>
+  
+  <!-- we want dijit.js to be treated like a layer of its own -->
+  <script type="text/javascript" src="/js/release/dijit/dijit.js"></script>
+  
+  <!-- include the rest of the modules we need -->
+  <script type="text/javascript" src="/js/release/acme/mylayer.js"></script>
+
+
+
 TODOC: everything. outline here:
 
     * summary
