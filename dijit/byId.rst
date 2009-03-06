@@ -64,8 +64,8 @@ Example 1: Locating a widget by its ID
   .. cv :: html 
 
     <input id="myTextBox" dojoType="dijit.form.TextBox" type="text" value="Default Value"></input>
-    <br>
-    <div id="textNode"></div>
+    <br><br>
+    <div id="textNode" style="background-color: lightgray"></div>
 
 
 ========
