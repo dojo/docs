@@ -122,10 +122,10 @@ Example 3: Comparing dojo.byId and dijit.byId
         var dobiDOM = dojo.byId("textNode3");
 
 
-        dojoById("textNode3").innerHTML = "dijit.byId for widget id returned: " + dibiWidget + <br> +
-                                          "dojo.byId for widget id returned: " + dobiWidget + <br> +
-                                          "dijit.byId for dom id returned: " + dibiDOM + <br> +
-                                          "dojo.byId for dom id returned: " + dobiDOM + <br>;
+        dojoById("textNode3").innerHTML = "dijit.byId for widget id returned: " + dibiWidget + "<br>" +
+                                          "dojo.byId for widget id returned: " + dobiWidget + "<br>" +
+                                          "dijit.byId for dom id returned: " + dibiDOM + "<br>" +
+                                          "dojo.byId for dom id returned: " + dobiDOM + "<br>";
       }
       dojo.addOnLoad(compareDojoDijitById);
     </script>
