@@ -24,16 +24,14 @@ dijit.byId and dojo.byId are often confused, particularly by first time users.  
 Usage
 =====
 
-TODO: how to use the component/class/method
+Usage of this function is trivial.  Simply call it with a string of the id for the widget you wish to obtain the handle of.  The return value will either be the JavaScript object instance that represents the widget or null/undefined if it is not found in the widget registry.
 
 .. code-block :: javascript
  :linenos:
 
  <script type="text/javascript">
-   // your code
+   var myWidget = dijit.byId("myWidget");
  </script>
-
-
 
 ========
 Examples
@@ -44,14 +42,9 @@ Programmatic example
 
 TODO: example
 
-Declarative example
--------------------
-
-TODO: example
-
 
 ========
 See also
 ========
 
-* TODO: links to other related articles
+* `dojo.byId <dojo/byId>`_
