@@ -79,11 +79,11 @@ Example 1: dojo.io.scriot call to fetch data from the Google Search API (JSONP)
           load: function(data){
             //Replace newlines with nice HTML tags.
             targetNode.innerHTML = dojo.toJson(data, true);
-          }
+          },
           error: function(error){
             targetNode.innerHTML = "An unexpected error occurred: " + error;
           }
-        }
+        };
         dojo.io.script.get(jsonpArgs);
       }
       dojo.addOnLoad(searchGoogle);
