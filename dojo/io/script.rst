@@ -10,10 +10,6 @@ dojox.io.script
 .. contents::
   :depth: 2
 
-====================
-Script request/JSONP
-====================
-
 ============
 Introduction
 ============
