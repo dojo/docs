@@ -105,7 +105,7 @@ Example 2: Locating a widget by its id and accessing its DOM node (main DOM rend
 Example 3: Comparing dojo.byId and dijit.byId
 ---------------------------------------------
 
-*This example shows how the output of each is different.
+*This example shows how the output of each is different.*
 
 .. cv-compound ::
   
