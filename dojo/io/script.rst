@@ -56,4 +56,40 @@ dojo.io.script.get() supported object properties
 Examples
 ========
 
-TODO
+Example 1: dojo.io.scriot call to fetch data from the Google Search API (JSONP)
+-------------------------------------------------------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      function searchGoogle() {
+        //Look up the node we'll stick the text under.
+        var targetNode = dojo.byId("results");
+
+        //The parameters to pass to xhrGet, the url, how to handle it, and the callbacks.
+        var jsonpArgs = {
+          url: "http://ajax.googleapis.com/ajax/services/search/web",
+          callbackParamName: "callback",
+          content: {
+            v: "1.0",
+            q: "dojo toolkit"
+          },
+          load: function(data){
+            //Replace newlines with nice HTML tags.
+            targetNode.innerHTML = dojo.toJson(data, true);
+          }
+          error: function(error){
+            targetNode.innerHTML = "An unexpected error occurred: " + error;
+          }
+        }
+        dojo.io.script.get(jsonpArgs);
+      }
+      dojo.addOnLoad(searchGoogle);
+    </script>
+
+  .. cv :: html 
+
+    <b>Google Search Results for 'dojo toolkit':</b>
+    <div id="results" style="height: 200px;"></div>
