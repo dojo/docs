@@ -102,6 +102,41 @@ Example 2: Locating a widget by its id and accessing its DOM node (main DOM rend
     <div id="textNode2" style="background-color: lightgray"></div>
 
 
+Example 3: Comparing dojo.byId and dijit.byId
+---------------------------------------------
+
+*This example shows how the output of each is different and one doesn't find elements of the other* 
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dijit.form.TextBox");
+
+      function compareDojoDijitById() {
+        //Locate the JS object.
+        var dibiWidget = dijit.byId("myTextBox3");
+        var dobiWidget = dojo.byId("myTextBox3");
+        var dibiDOM = dijit.byId("textNode3");
+        var dobiDOM = dojo.byId("textNode3");
+
+
+        dojoById("textNode3").innerHTML = "dijit.byId for widget id returned: " + dibiWidget + <br> +
+                                          "dojo.byId for widget id returned: " + dobiWidget + <br> +
+                                          "dijit.byId for dom id returned: " + dibiDOM + <br> +
+                                          "dojo.byId for dom id returned: " + dobiDOM + <br>;
+      }
+      dojo.addOnLoad(compareDojoDijitById);
+    </script>
+
+  .. cv :: html 
+
+    <input id="myTextBox3" dojoType="dijit.form.TextBox" type="text" value="Default Value"></input>
+    <br><br>
+    <div id="textNode3" style="background-color: lightgray"></div>
+
+
 
 ========
 See also
