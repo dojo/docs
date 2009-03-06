@@ -58,6 +58,7 @@ Example 1: Locating a widget by its ID
           dojo.byId("textNode").innerHTML = "Could not locate my text box widget!";
         }
       }
+      dojo.addOnLoad(findWidget);
     </script>
 
   .. cv :: html 
