@@ -45,6 +45,8 @@ Example 1: Locating a widget by its ID
   .. cv :: javascript
 
     <script>
+      dojo.require("dijit.form.TextBox");
+
       function findWidget () {
         //Locate the JS object.
         var widget = dijit.byId("myTextBox");
