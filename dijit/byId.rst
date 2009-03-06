@@ -68,6 +68,41 @@ Example 1: Locating a widget by its ID
     <div id="textNode" style="background-color: lightgray"></div>
 
 
+Example 2: Locating a widget by its id and accessing its DOM node (main DOM rendering element)
+----------------------------------------------------------------------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dijit.form.TextBox");
+
+      function findWidgetDOM () {
+        //Locate the JS object.
+        var widget = dijit.byId("myTextBox2");
+        if(widget){
+          //Get its DOM node:
+          var dNode = widget.domNode;
+
+          //Find my output node and write out I found my textbox and got its value + what type of DOM node is its primary node.
+          dojo.byId("textNode2").innerHTML = "Found my text box.  It has value: [" + widget.attr("value") + "] and its primary DOM node tag name is: [" + dNode.tagName + "]";
+        }else{
+          //Find my output node and write out I couldn't find the widget.
+          dojo.byId("textNode2").innerHTML = "Could not locate my text box widget!";
+        }
+      }
+      dojo.addOnLoad(findWidgetDOM);
+    </script>
+
+  .. cv :: html 
+
+    <input id="myTextBox2" dojoType="dijit.form.TextBox" type="text" value="Default Value"></input>
+    <br><br>
+    <div id="textNode2" style="background-color: lightgray"></div>
+
+
+
 ========
 See also
 ========
