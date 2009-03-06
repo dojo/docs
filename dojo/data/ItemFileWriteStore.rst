@@ -83,7 +83,7 @@ The reason this does not occur when you do not specify an identifier is that the
 The Behavior of the save() API
 ------------------------------
 
-Since this store implements the dojo.data.api.Write feature, it must implement the *save* function. Since this is an in-memory data store, what exactly does *save* do when called?  By default, it only does two things:
+Since this store implements the dojo.data.api.Write feature, it must implement the *save* function. Since this is an in-memory data store, what exactly does *save* do when called?  By default, it only does three things:
 
 * Clear out the record of all changed, deleted, and new items so that isDirty() will return false.
 * Commit the changes to the internal main tree of items.
