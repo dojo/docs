@@ -5,21 +5,20 @@ dijit.byId
 
 :Status: Draft
 :Version: 1.0
-:Project owner: ?--
-:Available: since V?
+:Project owner: Bill Keese
+:Available: since V0.9
 
 .. contents::
    :depth: 2
 
-TODO: short summary of the component/class/method
+dijit.byId is a function for looking up a specific widget by its assigned name (id).  This function is similar to `dojo.byId <dojo/byId>`_ but whereas dojo.byId returns DOMNodes, dijit.byId returns a JavaScript object that is the instance of the widget.  
 
 
 ============
 Introduction
 ============
 
-TODO: introduce the component/class/method
-
+dijit.byId and dojo.byId are often confused, particularly by first time users.  This function should be used when you wish to obtain a direct handle the the JavaScript object instance of your widget and access functions of that widget.  
 
 =====
 Usage
