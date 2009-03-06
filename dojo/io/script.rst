@@ -80,7 +80,7 @@ Example 1: dojo.io.scriot call to fetch data from the Google Search API (JSONP)
           },
           load: function(data){
             //Set the data from the search into the viewbox in nicely formatted JSON
-            targetNode.innerHTML = "<pre"> + dojo.toJson(data, true) + "</pre>";
+            targetNode.innerHTML = "<pre>" + dojo.toJson(data, true) + "</pre>";
           },
           error: function(error){
             targetNode.innerHTML = "An unexpected error occurred: " + error;
