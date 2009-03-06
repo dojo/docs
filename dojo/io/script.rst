@@ -51,7 +51,7 @@ dojo.io.script.get() supported object properties
 +----------------------+------------------------------------------------------------------------------------------------------------------------+
 |**preventCache**      |A boolean value that tells dojo.xhrGet to append a unique query parameter to each request.  The purpose of this         |
 |                      |parameter is to keep the browser from caching the results.  While it is generally good practice to let the server tell  |
-|                      |your browser how to cache and when to clear, sometimes it is necessary to force the browser to not cache.                                                                                         |
+|                      |your browser how to cache and when to clear, sometimes it is necessary to force the browser to not cache.                                                                                                      |
 |                      |                                                                                                                        |
 |                      |**This parameter is optional**                                                                                          |
 +----------------------+------------------------------------------------------------------------------------------------------------------------+
