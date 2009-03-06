@@ -37,7 +37,7 @@ To make an IO call using a script tag (for instance, for cross-domain JSONP call
 
 * dojo.io.script.get() with a JavaScript Object parameter.  The JavaScript object supports the following properties:
 
-dojo.io.scriot.get() supported object properties
+dojo.io.script.get() supported object properties
 ------------------------------------------------
 
 +----------------------+------------------------------------------------------------------------------------------------------------------------+
