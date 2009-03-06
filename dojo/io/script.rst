@@ -79,8 +79,8 @@ Example 1: dojo.io.scriot call to fetch data from the Google Search API (JSONP)
             q: "dojo toolkit"
           },
           load: function(data){
-            //Replace newlines with nice HTML tags.
-            targetNode.innerHTML = dojo.toJson(data, true);
+            //Set the data from the search into the viewbox in nicely formatted JSON
+            targetNode.innerHTML = "<pre"> + dojo.toJson(data, true) + "<pre>";
           },
           error: function(error){
             targetNode.innerHTML = "An unexpected error occurred: " + error;
@@ -93,5 +93,5 @@ Example 1: dojo.io.scriot call to fetch data from the Google Search API (JSONP)
 
   .. cv :: html 
 
-    <b>Google Search Results for 'dojo toolkit':</b>
+    <b>Google Search Results for 'dojo toolkit' (In JSON):</b>
     <div id="results" style="height: 200px;"></div>
