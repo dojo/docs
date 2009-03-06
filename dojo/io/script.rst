@@ -49,6 +49,15 @@ dojo.io.script.get() supported object properties
 |**checkString**       |A string of JavaScript that when evaluated like so: "typeof(" + checkString + ") != 'undefined'" being true means that  |
 |                      |the script fetched has been loaded. Do not use this if doing a JSONP type of call (use callbackParamName instead).      |
 +----------------------+------------------------------------------------------------------------------------------------------------------------+
+|**preventCache**      |A boolean value that tells dojo.xhrGet to append a unique query parameter to each request.  The purpose of this         |
+|                      |parameter is to keep the browser from caching the results.  While it is generally good practice to let the server tell  |
+|                      |your browser how to cache and when to clear, sometimes it is necessary to force the browser to not cache.                                                                           |
+|                      |**This parameter is optional**                                                                                          |
++----------------------+------------------------------------------------------------------------------------------------------------------------+
+|**content**           |A JavaScript object of name/string value pairs.  These items are converted to query parameters and passed on as part of |
+|                      |the url.  Example request made by the browser:  <url>?key1=value1&key2=value2&key3=value3..                                                                                           |
+|                      |**This parameter is optional**                                                                                                                                                                                        |
++----------------------+------------------------------------------------------------------------------------------------------------------------+
 
 **Note:** "handleAs" is NOT applicable to dojo.io.script.get() calls, since it is implied by the usage of "callbackParamName" (response will be a JSONP call returning JSON) or "checkString" (response is pure JavaScript defined in the body of the script that was attached). 
 
