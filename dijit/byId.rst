@@ -37,10 +37,32 @@ Usage of this function is trivial.  Simply call it with a string of the id for t
 Examples
 ========
 
-Programmatic example
---------------------
+Example 1: Locating a widget by its ID
+--------------------------------------
 
-TODO: example
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      function findWidget () {
+        //Locate the JS object.
+        var widget = dijit.byId("myTextBox");
+        if(widget){ 
+          //Find my output node and write out I found my textbox and got its value.
+          dojo.byId("textNode").innerHTML = "Found my text box.  It has value: [" + widget.attr("value") + "]";
+        }else{
+          //Find my output node and write out I couldn't find the widget.
+          dojo.byId("textNode").innerHTML = "Could not locate my text box widget!";
+        }
+      }
+    </script>
+
+  .. cv :: html 
+
+    <input id="myTextBox" dojoType="dijit.form.TextBox" type="text">Default Value</input>
+    <br>
+    <div id="textNode"></div>
 
 
 ========
