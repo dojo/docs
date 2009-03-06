@@ -64,6 +64,8 @@ Example 1: dojo.io.scriot call to fetch data from the Google Search API (JSONP)
   .. cv :: javascript
 
     <script>
+     dojo.require("dojo.io.script");
+
       function searchGoogle() {
         //Look up the node we'll stick the text under.
         var targetNode = dojo.byId("results");
