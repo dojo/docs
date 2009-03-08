@@ -15,6 +15,7 @@ dojo.html
  
 As of version 1.2, **dojo.html** is home to a single public helper method: **dojo.html.set()**. It is used to safely and conveniently replace an element's content, while providing some hooks and options for how the replacement should be handled.
 
+As of version 1.3, `dojo.place() <dojo/place>`__ accepts HTML strings for inserting HTML, and may be a better choice for simple HTML insertion. Unless you need to use the params capabilities of **dojo.html.set**, you should use dojo.place(cont, node, "only"). dojo.place() has more robust support for injecting an HTML string into the DOM, but it only handles inserting an HTML string as DOM elements, or inserting a DOM node. dojo.place does not handle NodeList insertions or the other capabilities as defined by the params argument for dojo.html.set().
 
 =====
 Usage
