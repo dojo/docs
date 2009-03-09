@@ -19,8 +19,10 @@ Getting up-and-running with Dojo couldn't be easier. Just include this line in y
     </script>   
 
 
-Dojo's now included on your page, no install, no fuss. So what do you get for all that had work? 
+Dojo's now included on your page, no install, no fuss. So what do you get for all that hard work? 
 
+
+As the example below shows, animations, event handling, and a wealth of other utilities are instantly available:
 
 =======
 Example
