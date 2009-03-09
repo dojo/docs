@@ -32,16 +32,7 @@ Custom formats may be specified to override the localized convention by passing 
 round()
 =======
 
-The rounding method attempts to overcome some of the shortcomings of the intrinsic Javascript rounding methods, Math.round and Number.toFixed, allowing arbitrary increments in rounding to any number of places, and making adjustments for browser quirks and binary floating point representation.
-
-Because JavaScript Number uses binary floating point, it is not always possible to achieve exact results for common calculations.  For example,
-
->>> 1.1+2.2
-3.3000000000000003
-
-This is commonly reported as a bug (https://bugzilla.mozilla.org/show_bug.cgi?id=5856) but in fact it is just an artifact of the way Numbers are stored in Javascript, rounded to the nearest IEEE double value, which can give unexpected results for even the most common calculations.  dojo.number.round accomodates numbers just a tiny bit below what would normally be the 'round up' point.  This is cheating, since a calculation based on full precision may have been expected and the results are not mathematically correct.  A real solution to this problem would involve Decimal floating point arithmetic (see IEEE-754r)
-
-dojo.number.round also works around a bug in Internet Explorer with Number.toFixed()
+The rounding method attempts to overcome some of the shortcomings of the intrinsic Javascript rounding methods, Math.round and Number.toFixed, allowing arbitrary increments in rounding to any number of places, and making adjustments for browser quirks.  dojo.number.round works around a bug in Internet Explorer with Number.toFixed()
 
 IE: (0.9).toFixed(1) yields "0.0"
 All other browsers: (0.9).toFixed(1) yields "0.1"
