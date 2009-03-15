@@ -91,7 +91,32 @@ To do the reverse - writing back to the server in Oracle format - you override t
    });
 
 TODO: you also have to hard code the 'en' locale, or this could serialize in the wrong language.
-TODO: do we really want to override setValue and not use postMixInProperties as done in the book?
+
+In newer Dojo-versions (>=1.2) this has changed, because *attr* has replaced *setValue*. Now you can define the data format for external dependencies like this:
+
+.. code-block:: javascript
+   :linenos:
+
+    dojo.declare(
+        "myProject.form.CakeDateTimeTextBox",
+        [dijit.form.DateTextBox],
+        {
+            // format 2009-03-15 00:00:00
+            extFormat: { selector: 'dateTime', datePattern:'yyyy-MM-dd', timePattern:'HH:mm:ss' },
+    
+            postCreate: function() {
+                var rawVal = dojo.attr( this.srcNodeRef, 'value' );
+                var val = dojo.date.locale.parse( rawVal, this.extFormat );
+                this.attr( 'value', val );
+                this.inherited( arguments );
+            },
+            
+            serialize: function( val ) {
+                return dojo.date.locale.format( val, this.extFormat );
+            }
+            
+        }
+    );
 
 Finally, you can use this new widget class programmatically or declaratively
 
