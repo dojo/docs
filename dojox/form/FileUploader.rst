@@ -16,8 +16,6 @@ FileUploader will detect if the correct version of Flash Player is available, an
 
 A basic example follows:
 
-Example
--------
 .. code-block :: javascript
  :linenos:
  
@@ -32,8 +30,6 @@ The *uploadUrl* property is the location of the server side script. Note that th
 
 Use *dojo.connect* to connect to the *onChange*, *onProgress* and *onComplete* methods:
 
-Example
--------
 .. code-block :: javascript
  :linenos:
  
@@ -55,8 +51,6 @@ Example
 
 Use *upload* to initiate the upload after files have been selected. Or set *uploadOnChange* to true to initiate upload automatically after the selection.
 
-Example
--------
 .. code-block :: javascript
  :linenos:
  
@@ -68,10 +62,8 @@ Advanced Parameters
 
 The FileUploader has many advanced properties to handle most situations.
 
-*fileMask*: An array, or an array of arrays. Restrict file selection to certain file types Empty array defaults to "All Files". NOTE: MacType is not supported, as it does not work very well. fileMask will work on a Mac, but differently than Windows.
+**fileMask**: An array, or an array of arrays. Restrict file selection to certain file types Empty array defaults to "All Files". NOTE: MacType is not supported, as it does not work very well. fileMask will work on a Mac, but differently than Windows.
 
-Example
--------
 .. code-block :: javascript
  :linenos:
  
@@ -90,22 +82,22 @@ Example
  });
 
 
-*force*: You can use either HTML (force="html") or Flash only, with this parameter. If force="flash" and the user does not have Flash installed, they will be prompted to install the plugin. "flash" forces Flash Uploader. Defaults to an empty string (force="") which checks for the availability of the proper Flash player (Flash 9 or higher).
+**force**: You can use either HTML (force="html") or Flash only, with this parameter. If force="flash" and the user does not have Flash installed, they will be prompted to install the plugin. "flash" forces Flash Uploader. Defaults to an empty string (force="") which checks for the availability of the proper Flash player (Flash 9 or higher).
 
-*postData*: The data that will be sent via POST to the server along with the uploaded files. This data object can bet set on instantiation, and the data will be sent to the server with each file on every upload. You can also pass postData in the upload method as an object argument which can be different with each upload.
+**postData**: The data that will be sent via POST to the server along with the uploaded files. This data object can bet set on instantiation, and the data will be sent to the server with each file on every upload. You can also pass postData in the upload method as an object argument which can be different with each upload.
 
-*htmlFieldName*: The name of the field of the fileInput that the server is expecting. See "Server Side Code" below.
+**htmlFieldName**: The name of the field of the fileInput that the server is expecting. See "Server Side Code" below.
 
-*flashFieldName*: The name of the field of the flash uploaded files that the server is expecting. See "Server Side Code" below.
+**flashFieldName**: The name of the field of the flash uploaded files that the server is expecting. See "Server Side Code" below.
 
 Debugging
 ---------
 
 Because of the complex nature of the FileUploader code (or more accurately, the hack!). It's often necessary to do some debugging to test if something is working properly. The following parameters assist with this:
 
-*isDebug*: Unlike most Dojo code, the logging has been left in the FileUploader, but is disabled by default. isDebug=true will turn on the log messages for inspection. This also passes to the SWF which will output messages of what's happening in there.
+**isDebug**: Unlike most Dojo code, the logging has been left in the FileUploader, but is disabled by default. isDebug=true will turn on the log messages for inspection. This also passes to the SWF which will output messages of what's happening in there.
 
-*devMode*: Changing this parameter to true will set the opacity of the HTML upload button to 100% and remove transparency from the Flash upload button. This helps to determine of the button is being positioned correctly.
+**devMode**: Changing this parameter to true will set the opacity of the HTML upload button to 100% and remove transparency from the Flash upload button. This helps to determine of the button is being positioned correctly.
 
 Server Side Code
 ----------------
