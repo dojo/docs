@@ -3,9 +3,11 @@
 dojox.form.FileUploader
 =========================
 
-:Status: Draft | Contributed
-:Version: 1.2
+:Status: Up to date
+:Version: 1.3
+:Project owner: Mike Wilcox
 :Author: Mike Wilcox
+:Available: since 1.1
 
 Basic Description
 -----------------
