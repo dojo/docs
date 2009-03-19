@@ -21,10 +21,10 @@ Example
 .. code-block :: javascript
  :linenos:
  
-var uploader = new dojox.form.FileUploader({
-    button:dijit.byId("myFakeButton"), 
-    uploadUrl:uploadUrl, 
-});
+ var uploader = new dojox.form.FileUploader({
+     button:dijit.byId("myFakeButton"), 
+     uploadUrl:uploadUrl, 
+ });
 
 The example has doesn't show *selectMultipleFiles*, but it defaults to true. Setting it to false restricts the user to one file selection. Multiple files are also supported in the HTML version, although only one file can be selected at a time. But after the files are selected, they will all be uploaded at once.
  
@@ -37,21 +37,21 @@ Example
 .. code-block :: javascript
  :linenos:
  
-dojo.connect(uploader, "onChange", function(dataArray){
-	dojo.forEach(dataArray, function(data){
-		dojo.byId("myTextarea").value += data.name+" "+Math.ceil(data.size*.001)+"kb \n";
-	});
-});
-dojo.connect(uploader, "onProgress", function(dataArray){
-	dojo.forEach(dataArray, function(data){
-		dojo.byId("myTextarea").value += "onProgress: ("+data.percent+"%) "+data.name+" \n";	
-	});
-});
-dojo.connect(uploader, "onComplete", function(dataArray){
-	dojo.forEach(dataArray, function(d){
-		dojo.byId("myTextarea").value += "onComplete: "+d.file+" \n";
-	});
-});
+ dojo.connect(uploader, "onChange", function(dataArray){
+     dojo.forEach(dataArray, function(data){
+         dojo.byId("myTextarea").value += data.name+" "+Math.ceil(data.size*.001)+"kb \n";
+     });
+ });
+ dojo.connect(uploader, "onProgress", function(dataArray){
+     dojo.forEach(dataArray, function(data){
+         dojo.byId("myTextarea").value += "onProgress: ("+data.percent+"%) "+data.name+" \n";	
+     });
+ });
+ dojo.connect(uploader, "onComplete", function(dataArray){
+     dojo.forEach(dataArray, function(d){
+         dojo.byId("myTextarea").value += "onComplete: "+d.file+" \n";
+     });
+ });
 
 Use *upload* to initiate the upload after files have been selected. Or set *uploadOnChange* to true to initiate upload automatically after the selection.
 
@@ -60,7 +60,7 @@ Example
 .. code-block :: javascript
  :linenos:
  
-dojo.connect(dijit.byId("myUploadButton"), "onClick", uploader, "upload");
+ dojo.connect(dijit.byId("myUploadButton"), "onClick", uploader, "upload");
 
 
 Advanced Parameters
@@ -75,19 +75,19 @@ Example
 .. code-block :: javascript
  :linenos:
  
-var fileMask = ["Images", "*.jpg;*.jpeg;*.gif;*.png"]
-//	or
-var fileMask = [
-    ["Jpeg File", 	"*.jpg;*.jpeg"],
-    ["GIF File", 	"*.gif"],
-    ["PNG File", 	"*.png"],
-    ["All Images", 	"*.jpg;*.jpeg;*.gif;*.png"],
-];
-var uploader = new dojox.form.FileUploader({
-    button:dijit.byId("myFakeButton"), 
-    uploadUrl:uploadUrl,
-    fileMask:fileMask
-});
+ var fileMask = ["Images", "*.jpg;*.jpeg;*.gif;*.png"]
+ //	or
+ var fileMask = [
+     ["Jpeg File", 	"*.jpg;*.jpeg"],
+     ["GIF File", 	"*.gif"],
+     ["PNG File", 	"*.png"],
+     ["All Images", 	"*.jpg;*.jpeg;*.gif;*.png"],
+ ];
+ var uploader = new dojox.form.FileUploader({
+     button:dijit.byId("myFakeButton"), 
+     uploadUrl:uploadUrl,
+     fileMask:fileMask
+ });
 
 
 *force*: You can use either HTML (force="html") or Flash only, with this parameter. If force="flash" and the user does not have Flash installed, they will be prompted to install the plugin. "flash" forces Flash Uploader. Defaults to an empty string (force="") which checks for the availability of the proper Flash player (Flash 9 or higher).
@@ -132,3 +132,11 @@ If *flashFieldName* is found in the headers and Flash is being used on the clien
 If *htmlFieldName* is used, the code on the client side gets pretty tricky, as an iframe is necessary for the file-post, and reading back from that iframe presents problems. In order to read the iframe return data accurately cross browser, the code needs to be wrapped in a *<textarea>*. You can see the code for this on the very last line of UploadFiles.php. 
 
 If you are having problems getting onComplete to fire, look at this code first. Often the problem is the server side code is not catching the flash field name for whatever reason (perhaps the client and server names don't match) and the code is falling to the end of the page and returning a textarea to Flash. Recently Code has been added in the SWF that checks for this, so if that is the problem, you should be notified with a console message.
+
+
+Demos
+-----
+
+http://mwilcox.dojotoolkit.org/dtk/dojox/form/tests/test_FileUploader.html
+
+http://mwilcox.dojotoolkit.org/dtk/demos/uploader/demo.html
