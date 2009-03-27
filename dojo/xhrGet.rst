@@ -57,10 +57,10 @@ dojo.xhrGet supported object properties
 |                  |                                                                                                                            |
 |                  |                                                                                                                            |
 |                  |  **Note:** As a matter of best practice, you should avoid using synchronized xhr calls unless there is no alternative.     |
-|                  |  Synchronized xhr calls block all other activity in the browser and can make it appear hung. **Also note that setting sync |
-|                  |  disables timeout.  The browsers themselves do not permit timeouts xhr calls.  All timeout functionality is done by dojo   |          
-|                  |  code which cannot execute when 'sync' is set.                                                                             |                                    
+|                  |  Synchronized xhr calls block all other activity in the browser and can make it appear hung.                               |
 |                  |                                                                                                                            |
+|                  |  **Note:** Setting sync disables timeout.  The browsers themselves do not permit timeouts xhr calls.  All timeout          |
+|                  |  functionality is done by dojo code which cannot execute when 'sync' is set.                                               |
 |                  |                                                                                                                            |
 |                  |**This parameter is optional**                                                                                              |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
