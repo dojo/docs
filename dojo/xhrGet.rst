@@ -57,7 +57,9 @@ dojo.xhrGet supported object properties
 |                  |                                                                                                                            |
 |                  |                                                                                                                            |
 |                  |  **Note:** As a matter of best practice, you should avoid using synchronized xhr calls unless there is no alternative.     |
-|                  |  Synchronized xhr calls block all other activity in the browser and can make it appear hung.                               |                                    
+|                  |  Synchronized xhr calls block all other activity in the browser and can make it appear hung. **Also note that setting sync |
+|                  |  disables timeout.  The browsers themselves do not permit timeouts xhr calls.  All timeout functionality is done by dojo   |          
+|                  |  code which cannot execute when 'sync' is set.                                                                             |                                    
 |                  |                                                                                                                            |
 |                  |                                                                                                                            |
 |                  |**This parameter is optional**                                                                                              |
@@ -79,6 +81,8 @@ dojo.xhrGet supported object properties
 |                  |**This parameter is optional**                                                                                              |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
 |**timeout**       |Number of milliseconds to wait until timing out the request.  Default is '0', which means infinite (no timeout).            |
+|                  |                                                                                                                            |
+|                  |  **Note:** This parameter is ignored when 'sync is set.  Browser limitation.                                               |
 |                  |                                                                                                                            |
 |                  |**This parameter is optional**                                                                                              |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
