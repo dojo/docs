@@ -786,6 +786,19 @@ There are times when you may wish to update the content of the grid.  For exampl
   var grid = dijit.byId("gridId");
   grid.setStore(newStore);
 
+====================
+Accessibility in 1.3
+====================
+
+Keyboard
+--------
+
+==============================================    ===============================================
+Action                                            Key
+==============================================    ===============================================
+Navigate into the grid			          The column header section and the data section are two separate tab stops in the grid. Press tab to put focus into the column header. With focus on a column header, press tab to set focus into the data portion of the grid. Focus will go to the data cell which last had focus in the grid or to the first data cell if focus had not been previously set into the grid in this session. 
+Navigate between column headers	                  With focus on a column header, use the left and right arrow keys to move between column headers.
+==============================================    ===============================================
 
 ========
 See also
