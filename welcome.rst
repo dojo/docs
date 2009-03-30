@@ -12,7 +12,7 @@ The Official Dojo Documentation
 
 
 ===============================
-`Getting started <quickstart>`_
+`Getting started <quickstart/index>`_
 ===============================
 
 * `Getting started with some simple steps <quickstart/gettingstarted>`_
