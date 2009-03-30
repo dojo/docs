@@ -9,7 +9,7 @@ Matrix tutorial
 Linear transformations are very important part of any graphics library. We deal
 with 2D graphics, it means we operate with 3 by 3 matrices:
 
-.. image :: attachment:matrix01.png
+.. image :: matrix01.png
 
 Because the third row is always constant we use an abbreviated way to write it:
 ``{xx: 1, xy: 0, yx: 0, yy: 1, dx: 0, dy: 0}`` --- this is an identity matrix.
