@@ -11,9 +11,9 @@ The Official Dojo Documentation
    :class: logowelcome;
 
 
-===============================
+=====================================
 `Getting started <quickstart/index>`_
-===============================
+=====================================
 
 * `Getting started with some simple steps <quickstart/gettingstarted>`_
 
