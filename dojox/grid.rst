@@ -810,6 +810,23 @@ Select contiguous rows			          Select a row, hold down the shift key and arr
 Select discontinuous rows		          Select a row,  hold down the control key and use the arrow keys to navigate to a new row,  continue holding the control key and press the space bar to add the new row to the selection. 
 ==============================================    ===============================================
 
+Known Issues
+------------
+
+The DataGrid is still not completely accessible.
+
+Keyboard
+~~~~~~~~
+
+* There is currently no keyboard mechanism to change column size.
+* Keyboard navigation does NOT skip hidden columns. 
+* There is no keyboard support for drag and drop. If you rely on drag and drop to reorder columns, you must provide an alternative keyboard mechanisism (dialog box, context menu, etc.) to perform the same function. 
+
+Screen Reader
+~~~~~~~~~~~~~
+
+The JAWS 10 screen reader will announce the column headers and will speak the contents of cells.  However, it does not yet announce sorting order nor does it indicate whether or not a cell is editable. Accessibility work is continuing on the grid. 
+
 ========
 See also
 ========
