@@ -44,4 +44,4 @@ This is the standard method of any widget. It is responsible for starting up the
 Usage
 =====
 
-See `dojox.form.manager <dojox/form/manager>`_ for the usage scenarios.
+See `dojox.form.manager <dojox/form/manager/index>`_ for the usage scenarios.
