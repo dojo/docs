@@ -9,7 +9,7 @@ How to become a dojo doc ninja
 .. contents::
   :depth: 3
 
-.. image:: http://media.dojocampus.org/images/docs/dojodocninja.png
+.. image:: dojodocninja.png
    :alt: Dojo Doc ninja
    :class: imageFloatRight;
 
