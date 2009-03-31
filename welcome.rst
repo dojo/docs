@@ -21,9 +21,9 @@ The Official Dojo Documentation
 
 
 
-===========================
-`Reference Guide <manual>`_
-===========================
+=================================
+`Reference Guide <manual/index>`_
+=================================
 
 * `The programmers manual for Dojo, Dijit, DojoX with more than 300 examples <manual/index>`_
 
