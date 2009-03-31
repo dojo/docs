@@ -26,6 +26,7 @@ Usage
 
 The DropDownSelect is designed to replace existing HTML select elements with minimal effort.  You can also create them programmatically.
 
+`New in 1.4` You can specify the maximum height of your dropdown by specifying "maxHeight" on your DropDownSelect.  If the dropdown would be larger than that value (in pixels), then scrollbars are added to the dropdown.
 
 ========
 Examples
