@@ -7,7 +7,7 @@ About the new Docu Wiki
 .. contents::
    :depth: 2
 
-.. image:: http://media.dojocampus.org/images/docs/logodojocdocssmall.png
+.. image:: /logodojocdocssmall.png
    :alt: Dojo Documentation
    :class: logowelcome;
 
