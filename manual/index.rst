@@ -7,7 +7,7 @@ Dojo Toolkit Reference Guide
 .. contents::
    :depth: 2
 
-.. image:: http://media.dojocampus.org/images/docs/logodojocdocssmall.png
+.. image:: welcome/logodojocdocssmall.png
    :alt: Dojo Documentation
    :class: logowelcome;
 
