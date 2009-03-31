@@ -16,18 +16,18 @@ Because the third row is always constant we use an abbreviated way to write it:
 
 The same simplification goes for coordinates:
 
-.. image :: attachment:matrix02.png
+.. image :: matrix02.png
 
 Because the third element is always 1 we "add" it virtually: ``{x: 12, y: 33}``.
 
 The way to apply a matrix to a coordinate (to multiply a coordinate by a matrix) ``u = M * v`` --- where, ``v`` is an input vector (e.g., ``{x: 1, y: 2}``), ``M`` is a transformation matrix, ``u`` is the resulting vector, and ``*`` denotes the multiplication operation:
 
-.. image :: attachment:matrix03.png
+.. image :: matrix03.png
 
 The matrix multiplication can be written like this (``*`` is omitted in this equation like in regular math to conserve space):
 
-.. image :: attachment:matrix04a.png
-.. image :: attachment:matrix04b.png
+.. image :: matrix04a.png
+.. image :: matrix04b.png
 
 (In all other examples we will skip the dummy third row because it is always the same).
 
@@ -43,52 +43,52 @@ Effectively all transformations are always applied from right to left sequential
 
 * ``identity`` does nothing:
 
-  .. image :: attachment:matrix05.png
+  .. image :: matrix05.png
 
 * ``flipX`` reflects a point around the ``Y`` axis by changing a sign of all ``X`` components:
 
-  .. image :: attachment:matrix06.png
+  .. image :: matrix06.png
 
 * ``flipY`` reflects a point around the ``X`` axis by changing a sign of all ``Y`` components:
 
-  .. image :: attachment:matrix07.png
+  .. image :: matrix07.png
 
 * ``flipXY`` reflects a point around the beginning of coordinates ``(0, 0)`` by changing a sign of both components:
 
-  .. image :: attachment:matrix08.png
+  .. image :: matrix08.png
 
 * ``translate(dx, dy)`` moves a point horizontally by shifting it ``dx`` units, and vertically by shifting it ``dy`` units:
 
-  .. image :: attachment:matrix09.png
+  .. image :: matrix09.png
 
 * ``scale(sx, sy)`` scales a picture by ``sx`` factor horizontally and ``sy`` factor vertically:
 
-  .. image :: attachment:matrix10.png
+  .. image :: matrix10.png
 
 * ``rotate(r)`` rotates a point around ``(0, 0)`` by ``r`` radians:
 
-  .. image :: attachment:matrix11.png
+  .. image :: matrix11.png
 
 * ``skewX(r)`` skews a picture in the ``X`` dimension by ``r`` radians:
 
-  .. image :: attachment:matrix12.png
+  .. image :: matrix12.png
 
 * ``skewY(r)`` skews a picture in the ``Y`` dimension by ``r`` radians:
 
-  .. image :: attachment:matrix13.png
+  .. image :: matrix13.png
 
 * ``reflect(x, y)`` reflects a point around the vector from ``(0, 0)`` to ``(x, y)``:
 
-  .. image :: attachment:matrix14.png
+  .. image :: matrix14.png
 
 * ``project(x, y)`` projects a point picture orthogonally on the vector from ``(0, 0)`` to ``(x, y)``:
 
-  .. image :: attachment:matrix15.png
+  .. image :: matrix15.png
 
 * ``invert(M)`` creates an inverted matrix to "undo" the parameter ``M``:
 
-  .. image :: attachment:matrix16.png
+  .. image :: matrix16.png
 
   Inverse matrices have a very useful property (where ``M`` is a matrix, ``I`` is an identity matrix):
 
-  .. image :: attachment:matrix17.png
+  .. image :: matrix17.png
