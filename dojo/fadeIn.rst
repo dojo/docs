@@ -117,3 +117,33 @@ Example 2:  Fade in a dom node with a custom duration
 
 Example 3:  Fade in a dom node with an easing function
 ------------------------------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dijit.form.Button");
+      function basicFadeinSetup3(){
+         //Style the dom node to opacity 0;
+         dojo.style("basicFadeNode3", "opacity", "0");
+
+         //Function linked to the button to trigger the fade.
+         function fadeIt() {
+            dojo.style("basicFadeNode3", "opacity", "0");
+            var fadeArgs = {
+              node: "basicFadeNode3",
+              duration: 10000,
+              easing: dojox.fx.easing.bounceOut
+            };
+            dojo.fadeIn(fadeArgs).play();
+         }
+         dojo.connect(dijit.byId("basicFadeButton3"), "onClick", fadeIt);
+      }
+      dojo.addOnLoad(basicFadeinSetup3);
+    </script>
+
+  .. cv :: html 
+
+    <button dojoType="dijit.form.Button" id="basicFadeButton3">Fade It In Slow with Bouncy Easing!</button>
+    <div id="basicFadeNode3" style="width: 100px; height: 100px; background-color: red;"></div>
