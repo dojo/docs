@@ -1,7 +1,7 @@
 #format dojo_rst
 
 dojox.grid.TreeGrid
-===============
+===================
 
 :Status: Draft
 :Version: 1.0
