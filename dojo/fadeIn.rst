@@ -124,6 +124,7 @@ Example 3:  Fade in a dom node with an easing function
 
     <script>
       dojo.require("dijit.form.Button");
+      dojo.require("dojo.fx.easing");
       function basicFadeinSetup3(){
          //Style the dom node to opacity 0;
          dojo.style("basicFadeNode3", "opacity", "0");
@@ -134,7 +135,7 @@ Example 3:  Fade in a dom node with an easing function
             var fadeArgs = {
               node: "basicFadeNode3",
               duration: 10000,
-              easing: dojox.fx.easing.bounceOut
+              easing: dojo.fx.easing.bounceOut
             };
             dojo.fadeIn(fadeArgs).play();
          }
