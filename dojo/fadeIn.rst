@@ -135,7 +135,7 @@ Example 3:  Fade in a dom node with an easing function
             var fadeArgs = {
               node: "basicFadeNode3",
               duration: 10000,
-              easing: dojo.fx.easing.bounceOut
+              easing: dojo.fx.easing.expoOut
             };
             dojo.fadeIn(fadeArgs).play();
          }
@@ -146,5 +146,5 @@ Example 3:  Fade in a dom node with an easing function
 
   .. cv :: html 
 
-    <button dojoType="dijit.form.Button" id="basicFadeButton3">Fade It In Slow with Bouncy Easing!</button>
+    <button dojoType="dijit.form.Button" id="basicFadeButton3">Fade It In Slow with Expo Easing!</button>
     <div id="basicFadeNode3" style="width: 100px; height: 100px; background-color: red;"></div>
