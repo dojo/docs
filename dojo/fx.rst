@@ -8,19 +8,37 @@ dojo.fx
 :Version: 1.0
 :Authors: Peter Higgins, Nikolai Onken, Marcus Reimann
 :Developers: Bryan Forbes, Peter Higgins, Eugene Lazutkin, Bill Keese, Adam Peller, Alex Russell, Dylan Schiemann, sjmiles
+
+---- /!\ '''Edit conflict - other version:''' ----
 :Available: since V1.0
+
+---- /!\ '''Edit conflict - your version:''' ----
+:Available: since V1.0
+
+---- /!\ '''End of edit conflict''' ----
 
 .. contents::
     :depth: 2
 
+
+---- /!\ '''Edit conflict - other version:''' ----
 Have you ever wanted to nicely fade our or faide in a block of text, slide or wipe a dom node into position, or even chain together numerous animations to provide a nide, dynamically changing page for your users?  Well, that is exactly what the dojo.fx package is for.  This package provides several commonly used animation effects as part of the dojox.fx package.  These FX functions all build upon the FX support in 'dojo base <dojo/_base/fx>`_.  There are also less commonly used FX functions available in dojox under the `dojox.fx <dojox/fx>`_ package.
 
 This page is a landing point for reference off to each function, their description, and examples.
+
+---- /!\ '''Edit conflict - your version:''' ----
+Have you ever wanted to nicely fade our or faide in a block of text, slide or wipe a dom node into position, or even chain together numerous animations to provide a nide, dynamically changing page for your users?  Well, that is exactly what the dojo.fx package is for.  This package provides several commonly used animation effects as part of the dojox.fx package.  These FX functions all build upon the FX support in 'dojo base <dojo/_base/fx>`_.  There are also less commonly used FX functions available in dojox under the `dojox.fx <dojox/fx>`_ package.
+
+This page is a landing point for reference off to each function, their description, and examples.
+
+---- /!\ '''End of edit conflict''' ----
 
 ========
 Features
 ========
 
+
+---- /!\ '''Edit conflict - other version:''' ----
 
 Dojo 'Base' *Functions avaliable without requiring in dojox.fx*
 -----------------------------------------------------------------
@@ -34,6 +52,24 @@ Functions provided by the dojo.fx module
 * `dojo.fx.wipeIn <dojo/fx/wipeIn>`_ -   To wipe in a node
 
 * `dojo.fx.wipeOut <dojo/fx/wipeOut>`_ -   To wipe in a node
+
+---- /!\ '''Edit conflict - your version:''' ----
+
+Functions always avalable (Dojo 'Base')
+---------------------------------------
+
+* `dojo.animateProperty <dojo/animateProperty>`_ - The most basic animation function in dojo.  It allows you to animate the change of most CSS properties, as well as perform, pre and post operations as the animation executes.  Almost all the following animation functions are built using this function.
+
+
+
+Functions provided by the dojo.fx module
+----------------------------------------
+
+* `dojo.fx.wipeIn <dojo/fx/wipeIn>`_ -   To wipe in a node
+
+* `dojo.fx.wipeOut <dojo/fx/wipeOut>`_ -   To wipe in a node
+
+---- /!\ '''End of edit conflict''' ----
 
 ========
 See also
