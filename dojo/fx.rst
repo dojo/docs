@@ -28,7 +28,9 @@ Functions always avalable (Dojo 'Base')
 
 * `dojo.animateProperty <dojo/animateProperty>`_ - The most basic animation function in dojo.  It allows you to animate the change of most CSS properties, as well as perform, pre and post operations as the animation executes.  Almost all the following animation functions are built using this function.
 
+* `dojo.fadeIn <dojo/fadeIn>`_ - A simple function for fading a currently invisible (opacity 0), node into view.
 
+* `dojo.fadeOut <dojo/fadeIn>`_ - A simple function for fading a currently visible(opacity 1), node to opacity 0.
 
 Functions provided by the dojo.fx module
 ----------------------------------------
