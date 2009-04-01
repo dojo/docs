@@ -64,6 +64,7 @@ Example 1:  Fade in a dom node
 
          //Function linked to the button to trigger the fade.
          function fadeIt() {
+            dojo.style(dojo.byId("basicFadeNode"), "opacity", "0");
             var fadeArgs = {
               node: "basicFadeNode"
             };
@@ -76,7 +77,7 @@ Example 1:  Fade in a dom node
 
   .. cv :: html 
 
-    <button dojoType="dijit.form.Button" id="basicFadeButton"></button>
+    <button dojoType="dijit.form.Button" id="basicFadeButton">Fade It!</button>
     <div id="basicFadeNode" style="width: 100px; height: 100px; background-color: red;"></div>
 
 
