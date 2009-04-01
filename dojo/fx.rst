@@ -35,9 +35,11 @@ Functions always avalable (Dojo 'Base')
 Functions provided by the dojo.fx module
 ----------------------------------------
 
-* `dojo.fx.wipeIn <dojo/fx/wipeIn>`_ -   To wipe in a node
+* `dojo.fx.easing <dojo/fx/wipeIn>`_ -  A collection of easing functions that can be used with dojo.animateProperty and its extensions to modify an animation.
 
-* `dojo.fx.wipeOut <dojo/fx/wipeOut>`_ -   To wipe in a node
+* `dojo.fx.wipeIn <dojo/fx/wipeIn>`_ -  To wipe in a node
+
+* `dojo.fx.wipeOut <dojo/fx/wipeOut>`_ -  To wipe in a node
 
 ========
 See also
