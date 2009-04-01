@@ -34,4 +34,4 @@ The Official Dojo Documentation
 
 * `All about Dojo Toolkits new official documentation pages <about/index>`_ and how you can contribute. 
 
-  It's a wiki, so dive in help us make it awesome!
+  It's a wiki, so dive in to help us make it awesome!
