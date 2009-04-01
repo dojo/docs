@@ -60,12 +60,12 @@ Example 1:  Fade in a dom node
       dojo.require("dijit.form.Button");
       function basicFadeinSetup(){
          //Style the dom node to opacity 0;
-         dojo.style(dojo.byId("basic"), "opacity", "0");
+         dojo.style(dojo.byId("basicFadeNode"), "opacity", "0");
 
          //Function linked to the button to trigger the fade.
          function fadeIt() {
             var fadeArgs = {
-              node: "basic"
+              node: "basicFadeNode"
             }
             dojo.fadeIn(fadeArgs).play();
          }
@@ -76,7 +76,7 @@ Example 1:  Fade in a dom node
 
   .. cv :: html 
     <button dojoType="dijit.form.Button" id="basicFadeButton"></button>
-    <div id="basic" style="width: 100px; height: 100px; background-color: red;"></div>
+    <div id="basicFadeNode" style="width: 100px; height: 100px; background-color: red;"></div>
 
 
 Example 2:  Fade in a dom node with a custom duration
