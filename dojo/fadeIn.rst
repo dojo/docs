@@ -38,3 +38,24 @@ The *dojo.fadeIn* takes an object as its parameter.  This object defines what do
 |                               |                                                                                            |
 |                               |**optional**                                                                                |
 +-------------------------------+--------------------------------------------------------------------------------------------+
+
+============
+Return value
+============
+
+The *dojo.fadeIn* function returns an instance of dojo._Animation.  To execute the fadeIn, call the *play()* function on the animation.  This object can be used with other dojo animation functions, such as `dojo.fx.chain <dojo/fx/chain>`_ and `dojo.fx.combine <dojo/fx/combine>`_ to link it with other effects to perform complex animations.
+
+========
+Examples
+========
+
+Example 1:  Fade in a dom node
+==============================
+
+
+Example 2:  Fade in a dom node with a custom duration
+=====================================================
+
+
+Example 3:  Fade in a dom node with an easing function
+======================================================
