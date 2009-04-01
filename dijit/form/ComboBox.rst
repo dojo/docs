@@ -104,6 +104,12 @@ To set the default value for this example, specify the *value* attribute in the 
                 id="stateInput">
 
 
+Codependent FilteringSelect/ComboBox widgets
+--------------------------------------------
+
+`The city ComboBox sets the state FilteringSelect value, and the state FilteringSelect filters the city ComboBox choices in this example. <dijit/form/FilteringSelect#codependent-filteringselect-combobox-widgets>`_
+
+
 =============
 Accessibility
 =============
