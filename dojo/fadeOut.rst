@@ -90,7 +90,7 @@ Example 2:  Fade in a dom node with a custom duration
       function basicFadeoutSetup2(){
          //Function linked to the button to trigger the fade.
          function fadeIt() {
-            dojo.style("basicFadeNode2", "opacity", "0");
+            dojo.style("basicFadeNode2", "opacity", "1");
             var fadeArgs = {
               node: "basicFadeNode2",
               duration: 10000,
@@ -120,12 +120,9 @@ Example 3:  Fade in a dom node with an easing function
       dojo.require("dijit.form.Button");
       dojo.require("dojo.fx.easing");
       function basicFadeoutSetup3(){
-         //Style the dom node to opacity 0;
-         dojo.style("basicFadeNode3", "opacity", "0");
-
          //Function linked to the button to trigger the fade.
          function fadeIt() {
-            dojo.style("basicFadeNode3", "opacity", "0");
+            dojo.style("basicFadeNode3", "opacity", "1");
             var fadeArgs = {
               node: "basicFadeNode3",
               duration: 10000,
