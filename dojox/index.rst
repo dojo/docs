@@ -278,6 +278,8 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
   A visual grid/table much like a spreadsheet
 
+  * `Grid Plugin API <dojox/grid/pluginAPI>`_
+
 * `dojox.help <dojox/help>`_
 * `dojox.highlight <dojox/highlight>`_
 * `dojox.html <dojox/html>`_
