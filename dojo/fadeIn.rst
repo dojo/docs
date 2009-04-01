@@ -75,6 +75,7 @@ Example 1:  Fade in a dom node
     </script>
 
   .. cv :: html 
+
     <button dojoType="dijit.form.Button" id="basicFadeButton"></button>
     <div id="basicFadeNode" style="width: 100px; height: 100px; background-color: red;"></div>
 
