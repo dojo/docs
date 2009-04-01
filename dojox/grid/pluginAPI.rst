@@ -17,5 +17,5 @@ NOTE: This document is a living document - and will change at any time.  It is a
 
 EXTENSION POINTS
 ================
-You can set _layoutClass on a subclass of grid if you want to subclass a layout.
-You can set _headerBuilderClass or _contentBuilderClass on a subclass of a view if you want to subclass the builders.
+ * You can set _layoutClass on a subclass of grid if you want to subclass a layout.
+ * You can set _headerBuilderClass or _contentBuilderClass on a subclass of a view if you want to subclass the builders.
