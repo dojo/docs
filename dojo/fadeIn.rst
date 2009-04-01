@@ -52,14 +52,6 @@ Examples
 Example 1:  Fade in a dom node
 ------------------------------
 
-
-Example 2:  Fade in a dom node with a custom duration
------------------------------------------------------
-
-
-Example 3:  Fade in a dom node with an easing function
-------------------------------------------------------
-
 .. cv-compound ::
   
   .. cv :: javascript
