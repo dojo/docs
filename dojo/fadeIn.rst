@@ -66,7 +66,7 @@ Example 1:  Fade in a dom node
          function fadeIt() {
             var fadeArgs = {
               node: "basicFadeNode"
-            }
+            };
             dojo.fadeIn(fadeArgs).play();
          }
          dojo.connect(dijit.byId("basicFadeButton"), "onClick", fadeIt);
