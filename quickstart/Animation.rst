@@ -1,7 +1,7 @@
 #format dojo_rst
 
-Animations with Dojo
-====================
+Animations and Effects with Dojo
+================================
 
 :Status: Draft
 :Version: 1.0
