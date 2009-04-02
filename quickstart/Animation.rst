@@ -22,7 +22,7 @@ As mentioned, dojo._Animation is the foundation for all Dojo Animations. It prov
 	:linenos:
 	
 	var animation = dojo.fadeOut({ // returns a dojo._Animation 
-		// this is the "magic object" used to define the animation
+		// this is an Object containing properties used to define the animation
 		node:"aStringId"
 	});
 	// call play() on the returned _Animation instance:
@@ -35,7 +35,7 @@ If you are into chaining, and don't need the variable pointing to the animation 
 	
 	dojo.fadeOut({ node:"someId" }).play();
 	
-All Animations in Dojo (with the exception of dojo.anim, introduced in Dojo 1.2) use the "magic object" as a means of configuration. The `node:` parameter is the most important, and points to a node in the DOM on which to apply the animation. It can be a string ID of a DOM node, or a direct reference to a DOM node you already have:
+All animations in Dojo (with the exception of dojo.anim, introduced in Dojo 1.2) use predefined animation properties on the Object parameter to specify the animation settings. The `node:` property is the most important, and points to a node in the DOM on which to apply the animation. `node` can be a String ID of a DOM node, or a direct reference to a DOM node you already have:
 
 .. code-block :: javascript
 	:linenos:
@@ -43,8 +43,8 @@ All Animations in Dojo (with the exception of dojo.anim, introduced in Dojo 1.2)
 	var target = dojo.byId("someId").parentNode;
 	dojo.fadeOut({ node: target }).play();
 
-Animation Options, or "The Magic Object"
-----------------------------------------
+Animation Properties
+--------------------
 
 `TODOC:` node, delay, duration, rate, easing, events (onEnd, etc), repeat, curve
 `API reference for _Animation <http://api.dojotoolkit.org/jsdoc/dojo/1.2/dojo._Animation>`_
@@ -52,7 +52,7 @@ Animation Options, or "The Magic Object"
 Animation Events
 ----------------
 
-The next most important public-facing aspect of the "private" _Animation class is the event handling: stub functions fired at various stages of an animation's life-cycle. 
+Performing custom behavior at specific points during an animation is done using callback functions.  These functions will be executed at various stages during an animation's life-cycle. 
 
 Consider this simple fade animation, and all the potential callbacks registered:
 
@@ -83,8 +83,7 @@ Consider this simple fade animation, and all the potential callbacks registered:
 
   }).play();
 
-You can define them as part of the "magic object" used to define the animation initially (as seen above) or use `dojo.connect <dojo/connect>`_ to connect directly to the instance and listen 
-for the function calls.
+You can define these callback functions as part of the Object parameter used to define the animation initially (as seen above) or use `dojo.connect <dojo/connect>`_ to connect directly to the instance and listen for the function calls.
 
 .. code-block :: javascript
 	:linenos:
@@ -100,7 +99,7 @@ for the function calls.
 Base Animations
 ===============
 
-Base Dojo provides the animation framework as well as several simple helper animations for fading, and one incredibly useful function `dojo.animateProperty` (the workhorse of most CSS-based animations). All use the same "magic object" for definition, though introduces several optioned in advanced cases. 
+Base Dojo provides the animation framework as well as several simple helper animations for fading, and one incredibly useful function `dojo.animateProperty` (the workhorse of most CSS-based animations). All use the same Object parameter format for specifying properties of the animation, and several additional options are used in advanced cases. 
 
 Fading Example
 --------------
@@ -168,9 +167,9 @@ To fade out two nodes simultaneously:
 		dojo.fx.combine([anim1, anim2]).play();
 	});
 
-(Notice we wraped the animation call in and addOnLoad function this time. This is required always, as you cannot modify the DOM before the DOM is ready, which `addOnLoad <dojo/addOnLoad>`_ alerts us to. Also, we need to ensure the `dojo.fx` module has been loaded properly)
+(Notice we wrapped the animation call in and addOnLoad function this time. This is required always, as you cannot modify the DOM before the DOM is ready, which `addOnLoad <dojo/addOnLoad>`_ alerts us to. Also, we need to ensure the `dojo.fx` module has been loaded properly)
 
-Javascript is rather flexible about return values and where functions are called. The above example can be written in a shorthand like:
+Javascript is rather flexible about return values and where functions are called. The above example can alternatively be written in a shorthand like:
 
 .. code-block :: javascript
 	:linenos:
@@ -197,7 +196,7 @@ The same rules apply to a combined animation as do a normal _Animation, though w
 		// fired after the full 2000ms
 	});
 
-Alternately, you can mix event handler into your individual animations passed to dojo.fx.combine:
+Alternately, you can mix event handlers into your individual animations passed to dojo.fx.combine:
 
 .. code-block :: javascript
 	:linenos:
