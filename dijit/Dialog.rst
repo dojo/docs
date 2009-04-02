@@ -143,7 +143,7 @@ Confirming Dialog Contents
 
 This example shows a Dialog containing form data.  You can get the form data as a javascript object by calling attr('values') on the dialog.
 
-To prevent the user from dismissing the dialog if there are errors in the form, add an onSubmit handler to your submit button:
+To prevent the user from dismissing the dialog if there are errors in the form, add an onClick handler to your submit button.
 
 .. cv-compound::
 
@@ -180,7 +180,7 @@ To prevent the user from dismissing the dialog if there are errors in the form, 
             <tr>
                 <td colspan="2" align="center">
                     <button dojoType=dijit.form.Button type="submit"
-                        onSubmit="return checkData();">OK</button>
+                        onClick="return checkData();">OK</button>
                 </td>
             </tr>
         </table>
