@@ -27,20 +27,6 @@ Over-ride the _createGlass method to create your custom surface, being sure to c
 that surface.
 
       
-=====
-Usage
-=====
-
-TODO: how to use the component/class/method
-
-.. code-block :: javascript
- :linenos:
-
- <script type="text/javascript">
-   // your code
- </script>
-
-
 
 ========
 Examples
