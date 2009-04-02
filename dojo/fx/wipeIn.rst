@@ -78,7 +78,7 @@ Example 1:  wipe in a dom node
 
     <button dojoType="dijit.form.Button" id="basicWipeButton">Wipe It In!</button>
     <div id="basicWipeNode" style="width: 100px; background-color: red; display: none;">
-      This is a container of random content to wipe in!
+      <b>This is a container of random content to wipe in!</b>
     </div>
 
 
