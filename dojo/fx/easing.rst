@@ -94,6 +94,38 @@ All functions follow a simple naming convention of "ease type" + "when".  If the
 Examples
 ========
 
+Example 1:  Linearly change the margin-left of a div
+----------------------------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dijit.form.Button");
+      function setup(){
+         //Function linked to the button to trigger the fade.
+         function moveIt() {
+            dojo.style("basicNode", "marginLeft", "0px");
+            var moveArgs = {
+              node: "basicNode",
+              properties: { marginLeft: {start: 0, end: 200, unit: "px"} },
+              easing: dojo.fx.easing.linear,
+              duration: 5000
+            };
+            dojo.animateProperty(moveArgs).play();
+         }
+         dojo.connect(dijit.byId("basicMoveButton"), "onClick", fadeIt);
+      }
+      dojo.addOnLoad(setup);
+    </script>
+
+  .. cv :: html 
+
+    <button dojoType="dijit.form.Button" id="basicMoveButton">Move the div!</button>
+    <div id="basicMoveNode" style="width: 100px; height: 100px; background-color: red; margin-left: 0px;"></div>
+
+
 ========
 See Also
 ========
