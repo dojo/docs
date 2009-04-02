@@ -1083,7 +1083,7 @@ Example 31:  bounceInOut change the margin-left of a div
          }
          dojo.connect(dijit.byId("basicMoveButton30"), "onClick", moveIt);
       }
-      dojo.addOnLoad(setup27);
+      dojo.addOnLoad(setup30);
     </script>
 
   .. cv :: html 
