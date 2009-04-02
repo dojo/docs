@@ -93,7 +93,7 @@ Example 2:  Fade in a dom node with a custom duration
             dojo.style("basicFadeNode2", "opacity", "1");
             var fadeArgs = {
               node: "basicFadeNode2",
-              duration: 10000,
+              duration: 5000,
             };
             dojo.fadeOut(fadeArgs).play();
          }
