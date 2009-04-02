@@ -130,7 +130,7 @@ To validate a form you use the `isValid()` function. Lets take at a simple examp
             </tr>
         </table>
 
-        <button dojoType="dijit.form.Button" onClick="console.log(myFormTwo.attr("value"))">Get Values from form!</button>
+        <button dojoType="dijit.form.Button" onClick="console.log(myFormTwo.attr('value'))">Get Values from form!</button>
         <button dojoType="dijit.form.Button" type="submit" name="submitButtonTwo" value="Submit">Submit</button>
         <button dojoType="dijit.form.Button" type="reset">Reset</button>
     </div>
