@@ -408,7 +408,7 @@ Example 10:  quartInOut change the margin-left of a div
          }
          dojo.connect(dijit.byId("basicMoveButton9"), "onClick", moveIt);
       }
-      dojo.addOnLoad(setup6);
+      dojo.addOnLoad(setup9);
     </script>
 
   .. cv :: html 
