@@ -14,7 +14,7 @@ dojo.wipeIn
 
 This function is a helper function that wraps the `dojo.animateProperty <dojo/animateProperty>`_ function to provide an easy interface to wiping a node into view on the page.  While this can be done with the *dojo.animateProperty* function, this function is simpler to use and will handle 99% of the cases a wipe-in is desired.
 
-** NOTE:** The wipe end wipes from a height of 0px to the full height of the target dom node.
+**NOTE:** The wipe end wipes from a height of 0px to the full height of the target dom node.
 
 ==========
 Parameters
