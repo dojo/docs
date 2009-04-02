@@ -124,7 +124,7 @@ Example 1:  Linearly change the margin-left of a div
   .. cv :: html 
 
     <button dojoType="dijit.form.Button" id="basicMoveButton">Move the div!</button>
-    <div id="basicMoveNode" style="width: 100px; height: 100px; background-color: red; margin-left: 0px;"></div>
+    <div id="basicNode" style="width: 100px; height: 100px; background-color: red; margin-left: 0px;"></div>
 
 
 ========
