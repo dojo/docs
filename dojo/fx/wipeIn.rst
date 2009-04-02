@@ -78,7 +78,7 @@ Example 1:  Wipe in a dom node
   .. cv :: html 
 
     <button dojoType="dijit.form.Button" id="basicWipeButton">Wipe It In!</button>
-    <div id="basicWipeNode" style="width: 100px; background-color: red; display: none;">
+    <div id="basicWipeNode" style="width: 200px; background-color: red; display: none;">
       <b>This is a container of random content to wipe in!</b>
     </div>
 
@@ -111,7 +111,7 @@ Example 2:  Wipe in a dom node with a custom duration
   .. cv :: html 
 
     <button dojoType="dijit.form.Button" id="basicWipeButton1">Wipe It In!</button>
-    <div id="basicWipeNode1" style="width: 100px; background-color: red; display: none;">
+    <div id="basicWipeNode1" style="width: 200px; background-color: red; display: none;">
       <b>This is a container of random content to wipe in slowly!</b>
     </div>
 
@@ -147,7 +147,7 @@ Example 3:  Wipe in a dom node with an easing function
   .. cv :: html 
 
     <button dojoType="dijit.form.Button" id="basicWipeButton2">Wipe It In!</button>
-    <div id="basicWipeNode2" style="width: 100px; background-color: red; display: none;">
+    <div id="basicWipeNode2" style="width: 200px; background-color: red; display: none;">
       <b>This is a container of random content to wipe in slowly with the expoOut easing!</b>
     </div>
 
