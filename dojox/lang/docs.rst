@@ -30,6 +30,7 @@ Usage
 dojox.lang.docs should be used with the -src distribution of Dojo, as it must be able to access the util/docscripts/api.xml (util should be at the same level as dojo, dojox, and dijit). To use dojox.lang.docs, load the module prior to loading other Dojo classes, and the API information will then be available on your classes. The API information that is populated on the classes follows the JSON Schema (http://json-schema.org) structure, where the class/constructor is the root object of the schema.
 
 .. code-block :: javascript
+
  dojo.require("dojox.lang.docs");
  dojo.require("dijit.ColorPalette");
  
