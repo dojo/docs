@@ -68,6 +68,7 @@ Example 1:  wipe in a dom node
             var wipeArgs = {
               node: "basicWipeNode"
             };
+            console.log("Calling wipein");
             dojo.wipeIn(wipeArgs).play();
          }
          dojo.connect(dijit.byId("basicWipeButton"), "onClick", wipeIt);
