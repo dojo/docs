@@ -26,9 +26,23 @@ Easing Functions
 +---------------------------------------+------------------------------------------------------------------------------------------------------+
 | dojo.fx.easing.linear                 | The most basic easing function (and the default for animations), apply the effect linearly over time.|
 +---------------------------------------+------------------------------------------------------------------------------------------------------+
-| dojo.fx.easing.quadIn                 | A function to increase the rate of the effect by a power of 2 over time.                             |
+| dojo.fx.easing.quadIn                 | A function to apply a rate of the effect by a power of 2 over time at the beginning.                 |
 +---------------------------------------+------------------------------------------------------------------------------------------------------+
-| dojo.fx.easing.quadOut                | A function to decrease the rate of the effect by a power of 2 over time.                             |
+| dojo.fx.easing.quadOut                | A function to apply a rate of the effect by a power of 2 over time at the end.                       |
++---------------------------------------+------------------------------------------------------------------------------------------------------+
+| dojo.fx.easing.quadInOut              | A function to apply the quad function at the beginning and end of the duration.                      |
++---------------------------------------+------------------------------------------------------------------------------------------------------+
+| dojo.fx.easing.cubicIn                | A function to apply a rate of the effect by a power of 3 over time at the beginning.                 |
++---------------------------------------+------------------------------------------------------------------------------------------------------+
+| dojo.fx.easing.cubicOut               | A function to apply a rate of the effect by a power of 3 over time at the end.                       |
++---------------------------------------+------------------------------------------------------------------------------------------------------+
+| dojo.fx.easing.cubicInOut             | A function to apply the cubic function at the beginning and end of the duration.                     |
++---------------------------------------+------------------------------------------------------------------------------------------------------+
+| dojo.fx.easing.quartIn                | A function to apply a rate of the effect by a power of 4 over time at the beginning.                 |
++---------------------------------------+------------------------------------------------------------------------------------------------------+
+| dojo.fx.easing.quartOut               | A function to apply a rate of the effect by a power of 4 over time at the end.                       |
++---------------------------------------+------------------------------------------------------------------------------------------------------+
+| dojo.fx.easing.quartInOut             | A function to apply the quart function at the beginning and end of the duration.                     |
 +---------------------------------------+------------------------------------------------------------------------------------------------------+
 
 
