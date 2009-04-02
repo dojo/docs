@@ -83,6 +83,11 @@ The standard set of properties for specifying animation settings (via the Object
 |                               |**optional**                                                                                |
 +-------------------------------+--------------------------------------------------------------------------------------------+
 
+Animation Events
+----------------
+
+Performing custom behavior at specific points during an animation is done using callback functions (also set via the Object parameter to the animation function).  These functions will be executed at various stages during an animation's life-cycle. 
+
 The standard set of events that are fired during stages of an animation are:
 
 +-------------------------------+--------------------------------------------------------------------------------------------+
@@ -110,13 +115,6 @@ The standard set of events that are fired during stages of an animation are:
 |                               |                                                                                            |
 |                               |**optional**                                                                                |
 +-------------------------------+--------------------------------------------------------------------------------------------+
-
-`API reference for _Animation <http://api.dojotoolkit.org/jsdoc/dojo/1.2/dojo._Animation>`_
-
-Animation Events
-----------------
-
-Performing custom behavior at specific points during an animation is done using callback functions.  These functions will be executed at various stages during an animation's life-cycle. 
 
 Consider this simple fade animation, and all the potential callbacks registered:
 
