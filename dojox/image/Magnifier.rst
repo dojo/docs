@@ -105,4 +105,5 @@ The code fragment creates a dojox.image.Magnifier and assoicates it with the src
 See also
 ========
 
-* [[http://archive.dojotoolkit.org/nightly/checkout/dojox/image/tests/test_Magnifier.html | Dojo nightly archive]]
+* http://archive.dojotoolkit.org/nightly/checkout/dojox/image/tests/test_Magnifier.html
+ 
