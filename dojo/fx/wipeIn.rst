@@ -127,6 +127,7 @@ Example 3:  Wipe in a dom node with an easing function
     <script>
       dojo.require("dijit.form.Button");
       dojo.require("dojo.fx");
+      dojo.require("dojo.fx.easing");
       function basicWipeinSetup2(){
          //Function linked to the button to trigger the wipe.
          function wipeIt() {
