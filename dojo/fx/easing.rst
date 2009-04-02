@@ -478,8 +478,8 @@ Example 12:  quintOut change the margin-left of a div
 
   .. cv :: html 
 
-    <button dojoType="dijit.form.Button" id="basicMoveButton8">Move the div!</button>
-    <div id="basicNode8" style="width: 100px; height: 100px; background-color: red; margin-left: 0px;"></div>
+    <button dojoType="dijit.form.Button" id="basicMoveButton11">Move the div!</button>
+    <div id="basicNode11" style="width: 100px; height: 100px; background-color: red; margin-left: 0px;"></div>
 
 Example 13:  quintInOut change the margin-left of a div
 -------------------------------------------------------
@@ -498,7 +498,7 @@ Example 13:  quintInOut change the margin-left of a div
             var moveArgs = {
               node: "basicNode12",
               properties: { marginLeft: {start: 0, end: 200, unit: "px"} },
-              easing: dojo.fx.easing.quartInOut,
+              easing: dojo.fx.easing.quintInOut,
               duration: 5000
             };
             dojo.animateProperty(moveArgs).play();
