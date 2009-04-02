@@ -70,7 +70,7 @@ Example 1:  wipe in a dom node
             };
             dojo.wipeIn(wipeArgs).play();
          }
-         dojo.connect(dijit.byId("basicWipeButton"), "onClick", fadeIt);
+         dojo.connect(dijit.byId("basicWipeButton"), "onClick", wipeIt);
       }
       dojo.addOnLoad(basicWipeinSetup);
     </script>
