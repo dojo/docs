@@ -5,7 +5,7 @@ dojo.fadeOut
 
 :Status: Draft
 :Version: 1.0
-:Authors: Peter Higgins, Nikolai Onken, Marcus Reimann
+:Authors: Peter Higgins, Nikolai Onken, Marcus Reimann, Jared Jurkiewicz
 :Developers: Bryan Forbes, Peter Higgins, Eugene Lazutkin, Bill Keese, Adam Peller, Alex Russell, Dylan Schiemann, sjmiles
 :Available: since V1.0
 
@@ -139,3 +139,10 @@ Example 3:  Fade in a dom node with an easing function
 
     <button dojoType="dijit.form.Button" id="basicFadeButton3">Fade It Out Slow with Expo Easing!</button>
     <div id="basicFadeNode3" style="width: 100px; height: 100px; background-color: red;"></div>
+
+========
+See Also
+========
+
+* `dojo/fadeIn <dojo/fadeIn>`_
+* `Animation Quickstart <quickstart/Animation>`_
