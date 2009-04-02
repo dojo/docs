@@ -16,7 +16,7 @@ Dojo provides several layers of Animation helpers, starting with Base Dojo (dojo
 Getting to know dojo._Animation
 ===============================
 
-As mentioned, dojo._Animation is the foundation for all Dojo Animations. It provides several simple methods good for controlling your animation, such as `play`, `pause`, `stop`, and `gotoPercent`. The most simple method which is required of all animations is `play`:
+As mentioned, dojo._Animation is the foundation class for all Dojo animations. It provides several simple methods good for controlling your animation, such as `play`, `pause`, `stop`, and `gotoPercent`. The most simple method which is required of all animations is `play`:
 
 .. code-block :: javascript
 	:linenos:
@@ -213,9 +213,9 @@ The namespace `dojo.fx` has been reserved for all these animation, including `do
 Chaining and Combining Animations
 =================================
 
-Two convenience functions provided in the `dojo.fx` module named `combine` and `chain` create an animation from a series of Animations in an array. 
+Two convenience functions provided in the `dojo.fx` module named `combine` and `chain` create an animation from a series of animations in an array. 
 
-`combine` merges the array of animations them into one `dojo._Animation` instance to control them all in parallel, whereas `chain` merges the animations into a single `dojo._Animation`, playing back each of the animations in series, or one right after the other.
+`combine` merges the array of animations them into one animation instance to control them all in parallel, whereas `chain` merges the animations into a single animation, playing back each of the animations in series, or one right after the other.
 
 To fade out two nodes simultaneously:
 
@@ -247,7 +247,7 @@ Javascript is rather flexible about return values and where functions are called
 		]).play();
 	});
 
-The same rules apply to a combined animation as do a normal _Animation, though with no direct way to mix event callbacks into the combine() call, you are left using the `dojo.connect` method to attach event handlers:
+The same rules apply to a combined animation as do a normal animation, though with no direct way to mix event callbacks into the combine() call, you are left using the `dojo.connect` method to attach event handlers:
 
 .. code-block :: javascript
 	:linenos:
@@ -285,7 +285,7 @@ Chain works in much the same way - though plays each animation one right after t
 		dojo.fadeIn({ node: "bar" })
 	]).play();
 
-All of the same patterns apply to chain as to other dojo._Animation instances. A good article covering `advanced usage of combine and chain <http://dojocampus.org/content/2008/04/11/staggering-animations/>`_ is available at DojoCampus. 
+All of the same patterns apply to chain as to other animation instances. A good article covering `advanced usage of combine and chain <http://dojocampus.org/content/2008/04/11/staggering-animations/>`_ is available at DojoCampus. 
 
 combine and chain accept an Array, and will work on a one-element array. This is interesting because you can manually create animations, pushing each into the array, and chain or combine the resulting set of animations. This is useful when you need to conditionally exclude some Animations from being created:
 
@@ -304,7 +304,7 @@ combine and chain accept an Array, and will work on a one-element array. This is
 	// combine and play any available animations waiting
 	dojo.fx.combine(anims).play();
 
-Obviously, any logic for determining if a node should participate in an Animation sequence is in the realm of the developer, but the syntax should be clear. Create an empty Array, push whichever style and types of animations you want into the Array, and call combine() on the list. 
+Obviously, any logic for determining if a node should participate in an animation sequence is in the realm of the developer, but the syntax should be clear. Create an empty Array, push whichever style and types of animations you want into the Array, and call combine() on the list. 
 
 
 ================
