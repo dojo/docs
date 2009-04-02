@@ -127,8 +127,8 @@ Example 1:  Linearly change the margin-left of a div
     <div id="basicNode" style="width: 100px; height: 100px; background-color: red; margin-left: 0px;"></div>
 
 
-Example 1:  quadIn change the margin-left of a div
-----------------------------------------------------
+Example 2:  quadIn change the margin-left of a div
+--------------------------------------------------
 
 .. cv-compound ::
   
@@ -158,6 +158,39 @@ Example 1:  quadIn change the margin-left of a div
 
     <button dojoType="dijit.form.Button" id="basicMoveButton1">Move the div!</button>
     <div id="basicNode1" style="width: 100px; height: 100px; background-color: red; margin-left: 0px;"></div>
+
+Example 2:  quadOut change the margin-left of a div
+---------------------------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dijit.form.Button");
+      dojo.require("dojo.fx.easing");
+      function setup2(){
+         //Function linked to the button to trigger the fade.
+         function moveIt() {
+            dojo.style("basicNode2", "marginLeft", "0px");
+            var moveArgs = {
+              node: "basicNode2",
+              properties: { marginLeft: {start: 0, end: 200, unit: "px"} },
+              easing: dojo.fx.easing.quadOut,
+              duration: 5000
+            };
+            dojo.animateProperty(moveArgs).play();
+         }
+         dojo.connect(dijit.byId("basicMoveButton2"), "onClick", moveIt);
+      }
+      dojo.addOnLoad(setup2);
+    </script>
+
+  .. cv :: html 
+
+    <button dojoType="dijit.form.Button" id="basicMoveButton2">Move the div!</button>
+    <div id="basicNode2" style="width: 100px; height: 100px; background-color: red; margin-left: 0px;"></div>
+
 
 
 
