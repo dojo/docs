@@ -117,7 +117,7 @@ Example 2:  Wipe in a dom node with a custom duration
 
 
 
-Example 3:  Fade in a dom node with an easing function
+Example 3:  Wipe in a dom node with an easing function
 ------------------------------------------------------
 
 .. cv-compound ::
@@ -126,30 +126,29 @@ Example 3:  Fade in a dom node with an easing function
 
     <script>
       dojo.require("dijit.form.Button");
-      dojo.require("dojo.fx.easing");
-      function basicFadeinSetup3(){
-         //Style the dom node to opacity 0;
-         dojo.style("basicFadeNode3", "opacity", "0");
-
-         //Function linked to the button to trigger the fade.
-         function fadeIt() {
-            dojo.style("basicFadeNode3", "opacity", "0");
-            var fadeArgs = {
-              node: "basicFadeNode3",
-              duration: 10000,
+      dojo.require("dojo.fx");
+      function basicWipeinSetup2(){
+         //Function linked to the button to trigger the wipe.
+         function wipeIt() {
+            dojo.style("basicWipeNode2", "display", "none");
+            var wipeArgs = {
+              node: "basicWipeNode2",
+              duration: 5000,
               easing: dojo.fx.easing.expoOut
             };
-            dojo.fadeIn(fadeArgs).play();
+            dojo.fx.wipeIn(wipeArgs).play();
          }
-         dojo.connect(dijit.byId("basicFadeButton3"), "onClick", fadeIt);
+         dojo.connect(dijit.byId("basicWipeButton2"), "onClick", wipeIt);
       }
-      dojo.addOnLoad(basicFadeinSetup3);
+      dojo.addOnLoad(basicWipeinSetup2);
     </script>
 
   .. cv :: html 
 
-    <button dojoType="dijit.form.Button" id="basicFadeButton3">Fade It In Slow with Expo Easing!</button>
-    <div id="basicFadeNode3" style="width: 100px; height: 100px; background-color: red;"></div>
+    <button dojoType="dijit.form.Button" id="basicWipeButton2">Wipe It In!</button>
+    <div id="basicWipeNode2" style="width: 100px; background-color: red; display: none;">
+      <b>This is a container of random content to wipe in slowly with the expoOut easing!</b>
+    </div>
 
 ========
 See Also
