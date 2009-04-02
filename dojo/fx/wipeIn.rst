@@ -155,5 +155,5 @@ Example 3:  Wipe in a dom node with an easing function
 See Also
 ========
 
-* `dojo/fadeOut <dojo/fadeOut>`_
+* `dojo/wipeOut <dojo/wipeOut>`_
 * `Animation Quickstart <quickstart/Animation>`_
