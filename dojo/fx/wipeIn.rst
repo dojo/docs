@@ -51,7 +51,7 @@ The *dojo.wipeIn* function returns an instance of dojo._Animation.  To execute t
 Examples
 ========
 
-Example 1:  wipe in a dom node
+Example 1:  Wipe in a dom node
 ------------------------------
 
 .. cv-compound ::
@@ -68,7 +68,6 @@ Example 1:  wipe in a dom node
             var wipeArgs = {
               node: "basicWipeNode"
             };
-            console.log("Calling wipein");
             dojo.fx.wipeIn(wipeArgs).play();
          }
          dojo.connect(dijit.byId("basicWipeButton"), "onClick", wipeIt);
@@ -84,7 +83,7 @@ Example 1:  wipe in a dom node
     </div>
 
 
-Example 2:  Fade in a dom node with a custom duration
+Example 2:  Wipe in a dom node with a custom duration
 -----------------------------------------------------
 
 .. cv-compound ::
@@ -93,28 +92,28 @@ Example 2:  Fade in a dom node with a custom duration
 
     <script>
       dojo.require("dijit.form.Button");
-      function basicFadeinSetup2(){
-         //Style the dom node to opacity 0;
-         dojo.style("basicFadeNode2", "opacity", "0");
-
-         //Function linked to the button to trigger the fade.
-         function fadeIt() {
-            dojo.style("basicFadeNode2", "opacity", "0");
-            var fadeArgs = {
-              node: "basicFadeNode2",
-              duration: 10000,
+      dojo.require("dojo.fx");
+      function basicWipeinSetup1(){
+         //Function linked to the button to trigger the wipe.
+         function wipeIt() {
+            dojo.style("basicWipeNode1", "display", "none");
+            var wipeArgs = {
+              node: "basicWipeNode1",
+              duration: 5000
             };
-            dojo.fadeIn(fadeArgs).play();
+            dojo.fx.wipeIn(wipeArgs).play();
          }
-         dojo.connect(dijit.byId("basicFadeButton2"), "onClick", fadeIt);
+         dojo.connect(dijit.byId("basicWipeButton1"), "onClick", wipeIt);
       }
-      dojo.addOnLoad(basicFadeinSetup2);
+      dojo.addOnLoad(basicWipeinSetup1);
     </script>
 
   .. cv :: html 
 
-    <button dojoType="dijit.form.Button" id="basicFadeButton2">Fade It In Slow!</button>
-    <div id="basicFadeNode2" style="width: 100px; height: 100px; background-color: red;"></div>
+    <button dojoType="dijit.form.Button" id="basicWipeButton1">Wipe It In!</button>
+    <div id="basicWipeNode1" style="width: 100px; background-color: red; display: none;">
+      <b>This is a container of random content to wipe in slowly!</b>
+    </div>
 
 
 
