@@ -279,7 +279,7 @@ Example 6:  cubicOut change the margin-left of a div
          }
          dojo.connect(dijit.byId("basicMoveButton5"), "onClick", moveIt);
       }
-      dojo.addOnLoad(setup2);
+      dojo.addOnLoad(setup5);
     </script>
 
   .. cv :: html 
