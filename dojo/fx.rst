@@ -17,10 +17,11 @@ Have you ever wanted to nicely fade out or fade in a block of text, slide or wip
 
 This page is a landing point for reference off to each function, their description, and examples.
 
+**NOTE:** There is a great `quickstart animation guide <quickstart/Animation>`_ to get you up and running with basic FX animations
+
 ========
 Features
 ========
-
 
 
 Functions always avalable (Dojo 'Base')
