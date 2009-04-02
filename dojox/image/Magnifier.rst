@@ -49,7 +49,7 @@ Examples
 Programmatic example
 --------------------
 The following code fragment is from
-[[http://archive.dojotoolkit.org/nightly/checkout/dojox/image/tests/test_Magnifier.html | Dojo nightly archive]]
+`Dojo nightly archive <http://archive.dojotoolkit.org/nightly/checkout/dojox/image/tests/test_Magnifier.html>`_
 and shows how dojox.image.Magnifier can be programatically created.  The code fragment creates two buttons, the 
 first button with id="foob" creates a dojox.image.Magnifier and associates it with the image.  The second button
 destroys it.
@@ -106,4 +106,3 @@ See also
 ========
 
 * http://archive.dojotoolkit.org/nightly/checkout/dojox/image/tests/test_Magnifier.html
- 
