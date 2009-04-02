@@ -16,7 +16,7 @@ Dojo provides several layers of Animation helpers, starting with Base Dojo (dojo
 Getting to know dojo._Animation
 ===============================
 
-As mentioned, dojo._Animation is the foundation for all Dojo Animations. It provides several simple methods good for controlling your animation, such as `play`, `pause`, `stop`, and `gotoPercent`. The most simple, and required of all animations is `play`:
+As mentioned, dojo._Animation is the foundation for all Dojo Animations. It provides several simple methods good for controlling your animation, such as `play`, `pause`, `stop`, and `gotoPercent`. The most simple method which is required of all animations is `play`:
 
 .. code-block :: javascript
 	:linenos:
