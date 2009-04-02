@@ -187,11 +187,10 @@ To fade out a node, alter it's contents, and fade it back in:
 
 Here, we've created a fadeOut animation, and run it immediately. At the end of the animation (set here to use the default duration by omitting the `duration:` parameter), we set the node reference's `.innerHTML` property to something new, and fade it back in, again using the default duration. 
 
-animateProperty Intro
----------------------
+Animating CSS Properties
+------------------------
 
-`TODOC`
-
+In addition to generic animations, Dojo provides shorthand helper functions for animating CSS properties via the `animateProperty <dojo/animateProperty>`_ API. An example where this specialized animation API simplifies specifying animation would be when you need to fade a background color property from red to green to indicate status changes.
 
 =================================
 Core Animations: Advanced helpers
