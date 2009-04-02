@@ -134,7 +134,7 @@ Example 3:  Fade in a dom node with an easing function
             dojo.style("basicFadeNode3", "opacity", "0");
             var fadeArgs = {
               node: "basicFadeNode3",
-              duration: 10000,
+              duration: 5000,
               easing: dojo.fx.easing.expoOut
             };
             dojo.fadeIn(fadeArgs).play();
