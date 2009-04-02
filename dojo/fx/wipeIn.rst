@@ -29,8 +29,8 @@ The *dojo.wipeIn* takes an object as its parameter.  This object defines what do
 |                               |                                                                                            |
 |                               |**required**                                                                                |
 +-------------------------------+--------------------------------------------------------------------------------------------+
-| duration                      |How long, in milliseconds, should the wipe take.  The default is 2000 milliseconds          |
-|                               |(2 seconds).                                                                                |
+| duration                      |How long, in milliseconds, should the wipe take.  The default is 350 milliseconds           |
+|                               |(.3 seconds).                                                                               |
 |                               |                                                                                            |
 |                               |**optional**                                                                                |
 +-------------------------------+--------------------------------------------------------------------------------------------+
