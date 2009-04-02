@@ -58,11 +58,9 @@ Example 1:  wipe in a dom node
 
     <script>
       dojo.require("dijit.form.Button");
+      dojo.require("dojo.fx");
       function basicWipeinSetup(){
-         //Style the dom node to opacity 0;
-         dojo.style("basicWipeNode", "display", "none");
-
-         //Function linked to the button to trigger the fade.
+         //Function linked to the button to trigger the wipe.
          function wipeIt() {
             dojo.style("basicWipeNode", "display", "none");
             var wipeArgs = {
@@ -79,7 +77,7 @@ Example 1:  wipe in a dom node
   .. cv :: html 
 
     <button dojoType="dijit.form.Button" id="basicWipeButton">Wipe It In!</button>
-    <div id="basicWipeNode" style="width: 100px; background-color: red;">
+    <div id="basicWipeNode" style="width: 100px; background-color: red; display: none;">
       This is a container of random content to wipe in!
     </div>
 
