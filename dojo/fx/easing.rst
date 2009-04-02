@@ -1101,6 +1101,7 @@ Examples:  Select the desired easing function from the dropdown and press 'move 
 
     <script>
       dojo.require("dijit.form.Button");
+      dojo.require("dijit.form.ComboBox");
       dojo.require("dojo.fx.easing");
       function setupMove(){
          //Function linked to the button to trigger the fade.
