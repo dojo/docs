@@ -27,8 +27,8 @@ The *dojo.fadeOut* takes an object as its parameter.  This object defines what d
 |                               |                                                                                            |
 |                               |**required**                                                                                |
 +-------------------------------+--------------------------------------------------------------------------------------------+
-| duration                      |How long, in milliseconds, should the fade take.  The default is 2000 milliseconds          |
-|                               |(2 seconds).                                                                                |
+| duration                      |How long, in milliseconds, should the fade take.  The default is 350 milliseconds           |
+|                               |(.3 seconds).                                                                                |
 |                               |                                                                                            |
 |                               |**optional**                                                                                |
 +-------------------------------+--------------------------------------------------------------------------------------------+
