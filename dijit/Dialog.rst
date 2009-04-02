@@ -180,7 +180,7 @@ To prevent the user from dismissing the dialog if there are errors in the form, 
             <tr>
                 <td colspan="2" align="center">
                     <button dojoType=dijit.form.Button type="submit"
-                        onClick="return checkData();">OK</button>
+                        onClick="if(!dijit.byId('formDialog').isValid()) dojo.stopEvent(arguments[0]);">OK</button>
                 </td>
             </tr>
         </table>
