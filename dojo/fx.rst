@@ -13,7 +13,7 @@ dojo.fx
 .. contents::
     :depth: 2
 
-Have you ever wanted to nicely fade out or fade in a block of text, slide or wipe a DOM node into position, or even chain together numerous animations to provide a nice, dynamically changing page for your users?  Well, that is exactly what the dojo.fx package is for.  This package provides several commonly used animation effects as part of the dojox.fx package.  These FX functions all build upon the FX support in `dojo base <dojo/_base/fx>`_.  There are also less commonly used FX functions available in dojox under the `dojox.fx <dojox/fx>`_ package.
+Have you ever wanted to nicely fade out or fade in a block of text, slide or wipe a DOM node into position, or even chain together numerous animations to provide a nice, dynamically changing page for your users?  Well, that is exactly what the dojo.fx module is for.  This module provides several commonly used animation effects.  These FX functions all build upon the basic FX support in `dojo base <dojo/_base/fx>`_.  There are also less commonly used FX functions available in dojox under the `dojox.fx <dojox/fx>`_ package.
 
 This page is a landing point for reference off to each function, their description, and examples.
 
