@@ -148,3 +148,10 @@ Example 3:  Fade in a dom node with an easing function
 
     <button dojoType="dijit.form.Button" id="basicFadeButton3">Fade It In Slow with Expo Easing!</button>
     <div id="basicFadeNode3" style="width: 100px; height: 100px; background-color: red;"></div>
+
+========
+See Also
+========
+
+* `dojo/fadeOut <dojo/fadeOut>`_
+* `Animation Quickstart <quickstart/Animation>`_
