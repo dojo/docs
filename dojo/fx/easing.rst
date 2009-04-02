@@ -103,6 +103,7 @@ Example 1:  Linearly change the margin-left of a div
 
     <script>
       dojo.require("dijit.form.Button");
+      dojo.require("diji.fx.easing");
       function setup(){
          //Function linked to the button to trigger the fade.
          function moveIt() {
@@ -115,7 +116,7 @@ Example 1:  Linearly change the margin-left of a div
             };
             dojo.animateProperty(moveArgs).play();
          }
-         dojo.connect(dijit.byId("basicMoveButton"), "onClick", fadeIt);
+         dojo.connect(dijit.byId("basicMoveButton"), "onClick", moveIt);
       }
       dojo.addOnLoad(setup);
     </script>
