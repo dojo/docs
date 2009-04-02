@@ -1092,6 +1092,77 @@ Example 31:  bounceInOut change the margin-left of a div
     <div id="basicNode30" style="width: 100px; height: 100px; background-color: red; margin-left: 0px;"></div>
 
 
+Examples:  Select the desired easing function from the dropdown and press 'move the div' 
+----------------------------------------------------------------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dijit.form.Button");
+      dojo.require("dojo.fx.easing");
+      function setupMove(){
+         //Function linked to the button to trigger the fade.
+         function moveIt() {
+			//Set initial state and get the easing from the dropdown
+            dojo.style("moveableNode", "marginLeft", "0px");
+			var easing = dijit.byId("easingSelector").attr("value");
+			var ef = dojo.fx.easing[easing];
+			if (ef) {
+				var moveArgs = {
+				  node: "moveableNode",
+				  properties: { marginLeft: {start: 0, end: 400, unit: "px"} },
+				  easing: ef,
+				  duration: 5000
+				};
+				dojo.animateProperty(moveArgs).play();
+			}
+         }
+         dojo.connect(dijit.byId("moveButton"), "onClick", moveIt);
+      }
+      dojo.addOnLoad(setupMove);
+    </script>
+
+  .. cv :: html 
+
+	<select dojoType="dijit.form.ComboBox" id="easingSelector">
+		<option>linear</option>
+		<option>quadIn</option>
+		<option>quadOut</option>
+		<option>quadInOut</option>
+		<option>cubicIn</option>
+		<option>cubicOut</option>
+		<option>cubicInOut</option>
+		<option>quartIn</option>
+		<option>quartOut</option>
+		<option>quartInOut</option>
+		<option>quintIn</option>
+		<option>quintOut</option>
+		<option>quintInOut</option>
+		<option>sineIn</option>
+		<option>sineOut</option>
+		<option>sineInOut</option>
+		<option>expoIn</option>
+		<option>expoOut</option>
+		<option>expoInOut</option>
+		<option>circIn</option>
+		<option>circOut</option>
+		<option>circInOut</option>
+		<option>backIn</option>
+		<option>backOut</option>
+		<option>backInOut</option>
+		<option>elasticIn</option>
+		<option>elasticOut</option>
+		<option>elasticInOut</option>
+		<option>bounceIn</option>
+		<option>bounceOut</option>
+		<option>bounceInOut</option>
+	</select>
+    <button dojoType="dijit.form.Button" id="moveButton">Move the div!</button>
+    <div id="moveableNode" style="width: 100px; height: 100px; background-color: red; margin-left: 0px;"></div>
+
+
 ========
 See Also
 ========
