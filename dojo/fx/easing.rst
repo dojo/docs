@@ -90,7 +90,9 @@ All functions follow a simple naming convention of "ease type" + "when".  If the
 | dojo.fx.easing.bounceInOut            | A function that 'bounces' near the beginning and end of the animation                                |
 +---------------------------------------+------------------------------------------------------------------------------------------------------+
 
-
+========
+Examples
+========
 
 ========
 See Also
