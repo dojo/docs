@@ -110,7 +110,7 @@ Example 1:  Linearly change the margin-left of a div
             dojo.style("basicNode", "marginLeft", "0px");
             var moveArgs = {
               node: "basicNode",
-              properties: { marginLeft: {start: 0, end: 200, unit: "px"} },
+              properties: { marginLeft: {start: 0, end: 400, unit: "px"} },
               easing: dojo.fx.easing.linear,
               duration: 5000
             };
@@ -143,7 +143,7 @@ Example 2:  quadIn change the margin-left of a div
             dojo.style("basicNode1", "marginLeft", "0px");
             var moveArgs = {
               node: "basicNode1",
-              properties: { marginLeft: {start: 0, end: 200, unit: "px"} },
+              properties: { marginLeft: {start: 0, end: 400, unit: "px"} },
               easing: dojo.fx.easing.quadIn,
               duration: 5000
             };
@@ -175,7 +175,7 @@ Example 3:  quadOut change the margin-left of a div
             dojo.style("basicNode2", "marginLeft", "0px");
             var moveArgs = {
               node: "basicNode2",
-              properties: { marginLeft: {start: 0, end: 200, unit: "px"} },
+              properties: { marginLeft: {start: 0, end: 400, unit: "px"} },
               easing: dojo.fx.easing.quadOut,
               duration: 5000
             };
@@ -207,7 +207,7 @@ Example 4:  quadInOut change the margin-left of a div
             dojo.style("basicNode3", "marginLeft", "0px");
             var moveArgs = {
               node: "basicNode3",
-              properties: { marginLeft: {start: 0, end: 200, unit: "px"} },
+              properties: { marginLeft: {start: 0, end: 400, unit: "px"} },
               easing: dojo.fx.easing.quadInOut,
               duration: 5000
             };
@@ -239,7 +239,7 @@ Example 5:  cubicIn change the margin-left of a div
             dojo.style("basicNode4", "marginLeft", "0px");
             var moveArgs = {
               node: "basicNode4",
-              properties: { marginLeft: {start: 0, end: 200, unit: "px"} },
+              properties: { marginLeft: {start: 0, end: 400, unit: "px"} },
               easing: dojo.fx.easing.cubicIn,
               duration: 5000
             };
@@ -271,7 +271,7 @@ Example 6:  cubicOut change the margin-left of a div
             dojo.style("basicNode5", "marginLeft", "0px");
             var moveArgs = {
               node: "basicNode5",
-              properties: { marginLeft: {start: 0, end: 200, unit: "px"} },
+              properties: { marginLeft: {start: 0, end: 400, unit: "px"} },
               easing: dojo.fx.easing.cubicOut,
               duration: 5000
             };
@@ -303,7 +303,7 @@ Example 7:  cubicInOut change the margin-left of a div
             dojo.style("basicNode6", "marginLeft", "0px");
             var moveArgs = {
               node: "basicNode6",
-              properties: { marginLeft: {start: 0, end: 200, unit: "px"} },
+              properties: { marginLeft: {start: 0, end: 400, unit: "px"} },
               easing: dojo.fx.easing.cubicInOut,
               duration: 5000
             };
@@ -336,7 +336,7 @@ Example 8:  quartIn change the margin-left of a div
             dojo.style("basicNode7", "marginLeft", "0px");
             var moveArgs = {
               node: "basicNode7",
-              properties: { marginLeft: {start: 0, end: 200, unit: "px"} },
+              properties: { marginLeft: {start: 0, end: 400, unit: "px"} },
               easing: dojo.fx.easing.quartIn,
               duration: 5000
             };
@@ -368,7 +368,7 @@ Example 9:  quartOut change the margin-left of a div
             dojo.style("basicNode8", "marginLeft", "0px");
             var moveArgs = {
               node: "basicNode8",
-              properties: { marginLeft: {start: 0, end: 200, unit: "px"} },
+              properties: { marginLeft: {start: 0, end: 400, unit: "px"} },
               easing: dojo.fx.easing.quartOut,
               duration: 5000
             };
@@ -400,7 +400,7 @@ Example 10:  quartInOut change the margin-left of a div
             dojo.style("basicNode9", "marginLeft", "0px");
             var moveArgs = {
               node: "basicNode9",
-              properties: { marginLeft: {start: 0, end: 200, unit: "px"} },
+              properties: { marginLeft: {start: 0, end: 400, unit: "px"} },
               easing: dojo.fx.easing.quartInOut,
               duration: 5000
             };
@@ -433,7 +433,7 @@ Example 11:  quintIn change the margin-left of a div
             dojo.style("basicNode10", "marginLeft", "0px");
             var moveArgs = {
               node: "basicNode10",
-              properties: { marginLeft: {start: 0, end: 200, unit: "px"} },
+              properties: { marginLeft: {start: 0, end: 400, unit: "px"} },
               easing: dojo.fx.easing.quintIn,
               duration: 5000
             };
@@ -465,7 +465,7 @@ Example 12:  quintOut change the margin-left of a div
             dojo.style("basicNode11", "marginLeft", "0px");
             var moveArgs = {
               node: "basicNode11",
-              properties: { marginLeft: {start: 0, end: 200, unit: "px"} },
+              properties: { marginLeft: {start: 0, end: 400, unit: "px"} },
               easing: dojo.fx.easing.quintOut,
               duration: 5000
             };
@@ -497,7 +497,7 @@ Example 13:  quintInOut change the margin-left of a div
             dojo.style("basicNode12", "marginLeft", "0px");
             var moveArgs = {
               node: "basicNode12",
-              properties: { marginLeft: {start: 0, end: 200, unit: "px"} },
+              properties: { marginLeft: {start: 0, end: 400, unit: "px"} },
               easing: dojo.fx.easing.quintInOut,
               duration: 5000
             };
@@ -529,7 +529,7 @@ Example 14:  sineIn change the margin-left of a div
             dojo.style("basicNode13", "marginLeft", "0px");
             var moveArgs = {
               node: "basicNode13",
-              properties: { marginLeft: {start: 0, end: 200, unit: "px"} },
+              properties: { marginLeft: {start: 0, end: 400, unit: "px"} },
               easing: dojo.fx.easing.sineIn,
               duration: 5000
             };
@@ -561,7 +561,7 @@ Example 15:  sineOut change the margin-left of a div
             dojo.style("basicNode14", "marginLeft", "0px");
             var moveArgs = {
               node: "basicNode14",
-              properties: { marginLeft: {start: 0, end: 200, unit: "px"} },
+              properties: { marginLeft: {start: 0, end: 400, unit: "px"} },
               easing: dojo.fx.easing.sineOut,
               duration: 5000
             };
@@ -593,7 +593,7 @@ Example 16:  sineInOut change the margin-left of a div
             dojo.style("basicNode15", "marginLeft", "0px");
             var moveArgs = {
               node: "basicNode15",
-              properties: { marginLeft: {start: 0, end: 200, unit: "px"} },
+              properties: { marginLeft: {start: 0, end: 400, unit: "px"} },
               easing: dojo.fx.easing.sineInOut,
               duration: 5000
             };
@@ -625,7 +625,7 @@ Example 17:  expoIn change the margin-left of a div
             dojo.style("basicNode16", "marginLeft", "0px");
             var moveArgs = {
               node: "basicNode16",
-              properties: { marginLeft: {start: 0, end: 200, unit: "px"} },
+              properties: { marginLeft: {start: 0, end: 400, unit: "px"} },
               easing: dojo.fx.easing.expoIn,
               duration: 5000
             };
@@ -657,7 +657,7 @@ Example 18:  expoOut change the margin-left of a div
             dojo.style("basicNode17", "marginLeft", "0px");
             var moveArgs = {
               node: "basicNode17",
-              properties: { marginLeft: {start: 0, end: 200, unit: "px"} },
+              properties: { marginLeft: {start: 0, end: 400, unit: "px"} },
               easing: dojo.fx.easing.expoOut,
               duration: 5000
             };
@@ -689,7 +689,7 @@ Example 19:  expoInOut change the margin-left of a div
             dojo.style("basicNode18", "marginLeft", "0px");
             var moveArgs = {
               node: "basicNode18",
-              properties: { marginLeft: {start: 0, end: 200, unit: "px"} },
+              properties: { marginLeft: {start: 0, end: 400, unit: "px"} },
               easing: dojo.fx.easing.expoInOut,
               duration: 5000
             };
