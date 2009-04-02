@@ -46,7 +46,68 @@ All animations in Dojo (with the exception of dojo.anim, introduced in Dojo 1.2)
 Animation Properties
 --------------------
 
-`TODOC:` node, delay, duration, rate, easing, events (onEnd, etc), repeat, curve
+The standard set of properties for specifying animation settings (via the Object parameter to the animation function) are:
++-------------------------------+--------------------------------------------------------------------------------------------+
++**Property**                   |**Description**                                                                             |
++-------------------------------+--------------------------------------------------------------------------------------------+
+| node                          |The domNode or node id to apply the animation effects to.                                   |
+|                               |                                                                                            |
+|                               |**required**                                                                                |
++-------------------------------+--------------------------------------------------------------------------------------------+
+| delay                         |Delay, in milliseconds, before the animation starts.  The default is 0ms.                   |
+|                               |                                                                                            |
+|                               |**optional**                                                                                |
++-------------------------------+--------------------------------------------------------------------------------------------+
+| duration                      |How long, in milliseconds, the animation will run.  The default is 2000 milliseconds        |
+|                               |(2 seconds).                                                                                |
+|                               |                                                                                            |
+|                               |**optional**                                                                                |
++-------------------------------+--------------------------------------------------------------------------------------------+
+| easing                        |An easing (timing) function to apply to the effect, such as exponential curve, bounce,      |
+|                               |etc.  Dojo provides a number of easing functions in module                                  |
+|                               |`dojo.fx.easing <dojo/fx/easing>`_                                                          |
+|                               |                                                                                            |
+|                               |**optional**                                                                                |
++-------------------------------+--------------------------------------------------------------------------------------------+
+| rate                          |`TODOC:`                                                                                    |
+|                               |                                                                                            |
+|                               |**optional**                                                                                |
++-------------------------------+--------------------------------------------------------------------------------------------+
+| repeat                        |How many times the animation will be played.  Default: 0.                                   |
+|                               |                                                                                            |
+|                               |**optional**                                                                                |
++-------------------------------+--------------------------------------------------------------------------------------------+
+| curve                         |`TODOC:`                                                                                    |
+|                               |                                                                                            |
+|                               |**optional**                                                                                |
++-------------------------------+--------------------------------------------------------------------------------------------+
+
+The standard set of events that are fired during stages of an animation are:
++-------------------------------+--------------------------------------------------------------------------------------------+
++**Property**                   |**Description**                                                                             |
++-------------------------------+--------------------------------------------------------------------------------------------+
+| beforeBegin                   |A callback function which will be executed synchronously before playing the animation.      |
+|                               |                                                                                            |
+|                               |**optional**                                                                                |
++-------------------------------+--------------------------------------------------------------------------------------------+
+| onBegin                       |A callback function which will be executed asynchronously immediately after starting the    |
+|                               |animation.                                                                                  |
+|                               |**optional**                                                                                |
++-------------------------------+--------------------------------------------------------------------------------------------+
+| onEnd                         |A callback function which will be executed synchronously when the animation ends.           |
+|                               |                                                                                            |
+|                               |**optional**                                                                                |
++-------------------------------+--------------------------------------------------------------------------------------------+
+| onPlay                        |A callback function which will be executed synchronously when the animation is played.      |
+|                               |                                                                                            |
+|                               |**optional**                                                                                |
++-------------------------------+--------------------------------------------------------------------------------------------+
+| onAnimate                     |A callback function fired for every step of the animation, passing                          |
+|                               |a value from a dojo._Line for this animation.                                               |
+|                               |                                                                                            |
+|                               |**optional**                                                                                |
++-------------------------------+--------------------------------------------------------------------------------------------+
+
 `API reference for _Animation <http://api.dojotoolkit.org/jsdoc/dojo/1.2/dojo._Animation>`_
 
 Animation Events
