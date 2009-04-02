@@ -449,8 +449,8 @@ Example 11:  quintIn change the margin-left of a div
     <button dojoType="dijit.form.Button" id="basicMoveButton10">Move the div!</button>
     <div id="basicNode10" style="width: 100px; height: 100px; background-color: red; margin-left: 0px;"></div>
 
-Example 12:  quartOut change the margin-left of a div
-----------------------------------------------------
+Example 12:  quintOut change the margin-left of a div
+-----------------------------------------------------
 
 .. cv-compound ::
   
@@ -481,7 +481,7 @@ Example 12:  quartOut change the margin-left of a div
     <button dojoType="dijit.form.Button" id="basicMoveButton8">Move the div!</button>
     <div id="basicNode8" style="width: 100px; height: 100px; background-color: red; margin-left: 0px;"></div>
 
-Example 13:  quartInOut change the margin-left of a div
+Example 13:  quintInOut change the margin-left of a div
 -------------------------------------------------------
 
 .. cv-compound ::
