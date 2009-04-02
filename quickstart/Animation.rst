@@ -94,6 +94,7 @@ The standard set of events that are fired during stages of an animation are:
 +-------------------------------+--------------------------------------------------------------------------------------------+
 | onBegin                       |A callback function which will be executed asynchronously immediately after starting the    |
 |                               |animation.                                                                                  |
+|                               |                                                                                            |
 |                               |**optional**                                                                                |
 +-------------------------------+--------------------------------------------------------------------------------------------+
 | onEnd                         |A callback function which will be executed synchronously when the animation ends.           |
