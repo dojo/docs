@@ -569,7 +569,7 @@ Example 15:  sineOut change the margin-left of a div
          }
          dojo.connect(dijit.byId("basicMoveButton14"), "onClick", moveIt);
       }
-      dojo.addOnLoad(setup15);
+      dojo.addOnLoad(setup14);
     </script>
 
   .. cv :: html 
@@ -601,7 +601,7 @@ Example 16:  sineInOut change the margin-left of a div
          }
          dojo.connect(dijit.byId("basicMoveButton15"), "onClick", moveIt);
       }
-      dojo.addOnLoad(setup12);
+      dojo.addOnLoad(setup15);
     </script>
 
   .. cv :: html 
