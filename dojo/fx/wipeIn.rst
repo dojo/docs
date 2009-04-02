@@ -78,7 +78,9 @@ Example 1:  wipe in a dom node
   .. cv :: html 
 
     <button dojoType="dijit.form.Button" id="basicFadeButton">Wipe It In!</button>
-    <div id="basicWipeNode" style="width: 100px; height: 100px; background-color: red;"></div>
+    <div id="basicWipeNode" style="width: 100px; background-color: red;">
+      This is a container of random content to wipe in!
+    </div>
 
 
 Example 2:  Fade in a dom node with a custom duration
