@@ -513,6 +513,101 @@ Example 13:  quintInOut change the margin-left of a div
     <button dojoType="dijit.form.Button" id="basicMoveButton12">Move the div!</button>
     <div id="basicNode12" style="width: 100px; height: 100px; background-color: red; margin-left: 0px;"></div>
 
+Example 14:  sineIn change the margin-left of a div
+---------------------------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dijit.form.Button");
+      dojo.require("dojo.fx.easing");
+      function setup13(){
+         //Function linked to the button to trigger the fade.
+         function moveIt() {
+            dojo.style("basicNode13", "marginLeft", "0px");
+            var moveArgs = {
+              node: "basicNode13",
+              properties: { marginLeft: {start: 0, end: 200, unit: "px"} },
+              easing: dojo.fx.easing.sineIn,
+              duration: 5000
+            };
+            dojo.animateProperty(moveArgs).play();
+         }
+         dojo.connect(dijit.byId("basicMoveButton13"), "onClick", moveIt);
+      }
+      dojo.addOnLoad(setup13);
+    </script>
+
+  .. cv :: html 
+
+    <button dojoType="dijit.form.Button" id="basicMoveButton13">Move the div!</button>
+    <div id="basicNode13" style="width: 100px; height: 100px; background-color: red; margin-left: 0px;"></div>
+
+Example 15:  sineOut change the margin-left of a div
+----------------------------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dijit.form.Button");
+      dojo.require("dojo.fx.easing");
+      function setup14(){
+         //Function linked to the button to trigger the fade.
+         function moveIt() {
+            dojo.style("basicNode14", "marginLeft", "0px");
+            var moveArgs = {
+              node: "basicNode14",
+              properties: { marginLeft: {start: 0, end: 200, unit: "px"} },
+              easing: dojo.fx.easing.sineOut,
+              duration: 5000
+            };
+            dojo.animateProperty(moveArgs).play();
+         }
+         dojo.connect(dijit.byId("basicMoveButton14"), "onClick", moveIt);
+      }
+      dojo.addOnLoad(setup15);
+    </script>
+
+  .. cv :: html 
+
+    <button dojoType="dijit.form.Button" id="basicMoveButton14">Move the div!</button>
+    <div id="basicNode14" style="width: 100px; height: 100px; background-color: red; margin-left: 0px;"></div>
+
+Example 16:  sineInOut change the margin-left of a div
+-------------------------------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dijit.form.Button");
+      dojo.require("dojo.fx.easing");
+      function setup15(){
+         //Function linked to the button to trigger the fade.
+         function moveIt() {
+            dojo.style("basicNode15", "marginLeft", "0px");
+            var moveArgs = {
+              node: "basicNode15",
+              properties: { marginLeft: {start: 0, end: 200, unit: "px"} },
+              easing: dojo.fx.easing.sineInOut,
+              duration: 5000
+            };
+            dojo.animateProperty(moveArgs).play();
+         }
+         dojo.connect(dijit.byId("basicMoveButton15"), "onClick", moveIt);
+      }
+      dojo.addOnLoad(setup12);
+    </script>
+
+  .. cv :: html 
+
+    <button dojoType="dijit.form.Button" id="basicMoveButton15">Move the div!</button>
+    <div id="basicNode15" style="width: 100px; height: 100px; background-color: red; margin-left: 0px;"></div>
 
 
 
