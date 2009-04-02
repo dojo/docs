@@ -30,46 +30,88 @@ All functions follow a simple naming convention of "ease type" + "when".  If the
 | dojo.fx.easing.linear                 | The most basic easing function (and the default for animations), apply the effect linearly over time.|
 +---------------------------------------+------------------------------------------------------------------------------------------------------+
 | dojo.fx.easing.quadIn                 | A function to apply the rate of the effect by a power of 2 over time at the beginning.               |
+|                                       |                                                                                                      |
+|                                       | *Starts slow and gets faster*                                                                        |
 +---------------------------------------+------------------------------------------------------------------------------------------------------+
 | dojo.fx.easing.quadOut                | A function to apply the rate of the effect by a power of 2 over time at the end.                     |
+|                                       |                                                                                                      |
+|                                       | *Starts fast and gets slower*                                                                        |
 +---------------------------------------+------------------------------------------------------------------------------------------------------+
 | dojo.fx.easing.quadInOut              | A function to apply the quad function at the beginning and end of the duration.                      |
+|                                       |                                                                                                      |
+|                                       | *Starts slow and gets faster, then gets slow again*                                                  |
 +---------------------------------------+------------------------------------------------------------------------------------------------------+
 | dojo.fx.easing.cubicIn                | A function to apply the rate of the effect by a power of 3 over time at the beginning.               |
+|                                       |                                                                                                      |
+|                                       | *Starts slow and gets faster*                                                                        |
 +---------------------------------------+------------------------------------------------------------------------------------------------------+
 | dojo.fx.easing.cubicOut               | A function to apply the rate of the effect by a power of 3 over time at the end.                     |
+|                                       |                                                                                                      |
+|                                       | *Starts fast and gets slower*                                                                        |
 +---------------------------------------+------------------------------------------------------------------------------------------------------+
 | dojo.fx.easing.cubicInOut             | A function to apply the cubic function at the beginning and end of the duration.                     |
+|                                       |                                                                                                      |
+|                                       | *Starts slow and gets faster, then gets slow again*                                                  |
 +---------------------------------------+------------------------------------------------------------------------------------------------------+
 | dojo.fx.easing.quartIn                | A function to apply the rate of the effect by a power of 4 over time at the beginning.               |
+|                                       |                                                                                                      |
+|                                       | *Starts slow and gets faster*                                                                        |
 +---------------------------------------+------------------------------------------------------------------------------------------------------+
 | dojo.fx.easing.quartOut               | A function to apply the rate of the effect by a power of 4 over time at the end.                     |
+|                                       |                                                                                                      |
+|                                       | *Starts fast and gets slower*                                                                        |
 +---------------------------------------+------------------------------------------------------------------------------------------------------+
 | dojo.fx.easing.quartInOut             | A function to apply the quart function at the beginning and end of the duration.                     |
+|                                       |                                                                                                      |
+|                                       | *Starts slow and gets faster, then gets slow again*                                                  |
 +---------------------------------------+------------------------------------------------------------------------------------------------------+
 | dojo.fx.easing.quintIn                | A function to apply the rate of the effect by a power of 5 over time at the beginning.               |
+|                                       |                                                                                                      |
+|                                       | *Starts slow and gets faster*                                                                        |
 +---------------------------------------+------------------------------------------------------------------------------------------------------+
 | dojo.fx.easing.quintOut               | A function to apply the rate of the effect by a power of 5 over time at the end.                     |
+|                                       |                                                                                                      |
+|                                       | *Starts fast and gets slower*                                                                        |
 +---------------------------------------+------------------------------------------------------------------------------------------------------+
 | dojo.fx.easing.quintInOut             | A function to apply the quint function at the beginning and end of the duration.                     |
+|                                       |                                                                                                      |
+|                                       | *Starts slow and gets faster, then gets slow again*                                                  |
 +---------------------------------------+------------------------------------------------------------------------------------------------------+
 | dojo.fx.easing.sineIn                 | A function to apply the rate of the effect by a sine function over time at the beginning.            |
+|                                       |                                                                                                      |
+|                                       | *Starts slow and gets faster*                                                                        |
 +---------------------------------------+------------------------------------------------------------------------------------------------------+
 | dojo.fx.easing.sineOut                | A function to apply the rate of the effect by a sine function over time at the end.                  |
+|                                       |                                                                                                      |
+|                                       | *Starts fast and gets slower*                                                                        |
 +---------------------------------------+------------------------------------------------------------------------------------------------------+
 | dojo.fx.easing.sineInOut              | A function to apply the sine function at the beginning and end of the duration.                      |
+|                                       |                                                                                                      |
+|                                       | *Starts slow and gets faster, then gets slow again*                                                  |
 +---------------------------------------+------------------------------------------------------------------------------------------------------+
 | dojo.fx.easing.expoIn                 | A function to apply the rate of the effect exponentially over time at the beginning.                 |
+|                                       |                                                                                                      |
+|                                       | *Starts slow and gets faster*                                                                        |
 +---------------------------------------+------------------------------------------------------------------------------------------------------+
 | dojo.fx.easing.expoOut                | A function to apply the rate of the effect exponentially over time at the end.                       |
+|                                       |                                                                                                      |
+|                                       | *Starts fast and gets slower*                                                                        |
 +---------------------------------------+------------------------------------------------------------------------------------------------------+
 | dojo.fx.easing.expoInOut              | A function to apply the exponential function at the beginning and end of the duration.               |
+|                                       |                                                                                                      |
+|                                       | *Starts slow and gets faster, then gets slow again*                                                  |
 +---------------------------------------+------------------------------------------------------------------------------------------------------+
 | dojo.fx.easing.circIn                 | A function to apply the rate of the effect circularly over time at the beginning.                    |
+|                                       |                                                                                                      |
+|                                       | *Starts slow and gets faster*                                                                        |
 +---------------------------------------+------------------------------------------------------------------------------------------------------+
 | dojo.fx.easing.circOut                | A function to apply the rate of the effect circularly over time at the end.                          |
+|                                       |                                                                                                      |
+|                                       | *Starts fast and gets slower*                                                                        |
 +---------------------------------------+------------------------------------------------------------------------------------------------------+
 | dojo.fx.easing.circInOut              | A function to apply the circular function at the beginning and end of the duration.                  |
+|                                       |                                                                                                      |
+|                                       | *Starts slow and gets faster, then gets slow again*                                                  |
 +---------------------------------------+------------------------------------------------------------------------------------------------------+
 | dojo.fx.easing.backIn                 | A function where the rate of change starts away from the target, but quickly accelerates towards it. | 
 +---------------------------------------+------------------------------------------------------------------------------------------------------+
