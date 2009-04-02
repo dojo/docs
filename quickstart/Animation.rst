@@ -28,7 +28,7 @@ As mentioned, dojo._Animation is the foundation for all Dojo Animations. It prov
 	// call play() on the returned _Animation instance:
 	animation.play();
 	
-If you are into chaining, and don't need the variable pointing to the animation instance, you can simply call .play() immediately after creation:
+You can simplify the above code using chaining, if you don't need to keep the animation object around for later use as follows:
 
 .. code-block :: javascript
 	:linenos:
