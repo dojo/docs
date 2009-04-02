@@ -60,7 +60,7 @@ Example 1:  wipe in a dom node
       dojo.require("dijit.form.Button");
       function basicWipeinSetup(){
          //Style the dom node to opacity 0;
-         dojo.style("basicFadeNode", "width", "0px");
+         dojo.style("basicWipeNode", "width", "0px");
 
          //Function linked to the button to trigger the fade.
          function wipeIt() {
