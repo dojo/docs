@@ -952,7 +952,7 @@ Example 27:  elasticOut change the margin-left of a div
             };
             dojo.animateProperty(moveArgs).play();
          }
-         dojo.connect(dijit.byId("basicMoveButton27"), "onClick", moveIt);
+         dojo.connect(dijit.byId("basicMoveButton26"), "onClick", moveIt);
       }
       dojo.addOnLoad(setup26);
     </script>
