@@ -40,7 +40,7 @@ refNode
   Can be a string (interpreted as an id of a DOM node) or a DOM node.
 
 pos
-  Optional argument. Can be a number or one of the following strings: "before", "after", "replace", "only", "first", or "last". If omitted, "last" is assumed. If the position argument is a number, it indicates that the node should be inserted as a child of ``refNode`` with this number (counting from 0).
+  Optional argument. Can be a number or one of the following strings: "before", "after", "replace", "only", "first", or "last". If omitted, "last" is assumed. The value of "only" replaces all children of the refNode. If the position argument is a number, it indicates that the node should be inserted as a child of ``refNode`` with this number (counting from 0).
 
 .. code-block :: javascript
   :linenos:
