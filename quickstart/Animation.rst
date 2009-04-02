@@ -311,4 +311,12 @@ Obviously, any logic for determining if a node should participate in an animatio
 Animation Easing
 ================
 
-`TODOC`
+Have you ever wanted to perform an animated effect such as fade out, fade in, wipe in, but apply the effect in a non-linear way? For example, wouldn't it be cool to have a fade in accelerate the rate at which the node appears the further along in the animation duration it is, or provide a bit of bounce to your slide in animation? The functions which control the timing of the animation is handled through the 'easing' property of the arguments passed to the animation creation functions.
+
+Instead of having to write the easing function yourself, dojo provides a collection of standard easing functions to use as this parameter to get a variety of effects.  See `Easing functions <dojo/fx/easing>`_ for more information on the easing function provided out of the box.
+
+============
+Text Effects
+============
+
+As mentioned above, the dojox/fx module provides additional effects over and beyond these basic animation capabilities.  On of the effects in the dojox package that is especially neat is effects that can operate on text directly, which can allow you to easily do animations such as exploding all the characters in a paragraph all over your page.  Make sure to check out these additional text effects once you understand the basics.
