@@ -65,6 +65,31 @@ All functions follow a simple naming convention of "ease type" + "when".  If the
 +---------------------------------------+------------------------------------------------------------------------------------------------------+
 | dojo.fx.easing.expoInOut              | A function to apply the exponential function at the beginning and end of the duration.               |
 +---------------------------------------+------------------------------------------------------------------------------------------------------+
+| dojo.fx.easing.circIn                 | A function to apply the rate of the effect circularly over time at the beginning.                    |
++---------------------------------------+------------------------------------------------------------------------------------------------------+
+| dojo.fx.easing.circOut                | A function to apply the rate of the effect circularly over time at the end.                          |
++---------------------------------------+------------------------------------------------------------------------------------------------------+
+| dojo.fx.easing.circInOut              | A function to apply the circular function at the beginning and end of the duration.                  |
++---------------------------------------+------------------------------------------------------------------------------------------------------+
+| dojo.fx.easing.backIn                 | A function where the rate of change starts away from the target, but quickly accelerates towards it. | 
++---------------------------------------+------------------------------------------------------------------------------------------------------+
+| dojo.fx.easing.backOut                | A function where the end value actually goes past the end, then pops back to the end value|          |
++---------------------------------------+------------------------------------------------------------------------------------------------------+
+| dojo.fx.easing.backInOut              | A function that applies both backIn and backOut to the animation behavior.                           |
++---------------------------------------+------------------------------------------------------------------------------------------------------+
+| dojo.fx.easing.elasticIn              | A function where the rate of change snaps elastically from the start value                           | 
++---------------------------------------+------------------------------------------------------------------------------------------------------+
+| dojo.fx.easing.elasticIn              | A function where the rate of change snaps elastically around the end value.                          | 
++---------------------------------------+------------------------------------------------------------------------------------------------------+
+| dojo.fx.easing.elasticInOut           | A function that elastically snaps around the value, near the beginning and end of the Animation.     |
++---------------------------------------+------------------------------------------------------------------------------------------------------+
+| dojo.fx.easing.bounceIn               | A function where the rate of change 'bounces' near the beginning value                               | 
++---------------------------------------+------------------------------------------------------------------------------------------------------+
+| dojo.fx.easing.bounceIn               | A function where the rate of change 'bounces' near the ending value                                  | 
++---------------------------------------+------------------------------------------------------------------------------------------------------+
+| dojo.fx.easing.bounceInOut            | A function that 'bounces' near the beginning and end of the animation                                |
++---------------------------------------+------------------------------------------------------------------------------------------------------+
+
 
 
 ========
