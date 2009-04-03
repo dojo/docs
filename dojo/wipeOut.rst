@@ -1,7 +1,7 @@
 #format dojo_rst
 
 dojo.wipeOut
-+===========
+============
 
 :Status: Draft
 :Version: 1.0
