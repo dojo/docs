@@ -188,6 +188,7 @@ The name of the topic is retrieved by calling the getShowTopicName method on the
 
 
 .. cv-compound::
+
   .. cv:: javascript
 
   	<script type="text/javascript">
