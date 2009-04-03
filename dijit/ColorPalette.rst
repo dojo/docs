@@ -23,8 +23,8 @@ Widget Construction Parameters
 +--------------------------------------+---------------------------------------------------------------------------------------------+
 |**Parameter**                         |**Description**                                                                              |
 +--------------------------------------+---------------------------------------------------------------------------------------------+
-| palette                              | A string defining the size of the palette.  Can only take one of two values, 7x10 or 3x4.   | 
-|                                      | The default value is 7x10.                                                                  |
+| palette                              |A string defining the size of the palette.  Can only take one of two values, 7x10 or 3x4.    | 
+|                                      |The default value is 7x10.                                                                   |
 |                                      |                                                                                             |
 |                                      |**optional**                                                                                 |
 +--------------------------------------+---------------------------------------------------------------------------------------------+
