@@ -211,16 +211,15 @@ The name of the topic is retrieved by calling the getShowTopicName method on the
 			
 	</script>
 
-.. cv:: html
+  .. cv:: html
 
-	<h2>from dojox.data.FlickrRestStore</h2>
-	This SlideShow should display five photos, and not loop. It should also not
-	open a URL when the image is clicked.  AutoLoading of images is also disabled.
-	The time between images in a SlideShow is 1 second.  The widget should not resize to fit the image
-	<div id="slideshow2" dojoType="dojox.image.SlideShow" noLink="true" loop="false" autoLoad="false"
-		slideshowInterval="1" fixedHeight="true"></div>
+    <h2>from dojox.data.FlickrRestStore</h2>
+    This SlideShow should display five photos, and not loop. It should also not
+    open a URL when the image is clicked.  AutoLoading of images is also disabled.
+    The time between images in a SlideShow is 1 second.  The widget should not resize to fit the image
+    <div id="slideshow2" dojoType="dojox.image.SlideShow" noLink="true" loop="false" autoLoad="false" slideshowInterval="1" fixedHeight="true"> </div>
 
-.. cv:: css
+  .. cv:: css
 	
    @import "moin_static163/js/dojo/trunk/release/dojo/dijit/themes/tundra/tundra.css";
    @import "moin_static163/js/dojo/trunk/release/dojo/dojox/image/resources/image.css";
