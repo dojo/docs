@@ -78,14 +78,15 @@ Example 1:  Demonstration of combining two chained animations.
             //Combine the three sets of animations into one that runs in parallel.
             dojo.fx.combine([displayAnim, moveAnim, resizeAnim]).play();
          }
-         dojo.connect(dijit.byId("basicButton"), "onClick", combineIt);
+         dojo.connect(dijit.byId("startButton"), "onClick", combineIt);
       }
       dojo.addOnLoad(basicCombine);
     </script>
 
   .. cv :: html 
 
-    <button dojoType="dijit.form.Button" id="basicButton">Fade and Wipe in Nodes!!</button>
+    <button dojoType="dijit.form.Button" id="startButton">Start the complex loop!</button>
+    <button dojoType="dijit.form.Button" id="endButton">End the complex loop!</button>
     <div id="basicNode1" style="width: 100px; height: 100px; background-color: red;"></div>
 
 ========
