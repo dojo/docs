@@ -27,6 +27,7 @@ Example 1:  Demonstration of combining two chained animations.
     <script>
       dojo.require("dijit.form.Button");
       dojo.require("dojo.fx");
+      dojo.require("dojo.fx.easing");
       function basicCombine(){
          //Function linked to the button to trigger the effects.
          function combineIt() {
@@ -36,8 +37,20 @@ Example 1:  Demonstration of combining two chained animations.
             ]);
 
             var moveAnim = dojo.fx.chain([
-              dojo.animateProperty({node: "basicNode1", properties: { marginLeft: {start: 0, end: 400, unit: "px"}}, duration: 1000}),
-              dojo.animateProperty({node: "basicNode1", properties: { marginLeft: {start: 400, end: 0, unit: "px"}}, duration: 1000}),
+              dojo.animateProperty({node: "basicNode1", 
+                properties: { 
+                  marginLeft: {start: 0, end: 400, unit: "px"}
+                }, 
+                duration: 1000,
+                easing: dojo.fx.easing.bounceOut
+              }),
+              dojo.animateProperty({node: "basicNode1", 
+                properties: { 
+                  marginLeft: {start: 400, end: 0, unit: "px"}
+                }, 
+                duration: 1000,
+                easing: dojo.fx.easing.bounceOut
+              }),
             ]);
 
             //Combine the two sets of animations into one that runs in parallel.
