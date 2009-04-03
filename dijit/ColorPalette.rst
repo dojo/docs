@@ -8,13 +8,26 @@ dijit.ColorPalette
 :Status: Draft
 :Version: 1.0
 :Authors: Bill Keese, Nikolai Onken
-:Developers: ?-
+:Developers: Declan Fahey, Bill Keese, Adam Peller, Becky Gibson, Pete Higgins
 :Available: since V?
 
 .. contents::
     :depth: 2
 
-dijit.ColorPalette is a great little tool which provides a color picker for you to use in your application.
+dijit.ColorPalette is a great little tool which provides a color picker for you to use in your application.  The color palette size is definable.  In addition, the color palette is accessible through screen readers as well as keyboard.
+
+==============================
+Widget Construction Parameters
+==============================
+
++--------------------------------------+---------------------------------------------------------------------------------------------+
+|**Parameter**                         |**Description**                                                                              |
++--------------------------------------+---------------------------------------------------------------------------------------------+
+| palette                              | A string defining the size of the palette.  Can only take one of two values, 7x10 or 3x4.   | 
+|                                      | The default value is 7x10.                                                                                                                                                                    |
+|                                      |                                                                                             |
+|                                      |**optional**                                                                                 |
++--------------------------------------+---------------------------------------------------------------------------------------------+
 
 
 ========
