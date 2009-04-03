@@ -221,7 +221,6 @@ The name of the topic is retrieved by calling the getShowTopicName method on the
 
   .. cv:: css
 	
-   @import "moin_static163/js/dojo/trunk/release/dojo/dijit/themes/tundra/tundra.css";
    @import "moin_static163/js/dojo/trunk/release/dojo/dojox/image/resources/image.css";
 
 
