@@ -41,9 +41,8 @@ Example 1:  Fade and Wipe in two DOM nodes at the same time
       dojo.require("dijit.form.Button");
       dojo.require("dojo.fx");
       function basicCombine(){
-         //Style the dom node to opacity 0;
          dojo.style("basicNode1", "opacity", "0");
-         dojo.style("basicNode2", "opacity", "0");
+         dojo.style("basicNode2", "height", "0px");
 
          //Function linked to the button to trigger the fade.
          function combineIt() {
