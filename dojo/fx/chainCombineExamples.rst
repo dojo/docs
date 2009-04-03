@@ -31,11 +31,14 @@ Example 1:  Demonstration of combining two chained animations.
       function basicCombine(){
          //Function linked to the button to trigger the effects.
          function combineIt() {
+
+            //Fade the node out, then in
             var displayAnim = dojo.fx.chain([
               dojo.fadeOut({node: "basicNode1", duration: 1000}),
               dojo.fadeIn({node: "basicNode1", duration: 1000}),
             ]);
 
+            //Move the node while it's fading out and in.
             var moveAnim = dojo.fx.chain([
               dojo.animateProperty({node: "basicNode1", 
                 properties: { 
@@ -53,8 +56,27 @@ Example 1:  Demonstration of combining two chained animations.
               }),
             ]);
 
-            //Combine the two sets of animations into one that runs in parallel.
-            dojo.fx.combine([displayAnim, moveAnim]).play();
+            //Resize the node as it moves too.
+            var resizeAnim = dojo.fx.chain([
+              dojo.animateProperty({node: "basicNode1", 
+                properties: { 
+                  width: {start: 100, end: 200, unit: "px"}
+                  height: {start: 100, end: 200, unit: "px"}
+                }, 
+                duration: 1000
+              }),
+              dojo.animateProperty({node: "basicNode1", 
+                properties: { 
+                  width: {start: 200, end: 100, unit: "px"}
+                  height: {start: 200, end: 100, unit: "px"}
+                }, 
+                duration: 1000
+              }),
+            ]);
+
+
+            //Combine the three sets of animations into one that runs in parallel.
+            dojo.fx.combine([displayAnim, moveAnim, resizeAnim]).play();
          }
          dojo.connect(dijit.byId("basicButton"), "onClick", combineIt);
       }
