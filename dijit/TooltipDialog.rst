@@ -6,11 +6,11 @@ dijit.TooltipDialog
 :Status: Draft
 :Version: 1.2
 
-A variant on Dialog Box is dijit.TooltipDialog. This displays the dialog box contents in a Tooltip
+A variant on Dialog Box is dijit.TooltipDialog. This displays a tooltip that contains form elements (like a dialog).
 
 Although both Dialog and TooltipDialog are modal, TooltipDialog can be closed by clicking anywhere on the screen, whereas for Dialog you must click on the [x] mark of the Dialog.
 
-Note: TooltipDialog can only be used, in it's current state, with the button drop down style
+A TooltipDialog can only be opened as a drop down from another widget, usually `dijit.form.DropDownButton`.
 
 Examples
 --------
@@ -22,6 +22,11 @@ The first example shows how to create a TooltipDialog and DropDownButton program
   .. cv:: javascript
 
 	<script type="text/javascript">
+          dojo.require("dijit.form.DropDownButton");
+          dojo.require("dijit.TooltipDialog");
+          dojo.require("dijit.form.TextBox");
+          dojo.require("dijit.form.Button");
+
           dojo.addOnLoad(function(){
             var dialog = new dijit.TooltipDialog({
                content:
@@ -31,8 +36,8 @@ The first example shows how to create a TooltipDialog and DropDownButton program
             });
  
             var button = new dijit.form.DropDownButton({
-                label: "hello!",
-                 dropDown: dialog
+                label: "show tooltip dialog",
+                dropDown: dialog
             });
             dojo.byId("dropdownButtonContainer").appendChild(button.domNode);
 	 });
@@ -53,9 +58,10 @@ Here's one displaying a TooltipDialog:
   .. cv:: javascript
 
     <script type="text/javascript">
-      dojo.require("dijit.form.Button");
-      dojo.require("dijit.Dialog");
+      dojo.require("dijit.form.DropDownButton");
+      dojo.require("dijit.TooltipDialog");
       dojo.require("dijit.form.TextBox");
+      dojo.require("dijit.form.Button");
     </script>
 
   .. cv:: html
