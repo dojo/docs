@@ -74,9 +74,24 @@ Example 1:  Demonstration of combining two chained animations.
               }),
             ]);
 
+            //And for overkill, change the color!
+            var colorAnim = dojo.fx.chain([
+              dojo.animateProperty({node: "basicNode1", 
+                properties: { 
+                  backgroundColor: {start: "red", end: "green"},
+                }, 
+                duration: 1000
+              }),
+              dojo.animateProperty({node: "basicNode1", 
+                properties: { 
+                  backgroundColor: {start: "green", end: "red"},
+                }, 
+                duration: 1000
+              }),
+            ]);
 
-            //Combine the three sets of animations into one that runs in parallel.
-            var combinedAnim = dojo.fx.combine([displayAnim, moveAnim, resizeAnim]);
+            //Combine the four sets of animations into one that runs in parallel.
+            var combinedAnim = dojo.fx.combine([displayAnim, moveAnim, resizeAnim, colorAnim]);
 
             //Set it so that every time it ends, it runs again. (And connect the stop action to it!)
             var handle = dojo.connect(combinedAnim, "onEnd", function(){combineIt();});
