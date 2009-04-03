@@ -79,8 +79,7 @@ Example 1:  Demonstration of combining two chained animations.
             var combinedAnim = dojo.fx.combine([displayAnim, moveAnim, resizeAnim]);
 
             //Set it so that every time it ends, it runs again.
-            var handle = dojo.connect(combinedAnim, "onEnd", function(){setTimeout(function(){combinedAnim.play();},10)});
-            dojo.connect(dijit.byId("endButton"), "onClick", function(){dojo.disconnect(handle);});
+            var handle = dojo.connect(combinedAnim, "onEnd", function(){combineIt();});
 
             //Run it!
             combinedAnim.play();
