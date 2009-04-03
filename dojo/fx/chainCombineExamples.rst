@@ -17,8 +17,10 @@ This page is a landing point for demonstrating complex animations of DOM nodes b
 Examples
 ========
 
-Example 1:  Demonstration of combining two chained animations.
---------------------------------------------------------------
+Example 1:  Demonstration of combining three chained animations
+---------------------------------------------------------------
+
+*This animation changes position, size, opacity, and color in a single, combined, animation*
 
 .. cv-compound ::
   
@@ -56,42 +58,29 @@ Example 1:  Demonstration of combining two chained animations.
               }),
             ]);
 
-            //Resize the node as it moves too.
-            var resizeAnim = dojo.fx.chain([
+            //Resize and change color of the node as it moves too.
+            var resizeColorAnim = dojo.fx.chain([
               dojo.animateProperty({node: "basicNode1", 
                 properties: { 
                   width: {start: 100, end: 200, unit: "px"},
-                  height: {start: 100, end: 200, unit: "px"}
+                  height: {start: 100, end: 200, unit: "px"},
+                  backgroundColor: {start: "red", end: "green"}
                 }, 
                 duration: 1000
               }),
               dojo.animateProperty({node: "basicNode1", 
                 properties: { 
                   width: {start: 200, end: 100, unit: "px"},
-                  height: {start: 200, end: 100, unit: "px"}
+                  height: {start: 200, end: 100, unit: "px"},
+                  backgroundColor: {start: "green", end: "red"}
                 }, 
                 duration: 1000
               }),
             ]);
 
-            //And for overkill, change the color!
-            var colorAnim = dojo.fx.chain([
-              dojo.animateProperty({node: "basicNode1", 
-                properties: { 
-                  backgroundColor: {start: "red", end: "green"},
-                }, 
-                duration: 1000
-              }),
-              dojo.animateProperty({node: "basicNode1", 
-                properties: { 
-                  backgroundColor: {start: "green", end: "red"},
-                }, 
-                duration: 1000
-              }),
-            ]);
 
-            //Combine the four sets of animations into one that runs in parallel.
-            var combinedAnim = dojo.fx.combine([displayAnim, moveAnim, resizeAnim, colorAnim]);
+            //Combine the three sets of animations into one that runs in parallel.
+            var combinedAnim = dojo.fx.combine([displayAnim, moveAnim, resizeColorAnim]);
 
             //Set it so that every time it ends, it runs again. (And connect the stop action to it!)
             var handle = dojo.connect(combinedAnim, "onEnd", function(){combineIt();});
