@@ -1,7 +1,7 @@
 #format dojo_rst
 
 Semi-Complex chain and combine examples
-===============
+=======================================
 
 :Status: Draft
 :Version: 1.0
@@ -32,7 +32,7 @@ Example 1:  Demonstration of combining two chained animations.
          function combineIt() {
             var displayAnim = dojo.fx.chain([
               dojo.fadeOut({node: "basicNode1", duration: 1000}),
-              dojo.fadeIn({node: "basicNode2", duration: 1000}),
+              dojo.fadeIn({node: "basicNode1", duration: 1000}),
             ]);
 
             var moveAnim = dojo.fx.chain([
