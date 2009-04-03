@@ -48,6 +48,7 @@ Example 1:  Fade and Wipe in two DOM nodes sequentially
          function chainIt() {
             dojo.style("basicNode1", "opacity", "0");
             dojo.style("basicNode2", "height", "0px");
+            dojo.style("basicNode2", "display", "none");
             dojo.fx.chain([
               dojo.fadeIn({node: "basicNode1", duration: 2000}),
               dojo.fx.wipeIn({node: "basicNode2", duration: 2000}),
