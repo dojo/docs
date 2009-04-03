@@ -22,10 +22,9 @@ The *dojo.fx.combine()* is a helper function that can take a list of dojo._Anima
 See Also
 ========
 
+* `Animation Quickstart <quickstart/Animation>`_
 * `dojo/animateProperty <dojo/animateProperty>`_
 * `dojo/fadeOut <dojo/fadeOut>`_
 * `dojo/fadeIn <dojo/fadeIn>`_
 * `dojo/wipeOut <dojo/fx/wipeOut>`_
 * `dojo/wipeIn <dojo/fx/wipeIn>`_
-
-* `Animation Quickstart <quickstart/Animation>`_
