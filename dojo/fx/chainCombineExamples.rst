@@ -42,14 +42,14 @@ Example 1:  Demonstration of combining two chained animations.
                   marginLeft: {start: 0, end: 400, unit: "px"}
                 }, 
                 duration: 1000,
-                easing: dojo.fx.easing.bounceOut
+                easing: dojo.fx.easing.backOut
               }),
               dojo.animateProperty({node: "basicNode1", 
                 properties: { 
                   marginLeft: {start: 400, end: 0, unit: "px"}
                 }, 
                 duration: 1000,
-                easing: dojo.fx.easing.bounceOut
+                easing: dojo.fx.easing.backOut
               }),
             ]);
 
