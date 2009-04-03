@@ -195,7 +195,7 @@ The name of the topic is retrieved by calling the getShowTopicName method on the
 		dojo.require("dojox.data.FlickrRestStore");
 		dojo.require("dojo.data.ItemFileReadStore"); 
 
-		//dojo.require("dojo.parser");	// find widgets		
+		dojo.require("dojo.parser");	// find widgets		
 		
 		dojo.addOnLoad(function(){
 			//Initialize the first SlideShow with an ItemFileReadStore
