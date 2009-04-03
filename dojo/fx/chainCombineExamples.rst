@@ -37,7 +37,7 @@ Example 1:  Demonstration of combining three chained animations
             //Fade the node out, then in
             var displayAnim = dojo.fx.chain([
               dojo.fadeOut({node: "basicNode1", duration: 1000}),
-              dojo.fadeIn({node: "basicNode1", duration: 1000}),
+              dojo.fadeIn({node: "basicNode1", duration: 1000})
             ]);
 
             //Move the node while it's fading out and in.
