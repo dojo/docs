@@ -60,14 +60,14 @@ Example 1:  Demonstration of combining two chained animations.
             var resizeAnim = dojo.fx.chain([
               dojo.animateProperty({node: "basicNode1", 
                 properties: { 
-                  width: {start: 100, end: 200, unit: "px"}
+                  width: {start: 100, end: 200, unit: "px"},
                   height: {start: 100, end: 200, unit: "px"}
                 }, 
                 duration: 1000
               }),
               dojo.animateProperty({node: "basicNode1", 
                 properties: { 
-                  width: {start: 200, end: 100, unit: "px"}
+                  width: {start: 200, end: 100, unit: "px"},
                   height: {start: 200, end: 100, unit: "px"}
                 }, 
                 duration: 1000
