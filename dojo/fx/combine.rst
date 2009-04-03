@@ -1,3 +1,5 @@
+#dojo_rst
+
 dojo.fx.combine
 ===============
 
