@@ -156,4 +156,5 @@ See Also
 ========
 
 * `dojo/wipeOut <dojo/wipeOut>`_
+* `dojo/animateProperty <dojo/animateProperty>`_
 * `Animation Quickstart <quickstart/Animation>`_
