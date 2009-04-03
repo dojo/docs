@@ -1,4 +1,4 @@
-#dojo_rst
+#format dojo_rst
 
 dojo.fx.combine
 ===============
@@ -13,3 +13,19 @@ dojo.fx.combine
     :depth: 2
 
 The *dojo.fx.combine()* is a helper function that can take a list of dojo._Animation objects and combine them so that their effects all run in parallel.  With this function animations that affect multiple nodes can be generated and executed at the same time.
+
+
+
+
+
+========
+See Also
+========
+
+* `dojo/animateProperty <dojo/animateProperty>`_
+* `dojo/fadeOut <dojo/fadeOut>`_
+* `dojo/fadeIn <dojo/fadeIn>`_
+* `dojo/wipeOut <dojo/fx/wipeOut>`_
+* `dojo/wipeIn <dojo/fx/wipeIn>`_
+
+* `Animation Quickstart <quickstart/Animation>`_
