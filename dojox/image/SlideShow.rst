@@ -220,8 +220,10 @@ The name of the topic is retrieved by calling the getShowTopicName method on the
     <div id="slideshow2" dojoType="dojox.image.SlideShow" noLink="true" loop="false" autoLoad="false" slideshowInterval="1" fixedHeight="true"> </div>
 
   .. cv:: css
-	
-   @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/image/resources/image.css";
+
+   <style>
+    @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/image/resources/image.css";
+   </style>
 
 
 
