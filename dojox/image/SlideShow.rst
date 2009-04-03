@@ -197,18 +197,9 @@ The name of the topic is retrieved by calling the getShowTopicName method on the
 
 		dojo.require("dojo.parser");	// find widgets		
 		
-		dojo.addOnLoad(function(){
-			//Initialize the first SlideShow with an ItemFileReadStore
-			dojo.parser.parse();
-			dijit.byId('slideshow1').setDataStore(imageItemStore,
-				{ query: {}, count:20 },
-				{
-					imageThumbAttr: "thumb",
-					imageLargeAttr: "large"
-				}
-			);
+		dojo.addOnLoad(function(){		
 			
-			//INitialize the second store with a FlickrRestStore
+			//INitialize the store with a FlickrRestStore
 			var flickrRestStore = new dojox.data.FlickrRestStore();
 			var req = {
 				query: {
