@@ -186,6 +186,52 @@ The name of the topic is retrieved by calling the getShowTopicName method on the
         alert("Got index: " +index);
   });
 
+
+.. cv-compound::
+  .. cv:: javascript
+
+  	<script type="text/javascript">
+		dojo.require("dojox.image.SlideShow");
+		dojo.require("dojox.data.FlickrRestStore");
+		dojo.require("dojo.data.ItemFileReadStore"); 
+
+		//dojo.require("dojo.parser");	// find widgets		
+		
+		dojo.addOnLoad(function(){
+			//Initialize the first SlideShow with an ItemFileReadStore
+			dojo.parser.parse();
+			dijit.byId('slideshow1').setDataStore(imageItemStore,
+				{ query: {}, count:20 },
+				{
+					imageThumbAttr: "thumb",
+					imageLargeAttr: "large"
+				}
+			);
+			
+			//INitialize the second store with a FlickrRestStore
+			var flickrRestStore = new dojox.data.FlickrRestStore();
+			var req = {
+				query: {
+					userid: "44153025@N00",
+					apikey: "8c6803164dbc395fb7131c9d54843627"
+				},
+				count: 20
+			};
+			dijit.byId('slideshow2').setDataStore(flickrRestStore, req);
+		});
+			
+	</script>
+
+.. cv:: html
+
+	<h2>from dojox.data.FlickrRestStore</h2>
+	This SlideShow should display five photos, and not loop. It should also not
+	open a URL when the image is clicked.  AutoLoading of images is also disabled.
+	The time between images in a SlideShow is 1 second.  The widget should not resize to fit the image
+	<div id="slideshow2" dojoType="dojox.image.SlideShow" noLink="true" loop="false" autoLoad="false"
+		slideshowInterval="1" fixedHeight="true"></div>
+
+
 ==========
 See Also
 ==========
