@@ -28,12 +28,8 @@ Example 1:  Demonstration of combining two chained animations.
       dojo.require("dijit.form.Button");
       dojo.require("dojo.fx");
       function basicCombine(){
-         dojo.style("basicNode1", "opacity", "0");
-         dojo.style("basicNode2", "height", "0px");
-
-         //Function linked to the button to trigger the fade.
+         //Function linked to the button to trigger the effects.
          function combineIt() {
-            dojo.style("basicNode1", "opacity", "0");
             var displayAnim = dojo.fx.chain([
               dojo.fadeOut({node: "basicNode1", duration: 1000}),
               dojo.fadeIn({node: "basicNode2", duration: 1000}),
