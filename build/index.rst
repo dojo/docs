@@ -257,6 +257,8 @@ Here is a sample profile from the Dojo 1.2.3 release directory tree, ``/utils/bu
     //    If no copyright is specified in this optimize case, then by default,
     //    the Dojo copyright will be used.
 
+Take notice that backslashes in prefix paths do not work on windows.
+
 ============
 Build Script
 ============
