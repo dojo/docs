@@ -76,7 +76,13 @@ Example 1:  Demonstration of combining two chained animations.
 
 
             //Combine the three sets of animations into one that runs in parallel.
-            dojo.fx.combine([displayAnim, moveAnim, resizeAnim]).play();
+            var combinedAnim = dojo.fx.combine([displayAnim, moveAnim, resizeAnim]);
+
+            //Set it so that every time it ends, it runs again.
+            dojo.connect(combinedAnim, "onEnd", combinedAnim, "play");
+
+            //Run it!
+            combinedAnim.play();
          }
          dojo.connect(dijit.byId("startButton"), "onClick", combineIt);
       }
