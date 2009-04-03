@@ -220,7 +220,7 @@ The name of the topic is retrieved by calling the getShowTopicName method on the
 		slideshowInterval="1" fixedHeight="true"></div>
 
 .. cv:: css
-	<!-- required: a default theme file -->
+	
 	@import "moin_static163/js/dojo/trunk/release/dojo/dijit/themes/tundra/tundra.css";
         @import "moin_static163/js/dojo/trunk/release/dojo/dojox/image/resources/image.css";
 
