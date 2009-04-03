@@ -55,3 +55,7 @@ See also
 * `dojox.fx <dojox/fx>`_
 
   More advanced animation functions in dojox.fx
+
+* `Animation Quickstart <quickstart/Animation>`_
+
+  The quickstart tutorial for doing animation effects.
