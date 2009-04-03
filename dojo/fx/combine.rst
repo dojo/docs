@@ -67,7 +67,6 @@ Example 1:  Fade and Wipe in two DOM nodes at the same time
       <b>Some random text in a node to wipe in.</b>
     </div>
 
-
 ========
 See Also
 ========
