@@ -84,7 +84,8 @@ Example 1:  Demonstration of combining two chained animations.
             //Run it!
             combinedAnim.play();
          }
-         dojo.connect(dijit.byId("startButton"), "onClick", combineIt);
+         var handle = dojo.connect(dijit.byId("startButton"), "onClick", combineIt);
+         dojo.connect(dijit.byId("endButton"), "onClick", function(){dojo.disconnect(handle);});
       }
       dojo.addOnLoad(basicCombine);
     </script>
