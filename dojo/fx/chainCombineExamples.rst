@@ -55,7 +55,7 @@ Example 1:  Demonstration of combining three chained animations
                 }, 
                 duration: 1000,
                 easing: dojo.fx.easing.backOut
-              }),
+              })
             ]);
 
             //Resize and change color of the node as it moves too.
@@ -75,7 +75,7 @@ Example 1:  Demonstration of combining three chained animations
                   backgroundColor: {start: "green", end: "red"}
                 }, 
                 duration: 1000
-              }),
+              })
             ]);
 
 
