@@ -72,6 +72,7 @@ See Also
 ========
 
 * `Animation Quickstart <quickstart/Animation>`_
+* `Semi-complex chaining and combining of effects <dojo/fx/chainCombineExamples>`_
 * `dojo/fx/chain <dojo/fx/chain>`_
 * `dojo/animateProperty <dojo/animateProperty>`_
 * `dojo/fadeOut <dojo/fadeOut>`_
