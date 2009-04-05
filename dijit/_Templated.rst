@@ -60,6 +60,8 @@ Instead, you the widget author do the following:
 
 The reason the variables are undeclared is that when the code in _Templated scans the html in step 1, and it finds the variables in the dojoAttachPoint attribute, it adds those variables to your widget class, dynamically.
 
+When using the "widgetsInTemplate" parameter, a dojoAttachPoint on the widget node in the template will refer to the widget instance rather than the Dom Node.
+
 dojoAttachEvent
 ---------------
 dojoAttachEvent will automatically setup a connection from an event on the DOM node (onclick in this case) to call a method in the widget (in this case increment().
