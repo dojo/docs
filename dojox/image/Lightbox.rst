@@ -4,15 +4,14 @@ dojox.image.Lightbox
 ====================
 
 :Status: Draft
-:Version: 1.0
-:Project owner: ?--
-:Available: since V?
+:Version: 1.4
+:Project owner: Peter Higgins
+:Available: since V1.1
 
 .. contents::
    :depth: 2
 
 The Lightbox is a nice way to show images centered on the screen. It works in a variety of ways: programmatic, from dojo.data, or inline. The Lightbox is currently labeled *experimental*, and may change to become a more consistent API.
-
 
 ============
 Introduction
@@ -91,6 +90,7 @@ A Lightbox instance has a .show() method, which tells the shared 'MasterDialog' 
 
 Here, the two images will be added in the same group, and the first image will be visible. Should you call lb2.show(), the same group of images would be displayed, though starting with the second.
 
+**new in 1.4** is a modal:Boolean parameter, which will allow you to enable/disable the behavior where clicking on the underlay will hide the dialog.
 
 ==================
 The LightboxDialog
