@@ -134,40 +134,33 @@ of settings, and using separate data stores.
 .. cv-compound::
 
    .. cv:: javascript
-          
-        <script type="text/javascript">
-           dojo.require("dojox.image.ThumbnailPicker");
-           dojo.require("dojox.image.FlickrRestStore");
 
-        dojo.addOnLoad(function() {
-         //Create a new FlickrRestStore
-         var flickrRestStore = new dojox.data.FlickrRestStore();
-         
-         //Create a request object, containing a query with the 
-         //userid, apikey and (optional) sort data.
-         //Extra query parameters 'tags' and 'tag_mode' are also 
-         //used to further filter the results
-         var req = {
-             query: {
-                 userid: "44153025@N00",//The Flickr user id to use
-                 apikey: "8c6803164dbc395fb7131c9d54843627",//An API key is required.
-                 sort: [
-                       {
-                           descending: true //Use descending sort order, ascending is default.
-                       }
-                       ],
-                 tags: ["superhorse", "redbones", "beachvolleyball","dublin","croatia"],
-                 tag_mode: "any" //Match any of the tags
-             },
-             start: 0, //start at record 0
-             count: 20 //request 20 records each time a request is made
-         };
-         
-         //Set the flickr data store on two of the dojox.image.ThumbnailPicker widgets
-         dijit.byId('thumbPicker1').setDataStore(flickrRestStore, req);
-     }
+     <script type="text/javascript">
+     dojo.require("dojox.image.ThumbnailPicker");
+     dojo.require("dojox.image.FlickrRestStore");
 
-     }
+     dojo.addOnLoad(function() {
+     //Create a new FlickrRestStore
+     var flickrRestStore = new dojox.data.FlickrRestStore();
+         
+     //Create a request object, containing a query with the 
+     //userid, apikey and (optional) sort data.
+     //Extra query parameters 'tags' and 'tag_mode' are also 
+     //used to further filter the results
+     var req = {query: {
+                        userid: "44153025@N00",
+                        apikey: "8c6803164dbc395fb7131c9d54843627",
+                        sort: [ {descending: true }],
+                        tags: ["superhorse", "redbones", "beachvolleyball","dublin","croatia"],
+                        tag_mode: "any" 
+                        },
+                        start: 0, //start at record 0
+                        count: 20 //request 20 records each time a request is made
+                        };
+         
+     //Set the flickr data store on two of the dojox.image.ThumbnailPicker widgets
+     dijit.byId('thumbPicker1').setDataStore(flickrRestStore, req);
+     });          
 
      </script>
 
