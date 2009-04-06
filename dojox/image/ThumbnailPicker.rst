@@ -170,28 +170,10 @@ of settings, and using separate data stores.
 
      }
 
-     //Subscribe to clicks on the thumbnails, and print out the information provided
-     function doSubscribe(){
-         function updateDiv(packet){
-             alert("You selected the thumbnail:"
-                   + "Index: " + packet.index
-                   + "Url: " + packet.url
-                   + "Large Url: " + packet.largeUrl
-                   + "Title: " + packet.title
-                   + "Link: " + packet.link)
-             ;
-         }
-         
-         //When an image in the ThumbnailPicker is clicked on, it publishes
-         //information on the image to a topic, whose name is found by calling
-         //the 'getClickTopicName' function on the widget.
-         dojo.subscribe(dijit.byId('thumbPicker1').getClickTopicName(), updateDiv);         
-     }
      </script>
 
      <script>
-     dojo.addOnLoad(initFlickrWidget);
-     dojo.addOnLoad(doSubscribe);
+        dojo.addOnLoad(initFlickrWidget);     
      </script>
 
 
