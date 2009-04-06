@@ -69,4 +69,4 @@ Accessibility
 Keyboard
 --------
 
-The MultiSelect widget uses native HTML TEXTAREA controls.
+The SimpleTextarea widget uses native HTML TEXTAREA controls.
