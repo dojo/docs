@@ -176,6 +176,10 @@ of settings, and using separate data stores.
      </body>
      </html>
 
+.. cv :: css
+   <style>
+      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/image/resources/image.css";
+   <style>
  
 ========
 See also
