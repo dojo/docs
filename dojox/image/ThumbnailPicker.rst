@@ -160,20 +160,20 @@ of settings, and uses the FlickrRestStore data store.
 
         </script>
 
-.. cv:: html
+   .. cv:: html
 
-    <h2>From FlickrRestStore:</h2>
-     This ThumbnailPicker should have 4 thumbnails, witheach of them linking
-     to a URL when clicked on, changing the current page.  The cursor should also change when over an image.
-     The widget is laid out in the default horizontal layout.
-     <div id="thumbPicker1" dojoType="dojox.image.ThumbnailPicker" numberThumbs="4" useHyperlink="true" 
-     hyperlinkTarget="this"></div>
+       <h2>From FlickrRestStore:</h2>
+       This ThumbnailPicker should have 4 thumbnails, witheach of them linking
+       to a URL when clicked on, changing the current page.  The cursor should also change when over an image.
+       The widget is laid out in the default horizontal layout.
+       <div id="thumbPicker1" dojoType="dojox.image.ThumbnailPicker" numberThumbs="4" useHyperlink="true" 
+       hyperlinkTarget="this"></div>
 
-.. cv:: css
+   .. cv:: css
 
-   <style>
-      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/image/resources/image.css";
-   <style>
+      <style>
+         @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/image/resources/image.css";
+      <style>
  
 
 ========
