@@ -129,8 +129,15 @@ of settings, and using separate data stores.
 
 
 
-.. code-block :: javascript
- :linenos:
+
+ 
+.. cv-compound::
+
+   .. cv:: javascript
+          
+        <script type="text/javascript">
+           dojo.require("dojox.image.ThumbnailPicker");
+           dojo.require("dojox.image.FlickrRestStore");
 
         function initFlickrWidget() {
          //Create a new FlickrRestStore
@@ -160,27 +167,7 @@ of settings, and using separate data stores.
          dijit.byId('thumbPicker1').setDataStore(flickrRestStore, req);
      }
 
-     /*
-       Initializes the second ThumbnailPicker widget with a data store that
-       reads information from a JSON URL.  This also tells the ThumbnailPicker
-       the name of the JSON attributes to read from each data item retrieved
-       from the JSON URL.
-     */
-     function initItemStoreWidget(){
-         var itemRequest = {
-             query: {},
-             count: 20
-         };
-         var itemNameMap = {
-             imageThumbAttr: "thumb",
-             imageLargeAttr: "large"
-         };
-         
-         //Set the dojo.data.ItemFileReadStore on two of the dojox.image.ThumbnailPicker widgets
-         //Note the use of the 'itemNameMap', which tells the widget what attributes to
-         //read from the store.  Look in the 'images.json' file in the same folder as this
-         //file to see the data being read by the widget.
-         dijit.byId('thumbPicker2').setDataStore(imageItemStore, itemRequest, itemNameMap);
+
      }
 
      //Subscribe to clicks on the thumbnails, and print out the information provided
@@ -198,35 +185,24 @@ of settings, and using separate data stores.
          //When an image in the ThumbnailPicker is clicked on, it publishes
          //information on the image to a topic, whose name is found by calling
          //the 'getClickTopicName' function on the widget.
-         dojo.subscribe(dijit.byId('thumbPicker1').getClickTopicName(), updateDiv);
-         dojo.subscribe(dijit.byId('thumbPicker2').getClickTopicName(), updateDiv);
+         dojo.subscribe(dijit.byId('thumbPicker1').getClickTopicName(), updateDiv);         
      }
+     </script>
 
-
-
+     <script>
      dojo.addOnLoad(initFlickrWidget);
-     dojo.addOnLoad(initItemStoreWidget);
      dojo.addOnLoad(doSubscribe);
      </script>
-     </head>
-     <body>
-     <h2>From FlickrRestStore:</h2>
+
+
+.. cv : html
+
+    <h2>From FlickrRestStore:</h2>
      This ThumbnailPicker should have 8 thumbnails, witheach of them linking
      to a URL when clicked on, changing the current page.  The cursor should also change when over an image.
      The widget is laid out in the default horizontal layout.
      <div id="thumbPicker1" dojoType="dojox.image.ThumbnailPicker" numberThumbs="8" useHyperlink="true" 
      hyperlinkTarget="this"></div>
-
-     <h2>From ItemFileReadStore:</h2>
-     This ThumbnailPicker should have 5 thumbnails. Clicking on a thumbnail should NOT
-     open a URL, and the cursor should not change when over an image that is not an arrow.
-     The widget is laid out in a vertical layout.
-
-     <div id="thumbPicker2" dojoType="dojox.image.ThumbnailPicker" numberThumbs="5" isClickable="false"
-     isHorizontal="false"></div>
-                  
-     Create an ItemFileReadStore that reads data from the file "images.json".  This is used by the ThumbnailPicker "thumbPicker2"
-     <div jsId="imageItemStore" dojoType="dojo.data.ItemFileReadStore" url="images.json"></div>
 
      </body>
      </html>
