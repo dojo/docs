@@ -128,8 +128,6 @@ This example will put a horizontal and a vertical dojox.image.ThumbnailPicker wi
 of settings, and using separate data stores.
 
 
-
-
  
 .. cv-compound::
 
@@ -161,7 +159,6 @@ of settings, and using separate data stores.
         //Set the flickr data store on two of the dojox.image.ThumbnailPicker widgets
         dijit.byId('thumbPicker1').setDataStore(flickrRestStore, req);
         });          
-
         </script>
 
 .. cv:: html
@@ -173,15 +170,13 @@ of settings, and using separate data stores.
      <div id="thumbPicker1" dojoType="dojox.image.ThumbnailPicker" numberThumbs="8" useHyperlink="true" 
      hyperlinkTarget="this"></div>
 
-     </body>
-     </html>
-
 .. cv:: css
 
    <style>
       @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/image/resources/image.css";
    <style>
  
+
 ========
 See also
 ========
