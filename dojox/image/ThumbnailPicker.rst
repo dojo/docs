@@ -166,7 +166,7 @@ of settings, and uses the FlickrRestStore data store.
        This ThumbnailPicker should have 4 thumbnails, witheach of them linking
        to a URL when clicked on, changing the current page.  The cursor should also change when over an image.
        The widget is laid out in the default horizontal layout.
-       <div id="thumbPicker1" dojoType="dojox.image.ThumbnailPicker" numberThumbs="4" useHyperlink="true" 
+       <div id="thumbPicker1" dojoType="dojox.image.ThumbnailPicker" numberThumbs="8" useHyperlink="true" 
        hyperlinkTarget="this"></div>
 
    .. cv:: css
