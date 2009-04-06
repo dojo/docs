@@ -121,13 +121,11 @@ really makes sense to use it in combination with other widgets or elements on a 
   <div dojoType="dojox.image.ThumbnailPicker" id="picker1" useLoadNotifier="true"> </div>
 
 
-Full Example
-------------
+Example
+-------
 
-This example will put a horizontal and a vertical dojox.image.ThumbnailPicker widget on a page, with a variety
-of settings, and using separate data stores.
-
-
+This example will put a horizontal dojox.image.ThumbnailPicker widget on a page, with a variety
+of settings, and uses the FlickrRestStore data store.
  
 .. cv-compound::
 
@@ -165,7 +163,7 @@ of settings, and using separate data stores.
 .. cv:: html
 
     <h2>From FlickrRestStore:</h2>
-     This ThumbnailPicker should have 8 thumbnails, witheach of them linking
+     This ThumbnailPicker should have 4 thumbnails, witheach of them linking
      to a URL when clicked on, changing the current page.  The cursor should also change when over an image.
      The widget is laid out in the default horizontal layout.
      <div id="thumbPicker1" dojoType="dojox.image.ThumbnailPicker" numberThumbs="4" useHyperlink="true" 
