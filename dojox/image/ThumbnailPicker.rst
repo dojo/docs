@@ -139,7 +139,7 @@ of settings, and using separate data stores.
            dojo.require("dojox.image.ThumbnailPicker");
            dojo.require("dojox.image.FlickrRestStore");
 
-        function initFlickrWidget() {
+        dojo.addOnLoad(function() {
          //Create a new FlickrRestStore
          var flickrRestStore = new dojox.data.FlickrRestStore();
          
@@ -167,15 +167,9 @@ of settings, and using separate data stores.
          dijit.byId('thumbPicker1').setDataStore(flickrRestStore, req);
      }
 
-
      }
 
      </script>
-
-     <script>
-        dojo.addOnLoad(initFlickrWidget);     
-     </script>
-
 
 .. cv : html
 
