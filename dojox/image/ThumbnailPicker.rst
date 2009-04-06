@@ -137,7 +137,7 @@ of settings, and using separate data stores.
 
      <script type="text/javascript">
      dojo.require("dojox.image.ThumbnailPicker");
-     dojo.require("dojox.image.FlickrRestStore");
+     dojo.require("dojox.data.FlickrRestStore");
 
      dojo.addOnLoad(function() {
      //Create a new FlickrRestStore
