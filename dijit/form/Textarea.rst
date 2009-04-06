@@ -71,8 +71,9 @@ Keyboard
 The Textarea widget uses native HTML TEXTAREA controls.
 
 
+=============================
 Known Issues (1.2 and before)
------------------------------
+=============================
 
 * On Firefox 2, the user must press the Tab key twice before keyboard focus moves to the next widget. (There is no problem when using Shift+Tab.) 
 
