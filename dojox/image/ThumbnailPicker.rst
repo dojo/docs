@@ -159,6 +159,7 @@ of settings, and using separate data stores.
         //Set the flickr data store on two of the dojox.image.ThumbnailPicker widgets
         dijit.byId('thumbPicker1').setDataStore(flickrRestStore, req);
         });          
+
         </script>
 
 .. cv:: html
