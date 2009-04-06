@@ -164,7 +164,7 @@ of settings, and using separate data stores.
 
      </script>
 
-.. cv : html
+.. cv :: html
 
     <h2>From FlickrRestStore:</h2>
      This ThumbnailPicker should have 8 thumbnails, witheach of them linking
