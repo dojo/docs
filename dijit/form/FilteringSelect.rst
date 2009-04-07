@@ -391,7 +391,7 @@ Transforming the displayed value using labelFunc
 
 The labelFunc attribute of FilteringSelect enables you to transform the text that appears in the textbox after the user selects a value from the menu or types in a value manually. labelFunc takes two arguments: a dojo.data item representing the option the user selected and the store the item came from; hence, myLabelFunc will not fire for invalid text. labelFunc is expected to return the text you want to display.
 
-In this example, the FilteringSelect takes a labelFunc attribute pointing to a function named myLabelFunc in the JavaScript. myLabelFunc receives two arguments: a dojo.data item, and the store it came from (FilteringSelects build from OPTION tags automatically generate a store). myLabelFunc returns an all lowercase string that then displays in the FilteringSelect.
+In this example, the FilteringSelect takes a labelFunc attribute pointing to a function named myLabelFunc in the JavaScript. myLabelFunc receives two arguments: a dojo.data item, and the store it came from (FilteringSelects built from OPTION tags automatically generate a store). myLabelFunc returns an all lowercase string that then displays in the FilteringSelect.
 
 .. cv-compound::
 
