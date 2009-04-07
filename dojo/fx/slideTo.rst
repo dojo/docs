@@ -14,7 +14,7 @@ dojo.fx.slideTo
 
 This function is a helper function that wraps the `dojo.animateProperty <dojo/animateProperty>`_ function to provide an easy interface to sliding a node from its current position to a new position on the page.  While this can be done with the *dojo.animateProperty* function, this function is simpler to use and will handle 99% of the cases a slide of a node is desired.
 
-**NOTE:** This function works best on absolutlely positioned nodes.
+**NOTE:** This function works best on absolutely positioned nodes.
 
 ==========
 Parameters
@@ -78,7 +78,6 @@ Example 1:  Slide a dom node right 200 pixels.
               left: (dojo.coords("basicNode").l + amt).toString(),
               unit: "px"
             };
-            console.debug(slideArgs);
             dojo.fx.slideTo(slideArgs).play();
          }
          dojo.connect(dijit.byId("slideRightButton"), "onClick", dojo.partial(slideIt, 200));
