@@ -404,7 +404,7 @@ When users opens a FilteringSelect menu, by default they just see the search tex
                 items:[
                         {name:"Dojo", label:"<img src='http://www.dojotoolkit.org/sites/all/themes/dtk/img/core-home.png' />"},
                         {name:"Dijit", label:"<img src='http://www.dojotoolkit.org/sites/all/themes/dtk/img/dijit-home.png' />"},
-                        {name:"Dijit", label:"<img src='http://www.dojotoolkit.org/sites/all/themes/dtk/img/dojox-home.png' />"}
+                        {name:"Dojox", label:"<img src='http://www.dojotoolkit.org/sites/all/themes/dtk/img/dojox-home.png' />"}
                 ]
         };
         var dojoStore=new dojo.data.ItemFileReadStore({data:richData});
@@ -412,6 +412,7 @@ When users opens a FilteringSelect menu, by default they just see the search tex
 
   .. cv:: html
     <input dojoType="dijit.form.FilteringSelect"
+        id="dojoBox"
         value="Dojo"
         store="dojoStore"
         searchAttr="name"
