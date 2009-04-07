@@ -386,6 +386,41 @@ The city ComboBox sets the state FilteringSelect value, and the state FilteringS
     <label for="state">State:</label>
     <input id="state">
 
+Displaying custom and rich text menu labels with labelAttr and labelType
+------------------------------------------------------------------------
+
+When users opens a FilteringSelect menu, by default they just see the search text as options in the menu. You can enrich the menu's content by supplying a different label as the following example demonstrates.
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+        dojo.require("dijit.form.FilteringSelect");
+        dojo.require("dojo.data.ItemFileReadStore");
+        var richData={
+                label="label",
+                items=[
+                        {name="Dojo", label="<img src='http://www.dojotoolkit.org/sites/all/themes/dtk/img/core-home.png' />"}]},
+                        {name="Dijit", label="<img src='http://www.dojotoolkit.org/sites/all/themes/dtk/img/dijit-home.png' />"}]},
+                        {name="Dijit", label="<img src='http://www.dojotoolkit.org/sites/all/themes/dtk/img/dojox-home.png' />"}]}
+                ]
+        };
+        var dojoStore=new dojo.data.ItemFileReadStore({data:richData});
+    </script>
+
+  .. cv:: html
+    (stateStore definition omitted; see above examples)
+    <input dojoType="dijit.form.FilteringSelect"
+        value="KY"
+        store="stateStore"
+        searchAttr="name"
+        name="state"
+        labelAttr="label"
+        labelType="html">
+
+
+
 Transforming the displayed value using labelFunc
 ------------------------------------------------
 
@@ -411,7 +446,7 @@ In this example, the FilteringSelect takes a labelFunc attribute pointing to a f
     </script>
 
   .. cv:: html
-
+    (stateStore definition omitted; see above examples)
     <input dojoType="dijit.form.FilteringSelect"
         value="KY"
         store="stateStore"
