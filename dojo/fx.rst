@@ -38,9 +38,9 @@ Functions provided by the dojo.fx module
 
 * `dojo.fx.easing <dojo/fx/easing>`_ -  A collection of easing functions that can be used with dojo.animateProperty and its extensions to modify an animation.
 
-* `dojo.fx.wipeIn <dojo/fx/wipeIn>`_ -  To wipe in a node
+* `dojo.fx.wipeIn <dojo/fx/wipeIn>`_ -  Wipe in a node (Height 0 to max height of node).
 
-* `dojo.fx.wipeOut <dojo/fx/wipeOut>`_ -  To wipe in a node
+* `dojo.fx.wipeOut <dojo/fx/wipeOut>`_ -  Wipe out a node (Max height to 0).
 
 * `dojo.fx.slideTo <dojo/fx/slideTo>`_ -  To slide a node from current position to ABS position x,y.
 
