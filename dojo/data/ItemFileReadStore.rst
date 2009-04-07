@@ -34,6 +34,8 @@ The following dojo.data APIs are implemented by ItemFileReadStore
 Constructor Parameters
 ======================
 
+**NOTE:** 'Since' refers to which version of dojo the parameter was added to the data store.
+
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
 | **Parameter**  | **Required** | **Description**                                                                                | **Since** |
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
