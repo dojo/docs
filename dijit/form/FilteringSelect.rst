@@ -420,7 +420,6 @@ In this example, the FilteringSelect takes a labelFunc attribute pointing to a f
         store="stateStore"
         searchAttr="name"
         name="state"
-        id="stateInput"
         labelFunc="myLabelFunc">
 
 
