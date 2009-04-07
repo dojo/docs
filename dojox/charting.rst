@@ -289,7 +289,7 @@ You can also add a grid at your tick marks to your entire chart by adding a Grid
   	hMajorLines: true,	
   	hMinorLines: false,	
   	vMajorLines: true,	
-  	vMinorLines: false,	
+  	vMinorLines: false
   });
 
 TODO: Grid Plot Example
