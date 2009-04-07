@@ -94,7 +94,7 @@ Why isn't it just SQL for a query?  Why can each store potentially define their 
 
 Therefore, the dojo.data API defines basic guidelines and syntax stores that can be easily mapped to a service (for example, attribute names can map directly to parameters in a query string). The same is true for an SQL backed datastore. The attributes become substitutions in a prepared statement that the stores use (when they pass back the query to the server) and a simple common pattern matching syntax, the * and ?, which also map easily across a wide variety of datasource query syntax.
 
-  **Note:** dojo.data recommends that stores generally use the dojo.data.ItemFileReadStore syntax, because it is fairly generic, works well in javascript, and can be mapped into other native syntaxes easily. Nearly all, if not all, datastores provided in the dojox.data module use the exact same syntax and will under the covers map it to the native syntaxes needed by the back-end services that provide the data store query and return (for remove data stores), and in-memory datastores, such as dojo.data.ItemFileReadStore work well with the structured JavaScript format.
+  **Note:** dojo.data recommends that stores generally use the dojo.data.ItemFileReadStore syntax, because it is fairly generic, works well in javascript, and can be mapped into other native syntaxes easily. Nearly all, if not all, datastores provided in the dojox.data module use the exact same syntax and will under the covers map it to the native syntaxes needed by the back-end services that provide the data store query and return (for remote data stores), and in-memory datastores, such as dojo.data.ItemFileReadStore work well with the structured JavaScript format.
 
 ========
 Examples
