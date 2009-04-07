@@ -20,7 +20,8 @@ Features
 ========
 
 * `dojo.animateProperty <dojo/animateProperty>`_
-
+* `dojo.fadeIn <dojo/fadeIn>`_ 
+* `dojo.fadeOut <dojo/fadeIn>`_ 
 
 ========
 See also
