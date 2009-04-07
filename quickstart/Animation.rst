@@ -98,7 +98,7 @@ The standard set of events that are fired during stages of an animation are:
 +-------------------------------+--------------------------------------------------------------------------------------------+
 | beforeBegin                   |A callback function which will be executed synchronously before playing the animation.      |
 |                               |                                                                                            |
-|                               |**optional**                                                                                |
+|                               |**optional** **new in 1.4**: passed node reference for the animation                        |
 +-------------------------------+--------------------------------------------------------------------------------------------+
 | onBegin                       |A callback function which will be executed asynchronously immediately after starting the    |
 |                               |animation.                                                                                  |
@@ -107,7 +107,7 @@ The standard set of events that are fired during stages of an animation are:
 +-------------------------------+--------------------------------------------------------------------------------------------+
 | onEnd                         |A callback function which will be executed synchronously when the animation ends.           |
 |                               |                                                                                            |
-|                               |**optional**                                                                                |
+|                               |**optional**  **new in 1.4**: passed node reference for the animation                       |
 +-------------------------------+--------------------------------------------------------------------------------------------+
 | onPlay                        |A callback function which will be executed synchronously when the animation is played.      |
 |                               |                                                                                            |
@@ -158,6 +158,21 @@ You can define these callback functions as part of the Object parameter used to 
 	 	// connect externally to this animation instance's onEnd function
 	});
 	animation.play(); // start it up
+
+**new in Dojo 1.4** - The onEnd and beforeBegin events are fired passing a reference to the node being animation so that you may more easily manipulate a node immediately before or after an animation:
+
+.. code-block :: javascript
+    :linenos:
+
+    dojo.fadeOut({
+        node:"foo",
+        onEnd: function(n){
+             n.innerHTML = "";
+        },
+        beforeBegin: function(n){
+             n.innerHTML = "Bye!";
+        }
+    }).play();
 
 
 ===============	
