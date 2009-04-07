@@ -415,7 +415,7 @@ Displaying rich text menu labels with labelAttr and labelType
 
 When users opens a FilteringSelect menu, by default they just see the search text as options in the menu. You can enrich the menu's content by supplying a different label.
 
-This example demonstrates a FilteringSelect featuring each of the 3 components of Dojo: Dojo core, Dijit, and Dojox. The FilteringSelect accepts the text Dojo core, Dijit, or Dojox. The autocomplete menu displays rich text representations (images from http://www.dojotoolkit.org) of each. If you try this example with a screen reader, you will notice that the screen reader continues to announce the value in the textbox as with other FilteringSelects, rather than trying to parse the rich text label.
+This example demonstrates a FilteringSelect featuring each of the 3 components of Dojo: Dojo core, Dijit, and Dojox. The FilteringSelect accepts the text Dojo core, Dijit, or Dojox. The autocomplete menu displays rich text representations (images from http://www.dojotoolkit.org) of each. If you try this example with a screen reader, you will notice that the screen reader continues to announce the autocompleted value in the textbox, as with other FilteringSelects, rather than trying to parse the rich text label.
 
 .. cv-compound::
 
@@ -515,10 +515,3 @@ See Also
 ========
 
 * There's a `DropDown Select <dojox/form/DropDownSelect>`_ widget in the `dojox.form <dojox/form>`_ project that's similar to FilteringSelect but without the search ability. It can support rich text in both the drop down and in a closed state (to display the selected item).
-
-=====
-TODOC
-=====
-
-* custom labels (example using labelFunc)
-* custom displayedValues (how?)
