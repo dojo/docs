@@ -70,7 +70,7 @@ Example 1:  Slide a dom node right 200 pixels.
       function basicSlideToSetup(){
          //Function linked to the button to trigger the wipe.
          function slideIt() {
-            var alideArgs = {
+            var slideArgs = {
               node: "basicNode",
               left: 200,
               unit: "px"
@@ -85,7 +85,7 @@ Example 1:  Slide a dom node right 200 pixels.
   .. cv :: html 
 
     <button dojoType="dijit.form.Button" id="basicSlideButton">Slide It In!</button>
-    <div id="basicNode" style="width: 200px; height: 200px; background-color: red;">
+    <div id="basicNode" style="width: 100px; height: 100px; background-color: red;">
     </div>
 
 
