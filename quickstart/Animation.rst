@@ -51,7 +51,7 @@ The standard set of properties for specifying animation settings (via the Object
 +-------------------------------+--------------------------------------------------------------------------------------------+
 +**Property**                   |**Description**                                                                             |
 +-------------------------------+--------------------------------------------------------------------------------------------+
-| node                          |The domNode or node id to apply the animation effects to.                                   |
+| node                          |The domNode reference or string id of a node to apply the animation effects to.             |
 |                               |                                                                                            |
 |                               |**required**                                                                                |
 +-------------------------------+--------------------------------------------------------------------------------------------+
@@ -59,8 +59,8 @@ The standard set of properties for specifying animation settings (via the Object
 |                               |                                                                                            |
 |                               |**optional**                                                                                |
 +-------------------------------+--------------------------------------------------------------------------------------------+
-| duration                      |How long, in milliseconds, the animation will run.  The default is 2000 milliseconds        |
-|                               |(2 seconds).                                                                                |
+| duration                      |How long, in milliseconds, the animation will run.  The default is 350 milliseconds         |
+|                               |(0.35 seconds).                                                                             |
 |                               |                                                                                            |
 |                               |**optional**                                                                                |
 +-------------------------------+--------------------------------------------------------------------------------------------+
@@ -70,7 +70,7 @@ The standard set of properties for specifying animation settings (via the Object
 |                               |                                                                                            |
 |                               |**optional**                                                                                |
 +-------------------------------+--------------------------------------------------------------------------------------------+
-| rate                          |By default dojo runs its animations with 100 frames/second. This can be too fast in certain |
+| rate                          |By default dojo runs its animations with 50 frames/second. This can be too fast in certain |
 |                               |scenarios when want the whole animation to run a lot slower. To change the framerate you use|
 |                               |the rate property which defines the pause/delay between each frame. Ex. if you want 5 frames|
 |                               |per second you should specify a rate of 200 (miliseconds between each frame)                |
