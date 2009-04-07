@@ -386,6 +386,44 @@ The city ComboBox sets the state FilteringSelect value, and the state FilteringS
     <label for="state">State:</label>
     <input id="state">
 
+Transforming the displayed value using labelFunc
+------------------------------------------------
+
+The labelFunc attribute of FilteringSelect enables you to transform the text that appears in the textbox after the user selects a value from the menu or types in a value manually. labelFunc takes two arguments: a dojo.data item representing the option the user selected and the store the item came from; hence, myLabelFunc will not fire for invalid text. labelFunc is expected to return the text you want to display.
+
+In this example, the FilteringSelect takes a labelFunc attribute pointing to a function named myLabelFunc in the JavaScript. myLabelFunc receives two arguments: a dojo.data item, and the store it came from (FilteringSelects build from OPTION tags automatically generate a store). myLabelFunc returns an all lowercase string that then displays in the FilteringSelect.
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+        dojo.require("dijit.form.FilteringSelect");
+        dojo.require("dojo.data.ItemFileReadStore");
+	function myLabelFunc(item, store){
+		var label=store.getValue(item, 'name');
+		// DEMO: uncomment to chop off a character
+		//label=label.substr(0, label.length-1);
+		// DEMO: uncomment to set to lower case
+		label = label.toLowerCase();
+		return label;
+	}
+    </script>
+
+  .. cv:: html
+
+    <div dojoType="dojo.data.ItemFileReadStore" 
+        jsId="stateStore"
+        url="http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/states.json"></div>
+    <input dojoType="dijit.form.FilteringSelect"
+        value="KY"
+        store="stateStore"
+        searchAttr="name"
+        name="state"
+        id="stateInput"
+        labelFunc="myLabelFunc">
+
+
 
 =============
 Accessibility
