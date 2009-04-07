@@ -399,8 +399,9 @@ When users opens a FilteringSelect menu, by default they just see the search tex
         dojo.require("dijit.form.FilteringSelect");
         dojo.require("dojo.data.ItemFileReadStore");
         var richData={
-                label="label",
-                items=[
+                identifier:"name",
+                label:"label",
+                items:[
                         {name="Dojo", label="<img src='http://www.dojotoolkit.org/sites/all/themes/dtk/img/core-home.png' />"}]},
                         {name="Dijit", label="<img src='http://www.dojotoolkit.org/sites/all/themes/dtk/img/dijit-home.png' />"}]},
                         {name="Dijit", label="<img src='http://www.dojotoolkit.org/sites/all/themes/dtk/img/dojox-home.png' />"}]}
@@ -410,12 +411,11 @@ When users opens a FilteringSelect menu, by default they just see the search tex
     </script>
 
   .. cv:: html
-    (stateStore definition omitted; see above examples)
     <input dojoType="dijit.form.FilteringSelect"
-        value="KY"
-        store="stateStore"
+        value="Dojo"
+        store="dojoStore"
         searchAttr="name"
-        name="state"
+        name="dojo"
         labelAttr="label"
         labelType="html">
 
