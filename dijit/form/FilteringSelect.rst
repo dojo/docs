@@ -412,9 +412,6 @@ In this example, the FilteringSelect takes a labelFunc attribute pointing to a f
 
   .. cv:: html
 
-    <div dojoType="dojo.data.ItemFileReadStore" 
-        jsId="stateStore"
-        url="http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/states.json"></div>
     <input dojoType="dijit.form.FilteringSelect"
         value="KY"
         store="stateStore"
