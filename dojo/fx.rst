@@ -59,3 +59,5 @@ See also
 * `Animation Quickstart <quickstart/Animation>`_
 
   The quickstart tutorial for doing animation effects.
+
+* `Semi-complex chaining and combining of effects <dojo/fx/chainCombineExamples>`_
