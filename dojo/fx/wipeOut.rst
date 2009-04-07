@@ -158,6 +158,6 @@ Example 3:  Wipe out a dom node with an easing function
 See Also
 ========
 
-* `dojo/fx/wipeIn <dojo/fx/wipeIn>`_
-* `dojo/animateProperty <dojo/animateProperty>`_
+* `dojo.fx.wipeIn <dojo/fx/wipeIn>`_
+* `dojo.animateProperty <dojo/animateProperty>`_
 * `Animation Quickstart <quickstart/Animation>`_
