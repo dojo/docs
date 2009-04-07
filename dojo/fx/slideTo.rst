@@ -76,7 +76,7 @@ Example 1:  Slide a dom node right 200 pixels.
               left: (dojo.coords("basicNode").l + 200).toString(),
               unit: "px"
             };
-            console.log(slideArgs);
+            console.debug(slideArgs);
             dojo.fx.slideTo(slideArgs).play();
          }
          dojo.connect(dijit.byId("basicSlideButton"), "onClick", slideIt);
