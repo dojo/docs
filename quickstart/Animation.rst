@@ -81,9 +81,9 @@ The standard set of properties for specifying animation settings (via the Object
 |                               |                                                                                            |
 |                               |**optional**                                                                                |
 +-------------------------------+--------------------------------------------------------------------------------------------+
-| curve                         |`TODOC:`                                                                                    |
-|                               |                                                                                            |
-|                               |**optional**                                                                                |
+| curve                         |An array two values, or an instance of a `dojo._Line`. Used as the start and end points for |
+|                               |a given animation. Typically not used directly by end-users, though allows usage of the     |
+|                               |Animation class outside of Node effects                                                     |
 +-------------------------------+--------------------------------------------------------------------------------------------+
 
 Animation Events
