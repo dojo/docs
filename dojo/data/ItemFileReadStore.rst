@@ -64,6 +64,10 @@ Constructor Parameters
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
 | hierarchical   | No           |This boolean value controls whether or not the ItemFileReadStore will treat the data as         | 1.4       |
 |                |              |hierarchical.  The default value is true for backwards compatibility.                           |           |
+|                |              |  Before dojo 1.4, ItemFileReadStore when loading the initial data set treated attribute values |           |
+|                |              |  that are JavaScript objects as data store items and processed them accordingly.  As of Dojo   |           |
+|                |              |  1.4 this function can be disabled by setting this to true in the constructor or on the store  |           |
+|                |              |  before the first fetch.  Note that 'custom types' and 'references' are still processed.       |           |
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
   
 
