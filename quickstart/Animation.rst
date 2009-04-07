@@ -60,7 +60,7 @@ The standard set of properties for specifying animation settings (via the Object
 |                               |**optional**                                                                                |
 +-------------------------------+--------------------------------------------------------------------------------------------+
 | duration                      |How long, in milliseconds, the animation will run.  The default is 350 milliseconds         |
-|                               |(.35 seconds)                                                                             |
+|                               |(.35 seconds)                                                                               |
 |                               |                                                                                            |
 |                               |**optional**                                                                                |
 +-------------------------------+--------------------------------------------------------------------------------------------+
@@ -70,7 +70,7 @@ The standard set of properties for specifying animation settings (via the Object
 |                               |                                                                                            |
 |                               |**optional**                                                                                |
 +-------------------------------+--------------------------------------------------------------------------------------------+
-| rate                          |By default dojo runs its animations with 50 frames/second. This can be too fast in certain |
+| rate                          |By default dojo runs its animations with 50 frames/second. This can be too fast in certain  |
 |                               |scenarios when want the whole animation to run a lot slower. To change the framerate you use|
 |                               |the rate property which defines the pause/delay between each frame. Ex. if you want 5 frames|
 |                               |per second you should specify a rate of 200 (miliseconds between each frame)                |
