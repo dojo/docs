@@ -4,7 +4,7 @@ dojo.data.ItemFileReadStore
 ===========================
 
 :Status: Contributed, Draft
-:Version: 1.2
+:Version: 1.4
 :Author: Jared Jurkiewicz
 :Available: since V1.0
 
@@ -56,9 +56,12 @@ Constructor Parameters
 |                |              |erase all items stored in the internal structures. A new call to fetch will invoke the URL      |           |
 |                |              |load or reparse the data object into a new list of items.                                       |           |
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
-| urlPreventCache| No           |This boolean value constrols whether dojo attempts to prevent the browser caching mechanism from| 1.2       |
+| urlPreventCache| No           |This boolean value controls whether dojo attempts to prevent the browser caching mechanism from | 1.2       |
 |                |              |caching values loaded from a webserver. This parameter is especially useful when combined with  |           | 
 |                |              |*clearOnClose* to force a data reload.                                                          |           |
++----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
+| hierarchical   | No           |This boolean value controls whether or not the ItemFileReadStore will treat the data as         | 1.4       |
+|                |              |hierarchical.  The default value is true for backwards compatibility.                           |           |
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
   
 
