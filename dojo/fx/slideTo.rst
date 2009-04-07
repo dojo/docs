@@ -72,10 +72,11 @@ Example 1:  Slide a dom node right 200 pixels.
          function slideIt() {
             var slideArgs = {
               node: "basicNode",
-              top: dojo.coords("basicNode").t,
-              left: dojo.coords("basicNode").l + 200,
+              top: (dojo.coords("basicNode").t).toString(),
+              left: (dojo.coords("basicNode").l) + 200).toSring(),
               unit: "px"
             };
+            console.log(slideArgs);
             dojo.fx.slideTo(slideArgs).play();
          }
          dojo.connect(dijit.byId("basicSlideButton"), "onClick", slideIt);
