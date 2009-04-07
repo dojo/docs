@@ -1,7 +1,7 @@
 #format dojo_rst
 
-dojo.wipeIn
-===========
+dojo.fx.wipeIn
+==============
 
 :Status: Draft
 :Version: 1.0
@@ -20,7 +20,7 @@ This function is a helper function that wraps the `dojo.animateProperty <dojo/an
 Parameters
 ==========
 
-The *dojo.wipeIn* takes an object as its parameter.  This object defines what dom node to act on, how long the wipe in should take (in milliseconds, and an optional easing function.  As with all dojo apis, refer to the API docs for the most up to date information on parameters.  These are listed for convenience.
+The *dojo.fx.wipeIn* takes an object as its parameter.  This object defines what dom node to act on, how long the wipe in should take (in milliseconds, and an optional easing function.  As with all dojo apis, refer to the API docs for the most up to date information on parameters.  These are listed for convenience.
 
 +-------------------------------+--------------------------------------------------------------------------------------------+
 +**Parameter**                  |**Description**                                                                             |
@@ -45,7 +45,7 @@ The *dojo.wipeIn* takes an object as its parameter.  This object defines what do
 Return value
 ============
 
-The *dojo.wipeIn* function returns an instance of dojo._Animation.  To execute the wipeIn, call the *play()* function on the animation.  This object can be used with other dojo animation functions, such as `dojo.fx.chain <dojo/fx/chain>`_ and `dojo.fx.combine <dojo/fx/combine>`_ to link it with other effects to perform complex animations.
+The *dojo.fx.wipeIn* function returns an instance of dojo._Animation.  To execute the wipeIn, call the *play()* function on the animation.  This object can be used with other dojo animation functions, such as `dojo.fx.chain <dojo/fx/chain>`_ and `dojo.fx.combine <dojo/fx/combine>`_ to link it with other effects to perform complex animations.
 
 ========
 Examples
