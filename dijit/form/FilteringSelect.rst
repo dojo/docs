@@ -386,7 +386,7 @@ The city ComboBox sets the state FilteringSelect value, and the state FilteringS
     <label for="state">State:</label>
     <input id="state">
 
-Displaying custom and rich text menu labels with labelAttr and labelType
+Displaying rich text menu labels with labelAttr and labelType
 ------------------------------------------------------------------------
 
 When users opens a FilteringSelect menu, by default they just see the search text as options in the menu. You can enrich the menu's content by supplying a different label as the following example demonstrates.
@@ -449,7 +449,7 @@ In this example, the FilteringSelect takes a labelFunc attribute pointing to a f
 
   .. cv:: html
 
-    (stateStore definition omitted; see above examples)
+    <!--stateStore definition omitted; see above examples-->
     <input dojoType="dijit.form.FilteringSelect"
         value="KY"
         store="stateStore"
