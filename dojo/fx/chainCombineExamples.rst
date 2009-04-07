@@ -106,9 +106,10 @@ See Also
 
 * `Animation Quickstart <quickstart/Animation>`_
 * `Semi-complex chaining and combining of effects <dojo/fx/chainCombineExamples>`_
-* `dojo/fx/chain <dojo/fx/chain>`_
-* `dojo/animateProperty <dojo/animateProperty>`_
-* `dojo/fadeOut <dojo/fadeOut>`_
-* `dojo/fadeIn <dojo/fadeIn>`_
-* `dojo/wipeOut <dojo/fx/wipeOut>`_
-* `dojo/wipeIn <dojo/fx/wipeIn>`_
+* `dojo.fx.chain <dojo/fx/chain>`_
+* `dojo.animateProperty <dojo/animateProperty>`_
+* `dojo.fadeOut <dojo/fadeOut>`_
+* `dojo.fadeIn <dojo/fadeIn>`_
+* `dojo.fx.wipeOut <dojo/fx/wipeOut>`_
+* `dojo.fx.wipeIn <dojo/fx/wipeIn>`_
+* `dojo.fx.slideTo <dojo/fx/slideTo>`_
