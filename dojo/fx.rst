@@ -42,7 +42,7 @@ Functions provided by the dojo.fx module
 
 * `dojo.fx.wipeOut <dojo/fx/wipeOut>`_ -  To wipe in a node
 
-* `dojo.fx.slideTo <dojo/fx/slideTo>`_ -  To slide a node from current position to ABS position x*(left)*,y*(top)*.
+* `dojo.fx.slideTo <dojo/fx/slideTo>`_ -  To slide a node from current position to ABS position x,y.
 
 * `dojo.fx.Toggler <dojo/fx/Toggler>`_ -  A helper class to wrap to simplify assigning two animations to a node, one for the 'show' animation and one for a 'hide' animation.  For example, fading a node in for show and out for hide.
 
