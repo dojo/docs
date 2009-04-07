@@ -60,7 +60,7 @@ The standard set of properties for specifying animation settings (via the Object
 |                               |**optional**                                                                                |
 +-------------------------------+--------------------------------------------------------------------------------------------+
 | duration                      |How long, in milliseconds, the animation will run.  The default is 350 milliseconds         |
-|                               |(0.35 seconds).                                                                             |
+|                               |(.35 seconds)                                                                             |
 |                               |                                                                                            |
 |                               |**optional**                                                                                |
 +-------------------------------+--------------------------------------------------------------------------------------------+
