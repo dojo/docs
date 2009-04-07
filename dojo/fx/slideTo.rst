@@ -71,24 +71,26 @@ Example 1:  Slide a dom node right 200 pixels.
       dojo.require("dojo.fx");
       function basicSlideToSetup(){
          //Function linked to the button to trigger the wipe.
-         function slideIt() {
+         function slideIt(amt) {
             var slideArgs = {
               node: "basicNode",
               top: (dojo.coords("basicNode").t).toString(),
-              left: (dojo.coords("basicNode").l + 200).toString(),
+              left: (dojo.coords("basicNode").l + amt).toString(),
               unit: "px"
             };
             console.debug(slideArgs);
             dojo.fx.slideTo(slideArgs).play();
          }
-         dojo.connect(dijit.byId("basicSlideButton"), "onClick", slideIt);
+         dojo.connect(dijit.byId("slideRightButton"), "onClick", dojo.partial(slideIt, 200);
+         dojo.connect(dijit.byId("slideLeftButton"), "onClick", dojo.partial(slideIt, -200);
       }
       dojo.addOnLoad(basicSlideToSetup);
     </script>
 
   .. cv :: html 
 
-    <button dojoType="dijit.form.Button" id="basicSlideButton">Slide It Right!</button>
+    <button dojoType="dijit.form.Button" id="slideLeftButton">Slide It Left!</button><button dojoType="dijit.form.Button" id="slideRightButton">Slide It Right!</button>
+    <br>
     <br>
     <div style="width: 100%; height: 120px;">
       <div id="basicNode" style="width: 100px; height: 100px; background-color: red; position: absolute;"></div>
