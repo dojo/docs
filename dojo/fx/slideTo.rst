@@ -81,8 +81,8 @@ Example 1:  Slide a dom node right 200 pixels.
             console.debug(slideArgs);
             dojo.fx.slideTo(slideArgs).play();
          }
-         dojo.connect(dijit.byId("slideRightButton"), "onClick", dojo.partial(slideIt, 200);
-         dojo.connect(dijit.byId("slideLeftButton"), "onClick", dojo.partial(slideIt, -200);
+         dojo.connect(dijit.byId("slideRightButton"), "onClick", dojo.partial(slideIt, 200));
+         dojo.connect(dijit.byId("slideLeftButton"), "onClick", dojo.partial(slideIt, -200));
       }
       dojo.addOnLoad(basicSlideToSetup);
     </script>
