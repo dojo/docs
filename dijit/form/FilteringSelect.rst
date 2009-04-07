@@ -411,6 +411,7 @@ When users opens a FilteringSelect menu, by default they just see the search tex
     </script>
 
   .. cv:: html
+
     <input dojoType="dijit.form.FilteringSelect"
         id="dojoBox"
         value="Dojo"
@@ -447,6 +448,7 @@ In this example, the FilteringSelect takes a labelFunc attribute pointing to a f
     </script>
 
   .. cv:: html
+
     (stateStore definition omitted; see above examples)
     <input dojoType="dijit.form.FilteringSelect"
         value="KY"
