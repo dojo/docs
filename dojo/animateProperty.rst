@@ -41,13 +41,63 @@ The above example will animate a node with id="someId" to width:300px from it's 
     properties: {
         width: 300,
         height: { end: 400, start:100 },
-        fontSize: { end:14, unit:"pt" } // beware of stray comma's
+        fontSize: { end:14, units:"pt" } // beware of stray comma's
     }
   }).play();
 
 As seen, we simply add new keys to the ``properties:`` hash. The above example introduces each of the available syntax options for the value of each property. The ``width`` property have an integer value, which is assumed to be the ``end:`` value, with a ``unit:`` of "px". The ``height`` key is another object hash, defining ``end`` and ``start`` values as integers. Passing a start value will cause the property to go immediately to the value, and animate to to end value, again assuming "px". The ``fontSize`` object hash omits a ``start:`` value, defaulting to the current calculated value, and introduces the ``unit:`` identifier, used to set the measurement to something other than the default "px". 
 
 It is also worth noting: when animating multi-word CSS properties such as ``font-size``, Javascript requires they be converted to the mixed-case: ``fontSize``. 
+
+===================
+Advanced Properties
+===================
+
+In addition to being able to use the above syntax to define the properties:{} object, you are able to define functions for the start: and end: members for a given property. The return value from these functions is substituted in for the value. 
+
+A simple, though redundant, example:
+
+.. code-block: javascript
+  :linenos:
+
+  dojo.animateProperty({
+    node:"someNode",
+    properties:{
+       width:{
+          start:function(){
+              // calculate the width before being play'd
+              return dojo.marginBox("someNode").w / 2;
+          },
+          end:function(){
+             return 600; 
+          }
+       }
+    }
+  }).play();
+
+**new in Dojo 1.4**: dojo.animateProperty allows a function to be directly passed to the property:
+
+.. code-block:: javascript
+  :linenos:
+
+  dojo.animateProperty({
+     node:"someNode",
+     properties:{
+        height: function(node){
+           // notice 'node' being passed. Also new in Dojo 1.4
+           // can return any animateProperty syntax:
+           // return { start:5, end:2 };
+           // return 100;
+           // return { end:50, units:"pt" }
+
+           // make this node 3x it's current height
+           return dojo.marginBox(node).h * 3
+ 
+        }
+     }
+  }).play();
+
+As pointed out above, the height: function is passed a reference to the domNode being animated. This functionality is new in Dojo 1.4, as well as the addition of the node being passed to the start: and end: functions. 
 
 ========
 Examples
