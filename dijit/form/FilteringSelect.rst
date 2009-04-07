@@ -114,6 +114,30 @@ To set the default value for this example, specify the *value* attribute (the hi
         name="state"
         id="stateInput">
 
+Custom displayed value/search text
+----------------------------------
+
+By default, FilteringSelect searches on the name attribute of objects in your dojo.data store. But what if you want to search on a different attribute? searchAttr enables you to do just that.
+
+In this example, the FilteringSelect has been set to display the abbreviations for states rather than their full names.
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+        dojo.require("dijit.form.FilteringSelect");
+        dojo.require("dojo.data.ItemFileReadStore");
+    </script>
+
+  .. cv:: html
+
+    <!--stateStore definition omitted; see above examples-->
+    <input dojoType="dijit.form.FilteringSelect"
+        value="KY"
+        store="stateStore"
+        searchAttr="abbreviation"
+        name="abbreviatedstate">
 
 Codependent FilteringSelect/ComboBox widgets
 --------------------------------------------
@@ -387,9 +411,11 @@ The city ComboBox sets the state FilteringSelect value, and the state FilteringS
     <input id="state">
 
 Displaying rich text menu labels with labelAttr and labelType
-------------------------------------------------------------------------
+-------------------------------------------------------------
 
-When users opens a FilteringSelect menu, by default they just see the search text as options in the menu. You can enrich the menu's content by supplying a different label as the following example demonstrates.
+When users opens a FilteringSelect menu, by default they just see the search text as options in the menu. You can enrich the menu's content by supplying a different label.
+
+This example demonstrates a FilteringSelect featuring each of the 3 components of Dojo: Dojo core, Dijit, and Dojox. The FilteringSelect accepts the text Dojo core, Dijit, or Dojox. The autocomplete menu displays rich text representations (images from http://www.dojotoolkit.org) of each. If you try this example with a screen reader, you will notice that the screen reader continues to announce the value in the textbox as with other FilteringSelects, rather than trying to parse the rich text label.
 
 .. cv-compound::
 
@@ -402,7 +428,7 @@ When users opens a FilteringSelect menu, by default they just see the search tex
                 identifier:"name",
                 label:"label",
                 items:[
-                        {name:"Dojo", label:"<img src='http://www.dojotoolkit.org/sites/all/themes/dtk/img/core-home.png' />"},
+                        {name:"Dojo core", label:"<img src='http://www.dojotoolkit.org/sites/all/themes/dtk/img/core-home.png' />"},
                         {name:"Dijit", label:"<img src='http://www.dojotoolkit.org/sites/all/themes/dtk/img/dijit-home.png' />"},
                         {name:"Dojox", label:"<img src='http://www.dojotoolkit.org/sites/all/themes/dtk/img/dojox-home.png' />"}
                 ]
