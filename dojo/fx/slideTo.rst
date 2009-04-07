@@ -89,9 +89,9 @@ Example 1:  Slide a dom node right 200 pixels.
   .. cv :: html 
 
     <button dojoType="dijit.form.Button" id="basicSlideButton">Slide It In!</button>
-    <div id="basicNode" style="width: 100px; height: 100px; background-color: red; position: absolute;">
+    <div style="width: 100%; height: 200px;">
+      <div id="basicNode" style="width: 100px; height: 100px; background-color: red; position: absolute;"></div>
     </div>
-
 
 
 ========
