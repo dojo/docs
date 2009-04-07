@@ -259,6 +259,21 @@ Cross-browser Considerations
 
 Destroying Nodes
 ----------------
+To destroy a node: (Since version 1.0)
+
+.. code-block :: javascript
+
+   dojo._destroyElement(node);
+
+```New With dojo v1.3:```
+
+A public alias to the above destroy method:
+
+.. code-block :: javascript
+
+  dojo.destroy(node);
+
+
 
 ========
 See Also
