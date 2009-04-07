@@ -440,7 +440,7 @@ This example demonstrates a FilteringSelect featuring each of the 3 components o
 
     <input dojoType="dijit.form.FilteringSelect"
         id="dojoBox"
-        value="Dojo"
+        value="Dojo core"
         store="dojoStore"
         searchAttr="name"
         name="dojo"
