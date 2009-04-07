@@ -72,7 +72,7 @@ Example 1:  Slide a dom node right 200 pixels.
          function slideIt() {
             var slideArgs = {
               node: "basicNode",
-              top: dojo.coords("basicNode").t
+              top: dojo.coords("basicNode").t,
               left: dojo.coords("basicNode").l + 200,
               unit: "px"
             };
