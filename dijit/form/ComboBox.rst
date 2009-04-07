@@ -4,10 +4,10 @@ dijit.form.ComboBox
 ===================
 
 :Status: Draft
-:Version: 1.0
+:Version: 1.3
 :Authors: Doug Hays, Nikolai Onken
-:Developers: ?-
-:Available: since V?
+:Developers: Doug Hays, Bill Keese
+:Available: since V1.0
 
 .. contents::
     :depth: 2
