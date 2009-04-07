@@ -77,7 +77,7 @@ Example 1:  Slide a dom node right 200 pixels.
             };
             dojo.fx.slideTo(slideArgs).play();
          }
-         dojo.connect(dijit.byId("basicSlideButton"), "onClick", wipeIt);
+         dojo.connect(dijit.byId("basicSlideButton"), "onClick", slideIt);
       }
       dojo.addOnLoad(basicSlideToSetup);
     </script>
