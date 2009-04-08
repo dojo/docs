@@ -39,9 +39,9 @@ To publish information to that channel:
 .. code-block :: javascript
  :linenos:
   
-  dojo.publish("foobar", { 
+  dojo.publish("foobar", [{ 
      item:"one", another:"item", anObject:{ deeper:"data" }
-  });
+  }]);
 
 When executed, the anonymous function registered in the subscription is executed passing the object. 
 
