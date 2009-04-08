@@ -36,7 +36,7 @@ To trigger that function, publish some data on the same channel:
 .. code-block :: javascript
  :linenos:
 
-  dojo.publish("/foo/bar/baz", { some:"object data" });
+  dojo.publish("/foo/bar/baz", [{ some:"object data" }]);
 
 The channel name can be any string you choose:
 
