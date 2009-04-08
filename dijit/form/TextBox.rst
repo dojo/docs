@@ -4,10 +4,10 @@ dijit.form.TextBox
 ==================
 
 :Status: Draft
-:Version: 1.0
+:Version: 1.3
 :Authors: Becky Gibson, Doug Hays, Bill Keese, Nikolai Onken, Marcus Reimann, Craig Riecke
-:Developers: ?-
-:Available: since V?
+:Developers: Doug Hays, Bill Keese
+:Available: since V1.0
 
 .. contents::
     :depth: 2
@@ -126,10 +126,6 @@ Getting and manipulating the value is a trivial matter.  It is done through the 
     </style>
 
 
-Example: Treating ENTER as a TAB
---------------------------------
-
-TODO
 
 =============
 Accessibility
@@ -138,10 +134,4 @@ Accessibility
 Keyboard
 --------
 
-================================================    =================================================
-Action                                              Key
-================================================    =================================================
-Move focus to the next widget in the tab order.	    Tab
-Move focus to the prior widget in the tab order.    Shift+Tab
-Submit the form.                                    Enter
-================================================    =================================================
+The TextBox widget uses native HTML INPUT (type=text) controls.
