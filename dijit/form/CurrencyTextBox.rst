@@ -77,7 +77,7 @@ In this example using euros with German formatting, the invalid message contains
 			};
 			new dijit.form.CurrencyTextBox(props, "eurde");
 		}
-		addOnLoad(createWidget);
+		dojo.addOnLoad(createWidget);
 	</script>
 
   .. cv:: html
