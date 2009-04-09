@@ -88,6 +88,27 @@ TODO: how to use the component/class/method
         </div>
     </div>
 
+		<div dojoType="dojox.image.Badge">
+
+			<a href="images/imageVert.jpg" dojoType="dojox.image.Lightbox" title="More Guatemala...">tall</a>
+			<a href="images/imageHoriz.jpg" dojoType="dojox.image.Lightbox" title="Antigua, Guatemala">4:3 image</a>
+			<a href="images/broken.jpg" dojoType="dojox.image.Lightbox" title="broken href example">Broken link</a>
+
+			<a href="images/huuuge.png" dojoType="dojox.image.Lightbox" title="a large image">large than viewport?</a>
+			<a href="images/imageHoriz2.jpg" dojoType="dojox.image.Lightbox" group="group1" title="Amsterdam Train Depot">wide image</a>
+			<a href="images/square.jpg" dojoType="dojox.image.Lightbox" group="group1" title="1:1 aspect">square</a>
+
+			<a href="images/extraWide.jpg" dojoType="dojox.image.Lightbox" group="group1" title="Greeneville, TN">wide image</a>
+			<a href="images/broken.jpg" dojoType="dojox.image.Lightbox" group="group1" title="broken href example">Broken link</a>
+			<a href="images/imageHoriz2.jpg" dojoType="dojox.image.Lightbox" group="group2" title="Amsterdam Train Depot">wide image</a>
+
+			<a href="images/square.jpg" dojoType="dojox.image.Lightbox" group="group2" title="1:1 aspect">square</a>
+			<a href="images/imageHoriz.jpg" dojoType="dojox.image.Lightbox" group="group2" title="Antigua, Guatemala">4:3 image</a>
+			<a href="images/imageVert.jpg" dojoType="dojox.image.Lightbox" group="group2" title="More Guatemala...">tall</a>
+
+		</div>
+
+
     <div dojoType="dojox.data.FlickrStore" jsId="flickrStore" label="title"></div>
     <div id="fromStore" dojoType="dojox.image.Lightbox" store="flickrStore" group="flickrStore"></div>
 
