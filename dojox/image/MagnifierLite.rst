@@ -44,7 +44,27 @@ TODO: how to use the component/class/method
 		
        <img id="foobar" style="width:585px; height:201px" scale="7" glassSize="185" 
                  dojoType="dojox.image.MagnifierLite"
-                      src="http://www.zelda-infinite.com/games/zelda1/overworld.png" /> 		
+                      src="http://www.zelda-infinite.com/games/zelda1/overworld.png" /> 
+
+                <button dojoType="dijit.form.Button" id="foob">
+			Make It
+			<script type="dojo/method" event="onClick">
+				this.setAttribute("disabled",true);
+				dijit.byId("foobd").setAttribute("disabled",false);
+				new dojox.image.MagnifierLite({ scale:4.2, glassSize:200 },"foobar");
+			</script>
+		</button>
+
+		<button dojoType="dijit.form.Button" id="foobd" disabled="disabled">
+			Destroy It
+			<script type="dojo/method" event="onClick">
+				dijit.byId("foob").setAttribute("disabled",false);
+				this.setAttribute("disabled",true);
+				dijit.byId("foobar").destroy(true);
+			</script>
+
+		</button>
+		
 		          
   .. cv:: css
 
