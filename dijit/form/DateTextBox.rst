@@ -106,7 +106,7 @@ To accept dates from the server in this format (but continue to work with dates 
 	<label for="oracle">Oracle:</label>
 	<input id="oracle" />
 	<label for"oracleServerValue">Oracle date back to server:</label>
-	<input id="oracleServerValue"/>
+	<input id="oracleServerValue" readOnly disabled/>
 
 
 Changing Constraints on the Fly
