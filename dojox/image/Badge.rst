@@ -37,12 +37,11 @@ TODO: how to use the component/class/method
 	</script>
 
 	<script type="text/javascript">
-        
+  
 		// programatic flickrstore implementation [basic]
 		function onComplete(items,request){
 			if (items.length>0){
-				dojo.forEach(items,function(item){
-                                        alert(item+" "+href);
+				dojo.forEach(items,function(item){                                        
 					var part = {
 						title: flickrStore.getValue(item,"title"),
 						href: flickrStore.getValue(item,"imageUrl")
@@ -59,6 +58,9 @@ TODO: how to use the component/class/method
 		}
 
 		function init(){
+                        
+                        var flickStore = new dojox.data.FlickrRestStore();
+                        
 			var flickrRequest = {
 				query: {},
 				onComplete: onComplete,
