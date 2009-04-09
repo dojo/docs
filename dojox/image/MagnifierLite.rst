@@ -36,30 +36,8 @@ TODO: how to use the component/class/method
        <script type="text/javascript">
          dojo.require("dojox.form.Button"); 	 
          dojo.require("dojox.image.MagnifierLite");                
+       </script>
        
-        dojo.addOnLoad(function(){
-		
-		<button dojoType="dijit.form.Button" id="foob">
-			Make It
-			<script type="dojo/method" event="onClick">
-				this.setAttribute("disabled",true);
-				dijit.byId("foobd").setAttribute("disabled",false);
-				new dojox.image.MagnifierLite({ scale:4.2, glassSize:200 },"foobar");
-			</script>
-		</button>
-
-		<button dojoType="dijit.form.Button" id="foobd" disabled="disabled">
-			Destroy It
-			<script type="dojo/method" event="onClick">
-				dijit.byId("foob").setAttribute("disabled",false);
-				this.setAttribute("disabled",true);
-				dijit.byId("foobar").destroy(true);
-			</script>
-
-		</button>
-	});
-        </script>
-
   .. cv:: html
 
        <p>Programatic: (destroy() removes this.domNode)<br></p>	
