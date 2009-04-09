@@ -77,14 +77,18 @@ TODO: how to use the component/class/method
      <h2>[6x6] threads:3</h2>
        <div class="noBorderWrapper">
          <div dojoType="dojox.image.Badge" threads="2" rows="6" cols="6">
-         <div class="dojoxBadgeImage"></div><div class="dojoxBadgeImage"></div><div class="dojoxBadgeImage"></div><div class="dojoxBadgeImage"> </div><div class="dojoxBadgeImage"></div><div class="dojoxBadgeImage"></div>
+              <div class="dojoxBadgeImage"></div>
+              <div class="dojoxBadgeImage"></div>
+              <div class="dojoxBadgeImage"></div>
+              <div class="dojoxBadgeImage">          </div><div class="dojoxBadgeImage"></div><div class="dojoxBadgeImage"></div>
+         <div class="dojoxBadgeImage"></div><div class="dojoxBadgeImage"></div><div class="dojoxBadgeImage">
+     </div><div  class="dojoxBadgeImage">    </div><div class="dojoxBadgeImage"></div><div class="dojoxBadgeImage"></div>
+         <div class="dojoxBadgeImage"></div><div class="dojoxBadgeImage"></div><div class="dojoxBadgeImage"></div><div class="dojoxBadgeImage">  </div><div class="dojoxBadgeImage"></div><div class="dojoxBadgeImage"></div>
          <div class="dojoxBadgeImage"></div><div class="dojoxBadgeImage"></div><div class="dojoxBadgeImage"></div><div class="dojoxBadgeImage"></div><div class="dojoxBadgeImage"></div><div class="dojoxBadgeImage"></div>
          <div class="dojoxBadgeImage"></div><div class="dojoxBadgeImage"></div><div class="dojoxBadgeImage"></div><div class="dojoxBadgeImage"></div><div class="dojoxBadgeImage"></div><div class="dojoxBadgeImage"></div>
          <div class="dojoxBadgeImage"></div><div class="dojoxBadgeImage"></div><div class="dojoxBadgeImage"></div><div class="dojoxBadgeImage"></div><div class="dojoxBadgeImage"></div><div class="dojoxBadgeImage"></div>
-         <div class="dojoxBadgeImage"></div><div class="dojoxBadgeImage"></div><div class="dojoxBadgeImage"></div><div class="dojoxBadgeImage"></div><div class="dojoxBadgeImage"></div><div class="dojoxBadgeImage"></div>
-         <div class="dojoxBadgeImage"></div><div class="dojoxBadgeImage"></div><div class="dojoxBadgeImage"></div><div class="dojoxBadgeImage"></div><div class="dojoxBadgeImage"></div><div class="dojoxBadgeImage"></div>
-     </div>
-</div>
+        </div>
+    </div>
      
 
   .. cv:: css
