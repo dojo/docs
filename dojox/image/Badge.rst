@@ -34,6 +34,7 @@ TODO: how to use the component/class/method
         <script type="text/javascript">
       		dojo.require("dojox.image.Badge"); 
 		dojo.require("dojox.data.FlickrStore");
+                dojo.require("dojox.image.Lightbox");
 	</script>
 
 	<script type="text/javascript">
