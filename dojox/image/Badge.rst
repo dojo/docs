@@ -74,7 +74,7 @@ TODO: how to use the component/class/method
 
   .. cv:: html
 
-     <h2>[6x6] threads:3</h2>
+     <h2>[4x3] threads:3</h2>
        <div class="noBorderWrapper">
          <div dojoType="dojox.image.Badge" threads="2" rows="4" cols="3">
               <div class="dojoxBadgeImage"></div><div class="dojoxBadgeImage"></div><div class="dojoxBadgeImage"></div>
