@@ -34,8 +34,8 @@ TODO: how to use the component/class/method
   .. cv:: javascript
 
        <script type="text/javascript">
-         dojo.require("dojox.form.Button");
- 	 dojo.require("dojox.image.MagnifierLite");                
+         dojo.require("dojox.form.Button"); 	 
+         dojo.require("dojox.image.MagnifierLite");                
        </script>
 
        <script type="text/javascript">
