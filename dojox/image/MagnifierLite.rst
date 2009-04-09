@@ -22,6 +22,7 @@ An unobtrusive way to add an unstyled overlay above the srcNode image element. T
 The logic behind requiring the src image to be large is “it’s going to be downloaded, anyway” so this method avoids having to make thumbnails and 2 http requests among other things.
 
 This is the base class for dojox.image.Magnifier, a dojox.gfx-based extension this portion does not require the dojox.gfx package, but is limited to CSS-based styling. 
+
 =====
 Usage
 =====
