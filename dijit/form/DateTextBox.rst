@@ -143,9 +143,24 @@ TODO: the idea of the code in the book was to make a textbox which used local co
 
 Changing Constraints on the Fly
 -------------------------------
-DateTextBox obeys the constraints you give, much like `dijit.form.NumberTextBox <dijit/form/NumberTextBox>`_  Sometimes you may need to change these constraints based on user input. To do this, you can set new constraints on the widget, but the catch is you must use JavaScript dates.
+The DateTextBox widget obeys the ``constraints`` you give, much like `dijit.form.NumberTextBox <dijit/form/NumberTextBox>`_  Sometimes you may need to change this attribute's `min` and `max` values at runtime. To do this, you can set new ``constraints`` on the widget, but the catch is you must use JavaScript dates.  In this example, the first DateTextBox widget sets the `max` constraint of the second widget, and the second widget sets the `min` constraint of the first widget.
 
-TODO: For example, this DateTextBox will not allow you to enter a day before today:
+.. cv-compound::
+
+  .. cv:: javascript
+
+	<script type="text/javascript">
+		dojo.require("dijit.form.DateTextBox");
+	</script>
+
+  .. cv:: html
+
+	<label for="fromDate">From:</label>
+	<input id="fromDate" type="text" name="fromDate" dojoType="dijit.form.DateTextBox" required="true"
+		onChange="dijit.byId('toDate').constraints.min = arguments[0];" />
+	<label for="toDate">To:</label>
+	<input id="toDate" type="text" name="toDate" dojoType="dijit.form.DateTextBox" required="true"
+		onChange="dijit.byId('fromDate').constraints.max = arguments[0];" />
 
 
 Two-Digit Year Format
