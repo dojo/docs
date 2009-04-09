@@ -67,7 +67,7 @@ Alternate Date Format to/from a Server
 
 Ideally, your server application will send and receive dates in the ISO standard format.  Dojo recommends it as a best practice, but your data may not conform.  For example when Oracle database processes dates, by default it insists on dd-MMM-yyyy format in English, as in 01-APR-2006.  Perhaps you do not control the database or cannot write a shim to convert the dates server side.  How do you get around it?  
 
-To accept dates from the server in this format (but continue to work with dates on the client using local conventions), you can create your own widget class which overrides the _setValueAttr (setValue in Dojo versions < 1.2) method of DateTextBox. (See `dijit <dijit>`_ for details on creating your own widgets). Here's an example:
+To accept dates from the server in this format (but continue to work with dates on the client using local conventions), you can create your own widget class which overrides the postMixInProperties and serialize methods of DateTextBox. (See `dijit <dijit>`_ for details on creating your own widgets). Here's an example:
 
 .. cv-compound::
 
@@ -90,7 +90,7 @@ To accept dates from the server in this format (but continue to work with dates 
 				}
 			});
 			function showServerValue(){
-				dojo.byId('oracleServerValue').value=document.getElementsByName('oracle')[0].value;
+				dojo.byId('toServerValue').value=document.getElementsByName('oracle')[0].value;
 			}
 			new OracleDateTextBox({
 				value: "31-DEC-2009", 
@@ -103,10 +103,12 @@ To accept dates from the server in this format (but continue to work with dates 
 
   .. cv:: html
 
-	<label for="oracle">Oracle:</label>
+	<label for"fromServerValue">Oracle date coming from server:</label>
+	<input id="fromServerValue" readOnly disabled value="31-DEC-2009"/>
+	<label for="oracle">Client date:</label>
 	<input id="oracle" />
-	<label for"oracleServerValue">Oracle date back to server:</label>
-	<input id="oracleServerValue" readOnly disabled/>
+	<label for"toServerValue">Oracle date going back to server:</label>
+	<input id="toServerValue" readOnly disabled/>
 
 
 Changing Constraints on the Fly
