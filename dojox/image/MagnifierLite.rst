@@ -33,16 +33,14 @@ TODO: how to use the component/class/method
 
   .. cv:: javascript
 
-        <script type="text/javascript">
-                dojo.require("dojox.form.Button");
-      		dojo.require("dojox.image.MagnifierLite");                
-	</script>
+       <script type="text/javascript">
+         dojo.require("dojox.form.Button");
+ 	 dojo.require("dojox.image.MagnifierLite");                
+       </script>
 
-        <script type="text/javascript">
+       <script type="text/javascript">
 
         dojo.addOnLoad(function(){
-
-		<p>Programatic: (destroy() removes this.domNode)<br>
 		
 		<button dojoType="dijit.form.Button" id="foob">
 			Make It
