@@ -18,41 +18,37 @@ An extension on `dojox.image.Badge <dojox/image/Badge>`_, using Flickr as a data
 Introduction
 ============
 
-TODO: introduce the component/class/method
-
-
-=====
-Usage
-=====
-
-TODO: how to use the component/class/method
-
-.. code-block :: javascript
- :linenos:
-
- <script type="text/javascript">
-   // your code
- </script>
-
+Flickr badge displays images on a page and cycles through the images displaying "badge" size
+instances.
+          
 
 
 ========
 Examples
 ========
 
-Programmatic example
---------------------
+FlickrBadge. There are a number of configurable parameters, most of which are optional:
 
-TODO: example
+    * apikey: your Flickr API key
+    * columns: # of columns of images to display
+    * rows: # of rows of images to display
+    * searchText: free text search of title, description, and tags
+    * setid: id of a Flickr set to use in displaying images
+    * tags: a comma separated list of tags or an array of tags to grab from Flickr
+    * userid: your flickr userid (saves a lookup request)
+    * username: your flickr username
 
-Declarative example
--------------------
 
-TODO: example
+
+
+
+
+
 
 
 ========
 See also
 ========
 
-* TODO: links to other related articles
+* http://archive.dojotoolkit.org/nightly/dojotoolkit/dojox/image/tests/test_FlickrBadge.html
+* http://www.sitepen.com/blog/2008/06/23/replacing-the-flash-flickr-badge-with-dojo/
