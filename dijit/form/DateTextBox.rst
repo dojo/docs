@@ -104,9 +104,9 @@ To accept dates from the server in this format (but continue to work with dates 
   .. cv:: html
 
 	<label for"fromServerValue">Oracle date coming from server:</label>
-	<input id="fromServerValue" readOnly disabled value="31-DEC-2009"/>
+	<input id="fromServerValue" readOnly disabled value="31-DEC-2009"/><br/>
 	<label for="oracle">Client date:</label>
-	<input id="oracle" />
+	<input id="oracle" /><br/>
 	<label for"toServerValue">Oracle date going back to server:</label>
 	<input id="toServerValue" readOnly disabled/>
 
