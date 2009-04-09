@@ -50,7 +50,7 @@ TODO: how to use the component/class/method
 					
 					dijit.byId('fromStore')._attachedDialog.addImage(part,"flickrStore");
 				});
-				dojo.byId('flickrButton').disabled = false; 
+				//dojo.byId('flickrButton').disabled = false; 
 			}
 		}
 
