@@ -62,8 +62,8 @@ TODO: how to use the component/class/method
 				query: {},
 				onComplete: onComplete,
 				onError: onError,
-				userid: "jetstreet",
-				tags: "jetstreet",
+				userid: "dylans",
+				tags: "dojotoolkit,italy",
 				count: 10
 			};
 			flickrStore.fetch(flickrRequest);
@@ -71,7 +71,6 @@ TODO: how to use the component/class/method
 		dojo.addOnLoad(init);
                 
 	</script>
-
 
   .. cv:: html
 
