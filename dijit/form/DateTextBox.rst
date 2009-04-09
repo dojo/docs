@@ -89,7 +89,15 @@ To accept dates from the server in this format (but continue to work with dates 
 					return dojo.date.locale.format(dateObject, this.oracleFormat).toUpperCase();
 				}
 			});
-			new OracleDateTextBox({value: "31-DEC-2009", name: "oracle"}, "oracle");
+			function showServerValue(){
+				dojo.byId('oracleServerValue').value=document.getElementsByName('oracle')[0].value;
+			}
+			new OracleDateTextBox({
+				value: "31-DEC-2009", 
+				name: "oracle", 
+				onChange: function(v){ setTimeout(showServerValue, 0)}
+			}, "oracle");
+			showServerValue();
 		});
 	</script>
 
@@ -97,6 +105,8 @@ To accept dates from the server in this format (but continue to work with dates 
 
 	<label for="oracle">Oracle:</label>
 	<input id="oracle" />
+	<label for"oracleServerValue">Oracle date back to server:</label>
+	<input id="oracleServerValue"/>
 
 
 Changing Constraints on the Fly
