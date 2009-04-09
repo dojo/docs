@@ -163,10 +163,29 @@ The DateTextBox widget obeys the ``constraints`` you give, much like `dijit.form
 		onChange="dijit.byId('fromDate').constraints.max = arguments[0];" />
 
 
-Two-Digit Year Format
----------------------
+Working with Two-Digit Years
+----------------------------
 
-TODO: http://dojotoolkit.org/forum/dijit-dijit-0-9/dijit-support/datetextbox-datepattern-constraint-2-digit-year-possible
+Sometimes you may want to input and display years in a format with only 2-digit years.  Note the server still needs the full 4-digit year sent on form submit so that it's not ambiguous.  There is a ``constraints`` property `fullYear` (boolean) that controls the presentation of the year as 2 digits or 4.  The catch is that this can only be set after the widget has been created.
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+	<script type="text/javascript">
+		dojo.require("dijit.form.DateTextBox");
+		function setShortYear(){
+			var w = dijit.byId('shortYear');
+			w.constraints.fullYear = false;
+			w.attr('value', w.attr('value')); // reformat display to short year
+		}
+		dojo.addOnLoad(setShortYear);
+	</script>
+
+  .. cv:: html
+
+	<label for="shortYear">From:</label>
+	<input id="shortYear" type="text" name="shortYear" dojoType="dijit.form.DateTextBox" required="true"/>
 
 =============
 Accessibility
