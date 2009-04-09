@@ -40,7 +40,7 @@ TODO: how to use the component/class/method
 
         <script type="text/javascript">
 
-        dojo.addOnLoad(function{}{
+        dojo.addOnLoad(function(){
 
 		<p>Programatic: (destroy() removes this.domNode)<br>
 		
