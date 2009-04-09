@@ -58,9 +58,8 @@ TODO: how to use the component/class/method
 		}
 
 		function init(){
-                                              
-                        var flickrStore = new dojox.data.FlickrStore();
-                        
+                             
+                                                
 			var flickrRequest = {
 				query: {},
 				onComplete: onComplete,
@@ -87,6 +86,9 @@ TODO: how to use the component/class/method
               
         </div>
     </div>
+
+    <div dojoType="dojox.data.FlickrStore" jsId="flickrStore" label="title"></div>
+
      
 
   .. cv:: css
