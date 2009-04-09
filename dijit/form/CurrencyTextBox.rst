@@ -65,9 +65,9 @@ In this example using euros with German formatting, the invalid message contains
   .. cv:: javascript
 
 	<script type="text/javascript">
-		dojo.config.extraLocale = ['de-de'];
 		dojo.require("dijit.form.CurrencyTextBox");
 		dojo.require("dojo.currency");
+		dojo.requireLocalization("dojo.cldr", "currency", 'de-de');
 		function createWidget(){
 			var example = dojo.currency.format(54775.53, {locale: 'de-de', currency: "EUR"});
 			var props = {
