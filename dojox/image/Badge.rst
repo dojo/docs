@@ -88,6 +88,8 @@ TODO: how to use the component/class/method
     </div>
 
     <div dojoType="dojox.data.FlickrStore" jsId="flickrStore" label="title"></div>
+    <div id="fromStore" dojoType="dojox.image.Lightbox" store="flickrStore" group="flickrStore"></div>
+
 
      
 
