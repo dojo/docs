@@ -36,10 +36,7 @@ TODO: how to use the component/class/method
        <script type="text/javascript">
          dojo.require("dojox.form.Button"); 	 
          dojo.require("dojox.image.MagnifierLite");                
-       </script>
-
-       <script type="text/javascript">
-
+       
         dojo.addOnLoad(function(){
 		
 		<button dojoType="dijit.form.Button" id="foob">
