@@ -62,7 +62,6 @@ TODO: how to use the component/class/method
 				this.setAttribute("disabled",true);
 				dijit.byId("foobar").destroy(true);
 			</script>
-
 		</button>
 		
 		          
