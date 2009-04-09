@@ -31,7 +31,7 @@ TODO: how to use the component/class/method
 
 .. cv-compound ::
 
-  .. cv :: javascript
+  .. cv:: javascript
 
         <script type="text/javascript">
                 dojo.require("dojox.form.Button");
@@ -68,14 +68,12 @@ TODO: how to use the component/class/method
   .. cv:: html
 
 
-                <p>Programatic: (destroy() removes this.domNode)<br>
+                <p>Programatic: (destroy() removes this.domNode)<br></p>
 	
 		<br /><!-- srcNodeRef : -->
                 <img id="foobar" style="width:585px; height:201px" scale="7" glassSize="185" dojoType="dojox.image.MagnifierLite" 
                    src="http://www.zelda-infinite.com/games/zelda1/overworld.png" /> 		
-		</p>
-
-          
+		          
   .. cv:: css
 
    <style>
