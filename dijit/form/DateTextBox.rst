@@ -185,7 +185,7 @@ Sometimes you may want to input and display years in a format with only 2-digit 
   .. cv:: html
 
 	<label for="shortYear">From:</label>
-	<input id="shortYear" type="text" name="shortYear" dojoType="dijit.form.DateTextBox" required="true"/>
+	<input id="shortYear" type="text" name="shortYear" dojoType="dijit.form.DateTextBox" value="2009-11-25" required="true"/>
 
 =============
 Accessibility
