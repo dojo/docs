@@ -64,7 +64,7 @@ TODO: how to use the component/class/method
 				onError: onError,
 				userid: "dylans",
 				tags: "dojotoolkit,italy",
-				count: 10
+				count: 12
 			};
 			flickrStore.fetch(flickrRequest);
 		}
