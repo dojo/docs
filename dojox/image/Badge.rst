@@ -58,8 +58,8 @@ TODO: how to use the component/class/method
 		}
 
 		function init(){
-                        
-                        var flickrStore = new dojox.data.FlickrRestStore();
+                                              
+                        var flickrStore = new dojox.data.FlickrStore();
                         
 			var flickrRequest = {
 				query: {},
