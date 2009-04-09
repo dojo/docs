@@ -67,11 +67,11 @@ TODO: how to use the component/class/method
 
   .. cv:: html
 
-
-                <p>Programatic: (destroy() removes this.domNode)<br></p>
-	
-		<br />
-       <img id="foobar" style="width:585px; height:201px" scale="7" glassSize="185" dojoType="dojox.image.MagnifierLite"              src="http://www.zelda-infinite.com/games/zelda1/overworld.png" /> 		
+       <p>Programatic: (destroy() removes this.domNode)<br></p>	
+		
+       <img id="foobar" style="width:585px; height:201px" scale="7" glassSize="185" 
+                 dojoType="dojox.image.MagnifierLite"
+                      src="http://www.zelda-infinite.com/games/zelda1/overworld.png" /> 		
 		          
   .. cv:: css
 
