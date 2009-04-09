@@ -41,10 +41,6 @@ FlickrBadge. There are a number of configurable parameters, most of which are op
 .. cv-compound::
 
   .. cv:: javascript
-
-  	<script type="text/javascript" src="/dojo/dojo/dojo.js" 
-  	     djConfig="parseOnLoad: true">
-        </script>
              
         <script type="text/javascript">
 	     dojo.require("dojox.image.FlickrBadge"); 
