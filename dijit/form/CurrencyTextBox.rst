@@ -55,8 +55,8 @@ In this example using USD, both dollars and cents are required.
 
 
 
-Declarative example
--------------------
+Programmatic example
+--------------------
 
 In this example using euros with German formatting, the invalid message contains a custom formatted example value.
 
@@ -66,6 +66,7 @@ In this example using euros with German formatting, the invalid message contains
 
 	<script type="text/javascript">
 		dojo.require("dijit.form.CurrencyTextBox");
+		dojo.require("dojo.currency");
 		function createWidget(){
 			var example = dojo.currency.format(54775.53, {locale: 'de-de', currency: "EUR"});
 			var props = {
