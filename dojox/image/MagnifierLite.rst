@@ -29,7 +29,7 @@ Usage
 
 TODO: how to use the component/class/method
 
-.. cv-compound ::
+.. cv-compound::
 
   .. cv:: javascript
 
