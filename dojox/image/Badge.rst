@@ -59,7 +59,7 @@ TODO: how to use the component/class/method
 
 		function init(){
                         
-                        var flickStore = new dojox.data.FlickrRestStore();
+                        var flickrStore = new dojox.data.FlickrRestStore();
                         
 			var flickrRequest = {
 				query: {},
