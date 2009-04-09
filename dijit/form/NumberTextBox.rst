@@ -4,10 +4,10 @@ dijit.form.NumberTextBox
 ========================
 
 :Status: Draft
-:Version: 1.0
+:Version: 1.3
 :Authors: Becky Gibson, Doug Hays, Bill Keese, Nikolai Onken, Marcus Reimann, Craig Riecke
-:Developers: ?-
-:Available: since V?
+:Developers: Doug Hays, Bill Keese
+:Available: since V1.0
 
 .. contents::
     :depth: 2
@@ -33,6 +33,8 @@ Examples
 Declarative example
 -------------------
 
+This example defines a ``min`` and ``max`` constraint and an initial value.
+
 .. cv-compound::
 
   .. cv:: javascript
@@ -49,13 +51,41 @@ Declarative example
 		name= "elevation"
 		value="3000"
 		constraints="{min:-20000,max:20000,places:0}"
-		required= "true" 
+		required="true" 
 		invalidMessage= "Invalid elevation.">
+
+
+Programmatic example
+--------------------
+
+This example creates a simple NumberTextBox programmatically.  The fractional part can be 0 to 6 digits long.
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+     <script type="text/javascript">
+         dojo.require("dijit.form.NumberTextBox");
+         function createWidget(){
+              var props = {
+                  name: "programmatic",
+                  constraints: {pattern: "0.######"}
+              };
+              new dijit.form.NumberTextBox(props, "programmatic");    
+         }
+         dojo.addOnLoad(createWidget);
+     </script>
+
+  .. cv:: html
+
+         <label for="programmatic">Input any number with up to 6 fractional digits:</label>
+	 <input id="programmatic" type="text">
+
 
 
 Formatting
 ----------
-The (so called) constraints attribute can also contain formatting information.  The example below always makes sure that the field shows three digits after the decimal point, and has a +/- sign.   Try entering a simple value like "-3" and then tab away to see the effect.
+The ``constraints`` attribute can also contain formatting information.  The example below always makes sure that the field shows three digits after the decimal point, and has a +/- sign.   Try entering a simple value like "-3" and then tab away to see the effect.
 
 .. cv-compound::
 
