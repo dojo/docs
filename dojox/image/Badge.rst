@@ -89,7 +89,7 @@ TODO: how to use the component/class/method
     </div>
 
     <div dojoType="dojox.data.FlickrStore" jsId="flickrStore" label="title"></div>
-    <div id="fromStore" dojoType="dojox.image.Lightbox" store="flickrStore" group="flickrStore"></div>
+    <div id="fromStore" dojoType="dojox.image.Badge" store="flickrStore" group="flickrStore"></div>
 
 		<div id="prog"></div>
 		<div dojoType="dojox.image.Badge">
