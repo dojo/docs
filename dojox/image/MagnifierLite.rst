@@ -42,7 +42,7 @@ TODO: how to use the component/class/method
 
        <p>Programatic: (destroy() removes this.domNode)<br></p>	
 		
-       <img id="foobar" style="width:585px; height:201px" scale="7" glassSize="185" 
+       <img id="foobar1" style="width:585px; height:201px" scale="7" glassSize="185" 
                  dojoType="dojox.image.MagnifierLite"
                       src="http://www.zelda-infinite.com/games/zelda1/overworld.png" /> 
 
