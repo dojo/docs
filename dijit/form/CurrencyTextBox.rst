@@ -65,6 +65,7 @@ In this example using euros with German formatting, the invalid message contains
   .. cv:: javascript
 
 	<script type="text/javascript">
+		dojo.config.extraLocale = ['de-de'];
 		dojo.require("dijit.form.CurrencyTextBox");
 		dojo.require("dojo.currency");
 		function createWidget(){
