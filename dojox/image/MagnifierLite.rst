@@ -62,7 +62,7 @@ TODO: how to use the component/class/method
 			</script>
 
 		</button>
-	}
+	});
         </script>
 
   .. cv:: html
