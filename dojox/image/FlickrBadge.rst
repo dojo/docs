@@ -38,6 +38,32 @@ FlickrBadge. There are a number of configurable parameters, most of which are op
     * userid: your flickr userid (saves a lookup request)
     * username: your flickr username
 
+.. cv-compound::
+
+  .. cv:: javascript
+
+  	<script type="text/javascript" src="/dojo/dojo/dojo.js" 
+  	     djConfig="parseOnLoad: true">
+        </script>
+             
+        <script type="text/javascript">
+	     dojo.require("dojox.image.FlickrBadge"); 
+	</script>
+
+  .. cv:: html
+
+   <div dojoType="dojox.image.FlickrBadge" rows="8" cols="3" username="dylans" 
+	tags="dojotoolkit,italy"></div>
+
+  .. cv:: css
+
+   <style>
+    @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/image/resources/image.css";
+    
+    img.thing { width:50px; height:50px; }
+
+   </style>
+
 
 
 
