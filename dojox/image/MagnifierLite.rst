@@ -51,7 +51,7 @@ TODO: how to use the component/class/method
 			<script type="dojo/method" event="onClick">
 				this.setAttribute("disabled",true);
 				dijit.byId("foobd").setAttribute("disabled",false);
-				new dojox.image.MagnifierLite({ scale:4.2, glassSize:200 },"foobar");
+				new dojox.image.MagnifierLite({ scale:4.2, glassSize:200 },"foobar1");
 			</script>
 		</button>
 
