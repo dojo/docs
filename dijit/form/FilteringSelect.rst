@@ -73,6 +73,8 @@ Declarative markup using native select and option tags
 
 Native SELECT combo-boxes always have value/description pairs, e.g. the OPTION's *value* attribute is used as the submit value and the OPTION's child text node is used as the displayed value. For FilteringSelect widgets, the OPTION's child text node is used as the displayed value and the OPTION's *value* attribute is used as the hidden submit value. To set the default value when using OPTION tags, specify the *selected* attribute on 1 of the child OPTION tags.
 
+NOTE: if you do not specify a selected option, the browser will select the first item by default. If you want the FilteringSelect to start blank, use a different method to create it.
+
 .. cv-compound::
 
   .. cv:: javascript
