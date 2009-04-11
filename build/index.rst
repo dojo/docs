@@ -17,13 +17,13 @@ The Dojo build system creates efficient versions of Dojo and application modules
 Introduction
 ============
 
-Dojo, in its source distribution, contains thousands of separate files and resources which are available to any app via the package system. Normally each "`dojo.require <dojo/require>`_" statement results a synchronous HTTP call to the server to retreive a resource (`dojo.require` avoids re-requesting resources that have already been loaded, but module needs to be loaded before it can be used).  
+Dojo, in its source distribution, contains thousands of separate files and resources which are available to any app via the package system. Normally each "`dojo.require <dojo/require>`_" statement results in a synchronous HTTP call to the server to retrieve a resource (`dojo.require` avoids re-requesting resources that have already been loaded, but the module needs to be loaded before it can be used).  
 
 Because browsers wait for each synchronous web call to finish before allowing anything else to happen, this can substantially impair performance. Large apps that have many dependencies can take a very long time to load when a build isn't used, or flash and redraw several times.
 
 Furthermore, in the source distribution, files are not `minified <http://en.wikipedia.org/wiki/Minify>`_, and larger files require more time and bandwidth to download to the page.
 
-Dojo does not include a single file containing every possible dojo function, since this would very large (especially with optional modules from Dijit and Dojox); instead, the build system allows the creation of customized Dojo builds tailored to the needs of your particular web site. Better yet, the build system works with the packaging tools to allow you to make *your* modules faster too.
+Dojo does not include a single file containing every possible dojo function, since this would be very large (especially with optional modules from Dijit and Dojox); instead, the build system allows the creation of customized Dojo builds tailored to the needs of your particular web site. Better yet, the build system works with the packaging tools to allow you to make *your* modules faster too.
 
 What is a layer?
 ----------------
@@ -43,9 +43,9 @@ You load a layer file into your web page using the normal `<script>` tags, simil
   <!-- include the rest of the modules we need -->
   <script type="text/javascript" src="/js/src/acme/mylayer.js"></script>
 
-JavaScript files specified in script tags download asynchronously from the web server, but in modern browsers execution order is gauranteed, so more than one download can be in progress at once, making pages load faster. Since extra HTTP calls to the server are usually the single biggest factor in slow page loads, loading only one larger file (quite possibly from browser cache) instead of multiple little files makes your web page load much faster.
+JavaScript files specified in script tags download asynchronously from the web server, but in modern browsers execution order is guaranteed, so more than one download can be in progress at once, making pages load faster. Since extra HTTP calls to the server are usually the single biggest factor in slow page loads, loading only one larger file (quite possibly from browser cache) instead of multiple little files makes your web page load much faster.
 
-We use ``dojo.require`` to specify modules that an apps needs, but larger Dojo apps put this list of requirements into a single file that *only* includes a list of dependencies. The source version of ``mylayer.js`` might read like this:
+We use ``dojo.require`` to specify modules that an app needs, but larger Dojo apps put this list of requirements into a single file that *only* includes a list of dependencies. The source version of ``mylayer.js`` might read like this:
 
 .. code-block :: javascript
    
