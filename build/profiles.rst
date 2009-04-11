@@ -17,7 +17,7 @@ The build profile is a simple JavaScript file containing an object which provide
 Introduction
 ============
 
-The builder reads its parameters from a profile, which is a JavaScript file named *something*.``profile.js``, typically containing a ``dependencies`` object matching the structure described in this article.
+The builder reads its parameters from a profile, which is a JavaScript file named *something*.profile.js, typically containing a ``dependencies`` object matching the structure described in this article.
 
 The builder automatically appends ``.profile.js`` to the name of the profile specified on the build command line, so this naming convention is mandatory.
 
