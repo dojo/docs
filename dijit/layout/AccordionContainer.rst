@@ -59,7 +59,7 @@ Programmatic example
 
   .. cv:: html
 
-     <div id="markup"></div>
+     <div id="markup" style="width: 300px"></div>
 
 
 
