@@ -35,7 +35,7 @@ Programmatic example
 
        var aContainer;
        dojo.addOnLoad(function(){
-	  aContainer = new dijit.layout.AccordionContainer({style:"height: 400px;"});
+	  aContainer = new dijit.layout.AccordionContainer({style:"height: 800px;"});
 	
 	  aContainer.addChild(new dijit.layout.ContentPane({
 				title:"This is a content pane", 
