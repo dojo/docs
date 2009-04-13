@@ -24,7 +24,8 @@ In the example below, second pane is selected when the widget is loaded.
 
 Programmatic example
 --------------------
-
+//TODO: Example to be modified so that pane is displayed more clearly
+ 
 .. cv-compound::
 
   .. cv:: javascript
@@ -55,9 +56,9 @@ Programmatic example
       });
     </script>
 
-    .. cv:: html
+  .. cv:: html
 
-     <div id="markup"></div>
+     <div id="markup" style="width: 300px"></div>
     
 
 
