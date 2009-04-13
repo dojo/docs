@@ -29,12 +29,12 @@ Programmatic example
 
   .. cv:: javascript
 
-    <script type"text/javascript">
+    <script type="text/javascript">
         dojo.require("dijit.layout.AccordionContainer");
 
        var aContainer;
        dojo.addOnLoad(function(){
-	  aContainer = new dijit.layout.AccordionContainer({});
+	  aContainer = new dijit.layout.AccordionContainer({style="height: 400px;"});
 	
 	  aContainer.addChild(new dijit.layout.ContentPane({
 				title:"This is a content pane", 
@@ -68,7 +68,7 @@ Declarative example
 
   .. cv:: javascript
 
-    <script type"text/javascript">
+    <script type="text/javascript">
     dojo.require("dijit.layout.AccordionContainer");
     </script>
 
