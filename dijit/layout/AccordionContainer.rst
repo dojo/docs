@@ -35,7 +35,7 @@ Programmatic example
        var aContainer;
        dojo.addOnLoad(function(){
 	  aContainer = new dijit.layout.AccordionContainer({
-			style:"height: 400px;"
+			style:"height:400px"
 	  });
 	
 	  aContainer.addChild(new dijit.layout.ContentPane({
@@ -59,7 +59,7 @@ Programmatic example
 
   .. cv:: html
 
-     <div id="markup" style="width: 300px"></div>
+     <div id="markup" style="width:300px"></div>
 
 
 
