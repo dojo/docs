@@ -55,9 +55,9 @@ Programmatic example
       });
     </script>
 
-  .. cv:: html
+    .. cv:: html
 
-     <div id="markup" style="width:300px"></div>
+     <div id="markup"></div>
     
 
 
