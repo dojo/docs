@@ -13,12 +13,55 @@ dijit.layout.AccordionContainer
 .. contents::
     :depth: 2
 
-Like `StackContainer <dijit/layout/StackContainer>`_ and `TabContainer <dijit/layout/TabContainer>`_, an **AccordionContainer** holds a set of panes whose titles are all visible, but only one pane's content is visible at a time. Clicking on a pane title slides the currently-displayed one away, similar to a garage door.
+Like `StackContainer <dijit/layout/StackContainer>`_ and `TabContainer <dijit/layout/TabContainer>`_, an **AccordionContainer** holds a set of panes whose titles are all visible, but only one pane's content is visible at a time. Clicking on a pane title slides the currently-displayed one away, similar to a garage door. Users can explicitly select the pane that is to be made visible when the widget is loaded. If it is not specified, then the first pane is taken by default.
 
 
 ========
 Examples
 ========
+
+In the example below, second pane is selected when the widget is loaded.
+
+Programmatic example
+--------------------
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type"text/javascript">
+        dojo.require("dijit.layout.AccordionContainer");
+
+       var aContainer;
+       dojo.addOnLoad(function(){
+	  aContainer = new dijit.layout.AccordionContainer({
+			style:"height: 400px;"
+	  });
+	
+	  aContainer.addChild(new dijit.layout.ContentPane({
+				title:"This is a content pane", 
+				content:"Hi!"
+	  }));
+	  aContainer.addChild(new dijit.layout.ContentPane({
+				title:"This is as well", 
+				content:"Hi how are you?",
+                                selected:"true"
+	  }));
+	  aContainer.addChild(new dijit.layout.ContentPane({
+				title:"This too", 
+				content:"Hello im fine.. thnx"
+	  }));
+	
+	  aContainer.placeAt("markup");
+	  aContainer.startup();
+      });
+    </script>
+
+  .. cv:: html
+
+     <div id="markup"></div>
+
+
 
 Declarative example
 -------------------
@@ -35,13 +78,13 @@ Declarative example
 
     <div style="width: 300px">
       <div dojoType="dijit.layout.AccordionContainer" style="height: 400px;">
-        <div dojoType="dijit.layout.AccordionPane" title="Heeh, this is an accordion pane">
+        <div dojoType="dijit.layout.ContentPane" title="Heeh, this is a content pane">
         Hi!
         </div>
-        <div dojoType="dijit.layout.AccordionPane" title="This is as well" selected="true">
+        <div dojoType="dijit.layout.ContentPane" title="This is as well" selected="true">
         Hi how are you?
         </div>
-        <div dojoType="dijit.layout.AccordionPane" title="This too">
+        <div dojoType="dijit.layout.ContentPane" title="This too">
         Hi how are you? .....Great, thx
         </div>
       </div>
