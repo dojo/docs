@@ -1,4 +1,3 @@
-## page was renamed from 1.2/dijit/layout/AccordionContainer
 #format dojo_rst
 
 dijit.layout.AccordionContainer
@@ -52,7 +51,7 @@ Programmatic example
 	  }));
 	
 	  //aContainer.placeAt("markup");
-	  //aContainer.startup();
+	  aContainer.startup();
       });
     </script>
 
