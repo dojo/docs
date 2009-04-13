@@ -59,8 +59,9 @@ Programmatic example
 
   .. cv:: html
 
-     <div id="markup" style="width:300px"></div>
-
+    <div style="width:300px">
+     <div id="markup"></div>
+    </div>
 
 
 Declarative example
