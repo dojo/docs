@@ -22,8 +22,8 @@ Standalone Ruler
   .. cv:: javascript
 
     <script type="text/javascript">
-  dojo.require("dijit.form.VerticalRule");  
-  dojo.require("dijit.form.VerticalRuleLabels");
+            dojo.require("dijit.form.VerticalRule");  
+            dojo.require("dijit.form.VerticalRuleLabels");
     </script>
 
   .. cv:: html
