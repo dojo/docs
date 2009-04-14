@@ -11,7 +11,7 @@ dijit.CheckedMenuItem
 :Authors: 
 
 The CheckedMenuItem is a checkbox-like menu item for toggling on/off. Every time the user clicks the widget, it changes state between checked and unchecked. By default, the state of the widget is unchecked. The default state of the widget can be changed to “checked” by specifying it explicitly. A user defined event function, onChange, is used to handle check/uncheck events. User can also optionally disable the widget.
-This widget is helpful in cases where the user has to toggle particular column/row, on/off as and when it is required. It is used with Menu widget.
+This widget is helpful in cases where the user has to toggle particular column/row, on/off as and when it is required. 
 
 To optionally set the default state of the menu item to “checked”, 
 
@@ -149,11 +149,4 @@ check/uncheck menu item			      Spacebar or enter
 Implementation Notes
 ====================
 
-
----- /!\ '''Edit conflict - other version:''' ----
 See `dijit.Menu <dijit/Menu>`_.
-
----- /!\ '''Edit conflict - your version:''' ----
-See `dijit.Menu <dijit/Menu>`_.
-
----- /!\ '''End of edit conflict''' ----
