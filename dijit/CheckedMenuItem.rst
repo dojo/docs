@@ -53,7 +53,7 @@ Programmatic example
 		
 		pMenuBar = new dijit.MenuBar({});
 		var pMenu = new dijit.Menu({});
-		var cItem = new dijit.CheckedMenuItem({label:"ToolBar", onChange: toolkit});
+		var cItem = new dijit.CheckedMenuItem({label:"ToolBar", onChange: "toolkit"});
 		pMenu.addChild(cItem);
 		pMenu.addChild(new dijit.MenuItem({
                          label:"StatusBar", 
