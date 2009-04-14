@@ -49,7 +49,6 @@ Programmatic example
 				content:"Hello im fine.. thnx"
 	  }));
 	  aContainer.startup();
-          aContainer.layout()
       });
     </script>
 
@@ -57,7 +56,7 @@ Programmatic example
 
      <div style="width: 300px">
        <div id="markup"></div>
-    </div>
+     </div>
 
 
 Declarative example
