@@ -53,11 +53,11 @@ Programmatic example
 		
 		pMenuBar = new dijit.MenuBar({});
 		var pMenu = new dijit.Menu({});
-		var cItem = new dijit.CheckedMenuItem({label:"Checked Menuitem", onChange: toolkit});
+		var cItem = new dijit.CheckedMenuItem({label:"Navigation bar", onChange: toolkit});
 		pMenu.addChild(cItem);
 		pMenu.addChild(new dijit.MenuItem({
-                         label:"Menu item", 
-                         onClick:function(){alert("you clicked menu item")}
+                         label:"Status bar", 
+                         onClick:function(){alert("you clicked status bar")}
                 }));
 		
 		pMenuBar.addChild(new dijit.PopupMenuBarItem({label:"View", popup:pMenu}));
@@ -65,9 +65,9 @@ Programmatic example
 	        pMenuBar.startup();
 		
 		pToolBar = new dijit.MenuBar({}, "toolbar");
-		pToolBar.addChild(new dijit.MenuBarItem({label:"Item 1", onClick:function(){alert("Item 1 clicked")}}));
-		pToolBar.addChild(new dijit.MenuBarItem({label:"Item 2", onClick:function(){alert("Item 2 clicked")}}));
-		pToolBar.addChild(new dijit.MenuBarItem({label:"Item 3", onClick:function(){alert("Item 3 clicked")}}));
+		pToolBar.addChild(new dijit.MenuBarItem({label:"Back", onClick:function(){alert("I go nowhere!! just a clickable item")}}));
+		pToolBar.addChild(new dijit.MenuBarItem({label:"Forward", onClick:function(){alert("No way to go..")}}));
+		pToolBar.addChild(new dijit.MenuBarItem({label:"Refresh", onClick:function(){alert("Refresh button clicked!!")}}));
 		pToolBar.startup();
 	  
 	  });
@@ -121,15 +121,15 @@ Declarative example
 	        <div dojoType="dijit.PopupMenuBarItem">
 	                <span>View</span>
 	                <div dojoType="dijit.Menu">
-				<div dojoType="dijit.CheckedMenuItem" onChange="toolBar(arguments[0])">Checked Menuitem</div>
-	                        <div dojoType="dijit.MenuItem" onClick="alert('you just clicked menu item')">Menu item</div>
+				<div dojoType="dijit.CheckedMenuItem" onChange="toolBar(arguments[0])">Navigation bar</div>
+	                        <div dojoType="dijit.MenuItem" onClick="alert('you just clicked Status bar')">Status bar</div>
 	                </div>
 	        </div>
 	</div>
 	<div dojoType="dijit.MenuBar" id="tools">
-		<div dojoType="dijit.MenuBarItem" onClick="alert('Item 1 clicked')">Item 1</div>
-		<div dojoType="dijit.MenuBarItem" onClick="alert('Item 2 clicked')">Item 2</div>
-		<div dojoType="dijit.MenuBarItem" onClick="alert('Item 3 clicked')">Item 3</div>
+		<div dojoType="dijit.MenuBarItem" onClick="alert('I go nowhere!! just a clickable item')">Back</div>
+		<div dojoType="dijit.MenuBarItem" onClick="alert('Oops..No way to go..')">Forward</div>
+		<div dojoType="dijit.MenuBarItem" onClick="alert('Refresh button clicked!!')">Refresh</div>
 	</div>
 	
 Accessibility
