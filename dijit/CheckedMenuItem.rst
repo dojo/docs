@@ -79,7 +79,7 @@ Programmatic example
 				tools.style.display = "none";
 			}
 		};
-		dojo.addOnLoad(toolBar);
+		dojo.addOnLoad(toolkit);
 
 	</script>
 	
