@@ -79,4 +79,4 @@ Activate a menu item                       		Spacebar or enter
 Implementation Notes
 ====================
 
-See `dijit.Menu <dijit/Menu>`_.
+See `dijit.MenuBar <dijit/MenuBar>`_.
