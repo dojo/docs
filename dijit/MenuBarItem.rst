@@ -27,8 +27,8 @@ A programatically created MenuBarItem
     function fClickAnotherItem() {alert("Clicked on the second Item!")};
     dojo.addOnLoad(function(){
     pMenuBar = new dijit.MenuBar({id:"SampleMenu"});
-    pMenuBar.addChild(new dijit.MenuBarItem({label:"MenuBarItem#1", disabled:true, onClick:fClickItem}));
-    pMenuBar.addChild(new dijit.MenuBarItem({label:"MenubarItem#2", onClick:fClickAnotherItem}));
+    pMenuBar.addChild(new dijit.MenuBarItem({label:"MenuBarItem#1 ", disabled:true, onClick:fClickItem}));
+    pMenuBar.addChild(new dijit.MenuBarItem({label:"MenubarItem#2 ", onClick:fClickAnotherItem}));
     pMenuBar.placeAt("wrapper");
     pMenuBar.startup();
     });
@@ -56,7 +56,7 @@ Creation from markup is more simpler and structured.
 		<div dojoType="dijit.MenuBarItem" onclick="alert('Clicked on BarMenuItem');">
 			Click me!
 		</div>
-		<div dojoType="dijit.MenuBarItem" disabled = "true" onclick="alert('Disabled');">
+		<div dojoType="dijit.MenuBarItem" disabled = "true">
 			Disabled item
 		</div>
 	</div>
