@@ -30,12 +30,12 @@ Programmatic example
   .. cv:: javascript
 
     <script type="text/javascript">
-        dojo.require("dijit.layout.AccordionContainer");
-        dojo.require("dijit.layout.ContentPane");
+	dojo.require("dijit.layout.AccordionContainer");
+	dojo.require("dijit.layout.ContentPane");
 
-        dojo.addOnLoad(function(){
+	dojo.addOnLoad(function(){
 	  var aContainer = new dijit.layout.AccordionContainer({style:"height: 400px; width: 300px;"}, "markup");
-	  aContainer.startup();
+
 	  aContainer.addChild(new dijit.layout.ContentPane({
 				title:"This is a content pane", 
 				content:"Hi!"
@@ -49,9 +49,7 @@ Programmatic example
 				title:"This too", 
 				content:"Hello im fine.. thnx"
 	  }));
-	
-	  //aContainer.placeAt("markup");
-
+	  aContainer.startup();
       });
     </script>
 
