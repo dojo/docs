@@ -54,7 +54,7 @@ Programmatic example
 
   .. cv:: html
 
-     <div id="markup" style="width:400px;"></div>
+     <div id="markup" style="width:300px;"></div>
   
 
 Declarative example
