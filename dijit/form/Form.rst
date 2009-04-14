@@ -5,7 +5,9 @@ dijit.form.Form
 
 :Status: Draft
 :Version: 1.0
-:Available: since V?
+:Authors: Doug Hays, Bill Keese
+:Developers: Doug Hays, Bill Keese
+:Available: since V1.0
 
 .. contents::
     :depth: 2
