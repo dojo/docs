@@ -39,7 +39,8 @@ A programatically created MenuItem
 
      <div id="wrapper"></div>
 
-Creation from markup is even easier.
+
+Creation from markup is more simpler and structured.
 
 .. cv-compound::
 
