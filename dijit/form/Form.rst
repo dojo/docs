@@ -146,10 +146,16 @@ dijit.form.Form can also handle any type of native form element, though you have
         dojo.require("dijit.form.ValidationTextBox");
 
         dojo.addOnLoad(function(){
-            var myForm = dijit.byId("myFormThree");
             dojo.connect(myForm, "onSubmit", function(e){
                 e.preventDefault();
-                alert("Ready to submit data: "+dojo.toJson(myForm.attr("value")) );
+                var f = dojo.byId("myFormThree");
+                var s = "";
+                for (var i = 0; i < f.elements.length; i++) {
+                   var elem = f.elements[i];
+                   if (elem.name == "button")  { continue; }
+                   s += elem.name + ": " + elem.value + "\n";
+                }
+                alert("Ready to submit data: " + s);
             });
         });
     </script>
