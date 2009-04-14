@@ -1,7 +1,7 @@
 #format dojo_rst
 
 dijit.MenuBarItem
-==============
+=================
 
 .. contents::
     :depth: 2
@@ -13,7 +13,7 @@ dijit.MenuBarItem
 These are the items in the Menubar that may be clickable but does not spawn a submenu when pressed or hovered over.
 
 A programatically created MenuBarItem
------------------------------------
+-------------------------------------
 
 .. cv-compound::
 
@@ -38,7 +38,7 @@ A programatically created MenuBarItem
 
      <div id="wrapper"></div>
 
-Creation from markup is even easier.
+Creation from markup is more simpler and structured.
 
 .. cv-compound::
 
