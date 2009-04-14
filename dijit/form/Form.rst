@@ -138,7 +138,7 @@ To validate a form you use the `isValid()` function. Lets take at a simple examp
 Using native form elements
 --------------------------
 
-dijit.form.Form can also handle any type of naive form element, though you have to do validation yourself
+dijit.form.Form can also handle any type of native form element, though you have to do validation yourself
 
 .. cv-compound::
 
@@ -195,3 +195,10 @@ dijit.form.Form can also handle any type of naive form element, though you have 
         <button dojoType="dijit.form.Button" type="submit" name="submitButtonThree" value="Submit">Submit</button>
         <button dojoType="dijit.form.Button" type="reset">Reset</button>
     </div>
+
+
+=============
+Accessibility
+=============
+
+The Form widget acts as a container for other widgets and HTML elements and has no specific behaviors affecting accessibility.
