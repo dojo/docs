@@ -104,7 +104,7 @@ Declarative example
 	  dojo.require("dijit.CheckedMenuItem");
 	  
 		function toolBar(checked){
-			var tools = dojo.byId("toolbar");
+			var tools = dojo.byId("tools");
 			if(checked){
 				tools.style.display = "block";
 			}else {
@@ -117,16 +117,16 @@ Declarative example
 	
   .. cv:: html
   
-	  <div dojoType="dijit.MenuBar" id="menubar">
+	  <div dojoType="dijit.MenuBar">
 	        <div dojoType="dijit.PopupMenuBarItem">
 	                <span>View</span>
-	                <div dojoType="dijit.Menu" id="toolsMenu">
+	                <div dojoType="dijit.Menu">
 				<div dojoType="dijit.CheckedMenuItem" onChange="toolBar(arguments[0])">ToolBar</div>
 	                        <div dojoType="dijit.MenuItem" onClick="alert('Nothing in the StatusBar!!!')">StatusBar</div>
 	                </div>
 	        </div>
 	</div>
-	<div dojoType="dijit.MenuBar" id="toolbar">
+	<div dojoType="dijit.MenuBar" id="tools">
 		<div dojoType="dijit.MenuBarItem">Cut</div>
 		<div dojoType="dijit.MenuBarItem">Copy</div>
 		<div dojoType="dijit.MenuBarItem">Paste</div>
