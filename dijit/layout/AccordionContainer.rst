@@ -43,7 +43,7 @@ Programmatic example
 	  aContainer.addChild(new dijit.layout.ContentPane({
 				title:"This is as well", 
 				content:"Hi how are you?",
-                                selected:true
+                                selected:"true"
 	  }));
 	  aContainer.addChild(new dijit.layout.ContentPane({
 				title:"This too", 
