@@ -161,7 +161,7 @@ dijit.form.Form can also handle any type of native form element, though you have
                 if(elem.type == "radio" && !elem.checked){ continue; }
                 s += elem.name + ": " + elem.value + "\n";
             }
-            alert("Unvalidated data that would be submitted " + s);
+            alert("Unvalidated data that would be submitted:\n" + s);
             return false;
         </script>
         <table style="border: 1px solid #9f9f9f;" cellspacing="10">
