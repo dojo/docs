@@ -40,8 +40,6 @@ Declarative example
         </script>
 
         <script type="dojo/method" event="onSubmit">
-            console.debug('Attempting to submit form w/values:\n', 
-                dojo.toJson(this.getValues(), true));
             if(this.validate()){
                 return confirm('Form is valid, press OK to submit');
             } else {
@@ -144,20 +142,6 @@ dijit.form.Form can also handle any type of native form element, though you have
         dojo.require("dijit.form.Form");
         dojo.require("dijit.form.Button");
         dojo.require("dijit.form.ValidationTextBox");
-
-        dojo.addOnLoad(function(){
-            dojo.connect(myForm, "onSubmit", function(e){
-                e.preventDefault();
-                var f = dojo.byId("myFormThree");
-                var s = "";
-                for (var i = 0; i < f.elements.length; i++) {
-                   var elem = f.elements[i];
-                   if (elem.name == "button")  { continue; }
-                   s += elem.name + ": " + elem.value + "\n";
-                }
-                alert("Ready to submit data: " + s);
-            });
-        });
     </script>
 
   .. cv:: html
@@ -167,6 +151,17 @@ dijit.form.Form can also handle any type of native form element, though you have
         <script type="dojo/method" event="validate">
            return dojo.query('INPUT[name=order]','myFormThree').filter(function(n){return n.checked}).length > 0 &&
            dijit.form.Form.prototype.validate.apply(this, arguments);
+        </script>
+        <script type="dojo/method" event="onSubmit">
+            var f = dojo.byId("myFormThree");
+            var s = "";
+            for (var i = 0; i < f.elements.length; i++){
+                var elem = f.elements[i];
+                if (elem.name == "button")  { continue; }
+                s += elem.name + ": " + elem.value + "\n";
+            }
+            alert("Unvalidated data that would be submitted " + s);
+            return false;
         </script>
         <table style="border: 1px solid #9f9f9f;" cellspacing="10">
             <tr>
