@@ -6,7 +6,7 @@ dijit.form.HorizontalRule
 .. contents::
     :depth: 3
 
-:Status: Draft
+:Status: 
 :Version:
 :Authors: 
 
