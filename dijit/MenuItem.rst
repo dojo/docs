@@ -55,15 +55,15 @@ Creation from markup is even easier.
   .. cv:: html
 
 	<div id="menubar" dojoType="dijit.MenuBar">
-		<div dojoType="dijit.PopupMenuBarItem" id="Item Menu">
-		<span>Items</span>
-			<div dojoType="dijit.Menu" id="fileMenu">
-				<div dojoType="dijit.MenuItem" onClick="alert('Item 1')">Item #1</div>
-				<div dojoType="dijit.MenuItem" onClick="alert('Item 2')">Item #2</div>
-				<div dojoType="dijit.MenuItem" onClick="alert('Item 3')" disabled="true" >Item #3</div>
-            </div>
+	<div dojoType="dijit.PopupMenuBarItem" id="Item Menu">
+	<span>Items</span>
+		<div dojoType="dijit.Menu" id="fileMenu">
+			<div dojoType="dijit.MenuItem" onClick="alert('Item 1')">Item #1</div>
+			<div dojoType="dijit.MenuItem" onClick="alert('Item 2')">Item #2</div>
+			<div dojoType="dijit.MenuItem" onClick="alert('Item 3')" disabled="true" >Item #3</div>
         </div>
-	</div>
+    </div>
+</div>
 
 
 Accessibility
