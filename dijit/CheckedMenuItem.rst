@@ -53,7 +53,7 @@ Programmatic example
 		
 		pMenuBar = new dijit.MenuBar({});
 		var pMenu = new dijit.Menu({});
-		var cItem = new dijit.CheckedMenuItem({label:"ToolBar", onChange: toolBar});
+		var cItem = new dijit.CheckedMenuItem({label:"ToolBar", onChange: toolkit});
 		pMenu.addChild(cItem);
 		pMenu.addChild(new dijit.MenuItem({
                          label:"StatusBar", 
@@ -71,7 +71,7 @@ Programmatic example
 		pToolBar.startup();
 	  
 	  });
-		function toolBar(/*Boolean*/ checked){
+		function toolkit(checked){
 			var tools = dojo.byId("toolbar");
 			if(checked){
 				tools.style.display = "block";
