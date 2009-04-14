@@ -148,7 +148,6 @@ dijit.form.Form can also handle any type of native form element, though you have
         dojo.require("dijit.form.Form");
         dojo.require("dijit.form.Button");
         dojo.require("dijit.form.ValidationTextBox");
-        dojo.require("dijit.form.DateTextBox");
 
         dojo.addOnLoad(function(){
             var myForm = dijit.byId("myFormThree");
@@ -174,14 +173,6 @@ dijit.form.Form can also handle any type of native form element, though you have
             </tr>
             <tr>
                 <td>
-                    <label for="dob">Date of birth:
-                </td>
-                <td>
-                    <input type="text" name="dob" dojoType="dijit.form.DateTextBox" />
-                </td>
-            </tr>
-            <tr>
-                <td>
                     <label for="dob">Order
                 </td>
                 <td>
@@ -191,7 +182,7 @@ dijit.form.Form can also handle any type of native form element, though you have
             </tr>
         </table>
 
-        <button dojoType="dijit.form.Button" onClick="console.log(myFormThree.attr("value"))">Get Values from form!</button>
+        <button dojoType="dijit.form.Button" onClick="alert('Form is ' + ((myFormThree.validate() && dojo.query('INPUT[name=order]','myFormThree').filter(function(n){return n.checked}).length)? '' : 'not ') + 'valid');return false">Validate form</button>
         <button dojoType="dijit.form.Button" type="submit" name="submitButtonThree" value="Submit">Submit</button>
         <button dojoType="dijit.form.Button" type="reset">Reset</button>
     </div>
