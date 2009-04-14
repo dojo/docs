@@ -6,9 +6,9 @@ dijit.MenuItem
 .. contents::
     :depth: 2
 
-:Status: Draft
-:Version: 1.3
-:Authors: Bill Keese
+:Status:
+:Version:
+:Authors:
 
 These are the line items in a Menu Widget. The display for the MenuItem consists of 3 columns namely Label, Icon and the Accelerator key. Although Menu can display accelerator keys there is no infrastructure currently to actually catch and execute these accelerators. The developer is responsible for the key event handler to support this. 
 
