@@ -149,4 +149,4 @@ check/uncheck menu item			      Spacebar or enter
 Implementation Notes
 ====================
 
- See `dijit.Menu <dijit/Menu>`_.
+See `dijit.Menu <dijit/Menu>`_.
