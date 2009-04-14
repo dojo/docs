@@ -34,7 +34,7 @@ Programmatic example
 	dojo.require("dijit.layout.ContentPane");
 
 	dojo.addOnLoad(function(){
-	  var aContainer = new dijit.layout.AccordionContainer({}, "markup");
+	  var aContainer = new dijit.layout.AccordionContainer({style:"height: 400px"}, "markup");
 
 	  aContainer.addChild(new dijit.layout.ContentPane({
 				title:"This is a content pane", 
@@ -42,9 +42,8 @@ Programmatic example
 	  }));
 	  aContainer.addChild(new dijit.layout.ContentPane({
 				title:"This is as well", 
-				content:"Hi how are you?",
-                                selected:"true"
-	  }));
+				content:"Hi how are you?"
+          }));
 	  aContainer.addChild(new dijit.layout.ContentPane({
 				title:"This too", 
 				content:"Hello im fine.. thnx"
@@ -55,7 +54,7 @@ Programmatic example
 
   .. cv:: html
 
-     <div style="height: 400px; width: 300px;">
+     <div style="width: 300px">
        <div id="markup"></div>
     </div>
 
