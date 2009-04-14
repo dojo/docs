@@ -27,7 +27,6 @@ Standalone Ruler
     </script>
 
   .. cv:: html
-              <p>
                <div style="height:2in;border-left:1px solid black;">
 			<div dojoType="dijit.form.VerticalRule" count=17 style="width:.4em;"></div>
 			<div dojoType="dijit.form.VerticalRule" count=9 style="width:.4em;"></div>
