@@ -54,7 +54,7 @@ Programmatic example
 
   .. cv:: html
 
-     <div id="markup" style="width: 300px"></div>
+     <div id="markup" style="width:400px;"></div>
   
 
 Declarative example
@@ -70,7 +70,7 @@ Declarative example
 
   .. cv:: html
 
-    <div style="width: 300px">
+    <div style="width: 300px;">
       <div dojoType="dijit.layout.AccordionContainer" style="height: 400px;">
         <div dojoType="dijit.layout.ContentPane" title="Heeh, this is a content pane">
         Hi!
