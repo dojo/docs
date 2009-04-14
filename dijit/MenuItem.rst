@@ -20,15 +20,15 @@ A programatically created MenuItem
   .. cv:: javascript
 
     <script type="text/javascript">
-	dojo.require("dijit.MenuBar");
-	dojo.require("dijit.MenuItem");
-	var pMenuBar;
-	function fClickOne() {alert("You clicked on Menu Item #1")};
-	function fClickTwo() {alert("You clicked on Menu Item #2")};
-	dojo.addOnLoad(function(){
-	ExampleMenu = new dijit.Menu({id:"SampleM"});
+    dojo.require("dijit.MenuBar");
+    dojo.require("dijit.MenuItem");
+    var pMenuBar;
+    function fClickOne() {alert("You clicked on Menu Item #1")};
+    function fClickTwo() {alert("You clicked on Menu Item #2")};
+    dojo.addOnLoad(function(){
+    ExampleMenu = new dijit.Menu({id:"SampleM"});
     ExampleMenu.addChild(new dijit.MenuItem({label:"Always Visible Menu", disabled:true}));
-	ExampleMenu.addChild(new dijit.MenuItem({label:"Item #1", onClick:fClickOne,  accelKey:"Shift+O"}));
+    ExampleMenu.addChild(new dijit.MenuItem({label:"Item #1", onClick:fClickOne,  accelKey:"Shift+O"}));
     ExampleMenu.addChild(new dijit.MenuItem({label:"Item #2", onClick:fClickTwo, disabled:true, accelKey:"Shift+T"}));
     ExampleMenu.placeAt("wrapper");
     ExampleMenu.startup();
