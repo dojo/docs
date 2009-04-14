@@ -51,10 +51,6 @@ Declarative example
             return true;
         </script>
 
-        <script type="dojo/method" event="onReset">
-            return confirm('reset Form?');
-        </script>
-
         <table style="border: 1px solid #9f9f9f;" cellspacing="10">
             <tr>
                 <td>
@@ -138,7 +134,7 @@ To validate a form you use the `isValid()` function. Lets take at a simple examp
 Using native form elements
 --------------------------
 
-dijit.form.Form can also handle any type of native form element, though you have to do validation yourself
+dijit.form.Form can also handle any type of native form element, though you have to do validation yourself.  The Form widget below will validate only when you have entered both a name in the ValidationTextBox widget AND when you have selected 1 of the native HTML radio buttons.
 
 .. cv-compound::
 
@@ -162,6 +158,10 @@ dijit.form.Form can also handle any type of native form element, though you have
 
     <div dojoType="dijit.form.Form" id="myFormThree" jsId="myFormThree"
     encType="multipart/form-data" action="" method="">
+        <script type="dojo/method" event="validate">
+           return dojo.query('INPUT[name=order]','myFormThree').filter(function(n){return n.checked}).length > 0 &&
+           dijit.form.Form.prototype.validate.apply(this, arguments);
+        </script>
         <table style="border: 1px solid #9f9f9f;" cellspacing="10">
             <tr>
                 <td>
@@ -177,12 +177,14 @@ dijit.form.Form can also handle any type of native form element, though you have
                 </td>
                 <td>
                     <input type="radio" name="order" value="Food"> Food  
-                    <input type="radio" name="order" value="Drinks" checked> Drinks
+                    <input type="radio" name="order" value="Drinks"> Drinks
                 </td>
             </tr>
         </table>
 
-        <button dojoType="dijit.form.Button" onClick="alert('Form is ' + ((myFormThree.validate() && dojo.query('INPUT[name=order]','myFormThree').filter(function(n){return n.checked}).length)? '' : 'not ') + 'valid');return false">Validate form</button>
+        <button dojoType="dijit.form.Button" onClick="alert('Form is ' + (myFormThree.validate()?'':'not ') + 'valid');return false">
+            Validate form
+        </button>
         <button dojoType="dijit.form.Button" type="submit" name="submitButtonThree" value="Submit">Submit</button>
         <button dojoType="dijit.form.Button" type="reset">Reset</button>
     </div>
