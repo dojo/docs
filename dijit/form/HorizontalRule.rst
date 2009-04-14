@@ -10,11 +10,9 @@ dijit.form.HorizontalRule
 :Version:
 :Authors: 
 
-This widget is used primarily for creating Hash marks for the `dijit.form.HorizontalSlider <dijit/form/HorizontalSlider>` widget. The rule can be dispalyed either above or below the slider by specifying the value of the container as "topDecoration" or "bottomDecoration" respectively. The number of hash marks to be displayed is to be specified through the 'count' attribute.
+This widget is used primarily for creating Hash marks for the `dijit.form.HorizontalSlider <dijit/form/HorizontalSlider>`_ widget. The rule can be dispalyed either above or below the slider by specifying the value of the container as "topDecoration" or "bottomDecoration" respectively. The number of hash marks to be displayed is to be specified through the 'count' attribute.
 
-The Label widget is used for specifying labels for the `dijit.form.HorizontalSlider<dijit/form/HorizontalSlider>`. The labels can be specified through a custom defined array of String labels. To get numeric labels,the minimum and maximum attributes need to be specified.The labels can also be specified directly as children of the <li> tag.
-
-For examples of using this widget along with the HorizontalSlider refer `dijit.form.HorizontalSlider <dijit/form/HorizontalSlider>` .
+For examples of using this widget along with the HorizontalSlider refer `dijit.form.HorizontalSlider <dijit/form/HorizontalSlider>`_ .
 
 Standalone Ruler
 ----------------
