@@ -27,17 +27,18 @@ Standalone Ruler
     </script>
 
   .. cv:: html
-               <div style="height:2in;border-left:1px solid black;">
-			<div dojoType="dijit.form.VerticalRule" count=17 style="width:.4em;"></div>
-			<div dojoType="dijit.form.VerticalRule" count=9 style="width:.4em;"></div>
-			<div dojoType="dijit.form.VerticalRule" count=5 style="width:.4em;"></div>
-			<div dojoType="dijit.form.VerticalRule" count=3 style="width:.4em;"></div>
-			<ol dojoType="dijit.form.VerticalRuleLabels" labelStyle="font-style:monospace;font-size:.7em;margin:0px -1em -.35em 0px;">
-				<li>1</li>
-				<li>2</li>
-				<li>3</li>
-			</ol>
-		</div>
+
+    <div style="height:2in;border-left:1px solid black;">
+        <div dojoType="dijit.form.VerticalRule" count=17 style="width:.4em;"></div>
+	<div dojoType="dijit.form.VerticalRule" count=9 style="width:.4em;"></div>
+	<div dojoType="dijit.form.VerticalRule" count=5 style="width:.4em;"></div>
+	<div dojoType="dijit.form.VerticalRule" count=3 style="width:.4em;"></div>
+	<ol dojoType="dijit.form.VerticalRuleLabels" labelStyle="font-style:monospace;font-size:.7em;margin:0px -1em -.35em 0px;">
+	    <li>1</li>
+	    <li>2</li>
+	    <li>3</li>
+	</ol>
+    </div>
 
 
 
