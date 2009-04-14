@@ -10,10 +10,9 @@ dijit.CheckedMenuItem
 :Version: 1.2
 :Authors: 
 
-The CheckedMenuItem is a checkbox-like menu item for toggling on/off. Every time the user clicks the widget, it changes state between checked and unchecked. By default, the state of the widget is unchecked. The default state of the widget can be changed to “checked” by specifying it explicitly. A user defined event function, onChange, is used to handle check/uncheck events. User can also optionally disable the widget.
-This widget is helpful in cases where the user has to toggle particular column/row, on/off as and when it is required. 
+The CheckedMenuItem is a checkbox-like menu item for toggling on/off. Every time the user clicks the widget, it changes state between checked and unchecked. By default, the state of the widget is unchecked. User can optionally change the default state of the widget and also disable the widget as well. A user defined event function, onChange, is used to handle check/uncheck events.
 
-To optionally set the default state of the menu item to “checked”, 
+To change the default state of the menu item to “checked”, 
 
 .. code-block :: javascript
 
@@ -25,6 +24,7 @@ The menu item can be disabled as follows:
 
    var cItem = new dijit.CheckedMenuItem({label:"Checked Menu Item", disable:"true"});
 
+This widget is helpful in cases where the user has to toggle particular column/row, on/off as and when it is required. The examples below illustrate the usage of the widget.
 
 
 
@@ -53,11 +53,11 @@ Programmatic example
 		
 		pMenuBar = new dijit.MenuBar({});
 		var pMenu = new dijit.Menu({});
-		var cItem = new dijit.CheckedMenuItem({label:"ToolBar", onChange: toolkit});
+		var cItem = new dijit.CheckedMenuItem({label:"Checked Menuitem", onChange: toolkit});
 		pMenu.addChild(cItem);
 		pMenu.addChild(new dijit.MenuItem({
-                         label:"StatusBar", 
-                         onClick:function(){alert("Nothing in the StatusBar!!!")}
+                         label:"Menu item", 
+                         onClick:function(){alert("you clicked menu item")}
                 }));
 		
 		pMenuBar.addChild(new dijit.PopupMenuBarItem({label:"View", popup:pMenu}));
@@ -65,9 +65,9 @@ Programmatic example
 	        pMenuBar.startup();
 		
 		pToolBar = new dijit.MenuBar({}, "toolbar");
-		pToolBar.addChild(new dijit.MenuBarItem({label:"Cut"}));
-		pToolBar.addChild(new dijit.MenuBarItem({label:"Copy"}));
-		pToolBar.addChild(new dijit.MenuBarItem({label:"Paste"}));
+		pToolBar.addChild(new dijit.MenuBarItem({label:"Item 1", onClick:function(){alert("Item 1 clicked")}}));
+		pToolBar.addChild(new dijit.MenuBarItem({label:"Item 2", onClick:function(){alert("Item 2 clicked")}}));
+		pToolBar.addChild(new dijit.MenuBarItem({label:"Item 3", onClick:function(){alert("Item 3 clicked")}}));
 		pToolBar.startup();
 	  
 	  });
@@ -121,15 +121,15 @@ Declarative example
 	        <div dojoType="dijit.PopupMenuBarItem">
 	                <span>View</span>
 	                <div dojoType="dijit.Menu">
-				<div dojoType="dijit.CheckedMenuItem" onChange="toolBar(arguments[0])">ToolBar</div>
-	                        <div dojoType="dijit.MenuItem" onClick="alert('Nothing in the StatusBar!!!')">StatusBar</div>
+				<div dojoType="dijit.CheckedMenuItem" onChange="toolBar(arguments[0])">Checked Menuitem</div>
+	                        <div dojoType="dijit.MenuItem" onClick="alert('you just clicked menu item')">Menu item</div>
 	                </div>
 	        </div>
 	</div>
 	<div dojoType="dijit.MenuBar" id="tools">
-		<div dojoType="dijit.MenuBarItem">Cut</div>
-		<div dojoType="dijit.MenuBarItem">Copy</div>
-		<div dojoType="dijit.MenuBarItem">Paste</div>
+		<div dojoType="dijit.MenuBarItem" onClick="alert('Item 1 clicked')">Item 1</div>
+		<div dojoType="dijit.MenuBarItem" onClick="alert('Item 2 clicked')">Item 2</div>
+		<div dojoType="dijit.MenuBarItem" onClick="alert('Item 3 clicked')">Item 3</div>
 	</div>
 	
 Accessibility
