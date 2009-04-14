@@ -155,9 +155,10 @@ dijit.form.Form can also handle any type of native form element, though you have
         <script type="dojo/method" event="onSubmit">
             var f = dojo.byId("myFormThree");
             var s = "";
-            for (var i = 0; i < f.elements.length; i++){
+            for(var i = 0; i < f.elements.length; i++){
                 var elem = f.elements[i];
-                if (elem.name == "button")  { continue; }
+                if(elem.name == "button"){ continue; }
+                if(elem.type == "radio" && !elem.checked){ continue; }
                 s += elem.name + ": " + elem.value + "\n";
             }
             alert("Unvalidated data that would be submitted " + s);
