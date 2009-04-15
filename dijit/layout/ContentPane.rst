@@ -130,30 +130,6 @@ Programmatic example
     </div>
 
 
-A content pane which loads the content remotely through href. 
-
-.. cv-compound::
-
-  .. cv:: javascript
-
-    <script type="text/javascript">
-      dojo.require("dijit.layout.ContentPane");
-      dojo.addOnLoad(function(){
-          new dijit.layout.ContentPane({
-              href:"layout/doc1.html",
-              style:"height:125px",
-			  onDownloadEnd: function(){
-				console.log("Download complete!");}
-          }).placeAt("cPane");
-      });
-    </script>
-
-  .. cv:: html
-
-    <div id="cPane">
-      The contentPane loads the content remotely:
-    </div>
-
 =============
 Accessibility
 =============
