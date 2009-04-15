@@ -49,7 +49,6 @@ Programmatic example
 				content:"Hello im fine.. thnx"
 	  }));
 	  aContainer.startup();
-	  aContainer.resize();
       });
     </script>
 
