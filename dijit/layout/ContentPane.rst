@@ -140,7 +140,7 @@ A content pane which loads the content remotely through href.
       dojo.require("dijit.layout.ContentPane");
       dojo.addOnLoad(function(){
           new dijit.layout.ContentPane({
-              href:"/layout/doc1.html",
+              href:"layout/doc1.html",
               style:"height:125px",
 			  onDownloadEnd: function(){
 				console.log("Download complete!");}
