@@ -46,6 +46,10 @@ Functions provided by the dojo.fx module
 
 * `dojo.fx.Toggler <dojo/fx/Toggler>`_ -  A helper class to wrap to simplify assigning two animations to a node, one for the 'show' animation and one for a 'hide' animation.  For example, fading a node in for show and out for hide.
 
+* `dojo.fx.chain <dojo/fx/chain>`_ -  A helper function that can take two animation instances and combine them into a single animation instance where each of the input animations is run after the other in sequence.
+
+* `dojo.fx.combine <dojo/fx/combine>`_ -  A helper function that can take two animation instances and combine them into a single animation instance where each of the input animations are run in parallel.
+
 ========
 See also
 ========
