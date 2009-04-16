@@ -450,7 +450,7 @@ This example demonstrates a FilteringSelect populated with 3 items: `Dojo core`,
                  labelAttr: "label",
                  labelType: "html"
            }, dojo.byId("dojoBox"));
-
+        });
     </script>
 
   .. cv:: html
