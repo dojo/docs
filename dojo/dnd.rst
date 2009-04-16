@@ -714,10 +714,21 @@ Low Vision
 
 In the current nightly build as of April 17, 2009, and for the 1.4 release the drag and drop icons have been updated to better support low vision and to not rely on color alone to distinguish between the copy/no copy and move/no move operations.
 
-* If the copy operation can be performed the DnD icon is a green background with a plus.
-* If the copy operation can not be performed, the DnD icon is a red background with an x.
-* If the move operation can be performed the DnD icon is a green background with an arrow.
-* If the move operation can not be performed the DnD icon is a red background with a dash.
+.. image:: dndCopy.png
+
+If the copy operation can be performed the DnD icon is a green background with a plus.
+
+.. image:: dndNoCopy.png
+ 
+If the copy operation can not be performed, the DnD icon is a red background with an x.
+
+.. image:: dndMove.png
+
+If the move operation can be performed the DnD icon is a green background with an arrow.
+
+.. image:: dndNoMove.png 
+
+If the move operation can not be performed the DnD icon is a red background with a dash.
 
 For High Contrast mode in Windows or when images have been turned off in the browser, the following character representations are used for the Dnd operations:
 
@@ -732,4 +743,6 @@ However, in order to detect that high contrast mode has been set on a MS Windows
 
   <script type="text/javascript" src="../../../dijit/_base/wai.js"></script>
 	
-Note that your src path may vary and you may need to do a custom build to include this dijit file since it is not included in dojo.js by default.  
+Note that your src path may vary and you may need to do a custom build to include this dijit file since it is not included in dojo.js by default.
+
+  
