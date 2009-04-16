@@ -692,7 +692,7 @@ External tutorials and documentation
 `Inside Dojo DnD: Drag Handles <http://www.sitepen.com/blog/2008/10/24/inside-dojo-dnd-drag-handles/>`_ by `Eugene Lazutkin <http://lazutkin.com/>`_ at `SitePen <http://www.sitepen.com/>`_.
   The article explains a frequently overlooked and underused feature of Dojo’s Drag-and-Drop (DnD) module: drag handles. It features several simple examples and clarifies some fine points.
 
-`Queued: Drag and Drop in the Queue <http://www.sitepen.com/blog/2009/04/16/queued-drag-and-drop-in-the-queue/>`_ by Bryan Forbes_ at `SitePen <http://www.sitepen.com/>`_.
+`Queued: Drag and Drop in the Queue <http://www.sitepen.com/blog/2009/04/16/queued-drag-and-drop-in-the-queue/>`_ by Bryan Forbes at `SitePen <http://www.sitepen.com/>`_.
   The article shows how Dojo DnD was used to implement the Netflix movie queue reordering feature in Queued, what features of DnD were used, and how it affected design decisions. All relevant code snippets are published along with detailed comments.
 
 `dojo.dnd 1.1 technical documentation <http://docs.google.com/Edit?tab=view&docid=d764479_20ghbr97c8>`_ by `Eugene Lazutkin <http://lazutkin.com/>`_
