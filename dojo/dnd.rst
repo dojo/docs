@@ -704,3 +704,32 @@ In order to limit the maximum number of items in a DnD source, you can override 
 If you want to create dojo.dnd.Source with markup, and want to select that Source for operations like insertNodes(), you will need to manually supply that Source with a jsId. E.g.: <div dojoType="dojo.dnd.Source" id="test" jsId="test"> Then you reference it in your code like: test.insertNodes(); Without that, there is no way to use the methods of the Source if you are creating it with markup.
 
 The DnD itself uses ``onmousedown``/``onmousemove``/``onmouseup`` to operate. If you want to process ``onclick``, be warned that this is the synthetic event: essentially it is ``onmousedown + onmouseup``, which occurred within some predefined time interval (usually settable on the OS level), or using other criteria. Some browsers generate ``onclick`` on every ``onmouseup``. Working with DnD you will get plenty of false ``onclick`` events. Some of them happen naturally, when user decided to drag but changed her mind clicking the mouse button generating ``onclick``. *Be extra careful when processing* ``onclick`` *on DnD sources!*
+
+=============
+Accessibility
+=============
+
+Low Vision
+-----------
+
+In the current nightly build as of April 17, 2009, and for the 1.4 release the drag and drop icons have been updated to better support low vision and to not rely on color alone to distinguish between the copy/no copy and move/no move operations.
+
+* If the copy operation can be performed the DnD icon is a green background with a plus.
+* If the copy operation can not be performed, the DnD icon is a red background with an x.
+* If the move operation can be performed the DnD icon is a green background with an arrow.
+* If the move operation can not be performed the DnD icon is a red background with a dash.
+
+For High Contrast mode in Windows or when images have been turned off in the browser, the following character representations are used for the Dnd operations:
+
+* If the copy operation can be performed the DnD character is a +.
+* If the copy operation can not be performed, the DnD is an x.
+* If the move operation can be performed the DnD character is a <.
+* If the move opertation can not be performed the DnD character is an o.
+
+However, in order to detect that high contrast mode has been set on a MS Windows system, you will need to include an additional file from the dijit system on your pages which use DnD.  This file performs the check that high contrast mode has been set on a Windows system.  When high contrast mode is turned on all color references are reduced to just a foreground and background color and CSS background images are not displayed. For more information on Windows High Contrast mode see `Widgets and High Contrast Mode <http://www.dojotoolkit.org/2007/03/30/widgets-and-high-contrast-mode>`_ . Since DnD uses background images for the icons, the character equivalents are rendered when High Contrast mode is detected.  You should include this additional file in all of your pages that use drag and drop in order to provide full accessibility.  Add the following in your page below the other dojo includes:
+
+.. code-block :: javascript
+
+  <script type="text/javascript" src="../../../dijit/_base/wai.js"></script>
+	
+Note that your src path may vary and you may need to do a custom build to include this dijit file since it is not included in dojo.js by default.  
