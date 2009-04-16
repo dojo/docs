@@ -692,6 +692,9 @@ External tutorials and documentation
 `Inside Dojo DnD: Drag Handles <http://www.sitepen.com/blog/2008/10/24/inside-dojo-dnd-drag-handles/>`_ by `Eugene Lazutkin <http://lazutkin.com/>`_ at `SitePen <http://www.sitepen.com/>`_.
   The article explains a frequently overlooked and underused feature of Dojo’s Drag-and-Drop (DnD) module: drag handles. It features several simple examples and clarifies some fine points.
 
+`Queued: Drag and Drop in the Queue <http://www.sitepen.com/blog/2009/04/16/queued-drag-and-drop-in-the-queue/>`_ by Bryan Forbes_ at `SitePen <http://www.sitepen.com/>`_.
+  The article shows how Dojo DnD was used to implement the Netflix movie queue reordering feature in Queued, what features of DnD were used, and how it affected design decisions. All relevant code snippets are published along with detailed comments.
+
 `dojo.dnd 1.1 technical documentation <http://docs.google.com/Edit?tab=view&docid=d764479_20ghbr97c8>`_ by `Eugene Lazutkin <http://lazutkin.com/>`_
   This is the technical documentation for Dojo DnD 1.1 listed here only as a historic reference. This document is based on it.
 
@@ -719,14 +722,14 @@ In the current nightly build as of April 17, 2009, and for the 1.4 release the d
 If the copy operation can be performed the DnD icon is a green background with a plus.
 
 .. image:: dndNoCopy.png
- 
+
 If the copy operation can not be performed, the DnD icon is a red background with an x.
 
 .. image:: dndMove.png
 
 If the move operation can be performed the DnD icon is a green background with an arrow.
 
-.. image:: dndNoMove.png 
+.. image:: dndNoMove.png
 
 If the move operation can not be performed the DnD icon is a red background with a dash.
 
@@ -742,7 +745,5 @@ However, in order to detect that high contrast mode has been set on a MS Windows
 .. code-block :: javascript
 
   <script type="text/javascript" src="../../../dijit/_base/wai.js"></script>
-	
-Note that your src path may vary and you may need to do a custom build to include this dijit file since it is not included in dojo.js by default.
 
-  
+Note that your src path may vary and you may need to do a custom build to include this dijit file since it is not included in dojo.js by default.
