@@ -437,19 +437,25 @@ This example demonstrates a FilteringSelect populated with 3 items: `Dojo core`,
                         {name:"Dojox", label:"<img src='http://www.dojotoolkit.org/sites/all/themes/dtk/img/dojox-home.png' />"}
                 ]
         };
-        var dojoStore=new dojo.data.ItemFileReadStore({data:richData});
+ 
+        dojo.addOnLoad(function(){
+           var dojoStore = new dojo.data.ItemFileReadStore({data:richData});
+
+           var fs = new dijit.form.FilteringSelect({
+                 id: "dojoBox",
+                 value: "Dojo core",
+                 store: dojoStore,
+                 searchAttr: "name",
+                 name: "dojo",
+                 labelAttr: "label",
+                 labelType: "html"
+           }, dojo.byId("dojoBox"));
+
     </script>
 
   .. cv:: html
 
-    <input dojoType="dijit.form.FilteringSelect"
-        id="dojoBox"
-        value="Dojo core"
-        store="dojoStore"
-        searchAttr="name"
-        name="dojo"
-        labelAttr="label"
-        labelType="html">
+    <input id="dojoBox">
 
 
 
