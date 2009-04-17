@@ -17,7 +17,7 @@ This module provides Animated CSS class transisitons for nodes, or in other word
 Usage
 =====
 
-These API's are identical to their plain Dojo counterparts: `dojo.addClass <dojo/addClass>`_, `dojo.removeClass <dojo/removeClass>`_, dojo.toggleClass <dojo/toggleClass>`_, though they return an instance of a dojo.Animation, and require you to call .play()
+These API's are identical to their plain Dojo counterparts: `dojo.addClass <dojo/addClass>`_, `dojo.removeClass <dojo/removeClass>`_, dojo.toggleClass <dojo/toggleClass>`_ , though they return an instance of a dojo.Animation, and require you to call .play()
 
 .. code-block :: javascript
  :linenos:
