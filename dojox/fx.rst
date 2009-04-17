@@ -38,7 +38,7 @@ The DojoX FX project also contains additional functions, group by role.
 
 * dojox.fx.scroll - Provides window and node scrolling animation: dojox.fx.smoothScroll
 * dojox.fx.Shadow - An experimental cross-browser drop-shadow
-* dojox.fx.style - An experimental API to animate the effects of adding, toggling, and removing class names from nodes.
+* `dojox.fx.style <dojox/fx/style>`_ - An experimental API to animate the effects of adding, toggling, and removing class names from nodes.
  
   * dojox.fx.addClass
   * dojox.fx.removeClass
