@@ -59,3 +59,10 @@ A cross-namespace module which mixes all the Core dojox.fx animations into `dojo
 
 This allows you to use `dojo.query <dojo/query>`_ to select groups of nodes and create animation instances from them.
 
+Additionally, a module in dojox.fx also provides the dojox.fx.style APIs to `dojo.query <dojo/query>`_ as well:
+
+.. code-block :: javascript
+ 
+  dojo.require("dojox.fx.ext-dojo.NodeList-style");
+
+Read more about CSS morphing at `dojox.fx.style docs <dojox/fx/style/>`_
