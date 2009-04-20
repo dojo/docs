@@ -92,6 +92,14 @@ The FileUploader has many advanced properties to handle most situations.
 
 **flashFieldName**: The name of the field of the flash uploaded files that the server is expecting. See "Server Side Code" below.
 
+Dependencies
+------------
+
+dojox.html.styles to create dynamic CSS for an IE workaround.
+dojo.io.iframe for the HTML POST upload.
+dojox.embed.Flash for embedding the SWF in the page.
+dojox/form/resources/FileInput.css for some fileInput styling.
+
 Debugging
 ---------
 
