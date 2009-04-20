@@ -289,7 +289,7 @@ Implementation details
 
 The VML renderer has following restrictions:
 
-  Linear gradient 
+  Linear gradient
     Should start and stop on a border of a shape.
 
     All other line definitions will be visually incompatible with the SVG implementation of the linear gradient.
@@ -302,10 +302,10 @@ The VML renderer has following restrictions:
   Transparency (the alpha channel)
     Is not supported for gradient fills.
 
-SVG (Firefox 1.5-2.0) 
+SVG (Firefox 1.5-2.0)
   Doesn't support the pattern fill.
 
-Canvas 
+Canvas
   Doesn't support the even-odd rule.
 
 Font property
@@ -334,29 +334,29 @@ There is also a useful shortcut: you can specify a font using a string similar t
 Implementation notes
 ~~~~~~~~~~~~~~~~~~~~
 
-IE7 
-  Broke many VML features. 
+IE7
+  Broke many VML features.
 
   For example, the family property doesn't work in IE7 at the moment but does work in IE6.
 
   IE7 uses Arial always. Unfortunately there is no workaround for that.
 
 Silverlight has the following restrictions:
-  style 
+  style
     Only "normal" and "italic" are supported, all other values are interpreted as "normal".
-  variant 
+  variant
     Ignored
-  weight 
+  weight
     "normal" is implemented as 400, "bold" is 700.
   size
     fully supported.
   family
     "serif" and "times" are substituted by "Times New Roman",
- 
+
     "sans-serif" and "helvetica" are substituted by "Arial",
 
     "monotone" and "courier" are substituted by "Courier New",
-  
+
   The rest is passed unchanged and will be interpreted by the underlying Silverlight renderer.
 
 By default all shapes are created with "null" font meaning "the default".
@@ -831,16 +831,16 @@ Rectangle
   The default shape description for rectangle is defined as the dojox.gfx.defaultRect object.
   Here is a list of all properties and their defaults:
 
-  type 
+  type
     is always "rect".
 
-  x, y 
+  x, y
     Coordinates of a top-left corner in pixels. Defaults: 0, 0.
 
   width, height
     Dimensions in pixels. Defaults: 100, 100.
 
-  r 
+  r
     A radius of rounded corners. Default: 0 (no rounded corners).
 
 Circle
@@ -849,13 +849,13 @@ Circle
   The default shape description for circle is defined as the dojox.gfx.defaultCircle object.
   Here is a list of all properties and their defaults:
 
-  type 
+  type
     Is always "circle"
 
-  cx, cy 
+  cx, cy
     Coordinates of a center in pixels. Defaults: 0, 0
 
-  r 
+  r
     Is a radius in pixels. Default: 100
 
 Ellipse
@@ -865,13 +865,13 @@ Ellipse
   An ellipse can be used to emulate a circle.
   Here is a list of all properties and their defaults:
 
-  type 
+  type
     Always "ellipse"
 
-  cx, cy 
+  cx, cy
     Coordinates of a center in pixels. Defaults: 0, 0
 
-  rx, ry 
+  rx, ry
     Horizontal and vertical radii (respectively) in pixels. Defaults: 200, 100
 
 Line
@@ -880,11 +880,11 @@ Line
   The default shape description for line is defined as the dojox.gfx.defaultLine object.
   Here is a list of all properties and their defaults:
 
-  type 
+  type
     Always "line"
   x1, y1
     Coordinates of a start point in pixels. Defaults: 0, 0
-  x2, y2 
+  x2, y2
     Coordinates of an end point in pixels. Defaults: 100, 100
 
 Polyline
@@ -910,29 +910,29 @@ Polyline
   A polyline can be used to emulate a line.
   Here is a list of all properties and their defaults:
 
-  type 
+  type
     Always "polyline".
 
-  points 
+  points
     An array of 2D coordinates in pixels. Default: [].
 
 
 Path
 ----
-  A Path is the most versatile geometric shape, which can emulate all other geometric shapes. 
-  It can be created by the createPath() method of a surface or a group. 
+  A Path is the most versatile geometric shape, which can emulate all other geometric shapes.
+  It can be created by the createPath() method of a surface or a group.
 
-  The default shape description for path is defined as the dojox.gfx.defaultPath object. 
+  The default shape description for path is defined as the dojox.gfx.defaultPath object.
 
   Here is a list of all properties and their defaults:
 
-  type 
+  type
     Always "path".
 
-  path 
+  path
     A string , which represents a path encoded in the SVG path language. Default: "".
 
-  A path can be open or closed. The latter means that the first and the last points are the same. 
+  A path can be open or closed. The latter means that the first and the last points are the same.
 
   When filling open paths, a straight line connecting the first and the last points is assumed.
 
@@ -941,96 +941,96 @@ Path
   moveTo(x,y)
     Starts new segment abandoning the previous segment, if any. It takes a coordinate as a parameter.
 
-  lineTo(x,y) 
+  lineTo(x,y)
     Draws a straight line from the last point to the argument (coordinate).
 
-  hLineTo(x) 
+  hLineTo(x)
     Draws a straight horizontal line from the last point using the argument (a number) as X position.
 
-  vLineTo(y) 
+  vLineTo(y)
     Draws a straight vertical line from the last point using the argument (a number) as Y position.
 
-  curveTo(x1,y1,x2,y2,x,y) 
+  curveTo(x1,y1,x2,y2,x,y)
     Draws a cubic Bézier curve from the last point using arguments (two control points, and a final coordinate).
 
-  smoothCurveTo(x2,y2,x,y) 
-    Draws a cubic Bézier curve from the last point using arguments. The difference between this method and curveTo() 
-    is that it accepts only one control point, which serves as the second control point. The first control is assumed 
+  smoothCurveTo(x2,y2,x,y)
+    Draws a cubic Bézier curve from the last point using arguments. The difference between this method and curveTo()
+    is that it accepts only one control point, which serves as the second control point. The first control is assumed
     to be a reflection of the second control point of the previous curve command.
 
-  qCurveTo(x1,y1,x,y) 
+  qCurveTo(x1,y1,x,y)
     Draws a quadratic Bézier curve from the last point using arguments (a control point, and a final point).
 
-  qSmoothCurveTo(x,y) 
-    Draws a quadratic Bézier curve from the last point using arguments. The difference between this method and qCurveTo() 
+  qSmoothCurveTo(x,y)
+    Draws a quadratic Bézier curve from the last point using arguments. The difference between this method and qCurveTo()
     is that it uses the reflected control point of the previous curve command.
 
-  arcTo(rx,ry,x_axis_rotation,large_arc_flag,sweep_flag,x,y) 
+  arcTo(rx,ry,x_axis_rotation,large_arc_flag,sweep_flag,x,y)
     Draws an elliptic arc from the last point using arguments (please see the above link for details).
 
   closePath()
     Closes the segment.
 
   setAbsoluteMode(mode)
-    Sets an absolute or relative mode for coordinates. In the absolute mode all coordinates are assumed to be literal. 
+    Sets an absolute or relative mode for coordinates. In the absolute mode all coordinates are assumed to be literal.
     In the relative mode all coordinates are offsets from the last point.
 
-  getAbsoluteMode() 
+  getAbsoluteMode()
     Returns true, if the current mode is absolute.
 
-  getLastPosition() 
+  getLastPosition()
     Returns the last point, if there is one.
 
 Examples
 ~~~~~~~~
 
-All parameters can be repeated, if it makes sense. 
+All parameters can be repeated, if it makes sense.
 
-Example: 
+Example:
 
   .. code-block :: javascript
 
-    path.lineTo(1,1,2,2,3,3) 
+    path.lineTo(1,1,2,2,3,3)
 
-  is equivalent to 
+  is equivalent to
 
   .. code-block :: javascript
 
     path.lineTo(1,1).lineTo(2,2).lineTo(3,3).
 
-A pair of coordinates can be replaced by a single coordinate object. 
+A pair of coordinates can be replaced by a single coordinate object.
 
-Example: 
+Example:
   .. code-block :: javascript
 
-    path.curveTo({x: 0.5, y: 0}, {x: 0.5, y: 1}, 1, 1) 
+    path.curveTo({x: 0.5, y: 0}, {x: 0.5, y: 1}, 1, 1)
 
-  is equivalent to 
-
-  .. code-block :: javascript
-
-    path.curveTo(0.5, 0, 0.5, 1, 1, 1).
-
-All arrays are unrolled. 
-
-Example: 
-  .. code-block :: javascript
-
-    path.curveTo([0.5, 0, [0.5, 1]], [{x: 1, y: 1}]) 
-
-  is equivalent to 
+  is equivalent to
 
   .. code-block :: javascript
 
     path.curveTo(0.5, 0, 0.5, 1, 1, 1).
 
-You can specify a well-formed path string as an argument to setShape() method of the path: 
+All arrays are unrolled.
+
+Example:
+  .. code-block :: javascript
+
+    path.curveTo([0.5, 0, [0.5, 1]], [{x: 1, y: 1}])
+
+  is equivalent to
 
   .. code-block :: javascript
 
-    path.setShape("m 0,0 l 100, 100 e") 
+    path.curveTo(0.5, 0, 0.5, 1, 1, 1).
 
-  is equivalent to 
+You can specify a well-formed path string as an argument to setShape() method of the path:
+
+  .. code-block :: javascript
+
+    path.setShape("m 0,0 l 100, 100 e")
+
+  is equivalent to
 
   .. code-block :: javascript
 
@@ -1038,39 +1038,39 @@ You can specify a well-formed path string as an argument to setShape() method of
 
 Image
 -----
-  An Image is a shape that represents a resolution-independent color bitmap data. 
-  It can be created by the createImage() method of a Surface or a Group. 
+  An Image is a shape that represents a resolution-independent color bitmap data.
+  It can be created by the createImage() method of a Surface or a Group.
 
-  The default shape description for image is defined as the dojox.gfx.defaultImage object. 
+  The default shape description for image is defined as the dojox.gfx.defaultImage object.
 
   Here is a list of all properties and their defaults:
 
-  type 
+  type
     Always "image".
 
-  x, y 
+  x, y
     Coordinates of a top-left corner in pixels. Defaults: 0, 0.
 
-  width, height 
+  width, height
     Dimensions in pixels. Defaults: 0, 0 - don't forget to set them to real values.
 
-  src 
+  src
     A URL of an image data pointing to a GIF, JPG, or PNG file. Default: "".
 
   Changing width and height parameters you can stretch/shrink an image anisotropically.
 
 Text
 ----
-  Text is a shape that anchors a text string to a point. It can be created by the createText() method of a Surface or a Group. 
+  Text is a shape that anchors a text string to a point. It can be created by the createText() method of a Surface or a Group.
   It implements these additional text-specific methods:
 
-  setFont(font) 
+  setFont(font)
     Sets a font object.
 
-  getFont() 
+  getFont()
     Returns the current font, or "null" to indicate that the default font is used.
 
-  The default shape description for text shape is defined as the dojox.gfx.defaultText object. 
+  The default shape description for text shape is defined as the dojox.gfx.defaultText object.
   Here is a list of all properties and their defaults:
 
   type
@@ -1079,136 +1079,22 @@ Text
   x, y
     Coordinates of a text anchor. Defaults: 0, 0.
 
-  text 
+  text
     A string of characters you want to show aligned to the anchor poistion. Default: "".
 
-  align 
+  align
     An alignment of a text in regards to the anchor position:
 
-    "start" 
+    "start"
       A text's baseline starts at the anchor. This is the default value of the align attribute.
 
     "middle"
       A text's baseline is centered on the anchor point.
 
-    "end" 
+    "end"
       A text's baseline ends at the anchor point.
 
-  decoration 
-    A hint on how to render optional elements of a text:
-
-    "none" 
-      Text is not decorated. This is the default value.
-
-    "underline" 
-      Text is underlined.
-
-    "overline" 
-      Text has a line above it.
-
-    "line-through"
-      Text has a line through the middle.
-
-  rotated 
-    A Boolean value, which indicates:
-
-    false 
-      All glyphs are unrotated. The is the default value.
-
-    true 
-      All glyphs are rotated 90 degrees counter-clock-wise. This mode is useful for vertically arranged text.
-
-  kerning 
-    A Boolean value, which indicates:
-
-    true 
-      Kerning is on. This is the default value.
-
-    false 
-      Kerning is off.
-
-Implementation notes
-~~~~~~~~~~~~~~~~~~~~
-
-Text properties are loosely based on properties of the SVG text element.
-
-IE7 
-  Broke a lot of VML features. 
-
-  The following things work in IE6 but don't work in IE7 (and there is no workaround for them):
-
-    decoration 
-      Always "none".
-
-    rotated
-      Always false.
-
-FF2 and Opera9
-  Do not support following properties:
-
   decoration
-    Always "none".
-
-  rotated 
-    Always false.
-
-Silverlight 
-  Has following restrictions:
-
-  stroke
-    Not supported - all setStroke() calls are ignored.
-
-  decoration 
-    Only "underline" and "none" are supported, the rest is interpreted as "none".
-
-  rotated and kerning properties
-    Not supported.
-
-Canvas 
-  Same as Silverlight
-
-TextPath
---------
-  A TextPath is a shape that flows text along an arbitrary path. TextPath properties are based on the text shape properties.
-
-  It can be created by the createTextPath() method of a surface or a group. 
-
-  The TextPath shape object implements all methods of a Path shape object, and two additional methods:
-
-  setFont(font) 
-    Sets a font object.
-
-  getFont()
-    Returns the current font, or "null" to indicate that the default font is used.
-
-  setText(text)
-    Sets a text path shape description.
-
-  The default shape description for text path shape is defined as the dojox.gfx.defaultTextPath object. 
-
-  It resembles the text description object. 
-
-  Here is a list of all properties and their defaults:
-
-  type 
-    Always "textpath".
-
-  text
-    A string of characters you want to show on a path. Default: "".
-
-  align
-    An alignment of a text in regards to the anchor position:
-
-    "start" 
-      Text starts at the beginning of the path. This is the default value of the align attribute.
-
-    "middle"
-      Text is centered on the middle of the path.
-
-    "end"
-      Text ends at the end of the path.
-
-  decoration 
     A hint on how to render optional elements of a text:
 
     "none"
@@ -1223,7 +1109,121 @@ TextPath
     "line-through"
       Text has a line through the middle.
 
-  rotated 
+  rotated
+    A Boolean value, which indicates:
+
+    false
+      All glyphs are unrotated. The is the default value.
+
+    true
+      All glyphs are rotated 90 degrees counter-clock-wise. This mode is useful for vertically arranged text.
+
+  kerning
+    A Boolean value, which indicates:
+
+    true
+      Kerning is on. This is the default value.
+
+    false
+      Kerning is off.
+
+Implementation notes
+~~~~~~~~~~~~~~~~~~~~
+
+Text properties are loosely based on properties of the SVG text element.
+
+IE7
+  Broke a lot of VML features.
+
+  The following things work in IE6 but don't work in IE7 (and there is no workaround for them):
+
+    decoration
+      Always "none".
+
+    rotated
+      Always false.
+
+FF2 and Opera9
+  Do not support following properties:
+
+  decoration
+    Always "none".
+
+  rotated
+    Always false.
+
+Silverlight
+  Has following restrictions:
+
+  stroke
+    Not supported - all setStroke() calls are ignored.
+
+  decoration
+    Only "underline" and "none" are supported, the rest is interpreted as "none".
+
+  rotated and kerning properties
+    Not supported.
+
+Canvas
+  Same as Silverlight
+
+TextPath
+--------
+  A TextPath is a shape that flows text along an arbitrary path. TextPath properties are based on the text shape properties.
+
+  It can be created by the createTextPath() method of a surface or a group.
+
+  The TextPath shape object implements all methods of a Path shape object, and two additional methods:
+
+  setFont(font)
+    Sets a font object.
+
+  getFont()
+    Returns the current font, or "null" to indicate that the default font is used.
+
+  setText(text)
+    Sets a text path shape description.
+
+  The default shape description for text path shape is defined as the dojox.gfx.defaultTextPath object.
+
+  It resembles the text description object.
+
+  Here is a list of all properties and their defaults:
+
+  type
+    Always "textpath".
+
+  text
+    A string of characters you want to show on a path. Default: "".
+
+  align
+    An alignment of a text in regards to the anchor position:
+
+    "start"
+      Text starts at the beginning of the path. This is the default value of the align attribute.
+
+    "middle"
+      Text is centered on the middle of the path.
+
+    "end"
+      Text ends at the end of the path.
+
+  decoration
+    A hint on how to render optional elements of a text:
+
+    "none"
+      Text is not decorated. This is the default value.
+
+    "underline"
+      Text is underlined.
+
+    "overline"
+      Text has a line above it.
+
+    "line-through"
+      Text has a line through the middle.
+
+  rotated
     A Boolean value, which indicates:
 
     false
@@ -1249,8 +1249,8 @@ This is an experimental shape, which is not recommended to be used in production
 TextPath shape properties mirror properties of a Text shape.
 When TextPath object is created its path is set to dojox.gfx.defaultPath.
 
-IE7 
-  Broke a lot of VML features. 
+IE7
+  Broke a lot of VML features.
 
   The following things work in IE6 but don't work in IE7 (and there is no workaround for them):
 
@@ -1263,7 +1263,7 @@ IE7
 FF2 and Opera9
   Do not support the following properties:
 
-  decoration 
+  decoration
     Always "none"
 
   rotated
@@ -1271,17 +1271,17 @@ FF2 and Opera9
 
 Alignment
 ~~~~~~~~~
-IE always aligns the vertical middle of the text with a path. 
+IE always aligns the vertical middle of the text with a path.
 
-FF and Opera both align the baseline with a path. 
+FF and Opera both align the baseline with a path.
 
-  Unfortunately they seem to ignore any other vertical alignment, which leads to a visual discrepancy between SVG and VML implementations. 
+  Unfortunately they seem to ignore any other vertical alignment, which leads to a visual discrepancy between SVG and VML implementations.
 
-The final version of the TextPath object will have the IE/VML behavior (as the greater common denominator): 
+The final version of the TextPath object will have the IE/VML behavior (as the greater common denominator):
 
   The text's middle line follows a path.
 
-Silverlight and Canvas 
+Silverlight and Canvas
   don't support this shape.
 
 =========
@@ -1302,44 +1302,47 @@ utils.js
 
 This file implements serialization helpers:
 
+forEach(shape, f, o)
+  Takes a shape or a surface and applies a function "f" to in the context of "o" (or global, if missing). If "shape" was a surface or a group, it applies the same function to all children recursively effectively visiting all shapes of the underlying scene graph. This function is available since Dojo 1.3.1.
+
 serialize(shape)
   Takes a shape or a surface and returns a DOM object, which describes underlying shapes.
 
-deserialize(parent, object) 
+deserialize(parent, object)
   Takes a surface or a shape and populates it with an object produced by serialize().
 
-toJson(shape, prettyPrint) 
+toJson(shape, prettyPrint)
   Works just like serialize() but returns a JSON string. If prettyPrint is true, the string is pretty-printed to make it more human-readable.
 
 fromJson(parent, json)
   Works just like deserialize() but takes a JSON representation of the object.
 
-serialize() 
+serialize()
   Returns following objects:
 
   for a surface it returns an array of shapes.
 
-  for a group it returns an object with a member variable children, which contains an array of shapes.
+  for a group it returns an object with a property "children", which contains an array of shapes.
 
-  for a shape it returns an object with a member variable shape, which contains a shape definition object.
+  for a shape it returns an object with a property "shape", which contains a shape definition object.
 
 Both a Shape and a Group may contain following member variables:
 
-  transform 
+  transform
     Contains a transformation matrix.
 
-  stroke 
+  stroke
     Contains a stroke definition object.
 
-  fill 
+  fill
     Contains a fill definition object.
 
-  font 
+  font
     Contains a font definition for text-based objects.
 
-Serialization helpers can be used to implement a persistent storage of vector-based images, generation of them on the server, conversion of dojox.gfx-based pictures in other formats (e.g., to PDF), and conversion of other formats (e.g., raw SVG) to dojox.gfx. 
+Serialization helpers can be used to implement a persistent storage of vector-based images, generation of them on the server, conversion of dojox.gfx-based pictures in other formats (e.g., to PDF), and conversion of other formats (e.g., raw SVG) to dojox.gfx.
 
-You can find examples in dojox/gfx/demos/creator.html and dojox/gfx/demos/inspector.html. Many serialized examples can be found in 
+You can find examples in dojox/gfx/demos/creator.html and dojox/gfx/demos/inspector.html. Many serialized examples can be found in
 ::
 
   dojox/gfx/demos/data/*.json.
@@ -1349,13 +1352,13 @@ decompose.js
 
 Some graphics libraries/renderers do not implement generic linear 2D transformations. They patronize developers with a "simple" subset, which typically include translation, rotation, and scaling operations. It makes next to impossible implementing compound transformations using the "sandwich" technique described above, storing transformations externally, or pre-calculating complex transformation ahead of time to improve the performance.
 
-At present time only Canvas is on this dishonorable list. While the latest Canvas specification finally defined the transform() method, which essentially operates on 2D matrices, nobody implemented it yet, so we are left to implement the general 2D matrix algebra on top of childish primitives. Is it possible? You bet! Of course at comes at a price of reduced performance, which is O.K. in most cases. 
+At present time only Canvas is on this dishonorable list. While the latest Canvas specification finally defined the transform() method, which essentially operates on 2D matrices, nobody implemented it yet, so we are left to implement the general 2D matrix algebra on top of childish primitives. Is it possible? You bet! Of course at comes at a price of reduced performance, which is O.K. in most cases.
 
 dojox.gfx implements a decomposition of any reasonable linear 2D transformation into four-component "primitive" transformations applied in succession. It is done using the singular value decomposition and the eigendecomposition, so you don't have to do it yourself.
 
 This algorithm is used internally in the Canvas renderer, but you are welcomed to use it for your own needs.
 
-decompose(matrix) 
+decompose(matrix)
   Takes a matrix in any suitable form and returns an object with 6 member variables:
 
 dx, dy
@@ -1378,39 +1381,39 @@ arc.js
 Some graphics libraries/renderers do not implement generic elliptic arcs or even ellipses (variant: they do but transforming them reveals multiple bugs in the underlying implementation). Both VML and Canvas are on this dishonorable list. The simplest way to deal with it is to approximate them with simple cubic Bézier curves - the Swiss-army knife of vector geometric shapes.
 This algorithm is used internally, but you are welcomed to use it for you own needs.
 
-unitArcAsBezier(alpha) 
+unitArcAsBezier(alpha)
   Returns an arc approximation as an object of 4 coordinates:
 
-  s 
+  s
     The start coordinate of the curve.
 
   c1
     The first control point of the curve.
 
-  c2 
+  c2
     The second control point of the curve.
 
-  e 
+  e
     The end coordinate of the curve.
 
 The resulting curve approximates an arc of 2 * angle size with radius of 1 symmetric around the x axis.
-It is important to keep the angle value reasonably low to improve the precision of the approximation. 
+It is important to keep the angle value reasonably low to improve the precision of the approximation.
 Angles less than PI/2 (45 degrees) are virtually indistinguishable from true arcs for typical screen sizes.
 
-curvePI4 
+curvePI4
   A pre-calculated curve for the arc of PI/4 size. Essentially curvePI4 = unitArcAsBezier(PI/8).
 
-arcAsBezier(last, rx, ry, xRotg, large, sweep, x, y) 
-  Takes all parameters of the SVG elliptic arc and returns an array of cubic Bézier curves necessary to represent the arc. 
-  
-Each cubic arc is represented as an array of six numeric values: [c1.x, c1.y, c2.x, c2.y, e.x, e.y], 
+arcAsBezier(last, rx, ry, xRotg, large, sweep, x, y)
+  Takes all parameters of the SVG elliptic arc and returns an array of cubic Bézier curves necessary to represent the arc.
+
+Each cubic arc is represented as an array of six numeric values: [c1.x, c1.y, c2.x, c2.y, e.x, e.y],
 where c1 is the first control point, c2 is the second control point, and e is the end point. All values are absolute.
 
 ==========================
-Considerations and Caveats 
+Considerations and Caveats
 ==========================
 
-The GFX system uses a series of underlying renderers for whichever browser loads the API. The renderer is determined at load time, and defines the entire API using whatever the browser is capable of: Silverlight or VML in IE, SVG in iPhone, Firefox and Safari, and a light-weight canvas variant are available. 
+The GFX system uses a series of underlying renderers for whichever browser loads the API. The renderer is determined at load time, and defines the entire API using whatever the browser is capable of: Silverlight or VML in IE, SVG in iPhone, Firefox and Safari, and a light-weight canvas variant are available.
 
 To define specifically which renderers can be used, and their relative priority, set the 'gfxRenderer' value in djConfig as a comma delimited string value, e.g. to specify that only SVG, Silverlight and VML should be used, and not Canvas, use:
 
@@ -1428,52 +1431,52 @@ Demos
 
 Demos are relatively complex examples located in the demos/ sub-directory. They are used to make sure that all parts of dojox.gfx work together well, to assess the performance, and to give realistic examples to users:
 
-demos/butterfly.html, demos/lion.html, demos/tiger.html 
+demos/butterfly.html, demos/lion.html, demos/tiger.html
   Show classic SVG pictures converted from the original SVG to dojox.gfx calls. You can rotate and scale them.
 
-demos/circles.html 
+demos/circles.html
   Shows 100 translucent draggable circles. It is a good example of dojox.gfx.move in action.
 
 demos/clock.html, demos/clock_black.html
-  Show an animated analog clock. You can grab its hands and set your own time. 
+  Show an animated analog clock. You can grab its hands and set your own time.
   It is a good example on simple animation and an interaction with user's actions.
 
-demos/creator.html, demos/inspector.html, demos/beautify.html 
+demos/creator.html, demos/inspector.html, demos/beautify.html
   Implement simple persistence mechanism using dojox.gfx.utils, and simple interaction using dojox.gfx.move.
 
 =====
 Tests
 =====
 
-All tests are located in the tests/ sub-directory. 
-They are used by developers to test the conformance, and can be used by users to see how different objects and algorithms can be used. 
+All tests are located in the tests/ sub-directory.
+They are used by developers to test the conformance, and can be used by users to see how different objects and algorithms can be used.
 The following tests are available:
 
-runTests.html 
+runTests.html
   Runs automated tests for the matrix (defined in tests/matrix.js) and the matrix decomposition (defined in tests/decompose.js).
 
-test_arc.html 
+test_arc.html
   Tests elliptic arcs component in the path shape.
 
-test_bezier.html 
+test_bezier.html
   Tests the approximation of the elliptic arc with Bézier curves helping to find potential problems with both arcs and curves.
 
-test_decompose.html 
+test_decompose.html
   A testbed for manual verification of the matrix decomposition.
 
-test_fill.html 
+test_fill.html
   Tests the even-odd rule for fills.
 
-test_gfx.html 
+test_gfx.html
   A complex test, which tries to tests many things at once.
 
-test_gradient.html 
+test_gradient.html
   Tests gradients with transparency.
 
-test_group.html 
+test_group.html
   Tests how moving a shape between groups with different transformations affect the visual.
 
-test_image1.html 
+test_image1.html
   Tests transformations applied to an image.
 
 test_image2.html
@@ -1482,31 +1485,31 @@ test_image2.html
 test_linearGradient.html
   Tests complex liner gradient fills.
 
-test_linestyle.html 
+test_linestyle.html
   Tests all line styles.
 
-test_pattern.html 
+test_pattern.html
   Tests the pattern fill.
 
-test_poly.html 
+test_poly.html
   Tests the line shape and the polyline shape by animating them using a rotation matrix and a timer.
 
-test_resize.html 
+test_resize.html
   Tests the dynamic surface resizing.
 
-test_setPath.html 
+test_setPath.html
   Tests relative/absolute coordinates in the path definition using cubic and quadratic curves.
 
-test_tbbox.html 
+test_tbbox.html
   Tests the getTransformBoundingBox() method.
 
-test_text.html 
+test_text.html
   Tests the text shape with various settings.
 
-test_textpath.html 
+test_textpath.html
   Tests the text path shape.
 
-test_transform.html 
+test_transform.html
   Tests the transformation applied to groups and individual shapes.
 
 ====
