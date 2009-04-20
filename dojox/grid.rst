@@ -819,7 +819,7 @@ Keyboard
 ~~~~~~~~
 
 * There is currently no keyboard mechanism to change column size in 1.3. This has been fixed as of the April 11, 2009 build.  Set focus to a column header, hold shift+control and press the left or right arrow key so change the column size.
-* Keyboard navigation does NOT skip hidden columns. 
+* Keyboard navigation does NOT skip hidden columns. This has been fixed as of the April 18, 2009 build.  Hidden colummns are now skipped when arrowing through the column headers and data.
 * There is no keyboard support for drag and drop. If you rely on drag and drop to reorder columns, you must provide an alternative keyboard mechanisism (dialog box, context menu, etc.) to perform the same function. 
 
 Screen Reader
