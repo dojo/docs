@@ -1,7 +1,6 @@
 #format dojo_rst
 
 dojox.image.Gallery
-
 ===================
 
 :Status: Draft
