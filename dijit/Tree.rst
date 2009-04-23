@@ -226,7 +226,7 @@ In the first and last case (ie, when an item is dropped onto the tree), the drop
   * the model must implement the pasteItem() method
   * the store must implement the `dojo.data.api.Write <dojo/data/api/Write>`_ interface
 
-In addition, to enable DnD on the Tree you must dojo.require("dijit._tree.dndSource"); and the dndController="dijit._tree.dndSource" parameter must be specified to the tree
+In addition, to enable DnD on the Tree you must dojo.require("dijit.tree.dndSource"); and the dndController="dijit.tree.dndSource" parameter must be specified to the tree
 
 
 .. cv-compound::
@@ -236,7 +236,7 @@ In addition, to enable DnD on the Tree you must dojo.require("dijit._tree.dndSou
     <script type="text/javascript">
       dojo.require("dojo.data.ItemFileWriteStore");
       dojo.require("dijit.tree.ForestStoreModel");
-      dojo.require("dijit._tree.dndSource");
+      dojo.require("dijit.tree.dndSource");
       dojo.require("dijit.Tree");
 
       dojo.addOnLoad(function(){
@@ -254,7 +254,7 @@ In addition, to enable DnD on the Tree you must dojo.require("dijit._tree.dndSou
         
         new dijit.Tree({
             model: treeModel,
-            dndController: "dijit._tree.dndSource"
+            dndController: "dijit.tree.dndSource"
         }, "treeThree");
       });
     </script>
@@ -278,7 +278,7 @@ If between threshold is set to a positive integer value like 5 (which represents
     <script type="text/javascript">
       dojo.require("dojo.data.ItemFileWriteStore");
       dojo.require("dijit.tree.ForestStoreModel");
-      dojo.require("dijit._tree.dndSource");
+      dojo.require("dijit.tree.dndSource");
       dojo.require("dijit.Tree");
     </script>
 
@@ -292,7 +292,7 @@ If between threshold is set to a positive integer value like 5 (which represents
       rootId="continentRoot" rootLabel="Continents" childrenAttrs="children"></div>
     
     <div dojoType="dijit.Tree" id="mytree5"
-      dndController="dijit._tree.dndSource" betweenThreshold="5" showRoot="false"
+      dndController="dijit.tree.dndSource" betweenThreshold="5" showRoot="false"
       model="continentModel5" openOnClick="true">
     </div>
 
