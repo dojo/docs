@@ -302,8 +302,8 @@ New to Dojo 1.4, the GoogleLocalSearchStore allows for a few extra options when 
  
   {
     "text" : "Find me"
-    "centerLatLong" : "1.23,23.36" //Comma-separated lat & long for the center of the search
-    "searchSpan" : 'sspn' //Comma-separated lat & long degrees indicating the size of the desired search area
+    "centerLatLong" : "48.8565,2.3509" //Comma-separated lat & long for the center of the search
+    "searchSpan" : "0.065165,0.194149" //Comma-separated lat & long degrees indicating the size of the desired search area
   }
 
 
