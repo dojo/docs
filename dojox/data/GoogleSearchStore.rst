@@ -282,7 +282,7 @@ dojox.data.GoogleImageSearchStore
 Query Syntax
 ============
 
-The query syntax for all stores is simple. It takes a single object with the attribute 'text', where the value is what text to search for.
+The query syntax for all stores is simple. Most only take a single object with the attribute 'text', where the value is what text to search for.
 
 Query Example
 -------------
@@ -293,6 +293,19 @@ Query Example
     "text" : "Find me"
   }
 
+---------------------------------------
+Query Syntax for GoogleLocalSearchStore
+---------------------------------------
+
+New to Dojo 1.4, the GoogleLocalSearchStore allows for a few extra options when searching, its allowed syntax is:
+
+.. code-block :: javascript 
+ 
+  {
+    "text" : "Find me"
+    centerLatLong: "1.23,23.36" //Comma-separated lat & long for the center of the search
+    searchSpan: 'sspn' //Comma-separated lat & long degrees indicating the size of the desired search area
+  }
 
 
 =============
