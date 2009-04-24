@@ -293,7 +293,6 @@ Query Example
     "text" : "Find me"
   }
 
----------------------------------------
 Query Syntax for GoogleLocalSearchStore
 ---------------------------------------
 
@@ -303,8 +302,8 @@ New to Dojo 1.4, the GoogleLocalSearchStore allows for a few extra options when 
  
   {
     "text" : "Find me"
-    centerLatLong: "1.23,23.36" //Comma-separated lat & long for the center of the search
-    searchSpan: 'sspn' //Comma-separated lat & long degrees indicating the size of the desired search area
+    "centerLatLong" : "1.23,23.36" //Comma-separated lat & long for the center of the search
+    "searchSpan" : 'sspn' //Comma-separated lat & long degrees indicating the size of the desired search area
   }
 
 
