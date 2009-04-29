@@ -1,0 +1,22 @@
+#format dojo_rst
+
+Dojo 1.4 Release Notes
+=======================
+
+.. contents::
+   :depth: 2
+
+======
+Dojo
+======
+
+
+
+======
+Dijit
+======
+
+
+======
+Dojox
+======
