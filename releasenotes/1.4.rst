@@ -57,13 +57,7 @@ Here is a list of topics that you can subscribe to, with the parameters they pas
 
 dojo.fieldToObject()
 -----------------------
-A new method in Dojo Base (part of dojo.js) that is related to dojo.formToObject(), except instead of converting a whole form to an object, it just converts one form field. Pass it a DOM Node for the field, or the ID of the form field as a string. dojo.fieldToObject returns the value encoded in a form field as as a string or an array of strings. Disabled form elements and unchecked radio and checkboxes are skipped. Multi-select elements are returned as an array of string values.
-
-.. code-block :: javascript
-  :linenos:
-
-  var value = dojo.fieldToObject(someInputTextNode); //returns a string value.
-  var value = dojo.fieldToObject("multiSelectId"); //returns an array of values.
+A new method in Dojo Base (part of dojo.js) that is related to dojo.formToObject(), except instead of converting a whole form to an object, it just converts one form field. Pass it a DOM Node for the field, or the ID of the form field as a string. dojo.fieldToObject returns the value encoded in a form field as as a string or an array of strings. Disabled form elements and unchecked radio and checkboxes are skipped. Multi-select elements are returned as an array of string values. See `dojo.fieldToObject <dojo/fieldToObject>`_ for more information.
 
 ======
 Dijit
