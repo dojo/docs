@@ -10,13 +10,13 @@ Dojo 1.4 Release Notes
 Dojo
 ======
 
-IO Pipeline Topics
--------------------
+`IO Pipeline Topics <dojo/ioPipelineTopics>`_
+----------------------------------------------
 Now there are topics that are published for the pipeline used to handle all IO operations. dojo.xhr, dojo.io.script and dojo.io.iframe all use the IO pipeline, so they can all publish the pipeline topics. By default, the topics are turned off. To enable them, set **djConfig.ioPublish = true**. After they are globally enabled, you can disable them for specific IO requests by setting **ioPublish: false** in the arg object you pass to dojo.xhr*, dojo.io.script.get() or dojo.io.iframe.send(). See `IO Pipeline Topics <dojo/ioPipelineTopics>`_ for more information.
 
 
-dojo.fieldToObject()
------------------------
+`dojo.fieldToObject <dojo/fieldToObject>`_
+-------------------------------------------
 A new method in Dojo Base (part of dojo.js) that is related to dojo.formToObject(), except instead of converting a whole form to an object, it just converts one form field. Pass it a DOM Node for the field, or the ID of the form field as a string. dojo.fieldToObject returns the value encoded in a form field as as a string or an array of strings. Disabled form elements and unchecked radio and checkboxes are skipped. Multi-select elements are returned as an array of string values. See `dojo.fieldToObject <dojo/fieldToObject>`_ for more information.
 
 ======
