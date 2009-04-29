@@ -28,6 +28,14 @@ The Official Dojo Documentation
 * `The programmers manual for Dojo, Dijit, DojoX with more than 300 examples <manual/index>`_
 
 
+=================================
+What's New / Release Notes
+=================================
+
+* `Dojo 1.4 Release Notes <releasenotes/1.4>`_
+
+
+
 ================
 `About <about>`_
 ================
