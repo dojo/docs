@@ -275,6 +275,7 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 
     AJAX I/O transports and utility methods
 
+    * `IO Pipeline Topics <dojo/ioPipelineTopics>`_
     * `dojo.formToJson <dojo/formToJson>`_
     * `dojo.fieldToObject <dojo/fieldToObject>`_
     * `dojo.formToObject <dojo/formToObject>`_
