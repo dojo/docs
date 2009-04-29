@@ -105,7 +105,7 @@ The constructor for XmlStore takes the following possible parameters in its keyw
 |label                     |The attribute of an item to use for the return of getLabel(). This is optional.                         |
 +--------------------------+--------------------------------------------------------------------------------------------------------+
 | urlPreventCache          |This boolean value controls whether dojo attempts to prevent the browser caching mechanism from         |
-| **(since dojo 1.4)**     |caching values loaded from a webserver.                                                                 |
+| **(since dojo 1.4)**     |caching values loaded from a webserver.  The default is true for backwards compatibility                |
 +--------------------------+--------------------------------------------------------------------------------------------------------+
 
 =================================
