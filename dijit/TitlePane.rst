@@ -84,6 +84,19 @@ For example:
       </div>
     </div>
 
+Constructor Parameters
+----------------------
+
+The constructor for TitlePane takes the following possible parameters in its keyword arguments:
+
++--------------------------+--------------------------------------------------------------------------------------------------------+
+|**Parameter**             |**Description**                                                                                         |
++--------------------------+--------------------------------------------------------------------------------------------------------+
+|title                     |The title to be displayed in the pane header. The default is an empty string.                           |
++--------------------------+--------------------------------------------------------------------------------------------------------+
+|open                      |Boolean option whether or not to display the pane contents. The default is true.                        |
++--------------------------+--------------------------------------------------------------------------------------------------------+
+
 Accessibility
 -------------
 
