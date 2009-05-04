@@ -4,7 +4,7 @@ dojox.form.FileUploader
 =========================
 
 :Status: Up to date
-:Version: 1.3
+:Version: 1.4
 :Project owner: Mike Wilcox
 :Author: Mike Wilcox
 :Available: since 1.1
@@ -19,12 +19,16 @@ Version 1.4
 
 FileUploader is now a widget and **DOES** create a button. You do not have to pass a button in. Passing a button is still supported until version 1.5 to maintain backwards compatibility, but it is not reccomended. Just create your uploader like any other widget.
 
+The button styles are now recreated in Flash, so there is no longer an invisible Flash movie with *wmode=transparent*. This way the Flash button is actually placed inline with the DOM, not floating above it and contstantly resetting its position. The "Windows Firefox clickable bug" should be fixed (and hopefully some Linux problems).
+
+The HTML button is created in a new way and it is now inline as is the Flash button. Styling is much easier and more versatile.
+
 The process is to create a typical HTML button, with either a button, input, div, or span tag. Button tags work the best. Style the button how you would like it to look in CSS. Then create another class that will append to the class chain to style the button in its hover state. Follow the same procedure for active state (press) and disabled state. Assign the normal class to your button and make the widget either programmtically or with markup.
 
 A basic example follows:
 
 .. code-block :: css
-  :linenos:
+ :linenos:
 
  .uploadBtn{
      border:1px solid #333333;
@@ -53,7 +57,7 @@ A basic example follows:
  
 
 .. code-block :: html
-  :linenos:
+ :linenos:
 
  <div id="btn" class="btnNormal">Select Files</div>
   
@@ -63,10 +67,44 @@ A basic example follows:
  var uploader = new dojox.form.FileUploader(
      hoverClass:"btnHover",
      activeClass:"btnActive",
-     activeClass:"btnDisable",
+     disabledClass:"btnDisable",
      uploadUrl:pathToUploadServerScript
  }, "myDiv");
  
+Or, using the same CSS, create it as markup:
+
+
+.. code-block :: html
+ :linenos:
+
+ <div class="btnNormal" dojoType="dojox.form.FileUploader" hoverClass="btnHover"
+      activeClass="btnActive" disabledClass="btnDisabled" uploadUrl="../serverpage.php">Select Files</div>
+
+
+Dependencies
+------------
+
+FileUploader no longer uses FileInput.css. It now uses FileUploader.css. See requires for JavaScript dependencies.
+
+New Features
+------------
+
+* Disabled: Can be toggled with widget.attr("disable", true|false)
+* Submit: A convenience method has been added for if the uploader is in a form. Instead of submitting the form, call uploader.submit(theForm), and the Uploader will handle all of the form values and post the data.
+* Selected List: If passing the ID of a container, the Uploaders will populate it with the selected files.
+* Deleting Files: You can now delete pending files.
+* Progress Built in: showProgress:true will change the button to a progress bar on upload.
+* Progress Attach: Passing progressWidgetId will tell the Uploader of a progress widget. If the Progress widget is initially hidden, it will change to visible and then restored after upload.
+* A11Y: The Flash button can be accessed with the TAB key. (The HTML cannot due to browser limtations)
+* Deferred Uploading: (Flash only) throttles the upload to one file at a time
+
+There are two new tests added to DojoX: *test_FileUpladerCSS.html* and *test_FileUpladerForm.html*. The form test will show how to implement most of the new features. The CSS test will show different methods of styling the Uploader. 
+
+http://mwilcox.dojotoolkit.org/dtk/dojox/form/tests/test_FileUploaderForm.html
+
+http://mwilcox.dojotoolkit.org/dtk/dojox/form/tests/test_FileUploaderCSS.html
+
+Continue with the 1.3 instructions for other information that still applies to implementing the FileUploader.
 
 Version 1.3
 -----------
@@ -201,3 +239,7 @@ Demos
 http://mwilcox.dojotoolkit.org/dtk/dojox/form/tests/test_FileUploader.html
 
 http://mwilcox.dojotoolkit.org/dtk/demos/uploader/demo.html
+
+http://mwilcox.dojotoolkit.org/dtk/dojox/form/tests/test_FileUploaderForm.html
+
+http://mwilcox.dojotoolkit.org/dtk/dojox/form/tests/test_FileUploaderCSS.html
