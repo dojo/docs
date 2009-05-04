@@ -35,11 +35,44 @@ The dojox.layout.TableContainer is a simple layout widget that displays the cont
 
  * Cell spacing can be customized by setting the "spacing" attribute.
 
-Todo: complete this
 
 =====
 Usage
 =====
+
+The following attributes are available on the TableContainer
+
++----------------+----------------------------------------------------------------------------------------------------------------------------------+
+|**cols**        | The number of child widgets to layout horizontally per row of the table.  If horizontal labels are enabled, the actual           |
+|                | number of cells per row in the table will be double this number.                                                                 |
++----------------+----------------------------------------------------------------------------------------------------------------------------------+
+|**labelWidth**  | Defines the width of a label.  This can take either a pixel (numeric, e.g. 40) or percentage value (a string, e.g. "50%")        |
++----------------+----------------------------------------------------------------------------------------------------------------------------------+
+|**showLabels**  | Set to **true** if labels should be displayed, **false** otherwise                                                               |
++----------------+----------------------------------------------------------------------------------------------------------------------------------+
+|**orientation** | This defines the position of the labels relative to the child widgets.  It accepts two values, "horiz" and "vert", which place   |
+|                | the labels to the left and above the child widget respectively.                                                                  |
++----------------+----------------------------------------------------------------------------------------------------------------------------------+
+|**spacing**     | The cell spacing which to apply to the table. Defaults to 1.                                                                     |
++----------------+----------------------------------------------------------------------------------------------------------------------------------+
+|**customClass** | The custom CSS class that should be applied to the TABLE element.  This allows the developer to customize every element of the   |
+|                | table.  Given the example CSS class "myClass", the following classes are applied to the table elements.                          |
++----------------+----------------------------------------------------------------------------------------------------------------------------------+
+|                | ***myClass-table*** - Applied to the outer TABLE element.                                                                        |
++----------------+----------------------------------------------------------------------------------------------------------------------------------+
+|                | ***myClass-table-horiz*** - Applied to the outer TABLE element if the label alignment is horizontal.                             |
++----------------+----------------------------------------------------------------------------------------------------------------------------------+
+|                | ***myClass-table-vert*** - Applied to the outer TABLE element if the label alignment is vertical.                                |
++----------------+----------------------------------------------------------------------------------------------------------------------------------+
+|                | ***myClass-labelCell*** - Applied to the all cells that contain a label.                                                         |
++----------------+----------------------------------------------------------------------------------------------------------------------------------+
+|                | ***myClass-valueCell*** - Applied to the all cells containing a child widget.                                                    |
++----------------+----------------------------------------------------------------------------------------------------------------------------------+
+|                | ***myClass-valueCell-(idx)*** - Applied to the all cells containing a child widget.  The index is the position  of the child     |
+|                |   widget, so the first value cell will have the class **myClass-valueCell-0*** set, the second will have **myClass-valueCell-1** |
+|                |   and so on.                                                                                                                     |
++----------------+----------------------------------------------------------------------------------------------------------------------------------+
+
 
 TODO: how to use the component/class/method
 
