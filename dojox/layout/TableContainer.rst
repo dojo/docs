@@ -69,7 +69,7 @@ The following attributes are available on the TableContainer
 |                | **myClass-valueCell** - Applied to the all cells containing a child widget.                                                      |
 +----------------+----------------------------------------------------------------------------------------------------------------------------------+
 |                | **myClass-valueCell-(idx)** - Applied to the all cells containing a child widget.  The index is the position  of the child       |
-|                |   widget, so the first value cell will have the class **myClass-valueCell-0*** set, the second will have **myClass-valueCell-1** |
+|                |   widget, so the first value cell will have the class **myClass-valueCell-0** set, the second will have **myClass-valueCell-1**  |
 |                |   and so on.                                                                                                                     |
 +----------------+----------------------------------------------------------------------------------------------------------------------------------+
 
