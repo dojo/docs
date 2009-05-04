@@ -1,7 +1,7 @@
 #format dojo_rst
 
 dojox.layout.TableContainer
-===============
+===========================
 
 :Status: Draft
 :Version: 1.4
