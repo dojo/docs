@@ -79,10 +79,12 @@ TODO: how to use the component/class/method
 .. code-block :: javascript
  :linenos:
 
- <script type="text/javascript">
-   // your code
- </script>
-
+ <div dojoType="dojox.layout.TableContainer" cols="1" id="tc1">
+   <div dojoType="dijit.form.TextBox" title="First Name:"></div>
+   <div dojoType="dijit.form.TextBox" title="Last Name:"></div>
+   <div dojoType="dijit.form.CheckBox" title="Employed"></div>
+   <div dojoType="dijit.form.NumberSpinner" title="Age" value="30"></div>
+ </div>
 
 
 ========
