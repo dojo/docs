@@ -51,6 +51,10 @@ Layout Widgets
 
   An interesting UI, scrolling an overflowed div based on mouse position, either vertical or horizontal
 
+* `dojox.layout.TableContainer <dojox/layout/TableContainer>`_
+
+  A simple layout widget that lays out its child widgets using a Table element.
+
 * `dojox.layout.ToggleSplitter <dojox/layout/ToggleSplitter>`_
 
   A custom Splitter for use in a BorderContainer, providing a lightweight way to collapse the associated child
