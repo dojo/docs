@@ -12,7 +12,66 @@ dojox.form.FileUploader
 Basic Description
 -----------------
 
-Handles file uploading to a server. It does **NOT** create a button - it transforms an existing button into an uploader. This can be used for toolbar buttons for example. Because of this, it only works programmatically, it does not work in markup. Use the other other DojoX FileInput files for markup solutions. 
+Handles file uploading to a server. 
+
+Version 1.4
+-----------
+
+FileUploader is now a widget and **DOES** create a button. You do not have to pass a button in. Passing a button is still supported until version 1.5 to maintain backwards compatibility, but it is not reccomended. Just create your uploader like any other widget.
+
+The process is to create a typical HTML button, with either a button, input, div, or span tag. Button tags work the best. Style the button how you would like it to look in CSS. Then create another class that will append to the class chain to style the button in its hover state. Follow the same procedure for active state (press) and disabled state. Assign the normal class to your button and make the widget either programmtically or with markup.
+
+A basic example follows:
+
+.. code-block :: css
+  :linenos:
+
+ .uploadBtn{
+     border:1px solid #333333;
+     background:url(buttonEnabled.png) #d0d0d0 repeat-x scroll 0px top;
+     font-size:14px;
+     width:201px;
+     height:30px;
+     vertical-align:middle; /* emulates a <button> if node is not */
+     text-align:center;
+ }
+ .uploadHover{
+     background-image:url(buttonHover.png);
+     cursor:pointer;
+     font-weight:bold;
+ }
+ 
+ .uploadPress{
+     background-image:url(buttonActive.png);
+ }
+ .uploadDisabled{
+     background-image:none;
+     background-color:#666;
+     color:#999;
+     border:1px solid #999;
+ }
+ 
+
+.. code-block :: html
+  :linenos:
+
+ <div id="btn" class="btnNormal">Select Files</div>
+  
+.. code-block :: javascript
+ :linenos:
+ 
+ var uploader = new dojox.form.FileUploader(
+     hoverClass:"btnHover",
+     activeClass:"btnActive",
+     activeClass:"btnDisable",
+     uploadUrl:pathToUploadServerScript
+ }, "myDiv");
+ 
+
+Version 1.3
+-----------
+
+Version 1.3 does **NOT** create a button - it transforms an existing button into an uploader. This can be used for toolbar buttons for example. Because of this, it only works programmatically, it does not work in markup. Use the other other DojoX FileInput files for markup solutions. 
 
 FileUploader will detect if the correct version of Flash Player is available, and if so, a transparent SWF is laid over the top of the original (referred to as the 'fake') button. If not available, a traditional fileInput button with opacity set to zero is laid over the fake button.
 
