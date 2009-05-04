@@ -58,17 +58,17 @@ The following attributes are available on the TableContainer
 |**customClass** | The custom CSS class that should be applied to the TABLE element.  This allows the developer to customize every element of the   |
 |                | table.  Given the example CSS class "myClass", the following classes are applied to the table elements.                          |
 +----------------+----------------------------------------------------------------------------------------------------------------------------------+
-|                | ***myClass-table*** - Applied to the outer TABLE element.                                                                        |
+|                | **myClass-table** - Applied to the outer TABLE element.                                                                        |
 +----------------+----------------------------------------------------------------------------------------------------------------------------------+
-|                | ***myClass-table-horiz*** - Applied to the outer TABLE element if the label alignment is horizontal.                             |
+|                | **myClass-table-horiz** - Applied to the outer TABLE element if the label alignment is horizontal.                             |
 +----------------+----------------------------------------------------------------------------------------------------------------------------------+
-|                | ***myClass-table-vert*** - Applied to the outer TABLE element if the label alignment is vertical.                                |
+|                | **myClass-table-vert** - Applied to the outer TABLE element if the label alignment is vertical.                                |
 +----------------+----------------------------------------------------------------------------------------------------------------------------------+
-|                | ***myClass-labelCell*** - Applied to the all cells that contain a label.                                                         |
+|                | **myClass-labelCell** - Applied to the all cells that contain a label.                                                         |
 +----------------+----------------------------------------------------------------------------------------------------------------------------------+
-|                | ***myClass-valueCell*** - Applied to the all cells containing a child widget.                                                    |
+|                | **myClass-valueCell** - Applied to the all cells containing a child widget.                                                    |
 +----------------+----------------------------------------------------------------------------------------------------------------------------------+
-|                | ***myClass-valueCell-(idx)*** - Applied to the all cells containing a child widget.  The index is the position  of the child     |
+|                | **myClass-valueCell-(idx)** - Applied to the all cells containing a child widget.  The index is the position  of the child     |
 |                |   widget, so the first value cell will have the class **myClass-valueCell-0*** set, the second will have **myClass-valueCell-1** |
 |                |   and so on.                                                                                                                     |
 +----------------+----------------------------------------------------------------------------------------------------------------------------------+
