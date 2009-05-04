@@ -141,7 +141,7 @@ If you wish to alter the default color for the underlay, you do so in CSS. The u
 Confirming Dialog Contents
 --------------------------
 
-This example shows a Dialog containing form data.  You can get the form data as a javascript object by calling attr('values') on the dialog.
+This example shows a Dialog containing form data.  You can get the form data as a javascript object by calling attr('value') on the dialog.
 
 To prevent the user from dismissing the dialog if there are errors in the form, add an onClick handler to your submit button. In order to run Dialog's execute-method the submit button has to be a dijit.form.Button, normal submit button doesn't trigger this function. In addition, the form has to be local, the dialog doesn't find the form values if it's included via href attribute.
 
