@@ -50,7 +50,7 @@ Property types and method signatures for classes follows the JSON Schema (http:/
  			{type:"number"},
  			{type:"number"}
  		],
- 		returns: {type:"string"}
+ 		returns: {type:"number"}
  	}
  }
 
