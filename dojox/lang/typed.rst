@@ -66,6 +66,7 @@ Note, that property type checking is not available on Internet Explorer. This in
 You can also run dojox.lang.typed.typeCheckAllClasses() to add type checking to all future classes defined with dojo.declare. Consequently, we could alternately define the class above like:
 
 .. code-block :: javascript
+
  dojox.lang.typed.typeCheckAllClasses();
  dojo.declare("TypedClass", null, {
  	constructor: function(makeDefaults){
