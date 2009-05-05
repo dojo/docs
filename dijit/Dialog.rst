@@ -292,9 +292,12 @@ Known Issues
   when setting focus to an input type=file element as the first element as a dialog. For this reason, in Firefox if the first
   focusable item in a dialog is an input type=file, focus will be set onto the dialog container rather than the input element.
   For these reasons it is recommended that input type=file elements not be added as the only or first focusable item within a dialog in Firefox.
-* Even though the dialog is marked with the proper ARIA role of dialog, JAWS 9 does not speak "dialog" when the dialog is opened.
-  In Firefox 2 even though the focus is on the first focusable item in the dialog, the information about that item is also not spoken.
-  Thus, it is important that the instructions or label for a trigger element that opens a dialog to indicate via text that a dialog will
-  be opened. In Firefox 3 with JAWS 9 the dialog is also not announced but the information about the item in the dialog which gets focus is spoken. The issue has been fixed in JAWS 10 with Firefox 3.
+* Even though the dialog is marked with the proper ARIA role of dialog, there are issues with screen readers. Due to these issues , it is important that the instructions or label for a trigger element that opens a dialog to indicate via text that a dialog will be opened. 
+
+  * JAWS 9 does not speak "dialog" when the dialog is opened in Firefox or IE 8.
+  * In Firefox 2 even though the focus is on the first focusable item in the dialog, the information about that item is also not spoken.
+  * In Firefox 3 with JAWS 9 the dialog is also not announced but the information about the item in the dialog which gets focus is spoken. The issue has been fixed in JAWS 10 with Firefox 3.
+  * In IE 8 with JAWS 10 the dialog information and title is not spoken. This is due to the fact that IE 8 does not support the ARIA labelledby property that is used to assign the title to the dialog.  
+
 * There are focus issues when the dialog is created via an href. Due to timing issues focus may not be properly set nor properly trapped
   in the dialog. For accessibility reasons, dialogs created via href are not recommended. This issue will be addressed in a future release.
