@@ -70,3 +70,5 @@ You can also run dojox.lang.typed.typeCheckAllClasses() to add type checking to 
  dojo.declare("TypedClass", null, {
  	constructor: function(makeDefaults){
  		...
+
+All classes declared with dojo.declare from this point on can have schema definitions for typing purposes.
