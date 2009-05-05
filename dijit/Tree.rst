@@ -438,3 +438,8 @@ Activate a tree item                Enter
 ================================    ===============
 
 * Note: The last tree item focused will be in the Tab order.
+
+Known Issues
+------------
+
+Using JAWS 10 in Firefox 3 the properties of each tree item are spoken including the open/close state and the level information.  Using JAWS 10 with IE 8, the open/close state of each item is spoken but the level information is not spoken.   In both Firefox 3 and IE 8 the JAWS user should be in App mode or virtual pc cursor off mode for best performance (toggle the mode via the insert+z key).  
