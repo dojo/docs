@@ -138,8 +138,8 @@ If you wish to alter the default color for the underlay, you do so in CSS. The u
         });
     </script>
 
-Confirming Dialog Contents
---------------------------
+Forms and Functionality in Dialogs
+----------------------------------
 
 This example shows a Dialog containing form data.  You can get the form data as a javascript object by calling attr('value') on the dialog.
 
@@ -216,6 +216,29 @@ To prevent the user from dismissing the dialog if there are errors in the form, 
             }
         }
     </script>
+
+External Dialog content using HREF attribute
+--------------------------------------------
+
+You can also load dialog content from another page by setting HREF attribute for the widget. Note that the Dialog doesn't execute script tags inline external content. However, it parses the page for widgets, so you can add functionality to widgets by connecting into widget extension points using declarative markup (DojoML; e.g. ``<script type="dojo/method" event="onClick">``). Other options for executing scripts are `iFrame <http://www.dojotoolkit.com/forum/dijit-dijit-0-9/dijit-support/loading-external-url-dijit-dialog>`_ and `dojox.layout.ContentPane <http://www.dojotoolkit.org/forum/dijit-dijit-0-9/dijit-support/javascript-ignored-when-loading-dijit-dialog-url>`_.
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+        dojo.require("dijit.form.Button");
+        dojo.require("dijit.Dialog");
+    </script>
+
+  .. cv:: html
+
+    <div id="external" dojoType="dijit.Dialog" title="My scrolling dialog" href="http://docs.dojocampus.org/dijit/Dialog">
+    </div>
+
+    <p>When pressing this button the dialog will popup loading the dialog content using an XHR call.</p>
+    <button dojoType="dijit.form.Button" onClick="dijit.byId('external').show();">Show me!</button>
+
 
 
 Sizing the Dialog
