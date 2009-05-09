@@ -19,7 +19,8 @@ Introduction
 String utilities for the Dojo toolkit
 
 .. cv-compound::
-  :javascript:
+  
+  .. cv:: javascript
 
     <script type="text/javascript">
         dojo.addOnLoad(function(){
@@ -27,11 +28,11 @@ String utilities for the Dojo toolkit
         });
     </script>
 
-    :html:
+  .. cv:: html
 
     <div id="foo">  Hi dojo.beercamp </div>
 
-    :css:
+  .. cv:: css
 
     <style type="text/css">
       #foo {
