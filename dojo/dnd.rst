@@ -143,11 +143,28 @@ It is not recommended to access ``map`` directly. There are several utility func
 * ``setItem(id, obj)`` --- associates an object ``obj`` with this ``id``. ``obj`` should define ``data`` and ``type`` attributes.
 * ``delItem(id)`` --- deletes a record of the node with this ``id``. *Warning: it does not delete the node from the container.*
 * ``clearItems()`` --- delete all records. *Warning: it does not delete nodes from the container.*
-* ``forInItems(f, o)`` --- similar to ``dojo.forEach()`` but goes over all items in the map. The function ``f`` will be called in the context ``o`` for every item in the ``map`` with following parameters:
+* ``forInItems(f, o)`` --- similar to ``dojo.forEach()`` but goes over all items in the map in an unspecified order. The function ``f`` will be called in the context ``o`` for every item in the ``map`` with following parameters:
 
   * ``obj`` --- the corresponding object with ``data`` and ``type`` defined.
   * ``id`` --- the node id.
   * ``map`` --- the map object itself.
+
+``forInItems()`` iterates over all DnD items in unspecified order. If you want to iterate over items in the order they are listed in the container you can use the code similar to this:
+
+.. code-block :: javascript
+
+  function OrderedIter(container, f, o){
+    // similar to:
+    // container.forInItems(f, o);
+    // but iterates in the listed order
+
+    o = o || dojo.global;
+    container.getAllNodes().forEach(function(node){
+      var id = node.id;
+      f.call(o, container.getItem(id), id, container);
+    });
+  }
+
 
 Event processors
 ~~~~~~~~~~~~~~~~
