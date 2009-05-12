@@ -12,6 +12,8 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
 * `dojox.analytics <dojox/analytics>`_
 
+  An analytic and client monitoring system
+
   * `dojox.analytics.Urchin <dojox/analytics/Urchin>`_
 
 * `dojox.av <dojox/av>`_
