@@ -39,6 +39,9 @@ These sections cover the available projects shipped with the Dojo Toolkit:
   Amazing charting library
 
 * `dojox.collections <dojox/collections>`_
+
+  Offers methods to handle common collections, like ArrayLists or Dictionaries
+
 * `dojox.color <dojox/color>`_
 
   Extends dojo.color/dojo.Color and adds advanced color model/matching functionality
