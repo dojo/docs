@@ -3,9 +3,22 @@
 dojox.analytics
 ===============
 
-Analytics is analytic and client monitoring system.  Including the base analytics system and any number of plugins enables logging of different system data back to the server.  
+:Status: Draft
+:Version: 1.0
+:Project owner: ?--
+:Available: since V?
 
-Plugins included at this time: ``TODOC: demo?``
+.. contents::
+   :depth: 2
+
+Analytics is analytic and client monitoring system. Including the base analytics system and any number of plugins enables logging of different system data back to the server.
+
+
+============
+Introduction
+============
+
+Plugins included at this time: 
 
 * dojo - reports dojo startup  collected information
 * window - reports available window information to the server
@@ -15,3 +28,40 @@ Plugins included at this time: ``TODOC: demo?``
 * consoleMessages - reports console.* messages to the server	
 
 Additionally, a `Google Ananlytics <dojox/analytics/Urchin>`_ (Urchin tracker) helper is included in this project, though is unrelated to the Core dojox.analytics project code. 
+
+
+=====
+Usage
+=====
+
+TODO: how to use the component/class/method
+
+.. code-block :: javascript
+ :linenos:
+
+ <script type="text/javascript">
+   // your code
+ </script>
+
+
+
+========
+Examples
+========
+
+Programmatic example
+--------------------
+
+TODO: example
+
+Declarative example
+-------------------
+
+TODO: example
+
+
+========
+See also
+========
+
+* TODO: links to other related articles
