@@ -1,6 +1,6 @@
 ##master-page:HomepageTemplate
 #format wiki
-== Your Name ==
+== Jeff Harris ==
 
 Email: <<MailTo(jharris+dojo AT SPAMFREE et2brut DOT us)>>
 
