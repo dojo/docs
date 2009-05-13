@@ -168,6 +168,8 @@ Data for the grid comes from a data store.  The data can be specified declarativ
 
 Programatically, a store can be assigned to a DataGrid with the ``setStore(myStore)`` method call.
 
+It should be noted that as of grid 1.3.1, the grid searched your datastore and converts all < to &lt; to avoid a cross-site scripting attack. Site developers who can guarantee that their data is safe can add a formatter function to convert all &lt; back to < if they need the datastore information parsed by the browser. 
+
 
 Locking columns from horizontal scrolling
 -----------------------------------------
