@@ -46,6 +46,10 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 
       Modifying DOM node attributes
 
+    * `dojo.create <dojo/create>`_
+
+      Creates a dom node with optional values and placement
+
     * `dojo.deprecated <dojo/deprecated>`_
 
       Log a debug message to indicate that a behavior has been deprecated
