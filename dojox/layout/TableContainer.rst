@@ -99,7 +99,21 @@ TODO: example
 Declarative example
 -------------------
 
-TODO: example
+
+.. codeviewer::
+
+  <script type="text/javascript">
+    dojo.require("dojox.layout.TableContainer");
+    dojo.require("dijit.layout.TextBox");
+  </script>
+
+  <div dojoType="dojox.layout.TableContainer" cols="2">
+    <div dojoType="dijit.layout.TextBox" label="First Name" value="Gary"></div>
+    <div dojoType="dijit.layout.TextBox" label="Last Name" value="Murphy"></div>
+    <div dojoType="dijit.layout.TextBox" label="Address" value="Dublin"></div>
+    <div dojoType="dijit.layout.TextBox" label="Age" value="25"></div>
+
+  </div>
 
 
 ========
