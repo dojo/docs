@@ -10,7 +10,7 @@ dijit.registry
 .. contents::
    :depth: 2
 
-The dijit.regsitry is a collection of all Dijit widgets within a page. It can be used for bulk operation and control of groups of widgets. The registry is an instance of a `dijit.WidgetSet <http://api.dojotoolkit.org/jsdoc/1.3/dijit.WidgetSet>`_ and is present on all pages using Dijits.
+The dijit.regsitry is a collection of all Dijit widgets within a page. It can be used for bulk operation and control of groups of widgets. The registry is an instance of a `Dijit WidgetSet <http://api.dojotoolkit.org/jsdoc/1.3/dijit.WidgetSet>`_ and is present on all pages using Dijits.
 
 ============
 Introduction
