@@ -145,6 +145,12 @@ errorMessage
   The message to show if an error has occurred loading the data.
 ``New in 1.3`` selectable
   Set to true if you want to enable text selection on your grid.
+``New in 1.3.2`` escapeHTMLInData
+  This will escape HTML brackets from the data to prevent HTML from user-inputted data being rendered with may contain JavaScript and result in XSS attacks. This is true by default, and it is recommended that it remain true. Setting this to false will allow data to be displayed in the grid without filtering, and should be only used if it is known that the data won't contain malicious scripts. If HTML is needed in grid cells, it is recommended that you use the formatter function to generate the HTML (the output of formatter functions is not filtered, even with escapeHTMLInData set to true). Setting this to false can be done:
+.. code-block :: javascript
+
+  <table dojoType="dojox.grid.DataGrid" escapeHTMLInData="false" ...>
+
 
 Editing cells
 -------------
