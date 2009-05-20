@@ -62,6 +62,8 @@ options
   Used when cellType is ``dojox.grid.cells.Select`` to name the allowable options
 editable
   A boolean value that declares whether or not the cell is editable
+``New in 1.4`` draggable
+  A boolean value that you can set to false if you want a cell not to be draggable but others to be draggable
 formatter
   A JavaScript function that is called which returns the value to be shown in the cell.  The value from the data store is passed as a parameter to the function.  The returned value that is inserted into the page can be any legal HTML.  It should *not* be a dijit Widget as that is not parsed.
 get
