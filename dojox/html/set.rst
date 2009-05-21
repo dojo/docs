@@ -29,7 +29,7 @@ Usage
  :linenos:
 
   dojox.html.set(node, htmlString {
-      executeScripts: 1, 
+      executeScripts: true, 
       scriptHasHooks: false,
       renderStyles: true
   });
