@@ -147,10 +147,10 @@ errorMessage
   Set to true if you want to enable text selection on your grid.
 ``New in 1.3.2`` escapeHTMLInData
   This will escape HTML brackets from the data to prevent HTML from user-inputted data being rendered with may contain JavaScript and result in XSS attacks. This is true by default, and it is recommended that it remain true. Setting this to false will allow data to be displayed in the grid without filtering, and should be only used if it is known that the data won't contain malicious scripts. If HTML is needed in grid cells, it is recommended that you use the formatter function to generate the HTML (the output of formatter functions is not filtered, even with escapeHTMLInData set to true). Setting this to false can be done:
+
 .. code-block :: javascript
 
   <table dojoType="dojox.grid.DataGrid" escapeHTMLInData="false" ...>
-
 
 Editing cells
 -------------
@@ -272,6 +272,19 @@ Assume that you know the row index and the name of the column whos value you wis
 
   var value = grid.store.getValue(grid.getItem(rowIndex), name);
 
+
+===================================================
+IMPORTANT INFORMATION about Formatting and Security
+===================================================
+
+Preventing cross-site scripting (XSS) attacks
+---------------------------------------------
+
+To avoid cross-site scripting (XSS) attacks, the grid will escape any HTML data that comes from an external source (datastore).  This escaping also applies to any values that are returned from a custom get function on a cell.  If you would like to format your data using HTML, you should create a custom formatter function for the cell and apply your formatting there instead.
+
+Site developers who can guarantee that their data is safe can add a formatter function to convert all &lt; back to < if they need the datastore information parsed by the browser.
+
+Finally, you can use the escapeHTMLInData option - however, this is `VERY HIGHLY DISCOURAGED` as it opens your application up to XSS attacks.
 
 ========
 Examples
