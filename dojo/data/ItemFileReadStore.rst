@@ -948,6 +948,60 @@ Demonstrating custom sorting
     </span>
 
 
+Reloading ItemFileReadStore from a 'data' object
+------------------------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojo.data.ItemFileReadStore");
+      dojo.require("dijit.form.ComboBox");
+
+      var storeData10 =   { identifier: 'abbr', 
+        label: 'name',
+        items: [
+          { abbr:'ec', name:'Ecuador',           capital:'Quito' },
+          { abbr:'eg', name:'Egypt',             capital:'Cairo' },
+          { abbr:'sv', name:'El Salvador',       capital:'San Salvador' },
+          { abbr:'gq', name:'Equatorial Guinea', capital:'Malabo' },
+          { abbr:'er', name:'Eritrea',           capital:'Asmara' },
+          { abbr:'ee', name:'Estonia',           capital:'Tallinn' },
+          { abbr:'et', name:'Ethiopia',          capital:'Addis Ababa' }
+      ]}
+
+      //Simple global so we can show how many times the data gets reset.
+      var reloadCount = 0;
+
+      //Now set up a linkage so that the store can be reloaded.
+      dojo.addOnLoad(function() {
+         dojo.connect(dijit.byId("", "onClick", function() {
+            reloadCount++;
+            reloadableStore1.clearOnClose = true;
+            reloadableStore1.data = {identifier: 'abbr', 
+              label: 'name',
+              items: [
+                { abbr:'ec', name:'Ecuador RELOADED: ' + reloadCount,           capital:'Quito' },
+                { abbr:'eg', name:'Egypt RELOADED: ' + reloadCount,             capital:'Cairo' },
+                { abbr:'sv', name:'El Salvador RELOADED: ' + reloadCount,       capital:'San Salvador' },
+                { abbr:'gq', name:'Equatorial Guinea RELOADED: ' + reloadCount, capital:'Malabo' },
+                { abbr:'er', name:'Eritrea RELOADED: ' + reloadCount,           capital:'Asmara' },
+                { abbr:'ee', name:'Estonia RELOADED: ' + reloadCount,           capital:'Tallinn' },
+                { abbr:'et', name:'Ethiopia RELOADED: ' + reloadCount,          capital:'Addis Ababa' }
+            ]};
+            reloadableStore1.close();
+         }
+      });
+    </script>
+
+  .. cv :: html 
+
+    <div dojoType="dojo.data.ItemFileReadStore" data="storeData10" jsId="reloadableStore1"></div>
+    <div dojoType="dijit.form.ComboBox" store="reloadableStore1" searchAttr="name"></div>
+    <div id="reloadButton1" dojoType="dijit.form.Button">Reload DataStore</div>
+
+
 ========
 See Also
 ========
