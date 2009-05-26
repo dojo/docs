@@ -970,7 +970,7 @@ Reloading ItemFileReadStore from a 'data' object
           { abbr:'er', name:'Eritrea',           capital:'Asmara' },
           { abbr:'ee', name:'Estonia',           capital:'Tallinn' },
           { abbr:'et', name:'Ethiopia',          capital:'Addis Ababa' }
-      ]}
+      ]};
 
       //Simple global so we can show how many times the data gets reset.
       var reloadCount = 0;
@@ -992,7 +992,7 @@ Reloading ItemFileReadStore from a 'data' object
                 { abbr:'et', name:'Ethiopia RELOADED: ' + reloadCount,          capital:'Addis Ababa' }
             ]};
             reloadableStore1.close();
-         }
+         });
       });
     </script>
 
