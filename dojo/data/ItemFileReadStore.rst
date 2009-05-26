@@ -58,17 +58,17 @@ Constructor Parameters
 |                |              |erase all items stored in the internal structures. A new call to fetch will invoke the URL      |           |
 |                |              |to fetch a new set of items or reload data from a new data object assigned to 'data'            |           |
 |                |              |                                                                                                |           |
-|                |              |** **                                                                                           |           |
+|                |              |****                                                                                            |           |
 |                |              |**Dojo Toolkit 1.4 Notes:**                                                                     |           |
 |                |              |                                                                                                |           |
 |                |              |As of the Dojo Toolkit, version 1.4, this parameter works better.  This parameter now allows    |           |
 |                |              |for clearing and resetting of both URL and data object provided content of a store instance.    |           |
-|                |              |Please refer to the examples section for demonstration of usage.                                |           |
-|                |              |                                                                                                |           |
-|                |              |** **                                                                                           |           |
-|                |              |**Prior to 1.4:** The clearOnCloseflag would only allow resetting of url loaded data.  Please   |           |
+|                |              |Please refer to the examples section for demonstration of usage. Please                         |           |
 |                |              |note that when resetting 'data' for data object provided loads, you must use new instances of   |           |
 |                |              |data objects.  Reusing an object from a previous store will cause failures.                     |           |
+|                |              |                                                                                                |           |
+|                |              |****                                                                                            |           |
+|                |              |**Prior to 1.4:** The clearOnCloseflag would only allow resetting of url loaded data.           |           |
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
 | urlPreventCache| No           |This boolean value controls whether dojo attempts to prevent the browser caching mechanism from | 1.2       |
 |                |              |caching values loaded from a webserver. This parameter is especially useful when combined with  |           | 
