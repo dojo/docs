@@ -1028,7 +1028,7 @@ Reloading/Refreshing ItemFileReadStore from a url
 
   .. cv :: html 
 
-    <div dojoType="dojo.data.ItemFileReadStore" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/tests/stores/countries.json" jsId="reloadableStore2" urlPreventCache="true"></div>
+    <div dojoType="dojo.data.ItemFileReadStore" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/tests/stores/countries.json" jsId="reloadableStore2" urlPreventCache="true" clearOnClose="true"></div>
     <div dojoType="dijit.form.ComboBox" store="reloadableStore2" searchAttr="name"></div>
     <div id="reloadButton2" dojoType="dijit.form.Button">Reload DataStore</div>
 
