@@ -948,8 +948,8 @@ Demonstrating custom sorting
     </span>
 
 
-Reloading ItemFileReadStore from a 'data' object
-------------------------------------------------
+Reloading/Refreshing ItemFileReadStore from a 'data' object
+-----------------------------------------------------------
 
 .. cv-compound ::
   
@@ -1001,6 +1001,33 @@ Reloading ItemFileReadStore from a 'data' object
     <div dojoType="dojo.data.ItemFileReadStore" data="storeData10" jsId="reloadableStore1"></div>
     <div dojoType="dijit.form.ComboBox" store="reloadableStore1" searchAttr="name"></div>
     <div id="reloadButton1" dojoType="dijit.form.Button">Reload DataStore</div>
+
+Reloading/Refreshing ItemFileReadStore from a url
+-------------------------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojo.data.ItemFileReadStore");
+      dojo.require("dijit.form.ComboBox");
+      dojo.require("dijit.form.Button");
+
+      //Now set up a linkage so that the store can be reloaded.
+      dojo.addOnLoad(function() {
+         dojo.connect(dijit.byId("reloadButton2"), "onClick", function() {
+            reloadableStore2.clearOnClose = true;
+            reloadableStore2.close();
+         });
+      });
+    </script>
+
+  .. cv :: html 
+
+    <div dojoType="dojo.data.ItemFileReadStore" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/tests/stores/countries.json" jsId="reloadableStore2"></div>
+    <div dojoType="dijit.form.ComboBox" store="reloadableStore2" searchAttr="name"></div>
+    <div id="reloadButton2" dojoType="dijit.form.Button">Reload DataStore</div>
 
 
 ========
