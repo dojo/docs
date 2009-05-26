@@ -1018,7 +1018,9 @@ Reloading/Refreshing ItemFileReadStore from a url
       //Now set up a linkage so that the store can be reloaded.
       dojo.addOnLoad(function() {
          dojo.connect(dijit.byId("reloadButton2"), "onClick", function() {
-            reloadableStore2.clearOnClose = true;
+            //Reset the url and call close.  Note this could be a different JSON file, but for this example, just 
+            //Showing how you would set the URL.
+            reloadableStore2.url = "/moin_static163/js/dojo/trunk/release/dojo/dojox/data/tests/stores/countries.json"; 
             reloadableStore2.close();
          });
       });
