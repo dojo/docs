@@ -56,7 +56,14 @@ Constructor Parameters
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
 | clearOnClose   | No           |This boolean parameter controls the close() behavior of the store. If set, calling close() will | 1.2       |
 |                |              |erase all items stored in the internal structures. A new call to fetch will invoke the URL      |           |
-|                |              |load or reparse the data object into a new list of items.                                       |           |
+|                |              |                                                                                                |           |
+|                |              |**Dojo Toolkit 1.4 Notes:items.**                                                               |           |
+|                |              |                                                                                                |           |
+|                |              |As of the Dojo Toolkit, version 1.4, this parameter works better.  This parameter now allows    |           |
+|                |              |for clearing and resetting of both URL and data object provided content of a store instance.    |           |
+|                |              |Please refer to the examples section for demonstration of usage.  Please note that when         |           |
+|                |              |resetting 'data' for data object provided loads, you must use new instances of data objects.    |           | 
+|                |              |Reusing an object from a previous store will cause failures.                                    |           |
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
 | urlPreventCache| No           |This boolean value controls whether dojo attempts to prevent the browser caching mechanism from | 1.2       |
 |                |              |caching values loaded from a webserver. This parameter is especially useful when combined with  |           | 
