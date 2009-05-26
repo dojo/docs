@@ -978,6 +978,7 @@ Reloading ItemFileReadStore from a 'data' object
       //Now set up a linkage so that the store can be reloaded.
       dojo.addOnLoad(function() {
          dojo.connect(dijit.byId("reloadButton1"), "onClick", function() {
+            alert("Fired!");
             reloadCount++;
             reloadableStore1.clearOnClose = true;
             reloadableStore1.data = {identifier: 'abbr', 
