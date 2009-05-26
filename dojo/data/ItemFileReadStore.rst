@@ -62,7 +62,8 @@ Constructor Parameters
 |                |              |                                                                                                |           |
 |                |              |As of the Dojo Toolkit, version 1.4, this parameter works better.  This parameter now allows    |           |
 |                |              |for clearing and resetting of both URL and data object provided content of a store instance.    |           |
-|                |              |Please refer to the examples section for demonstration of usage.  Prior to 1.4, the clearOnClose|           |                |              |flag would only allow resetting of url loaded data.  Please note that when                      |           |
+|                |              |Please refer to the examples section for demonstration of usage.  Prior to 1.4, the clearOnClose|           |
+|                |              |flag would only allow resetting of url loaded data.  Please note that when                      |           |
 |                |              |resetting 'data' for data object provided loads, you must use new instances of data objects.    |           | 
 |                |              |Reusing an object from a previous store will cause failures.                                    |           |
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
