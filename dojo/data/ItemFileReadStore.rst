@@ -1004,6 +1004,7 @@ Reloading/Refreshing ItemFileReadStore from a 'data' object
 
 Reloading/Refreshing ItemFileReadStore from a url
 -------------------------------------------------
+*Note that you can see the data reload after clicking the button then activating the dropdown in Firebug or if you are viewing the demo through a proxy that shows requests made.*
 
 .. cv-compound ::
   
@@ -1025,7 +1026,7 @@ Reloading/Refreshing ItemFileReadStore from a url
 
   .. cv :: html 
 
-    <div dojoType="dojo.data.ItemFileReadStore" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/tests/stores/countries.json" jsId="reloadableStore2"></div>
+    <div dojoType="dojo.data.ItemFileReadStore" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/tests/stores/countries.json" jsId="reloadableStore2" urlPreventCache="true"></div>
     <div dojoType="dijit.form.ComboBox" store="reloadableStore2" searchAttr="name"></div>
     <div id="reloadButton2" dojoType="dijit.form.Button">Reload DataStore</div>
 
