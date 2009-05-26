@@ -948,8 +948,8 @@ Demonstrating custom sorting
     </span>
 
 
-Reloading/Refreshing ItemFileReadStore from a 'data' object
------------------------------------------------------------
+Reloading/Refreshing ItemFileReadStore from a 'data' object (Dojo Toolkit 1.4+)
+-------------------------------------------------------------------------------
 *Note that you must set data to a new object.  Reusing a data object that had already been processed by the datastore will cause errors.*
 
 .. cv-compound ::
@@ -1003,8 +1003,8 @@ Reloading/Refreshing ItemFileReadStore from a 'data' object
     <div dojoType="dijit.form.ComboBox" store="reloadableStore1" searchAttr="name"></div>
     <div id="reloadButton1" dojoType="dijit.form.Button">Reload DataStore</div>
 
-Reloading/Refreshing ItemFileReadStore from a url
--------------------------------------------------
+Reloading/Refreshing ItemFileReadStore from a url (Dojo Toolkit 1.4+)
+---------------------------------------------------------------------
 *Note that you can see the data reload after clicking the button then activating the dropdown in Firebug or if you are viewing the demo through a proxy that shows requests made.*
 
 .. cv-compound ::
