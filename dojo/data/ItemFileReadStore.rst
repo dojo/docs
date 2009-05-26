@@ -57,7 +57,8 @@ Constructor Parameters
 | clearOnClose   | No           |This boolean parameter controls the close() behavior of the store. If set, calling close() will | 1.2       |
 |                |              |erase all items stored in the internal structures. A new call to fetch will invoke the URL      |           |
 |                |              |                                                                                                |           |
-|                |              |**Dojo Toolkit 1.4 Notes:items.**                                                               |           |
+|                |              |                                                                                                |           |
+|                |              |**Dojo Toolkit 1.4 Notes:**                                                                     |           |
 |                |              |                                                                                                |           |
 |                |              |As of the Dojo Toolkit, version 1.4, this parameter works better.  This parameter now allows    |           |
 |                |              |for clearing and resetting of both URL and data object provided content of a store instance.    |           |
