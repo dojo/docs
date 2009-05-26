@@ -13,9 +13,6 @@ The following pages need more love:
 Top priority: dojo.js
 =====================
 
-* `dojo.registerModulePath <dojo/registerModulePath>`_
-
-  needed: Examples
 
 * `dojo.windowUnloaded <dojo/windowUnloaded>`_
 
