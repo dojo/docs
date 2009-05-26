@@ -950,6 +950,7 @@ Demonstrating custom sorting
 
 Reloading/Refreshing ItemFileReadStore from a 'data' object
 -----------------------------------------------------------
+*Note that you must set data to a new object.  Reusing a data object that had already been processed by the datastore will cause errors.*
 
 .. cv-compound ::
   
