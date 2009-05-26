@@ -958,6 +958,7 @@ Reloading ItemFileReadStore from a 'data' object
     <script>
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dijit.form.ComboBox");
+      dojo.require("dijit.form.Button");
 
       var storeData10 =   { identifier: 'abbr', 
         label: 'name',
