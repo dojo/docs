@@ -115,13 +115,14 @@ Testing, Debugging and Tuning
 Testing
 -------
 
+* `D.O.H.  Dojo Objective Harness Test Framework <quickstart/doh>`_
 * TODOC: doh, unit tests
 * TODOC: doh.robot
 
 Debugging
 ---------
 
-* TODOC: firebug lite, isDebug, debugAtAllCosts, console.*
+TODOC: firebug lite, isDebug, debugAtAllCosts, console.*
 
 Tuning
 ------
