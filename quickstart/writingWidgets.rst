@@ -503,6 +503,18 @@ Closing words:
 2) How can you find the plain old js methods to override or "connect" to (in the dojo sense of dojo.connect)? Well, that can be painful. First, you have to look inside the widget. Or inside its ancestors/superclasses. Or theirs. Or theirs. Not fun. Second, they aren't named consistenly. Sometimes _ means private, sometimes it means protected. (TODO: move to separate page?)
 
 
+=============================
+Useful self-scoping functions
+=============================
+
+There are two sets of functions available to all widgets which simplify connections with other widgets an DOM nodes:
+
+  * connect/disconnect
+  * ``New in 1.4`` subscribe/unsubscribe
+
+These functions operate similar to their dojo.* counterparts - with two exceptions.  First, the target function will always be executed within the scope of the widget.  Second, these connections/subscriptions will be cleaned up during the destroy() lifecycle phase of the widget.
+
+
 =============
 Accessibility
 =============
