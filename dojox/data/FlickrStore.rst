@@ -74,10 +74,10 @@ Constructor Parameters
 +---------------------------+--------------------------------------------------------------------+---------------------+
 |**Attribute**              |**Description**                                                     |Since                |
 +---------------------------+--------------------------------------------------------------------+---------------------+
-|label                      |The item attribute to use as the label of the Flickr item.          |1.1                  |
+|label                      |The item attribute to use as the label of the Flickr item.          |Dojo 1.1             |
 |                           |Defaults to 'title'                                                 |                     |
 +---------------------------+--------------------------------------------------------------------+---------------------+
-|urlPreventCache            |Flag controlling whether preventCache of dojo.io.script is used to  |1.1                  |
+|urlPreventCache            |Flag controlling whether preventCache of dojo.io.script is used to  |Dojo 1.4             |
 |                           |prevent browser caching.  Default is true.                          |                     |
 +---------------------------+--------------------------------------------------------------------+---------------------+
 
