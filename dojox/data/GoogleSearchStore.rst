@@ -46,7 +46,7 @@ The following parameters are supported by all Google store implementations.
 +---------------+------------------------------------------------------------------------------------------+----------------------+
 |lang           |The language locale to use. Defaults to the browser locale.                               | string               |
 +---------------+------------------------------------------------------------------------------------------+----------------------+
-|urlPreventCache|Flag denoting whether or not browser caching should be avoided.  Defaults to true.        | string               |
+|urlPreventCache|Flag denoting whether or not browser caching should be avoided.  Defaults to true.        | boolean              |
 |               |**New to Dojo 1.4**                                                                       |                      |
 +---------------+------------------------------------------------------------------------------------------+----------------------+
 
