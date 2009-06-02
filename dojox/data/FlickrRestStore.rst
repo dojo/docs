@@ -120,7 +120,7 @@ Constructor Parameters
 |urlPreventCache            |Flag controlling whether preventCache of dojo.io.script is used to  |Dojo 1.4             |
 |                           |prevent browser caching.  Default is true.                          |                     |
 +---------------------------+--------------------------------------------------------------------+---------------------+
-|apiKey                     |Your Flickr service API key.                                        |Dojo 1.1             |
+|apikey                     |Your Flickr service API key.                                        |Dojo 1.1             |
 +---------------------------+--------------------------------------------------------------------+---------------------+
 
 
