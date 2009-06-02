@@ -93,6 +93,8 @@ Constructor Params
 | label          | No           |A string that identifies which attribute to treat as the human-readable label. It must match one| 1.0       |
 |                |              |of the attributes on the <outline> tags for it to be effective.                                 |           |
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
+|urlPreventCache | No           |Flag denoting whether or not browser caching should be avoided.  Defaults to false.             | 1.4       |
++----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
 
 ============
 Query Syntax
