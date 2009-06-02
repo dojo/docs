@@ -53,6 +53,8 @@ Constructor Parameters
 |                |              |from.  This is required as the OSD file contains all the information required to configure the  |           |
 |                |              |store to issue queries.                                                                         |           |
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
+|urlPreventCache | No           |Flag denoting whether or not browser caching should be avoided.  Defaults to true.              |1.4        |
++----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
 
 Attribute List
 --------------
