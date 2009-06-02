@@ -38,8 +38,8 @@ The following parameters are supported by the GoogleFeedStore implementation.
 +---------------+------------------------------------------------------------------------------------------+----------------------+
 |unescapeHTML   |A boolean to specify whether or not to unescape HTML text.                                | string               |
 +---------------+------------------------------------------------------------------------------------------+----------------------+
-|urlPreventCache|Parameter that allows enabling the xhrGet flag preventCache.  Defaults to false           | boolean              |
-|               |New in Dojo 1.4.                                                                          |                      |
+|urlPreventCache|Parameter that allows enabling the xhrGet flag preventCache.  Defaults to false.          | boolean              |
+|               |**New in Dojo 1.4.**                                                                      |                      |
 +---------------+------------------------------------------------------------------------------------------+----------------------+
 
 ===============
