@@ -56,6 +56,9 @@ The constructor for the store can take three different parameters as a way to lo
 +---------------+------------------------------------------------------------------------------+------------------------------+
 |dataVar        |A JavaScript Array object of the items.                                       |JavaScript Array              |
 +---------------+------------------------------------------------------------------------------+------------------------------+
+|urlPreventCache|Flag denoting whether or not browser caching should be avoided.  Defaults to  |boolean                       |
+|               |false.  **New to Dojo 1.4**                                                   |                              |
++---------------+------------------------------------------------------------------------------+------------------------------+
 
 ===============
 Item Attributes
