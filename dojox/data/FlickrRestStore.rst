@@ -111,7 +111,18 @@ FlickrRestStore's role is to process the query parameters passed to the dojo.dat
 Constructor Parameters
 ======================
 
-FlickrRestStore does not have any constructor parameters.
++---------------------------+--------------------------------------------------------------------+---------------------+
+|**Attribute**              |**Description**                                                     |Since                |
++---------------------------+--------------------------------------------------------------------+---------------------+
+|label                      |The item attribute to use as the label of the Flickr item.          |Dojo 1.1             |
+|                           |Defaults to 'title'                                                 |                     |
++---------------------------+--------------------------------------------------------------------+---------------------+
+|urlPreventCache            |Flag controlling whether preventCache of dojo.io.script is used to  |Dojo 1.4             |
+|                           |prevent browser caching.  Default is true.                          |                     |
++---------------------------+--------------------------------------------------------------------+---------------------+
+|apiKey                     |Your Flickr service API key.                                        |Dojo 1.1             |
++---------------------------+--------------------------------------------------------------------+---------------------+
+
 
 
 ===============
