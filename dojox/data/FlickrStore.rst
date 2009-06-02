@@ -70,7 +70,16 @@ FlickrStore's role is to process the query parameters passed to the dojo.data.ap
 
 Constructor Parameters
 ----------------------
-  FlickrStore does not have any constructor parameters.
+
++---------------------------+--------------------------------------------------------------------+---------------------+
+|**Attribute**              |**Description**                                                     |Since                |
++---------------------------+--------------------------------------------------------------------+---------------------+
+|label                      |The item attribute to use as the label of the Flickr item.          |1.1                  |
+|                           |Defaults to 'title'                                                 |                     |
++---------------------------+--------------------------------------------------------------------+---------------------+
+|urlPreventCache            |Flag controlling whether preventCache of dojo.io.script is used to  |1.1                  |
+|                           |prevent browser caching.  Default is true.                          |                     |
++---------------------------+--------------------------------------------------------------------+---------------------+
 
 Item Attributes
 ---------------
