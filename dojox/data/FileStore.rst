@@ -139,6 +139,9 @@ Using the dojox.dataFileStore is generally simple. The store takes three possibl
 |                     |**dirsOnly**: Only return file entries that are directories. This option is useful for         |                    |
 |                     |a directory tree display.                                                                      |                    |
 +---------------------+-----------------------------------------------------------------------------------------------+--------------------+
+|urlPreventCache      |Flag to denote if preventCache should be appended to underlying xhrGet calls.  Default is true | boolean            |
+|                     |**New in Dojo 1.4**                                                                            |                    |
++---------------------+-----------------------------------------------------------------------------------------------+--------------------+
 
 
 Some usage examples for using the service in code as well as declarative markup attaching it to a widget such as dijit.Tree, dijit.form.ComboBox, and dojox.grid.DataGrid are shown below.
