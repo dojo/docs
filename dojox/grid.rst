@@ -49,7 +49,9 @@ The ``<table>`` tag defines that a DataGrid is being created.  The nested ``<th>
 In the ``<th>`` tag in a declarative definition of a DataGrid, the following attributes are permitted
 
 field
-  The name of the field in the store data
+  The name of the field in the store data.  ``New in 1.4`` If you set the value of the field to "_item", then your formatter will be called with the entire item from the store - instead of just one field value
+``New in 1.4`` fields
+  An array of field names, when used, all values of all matching fields are returned to the grid
 width
   The width of the column
 cellType
@@ -65,7 +67,7 @@ editable
 ``New in 1.4`` draggable
   A boolean value that you can set to false if you want a cell not to be draggable but others to be draggable
 formatter
-  A JavaScript function that is called which returns the value to be shown in the cell.  The value from the data store is passed as a parameter to the function.  The returned value that is inserted into the page can be any legal HTML.  It should *not* be a dijit Widget as that is not parsed.
+  A JavaScript function that is called which returns the value to be shown in the cell.  The value from the data store is passed as a parameter to the function.  The returned value that is inserted into the page can be any legal HTML.  In dojo 1.3 and earlier, it should *not* be a dijit Widget as that is not parsed.  ``New in 1.4`` You can return a dijit Widget and it will be placed in that location in the cell.  ``New in 1.4`` You can also return a dojo.Deferred and can then pass the deferred's callback function a string to insert at a later point in time.
 get
   A JavaScript function that is called which returns the value to be shown in the cell.  The function is passed two parameters.  The first is the row index in the DataGrid.  The second is the DataStore record/item.  Given these two parameters, the function is expected to know what to return.  It should *not* be a dijit Widget as that is not parsed.  Care should be taken that the ``item`` parameter is not null.  Tests have shown that the function may be called more often than it should be and this is highlighted with an ``item = null``.
 hidden
@@ -145,6 +147,8 @@ errorMessage
   The message to show if an error has occurred loading the data.
 ``New in 1.3`` selectable
   Set to true if you want to enable text selection on your grid.
+``New in 1.4`` formatterScope
+  Set to an object that you would like to execute your formatter functions within the scope of.
 ``New in 1.3.2`` escapeHTMLInData
   This will escape HTML brackets from the data to prevent HTML from user-inputted data being rendered with may contain JavaScript and result in XSS attacks. This is true by default, and it is recommended that it remain true. Setting this to false will allow data to be displayed in the grid without filtering, and should be only used if it is known that the data won't contain malicious scripts. If HTML is needed in grid cells, it is recommended that you use the formatter function to generate the HTML (the output of formatter functions is not filtered, even with escapeHTMLInData set to true). Setting this to false can be done:
 
