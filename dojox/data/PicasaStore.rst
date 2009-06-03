@@ -6,7 +6,7 @@ dojo.data.PicasaStore
 .. contents::
   :depth: 3
 
-Dojo has several examples of browser in-memory stores, such as `dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`_, `dojox.data.CsvStore <dojox/data/CsvStore>`_, <dojox/data/FlickrStore>`_, and `dojox.data.OpmlStore <dojox/data/OpmlStore>`_. While these stores are useful and great examples of how data stores can be used to wrapper accessing data, they are not the only way data is served and processed. In many cases, data stores can wrapper external services. It is those services that perform the querying and filtering of data, and then provide only that as a subset back to the data store for presentation as items.
+Dojo has several examples of browser in-memory stores, such as `dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`_, `dojox.data.CsvStore <dojox/data/CsvStore>`_, `dojox.data.FlickrStore <dojox/data/FlickrStore>`_, and `dojox.data.OpmlStore <dojox/data/OpmlStore>`_. While these stores are useful and great examples of how data stores can be used to wrapper accessing data, they are not the only way data is served and processed. In many cases, data stores can wrapper external services. It is those services that perform the querying and filtering of data, and then provide only that as a subset back to the data store for presentation as items.
 
 PicasaStore is one such store. The purpose of PicasaStore is to wrapper the public photo feed of the Picasa service. Then by simply using the PicasaStore store, as you would any data store in Dojo, you now have access to querying the vast repository of public photos made available by others on the Web.
 
