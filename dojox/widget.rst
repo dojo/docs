@@ -89,6 +89,10 @@ Here is an up to date list of dojox.widget components. Note: Some of these are n
 
   A small sortable unordered-list
 
+* `dojox.widget.Standby <dojox/widget/Standby>`_
+ 
+  A small 'This section is busy' overlay blocking widget.
+
 * `dojox.widget.Toaster <dojox/widget/Toaster>`_
 
   A message display system, showing warnings, errors and other messages unobtrusively
