@@ -5,7 +5,7 @@ dojox.date.relative
 
 :Status: Draft
 :Version: 1.4
-:Available since: 1.4
+:Owner: Nathan Toone
 
 .. contents::
   :depth: 3
