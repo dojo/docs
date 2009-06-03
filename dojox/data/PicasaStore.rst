@@ -1,7 +1,7 @@
 #format dojo_rst
 
-dojo.data.PicasaStore
-=====================
+dojox.data.PicasaStore
+======================
 
 .. contents::
   :depth: 3
