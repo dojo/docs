@@ -1,7 +1,7 @@
 #format dojo_rst
 
-dojo.data.FlickrStore
-=====================
+dojox.data.FlickrStore
+======================
 
 .. contents::
   :depth: 3
