@@ -681,6 +681,9 @@ Constructor Parameters
 |urlPreventCache            |Flag controlling whether preventCache of dojo.io.script is used to  |Dojo 1.4             |
 |                           |prevent browser caching.  Default is true.                          |                     |
 +---------------------------+--------------------------------------------------------------------+---------------------+
+|maxResults                 |Total number of results to allow to return from a call to the       |Dojo 1.4             |
+|                           |service.  The default is 20.                                        |                     |
++---------------------------+--------------------------------------------------------------------+---------------------+
 
 Item Attributes
 ---------------
@@ -715,14 +718,11 @@ Query Syntax
 The fetch method query syntax for PicasaStore is simple and straightforward. It allows the following attributes to be queried against:
 
 +---------------+-----------------------------------------------------------------------------------------------------------------------------+
-| id            |Picasa userid to use to narrow the search scope. This is optional.                                                           |
+| userid        |Picasa userid to use to narrow the search scope. This is optional.                                                           |
 +---------------+-----------------------------------------------------------------------------------------------------------------------------+
-| ids           |A comma separated list of IDs used to narrow search scope. This is optional.                                                 |
+| userids       |A comma separated list of IDs used to narrow search scope. This is optional.                                                 |
 +---------------+-----------------------------------------------------------------------------------------------------------------------------+
 | tags          |A comma separated list of tags to search for matches on. This is optional.                                                   |
-+---------------+-----------------------------------------------------------------------------------------------------------------------------+
-| tagmode       |Indicates whether all tags must match from the list or any can match from the list. Valid values are all or any and the      |
-|               |default is any.                                                                                                              |
 +---------------+-----------------------------------------------------------------------------------------------------------------------------+
 | lang          |Specifies the language to return the results in. This is optional.                                                           |
 +---------------+-----------------------------------------------------------------------------------------------------------------------------+
