@@ -148,7 +148,7 @@ errorMessage
 ``New in 1.3`` selectable
   Set to true if you want to enable text selection on your grid.
 ``New in 1.4`` formatterScope
-  Set to an object that you would like to execute your formatter functions within the scope of.
+  Set to an object that you would like to execute your formatter functions within the scope of.  This object may choose to cache widgets that it creates - and if it has a function called ``invalidateCache``, that function will be called to notify the object that the cache of widgets is no longer valid.
 ``New in 1.3.2`` escapeHTMLInData
   This will escape HTML brackets from the data to prevent HTML from user-inputted data being rendered with may contain JavaScript and result in XSS attacks. This is true by default, and it is recommended that it remain true. Setting this to false will allow data to be displayed in the grid without filtering, and should be only used if it is known that the data won't contain malicious scripts. If HTML is needed in grid cells, it is recommended that you use the formatter function to generate the HTML (the output of formatter functions is not filtered, even with escapeHTMLInData set to true). Setting this to false can be done:
 
