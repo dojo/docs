@@ -110,7 +110,7 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
   * `dojo._base.Color <dojo/_base/Color>`_
 
     Color object and utility functions to handle colors.
-    Details on dojo.colorFromArray, dojo.colorFromHex, dojo.colorFromSting and dojo.colorFromRgb.
+    Details on dojo.colorFromArray, dojo.colorFromHex, dojo.colorFromString and dojo.colorFromRgb.
 
   * `dojo._base.connect <dojo/_base/connect>`_
 
