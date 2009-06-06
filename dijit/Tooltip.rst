@@ -5,8 +5,8 @@ dijit.Tooltip
 
 :Status: Draft
 :Version: 1.3
-:Authors: Doug Hays, Nikolai Onken
-:Developers: Doug Hays, Bill Keese
+:Authors: Doug Hays, Bill Keese
+:Developers: Bill Keese
 :Available: since V1.0
 
 .. contents::
@@ -18,7 +18,7 @@ Usage
 
 Tooltip is similar to the title="" attribute in regular HTML, but is much more flexible. You can control the display timing, and specify arbitrary (rich-text) HTML for the tooltip contents.
 
-Note that if you want your tooltip to contain a form or something that the user clicks on / focuses on, you should use the `dijit.TooltipDialog <dijit/TooltipDialog>_` instead.
+Note that if you want your tooltip to contain a form or something that the user clicks on / focuses on, you should use the `TooltipDialog <dijit/TooltipDialog>_` instead.
 
 ========
 Examples
