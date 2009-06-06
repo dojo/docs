@@ -1,11 +1,31 @@
 #format dojo_rst
 
-
 dijit.Tooltip
 =============
+
+:Status: Draft
+:Version: 1.3
+:Authors: Doug Hays, Nikolai Onken
+:Developers: Doug Hays, Bill Keese
+:Available: since V1.0
+
+.. contents::
+    :depth: 2
+
+=====
+Usage
+=====
+
 Tooltip is similar to the title="" attribute in regular HTML, but is much more flexible. You can control the display timing, and specify arbitrary (rich-text) HTML for the tooltip contents.
 
 Note that if you want your tooltip to contain a form or something that the user clicks on / focuses on, you should use the `dijit.TooltipDialog <dijit/TooltipDialog>_` instead.
+
+========
+Examples
+========
+
+Programmatic example
+--------------------
 
 Here's a tooltip created programatically:
 
@@ -29,6 +49,9 @@ Here's a tooltip created programatically:
 
 ''Note that connectId is an array, since it can contain multiple nodes to connect to.''
 
+Declarative markup
+------------------
+
 And here's a tooltip created from markup connected to a `dijit.form.Button <dijit/form/Button>_` widget:
 
 .. cv-compound::
@@ -47,7 +70,7 @@ And here's a tooltip created from markup connected to a `dijit.form.Button <diji
             a <i>disposition</i> to bear injuries patiently : <b>forbearance</b>
         </div>
 
-
+===================
 Tooltip Positioning
 ===================
 By default, dijit tries to find a place to display the tooltip to the left or the right of the target element.
@@ -55,7 +78,7 @@ You can control the search path for positions via a global setting like:
 
 dijit.Tooltip.defaultPosition = ["above", "below"];
 
-
+=============
 Accessibility
 =============
 
