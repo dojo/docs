@@ -42,10 +42,10 @@ And here's a tooltip created from markup connected to a `dijit.form.Button <diji
 
   .. cv:: html
 
+        <button id="buttonId" dojoType="dijit.form.Button">Longanimity</button>
         <div dojoType="dijit.Tooltip" connectId="buttonId" position="['above']">
             a <i>disposition</i> to bear injuries patiently : <b>forbearance</b>
         </div>
-        <button id="buttonId" dojoType="dijit.form.Button">Longanimity</button>
 
 
 Tooltip Positioning
