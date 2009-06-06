@@ -29,7 +29,7 @@ Here's a tooltip created programatically:
 
 ''Note that connectId is an array, since it can contain multiple nodes to connect to.''
 
-And here's the same tooltip created from markup:
+And here's a tooltip created from markup connected to a `dijit.form.Button <dijit/form/Button>_` widget:
 
 .. cv-compound::
 
@@ -37,14 +37,15 @@ And here's the same tooltip created from markup:
 
         <script>
            dojo.require("dijit.Tooltip");
+           dojo.require("dijit.form.Button");
         </script>
 
   .. cv:: html
 
-        <div dojoType="dijit.Tooltip" connectId="wordOfTheDay">
+        <div dojoType="dijit.Tooltip" connectId="buttonId" position="['above']">
             a <i>disposition</i> to bear injuries patiently : <b>forbearance</b>
-         </div>
-         <span id="wordOfTheDay">Longanimity</span>
+        </div>
+        <button id="buttonId" dojoType="dijit.form.Button">Longanimity</button>
 
 
 Tooltip Positioning
