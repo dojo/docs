@@ -30,6 +30,7 @@ Widgets
 * `dijit.Menu <dijit/Menu>`_
 * `dijit.ProgressBar <dijit/ProgressBar>`_
 * `dijit.TitlePane <dijit/TitlePane>`_
+* `dijit.Toolbar <dijit/Toolbar>`_
 * `dijit.Tooltip <dijit/Tooltip>`_
 * `dijit.TooltipDialog <dijit/TooltipDialog>`_
 * `dijit.Tree <dijit/Tree>`_
