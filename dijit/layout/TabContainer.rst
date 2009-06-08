@@ -142,7 +142,7 @@ More examples
 
 There are several more examples of basic use cases `available <dijit/layout/TabContainer-examples>`_ 
 
-Like `dijit.layout.StackContainer </dijit/layout/StackContainer>`_, TabContainer works by using a simple ``.addChild``, ``.removeChild``, and ``.selectChild`` API, all accepting a widget to be acted upon. 
+Like `dijit.layout.StackContainer <dijit/layout/StackContainer>`_, TabContainer works by using a simple ``.addChild``, ``.removeChild``, and ``.selectChild`` API, all accepting a widget to be acted upon. 
 
 Manipulating Children
 ---------------------
