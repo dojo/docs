@@ -32,7 +32,7 @@ The Official Dojo Documentation
 What's New / Release Notes
 =================================
 
-* `Dojo 1.4 Release Notes <releasenotes/1.4>`_
+* `Dojo 1.4 Release Notes (in progress) <releasenotes/1.4>`_
 
 
 
