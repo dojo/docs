@@ -32,6 +32,7 @@ The Official Dojo Documentation
 What's New / Release Notes
 =================================
 
+* `Dojo 1.3 Release Notes <http://www.dojotoolkit.org/book/dojo-1-3-release-notes>`_
 * `Dojo 1.4 Release Notes (in progress) <releasenotes/1.4>`_
 
 
