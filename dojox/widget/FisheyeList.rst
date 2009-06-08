@@ -51,6 +51,11 @@ Declarative example
 TODO: example
 
 
+Widget Demonstration
+--------------------
+http://demos.dojotoolkit.org/demos/fisheye/
+
+
 ========
 See also
 ========
