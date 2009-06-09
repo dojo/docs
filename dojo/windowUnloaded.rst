@@ -10,7 +10,7 @@ dojo.windowUnloaded
 .. contents::
    :depth: 2
 
-Signal fired by impending window destruction.
+Signal fired by impending window destruction. Favor using `dojo.addOnWindowUnload <dojo/addOnWindowUnload>`_ instead of this method directly.
 
 
 ============
@@ -21,7 +21,7 @@ The dojo.windowUnloaded function is triggered on the onwindowunload browser even
 
 It executes all the functions contained in an existing private array.
 
-To add a function to this array use dojo.addOnWindowUnload.  
+To add a function to this array use dojo.addOnWindowUnload. Favor using `dojo.addOnWindowUnload <dojo/addOnWindowUnload>`_ instead of this method directly.
 
 =====
 Usage
