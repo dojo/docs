@@ -18,7 +18,7 @@ Usage
 
 Tooltip is similar to the title="" attribute in regular HTML, but is much more flexible. You can control the display timing, and specify arbitrary (rich-text) HTML for the tooltip contents.
 
-Note that if you want your tooltip to contain a form or something that the user clicks on / focuses on, you should use the `TooltipDialog <dijit/TooltipDialog>_` instead.
+Note that if you want your tooltip to contain a form or something that the user clicks on / focuses on, you should use the `dijit.TooltipDialog <dijit/TooltipDialog>`_ instead.
 
 ========
 Examples
@@ -52,7 +52,7 @@ Here's a tooltip created programatically:
 Declarative markup
 ------------------
 
-And here's a tooltip created from markup connected to a `dijit.form.Button <dijit/form/Button>_` widget:
+And here's a tooltip created from markup connected to a `dijit.form.Button <dijit/form/Button>`_ widget:
 
 .. cv-compound::
 
