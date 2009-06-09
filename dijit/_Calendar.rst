@@ -4,7 +4,7 @@
 #format dojo_rst
 
 dijit._Calendar
-==============
+===============
 
 :Status: Contributed, Draft
 :Version: beta
