@@ -220,7 +220,7 @@ Specifically, to get/set attributes after initialization, you need to use the ``
   // set to the current date
   myDateTextBox.attr('value', new Date());
 
-It also supports a hash API like dojo.attr(), for setting multiple attributes:
+It also supports a hash API like `dojo.attr() <dojo/attr>`_, for setting multiple attributes:
 
 .. code-block :: javascript
 
