@@ -239,7 +239,7 @@ There are several attributes common to (most) all Dijit instances. These appear 
   // hide a widget with id="myThiner"
   dojo.style(dijit.byId("myThinger").domNode, "display", "none"); 
 
-* .containerNode - If a widget uses a template to create complex markup and has inner markup to be displayed within the widget, the containerNode member is a reference to the node where to content was moved to. For example with a `dijit.Dialog <dijit/Dialog>`_ only the surrounding domNode is used to create the widget, and any contents of that node are set inside the template's `containerNode`. When using .attr() to set and load content, this is the node that will be targeted for that content.
+* .containerNode - If a widget uses a template to create complex markup and has inner markup to be displayed within the widget, the containerNode member is a reference to the node where the content was moved to. For example with a `dijit.Dialog <dijit/Dialog>`_ only the surrounding domNode is used to create the widget, and any contents of that node are set inside the template's `containerNode`. When using .attr() to set and load content, this is the node that will be targeted for that content.
 
 * declaredClass - this is actually a relic of `dojo.declare <dojo/declare>`_, which is how widgets are defined. The declaredClass is a string equal to the fully qualified name of the widget class.
 
