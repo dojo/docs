@@ -148,11 +148,45 @@ A markup tree
 Icons
 =====
 
-Like other dijits, the icon is expressed as a CSS class (which should load a background-image). You specify the class per item by overriding getIconClass():
+Each node in the tree has an icon.
+Like other dijits, the icon is expressed as a CSS class (which should load a background-image).
+You specify the class per item by overriding dijit.Tree's getIconClass().
+
+The default implementation of getIconClass() shows two types of icons: folders and leafs.
+(Actually, it has separate icons for opened and closed folders, so that's three icons...)
+It tries to guess if the node is a folder or not by whether or not it has a children attribute:
 
 .. code-block :: javascript
   :linenos:
 
+  	getIconClass: function(/*dojo.data.Item*/ item, /*Boolean*/ opened){
+		return (!item || this.model.mayHaveChildren(item)) ? (opened ? "dijitFolderOpened" : "dijitFolderClosed") : "dijitLeaf"
+	},
+
+Note that the !item check refers to the root node in the tree,
+which may not have any associated item when using the old version of the Tree API,
+connecting the Tree directly to a store instead of using a model.
+
+That works fairly well, but will fail if mayHaveChildren() returns false for items with no children.
+The definition of mayHaveChildren() for "empty folders" is actually somewhat vague, so it's best not to depend on it.
+A better getIconClass() method for a Tree connected (through a model) to a `dojox.data.FileStore <dojox/data/FileStore>`_
+would determine if the item was a folder or not based on whether or not the item had the "directory" attribute
+(and it was set to true):
+
+.. code-block :: javascript
+  :linenos:
+
+  	getIconClass: function(/*dojo.data.Item*/ item, /*Boolean*/ opened){
+		return myStore.getValue(item, 'directory') ? (opened ? "dijitFolderOpened" : "dijitFolderClosed") : "dijitLeaf";
+	},
+
+
+If you want to have different icon types depending on the type of items in the tree (for example,
+separate icons for songs, movies, and TV shows), then you really need to override the method
+to return a separate class name based on the type of item:
+
+.. code-block :: javascript
+  :linenos:
 
   <script type="dojo/method" event="getIconClass" args="item, opened">
       if(item == this.model.root) {
