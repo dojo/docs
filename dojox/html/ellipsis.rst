@@ -66,8 +66,8 @@ Within a table
 
     <table style="width: 75%; table-layout: fixed">
         <tr>
-            <td width="25%"><div class="dojoxEllipsis">Long inner text that should be truncated after 100 pixels.</div></td>
-            <td width="75%"><div class="dojoxEllipsis">Long inner text that should be truncated after 100 pixels.</div></td>
+            <td width="25%"><div class="dojoxEllipsis">Long inner text that should be truncated if it gets too big.</div></td>
+            <td width="75%"><div class="dojoxEllipsis">Long inner text that should be truncated if it gets too big.</div></td>
         </tr>
     </table>
 
