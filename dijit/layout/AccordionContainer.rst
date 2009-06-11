@@ -8,7 +8,7 @@ dijit.layout.AccordionContainer
 :Authors: Becky Gibson, Nikolai Onken
 :Developers: ?-
 :Available: since V?
-:jsDoc: http://api.dojotoolkit.org/jsdoc/HEAD/dijit.layout.TabContainer
+:jsDoc: http://api.dojotoolkit.org/jsdoc/HEAD/dijit.layout.AccordionContainer
 
 .. contents::
     :depth: 2
