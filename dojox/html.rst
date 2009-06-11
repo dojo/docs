@@ -6,7 +6,7 @@ dojox.html
 :Status: Draft
 :Version: 1.0
 :Authors: Marcus Reimann
-:Developers: Bryan Forbes, Sam Foster, Mike Wilcox
+:Developers: Bryan Forbes, Sam Foster, Mike Wilcox, Nathan Toone
 :Available: since V1.2
 
 .. contents::
@@ -40,6 +40,15 @@ Features
   * Insert and remove CSS rules.
   * Search document for style sheets.
   * Toggle sheets on and off (based on the W3C spec).
+
+* ``New in 1.4`` `dojox.html.ellipsis <dojox/html/ellipsis>`_
+
+  Adds cross-browser support for a "dojoxEllipsis" class.
+
+  * To use, include the ellipsis.css file and dojo.require("dojox.html.ellipsis");
+  * To function properly - the *parent* node of the desired ellipsis-ized node should have a defined width
+  * ``NOTE:`` When using the dojoxEllipsis class within tables, the table needs to have the `table-layout: fixed` style
+  * ``NOTE:`` The dojoxEllipsis class should be placed on a block element (such as a div) and will not work on td elements 
 
 
 ========
