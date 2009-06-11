@@ -14,10 +14,6 @@ Top priority: dojo.js
 =====================
 
 
-* `dojo.windowUnloaded <dojo/windowUnloaded>`_
-
-  needed: Declarative example. add event that triggers this function.
-
 * `dojo.connectPublisher <dojo/connectPublisher>`_
 
   needed: full page
