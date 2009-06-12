@@ -8,7 +8,7 @@ dojox.grid
 :Version: 1.0
 :Project owners: Scott J. Miles, Steve Orvell, Bryan Forbes
 :Available: since V1.2
-:jsDoc: http://api.dojotoolkit.org/jsdoc/HEAD/dojox.charting.plot2d.Grid
+:jsDoc: http://api.dojotoolkit.org/jsdoc/HEAD/dojox.Grid
 
 .. contents::
    :depth: 2
