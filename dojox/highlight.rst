@@ -108,7 +108,8 @@ Highlight can also be used via the dojox.highlight.processString function
       dojo.require("dojox.highlight");
       dojo.require("dojox.highlight.languages.sql");
 
-      dojox.highlight.processString("Select a from b where a = 2;");
+      var sql = dojox.highlight.processString("Select a from b where a = 2;");
+      dojo.query("#sqlDisplay").innerHtml = sql;
     </script>
 
   .. cv:: css
@@ -116,3 +117,7 @@ Highlight can also be used via the dojox.highlight.processString function
     <style type="text/css">
       @import "/moin_static163/js/dojox/highlight/resources/highlight.css"
     </style>
+
+  .. cv:: html
+
+    <div id="sqlDisplay">if you can see this please fix the demo</div>
