@@ -113,12 +113,17 @@ Highlight can also be used via the dojox.highlight.processString function
     <script type="text/javascript">
       dojo.require("dojox.highlight");
       dojo.require("dojox.highlight.languages.sql");
+      function highlight(){
+
+        //highlighting the code
+        var code = dojox.highlight.processString("Select a from b where a = 2;");
+
+        //putting the highlighted code in a html element so you can see
+        dojo.attr('demoCode1', {innerHTML: code});
+      }
     </script>
 
   .. cv:: html
 
-    <div id="sqlDisplay">if you can see this please fix the demo</div>
-    <script type="text/javascript">
-        var sql = dojox.highlight.processString("Select a from b where a = 2;");
-        dojo.query("#sqlDisplay").innerHtml = sql;
-    </script>
+    <div id="demoCode1">Select a from b where a = 2;</div>
+    <button dojoType="dijit.form.Button" id="buttonOne" onClick="highlight();">Highlight Code</button>
