@@ -100,13 +100,19 @@ Or by calling ``dojox.highlight.init(someNode)``.
 
 Highlight can also be used via the dojox.highlight.processString function
 
-.. codeviewer::  
-  <style type="text/css">
-    @import "/moin_static163/js/dojox/highlight/resources/highlight.css"
-  </style>
-  <script type="text/javascript">
-    dojo.require("dojox.highlight");
-    dojo.require("dojox.highlight.languages.sql");
+.. cv-compound::
 
-    dojox.highlight.processString("Select a from b where a = 2;");
-  </script>
+  .. cv:: javascript
+
+    <script type="text/javascript">
+      dojo.require("dojox.highlight");
+      dojo.require("dojox.highlight.languages.sql");
+
+      dojox.highlight.processString("Select a from b where a = 2;");
+    </script>
+
+  .. cv:: css
+
+    <style type="text/css">
+      @import "/moin_static163/js/dojox/highlight/resources/highlight.css"
+    </style>
