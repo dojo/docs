@@ -102,16 +102,6 @@ Highlight can also be used via the dojox.highlight.processString function
 
 .. cv-compound::
 
-  .. cv:: javascript
-
-    <script type="text/javascript">
-      dojo.require("dojox.highlight");
-      dojo.require("dojox.highlight.languages.sql");
-
-      var sql = dojox.highlight.processString("Select a from b where a = 2;");
-      dojo.query("#sqlDisplay").innerHtml = sql;
-    </script>
-
   .. cv:: css
 
     <style type="text/css">
@@ -121,3 +111,13 @@ Highlight can also be used via the dojox.highlight.processString function
   .. cv:: html
 
     <div id="sqlDisplay">if you can see this please fix the demo</div>
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+      dojo.require("dojox.highlight");
+      dojo.require("dojox.highlight.languages.sql");
+
+      var sql = dojox.highlight.processString("Select a from b where a = 2;");
+      dojo.query("#sqlDisplay").innerHtml = sql;
+    </script>
