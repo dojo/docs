@@ -97,3 +97,16 @@ Or by calling ``dojox.highlight.init(someNode)``.
 
   // attempt to highlight all <code> blocks on a page:
   dojo.query("code").forEach(dojox.highlight.init);
+
+Highlight can also be used via the dojox.highlight.processString function
+
+.. codeviewer::  
+  <style type="text/css">
+    @import "/moin_static163/js/dojox/highlight/resources/highlight.css"
+  </style>
+  <script type="text/javascript">
+    dojo.require("dojox.highlight");
+    dojo.require("dojox.highlight.languages.sql");
+
+    dojox.highlight.processString("Select a from b where a = 2;");
+  </script>
