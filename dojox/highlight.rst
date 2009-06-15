@@ -113,13 +113,12 @@ Highlight can also be used via the dojox.highlight.processString function
     <script type="text/javascript">
       dojo.require("dojox.highlight");
       dojo.require("dojox.highlight.languages.sql");
-      
-      dojo.addOnLoad(function() {
-        var sql = dojox.highlight.processString("Select a from b where a = 2;");
-        dojo.query("#sqlDisplay").innerHtml = sql;
-      });
     </script>
 
   .. cv:: html
 
     <div id="sqlDisplay">if you can see this please fix the demo</div>
+    <script type="text/javascript">
+        var sql = dojox.highlight.processString("Select a from b where a = 2;");
+        dojo.query("#sqlDisplay").innerHtml = sql;
+    </script>
