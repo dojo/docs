@@ -116,7 +116,7 @@ Highlight can also be used via the dojox.highlight.processString function
       function highlight(){
 
         //highlighting the code
-        var code = dojox.highlight.processString("Select a from b where a = 2;");
+        var code = dojox.highlight.processString("Select a from b where a = 2;").result;
 
         //putting the highlighted code in a html element so you can see
         dojo.attr('demoCode1', {innerHTML: code});
