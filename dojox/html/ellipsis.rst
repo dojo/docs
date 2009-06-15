@@ -11,7 +11,7 @@ dojox.html.ellipsis
 .. contents::
     :depth: 2
 
-**dojox.html.ellipsis** offers cross-broser support for `text-overflow: ellipsis`
+**dojox.html.ellipsis** offers cross-browser support for `text-overflow: ellipsis`
 
 
 =====
