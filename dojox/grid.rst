@@ -152,6 +152,8 @@ errorMessage
   Set to an object that you would like to execute your formatter functions within the scope of.
 ``New in 1.4`` updateDelay
   A value, in milliseconds (default 1) to delay updates when receiving notifications from a datastore.  Set to 0 to update your grid immediately.  A larger value will result in a more performant grid when there are lots of datastore notifications happening, but there will be significant lag time in the update on-screen.  The default value of 1 will basically re-render changes once the browser is idle.
+``New in 1.4`` initialWidth
+  A CSS string value to use for autoWidth grids as their initial width.  If not set, it defaults to the sum width of all columns.  If set, it overrides any values passed to the grid via css or the html style parameter on the source node.
 ``New in 1.3.2`` escapeHTMLInData
   This will escape HTML brackets from the data to prevent HTML from user-inputted data being rendered with may contain JavaScript and result in XSS attacks. This is true by default, and it is recommended that it remain true. Setting this to false will allow data to be displayed in the grid without filtering, and should be only used if it is known that the data won't contain malicious scripts. If HTML is needed in grid cells, it is recommended that you use the formatter function to generate the HTML (the output of formatter functions is not filtered, even with escapeHTMLInData set to true). Setting this to false can be done:
 
