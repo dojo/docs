@@ -94,6 +94,8 @@ onRowClick(e)
    Fired when a row is clicked.  The event contains references to the grid, cell and rowIndex.
 onRowDblClick(e)
    Fired when a row is double clicked.  The event contains references to the grid, cell and rowIndex.
+onRowContextMenu(e)
+   Fired when a row is selected and then right clicked.
 
 And many more ...
 
