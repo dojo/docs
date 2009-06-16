@@ -9,6 +9,7 @@ dijit.Menu
 :Status: Draft
 :Version: 1.2
 :Authors: Bill Keese
+:jsDoc: http://api.dojotoolkit.org/jsdoc/1.3/dijit.Menu
 
 The Menu widget is used for three types of menus:
 
