@@ -22,7 +22,7 @@ This function is one of many helpers used by the dojo Xhr subsystem for handling
 Usage
 =====
 
-Usage is simple and straightforward, you pass the form node or the string id of a form node to convert.  The function will hand back a JavaScript object of the name/value pairs from the form elements.
+Usage is simple and straightforward, you pass the form node or the string id of a form node to convert.  The function will hand back a JavaScript object of the name/value pairs from the form elements. The values are either strings or arrays. If a checkbox group has a single item selected the function will return a string value; if several, an array.
 
 .. code-block :: javascript
  :linenos:
@@ -76,8 +76,13 @@ Example 1: Using formToObject to create an object version of a form
     <button id="convertForm" dojoType="dijit.form.Button">Click to convert the form to an object</button><br><br>
     <b>The FORM</b><br><br>
     <form id="myform">
-       <input type="text" name="field1" value="value1">
-       <input type="text" name="field2" value="value2">
+       field1: <input type="text" name="field1" value="value1"><br />
+       field2: <input type="text" name="field2" value="value2"><br />
+       cb_group.foo: <input id="f6_checkbox1" type="checkbox" name="cb_group" value="foo" checked><br />
+       cb_group.boo: <input id="f6_checkbox2" type="checkbox" name="cb_group" value="boo"><br />
+       radio_group.baz: <input id="f6_radio1" type="radio" name="radio_group" value="baz"><br />
+       radio_group.bam: <input id="f6_radio2" type="radio" name="radio_group" value="bam" checked><br />
+       radio_group.baf: <input id="f6_radio3" type="radio" name="radio_group" value="baf"><br />
        <input type="button" name="someButton" value="someValue">
     </form>
     <br><br>
