@@ -7,6 +7,7 @@ dijit.Dialog
 :Status: Draft
 :Version: 1.0
 :Available: since V?
+:jsDoc: http://api.dojotoolkit.org/jsdoc/HEAD/dijit.Dialog
 
 .. contents::
     :depth: 2
