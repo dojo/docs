@@ -1,6 +1,6 @@
 #format dojo_rst
 
-dojox.io.script
+dojo.io.script
 ===============
 
 :Status: Contributed, Draft
@@ -14,7 +14,7 @@ dojox.io.script
 Introduction
 ============
 
-This is an alternate IO mechanism to `dojo.xhrGet <dojo/xhrGet>`_ that has the capability of doing cross-site data access.  It accomplishes this feat by doing an IO call via a dynamically inserted <SCRIPT> tag into your web page.  
+This is an alternate IO mechanism to `dojo.xhrGet <dojo/xhrGet>`_ that has the capability of doing cross-site data access.  It accomplishes this feat by doing an IO call via a dynamically inserted <SCRIPT> tag into your web page.
 
 =====
 JSONP
@@ -61,7 +61,7 @@ dojo.io.script.get() supported object properties
 |                      |**This parameter is optional**                                                                                          |
 +----------------------+------------------------------------------------------------------------------------------------------------------------+
 
-**Note:** "handleAs" is NOT applicable to dojo.io.script.get() calls, since it is implied by the usage of "callbackParamName" (response will be a JSONP call returning JSON) or "checkString" (response is pure JavaScript defined in the body of the script that was attached). 
+**Note:** "handleAs" is NOT applicable to dojo.io.script.get() calls, since it is implied by the usage of "callbackParamName" (response will be a JSONP call returning JSON) or "checkString" (response is pure JavaScript defined in the body of the script that was attached).
 
 ========
 Examples
@@ -71,7 +71,7 @@ Example 1: dojo.io.scriot call to fetch data from the Google Search API (JSONP)
 -------------------------------------------------------------------------------
 
 .. cv-compound ::
-  
+
   .. cv :: javascript
 
     <script>
@@ -102,7 +102,7 @@ Example 1: dojo.io.scriot call to fetch data from the Google Search API (JSONP)
       dojo.addOnLoad(searchGoogle);
     </script>
 
-  .. cv :: html 
+  .. cv :: html
 
     <b>Google Search Results for 'dojo toolkit' (In JSON):</b>
     <div id="results" style="height: 200px;"></div>
