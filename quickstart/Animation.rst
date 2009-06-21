@@ -159,7 +159,7 @@ You can define these callback functions as part of the Object parameter used to 
 	});
 	animation.play(); // start it up
 
-**new in Dojo 1.4** - The onEnd and beforeBegin events are fired passing a reference to the node being animation so that you may more easily manipulate a node immediately before or after an animation:
+**new in Dojo 1.4** - The onEnd and beforeBegin events are fired passing a reference to the node being animated so that you may more easily manipulate a node immediately before or after an animation:
 
 .. code-block :: javascript
     :linenos:
