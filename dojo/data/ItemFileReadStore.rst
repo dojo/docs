@@ -132,7 +132,7 @@ The first is the the *_reference* structure. The *_reference* structure is a Jav
     ]
   }
 
-So, by calling store.getValue(bobItem, "spouse"), the return will be the datastore item identified by *Nancy*.
+So, by calling store.getValue(bobItem, "spouse"), the return will be the datastore item identified by *Sally*.
 
 
 **Custom Types:**
