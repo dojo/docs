@@ -11,7 +11,7 @@ dojo.hasClass
 .. contents::
    :depth: 2
 
-Returns a boolean depending on wether or not a node has a passed class string.
+Returns a boolean depending on whether or not a node has a passed class string.
 
 =====
 Usage
