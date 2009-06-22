@@ -16,15 +16,18 @@ Dojo is divided into two parts: ``dojo.js``, and the rest of Dojo Core. Typicall
 These pages cover both cases, and indicate how they are provided.
 
 Base Dojo: dojo.js
-------------------
+==================
 
 Dojo Base is the functionality you get by just including a stock built dojo.js or dojo.xd.js in your page.
 
-* `djConfig <djConfig>`_
+`djConfig <djConfig>`_
+----------------------
 
   Configuring Dojo with djConfig
 
-* Array utilities.
+Array utilities
+---------------
+
   Details on dojo.every, dojo.filter, dojo.forEach, dojo.indexOf, dojo.lastIndexOf, dojo.map, and dojo.some.
 
   * `dojo.forEach <dojo/forEach>`_
@@ -39,7 +42,8 @@ Dojo Base is the functionality you get by just including a stock built dojo.js o
   
     * NodeList.indexOf, NodeList.lastIndexOf, NodeList.forEach, NodeList.every, NodeList.some, NodeList.concat, NodeList.map, NodeList.filter, NodeList.at
 
-* Language Utilities
+Language Utilities
+------------------
 
   * `dojo.Deferred <dojo/Deferred>`_
 
@@ -81,7 +85,8 @@ Dojo Base is the functionality you get by just including a stock built dojo.js o
 
     Trim whitespace from a String
   
-* DOM 
+DOM 
+---
 
   * `dojo.query <dojo/query>`_
 
@@ -197,7 +202,8 @@ Dojo Base is the functionality you get by just including a stock built dojo.js o
 
       Getter/setter for the content-box of node
 
-* Effects
+Effects
+-------
 
   * `dojo.animateProperty <dojo/animateProperty>`_
 
@@ -215,7 +221,8 @@ Dojo Base is the functionality you get by just including a stock built dojo.js o
   
   * `dojo.fadeIn <dojo/fadeIn>`_
 
-* Events
+Events
+------
 
   * `dojo.connect <dojo/connect>`_
 
@@ -254,7 +261,8 @@ Dojo Base is the functionality you get by just including a stock built dojo.js o
     Stop an event's bubbling and propagation.
     
   
-* Document Lifecycle
+Document Lifecycle
+------------------
 
   * `dojo.addOnLoad <dojo/addOnLoad>`_
 
@@ -272,7 +280,8 @@ Dojo Base is the functionality you get by just including a stock built dojo.js o
 
      Signal fired by impending window destruction
 
-* Ajax
+Ajax / IO
+---------
 
   * `IO Pipeline Topics <dojo/ioPipelineTopics>`_
   * `dojo.xhr` <dojo/xhr>`_
@@ -286,7 +295,8 @@ Dojo Base is the functionality you get by just including a stock built dojo.js o
   * `dojo.rawXhrPost <dojo/rawXhrPost>`_
   * `dojo.rawXhrPut <dojo/rawXhrPut>`_
 
-* Package System
+Package System
+--------------
 
   * `dojo.registerModulePath <dojo/registerModulePath>`_
 
@@ -300,7 +310,8 @@ Dojo Base is the functionality you get by just including a stock built dojo.js o
   
   * dojo.moduleUrl
 
-* JSON
+JSON Tools
+----------
 
   * `dojo.fromJson <dojo/fromJson>`_
 
@@ -310,7 +321,8 @@ Dojo Base is the functionality you get by just including a stock built dojo.js o
 
     Returns a JSON serialization of an object
 
-* Objects / OO Tools
+Objects / OO Tools
+------------------
 
   * `dojo.mixin <dojo/mixin>`_
   
@@ -346,7 +358,8 @@ Dojo Base is the functionality you get by just including a stock built dojo.js o
     Create classes out of each node in the list
 
 
-* Colors
+Colors
+------
 
   * `dojo._base.Color <dojo/_base/Color>`_
 
@@ -361,7 +374,8 @@ Dojo Base is the functionality you get by just including a stock built dojo.js o
   
   * dojo.colorFromRgb.
 
-* Miscellaneous 
+Miscellaneous Base
+------------------
 
   * `dojo.keys <dojo/keys>`_
   
@@ -396,7 +410,7 @@ Dojo Base is the functionality you get by just including a stock built dojo.js o
     Evaluate some string of JavaScript
     
 Dojo Core
----------
+=========
 
 * `dojo.AdapterRegistry <dojo/AdapterRegistry>`_
 
@@ -540,7 +554,7 @@ Dojo Core
   String utilities for Dojo
 
 See also
---------
+========
 
 * `Dijit <dijit/index>`__
 
