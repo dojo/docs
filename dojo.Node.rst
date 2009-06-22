@@ -35,3 +35,6 @@ This idea simply follows the same design idea behind dojo.query() returning a No
 Two of the most popular javascript frameworks in use today, Prototype and jQuery, have extensions to the DOM element which enables them to be treated as first class objects with extensible functionality.  Dojo has taken the approach that doing so is bad because it pollutes the global namespace.  However, dojo already does something like this with dijit.byId(), which returns a widget instance. The DOM Node can be extended in the same way without changes to the global namespace and keep the developer aware that they are dealing with an extended dojo.Node type while still leaving them the option of using the original DOM Node if they so require.
 
 Javascript often involves a good amount of DOM manipulation. The harder we make it for developers to do so, the less willing they are to use the our framework.
+
+**NOTE** This function exists in plugd, as dojo.node(someid) - It will be proposed to Dojo Core as node.js, perhaps landing in time for Dojo 1.4
+see: http://code.google.com/p/plugd/source/browse/trunk/node.js
