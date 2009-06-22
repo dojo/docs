@@ -192,8 +192,13 @@ DOM
       
     * Class Utilities
     
-        * `hasClass <dojo/hasClass>`_, `addClass <dojo/addClass>`_, `removeClass <dojo/removeClass>`_, `toggleClass <dojo/toggleClass>`_
+      * `dojo.hasClass <dojo/hasClass>`_ 
 
+      * `dojo.addClass <dojo/addClass>`_
+
+      * `dojo.removeClass <dojo/removeClass>`_
+
+      * `dojo.toggleClass <dojo/toggleClass>`_
 
     * `dojo.marginBox <dojo/marginBox>`_
 
