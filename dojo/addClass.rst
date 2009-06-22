@@ -45,5 +45,5 @@ will find all the nodes with `class="randomClass"` and add "anotherClass" to the
 See also
 ========
 
-* `dojo.hasClass <dojo/hasClass>`
+* `dojo.hasClass <dojo/hasClass>`_
 * `dojo.removeClass <dojo/removeClass>`_
