@@ -1,9 +1,22 @@
 #format dojo_rst
 
 dojo.addClass
--------------
+=============
+
+:Status: Draft
+:Version: 1.0
+:Project owner: ?--
+:Available: since V?
+
+.. contents::
+   :depth: 2
 
 Adds a CSS class to a node.
+
+
+=====
+Usage
+=====
 
 .. code-block :: javascript
   :linenos:
@@ -27,4 +40,10 @@ When using addClass with dojo.query, the node parameter is omitted:
 
 will find all the nodes with `class="randomClass"` and add "anotherClass" to the class attribute.
 
-Relates to `dojo.hasClass <dojo/hasClass>`_ and `dojo.removeClass <dojo/removeClass>`_
+
+========
+See also
+========
+
+* `dojo.hasClass <dojo/hasClass>`
+* `dojo.removeClass <dojo/removeClass>`_
