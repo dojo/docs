@@ -15,174 +15,179 @@ Dojo is divided into two parts: ``dojo.js``, and the rest of Dojo Core. Typicall
 
 These pages cover both cases, and indicate how they are provided.
 
-dojo.js
--------
+Base Dojo: dojo.js
+------------------
 
-Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js in your page.
+Dojo Base is the functionality you get by just including a stock built dojo.js or dojo.xd.js in your page.
 
-* `dojo._base <dojo/base>`_
+* `djConfig <djConfig>`_
 
-  * `dojo._base._loader <dojo/base/loader>`_
+  Configuring Dojo with djConfig
 
-    Dojo's Bootstrap
+* Array utilities.
+  Details on dojo.every, dojo.filter, dojo.forEach, dojo.indexOf, dojo.lastIndexOf, dojo.map, and dojo.some.
 
-    * `djConfig <djConfig>`_
+  * `dojo.forEach <dojo/forEach>`_
 
-      Configuring Dojo with djConfig
+    Invokes a callback function for every item in array
 
-    * `dojo.addOnLoad <dojo/addOnLoad>`_
+  * `dojo.map <dojo/map>`_
 
-      Call functions after the DOM has finished loading and widgets declared in markup have been instantiated
+    Applies a callback to each element of arr and returns an Array with the results
+    
+  * `NodeList array methods <dojo/NodeList#array>`_
+  
+    * NodeList.indexOf, NodeList.lastIndexOf, NodeList.forEach, NodeList.every, NodeList.some, NodeList.concat, NodeList.map, NodeList.filter, NodeList.at
 
-    * `dojo.addOnUnload <dojo/addOnUnload>`_
+* Language Utilities
 
-      Call functions when the page unloads
+  * `dojo.Deferred <dojo/Deferred>`_
 
-    * `dojo.addOnWindowUnload <dojo/addOnWindowUnload>`_
+    Communication between threads
 
-      Call functions when window.onunload fires
+  * `dojo.hitch <dojo/hitch>`_
+  
+    Function that generates a wrapper function that ensures a function that will only ever execute in a defined scope.
+    
+  * `dojo.partial <dojo/partial>`_
+    
+    Function that generates a wrapper function that ensures a function will only ever execute globally.
 
-    * `dojo.attr <dojo/attr>`_
+  * `dojo.isString <dojo/isString>`_
 
-      Modifying DOM node attributes
+    Checks if the parameter is a String
+
+  * `dojo.isArray <dojo/isArray>`_
+
+    Checks if the parameter is an Array
+
+  * `dojo.isFunction <dojo/isFunction>`_
+
+    Checks if the parameter is a Function
+
+  * `dojo.isObject <dojo/isObject>`_
+
+    Checks if the parameter is an Object
+
+  * `dojo.isArrayLike <dojo/isArrayLike>`_
+
+    Checks if the parameter is like an Array
+
+  * `dojo.isAlien <dojo/isAlien>`_
+
+    Checks if the parameter is a built-in function
+
+  * `dojo.trim <dojo/trim>`_
+
+    Trim whitespace from a String
+  
+* DOM 
+
+  * `dojo.query <dojo/query>`_
+
+    The swiss army knife of DOM node manipulation in Dojo. 
+  
+  * `dojo.NodeList <dojo/NodeList>`_
+
+    A class to handle a list of DOM nodes. Most commonly returned from a `dojo.query` call.
+
+  * `dojo.doc <dojo/doc>`_
+
+    Alias for the current document
+
+  * `dojo.body <dojo/body>`_
+
+    Return the body element of the document
+
+  * `dojo.byId <dojo/byId>`_
+
+    Select a DOM node by 'id'
+
+  * Manipulation
 
     * `dojo.create <dojo/create>`_
 
       Creates a dom node with optional values and placement
 
-    * `dojo.deprecated <dojo/deprecated>`_
-
-      Log a debug message to indicate that a behavior has been deprecated
-
-    * `dojo.exists <dojo/exists>`_
-
-      Determine if an object supports a given method
-
-    * `dojo.getObject <dojo/getObject>`_
-
-      Get a property from a dot-separated string, such as "A.B.C"
-
-    * `dojo.global <dojo/global>`_
-
-      Alias for the global scope
-
-    * `dojo.mixin <dojo/mixin>`_
-
-      Multiple inheritance
-
     * `dojo.place <dojo/place>`_
 
       Place DOM nodes relative to others
+      
+    * NodeList.place
+        
+      Place DOM nodes in list relative to others
 
-    * `dojo.registerModulePath <dojo/registerModulePath>`_
+    * NodeList.orphan 
+    
+    * NodeList.adopt
+    
+    * NodeList.clone
+    
+    * NodeList.addContent
+    
+    * `dojo.destroy <dojo/destroy>`_
+    
+      Destroy a DOM element
+    
+    * NodeList.destroy
 
-      Maps module name to a path
+      
+    * `dojo.empty <dojo/empty>`_
+    
+      Empty the contents of a DOM element
 
-    * `dojo.require <dojo/require>`_
+    * NodeList.empty 
 
-      Loads a Javascript module from the appropriate URI
 
-    * `dojo.setObject <dojo/setObject>`_
 
-      Set a property from a dot-separated string, such as "A.B.C"
+  * Attributes
 
-    * `dojo.version <dojo/version>`_
+    * `dojo.formToJson <dojo/formToJson>`_
+    
+      Create an object from an form node
+      
+    * `dojo.attr <dojo/attr>`_
 
-      The current version number of Dojo
+      Modifying DOM node attributes
 
-    * `dojo.windowUnloaded <dojo/windowUnloaded>`_
+    * NodeList.attr
+    
+      Set/Get attributes for nodes in the list
 
-      Signal fired by impending window destruction
+    * dojo.hasAttr
+    
+    * dojo.removeAttr
+      
+    * `dojo.formToObject <dojo/formToObject>`_
+    * `dojo.formToQuery <dojo/formToQuery>`_
 
-  * `dojo._base.array <dojo/_base/array>`_
+    * dojo.isDescendant
+    
+    * dojo.setSelectable
+    
 
-    Array utilities.
-    Details on dojo.every, dojo.filter, dojo.forEach, dojo.indexOf, dojo.lastIndexOf, dojo.map, and dojo.some.
-
-    * `dojo.forEach <dojo/forEach>`_
-
-      Invokes a callback function for every item in array
-
-    * `dojo.map <dojo/map>`_
-
-      Applies a callback to each element of arr and returns an Array with the results
-
-  * `dojo._base.Color <dojo/_base/Color>`_
-
-    Color object and utility functions to handle colors.
-    Details on dojo.colorFromArray, dojo.colorFromHex, dojo.colorFromString and dojo.colorFromRgb.
-
-  * `dojo._base.connect <dojo/_base/connect>`_
-
-    Functions for connecting methods to events and to subscribe and publish events
-
-    * `dojo.connect <dojo/connect>`_
-
-      Connects events to methods
-
-    * `dojo.disconnect <dojo/disconnect>`_
-
-      Disconnects methods from linked topics
-
-    * `dojo.subscribe <dojo/subscribe>`_
-
-      Linked a listener to a named topic
-
-    * `dojo.unsubscribe <dojo/unsubscribe>`_
-
-      Remove a topic listener
-
-    * `dojo.publish <dojo/publish>`_
-
-      Publish an event to all subscribers of a topic
-
-    * `dojo.connectPublisher <dojo/connectPublisher>`_
-
-      Ensure that everytime an event is called, a message is published on the topic.
-
-  * `dojo._base.declare <dojo/_base/declare>`_
-
-    Defining Classes
-
-    * `dojo.declare <dojo/declare>`_
-
-      Creates a constructor using a compact notation for inheritance and prototype extension
-
-  * `dojo._base.Deferred <dojo/_base/Deferred>`_
-
-    Managing Callbacks
-
-    * `dojo.Deferred <dojo/Deferred>`_
-
-      Communication between threads
-
-  * `dojo._base.event <dojo/_base/event>`_
-
-    DOM Events
-
-  * `dojo._base.fx <dojo/_base/fx>`_
-
-    Dojo animation effects
-
-    * `dojo.animateProperty <dojo/animateProperty>`_
-
-      A very useful method for animating CSS properties
-
-  * `dojo._base.html <dojo/_base/html>`_
-
-    Basic DOM handling functions
-
-    * `dojo.byId <dojo/byId>`_
-
-      Select a DOM node by 'id'
-
-    * `dojo.style <dojo/style>`_
-
-      A getter/setter for styles on a DOM node
+  * Styles
 
     * `dojo.coords <dojo/coords>`_
 
       Getter for the coordinates (relative to parent and absolute) of a dom node.
+      
+    * NodeList.coords
+    
+      Getter for the coordinates of each node in the list
+
+    * `dojo.style <dojo/style>`_
+
+      A getter/setter for styles on a DOM node
+      
+    * `dojo.getComputedStyle <dojo/getComputedStyle>`_
+    
+      Return a cachable object of all computed styles for a node
+      
+    * Class Utilities
+    
+        * `hasClass <dojo/hasClass>`_, `addClass <dojo/addClass>`_, `removeClass <dojo/removeClass>`_, `toggleClass <dojo/toggleClass>`_
+
 
     * `dojo.marginBox <dojo/marginBox>`_
 
@@ -192,108 +197,204 @@ Dojo Base is the functionality you get by just including dojo.js or dojo.xd.js i
 
       Getter/setter for the content-box of node
 
-  * `dojo._base.json <dojo/_base/json>`_
+* Effects
 
-    JSON helpers
+  * `dojo.animateProperty <dojo/animateProperty>`_
 
-    * `dojo.fromJson <dojo/fromJson>`_
+    The workhorse of most `dojo.fx <dojo/fx>`_ animations. Used for animating CSS properties
+    
+  * `dojo.Animation <dojo/Animation>`_
+  
+    **1.4+** previously dojo._Animation, the class behind all dojo.fx
+    
+  * `dojo.anim <dojo/anim>`_
+  
+    Shorthand version of animateProperty using positional arguments
+    
+  * `dojo.fadeOut <dojo/fadeOut>`_
+  
+  * `dojo.fadeIn <dojo/fadeIn>`_
 
-      Parses a JSON string to return a JavaScript object
+* Events
 
-    * `dojo.toJson <dojo/toJson>`_
+  * `dojo.connect <dojo/connect>`_
 
-      Returns a JSON serialization of an object
+    Connects events to methods
 
-  * `dojo._base.lang <dojo/_base/lang>`_
+  * `NodeList.connect <dojo/NodeList#connect>`_
+  
+    Connects events to every node in the list, like dojo.connect
+    
+  * `NodeList.events <dojo/NodeList#events>`_
+  
+    Common event names mapped as functions on a NodeList - eg: .onclick(function(){})
 
-    Support for Polymorphism
+  * `dojo.disconnect <dojo/disconnect>`_
 
-    * `dojo.hitch <dojo/hitch>`_
+    Disconnects methods from linked topics
 
-      Function that generates a wrapper function that ensures a function that will only ever execute in a defined scope.
+  * `dojo.subscribe <dojo/subscribe>`_
 
-    * `dojo.isString <dojo/isString>`_
+    Linked a listener to a named topic
 
-      Checks if the parameter is a String
+  * `dojo.unsubscribe <dojo/unsubscribe>`_
 
-    * `dojo.isArray <dojo/isArray>`_
+    Remove a topic listener
 
-      Checks if the parameter is an Array
+  * `dojo.publish <dojo/publish>`_
 
-    * `dojo.isFunction <dojo/isFunction>`_
+    Publish an event to all subscribers of a topic
 
-      Checks if the parameter is a Function
+  * `dojo.connectPublisher <dojo/connectPublisher>`_
 
-    * `dojo.isObject <dojo/isObject>`_
+    Ensure that everytime an event is called, a message is published on the topic.
+    
+  * `dojo.stopEvent <dojo/stopEvent>`_
+  
+    Stop an event's bubbling and propagation.
+    
+  
+* Document Lifecycle
 
-      Checks if the parameter is an Object
+  * `dojo.addOnLoad <dojo/addOnLoad>`_
 
-    * `dojo.isArrayLike <dojo/isArrayLike>`_
+    Call functions after the DOM has finished loading and widgets declared in markup have been instantiated
 
-      Checks if the parameter is like an Array
+  * `dojo.addOnUnload <dojo/addOnUnload>`_
 
-    * `dojo.isAlien <dojo/isAlien>`_
+    Call functions when the page unloads
 
-      Checks if the parameter is a built-in function
+  * `dojo.addOnWindowUnload <dojo/addOnWindowUnload>`_
 
-  * `dojo._base.NodeList <dojo/_base/NodeList>`_
+    Call functions when window.onunload fires
 
-    Syntactic sugar for chaining, common iteration operations, animation, and node manipulation
+  * `dojo.windowUnloaded <dojo/windowUnloaded>`_
 
-    * `dojo.NodeList <dojo/NodeList>`_
+     Signal fired by impending window destruction
 
-      A class to handle a list of DOM nodes
+* Ajax
 
-  * `dojo._base.query <dojo/_base/query>`_
+  * `IO Pipeline Topics <dojo/ioPipelineTopics>`_
+  * `dojo.xhr` <dojo/xhr>`_
+  
+    Core for all xhr* verbs, eg: xhrPost, getGet
+  
+  * `dojo.xhrDelete <dojo/xhrDelete>`_
+  * `dojo.xhrGet <dojo/xhrGet>`_
+  * `dojo.xhrPost <dojo/xhrPost>`_
+  * `dojo.xhrPut <dojo/xhrPut>`_
+  * `dojo.rawXhrPost <dojo/rawXhrPost>`_
+  * `dojo.rawXhrPut <dojo/rawXhrPut>`_
 
-    A relatively full-featured CSS3 query library
+* Package System
 
-    * `dojo.query <dojo/query>`_
+  * `dojo.registerModulePath <dojo/registerModulePath>`_
 
-      The swiss army knife of DOM node manipulation in Dojo
+    Maps module name to a path
 
-  * `dojo._base.window <dojo/_base/window>`_
+  * `dojo.require <dojo/require>`_
 
-    Functions for dealing with the document-wide DOM and context related stuff
+    Loads a Javascript module from the appropriate URI
+    
+  * dojo.provide
+  
+  * dojo.moduleUrl
 
-    * `dojo.doc <dojo/doc>`_
+* JSON
 
-      Alias for the current document
+  * `dojo.fromJson <dojo/fromJson>`_
 
-    * `dojo.body <dojo/body>`_
+    Parses a JSON string to return a JavaScript object
 
-      Return the body element of the document
+  * `dojo.toJson <dojo/toJson>`_
 
-    * `dojo.setContext <dojo/setContext>`_
+    Returns a JSON serialization of an object
 
-      Changes the behavior of many core Dojo functions that deal with namespace and DOM lookup
+* Objects / OO Tools
 
-    * `dojo.withGlobal <dojo/withGlobal>`_
+  * `dojo.mixin <dojo/mixin>`_
+  
+    Mixes one object into another. Can be used as a shallow copy
+    
+  * `dojo.declare <dojo/declare>`_
 
-      Call callback with globalObject as dojo.global and globalObject.document as dojo.doc
+    Creates a constructor using a compact notation for inheritance and prototype extension
 
-    * `dojo.withDoc <dojo/withDoc>`_
+  * `dojo.extend <dojo/extend>`_
 
-      Call callback with documentObject as dojo.doc
+  * `dojo.exists <dojo/exists>`_
 
-  * `dojo._base.xhr <dojo/_base/xhr>`_
+    Determine if an object supports a given method
+    
+  * `dojo.delegate <dojo/delegate>`_
+  
+    Delegate an Object (beget)
 
-    AJAX I/O transports and utility methods
+  * `dojo.getObject <dojo/getObject>`_
 
-    * `IO Pipeline Topics <dojo/ioPipelineTopics>`_
-    * `dojo.formToJson <dojo/formToJson>`_
-    * `dojo.fieldToObject <dojo/fieldToObject>`_
-    * `dojo.formToObject <dojo/formToObject>`_
-    * `dojo.formToQuery <dojo/formToQuery>`_
-    * `dojo.objectToQuery <dojo/objectToQuery>`_
-    * `dojo.queryToObject <dojo/queryToObject>`_
-    * `dojo.xhrDelete <dojo/xhrDelete>`_
-    * `dojo.xhrGet <dojo/xhrGet>`_
-    * `dojo.xhrPost <dojo/xhrPost>`_
-    * `dojo.xhrPut <dojo/xhrPut>`_
-    * `dojo.rawXhrPost <dojo/rawXhrPost>`_
-    * `dojo.rawXhrPut <dojo/rawXhrPut>`_
+    Get a property from a dot-separated string, such as "A.B.C"
 
+  * `dojo.setObject <dojo/setObject>`_
+
+    Set a property from a dot-separated string, such as "A.B.C"
+
+  * `dojo.objectToQuery <dojo/objectToQuery>`_
+  * `dojo.queryToObject <dojo/queryToObject>`_
+
+  * `NodeList.instantiate <dojo/NodeList#instantiate>`_
+  
+    Create classes out of each node in the list
+
+
+* Colors
+
+  * `dojo._base.Color <dojo/_base/Color>`_
+
+    Color object and utility functions to handle colors.
+    Details on 
+    
+  * dojo.colorFromArray
+  
+  * dojo.colorFromHex
+  
+  * dojo.colorFromString
+  
+  * dojo.colorFromRgb.
+
+* Miscellaneous 
+
+  * `dojo.keys <dojo/keys>`_
+  
+    A collection of key constants.
+    
+  * `dojo.deprecated <dojo/deprecated>`_
+
+    Log a debug message to indicate that a behavior has been deprecated
+
+  * `dojo.version <dojo/version>`_
+
+    The current version number of Dojo
+
+  * `dojo.global <dojo/global>`_
+
+    Alias for the global scope
+
+  * `dojo.setContext <dojo/setContext>`_
+
+    Changes the behavior of many core Dojo functions that deal with namespace and DOM lookup
+
+  * `dojo.withGlobal <dojo/withGlobal>`_
+
+    Call callback with globalObject as dojo.global and globalObject.document as dojo.doc
+
+  * `dojo.withDoc <dojo/withDoc>`_
+
+    Call callback with documentObject as dojo.doc
+
+  * `dojo.eval <dojo/eval>`_
+  
+    Evaluate some string of JavaScript
+    
 Dojo Core
 ---------
 
@@ -313,6 +414,10 @@ Dojo Core
 
   A Common Locale Data Repository (CLDR) implementation
 
+* `dojo.cache <dojo/cache>`_ 
+
+  **1.4+** A mechanism to cache inline text.
+  
 * `dojo.colors <dojo/colors>`_
 
   CSS color manipulation functions
@@ -390,6 +495,9 @@ Dojo Core
 * `dojo.NodeList-html <dojo/NodeList-html>`_
 
   Adds a chainable html method to dojo.query()
+
+* `dojo.NodeList-manipulate <dojo/NodeList-manipulate>`_
+* `dojo.NodeList-traverse <dojo/NodeList-traverse>`_
 
 * `dojo.number <dojo/number>`_
 
