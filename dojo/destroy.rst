@@ -11,7 +11,7 @@ dojo.destroy
 .. contents::
    :depth: 2
 
-Deletes all children and the node itself Group DOM Query & Manipulation related pages into a book section.
+Destroys a DOM element. dojo.destroy deletes all children and the node itself.
 
 
 ============
