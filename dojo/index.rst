@@ -15,6 +15,7 @@ Dojo is divided into two parts: ``dojo.js``, and the rest of Dojo Core. Typicall
 
 These pages cover both cases, and indicate how they are provided.
 
+==================
 Base Dojo: dojo.js
 ==================
 
@@ -408,7 +409,8 @@ Miscellaneous Base
   * `dojo.eval <dojo/eval>`_
   
     Evaluate some string of JavaScript
-    
+
+=========    
 Dojo Core
 =========
 
@@ -553,6 +555,8 @@ Dojo Core
 
   String utilities for Dojo
 
+
+========
 See also
 ========
 
