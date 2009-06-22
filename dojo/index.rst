@@ -279,7 +279,7 @@ Document Lifecycle
 
   * `dojo.windowUnloaded <dojo/windowUnloaded>`_
 
-     Signal fired by impending window destruction
+    Signal fired by impending window destruction
 
 Ajax / IO
 ---------
@@ -307,9 +307,9 @@ Package System
 
     Loads a Javascript module from the appropriate URI
     
-  * dojo.provide
+  * `dojo.provide <dojo/provide>`_
   
-  * dojo.moduleUrl
+  * `dojo.moduleUrl <dojo/moduleUrl>`_
 
 JSON Tools
 ----------
