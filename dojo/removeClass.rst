@@ -43,21 +43,6 @@ The example above will remove class="someClass" from all nodes that have class="
 
 
 ========
-Examples
-========
-
-Programmatic example
---------------------
-
-TODO: example
-
-Declarative example
--------------------
-
-TODO: example
-
-
-========
 See also
 ========
 
