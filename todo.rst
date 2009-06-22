@@ -57,6 +57,11 @@ Top priority: dojo.js
   needed: full page
 
 
+* `dojo.toggleClass <dojo/toggleClass>`_
+
+  needed: full page
+
+
 =====================
 Priority 2: Dojo Core
 =====================
