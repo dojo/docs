@@ -11,7 +11,7 @@ dojo.empty
 .. contents::
    :depth: 2
 
-Deletes all children but keeps node there.
+Empty the contents of a DOM element. dojo.empty deletes all children but keeps the node there.
 
 
 ============
