@@ -1,10 +1,21 @@
 #format dojo_rst
 
 dojo.hasClass
--------------
+=============
 
-Returns a boolean depending on weather or not a node has a passed class string.
+:Status: Draft
+:Version: 1.0
+:Project owner: ?--
+:Available: since V?
 
+.. contents::
+   :depth: 2
+
+Returns a boolean depending on wether or not a node has a passed class string.
+
+=====
+Usage
+=====
 
 Consider the following html:
 
@@ -33,7 +44,27 @@ Using dojo.query to find a node and check if it has a class:
         /* it does */
      }
   });
-   
-See also: `dojo.addClass <dojo/addClass>`_ and `dojo.removeClass <dojo/removeClass>`_ 
 
 Note: You do not need to explicitly check for hasClass before adding or removing a class with dojo.addClass or dojo.removeClass, they do it for you.
+
+========
+Examples
+========
+
+Programmatic example
+--------------------
+
+TODO: example
+
+Declarative example
+-------------------
+
+TODO: example
+
+
+========
+See also
+========
+
+* `dojo.addClass <dojo/addClass>`_
+* `dojo.removeClass <dojo/removeClass>`_ 
