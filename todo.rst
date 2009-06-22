@@ -47,6 +47,13 @@ Top priority: dojo.js
   needed dojo.destroy("nodeId"); // deletes all children and the node itself
   Group DOM Query & Manipulation related pages into a book section
 
+* `dojo.provide <dojo/provide>`_
+
+  needed: full page
+
+* `dojo.moduleUrl <dojo/moduleUrl>`_
+
+  needed: full page
 
 
 =====================
