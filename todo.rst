@@ -40,11 +40,12 @@ Top priority: dojo.js
 
 * `dojo.empty <dojo/empty>`_
 
-  needed: dojo.empty("nodeId"); // deletes all children but keeps node there
+  needed: full page
 
 * `dojo.destroy <dojo/destroy>`_
 
-  needed dojo.destroy("nodeId"); // deletes all children and the node itself
+  needed: full page
+
   Group DOM Query & Manipulation related pages into a book section
 
 * `dojo.provide <dojo/provide>`_
