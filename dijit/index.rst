@@ -3,12 +3,17 @@
 Dijit
 =====
 
+.. contents::
+   :depth: 2
+
 Dijit is Dojo's UI Library, and lives as a separate namespace ``dijit``. Dijit requires Dojo Core. Each of the widgets and functionality provided by Dijit is describe in the following sections, though the aforementioned `quickstart <quickstart/index>`_ guides cover some basics.
 
 * `About Dijit <dijit/info>`_
 
+
+=======
 Widgets
--------
+=======
 
 * `dijit._Templated <dijit/_Templated>`_
 * `dijit._Widget <dijit/_Widget>`_
@@ -41,8 +46,9 @@ Widgets
   * `ForestStoreModel <dijit/tree/ForestStoreModel>`_
 
 
+=============
 Form handling
--------------
+=============
 
 * `dijit.form <dijit/form>`_
 
@@ -132,8 +138,10 @@ Form handling
 
       A scale with a handle you can drag up/down or left/right to select a value
 
+
+======
 Layout
-------
+======
 
 * `dijit.layout <dijit/layout>`_
 
