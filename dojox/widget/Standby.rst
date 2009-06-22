@@ -4,7 +4,7 @@ dojox.widget.Standby
 ====================
 
 :Status: Draft
-:Version: 1.3
+:Version: 1.4
 :Project owner: Jared Jurkiewicz
 :Available: since V1.3
 
@@ -26,6 +26,31 @@ Known issues
 =============================
 Constructor params/attributes
 =============================
+
++------------------------+--------------------------------------------------------------------------+--------------------+
+|**Parameter**           |**Description**                                                           |**Available Since** |
++------------------------+--------------------------------------------------------------------------+--------------------+
+|target                  |The target DOMNode id, DOMNode reference, or Widget ID to overlay when    | 1.3                |
+|                        |show() is called.                                                         |                    |
++------------------------+--------------------------------------------------------------------------+--------------------+
+|image                   |The URL of the image to center in the blocking div overlay                | 1.3                |
++------------------------+--------------------------------------------------------------------------+--------------------+
+|imageText               |The ALT tag text for the centered image.                                  | 1.3                |
++------------------------+--------------------------------------------------------------------------+--------------------+
+|color                   |The background color of the translucent DIV overlay                       | 1.3                |
++------------------------+--------------------------------------------------------------------------+--------------------+
+|text                    |The text to display in the center of the div overlay (alternate to image) | 1.4                |
+|                        |This is used in cases where you don't want to center an image, but just   |                    |
+|                        |display text.  Defaults to 'Please wait...'                               |                    |
++------------------------+--------------------------------------------------------------------------+--------------------+
+|centerIndicator         |Which center indicator to use, the image (with its alt text), or just the | 1.4                |
+|                        |text provided in the 'ext' attribute                                      |                    |
++------------------------+--------------------------------------------------------------------------+--------------------+
+|zIndex                  |A specific zIndex value to position the overlay at.  Defaults to 'auto'   | 1.4                |
+|                        |which means the widget will try to figure out what to use.  For usage in  |                    |
+|                        |overlaying dijit.Dialog contained widgets, then you will need to set this |                    |
+|                        |value to something like '1000'                                            |                    |
++------------------------+--------------------------------------------------------------------------+--------------------+
 
 ================
 Useful functions
