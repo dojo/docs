@@ -47,20 +47,6 @@ Using dojo.query to find a node and check if it has a class:
 
 Note: You do not need to explicitly check for hasClass before adding or removing a class with dojo.addClass or dojo.removeClass, they do it for you.
 
-========
-Examples
-========
-
-Programmatic example
---------------------
-
-TODO: example
-
-Declarative example
--------------------
-
-TODO: example
-
 
 ========
 See also
