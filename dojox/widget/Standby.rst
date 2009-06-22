@@ -51,6 +51,9 @@ Constructor params/attributes
 |                        |overlaying dijit.Dialog contained widgets, then you will need to set this |                    |
 |                        |value to something like '1000'                                            |                    |
 +------------------------+--------------------------------------------------------------------------+--------------------+
+|duration                |The time, in milliseconds, that the fadein or fadeout should take.        | 1.4                |
+|                        |The default is 500ms.                                                     |                    |
++------------------------+--------------------------------------------------------------------------+--------------------+
 
 ================
 Useful functions
