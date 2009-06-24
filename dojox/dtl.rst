@@ -8,7 +8,7 @@ dojox.dtl
 :Authors: Neil Roberts
 
 The Django Template Language (DTL) uses a system of templates that can be compiled
-once and rendered indefinitely afterward. It uses a simple system of tags
+once and rendered indefinitely afterward. Templates consist of simple tags
 and filters.
 
 Dojo's implementation of DTL matches Django 0.9, as outlined in
