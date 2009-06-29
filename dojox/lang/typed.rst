@@ -24,7 +24,7 @@ Introduction
 Usage
 =====
 
-Property types and method signatures for classes follows the JSON Schema (http://json-schema.org) structure, where the class/constructor is the root object of the schema.
+Property types and method signatures for classes follows the JSON Schema (http://json-schema.org) structure, where the class/constructor is the root object of the schema. Note, that you can use primitive constructors as property definitions (String instead {type:"string"}).
 
 .. code-block :: javascript
 
@@ -42,15 +42,15 @@ Property types and method signatures for classes follows the JSON Schema (http:/
  		}
  	}));
  TypedClass.properties = {
- 	aString:{type:"string"}, 
+ 	aString:String, // this is the same aString:{type:"string"}
  };
  TypedClass.methods = {
  	add: {
  		parameters:[
- 			{type:"number"},
- 			{type:"number"}
+ 			Number,
+ 			Number
  		],
- 		returns: {type:"number"}
+ 		returns: {type:"number", description: "The sum"}
  	}
  }
 
