@@ -59,7 +59,7 @@ Hebrew calendar and DateTextBox
 
 Hebrew calendar implemented in this package can be used in conjunction with DateTextBox in order to provide graphical date picker for Hebrew calendar. For example, image below illustrates DateTextBox using Hebrew calendar with default language set to Hebrew.
 
-[IMAGE]
+[[attachment:dijit.jpg]]
 
 ========
 Examples
