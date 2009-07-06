@@ -196,6 +196,17 @@ These sections cover the available projects shipped with the Dojo Toolkit:
     A set of DOM manipulation functions
 
 * `dojox.date <dojox/date>`_
+
+  A collection of date-related enhancements and utilities, including national calendars.
+
+  * `dojox.date.buddhist <dojox/date/buddhist>`_
+
+    A date-like class representing the Thai buddhist calendar
+
+  * `dojox.date.hebrew <dojox/date/hebrew>`_
+
+    A date-like class representing the Hebrew calendar
+
 * `dojox.dtl <dojox/dtl>`_
 * `dojox.editor <dojox/editor>`_
 * `dojox.embed <dojox/embed>`_
