@@ -34,6 +34,7 @@ You can also specify the following values on a TreeGrid:
 
   * defaultOpen: a boolean value that defines whether expandos default to open or closed (default is true)
   * openAtLevels: an array that will add a bit of logic to which values are open and closed.
+  * treeModel: a dijit.tree.ForestStoreModel tree model that will be used for a "columnar tree" as opposed to an "expandable grid"
 
 When defining openAtLevels, the index in the array correspond to the level that you are defining.  The values in the array can either be
 boolean (true/false) or an integer.  If it is an integer, then it will be closed if there are more than that many children.
@@ -41,6 +42,8 @@ boolean (true/false) or an integer.  If it is an integer, then it will be closed
 For example, setting openAtLevels to [true, false, 5] on a 4-level grid, top-level items will always be open, second-level items will always be closed, and third-level items will be open if they have 5 or fewer 4th-level items.
 
 The getItem function on the grid has also been extended to accept an array in order to get an item based off a level path.  For example, calling grid.getItem([2,1,5]) will return the 6th child (0-based index) of the 2nd child of the 3rd top-level item.
+
+If you specify a treeModel, then defaultOpen will always be false, and openAtLevels will be ignored
 
 ====================
 Structure Definition
