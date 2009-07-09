@@ -18,10 +18,6 @@ Top priority: dojo.js
 
   needed: full page
 
-* `dojo._base.event <dojo/_base/event>`_
-
-  needed: explain DOM event listener in detail
-
 * `dojo.isAlien <dojo/isAlien>`_
 
   needed: a proper test against isAlien() (in the example)
