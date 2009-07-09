@@ -15,32 +15,8 @@ dojo._base.event
 
 As with all dojo._base components, these functions are included within Dojo Base. You get this functionality by just including dojo.js or dojo.xd.js in your page.
 
-
-========
-Features
-========
-
-* Dojo's DOM Event Listener
-
-  TODO: explain DOM event listener in detail
-
-  * add
-
-  * remove
-
-* `dojo.fixEvent <dojo/fixEvent>`_
-
-  Normalizes properties on the event object including event bubbling methods, keystroke normalization, and x/y positions
-
-* `dojo.stopEvent <dojo/stopEvent>`_
-
-  Prevents propagation and clobbers the default action of the passed event
-
-* `dojo.keys <dojo/keys>`_
-
-  Definitions for common key values
-
-
+See `Dojo's Event System <quickstart/events>`__ for information on the event system.
+ 
 ================
 Migration issues
 ================
