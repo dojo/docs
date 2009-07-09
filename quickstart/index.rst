@@ -124,8 +124,7 @@ Testing
 -------
 
 * Unit Testing:  Using `D.O.H, the Dojo Objective Harness <quickstart/doh>`_
-* TODOC: doh, unit tests
-* TODOC: doh.robot
+* doh.robot tutorials `part 1 <http://blog.dojotoolkit.org/2008/08/11/doh-robot-automating-web-ui-unit-tests-real-user-events>`_ and `part 2 <http://blog.dojotoolkit.org/2008/10/31/doh-robot-part-2-automating-acceptance-tests-and-user-stories>`_
 
 Debugging
 ---------
