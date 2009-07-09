@@ -104,7 +104,7 @@ Now, to fire foo when a user clicks ``#firstLink``, and I have the node, so I ju
   firstLinkConnections.push(dojo.connect(firstLinkNode, 'onclick', foo));
 
 
-In this example, I passed ``dojo.connect`` the object I want my function to listen to (in this case, a DOM node), the name of the function that should trigger my function's call (in this case, the "onclick" event), and the name of my function. Note that I keep a reference to the connection by setting firstLinkConnections[0] to the return value of ``dojo.connect``. This will allow me to disconnect the listener later, if I desire. Now, when a user clicks "Dojo," a message appears in the log Because my function is global in scope, I can pass it directly to connect. The following, however, are equivalent:
+In this example, I passed ``dojo.connect`` the object I want my function to listen to (in this case, a DOM node), the name of the function that should trigger my function's call (in this case, the "onclick" event), and the name of my function. Note that I keep a reference to the connection (called a handle) by setting firstLinkConnections[0] to the return value of ``dojo.connect``. This will allow me to disconnect the listener later, if I desire. Now, when a user clicks "Dojo," a message appears in the log Because my function is global in scope, I can pass it directly to connect. The following, however, are equivalent:
 
 .. code-block :: javascript
 
@@ -199,18 +199,20 @@ All Mozilla based browsers use ``DOMMouseScroll``, and the rest ``onmousewheel``
 
 Here we've fixed the event based on the Event Object provided, and are returning a number greater than 1 for scrolling up, and a negative value for scrolling down.
 
-Connecting To Keyboard Events
------------------------------
+Keyboard Events
+---------------
 Although different browsers report keyboard events differently, you can write portable keyboard event handling code using dojo, by following these rules:
 
-  - Setup an onkeypress handler to monitor both printable and non-printable keys. (Dojo synthesizes onkeypress events for non-printable keys, for browsers that don't generate such events naturally.)
+  - Setup an onkeypress (not onkeydown) handler to monitor both printable and non-printable keys
 
-  - To detect if a keystroke matches a non-printable key, compare the keyCode against the dojo.keys table, rather than hardcoding a number.  For example, if the user presses the left arrow then event.keyCode == dojo.keys.LEFT_ARROW
+  - For non-printable keys (arrows, function keys, etc) compare evt.keyCode against the `Key code constants <dojo/keys>`_, rather than hardcoding a number.  For example, if the user presses the left arrow then event.keyCode == dojo.keys.LEFT_ARROW
 
-  - Ignore onkeypress events where keyCode == dojo.keys.CTRL, dojo.keys.SHIFT, etc. as these may occur as part of a user pressing (for example) CTRL-c.
+  - Ignore onkeypress events where keyCode == dojo.keys.CTRL, dojo.keys.SHIFT, etc. as these may occur as part of a user pressing (for example) Ctrl-C.
 
-  - call dojo.stopEvent(e) for CTRL combinations (like CTRL-b) or function keys (like F5) that have special meaning to the browser (like refreshing the page).
+  - call dojo.stopEvent(e) for CTRL combinations (like Ctrl-B) or function keys (like F5) that have special meaning to the browser (like refreshing the page).
 
+
+Implementation details: Dojo synthesizes onkeypress events for non-printable keys, for browsers that don't generate such events naturally.
 
 As mentioned above, non-printable character events define a keyCode.  Printable character events define a keyChar.  For example, if the user presses the 'a' key than evt.keyChar == 'a'.  If the user presses SHIFT-A then evt.keyChar == 'A'.
 
@@ -304,42 +306,20 @@ Dojo normalizes the following methods with an event object:
 
 Additionally, `dojo.stopEvent(event) <dojo/stopEvent>`_ will prevent both default behavior any any propagation (bubbling) of an event.
 
-Using a Dojo Event Object
--------------------------
-
-In the example code, we have two functions that are connected to two different events. Echo sends the key code of any key typed in the text input field to the console. It does so by using the ``charCode`` property of the normalized event object. Foo is connected to the #link and cause it to send "The link was clicked" to the console instead of changing the browser's location; by using the preventDefault method of the normalized event object, connections to change the default behavior of DOM objects.
-
-Now, imagine that you want to detect for the down arrow key in the text box. To do this, we just need to attach a new event listener to the text box and check to see if each keycode is the keycode for the down arrow. And how do you know what the keycode for the down arrow is, you may ask? Well, Dojo provides constants for every non-alpha-numeric key (see: `Key code constants <dojo/keys>`_). In our case, we are interested in dojo.keys.DOWN_ARROW. So, assuming that you want to just log when the down arrow is pressed, the following code should do the job:
-
-.. code-block :: javascript
-
-  dojo.connect(interactiveNode, 'onkeypress', function (evt) {
-    	key = evt.keyCode;
-    	if(key == dojo.keys.DOWN_ARROW) {
-		console.debug("The user pressed the down arrow!");
-	}
-  });
-
-Using the new charOrCode, you can get a keys value directly with no need for checking null on the other:
-
-.. code-block :: javascript
-
-  dojo.connect(someInput, "onkeypress", function(e){
-      switch(e.charOrCode){
-         case dojo.keys.ENTER : submitForm(); break;
-         default: console.log('you typed: ', e.charOrCode);
-      }
-  });
-
-*note:* We've used ``event``, ``evt``, and ``e`` for our event name in the callback function. You can name it whatever you like, it is the same object either way.
-
 
 ====================
 Page Load and Unload
 ====================
 
-``TODOC``
+Dojo has three functions recommended for registering code to run on page load and unload:
 
+* `dojo.addOnLoad(func) <dojo/addOnLoad>`_ - Runs the specified function after the page has finished loading, dojo.require() calls have completed, and the parser (if enabled) has instantiated widgets.
+
+* `dojo.addOnWindowUnload(func) <dojo/addOnWindowUnload>`_ - Runs on page unload.   Useful for tear-down releasing resources (destroying widgets, etc.), but some browsers limit what operations can be done at this stage, especially DOM access / manipulation.
+
+* `dojo.addOnUnload(func) <dojo/addOnUnload>`_ - This also runs on page unload, but earlier than `dojo.addOnWindowUnload(func) <dojo/addOnWindowUnload>`_, avoiding the restrictions mentioned above.   However, the function specified to `dojo.addOnUnload(func) <dojo/addOnUnload>` may be called even when the page isn't unloading, just because a user (for example) clicked a hyperlink to download a file.    Useful for idempotent operations like saving state.
+
+Like dojo.connect(), these methods are useful because multiple pieces of code calling `dojo.addOnLoad(func) <dojo/addOnLoad>`_ etc. won't overwrite each other.
 
 ==================
 Topic Based Events
