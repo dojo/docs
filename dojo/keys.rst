@@ -16,7 +16,8 @@ Dojo provides the following keycode constants in the namespace ``dojo.keys``. Th
 * ENTER 
 * SHIFT 
 * CTRL 
-* ALT 
+* ALT
+* META - the apple key on macs
 * PAUSE 
 * CAPS_LOCK 
 * ESCAPE 
@@ -68,7 +69,17 @@ Dojo provides the following keycode constants in the namespace ``dojo.keys``. Th
 * F15 
 * NUM_LOCK 
 * SCROLL_LOCK 
+* copyKey - this is a "virtual key" that is either CTRL on Windows, or the meta key (a.k.a. apple key) on Macintoshes, since cut and paste on Windows is performed using CTRL (CTRL-X, CTRL-C, and CTRL-P) whereas it's performed using META (META-X, META-C, and META-P)
 
 Key Event Modifiers
 -------------------
-``TODO: explain key modifiers in event object``
+Any keyboard event will have the following boolean attributes:
+
+* ctrlKey
+* altKey
+* shiftKey
+* metaKey
+
+They indicate if the control, alt, shift, or meta key was held down while the other key (alphanumeric or punctuation) was pressed.
+
+For example, pressing CTRL-A will produce an onkeypress event like {charOrCode: 'a', ctrlKey: true}
