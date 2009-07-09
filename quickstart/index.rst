@@ -22,18 +22,40 @@ Installation
 * `Configuring Dojo <djConfig>`_
 * `Using Dojo from a CDN <quickstart/cross-domain>`_
 
-====
+
+==================
+Base Functionality
+==================
+
+JavaScript Extensions
+---------------------
+
+* `Functions used *everywhere* <quickstart/dojo-basics>`_
+* `Browser Sniffing <quickstart/browser-sniffing>`_
+* `Arrays <quickstart/arrays>`_
+* `Parsing, Formatting and Validating Numbers and Dates <quickstart/numbersDates>`_
+* Todo: classes
+* Todo: inheritance
+* Todo: mixins
+
+
 AJAX
-====
+----
 
 * `AJAX <quickstart/ajax>`_
 * `Back buttons <quickstart/back>`_
 
-==============================
 DOM Manipulation & CSS Queries
-==============================
+------------------------------
 
-* `Overview <quickstart/dom>`_
+* `DOM Manipulation and dojo.query() <quickstart/dom>`_
+
+
+Events
+------
+
+* `The event system <quickstart/events>`_
+
 
 ==========
 Animations
@@ -85,20 +107,6 @@ Charting
 ========
 
 * `dojox.charting <dojox/charting>`_
-
-
-=====================
-JavaScript Extensions
-=====================
-
-* `Functions used *everywhere* <quickstart/dojo-basics>`_
-* `Browser Sniffing <quickstart/browser-sniffing>`_
-* `Arrays, Node lists <quickstart/arrays>`_
-* `Parsing, Formatting and Validating Numbers and Dates <quickstart/numbersDates>`_
-* `The event system <quickstart/events>`_
-* Todo: classes
-* Todo: inheritance
-* Todo: mixins
 
 
 =========================
