@@ -201,11 +201,34 @@ Here we've fixed the event based on the Event Object provided, and are returning
 
 Connecting To Keyboard Events
 -----------------------------
-With dojo's event system you can setup an onkeypress handler to monitor both printable and non-printable keys.  For browsers that don't generate onkeypress events for non-printable keys, dojo synthesizes them.
+Although different browsers report keyboard events differently, you can write portable keyboard event handling code using dojo, by following these rules:
 
-Unprintable characters events define a keyCode.  For example, if you press the left arrow then event.keyCode == dojo.keys.LEFT_ARROW
+  - Setup an onkeypress handler to monitor both printable and non-printable keys. (Dojo synthesizes onkeypress events for non-printable keys, for browsers that don't generate such events naturally.)
 
-Printable character events define a keyChar.  For example, if you press the 'a' key than evt.keyChar == 'a'.  If you press SHIFT-A then evt.keyChar == 'A'.
+  - To detect if a keystroke matches a non-printable key, compare the keyCode against the dojo.keys table, rather than hardcoding a number.  For example, if the user presses the left arrow then event.keyCode == dojo.keys.LEFT_ARROW
+
+  - Ignore onkeypress events where keyCode == dojo.keys.CTRL, dojo.keys.SHIFT, etc. as these may occur as part of a user pressing (for example) CTRL-c.
+
+  - call dojo.stopEvent(e) for CTRL combinations (like CTRL-b) or function keys (like F5) that have special meaning to the browser (like refreshing the page).
+
+
+As mentioned above, non-printable character events define a keyCode.  Printable character events define a keyChar.  For example, if the user presses the 'a' key than evt.keyChar == 'a'.  If the user presses SHIFT-A then evt.keyChar == 'A'.
+
+However, you can also reference an event's charOrCode attribute for making a single switch() statement to handle both printable and non-printable keys.  For example:
+
+.. code-block :: javascript
+
+  var node = dojo.byId("foobar");
+  dojo.connect(node, "onekeypress, function(e){
+     switch(e.charOrCode){
+          case dojo.keys.LEFT:
+          case 'h':
+               // go left
+          ...
+     }
+     dojo.stopEvent(e);
+  });
+
 
 
 Connecting Functions to One Another
