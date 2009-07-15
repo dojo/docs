@@ -7,7 +7,7 @@ dojox.form.ListInput
 :Version: 1.0
 :Authors: Benjamin Santalucia
 :Developers: Benjamin Santalucia
-:Available: ?
+:Available: 1.4
 
 .. contents::
    :depth: 2
