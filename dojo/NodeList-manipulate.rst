@@ -172,8 +172,8 @@ Assume a DOM created by this markup:
   dojo.require("dojo.NodeList-manipulate");
   
   This code gets and sets the values for the form fields above:
-  dojo.query('[type="text"]).val(); //gets value foo
-  dojo.query('[type="text"]).val("bar"); //sets the input's value to "bar"
+  dojo.query('[type="text"]').val(); //gets value foo
+  dojo.query('[type="text"]').val("bar"); //sets the input's value to "bar"
   dojo.query("select").val() //gets array value ["red", "yellow"]
   dojo.query("select").val(["blue", "yellow"]) //Sets the blue and yellow options to selected.
 
