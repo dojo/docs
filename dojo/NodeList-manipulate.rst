@@ -31,7 +31,7 @@ Here is a simple example showing how dojo.NodeList-manipulate adds an "after" me
   :linenos:
 
   dojo.require("dojo.NodeList-manipulate");
- 
+  
   //Add a span that says Hello World after each div in the DOM
   //by using the "after" method added by dojo.NodeList-manipulate
   dojo.query("div").after("<span>Hello World');
