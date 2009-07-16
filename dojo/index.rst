@@ -518,8 +518,13 @@ Dojo Core
   Adds a chainable html method to dojo.query()
 
 * `dojo.NodeList-manipulate <dojo/NodeList-manipulate>`_
+
+  **1.4+** Method extensions to dojo.NodeList/dojo.query() that manipulate HTML for insertion.
+  
 * `dojo.NodeList-traverse <dojo/NodeList-traverse>`_
 
+  **1.4+** Method extensions to dojo.NodeList/dojo.query() for traversing the DOM.
+  
 * `dojo.number <dojo/number>`_
 
   Localized formatting and parsing methods for number data
