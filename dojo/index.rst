@@ -519,7 +519,7 @@ Dojo Core
 
 * `dojo.NodeList-manipulate <dojo/NodeList-manipulate>`_
 
-  **1.4+** Method extensions to dojo.NodeList/dojo.query() that manipulate HTML for insertion.
+  **1.4+** Method extensions to dojo.NodeList/dojo.query() that manipulate HTML.
   
 * `dojo.NodeList-traverse <dojo/NodeList-traverse>`_
 
