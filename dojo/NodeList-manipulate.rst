@@ -6,7 +6,7 @@ dojo.NodeList-manipulate
 :Status: Draft
 :Version: 1.0
 :Project owner: James Burke
-:Available: since Dojo 1.4
+:Available: since 1.4
 
 .. contents::
    :depth: 2
