@@ -28,13 +28,13 @@ Usage
 Here is a simple example showing how dojo.NodeList-manipulate adds an "after" method to dojo.NodeList that can be called via the normal method chaining done with a dojo.query result:
 
 .. code-block :: javascript
- :linenos:
+  :linenos:
 
- dojo.require("dojo.NodeList-manipulate");
+  dojo.require("dojo.NodeList-manipulate");
  
- //Add a span that says Hello World after each div in the DOM
- //by using the "after" method added by dojo.NodeList-manipulate
- dojo.query("div").after("<span>Hello World');
+  //Add a span that says Hello World after each div in the DOM
+  //by using the "after" method added by dojo.NodeList-manipulate
+  dojo.query("div").after("<span>Hello World');
 
 
 =========================================
