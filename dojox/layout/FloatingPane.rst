@@ -52,16 +52,28 @@ Programmatic example
 
      dojo.require("dojox.layout.FloatingPane");
      dojo.require("dijit.form.Button");
+
+---- /!\ '''Edit conflict - other version:''' ----
+
+---- /!\ '''Edit conflict - your version:''' ----
+
+---- /!\ '''End of edit conflict''' ----
      dojo.addOnLoad(function() {
        new dojox.layout.FloatingPane({
           title: "A floating pane",
           resizable: true, dockable: true,
           style: "position:absolute;top:0;left:0;width:100px;height:100px;display:none;",
           id: "pFloatingPane"
-       }, "pFloatingPane").startup();
+       }, dojo.byId("pFloatingPane")).startup();
      });
      </script>
 
+
+---- /!\ '''Edit conflict - other version:''' ----
+
+---- /!\ '''Edit conflict - your version:''' ----
+
+---- /!\ '''End of edit conflict''' ----
   .. cv:: html
 
         <div id="pFloatingPane">This is the content of the pane!</div>
