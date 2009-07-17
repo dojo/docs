@@ -50,6 +50,7 @@ Programmatic example
 
   .. cv:: javascript
 
+     <script type="text/javascript">
      dojo.require("dojox.layout.FloatingPane");
      dojo.require("dijit.form.Button");
      dojo.addOnLoad(function() {
@@ -91,7 +92,7 @@ Declarative example
 
      <div dojoType="dojox.layout.FloatingPane" id="dFloatingPane"
         title="A floating pane" resizable="true" dockable="true"
-        style="position:absolute;top:0;left:0;width:100px;height:100px;display:none;">
+        style="position:absolute;top:0;left:0;width:100px;height:100px;visibility:hidden;">
      This is the content of the pane!
      </div>
      <div dojoType="dijit.form.Button" label="Show me" onClick="dijit.byId('dFloatingPane').show();"></div>
