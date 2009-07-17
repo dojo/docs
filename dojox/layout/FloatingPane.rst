@@ -95,8 +95,9 @@ Declarative example
         style="position:absolute;top:0;left:0;width:100px;height:100px;visibility:hidden;">
      This is the content of the pane!
      </div>
+     
      <div dojoType="dijit.form.Button" label="Show me" onClick="dijit.byId('dFloatingPane').show();"></div>
-        <br/><br/><br/><br/>
+     <!-- make campus preview div big enough: --><div style="height:280px;width:100%;"></div>
 
 ===============
 Troubleshooting
