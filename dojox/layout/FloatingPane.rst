@@ -64,6 +64,7 @@ Programmatic example
 
         <div id="pFloatingPane">This is the content of the pane!</div>
         <div dojoType="dijit.form.Button" label="Show me" onClick="dijit.byId('pFloatingPane').show();"></div>
+        <br/><br/><br/><br/>
 
 
 Declarative example
@@ -92,6 +93,7 @@ Declarative example
      This is the content of the pane!
      </div>
      <div dojoType="dijit.form.Button" label="Show me" onClick="dijit.byId('dFloatingPane').show();"></div>
+        <br/><br/><br/><br/>
 
 ===============
 Troubleshooting
