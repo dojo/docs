@@ -50,15 +50,14 @@ Programmatic example
 
   .. cv:: javascript
 
-     <script type="text/javascript">
      dojo.require("dojox.layout.FloatingPane");
      dojo.require("dijit.form.Button");
      new dojox.layout.FloatingPane({
         title: "A floating pane",
         resizable: true, dockable: true,
-        style: "position:absolute;top:0;left:0;width:100px;height:100px;display:none;"
+        style: "position:absolute;top:0;left:0;width:100px;height:100px;display:none;",
+        id: "pFloatingPane"
      }, "pFloatingPane").startup();
-     </script>
 
   .. cv:: html
 
