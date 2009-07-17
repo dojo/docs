@@ -11,7 +11,7 @@ dojo.NodeList-manipulate
 .. contents::
    :depth: 2
 
-Method extensions to `dojo.NodeList <dojo/NodeList>`_/`dojo.query <dojo/query>`_ that manipulate HTML. These methods are intended to match the API naming and behavior as the similarly names methods in jQuery.
+Method extensions to `dojo.NodeList <dojo/NodeList>`_/`dojo.query <dojo/query>`_ that manipulate HTML. These methods are intended to match the API naming and behavior as the similarly named methods in jQuery.
 
 
 ============
