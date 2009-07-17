@@ -44,8 +44,8 @@ Programmatic example
   .. cv:: css
 
      <style type="text/css">
-       @import "pathtodojo/dojox/layout/resources/FloatingPane.css";
-       @import "pathtodojo/dojox/layout/resources/ResizeHandle.css";
+       @import "/moin_static163/js/dojo/trunk/dojox/layout/resources/FloatingPane.css";
+       @import "/moin_static163/js/dojo/trunk/dojox/layout/resources/ResizeHandle.css";
      </style>
 
   .. cv:: javascript
@@ -56,7 +56,7 @@ Programmatic example
      new dojox.layout.FloatingPane({
         title: "A floating pane",
         resizable: true, dockable: true,
-        style: "position:absolute;top:0;left:0;width:100px;height:100px;"
+        style: "position:absolute;top:0;left:0;width:100px;height:100px;display:none;"
      }, "pFloatingPane").startup();
      </script>
 
@@ -73,8 +73,8 @@ Declarative example
   .. cv:: css
 
      <style type="text/css">
-       @import "pathtodojo/dojox/layout/resources/FloatingPane.css";
-       @import "pathtodojo/dojox/layout/resources/ResizeHandle.css";
+       @import "/moin_static163/js/dojo/trunk/dojox/layout/resources/FloatingPane.css";
+       @import "/moin_static163/js/dojo/trunk/dojox/layout/resources/ResizeHandle.css";
      </style>
 
   .. cv:: javascript
@@ -88,7 +88,7 @@ Declarative example
 
      <div dojoType="dojox.layout.FloatingPane" id="dFloatingPane"
         title="A floating pane" resizable="true" dockable="true"
-        style="position:absolute;top:0;left:0;width:100px;height:100px;">
+        style="position:absolute;top:0;left:0;width:100px;height:100px;display:none;">
      This is the content of the pane!
      </div>
      <div dojoType="dijit.form.Button" label="Show me" onClick="dijit.byId('dFloatingPane').show();"></div>
