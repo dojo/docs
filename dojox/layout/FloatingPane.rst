@@ -53,20 +53,25 @@ Programmatic example
      <script type="text/javascript">
      dojo.require("dojox.layout.FloatingPane");
      dojo.require("dijit.form.Button");
+
+     var pFloatingPane;
+
      dojo.addOnLoad(function() {
-       new dojox.layout.FloatingPane({
+       pFloatingPane = new dojox.layout.FloatingPane({
           title: "A floating pane",
           resizable: true, dockable: true,
-          style: "position:absolute;top:0;left:0;width:100px;height:100px;display:none;",
+          style: "position:absolute;top:0;left:0;width:100px;height:100px;visibility:hidden;",
           id: "pFloatingPane"
-       }, dojo.byId("pFloatingPane")).startup();
+       }, dojo.byId("pFloatingPane"));
+
+       pFloatingPane.startup();
      });
      </script>
 
   .. cv:: html
 
         <div id="pFloatingPane">This is the content of the pane!</div>
-        <div dojoType="dijit.form.Button" label="Show me" onClick="dijit.byId('pFloatingPane').show();"></div>
+        <div dojoType="dijit.form.Button" label="Show me" onClick="pFloatingPane.show();"></div>
         <br/><br/><br/><br/>
 
 
