@@ -199,7 +199,7 @@ Assume a DOM created by this markup:
 
 siblings
 ---------
-Returns all subling elements for nodes in this dojo.NodeList.
+Returns all sibling elements for nodes in this dojo.NodeList.
 Optionally takes a query to filter the sibling elements.
 
 **Note**: the optional query can only be single-expression CSS rule. For example, ".thinger" or
