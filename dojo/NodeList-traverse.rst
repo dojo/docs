@@ -162,7 +162,7 @@ Assume a DOM created by this markup:
 parents
 ---------
 Returns all parent elements for nodes in this dojo.NodeList.
-Optionally takes a query to filter the child elements.
+Optionally takes a query to filter the parent elements.
 
 **Note**: the optional query can only be single-expression CSS rule. For example, ".thinger" or
 "#someId[attrName='value']" but not "div > span". In short,
