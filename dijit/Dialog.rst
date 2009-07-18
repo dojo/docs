@@ -73,7 +73,7 @@ Now lets create a dialog programmatically, and change the dialog's content dynam
 
 .. cv-compound::
 
-  A programmatically created dialog with no content. First lets write up some simple HTML code because you need to define the place where your Dialog dhould be created.
+  A programmatically created dialog with no content. First lets write up some simple HTML code because you need to define the place where your Dialog should be created.
   
   .. cv:: html
     
