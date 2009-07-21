@@ -150,7 +150,7 @@ Use *dojo.connect* to connect to the *onChange*, *onProgress* and *onComplete* m
 
 Use *upload* to initiate the upload after files have been selected. Or set *uploadOnChange* to true to initiate upload automatically after the selection.
 
-Updated: Be careful not to construct the connect so that it sends a mouse event to the upload method (as this example used to do). The upload method expects no args or one arg to use as postData. The mouse event will be treated as postData and through an error. This is fixed in the trunk but exists in 1.32.
+Updated: Be careful not to construct the connect so that it sends a mouse event to the upload method (as this example used to do). The upload method expects no arguments or one argument to use as postData. The mouse event will be treated as postData and throw an error. This is fixed in the trunk but exists in 1.32.
 
 .. code-block :: javascript
  :linenos:
