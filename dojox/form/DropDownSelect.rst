@@ -13,6 +13,11 @@ dojox.form.DropDownSelect
 
 A styleable drop down select box (similar to html select element)
 
+==============
+Migration Note
+==============
+As of version 1.4, dojox.form.DropDownSelect has been deprecated, as it has now been moved to dijit.form.DropDownSelect.  Please update your code!
+
 ============
 Introduction
 ============
