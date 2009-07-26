@@ -17,7 +17,7 @@ Introduction
 
 This class defines low-level primitives for form nodes. It is complimentary to and should be used together with `dojox.form.manager._Mixin <dojox/form/manager/_Mixin>`_.
 
-On startup this mixin inspects its body and registers all found form nodes (``<input>``, ''<select>``, ``<textarea>``, ``<button>``) unless they are part of some form widget.
+On startup this mixin inspects its body and registers all found form nodes (``<input>``, ``<select>``, ``<textarea>``, ``<button>``) unless they are part of some form widget.
 
 ======================
 Methods and properties
