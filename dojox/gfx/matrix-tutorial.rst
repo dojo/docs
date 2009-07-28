@@ -79,9 +79,13 @@ Effectively all transformations are always applied from right to left sequential
 
 * ``reflect(x, y)`` reflects a point around the vector from ``(0, 0)`` to ``(x, y)``:
 
+  let a=x, b=y
+
   .. image :: matrix14.png
 
 * ``project(x, y)`` projects a point picture orthogonally on the vector from ``(0, 0)`` to ``(x, y)``:
+
+  let a=x, b=y
 
   .. image :: matrix15.png
 
