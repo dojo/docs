@@ -114,6 +114,7 @@ A declarative example with gradient ranges
 
     <script>
       dojo.require("dojox.widget.BarGauge");
+      dojo.require('dojox.widget.gauge.BarIndicator');
     </script>
 
   .. cv:: html
