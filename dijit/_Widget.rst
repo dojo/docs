@@ -110,6 +110,6 @@ For more details on both attributeMap and custom setters/getters, see the Writin
 See also
 ========
 
-* `Writing Widgets `quickstart`_
+* Writing Widgets `quickstart`_
 
 .. _quickstart: quickstart/writingWidgets
