@@ -28,22 +28,22 @@ Code snippet below illustrates most common usage of Hebrew calenadar.
 .. code-block :: javascript
  :linenos:
 
-<script type="text/javascript">
-  dojo.require("dojox.date.hebrew");     
-  dojo.require("dojox.date.hebrew.Date");
-  dojo.require("dojox.date.hebrew.locale"); 
-</script>
-<html><title> Hebrew calendar </title><body>
-  <input id="hebcal" 
-     name="noDOMvalue" 
-     value="2009-03-10" 
-     type="text" 
-     dojoType="dijit.form.DateTextBox" 
-     datePackage = "dojox.date.hebrew"
-     lang="en"
-     constraints="{min:'2008-03-01',max:'2009-04-01',datePattern:'dd MMMM yyyy'}"
-  >
-</body></html>
+  <script type="text/javascript">
+    dojo.require("dojox.date.hebrew");     
+    dojo.require("dojox.date.hebrew.Date");
+    dojo.require("dojox.date.hebrew.locale"); 
+  </script>
+  <html><title> Hebrew calendar </title><body>
+    <input id="hebcal" 
+       name="noDOMvalue" 
+       value="2009-03-10" 
+       type="text" 
+       dojoType="dijit.form.DateTextBox" 
+       datePackage = "dojox.date.hebrew"
+       lang="en"
+       constraints="{min:'2008-03-01',max:'2009-04-01',datePattern:'dd MMMM yyyy'}"
+    >
+  </body></html>
 
 Hebrew calendar package
 -----------------------
