@@ -49,7 +49,7 @@ In order to assist with key event handling, a generic onkeypress event has been 
 Tabindex and Focus
 ------------------
 
-When navigating via the keyboard is it essential that the element that is navigated to receives focus.   The focus should NOT be simulated via CSS - call the focus() method on the element.  Styling can be used to enhance the visual focus or selection but should not replace actually setting focus on an element.  A screen reader will only speak information about the element when it receives focus. Screen magnifiers rely on focus to move the zoomed viewport on the screen.
+When navigating via the keyboard is it essential that the element that is navigated to receives focus.   The focus should NOT be simulated via CSS - call the focus() method on the element.  Styling can be used to enhance the visual focus or selection but should not replace actually setting focus on an element.  A screen reader will only speak information about the element when it receives focus. Screen magnifiers rely on focus to move the zoomed viewport on the screen.  While the above statement is still relevant, the ARIA Specification removes this focus requirement if you use the `aria-activedescendant property <http://www.w3.org/WAI/PF/aria/#aria-activedescendant>`_.   A parent element must accept focus, but a child can be indicated as the currently active item via aria-activedescendant.  When using aria-activedescendant, CSS would be used to indicate the currently active child item.  
 
 Use the tabindex value to provide direct or programmatic keyboard focus to an element. See the tabindex chart in the `Device Independence section of Dijit Accessibility Strategy <dijit-a11y-strategy#support-device-independent-interaction>`_
 
