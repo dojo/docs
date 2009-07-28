@@ -63,42 +63,40 @@ A bar gauge with two indicators (programmatic)
           {low:60, high:70, hover:'60 - 70'},
           {low:70, high:75, hover:'70 - 75'}
         ];
-        gauge = dojo.byId("defaultGauge");
-        gauge = new dojox.widget.BarGauge({
-          id: "defaultGauge",
-          width: 300,
-          height: 55,
-          dataHeight: 25,
-          dataWidth: 275,
-          dataY: 25,
-          dataX: 10,
-          ranges: ranges1,
-          majorTicks: {
-            length: 5,
-            width: 1,
-            offset: -5,
-            interval: 5
-          },
-          indicators: [
-            new dojox.widget.BarIndicator({
-              value:17,
-              width: 7,
-              hover:'Value: 17',
-              title: 'Value'
-            }),
-            new dojox.widget.BarLineIndicator({
-              value:6,
-              width: 5,
-              color:'#D00000',
-              hover:'Target: 6',
-              title: 'Target'
-            })
-          ]  
-        }, gauge);
+          gauge = dojo.byId("defaultGauge");
+          gauge = new dojox.widget.BarGauge({
+            id: "defaultGauge",
+            width: 300,
+            height: 55,
+            dataHeight: 25,
+            dataWidth: 275,
+            dataY: 25,
+            dataX: 10,
+            ranges: ranges1,
+            majorTicks: {
+              length: 5,
+              width: 1,
+              offset: -5,
+              interval: 5
+            },
+            indicators: [
+              new dojox.widget.gauge.BarIndicator({
+                value:17,
+                width: 7,
+                hover:'Value: 17',
+                title: 'Value'
+              }),
+              new dojox.widget.gauge.BarLineIndicator({
+                value:6,
+                color:'#D00000',
+                hover:'Target: 6',
+                title: 'Target'
+              })
+            ]
+          }, gauge);
         gauge.startup();
       }
       dojo.addOnLoad(init);
-
     </script>
 
   .. cv:: html
