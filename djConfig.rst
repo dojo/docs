@@ -144,6 +144,10 @@ locale: 'en-us'
 extraLocale: ['en-us','jp-jp']
   In addition to the default locale, developers can specify that extra locale files also be downloaded in parallel to the default. The argument to the extraLocale parameter is an array of locale strings.
 
+  The extraLocale is used for multi-lingual pages or for dynamically switching languages. A use case would be a language tutorial – an English page that teaches Japanese.
+
+  Unless you have a multi-language use-case, it's not recommended that you use extraLocale and switch languages dynamically. Since it will have to download all those language packages, and it will not be efficient.
+
 Finding Resources in Non-Standard Locations
 -------------------------------------------
 
