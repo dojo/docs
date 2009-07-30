@@ -35,7 +35,7 @@ round()
 The rounding method attempts to overcome some of the shortcomings of the intrinsic Javascript rounding methods, Math.round and Number.toFixed, allowing arbitrary increments in rounding to any number of places, and making adjustments for browser quirks.  dojo.number.round works around a bug in Internet Explorer with Number.toFixed()
 
 IE: (0.9).toFixed(1) yields "0.0"
-All other browsers: (0.9).toFixed(1) yields "0.1"
+All other browsers: (0.9).toFixed(1) yields "1.0"
 
 
 ========
