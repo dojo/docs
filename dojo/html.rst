@@ -94,13 +94,13 @@ What else comes out of the box? set takes the following optional params to confi
     Should the content extracted from the ``<body>`` wrapper before injection?
 
 :parseContent: 
-    Should the node by passed to the parser after the new content is set
+    Should the node be passed to the parser after the new content is set?
 
 :onBegin: 
     Called right before the content is swapped out, use it for pre-processing your content, preparing the target node, or whatever. **Note**: ``onBegin`` does have a default implementation, so unless you wish to replace that, you should include ``this.inherited("onBegin", arguments)`` in the function you provide here. You can refer to your target node as ``this.node``, and your content is available as ``this.content`` - be sure to put them back when you are done.
 
 :onEnd: 
-    Called right after the content is swapped out, use it for post-processing your content, or whatever. **Note**: ``onEnd`` also has a default implementation. If you use ``parseContent`` you can grab the array of widget objects that yeilds from ``this.parseResults``		
+    Called right after the content is swapped out, use it for post-processing your content, or whatever. **Note**: ``onEnd`` also has a default implementation. If you use ``parseContent`` you can grab the array of widget objects that yields from ``this.parseResults``		
 
 :onContentError: 
     This event is called if an error is caught while inserting the new content. A typical example might be if you attempt to inject a ``div`` into a ``tr`` or similar. 
