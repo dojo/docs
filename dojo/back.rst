@@ -10,7 +10,7 @@ dojo.back
 .. contents::
     :depth: 2
 
-dojo.back allows to update the browser history, so that it's possible to use the Back- and Forward-buttons of a Browser without leaving the web application.
+dojo.back allows you to update the browser history, so that it's possible to use the Back- and Forward-buttons of a Browser without leaving the web application.
 
 =====
 Usage
