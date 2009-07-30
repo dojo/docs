@@ -27,6 +27,3 @@ Dijit
 ======
 Dojox
 ======
-
-
-[touched]
