@@ -12,7 +12,7 @@ This section is intended as a point to put answers to the common questions posed
 Question 1:  I called fetch() on a datastore and the return value from the fetch function doesn't have my data! Why?
 ====================================================================================================================
 
-Because the dojo.data API is asynchronous be definition. The return value from fetch will generally not have any data on it. It's intended as a point for stores to store an abort() function for a request and a place for stores to put internal cache details and the like. It is not intended to gand back data items. Data items are always returned through the callbacks to fetch().
+Because the dojo.data API is asynchronous be definition. The return value from fetch will generally not have any data on it. It's intended as a point for stores to store an abort() function for a request and a place for stores to put internal cache details and the like. It is not intended to hand back data items. Data items are always returned through the callbacks to fetch().
  
 
 ==========================================================================================================================================
