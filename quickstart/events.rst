@@ -265,7 +265,7 @@ To disconnect listeners from events, you simply pass the connection handle (the 
 
   dojo.disconnect(objectConnections[3]);
 
-Or, by using `dojo.forEach <dojo/forEach>`_, passing dojo.disconnect as a function reference as illustrated earlier:
+Or, by using `dojo.forEach <dojo/forEach>`_, passing ``dojo.disconnect`` as a function reference as illustrated earlier:
 
 .. code-block :: javascript
 
@@ -276,9 +276,9 @@ Or, by using `dojo.forEach <dojo/forEach>`_, passing dojo.disconnect as a functi
 The Event Object
 ================
 
-When you connect a function to a DOM event with <cite>dojo.connect</cite>, Dojo passes your function a **normalized** event object. This means that, regardless of the client's browser, you can count on a set of standard attributes about the event and a set of methods to manipulate the event.
+When you connect a function to a DOM event with `dojo.connect <dojo/connect>`_, Dojo passes your function a **normalized** event object. This means that, regardless of the client's browser, you can count on a set of standard attributes about the event and a set of methods to manipulate the event.
 
-Assume that your function has been called by dojo.connect and takes an argument named <em>event</em>, like:
+Assume that your function has been called by dojo.connect and takes an argument named ``event``, like:
 
 .. code-block :: javascript
 
@@ -290,10 +290,10 @@ Dojo provides the following attributes with an event object:
 
 * event.target - the element that generated the event
 * event.currentTarget - the current target
-* event.layerX - the <em>x</em> coordinate, relative to the ``event.currentTarget``
-* event.layerY - the <em>y</em> coordinate, relative to the ``event.currentTarget``
-* event.pageX - the <em>x</em> coordinate, relative to the view port
-* event.pageY - the <em>y</em> coordinate, relative to the view port
+* event.layerX - the x coordinate, relative to the ``event.currentTarget``
+* event.layerY - the y coordinate, relative to the ``event.currentTarget``
+* event.pageX - the x coordinate, relative to the view port
+* event.pageY - the y coordinate, relative to the view port
 * event.relatedTarget - For ``onmouseover`` and ``onmouseout``, the object that the mouse pointer is moving to or out of
 * event.charCode - For keypress events, the character code of the key pressed
 * event.keyCode - for keypress events, handles special keys like ENTER and spacebar.
@@ -301,8 +301,8 @@ Dojo provides the following attributes with an event object:
 
 Dojo normalizes the following methods with an event object:
 
-* event.preventDefault &mdash; prevent an event's default behavior (e.g., a link from loading a new page)
-* event.stopPropagation &mdash; prevent an event from triggering a parent node's event
+* event.preventDefault - prevent an event's default behavior (e.g., a link from loading a new page)
+* event.stopPropagation - prevent an event from triggering a parent node's event
 
 Additionally, `dojo.stopEvent(event) <dojo/stopEvent>`_ will prevent both default behavior any any propagation (bubbling) of an event.
 
@@ -325,14 +325,12 @@ Like dojo.connect(), these methods are useful because multiple pieces of code ca
 Topic Based Events
 ==================
 
-In addition to the simple event system created by <cite>dojo.connect</cite>, dojo offers support for anonymous publication and subscription of objects, via <cite>dojo.publish</cite> and <cite>dojo.subcribe</cite>. These methods allow a function to broadcast objects to any other function that has subscribed. This is dojo's topic system, and it makes it very easy to allow separate components to communicate without explicit knowledge of one another's internals.
-
-There are three functions that you need to understand to use dojo's topic system: <cite>dojo.publish</cite>, <cite>dojo.subscribe</cite>, and <cite>dojo.unsubscribe</cite> <cite>Dojo.publish</cite> calls any functions that are connected to the topic via <cite>dojo.subscribe</cite>, passing to those subscribed functions arguments that are published (see syntax for details). As one might expect, <cite>dojo.unsubscribe</cite> will cause a previously subscribed function to no longer be called when <cite>dojo.publish</cite> is called in the future
+In addition to the simple event system created by `dojo.connect <dojo/connect>`_, dojo offers support for anonymous publication and subscription of objects, via `dojo.publish <dojo/publish>`_ and `dojo.subcribe <dojo/subscribe>`_. These methods allow a function to broadcast objects to any other function that has subscribed. This is dojo's topic system, and it makes it very easy to allow separate components to communicate without explicit knowledge of one another's internals.  `dojo.publish <dojo/publish>`_ calls any functions that are connected to the topic via `dojo.subcribe <dojo/subscribe>`_, passing to those subscribed functions arguments that are published (see syntax for details). As one might expect, `dojo.unsubcribe <dojo/unsubscribe>`_ will cause a previously subscribed function to no longer be called when `dojo.publish <dojo/publish>`_ is called in the future
 
 How does it work?
 -----------------
 
-Imagine that you run a running a conference, and there will be updates throughout the day. You could collect contact information for everyone at the beginning of the day, along with each person's interests. However, this would be a lot of logistical work. Instead, you decide to use your facility's Public Address System. When there is an update to the schedule, you announce "This is an update to the schedule: the Dojo training is full and we have added yet a third time slot for it tomorrow." When there is meal information, you announce "This is an update about food: we will be serving free ice cream in the main hall in five minutes." This way, anyone interested in your information can pay attention to any updates that could change their behavior. You don't need to know who is subscribing, and they don't need to fill out a bunch of paper work &mdash; it's a win-win.
+Imagine that you run a running a conference, and there will be updates throughout the day. You could collect contact information for everyone at the beginning of the day, along with each person's interests. However, this would be a lot of logistical work. Instead, you decide to use your facility's Public Address System. When there is an update to the schedule, you announce "This is an update to the schedule: the Dojo training is full and we have added yet a third time slot for it tomorrow." When there is meal information, you announce "This is an update about food: we will be serving free ice cream in the main hall in five minutes." This way, anyone interested in your information can pay attention to any updates that could change their behavior. You don't need to know who is subscribing, and they don't need to fill out a bunch of paper work - it's a win-win.
 
 Example Code for Reference
 --------------------------
