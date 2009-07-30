@@ -65,7 +65,7 @@ Note that the second doctest should fail since the last index of the tested elem
 dojo.forEach
 ============
 
-This is a heavylifer you will use a lot when writing your apps using Dojo. dojo.forEach lets you iterate over arrays, node lists and provides you with ways to filter your results. Lets take a look at a very basic example.
+This is a heavylifter you will use a lot when writing your apps using Dojo. dojo.forEach lets you iterate over arrays, node lists and provides you with ways to filter your results. Lets take a look at a very basic example.
 Note the "i" variable which returns the current position of an iteration
 
 .. cv-compound::
@@ -182,7 +182,7 @@ There are many cases when you have an array and want to filter it by a certain c
 dojo.map
 ========
 
-Another great funtion, Dojo is providing is dojo.map. dojo.map lets you run a function on all elements of an array and returns a new array with the changed values. A very good example is the "Give all my employees a 10% salary rise":
+Another great function provided by Dojo is dojo.map. dojo.map lets you run a function on all elements of an array and returns a new array with the changed values. A very good example is the "Give all my employees a 10% salary rise":
 
 .. cv-compound::
 
@@ -236,7 +236,7 @@ dojo.some
 =========
 
 Imagine you are a manager of a famous bank. A client of you comes and visits your office asking for another million dollars as a credit.
-Now your bank policies only allows you to give each client one credit over 1 million, not two, not three - though you may have several smaller credits. Even 3 credits a 500.000 - weird bank.. anyways. dojo.some is the perfect functionto tell you whether an array has some of the asked values:
+Now your bank policies only allows you to give each client one credit over 1 million, not two, not three - though you may have several smaller credits. Even 3 credits a 500.000 - weird bank.. anyways. dojo.some is the perfect function to tell you whether an array has some of the asked values:
 
 *Note that we are using the doctest in this case to show you whether the client is allowed to get the credit. If the test passes he is allowed, if not he won't go home with the cash.*
 
@@ -248,7 +248,7 @@ Now your bank policies only allows you to give each client one credit over 1 mil
   <script type="text/javascript">dojo.require("dojox.widget.DocTester");</script>
   <div dojoType="dojox.widget.DocTester">
     >>> dojo.some([200000, 500000, 350000, 1000000, 75, 3], function(item){ return item>=1000000})
-    "false"
+    "true"
     >>> dojo.some([200000, 500000, 350000, 100000, 75, 3], function(item){ return item>=1000000})
     "false"
   </div>
@@ -271,7 +271,7 @@ An example:
   <script type="text/javascript">dojo.require("dojox.widget.DocTester");</script>
   <div dojoType="dojox.widget.DocTester">
     >>> dojo.every([{'month': 'january', 'income': 2000}, {'month': 'february', 'income': 3200}, {'month': 'march', 'income': 2100}], function(item){ return item.income>=3000})
-    "true"
+    "false"
     >>> dojo.every([{'month': 'january', 'income': 5000}, {'month': 'february', 'income': 4200}, {'month': 'march', 'income': 3100}], function(item){ return item.income>=3000})
     "true"
   </div>
