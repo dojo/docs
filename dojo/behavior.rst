@@ -62,7 +62,7 @@ Beyond simple application, we can bind selectors to Dom Events, and more, using 
       // all <span> nodes
       "span" : {
           // for each:
-          found: funcion(n){
+          found: function(n){
               console.log('found', n);
           }
        }
@@ -70,7 +70,7 @@ Beyond simple application, we can bind selectors to Dom Events, and more, using 
   dojo.behavior.add(myBehavior);
   dojo.behavior.apply();
 
-The ``found:`` function is applied to all found nodes. The ``onclick:`` identifier will bind an onlick function to all found nodes. You can use any Dom Event name, such as ``onclick``, ``onmouseenter``, ``onmouseleave``, ``onblur``, etc. 
+The ``found:`` function is applied to all found nodes. The ``onclick:`` identifier will bind an onclick function to all found nodes. You can use any Dom Event name, such as ``onclick``, ``onmouseenter``, ``onmouseleave``, ``onblur``, etc. 
 
 
 =====================
