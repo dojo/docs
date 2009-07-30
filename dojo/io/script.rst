@@ -67,7 +67,7 @@ dojo.io.script.get() supported object properties
 Examples
 ========
 
-Example 1: dojo.io.scriot call to fetch data from the Google Search API (JSONP)
+Example 1: dojo.io.script call to fetch data from the Google Search API (JSONP)
 -------------------------------------------------------------------------------
 
 .. cv-compound ::
