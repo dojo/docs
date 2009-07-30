@@ -96,8 +96,8 @@ If the creator function was not specified, a default creator is used. The defaul
   * If the container is ``<table>``-based, it will create a ``<tr><td>`` group of nodes, and it will be inserted in ``<tbody>``.
   * In all other contexts it will create a ``<span>`` node.
   * If the ``hint`` is ``"avatar"`` it will create a ``<span>`` node.
-* If the date item is an object, it will test for the presence of ``data`` member. If it is present, it will be used as a data object. Otherwise the item itself will be used as a data object.
-* If the date item is an object, it will test for the presence of ``type`` member. If it is present, it will be used as a type object. Otherwise ``["text"]`` will be used as a type object.
+* If the data item is an object, it will test for the presence of ``data`` member. If it is present, it will be used as a data object. Otherwise the item itself will be used as a data object.
+* If the data item is an object, it will test for the presence of ``type`` member. If it is present, it will be used as a type object. Otherwise ``["text"]`` will be used as a type object.
 * It will set a content of the node to ``String(data)``. You can override the ``toString()`` member function of your object to change how it is converted to the string. Or specify the ``creator`` function.
 * As any creator it returns a triplet object with newly created/identified ``node``, ``data``, and ``type``.
 
@@ -252,9 +252,9 @@ Constructor takes the same two parameters as the container's selector_. It under
 Public methods and attributes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Following public methods are defined (they can be replace to change the DnD behavior):
+The following public methods are defined (they can be replace to change the DnD behavior):
 
-* ``checkAcceptance(source, nodes)`` --- returns ``true``, if this object can accept ``nodes`` from ``source``. The default implementation checks item's types with accepted types of the object, and rejects the operation, if there is no full match. Such objects are marked as disabled targets and they do not participate in the current DnD operation. The source of items can always accept its items regardless of the match (for exceptions see the definition of ``selfAccept`` above) preventing the situation when user started to drag items and cannot find a suitable target, and cannot return them back. Please take it into consideration when replacing this method. Target's ``checkAcceptance()`` is called during the DnD in progress when user hovers above it. Following parameters are passed to the method:
+* ``checkAcceptance(source, nodes)`` --- returns ``true``, if this object can accept ``nodes`` from ``source``. The default implementation checks item's types with accepted types of the object, and rejects the operation if there is no full match. Such objects are marked as disabled targets and they do not participate in the current DnD operation. The source of items can always accept its items regardless of the match (for exceptions see the definition of ``selfAccept`` above) preventing the situation when user started to drag items and cannot find a suitable target, and cannot return them back. Please take it into consideration when replacing this method. Target's ``checkAcceptance()`` is called during the DnD in progress when user hovers above it. Following parameters are passed to the method:
 
   * ``source`` --- the source object for the dragged items.
   * ``nodes`` --- a list of DOM nodes.
@@ -280,7 +280,7 @@ Following local events are defined by Source_, which are meant to be overridden 
 * ``onDropExternal(source, nodes, copy)`` --- *(new in 1.2.2)* this method is called by the default implementation of ``onDrop()`` only if we have an external drop meaning that the source is different from the target. All parameters are the same as in ``onDrop()``. The default implementation performs the drop as instructed.
 * ``onDropInternal(nodes, copy)`` --- *(new in 1.2.2)* this method is called by the default implementation of ``onDrop()`` only if we have an internal drop meaning that the source is the same as the target. All parameters are the same as in ``onDrop()``, but ``source`` parameter is skipped as redundant (it is the same as ``this``). The default implementation performs the drop as instructed.
 * ``onDraggingOver()`` --- this method is called during the DnD operation in progress when the mouse is over this target, and it is not disabled for any reasons. The default implementation does nothing.
-* ``onDraggingOut()`` --- this method is called during the DnD operation in progress when the mouse went out this target, and it is not disabled for any reasons. The default implementation does nothing.
+* ``onDraggingOut()`` --- this method is called during the DnD operation in progress when the mouse went out of this target, and it is not disabled for any reasons. The default implementation does nothing.
 
 Topic processors
 ~~~~~~~~~~~~~~~~
@@ -326,9 +326,9 @@ Following methods should be implemented:
 * ``constructor(manager)`` --- the constructor of the class takes a single parameter --- the instance of Manager_, which is used to reflect the state of the DnD operation in progress visually. The constructor is called (and the avatar object is created) only when the manager decided to start a DnD operation. In this case Manager_ calls its method ``makeAvatar()``. By default Avatar constructs ``<table>``.
 * ``destroy()`` --- this method is called when the DnD operation is finished, the avatar is unneeded, and is about to be recycled.
 * ``update()`` --- this method is called, when the state of the manager changes. It is used to reflect manager's changes visually. Usually this method is called by Manager_ automatically.
-* ``_generateText()`` --- semi-public method, which is called by ``update()`` to render the header test. The default implementation returns a number of dragged items as a string. You can override this method for localization purposes, or to change the text how you like it.
+* ``_generateText()`` --- semi-public method, which is called by ``update()`` to render the header test. The default implementation returns a number of dragged items as a string. You can override this method for localization purposes, or to change the text however you like.
 
-The default implementation of the Avatar class does following:
+The default implementation of the Avatar class does the following:
 
 * It creates an absolutely positioned table of up to 6 rows.
 * The first row (the header) is populated with a text generated by ``_generateText()`` method.
@@ -349,7 +349,7 @@ Following CSS classes are used to style the avatar:
 Manager
 -------
 
-Manager is a small class, which implements a business logic of DnD and orchestrates the visualization of this process. It accepts events from sources/targets, creates the avatar, and checks the validity of the drop. At any given moment there is only one instance of this class (the singleton pattern), which can be accessed by ``dojo.dnd.manager()`` function. User does not need to instantiate this object explicitly. It is done automatically when DnD modules are included.
+Manager is a small class, which implements a business logic of DnD and orchestrates the visualization of this process. It accepts events from sources/targets, creates the avatar, and checks the validity of the drop. At any given moment there is only one instance of this class (the singleton pattern), which can be accessed by ``dojo.dnd.manager()`` function. You do not need to instantiate this object explicitly. It is done automatically when DnD modules are included.
 
 This class or its instance can be monkey patched or replaced completely, if you want to change its functionality.
 
@@ -436,7 +436,7 @@ The constructor accepts following parameters:
 
   * ``handle`` --- the node (or its id), which will be used as a drag handle. It should be a descendant of ``node``. If it is ``null`` (the default), the ``node`` itself is used for dragging.
   * ``delay`` --- a number in pixels. When user started the drag we should wait for ``delay`` pixels before starting dragging the node. It is used to prevent accidental drags. The default is 0 (no delay).
-  * ``skip`` --- a Boolean flag, which indicates that we should skip form elements when initiating drags, it is it ``true``. Otherwise we drag the node no matter what. This parameter is used when we want to drag a form, but keep form elements usable, e.g., we can still select text in a text node. The default is ``false``. When working with draggable form, the better lternative to ``skip=true`` is to define a drag handle instead.
+  * ``skip`` --- a Boolean flag, which indicates that we should skip form elements when initiating drags if it is ``true``. Otherwise we drag the node no matter what. This parameter is used when we want to drag a form, but keep form elements usable, e.g., we can still select text in a text node. The default is ``false``. When working with a draggable form, the better alternative to ``skip=true`` is to define a drag handle instead.
   * ``mover`` --- the class to be used to create a mover (see Mover_).
 
 Public methods and attributes
@@ -475,7 +475,7 @@ Following public methods/events are defined (they can be used with ``dojo.connec
 
 The most important events are ``onFirstMove()`` and ``onMove()``. The former can be used to set up some initial parameters for the move, and possibly update some DOM nodes. The latter implements the move itself. By overriding these two methods you can implement a variety of click-drag-release operations, e.g., a resize operation, a draw operation, and so on.
 
-As you can see ``onMoving()``, ``onMove()``, and ``onMoved()`` fit the classic AOP before/after pattern. ``onMoving()`` can be used to actively modify move parameters, while ``onMoved()`` can be used for book-keeping. You may consider to override ``onMove()`` for your own purposes and use ``dojox.lang.aop`` to augment it however you like.
+As you can see ``onMoving()``, ``onMove()``, and ``onMoved()`` fit the classic AOP before/after pattern. ``onMoving()`` can be used to actively modify move parameters, while ``onMoved()`` can be used for book-keeping. You may want to override ``onMove()`` for your own purposes and use ``dojox.lang.aop`` to augment it however you like.
 
 Following mouse event handlers are set up:
 
