@@ -131,7 +131,7 @@ The following operators from JSONPath are also supported:
       [?@['name']='Fred']
 
     * ..property - Performs a recursive search for the given property name, returning an array of all values with such a property name in the current object and any subobjects.
-    * +, -, /, *, &, |, %, (, ), <, >, < =, > =, ! = - These operators behave just as they do in JavaScript.
+    * +, -, /, \*, &, \|, %, (, ), <, >, < =, > =, ! = - These operators behave just as they do in JavaScript.
 
 Multiple operators can be used successively to create complex queries. For example, to find all the objects from the array in the products property that have a price under 15 and then sort them by descending order of rating and show the first twenty items from the resultant list, we could query:
 
