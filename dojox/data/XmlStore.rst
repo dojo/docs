@@ -331,9 +331,9 @@ Connecting XmlStore to dojox.grid.DataGrid
 
       var layoutBooks = [
         [
-          { field: "isbn", name: "ISBN", width: 10 },
-          { field: "author", name: "Author", width: 10 },
-          { field: "title", name: "Title", width: 'auto' }
+          { field: "isbn", name: "ISBN", width: 10, formatter: function(item) { return item.toString(); } },
+          { field: "author", name: "Author", width: 10, formatter: function(item) { return item.toString(); } },
+          { field: "title", name: "Title", width: 'auto', formatter: function(item) { return item.toString(); } }
         ]
       ];
     </script>
