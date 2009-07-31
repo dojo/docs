@@ -28,6 +28,11 @@ Dojo Base FX.
   * start: and end: properties, when using a function, are passed the node reference for the animtion
   * each property can now be a function, returning either a value, or and object to pass as the value
 
+`dojo.addOnLoad<dojo/addOnLoad>`_
+---------------------------------
+
+There was a dojo.require/onload fix done for Firefox browsers (see `Ticket #8976 <http://bugs.dojotoolkit.org/ticket/8976>`_).
+
 ======
 Dijit
 ======
