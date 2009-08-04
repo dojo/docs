@@ -11,47 +11,48 @@ dojo.position
 .. contents::
    :depth: 2
 
-Getter for the position and size of a dom node.
+Getter for the position and size of a DOM node.
 
 
 ============
 Introduction
 ============
 
-The dojo.position function is used to obtain a plethora of coordinate information about a dom node.  The type of information it returns is the width and height of the dom node's border-box (or border-to-border size), and absolute position in the form of page x and y coordinates.  The return object looks like:
+The dojo.position function is used to obtain position and size information about a DOM node.  The type of information it returns is the width and height of the DOM node's border-box (or borderStart-to-borderEnd size), and absolute position (borderStart) in the form of page x and y coordinates.  The return object looks like:
 
 { w: 300: h: 150, x: 700, y: 900, }
 
-for a node with a width of 300px and a height of 150px, with page absolute coordinates of 700px on the x axis and 900px on the y axis.
+for a node with a width of 300px and a height of 150px, with page absolute coordinates of 700px on the x-axis and 900px on the y-axis.
 
 ==============
 Usage Examples
 ==============
 
------------------------------------------------------------------------
-Example 1:  Look up a positioned DOM node and calculate its coordinates
------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------
+Example 1:  Center a small DOM node over a larger DOM node both vertically and horizontally
+-------------------------------------------------------------------------------------------
 
 .. cv-compound ::
   
   .. cv :: javascript
 
     <script>
-      function init() {
-        var node = dojo.byId("box");
-        var coords = dojo.position(node);
-        var info = dojo.byId("info");
-
-        info.appendChild(document.createTextNode("Width: " + coords.w + "px.   Height: " + coords.h + "px.  Absolute top: " + coords.y + "px.  Absolute left: " + coords.x + "px."));
-      }
-      dojo.addOnLoad(init);
+      dojo.addOnLoad(function(){
+        var span = dojo.byId('text');
+        var divInfo = dojo.position('underlay');
+        var spanInfo = dojo.position(span);
+        dojo.style(span, {
+          left: divInfo.x + (divInfo.w - spanInfo.w) / 2 + "px",
+          top: divInfo.y + (divInfo.h - spanInfo.h) / 2 + "px",
+          visibility: "visible"
+        });
+      });
     </script>
 
   .. cv :: html 
 
-    <div id="box" style="width: 100px; height: 100px; background-color: darkgray;"></div>
-    <br>
-    <span id="info"></span>
+    <div id='underlay' style="height:120px;width:120px;margin:20px;border:5px solid black;"></div>
+    <span id='text' style="position:absolute;visibility:hidden;border:10px groove black;padding:10px;font:14px monospace;">centered</span>
 
 
 --------------------------------------------------------------------
