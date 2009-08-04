@@ -42,8 +42,8 @@ Example 1:  Center a small DOM node over a larger DOM node both vertically and h
         var divInfo = dojo.coords('underlay', true);
         var spanInfo = dojo.coords(span);
         dojo.style(span, {
-          left: divInfo.x + (divInfo.w - spanInfo.w) / 2 + "px",
-          top: divInfo.y + (divInfo.h - spanInfo.h) / 2 + "px",
+          dummyleft: divInfo.x + (divInfo.w - spanInfo.w) / 2 + "px",
+          dummytop: divInfo.y + (divInfo.h - spanInfo.h) / 2 + "px",
           visibility: "visible"
         });
       });
