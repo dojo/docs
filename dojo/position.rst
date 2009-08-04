@@ -46,6 +46,8 @@ Example 1:  Center a small DOM node over a larger DOM node both vertically and h
           top: divInfo.y + (divInfo.h - spanInfo.h) / 2 + "px",
           visibility: "visible"
         });
+        var placeholder = dojo.create("span", null, dojo.body());
+        dojo.body().replaceChild(span, placeholder);
       });
     </script>
 
