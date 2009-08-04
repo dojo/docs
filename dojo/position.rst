@@ -51,7 +51,7 @@ Example 1:  Center a small DOM node over a larger DOM node both vertically and h
                         font: "14px monospace"
                 }
             }, dojo.body());
-        var spanInfo = dojo.position(span);
+        var spanInfo = dojo.coords(span);
         dojo.style(span, {
             left: divInfo.x + (divInfo.w - spanInfo.w) / 2 + "px",
             top: divInfo.y + (divInfo.h - spanInfo.h) / 2 + "px",
