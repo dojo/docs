@@ -73,7 +73,7 @@ Additional Information
 
 dojo.io.iframe calls cannot be made synchronous; therefore trying to set the 'sync' parameter (as shown in dojo.xhrGet()) will do nothing.  
 
-**IMPORTANT:** For all values EXCEPT html, The server response should be an HTML file with a textarea element. The response data should be inside the textarea element. Using an HTML document is the only reliable, cross-browser way this transport can know when the response has loaded. For the text/html mimetype, just return a normal HTML document. NOTE: text/xml or any other XML type is NOT supported by this transport.  In other words, your services for XML, JSON, and Text formats should return the data wrapped as the following:
+**IMPORTANT:** For all values EXCEPT html and xml, The server response should be an HTML file with a textarea element. The response data should be inside the textarea element. Using an HTML document is the only reliable, cross-browser way this transport can know when the response has loaded. For the text/html (Or XML) mimetype, just return a normal HTML/XML document.  In other words, your services for JSON and Text formats should return the data wrapped as the following:
 
 .. code-block :: javascript
   :linenos:
