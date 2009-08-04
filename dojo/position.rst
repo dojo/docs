@@ -1,8 +1,8 @@
 ## page was copied from dojo/coords
 #format dojo_rst
 
-dojo.coords
-===========
+dojo.position
+=============
 
 :Status: Draft
 :Version: 1.0
