@@ -39,7 +39,7 @@ Example 1:  Center a small DOM node over a larger DOM node both vertically and h
     <script>
       dojo.addOnLoad(function(){
         var span = dojo.byId('text');
-        var divInfo = dojo.position('underlay');
+        var divInfo = dojo.position('underlay', true);
         var spanInfo = dojo.position(span);
         dojo.style(span, {
           left: divInfo.x + (divInfo.w - spanInfo.w) / 2 + "px",
@@ -51,7 +51,7 @@ Example 1:  Center a small DOM node over a larger DOM node both vertically and h
 
   .. cv :: html 
 
-    <div id='underlay' style="height:100px;width:120px;margin:0px 20px;border:5px solid black;"></div>
+    <div id='underlay' style="height:100px;width:120px;margin:20px;border:5px solid black;"></div>
     <span id='text' style="position:absolute;left:0;top:0;visibility:hidden;border:10px groove black;padding:10px;font:14px monospace;">centered</span>
 
 
