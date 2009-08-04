@@ -39,18 +39,7 @@ Example 1:  Center a small DOM node over a larger DOM node both vertically and h
     <script>
       dojo.addOnLoad(function(){
         var divInfo = dojo.coords('underlay1', true);
-        var span = dojo.create("span", {
-                innerHTML: "CENTERED",
-                style: {
-                        position: "absolute",
-                        left: "0px",
-                        top: "0px",
-                        visibility: "hidden",
-                        border: "10px groove black",
-                        padding: "10px",
-                        font: "14px monospace"
-                }
-            }, dojo.body());
+        var span = dojo.byId("text1");
         var spanInfo = dojo.coords(span);
         dojo.style(span, {
             left: divInfo.x + (divInfo.w - spanInfo.w) / 2 + "px",
