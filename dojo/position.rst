@@ -44,7 +44,7 @@ Example 1:  Center a small DOM node over a larger DOM node both vertically and h
         dojo.style(span, {
           left: divInfo.x + (divInfo.w - spanInfo.w) / 2 + "px",
           top: divInfo.y + (divInfo.h - spanInfo.h) / 2 + "px",
-          display: "inline"
+          visibility: "visible"
         });
       });
     </script>
@@ -52,7 +52,7 @@ Example 1:  Center a small DOM node over a larger DOM node both vertically and h
   .. cv :: html 
 
     <div id='underlay' style="height:100px;width:120px;margin:0px 20px;border:5px solid black;"></div>
-    <span id='text' style="position:absolute;display:none;border:10px groove black;padding:10px;font:14px monospace;">centered</span>
+    <span id='text' style="position:absolute;left:0;top:0;visibility:hidden;border:10px groove black;padding:10px;font:14px monospace;">centered</span>
 
 
 --------------------------------------------------------------------
