@@ -18,7 +18,7 @@ Getter for the position and size of a DOM node.
 Introduction
 ============
 
-The dojo.position function is used to obtain position and size information about a DOM node.  The type of information it returns is the width and height of the DOM node's border-box (or borderStart-to-borderEnd size), and absolute position (borderStart) in the form of page x and y coordinates.  The return object looks like:
+The dojo.position function is used to obtain position and size information about a DOM node.  The type of information it returns is the width and height of the DOM node's border-box (or borderStart-to-borderEnd size), and absolute position (border-start) in the form of x and y coordinates.  If the optional second parameter (default=false) has the value true, then the returned x and y values are offsets from the document root (unaffected by window scrolling), otherwise they are relative to the current viewport.  The return object looks like:
 
 { w: 300: h: 150, x: 700, y: 900, }
 
@@ -28,9 +28,9 @@ for a node with a width of 300px and a height of 150px, with page absolute coord
 Usage Examples
 ==============
 
--------------------------------------------------------------------------------------------
-Example 1:  Center a small DOM node over a larger DOM node both vertically and horizontally
--------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------
+Example 1:  Center a small DOM node over a larger DOM node both vertically and horizontally relative to the document root
+-------------------------------------------------------------------------------------------------------------------------
 
 .. cv-compound ::
   
@@ -39,8 +39,8 @@ Example 1:  Center a small DOM node over a larger DOM node both vertically and h
     <script>
       dojo.addOnLoad(function(){
         var span = dojo.byId('text');
-        var divInfo = dojo.position('underlay', true);
-        var spanInfo = dojo.position(span);
+        var divInfo = dojo.coords('underlay', true);
+        var spanInfo = dojo.coords(span);
         dojo.style(span, {
           left: divInfo.x + (divInfo.w - spanInfo.w) / 2 + "px",
           top: divInfo.y + (divInfo.h - spanInfo.h) / 2 + "px",
@@ -55,8 +55,35 @@ Example 1:  Center a small DOM node over a larger DOM node both vertically and h
     <span id='text' style="position:absolute;visibility:hidden;border:10px groove black;padding:10px;font:14px monospace;">centered</span>
 
 
+----------------------------------------------------------------------------------------------------------------------------
+Example 2:  Center a small DOM node over a larger DOM node both vertically and horizontally relative to the current viewport
+----------------------------------------------------------------------------------------------------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.addOnLoad(function(){
+        var span = dojo.byId('text');
+        var divInfo = dojo.coords('underlay', false);
+        var spanInfo = dojo.coords(span);
+        dojo.style(span, {
+          left: divInfo.x + (divInfo.w - spanInfo.w) / 2 + "px",
+          top: divInfo.y + (divInfo.h - spanInfo.h) / 2 + "px",
+          visibility: "visible"
+        });
+      });
+    </script>
+
+  .. cv :: html 
+
+    <div id='underlay' style="height:100px;width:120px;margin:20px;border:5px solid black;"></div>
+    <span id='text' style="position:fixed;visibility:hidden;border:10px groove black;padding:10px;font:14px monospace;">centered</span>
+
+
 --------------------------------------------------------------------
-Example 2:  Look up a positioned dijit and calculate its coordinates
+Example 3:  Look up a positioned dijit and calculate its coordinates
 --------------------------------------------------------------------
 
 .. cv-compound ::
