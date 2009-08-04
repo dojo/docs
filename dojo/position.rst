@@ -51,7 +51,7 @@ Example 1:  Center a small DOM node over a larger DOM node both vertically and h
 
   .. cv :: html 
 
-    <div id='underlay1' style="height:100px;width:120px;margin:20px;border:5px solid black;"></div>
+    <div id='underlay1' style="height:100px;width:120px;margin:20px;border:5px solid black;position:absolute;"></div>
     <span id='text1' style="position:absolute;top:0;left:0;visibility:hidden;border:10px groove black;padding:10px;font:14px monospace;">centered</span>
 
 
