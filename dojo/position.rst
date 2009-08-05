@@ -56,9 +56,9 @@ Example 1:  Center a small DOM node over a larger DOM node both vertically and h
     <div id='div1' style="height:100px;width:120px;margin:20px;border:5px solid black;"></div>
 
 
-----------------------------------------------------------------------------------------------------------------------------
-Example 2:  Comparison of various DOM node position/size methods
-----------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------
+Comparison of various DOM node position/size methods
+----------------------------------------------------
 To see the effect of dojo.position's includeScroll boolean parameter, scroll the window down and click the 15x120 content area.
 
 .. cv-compound ::
@@ -107,7 +107,7 @@ To see the effect of dojo.position's includeScroll boolean parameter, scroll the
 	<tr><td style="text-align:left;">dojo.marginBox(node)</td><td id="marginBox_x"></td><td id="marginBox_y"></td><td id="marginBox_w"></td><td id="marginBox_h"></td><td id="marginBox_l"></td><td id="marginBox_t"></td></tr>
 	<tr><td style="text-align:left;">dojo.contentBox(node)</td><td id="contentBox_x"></td><td id="contentBox_y"></td><td id="contentBox_w"></td><td id="contentBox_h"></td><td id="contentBox_l"></td><td id="contentBox_t"></td></tr>
 	<tr style="color:gray;"><td style="text-align:left;">dojo.coords(node,true)</td><td id="coords_win_x"></td><td id="coords_win_y"></td><td id="coords_win_w"></td><td id="coords_win_h"></td><td id="coords_win_l"></td><td id="coords_win_t"></td></tr>
-	<tr style="color:gray;"><td style="text-align:left;">dojo.coords(node,false)</td><td id="coords_view_x"></td><td id="coords_view_y"></td><td id="coords_view_w"></td><td id="coords_view_h"></td><td id="coords_view_l"></td><td id="coords_view_t"></td></tr>
+	<tr style="color:gray;"><td style="text-align:left;">`dojo.coords <dojo/coords>`_(node,false)</td><td id="coords_view_x"></td><td id="coords_view_y"></td><td id="coords_view_w"></td><td id="coords_view_h"></td><td id="coords_view_l"></td><td id="coords_view_t"></td></tr>
     </table>
 
 
