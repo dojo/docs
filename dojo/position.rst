@@ -52,9 +52,27 @@ Example 1:  Center a small DOM node over a larger DOM node both vertically and h
 
   .. cv :: html 
 
-    <span id="span1" style="position:absolute; visibility:hidden; border:10px groove black; padding:10px; font:14px monospace;">centered</span>
-    <div id='div1' style="height:100px;width:120px;margin:20px;border:5px solid black;"></div>
+    <span id="span1" class="centered" style=""></span>
+    <div id='div1' class"container" style=""></div>
 
+  .. cv :: css
+
+    <style type="text/css">
+      .container {
+          background: url(http://docs.dojocampus.org/dojo/position?action=AttachFile&do=get&target=frame.png) no-repeat;
+          width: 237px;
+          height: 181px;
+      }
+
+      .centered {
+          background: url(http://docs.dojocampus.org/dojo/position?action=AttachFile&do=get&target=img.png) no-repeat;
+          width: 171px;
+          height: 121px;
+          visibility: hidden;
+          position: absolute;
+          border: 1px solid white;
+      }
+    </style>
 
 ----------------------------------------------------
 Comparison of various DOM node position/size methods
