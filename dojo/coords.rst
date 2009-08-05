@@ -84,10 +84,11 @@ Example 2:  Look up a positioned dijit and calculate its coordinates
     <span id="infoSpan"></span>
 
 
----------------------------------------------------------------------------------------------------------------------------------------
-`Comparison of various DOM node position/size methods. <dojo/position#example-2-comparison-of-various-dom-node-position-size-methods>`_
----------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------
+Comparison of various DOM node position/size methods
+----------------------------------------------------
 
+`Link: Comparison of various DOM node position/size methods. <dojo/position#example-2-comparison-of-various-dom-node-position-size-methods>`_
 
 =====
 Notes
