@@ -165,6 +165,11 @@ This example is showcasing the usage of dojo.marginBox as a setter, take a look 
     </style>
 
 
+Comparison of various DOM node position/size methods
+----------------------------------------------------
+
+`Link: Comparison of various DOM node position/size methods. <dojo/position#example-2-comparison-of-various-dom-node-position-size-methods>`_
+
 ========
 See also
 ========
