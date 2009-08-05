@@ -70,8 +70,8 @@ To see the effect of dojo.position's includeScroll boolean parameter, scroll the
 	var testNode = dojo.byId('testNode');
 	var contentBox = dojo.contentBox(testNode);
 	var marginBox = dojo.marginBox(testNode);
-	var position_win = (dojo.position||dojo.coords)(testNode, true);
-	var position_view = (dojo.position||dojo.coords)(testNode, false);
+	var position_win = dojo.coords(testNode, true);
+	var position_view = dojo.coords(testNode, false);
 	var coords_win = dojo.coords(testNode, true);
 	var coords_view = dojo.coords(testNode, false);
 	for (var attr in {x:0,y:0,w:0,h:0,l:0,t:0}){
