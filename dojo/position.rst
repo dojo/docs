@@ -53,7 +53,7 @@ Example 1:  Center a small DOM node over a larger DOM node both vertically and h
   .. cv :: html 
 
     <span id="span1" class="centered" style=""></span>
-    <div id='div1' class"container" style=""></div>
+    <div id="div1" class="container" style=""></div>
 
   .. cv :: css
 
