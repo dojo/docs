@@ -108,3 +108,24 @@ Connecting QueryReadStore to dijit.form.ComboBox
     <b>Combo lookup of states through QueryReadStore</b><br> 
     <div dojoType="dojox.data.QueryReadStore" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/tests/stores/QueryReadStore.php" jsId="comboStore"></div>
     <div dojoType="dijit.form.ComboBox" store="comboStore" searchAttr="name" pageSize="100"></div>
+
+
+Connecting QueryReadStore to dijit.form.FilteringSelect
+-------------------------------------------------------
+
+**Note:** You can watch the xhr requests to the service through firebug.
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojox.data.QueryReadStore");
+      dojo.require("dijit.form.FilteringSelect");
+    </script>
+
+  .. cv :: html 
+
+    <b>Combo lookup of states through QueryReadStore</b><br> 
+    <div dojoType="dojox.data.QueryReadStore" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/tests/stores/QueryReadStore.php" jsId="comboStore2"></div>
+    <div dojoType="dijit.form.FilteringSelect" store="comboStor2e" searchAttr="name" pageSize="100"></div>
