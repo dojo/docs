@@ -38,9 +38,9 @@ Example 1:  Center a small DOM node over a larger DOM node both vertically and h
 
     <script>
       dojo.addOnLoad(function(){
-        var divInfo = dojo.coords('div1', true);
+        var divInfo = dojo.coords('div1', true); // use true to get the x/y relative to the document root
         var span = dojo.byId('span1');
-        var spanInfo = dojo.coords(span, false);
+        var spanInfo = dojo.coords(span, false); // use false since x/y are not needed
         dojo.body().appendChild(span);
         dojo.style(span, {
             left: divInfo.x + (divInfo.w - spanInfo.w) / 2 + "px",
@@ -57,58 +57,57 @@ Example 1:  Center a small DOM node over a larger DOM node both vertically and h
 
 
 ----------------------------------------------------------------------------------------------------------------------------
-Example 2:  Center a small DOM node over a larger DOM node both vertically and horizontally relative to the current viewport
+Example 2:  Comparison of various DOM node position/size methods
 ----------------------------------------------------------------------------------------------------------------------------
+To see the effect of dojo.position's includeScroll boolean parameter, scroll the window down and click the 15x120 content area.
 
 .. cv-compound ::
   
   .. cv :: javascript
 
     <script>
-      dojo.addOnLoad(function(){
-        var span = dojo.byId('text2');
-        var divInfo = dojo.coords('underlay2', false);
-        var spanInfo = dojo.coords(span);
-        dojo.style(span, {
-          left: divInfo.x + (divInfo.w - spanInfo.w) / 2 + "px",
-          top: divInfo.y + (divInfo.h - spanInfo.h) / 2 + "px",
-          visibility: "visible"
-        });
-      });
-    </script>
+      function compareMethods(){
+	var testNode = dojo.byId('testNode');
+	var contentBox = dojo.contentBox(testNode);
+	var marginBox = dojo.marginBox(testNode);
+	var position_win = (dojo.position||dojo.coords)(testNode, true);
+	var position_view = (dojo.position||dojo.coords)(testNode, false);
+	var coords_win = dojo.coords(testNode, true);
+	var coords_view = dojo.coords(testNode, false);
+	for (var attr in {x:0,y:0,w:0,h:0,l:0,t:0}){
+		for (var fcn in {position_win:0, position_view:0, marginBox:0, contentBox:0, coords_win:0, coords_view:0}){
+			var val = eval(fcn)[attr];
+			dojo.byId(fcn+"_"+attr).innerHTML = !isNaN(val)?val:"--";
+		}
+	}
+    }
+    dojo.addOnLoad(function(){
+	compareMethods();
+    });
 
   .. cv :: html 
 
-    <div id='underlay2' style="height:100px;width:120px;margin:20px;border:5px solid black;"></div>
-    <span id='text2' style="position:fixed;visibility:hidden;border:10px groove black;padding:10px;font:14px monospace;">centered</span>
-
-
---------------------------------------------------------------------
-Example 3:  Look up a positioned dijit and calculate its coordinates
---------------------------------------------------------------------
-
-.. cv-compound ::
-  
-  .. cv :: javascript
-
-    <script>
-      dojo.require("dijit.form.TextBox");
-      function init() {
-        var node = dijit.byId("textbox").domNode;
-        var coords = dojo.position(node);
-        var info = dojo.byId("infoSpan");
-
-        info.appendChild(document.createTextNode("Width: " + coords.w + "px.   Height: " + coords.h + "px. Absolute top: " + coords.y + "px.  Absolute left: " + coords.x + "px."));
-      }
-      dojo.addOnLoad(init);
-    </script>
-
-  .. cv :: html 
-
-    <div id="textbox" dojoType="dijit.form.TextBox"></div>
-    <br>
-    <br>
-    <span id="infoSpan"></span>
+    <fieldset style="display:inline;border:15px solid gray;border-width:15px 0 0 15px;margin:0px;padding:0px;font:14px monospace;background-color:white;outline:1px dotted black;">
+	<fieldset style="display:inline;border:0px;border:0px;padding:0px;width:270px;height:165px;overflow:hidden;position:relative;left:-15px;top:-15px;">
+		<div id="testNode" style="display:inline;margin:25px;border:20px solid gray;padding:30px;float:left;position:relative;left:15px;top:15px;" onclick="compareMethods()">
+			<center style="display:block;margin:0px;padding:0px;border:0px;width:120px;height:15px;background-color:gray;color:white;overflow:hidden;">15x120 content</center>
+			<nobr style="position:absolute;left:2px;top:2px;color:black;">padding 30px</nobr>
+			<nobr style="position:absolute;left:-18px;top:-18px;color:white;">border 20px</nobr>
+			<nobr style="position:absolute;left:-43px;top:-43px;color:black;">margin 25px</nobr>
+			<nobr style="position:absolute;left:-63px;top:-63px;color:white;">left/top 15px</nobr>
+		</div>
+	</fieldset>
+    </fieldset>
+    <table rules=all cellpadding=2 cellspacing=2 border=2 style="font:16px monospace;text-align:center;">
+	<tr><td></td><td colspan="6">attribute</td></tr>
+	<tr><td>function</td><td>x</td><td>y</td><td>w</td><td>h</td><td>l</td><td>t</td></tr>
+	<tr><td style="text-align:left;">dojo.position(node,true)</td><td id="position_win_x"></td><td id="position_win_y"></td><td id="position_win_w"></td><td id="position_win_h"></td><td id="position_win_l"></td><td id="position_win_t"></td></tr>
+	<tr><td style="text-align:left;">dojo.position(node,false)</td><td id="position_view_x"></td><td id="position_view_y"></td><td id="position_view_w"></td><td id="position_view_h"></td><td id="position_view_l"></td><td id="position_view_t"></td></tr>
+	<tr><td style="text-align:left;">dojo.marginBox(node)</td><td id="marginBox_x"></td><td id="marginBox_y"></td><td id="marginBox_w"></td><td id="marginBox_h"></td><td id="marginBox_l"></td><td id="marginBox_t"></td></tr>
+	<tr><td style="text-align:left;">dojo.contentBox(node)</td><td id="contentBox_x"></td><td id="contentBox_y"></td><td id="contentBox_w"></td><td id="contentBox_h"></td><td id="contentBox_l"></td><td id="contentBox_t"></td></tr>
+	<tr style="color:gray;"><td style="text-align:left;">dojo.coords(node,true)</td><td id="coords_win_x"></td><td id="coords_win_y"></td><td id="coords_win_w"></td><td id="coords_win_h"></td><td id="coords_win_l"></td><td id="coords_win_t"></td></tr>
+	<tr style="color:gray;"><td style="text-align:left;">dojo.coords(node,false)</td><td id="coords_view_x"></td><td id="coords_view_y"></td><td id="coords_view_w"></td><td id="coords_view_h"></td><td id="coords_view_l"></td><td id="coords_view_t"></td></tr>
+    </table>
 
 
 
@@ -116,3 +115,4 @@ Example 3:  Look up a positioned dijit and calculate its coordinates
 Notes
 =====
 * Remember that page coordinates start as the top leftmost of the page is 0px, 0px
+* dojo.coords is deprecated starting in Dojo 1.4 since it's a mixin of the much faster dojo.position and dojo.marginBox
