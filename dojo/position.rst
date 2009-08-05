@@ -29,7 +29,7 @@ Usage Examples
 ==============
 
 -------------------------------------------------------------------------------------------------------------------------
-Example 1:  Center a small DOM node over a larger DOM node both vertically and horizontally relative to the document root
+Example 1:  Center a small DOM node (with background image) over a larger DOM node (the frame) both vertically and horizontally relative to the document root
 -------------------------------------------------------------------------------------------------------------------------
 
 .. cv-compound ::
