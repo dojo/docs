@@ -515,6 +515,12 @@ The fetch method query syntax for ItemFileReadStore is simple and straightforwar
 
 Okay, easy. Now what if I want to do a fuzzy match of items?  Can this be done?   Yes. ItemFileReadStore supports wildcard matching. Specifically, it supports multi-character * and single character ? as wildcards in attribute value queries.
 
+*NOTE:*  As of The dojo Toolkit 1.4, a RegularExpression object can also be passed as a query on an attribute.  This is not dojo.data.api specified, but a feature specific to ItemFileReadStore.   Do not expect other stores to implement it.  Some may, some may not.  Always refer to their documentation on their query syntax.
+
+.. code-block :: javascript
+
+  { foo:new RegExp("/^bar$/"), bit:/^bite$/}
+
 ==============
 Query Examples
 ==============
