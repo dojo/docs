@@ -38,9 +38,9 @@ Example 1:  Center a small DOM node over a larger DOM node both vertically and h
 
     <script>
       dojo.addOnLoad(function(){
-        var divInfo = dojo.position('div1', true); // use true to get the x/y relative to the document root
-        var span = dojo.byId('span1');
-        var spanInfo = dojo.position(span, false); // use false since x/y are not needed
+        var divInfo = dojo.position('div1', true), // use true to get the x/y relative to the document root
+            span = dojo.byId('span1'),
+            spanInfo = dojo.position(span, false); // use false since x/y are not needed
         dojo.body().appendChild(span);
         dojo.style(span, {
             left: divInfo.x + (divInfo.w - spanInfo.w) / 2 + "px",
@@ -85,13 +85,13 @@ To see the effect of dojo.position's includeScroll boolean parameter, scroll the
 
     <script>
     function compareMethods(){
-	var testNode = dojo.byId('testNode');
-	var contentBox = dojo.contentBox(testNode);
-	var marginBox = dojo.marginBox(testNode);
-	var position_win = dojo.position(testNode, true);
-	var position_view = dojo.position(testNode, false);
-	var coords_win = dojo.coords(testNode, true);
-	var coords_view = dojo.coords(testNode, false);
+	var testNode = dojo.byId('testNode'),
+	    contentBox = dojo.contentBox(testNode),
+	    marginBox = dojo.marginBox(testNode),
+	    position_win = dojo.position(testNode, true),
+	    position_view = dojo.position(testNode, false),
+	    coords_win = dojo.coords(testNode, true),
+	    coords_view = dojo.coords(testNode, false);
 	for (var attr in {x:0,y:0,w:0,h:0,l:0,t:0}){
 		for (var fcn in {position_win:0, position_view:0, marginBox:0, contentBox:0, coords_win:0, coords_view:0}){
 			var val = eval(fcn)[attr];
