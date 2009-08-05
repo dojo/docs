@@ -128,7 +128,7 @@ This example is showcasing the usage of dojo.contentBox as a setter, take a look
 Comparison of various DOM node position/size methods
 ----------------------------------------------------
 
-`Link: Comparison of various DOM node position/size methods. <dojo/position#example-2-comparison-of-various-dom-node-position-size-methods>`_
+`Link: Comparison of various DOM node position/size methods. <dojo/position#comparison-of-various-dom-node-position-size-methods>`_
 
 
 ========
