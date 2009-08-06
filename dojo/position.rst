@@ -41,8 +41,7 @@ Example 1:  Center a small DOM node (with background image) over a larger DOM no
       function doit(){
         var divInfo = dojo.position('div1', true), // use true to get the x/y relative to the document root
             span = dojo.byId('span1'),
-            spanInfo = dojo.position(span, true); // use false since x/y are not needed
-        //dojo.body().appendChild(span);
+            spanInfo = dojo.position(span, true);
         lastX += divInfo.x - spanInfo.x + (divInfo.w - spanInfo.w) / 2;
         lastY += divInfo.y - spanInfo.y + (divInfo.h - spanInfo.h) / 2;
         dojo.style(span, {
