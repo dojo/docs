@@ -42,33 +42,24 @@ Example 1:  Center a small DOM node (with background image) over a larger DOM no
             span = dojo.byId('span1'),
             spanInfo = dojo.position(span, false); // use false since x/y are not needed
         dojo.body().appendChild(span);
-   span.h = spanInfo.h;
-   var div = dojo.byId('div1');
-   div.y = divInfo.y;
-   div.h = divInfo.h;
-   div.scrollY = dojo._docScroll().y;
         dojo.style(span, {
             left: divInfo.x + (divInfo.w - spanInfo.w) / 2 + "px",
             top: divInfo.y + (divInfo.h - spanInfo.h) / 2 + "px",
             visibility: "visible"
         });
    }
-      dojo.addOnLoad(dojo.hitch(window, "setTimeout", function(){
+      dojo.addOnLoad(function(){
+return;
         var divInfo = dojo.position('div1', true), // use true to get the x/y relative to the document root
             span = dojo.byId('span1'),
             spanInfo = dojo.position(span, false); // use false since x/y are not needed
         dojo.body().appendChild(span);
-   span.h = spanInfo.h;
-   var div = dojo.byId('div1');
-   div.y = divInfo.y;
-   div.h = divInfo.h;
-   div.scrollY = dojo._docScroll().y;
         dojo.style(span, {
             left: divInfo.x + (divInfo.w - spanInfo.w) / 2 + "px",
             top: divInfo.y + (divInfo.h - spanInfo.h) / 2 + "px",
             visibility: "visible"
         });
-      }, 0));
+      });
     </script>
 
   .. cv :: html 
@@ -90,7 +81,6 @@ Example 1:  Center a small DOM node (with background image) over a larger DOM no
           background: url(http://docs.dojocampus.org/dojo/position?action=AttachFile&do=get&target=img.png) no-repeat;
           width: 171px;
           height: 121px;
-          visibility: hidden;
           position: absolute;
           border: 1px solid white;
       }
