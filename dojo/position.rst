@@ -42,10 +42,10 @@ Example 1:  Center a small DOM node (with background image) over a larger DOM no
             span = dojo.byId('span1'),
             spanInfo = dojo.position(span, false); // use false since x/y are not needed
         dojo.body().appendChild(span);
-span.h = spanInfo.h;
-var div = dojo.byId('div1');
-div.y = divInfo.y;
-div.h = divInfo.h;
+   span.h = spanInfo.h;
+   var div = dojo.byId('div1');
+   div.y = divInfo.y;
+   div.h = divInfo.h;
         dojo.style(span, {
             left: divInfo.x + (divInfo.w - spanInfo.w) / 2 + "px",
             top: divInfo.y + (divInfo.h - spanInfo.h) / 2 + "px",
