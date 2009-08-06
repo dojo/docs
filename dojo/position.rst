@@ -64,8 +64,8 @@ Example 1:  Center a small DOM node (with background image) over a larger DOM no
 
   .. cv :: html 
 
-    <span id="span1" testclass="centered" style="position:absolute;border:1px solid red;;">centered</span>
-    <div id="div1" testclass="container" style="width:200px;height:100px;border:1px solid blue;"></div>
+    <span id="span1" class="centered" teststyle="position:absolute;border:1px solid red;;">centered</span>
+    <div id="div1" class="container" teststyle="width:200px;height:100px;border:1px solid blue;"></div>
     <input type="button" onclick="doit()" value="Click to center the image over the frame">
 
   .. cv :: css
