@@ -64,7 +64,7 @@ Tree
 NumberSpinner
 -------------
 
-The `NumberSpinner <dijit/form/NumberSpinner>_` widget has changed the **required** attribute default value from true to false to more consistently allow for unspecified values within a FORM.
+The `NumberSpinner <dijit/form/NumberSpinner>`_ widget has changed the **required** attribute default value from true to false to more consistently allow for unspecified values within a FORM.
 
 ======
 Dojox
