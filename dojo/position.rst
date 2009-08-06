@@ -49,7 +49,7 @@ Example 1:  Center a small DOM node (with background image) over a larger DOM no
         });
    }
       dojo.addOnLoad(function(){
-return;
+    return;
         var divInfo = dojo.position('div1', true), // use true to get the x/y relative to the document root
             span = dojo.byId('span1'),
             spanInfo = dojo.position(span, false); // use false since x/y are not needed
