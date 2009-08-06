@@ -45,6 +45,11 @@ Dojo Base FX
 Dijit
 ======
 
+onChange event handling in dijit.form
+-------------------------------------
+
+Most dijit.form widgets fire the onChange event after a value change has been detected.  With some widgets, this event fired synchronously before the attr('value',val) returned, while on other widgets, the event was asynchronous.  In order to return control to the browser's UI thread sooner, and also to collapse onChange events that fire faster tha the user handler can execute, the events will always fire asynchronously now, and consecutive, unprocessed onChange events will be collapsed into single events.  User code that assumed onChange would always fire synchronously after a value change will have to be modified.
+
 dijit.WidgetSet enhancements
 ----------------------------
 
