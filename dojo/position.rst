@@ -37,14 +37,17 @@ Example 1:  Center a small DOM node (with background image) over a larger DOM no
   .. cv :: javascript
 
     <script>
+      var lastX = 0, lastY = 0;
       function doit(){
         var divInfo = dojo.position('div1', true), // use true to get the x/y relative to the document root
             span = dojo.byId('span1'),
-            spanInfo = dojo.position(span, false); // use false since x/y are not needed
+            spanInfo = dojo.position(span, true); // use false since x/y are not needed
         dojo.body().appendChild(span);
+        lastX += divInfo.x - spanInfo.x + (divInfo.w - spanInfo.w) / 2;
+        lastY += divInfo.y - spanInfo.y + (divInfo.h - spanInfo.h) / 2;
         dojo.style(span, {
-            left: divInfo.x + (divInfo.w - spanInfo.w) / 2 + "px",
-            top: divInfo.y + (divInfo.h - spanInfo.h) / 2 + "px"
+            left: lastX + "px",
+            top: lastY + "px"
         });
       }
     </script>
@@ -69,6 +72,8 @@ Example 1:  Center a small DOM node (with background image) over a larger DOM no
           width: 171px;
           height: 121px;
           position: absolute;
+          left: 0;
+          top: 0;
           border: 1px solid white;
       }
     </style>
