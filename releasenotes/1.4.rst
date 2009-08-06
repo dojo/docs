@@ -23,6 +23,14 @@ There was a dojo.require/onload fix done for Firefox browsers (see `Ticket #8976
 -------------------------------------------
 A new method in Dojo Base (part of dojo.js) that is related to dojo.formToObject(), except instead of converting a whole form to an object, it just converts one form field. Pass it a DOM Node for the field, or the ID of the form field as a string. dojo.fieldToObject returns the value encoded in a form field as as a string or an array of strings. Disabled form elements and unchecked radio and checkboxes are skipped. Multi-select elements are returned as an array of string values. See `dojo.fieldToObject <dojo/fieldToObject>`_ for more information.
 
+`dojo.position <dojo/position>`_
+-------------------------------------------
+A new method in Dojo Base (part of dojo.js) that returns the beginning x/y of a DOM node's border-box as well as it's width and height.  An optional boolean parameter can be specified to change the default coordinate origin point from the viewport to the document root.
+
+`dojo.coords <dojo/coords>`_
+-------------------------------------------
+This method in Dojo Base has been deprecated in Dojo 1.4.  The returned object is a mixin of `dojo.position <dojo/position>`_ and `dojo.marginBox <dojo/marginBox>`_.  Because the x/y position is based on the border-box and the (w)idth/(h)eight attributes represent the margin-box, there was considerable confusion on correctly using the returned object.  The new method `dojo.position <dojo/position>`_ performs much faster.  Users needing the l/t/w/h attributes from this method can continue to use `dojo.marginBox <dojo/marginBox>`_.
+
 Dojo Base FX
 ------------
 
@@ -52,6 +60,11 @@ Tree
 ----
 
 * Tree: dijit._tree.dndSource moved to dijit.tree.dndSource (since it's supposed to be used publicly)
+
+NumberSpinner
+-------------
+
+The `NumberSpinner <dijit/form/NumberSpinner>_` widget has changed the **required** attribute default value from true to false to more consistently allow for unspecified values within a FORM.
 
 ======
 Dojox
