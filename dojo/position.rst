@@ -37,36 +37,23 @@ Example 1:  Center a small DOM node (with background image) over a larger DOM no
   .. cv :: javascript
 
     <script>
-   function doit(){
+      function doit(){
         var divInfo = dojo.position('div1', true), // use true to get the x/y relative to the document root
             span = dojo.byId('span1'),
             spanInfo = dojo.position(span, false); // use false since x/y are not needed
         dojo.body().appendChild(span);
         dojo.style(span, {
             left: divInfo.x + (divInfo.w - spanInfo.w) / 2 + "px",
-            top: divInfo.y + (divInfo.h - spanInfo.h) / 2 + "px",
-            visibility: "visible"
+            top: divInfo.y + (divInfo.h - spanInfo.h) / 2 + "px"
         });
-   }
-      dojo.addOnLoad(function(){
-    return;
-        var divInfo = dojo.position('div1', true), // use true to get the x/y relative to the document root
-            span = dojo.byId('span1'),
-            spanInfo = dojo.position(span, false); // use false since x/y are not needed
-        dojo.body().appendChild(span);
-        dojo.style(span, {
-            left: divInfo.x + (divInfo.w - spanInfo.w) / 2 + "px",
-            top: divInfo.y + (divInfo.h - spanInfo.h) / 2 + "px",
-            visibility: "visible"
-        });
-      });
+      }
     </script>
 
   .. cv :: html 
 
-    <span id="span1" class="centered" teststyle="position:absolute;border:1px solid red;;">centered</span>
-    <div id="div1" class="container" teststyle="width:200px;height:100px;border:1px solid blue;"></div>
-    <input type="button" onclick="doit()" value="Click to center the image over the frame">
+    <span id="span1" class="centered" style=""></span>
+    <div id="div1" class="container" style=""></div>
+    <button type="button" onclick="doit()" class="">Click to center the image over the frame</button>
 
   .. cv :: css
 
