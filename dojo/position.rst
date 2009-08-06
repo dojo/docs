@@ -53,7 +53,7 @@ Example 1:  Center a small DOM node (with background image) over a larger DOM no
             visibility: "visible"
         });
    }
-      dojo.addOnLoad(function(){
+      dojo.addOnLoad(dojo.hitch(window, "setTImeout", function(){
         var divInfo = dojo.position('div1', true), // use true to get the x/y relative to the document root
             span = dojo.byId('span1'),
             spanInfo = dojo.position(span, false); // use false since x/y are not needed
@@ -68,14 +68,14 @@ Example 1:  Center a small DOM node (with background image) over a larger DOM no
             top: divInfo.y + (divInfo.h - spanInfo.h) / 2 + "px",
             visibility: "visible"
         });
-      });
+      }, 0));
     </script>
 
   .. cv :: html 
 
     <span id="span1" testclass="centered" style="position:absolute;border:1px solid red;;">centered</span>
     <div id="div1" testclass="container" style="width:200px;height:100px;border:1px solid blue;"></div>
-    <button onclick="doit()">recenter</button>
+    <input type="button" onclick="doit()" value="Click to center the image over the frame">
 
   .. cv :: css
 
