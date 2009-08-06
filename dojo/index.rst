@@ -176,11 +176,19 @@ DOM
 
     * `dojo.coords <dojo/coords>`_
 
-      Getter for the coordinates (relative to parent and absolute) of a dom node.
+      Getter for the coordinates (relative to parent and absolute) of a DOM node.  Deprecated in Dojo 1.4.
       
     * NodeList.coords
     
-      Getter for the coordinates of each node in the list
+      Getter for the coordinates of each node in the list.  Deprecated in Dojo 1.4.
+
+    * `dojo.position <dojo/position>`_
+
+      Getter for the border-box x/y coordinates and size of a DOM node.
+      
+    * NodeList.position
+    
+      Calls `dojo.position <dojo/position>`_ for each node in the list and returns those objects as an Array.
 
     * `dojo.style <dojo/style>`_
 
