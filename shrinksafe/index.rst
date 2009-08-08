@@ -42,6 +42,13 @@ to a file or process.
   java -jar shrinksafe.jar -?   Get the usage message with information on optional arguments.
 
 
+ShrinkSafe uses the encoding settings for the JVM, which may vary depending on your JDK installation.  To override the encoding, use the file.encoding system property:
+
+.. code-block :: javascript
+
+  java -jar -Dfile.encoding=UTF8 shrinksafe.jar
+
+
 =====================
 Developer information
 =====================
