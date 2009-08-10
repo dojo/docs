@@ -6,6 +6,7 @@ dojox.date
 :Status: Draft
 :Version: 1.0
 :Project owner: Tomer Mahlin
+:Developers: Tomer Mahlin, Helena Halperin, Moshe Wajnberg
 :Available: since V1.4
 
 .. contents::
