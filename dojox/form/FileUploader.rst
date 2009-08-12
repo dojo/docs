@@ -12,12 +12,49 @@ dojox.form.FileUploader
 Basic Description
 -----------------
 
-Handles file uploading to a server. 
+Handles multiple file uploading to a server. 
 
-Version 1.4
------------
+Dojo Version 1.2.x
+------------------
 
-FileUploader is now a widget and **DOES** create a button. You do not have to pass a button in. Passing a button is still supported until version 1.5 to maintain backwards compatibility, but it is not reccomended. Just create your uploader like any other widget.
+The FileUploader version 1.1 and 1.2 is no longer supported. FileUploader 1.2 programmatically called the Flash browse() method which Adobe soon after removed for security reasons.
+
+Dojo Version 1.3
+----------------
+
+This version is supported but has limitations. It floats the SWF over the styled button, so the CSS is tricky and not always 100% accurate. And this will not work in many cases where the button is in scrolling content, specifically Windows and Linux Firefox.
+
+Dojo Version 1.3.2
+------------------
+
+This version is a major upgrade from 1.3, makes CSS placement easier and fixes the scrolling bug. However there is an IE8 bug that was not caught at the time of release. This bug can be patched using the instructions found in the Trac ticket:
+
+http://bugs.dojotoolkit.org/ticket/9615
+
+Another bug found is uploading muliple files more than once causes onComplete to fire on every file. It should only fire after all files have uploaded. The fix for this is to use the SWF from the trunk (1.4) in the 1.3.2 release. 
+
+http://bugs.dojotoolkit.org/ticket/9646
+
+Updating Your Release
+---------------------
+
+I often suggest to people who are not able to use the 1.3.2 or trunk version of Dojo to copy over the latest uploader files. The involved files would be:
+
+ - dojox/form/FileUploader.js
+ - dojox/form/resources/FileUploader.swf
+ - dojox/form/FileUploader.css
+ - dojox/embed/flashVars.js
+ - dojox/embed/Flash.js
+
+and optionally:
+
+ - dojox/form/resources/UploadFile.php
+ - dojox/form/resources/cLog.php
+
+Release Notes for Versions 1.3.2 - 1.4
+--------------------------------------
+
+FileUploader is now a widget and **DOES** create a button. You do not have to pass a button in. Passing a button is still supported until version 1.5 to maintain backwards compatibility, but it is not recommended. Just create your uploader like any other widget.
 
 The button styles are now recreated in Flash, so there is no longer an invisible Flash movie with *wmode=transparent*. This way the Flash button is actually placed inline with the DOM, not floating above it and contstantly resetting its position. The "Windows Firefox clickable bug" should be fixed (and hopefully some Linux problems).
 
