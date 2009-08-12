@@ -37,10 +37,11 @@ What's New / Release Notes
 
 
 
-================
-`About <about>`_
-================
+=======================================
+`About the Dojo Documentation <about>`_
+=======================================
 
 * `All about Dojo Toolkits new official documentation pages <about/index>`_ and how you can contribute. 
+* `Wondering you you can signup to contribute? <about/login>`_ 
 
   It's a wiki, so dive in to help us make it awesome!
