@@ -331,12 +331,13 @@ Known Issues
 .. code-block :: javascript
   :linenos:
 
-		dialogObj = new dijit.Dialog({
-			id: 'dialogWithHref',
-			title: 'The title'
-			href: "/url/to/dialog/content/including/layout/dijit/",
-	 	   });
-	
-		dojo.style(dialogObj.containerNode, {
-			position:'relative', 
-		});
+  dialogObj = new dijit.Dialog({
+      id: 'dialogWithHref',
+      title: 'The title'
+      href: "/url/to/dialog/content/including/layout/dijit/",
+  });
+  
+  dojo.style(dialogObj.containerNode, {
+          position:'relative',
+  });
+  
