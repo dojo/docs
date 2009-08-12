@@ -325,3 +325,23 @@ Known Issues
 
 * There are focus issues when the dialog is created via an href. Due to timing issues focus may not be properly set nor properly trapped
   in the dialog. For accessibility reasons, dialogs created via href are not recommended. This issue will be addressed in a future release.
+* When loading Dialog content with the href property, there can be issues with scrolling in IE7: If the loaded content contains dijit.layout elements and the Dialog content is larger than the size of the dialog, the layout dijits do not scroll properly in IE7. The workaround for this issue is to set the 'position:relative' style to the dialog.containerNode: 
+
+.. cv:: javascript
+    :label: Example
+
+    <script type="text/javascript">
+        dojo.require("dijit.Dialog");
+        dojo.require("dijit.layout.AccordionContainer");
+
+	dialogObj = new dijit.Dialog({
+			id: 'mydialogid',
+			href: "/url/to/dialog/content/including/layout/dijit/",
+	 	   });
+	
+	dojo.style(dialogObj.containerNode, {
+		position:'relative', 
+	});
+	
+	dialogObj.show();
+    </script>
