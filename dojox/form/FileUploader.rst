@@ -51,6 +51,8 @@ and optionally:
  - dojox/form/resources/UploadFile.php
  - dojox/form/resources/cLog.php
 
+Note that if you are moving these files into Dojo 1.2 or less, you will have to change some of the code in the FileUploader to not use the 1.3 html method dojo.destroy() and replace it with the previous version of dojo._destroyElement()
+
 Release Notes for Versions 1.3.2 - 1.4
 --------------------------------------
 
