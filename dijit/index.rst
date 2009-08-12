@@ -34,6 +34,7 @@ Widgets
 * `dijit.Editor <dijit/Editor>`_
 * `dijit.InlineEditBox <dijit/InlineEditBox>`_
 * `dijit.Menu <dijit/Menu>`_
+* `dijit.Menu <dijit/MenuBar>`_
 * `dijit.ProgressBar <dijit/ProgressBar>`_
 * `dijit.TitlePane <dijit/TitlePane>`_
 * `dijit.Toolbar <dijit/Toolbar>`_
