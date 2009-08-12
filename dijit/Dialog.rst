@@ -328,10 +328,8 @@ Known Issues
 * When loading Dialog content with the href property, there can be issues with scrolling in IE7: If the loaded content contains dijit.layout elements and the Dialog content is larger than the size of the dialog, the layout dijits do not scroll properly in IE7. The workaround for this issue is to set the 'position:relative' style to the dialog.containerNode: 
 
 .. cv-compound::
-
-    Look in the javascript code to see an example of the workaround for the issue described above
-
-.. cv:: html
+ 
+  .. cv:: html
 
     <p>When pressing this button the dialog will popup:</p>
     <button id="buttonOne" dojoType="dijit.form.Button">Show me!
@@ -343,7 +341,6 @@ Known Issues
 
 
 .. cv:: javascript
-    :label: Example
 
     <script type="text/javascript">
         dojo.require("dijit.form.Button");
