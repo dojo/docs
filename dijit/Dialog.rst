@@ -327,27 +327,9 @@ Known Issues
   in the dialog. For accessibility reasons, dialogs created via href are not recommended. This issue will be addressed in a future release.
 * When loading Dialog content with the href property, there can be issues with scrolling in IE7: If the loaded content contains dijit.layout elements and the Dialog content is larger than the size of the dialog, the layout dijits do not scroll properly in IE7. The workaround for this issue is to set the 'position:relative' style to the dialog.containerNode: 
 
-.. cv-compound::
- 
-  .. cv:: html
 
-    <p>When pressing this button the dialog will popup:</p>
-    <button id="buttonOne" dojoType="dijit.form.Button">Show me!
-        <script type="dojo/method" event="onClick" args="evt">
-            // Show the Dialog:
-            dijit.byId("dialogWithHref").show();
-        </script>
-    </button>
-
-
-.. cv:: javascript
-
-    <script type="text/javascript">
-        dojo.require("dijit.form.Button");
-        dojo.require("dijit.Dialog");
-        dojo.require("dijit.layout.AccordionContainer");
-
-	dojo.addOnLoad(function(){
+.. code-block :: javascript
+  :linenos:
 		dialogObj = new dijit.Dialog({
 			id: 'dialogWithHref',
 			title: 'The title'
@@ -357,5 +339,3 @@ Known Issues
 		dojo.style(dialogObj.containerNode, {
 			position:'relative', 
 		});
-	});
-    </script>
