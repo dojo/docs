@@ -330,6 +330,7 @@ Known Issues
 
 .. code-block :: javascript
   :linenos:
+
 		dialogObj = new dijit.Dialog({
 			id: 'dialogWithHref',
 			title: 'The title'
