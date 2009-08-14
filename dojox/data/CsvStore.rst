@@ -48,6 +48,9 @@ Constructor Params
 | label          | No           |A string that identifies which column to treat as the human-readable label. It must match one of| 1.0       |
 |                |              |the column labels in the file for it to be effective.                                           |           |
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
+| separator      | No           |**New to Dojo Toolkit 1.4** The CsvStore can now take an optional character parameter to        | 1.4       |
+|                |              |identify the delimiter of fields.  Comma is not longer required, but merely the default.        |           |
++----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
 
 ============
 Query Syntax
