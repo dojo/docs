@@ -181,6 +181,12 @@ Connecting CsvStore to dojox.grid.DataGrid
           { field: "age", name: "Age", width: 'auto' }
         ]
       ];
+  
+      dojo.addOnLoad(function(){
+         dijit.byId("grid").setStore(personStoreForGrid, {});
+         dijit.byId("grid").resize();         
+      });
+
     </script>
 
   .. cv :: html
