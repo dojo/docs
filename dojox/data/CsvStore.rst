@@ -200,8 +200,4 @@ Connecting CsvStore to dojox.grid.DataGrid
     <style type="text/css">
       @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/resources/Grid.css";
       @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/resources/nihiloGrid.css";
-
-      .dojoxGrid table {
-        margin: 0;
-      }
     </style>
