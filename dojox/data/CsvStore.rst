@@ -182,23 +182,16 @@ Connecting CsvStore to dojox.grid.DataGrid
         ]
       ];
   
-      dojo.addOnLoad(function(){
-         dijit.byId("grid").setStore(personStoreForGrid, {});
-         dijit.byId("grid").resize();         
-      });
-
     </script>
 
   .. cv :: html
 
-    <div style="width: 400px; height: 300px;">
-      <div id="grid" 
-        dojoType="dojox.grid.DataGrid" 
-        store="personStoreForGrid" 
-        structure="layoutPeople" 
-        query="{}" 
-        rowsPerPage="40">
-      </div>
+    <div id="grid" style="width: 400px; height: 300px;" 
+      dojoType="dojox.grid.DataGrid" 
+      store="personStoreForGrid" 
+      structure="layoutPeople" 
+      query="{}" 
+      rowsPerPage="40">
     </div>
 
   .. cv:: css
