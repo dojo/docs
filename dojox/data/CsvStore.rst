@@ -78,7 +78,7 @@ Dojo.data defines support for a 'queryOptions' modifier object that affects the 
 Custom Sorting
 ==============
 
-CsvStore uses the dojo.data.util.sorter helper functions to implement item sorting. These functions provide a mechanism by which end users can customize how attributes are sorted. This is done by defining a *comparatorMap* on the store class. The comparator map maps an attribute name to some sorting function. The sorting function is expected to return 1, -1, or 0, base on whether the value for two items for the attribute was greater than, less than, or equal to, each other. An example of a custom sorter for attribute 'foo' is shown below:
+All fields in the CsvStore are read as strings.  Therefore, they are sorted as strings based on JavaScript's default string comparison algorithm.    This is not always what is desired, as Csv data can have fields which are intended to be numeric.  The good news is, this is easy to deal with.   CsvStore uses the dojo.data.util.sorter helper functions to implement item sorting. These functions provide a mechanism by which end users can customize how attributes are sorted. This is done by defining a *comparatorMap* on the store class. The comparator map maps an attribute name to some sorting function. The sorting function is expected to return 1, -1, or 0, base on whether the value for two items for the attribute was greater than, less than, or equal to, each other. An example of a custom sorter for attribute 'foo' is shown below:
 
 .. code-block :: javascript
 
