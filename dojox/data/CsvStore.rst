@@ -212,7 +212,7 @@ Connecting CsvStore to dojox.grid.DataGrid where the data used a different separ
       dojo.require("dojox.grid.DataGrid");
       dojo.require("dojox.data.CsvStore");
 
-      var peopleData =  "firstname|lastname|age\n" +
+      var peopleData2 =  "firstname|lastname|age\n" +
                         "John|Doe|21\n" +
                         "Jane|Doe|22\n" +
                         "Richard|Smith|43\n" +
@@ -223,7 +223,7 @@ Connecting CsvStore to dojox.grid.DataGrid where the data used a different separ
                         "Alptraum|Reisender|25\n" +
                         "Thomas|Winthrope|14\n";
 
-      var personStoreForGrid2= new dojox.data.CsvStore({data: peopleData, separator: '|'});
+      var personStoreForGrid2= new dojox.data.CsvStore({data: peopleData2, separator: '|'});
 
       var layoutPeople2 = [
         [
