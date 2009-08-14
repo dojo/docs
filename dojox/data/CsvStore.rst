@@ -186,7 +186,7 @@ Connecting CsvStore to dojox.grid.DataGrid
 
   .. cv :: html
 
-    <div id="grid" style="width: 400px; height: 300px;" 
+    <div id="grid" style="width: 350px; height: 300px;" 
       dojoType="dojox.grid.DataGrid" 
       store="personStoreForGrid" 
       structure="layoutPeople" 
