@@ -74,6 +74,48 @@ Dojo.data defines support for a 'queryOptions' modifier object that affects the 
 +------------+------------------------------------------------------------------------------------------------------------------------+
 
 
+==============
+Custom Sorting
+==============
+
+CsvStore uses the dojo.data.util.sorter helper functions to implement item sorting. These functions provide a mechanism by which end users can customize how attributes are sorted. This is done by defining a *comparatorMap* on the store class. The comparator map maps an attribute name to some sorting function. The sorting function is expected to return 1, -1, or 0, base on whether the value for two items for the attribute was greater than, less than, or equal to, each other. An example of a custom sorter for attribute 'foo' is shown below:
+
+.. code-block :: javascript
+
+  var csvData = "article,price\n";
+  csvData += "1008,4.59\n";
+  csvData += "1010,10.09\n";
+  csvData += "1011,5.13\n";
+  csvData += "1016,16.68\n";
+  csvData += "1019,15.5\n";
+  csvData += "1022,10.36\n";
+
+  var store = new dojox.data.CsvStore({identifier: "article", data: csvData});
+		
+  //Define the comparator function for price, we want to numerically, instead of
+  //string based sorting (As all fields in a CsvStore are parsed as strings).
+  store.comparatorMap = {};
+  store.comparatorMap["price"] = function(a,b) {
+    a = parseFloat(a);
+    b = parseFload(b);
+    return (a - b); 
+  };
+		
+  var sortAttributes = [{attribute: "price", descending: true}, { attribute: "article", descending: true}];
+  function completed(items, findResult){
+    for(var i = 0; i < items.length; i++){
+      var value = store.getValue(items[i], "article");
+      console.log("Item ID: [" + store.getValue(items[i], "article") + "] with price: [" + store.getValue(items[i], "price") + "]");
+    }
+  }
+  function error(errData, request){
+    console.log("Failed in sorting data.");
+  }
+
+  //Invoke the fetch.
+  store.fetch({onComplete: completed, onError: error, sort: sortAttributes});
+
+
 ========
 Examples
 ========
