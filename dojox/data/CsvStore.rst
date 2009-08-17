@@ -51,6 +51,9 @@ Constructor Params
 | separator      | No           |**New to Dojo Toolkit 1.4** The CsvStore can now take an optional character parameter to        | 1.4       |
 |                |              |identify the delimiter of fields.  Comma is not longer required, but merely the default.        |           |
 +----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
+| urlPreventCache| No           |This boolean value controls whether dojo attempts to prevent the browser caching mechanism from | 1.4       |
+|                |              |caching values loaded from a webserver.                                                         |           | 
++----------------+--------------+------------------------------------------------------------------------------------------------+-----------+
 
 ============
 Query Syntax
