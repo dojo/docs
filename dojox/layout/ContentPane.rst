@@ -55,4 +55,4 @@ See also
 ========
 
 * `Executing JavaScript inside Content Panes <http://dojocampus.org/content/2008/07/30/executing-javascript-inside-content-panes/>`_
-* through the use of a [Deferred] Object, onLoadDeferred and addCallback , you can simulate the dojo.addOnLoad behavior from inside the loaded content.
+* through the use of a `Deferred instance <http://docs.dojocampus.org/dojo/Deferred> `, onLoadDeferred and it's addCallback , you can simulate the dojo.addOnLoad behavior from inside the loaded content.
