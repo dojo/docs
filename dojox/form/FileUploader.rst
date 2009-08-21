@@ -31,7 +31,7 @@ This version is a major upgrade from 1.3, makes CSS placement easier and fixes t
 
 http://bugs.dojotoolkit.org/ticket/9615
 
-Another bug found is uploading muliple files more than once causes onComplete to fire on every file. It should only fire after all files have uploaded. The fix for this is to use the SWF from the trunk (1.4) in the 1.3.2 release. 
+Another bug found is uploading multiple files more than once causes onComplete to fire on every file. It should only fire after all files have uploaded. The fix for this is to use the SWF from the trunk (1.4) in the 1.3.2 release. 
 
 http://bugs.dojotoolkit.org/ticket/9646
 
@@ -269,9 +269,26 @@ Server Side Return Data
 
 How the data is returned from the server is not difficult, but it is very important. If not done correctly, it can be the cause of reported errors that the "onComplete" is not firing in FileUploader.
 
-If *flashFieldName* is found in the headers and Flash is being used on the client side, all that is needed for return data is an object, and it can simply be returned, as at the end of a function: *return $data;*. You may also want to insert *exit* or whatever necessary to cease execution of the remainder of the code.
+If *flashFieldName* is found in the headers and Flash is being used on the client side, all that is needed for return data is a key-value string, and it can simply be returned, as at the end of a function. You may also want to insert *exit* or whatever necessary to cease execution of the remainder of the code. Example:
 
-If *htmlFieldName* is used, the code on the client side gets pretty tricky, as an iframe is necessary for the file-post, and reading back from that iframe presents problems. In order to read the iframe return data accurately cross browser, the code needs to be wrapped in a *<textarea>*. You can see the code for this on the very last line of UploadFiles.php. 
+.. code-block :: html
+ :linenos:
+ 
+ $data .='file='.$file.',name='.$name.',width='.$width.',height='.$height.',type='.$type;
+ echo($data);
+ exit;
+ 
+
+If *htmlFieldName* is used, the code on the client side gets pretty tricky, as an iframe is necessary for the file-post, and reading back from that iframe presents problems. In order to read the iframe return data accurately cross browser, the code needs to be wrapped in a *<textarea>*. You can see the code for this on the very last line of UploadFiles.php. Note that the textarea needs to be outside of the PHP. Example:
+
+.. code-block :: html
+ :linenos:
+ 
+ <?php
+     ....code....
+ ?>
+ <textarea><?php print $json->encode($dataObject); ?></textarea>
+ 
 
 If you are having problems getting onComplete to fire, look at this code first. Often the problem is the server side code is not catching the flash field name for whatever reason (perhaps the client and server names don't match) and the code is falling to the end of the page and returning a textarea to Flash. Recently Code has been added in the SWF that checks for this, so if that is the problem, you should be notified with a console message.
 
