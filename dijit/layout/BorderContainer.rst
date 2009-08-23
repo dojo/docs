@@ -59,6 +59,7 @@ Declarative example
 -------------------
 
 .. cv-compound::
+  :type: inline
 
   Lets specify a simple BorderContainer with a left and center region
 
