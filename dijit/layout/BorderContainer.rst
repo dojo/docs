@@ -74,13 +74,11 @@ Declarative example
   .. cv:: html
     :label: A dijit button
     
-    <div style="position: relative; width: 100%; height: 400px; border: 1px #ccc solid;">
-      <div dojoType="dijit.layout.BorderContainer" design="sidebar" gutters="true" liveSplitters="true" id="borderContainer">
-        <div dojoType="dijit.layout.ContentPane" splitter="true" region="leading" style="width: 100px;">Hi</div>
-        <div dojoType="dijit.layout.ContentPane" splitter="true" region="center">Hi, I'm center</div>
-      </div>
+    <div dojoType="dijit.layout.BorderContainer" design="sidebar" gutters="true" liveSplitters="true" id="borderContainer">
+      <div dojoType="dijit.layout.ContentPane" splitter="true" region="leading" style="width: 100px;">Hi</div>
+      <div dojoType="dijit.layout.ContentPane" splitter="true" region="center">Hi, I'm center</div>
     </div>
-
+  
   .. cv:: css
     :label: A simple set of css rules
 
@@ -115,7 +113,6 @@ Note the tabStrip attribute on the TabContainer.
   .. cv:: html
     :label: The markup
 
-    <div style="position: relative; width: 100%; height: 400px; border: 1px #ccc solid;">
     <div dojoType="dijit.layout.BorderContainer" gutters="true" id="borderContainerTwo" >
       <div dojoType="dijit.layout.ContentPane" region="top" splitter="false">
         Hi, usually here you would have important information, maybe your company logo, or functions you need to access all the time..  
@@ -143,7 +140,6 @@ Note the tabStrip attribute on the TabContainer.
           </div>
         </div>
       </div>
-    </div>
     </div>
 
   .. cv:: css
