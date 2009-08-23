@@ -59,6 +59,7 @@ Declarative example
 -------------------
 
 .. cv-compound::
+  :viewerBox: {width: 300, height: 400}
 
   Lets specify a simple BorderContainer with a left and center region
 
