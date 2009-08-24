@@ -121,10 +121,6 @@ dojo.xhrGet supported object properties
 |                  |                                                                                                                            |
 |                  |**This parameter is optional**                                                                                              |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
-|``New in 1.4``    |By default, dojo.xhrGet outputs an error to the console when there is a transport error.  Setting **failOk** to true will   |
-|  **failOk**      |prevent that behavior and will suppress the error message.                                                                  |                  |                  |                                                                                                                            |
-|                  |**This parameter is optional**                                                                                              |
-+------------------+----------------------------------------------------------------------------------------------------------------------------+
 
 Return type (dojo.Deferred)
 ---------------------------
