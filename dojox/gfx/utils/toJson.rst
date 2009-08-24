@@ -28,17 +28,39 @@ So basic usage is:
 
   var json = dojox.gfx.utils.toJson(mySurface);
 
+Functional Exaple 
+-----------------
 
+.. cv-compound ::
+  
+  .. cv :: javascript
 
+    <script>
+      dojo.require("dojox.gfx");
+      dojo.require("dojox.gfx.utils");
+   
+      function init(){
+ 
+         //Create our surface.
+         var node = dojo.byId("gfxObject");
+         var drawing = dojox.gfx.createSurface(node, 300, 300);
+         drawing.createRect({ 
+           width:  100,
+           height: 100,
+           x: 100,
+           y: 100
+         }).setFill("blue").setStroke("black");
+      }
+      //Set the init function to run when dojo loading and page parsing has completed.
+      dojo.addOnLoad(init);
+    </script>
 
+  .. cv :: html 
 
-* `dojox.gfx.utils.toJson <dojox/gfx/utils/toJson>`_
-  -- Serialize the passed surface object to JSON form
-* **dojox.gfx.utils.fromJson**
-  -- Rebuild the dojox.gfx.Surface object from the provided JSON
-* **dojox.gfx.utils.serialize**
-  -- Serialize the passed surface object to JavaScript Object form
-* **dojox.gfx.utils.deserialize**
-  -- Rebuild the dojox.gfx.Surface object from the provided JS representation.
-* `dojox.gfx.utils.toSvg <dojox/gfx/utils/toSvg>`_ 
-  -- Serialize the passed surface object to SVG text.  **Note:** This function call returns a deferred as serialization is async on some browsers.
+    <div id="gfxObject"></div>
+    <div dojoType="dijit.form.Button" jsId="button">Click me to serialize the GFX object to JSON!</div>
+    <br>
+    <br>
+    <span id="list">
+    </span>
+
