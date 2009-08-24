@@ -53,6 +53,7 @@ Functional Exaple
          }).setFill("blue").setStroke("black");
 
          dojo.connect(dijit.byId("button"), "onClick", function() {
+            alert("Here!");
             var json = dojox.gfx.utils.toJson(drawing);
             dojo.byId("json").innerHTML = json;
          });
