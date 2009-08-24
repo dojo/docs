@@ -54,7 +54,8 @@ Functional Exaple
 
          dojo.connect(dijit.byId("button"), "onClick", function() {
             var json = dojox.gfx.utils.toJson(drawing);
-            dojo.byId("json").innerHTML = json;
+            //Try to make it pretty-print
+            dojo.byId("json").innerHTML = dojo.toJson(dojo.fromJson(json), true);
          });
       }
       //Set the init function to run when dojo loading and page parsing has completed.
@@ -68,5 +69,5 @@ Functional Exaple
     <br>
     <br>  
     <b>JSON Serialization</b>
-    <div id="json">
-    </div>
+    <pre id="json">
+    </pre>
