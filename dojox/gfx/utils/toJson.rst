@@ -44,16 +44,15 @@ Functional Exaple
  
          //Create our surface.
          var node = dojo.byId("gfxObject");
-         var drawing = dojox.gfx.createSurface(node, 300, 300);
+         var drawing = dojox.gfx.createSurface(node, 200, 200);
          drawing.createRect({ 
            width:  100,
            height: 100,
-           x: 100,
-           y: 100
+           x: 50,
+           y: 50
          }).setFill("blue").setStroke("black");
 
          dojo.connect(dijit.byId("button"), "onClick", function() {
-            alert("Here!");
             var json = dojox.gfx.utils.toJson(drawing);
             dojo.byId("json").innerHTML = json;
          });
@@ -65,7 +64,7 @@ Functional Exaple
   .. cv :: html 
 
     <div id="gfxObject"></div>
-    <div dojoType="dijit.form.Button" jsId="button">Click me to serialize the GFX object to JSON!</div>
+    <div dojoType="dijit.form.Button" id="button">Click me to serialize the GFX object to JSON!</div>
     <br>
     <br>  
     <b>JSON Serialization</b>
