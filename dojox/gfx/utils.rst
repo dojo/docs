@@ -11,18 +11,18 @@ dojox.gfx.utils
 .. contents::
   :depth: 2
 
-The "dojox.gfx.utils" module is a set of utility functions for working with dojox.gfx.Surface objects.  They mainly consist of serialization functions to allow you to serialize adojox.gfx.Surface in to a variety of forms, from GFX Objects, to JSON, to even SVG text across all browsers.
+The *dojox.gfx.utils* module is a set of utility functions for working with dojox.gfx.Surface objects.  They mainly consist of serialization functions to allow you to serialize adojox.gfx.Surface in to a variety of forms, from GFX Objects, to JSON, to even SVG text across all browsers.
 
 Provided functions
 ==================
 
-* dojox.gfx.utils.toJson(surface)
+* **dojox.gfx.utils.toJson**
   -- Serialize the passed surface object to JSON form
-* dojox.gfx.utils.fromJson(surface, json)
+* **dojox.gfx.utils.fromJson**
   -- Rebuild the dojox.gfx.Surface object from the provided JSON
-* dojox.gfx.utils.serialize(surface)
+* **dojox.gfx.utils.serialize**
   -- Serialize the passed surface object to JavaScript Object form
-* dojox.gfx.utils.deserialize(surface, jsGfx)
+* **dojox.gfx.utils.deserialize**
   -- Rebuild the dojox.gfx.Surface object from the provided JS representation.
-* dojox.gfx.utils.toSvg(surface)
+* **dojox.gfx.utils.toSvg**
   -- Serialize the passed surface object to SVG text.  **Note:** This function call returns a deferred as serialization is async on some browsers.
