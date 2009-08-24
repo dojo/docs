@@ -18,7 +18,7 @@ Provided functions
 
 * `dojox.gfx.utils.toJson <dojox/gfx/utils/toJson>`_
   -- Serialize the passed surface object to JSON form
-* **dojox.gfx.utils.fromJson**
+* `dojox.gfx.utils.fromJson <dojox/gfx/utils/fromJson>`_
   -- Rebuild the dojox.gfx.Surface object from the provided JSON
 * **dojox.gfx.utils.serialize**
   -- Serialize the passed surface object to JavaScript Object form
