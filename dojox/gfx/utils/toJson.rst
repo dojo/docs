@@ -38,6 +38,7 @@ Functional Exaple
     <script>
       dojo.require("dojox.gfx");
       dojo.require("dojox.gfx.utils");
+      dojo.require("dijit.form.Button");
    
       function init(){
  
@@ -50,6 +51,11 @@ Functional Exaple
            x: 100,
            y: 100
          }).setFill("blue").setStroke("black");
+
+         dojo.connect(dijit.byId(""), "onClick", function() {
+            var json = dojox.gfx.utils.toJson(drawing);
+            alert(json);
+         });
       }
       //Set the init function to run when dojo loading and page parsing has completed.
       dojo.addOnLoad(init);
@@ -63,4 +69,3 @@ Functional Exaple
     <br>
     <span id="list">
     </span>
-
