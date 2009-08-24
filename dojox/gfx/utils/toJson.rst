@@ -52,9 +52,9 @@ Functional Exaple
            y: 100
          }).setFill("blue").setStroke("black");
 
-         dojo.connect(dijit.byId(""), "onClick", function() {
+         dojo.connect(dijit.byId("button"), "onClick", function() {
             var json = dojox.gfx.utils.toJson(drawing);
-            alert(json);
+            dojo.byId("json").innerHTML = json;
          });
       }
       //Set the init function to run when dojo loading and page parsing has completed.
@@ -66,6 +66,7 @@ Functional Exaple
     <div id="gfxObject"></div>
     <div dojoType="dijit.form.Button" jsId="button">Click me to serialize the GFX object to JSON!</div>
     <br>
-    <br>
-    <span id="list">
-    </span>
+    <br>  
+    <b>JSON Serialization</b>
+    <div id="json">
+    </div>
