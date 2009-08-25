@@ -43,7 +43,7 @@ Creating a Gallery and setting a simple data source
   //Define the request, with no query, and a count of 20, so 20 items will be 
   //requested with each request
   var request = {query: {}, count: 20};
-  dijit.byId('gallery1').setDataStore('imageItemStore', request, itemNameMap);
+  dijit.byId('gallery1').setDataStore(imageItemStore, request, itemNameMap);
   </script>
 
   <div id="gallery1" dojoType="dojox.image.Gallery"></div>
@@ -80,7 +80,7 @@ Creating a Gallery with a FlickrRestStore
          count: 20
   };
   
-  dijit.byId('gallery1').setDataStore('imageItemStore', request, itemNameMap);
+  dijit.byId('gallery1').setDataStore(flickrRestStore, request, itemNameMap);
   </script>
   <div id="gallery1" dojoType="dojox.image.Gallery"></div>
 
