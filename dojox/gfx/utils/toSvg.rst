@@ -11,7 +11,7 @@ dojox.gfx.utils.toSvg
 .. contents::
   :depth: 2
 
-The *dojox.gfx.utils.toSvg* is a helper function designed to serialize a dojox.gfx.Surface object into SVG text on any dojo supported browser.  This is useful for situations where you may want to generate a standards-based graphics representation for post-back to a server side service.  For example, this can be very useful for converting a DataChart to a JPG, PNG, or even PDF via Apache Batik.   
+The *dojox.gfx.utils.toSvg* is a helper function designed to serialize a dojox.gfx.Surface object into SVG text on any dojo supported browser.  This is useful for situations where you may want to generate a standards-based graphics representation for post-back to a server side service.  For example, this can be very useful for converting a DataChart to a JPEG, PNG, or even PDF via Apache Batik.   
 
 =====
 Usage
@@ -47,7 +47,7 @@ If you are using a cross-domain build of dojo, then you must do some extra work 
 
 .. code-block :: javascript
 
-  <script type="text/javascript" src="http://some.xdomain.server/dojo.xd.js" djconfig='dojoxGfxSvgProxyFrameUrl: "mylocaldir/gfxSvgProxyFrame.html", parseOnLoad: true'>
+  <script type="text/javascript" src="http://some.xdomain.server/dojo.xd.js" djConfig='dojoxGfxSvgProxyFrameUrl: "mylocaldir/gfxSvgProxyFrame.html", parseOnLoad: true'>
   
 Functional Exaple 
 -----------------
