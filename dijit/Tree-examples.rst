@@ -86,7 +86,7 @@ the basic example repeated to make sure i understand the wiki
                     tnode.labelNode.innerHTML = args.label;
                     return tnode;
                 }
-            }, "treeHolder" );
+            }, "treeOne" );
         }
 
         dojo.addOnLoad(prepare);
