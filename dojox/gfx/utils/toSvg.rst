@@ -46,7 +46,8 @@ If you are using a cross-domain build of dojo, then you must do some extra work 
 # Set the djconfig option 'dojoxGfxSvgProxyFrameUrl' to point to the file you copied to your server, much as you would set for 'blank.html'.  For example, a modified djconfig setting for dojo:
 
 .. code-block :: javascript
-<script type="text/javascript" src="http://some.xdomain.server/dojo.xd.js" djconfig='dojoxGfxSvgProxyFrameUrl: "mylocaldir/gfxSvgProxyFrame", parseOnLoad: true'>
+
+  <script type="text/javascript" src="http://some.xdomain.server/dojo.xd.js" djconfig='dojoxGfxSvgProxyFrameUrl: "mylocaldir/gfxSvgProxyFrame", parseOnLoad: true'>
   
 Functional Exaple 
 -----------------
@@ -75,6 +76,7 @@ Functional Exaple
          dojo.connect(dijit.byId("button"), "onClick", function() {
             var deferred= dojox.gfx.utils.toSvg(drawing);
             deferred.addCallback(function(svg){
+              alert(svg);
               dojo.byId("svg").innerHTML = svg;  
             });
             //Try to make it pretty-print
