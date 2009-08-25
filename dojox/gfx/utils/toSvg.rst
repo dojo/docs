@@ -42,8 +42,8 @@ Cross-Domain considerations
 ---------------------------
 If you are using a cross-domain build of dojo, then you must do some extra work in order to get the SVG serializer working.  Namely, you must specify a DJConfig option that points to a 'svg iframe proxy' HTML page on your server so that the iframe itself does not believe it is running in cross-domain mode and as such, allows the contents of the frame to be accessed and manipulated.  Basically, this means you need to do the following:
 
-# Copy the dojox/gfx/resources/gfxSvgProxyFrame.html to the server that is serving your application
-# Set the djconfig option 'dojoxGfxSvgProxyFrameUrl' to point to the file you copied to your server, much as you would set for 'blank.html'.  For example, a modified djconfig setting for dojo:
+* Copy the dojox/gfx/resources/gfxSvgProxyFrame.html to the server that is serving your application
+* Set the djconfig option 'dojoxGfxSvgProxyFrameUrl' to point to the file you copied to your server, much as you would set for 'blank.html'.  For example, a modified djconfig setting for dojo:
 
 .. code-block :: javascript
 
