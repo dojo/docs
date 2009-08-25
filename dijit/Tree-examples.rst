@@ -56,26 +56,40 @@ the basic example repeated to make sure i understand the wiki
   .. cv:: javascript
 
     <script type="text/javascript">
-      dojo.require("dojo.data.ItemFileReadStore");
-      dojo.require("dijit.Tree");
+        dojo.require("dojo.data.ItemFileReadStore");
+        dojo.require( "dijit.Tree" );
 
-      dojo.addOnLoad(function(){
-        var store = new dojo.data.ItemFileReadStore({
-            url: "http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/countries.json" 
-        });
-        
-        var treeModel = new dijit.tree.ForestStoreModel({
-            store: store,
-            query: {"type": "continent"},
-            rootId: "root",
-            rootLabel: "Continents",
-            childrenAttrs: ["children"]
-        });
-        
-        new dijit.Tree({
-            model: treeModel    
-        }, "treeOne");
-      });
+        var rawdata = [ {
+            label: 'Something <b>important</b>',
+            id: '1',
+            children:  [ { label: 'Life', id: '1.1' }, { label: 'Liberty', id: '1.2' } ]
+        }, {
+            label: 'Some links (note: the link is <b>not</b> clickable)',
+            id: '2',
+            children: [
+                { id: '2.1', label: '<a href="http://dojotoolkit.org">Dojo Toolkit</a>' },
+                { id: '2.2', label: '<img src="http://dojofoundation.org/media/img/dojo.logo.png" alt="greatest ever" height="32px" />' },
+                { id: '2.3', label: '<a href="http://blog.nqzero.com">my blog</a>' }
+            ]
+        } ];
+
+        function prepare() {
+            var store = new dojo.data.ItemFileReadStore({
+                data: { identifier: 'id', label : 'label', items: rawdata }
+            });
+            var treeModel = new dijit.tree.ForestStoreModel({ store: store });
+            var treeControl = new dijit.Tree({
+                model: treeModel,
+                showRoot: false,
+                _createTreeNode: function(/*Object*/ args){
+                    var tnode = new dijit._TreeNode(args);
+                    tnode.labelNode.innerHTML = args.label;
+                    return tnode;
+                }
+            }, "treeHolder" );
+        }
+
+        dojo.addOnLoad(prepare);
     </script>
 
   .. cv:: html
