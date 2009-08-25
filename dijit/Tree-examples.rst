@@ -46,10 +46,14 @@ Simply set the ``openOnClick`` attribute to ``false``
 
 
 
-Another simple example
+Example using Local Data and Markup
 -----------------------------------------------------------
 
-the basic example repeated to make sure i understand the wiki
+Most of the examples have used the same url:json source of the data for the store.
+This example uses local data from a javascript object as the raw data.
+In addition, _createTreeNode is overridden to allow HTML markup in the tree.
+This is a hack, in the sense that the formatting may not be perfect for large (in pixels) elements.
+But the tree will display and work properly regardless, and for simple markup, eg bold, it works great.
 
 .. cv-compound::
 
