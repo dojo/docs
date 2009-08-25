@@ -47,7 +47,7 @@ If you are using a cross-domain build of dojo, then you must do some extra work 
 
 .. code-block :: javascript
 
-  <script type="text/javascript" src="http://some.xdomain.server/dojo.xd.js" djconfig='dojoxGfxSvgProxyFrameUrl: "mylocaldir/gfxSvgProxyFrame", parseOnLoad: true'>
+  <script type="text/javascript" src="http://some.xdomain.server/dojo.xd.js" djconfig='dojoxGfxSvgProxyFrameUrl: "mylocaldir/gfxSvgProxyFrame.html", parseOnLoad: true'>
   
 Functional Exaple 
 -----------------
