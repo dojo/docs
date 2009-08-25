@@ -1,7 +1,7 @@
 #format dojo_rst
 
-dojox.gfx.utils.toJson
-======================
+dojox.gfx.utils.toSvg
+=====================
 
 :Status: Contributed, Draft
 :Version: 1.4
