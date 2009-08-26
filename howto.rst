@@ -116,7 +116,7 @@ Executed code
 
 You can add a real example to the documentation by using the ".. cv-compound::" and ".. cv::" directives. The code you show can include JavaScript, CSS and HTML
 
-.. code-block :: javascript
+.. code-block :: html
   :linenos:
 
   .. cv-compound::
@@ -199,7 +199,6 @@ This will result in the following
 
     <div id="fohooo" class="fohooo">I'm just a node</div>
     <div id="fohooooooo" class="fohooo">Don't click Me</div>
-    <div dojoType="foohooo" class="fohooo">Or Me</div>
 
   This is the JavaScript code of your example. Simply paste both HMTL and JavaScript into the browser.
 
@@ -211,7 +210,7 @@ This will result in the following
     dojo.require("dijit._Widget");
 
     dojo.addOnLoad(function(){
-      dojo.declare("foohooo", [dijit._Widget,dijit._Templated], {
+      dojo.declare("foohooo", [dijit._Widget, dijit._Templated], {
          templateString: '<div dojoAttachEvent="onclick: _foo">Example: <span dojoAttachPoint="containerNode"></span></div>',
          _foo: function(){
             alert("foo");
