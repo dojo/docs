@@ -129,7 +129,7 @@ You can add a real example to the documentation by using the ".. cv-compound::" 
       <style type="text/css">
       body {
         font-family: Arial;
-        margin: 10px;
+        padding: 10px;
       }
       .fohooo { 
         color: #15d32a; 
@@ -137,7 +137,7 @@ You can add a real example to the documentation by using the ".. cv-compound::" 
       }
       </style>
 
-    The HTML snippet simply defines the markup of your code. Dojo will then parse the DOM nodes and create the widgets programatically. 
+    The HTML snippet simply defines the markup of your code. 
     
       * Programmatic code generation
       * Dom manipulation
@@ -145,9 +145,8 @@ You can add a real example to the documentation by using the ".. cv-compound::" 
     .. cv:: html
       :label: This is the HTML of the example
 
-      <div id="fohooo" class="fohooo">I'm just a node</div>
-      <div id="fohooooooo" class="fohooo">Don't click Me</div>
-      <div dojoType="foohooo" class="fohooo">Or Me</div>
+      <p id="fohooo" class="fohooo">I'm just a node</p>
+      <p id="fohooooooo" class="fohooo">Don't click Me</p>
 
     This is the JavaScript code of your example. Simply paste both HMTL and JavaScript into the browser.
 
@@ -189,7 +188,7 @@ This will result in the following
     }
     </style>
 
-  The HTML snippet simply defines the markup of your code. Dojo will then parse the DOM nodes and create the widgets programatically. 
+  The HTML snippet simply defines the markup of your code. 
     
     * Programmatic code generation
     * Dom manipulation
@@ -197,8 +196,8 @@ This will result in the following
   .. cv:: html
     :label: This is the HTML of the example
 
-    <div id="fohooo" class="fohooo">I'm just a node</div>
-    <div id="fohooooooo" class="fohooo">Don't click Me</div>
+    <p id="fohooo" class="fohooo">I'm just a node</p>
+    <p id="fohooooooo" class="fohooo">Don't click Me</p>
 
   This is the JavaScript code of your example. Simply paste both HMTL and JavaScript into the browser.
 
@@ -265,6 +264,65 @@ The valid reST syntax has to look like following markup:
         var widget = new foohooo({id: "test_foohooo"}, dojo.byId("fohooo"));
       });
       </script>
+
+A few important notes:
+
+Codeblock header and descriptions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Each of the codeblocks (JS/HTML/CSS) can have its own dedicated header and description.
+You can add a header to a block by adding the :label: block to your code as follows:
+
+.. code-block :: html
+  :lineos:
+
+  .. cv:: javascript
+    :label: And the JavaScript code
+
+This will result in a header in the JavaScript codeblock.
+To add a descriptive text to a codeblock you can simply add reST markup before the block definition with the same amount of spaces indented as the block directive:
+
+.. code-block :: html
+  :lineos:
+
+  This will be the descriptive text for the JavaScript block.
+  * You can even use reST syntax here
+  * Its pretty cool
+
+  .. cv:: javascript
+    :label: And the JavaScript code
+
+Keep the header and description simple though, they should only explain shortly what is happening in the codeblock.
+
+Custom parameters within the code
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Since CodeGlass (this is the name of the Dojo widget creating the demos) is very flexible and is allowing you to change the Dojo version and the themes on the fly you might want to be able to use dynamic variables in your code example as well.
+Imagine you are including a few CSS files from a dojox widget and you need to be sure that the example also works with other versions of Dojo from other locations. Simply doing an absolute reference to the document won't work.
+To fix this, at this moment you can use following parameters within the template and they change accordingly:
+
++---------------+
+|   Parameter   |
++---------------+
+| {{ baseUrl }} |
++---------------+
+
+An example if this in action (simply change the version and you will see what it does)
+
+
+
+.. code-block :: html
+  :linenos:
+
+  .. cv-compound::
+
+    This is a demo of the dynamic variables you can use in CodeGlass
+    
+    .. cv:: html
+      :label: This is the HTML of the example
+
+      <p>Current Dojo baseUrl: <strong>{{ baseUrl }}</strong></p>
+
 
 ======
 Images
