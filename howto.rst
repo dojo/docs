@@ -127,6 +127,7 @@ You can add a real example to the documentation by using the ".. cv-compound::" 
       :label: The CSS
 
       <style type="text/css">
+        body { margin: 0; padding: 0; }
         .fancy { 
           font-family: Arial; padding: 10px; color: orange; 
           font-size: 12px; font-weight: bold; 
@@ -164,6 +165,7 @@ This will result in the following
     :label: The CSS
 
     <style type="text/css">
+      body { margin: 0; padding: 0; }
       .fancy { 
         font-family: Arial; padding: 10px; color: orange; 
         font-size: 12px; font-weight: bold; 
@@ -226,7 +228,7 @@ To add a descriptive text to a codeblock you can simply add reST markup before t
 Keep the header and description simple though, they should only explain shortly what is happening in the codeblock.
 
 Custom parameters within the code
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------------
 
 Since CodeGlass (this is the name of the Dojo widget creating the demos) is very flexible and is allowing you to change the Dojo version and the themes on the fly you might want to be able to use dynamic variables in your code example as well.
 Imagine you are including a few CSS files from a dojox widget and you need to be sure that the example also works with other versions of Dojo from other locations. Simply doing an absolute reference to the document won't work.
