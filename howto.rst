@@ -114,7 +114,47 @@ If you need to give a simple source code example without it being executed use t
 Executed code
 -------------
 
-You can add a real example to the documentation by using the ".. cv-compound::" and ".. cv::" directives. The code you show can include JavaScript, CSS and HTML
+You can add a real example to the documentation by using the ".. cv-compound::" and ".. cv::" directives. The code you show can include JavaScript, CSS and HTML. Lets look at an example it action:
+
+.. cv-compound::
+
+  Some very simple CSS to make things look fancy
+
+  .. cv:: css
+    :label: The CSS
+
+    <style type="text/css">
+      body { margin: 0; padding: 0; height: auto; }
+      .fancy { 
+        font-family: Arial; padding: 10px; color: orange; 
+        font-size: 12px; font-weight: bold; 
+      }
+    </style>
+
+  Two nodes is all we need
+
+  .. cv:: html
+    :label: Very basic HTML
+
+    <p class="fancy">Hi reader, click me</p>
+
+  Very simple JavaScript using Dojos query selector
+
+  .. cv:: javascript
+    :label: dojo.query in action
+
+    <script type="text/javascript">
+    dojo.addOnLoad(function(){
+      var i=0;
+      dojo.query(".fancy").onclick(function(e){
+        dojo.attr(e.target, "innerHTML", "You clicked me "+(++i)+" times.");
+      });
+    });
+    </script>
+
+All you need to do is, to define the codeblocks for the JS/HTML and CSS parts you would like to use. 
+You can leave things out, so having a simple JavaScript example could just include the .. cv:: javascript directive. 
+Following code is the representation of the demo you saw above:
 
 .. code-block :: html
   :linenos:
@@ -155,43 +195,7 @@ You can add a real example to the documentation by using the ".. cv-compound::" 
       });
       </script>
 
-This will result in the following 
-
-.. cv-compound::
-
-  Some very simple CSS to make things look fancy
-
-  .. cv:: css
-    :label: The CSS
-
-    <style type="text/css">
-      body { margin: 0; padding: 0; height: auto; }
-      .fancy { 
-        font-family: Arial; padding: 10px; color: orange; 
-        font-size: 12px; font-weight: bold; 
-      }
-    </style>
-
-  Two nodes is all we need
-
-  .. cv:: html
-    :label: Very basic HTML
-
-    <p class="fancy">Hi reader, click me</p>
-
-  Very simple JavaScript using Dojos query selector
-
-  .. cv:: javascript
-    :label: dojo.query in action
-
-    <script type="text/javascript">
-    dojo.addOnLoad(function(){
-      var i=0;
-      dojo.query(".fancy").onclick(function(e){
-        dojo.attr(e.target, "innerHTML", "You clicked me "+(++i)+" times.");
-      });
-    });
-    </script>
+Nice, isn't it?
 
 A few important notes:
 
