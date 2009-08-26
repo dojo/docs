@@ -309,19 +309,14 @@ To fix this, at this moment you can use following parameters within the template
 
 An example if this in action (simply change the version and you will see what it does)
 
+.. cv-compound::
 
-
-.. code-block :: html
-  :linenos:
-
-  .. cv-compound::
-
-    This is a demo of the dynamic variables you can use in CodeGlass
+  This is a demo of the dynamic variables you can use in CodeGlass
     
-    .. cv:: html
-      :label: This is the HTML of the example
+  .. cv:: html
+    :label: This is the HTML of the example
 
-      <p>Current Dojo baseUrl: <strong>{{ baseUrl }}</strong></p>
+    <p>Current Dojo baseUrl: <strong>{{ baseUrl }}</strong></p>
 
 
 ======
