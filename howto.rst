@@ -119,7 +119,7 @@ You can add a real example to the documentation by using the ".. cv-compound::" 
 .. code-block :: javascript
   :linenos:
 
-  .. cv-compound:
+  .. cv-compound::
 
     First we declare the CSS
 
@@ -171,7 +171,7 @@ You can add a real example to the documentation by using the ".. cv-compound::" 
 
 This will result in the following 
 
-.. cv-compound:
+.. cv-compound::
 
   First we declare the CSS
 
