@@ -127,7 +127,7 @@ You can add a real example to the documentation by using the ".. cv-compound::" 
       :label: The CSS
 
       <style type="text/css">
-        body { margin: 0; padding: 0; }
+        body { margin: 0; padding: 0; height: auto; }
         .fancy { 
           font-family: Arial; padding: 10px; color: orange; 
           font-size: 12px; font-weight: bold; 
@@ -165,7 +165,7 @@ This will result in the following
     :label: The CSS
 
     <style type="text/css">
-      body { margin: 0; padding: 0; }
+      body { margin: 0; padding: 0; height: auto; }
       .fancy { 
         font-family: Arial; padding: 10px; color: orange; 
         font-size: 12px; font-weight: bold; 
