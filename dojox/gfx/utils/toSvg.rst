@@ -74,6 +74,7 @@ Functional Exaple
          }).setFill("blue").setStroke("black");
 
          dojo.connect(dijit.byId("button"), "onClick", function() {
+            alert("Clock!");
             var deferred= dojox.gfx.utils.toSvg(drawing);
             deferred.addCallback(function(svg){
               console.log("Here.");
