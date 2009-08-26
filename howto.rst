@@ -103,13 +103,13 @@ Non executed code
 
 If you need to give a simple source code example without it being executed use the ".. code-block ::" directive and put the code right into the next line indented by two spaces. If you want to display line numbers, use the "linenos" attribute.
 
+.. code-block :: javascript
+  :linenos:
+
   .. code-block :: javascript
     :linenos:
 
-    .. code-block :: javascript
-      :linenos:
-
-      <script type="text/javascript">alert("Your code");</script>
+    <script type="text/javascript">alert("Your code");</script>
 
 Executed code
 -------------
