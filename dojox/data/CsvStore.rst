@@ -134,18 +134,20 @@ Connecting CsvStore to dijit.form.ComboBox
       dojo.require("dojox.data.CsvStore");
       dojo.require("dijit.form.ComboBox");
 
-      var storeData =   "firstname,lastname,age\n" +
-                        "John, Doe, 21\n" +
-                        "Jane, Doe, 22\n" +
-                        "Richard, Smith, 43\n" +
-                        "Sally, Smith, 49\n" +
-                        "Lian, Zu, 23\n" +
-                        "Ichiro, Kagetsume, 23\n"+
-                        "Umeko, Tsuguri, 18\n" + 
-                        "Alptraum, Reisender, 25\n" +
-                        "Thomas, Winthrope, 14\n";
+      dojo.addOnLoad(function(){
+          var storeData =   "firstname,lastname,age\n" +
+                            "John, Doe, 21\n" +
+                            "Jane, Doe, 22\n" +
+                            "Richard, Smith, 43\n" +
+                            "Sally, Smith, 49\n" +
+                            "Lian, Zu, 23\n" +
+                            "Ichiro, Kagetsume, 23\n"+
+                            "Umeko, Tsuguri, 18\n" + 
+                            "Alptraum, Reisender, 25\n" +
+                            "Thomas, Winthrope, 14\n";
 
-      var personStore = new dojox.data.CsvStore({data: storeData});
+          var personStore = new dojox.data.CsvStore({data: storeData});
+      });
     </script>
 
   .. cv :: html 
@@ -163,28 +165,29 @@ Connecting CsvStore to dojox.grid.DataGrid
     <script>
       dojo.require("dojox.grid.DataGrid");
       dojo.require("dojox.data.CsvStore");
+      
+      dojo.addOnLoad(function(){
+          var peopleData =  "firstname,lastname,age\n" +
+                            "John, Doe, 21\n" +
+                            "Jane, Doe, 22\n" +
+                            "Richard, Smith, 43\n" +
+                            "Sally, Smith, 49\n" +
+                            "Lian, Zu, 23\n" +
+                            "Ichiro, Kagetsume, 23\n"+
+                            "Umeko, Tsuguri, 18\n" + 
+                            "Alptraum, Reisender, 25\n" +
+                            "Thomas, Winthrope, 14\n";
 
-      var peopleData =  "firstname,lastname,age\n" +
-                        "John, Doe, 21\n" +
-                        "Jane, Doe, 22\n" +
-                        "Richard, Smith, 43\n" +
-                        "Sally, Smith, 49\n" +
-                        "Lian, Zu, 23\n" +
-                        "Ichiro, Kagetsume, 23\n"+
-                        "Umeko, Tsuguri, 18\n" + 
-                        "Alptraum, Reisender, 25\n" +
-                        "Thomas, Winthrope, 14\n";
+          var personStoreForGrid= new dojox.data.CsvStore({data: peopleData});
 
-      var personStoreForGrid= new dojox.data.CsvStore({data: peopleData});
-
-      var layoutPeople = [
-        [
-          { field: "firstname", name: "First Name", width: 10 },
-          { field: "lastname", name: "Last Name", width: 10 },
-          { field: "age", name: "Age", width: 'auto' }
-        ]
-      ];
-  
+          var layoutPeople = [
+            [
+              { field: "firstname", name: "First Name", width: 10 },
+              { field: "lastname", name: "Last Name", width: 10 },
+              { field: "age", name: "Age", width: 'auto' }
+            ]
+          ];
+      });
     </script>
 
   .. cv :: html
@@ -215,27 +218,28 @@ Connecting CsvStore to dojox.grid.DataGrid where the data used a different separ
       dojo.require("dojox.grid.DataGrid");
       dojo.require("dojox.data.CsvStore");
 
-      var peopleData2 =  "firstname|lastname|age\n" +
-                        "John|Doe|21\n" +
-                        "Jane|Doe|22\n" +
-                        "Richard|Smith|43\n" +
-                        "Sally|Smith|49\n" +
-                        "Lian|Zu|23\n" +
-                        "Ichiro|Kagetsume|23\n"+
-                        "Umeko|Tsuguri|18\n" + 
-                        "Alptraum|Reisender|25\n" +
-                        "Thomas|Winthrope|14\n";
+      dojo.addOnLoad(function(){
+          var peopleData2 =  "firstname|lastname|age\n" +
+                            "John|Doe|21\n" +
+                            "Jane|Doe|22\n" +
+                            "Richard|Smith|43\n" +
+                            "Sally|Smith|49\n" +
+                            "Lian|Zu|23\n" +
+                            "Ichiro|Kagetsume|23\n"+
+                            "Umeko|Tsuguri|18\n" + 
+                            "Alptraum|Reisender|25\n" +
+                            "Thomas|Winthrope|14\n";
 
-      var personStoreForGrid2= new dojox.data.CsvStore({data: peopleData2, separator: '|'});
+          var personStoreForGrid2= new dojox.data.CsvStore({data: peopleData2, separator: '|'});
 
-      var layoutPeople2 = [
-        [
-          { field: "firstname", name: "First Name", width: 10 },
-          { field: "lastname", name: "Last Name", width: 10 },
-          { field: "age", name: "Age", width: 'auto' }
-        ]
-      ];
-  
+          var layoutPeople2 = [
+            [
+              { field: "firstname", name: "First Name", width: 10 },
+              { field: "lastname", name: "Last Name", width: 10 },
+              { field: "age", name: "Age", width: 'auto' }
+            ]
+          ];
+      });
     </script>
 
   .. cv :: html
