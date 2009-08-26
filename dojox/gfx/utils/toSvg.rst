@@ -76,6 +76,7 @@ Functional Exaple
          dojo.connect(dijit.byId("button"), "onClick", function() {
             var deferred= dojox.gfx.utils.toSvg(drawing);
             deferred.addCallback(function(svg){
+              console.log("Here.");
               dojo.byId("svg").innerHTML = svg;  
             });
             //Try to make it pretty-print
