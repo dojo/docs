@@ -241,6 +241,7 @@ Connecting CsvStore to dojox.grid.DataGrid where the data used a different separ
           ];
           dijit.byId("grid2").setStructure(layoutPeople2);
           dijit.byId("grid2").setStore(personStoreForGrid2, {});
+          console.log(personStoreForGrid2);
       });
     </script>
 
