@@ -147,12 +147,13 @@ Connecting CsvStore to dijit.form.ComboBox
                             "Thomas, Winthrope, 14\n";
 
           var personStore = new dojox.data.CsvStore({data: storeData});
+          dijit.byId("combo").store = personStore;
       });
     </script>
 
   .. cv :: html 
 
-    <div dojoType="dijit.form.ComboBox" store="personStore" searchAttr="firstname"></div>
+    <div id="combo" dojoType="dijit.form.ComboBox" searchAttr="firstname"></div>
 
     
 Connecting CsvStore to dojox.grid.DataGrid
@@ -187,6 +188,8 @@ Connecting CsvStore to dojox.grid.DataGrid
               { field: "age", name: "Age", width: 'auto' }
             ]
           ];
+          dijit.byId("grid").setStructure(layoutPeople);
+          dijit.byId("grid").setStore(personStoreForGrid, {});
       });
     </script>
 
@@ -194,8 +197,6 @@ Connecting CsvStore to dojox.grid.DataGrid
 
     <div id="grid" style="width: 350px; height: 300px;" 
       dojoType="dojox.grid.DataGrid" 
-      store="personStoreForGrid" 
-      structure="layoutPeople" 
       query="{}" 
       rowsPerPage="40">
     </div>
@@ -203,8 +204,8 @@ Connecting CsvStore to dojox.grid.DataGrid
   .. cv:: css
 
     <style type="text/css">
-      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/resources/Grid.css";
-      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/resources/nihiloGrid.css";
+      @import "{{baseUrl}}dojox/grid/resources/Grid.css";
+      @import "{{baseUrl}}/dojox/grid/resources/tundraGrid.css";
     </style>
 
 Connecting CsvStore to dojox.grid.DataGrid where the data used a different separator
@@ -241,7 +242,6 @@ Connecting CsvStore to dojox.grid.DataGrid where the data used a different separ
           ];
           dijit.byId("grid2").setStructure(layoutPeople2);
           dijit.byId("grid2").setStore(personStoreForGrid2, {});
-          console.log(personStoreForGrid2);
       });
     </script>
 
