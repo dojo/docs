@@ -36,7 +36,7 @@ How to Define djConfig
 
 djConfig is a JavaScript object that is typically created in one of three ways:
 
-* By specifying its properties in the djConfig="..." attribute of the <script> element in which the dojo core gets included in the document
+* By specifying its properties in the djConfig="..." attribute of the <script> element in which the dojo core gets included in the document (but see the **warning** below)
 * By explicitly creating the djConfig object BEFORE including the dojo core (i.e. dojo.js)
 * By inclusion within a custom build using the builder tool included in the Dojo Toolbox
 
@@ -45,7 +45,7 @@ Each of these methods will be explained now.
 1. Specifying djConfig options via the djConfig="..." attribute
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-By far, the easiest and most common way to specify djConfig is via the djConfig="..." attribute of the &lt;script> tag that is used to include the dojo framework in the page (i.e. dojo.js). Typically this looks something like this:
+By far, the easiest and most common way to specify djConfig is via the djConfig="..." attribute of the <script> tag that is used to include the dojo framework in the page (i.e. dojo.js). Typically this looks something like this:
 
 .. code-block :: javascript
   :linenos:
@@ -65,6 +65,8 @@ By far, the easiest and most common way to specify djConfig is via the djConfig=
   </html>
 
 Note that the content of the djConfig="..." attribute is a comma-delimited list of name/value pairs the same as one would use when creating any JavaScript object.
+
+**Warning:  This approach will not work correctly if** your code goes through a proxy that re-writes the HTML and possibly inlines script src files in the HTML. One known case this happens is with UMTS broadband connections. Favor approach #2 below for those cases.
 
 2. Explicitly creating the djConfig object BEFORE including the dojo core
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
