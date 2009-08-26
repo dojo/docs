@@ -121,50 +121,36 @@ You can add a real example to the documentation by using the ".. cv-compound::" 
 
   .. cv-compound::
 
-    First we declare the CSS
+    Some very simple CSS to make things look fancy
 
     .. cv:: css
       :label: The CSS
 
       <style type="text/css">
-      body {
-        font-family: Arial;
-        padding: 10px;
-      }
-      .fohooo { 
-        color: #15d32a; 
-        font-size: 16px; 
-      }
+        .fancy { 
+          font-family: Arial; padding: 10px; color: orange; 
+          font-size: 12px; font-weight: bold; 
+        }
       </style>
 
-    The HTML snippet simply defines the markup of your code. 
-    
-      * Programmatic code generation
-      * Dom manipulation
+    Two nodes is all we need
 
     .. cv:: html
-      :label: This is the HTML of the example
+      :label: Very basic HTML
 
-      <p id="fohooo" class="fohooo">I'm just a node</p>
-      <p id="fohooooooo" class="fohooo">Don't click Me</p>
+      <p class="fancy">Hi reader, click me</p>
 
-    This is the JavaScript code of your example. Simply paste both HMTL and JavaScript into the browser.
+    Very simple JavaScript using Dojos query selector
 
     .. cv:: javascript
-      :label: And the JavaScript code
+      :label: dojo.query in action
 
       <script type="text/javascript">
-      dojo.require("dijit._Templated");
-      dojo.require("dijit._Widget");
-
       dojo.addOnLoad(function(){
-        dojo.declare("foohooo", [dijit._Widget,dijit._Templated], {
-           templateString: '<div dojoAttachEvent="onclick: _foo">Example: <span dojoAttachPoint="containerNode"></span></div>',
-           _foo: function(){
-              alert("foo");
-           } 
+        var i=0;
+        dojo.query(".fancy").onclick(function(e){
+          dojo.attr(e.target, "innerHTML", "You clicked me "+(++i)+" times.");
         });
-        var widget = new foohooo({id: "test_foohooo"}, dojo.byId("fohooo"));
       });
       </script>
 
@@ -172,103 +158,48 @@ This will result in the following
 
 .. cv-compound::
 
-  First we declare the CSS
+  Some very simple CSS to make things look fancy
 
   .. cv:: css
     :label: The CSS
 
     <style type="text/css">
-    body {
-      font-family: Arial;
-      margin: 10px;
-    }
-    .fohooo { 
-      color: #15d32a; 
-      font-size: 16px; 
-    }
+      .fancy { 
+        font-family: Arial; padding: 10px; color: orange; 
+        font-size: 12px; font-weight: bold; 
+      }
     </style>
 
-  The HTML snippet simply defines the markup of your code. 
-    
-    * Programmatic code generation
-    * Dom manipulation
+  Two nodes is all we need
 
   .. cv:: html
-    :label: This is the HTML of the example
+    :label: Very basic HTML
 
-    <p id="fohooo" class="fohooo">I'm just a node</p>
-    <p id="fohooooooo" class="fohooo">Don't click Me</p>
+    <p class="fancy">Hi reader, click me</p>
 
-  This is the JavaScript code of your example. Simply paste both HMTL and JavaScript into the browser.
+  Very simple JavaScript using Dojos query selector
 
   .. cv:: javascript
-    :label: And the JavaScript code
+    :label: dojo.query in action
 
     <script type="text/javascript">
-    dojo.require("dijit._Templated");
-    dojo.require("dijit._Widget");
-
     dojo.addOnLoad(function(){
-      dojo.declare("foohooo", [dijit._Widget, dijit._Templated], {
-         templateString: '<div dojoAttachEvent="onclick: _foo">Example: <span dojoAttachPoint="containerNode"></span></div>',
-         _foo: function(){
-            alert("foo");
-         } 
+      var i=0;
+      dojo.query(".fancy").onclick(function(e){
+        dojo.attr(e.target, "innerHTML", "You clicked me "+(++i)+" times.");
       });
-      var widget = new foohooo({id: "test_foohooo"}, dojo.byId("fohooo"));
     });
     </script>
 
-
-The valid reST syntax has to look like following markup:
-
-
-.. code-block :: html
-  :linenos:
-
-  .. cv-compound::
-
-    First we declare the CSS
-
-    .. cv:: css
-      :label: The CSS
-      
-       <style type="text/css">
-       </style>
-
-    The HTML snippet simply defines the markup of your code. Dojo will then parse the DOM nodes and create the widgets programatically. 
-    
-      * Programmatic code generation
-      * Dom manipulation
-
-    .. cv:: html
-      :label: This is the HTML of the example
-
-      <div id="fohooo" class="fohooo">Click Me</div>
-      <div id="fohooooooo" class="fohooo">Don't click Me</div>
-      <div dojoType="foohooo" class="fohooo">Or Me</div>
-
-    This is the JavaScript code of your example. Simply paste both HMTL and JavaScript into the browser.
-
-    .. cv:: javascript
-      :label: And the JavaScript code
-
-      <script type="text/javascript">
-      dojo.declare("foohooo", [dijit._Widget,dijit._Templated], {
-         templateString: '<div dojoAttachEvent="onclick: _foo">Example: <span dojoAttachPoint="containerNode"></span></div>',
-         _foo: function(){
-            alert("foo");
-         }
-      });
-      dojo.addOnLoad(function(){
-        var widget = new foohooo({id: "test_foohooo"}, dojo.byId("fohooo"));
-      });
-      </script>
-
 A few important notes:
 
+Right indenting
+---------------
+
+You need to make sure you always use correct indenting. As you see in the example above, after the .. cv-compund ::, everything is indented by exactly 2 extra spaces. If you don't follow that standard you will see scary error messages, and who wants that, really ;)
+
 Codeblock header and descriptions
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------------
 
 Each of the codeblocks (JS/HTML/CSS) can have its own dedicated header and description.
 You can add a header to a block by adding the :label: block to your code as follows:
