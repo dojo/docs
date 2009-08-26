@@ -199,6 +199,14 @@ Nice, isn't it?
 
 A few important notes:
 
+Codeblock type definitions
+--------------------------
+
+When you add a block for JavaScript code, you need to make sure that you include the actual JavaScript tag within the example.
+If you forget, the code won't execute.
+The same accounts for CSS, so you either have to include the style or the link tag.
+Everything within an HTML block will by just appended to the document body.
+
 Right indenting
 ---------------
 
@@ -249,6 +257,15 @@ An example if this in action (simply change the version and you will see what it
 .. cv-compound::
 
   This is a demo of the dynamic variables you can use in CodeGlass
+
+  Some very simple CSS to make things look fancy
+
+  .. cv:: css
+    :label: The CSS
+
+    <style type="text/css">
+      body { margin: 0; padding: 0; height: auto; }
+    </style>
     
   .. cv:: html
     :label: This is the HTML of the example
