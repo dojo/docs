@@ -239,6 +239,8 @@ Connecting CsvStore to dojox.grid.DataGrid where the data used a different separ
               { field: "age", name: "Age", width: 'auto' }
             ]
           ];
+          dijit.byId("grid2").setStructure(layoutPeople2);
+          dijit.byId("grid2").setStore(personStoreForGrid2, {});
       });
     </script>
 
@@ -246,8 +248,6 @@ Connecting CsvStore to dojox.grid.DataGrid where the data used a different separ
 
     <div id="grid2" style="width: 350px; height: 300px;" 
       dojoType="dojox.grid.DataGrid" 
-      store="personStoreForGrid2" 
-      structure="layoutPeople2" 
       query="{}" 
       rowsPerPage="40">
     </div>
@@ -255,6 +255,6 @@ Connecting CsvStore to dojox.grid.DataGrid where the data used a different separ
   .. cv:: css
 
     <style type="text/css">
-      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/resources/Grid.css";
-      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/resources/nihiloGrid.css";
+      @import "{{baseUrl}}dojox/grid/resources/Grid.css";
+      @import "{{baseUrl}}/dojox/grid/resources/tundraGrid.css";
     </style>
