@@ -115,49 +115,63 @@ Executed code
 -------------
 
 You can add a real example to the documentation by using the ".. cv-compound::" and ".. cv::" directives. The code you show can include JavaScript, CSS and HTML
-.. cv-compound:b:
 
-  First we declare the CSS
+.. code-block :: javascript
+  :linenos:
 
-  .. cv:: css
-    :label: The CSS
+  .. cv-compound:
 
-    <style type="text/css">
-    .fohooo { color: #15d32a; font-size: 16px; }
-    </style>
+    First we declare the CSS
 
-  The HTML snippet simply defines the markup of your code. Dojo will then parse the DOM nodes and create the widgets programatically. 
+    .. cv:: css
+      :label: The CSS
+
+      <style type="text/css">
+      body {
+        font-family: Arial;
+        margin: 10px;
+      }
+      .fohooo { 
+        color: #15d32a; 
+        font-size: 16px; 
+      }
+      </style>
+
+    The HTML snippet simply defines the markup of your code. Dojo will then parse the DOM nodes and create the widgets programatically. 
     
-    * Programmatic code generation
-    * Dom manipulation
+      * Programmatic code generation
+      * Dom manipulation
 
-  .. cv:: html
-    :label: This is the HTML of the example
+    .. cv:: html
+      :label: This is the HTML of the example
 
-    <div id="fohooo" class="fohooo">Click Me</div>
-    <div id="fohooooooo" class="fohooo">Don't click Me</div>
-    <div dojoType="foohooo" class="fohooo">Or Me</div>
+      <div id="fohooo" class="fohooo">I'm just a node</div>
+      <div id="fohooooooo" class="fohooo">Don't click Me</div>
+      <div dojoType="foohooo" class="fohooo">Or Me</div>
 
-  This is the JavaScript code of your example. Simply paste both HMTL and JavaScript into the browser.
+    This is the JavaScript code of your example. Simply paste both HMTL and JavaScript into the browser.
 
-  .. cv:: javascript
-    :label: And the JavaScript code
+    .. cv:: javascript
+      :label: And the JavaScript code
 
-    <script type="text/javascript">
-    dojo.declare("foohooo", [dijit._Widget,dijit._Templated], {
-       templateString: '<div dojoAttachEvent="onclick: _foo">Example: <span dojoAttachPoint="containerNode"></span></div>',
-       _foo: function(){
-          alert("foo");
-       }
-    });
-    dojo.addOnLoad(function(){
-      var widget = new foohooo({id: "test_foohooo"}, dojo.byId("fohooo"));
-    });
-    </script>
+      <script type="text/javascript">
+      dojo.require("dijit._Templated");
+      dojo.require("dijit._Widget");
+
+      dojo.addOnLoad(function(){
+        dojo.declare("foohooo", [dijit._Widget,dijit._Templated], {
+           templateString: '<div dojoAttachEvent="onclick: _foo">Example: <span dojoAttachPoint="containerNode"></span></div>',
+           _foo: function(){
+              alert("foo");
+           } 
+        });
+        var widget = new foohooo({id: "test_foohooo"}, dojo.byId("fohooo"));
+      });
+      </script>
 
 This will result in the following 
 
-.. cv-compound::
+.. cv-compound:
 
   First we declare the CSS
 
@@ -165,7 +179,14 @@ This will result in the following
     :label: The CSS
 
     <style type="text/css">
-    .fohooo { color: #15d32a; font-size: 16px; }
+    body {
+      font-family: Arial;
+      margin: 10px;
+    }
+    .fohooo { 
+      color: #15d32a; 
+      font-size: 16px; 
+    }
     </style>
 
   The HTML snippet simply defines the markup of your code. Dojo will then parse the DOM nodes and create the widgets programatically. 
@@ -176,7 +197,7 @@ This will result in the following
   .. cv:: html
     :label: This is the HTML of the example
 
-    <div id="fohooo" class="fohooo">Click Me</div>
+    <div id="fohooo" class="fohooo">I'm just a node</div>
     <div id="fohooooooo" class="fohooo">Don't click Me</div>
     <div dojoType="foohooo" class="fohooo">Or Me</div>
 
@@ -186,16 +207,20 @@ This will result in the following
     :label: And the JavaScript code
 
     <script type="text/javascript">
-    dojo.declare("foohooo", [dijit._Widget,dijit._Templated], {
-       templateString: '<div dojoAttachEvent="onclick: _foo">Example: <span dojoAttachPoint="containerNode"></span></div>',
-       _foo: function(){
-          alert("foo");
-       }
-    });
+    dojo.require("dijit._Templated");
+    dojo.require("dijit._Widget");
+
     dojo.addOnLoad(function(){
+      dojo.declare("foohooo", [dijit._Widget,dijit._Templated], {
+         templateString: '<div dojoAttachEvent="onclick: _foo">Example: <span dojoAttachPoint="containerNode"></span></div>',
+         _foo: function(){
+            alert("foo");
+         } 
+      });
       var widget = new foohooo({id: "test_foohooo"}, dojo.byId("fohooo"));
     });
     </script>
+
 
 The valid reST syntax has to look like following markup:
 
