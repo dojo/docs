@@ -74,14 +74,11 @@ Functional Exaple
          }).setFill("blue").setStroke("black");
 
          dojo.connect(dijit.byId("button"), "onClick", function() {
-            alert(drawing);
-            var deferred= dojox.gfx.utils.toSvg(drawing);
-            deferred.addCallback(function(svg){
-              console.log("Here.");
+            var def = dojox.gfx.utils.toSvg(drawing);
+            def.addCallback(function(svg){
               dojo.byId("svg").innerHTML = svg;  
             });
-            //Try to make it pretty-print
-            deferred.addErrback(function(err){
+            def.addErrback(function(err){
               alert(err);
             });
          });
