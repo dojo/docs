@@ -94,5 +94,5 @@ Functional Exaple
     <br>
     <br>  
     <b>SVGSerialization</b>
-    <pre id="svg">
-    </pre>
+    <xmp id="svg">
+    </xmp>
