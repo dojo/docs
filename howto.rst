@@ -274,7 +274,7 @@ Each of the codeblocks (JS/HTML/CSS) can have its own dedicated header and descr
 You can add a header to a block by adding the :label: block to your code as follows:
 
 .. code-block :: html
-  :lineos:
+  :linenos:
 
   .. cv:: javascript
     :label: And the JavaScript code
@@ -283,7 +283,7 @@ This will result in a header in the JavaScript codeblock.
 To add a descriptive text to a codeblock you can simply add reST markup before the block definition with the same amount of spaces indented as the block directive:
 
 .. code-block :: html
-  :lineos:
+  :linenos:
 
   This will be the descriptive text for the JavaScript block.
   * You can even use reST syntax here
