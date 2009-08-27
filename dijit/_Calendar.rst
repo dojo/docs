@@ -66,36 +66,36 @@ With a custom template to change the look and feel
       dojo.require("dijit._Calendar");
 
 			dojo.addOnLoad(function(){
-				//Need to declare BigCalendar here in an addOnLoad block so that it works
-				//with xdomain loading, where the dojo.require for dijit._Calendar 
-				//may load asynchronously. This also means we cannot have HTML
-				//markup in the body tag for BigCalendar, but instead inject it in this
-				//onload handler after BigCalendar is defined.
-				dojo.declare("BigCalendar", dijit._Calendar, {
-					templatePath: "{{ baseUrl }}dijit/tests/_altCalendar.html",
-					templateString: null,  /* need this for builds */
-					isDisabledDate: dojo.date.locale.isWeekend,
-					getClassForDate: function(date){
-						if(!(date.getDate() % 10)){ return "blue"; } // apply special style to all days divisible by 10
-					}
-				});
-				
-				var bigCalendar = dojo.byId("calendar5");
-				bigCalendar.setAttribute("dojoType", "BigCalendar");
-				dojo.parser.parse(bigCalendar.parentNode);
+			//Need to declare BigCalendar here in an addOnLoad block so that it works
+			//with xdomain loading, where the dojo.require for dijit._Calendar 
+			//may load asynchronously. This also means we cannot have HTML
+			//markup in the body tag for BigCalendar, but instead inject it in this
+			//onload handler after BigCalendar is defined.
+			dojo.declare("BigCalendar", dijit._Calendar, {
+				templatePath: "http://docs.dojocampus.org/dijit/_Calendar?action=AttachFile&do=get&target=bigCalendar.html",
+				templateString: null,  /* need this for builds */
+				isDisabledDate: dojo.date.locale.isWeekend,
+				getClassForDate: function(date){
+					if(!(date.getDate() % 10)){ return "blue"; } // apply special style to all days divisible by 10
+				}
 			});
+
+			var bigCalendar = dojo.byId("calendar5");
+			bigCalendar.setAttribute("dojoType", "BigCalendar");
+			dojo.parser.parse(bigCalendar.parentNode);
+		});
     </script>
 
   .. cv:: css
 
-		<style>
-			#calendar5 .dijitCalendarDateTemplate { height: 50px; width: 50px; border: 1px solid #ccc; vertical-align: top }
-			#calendar5 .dijitCalendarDateLabel, #calendar5 .dijitCalendarDateTemplate { text-align: inherit }
-			#calendar5 .dijitCalendarDayLabel { font-weight: bold }
-			#calendar5 .dijitCalendarSelectedYear { font-size: 1.5em }
-			#calendar5 .dijitCalendarMonth { font-family: serif; letter-spacing: 0.2em; font-size: 2em }
-			.blue { color: blue }
-		</style>
+	<style>
+		#calendar5 .dijitCalendarDateTemplate { height: 50px; width: 50px; border: 1px solid #ccc; vertical-align: top }
+		#calendar5 .dijitCalendarDateLabel, #calendar5 .dijitCalendarDateTemplate { text-align: inherit }
+		#calendar5 .dijitCalendarDayLabel { font-weight: bold }
+		#calendar5 .dijitCalendarSelectedYear { font-size: 1.5em }
+		#calendar5 .dijitCalendarMonth { font-family: serif; letter-spacing: 0.2em; font-size: 2em }
+		.blue { color: blue }
+	</style>
 
   .. cv:: html
 
