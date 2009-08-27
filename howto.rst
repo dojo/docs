@@ -216,7 +216,7 @@ Besides that you can pass following parameters to the cv-compound directive
 +---------------------------------------+------------------------------------+-----------------------------------------------+
 |   Parameter                           | Example                            | Description                                   |
 +=======================================+====================================+===============================================+
-| `:djConfig:` key: value, key: value"  | `:djConfig:` parseOnLoad: true     | You can pass extra djConfig parameters here   |
+| `:djConfig:` key: value, key: value   | `:djConfig:` parseOnLoad: true     | You can pass extra djConfig parameters here   |
 +---------------------------------------+------------------------------------+-----------------------------------------------+
 | `:width:` num                         | `:width:` 750                      | The width of the opened CodeGlass             |
 +---------------------------------------+------------------------------------+-----------------------------------------------+
