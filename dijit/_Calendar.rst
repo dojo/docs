@@ -129,7 +129,7 @@ With a custom template to change the layout (only works locally)
 
   .. cv:: html
 
-	<input id="calendar5" dayWidth="abbr" value="2008-03-15">
+	<input id="calendar5" dayWidth="abbr" value="2008-03-13">
 
 
 [experimental: 1.4+ and trunk only] Using a non-Gregorian calendar, the Hebrew calendar, in your browser's native language and also in Hebrew.
