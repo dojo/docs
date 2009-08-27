@@ -49,11 +49,15 @@ With an initial selection, a minimum and maximum range, and weekends disabled
 
     <script type="text/javascript">
       dojo.require("dijit._Calendar");
+
+      dojo.addOnLoad(function(){
+	dijit.byId("mycal").isDisabled = dojo.date.locale.isWeekend;
+      });
     </script>
 
   .. cv:: html
 
-    <div dojoType="dijit._Calendar" value="2009-08-07" isDisabled="return dojo.date.locale.isWeekend;"></div>
+    <div id="mycal" dojoType="dijit._Calendar" value="2009-08-07"></div>
 
 
 With a custom template to change the look and feel
@@ -65,25 +69,25 @@ With a custom template to change the look and feel
     <script type="text/javascript">
       dojo.require("dijit._Calendar");
 
-			dojo.addOnLoad(function(){
-			//Need to declare BigCalendar here in an addOnLoad block so that it works
-			//with xdomain loading, where the dojo.require for dijit._Calendar 
-			//may load asynchronously. This also means we cannot have HTML
-			//markup in the body tag for BigCalendar, but instead inject it in this
-			//onload handler after BigCalendar is defined.
-			dojo.declare("BigCalendar", dijit._Calendar, {
+	dojo.addOnLoad(function(){
+		//Need to declare BigCalendar here in an addOnLoad block so that it works
+		//with xdomain loading, where the dojo.require for dijit._Calendar 
+		//may load asynchronously. This also means we cannot have HTML
+		//markup in the body tag for BigCalendar, but instead inject it in this
+		//onload handler after BigCalendar is defined.
+		dojo.declare("BigCalendar", dijit._Calendar, {
 				templatePath: "http://docs.dojocampus.org/dijit/_Calendar?action=AttachFile&do=get&target=bigCalendar.html",
 				templateString: null,  /* need this for builds */
 				isDisabledDate: dojo.date.locale.isWeekend,
 				getClassForDate: function(date){
 					if(!(date.getDate() % 10)){ return "blue"; } // apply special style to all days divisible by 10
 				}
-			});
-
-			var bigCalendar = dojo.byId("calendar5");
-			bigCalendar.setAttribute("dojoType", "BigCalendar");
-			dojo.parser.parse(bigCalendar.parentNode);
 		});
+
+		var bigCalendar = dojo.byId("calendar5");
+		bigCalendar.setAttribute("dojoType", "BigCalendar");
+		dojo.parser.parse(bigCalendar.parentNode);
+	});
     </script>
 
   .. cv:: css
@@ -99,7 +103,7 @@ With a custom template to change the look and feel
 
   .. cv:: html
 
-			<input id="calendar5" dayWidth="abbr" value="2008-03-15">
+	<input id="calendar5" dayWidth="abbr" value="2008-03-15">
 
 
 [experimental: 1.4+ and trunk only] Using a non-Gregorian calendar, the Hebrew calendar, in your browser's native language and in Hebrew.
