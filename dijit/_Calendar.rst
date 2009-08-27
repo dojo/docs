@@ -49,10 +49,6 @@ With an initial selection and weekends disabled
 
     <script type="text/javascript">
       dojo.require("dijit._Calendar");
-
-   //      dojo.addOnLoad(function(){
-   //	dijit.byId("mycal").isDisabledDate = dojo.date.locale.isWeekend;
-   //      });
     </script>
 
   .. cv:: html
