@@ -14,7 +14,7 @@ dijit._Calendar
 .. contents::
     :depth: 2
 
-The Calendar widget displays a localized month-view calendar and allows the user to navigate months and years and select a date.  Localizations for hundreds of languages and cultures are included as part of the Dojo Toolkit.  The locale will be chosen based on the djConfig.locale setting of your page, using navigator.language by default.  To meet the accessibility requirements of the Dijit project, which requires keyboard accessibility on input controls, the _Calendar must be used in conjunction with `DateTextBox <dijit/DateTextBox>`_. For this reason, the _Calendar widget is not supported standalone and is prefixed with an underscore ("_").  However, a standalone calendar can easily be added to a page as seen in the demo below.
+The _Calendar widget displays a localized month-view calendar and allows the user to navigate months and years and select a date.  It is typically used as part of the `DateTextBox <dijit/DateTextBox>`_ which includes a text box and uses the _Calendar as a drop-down. Localizations for hundreds of languages and cultures are included as part of the Dojo Toolkit.  The locale will be chosen based on the djConfig.locale setting of your page, using navigator.language by default.  To meet the accessibility requirements of the Dijit project, which requires keyboard accessibility on input controls, the _Calendar must be used in conjunction with `DateTextBox <dijit/DateTextBox>`_. For this reason, the _Calendar widget is not supported standalone and is prefixed with an underscore ("_").  However, a standalone calendar can easily be added to a page as seen in the demo below.
 
 Navigating between months is possible with the arrow icons, and the next and previous year may be clicked to change to that year.  Holding the mouse down on these controls will repeat the action.  In version 1.4+, the month name is a drop-down control for selecting a different month.
 
@@ -57,7 +57,7 @@ With an initial selection and weekends disabled
     <div id="mycal" dojoType="dijit._Calendar" value="2009-08-07" isDisabledDate="dojo.date.locale.isWeekend"></div>
 
 
-Programmatic, with a range of +/- one week
+Programmatic, with a restriction of +/- one week from the current date
 
 .. cv-compound::
   :height: 300
