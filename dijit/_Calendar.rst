@@ -29,7 +29,7 @@ A plain Calendar widget
 
 .. cv-compound::
   :type: inline
-  :height: 200
+  :height: 300
 
   .. cv:: javascript
 
@@ -118,8 +118,7 @@ With a custom template to change the look and feel
 
   .. cv:: html
 
-    <span dojoType="dijit._Calendar" datePackage = "dojox.date.hebrew"></span>
-    <span dojoType="dijit._Calendar" lang="he" datePackage = "dojox.date.hebrew"></span>
+    <div dojoType="dijit._Calendar" datePackage = "dojox.date.hebrew"></div><div dojoType="dijit._Calendar" lang="he" datePackage = "dojox.date.hebrew"></div>
 
 
 ========
