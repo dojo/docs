@@ -20,6 +20,8 @@ The Calendar widget displays a localized month-view calendar and allows the user
 Examples
 ========
 
+A plain Calendar widget
+
 .. cv-compound::
 
   .. cv:: javascript
@@ -75,6 +77,24 @@ With a custom template to change the look and feel
   .. cv:: html
 
 			<input id="calendar5" dayWidth="abbr" value="2008-03-15">
+
+
+[experimental] Using a non-Gregorian calendar, the Hebrew calendar
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+      dojo.require("dijit._Calendar");
+      dojo.require("dojox.date.hebrew");
+      dojo.require("dojox.date.hebrew.Date");
+      dojo.require("dojox.date.hebrew.locale");
+    </script>
+
+  .. cv:: html
+
+    <div dojoType="dijit._Calendar" datePackage = "dojox.date.hebrew"></div>
 
 
 ========
