@@ -72,7 +72,7 @@ With a custom template to change the look and feel
 				//markup in the body tag for BigCalendar, but instead inject it in this
 				//onload handler after BigCalendar is defined.
 				dojo.declare("BigCalendar", dijit._Calendar, {
-					templatePath: "{{ baseUrl }}../../dijit/tests/_altCalendar.html",
+					templatePath: "{{ baseUrl }}dijit/tests/_altCalendar.html",
 					templateString: null,  /* need this for builds */
 					isDisabledDate: dojo.date.locale.isWeekend,
 					getClassForDate: function(date){
@@ -118,7 +118,8 @@ With a custom template to change the look and feel
 
   .. cv:: html
 
-    <div dojoType="dijit._Calendar" datePackage = "dojox.date.hebrew"></div><div dojoType="dijit._Calendar" lang="he" datePackage = "dojox.date.hebrew"></div>
+    <div dojoType="dijit._Calendar" datePackage = "dojox.date.hebrew"></div>
+    <div dojoType="dijit._Calendar" lang="he" datePackage = "dojox.date.hebrew"></div>
 
 
 ========
