@@ -14,11 +14,11 @@ dijit._Calendar
 .. contents::
     :depth: 2
 
-The Calendar widget displays a localized month-view calendar and allows the user to navigate months and years and select a date.  Localizations for hundreds of languages and cultures are included as part of the Dojo Toolkit.  The locale will be chosen based on the djConfig.locale setting of your page, using navigator.language by default.  A calendar can easily be added to a page as seen in the demo below.
+The Calendar widget displays a localized month-view calendar and allows the user to navigate months and years and select a date.  Localizations for hundreds of languages and cultures are included as part of the Dojo Toolkit.  The locale will be chosen based on the djConfig.locale setting of your page, using navigator.language by default.  To meet the accessibility requirements of the Dijit project, which requires keyboard accessibility on input controls, the _Calendar must be used in conjunction with `DateTextBox <dijit/DateTextBox>`_. For this reason, the _Calendar widget is not supported standalone and is prefixed with an underscore ("_").  However, a standalone calendar can easily be added to a page as seen in the demo below.
 
 Navigating between months is possible with the arrow icons, and the next and previous year may be clicked to change to that year.  Holding the mouse down on these controls will repeat the action.  In version 1.4+, the month name is a drop-down control for selecting a different month.
 
-To meet the accessibility requirements of the Dijit project, which requires keyboard accessibility on input controls, the _Calendar must be used in conjunction with `DateTextBox <dijit/DateTextBox>`_. For this reason, the _Calendar widget is not supported standalone and is prefixed with an underscore ("_").  Non-Gregorian calendar use is possible using the datePackage attribute and experimental date classes in `dojox.date <dojox/date>`_.  
+Non-Gregorian calendar use is possible using the datePackage attribute and experimental date classes in `dojox.date <dojox/date>`_.  
 
 
 ========
