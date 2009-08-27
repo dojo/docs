@@ -96,6 +96,7 @@ With a custom template to change the look and feel
   .. cv:: html
 
     <div dojoType="dijit._Calendar" datePackage = "dojox.date.hebrew"></div>
+    <div dojoType="dijit._Calendar" lang="he" datePackage = "dojox.date.hebrew"></div>
 
 
 ========
