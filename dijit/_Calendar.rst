@@ -71,7 +71,7 @@ Programmatic, with a restriction of +/- one week from the current date
 		new dijit._Calendar({
 			value: new Date(2009, 7, 7),
 			isDisabledDate: function(d){
-				var d = new Date(d); d.setHours(0);
+				var d = new Date(d); d.setHours(0,0,0,0);
 				return Math.abs(dojo.date.difference(d, new Date, "week")) > 0;
 			}
 		}, "mycal");
