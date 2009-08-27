@@ -69,8 +69,8 @@ Programmatic, with a min/max range
 		new dijit._Calendar({
 			value: new Date(2009, 7, 7),
 			isDisabledDate: function(d){
-				return dojo.date.compare(d, new Date(2009, 7, 4)) > 0 &&
-					dojo.date.compare(d, new Date(2009, 8, 4)) < 0)
+				return dojo.date.compare(d, new Date(2009, 7, 4) > 0 &&
+					dojo.date.compare(d, new Date(2009, 8, 4) < 0)
 			}
 		}, "mycal");
 	});
