@@ -87,7 +87,7 @@ Programmatic, with a restriction of +/- one week from the current date
 With a custom template to change the layout (only works locally)
 
 .. cv-compound::
-  :height: 650
+  :height: 600
   :version: 9.99
 
   .. cv:: javascript
