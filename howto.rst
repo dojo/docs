@@ -197,6 +197,104 @@ Following code is the representation of the demo you saw above:
 
 Nice, isn't it?
 
+Inline/Dialog view
+------------------
+
+The same CodeGlass can be instantiated inline and in a modal dialog. Just add :type: inline/dialog to determine what type you would like to use
+
+.. code-block :: html
+  :linenos:
+
+  .. cv-compound::
+    :type: inline
+
+Other parameters
+----------------
+
+Besides that you can pass following parameters to the cv-compound directive
+
++-----------------------------------+-----------------------------------------------+
+|   Parameter                       | Description                                   |
++-----------------------------------+-----------------------------------------------+
+| :djConfig: key: value, key: value | You can pass extra djConfig parameters here   |
++-----------------------------------+-----------------------------------------------+
+| :width: num (e.g. :width: 670)    | The width of the opened CodeGlass             |
++-----------------------------------+-----------------------------------------------+
+| :height: num (e.g. :height: 500)  | The height of the opened CodeGlass            |
++-----------------------------------+-----------------------------------------------+
+
+Lets look at an example using the inline style and extra parameters in use:
+
+.. cv-compound::
+  :djConfig: parseOnLoad: true
+  :width: 680
+  :height: 450
+
+  .. cv:: javascript
+    :label: The dojo requires
+
+    <script type="text/javascript">
+      dojo.require("dijit.layout.ContentPane");
+      dojo.require("dijit.layout.BorderContainer");
+      dojo.require("dijit.layout.TabContainer");
+      dojo.require("dijit.layout.AccordionContainer");
+    </script>
+
+  The markup has to look as follows
+  
+  .. cv:: html
+    :label: The markup
+
+    <div dojoType="dijit.layout.BorderContainer" gutters="true" id="borderContainerTwo" >
+      <div dojoType="dijit.layout.ContentPane" region="top" splitter="false">
+        Hi, usually here you would have important information, maybe your company logo, or functions you need to access all the time..  
+      </div>	
+      <div dojoType="dijit.layout.BorderContainer" liveSplitters="false" design="sidebar" region="center" id="mainSplit">
+        <div dojoType="dijit.layout.AccordionContainer" minSize="20" style="width: 300px;" id="leftAccordion" region="leading" splitter="true">
+          <div dojoType="dijit.layout.AccordionPane" title="One fancy Pane">
+          </div>
+          <div dojoType="dijit.layout.AccordionPane" title="Another one">
+          </div>
+          <div dojoType="dijit.layout.AccordionPane" title="Even more fancy" selected="true">
+          </div>
+          <div dojoType="dijit.layout.AccordionPane" title="Last, but not least">
+          </div>
+        </div><!-- end AccordionContainer -->
+        <div dojoType="dijit.layout.TabContainer" region="center" tabStrip="true">
+          <div dojoType="dijit.layout.ContentPane" title="My first tab" selected="true">
+            Lorem ipsum and all around...
+          </div>
+          <div dojoType="dijit.layout.ContentPane" title="My second tab">
+            Lorem ipsum and all around - second...
+          </div>
+          <div dojoType="dijit.layout.ContentPane" title="My last tab" closable="true">
+            Lorem ipsum and all around - last...
+          </div>
+        </div>
+      </div>
+    </div>
+
+  .. cv:: css
+    :label: A few simple css rules
+
+    <style type="text/css">
+      #borderContainerTwo {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+
+The extra parameters we defined where
+
+.. code-block :: html
+  :linenos:
+
+  .. cv-compound::
+    :djConfig: parseOnLoad: true
+    :width: 680
+    :height: 450
+
+
 A few important notes:
 
 Codeblock type definitions
@@ -272,6 +370,10 @@ An example if this in action (simply change the version and you will see what it
 
     <p>Current Dojo baseUrl: <strong>{{ baseUrl }}</strong></p>
 
+CodeGlass style
+---------------
+
+Make sure you always give a width and height which makes the examples look nice. Adjusting the width and height can result in wonders :)
 
 ======
 Images
