@@ -50,15 +50,14 @@ With an initial selection and weekends disabled
     <script type="text/javascript">
       dojo.require("dijit._Calendar");
 
-      dojo.addOnLoad(function(){
-	dijit.byId("mycal").isDisabled = dojo.date.locale.isWeekend;
-   alert(dijit.byId("mycal").isDisabled);
-      });
+//      dojo.addOnLoad(function(){
+//	dijit.byId("mycal").isDisabledDate = dojo.date.locale.isWeekend;
+//      });
     </script>
 
   .. cv:: html
 
-    <div id="mycal" dojoType="dijit._Calendar" value="2009-08-07"></div>
+    <div id="mycal" dojoType="dijit._Calendar" value="2009-08-07" isDisabledDate="dojo.date.locale.isWeekend"></div>
 
 
 With a custom template to change the layout
