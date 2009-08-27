@@ -52,7 +52,7 @@ With an initial selection, a minimum and maximum range, and weekends disabled
 
   .. cv:: html
 
-    <div dojoType="dijit._Calendar" value="2008-07-06" constraints="{min:'2008-07-05', max:'2008-07-20', isDisabled:dojo.date.locale.isWeekend}"></div>
+    <div dojoType="dijit._Calendar" value="2009-08-07" isDisabled="dojo.date.locale.isWeekend"></div>
 
 
 With a custom template to change the look and feel
