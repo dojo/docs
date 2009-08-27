@@ -40,6 +40,20 @@ A plain Calendar widget
 
     <div dojoType="dijit._Calendar"></div>
 
+With an initial selection, a minimum and maximum range, and weekends disabled
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+      dojo.require("dijit._Calendar");
+    </script>
+
+  .. cv:: html
+
+    <div dojoType="dijit._Calendar" value="2008-07-06" constraints="{min:'2008-07-05', max:'2008-07-20', isDisabled:dojo.date.locale.isWeekend}"></div>
+
 
 With a custom template to change the look and feel
 
