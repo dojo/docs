@@ -213,15 +213,17 @@ Other parameters
 
 Besides that you can pass following parameters to the cv-compound directive
 
-+-----------------------------------+-----------------------------------------------+
-|   Parameter                       | Description                                   |
-+-----------------------------------+-----------------------------------------------+
-| :djConfig: key: value, key: value | You can pass extra djConfig parameters here   |
-+-----------------------------------+-----------------------------------------------+
-| :width: num (e.g. :width: 670)    | The width of the opened CodeGlass             |
-+-----------------------------------+-----------------------------------------------+
-| :height: num (e.g. :height: 500)  | The height of the opened CodeGlass            |
-+-----------------------------------+-----------------------------------------------+
++-----------------------------------+------------------------------------+-----------------------------------------------+
+|   Parameter                       | Example                            | Description                                   |
++===================================+====================================+===============================================+
+| :djConfig: key: value, key: value | :djConfig: parseOnLoad: true       | You can pass extra djConfig parameters here   |
++-----------------------------------+------------------------------------+-----------------------------------------------+
+| :width: num                       | :width: 750                        | The width of the opened CodeGlass             |
++-----------------------------------+------------------------------------+-----------------------------------------------+
+| :height: num                      | :height: 500                       | The height of the opened CodeGlass    |       |
++-----------------------------------+------------------------------------+-----------------------------------------------+
+| :version: start-?end              | :version: 1.3 or :version: 1.3-2.0 | The version supported by the example          |
++-----------------------------------+------------------------------------+-----------------------------------------------+
 
 Lets look at an example using the inline style and extra parameters in use:
 
@@ -229,6 +231,8 @@ Lets look at an example using the inline style and extra parameters in use:
   :djConfig: parseOnLoad: true
   :width: 680
   :height: 450
+  :type: inline
+  :version: 1.3-2.0
 
   .. cv:: javascript
     :label: The dojo requires
