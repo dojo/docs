@@ -131,7 +131,7 @@ With a custom template to change the layout (only works locally)
 	<input id="calendar5" dayWidth="abbr" value="2008-03-13">
 
 
-[experimental: 1.4+ and trunk only] Using a non-Gregorian calendar, the Hebrew calendar, in your browser's native language and also in Hebrew.
+[experimental: 1.4+] Using a non-Gregorian calendar, the Hebrew calendar, in your browser's native language and also in Hebrew.
 
 .. cv-compound::
   :djConfig: parseOnLoad: true, extraLocale: ['he']
