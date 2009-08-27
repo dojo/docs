@@ -104,7 +104,6 @@ With a custom template to change the layout (only works locally)
 		dojo.declare("BigCalendar", dijit._Calendar, {
 				templatePath: "http://docs.dojocampus.org/dijit/_Calendar?action=AttachFile&do=get&target=bigCalendar.html",
 				templateString: null,  /* need this for builds */
-				isDisabledDate: dojo.date.locale.isWeekend,
 				getClassForDate: function(date){
 					if(!(date.getDate() % 10)){ return "blue"; } // apply special style to all days divisible by 10
 				}
