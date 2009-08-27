@@ -28,7 +28,7 @@ Examples
 A plain Calendar widget
 
 .. cv-compound::
- :type: inline
+  :type: inline
 
   .. cv:: javascript
 
@@ -104,7 +104,7 @@ With a custom template to change the look and feel
 [experimental: 1.4+ and trunk only] Using a non-Gregorian calendar, the Hebrew calendar
 
 .. cv-compound::
- :djConfig: parseOnLoad: true, extraLocale: ['he']
+  :djConfig: parseOnLoad: true, extraLocale: ['he']
 
   .. cv:: javascript
 
