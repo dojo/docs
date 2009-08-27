@@ -29,7 +29,7 @@ A plain Calendar widget
 
 .. cv-compound::
   :type: inline
-  :width: 200px
+  :height: 200
 
   .. cv:: javascript
 
@@ -106,7 +106,6 @@ With a custom template to change the look and feel
 
 .. cv-compound::
   :djConfig: parseOnLoad: true, extraLocale: ['he']
-  :startVersion: 1.4
 
   .. cv:: javascript
 
