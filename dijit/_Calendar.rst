@@ -65,6 +65,8 @@ With a custom template to change the look and feel
 			});
     </script>
 
+  .. cv:: css
+
 		<style>
 			#calendar5 .dijitCalendarDateTemplate { height: 50px; width: 50px; border: 1px solid #ccc; vertical-align: top }
 			#calendar5 .dijitCalendarDateLabel, #calendar5 .dijitCalendarDateTemplate { text-align: inherit }
