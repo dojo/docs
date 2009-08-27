@@ -23,6 +23,7 @@ Examples
 A plain Calendar widget
 
 .. cv-compound::
+ :type: inline
 
   .. cv:: javascript
 
