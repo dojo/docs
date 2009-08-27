@@ -282,6 +282,12 @@ Lets look at an example using the inline style and extra parameters in use:
     :label: A few simple css rules
 
     <style type="text/css">
+      body, html {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+      }
+
       #borderContainerTwo {
         width: 100%;
         height: 100%;
@@ -297,7 +303,8 @@ The extra parameters we defined where
     :djConfig: parseOnLoad: true
     :width: 680
     :height: 450
-
+    :type: inline
+    :version: 1.3-2.0
 
 A few important notes:
 
