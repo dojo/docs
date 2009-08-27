@@ -56,6 +56,31 @@ With an initial selection and weekends disabled
     <div id="mycal" dojoType="dijit._Calendar" value="2009-08-07" isDisabledDate="dojo.date.locale.isWeekend"></div>
 
 
+Programmatic, with a min/max range
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+      dojo.require("dijit._Calendar");
+
+	dojo.addOnLoad(function(){
+		new dijit._Calendar({
+			value: new Date(2009, 7, 7);
+			isDisabledDate: function(d){
+				return dojo.date.compare(d, new Date(2009, 7, 4)) > 0 &&
+					dojo.date.compare(d, new Date(2009, 8, 4)) < 0);
+			}
+		}, "mycal");
+	});
+    </script>
+
+  .. cv:: html
+
+    <div id="mycal"></div>
+
+
 With a custom template to change the layout
 
 .. cv-compound::
