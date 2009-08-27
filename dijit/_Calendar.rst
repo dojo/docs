@@ -57,7 +57,7 @@ With an initial selection and weekends disabled
     <div id="mycal" dojoType="dijit._Calendar" value="2009-08-07" isDisabledDate="dojo.date.locale.isWeekend"></div>
 
 
-Programmatic, with a min/max range
+Programmatic, with a range of +/- one week
 
 .. cv-compound::
   :height: 300
@@ -71,7 +71,7 @@ Programmatic, with a min/max range
 		new dijit._Calendar({
 			value: new Date(2009, 7, 7),
 			isDisabledDate: function(d){
-				return dojo.date.difference(d, new Date) > 5;
+				return dojo.date.difference(d, new Date, "weeks") > 1;
 			}
 		}, "mycal");
 	});
