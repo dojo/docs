@@ -84,10 +84,11 @@ Programmatic, with a restriction of +/- one week from the current date
     <div id="mycal"></div>
 
 
-With a custom template to change the layout
+With a custom template to change the layout (only works locally)
 
 .. cv-compound::
-  :height: 600
+  :height: 650
+  :version: 9.99
 
   .. cv:: javascript
 
