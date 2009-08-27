@@ -107,6 +107,9 @@ Note the tabStrip attribute on the TabContainer.
 
 .. cv-compound::
   :djConfig: parseOnLoad: true
+  :type: inline
+  :height: 400
+  :width: 660
 
   .. cv:: javascript
     :label: The dojo requires
