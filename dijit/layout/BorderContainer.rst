@@ -61,7 +61,7 @@ Declarative example
 .. cv-compound::
   :type: inline
   :height: 400
-  :width: 500
+  :width: 600
 
   Lets specify a simple BorderContainer with a left and center region
 
