@@ -52,7 +52,7 @@ With an initial selection and weekends disabled
 
       dojo.addOnLoad(function(){
 	dijit.byId("mycal").isDisabled = dojo.date.locale.isWeekend;
-alert(dijit.byId("mycal").isDisabled);
+   alert(dijit.byId("mycal").isDisabled);
       });
     </script>
 
