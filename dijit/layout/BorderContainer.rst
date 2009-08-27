@@ -100,7 +100,7 @@ This example uses two BorderContainers to allow to, left and right content areas
 Note the tabStrip attribute on the TabContainer.
 
 .. cv-compound::
-  :djConfig: locale: en, parseOnLoad: true
+  :djConfig: parseOnLoad: true
 
   .. cv:: javascript
     :label: The dojo requires
