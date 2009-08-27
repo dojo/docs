@@ -44,6 +44,7 @@ A plain Calendar widget
 With an initial selection and weekends disabled
 
 .. cv-compound::
+  :height: 300
 
   .. cv:: javascript
 
@@ -59,6 +60,7 @@ With an initial selection and weekends disabled
 Programmatic, with a min/max range
 
 .. cv-compound::
+  :height: 300
 
   .. cv:: javascript
 
@@ -69,8 +71,8 @@ Programmatic, with a min/max range
 		new dijit._Calendar({
 			value: new Date(2009, 7, 7),
 			isDisabledDate: function(d){
-				return dojo.date.compare(d, new Date(2009, 7, 4) > 0) &&
-					dojo.date.compare(d, new Date(2009, 8, 4) < 0)
+				return dojo.date.compare(d, new Date(2009, 7, 4)) > 0 &&
+					dojo.date.compare(d, new Date(2009, 8, 4)) < 0
 			}
 		}, "mycal");
 	});
@@ -84,6 +86,7 @@ Programmatic, with a min/max range
 With a custom template to change the layout
 
 .. cv-compound::
+  :height: 600
 
   .. cv:: javascript
 
