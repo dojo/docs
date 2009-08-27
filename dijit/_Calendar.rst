@@ -71,7 +71,7 @@ Programmatic, with a range of +/- one week
 		new dijit._Calendar({
 			value: new Date(2009, 7, 7),
 			isDisabledDate: function(d){
-				return dojo.date.difference(d, new Date, "weeks") > 1;
+				return dojo.date.difference(d, new Date, "week") > 1;
 			}
 		}, "mycal");
 	});
