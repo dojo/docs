@@ -29,6 +29,7 @@ A plain Calendar widget
 
 .. cv-compound::
   :type: inline
+  :width: 200px
 
   .. cv:: javascript
 
@@ -101,10 +102,11 @@ With a custom template to change the look and feel
 			<input id="calendar5" dayWidth="abbr" value="2008-03-15">
 
 
-[experimental: 1.4+ and trunk only] Using a non-Gregorian calendar, the Hebrew calendar
+[experimental: 1.4+ and trunk only] Using a non-Gregorian calendar, the Hebrew calendar, in your browser's native language and in Hebrew.
 
 .. cv-compound::
   :djConfig: parseOnLoad: true, extraLocale: ['he']
+  :startVersion: 1.4
 
   .. cv:: javascript
 
@@ -117,8 +119,8 @@ With a custom template to change the look and feel
 
   .. cv:: html
 
-    <div dojoType="dijit._Calendar" datePackage = "dojox.date.hebrew"></div>
-    <div dojoType="dijit._Calendar" lang="he" datePackage = "dojox.date.hebrew"></div>
+    <span dojoType="dijit._Calendar" datePackage = "dojox.date.hebrew"></span>
+    <span dojoType="dijit._Calendar" lang="he" datePackage = "dojox.date.hebrew"></span>
 
 
 ========
