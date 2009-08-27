@@ -106,6 +106,7 @@ With a custom template to change the look and feel
 
 .. cv-compound::
   :djConfig: parseOnLoad: true, extraLocale: ['he']
+  :version: 1.4
 
   .. cv:: javascript
 
