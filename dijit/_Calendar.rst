@@ -25,7 +25,7 @@ Non-Gregorian calendar use is possible using the datePackage attribute and exper
 Examples
 ========
 
-A plain Calendar widget
+A plain Calendar widget with the formatted date below
 
 .. cv-compound::
   :type: inline
@@ -39,7 +39,8 @@ A plain Calendar widget
 
   .. cv:: html
 
-    <div dojoType="dijit._Calendar"></div>
+    <div dojoType="dijit._Calendar" onChange="dojo.byId('formatted').innerHTML=dojo.date.locale.format(arguments[0], {formatLength: 'long'})">
+    </div><div id="formatted"></div>
 
 With an initial selection and weekends disabled
 
