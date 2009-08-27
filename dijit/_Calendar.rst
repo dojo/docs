@@ -79,9 +79,10 @@ With a custom template to change the look and feel
 			<input id="calendar5" dayWidth="abbr" value="2008-03-15">
 
 
-[experimental] Using a non-Gregorian calendar, the Hebrew calendar
+[experimental: 1.4+ and trunk only] Using a non-Gregorian calendar, the Hebrew calendar
 
 .. cv-compound::
+ :djConfig: extraLocale: ['he']
 
   .. cv:: javascript
 
