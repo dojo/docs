@@ -15,7 +15,6 @@ dijit._Calendar
 
 The Calendar widget displays a localized gregorian month-view calendar, and allows the user to navigate months and years as well as select a date.  To meet the accessibility requirements of dijit which require keyboard accessibility on input controls, the Calendar must be used in conjunction with `DateTextBox <dijit/DateTextBox>`_. A read-only calendar view can easily be added to a page as seen in the demo below.
 
-An enhanced but still experimental version of Calendar which has additional capabilities like year-only views and animation effects is under development in `dojox.widget.Calendar <dojox/widget/Calendar>`_. 
 
 ========
 Examples
@@ -33,3 +32,9 @@ Examples
   .. cv:: html
 
     <div dojoType="dijit._Calendar"></div>
+
+========
+See Also
+========
+
+  * `dojox.widget.Calendar <dojox/widget/Calendar>`_ - An enhanced but still experimental version of Calendar which has additional capabilities like year-only views and animation effects.
