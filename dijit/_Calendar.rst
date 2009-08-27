@@ -41,7 +41,7 @@ A plain Calendar widget
 
     <div dojoType="dijit._Calendar"></div>
 
-With an initial selection, a minimum and maximum range, and weekends disabled
+With an initial selection and weekends disabled
 
 .. cv-compound::
 
@@ -52,6 +52,7 @@ With an initial selection, a minimum and maximum range, and weekends disabled
 
       dojo.addOnLoad(function(){
 	dijit.byId("mycal").isDisabled = dojo.date.locale.isWeekend;
+alert(dijit.byId("mycal").isDisabled);
       });
     </script>
 
@@ -60,7 +61,7 @@ With an initial selection, a minimum and maximum range, and weekends disabled
     <div id="mycal" dojoType="dijit._Calendar" value="2009-08-07"></div>
 
 
-With a custom template to change the look and feel
+With a custom template to change the layout
 
 .. cv-compound::
 
@@ -106,7 +107,7 @@ With a custom template to change the look and feel
 	<input id="calendar5" dayWidth="abbr" value="2008-03-15">
 
 
-[experimental: 1.4+ and trunk only] Using a non-Gregorian calendar, the Hebrew calendar, in your browser's native language and in Hebrew.
+[experimental: 1.4+ and trunk only] Using a non-Gregorian calendar, the Hebrew calendar, in your browser's native language and also in Hebrew.
 
 .. cv-compound::
   :djConfig: parseOnLoad: true, extraLocale: ['he']
