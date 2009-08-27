@@ -39,8 +39,8 @@ A plain Calendar widget with the formatted date below
 
   .. cv:: html
 
-    <div dojoType="dijit._Calendar" onChange="dojo.byId('formatted').innerHTML=dojo.date.locale.format(arguments[0], {formatLength: 'long', selector:'date'})">
-    </div><div id="formatted"></div>
+    <div dojoType="dijit._Calendar" onChange="dojo.byId('formatted').innerHTML=dojo.date.locale.format(arguments[0], {formatLength: 'full', selector:'date'})">
+    <br></br></div><div id="formatted"></div>
 
 With an initial selection and weekends disabled
 
