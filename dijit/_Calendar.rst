@@ -114,7 +114,6 @@ With a custom template to change the layout (only works locally)
 .. cv-compound::
   :height: 600
   :version: 9.99
-  :type: inline
 
   .. cv:: javascript
 
@@ -165,7 +164,6 @@ With a custom template to change the layout (only works locally)
 .. cv-compound::
   :djConfig: parseOnLoad: true, extraLocale: ['he']
   :version: 1.4
-  :type: inline
 
   .. cv:: javascript
 
