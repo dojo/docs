@@ -29,7 +29,7 @@ A plain Calendar widget with the formatted date below
 
 .. cv-compound::
   :type: inline
-  :height: 330
+  :height: 340
 
   .. cv:: javascript
 
@@ -56,7 +56,7 @@ A plain Calendar widget with the formatted date below
 With an initial selection and weekends disabled
 
 .. cv-compound::
-  :height: 300
+  :height: 320
   :type: inline
 
   .. cv:: javascript
@@ -83,7 +83,7 @@ With an initial selection and weekends disabled
 Programmatic, with a restriction of +/- one week from the current date
 
 .. cv-compound::
-  :height: 300
+  :height: 320
 
   .. cv:: javascript
 
@@ -159,7 +159,7 @@ With a custom template to change the layout (only works locally)
 		.blue { color: blue }
                 .container {
                   margin: 25px auto;
-                  width: 200px;
+                  width: 500px;
                 }
 	</style>
 
