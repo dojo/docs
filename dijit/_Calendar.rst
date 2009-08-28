@@ -29,7 +29,7 @@ A plain Calendar widget with the formatted date below
 
 .. cv-compound::
   :type: inline
-  :height: 300
+  :height: 330
 
   .. cv:: javascript
 
@@ -158,7 +158,7 @@ With a custom template to change the layout (only works locally)
 		#calendar5 .dijitCalendarMonthLabel { font-family: serif; letter-spacing: 0.2em; font-size: 2em }
 		.blue { color: blue }
                 .container {
-                  margin: 10 auto;
+                  margin: 25px auto;
                   width: 200px;
                 }
 	</style>
