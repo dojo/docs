@@ -159,7 +159,7 @@ With a custom template to change the layout (only works locally)
 		.blue { color: blue }
                 .container {
                   margin: 25px auto;
-                  width: 500px;
+                  width: 400px;
                 }
 	</style>
 
@@ -188,7 +188,7 @@ With a custom template to change the layout (only works locally)
   .. cv:: html
 
     <div class="container">
-      <div dojoType="dijit._Calendar" datePackage = "dojox.date.hebrew"></div>
+      <div dojoType="dijit._Calendar" datePackage = "dojox.date.hebrew"></div><br /><br />
       <div dojoType="dijit._Calendar" lang="he" datePackage = "dojox.date.hebrew"></div>
     </div>
 
