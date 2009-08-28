@@ -45,7 +45,7 @@ A plain Calendar widget with the formatted date below
   .. cv:: css
 
     <style type="text/css">
-      .{{ theme }} .dijitCalendarContainer {
+      .{{ theme }} table.dijitCalendarContainer {
         margin: 25px auto;
       }
     </style>
@@ -69,7 +69,7 @@ With an initial selection and weekends disabled
   .. cv:: css
 
     <style type="text/css">
-      .{{ theme }} .dijitCalendarContainer {
+      .{{ theme }} table.dijitCalendarContainer {
         margin: 25px auto;
       }
     </style>
@@ -103,7 +103,7 @@ Programmatic, with a restriction of +/- one week from the current date
   .. cv:: css
 
     <style type="text/css">
-      .{{ theme }} .dijitCalendarContainer {
+      .{{ theme }} table.dijitCalendarContainer {
         margin: 25px auto;
         width: 200px;
       }
@@ -149,7 +149,7 @@ With a custom template to change the layout (only works locally)
 		#calendar5 .dijitCalendarSelectedYear { font-size: 1.5em }
 		#calendar5 .dijitCalendarMonthLabel { font-family: serif; letter-spacing: 0.2em; font-size: 2em }
 		.blue { color: blue }
-                .{{ theme }} .dijitCalendarContainer {
+                .{{ theme }} table.dijitCalendarContainer {
                   margin: 25px auto;
                 }
 	</style>
@@ -183,7 +183,7 @@ With a custom template to change the layout (only works locally)
   .. cv:: css
 
     <style type="text/css">
-      .{{ theme }} .dijitCalendarContainer {
+      .{{ theme }} table.dijitCalendarContainer {
         margin: 25px auto;
       }
     </style>
