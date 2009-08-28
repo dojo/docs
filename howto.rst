@@ -370,14 +370,14 @@ An example if this in action (simply change the version and you will see what it
 
   Some very simple CSS to make things look fancy
 
-  .. cv:: css
+  .. css
     :label: The CSS
 
     <style type="text/css">
       body { margin: 0; padding: 0; height: auto; }
     </style>
     
-  .. cv:: html
+  .. html
     :label: This is the HTML of the example
 
     <p>Current Dojo baseUrl: <strong>{{ baseUrl }}</strong></p>
