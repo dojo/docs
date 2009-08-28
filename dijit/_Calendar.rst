@@ -163,7 +163,7 @@ With a custom template to change the layout (only works locally)
 
 .. cv-compound::
   :version: 1.4
-  :height: 330
+  :height: 340
 
   .. cv:: javascript
 
