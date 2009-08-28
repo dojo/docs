@@ -78,7 +78,6 @@ Programmatic, with a restriction of +/- one week from the current date
 
 .. cv-compound::
   :height: 300
-  :type: inline
 
   .. cv:: javascript
 
