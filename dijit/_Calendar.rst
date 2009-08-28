@@ -40,12 +40,21 @@ A plain Calendar widget with the formatted date below
   .. cv:: html
 
     <div dojoType="dijit._Calendar" onChange="dojo.byId('formatted').innerHTML=dojo.date.locale.format(arguments[0], {formatLength: 'full', selector:'date'})"></div>
-    <div id="formatted"></div>
+    <p id="formatted"></p>
+
+  .. cv:: css
+
+    <style type="text/css">
+      body {
+        text-align: center;
+      }
+    </style>
 
 With an initial selection and weekends disabled
 
 .. cv-compound::
   :height: 300
+  :type: inline
 
   .. cv:: javascript
 
@@ -57,11 +66,19 @@ With an initial selection and weekends disabled
 
     <div id="mycal" dojoType="dijit._Calendar" value="2009-08-07" isDisabledDate="dojo.date.locale.isWeekend"></div>
 
+  .. cv:: css
+
+    <style type="text/css">
+      body {
+        text-align: center;
+      }
+    </style>
 
 Programmatic, with a restriction of +/- one week from the current date
 
 .. cv-compound::
   :height: 300
+  :type: inline
 
   .. cv:: javascript
 
@@ -84,12 +101,20 @@ Programmatic, with a restriction of +/- one week from the current date
 
     <div id="mycal"></div>
 
+  .. cv:: css
+
+    <style type="text/css">
+      body {
+        text-align: center;
+      }
+    </style>
 
 With a custom template to change the layout (only works locally)
 
 .. cv-compound::
   :height: 600
   :version: 9.99
+  :type: inline
 
   .. cv:: javascript
 
@@ -125,6 +150,9 @@ With a custom template to change the layout (only works locally)
 		#calendar5 .dijitCalendarSelectedYear { font-size: 1.5em }
 		#calendar5 .dijitCalendarMonthLabel { font-family: serif; letter-spacing: 0.2em; font-size: 2em }
 		.blue { color: blue }
+                body {
+                  text-align: center;
+                }
 	</style>
 
   .. cv:: html
@@ -137,6 +165,7 @@ With a custom template to change the layout (only works locally)
 .. cv-compound::
   :djConfig: parseOnLoad: true, extraLocale: ['he']
   :version: 1.4
+  :type: inline
 
   .. cv:: javascript
 
@@ -152,6 +181,13 @@ With a custom template to change the layout (only works locally)
     <div dojoType="dijit._Calendar" datePackage = "dojox.date.hebrew"></div>
     <div dojoType="dijit._Calendar" lang="he" datePackage = "dojox.date.hebrew"></div>
 
+  .. cv:: css
+
+    <style type="text/css">
+      body {
+        text-align: center;
+      }
+    </style>
 
 ========
 See Also
