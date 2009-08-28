@@ -48,7 +48,7 @@ A plain Calendar widget with the formatted date below
 
     <style type="text/css">
       .container {
-        margin: 10 auto;
+        margin: 25px auto;
         width: 200px;
       }
     </style>
@@ -75,7 +75,7 @@ With an initial selection and weekends disabled
 
     <style type="text/css">
       .container {
-        margin: 10 auto;
+        margin: 25px auto;
         width: 200px;
       }
     </style>
@@ -112,7 +112,7 @@ Programmatic, with a restriction of +/- one week from the current date
 
     <style type="text/css">
       .container {
-        margin: 10 auto;
+        margin: 25px auto;
         width: 200px;
       }
     </style>
@@ -196,7 +196,7 @@ With a custom template to change the layout (only works locally)
 
     <style type="text/css">
       .container {
-        margin: 10 auto;
+        margin: 25px auto;
         width: 200px;
       }
     </style>
