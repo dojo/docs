@@ -175,7 +175,7 @@ With a custom template to change the layout (only works locally)
 .. cv-compound::
   :djConfig: parseOnLoad: true, extraLocale: ['he']
   :version: 1.4
-  :height: 600
+  :height: 580
 
   .. cv:: javascript
 
