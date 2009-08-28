@@ -39,17 +39,14 @@ A plain Calendar widget with the formatted date below
 
   .. cv:: html
 
-    <div class="container">
-      <div dojoType="dijit._Calendar" onChange="dojo.byId('formatted').innerHTML=dojo.date.locale.format(arguments[0], {formatLength: 'full', selector:'date'})"></div>
-      <p id="formatted"></p>
-    </div>
-
+    <div dojoType="dijit._Calendar" onChange="dojo.byId('formatted').innerHTML=dojo.date.locale.format(arguments[0], {formatLength: 'full', selector:'date'})"></div>
+    <p id="formatted"></p>
+    
   .. cv:: css
 
     <style type="text/css">
-      .container {
+      .dijitCalendarContainer {
         margin: 25px auto;
-        width: 200px;
       }
     </style>
 
@@ -67,16 +64,13 @@ With an initial selection and weekends disabled
 
   .. cv:: html
 
-    <div class="container">
-      <div id="mycal" dojoType="dijit._Calendar" value="2009-08-07" isDisabledDate="dojo.date.locale.isWeekend"></div>
-    </div>
-
+    <div id="mycal" dojoType="dijit._Calendar" value="2009-08-07" isDisabledDate="dojo.date.locale.isWeekend"></div>
+    
   .. cv:: css
 
     <style type="text/css">
-      .container {
+      .dijitCalendarContainer {
         margin: 25px auto;
-        width: 200px;
       }
     </style>
 
@@ -104,14 +98,12 @@ Programmatic, with a restriction of +/- one week from the current date
 
   .. cv:: html
 
-    <div class="container">
-      <div id="mycal"></div>
-    </div>
-
+    <div id="mycal"></div>
+    
   .. cv:: css
 
     <style type="text/css">
-      .container {
+      .dijitCalendarContainer {
         margin: 25px auto;
         width: 200px;
       }
@@ -157,25 +149,22 @@ With a custom template to change the layout (only works locally)
 		#calendar5 .dijitCalendarSelectedYear { font-size: 1.5em }
 		#calendar5 .dijitCalendarMonthLabel { font-family: serif; letter-spacing: 0.2em; font-size: 2em }
 		.blue { color: blue }
-                .container {
+                .dijitCalendarContainer {
                   margin: 25px auto;
-                  width: 400px;
                 }
 	</style>
 
   .. cv:: html
 
-	<div class="container">
-          <input id="calendar5" dayWidth="abbr" value="2008-03-13">
-        </div>
-
+	<input id="calendar5" dayWidth="abbr" value="2008-03-13">
+        
 
 [experimental: 1.4+] Using a non-Gregorian calendar, the Hebrew calendar, in your browser's native language and also in Hebrew.
 
 .. cv-compound::
   :djConfig: parseOnLoad: true, extraLocale: ['he']
   :version: 1.4
-  :height: 560
+  :height: 580
 
   .. cv:: javascript
 
@@ -196,9 +185,8 @@ With a custom template to change the layout (only works locally)
   .. cv:: css
 
     <style type="text/css">
-      .container {
+      .dijitCalendarContainer {
         margin: 25px auto;
-        width: 200px;
       }
     </style>
 
