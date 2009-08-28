@@ -39,7 +39,7 @@ A plain Calendar widget with the formatted date below
 
   .. cv:: html
 
-    <dov class="container">
+    <div class="container">
       <div dojoType="dijit._Calendar" onChange="dojo.byId('formatted').innerHTML=dojo.date.locale.format(arguments[0], {formatLength: 'full', selector:'date'})"></div>
       <p id="formatted"></p>
     </div>
