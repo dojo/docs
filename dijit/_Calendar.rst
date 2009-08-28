@@ -159,12 +159,12 @@ With a custom template to change the layout (only works locally)
 	<input id="calendar5" dayWidth="abbr" value="2008-03-13">
         
 
-[experimental: 1.4+] Using a non-Gregorian calendar, the Hebrew calendar, in your browser's native language and also in Hebrew.
+[experimental: 1.4+] Using a non-Gregorian calendar, the Hebrew calendar.  Select language=Hebrew to see Hebrew numerals.
 
 .. cv-compound::
-  :djConfig: parseOnLoad: true, extraLocale: ['he']
   :version: 1.4
-  :height: 580
+  :height: 300
+  :dir: rtl
 
   .. cv:: javascript
 
@@ -179,7 +179,6 @@ With a custom template to change the layout (only works locally)
 
     <div class="container">
       <div dojoType="dijit._Calendar" datePackage = "dojox.date.hebrew"></div><br /><br />
-      <div dojoType="dijit._Calendar" lang="he" datePackage = "dojox.date.hebrew"></div>
     </div>
 
   .. cv:: css
