@@ -364,7 +364,7 @@ To fix this, at this moment you can use following parameters within the template
 
 An example if this in action (simply change the version and you will see what it does)
 
-.. cv-compound::
+.. code-example::
 
   This is a demo of the dynamic variables you can use in CodeGlass
 
