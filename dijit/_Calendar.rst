@@ -45,7 +45,7 @@ A plain Calendar widget with the formatted date below
   .. cv:: css
 
     <style type="text/css">
-      .dijitCalendarContainer {
+      .{{ theme }} .dijitCalendarContainer {
         margin: 25px auto;
       }
     </style>
