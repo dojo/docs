@@ -13,6 +13,31 @@ dojox.charting
 
 Dojo comes with an amazing charting library, in the form of dojox.charting. A large number of features are supported, with new ones being added constantly.
 
+.. code-example::
+
+  .. javascript::
+
+    <script type="text/javascript">
+    dojo.require("dojox.charting.Chart2D");
+    dojo.require("dojox.charting.themes.Wetland");
+
+    dojo.addOnLoad(function(){
+      var c = new dojox.charting.Chart2D("chartOne");
+      c.addPlot("default", {type: "StackedAreas", tension:3})
+          .addAxis("x", {fixLower: "major", fixUpper: "major"})
+	  .addAxis("y", {vertical: true, fixLower: "major", fixUpper: "major", min: 0})
+          .setTheme(dojox.charting.themes.Wetland)
+          .addSeries("Series A", [1, 2, 0.5, 1.5, 1, 2.8, 0.4])
+          .addSeries("Series B", [2.6, 1.8, 2, 1, 1.4, 0.7, 2])
+          .addSeries("Series C", [6.3, 1.8, 3, 0.5, 4.4, 2.7, 2])
+          .render();
+    });
+    </script>
+
+  .. html::
+
+    <div id="chartOne" style="width: 400px; height: 240px; margin: 30px auto 0px auto;"></div>
+
 
 ============
 Introduction
