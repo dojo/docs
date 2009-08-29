@@ -18,16 +18,16 @@ HTML and Layouts
 
 Typically HTML has bottom-up sizing, where a container is as big as it's contents, so that given
 
-.. cv-compound::
+.. code-example::
 
-  .. cv:: css
+  .. css::
 
      <style type="text/css">
         .inner, .outer { margin: 5px; border: 1px solid blue; }
         .inner { border: 1px solid green; }
      </style>
 
-  .. cv:: html
+  .. html::
 
     <div class="outer">
       <div  class="inner">
@@ -50,9 +50,9 @@ Note that in this scenario, there's no scrollbar on the browser window itself, b
 
 Layout like above can be done using tables or fancy CSS (see recent `A List Apart article <http://www.alistapart.com/articles/conflictingabsolutepositions>`_ about CSS sizing):
 
-.. cv-compound::
+.. code-example::
 
-  .. cv:: css
+  .. css::
 
       <style type="css/text">
         .top, .bottom { height: 100px; }
@@ -60,7 +60,7 @@ Layout like above can be done using tables or fancy CSS (see recent `A List Apar
         .leading, .trailing { width: 200px; }
       </style>
 
-  .. cv:: html
+  .. html::
 
         <table>
           <tr>
@@ -87,16 +87,17 @@ Dijit has a number of layout widgets which can be combined in a hierarchy to ach
 
 You typically start off the page using a BorderContainer, like this, to split the screen into sections:
 
-.. cv-compound::
+.. code-example::
+  :djConfig: parseOnLoad: true
 
-  .. cv:: javascript
+  .. javascript::
 
      <script type="text/javascript">
      dojo.require("dijit.layout.BorderContainer");
      dojo.require("dijit.layout.ContentPane");
      </script>
 
-  .. cv:: html
+  .. html::
 
         <div dojoType="dijit.layout.BorderContainer" style="width: 500px; height: 300px; border: 1px solid #ccc;">
              <div dojoType="dijit.layout.ContentPane" region="top">Top pane</div>
@@ -108,15 +109,16 @@ You typically start off the page using a BorderContainer, like this, to split th
 
 Then you start nesting containers.  For instance, on the left you might want an AccordionContainer:
 
-.. cv-compound::
+.. code-example::
+  :djConfig: parseOnLoad: true
 
-  .. cv:: javascript
+  .. javascript::
 
      <script type="text/javascript">
      dojo.require("dijit.layout.AccordionContainer");
      </script>
 
-  .. cv:: html
+  .. html::
 
         <div dojoType="dijit.layout.AccordionContainer" style="width: 200px; height: 200px; border: 1px solid #ccc;">
              <div dojoType="dijit.layout.AccordionPane" title="pane #1">accordion pane #1</div>
@@ -126,16 +128,17 @@ Then you start nesting containers.  For instance, on the left you might want an 
 
 And a TabContainer in the middle:
 
-.. cv-compound::
+.. code-example::
+  :djConfig: parseOnLoad: true
 
-  .. cv:: javascript
+  .. javascript::
 
      <script type="text/javascript">
      dojo.require("dijit.layout.TabContainer");
      dojo.require("dijit.layout.ContentPane");
      </script>
 
-  .. cv:: html
+  .. html::
 
         <div dojoType="dijit.layout.TabContainer" style="width: 200px; height: 200px; border: 1px solid #ccc;">
              <div dojoType="dijit.layout.ContentPane" title="tab #1">tab pane #1</div>
@@ -145,9 +148,10 @@ And a TabContainer in the middle:
 
 Nesting those inside of the BorderContainer will look like this:
 
-.. cv-compound::
+.. code-example::
+  :djConfig: parseOnLoad: true
 
-  .. cv:: javascript
+  .. javascript::
 
      <script type="text/javascript">
      dojo.require("dijit.layout.BorderContainer");
@@ -156,7 +160,7 @@ Nesting those inside of the BorderContainer will look like this:
      dojo.require("dijit.layout.ContentPane");
      </script>
 
-  .. cv:: html
+  .. html::
 
         <div dojoType="dijit.layout.BorderContainer" style="width: 500px; height: 300px; border: 1px solid #ccc;">
              <div dojoType="dijit.layout.ContentPane" region="top">Top pane</div>
