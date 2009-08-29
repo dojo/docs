@@ -360,6 +360,7 @@ To fix this, at this moment you can use following parameters within the template
 |   Parameter   |
 +===============+
 | {{ baseUrl }} |
++---------------+
 | {{ theme }}   |
 +---------------+
 
@@ -368,15 +369,6 @@ An example if this in action (simply change the version and you will see what it
 .. code-example::
 
   This is a demo of the dynamic variables you can use in CodeGlass
-
-  Some very simple CSS to make things look fancy
-
-  .. css::
-    :label: The CSS
-
-    <style type="text/css">
-      body { margin: 0; padding: 0; height: auto; }
-    </style>
     
   .. html::
     :label: This is the HTML of the example
