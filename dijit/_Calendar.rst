@@ -29,7 +29,7 @@ A plain Calendar widget with the formatted date below
 
 .. cv-compound::
   :type: inline
-  :height: 340
+  :height: 350
 
   .. cv:: javascript
 
@@ -47,6 +47,9 @@ A plain Calendar widget with the formatted date below
     <style type="text/css">
       .{{ theme }} table.dijitCalendarContainer {
         margin: 25px auto;
+      }
+      #formatted {
+        text-align: center;
       }
     </style>
 
