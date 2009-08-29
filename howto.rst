@@ -225,6 +225,10 @@ Besides that you can pass following parameters to the cv-compound directive
 | `:version:` start-?end                | `:version:` 1.3                    | The version supported by the example          |
 |                                       | `:version:` 1.3-2.0                |                                               |
 +---------------------------------------+------------------------------------+-----------------------------------------------+
+| `:toolbar:` value, value              | `:toolbar:` versions, themes       | The toolbars to show. If not provided, all    |
+|                                       | `:toolbar:` none                   | are shown. Possible values are: themes,       |
+|                                       | `:toolbar:` a11y, i18n, dir        | versions, dir, a11y, i18n and none            |
++---------------------------------------+------------------------------------+-----------------------------------------------+
 
 Lets look at an example using the inline style and extra parameters in use:
 
@@ -234,6 +238,7 @@ Lets look at an example using the inline style and extra parameters in use:
   :height: 450
   :type: inline
   :version: 1.3-2.0
+  :toolbar: none
 
   .. javascript::
     :label: The dojo requires
