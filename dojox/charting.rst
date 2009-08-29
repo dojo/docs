@@ -38,7 +38,6 @@ Dojo comes with an amazing charting library, in the form of dojox.charting. A la
 
     <div id="chartOne" style="width: 400px; height: 240px; margin: 30px auto 0px auto;"></div>
 
-
 ============
 Introduction
 ============
@@ -49,36 +48,31 @@ Dojo's Charting module provides a way to quickly and easily add great looking an
 Usage 
 =====
 
-Here is an HTML fragment that is typical of a starting point for creating a Dojo Chart:
+Here is an example that is typical of a starting point for creating a Dojo Chart:
 
-.. code-block :: html
+.. code-example::
+  :type: inline
 
-  <html>
-  <head>
-  <title>Basic Charting</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <script type="text/javascript" src="dojo/dojo.js" djConfig="isDebug: true"></script>
-  <script type="text/javascript">
-    dojo.require("dojox.charting.Chart2D"); 
-    makeCharts = function(){
+  .. html::
+
+    <div id="simplechart" style="width: 250px; height: 150px;"></div>
+
+  .. javascript::
+ 
+    <script type="text/javascript">
+      dojo.require("dojox.charting.Chart2D"); 
+      makeCharts = function(){
   	var chart1 = new dojox.charting.Chart2D("simplechart");
   	chart1.addPlot("default", {type: "Lines"});
   	chart1.addAxis("x");
   	chart1.addAxis("y", {vertical: true});
   	chart1.addSeries("Series 1", [1, 2, 2, 3, 4, 5, 5, 7]);
   	chart1.render();
-  };
-  dojo.addOnLoad(makeCharts);
-  </script>
-  </head>
-  <body>
-    <div id="simplechart" style="width: 250px; height: 150px;"></div>
-  </body>
-  </html>
+      };
+      dojo.addOnLoad(makeCharts);
+    </script>    
 
-This source code produces the following simple chart.
-
-TODO: Live chart example
+Take a look at the source and you will see that it is simple to create charts.
 
 Charting Basics
 ---------------
@@ -97,6 +91,7 @@ addPlot() accepts 2 parameters, a name and an arguments array. The name is impor
 **type** is the main option, with a default value being a basic line chart.
 
 .. code-block :: javascript
+  :linenos:
 
   chart1.addPlot("default", {type: "Areas"});
 
@@ -122,6 +117,7 @@ Available 2D chart types include:
 With any of the lines, areas or markers types you have five specific options. First, there are three options for controlling aspects of **lines**, **areas**, and **markers**. These are often defined by the chosen plot type, but can be changed to get other behaviors. The lines option determines whether or not lines are used to connect data points. If the areas type is selected, the area below the data line will be filled. The markers option will determine if markers are placed at data points.
 
 .. code-block :: javascript
+  :linenos:
 
   chart1.addPlot("default", {type: "StackedAreas", lines: true, areas: true, 
   	markers: false});
@@ -129,6 +125,7 @@ With any of the lines, areas or markers types you have five specific options. Fi
 There are also two graphical options, **tension** and **shadows**. Tension allows you to add some curve to the lines on you plot. By default this option is set to 0 which is off. A tension in the range from 2 to 4 should be a good range for natural looking curves. For some crazy effects try setting the tension to values < 1 or negative. Shadows allow you to add a shadow effect, and consists of an array of three parameters, dx, dy and dw, which represent the offset to the right, the offset down, and the width of the shadow line, respectively. Negative values can be specified for the dx and dy parameters to produce a shadow that is to the left or above the chart line.
 
 .. code-block :: javascript
+  :linenos:
 
   chart1.addPlot("default", {type: "StackedLines",tension:3, 
   	shadows: {dx: 2, dy: 2, dw: 2}});
@@ -136,12 +133,14 @@ There are also two graphical options, **tension** and **shadows**. Tension allow
 Bar and column graph types have 1 unique option: they will accept a gap parameter that determines the spacing between your bars or columns in pixels.
 
 .. code-block :: javascript
+  :linenos:
 
   chart1.addPlot("default", {type: "Bars", gap: 5});
 
 For any chart type that supports axes, you can also define custom names to your axes here. By default they are “x” and “y”, but this option becomes useful if you wish to have a chart with multiple plots and multiple axes.
 
 .. code-block :: javascript
+  :linenos:
 
   chart1.addPlot("default", {type: "Bars", hAxis: "cool x", 
   	vAxis: "super y"});
@@ -149,6 +148,7 @@ For any chart type that supports axes, you can also define custom names to your 
 Pie charts have a separate list of parameters. Here are the parameters for the pie chart, from Pie.js:
 
 .. code-block :: javascript
+  :linenos:
 
   defaultParams: {
   	labels: true,
@@ -168,6 +168,7 @@ Pie charts have a separate list of parameters. Here are the parameters for the p
 One other type with unique options is the grid. This plot type will draw grid lines along the tick marks and supports the following four boolean options to determine if lines will be displayed at the horizontal or vertical and major or minor axis tick marks. 
 
 .. code-block :: javascript
+  :linenos:
 
   chart1.addPlot("default", {type: "Grid",
           hMajorLines: true, 
@@ -178,6 +179,7 @@ One other type with unique options is the grid. This plot type will draw grid li
 Shadows and curve can be added to the lines, and markers on data points as follows:
 
 .. code-block :: javascript
+  :linenos:
 
   chart1.addPlot("default", {type: "Lines", markers: true, 
   	tension:3, shadows: {dx: 2, dy: 2, dw: 2}});
