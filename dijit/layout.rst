@@ -13,6 +13,53 @@ dijit.layout
     :depth: 2
 
 ================
+An example first
+================
+
+Before we dive into the depths of making layouts with the Dojo Toolkit lets look at an example.
+Once you have read through this page you should be able to create such an layout yourself and even start experimenting with the Dijit layout components
+
+.. code-example::
+  :djConfig: parseOnLoad: true
+
+  .. javascript::
+
+     <script type="text/javascript">
+     dojo.require("dijit.layout.BorderContainer");
+     dojo.require("dijit.layout.TabContainer");
+     dojo.require("dijit.layout.AccordionContainer");
+     dojo.require("dijit.layout.ContentPane");
+     </script>
+
+  .. html::
+
+        <div dojoType="dijit.layout.BorderContainer" style="width: 100%; height: 100%;">
+             <div dojoType="dijit.layout.ContentPane" region="top">Top pane</div>
+             <div dojoType="dijit.layout.AccordionContainer" region="leading">
+                  <div dojoType="dijit.layout.AccordionPane" title="pane #1">accordion pane #1</div>
+                  <div dojoType="dijit.layout.AccordionPane" title="pane #2">accordion pane #2</div>
+                  <div dojoType="dijit.layout.AccordionPane" title="pane #3">accordion pane #3</div>
+             </div>
+             <div dojoType="dijit.layout.TabContainer" region="center">
+                  <div dojoType="dijit.layout.ContentPane" title="tab #1">tab pane #1</div>
+                  <div dojoType="dijit.layout.ContentPane" title="tab #2">tab pane #2</div>
+                  <div dojoType="dijit.layout.ContentPane" title="tab #3">tab pane #3</div>
+             </div>
+             <div dojoType="dijit.layout.ContentPane" region="trailing">Trailing pane</div>
+             <div dojoType="dijit.layout.ContentPane" region="bottom">Bottom pane</div>
+        </div>
+
+  .. css::
+
+    <style type="text/css">
+      html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+      }
+    </style>
+
+================
 HTML and Layouts
 ================
 
@@ -130,7 +177,7 @@ Then you start nesting containers.  For instance, on the left you might want an 
 
   .. html::
 
-        <div dojoType="dijit.layout.AccordionContainer" style="width: 200px; height: 100%;">
+        <div dojoType="dijit.layout.AccordionContainer" style="width: 200px; height: 95%; margin: 0 auto;">
              <div dojoType="dijit.layout.AccordionPane" title="pane #1">accordion pane #1</div>
              <div dojoType="dijit.layout.AccordionPane" title="pane #2">accordion pane #2</div>
              <div dojoType="dijit.layout.AccordionPane" title="pane #3">accordion pane #3</div>
@@ -142,7 +189,6 @@ Then you start nesting containers.  For instance, on the left you might want an 
       html, body {
         width: 100%;
         height: 100%;
-        margin: 0;
       }
     </style>
 
@@ -172,7 +218,6 @@ And a TabContainer in the middle:
       html, body {
         width: 100%;
         height: 100%;
-        margin: 0;
       }
     </style>
 
