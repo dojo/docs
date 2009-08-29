@@ -130,7 +130,7 @@ Then you start nesting containers.  For instance, on the left you might want an 
 
   .. html::
 
-        <div dojoType="dijit.layout.AccordionContainer" style="width: 200px; height: 100%; border: 1px solid #ccc;">
+        <div dojoType="dijit.layout.AccordionContainer" style="width: 200px; height: 100%;">
              <div dojoType="dijit.layout.AccordionPane" title="pane #1">accordion pane #1</div>
              <div dojoType="dijit.layout.AccordionPane" title="pane #2">accordion pane #2</div>
              <div dojoType="dijit.layout.AccordionPane" title="pane #3">accordion pane #3</div>
@@ -160,7 +160,7 @@ And a TabContainer in the middle:
 
   .. html::
 
-        <div dojoType="dijit.layout.TabContainer" style="width: 100%; height: 100%;">
+        <div dojoType="dijit.layout.TabContainer" style="width: 100%; height: 100%; margin: 20px;">
              <div dojoType="dijit.layout.ContentPane" title="tab #1">tab pane #1</div>
              <div dojoType="dijit.layout.ContentPane" title="tab #2">tab pane #2</div>
              <div dojoType="dijit.layout.ContentPane" title="tab #3">tab pane #3</div>
