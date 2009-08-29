@@ -57,6 +57,7 @@ This is a hack, in the sense that the formatting may not be perfect for large (i
 But the tree will display and work properly regardless, and for simple markup, eg bold, it works great.
 
 .. cv-compound::
+  :type: inline
 
   .. cv:: javascript
 
