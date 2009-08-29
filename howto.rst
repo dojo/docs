@@ -311,6 +311,7 @@ The extra parameters we defined where
     :height: 450
     :type: inline
     :version: 1.3-2.0
+    :toolbar: none
 
 A few important notes:
 
