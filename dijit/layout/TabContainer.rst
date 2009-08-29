@@ -75,6 +75,7 @@ Here are some markup examples:
 .. code-example::
   :type: inline
   :toolbar: versions, themes, dir
+  :djConfig: parseOnLoad: true
 
   This is a plain TabContainer with three tabs and fixed height. The third tab is closable
 
@@ -106,6 +107,7 @@ This is a plain TabContainer with three tabs and flexible height using the doLay
 .. code-example::
   :type: inline
   :toolbar: versions, themes, dir
+  :djConfig: parseOnLoad: true
 
   .. javascript::
 
