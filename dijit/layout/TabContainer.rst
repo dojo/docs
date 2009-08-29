@@ -34,27 +34,29 @@ A basic example
 First, we'll demonstrate a programatic TabContainer creation.
 Note that the tabs all have a fixed height.
 
-.. cv-compound::
+.. code-example::
+  :type: inline
+  :toolbar: versions, themes, dir
  
-  .. cv:: javascript
+  .. javascript::
 
     <script type="text/javascript">
     dojo.require("dijit.layout.TabContainer");
     dojo.require("dijit.layout.ContentPane");
     dojo.addOnLoad(function(){
         var tc = new dijit.layout.TabContainer({
-            style: "height: 300px; width: 400px;"
+            style: "height: 100%; width: 100%;"
         },"tc1-prog");
   
         var cp1 = new dijit.layout.ContentPane({
-             title: "tab 1",
-             content: "tab 1 content"
+             title: "Food",
+             content: "We offer amazing food"
         });
         tc.addChild(cp1);
   
         var cp2 = new dijit.layout.ContentPane({
-             title: "tab 2",
-             content: "tab 2 content"
+             title: "Drinks",
+             content: "We are known for our drinks."
         });
         tc.addChild(cp2);
   
@@ -64,17 +66,19 @@ Note that the tabs all have a fixed height.
 
   The html is very simple
 
-  .. cv:: html
+  .. html::
 
     <div id="tc1-prog"></div>
 
 Here are some markup examples:
 
-.. cv-compound::
+.. code-example::
+  :type: inline
+  :toolbar: versions, themes, dir
 
   This is a plain TabContainer with three tabs and fixed height. The third tab is closable
 
-  .. cv:: javascript
+  .. javascript::
 
     <script type="text/javascript">
     dojo.require("dijit.layout.TabContainer");
@@ -83,9 +87,9 @@ Here are some markup examples:
 
   The html is very simple
 
-  .. cv:: html
+  .. html::
 
-    <div dojoType="dijit.layout.TabContainer" style="width: 100%; height: 100px;">
+    <div dojoType="dijit.layout.TabContainer" style="width: 100%; height: 100%;">
       <div dojoType="dijit.layout.ContentPane" title="My first tab" selected="true">
         Lorem ipsum and all around...
       </div>
@@ -99,9 +103,11 @@ Here are some markup examples:
 
 This is a plain TabContainer with three tabs and flexible height using the doLayout="false" attribute. The second tab is closable.
 
-.. cv-compound::
+.. code-example::
+  :type: inline
+  :toolbar: versions, themes, dir
 
-  .. cv:: javascript
+  .. javascript::
 
     <script type="text/javascript">
     dojo.require("dijit.layout.TabContainer");
@@ -110,7 +116,7 @@ This is a plain TabContainer with three tabs and flexible height using the doLay
 
   The html is very simple
 
-  .. cv :: html
+  .. html::
     
     <!-- this div is only for documentation purpose, in real development environments, just take it out -->
     <div style="height: 105px;">
@@ -181,9 +187,9 @@ Closing A Tab
 
 A common action for ``closable`` tabs is to register an ``onClose`` function on the child, returning true or false to indicate weather or not the closing should take place:
 
-.. cv-compound::
+.. code-example::
 
-  .. cv:: javascript
+  .. javascript::
 
     <script type="text/javascript">
     dojo.require("dijit.layout.TabContainer");
@@ -204,7 +210,7 @@ A common action for ``closable`` tabs is to register an ``onClose`` function on 
 
   You can, of course, attach the onClose function directly on a pane as well:
 
-  .. cv :: html
+  .. html::
     
     <div style="height: 100px;">
 
