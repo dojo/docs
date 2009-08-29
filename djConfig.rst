@@ -57,7 +57,7 @@ By far, the easiest and most common way to specify djConfig is via the djConfig=
       <title>Dojo djConfig Tutorial&lt;/title>
       <script type="text/javascript"
               src="http://o.aolcdn.com/dojo/1.1.1/dojo/dojo.xd.js"
-              djConfig="parseOnLoad: true, isDebug: true">&lt;/script>
+              djConfig="parseOnLoad: true, isDebug: true"></script>
   </head>
   <body>
       <p>...</p>
