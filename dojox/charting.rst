@@ -52,6 +52,9 @@ Here is an example that is typical of a starting point for creating a Dojo Chart
 
 .. code-example::
   :type: inline
+  :height: 250
+  :width: 360
+  :toolbar: themes, versions
 
   .. html::
 
