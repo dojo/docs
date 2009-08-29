@@ -20,6 +20,7 @@ How can I prevent expanding of nodes when clicking on them?
 Simply set the ``openOnClick`` attribute to ``false``
 
 .. cv-compound::
+  :type: inline
 
   .. cv:: javascript
 
