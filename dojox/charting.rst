@@ -58,7 +58,7 @@ Here is an example that is typical of a starting point for creating a Dojo Chart
 
   .. html::
 
-    <div id="simplechart" style="width: 250px; height: 150px;"></div>
+    <div id="simplechart" style="width: 250px; height: 150px; margin: 5px auto 0px auto;"></div>
 
   .. javascript::
  
