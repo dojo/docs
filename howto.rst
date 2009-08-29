@@ -116,11 +116,11 @@ Executed code
 
 You can add a real example to the documentation by using the ".. cv-compound::" and ".. cv::" directives. The code you show can include JavaScript, CSS and HTML. Lets look at an example it action:
 
-.. cv-compound::
+.. code-example::
 
   Some very simple CSS to make things look fancy
 
-  .. cv:: css
+  .. css::
     :label: The CSS
 
     <style type="text/css">
@@ -133,14 +133,14 @@ You can add a real example to the documentation by using the ".. cv-compound::" 
 
   Two nodes is all we need
 
-  .. cv:: html
+  .. html::
     :label: Very basic HTML
 
     <p class="fancy">Hi reader, click me</p>
 
   Very simple JavaScript using Dojos query selector
 
-  .. cv:: javascript
+  .. javascript::
     :label: dojo.query in action
 
     <script type="text/javascript">
@@ -159,11 +159,11 @@ Following code is the representation of the demo you saw above:
 .. code-block :: html
   :linenos:
 
-  .. cv-compound::
+  .. code-example::
 
     Some very simple CSS to make things look fancy
 
-    .. cv:: css
+    .. css::
       :label: The CSS
 
       <style type="text/css">
@@ -176,14 +176,14 @@ Following code is the representation of the demo you saw above:
 
     Two nodes is all we need
 
-    .. cv:: html
+    .. html::
       :label: Very basic HTML
 
       <p class="fancy">Hi reader, click me</p>
 
     Very simple JavaScript using Dojos query selector
 
-    .. cv:: javascript
+    .. javascript::
       :label: dojo.query in action
 
       <script type="text/javascript">
@@ -205,7 +205,7 @@ The same CodeGlass can be instantiated inline and in a modal dialog. Just add :t
 .. code-block :: html
   :linenos:
 
-  .. cv-compound::
+  .. code-example::
     :type: inline
 
 Other parameters
@@ -228,14 +228,14 @@ Besides that you can pass following parameters to the cv-compound directive
 
 Lets look at an example using the inline style and extra parameters in use:
 
-.. cv-compound::
+.. code-example::
   :djConfig: parseOnLoad: true
   :width: 680
   :height: 450
   :type: inline
   :version: 1.3-2.0
 
-  .. cv:: javascript
+  .. javascript::
     :label: The dojo requires
 
     <script type="text/javascript">
@@ -247,7 +247,7 @@ Lets look at an example using the inline style and extra parameters in use:
 
   The markup has to look as follows
   
-  .. cv:: html
+  .. html::
     :label: The markup
 
     <div dojoType="dijit.layout.BorderContainer" gutters="true" id="borderContainerTwo" >
@@ -279,7 +279,7 @@ Lets look at an example using the inline style and extra parameters in use:
       </div>
     </div>
 
-  .. cv:: css
+  .. css::
     :label: A few simple css rules
 
     <style type="text/css">
@@ -300,7 +300,7 @@ The extra parameters we defined where
 .. code-block :: html
   :linenos:
 
-  .. cv-compound::
+  .. code-example::
     :djConfig: parseOnLoad: true
     :width: 680
     :height: 450
@@ -331,7 +331,7 @@ You can add a header to a block by adding the :label: block to your code as foll
 .. code-block :: html
   :linenos:
 
-  .. cv:: javascript
+  .. javascript::
     :label: And the JavaScript code
 
 This will result in a header in the JavaScript codeblock.
@@ -344,7 +344,7 @@ To add a descriptive text to a codeblock you can simply add reST markup before t
   * You can even use reST syntax here
   * Its pretty cool
 
-  .. cv:: javascript
+  .. javascript::
     :label: And the JavaScript code
 
 Keep the header and description simple though, they should only explain shortly what is happening in the codeblock.
