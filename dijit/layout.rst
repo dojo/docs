@@ -21,6 +21,7 @@ Once you have read through this page you should be able to create such an layout
 
 .. code-example::
   :djConfig: parseOnLoad: true
+  :type: inline
 
   .. javascript::
 
