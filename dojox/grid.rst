@@ -70,6 +70,11 @@ Grids are familiar in the client/server development world. Basically a grid is a
         .dojoxGrid table {
             margin: 0;
         }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
     </style>
 
 ============
@@ -286,7 +291,7 @@ Some style sheets supplied with the Dojo distribution are required:
 
   <style type="text/css">
     @import "/dojox/grid/resources/Grid.css";
-    @import "/dojox/grid/resources/tundraGrid.css";
+    @import "/dojox/grid/resources/{{ theme }}Grid.css";
 
     .dojoxGrid table {
       margin: 0;
@@ -407,6 +412,11 @@ This example shows how to create a simple Grid declaratively.
         .dojoxGrid table {
             margin: 0;
         }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
     </style>
 
 
@@ -464,6 +474,11 @@ This example shows how to create a simple Grid programmatically.
 
         .dojoxGrid table {
             margin: 0;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
         }
     </style>
 
@@ -556,6 +571,11 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
         .dojoxGrid table {
             margin: 0;
         }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
     </style>
 
 
@@ -625,6 +645,11 @@ First, you have to set a editor for each cell, you would like to edit:
 
     <style type="text/css">
 	@import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
     </style>
 
 Adding and Deleting data
@@ -711,6 +736,11 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
 
     <style type="text/css">
 	@import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
     </style>
 
 Filtering data
@@ -781,6 +811,11 @@ The Grid offers a filter() method, to filter data from the current query (client
 
     <style type="text/css">
 	@import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
     </style>
 
 Grid styling : Rows 
@@ -851,6 +886,11 @@ To use it, you just have to override default behavior by yours.
 
         .dojoxGrid table {
             margin: 0;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
         }
     </style>
 
