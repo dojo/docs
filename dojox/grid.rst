@@ -538,7 +538,7 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
     </table>
 
     <p class="container">
-    <div dojoType="dijit.form.Button">
+    <span dojoType="dijit.form.Button">
         get all Selected Items
         <script type="dojo/method" event="onClick" args="evt">
             // Get all selected items from the Grid:
@@ -565,7 +565,7 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
                 }); // end forEach
             } // end if
         </script>
-    </div>
+    </span>
     </p>
 
   .. cv:: css
@@ -722,7 +722,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
     </table>
 
     <p class="container">
-      <div dojoType="dijit.form.Button">
+      <span dojoType="dijit.form.Button">
           Add Row
           <script type="dojo/method" event="onClick" args="evt">
               // set the properties for the new item:
@@ -731,9 +731,9 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
               // (we use store3 from the example above in this example)
               store3.newItem(myNewItem);
           </script>
-      </div>
+      </span>
     
-      <div dojoType="dijit.form.Button">
+      <span dojoType="dijit.form.Button">
           Remove Selected Rows
           <script type="dojo/method" event="onClick" args="evt">
               // Get all selected items from the Grid:
@@ -750,7 +750,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
                   }); // end forEach
               } // end if
           </script>
-      </div>
+      </span>
     </p>
 
   .. cv:: css
@@ -822,22 +822,22 @@ The Grid offers a filter() method, to filter data from the current query (client
         </thead>
     </table>
 
-    <p class="container"
-    <div dojoType="dijit.form.Button">
+    <p class="container">
+    <span dojoType="dijit.form.Button">
         filter movies
         <script type="dojo/method" event="onClick" args="evt">
             // Filter the movies from the data store:
             grid3.filter({Title: "T*"});
         </script>
-    </div>
+    </span>
 
-    <div dojoType="dijit.form.Button">
+    <span dojoType="dijit.form.Button">
         show all movies
         <script type="dojo/method" event="onClick" args="evt">
             // reset the filter:
             grid3.filter({Title: "*"});
         </script>
-    </div>
+    </span>
     </p>
 
   .. cv:: css
@@ -954,6 +954,7 @@ Hiding the Headers of a Grid
 You can hide the columns of a Grid by using normal css:
 
 .. code-block :: html
+  :linenos:
 
   .dojoxGrid-header { display:none; }
 
@@ -963,6 +964,7 @@ Refreshing the content of a grid
 There are times when you may wish to update the content of the grid.  For example, a button on the screen may cause an xhrGet to retrieve a new set of information that you want to display in the table.  The following code snippet can be used to update the grid:
 
 .. code-block :: javascript
+  :linenos:
 
   var newStore = new dojo.data.ItemFileReadStore({data: {... some data ...});
   var grid = dijit.byId("gridId");
