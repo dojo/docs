@@ -224,11 +224,14 @@ Besides that you can pass following parameters to the cv-compound directive
 +---------------------------------------+------------------------------------+-----------------------------------------------+
 | `:version:` start-?end                | `:version:` 1.3                    | The version supported by the example          |
 |                                       | `:version:` 1.3-2.0                |                                               |
+|                                       | `:version:` local                  |                                               |
 +---------------------------------------+------------------------------------+-----------------------------------------------+
 | `:toolbar:` value, value              | `:toolbar:` versions, themes       | The toolbars to show. If not provided, all    |
 |                                       | `:toolbar:` none                   | are shown. Possible values are: themes,       |
 |                                       | `:toolbar:` a11y, i18n, dir        | versions, dir, a11y, i18n and none            |
 +---------------------------------------+------------------------------------+-----------------------------------------------+
+
+Note that you can also specify to only use a local build. This is important in the case that your example depends on files which are not deployed on the CDN or which are net retrievable via xdomain calls.
 
 Lets look at an example using the inline style and extra parameters in use:
 
