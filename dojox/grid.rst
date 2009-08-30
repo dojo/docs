@@ -96,6 +96,7 @@ At a high level, a DataGrid can be defined either delcaratively in HTML markup o
 
 .. code-block :: html
   :linenos:
+
   <table dojoType="dojox.grid.DataGrid" >
     <thead>
       <tr>
