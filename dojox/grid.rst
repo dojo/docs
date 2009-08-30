@@ -74,6 +74,7 @@ Grids are familiar in the client/server development world. Basically a grid is a
         html, body {
             width: 100%;
             height: 100%;
+            margin: 0;
         }
     </style>
 
@@ -416,6 +417,7 @@ This example shows how to create a simple Grid declaratively.
         html, body {
             width: 100%;
             height: 100%;
+            margin: 0;
         }
     </style>
 
@@ -479,6 +481,7 @@ This example shows how to create a simple Grid programmatically.
         html, body {
             width: 100%;
             height: 100%;
+            margin: 0;
         }
     </style>
 
@@ -509,11 +512,11 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
         jsId="store2" url="{{ baseUrl }}dojox/grid/tests/support/movies.csv">
     </span>
 
-    <div>
+    <p class="info">
         Select a single row or multiple rows in the Grid (click on the Selector on the left side of each row). 
         After that, a click on the Button "get all Selected Items" will show you each attribute/value of the
         selected rows.
-    </div>
+    </p>
 
     <table dojoType="dojox.grid.DataGrid"
         jsId="grid2"
@@ -533,6 +536,7 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
         </thead>
     </table>
 
+    <div class="container">
     <div dojoType="dijit.form.Button">
         get all Selected Items
         <script type="dojo/method" event="onClick" args="evt">
@@ -561,6 +565,7 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
             } // end if
         </script>
     </div>
+    </div>
 
   .. cv:: css
 
@@ -575,6 +580,15 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
         html, body {
             width: 100%;
             height: 100%;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .info {
+            margin: 10px;
         }
     </style>
 
@@ -615,10 +629,10 @@ First, you have to set a editor for each cell, you would like to edit:
         jsId="store3" url="http://docs.dojocampus.org{{ baseUrl }}dijit/tests/_data/countries.json">
     </span>
 
-    <div>
+    <p class="info">
         This example shows, how to make the column "Type" editable.
         In order to select a new value, you have to double click on the current value in the second column.
-    </div>
+    </p>
 
     <table dojoType="dojox.grid.DataGrid"
         jsId="grid3"
@@ -649,6 +663,11 @@ First, you have to set a editor for each cell, you would like to edit:
         html, body {
             width: 100%;
             height: 100%;
+            margin: 0;
+        }
+
+        .info {
+            margin: 10px;
         }
     </style>
 
@@ -676,10 +695,9 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
         jsId="store3" url="http://docs.dojocampus.org{{ baseUrl }}dijit/tests/_data/countries.json">
     </span>
 
-
-    <div>
+    <p class="info">
         This example shows, how to add/remove rows
-    </div>
+    </p>
 
     <table dojoType="dojox.grid.DataGrid"
         jsId="grid5"
@@ -702,34 +720,36 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
         </thead>
     </table>
 
-    <div dojoType="dijit.form.Button">
-        Add Row
-        <script type="dojo/method" event="onClick" args="evt">
-            // set the properties for the new item:
-            var myNewItem = {type: "country", name: "Fill this country name"}; 
-            // Insert the new item into the store:
-            // (we use store3 from the example above in this example)
-            store3.newItem(myNewItem);
-        </script>
-    </div>
+    <div class="container">
+      <div dojoType="dijit.form.Button">
+          Add Row
+          <script type="dojo/method" event="onClick" args="evt">
+              // set the properties for the new item:
+              var myNewItem = {type: "country", name: "Fill this country name"}; 
+              // Insert the new item into the store:
+              // (we use store3 from the example above in this example)
+              store3.newItem(myNewItem);
+          </script>
+      </div>
     
-    <div dojoType="dijit.form.Button">
-        Remove Selected Rows
-        <script type="dojo/method" event="onClick" args="evt">
-            // Get all selected items from the Grid:
-            var items = grid5.selection.getSelected();
-            if(items.length){
-                // Iterate through the list of selected items.
-                // The current item is available in the variable 
-                // "selectedItem" within the following function:
-                dojo.forEach(items, function(selectedItem) {
-                    if(selectedItem !== null) {
-                        // Delete the item from the data store:
-                        store3.deleteItem(selectedItem);
-                    } // end if
-                }); // end forEach
-            } // end if
-        </script>
+      <div dojoType="dijit.form.Button">
+          Remove Selected Rows
+          <script type="dojo/method" event="onClick" args="evt">
+              // Get all selected items from the Grid:
+              var items = grid5.selection.getSelected();
+              if(items.length){
+                  // Iterate through the list of selected items.
+                  // The current item is available in the variable 
+                  // "selectedItem" within the following function:
+                  dojo.forEach(items, function(selectedItem) {
+                      if(selectedItem !== null) {
+                          // Delete the item from the data store:
+                          store3.deleteItem(selectedItem);
+                      } // end if
+                  }); // end forEach
+              } // end if
+          </script>
+      </div>
     </div>
 
   .. cv:: css
@@ -740,6 +760,16 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
         html, body {
             width: 100%;
             height: 100%;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            margin: 10px;
+        }
+
+        .info {
+            margin: 10px;
         }
     </style>
 
@@ -768,11 +798,11 @@ The Grid offers a filter() method, to filter data from the current query (client
         // jsId="store2" url="{{ baseUrl }}dojox/grid/tests/support/movies.csv">
     </span>
 
-    <div>
-        Click on the button "filter movies" to filter the current data (only movies with title "T*" will be visible).
+    <p class="info">
+        Click on the button "filter movies" to filter the current data (only movies with title "T*" will be visible).<br />
         Click on the button "show all movies" to remove the filter.
-    </div>
-
+    </p>
+ 
     <table dojoType="dojox.grid.DataGrid"
         jsId="grid3"
         store="store2"
@@ -791,6 +821,7 @@ The Grid offers a filter() method, to filter data from the current query (client
         </thead>
     </table>
 
+    <div class="container"
     <div dojoType="dijit.form.Button">
         filter movies
         <script type="dojo/method" event="onClick" args="evt">
@@ -806,6 +837,7 @@ The Grid offers a filter() method, to filter data from the current query (client
             grid3.filter({Title: "*"});
         </script>
     </div>
+    </div>
 
   .. cv:: css
 
@@ -815,6 +847,16 @@ The Grid offers a filter() method, to filter data from the current query (client
         html, body {
             width: 100%;
             height: 100%;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            margin: 10px;
+        }
+
+        .info {
+            margin: 10px;
         }
     </style>
 
@@ -891,6 +933,7 @@ To use it, you just have to override default behavior by yours.
         html, body {
             width: 100%;
             height: 100%;
+            margin: 0;
         }
     </style>
 
