@@ -95,7 +95,7 @@ Usage
 At a high level, a DataGrid can be defined either delcaratively in HTML markup or programatically in JavaScript.  In markup, the following high level structure is defined:
 
 .. code-block :: html
-
+  :linenos:
   <table dojoType="dojox.grid.DataGrid" >
     <thead>
       <tr>
@@ -222,6 +222,7 @@ errorMessage
   This will escape HTML brackets from the data to prevent HTML from user-inputted data being rendered with may contain JavaScript and result in XSS attacks. This is true by default, and it is recommended that it remain true. Setting this to false will allow data to be displayed in the grid without filtering, and should be only used if it is known that the data won't contain malicious scripts. If HTML is needed in grid cells, it is recommended that you use the formatter function to generate the HTML (the output of formatter functions is not filtered, even with escapeHTMLInData set to true). Setting this to false can be done:
 
 .. code-block :: javascript
+  :linenos:
 
   <table dojoType="dojox.grid.DataGrid" escapeHTMLInData="false" ...>
 
@@ -242,6 +243,7 @@ Data for the grid
 Data for the grid comes from a data store.  The data can be specified declaratively using the ``store="name"`` attribute where ``name`` is the name of a global JavaScript object that represents a DataStore.  This could previously have been created as follows:
 
 .. code-block :: html
+  :linenos:
 
   <span dojoType="dojo.data.ItemFileWriteStore" 
      jsId="myStore" url="/myData.json">
@@ -257,6 +259,7 @@ Locking columns from horizontal scrolling
 A set of columns can be *locked* to prevent them from scrolling horizontally while allows other columns to continue to scroll.  To achieve this, the ``<colgroup>`` tags can be inserted before the ``<thead>`` tag.  For example, if a DataGrid has four columns, the following will lock the first column but allow the remaining columns the ability to scroll horizontally:
 
 .. code-block :: html
+  :linenos:
 
   <colgroup span="1" noscroll="true"></colgroup>
   <colgroup span="3"></colgroup>
@@ -268,6 +271,7 @@ We are used to a row in a table being a single line of data.  DataGrid provides 
 For example:
 
 .. code-block :: javascript
+  :linenos:
 
   <table dojoType="dojox.grid.DataGrid" store="myTestStore" style="width: 800px; height: 300px;">
     <thead>
@@ -289,6 +293,7 @@ Required CSS
 Some style sheets supplied with the Dojo distribution are required:
 
 .. code-block :: html
+  :linenos:
 
   <style type="text/css">
     @import "/dojox/grid/resources/Grid.css";
@@ -342,6 +347,7 @@ Getting a value from a row knowing the row index
 Assume that you know the row index and the name of the column whos value you wish to retrieve, you can obtain that value using the following snippet:
 
 .. code-block :: javascript
+  :linenos:
 
   var value = grid.store.getValue(grid.getItem(rowIndex), name);
 
