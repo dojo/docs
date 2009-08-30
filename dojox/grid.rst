@@ -20,6 +20,8 @@ Grids are familiar in the client/server development world. Basically a grid is a
   :type: inline
   :toolbar: themes, versions, dir
   :version: local
+  :width: 480
+  :height: 300
 
   .. javascript::
 
@@ -57,7 +59,7 @@ Grids are familiar in the client/server development world. Basically a grid is a
 
   .. html::
 
-    <div id="gridContainer4" style="width: 400px; height: 200px;"></div>
+    <div id="gridContainer4" style="width: 100%; height: 100%;"></div>
 
   .. css::
 
@@ -364,6 +366,7 @@ This example shows how to create a simple Grid declaratively.
 
 .. cv-compound::
   :djConfig: parseOnLoad: true
+  :version: local
 
   .. cv:: javascript
 
@@ -382,7 +385,7 @@ This example shows how to create a simple Grid declaratively.
         store="store1"
         query="{ Title: '*' }"
         clientSort="true"
-        style="width: 400px; height: 200px;"
+        style="width: 100%; height: 100%;"
         rowSelector="20px">
         <thead>
             <tr>
@@ -413,6 +416,7 @@ Programmatically creating a DataGrid
 This example shows how to create a simple Grid programmatically.
 
 .. cv-compound::
+  :version: local
 
   .. cv:: javascript
 
@@ -450,7 +454,7 @@ This example shows how to create a simple Grid programmatically.
 
   .. cv:: html
 
-    <div id="gridContainer4" style="width: 400px; height: 200px;"></div>
+    <div id="gridContainer4" style="width: 100%; height: 100%;"></div>
 
   .. cv:: css
 
@@ -474,6 +478,7 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
 
 .. cv-compound::
   :djConfig: parseOnLoad: true
+  :version: local
 
   .. cv:: javascript
 
@@ -500,7 +505,7 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
         store="store2"
         query="{ Title: '*' }"
         clientSort="true"
-        style="width: 400px; height: 200px;"
+        style="width: 100%; height: 300px;"
         rowSelector="20px">
         <thead>
             <tr>
@@ -575,6 +580,7 @@ First, you have to set a editor for each cell, you would like to edit:
 
 .. cv-compound::
   :djConfig: parseOnLoad: true
+  :version: local
 
   .. cv:: javascript
 
@@ -600,7 +606,7 @@ First, you have to set a editor for each cell, you would like to edit:
         query="{ name: '*' }"
         rowsPerPage="20"
         clientSort="true"
-        style="width: 400px; height: 200px;"
+        style="width: 100%; height: 100%;"
         rowSelector="20px">
         <thead>
             <tr>
@@ -629,6 +635,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
  
 .. cv-compound::
   :djConfig: parseOnLoad: true
+  :version: local
 
   .. cv:: javascript
 
@@ -655,7 +662,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
         query="{ name: '*' }"
         rowsPerPage="20"
         clientSort="true"
-        style="width: 400px; height: 200px;"
+        style="width: 100%; height: 300px;"
         rowSelector="20px">
         <thead>
             <tr>
@@ -713,6 +720,7 @@ The Grid offers a filter() method, to filter data from the current query (client
 
 .. cv-compound::
   :djConfig: parseOnLoad: true
+  :version: local
 
   .. cv:: javascript
 
@@ -740,7 +748,7 @@ The Grid offers a filter() method, to filter data from the current query (client
         store="store2"
         query="{ Title: '*' }"
         clientSort="true"
-        style="width: 400px; height: 200px;"
+        style="width: 100%; height: 300px;"
         rowSelector="20px">
         <thead>
             <tr>
@@ -783,6 +791,7 @@ To use it, you just have to override default behavior by yours.
 
 .. cv-compound::
   :djConfig: parseOnLoad: true
+  :version: local
 
   .. cv:: javascript
 
@@ -803,7 +812,7 @@ To use it, you just have to override default behavior by yours.
         query="{ name: '*' }"
         rowsPerPage="20"
         clientSort="true"
-        style="width: 400px; height: 200px;"
+        style="width: 100%; height: 100%;"
         rowSelector="20px">
         <script type="dojo/method" event="onStyleRow" args="row">
 	     //The row object has 4 parameters, and you can set two others to provide your own styling
