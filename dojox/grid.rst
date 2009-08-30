@@ -497,6 +497,7 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
 .. cv-compound::
   :djConfig: parseOnLoad: true
   :version: local
+  :height: 480
 
   .. cv:: javascript
 
@@ -536,7 +537,7 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
         </thead>
     </table>
 
-    <div class="container">
+    <p class="container">
     <div dojoType="dijit.form.Button">
         get all Selected Items
         <script type="dojo/method" event="onClick" args="evt">
@@ -565,7 +566,7 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
             } // end if
         </script>
     </div>
-    </div>
+    </p>
 
   .. cv:: css
 
@@ -579,7 +580,6 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
 
         html, body {
             width: 100%;
-            height: 100%;
             margin: 0;
         }
 
@@ -615,6 +615,7 @@ First, you have to set a editor for each cell, you would like to edit:
 .. cv-compound::
   :djConfig: parseOnLoad: true
   :version: local
+  :height: 480
 
   .. cv:: javascript
 
@@ -640,7 +641,7 @@ First, you have to set a editor for each cell, you would like to edit:
         query="{ name: '*' }"
         rowsPerPage="20"
         clientSort="true"
-        style="width: 100%; height: 100%;"
+        style="width: 100%; height: 300px;"
         rowSelector="20px">
         <thead>
             <tr>
@@ -662,7 +663,6 @@ First, you have to set a editor for each cell, you would like to edit:
 
         html, body {
             width: 100%;
-            height: 100%;
             margin: 0;
         }
 
@@ -680,6 +680,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
 .. cv-compound::
   :djConfig: parseOnLoad: true
   :version: local
+  :height: 480
 
   .. cv:: javascript
 
@@ -720,7 +721,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
         </thead>
     </table>
 
-    <div class="container">
+    <p class="container">
       <div dojoType="dijit.form.Button">
           Add Row
           <script type="dojo/method" event="onClick" args="evt">
@@ -750,7 +751,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
               } // end if
           </script>
       </div>
-    </div>
+    </p>
 
   .. cv:: css
 
@@ -759,7 +760,6 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
 
         html, body {
             width: 100%;
-            height: 100%;
             margin: 0;
         }
 
@@ -781,6 +781,7 @@ The Grid offers a filter() method, to filter data from the current query (client
 .. cv-compound::
   :djConfig: parseOnLoad: true
   :version: local
+  :height: 480
 
   .. cv:: javascript
 
@@ -821,7 +822,7 @@ The Grid offers a filter() method, to filter data from the current query (client
         </thead>
     </table>
 
-    <div class="container"
+    <p class="container"
     <div dojoType="dijit.form.Button">
         filter movies
         <script type="dojo/method" event="onClick" args="evt">
@@ -837,7 +838,7 @@ The Grid offers a filter() method, to filter data from the current query (client
             grid3.filter({Title: "*"});
         </script>
     </div>
-    </div>
+    </p>
 
   .. cv:: css
 
@@ -846,7 +847,6 @@ The Grid offers a filter() method, to filter data from the current query (client
 
         html, body {
             width: 100%;
-            height: 100%;
             margin: 0;
         }
 
