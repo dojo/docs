@@ -16,6 +16,59 @@ dojox.grid
 Grids are familiar in the client/server development world. Basically a grid is a kind of mini spreadsheet, commonly used to display details on master-detail forms. From HTML terms, a grid is a "super-table" with its own scrollable viewport.
 
 
+.. code-example::
+  :type: inline
+  :toolbar: themes, versions, dir
+
+  .. javascript::
+
+    <script type="text/javascript">
+        dojo.require("dojox.grid.DataGrid");
+        dojo.require("dojox.data.CsvStore");
+    
+        dojo.addOnLoad(function(){
+          // our test data store for this example:
+          var store4 = new dojox.data.CsvStore({ url: '{{ baseUrl }}dojox/grid/tests/support/movies.csv' });
+
+          // set the layout structure:
+          var layout4 = [
+              { field: 'Title', name: 'Title of Movie', width: '200px' },
+              { field: 'Year', name: 'Year', width: '50px' },
+              { field: 'Producer', name: 'Producer', width: 'auto' }
+          ];
+
+          // create a new grid:
+          var grid4 = new dojox.grid.DataGrid({
+              query: { Title: '*' },
+              store: store4,
+              clientSort: true,
+              rowSelector: '20px',
+              structure: layout4
+          }, document.createElement('div'));
+
+          // append the new grid to the div "gridContainer4":
+          dojo.byId("gridContainer4").appendChild(grid4.domNode);
+
+          // Call startup, in order to render the grid:
+          grid4.startup();
+        });
+    </script>
+
+  .. html::
+
+    <div id="gridContainer4" style="width: 400px; height: 200px;"></div>
+
+  .. css::
+
+    <style type="text/css">
+        @import "{{ baseUrl }}dojox/grid/resources/Grid.css";
+        @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
+
+        .dojoxGrid table {
+            margin: 0;
+        }
+    </style>
+
 ============
 Introduction
 ============
@@ -309,6 +362,7 @@ A simple Grid
 This example shows how to create a simple Grid declaratively.
 
 .. cv-compound::
+  :djConfig: parseOnLoad: true
 
   .. cv:: javascript
 
@@ -320,7 +374,7 @@ This example shows how to create a simple Grid declaratively.
   .. cv:: html
 
     <span dojoType="dojox.data.CsvStore" 
-        jsId="store1" url="/moin_static163/js/dojo/trunk/dojox/grid/tests/support/movies.csv">
+        jsId="store1" url="{{ baseUrl }}dojox/grid/tests/support/movies.csv">
     </span>
 
     <table dojoType="dojox.grid.DataGrid"
@@ -343,8 +397,8 @@ This example shows how to create a simple Grid declaratively.
   .. cv:: css
 
     <style type="text/css">
-        @import "/moin_static163/js/dojo/trunk/dojox/grid/resources/Grid.css";
-        @import "/moin_static163/js/dojo/trunk/dojox/grid/resources/nihiloGrid.css";
+        @import "{{ baseUrl }}dojox/grid/resources/Grid.css";
+        @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
 
         .dojoxGrid table {
             margin: 0;
@@ -364,32 +418,32 @@ This example shows how to create a simple Grid programmatically.
     <script type="text/javascript">
         dojo.require("dojox.grid.DataGrid");
         dojo.require("dojox.data.CsvStore");
-
-        // our test data store for this example:
-        var store4 = new dojox.data.CsvStore({ url: '/moin_static163/js/dojo/trunk/dojox/grid/tests/support/movies.csv' });
-
+    
         dojo.addOnLoad(function(){
-            // set the layout structure:
-            var layout4 = [
-                { field: 'Title', name: 'Title of Movie', width: '200px' },
-                { field: 'Year', name: 'Year', width: '50px' },
-                { field: 'Producer', name: 'Producer', width: 'auto' }
-            ];
+          // our test data store for this example:
+          var store4 = new dojox.data.CsvStore({ url: '{{ baseUrl }}dojox/grid/tests/support/movies.csv' });
 
-            // create a new grid:
-            var grid4 = new dojox.grid.DataGrid({
-                query: { Title: '*' },
-                store: store4,
-                clientSort: true,
-                rowSelector: '20px',
-                structure: layout4
-            }, document.createElement('div'));
+          // set the layout structure:
+          var layout4 = [
+              { field: 'Title', name: 'Title of Movie', width: '200px' },
+              { field: 'Year', name: 'Year', width: '50px' },
+              { field: 'Producer', name: 'Producer', width: 'auto' }
+          ];
 
-            // append the new grid to the div "gridContainer4":
-            dojo.byId("gridContainer4").appendChild(grid4.domNode);
+          // create a new grid:
+          var grid4 = new dojox.grid.DataGrid({
+              query: { Title: '*' },
+              store: store4,
+              clientSort: true,
+              rowSelector: '20px',
+              structure: layout4
+          }, document.createElement('div'));
 
-            // Call startup, in order to render the grid:
-            grid4.startup();
+          // append the new grid to the div "gridContainer4":
+          dojo.byId("gridContainer4").appendChild(grid4.domNode);
+
+          // Call startup, in order to render the grid:
+          grid4.startup();
         });
     </script>
 
@@ -400,8 +454,8 @@ This example shows how to create a simple Grid programmatically.
   .. cv:: css
 
     <style type="text/css">
-        @import "/moin_static163/js/dojo/trunk/dojox/grid/resources/Grid.css";
-        @import "/moin_static163/js/dojo/trunk/dojox/grid/resources/nihiloGrid.css";
+        @import "{{ baseUrl }}dojox/grid/resources/Grid.css";
+        @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
 
         .dojoxGrid table {
             margin: 0;
@@ -418,6 +472,7 @@ Working with selections
 To get the current selected rows of the grid, you can use the method yourGrid.selection.getSelected(). You will get an array of the selected items. The following code shows an example:
 
 .. cv-compound::
+  :djConfig: parseOnLoad: true
 
   .. cv:: javascript
 
@@ -430,7 +485,7 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
   .. cv:: html
 
     <span dojoType="dojox.data.CsvStore" 
-        jsId="store2" url="/moin_static163/js/dojo/trunk/dojox/grid/tests/support/movies.csv">
+        jsId="store2" url="{{ baseUrl }}dojox/grid/tests/support/movies.csv">
     </span>
 
     <div>
@@ -489,8 +544,8 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
   .. cv:: css
 
     <style type="text/css">
-        @import "/moin_static163/js/dojo/trunk/dojox/grid/resources/Grid.css";
-        @import "/moin_static163/js/dojo/trunk/dojox/grid/resources/nihiloGrid.css";
+        @import "{{ baseUrl }}dojox/grid/resources/Grid.css";
+        @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
 
         .dojoxGrid table {
             margin: 0;
@@ -518,6 +573,7 @@ Grid allows you to edit your data easily and send the changed values back to you
 First, you have to set a editor for each cell, you would like to edit:
 
 .. cv-compound::
+  :djConfig: parseOnLoad: true
 
   .. cv:: javascript
 
@@ -529,7 +585,7 @@ First, you have to set a editor for each cell, you would like to edit:
   .. cv:: html
 
     <span dojoType="dojo.data.ItemFileWriteStore" 
-        jsId="store3" url="http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/countries.json">
+        jsId="store3" url="http://docs.dojocampus.org{{ baseUrl }}dijit/tests/_data/countries.json">
     </span>
 
     <div>
@@ -561,8 +617,7 @@ First, you have to set a editor for each cell, you would like to edit:
   .. cv:: css
 
     <style type="text/css">
-	@import "/moin_static163/js/dojo/trunk/dijit/themes/nihilo/nihilo.css";
-	@import "/moin_static163/js/dojo/trunk/dojox/grid/resources/nihiloGrid.css";
+	@import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
     </style>
 
 Adding and Deleting data
@@ -572,6 +627,7 @@ If you want to add (remove) data programatically, you just have to add (remove) 
 Since DataGrid is "DataStoreAware", changes made to the store will be reflected automatically in the DataGrid.
  
 .. cv-compound::
+  :djConfig: parseOnLoad: true
 
   .. cv:: javascript
 
@@ -584,7 +640,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
   .. cv:: html
 
     <span dojoType="dojo.data.ItemFileWriteStore" 
-        jsId="store3" url="http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/countries.json">
+        jsId="store3" url="http://docs.dojocampus.org{{ baseUrl }}dijit/tests/_data/countries.json">
     </span>
 
 
@@ -646,8 +702,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
   .. cv:: css
 
     <style type="text/css">
-	@import "/moin_static163/js/dojo/trunk/dijit/themes/nihilo/nihilo.css";
-	@import "/moin_static163/js/dojo/trunk/dojox/grid/resources/nihiloGrid.css";
+	@import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
     </style>
 
 Filtering data
@@ -656,6 +711,7 @@ Filtering data
 The Grid offers a filter() method, to filter data from the current query (client-side filtering).
 
 .. cv-compound::
+  :djConfig: parseOnLoad: true
 
   .. cv:: javascript
 
@@ -670,7 +726,7 @@ The Grid offers a filter() method, to filter data from the current query (client
     <span dojoType="dojox.data.CsvStore" 
         // We use the store from the examples above.
         // Please uncomment this line, if you need your own store:
-        // jsId="store2" url="/moin_static163/js/dojo/trunk/dojox/grid/tests/support/movies.csv">
+        // jsId="store2" url="{{ baseUrl }}dojox/grid/tests/support/movies.csv">
     </span>
 
     <div>
@@ -715,8 +771,7 @@ The Grid offers a filter() method, to filter data from the current query (client
   .. cv:: css
 
     <style type="text/css">
-	@import "/moin_static163/js/dojo/trunk/dijit/themes/nihilo/nihilo.css";
-	@import "/moin_static163/js/dojo/trunk/dojox/grid/resources/nihiloGrid.css";
+	@import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
     </style>
 
 Grid styling : Rows 
@@ -726,6 +781,7 @@ The DataGrid provides extension points which allows you to apply custom css clas
 To use it, you just have to override default behavior by yours.
 
 .. cv-compound::
+  :djConfig: parseOnLoad: true
 
   .. cv:: javascript
 
@@ -737,7 +793,7 @@ To use it, you just have to override default behavior by yours.
   .. cv:: html
 
     <span dojoType="dojo.data.ItemFileWriteStore" 
-        jsId="store3" url="http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/countries.json">
+        jsId="store3" url="http://docs.dojocampus.org{{ baseUrl }}dijit/tests/_data/countries.json">
     </span>
 
     <table dojoType="dojox.grid.DataGrid"
@@ -781,8 +837,7 @@ To use it, you just have to override default behavior by yours.
   .. cv:: css
 
     <style type="text/css">
-        @import "/moin_static163/js/dojo/trunk/dojox/grid/resources/Grid.css";
-        @import "/moin_static163/js/dojo/trunk/dojox/grid/resources/nihiloGrid.css";
+        @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
 
         .dojoxGrid table {
             margin: 0;
