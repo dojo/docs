@@ -19,6 +19,7 @@ Grids are familiar in the client/server development world. Basically a grid is a
 .. code-example::
   :type: inline
   :toolbar: themes, versions, dir
+  :version: local
 
   .. javascript::
 
