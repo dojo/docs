@@ -92,7 +92,7 @@ This Widget inherits from dojo.grid._Grid and hence all methods and properties p
 Usage
 =====
 
-At a high level, a DataGrid can be defined either delcaratively in HTML markup or programatically in JavaScript.  In markup, the following high level structure is defined:
+At a high level, a DataGrid can be defined either declaratively in HTML markup or programatically in JavaScript.  In markup, the following high level structure is defined:
 
 .. code-block :: html
   :linenos:
