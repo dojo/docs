@@ -165,7 +165,6 @@ With a custom template to change the layout (only works locally)
 [experimental: 1.4+] Using a non-Gregorian calendar, the Hebrew calendar.  Select language=Hebrew to see Hebrew numerals.
 
 .. cv-compound::
-  :djConfig: extraLocale: ['he'], parseOnLoad: true
   :version: 1.4
   :height: 340
 
@@ -184,6 +183,10 @@ With a custom template to change the layout (only works locally)
       function hebrew2greg(d){
         dijit.byId('greg').attr('value', d.toGregorian());
       }
+
+      function setLabel(d){
+        dojo.byId(this.attr('label')).addContent(dojo.date.locale.format(arguments[0], {formatLength:'long', selector:'date'}), "replace")
+      }
     </script>
 
   .. cv:: html
@@ -191,11 +194,11 @@ With a custom template to change the layout (only works locally)
     <table class="container">
       <tr>
         <td>
-          <div id="hebrew" dojoType="dijit._Calendar" datePackage="dojox.date.hebrew" onValueSelected="hebrew2greg" onChange="dojo.byId('formattedHebrew').innerHTML=dojo.date.locale.format(arguments[0], {formatLength:'long', selector:'date'})"></div>
+          <div id="hebrew" dojoType="dijit._Calendar" datePackage="dojox.date.hebrew" onValueSelected="hebrew2greg" label="formattedHebrew"></div>
           <div id="formattedHebrew"></div>
         </td>
         <td>
-          <div id="gregorian" dojoType="dijit._Calendar" onValueSelected="greg2hebrew" onChange="dojo.byId('formattedGreg').innerHTML=dojo.date.locale.format(arguments[0], {formatLength:'long', selector:'date'})"></div>
+          <div id="gregorian" dojoType="dijit._Calendar" onValueSelected="greg2hebrew" label="formattedGreg" onChange="dojo.byId('formattedGreg').innerHTML=dojo.date.locale.format(arguments[0], {formatLength:'long', selector:'date'})"></div>
           <div id="formattedGreg"></div>
         </td>
       </tr>
