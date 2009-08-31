@@ -177,10 +177,12 @@ With a custom template to change the layout (only works locally)
       dojo.require("dojox.date.hebrew.Date");
       dojo.require("dojox.date.hebrew.locale");
 
-      function greg2hebrew(){
+      function greg2hebrew(d){
+        dijit.byId('hebrew').attr('value', d);
       }
 
-      function hebrew2greg(){
+      function hebrew2greg(d){
+        dijit.byId('greg').attr('value', d);
       }
     </script>
 
