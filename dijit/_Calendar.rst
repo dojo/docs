@@ -190,10 +190,12 @@ With a custom template to change the layout (only works locally)
 
   .. cv:: html
 
-    <div class="container">
-      <div id="hebrew" dojoType="dijit._Calendar" datePackage="dojox.date.hebrew" onChange="hebrew2greg"></div>
-      <div id="gregorian" dojoType="dijit._Calendar" onChange="greg2hebrew"></div>
-    </div>
+    <table class="container">
+      <tr>
+        <td><div id="hebrew" dojoType="dijit._Calendar" datePackage="dojox.date.hebrew" onChange="hebrew2greg"></div></td>
+        <td><div id="gregorian" dojoType="dijit._Calendar" onChange="greg2hebrew"></div></td>
+      </tr>
+    </table>
 
   .. cv:: css
 
