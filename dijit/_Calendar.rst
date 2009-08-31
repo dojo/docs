@@ -178,7 +178,7 @@ With a custom template to change the layout (only works locally)
       dojo.require("dojox.date.hebrew.locale");
 
       function greg2hebrew(d){
-        dijit.byId('hebrew').attr('value', d);
+//        dijit.byId('hebrew').attr('value', d);
       }
 
       function hebrew2greg(d){
@@ -189,8 +189,8 @@ With a custom template to change the layout (only works locally)
   .. cv:: html
 
     <div class="container">
-      <div id="gregorian" dojoType="dijit._Calendar" onChange="greg2hebrew"></div>
       <div id="hebrew" dojoType="dijit._Calendar" datePackage="dojox.date.hebrew" onChange="hebrew2greg"></div>
+      <div id="gregorian" dojoType="dijit._Calendar" onChange="greg2hebrew"></div>
     </div>
 
   .. cv:: css
