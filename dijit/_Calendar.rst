@@ -188,7 +188,7 @@ With a custom template to change the layout (only works locally)
 
     <div class="container">
       <div id="gregorian" dojoType="dijit._Calendar" onChange="greg2hebrew"></div>
-      <div id="hebrew" dojoType="dijit._Calendar" datePackage="dojox.date.hebrew" lang="he" onChange="hebrew2greg"></div>
+      <div id="hebrew" dojoType="dijit._Calendar" datePackage="dojox.date.hebrew" onChange="hebrew2greg"></div>
     </div>
 
   .. cv:: css
