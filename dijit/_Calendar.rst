@@ -165,6 +165,7 @@ With a custom template to change the layout (only works locally)
 [experimental: 1.4+] Using a non-Gregorian calendar, the Hebrew calendar.  Select language=Hebrew to see Hebrew numerals.
 
 .. cv-compound::
+  :djConfig: [extraLocale: 'he']
   :version: 1.4
   :height: 340
 
@@ -175,12 +176,19 @@ With a custom template to change the layout (only works locally)
       dojo.require("dojox.date.hebrew");
       dojo.require("dojox.date.hebrew.Date");
       dojo.require("dojox.date.hebrew.locale");
+
+      function greg2hebrew(){
+      }
+
+      function hebrew2greg(){
+      }
     </script>
 
   .. cv:: html
 
     <div class="container">
-      <div dojoType="dijit._Calendar" datePackage = "dojox.date.hebrew"></div><br /><br />
+      <div id="gregorian" dojoType="dijit._Calendar" onChange="greg2hebrew"></div>
+      <div id="hebrew" dojoType="dijit._Calendar" datePackage="dojox.date.hebrew" lang="he" onChange="hebrew2greg"></div>
     </div>
 
   .. cv:: css
