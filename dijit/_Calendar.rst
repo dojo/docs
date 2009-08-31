@@ -165,7 +165,7 @@ With a custom template to change the layout (only works locally)
 [experimental: 1.4+] Using a non-Gregorian calendar, the Hebrew calendar.  Select language=Hebrew to see Hebrew numerals.
 
 .. cv-compound::
-  :djConfig: extraLocale: 'he'
+  :djConfig: extraLocale: ['he']
   :version: 1.4
   :height: 340
 
