@@ -196,8 +196,8 @@ With a local custom template to change the layout (does not work against CDN)
       });
 
       function formatDate(d) {
-        var datePackage = dojo.date;//(this.id == "gregorian") ? dojo.date : dojox.date[this.id];
-	dojo.byId(this.id+"Formatted").innerHTML=datePackage.format(arguments[0], {
+        var datePackage = (this.id == "gregorian") ? dojo.date : dojox.date[this.id];
+	dojo.byId(this.id+"Formatted").innerHTML = datePackage.locale.format(arguments[0], {
           formatLength: 'long',
           selector: 'date'
         });
