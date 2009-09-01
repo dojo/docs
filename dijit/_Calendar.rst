@@ -197,12 +197,12 @@ With a custom template to change the layout (only works locally)
     <table class="container">
       <tr>
         <td>
-          <div id="hebrew" dojoType="dijit._Calendar" datePackage="dojox.date.hebrew" onValueSelected="hebrew2greg" label="formattedHebrew"></div>
-          <div id="formattedHebrew"></div>
+          <div id="hebrew" dojoType="dijit._Calendar" datePackage="dojox.date.hebrew" onValueSelected="hebrew2greg" onChange="formatDate"></div>
+          <div id="hebrewFormatted"></div>
         </td>
         <td>
-          <div id="gregorian" dojoType="dijit._Calendar" onValueSelected="greg2hebrew" label="formattedGreg" onChange="dojo.byId('formattedGreg').innerHTML=dojo.date.locale.format(arguments[0], {formatLength:'long', selector:'date'})"></div>
-          <div id="formattedGreg"></div>
+          <div id="gregorian" dojoType="dijit._Calendar" onValueSelected="greg2hebrew" onChange="formatDate"></div>
+          <div id="gregorianFormatted"></div>
         </td>
       </tr>
     </table>
