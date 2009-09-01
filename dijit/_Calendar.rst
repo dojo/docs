@@ -173,10 +173,6 @@ With a custom template to change the layout (only works locally)
     <script type="text/javascript">
       dojo.require("dijit._Calendar");
 
-      dojo.require("dojox.date.buddhist");
-      dojo.require("dojox.date.buddhist.Date");
-      dojo.require("dojox.date.buddhist.locale");
-
       dojo.require("dojox.date.hebrew");
       dojo.require("dojox.date.hebrew.Date");
       dojo.require("dojox.date.hebrew.locale");
@@ -216,10 +212,6 @@ With a custom template to change the layout (only works locally)
         <td>
           <div id="hebrew" dojoType="dijit._Calendar" datePackage="dojox.date.hebrew" onValueSelected="publishDate" onChange="formatDate"></div>
           <div id="hebrewFormatted"></div>
-        </td>
-        <td>
-          <div id="buddhist" dojoType="dijit._Calendar" datePackage="dojox.date.buddhist" onValueSelected="publishDate" onChange="formatDate"></div>
-          <div id="buddhistFormatted"></div>
         </td>
         <td>
           <div id="gregorian" dojoType="dijit._Calendar" onValueSelected="publishDate" onChange="formatDate"></div>
