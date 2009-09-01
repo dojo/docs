@@ -72,6 +72,10 @@ With an initial selection and weekends disabled
   .. cv:: css
 
     <style type="text/css">
+      .{{ theme }} .dijitCalendarDisabledDate {
+        background-color:dark-gray !important;
+      }
+
       .{{ theme }} table.dijitCalendarContainer {
         margin: 25px auto;
       }
