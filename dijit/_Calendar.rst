@@ -34,6 +34,7 @@ A plain Calendar widget with the formatted date below
   .. cv:: javascript
 
     <script type="text/javascript">
+      dojo.require("dijit.dijit"); // loads the optimized dijit layer
       dojo.require("dijit._Calendar");
     </script>
 
@@ -57,11 +58,12 @@ With an initial selection and weekends disabled
 
 .. cv-compound::
   :height: 320
-  :type: inline
+  :version: 1.4
 
   .. cv:: javascript
 
     <script type="text/javascript">
+      dojo.require("dijit.dijit"); // loads the optimized dijit layer
       dojo.require("dijit._Calendar");
     </script>
 
@@ -90,6 +92,7 @@ Javascript declaration, with a restriction of +/- one week from the current date
   .. cv:: javascript
 
     <script type="text/javascript">
+      dojo.require("dijit.dijit"); // loads the optimized dijit layer
       dojo.require("dijit._Calendar");
 
 	dojo.addOnLoad(function(){
@@ -126,6 +129,7 @@ With a local custom template to change the layout (does not work against CDN)
   .. cv:: javascript
 
     <script type="text/javascript">
+      dojo.require("dijit.dijit"); // loads the optimized dijit layer
       dojo.require("dijit._Calendar");
 
 	dojo.addOnLoad(function(){
@@ -176,6 +180,7 @@ With a local custom template to change the layout (does not work against CDN)
   .. cv:: javascript
 
     <script type="text/javascript">
+      dojo.require("dijit.dijit"); // loads the optimized dijit layer
       dojo.require("dijit._Calendar");
 
       dojo.require("dojox.date.hebrew");
