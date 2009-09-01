@@ -162,7 +162,7 @@ With a custom template to change the layout (only works locally)
 	<input id="calendar5" dayWidth="abbr" value="2008-03-13">
         
 
-[experimental: 1.4+] Using a non-Gregorian calendar, the Hebrew calendar.  Select language=Hebrew to see Hebrew numerals.
+[experimental: 1.4+] Non-Gregorian calendars
 
 .. cv-compound::
   :version: 1.4
@@ -172,12 +172,21 @@ With a custom template to change the layout (only works locally)
 
     <script type="text/javascript">
       dojo.require("dijit._Calendar");
+
+      dojo.require("dojox.date.buddhist");
+      dojo.require("dojox.date.buddhist.Date");
+      dojo.require("dojox.date.buddhist.locale");
+
       dojo.require("dojox.date.hebrew");
       dojo.require("dojox.date.hebrew.Date");
       dojo.require("dojox.date.hebrew.locale");
 
+      dojo.require("dojox.date.islamic");
+      dojo.require("dojox.date.islamic.Date");
+      dojo.require("dojox.date.islamic.locale");
+
       function greg2hebrew(d){
-        dijit.byId('hebrew').attr('value', new dojox.date.hebrew.Date(d));
+        dijit.byId('hebrew').attr('value', d);
       }
 
       function hebrew2greg(d){
@@ -197,8 +206,16 @@ With a custom template to change the layout (only works locally)
     <table class="container">
       <tr>
         <td>
-          <div id="hebrew" dojoType="dijit._Calendar" datePackage="dojox.date.hebrew" onValueSelected="hebrew2greg" onChange="formatDate"></div>
+          <div id="hebrew" dojoType="dijit._Calendar" datePackage="dojox.date.hebrew" onValueSelected="publishDate" onChange="formatDate"></div>
           <div id="hebrewFormatted"></div>
+        </td>
+        <td>
+          <div id="islamic" dojoType="dijit._Calendar" datePackage="dojox.date.islamic" onValueSelected="publishDate" onChange="formatDate"></div>
+          <div id="islamicFormatted"></div>
+        </td>
+        <td>
+          <div id="buddhist" dojoType="dijit._Calendar" datePackage="dojox.date.buddhist" onValueSelected="publishDate" onChange="formatDate"></div>
+          <div id="buddhistFormatted"></div>
         </td>
         <td>
           <div id="gregorian" dojoType="dijit._Calendar" onValueSelected="greg2hebrew" onChange="formatDate"></div>
