@@ -181,7 +181,7 @@ With a custom template to change the layout (only works locally)
       }
 
       function hebrew2greg(d){
-        dijit.byId('greg').attr('value', d.toGregorian());
+        dijit.byId('gregorian').attr('value', d.toGregorian());
       }
 
       function formatDate(d) {
