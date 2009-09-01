@@ -77,7 +77,7 @@ With an initial selection and weekends disabled
       }
     </style>
 
-Programmatic, with a restriction of +/- one week from the current date
+Javascript declaration, with a restriction of +/- one week from the current date
 
 .. cv-compound::
   :height: 320
@@ -112,7 +112,7 @@ Programmatic, with a restriction of +/- one week from the current date
       }
     </style>
 
-With a custom template to change the layout (only works locally)
+With a local custom template to change the layout (does not work against CDN)
 
 .. cv-compound::
   :height: 600
@@ -215,6 +215,10 @@ With a custom template to change the layout (only works locally)
           <div id="islamic" dojoType="dijit._Calendar" datePackage="dojox.date.islamic" onValueSelected="publishDate" onChange="formatDate"></div>
           <div id="islamicFormatted"></div>
         </td>
+  <!--      <td>
+          <div id="buddhist" dojoType="dijit._Calendar" datePackage="dojox.date.buddhist" onValueSelected="publishDate" onChange="formatDate"></div>
+          <div id="buddhistFormatted"></div>
+        </td> -->
         <td>
           <div id="gregorian" dojoType="dijit._Calendar" onValueSelected="publishDate" onChange="formatDate"></div>
           <div id="gregorianFormatted"></div>
