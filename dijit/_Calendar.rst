@@ -189,7 +189,7 @@ With a custom template to change the layout (only works locally)
         dojo.publish("date", [d.toGregorian ? d.toGregorian() : d]);
       }
 
-      dojo.subscribe("date", function(context, d){
+      dojo.subscribe("date", function(d){
         alert(d);
       });
 
@@ -226,7 +226,7 @@ With a custom template to change the layout (only works locally)
           <div id="buddhistFormatted"></div>
         </td>
         <td>
-          <div id="gregorian" dojoType="dijit._Calendar" onValueSelected="greg2hebrew" onChange="formatDate"></div>
+          <div id="gregorian" dojoType="dijit._Calendar" onValueSelected="publishDate" onChange="formatDate"></div>
           <div id="gregorianFormatted"></div>
         </td>
       </tr>
