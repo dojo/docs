@@ -177,15 +177,18 @@ With a custom template to change the layout (only works locally)
       dojo.require("dojox.date.hebrew.locale");
 
       function greg2hebrew(d){
-        dijit.byId('hebrew').attr('value', d);
+        dijit.byId('hebrew').attr('value', new dojox.date.hebrew.Date(d));
       }
 
       function hebrew2greg(d){
         dijit.byId('greg').attr('value', d.toGregorian());
       }
 
-      function setLabel(d){
-        dojo.byId(this.attr('label')).addContent(dojo.date.locale.format(arguments[0], {formatLength:'long', selector:'date'}), "replace")
+      function formatDate(d) {
+	dojo.byId(this.id+"Formatted").innerHTML=dojo.date.locale.format(arguments[0], {
+          formatLength: 'long',
+          selector: 'date'
+        });
       }
     </script>
 
