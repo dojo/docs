@@ -74,6 +74,7 @@ With an initial selection and weekends disabled
     <style type="text/css">
       .{{ theme }} .dijitCalendarDisabledDate {
         background-color:#333 !important;
+        text-decoration:none !important;
       }
 
       .{{ theme }} table.dijitCalendarContainer {
