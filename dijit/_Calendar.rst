@@ -192,16 +192,8 @@ With a custom template to change the layout (only works locally)
       }
 
       dojo.subscribe("date", function(data){
-        dijit.registry.filter(function(widget){ widget.id != data.id; }).forEach(function(widget){ widget.attr('value', data.date; });
+        dijit.registry.filter(function(widget){ return widget.id != data.id; }).forEach(function(widget){ widget.attr('value', data.date); });
       });
-
-      function greg2hebrew(d){
-        dijit.byId('hebrew').attr('value', d);
-      }
-
-      function hebrew2greg(d){
-        dijit.byId('gregorian').attr('value', d.toGregorian());
-      }
 
       function formatDate(d) {
 	dojo.byId(this.id+"Formatted").innerHTML=dojo.date.locale.format(arguments[0], {
