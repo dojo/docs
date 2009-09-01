@@ -214,6 +214,10 @@ With a custom template to change the layout (only works locally)
           <div id="hebrewFormatted"></div>
         </td>
         <td>
+          <div id="islamic" dojoType="dijit._Calendar" datePackage="dojox.date.islamic" onValueSelected="publishDate" onChange="formatDate"></div>
+          <div id="islamicFormatted"></div>
+        </td>
+        <td>
           <div id="gregorian" dojoType="dijit._Calendar" onValueSelected="publishDate" onChange="formatDate"></div>
           <div id="gregorianFormatted"></div>
         </td>
