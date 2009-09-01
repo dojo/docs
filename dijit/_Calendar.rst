@@ -185,6 +185,14 @@ With a custom template to change the layout (only works locally)
       dojo.require("dojox.date.islamic.Date");
       dojo.require("dojox.date.islamic.locale");
 
+      function publishDate(d){
+        dojo.publish("date", [d.toGregorian ? d.toGregorian() : d]);
+      }
+
+      dojo.subscribe("date", function(context, d){
+        alert(d);
+      });
+
       function greg2hebrew(d){
         dijit.byId('hebrew').attr('value', d);
       }
@@ -212,8 +220,8 @@ With a custom template to change the layout (only works locally)
   <!--        <td>
           <div id="islamic" dojoType="dijit._Calendar" datePackage="dojox.date.islamic" onValueSelected="publishDate" onChange="formatDate"></div>
           <div id="islamicFormatted"></div>
-        </td>
-        <td>-->
+        </td>-->
+        <td>
           <div id="buddhist" dojoType="dijit._Calendar" datePackage="dojox.date.buddhist" onValueSelected="publishDate" onChange="formatDate"></div>
           <div id="buddhistFormatted"></div>
         </td>
