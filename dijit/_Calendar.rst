@@ -181,12 +181,18 @@ With a custom template to change the layout (only works locally)
       dojo.require("dojox.date.islamic.Date");
       dojo.require("dojox.date.islamic.locale");
 
+      var publishing = false;
+
       function publishDate(d){
-        dojo.publish("date", [d.toGregorian ? d.toGregorian() : d]);
+        if(!publishing){
+          publishing = true;
+          dojo.publish("date", [{date: d.toGregorian ? d.toGregorian() : d, id: this.id}]);
+          publishing = false;
+        }
       }
 
-      dojo.subscribe("date", function(d){
-        alert(d);
+      dojo.subscribe("date", function(data){
+        dijit.registry.filter(function(widget){ widget.id != data.id; }).forEach(function(widget){ widget.attr('value', data.date; });
       });
 
       function greg2hebrew(d){
