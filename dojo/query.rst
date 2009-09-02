@@ -199,13 +199,13 @@ Nth-child
 
 .. code-block :: javascript
 
-  dojo.query('#main > h3:nth-child(odd)'
-  dojo.query('#main h3:nth-child(odd)'
-  dojo.query('#main h3:nth-child(2n+1)'
-  dojo.query('#main h3:nth-child(even)'
-  dojo.query('#main h3:nth-child(2n)'
-  dojo.query('#main h3:nth-child(2n+3)'
-  dojo.query('#main > *:nth-child(2n-5)'
+  dojo.query('#main > h3:nth-child(odd)')
+  dojo.query('#main h3:nth-child(odd)')
+  dojo.query('#main h3:nth-child(2n+1)')
+  dojo.query('#main h3:nth-child(even)')
+  dojo.query('#main h3:nth-child(2n)')
+  dojo.query('#main h3:nth-child(2n+3)')
+  dojo.query('#main > *:nth-child(2n-5)')
 
 
 Using pseudo-selectors
@@ -216,6 +216,14 @@ Using pseudo-selectors
   dojo.query('#main2 > :checked')
   dojo.query('#main2 > input[type=checkbox]:checked')
   dojo.query('#main2 > input[type=radio]:checked')
+
+
+Count of checked checkboxes in a form with id myForm
+----------------------------------------------------
+
+.. code-block :: javascript
+
+  dojo.query('input:checked', 'myForm').length
 
 
 =======================
