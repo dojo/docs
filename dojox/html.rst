@@ -60,7 +60,7 @@ Features
   * To decode a string with default encodings (HTML and LATIN-1) you do:  str = dojox.html.entities.decode(str);
   * For more information, please see the entities documentation.
 
-* ``New in 1.4`` `dojox.html.entities <dojox/html/entities>`_
+* ``New in 1.4`` `dojox.html.format <dojox/html/format>`_
 
   Adds utility functions in for formatting HTML.
 
