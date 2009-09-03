@@ -35,11 +35,10 @@ Encoding HTML and LATIN-1 entities in a text string
 
       //Now set up a linkage so that the store can be reloaded.
       dojo.addOnLoad(function() {
-         dojo.connect(dijit.byId("reloadButton2"), "onClick", function() {
-            //Reset the url and call close.  Note this could be a different JSON file, but for this example, just 
-            //Showing how you would set the URL.
-            reloadableStore2.url = "/moin_static163/js/dojo/trunk/release/dojo/dojox/data/tests/stores/countries.json"; 
-            reloadableStore2.close();
+         dojo.connect(dijit.byId("bEncode", "onClick", function()(
+           var input = dojo.byId("input");
+           var output = dojo.byId("output");
+           var output.value = dojox.html.entities.encode(input.value);
          });
       });
     </script>
@@ -51,7 +50,7 @@ Encoding HTML and LATIN-1 entities in a text string
     <textarea style="width: 100%; height: 100px;" id="input">
     </textarea>
     <br>
-    <button dojoType="dijit.form.Button">Press me to encode!</button>
+    <button id="bEncode" dojoType="dijit.form.Button">Press me to encode!</button>
     <br>
     <textarea style="width: 100%; height: 100px;" id="output" readonly="true">
     </textarea>
