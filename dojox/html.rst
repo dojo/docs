@@ -6,7 +6,7 @@ dojox.html
 :Status: Draft
 :Version: 1.0
 :Authors: Marcus Reimann
-:Developers: Bryan Forbes, Sam Foster, Mike Wilcox, Nathan Toone
+:Developers: Bryan Forbes, Sam Foster, Mike Wilcox, Nathan Toone, Jared Jurkiewicz
 :Available: since V1.2
 
 .. contents::
@@ -59,6 +59,13 @@ Features
   * To encode a string with default encodings (HTML and LATIN-1) you do:  str = dojox.html.entities.encode(str);
   * To decode a string with default encodings (HTML and LATIN-1) you do:  str = dojox.html.entities.decode(str);
   * For more information, please see the entities documentation.
+
+* ``New in 1.4`` `dojox.html.entities <dojox/html/entities>`_
+
+  Adds utility functions in for formatting HTML.
+
+  * To use dojo.require("dojox.html.format");
+  * you now have access to a prettyPrint function, one that takes a string of HTML text and tries to format it so that it is easily human readable.
 
 
 ========
