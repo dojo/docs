@@ -12,8 +12,9 @@ dojox.html.format
 .. contents::
     :depth: 2
 
-**dojox.html.format** package offers additional HTML helper functions for formatting HTML text.
+Have you ever wanted to format some HTML that came out of a textarea?  Or the dijit.Editor?  Or any other markup editor, for that matter, so it can be easily read by people?  If so, then this package is for you!
 
+**dojox.html.format** package offers additional HTML helper functions for formatting HTML text.
 
 ========
 Features
@@ -33,4 +34,11 @@ Usage Notes
 
 * Internet Explorer does not consistently keep comment nodes (<!-- -->).   Sometimes they will be in a rendered doc and thus format-able, sometimes not.  I wish this were not true, but alas it is.  Internet explorer has a tendency to just delete nodes from documents if it thinks they're in the wrong spot, which then makes it impossible to serialize out in a nice format (when using the browser renderer to give you the tree structure).
 
+=========
+Functions
+=========
 
+dojox.html.format.prettyPrint(str, indentBy, lineLength, map)
+-------------------------------------------------------------
+
+The 'prettyPrint function takes one required parameter and several optional ones.  Please see the following table below for descriptions of the parameters.
