@@ -6,12 +6,12 @@ dojox.html.entities.decode
 :Status: Contributed, Draft
 :Version: 1.4
 :Author: Jared Jurkiewicz
-:Available: since V1.0
+:Available: since V1.4
 
 .. contents::
   :depth: 2
 
-A flexible function for decoding entity encoded characters back to their UTF-8 representation.  This function is particularly useful when working with text that is to be inserted as text content in HTML/XML markup.  Certain characters cannot be used directly in text (for example: &lt; and &gt;) as they mean special things to the parser.  So entity encodings are required so that the parser doesn't interpret them as meta data and yet they still display correctly.  This function can decode those entities back to the real character.
+A flexible function for decoding entity encoded characters back to their UTF-8 representation.  This function is particularly useful when working with text that is to be inserted as text content in HTML/XML markup.  Certain characters cannot be used directly in text (for example: < and >) as they mean special things to the parser.  So entity encodings are required so that the parser doesn't interpret them as meta data and yet they still display correctly.  This function can decode those entities back to the real character.
 
 This function will use the entity encodings for HTML and LATIN-1 as default encodings to convert when called.  Users can over-ride the encoding map used by providing a new encoding map as the second parameter to the decode function.
 
