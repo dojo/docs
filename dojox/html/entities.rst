@@ -44,3 +44,10 @@ So, for example say you want to *just* encode & characters to an entity represen
   ];
 
 Then call the encode and decode functions with that as the map to use instead of the default maps.
+
+=========
+Functions
+=========
+
+* `dojox.html.entities.encode <dojox/html/entities/encode>`_ - A function for encoding entity (special) characters in a text string
+* `dojox.html.entities.decode <dojox/html/entities/decode>`_ - A function for decoding entity (special) characters in a text string
