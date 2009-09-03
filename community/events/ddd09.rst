@@ -6,7 +6,7 @@ Dojo Developer Day 2009
 Location:
 Time:
 
-Feel free to edit this page.
+Feel free to edit this page. All tasks should be assigned to a task/project manager/lead so we can track progress and check how things are going during the day. Maybe we can set up a simple dynamic chart which we can look at to see how a project is doing (a nice projects for those having long flights ;) )
 
 Dojo documentation
 ------------------
@@ -21,6 +21,9 @@ Dojo documentation
 
 Dojo website
 ------------
+
+* Create demos (fullpage) which can be showcased in CodeGlass (on frontpage) or separately
+* Create company profile pages (who is using Dojo)
 
 Website and Docs
 ----------------
