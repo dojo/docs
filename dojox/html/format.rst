@@ -44,20 +44,20 @@ dojox.html.format.prettyPrint(str, indentBy, lineLength, map)
 The 'prettyPrint function takes one required parameter and several optional ones.  Please see the following table below for descriptions of the parameters.
 
 
-+-----------------------------------+----------------------------------------------------------------------------------------------+
++-----------------------------------+---------------------------------------------------------------------+------------------------+
 | **Parameter**                     | **Description**                                                     | **Required**           |
-+-----------------------------------+----------------------------------------------------------------------------------------------+
++-----------------------------------+---------------------------------------------------------------------+------------------------+
 | str                               |The string of HTML text to format                                    | YES                    |
-+-----------------------------------+----------------------------------------------------------------------------------------------+
++-----------------------------------+---------------------------------------------------------------------+------------------------+
 | indentBy                          |An integer between 1 and 10 to indicate how many spaces to indent    | NO                     |
 |                                   |by when indenting.  If negative, greater than 10, or null/undefined  |                        |
 |                                   |indent will be a TAB character.                                      |                        |
-+-----------------------------------+----------------------------------------------------------------------------------------------+
++-----------------------------------+---------------------------------------------------------------------+------------------------+
 | lineLength                        |An integer specifying the maximum length of a TEXT line in the HTML  | NO                     |
 |                                   |document.  Must be non-negative.  If negative, null, or undefined,   |                        |
 |                                   |then the line has no maximum length and will not be split into       |                        |
 |                                   |multiple.                                                            |                        |
-+-----------------------------------+----------------------------------------------------------------------------------------------+
++-----------------------------------+---------------------------------------------------------------------+------------------------+
 | map                               |An array of entity character mappings to encode special characters to| NO                     |
 |                                   |If not provided, then it uses the default set HTML and LATIN 1       |                        |
 |                                   |(8859-1).                                                            |                        |
