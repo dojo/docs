@@ -84,6 +84,10 @@ Decoding HTML and LATIN-1 entities in a text string
 
     <b>Enter some text, then press the button to see it in encoded format</b>
     <br>
+    <!-- 
+      Note that for the text below, the reason for the encoding og & is that textarea auto-decodes them
+      when input this way, so it needs to be escaped so the textarea returns a still-encoded string.
+    -->
     <textarea style="width: 100%; height: 100px;" id="input1">
       &amp;lt;sometag&amp;gt;
         blah blah &amp;amp; blah!
