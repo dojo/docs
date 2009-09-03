@@ -137,3 +137,10 @@ Encoding custom entities in a text string
     <br>
     <textarea style="width: 100%; height: 100px;" id="output2" readonly="true">
     </textarea>
+
+========
+See Also
+========
+
+* `dojox.html.entities <dojox/html/entities>`_
+* `dojox.html.entities.decode <dojox/html/entities/decode>`_
