@@ -1,7 +1,7 @@
 #format dojo_rst
 
-dojox.html
-==========
+dojox.html.entities
+===================
 
 :Status: Draft
 :Version: 1.0
