@@ -51,3 +51,9 @@ Functions
 
 * `dojox.html.entities.encode <dojox/html/entities/encode>`_ - A function for encoding entity (special) characters in a text string
 * `dojox.html.entities.decode <dojox/html/entities/decode>`_ - A function for decoding entity (special) characters in a text string
+
+========
+See Also
+========
+
+* `dojox.html <dojox/html>`_
