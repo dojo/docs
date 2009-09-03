@@ -61,4 +61,4 @@ The 'prettyPrint function takes one required parameter and several optional ones
 | map                               |An array of entity character mappings to encode special characters to| NO                     |
 |                                   |If not provided, then it uses the default set HTML and LATIN 1       |                        |
 |                                   |(8859-1).                                                            |                        |
-+-----------------------------------+----------------------------------------------------------------------------------------------+
++-----------------------------------+---------------------------------------------------------------------+------------------------+
