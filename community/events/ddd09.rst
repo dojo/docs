@@ -1,5 +1,10 @@
-Dojoo Devloper Day 2009
+#format dojo_rst
+
+Dojo Devloper Day 2009
 =======================
+
+Location:
+Time:
 
 Feel free to edit this page.
 
