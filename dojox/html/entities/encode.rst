@@ -57,3 +57,42 @@ Encoding HTML and LATIN-1 entities in a text string
     <br>
     <textarea style="width: 100%; height: 100px;" id="output" readonly="true">
     </textarea>
+
+
+Decoding HTML and LATIN-1 entities in a text string
+---------------------------------------------------
+
+.. code-example::
+  :djConfig: parseOnLoad: true
+  :version: 1.4
+
+  .. javascript::
+
+    <script>
+      dojo.require("dijit.form.Button");
+      dojo.require("dojox.html.entities");
+
+      //Now set up a linkage so that the store can be reloaded.
+      dojo.addOnLoad(function() {
+         dojo.connect(dijit.byId("bEncode"), "onClick", function(){
+           var input = dojo.byId("input");
+           var output = dojo.byId("output");
+           output.value = dojox.html.entities.encode(input.value);
+         });
+      });
+    </script>
+
+  .. html::
+
+    <b>Enter some text, then press the button to see it in encoded format</b>
+    <br>
+    <textarea style="width: 100%; height: 100px;" id="input">
+      &lt;sometag&gt;
+        blah blah &amp; blah!
+      &lt;/sometag&gt;
+    </textarea>
+    <br>
+    <button id="bEncode" dojoType="dijit.form.Button">Press me to decode!</button>
+    <br>
+    <textarea style="width: 100%; height: 100px;" id="output" readonly="true">
+    </textarea>
