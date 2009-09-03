@@ -91,7 +91,7 @@ Decoding custom entities in a text string
     <br>
     <textarea style="width: 100%; height: 100px;" id="input2">
       <sometag>
-        blah blah &amp; blah!
+        blah blah &amp;amp; blah!
       </sometag>
     </textarea>
     <br>
