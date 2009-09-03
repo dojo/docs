@@ -75,7 +75,7 @@ Decoding HTML and LATIN-1 entities in a text string
          dojo.connect(dijit.byId("bEncode1"), "onClick", function(){
            var input = dojo.byId("input1");
            var output = dojo.byId("output1");
-           output.value = dojox.html.entities.encode(input.value);
+           output.value = dojox.html.entities.decode(input.value);
          });
       });
     </script>
