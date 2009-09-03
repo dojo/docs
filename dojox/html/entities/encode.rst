@@ -35,10 +35,10 @@ Encoding HTML and LATIN-1 entities in a text string
 
       //Now set up a linkage so that the store can be reloaded.
       dojo.addOnLoad(function() {
-         dojo.connect(dijit.byId("bEncode"), "onClick", function()(
+         dojo.connect(dijit.byId("bEncode"), "onClick", function(){
            var input = dojo.byId("input");
            var output = dojo.byId("output");
-           var output.value = dojox.html.entities.encode(input.value);
+           output.value = dojox.html.entities.encode(input.value);
          });
       });
     </script>
