@@ -50,6 +50,16 @@ Features
   * ``NOTE:`` When using the dojoxEllipsis class within tables, the table needs to have the `table-layout: fixed` style
   * ``NOTE:`` The dojoxEllipsis class should be placed on a block element (such as a div) and will not work on td elements 
 
+* ``New in 1.4`` `dojox.html.entities <dojox/html/entities>`_
+
+  Adds support for encoding and unencoding HTML/XML entity characters in text. Also provides basic mappings of character to entity encoding for HTML and LATIN (8859-1), special characters.  For information on entities see:  `Entity Reference <http://www.w3schools.com/HTML/html_entities.asp>`_ and `Latin (8859-1) Entities <http://www.w3schools.com/tags/ref_entities.asp>`_
+
+  * To use dojo.require("dojox.html.entities");
+  * you now have access to entity array mappings for HTML (dojox.html.entities.html) and LATIN-1 (dojox.html.entities.latin)
+  * To encode a string with default encodings (HTML and LATIN-1) you do:  str = dojox.html.entities.encode(str);
+  * To decode a string with default encodings (HTML and LATIN-1) you do:  str = dojox.html.entities.decode(str);
+  * For more information, please see the entities documentation.
+
 
 ========
 See also
