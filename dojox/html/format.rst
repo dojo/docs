@@ -62,3 +62,10 @@ The 'prettyPrint function takes one required parameter and several optional ones
 |                                   |If not provided, then it uses the default set HTML and LATIN 1       |                        |
 |                                   |(8859-1).                                                            |                        |
 +-----------------------------------+---------------------------------------------------------------------+------------------------+
+
+========
+Examples
+========
+
+Format some HTML markup
+-----------------------
