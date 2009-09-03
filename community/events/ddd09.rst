@@ -1,6 +1,6 @@
 #format dojo_rst
 
-Dojo Devloper Day 2009
+Dojo Developer Day 2009
 =======================
 
 Location:
@@ -13,7 +13,7 @@ Dojo documentation
 
 * Decide on final solution for data export and wiki svn integration. Current options are:
 
-  * Wait for minmoin 2.0 which will have wiki <=> svn support and way better templating mechanism
+  * Wait for moinmoin 2.0 which will have wiki <=> svn support and way better templating mechanism
   * Build a middleware to handle wiki to svn integration and fix sphinx issues
 
 * Clean up navigation
@@ -29,6 +29,12 @@ Website and Docs
 
 1.4
 ---
+
+Other TODOs
+-----------
+
+* Do we have video conferencing options?
+* Could we use bespin to do collaborative hacking? (how do we integrate the actual code???)
 
 People attending
 ----------------
