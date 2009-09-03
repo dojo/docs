@@ -48,9 +48,10 @@ Encoding HTML and LATIN-1 entities in a text string
 
     <b>Enter some text, then press the button to see it in encoded format</b>
     <br>
-    <textarea style="100%; height: 100px;" id="input">
+    <textarea style="width: 100%; height: 100px;" id="input">
     </textarea>
+    <br>
     <button dojoType="dijit.form.Button">Press me to encode!</button>
-
-    <textarea style="100%; height: 100px;" id="output" readonly="true">
+    <br>
+    <textarea style="width: 100%; height: 100px;" id="output" readonly="true">
     </textarea>
