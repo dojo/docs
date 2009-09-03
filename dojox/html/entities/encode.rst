@@ -13,7 +13,7 @@ dojox.html.entities.encode
 
 A flexible function for encoding defined UTF-8 characters into an entity encoding representation.  This function is particularly useful when working with text that is to be inserted as text content in HTML/XML markup.  Certain characters cannot be used directly in text (for example: &lt; and &gt;) as they mean special things to the parser.  So entity encodings are required so that the parser doesn't interpret them as meta data and yet they still display correctly.
 
-This function willuse the entity encodings for HTML and LATIN-1 as default encodings when called.  Users can over-ride the encoding map used by providing a new encoding map as the second parameter to the encode function.
+This function will use the entity encodings for HTML and LATIN-1 as default encodings when called.  Users can over-ride the encoding map used by providing a new encoding map as the second parameter to the encode function.
 
 
 ========
@@ -47,9 +47,10 @@ Encoding HTML and LATIN-1 entities in a text string
   .. html::
 
     <b>Enter some text, then press the button to see it in encoded format</b>
-    <textarea width="100%" height="20" id="input">
+    <br>
+    <textarea style="100%; height: 100px;" id="input">
     </textarea>
     <button dojoType="dijit.form.Button">Press me to encode!</button>
 
-    <textarea width="100%" height="20" id="output" readOnly="true">
+    <textarea style="100%; height: 100px;" id="output" readonly="true">
     </textarea>
