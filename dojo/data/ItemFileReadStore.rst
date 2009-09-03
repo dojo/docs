@@ -1013,20 +1013,11 @@ Reloading/Refreshing ItemFileReadStore from a url (Dojo Toolkit 1.4+)
 ---------------------------------------------------------------------
 *Note that you can see the data reload after clicking the button then activating the dropdown in Firebug or if you are viewing the demo through a proxy that shows requests made.*
 
-
----- /!\ '''Edit conflict - other version:''' ----
-.. cv-compound ::
-   :version: 1.4
-  
-  .. cv :: javascript
-
----- /!\ '''Edit conflict - your version:''' ----
-.. code-example ::
+.. code-example::
    :version: 1.4
   
   .. javascript::
 
----- /!\ '''End of edit conflict''' ----
 
     <script>
       dojo.require("dojo.data.ItemFileReadStore");
