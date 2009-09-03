@@ -33,7 +33,6 @@ Encoding HTML and LATIN-1 entities in a text string
       dojo.require("dijit.form.Button");
       dojo.require("dojox.html.entities");
 
-      //Now set up a linkage so that the store can be reloaded.
       dojo.addOnLoad(function() {
          dojo.connect(dijit.byId("bEncode"), "onClick", function(){
            var input = dojo.byId("input");
@@ -72,11 +71,10 @@ Decoding HTML and LATIN-1 entities in a text string
       dojo.require("dijit.form.Button");
       dojo.require("dojox.html.entities");
 
-      //Now set up a linkage so that the store can be reloaded.
       dojo.addOnLoad(function() {
-         dojo.connect(dijit.byId("bEncode"), "onClick", function(){
-           var input = dojo.byId("input");
-           var output = dojo.byId("output");
+         dojo.connect(dijit.byId("bEncode1"), "onClick", function(){
+           var input = dojo.byId("input1");
+           var output = dojo.byId("output1");
            output.value = dojox.html.entities.encode(input.value);
          });
       });
@@ -86,13 +84,13 @@ Decoding HTML and LATIN-1 entities in a text string
 
     <b>Enter some text, then press the button to see it in encoded format</b>
     <br>
-    <textarea style="width: 100%; height: 100px;" id="input">
-      &lt;sometag&gt;
-        blah blah &amp; blah!
-      &lt;/sometag&gt;
+    <textarea style="width: 100%; height: 100px;" id="input1">
+      &amp;lt;sometag&amp;gt;
+        blah blah &amp;amp; blah!
+      &amp;lt;/sometag&amp;gt;
     </textarea>
     <br>
-    <button id="bEncode" dojoType="dijit.form.Button">Press me to decode!</button>
+    <button id="bEncode1" dojoType="dijit.form.Button">Press me to decode!</button>
     <br>
-    <textarea style="width: 100%; height: 100px;" id="output" readonly="true">
+    <textarea style="width: 100%; height: 100px;" id="output1" readonly="true">
     </textarea>
