@@ -958,9 +958,11 @@ Reloading/Refreshing ItemFileReadStore from a 'data' object (Dojo Toolkit 1.4+)
 -------------------------------------------------------------------------------
 *Note that you must set data to a new object.  Reusing a data object that had already been processed by the datastore will cause errors.*
 
-.. cv-compound ::
+.. code-example::
+  :djConfig: parseOnLoad: true
+  :version: 1.4
   
-  .. cv :: javascript
+  ..javascript::
 
     <script>
       dojo.require("dojo.data.ItemFileReadStore");
@@ -1003,7 +1005,7 @@ Reloading/Refreshing ItemFileReadStore from a 'data' object (Dojo Toolkit 1.4+)
       });
     </script>
 
-  .. cv :: html 
+  .. html::
 
     <div dojoType="dojo.data.ItemFileReadStore" data="storeData10" jsId="reloadableStore1"></div>
     <div dojoType="dijit.form.ComboBox" store="reloadableStore1" searchAttr="name"></div>
@@ -1015,9 +1017,6 @@ Reloading/Refreshing ItemFileReadStore from a url (Dojo Toolkit 1.4+)
 
 .. code-example::
   :djConfig: parseOnLoad: true
-  :width: 680
-  :height: 450
-  :type: inline
   :version: 1.4
 
   .. javascript::
