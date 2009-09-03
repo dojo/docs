@@ -105,4 +105,4 @@ See Also
 ========
 
 * `dojox.html.entities <dojox/html/entities>`_
-* `dojox.html.entities.decode <dojox/html/entities/encode>`_
+* `dojox.html.entities.encode <dojox/html/entities/encode>`_
