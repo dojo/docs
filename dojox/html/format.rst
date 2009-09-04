@@ -81,7 +81,7 @@ Format some HTML markup
       dojo.require("dojox.html.format");
 
       dojo.addOnLoad(function() {
-         dojo.byId("input").value = dojo.byId("input").value.replace("\t", "");
+         dojo.byId("input").value = dojo.byId("input").value.replace("    ", "");
          dojo.connect(dijit.byId("bFormat"), "onClick", function(){
            var input = dojo.byId("input");
            var output = dojo.byId("output");
