@@ -87,6 +87,7 @@ Format some HTML markup
          for(i=0; i < lines.length; i++){
             lines[i] = dojo.trim(lines[i]) + "\n";
          }
+         dojo.byId("input").value = lines.join("");
          dojo.connect(dijit.byId("bFormat"), "onClick", function(){
            var input = dojo.byId("input");
            var output = dojo.byId("output");
