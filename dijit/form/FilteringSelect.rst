@@ -481,8 +481,11 @@ In this example, the FilteringSelect takes a labelFunc attribute pointing to a f
 		label = label.toLowerCase();
 		return label;
 	}
-        var stateStore = new dojo.data.ItemFileReadStore({
-            url: "http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/states.json"
+        dojo.addOnLoad(function(){
+          var stateStore = new dojo.data.ItemFileReadStore({
+              url: "http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/states.json"
+          });
+          dijit.byId("fs").store = stateStore;
         });
 
     </script>
@@ -491,6 +494,7 @@ In this example, the FilteringSelect takes a labelFunc attribute pointing to a f
 
     <!--stateStore definition omitted; see above examples-->
     <input dojoType="dijit.form.FilteringSelect"
+        id="fs"
         value="KY"
         store="stateStore"
         searchAttr="name"
