@@ -43,6 +43,10 @@ Once it has been required in, all you have to do is include it in the list of ex
 
 .. code-block :: html
 
+  <div dojoType="dijit.Editor" id="editor" extraPlugins="['prettyprint']">
+
+And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the PrettyPrint plugin!
+
 
 =========
 Functions
