@@ -65,7 +65,7 @@ Common NodeList Functions
 
 The `entire NodeList API <http://api.dojotoolkit.org/jsdoc/dojo/HEAD/dojo.NodeList>`_ is extensive, so lets just focus on some of the most frequently used methods.
 
-``forEach`` - runs a function for each element in a NodeList. 
+``forEach`` - runs a function for each element in a NodeList. If you want the option to break out of the loop, use ``every`` or ``some`` instead.
 
 .. code-block :: javascript
   :linenos:
