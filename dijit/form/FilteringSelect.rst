@@ -132,6 +132,12 @@ In this example, the FilteringSelect has been set to display the abbreviations f
     <script type="text/javascript">
         dojo.require("dijit.form.FilteringSelect");
         dojo.require("dojo.data.ItemFileReadStore");
+        dojo.addOnLoad(function(){
+          var stateStore = new dojo.data.ItemFileReadStore({
+              url: "http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/states.json"
+          });
+          dijit.byId("fs").store = stateStore;
+        });
     </script>
 
   .. cv:: html
@@ -139,7 +145,7 @@ In this example, the FilteringSelect has been set to display the abbreviations f
     <!--stateStore definition omitted; see above examples-->
     <input dojoType="dijit.form.FilteringSelect"
         value="KY"
-        store="stateStore"
+        id="fs"
         searchAttr="abbreviation"
         name="abbreviatedstate">
 
