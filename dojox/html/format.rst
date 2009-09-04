@@ -231,7 +231,7 @@ Format some HTML markup with three space indent and 20 character line wrap
     <textarea style="width: 100%; height: 100px;" id="input">
     <div>
     <br>
-    blah blah & blah!  This is a somewhat long line, it needs to be split up by the formatter!
+    blah blah & blah!  This is a somewhat <b>long</b> line, it needs to be split up by the formatter!
     <br>
     </div>
     <br>
