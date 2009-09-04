@@ -38,7 +38,7 @@ If you pass byId a domNode reference, the same node is returned:
   console.log(node == other);
   >>> true
 
-If you pass dojo.byId a string, and no domNode is found to match, ''undefined'' is returned, which is adequate truthiness to use conditionally:
+If you pass dojo.byId a string, and no domNode is found to match, ''undefined'' or the null object is returned (depending on the browser), which is adequate truthiness to use conditionally:
 
 .. code-block :: javascript
   :linenos:
