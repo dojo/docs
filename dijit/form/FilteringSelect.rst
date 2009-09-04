@@ -496,7 +496,6 @@ In this example, the FilteringSelect takes a labelFunc attribute pointing to a f
     <input dojoType="dijit.form.FilteringSelect"
         id="fs"
         value="KY"
-        store="stateStore"
         searchAttr="name"
         name="state"
         labelFunc="myLabelFunc">
