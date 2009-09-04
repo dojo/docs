@@ -83,8 +83,18 @@ How do I configure the options?  Glad you asked.  You do it where you declare th
 .. code-block :: html
 
   <div dojoType="dijit.Editor" 
-       id="editor" extraPlugins="[{name: 'prettyprint', indentBy: 3, lineLength: 80, map: [['<', 'lt'],['<', 'gt']]}]">
+       id="editor" extraPlugins="[{name: 'prettyprint', indentBy: 3, lineLength: 80, map: [['<', 'lt'],['>', 'gt']]}]">
   </div>
+
+
+========
+Examples
+========
+
+Basic Usage
+-----------
+
+
 
 
 ========
