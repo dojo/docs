@@ -116,6 +116,7 @@ Format some HTML markup
     item two
     </li>
     </ul>
+    </div>
     </textarea>
     <button id="bFormat" dojoType="dijit.form.Button">Press me to format!</button>
     <br>
