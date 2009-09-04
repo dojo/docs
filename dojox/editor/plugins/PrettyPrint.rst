@@ -94,6 +94,55 @@ Examples
 Basic Usage
 -----------
 
+.. code-example::
+  :djConfig: parseOnLoad: true
+  :version: 1.4
+
+  .. javascript::
+
+    <script>
+      dojo.require("dijit.form.Button");
+      dojo.require("dijit.Editor");
+      dojo.require("dojox.editor.plugins.PrettyPrint");
+      dojo.addOnLoad(function(){
+         dojo.connect(dijit.byId("eFormat"), "onClick", function(){
+           output.value = dijit.byId("input").attr("value");
+         });
+      });
+    </script>
+
+  .. html::
+
+    <b>Enter some text, then press the button to see it in encoded format</b>
+    <br>
+    <div dojoType="dijit.Editor" height="100px"id="input" extraPlugins="['prettyprint']">
+    <div>
+    <br>
+    blah blah & blah!
+    <br>
+    </div>
+    <br>
+    <table>
+    <tbody>
+    <tr>
+    <td>One cell</td>
+    <td>
+    Two cell
+    </td>
+    </tr>
+    </tbody>
+    </table>
+    <ul> 
+    <li>item one</li>
+    <li>
+    item two
+    </li>
+    </ul>
+    </div>
+    <button id="eFormat" dojoType="dijit.form.Button">Press me to format!</button>
+    <br>
+    <textarea style="width: 100%; height: 100px;" id="output" readonly="true">
+    </textarea>
 
 
 
