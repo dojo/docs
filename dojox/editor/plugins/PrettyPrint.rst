@@ -125,8 +125,8 @@ Basic Usage
     <table>
     <tbody>
     <tr>
-    <td>One cell</td>
-    <td>
+    <td style="border-style:solid; border-width: 2px; border-color: gray;">One cell</td>
+    <td style="border-style:solid; border-width: 2px; border-color: gray;">
     Two cell
     </td>
     </tr>
