@@ -69,3 +69,55 @@ Examples
 
 Format some HTML markup
 -----------------------
+
+.. code-example::
+  :djConfig: parseOnLoad: true
+  :version: 1.4
+
+  .. javascript::
+
+    <script>
+      dojo.require("dijit.form.Button");
+      dojo.require("dojox.html.format");
+
+      dojo.addOnLoad(function() {
+         dojo.connect(dijit.byId("bFormat"), "onClick", function(){
+           var input = dojo.byId("input");
+           var output = dojo.byId("output");
+           output.value = dojox.html.format.prettyPrint(input.value);
+         });
+      });
+    </script>
+
+  .. html::
+
+    <b>Enter some text, then press the button to see it in encoded format</b>
+    <br>
+    <textarea style="width: 100%; height: 100px;" id="input">
+    <div>
+    <br>
+    blah blah & blah!
+    <br>
+    <div>
+    <br>
+    <table>
+    <tbody>
+    <tr>
+    <td>One cell</td>
+    <td>
+    Two cell
+    </td>
+    </tr>
+    </tbody>
+    </table>
+    <ul> 
+    <li>item one</li>
+    <li>
+    item two
+    </li>
+    </ul>
+    </textarea>
+    <button id="bFormat" dojoType="dijit.form.Button">Press me to format!</button>
+    <br>
+    <textarea style="width: 100%; height: 100px;" id="output" readonly="true">
+    </textarea>
