@@ -282,7 +282,7 @@ Format some HTML markup with three space indent and 20 character line wrap and n
          dojo.connect(dijit.byId("bFormat"), "onClick", function(){
            var input = dojo.byId("input");
            var output = dojo.byId("output");
-           output.value = dojox.html.format.prettyPrint(input.value, 3, 20, []);
+           output.value = dojox.html.format.prettyPrint(input.value, 3, 20, [["",""]]);
          });
       });
     </script>
