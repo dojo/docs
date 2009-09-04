@@ -256,3 +256,66 @@ Format some HTML markup with three space indent and 20 character line wrap
     <br>
     <textarea style="width: 100%; height: 100px;" id="output" readonly="true">
     </textarea>
+
+Format some HTML markup with three space indent and 20 character line wrap and no entity encoding.
+--------------------------------------------------------------------------------------------------
+
+.. code-example::
+  :djConfig: parseOnLoad: true
+  :version: 1.4
+
+  .. javascript::
+
+    <script>
+      dojo.require("dijit.form.Button");
+      dojo.require("dojox.html.format");
+
+      dojo.addOnLoad(function(){
+         //Make sure the default input is actually unformatted!
+         //The code viewer is actually formatting the textarea, doh.
+         var lines = dojo.byId("input").value.split("\n");
+         var i;
+         for(i=0; i < lines.length; i++){
+            lines[i] = dojo.trim(lines[i]) + "\n";
+         }
+         dojo.byId("input").value = lines.join("");
+         dojo.connect(dijit.byId("bFormat"), "onClick", function(){
+           var input = dojo.byId("input");
+           var output = dojo.byId("output");
+           output.value = dojox.html.format.prettyPrint(input.value, 3, 20, []);
+         });
+      });
+    </script>
+
+  .. html::
+
+    <b>Enter some text, then press the button to see it in encoded format</b>
+    <br>
+    <textarea style="width: 100%; height: 100px;" id="input">
+    <div>
+    <br>
+    blah blah & blah!  This is a somewhat <b>long</b> line, it needs to be split up by the formatter!
+    <br>
+    </div>
+    <br>
+    <table>
+    <tbody>
+    <tr>
+    <td>One cell</td>
+    <td>
+    Two cell
+    </td>
+    </tr>
+    </tbody>
+    </table>
+    <ul> 
+    <li>item one</li>
+    <li>
+    item two
+    </li>
+    </ul>
+    </textarea>
+    <button id="bFormat" dojoType="dijit.form.Button">Press me to format!</button>
+    <br>
+    <textarea style="width: 100%; height: 100px;" id="output" readonly="true">
+    </textarea>
