@@ -35,10 +35,8 @@ Usage of this plugin is quite simple and painless.  The first thing you need to 
 
 .. code-block::javascript:
  
-  <script type="text/javascript">
     dojo.require("dijit.Editor");
     dojo.require("dojox.editor.plugins.PrettyPrint");
-  </script>
 
 
 =========
