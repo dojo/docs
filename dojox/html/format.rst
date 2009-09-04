@@ -80,8 +80,13 @@ Format some HTML markup
       dojo.require("dijit.form.Button");
       dojo.require("dojox.html.format");
 
-      dojo.addOnLoad(function() {
-         dojo.byId("input").value = dojo.byId("input").value.replace("    ", "");
+      dojo.addOnLoad(function(){
+         //Make sure the default input is actually unformatted!
+         var lines = dojo.byId("input").value.split("\n");
+         var i;
+         for(i=0; i < lines.length; i++){
+            lines[i] = dojo.trim(lines[i]) + "\n";
+         }
          dojo.connect(dijit.byId("bFormat"), "onClick", function(){
            var input = dojo.byId("input");
            var output = dojo.byId("output");
