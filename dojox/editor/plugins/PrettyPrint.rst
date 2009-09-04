@@ -31,6 +31,8 @@ This plugin cleans up the output from dijit.Editor in the following ways:
 Usage
 =====
 
+Basic Usage
+-----------
 Usage of this plugin is quite simple and painless.  The first thing you need to do is require into the page you're using the editor.  This is done in the same spot all your dojo.require calls are made, usually a head script tag.  For example:
 
 .. code-block :: javascript
@@ -47,34 +49,33 @@ Once it has been required in, all you have to do is include it in the list of ex
 
 And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the PrettyPrint plugin!
 
+Configuring PrettyPrint Options
+-------------------------------
 
-=========
-Functions
-=========
-
-dojox.html.format.prettyPrint(str, indentBy, lineLength, map)
--------------------------------------------------------------
-
-The 'prettyPrint function takes one required parameter and several optional ones.  Please see the following table below for descriptions of the parameters.
-
+The PrettyPrint plugin supports three options that control how it formats the text.  The options are defined below:
 
 +-----------------------------------+---------------------------------------------------------------------+------------------------+
-| **Parameter**                     | **Description**                                                     | **Required**           |
+| **option**                        | **Description**                                                     | **Required**           |
 +-----------------------------------+---------------------------------------------------------------------+------------------------+
-| str                               |The string of HTML text to format                                    | YES                    |
-+-----------------------------------+---------------------------------------------------------------------+------------------------+
-| indentBy                          |An integer between 1 and 10 to indicate how many spaces to indent    | NO                     |
-|                                   |by when indenting.  If negative, greater than 10, or null/undefined  |                        |
-|                                   |indent will be a TAB character.                                      |                        |
+| indentBy                          |Integer defining how many spaces to indent by.  Must be a value from |NO                      |
+|                                   |1 to 9.  Anything negative, undefined, or greater than 10 will       |                        |
+|                                   |instruct the plugin to use the default indent, the TAB character     |                        |
 +-----------------------------------+---------------------------------------------------------------------+------------------------+
 | lineLength                        |An integer specifying the maximum length of a TEXT line in the HTML  | NO                     |
 |                                   |document.  Must be non-negative.  If negative, null, or undefined,   |                        |
 |                                   |then the line has no maximum length and will not be split into       |                        |
-|                                   |multiple.                                                            |                        |
+|                                   |multiple lines.                                                      |                        |
 +-----------------------------------+---------------------------------------------------------------------+------------------------+
 | map                               |An array of entity character mappings to encode special characters to| NO                     |
-|                                   |If not provided, then it uses the default set HTML and LATIN 1       |                        |
-|                                   |(8859-1).                                                            |                        |
+|                                   |If not provided, then it uses the the following encodings for        |                        |
+|                                   |entities: HTML (dojox.html.entities.html), and the following extras  |                        |
+|                                   |pound, cent, yen, ellipsis, copyright, registered trademark, section |                        |
+|                                   |and euro.  Those are the most common ones used in HTML documents.    |                        |
+|                                   |                                                                     |                        |
+|                                   |                                                                     |                        |
+|                                   |Note: The more entities you list, the longer it will take PrettyPrint|                        |
+|                                   |to render your content.  The entity encoding function is fast, but   |                        |
+|                                   |there is still cost to use it.                                       |                        |
 +-----------------------------------+---------------------------------------------------------------------+------------------------+
 
 
