@@ -66,7 +66,7 @@ The PrettyPrint plugin supports three options that control how it formats the te
 |                                   |then the line has no maximum length and will not be split into       |                        |
 |                                   |multiple lines.                                                      |                        |
 +-----------------------------------+---------------------------------------------------------------------+------------------------+
-| map                               |An array of entity character mappings to encode special characters to| NO                     |
+| entityMap                         |An array of entity character mappings to encode special characters to| NO                     |
 |                                   |If not provided, then it uses the the following encodings for        |                        |
 |                                   |entities: HTML (dojox.html.entities.html), and the following extras  |                        |
 |                                   |pound, cent, yen, ellipsis, copyright, registered trademark, section |                        |
