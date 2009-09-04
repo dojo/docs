@@ -81,6 +81,7 @@ Format some HTML markup
       dojo.require("dojox.html.format");
 
       dojo.addOnLoad(function() {
+         dojo.byId("input").value = dojo.byId("input").value.replace("\t", "");
          dojo.connect(dijit.byId("bFormat"), "onClick", function(){
            var input = dojo.byId("input");
            var output = dojo.byId("output");
@@ -98,7 +99,7 @@ Format some HTML markup
     <br>
     blah blah & blah!
     <br>
-    <div>
+    </div>
     <br>
     <table>
     <tbody>
@@ -116,7 +117,6 @@ Format some HTML markup
     item two
     </li>
     </ul>
-    </div>
     </textarea>
     <button id="bFormat" dojoType="dijit.form.Button">Press me to format!</button>
     <br>
