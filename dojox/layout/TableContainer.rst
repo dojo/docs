@@ -221,7 +221,7 @@ Using Colspan
     <div dojoType="dojox.layout.TableContainer" cols="2" id="tc1" customClass="labelsAndValues" >
       <div dojoType="dijit.form.TextBox" title="First Name:"></div>
       <div dojoType="dijit.form.TextBox" title="Last Name:"></div>
-      <textarea dojoType="dijit.form.Textarea" id="texteditor" style="width:100%;">
+      <textarea dojoType="dijit.form.Textarea" id="texteditor" style="width:100%;" colspan="2">
         Hi, I'm a hacker, 
         I have no personal details to speak of,
         but I can write a widget in under a minute!
