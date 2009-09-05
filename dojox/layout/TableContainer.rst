@@ -215,7 +215,7 @@ Using Colspan
       dojo.require("dijit.form.Textarea");
     </script>
 
-  Declare the required HTML. Note that each contained widget is given a 'title' attribute.  Note the 'customClass' attribute added to the TableContainer.  This is used in the CSS declaration to add a style to all label and value cells. The textarea widget is also given a 'colspan' attribute, which makes it multiple columns. This is useful when you have a widget that requires more room.
+  Declare the required HTML. Note that each contained widget is given a 'title' attribute.  Note that the first three widgets are given a 'colspan' attribute, which makes them take up multiple columns. To accomodate these extra columns, the TableContainer is given the attribuge cols='4'. This is useful when you have a widget that requires more room. Since the CheckBox widgets along the bottom have no 'colspan' attribute, they each occupy a single column
 
   .. html::
 
