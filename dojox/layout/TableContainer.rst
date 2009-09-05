@@ -255,13 +255,71 @@ Using Colspan
 Programmatic example
 --------------------
 
-TODO: example
+.. code-example::
+  :version: local
 
-Declarative example
--------------------
+  Load the required JavaScript files. These include the TableContainer itself, along with the three other widgets that it contains.
+  A TableContainer widget is created programmatically, and four text box widgets are added to it.
 
-TODO: example
+  .. javascript::
+  
+    <script type="text/javascript">
+      dojo.require("dijit.dijit");
+      dojo.require("dojox.layout.TableContainer");
+      dojo.require("dijit.form.TextBox");
+      dojo.require("dijit.form.CheckBox");
+      dojo.require("dijit.form.Textarea");
 
+      // Create the TableContainer, and insert it into the DOM node with id "putWidgetHere".
+      // Add the custom class "labelsAndValues" 
+      var programmatic = new dojox.layout.TableContainer(
+      {
+        cols: 2, 
+        customClass:"labelsAndValues", 
+        "labelWidth": "150"
+      }, dojo.byId("putWidgetHere"));
+
+      // Create four text boxes
+      var text1 = new dijit.form.TextBox({label: "ProgText 1"});
+      var text2 = new dijit.form.TextBox({label: "ProgText 2"});
+      var text3 = new dijit.form.TextBox({label: "ProgText 3"});
+      var text4 = new dijit.form.TextBox({label: "ProgText 4"});
+
+      // Add the four text boxes to the TableContainer
+      programmatic.addChild(text1);
+      programmatic.addChild(text2);
+      programmatic.addChild(text3);
+      programmatic.addChild(text4);
+
+      // Start the table container. This initializes it and places
+      // the child widgets in the correct place.
+      programmatic.startup();
+
+    </script>
+
+  No HTML is required here, as it is a purely programmatic example
+
+  .. html::
+
+    <div id="putWidgetHere" ></div>
+
+  Apply a custom class that styles both the label and value cells.  
+
+  .. css::
+
+    <style type="text/css">
+      .labelsAndValues-labelCell {
+
+        background-color: lightgrey;
+        padding-left: 5px;
+      }
+
+      .labelsAndValues-valueCell {
+
+        padding-left: 20px;
+        background-color: lightblue;
+      }
+    </style>
 
 ========
 See also
