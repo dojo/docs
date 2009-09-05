@@ -127,7 +127,7 @@ Two Columns, Label Styling
       dojo.require("dijit.form.NumberSpinner");
     </script>
 
-  Declare the required HTML. Note that each contained widget is given a 'title' attribute.  This is the simplest type of TableContainer, with just one column, and no special CSS added
+  Declare the required HTML. Note that each contained widget is given a 'title' attribute.  Note the 'customClass' attribute added to the TableContainer.  This is used in the CSS declaration to add a style to all label cells.
 
   .. html::
 
@@ -146,6 +146,54 @@ Two Columns, Label Styling
       .justLabels-labelCell {
         background-color: lightgrey;
         padding-left: 5px;
+      }
+    </style>
+
+
+Two Columns, Label and Value cell Styling
+-----------------------------------------
+
+.. code-example::
+  :version: local
+
+  Load the required JavaScript files. These include the TableContainer itself, along with the three other widgets that it contains.
+
+  .. javascript::
+  
+    <script type="text/javascript">
+      dojo.require("dijit.dijit");
+      dojo.require("dojox.layout.TableContainer");
+      dojo.require("dijit.form.TextBox");
+      dojo.require("dijit.form.CheckBox");
+      dojo.require("dijit.form.NumberSpinner");
+    </script>
+
+  Declare the required HTML. Note that each contained widget is given a 'title' attribute.  Note the 'customClass' attribute added to the TableContainer.  This is used in the CSS declaration to add a style to all label and value cells.
+
+  .. html::
+
+    <div dojoType="dojox.layout.TableContainer" cols="2" id="tc1" customClass="labelsAndValues">
+      <div dojoType="dijit.form.TextBox" title="First Name:"></div>
+      <div dojoType="dijit.form.TextBox" title="Last Name:"></div>
+      <div dojoType="dijit.form.CheckBox" title="Employed"></div>
+      <div dojoType="dijit.form.NumberSpinner" title="Age" value="30"></div>
+    </div>
+
+  Apply a custom class that styles both the label and value cells.  
+
+  .. css::
+
+    <style type="text/css">
+      .labelsAndValues-labelCell {
+
+        background-color: lightgrey;
+        padding-left: 5px;
+      }
+
+      .labelsAndValues-valueCell {
+
+        padding-left: 20px;
+        background-color: lightblue;
       }
     </style>
 
