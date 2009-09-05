@@ -191,7 +191,7 @@ This example also shows the dojox.widget.PortletFeedSettings widget being used w
 
 Portlets In A Grid Container
 ----------------------------
-
+This examples shows Portlets as they are intended to be used, inside a dojox.layout.GridContainer.  It shows three Portlets, all of which can be dragged around the page.
 
 .. code-example::
   :version: 1.3.2-2.0
