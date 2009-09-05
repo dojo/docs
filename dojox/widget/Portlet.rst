@@ -197,6 +197,14 @@ Portlets In A Grid Container
       dojo.require("dojox.layout.GridContainer");
     </script>
 
+
+  .. css::
+
+    <style type="text/css">
+      @import "{{ baseUrl }}dojox/widget/Portlet/Portlet.css";
+      @import "{{ baseUrl }}dojox/layout/resources/GridContainer.css";
+    </style>
+
   .. html::
    
     <div dojoType="dojox.layout.GridContainer"
@@ -212,7 +220,7 @@ Portlets In A Grid Container
 	minChildWidth="200"
 	minColWidth="40">
 
-        <div dojoType="dojox.widget.Portlet" title="First Portlet">
+        <div dojoType="dojox.widget.Portlet" title="First Portlet" style="width: 150px;">
 
           <div dojoType="dojox.widget.PortletSettings">
             Put whatever settings you like in here
@@ -239,7 +247,7 @@ Portlets In A Grid Container
         </div>
       
         
-        <div dojoType="dojox.widget.Portlet" title="Second Portlet">
+        <div dojoType="dojox.widget.Portlet" title="Second Portlet" style="width: 150px;">
           <div dojoType="dojox.widget.PortletSettings">
             Put whatever settings you like in here
           </div>
@@ -250,16 +258,6 @@ Portlets In A Grid Container
 
       </div>
 
-  .. css::
-
-    <style type="text/css">
-      @import "{{ baseUrl }}dojox/widget/Portlet/Portlet.css"
-      @import "{{ baseUrl }}dojox/layout/resources/GridContainer.css"
-    </style>
-
-
-
-TODO: example
 
 
 ========
