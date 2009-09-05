@@ -81,10 +81,14 @@ TODO: how to use the component/class/method
   .. cv:: javascript
   
     <script type="text/javascript">
+    try {
       dojo.require("dojox.layout.TableContainer");
       dojo.require("dijit.form.TextBox");
       dojo.require("dijit.form.CheckBox");
       dojo.require("dijit.form.NumberSpinner");
+    } catch (e) {
+      console.log("Error: ", e);
+    }
     </script>
 
   .. cv:: html
