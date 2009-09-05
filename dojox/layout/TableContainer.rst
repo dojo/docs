@@ -214,18 +214,22 @@ Using Colspan
       dojo.require("dijit.form.Textarea");
     </script>
 
-  Declare the required HTML. Note that each contained widget is given a 'title' attribute.  Note the 'customClass' attribute added to the TableContainer.  This is used in the CSS declaration to add a style to all label and value cells.
+  Declare the required HTML. Note that each contained widget is given a 'title' attribute.  Note the 'customClass' attribute added to the TableContainer.  This is used in the CSS declaration to add a style to all label and value cells. The textarea widget is also given a 'colspan' attribute, which makes it multiple columns. This is useful when you have a widget that requires more room.
 
   .. html::
 
-    <div dojoType="dojox.layout.TableContainer" cols="2" id="tc1" customClass="labelsAndValues" >
-      <div dojoType="dijit.form.TextBox" title="First Name:"></div>
-      <div dojoType="dijit.form.TextBox" title="Last Name:"></div>
-      <textarea dojoType="dijit.form.Textarea" id="texteditor" style="width:100%;" colspan="2">
+    <div dojoType="dojox.layout.TableContainer" cols="4" id="tc1" customClass="labelsAndValues" >
+      <div dojoType="dijit.form.TextBox" title="First Name:" colspan="2"></div>
+      <div dojoType="dijit.form.TextBox" title="Last Name:" colspan="2"></div>
+      <textarea dojoType="dijit.form.Textarea" id="texteditor" style="width:100%;" colspan="4" title="Personal Details">
         Hi, I'm a hacker, 
         I have no personal details to speak of,
         but I can write a widget in under a minute!
       </textarea>
+     <div dojoType="dijit.form.CheckBox" title="Employed"></div>
+     <div dojoType="dijit.form.CheckBox" title="Is Married"></div>
+     <div dojoType="dijit.form.CheckBox" title="Has Children"></div>
+     <div dojoType="dijit.form.CheckBox" title="Loves Dojo" checked="true"></div>      
       
     </div>
 
