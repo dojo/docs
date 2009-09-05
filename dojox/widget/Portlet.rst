@@ -28,7 +28,8 @@ The settings types included are
  * dojox.widget.PortletFeedSettings
    The settings widget to be used with the dojox.widget.FeedPortlet.  It can be a simple text input displaying the URL to an Atom or RSS feed, or a select node displaying multiple feeds to load.
 
-It is worth noting that this widget just implements one possible front end of a Portlet.  The JSR-168 standard (http://jcp.org/aboutJava/communityprocess/review/jsr168/) for Portlets contains a lot more than this.  A full Portlet implementation requires both server side and client side code.  This widget only serves to present the Portlet on the client side.
+It is worth noting that this widget just implements one possible front end of a Portlet.  The
+`JSR-168 standard <http://jcp.org/aboutJava/communityprocess/review/jsr168>`_ for Portlets contains a lot more than this.  A full Portlet implementation requires both server side and client side code.  This widget only serves to present the Portlet on the client side.
 
 =====
 Usage
@@ -60,6 +61,8 @@ Examples
 
 Basic Portlet
 --------------------
+
+This example shows a very simplistic Portlet, with just a simple PortletSettings widget and text content.
 
 .. code-example::
   :version: 1.3.2-2.0
@@ -97,6 +100,10 @@ Basic Portlet
 
 Basic Feed Portlet
 ------------------
+
+This example shows a FeedPortlet with a single URL.  A FeedPortlet is an extension of Portlet, and can be used to load an 
+'Atom <http://en.wikipedia.org/wiki/Atom_(standard)>'_ or 'RSS <http://en.wikipedia.org/wiki/RSS>'_ feed and display it as a list.
+The FeedPortlet displays the titles of the feed items, and shows the contents of each item, or story, in a tooltip when the mouse hovers over it.
 
 .. code-example::
   :version: 1.3.2-2.0
@@ -138,6 +145,8 @@ Basic Feed Portlet
 
 Expandable Feed Portlet With Multiple URLs
 ------------------------------------------
+
+An ExpandableFeedPortlet is an extenstion of FeedPortlet.  Like FeedPortlet it can load an Atom or RSS feed from a URL, however it displays the feed items in a list with an icons placed to the left of each item.  When an icon is clicked, the content of the item, or story, is shown.  This is different from the FeedPortlet, which displays the content in a tooltip.
 
 .. code-example::
   :version: 1.3.2-2.0
