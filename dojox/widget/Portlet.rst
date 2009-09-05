@@ -178,8 +178,86 @@ Expandable Feed Portlet With Multiple URLs
       @import "{{ baseUrl }}dojox/widget/Portlet/Portlet.css"
     </style>
 
-Declarative example
--------------------
+Portlets In A Grid Container
+----------------------------
+
+
+.. code-example::
+  :version: 1.3.2-2.0
+
+  Load the Portlet and GridContainer JavaScript.
+
+  .. javascript::
+
+    <script type="text/javascript">
+
+      dojo.require("dijit.dijit");
+      dojo.require("dojox.widget.Portlet");
+      dojo.require("dojox.widget.FeedPortlet");
+      dojo.require("dojox.layout.GridContainer");
+    </script>
+
+  .. html::
+   
+    <div dojoType="dojox.layout.GridContainer"
+	id="gc1"
+	acceptTypes="dojox.widget.Portlet, dojox.widget.FeedPortlet,dojox.widget.ExpandableFeedPortlet"
+	hasResizableColumns="false"
+	opacity="0.3"
+	nbZones="2"
+	allowAutoScroll="true" 
+	withHandles="true"
+	handleClasses="dijitTitlePaneTitle"
+	region="center"
+	minChildWidth="200"
+	minColWidth="40">
+
+        <div dojoType="dojox.widget.Portlet" title="First Portlet">
+
+          <div dojoType="dojox.widget.PortletSettings">
+            Put whatever settings you like in here
+          </div>
+          <div>
+             Drag me around by clicking on my title bar
+          </div>
+        </div>
+
+
+        <div dojoType="dojox.widget.ExpandableFeedPortlet" title="Dojo News" 
+          id="todaysNews"
+          maxResults="5">
+          <select dojoType="dojox.widget.PortletFeedSettings">
+            <option value="http://shaneosullivan.wordpress.com/category/dojo/feed/">Dojo Blatherings</option>
+            <option value="http://www.dojotoolkit.org/aggregator/rss">Planet Dojo</option>
+            <option value="http://feeds2.feedburner.com/ajaxian">Ajaxian</option>
+          </select>
+
+	  <div>
+	    This is a FeedPortlet with a multiple feeds.
+            Click the settings icon in the title bar to choose different feed to load.
+          </div>
+        </div>
+      
+        
+        <div dojoType="dojox.widget.Portlet" title="Second Portlet">
+          <div dojoType="dojox.widget.PortletSettings">
+            Put whatever settings you like in here
+          </div>
+          <div>
+             Drag me around by clicking on my title bar
+          </div>
+        </div>
+
+      </div>
+
+  .. css::
+
+    <style type="text/css">
+      @import "{{ baseUrl }}dojox/widget/Portlet/Portlet.css"
+      @import "{{ baseUrl }}dojox/layout/resources/GridContainer.css"
+    </style>
+
+
 
 TODO: example
 
