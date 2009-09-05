@@ -1,7 +1,7 @@
 #format dojo_rst
 
 dojox.widget.Portlet
-===============
+====================
 
 :Status: Draft
 :Version: 1.0
