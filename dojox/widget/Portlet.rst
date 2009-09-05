@@ -198,6 +198,7 @@ Portlets In A Grid Container
       dojo.require("dojox.widget.Calendar");
     </script>
 
+  Include the CSS for the Portlet, the GridContainer, and the Calendar widgets.
 
   .. css::
 
@@ -212,6 +213,9 @@ Portlets In A Grid Container
         margin-bottom:5px;
       }
     </style>
+
+  This example includes three Portlets in a GridContainer.  The GridContainer lays out the widgets in a grid enables dragging them around.
+  The GridContainer in this example has two columns, set using the 'nbZones' attribute.  This example also shows the Calendar Portlet containing another Dojo widget, the dojox.widget.Calendar.
 
   .. html::
    
