@@ -222,10 +222,7 @@ Using Colspan
     <div dojoType="dojox.layout.TableContainer" cols="4" id="tc1" customClass="labelsAndValues" >
       <div dojoType="dijit.form.TextBox" title="First Name:" colspan="2"></div>
       <div dojoType="dijit.form.TextBox" title="Last Name:" colspan="2"></div>
-      <textarea dojoType="dijit.form.Textarea" id="texteditor" style="width:100%;" colspan="4" title="Personal Details">
-        Hi, I'm a hacker, 
-        I have no personal details to speak of,
-        but I can write a widget in under a minute!
+      <textarea dojoType="dijit.form.Textarea" id="texteditor" style="width:100%;" colspan="4" title="Personal Details">Hi, I'm a hacker, I have no  personal details to speak of, but I can write a widget in under a minute!
       </textarea>
      <div dojoType="dijit.form.CheckBox" title="Employed"></div>
      <div dojoType="dijit.form.CheckBox" title="Is Married"></div>
