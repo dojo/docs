@@ -103,10 +103,10 @@ Simple Example, one column and no styling
   .. html::
 
     <div dojoType="dojox.layout.TableContainer" cols="1" id="tc1">
-      <div dojoType="dijit.form.TextBox" title="First Name:"></div>
-      <div dojoType="dijit.form.TextBox" title="Last Name:"></div>
+      <div dojoType="dijit.form.TextBox" title="First Name:" value="Michael"></div>
+      <div dojoType="dijit.form.TextBox" title="Last Name:" value="Collins"></div>
       <div dojoType="dijit.form.CheckBox" title="Employed"></div>
-      <div dojoType="dijit.form.NumberSpinner" title="Age" value="30"></div>
+      <div dojoType="dijit.form.NumberSpinner" title="Age" value="25"></div>
     </div>
 
 Two Columns, Label Styling
@@ -132,10 +132,10 @@ Two Columns, Label Styling
   .. html::
 
     <div dojoType="dojox.layout.TableContainer" cols="2" id="tc1" customClass="justLabels">
-      <div dojoType="dijit.form.TextBox" title="First Name:"></div>
-      <div dojoType="dijit.form.TextBox" title="Last Name:"></div>
+      <div dojoType="dijit.form.TextBox" title="First Name:" value="Eamonn"></div>
+      <div dojoType="dijit.form.TextBox" title="Last Name:" value="De Valera"></div>
       <div dojoType="dijit.form.CheckBox" title="Employed"></div>
-      <div dojoType="dijit.form.NumberSpinner" title="Age" value="30"></div>
+      <div dojoType="dijit.form.NumberSpinner" title="Age" value="40"></div>
     </div>
 
   Apply a custom class that colors the labels.  
@@ -173,8 +173,8 @@ Two Columns, Label and Value cell Styling
   .. html::
 
     <div dojoType="dojox.layout.TableContainer" cols="2" id="tc1" customClass="labelsAndValues">
-      <div dojoType="dijit.form.TextBox" title="First Name:"></div>
-      <div dojoType="dijit.form.TextBox" title="Last Name:"></div>
+      <div dojoType="dijit.form.TextBox" title="First Name:" value="Patrick"></div>
+      <div dojoType="dijit.form.TextBox" title="Last Name:" value="Pearse"></div>
       <div dojoType="dijit.form.CheckBox" title="Employed"></div>
       <div dojoType="dijit.form.NumberSpinner" title="Age" value="30"></div>
     </div>
@@ -220,8 +220,8 @@ Using Colspan
   .. html::
 
     <div dojoType="dojox.layout.TableContainer" cols="4" id="tc1" customClass="labelsAndValues" >
-      <div dojoType="dijit.form.TextBox" title="First Name:" colspan="2"></div>
-      <div dojoType="dijit.form.TextBox" title="Last Name:" colspan="2"></div>
+      <div dojoType="dijit.form.TextBox" title="First Name:" colspan="2" value="Tom"></div>
+      <div dojoType="dijit.form.TextBox" title="Last Name:" colspan="2" value="Clarke"></div>
       <textarea dojoType="dijit.form.Textarea" id="texteditor" style="width:100%;" colspan="4" title="Personal Details">Hi, I'm a hacker, I have no  personal details to speak of, but I can write a widget in under a minute!
       </textarea>
      <div dojoType="dijit.form.CheckBox" title="Employed"></div>
