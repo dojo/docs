@@ -295,4 +295,4 @@ This examples shows Portlets as they are intended to be used, inside a dojox.lay
 See also
 ========
 
-* TODO: links to other related articles
+* `dojox.layout.GridContainer <dojox/layout/GridContainer>`_
