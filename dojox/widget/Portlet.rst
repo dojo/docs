@@ -226,7 +226,7 @@ Portlets In A Grid Container
 	minChildWidth="200"
 	minColWidth="40">
 
-        <div dojoType="dojox.widget.Portlet" title="First Portlet" style="width: 150px;">
+        <div dojoType="dojox.widget.Portlet" title="First Portlet" style="width: 250px;">
 
           <div dojoType="dojox.widget.PortletSettings">
             Put whatever settings you like in here
@@ -253,7 +253,7 @@ Portlets In A Grid Container
         </div>
       
         
-        <div dojoType="dojox.widget.Portlet" title="Second Portlet" style="width: 150px;">
+        <div dojoType="dojox.widget.Portlet" title="Second Portlet">
           <div dojoType="dojox.widget.PortletSettings">
             Put whatever settings you like in here
           </div>
