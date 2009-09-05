@@ -204,6 +204,7 @@ Portlets In A Grid Container
     <style type="text/css">
       @import "{{ baseUrl }}dojox/widget/Portlet/Portlet.css";
       @import "{{ baseUrl }}dojox/layout/resources/GridContainer.css";
+      @import "{{ baseUrl }}dojox/widget/Calendar/Calendar.css";
 
       .dndDropIndicator {
         border: 2px dashed #99BBE8;
