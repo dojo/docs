@@ -95,6 +95,47 @@ Basic Portlet
       @import "{{ baseUrl }}dojox/widget/Portlet/Portlet.css"
     </style>
 
+Basic Feed Portlet
+--------------------
+
+.. code-example::
+  :version: 1.3.2-2.0
+
+  Load the Portlet JavaScript.
+
+  .. javascript::
+
+    <script type="text/javascript">
+
+      dojo.require("dijit.dijit");
+      dojo.require("dojox.widget.Portlet");
+      dojo.require("dojox.widget.FeedPortlet");
+    </script>
+
+  .. html::
+   
+      <div dojoType="dojox.widget.FeedPortlet" title="Todays News" 
+	id="todaysNews"
+	url="http://news.google.com/news?hl=en&topic=t&output=atom"
+	maxResults="5"
+	>
+	<div dojoType="dojox.widget.PortletFeedSettings"></div>
+
+	<div>
+	This is a FeedPortlet with a single feed.
+	Click the settings icon in the title bar to enter a
+	different feed to load.  Hovering over a news item shows a summary
+	of it in a tooltip.
+	</div>
+      </div>
+
+  .. css::
+
+    <style type="text/css">
+      @import "{{ baseUrl }}dojox/widget/Portlet/Portlet.css"
+    </style>
+
+
 Declarative example
 -------------------
 
