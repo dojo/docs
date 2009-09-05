@@ -109,6 +109,47 @@ Simple Example, one column and no styling
       <div dojoType="dijit.form.NumberSpinner" title="Age" value="30"></div>
     </div>
 
+Two Columns, Label Styling
+--------------------------
+
+.. code-example::
+  :version: local
+
+  Load the required JavaScript files. These include the TableContainer itself, along with the three other widgets that it contains.
+
+  .. javascript::
+  
+    <script type="text/javascript">
+      dojo.require("dijit.dijit");
+      dojo.require("dojox.layout.TableContainer");
+      dojo.require("dijit.form.TextBox");
+      dojo.require("dijit.form.CheckBox");
+      dojo.require("dijit.form.NumberSpinner");
+    </script>
+
+  Declare the required HTML. Note that each contained widget is given a 'title' attribute.  This is the simplest type of TableContainer, with just one column, and no special CSS added
+
+  .. html::
+
+    <div dojoType="dojox.layout.TableContainer" cols="2" id="tc1" customClass="justLabels">
+      <div dojoType="dijit.form.TextBox" title="First Name:"></div>
+      <div dojoType="dijit.form.TextBox" title="Last Name:"></div>
+      <div dojoType="dijit.form.CheckBox" title="Employed"></div>
+      <div dojoType="dijit.form.NumberSpinner" title="Age" value="30"></div>
+    </div>
+
+  Apply a custom class that colors the labels.  
+
+  .. css::
+
+    <style type="text/css">
+      .justLabels-labelCell {
+        background-color: lightgrey;
+        padding-left: 5px;
+      }
+    </style>
+
+
 Programmatic example
 --------------------
 
