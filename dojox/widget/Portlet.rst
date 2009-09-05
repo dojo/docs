@@ -69,7 +69,6 @@ Basic Portlet
   .. javascript::
 
     <script type="text/javascript">
-      @import "{{ baseUrl }}/dojox/widget/Portlet/Portlet.css"
 
       dojo.require("dijit.dijit");
       dojo.require("dojox.widget.Portlet");
@@ -89,6 +88,12 @@ Basic Portlet
             
 	</div>
     </div>
+
+  .. css::
+
+    <style type="text/css">
+      @import "{{ baseUrl }}/dojox/widget/Portlet/Portlet.css"
+    </style>
 
 Declarative example
 -------------------
