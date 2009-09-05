@@ -62,6 +62,7 @@ Basic Portlet
 --------------------
 
 .. code-example::
+  :version: 1.3.2-2.0
 
   Load the Portlet JavaScript.
 
