@@ -34,8 +34,6 @@ It is worth noting that this widget just implements one possible front end of a 
 Usage
 =====
 
-TODO: how to use the component/class/method
-
 .. code-block :: javascript
  :linenos:
 
