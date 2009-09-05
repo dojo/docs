@@ -258,7 +258,7 @@ Programmatic example
 .. code-example::
   :version: local
 
-  Load the required JavaScript files. These include the TableContainer itself, along with the three other widgets that it contains.
+  Load the required JavaScript files. These include the TableContainer itself, and the dijit.TextBox widget that it contains.
   A TableContainer widget is created programmatically, and four text box widgets are added to it.
 
   .. javascript::
@@ -267,8 +267,7 @@ Programmatic example
       dojo.require("dijit.dijit");
       dojo.require("dojox.layout.TableContainer");
       dojo.require("dijit.form.TextBox");
-      dojo.require("dijit.form.CheckBox");
-      dojo.require("dijit.form.Textarea");
+      
 
       // Create the TableContainer, and insert it into the DOM node with id "putWidgetHere".
       // Add the custom class "labelsAndValues" 
