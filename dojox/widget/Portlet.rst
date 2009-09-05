@@ -148,6 +148,8 @@ Expandable Feed Portlet With Multiple URLs
 
 An ExpandableFeedPortlet is an extenstion of FeedPortlet.  Like FeedPortlet it can load an Atom or RSS feed from a URL, however it displays the feed items in a list with an icons placed to the left of each item.  When an icon is clicked, the content of the item, or story, is shown.  This is different from the FeedPortlet, which displays the content in a tooltip.
 
+This example also shows the dojox.widget.PortletFeedSettings widget being used with multiple URLs.  If the PortletFeedSettings is created as a SELECT node, it will display multiple URLs to the user, along with labels which are more readable than URLs.
+
 .. code-example::
   :version: 1.3.2-2.0
 
