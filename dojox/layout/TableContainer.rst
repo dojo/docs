@@ -249,9 +249,6 @@ Using Colspan
       }
     </style>
 
-
-
-
 Programmatic example
 --------------------
 
@@ -301,6 +298,52 @@ Programmatic example
   .. html::
 
     <div id="putWidgetHere" ></div>
+
+  Apply a custom class that styles both the label and value cells.  
+
+  .. css::
+
+    <style type="text/css">
+      .labelsAndValues-labelCell {
+
+        background-color: lightgrey;
+        padding-left: 5px;
+      }
+
+      .labelsAndValues-valueCell {
+
+        padding-left: 20px;
+        background-color: lightblue;
+      }
+    </style>
+
+Setting the Label Width
+-----------------------
+
+.. code-example::
+  :version: local
+
+  Load the required JavaScript files. These include the TableContainer itself, along with the three other widgets that it contains.
+
+  .. javascript::
+  
+    <script type="text/javascript">
+      dojo.require("dijit.dijit");
+      dojo.require("dojox.layout.TableContainer");
+      dojo.require("dijit.form.TextBox");
+    </script>
+
+  Declare the required HTML. Note the 'labelWidth' attribute on the TableContainer, which specifies the width of the labels in pixels.
+
+  .. html::
+
+    <div dojoType="dojox.layout.TableContainer" cols="2" id="tc1" customClass="labelsAndValues" labelWidth="10">
+      <div dojoType="dijit.form.TextBox" title="1" value="United States"></div>
+      <div dojoType="dijit.form.TextBox" title="2" value="Ireland"></div>
+      <div dojoType="dijit.form.TextBox" title="3" value="Italy"></div>
+      <div dojoType="dijit.form.TextBox" title="4" value="Faroe Islands"></div>     
+      
+    </div>
 
   Apply a custom class that styles both the label and value cells.  
 
