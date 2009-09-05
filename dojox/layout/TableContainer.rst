@@ -211,7 +211,7 @@ Using Colspan
       dojo.require("dijit.dijit");
       dojo.require("dojox.layout.TableContainer");
       dojo.require("dijit.form.TextBox");
-      dojo.require("dijit.Editor");
+      dojo.require("dijit.form.TextArea");
     </script>
 
   Declare the required HTML. Note that each contained widget is given a 'title' attribute.  Note the 'customClass' attribute added to the TableContainer.  This is used in the CSS declaration to add a style to all label and value cells.
@@ -221,7 +221,7 @@ Using Colspan
     <div dojoType="dojox.layout.TableContainer" cols="2" id="tc1" customClass="labelsAndValues" >
       <div dojoType="dijit.form.TextBox" title="First Name:"></div>
       <div dojoType="dijit.form.TextBox" title="Last Name:"></div>
-      <div dojoType="dijit.Editor" id="texteditor" height="5.5em" focusOnLoad="false" style="border:0px;">
+      <textarea dojoType="dijit.form.Textarea" id="texteditor" style="width:100%;">
         Hi, I'm a hacker, 
         I have no personal details to speak of,
         but I can write a widget in under a minute!
