@@ -76,10 +76,10 @@ The following attributes are available on the TableContainer
 
 TODO: how to use the component/class/method
 
-.. cv-compound::
+.. code-example::
+  :version: local
 
-  .. cv:: javascript
-    :version:local
+  .. javascript::
   
     <script type="text/javascript">
     try {
@@ -92,7 +92,7 @@ TODO: how to use the component/class/method
     }
     </script>
 
-  .. cv:: html
+  .. html::
 
     <div dojoType="dojox.layout.TableContainer" cols="1" id="tc1">
       <div dojoType="dijit.form.TextBox" title="First Name:"></div>
