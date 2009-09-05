@@ -157,7 +157,6 @@ Expandable Feed Portlet With Multiple URLs
    
       <div dojoType="dojox.widget.ExpandableFeedPortlet" title="Dojo News" 
 	id="todaysNews"
-	url="http://news.google.com/news?hl=en&topic=t&output=atom"
 	maxResults="5"
 	>
 	<select dojoType="dojox.widget.PortletFeedSettings">
