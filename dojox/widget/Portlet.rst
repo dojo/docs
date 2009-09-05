@@ -195,6 +195,7 @@ Portlets In A Grid Container
       dojo.require("dojox.widget.Portlet");
       dojo.require("dojox.widget.FeedPortlet");
       dojo.require("dojox.layout.GridContainer");
+      dojo.require("dojox.widget.Calendar");
     </script>
 
 
