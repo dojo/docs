@@ -92,7 +92,7 @@ Basic Portlet
   .. css::
 
     <style type="text/css">
-      @import "{{ baseUrl }}/dojox/widget/Portlet/Portlet.css"
+      @import "{{ baseUrl }}dojox/widget/Portlet/Portlet.css"
     </style>
 
 Declarative example
