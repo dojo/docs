@@ -25,3 +25,22 @@ Your existing templates should work, and will benefit from the massive
 performance gain of being able to manipulate the DOM, rather than having to do
 clunky innerHTML swaps you would have to do with a text-only system. It also
 allows for new DOM-centric capabilities.
+
+.. code-example::
+  :version: 1.3.2-2.0
+
+  .. javascript::
+
+    <script type="text/javascript">
+      dojo.require("dojox.dtl.Inline");
+    </script>
+
+  .. html::
+ 
+    <div dojoType="dojox.dtl.Inline" id="inline" context="{items: ['apple', 'banana', 'orange']}">
+      <ul>
+        {% for item in items %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
