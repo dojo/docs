@@ -486,6 +486,10 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
     A menu item that can be used as a placeholder.
 
+  * `dojox.widget.Portlet <dojox/widget/Portlet>`_
+
+    An enhanced TitlePane designed to be used with the dojox.layout.GridContainer.
+
   * `dojox.widget.Roller <dojox/widget/Roller>`_
 
     An unobtrusive "roller", displaying one message from a list in a loop
