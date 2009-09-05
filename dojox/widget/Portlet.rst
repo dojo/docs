@@ -69,6 +69,7 @@ Basic Portlet
   .. javascript::
 
     <script type="text/javascript">
+      dojo.require("dijit.dijit");
       dojo.require("dojox.widget.Portlet");
     </script>
 
