@@ -76,6 +76,13 @@ The following attributes are available on the TableContainer
 
 TODO: how to use the component/class/method
 
+========
+Examples
+========
+
+Simple Example, one column and no styling
+-----------------------------------------
+
 .. code-example::
   :version: local
 
@@ -101,11 +108,6 @@ TODO: how to use the component/class/method
       <div dojoType="dijit.form.CheckBox" title="Employed"></div>
       <div dojoType="dijit.form.NumberSpinner" title="Age" value="30"></div>
     </div>
-
-
-========
-Examples
-========
 
 Programmatic example
 --------------------
