@@ -37,9 +37,20 @@ TODO: how to use the component/class/method
 .. code-block :: javascript
  :linenos:
 
- <script type="text/javascript">
-   // your code
- </script>
+ <div dojoType="dojox.widget.Portlet" title="My Flickr">
+
+   <div dojoType="dojox.widget.PortletSettings">
+     <div dojoType="dojox.layout.TableContainer" cols="1">
+       <div dojoType="dijit.form.TextBox" title="Option 3"></div>
+       <div dojoType="dijit.form.TextBox" title="Option 4"></div>
+     </div>
+   </div>
+
+   <div>
+     The Contents of the portlet go here  
+   </div>
+ </div>
+
 
 
 
@@ -47,10 +58,33 @@ TODO: how to use the component/class/method
 Examples
 ========
 
-Programmatic example
+Basic Portlet
 --------------------
 
-TODO: example
+.. code-example::
+
+  Load the Portlet JavaScript.
+
+  .. javascript::
+
+    <script type="text/javascript">
+      dojo.require("dojox.widget.Portlet");
+    </script>
+
+  .. html::
+   
+      <div dojoType="dojox.widget.Portlet" title="A Simple Portlet">
+	<div dojoType="dojox.widget.PortletSettings">
+          This is a simple settings widget.
+          Put whatever you like in here       
+	</div>
+
+	<div style="height: 100px;">
+	  The contents of the portlet go in here.
+          Try clicking the settings icon in the title bar to see the settings. 
+            
+	</div>
+    </div>
 
 Declarative example
 -------------------
