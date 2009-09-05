@@ -45,7 +45,6 @@ Printing a simple list
 
   .. html::
  
-    <!-- Use the DOM-based version with an external context -->
     <script type="text/html" dojoType="dojox.dtl.Inline" id="inline" context="{items: ['apple', 'banana', 'orange']}">
       <ul>
         {% for item in items %}
