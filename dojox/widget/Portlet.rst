@@ -69,6 +69,8 @@ Basic Portlet
   .. javascript::
 
     <script type="text/javascript">
+      @import "{{ baseUrl }}/dojox/widget/Portlet/Portlet.css"
+
       dojo.require("dijit.dijit");
       dojo.require("dojox.widget.Portlet");
     </script>
