@@ -490,6 +490,10 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
     An enhanced TitlePane designed to be used with the dojox.layout.GridContainer.
 
+  * `dojox.widget.FeedPortlet <dojox/widget/Portlet>`_
+
+    An enhanced Portlet which can load both remote and local Atom and RSS feeds, displaying them as a list.
+
   * `dojox.widget.Roller <dojox/widget/Roller>`_
 
     An unobtrusive "roller", displaying one message from a list in a loop
