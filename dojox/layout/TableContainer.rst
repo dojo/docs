@@ -79,19 +79,17 @@ TODO: how to use the component/class/method
 .. code-example::
   :version: local
 
+  Load the required JavaScript files. These include the TableContainer itself, along with the three other widgets that it contains.
   .. javascript::
   
     <script type="text/javascript">
-    try {
       dojo.require("dojox.layout.TableContainer");
       dojo.require("dijit.form.TextBox");
       dojo.require("dijit.form.CheckBox");
       dojo.require("dijit.form.NumberSpinner");
-    } catch (e) {
-      console.log("Error: ", e);
-    }
     </script>
 
+  Declare the required HTML. Note that each contained widget is given a 'title' attribute.  This is the simplest type of TableContainer, with just one column, and no special CSS added
   .. html::
 
     <div dojoType="dojox.layout.TableContainer" cols="1" id="tc1">
