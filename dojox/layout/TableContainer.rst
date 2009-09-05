@@ -79,6 +79,7 @@ TODO: how to use the component/class/method
 .. cv-compound::
 
   .. cv:: javascript
+    :verision:local
   
     <script type="text/javascript">
     try {
