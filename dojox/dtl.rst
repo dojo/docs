@@ -45,10 +45,10 @@ Printing a simple list
 
   .. html::
  
-    <script type="text/html" dojoType="dojox.dtl.Inline" id="inline" context="{items: ['apple', 'banana', 'orange']}">
+    <div dojoType="dojox.dtl.Inline" id="inline" context="{items: ['apple', 'banana', 'orange']}">
       <ul>
         {% for item in items %}
           <li>{{ item }}</li>
         {% endfor %}
       </ul>
-    </script>
+    </div>
