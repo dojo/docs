@@ -253,12 +253,20 @@ Portlets In A Grid Container
         </div>
       
         
-        <div dojoType="dojox.widget.Portlet" title="Second Portlet">
+        <div dojoType="dojox.widget.Portlet" title="Calendar Portlet">
           <div dojoType="dojox.widget.PortletSettings">
             Put whatever settings you like in here
           </div>
           <div>
-             Drag me around by clicking on my title bar
+             Drag me around by clicking on my title bar.
+          </div>
+          <div dojoType="dojox.widget.Calendar">
+            <script type="dojo/connect" event="onValueSelected" args="date">
+              dojo.byId("dateGoesHere").innerHTML = "Date Selected: " + date.toString();
+            </script>
+          </div>
+          <div id="dateGoesHere">
+
           </div>
         </div>
 
