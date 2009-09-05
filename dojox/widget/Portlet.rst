@@ -96,7 +96,7 @@ Basic Portlet
     </style>
 
 Basic Feed Portlet
---------------------
+------------------
 
 .. code-example::
   :version: 1.3.2-2.0
@@ -135,6 +135,49 @@ Basic Feed Portlet
       @import "{{ baseUrl }}dojox/widget/Portlet/Portlet.css"
     </style>
 
+
+Expandable Feed Portlet With Multiple URLs
+------------------------------------------
+
+.. code-example::
+  :version: 1.3.2-2.0
+
+  Load the Portlet JavaScript.
+
+  .. javascript::
+
+    <script type="text/javascript">
+
+      dojo.require("dijit.dijit");
+      dojo.require("dojox.widget.Portlet");
+      dojo.require("dojox.widget.FeedPortlet");
+    </script>
+
+  .. html::
+   
+      <div dojoType="dojox.widget.ExpandableFeedPortlet" title="Dojo News" 
+	id="todaysNews"
+	url="http://news.google.com/news?hl=en&topic=t&output=atom"
+	maxResults="5"
+	>
+	<select dojoType="dojox.widget.PortletFeedSettings">
+          <option value="http://shaneosullivan.wordpress.com/category/dojo/feed/">Dojo Blatherings</option>
+          <option value="http://www.dojotoolkit.org/aggregator/rss">Planet Dojo</option>
+          <option value="http://feeds2.feedburner.com/ajaxian">Ajaxian</option>
+        </select>
+
+	<div>
+	This is a FeedPortlet with a multiple feeds.
+	Click the settings icon in the title bar to choose a
+	different feed to load.
+	</div>
+      </div>
+
+  .. css::
+
+    <style type="text/css">
+      @import "{{ baseUrl }}dojox/widget/Portlet/Portlet.css"
+    </style>
 
 Declarative example
 -------------------
