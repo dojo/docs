@@ -138,7 +138,7 @@ Programmatic example
     <div>
       <span>Enter Search Text</span>
       <input type="text" value="dojo ajax toolkit">
-      <button onclick="doSearch">Search</button>
+      <button onclick="doSearch()">Search</button>
     </div>
 
     <table id="resultTable">
