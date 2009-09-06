@@ -379,7 +379,7 @@ Array Methods
 .. code-block :: javascript
   :linenos:
 
-  // a list of anchors that are only children
+  // a list of anchors that are only children, same as dojo.query("a:only-child")
   var onlyChildren = dojo.query("a").
     filter(function(node){
       return node.parentNode.childNodes.length == 1;
