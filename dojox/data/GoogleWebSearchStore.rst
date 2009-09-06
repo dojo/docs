@@ -117,7 +117,11 @@ Programmatic example
 
           var titleCell = dojo.create("td", {innerHTML: store.getValue(item, "titleNoFormatting")}, row);
 
-          var urlCell = dojo.create("td", {innerHTML: store.getValue(item, "unescapedUrl")}, row);
+          var urlCell = dojo.create("td", {}, row);
+          dojo.create("a", {
+                             href: store.getValue(item, "unescapedUrl"),
+                             innerHTML: store.getValue(item, "unescapedUrl")
+                           }, urlCell);
         })
       };
 
