@@ -103,7 +103,11 @@ Programmatic example
 
       var callbackFunction = function(items /* Array */) {
 
-        var tableBody = dojo.byId("resultTable").tBodies[0];      
+        var table = dojo.byId("resultTable");
+        var tableBody = table.tBodies[0];      
+
+        // Show the table
+        dojo.style(table, "display", "");
 
       
         dojo.forEach(items, function(item, index){
@@ -141,12 +145,12 @@ Programmatic example
       <button onclick="doSearch()">Search</button>
     </div>
 
-    <table id="resultTable" style="border: 1px solid black;">
-      <th>
-        <td>Number</td>
-        <td>Title</td>
-        <td>URL</td>
-      </th>
+    <table id="resultTable" style="border: 1px solid black; display: none;">
+      <thead>
+        <th>Number</th>
+        <th>Title</th>
+        <th>URL</th>
+      </thead>
       <tbody>
       </tbody>
     </table>
