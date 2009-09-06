@@ -147,7 +147,7 @@ Programmatic example
 
     <table id="resultTable" style="border: 1px solid black; display: none;">
       <thead>
-        <th>Number</th>
+        <th>#</th>
         <th>Title</th>
         <th>URL</th>
       </thead>
