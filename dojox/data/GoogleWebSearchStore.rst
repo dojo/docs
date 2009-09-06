@@ -91,7 +91,7 @@ Programmatic example
 .. code-example::
 
   .. javascript::
-
+    <script type="text/javascript">
     dojo.require("dojox.data.GoogleSearchStore"); 
     var store = new dojox.data.GoogleSearchStore();
 
@@ -123,6 +123,7 @@ Programmatic example
       onComplete: callbackFunction,
       onError: onErrorFunction
     });
+    </script>
 
   .. html::
 
