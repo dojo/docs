@@ -88,7 +88,55 @@ Examples
 Programmatic example
 --------------------
 
-TODO: example
+.. code-example::
+
+  .. javascript::
+
+    dojo.require("dojox.data.GoogleSearchStore"); 
+    var store = new dojox.data.GoogleSearchStore();
+
+    var query = {text: "dojo ajax toolkit"};
+
+    var callbackFunction = function(items /* Array */) {
+      var tableBody = dojo.byId("resultTable").tBodies[0];      
+
+      
+      dojo.forEach(items, function(item, index){
+        var row = dojo.create("tr", {}, tableBody);
+
+        var numberCell = dojo.create("td", {innerHTML: index}, row);
+
+        var titleCell = dojo.create("td", {innerHTML: store.getValue(item, "titleNoFormatting")}, row);
+
+        var urlCell = dojo.create("td", {innerHTML: store.getValue(item, "unescapedUrl")}, row);
+      })
+    };
+
+    var onErrorFunction = function() {
+      console.log("An error occurred getting Google Search data");
+    }
+
+    store.fetch({
+      query: query,
+      count: 20,
+      start: 0,
+      onComplete: callbackFunction,
+      onError: onErrorFunction
+    });
+
+  .. html::
+
+    <table id="resultTable">
+      <th>
+        <td>Number</td>
+        <td>Title</td>
+        <td>URL</td>
+      </th>
+      <tbody>
+      </tbody>
+    </table>
+
+
 
 Declarative example
 -------------------
