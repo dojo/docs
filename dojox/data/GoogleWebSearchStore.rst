@@ -99,6 +99,7 @@ Programmatic example
     var query = {text: "dojo ajax toolkit"};
 
     var callbackFunction = function(items /* Array */) {
+      console.log("got items", items);
       var tableBody = dojo.byId("resultTable").tBodies[0];      
 
       
@@ -124,6 +125,7 @@ Programmatic example
       onComplete: callbackFunction,
       onError: onErrorFunction
     });
+    console.log("called fetch with query", query);
     </script>
 
   .. html::
