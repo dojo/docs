@@ -159,14 +159,6 @@ Programmatic example
       </tbody>
     </table>
 
-
-
-Declarative example
--------------------
-
-TODO: example
-
-
 ========
 See also
 ========
