@@ -94,41 +94,52 @@ Programmatic example
 
     <script type="text/javascript">
     dojo.require("dojox.data.GoogleSearchStore"); 
-    var store = new dojox.data.GoogleSearchStore();
 
-    var query = {text: "dojo ajax toolkit"};
+    function doSearch() {
 
-    var callbackFunction = function(items /* Array */) {
-      console.log("got items", items);
-      var tableBody = dojo.byId("resultTable").tBodies[0];      
+      var store = new dojox.data.GoogleSearchStore();
+
+      var query = {text: "dojo ajax toolkit"};
+
+      var callbackFunction = function(items /* Array */) {
+        console.log("got items", items);
+        var tableBody = dojo.byId("resultTable").tBodies[0];      
 
       
-      dojo.forEach(items, function(item, index){
-        var row = dojo.create("tr", {}, tableBody);
+        dojo.forEach(items, function(item, index){
+          var row = dojo.create("tr", {}, tableBody);
+  
+          var numberCell = dojo.create("td", {innerHTML: index}, row);
 
-        var numberCell = dojo.create("td", {innerHTML: index}, row);
+          var titleCell = dojo.create("td", {innerHTML: store.getValue(item, "titleNoFormatting")}, row);
 
-        var titleCell = dojo.create("td", {innerHTML: store.getValue(item, "titleNoFormatting")}, row);
+          var urlCell = dojo.create("td", {innerHTML: store.getValue(item, "unescapedUrl")}, row);
+        })
+      };
 
-        var urlCell = dojo.create("td", {innerHTML: store.getValue(item, "unescapedUrl")}, row);
-      })
-    };
+      var onErrorFunction = function() {
+        console.log("An error occurred getting Google Search data");
+      }
 
-    var onErrorFunction = function() {
-      console.log("An error occurred getting Google Search data");
+      store.fetch({
+        query: query,
+        count: 20,
+        start: 0,
+        onComplete: callbackFunction,
+        onError: onErrorFunction
+      });
+      console.log("called fetch with query", query);
+
     }
-
-    store.fetch({
-      query: query,
-      count: 20,
-      start: 0,
-      onComplete: callbackFunction,
-      onError: onErrorFunction
-    });
-    console.log("called fetch with query", query);
     </script>
 
   .. html::
+
+    <div>
+      <span>Enter Search Text</span>
+      <input type="text" value="dojo ajax toolkit">
+      <button onclick="doSearch">Search</button>
+    </div>
 
     <table id="resultTable">
       <th>
