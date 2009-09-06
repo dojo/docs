@@ -102,7 +102,7 @@ Programmatic example
       var query = {text: "dojo ajax toolkit"};
 
       var callbackFunction = function(items /* Array */) {
-        console.log("got items", items);
+
         var tableBody = dojo.byId("resultTable").tBodies[0];      
 
       
@@ -141,7 +141,7 @@ Programmatic example
       <button onclick="doSearch()">Search</button>
     </div>
 
-    <table id="resultTable">
+    <table id="resultTable" style="border: 1px solid black;">
       <th>
         <td>Number</td>
         <td>Title</td>
