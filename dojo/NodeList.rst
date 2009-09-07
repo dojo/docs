@@ -355,7 +355,7 @@ Array Methods
       return node.innerHTML == "foo";
     });
 
-  // or using the string version:
+  // or using the string version (item is the node):
   var hasFoo = dojo.query("a").some("return item.innerHTML == 'foo';");
 
 :every:
@@ -365,12 +365,12 @@ Array Methods
   :linenos:
 
   var areOnlyChildren = dojo.query("a").
-    every(function(node){
-      return node.parentNode.childNodes.length == 1;
+    every(function(node){ 
+       return dojo.query(node.parentNode).children().length == 1
     });
 
-  // or using the string version:
-  var hasFoo = dojo.query("a").some("return item.parentNode.childNodes.length == 1;");
+  // or using the string version (item is the node):
+  var areOnlyChildren = dojo.query("a").every("return dojo.query(item.parentNode).children().length == 1;");
 
 
 :filter:
@@ -382,12 +382,19 @@ Array Methods
   // a list of anchors that are only children, same as dojo.query("a:only-child")
   var onlyChildren = dojo.query("a").
     filter(function(node){
-      return node.parentNode.childNodes.length == 1;
+      return dojo.query(node.parentNode).children().length == 1;
     });
 
   // anchors that also have the class ``foo`` and an attribute ``bar``:
   var fooBarAnchors = dojo.query("a").filter(".foo[bar]");
 
+  dojo.query("*").filter(function(item){
+    // highlight every paragraph
+    return (item.nodeName == "p");
+  }).style("backgroundColor", "yellow");
+
+  // the same filtering using a CSS selector
+  dojo.query("*").filter("p").styles("backgroundColor", "yellow"); 
 
 :query:
   Searches under all of the nodes in this list for nodes that match the passed query. Returns a flattened ``NodeList`` of all matching elements (can be chained).
