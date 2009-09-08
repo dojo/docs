@@ -83,8 +83,10 @@ Basic Usage
 
   .. css::
 
-    <link rel="stylesheet" type="text/css" href="{{ baseUrl }}dojox/editor/plugins/resources/css/PageBreak.css">
-
+    <style>
+      @import "dojox/editor/plugins/resources/css/PageBreak.css";
+    </style>
+    
   .. html::
 
     <b>Enter some text or select a position, then push the PageBreak button or use CTRL-SHIFT-ENTER, to insert a page break at the desired point.</b>
