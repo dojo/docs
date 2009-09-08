@@ -121,3 +121,4 @@ See also
 ========
 
 * http://www.sitepen.com/blog/2008/03/13/analyze-your-code-errors-interface-and-marketing-effectiveness-with-dojoxanalytics/
+* http://dojocampus.org/content/2009/09/03/profiling-with-dojoxanalytics/
