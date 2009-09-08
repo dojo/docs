@@ -44,6 +44,14 @@ Once it has been required in, all you have to do is include it in the list of ex
 
   <div dojoType="dijit.Editor" id="editor" extraPlugins="['pageBreak']"></div>
 
+
+You also need to include the CSS for it.  For example:
+.. code-block :: html
+
+  <style>
+     import "dojox/editor/plugins/resources/css/PageBreak.css";
+  </style>
+
 And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the PageBreak plugin!  You can use the button or hotkey to insert page breaks as you desire.
 
 ===========
