@@ -1,7 +1,7 @@
 #format dojo_rst
 
-dojox.editor.plugins.PageBreak
-==============================
+dojox.editor.plugins.ShowBlockNodes
+===================================
 
 :Status: Draft
 :Version: 1.0
