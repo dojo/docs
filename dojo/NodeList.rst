@@ -364,6 +364,7 @@ Array Methods
 .. code-block :: javascript
   :linenos:
 
+  // dojo.require("dojo.NodeList-traverse"); must be added in your code to use dojo.query().children() (new in 1.4)  
   var areOnlyChildren = dojo.query("a").
     every(function(node){ 
        return dojo.query(node.parentNode).children().length == 1
@@ -380,6 +381,7 @@ Array Methods
   :linenos:
 
   // a list of anchors that are only children, same as dojo.query("a:only-child")
+  // dojo.require("dojo.NodeList-traverse"); must be added in your code to use dojo.query().children() (new in 1.4)
   var onlyChildren = dojo.query("a").
     filter(function(node){
       return dojo.query(node.parentNode).children().length == 1;
