@@ -72,7 +72,7 @@ Basic Usage
     <script>
       dojo.require("dijit.form.Button");
       dojo.require("dijit.Editor");
-      dojo.require("dojox.editor.plugins.ShowblockNodes");
+      dojo.require("dojox.editor.plugins.ShowBlockNodes");
     </script>
 
   .. css::
