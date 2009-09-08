@@ -48,7 +48,6 @@ The first example uses setContent() and show() to vary the message and display i
 
     <script type="text/javascript">
        dojo.require("dojox.widget.Toaster");
-       dojo.require("dojo.parser");
 
        function surpriseMe() {
           dijit.byId('first_toaster').setContent('Twinkies are now being served in the vending machine!', 'fatal');
@@ -131,7 +130,6 @@ This example builds a Toaster programatically and lets you set params.
 
     <script type="text/javascript">
        dojo.require("dojox.widget.Toaster");
-       dojo.require("dojo.parser");
 
        function showMyToaster() {
           toaster = dijit.byId('myToaster');
