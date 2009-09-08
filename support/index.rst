@@ -5,6 +5,9 @@ Dojo is a [[http://dojofoundation.org/about/hundredpoint|hundred point]] open so
 [[http://www.dojotoolkit.org/support]] lists several methods of gaining support for Dojo
 
 
+== Before asking for help
+check the FAQ, the mailing list archives, the stack overflow forums, firebug, and the source
+
 == Options ==
 
  * [[http://www.dojotoolkit.org/support/faq|FAQ]]
@@ -17,3 +20,4 @@ Dojo is a [[http://dojofoundation.org/about/hundredpoint|hundred point]] open so
   * [[http://stackoverflow.com/questions/tagged/dijit|dijit]]
   * [[http://stackoverflow.com/questions/tagged/dojox|dojox]]
   * when you post questions, use an appropriate tag (ie, dojo, dijit or dojox)
+
