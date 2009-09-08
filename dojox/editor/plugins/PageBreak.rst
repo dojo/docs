@@ -1,7 +1,7 @@
 #format dojo_rst
 
-dojox.editor.plugins.PrettyPrint
-================================
+dojox.editor.plugins.PageBreak
+==============================
 
 :Status: Draft
 :Version: 1.0
