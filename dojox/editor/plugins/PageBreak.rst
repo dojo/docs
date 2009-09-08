@@ -81,6 +81,10 @@ Basic Usage
       dojo.require("dojox.editor.plugins.PageBreak");
     </script>
 
+  .. css::
+ 
+    import "{{ baseUrl }}dojox/editor/plugins/resources/css/PageBreak.css";
+
   .. html::
 
     <b>Enter some text or select a position, then push the PageBreak button or use CTRL-SHIFT-ENTER, to insert a page break at the desired point.</b>
@@ -109,7 +113,3 @@ Basic Usage
     </li>
     </ul>
     </div>
-
-  .. css::
- 
-    import "/moin_static163/js/dojo/trunk/release/dojo/dojox/editor/plugins/resources/css/PageBreak.css";
