@@ -117,6 +117,7 @@ Example 1: Basic usage
       
       # Also just define the styles inline in case the stylesheet can't be loaded.
       # Note that for Dojo 1.4+, this is not needed at all.
+
       .standbyUnderlayNode {
         display: none;
         opacity: 0;
