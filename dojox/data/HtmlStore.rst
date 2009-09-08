@@ -176,7 +176,7 @@ Connecting HtmlStore to dijit.form.ComboBox
   .. cv :: javascript
 
     <script>
-      dojo.require("dojox.data.HtmlTableStore");
+      dojo.require("dojox.data.HtmlStore");
       dojo.require("dijit.form.ComboBox");
     </script>
 
@@ -220,7 +220,7 @@ Connecting HtmlStore to dijit.form.ComboBox
     </table>
 
     <b>Combo lookup of isbn</b><br> 
-    <div dojoType="dojox.data.HtmlTableStore" tableId="myData" jsId="comboStore"></div>
+    <div dojoType="dojox.data.HtmlStore" dataId="myData" jsId="comboStore"></div>
     <div dojoType="dijit.form.ComboBox" store="comboStore" searchAttr="isbn"></div>
 
 
