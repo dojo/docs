@@ -50,7 +50,7 @@ You also need to include the CSS for it.  For example:
 .. code-block :: html
 
   <style>
-    import "dojox/editor/plugins/resources/css/PageBreak.css";
+    @import "dojox/editor/plugins/resources/css/PageBreak.css";
   </style>
 
 
