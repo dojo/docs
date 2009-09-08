@@ -23,7 +23,7 @@ There are currently a small set of nice features that can be plugged into the di
 
 | 
 
-* `dojox.editor.plugins.PrettyPrint <dojox/editor/plugins/TablePlugins>`_  -- **STABLE**  -- A headless plugin that improves the output format from dijit.Editor by structuring the tag indentions and text lines in a more easily human-readable way.  **This plugin is new to the Dojo Toolkit 1.4.**
+* `dojox.editor.plugins.PrettyPrint <dojox/editor/plugins/PrettyPrint>`_  -- **STABLE**  -- A headless plugin that improves the output format from dijit.Editor by structuring the tag indentions and text lines in a more easily human-readable way.  **This plugin is new to the Dojo Toolkit 1.4.**
 
 |
 
