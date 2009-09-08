@@ -5,54 +5,22 @@ dojox.editor
 
 :Status: Draft
 :Version: 1.0
-:Project owner: ?--
-:Available: since V?
+:Project owner: Mike Wilcox, Jared Jurkiewicz
+:Available: since V1.1
 
 .. contents::
    :depth: 2
 
-TODO: short summary of the component/class/method
-
+The dojox.editor component is a holding place for additional features for the dijit.Editor that are useful, but not extremely commonplace.
 
 ============
 Introduction
 ============
 
-TODO: introduce the component/class/method
-
-
-=====
-Usage
-=====
-
-TODO: how to use the component/class/method
-
-.. code-block :: javascript
- :linenos:
-
- <script type="text/javascript">
-   // your code
- </script>
-
-
-
-========
-Examples
-========
-
-Programmatic example
---------------------
-
-TODO: example
-
-Declarative example
--------------------
-
-TODO: example
-
+The dojox.editor component is a holding place for additional features for the dijit.Editor that are useful, but not extremely commonplace.
 
 ========
 See also
 ========
 
-* TODO: links to other related articles
+* `dojox.editor.plugins <dojox/editor/plugins>`_
