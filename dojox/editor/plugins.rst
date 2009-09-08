@@ -31,6 +31,6 @@ There are currently a small set of nice features that can be plugged into the di
 
 |
 
-* `dojox.editor.plugins.ShowBlockNodes<dojox.editor.plugins.TablePlugins>`_  -- **STABLE** -- A plugin + associated button icon and keybind for helping see the current document 'structure' by applying styles to the block elements in the document to make the layout visible.  It does not affect the output contents from the editor in any way, as the styles are applied on the <body> node of the editor iframe document, which is not serialized.  Only the content underneath the body tag is serialized when dijit.Editor.attr("value")/dijit.Editor.getValue() are called.  **This plugin is new to the Dojo Toolkit 1.4.**
+* `dojox.editor.plugins.ShowBlockNodes <dojox.editor.plugins.ShowBlockNodes>`_  -- **STABLE** -- A plugin + associated button icon and keybind for helping see the current document 'structure' by applying styles to the block elements in the document to make the layout visible.  It does not affect the output contents from the editor in any way, as the styles are applied on the <body> node of the editor iframe document, which is not serialized.  Only the content underneath the body tag is serialized when dijit.Editor.attr("value")/dijit.Editor.getValue() are called.  **This plugin is new to the Dojo Toolkit 1.4.**
 
 |
