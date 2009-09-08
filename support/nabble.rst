@@ -1,5 +1,3 @@
-#format dojo_rst
-
 Mailing List Archive
 ====================
 
