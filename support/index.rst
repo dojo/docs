@@ -7,8 +7,13 @@ Dojo is a [[http://dojofoundation.org/about/hundredpoint|hundred point]] open so
 
 == Options ==
 
- * [[http://www.dojotoolkit.org/support/faq]]
+ * [[http://www.dojotoolkit.org/support/faq|FAQ]]
  * IRC: #dojo at irc.freenode.net
  * the dojo-interest mailing list at [[http://mail.dojotoolkit.org/mailman/listinfo/dojo-interest]]
   * [[support/nabble|more info]] on the mailing list and the nabble archive
  * commercial support from sitepen at [[http://sitepen.com/services/support.php]]
+ * [[stackoverflow.com]] has forums for
+  * [[http://stackoverflow.com/questions/tagged/dojo|dojo]]
+  * [[http://stackoverflow.com/questions/tagged/dijit|dijit]]
+  * [[http://stackoverflow.com/questions/tagged/dojox|dojox]]
+  * when you post questions, use an appropriate tag (ie, dojo, dijit or dojox)
