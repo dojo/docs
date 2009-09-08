@@ -16,6 +16,8 @@ the dojo-interest mailing list is at [[http://mail.dojotoolkit.org/mailman/listi
 
 the mailing list is archived by nabble
  * [[http://www.nabble.com/Dojo-(2)-f36462.html]]
+  * all new posts should go here, but it's only a few months old
  * there is another archive on nabble, but it is broken
   * don't use: [[http://www.nabble.com/Dojo-f13676.html]]
-  * the administer has been contacted, but no response yet
+  * the administer has been contacted, and they're working to sort things out
+  * the current posts aren't archived properly here, but older ones where and there's an extensive archive
