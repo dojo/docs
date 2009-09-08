@@ -91,6 +91,7 @@ The next example does the same thing, but uses the publish/subscribe model.  The
   .. cv:: javascript
 
     <script>
+      dojo.require("dojox.widget.Toaster");
       function surpriseMe() {
         dojo.publish("testMessageTopic", 
           [
