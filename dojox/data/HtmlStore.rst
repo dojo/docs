@@ -135,7 +135,7 @@ The constructor for HtmlTableStore takes the following possible parameters in it
 +--------------+------------------------------------------------------------------------------------------+----------------------+
 |url           |The URL from which to load the HTML file containing the HTML table. This is optional.     | string               |
 +--------------+------------------------------------------------------------------------------------------+----------------------+
-|tableId       |The id of the HTML tag that contains the table to read from, in either a remote page (if  | string               |
+|dataId        |The id of the HTML tag that contains the table to read from, in either a remote page (if  | string               |
 |              |the URL was passed) or in the current HTML DOM if the url parameter is null. This is      |                      |
 |              |required.                                                                                 |                      |
 +--------------+------------------------------------------------------------------------------------------+----------------------+
