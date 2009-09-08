@@ -1,4 +1,5 @@
-= Mailing List Archive =;
+
+= Mailing List Archive =
 
 The mailing list is a good way to ask questions about Dojo
  * check the archive first
