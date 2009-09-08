@@ -83,9 +83,7 @@ Basic Usage
 
   .. css::
 
-    <style>
-      import "{{ baseUrl }}dojox/editor/plugins/resources/css/PageBreak.css";
-    </style>
+    <link rel="stylesheet" type="text/css" href="{{ baseUrl }}dojox/editor/plugins/resources/css/PageBreak.css">
 
   .. html::
 
