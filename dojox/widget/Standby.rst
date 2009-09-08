@@ -170,6 +170,27 @@ Example 2: Programmatic creation
     <style type="text/css">
       @import "/moin_static163/js/dojo/release/dojox/widget/Standby/Standby.css";
     </style>
+    <!-- Also just define the styles inline in case the stylesheet can't be loaded. -->
+    <!-- Note that for Dojo 1.4+, this is not needed at all. -->
+    <style>
+      .standbyUnderlayNode {
+        display: none;
+        opacity: 0;
+        z-index: 9999;
+        position: absolute;
+       cursor:wait;
+      }
+
+      .standbyImageNode {
+        opacity: 0;
+        display: none;
+        z-index: -10000;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        cursor:wait;
+      }
+    </style>
 
 
 Example 3: Changing overlay color
@@ -202,6 +223,27 @@ Example 3: Changing overlay color
 
     <style type="text/css">
       @import "/moin_static163/js/dojo/release/dojox/widget/Standby/Standby.css";
+    </style>
+    <!-- Also just define the styles inline in case the stylesheet can't be loaded. -->
+    <!-- Note that for Dojo 1.4+, this is not needed at all. -->
+    <style>
+      .standbyUnderlayNode {
+        display: none;
+        opacity: 0;
+        z-index: 9999;
+        position: absolute;
+       cursor:wait;
+      }
+
+      .standbyImageNode {
+        opacity: 0;
+        display: none;
+        z-index: -10000;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        cursor:wait;
+      }
     </style>
 
 
@@ -236,6 +278,27 @@ Example 4: Changing overlay color and image
     <style type="text/css">
       @import "/moin_static163/js/dojo/release/dojox/widget/Standby/Standby.css";
     </style>
+    <!-- Also just define the styles inline in case the stylesheet can't be loaded. -->
+    <!-- Note that for Dojo 1.4+, this is not needed at all. -->
+    <style>
+      .standbyUnderlayNode {
+        display: none;
+        opacity: 0;
+        z-index: 9999;
+        position: absolute;
+       cursor:wait;
+      }
+
+      .standbyImageNode {
+        opacity: 0;
+        display: none;
+        z-index: -10000;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        cursor:wait;
+      }
+    </style>
 
 
 Example 5: Showing curved border cloning (works on Firefix and Safari only)
@@ -268,6 +331,27 @@ Example 5: Showing curved border cloning (works on Firefix and Safari only)
 
     <style type="text/css">
       @import "/moin_static163/js/dojo/release/dojox/widget/Standby/Standby.css";
+    </style>
+    <!-- Also just define the styles inline in case the stylesheet can't be loaded. -->
+    <!-- Note that for Dojo 1.4+, this is not needed at all. -->
+    <style>
+      .standbyUnderlayNode {
+        display: none;
+        opacity: 0;
+        z-index: 9999;
+        position: absolute;
+       cursor:wait;
+      }
+
+      .standbyImageNode {
+        opacity: 0;
+        display: none;
+        z-index: -10000;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        cursor:wait;
+      }
     </style>
 
 Example 6: Overlaying a dijit.form.TextBox
@@ -302,4 +386,25 @@ Example 6: Overlaying a dijit.form.TextBox
 
     <style type="text/css">
       @import "/moin_static163/js/dojo/release/dojox/widget/Standby/Standby.css";
+    </style>
+    <!-- Also just define the styles inline in case the stylesheet can't be loaded. -->
+    <!-- Note that for Dojo 1.4+, this is not needed at all. -->
+    <style>
+      .standbyUnderlayNode {
+        display: none;
+        opacity: 0;
+        z-index: 9999;
+        position: absolute;
+        cursor:wait;
+      }
+
+      .standbyImageNode {
+        opacity: 0;
+        display: none;
+        z-index: -10000;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        cursor:wait;
+      }
     </style>
