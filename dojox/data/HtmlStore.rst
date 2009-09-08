@@ -142,9 +142,9 @@ The constructor for HtmlTableStore takes the following possible parameters in it
 |trimWhitespace|**New to Dojo 1.4** Pre 1.4, the surrounding whitespace inside an attribute element, such | boolean              |
 |              |as <td> in a table was treated as part of the attribute value.  This could potentially    |                      |
 |              |cause problems if the tables were reformatted to include more whitespace, particularly in |                      |
-|              |the header where attribute names are read.  So this attribute was added.  If set to true  |                      |
-|              |HtmlStore ignores that whitespace (strips it off), when it indexes the attribute headers  |                      |
-|              |and when it retrieves values.  The default is false for backwards compatibility.          |                      |
+|              |the header where attribute names are read.  So this store attribute was added.  If set to |                      |
+|              |true HtmlStore ignores that whitespace (strips it off), when it indexes the attribute     |                      |
+|              |headers and when it retrieves values.  The default is false for backwards compatibility.  |                      |
 +--------------+------------------------------------------------------------------------------------------+----------------------+
 
 
