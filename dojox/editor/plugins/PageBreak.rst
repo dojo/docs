@@ -91,7 +91,7 @@ Basic Usage
 
     <b>Enter some text or select a position, then push the PageBreak button or use CTRL-SHIFT-ENTER, to insert a page break at the desired point.</b>
     <br>
-    <div dojoType="dijit.Editor" height="300px"id="input" extraPlugins="['pagebreak']">
+    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['pagebreak']">
     <div>
     <br>
     blah blah & blah!
