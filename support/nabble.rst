@@ -1,4 +1,3 @@
-
 = Mailing List Archive =
 
 The mailing list is a good way to ask questions about Dojo
@@ -8,15 +7,12 @@ The mailing list is a good way to ask questions about Dojo
  ** provide a succinct description of the problem and what you're trying to do
  ** a short javascript example of what's not working
 
-========
-The List
-========
+== The List ==
 
 the dojo-interest mailing list is at [[http://mail.dojotoolkit.org/mailman/listinfo/dojo-interest]]
 
-===========
-The Archive
-===========
+== The Archive ==
+
 
 the mailing list is archived by nabble
  * [[http://www.nabble.com/Dojo-(2)-f36462.html]]
