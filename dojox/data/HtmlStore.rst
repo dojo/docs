@@ -130,15 +130,22 @@ Constructor params
 
 The constructor for HtmlTableStore takes the following possible parameters in its keyword arguments:
 
-+-------------+------------------------------------------------------------------------------------------+----------------------+
-| **name**    | **description**                                                                          | **type**             |
-+-------------+------------------------------------------------------------------------------------------+----------------------+
-|url          |The URL from which to load the HTML file containing the HTML table. This is optional.     | string               |
-+-------------+------------------------------------------------------------------------------------------+----------------------+
-|tableId      |The id of the HTML tag that contains the table to read from, in either a remote page (if  | string               |
-|             |the URL was passed) or in the current HTML DOM if the url parameter is null. This is      |                      |
-|             |required.                                                                                 |                      |
-+-------------+------------------------------------------------------------------------------------------+----------------------+
++--------------+------------------------------------------------------------------------------------------+----------------------+
+| **name**     | **description**                                                                          | **type**             |
++--------------+------------------------------------------------------------------------------------------+----------------------+
+|url           |The URL from which to load the HTML file containing the HTML table. This is optional.     | string               |
++--------------+------------------------------------------------------------------------------------------+----------------------+
+|tableId       |The id of the HTML tag that contains the table to read from, in either a remote page (if  | string               |
+|              |the URL was passed) or in the current HTML DOM if the url parameter is null. This is      |                      |
+|              |required.                                                                                 |                      |
++--------------+------------------------------------------------------------------------------------------+----------------------+
+|trimWhitespace|**New to Dojo 1.4** Pre 1.4, the surrounding whitespace inside an attribute element, such | boolean              |
+|              |as <td> in a table was treated as part of the attribute value.  This could potentially    |                      |
+|              |cause problems if the tables were reformatted to include more whitespace, particularly in |                      |
+|              |the header where attribute names are read.  So this attribute was added.  If set to true  |                      |
+|              |HtmlStore ignores that whitespace (strips it off), when it indexes the attribute headers  |                      |
+|              |and when it retrieves values.  The default is false for backwards compatibility.          |                      |
++--------------+------------------------------------------------------------------------------------------+----------------------+
 
 
 ===============
