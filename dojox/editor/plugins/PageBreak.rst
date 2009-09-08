@@ -109,3 +109,7 @@ Basic Usage
     </li>
     </ul>
     </div>
+
+  .. css::
+ 
+    import "/moin_static163/js/dojo/trunk/release/dojo/dojox/editor/resources/css/PageBreak.css";
