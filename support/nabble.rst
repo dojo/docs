@@ -21,7 +21,7 @@ the mailing list is archived by nabble
  * there is another archive on nabble, but it is broken
   * don't use: [[http://www.nabble.com/Dojo-f13676.html]]
   * the administer has been contacted, and they're working to sort things out
-  * the current posts aren't archived properly here, but older ones where and there's an extensive archive
+  * the current posts aren't archived properly here, but older ones were and there's an extensive archive
   * Dec 5, 2005 thru March 9, 2009
  * the complete archive is available at http://mail.dojotoolkit.org/pipermail/dojo-interest
   * use google to search, eg: [[http://www.google.com/search?q=site:http://mail.dojotoolkit.org/pipermail/dojo-interest+menuitem|menuitem]]
