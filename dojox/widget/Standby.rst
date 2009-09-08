@@ -114,6 +114,26 @@ Example 1: Basic usage
 
     <style type="text/css">
       @import "/moin_static163/js/dojo/release/dojox/widget/Standby/Standby.css";
+      
+      # Also just define the styles inline in case the stylesheet can't be loaded.
+      # Note that for Dojo 1.4+, this is not needed at all.
+      .standbyUnderlayNode {
+        display: none;
+        opacity: 0;
+        z-index: 9999;
+        position: absolute;
+       cursor:wait;
+      }
+
+      .standbyImageNode {
+        opacity: 0;
+        display: none;
+        z-index: -10000;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        cursor:wait;
+      }
     </style>
 
 
