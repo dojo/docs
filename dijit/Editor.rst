@@ -148,7 +148,7 @@ This is a list of the default commands included in the editor, that can be speci
 Additional Editor Plugins
 =========================
 
-There are several additional editor plugins contained in the *`dojox.editor.plugins <dojox/editor/plugins>`_* project.  The following are listed below as their are considered generally stable:
+There are several additional editor plugins contained in the `dojox.editor.plugins <dojox/editor/plugins>`_ project.  The following are listed below as their are considered generally stable and may be useful to you.
 
 * `dojox.editor.plugins.PrettyPrint <dojox/editor/plugins/PrettyPrint>`_  -- **STABLE**  -- A headless plugin that improves the output format from dijit.Editor by structuring the tag indentions and text lines in a more easily human-readable way.  **This plugin is new to the Dojo Toolkit 1.4.**
 
