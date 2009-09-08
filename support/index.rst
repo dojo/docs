@@ -10,7 +10,7 @@ Dojo is a [[http://dojofoundation.org/about/hundredpoint|hundred point]] open so
  * [[http://www.dojotoolkit.org/support/faq]]
  * IRC: #dojo at irc.freenode.net
  * the dojo-interest mailing list at [[http://mail.dojotoolkit.org/mailman/listinfo/dojo-interest]]
-  * the mailing list is archived by nabble, see [[support/nabble]]
+  * the mailing list is [[support/nabble|archived by nabble]]
  * commercial support from sitepen at [[http://sitepen.com/services/support.php]]
 
 
