@@ -56,7 +56,8 @@ The 'prettyPrint function takes one required parameter and several optional ones
 | lineLength                        |An integer specifying the maximum length of a TEXT line in the HTML  | NO                     |
 |                                   |document.  Must be non-negative.  If negative, null, or undefined,   |                        |
 |                                   |then the line has no maximum length and will not be split into       |                        |
-|                                   |multiple.                                                            |                        |
+|                                   |multiple.  This only affects wrapping of TEXT lines, it does not     |                        |
+|                                   |split long HTML tags with lots of attributes.                        |                        |
 +-----------------------------------+---------------------------------------------------------------------+------------------------+
 | map                               |An array of entity character mappings to encode special characters to| NO                     |
 |                                   |If not provided, then it uses the default set HTML and LATIN 1       |                        |
