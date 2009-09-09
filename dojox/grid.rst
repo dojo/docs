@@ -265,6 +265,24 @@ A set of columns can be *locked* to prevent them from scrolling horizontally whi
   <colgroup span="1" noscroll="true"></colgroup>
   <colgroup span="3"></colgroup>
 
+Auto-width columns
+------------------
+Columns with width="auto" are not fully supported, and do not work in all cases.  In addition, they are poorly performant.
+
+The main reason for this is the "dynamic" nature of the grid itself.  The grid needs to start laying itself out *before* it has any data - so it does not have a way to "know" how wide to draw the columns - because we don't have the data.  Depending on the browser, we are able to make a "best guess" - but it doesn't work in all situations.
+
+It is strongly suggested that users move away from using width="auto" columns.  We are even considering deprecating their use in upcoming releases of the grid.
+
+The only way that we are able to support width="auto" is to:
+  1. require that all data be present (so we can figure out the "widest" value for the column)
+  2. render all data at once (so that we are sure we have rendered the "widest" value)
+  3. render the grid twice (once to lay out the values and calculate the widest one - another time to actually set all the widths to the width of the widest value)
+
+Each of these greatly hurts the grid - and in reality is not feasible.  #1 would mean that you are unable to use stores such as JsonRestStore or QueryReadStore with a grid.  #2 will really impact your performance...because it throws away all the benefits of incremental rendering and virtual scrolling...you'll never be able to have million-row grids like you can right now.  #3 is bad - especially in combination with #2 - since, in effect, it will take twice as long to display your grid...and you will get "flickering" - that is, you will see it render once with different cell widths, and then it will redraw again.
+
+Again - don't use width="auto".  It's very much not recommended, and will not be supported in the future.
+
+
 Multi-rowed *rows*
 ------------------
 We are used to a row in a table being a single line of data.  DataGrid provides the ability for a single logical row to contain multiple lines of data.  This can be achieved by adding additional ``<tr>`` tags into the DataGrid declaration.
