@@ -32,6 +32,11 @@ Website and Docs
 
 1.4
 ---
+* bug triage
+* web builder
+* dojox.lang.oo.declare promoted to dojo.declare.
+* Broaden the API coverage for dojox.jq
+* CommonJS module loading?
 
 Other TODOs
 -----------
@@ -44,3 +49,4 @@ People attending
 
 * Dylan Schiemann
 * Tobias von Klipstein
+* James Burke
