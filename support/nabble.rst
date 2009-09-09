@@ -14,14 +14,16 @@ the dojo-interest mailing list is at [[http://mail.dojotoolkit.org/mailman/listi
 == The Archive ==
 
 
-the mailing list is archived by nabble
- * [[http://www.nabble.com/Dojo-f36462.html]]
+the mailing list is archived by Nabble and pipermail
+ * current questions and posts
+  * [[http://www.nabble.com/Dojo-f36462.html]]
   * all new posts should go here, but it's only a few months old
   * March 9, 2009 thru present
- * there's another archive on nabble, but it is broken
-  * don't use: [[http://www.nabble.com/Dojo-(Old-Archive)-f13676.html]]
-  * the administer has been contacted, and renamed this archive to indicate that it's "Old"
+ * there's another archive on nabble, but it only gets a subset of the posts
+  * use it to check for older answers, but don't use it for new questions
+  * [[http://www.nabble.com/Dojo-(Old-Archive)-f13676.html]]
   * the current posts aren't archived properly here, but older ones were and there's an extensive archive
+  * the administer has been contacted, and renamed this archive to indicate that it's "Old"
   * Dec 5, 2005 thru March 9, 2009
  * there were some issues with the duplicate archives
   * Hugo Teixeira from Nabble was very helpful (thanks Hugo)
