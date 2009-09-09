@@ -26,6 +26,6 @@ the mailing list is archived by nabble
  * there were some issues with the duplicate archives
   * Hugo Teixeira from Nabble was very helpful (thanks Hugo)
   * he renamed the archives
-  * to get hold of the list admins, click the "Edit this Forum" link on the archive's main page: eg. [[http://www.nabble.com/catalog/EditForum.jtp?forum=36462|Edit this Forum]]
+  * to get hold of the archive's admin, click the "Edit this Forum" link on the archive's main page: eg. [[http://www.nabble.com/catalog/EditForum.jtp?forum=36462|Edit this Forum]]
  * the complete archive is available at http://mail.dojotoolkit.org/pipermail/dojo-interest
   * use google to search, eg: [[http://www.google.com/search?q=site:http://mail.dojotoolkit.org/pipermail/dojo-interest+menuitem|menuitem]]
