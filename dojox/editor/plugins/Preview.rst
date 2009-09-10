@@ -216,3 +216,10 @@ Applying stylesheets to preview content
     </li>
     </ul>
     </div>
+
+========
+See Also
+========
+
+* `dijit.Editor <dijit/Editor>`_
+* `dojox.editor.plugins <dojox/editor/plugins>`_
