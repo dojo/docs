@@ -115,3 +115,53 @@ Basic Usage
     </li>
     </ul>
     </div>
+
+Apply some styles
+-----------------
+
+.. code-example::
+  :djConfig: parseOnLoad: true
+  :version: 1.4
+
+  .. javascript::
+
+    <script>
+      dojo.require("dijit.form.Button");
+      dojo.require("dijit.Editor");
+      dojo.require("dojox.editor.plugins.Preview");
+    </script>
+
+  .. css::
+
+    <style>
+      @import "{{baseUrl}}dojox/editor/plugins/resources/css/Preview.css";
+    </style>
+    
+  .. html::
+
+    <b>Enter whatever you like in the editor, then press the 'Preview' button.  A new window will open with the contents.</b>
+    <br>
+    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="[{name: 'preview', styles: 'body {background-color: lightgray;} table {border-style: groove; border-width: 2px; border-color: darkgray;} table tr {border-style: inset; border-width: 1px; border-color: darkgray;'}'}]">
+    <div>
+    <br>
+    blah blah & blah!
+    <br>
+    </div>
+    <br>
+    <table>
+    <tbody>
+    <tr>
+    <td style="border-style:solid; border-width: 2px; border-color: gray;">One cell</td>
+    <td style="border-style:solid; border-width: 2px; border-color: gray;">
+    Two cell
+    </td>
+    </tr>
+    </tbody>
+    </table>
+    <ul> 
+    <li>item one</li>
+    <li>
+    item two
+    </li>
+    </ul>
+    </div>
