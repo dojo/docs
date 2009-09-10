@@ -82,7 +82,7 @@ Using the widget is simple.  At its most basic form, all you have to provide the
 
 For more custom control, you can also set the 'color' attribute on the widget to a color to use for the overlay as well as an 'image' attribute with the location/url of an image to center in the middle of the widget.  Its default image is the same one that dojox.image.Lightbox uses, a basic spinner/busy animated gif.
 
-Also ... please remember to import the dojox/widget/Standby/Standby.css into your page.  The CSS contains specific positioning details for the divs in the template that are needed for it to display properly.
+Also, for Dojo 1.3 users ... please remember to import the dojox/widget/Standby/Standby.css into your page.  The CSS contains specific positioning details for the divs in the template that are needed for it to display properly.   Dojo 1.4 users do not need a CSS import, the CSS was inlined into the template.
 
 Example 1: Basic usage
 ----------------------
