@@ -35,6 +35,10 @@ There are currently a small set of nice features that can be plugged into the di
 
 |
 
+* `dojox.editor.plugins.Preview <dojox/editor/plugins/Preview>`_ -- **STABLE**  -- A plugin + associated button icon that allows you to 'preview' the editor content in a window outside of the editor with CSS styles and stylesheets applied to it.  **This plugin is new to the Dojo Toolkit 1.4.**
+
+|
+
 
 ========
 See Also
