@@ -116,8 +116,8 @@ Basic Usage
     </ul>
     </div>
 
-Apply some styles
------------------
+Applying styles to preview content
+----------------------------------
 
 .. code-example::
   :djConfig: parseOnLoad: true
@@ -146,6 +146,57 @@ Apply some styles
     <br>
     blah blah & blah!
     <br>
+    </div>
+    <br>
+    <table>
+    <tbody>
+    <tr>
+    <td>One cell</td>
+    <td>
+    Two cell
+    </td>
+    </tr>
+    </tbody>
+    </table>
+    <ul> 
+    <li>item one</li>
+    <li>
+    item two
+    </li>
+    </ul>
+    </div>
+
+
+Applying stylesheets to preview content
+---------------------------------------
+
+.. code-example::
+  :djConfig: parseOnLoad: true
+  :version: 1.4
+
+  .. javascript::
+
+    <script>
+      dojo.require("dijit.form.Button");
+      dojo.require("dijit.Editor");
+      dojo.require("dojox.editor.plugins.Preview");
+    </script>
+
+  .. css::
+
+    <style>
+      @import "{{baseUrl}}dojox/editor/plugins/resources/css/Preview.css";
+    </style>
+    
+  .. html::
+
+    <b>Enter whatever you like in the editor, then press the 'Preview' button.  A new window will open with the contents.</b>
+    <br>
+    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="[{name: 'preview', stylesheets: ['http://docs.dojocampus.org/{{baseUrl}}/dojox/editor/plugins/tests/testBodySheet.css', 'http://docs.dojocampus.org/{{baseUrl}}/dojox/editor/plugins/tests/testContentSheet.css']}]">       
+    <div>
+    <p>
+    blah blah & blah!
+    </p>
     </div>
     <br>
     <table>
