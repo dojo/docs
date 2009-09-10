@@ -91,7 +91,7 @@ Basic Usage
 
     <b>Enter whatever you like in the editor, then press the 'Preview' button.  A new window will open with the contents.</b>
     <br>
-    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['pagebreak']">
+    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['preview']">
     <div>
     <br>
     blah blah & blah!
