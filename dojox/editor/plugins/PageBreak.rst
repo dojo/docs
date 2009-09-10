@@ -115,3 +115,10 @@ Basic Usage
     </li>
     </ul>
     </div>
+
+========
+See Also
+========
+
+* `dijit.Editor <dijit/Editor>`_
+* `dojox.editor.plugins <dojox/editor/plugins>`_
