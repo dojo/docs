@@ -22,7 +22,7 @@ Once required in and enabled, this plugin provides the following features to dij
 
 * Button with icon in toolbar for toggling the view of block nodes in the editor.
 * Keyboard hotkey: CTRL-SHIFT-F9 for toggling the ShowBlockNodes on and off.
-* Dynamic styling in the page to enable/disable the showing of the block nodes.  It does not affect or alter nay of the HTML within the actual editor body, making it safe to use.
+* Dynamic styling in the page to enable/disable the showing of the block nodes.  It does not affect or alter any of the HTML within the actual editor body, making it safe to use.
 
 =====
 Usage
