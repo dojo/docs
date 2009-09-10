@@ -141,7 +141,7 @@ Apply some styles
 
     <b>Enter whatever you like in the editor, then press the 'Preview' button.  A new window will open with the contents.</b>
     <br>
-    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="[{name: 'preview', styles: 'body {background-color: lightgray;} table {border-style: groove; border-width: 2px; border-color: darkgray;} table tr {border-style: inset; border-width: 1px; border-color: darkgray;'}'}]">
+    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="[{name: 'preview', styles: 'body {background-color: lightgray;} table {border-style: groove; border-width: 2px; border-color: darkgray;} table tr {border-style: inset; border-width: 1px; border-color: darkgray;}'}]">       
     <div>
     <br>
     blah blah & blah!
