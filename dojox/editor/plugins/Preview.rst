@@ -192,7 +192,7 @@ Applying stylesheets to preview content
 
     <b>Enter whatever you like in the editor, then press the 'Preview' button.  A new window will open with the contents.</b>
     <br>
-    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="[{name: 'preview', stylesheets: ['http://docs.dojocampus.org/{{baseUrl}}/dojox/editor/plugins/tests/testBodySheet.css', 'http://docs.dojocampus.org/{{baseUrl}}/dojox/editor/plugins/tests/testContentSheet.css']}]">       
+    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="[{name: 'preview', stylesheets: ['http://docs.dojocampus.org{{baseUrl}}dojox/editor/plugins/tests/testBodySheet.css', 'http://docs.dojocampus.org{{baseUrl}}dojox/editor/plugins/tests/testContentSheet.css']}]">       
     <div>
     <p>
     blah blah & blah!
