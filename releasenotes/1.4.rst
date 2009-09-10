@@ -81,7 +81,7 @@ The RTE has had numerous bug fixes applied to it as well as some code cleanup to
 
 * `Print <dijit/_editor/plugins/Print>`_:  A plugin that lets you print the contents of the editor frame. 
 
-* `NewPage <dijit/_editor/plugins/NewPage>`_:  A plugin that lets you clear the content of the editor and set a new default content with a button click.  `See the dNewPage ocumentation here <dijit/_editor/plugins/NewPage>`_
+* `NewPage <dijit/_editor/plugins/NewPage>`_:  A plugin that lets you clear the content of the editor and set a new default content with a button click.  
 
 ======
 Dojox
@@ -113,3 +113,15 @@ dojox.form
 ----------
 
 * dojox.form._HasDropDown, dojox.form._FormSelectWidget, dojox.form.DropDownSelect - Migrated to dijit (dijit._HasDropDown, dijit.form._FormSelectWidget, dijit.form.DropDownSelect)
+
+dojox.editor.plugins
+--------------------
+Several new plugins for the dijit.Editor RTE have been provided as dojox modules.  They are all generally well tested and work good across browsers.
+
+* `PrettyPrint <dojox/editor/plugins/PrettyPrint>`_:  A plugin that formats the output from dijit.Editor more cleanly than the browsers defaults.
+
+* `PageBreak <dojox/editor/plugins/PageBreak>`_:  A plugin that lets you insert CSS style page breaks so when printed, the document page breaks at the indicated spot.
+
+* `ShowBlockNodes <dojox/editor/plugins/ShowBlockNodes>`_:  A plugin that lets you see in the editor what the block structure is that makes up the RTE document. 
+
+* `Preview <dojox/editor/plugins/Preview>`_:  A plugin that lets you preview the editor content in a separate window with different CSS styles and stylesheets applied than what are used in the editor.  
