@@ -75,11 +75,11 @@ Editor
 ------
 The RTE has had numerous bug fixes applied to it as well as some code cleanup to make it more extensible and better behaving on browsers such as Opera.  It also had several new plugin modules added to dijit, as well as several new ones added to dojox.  For information on the dojox modules, see the dojox section of these release notes.
 
-* FullScreen:  A plugin that adds the capability to the editor to take over the complete viewport containing the page running the editor.  `See the documentation here <dijit/_editor/plugins/FullScreen>`_
+* FullScreen:  A plugin that adds the capability to the editor to take over the complete viewport containing the page running the editor.  `See the FullScreen documentation here <dijit/_editor/plugins/FullScreen>`_
 
-* Print:  A plugin that lets you print the contents of the editor frame.  `See the documentation here <dijit/_editor/plugins/Print>`_
+* Print:  A plugin that lets you print the contents of the editor frame.  `See the Print documentation here <dijit/_editor/plugins/Print>`_
 
-* NewPage:  A plugin that lets you clear the content of the editor and set a new default content with a button click.  `See the documentation here <dijit/_editor/plugins/NewPage>`_
+* NewPage:  A plugin that lets you clear the content of the editor and set a new default content with a button click.  `See the dNewPage ocumentation here <dijit/_editor/plugins/NewPage>`_
 
 ======
 Dojox
