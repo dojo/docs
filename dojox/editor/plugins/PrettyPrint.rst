@@ -205,4 +205,6 @@ Configured indent and line length
 See Also
 ========
 
+* `dijit.Editor <dijit/Editor>`_
+* `dojox.editor.plugins <dojox/editor/plugins>`_
 * `dojox.html.format <dojox/html/format>`_
