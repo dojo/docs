@@ -47,7 +47,11 @@ Once it has been required in, all you have to do is include it in the list of ex
 
 And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the Printplugin!  You can use the button to set the editor content to a 'new page'.
 
-Note, to initialize the plugin with custom new page content, it is just a matter of passing a content parameter to the new page instantiation.  For example:
+------------------
+Custom New Content
+------------------
+
+To initialize the plugin with custom new page content, it is just a matter of passing a content parameter to the new page instantiation.  For example:
 
 .. code-block :: html
 
