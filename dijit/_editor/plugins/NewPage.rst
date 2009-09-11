@@ -54,7 +54,7 @@ To initialize the plugin with custom new page content, it is just a matter of pa
 
 .. code-block :: html
 
-  <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="[{name: 'newpage', content='This is some &lt;b&gt;custom&lt;/b&gt; content!'}]">
+  <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="[{name: 'newpage', content: 'This is some &lt;b&gt;custom&lt;/b&gt; content!'}]">
 
 Or programmatically:
 
@@ -131,7 +131,7 @@ Custom New Page Content
 
     <b>Enter some text then press the New Page button.  The editor content will then be replaced with the custom new page content.</b>
     <br>
-    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="[{name: 'newpage', content='This is some &lt;b&gt;custom&lt;/b&gt; content!'}]">
+    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="[{name: 'newpage', content: 'This is some &lt;b&gt;custom&lt;/b&gt; content!'}]">
     <div>
     <br>
     blah blah & blah!
