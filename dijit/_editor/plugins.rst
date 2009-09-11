@@ -35,7 +35,7 @@ There are currently a small set of nice features that can be plugged into the di
 
 | 
 
-* `dijit._editor.plugins.FullScreen <dijit/_editor/plugins/FullScreen>`_  -- **STABLE** -- A plugin that enables a 'FullScreen' option for the dijit.Editor.  This provides a button plus hotkey command for putting the editor in 'Full Screen' mode, where it will fill the entire viewport of the window containing it.
+* `dijit._editor.plugins.FullScreen <dijit/_editor/plugins/FullScreen>`_  -- **STABLE** -- A plugin that enables a 'FullScreen' option for the dijit.Editor.  This provides a button plus hotkey command for putting the editor in 'Full Screen' mode, where it will fill the entire viewport of the window containing it.  **This plugin is new to the Dojo Toolkit 1.4.**
 
 | 
 
