@@ -141,7 +141,7 @@ Enabling read-only view
 
     <b>Toggle the View Source button to see the contents in source mode.</b>
     <br>
-    <div dojoType="dijit.Editor" height="250px" id="input" extraPlugins="[{name: 'viewsource', readOnly: true}]">
+    <div dojoType="dijit.Editor" height="250px" id="input" extraPlugins="[{name:'viewsource',readOnly: true}]">
     <div>
     <br>
     blah blah & blah!
