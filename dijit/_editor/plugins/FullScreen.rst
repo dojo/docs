@@ -12,7 +12,7 @@ dijit._editor.plugins.FullScreen
 .. contents::
     :depth: 2
 
-Have you ever been on a website where you were able to edit some document to post, for example a blog site, and found that all they give you for an editong 'window' in some nearly postage stamp sized box to edit content in?   Doesn't that make it nearly impossible to edit the document effectively?  It's time to put an end to such behaviors and this plugin's goal is to do exactly that for the dijit.Editor.  No more postage stamp sized editors!
+Have you ever been on a website where you were able to edit some document to post, for example a blog site, and found that all they give you for an editing 'window' in some nearly postage stamp sized box to edit content in?   Doesn't that make it nearly impossible to edit the document effectively?  It's time to put an end to such behaviors and this plugin's goal is to do exactly that for the dijit.Editor.  No more postage stamp sized editors!
 
 ========
 Features
@@ -20,8 +20,8 @@ Features
 
 Once required in and enabled, this plugin provides the following features to dijit.Editor.
 
-* Button with icon in toolbar for toggling a dijit.Editorto take over the entire viewport of its current 'window' (normally the entire browser window.)
-* HotKey enabled for CTRL-SHIFT-F11.  When this combination is pressed in the viewport, the editor will toggle between fullscreen and normal modes.
+* Button with icon in toolbar for toggling a dijit.Editor to take over the entire view port of its current 'window' (normally the entire browser window.)
+* HotKey enabled for CTRL-SHIFT-F11.  When this combination is pressed in the view port, the editor will toggle between full screen and normal modes.
 
 ===========
 Limitations
