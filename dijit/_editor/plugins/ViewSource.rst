@@ -51,6 +51,28 @@ Once it has been required in, all you have to do is include it in the list of ex
 
 And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the ViewSource plugin!  You can use the button or hotkey to toggle between source and RTE views.
 
+Configurable Options
+--------------------
+
+The ViewSource plugin has several configurable options to tailor it for your usage.  Please see the following table:
+
++---------------------------+-----------------------------------------------------------------------------------------------------------+
+| **Option                  | **Description**                                                                                           |
++---------------------------+-----------------------------------------------------------------------------------------------------------+
+| readOnly                  |When enabled, the source can only be viewed in read-only mode, it cannot be edited.  The default is false  |
++---------------------------+-----------------------------------------------------------------------------------------------------------+
+| stripScripts              |When enabled, script tags are stripped from the source.  The default is true.  It is highly recommended    |
+|                           |that this option is left enabled.  Disabling it opens up a vector for XSS attacks                          |
++---------------------------+-----------------------------------------------------------------------------------------------------------+
+| stripComments             |When enabled, comments are stripped from the source.  The default is true.  It is highly recommended       |
+|                           |that this option is left enabled.  Disabling it opens up a vector for XSS attacks                          |
++---------------------------+-----------------------------------------------------------------------------------------------------------+
+| stripIframes              |When enabled, iframe tags are stripped from the source.  The default is true.  It is highly recommended    |
+|                           |that this option is left enabled.  Disabling it opens up a vector for XSS attacks                          |
++---------------------------+-----------------------------------------------------------------------------------------------------------+
+
+
+
 ================
 XSS Attack notes
 ================
