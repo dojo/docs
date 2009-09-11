@@ -71,8 +71,8 @@ Other useful notes
 
 This plugin is particularly powerful when it is combined with the following plugins:
 
-`dijit._editor.plugins.FullScreen <dijit/_editor/plugins/FullScreen>`_ - Edit the document in the full 'viewport' of the window running dojo.
-`dojox.editor.plugins.PrettyPrint <dojox/editor/plugins/PrettyPrint>`_ - Format the content in the editor so that it is easily human readable and modifiable.
+*`dijit._editor.plugins.FullScreen <dijit/_editor/plugins/FullScreen>`_ - Edit the document in the full 'viewport' of the window running dojo.
+*`dojox.editor.plugins.PrettyPrint <dojox/editor/plugins/PrettyPrint>`_ - Format the content in the editor so that it is easily human readable and modifiable.
 
 
 ========
@@ -146,6 +146,51 @@ Enabling read-only view
     <br>
     blah blah & blah!
     <br>
+    </div>
+    <br>
+    <table>
+    <tbody>
+    <tr>
+    <td style="border-style:solid; border-width: 2px; border-color: gray;">One cell</td>
+    <td style="border-style:solid; border-width: 2px; border-color: gray;">
+    Two cell
+    </td>
+    </tr>
+    </tbody>
+    </table>
+    <ul> 
+    <li>item one</li>
+    <li>
+    item two
+    </li>
+    </ul>
+    </div>
+
+
+Viewing Source with PrettyPrint Plugin enabled
+----------------------------------------------
+
+.. code-example::
+  :djConfig: parseOnLoad: true
+  :version: 1.4
+
+  .. javascript::
+
+    <script>
+      dojo.require("dijit.Editor");
+      dojo.require("dijit._editor.plugins.ViewSource");
+      dojo.require("dojox.editor.plugins.PrettyPrint");
+    </script>
+
+  .. html::
+
+    <b>Toggle the View Source button to see the contents in source mode.</b>
+    <br>
+    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['viewsource', prettyprint']">
+    <div>
+      <br>
+      blah blah & blah!
+      <br>
     </div>
     <br>
     <table>
