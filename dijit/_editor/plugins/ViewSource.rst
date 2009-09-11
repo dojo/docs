@@ -233,7 +233,7 @@ This example also organizes the toolbar a bit.
 
     <b>Toggle the View Source button to see the contents in source mode.</b>
     <br>
-    <div dojoType="dijit.Editor" height="250px" id="input" plugins="['prettyprint', 'viewsource', 'fullscreen', "|', 'undo','redo','|','cut','copy','paste','|','bold','italic','underline','strikethrough','|','insertOrderedList','insertUnorderedList','indent','outdent','|','justifyLeft','justifyRight','justifyCenter','justifyFull',{name: 'dijit._editor.plugins.EnterKeyHandling', blockNodeForEnter: 'DIV'}]">
+    <div dojoType="dijit.Editor" height="250px" id="input" plugins="['prettyprint','viewsource','fullscreen',"|','undo','redo','|','cut','copy','paste','|','bold','italic','underline','strikethrough','|','insertOrderedList','insertUnorderedList','indent','outdent','|','justifyLeft','justifyRight','justifyCenter','justifyFull',{name:'dijit._editor.plugins.EnterKeyHandling',blockNodeForEnter:'DIV'}]">
     <div>
       <br>
       blah blah & blah!
