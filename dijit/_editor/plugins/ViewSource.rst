@@ -1,7 +1,7 @@
 #format dojo_rst
 
-dojox.editor.plugins.ViewSource
-===============================
+dijit._editor.plugins.ViewSource
+================================
 
 :Status: Draft
 :Version: 1.0
@@ -89,9 +89,8 @@ Basic Usage
   .. javascript::
 
     <script>
-      dojo.require("dijit.form.Button");
       dojo.require("dijit.Editor");
-      dojo.require("dojox.editor.plugins.ViewSource");
+      dojo.require("dijit._editor.plugins.ViewSource");
     </script>
 
   .. css::
