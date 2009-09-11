@@ -147,7 +147,7 @@ JsonRestStore uses HTTP's Range header to perform paging. When a request is made
 
  Range: items=0-24
 
-The server should respond with a Content-Range header to indicate how many items are being returned and how many total items exist:
+On your server, you should look at the Range header in the request to know which items to return. The server should respond with a Content-Range header to indicate how many items are being returned and how many total items exist:
 
  Content-Range: items 0-24/66
 
