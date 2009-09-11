@@ -1,7 +1,7 @@
 #format dojo_rst
 
-dijit._editor.plugins.Print
-===========================
+dijit._editor.plugins.NewPage
+=============================
 
 :Status: Draft
 :Version: 1.0
@@ -45,7 +45,7 @@ Once it has been required in, all you have to do is include it in the list of ex
 
 
 
-And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the Printplugin!  You can use the button to set the editor content to a 'new page'.
+And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the NewPage plugin!  You can use the button to set the editor content to a 'new page'.
 
 Custom New Content
 ------------------
