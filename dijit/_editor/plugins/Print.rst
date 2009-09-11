@@ -1,7 +1,7 @@
 #format dojo_rst
 
-dojox.editor.plugins.Print
-==============================
+dijit._editor.plugins.Print
+===========================
 
 :Status: Draft
 :Version: 1.0
