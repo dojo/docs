@@ -53,6 +53,27 @@ Once it has been required in, all you have to do is include it in the list of ex
 
 And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the FullScreen plugin!  You can use the button or hotkey command to toggle the editor mode.
 
+Configurable Attributes
+-----------------------
+
+The Full Screen plugin has a few configurable attributes on it that let you affetc its current behavior a bit.  The options are listed below:
+
++---------------------------+---------------------------------------------------------------------------------------------------------+
+| **Option**                | **Description**                                                                                         |
++---------------------------+---------------------------------------------------------------------------------------------------------+
+| zIndex                    |The zIndex at which to set the editor when it overlays the page.  The default is 500, so that things     |
+|                           |like dijit.Menus and other drop downs will still work properly with it.  If you already have items       |
+|                           |positioned in your page at a higher zIndex than 500, you will need to increase this value for the        |
+|                           |FullScreen plugin when you enable it.                                                                    |
++---------------------------+---------------------------------------------------------------------------------------------------------+
+
+Example:
+
+.. code-block :: html
+
+  <div dojoType="dijit.Editor" id="editor" extraPlugins="[name: 'fullscreen', zIndex: 900}]"></div>
+
+
 ========
 Examples
 ========
