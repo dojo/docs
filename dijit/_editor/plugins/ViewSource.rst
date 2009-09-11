@@ -230,7 +230,7 @@ Viewing Source with PrettyPrint Plugin enabled and readOnly source
 
     <b>Toggle the View Source button to see the contents in source mode.</b>
     <br>
-    <div dojoType="dijit.Editor" height="250px" id="input" extraPlugins="['viewsource', 'prettyprint']">
+    <div dojoType="dijit.Editor" height="250px" id="input" extraPlugins="[{name:'viewsource',readOnly: true}, 'prettyprint']">
     <div>
       <br>
       blah blah & blah!
