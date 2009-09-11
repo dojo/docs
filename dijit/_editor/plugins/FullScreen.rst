@@ -60,7 +60,7 @@ Examples
 Basic Usage
 -----------
 
-**Note:** The Demo Viewer runs in an iframe, so it can only maximize ot the size of the demo viewer.
+**Note:** The Demo Viewer runs in an iframe, so it can only maximize to the size of the demo viewer.
 
 .. code-example::
   :djConfig: parseOnLoad: true
