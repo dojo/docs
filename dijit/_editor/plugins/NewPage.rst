@@ -12,7 +12,7 @@ dijit._editor.plugins.NewPage
 .. contents::
     :depth: 2
 
-Have you ever wanted to be able to with the click of a button clear the editor and set it with some default content, be it an empty line of some template HTML?  If so, then this plugin is for you.  It's a simple plugin that adds 'NewPage' support to the editor toolbar..
+Have you ever wanted to be able to with the click of a button clear the editor and set it with some default content, be it an empty line of some template HTML?  If so, then this plugin is for you.  It's a simple plugin that adds 'NewPage' support to the editor toolbar.
 
 ========
 Features
