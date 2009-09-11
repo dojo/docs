@@ -12,7 +12,7 @@ dijit._editor.plugins.FullScreen
 .. contents::
     :depth: 2
 
-Have you ever been on a website where you were able to edit some document to post, for example a blog site, and found that all they give you for an editong 'window' in some nearly postage stamp sized box to edit content in?   Doesn't that make it nearly impossible to edit the document effectively?  It's time to put an end to such behaviors and this pkugin's goal is to do exactly that for the dijit.Editor.  No more postage stamp sized editors!
+Have you ever been on a website where you were able to edit some document to post, for example a blog site, and found that all they give you for an editong 'window' in some nearly postage stamp sized box to edit content in?   Doesn't that make it nearly impossible to edit the document effectively?  It's time to put an end to such behaviors and this plugin's goal is to do exactly that for the dijit.Editor.  No more postage stamp sized editors!
 
 ========
 Features
