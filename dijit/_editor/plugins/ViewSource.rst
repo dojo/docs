@@ -134,7 +134,7 @@ Enabling read-only view
     <script>
       dojo.require("dijit.form.Button");
       dojo.require("dijit.Editor");
-      dojo.require("dojox.editor.plugins.ViewSource");
+      dojo.require("dijit._editor.plugins.ViewSource");
     </script>
 
   .. html::
