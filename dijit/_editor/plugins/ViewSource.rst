@@ -93,17 +93,15 @@ Basic Usage
       dojo.require("dijit._editor.plugins.ViewSource");
     </script>
 
-  .. css::
-
   .. html::
 
     <b>Toggle the View Source button to see the contents in source mode.</b>
     <br>
     <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['viewsource']">
     <div>
-    <br>
-    blah blah & blah!
-    <br>
+      <br>
+      blah blah & blah!
+      <br>
     </div>
     <br>
     <table>
@@ -138,8 +136,6 @@ Enabling read-only view
       dojo.require("dijit.Editor");
       dojo.require("dojox.editor.plugins.ViewSource");
     </script>
-
-  .. css::
 
   .. html::
 
