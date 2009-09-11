@@ -31,7 +31,7 @@ There are currently a small set of nice features that can be plugged into the di
 
 | 
 
-* `dijit._editor.plugins.TextColor <dijit/_editor/plugins/TextColor >`_  -- **STABLE** -- A plugin that enables a a 'Font color' editor for the dijit.Editor.  This provides the commands 'foreColor' and 'hiliteColor', editor commands to alter font color and font background color of selected text.
+* `dijit._editor.plugins.TextColor <dijit/_editor/plugins/TextColor>`_  -- **STABLE** -- A plugin that enables a a 'Font color' editor for the dijit.Editor.  This provides the commands 'foreColor' and 'hiliteColor', editor commands to alter font color and font background color of selected text.
 
 | 
 
