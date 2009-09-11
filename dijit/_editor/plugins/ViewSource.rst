@@ -57,7 +57,7 @@ Configurable Options
 The ViewSource plugin has several configurable options to tailor it for your usage.  Please see the following table:
 
 +---------------------------+-----------------------------------------------------------------------------------------------------------+
-| **Option                  | **Description**                                                                                           |
+| **Option**                | **Description**                                                                                           |
 +---------------------------+-----------------------------------------------------------------------------------------------------------+
 | readOnly                  |When enabled, the source can only be viewed in read-only mode, it cannot be edited.  The default is false  |
 +---------------------------+-----------------------------------------------------------------------------------------------------------+
