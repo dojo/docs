@@ -125,6 +125,57 @@ Basic Usage
     </ul>
     </div>
 
+
+Setting the zIndex
+------------------
+
+**Note:** The Demo Viewer runs in an iframe, so it can only maximize to the size of the demo viewer.
+
+.. code-example::
+  :djConfig: parseOnLoad: true
+  :version: 1.4
+
+  .. javascript::
+
+    <script>
+      dojo.require("dijit.form.Button");
+      dojo.require("dijit.Editor");
+      dojo.require("dijit._editor.plugins.FullScreen");
+    </script>
+
+    
+  .. html::
+
+    <b style="position: absolute; top: 0px; left: 0px; z-index: 700;">Press the FullScreen button or use the hotkey CTRL-SHIFT-F11 while in the editing pane and the editor will go into full screen mode</b>
+    <br>
+    <br>
+    <br>
+    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['fullscreen']">
+    <div>
+    <br>
+    blah blah & blah!
+    <br>
+    </div>
+    <br>
+    <table>
+    <tbody>
+    <tr>
+    <td style="border-style:solid; border-width: 2px; border-color: gray;">One cell</td>
+    <td style="border-style:solid; border-width: 2px; border-color: gray;">
+    Two cell
+    </td>
+    </tr>
+    </tbody>
+    </table>
+    <ul> 
+    <li>item one</li>
+    <li>
+    item two
+    </li>
+    </ul>
+    </div>
+
+
 ========
 See Also
 ========
