@@ -71,8 +71,8 @@ Other useful notes
 
 This plugin is particularly powerful when it is combined with the following plugins:
 
-*`dijit._editor.plugins.FullScreen <dijit/_editor/plugins/FullScreen>`_ - Edit the document in the full 'viewport' of the window running dojo.
-*`dojox.editor.plugins.PrettyPrint <dojox/editor/plugins/PrettyPrint>`_ - Format the content in the editor so that it is easily human readable and modifiable.
+* `dijit._editor.plugins.FullScreen <dijit/_editor/plugins/FullScreen>`_ - Edit the document in the full 'viewport' of the window running dojo.
+* `dojox.editor.plugins.PrettyPrint <dojox/editor/plugins/PrettyPrint>`_ - Format the content in the editor so that it is easily human readable and modifiable.
 
 
 ========
