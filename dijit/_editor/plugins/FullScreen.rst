@@ -146,11 +146,11 @@ Setting the zIndex
     
   .. html::
 
-    <b style="position: absolute; top: 0px; left: 0px; z-index: 700;">Press the FullScreen button or use the hotkey CTRL-SHIFT-F11 while in the editing pane and the editor will go into full screen mode</b>
+    <b style="position: absolute; top: 0px; left: 0px; z-index: 700;">Press the FullScreen button or use the hotkey CTRL-SHIFT-F11 while in the editing pane and the editor will go into full screen mode.  Without the zIndex setting, this div would overlay the editor.</b>
     <br>
     <br>
     <br>
-    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['fullscreen']">
+    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="[{name:'fullscreen', zIndex: 900}]">
     <div>
     <br>
     blah blah & blah!
