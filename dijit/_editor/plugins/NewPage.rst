@@ -47,6 +47,12 @@ Once it has been required in, all you have to do is include it in the list of ex
 
 And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the Printplugin!  You can use the button to set the editor content to a 'new page'.
 
+Note, to initialize the plugin with cusom new page content, it is just a matter of passing a content parameter to the new page instantiation.  For example:
+
+.. code-block :: html
+
+  <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="[{name: 'newpage', content='This is some &lt;b&gt;custom&lt;/b&gt; content!'}]">
+
 ========
 Examples
 ========
@@ -116,7 +122,7 @@ Custom New Page Content
 
     <b>Enter some text then press the New Page button.  The editor content will then be replaced with the custom new page content.</b>
     <br>
-    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="[{name: 'newpage', content='This is some &lt;b&gt;custom&lt;/b&gt; content!']">
+    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="[{name: 'newpage', content='This is some &lt;b&gt;custom&lt;/b&gt; content!'}]">
     <div>
     <br>
     blah blah & blah!
