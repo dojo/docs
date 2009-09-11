@@ -12,7 +12,7 @@ dojox.editor.plugins.PrettyPrint
 .. contents::
     :depth: 2
 
-Have you ever wanted to pull your hair out because the content from dijit.Editor was formatted so badly it looked like the output from some crazed demonic minion bent on causing insanity?   Well, I know I sure have, and thus was born the PrettyPrint plugin for the dijit.Editor.  What this plugin does is format the output that comes from dijit.Editor.attr("value"), (or dijit.Editor.getValue()), and makes it human readable, with reasonably indented structure, cleaned up line wrapping, and other general cleanup to make it much more human-readable.  
+Have you ever wanted to pull your hair out because the content from dijit.Editor was formatted so badly it looked like the output from some crazed demonic minion bent on causing insanity?   Well, I know I sure have, and thus was born the PrettyPrint plugin for the dijit.Editor.  What this plugin does is format the output that comes from dijit.Editor.attr("value"), (or dijit.Editor.getValue()), and reformats it with reasonably indented structure, cleaned up line wrapping, and other general structural cleanup to make it much more human-readable.  
 
 This plugin is 'headless', meaning it adds no toolbar button nor does it require any work to get decent output from it.  All you do is load it and register it as an extraPlugin for your editor and you're good to go.
 
