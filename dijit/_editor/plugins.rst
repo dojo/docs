@@ -6,7 +6,7 @@ dijit.editor.plugins
 :Status: Draft
 :Version: 1.0
 :Project owner: Bill Keese
-:Available: since V1.1
+:Available: since V1.0
 
 .. contents::
    :depth: 2
