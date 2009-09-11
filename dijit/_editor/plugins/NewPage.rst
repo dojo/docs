@@ -60,7 +60,7 @@ Or programmatically:
 
 .. code-block :: javascript
 
-   var editor = new dijit.Editor({extraPlugins: [{name: 'newpage', content='This is some <b>custom</b> content!'}]}
+   var editor = new dijit.Editor({extraPlugins: [{name: 'newpage', content: 'This is some <b>custom</b> content!'}]}
 
 ========
 Examples
