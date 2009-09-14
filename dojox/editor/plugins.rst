@@ -39,6 +39,9 @@ There are currently a small set of nice features that can be plugged into the di
 
 |
 
+* `dojox.editor.plugins.Save <dojox/editor/plugins/Save>`_ -- **STABLE**  -- A simple plugin + associated button icon that allows you have a toolbar button for saving (POSTing) the content to a URL on your server.  More extensive save logic should extend this plugin and customize it to their needs.  **This plugin is new to the Dojo Toolkit 1.4.**
+
+|
 
 ========
 See Also
