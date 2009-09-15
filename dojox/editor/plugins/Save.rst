@@ -148,7 +148,7 @@ Customizing a save
              }); 
            }
          });
-         dojo.parse(document.body);
+         dojo.parse();
         });
     </script>
 
