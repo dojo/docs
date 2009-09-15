@@ -69,6 +69,7 @@ dojoAttachEvent will automatically setup a connection from an event on the DOM n
 Here's an example of dojoAttachPoint and dojoAttachEvent:
 
 .. code-example::
+  :djConfig: parseOnLoad: false
 
   .. javascript::
 
@@ -76,9 +77,8 @@ Here's an example of dojoAttachPoint and dojoAttachEvent:
 		dojo.require("dijit._Widget");
 		dojo.require("dijit._Templated");
 		dojo.require("dojo.parser");
-	</script>
 
-        <script type="text/javascript">
+                dojo.addOnLoad(function(){
                 dojo.declare("FancyCounter",
 			[dijit._Widget, dijit._Templated], {
 				// counter
@@ -94,6 +94,8 @@ Here's an example of dojoAttachPoint and dojoAttachEvent:
 				 	this.counter.innerHTML = ++this._i;
 				 }
 			});
+                        dojo.parser.parse();
+                });
         </script>
 
   .. html::
