@@ -71,8 +71,8 @@ Here's an example of dojoAttachPoint and dojoAttachEvent:
 .. code-example::
   :djConfig: parseOnLoad: false
   :type: inline
-  :width: 300
-  :height: 200
+  :width: 400
+  :height: 250
   :toolbar: versions, dir
 
   .. javascript::
@@ -126,8 +126,8 @@ For example:
 
 .. code-example::
   :djConfig: parseOnLoad: false
-  :width: 300
-  :height: 200
+  :width: 400
+  :height: 250
   :toolbar: versions, dir
 
   .. javascript::
