@@ -149,7 +149,8 @@ Customizing a save
              }); 
            }
          });
-         dojo.parse();
+         //Now we can parse the page since we defined our save plugin above.
+         dojo.parser.parse();
         });
     </script>
 
