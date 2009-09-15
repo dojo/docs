@@ -126,6 +126,7 @@ Customizing a save
   .. javascript::
 
     <script>
+      dojo.require("dojo.parser");
       dojo.require("dijit.Editor");
       dojo.require("dojox.editor.plugins.Save");
 
