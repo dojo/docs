@@ -135,7 +135,7 @@ Customizing a save
         dojo.declare("mySavePlugin", [dojox.editor.plugins.Save],{
           save: function(content){
             alert(content);
-            this,inherited(arguments);
+            this.inherited(arguments);
           }
         });
 
