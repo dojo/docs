@@ -76,8 +76,10 @@ Here's an example of dojoAttachPoint and dojoAttachEvent:
 		dojo.require("dijit._Widget");
 		dojo.require("dijit._Templated");
 		dojo.require("dojo.parser");
+	</script>
 
-		dojo.declare("FancyCounter",
+        <script type="text/javascript">
+                dojo.declare("FancyCounter",
 			[dijit._Widget, dijit._Templated], {
 				// counter
 				_i: 0,
@@ -92,7 +94,7 @@ Here's an example of dojoAttachPoint and dojoAttachEvent:
 				 	this.counter.innerHTML = ++this._i;
 				 }
 			});
-	</script>
+        </script>
 
   .. html::
 
