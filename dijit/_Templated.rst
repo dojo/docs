@@ -70,6 +70,7 @@ Here's an example of dojoAttachPoint and dojoAttachEvent:
 
 .. code-example::
   :djConfig: parseOnLoad: false
+  :type: inline
 
   .. javascript::
 
@@ -121,18 +122,24 @@ If the template defines dojoAttachPoint="containerNode", the children from the s
 For example:
 
 .. code-example::
+  :djConfig: parseOnLoad: false
 
   .. javascript::
 
     <script>
 		dojo.require("dijit._Widget");
 		dojo.require("dijit._Templated");
+		dojo.require("dojo.parser");
+
+                dojo.addOnLoad(function(){
 		dojo.declare("MyButton",
 			[dijit._Widget, dijit._Templated], {
 				templateString:
 				    "<button dojoAttachPoint='containerNode'></button>"
 			});
-		dojo.require("dojo.parser");
+                });
+
+                dojo.parser.parse();
     </script>
 
   .. html::
