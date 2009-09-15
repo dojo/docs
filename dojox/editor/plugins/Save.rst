@@ -120,7 +120,7 @@ Customizing a save
 ------------------
 
 .. code-example::
-  :djConfig: parseOnLoad: true
+  :djConfig: parseOnLoad: false
   :version: 1.4
 
   .. javascript::
@@ -129,23 +129,27 @@ Customizing a save
       dojo.require("dijit.Editor");
       dojo.require("dojox.editor.plugins.Save");
 
-      dojo.declare("mySavePlugin", [dojox.editor.plugins.Save],{
-        save: function(content){
-          alert(content);
-          this,inherited(arguments);
-        }
-      });
+      dojo.addOnLoad(function(){
 
-      dojo.subscribe(dijit._scopeName + ".Editor.getPlugin",null,function(o){
-        if(o.plugin){ return; }
-        var name = o.args.name.toLowerCase();
-        if(name ===  "mysave"){
-           o.plugin = new mySavePlugin({
-             url: ("url" in o.args)?o.args.url:"",
-             logResults: ("logResults" in o.args)?o.args.logResults:true
-           });
-         }
-       });
+        dojo.declare("mySavePlugin", [dojox.editor.plugins.Save],{
+          save: function(content){
+            alert(content);
+            this,inherited(arguments);
+          }
+        });
+
+        dojo.subscribe(dijit._scopeName + ".Editor.getPlugin",null,function(o){
+          if(o.plugin){ return; }
+          var name = o.args.name.toLowerCase();
+          if(name ===  "mysave"){
+             o.plugin = new mySavePlugin({
+               url: ("url" in o.args)?o.args.url:"",
+               logResults: ("logResults" in o.args)?o.args.logResults:true
+             }); 
+           }
+         });
+         dojo.parse(document.body);
+        });
     </script>
 
   .. css::
