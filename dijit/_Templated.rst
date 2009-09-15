@@ -141,7 +141,10 @@ For example:
 		        dojo.declare("MyButton",
 			[dijit._Widget, dijit._Templated], {
 				templateString:
-				    "<button dojoAttachPoint='containerNode'></button>"
+				    "<button dojoAttachPoint='containerNode' dojoAttachEvent='onclick: onClick'></button>",
+                                onClick: function(){
+                                        alert("Awesome!!");
+                                }
 			});
                         dojo.parser.parse();
                 });
