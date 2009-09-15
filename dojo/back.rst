@@ -63,6 +63,7 @@ To use dojo.back:
 
    ..
 
+**WARNING:** dojo.back.init() must be called before the page's DOM is finished loading. Otherwise it will not work. Be careful with xdomain loading or djConfig.debugAtAllCosts scenarios, in order for this method to work, dojo.back will need to be part of a build layer.
 
 Register a state object
 -----------------------
