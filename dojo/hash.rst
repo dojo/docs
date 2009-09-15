@@ -161,4 +161,4 @@ Customizing the polling loop frequency
  ..
 
 Encoding/Decoding
- 
+ dojo.hash automatically decodes the hash value when you use it as a getter.  As a setter, it is up to the consumer to properly encode the pieces of input that should be encoded.
