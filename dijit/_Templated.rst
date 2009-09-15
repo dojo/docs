@@ -68,13 +68,16 @@ dojoAttachEvent will automatically setup a connection from an event on the DOM n
 
 Here's an example of dojoAttachPoint and dojoAttachEvent:
 
-.. cv-compound::
+.. code-example::
 
-  .. cv:: javascript
+  .. javascript::
 
 	<script type="text/javascript">
 		dojo.require("dijit._Widget");
 		dojo.require("dijit._Templated");
+		dojo.require("dojo.parser");
+
+                dojo.addOnLoad(function(){
 		dojo.declare("FancyCounter",
 			[dijit._Widget, dijit._Templated], {
 				// counter
@@ -90,10 +93,10 @@ Here's an example of dojoAttachPoint and dojoAttachEvent:
 				 	this.counter.innerHTML = ++this._i;
 				 }
 			});
-		dojo.require("dojo.parser");
+                });
 	</script>
 
-  .. cv:: html
+  .. html::
 
 	<span dojoType="FancyCounter">press me</span>
 
@@ -115,9 +118,9 @@ If the template defines dojoAttachPoint="containerNode", the children from the s
 
 For example:
 
-.. cv-compound::
+.. code-example::
 
-  .. cv:: javascript
+  .. javascript::
 
     <script>
 		dojo.require("dijit._Widget");
@@ -130,7 +133,7 @@ For example:
 		dojo.require("dojo.parser");
     </script>
 
-  .. cv:: html
+  .. html::
 
 	<button dojoType="MyButton">press me</button>
 
