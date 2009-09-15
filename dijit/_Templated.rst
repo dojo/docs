@@ -71,6 +71,9 @@ Here's an example of dojoAttachPoint and dojoAttachEvent:
 .. code-example::
   :djConfig: parseOnLoad: false
   :type: inline
+  :width: 300
+  :height: 200
+  :toolbars: versions, dir
 
   .. javascript::
 
@@ -123,6 +126,9 @@ For example:
 
 .. code-example::
   :djConfig: parseOnLoad: false
+  :width: 300
+  :height: 200
+  :toolbars: versions, dir
 
   .. javascript::
 
@@ -132,14 +138,13 @@ For example:
 		dojo.require("dojo.parser");
 
                 dojo.addOnLoad(function(){
-		dojo.declare("MyButton",
+		        dojo.declare("MyButton",
 			[dijit._Widget, dijit._Templated], {
 				templateString:
 				    "<button dojoAttachPoint='containerNode'></button>"
 			});
+                        dojo.parser.parse();
                 });
-
-                dojo.parser.parse();
     </script>
 
   .. html::
