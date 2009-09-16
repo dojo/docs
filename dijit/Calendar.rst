@@ -6,17 +6,17 @@
 dijit.Calendar
 ===============
 
+:Status: Contributed, Draft
+:Version: 1.4
 :Authors: Adam Peller
-:Project owner: Adam Peller
+:Developers: Adam Peller
 
 .. contents::
     :depth: 2
 
-The Calendar widget displays a localized month-view calendar and allows the user to navigate months and years and select a date.  It is typically used as part of the `DateTextBox <dijit/form/DateTextBox>`_ which includes a text box and uses the Calendar as a drop-down. Localizations for hundreds of languages and cultures are included as part of the Dojo Toolkit.  The locale will be chosen based on the djConfig.locale setting of your page, using navigator.language by default.
+The _Calendar widget displays a localized month-view calendar and allows the user to navigate months and years and select a date.  It is typically used as part of the `DateTextBox <dijit/form/DateTextBox>`_ which includes a text box and uses the _Calendar as a drop-down. Localizations for hundreds of languages and cultures are included as part of the Dojo Toolkit.  The locale will be chosen based on the djConfig.locale setting of your page, using navigator.language by default.  To meet the accessibility requirements of the Dijit project, which requires keyboard accessibility on input controls, the _Calendar must be used in conjunction with `DateTextBox <dijit/form/DateTextBox>`_. For this reason, the _Calendar widget is not supported standalone and is prefixed with an underscore ("_").  However, a standalone calendar can easily be added to a page as seen in the demo below.
 
-Navigating between months is possible with the arrow icons, and the next and previous year may be clicked to change to that year.  Holding the mouse down on these controls will repeat the action.  Starting with version 1.4, the month name is a drop-down control for selecting a different month.
-
-The Calendar widget has been supported as a standalone widget since version 1.4.  Prior to that, to meet the accessibility requirements of the Dijit project which requires accessibility on all widgets, the implementation was private and began with an underscore character: dijit._Calendar.
+Navigating between months is possible with the arrow icons, and the next and previous year may be clicked to change to that year.  Holding the mouse down on these controls will repeat the action.  In version 1.4+, the month name is a drop-down control for selecting a different month.
 
 Non-Gregorian calendar use is possible using the datePackage attribute and experimental date classes in `dojox.date <dojox/date>`_.  
 
@@ -97,7 +97,7 @@ Javascript declaration, with a restriction of +/- one week from the current date
 
 	dojo.addOnLoad(function(){
 		new dijit._Calendar({
-			value: new Date(),
+			value: new Date(2009, 7, 7),
 			isDisabledDate: function(d){
 				var d = new Date(d); d.setHours(0,0,0,0);
 				var today = new Date(); today.setHours(0,0,0,0);
@@ -171,13 +171,13 @@ With a local custom template to change the layout (does not work against CDN)
 	<input id="calendar5" dayWidth="abbr" value="2008-03-13">
         
 
-[1.4+] Non-Gregorian calendars
+[experimental: 1.4+] Non-Gregorian calendars
 
-.. code-example::
-  :version: 9.99
+.. cv-compound::
+  :version: 1.4
   :height: 340
 
-  .. javascript::
+  .. cv:: javascript
 
     <script type="text/javascript">
       dojo.require("dijit.dijit"); // loads the optimized dijit layer
@@ -214,7 +214,7 @@ With a local custom template to change the layout (does not work against CDN)
       }
     </script>
 
-  .. html::
+  .. cv:: html
 
     <table class="container">
       <tr>
@@ -233,7 +233,7 @@ With a local custom template to change the layout (does not work against CDN)
       </tr>
     </table>
 
-  .. css:
+  .. cv:: css
 
     <style type="text/css">
       .{{ theme }} table.dijitCalendarContainer {
@@ -245,11 +245,11 @@ With a local custom template to change the layout (does not work against CDN)
 Note
 ====
 
-dijit._Calendar was upgraded to dijit.Calendar in version 1.4. An alias is provided for backwards compatibility.
+dijit._Calendar was upgraded to dijit.Calendar in version 1.4.0. An alias is provided for backwards compatibility.
 
 
 ========
 See Also
 ========
 
-  * `dojox.widget.Calendar <dojox/widget/Calendar>`_ - An enhanced but still experimental calendar widget which has additional capabilities like year-only views and animation effects.
+  * `dojox.widget.Calendar <dojox/widget/Calendar>`_ - An enhanced but still experimental version of Calendar which has additional capabilities like year-only views and animation effects.
