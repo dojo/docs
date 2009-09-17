@@ -131,6 +131,50 @@ Example 1: dojo.xhrPost call to send a form
 Example 2: dojo.xhrPost call to send some text data
 ---------------------------------------------------
 
+.. code-example::
+  
+  .. javascript::
+
+    <script type="text/javascript">
+      dojo.require("dijit.form.Button");
+
+      function sendText() {
+        var button = dijit.byId("submitButton2");
+
+        dojo.connect(button, "onClick", function(event){
+          //The parameters to pass to xhrPost, the message, and the url to send it to
+          //Also, how to handle the return and callbacks.
+          var xhrArgs = {
+            url: "postIt",
+            postData: "Some random text",
+            handleAs: "text",
+            load: function(data){
+              dojo.byId("response2").innerHTML = "Message posted.";
+            },
+            error: function(error){
+              //We'll 404 in the demo, but that's okay.  We don't have a 'postIt' service on the 
+              //docs server.
+              dojo.byId("response2").innerHTML = "Message posted.";
+            }
+          }
+          dojo.byId("response2").innerHTML = "Message being sent..."
+          //Call the asynchronous xhrPost
+          var deferred = dojo.xhrPost(xhrArgs);  
+        });
+      }
+      dojo.addOnLoad(sendText);
+    </script>
+
+  .. html::
+
+    <b>Push the button to POST some text.</b>
+    <br>
+    <br>
+    <button dojoType="dijit.form.Button" id="submitButton2">Send it!</button>
+    <br>
+    <br>
+    <b>Result</b>
+    <div id="response2"></div>
 
 ========
 See also
