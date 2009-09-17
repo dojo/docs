@@ -29,15 +29,42 @@ Mixin dijit._Templated when you declare your widget:
  :linenos:
 
  <script type="text/javascript">
-   dojo.declare("MyWidget", [dijit._Widget, dijit._Templated], { ... });
+   dojo.declare("MyWidget", [dijit._Widget, dijit._Templated], {
+       templateString: "<div>hello world</div>"
+   });
  </script>
 
-and then *don't* define buildRendering().
+and then instead of defining buildRendering(), define a ``templateString``.
 
 ============
 The template
 ============
-The template is specified in the widget attribute templatePath or templateString, and points to some HTML w/a single root node, with special attributes on the nodes, plus possibly substitution variables, etc.
+The template is specified in the widget attribute ``templateString``, and points to some HTML w/a single root node, with special attributes on the tags, plus possibly substitution variables, etc.
+
+It can either be specified as a literal string:
+
+.. code-block :: javascript
+ :linenos:
+
+ <script type="text/javascript">
+   dojo.declare("MyWidget", [dijit._Widget, dijit._Templated], {
+       templateString: "<div>hello world</div>"
+   });
+ </script>
+
+
+or pulled in from a file using `dojo.cache() <dojo/cache>`_
+
+.. code-block :: javascript
+ :linenos:
+
+ <script type="text/javascript">
+   dojo.declare("MyWidget", [dijit._Widget, dijit._Templated], {
+       templateString: 	templateString: dojo.cache("myNameSpace", "templates/MyWidget.html"),
+   });
+ </script>
+
+When using a built or released Dijit tree, the build will ``internStrings``, converting the dojo.cache() call into a literal string, avoiding a network request when users load the widget.
 
 The tags in the template can have these special attributes, in addition to typical attributes like class:
 
@@ -60,7 +87,7 @@ Instead, you the widget author do the following:
 
 The reason the variables are undeclared is that when the code in _Templated scans the html in step 1, and it finds the variables in the dojoAttachPoint attribute, it adds those variables to your widget class, dynamically.
 
-When using the "widgetsInTemplate" parameter, a dojoAttachPoint on the widget node in the template will refer to the widget instance rather than the Dom Node.
+When using the ``widgetsInTemplate`` parameter, a dojoAttachPoint on the widget node in the template will refer to the widget instance rather than the Dom Node.
 
 dojoAttachEvent
 ---------------
@@ -160,6 +187,8 @@ A template can also reference substitution variables like ${title}.   ${title} r
 
 However, this is not recommended, as (due to implementation details) it only handles setting of the title on widget instantiation. In other words, myWidget.attr('title', 'My new title') won't work if you use substitution variables.
 
+See the section on attributeMap in `Writing Widgets <quickstart/writingWidgets>`_ for an alternative to substitution variables.
+
 
 ===========================
 Widgets inside the Template
@@ -217,24 +246,6 @@ The onClick event on the dijit.form.Button will call InlineEditBox.save().
 The widgetsInTemplate feature does not support adding layout widgets as children.  In particular there are issues with startup() and resize() calls to the children.
 
 Also note that a widget's getChildren() method and similar methods will *not* include the widgets declared in the template, but rather just the widgets inside the containerNode.   This is because the widgets declared in the template are internal objects, effectively hidden from widget users.  In other words, only the developer of the widget knows that it internally contains widgets.
-
-=====================
-Templated Particulars
-=====================
-
-_Templated used *both* ``templateString`` and ``templatePath``. In cases where the parent widget has defined a ``templateString``, and you wish to define a ``templatePath`` in a subclass, you must null the original ``templateString``:
-
-.. code-block :: javascript
-
-   dojo.declare("Thinger", [dijit._Widget, dijit._Templated], {
-       // parent has a templateString
-       templateString:null,
-       templatePath: dojo.moduleUrl("foo", "bar.html")
-   });
-
-Most widgets do *not* define a ``templateString``. When using a built or released Dijit tree, the build will ``internStrings``, converting the contents of the templatePath into a templateString variable in the built code. 
-
-*note:* define ``templateString`` *first*, should you need to define both at all. If you define the path first, and supply a string, that string will always be used, and will throw errors after running through the build system.
 
 ========
 See also
