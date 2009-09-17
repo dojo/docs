@@ -73,7 +73,8 @@ Example 1: dojo.xhrPost call to send a form
 
 
 .. code-example::
-  
+  :djConfig: parseOnLoad: false
+
   .. javascript::
 
     <script>
