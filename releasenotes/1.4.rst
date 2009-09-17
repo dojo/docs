@@ -4,11 +4,11 @@ Dojo 1.4 Release Notes
 =======================
 
 .. contents::
-   :depth: 2
+   :depth: 3
 
-======
+====
 Dojo
-======
+====
 
 `IO Pipeline Topics <dojo/ioPipelineTopics>`_
 ----------------------------------------------
@@ -53,78 +53,20 @@ Dojo Base FX
 Dijit
 ======
 
-Dialog
-------
-Multiple dialogs can now be shown (with one dialog launching over another).
-
-
-_Templated
-----------
-* widgetsInTemplate widget lifecycle: lots of bug fixes around the lifecycle for widgets in templates.  startup() is now called on widgets in templates when startup() is called on the main widget.   Templated Layout widgets with widgets in their templates should call resize() on those widgets manually.
-* templatePath has been deprecated in favor of templateString used with dojo.cache(), see above.
-
-ContentPane
------------
-Fixes related to resizing and href loading, including avoid premature href loading for ContentPanes in nested TabContainers.  ContentPane now acts as a full layout widget, meaning that it calls resize() on it's child widgets when (not before) it is made visible, so no problems with ContentPane's children being initialized while hidden.
- 
-TextBox
--------
-selectOnClick attribute added to `dijit.form.TextBox <dijit/form/TextBox>`_ and all descendant form widgets, selecting all the text in the field just by clicking.   This makes it easier for users to change the value: just click and type.
-
-Select
-------
-dojox.form.DropDownSelect has been moved to dijit.Select as a styled HTML <select> replacement.
-
-Menu
-----
-Sliding the mouse diagonally from a vertical menu to a second vertical menu will no longer close the second menu if the mouse temporarily moves off of both menus.   (This happens when the MenuItem in the second menu is below the bottom of the first Menu.) ( (`#6773 <http://bugs.dojotoolkit.org/ticket/6773>`_)
-
-DropDownButton, ComboButton
----------------------------
-dropDownPosition parameter controls where the drop down appears, as usual searching a list of positions until somewhere is found where the drop down fits.   Example:  dropDownPosition="top,bottom"
-
-TitlePane
----------
-toggleable attribute to control whether or not user can close the TitlePane.  Useful for non-closable TitlePane's in a app that match the styling of the other TitlePanes (and other dijit components).
-
-onChange event handling in dijit.form
--------------------------------------
-Most dijit.form widgets fire the onChange event after a value change has been detected.  With some widgets, this event fired synchronously before the attr('value',val) returned, while on other widgets, the event was asynchronous.  In order to return control to the browser's UI thread sooner, and also to collapse onChange events that fire faster tha the user handler can execute, the events will always fire asynchronously now, and consecutive, unprocessed onChange events will be collapsed into single events.  User code that assumed onChange would always fire synchronously after a value change will have to be modified.
-
-dijit.WidgetSet enhancements
-----------------------------
-dijit.WidgetSet/dijit.registry now has a .length property, and new array-like functions: toArray, some, every, and map. forEach now returns instance for chaining. forEach, some, every, filter and map now accept a 'thisObj' as second or third param (after callback)
-
-TabContainer / AccordionContainer
----------------------------------
-* scrolling tab labels now supported (like on Firefox etc.) so that labels don't spill over to two rows when there isn't enough space
-* tab labels / pane titles can be changed via pane.attr('title', ...)
-* icons added, controlled via iconClass parameter (like for Buttons and MenuItems).   To display only icons set showTitle=false.
-
+top level widgets
+-----------------
 Tree
-----
-* Tree: dijit._tree.dndSource moved to dijit.tree.dndSource (since it's supposed to be used publicly)
+~~~~
+* dijit._tree.dndSource moved to dijit.tree.dndSource (since it's supposed to be used publicly)
 * Lots of cleanup and bug fixes around DnD related code
 * Multi-character search.  Typing "al" will jump directly to first node starting with "al".
-* Path and selectedItem attributes to get/set the current tree item (`#9339 <http://bugs.dojotoolkit.org/ticket/9339>`_)
+* new Path and selectedItem attributes to get/set the current tree item (`#9339 <http://bugs.dojotoolkit.org/ticket/9339>`_)
 * Multi-parented items support.   Tree can support items with multiple parents, as long as this doesn't cause a loop.  (`#9361 <http://bugs.dojotoolkit.org/ticket/9361>`_)
-* Deferred Child load option on TreeStoreModel.  Option added to deferring calling loadItem() on a data store item until it's children need to be read.  Performance boost for JsonRestStore.  (`#9575 <http://bugs.dojotoolkit.org/ticket/9575>`_)
+* Deferred child load option on TreeStoreModel.  Option added to deferring calling loadItem() on a data store item until it's children need to be read.  Performance boost for JsonRestStore.  (`#9575 <http://bugs.dojotoolkit.org/ticket/9575>`_)
 
-
-Calendar/DateTextBox
---------------------
-Keyboard support added, users can select a date in the calendar using arrow keys, and page-down/up for month navigation.
-
-Tooltip
--------
-addTarget()/removeTarget() methods to dynamically attach/detach the tooltip from various nodes.
-
-NumberSpinner
--------------
-The `NumberSpinner <dijit/form/NumberSpinner>`_ widget has changed the **required** attribute default value from true to false to more consistently allow for unspecified values within a FORM.
 
 Editor
-------
+~~~~~~
 The RTE has had numerous bug fixes applied to it as well as some code cleanup to make it more extensible and better behaving on browsers such as Opera.  It also had several new plugin modules added to dijit, as well as several new ones added to dojox.  For information on the dojox modules, see the dojox section of these release notes.
 
 * `FullScreen <dijit/_editor/plugins/FullScreen>`_:  A plugin that adds the capability to the editor to take over the complete viewport containing the page running the editor.  
@@ -134,6 +76,73 @@ The RTE has had numerous bug fixes applied to it as well as some code cleanup to
 * `Print <dijit/_editor/plugins/Print>`_:  A plugin that lets you print the contents of the editor frame. 
 
 * `NewPage <dijit/_editor/plugins/NewPage>`_:  A plugin that lets you clear the content of the editor and set a new default content with a button click.  
+
+Dialog
+~~~~~~
+Multiple dialogs can now be shown (with one dialog launching over another).
+
+Menu
+~~~~
+Sliding the mouse diagonally from a vertical menu to a second vertical menu will no longer close the second menu if the mouse temporarily moves off of both menus.   (This happens when the MenuItem in the second menu is below the bottom of the first Menu.) ( (`#6773 <http://bugs.dojotoolkit.org/ticket/6773>`_)
+
+TitlePane
+~~~~~~~~~
+toggleable attribute to control whether or not user can close the TitlePane.  Useful for non-closable TitlePane's in a app that match the styling of the other TitlePanes (and other dijit components).
+
+Tooltip
+~~~~~~~
+addTarget()/removeTarget() methods to dynamically attach/detach the tooltip from various nodes.
+
+dijit.layout
+------------
+TabContainer / AccordionContainer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* scrolling tab labels now supported (like on Firefox etc.) so that labels don't spill over to two rows when there isn't enough space
+* tab labels / pane titles can be changed via pane.attr('title', ...)
+* icons added, controlled via iconClass parameter (like for Buttons and MenuItems).   To display only icons set showTitle=false.
+
+ContentPane
+~~~~~~~~~~~
+Fixes related to resizing and href loading, including avoiding premature href loading for ContentPanes in nested TabContainers.  ContentPane now acts as a full layout widget, calling resize() on it's child widgets when (not before) it is made visible, avoiding problems with children being initialized while hidden.
+
+
+dijit.form
+----------
+Select
+~~~~~~
+dojox.form.DropDownSelect has been moved to dijit.Select as a styled HTML <select> replacement.
+
+Calendar/DateTextBox
+~~~~~~~~~~~~~~~~~~~~
+Keyboard support added, users can select a date in the calendar using arrow keys, and page-down/up for month navigation.
+
+TextBox
+~~~~~~~
+selectOnClick attribute added to `dijit.form.TextBox <dijit/form/TextBox>`_ and all descendant form widgets, selecting all the text in the field just by clicking.   This makes it easier for users to change the value: just click and type.
+
+DropDownButton, ComboButton
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+dropDownPosition parameter controls where the drop down appears, as usual searching a list of positions until somewhere is found where the drop down fits.   Example:  dropDownPosition="top,bottom"
+
+onChange event handling
+~~~~~~~~~~~~~~~~~~~~~~~
+Most dijit.form widgets fire the onChange event after a value change has been detected.  With some widgets, this event fired synchronously before the attr('value',val) returned, while on other widgets, the event was asynchronous.  In order to return control to the browser's UI thread sooner, and also to collapse onChange events that fire faster tha the user handler can execute, the events will always fire asynchronously now, and consecutive, unprocessed onChange events will be collapsed into single events.  User code that assumed onChange would always fire synchronously after a value change will have to be modified.
+
+NumberSpinner
+~~~~~~~~~~~~~
+The `NumberSpinner <dijit/form/NumberSpinner>`_ widget has changed the **required** attribute default value from true to false to more consistently allow for unspecified values within a FORM.
+
+Dijit infrastructure changes
+----------------------------
+_Templated
+~~~~~~~~~~
+* widgetsInTemplate widget lifecycle: lots of bug fixes around the lifecycle for widgets in templates.  startup() is now called on widgets in templates when startup() is called on the main widget.   Templated Layout widgets with widgets in their templates should call resize() on those widgets manually.
+* templatePath has been deprecated in favor of templateString used with dojo.cache(), see above.
+
+
+dijit.WidgetSet enhancements
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+dijit.WidgetSet/dijit.registry now has a .length property, and new array-like functions: toArray, some, every, and map. forEach now returns instance for chaining. forEach, some, every, filter and map now accept a 'thisObj' as second or third param (after callback)
 
 ======
 Dojox
