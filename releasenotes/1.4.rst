@@ -175,6 +175,16 @@ dojox.form
 
 * dojox.form._HasDropDown, dojox.form._FormSelectWidget, dojox.form.DropDownSelect - Migrated to dijit (dijit._HasDropDown, dijit.form._FormSelectWidget, dijit.form.DropDownSelect)
 
+dojo.form.FileUploader
+----------------------
+
+* The improved FileUploader actually landed in a "dot release", 1.3.1, but 1.4 adds some bug fixes. The new FileUploader adds many features, and the display is now quite robust. The Flash uploader is now an actual Flash button with an emulated HTML style, so that it can be used in cases where it was broken before, like in scrolling boxes. The HTML uploader too has been improved so that it is not floating on the page, allowing for more complex display cases and less UI breakage.
+
+dojox.Drawing
+-------------
+
+A new drawing tool has landed in DojoX. Similar to Sketch, but with an extensible architecture that allows for plugins. 
+
 dojox.editor.plugins
 --------------------
 Several new plugins for the dijit.Editor RTE have been provided as dojox modules.  They are all generally well tested and work good across browsers.
