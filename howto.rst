@@ -440,9 +440,6 @@ For any other part of the documentation we use lowerCamelCase::
 headertest
 ==========
 
-h3
-==
-
 h4
 --
 
