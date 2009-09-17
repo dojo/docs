@@ -133,7 +133,7 @@ Example 2: dojo.xhrPost call to send some text data
   
   .. javascript::
 
-    <script>
+    <script type="text/javascript>
       dojo.require("dijit.form.Button");
 
       function sendText() {
