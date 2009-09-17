@@ -74,6 +74,14 @@ Example:
   <div dojoType="dijit.Editor" id="editor" extraPlugins="[name: 'fullscreen', zIndex: 900}]"></div>
 
 
+===================
+A11Y Considerations
+===================
+
+* When using the hotkey CTRL-SHIFT-F11, the focus is kept in the editor window.
+* When using the button (via mouse click or keyboard), focus does not move into the edit area.  This is so that users who accidentally enable the mode do not have to chift-tab out to undo the mode.  They can just press the button again.
+
+
 ========
 Examples
 ========
