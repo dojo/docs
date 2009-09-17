@@ -407,7 +407,7 @@ The attach point where that input is copied is called containerNode.   In other 
 For widgets that mixin _Templated, that is handled automatically, as long as the template specifies dojoAttachPoint="containerNode".
 
 
-Having said all that, now we define the widget, referencing this template.  We can either reference it via templatePath, or templateString.   For this demo we'll inline it into the javascript with templateString, although usually it's loaded indirectly from a file (via templatePath).
+Having said all that, now we define the widget, referencing this template via the templateString attribute.   Note that often the template is stored in a file, and in that case templateString should reference the file via `dojo.cache() <dojo/cache>`_.
 
 .. cv-compound::
 
