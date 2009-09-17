@@ -78,40 +78,7 @@ Example 1: dojo.xhrPost call to send a form
   .. javascript::
 
     <script type="text/javascript">
-      dojo.require("dijit.form.Button");
-      dojo.require("dijit.form.TextBox");
-      dojo.require("dijit.form.CheckBox");
-
-      function sendForm() {
-        var button = dijit.byId("submitButton");
-
-        dojo.connect(button, "onClick", function(event){
-          //Stop the submit event since we want to control form submission.
-          event.preventDefault();
-          event.stopPropagation();
-
-          //The parameters to pass to xhrPost, the form, how to handle it, and the callbacks.
-          //Note that there isn't a url passed.  xhrPost will extract the url to call from the form's
-          //'action' attribute.  You could also leave off the action attribute and set the url of the xhrPost object
-          //either should work.
-          var xhrArgs = {
-            form: dojo.byId("myform"),
-            handleAs: "text",
-            load: function(data){
-              dojo.byId("response").innerHTML = "Form posted.";
-            },
-            error: function(error){
-              //We'll 404 in the demo, but that's okay.  We don't have a 'postIt' service on the 
-              //docs server.
-              dojo.byId("response").innerHTML = "Form posted.";
-            }
-          }
-          //Call the asynchronous xhrPost
-          dojo.byId("response").innerHTML = "Form being sent..."
-          var deferred = dojo.xhrPost(xhrArgs);  
-        });
-      }
-      dojo.addOnLoad(sendForm);
+     
     </script>
 
   .. html::
