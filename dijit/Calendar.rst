@@ -14,9 +14,11 @@ dijit.Calendar
 .. contents::
     :depth: 2
 
-The Calendar widget displays a localized month-view calendar and allows the user to navigate months and years and select a date.  It is typically used as part of the `DateTextBox <dijit/form/DateTextBox>`_ which includes a text box and uses the Calendar as a drop-down. Localizations for hundreds of languages and cultures are included as part of the Dojo Toolkit.  The locale will be chosen based on the djConfig.locale setting of your page, using navigator.language by default.  The Calendar widget has been supported as a standalone widget since version 1.4.  Prior to that, to meet the accessibility requirements of the Dijit project which requires accessibility on all widgets, the implementation was private and began with an underscore character: dijit._Calendar.
+The Calendar widget displays a localized month-view calendar and allows the user to navigate months and years and select a date.  It is typically used as part of the `DateTextBox <dijit/form/DateTextBox>`_ which includes a text box and uses the Calendar as a drop-down. Localizations for hundreds of languages and cultures are included as part of the Dojo Toolkit.  The locale will be chosen based on the djConfig.locale setting of your page, using navigator.language by default.
 
 Navigating between months is possible with the arrow icons, and the next and previous year may be clicked to change to that year.  Holding the mouse down on these controls will repeat the action.  Starting with version 1.4, the month name is a drop-down control for selecting a different month.
+
+The Calendar widget has been supported as a standalone widget since version 1.4.  Prior to that, to meet the accessibility requirements of the Dijit project which requires accessibility on all widgets, the implementation was private and began with an underscore character: dijit._Calendar.
 
 Non-Gregorian calendar use is possible using the datePackage attribute and experimental date classes in `dojox.date <dojox/date>`_.  
 
