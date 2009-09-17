@@ -98,9 +98,9 @@ This plugin is particularly powerful when it is combined with the following plug
 * `dojox.editor.plugins.PrettyPrint <dojox/editor/plugins/PrettyPrint>`_ - Format the content in the editor so that it is easily human readable and modifiable.
 
 
-==========
-A11Y Notes
-==========
+===================
+A11Y Considerations
+===================
 
 * When using the hotkey CTRL-SHIFT-F12, the focus will be restored to the top of both the source view or the RTE view, keeping it consistent with retaining focus inside the 'editable' area of the editor.
 * When using the button (via mouse click or keyboard), focus does not move into the edit area.  This is so that users who accidentally enable the mode do not have to chift-tab out to undo the mode.  They can just press the button again.
