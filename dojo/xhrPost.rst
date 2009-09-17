@@ -70,9 +70,9 @@ For specific examples of how to use dojo.xhrPost, please refer to the following.
 Example 1: dojo.xhrPost call to send a form
 -------------------------------------------
 
-.. cv-compound ::
+.. code-example::
   
-  .. cv :: javascript
+  .. javascript::
 
     <script>
       dojo.require("dijit.form.Button");
@@ -111,7 +111,7 @@ Example 1: dojo.xhrPost call to send a form
       dojo.addOnLoad(sendForm);
     </script>
 
-  .. cv :: html 
+  .. html::
 
     <b>Simple Form:</b>
     <br>
@@ -129,9 +129,9 @@ Example 1: dojo.xhrPost call to send a form
 Example 2: dojo.xhrPost call to send some text data
 ---------------------------------------------------
 
-.. cv-compound ::
+.. code-example::
   
-  .. cv :: javascript
+  .. javascript::
 
     <script>
       dojo.require("dijit.form.Button");
@@ -163,7 +163,7 @@ Example 2: dojo.xhrPost call to send some text data
       dojo.addOnLoad(sendText);
     </script>
 
-  .. cv :: html 
+  .. html::
 
     <b>Push the button to POST some text.</b>
     <br>
