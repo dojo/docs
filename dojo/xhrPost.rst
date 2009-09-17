@@ -118,7 +118,7 @@ Example 1: dojo.xhrPost call to send a form
 
     <b>Simple Form:</b>
     <br>
-      <form action=postIt" id="myform">
+      <form action="postIt" id="myform">
 
       </form>
 
