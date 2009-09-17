@@ -120,9 +120,7 @@ Example 1: dojo.xhrPost call to send a form
     <br>
     <blockquote>
       <form action=postIt" id="myform">
-        Text: <input type="text" dojoType="dijit.form.TextBox" name="formInput" value="Some text"></input><br><br>
-        Checkbox: <input type="checkbox" dojoType="dijit.form.CheckBox" name="checkboxInput"></input><br><br>
-        <button type="submit" dojoType="dijit.form.Button" id="submitButton">Send it!</button>
+
       </form>
     </blockquote>
     <br>
