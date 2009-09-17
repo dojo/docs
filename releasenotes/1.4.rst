@@ -33,6 +33,9 @@ This method in Dojo Base has been deprecated in Dojo 1.4.  The returned object i
 
 `dojo.declare <dojo/declare>`_
 ------------------------------
+
+A drop-in replacement is committed, which is generally faster, and introduces enhancements to the familiar functionality. The announcement link: http://groups.google.com/group/dojo-interest/msg/4a22b20587e91d27
+
 TODO: document or link to blog post (Eugene)
 
 `dojo.cache <dojo/cache>`_
@@ -69,13 +72,13 @@ Editor
 ~~~~~~
 The RTE has had numerous bug fixes applied to it as well as some code cleanup to make it more extensible and better behaving on browsers such as Opera.  It also had several new plugin modules added to dijit, as well as several new ones added to dojox.  For information on the dojox modules, see the dojox section of these release notes.
 
-* `FullScreen <dijit/_editor/plugins/FullScreen>`_:  A plugin that adds the capability to the editor to take over the complete viewport containing the page running the editor.  
+* `FullScreen <dijit/_editor/plugins/FullScreen>`_:  A plugin that adds the capability to the editor to take over the complete viewport containing the page running the editor.
 
 * `ViewSource <dijit/_editor/plugins/ViewSource>`_:  A plugin that lets you toggle the editor view between HTML source and RTE modes.
 
-* `Print <dijit/_editor/plugins/Print>`_:  A plugin that lets you print the contents of the editor frame. 
+* `Print <dijit/_editor/plugins/Print>`_:  A plugin that lets you print the contents of the editor frame.
 
-* `NewPage <dijit/_editor/plugins/NewPage>`_:  A plugin that lets you clear the content of the editor and set a new default content with a button click.  
+* `NewPage <dijit/_editor/plugins/NewPage>`_:  A plugin that lets you clear the content of the editor and set a new default content with a button click.
 
 Dialog
 ~~~~~~
@@ -152,11 +155,11 @@ dojox.image
 -----------
 
 * Significant fixes and improvements in dojox.image.Lightbox. see: `[17205] <http://bugs.dojotoolkit.org/changeset/17205>`_
-  
+
 dojox.fx
 --------
 
-* API change to dojox.fx.style functions. dojox.fx.addClass/toggleClass/removeClass now match dojo.addClass/toggleClass/removeClass API's. Documentation added, still experimental. 
+* API change to dojox.fx.style functions. dojox.fx.addClass/toggleClass/removeClass now match dojo.addClass/toggleClass/removeClass API's. Documentation added, still experimental.
 * Added dojox.fx.ext-dojo.NodeList-style module, mapping dojox.fx.style functions into dojo.NodeList
 
 dojox.layout
@@ -183,7 +186,7 @@ dojo.form.FileUploader
 dojox.Drawing
 -------------
 
-A new drawing tool has landed in DojoX. Similar to Sketch, but with an extensible architecture that allows for plugins. 
+A new drawing tool has landed in DojoX. Similar to Sketch, but with an extensible architecture that allows for plugins.
 
 dojox.editor.plugins
 --------------------
@@ -193,9 +196,9 @@ Several new plugins for the dijit.Editor RTE have been provided as dojox modules
 
 * `PageBreak <dojox/editor/plugins/PageBreak>`_:  A plugin that lets you insert CSS style page breaks so when printed, the document page breaks at the indicated spot.
 
-* `ShowBlockNodes <dojox/editor/plugins/ShowBlockNodes>`_:  A plugin that lets you see in the editor what the block structure is that makes up the RTE document. 
+* `ShowBlockNodes <dojox/editor/plugins/ShowBlockNodes>`_:  A plugin that lets you see in the editor what the block structure is that makes up the RTE document.
 
-* `Preview <dojox/editor/plugins/Preview>`_:  A plugin that lets you preview the editor content in a separate window with different CSS styles and stylesheets applied than what are used in the editor.  
+* `Preview <dojox/editor/plugins/Preview>`_:  A plugin that lets you preview the editor content in a separate window with different CSS styles and stylesheets applied than what are used in the editor.
 
 * `Save <dojox/editor/plugins/Save>`_:  A plugin that simplifes adding a save toolbar action for posting editor content back to a specified url.
 
@@ -204,4 +207,3 @@ Several new plugins for the dijit.Editor RTE have been provided as dojox modules
 Bug fixes
 =========
 The `full list of bug fixes <http://bugs.dojotoolkit.org/query?status=closed&group=component&order=priority&milestone=1.4&resolution=fixed&col=id&col=summary&col=type&col=priority>`_ is located in the bug database.
-  
