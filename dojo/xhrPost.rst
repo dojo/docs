@@ -121,10 +121,6 @@ Example 1: dojo.xhrPost call to send a form
       <form action=postIt" id="myform">
 
       </form>
-    <br>
-    <b>Result</b>
-    <div id="response"></div>
-
 
 Example 2: dojo.xhrPost call to send some text data
 ---------------------------------------------------
