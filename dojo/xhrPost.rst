@@ -77,7 +77,7 @@ Example 1: dojo.xhrPost call to send a form
 
   .. javascript::
 
-    <script>
+    <script type="text/javascript">
       dojo.require("dijit.form.Button");
       dojo.require("dijit.form.TextBox");
       dojo.require("dijit.form.CheckBox");
