@@ -87,9 +87,9 @@ Also, for Dojo 1.3 users ... please remember to import the dojox/widget/Standby/
 Example 1: Basic usage
 ----------------------
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. javascript::
 
     <script>
       dojo.require("dojox.widget.Standby");
@@ -103,14 +103,14 @@ Example 1: Basic usage
       dojo.addOnLoad(init);
     </script>
 
-  .. cv :: html 
+  .. html::
 
     <button jsId="b1" dojoType="dijit.form.Button">Show Standby widget</button>
     <button jsId="b2" dojoType="dijit.form.Button">Hide Standby widget</button>
     <div id="basic" style="width: 300px; height: 150px; background-color: yellow; border-style: solid; border-width: 2px;"></div>
     <div jsId="basicStandby1" dojoType="dojox.widget.Standby" target="basic"></div>
 
-  .. cv:: css
+  .. css::
 
     <style type="text/css">
       @import "/moin_static163/js/dojo/release/dojox/widget/Standby/Standby.css";
