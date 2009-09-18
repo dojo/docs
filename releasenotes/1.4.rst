@@ -56,6 +56,10 @@ Dojo Base FX
 
 A new method for monitoring, getting and setting the hash value.  dojo.hash provides hashchange notification using a new published topic "/dojo/hashchange", enabling cross-browser back/forward support and bookmarkability in AJAX applications. The native HTML 5 onhashchange event is used behind the scenes in browsers that support it.
 
+Dojo i18n
+---------
+
+The cultural tables in dojo/cldr have been updated to version 1.7.1 of the Unicode CLDR http://unicode.org/cldr
 ======
 Dijit
 ======
@@ -119,9 +123,9 @@ Select
 ~~~~~~
 dojox.form.DropDownSelect has been moved to dijit.Select as a styled HTML <select> replacement.
 
-Calendar/DateTextBox
+Calendar
 ~~~~~~~~~~~~~~~~~~~~
-Keyboard support added, users can select a date in the calendar using arrow keys, and page-down/up for month navigation.
+Calendar standalone widget now supports accessibility with ARIA and keyboard.  The widget was promoted to a public object, renamed from dijit._Calendar to dijit.Calendar.  Users can select a date in the calendar using arrow keys, and page-down/up for month navigation.  There is also a dropdown at the month label to change the month.  DateTextBox still relies on the input control for a11y and does not transfer focus to the calendar popup.
 
 TextBox
 ~~~~~~~
@@ -181,7 +185,7 @@ dojox.grid
 ----------
 
 * dojox.grid.TreeGrid - support for collapsable rows and model-based (dijit.tree.ForestStoreModel) structure.
-* compat grid is now bundled in the dojox/grid directory as a tarball archive for those who would like to continue using the deprecated (1.1) Grid
+* compat grid (dojox.grid.Grid) is now bundled in the dojox/grid directory as a tarball archive for those who would like to continue using the deprecated (1.1) Grid.  dojox.grid.DataGrid is the replacement.
 
 dojox.grid.EnhancedGrid
 -----------------------
@@ -203,7 +207,7 @@ dojo.form.FileUploader
 
 * The improved FileUploader actually landed in a "dot release", 1.3.1, but 1.4 adds some bug fixes. The new FileUploader adds many features, and the display is now quite robust. The Flash uploader is now an actual Flash button with an emulated HTML style, so that it can be used in cases where it was broken before, like in scrolling boxes. The HTML uploader too has been improved so that it is not floating on the page, allowing for more complex display cases and less UI breakage.
 
-dojox.Drawing
+dojox.drawing
 -------------
 
 A new drawing tool has landed in DojoX. Similar to Sketch, but with an extensible architecture that allows for plugins.
