@@ -303,6 +303,19 @@ When a dialog is opened focus goes to the title section of the dialog. This was 
 
 When focus is in a dialog, pressing the tab key will move focus forward to each focusable element within the dialog. When focus reaches the last focusable element in the dialog, pressing tab will cycle focus back to the dialog title. Pressing shift-tab will move focus backwards through focusable elements within the dialog until the dialog title is reached. If focus has previous cycled forward through all of the elements, pressing shift-tab with focus on the dialog title will move focus to the last element in the dialog. If focus has not previously been cycled through all of the focusable elements in the dialog using the tab key, pressing shift-tab with focus on the dialog title will leave focus in the title. The same focus cycling applies to the tooltip dialog as well with focus being set to the tooltip dialog container since there is no dialog title.
 
+Improved Screen Reader Support in 1.4
+-------------------------------------
+
+The dialog now supports the aria-describedby property.  If you have a description of the dialog that you would like spoken by the screen reader when the dialog opens add the aria-describedby property to the dialog.   Include an element containing the text you want spoken in the dialog.  The value of the aria-describedby property is the id of the element containing the text.
+
+.. code-block :: javascript
+
+  <div dojoType="dijit.Dialog" title="Example Dialog" aria-describedby="intro">
+    <div id="intro">Text to describe dialog</div>
+    <div>Additional dialog contents....</div>
+  </div>
+
+
 Known Issues
 ------------
 
