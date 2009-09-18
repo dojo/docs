@@ -105,10 +105,7 @@ Example 1: Basic usage
 
   .. html::
 
-    <button jsId="b1" dojoType="dijit.form.Button">Show Standby widget</button>
-    <button jsId="b2" dojoType="dijit.form.Button">Hide Standby widget</button>
-    <div id="basic" style="width: 300px; height: 150px; background-color: yellow; border-style: solid; border-width: 2px;"></div>
-    <div jsId="basicStandby1" dojoType="dojox.widget.Standby" target="basic"></div>
+    <h1>hi</h1>
 
   .. css::
 
