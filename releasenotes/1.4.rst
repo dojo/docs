@@ -147,6 +147,12 @@ dijit.WidgetSet enhancements
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 dijit.WidgetSet/dijit.registry now has a .length property, and new array-like functions: toArray, some, every, and map. forEach now returns instance for chaining. forEach, some, every, filter and map now accept a 'thisObj' as second or third param (after callback)
 
+Browser support
+---------------
+* Firefox 2 support dropped.  Firefox V3 and V3.5 supported.
+* Latest Safari (Safari v4) and latest Chrome (Chrome v3) supported, but not previous versions.
+* IE6, IE7, IE8 all supported
+
 ======
 Dojox
 ======
