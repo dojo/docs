@@ -13,6 +13,8 @@ dojo.modulename
 
 Enhanced DataGrid adds numerous useful features to dojox.grid.
 
+'''Contents'''
+<<TableOfContents(3)>>
 
 ============
 Introduction
@@ -34,15 +36,119 @@ Usage
 
 The following steps show a typical usage of EnhancedGrid:
 
-.. code-block :: javascript
- :linenos:
+.. code-example::
+  :type: inline
+  :toolbar: themes, versions, dir
+  :version: local
+  :width: 480
+  :height: 300
 
-<style type="text/css">
-     @import "../../../../dijit/themes/tundra/tundra.css";
-     @import "../../enhanced/resources/tundraEnhancedGrid.css";
-         ...
-</style>
+  .. javascript::
 
+    <style type="text/css">
+        @import "../../../../dijit/themes/tundra/tundra.css";
+        @import "../../enhanced/resources/tundraEnhancedGrid.css";
+        ...
+    </style>
+
+
+2. Declare required feature plugins 
+
+.. code-example::
+  :type: inline
+  :toolbar: themes, versions, dir
+  :version: local
+  :width: 480
+  :height: 300
+
+  .. javascript::
+
+    <script type="text/javascript">
+        dojo.require("dojox.grid.EnhancedGrid");                          // Required for all Enhanced features
+        dojo.require("dojox.grid.enhanced.plugins.DnD");                  // Row/Column drag-drop feature
+        dojo.require("dojox.grid.enhanced.plugins.Menu");                 // Declarative pop-up menu feature
+        dojo.require("dojox.grid.enhanced.plugins.NestedSorting");        // Nested sorting feature
+        dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");    // Indirect selection (checkbox/radio button selection) feature
+        ...
+    </script>
+
+3. Use features:
+
+.. code-example::
+  :type: inline
+  :toolbar: themes, versions, dir
+  :version: local
+  :width: 480
+  :height: 300
+
+  .. javascript::
+
+    <div id="grid" dojoType="dojox.grid.EnhancedGrid" 
+        plugins="{nestedSorting: true, dnd: true, indirectSelection: true,  // Each required feature must be turned on
+        menus:{
+        headerMenu:’headerMenu‘,  //References menus defined declaratively below
+        rowMenu:’rowMenu‘,
+        cellMenu:’cellMenu‘,
+        selectedRegionMenu:’selectedRegionMenu‘}}”
+        ...>
+    </div>
+
+[TODO - Add a live EDG demo here on Dojo Campus page]
+
+==Nested Sorting==
+
+This feature enhances the single sorting feature of base DataGrid. Nested sorting allows users to sort on one or more columns concurrently and also control the sort direction and order.
+
+===Usage===
+
+Using the nested sorting feature is pretty simple as shown below:
+
+* Declare nested sorting feature plugin
+
+.. code-example::
+  :type: inline
+  :toolbar: themes, versions, dir
+  :version: local
+  :width: 480
+  :height: 300
+
+  .. html::
+
+<script type="text/javascript">
+	dojo.require("dojox.grid.EnhancedGrid");
+	dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
+	...
+</script>
+
+* Use nested sorting feature
+
+    ... with HTML markup
+    
+.. code-example::
+  :type: inline
+  :toolbar: themes, versions, dir
+  :version: local
+  :width: 480
+  :height: 300
+
+  .. html::
+
+    <div id="grid" store="store1" dojoType="dojox.grid.EnhancedGrid" plugins="{nestedSorting: true}” ... ></div>
+
+    ... with JavaScript
+    
+.. code-example::
+  :type: inline
+  :toolbar: themes, versions, dir
+  :version: local
+  :width: 480
+  :height: 300
+
+  .. javascript::
+
+    var grid = new dojox.grid.EnhancedGrid({id: "grid", store: "store1", plugins: {nestedSorting: true}, ...}, dojo.byId("gridDiv”));
+    
+    
 ========
 Examples
 ========
