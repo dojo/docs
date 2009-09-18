@@ -344,12 +344,12 @@ Basic Scenarios
 Release Build
 ~~~~~~~~~~~~~
 
-A simple default build that creates the basic distribution tree from the source tree - the same as you would find by downloading the Dojo Toolkit Release from http://www.dojotoolkit.org/downloads:  `base build <build/scenario-releease>`_
+A simple default `build <build/scenario-release>`_ that creates the basic distribution tree from the source tree - the same as you would find by downloading the Dojo Toolkit Release from http://www.dojotoolkit.org/downloads
 
 Dojo Base Only Build
 ~~~~~~~~~~~~~~~~~~~~
 
-A small Dojo build which only builds the Dojo core into a layer, without dijit and the other name spaces:  `core build <build/scenario-base>`_
+A small Dojo `build <build/scenario-base>`_ which only builds the Dojo core into a layer, without dijit and the other name spaces: 
 
 * Simple one-layer build of all required Dojo resources, including other dijit and dojox namespaces
 * Single layer containing required resources from a custom namespace in addition to Dojo namespaces
