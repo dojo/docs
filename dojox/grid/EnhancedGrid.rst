@@ -86,20 +86,20 @@ The following steps show a typical usage of EnhancedGrid:
     <div id="grid" dojoType="dojox.grid.EnhancedGrid" 
         plugins="{nestedSorting: true, dnd: true, indirectSelection: true,  // Each required feature must be turned on
         menus:{
-        headerMenu:’headerMenu‘,  //References menus defined declaratively below
-        rowMenu:’rowMenu‘,
-        cellMenu:’cellMenu‘,
-        selectedRegionMenu:’selectedRegionMenu‘}}”
+        headerMenu:'headerMenu',  //References menus defined declaratively below
+        rowMenu:'rowMenu',
+        cellMenu:'cellMenu',
+        selectedRegionMenu:'selectedRegionMenu'}}"
         ...>
     </div>
 
 [TODO - Add a live EDG demo here on Dojo Campus page]
 
-==Nested Sorting==
+== Nested Sorting ==
 
 This feature enhances the single sorting feature of base DataGrid. Nested sorting allows users to sort on one or more columns concurrently and also control the sort direction and order.
 
-===Usage===
+=== Usage ===
 
 Using the nested sorting feature is pretty simple as shown below:
 
@@ -114,11 +114,11 @@ Using the nested sorting feature is pretty simple as shown below:
 
   .. html::
 
-<script type="text/javascript">
-	dojo.require("dojox.grid.EnhancedGrid");
-	dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
-	...
-</script>
+    <script type="text/javascript">
+        dojo.require("dojox.grid.EnhancedGrid");
+        dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
+        ...
+    </script>
 
 * Use nested sorting feature
 
@@ -133,9 +133,9 @@ Using the nested sorting feature is pretty simple as shown below:
 
   .. html::
 
-    <div id="grid" store="store1" dojoType="dojox.grid.EnhancedGrid" plugins="{nestedSorting: true}” ... ></div>
+    <div id="grid" store="store1" dojoType="dojox.grid.EnhancedGrid" plugins="{nestedSorting: true}" ... ></div>
 
-    ... with JavaScript
+    ... with JavaScript  <<< '''This isn't code. Not sure how to fix'''
     
 .. code-example::
   :type: inline
@@ -146,7 +146,7 @@ Using the nested sorting feature is pretty simple as shown below:
 
   .. javascript::
 
-    var grid = new dojox.grid.EnhancedGrid({id: "grid", store: "store1", plugins: {nestedSorting: true}, ...}, dojo.byId("gridDiv”));
+    var grid = new dojox.grid.EnhancedGrid({id: "grid", store: "store1", plugins: {nestedSorting: true}, ...}, dojo.byId("gridDiv"));
     
     
 ========
