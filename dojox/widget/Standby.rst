@@ -89,11 +89,6 @@ Example 1: Basic usage
 
 .. code-example::
   
-  .. javascript::
-
-    <script type="text/javascript">
-    </script>
-
   .. html::
 
     <h1>hi</h1>
