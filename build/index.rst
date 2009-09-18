@@ -341,6 +341,11 @@ See `possible directory layout <build/directoryLayout>`_ for the directory schem
 Basic Scenarios
 ---------------
 
+* Simple one-layer build of all required Dojo resources, including other dijit and dojox namespaces
+* Single layer containing required resources from a custom namespace in addition to Dojo namespaces
+* Simple cross-domain build
+* Custom namespace build that works in conjunction with a cross-domain build without duplicating resources
+
 Release Build
 ~~~~~~~~~~~~~
 
@@ -350,11 +355,6 @@ Dojo Base Only Build
 ~~~~~~~~~~~~~~~~~~~~
 
 A small Dojo `base build <build/scenario-base>`_ which only builds the Dojo core into a layer, without dijit and the other name spaces: 
-
-* Simple one-layer build of all required Dojo resources, including other dijit and dojox namespaces
-* Single layer containing required resources from a custom namespace in addition to Dojo namespaces
-* Simple cross-domain build
-* Custom namespace build that works in conjunction with a cross-domain build without duplicating resources
 
 Basic Cross Domain Build
 ~~~~~~~~~~~~~~~~~~~~~~~~
