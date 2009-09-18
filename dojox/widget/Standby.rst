@@ -94,13 +94,6 @@ Example 1: Basic usage
     <script type="text/javascript">
       dojo.require("dojox.widget.Standby");
       dojo.require("dijit.form.Button");
-
-      function init(){
-         document.body.appendChild(basicStandby1.domNode);
-         dojo.connect(b1, "onClick", function(){basicStandby1.show();});
-         dojo.connect(b2, "onClick", function(){basicStandby1.hide();});
-      }
-      dojo.addOnLoad(init);
     </script>
 
   .. html::
