@@ -349,7 +349,7 @@ A simple default `build <build/scenario-release>`_ that creates the basic distri
 Dojo Base Only Build
 ~~~~~~~~~~~~~~~~~~~~
 
-A small Dojo `build <build/scenario-base>`_ which only builds the Dojo core into a layer, without dijit and the other name spaces: 
+A small Dojo `<build/scenario-base>`_ which only builds the Dojo core into a layer, without dijit and the other name spaces: 
 
 * Simple one-layer build of all required Dojo resources, including other dijit and dojox namespaces
 * Single layer containing required resources from a custom namespace in addition to Dojo namespaces
