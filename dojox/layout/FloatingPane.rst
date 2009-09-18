@@ -81,6 +81,8 @@ Declarative example
 -------------------
 
 .. cv-compound::
+  :type: inline
+
   .. cv:: css
 
      <style type="text/css">
