@@ -381,6 +381,6 @@ Advanced and Special Purpose Scenarios
 Micro Build
 ~~~~~~~~~~~
 
-An absolutely minimal build of Dojo containing just the most essential core elements, suitable for smart phones and other resource-limited hosts:  Micro-build <build/scenario-micro>
+An absolutely minimal build of Dojo containing just the most essential core elements, suitable for smart phones and other resource-limited hosts:  `Micro-build <build/scenario-micro>`_
 
 * Others?
