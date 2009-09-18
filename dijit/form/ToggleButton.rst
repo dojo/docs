@@ -78,3 +78,8 @@ Keyboard
 +----------------------------+-----------------+
 | Toggle checked state       | Spacebar        | 
 +----------------------------+-----------------+
+
+Known Issues
+------------
+
+* Running IE 8 in Windows with JAWS 10 the pressed/not pressed state of toggle buttons is not announced.  Since this works correctly in Firefox, I believe this is an IE 8 issue. 
