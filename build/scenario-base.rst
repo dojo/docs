@@ -2,14 +2,14 @@
 
 TODOC - additional details
 
-First, download and unpack a source distribution from  http://download.dojotoolkit.org/ or checkout the source from SVN.
+First, download and unpack a source distribution from http://download.dojotoolkit.org/ or checkout the dojo source from SVN.
 
 Next, go to the utils/buildscripts directory and run the following command:
 
 .. code-block :: text
   
-  ./build.sh profile=standard action=release
+  ./build.sh profile=base action=release
 
 Assuming you have java installed, after some time your dojo build will reside in ../../release/dojo
 
-The "standard" profile essentially builds the same thing as what you would find in a full Dojo toolkit release - all of base, core, dijit, dojox.  This might be useful if you want to test changes to the Dojo source or create an extended Dojo release.
+The "base" profile builds dojo without dijit or dojox.  Include ../../release/dojo/dojo.js in your application for your core dojo build.  This is similar to downloading dojo.js from the http://www.dojotoolkit.org/downloads
