@@ -5,14 +5,13 @@ dojox.layout.FloatingPane
 
 :Status: Draft
 :Version: 1.0
-:Project owner: ?--
+:Project owner: Peter Higgins
 :Available: since V?
 
 .. contents::
    :depth: 2
 
-dojox.layout.FloatingPane is an experimental floating window.
-
+dojox.layout.FloatingPane is an **experimental** floating window.
 
 ============
 Introduction
@@ -42,6 +41,7 @@ Programmatic example
 
 .. cv-compound::
   :type: inline
+  :height: 350
 
   .. cv:: css
 
@@ -82,6 +82,7 @@ Declarative example
 
 .. cv-compound::
   :type: inline
+  :height: 350
 
   .. cv:: css
 
