@@ -1,3 +1,5 @@
+#format dojo_rst
+
 TODOC - additional details
 
 First, download a source distribution from http://download.dojotoolkit.org/ or checkout the source from SVN.
