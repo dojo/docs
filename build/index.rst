@@ -341,15 +341,15 @@ See `possible directory layout <build/directoryLayout>`_ for the directory schem
 Basic Scenarios
 ---------------
 
-Base Build
-~~~~~~~~~~
+Release Build
+~~~~~~~~~~~~~
 
-A simple default build that creates the basic distribution tree from the source tree:  `base build <build/scenario-base>`_
+A simple default build that creates the basic distribution tree from the source tree - the same as you would find by downloading the Dojo Toolkit Release from http://www.dojotoolkit.org/downloads:  `base build <build/scenario-releease>`_
 
-Dojo Core Only Build
+Dojo Base Only Build
 ~~~~~~~~~~~~~~~~~~~~
 
-A small Dojo build which only builds the Dojo core into a layer, without dijit and the other name spaces:  `core build <build/scenario-core>`_
+A small Dojo build which only builds the Dojo core into a layer, without dijit and the other name spaces:  `core build <build/scenario-base>`_
 
 * Simple one-layer build of all required Dojo resources, including other dijit and dojox namespaces
 * Single layer containing required resources from a custom namespace in addition to Dojo namespaces
