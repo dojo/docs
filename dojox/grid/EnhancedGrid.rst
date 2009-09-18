@@ -4,9 +4,9 @@ dojo.modulename
 ===============
 
 :Status: Draft
-:Version: 1.0
+:Version: Experimental
 :Project owner: Nathan Toone
-:Available: since V1.4
+:Available: since V.1.4
 
 .. contents::
    :depth: 2
@@ -160,7 +160,103 @@ The followings are typical scenario of nested sorting:
 
 * When there is no sorting established, a unary (single) sort caret is shown when the mouse hovers over a column. The upward direction of the caret reflects that this will result in an ascending sort.
 
-{{sort-1.png}}
+[[attachment:sort-1.png]]
+
+* Once the sort choice is selected for the 'Genre' column, the grid rows will be sorted by the values in Genre. Note that the keyboard focus moves to the sort choice in response to the mouse click.
+
+[[attachment:sort-2.png]]
+
+* Then nested sort tip will be shown when the mouse hovers over a other columns.
+
+[[attachment:nested-sort-1.png]]
+
+   * Clicking region "A" will execute a nested sort, and the rows will be sorted by Artist in this example within Genre.
+   * Clicking region "B" will reset the sort, and the rows will be sorted by Artist alone.
+   
+* Once a column is sorted ascending, the sort choice changes to a sort descending choice.
+
+[[attachment:descending-sort-1.png]]
+
+* Once a column is sorted descending, the sort choice changes to a 'remove sort' function. When a column is removed from the sort, other columns in the sort will be adjusted to reflect the new sort order. For example, Year would become the second column in the sort if is had previously been the third.
+
+[[attachment:remove-sort.png]]
+
+To summarize, the sort choice cycles among sort-ascending, sort-descending, and remove sort functions.
+
+=============
+Accessibility
+=============
+
+Keyboard Support
+----------------
+
++------------+--------------------------------+
+| **Key**    | **Action**                     +
++------------+--------------------------------+
+| LEFT/RIGHT | Moves the keyboard focus among +
+| arrow keys | column headers and regions     +
+|            | within a column header         +
++------------+--------------------------------+
+| SPACE key  | Chooses the sorting choice     +
+| arrow keys | with the keyboard focus        +
++------------+--------------------------------+
+
+* The above keys are only effective when keyboard focus is in the region of column headers. 
+
+Screen Readers
+--------------
+
+ARIA attributes "aria-label" and "aria-sort" are used for screen readers.
+
++--------------+---------------+--------------------------------------+
+| **Region**   | **ARIA        + **ARIA Attribute Value**             +
+|              | Attribute**   +                                      +
++--------------+---------------+--------------------------------------+
+| Select       | aria-label    | Column name                          +
+| region       |               |                                      +
++--------------+---------------+--------------------------------------+
+| Unary sort   | aria-sort     | Sorting state, e.g. "descending"     +
+| choice       |               |                                      +
++--------------+---------------+--------------------------------------+
+|              | aria-label    | * Normal sate - "Column 2 Genre      +
+|              |               |    single sort"                      +
+|              |               |                                      +
+|              |               | * Hovered - "Column 2 Genre -        +
+|              |               |    Press space to choose descending  +
+|              |               |    nested sort"                      +
++--------------+---------------+--------------------------------------+
+| Nested sort  | aria-sort     | Sorting state, e.g. "descending"     +
+| choice       |               |                                      +
++--------------+---------------+--------------------------------------+
+|              | aria-label    | * Normal sate - "Column 2 Genre      +
+|              |               |   nested sort sort position 1"       +
+|              |               |                                      +
+|              |               | * Hovered - "Column 2 Genre -        +
+|              |               |    Press space to choose descending  +
+|              |               |    nested sort"                      +
++--------------+---------------+--------------------------------------+
+
+Note: In Firefox v.3.5, JAWS10 doesn't announce all the above ARIA attributes appropriately. This will be addressed when newer JAWS and Firefox versions are released.
+
+=======================================
+Built-in Support for Indirect Selection
+=======================================
+
+This feature provides indirect row selection support either through
+
+    * Radio buttons - for single row selection, and
+    * Check boxes - for multiple row selections
+
+Please note indirect selection is completely dependent on the selection mode of EnhancedGrid so check boxes are used for "extended" and "multiple" selection mode ("extended" is the default mode), and radio buttons are used for "single" selection mode. For more details of Grid selection modes, please refer to the [[http://docs.dojocampus.org/dojox/grid|specification of the base Grid]].
+
+
+
+
+
+
+
+
+
 
 ========
 Examples
