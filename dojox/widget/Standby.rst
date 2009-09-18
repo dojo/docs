@@ -91,7 +91,7 @@ Example 1: Basic usage
   
   .. javascript::
 
-    <script>
+    <script type="text/javascript">
       dojo.require("dojox.widget.Standby");
       dojo.require("dijit.form.Button");
 
