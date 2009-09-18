@@ -8,13 +8,11 @@ dojox.grid.EnhancedGrid
 :Project owner: Nathan Toone
 :Available: since V.1.4
 
-.. contents::
-   :depth: 3
-
 Enhanced DataGrid adds numerous useful features to dojox.grid.
 
 '''Contents'''
-<<TableOfContents(3)>>
+.. contents::
+   :depth: 3
 
 ============
 Introduction
@@ -166,7 +164,7 @@ The followings are typical scenario of nested sorting:
 
 .. image:: sort-2.png
 
-* Then nested sort tip will be shown when the mouse hovers over a other columns.
+* Then the nested sort tip will be shown when the mouse hovers over a other columns.
 
 .. image:: nested-sort-1.png
 
@@ -269,10 +267,78 @@ Usage
         ...
     </script>
 
+* Use indirect selection feature
 
+    * Check boxes
 
+    ... with HTML markup
+    
+.. code-example::
+  :type: inline
+  :toolbar: themes, versions, dir
+  :version: local
+  :width: 480
+  :height: 300
 
+  .. html::
 
+   <div id="grid" dojoType="dojox.grid.EnhancedGrid" plugins=“{indirectSelection: true}” ... ></div>
+
+    ... with JavaScript  <<< '''This isn't code. Not sure how to fix'''
+    
+.. code-example::
+  :type: inline
+  :toolbar: themes, versions, dir
+  :version: local
+  :width: 480
+  :height: 300
+
+  .. javascript::
+
+    var grid = new dojox.grid.EnhancedGrid({id: "grid", plugins: {indirectSelection: true}, ...}, dojo.byId('gridDiv'));
+
+    * Radio buttons
+
+    ... with HTML markup
+    
+.. code-example::
+  :type: inline
+  :toolbar: themes, versions, dir
+  :version: local
+  :width: 480
+  :height: 300
+
+  .. html::
+
+   <div id="grid" dojoType="dojox.grid.EnhancedGrid" plugins=“{indirectSelection: true}”  selectionMode=“single” ... ></div>
+
+    ... with JavaScript  <<< '''This isn't code. Not sure how to fix'''
+    
+.. code-example::
+  :type: inline
+  :toolbar: themes, versions, dir
+  :version: local
+  :width: 480
+  :height: 300
+
+  .. javascript::
+
+    var grid = new dojox.grid.EnhancedGrid({id: "grid", plugins: {indirectSelection: true}, selectionMode: “single”, ...}, dojo.byId('gridDiv'));
+
+It is unlikely that the row headers will be desired when indirect selection is used. The following code removes the row headers from the grid.
+
+Scenario
+--------
+
+* Indirect selection by radio buttons
+
+.. image:: radio-buttons.png
+
+* Indirect selection by check boxes
+
+Besides selecting or deselecting rows by clicking on check boxes, the SHIFT key can be held during the 2nd click to select or deselect a range of rows.
+
+.. image:: extended selection-checkboxes.camrec
 
 
 
