@@ -10,9 +10,8 @@ dojox.grid.EnhancedGrid
 
 Enhanced DataGrid adds numerous useful features to dojox.grid.
 
-'''Contents'''
 .. contents::
-   :depth: 3
+   :depth: 2
 
 ============
 Introduction
@@ -165,12 +164,11 @@ The followings are typical scenario of nested sorting:
 .. image:: sort-2.png
 
 * Then the nested sort tip will be shown when the mouse hovers over a other columns.
+* Clicking region "A" will execute a nested sort, and the rows will be sorted by Artist in this example within Genre.
+* Clicking region "B" will reset the sort, and the rows will be sorted by Artist alone.
 
 .. image:: nested-sort-1.png
 
-   * Clicking region "A" will execute a nested sort, and the rows will be sorted by Artist in this example within Genre.
-   * Clicking region "B" will reset the sort, and the rows will be sorted by Artist alone.
-   
 * Once a column is sorted ascending, the sort choice changes to a sort descending choice.
 
 .. image:: descending-sort-1.png
