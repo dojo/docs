@@ -95,11 +95,14 @@ The following steps show a typical usage of EnhancedGrid:
 
 [TODO - Add a live EDG demo here on Dojo Campus page]
 
-== Nested Sorting ==
+==============
+Nested Sorting
+==============
 
 This feature enhances the single sorting feature of base DataGrid. Nested sorting allows users to sort on one or more columns concurrently and also control the sort direction and order.
 
-=== Usage ===
+Usage
+-----
 
 Using the nested sorting feature is pretty simple as shown below:
 
@@ -150,7 +153,8 @@ Using the nested sorting feature is pretty simple as shown below:
     
 When nested sorting is enabled, you can also use comparatorMap for custom sorting; see [[http://docs.dojocampus.org/dojo/data/ItemFileReadStore|dojo.data.ItemFileReadStore]] on DojoCampus.org for more details.
 
-=== Scenario ===
+Scenario
+--------
 
 The followings are typical scenario of nested sorting:
 
