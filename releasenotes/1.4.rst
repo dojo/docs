@@ -183,6 +183,16 @@ dojox.grid
 * dojox.grid.TreeGrid - support for collapsable rows and model-based (dijit.tree.ForestStoreModel) structure.
 * compat grid is now bundled in the dojox/grid directory as a tarball archive for those who would like to continue using the deprecated (1.1) Grid
 
+dojox.grid.EnhancedGrid
+-----------------------
+The new Enhanced DataGrid extends the base grid in numerous useful ways.
+
+* Nested Sort:  The user can now concurrently sort on any number of columns.
+* Multiple Column/Row Selection: The user can now select multiple columns or rows through swipe-select or extended selection techniques.
+* Drag-drop Multiple Columns and Rows: The user can now move multiple columns or rows in the same action.
+* Indirect Selection: Rather than having to manually include radio buttons and check boxes for single and multiple selection models, the Enhanced DataGrid will do it automatically in response to the inclusion of simple attribute-value pairs, e.g., indirectSelection=true, on the grid's div tag. 
+* Declarative Pop-up Menus: Rather than having to create and assign pop-up menus through scripts, the enhanced DataGrid allows you to specify these menus with straightforward markup.
+
 dojox.form
 ----------
 
