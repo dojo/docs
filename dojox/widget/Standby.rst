@@ -86,15 +86,3 @@ Also, for Dojo 1.3 users ... please remember to import the dojox/widget/Standby/
 
 Example 1: Basic usage
 ----------------------
-
-.. code-example::
-  
-  .. html::
-
-    <h1>hi</h1>
-
-  .. css::
-
-    <style type="text/css">
-      @import "{{ baseUrl }}dojox/widget/Standby/Standby.css";
-    </style>
