@@ -148,7 +148,16 @@ Using the nested sorting feature is pretty simple as shown below:
 
     var grid = new dojox.grid.EnhancedGrid({id: "grid", store: "store1", plugins: {nestedSorting: true}, ...}, dojo.byId("gridDiv"));
     
-    
+When nested sorting is enabled, you can also use comparatorMap for custom sorting; see [[http://docs.dojocampus.org/dojo/data/ItemFileReadStore|dojo.data.ItemFileReadStore]] on DojoCampus.org for more details.
+
+=== Scenario ===
+
+The followings are typical scenario of nested sorting:
+
+* When there is no sorting established, a unary (single) sort caret is shown when the mouse hovers over a column. The upward direction of the caret reflects that this will result in an ascending sort.
+
+{{sort-1.png}}
+
 ========
 Examples
 ========
