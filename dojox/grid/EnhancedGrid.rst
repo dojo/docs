@@ -181,12 +181,12 @@ The followings are typical scenario of nested sorting:
 
 To summarize, the sort choice cycles among sort-ascending, sort-descending, and remove sort functions.
 
-=============
+
 Accessibility
-=============
+-------------
 
 Keyboard Support
-----------------
+~~~~~~~~~~~~~~~~
 
 +------------+--------------------------------+
 | **Key**    | **Action**                     +
@@ -196,13 +196,13 @@ Keyboard Support
 |            | within a column header         +
 +------------+--------------------------------+
 | SPACE key  | Chooses the sorting choice     +
-| arrow keys | with the keyboard focus        +
+|            | with the keyboard focus        +
 +------------+--------------------------------+
 
 * The above keys are only effective when keyboard focus is in the region of column headers. 
 
 Screen Readers
---------------
+~~~~~~~~~~~~~~
 
 ARIA attributes "aria-label" and "aria-sort" are used for screen readers.
 
@@ -338,9 +338,86 @@ Scenario
 
 Besides selecting or deselecting rows by clicking on check boxes, the SHIFT key can be held during the 2nd click to select or deselect a range of rows.
 
-.. image:: extended selection-checkboxes.camrec
+.. image:: extended-selection-checkboxes.gif
 
+* An additional selection technique is to swipe through check boxes (mouse down on the first, drag through the adjacent checkboxes and then release on the last).
 
+.. image:: swipe-checkbox.gif
+
+Accessibility
+-------------
+
+Keyboard Support
+~~~~~~~~~~~~~~~~
+
++------------+--------------------------------+
+| **Key**    | **Action**                     +
++------------+--------------------------------+
+| UP/Down    | Navigate keyboard focus across +
+| arrow keys | cells that contain radio       +
+|            | buttons or check boxes         +
++------------+--------------------------------+
+| SPACE key  | * Radio button - select a row  +
+|            | * Check box - select or        +
+|            |   de-select a row.             +
++------------+--------------------------------+
+| SHIFT +    | Select or de-select a range    +
+| SPACE key  | of rows                        +
++------------+--------------------------------+
+| SHIFT+     | Extend the selection or        +
+| UP/Down    | de-selection - only for        +
+| arrow keys | check boxes   .                +
++------------+--------------------------------+
+
+    * The above keys are only effective when keyboard focus is in the first column that contains radio buttons or check boxes.
+
+Note that extended selection is also enabled through the row headers as well.
+
+Tips
+----
+
+* When "Indirect Selection" feature is enabled, you could handle row selection programmatically as follows.
+
+.. code-example::
+  :type: inline
+  :toolbar: themes, versions, dir
+  :version: local
+  :width: 480
+  :height: 300
+
+  .. javascript::
+
+    for(var i = 0; i < selectedRows.length/*Array of selected row index*/; i++){
+       grid.rowSelectCell.toggleRow(selectedRows[i], true);
+    }
+
+* A topic named "rowSelectionChangedTopic" will be published when row selections are changed. The topic can be subscribed to with the following code.
+
+.. code-example::
+  :type: inline
+  :toolbar: themes, versions, dir
+  :version: local
+  :width: 480
+  :height: 300
+
+  .. javascript::
+
+    dojo.subscribe(dijit.byId('grid').rowSelectionChangedTopic, function(){...});
+
+* You can check whether a certain row is selected with the following code.
+
+.. code-example::
+  :type: inline
+  :toolbar: themes, versions, dir
+  :version: local
+  :width: 480
+  :height: 300
+
+  .. javascript::
+
+    dijit.byId('grid').selection.selected[rowIndex] // returns true or false
+    
+CONTINUE HERE
 
 ========
 Examples
