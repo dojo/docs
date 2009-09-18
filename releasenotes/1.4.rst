@@ -60,6 +60,7 @@ Dojo i18n
 ---------
 
 The cultural tables in dojo/cldr have been updated to version 1.7.1 of the Unicode CLDR http://unicode.org/cldr
+
 ======
 Dijit
 ======
