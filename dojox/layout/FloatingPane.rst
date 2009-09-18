@@ -41,6 +41,7 @@ Programmatic example
 --------------------
 
 .. cv-compound::
+  :type: inline
 
   .. cv:: css
 
@@ -80,7 +81,6 @@ Declarative example
 -------------------
 
 .. cv-compound::
-
   .. cv:: css
 
      <style type="text/css">
