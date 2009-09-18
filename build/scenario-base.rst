@@ -12,4 +12,4 @@ Next, go to the utils/buildscripts directory and run the following command:
 
 Assuming you have java installed, after some time your dojo build will reside in ../../release/dojo
 
-The "standard" profile essentially builds the same thing as what you would find in a full dojo release - all of base, core, dijit, dojox.
+The "standard" profile essentially builds the same thing as what you would find in a full dojo release - all of base, core, dijit, dojox.  This might be useful if you want to test changes to the dojo source or create an extended dojo release.
