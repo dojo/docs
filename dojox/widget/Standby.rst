@@ -111,3 +111,300 @@ Example 1: Basic usage
     <div jsId="basicStandby1" dojoType="dojox.widget.Standby" target="basic"></div>
 
   .. css::
+
+    <style type="text/css">
+      @import "/moin_static163/js/dojo/release/dojox/widget/Standby/Standby.css";
+    </style>  
+    <!-- Also just define the styles inline in case the stylesheet can't be loaded. -->
+    <!-- Note that for Dojo 1.4+, this is not needed at all. -->
+    <style>
+      .standbyUnderlayNode {
+        display: none;
+        opacity: 0;
+        z-index: 9999;
+        position: absolute;
+       cursor:wait;
+      }
+
+      .standbyImageNode {
+        opacity: 0;
+        display: none;
+        z-index: -10000;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        cursor:wait;
+      }
+    </style>
+
+
+Example 2: Programmatic creation
+--------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojox.widget.Standby");
+      dojo.require("dijit.form.Button");
+
+      function init(){
+         var standby = new dojox.widget.Standby({target: "basic2"});
+         document.body.appendChild(standby.domNode);
+         standby.startup();
+         dojo.connect(b3, "onClick", function(){standby.show();});
+         dojo.connect(b4, "onClick", function(){standby.hide();});
+      }
+      dojo.addOnLoad(init);
+    </script>
+
+  .. cv :: html 
+
+    <button jsId="b3" dojoType="dijit.form.Button">Show Standby widget</button>
+    <button jsId="b4" dojoType="dijit.form.Button">Hide Standby widget</button>
+    <div id="basic2" style="width: 300px; height: 150px; background-color: yellow; border-style: solid; border-width: 2px;"></div>
+
+  .. cv:: css
+
+    <style type="text/css">
+      @import "/moin_static163/js/dojo/release/dojox/widget/Standby/Standby.css";
+    </style>
+    <!-- Also just define the styles inline in case the stylesheet can't be loaded. -->
+    <!-- Note that for Dojo 1.4+, this is not needed at all. -->
+    <style>
+      .standbyUnderlayNode {
+        display: none;
+        opacity: 0;
+        z-index: 9999;
+        position: absolute;
+       cursor:wait;
+      }
+
+      .standbyImageNode {
+        opacity: 0;
+        display: none;
+        z-index: -10000;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        cursor:wait;
+      }
+    </style>
+
+
+Example 3: Changing overlay color
+---------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojox.widget.Standby");
+      dojo.require("dijit.form.Button");
+
+      function init(){
+         document.body.appendChild(basicStandby3.domNode);
+         dojo.connect(b5, "onClick", function(){basicStandby3.show();});
+         dojo.connect(b6, "onClick", function(){basicStandby3.hide();});
+      }
+      dojo.addOnLoad(init);
+    </script>
+
+  .. cv :: html 
+
+    <button jsId="b5" dojoType="dijit.form.Button">Show Standby widget</button>
+    <button jsId="b6" dojoType="dijit.form.Button">Hide Standby widget</button>
+    <div id="basic3" style="width: 300px; height: 150px; background-color: yellow; border-style: solid; border-width: 2px;"></div>
+    <div jsId="basicStandby3" dojoType="dojox.widget.Standby" target="basic3" color="red"></div>
+
+  .. cv:: css
+
+    <style type="text/css">
+      @import "/moin_static163/js/dojo/release/dojox/widget/Standby/Standby.css";
+    </style>
+    <!-- Also just define the styles inline in case the stylesheet can't be loaded. -->
+    <!-- Note that for Dojo 1.4+, this is not needed at all. -->
+    <style>
+      .standbyUnderlayNode {
+        display: none;
+        opacity: 0;
+        z-index: 9999;
+        position: absolute;
+       cursor:wait;
+      }
+
+      .standbyImageNode {
+        opacity: 0;
+        display: none;
+        z-index: -10000;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        cursor:wait;
+      }
+    </style>
+
+
+Example 4: Changing overlay color and image
+-------------------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojox.widget.Standby");
+      dojo.require("dijit.form.Button");
+
+      function init(){
+         document.body.appendChild(basicStandby4.domNode);
+         dojo.connect(b7, "onClick", function(){basicStandby4.show();});
+         dojo.connect(b8, "onClick", function(){basicStandby4.hide();});
+      }
+      dojo.addOnLoad(init);
+    </script>
+
+  .. cv :: html 
+
+    <button jsId="b7" dojoType="dijit.form.Button">Show Standby widget</button>
+    <button jsId="b8" dojoType="dijit.form.Button">Hide Standby widget</button>
+    <div id="basic4" style="width: 400px; height: 400px; background-color: yellow; border-style: solid; border-width: 2px;"></div>
+    <div jsId="basicStandby4" dojoType="dojox.widget.Standby" target="basic4" color="lightgray" image="/moin_static163/js/dojo/release/dojox/widget/tests/images/busy.gif"></div>
+
+  .. cv:: css
+
+    <style type="text/css">
+      @import "/moin_static163/js/dojo/release/dojox/widget/Standby/Standby.css";
+    </style>
+    <!-- Also just define the styles inline in case the stylesheet can't be loaded. -->
+    <!-- Note that for Dojo 1.4+, this is not needed at all. -->
+    <style>
+      .standbyUnderlayNode {
+        display: none;
+        opacity: 0;
+        z-index: 9999;
+        position: absolute;
+       cursor:wait;
+      }
+
+      .standbyImageNode {
+        opacity: 0;
+        display: none;
+        z-index: -10000;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        cursor:wait;
+      }
+    </style>
+
+
+Example 5: Showing curved border cloning (works on Firefix and Safari only)
+---------------------------------------------------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojox.widget.Standby");
+      dojo.require("dijit.form.Button");
+
+      function init(){
+         document.body.appendChild(basicStandby5.domNode);
+         dojo.connect(b9, "onClick", function(){basicStandby5.show();});
+         dojo.connect(b10, "onClick", function(){basicStandby5.hide();});
+      }
+      dojo.addOnLoad(init);
+    </script>
+
+  .. cv :: html 
+
+    <button jsId="b9" dojoType="dijit.form.Button">Show Standby widget</button>
+    <button jsId="b10" dojoType="dijit.form.Button">Hide Standby widget</button>
+    <div id="basic5" style="width: 200px; height: 200px; background-color: yellow; border-style: solid; border-width: 2px; -moz-border-radius: 20px; -webkit-border-radius: 20px;"></div>
+    <div jsId="basicStandby5" dojoType="dojox.widget.Standby" target="basic5" color="lightgray"></div>
+
+  .. cv:: css
+
+    <style type="text/css">
+      @import "/moin_static163/js/dojo/release/dojox/widget/Standby/Standby.css";
+    </style>
+    <!-- Also just define the styles inline in case the stylesheet can't be loaded. -->
+    <!-- Note that for Dojo 1.4+, this is not needed at all. -->
+    <style>
+      .standbyUnderlayNode {
+        display: none;
+        opacity: 0;
+        z-index: 9999;
+        position: absolute;
+       cursor:wait;
+      }
+
+      .standbyImageNode {
+        opacity: 0;
+        display: none;
+        z-index: -10000;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        cursor:wait;
+      }
+    </style>
+
+Example 6: Overlaying a dijit.form.TextBox
+------------------------------------------
+
+.. cv-compound ::
+  
+  .. cv :: javascript
+
+    <script>
+      dojo.require("dojox.widget.Standby");
+      dojo.require("dijit.form.Button");
+      dojo.require("dijit.form.TextBox");
+
+      function init(){
+         document.body.appendChild(basicStandby6.domNode);
+         dojo.connect(b11, "onClick", function(){basicStandby6.show();});
+         dojo.connect(b12, "onClick", function(){basicStandby6.hide();});
+      }
+      dojo.addOnLoad(init);
+    </script>
+
+  .. cv :: html 
+
+    <button jsId="b11" dojoType="dijit.form.Button">Show Standby widget</button>
+    <button jsId="b12" dojoType="dijit.form.Button">Hide Standby widget</button>
+    <br><br>
+    <input type="text" dojoType="dijit.form.TextBox" id="dijitWidget"></input>
+    <div jsId="basicStandby6" dojoType="dojox.widget.Standby" target="dijitWidget"></div>
+
+  .. cv:: css
+
+    <style type="text/css">
+      @import "/moin_static163/js/dojo/release/dojox/widget/Standby/Standby.css";
+    </style>
+    <!-- Also just define the styles inline in case the stylesheet can't be loaded. -->
+    <!-- Note that for Dojo 1.4+, this is not needed at all. -->
+    <style>
+      .standbyUnderlayNode {
+        display: none;
+        opacity: 0;
+        z-index: 9999;
+        position: absolute;
+        cursor:wait;
+      }
+
+      .standbyImageNode {
+        opacity: 0;
+        display: none;
+        z-index: -10000;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        cursor:wait;
+      }
+    </style>
