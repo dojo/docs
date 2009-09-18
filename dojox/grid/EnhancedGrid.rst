@@ -1,7 +1,7 @@
 #format dojo_rst
 
-dojo.modulename
-===============
+dojox.grid.EnhancedGrid
+=======================
 
 :Status: Draft
 :Version: Experimental
@@ -9,7 +9,7 @@ dojo.modulename
 :Available: since V.1.4
 
 .. contents::
-   :depth: 2
+   :depth: 3
 
 Enhanced DataGrid adds numerous useful features to dojox.grid.
 
@@ -28,7 +28,7 @@ EnhancedGrid (dojox.grid.EnhancedGrid) provides a rich set of features that enha
 * Selecting rows or columns by swiping
 * Moving multiple rows or columns with drag-n-drop
 
-There is currently a project to implement a [[/dojox/grid/pluginAPI|Grid plugin architecture]]. To be compatible with this work, EnhancedGrid features are implemented as plugins which can be loaded on demand. As a result, the required features must first declared before they can be used.
+There is currently a project to implement a `Grid plugin architecture </dojox/grid/pluginAPI>`_. To be compatible with this work, EnhancedGrid features are implemented as plugins which can be loaded on demand. As a result, the required features must first declared before they can be used.
 
 =====
 Usage
@@ -151,7 +151,7 @@ Using the nested sorting feature is pretty simple as shown below:
 
     var grid = new dojox.grid.EnhancedGrid({id: "grid", store: "store1", plugins: {nestedSorting: true}, ...}, dojo.byId("gridDiv"));
     
-When nested sorting is enabled, you can also use comparatorMap for custom sorting; see [[http://docs.dojocampus.org/dojo/data/ItemFileReadStore|dojo.data.ItemFileReadStore]] on DojoCampus.org for more details.
+When nested sorting is enabled, you can also use comparatorMap for custom sorting; see `dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`_ on DojoCampus.org for more details.
 
 Scenario
 --------
@@ -160,26 +160,26 @@ The followings are typical scenario of nested sorting:
 
 * When there is no sorting established, a unary (single) sort caret is shown when the mouse hovers over a column. The upward direction of the caret reflects that this will result in an ascending sort.
 
-[[attachment:sort-1.png]]
+.. image:: sort-1.png
 
 * Once the sort choice is selected for the 'Genre' column, the grid rows will be sorted by the values in Genre. Note that the keyboard focus moves to the sort choice in response to the mouse click.
 
-[[attachment:sort-2.png]]
+.. image:: sort-2.png
 
 * Then nested sort tip will be shown when the mouse hovers over a other columns.
 
-[[attachment:nested-sort-1.png]]
+.. image:: nested-sort-1.png
 
    * Clicking region "A" will execute a nested sort, and the rows will be sorted by Artist in this example within Genre.
    * Clicking region "B" will reset the sort, and the rows will be sorted by Artist alone.
    
 * Once a column is sorted ascending, the sort choice changes to a sort descending choice.
 
-[[attachment:descending-sort-1.png]]
+.. image:: descending-sort-1.png
 
 * Once a column is sorted descending, the sort choice changes to a 'remove sort' function. When a column is removed from the sort, other columns in the sort will be adjusted to reflect the new sort order. For example, Year would become the second column in the sort if is had previously been the third.
 
-[[attachment:remove-sort.png]]
+.. image:: remove-sort.png
 
 To summarize, the sort choice cycles among sort-ascending, sort-descending, and remove sort functions.
 
@@ -249,7 +249,25 @@ This feature provides indirect row selection support either through
 
 Please note indirect selection is completely dependent on the selection mode of EnhancedGrid so check boxes are used for "extended" and "multiple" selection mode ("extended" is the default mode), and radio buttons are used for "single" selection mode. For more details of Grid selection modes, please refer to the [[http://docs.dojocampus.org/dojox/grid|specification of the base Grid]].
 
+Usage
+-----
 
+* Declare indirect selection feature plugin
+
+.. code-example::
+  :type: inline
+  :toolbar: themes, versions, dir
+  :version: local
+  :width: 480
+  :height: 300
+
+  .. html::
+
+    <script type="text/javascript">
+        dojo.require("dojox.grid.EnhancedGrid");
+        dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");
+        ...
+    </script>
 
 
 
