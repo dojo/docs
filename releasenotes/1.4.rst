@@ -54,7 +54,7 @@ Dojo Base FX
 `dojo.hash <dojo/hash>`_
 --------------------------
 
-A new method for monitoring, getting and setting the hash value.  dojo.hash provides hashchange notification using a new published topic "/dojo/hashchange", enabling cross-browser back/forward notification and bookmarkability. The native HTML 5 onhashchange event is used behind the scenes in browsers that support it.
+A new method for monitoring, getting and setting the hash value.  dojo.hash provides hashchange notification using a new published topic "/dojo/hashchange", enabling cross-browser back/forward support and bookmarkability in AJAX applications. The native HTML 5 onhashchange event is used behind the scenes in browsers that support it.
 
 ======
 Dijit
