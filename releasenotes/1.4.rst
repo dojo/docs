@@ -91,7 +91,8 @@ The RTE has had numerous bug fixes applied to it as well as some code cleanup to
 
 Dialog
 ~~~~~~
-Multiple dialogs can now be shown (with one dialog launching over another).
+* Multiple dialogs can now be shown (with one dialog launching over another).
+* Dialog supports aria-describedby to make it more accessible to screen readers.
 
 Menu
 ~~~~
