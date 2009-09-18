@@ -87,13 +87,11 @@ Also, for Dojo 1.3 users ... please remember to import the dojox/widget/Standby/
 Example 1: Basic usage
 ----------------------
 
-.. code-example ::
+.. code-example::
   
   .. javascript::
 
     <script type="text/javascript">
-      dojo.require("dojox.widget.Standby");
-      dojo.require("dijit.form.Button");
     </script>
 
   .. html::
