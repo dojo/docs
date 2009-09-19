@@ -411,11 +411,13 @@ DOM Methods
 -----------
 
 :attr:
-  TODOC
+  Attribute getter/setter for this list of nodes - Mimics dojo.attr, excluding the node passed. TODOC
+:removeAttr:
+  **New in 1.4** - Forcefully remove the passed attribute from a node. 
 :style:
   TODOC
 :addClass:
-  TODOC
+  Add the passed class to the nodes in this list. TODOC
 :removeClass:
   TODOC
 :toggleClass:
