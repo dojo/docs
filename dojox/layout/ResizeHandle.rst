@@ -147,3 +147,12 @@ Resize Notification
 -------------------
 
 event: onResize, property: intermediateChanges:true causes firing frequently.
+
+**New in 1.4** - User-definable topics are published before and after the resize UI is taking placing. The topics default to /dojo/resize/start and /dojo/resize/stop respectively. They can be overridden by defining *startTopci* and *endTopic* members in the constructor on a per-instance basis. The ResizeHandle instance is passed as the only argument to subscribed functions, allowing you to lookup which widget/node/whatever has been resized.
+
+.. code-block :: javascript
+  :linenos:
+
+  dojo.subscribe("/dojo/resize/stop", function(inst){
+     // inst.targetDomNode is the node resized. sometimes there will be a inst.targetWidget. inst is the ResizeHandle instance.
+  });
