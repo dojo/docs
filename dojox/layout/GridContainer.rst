@@ -6,53 +6,31 @@ dojox.layout.GridContainer
 :Status: Draft
 :Version: 1.0
 :Project owner: ?--
-:Available: since V?
+:Available: since V1.3
 
 .. contents::
    :depth: 2
 
-dojox.layout.GridContainer is a panel-like layout mechanism, allowing Drag and Drop between regions.
-
-
-============
-Introduction
-============
-
-TODO: introduce the component/class/method
+dojox.layout.GridContainer is an **experimental** panel-like layout mechanism, allowing Drag and Drop between regions.
 
 
 =====
 Usage
 =====
 
-TODO: how to use the component/class/method
+In order to use the GridContainer, you must issue the require statement:
 
 .. code-block :: javascript
- :linenos:
+  :linenos:
+  
+  dojo.require("dojox.layout.GridContainer");
 
- <script type="text/javascript">
-   // your code
- </script>
+The project requires some Dijit functionality, and a custom DnD handler provided in the dojox.layout package.
 
+Additionally, the required CSS files must be included in your page for proper operation. Two are needed:
 
-
-========
-Examples
-========
-
-Programmatic example
---------------------
-
-TODO: example
-
-Declarative example
--------------------
-
-TODO: example
+  * dojox/layout/resources/GridContainer.css
+  * dojox/layout/resources/DndGridContainer.css
 
 
-========
-See also
-========
-
-* TODO: links to other related articles
+TODOC, params, examples, adding/removing regions, columns.
