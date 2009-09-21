@@ -83,7 +83,7 @@ Basic Usage
 
     <b>Look at the toolbar, the font manipulation options are wrapped to a new line in the toolbar.</b>
     <br>
-    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['||', 'fontName', 'fontSize', 'formatBlock', 'foreColor', 'hiliteColor']">
+    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['||', 'fontName', '||', 'fontSize', '||', 'formatBlock', '||', 'foreColor', 'hiliteColor']">
     <div>
     <br>
     blah blah & blah!
