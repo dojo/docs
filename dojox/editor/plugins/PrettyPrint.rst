@@ -77,13 +77,16 @@ The PrettyPrint plugin supports three options that control how it formats the te
 |                                   |to render your content.  The entity encoding function is fast, but   |                        |
 |                                   |there is still cost to use it.                                       |                        |
 +-----------------------------------+---------------------------------------------------------------------+------------------------+
+| xhtml                             |An optional boolean parameter to tell the plugin to try to generate  | NO                     |
+|                                   |xhtml compliant markup.  The default is false.                       |                        |
++-----------------------------------+---------------------------------------------------------------------+------------------------+
 
-How do I configure the options?  Glad you asked.  You do it where you declare the plugin.  See the following example, which configures an editor with 3 space indent, 80 character line length, aonf a map that only encodes < and >.
+How do I configure the options?  Glad you asked.  You do it where you declare the plugin.  See the following example, which configures an editor with 3 space indent, 80 character line length, a map that only encodes < and >, and XHTML mode true.
 
 .. code-block :: html
 
   <div dojoType="dijit.Editor" 
-       id="editor" extraPlugins="[{name: 'prettyprint', indentBy: 3, lineLength: 80, entityMap: [['<', 'lt'],['>', 'gt']]}]">
+       id="editor" extraPlugins="[{name: 'prettyprint', indentBy: 3, lineLength: 80, entityMap: [['<', 'lt'],['>', 'gt']], xhtml: true}]">
   </div>
 
 
