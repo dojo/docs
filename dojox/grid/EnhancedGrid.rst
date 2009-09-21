@@ -510,6 +510,74 @@ The following figure shows a sample of row headers and column select regions
 
 As noted above, swipe-select is also possible when check boxes are used for row selection.
 
+Usage
+-----
+
+To use this feature, you need to first enable the "DnD" plugin.
+
+* Declare DnD feature plugin
+
+.. code-example::
+  :type: inline
+  :toolbar: themes, versions, dir
+  :version: local
+  :width: 480
+  :height: 300
+
+  .. javascript::
+
+    <script type="text/javascript">
+        dojo.require("dojox.grid.EnhancedGrid");
+        dojo.require("dojox.grid.enhanced.plugins.DnD");
+        dojo.require("dojox.grid.enhanced.plugins.NestedSorting");//This is a must as DnD depends on NestedSorting feature
+        ...
+    </script>
+
+* To use DnD feature
+
+    ... with HTML markup
+    
+.. code-example::
+  :type: inline
+  :toolbar: themes, versions, dir
+  :version: local
+  :width: 480
+  :height: 300
+
+  .. html::
+
+    <div id="grid" store="store1" dojoType="dojox.grid.EnhancedGrid" plugins=“{dnd: true}”  rowSelector="20px" ... ></div>
+
+    ... with JavaScript  <<< '''This isn't code. Not sure how to fix'''
+    
+.. code-example::
+  :type: inline
+  :toolbar: themes, versions, dir
+  :version: local
+  :width: 480
+  :height: 300
+
+  .. javascript::
+
+    var grid = new dojox.grid.EnhancedGrid({id: "grid", store: "store1", plugins: {dnd: true}, rowSelector: "20px", ...}, dojo.byId(“gridDiv”));
+
+========
+Scenario
+========
+
+Selecting rows/columns via mouse clicking/keyboard
+--------------------------------------------------
+
+You can also select multiple non-adjacent rows/columns by holding CTRL key or select a range of adjacent rows/columns by holding SHIFT key and selecting another row.
+
+.. image:: extended-selection-checkboxes.gif
+
+* Selecting rows/columns by swiping.
+
+Swiping is a useful technique for selecting multiple contiguous rows or columns.
+
+.. image:: swipe-select.gif
+
 
 
 
