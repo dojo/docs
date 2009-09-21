@@ -43,6 +43,10 @@ There are currently a small set of nice features that can be plugged into the di
 
 |
 
+* `dojox.editor.plugins.ToolbarLineBreak <dojox/editor/plugins/ToolbarLineBreak>`_ -- **STABLE**  -- A simple plugin that lets you break the editor toolbar to multiple lines.  **This plugin is new to the Dojo Toolkit 1.4.**
+
+|
+
 ========
 See Also
 ========
