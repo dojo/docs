@@ -229,6 +229,7 @@ Several new plugins for the dijit.Editor RTE have been provided as dojox modules
 
 * `Save <dojox/editor/plugins/Save>`_:  A plugin that simplifes adding a save toolbar action for posting editor content back to a specified url.
 
+* `ToolbarLineBreak <dojox/editor/plugins/ToolbarLineBreak>`_:  A simple plugin that provides a way to break the editor toolbar into multiple lines.
 
 =========
 Bug fixes
