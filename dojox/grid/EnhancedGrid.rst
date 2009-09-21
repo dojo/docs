@@ -415,7 +415,103 @@ Tips
 
     dijit.byId('grid').selection.selected[rowIndex] // returns true or false
     
-CONTINUE HERE
+========================
+Declarative context menu
+========================
+
+With this new feature, users can add context menus either through declarative HTML markup or JavaScript. The following menu types are supported:
+
+* Header cell menu
+* Cell menu
+* Row menu
+
+Usage
+-----
+
+* Declare menu feature plugin
+
+.. code-example::
+  :type: inline
+  :toolbar: themes, versions, dir
+  :version: local
+  :width: 480
+  :height: 300
+
+  .. javascript::
+
+    <script type="text/javascript">
+        dojo.require("dojox.grid.EnhancedGrid");
+        dojo.require("dojox.grid.enhanced.plugins.Menu");
+        ...
+    </script>
+
+* Use menu feature
+
+    ... with HTML markup
+    
+.. code-example::
+  :type: inline
+  :toolbar: themes, versions, dir
+  :version: local
+  :width: 480
+  :height: 300
+
+  .. html::
+
+    <div id="grid" dojoType="dojox.grid.EnhancedGrid"
+        plugins=“{menus:{headerMenu:’headerMenu‘, rowMenu:’rowMenu‘, cellMenu:’cellMenu‘, selectedRegionMenu:’selectedRegionMenu‘}}” ... >
+        <div dojoType="dijit.Menu" id="headerMenu"  style="display: none;">
+            <div dojoType="dijit.MenuItem">Header Menu Item 1</div>
+        </div>
+        <div dojoType="dijit.Menu" id="rowMenu"  style="display: none;">
+            <div dojoType="dijit.MenuItem">Row Menu Item 1</div>
+        </div>
+        <div dojoType="dijit.Menu" id="cellMenu"  style="display: none;">
+            <div dojoType="dijit.MenuItem">Cell Menu Item 1</div>
+        </div>
+        <div dojoType="dijit.Menu" id="selectedRegionMenu"  style="display: none;">
+            <div dojoType="dijit.MenuItem">Action 1 for Selected Region</div>
+        </div>
+    </div>
+
+    ... with JavaScript  <<< '''This isn't code. Not sure how to fix'''
+    
+.. code-example::
+  :type: inline
+  :toolbar: themes, versions, dir
+  :version: local
+  :width: 480
+  :height: 300
+
+  .. javascript::
+
+    var grid = new dojox.grid.EnhancedGrid({id: "grid",
+        plugins: {menus:{headerMenu:’headerMenu‘, rowMenu:’rowMenu‘, cellMenu:’cellMenu‘, selectedRegionMenu:’selectedRegionMenu‘}}, ...},
+        dojo.byId('gridDiv'));
+
+Tips
+----
+********* TODO tips - bind events to onxxContextMenu(e) ***********
+
+=================================
+Selecting Rows/Columns with Swipe
+=================================
+
+This feature provides a mechanism to select row(s) and column(s) via mouse clicking, swiping or keyboards.
+
+Note:
+
+* This feature is implemented as part of the "DnD" plugin of EnhancedGrid.
+* Row headers and column select regions are the only places where this feature is effective.
+
+The following figure shows a sample of row headers and column select regions
+
+.. image:: swipe-rows&columns.png
+
+As noted above, swipe-select is also possible when check boxes are used for row selection.
+
+
+
 
 ========
 Examples
