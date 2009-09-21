@@ -12,7 +12,7 @@ dojox.editor.plugins.ToolbarLineBreak
 .. contents::
     :depth: 2
 
-Have you ever wanted to focibly cause the editor toolbar to line break/wrap to a new line?  I've often found myself with that wish, particularly when there are a lot of buttons/icons enabled in the toolbar.  It provides a visual way to separate the toolbar into 'sections', much like how you can use the dijit.ToolbarSeparator to put a vertical separator bar into the editor toolbar.
+Have you ever wanted to force the editor toolbar to line break/wrap to a new line?  I've often found myself with that wish, particularly when there are a lot of buttons/icons enabled in the toolbar.  It provides a visual way to separate the toolbar into 'sections', much like how you can use the dijit.ToolbarSeparator to put a vertical separator bar into the editor toolbar.
 
 ========
 Features
