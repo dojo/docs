@@ -243,7 +243,7 @@ This feature provides indirect row selection support either through
     * Radio buttons - for single row selection, and
     * Check boxes - for multiple row selections
 
-Please note indirect selection is completely dependent on the selection mode of EnhancedGrid so check boxes are used for "extended" and "multiple" selection mode ("extended" is the default mode), and radio buttons are used for "single" selection mode. For more details of Grid selection modes, please refer to the [[http://docs.dojocampus.org/dojox/grid|specification of the base Grid]].
+Please note indirect selection is completely dependent on the selection mode of EnhancedGrid so check boxes are used for "extended" and "multiple" selection mode ("extended" is the default mode), and radio buttons are used for "single" selection mode. For more details of Grid selection modes, please refer to the `specification of the base Grid <http://docs.dojocampus.org/dojox/grid>`_.
 
 Usage
 -----
