@@ -63,7 +63,7 @@ The 'prettyPrint function takes one required parameter and several optional ones
 |                                   |If not provided, then it uses the default set HTML and LATIN 1       |                        |
 |                                   |(8859-1).                                                            |                        |
 +-----------------------------------+---------------------------------------------------------------------+------------------------+
-| xhtml                             |An optional boolean flag indicating to try and close normal HTML     |                        |
+| xhtml                             |An optional boolean flag indicating to try and close normal HTML     | NO                     |
 |                                   |unclosed tags <hr>, <br>, etc, as XHTML compatible <hr />            |                        |
 +-----------------------------------+---------------------------------------------------------------------+------------------------+
 
