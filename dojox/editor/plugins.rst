@@ -47,7 +47,7 @@ There are currently a small set of nice features that can be plugged into the di
 
 |
 
-* `dojox.editor.plugins.ToolbarLineBreak <dojox/editor/plugins/ToolbarLineBreak>`_ -- **EXPERIMENTAL**  -- A plugin that enables inserting 'entity' characters into the editor, such as latin and greek symbols/characters  This plugin is keybound to CTRL-SHIFT-S as well as button driven.  **This plugin is new to the Dojo Toolkit 1.4.**
+* `dojox.editor.plugins.InsertEntity <dojox/editor/plugins/InsertEntity>`_ -- **EXPERIMENTAL**  -- A plugin that enables inserting 'entity' characters into the editor, such as latin and greek symbols/characters  This plugin is keybound to CTRL-SHIFT-S as well as button driven.  **This plugin is new to the Dojo Toolkit 1.4.**
 
 |
 
