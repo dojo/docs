@@ -82,7 +82,6 @@ Basic Usage
   .. javascript::
 
     <script>
-      dojo.require("dijit.form.Button");
       dojo.require("dijit.Editor");
       dojo.require("dijit._editor.plugins.ViewSource");
       dojo.require("dojox.editor.plugins.InsertEntity");
@@ -100,7 +99,7 @@ Basic Usage
 
     <b>Enter some text or select a position, then push the InsertEntity button or use CTRL-SHIFT-S, to insert an entity character of your choosing at that point.  Note that viewsource and prettyprint are also enabled so that you can see the entities and their encodings.</b>
     <br>
-    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['insertentity', 'viewsource'], {name: 'prettyprint', indentBy: 3,       entityMap: dojox.html.entities.html.concat(dojox.html.entities.latin)}]">
+    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['insertentity', 'viewsource', {name: 'prettyprint', indentBy: 3,       entityMap: dojox.html.entities.html.concat(dojox.html.entities.latin)}]">
     <div>
     <br>
     blah blah & blah!
