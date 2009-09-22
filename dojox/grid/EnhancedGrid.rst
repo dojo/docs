@@ -578,6 +578,94 @@ Swiping is a useful technique for selecting multiple contiguous rows or columns.
 
 .. image:: swipe-select.gif
 
+Accessibility
+-------------
+
+Keyboard Support
+~~~~~~~~~~~~~~~~
+
++------------+--------------------------------+
+| **Key**    | **Action**                     +
++------------+--------------------------------+
+| UP/Down    | Navigate keyboard focus across +
+| arrow keys | row headers                    +
++------------+--------------------------------+
+| Left/Right | Navigate keyboard focus across +
+| arrow keys | column headers                 +
++------------+--------------------------------+
+| SPACE key  | Select a row or column         +
++------------+--------------------------------+
+| SHIFT+     | Extend the column selection or +
+| Left/Right | de-selection                   +
+| arrow keys |                                +
++------------+--------------------------------+
+| SHIFT+     | Extend the row selection or    +
+| UP/Down    | de-selection                   +
+| arrow keys |                                +
++------------+--------------------------------+
+
+    * The above keys are only effective when keyboard focus is in row headers or select regions of column headers.
+
+Tips
+----
+
+* When "DnD" feature is enabled but "Indirect Selection" not enabled, row selection can be handled programmatically the same way as base DataGrid:
+
+.. code-example::
+  :type: inline
+  :toolbar: themes, versions, dir
+  :version: local
+  :width: 480
+  :height: 300
+
+  .. javascript::
+
+    for(var i = 0; i < selectedRows.length/*Array of selected row index*/; i++){
+        dijit.byId('grid').selection.addToSelection(selectedRows[i]);
+    }
+
+* There are preconditions to using the "DnD" feature:
+  * The "NestedSorting" feature must be enabled to use the "DnD" feature.
+  * "RowSelector" should be used for "DnD", e.g.,
+
+.. code-example::
+  :type: inline
+  :toolbar: themes, versions, dir
+  :version: local
+  :width: 480
+  :height: 300
+
+  .. HTML::
+
+    <div dojoType="dojox.grid.EnhancedGrid"  plugins='{dnd: true, ...}}' rowSelector="20px" .../>
+
+* When the "DnD" feature is enabled, whether a column is selected can be determined by:
+
+.. code-example::
+  :type: inline
+  :toolbar: themes, versions, dir
+  :version: local
+  :width: 480
+  :height: 300
+
+  .. javascript::
+
+    dijit.byId('grid').select.selectedColumns[columnIndex] // returns true or false , for column
+
+* A topic named "rowSelectionChangedTopic" will be published when row selections are changed, you could simply subscribe the topic as:
+
+.. code-example::
+  :type: inline
+  :toolbar: themes, versions, dir
+  :version: local
+  :width: 480
+  :height: 300
+
+  .. javascript::
+
+    dojo.subscribe(dijit.byId('grid').rowSelectionChangedTopic, function(){...});
+
+
 
 
 
