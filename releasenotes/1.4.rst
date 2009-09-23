@@ -89,7 +89,10 @@ The RTE has had numerous bug fixes applied to it as well as some code cleanup to
 
 * `NewPage <dijit/_editor/plugins/NewPage>`_:  A plugin that lets you clear the content of the editor and set a new default content with a button click.
 
+In addition to the new plugins, the editor icons have all been updated!  They are much cleaner and professional.
+
 Dialog
+
 ~~~~~~
 * Multiple dialogs can now be shown (with one dialog launching over another).
 * Dialog supports aria-describedby to make it more accessible to screen readers.
