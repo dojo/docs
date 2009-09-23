@@ -33,20 +33,32 @@ Usage
 
 The following steps show a typical usage of EnhancedGrid:
 
+.. code-example::
+  :width: 480
+  :height: 300
+
+  .. HTML::
+
+    <style type="text/css">
+        @import "../../../../dijit/themes/tundra/tundra.css";
+        @import "../../enhanced/resources/tundraEnhancedGrid.css";
+        ...
+    </style>
+
 
 2. Declare required feature plugins 
 
 .. code-block :: javascript
   :linenos:
 
-    <script type="text/javascript">
-        dojo.require("dojox.grid.EnhancedGrid");                          // Required for all Enhanced features
-        dojo.require("dojox.grid.enhanced.plugins.DnD");                  // Row/Column drag-drop feature
-        dojo.require("dojox.grid.enhanced.plugins.Menu");                 // Declarative pop-up menu feature
-        dojo.require("dojox.grid.enhanced.plugins.NestedSorting");        // Nested sorting feature
-        dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");    // Indirect selection (checkbox/radio button selection) feature
-        ...
-    </script>
+  <script type="text/javascript">
+      dojo.require("dojox.grid.EnhancedGrid");                          // Required for all Enhanced features
+      dojo.require("dojox.grid.enhanced.plugins.DnD");                  // Row/Column drag-drop feature
+      dojo.require("dojox.grid.enhanced.plugins.Menu");                 // Declarative pop-up menu feature
+      dojo.require("dojox.grid.enhanced.plugins.NestedSorting");        // Nested sorting feature
+      dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");    // Indirect selection (checkbox/radio button selection) feature
+      ...
+  </script>
 
 3. Use features:
 
