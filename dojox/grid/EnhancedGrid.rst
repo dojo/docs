@@ -53,7 +53,8 @@ The following steps show a typical usage of EnhancedGrid:
       dojo.require("dojox.grid.enhanced.plugins.DnD");                  // Row/Column drag-drop feature
       dojo.require("dojox.grid.enhanced.plugins.Menu");                 // Declarative pop-up menu feature
       dojo.require("dojox.grid.enhanced.plugins.NestedSorting");        // Nested sorting feature
-      dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");    // Indirect selection (checkbox/radio button selection) feature
+      dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");    // Indirect selection
+                                                                        // (checkbox/radio button selection) feature
       ...
   </script>
 
@@ -87,51 +88,33 @@ Using the nested sorting feature is pretty simple as shown below:
 
 * Declare nested sorting feature plugin
 
-.. code-example::
-  :type: inline
-  :toolbar: themes, versions, dir
-  :version: local
-  :width: 480
-  :height: 300
+.. code-block :: javascript
+  :linenos:
 
-  .. javascript::
-
-    <script type="text/javascript">
-        dojo.require("dojox.grid.EnhancedGrid");
-        dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
-        ...
-    </script>
+  <script type="text/javascript">
+      dojo.require("dojox.grid.EnhancedGrid");
+      dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
+      ...
+  </script>
 
 * Use nested sorting feature
 
     ... with HTML markup
     
-.. code-example::
-  :type: inline
-  :toolbar: themes, versions, dir
-  :version: local
-  :width: 480
-  :height: 300
+.. code-block :: javascript
+  :linenos:
 
-  .. html::
-
-    <div id="grid" store="store1" dojoType="dojox.grid.EnhancedGrid" plugins="{nestedSorting: true}" ... >
-    </div>
+  <div id="grid" store="store1" dojoType="dojox.grid.EnhancedGrid" plugins="{nestedSorting: true}" ... >
+  </div>
 
     ... with JavaScript  <<< '''This isn't code. Not sure how to fix'''
     
-.. code-example::
-  :type: inline
-  :toolbar: themes, versions, dir
-  :version: local
-  :width: 480
-  :height: 300
+.. code-block :: javascript
+  :linenos:
 
-  .. javascript::
-
-    <script>
-        var grid = new dojox.grid.EnhancedGrid({id: "grid", store: "store1", plugins: {nestedSorting: true}, ...}, dojo.byId("gridDiv"));
-    </script>
+  <script>
+      var grid = new dojox.grid.EnhancedGrid({id: "grid", store: "store1", plugins: {nestedSorting: true}, ...}, dojo.byId("gridDiv"));
+  </script>
     
 When nested sorting is enabled, you can also use comparatorMap for custom sorting; see `dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`_ on DojoCampus.org for more details.
 
@@ -235,20 +218,14 @@ Usage
 
 * Declare indirect selection feature plugin
 
-.. code-example::
-  :type: inline
-  :toolbar: themes, versions, dir
-  :version: local
-  :width: 480
-  :height: 300
+.. code-block :: javascript
+  :linenos:
 
-  .. javascript::
-
-    <script type="text/javascript">
-        dojo.require("dojox.grid.EnhancedGrid");
-        dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");
-        ...
-    </script>
+  <script type="text/javascript">
+      dojo.require("dojox.grid.EnhancedGrid");
+      dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");
+      ...
+  </script>
 
 * Use indirect selection feature
 
@@ -256,63 +233,39 @@ Usage
 
    ... with HTML markup
     
-.. code-example::
-  :type: inline
-  :toolbar: themes, versions, dir
-  :version: local
-  :width: 480
-  :height: 300
+.. code-block :: javascript
+  :linenos:
 
-  .. html::
-
-   <div id="grid" dojoType="dojox.grid.EnhancedGrid" plugins=“{indirectSelection: true}” ... >
-   </div>
+  <div id="grid" dojoType="dojox.grid.EnhancedGrid" plugins=“{indirectSelection: true}” ... >
+  </div>
 
     ... with JavaScript  <<< '''This isn't code. Not sure how to fix'''
     
-.. code-example::
-  :type: inline
-  :toolbar: themes, versions, dir
-  :version: local
-  :width: 480
-  :height: 300
+.. code-block :: javascript
+  :linenos:
 
-  .. javascript::
-
-    <script>
-        var grid = new dojox.grid.EnhancedGrid({id: "grid", plugins: {indirectSelection: true}, ...}, dojo.byId('gridDiv'));
-    </script>
+  <script>
+      var grid = new dojox.grid.EnhancedGrid({id: "grid", plugins: {indirectSelection: true}, ...}, dojo.byId('gridDiv'));
+  </script>
 
   * Radio buttons
 
     ... with HTML markup
     
-.. code-example::
-  :type: inline
-  :toolbar: themes, versions, dir
-  :version: local
-  :width: 480
-  :height: 300
+.. code-block :: javascript
+  :linenos:
 
-  .. html::
-
-   <div id="grid" dojoType="dojox.grid.EnhancedGrid" plugins=“{indirectSelection: true}”  selectionMode=“single” ... >
-   </div>
+  <div id="grid" dojoType="dojox.grid.EnhancedGrid" plugins=“{indirectSelection: true}”  selectionMode=“single” ... >
+  </div>
 
     ... with JavaScript  <<< '''This isn't code. Not sure how to fix'''
     
-.. code-example::
-  :type: inline
-  :toolbar: themes, versions, dir
-  :version: local
-  :width: 480
-  :height: 300
+.. code-block :: javascript
+  :linenos:
 
-  .. javascript::
-
-    <script>
-        var grid = new dojox.grid.EnhancedGrid({id: "grid", plugins: {indirectSelection: true}, selectionMode: “single”, ...}, dojo.byId('gridDiv'));
-    </script>
+  <script>
+      var grid = new dojox.grid.EnhancedGrid({id: "grid", plugins: {indirectSelection: true}, selectionMode: “single”, ...}, dojo.byId('gridDiv'));
+  </script>
 
 It is unlikely that the row headers will be desired when indirect selection is used. The following code removes the row headers from the grid.
 
@@ -369,46 +322,28 @@ Tips
 
 * When "Indirect Selection" feature is enabled, you could handle row selection programmatically as follows.
 
-.. code-example::
-  :type: inline
-  :toolbar: themes, versions, dir
-  :version: local
-  :width: 480
-  :height: 300
+.. code-block :: javascript
+  :linenos:
 
-  .. javascript::
-
-    <script>
-        for(var i = 0; i < selectedRows.length/*Array of selected row index*/;  i++){
-           grid.rowSelectCell.toggleRow(selectedRows[i], true);
-        }
-    </script>
+  <script>
+      for(var i = 0; i < selectedRows.length/*Array of selected row index*/;  i++){
+         grid.rowSelectCell.toggleRow(selectedRows[i], true);
+      }
+  </script>
 
 * A topic named "rowSelectionChangedTopic" will be published when row selections are changed. The topic can be subscribed to with the following code.
 
-.. code-example::
-  :type: inline
-  :toolbar: themes, versions, dir
-  :version: local
-  :width: 480
-  :height: 300
+.. code-block :: javascript
+  :linenos:
 
-  .. javascript::
-
-    dojo.subscribe(dijit.byId('grid').rowSelectionChangedTopic, function(){...});
+  dojo.subscribe(dijit.byId('grid').rowSelectionChangedTopic, function(){...});
 
 * You can check whether a certain row is selected with the following code.
 
-.. code-example::
-  :type: inline
-  :toolbar: themes, versions, dir
-  :version: local
-  :width: 480
-  :height: 300
+.. code-block :: javascript
+  :linenos:
 
-  .. javascript::
-
-    dijit.byId('grid').selection.selected[rowIndex] // returns true or false
+  dijit.byId('grid').selection.selected[rowIndex] // returns true or false
     
 ========================
 Declarative context menu
@@ -425,64 +360,46 @@ Usage
 
 * Declare menu feature plugin
 
-.. code-example::
-  :type: inline
-  :toolbar: themes, versions, dir
-  :version: local
-  :width: 480
-  :height: 300
+.. code-block :: javascript
+  :linenos:
 
-  .. javascript::
-
-    <script type="text/javascript">
-        dojo.require("dojox.grid.EnhancedGrid");
-        dojo.require("dojox.grid.enhanced.plugins.Menu");
-        ...
-    </script>
+  <script type="text/javascript">
+      dojo.require("dojox.grid.EnhancedGrid");
+      dojo.require("dojox.grid.enhanced.plugins.Menu");
+      ...
+  </script>
 
 * Use menu feature
 
     ... with HTML markup
     
-.. code-example::
-  :type: inline
-  :toolbar: themes, versions, dir
-  :version: local
-  :width: 480
-  :height: 300
+.. code-block :: javascript
+  :linenos:
 
-  .. html::
-
-    <div id="grid" dojoType="dojox.grid.EnhancedGrid"
-        plugins=“{menus:{headerMenu:’headerMenu‘, rowMenu:’rowMenu‘, cellMenu:’cellMenu‘, selectedRegionMenu:’selectedRegionMenu‘}}” ... >
-        <div dojoType="dijit.Menu" id="headerMenu"  style="display: none;">
-            <div dojoType="dijit.MenuItem">Header Menu Item 1</div>
-        </div>
-        <div dojoType="dijit.Menu" id="rowMenu"  style="display: none;">
-            <div dojoType="dijit.MenuItem">Row Menu Item 1</div>
-        </div>
-        <div dojoType="dijit.Menu" id="cellMenu"  style="display: none;">
-            <div dojoType="dijit.MenuItem">Cell Menu Item 1</div>
-        </div>
-        <div dojoType="dijit.Menu" id="selectedRegionMenu"  style="display: none;">
-            <div dojoType="dijit.MenuItem">Action 1 for Selected Region</div>
-        </div>
-    </div>
+  <div id="grid" dojoType="dojox.grid.EnhancedGrid"
+      plugins=“{menus:{headerMenu:’headerMenu‘, rowMenu:’rowMenu‘, cellMenu:’cellMenu‘, selectedRegionMenu:’selectedRegionMenu‘}}” ... >
+      <div dojoType="dijit.Menu" id="headerMenu"  style="display: none;">
+          <div dojoType="dijit.MenuItem">Header Menu Item 1</div>
+      </div>
+      <div dojoType="dijit.Menu" id="rowMenu"  style="display: none;">
+          <div dojoType="dijit.MenuItem">Row Menu Item 1</div>
+      </div>
+      <div dojoType="dijit.Menu" id="cellMenu"  style="display: none;">
+          <div dojoType="dijit.MenuItem">Cell Menu Item 1</div>
+      </div>
+      <div dojoType="dijit.Menu" id="selectedRegionMenu"  style="display: none;">
+          <div dojoType="dijit.MenuItem">Action 1 for Selected Region</div>
+      </div>
+  </div>
 
     ... with JavaScript  <<< '''This isn't code. Not sure how to fix'''
     
-.. code-example::
-  :type: inline
-  :toolbar: themes, versions, dir
-  :version: local
-  :width: 480
-  :height: 300
+.. code-block :: javascript
+  :linenos:
 
-  .. javascript::
-
-    var grid = new dojox.grid.EnhancedGrid({id: "grid",
-        plugins: {menus:{headerMenu:’headerMenu‘, rowMenu:’rowMenu‘, cellMenu:’cellMenu‘, selectedRegionMenu:’selectedRegionMenu‘}}, ...},
-        dojo.byId('gridDiv'));
+  var grid = new dojox.grid.EnhancedGrid({id: "grid",
+      plugins: {menus:{headerMenu:’headerMenu‘, rowMenu:’rowMenu‘, cellMenu:’cellMenu‘, selectedRegionMenu:’selectedRegionMenu‘}}, ...},
+      dojo.byId('gridDiv'));
 
 Tips
 ----
@@ -512,49 +429,31 @@ To use this feature, you need to first enable the "DnD" plugin.
 
 * Declare DnD feature plugin
 
-.. code-example::
-  :type: inline
-  :toolbar: themes, versions, dir
-  :version: local
-  :width: 480
-  :height: 300
+.. code-block :: javascript
+  :linenos:
 
-  .. javascript::
-
-    <script type="text/javascript">
-        dojo.require("dojox.grid.EnhancedGrid");
-        dojo.require("dojox.grid.enhanced.plugins.DnD");
-        dojo.require("dojox.grid.enhanced.plugins.NestedSorting");//This is a must as DnD depends on NestedSorting feature
-        ...
-    </script>
+  <script type="text/javascript">
+      dojo.require("dojox.grid.EnhancedGrid");
+      dojo.require("dojox.grid.enhanced.plugins.DnD");
+      dojo.require("dojox.grid.enhanced.plugins.NestedSorting");//This is a must as DnD depends on NestedSorting feature
+      ...
+  </script>
 
 * To use DnD feature
 
     ... with HTML markup
     
-.. code-example::
-  :type: inline
-  :toolbar: themes, versions, dir
-  :version: local
-  :width: 480
-  :height: 300
+.. code-block :: javascript
+  :linenos:
 
-  .. html::
-
-    <div id="grid" store="store1" dojoType="dojox.grid.EnhancedGrid" plugins=“{dnd: true}”  rowSelector="20px" ... ></div>
+  <div id="grid" store="store1" dojoType="dojox.grid.EnhancedGrid" plugins=“{dnd: true}”  rowSelector="20px" ... ></div>
 
     ... with JavaScript  <<< '''This isn't code. Not sure how to fix'''
     
-.. code-example::
-  :type: inline
-  :toolbar: themes, versions, dir
-  :version: local
-  :width: 480
-  :height: 300
+.. code-block :: javascript
+  :linenos:
 
-  .. javascript::
-
-    var grid = new dojox.grid.EnhancedGrid({id: "grid", store: "store1", plugins: {dnd: true}, rowSelector: "20px", ...}, dojo.byId(“gridDiv”));
+  var grid = new dojox.grid.EnhancedGrid({id: "grid", store: "store1", plugins: {dnd: true}, rowSelector: "20px", ...}, dojo.byId(“gridDiv”));
 
 ========
 Scenario
@@ -607,59 +506,35 @@ Tips
 
 * When "DnD" feature is enabled but "Indirect Selection" not enabled, row selection can be handled programmatically the same way as base DataGrid:
 
-.. code-example::
-  :type: inline
-  :toolbar: themes, versions, dir
-  :version: local
-  :width: 480
-  :height: 300
+.. code-block :: javascript
+  :linenos:
 
-  .. javascript::
-
-    for(var i = 0; i < selectedRows.length/*Array of selected row index*/; i++){
-        dijit.byId('grid').selection.addToSelection(selectedRows[i]);
-    }
+  for(var i = 0; i < selectedRows.length/*Array of selected row index*/; i++){
+      dijit.byId('grid').selection.addToSelection(selectedRows[i]);
+  }
 
 * There are preconditions to using the "DnD" feature:
   * The "NestedSorting" feature must be enabled to use the "DnD" feature.
   * "RowSelector" should be used for "DnD", e.g.,
 
-.. code-example::
-  :type: inline
-  :toolbar: themes, versions, dir
-  :version: local
-  :width: 480
-  :height: 300
+.. code-block :: javascript
+  :linenos:
 
-  .. HTML::
-
-    <div dojoType="dojox.grid.EnhancedGrid"  plugins='{dnd: true, ...}}' rowSelector="20px" .../>
+  <div dojoType="dojox.grid.EnhancedGrid"  plugins='{dnd: true, ...}}' rowSelector="20px" .../>
 
 * When the "DnD" feature is enabled, whether a column is selected can be determined by:
 
-.. code-example::
-  :type: inline
-  :toolbar: themes, versions, dir
-  :version: local
-  :width: 480
-  :height: 300
+.. code-block :: javascript
+  :linenos:
 
-  .. javascript::
-
-    dijit.byId('grid').select.selectedColumns[columnIndex] // returns true or false , for column
+  dijit.byId('grid').select.selectedColumns[columnIndex] // returns true or false , for column
 
 * A topic named "rowSelectionChangedTopic" will be published when row selections are changed, you could simply subscribe the topic as:
 
-.. code-example::
-  :type: inline
-  :toolbar: themes, versions, dir
-  :version: local
-  :width: 480
-  :height: 300
+.. code-block :: javascript
+  :linenos:
 
-  .. javascript::
-
-    dojo.subscribe(dijit.byId('grid').rowSelectionChangedTopic, function(){...});
+  dojo.subscribe(dijit.byId('grid').rowSelectionChangedTopic, function(){...});
 
 =================================
 Drag-n-drop: rows, columns - MOVE
