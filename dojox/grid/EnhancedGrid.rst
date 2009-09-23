@@ -33,21 +33,6 @@ Usage
 
 The following steps show a typical usage of EnhancedGrid:
 
-.. code-example::
-  :type: inline
-  :toolbar: themes, versions, dir
-  :version: local
-  :width: 480
-  :height: 300
-
-  .. HTML::
-
-    <style type="text/css">
-        @import "../../../../dijit/themes/tundra/tundra.css";
-        @import "../../enhanced/resources/tundraEnhancedGrid.css";
-        ...
-    </style>
-
 
 2. Declare required feature plugins 
 
@@ -371,3 +356,364 @@ Keyboard Support
 | UP/Down    | de-selection - only for        +
 | arrow keys | check boxes   .                +
 +------------+--------------------------------+
+
+  * The above keys are only effective when keyboard focus is in the first column that contains radio buttons or check boxes.
+
+Note that extended selection is also enabled through the row headers as well.
+
+Tips
+----
+
+* When "Indirect Selection" feature is enabled, you could handle row selection programmatically as follows.
+
+.. code-example::
+  :type: inline
+  :toolbar: themes, versions, dir
+  :version: local
+  :width: 480
+  :height: 300
+
+  .. javascript::
+
+    <script>
+        for(var i = 0; i < selectedRows.length/*Array of selected row index*/;  i++){
+           grid.rowSelectCell.toggleRow(selectedRows[i], true);
+        }
+    </script>
+
+* A topic named "rowSelectionChangedTopic" will be published when row selections are changed. The topic can be subscribed to with the following code.
+
+.. code-example::
+  :type: inline
+  :toolbar: themes, versions, dir
+  :version: local
+  :width: 480
+  :height: 300
+
+  .. javascript::
+
+    dojo.subscribe(dijit.byId('grid').rowSelectionChangedTopic, function(){...});
+
+* You can check whether a certain row is selected with the following code.
+
+.. code-example::
+  :type: inline
+  :toolbar: themes, versions, dir
+  :version: local
+  :width: 480
+  :height: 300
+
+  .. javascript::
+
+    dijit.byId('grid').selection.selected[rowIndex] // returns true or false
+    
+========================
+Declarative context menu
+========================
+
+With this new feature, users can add context menus either through declarative HTML markup or JavaScript. The following menu types are supported:
+
+* Header cell menu
+* Cell menu
+* Row menu
+
+Usage
+-----
+
+* Declare menu feature plugin
+
+.. code-example::
+  :type: inline
+  :toolbar: themes, versions, dir
+  :version: local
+  :width: 480
+  :height: 300
+
+  .. javascript::
+
+    <script type="text/javascript">
+        dojo.require("dojox.grid.EnhancedGrid");
+        dojo.require("dojox.grid.enhanced.plugins.Menu");
+        ...
+    </script>
+
+* Use menu feature
+
+    ... with HTML markup
+    
+.. code-example::
+  :type: inline
+  :toolbar: themes, versions, dir
+  :version: local
+  :width: 480
+  :height: 300
+
+  .. html::
+
+    <div id="grid" dojoType="dojox.grid.EnhancedGrid"
+        plugins=“{menus:{headerMenu:’headerMenu‘, rowMenu:’rowMenu‘, cellMenu:’cellMenu‘, selectedRegionMenu:’selectedRegionMenu‘}}” ... >
+        <div dojoType="dijit.Menu" id="headerMenu"  style="display: none;">
+            <div dojoType="dijit.MenuItem">Header Menu Item 1</div>
+        </div>
+        <div dojoType="dijit.Menu" id="rowMenu"  style="display: none;">
+            <div dojoType="dijit.MenuItem">Row Menu Item 1</div>
+        </div>
+        <div dojoType="dijit.Menu" id="cellMenu"  style="display: none;">
+            <div dojoType="dijit.MenuItem">Cell Menu Item 1</div>
+        </div>
+        <div dojoType="dijit.Menu" id="selectedRegionMenu"  style="display: none;">
+            <div dojoType="dijit.MenuItem">Action 1 for Selected Region</div>
+        </div>
+    </div>
+
+    ... with JavaScript  <<< '''This isn't code. Not sure how to fix'''
+    
+.. code-example::
+  :type: inline
+  :toolbar: themes, versions, dir
+  :version: local
+  :width: 480
+  :height: 300
+
+  .. javascript::
+
+    var grid = new dojox.grid.EnhancedGrid({id: "grid",
+        plugins: {menus:{headerMenu:’headerMenu‘, rowMenu:’rowMenu‘, cellMenu:’cellMenu‘, selectedRegionMenu:’selectedRegionMenu‘}}, ...},
+        dojo.byId('gridDiv'));
+
+Tips
+----
+TODO: tips - bind events to onxxContextMenu(e) 
+
+=================================
+Selecting Rows/Columns with Swipe
+=================================
+
+This feature provides a mechanism to select row(s) and column(s) via mouse clicking, swiping or keyboards.
+
+Note:
+
+* This feature is implemented as part of the "DnD" plugin of EnhancedGrid.
+* Row headers and column select regions are the only places where this feature is effective.
+
+The following figure shows a sample of row headers and column select regions
+
+.. image:: swipe-rows&columns.png
+
+As noted above, swipe-select is also possible when check boxes are used for row selection.
+
+Usage
+-----
+
+To use this feature, you need to first enable the "DnD" plugin.
+
+* Declare DnD feature plugin
+
+.. code-example::
+  :type: inline
+  :toolbar: themes, versions, dir
+  :version: local
+  :width: 480
+  :height: 300
+
+  .. javascript::
+
+    <script type="text/javascript">
+        dojo.require("dojox.grid.EnhancedGrid");
+        dojo.require("dojox.grid.enhanced.plugins.DnD");
+        dojo.require("dojox.grid.enhanced.plugins.NestedSorting");//This is a must as DnD depends on NestedSorting feature
+        ...
+    </script>
+
+* To use DnD feature
+
+    ... with HTML markup
+    
+.. code-example::
+  :type: inline
+  :toolbar: themes, versions, dir
+  :version: local
+  :width: 480
+  :height: 300
+
+  .. html::
+
+    <div id="grid" store="store1" dojoType="dojox.grid.EnhancedGrid" plugins=“{dnd: true}”  rowSelector="20px" ... ></div>
+
+    ... with JavaScript  <<< '''This isn't code. Not sure how to fix'''
+    
+.. code-example::
+  :type: inline
+  :toolbar: themes, versions, dir
+  :version: local
+  :width: 480
+  :height: 300
+
+  .. javascript::
+
+    var grid = new dojox.grid.EnhancedGrid({id: "grid", store: "store1", plugins: {dnd: true}, rowSelector: "20px", ...}, dojo.byId(“gridDiv”));
+
+========
+Scenario
+========
+
+Selecting rows/columns via mouse clicking/keyboard
+--------------------------------------------------
+
+You can also select multiple non-adjacent rows/columns by holding CTRL key or select a range of adjacent rows/columns by holding SHIFT key and selecting another row.
+
+.. image:: extended-selection-checkboxes.gif
+
+* Selecting rows/columns by swiping.
+
+Swiping is a useful technique for selecting multiple contiguous rows or columns.
+
+.. image:: swipe-select.gif
+
+Accessibility
+-------------
+
+Keyboard Support
+~~~~~~~~~~~~~~~~
+
++------------+--------------------------------+
+| **Key**    | **Action**                     +
++------------+--------------------------------+
+| CTRL +     | Navigate keyboard focus across +
+| UP/Down    | row headers                    +
+| arrow keys |                                +
++------------+--------------------------------+
+| Left/Right | Navigate keyboard focus across +
+| arrow keys | column headers                 +
++------------+--------------------------------+
+| SPACE key  | Select a row or column         +
++------------+--------------------------------+
+| SHIFT+     | Extend the column selection or +
+| Left/Right | de-selection                   +
+| arrow keys |                                +
++------------+--------------------------------+
+| SHIFT+     | Extend the row selection or    +
+| UP/Down    | de-selection                   +
+| arrow keys |                                +
++------------+--------------------------------+
+
+  * The above keys are only effective when keyboard focus is in row headers or select regions of column headers.
+
+Tips
+----
+
+* When "DnD" feature is enabled but "Indirect Selection" not enabled, row selection can be handled programmatically the same way as base DataGrid:
+
+.. code-example::
+  :type: inline
+  :toolbar: themes, versions, dir
+  :version: local
+  :width: 480
+  :height: 300
+
+  .. javascript::
+
+    for(var i = 0; i < selectedRows.length/*Array of selected row index*/; i++){
+        dijit.byId('grid').selection.addToSelection(selectedRows[i]);
+    }
+
+* There are preconditions to using the "DnD" feature:
+  * The "NestedSorting" feature must be enabled to use the "DnD" feature.
+  * "RowSelector" should be used for "DnD", e.g.,
+
+.. code-example::
+  :type: inline
+  :toolbar: themes, versions, dir
+  :version: local
+  :width: 480
+  :height: 300
+
+  .. HTML::
+
+    <div dojoType="dojox.grid.EnhancedGrid"  plugins='{dnd: true, ...}}' rowSelector="20px" .../>
+
+* When the "DnD" feature is enabled, whether a column is selected can be determined by:
+
+.. code-example::
+  :type: inline
+  :toolbar: themes, versions, dir
+  :version: local
+  :width: 480
+  :height: 300
+
+  .. javascript::
+
+    dijit.byId('grid').select.selectedColumns[columnIndex] // returns true or false , for column
+
+* A topic named "rowSelectionChangedTopic" will be published when row selections are changed, you could simply subscribe the topic as:
+
+.. code-example::
+  :type: inline
+  :toolbar: themes, versions, dir
+  :version: local
+  :width: 480
+  :height: 300
+
+  .. javascript::
+
+    dojo.subscribe(dijit.byId('grid').rowSelectionChangedTopic, function(){...});
+
+=================================
+Drag-n-drop: rows, columns - MOVE
+=================================
+
+This feature is an enhancement to the single Column moving feature of base DataGrid. Once rows or columns are selected, they can be moved to the target position by dragging them.
+ 
+Note:
+
+* This feature is implemented as part of the "DnD" plugin of EnhancedGrid.
+* This feature is only effective to selected rows or columns.
+
+Usage 
+-----
+
+See the usage section for "Selecting rows/columns via swipe".
+
+Scenario
+--------
+
+* Moving contiguous rows/columns.
+
+.. image:: drag-contiguous-rows-and-columns.gif
+
+* Moving noncontiguous rows/columns.
+
+  Noncontiguous rows and columns can be moved using drag-drop as well. The moved columns and rows will be adjacent, in their original relative order, after the move.
+
+.. image:: drag-non-contiguous-rows-and-columns.gif
+
+Accessibility
+-------------
+
+Keyboard Support
+~~~~~~~~~~~~~~~~
+
++------------+--------------------------------+
+| **Key**    | **Action**                     +
++------------+--------------------------------+
+| CTRL +     | Move row(s) upward or downward +
+| UP/Down    |                                +
+| arrow keys |                                +
++------------+--------------------------------+
+| CTRL +     | Move column(s) leftward        +
+| LEFT/RIGHT | or rightward                   +
+| arrow keys |                                +
++------------+--------------------------------+
+
+  * The above keys are only effective when keyboard focus is in row headers or select regions of column headers.
+
+============
+Known Issues
+============
+
+
+========
+See also
+========
+
+* TODO: links to other related articles
