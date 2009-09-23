@@ -236,7 +236,7 @@ Usage
 .. code-block :: javascript
   :linenos:
 
-  <div id="grid" dojoType="dojox.grid.EnhancedGrid" plugins=“{indirectSelection: true}” ... >
+  <div id="grid" dojoType="dojox.grid.EnhancedGrid" plugins="{indirectSelection: true}" ... >
   </div>
 
     ... with JavaScript  <<< '''This isn't code. Not sure how to fix'''
@@ -255,7 +255,7 @@ Usage
 .. code-block :: javascript
   :linenos:
 
-  <div id="grid" dojoType="dojox.grid.EnhancedGrid" plugins=“{indirectSelection: true}”  selectionMode=“single” ... >
+  <div id="grid" dojoType="dojox.grid.EnhancedGrid" plugins="{indirectSelection: true}"  selectionMode="single" ... >
   </div>
 
     ... with JavaScript  <<< '''This isn't code. Not sure how to fix'''
@@ -264,7 +264,7 @@ Usage
   :linenos:
 
   <script>
-      var grid = new dojox.grid.EnhancedGrid({id: "grid", plugins: {indirectSelection: true}, selectionMode: “single”, ...}, dojo.byId('gridDiv'));
+      var grid = new dojox.grid.EnhancedGrid({id: "grid", plugins: {indirectSelection: true}, selectionMode: "single", ...}, dojo.byId('gridDiv'));
   </script>
 
 It is unlikely that the row headers will be desired when indirect selection is used. The following code removes the row headers from the grid.
@@ -377,7 +377,7 @@ Usage
   :linenos:
 
   <div id="grid" dojoType="dojox.grid.EnhancedGrid"
-      plugins=“{menus:{headerMenu:’headerMenu‘, rowMenu:’rowMenu‘, cellMenu:’cellMenu‘, selectedRegionMenu:’selectedRegionMenu‘}}” ... >
+      plugins="{menus:{headerMenu:’headerMenu‘, rowMenu:’rowMenu‘, cellMenu:’cellMenu‘, selectedRegionMenu:’selectedRegionMenu‘}}" ... >
       <div dojoType="dijit.Menu" id="headerMenu"  style="display: none;">
           <div dojoType="dijit.MenuItem">Header Menu Item 1</div>
       </div>
@@ -446,14 +446,14 @@ To use this feature, you need to first enable the "DnD" plugin.
 .. code-block :: javascript
   :linenos:
 
-  <div id="grid" store="store1" dojoType="dojox.grid.EnhancedGrid" plugins=“{dnd: true}”  rowSelector="20px" ... ></div>
+  <div id="grid" store="store1" dojoType="dojox.grid.EnhancedGrid" plugins="{dnd: true}"  rowSelector="20px" ... ></div>
 
     ... with JavaScript  <<< '''This isn't code. Not sure how to fix'''
     
 .. code-block :: javascript
   :linenos:
 
-  var grid = new dojox.grid.EnhancedGrid({id: "grid", store: "store1", plugins: {dnd: true}, rowSelector: "20px", ...}, dojo.byId(“gridDiv”));
+  var grid = new dojox.grid.EnhancedGrid({id: "grid", store: "store1", plugins: {dnd: true}, rowSelector: "20px", ...}, dojo.byId("gridDiv"));
 
 ========
 Scenario
