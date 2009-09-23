@@ -207,7 +207,7 @@ The new Enhanced DataGrid extends the base grid in numerous useful ways.
 dojox.form
 ----------
 
-* dojox.form._HasDropDown, dojox.form._FormSelectWidget, dojox.form.DropDownSelect - Migrated to dijit (dijit._HasDropDown, dijit.form._FormSelectWidget, dijit.form.DropDownSelect)
+* dojox.form._HasDropDown, dojox.form._FormSelectWidget, dojox.form.DropDownSelect - Migrated to dijit (dijit._HasDropDown, dijit.form._FormSelectWidget, dijit.form.Select)
 
 dojo.form.FileUploader
 ----------------------
