@@ -59,24 +59,18 @@ The following steps show a typical usage of EnhancedGrid:
 
 3. Use features:
 
-.. code-example::
-  :type: inline
-  :toolbar: themes, versions, dir
-  :version: local
-  :width: 480
-  :height: 300
+.. code-block :: javascript
+  :linenos:
 
-  .. HTML::
-
-    <div id="grid" dojoType="dojox.grid.EnhancedGrid" 
-        plugins="{nestedSorting: true, dnd: true, indirectSelection: true,  // Each required feature must be turned on
-        menus:{
-        headerMenu:'headerMenu',  //References menus defined declaratively below
-        rowMenu:'rowMenu',
-        cellMenu:'cellMenu',
-        selectedRegionMenu:'selectedRegionMenu'}}"
-        ...>
-    </div>
+  <div id="grid" dojoType="dojox.grid.EnhancedGrid" 
+      plugins="{nestedSorting: true, dnd: true, indirectSelection: true,  // Each required feature must be turned on
+      menus:{
+      headerMenu:'headerMenu',  //References menus defined declaratively below
+      rowMenu:'rowMenu',
+      cellMenu:'cellMenu',
+      selectedRegionMenu:'selectedRegionMenu'}}"
+      ...>
+  </div>
 
 TODO:  Add a live EDG demo here
 
