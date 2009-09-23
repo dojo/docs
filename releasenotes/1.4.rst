@@ -19,6 +19,11 @@ Now there are topics that are published for the pipeline used to handle all IO o
 
 There was a dojo.require/onload fix done for Firefox browsers (see `Ticket #8976 <http://bugs.dojotoolkit.org/ticket/8976>`_).
 
+`dojo.ready <dojo/ready>`_
+----------------------------------
+
+It is just an alias for `dojo.addOnLoad <dojo/addOnLoad>`_.
+
 `dojo.fieldToObject <dojo/fieldToObject>`_
 -------------------------------------------
 A new method in Dojo Base (part of dojo.js) that is related to dojo.formToObject(), except instead of converting a whole form to an object, it just converts one form field. Pass it a DOM Node for the field, or the ID of the form field as a string. dojo.fieldToObject returns the value encoded in a form field as as a string or an array of strings. Disabled form elements and unchecked radio and checkboxes are skipped. Multi-select elements are returned as an array of string values. See `dojo.fieldToObject <dojo/fieldToObject>`_ for more information.
