@@ -121,6 +121,10 @@ Fixes related to resizing and href loading, including avoiding premature href lo
 
 dijit.form
 ----------
+Button
+~~~~~~
+Although not related to the Dojo 1.4 release per-se, note that to support IE8 all dijit.form.Button's declared in markup must have type=button (unless they are intended as submit buttons).   This is to work around an IE8 problem where the parser can't distinguish between an explicit type=submit and an implicit one.   (The default type for <button> tags is submit, according to the latest HTML spec.)
+
 Select
 ~~~~~~
 dojox.form.DropDownSelect has been moved to dijit.Select as a styled HTML <select> replacement.
