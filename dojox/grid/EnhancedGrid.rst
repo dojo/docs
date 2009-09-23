@@ -33,17 +33,14 @@ Usage
 
 The following steps show a typical usage of EnhancedGrid:
 
-.. code-example::
-  :width: 480
-  :height: 300
+.. code-block :: javascript
+  :linenos:
 
-  .. HTML::
-
-    <style type="text/css">
-        @import "../../../../dijit/themes/tundra/tundra.css";
-        @import "../../enhanced/resources/tundraEnhancedGrid.css";
-        ...
-    </style>
+  <style type="text/css">
+      @import "../../../../dijit/themes/tundra/tundra.css";
+      @import "../../enhanced/resources/tundraEnhancedGrid.css";
+      ...
+  </style>
 
 
 2. Declare required feature plugins 
