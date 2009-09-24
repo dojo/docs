@@ -171,6 +171,25 @@ Miscellaneous
 * `Dynamic Stylesheets, Part 1 <http://www.sitepen.com/blog/2009/03/13/dynamic-stylesheets-part-1/>`_, Sam Foster, SitePen, Dojo Committer
 
 
+=========
+Utilities
+=========
+
+* `DOH + Selenium <http://rob.coup.net.nz/2008/01/automated-dojo-testing-doh-selenium-rc.html>`_, Rob Coup, Dojo Contributor
+* `DOH Unit Testing <http://dojotoolkit.org/book/dojo-book-0-9/part-4-meta-dojo/d-o-h-unit-testing>`_, Dojo Book
+* `Custom Builds <http://dojotoolkit.org/book/dojo-book-0-9/part-4-meta-dojo/package-system-and-custom-builds>`_, Dojo Book
+* `Dojo Toolkit for Drupal <http://cb1inc.com/2007/11/9/dojo-toolkit-module-v2.1-released>`_, Chris Barber, CB1, Dojo Committer
+* `Dojo-mini <http://www.sitepen.com/blog/2008/04/02/dojo-mini-optimization-tricks-with-the-dojo-toolkit/>`_, Peter Higgins, SitePen, Dojo Project Lead
+* `Easy, Repeatable Building/Deployment of Python+Dojo Projects <http://www.sitepen.com/blog/2008/06/05/easy-repeatable-buildingdeployment-of-pythondojo-projects/>`_, Kevin Dangoor, SitePen, Dojo Contributor
+* `SitePen's Dojo Toolbox <http://sitepen.com/labs/toolbox/>`_ (requires Adobe AIR 1.1 or higher), SitePen
+* `Dojo in 6K <http://www.sitepen.com/blog/2008/07/01/dojo-in-6k/>`_, Alex Russell, SitePen, Dojo Co-founder
+* `Unit testing Web 2.0 apps using DOH <http://www.ibm.com/developerworks/web/library/wa-aj-doh/index.html?ca=drs->`_, Jared Jurkiewicz/Stephanie Walter, IBM, Dojo Committer/User
+* `Automatic Dojo Builds <http://www.sitepen.com/blog/2008/10/28/automatic-dojo-builds/>`_, Jason Cline, SitePen, Dojo Contributor
+* `Dojo and Firebug Tricks for Development <http://www.sitepen.com/blog/2008/11/10/dojo-and-firebug-tricks-for-development/>`_, Tom Trenka, SitePen, Dojo Committer
+* `Census2 <http://alex.dojotoolkit.org/2008/12/census-2-more-than-just-a-pretty-graph>`_, Alex Russell, Google, Dojo Co-founder
+* `Patching Dojo <http://www.sitepen.com/blog/2009/02/04/patching-dojo/>`_, Sam Foster, SitePen, Dojo Committer
+
+
 ========
 See also
 ========
