@@ -66,6 +66,31 @@ Core
 * `Demystifying Deferreds <http://www.sitepen.com/blog/2009/03/31/queued-demystifying-deferreds/>`_, Dustin Machi, SitePen, Dojo Committer
 
 
+=====
+Dijit
+=====
+
+* `Hello Dijit <http://bitstructures.com/2007/11/hello-dijit-ajax-world>`_, Simon Bates, Adaptive Technology Resource Centre, Dojo Committer
+* `Widget Prototyping <http://www.sitepen.com/blog/2007/11/02/html-widget-prototyping-with-the-dojo-toolkit/>`_, Mike Wilcox, SitePen, Dojo Committer
+* `Develop a Dojo-based Blog Reader <http://www.ibm.com/developerworks/web/library/wa-aj-basics2/index.html?ca=drs->`_, IBM Developer Works
+* `Declaring Class <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/object-orientation/declaring-class>`_, Dojo Book
+* `TinyBuddy IM <http://tagneto.blogspot.com/2007/07/tinybuddy-im-instant-messaging-for.html>`_, James Burke, AOL, Dojo Committer
+* `dijit.Tree and dojo.data in Dojo 1.1 <http://dojotoolkit.org/2008/02/12/dijit-tree-and-dojo-data-dojo-1-1>`_, Bill Keese, IBM, Dojo Committer
+* `Templating Made Nicer with Jaxer, Dijit, and dojo.query <http://dojofindings.blogspot.com/2008/03/templating-made-nicer-with-jaxer-dijit.html>`_, Tony Issakov, Dojo User
+* `Dojo 1.1 Custom Widgets <http://docs.google.com/Present?docid=dfxgjqrf_78fr7h6sd7#0>`_, Peter Svensson, Mashup Station, Dojo Contributor
+* `Accessibility <http://www-03.ibm.com/able/resources/dojo.html>`_, Becky Gibson, IBM, Dojo Committer
+* `Usable Directory Listing with Dojo <http://www.sitepen.com/blog/2008/04/29/usable-directory-listings-with-a-little-dojo/>`_, Sam Foster, SitePen, Dojo Committer
+* `Developer Accessibility Requirements <http://www.dojotoolkit.org/developer/A11yReq>`_, Becky Gibson, IBM, Dojo Committer
+* `Adding setTitle to TabContainer <http://dojocampus.org/content/2008/06/06/hacking-tabcontainer-settitle-extension/>`_, Peter Higgins, SitePen, Dojo Project Lead
+* `Creating Dojo Widgets with Inline Templates <http://www.sitepen.com/blog/2008/06/24/creating-dojo-widgets-with-inline-templates/>`_, Dustin Machi, SitePen, Dojo Committer
+* `dijit.Tree - server fetch on node expansion <http://dojocampus.org/content/2008/06/07/tree-server-fetch-on-node-expansion/>`_, Josh Trutwin, Dojo User
+* `Separating Presentation from Content the Dojo Way <http://dojocampus.org/content/2008/06/18/separating-content-from-presentation-ajax/>`_, Gerald Lopez, Dojo Contributor
+* `Implementing an Application Preloading Overlay <https://www.sitepen.com/blog/?p=498>`_, Peter Higgins, SitePen, Dojo Project Lead
+* `Dojo Tag Cloud Widget <http://ekrantz.com/index.php/2008/07/29/dojo-tag-cloud-widget.html>`_, Viktor Krantz, ekrantz.com, Dojo User
+* `Extending Dojo Widgets <http://heather.koyuk.net/refractions/?p=41>`_, Heather Koyuk, Dojo User
+* `Styling Dijit Form Elements <http://www.sitepen.com/blog/2009/02/25/styling-dijit-form-elements/>`_, Mike Wilcox, SitePen, Dojo Committer
+
+
 ========
 See also
 ========
