@@ -302,9 +302,9 @@ Ajax / IO
 ---------
 
   * `IO Pipeline Topics <dojo/ioPipelineTopics>`_
-  * **1.4+** `dojo.contentHandlers <dojo/contentHandlers>`_ 
+  * `dojo.contentHandlers <dojo/contentHandlers>`_ 
   
-    Pre-defined XHR content handlers, and an extension point to add your own custom handling.    
+    **1.4+** Pre-defined XHR content handlers, and an extension point to add your own custom handling.    
 
   * `dojo.xhr <dojo/xhr>`_
   
