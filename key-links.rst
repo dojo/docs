@@ -150,6 +150,27 @@ Data, JSON, and RPC
 * `Deterministic Client/Server Interaction <http://www.sitepen.com/blog/2009/02/27/deterministic-clientserver-interaction/>`_, Kris Zyp, SitePen, Dojo Committer
 
 
+=============
+Miscellaneous
+=============
+
+* `Dojo Offline <http://dojotoolkit.org/offline>`_
+* `Syntax Highlighting with Dojo <http://dojofindings.blogspot.com/2008/04/why-not-code-highlighting-with-dojox.html>`_, Tony Issakov, Dojo User
+* `AOP Aspect of JavaScript with Dojo <http://lazutkin.com/blog/2008/may/18/aop-aspect-javascript-dojo/>`_, Eugene Lazutkin, SitePen, Dojo Committer
+* `Replacing the Flash Flickr Badge with Dojo <http://www.sitepen.com/blog/2008/06/23/replacing-the-flash-flickr-badge-with-dojo/>`_, Dylan Schiemann, SitePen, Dojo Co-founder
+* `Inside the Dojo Toolbox <http://www.sitepen.com/blog/2008/09/09/inside-the-dojo-toolbox/>`_, Kevin Dangoor, SitePen, Dojo Contributor
+* `The Dojo Toolkit and Deft <http://www.sitepen.com/blog/2008/08/03/the-dojo-toolkit-and-deft/>`_, Mike Wilcox, SitePen, Dojo Committer
+* `The Dojo Toolkit Multi-file Uploader <http://www.sitepen.com/blog/2008/09/02/the-dojo-toolkit-multi-file-uploader/>`_, Mike Wilcox, SitePen, Dojo Committer
+* `Reinhardt: a Client-side Web Framework <http://www.sitepen.com/blog/2008/10/09/reinhardt-a-client-side-web-framework/>`_, Kevin Dangoor, SitePen, Dojo Contributor
+* `OSGI and JavaScript; Frameworks and building blocks for Ajax apps <http://billhiggins.us/weblog/2008/10/10/frameworks-and-building-blocks/>`_, Bill Higgins, IBM Rational, Dojo Conributor
+* `DWR Hooks and Dojo Dialogs <http://www.sitepen.com/blog/2008/10/16/dwr-hooks-and-dojo-dialogs/>`_, Joe Walker, SitePen, DWR Project Lead
+* `dojo.show, .hide, .toggle, and more <http://higginsforpresident.net/2008/10/dojoshow-hide-toggle-and-more/>`_, Peter Higgins, SitePen, Dojo Project Lead
+* `Micro-blogging with Dojo, Yahoo Pipes, Google Docs, and Google App Engine <http://ecminstitute.blogspot.com/2009/01/build-yourself-micro-blog-knowledge.html>`_, Ray Chance, ECMINSTITUTE, Dojo User
+* `Dojo Search with Yahoo BOSS <http://www.sitepen.com/blog/2009/02/20/dojo-search-with-yahoo-boss/>`_, Mike Wilcox, SitePen, Dojo Committer
+* `Introducing OAuth with DojoX <http://www.sitepen.com/blog/2009/02/19/introducing-oauth-in-dojox/>`_, Tom Trenka, SitePen, Dojo Committer
+* `Dynamic Stylesheets, Part 1 <http://www.sitepen.com/blog/2009/03/13/dynamic-stylesheets-part-1/>`_, Sam Foster, SitePen, Dojo Committer
+
+
 ========
 See also
 ========
