@@ -9,6 +9,8 @@ dojo.forEach
 
 Since it's not supported natively on every browser, ``dojo.forEach`` provides the `standard JavaScript 1.6 forEach construct <https://developer.mozilla.org/En/Core_JavaScript_1.5_Reference:Objects:Array:forEach>`_ everywhere. ``dojo.forEach`` lets you apply a function to each element of an array, emulating a ``for`` loop, but with fewer scoping compliations. 
 
+``dojo.forEach`` has a notable difference from the JavaScript 1.6 forEach: ``dojo.forEach`` runs over sparse arrays, passing the "holes" in the sparse array to the callback function. JavaScript 1.6's forEach skips the holes in the sparse array.
+
 dojo.forEach() cannot terminate a loop (save for throwing an exception). Use dojo.some() or dojo.every() instead.
 
 ``forEach`` is syntactic sugar for a regular 'ol for loop:
