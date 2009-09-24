@@ -291,6 +291,23 @@ Dojo Toolkit V 1.0.2 Tests
   * `GFX 3D <http://download.dojotoolkit.org/release-1.0.2/dojo-release-1.0.2/dojox/gfx3d/tests/>`__
 
 
+=============
+Presentations
+=============
+
+* `SlideShare <http://www.slideshare.net/search/slideshow?q=dojo&amp;submit=post&amp;commit=Search>`_, slides uploaded by many Dojo Committers
+* `Achieving a runtime CPAN with Dojo's XD loader <http://dev.aol.com/presentations/AjaxExperienceXDomain/index.html>`_, James Burke, AOL, Dojo Committer
+* `Accessibility and Internationalization <http://peller.dojotoolkit.org/GlobalAccess-AjaxWorld2008.pdf>`_, Adam Peller and Becky Gibson, IBM, Dojo Committers
+* `Dojo 1.0.2 Screencast <http://www.youtube.com/watch?v=V8aGcKgTFNo>`_, InfoWorld Videos
+* `The Case for WYSIWYG Ajax Tools <http://visualajax.blogspot.com/2008/04/case-for-wysiwyg-ajax-tools.html>`_, Scott Miles and Steve Orvell, WaveMaker, Dojo Committers
+* `Dojo 1.1, the Enterprise Effect <http://www.scribd.com/doc/2803836/Dojo-11-the-Enterprise-Effect>`_, Bob Buffone, Nexaweb, Dojo Contributor
+* `Can We Get There From Here <http://sites.google.com/site/io/can-we-get-there-from-here>`_, Google I/O, Alex Russell, SitePen, Dojo Co-founder
+* `Efficient JavaScript Development and dojo.basix <http://blog.uxebu.com/2008/10/13/barcampmunich-2008-slides/>`_, Wolfram Kriesing, Uxebu, Dojo Committer
+* `Dojo Sensei Reader Screencast <http://www.sitepen.com/blog/2008/10/14/dojo-sensei-reader/>`_, Revin Guillen, SitePen, Dojo Committer
+* `Dojo 1.2 Loader and Build System <http://tagneto.blogspot.com/2008/10/dojo-12-loader-and-build-system.html>`_, James Burke, AOL, Dojo Committer
+* `0 to Production with Dojo <http://www.slideshare.net/phiggins/zero-to-dojo-presentation>`_ - SpringOne America 2008 with Peter Higgins
+
+
 ========
 See also
 ========
