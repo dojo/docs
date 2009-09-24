@@ -226,6 +226,21 @@ Misc
 * `A Dojo Plugin Pattern <http://higginsforpresident.net/2009/03/a-dojo-plugin-pattern/>`_, Peter Higgins, Dojo Project Lead
 
 
+===============
+Books/Magazines
+===============
+
+* `Dojo: The Definitive Guide <http://www.oreilly.com/catalog/9780596516482/>`_, Matthew Russell, Zaffra, Dojo Contributor
+* `Mastering Dojo: JavaScript and Ajax Tools for Great Web Experiences <http://www.pragprog.com/titles/rgdojo>`_, Craig Riecke, Rawld Gill, Alex Russell
+* `Dojo: Using the Dojo JavaScript Library to Build AJAX Applications <http://www.pearsonhighered.com/educator/academic/product/1,3110,0132358042,00.html>`_, James Harmon, Object Training Group, Dojo User
+* `Practical Dojo Projects <http://www.apress.com/book/view/9781430210665>`_, Frank Zammetti, Omnytex Technologies, Dojo User
+* `Concise Guide to Dojo <http://www.amazon.com/Concise-Guide-Dojo-Leslie-Orchard/dp/0470452021/ref=pd_bbs_sr_6?ie=UTF8&amp;s=books&amp;qid=1228923296&amp;sr=8-6>`_,  Leslie M. Orchard
+* `Learning Dojo <http://astore.amazon.com/dylanschie-20/detail/1847192688>`_, Peter Svensson - Dojo Contributor
+* `Dojo Fundamentals <http://www.oreilly.com/catalog/9780596517052/>`_, Matthew Russell, Zaffra, Dojo Contributor
+* `Dojo: The JavaScript Toolkit with Industrial-Strength Mojo <http://www.flickr.com/photos/dylans/2557079588/>`_, Linux Journal, July, 2008, Matthew Russell, Zaffra, Dojo Contributor
+
+
+
 ========
 See also
 ========
