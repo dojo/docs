@@ -190,6 +190,24 @@ Utilities
 * `Patching Dojo <http://www.sitepen.com/blog/2009/02/04/patching-dojo/>`_, Sam Foster, SitePen, Dojo Committer
 
 
+====================
+Dojo Goodness Series
+====================
+
+* Matthew Russell, Zaffra, Dojo Contributor
+
+  * `Dojo Introduction <http://www.oreillynet.com/onlamp/blog/2008/02/dojo_goodness_part_1_1.html>`_
+  * `Dijit Introduction <http://www.oreillynet.com/onlamp/blog/2008/03/dojo_goodness_part_2_1.html>`_
+  * `Animation Stations <http://www.oreillynet.com/onlamp/blog/2008/03/dojo_goodness_part_3_animation_1.html>`_
+  * `Easy Ajax <http://www.oreillynet.com/onlamp/blog/2008/03/dojo_goodness_part_4_easy_ajax.html>`_
+  * `Simple Network I/O <http://www.oreillynet.com/onlamp/blog/2008/04/dojo_goodness_part_5_simple_ne_1.html>`_
+  * `A Million Records in the Grid <http://www.oreillynet.com/onlamp/blog/2008/04/dojo_goodness_part_6_a_million.html>`_
+  * `Injecting Dojo After Page Load <http://www.oreillynet.com/onlamp/blog/2008/05/dojo_goodness_part_7_injecting.html>`_
+  * `Dojo the Definitive Guide <http://www.oreillynet.com/onlamp/blog/2008/05/dojo_goodness_part_7_book_prev_1.html>`_, Book Preview
+  * `JSONified Cookies <http://www.oreillynet.com/onlamp/blog/2008/05/dojo_goodness_part_8_jsonified.html>`_
+  * `GFX Foo with FX <http://www.oreillynet.com/onlamp/blog/2008/06/dojo_goodness_part_9_gfx_foo.html>`_
+
+
 ========
 See also
 ========
