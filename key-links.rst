@@ -3,9 +3,6 @@
 Key Links
 =========
 
-:Status: Draft
-:Version: 1.0
-
 .. contents::
    :depth: 2
 
