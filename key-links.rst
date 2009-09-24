@@ -122,6 +122,13 @@ Charting and GFX
 * `Dojo, Now with Drawing Tools <http://dojotdg.zaffra.com/2009/03/dojo-now-with-drawing-tools-linux-journal-reprint/>`_, Matthew Russell, Zaffra, Dojo Contributor
 * `Introducing DojoX DataChart <http://www.sitepen.com/blog/2009/03/30/introducing-dojox-datachart/>`_, Mike Wilcox, SitePen, Dojo Committer
 
+Comet
+-----
+
+* Cometd-based chat examples: `Cometd Chat <http://comet.sitepen.com:9000/tests/chat/>`_ and `iPhone Cometd Chat <http://comet.sitepen.com:9000/tests/iphone/>`_
+* `Real-time Widgets with the Dojo Toolkit <http://cometdaily.com/2008/03/04/real-time-widgets-with-the-dojo-toolkit/>`_, Dylan Schiemann, SitePen, Dojo Co-founder
+* `Using REST Channels with Dojo <http://cometdaily.com/2008/11/12/using-rest-channels-in-dojo/>`_, Kris Zyp, SitePen, Dojo Committer
+
 
 ========
 See also
