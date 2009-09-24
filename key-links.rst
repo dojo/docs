@@ -106,6 +106,22 @@ Grid
 * `A million records in the grid <http://www.oreillynet.com/onlamp/blog/2008/04/dojo_goodness_part_6_a_million.html>`_, Matthew Russell, Zaffra, Dojo Contributor
 * `Web-based spreadsheets with OpenOffice.org and Dojo, Learn about the server-side capabilities of OpenOffice.org <http://www.javaworld.com/javaworld/jw-05-2008/jw-05-spreadsheets.html>`_, Oleg Mikheev and Doan Nguyen Van, JavaWorld.com
 
+Charting and GFX
+----------------
+
+* `dojox.gfx Complete Documentation <http://docs.google.com/View?docid=d764479_9hgdng4g8>`_, Eugene Lazutkin, SitePen, Dojo Committer
+* `Rating Engine with GFX <http://tobias.klpstn.com/2008/02/15/dojo-rating-engine-with-dojogfx/>`_, Tobias von Klipstein, Dojo Contributor
+* `Floating Labels for Charts <http://unclescript.blogspot.com/2008/04/floating-labels-for-charts-in-dojo.html>`_, Peter Svensson, Mashup Station, Dojo Contributor
+* `A Beginner's Guide to Dojo Charting: Part 1 of 2 <http://www.sitepen.com/blog/2008/06/06/a-beginners-guide-to-dojo-charting-part-1-of-2/>`_, Doug McMaster, SitePen, Dojo Contributor
+* `A Beginner's Guide to Dojo Charting: Part 2 of 2 <http://www.sitepen.com/blog/2008/06/16/a-beginners-guide-to-dojo-charting-part-2-of-2/>`_, Doug McMaster, SitePen, Dojo Contributor
+* `Dojo Charting Reorganization <http://www.sitepen.com/blog/2008/05/07/dojo-charting-reorganization/>`_, Eugene Lazutkin, SitePen, Dojo Committer
+* `Dojo Charting: Zooming, Scrolling, and Panning <http://www.sitepen.com/blog/2008/05/15/zooming-scrolling-and-panning-in-dojo-charting/>`_, Eugene Lazutkin, SitePen, Dojo Committer
+* `Dojo Charting: Event Support has Landed <http://www.sitepen.com/blog/2008/05/27/dojo-charting-event-support-has-landed/>`_, Eugene Lazutkin, SitePen, Dojo Committer
+* `Dojo Charting: Widgets, Tooltips, and Legend <http://www.sitepen.com/blog/2008/06/12/dojo-charting-widgets-tooltips-and-legend/>`_, Eugene Lazutkin, SitePen, Dojo Committer
+* `Custom Fonts with dojox.gfx <http://www.sitepen.com/blog/2008/09/08/custom-fonts-with-dojoxgfx/>`_, Tom Trenka, SitePen, Dojo Committer
+* `Dojo, Now with Drawing Tools <http://dojotdg.zaffra.com/2009/03/dojo-now-with-drawing-tools-linux-journal-reprint/>`_, Matthew Russell, Zaffra, Dojo Contributor
+* `Introducing DojoX DataChart <http://www.sitepen.com/blog/2009/03/30/introducing-dojox-datachart/>`_, Mike Wilcox, SitePen, Dojo Committer
+
 
 ========
 See also
