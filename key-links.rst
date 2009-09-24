@@ -308,8 +308,26 @@ Presentations
 * `0 to Production with Dojo <http://www.slideshare.net/phiggins/zero-to-dojo-presentation>`_ - SpringOne America 2008 with Peter Higgins
 
 
+=====
+Blogs
+=====
+
+There are many blogs exclusively or partly devoted to dojo.
+
+* `Dojo's own blog <http://www.dojotoolkit.org/blog>`_ (`RSS <http://www.dojotoolkit.org/blog/feed>`__)
+* `Dojo Toolkit Aggregator <http://www.dojotoolkit.org/aggregator>`_ (`RSS <http://www.dojotoolkit.org/aggregator/rss>`__) - collects articles from various sources
+* `Dojo Campus cookies <http://dojocampus.org/content/category/dojo-cookies/>`_ (`RSS <http://dojocampus.org/content/category/dojo-cookies/rss>`__)
+* `SitePen's blog <http://www.sitepen.com/blog/>`_ (`RSS <http://www.sitepen.com/blog/rss>`__) - has many articles about dojo
+* `Eugene's blog <http://lazutkin.com/blog/>`_ (`ATOM <http://lazutkin.com/blog/feeds/atom/latest/>`__) - has many articles about dojo
+* `Sam's blog <http://www.sam-i-am.com/work/blog.html>`_ - sometimes has dojo articles.
+* `Peter's Blog <http://higginsforpresident.net/category/dojo>`_
+* `Dojomino <http://dojomino.com/>`_ - Dojo + Domino
+* `dojotdg.com <http://dojotdg.com>`_ - Companion blog for "Dojo: The Definitive Guide" by author Matthew Russell
+* `Dojotoolkit-forum.de <http://www.dojotoolkit-forum.de/>`_ (`RSS <http://www.dojotoolkit-forum.de/?feed=rss2>`__) - German language forum and news for Dojo Toolkit
+
+
 ========
 See also
 ========
 
-* TODO: links to other related articles
+* `Installation instructions & Tutorials <quickstart/index>`_
