@@ -47,6 +47,10 @@ TODO: document or link to blog post (Eugene)
 --------------------------
 A new method has been added for caching data from files.   In particular it's used in templated widgets in conjunction with templateString, rather than templatePath.
 
+`dojo.contentHandlers <dojo/contentHandlers>`_
+----------------------------------------------
+Exposed previously "private" dojo._contentHandlers as a public way to write custom XHR handleAs functions
+
 Dojo Base FX
 ------------
 
