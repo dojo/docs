@@ -208,6 +208,24 @@ Dojo Goodness Series
   * `GFX Foo with FX <http://www.oreillynet.com/onlamp/blog/2008/06/dojo_goodness_part_9_gfx_foo.html>`_
 
 
+====
+Misc
+====
+
+* `Navigating in an IE Modal Dialog <http://shaneosullivan.wordpress.com/2007/12/31/navigating-in-an-ie-modal-dialog/>`_, Shane O'Sullivan, Dojo Contributor
+* `Advanced JavaScript Debugging Techniques <http://www.sitepen.com/blog/2008/04/03/advanced-javascript-debugging-techniques/>`_, Mike Wilcox, SitePen, Dojo Committer
+* `Dojo for Sling 101 <http://dev.day.com/microsling/content/blogs/main/dojosling101.html>`_, Lars Trieloff, Day Software, Dojo User
+* `Dojo Modules for AIM <http://dojotoolkit.org/2008/06/16/dojo-modules-aim>`_, James Burke, AOL, Dojo Committer
+* `Dojo + jabsorb <http://www.sitepen.com/blog/2008/06/18/dojo-jabsorb/>`_, Kris Zyp, SitePen, Dojo Committer
+* `Medryx Observations <http://blog.medryx.org/category/dojo/>`_, Maulin Shah, Medryx, Dojo Contributor
+* `Gears PubTools Search <http://gears-pubtools.googlecode.com/svn/trunk/docs/fast_search_article.html>`_, Brad Neuberg, Google, Dojo Committer
+* `Getting Started Using Persevere with Dojo <http://www.sitepen.com/blog/2008/07/23/getting-started-with-persevere-using-dojo/>`_, Kris Zyp, SitePen, Dojo Committer
+* `Dojo 1.2 and Django 1.0 on Google App Engine <http://adamfisk.wordpress.com/2008/09/17/dojo-12-and-django-10-on-google-app-engine-113/>`_, Adam Fisk, LittleShoot, Dojo User
+* `Dojo Extensions for Adobe AIR <http://sitepen.com/labs/dair/>`_, SitePen, Dojo Committers and Contributors
+* `Writing a custom Dojo app <http://www.ibm.com/developerworks/web/library/wa-aj-custom20/index.html?ca=drs->`_, Wendi Nusbickel and Melissa Betancourt, IBM, Dojo Users
+* `A Dojo Plugin Pattern <http://higginsforpresident.net/2009/03/a-dojo-plugin-pattern/>`_, Peter Higgins, Dojo Project Lead
+
+
 ========
 See also
 ========
