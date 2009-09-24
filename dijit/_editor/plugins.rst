@@ -23,7 +23,7 @@ There are currently a small set of nice features that can be plugged into the di
 
 | 
 
-* `dijit._editor.plugins.LinkDialog <dijit/_editor/plugins/LinkDialog>`_  -- **STABLE** -- A plugin that enables a hyperlink editor for dijit.Editor.  This provides the two commands 'unlink' and 'createlink' as registrable toolbar plugins in the editor.  
+* `dijit._editor.plugins.LinkDialog <dijit/_editor/plugins/LinkDialog>`_  -- **STABLE** -- A plugin that enables a hyperlinks and image insert support for dijit.Editor.  This provides the two commands 'createlink' and 'insertImage' as registrable toolbar plugins in the editor.  
 
 | 
 
