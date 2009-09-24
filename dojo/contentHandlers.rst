@@ -1,7 +1,7 @@
 #format dojo_rst
 
 dojo.contentHandlers
-===============
+====================
 
 :Status: Draft
 :Version: 1.4
