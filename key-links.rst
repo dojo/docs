@@ -129,6 +129,26 @@ Comet
 * `Real-time Widgets with the Dojo Toolkit <http://cometdaily.com/2008/03/04/real-time-widgets-with-the-dojo-toolkit/>`_, Dylan Schiemann, SitePen, Dojo Co-founder
 * `Using REST Channels with Dojo <http://cometdaily.com/2008/11/12/using-rest-channels-in-dojo/>`_, Kris Zyp, SitePen, Dojo Committer
 
+Data, JSON, and RPC
+-------------------
+
+* `JSONPath Support <http://www.sitepen.com/blog/2008/03/17/jsonpath-support/>`_, Kris Zyp, SitePen, Dojo Committer
+* `RESTful JSON + Dojo <http://www.sitepen.com/blog/2008/06/13/restful-json-dojo-data/>`_, Kris Zyp, SitePen, Dojo Committer
+* `JSONQuery <http://www.sitepen.com/blog/2008/07/16/jsonquery-data-querying-beyond-jsonpath/>`_, Kris Zyp, SitePen, Dojo Committer
+* `Pluggable Web Services with SMD <http://www.sitepen.com/blog/2008/03/19/pluggable-web-services-with-smd/>`_, Kris Zyp, SitePen, Dojo Committer
+* `Amazon S3 and Dojo <http://www.sitepen.com/blog/2008/07/03/amazon-s3-dojo/>`_, Kris Zyp, SitePen, Dojo Committer
+* `Web Service to dojo.data Store in 4 Easy Steps <http://www.sitepen.com/blog/2008/06/25/web-service-data-store/>`_, Revin Guillen, SitePen, Dojo Committer
+* `window.name Transport <http://www.sitepen.com/blog/2008/07/22/windowname-transport/>`_, Kris Zyp, SitePen, Dojo Committer
+* `Protected Cross-Domain Authentication <http://www.sitepen.com/blog/2008/07/30/protected-cross-domain-authentication-with-javascript/>`_, Neil Roberts, SitePen, Dojo Committer
+* `Cross-Site XHR Plugin Registry <http://www.sitepen.com/blog/2008/07/31/cross-site-xhr-plugin-registry/>`_, Kris Zyp, SitePen, Dojo Committer
+* `Secure Mashups with dojox.secure <http://www.sitepen.com/blog/2008/08/01/secure-mashups-with-dojoxsecure/>`_, Kris Zyp, SitePen, Dojo Committer
+* `Protected Cross-Domain Access with Dojo’s windowName <http://www.sitepen.com/blog/2008/08/18/protected-cross-domain-access-with-dojos-windowname/>`_, Kris Zyp, SitePen, Dojo Committer
+* `JSON Schema with Dojo <http://www.sitepen.com/blog/2008/10/31/json-schema/>`_, Kris Zyp, SitePen, Dojo Committer
+* `Effective use of JsonRestStore: Referencing, Lazy Loading, and more <http://www.sitepen.com/blog/2008/11/21/effective-use-of-jsonreststore-referencing-lazy-loading-and-more/>`_, Kris Zyp, SitePen, Dojo Committer
+* `Easy Exploration of Dojo Data Stores <http://www.sitepen.com/blog/2009/01/14/store-explorer/>`_, Kris Zyp, SitePen, Dojo Committer
+* `Some RPC with your JsonRestStore <http://www.sitepen.com/blog/2009/01/29/some-rpc-with-your-jsonreststore/>`_, Kris Zyp, SitePen, Dojo Committer
+* `Deterministic Client/Server Interaction <http://www.sitepen.com/blog/2009/02/27/deterministic-clientserver-interaction/>`_, Kris Zyp, SitePen, Dojo Committer
+
 
 ========
 See also
