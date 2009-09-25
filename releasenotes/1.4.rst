@@ -227,17 +227,25 @@ Several new plugins for the dijit.Editor RTE have been provided as dojox modules
 dojox.form
 ----------
 
-* dojox.form._HasDropDown, dojox.form._FormSelectWidget, dojox.form.DropDownSelect - Migrated to dijit (dijit._HasDropDown, dijit.form._FormSelectWidget, dijit.form.Select)
+dojox.form._HasDropDown
+~~~~~~~~~~~~~~~~~~~~~~~
+
+This widget has been moved to `dijit._HasDropDown <dijit/_HasDropDown>`__.
+
+dojox.form._FormSelectWidget
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This widget has been moved to `dijit.form._FormSelectWidget <dijit/form/_FormSelectWidget>`__.
 
 
 dojox.form.DropDownSelect
--------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This widget has been moved to `dijit.Select <dijit/Select>`__.
+This widget has been moved to `dijit.form.Select <dijit/form/Select>`__.
 
 
 dojox.form.FileUploader
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~
 
 * The improved FileUploader actually landed in a "dot release", 1.3.1, but 1.4 adds some bug fixes. The new FileUploader adds many features, and the display is now quite robust. The Flash uploader is now an actual Flash button with an emulated HTML style, so that it can be used in cases where it was broken before, like in scrolling boxes. The HTML uploader too has been improved so that it is not floating on the page, allowing for more complex display cases and less UI breakage.
 
