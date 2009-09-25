@@ -29,10 +29,6 @@ Top priority: dojo.js
 
   needed: Review and additional use causes.  Very spartan right now.
 
-* `dojo._base.xhr <dojo/_base/xhr>`_
-
-  Should we move the current example to another page?
-
 * `dojo.empty <dojo/empty>`_
 
   needed: full page
