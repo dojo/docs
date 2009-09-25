@@ -1,13 +1,18 @@
 #format dojo_rst
 
-dojox.form.FileUploader
-=========================
 
 :Status: Up to date
 :Version: 1.4
 :Project owner: Mike Wilcox
 :Author: Mike Wilcox
 :Available: since 1.1
+
+.. contents::
+  :depth: 3
+  
+=======================
+dojox.form.FileUploader
+=======================
 
 Basic Description
 -----------------
@@ -58,8 +63,9 @@ and optionally:
 
 Note that if you are moving these files into Dojo 1.2 or less, you will have to change some of the code in the FileUploader to not use the 1.3 html method dojo.destroy() and replace it with the previous version of dojo._destroyElement()
 
-Release Notes for Versions 1.3.2 - 1.4
---------------------------------------
+======================================
+FileUploader Functionality 1.3.2 - 1.4
+======================================
 
 FileUploader is now a widget and **DOES** create a button. You do not have to pass a button in. Passing a button is still supported until version 1.5 to maintain backwards compatibility, but it is not recommended. Just create your uploader like any other widget.
 
@@ -254,16 +260,21 @@ Because of the complex nature of the FileUploader code (or more accurately, the 
 
 **devMode**: Changing this parameter to true will set the opacity of the HTML upload button to 100% and remove transparency from the Flash upload button. This helps to determine of the button is being positioned correctly.
 
+===========
 Server Side
------------
+===========
 
-The transfer of data happens through Flash and so the you will not be able to inspect the data in Firebug. It's reccomended to use Charles or Fiddler to inspect the transfer.
+The transfer of data happens through Flash and so the you will not be able to inspect the data in Firebug. It's recommended to use Charles or Fiddler if you wish to inspect the transfer.
+
+http://www.charlesproxy.com/
+
+http://www.fiddler2.com/fiddler2/
 
 The following transfer example is taken from:
 
 http://livedocs.adobe.com/flash/9.0/ActionScriptLangRefV3/flash/net/FileReference.html
 
-It includes examples two post parameters, api_sig and api_key. The name for the field where the file can be found is the default setting of "Filename". The name of the file is "photo" and  filename="MyFile.jpg".
+It includes examples two post parameters, api_sig and api_key. The name for the field where the file can be found is set to "photo" (Adobe default is "FileData" and FileUploader changes this default to "flashUploadFiles").
 
 .. code-block :: text
  :linenos:
@@ -305,6 +316,13 @@ It includes examples two post parameters, api_sig and api_key. The name for the 
    Submit Query
    ------------Ij5GI3GI3ei4GI3ei4KM7GI3KM7KM7--
 
+Whether HTML or Flash, the payload is done with a multipart transfer. The file data is uploaded to a temp folder on the server. After the upload is complete, the server script is called. It is the job of the server script to know where this temp folder is and access the file (to move it to the destination, and or perform tasks upon it).
+
+During a Flash multi-file upload, the images are uploaded in parallel (unless FileUploader.deferredUploading=true), however, the server script only receives one file at a time. So if five files are uploaded, the server script will be called five times.
+
+During an HTML multi-file upload, the files are all uploaded at once, and after all five are completely uploaded to the temp folder, the server script is called just once. Each file will be referenced as numerically sequenced fields: uploadedfile0, uploadedfile1, uploadedfile2, etc. Single file uploads will of course call the server script once.
+
+With a multipart request the POST data is the contents for the first part and the uploaded files is an array (or an object) of each additional part. Refer to your particular server documentation for how to reference the files (PHP is used as an example in the next section).
 
 
 Server Side Code PHP
@@ -350,9 +368,9 @@ If *htmlFieldName* is used, the code on the client side gets pretty tricky, as a
 
 If you are having problems getting onComplete to fire, look at this code first. Often the problem is the server side code is not catching the flash field name for whatever reason (perhaps the client and server names don't match) and the code is falling to the end of the page and returning a textarea to Flash. Recently Code has been added in the SWF that checks for this, so if that is the problem, you should be notified with a console message.
 
-
+=====
 Demos
------
+=====
 
 http://mwilcox.dojotoolkit.org/dtk/dojox/form/tests/test_FileUploader.html
 
