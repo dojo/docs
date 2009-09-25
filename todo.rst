@@ -25,10 +25,6 @@ Top priority: dojo.js
 
   needed: a proper test against isAlien() (in the example)
 
-* `dojo.setContext <dojo/setContext>`_
-
-  needed: Review.  Fill out TODOs or remove.
-
 * `dojo.withGlobal <dojo/withGlobal>`_
 
   needed: Review and additional use causes.  Very spartan right now.
