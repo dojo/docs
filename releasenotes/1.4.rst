@@ -107,7 +107,7 @@ Tree
 
 Editor
 ~~~~~~
-The RTE has had numerous bug fixes applied to it as well as some code cleanup to make it more extensible and better behaving on browsers such as Opera.  It also had several new plugin modules added to dijit, as well as several new ones added to dojox.  For information on the dojox modules, see the dojox section of these release notes.
+The RTE has had numerous bug fixes applied to it as well as some code cleanup to make it more extensible and better behaving on browsers such as Opera.  It also had several new plugin modules added to dijit, as well as several new ones added to DojoX.  For information on the DojoX modules, see the DojoX section of these release notes.
 
 * `FullScreen <dijit/_editor/plugins/FullScreen>`_:  A plugin that adds the capability to the editor to take over the complete viewport containing the page running the editor.
 
@@ -200,9 +200,9 @@ Browser support
 * IE6, IE7, IE8 all supported
 * Keyboard now supported in all browsers (previously it didn't work in safari and on chrome)
 
-======
-Dojox
-======
+=====
+DojoX
+=====
 
 
 dojox.drawing
@@ -228,6 +228,12 @@ dojox.form
 ----------
 
 * dojox.form._HasDropDown, dojox.form._FormSelectWidget, dojox.form.DropDownSelect - Migrated to dijit (dijit._HasDropDown, dijit.form._FormSelectWidget, dijit.form.Select)
+
+
+dojox.form.DropDownSelect
+-------------------------
+
+This widget has been moved to `dijit.Select <dijit/Select>`__.
 
 
 dojox.form.FileUploader
