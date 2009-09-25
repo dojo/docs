@@ -86,6 +86,18 @@ Priority 2: Dojo Core
 Priority 3: Dijit
 =================
 
+* `dijit._HasDropDown <dijit/_HasDropDown>`_
+
+  needed: full page
+
+* `dijit.form._FormSelectWidget <dijit/form/_FormSelectWidget>`_
+
+  needed: full page
+
+* `dijit.form.Select <dijit/form/Select>`_
+
+  needed: full page
+
 
 =================
 Priority 4: DojoX
