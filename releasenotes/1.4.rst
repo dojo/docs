@@ -12,10 +12,12 @@ Dojo
 
 `IO Pipeline Topics <dojo/ioPipelineTopics>`_
 ----------------------------------------------
+
 Now there are topics that are published for the pipeline used to handle all IO operations. dojo.xhr, dojo.io.script and dojo.io.iframe all use the IO pipeline, so they can all publish the pipeline topics. By default, the topics are turned off. To enable them, set **djConfig.ioPublish = true**. After they are globally enabled, you can disable them for specific IO requests by setting **ioPublish: false** in the arg object you pass to dojo.xhr*, dojo.io.script.get() or dojo.io.iframe.send(). See `IO Pipeline Topics <dojo/ioPipelineTopics>`_ for more information.
 
 Dojo Base FX
 ------------
+
 * Considerable performance increase and new API's
 * made dojo._Animation public: dojo.Animation
 * onEnd, beforeBegin functions are passed the node reference used in the Animation
@@ -24,44 +26,54 @@ Dojo Base FX
 
 Dojo i18n
 ---------
+
 The cultural tables in dojo/cldr have been updated to version 1.7.1 of the Unicode CLDR http://unicode.org/cldr
 
 `dojo.addOnLoad <dojo/addOnLoad>`_
 ----------------------------------
+
 There was a dojo.require/onload fix done for Firefox browsers (see `Ticket #8976 <http://bugs.dojotoolkit.org/ticket/8976>`_).
 
 `dojo.cache <dojo/cache>`_
 --------------------------
+
 A new method has been added for caching data from files.   In particular it's used in templated widgets in conjunction with templateString, rather than templatePath.
 
 `dojo.contentHandlers <dojo/contentHandlers>`_
 ----------------------------------------------
+
 Exposed previously "private" dojo._contentHandlers as a public way to write custom XHR handleAs functions
 
 `dojo.coords <dojo/coords>`_
--------------------------------------------
+----------------------------
+
 This method in Dojo Base has been deprecated in Dojo 1.4.  The returned object is a mixin of `dojo.position <dojo/position>`_ and `dojo.marginBox <dojo/marginBox>`_.  Because the x/y position is based on the border-box and the (w)idth/(h)eight attributes represent the margin-box, there was considerable confusion on correctly using the returned object.  The new method `dojo.position <dojo/position>`_ performs much faster.  Users needing the l/t/w/h attributes from this method can continue to use `dojo.marginBox <dojo/marginBox>`_.
 
 `dojo.declare <dojo/declare>`_
 ------------------------------
+
 A drop-in replacement is committed, which is generally faster, and introduces enhancements to the familiar functionality. The announcement link: http://groups.google.com/group/dojo-interest/msg/4a22b20587e91d27
 
 TODO: document or link to blog post (Eugene)
 
 `dojo.fieldToObject <dojo/fieldToObject>`_
 -------------------------------------------
+
 A new method in Dojo Base (part of dojo.js) that is related to dojo.formToObject(), except instead of converting a whole form to an object, it just converts one form field. Pass it a DOM Node for the field, or the ID of the form field as a string. dojo.fieldToObject returns the value encoded in a form field as as a string or an array of strings. Disabled form elements and unchecked radio and checkboxes are skipped. Multi-select elements are returned as an array of string values. See `dojo.fieldToObject <dojo/fieldToObject>`_ for more information.
 
 `dojo.hash <dojo/hash>`_
---------------------------
+------------------------
+
 A new method for monitoring, getting and setting the hash value.  dojo.hash provides hashchange notification using a new published topic "/dojo/hashchange", enabling cross-browser back/forward support and bookmarkability in AJAX applications. The native HTML 5 onhashchange event is used behind the scenes in browsers that support it.
 
 `dojo.position <dojo/position>`_
--------------------------------------------
+--------------------------------
+
 A new method in Dojo Base (part of dojo.js) that returns the beginning x/y of a DOM node's border-box as well as it's width and height.  An optional boolean parameter can be specified to change the default coordinate origin point from the viewport to the document root.
 
 `dojo.ready <dojo/ready>`_
-----------------------------------
+--------------------------
+
 A new alias for `dojo.addOnLoad <dojo/addOnLoad>`_.
 
 
