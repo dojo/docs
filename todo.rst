@@ -13,6 +13,9 @@ The following pages need more love:
 Top priority: dojo.js
 =====================
 
+* `dojo.cldr <dojo/cldr>`_
+
+  needed: full page
 
 * `dojo.connectPublisher <dojo/connectPublisher>`_
 
