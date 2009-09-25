@@ -84,6 +84,7 @@ Tree
 * new Path and selectedItem attributes to get/set the current tree item (`#9339 <http://bugs.dojotoolkit.org/ticket/9339>`_)
 * Multi-parented items support.   Tree can support items with multiple parents, as long as this doesn't cause a loop.  (`#9361 <http://bugs.dojotoolkit.org/ticket/9361>`_)
 * Deferred child load option on TreeStoreModel.  Option added to deferring calling loadItem() on a data store item until it's children need to be read.  Performance boost for JsonRestStore.  (`#9575 <http://bugs.dojotoolkit.org/ticket/9575>`_)
+* getTooltip() method can set tooltip on each tree node
 
 
 Editor
@@ -111,7 +112,8 @@ Sliding the mouse diagonally from a vertical menu to a second vertical menu will
 
 TitlePane
 ~~~~~~~~~
-toggleable attribute to control whether or not user can close the TitlePane.  Useful for non-closable TitlePane's in a app that match the styling of the other TitlePanes (and other dijit components).
+* toggleable attribute to control whether or not user can close the TitlePane.  Useful for non-closable TitlePane's in a app that match the styling of the other TitlePanes (and other dijit components)
+* tooltip attribute to control tooltip on title bar
 
 Tooltip
 ~~~~~~~
@@ -124,6 +126,7 @@ TabContainer / AccordionContainer
 * scrolling tab labels now supported (like on Firefox etc.) so that labels don't spill over to two rows when there isn't enough space
 * tab labels / pane titles can be changed via pane.attr('title', ...)
 * icons added, controlled via iconClass parameter (like for Buttons and MenuItems).   To display only icons set showTitle=false.
+* tooltip attribute controls tooltip on tab labels or accordion pane titles
 
 ContentPane
 ~~~~~~~~~~~
