@@ -19,7 +19,7 @@ Introduction
 
 "dojo.setContext" allows many of Dojo's core functions to easily switch context (e.g. from the current window to an iframe) with a single function call.
 
-For example, `dojo.query <http://docs.dojocampus.org/dojo/query>`_ references the "window" global variable when performing searches by default.
+For example, `dojo.query <dojo/query>`_ references the "window" global variable when performing searches by default.
 
 .. code-block :: javascript
   :linenos:
@@ -39,6 +39,7 @@ This is because dojo stores many of the common global variables:
 :body: dojo.body()
 
 By calling "dojo.setContext" (which modifies the convenience variables above), you can easily query another frame's content.
+
 
 =====
 Usage
@@ -102,10 +103,3 @@ JavaScript
     // Count the number of links in the *iframe*
     those.value = dojo.query('a').length;
   };
-
-
-========
-See also
-========
-
-* TODO: links to other related articles
