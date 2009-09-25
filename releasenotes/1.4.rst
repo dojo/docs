@@ -24,11 +24,6 @@ Dojo Base FX
 * start: and end: properties, when using a function, are passed the node reference for the animtion
 * each property can now be a function, returning either a value, or and object to pass as the value
 
-Dojo i18n
----------
-
-The cultural tables in dojo/cldr have been updated to version 1.7.1 of the Unicode CLDR http://unicode.org/cldr
-
 `dojo.addOnLoad <dojo/addOnLoad>`_
 ----------------------------------
 
@@ -38,6 +33,11 @@ There was a dojo.require/onload fix done for Firefox browsers (see `Ticket #8976
 --------------------------
 
 A new method has been added for caching data from files.   In particular it's used in templated widgets in conjunction with templateString, rather than templatePath.
+
+dojo.cldr (Dojo i18n)
+---------------------
+
+The cultural tables in `dojo/cldr <dojo/cldr>`_ have been updated to version 1.7.1 of the Unicode CLDR http://unicode.org/cldr
 
 `dojo.contentHandlers <dojo/contentHandlers>`_
 ----------------------------------------------
