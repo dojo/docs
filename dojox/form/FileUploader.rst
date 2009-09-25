@@ -254,8 +254,61 @@ Because of the complex nature of the FileUploader code (or more accurately, the 
 
 **devMode**: Changing this parameter to true will set the opacity of the HTML upload button to 100% and remove transparency from the Flash upload button. This helps to determine of the button is being positioned correctly.
 
-Server Side Code
-----------------
+Server Side
+-----------
+
+The transfer of data happens through Flash and so the you will not be able to inspect the data in Firebug. It's reccomended to use Charles or Fiddler to inspect the transfer.
+
+The following transfer example is taken from:
+
+http://livedocs.adobe.com/flash/9.0/ActionScriptLangRefV3/flash/net/FileReference.html
+
+It includes examples two post parameters, api_sig and api_key. The name for the field where the file can be found is the default setting of "Filename". The name of the file is "photo" and  filename="MyFile.jpg".
+
+.. code-block :: text
+ :linenos:
+
+ POST /handler.cfm HTTP/1.1 
+   Accept: text/*
+   Content-Type: multipart/form-data; 
+   boundary=----------Ij5ae0ae0KM7GI3KM7ei4cH2ei4gL6 
+   User-Agent: Shockwave Flash 
+   Host: www.example.com 
+   Content-Length: 421 
+   Connection: Keep-Alive 
+   Cache-Control: no-cache
+  
+   ------------Ij5GI3GI3ei4GI3ei4KM7GI3KM7KM7
+   Content-Disposition: form-data; name="Filename"
+  
+   MyFile.jpg
+   ------------Ij5GI3GI3ei4GI3ei4KM7GI3KM7KM7
+   Content-Disposition: form-data; name="api_sig"
+  
+   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+   ------------Ij5GI3GI3ei4GI3ei4KM7GI3KM7KM7
+   Content-Disposition: form-data; name="api_key"
+  
+   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+   ------------Ij5GI3GI3ei4GI3ei4KM7GI3KM7KM7
+   Content-Disposition: form-data; name="auth_token"
+  
+   XXXXXXXXXXXXXXXXXXXXXX
+   ------------Ij5GI3GI3ei4GI3ei4KM7GI3KM7KM7
+   Content-Disposition: form-data; name="photo"; filename="MyFile.jpg"
+   Content-Type: application/octet-stream
+  
+   FileDataHere
+   ------------Ij5GI3GI3ei4GI3ei4KM7GI3KM7KM7
+   Content-Disposition: form-data; name="Upload"
+   
+   Submit Query
+   ------------Ij5GI3GI3ei4GI3ei4KM7GI3KM7KM7--
+
+
+
+Server Side Code PHP
+--------------------
 
 FlashUploader comes with a working PHP file, *dojox/form/resources/UploadFile.php*, to use as a reference for how your server side code should work. UploadFile.php has two dependencies, *dojo/tests/resources/JSON.php*, which is used for converting the return data to a JSO string, and *dojox/form/resources/cLog.php* which is used to log message to a text file, placed relative to the PHP file.
 
