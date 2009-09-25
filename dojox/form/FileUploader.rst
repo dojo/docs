@@ -359,17 +359,24 @@ If *flashFieldName* is found in the post data and Flash is being used on the cli
  
 For non-PHP devs this translates to:
 
-$name = name of the file, such as "PIC01.jpg"
-$file = name of the file and the path, such as "uploaded/PIC01.jpg"
-$width, $height = the dimensions (if you are working with images)
-$type = the extension of the file - JPG, GIF, PNG, etc.
+.. code-block :: text
+ :linenos:
+ 
+ $name = name of the file, such as "PIC01.jpg"
+ $file = name of the file and the path, such as "uploaded/PIC01.jpg"
+ $width, $height = the dimensions (if you are working with images)
+ $type = the extension of the file - JPG, GIF, PNG, etc.
+
 
 The return to Flash should look like:
 
-"file=uploaded/PIC01.jpg,name=PIC01.jpg,width=320,height=240,type=jpg"
+.. code-block :: text
+ :linenos:
+
+ "file=uploaded/PIC01.jpg,name=PIC01.jpg,width=320,height=240,type=jpg"
+ 
 
 This string should be returned, or printed, or echoed.
-
 
 If *htmlFieldName* is used, the code on the client side gets pretty tricky, as an iframe is necessary for the file-post, and reading back from that iframe presents problems. In order to read the iframe return data accurately cross browser, the code needs to be wrapped in a *<textarea>*. You can see the code for this on the very last line of UploadFiles.php. Note that the textarea needs to be outside of the PHP. Example:
 
