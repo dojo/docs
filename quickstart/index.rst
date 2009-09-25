@@ -141,4 +141,4 @@ Tuning
 See also
 ========
 
-* `Key Links <key-links>`_
+* `Key Links <key-links>`_ - a collection of current and useful Dojo demos and tutorials
