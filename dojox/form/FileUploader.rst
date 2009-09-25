@@ -324,6 +324,7 @@ During an HTML multi-file upload, the files are all uploaded at once, and after 
 
 With a multipart request the POST data is the contents for the first part and the uploaded files is an array (or an object) of each additional part. Refer to your particular server documentation for how to reference the files (PHP is used as an example in the next section).
 
+The return data needs to be formatted very specifically, ad there are different formats for Flash and HTML. See **Server Side Return Data** below. 
 
 Server Side Code PHP
 --------------------
@@ -345,7 +346,9 @@ Server Side Return Data
 
 How the data is returned from the server is not difficult, but it is very important. If not done correctly, it can be the cause of reported errors that the "onComplete" is not firing in FileUploader.
 
-If *flashFieldName* is found in the headers and Flash is being used on the client side, all that is needed for return data is a key-value string, and it can simply be returned, as at the end of a function. You may also want to insert *exit* or whatever necessary to cease execution of the remainder of the code. Example:
+**NOTE** The Flash uploader and the HTML uploader need differently formatted return data. You will need to inspect the post data to determine which type to return.
+
+If *flashFieldName* is found in the post data and Flash is being used on the client side, all that is needed for return data is a key-value string, and it can simply be returned, as at the end of a function. You may also want to insert *exit* or whatever necessary to cease execution of the remainder of the code. Example:
 
 .. code-block :: html
  :linenos:
@@ -354,6 +357,19 @@ If *flashFieldName* is found in the headers and Flash is being used on the clien
  echo($data);
  exit;
  
+For non-PHP devs this translates to:
+
+$name = name of the file, such as "PIC01.jpg"
+$file = name of the file and the path, such as "uploaded/PIC01.jpg"
+$width, $height = the dimensions (if you are working with images)
+$type = the extension of the file - JPG, GIF, PNG, etc.
+
+The return to Flash should look like:
+
+"file=uploaded/PIC01.jpg,name=PIC01.jpg,width=320,height=240,type=jpg"
+
+This string should be returned, or printed, or echoed.
+
 
 If *htmlFieldName* is used, the code on the client side gets pretty tricky, as an iframe is necessary for the file-post, and reading back from that iframe presents problems. In order to read the iframe return data accurately cross browser, the code needs to be wrapped in a *<textarea>*. You can see the code for this on the very last line of UploadFiles.php. Note that the textarea needs to be outside of the PHP. Example:
 
@@ -365,6 +381,7 @@ If *htmlFieldName* is used, the code on the client side gets pretty tricky, as a
  ?>
  <textarea><?php print $json->encode($dataObject); ?></textarea>
  
+For non-PHP devs, this translates into a JSON string, wrapped in a textarea, returned as HTML. I know it's screwy, but that's how it works.
 
 If you are having problems getting onComplete to fire, look at this code first. Often the problem is the server side code is not catching the flash field name for whatever reason (perhaps the client and server names don't match) and the code is falling to the end of the page and returning a textarea to Flash. Recently Code has been added in the SWF that checks for this, so if that is the problem, you should be notified with a console message.
 
