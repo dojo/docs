@@ -18,20 +18,29 @@ Destroys a DOM element. dojo.destroy deletes all children and the node itself.
 Introduction
 ============
 
-TODO: introduce the component/class/method
+dojo.destroy removes a node from its parent, clobbering it and all of its children.
 
 
 =====
 Usage
 =====
 
-TODO: how to use the component/class/method
+This function only works with DomNodes, and returns nothing.
+
+Parameters:
+
+node
+  A String ID or DomNode reference of the element to be destroyed.
 
 .. code-block :: javascript
  :linenos:
 
  <script type="text/javascript">
-   // your code
+   // Destroy a node byId:
+   dojo.destroy("someId");
+
+  // Destroy all nodes in a list by reference:
+  dojo.query(".someNode").forEach(dojo.destroy);
  </script>
 
 
