@@ -25,13 +25,23 @@ TODO: introduce the component/class/method
 Usage
 =====
 
-TODO: how to use the component/class/method
+dojo.empty safely removes all children of the node.
+
+Parameters: 
+
+node: DOMNode|String
+  a reference to a DOM node or an id.
+
 
 .. code-block :: javascript
  :linenos:
 
  <script type="text/javascript">
-   // your code
+   // Destroy node's children byId:
+   dojo.empty("someId");
+
+   // Destroy all nodes' children in a list by reference:
+   dojo.query(".someNode").forEach(dojo.empty);
  </script>
 
 
