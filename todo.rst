@@ -19,7 +19,7 @@ Top priority: dojo.js
 
 * `dojo.connectPublisher <dojo/connectPublisher>`_
 
-  needed: full page
+  needed: review necessary
 
 * `dojo.isAlien <dojo/isAlien>`_
 
@@ -31,26 +31,25 @@ Top priority: dojo.js
 
 * `dojo.empty <dojo/empty>`_
 
-  needed: full page
+  needed: review necessary
 
 * `dojo.destroy <dojo/destroy>`_
 
-  needed: full page
+  needed: review necessary
 
   Group DOM Query & Manipulation related pages into a book section
 
 * `dojo.provide <dojo/provide>`_
 
-  needed: full page
+  needed: review necessary
 
 * `dojo.moduleUrl <dojo/moduleUrl>`_
 
-  needed: full page
-
+  needed: review necessary
 
 * `dojo.toggleClass <dojo/toggleClass>`_
 
-  needed: full page
+  needed: review necessary
 
 
 =====================
