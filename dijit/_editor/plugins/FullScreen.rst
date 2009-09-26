@@ -56,7 +56,7 @@ And that's it.  The editor instance you can reference by 'dijit.byId("editor")' 
 Configurable Attributes
 -----------------------
 
-The Full Screen plugin has a few configurable attributes on it that let you affetc its current behavior a bit.  The options are listed below:
+The Full Screen plugin has a few configurable attributes on it that let you affect its current behavior a bit.  The options are listed below:
 
 +---------------------------+---------------------------------------------------------------------------------------------------------+
 | **Option**                | **Description**                                                                                         |
