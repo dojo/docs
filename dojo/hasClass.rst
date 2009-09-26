@@ -53,4 +53,5 @@ See also
 ========
 
 * `dojo.addClass <dojo/addClass>`_
-* `dojo.removeClass <dojo/removeClass>`_ 
+* `dojo.removeClass <dojo/removeClass>`_
+* `dojo.toggleClass <dojo/toggleClass>`_
