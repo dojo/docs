@@ -11,28 +11,38 @@ dojo.toggleClass
 .. contents::
    :depth: 2
 
-dojo.toggleClass simply toggles a className (or now in 1.4 an array of classNames).
+Simply toggles a className (or now in 1.4 an array of classNames).
 
 ============
 Introduction
 ============
 
-TODO: introduce the component/class/method
+dojo.toggleClass adds a class to node if not present, or removes if present.
 
 
 =====
 Usage
 =====
 
-TODO: how to use the component/class/method
+Pass a boolean condition if you want to explicitly add or remove.
+
+Parameters:
+
+node
+  The node which should changed.
+
+classStr
+  name of the class
+
+condition
+  true|false Optional. true means to add the class, false means to remove.
 
 .. code-block :: javascript
  :linenos:
 
  <script type="text/javascript">
-   // your code
+   var foo=dojo.toggleClass(node: DomNode|String, classStr: String, condition: Boolean?);
  </script>
-
 
 
 ========
@@ -42,13 +52,18 @@ Examples
 Programmatic example
 --------------------
 
-TODO: example
+.. code-block :: javascript
+ :linenos:
 
-Declarative example
--------------------
+ <script type="text/javascript">
+   dojo.toggleClass("someNode", "hovered");
 
-TODO: example
+   // Forcefully add a class:
+   dojo.toggleClass("someNode", "hovered", true);
 
+   // Available in `dojo.NodeList` for multiple toggles:
+   dojo.query(".toggleMe").toggleClass("toggleMe");
+ </script>
 
 ========
 See also
