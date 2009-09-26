@@ -11,7 +11,7 @@ dojo.moduleUrl
 .. contents::
    :depth: 2
 
-TODO: short summary of the component/class/method
+dojo.moduleUrl is used to return a dojo._Url object relative to a module.
 
 
 ============
