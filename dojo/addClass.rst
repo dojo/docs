@@ -47,3 +47,4 @@ See also
 
 * `dojo.hasClass <dojo/hasClass>`_
 * `dojo.removeClass <dojo/removeClass>`_
+* `dojo.toggleClass <dojo/toggleClass>`_
