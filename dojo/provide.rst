@@ -11,14 +11,14 @@ dojo.provide
 .. contents::
    :depth: 2
 
-TODO: short summary of the component/class/method
+dojo.provide is a core part of the dojo packaging system. It enables telling the package manager that a specific package has been loaded. Asides from the functioning, there has been mention that it automatically instantiates objects corresponding to the namespace it is passed.
 
 
 ============
 Introduction
 ============
 
-TODO: introduce the component/class/method
+Each javascript source file must have at least one dojo.provide() call at the top of the file, corresponding to the file name. For example, `js/dojo/foo.js` must have `dojo.provide("dojo.foo");` before any calls to `dojo.require()` are made.
 
 
 =====
