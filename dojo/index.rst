@@ -200,13 +200,21 @@ DOM
       
     * Class Utilities
     
-      * `dojo.hasClass <dojo/hasClass>`_ 
+      * `dojo.hasClass <dojo/hasClass>`_
+
+        Returns a boolean depending on whether or not a node has a passed class string. 
 
       * `dojo.addClass <dojo/addClass>`_
 
+        Adds a CSS class to a node.
+
       * `dojo.removeClass <dojo/removeClass>`_
 
+        Removes a class from a Node.
+
       * `dojo.toggleClass <dojo/toggleClass>`_
+
+        Toggles a className (or now in 1.4 an array of classNames).
 
     * `dojo.marginBox <dojo/marginBox>`_
 
