@@ -11,7 +11,7 @@ dojo.connectPublisher
 .. contents::
    :depth: 2
 
-Ensure that everytime an event is called, a message is published on the topic.
+Ensure that everytime an event is called, a message is published on the topic. 
 
 
 ============
@@ -25,15 +25,16 @@ TODO: introduce the component/class/method
 Usage
 =====
 
-TODO: how to use the component/class/method
+Returns a handle which can be passed to dojo.disconnect() to disable subsequent automatic publication on the topic.
 
-.. code-block :: javascript
- :linenos:
+topic:
+The name of the topic to publish.
 
- <script type="text/javascript">
-   // your code
- </script>
+obj: 
+The source object for the event function. Defaults to dojo.global if null.
 
+event:
+The name of the event function in obj. I.e. identifies a property obj[event].
 
 
 ========
@@ -43,12 +44,12 @@ Examples
 Programmatic example
 --------------------
 
-TODO: example
+.. code-block :: javascript
+ :linenos:
 
-Declarative example
--------------------
-
-TODO: example
+ <script type="text/javascript">
+   dojo.connectPublisher("/ajax/start", dojo, "xhrGet");
+ </script>
 
 
 ========
