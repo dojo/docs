@@ -27,14 +27,16 @@ Usage
 
 Returns a handle which can be passed to dojo.disconnect() to disable subsequent automatic publication on the topic.
 
+Parameters:
+
 topic:
-The name of the topic to publish.
+  The name of the topic to publish.
 
 obj: 
-The source object for the event function. Defaults to dojo.global if null.
+  The source object for the event function. Defaults to dojo.global if null.
 
 event:
-The name of the event function in obj. I.e. identifies a property obj[event].
+  The name of the event function in obj. I.e. identifies a property obj[event].
 
 
 ========
