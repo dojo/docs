@@ -11,8 +11,7 @@ dojo.toggleClass
 .. contents::
    :depth: 2
 
-TODO: short summary of the component/class/method
-
+dojo.toggleClass simply toggles a className (or now in 1.4 an array of classNames).
 
 ============
 Introduction
@@ -55,4 +54,7 @@ TODO: example
 See also
 ========
 
-* TODO: links to other related articles
+* `dojo.addClass <dojo/addClass>`_
+* `dojo.hasClass <dojo/hasClass>`_
+* `dojo.removeClass <dojo/removeClass>`_
+* `dojo.style <dojo/style>`_
