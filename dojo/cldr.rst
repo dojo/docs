@@ -5,20 +5,19 @@ dojo.cldr
 
 :Status: Draft
 :Version: 1.0
-:Project owner: ?--
-:Available: since V?
+:Project owner: Adam Peller
+:Available: since 1.0?
 
 .. contents::
    :depth: 2
 
-A Common Locale Data Repository (CLDR) implementation
-
+Contains data from the Common Locale Data Repository (CLDR) http://unicode.org/cldr with associated utility classes
 
 ============
 Introduction
 ============
 
-TODO: introduce the component/class/method
+This data contains tables with culturally sensitive information for hundreds of languages and country variants, such as translations of days of the week, months of the year, patterns for formatting dates and numbers.  This is used by dojo.date, dojo.number, and dojo.currency to produce localized output.  The nls/ directory contains a subset of the available locales; a complete set is available by running the ant script in util/buildscripts/cldr.  See the README file in that directory for more information.
 
 
 =====
