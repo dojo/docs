@@ -48,3 +48,4 @@ See also
 
 * `dojo.addClass <dojo/addClass>`_
 * `dojo.hasClass <dojo/hasClass>`_
+* `dojo.toggleClass <dojo/toggleClass>`_
