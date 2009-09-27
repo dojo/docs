@@ -287,6 +287,12 @@ dojox.layout
 
 * dojox.layout.ContentPane.attr('href', ...) now returns a dojo.Deferred rather than a dojox.layout.ContentPane.DeferredHandle custom class.   The dojo.Deferred triggers when the load completes (or errors out).
 
+* dojo.layout.GridContainer styles changed, with red borders removed and theme-specific drop indicators added.
+
+dojox.widget
+------------
+* dojox.widget.Portlet added. An extended version of the dijit.TitlePane, designed to be used with the dojox.layout.GridContainer.
+
 
 =========
 Bug fixes
