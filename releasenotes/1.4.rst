@@ -284,7 +284,7 @@ dojox.image
 -----------
 
 * Significant fixes and improvements in dojox.image.Lightbox. see: `[17205] <http://bugs.dojotoolkit.org/changeset/17205>`_
-
+* Bug fixes for dojox.image.SlideShow to deal with autoLoad and autoStart issues. see `[20285] <http://bugs.dojotoolkit.org/changeset/20285>`_
 
 dojox.layout
 ------------
