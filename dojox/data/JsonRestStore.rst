@@ -125,7 +125,7 @@ Now we have grid that connected to our store and when you edit data in the grid 
 ==========================
 Implementing a REST Server
 ==========================
-The JsonRestStore follows RFC 2616 whenever possible to define to interaction with server. JsonRestStore uses an HTTP GET request to retrieve data, a PUT request to change items, a DELETE request to delete items, and a POST request to create new items. It is recommended that the server follow a URL structure for resources:
+The JsonRestStore follows RFC 2616 (http://www.ietf.org/rfc/rfc2616.txt) whenever possible to define to interaction with server. JsonRestStore uses an HTTP GET request to retrieve data, a PUT request to change items, a DELETE request to delete items, and a POST request to create new items. It is recommended that the server follow a URL structure for resources:
 
  /{Table}/{id}
 
