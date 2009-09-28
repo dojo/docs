@@ -21,7 +21,8 @@ Dojo comes with a bunch of useful methods to deal with arrays, a few more than y
 dojo.indexOf
 ============
 
-dojo.indexOf lets you easily determine the index of an element in an array.
+dojo.indexOf lets you easily determine the index of an element in an array.  It locates the first index of the provided value in the passed array.  If the value is not found, -1 is returned.
+
 Included are a few doctests which will either pass or fail depending on the expected result.
 Note that the second test should fail, since the value of the passed array at position 3 is not existant
 
@@ -43,7 +44,8 @@ Note that the second test should fail, since the value of the passed array at po
 dojo.lastIndexOf
 ================
 
-dojo.lastIndexOf lets you easily determine the last index of an element in an array.
+dojo.lastIndexOf lets you easily determine the last index of an element in an array.  It locates the first index of the provided value in the passed array.  If the value is not found, -1 is returned.
+
 Included are a few doctests which will either pass or fail depending on the expected result.
 Note that the second doctest should fail since the last index of the tested element is not 2, but 4.
 
