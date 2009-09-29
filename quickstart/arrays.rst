@@ -38,7 +38,7 @@ Note that the second test should fail, since the value of the passed array at po
         var position = dojo.indexOf(arrIndxOf, "zoo");
         dojo.place(
             "<div>The Position of the word 'zoo' within the array is " + position + "</div>", 
-            "refButton1", 
+            "example1", 
             "after"
         );
     }
@@ -47,6 +47,7 @@ Note that the second test should fail, since the value of the passed array at po
   .. cv :: html
 
     <button id="refButton1" dojoType="dijit.form.Button" onClick="testIndxOf()">Show the Position of the word 'zoo' within the array.</button>
+    <div id="example1"></div>
 
 
 
