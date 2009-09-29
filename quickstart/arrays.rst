@@ -272,7 +272,7 @@ Now your bank policies only allows you to give each client one credit over 1 mil
         if (dojo.some(arrIndxSome, function(item){ return item>=1000000})) {
             result = 'yes, there are';
         } else {
-            result = 'no, there aren't';
+            result = 'no, there aren no such items';
         }
         dojo.place(
             "<p>The answer is: " + result + "</p>", 
