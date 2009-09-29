@@ -31,7 +31,7 @@ Functions always avalable (Dojo 'Base')
 
 * `dojo.fadeIn <dojo/fadeIn>`_ - A simple function for fading a currently invisible (opacity 0), node into view.
 
-* `dojo.fadeOut <dojo/fadeIn>`_ - A simple function for fading a currently visible(opacity 1), node to opacity 0.
+* `dojo.fadeOut <dojo/fadeOut>`_ - A simple function for fading a currently visible(opacity 1), node to opacity 0.
 
 Functions provided by the dojo.fx module
 ----------------------------------------
