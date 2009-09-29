@@ -35,7 +35,7 @@ dojo.indexOf lets you easily determine the index of an element in an array.  It 
         var position = dojo.indexOf(arrIndxOf, "zoo");
         dojo.place(
             "<p>The index of the word 'zoo' within the array is " + position + "</p>", 
-            "example1", 
+            "result1", 
             "after"
         );
     }
@@ -45,21 +45,16 @@ dojo.indexOf lets you easily determine the index of an element in an array.  It 
         dojo.forEach(arrIndxOf, function(item, i) {
             var list1 = dojo.doc.createElement("li");
             list1.innerHTML = i + 1 + ". " + item;
-        }
-        dojo.place(
-            list1,
-            "listArray1",
-            "after"
-        );
-    };
-
+            dojo.byId("listArray1").appendChild(list1);
+        });
+    }
     </script>
 
   .. cv :: html
 
     <div id="listArray1">The content of the current array:</div>
     <button id="refButton1" dojoType="dijit.form.Button" onClick="testIndxOf()">Show the index of the word 'zoo' within the array.</button>
-    <div id="example1"></div>
+    <div id="result1"></div>
 
 
 
