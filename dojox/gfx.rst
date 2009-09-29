@@ -26,6 +26,8 @@ As of Dojo 1.2, the following native vector graphics engine adaptations are impl
 * Silverlight (wherever it is supported by Microsoft)
 * Canvas (Firefox 2.0-3.0, Safari 3.0 including iPhone Safari 1.x & 2.x, Opera 9.0)
 
+Development of a new experimental renderer which uses `SVGWeb <http://code.google.com/p/svgweb/>`_(Flash-based) is also `underway <http://trac.dojotoolkit.org/ticket/9948>`_. 
+
 Other renderer adaptations could be implemented as well underneath these api's. For example, a Flash player implementation can be built that plugs in under the GFX api's (perhaps using dojox.flash as it's bridge interface). If you're interested in contributing other implementations, please let us know.
 
 Note that SVG & VML are "live" DOM scene graphs; whereas Canvas is an immediate mode procedural API. When Canvas is used under gfx, you gain the benefits that come with having a live scene graph (plus you can still drop down and access pixel data from the Canvas if you need to). These benefits include being able to move groups of objects around a picture (and in the future, will allow responding to events on Shapes).
