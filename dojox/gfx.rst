@@ -26,7 +26,7 @@ As of Dojo 1.2, the following native vector graphics engine adaptations are impl
 * Silverlight (wherever it is supported by Microsoft)
 * Canvas (Firefox 2.0-3.0, Safari 3.0 including iPhone Safari 1.x & 2.x, Opera 9.0)
 
-Development of a new experimental renderer which uses `SVGWeb <http://code.google.com/p/svgweb/>`_(Flash-based) is also `underway <http://trac.dojotoolkit.org/ticket/9948>`_. 
+Development of a new experimental renderer which uses `SVGWeb <http://code.google.com/p/svgweb/>`_ is also `underway <http://trac.dojotoolkit.org/ticket/9948>`_. 
 
 Other renderer adaptations could be implemented as well underneath these api's. For example, a Flash player implementation can be built that plugs in under the GFX api's (perhaps using dojox.flash as it's bridge interface). If you're interested in contributing other implementations, please let us know.
 
