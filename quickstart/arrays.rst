@@ -24,21 +24,6 @@ dojo.indexOf lets you easily determine the index of an element in an array.  It 
 Included are a few doctests which will either pass or fail depending on the expected result.
 Note that the second test should fail, since the value of the passed array at position 3 is not existant
 
-.. codeviewer::
-  
-  <style type="text/css">
-    @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/widget/DocTester/DocTester.css"; 
-  </style>
-  <script type="text/javascript">dojo.require("dojox.widget.DocTester");</script>
-  <div dojoType="dojox.widget.DocTester">
-    >>> dojo.indexOf(["foo", "hoo", "zoo"], "zoo")
-    "2"
-    >>> dojo.indexOf(["foo", "hoo", "zoo"], "zoo")
-    "3"
-  </div>
-
-
-
 .. cv-compound::
 
   .. cv :: javascript
