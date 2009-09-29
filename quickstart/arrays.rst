@@ -5,8 +5,6 @@
 Arrays and Dojo
 ===============
 
-:Status: Draft
-:Version: 1.0
 :Authors: Nikolai Onken, Marcus Reimann, Josh Trutwin
 
 .. contents::
