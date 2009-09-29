@@ -831,6 +831,14 @@ Group
   clear()
     Removes all shapes from a surface returning the surface itself.
 
+  whenLoaded(callbackFunction)
+    Executes the user-specified callbackFunction as soon as the Surface is ready for drawing.
+
+Surface supports the following events:
+
+  onLoaded
+    This event is fired when a Surface is initialized and ready for use.
+
 Rectangle
 ---------
   A rectangle is a basic rectangular shape with optionally rounded corners.
