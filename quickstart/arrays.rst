@@ -43,6 +43,7 @@ dojo.indexOf lets you easily determine the index of an element in an array. It l
 
   .. cv :: html
 
+    <div>The content of our test array is ["foo", "hoo", "zoo"].</div>
     <button id="refButton1" dojoType="dijit.form.Button" onClick="testIndxOf()">Show the index of the word 'zoo' within the array.</button>
     <div id="result1"></div>
 
@@ -75,6 +76,7 @@ dojo.lastIndexOf lets you easily determine the last index of an element in an ar
 
   .. cv :: html
 
+    <div>The content of our test array is ["foo", "hoo", "zoo", "shoe", "zoo", "nuu"].</div>
     <button id="refButton2" dojoType="dijit.form.Button" onClick="testLastIndxOf()">Show the last index of the word 'zoo' within the array.</button>
     <div id="result2"></div>
 
