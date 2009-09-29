@@ -26,7 +26,7 @@ As of Dojo 1.2, the following native vector graphics engine adaptations are impl
 * Silverlight (wherever it is supported by Microsoft)
 * Canvas (Firefox 2.0-3.0, Safari 3.0 including iPhone Safari 1.x & 2.x, Opera 9.0)
 
-Other renderer adaptations's could be implemented as well underneath these api's. For example, a Flash player implementation can be built that plugs in under the GFX api's (perhaps using dojox.flash as it's bridge interface). If you're interested in contributing other implementations, please let us know.
+Other renderer adaptations could be implemented as well underneath these api's. For example, a Flash player implementation can be built that plugs in under the GFX api's (perhaps using dojox.flash as it's bridge interface). If you're interested in contributing other implementations, please let us know.
 
 Note that SVG & VML are "live" DOM scene graphs; whereas Canvas is an immediate mode procedural API. When Canvas is used under gfx, you gain the benefits that come with having a live scene graph (plus you can still drop down and access pixel data from the Canvas if you need to). These benefits include being able to move groups of objects around a picture (and in the future, will allow responding to events on Shapes).
 
@@ -35,13 +35,10 @@ Core Concepts
 
 On a conceptual level dojox.gfx has a simple declarative model.
 
-All basic primitives required for 2D graphics are defined:
 
-* 2D coordinates
-* 2D linear transformation matrices
-* Colors
+Every visual presentation created with Dojo GFX begins by creating a **Surface** object which will serve as the visual rectangular container for shapes.  Because Surface contains the shapes that will be drawn, it also has in common the capabilities of **Group** nodes (see below).  
 
-There is a **Surface**, which serves as a visual rectangular container for shapes:
+**IMPORTANT:** Under the covers, Surface objects are associated with a particular rendering implementation that's in use in the current environment to perform all the graphics operations.  Some kinds of graphics renderer implementations require additional time for them to be initialized, and they may not be immediately ready after they are created.  For this reason, Surface provides an important callback registration function that must ALWAYS be used for registering all your graphics manipulation code, whenLoaded().  When a Surface implementation is ready to allow drawing on its surface (asynchronously), it will execute the functions registered via whenLoaded().  Think of this working similar to dojo.addOnLoad(), but instead of the Document being initialized asynchronously, it's the Surface object in this case.  There are several interesting characteristics of Surface objects, including:
 
 * A web page can have several surfaces defined.
 
@@ -55,7 +52,7 @@ There is a **Surface**, which serves as a visual rectangular container for shape
 
 * By default the background of a surface is transparent.
 
-There is a **Shape** description object, which represent a simple description of geometry, with corresponding shape objects. dojox.gfx supports following shapes:
+In order to draw on a **Surface**, you'll need to create **Shape** objects and attach the shapes to a **Surface**, at which time they will be rendered.  This style of graphics api is known as a "retained mode" graphics system.  Shapes that you've attached into a surface create a graph of objects forming the scene to be rendered.  You can manipulate the shapes in the scene graph at any time later, in addition to being notified when a user interacts with the shapes in the scene via Events.  **Shape** objects encapsulate a simple description of geometry and stylistic properties of a given shape, and there are several predefined shape types supported by dojox.gfx to get you started drawing quickly:
 
 * Rectangle (optionally with rounded corners)
 
@@ -92,6 +89,14 @@ Shapes support two types of properties:
   * Fill (interior of a shape).
 
 Shapes are stacked from bottom to top in the order they are added. This z-order can be changed dynamically after a shape has been added using functions on Shape such as moveToFront().
+
+In addition, all the basic graphics primitives required for 2D graphics are provided, including:
+
+* 2D coordinates
+* 2D linear transformation matrices
+* Colors
+
+Note that Dojo GFX operates as a high-level "retained mode" graphics system, even when running on top of lower-level rendering implementations that may not operate in retained mode, such as Canvas, which is an immediate mode graphics api.  This allows scenes to be manipulated and for your application code to be easily notified of user interactions via events in the same way as when working with retained mode graphics implementations (although at the cost of having to keep the scene graph objects around). (We're still working on event support for the Canvas renderer, see ticket http://trac.dojotoolkit.org/ticket/7782 for updates)
 
 Groups
 ------
