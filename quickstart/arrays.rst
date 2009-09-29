@@ -8,8 +8,6 @@ Arrays and Dojo
 :Status: Draft
 :Version: 1.0
 :Authors: Nikolai Onken
-:Developers: ?-
-:Available: since V?
 
 .. contents::
     :depth: 2
@@ -38,6 +36,29 @@ Note that the second test should fail, since the value of the passed array at po
     >>> dojo.indexOf(["foo", "hoo", "zoo"], "zoo")
     "3"
   </div>
+
+
+
+.. cv-compound::
+
+  .. cv :: javascript
+
+    <script type="text/javascript">
+    // this Button is just to make the demo look nicer:
+    dojo.require("dijit.form.Button"); 
+
+    var arrIndxOf = ["foo", "hoo", "zoo"];
+
+    function testIndxOf(){
+        alert('The Position of the word "zoo" within the array is ' + dojo.indexOf(arrIndxOf, "zoo"));
+    }
+    </script>
+
+  .. cv :: html
+
+    <button dojoType="dijit.form.Button" onClick="testIndxOf()">Show the Position of the word 'zoo' within the array.</button>
+
+
 
 
 ================
