@@ -39,20 +39,10 @@ dojo.indexOf lets you easily determine the index of an element in an array.  It 
             "after"
         );
     }
-
-    // this code is just to make the demo look nicer:
-    dojo.addOnLoad(function() {
-        dojo.forEach(arrIndxOf, function(item, i) {
-            var list1 = dojo.doc.createElement("li");
-            list1.innerHTML = i + 1 + ". " + item;
-            dojo.byId("listArray1").appendChild(list1);
-        });
-    }
     </script>
 
   .. cv :: html
 
-    <div id="listArray1">The content of the current array:</div>
     <button id="refButton1" dojoType="dijit.form.Button" onClick="testIndxOf()">Show the index of the word 'zoo' within the array.</button>
     <div id="result1"></div>
 
