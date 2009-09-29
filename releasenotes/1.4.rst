@@ -148,7 +148,10 @@ TabContainer / AccordionContainer
 
 ContentPane
 ~~~~~~~~~~~
-Fixes related to resizing and href loading, including avoiding premature href loading for ContentPanes in nested TabContainers.  ContentPane now acts as a full layout widget, calling resize() on it's child widgets when (not before) it is made visible, avoiding problems with children being initialized while hidden.
+* ContentPane now acts as a full layout widget, calling resize() on it's child widgets when (not before) it is made visible, avoiding problems with children being initialized while hidden.
+* Consequently ContentPane now defines isLayoutContainer to true
+* Fixes related to resizing and href loading, including avoiding premature href loading for ContentPanes in nested TabContainers
+
 
 
 dijit.form
