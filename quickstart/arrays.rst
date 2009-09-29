@@ -296,17 +296,32 @@ dojo.every
 Lets get back to our bank manager. A client wants another credit, but you only allow a credit if every income transfer is at least 3000,-
 An example:
 
-*Note that we are using the doctest in this case to show you whether the client is allowed to get the credit. If the test passes he is allowed, if not he won't go home with the cash.*
+.. cv-compound::
 
-.. codeviewer::
-  
-  <style type="text/css">
-    @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/widget/DocTester/DocTester.css"; 
-  </style>
-  <script type="text/javascript">dojo.require("dojox.widget.DocTester");</script>
-  <div dojoType="dojox.widget.DocTester">
-    >>> dojo.every([{'month': 'january', 'income': 2000}, {'month': 'february', 'income': 3200}, {'month': 'march', 'income': 2100}], function(item){ return item.income>=3000})
-    "false"
-    >>> dojo.every([{'month': 'january', 'income': 5000}, {'month': 'february', 'income': 4200}, {'month': 'march', 'income': 3100}], function(item){ return item.income>=3000})
-    "true"
-  </div>
+  .. cv :: javascript
+
+    <script type="text/javascript">
+    // this Button is just to make the demo look nicer:
+    dojo.require("dijit.form.Button"); 
+
+    var arrIndxEvery = [{'month': 'january', 'income': 2000}, {'month': 'february', 'income': 3200}, {'month': 'march', 'income': 2100}];
+
+    function testIndxSome() {
+        if (dojo.every(arrIndxEvery , function(item){ return item.income>=3000})) {
+            result = 'yes, he is allowd';
+        } else {
+            result = 'no, unfortunately not';
+        }
+        dojo.place(
+            "<p>The answer is: " + result + "</p>", 
+            "result6", 
+            "after"
+        );
+    }
+    </script>
+
+  .. cv :: html
+
+    <div>The content of our test array is [{'month': 'january', 'income': 2000}, {'month': 'february', 'income': 3200}, {'month': 'march', 'income': 2100}].</div>
+    <button id="refButton7" dojoType="dijit.form.Button" onClick="testIndxSome()">Is the client allowed to get the credit?</button>
+    <div id="result7"></div>
