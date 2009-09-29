@@ -308,13 +308,13 @@ An example:
 
     function testIndxSome() {
         if (dojo.every(arrIndxEvery , function(item){ return item.income>=3000})) {
-            result = 'yes, he is allowd';
+            result = 'yes, he is allowed';
         } else {
             result = 'no, unfortunately not';
         }
         dojo.place(
             "<p>The answer is: " + result + "</p>", 
-            "result6", 
+            "result7", 
             "after"
         );
     }
