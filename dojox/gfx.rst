@@ -775,6 +775,14 @@ Surface
   connect() and disconnect()
     See the discussion of these methods in the Event processing section above.
 
+  whenLoaded(callbackFunction)
+    Executes the user-specified callbackFunction as soon as the Surface is ready for drawing.
+
+Surface supports the following events:
+
+  onLoaded
+    This event is fired when a Surface is initialized and ready for use.
+
 Group
 -----
   A group is a pseudo-shape, which represents a collection of shapes.
@@ -830,14 +838,6 @@ Group
 
   clear()
     Removes all shapes from a surface returning the surface itself.
-
-  whenLoaded(callbackFunction)
-    Executes the user-specified callbackFunction as soon as the Surface is ready for drawing.
-
-Surface supports the following events:
-
-  onLoaded
-    This event is fired when a Surface is initialized and ready for use.
 
 Rectangle
 ---------
