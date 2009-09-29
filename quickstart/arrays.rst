@@ -21,9 +21,6 @@ dojo.indexOf
 
 dojo.indexOf lets you easily determine the index of an element in an array.  It locates the first index of the provided value in the passed array.  If the value is not found, -1 is returned.
 
-Included are a few doctests which will either pass or fail depending on the expected result.
-Note that the second test should fail, since the value of the passed array at position 3 is not existant
-
 .. cv-compound::
 
   .. cv :: javascript
@@ -37,7 +34,7 @@ Note that the second test should fail, since the value of the passed array at po
     function testIndxOf(){
         var position = dojo.indexOf(arrIndxOf, "zoo");
         dojo.place(
-            "<div>The Position of the word 'zoo' within the array is " + position + "</div>", 
+            "<p>The index of the word 'zoo' within the array is " + position + "</p>", 
             "example1", 
             "after"
         );
@@ -46,7 +43,7 @@ Note that the second test should fail, since the value of the passed array at po
 
   .. cv :: html
 
-    <button id="refButton1" dojoType="dijit.form.Button" onClick="testIndxOf()">Show the Position of the word 'zoo' within the array.</button>
+    <button id="refButton1" dojoType="dijit.form.Button" onClick="testIndxOf()">Show the index of the word 'zoo' within the array.</button>
     <div id="example1"></div>
 
 
