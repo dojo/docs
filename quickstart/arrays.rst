@@ -75,7 +75,7 @@ dojo.lastIndexOf lets you easily determine the last index of an element in an ar
 
   .. cv :: html
 
-    <button id="refButton2" dojoType="dijit.form.Button" onClick="testIndxOf()">Show the last index of the word 'zoo' within the array.</button>
+    <button id="refButton2" dojoType="dijit.form.Button" onClick="testLastIndxOf()">Show the last index of the word 'zoo' within the array.</button>
     <div id="result2"></div>
 
 
