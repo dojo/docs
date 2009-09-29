@@ -258,20 +258,31 @@ dojo.some
 Imagine you are a manager of a famous bank. A client of you comes and visits your office asking for another million dollars as a credit.
 Now your bank policies only allows you to give each client one credit over 1 million, not two, not three - though you may have several smaller credits. Even 3 credits a 500.000 - weird bank.. anyways. dojo.some is the perfect function to tell you whether an array has some of the asked values:
 
-*Note that we are using the doctest in this case to show you whether the client is allowed to get the credit. If the test passes he is allowed, if not he won't go home with the cash.*
+.. cv-compound::
 
-.. codeviewer::
-  
-  <style type="text/css">
-    @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/widget/DocTester/DocTester.css"; 
-  </style>
-  <script type="text/javascript">dojo.require("dojox.widget.DocTester");</script>
-  <div dojoType="dojox.widget.DocTester">
-    >>> dojo.some([200000, 500000, 350000, 1000000, 75, 3], function(item){ return item>=1000000})
-    "true"
-    >>> dojo.some([200000, 500000, 350000, 100000, 75, 3], function(item){ return item>=1000000})
-    "false"
-  </div>
+  .. cv :: javascript
+
+    <script type="text/javascript">
+    // this Button is just to make the demo look nicer:
+    dojo.require("dijit.form.Button"); 
+
+    var arrIndxSome = [200000, 500000, 350000, 1000000, 75, 3];
+
+    function testIndxSome() {
+        var result = dojo.some(arrIndxSome, function(item){ return item>=1000000});
+        dojo.place(
+            "<p>The answer is: " + result + "</p>", 
+            "result6", 
+            "after"
+        );
+    }
+    </script>
+
+  .. cv :: html
+
+    <div>The content of our test array is [200000, 500000, 350000, 1000000, 75, 3].</div>
+    <button id="refButton6" dojoType="dijit.form.Button" onClick="testIndxSome()">Are there some items >=1000000 within the array?</button>
+    <div id="result6"></div>
 
 
 ==========
