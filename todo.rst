@@ -154,10 +154,6 @@ Priority 4: DojoX
 
   needed: full page
 
-* `dojox.image.Magnifier <dojox/image/Magnifier>`_
-
-  needed: full page
-
 * `dojox.image.MagnifierLite <dojox/image/MagnifierLite>`__
 
   needed: full page
