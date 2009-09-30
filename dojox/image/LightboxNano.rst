@@ -17,9 +17,9 @@ A simple "nano" version of the lightbox.
 Introduction
 ============
 
-The LightboxNano is a very lightweight lightbox which only displays a larger image.  There is no support for a caption or description.  The lightbox can be closed by clicking any where or pressing any key.  It is not a dijit._Widget, but behaves similar to a dijit._Widget.
+The LightboxNano is a very lightweight lightbox which only displays a larger image. There is no support for a caption or description. The lightbox can be closed by clicking any where or pressing any key. It is not a dijit._Widget, but behaves similar to a dijit._Widget.
 
-After the LightboxNano loads, it waits preloadDelay (default of 5000ms) before caching the larger image.  When the user clicks the thumbnail image to launch the LightboxNano, hopefully the larger image will be downloaded and the animation will play smoothly.  If the user clicks the thumbnail image before the larger version could be preloaded, a loading indicator is displayed prior to the animation beginning.  Subsequent clicking of the larger image is instant since the larger image is already cached.
+After the LightboxNano loads, it waits preloadDelay (default of 5000ms) before caching the larger image. When the user clicks the thumbnail image to launch the LightboxNano, hopefully the larger image will be downloaded and the animation will play smoothly. If the user clicks the thumbnail image before the larger version could be preloaded, a loading indicator is displayed prior to the animation beginning. Subsequent clicking of the larger image is instant since the larger image is already cached.
 
 For being so small, it packs a handful of features:
 
@@ -32,7 +32,17 @@ For being so small, it packs a handful of features:
 Usage
 =====
 
-The LightboxNano is intended to be used on <a> and <img> tags.  Upon creation, if the domNode is <img> tag, then it is wrapped in an <a> tag.  It will also add two <div> tags inside the <a> tag: one to display a enlarge icon and another to show a loading icon.  To style the enlarge icon and the loading icon, you need to create some CSS that looks like the following:
+The LightboxNano is intended to be used on <a> and <img> tags. Upon creation, if the domNode is <img> tag, then it is wrapped in an <a> tag. It will also add two <div> tags inside the <a> tag: one to display a enlarge icon and another to show a loading icon.
+
+============  ======  ======================================================================
+Parameter     Type    Description
+============  ======  ======================================================================
+href          String  URL to the large image to show in the lightbox.
+duration      int     The delay in milliseconds of the LighboxNano open and close animation.
+preloadDelay  int     The delay in milliseconds after the LightboxNano is created before preloading the larger image.
+============  ======  ======================================================================
+
+To style the enlarge icon and the loading icon, you need to create some CSS that looks like the following:
 
 .. code-block :: css
  :linenos:
@@ -61,21 +71,6 @@ The LightboxNano is intended to be used on <a> and <img> tags.  Upon creation, i
      width: 24px;
  }
 
-==========
-Parameters
-==========
-
-**href** - String
-
-URL to the large image to show in the lightbox.
-
-**duration** - int
-
-The delay in milliseconds of the LighboxNano open and close animation.
-
-**preloadDelay** - int
-
-The delay in milliseconds after the LightboxNano is created before preloading the larger image.
 
 ========
 Examples
@@ -138,7 +133,7 @@ Standard way to declaratively create the LightboxNano
      <img src="/path/to/small/image.jpg">
  </a>
 
-Should you want to destroy the LightboxNano, you'll need to use the jsid.  You can view more info about using the jsid on http://dojocampus.org/content/2008/05/06/jsid-dijitbyid-and-dojobyid/.
+Should you want to destroy the LightboxNano, you'll need to use the jsid. You can view more info about using the jsid on http://dojocampus.org/content/2008/05/06/jsid-dijitbyid-and-dojobyid/.
 
 .. code-block :: javascript
  :linenos:
