@@ -1,4 +1,4 @@
-#format dojo*rst
+#format dojo_rst
 
 dojox.string.Builder
 =====================
