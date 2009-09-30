@@ -6,7 +6,7 @@ dojox.image.FlickrBadge
 :Status: Draft
 :Version: 1.0
 :Project owner: ?--
-:Available: 1.0
+:Available: since V1.0
 
 .. contents::
    :depth: 2
