@@ -97,8 +97,8 @@ bookmarkable
 
 A simple demo of dojo.back - it's bookmarkable and based on the tests/back.html
 
-<b> BROKEN </b>
-<b>this isn't working in the sandbox - needs to be a fullblown page ... leaving it here till i figure out if it can be done </b>
+**BROKEN**
+**this isn't working in the sandbox - needs to be a fullblown page ... leaving it here till i figure out if it can be done**
 
 
 .. cv-compound::
