@@ -7,7 +7,7 @@ dojox.string.Builder
 :Version: Dojo Toolkit 1.0+
 :Author: Tom Trenka
 
-The DojoX String Builder is a constructor designed to make working with large strings, particularly in the context of recursive functions, much more efficient and performant.  The basic idea (borrowed primarily from the .NET Framework and heavily optimized) is that you can pass around a single Builder object to various functions, and have each function ~append~ string fragments to the Builder; when you are finished, you can simply add the Builder to an existing string or explicitly call the toString method.
+The DojoX String Builder is a constructor designed to make working with large strings, particularly in the context of recursive functions, much more efficient and performant.  The basic idea (borrowed primarily from the .NET Framework and heavily optimized) is that you can pass around a single Builder object (since objects are passed by reference and not by value) to various functions, and have each function _append_ string fragments to the Builder; when you are finished, you can simply add the Builder to an existing string or explicitly call the toString method.
 
 A simple example of using the Builder:
 
@@ -64,7 +64,9 @@ Situations where using a string builder is handy are template systems and serial
   buildTable(sb);
   console.log(sb.toString());
 
+
 The string Builder has the following methods:
+
  * append
  * concat
  * appendArray
@@ -74,20 +76,20 @@ The string Builder has the following methods:
  * insert
  * toString
 
-In general, the only methods used are ~append~ and ~toString~.  ~concat~ and ~appendArray~ are basically versions of ~append~; ~clear~ cleans out the internal string buffer.
+In general, the only methods used are _append_ and _toString_.  _concat_ and _appendArray_ are basically versions of _append_; _clear_ cleans out the internal string buffer.
 
-~replace~, ~remove~ and ~insert~ all work on existing internal string buffers; ~replace~ functions exactly like String.replace.  ~remove~ will pull N characters beginning at idx:
+_replace_, _remove_ and _insert_ all work on existing internal string buffers; _replace_ functions exactly like String.replace.  _remove_ will pull N characters beginning at idx:
 
 .. code-block :: javascript
   :linenos:
 
   sb.remove(index, numChars);
 
-~insert~ will place a string at index:
+_insert_ will place a string at index:
 
 .. code-block :: javascript
   :linenos:
 
   sb.insert(index, "The rain in Spain falls mainly on the plain");
 
-For a reference on how the Builder was optimized, please see [[http://www.sitepen.com/blog/2008/05/09/string-performance-an-analysis/|String Performance, an Analysis]] and [[http://www.sitepen.com/blog/2008/06/09/string-performance-getting-good-performance-from-internet-explorer/|String Performance: Getting Good Performance from Internet Explorer]].
+For a reference on how the Builder was optimized, please see http://www.sitepen.com/blog/2008/05/09/string-performance-an-analysis/ and http://www.sitepen.com/blog/2008/06/09/string-performance-getting-good-performance-from-internet-explorer/.
