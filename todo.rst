@@ -158,10 +158,6 @@ Priority 4: DojoX
 
   needed: available parameters and their description
 
-* `dojox.image.ThumbnailPicker <dojox/image/ThumbnailPicker>`_
-
-  needed: full page
-
 * `dojox.io.httpParse <dojox/io/httpParse>`_
 
   needed: full page
