@@ -57,7 +57,13 @@ As usual you can create the button widget declaratively using the dojoType attri
 
   .. cv:: html
 
-    <button dojoType="dijit.form.Button" type="button">Click me too!</button>
+    <button dojoType="dijit.form.Button" type="button">Click me too!
+        <script type="dojo/method" event="onClick" args="evt">
+            // Do something:
+            dojo.byId("result1").innerHTML += "Thank you";
+        </script>
+    </button>
+    <div id="result1"></div>
 
 Show only the icon
 ------------------
