@@ -31,18 +31,16 @@ Usage
 
 TODO: how to use the component/class/method
 
-
-
+=========  ====  ===========
+Parameter  Type  Description
+=========  ====  ===========
+TODOC      ---   ---
+=========  ====  ===========
 
 
 ========
 Examples
 ========
-
-Programmatic example
---------------------
-
-TODO: example
 
 Declarative example
 -------------------
