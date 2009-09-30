@@ -93,5 +93,6 @@ In general, the only methods used are *append* and *toString*.  *concat* and *ap
   sb.insert(index, "The rain in Spain falls mainly on the plain");
 
 For a reference on how the Builder was optimized, please see 
+
  * http://www.sitepen.com/blog/2008/05/09/string-performance-an-analysis/ 
  * http://www.sitepen.com/blog/2008/06/09/string-performance-getting-good-performance-from-internet-explorer/.
