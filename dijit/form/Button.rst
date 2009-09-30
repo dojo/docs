@@ -35,7 +35,7 @@ The first example shows how to create a button programmatically.
         // Create a button programmatically:
         var button = new dijit.form.Button({
             label: "Click me!",
-            onClick: function(/*Event*/ e){
+            onClick: function(){
                 // Do something:
                 dojo.byId("result1").innerHTML += "Thank you! ";
             }
