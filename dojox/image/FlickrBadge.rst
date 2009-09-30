@@ -20,23 +20,33 @@ Introduction
 
 Flickr badge displays images on a page and cycles through the images displaying "badge" size
 instances.
-          
 
+
+=====
+Usage
+=====
+
+There are a number of configurable parameters, most of which are optional:
+
+==========    ======================================================================
+Parameter     Description
+==========    ======================================================================
+apikey        your Flickr API key
+columns       # of columns of images to display
+rows          # of rows of images to display
+searchText    free text search of title, description, and tags
+setid         id of a Flickr set to use in displaying images
+tags          a comma separated list of tags or an array of tags to grab from Flickr
+userid        your flickr userid (saves a lookup request)
+username      your flickr username
+==========    ======================================================================
 
 ========
 Examples
 ========
 
-FlickrBadge. There are a number of configurable parameters, most of which are optional:
-
-    * apikey: your Flickr API key
-    * columns: # of columns of images to display
-    * rows: # of rows of images to display
-    * searchText: free text search of title, description, and tags
-    * setid: id of a Flickr set to use in displaying images
-    * tags: a comma separated list of tags or an array of tags to grab from Flickr
-    * userid: your flickr userid (saves a lookup request)
-    * username: your flickr username
+Declarative example
+-------------------
 
 .. cv-compound::
 
@@ -59,13 +69,6 @@ FlickrBadge. There are a number of configurable parameters, most of which are op
     img.thing { width:50px; height:50px; }
 
    </style>
-
-
-
-
-
-
-
 
 
 ========
