@@ -154,10 +154,6 @@ Priority 4: DojoX
 
   needed: full page
 
-* `dojox.image.Lightbox <dojox/image/Lightbox>`_
-
-  needed: examples don't load images
-
 * `dojox.image.LightboxNano <dojox/image/LightboxNano>`_ 
 
   needed: working examples instead of source code
