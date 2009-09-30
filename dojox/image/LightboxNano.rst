@@ -6,7 +6,7 @@ dojox.image.LightboxNano
 :Status: Draft
 :Version: 1.0
 :Project owner: Chris Barber
-:Available: since 1.3?
+:Available: since V1.3
 
 .. contents::
    :depth: 2
