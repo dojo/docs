@@ -31,22 +31,17 @@ The first example shows how to create a button programmatically.
     <script type="text/javascript">
     dojo.require("dijit.form.Button");
 
-    function progButtonPressed() {
-        // Do something:
-        dojo.byId("result1").innerHTML += "Thank you! ";
-    }
-
     dojo.addOnLoad(function(){
         // Create a button programmatically:
         var button = new dijit.form.Button({
-            label: "Click me!"
+            label: "Click me!",
+            onClick: function(/*Event*/ e){
+                // Do something:
+                dojo.byId("result1").innerHTML += "Thank you! ";
+            }
         }, "progButtonNode");
 
-        // Connect the onclick-Event to a function:
-        dojo.connect(dojo.byId("progButtonNode"), "onclick", progButtonPressed);
     });
-
-
     </script>
 
   .. cv:: html
