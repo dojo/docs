@@ -118,10 +118,6 @@ Priority 4: DojoX
 
   needed: full page
 
-* `dojox.color <dojox/color>`_
-
-  needed: full page
-
 * `dojox/data/QueryReadStore/example <dojox/data/QueryReadStore/example>`_
 
   This example is unfinished, should we delete it?
