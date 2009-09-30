@@ -45,7 +45,7 @@ The first example creates a Dialog via markup from an existing DOM node:
     </div>
 
     <p>When pressing this button the dialog will popup:</p>
-    <button id="buttonOne" dojoType="dijit.form.Button">Show me!
+    <button id="buttonOne" dojoType="dijit.form.Button" type="button">Show me!
         <script type="dojo/method" event="onClick" args="evt">
             // Show the Dialog:
             dijit.byId("dialogOne").show();
@@ -78,7 +78,7 @@ Now lets create a dialog programmatically, and change the dialog's content dynam
   .. cv:: html
     
     <p>When pressing this button the dialog will popup. Notice this time there is no DOM node with content for the dialog:</p>
-    <button id="buttonTwo" dojoType="dijit.form.Button" onClick="showDialogTwo();">Show me!</button>
+    <button id="buttonTwo" dojoType="dijit.form.Button" onClick="showDialogTwo();" type="button">Show me!</button>
 
   .. cv:: javascript
     :label: The javascript, put this wherever you want the dialog creation to happen
@@ -122,7 +122,7 @@ If you wish to alter the default color for the underlay, you do so in CSS. The u
     </div>
 
     <p>When pressing this button the dialog will popup:</p>
-    <button id="button4" dojoType="dijit.form.Button">Show me!</button>
+    <button id="button4" dojoType="dijit.form.Button" type="button">Show me!</button>
 
   .. cv:: javascript
 
@@ -188,7 +188,7 @@ To prevent the user from dismissing the dialog if there are errors in the form, 
     </div>
 
     <p>When pressing this button the dialog will popup:</p>
-    <button id="buttonThree" dojoType="dijit.form.Button">Show me!</button>
+    <button id="buttonThree" dojoType="dijit.form.Button" type="button">Show me!</button>
 
   .. cv:: javascript
     :label: The javascript, put this wherever you want the dialog creation to happen
@@ -238,7 +238,7 @@ You can also load dialog content from another page by setting HREF attribute for
     </div>
 
     <p>When pressing this button the dialog will popup loading the dialog content using an XHR call.</p>
-    <button dojoType="dijit.form.Button" onClick="dijit.byId('external').show();">Show me!</button>
+    <button dojoType="dijit.form.Button" onClick="dijit.byId('external').show();" type="button">Show me!</button>
 
 
 
@@ -271,7 +271,7 @@ If you want a scrollbar on a dialog, then you need to add width/height to a div 
     </div>
 
     <p>When pressing this button the dialog will popup (with a scrollbar):</p>
-    <button dojoType="dijit.form.Button" onClick="dijit.byId('sized').show();">Show me!</button>
+    <button dojoType="dijit.form.Button" onClick="dijit.byId('sized').show();" type="button">Show me!</button>
 
 
 =============
