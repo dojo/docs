@@ -17,17 +17,35 @@ A simple hover behavior for images, showing a zoomed version of a size image.
 ============
 Introduction
 ============
-An unobtrusive way to add an unstyled overlay above the srcNode image element. The overlay/glass is a scaled version of the src image (so larger images sized down are clearer).
 
-The logic behind requiring the src image to be large is “it’s going to be downloaded, anyway” so this method avoids having to make thumbnails and 2 http requests among other things.
+dojox.image.MagnifierLite offers an unobtrusive way to add an unstyled overlay above the srcNode image element. The overlay/glass is a scaled version of the src image (so larger images sized down are clearer).
 
-This is the base class for dojox.image.Magnifier, a dojox.gfx-based extension this portion does not require the dojox.gfx package, but is limited to CSS-based styling. 
+The logic behind requiring the src image to be large is “it’s going to be downloaded, anyway” so this method avoids having to make thumbnails and two http requests among other things.
+
+This is the base class for `dojox.image.Magnifier <dojox/image/Magnifier>`_, a dojox.gfx-based extension this portion does not require the dojox.gfx package, but is limited to CSS-based styling. 
+
 
 =====
 Usage
 =====
 
 TODO: how to use the component/class/method
+
+
+
+
+
+========
+Examples
+========
+
+Programmatic example
+--------------------
+
+TODO: example
+
+Declarative example
+-------------------
 
 .. cv-compound::
 
@@ -72,27 +90,8 @@ TODO: how to use the component/class/method
    </style>
 
 
-
-
-
-
-========
-Examples
-========
-
-Programmatic example
---------------------
-
-TODO: example
-
-Declarative example
--------------------
-
-TODO: example
-
-
 ========
 See also
 ========
 
-* TODO: links to other related articles
+* `dojox.image.Magnifier <dojox/image/Magnifier>`_
