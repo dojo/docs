@@ -5,14 +5,14 @@ dijit.form.Button
 
 :Status: Draft
 :Version: 1.0
-:Authors: Becky Gibson, Doug Hays, Bill Keese, Nikolai Onken
+:Authors: Becky Gibson, Doug Hays, Bill Keese, Nikolai Onken, Marcus Reimann
 :Developers: ?-
 :Available: since V?
 
 .. contents::
     :depth: 2
 
-The dijit.form.Button widget is a representation of a normal <button> or <input type="submit/reset/button"/>.  The default value for the `type` attribute is `button`.  However, if creating Button widgets via markup using IE8 in strict mode, the default value is changed by the browser to `submit`.  Because of this, users are encouraged to always specify an explicit `type` attribute.
+The dijit.form.Button widget is a representation of a normal <button> or <input type="submit/reset/button"/>. The default value for the `type` attribute is `button`. However, if creating Button widgets via markup using IE8 in strict mode, the default value is changed by the browser to `submit`. Because of this, users are encouraged to always specify an explicit `type` attribute.
 
 
 ========
@@ -57,7 +57,7 @@ As usual you can create the button widget declaratively using the dojoType attri
 
   .. cv:: html
 
-    <button dojoType="dijit.form.Button">Click me too!</button>
+    <button dojoType="dijit.form.Button" type="button">Click me too!</button>
 
 Show only the icon
 ------------------
@@ -74,7 +74,7 @@ Buttons can have icons and labels, and sometimes they just display an icon, but 
 
   .. cv:: html
 
-    <button dojoType="dijit.form.Button" iconClass="dijitEditorIcon dijitEditorIconCut" showLabel="false">cut</button>
+    <button dojoType="dijit.form.Button" iconClass="dijitEditorIcon dijitEditorIconCut" showLabel="false" type="button">cut</button>
 
 Change the icon
 ---------------
@@ -99,7 +99,7 @@ You can change an icon of a Button using its iconClass attribute. Following exam
 
   .. cv:: html
 
-    <button dojoType="dijit.form.Button" id="toggleButton" iconClass="dijitEditorIcon dijitEditorIconCut">Click me!</button>
+    <button dojoType="dijit.form.Button" id="toggleButton" iconClass="dijitEditorIcon dijitEditorIconCut" type="button">Click me!</button>
 
 
 =============
