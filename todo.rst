@@ -154,10 +154,6 @@ Priority 4: DojoX
 
   needed: full page
 
-* `dojox.image.FlickrBadge <dojox/image/FlickrBadge>`_
-
-  needed: full page
-
 * `dojox.image.Gallery <dojox/image/Gallery>`_
 
   needed: full page
