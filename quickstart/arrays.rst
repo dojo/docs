@@ -42,7 +42,7 @@ dojo.indexOf lets you easily determine the index of an element in an array. It l
   .. cv :: html
 
     <div>The content of our test array is ["foo", "hoo", "zoo"].</div>
-    <button id="refButton1" dojoType="dijit.form.Button" onClick="testIndxOf()">Show the index of the word 'zoo' within the array.</button>
+    <button id="refButton1" dojoType="dijit.form.Button" onClick="testIndxOf()" type="button">Show the index of the word 'zoo' within the array.</button>
     <div id="result1"></div>
 
 
@@ -75,7 +75,7 @@ dojo.lastIndexOf lets you easily determine the last index of an element in an ar
   .. cv :: html
 
     <div>The content of our test array is ["foo", "hoo", "zoo", "shoe", "zoo", "nuu"].</div>
-    <button id="refButton2" dojoType="dijit.form.Button" onClick="testLastIndxOf()">Show the last index of the word 'zoo' within the array.</button>
+    <button id="refButton2" dojoType="dijit.form.Button" onClick="testLastIndxOf()" type="button">Show the last index of the word 'zoo' within the array.</button>
     <div id="result2"></div>
 
 
@@ -105,7 +105,7 @@ Note the "i" variable which returns the current position of an iteration
 
   .. cv :: html
 
-    <button dojoType="dijit.form.Button" onClick="populateData()">Populate data</button>
+    <button dojoType="dijit.form.Button" onClick="populateData()" type="button">Populate data</button>
     <ul id="forEach-items">
 
     </ul>
@@ -131,7 +131,7 @@ Now lets use dojo.forEach with a list of dom nodes we retrieve using dojo.query.
 
   .. cv :: html
 
-    <button dojoType="dijit.form.Button" onClick="populateQueryData()">Populate data</button>
+    <button dojoType="dijit.form.Button" onClick="populateQueryData()" type="button">Populate data</button>
     <ul id="forEachQuery-items">
 
     </ul>
@@ -182,7 +182,7 @@ There are many cases when you have an array and want to filter it by a certain c
 
   .. cv :: html
 
-    <button dojoType="dijit.form.Button" onClick="filterArray()">Filter array</button>
+    <button dojoType="dijit.form.Button" onClick="filterArray()" type="button">Filter array</button>
     <div style="width: 300px; float: left;">
     Filtered items<br />(only people with "Washington" as surname)
     <ul id="filtered-items">
@@ -232,7 +232,7 @@ Another great function provided by Dojo is dojo.map. dojo.map lets you run a fun
 
   .. cv :: html
 
-    <button dojoType="dijit.form.Button" onClick="raiseSalary()">Raise the salary</button>
+    <button dojoType="dijit.form.Button" onClick="raiseSalary()" type="button">Raise the salary</button>
     <div style="width: 300px; float: left;">
     Peoples salaries after raise:
     <ul id="filteredSalary-items">
@@ -283,7 +283,7 @@ Now your bank policies only allows you to give each client one credit over 1 mil
   .. cv :: html
 
     <div>The content of our test array is [200000, 500000, 350000, 1000000, 75, 3].</div>
-    <button id="refButton6" dojoType="dijit.form.Button" onClick="testIndxSome()">Are there some items >=1000000 within the array?</button>
+    <button id="refButton6" dojoType="dijit.form.Button" onClick="testIndxSome()" type="button">Are there some items >=1000000 within the array?</button>
     <div id="result6"></div>
 
 
@@ -321,5 +321,5 @@ An example:
   .. cv :: html
 
     <div>The content of our test array is [{'month': 'january', 'income': 2000}, {'month': 'february', 'income': 3200}, {'month': 'march', 'income': 2100}].</div>
-    <button id="refButton7" dojoType="dijit.form.Button" onClick="testIndxSome()">Is the client allowed to get the credit?</button>
+    <button id="refButton7" dojoType="dijit.form.Button" onClick="testIndxSome()" type="button">Is the client allowed to get the credit?</button>
     <div id="result7"></div>
