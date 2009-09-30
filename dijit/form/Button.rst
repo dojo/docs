@@ -31,16 +31,26 @@ The first example shows how to create a button programmatically.
     <script type="text/javascript">
     dojo.require("dijit.form.Button");
 
+    function progButtonPressed() {
+        // Do something:
+        dojo.byId("result1").innerHTML += "Thank you! ";
+    }
+
     dojo.addOnLoad(function(){
-      var button = new dijit.form.Button({
-                    label: "Click me!"
-      }, "progButtonNode");
+        var button = new dijit.form.Button({
+            label: "Click me!"
+        }, "progButtonNode");
+
+        dojo.connect(dojo.byId("progButtonNode"), "onclick", progButtonPressed);
     });
+
+
     </script>
 
   .. cv:: html
 
-    <button id="progButtonNode"></button>
+    <button id="progButtonNode" type="button"></button>
+    <div id="result1"></div>
 
 Declarative example
 -------------------
@@ -60,10 +70,10 @@ As usual you can create the button widget declaratively using the dojoType attri
     <button dojoType="dijit.form.Button" type="button">Click me too!
         <script type="dojo/method" event="onClick" args="evt">
             // Do something:
-            dojo.byId("result1").innerHTML += "Thank you";
+            dojo.byId("result2").innerHTML += "Thank you! ";
         </script>
     </button>
-    <div id="result1"></div>
+    <div id="result2"></div>
 
 Show only the icon
 ------------------
