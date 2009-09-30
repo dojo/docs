@@ -37,10 +37,12 @@ The first example shows how to create a button programmatically.
     }
 
     dojo.addOnLoad(function(){
+        // Create a button programmatically:
         var button = new dijit.form.Button({
             label: "Click me!"
         }, "progButtonNode");
 
+        // Connect the onclick-Event to a function:
         dojo.connect(dojo.byId("progButtonNode"), "onclick", progButtonPressed);
     });
 
@@ -51,6 +53,7 @@ The first example shows how to create a button programmatically.
 
     <button id="progButtonNode" type="button"></button>
     <div id="result1"></div>
+
 
 Declarative example
 -------------------
@@ -75,6 +78,7 @@ As usual you can create the button widget declaratively using the dojoType attri
     </button>
     <div id="result2"></div>
 
+
 Show only the icon
 ------------------
 
@@ -91,6 +95,7 @@ Buttons can have icons and labels, and sometimes they just display an icon, but 
   .. cv:: html
 
     <button dojoType="dijit.form.Button" iconClass="dijitEditorIcon dijitEditorIconCut" showLabel="false" type="button">cut</button>
+
 
 Change the icon
 ---------------
