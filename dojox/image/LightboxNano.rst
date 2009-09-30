@@ -32,8 +32,6 @@ For being so small, it packs a handful of features:
 Usage
 =====
 
-The LightboxNano is intended to be used on <a> and <img> tags. Upon creation, if the domNode is <img> tag, then it is wrapped in an <a> tag. It will also add two <div> tags inside the <a> tag: one to display a enlarge icon and another to show a loading icon.
-
 ============  ======  ======================================================================
 Parameter     Type    Description
 ============  ======  ======================================================================
@@ -42,7 +40,7 @@ duration      int     The delay in milliseconds of the LighboxNano open and clos
 preloadDelay  int     The delay in milliseconds after the LightboxNano is created before preloading the larger image.
 ============  ======  ======================================================================
 
-To style the enlarge icon and the loading icon, you need to create some CSS that looks like the following:
+The LightboxNano is intended to be used on <a> and <img> tags. Upon creation, if the domNode is <img> tag, then it is wrapped in an <a> tag. It will also add two <div> tags inside the <a> tag: one to display a enlarge icon and another to show a loading icon. To style the enlarge icon and the loading icon, you need to create some CSS that looks like the following:
 
 .. code-block :: css
  :linenos:
