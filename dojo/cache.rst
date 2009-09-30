@@ -11,15 +11,17 @@ dojo.cache
 .. contents::
    :depth: 2
 
-A way to cache string content that is fetchable via `dojo.moduleUrl`.
-
+A getter and setter method for storing the string content associated with the module and url arguments. It is a generic version of the functionality provided by dijit's templatePath method.
 
 ============
 Introduction
 ============
 
-TODO: introduce the component/class/method
+There are many times where you will want to inject some raw HTML into the DOM. However, it can be cumbersome to write the HTML as a string literal in JavaScript.
 
+`dojo.cache` allows you to specify a path to a file that has the HTML, and `dojo.cache` will load it via a synchronous XMLHttpRequest (XHR) call. Because of this, the HTML file should live on the same domain as the web page that uses the JavaScript module that has the dojo.cache call.
+
+The Dojo build system will inline the HTML as a string where the dojo.cache call happens, so it allows for better performance just by doing a build.
 
 =====
 Usage
