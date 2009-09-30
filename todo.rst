@@ -178,10 +178,6 @@ Priority 4: DojoX
 
   needed: full page
 
-* `dojox.image.SlideShow <dojox/image/SlideShow>`_
-
-  needed: full page
-
 * `dojox.image.ThumbnailPicker <dojox/image/ThumbnailPicker>`_
 
   needed: full page
