@@ -156,7 +156,7 @@ Priority 4: DojoX
 
 * `dojox.image.MagnifierLite <dojox/image/MagnifierLite>`__
 
-  needed: full page
+  needed: available parameters and their description
 
 * `dojox.image.ThumbnailPicker <dojox/image/ThumbnailPicker>`_
 
