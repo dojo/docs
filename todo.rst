@@ -15,7 +15,7 @@ Top priority: dojo.js
 
 * `dojo.cldr <dojo/cldr>`_
 
-  needed: full page
+  needed: review necessary
 
 * `dojo.connectPublisher <dojo/connectPublisher>`_
 
@@ -224,7 +224,3 @@ New features for Dojo Toolkit V1.3
 ==================================
 
 With V1.3 each new feature needs a proper documentation at docs.dojocampus.org - otherwise it will not be included in DojoToolkit.
-
-* `dojox.form.Manager <dojox/form/Manager>`_
-
-  needed: examples?
