@@ -20,11 +20,11 @@ dojox.image.Gallery is a widget that displays a series of thumbnail sized images
 
 The Gallery works as a wrapper around two other widgets, dojox.image.ThumbnailPicker and dojox.image.SlideShow. It provides the following features:
 
-    * A row of thumbnail sized images. Clicking on a thumbnail image shows a large version of that picture in the main image pane. Navigation controls are placed to the left and right of the thumbnails, to move between them.
-    * A large image pane, displaying one image at a time. Navigation controls when the mouse pointer is over the image pane, allowing the user to move backwards and forwards between the images, and to start an automated slideshow. The size of the image pane is configurable using the imageWidth and imageHeight attributes.
-    * Reads image data from an implementation of the dojo.data.api.Read interface. This means it is completely decoupled from any particular data source, and can be used with any data source at all as long as it is a valid dojo.data store. For example, the Gallery can display images based on data in a simple text file using dojo.data.ItemFileReadStore, can show Flickr images using dojox.data.FlickrRestStore, or images from Picasa Web Albums using dojox.data.PicasaStore.
-    * Displays the title of each image, using a template that can be simply overridden.
-    * Links an image to a URL, so that clicking the image navigates to a specified web address. This is optional.
+* A row of thumbnail sized images. Clicking on a thumbnail image shows a large version of that picture in the main image pane. Navigation controls are placed to the left and right of the thumbnails, to move between them.
+* A large image pane, displaying one image at a time. Navigation controls when the mouse pointer is over the image pane, allowing the user to move backwards and forwards between the images, and to start an automated slideshow. The size of the image pane is configurable using the imageWidth and imageHeight attributes.
+* Reads image data from an implementation of the dojo.data.api.Read interface. This means it is completely decoupled from any particular data source, and can be used with any data source at all as long as it is a valid dojo.data store. For example, the Gallery can display images based on data in a simple text file using dojo.data.ItemFileReadStore, can show Flickr images using dojox.data.FlickrRestStore, or images from Picasa Web Albums using dojox.data.PicasaStore.
+* Displays the title of each image, using a template that can be simply overridden.
+* Links an image to a URL, so that clicking the image navigates to a specified web address. This is optional.
 
 
 =====
