@@ -277,6 +277,45 @@ Assume a DOM created by this markup:
   dojo.query(".last").next(".red");
 
 
+nextAll
+---------
+Returns all sibling elements that come after the nodes in this dojo.NodeList.
+Optionally takes a query to filter the sibling elements.
+
+**Note**: the optional query can only be single-expression CSS rule. For example, ".thinger" or
+"#someId[attrName='value']" but not "div > span". In short,
+anything which does not invoke a descent to evaluate but
+can instead be used to test a single node is acceptable.
+
+.end() can be used on the returned dojo.NodeList to get back to the
+original dojo.NodeList.
+
+**Example**
+
+Assume a DOM created by this markup:
+
+.. code-block :: html
+  :linenos:
+
+  <div class="container">
+    <div class="red">Red One</div>
+    Some Text
+    <div class="blue first">Blue One</div>
+    <div class="red next">Red Two</div>
+    <div class="blue next">Blue Two</div>
+  </div>
+
+.. code-block :: javascript
+  :linenos:
+
+  dojo.require("dojo.NodeList-traverse");
+  
+  //This code returns the two divs with class of "next":
+  dojo.query(".first").nextAll();
+
+  //This code returns the one div with class "red" and innerHTML "Red Two".
+  dojo.query(".first").nextAll(".red");
+
 prev
 ---------
 Returns the previous element for nodes in this dojo.NodeList.
@@ -315,6 +354,77 @@ Assume a DOM created by this markup:
 
   //This code does not match any nodes so it returns an empty dojo.NodeList:
   dojo.query(".first").prev(".blue");
+
+
+prevAll
+---------
+Returns all sibling elements that come before the nodes in this dojo.NodeList.
+Optionally takes a query to filter the previous elements.
+
+**Note**: the optional query can only be single-expression CSS rule. For example, ".thinger" or
+"#someId[attrName='value']" but not "div > span". In short,
+anything which does not invoke a descent to evaluate but
+can instead be used to test a single node is acceptable.
+
+.end() can be used on the returned dojo.NodeList to get back to the
+original dojo.NodeList.
+
+**Example**
+
+Assume a DOM created by this markup:
+
+.. code-block :: html
+  :linenos:
+
+  <div class="container">
+    <div class="red prev">Red One</div>
+    Some Text
+    <div class="blue prev">Blue One</div>
+    <div class="red second">Red Two</div>
+    <div class="blue last">Blue Two</div>
+  </div>
+
+.. code-block :: javascript
+  :linenos:
+
+  dojo.require("dojo.NodeList-traverse");
+  
+  //This code returns the two divs with class of "prev":
+  dojo.query(".first").prevAll();
+
+  //This code returns the one div with class "red prev" and innerHTML "Red One":
+  dojo.query(".first").prevAll(".red");
+
+
+andSelf
+---------
+Adds the nodes from the previous dojo.NodeList to the current dojo.NodeList.
+
+.end() can be used on the returned dojo.NodeList to get back to the
+original dojo.NodeList.
+
+**Example**
+
+Assume a DOM created by this markup:
+
+.. code-block :: html
+  :linenos:
+
+  <div class="container">
+    <div class="red prev">Red One</div>
+    Some Text
+    <div class="blue prev">Blue One</div>
+    <div class="red second">Red Two</div>
+    <div class="blue">Blue Two</div>
+  </div>
+
+.. code-block :: javascript
+  :linenos:
+
+  dojo.require("dojo.NodeList-traverse");
+  
+  //This code returns the two divs with class of "prev", as well as the div with class "second":
+  dojo.query(".second").prevAll().andSelf();
 
 
 first
