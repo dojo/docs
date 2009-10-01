@@ -39,19 +39,6 @@ dojo.cldr.monetary.getData(code)
   =========  ======  =======================================================
 
 
-.. code-block :: javascript
- :linenos:
-
- <script type="text/javascript">
-   // load monetary data:
-   dojo.require("dojo.cldr.monetary");
-   // the ISO 4217 currency code for Belarusian ruble:
-   var iso = 'BYR';
-   // get monetary data:
-   var cldrMonetary = dojo.cldr.monetary.getData(iso);
- </script>
-
-
 Currency data
 -------------
 
@@ -116,15 +103,39 @@ NOTE: it is currently necessary to perform a one-time installation of the Saxon 
 Examples
 ========
 
-Programmatic example
---------------------
+Monetary example
+----------------
 
-TODO: example
+The following example prints out the monetary data (places and round) for EUR (Euro):
 
-Declarative example
--------------------
+.. cv-compound::
 
-TODO: example
+  .. cv:: javascript
+
+    <script type="text/javascript">
+        dojo.require("dijit.form.Button");
+        // load monetary data:
+        dojo.require("dojo.cldr.monetary");
+    </script>
+
+  .. cv:: html
+
+    <button id="monetaryButton" dojoType="dijit.form.Button" type="button">Get Monetary data for EUR (Euro)
+        <script type="dojo/method" event="onClick">
+            // the ISO 4217 currency code for Euro:
+            var iso = 'EUR';
+            // get monetary data:
+            var cldrMonetary = dojo.cldr.monetary.getData(iso);
+
+            // print out places:
+            dojo.byId("places").innerHTML = "Places: " + cldrMonetary.places;
+
+            // print out round:
+            dojo.byId("round").innerHTML = "Round: " + cldrMonetary.round;
+        </script>
+    </button>
+    <div id="places"></div>
+    <div id="round"></div>
 
 
 ========
