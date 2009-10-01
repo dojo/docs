@@ -116,3 +116,5 @@ See also
 ========
 
 * `dojo.date.locale <dojo/date/locale>`_
+* `dojo.number <dojo/number>`_
+* `dojo.currency <dojo/currency>`_
