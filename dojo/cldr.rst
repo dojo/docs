@@ -52,6 +52,9 @@ dojo.cldr.monetary.getData(code: String): Object
  </script>
 
 
+Currency data
+-------------
+
 .. code-block :: javascript
  :linenos:
 
@@ -60,11 +63,28 @@ dojo.cldr.monetary.getData(code: String): Object
    dojo.requireLocalization("dojo.cldr", "currency");
    // get currency data:
    var cldrCurrency = dojo.i18n.getLocalization("dojo.cldr", "currency", options.locale) || {};
+ </script>
 
+
+Number data
+-----------
+
+ <script type="text/javascript">
    // load number data:
    dojo.requireLocalization("dojo.cldr", "number");
    var cldrNumber= dojo.i18n.getLocalization("dojo.cldr", "number", locale);
  </script>
+
+
+dojo.cldr.supplemental
+----------------------
+
+dojo.cldr.supplemental.getFirstDayOfWeek = function(/*String?*/locale)
+  Returns a zero-based index for first day of the week, as used by the local (Gregorian) calendar. 
+  e.g. Sunday (returns 0), or Monday (returns 1)
+
+dojo.cldr.supplemental.getWeekend(locale: String?)
+  Returns a hash containing the start and end days of the weekend.
 
 
 Buildscripts in util/buildscripts/cldr
