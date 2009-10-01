@@ -122,6 +122,12 @@ Editor
 ~~~~~~
 The RTE has had numerous bug fixes applied to it as well as some code cleanup to make it more extensible and better behaving on browsers such as Opera.  It also had several new plugin modules added to dijit, as well as several new ones added to DojoX.  For information on the DojoX modules, see the DojoX section of these release notes.
 
+**Updated Plugins**
+
+* `LinkDialog <dijit/_editor/plugins/LinkDialog>`_:  The plugin that provides the dialog support for insert image and insert link have been considerably updated.  Input is better validated, invalid values will disable set, and it will auto-append http:// if it believes you have typed only part of a url.
+
+**New Plugins**
+
 * `FullScreen <dijit/_editor/plugins/FullScreen>`_:  A plugin that adds the capability to the editor to take over the complete viewport containing the page running the editor.
 
 * `ViewSource <dijit/_editor/plugins/ViewSource>`_:  A plugin that lets you toggle the editor view between HTML source and RTE modes.
@@ -129,6 +135,7 @@ The RTE has had numerous bug fixes applied to it as well as some code cleanup to
 * `Print <dijit/_editor/plugins/Print>`_:  A plugin that lets you print the contents of the editor frame.
 
 * `NewPage <dijit/_editor/plugins/NewPage>`_:  A plugin that lets you clear the content of the editor and set a new default content with a button click.
+
 
 In addition to the new plugins, the editor icons have all been updated!  They are much cleaner and professional.
 
