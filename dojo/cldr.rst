@@ -29,7 +29,7 @@ The data is transformed from XML data to JSON-style Javascript you see under the
 Monetary data
 -------------
 
-dojo.cldr.monetary.getData(code: String): Object
+dojo.cldr.monetary.getData(code)
   returns a mapping of currency code to currency-specific formatting information. Returns a unique object with properties: places, round
 
   =========  ======  =======================================================
@@ -82,12 +82,24 @@ Number data
 dojo.cldr.supplemental
 ----------------------
 
-dojo.cldr.supplemental.getFirstDayOfWeek = function(/*String?*/locale)
+dojo.cldr.supplemental.getFirstDayOfWeek(locale)
   Returns a zero-based index for first day of the week, as used by the local (Gregorian) calendar. 
   e.g. Sunday (returns 0), or Monday (returns 1)
 
-dojo.cldr.supplemental.getWeekend(locale: String?)
+  =========  ======  =======================================================
+  Parameter  Type    Description
+  =========  ======  =======================================================
+  locale     String  ?
+  =========  ======  =======================================================
+
+dojo.cldr.supplemental.getWeekend(locale)
   Returns a hash containing the start and end days of the weekend.
+
+  =========  ======  =======================================================
+  Parameter  Type    Description
+  =========  ======  =======================================================
+  locale     String  ?
+  =========  ======  =======================================================
 
 
 Buildscripts in util/buildscripts/cldr
