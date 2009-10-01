@@ -26,6 +26,32 @@ Usage
 
 The data is transformed from XML data to JSON-style Javascript you see under the nls/ directory. They are used by other modules in core Dojo such as dojo.date, dojo.number and dojo.currency. It usually is not necessary to use dojo.cldr directly.
 
+Monetary data
+-------------
+
+dojo.cldr.monetary.getData(code: String): Object
+  returns a mapping of currency code to currency-specific formatting information. Returns a unique object with properties: places, round
+
+=========  ======  =======================================================
+Parameter  Type    Description
+=========  ======  =======================================================
+code       String  an `ISO 4217 currency code <http://en.wikipedia.org/wiki/ISO_4217>`_
+=========  ======  =======================================================
+
+
+.. code-block :: javascript
+ :linenos:
+
+ <script type="text/javascript">
+   // load monetary data:
+   dojo.require("dojo.cldr.monetary");
+   // the ISO 4217 currency code for Belarusian ruble:
+   var iso = 'BYR';
+   // get monetary data:
+   var cldrMonetary = dojo.cldr.monetary.getData(iso);
+ </script>
+
+
 .. code-block :: javascript
  :linenos:
 
@@ -38,11 +64,6 @@ The data is transformed from XML data to JSON-style Javascript you see under the
    // load number data:
    dojo.requireLocalization("dojo.cldr", "number");
    var cldrNumber= dojo.i18n.getLocalization("dojo.cldr", "number", locale);
-
-   // load monetary data:
-   dojo.require("dojo.cldr.monetary");
-   // get monetary data:
-   var cldrMonetary = dojo.cldr.monetary.getData(iso);
  </script>
 
 
