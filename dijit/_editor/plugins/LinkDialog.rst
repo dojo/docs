@@ -78,7 +78,6 @@ Basic Usage
   .. javascript::
 
     <script>
-      dojo.require("dijit.form.Button");
       dojo.require("dijit.Editor");
       dojo.require("dijit._editor.plugins.LinkDialog");
     </script>
@@ -90,7 +89,11 @@ Basic Usage
     <br>
     <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['createLink', 'unlink', 'insertImage']">
       <br>
+      <br>
       <a href="http://www.dojotoolkit.org">The best Ajax Toolkit there is, Dojo!</a>
+      <br>
+      <br>
+      <br>
       <br>
       It even has a cool logo: <img src="http://jaredj.dojotoolkit.org/images/dojo.logo.png" alt="The Dojo Toolkit" />
       <br>
