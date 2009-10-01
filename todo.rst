@@ -21,6 +21,10 @@ Top priority: dojo.js
 
   needed: review necessary
 
+* `dojo.i18n <dojo/i18n>`_
+
+  needed: full page
+
 * `dojo.isAlien <dojo/isAlien>`_
 
   needed: a proper test against isAlien() (in the example)
