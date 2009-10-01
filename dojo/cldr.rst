@@ -24,13 +24,25 @@ This data contains tables with culturally sensitive information for hundreds of 
 Usage
 =====
 
-TODO: how to use the component/class/method
+The data is transformed from XML data to JSON-style Javascript you see under the nls/ directory. They are used by other modules in core Dojo such as dojo.date, dojo.number and dojo.currency. It usually is not necessary to use dojo.cldr directly.
 
 .. code-block :: javascript
  :linenos:
 
  <script type="text/javascript">
-   // your code
+   // load currency data:
+   dojo.requireLocalization("dojo.cldr", "currency");
+   // get currency data:
+   var cldrCurrency = dojo.i18n.getLocalization("dojo.cldr", "currency", options.locale) || {};
+
+   // load number data:
+   dojo.requireLocalization("dojo.cldr", "number");
+   var cldrNumber= dojo.i18n.getLocalization("dojo.cldr", "number", locale);
+
+   // load monetary data:
+   dojo.require("dojo.cldr.monetary");
+   // get monetary data:
+   var cldrMonetary = dojo.cldr.monetary.getData(iso);
  </script>
 
 
