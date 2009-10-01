@@ -17,10 +17,6 @@ Top priority: dojo.js
 
   needed: full page
 
-* `dojo.cldr <dojo/cldr>`_
-
-  needed: review necessary
-
 * `dojo.connectPublisher <dojo/connectPublisher>`_
 
   needed: review necessary
