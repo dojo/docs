@@ -18,6 +18,7 @@ Introduction
 
 This function provides a quick way to alter both the dojo.global scope and the dojo.doc document scope with a single call. You pass in a global scope (window object) and if it contains a "document" property, it is used in place of the default dojo.doc for the life of the function call. This call makes it possible for widgets that are dojo.global and dojo.doc scope-control away to have their scopes changed temporarily without affecting the rest of the page.
 
+
 =====
 Usage
 =====
@@ -44,6 +45,7 @@ Use this function to replace the globals for a callback. Only during the callbac
 See also
 ========
 
+* `dojo.global <dojo/global>`_
 * `dojo.doc <dojo/doc>`_
 * `dojo.withDoc <dojo/withDoc>`_
 * `dojo.setContext <dojo/setContext>`_
