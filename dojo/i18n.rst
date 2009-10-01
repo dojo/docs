@@ -13,6 +13,7 @@ dojo.i18n
 
 Utility classes to enable loading of resources for internationalization.
 
+Used exclusively with dojo.requireLocalization.  See http://docs.dojocampus.org/dojo/requireLocalization
 
 ============
 Introduction
