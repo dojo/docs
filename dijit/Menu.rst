@@ -156,7 +156,7 @@ Keyboard
 Action                                        Key
 ==========================================    =================================================
 Open a context menu                           On Windows: shift-f10 or the Windows context menu key
-                                              On Firefox on the Macintosh: ctrl-space
+                                              On Firefox on the Macintosh: ctrl-space On Safari 4 on Mac: VO+shift+m (VO is ususally control+opton)
 Navigate menu items                           Up and down arrow keys
 Activate a menu item                          Spacebar or enter
 Open a submenu                                Spacebar, enter, or right arrow
