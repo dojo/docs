@@ -42,10 +42,5 @@ Though this example is clearly targeted at a browser environment, by using `dojo
 See also
 ========
 
-* `dojo.doc <dojo/doc>`_ 
-
-  Alias for the current document
-
 * `dojo.withGlobal <dojo/withGlobal>`_
-
-  Call callback with globalObject as dojo.global and globalObject.document as dojo.doc
+* `dojo.doc <dojo/doc>`_ 
