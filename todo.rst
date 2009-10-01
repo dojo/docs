@@ -47,6 +47,10 @@ Top priority: dojo.js
 
   needed: review necessary
 
+* `dojo.requireLocalization <dojo/requireLocalization>`_
+
+  needed: full page
+
 * `dojo.moduleUrl <dojo/moduleUrl>`_
 
   needed: review necessary
