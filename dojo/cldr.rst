@@ -32,11 +32,11 @@ Monetary data
 dojo.cldr.monetary.getData(code: String): Object
   returns a mapping of currency code to currency-specific formatting information. Returns a unique object with properties: places, round
 
-=========  ======  =======================================================
-Parameter  Type    Description
-=========  ======  =======================================================
-code       String  an `ISO 4217 currency code <http://en.wikipedia.org/wiki/ISO_4217>`_
-=========  ======  =======================================================
+  =========  ======  =======================================================
+  Parameter  Type    Description
+  =========  ======  =======================================================
+  code       String  an `ISO 4217 currency code <http://en.wikipedia.org/wiki/ISO_4217>`_
+  =========  ======  =======================================================
 
 
 .. code-block :: javascript
