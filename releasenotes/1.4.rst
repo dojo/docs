@@ -61,7 +61,7 @@ dojo.coord
 ----------
 
 * This method in Dojo Base has been deprecated in Dojo 1.4. The returned object is a mixin of `dojo.position <dojo/position>`_ and `dojo.marginBox <dojo/marginBox>`_. Because the x/y position is based on the border-box and the (w)idth/(h)eight attributes represent the margin-box, there was considerable confusion on correctly using the returned object. The new method `dojo.position <dojo/position>`_ performs much faster. Users needing the l/t/w/h attributes from this method can continue to use `dojo.marginBox <dojo/marginBox>`_.
-* See also `dojo.coords <dojo/coords>`_
+* See also `dojo.position <dojo/position>`_
 
 
 dojo.declare
