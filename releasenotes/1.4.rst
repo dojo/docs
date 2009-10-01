@@ -46,7 +46,7 @@ dojo.cache
 dojo.cldr (Dojo i18n)
 ---------------------
 
-* The cultural tables in have been updated to version 1.7.1 of the Unicode CLDR http://unicode.org/cldr
+* The cultural tables have been updated to version 1.7.1 of the Unicode CLDR http://unicode.org/cldr
 * See also `dojo.cldr <dojo/cldr>`_ 
 
 
