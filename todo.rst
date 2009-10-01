@@ -13,6 +13,10 @@ The following pages need more love:
 Top priority: dojo.js
 =====================
 
+* `dojo.eval <dojo/eval>`_
+
+  needed: full page
+
 * `dojo.cldr <dojo/cldr>`_
 
   needed: review necessary
