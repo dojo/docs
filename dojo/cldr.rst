@@ -89,7 +89,7 @@ dojo.cldr.supplemental.getFirstDayOfWeek(locale)
   =========  ======  =======================================================
   Parameter  Type    Description
   =========  ======  =======================================================
-  locale     String  The locale defined by the host environment (see `dojo.date.locale <dojo/date/locale>`_).
+  locale     String  The locale to assume for loading localized resources in this page, specified according to `RFC 3066 <http://www.ietf.org/rfc/rfc3066.txt>`_. Must be specified entirely in lowercase, e.g. `en-us` and `zh-cn`. See the documentation for `dojo.i18n <dojo/i18n>`_ and `dojo.requireLocalization <dojo/requireLocalization>`_ for details on loading localized resources. If no locale is specified, Dojo assumes the browser's user locale as defined by `dojo.locale <dojo/locale>`_.
   =========  ======  =======================================================
 
 dojo.cldr.supplemental.getWeekend(locale)
@@ -98,7 +98,7 @@ dojo.cldr.supplemental.getWeekend(locale)
   =========  ======  =======================================================
   Parameter  Type    Description
   =========  ======  =======================================================
-  locale     String  The locale defined by the host environment (see `dojo.date.locale <dojo/date/locale>`_).
+  locale     String  The locale to assume for loading localized resources in this page, specified according to `RFC 3066 <http://www.ietf.org/rfc/rfc3066.txt>`_. Must be specified entirely in lowercase, e.g. `en-us` and `zh-cn`. See the documentation for `dojo.i18n <dojo/i18n>`_ and `dojo.requireLocalization <dojo/requireLocalization>`_ for details on loading localized resources. If no locale is specified, Dojo assumes the browser's user locale as defined by `dojo.locale <dojo/locale>`_.
   =========  ======  =======================================================
 
 
