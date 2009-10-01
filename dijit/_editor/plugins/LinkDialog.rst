@@ -71,8 +71,6 @@ Examples
 Basic Usage
 -----------
 
-**Note:** The Demo Viewer runs in an iframe, so it can only maximize to the size of the demo viewer.
-
 .. code-example::
   :djConfig: parseOnLoad: true
   :version: 1.4
@@ -82,37 +80,20 @@ Basic Usage
     <script>
       dojo.require("dijit.form.Button");
       dojo.require("dijit.Editor");
-      dojo.require("dijit._editor.plugins.FullScreen");
+      dojo.require("dijit._editor.plugins.LinkDialog");
     </script>
 
     
   .. html::
 
-    <b>Press the FullScreen button or use the hotkey CTRL-SHIFT-F11 while in the editing pane and the editor will go into full screen mode</b>
+    <b>Select any of the links or images below and click the appropriate button to change their properties.  Or, click where on the page you want to insert an image or a link, then click the appropriate button and create the image or link.</b>
     <br>
-    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['fullscreen']">
-    <div>
-    <br>
-    blah blah & blah!
-    <br>
-    </div>
-    <br>
-    <table>
-    <tbody>
-    <tr>
-    <td style="border-style:solid; border-width: 2px; border-color: gray;">One cell</td>
-    <td style="border-style:solid; border-width: 2px; border-color: gray;">
-    Two cell
-    </td>
-    </tr>
-    </tbody>
-    </table>
-    <ul> 
-    <li>item one</li>
-    <li>
-    item two
-    </li>
-    </ul>
+    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['createLink', 'unlink', 'insertImage']">
+      <br>
+      <a href="http://www.dojotoolkit.org">The best Ajax Toolkit there is, Dojo!</a>
+      <br>
+      It even has a cool logo: <img src="http://jaredj.dojotoolkit.org/images/dojo.logo.png" alt="The Dojo Toolkit" />
+      <br>
     </div>
 
 
