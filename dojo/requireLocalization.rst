@@ -13,6 +13,7 @@ dojo.requireLocalization
 
 TODO: short summary of the component/class/method
 
+see http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/i18n/resource-bundling
 
 ============
 Introduction
@@ -55,4 +56,4 @@ TODO: example
 See also
 ========
 
-* TODO: links to other related articles
+* http://www.ibm.com/developerworks/web/library/wa-dojo/index.html
