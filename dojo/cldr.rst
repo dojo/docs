@@ -69,6 +69,9 @@ Currency data
 Number data
 -----------
 
+.. code-block :: javascript
+ :linenos:
+
  <script type="text/javascript">
    // load number data:
    dojo.requireLocalization("dojo.cldr", "number");
