@@ -39,33 +39,6 @@ dojo.cldr.monetary.getData(code)
   =========  ======  =======================================================
 
 
-Currency data
--------------
-
-.. code-block :: javascript
- :linenos:
-
- <script type="text/javascript">
-   // load currency data:
-   dojo.requireLocalization("dojo.cldr", "currency");
-   // get currency data:
-   var cldrCurrency = dojo.i18n.getLocalization("dojo.cldr", "currency", dojo.locale) || {};
- </script>
-
-
-Number data
------------
-
-.. code-block :: javascript
- :linenos:
-
- <script type="text/javascript">
-   // load number data:
-   dojo.requireLocalization("dojo.cldr", "number");
-   var cldrNumber= dojo.i18n.getLocalization("dojo.cldr", "number", dojo.locale);
- </script>
-
-
 dojo.cldr.supplemental
 ----------------------
 
