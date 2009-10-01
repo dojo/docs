@@ -21,10 +21,12 @@ Base Dojo: dojo.js
 
 Dojo Base is the functionality you get by just including a stock built dojo.js or dojo.xd.js in your page.
 
-`djConfig <djConfig>`_
-----------------------
+Confguring Dojo
+---------------
 
-  Configuring Dojo with djConfig
+  * `djConfig <djConfig>`_
+
+    Configuring Dojo with djConfig
 
 Array utilities
 ---------------
@@ -145,7 +147,6 @@ DOM
     * NodeList.empty 
 
 
-
   * Attributes
 
     * `dojo.formToJson <dojo/formToJson>`_
@@ -165,6 +166,7 @@ DOM
     * dojo.removeAttr
       
     * `dojo.formToObject <dojo/formToObject>`_
+
     * `dojo.formToQuery <dojo/formToQuery>`_
 
     * dojo.isDescendant
@@ -404,40 +406,46 @@ Colors
   
   * dojo.colorFromRgb.
 
+
 Miscellaneous Base
 ------------------
 
-  * `dojo.keys <dojo/keys>`_
-  
-    A collection of key constants.
-    
   * `dojo.deprecated <dojo/deprecated>`_
 
     Log a debug message to indicate that a behavior has been deprecated
 
-  * `dojo.version <dojo/version>`_
-
-    The current version number of Dojo
+  * `dojo.eval <dojo/eval>`_
+  
+    Evaluate some string of JavaScript
 
   * `dojo.global <dojo/global>`_
 
     Alias for the global scope
 
+  * `dojo.keys <dojo/keys>`_
+  
+    A collection of key constants.
+
+  * `dojo.locale <dojo/locale>`_
+
+    A string containing the current locale as defined by Dojo
+
   * `dojo.setContext <dojo/setContext>`_
 
     Changes the behavior of many core Dojo functions that deal with namespace and DOM lookup
+    
+  * `dojo.version <dojo/version>`_
 
-  * `dojo.withGlobal <dojo/withGlobal>`_
-
-    Call callback with globalObject as dojo.global and globalObject.document as dojo.doc
+    The current version number of Dojo
 
   * `dojo.withDoc <dojo/withDoc>`_
 
     Call callback with documentObject as dojo.doc
 
-  * `dojo.eval <dojo/eval>`_
-  
-    Evaluate some string of JavaScript
+  * `dojo.withGlobal <dojo/withGlobal>`_
+
+    Call callback with globalObject as dojo.global and globalObject.document as dojo.doc
+
 
 =========    
 Dojo Core
