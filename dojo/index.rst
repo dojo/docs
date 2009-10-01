@@ -26,7 +26,7 @@ Confguring Dojo
 
 * `djConfig <djConfig>`_
 
-  Configuring Dojo with djConfig
+  Possibility to override certain global settings that control how the framework operates
 
 Array utilities
 ---------------
