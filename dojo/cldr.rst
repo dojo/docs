@@ -30,7 +30,7 @@ Monetary data
 -------------
 
 dojo.cldr.monetary.getData(code)
-  returns a mapping of currency code to currency-specific formatting information. Returns a unique object with properties: places, round
+  returns an object with currency-specific formatting information. The object has the two properties .places and .round
 
   =========  ======  =======================================================
   Parameter  Type    Description
