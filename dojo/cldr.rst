@@ -89,7 +89,7 @@ dojo.cldr.supplemental.getFirstDayOfWeek(locale)
   =========  ======  =======================================================
   Parameter  Type    Description
   =========  ======  =======================================================
-  locale     String  The locale defined by the host environment (see `dojo.locale <dojo/locale>`_).
+  locale     String  The locale defined by the host environment (see `dojo.date.locale <dojo/date/locale>`_).
   =========  ======  =======================================================
 
 dojo.cldr.supplemental.getWeekend(locale)
@@ -98,7 +98,7 @@ dojo.cldr.supplemental.getWeekend(locale)
   =========  ======  =======================================================
   Parameter  Type    Description
   =========  ======  =======================================================
-  locale     String  The locale defined by the host environment (see `dojo.locale <dojo/locale>`_).
+  locale     String  The locale defined by the host environment (see `dojo.date.locale <dojo/date/locale>`_).
   =========  ======  =======================================================
 
 
@@ -131,4 +131,4 @@ TODO: example
 See also
 ========
 
-* TODO: links to other related articles
+* `dojo.date.locale <dojo/date/locale>`_
