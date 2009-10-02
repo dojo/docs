@@ -26,7 +26,11 @@ Once required in and enabled, this plugin provides the following features to dij
 * URL input is validated.  The preferred input are full urls, such as http://example.com/somepage.html, but it will 'permit' local urls so long as they are prefixed accordingly, such as /mydir/myfile.html or ./mydir/myfile.html.   The same validation is done for both image inserts and hyperlink inserts.
 * Description text for hyperlinks is validated.  It cannot be empty.
 * Descriptions (alt text) for images is optional, but highly recommended for accessibility reasons.
- 
+* Double-Clicking on a link should activate the Link Properties dialog dropdown on the button. 
+* Double-Clicking on an image should activate the Image Properties dialog dropdown on the button.
+* Single-clicking an image should select the image.  This makes it easy to select, then edit, an image in the page
+
+
 ===========
 Limitations
 ===========
