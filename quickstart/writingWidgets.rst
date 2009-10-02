@@ -70,6 +70,7 @@ Here's a simple example of a widget that creates it's own DOM tree:
   .. cv:: javascript
 
     <script>
+dojo.require('dijit._Widget');
 	dojo.addOnLoad(function(){
 	dojo.declare("MyFirstWidget",[dijit._Widget], {
 		buildRendering: function(){
@@ -78,7 +79,7 @@ Here's a simple example of a widget that creates it's own DOM tree:
 		}
 	});
 		// Create the widget programatically
-		new MyFirstWidget({}).placeAt(dojo.body());
+		(new MyFirstWidget()).placeAt(dojo.body());
 	});
     </script>
 
