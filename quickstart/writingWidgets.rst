@@ -70,13 +70,13 @@ Here's a simple example of a widget that creates it's own DOM tree:
   .. cv:: javascript
 
     <script>
+	dojo.addOnLoad(function(){
 	dojo.declare("MyFirstWidget",[dijit._Widget], {
 		buildRendering: function(){
 			// create the DOM for this widget
 			this.domNode = dojo.create("button", {innerHTML: "push me"});
 		}
 	});
-	dojo.addOnLoad(function(){
 		// Create the widget programatically
 		new MyFirstWidget({}).placeAt(dojo.body());
 	});
