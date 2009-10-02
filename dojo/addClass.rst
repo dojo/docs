@@ -29,7 +29,10 @@ The node can be a string ID of a DOM Node, or a reference to a DOM Node:
   :linenos:
 
   var node = dojo.byId("someNode").parentNode;
-  dojo.addClass(node, "someNodesParent");
+  dojo.addClass(node, "someClass");
+  dojo.addClass(node, "someClass2 someClass3");
+  dojo.addClass(node, ["someClass4", "someClass5"]);  // Adding classes using array is new in 1.4
+
 
 When using addClass with dojo.query, the node parameter is omitted:
 
