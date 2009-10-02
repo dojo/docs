@@ -30,7 +30,11 @@ Usage
 
   dojo.removeClass("someNode","removedClass");
   var node = dojo.byId("someNode").parentNode;
-  dojo.removeClass(node, "removedClass");
+  dojo.removeClass(node, "someClass");
+  dojo.removeClass(node, "someClass2 someClass3");
+  dojo.removeClass(node, ["someClass4", "someClass5"]);  // Removing classes using array is new in 1.4
+  dojo.removeClass(node);  // This will remove all classes - new in 1.4
+
 
 You can also use removeClass as a dojo.query chain:
 
