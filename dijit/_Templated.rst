@@ -60,7 +60,7 @@ or pulled in from a file using `dojo.cache() <dojo/cache>`_
 
  <script type="text/javascript">
    dojo.declare("MyWidget", [dijit._Widget, dijit._Templated], {
-       templateString: 	templateString: dojo.cache("myNameSpace", "templates/MyWidget.html"),
+       templateString: dojo.cache("myNameSpace", "templates/MyWidget.html"),
    });
  </script>
 
@@ -120,7 +120,7 @@ Here's an example of dojoAttachPoint and dojoAttachEvent:
 						"<button dojoAttachEvent='onclick: increment'>press me</button>" +
 						"&nbsp; count: <span dojoAttachPoint='counter'>0</span>" +
 					"</div>",
-				 
+
 				 increment: function(){
 				 	this.counter.innerHTML = ++this._i;
 				 }
@@ -232,7 +232,7 @@ dojoAttachEvent also functions to attach a widget event (not a DOM event) on the
 .. code-block :: html
 
   <fieldset dojoAttachPoint="editNode" waiRole="presentation" style="position: absolute; visibility:hidden" class="dijitReset dijitInline"
-	dojoAttachEvent="onkeypress: _onKeyPress" 
+	dojoAttachEvent="onkeypress: _onKeyPress"
 	><div dojoAttachPoint="editorPlaceholder"></div
 	><span dojoAttachPoint="buttonContainer"
 		><button class='saveButton' dojoAttachPoint="saveButton" dojoType="dijit.form.Button" dojoAttachEvent="onClick:save" disabled="true">${buttonSave}</button
