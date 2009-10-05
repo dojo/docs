@@ -421,7 +421,7 @@ DOM Methods
 :removeClass:
   Remove the passed class to the nodes in this list. For more information see `dojo.removeClass <dojo/removeClass>`_
 :toggleClass:
-  Add the passed class to the nodes in this list, if the class is not present, or removes it. For more information see `dojo.toggleClass <dojo/toggleClass>`_
+  Add the passed class to the nodes in this list, if the class is not present, otherwise removes it. For more information see `dojo.toggleClass <dojo/toggleClass>`_
 :place:
   TODOC
 :orphan:
