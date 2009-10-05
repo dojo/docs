@@ -65,7 +65,7 @@ The following example adds the class "hovered" to the node "example1", if there 
     :label: The CSS
 
     <style type="text/css">
-      .hovered { font-color: orange; background-color: grey; }
+      .hovered { background-color: grey; border: 1px solid red; }
     </style>
 
   .. cv:: javascript
