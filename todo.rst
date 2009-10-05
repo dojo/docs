@@ -200,3 +200,41 @@ New features for Dojo Toolkit V1.3
 ==================================
 
 With V1.3 each new feature needs a proper documentation at docs.dojocampus.org - otherwise it will not be included in DojoToolkit.
+
+
+==================================
+Integration with Dojo
+==================================
+
+We're working on documentation for how to use Dojo with various servers and other environments.  To claim one of the following, just add your name in the () at the beginning of the line and talk with Dylan Schiemann if you have any questions:
+
+* ( ) ItemFileReadStore of Dojo Committers: (firstname, lastname, city)  (needed for all other demos)
+* ( ) Java: JSP
+* ( ) Java: Servlet
+* ( ) Java: Persevere
+* ( ) Java: DWR
+* ( ) Java: Spring
+* ( ) Java: AppEngine
+* ( ) Java: WebSphere
+* ( ) Java: Jetty
+* ( ) PHP: plain
+* ( ) PHP: Zend Framework
+* ( ) PHP: WordPress
+* ( ) Python: plain
+* (Tobias) Python: Django/Dojango
+* ( ) Python: Orbited
+* ( ) Python: Tornado
+* ( ) Python: Django
+* ( ) Python: TurboGears
+* ( ) Python: AppEngine
+* ( ) Perl: plain
+* ( ) Ruby: Rails
+* ( ) Erlang: ErlyWeb/ErlyComet
+* ( ) Compuware Uniface
+* ( ) ProjectZero
+* ( ) WaveMaker
+* ( ) iPhone
+* ( ) Android
+* ( ) Palm Pre
+* ( ) Vodafone widgets
+* ( ) Facebook apps
