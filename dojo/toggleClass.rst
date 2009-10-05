@@ -115,7 +115,7 @@ The following example adds the class "style2" to the node "example2", no matter 
 Toggle multiple nodes
 ---------------------
 
-toggleClass is also available for NodeLists, so that it's also possible to toggle the class for multiple nodes. The following example toggles the class for each node in the NodeList returned from dojo.query:
+toggleClass is also available for `NodeLists <dojo/NodeList>`_, so that it's also possible to toggle the class for multiple nodes. The following example toggles the class for each node in the NodeList returned from dojo.query:
 
 .. cv-compound::
 
