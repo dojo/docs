@@ -133,8 +133,8 @@ toggleClass is also available for NodeLists, so that it's also possible to toggl
         dojo.require("dijit.form.Button");
 
         function toggle3() {
-            // add or remove the class "style3" to/from each node with the class "additionalStyle3":
-            dojo.query(".additionalStyle3").toggleClass("style3");
+            // add or remove the class "style3" to/from each <div> node:
+            dojo.query("#example3 div").toggleClass("style3");
         }
 
         dojo.addOnLoad(function() {
@@ -144,9 +144,11 @@ toggleClass is also available for NodeLists, so that it's also possible to toggl
 
   .. cv:: html
 
-    <div id="example3" class="additionalStyle3">This node will be changed.</div>
-    <div id="example3" class="additionalStyle3">This node also.</div>
-    <div id="example3" class="additionalStyle3">And this is the last one.</div>
+    <div id="example3">
+        <div class="additionalStyle3">This node will be changed.</div>
+        <div class="additionalStyle3">This node also.</div>
+        <div class="additionalStyle3">And this is the last one.</div>
+    </div>
     <button id="button3" dojoType="dijit.form.Button" type="button">Toggle multiple nodes</button>
 
 
