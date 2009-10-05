@@ -144,10 +144,10 @@ toggleClass is also available for NodeLists, so that it's also possible to toggl
 
   .. cv:: html
 
-    <div id="example3">
-        <div class="additionalStyle3">This node will be changed.</div>
-        <div class="additionalStyle3">This node also.</div>
-        <div class="additionalStyle3">And this is the last one.</div>
+    <div id="example3" class="additionalStyle3">
+        <div>This node will be changed.</div>
+        <div>This node also.</div>
+        <div>And this is the last one.</div>
     </div>
     <button id="button3" dojoType="dijit.form.Button" type="button">Toggle multiple nodes</button>
 
