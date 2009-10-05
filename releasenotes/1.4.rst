@@ -186,7 +186,9 @@ dojox.form.DropDownSelect has been moved to dijit.Select as a styled HTML <selec
 
 Calendar
 ~~~~~~~~~~~~~~~~~~~~
-Calendar standalone widget now supports accessibility with ARIA and keyboard.  The widget was promoted to a public object, renamed from dijit._Calendar to dijit.Calendar.  Users can select a date in the calendar using arrow keys, and page-down/up for month navigation.  There is also a dropdown at the month label to change the month.  DateTextBox still relies on the input control for a11y and does not transfer focus to the calendar popup.
+* The widget was promoted to a public object, renamed from dijit._Calendar to dijit.Calendar.
+* Calendar standalone widget now supports accessibility with ARIA and keyboard. Users can select a date in the calendar using arrow keys, and page-down/up for month navigation. There is also a dropdown at the month label to change the month. DateTextBox still relies on the input control for a11y and does not transfer focus to the calendar popup.
+* See also `dijit.Calendar <dijit/Calendar>`_
 
 TextBox
 ~~~~~~~
