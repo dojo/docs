@@ -36,14 +36,6 @@ dojo.toggleClass(node, classStr, condition)
   condition  true|false      Optional. true means to add the class, false means to remove.
   =========  ==============  =================================================
 
-.. code-block :: javascript
- :linenos:
-
- <script type="text/javascript">
-   // Available in `dojo.NodeList` for multiple toggles:
-   dojo.query(".toggleMe").toggleClass("toggleMe");
- </script>
-
 
 ========
 Examples
@@ -118,6 +110,45 @@ The following example adds the class "style2" to the node "example2", no matter 
 
     <div id="example2" class="additionalStyle">This node will be changed.</div>
     <button id="button2" dojoType="dijit.form.Button" type="button">Add a class forcefully</button>
+
+
+Toggle multiple nodes
+---------------------
+
+toggleClass is also available for NodeLists, so that it's also possible to toggle the class for multiple nodes. The following example toggles the class for each node in the NodeList returned from dojo.query:
+
+.. cv-compound::
+
+  .. css::
+    :label: The CSS
+
+    <style type="text/css">
+        .style3 { background-color: #7c7c7c; color: #ffbf00; padding: 10px }
+        .additionalStyle3 { color: #36d900 }
+    </style>
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+        dojo.require("dijit.form.Button");
+
+        function toggle3() {
+            // add or remove the class "style3" to/from each node with the class "additionalStyle3":
+            dojo.query(".additionalStyle3").toggleClass("style3");
+        }
+
+        dojo.addOnLoad(function() {
+            dojo.connect(dojo.byId("button3"), "onclick", toggle3);
+        });
+    </script>
+
+  .. cv:: html
+
+    <div id="example3" class="additionalStyle3">This node will be changed.</div>
+    <div id="example3" class="additionalStyle3">This node also.</div>
+    <div id="example3" class="additionalStyle3">And this is the last one.</div>
+    <button id="button3" dojoType="dijit.form.Button" type="button">Toggle multiple nodes</button>
+
 
 ========
 See also
