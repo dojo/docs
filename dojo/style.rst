@@ -3,7 +3,6 @@
 dojo.style
 ==========
 
-:Status: Draft
 :Version: 1.0
 :Available: since V?
 
@@ -40,7 +39,7 @@ style
   the style property to set in DOM-accessor format ("borderWidth", not "border-width") or an object with key/value pairs suitable for setting each property.
 
 value
-  If passed, sets value on the node for style, handling cross-browser concerns.  When setting a pixel value, be sure to include "px" in the value. For instance, top: "200px". Otherwise, in some cases, some browsers will not apply the style.
+  If passed, sets value on the node for style, handling cross-browser concerns. When setting a pixel value, be sure to include "px" in the value. For instance, top: "200px". Otherwise, in some cases, some browsers will not apply the style.
 
 
 ========
@@ -256,5 +255,9 @@ See also
 
   dojo.style() tutorial from Peter Higgins
 
+* `dojo.addClass <dojo/addClass>`_
+* `dojo.hasClass <dojo/hasClass>`_
+* `dojo.removeClass <dojo/removeClass>`_
+* `dojo.toggleClass <dojo/toggleClass>`_
 * `dojo.query <dojo/query>`_
 * `dojo.NodeList <dojo/NodeList>`_
