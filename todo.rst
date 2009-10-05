@@ -55,10 +55,6 @@ Top priority: dojo.js
 
   needed: review necessary
 
-* `dojo.toggleClass <dojo/toggleClass>`_
-
-  needed: review necessary
-
 
 =====================
 Priority 2: Dojo Core
