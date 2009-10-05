@@ -26,31 +26,15 @@ Usage
 
 Pass a boolean condition if you want to explicitly add or remove.
 
-Parameters:
+dojo.toggleClass(node, classStr, condition)
 
-node
-  The node which should changed.
-
-classStr
-  name of the class
-
-condition
-  true|false Optional. true means to add the class, false means to remove.
-
-.. code-block :: javascript
- :linenos:
-
- <script type="text/javascript">
-   var foo=dojo.toggleClass(node: DomNode|String, classStr: String, condition: Boolean?);
- </script>
-
-
-========
-Examples
-========
-
-Programmatic example
---------------------
+  =========  ==============  =================================================
+  Parameter  Type            Description
+  =========  ==============  =================================================
+  node       DomNode|String  The node which should changed.
+  classStr   string          name of the class to add or remove
+  condition  true|false      Optional. true means to add the class, false means to remove.
+  =========  ==============  =================================================
 
 .. code-block :: javascript
  :linenos:
@@ -64,6 +48,46 @@ Programmatic example
    // Available in `dojo.NodeList` for multiple toggles:
    dojo.query(".toggleMe").toggleClass("toggleMe");
  </script>
+
+
+========
+Examples
+========
+
+Simple toggle
+-------------
+
+The following example adds the class "hovered" to the node "example1", if there is no such class for this node or removes it, if there is already such a class:
+
+.. cv-compound::
+
+  .. css::
+    :label: The CSS
+
+    <style type="text/css">
+      .hovered { font-color: orange; background-color: grey; }
+    </style>
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+        dojo.require("dijit.form.Button");
+
+        function toggleMe() {
+            // add or remove the class "hovered" to/from the node "example1":
+            dojo.toggleClass("example1", "hovered");
+        }
+
+        dojo.addOnLoad(function() {
+            dojo.connect(dojo.byId("button1"), "onclick", toggleMe);
+        });
+    </script>
+
+  .. cv:: html
+
+    <div id="example1">This node will be changed.</div>
+    <button id="button1" dojoType="dijit.form.Button" type="button">Toggle class</button>
+
 
 ========
 See also
