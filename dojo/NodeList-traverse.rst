@@ -361,6 +361,8 @@ prevAll
 Returns all sibling elements that come before the nodes in this dojo.NodeList.
 Optionally takes a query to filter the previous elements.
 
+The returned nodes will be in reverse DOM order -- the first node in the list will be the node closest to the original node/NodeList.
+
 **Note**: the optional query can only be single-expression CSS rule. For example, ".thinger" or
 "#someId[attrName='value']" but not "div > span". In short,
 anything which does not invoke a descent to evaluate but
