@@ -182,7 +182,8 @@ Although not related to the Dojo 1.4 release per-se, note that to support IE8 al
 
 Select
 ~~~~~~
-dojox.form.DropDownSelect has been moved to dijit.Select as a styled HTML <select> replacement.
+* dojox.form.DropDownSelect has been moved to dijit.Select as a styled HTML <select> replacement.
+* See also `dijit.Select <dijit/Select>`_
 
 Calendar
 ~~~~~~~~~~~~~~~~~~~~
