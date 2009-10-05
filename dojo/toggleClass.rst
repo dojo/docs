@@ -124,7 +124,7 @@ toggleClass is also available for NodeLists, so that it's also possible to toggl
 
     <style type="text/css">
         .style3 { background-color: #7c7c7c; color: #ffbf00; padding: 10px }
-        .additionalStyle3 { background-color: #491f000; color: #36d900 }
+        .additionalStyle3 { background-color: #491f00; color: #36d900 }
     </style>
 
   .. cv:: javascript
