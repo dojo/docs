@@ -40,11 +40,6 @@ dojo.toggleClass(node, classStr, condition)
  :linenos:
 
  <script type="text/javascript">
-   dojo.toggleClass("someNode", "hovered");
-
-   // Forcefully add a class:
-   dojo.toggleClass("someNode", "hovered", true);
-
    // Available in `dojo.NodeList` for multiple toggles:
    dojo.query(".toggleMe").toggleClass("toggleMe");
  </script>
@@ -57,7 +52,7 @@ Examples
 Simple toggle
 -------------
 
-The following example adds the class "hovered" to the node "example1", if there is no such class for this node or removes it, if there is already such a class:
+The following example adds the class "style1" to the node "example1", if there is no such class for this node or removes it, if there is already such a class:
 
 .. cv-compound::
 
@@ -65,7 +60,7 @@ The following example adds the class "hovered" to the node "example1", if there 
     :label: The CSS
 
     <style type="text/css">
-      .hovered { background-color: #7c7c7c; color: #ffbf00; border: 1px solid #ffbf00; padding: 20px;}
+        .style1 { background-color: #7c7c7c; color: #ffbf00; border: 1px solid #ffbf00; padding: 20px;}
     </style>
 
   .. cv:: javascript
@@ -73,13 +68,13 @@ The following example adds the class "hovered" to the node "example1", if there 
     <script type="text/javascript">
         dojo.require("dijit.form.Button");
 
-        function toggleMe() {
-            // add or remove the class "hovered" to/from the node "example1":
-            dojo.toggleClass("example1", "hovered");
+        function toggle1() {
+            // add or remove the class "style1" to/from the node "example1":
+            dojo.toggleClass("example1", "style1");
         }
 
         dojo.addOnLoad(function() {
-            dojo.connect(dojo.byId("button1"), "onclick", toggleMe);
+            dojo.connect(dojo.byId("button1"), "onclick", toggle1);
         });
     </script>
 
@@ -88,6 +83,41 @@ The following example adds the class "hovered" to the node "example1", if there 
     <div id="example1">This node will be changed.</div>
     <button id="button1" dojoType="dijit.form.Button" type="button">Toggle class</button>
 
+
+Forcefully add a class
+----------------------
+
+The following example adds the class "style2" to the node "example2", no matter if there is already such a class for this node or not:
+
+.. cv-compound::
+
+  .. css::
+    :label: The CSS
+
+    <style type="text/css">
+        .style2 { background-color: #7c7c7c; color: #ffbf00; border: 1px solid #ffbf00; padding: 20px;}
+        .additionalStyle { border: 5px solid #ffbf00; padding: 20px;}
+    </style>
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+        dojo.require("dijit.form.Button");
+
+        function toggle2() {
+            // add or remove the class "style2" to/from the node "example2":
+            dojo.toggleClass("example2", "style2", true);
+        }
+
+        dojo.addOnLoad(function() {
+            dojo.connect(dojo.byId("button2"), "onclick", toggle2);
+        });
+    </script>
+
+  .. cv:: html
+
+    <div id="example2" class="style2 additionalStyle">This node will be changed.</div>
+    <button id="button2" dojoType="dijit.form.Button" type="button">Add a class forcefully</button>
 
 ========
 See also
