@@ -107,24 +107,27 @@ Dijit
 
 top level widgets
 -----------------
-Tree
-~~~~
+
+dijit.Tree
+~~~~~~~~~~
+
 * dijit._tree.dndSource moved to dijit.tree.dndSource (since it's supposed to be used publicly)
 * Lots of cleanup and bug fixes around DnD related code
-* Multi-character search.  Typing "al" will jump directly to first node starting with "al".
+* Multi-character search. Typing "al" will jump directly to first node starting with "al".
 * new Path and selectedItem attributes to get/set the current tree item (`#9339 <http://bugs.dojotoolkit.org/ticket/9339>`_)
-* Multi-parented items support.   Tree can support items with multiple parents, as long as this doesn't cause a loop.  (`#9361 <http://bugs.dojotoolkit.org/ticket/9361>`_)
-* Deferred child load option on TreeStoreModel.  Option added to deferring calling loadItem() on a data store item until it's children need to be read.  Performance boost for JsonRestStore.  (`#9575 <http://bugs.dojotoolkit.org/ticket/9575>`_)
+* Multi-parented items support. Tree can support items with multiple parents, as long as this doesn't cause a loop. (`#9361 <http://bugs.dojotoolkit.org/ticket/9361>`_)
+* Deferred child load option on TreeStoreModel. Option added to deferring calling loadItem() on a data store item until it's children need to be read. Performance boost for JsonRestStore. (`#9575 <http://bugs.dojotoolkit.org/ticket/9575>`_)
 * getTooltip() method can set tooltip on each tree node
 
 
-Editor
-~~~~~~
-The RTE has had numerous bug fixes applied to it as well as some code cleanup to make it more extensible and better behaving on browsers such as Opera.  It also had several new plugin modules added to dijit, as well as several new ones added to DojoX.  For information on the DojoX modules, see the DojoX section of these release notes.
+dijit.Editor
+~~~~~~~~~~~~
+
+The RTE has had numerous bug fixes applied to it as well as some code cleanup to make it more extensible and better behaving on browsers such as Opera. It also had several new plugin modules added to dijit, as well as several new ones added to DojoX. For information on the DojoX modules, see the DojoX section of these release notes.
 
 **Updated Plugins**
 
-* `LinkDialog <dijit/_editor/plugins/LinkDialog>`_:  The plugin that provides the dialog support for insert image and insert link have been considerably updated.  Input is better validated, invalid values will disable set, and it will auto-append http:// if it believes you have typed only part of a url.
+* `LinkDialog <dijit/_editor/plugins/LinkDialog>`_:  The plugin that provides the dialog support for insert image and insert link have been considerably updated. Input is better validated, invalid values will disable set, and it will auto-append http:// if it believes you have typed only part of a url.
 
 **New Plugins**
 
@@ -136,92 +139,121 @@ The RTE has had numerous bug fixes applied to it as well as some code cleanup to
 
 * `NewPage <dijit/_editor/plugins/NewPage>`_:  A plugin that lets you clear the content of the editor and set a new default content with a button click.
 
-
 In addition to the new plugins, the editor icons have all been updated!  They are much cleaner and professional.
 
 Dialog
 ~~~~~~
+
 * Multiple dialogs can now be shown (with one dialog launching over another).
 * Dialog supports aria-describedby to make it more accessible to screen readers.
 
 Menu
 ~~~~
-Sliding the mouse diagonally from a vertical menu to a second vertical menu will no longer close the second menu if the mouse temporarily moves off of both menus.   (This happens when the MenuItem in the second menu is below the bottom of the first Menu.) ( (`#6773 <http://bugs.dojotoolkit.org/ticket/6773>`_)
+
+* Sliding the mouse diagonally from a vertical menu to a second vertical menu will no longer close the second menu if the mouse temporarily moves off of both menus. (This happens when the MenuItem in the second menu is below the bottom of the first Menu.) ( (`#6773 <http://bugs.dojotoolkit.org/ticket/6773>`_)
 
 TitlePane
 ~~~~~~~~~
-* toggleable attribute to control whether or not user can close the TitlePane.  Useful for non-closable TitlePane's in a app that match the styling of the other TitlePanes (and other dijit components)
+
+* toggleable attribute to control whether or not user can close the TitlePane. Useful for non-closable TitlePane's in a app that match the styling of the other TitlePanes (and other dijit components)
 * tooltip attribute to control tooltip on title bar
 
 Tooltip
 ~~~~~~~
-addTarget()/removeTarget() methods to dynamically attach/detach the tooltip from various nodes.
+
+* addTarget()/removeTarget() methods to dynamically attach/detach the tooltip from various nodes.
+
+dijit.Calendar
+~~~~~~~~~~~~~~
+
+* The previously available widget dijit._Calendar was promoted to a public object and therefore renamed from dijit._Calendar to dijit.Calendar.
+* Calendar standalone widget now supports accessibility with ARIA and keyboard. Users can select a date in the calendar using arrow keys, and page-down/up for month navigation. There is also a dropdown at the month label to change the month. DateTextBox still relies on the input control for a11y and does not transfer focus to the calendar popup.
+* See also `dijit.Calendar <dijit/Calendar>`_
 
 dijit.layout
 ------------
+
 TabContainer / AccordionContainer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 * scrolling tab labels now supported (like on Firefox etc.) so that labels don't spill over to two rows when there isn't enough space
 * tab labels / pane titles can be changed via pane.attr('title', ...)
-* icons added, controlled via iconClass parameter (like for Buttons and MenuItems).   To display only icons set showTitle=false.
+* icons added, controlled via iconClass parameter (like for Buttons and MenuItems). To display only icons set showTitle=false.
 * tooltip attribute controls tooltip on tab labels or accordion pane titles
 
 ContentPane
 ~~~~~~~~~~~
+
 * ContentPane now acts as a full layout widget, calling resize() on it's child widgets when (not before) it is made visible, avoiding problems with children being initialized while hidden.
 * Consequently ContentPane now defines isLayoutContainer to true
 * Fixes related to resizing and href loading, including avoiding premature href loading for ContentPanes in nested TabContainers
 
-
-
 dijit.form
 ----------
-Button
-~~~~~~
-Although not related to the Dojo 1.4 release per-se, note that to support IE8 all dijit.form.Button's declared in markup must have type=button (unless they are intended as submit buttons).   This is to work around an IE8 problem where the parser can't distinguish between an explicit type=submit and an implicit one.   (The default type for <button> tags is submit, according to the latest HTML spec.)
-
-Select
-~~~~~~
-* dojox.form.DropDownSelect has been moved to dijit.Select as a styled HTML <select> replacement.
-* See also `dijit.Select <dijit/Select>`_
-
-Calendar
-~~~~~~~~~~~~~~~~~~~~
-* The widget was promoted to a public object, renamed from dijit._Calendar to dijit.Calendar.
-* Calendar standalone widget now supports accessibility with ARIA and keyboard. Users can select a date in the calendar using arrow keys, and page-down/up for month navigation. There is also a dropdown at the month label to change the month. DateTextBox still relies on the input control for a11y and does not transfer focus to the calendar popup.
-* See also `dijit.Calendar <dijit/Calendar>`_
-
-TextBox
-~~~~~~~
-selectOnClick attribute added to `dijit.form.TextBox <dijit/form/TextBox>`_ and all descendant form widgets, selecting all the text in the field just by clicking.   This makes it easier for users to change the value: just click and type.
-
-DropDownButton, ComboButton
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-dropDownPosition parameter controls where the drop down appears, as usual searching a list of positions until somewhere is found where the drop down fits.   Example:  dropDownPosition="top,bottom"
 
 onChange event handling
 ~~~~~~~~~~~~~~~~~~~~~~~
-Most dijit.form widgets fire the onChange event after a value change has been detected.  With some widgets, this event fired synchronously before the attr('value',val) returned, while on other widgets, the event was asynchronous.  In order to return control to the browser's UI thread sooner, and also to collapse onChange events that fire faster tha the user handler can execute, the events will always fire asynchronously now, and consecutive, unprocessed onChange events will be collapsed into single events.  User code that assumed onChange would always fire synchronously after a value change will have to be modified.
 
-NumberSpinner
-~~~~~~~~~~~~~
-The `NumberSpinner <dijit/form/NumberSpinner>`_ widget has changed the **required** attribute default value from true to false to more consistently allow for unspecified values within a FORM.
+Most dijit.form widgets fire the onChange event after a value change has been detected. With some widgets, this event fired synchronously before the attr('value',val) returned, while on other widgets, the event was asynchronous. In order to return control to the browser's UI thread sooner, and also to collapse onChange events that fire faster tha the user handler can execute, the events will always fire asynchronously now, and consecutive, unprocessed onChange events will be collapsed into single events. User code that assumed onChange would always fire synchronously after a value change will have to be modified.
+
+dijit.form.Button
+~~~~~~~~~~~~~~~~~
+
+* Although not related to the Dojo 1.4 release per-se, note that to support IE8 all dijit.form.Button's declared in markup must have type=button (unless they are intended as submit buttons). This is to work around an IE8 problem where the parser can't distinguish between an explicit type=submit and an implicit one. (The default type for <button> tags is submit, according to the latest HTML spec.)
+
+dijit.form.ComboButton
+~~~~~~~~~~~~~~~~~~~~~~
+
+* A new parameter dropDownPosition was added.
+* The parameter controls where the drop down appears, as usual searching a list of positions until somewhere is found where the drop down fits.
+* Example: dropDownPosition="top,bottom"
+* See also `dijit.form.ComboButton <dijit/form/ComboButton>`_
+
+dijit.form.DropDownButton
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* A new parameter dropDownPosition was added.
+* The parameter controls where the drop down appears, as usual searching a list of positions until somewhere is found where the drop down fits.
+* Example: dropDownPosition="top,bottom"
+* See also `dijit.form.DropDownButton <dijit/form/DropDownButton>`_
+
+dijit.form.NumberSpinner
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+* The NumberSpinner widget has changed the **required** attribute default value from true to false to more consistently allow for unspecified values within a FORM.
+* See also `dijit.form.NumberSpinner <dijit/form/NumberSpinner>`_
+
+dijit.form.Select
+~~~~~~~~~~~~~~~~~
+
+* dojox.form.DropDownSelect has been moved to dijit.form.Select as a styled HTML <select> replacement.
+* See also `dijit.form.Select <dijit/form/Select>`_
+
+dijit.form.TextBox
+~~~~~~~~~~~~~~~~~~
+
+* selectOnClick attribute added to `dijit.form.TextBox <dijit/form/TextBox>`_ and all descendant form widgets, selecting all the text in the field just by clicking.
+* This makes it easier for users to change the value: just click and type.
+* See also `dijit.form.TextBox <dijit/form/TextBox>`_
 
 Dijit infrastructure changes
 ----------------------------
+
 _Templated
 ~~~~~~~~~~
-* widgetsInTemplate widget lifecycle: lots of bug fixes around the lifecycle for widgets in templates.  startup() is now called on widgets in templates when startup() is called on the main widget.   Templated Layout widgets with widgets in their templates should call resize() on those widgets manually.
-* templatePath has been deprecated in favor of templateString used with dojo.cache(), see above.
 
+* widgetsInTemplate widget lifecycle: lots of bug fixes around the lifecycle for widgets in templates. startup() is now called on widgets in templates when startup() is called on the main widget. Templated Layout widgets with widgets in their templates should call resize() on those widgets manually.
+* templatePath has been deprecated in favor of templateString used with dojo.cache(), see above.
 
 dijit.WidgetSet enhancements
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 dijit.WidgetSet/dijit.registry now has a .length property, and new array-like functions: toArray, some, every, and map. forEach now returns instance for chaining. forEach, some, every, filter and map now accept a 'thisObj' as second or third param (after callback)
 
 Browser support
 ---------------
-* Firefox 2 support dropped.  Firefox V3 and V3.5 supported.
+
+* Firefox 2 support dropped. Firefox V3 and V3.5 supported.
 * Latest Safari (Safari v4) and latest Chrome (Chrome v3) supported, but not previous versions.
 * IE6, IE7, IE8 all supported
 * Keyboard now supported in all browsers (previously it didn't work in safari and on chrome)
@@ -291,7 +323,7 @@ dojox.grid
 ----------
 
 * dojox.grid.TreeGrid - support for collapsable rows and model-based (dijit.tree.ForestStoreModel) structure.
-* compat grid (dojox.grid.Grid) is now bundled in the dojox/grid directory as a tarball archive for those who would like to continue using the deprecated (1.1) Grid.  dojox.grid.DataGrid is the replacement.
+* compat grid (dojox.grid.Grid) is now bundled in the dojox/grid directory as a tarball archive for those who would like to continue using the deprecated (1.1) Grid. dojox.grid.DataGrid is the replacement.
 
 
 dojox.grid.EnhancedGrid
@@ -315,7 +347,7 @@ dojox.image
 dojox.layout
 ------------
 
-* dojox.layout.ContentPane.attr('href', ...) now returns a dojo.Deferred rather than a dojox.layout.ContentPane.DeferredHandle custom class.   The dojo.Deferred triggers when the load completes (or errors out).
+* dojox.layout.ContentPane.attr('href', ...) now returns a dojo.Deferred rather than a dojox.layout.ContentPane.DeferredHandle custom class. The dojo.Deferred triggers when the load completes (or errors out).
 
 * dojo.layout.GridContainer styles changed, with red borders removed and theme-specific drop indicators added.
 
