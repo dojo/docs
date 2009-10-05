@@ -415,13 +415,13 @@ DOM Methods
 :removeAttr:
   **New in 1.4** - Forcefully remove the passed attribute from a node. 
 :style:
-  TODOC
+  Gets or sets styles to the nodes in this list. For more information see `dojo.style <dojo/style>`_
 :addClass:
-  Add the passed class to the nodes in this list. TODOC
+  Add the passed class to the nodes in this list. For more information see `dojo.addClass <dojo/addClass>`_
 :removeClass:
-  TODOC
+  Removes the passed class to the nodes in this list. For more information see `dojo.removeClass <dojo/removeClass>`_
 :toggleClass:
-  TODOC
+  Adds the passed class to the nodes in this list, if the class is not present, or removes it. For more information see `dojo.toggleClass <dojo/toggleClass>`_
 :place:
   TODOC
 :orphan:
@@ -434,6 +434,7 @@ DOM Methods
   TODOC
 :coords:
   TODOC
+
 
 Event Methods
 -------------
