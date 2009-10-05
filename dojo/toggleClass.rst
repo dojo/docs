@@ -116,7 +116,7 @@ The following example adds the class "style2" to the node "example2", no matter 
 
   .. cv:: html
 
-    <div id="example2" class="style2 additionalStyle">This node will be changed.</div>
+    <div id="example2" class="additionalStyle">This node will be changed.</div>
     <button id="button2" dojoType="dijit.form.Button" type="button">Add a class forcefully</button>
 
 ========
