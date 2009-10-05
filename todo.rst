@@ -209,6 +209,7 @@ Integration with Dojo
 We're working on documentation for how to use Dojo with various servers and other environments.  To claim one of the following, just add your name in the () at the beginning of the line and talk with Dylan Schiemann if you have any questions:
 
 * ( ) ItemFileReadStore of Dojo Committers: (firstname, lastname, city)  (needed for all other demos)
+* ( ) Basic Dojo-based UI for displaying information about committers... tundra theme, DTL-based table view of committers, etc.
 * ( ) Java: JSP
 * ( ) Java: Servlet
 * ( ) Java: Persevere
