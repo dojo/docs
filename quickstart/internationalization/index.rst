@@ -27,4 +27,3 @@ Localization in the form of translated resources, mostly in the Dijit project, a
 * `Translatable Resource bundles <quickstart/internationalization/resource-bundling>`_
 * `Cultural conventions: Date, Number and Currency <quickstart/internationalization/number-and-currency-formatting>`_
 * `Bi-Directional Text <quickstart/internationalization/bi-directional-text>`_
-* `Globalization Tutorial <quickstart/internationalization/globalization-tutorial/index>`_
