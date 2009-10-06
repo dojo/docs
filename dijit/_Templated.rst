@@ -39,7 +39,7 @@ and then instead of defining buildRendering(), define a ``templateString``.
 ============
 The template
 ============
-The template is specified in the widget attribute ``templateString``, and points to some HTML w/a single root node, with special attributes on the tags, plus possibly substitution variables, etc.
+The template is specified in the widget attribute ``templateString``, and points to some HTML w/a `single root node`, with special attributes on the tags, plus possibly substitution variables, etc.
 
 It can either be specified as a literal string:
 
@@ -246,6 +246,18 @@ The onClick event on the dijit.form.Button will call InlineEditBox.save().
 The widgetsInTemplate feature does not support adding layout widgets as children.  In particular there are issues with startup() and resize() calls to the children.
 
 Also note that a widget's getChildren() method and similar methods will *not* include the widgets declared in the template, but rather just the widgets inside the containerNode.   This is because the widgets declared in the template are internal objects, effectively hidden from widget users.  In other words, only the developer of the widget knows that it internally contains widgets.
+
+===============
+Common Pitfalls
+===============
+
+1. Be sure to only have one root node in your template
+
+2. Don't start your template (or end it) with a comment (because that means you technically have two nodes)
+
+3. Avoid a trailing </div> at the end of your template
+
+4. For widgetsInTemplate, don't try to make the root node itself a widget.   That's not supported (that would make the top node the root of two separate widgets and we can't support that).
 
 ========
 See also
