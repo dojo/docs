@@ -5,7 +5,7 @@ Globalization Guidelines: Encoding
 
 :Status: Draft
 :Version: 1.0
-:Authorsr: ?--
+:Authors: ?--
 :Available: since V?
 
 .. contents::
@@ -139,8 +139,8 @@ Some browsers like IE always send URLs using the default system encoding. For ex
 
 You might get different results for name1 and name2 at the server side:
 
-name1 --> 0xD2 0xBB (in GB2312, Wrong!)
-name2 --> 0xE4 0xB8 0x80 (in UTF-8, Right!)
+* name1 --> 0xD2 0xBB (in GB2312, Wrong!)
+* name2 --> 0xE4 0xB8 0x80 (in UTF-8, Right!)
 
 The right way is to encode name1 first:
 
