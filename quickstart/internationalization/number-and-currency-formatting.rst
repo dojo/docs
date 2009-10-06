@@ -65,7 +65,12 @@ Also available under `dojo.cldr.supplemental <dojo/cldr#supplemental>`_ are rout
 Numbers and currencies
 ======================
 
-The formatting and parsing of numbers is handled in much the same way. Conventions vary around the world for the decimal and thousands separator, placement of the sign, and symbols used to indicate exponential numbers or percentages. There are other exceptions, such as in India, where the thousands separator is used at the thousands place, then again after every two digits instead of three. Dojo provides the facilities to properly format and parse numbers on a localized basis using the methods in dojo.number:
+The formatting and parsing of numbers is handled in much the same way. Conventions vary around the world for the decimal and thousands separator, placement of the sign, and symbols used to indicate exponential numbers or percentages. There are other exceptions, such as in India, where the thousands separator is used at the thousands place, then again after every two digits instead of three. 
+
+dojo.number
+-----------
+
+Dojo provides the facilities to properly format and parse numbers on a localized basis using the methods in `dojo.number <dojo/number>`_:
 
 .. code-block :: javascript
  :linenos:
@@ -83,6 +88,9 @@ The formatting and parsing of numbers is handled in much the same way. Conventio
  </script>
 
 Other options may be specified to limit output to a certain number of decimal places or use rounding. And again, custom formats may be specified, overriding the local customs.
+
+dojo.currency
+-------------
 
 `dojo.currency <dojo/currency>`_ combines the functionality of dojo.number to use the appropriate syntax with knowledge of the conventions associated with a particular currency -- this includes the number of decimal places typically used with a currency, rounding conventions, and the currency symbol which itself may be rendered differently according to locale, any of these may be overridden. When calling dojo.currency APIs, be sure to specify a currency according to its 3-letter ISO-4217 symbol.
 
