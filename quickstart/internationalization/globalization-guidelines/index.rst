@@ -25,7 +25,7 @@ Use the following guidelines to implement internationalization.
 
 
 =====================================================================================================
-`Encoding guidelines <quickstart/internationalization/globalization-guidelines/encoding-guidelines>`_
+`Encoding Guidelines <quickstart/internationalization/globalization-guidelines/encoding-guidelines>`_
 =====================================================================================================
 
 * `You should always use UTF-8 for encoding settings wherever applicable. <quickstart/internationalization/globalization-guidelines/encoding-guidelines#you-should-always-use-utf-8-for-encoding-settings-wherever-applicable>`_
