@@ -13,7 +13,7 @@ dojo.requireLocalization
 
 TODO: short summary of the component/class/method
 
-see http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/i18n/resource-bundling
+see `Translatable Resource bundles <quickstart/internationalization/resource-bundling>`_
 
 ============
 Introduction
@@ -56,4 +56,5 @@ TODO: example
 See also
 ========
 
+* `Translatable Resource bundles <quickstart/internationalization/resource-bundling>`_
 * http://www.ibm.com/developerworks/web/library/wa-dojo/index.html
