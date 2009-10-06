@@ -37,6 +37,7 @@ JavaScript Extensions
 * Todo: classes
 * Todo: inheritance
 * Todo: mixins
+* `Internationalization (i18n) <quickstart/internationalization/index>`_
 
 
 AJAX
