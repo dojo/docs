@@ -41,7 +41,6 @@ Use the following guidelines to implement internationalization.
 `Locale and Resource Bundle Guidelines <quickstart/internationalization/globalization-guidelines/locale-and-resource-bundle-guidelines>`_
 =========================================================================================================================================
 
-* You must set Content-Type in an HTTP response header if the response is not encoded in UTF-8.
 * `You must set djConfig.locale in all files to the same as the locale used by the server code. <quickstart/internationalization/globalization-guidelines/locale-and-resource-bundle-guidelines#you-must-set-djconfig-locale-in-all-files-to-achieve-server-based-personalization>`_
 * `You must always use resource bundle to store the strings displayed to users. <quickstart/internationalization/globalization-guidelines/locale-and-resource-bundle-guidelines#you-must-always-use-resource-bundles-to-store-the-strings-displayed-to-users>`_
 * `You should use djConfig.locale to set the default locale and extra locales, and use only dojo.requireLocalization without the locale parameter. <quickstart/internationalization/globalization-guidelines/locale-and-resource-bundle-guidelines#you-should-use-djconfig-locale-to-set-the-default-locale-and-extra-locales-and-use-only-dojo-requirelocalization-without-the-locale-parameter>`_
