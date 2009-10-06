@@ -24,9 +24,9 @@ Dojo addressed the globalization features at the very beginning of its developme
 Use the following guidelines to implement internationalization.
 
 
-===================
-Encoding guidelines
-===================
+=====================================================================================================
+`Encoding guidelines <quickstart/internationalization/globalization-guidelines/encoding-guidelines>`_
+=====================================================================================================
 
 * You should always use UTF-8 for encoding settings wherever applicable.
 * You should encode all text files in UTF-8.
