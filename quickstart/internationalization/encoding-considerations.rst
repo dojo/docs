@@ -31,7 +31,7 @@ A user agent such as one of the current generation browsers infers the encoding 
 
  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
 
-The most common means of specifying the encoding in a page is to use the META tag. Note that the META tag only works in pages loaded directly by browsers or IFRAMEs and may not function when used in other situations, such as in a document referenced by HREF in `dijit.layout.ContentPane <dijit/layout/ContentPane>`_. UTF-8 is the detault encoding used by XML documents exchanged by the `XMLHTTP request object <quickstart/ajax>`_ and also is the encoding that is used internally by Dojo APIs such as `dojo.io.bind <dojo/io/bind>`_. We recommend using UTF-8 as the encoding for all of your applications.
+The most common means of specifying the encoding in a page is to use the META tag. Note that the META tag only works in pages loaded directly by browsers or IFRAMEs and may not function when used in other situations, such as in a document referenced by HREF in `dijit.layout.ContentPane <dijit/layout/ContentPane>`_. UTF-8 is the detault encoding used by XML documents exchanged by the `XMLHTTP request object <quickstart/ajax>`_ and also is the encoding that is used internally by Dojo APIs. We recommend using UTF-8 as the encoding for all of your applications.
 
 
 ============
