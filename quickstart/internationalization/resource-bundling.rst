@@ -29,9 +29,9 @@ Localizing Strings
 dojo.requireLocalization() / dojo.i18n.getLocalization()
   these methods leverage `Dojo's package concept <dojo/require>`_ to load localized resources. Each translated resource is implemented as a file containing a Javascript Object (see JSON notation) where each property may be a string or any other Javascript type. Resources are located within the directory structure beneath a specially named "nls" directory (short for native language support). Each translation is made available in a subdirectory named by locale.
 
-dojo.requireLocalization() is used to declare usage of these resources and load them in the same way that dojo.requires() pulls in Javascript packages, but using the translation appropriate to the caller. The location of the bundle is specified using two arguments: the first is the directory structure containing the nls directory; the second is the name of the file in that directory containing the localized resources. The locale used is discovered at runtime from the browser, or specified by an override in djConfig (see "Specifying a locale") If djConfig.extraLocale is set, the localizations in that list will be loaded also.
+`dojo.requireLocalization() <dojo/requireLocalization>`_ is used to declare usage of these resources and load them in the same way that dojo.requires() pulls in Javascript packages, but using the translation appropriate to the caller. The location of the bundle is specified using two arguments: the first is the directory structure containing the nls directory; the second is the name of the file in that directory containing the localized resources. The locale used is discovered at runtime from the browser, or specified by an override in djConfig (see "Specifying a locale") If djConfig.extraLocale is set, the localizations in that list will be loaded also.
 
-Use dojo.i18n.getLocalization() to get a reference to the object representing the localized resources. The resources loaded by dojo.requireLocalization() are searched and one best matching the user's locale are used. The localized values will be available as properties on the returned object. For example:
+Use `dojo.i18n.getLocalization() <dojo/i18n/getLocalization>`_ to get a reference to the object representing the localized resources. The resources loaded by dojo.requireLocalization() are searched and one best matching the user's locale are used. The localized values will be available as properties on the returned object. For example:
 
 .. code-block :: javascript
  :linenos:
@@ -61,5 +61,5 @@ See also
 ========
 
 * `dojo.i18n <dojo/i18n>`_
-* `dojo.requireLocalization <dojo.requireLocalization>`_
+* `dojo.requireLocalization <dojo/requireLocalization>`_
 * `dojo.i18n.getLocalization <dojo/i18n/getLocalization>`_
