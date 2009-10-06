@@ -21,7 +21,7 @@ Dojo aims to make internationalization a basic feature of the toolkit, such that
 
 Localization in the form of translated resources, mostly in the Dijit project, are generally available starting with the 1.0 release in over a dozen languages, with more to come.
 
-* `Globalization Guidelines <quickstart/Internationalization/Globalization-Guidelines/index>`_
+* `Globalization Guidelines <quickstart/internationalization/globalization-guidelines/index>`_
 * Encoding considerations
 * Specifying a Locale
 * Translatable Resource bundles
