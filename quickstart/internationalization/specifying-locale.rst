@@ -24,7 +24,7 @@ How does Dojo find the locale?
 
 By default, Dojo derives the user locale setting from the navigator browser object, the only locale information available from Javascript. The browser locale is determined during browser installation and is not easily configurable. Note that this is not the same as the locale in the preferences dialog which can be used to accompany HTTP requests; there is unfortunately no way to access that locale from the client without a server round-trip. 
 
-The user's locale may easily be overridden on a page prior to the Dojo bootstrap by setting the `djConfig.locale property <djConfig#language-and-localization-settings-in-djconfig>`_. Of course, setting this property in a static way defeats internationalization for other users. This setting may be established by a server to achieve personalization of web applications, where a user may be able to select their locale or this information may be available through some other means. 
+The user's locale may easily be overridden on a page prior to the Dojo bootstrap by setting the `djConfig.locale <djConfig#language-and-localization-settings-in-djconfig>`_ property. Of course, setting this property in a static way defeats internationalization for other users. This setting may be established by a server to achieve personalization of web applications, where a user may be able to select their locale or this information may be available through some other means. 
 
 Once Dojo is loaded, it is not possible to change the locale for the page.
 
@@ -40,6 +40,6 @@ Several locales used since the early days of the Internet `have been deprecated 
 Using many locales at the same time
 ===================================
 
-In the unusual case where multiple locales are used on a single page, the `djConfig.extraLocale property <djConfig#language-and-localization-settings-in-djconfig>`_ must be set, prior to bootstrap, listing the additional locales as elements in an array, otherwise they will not work at runtime. 
+In the unusual case where multiple locales are used on a single page, the `djConfig.extraLocale <djConfig#language-and-localization-settings-in-djconfig>`_ property must be set, prior to bootstrap, listing the additional locales as elements in an array, otherwise they will not work at runtime. 
 
 Optionally, one of these extra locales may be passed into routines like dojo.date.format or Dijit widgets using the 'lang' attribute, but such use cases are rare. Typically, the one locale is sufficient to localize the entire page and the locale should not be applied to any one specific widget or API.
