@@ -124,4 +124,4 @@ Note: handling of Hindi and Arabic style numerals is planned for 1.0, but not ye
 Locale support
 ==============
 
-It is not necessary to craft translated files to support these conventions in your locale. Dojo supports the above cultural conventions and currency types in pretty much every locale available through the CLDR, which is included with the Dojo build tools. However, by default, only a subset of these locales and currencies are built as Javascript objects in the Dojo repository under dojo.cldr. A script is available to build a custom or more complete set -- look for instructions at util/buildscripts/cldr/README.
+It is not necessary to craft translated files to support these conventions in your locale. Dojo supports the above cultural conventions and currency types in pretty much every locale available through the CLDR, which is included with the Dojo build tools. However, by default, only a subset of these locales and currencies are built as Javascript objects in the Dojo repository under `dojo.cldr <dojo/cldr>`_. A script is available to build a custom or more complete set -- look for instructions at util/buildscripts/cldr/README.
