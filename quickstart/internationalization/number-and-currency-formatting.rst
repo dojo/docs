@@ -24,6 +24,7 @@ Unlike standard Javascript, Dojo is capable of formatting and parsing date forma
    // the page must specify djConfig.extraLocale: 'zh-cn' 
    // to bootstrap the environment with support for an extra locale
    dojo.require("dojo.date.locale");
+
    var d = new Date(2006,9,29,12,30);
    // to format a date, simply pass the date to the format function
    dojo.date.locale.format(d);
@@ -51,6 +52,7 @@ Note that the positioning of month, day, and year are all different, as well as 
 Also, it is possible to reverse the process and parse String objects into Dates. For a user running in a Dutch locale like "nl-nl", the following would produce a valid Date object:
 
 .. code-block :: javascript
+ :linenos:
 
  <script type="text/javascript">
    dojo.date.locale.parse("maandag 30 oktober 2006", {formatLength: "full"});
