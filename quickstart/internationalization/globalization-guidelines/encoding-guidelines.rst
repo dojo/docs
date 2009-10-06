@@ -39,10 +39,16 @@ You must specify the UTF-8 encoding in every HTML file before any non-English ch
 
 You must specify the encodings of all HTML files as early as possible. Ideally, this occurs on the server such that the server applies HTTP encoding headers to mark the document, otherwise this must be achieved in the browser using the meta tag. For example:
 
-    
-        
-        
-    ...
+.. code-block :: html
+ :linenos:
+
+ <html>
+     <head>
+         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+         <title>Hello World!</title>
+     </head>
+     ...
+ </html>
 
 This encoding declaration must appear before any non-English characters in a file; otherwise a browser might fail to read it correctly. For example, IE 6.0/7.0 cannot render the following content (encoded in UTF-8):
 
