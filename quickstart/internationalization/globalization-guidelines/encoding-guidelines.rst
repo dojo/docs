@@ -52,10 +52,16 @@ You must specify the encodings of all HTML files as early as possible. Ideally, 
 
 This encoding declaration must appear before any non-English characters in a file; otherwise a browser might fail to read it correctly. For example, IE 6.0/7.0 cannot render the following content (encoded in UTF-8):
 
-    
-        
-        
-    Hello!
+.. code-block :: html
+ :linenos:
+
+ <html>
+     <head>
+          <title>???</title>
+         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+     </head>
+     <body>Hello!</body>
+</html>
 
 By default, browsers assume that all files referred by an HTML file use the same encoding as the referring HTML file. So if you have the encoding of every HTML file specified, you do not need to declare the encoding setting in each CSS or JavaScript file again, but you can override the encoding anyway when some files are not in the same encoding as the HTML file. For example,
 
