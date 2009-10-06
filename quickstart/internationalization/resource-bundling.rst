@@ -5,7 +5,7 @@ Translatable Resource bundles
 
 :Status: Draft
 :Version: 1.0
-:Project owner: ?--
+:Authors: Adam Peller
 :Available: since V?
 
 .. contents::
