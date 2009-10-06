@@ -63,4 +63,4 @@ See also
 * `dojo.i18n <dojo/i18n>`_
 * `dojo.requireLocalization <dojo/requireLocalization>`_
 * `dojo.i18n.getLocalization <dojo/i18n/getLocalization>`_
-* Language and Localization Settings in djConfig
+* `Language and Localization Settings in djConfig <djConfig#language-and-localization-settings-in-djconfig>`_
