@@ -61,7 +61,7 @@ This encoding declaration must appear before any non-English characters in a fil
          <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
      </head>
      <body>Hello!</body>
-</html>
+ </html>
 
 By default, browsers assume that all files referred by an HTML file use the same encoding as the referring HTML file. So if you have the encoding of every HTML file specified, you do not need to declare the encoding setting in each CSS or JavaScript file again, but you can override the encoding anyway when some files are not in the same encoding as the HTML file. For example,
 
