@@ -95,14 +95,21 @@ Using Resource Bundle
 =====================
 
 First, you should use the dojo.registerModulePath function to define the directory where resource bundles are as a registered module. The module name needs to be used in later callings to the dojo.requireLocalization and dojo.i18n.getLocalization functions. For the previous example, you can use the following line to define the module "my.app":
-dojo.registerModulePath("my.app", "../../my/app");
 
-Note: Here, the "../../my/app" path is relative to the directory that contains "dojo.js".
+.. code-block :: javascript
+ :linenos:
+
+ <script type="text/javascript">
+   dojo.registerModulePath("my.app", "../../my/app");
+   // Note: Here, the "../../my/app" path is relative to the directory that contains "dojo.js".
+ </script>
 
 Then you can use the dojo.requireLocalization function to load resource bundles from files. After a resource bundle is loaded, the dojo.i18n.getLocalization function returns a copy of the bundle object.
 
 When you get the bundle object, you can use it as a normal JSON object (a hash) to get messages. If you modify values in the bundle object, the original global bundle object will not be affected.
+
 You may use djConfig.locale to set the default locale and extra locales, and use only dojo.requireLocalization without the locale parameter.
+--------------------------------------------------------------------------------------------------------------------------------------------
 
 djConfig.locale overrides the browser's default locale as specified by the navigator Javascript object. This setting is effective for the entire page and must be declared prior to loading dojo.js. djConfig.extraLocale establishes additional locales whose resource bundles will be made available. This is used rarely to accomodate multiple languages on a single page. No other locales may be used on the page.
 
@@ -110,32 +117,57 @@ If you omit the locale parameter when calling the dojo.requireLocalization funct
 
 For example, if you define:
 
+.. code-block :: javascript
+ :linenos:
+
+ <script type="text/javascript" src="../dojo/dojo.js" djconfig="locale: 'zh-cn', extraLocale: ['zh-tw', 'fr']">
+ </script>
+
 then the following two code blocks are equal:
 
 Code block A:
 
-dojo.requireLocalization("my.app", "bar");
+.. code-block :: javascript
+ :linenos:
 
-var bar = dojo.i18n.getLocalization("my.app", "bar");
+ <script type="text/javascript">
+   dojo.requireLocalization("my.app", "bar");
+   
+   var bar = dojo.i18n.getLocalization("my.app", "bar");
+ </script>
 
 Code block B:
 
-dojo.requireLocalization("my.app", "bar", "zh-cn"); // default locale
-dojo.requireLocalization("my.app", "bar", "zh-tw"); // extra locale
-dojo.requireLocalization("my.app", "bar", "fr");    // extra locale
+.. code-block :: javascript
+ :linenos:
 
-var bar = dojo.i18n.getLocalization("my.app", "bar", "zh-cn"); // default locale
+ <script type="text/javascript">
+   dojo.requireLocalization("my.app", "bar", "zh-cn"); // default locale
+   dojo.requireLocalization("my.app", "bar", "zh-tw"); // extra locale
+   dojo.requireLocalization("my.app", "bar", "fr");    // extra locale
+   
+   var bar = dojo.i18n.getLocalization("my.app", "bar", "zh-cn"); // default locale
+ </script>
 
 The first method is preferred as it is less brittle.
+
+
+======
 Builds
+======
 
 Before you deploy your Web application using Dojo, you should consider building the Dojo layers that are used by your application into a single JavaScript file. Using such a build brings you many advantages. The unused scripts, white spaces, comments, and overridden string values can be removed to make smaller downloads, and the need to search by locale can be skipped such that extra server requests and 404 responses are avoided. In general, the build reduces the request time from the browser to the server to avoid latency issues.
-Should make a build to include resource bundles in the locales that you use
+
+You should make a build to include resource bundles in the locales that you use
+-------------------------------------------------------------------------------
 
 Resource bundles can either be included in a build or be used without a build. If you use resource bundles without a build, the first request for each resource bundle will generate N+1 HTTP requests when it searches the server for values, where N is the number of segments in the target locale. For example, a call of dojo.requireLocalization("my.app", "bar") in the "zh-cn" locale looks for "bar.js" first in the "zh-cn", then in "zh", and finally in the root. Without optimization, some of these requests might result in harmless HTTP 404 errors (page not found) if a variant does not need to override any definitions from its parent.
 
-Translation
 
-JSON is a convenient and efficient format for resource bundles in JavaScript, but the JSON format is not well supported by many professional translation centers. XLIFF is the industry standard file format for localization and translation. Among other things, XLIFF will ease in declaration of encoding and hide details from the translator such as JavaScript character entities. Tools will be developed to support round-trip transforms between JSON and XLIFF. Support for gettext PO files in the future is also possible.
+===========
+Translation
+===========
+
+JSON is a convenient and efficient format for resource bundles in JavaScript, but the JSON format is not well supported by many professional translation centers. `XLIFF <http://docs.oasis-open.org/xliff/v1.2/cs02/xliff-core.html#SectionIntroduction>`_ is the industry standard file format for localization and translation. Among other things, XLIFF will ease in declaration of encoding and hide details from the translator such as JavaScript character entities. Tools will be developed to support round-trip transforms between JSON and XLIFF. Support for `gettext PO files <http://www.gnu.org/software/gettext/manual/gettext.html#PO-Files>`_ in the future is also possible.
 
 Translators must also be aware of the substitution syntax of Dojo — ${x}
