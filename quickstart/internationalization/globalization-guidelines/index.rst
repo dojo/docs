@@ -37,9 +37,9 @@ Use the following guidelines to implement internationalization.
 * `You must set Content-Type in an HTTP response header if the response is not encoded in UTF-8. <quickstart/internationalization/globalization-guidelines/encoding-guidelines#you-must-set-content-type-in-an-http-response-header-if-the-response-is-not-encoded-in-utf-8>`_
 
 
-=====================================
-Locale and Resource Bundle Guidelines
-=====================================
+=========================================================================================================================================
+`Locale and Resource Bundle Guidelines <quickstart/internationalization/globalization-guidelines/locale-and-resource-bundle-guidelines>`_
+=========================================================================================================================================
 
 * You must set Content-Type in an HTTP response header if the response is not encoded in UTF-8.
 * You must set djConfig.locale in all files to the same as the locale used by the server code.
