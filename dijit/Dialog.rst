@@ -315,6 +315,14 @@ The dialog now supports the aria-describedby property.  If you have a descriptio
     <div>Additional dialog contents....</div>
   </div>
 
+For earlier Dojo versions, you can add an onshow event handler that adds the aria-describedby property:
+
+.. code-block :: javascript
+
+  <div dojoType="dijit.Dialog" title="Example Dialog" onShow="dojo.attr(this.domNode, 'aria-describedby', 'info');">
+    <div id="intro">Text to describe dialog</div>
+    <div>Additional dialog contents....</div>
+  </div> 
 
 Known Issues
 ------------
