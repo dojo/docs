@@ -5,7 +5,7 @@ Globalization Guidelines
 
 :Status: Draft
 :Version: 1.0
-:Project owner: ?--
+:Authorsr: Adam Peller
 :Available: since V0.9?
 
 .. contents::
