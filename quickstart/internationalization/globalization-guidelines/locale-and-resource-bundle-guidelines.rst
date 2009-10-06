@@ -158,8 +158,8 @@ Builds
 
 Before you deploy your Web application using Dojo, you should consider building the Dojo layers that are used by your application into a single JavaScript file. Using such a build brings you many advantages. The unused scripts, white spaces, comments, and overridden string values can be removed to make smaller downloads, and the need to search by locale can be skipped such that extra server requests and 404 responses are avoided. In general, the build reduces the request time from the browser to the server to avoid latency issues.
 
-You should make a build to include resource bundles in the locales that you use
--------------------------------------------------------------------------------
+You may make a build to include resource bundles in the locales that you use
+----------------------------------------------------------------------------
 
 Resource bundles can either be included in a build or be used without a build. If you use resource bundles without a build, the first request for each resource bundle will generate N+1 HTTP requests when it searches the server for values, where N is the number of segments in the target locale. For example, a call of dojo.requireLocalization("my.app", "bar") in the "zh-cn" locale looks for "bar.js" first in the "zh-cn", then in "zh", and finally in the root. Without optimization, some of these requests might result in harmless HTTP 404 errors (page not found) if a variant does not need to override any definitions from its parent.
 
