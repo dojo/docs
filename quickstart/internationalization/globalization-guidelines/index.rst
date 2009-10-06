@@ -28,13 +28,13 @@ Use the following guidelines to implement internationalization.
 `Encoding guidelines <quickstart/internationalization/globalization-guidelines/encoding-guidelines>`_
 =====================================================================================================
 
-* You should always use UTF-8 for encoding settings wherever applicable.
-* You should encode all text files in UTF-8.
-* You must specify the UTF-8 encoding in every HTML file before any non-English characters.
-* You must use the BOM header for UTF-16 files.
-* You must use UTF-8 to decode XHR request parameters.
-* You must use UTF-8 encoding when using a non-English string in a URL.
-* You must set Content-Type in an HTTP response header if the response is not encoded in UTF-8.
+* `You should always use UTF-8 for encoding settings wherever applicable. <quickstart/internationalization/globalization-guidelines/encoding-guidelines#you-should-always-use-utf-8-for-encoding-settings-wherever-applicable>`_
+* `You should encode all text files in UTF-8. <quickstart/internationalization/globalization-guidelines/encoding-guidelines#you-should-encode-all-text-files-in-utf-8>`_
+* `You must specify the UTF-8 encoding in every HTML file before any non-English characters. <quickstart/internationalization/globalization-guidelines/encoding-guidelines#you-must-specify-the-utf-8-encoding-in-every-html-file-before-any-non-english-characters>`_
+* `You must use the BOM header for UTF-16 files. <quickstart/internationalization/globalization-guidelines/encoding-guidelines#you-must-use-the-bom-header-for-utf-16-files>`_
+* `You must use UTF-8 to decode XHR request parameters. <quickstart/internationalization/globalization-guidelines/encoding-guidelines#you-must-use-utf-8-to-decode-xhr-request-parameters>`_
+* `You must use UTF-8 encoding when using a non-English string in a URL. <quickstart/internationalization/globalization-guidelines/encoding-guidelines#you-must-use-utf-8-encoding-when-using-a-non-english-string-in-a-url>`_
+* `You must set Content-Type in an HTTP response header if the response is not encoded in UTF-8. <quickstart/internationalization/globalization-guidelines/encoding-guidelines#you-must-set-content-type-in-an-http-response-header-if-the-response-is-not-encoded-in-utf-8>`_
 
 
 =====================================
