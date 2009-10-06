@@ -9,18 +9,9 @@ Globalization Guidelines: Encoding
 :Available: since V?
 
 .. contents::
-   :depth: 1
+   :depth: 2
 
 The following guidelines should be used to implement internationalization in encoding.
-
-* You should always use UTF-8 for encoding settings wherever applicable.
-* You should encode all text files in UTF-8.
-* You must specify the UTF-8 encoding in every HTML file before any non-English characters.
-* You must use the BOM header for UTF-16 files.
-* You must use UTF-8 to decode XHR request parameters.
-* You must use UTF-8 encoding when using a non-English string in a URL.
-* You must set Content-Type in an HTTP response header if the response is not encoded in UTF-8.
-
 
 ==================
 The UTF-8 Encoding
@@ -79,7 +70,9 @@ You must use the BOM header for UTF-16 files.
 A BOM header consists of 2, 3, or 4 bytes at the very beginning of a text file to indicate its encoding. For example, 0xFF 0xFE means that the file is encoded in UTF-16LE, while 0xEF 0xBB 0xBF means that the encoding is UTF-8. The BOM header can override the encoding settings mentioned above in a browser.
 
 Using UTF-16 is not recommended, but if you choose it for some reason, the BOM header is required. Because UTF-16 is not compatible with ASCII, a browser even does not have a chance to read the encoding setting of the file content.
+
 You must use UTF-8 to decode XHR request parameters.
+----------------------------------------------------
 
 The dojo.xhr* functions are the most common way in Dojo to enable Ajax features -- sending an asynchronous request to the server by an XMLHttpRequest object. The typical call to one of these functions can be:
 
@@ -160,5 +153,6 @@ Sending Responses
 =================
 
 You must set Content-Type in an HTTP response header if the response is not encoded in UTF-8.
+---------------------------------------------------------------------------------------------
 
 An XMLHttpRequest object first checks the HTTP header of a response to see if there is a Content-Type property that sets the encoding of the response; otherwise, it always uses UTF-8 to decode the response into a string. Web servers usually set the Content-Type property automatically for dynamic files like JSP. However, for static files, Web servers probably do not know the encoding of the files and also do not set the Content-Type property for them.
