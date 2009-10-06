@@ -21,14 +21,16 @@ Unlike standard Javascript, Dojo is capable of formatting and parsing date forma
  :linenos:
 
  <script type="text/javascript">
-   // the page must specify djConfig.extraLocale: 'zh-cn' to bootstrap the environment with support for an extra locale
+   // the page must specify djConfig.extraLocale: 'zh-cn' 
+   // to bootstrap the environment with support for an extra locale
    dojo.require("dojo.date.locale");
    var d = new Date(2006,9,29,12,30);
    // to format a date, simply pass the date to the format function
    dojo.date.locale.format(d);
    // => "10/29/06 12:30 PM"
 
-   // the second argument may contain a list of options in Object syntax, such as overriding the default locale
+   // the second argument may contain a list of options in Object syntax, 
+   // such as overriding the default locale
    dojo.date.locale.format(d, {locale:'zh-cn'})
    // => "06-10-29 下午12:30"
  </script>
