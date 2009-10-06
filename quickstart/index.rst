@@ -37,8 +37,6 @@ JavaScript Extensions
 * Todo: classes
 * Todo: inheritance
 * Todo: mixins
-* `Internationalization (i18n) <quickstart/internationalization/index>`_
-
 
 AJAX
 ----
@@ -51,12 +49,15 @@ DOM Manipulation & CSS Queries
 
 * `DOM Manipulation and dojo.query() <quickstart/dom>`_
 
-
 Events
 ------
 
 * `The event system <quickstart/events>`_
 
+Internationalization
+--------------------
+
+* `Internationalization (i18n) <quickstart/internationalization/index>`_
 
 ==========
 Animations
