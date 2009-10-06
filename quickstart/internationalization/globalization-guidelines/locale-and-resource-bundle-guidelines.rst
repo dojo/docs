@@ -108,8 +108,8 @@ Then you can use the dojo.requireLocalization function to load resource bundles 
 
 When you get the bundle object, you can use it as a normal JSON object (a hash) to get messages. If you modify values in the bundle object, the original global bundle object will not be affected.
 
-You may use djConfig.locale to set the default locale and extra locales, and use only dojo.requireLocalization without the locale parameter.
---------------------------------------------------------------------------------------------------------------------------------------------
+You should use djConfig.locale to set the default locale and extra locales, and use only dojo.requireLocalization without the locale parameter.
+-----------------------------------------------------------------------------------------------------------------------------------------------
 
 djConfig.locale overrides the browser's default locale as specified by the navigator Javascript object. This setting is effective for the entire page and must be declared prior to loading dojo.js. djConfig.extraLocale establishes additional locales whose resource bundles will be made available. This is used rarely to accomodate multiple languages on a single page. No other locales may be used on the page.
 
