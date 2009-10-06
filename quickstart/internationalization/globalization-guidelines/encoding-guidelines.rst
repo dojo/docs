@@ -57,7 +57,7 @@ This encoding declaration must appear before any non-English characters in a fil
 
  <html>
      <head>
-          <title>???</title>
+         <title>???</title>
          <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
      </head>
      <body>Hello!</body>
@@ -120,7 +120,15 @@ Because the encodeURIComponent function always uses UTF-8, you must use UTF-8 at
 
 For example, in Tomcat, you can set the encoding of URL by the URIEncoding attribute in server.xml:
 
-<
+.. code-block :: html
+ :linenos:
+
+ <<!-- Define a non-SSL HTTP/1.1 Connector on port 8080 -->
+ <Connector port="8080" maxHttpHeaderSize="8192"
+     maxThreads="150" minSpareThreads="25" maxSpareThreads="75"
+     enableLookups="false" redirectPort="8443" acceptCount="100"
+     connectionTimeout="20000" disableUploadTimeout="true"
+     URIEncoding="UTF-8" />
 
 You can set the encoding of the request content (xhrPost) by simply calling request.setCharacterEncoding before using the request object:
 
