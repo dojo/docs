@@ -138,7 +138,7 @@ debugAtAllCosts: true
 Language and Localization Settings in djConfig
 ----------------------------------------------
 
-There is an extensive discussion of the i18n features of dojo in the `tutorial chapter on i18n <quickstart/internationalization/index>`_. Here we'll briefly cover the two djConfig variables that apply to these settings:
+There is an extensive discussion of the i18n features of dojo in the `tutorial on i18n <quickstart/internationalization/index>`_. Here we'll briefly cover the two djConfig variables that apply to these settings:
 
 locale: 'en-us'
   By default, dojo sets the locale of all dijits by pulling the locale from the browser. However, developers can force the default locale by using the djConfig locale setting.
