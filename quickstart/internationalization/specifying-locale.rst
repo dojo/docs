@@ -15,7 +15,7 @@ Specifying a Locale
 What is a Locale?
 =================
 
-Localization is driven by a locale, a short string often supplied by the host environment, which conforms to RFC 3066 used in the HTML specification. It consists of short identifiers, typically two characters long which are case-insensitive. Note that Dojo uses dash separators like the RFC, not underscores like Java (e.g. "en-us", not "en_US"). Typically country codes are used in the optional second identifier, and additional variants may be specified. For example, Japanese is "ja"; Japanese in Japan is "ja-jp". Notice that the lower case is intentional -- while Dojo will often convert all locales to lowercase to normalize them, it is the lowercase that must be used when defining your resources.
+Localization is driven by a locale, a short string often supplied by the host environment, which conforms to `RFC 3066 <http://www.ietf.org/rfc/rfc3066.txt>`_ used in the HTML specification. It consists of short identifiers, typically two characters long which are case-insensitive. Note that Dojo uses dash separators like the RFC, not underscores like Java (e.g. "en-us", not "en_US"). Typically country codes are used in the optional second identifier, and additional variants may be specified. For example, Japanese is "ja"; Japanese in Japan is "ja-jp". Notice that the lower case is intentional -- while Dojo will often convert all locales to lowercase to normalize them, it is the lowercase that must be used when defining your resources.
 
 
 ==============================
@@ -29,7 +29,7 @@ By default, Dojo derives the user locale setting from the navigator browser obje
 What about deprecated locale support?
 =====================================
 
-Several locales used since the early days of the Internet have been deprecated in favor of new codes. These include 'iw' for Hebrew in favor of 'he'. Also, 'in' in favor of 'id' for Indonesian, 'no' in favor of 'nb' Norwegian Bokmål (to differentiate from Nynorsk), and 'ji' became 'yi' for Yiddish. Dojo tries to adhere to the latest specifications. Unfortunately, some applications still use the deprecated codes, most notably the JDK. The best practice when dealing with these technologies is to run a transformation on the string before assigning to djConfig.locale to assure that the new locale codes are used.
+Several locales used since the early days of the Internet `have been deprecated <http://www.loc.gov/standards/iso639-2/php/code_changes.php>`_ in favor of new codes. These include 'iw' for Hebrew in favor of 'he'. Also, 'in' in favor of 'id' for Indonesian, 'no' in favor of 'nb' Norwegian Bokmål (to differentiate from Nynorsk), and 'ji' became 'yi' for Yiddish. Dojo tries to adhere to the latest specifications. Unfortunately, some applications still use the deprecated codes, most notably the JDK. The best practice when dealing with these technologies is to run a transformation on the string before assigning to djConfig.locale to assure that the new locale codes are used.
 
 
 ===================================
