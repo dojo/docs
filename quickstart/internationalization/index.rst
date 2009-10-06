@@ -5,7 +5,7 @@ Internationalization (i18n)
 
 :Status: Draft
 :Version: 1.0
-:Project owner: ?--
+:Authors: Adam Peller
 :Available: since V0.9?
 
 .. contents::
@@ -22,9 +22,9 @@ Dojo aims to make internationalization a basic feature of the toolkit, such that
 Localization in the form of translated resources, mostly in the Dijit project, are generally available starting with the 1.0 release in over a dozen languages, with more to come.
 
 * `Globalization Guidelines <quickstart/internationalization/globalization-guidelines/index>`_
-* Encoding considerations
-* Specifying a Locale
-* Translatable Resource bundles
-* Cultural conventions: Date, Number and Currency
-* Bi-Directional Text
-* Globalization Tutorial
+* `Encoding considerations <quickstart/internationalization/encoding-considerations>`_
+* `Specifying a Locale <quickstart/internationalization/specifying-locale>`_
+* `Translatable Resource bundles <quickstart/internationalization/resource-bundling>`_
+* `Cultural conventions: Date, Number and Currency <quickstart/internationalization/number-and-currency-formatting>`_
+* `Bi-Directional Text <quickstart/internationalization/bi-directional-text>`_
+* `Globalization Tutorial <quickstart/internationalization/globalization-tutorial/index>`_
