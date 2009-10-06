@@ -19,7 +19,7 @@ Bi-Di issues are largely related to widgets, and are therefore addressed mostly 
 
 As of the 1.1 release, all Dijits, except for deprecated widgets, are Bi-Di capable. DojoX BiDi support varies.
 
-As of the 1.0 release, the following the widgets have limited Bi-Di support using the Tundra theme:
+As of the 1.0 release, the following widgets have limited Bi-Di support using the Tundra theme:
 
 * dijit.ColorPalette
 * dijit.Declaration
