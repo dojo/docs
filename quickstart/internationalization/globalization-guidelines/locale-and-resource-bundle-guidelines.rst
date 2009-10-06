@@ -19,8 +19,8 @@ There is a slight difference in the locale naming conventions between Dojo and J
 
 Like the default locale in Java, Dojo has a global locale value that is stored in a global variable: dojo.locale. This default locale value affects the behavior of several locale-related functions and widgets. The value of dojo.locale is not supposed to be changed. You should use djConfig.locale to initialize this value.
 
-Must set djConfig.locale in all files to achieve server-based personalization
------------------------------------------------------------------------------
+You must set djConfig.locale in all files to achieve server-based personalization
+---------------------------------------------------------------------------------
 
 If djConfig.locale is undefined, Dojo will consult the browser's navigator object for the setting chosen at browser install time. Note that this is unrelated to the locale setting in the preferences dialog, which is for interaction with the server only. To provide personalization from the server to control locale settings in an application, you must set djConfig.locale in the page at the server side, prior to loading dojo.js. For example, here is a JSP page that sets the default locale for Dojo:
 
