@@ -10,7 +10,7 @@ dojo.date.locale
 .. contents::
   :depth: 3
 
-A library to format and parse dates and times.
+dojo.date.locale offers a library of localization methods to format and parse dates and times.
 
 
 ============
