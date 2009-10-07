@@ -10,15 +10,28 @@ dojo.date.locale
 .. contents::
   :depth: 3
 
+
+============
+Introduction
+============
+
 Dojo comes with a powerful library to format and parse dates and times using local language and conventions, from your choice of hundreds of locales, or as you would like using custom date/time patterns.
 
-Examples
---------
+
+=====
+Usage
+=====
 
 Formatting dates and times using custom patterns
 ------------------------------------------------
 
-When you want to present dates or times to the user, Javascript only knows how to handle a single locale and language, and the actual format is implementation-dependent, and your web application has no control over these choices.  By simply passing a Javascript Date object to dojo.date.locale.format, Dojo will use the locale passed as djConfig.locale or the browser's default to handle the formats, and you may choose from a variety of formats: short, medium, full, or long.  Various other optins are available.  You may choose to process the only the date, only the time, or both, and you may decide to use your own custom datePattern or timePattern. Lets dive right in and render the current Date in several ways using format().  The inverse operation to take the String and return a Date object is parse().
+When you want to present dates or times to the user, Javascript only knows how to handle a single locale and language, and the actual format is implementation-dependent, and your web application has no control over these choices. 
+
+By simply passing a Javascript Date object to `dojo.date.locale.format <dojo/date/locale/format>`_, Dojo will use the locale passed as djConfig.locale or the browser's default to handle the formats, and you may choose from a variety of formats: short, medium, full, or long.
+
+Various other options are available. You may choose to process the only the date, only the time, or both, and you may decide to use your own custom datePattern or timePattern. 
+
+Lets dive right in and render the current Date in several ways using format(). The inverse operation to take the String and return a Date object is parse().
 
 .. codeviewer::
   
@@ -66,3 +79,10 @@ When you want to present dates or times to the user, Javascript only knows how t
     >>> dojo.date.locale.format(new Date(2007,2,23,15,23,6), {datePattern: "yyyyMMdd", timePattern: "HHmmss"});
     "20070323 152306"
   </div>
+
+
+========
+See also
+========
+
+* `dojo.date.locale.format <dojo/date/locale/format>`_
