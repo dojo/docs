@@ -105,14 +105,6 @@ dojo.date.locale.format(dateObject, options)
   ======================  ====================  ======================================  ======
 
 
-.. code-block :: javascript
-
- <script type="text/javascript">
-   dojo.require("dojo.date.locale");
-   
-   var foo = dojo.date.locale.format(dateObject, options);
- </script>
-
 Notes:
 
 * Everything in this module assumes Gregorian calendars. Other calendars will be implemented in separate modules.
