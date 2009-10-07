@@ -175,4 +175,4 @@ A simple example formatting a date in a number of ways
 See also
 ========
 
-* TODO: links to other related articles
+* `dojo.date.locale <dojo/date/locale>`_
