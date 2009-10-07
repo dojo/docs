@@ -26,6 +26,26 @@ Dojo comes with a powerful library to format and parse dates and times using loc
 Usage
 =====
 
+dojo.date.locale.addCustomFormats(packageName, bundleName)
+  Add a reference to a bundle containing localized custom formats to be used by date/time formatting and parsing routines.
+
+dojo.date.locale.format(dateObject, options)
+  Format a Date object as a String, using locale-specific settings.
+
+dojo.date.locale.getNames(item, type, context, locale)
+  Used to get localized strings from dojo.cldr for day or month names.
+
+dojo.date.locale.isWeekend(dateObject, locale)
+  Determines if the date falls on a weekend, according to local custom.
+
+dojo.date.locale.parse(value, options)
+  Convert a properly formatted string to a primitive Date object, using locale-specific settings.
+
+dojo.date.locale.regexp(options)
+  Builds the regular needed to parse a localized date
+
+
+
 Formatting dates and times using custom patterns
 ------------------------------------------------
 
