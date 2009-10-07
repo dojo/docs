@@ -4,10 +4,6 @@
 Dojo
 ====
 
-:Status: Draft
-:Version: 1.0
-:Available: since version 0.9
-
 .. contents::
    :depth: 2
 
