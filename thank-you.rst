@@ -26,6 +26,7 @@ A big "thank you" goes to
 * Tobias Klipstein, 
 * kolban,
 * Wolfram Kriesing,
+* Seth Lytle,
 * Ben Lowery,
 * Dustin Machi,
 * mcoquet,
