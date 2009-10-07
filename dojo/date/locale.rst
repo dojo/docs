@@ -3,7 +3,6 @@
 dojo.date.locale
 ================
 
-:Status: Draft
 :Version: 1.2
 :Project owner: ?--
 :Available: since V?
