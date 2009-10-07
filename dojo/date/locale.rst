@@ -10,10 +10,14 @@ dojo.date.locale
 .. contents::
   :depth: 3
 
+A library to format and parse dates and times.
+
 
 ============
 Introduction
 ============
+
+When you want to present dates or times to the user, Javascript only knows how to handle a single locale and language, and the actual format is implementation-dependent, and your web application has no control over these choices. 
 
 Dojo comes with a powerful library to format and parse dates and times using local language and conventions, from your choice of hundreds of locales, or as you would like using custom date/time patterns.
 
@@ -24,8 +28,6 @@ Usage
 
 Formatting dates and times using custom patterns
 ------------------------------------------------
-
-When you want to present dates or times to the user, Javascript only knows how to handle a single locale and language, and the actual format is implementation-dependent, and your web application has no control over these choices. 
 
 By simply passing a Javascript Date object to `dojo.date.locale.format <dojo/date/locale/format>`_, Dojo will use the locale passed as djConfig.locale or the browser's default to handle the formats, and you may choose from a variety of formats: short, medium, full, or long.
 
