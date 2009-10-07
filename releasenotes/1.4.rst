@@ -35,6 +35,11 @@ dojo.addOnLoad
 * There was a dojo.require/onload fix done for Firefox browsers (see `Ticket #8976 <http://bugs.dojotoolkit.org/ticket/8976>`_).
 * See also `dojo.addOnLoad <dojo/addOnLoad>`_
 
+dojo.ready
+----------
+
+* A new alias for `dojo.addOnLoad <dojo/addOnLoad>`_.
+* See also `dojo.ready <dojo/ready>`_
 
 dojo.cache
 ----------
@@ -93,13 +98,50 @@ dojo.position
 * A new method in Dojo Base (part of dojo.js) that returns the beginning x/y of a DOM node's border-box as well as it's width and height. An optional boolean parameter can be specified to change the default coordinate origin point from the viewport to the document root.
 * See also `dojo.position <dojo/position>`_
 
+dojo.NodeList-traverse and dojo.NodeList-manipulate
+---------------------------------------------------
+Two mixins for dojo.NodeList are now available. dojo.NodeLists are returned from dojo.query() calls.
 
-dojo.ready
-----------
+`dojo.NodeList-traverse <dojo/NodeList-traverse>`_  adds methods:
 
-* A new alias for `dojo.addOnLoad <dojo/addOnLoad>`_.
-* See also `dojo.ready <dojo/ready>`_
+* children
+* closest
+* parent
+* parents
+* siblings
+* next
+* nextAll
+* prev
+* prevAll
+* andSelf
+* first
+* last
+* even
+* odd
 
+`dojo.NodeList-manipulate <dojo/NodeList-manipulate>`_  adds methods:
+
+* innerHTML
+* html
+* text
+* val
+* append
+* appendTo
+* prepend
+* prependTo
+* after
+* insertAfter
+* before
+* insertBefore
+* remove
+* wrap
+* wrapAll
+* wrapInner
+* replaceWith
+* replaceAll
+* clone
+
+Both mixins are modeled after the jQuery APIs that have the same names.
 
 ======
 Dijit
