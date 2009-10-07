@@ -11,7 +11,7 @@ dojo.date.locale.isWeekend
 .. contents::
    :depth: 2
 
-TODO: short summary of the component/class/method
+Determines if the date falls on a weekend, according to local custom.
 
 
 ============
