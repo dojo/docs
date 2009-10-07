@@ -511,7 +511,33 @@ Dojo Core
 
   Date manipulation utilities
 
-  * `dojo.date.locale.format <dojo/date/locale/format>`_
+  * dojo.date.locale
+
+    Offers a library of localization methods to format and parse dates and times
+
+    * `dojo.date.locale.addCustomFormats <dojo/date/locale/addCustomFormats>`_
+
+      Adds a reference to a bundle containing localized custom formats to be used by date/time formatting and parsing routines.
+
+    * `dojo.date.locale.format <dojo/date/locale/format>`_
+
+      Formats a Date object as a String, using locale-specific settings or custom patterns.
+
+    * `dojo.date.locale.getNames <dojo/date/locale/getNames>`_
+
+      Used to get localized strings from dojo.cldr for day or month names.
+
+    * `dojo.date.locale.isWeekend <dojo/date/locale/isWeekend>`_
+
+      Determines if the date falls on a weekend, according to local custom.
+
+    * `dojo.date.locale.parse <dojo/date/locale/parse>`_
+
+      Converts a properly formatted string to a primitive Date object, using locale-specific settings.
+
+    * `dojo.date.locale.regexp <dojo/date/locale/regexp>`_
+
+      Builds the regular needed to parse a localized date
 
 * `dojo.DeferredList <dojo/DeferredList>`_
 
