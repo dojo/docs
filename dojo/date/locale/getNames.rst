@@ -11,7 +11,7 @@ dojo.date.locale.getNames
 .. contents::
    :depth: 2
 
-TODO: short summary of the component/class/method
+Used to get localized strings from dojo.cldr for day or month names.
 
 
 ============
