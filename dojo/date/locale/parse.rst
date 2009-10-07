@@ -11,7 +11,7 @@ dojo.date.locale.parse
 .. contents::
    :depth: 2
 
-TODO: short summary of the component/class/method
+Converts a properly formatted string to a primitive Date object, using locale-specific settings.
 
 
 ============
