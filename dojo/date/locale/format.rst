@@ -25,8 +25,11 @@ By default, this method formats both date and time from dateObject. Formatting p
 Usage
 =====
 
-dojo.date.locale.format(dateObject, options) will use options.datePattern to format the date if it's provided.
+By simply passing a Javascript Date object to dojo.date.locale.format, Dojo will use the locale passed as djConfig.locale or the browser's default to handle the formats, and you may choose from a variety of formats: short, medium, full, or long.
 
+Various other options are available to format the date. You may choose to process only the date, only the time, or both, and you may decide to use your own custom datePattern or timePattern. 
+
+dojo.date.locale.format(dateObject, options)
   +------------+----------------------------------+-------------+-----------+-----------------------------------+
   | Parameter  | Type                             | Description                                                 |
   +============+==================================+=============+===========+===================================+
