@@ -55,4 +55,4 @@ TODO: example
 See also
 ========
 
-* TODO: links to other related articles
+* `dojo.date.locale <dojo/date/locale>`_
