@@ -30,11 +30,11 @@ dojo.date.locale offers the following methods:
 
 * `dojo.date.locale.addCustomFormats <dojo/date/locale/addCustomFormats>`_
 
-  Add a reference to a bundle containing localized custom formats to be used by date/time formatting and parsing routines.
+  Adds a reference to a bundle containing localized custom formats to be used by date/time formatting and parsing routines.
 
 * `dojo.date.locale.format <dojo/date/locale/format>`_
 
-  Format a Date object as a String, using locale-specific settings or custom patterns.
+  Formats a Date object as a String, using locale-specific settings or custom patterns.
 
 * `dojo.date.locale.getNames <dojo/date/locale/getNames>`_
 
@@ -46,7 +46,7 @@ dojo.date.locale offers the following methods:
 
 * `dojo.date.locale.parse <dojo/date/locale/parse>`_
 
-  Convert a properly formatted string to a primitive Date object, using locale-specific settings.
+  Converts a properly formatted string to a primitive Date object, using locale-specific settings.
 
 * `dojo.date.locale.regexp <dojo/date/locale/regexp>`_
 
