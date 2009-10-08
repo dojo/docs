@@ -12,7 +12,7 @@ dijit.Tree examples
 Expanding and Focusing tree nodes programatically
 -------------------------------------------------
 
-Taking as an example a ''dijit.Tree'' linked to a ''dijit.tree.ForestStoreModel'' linked to a ''dojo.data.ItemFileReadStore'', this information was true as of dojo 1.3.2, October 2009:
+Taking as an example a ``dijit.Tree`` linked to a ``dijit.tree.ForestStoreModel`` linked to a ``dojo.data.ItemFileReadStore``, this information was true as of dojo 1.3.2, October 2009:
 
 .. cv-compound::
 
@@ -38,9 +38,9 @@ Taking as an example a ''dijit.Tree'' linked to a ''dijit.tree.ForestStoreModel'
         openOnClick="true" showRoot="false" persist="false">
     </div>
 
-Lets presume the tree does not persist its expanded state between reloads (see ''persist="false"'' in the example above).  It will load unexpanded, with only the root TreeNode in the tree.  When that root node is expanded, its immediate child TreeNodes will be created.  However, until then, there is only the root node.
+Lets presume the tree does not persist its expanded state between reloads (see ``persist="false"`` in the example above).  It will load unexpanded, with only the root TreeNode in the tree.  When that root node is expanded, its immediate child TreeNodes will be created.  However, until then, there is only the root node.
 
-If you try to use ''tree.attr('path')'' immediately to select a path in the tree, it will fail with an obscure error message as it finds the child nodes it is trying to expand do not yet exist.
+If you try to use ``tree.attr('path')`` immediately to select a path in the tree, it will fail with an obscure error message as it finds the child nodes it is trying to expand do not yet exist.
 
 In order to select a TreeNode deep in the hierarchy, we must:
 
