@@ -21,6 +21,7 @@ Horizontal Pager
 
     <script type="text/javascript">
         dojo.require("dojo.data.ItemFileReadStore");
+        dojo.require("dojox.widget.Pager");
     </script>
 
     <script type="text/javascript">     
