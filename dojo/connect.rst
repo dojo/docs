@@ -118,7 +118,7 @@ This example shows, how to use dojo.connect in order to connect the onclick-Even
             );
 
             // Use dojo.connect to connect the onclick-Event to a function:
-            dojo.connect(dojo.byId("button1"), "onclick", helloPressed);           
+            // dojo.connect(dojo.byId("button1"), "onclick", helloPressed);           
         });
     </script>
 
