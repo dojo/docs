@@ -125,7 +125,8 @@ This example shows, how to use dojo.connect in order to connect the onclick-Even
   .. cv:: html
     :label: A dojo button
 
-    <div dojoType="dijit.form.Button" id="button1">Click me!</div>
+    <button id="button1" type="button">
+    </button>
 
 
 ========
