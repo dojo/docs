@@ -22,7 +22,7 @@ Introduction
 ``dijit.form.DateTextBox``:
 
 * is a `mapped form control <dijit/form#mapped>`_
-* validates against locale-specific `i18n <dojo/i18n>`_ rules
+* validates against locale-specific `i18n <quickstart/internationalization/index>`_ rules
 * also validates against developer-provided ``constraints`` like ``min``, ``max``, valid days of the week, etc.
 
 Standard Date Format
