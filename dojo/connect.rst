@@ -91,4 +91,37 @@ Examples
 	dojo.connect(null, "globalEvent", null, globalHandler);
 	dojo.connect("globalEvent", globalHandler); // same
 
-See the `Event QuickStart <quickstart/events>`_ for a good introduction. 
+
+Connecting to a button click
+----------------------------
+
+This example shows, how to use dojo.connect in order to connect the onclick-Event to a function.
+
+.. cv-compound::
+
+  .. cv:: html
+    :label: A dojo button
+
+    <div dojoType="dijit.form.Button" id="button1">Click me!</div>
+
+  .. cv:: javascript
+    :label: The jscript to connect to an onclick event
+
+    <script language="text/javascript">
+        dojo.require("dijit.form.Button");
+
+        function helloPressed(){
+            alert('You pressed the button');
+        }
+
+        dojo.addOnLoad(function(){
+            dojo.connect(dojo.byId("button1"), "onclick", helloPressed);
+        });
+    </script>
+
+
+========
+See also
+========
+
+* `Event QuickStart <quickstart/events>`_ for a good introduction
