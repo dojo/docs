@@ -74,3 +74,5 @@ See also
 
 * `Event QuickStart <quickstart/events>`_
 * `dojo.connect <dojo/connect>`_
+* `dojo.publish <dojo/publish>`_
+* `dojo.disconnect <dojo/disconnect>`_
