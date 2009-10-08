@@ -90,3 +90,5 @@ Examples
 	// with the same scope (this):
 	dojo.connect(null, "globalEvent", null, globalHandler);
 	dojo.connect("globalEvent", globalHandler); // same
+
+See the `Event QuickStart <quickstart/events>`_ for a good introduction. 
