@@ -58,4 +58,5 @@ Programmatic example
 See also
 ========
 
-* TODO: links to other related articles
+* `Event QuickStart <quickstart/events>`_ for a good introduction
+* `dojo.connect <dojo/connect>`_
