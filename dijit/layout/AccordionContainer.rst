@@ -24,7 +24,6 @@ In the example below, second pane is selected when the widget is loaded.
 
 Programmatic example
 --------------------
-//TODO: Example to be modified so that pane is displayed more clearly
  
 .. cv-compound::
 
@@ -35,7 +34,7 @@ Programmatic example
 	dojo.require("dijit.layout.ContentPane");
 
 	dojo.addOnLoad(function(){
-	  var aContainer = new dijit.layout.AccordionContainer({style:"height: 350px"}, "markup");
+	  var aContainer = new dijit.layout.AccordionContainer({style:"height: 300px"}, "markup");
 
 	  aContainer.addChild(new dijit.layout.ContentPane({
 				title:"This is a content pane", 
@@ -55,7 +54,7 @@ Programmatic example
 
   .. cv:: html
 
-     <div id="markup" style="width:300px; height: 350px"></div>
+     <div id="markup" style="width:300px; height: 300px"></div>
   
 
 Declarative example
@@ -71,8 +70,8 @@ Declarative example
 
   .. cv:: html
 
-    <div style="width: 300px;">
-      <div dojoType="dijit.layout.AccordionContainer" style="height: 400px;">
+    <div style="width: 300px; height: 300px">
+      <div dojoType="dijit.layout.AccordionContainer" style="height: 300px;">
         <div dojoType="dijit.layout.ContentPane" title="Heeh, this is a content pane">
         Hi!
         </div>
