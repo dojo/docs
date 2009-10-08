@@ -25,16 +25,20 @@ TODO: introduce the component/class/method
 Usage
 =====
 
-var foo = dojo.connectPublisher(topic, obj, event);
-  Returns a handle which can be passed to dojo.disconnect() to disable subsequent automatic publication on the topic.
+.. code-block :: javascript
+  
+  var foo = dojo.connectPublisher(topic, obj, event);
 
-  =========  ===========  =============================================================================
-  Parameter  Type         Description
-  =========  ===========  =============================================================================
-  topic      String       The name of the topic to publish.
-  obj        Object|null  The source object for the event function. Defaults to dojo.global if null.
-  event      String       The name of the event function in obj. I.e. identifies a property obj[event].
-  =========  ===========  =============================================================================
+
+Returns a handle which can be passed to dojo.disconnect() to disable subsequent automatic publication on the topic.
+
+=========  ===========  =============================================================================
+Parameter  Type         Description
+=========  ===========  =============================================================================
+topic      String       The name of the topic to publish.
+obj        Object|null  The source object for the event function. Defaults to dojo.global if null.
+event      String       The name of the event function in obj. I.e. identifies a property obj[event].
+=========  ===========  =============================================================================
 
 
 ========
