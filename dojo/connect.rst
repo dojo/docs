@@ -79,3 +79,4 @@ See also
 ========
 
 * `Event QuickStart <quickstart/events>`_ for a good introduction
+* `dojo.connectPublisher <dojo/connectPublisher>`_
