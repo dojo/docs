@@ -92,43 +92,6 @@ Examples
 	dojo.connect("globalEvent", globalHandler); // same
 
 
-Connecting to a button click
-----------------------------
-
-This example shows, how to use dojo.connect in order to connect the onclick-Event to a function.
-
-.. cv-compound::
-
-  .. cv:: javascript
-    :label: The jscript to connect to an onclick event
-
-    <script language="text/javascript">
-        dojo.require("dijit.form.Button");
-
-        function helloPressed(){
-            alert('You pressed the button');
-        }
-
-        dojo.addOnLoad(function(){
-            // Create a button programmatically:
-            var button = new dijit.form.Button({
-                label: "Click me!"
-                },
-                "button1"
-            );
-
-            // Use dojo.connect to connect the onclick-Event to a function:
-            // dojo.connect(dojo.byId("button1"), "onclick", helloPressed);           
-        });
-    </script>
-
-  .. cv:: html
-    :label: A dojo button
-
-    <button id="button1" type="button">
-    </button>
-
-
 ========
 See also
 ========
