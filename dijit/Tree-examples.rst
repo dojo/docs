@@ -50,7 +50,7 @@ In order to select a TreeNode deep in the hierarchy, we must:
 
 * expand each TreeNode in the tree for that hierarchy, to force creation of all the TreeNodes we need
 
-* finally, tell the Tree to select the TreeNode we are interested in.
+* finally, tell the Tree to select the TreeNode we are interested in (NOTE: This feature, tree.attr('selectedItem'), was on trunk as of dojo 1.3.2, and is scheduled for 1.4, see <http://bugs.dojotoolkit.org/ticket/9443>)
 
 Here is the solution I came up with:
 
