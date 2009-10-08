@@ -24,15 +24,11 @@ Horizontal Pager
         dojo.require("dojox.widget.Pager");
     </script>
 
-    <script type="text/javascript">     
-        dojo.addOnLoad(function(){
-            var pagerStore = new dojo.data.ItemFileReadStore({
-                url: "http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dojox/widget/tests/_pager-data.json"
-            });
-        });
-    </script>
-
   .. cv:: html
+
+    <!-- the datastore -->
+    <div dojoType="dojo.data.ItemFileReadStore" jsId="pagerStore" id="pagerStore" 
+        url="http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dojox/widget/tests/_pager-data.json"></div>
 
     <h2>Horizontal Pager</h2>
 
