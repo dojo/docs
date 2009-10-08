@@ -17,6 +17,13 @@ Horizontal Pager
 
 .. cv-compound::
 
+  .. cv:: css
+
+    <style type="text/css">
+        @import "http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dojox/Pager/Pager.css";
+    </style>
+
+
   .. cv:: javascript
 
     <script type="text/javascript">
