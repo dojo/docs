@@ -1,19 +1,50 @@
-#format dojo_rst
-
 dojox.widget.Pager
 ==================
 
 :Status: Draft
-:Version: beta
-:Authors: Nikolai Onken
+:Version: 1.0
+:Project owner: Nikolai Onken
+:Available: since V?
+
+.. contents::
+   :depth: 2
+
+TODO: short summary of the component/class/method
+
+
+============
+Introduction
+============
+
+TODO: introduce the component/class/method
+
+
+=====
+Usage
+=====
+
+TODO: how to use the component/class/method
+
+.. code-block :: javascript
+ :linenos:
+
+ <script type="text/javascript">
+   // your code
+ </script>
+
 
 
 ========
 Examples
 ========
 
-Horizontal Pager
-----------------
+Programmatic example
+--------------------
+
+TODO: example
+
+Declarative example: Horizontal Pager
+-------------------------------------
 
 .. cv-compound::
 
@@ -43,3 +74,10 @@ Horizontal Pager
         <div dojoType="dojox.widget.Pager" id="dojoxMenu1" 
             store="pagerStore" style="width: 410px; height: 150px"></div>
     </div>
+
+
+========
+See also
+========
+
+* TODO: links to other related articles
