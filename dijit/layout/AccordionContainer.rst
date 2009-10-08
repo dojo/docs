@@ -35,7 +35,7 @@ Programmatic example
 	dojo.require("dijit.layout.ContentPane");
 
 	dojo.addOnLoad(function(){
-	  var aContainer = new dijit.layout.AccordionContainer({style:"height: 400px"}, "markup");
+	  var aContainer = new dijit.layout.AccordionContainer({style:"height: 350px"}, "markup");
 
 	  aContainer.addChild(new dijit.layout.ContentPane({
 				title:"This is a content pane", 
@@ -55,7 +55,7 @@ Programmatic example
 
   .. cv:: html
 
-     <div id="markup" style="width:300px;"></div>
+     <div id="markup" style="width:300px; height: 350px"></div>
   
 
 Declarative example
