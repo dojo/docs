@@ -22,7 +22,7 @@ dojo.connectPublisher is an automation of this common form:
 
 .. code-block :: javascript
   
-  dojo.connect(foo, "bar", function(){
+  dojo.connect(myObject, "myEvent", function(){
        dojo.publish("/some/topic/name", arguments);
   });
 
@@ -30,7 +30,7 @@ Which becomes:
 
 .. code-block :: javascript
   
-  dojo.connectPublisher("/some/topic/name", foo, "bar");
+  dojo.connectPublisher("/some/topic/name", myObject, "myEvent");
 
 
 =====
