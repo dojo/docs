@@ -36,15 +36,3 @@ Horizontal Pager
         <div dojoType="dojox.widget.Pager" id="dojoxMenu1" 
             store="pagerStore" style="width: 410px; height: 150px"></div>
     </div>
-    <div style="padding:8px">
-        <div dojoType="dojox.widget.Pager" id="dojoxMenu2" itemsPage="4" 
-            store="pagerStore" statusPos="trailing" style="width: 410px; height: 150px"></div>
-    </div>
-    <div style="padding:8px">
-        <div dojoType="dojox.widget.Pager" id="dojoxMenu1s" store="pagerStore" pagerPos="none" 
-            style="width: 410px; height: 150px"></div>
-    </div>
-    <div style="padding:8px">
-        <div dojoType="dojox.widget.Pager" id="dojoxMenu2s" itemsPage="4" pagerPos="none" 
-            store="pagerStore" statusPos="trailing" style="width: 410px; height: 150px"></div>
-    </div>
