@@ -17,11 +17,38 @@ dojo.connect connects events to methods, so that after the event occurs, the new
 Introduction
 ============
 
-Events in JavaScript or Dojo based applications are essential to making applications work. Connecting an event handler (function) to an element or an object is one of the most common things you will do when developing applications using Dojo. Dojo provides a simple API for connecting events via the dojo.connect() function. One important thing to note here is that events can be mapped to any property or object or element. Using this API you can wire your user interfaces together or allow for your objects to communicate. The dojo.connnect() API does not require that the objects be Dojo based. In other words, you can use this API with your existing code and interfaces.
+`dojo.connect` is the core event handling and delegation method in
+Dojo. It allows one function to "listen in" on the execution of
+any other, triggering the second whenever the first is called. Many
+listeners may be attached to a function, and source functions may
+be either regular function calls or DOM events.
 
-See the `Event QuickStart <quickstart/events>`_ for a good introduction. 
+`dojo.connect` connects listeners to actions, so that after event fires, a
+listener is called with the same arguments passed to the orginal
+function.
 
-``FIXME: quickstart is more informative. fill in details and more technical information below``
+Since `dojo.connect` allows the source of events to be either a
+"regular" JavaScript function or a DOM event, it provides a uniform
+interface for listening to all the types of events that an
+application is likely to deal with though a single, unified
+interface. DOM programmers may want to think of it as
+"addEventListener for everything and anything".
+
+When setting up a connection, the `event` parameter must be a
+string that is the name of the method/event to be listened for. If
+`obj` is null, `dojo.global` is assumed, meaning that connections
+to global methods are supported but also that you may inadvertantly
+connect to a global by passing an incorrect object name or invalid
+reference.
+
+`dojo.connect` generally is forgiving. If you pass the name of a
+function or method that does not yet exist on `obj`, connect will
+not fail, but will instead set up a stub method. Similarly, null
+arguments may simply be omitted such that fewer than 4 arguments
+may be required to set up a connection See the examples for deails.
+
+The return value is a handle that is needed to 
+remove this connection with `dojo.disconnect`.
 
 =====
 Usage
@@ -36,26 +63,30 @@ Usage
 Examples
 ========
 
-Connecting to a button click
-----------------------------
+.. code-block :: javascript
 
-.. cv-compound::
+	// When obj.onchange(), do ui.update():
+	dojo.connect(obj, "onchange", ui, "update");
+	dojo.connect(obj, "onchange", ui, ui.update); // same
 
-  .. cv:: html
-    :label: A dojo button
+	// Using return value for disconnect:
+	var link = dojo.connect(obj, "onchange", ui, "update");
+	...
+	dojo.disconnect(link);
 
-    <div dojoType="dijit.form.Button" id="button1">Click me!</div>
+	// When onglobalevent executes, watcher.handler is invoked:
+	dojo.connect(null, "onglobalevent", watcher, "handler");
 
-  .. cv:: javascript
-    :label: The jscript to connect to an onclick event
+	// When ob.onCustomEvent executes, customEventHandler is invoked:
+	dojo.connect(ob, "onCustomEvent", null, "customEventHandler");
+	dojo.connect(ob, "onCustomEvent", "customEventHandler"); // same
 
-    <script language="text/javascript">
-      dojo.require("dijit.form.Button");
+	// When ob.onCustomEvent executes, customEventHandler is invoked
+	// with the same scope (this):
+	dojo.connect(ob, "onCustomEvent", null, customEventHandler);
+	dojo.connect(ob, "onCustomEvent", customEventHandler); // same
 
-      function helloPressed(){
-       alert('You pressed the button');
-      }
-      dojo.addOnLoad(function(){
-        dojo.connect(dojo.byId("button1"), "onclick", helloPressed);
-      });
-    </script>
+	// When globalEvent executes, globalHandler is invoked
+	// with the same scope (this):
+	dojo.connect(null, "globalEvent", null, globalHandler);
+	dojo.connect("globalEvent", globalHandler); // same
