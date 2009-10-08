@@ -60,5 +60,5 @@ Programmatic example
 See also
 ========
 
-* `Event QuickStart <quickstart/events>`_ for a good introduction
+* `Event QuickStart <quickstart/events>`_
 * `dojo.connect <dojo/connect>`_
