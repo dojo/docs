@@ -20,7 +20,7 @@ Horizontal Pager
   .. cv:: css
 
     <style type="text/css">
-        @import "http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dojox/Pager/Pager.css";
+        @import "http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dojox/widget/Pager/Pager.css";
     </style>
 
 
