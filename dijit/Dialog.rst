@@ -142,7 +142,7 @@ If you wish to alter the default color for the underlay, you do so in CSS. The u
 Forms and Functionality in Dialogs
 ----------------------------------
 
-This example shows a Dialog containing form data.  You can get the form data as a javascript object by calling attr('value') on the dialog.
+This example shows a Dialog containing form data. You can get the form data as a javascript object by calling attr('value') on the dialog.
 
 To prevent the user from dismissing the dialog if there are errors in the form, add an onClick handler to your submit button. In order to run Dialog's execute-method the submit button has to be a dijit.form.Button, normal submit button doesn't trigger this function. In addition, the form has to be local, the dialog doesn't find the form values if it's included via href attribute.
 
@@ -158,33 +158,33 @@ To simply close the dialog, click the Cancel button, which calls the hide() func
         <table>
             <tr>
                 <td><label for="name">Name: </label></td>
-                <td><input dojoType=dijit.form.TextBox type="text" name="name" id="name"></td>
+                <td><input dojoType="dijit.form.TextBox" type="text" name="name" id="name"></td>
             </tr>
             <tr>
                 <td><label for="loc">Location: </label></td>
-                <td><input dojoType=dijit.form.TextBox type="text" name="loc" id="loc"></td>
+                <td><input dojoType="dijit.form.TextBox" type="text" name="loc" id="loc"></td>
             </tr>
             <tr>
                 <td><label for="date">Start date: </label></td>
-                <td><input dojoType=dijit.form.DateTextBox type="text" name="sdate" id="sdate"></td>
+                <td><input dojoType="dijit.form.DateTextBox" type="text" name="sdate" id="sdate"></td>
             </tr>
             <tr>
                 <td><label for="date">End date: </label></td>
-                <td><input dojoType=dijit.form.DateTextBox type="text" name="edate" id="edate"></td>
+                <td><input dojoType="dijit.form.DateTextBox" type="text" name="edate" id="edate"></td>
             </tr>
             <tr>
                 <td><label for="date">Time: </label></td>
-                <td><input dojoType=dijit.form.TimeTextBox type="text" name="time" id="time"></td>
+                <td><input dojoType="dijit.form.TimeTextBox" type="text" name="time" id="time"></td>
             </tr>
             <tr>
                 <td><label for="desc">Description: </label></td>
-                <td><input dojoType=dijit.form.TextBox type="text" name="desc" id="desc"></td>
+                <td><input dojoType="dijit.form.TextBox" type="text" name="desc" id="desc"></td>
             </tr>
             <tr>
                 <td align="center" colspan="2">
-                    <button dojoType=dijit.form.Button type="submit"
+                    <button dojoType="dijit.form.Button" type="submit"
                         onClick="return dijit.byId('formDialog').isValid();">OK</button>
-                    <button dojoType=dijit.form.Button 
+                    <button dojoType="dijit.form.Button" type="button"
                         onClick="dijit.byId('formDialog').hide();">Cancel</button>
                 </td>
             </tr>
