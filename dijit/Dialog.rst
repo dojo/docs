@@ -146,6 +146,8 @@ This example shows a Dialog containing form data.  You can get the form data as 
 
 To prevent the user from dismissing the dialog if there are errors in the form, add an onClick handler to your submit button. In order to run Dialog's execute-method the submit button has to be a dijit.form.Button, normal submit button doesn't trigger this function. In addition, the form has to be local, the dialog doesn't find the form values if it's included via href attribute.
 
+To simply close the dialog, click the Cancel button, which calls the hide() function on the Dialog.
+
 .. cv-compound::
 
   
@@ -179,9 +181,13 @@ To prevent the user from dismissing the dialog if there are errors in the form, 
                 <td><input dojoType=dijit.form.TextBox type="text" name="desc" id="desc"></td>
             </tr>
             <tr>
-                <td colspan="2" align="center">
+                <td align="right">
                     <button dojoType=dijit.form.Button type="submit"
                         onClick="return dijit.byId('formDialog').isValid();">OK</button>
+                </td>
+                <td align="left">
+                    <button dojoType=dijit.form.Button 
+                        onClick="dijit.byId('formDialog').hide();">Cancel</button>
                 </td>
             </tr>
         </table>
