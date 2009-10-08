@@ -99,11 +99,6 @@ This example shows, how to use dojo.connect in order to connect the onclick-Even
 
 .. cv-compound::
 
-  .. cv:: html
-    :label: A dojo button
-
-    <div dojoType="dijit.form.Button" id="button1">Click me!</div>
-
   .. cv:: javascript
     :label: The jscript to connect to an onclick event
 
@@ -115,9 +110,22 @@ This example shows, how to use dojo.connect in order to connect the onclick-Even
         }
 
         dojo.addOnLoad(function(){
-            dojo.connect(dojo.byId("button1"), "onclick", helloPressed);
+            // Create a button programmatically:
+            var button = new dijit.form.Button({
+                label: "Click me!"
+                },
+                "button1"
+            );
+
+            // Use dojo.connect to connect the onclick-Event to a function:
+            dojo.connect(dojo.byId("button1"), "onclick", helloPressed);           
         });
     </script>
+
+  .. cv:: html
+    :label: A dojo button
+
+    <div dojoType="dijit.form.Button" id="button1">Click me!</div>
 
 
 ========
