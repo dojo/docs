@@ -12,7 +12,7 @@ dijit.Tree examples
 Expanding and Focusing tree nodes programatically
 -------------------------------------------------
 
-Taking as an example a dijit.Tree linked to a ForestStoreModel linked to a ItemFileReadStore:
+Taking as an example a ''dijit.Tree'' linked to a ''dijit.tree.ForestStoreModel'' linked to a ''dojo.data.ItemFileReadStore'':
 
 .. cv-compound::
 
@@ -27,7 +27,6 @@ Taking as an example a dijit.Tree linked to a ForestStoreModel linked to a ItemF
   .. cv:: html
 
     <div dojoType="dojo.data.ItemFileReadStore" jsId="catStore"
-        dojoAttachPoint="catStore" onComplete="_storeOnComplete" dojoAttachEvent="onComplete: _storeOnComplete"
         url="http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/countries.json">
     </div>
     <div dojoType="dijit.tree.ForestStoreModel" jsId="catModel" jsId="catModel" store="catStore"
@@ -39,13 +38,15 @@ Taking as an example a dijit.Tree linked to a ForestStoreModel linked to a ItemF
         openOnClick="true" showRoot="false" persist="false">
     </div>
 
-Lets presume the tree does not persist its expanded state between reloads (see 'persist="false"' in the example above).  It will load unexpanded, with only the root TreeNode in the tree.  When that root node is expanded, its immediate child TreeNodes will be created.  However, until then, there is only the root node.
+Lets presume the tree does not persist its expanded state between reloads (see ''persist="false"'' in the example above).  It will load unexpanded, with only the root TreeNode in the tree.  When that root node is expanded, its immediate child TreeNodes will be created.  However, until then, there is only the root node.
+
+If you try to use ''tree.attr('path')'' immediately to select a path in the tree, it will fail with an obscure error message as it finds the child nodes it is trying to expand do not yet exist.
 
 In order to select a TreeNode deep in the hierarchy, we must:
-- know the identify of the item in the store for the item we want to expand.
-- build an array of DataItem objects from the store for each item in the data hierarchy
-- expand each TreeNode in the tree for that hierarchy, to force creation of all the TreeNodes we need
-- finally, tell the Tree to select the TreeNode we are interested in.
+* know the identify of the item in the store for the item we want to expand.
+* build an array of DataItem objects from the store for each item in the data hierarchy
+* expand each TreeNode in the tree for that hierarchy, to force creation of all the TreeNodes we need
+* finally, tell the Tree to select the TreeNode we are interested in.
 
 Here is the solution I came up with:
 
@@ -135,11 +136,12 @@ Here is the solution I came up with:
 	}
     </script>
 
+The question remains, at the point that we want to highlight a node in the tree, why would we need to know the full path to the node we wish to select?  Perhaps future dijit.Tree implementations will be able to take care of that for us.
+
   .. cv:: html
 
     <div dojoType="dojo.data.ItemFileReadStore" jsId="catStore"
-        dojoAttachPoint="catStore" onComplete="_storeOnComplete" dojoAttachEvent="onComplete: _storeOnComplete"
-        url="http://neekfenwick.homeip.net:8080/DojoTest/treeitemselect.json">
+        url="http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/countries.json">
     </div>
     <div dojoType="dijit.tree.ForestStoreModel" jsId="catModel" jsId="catModel" store="catStore"
         query="{type: 'continent'}" rootId="continentRoot" rootLabel="Continents"
