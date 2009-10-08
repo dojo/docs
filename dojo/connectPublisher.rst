@@ -30,7 +30,7 @@ Usage
   var foo = dojo.connectPublisher(topic, obj, event);
 
 
-Returns a handle which can be passed to dojo.disconnect() to disable subsequent automatic publication on the topic.
+Returns a handle which can be passed to `dojo.disconnect() <dojo/disconnect>`_ to disable subsequent automatic publication on the topic.
 
 =========  ===========  =============================================================================
 Parameter  Type         Description
