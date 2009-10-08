@@ -153,9 +153,9 @@ Here is the solution I came up with:
     <div dojoType="dijit.Tree" id="mytree" jsId="catTree" model="catModel"
         openOnClick="true" showRoot="false" persist="false">
     </div>
-    <input type='button' onClick='selectTheNode();'>Select the node!</input>
+    <input type='button' onClick='selectTheNode();' value='Select Mexico City!'/>
 
-The question remains, at the point that we want to highlight a node in the tree, why would we need to know the full path to the node we wish to select?  Perhaps future dijit.Tree implementations will be able to take care of that for us.
+The question remains, at the point that we want to highlight a node in the tree, why would we need to know the full path to the node we wish to select?  It is likely that your requirement will be that your server has sent an id for an item in the data store, and you need to highlight the tree node for that item using only that id.  Perhaps future dijit.Tree implementations will be able to take care of that for us.  For now, the best solution would probably be to have your server send the full that to the item in question, so your javascript client need only do the legwork above, and not exhaustively scan the data store for the item in question.
 
 How can I prevent expanding of nodes when clicking on them?
 -----------------------------------------------------------
