@@ -28,10 +28,10 @@ Taking as an example a dijit.Tree linked to a ForestStoreModel linked to a ItemF
 
     <div dojoType="dojo.data.ItemFileReadStore" jsId="catStore"
         dojoAttachPoint="catStore" onComplete="_storeOnComplete" dojoAttachEvent="onComplete: _storeOnComplete"
-        url="http://neekfenwick.homeip.net:8080/DojoTest/treeitemselect.json">
+        url="http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/countries.json">
     </div>
     <div dojoType="dijit.tree.ForestStoreModel" jsId="catModel" jsId="catModel" store="catStore"
-        query="{name:'*'}" rootId="catRoot" rootLabel="categories"
+        query="{type:'continent'}" rootId="continentRoot" rootLabel="Continents"
         childrenAttrs="children">
     </div>
     <span>In Category:</span>
@@ -131,9 +131,7 @@ Here is the solution I came up with:
 		//  that last item, and build an array of DataItems from the store for
 		//  each one, in order to pass the array of DataItems to tree.attr('path').
 		recursiveFetch(dataItems, catTree,
-				['f8d5f246-aee6-45e2-b0c4-e4e38a78ace8',
-					'6e205a1f-c56a-4b27-8992-80cbf7b1f9e0',
-					'fa129791-e591-4e5f-b332-ccde9d67e94b'], 0);
+				['NA', 'MX', 'Mexico City'], 0);
 	}
     </script>
 
@@ -144,7 +142,7 @@ Here is the solution I came up with:
         url="http://neekfenwick.homeip.net:8080/DojoTest/treeitemselect.json">
     </div>
     <div dojoType="dijit.tree.ForestStoreModel" jsId="catModel" jsId="catModel" store="catStore"
-        query="{name:'*'}" rootId="catRoot" rootLabel="categories"
+        query="{type: 'continent'}" rootId="continentRoot" rootLabel="Continents"
         childrenAttrs="children">
     </div>
     <span>In Category:</span>
