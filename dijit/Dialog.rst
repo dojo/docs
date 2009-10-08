@@ -181,11 +181,9 @@ To simply close the dialog, click the Cancel button, which calls the hide() func
                 <td><input dojoType=dijit.form.TextBox type="text" name="desc" id="desc"></td>
             </tr>
             <tr>
-                <td align="right">
+                <td align="center" colspan="2">
                     <button dojoType=dijit.form.Button type="submit"
                         onClick="return dijit.byId('formDialog').isValid();">OK</button>
-                </td>
-                <td align="left">
                     <button dojoType=dijit.form.Button 
                         onClick="dijit.byId('formDialog').hide();">Cancel</button>
                 </td>
