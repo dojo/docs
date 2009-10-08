@@ -5,8 +5,8 @@ dojo.connectPublisher
 
 :Status: Draft
 :Version: 1.0
-:Project owner: ?--
-:Available: since V?
+:Project owner: Alex Russell
+:Available: since V0.9
 
 .. contents::
    :depth: 2
@@ -18,7 +18,19 @@ Ensure that everytime an event is called, a message is published on the topic.
 Introduction
 ============
 
-TODO: introduce the component/class/method
+dojo.connectPublisher is an automation of this common form:
+
+.. code-block :: javascript
+  
+  dojo.connect(foo, "bar", function(){
+       dojo.publish("/some/topic/name", arguments);
+  });
+
+Which becomes:
+
+.. code-block :: javascript
+  
+  dojo.connectPublisher("/some/topic/name", foo, "bar");
 
 
 =====
