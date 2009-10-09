@@ -27,7 +27,7 @@ Technically, a widget can be any javascript "class" that implements a constructo
 .. code-block:: javascript
 
   constructor: function(params, srcNodeRef){
-       console.log("creating widget with params " + dojo.toJson(params) + " on node " + srcNodeRef);
+      console.log("creating widget with params " + dojo.toJson(params) + " on node " + srcNodeRef);
   }
 
 
@@ -40,16 +40,16 @@ The simplest widget you can create is a *behavioral* widget, i.e., a widget that
   .. cv:: javascript
 
     <script>
-	dojo.require("dijit._Widget");
-	dojo.declare("MyFirstBehavioralWidget", [dijit._Widget], {
-             // put methods, attributes, etc. here
-	});
-	dojo.require("dojo.parser");
+        dojo.require("dijit._Widget");
+        dojo.declare("MyFirstBehavioralWidget", [dijit._Widget], {
+                // put methods, attributes, etc. here
+        });
+        dojo.require("dojo.parser");
     </script>
 
   .. cv:: html
 
-	<span dojoType="MyFirstBehavioralWidget">hi</span>
+    <span dojoType="MyFirstBehavioralWidget">hi</span>
 
 This is merely creating a javascript object (of type MyFirstBehavioralWidget) associated with the <span> in the original markup.  You would create a postCreate() method referencing this.domNode that did connections, etc. to do something interesting w/that DOM node.
 
@@ -57,7 +57,7 @@ This kind of behavioral widget is useful in some cases, but it has severe limita
 
 .. code-block:: javascript
 
-  new MyWidget({})
+    new MyWidget({})
 
 there isn't even a DOM node to replace at all.
 
@@ -70,22 +70,22 @@ Here's a simple example of a widget that creates it's own DOM tree:
   .. cv:: javascript
 
     <script>
-dojo.require('dijit._Widget');
-	dojo.addOnLoad(function(){
-	dojo.declare("MyFirstWidget",[dijit._Widget], {
-		buildRendering: function(){
-			// create the DOM for this widget
-			this.domNode = dojo.create("button", {innerHTML: "push me"});
-		}
-	});
-		// Create the widget programatically
-		(new MyFirstWidget()).placeAt(dojo.body());
-	});
+        dojo.require('dijit._Widget');
+        dojo.addOnLoad(function(){
+            dojo.declare("MyFirstWidget",[dijit._Widget], {
+                buildRendering: function(){
+                    // create the DOM for this widget
+                    this.domNode = dojo.create("button", {innerHTML: "push me"});
+                }
+            });
+            // Create the widget programatically
+            (new MyFirstWidget()).placeAt(dojo.body());
+        });
     </script>
 
   .. cv:: html
 
-	<span dojoType="MyFirstWidget">i'll be replaced</span>
+    <span dojoType="MyFirstWidget">i'll be replaced</span>
 
 This widget doesn't do much, but it does show the minimum requirements for a (non-behavioral) widget: create a DOM tree.
 
@@ -96,31 +96,31 @@ Now let's write a widget that performs some javascript.   We'll setup an onclick
   .. cv:: javascript
 
     <script>
-		dojo.require("dijit._Widget");
-		dojo.declare("Counter", [dijit._Widget], {
-			// counter
-			_i: 0,
+        dojo.require("dijit._Widget");
+        dojo.declare("Counter", [dijit._Widget], {
+            // counter
+            _i: 0,
      
-			buildRendering: function(){
-				// create the DOM for this widget
-				this.domNode = dojo.create("button", {innerHTML: this._i});
-			},
+            buildRendering: function(){
+                // create the DOM for this widget
+                this.domNode = dojo.create("button", {innerHTML: this._i});
+            },
 				 
-			postCreate: function(){
-			 	// every time the user clicks the button, increment the counter
-			 	this.connect(this.domNode, "onclick", "increment");
-			 },
+            postCreate: function(){
+                // every time the user clicks the button, increment the counter
+                this.connect(this.domNode, "onclick", "increment");
+            },
 				 
-			increment: function(){
-				 this.domNode.innerHTML = ++this._i;
-			}
-		});
-		dojo.require("dojo.parser");
+            increment: function(){
+                this.domNode.innerHTML = ++this._i;
+            }
+        });
+        dojo.require("dojo.parser");
     </script>
 
   .. cv:: html
 
-	<span dojoType="Counter"></span>
+    <span dojoType="Counter"></span>
 
 postCreate() is called after buildRendering() is finished, and is typically used for connections etc. that can't be done until the DOM tree has been created.
 
@@ -166,25 +166,23 @@ So, putting that all together the source becomes:
 
   .. cv:: javascript
 
-	<script type="text/javascript">
-		dojo.require("dijit._Widget");
-		dojo.require("dijit._Templated");
-		dojo.declare("FancyCounter",
-			[dijit._Widget, dijit._Templated], {
-				// counter
-				_i: 0,
+    <script type="text/javascript">
+        dojo.require("dijit._Widget");
+        dojo.require("dijit._Templated");
+        dojo.declare("FancyCounter", [dijit._Widget, dijit._Templated], {
+            // counter
+            _i: 0,
 
-				templateString:
-					"<div>" +
-						"<button dojoAttachEvent='onclick: increment'>press me</button>" +
-						"&nbsp; count: <span dojoAttachPoint='counter'>0</span>" +
-					"</div>",
+            templateString: "<div>" +
+                "<button dojoAttachEvent='onclick: increment'>press me</button>" +
+                "&nbsp; count: <span dojoAttachPoint='counter'>0</span>" +
+                "</div>",
 				 
-				 increment: function(){
-				 	this.counter.innerHTML = ++this._i;
-				 }
-			});
-		dojo.require("dojo.parser");
+            increment: function(){
+                this.counter.innerHTML = ++this._i;
+            }
+        });
+        dojo.require("dojo.parser");
 	</script>
 
   .. cv:: html
@@ -205,21 +203,21 @@ As a widget writer, you need to declare all your widget parameters in the protot
 
 .. code-block:: javascript
 
-				// label: String
-				//		Button label
-				label: "push me"
+    // label: String
+    // Button label
+    label: "push me"
 
 .. code-block:: javascript
 
-				// duration: Integer
-				//		Milliseconds to fade in/out
-				duration: 100
+    // duration: Integer
+    // Milliseconds to fade in/out
+    duration: 100
 
 .. code-block:: javascript
 
-				// open: Boolean
-				//		Whether pane is visible or hidden
-				open: true
+    // open: Boolean
+    // Whether pane is visible or hidden
+    open: true
 
 Note that all the documentation for an attribute needs to go next
 to the attribute definition, even when you need special documentation about how attr() performs for that
