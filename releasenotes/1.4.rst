@@ -160,7 +160,8 @@ dijit.Tree
 * Multi-parented items support. Tree can support items with multiple parents, as long as this doesn't cause a loop. (`#9361 <http://bugs.dojotoolkit.org/ticket/9361>`_)
 * Deferred child load option on TreeStoreModel. Option added to deferring calling loadItem() on a data store item until it's children need to be read. Performance boost for JsonRestStore. (`#9575 <http://bugs.dojotoolkit.org/ticket/9575>`_)
 * getTooltip() method can set tooltip on each tree node
-
+* onLoad() event when tree is fully loaded
+* expandAll() method to expand all nodes in the tree
 
 dijit.Editor
 ~~~~~~~~~~~~
