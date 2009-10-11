@@ -304,7 +304,7 @@ To map a widget attribute to a DOM node attribute, you do:
 
   attributeMap: {
         disabled: {node: "focusNode", type: "attribute" }
-  }),
+  },
 
 or alternately just
 
@@ -312,7 +312,7 @@ or alternately just
 
   attributeMap: {
         disabled: "focusNode"
-  }),
+  },
 
 Both code blocks copy the widget's "disabled" attribute onto the focusNode DOM node in the template.
 
