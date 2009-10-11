@@ -161,7 +161,7 @@ dijit.Tree
 * Deferred child load option on TreeStoreModel. Option added to deferring calling loadItem() on a data store item until it's children need to be read. Performance boost for JsonRestStore. (`#9575 <http://bugs.dojotoolkit.org/ticket/9575>`_)
 * getTooltip() method can set tooltip on each tree node
 * onLoad() event when tree is fully loaded
-* expandAll() method to expand all nodes in the tree
+* autoExpand=true flag to initially expand all nodes in the tree
 
 dijit.Editor
 ~~~~~~~~~~~~
@@ -184,25 +184,25 @@ The RTE has had numerous bug fixes applied to it as well as some code cleanup to
 
 In addition to the new plugins, the editor icons have all been updated!  They are much cleaner and professional.
 
-Dialog
-~~~~~~
+dijit.Dialog
+~~~~~~~~~~~~
 
 * Multiple dialogs can now be shown (with one dialog launching over another).
 * Dialog supports aria-describedby to make it more accessible to screen readers.
 
-Menu
-~~~~
+dijit.Menu
+~~~~~~~~~~
 
 * Sliding the mouse diagonally from a vertical menu to a second vertical menu will no longer close the second menu if the mouse temporarily moves off of both menus. (This happens when the MenuItem in the second menu is below the bottom of the first Menu.) ( (`#6773 <http://bugs.dojotoolkit.org/ticket/6773>`_)
 
-TitlePane
-~~~~~~~~~
+dijit.TitlePane
+~~~~~~~~~~~~~~~
 
 * toggleable attribute to control whether or not user can close the TitlePane. Useful for non-closable TitlePane's in a app that match the styling of the other TitlePanes (and other dijit components)
 * tooltip attribute to control tooltip on title bar
 
-Tooltip
-~~~~~~~
+dijit.Tooltip
+~~~~~~~~~~~~~
 
 * addTarget()/removeTarget() methods to dynamically attach/detach the tooltip from various nodes.
 
@@ -216,16 +216,16 @@ dijit.Calendar
 dijit.layout
 ------------
 
-TabContainer / AccordionContainer
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+dijit.layout.TabContainer / dijit.layout.AccordionContainer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * scrolling tab labels now supported (like on Firefox etc.) so that labels don't spill over to two rows when there isn't enough space
 * tab labels / pane titles can be changed via pane.attr('title', ...)
 * icons added, controlled via iconClass parameter (like for Buttons and MenuItems). To display only icons set showTitle=false.
 * tooltip attribute controls tooltip on tab labels or accordion pane titles
 
-ContentPane
-~~~~~~~~~~~
+dijit.layout.ContentPane
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 * ContentPane now acts as a full layout widget, calling resize() on it's child widgets when (not before) it is made visible, avoiding problems with children being initialized while hidden.
 * Consequently ContentPane now defines isLayoutContainer to true
@@ -286,8 +286,8 @@ dijit.form.TextBox
 Dijit infrastructure changes
 ----------------------------
 
-_Templated
-~~~~~~~~~~
+dijit._Templated
+~~~~~~~~~~~~~~~~
 
 * widgetsInTemplate widget lifecycle: lots of bug fixes around the lifecycle for widgets in templates. startup() is now called on widgets in templates when startup() is called on the main widget. Templated Layout widgets with widgets in their templates should call resize() on those widgets manually.
 * templatePath has been deprecated in favor of templateString used with dojo.cache(), see above.
