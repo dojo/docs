@@ -39,10 +39,34 @@ A basic example follows:
 
  var pres = new dojox.widget.DataPresentation("myChartNode", {
 		type: "chart",
-		url: "/data/mydata",
+		url: "/data/mydata",   // see example below
 		gridNode: "myGridNode"
 	});
  
+which uses the following (example) chart datafile /data/mydata
+ 
+.. code-block :: javascript
+ :linenos:
+ 
+ {
+ "title"  : "Softdrink Sales (2008)",
+ "footer" : "North America only",
+ "range"  : [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ],
+
+ "series" : 
+ [                            
+ { "legend" : "Pepsi-cola",  "values" : [ "84", "98", "24", "56", "78", "84", "84", "98", "24", "56", "78", "94" ] },
+ { "legend" : "Sprite",      "values" : [ "75", "65", "85", "75", "82", "43", "59", "34", "76", "65", "34", "67" ] },
+ { "legend" : "Coca-Cola",   "values" : [ "64", "47", "68", "73", "43", "34", "42", "69", "86", "77", "65", "41" ] },
+ { "legend" : "Ginger Ale",  "values" : [ "54", "43", "76", "92", "32", "54", "78", "65", "43", "43", "45", "65" ] },
+ { "legend" : "Creme Soda",  "values" : [ "44", "58", "44", "36", "48", "54", "34", "38", "24", "56", "48", "34" ] },
+ { "legend" : "7-Up",        "values" : [ "45", "25", "45", "31", "42", "33", "49", "34", "46", "25", "44", "37" ] },
+ { "legend" : "Fanta",       "values" : [ "34", "17", "38", "13", "33", "14", "22", "39", "26", "17", "35", "21" ] },
+ { "legend" : "Diet Coke",   "values" : [ "14", "23", "16", "32", "12", "24", "18", "25", "13", "33", "15", "25" ] }
+ ]
+ }
+
+
 Properties
 ----------
 
@@ -184,31 +208,9 @@ Different chart styles is a simple matter of passing a type:
  });
 
 
-DataChart Mapping
------------------
+Sample chart datafile /data/mydata
+----------------------------------
 
-This is a (trimmed down) version of the JSON file used, as it is important to the next concepts:
- 
-.. code-block :: javascript
- :linenos:
- 
- {
- "title"  : "Softdrink Sales (2008)",
- "footer" : "North America only",
- "range"  : [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ],
-
- "series" : 
- [                            
- { "legend" : "Pepsi-cola",  "values" : [ "84", "98", "24", "56", "78", "84", "84", "98", "24", "56", "78", "94" ] },
- { "legend" : "Sprite",      "values" : [ "75", "65", "85", "75", "82", "43", "59", "34", "76", "65", "34", "67" ] },
- { "legend" : "Coca-Cola",   "values" : [ "64", "47", "68", "73", "43", "34", "42", "69", "86", "77", "65", "41" ] },
- { "legend" : "Ginger Ale",  "values" : [ "54", "43", "76", "92", "32", "54", "78", "65", "43", "43", "45", "65" ] },
- { "legend" : "Creme Soda",  "values" : [ "44", "58", "44", "36", "48", "54", "34", "38", "24", "56", "48", "34" ] },
- { "legend" : "7-Up",        "values" : [ "45", "25", "45", "31", "42", "33", "49", "34", "46", "25", "44", "37" ] },
- { "legend" : "Fanta",       "values" : [ "34", "17", "38", "13", "33", "14", "22", "39", "26", "17", "35", "21" ] },
- { "legend" : "Diet Coke",   "values" : [ "14", "23", "16", "32", "12", "24", "18", "25", "13", "33", "15", "25" ] }
- ]
- }
 
  
 Demos
