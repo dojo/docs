@@ -1,6 +1,6 @@
 #format dojo_rst
 
-dijit.editor._plugins.TextColor
+dijit._editor.plugins.TextColor
 ===============================
 
 :Status: Draft
@@ -12,7 +12,7 @@ dijit.editor._plugins.TextColor
 .. contents::
     :depth: 2
 
-Have you ever wanted to change the color of the font, or the background color of the text in the document you're editing in the dijir.Editor?  If so, then this plugin is for you.  The dijit.editor._plugins.TextColor plugin provides two action buttons on the editor toolbar for changing those items.  Each make use of the dijit ColorPicker, so they are simple to use.
+Have you ever wanted to change the color of the font, or the background color of the text in the document you're editing in the dijir.Editor?  If so, then this plugin is for you.  The dijit._editor.plugins.TextColor plugin provides two action buttons on the editor toolbar for changing those items.  Each make use of the dijit ColorPicker, so they are simple to use.
 
 ========
 Features
