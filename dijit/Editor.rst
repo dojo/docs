@@ -48,7 +48,7 @@ Limitations
     <p>This is the initial content.</p>
   </div>
 
-* The editor cannot be created on a hidden div.
+* The editor cannot be created on a hidden div.  This is in large part due to the frames and similar.  You will get odd browser errors should you attempt to create an editor on a hidden div.
 
 
 ========
@@ -99,7 +99,10 @@ Most plugins have an associated toolbar button(s), such as the FontChoice plugin
 but some plugins (like AlwaysShowToolbar) just affect the Editor's behavior without changing the toolbar.
 
 The "plugins" parameter controls which plugins are available, and also controls which builtin editor commands
-are available.
+are available.  It can also be used to re-arrange the default ordering of the buttons.  
+
+The basic plugins which are enabled by default are:
+undo, redo, cut, copy, paste, bold, italic, underline, strikethrough, insertOrderedList, insertUnorderedList, indent, outdent, justifyLeft, justifyRight, justifyCenter, justifyFull, dijit._editor.plugins.EnterKeyHandling
 
 If you want to just add plugins above and beyond the standard configuration, then you should use the "extraPlugins" parameter.
 
@@ -151,33 +154,74 @@ This example starts from scratch, thus removing some items from the toolbar (as 
 Builtin Commands
 ================
 
-This is a list of the default commands included in the editor, that can be specified in the plugins parameter (in addition to actual editor plugins in the editor/plugins directory or other places):
+This is a list of the default commands (plugins) supported by the editor as built-in capabilities.  They can be specified in the plugins parameter (in addition to actual editor plugins in the editor/plugins directory or other places):
 
-* "undo"
-* "redo"
-* "cut"
-* "copy"
-* "paste"
-* "selectAll"
-* "bold"
-* "italic"
-* "underline"
-* "strikethrough"
-* "subscript"
-* "superscript"
-* "removeFormat"
-* "insertOrderedList"
-* "insertUnorderedList"
-* "insertHorizontalRule"
-* "indent"
-* "outdent"
-* "justifyLeft"
-* "justifyRight"
-* "justifyCenter"
-* "justifyFull"
-* "createLink"
-* "unlink"
-* "delete" 
++------------------------------+-----------------------------------------------------------------------------------------------------+
+|**Command/Plugin**            |**Description**                                                                                      |
++------------------------------+-----------------------------------------------------------------------------------------------------+
+| undo                         |Undo the last operation on the editor contents.                                                      |
++------------------------------+-----------------------------------------------------------------------------------------------------+
+| redo                         |Redo the last operation that was 'undone' on the editor contents                                     |
++------------------------------+-----------------------------------------------------------------------------------------------------+
+| cut                          |Remove the currently selected text and put it on the clipboard.  Please note that some browsers, such|
+|                              |as FireFox, do not allow direct access to the clipboard by default (for security purposes).  The     |
+|                              |editor, therefore, cannot use its own events to access and past content there.  In those cases, the  |
+|                              |editor will warn you it cannot and tell you what native hotkey sequence to use to perform the        |
+|                              |operation.                                                                                           |
++------------------------------+-----------------------------------------------------------------------------------------------------+
+| copy                         |Copy the currently selected text and put it on the clipboard.  Please note that some browsers, such  |
+|                              |as FireFox, do not allow direct access to the clipboard by default (for security purposes).  The     |
+|                              |editor, therefore, cannot use its own events to access and past content there.  In those cases, the  |
+|                              |editor will warn you it cannot and tell you what native hotkey sequence to use to perform the        |
+|                              |operation.                                                                                           |
++------------------------------+-----------------------------------------------------------------------------------------------------+
+| paste                        |Paste content currently in the clipboard to the editor.  Please note that some browsers, such        |
+|                              |as FireFox, do not allow direct access to the clipboard by default (for security purposes).  The     |
+|                              |editor, therefore, cannot use its own events to access and past content there.  In those cases, the  |
+|                              |editor will warn you it cannot and tell you what native hotkey sequence to use to perform the        |
+|                              |operation.                                                                                           |
++------------------------------+-----------------------------------------------------------------------------------------------------+
+| selectAll                    |Select all the content in the editor.                                                                |
++------------------------------+-----------------------------------------------------------------------------------------------------+
+| bold                         |Bold the currently selected text.                                                                    |
++------------------------------+-----------------------------------------------------------------------------------------------------+
+| italic                       |Italic the currently selected text.                                                                  |
++------------------------------+-----------------------------------------------------------------------------------------------------+
+| underline                    |Underline the currently selected text.                                                               |
++------------------------------+-----------------------------------------------------------------------------------------------------+
+| strikethrough                |Strike through the currently selected text.                                                          |
++------------------------------+-----------------------------------------------------------------------------------------------------+
+| subscript                    |Make the currently selected text subscript.                                                          |
++------------------------------+-----------------------------------------------------------------------------------------------------+
+| superscript                  |Make the currently selected text superscript.                                                        |
++------------------------------+-----------------------------------------------------------------------------------------------------+
+| removeFormat                 |Remove formatting on current block.                                                                  |
++------------------------------+-----------------------------------------------------------------------------------------------------+
+| insertOrderedList            |Insert an ordered list (1, 2, 3, etc)                                                                |
++------------------------------+-----------------------------------------------------------------------------------------------------+
+| insertUnorderedList          |Insert an unordered list (bullets)                                                                   | 
++------------------------------+-----------------------------------------------------------------------------------------------------+
+| insertHorizontalRule         |Insert a horizontal line.                                                                            |
++------------------------------+-----------------------------------------------------------------------------------------------------+
+| indent                       |Indent the current text block or list item                                                           |
++------------------------------+-----------------------------------------------------------------------------------------------------+
+| outdent                      |'Unindent' the current text block or list item.                                                      |
++------------------------------+-----------------------------------------------------------------------------------------------------+
+| justifyLeft                  |Justify the current text block/selected text to the left.                                            |
++------------------------------+-----------------------------------------------------------------------------------------------------+ 
+| justifyRight                 |Justify the current text block/selected text to the right.                                           |
++------------------------------+-----------------------------------------------------------------------------------------------------+
+| justifyCenter                |Center the current text block/selected text.                                                         |
++------------------------------+-----------------------------------------------------------------------------------------------------+
+| justifyFull                  |Full-justify the current text block/selected text.                                                   |
++------------------------------+-----------------------------------------------------------------------------------------------------+
+| createLink                   |Create a hyperlink.  Works best when using the                                                       |
+|                              |`dijit._editor.plugins.LinkDialog <dijit/_editor/plugins/LinkDialog>` plugin.                        |
++------------------------------+-----------------------------------------------------------------------------------------------------+
+| unlink                       |Unlink the current hyperlink undet the cursor/selected text.                                         |
++------------------------------+-----------------------------------------------------------------------------------------------------+
+| delete                       |Delete the currently selected text.                                                                  |
++------------------------------+-----------------------------------------------------------------------------------------------------+
 
 =========================
 Additional Editor Plugins
