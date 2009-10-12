@@ -6,8 +6,9 @@ Dojo 1.4 Release Notes
 .. contents::
    :depth: 3
 
+===============
 Browser support
----------------
+===============
 
 The following browsers are supported. If a browser is not supported, it still may work, but no effort is taken to test unsupported browsers and any specific fix for an unsupported browser is likely not to be done:
 
