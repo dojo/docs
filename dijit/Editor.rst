@@ -7,14 +7,49 @@ dijit.Editor
 
 :Status: Draft
 :Version: 1.0
-:Authors: Becky Gibson, Bill Keese, Nikolai Onken, Marcus Reimann
+:Authors: Becky Gibson, Bill Keese, Nikolai Onken, Marcus Reimann, Jared Jurkiewicz
 :Developers: Liu Cougar, Bill Keese, Douglas Hays, Becky Gibson, Jared Jurkiewicz
-:Available: since V?
+:Available: since V1.0
 
 .. contents::
     :depth: 2
 
 Dijit's Rich Text editor, Dijit.Editor, is a text box on steroids. Designed to look and work like a word processor. The editor features a toolbar, HTML output, and a plugin architecture that supports new commands, new buttons and other new features.
+
+========
+Features
+========
+
+* Provides Rich Text (word processor-like), editing of HTML documents.
+* Extensible toolbar with a default set of icons for common actions (bold, italic, underline, indent, and so on)
+* Cross-browser support.  The RTE cababilities of browsers vary in what they provide and how they are set up.  The dijitEditor abtracts this away and provides a single wat to create a rich-text editing field in your pages.
+* Built-in filtering support.  The editor provides hooks to register HTML and DOM filters with the editor, to pre and post process data going in, or coming out of, the document being edited.
+* Pluggable architecture.  The editor's functionality can be extended by implementing and registering plugins with the editor.  In fact, all the base commands of editor are effectively plugins.  The plugin architecture makes it relatively easy to add new buttons and actions to the toolbar, to being 'headless', where it simply registers filters or augments existing actions.
+
+===========
+Limitations
+===========
+
+* The dijit.Editor uses an iframe to separate the document being edited from the rest of the content of your page.  This helps protect your main page from being corrupted by editor content and vice-versa.  But because of it being iframe isolated, the editor initializes asynchronously.  To avoid any actions firing too early against editor content, you should make use of the 'onLoadDeferred' object of the editor.  For example, see the following example that changes the content after init completes:
+
+.. cv:: html
+
+  <script>
+    dojo.addOnLoad(function(){
+      var editor = dijit.byId("myEditor");
+    
+      editor .onLoadDeferred.addCallback(function(){
+        editor.atte("value", "<b>This is new content.</b>");   
+      });
+    });
+  </script>      
+
+  <div dojoType="dijit.Editor" id="myEditor">
+    <p>This is the initial content.</p>
+  </div>
+
+* The editor cannot be created on a hidden div.
+
 
 ========
 Examples
