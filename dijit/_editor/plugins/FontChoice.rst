@@ -77,23 +77,20 @@ Basic Usage
 
     <script>
       dojo.require("dijit.Editor");
-      dojo.require("dijit._editor.plugins.LinkDialog");
+      dojo.require("dijit._editor.plugins.FontChoice");
     </script>
 
     
   .. html::
 
-    <b>Select any of the links or images below and click the appropriate button to change their properties.  Or, click where on the page you want to insert an image or a link, then click the appropriate button and create the image or link.</b>
+    <b>Select any of the text below and experiment with the font options</b>
     <br>
-    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['createLink', 'unlink', 'insertImage']">
+    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['fontName', 'fontSize', 'formatBlock']">
       <br>
       <br>
-      <a href="http://www.dojotoolkit.org">The best Ajax Toolkit there is, Dojo!</a>
-      <br>
-      <br>
-      <br>
-      <br>
-      It even has a cool logo: <img src="http://jaredj.dojotoolkit.org/images/dojo.logo.png" alt="The Dojo Toolkit" />
+      <h1>This is a header</h1>
+      <p>This is some basic paragraph text.</p>
+      <p><font style="font-face: 'Comic Sans MS'">This is some basic paragraph text in Comic font.</font></p>
       <br>
     </div>
 
