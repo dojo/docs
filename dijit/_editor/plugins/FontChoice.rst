@@ -90,7 +90,7 @@ Basic Usage
       <br>
       <h1>This is a header</h1>
       <p>This is some basic paragraph text.</p>
-      <p><font style="font-face: 'Comic Sans MS'">This is some basic paragraph text in Comic font.</font></p>
+      <p><font style="font-family: 'Comic Sans MS'">This is some basic paragraph text in Comic font.</font></p>
       <br>
     </div>
 
