@@ -254,6 +254,13 @@ There are several additional editor plugins provided by dijit and are listed out
 +---------------------------------------------+-----------------+----------------------------------------------------------------------+
 |**Plugin**                                   |**command**      |**Description**                                                       |
 +---------------------------------------------+-----------------+----------------------------------------------------------------------+
+|dijit._editor.plugins.ToggleDir              |toggleDir        |A toolbar button for toggling the eidtor contents between             |
+|                                             |                 |Right-To-Left and Left-ToRight                                        |
++---------------------------------------------+-----------------+----------------------------------------------------------------------+
+|dijit._editor.plugins.TextColor              |foreColor and    |A plugin that provides two actions for altering text color in the     |
+|                                             |hiliteColor      |editor, the font color (foreColor) and the background color           |
+|                                             |                 |(hiliteColor).                                                        |
++---------------------------------------------+-----------------+----------------------------------------------------------------------+
 |dijit._editor.plugins.FullScreen             |fullscreen       |A toolbar button plus hotkey for invoking an                          |
 |                                             |                 |action that will toggle the editor's fullscreen mode, where it        |
 |                                             |                 |takes over the full viewport of the browser window object.  Note that |
