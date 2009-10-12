@@ -12,7 +12,7 @@ dijit._editor.plugins.ToggleDir
 .. contents::
     :depth: 2
 
-Not all documents in the world are read from Left-To-Right.  There are several languages, in fact, that are read from Right-To-Left, such as Arabic, Hebrew, and so forth.   So, there are times it would be great to see what your document would look like in Right-To-Left view.  With this plugin, you can do that.  The plugin provides a way to toggle RTL/LTR modes to see how it looks.
+Not all documents in the world are read from Left-To-Right.  There are several languages, in fact, that are read from Right-To-Left, such as Arabic, Hebrew, and so forth.   So, there are times it would be great to see what your document would look like in Right-To-Left view.  With this plugin, you can do that. 
 
 ========
 Features
