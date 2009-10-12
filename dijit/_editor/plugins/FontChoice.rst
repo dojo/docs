@@ -95,6 +95,35 @@ Basic Usage
     </div>
 
 
+Basic Usage: Plain Text Previews
+--------------------------------
+
+.. code-example::
+  :djConfig: parseOnLoad: true
+  :version: 1.4
+
+  .. javascript::
+
+    <script>
+      dojo.require("dijit.Editor");
+      dojo.require("dijit._editor.plugins.FontChoice");
+    </script>
+
+    
+  .. html::
+
+    <b>Select any of the text below and experiment with the font options</b>
+    <br>
+    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="[{name: 'fontName', plainText: true}, {name: 'fontSize', plainText: true}, {name: 'formatBlock', plainText: true}]">
+      <br>
+      <br>
+      <h1>This is a header</h1>
+      <p>This is some basic paragraph text.</p>
+      <p><font style="font-family: 'Comic Sans MS'">This is some basic paragraph text in Comic font.</font></p>
+      <br>
+    </div>
+
+
 ========
 See Also
 ========
