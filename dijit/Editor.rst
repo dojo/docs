@@ -89,6 +89,26 @@ although even when created programatically you need to specify a source DOM node
 	</button>
 
 
+Declarative example: Custom Toolbar
+-----------------------------------
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+      dojo.require("dijit.Editor");
+    </script>
+
+  .. cv:: html
+
+      <div dojoType="dijit.Editor" id="editor1" onChange="console.log('editor1 onChange handler: ' + arguments[0])"
+      plugins="['cut','copy','paste','|','bold','italic','underline','strikethrough','subscript',superscript','|', 'indent', 'outdent', 'justifyLeft', 'justifyCenter', 'justifyRight']>
+        <p>This instance is created with a subset of functions enabled in the order we want</p>
+      </div>
+
+
+
 =======
 Plugins
 =======
