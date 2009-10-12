@@ -26,6 +26,7 @@ Once required in and enabled, this plugin provides the following features to dij
 * The plugins are registrable in the editor via the following commands:
 
     foreColor - Enable the the text color plugin.
+
     hiliteColor - Enable the text background color plugin.
 
 
