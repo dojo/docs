@@ -267,8 +267,9 @@ There are several additional editor plugins provided by dijit and are listed out
 +---------------------------------------------+-----------------+----------------------------------------------------------------------+
 |dijit._editor.plugins.LinkDialog             |createLink       |A plugin that provides two actions involving links to external        |
 |                                             |insertImage      |content.  The actions handle inserting hyperlinks (<a> tags) and      |
-|                                             |                 |inserting an imagine (<img> tags).  The plugin provides basic, but    |
-|                                             |                 |decent validating Tooltip Dialog editors for them.                    |
+|                                             |                 |inserting images (<img> tags).  The plugin provides basic, but        |
+|                                             |                 |decent validating Tooltip Dialog editors for working with both types  |
+|                                             |                 |of external links.                                                    |
 +---------------------------------------------+-----------------+----------------------------------------------------------------------+
 |dijit._editor.plugins.FullScreen             |fullscreen       |A toolbar button plus hotkey for invoking an                          |
 |                                             |                 |action that will toggle the editor's fullscreen mode, where it        |
