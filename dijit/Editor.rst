@@ -228,7 +228,7 @@ This is a list of the default commands (plugins) supported by the editor as buil
 Additional Editor Plugins
 =========================
 
-There are several additional editor plugins provided by dijit and are listed out on the page: `dijit._editor.plugins <dijit/_editor/plugins>`_.  These plugins add very useful functionlity above and beyond the basics of editor.  Such function is:
+There are several additional editor plugins provided by dijit and are listed out on the page: `dijit._editor.plugins <dijit/_editor/plugins>`_.  These plugins add very useful functionality above and beyond the basics of editor.  Such function is:
 
 +---------------------------------------------+----------------------------------------------------------------------------------------+
 |**Plugin**                                   |**command**      |**Description**                                                       |
