@@ -272,6 +272,20 @@ DojoX (Dojo eXtensions) contains even more plugins for improving the capabilitie
 |                                             |                 |used to lay out the editor content.                                   |
 |                                             |                 |**New to Dojo toolkit 1.4.**                                          |
 +---------------------------------------------+-----------------+----------------------------------------------------------------------+
+|dojox.editor.plugins.Preview                 |preview          |A toolbar button that allows you to view the content in a new window  |
+|                                             |                 |You can also have it apply custom stylesheets so that the content is  |
+|                                             |                 |is styled differently from how it appears in the editor.              |
+|                                             |                 |**New to Dojo toolkit 1.4.**                                          |
++---------------------------------------------+-----------------+----------------------------------------------------------------------+
+|dojox.editor.plugins.Save                    |save             |A toolbar button that allows you to post back the content of the      |
+|                                             |                 |editor to a remote service easily.  It is intended for subclassing to |
+|                                             |                 |customize save behavior.                                              |
+|                                             |                 |**New to Dojo toolkit 1.4.**                                          |
++---------------------------------------------+-----------------+----------------------------------------------------------------------+
+|dojox.editor.plugins.ToolbarLineBreak        ||| or            |A simple plugin for splitting the toolbar up into multiple lines.     |
+|                                             |toolbarlinebreak |Useful in controlling how the dijit.Editor toolbar wraps.             |
+|                                             |                 |**New to Dojo toolkit 1.4.**                                          |
++---------------------------------------------+-----------------+----------------------------------------------------------------------+
 
 
 
