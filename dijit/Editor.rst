@@ -249,10 +249,10 @@ This is a list of the default commands (plugins) supported by the editor as buil
 Additional Editor Plugins
 =========================
 
-There are several additional editor plugins provided by dijit and are listed out on the page: `dijit._editor.plugins <dijit/_editor/plugins>`_.  These plugins add very useful functionality above and beyond the basics of editor.  Such function is:
+There are several additional editor plugins provided by dijit and are listed out on the page: `dijit._editor.plugins <dijit/_editor/plugins>`_.  These plugins add very useful functionality above and beyond the basics of editor.  Please note that several of the plugins actually provide multiple capabilities.  To make full use of those plugins, you must register the editor with each capability (short name).  A quick summary of the provided function is below:
 
 +---------------------------------------------+-----------------+----------------------------------------------------------------------+
-|**Plugin**                                   |**Short Name**   |**Description**                                                       |
+|**Plugin**                                   |**Short Name(s)**|**Description**                                                       |
 +---------------------------------------------+-----------------+----------------------------------------------------------------------+
 |dijit._editor.plugins.ToggleDir              |toggleDir        |A toolbar button for toggling the eidtor contents between             |
 |                                             |                 |Right-To-Left and Left-ToRight                                        |
@@ -294,7 +294,7 @@ DojoX (Dojo eXtensions) contains even more plugins for improving the capabilitie
 
 
 +---------------------------------------------+-----------------+----------------------------------------------------------------------+
-|**Plugin**                                   |**Short Name**   |**Description**                                                       |
+|**Plugin**                                   |**Short Name(s)**|**Description**                                                       |
 +---------------------------------------------+-----------------+----------------------------------------------------------------------+
 |dojox.editor.plugins.PrettyPrint             |prettyprint      |A headless (no button), plugin that improves the formatting of the    |
 |                                             |                 |HTML returned from editor.attr("value").                              |
