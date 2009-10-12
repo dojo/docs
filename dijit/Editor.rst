@@ -252,7 +252,7 @@ Additional Editor Plugins
 There are several additional editor plugins provided by dijit and are listed out on the page: `dijit._editor.plugins <dijit/_editor/plugins>`_.  These plugins add very useful functionality above and beyond the basics of editor.  Such function is:
 
 +---------------------------------------------+-----------------+----------------------------------------------------------------------+
-|**Plugin**                                   |**command**      |**Description**                                                       |
+|**Plugin**                                   |**Short Name**   |**Description**                                                       |
 +---------------------------------------------+-----------------+----------------------------------------------------------------------+
 |dijit._editor.plugins.ToggleDir              |toggleDir        |A toolbar button for toggling the eidtor contents between             |
 |                                             |                 |Right-To-Left and Left-ToRight                                        |
@@ -260,6 +260,10 @@ There are several additional editor plugins provided by dijit and are listed out
 |dijit._editor.plugins.TextColor              |foreColor and    |A plugin that provides two actions for altering text color in the     |
 |                                             |hiliteColor      |editor, the font color (foreColor) and the background color           |
 |                                             |                 |(hiliteColor).                                                        |
++---------------------------------------------+-----------------+----------------------------------------------------------------------+
+|dijit._editor.plugins.FontChoice             |fontName,        |A plugin that allows users to edit certain properties of text, such as|
+|                                             |fontSize, and    |the size, the font name, and the block formatting (<p>, <pre>, etc)   |
+|                                             |formatBlock      |                                                                      |
 +---------------------------------------------+-----------------+----------------------------------------------------------------------+
 |dijit._editor.plugins.FullScreen             |fullscreen       |A toolbar button plus hotkey for invoking an                          |
 |                                             |                 |action that will toggle the editor's fullscreen mode, where it        |
@@ -285,7 +289,7 @@ DojoX (Dojo eXtensions) contains even more plugins for improving the capabilitie
 
 
 +---------------------------------------------+-----------------+----------------------------------------------------------------------+
-|**Plugin**                                   |**command**      |**Description**                                                       |
+|**Plugin**                                   |**Short Name**   |**Description**                                                       |
 +---------------------------------------------+-----------------+----------------------------------------------------------------------+
 |dojox.editor.plugins.PrettyPrint             |prettyprint      |A headless (no button), plugin that improves the formatting of the    |
 |                                             |                 |HTML returned from editor.attr("value").                              |
