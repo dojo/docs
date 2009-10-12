@@ -1,6 +1,6 @@
 #format dojo_rst
 
-dijit._editor.plugins.LinkDialog
+dijit._editor.plugins.FontChoice
 ================================
 
 :Status: Draft
