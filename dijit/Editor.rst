@@ -230,15 +230,15 @@ Additional Editor Plugins
 
 There are several additional editor plugins provided by dijit and are listed out on the page: `dijit._editor.plugins <dijit/_editor/plugins>`_.  These plugins add very useful functionality above and beyond the basics of editor.  Such function is:
 
-+---------------------------------------------+----------------------------------------------------------------------------------------+
++---------------------------------------------+-----------------+----------------------------------------------------------------------+
 |**Plugin**                                   |**command**      |**Description**                                                       |
-+---------------------------------------------+----------------------------------------------------------------------------------------+
++---------------------------------------------+-----------------+----------------------------------------------------------------------+
 |dijit._editor.plugins.FullScreen             |fullscreen       |A toolbar button plus hotkey binds a hotkey and toolbar button to an  |
 |                                             |                 |action that will have the editor go into fullscreen mode, where it    |
 |                                             |                 |takes over the full viewport of the browser window object.  Note that |
 |                                             |                 |running the editor in an iframe means the editor can only take over   |
 |                                             |                 |the iframe.                                                           |
-+---------------------------------------------+----------------------------------------------------------------------------------------+
++---------------------------------------------+-----------------+----------------------------------------------------------------------+
 
 
 contained in the `dojox.editor.plugins <dojox/editor/plugins>`_ project.  The following are listed below as their are considered generally stable and may be useful to you.
