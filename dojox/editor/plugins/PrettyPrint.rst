@@ -23,6 +23,8 @@ Features
 This plugin cleans up the output from dijit.Editor in the following ways:
 
 * Reasonable indention of tags to show nesting structure.
+* Sorts node attributes alphabetically.
+* Sorts CSS 'style' names alphabetically.
 * Wrapping of text lines consistently and allowing the user to specify a max line length.
 * Configurable encoding entity characters in the TEXT elements of the document.  
 * All done automatically, no toolbar buttons, no extra user actions required.
