@@ -190,6 +190,35 @@ Priority 4: DojoX
 
   needed: full page
 
+* `dojox.widget.Rotator <dojox/widget/Rotator>`_ 
+
+  needed: full page
+
+* `dojox.widget.AutoRotator <dojox/widget/AutoRotator>`_ 
+
+  needed: full page
+
+* `dojox.widget.rotator.Controller <dojox/widget/rotator/Controller>`_ 
+
+  needed: full page
+
+* `dojox.widget.rotator.Fade <dojox/widget/rotator/Fade>`_ 
+
+  needed: full page
+
+* `dojox.widget.rotator.Pan <dojox/widget/rotator/Pan>`_ 
+
+  needed: full page
+
+* `dojox.widget.rotator.Slide <dojox/widget/rotator/Slide>`_ 
+
+  needed: full page
+
+* `dojox.widget.rotator.Wipe <dojox/widget/rotator/Wipe>`_ 
+
+  needed: full page
+
+
 
 ==================================
 New features for Dojo Toolkit V1.3
