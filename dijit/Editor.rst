@@ -234,8 +234,8 @@ There are several additional editor plugins provided by dijit and are listed out
 |**Plugin**                                   |**command**      |**Description**                                                       |
 +---------------------------------------------+----------------------------------------------------------------------------------------+
 |dijit._editor.plugins.FullScreen             |fullscreen       |A toolbar button plus hotkey binds a hotkey and toolbar button to an  |
-|                                             |                 |action that will have the editor go into 'fullscreen' mode, where it  |
-|                                             |                 |can take over the full viewport of the browser 'window'.  Note that   |
+|                                             |                 |action that will have the editor go into fullscreen mode, where it    |
+|                                             |                 |takes over the full viewport of the browser 'window'.  Note that      |
 |                                             |                 |running the editor in an iframe means the editor can only take over   |
 |                                             |                 |the iframe.                                                           |
 +---------------------------------------------+----------------------------------------------------------------------------------------+
