@@ -390,6 +390,7 @@ dojox.image
 
 * Significant fixes and improvements in dojox.image.Lightbox. see: `[17205] <http://bugs.dojotoolkit.org/changeset/17205>`_
 * Bug fixes for dojox.image.SlideShow to deal with autoLoad and autoStart issues. see `[20285] <http://bugs.dojotoolkit.org/changeset/20285>`_
+* Extended the dojox.image.LightboxNano to show more than one image with a single LBN instance.
 
 dojox.layout
 ------------
@@ -401,6 +402,8 @@ dojox.layout
 dojox.widget
 ------------
 * dojox.widget.Portlet added. An extended version of the dijit.TitlePane, designed to be used with the dojox.layout.GridContainer.
+
+* dojox.widget.Rotator and dojox.widget.AutoRotator added. The rotator is a lightweight non-dijit widget that rotates through child nodes. Support for pan, slide, wipe, and fade transitions. Includes dojox.widget.rotator.Controller for manipulating a rotator.
 
 
 =========
