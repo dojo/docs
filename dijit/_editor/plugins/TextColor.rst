@@ -7,7 +7,7 @@ dijit._editor.plugins.TextColor
 :Version: 1.0
 :Authors: Jared Jurkiewicz
 :Developers: Bill Keese, Jared Jurkiewicz
-:Available: since V1.4
+:Available: since V1.1
 
 .. contents::
     :depth: 2
@@ -68,7 +68,7 @@ Basic Usage: foreColor (Text Color)
 
     <script>
       dojo.require("dijit.Editor");
-      dojo.require("dijit.editor.plugins.TextColor");
+      dojo.require("dijit._editor.plugins.TextColor");
     </script>
 
     
@@ -113,7 +113,7 @@ Basic Usage: hiliteColor (Text Background Color)
 
     <script>
       dojo.require("dijit.Editor");
-      dojo.require("dijit.editor.plugins.TextColor");
+      dojo.require("dijit._editor.plugins.TextColor");
     </script>
 
     
