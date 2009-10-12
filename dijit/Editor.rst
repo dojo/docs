@@ -265,7 +265,7 @@ There are several additional editor plugins provided by dijit and are listed out
 |                                             |fontSize, and    |the size, the font name, and the block formatting (<p>, <pre>, etc)   |
 |                                             |formatBlock      |                                                                      |
 +---------------------------------------------+-----------------+----------------------------------------------------------------------+
-|dijit._editor.plugins.TextColor              |createLink       |A plugin that provides two actions involving links to external        |
+|dijit._editor.plugins.LinkDialog             |createLink       |A plugin that provides two actions involving links to external        |
 |                                             |insertImage      |content.  The actions handle inserting hyperlinks (<a> tags) and      |
 |                                             |                 |inserting an imagine (<img> tags).  The plugin provides basic, but    |
 |                                             |                 |decent validating Tooltip Dialog editors for them.                    |
