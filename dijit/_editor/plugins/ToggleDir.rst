@@ -6,8 +6,8 @@ dijit._editor.plugins.ToggleDir
 :Status: Draft
 :Version: 1.0
 :Authors: Jared Jurkiewicz
-:Developers: Jared Jurkiewicz
-:Available: since V1.4
+:Developers: Bill Keese, Jared Jurkiewicz
+:Available: since V1.0
 
 .. contents::
     :depth: 2
