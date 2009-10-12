@@ -233,25 +233,45 @@ There are several additional editor plugins provided by dijit and are listed out
 +---------------------------------------------+-----------------+----------------------------------------------------------------------+
 |**Plugin**                                   |**command**      |**Description**                                                       |
 +---------------------------------------------+-----------------+----------------------------------------------------------------------+
-|dijit._editor.plugins.FullScreen             |fullscreen       |A toolbar button plus hotkey binds a hotkey and toolbar button to an  |
-|                                             |                 |action that will have the editor go into fullscreen mode, where it    |
+|dijit._editor.plugins.FullScreen             |fullscreen       |A toolbar button plus hotkey for invoking an                          |
+|                                             |                 |action that will toggle the editor's fullscreen mode, where it        |
 |                                             |                 |takes over the full viewport of the browser window object.  Note that |
 |                                             |                 |running the editor in an iframe means the editor can only take over   |
 |                                             |                 |the iframe.                                                           |
+|                                             |                 |**New to Dojo toolkit 1.4.**                                          |
++---------------------------------------------+-----------------+----------------------------------------------------------------------+
+|dijit._editor.plugins.ViewSource             |viewsource       |A toolbar button plus hotkey for invoking an action that toggles the  |
+|                                             |                 |viewport of the editor between Rich-Text and HTML view.               |
+|                                             |                 |**New to Dojo toolkit 1.4.**                                          |
++---------------------------------------------+-----------------+----------------------------------------------------------------------+
+|dijit._editor.plugins.Print                  |print            |A toolbar button that allows you to print the contents of the editor  |
+|                                             |                 |**New to Dojo toolkit 1.4.**                                          |
++---------------------------------------------+-----------------+----------------------------------------------------------------------+
+|dijit._editor.plugins.NewPage                |newpage          |A toolbar button that allows you clear the contents of the editor     |
+|                                             |                 |to a default state, such as blank.  **New to Dojo toolkit 1.4.**      |
 +---------------------------------------------+-----------------+----------------------------------------------------------------------+
 
+Please refer to each plugin's detail page for more information about it.
 
-contained in the `dojox.editor.plugins <dojox/editor/plugins>`_ project.  The following are listed below as their are considered generally stable and may be useful to you.
+DojoX (Dojo eXtensions) contains even more plugins for improving the capabilities of the dijit.Editor.  These are functions that were deemed 'less common' requirements and were therefore put in the extensions namespace.  Please refer to the `landing page <dojox/editor/plugins>`_ for more information about them.  Below is a quick description of each.
 
-* `dojox.editor.plugins.PrettyPrint <dojox/editor/plugins/PrettyPrint>`_  -- **STABLE**  -- A headless plugin that improves the output format from dijit.Editor by structuring the tag indentions and text lines in a more easily human-readable way.  **This plugin is new to the Dojo Toolkit 1.4.**
 
-|
-
-* `dojox.editor.plugins.PageBreak <dojox/editor/plugins/PageBreak>`_ -- **STABLE**  -- A plugin + associated button icon and keybind for inserting page-break styled <hr> tags into the editor document so that upon printing, the document will page break at the desired points.  **This plugin is new to the Dojo Toolkit 1.4.**
-
-|
-
-* `dojox.editor.plugins.ShowBlockNodes <dojox/editor/plugins/ShowBlockNodes>`_  -- **STABLE** -- A plugin + associated button icon and keybind for helping see the current document 'structure' by applying styles to the block elements in the document to make the layout visible.  It does not affect the output contents from the editor in any way, as the styles are applied on the <body> node of the editor iframe document, which is not serialized.  Only the content underneath the body tag is serialized when dijit.Editor.attr("value")/dijit.Editor.getValue() are called.  **This plugin is new to the Dojo Toolkit 1.4.**
++---------------------------------------------+-----------------+----------------------------------------------------------------------+
+|**Plugin**                                   |**command**      |**Description**                                                       |
++---------------------------------------------+-----------------+----------------------------------------------------------------------+
+|dojox.editor.plugins.PrettyPrint             |prettyprint      |A headless (no button), plugin that improves the formatting of the    |
+|                                             |                 |HTML returned from editor.attr("value").                              |
+|                                             |                 |**New to Dojo toolkit 1.4.**                                          |
++---------------------------------------------+-----------------+----------------------------------------------------------------------+
+|dojox.editor.plugins.PageBreak               |pagebreak        |A toolbar button and hotkey for inserting a 'page break' into the     |
+|                                             |                 |document.  When the document is printed, the printor will break to    |
+|                                             |                 |output to new pages at those points.                                  |
+|                                             |                 |**New to Dojo toolkit 1.4.**                                          |
++---------------------------------------------+-----------------+----------------------------------------------------------------------+
+|dojox.editor.plugins.ShowBlockNodes          |showblocknodes   |A toolbar button and hotkey for showing the block html elements being |
+|                                             |                 |used to lay out the editor content.                                   |
+|                                             |                 |**New to Dojo toolkit 1.4.**                                          |
++---------------------------------------------+-----------------+----------------------------------------------------------------------+
 
 
 
