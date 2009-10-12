@@ -13,8 +13,8 @@ dojox.widget.DataPresentation
 .. contents::
    :depth: 2
 
-Basic Description
------------------
+Overview
+--------
 
 DataPresentation is a widget that connects to a data store in a simple manner, and also provides some additional convenience mechanisms for connecting to common data sources without needing to explicitly construct a Dojo data store. 
 
@@ -23,7 +23,8 @@ The widget can then present the data in several forms: as a graphical chart, as 
 The widget can also create and manage several of these forms in one simple construction. 
 		
 
-A basic example follows:
+Example 1.
+~~~~~~~~~~
 
 .. code-block :: html
  :linenos:
@@ -188,28 +189,6 @@ gridWidget: Object
 
 
 
-
-
-Different Chart Types
----------------------
-
-Different chart styles is a simple matter of passing a type:
-
-.. code-block :: javascript
- :linenos:
-
- dojo.addOnLoad(function(){
-    chart = new dojox.charting.DataChart("chartDiv", {
-        type: dojox.charting.plot2d.Columns, // <-- chart type
-            scroll:false,
-            xaxis:{labelFunc:"seriesLabels"}
-    });
-    chart.setStore(store, {symbol:"*"}, "price");
- });
-
-
-Sample chart datafile /data/mydata
-----------------------------------
 
 
  
