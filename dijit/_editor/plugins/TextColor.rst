@@ -121,7 +121,52 @@ Basic Usage: hiliteColor (Text Background Color)
 
     <b>Enter some text and select it, or select existing text, then push the Text Background Color button to select a new background color for it.</b>
     <br>
-    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['foreColor']">
+    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['hiliteColor']">
+    <div>
+    <br>
+    blah blah & blah!
+    <br>
+    </div>
+    <br>
+    <table>
+    <tbody>
+    <tr>
+    <td style="border-style:solid; border-width: 2px; border-color: gray;">One cell</td>
+    <td style="border-style:solid; border-width: 2px; border-color: gray;">
+    Two cell
+    </td>
+    </tr>
+    </tbody>
+    </table>
+    <ul> 
+    <li>item one</li>
+    <li>
+    item two
+    </li>
+    </ul>
+    </div>
+
+
+Basic Usage: hiliteColor (Text Background Color)
+------------------------------------------------
+
+.. code-example::
+  :djConfig: parseOnLoad: true
+  :version: 1.4
+
+  .. javascript::
+
+    <script>
+      dojo.require("dijit.Editor");
+      dojo.require("dijit._editor.plugins.TextColor");
+    </script>
+
+    
+  .. html::
+
+    <b>Enter some text and select it, or select existing text, then change its colors via the text color and text background color buttons.</b>
+    <br>
+    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['foreColor', 'hiliteColor']">
     <div>
     <br>
     blah blah & blah!
