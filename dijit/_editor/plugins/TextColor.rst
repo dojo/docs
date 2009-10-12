@@ -51,7 +51,7 @@ Once it has been required in, all you have to do is include it in the list of ex
   <div dojoType="dijit.Editor" id="editor" extraPlugins="['foreColor', 'hiliteColor']"></div>
 
 
-And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the TextColor plugin!  You can use the buttons to alter the colors of the selected text.
+And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the TextColor plugin!  You can use the buttons to alter the colors of selected text.
 
 ========
 Examples
