@@ -54,7 +54,18 @@ And that's it.  The editor instance you can reference by 'dijit.byId("editor")' 
 Plugin Options
 ==============
 
-The FontChoice plugin allows certain options to control how the plugin displays state to the user.  This is primarily to enable or disable the style 'preview' in the button.  The default mode for style preview is enabled for backwards compatibility.  An example of disabling it is below:
+The FontChoice plugin allows certain options to control how the plugin displays state to the user.  This is primarily to enable or disable the style 'preview' in the button.  The default mode for style preview is enabled for backwards compatibility.  
+
++-----------------------------------+---------------------------------------------------------------------+------------------------+
+| **option**                        | **Description**                                                     | **Required**           |
++-----------------------------------+---------------------------------------------------------------------+------------------------+
+| plainText                         |Boolean indicator if the displayed values in the dropdowns should be |NO                      |
+|                                   |styled or not.  The default value is false, which means they are     |                        |
+|                                   |styled.  **This option is new to Dojo Toolkit 1.4**                  |                        |
++-----------------------------------+---------------------------------------------------------------------+------------------------+
+
+
+An example of disabling it is below:
 
 .. code-block :: html
 
