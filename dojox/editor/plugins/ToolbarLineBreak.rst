@@ -17,7 +17,6 @@ Have you ever wanted to force the editor toolbar to line break/wrap to a new lin
 ========
 Features
 ========
-
 Once required in and enabled, this plugin provides the following features to dijit.Editor.
 
 * A plugin that can be declared multiple times in your 'plugins' or 'extraPlugins' options of Editor that lets you wrap the toolbar at the indicated points
@@ -113,4 +112,5 @@ See Also
 ========
 
 * `dijit.Editor <dijit/Editor>`_
+* `dijit._editor.plugins <dijit/_editor/plugins>`_
 * `dojox.editor.plugins <dojox/editor/plugins>`_
