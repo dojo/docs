@@ -115,4 +115,5 @@ See Also
 ========
 
 * `dijit.Editor <dijit/Editor>`_
+* `dijit._editor.plugins <dijit/_editor/plugins>`_
 * `dojox.editor.plugins <dojox/editor/plugins>`_
