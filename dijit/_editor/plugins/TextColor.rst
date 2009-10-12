@@ -147,8 +147,8 @@ Basic Usage: hiliteColor (Text Background Color)
     </div>
 
 
-Basic Usage: hiliteColor (Text Background Color)
-------------------------------------------------
+Basic Usage: Both foreground and background color buttons together
+------------------------------------------------------------------
 
 .. code-example::
   :djConfig: parseOnLoad: true
