@@ -206,3 +206,6 @@ Demos
 -----
 
 DataPresentation Demo: http://dleadt.torolab.ibm.com/dl/charts/testb.html
+
+
+.. image:: datapres_example_2.png
