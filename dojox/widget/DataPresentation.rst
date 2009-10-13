@@ -205,4 +205,4 @@ which uses the following (example) chart datafile /data/mydata
 Demos
 -----
 
-DataPresentation Demo: http://dleadt.torolab.ibm.com/dl/charts/testa.html
+DataPresentation Demo: http://dleadt.torolab.ibm.com/dl/charts/testb.html
