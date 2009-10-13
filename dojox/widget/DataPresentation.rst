@@ -170,13 +170,10 @@ gridWidget: Object
  The grid widget, if any
 
 
-Examples
---------
+Sample Data
+-----------
 
-Example 1
-~~~~~~~~~
-
-which uses the following (example) chart datafile /data/mydata
+Typical input chart data
  
 .. code-block :: javascript
  :linenos:
