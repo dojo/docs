@@ -97,7 +97,7 @@ For instance, we can create a handler that will populate a node with the respons
   :linenos:
 
   // you don't need to mix(), you can just set the object directly if you prefer:
-  dojo.contentHandlers.loadNoad = function(xhr){
+  dojo.contentHandlers.loadNode = function(xhr){
       var n = dojo.byId(xhr.ioArgs.node);
       n && n.innerHTML = xhr.responseText;
   }
