@@ -46,6 +46,7 @@ Example 1.
  
 
 
+fig 1.
 
 .. image:: datapres_example_1.png
 
@@ -207,5 +208,6 @@ Demos
 
 DataPresentation Demo: http://dleadt.torolab.ibm.com/dl/charts/testb.html
 
+fig 2.
 
 .. image:: datapres_example_2.png
