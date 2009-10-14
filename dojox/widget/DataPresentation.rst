@@ -197,13 +197,11 @@ Typical input chart data
  ]
  }
 
-For more examples see: http://dleadt.torolab.ibm.com/dl/charts/data.js
-
  
 Demos
 -----
 
-DataPresentation Demo: http://dleadt.torolab.ibm.com/dl/charts/testb.html
+DataPresentation Demo: http://dleadt.torolab.ibm.com/dl/charts/testd.html
 
 fig 2.
 
