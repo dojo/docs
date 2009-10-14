@@ -205,4 +205,4 @@ DataPresentation Demo: http://dleadt.torolab.ibm.com/dl/charts/testd.html
 
 fig 2.
 
-.. image:: datapres_example_2.png
+.. image:: datapres_example_3.png
