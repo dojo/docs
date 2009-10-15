@@ -38,7 +38,7 @@ The simplest widget you can create is a *behavioral* widget, i.e., a widget that
 .. code-example::
   :djConfig: parseOnLoad: false
 
-  .. javascript
+  .. javascript::
 	:label: The widget definition
 
 	<script>
@@ -187,7 +187,7 @@ dojoAttachPoint and dojoAttachEvent are documented in detail on the `dijit._Temp
 
 So, putting that all together the source becomes:
 
-.. code-example:
+.. code-example::
   :djConfig: parseOnLoad: false
 
   .. javascript::
