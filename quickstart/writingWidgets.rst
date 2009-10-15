@@ -36,18 +36,21 @@ However, all the widgets in dijit and dojox, are built on top of the `dijit._Wid
 The simplest widget you can create is a *behavioral* widget, i.e., a widget that just uses the DOM tree passed into it rather than creating a DOM tree.
 
 .. code-example::
+  :type: inline
 
   .. javascript
+    :label: The widget definition
 
     <script>
         dojo.require("dijit._Widget");
+        dojo.require("dojo.parser");
         dojo.declare("MyFirstBehavioralWidget", [dijit._Widget], {
                 // put methods, attributes, etc. here
         });
-        dojo.require("dojo.parser");
     </script>
 
   .. html::
+    :label: Instantiate the widget in markup
 
     <span dojoType="MyFirstBehavioralWidget">hi</span>
 
@@ -66,8 +69,11 @@ Here's a simple example of a widget that creates it's own DOM tree:
 
 
 .. code-example::
+  :type: inline
+  :djConfig: parseOnLoad: false
 
   .. javascript::
+    :label: Define the widget and instantiate programatically
 
     <script>
         dojo.require('dijit._Widget');
@@ -84,6 +90,7 @@ Here's a simple example of a widget that creates it's own DOM tree:
     </script>
 
   .. html::
+    :label: Instantiate declaratively
 
     <span dojoType="MyFirstWidget">i'll be replaced</span>
 
@@ -92,9 +99,11 @@ This widget doesn't do much, but it does show the minimum requirement for a (non
 Now let's write a widget that performs some javascript.   We'll setup an onclick handler on a button node which will increment a counter:
 
 .. code-example::
+  :type: inline
   :djConfig: parseOnLoad: false
 
   .. javascript::
+    :label: Define the widget
 
     <script>
         dojo.require("dijit._Widget");
@@ -125,6 +134,7 @@ Now let's write a widget that performs some javascript.   We'll setup an onclick
     </script>
 
   .. html::
+    :label: Instantiate declaratively
 
     <span dojoType="Counter"></span>
 
