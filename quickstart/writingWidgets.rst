@@ -45,13 +45,13 @@ The simplest widget you can create is a *behavioral* widget, i.e., a widget that
     <script>
         dojo.require("dijit._Widget");
         dojo.require("dojo.parser");
-    
+
         dojo.addOnLoad(function(){
             dojo.declare("MyFirstBehavioralWidget", [dijit._Widget], {
                     // put methods, attributes, etc. here
             });
 
-            // Call the parser manually so it runs after our widget is declared
+            // Call the parser manually so it runs after our widget is defined
             dojo.parser.parse();
         });
     </script>
@@ -85,7 +85,7 @@ Here's a simple example of a widget that creates it's own DOM tree:
     <script>
         dojo.require('dijit._Widget');
         dojo.require("dojo.parser");
-    
+
         dojo.addOnLoad(function(){
             dojo.declare("MyFirstWidget",[dijit._Widget], {
                 buildRendering: function(){
@@ -95,8 +95,8 @@ Here's a simple example of a widget that creates it's own DOM tree:
             });
             // Create the widget programatically
             (new MyFirstWidget()).placeAt(dojo.body());
-    
-            // Call the parser manually so it runs after our custom widget is declared
+
+            // Call the parser manually so it runs after our widget is defined
             dojo.parser.parse();
         });
     </script>
@@ -124,23 +124,23 @@ Now let's write a widget that performs some javascript.   We'll setup an onclick
             dojo.declare("Counter", [dijit._Widget], {
                 // counter
                 _i: 0,
-         
+
                 buildRendering: function(){
                     // create the DOM for this widget
                     this.domNode = dojo.create("button", {innerHTML: this._i});
                 },
-    				 
+
                 postCreate: function(){
                     // every time the user clicks the button, increment the counter
                     this.connect(this.domNode, "onclick", "increment");
                 },
-    				 
+
                 increment: function(){
                     this.domNode.innerHTML = ++this._i;
                 }
             });
-    
-            // Call the parser manually so it runs after Counter is declared
+
+            // Call the parser manually so it runs after our widget is defined
             dojo.parser.parse();
         });
     </script>
@@ -190,30 +190,37 @@ dojoAttachPoint and dojoAttachEvent are documented in detail on the `dijit._Temp
 
 So, putting that all together the source becomes:
 
-.. cv-compound::
+.. code-example:
+  :djConfig: parseOnLoad: false
 
-  .. cv:: javascript
+  .. javascript::
 
     <script type="text/javascript">
         dojo.require("dijit._Widget");
         dojo.require("dijit._Templated");
-        dojo.declare("FancyCounter", [dijit._Widget, dijit._Templated], {
-            // counter
-            _i: 0,
-
-            templateString: "<div>" +
-                "<button dojoAttachEvent='onclick: increment'>press me</button>" +
-                "&nbsp; count: <span dojoAttachPoint='counter'>0</span>" +
-                "</div>",
-				 
-            increment: function(){
-                this.counter.innerHTML = ++this._i;
-            }
-        });
         dojo.require("dojo.parser");
+
+        dojo.addOnLoad(function(){
+            dojo.declare("FancyCounter", [dijit._Widget, dijit._Templated], {
+                // counter
+                _i: 0,
+
+                templateString: "<div>" +
+                    "<button dojoAttachEvent='onclick: increment'>press me</button>" +
+                    "&nbsp; count: <span dojoAttachPoint='counter'>0</span>" +
+                    "</div>",
+
+                increment: function(){
+                    this.counter.innerHTML = ++this._i;
+                }
+            });
+
+            // Call the parser manually so it runs after the widget is defined
+            dojo.parser.parse();
+        });
 	</script>
 
-  .. cv:: html
+  .. html::
 
 	<span dojoType="FancyCounter">press me</span>
 
@@ -267,7 +274,7 @@ Often widget attributes are mapped into the widget's DOM.   For example, a Title
 
 You might think that that mapping would be specified inside of the widget's template, but actually it's specified in something called the "attributeMap".  attributeMap can map widget attributes to DOM node attributes, innerHTML, or class.
 
-That explanation is confusing, but an example will help.  
+That explanation is confusing, but an example will help.
 
 Here's a simple widget for displaying a business card.  The widget has 3 parameters:
 
@@ -278,15 +285,18 @@ Here's a simple widget for displaying a business card.  The widget has 3 paramet
 
 Each parameter is specified in the attributeMap to say how it relates to the template:
 
-.. cv-compound::
+.. code-example::
+  :djConfig: parseOnLoad: false
 
-  .. cv:: javascript
+  .. javascript::
 
 	<script type="text/javascript">
 		dojo.require("dijit._Widget");
 		dojo.require("dijit._Templated");
-		dojo.declare("BusinessCard",
-			[dijit._Widget, dijit._Templated], {
+		dojo.require("dojo.parser");
+
+		dojo.addOnLoad(function(){
+			dojo.declare("BusinessCard", [dijit._Widget, dijit._Templated], {
 				// Initialization parameters
 				name: "unknown",
 				nameClass: "employeeName",
@@ -304,10 +314,13 @@ Each parameter is specified in the attributeMap to say how it relates to the tem
 					phone: { node: "phoneNode", type: "innerHTML" },
 				}
 			});
-		dojo.require("dojo.parser");
+
+			// Call the parser manually so it runs after our widget is defined
+			dojo.parser.parse();
+		});
 	</script>
 
-  .. cv:: html
+  .. css::
 
 	<style>
 		.businessCard {
@@ -321,6 +334,9 @@ Each parameter is specified in the attributeMap to say how it relates to the tem
 			color: red;
 		}
 	</style>
+
+  .. html::
+
 	<span dojoType="BusinessCard" name="John Smith" phone="(800) 555-1212"></span>
 	<span dojoType="BusinessCard" name="Jack Bauer" nameClass="specialEmployeeName" phone="(800) CALL-CTU"></span>
 
@@ -354,27 +370,33 @@ _getFooAttr(). attr() will automatically detect and call these custom setters.
 
 Here's an example of a behavioral widget (it uses the DOM node from the supplied markup) that has an "open" attribute that controls whether the widget is hidden or shown:
 
-.. cv-compound::
+.. code-example::
+  :djConfig: parseOnLoad: false
 
-  .. cv:: javascript
+  .. javascript::
 
 	<script type="text/javascript">
 		dojo.require("dijit._Widget");
 		dojo.require("dijit._Templated");
-		dojo.declare("HidePane",
-			[dijit._Widget], {
+		dojo.require("dojo.parser");
+
+		dojo.addOnLoad(function(){
+			dojo.declare("HidePane",[dijit._Widget], {
 				// parameters
 				open: true,
-				
+
 				_setOpenAttr: function(/*Boolean*/ open){
 					this.open = open;
 					dojo.style(this.domNode, "display", open ? "block" : "none");
 				}
 			});
-		dojo.require("dojo.parser");
+
+			// Call the parser manually so it runs after our widget is defined
+			dojo.parser.parse();
+		});
 	</script>
 
-  .. cv:: html
+  .. html::
 
 	<span dojoType="HidePane" open="false" jsId="pane">This pane is initially hidden</span>
 	<button onclick="pane.attr('open', true);">show</button>
@@ -401,9 +423,9 @@ eg:
   :linenos:
 
   dojo.declare("my.Thinger", dijit._Widget, {
-       
+
        value:9,
- 
+
        buildRendering: function(){
             this.inherited(arguments);
             this.multiplier = 3;
@@ -436,22 +458,28 @@ For widgets that mixin _Templated, that is handled automatically, as long as the
 
 Having said all that, now we define the widget, referencing this template via the templateString attribute.   Note that often the template is stored in a file, and in that case templateString should reference the file via `dojo.cache() <dojo/cache>`_.
 
-.. cv-compound::
+.. code-example::
+  :djConfig: parseOnLoad: false
 
-  .. cv:: javascript
+  .. javascript::
 
     <script>
 		dojo.require("dijit._Widget");
 		dojo.require("dijit._Templated");
-		dojo.declare("MyButton",
-			[dijit._Widget, dijit._Templated], {
+		dojo.require("dojo.parser");
+
+		dojo.addOnLoad(function(){
+			dojo.declare("MyButton",[dijit._Widget, dijit._Templated], {
 				templateString:
 				    "<button dojoAttachPoint='containerNode'></button>"
 			});
-		dojo.require("dojo.parser");
+
+			// Call the parser manually so it runs after our widget is defined
+			dojo.parser.parse();
+		});
     </script>
 
-  .. cv:: html
+  .. html::
 
 	<button dojoType="MyButton">press me</button>
 
