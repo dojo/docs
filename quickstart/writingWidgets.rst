@@ -2,7 +2,7 @@
 
 Writing Your Own Widget
 =======================
-:Status: Draft
+:Status: Contributed
 :Version: 1.0
 :Authors: Bill Keese
 
@@ -35,9 +35,9 @@ However, all the widgets in dijit and dojox, are built on top of the `dijit._Wid
 
 The simplest widget you can create is a *behavioral* widget, i.e., a widget that just uses the DOM tree passed into it rather than creating a DOM tree.
 
-.. cv-compound::
+.. code-example::
 
-  .. cv:: javascript
+  .. javascript
 
     <script>
         dojo.require("dijit._Widget");
@@ -47,7 +47,7 @@ The simplest widget you can create is a *behavioral* widget, i.e., a widget that
         dojo.require("dojo.parser");
     </script>
 
-  .. cv:: html
+  .. html::
 
     <span dojoType="MyFirstBehavioralWidget">hi</span>
 
@@ -65,9 +65,9 @@ there isn't even a DOM node to replace at all.
 Here's a simple example of a widget that creates it's own DOM tree:
 
 
-.. cv-compound::
+.. code-example::
 
-  .. cv:: javascript
+  .. javascript::
 
     <script>
         dojo.require('dijit._Widget');
@@ -83,42 +83,48 @@ Here's a simple example of a widget that creates it's own DOM tree:
         });
     </script>
 
-  .. cv:: html
+  .. html::
 
     <span dojoType="MyFirstWidget">i'll be replaced</span>
 
-This widget doesn't do much, but it does show the minimum requirements for a (non-behavioral) widget: create a DOM tree.
+This widget doesn't do much, but it does show the minimum requirement for a (non-behavioral) widget: create a DOM tree.
 
 Now let's write a widget that performs some javascript.   We'll setup an onclick handler on a button node which will increment a counter:
 
-.. cv-compound::
+.. code-example::
+  :djConfig: parseOnLoad: false
 
-  .. cv:: javascript
+  .. javascript::
 
     <script>
         dojo.require("dijit._Widget");
-        dojo.declare("Counter", [dijit._Widget], {
-            // counter
-            _i: 0,
-     
-            buildRendering: function(){
-                // create the DOM for this widget
-                this.domNode = dojo.create("button", {innerHTML: this._i});
-            },
-				 
-            postCreate: function(){
-                // every time the user clicks the button, increment the counter
-                this.connect(this.domNode, "onclick", "increment");
-            },
-				 
-            increment: function(){
-                this.domNode.innerHTML = ++this._i;
-            }
-        });
         dojo.require("dojo.parser");
+        dojo.addOnLoad(function(){
+            dojo.declare("Counter", [dijit._Widget], {
+                // counter
+                _i: 0,
+         
+                buildRendering: function(){
+                    // create the DOM for this widget
+                    this.domNode = dojo.create("button", {innerHTML: this._i});
+                },
+    				 
+                postCreate: function(){
+                    // every time the user clicks the button, increment the counter
+                    this.connect(this.domNode, "onclick", "increment");
+                },
+    				 
+                increment: function(){
+                    this.domNode.innerHTML = ++this._i;
+                }
+            });
+    
+            // Note that we are calling the parser manually so it runs after Counter is declared
+            this.parser.parse();
+        });
     </script>
 
-  .. cv:: html
+  .. html::
 
     <span dojoType="Counter"></span>
 
