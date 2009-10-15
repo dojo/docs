@@ -52,7 +52,7 @@ The simplest widget you can create is a *behavioral* widget, i.e., a widget that
             });
 
             // Call the parser manually so it runs after our widget is declared
-            this.parser.parse();
+            dojo.parser.parse();
         });
     </script>
 
@@ -97,7 +97,7 @@ Here's a simple example of a widget that creates it's own DOM tree:
             (new MyFirstWidget()).placeAt(dojo.body());
     
             // Call the parser manually so it runs after our custom widget is declared
-            this.parser.parse();
+            dojo.parser.parse();
         });
     </script>
 
@@ -141,7 +141,7 @@ Now let's write a widget that performs some javascript.   We'll setup an onclick
             });
     
             // Call the parser manually so it runs after Counter is declared
-            this.parser.parse();
+            dojo.parser.parse();
         });
     </script>
 
