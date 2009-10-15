@@ -36,6 +36,7 @@ However, all the widgets in dijit and dojox, are built on top of the `dijit._Wid
 The simplest widget you can create is a *behavioral* widget, i.e., a widget that just uses the DOM tree passed into it rather than creating a DOM tree.
 
 .. code-example::
+  :djConfig: parseOnLoad: false
   :type: inline
 
   .. javascript
@@ -44,8 +45,14 @@ The simplest widget you can create is a *behavioral* widget, i.e., a widget that
     <script>
         dojo.require("dijit._Widget");
         dojo.require("dojo.parser");
-        dojo.declare("MyFirstBehavioralWidget", [dijit._Widget], {
-                // put methods, attributes, etc. here
+    
+        dojo.addOnLoad(function(){
+            dojo.declare("MyFirstBehavioralWidget", [dijit._Widget], {
+                    // put methods, attributes, etc. here
+            });
+
+            // Call the parser manually so it runs after our widget is declared
+            this.parser.parse();
         });
     </script>
 
@@ -77,6 +84,8 @@ Here's a simple example of a widget that creates it's own DOM tree:
 
     <script>
         dojo.require('dijit._Widget');
+        dojo.require("dojo.parser");
+    
         dojo.addOnLoad(function(){
             dojo.declare("MyFirstWidget",[dijit._Widget], {
                 buildRendering: function(){
@@ -86,6 +95,9 @@ Here's a simple example of a widget that creates it's own DOM tree:
             });
             // Create the widget programatically
             (new MyFirstWidget()).placeAt(dojo.body());
+    
+            // Call the parser manually so it runs after our custom widget is declared
+            this.parser.parse();
         });
     </script>
 
@@ -128,7 +140,7 @@ Now let's write a widget that performs some javascript.   We'll setup an onclick
                 }
             });
     
-            // Note that we are calling the parser manually so it runs after Counter is declared
+            // Call the parser manually so it runs after Counter is declared
             this.parser.parse();
         });
     </script>
