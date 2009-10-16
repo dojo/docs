@@ -27,7 +27,7 @@ Confguring Dojo
 Array utilities
 ---------------
 
-Details on dojo.every, dojo.filter, dojo.forEach, dojo.indexOf, dojo.lastIndexOf, dojo.map, and dojo.some.
+Details on dojo.every, dojo.filter, dojo.forEach, dojo.indexOf, dojo.lastIndexOf, dojo.map, and dojo.some. See the `Array QuickStart <quickstart/arrays>`_ for an overview.
 
 * `dojo.forEach <dojo/forEach>`_
 
@@ -36,7 +36,23 @@ Details on dojo.every, dojo.filter, dojo.forEach, dojo.indexOf, dojo.lastIndexOf
 * `dojo.map <dojo/map>`_
 
   Applies a callback to each element of arr and returns an Array with the results
+
+* `dojo.some <dojo/some>`_
+
+  Iterate over an array, escaping when the callback returns true for some logic check.
+
+* `dojo.every <dojo/every>`_
+
+  Iterate over an array, escaping when the callback returns false for some logic check.
+
+* `dojo.filter <dojo/filter>`_
+
+  Iterate over an array, reducing the array based on the callback return.
     
+* `dojo.indexOf <dojo/indexOf>`_
+
+  Find the index of some element in an Array.
+
 * `NodeList array methods <dojo/NodeList#array>`_
   
   * NodeList.indexOf, NodeList.lastIndexOf, NodeList.forEach, NodeList.every, NodeList.some, NodeList.concat, NodeList.map, NodeList.filter, NodeList.at
