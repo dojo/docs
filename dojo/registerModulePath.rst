@@ -19,11 +19,11 @@ Introduction
 
 Dojo maps module names used in dojo.require calls to paths names. By default, Dojo uses a couple pieces of information to map a module name to a path name:
 
-The first part is dojo.baseUrl: the path to the Dojo directory. For example, assume the path to dojo.js is "/web/scripts/dojo-1.2/dojo/dojo.js". The baseUrl is "/web/scripts/dojo-1.2/dojo/". Dojo automatically determines this path, but you can explicitly set it via djConfig.baseUrl.  
+The first part is dojo.baseUrl: the path to the Dojo directory. For example, assume the path to dojo.js is "/web/scripts/dojo-1.3/dojo/dojo.js". The baseUrl is "/web/scripts/dojo-1.3/dojo/". Dojo automatically determines this path, but you can explicitly set it via djConfig.baseUrl.  
 
 Next, Dojo assumes that the path for any module names that start with a prefix other than "dojo" are in a sibling directory to the dojo directory.
 
-For instance, if "/web/scripts/dojo-1.2/dojo/dojo.js" is the path to dojo.js, and you do dojo.require("some.module"), Dojo will try to load the JavaScript file using the path "/web/scripts/dojo-1.2/some/module.js".
+For instance, if "/web/scripts/dojo-1.3/dojo/dojo.js" is the path to dojo.js, and you do dojo.require("some.module"), Dojo will try to load the JavaScript file using the path "/web/scripts/dojo-1.3/some/module.js".
 
 If you want to load "some.module" from a different path, dojo.registerModulePath can be used to change the path. However, it is more common to use djConfig.modulePaths instead of dojo.registerModulePath directly. Dojo will call dojo.registerModulePath for each entry in djConfig.modulePaths.
 
@@ -60,7 +60,7 @@ Usage
    // now refers to "/somepath/css/"
 
    // we can set an absolute path by prefixing it with "/" or "http:"
-   dojo.registerModulePath("aoldojo", "http://o.aolcdn.com/dojo/1.2.3/dojo/");
+   dojo.registerModulePath("aoldojo", "http://o.aolcdn.com/dojo/1.3.2/dojo/");
  </script>
 
 ========
