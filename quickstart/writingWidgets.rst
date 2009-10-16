@@ -82,7 +82,9 @@ Here's a simple example of a widget that creates it's own DOM tree:
 
 	<script>
 		dojo.require('dijit._Widget');
-		dojo.require("dojo.parser");
+		// the dojo.parser is only needed, if you want 
+		// to instantiate the widget declaratively (in markup)
+		// dojo.require("dojo.parser");
 	
 		dojo.addOnLoad(function(){
 			dojo.declare("MyFirstWidget",[dijit._Widget], {
@@ -95,7 +97,8 @@ Here's a simple example of a widget that creates it's own DOM tree:
 			(new MyFirstWidget()).placeAt(dojo.body());
 	
 			// Call the parser manually so it runs after our widget is defined
-			dojo.parser.parse();
+			// (only needed if you want to instantiate the widget declaratively (in markup)):
+			// dojo.parser.parse();
 		});
 	</script>
 
