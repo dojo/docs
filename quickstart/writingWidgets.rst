@@ -100,9 +100,9 @@ Here's a simple example of a widget that creates it's own DOM tree:
 	</script>
 
   .. html::
-	:label: Instantiate declaratively
+	:label: Nothing to do here
 
-	<p>A new button:</p>
+
 
 This widget doesn't do much, but it does show the minimum requirement for a (non-behavioral) widget: create a DOM tree.
 
