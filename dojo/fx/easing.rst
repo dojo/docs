@@ -137,11 +137,13 @@ Examples
 ========
 
 
-Examples:  Select the desired easing function from the dropdown and press 'move the div' 
-----------------------------------------------------------------------------------------
+Example: Playing with Easing  
+----------------------------
 
 .. cv-compound ::
-  
+
+  Select the desired easing function from the dropdown and press 'move the div'   
+
   .. cv :: javascript
 
     <script>
