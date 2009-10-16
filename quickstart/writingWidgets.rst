@@ -102,7 +102,7 @@ Here's a simple example of a widget that creates it's own DOM tree:
   .. html::
 	:label: Instantiate declaratively
 
-	<span dojoType="MyFirstWidget">i'll be replaced</span>
+	<span>i'll be replaced</span>
 
 This widget doesn't do much, but it does show the minimum requirement for a (non-behavioral) widget: create a DOM tree.
 
