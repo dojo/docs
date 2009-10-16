@@ -56,7 +56,7 @@ By far, the easiest and most common way to specify djConfig is via the djConfig=
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <title>Dojo djConfig Tutorial&lt;/title>
       <script type="text/javascript"
-              src="http://o.aolcdn.com/dojo/1.1.1/dojo/dojo.xd.js"
+              src="http://o.aolcdn.com/dojo/1.3.2/dojo/dojo.xd.js"
               djConfig="parseOnLoad: true, isDebug: true"></script>
   </head>
   <body>
@@ -89,7 +89,7 @@ In cases where lots of attributes must be set in the djConfig object, or for dev
               extraLocale: ['jp-jp']
           };
       </script>
-      <script type="text/javascript" src="http://o.aolcdn.com/dojo/1.1.1/dojo/dojo.xd.js"></script>
+      <script type="text/javascript" src="http://o.aolcdn.com/dojo/1.3.2/dojo/dojo.xd.js"></script>
   </head>
   <body>
       <p>...</p>
