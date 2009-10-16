@@ -201,7 +201,7 @@ Typical input chart data
 Demos
 -----
 
-DataPresentation Demo: http://dleadt.torolab.ibm.com/dl/charts/testd.html
+DataPresentation Demo: http://www.ibm.com/software/ucd/DataPres/testd.html
 
 fig 2.
 
