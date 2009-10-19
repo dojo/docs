@@ -66,7 +66,7 @@ The following example contains workaround code for this problem, as well as an e
                 console.debug("tree onLoad here!");
                 dojo.disconnect(tmph);
 
-                selectTreeNodeById('bc3dcf93-05b6-4338-b77d-897ca1feab7d');
+                selectTreeNodeById(tree, 'bc3dcf93-05b6-4338-b77d-897ca1feab7d');
             });
         }
     </script>
@@ -83,76 +83,6 @@ The following example contains workaround code for this problem, as well as an e
         model="continentModel" showRoot="false" preserve="false">
 
     <div dojoType="dijit.form.Button" onClick="selectNode" value="Highlight the node!"></div>
-
-
-
-
-.. cv-compound::
-
-  .. cv:: javascript
-
-    <script type="text/javascript">
-        dojo.require("dojo.data.ItemFileReadStore");
-        dojo.require("dijit.Tree");
-
-        function recursiveHunt(lookfor, buildme, item) {
-            console.log(">> recursiveHunt, item ", item, " looking for ", lookfor);
-            buildme.push(item.id[0]);
-            if (item.id[0] == lookfor) {
-                // Return the buildme array, indicating a match was found
-                console.log("++ FOUND item ", item, " buildme now = ", buildme);
-                return buildme;
-            }
-            for (var idx in item.children) {
-                // start a new branch of buildme, starting with what we have so far
-                var buildmebranch = buildme.slice(0);
-                console.log("Branching into ", item.children[idx].name[0], ", buildmebranch=", buildmebranch);
-                var r = recursiveHunt(lookfor, buildmebranch, item.children[idx]);
-                // If a match was found in that recurse, return it.
-                //  This unwinds the recursion on completion.
-                if (r) { return r; }
-            }
-            // Return undefined, indicating no match was found
-            return undefined;
-        }
-
-        function selectTreeNodeById(tree, lookfor) {
-            console.log("See model root=", tree.model.root);
-            var buildme = new Array();
-            var result = recursiveHunt(lookfor, buildme, tree.model.root);
-            console.log("*** FINISHED: result ", result, " buildme ", buildme);
-            console.dir(result);
-            if (result && result.length > 0) {
-                tree.attr('path', result);
-            }
-        }
-
-        function selectNode() {
-
-            var tree = dijit.byId('rhTree');
-
-            var tmph = dojo.connect(tree, 'onLoad', function() {
-                console.debug("tree onLoad here!");
-                dojo.disconnect(tmph);
-
-                selectTreeNodeById('bc3dcf93-05b6-4338-b77d-897ca1feab7d');
-            });
-        }
-    </script>
-
-  .. cv:: html
-
-    <div dojoType="dojo.data.ItemFileReadStore" jsId="continentStore"
-      url="http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/countries.json"></div>
-    <div dojoType="dijit.tree.ForestStoreModel" jsId="continentModel" 
-      store="continentStore" query="{type:'continent'}"
-      rootId="continentRoot" rootLabel="Continents" childrenAttrs="children"></div>
-
-    <div dojoType="dijit.Tree" id="mytree" openOnClick="true"
-        model="continentModel" showRoot="false" preserve="false">
-
-    <div dojoType="dijit.form.Button" onClick="selectNode" value="Highlight the node!"></div>
-
 
 How can I prevent expanding of nodes when clicking on them?
 -----------------------------------------------------------
