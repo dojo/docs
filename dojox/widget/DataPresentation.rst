@@ -200,9 +200,3 @@ Typical input chart data
  
 Demos
 -----
-
-DataPresentation Demo: http://www.ibm.com/software/ucd/DataPres/testd.html
-
-fig 2.
-
-.. image:: datapres_example_3.png
