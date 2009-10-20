@@ -68,7 +68,9 @@ Note that the tabs all have a fixed height.
 
   .. html::
 
-    <div id="tc1-prog"></div>
+    <div style="width: 350px; height: 300px">
+        <div id="tc1-prog"></div>
+    </div>
 
 Here are some markup examples:
 
