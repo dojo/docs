@@ -173,6 +173,7 @@ dijit.Tree
 * getTooltip() method can set tooltip on each tree node
 * onLoad() event when tree is fully loaded
 * autoExpand=true flag to initially expand all nodes in the tree
+* ability to add a CSS class to the root node of a tree item.
 
 dijit.Editor
 ~~~~~~~~~~~~
@@ -408,6 +409,16 @@ dojox.widget
 * dojox.widget.Portlet added. An extended version of the dijit.TitlePane, designed to be used with the dojox.layout.GridContainer.
 
 * dojox.widget.Rotator and dojox.widget.AutoRotator added. The rotator is a lightweight non-dijit widget that rotates through child nodes. Support for pan, slide, wipe, and fade transitions. Includes dojox.widget.rotator.Controller for manipulating a rotator.
+
+* Bug fixes for dojox.widget.Calendar3Pane, which now selects the correct year.
+
+====
+Util
+====
+
+Checkstyle
+----------
+A Checkstyle tool has been added in util/checkstyle. This can be used to both flag style guide violations in either Dojo or custom JavaScript code, and also to fix the errors using an online tool.
 
 
 =========
