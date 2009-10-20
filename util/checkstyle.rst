@@ -11,20 +11,19 @@ util.checkstyle
 .. contents::
    :depth: 2
 
-Checkstyle is a command line tool that generates a report of all JavaScript files that violate the [[http://www.dojotoolkit.org/developer/StyleGuide|Dojo code style guidelines]]. It also includes an interactive online tool to automatically fix most style guide issues.
-
 ============
 Introduction
 ============
 
-
-
+Checkstyle is a command line tool that generates a report of all JavaScript files that violate the Dojo code style guidelines - http://www.dojotoolkit.org/developer/StyleGuide. It also includes an interactive online tool to automatically fix most style guide issues.
 
 =====
 Usage
 =====
 
-TODO: how to use the component/class/method
+Open a command window in the util/checkstyle folder.
+
+
 
 
 ========
