@@ -14,6 +14,7 @@ Initialise the Tree after onLoad Event has Fired
 
 .. code-block :: javascript
   :linenos:
+
     var tree = dijit.byId('myTree');
 
     // Connect to tree onLoad to do work once it has initialised
@@ -43,7 +44,7 @@ Expanding and Focusing tree nodes programatically
 
         function selectNode() {
 
-            var tree = dijit.byId('rhTree');
+            var tree = dijit.byId('myTree');
 
             tree.path('attr', [ 'NA', 'MX', 'Mexico City' ] );
 
@@ -108,7 +109,7 @@ The following example contains workaround code for this problem, as well as an e
 
         function selectNode() {
 
-            var tree = dijit.byId('rhTree');
+            var tree = dijit.byId('myTree2');
 
             selectTreeNodeById(tree, 'Mexico City');
 
@@ -122,7 +123,7 @@ The following example contains workaround code for this problem, as well as an e
     <div dojoType="dijit.tree.ForestStoreModel" jsId="continentModel" 
       store="continentStore" query="{type:'continent'}"
       rootId="continentRoot" rootLabel="Continents" childrenAttrs="children"></div>
-    <div dojoType="dijit.Tree" id="mytree" openOnClick="true"
+    <div dojoType="dijit.Tree" id="mytree2" openOnClick="true"
         model="continentModel" showRoot="false" preserve="false"></div>
     <div dojoType="dijit.form.Button" onClick="selectNode();">Highlight the node!</div>
 
