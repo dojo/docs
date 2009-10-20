@@ -12,6 +12,8 @@ dijit.Tree examples
 Initialise the Tree after onLoad Event has Fired
 ------------------------------------------------
 
+``New in 1.4`` The onLoad event is being introduced in Dojo release 1.4.
+
 .. code-block :: javascript
   :linenos:
 
@@ -44,9 +46,7 @@ Expanding and Focusing tree nodes programatically
 
         function selectNode() {
 
-            var tree = dijit.byId('myTree');
-
-            tree.path('attr', [ 'NA', 'MX', 'Mexico City' ] );
+            mytree.path('attr', [ 'NA', 'MX', 'Mexico City' ] );
 
         }
     </script>
@@ -58,7 +58,7 @@ Expanding and Focusing tree nodes programatically
     <div dojoType="dijit.tree.ForestStoreModel" jsId="continentModel" 
       store="continentStore" query="{type:'continent'}"
       rootId="continentRoot" rootLabel="Continents" childrenAttrs="children"></div>
-    <div dojoType="dijit.Tree" id="mytree" openOnClick="true"
+    <div dojoType="dijit.Tree" jsId="mytree" openOnClick="true"
         model="continentModel" showRoot="false" preserve="false"></div>
     <div dojoType="dijit.form.Button" onClick="selectNode();">Highlight the node!</div>
 
@@ -109,9 +109,7 @@ The following example contains workaround code for this problem, as well as an e
 
         function selectNode() {
 
-            var tree = dijit.byId('myTree2');
-
-            selectTreeNodeById(tree, 'Mexico City');
+            selectTreeNodeById(mytree2, 'Mexico City');
 
         }
     </script>
@@ -123,7 +121,7 @@ The following example contains workaround code for this problem, as well as an e
     <div dojoType="dijit.tree.ForestStoreModel" jsId="continentModel" 
       store="continentStore" query="{type:'continent'}"
       rootId="continentRoot" rootLabel="Continents" childrenAttrs="children"></div>
-    <div dojoType="dijit.Tree" id="mytree2" openOnClick="true"
+    <div dojoType="dijit.Tree" jsId="mytree2" openOnClick="true"
         model="continentModel" showRoot="false" preserve="false"></div>
     <div dojoType="dijit.form.Button" onClick="selectNode();">Highlight the node!</div>
 
