@@ -6,7 +6,7 @@ dijit.layout.TabContainer
 
 :Status: Draft
 :Version: 1.0
-:Authors: Becky Gibson, Peter Higgins, Bill Keese, Nikolai Onken
+:Authors: Becky Gibson, Peter Higgins, Bill Keese, Nikolai Onken, Marcus Reimann
 :Developers: ?-
 :Available: since V?
 :jsDoc: http://api.dojotoolkit.org/jsdoc/HEAD/dijit.layout.TabContainer
@@ -146,6 +146,58 @@ This is a plain TabContainer with three tabs and flexible height using the doLay
       </div>
 
     <!-- end of the div -->
+    </div>
+
+
+Selecting another Tab
+---------------------
+
+Normally, TabContainer will show the first Tab. But it's also possible to automatically open another Tab with giving one of the ContentPanes the argument selected: true (if programmatically created) or the attribute selected="true" (if declaratively created).
+
+.. code-example::
+  :type: dialog
+  :toolbar: versions, themes, dir
+ 
+  .. javascript::
+
+    <script type="text/javascript">
+    dojo.require("dijit.layout.TabContainer");
+    dojo.require("dijit.layout.ContentPane");
+    dojo.addOnLoad(function(){
+        var tc = new dijit.layout.TabContainer({
+            style: "height: 100%; width: 100%;"
+        },"tc1-prog");
+  
+        var cp1 = new dijit.layout.ContentPane({
+             title: "First Tab",
+             content: "We offer amazing food"
+        });
+        tc.addChild(cp1);
+  
+        var cp2 = new dijit.layout.ContentPane({
+             title: "Second Tab",
+             content: "We are known for our drinks."
+        });
+        tc.addChild(cp2);
+
+        var cp3 = new dijit.layout.ContentPane({
+             title: "Third Tab",
+             content: "This Tab has the attribute 'selected: true' set.",
+             selected: true
+        });
+        tc.addChild(cp3);
+
+  
+        tc.startup(); 
+    });
+    </script>
+
+  The html is very simple
+
+  .. html::
+
+    <div style="width: 350px; height: 300px">
+        <div id="tc1-prog"></div>
     </div>
 
 
