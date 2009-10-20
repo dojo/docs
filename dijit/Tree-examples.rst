@@ -9,6 +9,18 @@ dijit.Tree examples
 .. contents::
   :depth: 3
 
+Initialise the Tree after onLoad Event has Fired
+------------------------------------------------
+            var tree = dijit.byId('myTree');
+
+            // Connect to tree onLoad to do work once it has initialised
+            var tmph = dojo.connect(tree, 'onLoad', function() {
+                console.debug("tree onLoad here!");
+                dojo.disconnect(tmph);
+
+                // do work here
+            });
+
 Expanding and Focusing tree nodes programatically
 -------------------------------------------------
 
@@ -63,11 +75,12 @@ The following example contains workaround code for this problem, as well as an e
 
             var tree = dijit.byId('rhTree');
 
+            // Connect to tree onLoad to do work once it has initialised
             var tmph = dojo.connect(tree, 'onLoad', function() {
                 console.debug("tree onLoad here!");
                 dojo.disconnect(tmph);
 
-                selectTreeNodeById(tree, 'bc3dcf93-05b6-4338-b77d-897ca1feab7d');
+                selectTreeNodeById(tree, 'Mexico City');
             });
         }
     </script>
@@ -79,11 +92,9 @@ The following example contains workaround code for this problem, as well as an e
     <div dojoType="dijit.tree.ForestStoreModel" jsId="continentModel" 
       store="continentStore" query="{type:'continent'}"
       rootId="continentRoot" rootLabel="Continents" childrenAttrs="children"></div>
-
     <div dojoType="dijit.Tree" id="mytree" openOnClick="true"
         model="continentModel" showRoot="false" preserve="false">
-
-    <div dojoType="dijit.form.Button" onClick="selectNode" value="Highlight the node!"></div>
+    <div dojoType="dijit.form.Button" onClick="selectNode();" value="Highlight the node!"></div>
 
 How can I prevent expanding of nodes when clicking on them?
 -----------------------------------------------------------
