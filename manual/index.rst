@@ -75,3 +75,9 @@ Dojo uses a custom inline comment syntax which produces well structured xml, and
 ---------------------------------
 
 A standalone utility for compressing JavaScript, used by the Dojo Build System as an optional compression step, though can be used on individual files manually.
+
+
+`Checkstyle <util/checkstyle>`_
+---------------------------------
+
+A standalone utility for checking JavaScript files for violations of the Dojo style guide. Also includes an online tool for automatically fixing the majority of style guide violations.
