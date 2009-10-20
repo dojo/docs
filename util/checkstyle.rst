@@ -21,8 +21,26 @@ Checkstyle is a command line tool that generates a report of all JavaScript file
 Usage
 =====
 
-Open a command window in the util/checkstyle folder.
+Open a command window in the util/checkstyle folder.  The commands listed below all use '''checkstyle.bat''', which is for MS Windows, but users of Linux and Macs can use '''checkstyle.sh'''.
 
+Run Checkstyle on all Dojo folders
+==================================
+checkstyle.bat
+
+
+Run Checkstyle on a specific folder
+===================================
+checkstyle.bat dir=dijit/form
+
+
+Run Checkstyle on a custom namespace
+====================================
+checkstyle.bat dir=myCustomNs
+
+
+Show Checkstyle help
+====================
+checkstyle help
 
 
 
