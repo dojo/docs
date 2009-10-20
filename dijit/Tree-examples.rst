@@ -46,7 +46,7 @@ Expanding and Focusing tree nodes programatically
 
         function selectNode() {
 
-            mytree.attr('path', [ 'c', 'NA', 'MX', 'Mexico City' ] );
+            mytree.attr('path', [ 'continentRoot', 'NA', 'MX', 'Mexico City' ] );
 
         }
     </script>
@@ -75,10 +75,11 @@ The following example contains workaround code for this problem, as well as an e
         dojo.require("dijit.Tree");
         dojo.require("dijit.form.Button");
 
-        function recursiveHunt(lookfor, buildme, item) {
+        function recursiveHunt(lookfor, model, buildme, item) {
             console.log(">> recursiveHunt, item ", item, " looking for ", lookfor);
-            buildme.push(item.id[0]);
-            if (item.id[0] == lookfor) {
+            var id = model.getIdentity(item);
+            buildme.push(id);
+            if (id == lookfor) {
                 // Return the buildme array, indicating a match was found
                 console.log("++ FOUND item ", item, " buildme now = ", buildme);
                 return buildme;
@@ -86,8 +87,8 @@ The following example contains workaround code for this problem, as well as an e
             for (var idx in item.children) {
                 // start a new branch of buildme, starting with what we have so far
                 var buildmebranch = buildme.slice(0);
-                console.log("Branching into ", item.children[idx].name[0], ", buildmebranch=", buildmebranch);
-                var r = recursiveHunt(lookfor, buildmebranch, item.children[idx]);
+                console.log("Branching into ", model.store.getValue(item.children[idx], 'name'), ", buildmebranch=", buildmebranch);
+                var r = recursiveHunt(lookfor, model, buildmebranch, item.children[idx]);
                 // If a match was found in that recurse, return it.
                 //  This unwinds the recursion on completion.
                 if (r) { return r; }
@@ -99,7 +100,7 @@ The following example contains workaround code for this problem, as well as an e
         function selectTreeNodeById(tree, lookfor) {
             console.log("See model root=", tree.model.root);
             var buildme = new Array();
-            var result = recursiveHunt(lookfor, buildme, tree.model.root);
+            var result = recursiveHunt(lookfor, tree.model, buildme, tree.model.root);
             console.log("*** FINISHED: result ", result, " buildme ", buildme);
             console.dir(result);
             if (result && result.length > 0) {
