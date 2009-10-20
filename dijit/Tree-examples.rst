@@ -12,7 +12,8 @@ dijit.Tree examples
 Initialise the Tree after onLoad Event has Fired
 ------------------------------------------------
 
-.. cv:: javascript
+.. code-block :: javascript
+  :linenos:
     var tree = dijit.byId('myTree');
 
     // Connect to tree onLoad to do work once it has initialised
@@ -28,7 +29,39 @@ Expanding and Focusing tree nodes programatically
 
 ``New in 1.4``
 
-``dijit.Tree`` in dojo 1.4 has a new 'path' attribute, which can be set with the usual ``tree.attr('path', thePath);`` syntax.  It serves two purposes: to expand the tree up to the node in question, and to highlight that node.  One problem with using 'path' is that you must know the full path to the node in your data your are trying to select.
+``dijit.Tree`` in dojo 1.4 has a new 'path' attribute, which can be set with the usual ``tree.attr('path', thePath);`` syntax.  It serves two purposes: to expand the tree up to the node in question, and to highlight that node.
+
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+        dojo.require("dojo.data.ItemFileReadStore");
+        dojo.require("dijit.Tree");
+        dojo.require("dijit.form.Button");
+
+        function selectNode() {
+
+            var tree = dijit.byId('rhTree');
+
+            tree.path('attr', [ 'NA', 'MX', 'Mexico City' ] );
+
+        }
+    </script>
+
+  .. cv:: html
+
+    <div dojoType="dojo.data.ItemFileReadStore" jsId="continentStore"
+      url="http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/countries.json"></div>
+    <div dojoType="dijit.tree.ForestStoreModel" jsId="continentModel" 
+      store="continentStore" query="{type:'continent'}"
+      rootId="continentRoot" rootLabel="Continents" childrenAttrs="children"></div>
+    <div dojoType="dijit.Tree" id="mytree" openOnClick="true"
+        model="continentModel" showRoot="false" preserve="false"></div>
+    <div dojoType="dijit.form.Button" onClick="selectNode();">Highlight the node!</div>
+
+One problem with using 'path' is that you must know the full path to the node in your data your are trying to select.
 
 The following example contains workaround code for this problem, as well as an example call to tree.attr('path').  If you already know the full path to the tree node you want to highlight, you can simply call tree.attr('path').
 
@@ -77,13 +110,8 @@ The following example contains workaround code for this problem, as well as an e
 
             var tree = dijit.byId('rhTree');
 
-            // Connect to tree onLoad to do work once it has initialised
-            var tmph = dojo.connect(tree, 'onLoad', function() {
-                console.debug("tree onLoad here!");
-                dojo.disconnect(tmph);
+            selectTreeNodeById(tree, 'Mexico City');
 
-                selectTreeNodeById(tree, 'Mexico City');
-            });
         }
     </script>
 
@@ -96,7 +124,7 @@ The following example contains workaround code for this problem, as well as an e
       rootId="continentRoot" rootLabel="Continents" childrenAttrs="children"></div>
     <div dojoType="dijit.Tree" id="mytree" openOnClick="true"
         model="continentModel" showRoot="false" preserve="false"></div>
-    <div dojoType="dijit.form.Button" onClick="selectNode();" value="Highlight the node!"></div>
+    <div dojoType="dijit.form.Button" onClick="selectNode();">Highlight the node!</div>
 
 How can I prevent expanding of nodes when clicking on them?
 -----------------------------------------------------------
