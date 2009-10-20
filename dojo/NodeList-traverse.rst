@@ -46,11 +46,6 @@ children
 Returns all immediate child elements for nodes in this dojo.NodeList.
 Optionally takes a query to filter the child elements.
 
-**Note**: the optional query can only be single-expression CSS rule. For example, ".thinger" or
-"#someId[attrName='value']" but not "div > span". In short,
-anything which does not invoke a descent to evaluate but
-can instead be used to test a single node is acceptable.
-
 .end() can be used on the returned dojo.NodeList to get back to the
 original dojo.NodeList.
 
@@ -87,11 +82,6 @@ closest
 Returns closest parent that matches query, **including** current node in this
 dojo.NodeList if it matches the query. Optionally takes a query to filter the closest nodes.
 
-**Note**: the optional query can only be single-expression CSS rule. For example, ".thinger" or
-"#someId[attrName='value']" but not "div > span". In short,
-anything which does not invoke a descent to evaluate but
-can instead be used to test a single node is acceptable.
-
 .end() can be used on the returned dojo.NodeList to get back to the
 original dojo.NodeList.
 
@@ -124,11 +114,6 @@ parent
 ---------
 Returns immediate parent elements for nodes in this dojo.NodeList.
 Optionally takes a query to filter the parent elements.
-
-**Note**: the optional query can only be single-expression CSS rule. For example, ".thinger" or
-"#someId[attrName='value']" but not "div > span". In short,
-anything which does not invoke a descent to evaluate but
-can instead be used to test a single node is acceptable.
 
 .end() can be used on the returned dojo.NodeList to get back to the
 original dojo.NodeList.
@@ -164,11 +149,6 @@ parents
 Returns all parent elements for nodes in this dojo.NodeList.
 Optionally takes a query to filter the parent elements.
 
-**Note**: the optional query can only be single-expression CSS rule. For example, ".thinger" or
-"#someId[attrName='value']" but not "div > span". In short,
-anything which does not invoke a descent to evaluate but
-can instead be used to test a single node is acceptable.
-
 .end() can be used on the returned dojo.NodeList to get back to the
 original dojo.NodeList.
 
@@ -201,11 +181,6 @@ siblings
 ---------
 Returns all sibling elements for nodes in this dojo.NodeList.
 Optionally takes a query to filter the sibling elements.
-
-**Note**: the optional query can only be single-expression CSS rule. For example, ".thinger" or
-"#someId[attrName='value']" but not "div > span". In short,
-anything which does not invoke a descent to evaluate but
-can instead be used to test a single node is acceptable.
 
 .end() can be used on the returned dojo.NodeList to get back to the
 original dojo.NodeList.
@@ -242,11 +217,6 @@ next
 Returns the next element for nodes in this dojo.NodeList.
 Optionally takes a query to filter the next elements.
 
-**Note**: the optional query can only be single-expression CSS rule. For example, ".thinger" or
-"#someId[attrName='value']" but not "div > span". In short,
-anything which does not invoke a descent to evaluate but
-can instead be used to test a single node is acceptable.
-
 .end() can be used on the returned dojo.NodeList to get back to the
 original dojo.NodeList.
 
@@ -282,11 +252,6 @@ nextAll
 Returns all sibling elements that come after the nodes in this dojo.NodeList.
 Optionally takes a query to filter the sibling elements.
 
-**Note**: the optional query can only be single-expression CSS rule. For example, ".thinger" or
-"#someId[attrName='value']" but not "div > span". In short,
-anything which does not invoke a descent to evaluate but
-can instead be used to test a single node is acceptable.
-
 .end() can be used on the returned dojo.NodeList to get back to the
 original dojo.NodeList.
 
@@ -320,11 +285,6 @@ prev
 ---------
 Returns the previous element for nodes in this dojo.NodeList.
 Optionally takes a query to filter the previous elements.
-
-**Note**: the optional query can only be single-expression CSS rule. For example, ".thinger" or
-"#someId[attrName='value']" but not "div > span". In short,
-anything which does not invoke a descent to evaluate but
-can instead be used to test a single node is acceptable.
 
 .end() can be used on the returned dojo.NodeList to get back to the
 original dojo.NodeList.
@@ -362,11 +322,6 @@ Returns all sibling elements that come before the nodes in this dojo.NodeList.
 Optionally takes a query to filter the previous elements.
 
 The returned nodes will be in reverse DOM order -- the first node in the list will be the node closest to the original node/NodeList.
-
-**Note**: the optional query can only be single-expression CSS rule. For example, ".thinger" or
-"#someId[attrName='value']" but not "div > span". In short,
-anything which does not invoke a descent to evaluate but
-can instead be used to test a single node is acceptable.
 
 .end() can be used on the returned dojo.NodeList to get back to the
 original dojo.NodeList.
