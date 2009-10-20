@@ -165,7 +165,7 @@ Other Options
 -------------
 
 afterOnLoad: true 
-  (defaults to false). Set to true if you are attempting to inject dojo.js into the page after the initial page load has occurred. 
+  (defaults to false). Set to true if you are attempting to inject dojo.js into the page after the initial page load has occurred. Only works with a **built** dojo.js, it does not work the dojo.js directly from source control.
 
 .. code-block :: html
 
