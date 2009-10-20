@@ -11,15 +11,17 @@ dijit.Tree examples
 
 Initialise the Tree after onLoad Event has Fired
 ------------------------------------------------
-            var tree = dijit.byId('myTree');
 
-            // Connect to tree onLoad to do work once it has initialised
-            var tmph = dojo.connect(tree, 'onLoad', function() {
-                console.debug("tree onLoad here!");
-                dojo.disconnect(tmph);
+.. cv:: javascript
+    var tree = dijit.byId('myTree');
 
-                // do work here
-            });
+    // Connect to tree onLoad to do work once it has initialised
+    var tmph = dojo.connect(tree, 'onLoad', function() {
+        console.debug("tree onLoad here!");
+        dojo.disconnect(tmph);
+
+        // do work here
+    });
 
 Expanding and Focusing tree nodes programatically
 -------------------------------------------------
@@ -93,7 +95,7 @@ The following example contains workaround code for this problem, as well as an e
       store="continentStore" query="{type:'continent'}"
       rootId="continentRoot" rootLabel="Continents" childrenAttrs="children"></div>
     <div dojoType="dijit.Tree" id="mytree" openOnClick="true"
-        model="continentModel" showRoot="false" preserve="false">
+        model="continentModel" showRoot="false" preserve="false"></div>
     <div dojoType="dijit.form.Button" onClick="selectNode();" value="Highlight the node!"></div>
 
 How can I prevent expanding of nodes when clicking on them?
