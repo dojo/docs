@@ -35,7 +35,7 @@ First, we'll demonstrate a programatic TabContainer creation.
 Note that the tabs all have a fixed height.
 
 .. code-example::
-  :type: inline
+  :type: dialog
   :toolbar: versions, themes, dir
  
   .. javascript::
@@ -75,7 +75,7 @@ Note that the tabs all have a fixed height.
 Here are some markup examples:
 
 .. code-example::
-  :type: inline
+  :type: dialog
   :toolbar: versions, themes, dir
   :djConfig: parseOnLoad: true
 
@@ -92,16 +92,18 @@ Here are some markup examples:
 
   .. html::
 
-    <div dojoType="dijit.layout.TabContainer" style="width: 100%; height: 100%;">
-      <div dojoType="dijit.layout.ContentPane" title="My first tab" selected="true">
-        Lorem ipsum and all around...
-      </div>
-      <div dojoType="dijit.layout.ContentPane" title="My second tab">
-        Lorem ipsum and all around - second...
-      </div>
-      <div dojoType="dijit.layout.ContentPane" title="My last tab" closable="true">
-        Lorem ipsum and all around - last...
-      </div>
+    <div style="width: 350px; height: 300px">
+        <div dojoType="dijit.layout.TabContainer" style="width: 100%; height: 100%;">
+            <div dojoType="dijit.layout.ContentPane" title="My first tab" selected="true">
+                Lorem ipsum and all around...
+            </div>
+            <div dojoType="dijit.layout.ContentPane" title="My second tab">
+                Lorem ipsum and all around - second...
+            </div>
+            <div dojoType="dijit.layout.ContentPane" title="My last tab" closable="true">
+                Lorem ipsum and all around - last...
+            </div>
+        </div>
     </div>
 
 This is a plain TabContainer with three tabs and flexible height using the doLayout="false" attribute. The second tab is closable.
