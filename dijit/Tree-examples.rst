@@ -25,6 +25,7 @@ The following example contains workaround code for this problem, as well as an e
     <script type="text/javascript">
         dojo.require("dojo.data.ItemFileReadStore");
         dojo.require("dijit.Tree");
+        dojo.require("dijit.form.Button");
 
         function recursiveHunt(lookfor, buildme, item) {
             console.log(">> recursiveHunt, item ", item, " looking for ", lookfor);
