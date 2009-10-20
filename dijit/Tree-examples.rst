@@ -46,7 +46,7 @@ Expanding and Focusing tree nodes programatically
 
         function selectNode() {
 
-            mytree.path('attr', [ 'NA', 'MX', 'Mexico City' ] );
+            mytree.attr('path', [ 'NA', 'MX', 'Mexico City' ] );
 
         }
     </script>
