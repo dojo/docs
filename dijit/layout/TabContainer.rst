@@ -109,7 +109,7 @@ Here are some markup examples:
 This is a plain TabContainer with three tabs and flexible height using the doLayout="false" attribute. The second tab is closable.
 
 .. code-example::
-  :type: inline
+  :type: dialog
   :toolbar: versions, themes, dir
   :djConfig: parseOnLoad: true
 
