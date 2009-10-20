@@ -48,7 +48,10 @@ Usage of Online Tool
 
 The Checkstyle Online Tool can be used to look at the style guide violations and to fix them.  Open the file util/checkstyle/checkstyleReport.html, which will display the errors to be fixed.  Note that this file should be opened using a web server, and not from the file system, as browser security issues will cause problems if loaded from the file system.
 
-attachment:checkstyle.png
+
+.. image:: attachment:checkstyle.png
+   :alt: Checkstyle Tool
+
 
 ========
 See also
