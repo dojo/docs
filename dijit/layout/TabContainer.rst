@@ -28,8 +28,8 @@ You can use tabs in your own application and style them as you want, but they al
 Examples
 ========
 
-A basic example
----------------
+Programmatic example
+--------------------
 
 First, we'll demonstrate a programatic TabContainer creation.
 Note that the tabs all have a fixed height.
@@ -72,6 +72,10 @@ Note that the tabs all have a fixed height.
         <div id="tc1-prog"></div>
     </div>
 
+
+Declarative example
+-------------------
+
 Here are some markup examples:
 
 .. code-example::
@@ -105,6 +109,10 @@ Here are some markup examples:
             </div>
         </div>
     </div>
+
+
+A TabContainer with flexible height
+-----------------------------------
 
 This is a plain TabContainer with three tabs and flexible height using the doLayout="false" attribute. The second tab is closable.
 
