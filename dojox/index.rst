@@ -73,7 +73,7 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
   * `dojox.data.CouchDBRestStore <dojox/data/CouchDBRestStore>`_
 
-    An extension of `dojox.data.JsonRestStore <dojox/data/JsonRestStore>`_ to handle CouchDB's idiosyncrasies, special features, and deviations from standard HTTP Rest
+    A datastore for connecting to the open source document-oriented database Apache CouchDB
 
   * `dojox.data.CssClassStore <dojox/data/CssClassStore>`_
 
