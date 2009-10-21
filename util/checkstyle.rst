@@ -53,10 +53,3 @@ The Checkstyle Online Tool can be used to look at the style guide violations and
 
 .. image:: attachment:checkstyle_scrnshot.png
    :alt: Checkstyle Tool
-
-
-========
-See also
-========
-
-* TODO: links to other related articles
