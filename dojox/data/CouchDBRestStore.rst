@@ -12,7 +12,7 @@ dojox.data.CouchDBRestStore
 .. contents::
     :depth: 3
 
-**dojox.data.CouchDBRestStore** is a subclass of `JsonRestStore <dojo/data/JsonRestStore>`_ for connecting to the open source document-oriented database `Apache CouchDB <http://couchdb.org/>`_.
+**dojox.data.CouchDBRestStore** is a subclass of `JsonRestStore <dojo/data/JsonRestStore>`_ for connecting to the open source document-oriented database `Apache CouchDB <http://couchdb.apache.org/>`_.
 
 
 ============
@@ -39,8 +39,14 @@ This will return a object where each property name is the name of the store, and
 See also
 ========
 
-* `Apache CouchDB <http://couchdb.org/>`_
+* `Apache CouchDB <http://couchdb.apache.org/>`_  
 
-* CouchDBRestStore is described in more detail here: http://www.sitepen.com/blog/2008/09/26/couchdbreststore/
+  The Apache CouchDB project homepage
 
-* JsonRestStore is described in more detail here: http://www.sitepen.com/blog/2008/06/13/restful-json-dojo-data/
+* `CouchDBRestStore <http://www.sitepen.com/blog/2008/09/26/couchdbreststore/>`_
+
+  Blog article about CouchDBRestStore
+
+* `"RESTful JSON + Dojo Data" <http://www.sitepen.com/blog/2008/06/13/restful-json-dojo-data/>`_
+
+  Blog article about JsonRestStore
