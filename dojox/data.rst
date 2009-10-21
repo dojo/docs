@@ -37,7 +37,7 @@ Features
 
 * `dojox.data.CouchDBRestStore <dojox/data/CouchDBRestStore>`_
 
-  An extension of `dojox.data.JsonRestStore <dojox/data/JsonRestStore>`__ to handle CouchDB's idiosyncrasies, special features, and deviations from standard HTTP Rest
+  An extension of `dojox.data.JsonRestStore <dojox/data/JsonRestStore>`__ for connecting to the open source document-oriented database Apache CouchDB
 
 * `dojox.data.CssClassStore <dojox/data/CssClassStore>`_
 
