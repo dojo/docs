@@ -86,7 +86,7 @@ In cases where lots of attributes must be set in the djConfig object, or for dev
               parseOnLoad: true,
               isDebug: true,
               locale: 'en-us',
-              extraLocale: ['jp-jp']
+              extraLocale: ['ja-jp']
           };
       </script>
       <script type="text/javascript" src="http://o.aolcdn.com/dojo/1.3.2/dojo/dojo.xd.js"></script>
@@ -141,14 +141,12 @@ Language and Localization Settings in djConfig
 There is an extensive discussion of the i18n features of dojo in the `tutorial on i18n <quickstart/internationalization/index>`_. Here we'll briefly cover the two djConfig variables that apply to these settings:
 
 locale: 'en-us'
-  By default, dojo sets the locale of all dijits by pulling the locale from the browser. However, developers can force the default locale by using the djConfig locale setting.
+  By default, dojo determines the locale of the application by pulling the locale from the browser navigator object.  However, developers can force the default locale by using the djConfig locale setting, often done by app servers to establish locale based on user preferences.  Dojo's locale must be established at bootstrap time and cannot be changed later.
 
-extraLocale: ['en-us','jp-jp']
-  In addition to the default locale, developers can specify that extra locale files also be downloaded in parallel to the default. The argument to the extraLocale parameter is an array of locale strings.
+extraLocale: ['ja-jp']
+  In addition to the locale, developers can specify that extra locale files also be downloaded in parallel.  The argument to the extraLocale parameter is an array of strings representing locales.
 
-  The extraLocale is used for multi-lingual pages or for dynamically switching languages. A use case would be a language tutorial – an English page that teaches Japanese.
-
-  Unless you have a multi-language use-case, it's not recommended that you use extraLocale and switch languages dynamically. Since it will have to download all those language packages, and it will not be efficient.
+  The extraLocale is used only for edge cases like multi-lingual pages or for dynamically switching languages. It is generally more efficient and preferred to switch languages by reloading the page and changing the locale setting.  An example use case for extraLocale would be a language tutorial – a page in the user's native language that teaches Japanese.
 
 Finding Resources in Non-Standard Locations
 -------------------------------------------
