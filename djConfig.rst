@@ -141,7 +141,7 @@ Language and Localization Settings in djConfig
 There is an extensive discussion of the i18n features of dojo in the `tutorial on i18n <quickstart/internationalization/index>`_. Here we'll briefly cover the two djConfig variables that apply to these settings:
 
 locale: 'en-us'
-  By default, dojo determines the locale of the application by pulling the locale from the browser navigator object.  However, developers can force the default locale by using the djConfig locale setting, often done by app servers to establish locale based on user preferences.  Dojo's locale must be established at bootstrap time and cannot be changed later.
+  By default, dojo determines the locale of the application by pulling the locale from the browser navigator object.  However, developers can force the default locale by using the djConfig locale setting, often done by app servers to establish locale based on user preferences.  Dojo's locale must be established at bootstrap time and cannot be changed later.  Locales must be specified in all lowercase with dashes separating variants.
 
 extraLocale: ['ja-jp']
   In addition to the locale, developers can specify that extra locale files also be downloaded in parallel.  The argument to the extraLocale parameter is an array of strings representing locales.
