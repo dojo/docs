@@ -3,8 +3,6 @@
 djConfig
 ========
 
-:Status: Draft
-:Version: 1.0
 :Available: since V0.4
 
 .. contents::
