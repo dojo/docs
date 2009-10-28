@@ -11,18 +11,15 @@ dojox.widget.AutoRotator
 .. contents::
    :depth: 2
 
-TODO: short summary of the component/class/method
-
 A rotator that automatically transitions between child nodes.
+
 
 ============
 Introduction
 ============
 
-TODO: introduce the component/class/method
+Adds automatic rotating to the dojox.widget.Rotator. The AutoRotator has parameters that control how user input can affect the rotator including a suspend when hovering over the rotator and pausing when the user manually advances to another pane.
 
-
-Adds automatic rotating to the dojox.widget.Rotator.  The AutoRotator has parameters that control how user input can affect the rotator including a suspend when hovering over the rotator and pausing when the user manually advances to another pane.
 
 =====
 Usage
