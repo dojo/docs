@@ -3,10 +3,8 @@
 dojox.data
 ==========
 
-:Status: Draft
-:Version: 1.0
+:Project owners: Frank Fortson, Russell Jones, Jared Jurkiewicz, Wolfram Kriesing, Dustin Machi, Shane O'Sullivan, Benjamin Schell, Kurt Stutsman, Kris Zyp
 :Authors: Wolfram Kriesing, Nikolia Onken, Marcus Reimann
-:Developers: Frank Fortson, Russell Jones, Jared Jurkiewicz, Wolfram Kriesing, Dustin Machi, Shane O'Sullivan, Benjamin Schell, Kurt Stutsman, Kris Zyp
 :Available: since V0.9
 
 .. contents::
