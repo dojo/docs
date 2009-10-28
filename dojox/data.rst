@@ -152,3 +152,11 @@ Features
 * `dojox.data.XmlStore <dojox/data/XmlStore>`_
 
   A read and write interface to basic XML data
+
+
+========
+See also
+========
+
+* `Dojo Data Introduction <dojo/data>`_
+* `Quickstart Tutorial: Using Dojo Data <quickstart/data/usingdatastores>`_
