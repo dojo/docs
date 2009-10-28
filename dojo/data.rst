@@ -38,3 +38,4 @@ See also
 ========
 
 * `Quickstart Tutorial: Using Dojo Data <quickstart/data/usingdatastores>`_
+* `Additional available Datastores <dojox/data>`_
