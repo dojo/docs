@@ -13,6 +13,14 @@ The following pages need more love:
 Top priority: dojo.js
 =====================
 
+* `dojo.Animation <dojo/Animation>`_
+
+  needed: full page
+
+* `dojo.anim <dojo/anim>`_
+
+  needed: full page
+
 * `dojo.eval <dojo/eval>`_
 
   needed: full page
