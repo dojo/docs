@@ -392,9 +392,12 @@ You can check the result here:
         });
       }
       dojo.addOnLoad(function(){
-        dojo.byId("output").innerHTML = safeReplace("<div>{0}</div",
-          ["<script>alert('Let\' break stuff!');</script>"]
-        );
+        // we don't want to break the Code Glass widget here
+        var bad = "{script}alert('Let\' break stuff!');{/script}";
+        // let's reconstitute the original bad string
+        bad = bad.replace(/\{/g, "<").replace(/\}/g, ">");
+        // now the replacement
+        dojo.byId("output").innerHTML = safeReplace("<div>{0}</div", [bad]);
       });
     </script>
 
