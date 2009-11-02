@@ -43,6 +43,7 @@ If the second argument is an object, all names within braces are interpreted as 
   :toolbar: none
   :width: 500
   :height: 300
+  :version: local
 
   .. javascript::
     :label: Object example
