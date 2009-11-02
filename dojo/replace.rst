@@ -94,7 +94,7 @@ This code in action:
   :version: local
   :djConfig: parseOnLoad: false
 
-  A complex object can be used with dojo.replace.
+  An array can be used with dojo.replace.
 
   .. javascript::
     :label: Object example
@@ -167,7 +167,7 @@ This code in action:
   :version: local
   :djConfig: parseOnLoad: false
 
-  A complex object can be used with dojo.replace.
+  A function can be used with dojo.replace.
 
   .. javascript::
     :label: Object example
@@ -213,7 +213,7 @@ In some cases you may want to use different braces, e.g., because your interpola
 
   dojo.replace("Hello, %[0] %[2] AKA %[3]!",
     ["Robert", "X", "Cringely", "Bob"],
-    /%\[([^\]+)]\]/g
+    /%\[([^\]]+)]\]/g
   );
 
 This code in action:
@@ -225,7 +225,7 @@ This code in action:
   :version: local
   :djConfig: parseOnLoad: false
 
-  A complex object can be used with dojo.replace.
+  A pattern can be replaced.
 
   .. javascript::
     :label: Object example
@@ -235,7 +235,7 @@ This code in action:
         dojo.byId("output").innerHTML = dojo.replace(
           "Hello, %[0] %[2] AKA %[3]!",
           ["Robert", "X", "Cringely", "Bob"],
-          /\%\[([^\]+)]\]/g
+          /%\[([^\]]+)]\]/g
         );
       });
     </script>
