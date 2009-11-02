@@ -213,7 +213,7 @@ In some cases you may want to use different braces, e.g., because your interpola
 
   dojo.replace("Hello, %[0] %[2] AKA %[3]!",
     ["Robert", "X", "Cringely", "Bob"],
-    /%\[([^\]]+)]\]/g
+    /\%\[([^\]]+)]\]/g
   );
 
 This code in action:
@@ -235,7 +235,7 @@ This code in action:
         dojo.byId("output").innerHTML = dojo.replace(
           "Hello, %[0] %[2] AKA %[3]!",
           ["Robert", "X", "Cringely", "Bob"],
-          /%\[([^\]]+)]\]/g
+          /\%\[([^\]]+)]\]/g
         );
       });
     </script>
