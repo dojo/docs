@@ -40,8 +40,12 @@ If the second argument is an object, all names within braces are interpreted as 
 
 .. code-example::
   :type: inline
+  :toolbar: none
+  :width: 300
+  :height: 100
 
   .. javascript::
+    :label: Object example
 
     dojo.addOnLoad(function(){
       dojo.byId("output").innerHTML = dojo.replace(
@@ -58,6 +62,7 @@ If the second argument is an object, all names within braces are interpreted as 
     });
 
   .. html::
+    :label: Minimal HTML.
 
     <p id="output"></p>
 
