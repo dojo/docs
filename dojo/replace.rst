@@ -381,10 +381,10 @@ You can check the result here:
         return dojo.replace(tmpl, function(_, name){
           if(name.charAt(0) == '!'){
             // no escaping
-            return fn.call(this, _, name.slice(1));
+            return fn(_, name.slice(1));
           }
           // escape
-          return fn.call(this, _, name).
+          return fn.(_, name).
             replace(/&/g, "&amp;").
             replace(/</g, "&lt;").
             replace(/>/g, "&gt;").
