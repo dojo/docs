@@ -43,23 +43,23 @@ If the second argument is an object, all names within braces are interpreted as 
 
   .. javascript::
 
-  dojo.addOnLoad(function(){
-    dojo.byId("output").innerHTML = dojo.replace(
-      "Hello, {name.first} {name.last} AKA {nick}!",
-      {
-        name: {
-          first:  "Robert",
-          middle: "X",
-          last:   "Cringely"
-        },
-        nick: "Bob"
-      }
-    );
-  });
+    dojo.addOnLoad(function(){
+      dojo.byId("output").innerHTML = dojo.replace(
+        "Hello, {name.first} {name.last} AKA {nick}!",
+        {
+          name: {
+            first:  "Robert",
+            middle: "X",
+            last:   "Cringely"
+          },
+          nick: "Bob"
+        }
+      );
+    });
 
   .. html::
 
-  <p id="output"></p>
+    <p id="output"></p>
 
 In most cases you may prefer an array notation effectively simulating the venerable ``printf``:
 
