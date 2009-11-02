@@ -374,6 +374,10 @@ dojox.fx
 * API change to dojox.fx.style functions. dojox.fx.addClass/toggleClass/removeClass now match dojo.addClass/toggleClass/removeClass API's. Documentation added, still experimental.
 * Added dojox.fx.ext-dojo.NodeList-style module, mapping dojox.fx.style functions into dojo.NodeList
 
+dojox.gfx
+---------
+
+* dojox.gfx.utils.toSvg - serialize a dojox.gfx surface as a string in SVG format for all browsers (including IE).
 
 dojox.grid
 ----------
