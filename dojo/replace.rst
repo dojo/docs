@@ -22,7 +22,9 @@ dojo.replace accepts 3 arguments:
 * Object or a function to bu used for substitutions.
 * Optional regular expression pattern to look for. By default all patterns "{abc}" are going to be found and replaced.
 
-If the second argument is an object, all names within braces are interpreted as property names within this object. All "." will be interpreted as subobjects. This default behavior provides a great flexibility. Example:
+If the second argument is an object, all names within braces are interpreted as property names within this object. All "." will be interpreted as subobjects. This default behavior provides a great flexibility.
+
+Example:
 
 .. code-block :: javascript
   :linenos:
@@ -142,7 +144,7 @@ Let's take a look at example:
     dojo.forEach(a, function(x){ t += x; });
     return t;
   }
-  
+
   var output = dojo.replace(
     "{count} payments averaging {avg} USD per payment.",
     dojo.hitch(
@@ -182,7 +184,7 @@ This code in action:
         dojo.forEach(a, function(x){ t += x; });
         return t;
       }
-      
+
       dojo.addOnLoad(function(){
         dojo.byId("output").innerHTML = dojo.replace(
           "{count} payments averaging {avg} USD per payment.",
@@ -257,15 +259,20 @@ Examples
 
 Below are real-world examples of using `dojo.replace`_
 
+Highlighting substitutions
+--------------------------
+
 Let's add highlighting to all substituted feeds:
 
 .. code-block :: javascript
   :linenos:
 
   function hiliteReplace(tmpl, dict){
+    // add highlights first
     var hilited = dojo.replace(tmpl, function(_, name){
       return "<span class='hilite'>{" + name + "}</span>";
     });
+    // now perform real substitutions
     return dojo.replace(hilited, dict);
   }
   // that is how we use it:
@@ -302,6 +309,15 @@ Take a look at this code in action:
       });
     </script>
 
+  Minimalistic CSS for our example.
+
+  .. css::
+    :label: Minimal CSS.
+
+    <style>
+      .hilite {font-weight: bold; color: green;}
+    </style>
+
   Minimalistic HTML for our example.
 
   .. html::
@@ -309,11 +325,39 @@ Take a look at this code in action:
 
     <p id="output"></p>
 
-  Minimalistic CSS for our example.
+Escaping substitutions
+----------------------
 
-  .. css::
-    :label: Minimal CSS.
-    
-    <style>
-      .hilite {font-weight: bold; color: green;}
-    </style>
+Let's escape substituted text for HTML to prevent possible exploits. Dijit templates implement similar technique. We will borrow Dijit syntax: all names starting with "!" are going to be placed as is (example: ``{!abc}``), while everything else is going to be filtered.
+
+.. code-block :: javascript
+  :linenos:
+
+  function safeReplace(tmpl, dict){
+    // convert dict to a function, if needed
+    dict = dojo.isFunction(dict) ? dict : function(_, name){
+      return dojo.getObject(name, false, dict);
+    };
+    // perform the substitution
+    return dojo.replace(tmpl, function(_, name){
+      if(name.charAt(0) != '!'){
+        // no escaping
+        return dict(_, name.slice(1));
+      }
+      // escape
+      return dict(_, name).
+        replace(/&/g, "&amp;").
+        replace(/</g, "&lt;").
+        replace(/>/g, "&gt;").
+        replace(/"/g, "&quot;");
+    });
+  }
+  // that is how we use it:
+  var output = safeReplace("<div>{0}</div",
+    ["<script>alert('Let\' break stuff!');</script>"]
+  );
+
+Formatting substitutions
+------------------------
+
+Let's add a simple formatting to substituted fields.
