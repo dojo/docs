@@ -51,19 +51,21 @@ If the second argument is an object, all names within braces are interpreted as 
   .. javascript::
     :label: Object example
 
-    dojo.addOnLoad(function(){
-      dojo.byId("output").innerHTML = dojo.replace(
-        "Hello, {name.first} {name.last} AKA {nick}!",
-        {
-          name: {
-            first:  "Robert",
-            middle: "X",
-            last:   "Cringely"
-          },
-          nick: "Bob"
-        }
-      );
-    });
+    <script>
+      dojo.addOnLoad(function(){
+        dojo.byId("output").innerHTML = dojo.replace(
+          "Hello, {name.first} {name.last} AKA {nick}!",
+          {
+            name: {
+              first:  "Robert",
+              middle: "X",
+              last:   "Cringely"
+            },
+            nick: "Bob"
+          }
+        );
+      });
+    </script>
 
   Minimalistic HTML for our example.
 
