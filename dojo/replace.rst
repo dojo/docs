@@ -27,7 +27,8 @@ If the second argument is an object, all names within braces are interpreted as 
 .. code-block :: javascript
   :linenos:
 
-  dojo.replace("Hello, {name.first} {name.last} AKA {nick}!",
+  dojo.replace(
+    "Hello, {name.first} {name.last} AKA {nick}!",
     {
       name: {
         first:  "Robert",
@@ -38,11 +39,12 @@ If the second argument is an object, all names within braces are interpreted as 
     }
   );
 
+You can see this code in action:
+
 .. code-example::
-  :type: inline
   :toolbar: none
-  :width: 500
-  :height: 300
+  :width:  600
+  :height: 200
   :version: local
   :djConfig: parseOnLoad: false
 
