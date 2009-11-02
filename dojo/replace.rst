@@ -20,15 +20,13 @@ Basic Usage
 dojo.replace accepts 3 arguments:
 
 * String template to be interpolated.
-* Object or a function to be used for substitutions.
-* Optional regular expression pattern to look for. By default all patterns "{abc}" are going to be found and replaced.
+* Object or function to be used for substitutions.
+* Optional regular expression pattern to look for. By default all patterns looking like ``{abc}`` are going to be found and replaced.
 
 With dictionary
 ---------------
 
-If the second argument is an object, all names within braces are interpreted as property names within this object. All "." will be interpreted as subobjects. This default behavior provides a great flexibility.
-
-Example:
+If the second argument is an object, all names within braces are interpreted as property names within this object. All names separated by ``.`` (dot) will be interpreted as subobjects. This default behavior provides a great flexibility:
 
 .. code-block :: javascript
   :linenos:
@@ -82,6 +80,8 @@ You can see this code in action:
 
     <p id="output"></p>
 
+You don't need to use all properties of an object, you can list them in any order, and you can reuse them as many times as you like.
+
 With array
 ----------
 
@@ -124,8 +124,6 @@ This code in action:
     :label: Minimal HTML.
 
     <p id="output"></p>
-
-You don't need to use all properties of an object, you can list them in any order, and you can reuse them as many times as you like.
 
 ==============
 Advanced Usage
@@ -224,7 +222,7 @@ This code in action:
 With custom pattern
 -------------------
 
-In some cases you may want to use different braces, e.g., because your interpolated strings contain patterns similar to "{abc}", but they should not be evaluated and replaced, or your server-side framework already uses these patterns for something else. In this case you should replace the pattern:
+In some cases you may want to use different braces, e.g., because your interpolated strings contain patterns similar to ``{abc}``, but they should not be evaluated and replaced, or your server-side framework already uses these patterns for something else. In this case you should replace the pattern:
 
 .. code-block :: javascript
   :linenos:
@@ -346,7 +344,7 @@ Take a look at this code in action:
 Escaping substitutions
 ----------------------
 
-Let's escape substituted text for HTML to prevent possible exploits. Dijit templates implement similar technique. We will borrow Dijit syntax: all names starting with "!" are going to be placed as is (example: ``{!abc}``), while everything else is going to be filtered.
+Let's escape substituted text for HTML to prevent possible exploits. Dijit templates implement similar technique. We will borrow Dijit syntax: all names starting with ``!`` are going to be placed as is (example: ``{!abc}``), while everything else is going to be filtered.
 
 .. code-block :: javascript
   :linenos:
@@ -429,7 +427,13 @@ You can check the result here:
 Formatting substitutions
 ------------------------
 
-Let's add a simple formatting to substituted fields.
+Let's add a simple formatting to substituted fields. We will use the following notation in this example:
+
+* ``{name}`` - use the result of substitution directly.
+* ``{name:fmt}`` - use formatter ``fmt`` to format the result.
+* ``{name:fmt:a:b:c}`` - use formatter ``fmt`` with optional parameters ``a``, ``b``, and ``c``. Any number of parameters can be used. Their interpretation depends on a formatter.
+
+In this example we are going to format numbers as fixed or exponential with optional precision.
 
 .. code-block :: javascript
   :linenos:
@@ -463,8 +467,13 @@ Let's add a simple formatting to substituted fields.
     }
   };
   // that is how we use it:
-  var output = format(
-    "{pi} {pi:f} {pi:f:5} {big} {big:e} {big:e:5}",
+  var output1 = format(
+    "pi = {pi}<br>pi:f = {pi:f}<br>pi:f:5 = {pi:f:5}",
+    {pi: Math.PI, big: 1234567890},
+    customFormatters
+  );
+  var output2 = format(
+    "big = {big}<br>big:e = {big:e}<br>big:e:5 = {big:e:5}",
     {pi: Math.PI, big: 1234567890},
     customFormatters
   );
