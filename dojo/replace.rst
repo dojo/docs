@@ -41,8 +41,8 @@ If the second argument is an object, all names within braces are interpreted as 
 .. code-example::
   :type: inline
   :toolbar: none
-  :width: 300
-  :height: 100
+  :width: 500
+  :height: 300
 
   .. javascript::
     :label: Object example
