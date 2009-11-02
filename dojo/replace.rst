@@ -496,8 +496,13 @@ You can check the result here:
         }
       };
       dojo.addOnLoad(function(){
-        dojo.byId("output").innerHTML = format(
-          "{pi} {pi:f} {pi:f:5}<br>{big} {big:e} {big:e:5}",
+        dojo.byId("output1").innerHTML = format(
+          "pi = {pi}<br>pi:f = {pi:f}<br>pi:f:5 = {pi:f:5}",
+          {pi: Math.PI, big: 1234567890},
+          customFormatters
+        );
+        dojo.byId("output2").innerHTML = format(
+          "big = {big}<br>big:e = {big:e}<br>big:e:5 = {big:e:5}",
           {pi: Math.PI, big: 1234567890},
           customFormatters
         );
@@ -509,4 +514,5 @@ You can check the result here:
   .. html::
     :label: Minimal HTML.
 
-    <p id="output"></p>
+    <p id="output1"></p>
+    <p id="output2"></p>
