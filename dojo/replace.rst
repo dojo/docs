@@ -10,7 +10,7 @@ dojo.replace
 .. contents::
     :depth: 2
 
-This function provides a sane light-weight foundation for substitution-based templating.
+This function provides a light-weight foundation for substitution-based templating. It is a sane alternative to string concatenation technique, which is brittle and doesn't play nice with localization.
 
 ===========
 Basic Usage
@@ -115,4 +115,93 @@ This code in action:
 
     <p id="output"></p>
 
-Note that you don't need to use all properties of an object.
+You don't need to use all properties of an object, you can list them in any order, and you can reuse them as many times as you like.
+
+==============
+Advanced Usage
+==============
+
+For ultimate flexibility you can use `dojo.replace` with a function as the second argument. The function is going to be called with 4 arguments:
+
+* Whole match.
+* Name between found braces.
+* Offset of the match.
+* Whole string.
+
+Essentially these arguments are the same as in `String.replace() <https://developer.mozilla.org/en/Core_JavaScript_1.5_Reference/Global_Objects/String/replace>`_ when a function is used. Usually the second argument is the most useful one.
+
+Let's take a look at example:
+
+.. code-block :: javascript
+  :linenos:
+
+  // helper function
+  function sum(a){
+    var t = 0;
+    dojo.forEach(a, function(x){ t += x; });
+    return t;
+  }
+  
+  dojo.replace(
+    "{count} payments averaging {avg} USD per payment.",
+    dojo.hitch(
+      { payments: [11, 16, 12] },
+      function(_, key){
+        switch(key){
+          case "count": return this.payments.length;
+          case "min":   return Math.min.apply(Math, this.payments);
+          case "max":   return Math.max.apply(Math, this.payments);
+          case "sum":   return sum(this.payments);
+          case "avg":   return sum(this.payments) / this.payments.length;
+        }
+      }
+    )
+  );
+
+This code in action:
+
+.. code-example::
+  :toolbar: none
+  :width:  600
+  :height: 400
+  :version: local
+  :djConfig: parseOnLoad: false
+
+  A complex object can be used with dojo.replace.
+
+  .. javascript::
+    :label: Object example
+
+    <script>
+      // helper function
+      function sum(a){
+        var t = 0;
+        dojo.forEach(a, function(x){ t += x; });
+        return t;
+      }
+      
+      dojo.addOnLoad(function(){
+        dojo.byId("output").innerHTML = dojo.replace(
+          "{count} payments averaging {avg} USD per payment.",
+          dojo.hitch(
+            { payments: [11, 16, 12] },
+            function(_, key){
+              switch(key){
+                case "count": return this.payments.length;
+                case "min":   return Math.min.apply(Math, this.payments);
+                case "max":   return Math.max.apply(Math, this.payments);
+                case "sum":   return sum(this.payments);
+                case "avg":   return sum(this.payments) / this.payments.length;
+              }
+            }
+          )
+        );
+      });
+    </script>
+
+  Minimalistic HTML for our example.
+
+  .. html::
+    :label: Minimal HTML.
+
+    <p id="output"></p>
