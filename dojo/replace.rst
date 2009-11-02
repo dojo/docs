@@ -27,7 +27,7 @@ If the second argument is an object, all names within braces are interpreted as 
 .. code-block :: javascript
   :linenos:
 
-  dojo.replace(
+  var output = dojo.replace(
     "Hello, {name.first} {name.last} AKA {nick}!",
     {
       name: {
@@ -81,7 +81,8 @@ In most cases you may prefer an array notation effectively simulating the venera
 .. code-block :: javascript
   :linenos:
 
-  dojo.replace("Hello, {0} {2} AKA {3}!",
+  var output = dojo.replace(
+    "Hello, {0} {2} AKA {3}!",
     ["Robert", "X", "Cringely", "Bob"]
   );
 
@@ -121,7 +122,7 @@ You don't need to use all properties of an object, you can list them in any orde
 Advanced Usage
 ==============
 
-For ultimate flexibility you can use `dojo.replace` with a function as the second argument. The function is going to be called with 4 arguments:
+For ultimate flexibility you can use `dojo.replace`_ with a function as the second argument. The function is going to be called with 4 arguments:
 
 * Whole match.
 * Name between found braces.
@@ -142,7 +143,7 @@ Let's take a look at example:
     return t;
   }
   
-  dojo.replace(
+  var output = dojo.replace(
     "{count} payments averaging {avg} USD per payment.",
     dojo.hitch(
       { payments: [11, 16, 12] },
@@ -213,7 +214,8 @@ In some cases you may want to use different braces, e.g., because your interpola
 .. code-block :: javascript
   :linenos:
 
-  dojo.replace("Hello, %[0] %[2] AKA %[3]!",
+  var output = dojo.replace(
+    "Hello, %[0] %[2] AKA %[3]!",
     ["Robert", "X", "Cringely", "Bob"],
     /\%\[([^\]]+)\]/g
   );
@@ -248,3 +250,70 @@ This code in action:
     :label: Minimal HTML.
 
     <p id="output"></p>
+
+========
+Examples
+========
+
+Below are real-world examples of using `dojo.replace`_
+
+Let's add highlighting to all substituted feeds:
+
+.. code-block :: javascript
+  :linenos:
+
+  function hiliteReplace(tmpl, dict){
+    var hilited = dojo.replace(tmpl, function(_, name){
+      return "<span class='hilite'>{" + name + "}</span>";
+    });
+    return dojo.replace(hilited, dict);
+  }
+  // that is how we use it:
+  var output = hiliteReplace("Hello, {0} {2} AKA {3}!",
+    ["Robert", "X", "Cringely", "Bob"]
+  );
+
+Take a look at this code in action:
+
+.. code-example::
+  :toolbar: none
+  :width:  600
+  :height: 400
+  :version: local
+  :djConfig: parseOnLoad: false
+
+  Highlighting replaced fields.
+
+  .. javascript::
+    :label: Object example
+
+    <script>
+      function hiliteReplace(tmpl, dict){
+        var hilited = dojo.replace(tmpl, function(_, name){
+          return "<span class='hilite'>{" + name + "}</span>";
+        });
+        return dojo.replace(hilited, dict);
+      }
+      dojo.addOnLoad(function(){
+        dojo.byId("output").innerHTML = hiliteReplace(
+          "Hello, {0} {2} AKA {3}!",
+          ["Robert", "X", "Cringely", "Bob"]
+        );
+      });
+    </script>
+
+  Minimalistic HTML for our example.
+
+  .. html::
+    :label: Minimal HTML.
+
+    <p id="output"></p>
+
+  Minimalistic CSS for our example.
+
+  .. css::
+    :label: Minimal CSS.
+    
+    <style>
+      .hilite {font-weight: bold; color: green;}
+    </style>
