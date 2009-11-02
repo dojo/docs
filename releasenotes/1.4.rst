@@ -29,17 +29,6 @@ IO Pipeline Topics
 * See `IO Pipeline Topics <dojo/ioPipelineTopics>`_ for more information.
 
 
-Dojo Base FX
-------------
-
-* Considerable performance increase and new API's
-* made dojo._Animation public: dojo.Animation
-* onEnd, beforeBegin functions are passed the node reference used in the Animation
-* start: and end: properties, when using a function, are passed the node reference for the animtion
-* each property can now be a function, returning either a value, or and object to pass as the value
-* See also `dojo.fx <dojo/fx>`_
-
-
 dojo.addOnLoad
 --------------
 
@@ -89,6 +78,17 @@ dojo.fieldToObject
 
 * A new method in Dojo Base (part of dojo.js) that is related to dojo.formToObject(), except instead of converting a whole form to an object, it just converts one form field. Pass it a DOM Node for the field, or the ID of the form field as a string. dojo.fieldToObject returns the value encoded in a form field as as a string or an array of strings. Disabled form elements and unchecked radio and checkboxes are skipped. Multi-select elements are returned as an array of string values.
 * See `dojo.fieldToObject <dojo/fieldToObject>`_ for more information.
+
+
+dojo.fx (Dojo Base FX)
+----------------------
+
+* Considerable performance increase and new API's
+* made dojo._Animation public: dojo.Animation
+* onEnd, beforeBegin functions are passed the node reference used in the Animation
+* start: and end: properties, when using a function, are passed the node reference for the animtion
+* each property can now be a function, returning either a value, or and object to pass as the value
+* See also `dojo.fx <dojo/fx>`_
 
 
 dojo.hash
