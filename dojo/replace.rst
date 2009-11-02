@@ -374,17 +374,17 @@ You can check the result here:
     <script>
       function safeReplace(tmpl, dict){
         // convert dict to a function, if needed
-        dict = dojo.isFunction(dict) ? dict : function(_, name){
+        var fn  = dojo.isFunction(dict) ? dict : function(_, name){
           return dojo.getObject(name, false, dict);
         };
         // perform the substitution
         return dojo.replace(tmpl, function(_, name){
           if(name.charAt(0) == '!'){
             // no escaping
-            return dict.call(this, _, name.slice(1));
+            return fn.call(this, _, name.slice(1));
           }
           // escape
-          return dict.call(this, _, name).
+          return fn.call(this, _, name).
             replace(/&/g, "&amp;").
             replace(/</g, "&lt;").
             replace(/>/g, "&gt;").
