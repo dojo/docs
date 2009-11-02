@@ -24,8 +24,8 @@ Dojo
 IO Pipeline Topics
 ------------------
 
-* Now there are topics that are published for the pipeline used to handle all IO operations. dojo.xhr, dojo.io.script and dojo.io.iframe all use the IO pipeline, so they can all publish the pipeline topics. 
-* By default, the topics are turned off. To enable them, set **djConfig.ioPublish = true**. After they are globally enabled, you can disable them for specific IO requests by setting **ioPublish: false** in the arg object you pass to dojo.xhr*, dojo.io.script.get() or dojo.io.iframe.send(). 
+* Now there are topics that are published for the pipeline used to handle all IO operations. dojo.xhr, dojo.io.script and dojo.io.iframe all use the IO pipeline, so they can all publish the pipeline topics.
+* By default, the topics are turned off. To enable them, set **djConfig.ioPublish = true**. After they are globally enabled, you can disable them for specific IO requests by setting **ioPublish: false** in the arg object you pass to dojo.xhr*, dojo.io.script.get() or dojo.io.iframe.send().
 * See `IO Pipeline Topics <dojo/ioPipelineTopics>`_ for more information.
 
 
@@ -63,7 +63,7 @@ dojo.cldr (Dojo i18n)
 ---------------------
 
 * The cultural tables have been updated to version 1.7.1 of the Unicode CLDR http://unicode.org/cldr
-* See also `dojo.cldr <dojo/cldr>`_ 
+* See also `dojo.cldr <dojo/cldr>`_
 
 
 dojo.contentHandlers
@@ -92,7 +92,7 @@ TODO: document or link to blog post (Eugene)
 dojo.fieldToObject
 ------------------
 
-* A new method in Dojo Base (part of dojo.js) that is related to dojo.formToObject(), except instead of converting a whole form to an object, it just converts one form field. Pass it a DOM Node for the field, or the ID of the form field as a string. dojo.fieldToObject returns the value encoded in a form field as as a string or an array of strings. Disabled form elements and unchecked radio and checkboxes are skipped. Multi-select elements are returned as an array of string values. 
+* A new method in Dojo Base (part of dojo.js) that is related to dojo.formToObject(), except instead of converting a whole form to an object, it just converts one form field. Pass it a DOM Node for the field, or the ID of the form field as a string. dojo.fieldToObject returns the value encoded in a form field as as a string or an array of strings. Disabled form elements and unchecked radio and checkboxes are skipped. Multi-select elements are returned as an array of string values.
 * See `dojo.fieldToObject <dojo/fieldToObject>`_ for more information.
 
 
@@ -153,6 +153,11 @@ Two mixins for dojo.NodeList are now available. dojo.NodeLists are returned from
 * clone
 
 Both mixins are modeled after the jQuery APIs that have the same names.
+
+dojo.replace
+------------
+
+New flexible facility for simple templating based on substitutions.
 
 ======
 Dijit
@@ -386,7 +391,7 @@ The new Enhanced DataGrid extends the base grid in numerous useful ways.
 * Nested Sort:  The user can now concurrently sort on any number of columns.
 * Multiple Column/Row Selection: The user can now select multiple columns or rows through swipe-select or extended selection techniques.
 * Drag-drop Multiple Columns and Rows: The user can now move multiple columns or rows in the same action.
-* Indirect Selection: Rather than having to manually include radio buttons and check boxes for single and multiple selection models, the Enhanced DataGrid will do it automatically in response to the inclusion of simple attribute-value pairs, e.g., indirectSelection=true, on the grid's div tag. 
+* Indirect Selection: Rather than having to manually include radio buttons and check boxes for single and multiple selection models, the Enhanced DataGrid will do it automatically in response to the inclusion of simple attribute-value pairs, e.g., indirectSelection=true, on the grid's div tag.
 * Declarative Pop-up Menus: Rather than having to create and assign pop-up menus through scripts, the enhanced DataGrid allows you to specify these menus with straightforward markup.
 
 
