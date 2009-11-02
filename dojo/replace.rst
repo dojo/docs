@@ -433,7 +433,7 @@ Let's add a simple formatting to substituted fields.
     });
   }
   // simple numeric formatters
-  var fmts = {
+  var customFormatters = {
     f: function(value, opts){
       // return formatted as a fixed number
       var precision = opts && opts.length && opts[0];
@@ -448,7 +448,8 @@ Let's add a simple formatting to substituted fields.
   // that is how we use it:
   var output = format(
     "{pi} {pi:f} {pi:f:5} {big} {big:e} {big:e:5}",
-    {pi: Math.PI, big: 1234567890}
+    {pi: Math.PI, big: 1234567890},
+    customFormatters
   );
 
 You can check the result here:
@@ -482,7 +483,7 @@ You can check the result here:
         });
       }
       // simple numeric formatters
-      var fmts = {
+      var customFormatters = {
         f: function(value, opts){
           // return formatted as a fixed number
           var precision = opts && opts.length && opts[0];
@@ -497,7 +498,8 @@ You can check the result here:
       dojo.addOnLoad(function(){
         dojo.byId("output").innerHTML = format(
           "{pi} {pi:f} {pi:f:5}<br>{big} {big:e} {big:e:5}",
-          {pi: Math.PI, big: 1234567890}
+          {pi: Math.PI, big: 1234567890},
+          customFormatters
         );
       });
     </script>
