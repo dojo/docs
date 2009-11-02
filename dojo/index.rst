@@ -48,13 +48,13 @@ Details on dojo.every, dojo.filter, dojo.forEach, dojo.indexOf, dojo.lastIndexOf
 * `dojo.filter <dojo/filter>`_
 
   Iterate over an array, reducing the array based on the callback return.
-    
+
 * `dojo.indexOf <dojo/indexOf>`_
 
   Find the index of some element in an Array.
 
 * `NodeList array methods <dojo/NodeList#array>`_
-  
+
   * NodeList.indexOf, NodeList.lastIndexOf, NodeList.forEach, NodeList.every, NodeList.some, NodeList.concat, NodeList.map, NodeList.filter, NodeList.at
 
 Language Utilities
@@ -65,11 +65,11 @@ Language Utilities
   Communication between threads
 
 * `dojo.hitch <dojo/hitch>`_
-  
+
   Function that generates a wrapper function that ensures a function that will only ever execute in a defined scope.
-    
+
 * `dojo.partial <dojo/partial>`_
-    
+
   Function that generates a wrapper function that ensures a function will only ever execute globally.
 
 * `dojo.isString <dojo/isString>`_
@@ -96,17 +96,25 @@ Language Utilities
 
   Checks if the parameter is a built-in function
 
+
+String Utilities
+----------------
+
 * `dojo.trim <dojo/trim>`_
 
   Trim whitespace from a String
-  
-DOM 
+
+* `dojo.replace <dojo/replace>`_
+
+  Simple templates with parameterized substitutions.
+
+DOM
 ---
 
 * `dojo.query <dojo/query>`_
 
-  The swiss army knife of DOM node manipulation in Dojo. 
-  
+  The swiss army knife of DOM node manipulation in Dojo.
+
 * `dojo.NodeList <dojo/NodeList>`_
 
   A class to handle a list of DOM nodes. Most commonly returned from a `dojo.query` call.
@@ -132,90 +140,90 @@ DOM
   * `dojo.place <dojo/place>`_
 
     Place DOM nodes relative to others
-      
+
   * NodeList.place
-        
+
     Place DOM nodes in list relative to others
 
-  * NodeList.orphan 
-    
+  * NodeList.orphan
+
   * NodeList.adopt
-    
+
   * NodeList.clone
-    
+
   * NodeList.addContent
-    
+
   * `dojo.destroy <dojo/destroy>`_
-    
+
     Destroy a DOM element
-    
+
   * NodeList.destroy
-    
+
   * `dojo.empty <dojo/empty>`_
-    
+
     Empty the contents of a DOM element
 
-  * NodeList.empty 
+  * NodeList.empty
 
 
 * Attributes
 
   * `dojo.formToJson <dojo/formToJson>`_
-    
+
     Create an object from an form node
-      
+
   * `dojo.attr <dojo/attr>`_
 
     Modifying DOM node attributes
 
   * NodeList.attr
-    
+
     Set/Get attributes for nodes in the list
 
   * dojo.hasAttr
-    
+
   * dojo.removeAttr
-      
+
   * `dojo.formToObject <dojo/formToObject>`_
 
   * `dojo.formToQuery <dojo/formToQuery>`_
 
   * dojo.isDescendant
-    
+
   * dojo.setSelectable
-    
+
 
 * Styles
 
   * `dojo.coords <dojo/coords>`_
 
     Getter for the coordinates (relative to parent and absolute) of a DOM node.  Deprecated in Dojo 1.4.
-      
+
   * NodeList.coords
-    
+
     Getter for the coordinates of each node in the list.  Deprecated in Dojo 1.4.
 
   * `dojo.position <dojo/position>`_
 
     Getter for the border-box x/y coordinates and size of a DOM node.
-      
+
   * NodeList.position
-    
+
     Calls `dojo.position <dojo/position>`_ for each node in the list and returns those objects as an Array.
 
   * `dojo.style <dojo/style>`_
 
     A getter/setter for styles on a DOM node
-      
+
   * `dojo.getComputedStyle <dojo/getComputedStyle>`_
-    
+
     Return a cachable object of all computed styles for a node
-      
+
   * Class Utilities
-    
+
     * `dojo.hasClass <dojo/hasClass>`_
 
-      Returns a boolean depending on whether or not a node has a passed class string. 
+      Returns a boolean depending on whether or not a node has a passed class string.
 
     * `dojo.addClass <dojo/addClass>`_
 
@@ -243,17 +251,17 @@ Effects
 * `dojo.animateProperty <dojo/animateProperty>`_
 
   The workhorse of most `dojo.fx <dojo/fx>`_ animations. Used for animating CSS properties
-    
+
 * `dojo.Animation <dojo/Animation>`_
-  
+
   **1.4+** previously dojo._Animation, the class behind all dojo.fx
-    
+
 * `dojo.anim <dojo/anim>`_
-  
+
   Shorthand version of animateProperty using positional arguments
-    
+
 * `dojo.fadeOut <dojo/fadeOut>`_
-  
+
 * `dojo.fadeIn <dojo/fadeIn>`_
 
 Events
@@ -264,11 +272,11 @@ Events
   Connects events to methods
 
 * `NodeList.connect <dojo/NodeList#connect>`_
-  
+
   Connects events to every node in the list, like dojo.connect
-    
+
 * `NodeList.events <dojo/NodeList#events>`_
-  
+
   Common event names mapped as functions on a NodeList - eg: .onclick(function(){})
 
 * `dojo.disconnect <dojo/disconnect>`_
@@ -290,12 +298,12 @@ Events
 * `dojo.connectPublisher <dojo/connectPublisher>`_
 
   Ensure that everytime an event is called, a message is published on the topic.
-    
+
 * `dojo.stopEvent <dojo/stopEvent>`_
-  
+
   Stop an event's bubbling and propagation.
-    
-  
+
+
 Document Lifecycle
 ------------------
 
@@ -324,14 +332,14 @@ Ajax / IO
 
 * `IO Pipeline Topics <dojo/ioPipelineTopics>`_
 
-* `dojo.contentHandlers <dojo/contentHandlers>`_ 
-  
-  **1.4+** Pre-defined XHR content handlers, and an extension point to add your own custom handling.    
+* `dojo.contentHandlers <dojo/contentHandlers>`_
+
+  **1.4+** Pre-defined XHR content handlers, and an extension point to add your own custom handling.
 
 * `dojo.xhr <dojo/xhr>`_
-  
+
   Core for all xhr* verbs, eg: xhrPost, getGet
-  
+
 * `dojo.xhrDelete <dojo/xhrDelete>`_
 
 * `dojo.xhrGet <dojo/xhrGet>`_
@@ -354,9 +362,9 @@ Package System
 * `dojo.require <dojo/require>`_
 
   Loads a Javascript module from the appropriate URI
-    
+
 * `dojo.provide <dojo/provide>`_
-  
+
 * `dojo.moduleUrl <dojo/moduleUrl>`_
 
 JSON Tools
@@ -374,9 +382,9 @@ Objects / OO Tools
 ------------------
 
 * `dojo.mixin <dojo/mixin>`_
-  
+
   Mixes one object into another. Can be used as a shallow copy
-    
+
 * `dojo.declare <dojo/declare>`_
 
   Creates a constructor using a compact notation for inheritance and prototype extension
@@ -386,9 +394,9 @@ Objects / OO Tools
 * `dojo.exists <dojo/exists>`_
 
   Determine if an object supports a given method
-    
+
 * `dojo.delegate <dojo/delegate>`_
-  
+
   Delegate an Object (beget)
 
 * `dojo.getObject <dojo/getObject>`_
@@ -404,7 +412,7 @@ Objects / OO Tools
 * `dojo.queryToObject <dojo/queryToObject>`_
 
 * `NodeList.instantiate <dojo/NodeList#instantiate>`_
-  
+
   Create classes out of each node in the list
 
 
@@ -414,14 +422,14 @@ Colors
 * `dojo._base.Color <dojo/_base/Color>`_
 
   Color object and utility functions to handle colors.
-  Details on 
-    
+  Details on
+
 * dojo.colorFromArray
-  
+
 * dojo.colorFromHex
-  
+
 * dojo.colorFromString
-  
+
 * dojo.colorFromRgb.
 
 
@@ -433,7 +441,7 @@ Miscellaneous Base
   Log a debug message to indicate that a behavior has been deprecated
 
 * `dojo.eval <dojo/eval>`_
-  
+
   Evaluate some string of JavaScript
 
 * `dojo.global <dojo/global>`_
@@ -441,7 +449,7 @@ Miscellaneous Base
   Alias for the global scope
 
 * `dojo.keys <dojo/keys>`_
-  
+
   A collection of key constants.
 
 * `dojo.locale <dojo/locale>`_
@@ -451,7 +459,7 @@ Miscellaneous Base
 * `dojo.setContext <dojo/setContext>`_
 
   Changes the behavior of many core Dojo functions that deal with namespace and DOM lookup
-   
+
 * `dojo.version <dojo/version>`_
 
   The current version number of Dojo
@@ -465,7 +473,7 @@ Miscellaneous Base
   Call callback with globalObject as dojo.global and globalObject.document as dojo.doc
 
 
-=========    
+=========
 Dojo Core
 =========
 
@@ -485,10 +493,10 @@ Dojo Core
 
   A Common Locale Data Repository (CLDR) implementation
 
-* `dojo.cache <dojo/cache>`_ 
+* `dojo.cache <dojo/cache>`_
 
   **1.4+** A mechanism to cache inline text.
-  
+
 * `dojo.colors <dojo/colors>`_
 
   CSS color manipulation functions
@@ -602,11 +610,11 @@ Dojo Core
 * `dojo.NodeList-manipulate <dojo/NodeList-manipulate>`_
 
   **1.4+** Method extensions to dojo.NodeList/dojo.query() that manipulate HTML.
-  
+
 * `dojo.NodeList-traverse <dojo/NodeList-traverse>`_
 
   **1.4+** Method extensions to dojo.NodeList/dojo.query() for traversing the DOM.
-  
+
 * `dojo.number <dojo/number>`_
 
   Localized formatting and parsing methods for number data
