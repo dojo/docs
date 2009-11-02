@@ -85,4 +85,34 @@ In most cases you may prefer an array notation effectively simulating the venera
     ["Robert", "X", "Cringely", "Bob"]
   );
 
+This code in action:
+
+.. code-example::
+  :toolbar: none
+  :width:  600
+  :height: 400
+  :version: local
+  :djConfig: parseOnLoad: false
+
+  A complex object can be used with dojo.replace.
+
+  .. javascript::
+    :label: Object example
+
+    <script>
+      dojo.addOnLoad(function(){
+        dojo.byId("output").innerHTML = dojo.replace(
+          "Hello, {0} {2} AKA {3}!",
+          ["Robert", "X", "Cringely", "Bob"]
+        );
+      });
+    </script>
+
+  Minimalistic HTML for our example.
+
+  .. html::
+    :label: Minimal HTML.
+
+    <p id="output"></p>
+
 Note that you don't need to use all properties of an object.
