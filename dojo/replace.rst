@@ -384,7 +384,7 @@ You can check the result here:
             return fn(_, name.slice(1));
           }
           // escape
-          return fn.(_, name).
+          return fn(_, name).
             replace(/&/g, "&amp;").
             replace(/</g, "&lt;").
             replace(/>/g, "&gt;").
