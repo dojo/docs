@@ -157,7 +157,7 @@ Both mixins are modeled after the jQuery APIs that have the same names.
 dojo.replace
 ------------
 
-New flexible facility for simple templating based on substitutions.
+New flexible facility for simple templating based on substitutions. See `dojo.replace <dojo/replace>`_.
 
 ======
 Dijit
