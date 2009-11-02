@@ -278,7 +278,7 @@ Below are real-world examples of using `dojo.replace`_.
 Highlighting substitutions
 --------------------------
 
-Let's add highlighting to all substituted feeds:
+Let's add highlighting to all substituted fields:
 
 .. code-block :: javascript
   :linenos:
