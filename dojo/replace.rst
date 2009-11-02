@@ -273,7 +273,7 @@ It is advised for the new pattern to be:
 Examples
 ========
 
-Below are real-world examples of using `dojo.replace`_
+Below are real-world examples of using `dojo.replace`_.
 
 Highlighting substitutions
 --------------------------
