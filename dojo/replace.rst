@@ -367,7 +367,7 @@ You can check the result here:
   :version: local
   :djConfig: parseOnLoad: false
 
-  Highlighting replaced fields.
+  Escaping replaced fields.
 
   .. javascript::
     :label: Object example
@@ -460,38 +460,45 @@ You can check the result here:
   :version: local
   :djConfig: parseOnLoad: false
 
-  Highlighting replaced fields.
+  Formatting replaced fields.
 
   .. javascript::
     :label: Object example
 
     <script>
-      function safeReplace(tmpl, dict){
+      function format(tmpl, dict, formatters){
         // convert dict to a function, if needed
-        var fn  = dojo.isFunction(dict) ? dict : function(_, name){
+        var fn = dojo.isFunction(dict) ? dict : function(_, name){
           return dojo.getObject(name, false, dict);
         };
         // perform the substitution
         return dojo.replace(tmpl, function(_, name){
-          if(name.charAt(0) == '!'){
-            // no escaping
-            return fn(_, name.slice(1));
+          var parts = name.split(":"),
+              value = fn(_, parts[0]);
+          if(parts.length > 1){
+            value = formatters[parts[1]](value, parts.slice(2));
           }
-          // escape
-          return fn(_, name).
-            replace(/&/g, "&amp;").
-            replace(/</g, "&lt;").
-            replace(/>/g, "&gt;").
-            replace(/"/g, "&quot;");
+          return value;
         });
       }
+      // simple numeric formatters
+      var fmts = {
+        f: function(value, opts){
+          // return formatted as a fixed number
+          var precision = opts && opts.length && opts[0];
+          return Number(value).toFixed(precision);
+        },
+        e: function(value, opts){
+          // return formatted as an exponential number
+          var precision = opts && opts.length && opts[0];
+          return Number(value).toExponential(precision);
+        }
+      };
       dojo.addOnLoad(function(){
-        // we don't want to break the Code Glass widget here
-        var bad = "{script}alert('Let\' break stuff!');{/script}";
-        // let's reconstitute the original bad string
-        bad = bad.replace(/\{/g, "<").replace(/\}/g, ">");
-        // now the replacement
-        dojo.byId("output").innerHTML = safeReplace("<div>{0}</div", [bad]);
+        dojo.byId("output").innerHTML = format(
+          "{pi} {pi:f} {pi:f:5}<br>{big} {big:e} {big:e:5}",
+          {pi: Math.PI, big: 1234567890}
+        );
       });
     </script>
 
