@@ -6,6 +6,7 @@ dojo.replace
 :Status: Draft
 :Version: 1.4
 :Available: since V1.4
+:Author: Eugene Lazutkin
 
 .. contents::
     :depth: 2
@@ -335,17 +336,17 @@ Let's escape substituted text for HTML to prevent possible exploits. Dijit templ
 
   function safeReplace(tmpl, dict){
     // convert dict to a function, if needed
-    dict = dojo.isFunction(dict) ? dict : function(_, name){
+    var fn = dojo.isFunction(dict) ? dict : function(_, name){
       return dojo.getObject(name, false, dict);
     };
     // perform the substitution
     return dojo.replace(tmpl, function(_, name){
       if(name.charAt(0) == '!'){
         // no escaping
-        return dict(_, name.slice(1));
+        return fn(_, name.slice(1));
       }
       // escape
-      return dict(_, name).
+      return fn(_, name).
         replace(/&/g, "&amp;").
         replace(/</g, "&lt;").
         replace(/>/g, "&gt;").
@@ -412,3 +413,91 @@ Formatting substitutions
 ------------------------
 
 Let's add a simple formatting to substituted fields.
+
+.. code-block :: javascript
+  :linenos:
+
+  function format(tmpl, dict, formatters){
+    // convert dict to a function, if needed
+    var fn = dojo.isFunction(dict) ? dict : function(_, name){
+      return dojo.getObject(name, false, dict);
+    };
+    // perform the substitution
+    return dojo.replace(tmpl, function(_, name){
+      var parts = name.split(":"),
+          value = fn(_, parts[0]);
+      if(parts.length > 1){
+        value = formatters[parts[1]](value, parts.slice(2));
+      }
+      return value;
+    });
+  }
+  // simple numeric formatters
+  var fmts = {
+    f: function(value, opts){
+      // return formatted as a fixed number
+      var precision = opts && opts.length && opts[0];
+      return Number(value).toFixed(precision);
+    },
+    e: function(value, opts){
+      // return formatted as an exponential number
+      var precision = opts && opts.length && opts[0];
+      return Number(value).toExponential(precision);
+    }
+  };
+  // that is how we use it:
+  var output = format(
+    "{pi} {pi:f} {pi:f:5} {big} {big:e} {big:e:5}",
+    {pi: Math.PI, big: 1234567890}
+  );
+
+You can check the result here:
+
+.. code-example::
+  :toolbar: none
+  :width:  600
+  :height: 400
+  :version: local
+  :djConfig: parseOnLoad: false
+
+  Highlighting replaced fields.
+
+  .. javascript::
+    :label: Object example
+
+    <script>
+      function safeReplace(tmpl, dict){
+        // convert dict to a function, if needed
+        var fn  = dojo.isFunction(dict) ? dict : function(_, name){
+          return dojo.getObject(name, false, dict);
+        };
+        // perform the substitution
+        return dojo.replace(tmpl, function(_, name){
+          if(name.charAt(0) == '!'){
+            // no escaping
+            return fn(_, name.slice(1));
+          }
+          // escape
+          return fn(_, name).
+            replace(/&/g, "&amp;").
+            replace(/</g, "&lt;").
+            replace(/>/g, "&gt;").
+            replace(/"/g, "&quot;");
+        });
+      }
+      dojo.addOnLoad(function(){
+        // we don't want to break the Code Glass widget here
+        var bad = "{script}alert('Let\' break stuff!');{/script}";
+        // let's reconstitute the original bad string
+        bad = bad.replace(/\{/g, "<").replace(/\}/g, ">");
+        // now the replacement
+        dojo.byId("output").innerHTML = safeReplace("<div>{0}</div", [bad]);
+      });
+    </script>
+
+  Minimalistic HTML for our example.
+
+  .. html::
+    :label: Minimal HTML.
+
+    <p id="output"></p>
