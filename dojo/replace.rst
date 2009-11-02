@@ -205,3 +205,44 @@ This code in action:
     :label: Minimal HTML.
 
     <p id="output"></p>
+
+In some cases you may want to use different braces, e.g., because your interpolated strings contain patterns similar to "{abc}", but they should not be evaluated and replaced, or your server-side framework already uses these patterns for something else. In this case you should replace the pattern:
+
+.. code-block :: javascript
+  :linenos:
+
+  dojo.replace("Hello, %[0] %[2] AKA %[3]!",
+    ["Robert", "X", "Cringely", "Bob"],
+    /%\[([^\]+)]\]/g
+  );
+
+This code in action:
+
+.. code-example::
+  :toolbar: none
+  :width:  600
+  :height: 400
+  :version: local
+  :djConfig: parseOnLoad: false
+
+  A complex object can be used with dojo.replace.
+
+  .. javascript::
+    :label: Object example
+
+    <script>
+      dojo.addOnLoad(function(){
+        dojo.byId("output").innerHTML = dojo.replace(
+          "Hello, %[0] %[2] AKA %[3]!",
+          ["Robert", "X", "Cringely", "Bob"],
+          /%\[([^\]+)]\]/g
+        );
+      });
+    </script>
+
+  Minimalistic HTML for our example.
+
+  .. html::
+    :label: Minimal HTML.
+
+    <p id="output"></p>
