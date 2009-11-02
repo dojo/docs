@@ -37,3 +37,37 @@ If the second argument is an object, all names within braces are interpreted as 
       nick: "Bob"
     }
   );
+
+.. code-example::
+  :type: inline
+
+  .. javascript::
+
+  dojo.addOnLoad(function(){
+    dojo.byId("output").innerHTML = dojo.replace(
+      "Hello, {name.first} {name.last} AKA {nick}!",
+      {
+        name: {
+          first:  "Robert",
+          middle: "X",
+          last:   "Cringely"
+        },
+        nick: "Bob"
+      }
+    );
+  });
+
+  .. html::
+
+  <p id="output"></p>
+
+In most cases you may prefer an array notation effectively simulating the venerable ``printf``:
+
+.. code-block :: javascript
+  :linenos:
+
+  dojo.replace("Hello, {0} {2} AKA {3}!",
+    ["Robert", "X", "Cringely", "Bob"]
+  );
+
+Note that you don't need to use all properties of an object.
