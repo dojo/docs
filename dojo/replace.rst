@@ -158,6 +158,8 @@ Let's take a look at example:
     )
   );
 
+As you can see in this example we are calculating values lazily on demand from a potentially dynamic source.
+
 This code in action:
 
 .. code-example::
