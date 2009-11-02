@@ -340,7 +340,7 @@ Let's escape substituted text for HTML to prevent possible exploits. Dijit templ
     };
     // perform the substitution
     return dojo.replace(tmpl, function(_, name){
-      if(name.charAt(0) != '!'){
+      if(name.charAt(0) == '!'){
         // no escaping
         return dict(_, name.slice(1));
       }
@@ -356,6 +356,54 @@ Let's escape substituted text for HTML to prevent possible exploits. Dijit templ
   var output = safeReplace("<div>{0}</div",
     ["<script>alert('Let\' break stuff!');</script>"]
   );
+
+You can check the result here:
+
+.. code-example::
+  :toolbar: none
+  :width:  600
+  :height: 400
+  :version: local
+  :djConfig: parseOnLoad: false
+
+  Highlighting replaced fields.
+
+  .. javascript::
+    :label: Object example
+
+    <script>
+      function safeReplace(tmpl, dict){
+        // convert dict to a function, if needed
+        dict = dojo.isFunction(dict) ? dict : function(_, name){
+          return dojo.getObject(name, false, dict);
+        };
+        // perform the substitution
+        return dojo.replace(tmpl, function(_, name){
+          if(name.charAt(0) == '!'){
+            // no escaping
+            return dict(_, name.slice(1));
+          }
+          // escape
+          return dict(_, name).
+            replace(/&/g, "&amp;").
+            replace(/</g, "&lt;").
+            replace(/>/g, "&gt;").
+            replace(/"/g, "&quot;");
+        });
+      }
+      dojo.addOnLoad(function(){
+        dojo.byId("output").innerHTML = safeReplace("<div>{0}</div",
+          ["<script>alert('Let\' break stuff!');</script>"]
+        );
+      });
+    </script>
+
+  Minimalistic HTML for our example.
+
+  .. html::
+    :label: Minimal HTML.
+
+    <p id="output"></p>
 
 Formatting substitutions
 ------------------------
