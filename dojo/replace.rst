@@ -20,8 +20,11 @@ Basic Usage
 dojo.replace accepts 3 arguments:
 
 * String template to be interpolated.
-* Object or a function to bu used for substitutions.
+* Object or a function to be used for substitutions.
 * Optional regular expression pattern to look for. By default all patterns "{abc}" are going to be found and replaced.
+
+With dictionary
+---------------
 
 If the second argument is an object, all names within braces are interpreted as property names within this object. All "." will be interpreted as subobjects. This default behavior provides a great flexibility.
 
@@ -79,6 +82,9 @@ You can see this code in action:
 
     <p id="output"></p>
 
+With array
+----------
+
 In most cases you may prefer an array notation effectively simulating the venerable ``printf``:
 
 .. code-block :: javascript
@@ -124,6 +130,9 @@ You don't need to use all properties of an object, you can list them in any orde
 ==============
 Advanced Usage
 ==============
+
+With function
+-------------
 
 For ultimate flexibility you can use `dojo.replace`_ with a function as the second argument. The function is going to be called with 4 arguments:
 
@@ -212,6 +221,9 @@ This code in action:
 
     <p id="output"></p>
 
+With custom pattern
+-------------------
+
 In some cases you may want to use different braces, e.g., because your interpolated strings contain patterns similar to "{abc}", but they should not be evaluated and replaced, or your server-side framework already uses these patterns for something else. In this case you should replace the pattern:
 
 .. code-block :: javascript
@@ -253,6 +265,11 @@ This code in action:
     :label: Minimal HTML.
 
     <p id="output"></p>
+
+It is advised for the new pattern to be:
+
+* Global
+* It should capture one substring, usually some text inside "braces".
 
 ========
 Examples
