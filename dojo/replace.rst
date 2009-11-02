@@ -45,6 +45,8 @@ If the second argument is an object, all names within braces are interpreted as 
   :height: 300
   :version: local
 
+  A complex object can be used with dojo.replace.
+
   .. javascript::
     :label: Object example
 
@@ -61,6 +63,8 @@ If the second argument is an object, all names within braces are interpreted as 
         }
       );
     });
+
+  Minimalistic HTML for our example.
 
   .. html::
     :label: Minimal HTML.
