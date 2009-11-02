@@ -6,14 +6,23 @@ dijit.Toolbar
 .. contents::
     :depth: 2
 
-:Status: Draft
-:Version: 1.2
-:Authors: Bill Keese
+:Project owner: Bill Keese
+:Available: since V?
+
+============
+Introduction
+============
 
 Just as dijit.Menu is a container for dijit.MenuItem's, so dijit.Toolbar is a container for buttons. Any button-based Dijit component can be placed on the toolbar, including ComboButtons and DropdownButtons.
 
-Programatic Toolbar
--------------------
+
+========
+Examples
+========
+
+Programmatic example
+--------------------
+
 In this example, we borrow some of the toolbar buttons from the Editor.
 
 .. cv-compound::
@@ -47,8 +56,9 @@ In this example, we borrow some of the toolbar buttons from the Editor.
 
 Note that iconClass is a CSS class that's been defined by the theme, see `Themes <dijit-themes>`_ for details.
 
-Markup
-------
+Declarative example
+-------------------
+
 Creation from markup is even easier.
 
 .. cv-compound::
@@ -77,8 +87,10 @@ Creation from markup is even easier.
    </div>
 
 
+==========
 Drop Downs
 ==========
+
 By using `dijit.form.DropDownButton <dijit/form/DropDownButton>`_ and `dijit.form.ComboButton <dijit/form/ComboButton>`_ you can make a toolbar with drop downs.
 
 .. cv-compound::
@@ -112,6 +124,8 @@ By using `dijit.form.DropDownButton <dijit/form/DropDownButton>`_ and `dijit.for
 
 (The icons are no good but hopefully convey the idea.)
 
+
+=============
 Accessibility
 =============
 
@@ -130,6 +144,9 @@ Known Issues
 ------------
 In hign contrast mode when a toggle button is checked an html entity charcter (✓) is displayed since the CSS background image icon for the checked state is no longer visible. When the toggle button is part of a toolbar the checkmark character does not display properly in IE6. In IE6 with high contrast mode turned on, a checked toggle button in a toolbar displays as two vertical bars rather than the checkmark character.
 
-See Also
+
 ========
- * `dijit.MenuBar <dijit/MenuBar>`_
+See also
+========
+
+* `dijit.MenuBar <dijit/MenuBar>`_
