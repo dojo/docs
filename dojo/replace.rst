@@ -44,6 +44,7 @@ If the second argument is an object, all names within braces are interpreted as 
   :width: 500
   :height: 300
   :version: local
+  :djConfig: parseOnLoad: false
 
   A complex object can be used with dojo.replace.
 
