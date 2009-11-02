@@ -235,7 +235,7 @@ This code in action:
         dojo.byId("output").innerHTML = dojo.replace(
           "Hello, %[0] %[2] AKA %[3]!",
           ["Robert", "X", "Cringely", "Bob"],
-          /%\[([^\]+)]\]/g
+          /\%\[([^\]+)]\]/g
         );
       });
     </script>
