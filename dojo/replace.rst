@@ -44,7 +44,7 @@ You can see this code in action:
 .. code-example::
   :toolbar: none
   :width:  600
-  :height: 200
+  :height: 400
   :version: local
   :djConfig: parseOnLoad: false
 
