@@ -380,6 +380,8 @@ Note that ``-> B -> A`` are folded into our superclass ``D`` and are not instant
 Technical information
 =====================
 
+This information describes the major revision of ``dojo.declare`` made in 1.4.
+
 Inheritance
 -----------
 
@@ -398,6 +400,8 @@ As you can see ``D`` requires that ``B`` should go before ``A``, and ``C`` requi
 
 Chaining
 --------
+
+New in 1.4.
 
 By default only constructors are chained automatically. In some cases user may want to chain other methods too, e.g., life-cycle methods, which govern how instances are created, modified, and destroy, or methods called for various events. Good example is ``destroy()`` method, which destroys external objects and references and can be used by all base classes of an object.
 
@@ -484,18 +488,20 @@ By default all constructors are chained using **after** algorithm (using `AOP <h
   // B
   // C
 
-The exact algorithm of an instance initialization is very complex:
+The exact algorithm of an instance initialization for chained constructors:
 
 #. If the first argument of the constructor is an object and it has ``preamble()`` property, it is called with ``arguments`` pseudo-array in ``this`` context. If it returns a *truthy* value it will be used as a new set of arguments for all superclass constructors. **Please don't use this feature! It is error-prone, slows down the initialization, and it is deprecated since 1.4!**
 #. If the class has its own ``preamble()`` method, it is called with ``arguments`` pseudo-array in ``this`` context. If it returns a *truthy* value it will be used as a new set of arguments for all superclass constructors. **Please don't use this feature! It is error-prone, slows down the initialization, and it is deprecated since 1.4!**
 #. Superclass constructors are called recursively with original arguments, which could be overridden or modified by two passes of ``preamble()`` described above.
 #. The class own constructor is called with original arguments (unless they were modified indirectly by ``preamble()`` or superclass constructors).
-#. When all constructors are finished, and the instance is properly initialized, ``postscript()`` method is called with original arguments of the top-most constructor (unless they were modified indirectly by ``preamble()`` or superclass constructors).
+#. When all constructors are finished, and the instance is initialized, ``postscript()`` method is called with original arguments of the top-most constructor (unless they were modified indirectly by ``preamble()`` or superclass constructors).
 
-A good practice for constructors is to avoid modifications of its arguments. It ensures that other classes can access original values, and allows to play nice when the class is used as a building block for other classes.
+A good practice for constructors is to avoid modifications of its arguments. It ensures that other classes can access original values, and allows to play nice when the class is used as a building block for other classes. If you do need to modify arguments of superclass constructors consider `Manual constructor chaining`_ as a better alternative to ``preamble()``.
 
 Manual constructor chaining
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+New in 1.4.
 
 In some cases users may want to redefine how initialization works. In this case the chaining should be turned off so ``this.inherited()`` can be used instead.
 
@@ -529,6 +535,16 @@ In some cases users may want to redefine how initialization works. In this case 
   // C - 2
 
 The example above doesn't call the constructor of ``A`` at all, and runs some code before and after calling the constructor of ``B``.
+
+The exact algorithm of an instance initialization for manual constructors:
+
+#. The top-most constructor is called with original arguments. It is up to this constructor to call a superclass constructor using ``this.inherited()``. While doing so it can substitute arguments.
+#. When the instance is initialized, ``postscript()`` method is called with original arguments of the top-most constructor (unless they were modified indirectly by superclass constructors).
+
+Notes:
+
+* Prefer manual constructors to deprecated ``preamble()``.
+* As soon as you switch to manual constructors **all** constructors in your hierarchy would be called manually. Make sure that all constructors are wired for that.
 
 ========
 See Also
