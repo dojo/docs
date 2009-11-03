@@ -396,8 +396,71 @@ Since 1.4 ``dojo.declare`` uses `C3 superclass linearization <http://www.python.
 
 As you can see ``D`` requires that ``B`` should go before ``A``, and ``C`` requires that ``A`` go before ``B``. It makes an inheritance chain for ``E`` impossible because these contradictory requirements cannot be satisfied. Obviously any other circular dependencies cannot be satisfied either. But any `DAG <http://en.wikipedia.org/wiki/Directed_acyclic_graph>`_ inheritance will be linearized correctly including the famous `Diamond problem <http://en.wikipedia.org/wiki/Diamond_problem>`_.
 
+Chaining
+--------
+
+By default only constructors are chained automatically. In some cases user may want to chain other methods too, e.g., life-cycle methods, which govern how instances are created, modified, and destroy, or methods called for various events. Good example is ``destroy()`` method, which destroys external objects and references and can be used by all base classes of an object.
+
+While ``this.inherited(arguments)`` takes care of all scenarios, chaining has following benefits:
+
+* It is much faster than using ``this.inherited(arguments)``. On some browsers the difference can be more than an order of magnitude for simple methods.
+* It is automatic. User cannot forget to call a superclass method.
+* Less code to write, less code to worry about.
+
+Chained methods cannot be functions: all returned values are going to be ignored. They all be called with the same arguments. A good practice is to avoid modifications to the arguments. It will ensure that your classes play nice with others when used as superclasses.
+
+There are two ways to chain methods: **after** and **before** (`AOP <http://en.wikipedia.org/wiki/Aspect-oriented_programming>`_ terminology is used). **after** means that a method is called after its superclass' method. **before** means that a method is called before calling its superclass method. All chains are described in a special property named ``-chains-``:
+
+.. code-block :: javascript
+  :linenos:
+
+  var A = dojo.declare(null, {
+    "-chains-": {
+      init:    "after",
+      destroy: "before"
+    },
+    init: function(token){
+      this.initialized = true;
+      this.token = token;
+      this.node = dojo.create("div", null, dojo.body());
+      console.log("A.init");
+    },
+    destroy: function(){
+      dojo.destroy(this.node);
+      this.node = null;
+      console.log("A.destroy");
+    }
+  });
+  var B = dojo.declare(A, {
+    init: function(token){
+      console.log("B.init");
+      // more code
+    },
+    destroy: function(){
+      console.log("B.destroy");
+      // more code
+    }
+  });
+  
+  var x = new B();
+  x.init(42);
+  x.destroy();
+  
+  // prints:
+  // A.init
+  // B.init
+  // B.destroy
+  // A.destroy
+
+Chain declarations are inherited. Chaining for individual methods can be overridden in child classes, but not advised.
+
+There is a special case: chain declaration for ``constructor``. This method supports two chaining directives: **after**, and **manual**. See more details in Constructors_.
+
 Constructors
 ------------
+
+Default constructor chaining
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 By default all constructors are chained using *after* algorithm (using `AOP <http://en.wikipedia.org/wiki/Aspect-oriented_programming>`_ terminology). It means that after the linearization for any given class its constructor is going to be called *after* its superclass constructors:
 
@@ -405,13 +468,13 @@ By default all constructors are chained using *after* algorithm (using `AOP <htt
   :linenos:
 
   var A = dojo.declare(null,
-    constructor: function{ console.log("A"); }
+    constructor: function(){ console.log("A"); }
   };
   var B = dojo.declare(A,
-    constructor: function{ console.log("B"); }
+    constructor: function(){ console.log("B"); }
   };
   var C = dojo.declare(B,
-    constructor: function{ console.log("C"); }
+    constructor: function(){ console.log("C"); }
   };
   new C();
   // prints:
@@ -419,7 +482,18 @@ By default all constructors are chained using *after* algorithm (using `AOP <htt
   // B
   // C
 
+The exact algorithm of an instance initialization is very complex:
 
+#. If the first argument of the constructor is an object and it has ``preamble()`` property, it is called with ``arguments`` pseudo-array in ``this`` context. If it returns a *truthy* value it will be used as a new set of arguments for all superclass constructors. **Please don't use this feature! It is error-prone, slows down the initialization, and it is deprecated since 1.4!**
+#. If the class has its own ``preamble()`` method, it is called with ``arguments`` pseudo-array in ``this`` context. If it returns a *truthy* value it will be used as a new set of arguments for all superclass constructors. **Please don't use this feature! It is error-prone, slows down the initialization, and it is deprecated since 1.4!**
+#. Superclass constructors are called recursively with original arguments, which could be overridden or modified by two passes of ``preamble()`` described above.
+#. The class own constructor is called with original arguments (unless they were modified indirectly by ``preamble()`` or superclass constructors).
+#. When all constructors are finished, and the instance is properly initialized, ``postscript()`` method is called with original arguments of the top-most constructor (unless they were modified indirectly by ``preamble()`` or superclass constructors).
+
+A good practice for constructors is to avoid modifications of its arguments. It ensures that other classes can access original values, and allows to play nice when the class is used as a building block for other classes.
+
+Manual constructor chaining
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ========
 See Also
