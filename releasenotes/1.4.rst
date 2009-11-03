@@ -186,49 +186,52 @@ dijit.Tree
 * onLoad() event when tree is fully loaded
 * autoExpand=true flag to initially expand all nodes in the tree
 * ability to add a CSS class to the root node of a tree item.
+* See also `dijit.Tree <dijit/Tree>`_
 
 dijit.Editor
 ~~~~~~~~~~~~
 
-The RTE has had numerous bug fixes applied to it as well as some code cleanup to make it more extensible and better behaving on browsers such as Opera. It also had several new plugin modules added to dijit, as well as several new ones added to DojoX. For information on the DojoX modules, see the DojoX section of these release notes.
+* The RTE has had numerous bug fixes applied to it as well as some code cleanup to make it more extensible and better behaving on browsers such as Opera. It also had several new plugin modules added to dijit, as well as several new ones added to DojoX. For information on the DojoX modules, see the DojoX section of these release notes.
 
-**Updated Plugins**
+  * **Updated Plugins**
 
-* `LinkDialog <dijit/_editor/plugins/LinkDialog>`_:  The plugin that provides the dialog support for insert image and insert link have been considerably updated. Input is better validated, invalid values will disable set, and it will auto-append http:// if it believes you have typed only part of a url.
+    * `LinkDialog <dijit/_editor/plugins/LinkDialog>`_:  The plugin that provides the dialog support for insert image and insert link have been considerably updated. Input is better validated, invalid values will disable set, and it will auto-append http:// if it believes you have typed only part of a url.
 
-**New Plugins**
+  * **New Plugins**
 
-* `FullScreen <dijit/_editor/plugins/FullScreen>`_:  A plugin that adds the capability to the editor to take over the complete viewport containing the page running the editor.
+    * `FullScreen <dijit/_editor/plugins/FullScreen>`_:  A plugin that adds the capability to the editor to take over the complete viewport containing the page running the editor.
+    * `ViewSource <dijit/_editor/plugins/ViewSource>`_:  A plugin that lets you toggle the editor view between HTML source and RTE modes.
+    * `Print <dijit/_editor/plugins/Print>`_:  A plugin that lets you print the contents of the editor frame.
+    * `NewPage <dijit/_editor/plugins/NewPage>`_:  A plugin that lets you clear the content of the editor and set a new default content with a button click.
 
-* `ViewSource <dijit/_editor/plugins/ViewSource>`_:  A plugin that lets you toggle the editor view between HTML source and RTE modes.
-
-* `Print <dijit/_editor/plugins/Print>`_:  A plugin that lets you print the contents of the editor frame.
-
-* `NewPage <dijit/_editor/plugins/NewPage>`_:  A plugin that lets you clear the content of the editor and set a new default content with a button click.
-
-In addition to the new plugins, the editor icons have all been updated!  They are much cleaner and professional.
+* In addition to the new plugins, the editor icons have all been updated! They are much cleaner and professional.
+* See also `dijit.Editor <dijit/Editor>`_
 
 dijit.Dialog
 ~~~~~~~~~~~~
 
 * Multiple dialogs can now be shown (with one dialog launching over another).
 * Dialog supports aria-describedby to make it more accessible to screen readers.
+* See also `dijit.Dialog <dijit/Dialog>`_
 
 dijit.Menu
 ~~~~~~~~~~
 
 * Sliding the mouse diagonally from a vertical menu to a second vertical menu will no longer close the second menu if the mouse temporarily moves off of both menus. (This happens when the MenuItem in the second menu is below the bottom of the first Menu.) ( (`#6773 <http://bugs.dojotoolkit.org/ticket/6773>`_)
+* See also `dijit.Menu <dijit/Menu>`_
 
 dijit.TitlePane
 ~~~~~~~~~~~~~~~
 
 * toggleable attribute to control whether or not user can close the TitlePane. Useful for non-closable TitlePane's in a app that match the styling of the other TitlePanes (and other dijit components)
 * tooltip attribute to control tooltip on title bar
+* See also `dijit.TitlePane <dijit/TitlePane>`_
 
 dijit.Tooltip
 ~~~~~~~~~~~~~
 
 * addTarget()/removeTarget() methods to dynamically attach/detach the tooltip from various nodes.
+* See also `dijit.Tooltip <dijit/Tooltip>`_
 
 dijit.Calendar
 ~~~~~~~~~~~~~~
@@ -247,6 +250,7 @@ dijit.layout.TabContainer / dijit.layout.AccordionContainer
 * tab labels / pane titles can be changed via pane.attr('title', ...)
 * icons added, controlled via iconClass parameter (like for Buttons and MenuItems). To display only icons set showTitle=false.
 * tooltip attribute controls tooltip on tab labels or accordion pane titles
+* See also `dijit.layout.TabContainer <dijit/layout/TabContainer>`_
 
 dijit.layout.ContentPane
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -254,6 +258,7 @@ dijit.layout.ContentPane
 * ContentPane now acts as a full layout widget, calling resize() on it's child widgets when (not before) it is made visible, avoiding problems with children being initialized while hidden.
 * Consequently ContentPane now defines isLayoutContainer to true
 * Fixes related to resizing and href loading, including avoiding premature href loading for ContentPanes in nested TabContainers
+* See also `dijit.layout.ContentPane <dijit/layout/ContentPane>`_
 
 dijit.form
 ----------
