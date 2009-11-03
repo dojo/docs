@@ -378,7 +378,22 @@ Technical information
 Inheritance
 -----------
 
-``dojo.declare`` uses `C3 superclass linearization <http://www.python.org/download/releases/2.3/mro/>`_ to convert multiple inheritance to a linear list of superclasses.
+``dojo.declare`` uses `C3 superclass linearization <http://www.python.org/download/releases/2.3/mro/>`_ to convert multiple inheritance to a linear list of superclasses. While it solves most thorny problems of inheritance, some configurations are impossible:
+
+.. code-block :: javascript
+
+  var A = dojo.declare(null);
+  var B = dojo.declare(null);
+  var C = dojo.declare([A, B]);
+  var D = dojo.declare([B, A]);
+  var E = dojo.declare([C, D]);
+
+As you can see ``D`` requires that ``B`` should go before ``A``, and ``C`` requires that ``A`` go before ``B``. It makes an inheritance chain for ``E`` impossible because these contradictory requirements cannot be satisfied. Obviously any other circular dependencies cannot be satisfied either. But any `DAG <http://en.wikipedia.org/wiki/Directed_acyclic_graph>`_ inheritance will be linearized correctly including the famous `Diamond problem <http://en.wikipedia.org/wiki/Diamond_problem>`_.
+
+Constructors
+------------
+
+
 
 ========
 See Also
