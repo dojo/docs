@@ -496,7 +496,12 @@ The exact algorithm of an instance initialization for chained constructors:
 #. The class own constructor is called with original arguments (unless they were modified indirectly by ``preamble()`` or superclass constructors).
 #. When all constructors are finished, and the instance is initialized, ``postscript()`` method is called with original arguments of the top-most constructor (unless they were modified indirectly by ``preamble()`` or superclass constructors).
 
-A good practice for constructors is to avoid modifications of its arguments. It ensures that other classes can access original values, and allows to play nice when the class is used as a building block for other classes. If you do need to modify arguments of superclass constructors consider `Manual constructor chaining`_ as a better alternative to ``preamble()``.
+Notes:
+
+* A good practice for constructors is to avoid modifications of its arguments. It ensures that other classes can access original values, and allows to play nice when the class is used as a building block for other classes.
+* If you do need to modify arguments of superclass constructors consider `Manual constructor chaining`_ as a better alternative to ``preamble()``.
+* If a class doesn't use ``preamble()`` it switches the initialization to a fast path making instantiation substantially faster.
+* For historical reasons ``preamble()`` is called for classes without a constructor and even for the last class in the superclass list, which doesn't have a superclass.
 
 Manual constructor chaining
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -545,6 +550,16 @@ Notes:
 
 * Prefer manual constructors to deprecated ``preamble()``.
 * As soon as you switch to manual constructors **all** constructors in your hierarchy would be called manually. Make sure that all constructors are wired for that.
+* Chaining works faster than simulating it with ``this.inherited()``. Know when to use it.
+
+Constructor methods
+-------------------
+
+Class methods
+-------------
+
+Instance methods
+----------------
 
 ========
 See Also
