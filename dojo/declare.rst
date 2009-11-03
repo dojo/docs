@@ -248,7 +248,7 @@ Often when you're overriding a method, you want to *add* something to the superc
 
 But you don't have to worry in the constructor. As we said above, superclass constructors are *always* called automatically, and *always* before the subclass constructor. This convention reduces boilerplate in 90% of cases. If it doesn't fit your needs see `Advanced techniques`_ below.
 
-For all other methods, you can use ``this.inherited(arguments)`` to call the superclass method of the same name.  Take for example:
+For all other methods, you can use ``this.inherited()`` to call the superclass method of the same name.  Take for example:
 
 .. code-block :: javascript
   :linenos:
@@ -401,9 +401,9 @@ Chaining
 
 By default only constructors are chained automatically. In some cases user may want to chain other methods too, e.g., life-cycle methods, which govern how instances are created, modified, and destroy, or methods called for various events. Good example is ``destroy()`` method, which destroys external objects and references and can be used by all base classes of an object.
 
-While ``this.inherited(arguments)`` takes care of all scenarios, chaining has following benefits:
+While ``this.inherited()`` takes care of all scenarios, chaining has following benefits:
 
-* It is much faster than using ``this.inherited(arguments)``. On some browsers the difference can be more than an order of magnitude for simple methods.
+* It is much faster than using ``this.inherited()``. On some browsers the difference can be more than an order of magnitude for simple methods.
 * It is automatic. User cannot forget to call a superclass method.
 * Less code to write, less code to worry about.
 
@@ -459,10 +459,12 @@ There is a special case: chain declaration for ``constructor``. This method supp
 Constructors
 ------------
 
+Constructor invocations are governed by Chaining_.
+
 Default constructor chaining
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-By default all constructors are chained using *after* algorithm (using `AOP <http://en.wikipedia.org/wiki/Aspect-oriented_programming>`_ terminology). It means that after the linearization for any given class its constructor is going to be called *after* its superclass constructors:
+By default all constructors are chained using **after** algorithm (using `AOP <http://en.wikipedia.org/wiki/Aspect-oriented_programming>`_ terminology). It means that after the linearization for any given class its constructor is going to be called *after* its superclass constructors:
 
 .. code-block :: javascript
   :linenos:
@@ -494,6 +496,39 @@ A good practice for constructors is to avoid modifications of its arguments. It 
 
 Manual constructor chaining
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In some cases users may want to redefine how initialization works. In this case the chaining should be turned off so ``this.inherited()`` can be used instead.
+
+.. code-block :: javascript
+  :linenos:
+
+  var A = dojo.declare(null,
+    constructor: function(){
+      console.log("A");
+    }
+  };
+  var B = dojo.declare(A,
+    "-chains-": {
+      constructor: "manual"
+    },
+    constructor: function(){
+      console.log("B");
+    }
+  };
+  var C = dojo.declare(B,
+    constructor: function(){
+      console.log("C - 1");
+      this.inherited(arguments);
+      console.log("C - 2");
+    }
+  };
+  var x = new C();
+  // prints:
+  // C - 1
+  // B
+  // C - 2
+
+The example above doesn't call the constructor of ``A`` at all, and runs some code before and after calling the constructor of ``B``.
 
 ========
 See Also
