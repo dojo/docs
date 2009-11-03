@@ -17,7 +17,7 @@ Introduction
 
 String utilities for the Dojo toolkit include trim, pad, rep, and substitute.  This common functionality is used often in applications, so performance was carefully considered when implementing these methods.
 
-trim() trims whitespace off both ends of a string using an efficient regular expression.  It now passes through to native String.prototype.trim defined by EcmaScript-5, if one is provided.
+trim() trims whitespace off both ends of a string using an efficient regular expression.  It now passes through to native String.prototype.trim defined by EcmaScript-5, if one is provided. See `dojo.string.trim <dojo/string/trim>`_ and `dojo.trim <dojo/trim>`_ for more details.
 
 pad() and rep() help construct strings.  pad() can extend a string to a certain length by padding at the front or end, using a character of your choice.  rep() simply constructs a string by replicating a sequence n times.
 
