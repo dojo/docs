@@ -42,7 +42,6 @@ You can see the result here:
   :toolbar: none
   :width:  600
   :height: 400
-  :version: local
   :djConfig: parseOnLoad: false
 
   Examples of dojo.trim().
