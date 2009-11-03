@@ -34,7 +34,7 @@ Examples:
   var output2 = show("two ");
   var output3 = show("   three ");
   var output4 = show("\tfour\r\n");
-  var output5 = show("\f\n\r\t\vfive\f\n\r\t\v");
+  var output5 = show("\f\n\r\t\vF I V E\f\n\r\t\v");
 
 You can see the result here:
 
@@ -58,7 +58,7 @@ You can see the result here:
         dojo.byId("output2").innerHTML = show("two ");
         dojo.byId("output3").innerHTML = show("   three ");
         dojo.byId("output4").innerHTML = show("\tfour\r\n");
-        dojo.byId("output5").innerHTML = show("\f\n\r\t\vfive\f\n\r\t\v");
+        dojo.byId("output5").innerHTML = show("\f\n\r\t\vF I V E\f\n\r\t\v");
       });
     </script>
 
