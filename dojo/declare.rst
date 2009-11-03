@@ -5,12 +5,12 @@ dojo.declare
 
 :Status: Draft
 :Version: 1.0
-:Available: since V0.?
+:Available: since V0.9
 
 .. contents::
     :depth: 2
 
-Javascript doesn't have a Class system like Java, though Dojo provides functionality to simulate this: dojo.declare. For some background on JavaScript and prototype-based object orientation, chapter 9 of David Flanagan's *JavaScript: The Definitive Guide, 5th edition* is a good read.  
+Javascript doesn't have a Class system like Java, though Dojo provides functionality to simulate this: dojo.declare. For some background on JavaScript and prototype-based object orientation, chapter 9 of David Flanagan's *JavaScript: The Definitive Guide, 5th edition* is a good read.
 
 This section has some pretty abstract stuff, and you may wish to skip it on the first read.  Certainly you can do a lot with Dojo without using dojo.declare or the other object orientation functions.  But a good knowledge of it will help you program faster and smarter.
 
@@ -19,89 +19,104 @@ This section has some pretty abstract stuff, and you may wish to skip it on the 
 Basic Usage
 ===========
 
-dojo.declare accepts three arguments. The first is the name of the Class to declare, and is a string representation of the name. The second is either an object or an array of objects, each mixed into your Class in order from left to right. The third is an object hash of properties to be mixed in after all other inheritance has been solved. 
+dojo.declare accepts up to three arguments. The first is the optional (since 1.4) global name of the Class to declare, and is a string representation of the name. If you don't specify it, the class is assumed to be anonymous. It is your responsibility to assign it to a variable. The second is either ``null`` (no base class), an object (a base class) or an array of objects (multiple inheritance). The third is an object hash of properties to be mixed in after all other inheritance has been solved.
 
 .. code-block :: javascript
-  :linenos:
-
-  dojo.declare("my.Thinger", null, { 
-      constructor: function(/* Object */args){
-          dojo.mixin(this, args);
-      }
-  });
-
-Here, we've declared a simple class named 'my.Thinger', mixing in 'null' Classes, and finally providing a single property named constructor. The constructor function is run once for each mixed Class. In this example, we've simply mixed the passed arguments into 'this', or our scoped reference to an instance of my.Thinger. You could then create a Thinger like so:
-
-.. code-block :: javascript
-  :linenos:
-
-  var thing = new my.Thinger({ count:100 }); 
-  console.log(thing.count); 
-
-The dojo.mixin call (in the constructor) then mixes the variable count into the properties of the instance, making it available as a member of the instance. We can supply defaults to use from within dojo.declare itself.
-
-.. code-block :: javascript 
   :linenos:
 
   dojo.declare("my.Thinger", null, {
-      count: 100,
-      constructor: function(args){
-         dojo.mixin(this, args);
-      }
-  }); 
-  var thing1 = new my.Thinger(); 
-  var thing2 = new my.Thinger({ count:200 }); 
+    constructor: function(/* Object */args){
+      dojo.mixin(this, args);
+    }
+  });
+
+Here, we've declared a simple class named ``my.Thinger``, not based on anything, and finally providing a single property named constructor. The constructor function is run once for each mixed Class. In this example, we've simply mixed the passed arguments into ``this``, or our scoped reference to an instance of my.Thinger. You could then create a Thinger like so:
+
+.. code-block :: javascript
+  :linenos:
+
+  var thing = new my.Thinger({ count:100 });
+  console.log(thing.count);
+
+The `dojo.mixin <dojo/mixin>`_ call (in the constructor) then mixes the variable count into the properties of the instance, making it available as a member of the instance. We can supply defaults to use from within ``dojo.declare`` itself.
+
+.. code-block :: javascript
+  :linenos:
+
+  dojo.declare("my.Thinger", null, {
+    count: 100,
+    constructor: function(args){
+      dojo.mixin(this, args);
+    }
+  });
+  var thing1 = new my.Thinger();
+  var thing2 = new my.Thinger({ count:200 });
   console.log(thing1.count, thing2.count);
 
+Now we have a 'base class', called my.Thinger.
 
-Now we have a 'base class', called my.Thinger. To show how the inheritance chain works, we will create a new class derrived from this base Class:
+If we don't want a globally accessible class we can easily make it local (since 1.4):
+
+.. code-block :: javascript
+  :linenos:
+
+  var localThinger = dojo.declare(null, {
+    count: 100,
+    constructor: function(args){
+      dojo.mixin(this, args);
+    }
+  });
+  var thing1 = new localThinger();
+  var thing2 = new localThinger({ count:200 });
+  console.log(thing1.count, thing2.count);
+
+To show how the inheritance chain works, we will create a new class derived from ``my.Thinger``:
 
 .. code-block :: javascript
   :linenos:
 
   dojo.declare("my.OtherThinger", [my.Thinger], {
-       divisor: 5,
-       constructor: function(args){
-         console.log('OtherThinger constructor called');
-         this.total = this.count / this.divisor;
-       }
+    divisor: 5,
+    constructor: function(args){
+      console.log('OtherThinger constructor called');
+      this.total = this.count / this.divisor;
+    }
   });
   var thing = new my.OtherThinger({ count:50 });
   console.log(thing.total); // 10
 
+First, the constructor of ``my.Thinger`` is called, mixing in the args parameter. Then, we're using the reserved word ``this`` to access instance properties, creating a new instance property ``total`` based on some simple code.
 
-First, the constructor of 'my.Thinger' is called, mixing in the args parameter. Then, we're using the reserved word 'this' to access instance variables, creating a new variable 'total' based on some simple code. 
-
-Above we passed an object hash exclusively as the parameter to our Class instantiation. The constructor is passed whichever arguments are passed during instantiation. 
+Above we passed an object hash exclusively as the parameter to our Class instantiation. The constructor is passed whichever arguments are passed during instantiation.
 
 .. code-block :: javascript
   :linenos:
 
   dojo.declare("Person", null, {
-	constructor: function(name, age, currentResidence){
-		this.name=name;
-		this.age=age;
-		this.currentResidence = currentResidence;
-	}
+    constructor: function(name, age, currentResidence){
+      this.name=name;
+      this.age=age;
+      this.currentResidence = currentResidence;
+    }
   });
   var folk = new Person("phiggins", 42, "Tennessee");
- 
-Each of the ordered parameters are passed (as seen by the constructor's function signature) and then manually added to 'this' by direct variable assignment. 
 
-Let's add some content to a new class by giving it a name and showing what the constructor can do. Following is a Person class with a constructor and a moveToNewState() function:
+Each of the ordered parameters are passed (as seen by the constructor's function signature) and then manually added to ``this`` by direct variable assignment.
+
+Let's add some content to a new class by giving it a name and showing what the constructor can do. Following is a Person class with a constructor and a ``moveToNewState()`` function:
 
 .. code-block :: javascript
   :linenos:
 
   dojo.declare("Person", null, {
-	constructor: function(name, age, currentResidence){
-		this.name = name;
-		this.age = age;
-		this.currentResidence = currentResidence;
-	},
-	moveToNewState: function(newState){
-		this.currentResidence = newState;
-	} 
+    constructor: function(name, age, currentResidence){
+      this.name = name;
+      this.age = age;
+      this.currentResidence = currentResidence;
+    },
+    moveToNewState: function(newState){
+      this.currentResidence = newState;
+    }
   });
   var folk = new Person("phiggins", 28, "Tennessee");
   console.log(folk.currentResidence);
@@ -109,10 +124,9 @@ Let's add some content to a new class by giving it a name and showing what the c
   console.log(folk.currentResidence);
 
 
-Note the use of anonymous functions here.  You are passing to dojo.declare an associative array of anonymous functions.  "That's not an anonymous function," you might say, "their names are constructor and moveToNewState!"  Strictly speaking, no they aren't.  They are anonymous functions with the *keys* constructor and moveToNewState.  
+Note the use of anonymous functions here.  You are passing to ``dojo.declare`` an associative array of anonymous functions.  "That's not an anonymous function," you might say, "their names are constructor and moveToNewState!"  Strictly speaking, no they aren't.  They are anonymous functions with the *keys* ``constructor`` and ``moveToNewState``.
 
-In pure JavaScript, this is handled by a prototype function named after the class - for example, Person.prototype.  Dojo wires in your constructor as a part of the prototype, but then adds extra goodies like calling the superclass constructor and initializing extra properties.
-
+In pure JavaScript, this is handled by a prototype function named after the class - for example, ``Person.prototype``.  Dojo wires in your constructor as a part of the prototype, but then adds extra goodies like calling the superclass constructor and initializing extra properties.
 
 ======================================
 Arrays and Objects as member variables
@@ -121,143 +135,174 @@ Arrays and Objects as member variables
 If your class contains arrays or other objects, they should be declared in the constructor so that each instance gets it's own copy. Simple types (literal strings and numbers) and are fine to declare in the class directly.
 
 
-.. code-block :: javascript 
+.. code-block :: javascript
   :linenos:
 
   dojo.declare("my.classes.bar", my.classes.foo, {
-	someData: [1, 2, 3, 4], // doesn't do what I want: ends up being static
-	numItem : 5, // one per bar
-	strItem : "string", // one per bar
+    someData: [1, 2, 3, 4], // doesn't do what I want: ends up being static
+    numItem : 5, // one per bar
+    strItem : "string", // one per bar
 
-	 constructor: function() {
-		this.someData = [ ]; // better, each bar has it's own array
-		this.expensiveResource = new expensiveResource(); // one per bar 
-	}
+    constructor: function() {
+      this.someData = [ ]; // better, each bar has it's own array
+      this.expensiveResource = new expensiveResource(); // one per bar
+    }
   });
 
-On the other hand, if you want an object or array to be static (shared between all instances of *my.classes.bar*), then you should do something like this: 
+On the other hand, if you want an object or array to be static (shared between all instances of *my.classes.bar*), then you should do something like this:
 
-.. code-block :: javascript 
+.. code-block :: javascript
   :linenos:
 
   dojo.declare("my.classes.bar", my.classes.foo, {
-	constructor: function() {
-		dojo.debug("this is bar object # " + this.statics.counter++);
-	},
+    constructor: function() {
+      dojo.debug("this is bar object # " + this.statics.counter++);
+    },
 
-	statics: { counter: 0, somethingElse: "hello" }
+    statics: { counter: 0, somethingElse: "hello" }
   });
 
 
-"Statics" is not a special dojo construct - you can use any name you want, like "constants".  In this example, you'd refer to the variable as myInstance.statics.counter both inside and outside the class definition.  
+``Statics`` is not a special dojo construct - you can use any name you want, like ``constants``.  In this example, you'd refer to the variable as ``myInstance.statics.counter`` both inside and outside the class definition.
 
-Why is this true for arrays and objects, but not primitives?  It's because, like most OOP languages, JavaScript uses object references. For example, given:
+Why is this true for arrays and objects, but not primitives? It's because, like most OOP languages, JavaScript uses object references. For example, given:
 
-.. code-block :: javascript 
+.. code-block :: javascript
 
   x = { fruit: "apple" };
   y = x;
 
 Now *x* and *y* both refer to the same object. Modifying *x.fruit* will also affect *y.fruit*.
 
+On the other hand, numbers, booleans, and strings are used as values. Any assignment updates a variable, rather than shared object.
 
 ===========
 Inheritance
 ===========
 
-A person can only do so much, so let's create an Employee class that extends the Person class.The second argument in the dojo.declare() function is for extending classes.
+A person can only do so much, so let's create an Employee class that extends the Person class. The second argument in the ``dojo.declare`` function is for extending classes.
 
 .. code-block :: javascript
   :linenos:
 
   dojo.declare("Employee", Person, {
-	constructor: function(name, age, currentResidence, position){
-                // remember, Person constructor is called automatically
-		this.password="";
-		this.position=position;
-	},
+    constructor: function(name, age, currentResidence, position){
+      // Remember, Person constructor is called automatically
+      // before this constructor.
+      this.password = "";
+      this.position = position;
+    },
 
-	login: function(){
-	    if(this.password){
-		alert('you have successfully logged in');
-	    }else{
-		alert('please ask the administrator for your password');
-	    }
-        }
+    login: function(){
+      if(this.password){
+        alert('you have successfully logged in');
+      }else{
+        alert('please ask the administrator for your password');
+      }
+    }
   });
 
-Dojo handles all of the requirements for setting up the inheritance chain, including calling the superclass constructor automatically. Methods or variables can be overridden by setting the name to the same as it is in the parent class. The Employee class can override the Person class moveToNewState(), perhaps by letting the company pay for moving expenses.
+Dojo handles all of the requirements for setting up the inheritance chain, including calling the superclass constructor automatically. Methods or variables can be overridden by setting the name to the same as it is in the parent class. The Employee class can override the Person class ``moveToNewState()``, perhaps by letting the company pay for moving expenses.
 
 You initialize the subclass the same as the Person class with the new keyword.
 
-.. code-block :: javascript 
+.. code-block :: javascript
 
-  var kathryn = new Employee(' Kathryn ', 26, 'Minnesota', 'Designer');
+  var kathryn = new Employee('Kathryn', 26, 'Minnesota', 'Designer');
+  var matt    = new Person('Matt', 33, 'California');
 
+The Employee class passes the arguments down to the Person class (which uses only the first three), and sets the position. Kathryn has access to the login() function found in the Employee class, and also the moveToNewState() function by calling kathryn.moveToNewState("Texas"); Matt on the other hand, does not have access to the Employee login() function.
 
-The Employee class passes the first three arguments down to the Person class, and sets the position.Kathryn has access to the login() function found in the Employee class, and also the moveToNewState() function by calling kathryn.moveToNewState("Texas"); Matt on the other hand, does not have access to the Employee login() function.
+Adding more arguments at the end of the argument list is a common idiom in Dojo. All arguments are passed to all constructors, but ancestor constructors take only first N arguments they know of ignoring the rest.
+
+Another popular idiom is to pass an object as one of the arguments using it is a property bag. Each class takes from the bag properties they can understand. Below is rewriting of our example to demonstrate this technique:
+
+.. code-block :: javascript
+  :linenos:
+
+  var Person2 = dojo.declare(null, {
+    constructor: function(args){
+      this.name = args.name;
+      this.age = args.age;
+      this.currentResidence = args.currentResidence;
+    }
+    // more methods
+  });
+
+  var Employee2 = dojo.declare(Person2, {
+    constructor: function(args){
+      // Remember, Person constructor is called automatically
+      // before this constructor.
+      this.password = "";
+      this.position = args.position;
+    }
+    // more methods
+  });
+
+Programmers familiar with Python will see Python's ``kwargs`` in this technique.
 
 Calling Superclass Methods
 --------------------------
 
 Often when you're overriding a method, you want to *add* something to the superclasses method, not totally replace it.  Dojo has helper functions to make this easy.
 
-But you don't have to worry in the constructor.  As we said above, superclass constructors are *always* called automatically, and *always* before the subclass constructor. This convention reduces boilerplate in 90% of cases.
+But you don't have to worry in the constructor. As we said above, superclass constructors are *always* called automatically, and *always* before the subclass constructor. This convention reduces boilerplate in 90% of cases. If it doesn't fit your needs see `Advanced techniques`_ below.
 
-For all other methods, you can use ``inherited(arguments)`` to call the superclass method of the same name.  Take for example:
+For all other methods, you can use ``this.inherited(arguments)`` to call the superclass method of the same name.  Take for example:
 
-.. code-block :: javascript 
+.. code-block :: javascript
   :linenos:
 
-    someMethod: function() {
-      // call base class someMethod
-      this.inherited(arguments);
-      // now do something else
-    }
+  someMethod: function() {
+    // call base class someMethod
+    this.inherited(arguments);
+    // now do something else
+  }
 
+Inherited will climb up the scope chain, from superclass to superclass, until it finds "someMethod", then it will invoke that method.
 
-Inherited will climb up the scope chain, from superclass to superclass and through mixin classes as well, until it finds "someMethod", then it will invoke that method.
-
-The argument is always literally ``arguments``, a special Javascript array variable which holds all the arguments (like argv in C).
+The argument is always literally ``arguments``, a special Javascript array-like variable which holds all the arguments (like argv in C).
 
 You can send custom parameters to the ancestor function.  Just place the extra arguments in array literal notation with brackets:
 
 .. code-block :: javascript
 
-  this.inherited(arguments, [ customArg1, customArg2 ])
+  this.inherited(arguments, [ customArg1, customArg2 ]);
+
+See `Advanced techniques`_ for more details.
 
 
-======
-Mixins
-======
+====================
+Multiple inheritance
+====================
 
-Just as Dojo adds class-based inheritance to JavaScript, so it adds support for *multiple inheritance*.  We do this through Dojo *mixins*.   The methods and properties of a mixed-in class are simply added to each instance. 
+Just as Dojo adds class-based inheritance to JavaScript, so it adds support for *multiple inheritance*. In order to do it ``dojo.declare`` uses C3 superclass linearization. This algorithm is what Python uses for its implementation of multiple inheritance. You can learn more details in `The Python 2.3 Method Resolution Order <http://www.python.org/download/releases/2.3/mro/>`_. Essentially the algorithm builds a single inheritance chain respecting all dependencies and removing duplicated base classes.
 
-In pure object-oriented languages like Java, you must use typecasts to make an object "act like" its mixed-in class (in Java, this is through interfaces).  Not in Dojo.  You can use the mixed-in properties directly.
+In pure object-oriented languages like Java, you must use typecasts to make an object "act like" its mixed-in class (in Java, this is through interfaces). Not in Dojo. You can use the mixed-in properties directly.
 
-Suppose, for example, you have a class called VanillaSoftServe, and classes MandMs and CookieDough.  Here's how to make a Blizzard:
+Suppose, for example, you have a class called ``VanillaSoftServe``, and classes ``MandMs`` and ``CookieDough``.  Here's how to make a ``Blizzard``:
 
-.. code-block :: javascript 
+.. code-block :: javascript
   :linenos:
 
-  dojo.declare("VanillaSoftServe",null, {
+  dojo.declare("VanillaSoftServe", null, {
     constructor: function() { console.debug ("mixing in Vanilla"); }
   });
 
-  dojo.declare("MandMs",null, {
+  dojo.declare("MandMs", null, {
     constructor: function() { console.debug("mixing in MandM's"); },
     kind: "plain"
   });
 
-  dojo.declare("CookieDough",null, {
+  dojo.declare("CookieDough", null, {
     chunkSize: "medium"
   });
 
   dojo.declare("Blizzard", [VanillaSoftServe, MandMs, CookieDough], {
         constructor: function() {
-             console.debug("A blizzard with "+
-                 this.kind+" M and Ms and "+
-                 this.chunkSize+" chunks of cookie dough."
+             console.debug("A blizzard with " +
+                 this.kind + " M and Ms and " +
+                 this.chunkSize +" chunks of cookie dough."
              );
         }
   });
@@ -265,42 +310,75 @@ Suppose, for example, you have a class called VanillaSoftServe, and classes Mand
   new Blizzard();
 
 
-This will first print "mixing in Vanilla" on the debug console because VanillaSoftServe is the superclass of Blizzard.  In fact, VanillaSoftServe is the *only* superclass of Blizzard - the first mixin is always the superclass. Next the constructors of the mixins are called, so "mixing in MandMs" will appear.  Then "A blizzard with plain M and Ms and medium chunks of cookie dough." will appear.
+This will first print "mixing in Vanilla" on the debug console because VanillaSoftServe is the superclass of Blizzard. In fact, VanillaSoftServe is the *only* superclass of Blizzard - the first class in the array of dependencies is used as a true super class (there are some exception, see `Advanced techniques`_ for more info). Next the constructors of other classes (the mixins) are called, so "mixing in MandMs" will appear.  Then "A blizzard with plain M and Ms and medium chunks of cookie dough." will appear.
 
 Mixins are used a lot in defining Dijit classes, with most classes extending ``dijit._Widget`` and mixing in ``dijit._Templated``.
 
-
-=======================
-Mixin inheritance chain
-=======================
+==================
+Inheritance chains
+==================
 
 Given:
 
-   dojo.declare("foo", [bar, zot, nim])
+.. code-block :: javascript
 
-Then the inheritance chain looks like this:
+   var A = dojo.declare(null);
+   var B = dojo.declare(null);
+   var C = dojo.declare(null);
+   var D = dojo.declare([A, B]);
+   var E = dojo.declare([B, C]);
+   var F = dojo.declare([A, C]);
+   var G = dojo.declare([D, E]);
+   var H = dojo.declare([D, F]);
+   var I = dojo.declare([D, E, F]);
+
+Let's explore inheritance chains. First three classes look trivial:
 
 .. code-block :: html
 
-   foo -> nim -> zot -> bar
+  A
+  B
+  C
 
-It specifically does not look like this:
+Next three classes look like that:
 
 .. code-block :: html
 
-   foo -> bar
-       -> zot
-       -> nim
+  D -> B -> A
+  E -> C -> B
+  F -> C -> A
 
-This can be confusing because of the nomenclature. "Mixins" sounds a lot
-like the latter, but it's really "multiple base classes with limitations".
-Sometimes we use the phrase "mixin classes" to describe it, but that's not
-ideal either.
+Notice that the inheritance chains are the same as the corresponding list of base classes, but reversed.
 
-Note also that "mixin classes" can have their own arbitrarily complex
-hierarchy. So the "inherits" can also walk a tree.
+Another useful bit of information: only the first base (the last in an inheritance chain) is a true superclass. The rest are duplicated to produce the inheritance chain we need. For example, B is not based on A, so we base a copy of it on A. What does it mean for us practically? We cannot use ``instanceof`` operator for mxins, only for base classes:
 
-The upshot of this is that, in general, every mixin method should be calling this.inherited(arguments).   Of course that's assuming it'll be mixed in where the superclass has a method in the base class with the same name.
+.. code-block :: javascript
+
+  console.log(D instanceof A); // true
+  console.log(D instanceof B); // false
+
+How to get around it? Use `isInstanceOf`_.
+
+Now on to more complex cases:
+
+.. code-block :: html
+
+  G -> C -> D(-> B -> A)
+  H -> C -> D(-> B -> A)
+  I -> C -> D(-> B -> A)
+
+As you can see the inheritance chain is the same for all three classes. Why? Because new mixins do not add new functionality. For example ``G`` brings ``E``, which is unraveled as ``E -> C -> B``, but we already have ``B`` in our hierarchy, so we can skip it to avoid double initialization, or calling the same methods twice. That is why ``B`` was removed. You can inspect other cases using the same logic to make sure that the inheritance chains are correct.
+
+Note that ``-> B -> A`` are folded into our superclass ``D`` and are not instantiated directly.
+
+=====================
+Technical information
+=====================
+
+Inheritance
+-----------
+
+``dojo.declare`` uses `C3 superclass linearization <http://www.python.org/download/releases/2.3/mro/>`_ to convert multiple inheritance to a linear list of superclasses.
 
 ========
 See Also
