@@ -321,6 +321,7 @@ Inheritance chains
 Given:
 
 .. code-block :: javascript
+  :linenos:
 
    var A = dojo.declare(null);
    var B = dojo.declare(null);
@@ -335,6 +336,7 @@ Given:
 Let's explore inheritance chains. First three classes look trivial:
 
 .. code-block :: html
+  :linenos:
 
   A
   B
@@ -343,6 +345,7 @@ Let's explore inheritance chains. First three classes look trivial:
 Next three classes look like that:
 
 .. code-block :: html
+  :linenos:
 
   D -> B -> A
   E -> C -> B
@@ -353,6 +356,7 @@ Notice that the inheritance chains are the same as the corresponding list of bas
 Another useful bit of information: only the first base (the last in an inheritance chain) is a true superclass. The rest are duplicated to produce the inheritance chain we need. For example, B is not based on A, so we base a copy of it on A. What does it mean for us practically? We cannot use ``instanceof`` operator for mxins, only for base classes:
 
 .. code-block :: javascript
+  :linenos:
 
   console.log(D instanceof A); // true
   console.log(D instanceof B); // false
@@ -362,6 +366,7 @@ How to get around it? Use `isInstanceOf`_.
 Now on to more complex cases:
 
 .. code-block :: html
+  :linenos:
 
   G -> C -> D(-> B -> A)
   H -> C -> D(-> B -> A)
@@ -378,9 +383,10 @@ Technical information
 Inheritance
 -----------
 
-``dojo.declare`` uses `C3 superclass linearization <http://www.python.org/download/releases/2.3/mro/>`_ to convert multiple inheritance to a linear list of superclasses. While it solves most thorny problems of inheritance, some configurations are impossible:
+Since 1.4 ``dojo.declare`` uses `C3 superclass linearization <http://www.python.org/download/releases/2.3/mro/>`_ to convert multiple inheritance to a linear list of superclasses. While it solves most thorny problems of inheritance, some configurations are impossible:
 
 .. code-block :: javascript
+  :linenos:
 
   var A = dojo.declare(null);
   var B = dojo.declare(null);
@@ -392,6 +398,26 @@ As you can see ``D`` requires that ``B`` should go before ``A``, and ``C`` requi
 
 Constructors
 ------------
+
+By default all constructors are chained using *after* algorithm (using `AOP <http://en.wikipedia.org/wiki/Aspect-oriented_programming>`_ terminology). It means that after the linearization for any given class its constructor is going to be called *after* its superclass constructors:
+
+.. code-block :: javascript
+  :linenos:
+
+  var A = dojo.declare(null,
+    constructor: function{ console.log("A"); }
+  };
+  var B = dojo.declare(A,
+    constructor: function{ console.log("B"); }
+  };
+  var C = dojo.declare(B,
+    constructor: function{ console.log("C"); }
+  };
+  new C();
+  // prints:
+  // A
+  // B
+  // C
 
 
 
