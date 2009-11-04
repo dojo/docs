@@ -825,6 +825,29 @@ Examples:
   x.m1(); // A.m1 will be called via this.inherited()
   x.m2(); // B.m2 will be called via this.inherited()
 
+Meta-information
+----------------
+
+All meta-information is a subject to change and should not be used in the course of normal coding. If you use it, be ready to update your code, when it changes.
+
+Every constructor produced with ``dojo.declare`` carries a meta-information required for internal plumbing and for introspection. It is implemented as a property called ``_meta`` on a constructor. ``_meta`` has following properties:
+
+bases
+  List of all superclasses produced by the C3 linearization algorithm (see Inheritance_ for more details). The very first item in the list is the class itself.
+
+hidden
+  Copy of all own properties and methods of the class. It is the third argument (or the second argument, if class name was omitted) of ``dojo.declare``.
+
+chains
+  List of chains (see Chaining_ for more details) augmented by all inherited chains.
+
+parents
+ List of immediate parents. It is the second argument (or the first argument, if class name was omitted) of ``dojo.declare``.
+
+Additionally a prototype has a special property named ``declaredClass``, if the class was named when created by ``dojo.declare``. If it was an anonymous class, this property can be missing, or it can be a auto-generated name in the form of ``uniqName_NNN``, where ``NNN`` is some unique number. This property is used internally to distinguish between different classes. It is not meant for end users, but it can be useful for debugging.
+
+Every instance created by ``dojo.declare``'d class has a special property called ``_inherited``, which is used to speed up `inherited()`_ calls. Please don't touch it.
+
 ========
 See Also
 ========
