@@ -779,6 +779,52 @@ Examples:
   console.log(x instanceof D);     // true
   console.log(x.isInstanceOf(D));  // true
 
+Using "raw" classes with dojo.declare()
+---------------------------------------
+
+``dojo.declare`` allows to use "raw" classes created by other means as a superclass. Such classes are considered to be monolithic (because their structure cannot be introspected) and they cannot use advanced features like `inherited()`_. But their methods will be called by `inherited()`_ and all their methods can be chained (see Chaining_) including constructors.
+
+Examples:
+
+.. code-block :: javascript
+  :linenos:
+
+  // plain vanilla constructor
+  var A = function(){
+    this.a = 42;
+  };
+  A.prototype.m1 = function(){
+    // ...
+  };
+
+  // another plain vanilla constructor
+  var B = function(){
+    this.b = "abc";
+  };
+  dojo.extend(B, {
+    m2: function(){
+      // ...
+    }
+  });
+
+  var C = dojo.declare([A, B], {
+    m1: function(){
+      return this.inherited(arguments);
+    },
+    m2: function(){
+      return this.inherited(arguments);
+    }
+  });
+
+  var x = new C();
+  // both A and B will be called at this point
+
+  console.log(x.isInstanceOf(A)); // true
+  console.log(x.isInstanceOf(B)); // true
+
+  x.m1(); // A.m1 will be called via this.inherited()
+  x.m2(); // B.m2 will be called via this.inherited()
+
 ========
 See Also
 ========
