@@ -219,6 +219,12 @@ Sometimes you don't want that "the world" top level node to show up, especially 
 
   .. cv:: html
 
+    <div dojoType="dojo.data.ItemFileReadStore" jsId="continentStore"
+      url="http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/countries.json"></div>
+    <div dojoType="dijit.tree.ForestStoreModel" jsId="continentModel" 
+      store="continentStore" query="{type:'continent'}"
+      rootId="continentRoot" rootLabel="Continents" childrenAttrs="children"></div>
+    
     <div dojoType="dijit.Tree" id="mytree2"
       model="continentModel" showRoot="false">
     </div>
