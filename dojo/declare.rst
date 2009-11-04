@@ -701,8 +701,8 @@ Examples:
   x.m4(); // our instance-specific method is called
   x.m5(); // our instance-specific method is called
 
-getInherited
-~~~~~~~~~~~~
+getInherited()
+~~~~~~~~~~~~~~
 
 This is a companion method to `inherited()`_. The difference is that it doesn't execute the found method, but returns it. It is up to the user to call it with proper arguments.
 
@@ -746,6 +746,38 @@ Examples:
     var supermethod = this.getInherited("m2", arguments);
     this.logAndCall("A.m2", supermethod, [1, 2]);
   };
+
+isInstanceOf()
+~~~~~~~~~~~~~~
+
+This method checks if an instance is derived from a given class. It is modeled on ``instanceof`` operator. It is most useful when you have classes built with the multiple inheritance somewhere in your hierarchy.
+
+The method accepts one argument: class (constructor). It returns ``true``/``false``.
+
+Examples:
+
+.. code-block :: javascript
+  :linenos:
+
+  var A = dojo.declare(null);
+  var B = dojo.declare(null);
+  var C = dojo.declare(null);
+
+  var D = dojo.declare([A, B]);
+
+  var x = new D();
+
+  console.log(x instanceof A);     // true
+  console.log(x.isInstanceOf(A));  // true
+
+  console.log(x instanceof B);     // false
+  console.log(x.isInstanceOf(B));  // true
+
+  console.log(x instanceof C);     // false
+  console.log(x.isInstanceOf(C));  // false
+
+  console.log(x instanceof D);     // true
+  console.log(x.isInstanceOf(D));  // true
 
 ========
 See Also
