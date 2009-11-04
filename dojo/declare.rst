@@ -596,6 +596,108 @@ Class methods
 
 Every prototype produced by ``dojo.declare`` contains some convenience methods.
 
+inherited
+~~~~~~~~~
+
+The method is used to call a superclass method. It accepts up to three arguments:
+
+* Optional name of the method to call. If it is specified it must match the name of the caller. Generally it should be specified when calling ``this.inherited()`` from an undecorated method.
+* ``arguments`` - literally ``arguments`` pseudo-variable, which is used for introspection.
+* Optional array of arguments, which will be used to call a superclass method. If it is not specified ``arguments`` are used.
+
+Examples:
+
+.. code-block :: javascript
+  :linenos:
+
+  var A = dojo.declare(null,
+    m1: function(){
+      // ...
+    },
+    m2: function(){
+      // ...
+    },
+    m3: function(){
+      // ...
+    },
+    m4: function(){
+      // ...
+    },
+    m5: function(){
+      // ...
+    }
+  };
+
+  var B = dojo.declare(A, {
+    m1: function(){
+      // simple super call with the same arguments
+      this.inherited(arguments);
+      // super call with new arguments
+      this.inherited(arguments, [1, 2, 3]);
+    }
+  });
+
+  // extend B using extend()
+  B.extend({
+    m2: function(){
+      // this method is going to be properly decorated =>
+      // we can use the same form of this.inherited() as
+      // normal methods:
+      // simple super call with the same arguments
+      this.inherited(arguments);
+      // super call with new arguments
+      this.inherited(arguments, ["a"]);
+    }
+  });
+
+  // extend B using dojo.extend()
+  dojo.extend(B, {
+    m3: function(){
+      // this method is not decorated =>
+      // we should supply its name when calling
+      // a superclass:
+      // simple super call with the same arguments
+      this.inherited("m3", arguments);
+      // super call with new arguments
+      this.inherited("m3", arguments, ["a"]);
+    }
+  });
+
+  // let's create an instance
+  var x = new B();
+  x.m1();
+  x.m2();
+  x.m3();
+  x.m4(); // A.m4() is called
+  x.m5(); // A.m5() is called
+
+  // add a method on the fly using dojo.safeMixin()
+  dojo.safeMixin(x, {
+    m4: function(){
+      // this method is going to be properly decorated =>
+      // we can use the same form of this.inherited() as
+      // normal methods:
+      // simple super call with the same arguments
+      this.inherited(arguments);
+      // super call with new arguments
+      this.inherited(arguments, ["a"]);
+    }
+  });
+
+  // add a method on the fly
+  x.m5 = function(){
+    // this method is not decorated =>
+    // we should supply its name when calling
+    // a superclass:
+    // simple super call with the same arguments
+    this.inherited("m5", arguments);
+    // super call with new arguments
+    this.inherited("m5", arguments, ["a"]);
+  };
+
+  x.m4(); // our instance-specific method is called
+  x.m5(); // our instance-specific method is called
+
 ========
 See Also
 ========
