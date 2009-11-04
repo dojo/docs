@@ -445,11 +445,11 @@ There are two ways to chain methods: **after** and **before** (`AOP <http://en.w
       // more code
     }
   });
-  
+
   var x = new B();
   x.init(42);
   x.destroy();
-  
+
   // prints:
   // A.init
   // B.init
@@ -555,11 +555,46 @@ Notes:
 Constructor methods
 -------------------
 
+Every constructor created by ``dojo.declare`` defines some convenience methods.
+
+extend
+~~~~~~
+
+This constructor method adds new properties to the constructor's prototype the same way as `dojo.extend <dojo/extend>`_ works. The difference is that it decorates function properties them the same way ``dojo.declare`` does. These changes will be propagated to all classes and object where this class constructor was a superclass.
+
+The method has one argument: an object to mix in.
+
+Example:
+
+.. code-block :: javascript
+  :linenos:
+
+  var A = dojo.declare(null,
+    m1: function(){
+      // ...
+    }
+  };
+
+  A.extend({
+    m1: function(){
+      // this method will replace the original method
+      // ...
+    },
+    m2: function(){
+      // ...
+    }
+  });
+
+  var x = new A();
+  a.m1();
+  a.m2();
+
+Internally this method uses `dojo.safeMixin <dojo/safeMixin>`_.
+
 Class methods
 -------------
 
-Instance methods
-----------------
+Every prototype produced by ``dojo.declare`` contains some convenience methods.
 
 ========
 See Also
