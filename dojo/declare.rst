@@ -596,14 +596,17 @@ Class methods
 
 Every prototype produced by ``dojo.declare`` contains some convenience methods.
 
-inherited
-~~~~~~~~~
+inherited()
+~~~~~~~~~~~
 
 The method is used to call a superclass method. It accepts up to three arguments:
 
 * Optional name of the method to call. If it is specified it must match the name of the caller. Generally it should be specified when calling ``this.inherited()`` from an undecorated method.
 * ``arguments`` - literally ``arguments`` pseudo-variable, which is used for introspection.
 * Optional array of arguments, which will be used to call a superclass method. If it is not specified ``arguments`` are used.
+
+It returns whatever value was returned by a superclass method that was called. If it turned out that there is no superclass method to call, ``inherited()`` doesn't do anything and returns ``undefined``.
+
 
 Examples:
 
@@ -697,6 +700,52 @@ Examples:
 
   x.m4(); // our instance-specific method is called
   x.m5(); // our instance-specific method is called
+
+getInherited
+~~~~~~~~~~~~
+
+This is a companion method to `inherited()`_. The difference is that it doesn't execute the found method, but returns it. It is up to the user to call it with proper arguments.
+
+The method accepts up to two arguments:
+
+* Optional name of the method to call. If it is specified it must match the name of the caller. Generally it should be specified when calling this method from an undecorated method (the same rule as for `inherited()`_).
+* ``arguments`` - literally ``arguments`` pseudo-variable, which is used for introspection.
+
+The result is a superclass method or ``undefined``, if it was not found. You can use the result as you wish. The most useful case is to pass it to some other function, which cannot use `inherited()`_ directly for some reasons.
+
+Examples:
+
+.. code-block :: javascript
+  :linenos:
+
+  var A = dojo.declare(null,
+    m1: function(){
+      // ...
+    },
+    m2: function(){
+      // ...
+    }
+  });
+
+  var B = dojo.declare(A, {
+    logAndCall: function(name, method, args){
+      console.log("Calling " + name + "...");
+      method.apply(this, args);
+      console.log("...done");
+    },
+    m1: function(){
+      var supermethod = this.getInherited(arguments);
+      this.logAndCall("A.m1", supermethod, [1, 2]);
+    }
+  });
+
+  var x = new B();
+  x.m2 = function(){
+    // we need to use a name here because
+    // this method was not properly decorated:
+    var supermethod = this.getInherited("m2", arguments);
+    this.logAndCall("A.m2", supermethod, [1, 2]);
+  };
 
 ========
 See Also
