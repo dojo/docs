@@ -6,6 +6,7 @@ dijit.form.Select
 :Status: Draft
 :Version: 1.4
 :Project owner: Nathan Toone
+:Authors: Nathan Toone, Doug Hays
 :Available: since V1.4
 
 .. contents::
@@ -56,11 +57,6 @@ This example shows a simple Select widget - converted from a select tag.
         <option value="CA">California</option>
     </select>
 
-  .. cv:: css
-
-    <style type="text/css">
-      @import "/moin_static163/js/dojo/trunk/release/dojo/dijit/themes/tundra/form/Select.css";
-    </style>
 
 A "styled" Select
 -------------------------
@@ -85,10 +81,3 @@ When styling the entries of a Select widget, you must use div and span tags, ins
         <span value="CA"><span style="font-size:25%">C</span><span style="font-size:50%">a</span><span style="font-size:75%">l</span><span style="font-size:90%">i</span><span style="font-size:100%">f</span><span style="font-size:125%">o</span><span style="font-size:133%">r</span><span style="font-size:150%">n</span><span style="font-size:175%">i</span><span style="font-size:200%">a</span></span>
         <span value="NM" disabled="disabled">New<br>&nbsp;&nbsp;Mexico</span>
     </div>
-
-  .. cv:: css
-
-    <style type="text/css">
-      @import "/moin_static163/js/dojo/trunk/release/dojo/dijit/themes/tundra/form/Select.css";
-      .ark { text-decoration: underline; }
-    </style>
