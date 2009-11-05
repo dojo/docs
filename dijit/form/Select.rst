@@ -40,6 +40,7 @@ A simple Select
 This example shows a simple Select widget - converted from a select tag.
 
 .. cv-compound::
+  :version: local
 
   .. cv:: javascript
 
