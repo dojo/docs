@@ -19,7 +19,7 @@ This section has some pretty abstract stuff, and you may wish to skip it on the 
 Basic Usage
 ===========
 
-dojo.declare accepts up to three arguments. The first is the optional (since 1.4) global name of the Class to declare, and is a string representation of the name. If you don't specify it, the class is assumed to be anonymous. It is your responsibility to assign it to a variable. The second is either ``null`` (no base class), an object (a base class) or an array of objects (multiple inheritance). The third is an object hash of properties to be mixed in after all other inheritance has been solved.
+``dojo.declare`` accepts up to three arguments. The first is the optional (since 1.4) global name of the Class to declare, and is a string representation of the name. If you don't specify it, the class is assumed to be anonymous. It is your responsibility to assign it to a variable. The second is either ``null`` (no base class), an object (a base class) or an array of objects (multiple inheritance). The third is an object hash of properties to be mixed in after all other inheritance has been solved.
 
 .. code-block :: javascript
   :linenos:
