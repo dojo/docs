@@ -39,15 +39,15 @@ A simple Select
 
 This example shows a simple Select widget - converted from a select tag.
 
-.. cv-compound ::
+.. cv-compound::
 
-  .. cv :: javascript
+  .. cv:: javascript
 
     <script>
       dojo.require("dijit.form.Select");
     </script>
 
-  .. cv :: html
+  .. cv:: html
 
     <select name="select" dojoType="dijit.form.Select">
         <option value="TN">Tennessee</option>
@@ -59,19 +59,19 @@ This example shows a simple Select widget - converted from a select tag.
 
 
 A "styled" Select
--------------------------
+-----------------
 
 When styling the entries of a Select widget, you must use div and span tags, instead of select and option tags - as IE will strip out any HTML within the option tags.
 
-.. cv-compound ::
+.. cv-compound::
 
-  .. cv :: javascript
+  .. cv:: javascript
 
     <script>
       dojo.require("dijit.form.Select");
     </script>
 
-  .. cv :: html
+  .. cv:: html
 
     <div name="select" value="AK" dojoType="dijit.form.Select">
         <span value="AL"><b>Alabama</b></span>
