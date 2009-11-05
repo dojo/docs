@@ -165,6 +165,11 @@ dojo.replace
 * A new flexible facility for simple templating based on substitutions.
 * See `dojo.replace <dojo/replace>`_ for more information.
 
+dojo.safeMixin
+--------------
+
+* A companion for `dojo.declare <dojo/declare>`_. It is similar to `dojo.mixin <dojo/mixin>`_ but decorates copied methods compatibly with `dojo.declare <dojo/declare>`_.
+
 
 ======
 Dijit
@@ -354,6 +359,11 @@ Several new plugins for the dijit.Editor RTE have been provided as dojox modules
 * `ToolbarLineBreak <dojox/editor/plugins/ToolbarLineBreak>`_:  A simple plugin that provides a way to break the editor toolbar into multiple lines.
 
 
+dojox.encoding.crypto.RSAKey
+----------------------------
+
+* JavaScript implementation of RSA by Tom Wu. Ported as an experimental module. See http://www-cs-students.stanford.edu/~tjw/jsbn/ for details.
+
 dojox.form
 ----------
 
@@ -372,7 +382,6 @@ dojox.form.DropDownSelect
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This widget has been moved to `dijit.form.Select <dijit/form/Select>`__.
-
 
 dojox.form.FileUploader
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -425,6 +434,11 @@ dojox.layout
 
 * dojo.layout.GridContainer styles changed, with red borders removed and theme-specific drop indicators added.
 
+dojox.math.BigInteger
+---------------------
+
+* Implementation of arbitrary large integer numbers by Tom Wu. Ported as an experimental module. See http://www-cs-students.stanford.edu/~tjw/jsbn/ for details.
+
 dojox.widget
 ------------
 * dojox.widget.Portlet added. An extended version of the dijit.TitlePane, designed to be used with the dojox.layout.GridContainer.
@@ -454,5 +468,5 @@ Upgrading
 Here are some common issues people have had when upgrading (ie, migrating) from 1.3 to 1.4:
 
  1. if your widgets are using templatePath you should ideally update them to use templateString with dojo.cache() instead, or alternately, minimally, make sure that they set templateString to null (to override the templateString setting from a superclass).
- 2. ContentPane acts more as a layout widget than before, defining isLayoutContainer: true.  This may break some custom subclasses. 
+ 2. ContentPane acts more as a layout widget than before, defining isLayoutContainer: true.  This may break some custom subclasses.
  3. the startup code for widgetsInTemplate has changed; if you have a custom widget that manually adds sub-widgets into it's DOM, be sure to add those sub-widgets to this._startupWidgets[] and also this._supportingWidgets[].  Alternately you can set _earlyTemplatedStartup to true to get the 1.3 behavior
