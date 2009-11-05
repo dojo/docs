@@ -44,11 +44,23 @@ This example shows a simple Select widget - converted from a select tag.
   .. cv:: javascript
 
     <script>
-      dojo.require("dijit.form.Select");
+      if(dojo.version.toString() < "1.4"){
+          dojo.require("dojox.form.DropDownSelect");
+      }else{
+          dojo.require("dijit.form.Select");
+      }
     </script>
 
   .. cv:: html
 
+    <div dojoType="dijit._Widget" style="display:none;">
+        <script type="dojo/method" event="postCreate">
+            // create dijit.form.Select as a simple wrapper to dojox.form.DropDownSelect for Dojo < 1.4
+            if(!dijit.form.Select){
+                dojo.declare("dijit.form.Select", dojox.form.DropDownSeleect, {});
+            }
+        </script>
+    </div>
     <select name="select" dojoType="dijit.form.Select">
         <option value="TN">Tennessee</option>
         <option value="VA" selected="selected">Virginia</option>
