@@ -76,6 +76,7 @@ A "styled" Select
 When styling the entries of a Select widget, you must use div and span tags, instead of select and option tags - as IE will strip out any HTML within the option tags.
 
 .. cv-compound::
+  :version: local
 
   .. cv:: javascript
 
