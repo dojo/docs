@@ -848,6 +848,8 @@ Additionally a prototype has a special property named ``declaredClass``, if the 
 
 Every instance created by ``dojo.declare``'d class has a special property called ``_inherited``, which is used to speed up `inherited()`_ calls. Please don't touch it.
 
+Every method mixed in by ``dojo.declare`` or `dojo.safeMethod <dojo/safeMethod>`_ is annotated: a special property called ``nom`` is added. It contains a name of the method in question and used by `inherited()`_ and `getInherited()`_ to deduce the name of a superclass method. See `dojo.safeMixin <dojo/safeMixin>`_ for more details.
+
 ========
 See Also
 ========
