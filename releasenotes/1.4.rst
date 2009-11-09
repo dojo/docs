@@ -432,11 +432,11 @@ The new Enhanced DataGrid extends the base grid in numerous useful ways.
 * Declarative Pop-up Menus: Rather than having to create and assign pop-up menus through scripts, the enhanced DataGrid allows you to specify these menus with straightforward markup.
 * See also `dojox.grid.EnhancedGrid <dojox/grid/EnhancedGrid>`_
 
-dojox.grid.Treegrid
+dojox.grid.TreeGrid
 ~~~~~~~~~~~~~~~~~~~
 
-* dojox.grid.TreeGrid - support for collapsable rows and model-based (dijit.tree.ForestStoreModel) structure.
-* See also `dojox.grid.Treegrid <dojox/grid/Treegrid>`_
+* dojox.grid.TreeGrid - support for collapsable rows and model-based (`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`_) structure.
+* See also `dojox.grid.TreeGrid <dojox/grid/TreeGrid>`_
 
 (old) compat grid
 ~~~~~~~~~~~~~~~~~
