@@ -25,7 +25,7 @@ EnhancedGrid (dojox.grid.EnhancedGrid) provides a rich set of features that enha
 * Selecting rows or columns by swiping
 * Moving multiple rows or columns with drag-n-drop
 
-There is currently a project to implement a `Grid plugin architecture </dojox/grid/pluginAPI>`_. To be compatible with this work, EnhancedGrid features are implemented as plugins which can be loaded on demand. As a result, the required features must first declared before they can be used.
+There is currently a project to implement a `Grid plugin architecture <dojox/grid/pluginAPI>`_. To be compatible with this work, EnhancedGrid features are implemented as plugins which can be loaded on demand. As a result, the required features must first declared before they can be used.
 
 =====
 Usage
@@ -594,4 +594,12 @@ Known Issues
 See also
 ========
 
-* TODO: links to other related articles
+* `dojox.grid.DataGrid <dojox/grid/DataGrid>`_
+
+  The base grid
+
+* `dojox.grid.TreeGrid <dojox/grid/TreeGrid>`_
+
+  This grid offers support for collapsable rows and model-based (`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`_) structure
+
+* `Grid Plugin API <dojox/grid/pluginAPI>`_
