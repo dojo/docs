@@ -110,6 +110,8 @@ fig 1.
 Example 2.
 ~~~~~~~~~~
 
+ To add a DataGrid to the above chart simply add the 'gridnode' property and target it at the relevant HTML element.
+
 .. code-block :: javascript
  :linenos:
 
