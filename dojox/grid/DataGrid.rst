@@ -22,7 +22,6 @@ Grids are familiar in the client/server development world. Basically a grid is a
 
 
 .. code-example::
-  :type: inline
   :toolbar: themes, versions, dir
   :version: local
   :width: 480
@@ -1042,7 +1041,15 @@ The JAWS 10 screen reader will announce the column headers and will speak the co
 See also
 ========
 
-Here is a set of related links to other Dojo Grid pages on the Web:
+* `dojox.grid.EnhancedGrid <dojox/grid/EnhancedGrid>`_
+
+  An enhanced version of the base grid, which extends it in numerous useful ways. **new with V1.4**
+
+* `dojox.grid.TreeGrid <dojox/grid/TreeGrid>`_
+
+  This grid offers support for collapsable rows and model-based (`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`_) structure
+
+* `Grid Plugin API <dojox/grid/pluginAPI>`_
 
 * `Introducing the 1.2 DataGrid <http://www.sitepen.com/blog/2008/07/14/dojo-12-grid/>`_
 * `New Features in Dojo Grid 1.2 <http://www.sitepen.com/blog/2008/10/22/new-features-in-dojo-grid-12/>`_
