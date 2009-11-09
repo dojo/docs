@@ -15,13 +15,19 @@ Dojo Toolkit offers three different Grid widgets:
 
   A visual grid/table much like a spreadsheet.
 
+  .. image:: DataGrid.png
+
 * `dojox.grid.EnhancedGrid <dojox/grid/EnhancedGrid>`_
 
   An enhanced version of the base grid, which extends it in numerous useful ways. ``New in 1.4``
 
+  .. image:: EnhancedGrid.png
+
 * `dojox.grid.TreeGrid <dojox/grid/TreeGrid>`_
 
   This grid offers support for collapsable rows and model-based (`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`_) structure. ``New in 1.4``
+
+  .. image:: TreeGrid.png
 
 
 ================================
