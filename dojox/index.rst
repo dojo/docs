@@ -291,7 +291,23 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 * `dojox.gfx3d <dojox/gfx3d>`_
 * `dojox.grid <dojox/grid>`_
 
-  A visual grid/table much like a spreadsheet
+  Dojo Toolkits Grid Widgets
+
+  * `dojox.grid.DataGrid <dojox/grid/DataGrid>`_
+
+    A visual grid/table much like a spreadsheet
+
+  * `dojox.grid.EnhancedGrid <dojox/grid/EnhancedGrid>`_
+
+    An enhanced version of the base grid, which extends it in numerous useful ways
+
+  * `dojox.grid.TreeGrid <dojox/grid/TreeGrid>`_
+
+    A grid with support for collapsable rows and model-based (`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`_) structure
+
+  * the old dojox.grid.Grid
+
+    This old version is only available for compatible reasons
 
   * `Grid Plugin API <dojox/grid/pluginAPI>`_
 
