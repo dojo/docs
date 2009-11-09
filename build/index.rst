@@ -320,7 +320,6 @@ Using Google's Closure Compiler
 As of Dojo 1.4, Google's Closure Compiler can be used to minify your files in a build. Using Closure Compiler will mean that ShrinkSafe is not used. Right now only the "simple optimizations" support is available with Closure Compiler. IMPORTANT NOTES:
 
 * You MUST use Java 6 to run Closure Compiler
-* There is no option in the Dojo build for the Closure compiler to preserve line returns.
 * The stripConsole build option will not do anything when using Closure Compiler, even though the build output may say console stripping is occurring.
 * Closure Compiler may make some some complaints about the code and print out errors, but if the build completes, then the code should work.
 
