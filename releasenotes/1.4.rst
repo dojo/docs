@@ -329,7 +329,14 @@ dijit._Templated
 dijit.WidgetSet enhancements
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-dijit.WidgetSet/dijit.registry now has a .length property, and new array-like functions: toArray, some, every, and map. forEach now returns instance for chaining. forEach, some, every, filter and map now accept a 'thisObj' as second or third param (after callback)
+* dijit.WidgetSet/dijit.registry now has a .length property, and new array-like functions: 
+  * toArray, 
+  * some, 
+  * every, 
+  * and map. 
+* forEach now returns instance for chaining.
+* forEach, some, every, filter and map now accept a 'thisObj' as second or third param (after callback)
+
 
 =====
 DojoX
@@ -338,12 +345,15 @@ DojoX
 dojox.charting.DataChart
 ------------------------
 
-The new DataChart simplifies the task of connecting Data Stores to a Chart.
+* The new DataChart simplifies the task of connecting Data Stores to a Chart.
+* See also `dojox.charting.DataChard <dojox/charting/DataChart>`_
 
 dojox.drawing
 -------------
 
-A new drawing tool has landed in DojoX. Similar to Sketch, but with an extensible architecture that allows for plugins.
+* A new drawing tool has landed in DojoX. 
+* dojox.drawing is similar to Sketch, but with an extensible architecture that allows for plugins.
+* See also `dojox.drawing <dojox/drawing>`_
 
 
 dojox.editor.plugins
@@ -357,12 +367,14 @@ Several new plugins for the dijit.Editor RTE have been provided as dojox modules
 * `Preview <dojox/editor/plugins/Preview>`_:  A plugin that lets you preview the editor content in a separate window with different CSS styles and stylesheets applied than what are used in the editor.
 * `Save <dojox/editor/plugins/Save>`_:  A plugin that simplifes adding a save toolbar action for posting editor content back to a specified url.
 * `ToolbarLineBreak <dojox/editor/plugins/ToolbarLineBreak>`_:  A simple plugin that provides a way to break the editor toolbar into multiple lines.
+* See also `dojox.editor.plugins <dojox/editor/plugins>`_
 
 
 dojox.encoding.crypto.RSAKey
 ----------------------------
 
-* JavaScript implementation of RSA by Tom Wu. Ported as an experimental module. See http://www-cs-students.stanford.edu/~tjw/jsbn/ for details.
+* JavaScript implementation of RSA by Tom Wu. Ported as an experimental module. 
+* See http://www-cs-students.stanford.edu/~tjw/jsbn/ for details.
 
 dojox.form
 ----------
@@ -370,23 +382,24 @@ dojox.form
 dojox.form._HasDropDown
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-This widget has been moved to `dijit._HasDropDown <dijit/_HasDropDown>`__.
+* This widget has been moved to `dijit._HasDropDown <dijit/_HasDropDown>`__.
 
 dojox.form._FormSelectWidget
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This widget has been moved to `dijit.form._FormSelectWidget <dijit/form/_FormSelectWidget>`__.
+* This widget has been moved to `dijit.form._FormSelectWidget <dijit/form/_FormSelectWidget>`__.
 
 
 dojox.form.DropDownSelect
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This widget has been moved to `dijit.form.Select <dijit/form/Select>`__.
+* This widget has been moved to `dijit.form.Select <dijit/form/Select>`__.
 
 dojox.form.FileUploader
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 * The improved FileUploader actually landed in a "dot release", 1.3.1, but 1.4 adds some bug fixes. The new FileUploader adds many features, and the display is now quite robust. The Flash uploader is now an actual Flash button with an emulated HTML style, so that it can be used in cases where it was broken before, like in scrolling boxes. The HTML uploader too has been improved so that it is not floating on the page, allowing for more complex display cases and less UI breakage.
+* See also `dojox.form.FileUploader <dojox/form/FileUploader>`_
 
 
 dojox.fx
@@ -404,13 +417,11 @@ dojox.gfx
 dojox.grid
 ----------
 
-* dojox.grid.TreeGrid - support for collapsable rows and model-based (dijit.tree.ForestStoreModel) structure.
-* compat grid (dojox.grid.Grid) is now bundled in the dojox/grid directory as a tarball archive for those who would like to continue using the deprecated (1.1) Grid. dojox.grid.DataGrid is the replacement.
-* Screen reader support has degraded when using JAWS 10 due to a change in the way ARIA (Accessible Rich Internet Applications) has been implemented in the grid. The grid column header cells no longer get actual focus since that was preventing proper scrolling via the mouse.  Due to this change, if focus is in a grid data cell and the user shift-tabs back to the column header, JAWS 10 will not speak the column header text.  This will be fixed with the next release of JAWS and Firefox which should provide better screen reader support for ARIA enabled grids.
-
+* Screen reader support has degraded when using JAWS 10 due to a change in the way ARIA (Accessible Rich Internet Applications) has been implemented in the grid. The grid column header cells no longer get actual focus since that was preventing proper scrolling via the mouse.
+* Due to this change, if focus is in a grid data cell and the user shift-tabs back to the column header, JAWS 10 will not speak the column header text.  This will be fixed with the next release of JAWS and Firefox which should provide better screen reader support for ARIA enabled grids.
 
 dojox.grid.EnhancedGrid
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~
 
 The new Enhanced DataGrid extends the base grid in numerous useful ways.
 
@@ -419,6 +430,17 @@ The new Enhanced DataGrid extends the base grid in numerous useful ways.
 * Drag-drop Multiple Columns and Rows: The user can now move multiple columns or rows in the same action.
 * Indirect Selection: Rather than having to manually include radio buttons and check boxes for single and multiple selection models, the Enhanced DataGrid will do it automatically in response to the inclusion of simple attribute-value pairs, e.g., indirectSelection=true, on the grid's div tag.
 * Declarative Pop-up Menus: Rather than having to create and assign pop-up menus through scripts, the enhanced DataGrid allows you to specify these menus with straightforward markup.
+* See also `dojox.grid.EnhancedGrid <dojox/grid/EnhancedGrid>`_
+
+dojox.grid.Treegrid
+~~~~~~~~~~~~~~~~~~~
+
+* dojox.grid.TreeGrid - support for collapsable rows and model-based (dijit.tree.ForestStoreModel) structure.
+* See also `dojox.grid.Treegrid <dojox/grid/Treegrid>`_
+
+(old) compat grid
+~~~~~~~~~~~~~~~~~
+* compat grid (dojox.grid.Grid) is now bundled in the dojox/grid directory as a tarball archive for those who would like to continue using the deprecated (1.1) Grid. dojox.grid.DataGrid is the replacement.
 
 
 dojox.image
@@ -427,6 +449,12 @@ dojox.image
 * Significant fixes and improvements in dojox.image.Lightbox. see: `[17205] <http://bugs.dojotoolkit.org/changeset/17205>`_
 * Bug fixes for dojox.image.SlideShow to deal with autoLoad and autoStart issues. see `[20285] <http://bugs.dojotoolkit.org/changeset/20285>`_
 * Extended the dojox.image.LightboxNano to show more than one image with a single LBN instance.
+
+dojox.jq
+--------
+
+* dojox.jq is a very experimental module aimed at trying to match the jQuery API as close as possible, but using Dojo underneath. It is still very rough, and there is no fx API support yet.
+
 
 dojox.layout
 ------------
@@ -442,16 +470,11 @@ dojox.math.BigInteger
 
 dojox.widget
 ------------
+
 * dojox.widget.Portlet added. An extended version of the dijit.TitlePane, designed to be used with the dojox.layout.GridContainer.
-
 * dojox.widget.Rotator and dojox.widget.AutoRotator added. The rotator is a lightweight non-dijit widget that rotates through child nodes. Support for pan, slide, wipe, and fade transitions. Includes dojox.widget.rotator.Controller for manipulating a rotator.
-
 * Bug fixes for dojox.widget.Calendar3Pane, which now selects the correct year.
 
-
-dojox.jq
---------
-dojox.jq is a very experimental module aimed at trying to match the jQuery API as close as possible, but using Dojo underneath. It is still very rough, and there is no fx API support yet.
 
 ====
 Util
@@ -469,6 +492,7 @@ A Checkstyle tool has been added in util/checkstyle. This can be used to both fl
 =========
 Bug fixes
 =========
+
 The `full list of bug fixes <http://bugs.dojotoolkit.org/query?status=closed&group=component&order=priority&milestone=1.4&resolution=fixed&col=id&col=summary&col=type&col=priority>`_ is located in the bug database.
 
 =========
@@ -477,6 +501,6 @@ Upgrading
 
 Here are some common issues people have had when upgrading (ie, migrating) from 1.3 to 1.4:
 
- 1. if your widgets are using templatePath you should ideally update them to use templateString with dojo.cache() instead, or alternately, minimally, make sure that they set templateString to null (to override the templateString setting from a superclass).
- 2. ContentPane acts more as a layout widget than before, defining isLayoutContainer: true.  This may break some custom subclasses.
- 3. the startup code for widgetsInTemplate has changed; if you have a custom widget that manually adds sub-widgets into it's DOM, be sure to add those sub-widgets to this._startupWidgets[] and also this._supportingWidgets[].  Alternately you can set _earlyTemplatedStartup to true to get the 1.3 behavior
+1. if your widgets are using templatePath you should ideally update them to use templateString with dojo.cache() instead, or alternately, minimally, make sure that they set templateString to null (to override the templateString setting from a superclass).
+2. ContentPane acts more as a layout widget than before, defining isLayoutContainer: true. This may break some custom subclasses.
+3. the startup code for widgetsInTemplate has changed; if you have a custom widget that manually adds sub-widgets into it's DOM, be sure to add those sub-widgets to this._startupWidgets[] and also this._supportingWidgets[]. Alternately you can set _earlyTemplatedStartup to true to get the 1.3 behavior
