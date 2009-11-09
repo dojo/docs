@@ -346,7 +346,7 @@ dojox.charting.DataChart
 ------------------------
 
 * The new DataChart simplifies the task of connecting Data Stores to a Chart.
-* See also `dojox.charting.DataChard <dojox/charting/DataChart>`_
+* See also `dojox.charting.DataChart <dojox/charting/DataChart>`_
 
 dojox.drawing
 -------------
