@@ -110,32 +110,41 @@ fig 1.
 Example 2.
 ~~~~~~~~~~
 
-
-
-
 .. code-block :: javascript
  :linenos:
- 
- dojo.require("dojox.widget.DataPresentation");
 
- var pres = new dojox.widget.DataPresentation("myChartNode", {
-		type: "chart",
-		url: "/data/mydata",   // see example below
-		gridNode: "myGridNode"
-	});
+ dojo.require("dojox.widget.DataPresentation");
+ dojo.require("dojox.charting.themes.Distinctive");
  
+  	var dp;
+
+	dojo.addOnLoad(function() {
+
+	dp = new dojox.widget.DataPresentation("chartdiv", {
+		type: "chart",
+		chartType: "StackedColumns",
+		data: jsondata0,
+		series: makeseries(jsondata0),
+       		legendNode: "legenddiv",
+	        gridNode: "griddiv",
+       		theme: "dojox.charting.themes.Distinctive"
+		});
+	});
 
 .. code-block :: html
  :linenos:
  
- <div id="myChartNode" style="width: 600px; height: 400px;"></div>
- <div id="myGridNode"  style="width: 600px; height: 400px;"></div>
- 
 
+ <div id="legenddiv"></div>
+ <div id="chartdiv" style="width: 500px; height: 300px;"></div>
+     	<div style="width:500px; height:300px;">
+ <div id="griddiv"></div>
+ </div>   
+ 
 
 fig 2.
 
-.. image:: datapres_example_1a.png
+.. image:: dp_example_2.png
 
 
 Properties
