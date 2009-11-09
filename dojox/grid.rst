@@ -4,12 +4,6 @@
 dojox.grid
 ==========
 
-:Status: Draft
-:Version: 1.0
-:Project owners: Scott J. Miles, Steve Orvell, Bryan Forbes
-:Available: since V1.2
-:jsDoc: http://api.dojotoolkit.org/jsdoc/HEAD/dojox.Grid
-
 .. contents::
    :depth: 2
 
@@ -18,7 +12,17 @@ Grids are familiar in the client/server development world. Basically a grid is a
 Dojo Toolkit offers four different Grid widgets:
 
 * `dojox.grid.DataGrid <dojox/grid/DataGrid>`_
+
+  The base grid.
+
 * `dojox.grid.EnhancedGrid <dojox/grid/EnhancedGrid>`_
+
+  An enhanced version of the base grid, which extends it in numerous useful ways. *new with V1.4*
+
 * `dojox.grid.TreeGrid <dojox/grid/TreeGrid>`_
-* the old dojox.grid.Grid - only available for compatible reasons
-  This old version is now bundled in the dojox/grid directory as a tarball archive for those who would like to continue using the deprecated (V1.1) Grid.
+
+  This grid offers support for collapsable rows and model-based (`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`_) structure.
+
+* the old dojox.grid.Grid
+
+  This old version is only available for compatible reasons. It is now bundled in the dojox/grid directory as a tarball archive for those who would like to continue using the deprecated (V1.1) Grid.
