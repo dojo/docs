@@ -149,6 +149,67 @@ fig 2.
 .. image:: dp_example_2.png
 
 
+Example 3.
+~~~~~~~~~~
+
+.. code-block :: javascript
+ :linenos:
+
+ dojo.require("dojox.widget.DataPresentation");
+ dojo.require("dojox.charting.themes.Distinctive");
+ 
+ var dp;
+
+ dojo.addOnLoad(function() {
+
+ dp = new dojox.widget.DataPresentation("chartdiv", {
+  type: "chart",
+  chartType: "StackedBars",
+  data: jsondata1,
+  refreshInterval: 3000,
+  series: makeseries(jsondata1),
+  legendNode: "legenddiv",
+  legendVertical: true,
+  gridNode: "griddiv",
+  titleNode: "title",
+  footerNode: "footer",
+  theme: "dojox.charting.themes.Distinctive"
+  });
+ });
+
+.. code-block :: html
+ :linenos:
+ 
+ <h1>Example 3.</h1>
+
+ <div style="width:600px; text-align: center;">
+  <h2 id="title" style="margin-bottom: 0;"></h2>
+  <p id="footer" style="color: gray; font-size: 0.85em; margin-top: 0.2em;"></p>
+ </div>
+
+ <table border="0"><tr valign="top">
+  <td>
+   <div id="chartdiv" style="width: 400px; height: 300px;"></div>
+  </td>
+
+  <td>  
+   <div style="border: 1px solid #888888; padding: 5px; background-color: rgba(255, 255, 221, 0.8);">    
+    <div id="legenddiv" ></div>
+   </div>
+  </td>
+
+ </tr></table>	
+	
+ <div style="width:400px; height:300px; padding-left: 100px;">
+  <div id="griddiv"></div>
+ </div>   
+ 
+
+fig 2.
+
+.. image:: dp_example_2.png
+
+
 Properties
 ----------
 
