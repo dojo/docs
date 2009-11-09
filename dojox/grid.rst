@@ -26,3 +26,10 @@ Dojo Toolkit offers four different Grid widgets:
 * the old dojox.grid.Grid
 
   This old version is only available for compatible reasons. It is now bundled in the dojox/grid directory as a tarball archive for those who would like to continue using the deprecated (V1.1) Grid.
+
+
+========
+See also
+========
+
+* `Grid Plugin API <dojox/grid/pluginAPI>`_
