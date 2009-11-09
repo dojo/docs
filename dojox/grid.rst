@@ -13,7 +13,7 @@ Dojo Toolkit offers four different Grid widgets:
 
 * `dojox.grid.DataGrid <dojox/grid/DataGrid>`_
 
-  The base grid.
+  A visual grid/table much like a spreadsheet.
 
 * `dojox.grid.EnhancedGrid <dojox/grid/EnhancedGrid>`_
 
