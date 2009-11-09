@@ -1043,7 +1043,7 @@ See also
 
 * `dojox.grid.EnhancedGrid <dojox/grid/EnhancedGrid>`_
 
-  An enhanced version of the base grid, which extends it in numerous useful ways. **new with V1.4**
+  An enhanced version of the base grid, which extends it in numerous useful ways
 
 * `dojox.grid.TreeGrid <dojox/grid/TreeGrid>`_
 
