@@ -76,7 +76,7 @@ url: String
 
 urlError: function
 ~~~~~~~~~~~~~~~~~~
-A function to be called if an error is encountered when fetching data from the supplied URL. This function will be supplied with two parameters exactly as the error function supplied to the dojo.xhrGet function. This function may be called multiple times if a refresh interval has been supplied.
+ A function to be called if an error is encountered when fetching data from the supplied URL. This function will be supplied with two parameters exactly as the error function supplied to the dojo.xhrGet function. This function may be called multiple times if a refresh interval has been supplied.
 		
 refreshInterval: Number
 ~~~~~~~~~~~~~~~~~~~~~~~
