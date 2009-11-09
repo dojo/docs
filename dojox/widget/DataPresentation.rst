@@ -23,9 +23,10 @@ The widget can then present the data in several forms: as a graphical chart, as 
 The widget can also create and manage several of these forms in one simple construction. 
 
 
+Example 1.
+~~~~~~~~~~
 
 Sample data
-~~~~~~~~~~~
 
  This sample data contains the various properties used to define the title, footer, range names and data values.
  
@@ -51,7 +52,6 @@ Sample data
 
 
 'Series' function
-~~~~~~~~~~~~~~~~~
 
  This function is used to parse the above data and define which series and which properties are to be used for the chart. 
 
@@ -67,11 +67,9 @@ Sample data
       		];
 	}
 
-Example 1.
-~~~~~~~~~~
 
- Finally, create a DataPresentation object using the above data and series objects. 
- The chart is placed in 'chartdiv', and the legend is placed in 'legenddiv'.
+Finally, create a DataPresentation object using the above data and series objects. 
+The chart is placed in 'chartdiv', and the legend is placed in 'legenddiv'.
 
 .. code-block :: javascript
  :linenos:
@@ -152,6 +150,42 @@ fig 2.
 Example 3.
 ~~~~~~~~~~
 
+
+.. code-block :: javascript
+ :linenos:
+
+ var jsondata1 = {
+  "title"  : "Softdrink Sales (2007)",
+  "footer" : "North America only",
+  "sales"  : [
+   { "month": "Jan", "cola": "84", "lemonade": "75", "dandelionandburdock": "64", "gingerale": "54" },
+   { "month": "Feb", "cola": "108", "lemonade": "65", "dandelionandburdock": "47", "gingerale": "43" },
+   { "month": "Mar", "cola": "24", "lemonade": "85", "dandelionandburdock": "68", "gingerale": "76" },
+   { "month": "Apr", "cola": "56", "lemonade": "75", "dandelionandburdock": "73", "gingerale": "92" },
+   { "month": "May", "cola": "78", "lemonade": "82", "dandelionandburdock": "43", "gingerale": "32" },
+   { "month": "Jun", "cola": "124", "lemonade": "43", "dandelionandburdock": "34", "gingerale": "54" },
+   { "month": "Jul", "cola": "84", "lemonade": "59", "dandelionandburdock": "42", "gingerale": "78" },
+   { "month": "Aug", "cola": "108", "lemonade": "34", "dandelionandburdock": "69", "gingerale": "65" },
+   { "month": "Sep", "cola": "24", "lemonade": "76", "dandelionandburdock": "86", "gingerale": "43" },
+   { "month": "Oct", "cola": "56", "lemonade": "65", "dandelionandburdock": "77", "gingerale": "43" },
+   { "month": "Nov", "cola": "78", "lemonade": "34", "dandelionandburdock": "65", "gingerale": "45" },
+   { "month": "Dec", "cola": "124", "lemonade": "67", "dandelionandburdock": "41", "gingerale": "65" }
+  ]
+ };
+
+.. code-block :: javascript
+ :linenos:
+
+ var makeseries = function(data) {
+  return [ 
+   { datapoints: "sales", field: "month", name: "Month", type: "range", chart: false },
+   { datapoints: "sales", field: "lemonade", name: "Lemonade (fizzy)" },
+   { datapoints: "sales", field: "dandelionandburdock", name: "Dandelion and burdock" },
+   { datapoints: "sales", field: "cola", name: "Cola" },
+   { datapoints: "sales", field: "gingerale", name: "Ginger ale" }
+  ];
+ }
+
 .. code-block :: javascript
  :linenos:
 
@@ -205,9 +239,9 @@ Example 3.
  </div>   
  
 
-fig 2.
+fig 3.
 
-.. image:: dp_example_2.png
+.. image:: dp_example_3.png
 
 
 Properties
