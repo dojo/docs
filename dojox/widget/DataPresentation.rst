@@ -26,6 +26,8 @@ The widget can also create and manage several of these forms in one simple const
 
 Sample data
 ~~~~~~~~~~~
+
+ This sample data contains the various properties used to define the title, footer, range names and data values.
  
 .. code-block :: javascript
  :linenos:
@@ -47,13 +49,11 @@ Sample data
 	};
 
 
-.. code-block :: javascript
- :linenos:
-
-
 
 'Series' function
 ~~~~~~~~~~~~~~~~~
+
+ This function is used to parse the above data and define which series and which properties are to be used for the chart. 
 
 .. code-block :: javascript
  :linenos:
@@ -69,6 +69,9 @@ Sample data
 
 Example 1.
 ~~~~~~~~~~
+
+ Finally, create a DataPresentation object using the above data and series objects. 
+ The chart is placed in 'chartdiv', and the legend is placed in 'legenddiv'.
 
 .. code-block :: javascript
  :linenos:
