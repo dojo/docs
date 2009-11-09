@@ -441,7 +441,7 @@ dojox.grid.TreeGrid
 (old) compat grid
 ~~~~~~~~~~~~~~~~~
 * compat grid (dojox.grid.Grid) is now bundled in the dojox/grid directory as a tarball archive for those who would like to continue using the deprecated (1.1) Grid.
-* `dojox.grid.DataGrid <dojox/grid/DataGrid>`_ is the replacement.
+* `dojox.grid.DataGrid <dojox/grid/grid>`_ is the replacement.
 
 
 dojox.image
