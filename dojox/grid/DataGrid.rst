@@ -12,7 +12,7 @@ dojox.grid.DataGrid
 .. contents::
    :depth: 2
 
-A kind of mini spreadsheet.
+A visual grid/table much like a spreadsheet.
 
 ============
 Introduction
