@@ -101,6 +101,10 @@ Priority 3: Dijit
 
   needed: full page
 
+* `dijit.layout.LinkPane <dijit/layout/LinkPane>`_
+
+  needed: full page
+
 
 =================
 Priority 4: DojoX
