@@ -12,6 +12,12 @@ dojox.grid.DataGrid
 .. contents::
    :depth: 2
 
+A kind of mini spreadsheet.
+
+============
+Introduction
+============
+
 Grids are familiar in the client/server development world. Basically a grid is a kind of mini spreadsheet, commonly used to display details on master-detail forms. From HTML terms, a grid is a "super-table" with its own scrollable viewport.
 
 
@@ -77,11 +83,6 @@ Grids are familiar in the client/server development world. Basically a grid is a
         }
     </style>
 
-============
-Introduction
-============
-
-TODO: introduce the component/class/method
 A structure is an array of views and a view is an array of cells.
 
 This Widget inherits from dojo.grid._Grid and hence all methods and properties pertaining to that Widget also apply here.
