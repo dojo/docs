@@ -452,6 +452,10 @@ dojox.widget
 Util
 ====
 
+Build System/buildscripts
+-------------------------
+Using Google's Closure Compiler is now supported in the build system. See the `Advanced Build Topics docs <build/index#using-google-s-closure-compiler>`_.
+
 Checkstyle
 ----------
 A Checkstyle tool has been added in util/checkstyle. This can be used to both flag style guide violations in either Dojo or custom JavaScript code, and also to fix the errors using an online tool.
