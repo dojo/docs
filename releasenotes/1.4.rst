@@ -448,6 +448,11 @@ dojox.widget
 
 * Bug fixes for dojox.widget.Calendar3Pane, which now selects the correct year.
 
+
+dojox.jq
+--------
+dojox.jq is a very experimental module aimed at trying to match the jQuery API as close as possible, but using Dojo underneath. It is still very rough, and there is no fx API support yet.
+
 ====
 Util
 ====
