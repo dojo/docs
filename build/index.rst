@@ -315,6 +315,27 @@ link to full docs to cover:
 Advanced Build Topics
 =====================
 
+Using Google's Closure Compiler
+-------------------------------
+As of Dojo 1.4, Google's Closure Compiler can be used to minify your files in a build. Using Closure Compiler will mean that ShrinkSafe is not used. Right now only the "simple optimizations" support is available with Closure Compiler. IMPORTANT NOTES:
+
+* You MUST use Java 6 to run Closure Compiler
+* There is no option in the Dojo build for the Closure compiler to preserve line returns.
+* The stripConsole build option will not do anything when using Closure Compiler, even though the build output may say console stripping is occurring.
+* Closure Compiler may make some some complaints about the code and print out errors, but if the build completes, then the code should work.
+
+To use Closure compiler, download it from here:
+http://code.google.com/p/closure-compiler/downloads/list
+
+And place the compiler.jar file somewhere you can easily reference. Then use the following to execute a Dojo build from the util/buildscripts directory (remember to use Java 6):
+
+java -classpath ../shrinksafe/js.jar:../closurecompiler/compiler.jar org.mozilla.javascript.tools.shell.Main build.js
+
+and place your build arguments on the same line after that text. Change the ../closurecompiler/compiler.jar path to the path where you keep Closure's compiler.jar.
+
+
+Other Advanced Topics
+---------------------
 The following build topics are for expert users, and not needed for routine builds:
 
     * conditional inclusion via the `excludeStart and exludeStop <build/exclude>`_ pragmas
