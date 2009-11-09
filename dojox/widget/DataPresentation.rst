@@ -73,6 +73,10 @@ data: Object
 url: String
 ~~~~~~~~~~~
  URL to fetch data from in JSON format. If supplied on construction this property will override any values supplied for the 'store' and/or 'data' properties.
+
+urlError: function
+~~~~~~~~~~~~~~~~~~
+A function to be called if an error is encountered when fetching data from the supplied URL. This function will be supplied with two parameters exactly as the error function supplied to the dojo.xhrGet function. This function may be called multiple times if a refresh interval has been supplied.
 		
 refreshInterval: Number
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -98,6 +102,8 @@ series: Array
 
   charttype: the type of presentation of the series in the chart, which can be "range", "line", "bar" (default: "bar")
 
+  linestyle: the stroke style for lines (if applicable) (default: "Solid")
+
   axis: the dependant axis to which the series will be attached in the chart, which can be "primary" or "secondary" 
 
   grid: true if the series should be included in a data grid presentation (default: true)
@@ -122,6 +128,10 @@ chartType: String
 reverse: Boolean
 ~~~~~~~~~~~~~~~~
  true if the chart independent axis should be reversed.
+
+animate: Object
+~~~~~~~~~~~~~~~
+ default = false, or override duration ... eg { duration: 1000 } sets animation to 1 second 
 
 labelMod: Integer
 ~~~~~~~~~~~~~~~~~
