@@ -417,8 +417,12 @@ dojox.gfx
 dojox.grid
 ----------
 
+dojox.grid.DataGrid
+~~~~~~~~~~~~~~~~~~~
+
 * Screen reader support has degraded when using JAWS 10 due to a change in the way ARIA (Accessible Rich Internet Applications) has been implemented in the grid. The grid column header cells no longer get actual focus since that was preventing proper scrolling via the mouse.
 * Due to this change, if focus is in a grid data cell and the user shift-tabs back to the column header, JAWS 10 will not speak the column header text.  This will be fixed with the next release of JAWS and Firefox which should provide better screen reader support for ARIA enabled grids.
+* See `dojox.grid.DataGrid <dojox/grid/DataGrid>`_ for more information.
 
 dojox.grid.EnhancedGrid
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -441,7 +445,7 @@ dojox.grid.TreeGrid
 (old) compat grid
 ~~~~~~~~~~~~~~~~~
 * compat grid (dojox.grid.Grid) is now bundled in the dojox/grid directory as a tarball archive for those who would like to continue using the deprecated (1.1) Grid.
-* `dojox.grid.DataGrid <dojox/grid/grid>`_ is the replacement.
+* `dojox.grid.DataGrid <dojox/grid/DataGrid>`_ is the replacement.
 
 
 dojox.image
