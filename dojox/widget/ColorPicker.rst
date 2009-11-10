@@ -5,7 +5,7 @@ dojox.widget.ColorPicker
 
 :Status: Draft
 :Version: 1.0
-:Project owner: ?--
+:Project owner: Nathan Toone
 :Available: since V1.1
 
 .. contents::
