@@ -85,6 +85,31 @@ Declarative example
     <div dojoType="dojox.widget.ColorPicker" id="picker2"></div>
 
 
+A ColorPicker within a DropDownButton
+-------------------------------------
+
+.. code-example::
+
+  .. css::
+
+    <link rel="stylesheet" href="/moin_static163/js/dojo/trunk/dojox/widget/ColorPicker/ColorPicker.css" />
+
+  .. javascript::
+
+    <script type="text/javascript">
+        dojo.require("dojox.widget.ColorPicker");
+        dojo.require("dijit.form.DropDownButton");
+    </script>
+
+  .. html::
+
+    <div dojoType="dijit.form.DropDownButton">
+        <span>
+            ColorPicker
+        </span>
+        <div dojoType="dojox.widget.ColorPicker" id="picker3"></div>
+    </div>
+
 
 =====
 Notes
