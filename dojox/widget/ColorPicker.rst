@@ -45,10 +45,25 @@ Examples
 Programmatic example
 --------------------
 
-.. code-block :: javascript
-  :linenos:
+.. code-example::
 
-  var c = new dojox.widget.ColorPicker();
+  .. css::
+
+    <link rel="stylesheet" href="/moin_static163/js/dojo/trunk/dojox/widget/ColorPicker/ColorPicker.css" />
+
+  .. javascript::
+
+    <script type="text/javascript">
+        dojo.require("dojox.widget.ColorPicker");
+        dojo.addOnLoad(function() {
+            var c = new dojox.widget.ColorPicker(,"picker1");
+        });
+    </script>
+
+  .. html::
+
+    <div id="picker1"></div>
+
 
 Declarative example
 -------------------
@@ -67,7 +82,7 @@ Declarative example
 
   .. html::
 
-    <div dojoType="dojox.widget.ColorPicker" id="picker"></div>
+    <div dojoType="dojox.widget.ColorPicker" id="picker2"></div>
 
 
 
