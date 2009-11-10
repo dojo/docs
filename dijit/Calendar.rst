@@ -254,4 +254,4 @@ dijit._Calendar was upgraded to dijit.Calendar in version 1.4.0. An alias is pro
 See Also
 ========
 
-  * `dojox.widget.Calendar <dojox/widget/Calendar>`_ - An enhanced but still experimental version of Calendar which has additional capabilities like year-only views and animation effects.
+  * `dojox.widget.Calendar <dojox/widget/Calendar>`_ - An enhanced but still experimental calendar widget which has additional capabilities like year-only views and animation effects.
