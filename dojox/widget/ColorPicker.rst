@@ -58,6 +58,18 @@ Declarative example
 
     <div dojoType="dojox.widget.ColorPicker" id="picker"></div>
 
+
+.. code-example::
+
+  .. javascript::
+
+     dojo.require("dojox.widget.ColorPicker");
+
+  .. html::
+
+     <div dojoType="dojox.widget.ColorPicker" id="picker"></div>
+
+
 =====
 Notes
 =====
