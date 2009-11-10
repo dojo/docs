@@ -18,7 +18,7 @@ In most cases, there are two widgets involved with a popup:
 * The parent widget, that opens and closes the popup
 * The popup widget itself
 
-For example, respectively, `dijit.form.DropDownButton <dijit/form/DropDownButton>`_ and `dojox.widget.ColorPicker <dojox/widget/ColorPicker>`_.
+For example, respectively, `dijit.form.DropDownButton <dijit/form/DropDownButton>`_ and `dijit.ColorPalette <dijit/ColorPalette>`_.
 
 
 =============================
@@ -33,23 +33,23 @@ Here's some example code from DropDownButton about how it opens and closes it's 
 
 .. code-block :: javascript
 
-		dijit.popup.open({
-			parent: this,
-			popup: dropDown,
-			around: this.domNode,
-			orient: {'BR':'TR', 'BL':'TL', 'TR':'BR', 'TL':'BL'},
-			onExecute: function(){
-				dijit.popup.close(dropDown);
-			},
-			onCancel: function(){
-				dijit.popup.close(dropDown);
-			},
-			onClose: function(){
-				...
-			}
-		});
+    dijit.popup.open({
+        parent: this,
+        popup: dropDown,
+        around: this.domNode,
+        orient: {'BR':'TR', 'BL':'TL', 'TR':'BR', 'TL':'BL'},
+        onExecute: function(){
+            dijit.popup.close(dropDown);
+        },
+        onCancel: function(){
+            dijit.popup.close(dropDown);
+        },
+        onClose: function(){
+            ...
+        }
+    });
      
-Popup points to a `dojox.widget.ColorPicker <dojox/widget/ColorPicker>`_, `dijit.Menu <dijit/Menu>`_, etc.... it can be any widget.
+Popup points to a `dijit.ColorPalette <dijit/ColorPalette>`_, `dijit.Menu <dijit/Menu>`_, etc.... it can be any widget.
 
 The parent code should also call dijit.popup.prepare() to hide the popup widget and to get it ready for dijit.popup.open() calls:
 
@@ -68,13 +68,13 @@ However, there are two important methods in the popup widget that the popup widg
 
 .. code-block :: javascript
 
-	onExecute: function(){
-		// summary: attach point for notification about when a menu item has been executed
-	},
+    onExecute: function(){
+        // summary: attach point for notification about when a menu item has been executed
+    },
 
-	onCancel: function(/*Boolean*/ closeAll){
-		// summary: attach point for notification about when the user cancels the current menu
-	},
+    onCancel: function(/*Boolean*/ closeAll){
+        // summary: attach point for notification about when the user cancels the current menu
+    },
 
 dijit.popup will monitor calls to these two methods and inform the parent widget.
 
@@ -82,16 +82,16 @@ Here's some example code from a popup widget showing what it does when it's been
 
 .. code-block :: javascript
 
-	onItemClick: function(/*Widget*/ item, /*Event*/ evt){
-		...
-		// before calling user defined handler, close hierarchy of menus
-		// and restore focus to place it was when menu was opened
-		this.onExecute();
+    onItemClick: function(/*Widget*/ item, /*Event*/ evt){
+        ...
+        // before calling user defined handler, close hierarchy of menus
+        // and restore focus to place it was when menu was opened
+        this.onExecute();
 
-		// user defined handler for click
-		item.onClick(evt);
-		...
-	}
+        // user defined handler for click
+        item.onClick(evt);
+        ...
+    }
 
 
 =========
