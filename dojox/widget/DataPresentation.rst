@@ -150,6 +150,7 @@ fig 2.
 Example 3.
 ~~~~~~~~~~
 
+To see how the widget can cope with different data shapes, switch from jsondata0 to jsondata1 as the input data. jsondata0 is structured as complete 'series' of values, gathered into an array with series titles. jsondata1 is structures as 'data points', each containing multiple sales values. 
 
 .. code-block :: javascript
  :linenos:
@@ -241,7 +242,7 @@ Example 3.
 
 fig 3.
 
-.. image:: dp_example_3.png
+.. image:: dp_example_3a.png
 
 
 Properties
