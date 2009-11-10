@@ -494,21 +494,28 @@ Example 5 ( Chart plus DataGrid )
 
       dojo.addOnLoad(function() {
 
-      dp = new dojox.widget.DataPresentation("chartdiv", {
+	dp = new dojox.widget.DataPresentation("chartdiv", {
 		type: "chart",
-		chartType: "ClusteredColumns",
+		chartType: "StackedColumns",
 		data: jsondata0,
 		series: makeseries(jsondata0),
-        	legendNode: "legenddiv",
-        	theme: "dojox.charting.themes.Distinctive"
+       		legendNode: "legenddiv",
+	        gridNode: "griddiv",
+       		theme: "dojox.charting.themes.Distinctive"
 		});
 	});
+
     </script>
 
   .. cv:: html
 
     <div id="legenddiv"></div>
-    <div id="chartdiv" style="width: 500px; height: 300px;"></div>  
+    <div id="chartdiv" style="width: 500px; height: 300px;"></div>
+    <div style="width:500px; height:300px;">
+       <div id="griddiv"></div>
+    </div> 
+
+ 
 
   .. cv:: css
 
