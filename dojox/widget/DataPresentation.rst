@@ -387,7 +387,7 @@ Example 4
 ---------
 
 .. cv-compound::
-  :height: 400
+  :height: 500
   :version: 1.4
 
   .. cv:: javascript
