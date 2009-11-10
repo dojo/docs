@@ -36,6 +36,7 @@ You can also specify the following values on a TreeGrid:
   * defaultOpen: a boolean value that defines whether expandos default to open or closed (default is true)
   * openAtLevels: an array that will add a bit of logic to which values are open and closed.
   * treeModel: a dijit.tree.ForestStoreModel tree model that will be used for a "columnar tree" as opposed to an "expandable grid"
+  * expandoCell: when used in conjunction with a treeModel (see above), this is a 0-based index of which cell to place the actual expando in
 
 When defining openAtLevels, the index in the array correspond to the level that you are defining. The values in the array can either be
 boolean (true/false) or an integer. If it is an integer, then it will be closed if there are more than that many children.
