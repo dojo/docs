@@ -55,6 +55,10 @@ Declarative example
 
 .. code-example::
 
+  .. css::
+
+    <link rel="stylesheet" href="/moin_static163/js/dojo/trunk/dojox/widget/ColorPicker/ColorPicker.css" />
+
   .. javascript::
 
     <script type="text/javascript">
