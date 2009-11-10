@@ -59,15 +59,19 @@ Declarative example
     <div dojoType="dojox.widget.ColorPicker" id="picker"></div>
 
 
+
 .. code-example::
 
   .. javascript::
 
-     dojo.require("dojox.widget.ColorPicker");
+    <script type="text/javascript">
+        dojo.require("dojox.widget.ColorPicker");
+    </script>
 
   .. html::
 
-     <div dojoType="dojox.widget.ColorPicker" id="picker"></div>
+    <div dojoType="dojox.widget.ColorPicker" id="picker"></div>
+
 
 
 =====
