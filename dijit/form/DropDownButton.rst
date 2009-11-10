@@ -70,7 +70,7 @@ As usual you can create the DropDown button widget declaratively using the dojoT
 When created declaratively the DropDownButton node has two children, one for the label of the button,
 and the other for the drop-down widget that's displayed when you press the button.
 
-Here's one displaying a TooltipDialog:
+Here's one displaying a `TooltipDialog <dijit/TooltipDialog>`_:
 
 .. cv-compound::
 
