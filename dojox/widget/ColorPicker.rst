@@ -6,7 +6,7 @@ dojox.widget.ColorPicker
 :Status: Draft
 :Version: 1.0
 :Project owner: ?--
-:Available: since 1.1
+:Available: since V1.1
 
 .. contents::
    :depth: 2
@@ -52,13 +52,6 @@ Programmatic example
 
 Declarative example
 -------------------
-
-.. code-block :: html
-  :linenos:
-
-    <div dojoType="dojox.widget.ColorPicker" id="picker"></div>
-
-
 
 .. code-example::
 
