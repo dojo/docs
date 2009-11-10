@@ -388,7 +388,7 @@ Example 4
 
 .. cv-compound::
   :type: inline
-  :height: 420
+  :height: 430
   :version: 1.4
 
   .. cv:: javascript
