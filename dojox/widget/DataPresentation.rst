@@ -49,11 +49,7 @@ Sample data
 		]
 	};
 
-
-
-'Series' function
-
- This function is used to parse the above data and define which series and which properties are to be used for the chart. 
+'Series' function This function is used to parse the above data and define which series and which properties are to be used for the chart. 
 
 .. code-block :: javascript
  :linenos:
@@ -173,6 +169,8 @@ To see how the widget can cope with different data shapes, switch from jsondata0
    { "month": "Dec", "cola": "124", "lemonade": "67", "dandelionandburdock": "41", "gingerale": "65" }
   ]
  };
+
+'Series' function. This function is used to parse the above data and define which series and which properties are to be used for the chart.
 
 .. code-block :: javascript
  :linenos:
