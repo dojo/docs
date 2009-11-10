@@ -380,43 +380,14 @@ fig 2. DataPresentation Demo: http://dleadt.torolab.ibm.com/dl/charts/testd.html
 
 .. image:: datapres6.png
 
-Calendar
---------
-
-.. cv-compound::
-  :height: 320
-  :version: 1.4
-
-  .. cv:: javascript
-
-    <script type="text/javascript">
-      dojo.require("dijit.dijit"); // loads the optimized dijit layer
-      dojo.require("dijit._Calendar");
-    </script>
-
-  .. cv:: html
-
-    <div id="mycal" dojoType="dijit._Calendar" value="2009-08-07" isDisabledDate="dojo.date.locale.isWeekend"></div>
-    
-  .. cv:: css
-
-    <style type="text/css">
-      .{{ theme }} .dijitCalendarDisabledDate {
-        background-color:#333 !important;
-        text-decoration:none !important;
-      }
-
-      .{{ theme }} table.dijitCalendarContainer {
-        margin: 25px auto;
-      }
-    </style>
 
 
-DPexample
+
+Example 4
 ---------
 
 .. cv-compound::
-  :height: 320
+  :height: 400
   :version: 1.4
 
   .. cv:: javascript
