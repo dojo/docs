@@ -17,7 +17,7 @@ A Photoshop-like HSV ColorPicker widget.
 Introduction
 ============
 
-This ColorPicker adds many options to the standard `ColorPallete <dijit/ColorPallete>`_ available in Dijit. 
+This ColorPicker adds many options to the standard `ColorPallete <dijit/ColorPalette>`_ available in Dijit. 
 
 =====
 Usage
