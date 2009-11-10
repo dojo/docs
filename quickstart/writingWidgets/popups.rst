@@ -18,7 +18,7 @@ In most cases, there are two widgets involved with a popup:
 * The parent widget, that opens and closes the popup
 * The popup widget itself
 
-For example, respectively, `dijit.form.DropDownButton <dijit/form/DropDownButton>`_ and `dijit.ColorPicker <dijit/ColorPicker>`_.
+For example, respectively, `dijit.form.DropDownButton <dijit/form/DropDownButton>`_ and `dijit.ColorPalette <dijit/ColorPalette>`_.
 
 
 =============================
