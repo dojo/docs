@@ -18,7 +18,7 @@ In most cases, there are two widgets involved with a popup:
 * The parent widget, that opens and closes the popup
 * The popup widget itself
 
-For example, respectively, `dijit.form.DropDownButton <dijit/form/DropDownButton>`_ and `dijit.ColorPalette <dijit/ColorPalette>`_.
+For example, respectively, `dijit.form.DropDownButton <dijit/form/DropDownButton>`_ and `dojox.widget.ColorPicker <dojox/widget/ColorPicker>`_.
 
 
 =============================
@@ -49,7 +49,7 @@ Here's some example code from DropDownButton about how it opens and closes it's 
 			}
 		});
      
-Popup points to a `dijit.ColorPicker <dijit/ColorPicker>`_, `dijit.Menu <dijit/Menu>`_, etc.... it can be any widget.
+Popup points to a `dojox.widget.ColorPicker <dojox/widget/ColorPicker>`_, `dijit.Menu <dijit/Menu>`_, etc.... it can be any widget.
 
 The parent code should also call dijit.popup.prepare() to hide the popup widget and to get it ready for dijit.popup.open() calls:
 
