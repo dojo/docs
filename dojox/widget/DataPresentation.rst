@@ -387,6 +387,7 @@ Example 4
 ---------
 
 .. cv-compound::
+  :type: inline
   :height: 500
   :version: 1.4
 
