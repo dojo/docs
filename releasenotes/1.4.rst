@@ -178,20 +178,12 @@ Dijit
 top level widgets
 -----------------
 
-dijit.Tree
-~~~~~~~~~~
+dijit.Calendar
+~~~~~~~~~~~~~~
 
-* dijit._tree.dndSource moved to dijit.tree.dndSource (since it's supposed to be used publicly)
-* Lots of cleanup and bug fixes around DnD related code
-* Multi-character search. Typing "al" will jump directly to first node starting with "al".
-* new Path and selectedItem attributes to get/set the current tree item (`#9339 <http://bugs.dojotoolkit.org/ticket/9339>`_)
-* Multi-parented items support. Tree can support items with multiple parents, as long as this doesn't cause a loop. (`#9361 <http://bugs.dojotoolkit.org/ticket/9361>`_)
-* Deferred child load option on TreeStoreModel. Option added to deferring calling loadItem() on a data store item until it's children need to be read. Performance boost for JsonRestStore. (`#9575 <http://bugs.dojotoolkit.org/ticket/9575>`_)
-* getTooltip() method can set tooltip on each tree node
-* onLoad() event when tree is fully loaded
-* autoExpand=true flag to initially expand all nodes in the tree
-* ability to add a CSS class to the root node of a tree item.
-* See also `dijit.Tree <dijit/Tree>`_
+* The previously available widget dijit._Calendar was promoted to a public object and therefore renamed from dijit._Calendar to dijit.Calendar.
+* Calendar standalone widget now supports accessibility with ARIA and keyboard. Users can select a date in the calendar using arrow keys, and page-down/up for month navigation. There is also a dropdown at the month label to change the month. DateTextBox still relies on the input control for a11y and does not transfer focus to the calendar popup.
+* See also `dijit.Calendar <dijit/Calendar>`_
 
 dijit.Editor
 ~~~~~~~~~~~~
@@ -238,12 +230,20 @@ dijit.Tooltip
 * addTarget()/removeTarget() methods to dynamically attach/detach the tooltip from various nodes.
 * See also `dijit.Tooltip <dijit/Tooltip>`_
 
-dijit.Calendar
-~~~~~~~~~~~~~~
+dijit.Tree
+~~~~~~~~~~
 
-* The previously available widget dijit._Calendar was promoted to a public object and therefore renamed from dijit._Calendar to dijit.Calendar.
-* Calendar standalone widget now supports accessibility with ARIA and keyboard. Users can select a date in the calendar using arrow keys, and page-down/up for month navigation. There is also a dropdown at the month label to change the month. DateTextBox still relies on the input control for a11y and does not transfer focus to the calendar popup.
-* See also `dijit.Calendar <dijit/Calendar>`_
+* dijit._tree.dndSource moved to dijit.tree.dndSource (since it's supposed to be used publicly)
+* Lots of cleanup and bug fixes around DnD related code
+* Multi-character search. Typing "al" will jump directly to first node starting with "al".
+* new Path and selectedItem attributes to get/set the current tree item (`#9339 <http://bugs.dojotoolkit.org/ticket/9339>`_)
+* Multi-parented items support. Tree can support items with multiple parents, as long as this doesn't cause a loop. (`#9361 <http://bugs.dojotoolkit.org/ticket/9361>`_)
+* Deferred child load option on TreeStoreModel. Option added to deferring calling loadItem() on a data store item until it's children need to be read. Performance boost for JsonRestStore. (`#9575 <http://bugs.dojotoolkit.org/ticket/9575>`_)
+* getTooltip() method can set tooltip on each tree node
+* onLoad() event when tree is fully loaded
+* autoExpand=true flag to initially expand all nodes in the tree
+* ability to add a CSS class to the root node of a tree item.
+* See also `dijit.Tree <dijit/Tree>`_
 
 dijit.layout
 ------------
