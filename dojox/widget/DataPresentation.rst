@@ -150,7 +150,7 @@ fig 1.
   .. cv:: html
 
     <div id="legenddiv"></div>
-    <div id="chartdiv" style="width: 500px; height: 300px;"></div>  
+    <div id="chartdiv" style="width: 700px; height: 300px;"></div>  
 
   .. cv:: css
 
@@ -520,5 +520,3 @@ Demos
 fig 2. DataPresentation Demo: http://dleadt.torolab.ibm.com/dl/charts/testd.html
 
 .. image:: datapres6.png
-
-
