@@ -192,7 +192,7 @@ Example 2.
  
 
  <div id="legenddiv"></div>
- <div id="chartdiv" style="width: 500px; height: 300px;"></div>
+ <div id="chartdiv" style="width: 650px; height: 300px;"></div>
      	<div style="width:500px; height:300px;">
  <div id="griddiv"></div>
  </div>   
@@ -257,7 +257,7 @@ fig 2.
   .. cv:: html
 
     <div id="legenddiv"></div>
-    <div id="chartdiv" style="width: 500px; height: 300px;"></div>
+    <div id="chartdiv" style="width: 650px; height: 300px;"></div>
     <div style="width:500px; height:300px;">
        <div id="griddiv"></div>
     </div> 
