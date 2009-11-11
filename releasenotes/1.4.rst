@@ -372,7 +372,7 @@ Several new plugins for the dijit.Editor RTE have been provided as dojox modules
 * `Preview <dojox/editor/plugins/Preview>`_:  A plugin that lets you preview the editor content in a separate window with different CSS styles and stylesheets applied than what are used in the editor.
 * `Save <dojox/editor/plugins/Save>`_:  A plugin that simplifes adding a save toolbar action for posting editor content back to a specified url.
 * `ToolbarLineBreak <dojox/editor/plugins/ToolbarLineBreak>`_:  A simple plugin that provides a way to break the editor toolbar into multiple lines.
-* `dojox.editor.plugins.NormalizeIndentOutdent <dojox/editor/plugins/NormalizeIndentOutdent>`_:  A plugin that tries to normalize indent and outdent behavior across browsers.  
+* `dojox.editor.plugins.NormalizeIndentOutdent <dojox/editor/plugins/NormalizeIndentOutdent>`_:  An **experimental** plugin that tries to normalize indent and outdent behavior across browsers.  
 * See also `dojox.editor.plugins <dojox/editor/plugins>`_
 
 
