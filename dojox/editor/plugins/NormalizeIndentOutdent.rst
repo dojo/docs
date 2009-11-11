@@ -157,11 +157,7 @@ Configured indent to be ems
     <b>Enter some text, then press the button to see it in encoded format</b>
     <br>
     <div dojoType="dijit.Editor" height="100px"id="input" extraPlugins="[{name:'normalizeindentoutdent', indentBy: 3, indentUnits: "em"}, 'prettyprint', 'viewsource']">
-    <div>
-    <br>
     blah blah & <b>blah</b>!
-    <br>
-    </div>
     <br>
     <table>
     <tbody>
