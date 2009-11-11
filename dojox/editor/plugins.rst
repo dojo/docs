@@ -65,6 +65,11 @@ There are currently a small set of nice features that can be plugged into the di
   
   **This plugin is new to the Dojo Toolkit 1.4.**
 
+* `dojox.editor.plugins.NormalizeIndentOutdent <dojox/editor/plugins/NormalizeIndentOutdent>`_ -- **EXPERIMENTAL**
+
+  A plugin that tries to normalise indent and outdent behavior across browsers.  It uses margin-left styling to indent/outdent block nodes and the like, and properly handles indenting and outdenting list structures.  It will even attempt to correct malformed lists to make them HTML compliant.
+  
+  **This plugin is new to the Dojo Toolkit 1.4.**
 
 ========
 See Also
