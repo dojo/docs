@@ -89,7 +89,7 @@ The chart is placed in 'chartdiv', and the legend is placed in 'legenddiv'.
  :linenos:
  
  <div id="legenddiv"></div>
- <div id="chartdiv" style="width: 500px; height: 300px;"></div>
+ <div id="chartdiv" style="width: 650px; height: 300px;"></div>
 
 
 
@@ -150,7 +150,7 @@ fig 1.
   .. cv:: html
 
     <div id="legenddiv"></div>
-    <div id="chartdiv" style="width: 600px; height: 300px;"></div>  
+    <div id="chartdiv" style="width: 650px; height: 300px;"></div>  
 
   .. cv:: css
 
