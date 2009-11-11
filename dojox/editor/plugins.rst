@@ -77,6 +77,12 @@ There are currently a small set of nice features that can be plugged into the di
   
   **This plugin is new to the Dojo Toolkit 1.4.**
 
+* `dojox.editor.plugins.FindReplace <dojox/editor/plugins/FindReplace >`_ -- **EXPERIMENTAL**
+
+  A plugin that adds a find/replace toolbar that can be toggled to appear underneath the main toolbar.  It provides the capability to find textm replace text, and replace all occurances of some text.  It also allows searching backwards from current cursor position as well as matching case.  This plugin does NOT work on Opera, as it is making use of Browser specific apis, and Opera doesn't provide a mechanism to do native find.
+  
+  **This plugin is new to the Dojo Toolkit 1.4.**
+
 ========
 See Also
 ========
