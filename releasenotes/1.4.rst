@@ -320,6 +320,11 @@ dijit.form.TextBox
 Dijit infrastructure changes
 ----------------------------
 
+dijit._Widget
+~~~~~~~~~~~~~
+
+* widgets now support a subscribe/unsubscribe function - analagous to dojo.subscribe/unsubscribe which operates on the widget itself (and cleans itself up) in a similar way to _Widget.connect/disconnect.
+
 dijit._Templated
 ~~~~~~~~~~~~~~~~
 
