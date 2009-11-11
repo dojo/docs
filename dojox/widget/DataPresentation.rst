@@ -520,5 +520,16 @@ Example 5 ( Chart plus DataGrid )
   .. cv:: css
 
     <style type="text/css">
+        @import "{{ baseUrl }}dojox/grid/resources/Grid.css";
+        @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
 
+        .dojoxGrid table {
+            margin: 0;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
     </style>
