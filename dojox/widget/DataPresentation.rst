@@ -158,7 +158,7 @@ fig 1.
 
     </style>
 
-.. image:: dp_example_1.png
+
 		
 
 Example 2.
@@ -281,7 +281,7 @@ fig 2.
         }
     </style>
 
-.. image:: dp_example_2.png
+
 
 
 Example 3.
@@ -520,7 +520,5 @@ Demos
 fig 2. DataPresentation Demo: http://dleadt.torolab.ibm.com/dl/charts/testd.html
 
 .. image:: datapres6.png
-
-
 
 
