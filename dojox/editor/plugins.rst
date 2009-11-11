@@ -71,6 +71,12 @@ There are currently a small set of nice features that can be plugged into the di
   
   **This plugin is new to the Dojo Toolkit 1.4.**
 
+* `dojox.editor.plugins.Breadcrumb <dojox/editor/plugins/Breadcrumb>`_ -- **EXPERIMENTAL**
+
+  A plugin that adds a toolbar footer to the dijit.Editor that shows you the location in the DOM where the cursor is.  If clicked, it selects the node contents.  It also provides dropdown menus that allow you to perform operations on the node in question, such as select, delete, move cursor to start, and move cursor to end.
+  
+  **This plugin is new to the Dojo Toolkit 1.4.**
+
 ========
 See Also
 ========
