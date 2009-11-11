@@ -392,14 +392,44 @@ For non-PHP devs, this translates into a JSON string, wrapped in a textarea, ret
 
 If you are having problems getting onComplete to fire, look at this code first. Often the problem is the server side code is not catching the flash field name for whatever reason (perhaps the client and server names don't match) and the code is falling to the end of the page and returning a textarea to Flash. Recently Code has been added in the SWF that checks for this, so if that is the problem, you should be notified with a console message.
 
+HTTPS Issues
+------------
+
+Attempting to upload to an HTTPS server can be very difficult in Firefox and Safari due to the fact that they do not share the same session as the browser page. IE has much fewer issues. Potential workarounds (mostly unverified as I do not have an HTTPS server to test with):
+
+ - Here is the official Adobe bug report on the issue: https://bugs.adobe.com/jira/browse/FP-226
+
+ - Firefox does not like self signed security certificates. It has been said that an official signed cert will work.
+
+ - It was brought to my attention that an .htaccess files on the server will work with the following content:
+
+.. code-block :: text
+ :linenos:
+ 
+ <IfModule mod_security.c>
+   SecFilterEngine Off
+   SecFilterScanPOST Off
+ </IfModule>
+ 
+
+HOWEVER, this site says that opens you up to SQL injection attacks. He offers other solutions:
+http://pumastudios.com/2009/05/file-uploads-and-mod_security-vs-wordpress-wp-adminadmin-ajaxphp
+ 
+The other, less desirable solutions, are: 
+ - Have an HTTP server to handle the uploads and use a crossdomain.xml file to handle the different protocol. 
+ - You may need to resort to force the HTML uploader.
+ 
+More references to this issue:
+ - http://bugs.dojotoolkit.org/ticket/8911
+ - http://bugs.dojotoolkit.org/ticket/10306
+ - http://wiki.modxcms.com/index.php/What_is_mod_security_and_how_does_it_affect_me
+ - http://www.modsecurity.org/documentation/modsecurity-apache/1.9.3/html-multipage/06-special_features.html
+
 =====
 Demos
 =====
 
-http://mwilcox.dojotoolkit.org/dtk/dojox/form/tests/test_FileUploader.html
-
-http://mwilcox.dojotoolkit.org/dtk/demos/uploader/demo.html
-
-http://mwilcox.dojotoolkit.org/dtk/dojox/form/tests/test_FileUploaderForm.html
-
-http://mwilcox.dojotoolkit.org/dtk/dojox/form/tests/test_FileUploaderCSS.html
+ - http://mwilcox.dojotoolkit.org/dtk/dojox/form/tests/test_FileUploader.html
+ - http://mwilcox.dojotoolkit.org/dtk/demos/uploader/demo.html
+ - http://mwilcox.dojotoolkit.org/dtk/dojox/form/tests/test_FileUploaderForm.html
+ - http://mwilcox.dojotoolkit.org/dtk/dojox/form/tests/test_FileUploaderCSS.html
