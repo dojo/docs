@@ -23,7 +23,7 @@ The widget can then present the data in several forms: as a graphical chart, as 
 The widget can also create and manage several of these forms in one simple construction. 
 
 Example 1 - Chart only
-----------------------
+~~~~~~~~~~~~~~~~~~~~~~
 
 This example uses the following sample data, used to define the chart title, footer, range names and data values.
  
