@@ -221,10 +221,12 @@ dojo.NodeList implements .style() using the same syntax, omitting the "node" par
     <div dojoType="dijit.form.Button">
         change the style for each point
         <script type="dojo/method" event="onClick" args="evt">
-            // Set the color to 'red', opacity to 0.5, border to "3px solid black" to DOM node "poorboy4":
+            // Set the backgroundColor, color and opacity
+            // for each node found by dojo.query:
             dojo.query(".sweet").style({
                 "backgroundColor": "#B822B0",
-                "color": "#FFFF00"
+                "color": "#FFFF00",
+                "opacity": 0.5
             });
         </script>
     </div>
