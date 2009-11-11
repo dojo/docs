@@ -107,11 +107,7 @@ Basic Usage
     <b>Enter some text, then press the button to see it in encoded format</b>
     <br>
     <div dojoType="dijit.Editor" height="100px"id="input" extraPlugins="['normaliseindentoutdent', 'viewsource', 'prettyprint']">
-    <div>
-    <br>
     blah blah & blah!
-    <br>
-    </div>
     <br>
     <table>
     <tbody>
