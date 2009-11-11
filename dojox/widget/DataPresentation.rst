@@ -150,7 +150,7 @@ fig 1.
   .. cv:: html
 
     <div id="legenddiv"></div>
-    <div id="chartdiv" style="width: 700px; height: 300px;"></div>  
+    <div id="chartdiv" style="width: 600px; height: 300px;"></div>  
 
   .. cv:: css
 
