@@ -89,7 +89,6 @@ Basic Usage
     
   .. html::
 
-    <b>Toggle the show block nodes button or use CTRL-SHIFT-F9, to show and hide block nodes in the page.</b>
     <br>
     <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['breadcrumb']">
     <div>
