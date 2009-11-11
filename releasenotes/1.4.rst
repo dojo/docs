@@ -364,7 +364,7 @@ dojox.drawing
 dojox.editor.plugins
 --------------------
 
-Several new plugins for the dijit.Editor RTE have been provided as dojox modules. They are all generally well tested and work good across browsers.
+Several new plugins for the dijit.Editor RTE have been provided as dojox modules. Unless otherwise noted in their documentation, they are all generally well tested and work good across browsers.
 
 * `PrettyPrint <dojox/editor/plugins/PrettyPrint>`_:  A plugin that formats the output from dijit.Editor more cleanly than the browsers defaults.
 * `PageBreak <dojox/editor/plugins/PageBreak>`_:  A plugin that lets you insert CSS style page breaks so when printed, the document page breaks at the indicated spot.
@@ -374,6 +374,7 @@ Several new plugins for the dijit.Editor RTE have been provided as dojox modules
 * `ToolbarLineBreak <dojox/editor/plugins/ToolbarLineBreak>`_:  A simple plugin that provides a way to break the editor toolbar into multiple lines.
 * `NormalizeIndentOutdent <dojox/editor/plugins/NormalizeIndentOutdent>`_:  An **experimental** plugin that tries to normalize indent and outdent behavior across browsers.
 * `FindReplace <dojox/editor/plugins/FindReplace>`_:  An **experimental** plugin that adds a find/replace toolbar that can be toggled to appear underneath the main toolbar.  The plugin provides find and replace text capability to the editor.
+* `Breadcrumb <dojox/editor/plugins/Breadcrumb>`_:  An **experimental** plugin that adds a footer toolbar that shows you what node you are in and all its ansestor nodes.  It also provides actions such as selecting all content, deleting the element, and moving the cursor to the start or end of the element contents.
 * See also `dojox.editor.plugins <dojox/editor/plugins>`_
 
 
