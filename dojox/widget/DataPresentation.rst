@@ -22,11 +22,10 @@ The widget can then present the data in several forms: as a graphical chart, as 
 
 The widget can also create and manage several of these forms in one simple construction. 
 
+Example 1
+---------
 
-
-Sample data
-
- This sample data contains the various properties used to define the title, footer, range names and data values.
+This example uses the following sample data, used to define the chart title, footer, range names and data values.
  
 .. code-block :: javascript
  :linenos:
@@ -95,10 +94,6 @@ The chart is placed in 'chartdiv', and the legend is placed in 'legenddiv'.
 
 
 fig 1.
-
-
-Example 1
----------
 
 .. cv-compound::
   :type: inline
