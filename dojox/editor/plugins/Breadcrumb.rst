@@ -28,7 +28,7 @@ Once required in and enabled, this plugin provides the following features to dij
 Limitations
 ===========
 
-* This plugin does not work well with the `full screen <dijit/_editor/plugins/FullScreen>`_ plugin.  In Full screen mode the foot er toolbar is out of view.  This will be fixed in a later version of dojo.  It requires minor updated to Editor as well as the full screen and view source plugins.
+* This plugin does not work well with the `full screen <dijit/_editor/plugins/FullScreen>`_ plugin.  In Full screen mode the footer toolbar is out of view.  This will be fixed in a later version of dojo.  It requires minor updated to Editor as well as the full screen and view source plugins.
 
 
 =====
@@ -61,7 +61,7 @@ You also need to include the CSS for it.  For example:
   </style>
 
 
-And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the ShowBlockNodes plugin!  You can use the button or hotkey to toggle the mode as you desire..
+And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the Breadcrumb plugin!  You can click around in the editor and see the breadcrumb update.  You can also click the buttons in the breadcrumb bar to select contents or activate the dropdown action menu.
 
 ========
 Examples
@@ -77,22 +77,21 @@ Basic Usage
   .. javascript::
 
     <script>
-      dojo.require("dijit.form.Button");
       dojo.require("dijit.Editor");
-      dojo.require("dojox.editor.plugins.ShowBlockNodes");
+      dojo.require("dojox.editor.plugins.Breadcrumb");
     </script>
 
   .. css::
 
     <style>
-      @import "{{baseUrl}}dojox/editor/plugins/resources/css/ShowBlockNodes.css";
+      @import "{{baseUrl}}dojox/editor/plugins/resources/css/Breadcrumb.css";
     </style>
     
   .. html::
 
     <b>Toggle the show block nodes button or use CTRL-SHIFT-F9, to show and hide block nodes in the page.</b>
     <br>
-    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['showblocknodes']">
+    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['breadcrumb']">
     <div>
     <br>
     blah blah & blah!
