@@ -356,7 +356,7 @@ dojox.charting.DataChart
 dojox.date
 ----------
 
-* Experimental time zone support via dojox.date.timezone
+* Experimental time zone support via dojox.date.timezone.  Based off of the fleegix timezone support by Matthew Eernise.
 
 dojox.drawing
 -------------
