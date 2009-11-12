@@ -414,6 +414,21 @@ Attempting to upload to an HTTPS server can be very difficult in Firefox and Saf
 
 HOWEVER, this site says that opens you up to SQL injection attacks. He offers other solutions:
 http://pumastudios.com/2009/05/file-uploads-and-mod_security-vs-wordpress-wp-adminadmin-ajaxphp
+
+The original poster responds:
+
+    This is not only a https issue. It's also on simple http connections. Ist a bug of adobe flash player in conjunction with the web application firewall (modsecurity). If i understand that correctly the flash player sends one "\\n\\r" instead but the http protocol requires "\\n\\r\\n\\r". For modsecutiry this is a rule break so it delivers 403 rejected.
+
+    And yes if you disable modsecurity sql injections can be done on all post vars that are later processed by the database an not escaped within the application. So another safer way - until adobe fixed this problem and all flash players are updated - is the following but may not work on all servers: 
+
+.. code-block :: text
+ :linenos:
+ 
+ <IfModule mod_security.c>
+  SetEnvIfNoCase Content-Type "^multipart/form-data;" "MODSEC_NOPOSTBUFFERING=Do not buffer file uploads"
+ </IfModule>
+ 
+(Thanks to minobun for all the great info on this thorny issue)
  
 The other, less desirable solutions, are: 
  - Have an HTTP server to handle the uploads and use a crossdomain.xml file to handle the different protocol. 
