@@ -330,7 +330,7 @@ DojoX (Dojo eXtensions) contains even more plugins for improving the capabilitie
 +---------------------------------------------+----------------------+----------------------------------------------------------------------+
 |dojox.editor.plugins.Breadcrumb              |breadcrumb            |A plugin that adds a footer toolbar to the editor that allows you to  |
 |                                             |                      |see the node position of the cursor.  It also provides selection,     |
-|                                             |                      |deletion, and cursor move functions.                                  |
+|                                             |                      |deletion, and cursor move functions.  This plugin is experimental.    |
 |                                             |                      |**New to Dojo toolkit 1.4.**                                          |
 +---------------------------------------------+----------------------+----------------------------------------------------------------------+
 |dojox.editor.plugins.FindReplace             |findreplace           |A plugin that provides a find and replace togglable toolbar to the    |
