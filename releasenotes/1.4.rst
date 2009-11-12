@@ -500,6 +500,7 @@ dojox.widget.DataPresentation
 * The new DataPresentation widget connects to a data store in a simple manner, and also provides some additional convenience mechanisms for connecting to common data sources without needing to explicitly construct a Dojo data store.
 * The widget can then present the data in several forms: as a graphical chart, as a tabular grid, or as display panels presenting meta-data (title, creation information, etc) from the data.
 * The widget can also create and manage several of these forms in one simple construction.
+* Animation support.  Optionally allows chart bars, columns and lines to animate into place as chart is intially being displayed.
 * See also `dojox.widget.DataPresentation <dojox/widget/DataPresentation>`_
 
 
