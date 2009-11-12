@@ -333,6 +333,10 @@ DojoX (Dojo eXtensions) contains even more plugins for improving the capabilitie
 |                                             |                      |deletion, and cursor move functions.                                  |
 |                                             |                      |**New to Dojo toolkit 1.4.**                                          |
 +---------------------------------------------+----------------------+----------------------------------------------------------------------+
+|dojox.editor.plugins.FindReplace             |findreplace           |A plugin that provides a find and replace togglable toolbar to the    |
+|                                             |                      |editor.  This plugin is experimental.                                  |
+|                                             |                      |**New to Dojo toolkit 1.4.**                                          |
++---------------------------------------------+----------------------+----------------------------------------------------------------------+
 
 
 =====================
