@@ -294,37 +294,45 @@ Please refer to each plugin's detail page for more information about it.
 DojoX (Dojo eXtensions) contains even more plugins for improving the capabilities of the dijit.Editor.  These are functions that were deemed 'less common' requirements and were therefore put in the extensions namespace.  Please refer to the `landing page <dojox/editor/plugins>`_ for more information about them.  Below is a quick description of each.
 
 
-+---------------------------------------------+-----------------+----------------------------------------------------------------------+
-|**Plugin**                                   |**Short Name(s)**|**Description**                                                       |
-+---------------------------------------------+-----------------+----------------------------------------------------------------------+
-|dojox.editor.plugins.PrettyPrint             |prettyprint      |A headless (no button), plugin that improves the formatting of the    |
-|                                             |                 |HTML returned from editor.attr("value").                              |
-|                                             |                 |**New to Dojo toolkit 1.4.**                                          |
-+---------------------------------------------+-----------------+----------------------------------------------------------------------+
-|dojox.editor.plugins.PageBreak               |pagebreak        |A toolbar button and hotkey for inserting a 'page break' into the     |
-|                                             |                 |document.  When the document is printed, the printor will break to    |
-|                                             |                 |output to new pages at those points.                                  |
-|                                             |                 |**New to Dojo toolkit 1.4.**                                          |
-+---------------------------------------------+-----------------+----------------------------------------------------------------------+
-|dojox.editor.plugins.ShowBlockNodes          |showblocknodes   |A toolbar button and hotkey for showing the block html elements being |
-|                                             |                 |used to lay out the editor content.                                   |
-|                                             |                 |**New to Dojo toolkit 1.4.**                                          |
-+---------------------------------------------+-----------------+----------------------------------------------------------------------+
-|dojox.editor.plugins.Preview                 |preview          |A toolbar button that allows you to view the content in a new window  |
-|                                             |                 |You can also have it apply custom stylesheets so that the content is  |
-|                                             |                 |is styled differently from how it appears in the editor.              |
-|                                             |                 |**New to Dojo toolkit 1.4.**                                          |
-+---------------------------------------------+-----------------+----------------------------------------------------------------------+
-|dojox.editor.plugins.Save                    |save             |A toolbar button that allows you to post back the content of the      |
-|                                             |                 |editor to a remote service easily.  It is intended for subclassing to |
-|                                             |                 |customize save behavior.                                              |
-|                                             |                 |**New to Dojo toolkit 1.4.**                                          |
-+---------------------------------------------+-----------------+----------------------------------------------------------------------+
-|dojox.editor.plugins.ToolbarLineBreak        ||| or            |A simple plugin for splitting the toolbar up into multiple lines.     |
-|                                             |toolbarlinebreak |Useful in controlling how the dijit.Editor toolbar wraps.             |
-|                                             |                 |**New to Dojo toolkit 1.4.**                                          |
-+---------------------------------------------+-----------------+----------------------------------------------------------------------+
-
++---------------------------------------------+----------------------+----------------------------------------------------------------------+
+|**Plugin**                                   |**Short Name(s)**     |**Description**                                                       |
++---------------------------------------------+----------------------+----------------------------------------------------------------------+
+|dojox.editor.plugins.PrettyPrint             |prettyprint           |A headless (no button), plugin that improves the formatting of the    |
+|                                             |                      |HTML returned from editor.attr("value").                              |
+|                                             |                      |**New to Dojo toolkit 1.4.**                                          |
++---------------------------------------------+----------------------+----------------------------------------------------------------------+
+|dojox.editor.plugins.PageBreak               |pagebreak             |A toolbar button and hotkey for inserting a 'page break' into the     |
+|                                             |                      |document.  When the document is printed, the printor will break to    |
+|                                             |                      |output to new pages at those points.                                  |
+|                                             |                      |**New to Dojo toolkit 1.4.**                                          |
++---------------------------------------------+----------------------+----------------------------------------------------------------------+
+|dojox.editor.plugins.ShowBlockNodes          |showblocknodes        |A toolbar button and hotkey for showing the block html elements being |
+|                                             |                      |used to lay out the editor content.                                   |
+|                                             |                      |**New to Dojo toolkit 1.4.**                                          |
++---------------------------------------------+----------------------+----------------------------------------------------------------------+
+|dojox.editor.plugins.Preview                 |preview               |A toolbar button that allows you to view the content in a new window  |
+|                                             |                      |You can also have it apply custom stylesheets so that the content is  |
+|                                             |                      |is styled differently from how it appears in the editor.              |
+|                                             |                      |**New to Dojo toolkit 1.4.**                                          |
++---------------------------------------------+----------------------+----------------------------------------------------------------------+
+|dojox.editor.plugins.Save                    |save                  |A toolbar button that allows you to post back the content of the      |
+|                                             |                      |editor to a remote service easily.  It is intended for subclassing to |
+|                                             |                      |customize save behavior.                                              |
+|                                             |                      |**New to Dojo toolkit 1.4.**                                          |
++---------------------------------------------+----------------------+----------------------------------------------------------------------+
+|dojox.editor.plugins.ToolbarLineBreak        ||| or                 |A simple plugin for splitting the toolbar up into multiple lines.     |
+|                                             |toolbarlinebreak      |Useful in controlling how the dijit.Editor toolbar wraps.             |
+|                                             |                      |**New to Dojo toolkit 1.4.**                                          |
++---------------------------------------------+----------------------+----------------------------------------------------------------------+
+|dojox.editor.plugins.NormalizeIndentOutdent  |normalizeindentoutdent|A headless plugin that tries to standardize how browsers hander       |
+|                                             |                      |indent and outdent operations on content.  This plugin is experimental|
+|                                             |                      |**New to Dojo toolkit 1.4.**                                          |
++---------------------------------------------+----------------------+----------------------------------------------------------------------+
+|dojox.editor.plugins.Breadcrumb              |breadcrumb            |A plugin that adds a footer toolbar to the editor that allows you to  |
+|                                             |                      |see the node position of the cursor.  It also provides selection,     |
+|                                             |                      |deletion, and cursor move functions.                                  |
+|                                             |                      |**New to Dojo toolkit 1.4.**                                          |
++---------------------------------------------+----------------------+----------------------------------------------------------------------+
 
 
 =====================
