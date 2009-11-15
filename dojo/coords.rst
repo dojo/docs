@@ -18,7 +18,7 @@ Getter for the complete coordinates of a dom node.
 Introduction
 ============
 
-The dojo coords function is used to obtain a plethora of coordinate information about a dom node.  The type of information it returns is relative positin to its parent in the form of 'left' and 'top' values, the width and height of the dom node, and absolute position in the form of page x and y coordinates.  Effectively, it is a combination of margin box values `dojo.marginBox <dojo/marginMox>`_ and `dojo.position <dojo/position>`_.  Because of this redunancy and because the return attributes use differeing box-types, this method is being deprecated beginning with Dojo 1.4 but is being kept active for backward compatibility.  The return object looks like:
+The dojo coords function is used to obtain a plethora of coordinate information about a dom node.  The type of information it returns is relative positin to its parent in the form of 'left' and 'top' values, the width and height of the dom node, and absolute position in the form of page x and y coordinates.  Effectively, it is a combination of margin box values `dojo.marginBox <dojo/marginBox>`_ and `dojo.position <dojo/position>`_.  Because of this redunancy and because the return attributes use differeing box-types, this method is being deprecated beginning with Dojo 1.4 but is being kept active for backward compatibility.  The return object looks like:
 
 { l: 50, t: 200, w: 300: h: 150, x: 700, y: 900, }
 
