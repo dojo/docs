@@ -433,6 +433,7 @@ dojox.gfx
 
 * dojox.gfx.utils.toSvg - serialize a dojox.gfx surface as a string in SVG format for all browsers (including IE).
 * New XSLT file (``dojox/gfx/resources/svg2gfx.xsl``) to transform bigger subset of SVG to the ``dojox.gfx`` JSON-based serialization format by Eric W. Brown.
+* Fixed the VML renderer to work on IE8 in the standards mode.
 
 dojox.grid
 ----------
