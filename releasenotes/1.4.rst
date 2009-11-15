@@ -334,11 +334,11 @@ dijit._Templated
 dijit.WidgetSet enhancements
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* dijit.WidgetSet/dijit.registry now has a .length property, and new array-like functions: 
-  * toArray, 
-  * some, 
-  * every, 
-  * and map. 
+* dijit.WidgetSet/dijit.registry now has a .length property, and new array-like functions:
+  * toArray,
+  * some,
+  * every,
+  * and map.
 * forEach now returns instance for chaining.
 * forEach, some, every, filter and map now accept a 'thisObj' as second or third param (after callback)
 
@@ -346,6 +346,11 @@ dijit.WidgetSet enhancements
 =====
 DojoX
 =====
+
+dojox.charting
+--------------
+
+* Added the simple animation for all bar- and column-based charts by Adam Jones and Dave Clark (IBM).
 
 dojox.charting.DataChart
 ------------------------
@@ -362,7 +367,7 @@ dojox.date
 dojox.drawing
 -------------
 
-* A new drawing tool has landed in DojoX. 
+* A new drawing tool has landed in DojoX.
 * dojox.drawing is similar to Sketch, but with an extensible architecture that allows for plugins.
 * See also `dojox.drawing <dojox/drawing>`_
 
@@ -387,7 +392,7 @@ Several new plugins for the dijit.Editor RTE have been provided as dojox modules
 dojox.encoding.crypto.RSAKey
 ----------------------------
 
-* JavaScript implementation of RSA by Tom Wu. Ported as an experimental module. 
+* JavaScript implementation of RSA by Tom Wu. Ported as an experimental module.
 * See http://www-cs-students.stanford.edu/~tjw/jsbn/ for details.
 
 dojox.form
