@@ -351,6 +351,7 @@ dojox.charting
 --------------
 
 * Added the simple animation for all bar- and column-based charts by Adam Jones and Dave Clark (IBM).
+* Now objects can be used with bar- and column-based charts. It means now we can have custom tooltip/color/fill/stroke for individual rectangles.
 
 dojox.charting.DataChart
 ------------------------
