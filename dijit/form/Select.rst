@@ -107,3 +107,41 @@ When styling the entries of a Select widget, you must use div and span tags, ins
         <span value="CA"><span style="font-size:25%">C</span><span style="font-size:50%">a</span><span style="font-size:75%">l</span><span style="font-size:90%">i</span><span style="font-size:100%">f</span><span style="font-size:125%">o</span><span style="font-size:133%">r</span><span style="font-size:150%">n</span><span style="font-size:175%">i</span><span style="font-size:200%">a</span></span>
         <span value="NM" disabled="disabled">New<br>&nbsp;&nbsp;Mexico</span>
     </div>
+
+Setting Width
+-------------
+
+By default, the width of the select widget will be to fit the width of the selected item.  However, you can specify a width on the select to force a fixed width.
+
+.. cv-compound::
+  :version: local
+
+  .. cv:: javascript
+
+    <script>
+      if(dojo.version.toString() < "1.4"){
+          dojo.require("dojox.form.DropDownSelect");
+      }else{
+          dojo.require("dijit.form.Select");
+      }
+    </script>
+
+  .. cv:: html
+
+    <div dojoType="dijit._Widget" style="display:none;">
+        <script type="dojo/method" event="postCreate">
+            // create dijit.form.Select as a simple wrapper to dojox.form.DropDownSelect for Dojo < 1.4
+            if(!dijit.form.Select){
+                dojo.declare("dijit.form.Select", dojox.form.DropDownSelect, {});
+            }
+        </script>
+    </div>
+    <select jsId="s3" name="s3" id="s3" style="width: 150px;" dojoType="dijit.form.Select">
+        <option value="AL">Alabama</option>
+        <option value="AK">Alaska</option>
+        <option type="separator"></option>
+        <option value="AZ">Arizona</option>
+        <option value="AR">Arkansas</option>
+        <option type="separator"></option>
+        <option value="CA">California</option>
+    </select>
