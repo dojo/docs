@@ -143,6 +143,7 @@ fig 1.
 		data: jsondata0,
 		series: makeseries(jsondata0),
         	legendNode: "legenddiv",
+                animate: true,
         	theme: "dojox.charting.themes.Distinctive"
 		});
 	});
