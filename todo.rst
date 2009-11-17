@@ -113,10 +113,6 @@ Priority 3: Dijit
 
   needed: full page
 
-* `dijit.form.Select <dijit/form/Select>`_
-
-  needed: full page
-
 * `dijit.layout.LinkPane <dijit/layout/LinkPane>`_
 
   needed: full page
