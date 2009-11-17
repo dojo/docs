@@ -72,6 +72,10 @@ Priority 2: Dojo Core
 
   needed: full page
 
+* `dojo.colors <dojo/colors>`_
+
+  needed: full page
+
 * `dojo.rpc <dojo/rpc>`_
 
   needed: Everything (docs, examples, etc).
