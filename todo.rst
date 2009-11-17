@@ -76,6 +76,10 @@ Priority 2: Dojo Core
 
   needed: full page
 
+* `dojo.cookie <dojo/cookie>`_
+
+  needed: Introduction, usage info
+
 * `dojo.currency <dojo/currency>`_
 
   needed: full page
