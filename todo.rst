@@ -68,6 +68,10 @@ Top priority: dojo.js
 Priority 2: Dojo Core
 =====================
 
+* `dojo.AdapterRegistry <dojo/AdapterRegistry>`_
+
+  needed: full page
+
 * `dojo.rpc <dojo/rpc>`_
 
   needed: Everything (docs, examples, etc).
