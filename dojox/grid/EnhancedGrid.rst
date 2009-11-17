@@ -54,7 +54,7 @@ The following steps show a typical usage of EnhancedGrid:
       dojo.require("dojox.grid.enhanced.plugins.Menu");                 // Declarative pop-up menu feature
       dojo.require("dojox.grid.enhanced.plugins.NestedSorting");        // Nested sorting feature
       dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");    // Indirect selection
-                                                                        // (checkbox/radio button selection) feature
+                                                                        // (check box/radio button selection) feature
       ...
   </script>
 
@@ -284,7 +284,7 @@ Besides selecting or deselecting rows by clicking on check boxes, the SHIFT key 
 
 .. image:: extended-selection-checkboxes.gif
 
-* An additional selection technique is to swipe through check boxes (mouse down on the first, drag through the adjacent checkboxes and then release on the last).
+* An additional selection technique is to swipe through check boxes (mouse down on the first, drag through the adjacent check boxes and then release on the last).
 
 .. image:: swipe-checkbox.gif
 
@@ -294,24 +294,25 @@ Accessibility
 Keyboard Support
 ~~~~~~~~~~~~~~~~
 
-+------------+--------------------------------+
-| **Key**    | **Action**                     +
-+------------+--------------------------------+
-| UP/Down    | Navigate keyboard focus across +
-| arrow keys | cells that contain radio       +
-|            | buttons or check boxes         +
-+------------+--------------------------------+
-| SPACE key  | * Radio button - select a row  +
-|            | * Check box - select or        +
-|            |   de-select a row.             +
-+------------+--------------------------------+
-| SHIFT +    | Select or de-select a range    +
-| SPACE key  | of rows                        +
-+------------+--------------------------------+
-| SHIFT+     | Extend the selection or        +
-| UP/Down    | de-selection - only for        +
-| arrow keys | check boxes   .                +
-+------------+--------------------------------+
++---------   ---+--------------------------------+
+| **Key**       | **Action**                     +
++---------------+--------------------------------+
+| UP/Down       | Navigate keyboard focus across +
+| arrow keys    | cells that contain radio       +
+|               | buttons or check boxes         +
++---------------+--------------------------------+
+| SPACE key     | * Radio button - select a row  +
+|               | * Check box - select or        +
+|               |   de-select a row.             +
++---------------+--------------------------------+
+| SHIFT + Click | Select or de-select a range    +
+| SHIFT +       | of rows                        +
+| SPACE key     |                                +
++---------------+--------------------------------+
+| SHIFT+        | Extend the selection or        +
+| UP/Down       | de-selection - only for        +
+| arrow keys    | check boxes   .                +
++---------------+--------------------------------+
 
   * The above keys are only effective when keyboard focus is in the first column that contains radio buttons or check boxes.
 
@@ -320,7 +321,7 @@ Note that extended selection is also enabled through the row headers as well.
 Tips
 ----
 
-* When "Indirect Selection" feature is enabled, you could handle row selection programmatically as follows.
+* When the "Indirect Selection" feature is enabled, you could handle row selection programmatically as follows.
 
 .. code-block :: javascript
   :linenos:
@@ -346,7 +347,7 @@ Tips
   dijit.byId('grid').selection.selected[rowIndex] // returns true or false
     
 ========================
-Declarative context menu
+Declarative Context Menu
 ========================
 
 With this new feature, users can add context menus either through declarative HTML markup or JavaScript. The following menu types are supported:
@@ -405,9 +406,9 @@ Tips
 ----
 TODO: tips - bind events to onxxContextMenu(e) 
 
-=================================
-Selecting Rows/Columns with Swipe
-=================================
+==========================================
+Selecting Multiple Rows/Columns with Swipe
+==========================================
 
 This feature provides a mechanism to select row(s) and column(s) via mouse clicking, swiping or keyboards.
 
@@ -420,7 +421,7 @@ The following figure shows a sample of row headers and column select regions
 
 .. image:: swipe-rows&columns.png
 
-As noted above, swipe-select is also possible when check boxes are used for row selection.
+As noted above, swipe-select is also possible when the check box mode of Indirect Selection is are used for row selection.
 
 Usage
 -----
@@ -462,7 +463,7 @@ Scenario
 Selecting rows/columns via mouse clicking/keyboard
 --------------------------------------------------
 
-You can also select multiple non-adjacent rows/columns by holding CTRL key or select a range of adjacent rows/columns by holding SHIFT key and selecting another row.
+You can also select multiple non-adjacent rows/columns by holding CTRL key or select a range of adjacent rows/columns by holding SHIFT key and selecting another row. These techniques can be used with either the row headers or checkboxes for multiple row selection.
 
 .. image:: extended-selection-checkboxes.gif
 
@@ -481,9 +482,8 @@ Keyboard Support
 +------------+--------------------------------+
 | **Key**    | **Action**                     +
 +------------+--------------------------------+
-| CTRL +     | Navigate keyboard focus across +
-| UP/Down    | row headers                    +
-| arrow keys |                                +
+| UP/Down    | Navigate keyboard focus across +
+| arrow keys | row headers                    +
 +------------+--------------------------------+
 | Left/Right | Navigate keyboard focus across +
 | arrow keys | column headers                 +
@@ -499,7 +499,7 @@ Keyboard Support
 | arrow keys |                                +
 +------------+--------------------------------+
 
-  * The above keys are only effective when keyboard focus is in row headers or select regions of column headers.
+  * The above key bindings are only effective when keyboard focus is in row headers or select regions of column headers.
 
 Tips
 ----
@@ -529,7 +529,7 @@ Tips
 
   dijit.byId('grid').select.selectedColumns[columnIndex] // returns true or false , for column
 
-* A topic named "rowSelectionChangedTopic" will be published when row selections are changed, you could simply subscribe the topic as:
+* A topic named "rowSelectionChangedTopic" will be published when row selections are changed. You can subscribe the topic as:
 
 .. code-block :: javascript
   :linenos:
@@ -540,12 +540,12 @@ Tips
 Drag-n-drop: rows, columns - MOVE
 =================================
 
-This feature is an enhancement to the single Column moving feature of base DataGrid. Once rows or columns are selected, they can be moved to the target position by dragging them.
+This feature is an enhancement to the single column moving feature of base DataGrid. Once rows or columns are selected, they can be moved to the target position by dragging them.
  
 Note:
 
 * This feature is implemented as part of the "DnD" plugin of EnhancedGrid.
-* This feature is only effective to selected rows or columns.
+* Rows and columns must be selected before being dragged.
 
 Usage 
 -----
@@ -559,9 +559,9 @@ Scenario
 
 .. image:: drag-contiguous-rows-and-columns.gif
 
-* Moving noncontiguous rows/columns.
+* Moving discontiguous rows/columns.
 
-  Noncontiguous rows and columns can be moved using drag-drop as well. The moved columns and rows will be adjacent, in their original relative order, after the move.
+  Discontiguous  rows and columns can be moved using drag-drop as well. The moved columns and rows will be adjacent, in their original relative order, after the move.
 
 .. image:: drag-non-contiguous-rows-and-columns.gif
 
@@ -575,20 +575,19 @@ Keyboard Support
 | **Key**    | **Action**                     +
 +------------+--------------------------------+
 | CTRL +     | Move row(s) upward or downward +
-| UP/Down    |                                +
+| UP/Down    | by one row                     +
 | arrow keys |                                +
 +------------+--------------------------------+
 | CTRL +     | Move column(s) leftward        +
-| LEFT/RIGHT | or rightward                   +
+| LEFT/RIGHT | or rightward  by one column    +
 | arrow keys |                                +
 +------------+--------------------------------+
-
-  * The above keys are only effective when keyboard focus is in row headers or select regions of column headers.
 
 ============
 Known Issues
 ============
 
+* See the `outstanding tickets for the EnhancedGrid <http://bugs.dojotoolkit.org/query?status=assigned&status=new&status=reopened&component=DojoX+Grid&order=priority&owner=Evan&type=defect&col=id&col=summary&col=status&col=type&col=priority&col=milestone&report=93#no2>`_.
 
 ========
 See also
