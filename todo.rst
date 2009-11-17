@@ -76,6 +76,10 @@ Priority 2: Dojo Core
 
   needed: full page
 
+* `dojo.currency <dojo/currency>`_
+
+  needed: full page
+
 * `dojo.rpc <dojo/rpc>`_
 
   needed: Everything (docs, examples, etc).
