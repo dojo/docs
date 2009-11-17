@@ -17,15 +17,15 @@ Enhanced DataGrid adds numerous useful features to dojox.grid.
 Introduction
 ============
 
-EnhancedGrid (dojox.grid.EnhancedGrid) provides a rich set of features that enhance the capabilities of base DataGrid. The following enhancements are implemented in Dojo 1.4:
+EnhancedGrid (dojox.grid.EnhancedGrid) provides a rich set of features that enhance the capabilities of base DataGrid. The following accessible enhancements are implemented in Dojo 1.4:
 
 * Nested Sorting
 * Built-in support for Indirect Selection (radio buttons and check boxes)
-* Declarative context menu
-* Selecting rows or columns by swiping
+* Declarative context menus
+* Selecting multiple rows or columns by swiping
 * Moving multiple rows or columns with drag-n-drop
 
-There is currently a project to implement a `Grid plugin architecture <dojox/grid/pluginAPI>`_. To be compatible with this work, EnhancedGrid features are implemented as plugins which can be loaded on demand. As a result, the required features must first declared before they can be used.
+EnhancedGrid features are implemented as plugins which can be loaded on demand. As a result, the required features must first declared before they can be used.
 
 =====
 Usage
@@ -79,7 +79,7 @@ TODO:  Add a live EDG demo here
 Nested Sorting
 ==============
 
-This feature enhances the single sorting feature of base DataGrid. Nested sorting allows users to sort on one or more columns concurrently and also control the sort direction and order.
+This feature enhances the single sorting feature of base DataGrid. Nested sorting allows users to sort on one or more columns concurrently and also control the sort direction and order. Finally, columns can be removed from the sort without disturbing the rest of the sort.
 
 Usage
 -----
@@ -121,18 +121,18 @@ When nested sorting is enabled, you can also use comparatorMap for custom sortin
 Scenario
 --------
 
-The followings are typical scenario of nested sorting:
+The following are typical scenarios using nested sorts:
 
 * When there is no sorting established, a unary (single) sort caret is shown when the mouse hovers over a column. The upward direction of the caret reflects that this will result in an ascending sort.
 
 .. image:: sort-1.png
 
-* Once the sort choice is selected for the 'Genre' column, the grid rows will be sorted by the values in Genre. Note that the keyboard focus moves to the sort choice in response to the mouse click.
+* Once the sort choice is selected for the 'Genre' column, the grid rows will be sorted ascending based on by the values in Genre. Note that the keyboard focus moves to the sort choice in response to the mouse click. The graphical label of the sort choice is a downward caret since the function would be a descending sort.
 
 .. image:: sort-2.png
 
-* Then the nested sort tip will be shown when the mouse hovers over a other columns.
-* Clicking region "A" will execute a nested sort, and the rows will be sorted by Artist in this example within Genre.
+* Then the nested sort tip is shown when the mouse hovers over a other column headers.
+* Clicking region "A" in the figure below will execute a nested sort, and the rows will be sorted by Artist in this example within Genre.
 * Clicking region "B" will reset the sort, and the rows will be sorted by Artist alone.
 
 .. image:: nested-sort-1.png
@@ -141,7 +141,7 @@ The followings are typical scenario of nested sorting:
 
 .. image:: descending-sort-1.png
 
-* Once a column is sorted descending, the sort choice changes to a 'remove sort' function. When a column is removed from the sort, other columns in the sort will be adjusted to reflect the new sort order. For example, Year would become the second column in the sort if is had previously been the third.
+* Once a column is sorted descending, the sort choice changes to a 'remove sort' function (see the figure below). When a column is removed from the sort, other columns in the sort will be adjusted to reflect the new sort order. For example, Year would become the second column in the sort if is had previously been the third.
 
 .. image:: remove-sort.png
 
