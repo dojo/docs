@@ -514,11 +514,3 @@ gridWidget: Object
 ~~~~~~~~~~~~~~~~~~
  The grid widget, if any
 
-
- 
-Demos
------
-
-fig 2. DataPresentation Demo: http://dleadt.torolab.ibm.com/dl/charts/testd.html
-
-.. image:: datapres6.png
