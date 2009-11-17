@@ -141,11 +141,13 @@ The following are typical scenarios using nested sorts:
 
 .. image:: descending-sort-1.png
 
-* Once a column is sorted descending, the sort choice changes to a 'remove sort' function (see the figure below). When a column is removed from the sort, other columns in the sort will be adjusted to reflect the new sort order. For example, Year would become the second column in the sort if is had previously been the third.
+* Once a column is sorted descending, the sort choice changes to a 'remove sort' function (see the figure below). When a column is removed from the sort, other columns in the sort will be adjusted to reflect the new sort order. For example, Year would become the second column in the sort if it had previously been the third.
 
 .. image:: remove-sort.png
 
 To summarize, the sort choice cycles among sort-ascending, sort-descending, and remove sort functions.
+
+There is no limit to the number of columns that may be in the sort.
 
 
 Accessibility
@@ -165,7 +167,7 @@ Keyboard Support
 |            | with the keyboard focus        +
 +------------+--------------------------------+
 
-  * The above keys are only effective when keyboard focus is in the region of column headers. 
+  * The above keys are only effective when keyboard focus is within the column headers. 
 
 Screen Readers
 ~~~~~~~~~~~~~~
@@ -227,11 +229,9 @@ Usage
       ...
   </script>
 
-* Use indirect selection feature
+* Use indirect selection feature with check boxes
 
- * Check boxes
-
-   ... with HTML markup
+  ... with HTML markup
     
 .. code-block :: javascript
   :linenos:
@@ -248,9 +248,9 @@ Usage
       var grid = new dojox.grid.EnhancedGrid({id: "grid", plugins: {indirectSelection: true}, ...}, dojo.byId('gridDiv'));
   </script>
 
-  * Radio buttons
+  * Use indirect selection feature with radio buttons
 
-    ... with HTML markup
+  ... with HTML markup
     
 .. code-block :: javascript
   :linenos:
