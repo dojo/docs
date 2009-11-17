@@ -80,6 +80,7 @@ The chart is placed in 'chartdiv', and the legend is placed in 'legenddiv'.
 		data: jsondata0,
 		series: makeseries(jsondata0),
         	legendNode: "legenddiv",
+                animate: true,
         	theme: "dojox.charting.themes.Distinctive"
 		});
 	});
