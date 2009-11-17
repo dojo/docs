@@ -49,7 +49,7 @@ Top priority: dojo.js
 
   needed: review necessary
 
-  Group DOM Query & Manipulation related pages into a book section
+  Group DOM Query & Manipulation related pages into a book section (we need both, a task-oriented overview and a reference page with examples)
 
 * `dojo.provide <dojo/provide>`_
 
