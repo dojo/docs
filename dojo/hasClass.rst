@@ -52,7 +52,7 @@ Using `dojo.query <dojo/query>`_ to find a node and check if it has a class:
      }
   });
 
-Note: You do not need to explicitly check for``dojo.hasClass`` before adding or removing a class with `dojo.addClass <dojo/addClass>`_ or `dojo.removeClass <dojo/removeClass>`_, they do it for you.
+Note: You do not need to explicitly check for ``dojo.hasClass`` before adding or removing a class with `dojo.addClass <dojo/addClass>`_ or `dojo.removeClass <dojo/removeClass>`_, they do it for you.
 
 
 ========
