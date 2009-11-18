@@ -3,10 +3,10 @@
 dojo.hasClass
 =============
 
-:Status: Draft
+:Status: Final
 :Version: 1.0
-:Project owner: ?--
-:Available: since V?
+:Project owner: Eugene Lazutkin
+:Available: since 0.9
 
 .. contents::
    :depth: 2
