@@ -172,9 +172,9 @@ This function is a simple convenience wrapper for `dojo.hasClass <dojo/hasClass>
 
   dojo.toggleClass = function(node, classStr, condition){
     if(condition === undefined){
-      condition = !d.hasClass(node, classStr);
+      condition = !dojo.hasClass(node, classStr);
     }
-    d[condition ? "addClass" : "removeClass"](node, classStr);
+    dojo[condition ? "addClass" : "removeClass"](node, classStr);
   };
 
 
