@@ -316,7 +316,7 @@ Suppose, for example, you have a class called ``VanillaSoftServe``, and classes 
   new Blizzard();
 
 
-This will first print "mixing in Vanilla" on the debug console because VanillaSoftServe is the superclass of Blizzard. In fact, VanillaSoftServe is the *only* superclass of Blizzard - the first class in the array of dependencies is used as a true super class (there are some exception, see `Advanced techniques`_ for more info). Next the constructors of other classes (the mixins) are called, so "mixing in MandMs" will appear.  Then "A blizzard with plain M and Ms and medium chunks of cookie dough." will appear.
+This will first print "mixing in Vanilla" on the debug console because VanillaSoftServe is the superclass of Blizzard. In fact, VanillaSoftServe is the *only* superclass of Blizzard - the first class in the array of dependencies is used as a true super class (there are some exception, see `Inheritance`_ for more info). Next the constructors of other classes (the mixins) are called, so "mixing in MandMs" will appear.  Then "A blizzard with plain M and Ms and medium chunks of cookie dough." will appear.
 
 Mixins are used a lot in defining Dijit classes, with most classes extending ``dijit._Widget`` and mixing in ``dijit._Templated``.
 
@@ -367,7 +367,7 @@ Another useful bit of information: only the first base (the last in an inheritan
   console.log(D instanceof A); // true
   console.log(D instanceof B); // false
 
-How to get around it? Use `isInstanceOf`_.
+How to get around it? Use `isInstanceOf()`_.
 
 Now on to more complex cases:
 
@@ -403,6 +403,40 @@ Since 1.4 ``dojo.declare`` uses `C3 superclass linearization <http://www.python.
   var E = dojo.declare([C, D]);
 
 As you can see ``D`` requires that ``B`` should go before ``A``, and ``C`` requires that ``A`` go before ``B``. It makes an inheritance chain for ``E`` impossible because these contradictory requirements cannot be satisfied. Obviously any other circular dependencies cannot be satisfied either. But any `DAG <http://en.wikipedia.org/wiki/Directed_acyclic_graph>`_ inheritance will be linearized correctly including the famous `Diamond problem <http://en.wikipedia.org/wiki/Diamond_problem>`_.
+
+In same rare cases it is possible to build a linear chain, which cannot reuse the base class:
+
+.. code-block :: javascript
+  :linenos:
+
+  // the first batch
+  var A = dojo.declare(null);
+  var B = dojo.declare(A);
+  var C = dojo.declare(B);
+
+  // the second batch
+  var D = dojo.declare(null);
+  var E = dojo.declare([D, B]);
+
+  // the quirky case
+  var F = dojo.declare([C, E]);
+
+Let's look at ``C`` and ``E`` inheritance chains:
+
+.. code-block :: html
+  :linenos:
+
+  C -> B -> A
+  E -> B -> D
+
+As you can see in one case ``B`` follows after ``A`` and in the other case it follows ``D``. How does ``F`` look like?
+
+.. code-block :: html
+  :linenos:
+
+  F -> C -> B -> D -> A
+
+As you can see all dependency rules are satisfied, yet the chain's tail doesn't match ``C`` as we are accustomed to see. Obviously ``instanceof`` would be useless in this case, but `isInstanceOf()`_ will work just fine. So when in doubt use `isInstanceOf()`_.
 
 Chaining
 --------
