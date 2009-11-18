@@ -33,7 +33,7 @@ Example 1:  Center a small DOM node (with background image) over a larger DOM no
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 .. cv-compound ::
-  :version: local
+  :version: 1.4-2.0
 
   .. cv :: javascript
 
@@ -84,7 +84,7 @@ Comparison of various DOM node position/size methods
 To see the effect of dojo.position's includeScroll boolean parameter, scroll the window down and click the 15x120 content area.
 
 .. code-example ::
-  :version: local
+  :version: 1.4-2.0
 
   .. javascript :: 
 
