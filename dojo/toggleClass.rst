@@ -38,6 +38,11 @@ Simple toggle
 
 The following example adds the class "style1" to the node "example1", if there is no such class for this node or removes it, if there is already such a class:
 
+.. code-block :: javascript
+  :linenos:
+
+  dojo.toggleClass("example1", "style1");
+
 .. cv-compound::
 
   .. css::
@@ -72,6 +77,11 @@ Forcefully add a class
 ----------------------
 
 The following example adds the class "style2" to the node "example2", no matter if there is already such a class for this node or not:
+
+.. code-block :: javascript
+  :linenos:
+
+  dojo.toggleClass("example2", "style2", true);
 
 .. cv-compound::
 
@@ -108,6 +118,11 @@ Toggle multiple nodes
 ---------------------
 
 toggleClass is also available for `NodeLists <dojo/NodeList>`_, so that it's also possible to toggle the class for multiple nodes. The following example toggles the class for each node in the NodeList returned from dojo.query:
+
+.. code-block :: javascript
+  :linenos:
+
+  dojo.query("#example3 div").toggleClass("style3");
 
 .. cv-compound::
 
