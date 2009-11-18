@@ -168,7 +168,6 @@ Add to multiple nodes
 See it in action:
 
 .. cv-compound::
-  :version: local
 
   .. css::
     :label: The CSS
