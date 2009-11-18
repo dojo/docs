@@ -32,28 +32,6 @@ If the second argument is not specified or ``undefined``, all classes will be re
 
 Space-separated classes, arrays, and optional removing of all classes are supported since 1.4.
 
-.. code-block :: javascript
-  :linenos:
-
-  dojo.removeClass("someNode","removedClass");
-
-  var node = dojo.byId("someNode").parentNode;
-  dojo.removeClass(node, "someClass");
-
-  dojo.removeClass(node, "someClass2 someClass3");
-  dojo.removeClass(node, ["someClass4", "someClass5"]);
-  dojo.removeClass(node);
-
-
-You can also use removeClass as a dojo.query chain:
-
-.. code-block :: javascript
-  :linenos:
-
-  dojo.query(".someSelector").removeClass("someClass");
-
-The example above will remove ``class="someClass"`` from all nodes that have ``class="someSelector"``, if the node already has the class.
-
 
 ========
 Examples
