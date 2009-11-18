@@ -88,19 +88,7 @@ To see the effect of dojo.position's includeScroll boolean parameter, scroll the
 
     <script type="text/javascript">
     function compareMethods(){
-	var testNode = dojo.byId('testNode'),
-	    contentBox = dojo.contentBox(testNode),
-	    marginBox = dojo.marginBox(testNode),
-	    position_win = dojo.position(testNode, true),
-	    position_view = dojo.position(testNode, false),
-	    coords_win = dojo.coords(testNode, true),
-	    coords_view = dojo.coords(testNode, false);
-	for (var attr in {x:0,y:0,w:0,h:0,l:0,t:0}){
-		for (var fcn in {position_win:0, position_view:0, marginBox:0, contentBox:0, coords_win:0, coords_view:0}){
-			var val = eval(fcn)[attr];
-			dojo.byId(fcn+"_"+attr).innerHTML = !isNaN(val)?val:"--";
-		}
-	}
+	alert(1);
     }
     dojo.addOnLoad(function(){
 	compareMethods();
