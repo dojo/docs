@@ -82,11 +82,11 @@ Comparison of various DOM node position/size methods
 ----------------------------------------------------
 To see the effect of dojo.position's includeScroll boolean parameter, scroll the window down and click the 15x120 content area.
 
-.. cv-compound ::
+.. code-example ::
   
-  .. cv :: javascript
+  .. javascript :: 
 
-    <script>
+    <script type="text/javascript">
     function compareMethods(){
 	var testNode = dojo.byId('testNode'),
 	    contentBox = dojo.contentBox(testNode),
@@ -107,7 +107,7 @@ To see the effect of dojo.position's includeScroll boolean parameter, scroll the
     });
     </script>
 
-  .. cv :: html 
+  .. html :: 
 
     <fieldset style="display:inline;border:15px solid gray;border-width:15px 0 0 15px;margin:0px;padding:0px;font:14px monospace;background-color:white;outline:1px dotted black;">
 	<fieldset style="display:inline;border:0px;border:0px;padding:0px;width:270px;height:165px;overflow:hidden;position:relative;left:-15px;top:-15px;">
