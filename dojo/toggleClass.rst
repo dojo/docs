@@ -3,15 +3,15 @@
 dojo.toggleClass
 ================
 
-:Status: Draft
-:Version: 1.0
-:Project owner: ?--
-:Available: since V?
+:Status: Final
+:Version: 1.4
+:Project owner: Eugene Lazutkin
+:Available: since 0.9
 
 .. contents::
    :depth: 2
 
-Simply toggles a className (or now in 1.4 an array of classNames).
+Simply toggles (adds or removes) a CSS class.
 
 ============
 Introduction
@@ -19,23 +19,15 @@ Introduction
 
 dojo.toggleClass adds a class to node if not present, or removes if present.
 
-
 =====
 Usage
 =====
 
-Pass a boolean condition if you want to explicitly add or remove.
+The function takes up to three arguments:
 
-dojo.toggleClass(node, classStr, condition)
-
-  =========  ==============  =================================================
-  Parameter  Type            Description
-  =========  ==============  =================================================
-  node       DomNode|String  The node which should changed.
-  classStr   string          name of the class to add or remove
-  condition  true|false      Optional. true means to add the class, false means to remove.
-  =========  ==============  =================================================
-
+1. A DOM node or its node id (as a string).
+2. A CSS class name as a string.
+3. Optional. A Boolean flag. If ``true`` we add classes, otherwise we remove classes. If not specified, the class will be removed if it is already present on the node, and added otherwise.
 
 ========
 Examples
@@ -151,7 +143,6 @@ toggleClass is also available for `NodeLists <dojo/NodeList>`_, so that it's als
     </div>
     <button id="button3" dojoType="dijit.form.Button" type="button">Toggle multiple nodes</button>
 
-
 ========
 See also
 ========
@@ -159,4 +150,3 @@ See also
 * `dojo.addClass <dojo/addClass>`_
 * `dojo.hasClass <dojo/hasClass>`_
 * `dojo.removeClass <dojo/removeClass>`_
-* `dojo.style <dojo/style>`_
