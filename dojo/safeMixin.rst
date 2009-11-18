@@ -3,7 +3,7 @@
 dojo.safeMixin
 ==============
 
-:Status: Draft
+:Status: Final
 :Version: 1.4
 :Available: since 1.4
 :Author: Eugene Lazutkin
@@ -17,7 +17,7 @@ dojo.safeMixin
 Basic Usage
 ===========
 
-The function is usually used with classes and instances produced by `dojo.declare <dojo/declare>`_. It takes two parameters (both objects): target and source of properties.
+The function is usually used with classes and instances produced by `dojo.declare <dojo/declare>`_. It takes two parameters (both objects): target and source of properties. Just like `dojo.mixin <dojo/mixin>`_ it returns ``target``.
 
 .. code-block :: javascript
   :linenos:
