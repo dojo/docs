@@ -87,37 +87,11 @@ To see the effect of dojo.position's includeScroll boolean parameter, scroll the
   .. javascript :: 
 
     <script type="text/javascript">
-    function compareMethods(){
-	alert(1);
-    }
-    dojo.addOnLoad(function(){
-	compareMethods();
-    });
-    </script>
+       </script>
 
   .. html :: 
 
-    <fieldset style="display:inline;border:15px solid gray;border-width:15px 0 0 15px;margin:0px;padding:0px;font:14px monospace;background-color:white;outline:1px dotted black;">
-	<fieldset style="display:inline;border:0px;border:0px;padding:0px;width:270px;height:165px;overflow:hidden;position:relative;left:-15px;top:-15px;">
-		<div id="testNode" style="display:inline;margin:25px;border:20px solid gray;padding:30px;float:left;position:relative;left:15px;top:15px;" onclick="compareMethods()">
-			<center style="display:block;margin:0px;padding:0px;border:0px;width:120px;height:15px;background-color:gray;color:white;overflow:hidden;">15x120 content</center>
-			<nobr style="position:absolute;left:2px;top:2px;color:black;">padding 30px</nobr>
-			<nobr style="position:absolute;left:-18px;top:-18px;color:white;">border 20px</nobr>
-			<nobr style="position:absolute;left:-43px;top:-43px;color:black;">margin 25px</nobr>
-			<nobr style="position:absolute;left:-63px;top:-63px;color:white;">left/top 15px</nobr>
-		</div>
-	</fieldset>
-    </fieldset>
-    <table rules=all cellpadding=2 cellspacing=2 border=2 style="font:16px monospace;text-align:center;">
-	<tr><td></td><td colspan="6">attribute</td></tr>
-	<tr><td>function</td><td>x</td><td>y</td><td>w</td><td>h</td><td>l</td><td>t</td></tr>
-	<tr><td style="text-align:left;">dojo.position(node,true)</td><td id="position_win_x"></td><td id="position_win_y"></td><td id="position_win_w"></td><td id="position_win_h"></td><td id="position_win_l"></td><td id="position_win_t"></td></tr>
-	<tr><td style="text-align:left;">dojo.position(node,false)</td><td id="position_view_x"></td><td id="position_view_y"></td><td id="position_view_w"></td><td id="position_view_h"></td><td id="position_view_l"></td><td id="position_view_t"></td></tr>
-	<tr><td style="text-align:left;">dojo.marginBox(node)</td><td id="marginBox_x"></td><td id="marginBox_y"></td><td id="marginBox_w"></td><td id="marginBox_h"></td><td id="marginBox_l"></td><td id="marginBox_t"></td></tr>
-	<tr><td style="text-align:left;">dojo.contentBox(node)</td><td id="contentBox_x"></td><td id="contentBox_y"></td><td id="contentBox_w"></td><td id="contentBox_h"></td><td id="contentBox_l"></td><td id="contentBox_t"></td></tr>
-	<tr style="color:gray;"><td style="text-align:left;">dojo.coords(node,true)</td><td id="coords_win_x"></td><td id="coords_win_y"></td><td id="coords_win_w"></td><td id="coords_win_h"></td><td id="coords_win_l"></td><td id="coords_win_t"></td></tr>
-	<tr style="color:gray;"><td style="text-align:left;">dojo.coords(node,false)</td><td id="coords_view_x"></td><td id="coords_view_y"></td><td id="coords_view_w"></td><td id="coords_view_h"></td><td id="coords_view_l"></td><td id="coords_view_t"></td></tr>
-    </table>
+    <div>hi</div>
 
 
 
