@@ -5,7 +5,7 @@ dojo.replace
 
 :Status: Final
 :Version: 1.4
-:Available: since V1.4
+:Available: since 1.4
 :Author: Eugene Lazutkin
 
 .. contents::
