@@ -83,6 +83,7 @@ Comparison of various DOM node position/size methods
 To see the effect of dojo.position's includeScroll boolean parameter, scroll the window down and click the 15x120 content area.
 
 .. code-example ::
+  :version: local
 
   .. javascript :: 
 
