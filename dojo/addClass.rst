@@ -27,7 +27,7 @@ The function takes two arguments:
 
   dojo.addClass("someNode", "someClass");
   dojo.addClass("someNode", "someClass class1 class2");
-  
+
   var node = dojo.byId("someNode").parentNode;
   dojo.addClass(node, "someClass");
   dojo.addClass(node, "someClass2 someClass3");
