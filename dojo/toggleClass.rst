@@ -39,9 +39,10 @@ Simple toggle
 The following example adds the class "style1" to the node "example1", if there is no such class for this node or removes it, if there is already such a class:
 
 .. code-block :: javascript
-  :linenos:
 
   dojo.toggleClass("example1", "style1");
+
+See it in action:
 
 .. cv-compound::
 
@@ -83,6 +84,8 @@ The following example adds the class "style2" to the node "example2", no matter 
 
   dojo.toggleClass("example2", "style2", true);
 
+See it in action:
+
 .. cv-compound::
 
   .. css::
@@ -123,6 +126,8 @@ toggleClass is also available for `NodeLists <dojo/NodeList>`_, so that it's als
   :linenos:
 
   dojo.query("#example3 div").toggleClass("style3");
+
+See it in action:
 
 .. cv-compound::
 
