@@ -443,7 +443,7 @@ Chaining
 
 New in 1.4.
 
-By default only constructors are chained automatically. In some cases user may want to chain other methods too, e.g., life-cycle methods, which govern how instances are created, modified, and destroy, or methods called for various events. Good example is ``destroy()`` method, which destroys external objects and references and can be used by all base classes of an object.
+By default only constructors are chained automatically. In some cases user may want to chain other methods too, e.g., life-cycle methods, which govern how instances are created, modified, and destroy, or methods called for various events. Good example is ``destroy()`` method, which destroys external objects and references and can be used by all super classes of an object.
 
 While ``this.inherited()`` takes care of all scenarios, chaining has following benefits:
 
@@ -451,7 +451,7 @@ While ``this.inherited()`` takes care of all scenarios, chaining has following b
 * It is automatic. User cannot forget to call a superclass method.
 * Less code to write, less code to worry about.
 
-Chained methods cannot be functions: all returned values are going to be ignored. They all be called with the same arguments. A good practice is to avoid modifications to the arguments. It will ensure that your classes play nice with others when used as superclasses.
+Chained methods should not return values: all returned values are going to be ignored. They all be called with the same arguments. A good practice is to avoid modifications to the arguments. It will ensure that your classes play nice with others when used as superclasses.
 
 There are two ways to chain methods: **after** and **before** (`AOP <http://en.wikipedia.org/wiki/Aspect-oriented_programming>`_ terminology is used). **after** means that a method is called after its superclass' method. **before** means that a method is called before calling its superclass method. All chains are described in a special property named ``-chains-``:
 
@@ -530,7 +530,7 @@ By default all constructors are chained using **after** algorithm (using `AOP <h
 
 The exact algorithm of an instance initialization for chained constructors:
 
-#. If the first argument of the constructor is an object and it has ``preamble()`` property, it is called with ``arguments`` pseudo-array in ``this`` context. If it returns a *truthy* value it will be used as a new set of arguments for all superclass constructors. **Please don't use this feature! It is error-prone, slows down the initialization, and it is deprecated since 1.4!**
+#. If the first argument of constructor is an object and it has ``preamble()`` property, it is called with ``arguments`` pseudo-array in ``this`` context. If it returns a *truthy* value it will be used as a new set of arguments for all superclass constructors. **Please don't use this feature! It is error-prone, slows down the initialization, and it is deprecated since 1.4!**
 #. If the class has its own ``preamble()`` method, it is called with ``arguments`` pseudo-array in ``this`` context. If it returns a *truthy* value it will be used as a new set of arguments for all superclass constructors. **Please don't use this feature! It is error-prone, slows down the initialization, and it is deprecated since 1.4!**
 #. Superclass constructors are called recursively with original arguments, which could be overridden or modified by two passes of ``preamble()`` described above.
 #. The class own constructor is called with original arguments (unless they were modified indirectly by ``preamble()`` or superclass constructors).
@@ -540,7 +540,7 @@ Notes:
 
 * A good practice for constructors is to avoid modifications of its arguments. It ensures that other classes can access original values, and allows to play nice when the class is used as a building block for other classes.
 * If you do need to modify arguments of superclass constructors consider `Manual constructor chaining`_ as a better alternative to ``preamble()``.
-* If a class doesn't use ``preamble()`` it switches the initialization to a fast path making instantiation substantially faster.
+* If a class doesn't use ``preamble()`` it switches the initialization to the fast path making an instantiation substantially faster.
 * For historical reasons ``preamble()`` is called for classes without a constructor and even for the last class in the superclass list, which doesn't have a superclass.
 
 Manual constructor chaining
@@ -589,7 +589,7 @@ The exact algorithm of an instance initialization for manual constructors:
 Notes:
 
 * Prefer manual constructors to deprecated ``preamble()``.
-* As soon as you switch to manual constructors **all** constructors in your hierarchy would be called manually. Make sure that all constructors are wired for that.
+* As soon as you switch to manual constructors **all** constructors in your hierarchy should be called manually. Make sure that all constructors are wired for that.
 * Chaining works faster than simulating it with ``this.inherited()``. Know when to use it.
 
 Constructor methods
@@ -602,7 +602,7 @@ extend
 
 This constructor method adds new properties to the constructor's prototype the same way as `dojo.extend <dojo/extend>`_ works. The difference is that it decorates function properties them the same way ``dojo.declare`` does. These changes will be propagated to all classes and object where this class constructor was a superclass.
 
-The method has one argument: an object to mix in.
+The method has one argument: an object to mix in. It returns the constructor itself, which can be used for chained calls.
 
 Example:
 
@@ -641,9 +641,9 @@ inherited()
 
 The method is used to call a superclass method. It accepts up to three arguments:
 
-* Optional name of the method to call. If it is specified it must match the name of the caller. Generally it should be specified when calling ``this.inherited()`` from an undecorated method.
+* Optional name of the method to call. Generally it should be specified when calling ``this.inherited()`` from an undecorated method, otherwise it will be deduced from the method itself.
 * ``arguments`` - literally ``arguments`` pseudo-variable, which is used for introspection.
-* Optional array of arguments, which will be used to call a superclass method. If it is not specified ``arguments`` are used.
+* Optional array of arguments, which will be used to call a superclass method. If it is not specified ``arguments`` are used. If this argument is a literal constant ``true``, then the found super method is not executed but returned as a value (see `getInherited()`_).
 
 It returns whatever value was returned by a superclass method that was called. If it turned out that there is no superclass method to call, ``inherited()`` doesn't do anything and returns ``undefined``.
 
@@ -786,6 +786,8 @@ Examples:
     var supermethod = this.getInherited("m2", arguments);
     this.logAndCall("A.m2", supermethod, [1, 2]);
   };
+
+Internally this method is a helper, which calls `inherited()`_ with ``true`` as the last argument.
 
 isInstanceOf()
 ~~~~~~~~~~~~~~
