@@ -29,6 +29,13 @@ IO Pipeline Topics
 * See `IO Pipeline Topics <dojo/ioPipelineTopics>`_ for more information.
 
 
+dojo.addClass
+-------------
+
+* Added support for space-separated class names, and arrays of class names.
+* See `dojo.addClass <dojo/addClass>`_ for more information.
+
+
 dojo.addOnLoad
 --------------
 
@@ -157,6 +164,13 @@ dojo.ready
 
 * A new alias for `dojo.addOnLoad <dojo/addOnLoad>`_.
 * See also `dojo.ready <dojo/ready>`_
+
+
+dojo.removeClass
+----------------
+
+* Added support for space-separated class names, arrays of class names, and the ability to remove all classes, if no class was specified.
+* See `dojo.removeClass <dojo/removeClass>`_ for more information.
 
 
 dojo.replace
