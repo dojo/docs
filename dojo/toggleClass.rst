@@ -161,6 +161,23 @@ See it in action:
     </div>
     <button id="button3" dojoType="dijit.form.Button" type="button">Toggle multiple nodes</button>
 
+=====================
+Technical information
+=====================
+
+This function is a simple convenience wrapper for `dojoi.hasClass <doijo/hasClass>`_, `dojo.addClass <dojo/addClass>`_ and `dojo.removeClass <dojo/removeClass>`_:
+
+.. code-block :: javascript
+  :linenos:
+
+  dojo.toggleClass = function(node, classStr, condition){
+    if(condition === undefined){
+      condition = !d.hasClass(node, classStr);
+    }
+    d[condition ? "addClass" : "removeClass"](node, classStr);
+  };
+
+
 ========
 See also
 ========
