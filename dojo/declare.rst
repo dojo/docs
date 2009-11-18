@@ -600,7 +600,7 @@ Every constructor created by ``dojo.declare`` defines some convenience methods.
 extend
 ~~~~~~
 
-This constructor method adds new properties to the constructor's prototype the same way as `dojo.extend <dojo/extend>`_ works. The difference is that it decorates function properties them the same way ``dojo.declare`` does. These changes will be propagated to all classes and object where this class constructor was a superclass.
+This constructor method adds new properties to the constructor's prototype the same way as `dojo.extend <dojo/extend>`_ works. The difference is that it annotates function properties them the same way ``dojo.declare`` does. These changes will be propagated to all classes and object where this class constructor was a superclass.
 
 The method has one argument: an object to mix in. It returns the constructor itself, which can be used for chained calls.
 
@@ -641,7 +641,7 @@ inherited()
 
 The method is used to call a superclass method. It accepts up to three arguments:
 
-* Optional name of the method to call. Generally it should be specified when calling ``this.inherited()`` from an undecorated method, otherwise it will be deduced from the method itself.
+* Optional name of the method to call. Generally it should be specified when calling ``this.inherited()`` from an un-annotated method, otherwise it will be deduced from the method itself.
 * ``arguments`` - literally ``arguments`` pseudo-variable, which is used for introspection.
 * Optional array of arguments, which will be used to call a superclass method. If it is not specified ``arguments`` are used. If this argument is a literal constant ``true``, then the found super method is not executed but returned as a value (see `getInherited()`_).
 
@@ -683,7 +683,7 @@ Examples:
   // extend B using extend()
   B.extend({
     m2: function(){
-      // this method is going to be properly decorated =>
+      // this method is going to be properly annotated =>
       // we can use the same form of this.inherited() as
       // normal methods:
       // simple super call with the same arguments
@@ -696,7 +696,7 @@ Examples:
   // extend B using dojo.extend()
   dojo.extend(B, {
     m3: function(){
-      // this method is not decorated =>
+      // this method is not annotated =>
       // we should supply its name when calling
       // a superclass:
       // simple super call with the same arguments
@@ -717,7 +717,7 @@ Examples:
   // add a method on the fly using dojo.safeMixin()
   dojo.safeMixin(x, {
     m4: function(){
-      // this method is going to be properly decorated =>
+      // this method is going to be properly annotated =>
       // we can use the same form of this.inherited() as
       // normal methods:
       // simple super call with the same arguments
@@ -729,7 +729,7 @@ Examples:
 
   // add a method on the fly
   x.m5 = function(){
-    // this method is not decorated =>
+    // this method is not annotated =>
     // we should supply its name when calling
     // a superclass:
     // simple super call with the same arguments
@@ -748,7 +748,7 @@ This is a companion method to `inherited()`_. The difference is that it doesn't 
 
 The method accepts up to two arguments:
 
-* Optional name of the method to call. If it is specified it must match the name of the caller. Generally it should be specified when calling this method from an undecorated method (the same rule as for `inherited()`_).
+* Optional name of the method to call. If it is specified it must match the name of the caller. Generally it should be specified when calling this method from an un-annotated method (the same rule as for `inherited()`_).
 * ``arguments`` - literally ``arguments`` pseudo-variable, which is used for introspection.
 
 The result is a superclass method or ``undefined``, if it was not found. You can use the result as you wish. The most useful case is to pass it to some other function, which cannot use `inherited()`_ directly for some reasons.
@@ -782,7 +782,7 @@ Examples:
   var x = new B();
   x.m2 = function(){
     // we need to use a name here because
-    // this method was not properly decorated:
+    // this method was not properly annotated:
     var supermethod = this.getInherited("m2", arguments);
     this.logAndCall("A.m2", supermethod, [1, 2]);
   };
@@ -890,7 +890,7 @@ Additionally a prototype has a special property named ``declaredClass``, if the 
 
 Every instance created by ``dojo.declare``'d class has a special property called ``_inherited``, which is used to speed up `inherited()`_ calls. Please don't touch it.
 
-Every method mixed in by ``dojo.declare`` or `dojo.safeMethod <dojo/safeMethod>`_ is decorated: a special property called ``nom`` is added. It contains a name of the method in question and used by `inherited()`_ and `getInherited()`_ to deduce the name of a superclass method. See `dojo.safeMixin <dojo/safeMixin>`_ for more details.
+Every method mixed in by ``dojo.declare`` or `dojo.safeMethod <dojo/safeMethod>`_ is annotated: a special property called ``nom`` is added. It contains a name of the method in question and used by `inherited()`_ and `getInherited()`_ to deduce the name of a superclass method. See `dojo.safeMixin <dojo/safeMixin>`_ for more details.
 
 ========
 See Also
