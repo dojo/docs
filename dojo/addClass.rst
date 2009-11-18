@@ -32,7 +32,7 @@ Examples
 Add a class
 -------------
 
-The following example adds the class "style1" to the node "example1", if there is no such class for this node or removes it, if there is already such a class:
+The following example adds the class "style1" to the node "example1":
 
 .. code-block :: javascript
 
