@@ -24,26 +24,6 @@ The function takes two arguments:
 
 Space-separated classes and arrays are supported since 1.4.
 
-.. code-block :: javascript
-  :linenos:
-
-  dojo.addClass("someNode", "someClass");
-
-  var node = dojo.byId("someNode").parentNode;
-  dojo.addClass(node, "someClass");
-
-  dojo.addClass(node, "someClass2 someClass3");
-  dojo.addClass(node, ["someClass4", "someClass5"]);
-
-When using ``addClass`` with `dojo.query <dojo/query>`_, the node argument is omitted:
-
-.. code-block :: javascript
-  :linenos:
-
-  dojo.query(".randomClass").addClass("anotherClass");
-
-will find all the nodes with `class="randomClass"` and add "anotherClass" to the class attribute.
-
 
 ========
 Examples
@@ -61,6 +41,7 @@ The following example adds the class "style1" to the node "example1", if there i
 See it in action:
 
 .. cv-compound::
+  :version: local
 
   .. css::
     :label: The CSS
@@ -102,6 +83,7 @@ The following example adds two classes: "style1" and "style2" to the node "examp
 See it in action:
 
 .. cv-compound::
+  :version: local
 
   .. css::
     :label: The CSS
@@ -144,6 +126,7 @@ The following example adds two classes: "style1" and "style2" to the node "examp
 See it in action:
 
 .. cv-compound::
+  :version: local
 
   .. css::
     :label: The CSS
@@ -186,6 +169,7 @@ Add a class to multiple nodes
 See it in action:
 
 .. cv-compound::
+  :version: local
 
   .. css::
     :label: The CSS
