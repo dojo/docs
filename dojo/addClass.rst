@@ -156,8 +156,8 @@ See it in action:
     <button id="button1" dojoType="dijit.form.Button" type="button">Add classes</button>
 
 
-Add a class to multiple nodes
------------------------------
+Add to multiple nodes
+---------------------
 
 ``addClass`` is also available for `NodeLists <dojo/NodeList>`_, so that it's also possible to add classes for multiple nodes. The following example adds the class for each node in the NodeList returned from dojo.query:
 
