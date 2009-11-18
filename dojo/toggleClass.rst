@@ -165,7 +165,7 @@ See it in action:
 Technical information
 =====================
 
-This function is a simple convenience wrapper for `dojoi.hasClass <doijo/hasClass>`_, `dojo.addClass <dojo/addClass>`_ and `dojo.removeClass <dojo/removeClass>`_:
+This function is a simple convenience wrapper for `dojo.hasClass <dojo/hasClass>`_, `dojo.addClass <dojo/addClass>`_ and `dojo.removeClass <dojo/removeClass>`_:
 
 .. code-block :: javascript
   :linenos:
