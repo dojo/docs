@@ -41,7 +41,6 @@ The following example adds the class "style1" to the node "example1", if there i
 See it in action:
 
 .. cv-compound::
-  :version: local
 
   .. css::
     :label: The CSS
