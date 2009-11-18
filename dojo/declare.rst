@@ -18,7 +18,7 @@ Javascript doesn't have a Class system like Java, though Dojo provides functiona
 
 If you prefer books, chapter 9 of `David Flanagan's JavaScript: The Definitive Guide, 5th edition <http://www.amazon.com/JavaScript-Definitive-Guide-David-Flanagan/dp/0596101996/ref=sr_1_1?ie=UTF8&s=books&qid=1257280051&sr=8-1>`_ is a good read.
 
-This section has some pretty abstract stuff, and you may wish to skip it on the first read.  Certainly you can do a lot with Dojo without using dojo.declare or the other object orientation functions.  But a good knowledge of it will help you program faster and smarter.
+This section has some pretty abstract stuff, and you may wish to skip it on the first read.  Certainly you can do a lot with Dojo without using ``dojo.declare`` or the other object orientation functions.  But a good knowledge of it will help you program faster and smarter.
 
 
 ===========
@@ -32,11 +32,11 @@ Basic Usage
 
   dojo.declare("my.Thinger", null, {
     constructor: function(/* Object */args){
-      dojo.mixin(this, args);
+      dojo.safeMixin(this, args);
     }
   });
 
-Here, we've declared a simple class named ``my.Thinger``, not based on anything, and finally providing a single property named constructor. The constructor function is run once for each mixed Class. In this example, we've simply mixed the passed arguments into ``this``, or our scoped reference to an instance of my.Thinger. You could then create a Thinger like so:
+Here, we've declared a simple class named ``my.Thinger``, not based on anything, and finally providing a single property named ``constructor``. The constructor function is run once for each mixed Class. In this example, we've simply mixed the passed arguments into ``this``, or our scoped reference to an instance of my.Thinger. You could then create a Thinger like so:
 
 .. code-block :: javascript
   :linenos:
@@ -52,7 +52,7 @@ The `dojo.mixin <dojo/mixin>`_ call (in the constructor) then mixes the variable
   dojo.declare("my.Thinger", null, {
     count: 100,
     constructor: function(args){
-      dojo.mixin(this, args);
+      dojo.safeMixin(this, args);
     }
   });
   var thing1 = new my.Thinger();
@@ -138,7 +138,7 @@ In pure JavaScript, this is handled by a prototype function named after the clas
 Arrays and Objects as member variables
 ======================================
 
-If your class contains arrays or other objects, they should be declared in the constructor so that each instance gets it's own copy. Simple types (literal strings and numbers) and are fine to declare in the class directly.
+If your class contains arrays or other objects, they should be declared in the constructor so that each instance gets it's own copy. Simple types (literal strings and numbers) are fine to declare in the class directly.
 
 
 .. code-block :: javascript
@@ -217,7 +217,7 @@ You initialize the subclass the same as the Person class with the new keyword.
   var kathryn = new Employee('Kathryn', 26, 'Minnesota', 'Designer');
   var matt    = new Person('Matt', 33, 'California');
 
-The Employee class passes the arguments down to the Person class (which uses only the first three), and sets the position. Kathryn has access to the login() function found in the Employee class, and also the moveToNewState() function by calling kathryn.moveToNewState("Texas"); Matt on the other hand, does not have access to the Employee login() function.
+The Employee class passes the arguments down to the Person class (which uses only the first three), and sets the position. Kathryn has access to the ``login()`` function found in the Employee class, and also the ``moveToNewState()`` function by calling ``kathryn.moveToNewState("Texas")``. Matt on the other hand, does not have access to the Employee ``login()`` function.
 
 Adding more arguments at the end of the argument list is a common idiom in Dojo. All arguments are passed to all constructors, but ancestor constructors take only first N arguments they know of ignoring the rest.
 
@@ -252,7 +252,7 @@ Calling Superclass Methods
 
 Often when you're overriding a method, you want to *add* something to the superclasses method, not totally replace it.  Dojo has helper functions to make this easy.
 
-But you don't have to worry in the constructor. As we said above, superclass constructors are *always* called automatically, and *always* before the subclass constructor. This convention reduces boilerplate in 90% of cases. If it doesn't fit your needs see `Advanced techniques`_ below.
+But you don't have to worry in the constructor. As we said above, superclass constructors are *always* called automatically, and *always* before the subclass constructor. This convention reduces boilerplate in 90% of cases. If it doesn't fit your needs see `Manual constructor chaining`_ below.
 
 For all other methods, you can use ``this.inherited()`` to call the superclass method of the same name.  Take for example:
 
@@ -267,7 +267,7 @@ For all other methods, you can use ``this.inherited()`` to call the superclass m
 
 Inherited will climb up the scope chain, from superclass to superclass, until it finds "someMethod", then it will invoke that method.
 
-The argument is always literally ``arguments``, a special Javascript array-like variable which holds all the arguments (like argv in C).
+The argument is always literally ``arguments``, a special Javascript array-like pseudo-variable which holds all the arguments (like argv in C).
 
 You can send custom parameters to the ancestor function.  Just place the extra arguments in array literal notation with brackets:
 
@@ -275,16 +275,16 @@ You can send custom parameters to the ancestor function.  Just place the extra a
 
   this.inherited(arguments, [ customArg1, customArg2 ]);
 
-See `Advanced techniques`_ for more details.
+See `inherited()`_ for more details.
 
 
 ====================
 Multiple inheritance
 ====================
 
-Just as Dojo adds class-based inheritance to JavaScript, so it adds support for *multiple inheritance*. In order to do it ``dojo.declare`` uses C3 superclass linearization. This algorithm is what Python uses for its implementation of multiple inheritance. You can learn more details in `The Python 2.3 Method Resolution Order <http://www.python.org/download/releases/2.3/mro/>`_. Essentially the algorithm builds a single inheritance chain respecting all dependencies and removing duplicated base classes.
+Just as Dojo adds class-based inheritance to JavaScript, so it adds support for *multiple inheritance*. In order to do it ``dojo.declare`` uses C3 superclass linearization. This algorithm is what Python and some other languages use for its implementation of multiple inheritance. You can learn more details in `The Python 2.3 Method Resolution Order <http://www.python.org/download/releases/2.3/mro/>`_. Essentially the algorithm builds a single inheritance chain respecting all dependencies and removing duplicated base classes.
 
-In pure object-oriented languages like Java, you must use typecasts to make an object "act like" its mixed-in class (in Java, this is through interfaces). Not in Dojo. You can use the mixed-in properties directly.
+In static languages like Java, you must use typecasts to make an object "act like" its mixed-in class (in Java, this is through interfaces). Not in Dojo. You can use the mixed-in properties directly.
 
 Suppose, for example, you have a class called ``VanillaSoftServe``, and classes ``MandMs`` and ``CookieDough``.  Here's how to make a ``Blizzard``:
 
