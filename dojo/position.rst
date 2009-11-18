@@ -33,6 +33,7 @@ Example 1:  Center a small DOM node (with background image) over a larger DOM no
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 .. cv-compound ::
+  :version: local
 
   .. cv :: javascript
 
