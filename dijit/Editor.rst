@@ -37,12 +37,12 @@ Limitations
   <script>
     dojo.addOnLoad(function(){
       var editor = dijit.byId("myEditor");
-    
+
       editor .onLoadDeferred.addCallback(function(){
-        editor.atte("value", "<b>This is new content.</b>");   
+        editor.atte("value", "<b>This is new content.</b>");
       });
     });
-  </script>      
+  </script>
 
   <div dojoType="dijit.Editor" id="myEditor">
     <p>This is the initial content.</p>
@@ -121,7 +121,7 @@ Most plugins have an associated toolbar button(s), such as the FontChoice plugin
 but some plugins (like AlwaysShowToolbar) just affect the Editor's behavior without changing the toolbar.
 
 The "plugins" parameter controls which plugins are available, and also controls which builtin editor commands
-are available.  It can also be used to re-arrange the default ordering of the buttons.  
+are available.  It can also be used to re-arrange the default ordering of the buttons.
 
 The basic plugins which are enabled by default are:
 undo, redo, cut, copy, paste, bold, italic, underline, strikethrough, insertOrderedList, insertUnorderedList, indent, outdent, justifyLeft, justifyRight, justifyCenter, justifyFull, dijit._editor.plugins.EnterKeyHandling
@@ -221,7 +221,7 @@ This is a list of the default commands (plugins) supported by the editor as buil
 +------------------------------+-----------------------------------------------------------------------------------------------------+
 | insertOrderedList            |Insert an ordered list (1, 2, 3, etc)                                                                |
 +------------------------------+-----------------------------------------------------------------------------------------------------+
-| insertUnorderedList          |Insert an unordered list (bullets)                                                                   | 
+| insertUnorderedList          |Insert an unordered list (bullets)                                                                   |
 +------------------------------+-----------------------------------------------------------------------------------------------------+
 | insertHorizontalRule         |Insert a horizontal line.                                                                            |
 +------------------------------+-----------------------------------------------------------------------------------------------------+
@@ -230,7 +230,7 @@ This is a list of the default commands (plugins) supported by the editor as buil
 | outdent                      |'Unindent' the current text block or list item.                                                      |
 +------------------------------+-----------------------------------------------------------------------------------------------------+
 | justifyLeft                  |Justify the current text block/selected text to the left.                                            |
-+------------------------------+-----------------------------------------------------------------------------------------------------+ 
++------------------------------+-----------------------------------------------------------------------------------------------------+
 | justifyRight                 |Justify the current text block/selected text to the right.                                           |
 +------------------------------+-----------------------------------------------------------------------------------------------------+
 | justifyCenter                |Center the current text block/selected text.                                                         |
@@ -302,7 +302,7 @@ DojoX (Dojo eXtensions) contains even more plugins for improving the capabilitie
 |                                             |                      |**New to Dojo toolkit 1.4.**                                          |
 +---------------------------------------------+----------------------+----------------------------------------------------------------------+
 |dojox.editor.plugins.PageBreak               |pagebreak             |A toolbar button and hotkey for inserting a 'page break' into the     |
-|                                             |                      |document.  When the document is printed, the printor will break to    |
+|                                             |                      |document.  When the document is printed, the printer will break to    |
 |                                             |                      |output to new pages at those points.                                  |
 |                                             |                      |**New to Dojo toolkit 1.4.**                                          |
 +---------------------------------------------+----------------------+----------------------------------------------------------------------+
