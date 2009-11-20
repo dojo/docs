@@ -14,8 +14,9 @@ The following browsers are supported. If a browser is not supported, it still ma
 
 * Firefox 2 support dropped. Firefox V3 and V3.5 supported.
 * Latest Safari (Safari v4) and latest Chrome (Chrome v3) supported, but not previous versions.
-* IE6, IE7, IE8 all supported
-* Keyboard now supported in all browsers (previously it didn't work in safari and on chrome)
+* IE6, IE7, IE8 all supported.
+* Latest Opera (Opera v10) (Dojo core only).
+* Keyboard now supported in all supported browsers (previously it didn't work on Safari and on Chrome)
 
 ====
 Dojo
