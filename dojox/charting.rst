@@ -105,7 +105,7 @@ Available 2D chart types include:
   * **ClusteredBars** - Horizontal bars with clustered data sets
   * **ClusteredColumns** - Vertical bars with clustered data sets
   * **Columns** - Vertical bars
-  * **Grid** - For adding a grid layer to you chart
+  * **Grid** - For adding a grid layer to your chart
   * **Lines** - Basic line chart
   * **Markers** - Lines with markers
   * **MarkersOnly** - Markers, sans lines
