@@ -65,7 +65,7 @@ Basic Portlet
 This example shows a very simplistic Portlet, with just a simple PortletSettings widget and text content.
 
 .. code-example::
-  :version: local
+  :version: 1.3.2-2.0
 
   Load the Portlet JavaScript.
 
@@ -106,7 +106,7 @@ This example shows a FeedPortlet with a single URL.  A FeedPortlet is an extensi
 The FeedPortlet displays the titles of the feed items, and shows the contents of each item, or story, in a tooltip when the mouse hovers over it.
 
 .. code-example::
-  :version: 1.4-2.0
+  :version: 1.3.2-2.0
 
   Load the Portlet JavaScript.
 
@@ -151,7 +151,7 @@ An ExpandableFeedPortlet is an extenstion of FeedPortlet.  Like FeedPortlet it c
 This example also shows the dojox.widget.PortletFeedSettings widget being used with multiple URLs.  If the PortletFeedSettings is created as a SELECT node, it will display multiple URLs to the user, along with labels which are more readable than URLs.
 
 .. code-example::
-  :version: 1.4-2.0
+  :version: 1.3.2-2.0
 
   Load the Portlet JavaScript.
 
@@ -194,7 +194,7 @@ Portlets In A Grid Container
 This examples shows Portlets as they are intended to be used, inside a dojox.layout.GridContainer.  It shows three Portlets, all of which can be dragged around the page.
 
 .. code-example::
-  :version: 1.4-2.0
+  :version: 1.3.2-2.0
 
   Load the Portlet and GridContainer JavaScript.
 
