@@ -65,7 +65,7 @@ Basic Portlet
 This example shows a very simplistic Portlet, with just a simple PortletSettings widget and text content.
 
 .. code-example::
-  :version: 1.4-2.0
+  :version: local
 
   Load the Portlet JavaScript.
 
