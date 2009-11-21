@@ -532,18 +532,21 @@ dojox.widget.DataPresentation
 * See also `dojox.widget.DataPresentation <dojox/widget/DataPresentation>`_
 
 
-
 ====
 Util
 ====
 
 Build System/buildscripts
 -------------------------
-Using Google's Closure Compiler is now supported in the build system. See the `Advanced Build Topics docs <build/index#using-google-s-closure-compiler>`_.
+
+* Using Google's Closure Compiler is now supported in the build system.
+* See the `Advanced Build Topics docs <build/index#using-google-s-closure-compiler>`_.
 
 Checkstyle
 ----------
-A Checkstyle tool has been added in util/checkstyle. This can be used to both flag style guide violations in either Dojo or custom JavaScript code, and also to fix the errors using an online tool.
+
+* A Checkstyle tool has been added in util/checkstyle. This can be used to both flag style guide violations in either Dojo or custom JavaScript code, and also to fix the errors using an online tool.
+* See also `util.checkstyle <util/checkstyle>`_
 
 
 =========
@@ -551,6 +554,7 @@ Bug fixes
 =========
 
 The `full list of bug fixes <http://bugs.dojotoolkit.org/query?status=closed&group=component&order=priority&milestone=1.4&resolution=fixed&col=id&col=summary&col=type&col=priority>`_ is located in the bug database.
+
 
 =========
 Upgrading
