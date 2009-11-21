@@ -78,8 +78,6 @@ dojo.declare
 * A drop-in replacement is committed, which is generally faster, and introduces enhancements to the familiar functionality. The announcement link: http://groups.google.com/group/dojo-interest/msg/4a22b20587e91d27
 * See also `dojo.declare <dojo/declare>`_
 
-TODO: document or link to blog post (Eugene)
-
 
 dojo.fieldToObject
 ------------------
