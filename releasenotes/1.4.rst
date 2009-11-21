@@ -367,6 +367,7 @@ dojox.charting
 
 * Added the simple animation for all bar- and column-based charts by Adam Jones and Dave Clark (IBM).
 * Now objects can be used with bar- and column-based charts. It means now we can have custom tooltip/color/fill/stroke for individual rectangles.
+* See also `dojox.charting <dojox/charting>`_
 
 dojox.charting.DataChart
 ------------------------
@@ -374,11 +375,18 @@ dojox.charting.DataChart
 * The new DataChart simplifies the task of connecting Data Stores to a Chart.
 * See also `dojox.charting.DataChart <dojox/charting/DataChart>`_
 
+dojox.data.jsonPathStore
+------------------------
+
+* This widget was out of sync due to the more advanced dojox.json capabilities and has been removed.
+* There is an equivalent widget which uses dojox.json ref and query in dojoc/dmachi/data called JsonStore for those who still need this capability. While they are not drop in replacements of each other, they are pretty close and it should not take a significant amount of time to convert, and the benefits gained in performance and querying flexibility are worth it.
+* See also `dojoc <dojoc/index>`_
 
 dojox.date
 ----------
 
-* Experimental time zone support via dojox.date.timezone.  Based off of the fleegix timezone support by Matthew Eernise.
+* Experimental time zone support via dojox.date.timezone. Based off of the fleegix timezone support by Matthew Eernise.
+* See also `dojoc <dojox/date>`_
 
 dojox.drawing
 -------------
