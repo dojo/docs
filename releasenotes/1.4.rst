@@ -386,7 +386,7 @@ dojox.date
 ----------
 
 * Experimental time zone support via dojox.date.timezone. Based off of the fleegix timezone support by Matthew Eernise.
-* See also `dojoc <dojox/date>`_
+* See also `dojox.date <dojox/date>`_
 
 dojox.drawing
 -------------
