@@ -3,6 +3,8 @@
 Release Notes Dojo Toolkit
 ==========================
 
+The Release Notes are specific to each version of the Dojo Toolkit. Please select your version from the list below to see the release notes for it. 
+
 * `Dojo Toolkit V1.4 Release Notes <releasenotes/1.4>`_
 * `Dojo Toolkit V1.3 Release Notes <releasenotes/1.3>`_
 * `Dojo Toolkit V1.2 Release Notes <http://dojotoolkit.org/book/dojo-1-2-release-notes>`_
