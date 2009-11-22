@@ -63,6 +63,10 @@ Top priority: dojo.js
 
   needed: review necessary
 
+* `dojo.getNodeProp <dojo/getNodeProp>`_
+
+  needed: full page (Eugene)
+
 
 =====================
 Priority 2: Dojo Core
