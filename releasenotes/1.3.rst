@@ -1,0 +1,217 @@
+#format dojo_rst
+
+Dojo 1.3 Release Notes
+=======================
+
+These are the release notes for the Dojo Toolkit V1.3 release.
+
+.. contents::
+  :depth: 3
+
+==============================
+Enhanced Cross Browser support
+==============================
+
+IE 8 support
+------------
+
+Dojo has been upgraded to work with IE8
+
+Chrome support
+--------------
+
+Chrome is supported, and also any other browsers based on the webkit renderer.
+
+What browsers are supported by this release?
+--------------------------------------------
+
+* Internet Explorer 6.0 through 8.0
+* Firefox 1.5, 2.0, and 3.0, Firefox 3.5 (1.3.2 only) (Dijit supports only FireFox 2+)
+* Safari 3.2, Safari 4.0 (1.3.2 only)
+* Chrome 1.0, Chrome 2.0 (1.3.2 only)
+* Opera 9.6 (Dojo Core only)
+* Konqueror 3.5+ (Dojo Core only)
+
+
+===================================================
+Enhancements within Dojo core and related libraries
+===================================================
+
+try/catch behavior changed with djConfig.debugAtAllCosts = true
+---------------------------------------------------------------
+
+* Some modules in Dojo Core (XHR, Deferred, dojo.addOnLoad callback code) would catch errors and either just report them in the console or did another throw which made it hard to track the origin of the error. This was done to keep the code robust and running in the page. However, for development scenarios it made it hard to track down the origin of the error.
+* Now, those modules let the original exception bubble up, stopping JavaScript execution if djConfig.debugAtAllCosts is set to true. **This is different from Dojo 1.2** where the trigger was djConfig.isDebug.
+* If djConfig.debugAtAllCosts is set to false (or undefined) then a try/catch is used and the error is logged to the console.
+
+host environments/bootstrap
+---------------------------
+
+* Added a XUL host environment and support for that in the bootstrap loader.
+* Added support in the bootstrap (source version of dojo.js) for documents which disallow document.write (such as pages served with a mime type of "application/xhtml+xml").
+* dojo.isChrome and dojo.isWebKit available. dojo.isWebKit now gives version numbers like 525.3. KHTML detection changed to just support being defined for KHTML browsers only, since other KHTML-related browsers are likely more sensitive to dojo.isWebKit versions. Changed dojo.isSafari check so that now Safari 3.1.2 now correctly reports as dojo.isSafari 3.1. But with that change, Chrome browser does not have dojo.isSafari defined, which should be good, since we now have dojo.isWebKit and then dojo.isChrome for chrome-specific (non-webkit) issues. Now that there are webkit numbers, switched to DOMContentLoaded for webkit versions that support it.
+
+Base API additions
+------------------
+
+* dojo.create introduced to alias document.createElement and allow for immediate passing through dojo.attr and dojo.place for shorthand dom utility
+* dojo.destroy introduced, legalizing the use of dojo.\_destroyElement. dojo.\_destroyElement is left as an alias to dojo.destroy for backwards compatibility despite being "private"
+
+dojo.date.locale.displayPattern removed
+---------------------------------------
+
+* This feature was removed in 1.3.2. Do not use.
+
+dojo.number
+-----------
+
+* Made improvements to dojo.number.round to provide a faster and more consistent definition of rounding, defining rounding as going away from zero, and working around a bug in IE Number.toFixed.
+* See also [`#7930 <http://bugs.dojotoolkit.org/ticket/7930>`_]
+
+dojo.query
+----------
+
+* The query engine in Dojo 1.3 has received substantial work to improve performance, reduce code size, and make the system even more maintainable. The new query engine (aka, "Acme") now takes full advantage of the native browser's ``querySelectorAll`` implementation (if available). This change will likely reduce the runtime performance of dojo.query slightly on FireFox 3.0, but subsequent FF versions will see a huge speed boost, as will other browsers which implement QSA, including IE8 in standards mode, Safari+Chrome, and modern Opera versions.
+* Acme is believed at the time of release to be the fastest available CSS query engine system in any major JavaScript toolkit, across all major browsers, by a rather wide margin.
+* ``query.js`` can now be used standalone for easy integration into other toolkits
+
+
+==================
+Dijit Enhancements
+==================
+
+Menu and MenuBar
+----------------
+
+* Implemented MenuBar widget (like the "File" menu on most programs)
+* Enhanced Menu widget so that it can appear on the page statically, rather than being a popup. Useful for left-hand-side navigation menus, etc.
+* accelKey parameter added. Dijit doesn't have any features to detect/process accelerator keys (they should be caught at page scope), but if your application catches them, then you can display which key is associated w/which menu item choice now.
+  
+Textarea
+--------
+
+* Rearchitected to be implemented using <textarea> node, thus eliminating issues w/pasting rich text and other quirks of previous implementation (#2178, #4988, #7383, #8063, #8211, #8222, #8274, #8276, #7740)
+* Added maxlength parameter to limit number of characters allowed to be typed
+
+Tree
+----
+
+* New feature (betweenThreshold) to drop an item between two other tree nodes, rather than into a tree node. Allows user to control position element appears in a child list.
+* Can now hover/click over entire tree row, even to the left of the expando (plus/minus sign). The highlighting affect also spans the whole width of the row.
+  Note that it's using transparent png images for the row highlighting hover effect, so that hovering over a tree row doesn't block out the grid lines behind it. Developers have the choice of overriding this styling by:
+  
+  * not using grid lines at all
+  * not using a full-width background hover effect
+
+  In either of the above cases, users can use a plain background-color CSS rule w/out interfering w/the grid lines.
+
+ContentPane/hidden initialization
+---------------------------------
+
+* Fixed initialization of layout widgets in hidden panes (ex: unselected tabs, dialogs, closed accordion panes, etc.) Originally had planned to do this by using visibility:hidden instead of display:none but IE had unresolvable issues, so instead implemented by making ContentPane act like a layout widget, i.e., by calling resize() on each of it's children when the ContentPane is made visible.
+* Loading a layout widget from an href works better (ex: initially unselected tab is a ContentPane that loads an href that contains a BorderContainer)
+
+TabContainer
+------------
+
+* nested=true parameter to make second level of tabs visually distinct from first level
+* Initialization of layout widgets in hidden tabs fixed (see above). Fixed for StackContainer too.
+
+AccordionContainer
+------------------
+
+* Can now support layout widgets (like BorderContainer) as AccordionContainer panes
+* AccordionPane was deprecated, use ContentPane or a layout widget instead.
+* AccordionContainer was refactored so that the title bars and the content panes are DOM siblings. Change should be transparent.
+* Initialization of layout widgets in hidden panes fixed (see ContentPane section above).
+
+Dialog
+------
+
+* Dialog was refactored so all dialogs share a single DialogUnderlay, stored in dijit.\_underlay rather than this.\_underlay. The change should be transparent unless you happen to be subclassing from dijit.Dialog.
+
+
+==================
+DojoX Enhancements
+==================
+
+* dojox.image.LightboxNano - a lightweight, unobtrusive Lightbox-like widget
+* dojox.form.Manager - prototype (experimental) dynamic form management API
+* dojox.data.XmlStore - Now provides a default dojo.data.api.Identity implementation. Will work with dijit.Tree and dijit.form.FilteringSelect directly.
+* dojox.data.AppStore - A store implementing an Atom store with complete ATOM Publishing Protocol support. Allows reading and writing of ATOM formatted feeds.
+* dojox.widget.AnalogGauge - A radial style gauge for displaying numeric data. Implemented via dojox.gfx.
+* dojox.widget.BarGauge - A linear bar style gauge for displaying numeric data. Implemented via dojox.gfx.
+* dojox.atom - An implementation of an IO layer for working with ATOM feeds.
+* dojox.widget.FisheyeLite - Improved configurability via direct object setting for end: values
+* dojox.timing.doLater - Checks if your function is ready, and if not, it will "do it later".
+* dojox.charting.DataChart - Connects a Data Store to DojoX Charts
+
+
+====
+Util
+====
+
+ShrinkSafe packaging change
+---------------------------
+
+* The code for ShrinkSafe used to be applied to the Rhino JavaScript engine as a patch to the Rhino code, and Dojo used to ship with a copy of this patched file at util/shrinksafe/custom\_rhino.jar. Now, the ShrinkSafe changes are in a separate JAR file, util/shrinksafe/shrinksafe.jar, which should be used in conjunction with an unmodified js.jar (Rhino). Along with the upgrade to a newer version of Rhino, several bugs with variable references through closures have been fixed. Also, there is a new option ööescape-unicode to use JavaScript \\unnnn escapes in the code rather than injecting encoded Unicode (non-ASCII) characters. This can help avoid encoding issues. Also, null characters are always escaped using JavaScript to avoid a bug in Internet Explorer which would prematurely end the buffer (#5027) 
+* Some command line options have changed. See `migration issues <#migration>`_ for details.
+
+DOH enhancements
+----------------
+
+* DOH progress bars no longer go beyond 100%, and clicking on a test header or error range will bring you to the relevant test or log info.
+
+
+================  
+Migration issues
+================
+
+This sections details changes you might need to make if upgrading your app from Dojo Toolkit V1.2 to Dojo Toolkit V1.3
+
+dojo.addOnUnload vs. dojo.connect(dojo, "unloaded", ...); Behavioral Change
+---------------------------------------------------------------------------
+  
+* Prior to Dojo 1.3 an "unload" hander was *always* added to documents whenever dojo.js was included. This behavior caused "fast-back" caches on some browsers to throw out many pages from the back-button cache without cause, even if no application-level handlers were registered.
+* To correct this behavior, ``dojo.js`` no longer adds a page handler for unload events by default. Instead, *the first time that ``dojo.addOnUload`` or ``addOnWindwowUnload`` are called, the document handlers are registered*. This means that scripts which attach to unload handlers by calling ``dojo.connect(dojo, "unloaded", ...);`` will **NOT** have their handler called if no call to ``dojo.addOnUnload`` is made in the script.
+* As a result of this change, you are **strongly** encouraged to ensure that unload handler logic in your applications is set up via ``dojo.addOnUnload`` or ``dojo.addOnWindowUnload`` instead of via listeners to ``dojo.unloaded`` or ``dojo.windowunloaded``.
+
+Shrinksafe command line change
+------------------------------
+  
+* shrinksafe.jar should be used in conjunction with an unmodified js.jar (Rhino) in place of custom\_rhino.jar. Version 1.7R1 of Rhino is delivered at util/shrinksafe/js.jar.  shrinksafe.jar has a runtime dependency on the Rhino version, so it must be used with this same version of js.jar or it can be rebuilt and used with a different API-compatible version of Rhino. So, if you referenced custom\_rhino.jar for doing build commands, you should now reference shrinksafe.jar from the command line, e.g. java -jar shrinksafe.jar If calling ShrinkSafe from JavaScript running inside Rhino, a combination of shrinksafe.jar and js.jar should be listed on the classpath öö see build.sh or build.bat for examples.
+* Some command line options have changed. See util/shrinksafe/README for details or try java -jar shrinksafe.jar -? for usage.
+* If you use the build.sh or build.bat files in the util/buildscripts directory, you do not have to make any changes.
+
+dojo.require() for dijit widgets
+---------------------------------
+
+* Previously multiple dijit widgets were included in the same file/module, so for example you would do dojo.require("dijit.form.Button") to use dijit.form.ComboButton. That's still supported for backwards-compatibility reasons, it will be removed in 2.0, and starting now you should have a separate dojo.require() call for each widget you are using.
+* dojo.fx.Toggler was moved out of dojo/fx.js into it's own module for 1:1 mapping of require() to provide(), with a require() in fx.js for backwards compatibility
+
+widget lifecycle change
+-----------------------
+
+* The buildRendering() method is no longer required to replace the srcNodeRef (if specified) with this.domNode. Rather, the replacement happens after buildRendering() and applyAttributes() have returned. The default buildRendering() method has been modified to not do the replacement.
+* Thus custom buildRendering() methods which call this.inherited() to execute dijit's buildRendering(), or \_setFooAttr() methods, should not assume that this.domNode is attached to the document. Thus they shouldn't call dojo.query() etc. This was also true for 1.2, since srcNodeRef is an optional parameter to the widget constructor... but now even if srcNodeRef is specified, this.domNode won't be inserted into the document until after buildRendering() and custom setters have executed.
+  
+dojox.presentation removed
+--------------------------
+
+* The failing/experimental dojox.presentation project has been removed without deprecation. It was demoted in its current [broken] form to dojoc.sandbox.presentation, where it will likely receive a rewrite.
+
+dojox.regexp missing
+--------------------
+
+* the dojox.regexp functions and regexp's provided by dojox/validate/regexp.js are no longer cross-polluting namespaces. 
+  dojox/validate/regexp.js defined dojox.validate.regexp.
+  dojox.regexp = dojox.validate.regexp is a quick shim to make any code using dojox.regexp functions use the new namespace.
+
+
+=============================
+Change Log/List of fixed bugs
+=============================
+
+* The full `change log <http://bugs.dojotoolkit.org/milestone/1.3>`_ is available on bugs.dojotoolkit.org.
+* Here is `the list of bugs <http://bugs.dojotoolkit.org/query?status=closed&group=resolution&order=priority&milestone=1.3&col=id&col=summary&col=milestone&col=status&col=type&col=priority&col=component>`_ fixed in 1.3.
+* Note that many of those bug reports aren't bugs in 1.2, but rather just refactoring work, enhancements, or bugs that appeared after the 1.2 release.
