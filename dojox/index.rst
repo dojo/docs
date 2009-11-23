@@ -20,6 +20,10 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
   Implements the Atom Syndication Format and Atom Publishing Protocol
 
+  * `dojox.atom.io.model <dojox/atom/io/model>`_
+  * `dojox.atom.io.Connection <dojox/atom/io/Connection>`_
+
+
 * `dojox.av <dojox/av>`_
 
   Brings audio and video capabilities to the Open Web
