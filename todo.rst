@@ -130,9 +130,17 @@ Priority 4: DojoX
 
   needed: examples or subpages?
 
-* `dojox.atom <dojox/atom/widget>`_
+* `dojox.atom.widget.FeedViewer <dojox/atom/widget/FeedViewer>`_
 
-  needed: Document the widgets.  The IO layer is already documented.
+  needed: Document the widgets. The IO layer is already documented.
+
+* `dojox.atom.widget.FeedEntryViewer <dojox/atom/widget/FeedEntryViewer>`_
+
+  needed: Document the widgets. The IO layer is already documented.
+
+* `dojox.atom.widget.FeedEntryEditor <dojox/atom/widget/FeedEntryEditor>`_
+
+  needed: Document the widgets. The IO layer is already documented.
 
 * `dojox.av.FLAudio <dojox/av/FLAudio>`_
 
