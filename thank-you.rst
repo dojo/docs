@@ -40,6 +40,7 @@ A big "thank you" goes to
 * Craig Riecke, 
 * Will Riley, 
 * Alex Russell,
+* Sudheera Satyanarayana,
 * Benjamin Schell,
 * Dylan Schiemann, 
 * Tom Trenka, 
