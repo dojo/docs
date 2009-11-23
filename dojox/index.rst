@@ -524,6 +524,9 @@ These sections cover the available projects shipped with the Dojo Toolkit:
     A custom Splitter for use in a BorderContainer, providing a lightweight way to collapse the associated child
 
 * `dojox.math <dojox/math>`_
+
+  A collection of various advanced math functions
+
 * `dojox.off <dojox/off>`_
 * `dojox.presentation <dojox/presentation>`_
 * `dojox.resources <dojox/resources>`_
@@ -543,14 +546,35 @@ These sections cover the available projects shipped with the Dojo Toolkit:
   * `dojox.rpc.Service <dojox/rpc/Service>`_
 
 * `dojox.secure <dojox/secure>`_
+* `dojox.sketch <dojox/sketch>`_
 * `dojox.sql <dojox/sql>`_
+
+   objects to support Dojo Offline (dojox.off)  DEPRECATED
+
 * `dojox.storage <dojox/storage>`_
+
+  Objects for mass storage within the browser
+
 * `dojox.string <dojox/string>`_
+
+  A collection of various objects for advanced string manipulation, including a Builder and a tokenizer
+
 * `dojox.testing <dojox/testing>`_
 * `dojox.timing <dojox/timing>`_
+
+  A set of objects to perform advanced time-based tasks, including a basic Timer
+
 * `dojox.uuid <dojox/uuid>`_
+
+  Universally Unique Identifier (UUID) implementations, including an implementation of UUID 2
+
 * `dojox.validate <dojox/validate>`_
+
+  Additional input validation methods
+
 * `dojox.widget <dojox/widget>`_
+
+  A collection of un-categorized widgets, or code not requiring its own package
 
   * `dojox.widget.AnalogGauge <dojox/widget/AnalogGauge>`_
 
