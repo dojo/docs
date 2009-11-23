@@ -1,7 +1,7 @@
 #format dojo_rst
 
-dojox.widget
-============
+dojox.atom.widget
+=================
 
 :Project owner: Jared Jurkiewicz, Benjamin Schell
 :Available: since V1.3
@@ -9,7 +9,7 @@ dojox.widget
 .. contents::
    :depth: 2
 
-dojox.widget offers widgets for reading and editing ATOM feeds.
+dojox.atom.widget offers widgets for reading and editing ATOM feeds.
 
 
 ========
