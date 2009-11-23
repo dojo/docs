@@ -490,8 +490,17 @@ dojox.grid.TreeGrid
 * compat grid (dojox.grid.Grid) is now bundled in the dojox/grid directory as a tarball archive for those who would like to continue using the deprecated (1.1) Grid.
 * `dojox.grid.DataGrid <dojox/grid/DataGrid>`_ is the replacement.
 
+dojox.html
+----------
+
+dojox.html.ellipsis
+~~~~~~~~~~~~~~~~~~~
+
+* The new dojox.html.ellipsis offers cross-browser support for text-overflow: ellipsis
+* See also `dojox.html.ellipsis <dojox/html/ellipsis>`_
+
 dojox.html.format
------------------
+~~~~~~~~~~~~~~~~~
 
 * dojox.html.format is a new package which offers additional HTML helper functions for formatting HTML text.
 * See also `dojox.html.format <dojox/html/format>`_
