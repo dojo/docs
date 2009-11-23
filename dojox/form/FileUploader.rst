@@ -378,6 +378,15 @@ The return to Flash should look like:
 
 This string should be returned, or printed, or echoed.
 
+New in 1.4, you can add an error key if one file was in error; say if it was not of the correct type. This error code or message will be returned in the onComplete dataArray. It's important to note that as far as the FileUploader is concerned, everything was a success. It's up to your custom code to test for this error.
+
+The return string with an error might look like:
+
+.. code-block :: text
+ :linenos:
+
+ "file=uploaded/PIC01.jpg,name=PIC01.jpg,width=320,height=240,type=jpg,error=Not recognized file type"
+
 If *htmlFieldName* is used, the code on the client side gets pretty tricky, as an iframe is necessary for the file-post, and reading back from that iframe presents problems. In order to read the iframe return data accurately cross browser, the code needs to be wrapped in a *<textarea>*. You can see the code for this on the very last line of UploadFiles.php. Note that the textarea needs to be outside of the PHP. Example:
 
 .. code-block :: html
