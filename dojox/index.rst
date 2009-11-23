@@ -457,7 +457,19 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
 * `dojox.lang <dojox/lang>`_
 
-  JavaScript Language specific extensions
+  Implementation of common functional operations, and provisions, aspect-oriented helpers
+
+  * `dojox.lang.observable <dojox/lang/observable>`_
+
+    Provides construction of objects that such that property access and modification can be controlled
+
+  * `dojox.lang.typed <dojox/lang/typed>`_
+
+    Provides type checking for JavaScript classes, enforcing types on properties and method parameters using JSON Schema definitions
+
+  * `dojox.lang.docs <dojox/lang/docs>`_
+
+    Provides schemas on Dojo's classes from the API documentation
 
   * `dojox.lang.functional <dojox/lang/functional>`_
 
