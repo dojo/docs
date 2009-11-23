@@ -499,6 +499,13 @@ dojox.html.ellipsis
 * The new dojox.html.ellipsis offers cross-browser support for text-overflow: ellipsis
 * See also `dojox.html.ellipsis <dojox/html/ellipsis>`_
 
+dojox.html.entities
+~~~~~~~~~~~~~~~~~~~
+
+* Adds support for encoding and unencoding HTML/XML entity characters in text.
+* Also provides basic mappings of character to entity encoding for HTML and LATIN (8859-1), special characters.
+* See also `dojox.html.entities <dojox/html/entities>`_
+
 dojox.html.format
 ~~~~~~~~~~~~~~~~~
 
