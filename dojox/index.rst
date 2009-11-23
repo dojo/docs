@@ -220,6 +220,9 @@ These sections cover the available projects shipped with the Dojo Toolkit:
     A date-like class representing the Hebrew calendar
 
 * `dojox.dtl <dojox/dtl>`_
+
+  Django Templating Language implementation
+
 * `dojox.editor <dojox/editor>`_
 
   Extensions for dijit.Editor
