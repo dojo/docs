@@ -144,7 +144,7 @@ By wrapping <body> lookup in the ``dojo.body()`` function, we are able to redefi
 document vs. dojo.doc
 ---------------------
 
-It is very common to see the special global 'document' used throughout JavaScript code. When using Dojo, one should reference reference the global `dojo.doc <dojo/doc>`_ when accessing the current document. For instance:
+It is very common to see the special global 'document' used throughout JavaScript code. When using Dojo, one should reference the global `dojo.doc <dojo/doc>`_ when accessing the current document. For instance:
 
 .. code-block :: javascript
   :linenos:
