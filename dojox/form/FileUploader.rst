@@ -109,7 +109,7 @@ A basic example follows:
 .. code-block :: html
  :linenos:
 
- <div id="btn" class="btnNormal">Select Files</div>
+ <div id="btn" class="uploadBtn">Select Files</div>
   
 .. code-block :: javascript
  :linenos:
@@ -129,7 +129,7 @@ Or, using the same CSS, create it as markup:
  :linenos:
 
  <div class="uploadBtn" dojoType="dojox.form.FileUploader" hoverClass="uploadHover" pressClas="uploadPress"
-      activeClass="btnActive" disabledClass="uploadDisable" uploadUrl="../serverpage.php">Select Files</div>
+      activeClass="uploadBtn" disabledClass="uploadDisable" uploadUrl="../serverpage.php">Select Files</div>
 
 
 Dependencies
