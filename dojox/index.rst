@@ -16,6 +16,10 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
   * `dojox.analytics.Urchin <dojox/analytics/Urchin>`_
 
+* `dojox.atom <dojox/atom>`_
+
+  Implements the Atom Syndication Format and Atom Publishing Protocol
+
 * `dojox.av <dojox/av>`_
 
   Brings audio and video capabilities to the Open Web
