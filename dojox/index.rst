@@ -21,6 +21,9 @@ These sections cover the available projects shipped with the Dojo Toolkit:
   Implements the Atom Syndication Format and Atom Publishing Protocol
 
   * `dojox.atom.io.model <dojox/atom/io/model>`_
+
+    A JavaScript model of an ATOM feed
+
   * `dojox.atom.io.Connection <dojox/atom/io/Connection>`_
 
 
