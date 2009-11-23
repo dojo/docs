@@ -51,15 +51,15 @@ Updating Your Release
 I often suggest to people who are not able to use the 1.3.2 or trunk version of Dojo to copy over the latest uploader files. The involved files would be:
 
  - dojox/form/FileUploader.js
- - dojox/form/resources/FileUploader.swf
- - dojox/form/FileUploader.css
+ - dojox/form/resources/uploader.swf
+ - dojox/form/resources/FileUploader.css
  - dojox/embed/flashVars.js
  - dojox/embed/Flash.js
 
 and optionally:
 
  - dojox/form/resources/UploadFile.php
- - dojox/form/resources/cLog.php
+ - dojox/form/resources/cLOG.php
 
 Note that if you are moving these files into Dojo 1.2 or less, you will have to change some of the code in the FileUploader to not use the 1.3 html method dojo.destroy() and replace it with the previous version of dojo._destroyElement()
 
@@ -115,9 +115,10 @@ A basic example follows:
  :linenos:
  
  var uploader = new dojox.form.FileUploader(
-     hoverClass:"btnHover",
-     activeClass:"btnActive",
-     disabledClass:"btnDisable",
+     hoverClass:"uploadHover",
+     activeClass:"uploadBtn",
+     pressClass:"uploadPress",
+     disabledClass:"uploadDisable",
      uploadUrl:pathToUploadServerScript
  }, "myDiv");
  
@@ -127,8 +128,8 @@ Or, using the same CSS, create it as markup:
 .. code-block :: html
  :linenos:
 
- <div class="btnNormal" dojoType="dojox.form.FileUploader" hoverClass="btnHover"
-      activeClass="btnActive" disabledClass="btnDisabled" uploadUrl="../serverpage.php">Select Files</div>
+ <div class="uploadBtn" dojoType="dojox.form.FileUploader" hoverClass="uploadHover" pressClas="uploadPress"
+      activeClass="btnActive" disabledClass="uploadDisable" uploadUrl="../serverpage.php">Select Files</div>
 
 
 Dependencies
