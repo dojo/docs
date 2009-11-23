@@ -673,3 +673,5 @@ These sections cover the available projects shipped with the Dojo Toolkit:
   XML utilities
 
 * `dojox.xmpp <dojox/xmpp>`_
+
+  XMPP (Jabber Client) Service implementation in pure javascript
