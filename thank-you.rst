@@ -45,8 +45,9 @@ A big "thank you" goes to
 * David Schwarz,
 * Dylan Schiemann, 
 * Tom Trenka, 
-* Josh Trutwin, 
+* Josh Trutwin,
 * Alexander Whillas,
+* Dean Williams,
 * Mike Wilcox,
 * Kris Zyp
 
