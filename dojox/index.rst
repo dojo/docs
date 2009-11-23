@@ -26,6 +26,7 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
   * `dojox.atom.io.Connection <dojox/atom/io/Connection>`_
 
+    A IO class for performing APP (ATOM Publishing Protocol) styled IO actions with a server
 
 * `dojox.av <dojox/av>`_
 
