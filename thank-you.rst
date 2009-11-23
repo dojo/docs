@@ -42,6 +42,7 @@ A big "thank you" goes to
 * Alex Russell,
 * Sudheera Satyanarayana,
 * Benjamin Schell,
+* David Schwarz,
 * Dylan Schiemann, 
 * Tom Trenka, 
 * Josh Trutwin, 
