@@ -148,6 +148,8 @@ New Features
 * A11Y: The Flash button can be accessed with the TAB key. (The HTML cannot due to browser limtations)
 * Deferred Uploading: (Flash only) throttles the upload to one file at a time
 
+Changed in 1.4: deferredUploading is now mandatory to prevent errors in Firefox and Safari. It accepts a number and the idea is you can upload more than one file in parallel, though my tests have shown it always does one at a time anyway. This change makes the upload a little slower, but now it is much more robust and can handle uploads of 500 files or more without crashing the browser.
+ 
 There are two new tests added to DojoX: *test_FileUpladerCSS.html* and *test_FileUpladerForm.html*. The form test will show how to implement most of the new features. The CSS test will show different methods of styling the Uploader. 
 
 http://mwilcox.dojotoolkit.org/dtk/dojox/form/tests/test_FileUploaderForm.html
