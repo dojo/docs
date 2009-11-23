@@ -549,7 +549,7 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 * `dojox.sketch <dojox/sketch>`_
 * `dojox.sql <dojox/sql>`_
 
-   objects to support Dojo Offline (dojox.off)  DEPRECATED
+  objects to support Dojo Offline (dojox.off)  DEPRECATED
 
 * `dojox.storage <dojox/storage>`_
 
@@ -665,5 +665,11 @@ These sections cover the available projects shipped with the Dojo Toolkit:
     A simple widget providing a step-by-step wizard like UI
 
 * `dojox.wire <dojox/wire>`_
+
+  Declarative data binding and action tags for simplified MVC
+
 * `dojox.xml <dojox/xml>`_
+
+  XML utilities
+
 * `dojox.xmpp <dojox/xmpp>`_
