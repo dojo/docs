@@ -63,6 +63,9 @@ These sections cover the available projects shipped with the Dojo Toolkit:
     A color palette generator and handler (used extensively in `dojox.charting <dojox/charting>`_
 
 * `dojox.cometd <dojox/cometd>`_
+
+  A cometd client written in Dojo
+
 * `dojox.data <dojox/data>`_
 
   Additional data stores and data store helpers
@@ -221,7 +224,7 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
 * `dojox.dtl <dojox/dtl>`_
 
-  Django Templating Language implementation
+  Django Template Language implementation
 
 * `dojox.editor <dojox/editor>`_
 
