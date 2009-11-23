@@ -221,12 +221,21 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
 * `dojox.dtl <dojox/dtl>`_
 * `dojox.editor <dojox/editor>`_
+
+  Extensions for dijit.Editor
+
 * `dojox.embed <dojox/embed>`_
+
+  Base code for embedding external objects like Flash, Quicktime
+
 * `dojox.encoding <dojox/encoding>`_
 
   All sorts of string encoding algorithms, including compression, crypto and more.
 
 * `dojox.flash <dojox/flash>`_
+
+  Utilities to embed and communicate with Flash-based objects
+
 * `dojox.form <dojox/form>`_
 
   Additional form-related widgets beyond `dijit.form <dijit/form>`_ functionality
@@ -296,6 +305,32 @@ These sections cover the available projects shipped with the Dojo Toolkit:
     description?
 
 * `dojox.fx <dojox/fx>`_
+
+  Extension animations to the core dojo FX project
+
+  * `dojox.fx.crossFade <dojox/fx/crossFade>`_
+
+    Crossfade two nodes easily
+
+  * `dojox.fx.highlight <dojox/fx/highlight>`_
+
+    Animates the background color of a node, and returns it to the color it was
+
+  * `dojox.fx.sizeTo <dojox/fx/sizeTo>`_
+
+    Size a node about it's center to a new width/height
+
+  * `dojox.fx.slideBy <dojox/fx/slideBy>`_
+
+    Slide a node by a t,l offset
+
+  * `dojox.fx.style <dojox/fx/style>`_
+
+    Module to provide CSS animations
+
+  * `dojox.fx.scroll <dojox/fx/scroll>`_
+
+    Module to provide scroll-related FX
 
   * `dojox.fx.wipeTo <dojox/fx/wipeTo>`_
 
