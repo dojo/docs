@@ -317,6 +317,10 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
   Additional HTML helper functions
 
+  * `dojox.html.format <dojox/html/format>`_
+
+    A package which offers additional HTML helper functions for formatting HTML text
+
   * `dojox.html.set <dojox/html/set>`_
 
     A generic content setter, including adding new stylesheets and evaluating scripts (was part of ContentPane loaders, now separated for generic usage)
