@@ -3,8 +3,6 @@
 dojox.widget
 ============
 
-:Status: Draft
-:Version: 1.0
 :Project owner: Jared Jurkiewicz, Benjamin Schell
 :Available: since V1.3
 
