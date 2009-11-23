@@ -138,10 +138,6 @@ Priority 4: DojoX
 
   needed: errors in the example, no audio directory within tests available on the server
 
-* `dojox.gfx <dojox/gfx>`_ 
-
-  needed: split apart into multiple pages for each major concept, add inline gfx demos
-
 * `dojox.charting <dojox/charting>`_ ``ttrenka``
 
   needed: explanation about periodic updating, split apart into multiple pages for each major concept, add inline chart demos, add chart and legend widget properties/events table, using dojo data sources with charts/chart widgets
@@ -174,9 +170,25 @@ Priority 4: DojoX
 
   needed: full page
 
+* `dojox.gfx <dojox/gfx>`_ 
+
+  needed: split apart into multiple pages for each major concept, add inline gfx demos
+
 * `dojox.grid <dojox/grid>`_ ``bforbes, toonetown``
 
   needed: Introduction, Grid 1.2 Changes, Usage, Parameter "selection mode", Example "sorting data at the server", Example "Large datasets", Tips
+
+* `dojox.html.metrics <dojox/html/metrics>`_
+
+  needed: full page
+
+* `dojox.html.set <dojox/html/set>`_
+
+  needed: examples
+
+* `dojox.html.styles <dojox/html/styles>`_
+
+  needed: full page
 
 * `dojox.image.Badge <dojox/image/Badge>`_
 
