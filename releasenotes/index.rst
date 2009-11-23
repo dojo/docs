@@ -21,7 +21,9 @@ Current version
 
 * `Dojo Toolkit V1.3 Release Notes <releasenotes/1.3>`_
 
-   V1.3.2 relased at 07/15/2009, V1.3.2 RC 2 published at 07/10/2009, V1.3.2 RC 1 published at 07/09/2009
+  V1.3.2 relased at 07/15/2009, V1.3.2 RC 2 published at 07/10/2009, V1.3.2 RC 1 published at 07/09/2009
+
+  V1.3 released at 03/31/2009
 
 
 ==============
