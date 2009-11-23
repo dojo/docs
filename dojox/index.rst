@@ -341,7 +341,13 @@ These sections cover the available projects shipped with the Dojo Toolkit:
   * `dojox.fx.wipeTo <dojox/fx/wipeTo>`_
 
 * `dojox.gfx <dojox/gfx>`_
+
+  Cross-browser vector graphics API
+
 * `dojox.gfx3d <dojox/gfx3d>`_
+
+  A 3d API for dojox.gfx
+
 * `dojox.grid <dojox/grid>`_
 
   Dojo Toolkits Grid Widgets
@@ -366,6 +372,9 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
 * `dojox.help <dojox/help>`_
 * `dojox.highlight <dojox/highlight>`_
+
+  A client-side syntax highlighting engine
+
 * `dojox.html <dojox/html>`_
 
   Additional HTML helper functions
@@ -388,7 +397,7 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
 * `dojox.image <dojox/image>`_
 
-  Provides a number of image-related widgets
+  A collection of image-related widgets
 
   * `dojox.image.Badge <dojox/image/Badge>`_
 
@@ -423,9 +432,37 @@ These sections cover the available projects shipped with the Dojo Toolkit:
     A dojo.data-powered ThumbnailPicker
 
 * `dojox.io <dojox/io>`_
+
+  Extensions to the Core dojo.io transports
+
 * `dojox.json <dojox/json>`_
+
+  DojoX JSON Modules
+
+  * `dojox.json.query <dojox/json/query>`_
+
+    A comprehensive object data query tool
+
+  * `dojox.json.schema <dojox/json/schema>`_
+
+    An object validation tool based on JSON Schema
+
+  * `dojox.json.ref <dojox/json/ref>`_
+
+    JSON Referencing capable serializer and deserializer
+
 * `dojox.jsonPath <dojox/jsonPath>`_
+
+  A query system for JavaScript objects
+
 * `dojox.lang <dojox/lang>`_
+
+  JavaScript Language specific extensions
+
+  * `dojox.lang.functional <dojox/lang/functional>`_
+
+    Functional language constructs, including currying and lambda
+
 * `dojox.layout <dojox/layout>`_
 
   Experimental and additional extensions to `Dijit Layout <dijit/layout>`__ Widgets
