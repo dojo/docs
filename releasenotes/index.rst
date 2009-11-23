@@ -12,9 +12,7 @@ Upcoming version
 
 * `Dojo Toolkit V1.4 Release Notes <releasenotes/1.4>`_
 
-  RC1 scheduled for 11/23/2009
-  Beta 2 published at 10/27/2009
-  Beta 1 published at 10/12/2009
+  RC1 scheduled for 11/23/2009, Beta 2 published at 10/27/2009, Beta 1 published at 10/12/2009
 
 
 ===============
