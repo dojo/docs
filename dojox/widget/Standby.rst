@@ -44,7 +44,7 @@ Constructor params/attributes
 |                        |display text.  Defaults to 'Please wait...'                               |                    |
 +------------------------+--------------------------------------------------------------------------+--------------------+
 |centerIndicator         |Which center indicator to use, the image (with its alt text), or just the | 1.4                |
-|                        |text provided in the 'ext' attribute                                      |                    |
+|                        |text provided in the 'text' attribute                                     |                    |
 +------------------------+--------------------------------------------------------------------------+--------------------+
 |zIndex                  |A specific zIndex value to position the overlay at.  Defaults to 'auto'   | 1.4                |
 |                        |which means the widget will try to figure out what to use.  For usage in  |                    |
