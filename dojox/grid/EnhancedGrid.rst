@@ -125,7 +125,7 @@ The following are typical scenarios using nested sorts:
 
 * When there is no sorting established, a unary (single) sort caret is shown when the mouse hovers over a column. The upward direction of the caret reflects that this will result in an ascending sort.
 
-.. image:: sort-1.png
+.. image:: sort-1.new.png
 
 * Once the sort choice is selected for the 'Genre' column, the grid rows will be sorted ascending based on by the values in Genre. Note that the keyboard focus moves to the sort choice in response to the mouse click. The graphical label of the sort choice is a downward caret since the function would be a descending sort.
 
@@ -135,7 +135,7 @@ The following are typical scenarios using nested sorts:
 * Clicking region "A" in the figure below will execute a nested sort, and the rows will be sorted by Artist in this example within Genre.
 * Clicking region "B" will reset the sort, and the rows will be sorted by Artist alone.
 
-.. image:: nested-sort-1.png
+.. image:: nested-sort-1.new.png
 
 * Once a column is sorted ascending, the sort choice changes to a sort descending choice.
 
@@ -421,7 +421,7 @@ The following figure shows a sample of row headers and column select regions
 
 .. image:: swipe-rows&columns.png
 
-As noted above, swipe-select is also possible when the check box mode of Indirect Selection is are used for row selection.
+As noted above, swipe-select is also possible when the check box mode of Indirect Selection is used for row selection.
 
 Usage
 -----
@@ -579,7 +579,7 @@ Keyboard Support
 | arrow keys |                                +
 +------------+--------------------------------+
 | CTRL +     | Move column(s) leftward        +
-| LEFT/RIGHT | or rightward  by one column    +
+| LEFT/RIGHT | or rightward by one column     +
 | arrow keys |                                +
 +------------+--------------------------------+
 
