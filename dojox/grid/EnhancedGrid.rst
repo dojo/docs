@@ -236,10 +236,10 @@ Usage
 .. code-block :: javascript
   :linenos:
 
-  <div id="grid" dojoType="dojox.grid.EnhancedGrid" plugins="{indirectSelection: true}" ... >
+  <div id="grid" dojoType="dojox.grid.EnhancedGrid" plugins="{indirectSelection: true}" >
   </div>
 
-    ... with JavaScript  <<< '''This isn't code. Not sure how to fix'''
+  ... with JavaScript  <<< '''This isn't code. Not sure how to fix'''
     
 .. code-block :: javascript
   :linenos:
@@ -248,7 +248,7 @@ Usage
       var grid = new dojox.grid.EnhancedGrid({id: "grid", plugins: {indirectSelection: true}, ...}, dojo.byId('gridDiv'));
   </script>
 
-  * Use indirect selection feature with radio buttons
+* Use indirect selection feature with radio buttons
 
   ... with HTML markup
     
@@ -294,7 +294,7 @@ Accessibility
 Keyboard Support
 ~~~~~~~~~~~~~~~~
 
-+---------   ---+--------------------------------+
++---------------+--------------------------------+
 | **Key**       | **Action**                     +
 +---------------+--------------------------------+
 | UP/Down       | Navigate keyboard focus across +
@@ -303,7 +303,7 @@ Keyboard Support
 +---------------+--------------------------------+
 | SPACE key     | * Radio button - select a row  +
 |               | * Check box - select or        +
-|               |   de-select a row.             +
+|               |   de-select a row              +
 +---------------+--------------------------------+
 | SHIFT + Click | Select or de-select a range    +
 | SHIFT +       | of rows                        +
@@ -311,7 +311,7 @@ Keyboard Support
 +---------------+--------------------------------+
 | SHIFT+        | Extend the selection or        +
 | UP/Down       | de-selection - only for        +
-| arrow keys    | check boxes   .                +
+| arrow keys    | check boxes                    +
 +---------------+--------------------------------+
 
   * The above keys are only effective when keyboard focus is in the first column that contains radio buttons or check boxes.
@@ -561,7 +561,7 @@ Scenario
 
 * Moving discontiguous rows/columns.
 
-  Discontiguous  rows and columns can be moved using drag-drop as well. The moved columns and rows will be adjacent, in their original relative order, after the move.
+   Discontiguous  rows and columns can be moved using drag-drop as well. The moved columns and rows will be adjacent, in their original relative order, after the move.
 
 .. image:: drag-non-contiguous-rows-and-columns.gif
 
