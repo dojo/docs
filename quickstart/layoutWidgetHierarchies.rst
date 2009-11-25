@@ -30,7 +30,7 @@ Widgets that define an isLayoutContainer attribute extend the isContainer contra
 
     * call resize() on (top level) child widgets when those widgets become visible
 
-isLayoutContainer widgets will often will pass in a size on the child.resize() call, but they might just call resize() w/out any parameters.
+isLayoutContainer widgets often will pass in a size on the child.resize() call, but they might just call resize() w/out any parameters.
 
 isLayoutContainer widgets also define the flag:
 
