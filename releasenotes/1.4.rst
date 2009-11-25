@@ -274,7 +274,9 @@ dijit.layout.ContentPane
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 * ContentPane now acts as a full layout widget, calling resize() on it's child widgets when (not before) it is made visible, avoiding problems with children being initialized while hidden.
-* Consequently ContentPane now defines isLayoutContainer to true
+* Consequently ContentPane now defines isContainer and isLayoutContainer:
+     * isContainer's meaning was widened to include any widget that calls startup() on it's children, not just widgets that extend dijit._Container
+     * isLayoutContainer's meaning was widened to include any widget that calls resize() on it's children, not just widgets that extend dijit.layout._LayoutContainer
 * Fixes related to resizing and href loading, including avoiding premature href loading for ContentPanes in nested TabContainers
 * See also `dijit.layout.ContentPane <dijit/layout/ContentPane>`_
 
