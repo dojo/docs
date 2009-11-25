@@ -3,7 +3,7 @@
 Layout Widget Hierarchies: isLayoutContainer and dijit.layout._LayoutWidget
 ===========================================================================
 :Status: Contributed
-:Version: 0.1
+:Version: 0.2
 :Authors: Bill Keese
 
 .. contents::
@@ -26,9 +26,9 @@ Both layout widgets and their children need to support the resize() method.    (
 =================
 isLayoutContainer
 =================
-Widgets that define an isLayoutContainer attribute promise to:
+Widgets that define an isLayoutContainer attribute extend the isContainer contract (see `Widget Hierarchies <quickstart/widgetHierarchies>`_), and in addition promise to:
 
-    * Calls resize() on (top level) child widgets when those widgets become visible.
+    * call resize() on (top level) child widgets when those widgets become visible
 
 isLayoutContainer widgets will often will pass in a size on the child.resize() call, but they might just call resize() w/out any parameters.
 
