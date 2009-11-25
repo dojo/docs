@@ -74,8 +74,12 @@ Widgets
 * `UI Development <quickstart/interfacedesign>`_
 * `Themes and Theming <dijit-themes>`_
 * `DojoX Widgets <dojox/widget>`_
+
+Widget developers notes:
+------------------------
 * `Writing Widgets <quickstart/writingWidgets>`_
 * `Widget Hierarchies <quickstart/widgetHierarchies>`_
+* `Layout Widget Hierarchies <quickstart/widgetHierarchies>`_
 
 
 =======================
