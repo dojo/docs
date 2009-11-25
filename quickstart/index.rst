@@ -70,23 +70,12 @@ Animations
 Widgets
 =======
 
-* `Dijit, Dojos widget Library <dijit/info>`_
-* `DojoX Widgets <dojox/widget>`_
-
-Layout
-------
-
+* `Dijit, Dojo's widget Library <dijit/info>`_
 * `UI Development <quickstart/interfacedesign>`_
-
-Theming
--------
-
 * `Themes and Theming <dijit-themes>`_
-
-Writing Widgets
----------------
-
+* `DojoX Widgets <dojox/widget>`_
 * `Writing Widgets <quickstart/writingWidgets>`_
+* `Widget Hierarchies <quickstart/widgetHierarchies>`_
 
 
 =======================
