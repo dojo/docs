@@ -19,41 +19,26 @@ Used exclusively with `dojo.requireLocalization <dojo/requireLocalization>`_.
 Introduction
 ============
 
-TODO: introduce the component/class/method
+dojo.i18n.getLocalization gets a reference to an Object with localized strings, as loaded by dojo.requireLocalization()
 
 
 =====
 Usage
 =====
 
-TODO: how to use the component/class/method
+See internationalization quick start for more information.
 
 .. code-block :: javascript
  :linenos:
 
  <script type="text/javascript">
-   // your code
+  var validate = dojo.i18n.getLocalization("dijit.form", "validate");
+  console.log(validate.invalidMessage);
  </script>
-
-
-
-========
-Examples
-========
-
-Programmatic example
---------------------
-
-TODO: example
-
-Declarative example
--------------------
-
-TODO: example
 
 
 ========
 See also
 ========
 
-* TODO: links to other related articles
+* http://docs.dojocampus.org/quickstart/internationalization/resource-bundling
