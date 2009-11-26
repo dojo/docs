@@ -11,7 +11,7 @@ dojo.requireLocalization
 .. contents::
    :depth: 2
 
-TODO: short summary of the component/class/method
+Loads localized resources, according to the operating locale, or other locale if specified.
 
 see `Translatable Resource bundles <quickstart/internationalization/resource-bundling>`_
 
@@ -19,37 +19,19 @@ see `Translatable Resource bundles <quickstart/internationalization/resource-bun
 Introduction
 ============
 
-TODO: introduce the component/class/method
-
+This method is analogous to dojo.require, which loads Javascript modules from a specified package.  requireLocalization specifies a named resource bundle within a package and loads the resources necessary to match a particular locale.  In development mode, this will trigger a series of transactions to fetch the root bundle and all locales and variants necessary to match the specified locale.  For example, fr-ca will pull in not only fr-ca, if available, but also fr and root and mix them together to form a single Javascript Object.  If there is no fr-ca variant, the correct result will be a 404, and the more general fr and root resources will be used. Note that the root, by convention is usually US-English, so there are actually no resources for either 'en' or 'en-us'.  Loading 'en-us' will result in three hits, two of which will be 404.  A Dojo build will collapse these locales into flattened resource bundles, resulting in a single server hit.
 
 =====
 Usage
 =====
 
-TODO: how to use the component/class/method
-
 .. code-block :: javascript
  :linenos:
 
  <script type="text/javascript">
-   // your code
+  dojo.require("dojo.i18n");
+  dojo.requireLocalization("dijit.form", "validate");
  </script>
-
-
-
-========
-Examples
-========
-
-Programmatic example
---------------------
-
-TODO: example
-
-Declarative example
--------------------
-
-TODO: example
 
 
 ========
