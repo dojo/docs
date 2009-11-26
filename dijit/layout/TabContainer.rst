@@ -370,7 +370,7 @@ Action                                        Key
 Navigate to next tab button                   Right arrow
 Navigate to previous tab button               Left arrow
 Navigate into page                            Tab
-Navigate to next page                         Ctrl + page down, ctrl + tab (except IE7)
-Navigate to previous page                     Ctrl + page up
+Navigate to next page                         Ctrl + page down, ctrl + tab (FF and IE6 only)
+Navigate to previous page                     Ctrl + page up, ctrl + shift + tab (FF and IE6 only)
 Delete a tab                                  With focus on the tab title of the tab to delete, press Delete or ctrl + w. Note that the tab must have been created with deletion enabled via the closable attribute. For 1.1 and later releases, pressing shift-F10 with focus on the tab title or right mouse clicking on the tab title will bring up a context menu with the option to Close the tab. This provides a mechanism to determine if the tab is closable.
 ==========================================    =================================================
