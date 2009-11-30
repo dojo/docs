@@ -234,7 +234,7 @@ Nesting an Editor With FullScreen in BorderContainer
 
   .. html::
 
-    <div dojoType="dijit.layout.BorderContainer" gutters="true" design="headline" liveSplitters="true" id="borderContainer" style="width: 100%; height: 100%;">
+    <div dojoType="dijit.layout.BorderContainer" gutters="true"  design="headline" liveSplitters="true"style="width: 100%; height: 100%;">
       <div dojoType="dijit.layout.ContentPane" splitter="true" region="leading" style="height: 100px;"><b>This example demonstrates how to embed an editor in a BorderContainer and still use the FullScreen plugin</b></div>
       <div dojoType="dijit.layout.ContentPane" splitter="true" region="center">
         <br>
