@@ -91,8 +91,8 @@ Layout containers put restrictions on their children content in order to force s
 **FullScreen mode and BorderContainer:** 
 For FullScreen mode on an editor in BorderContainer to work properly, the Editor **must** be contained within a content pane.  The Editor cannot be a direct child of BorderContainer.  This is because BorderContainer directly alters DOM styles such as top and left of its direct children and if it were to apply those style changes to Editor, it would undue the settings that enable the Editor to take up the entire viewport.  The editor and its plguins cannot prevent this.  So when using an instance of the Editor will FullScreen support be sure to nest it inside a ContentPaqne to avoid problems.  
 
-**Estra information on Layout Containers and FullScreen:**
-The ideal solution to scaling out issues with LayoutContainer nested Editors is to reparent the Editor temporarily to the <body> element of your page.  This, however, will not work in some browsers, such as FireFox.  This is because FireFox forcibly reloads an IFRAME element if the iframe (or any of its parent dom nodes), moves its DOM position in the page.  At this time there are no known workarounds to that FireFox behavior, and due to such, the editor takes the the alternate approach of class manipulation explained above.  If a workaround is discovered, then the plugin and these docs will be updated to reflect the improved behavior.  
+**Extra information on Layout Containers and FullScreen:**
+xhe ideal solution to scaling out issues with LayoutContainer nested Editors is to reparent the Editor temporarily to the <body> element of your page.  This, however, will not work in some browsers, such as FireFox.  This is because FireFox forcibly reloads an IFRAME element if the iframe (or any of its parent dom nodes), moves its DOM position in the page.  At this time there are no known workarounds to that FireFox behavior, and due to such, the editor takes the the alternate approach of class manipulation explained above.  If a workaround is discovered, then the plugin and these docs will be updated to reflect the improved behavior.  
 
 
 ===================
