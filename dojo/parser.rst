@@ -3,6 +3,12 @@
 The Dojo Parser
 ===============
 
+:Status: Draft
+:Version: 1.0
+:Authors: Peter Higgins, Nathan Toone, Bill Keese, kolban
+
+.. contents::
+    :depth: 2
 
 The Dojo Parser is an optional module which is used to convert specially decorated nodes in the DOM and convert them into `Dijits <dijit>`_. By `decorated` we mean use of a `dojoType` attribute. Any "Class" (or object, such as the ones created by `dojo.declare <dojo/declare>`_) can be instantiated by using a `dojoType` attribute on some node in the DOM, and create a widget out of it.
 
@@ -38,6 +44,33 @@ To run the parser when your page loads, add a djConfig="parseOnLoad: true" to yo
 			djConfig="parseOnLoad: true"></script>
 
 
+Setting the parser behavior
+---------------------------
+
+``todoc: parseOnLoad`` parseOnLoad:false by default, parseOnLoad:true optional, parseOnLoad:true makes addOnLoad call after parsing. howto set parseOnLoad
+
+``NEW in 1.3:``  Beginning in release 1.3 of dojo, you can manually call dojo.parser.instantiate on any node - and pass in an additional mixin to specify options, such as dojoType, etc.  The values in the mixin would override any values in your node.  For example:
+
+.. code-block :: html
+
+  <div id="myDiv" name="ABC" value="1"></div>
+
+You can manually call the parser's instantiate function (which does the "Magical Typing") by doing:
+
+.. code-block :: javascript
+
+  dojo.parser.instantiate([dojo.byId("myDiv")], {dojoType: "my.custom.type"});
+
+Calling instantiate in this way will return to you a list of instances that were created.  Note that the first parameter to instantiate is an array of nodes...even if it's one-element you need to wrap it in an array
+
+``NEW in 1.4:``  You specify that you do not want subwidgets to be started if you pass _started: false in your mixin.  For example:
+
+.. code-block :: javascript
+
+  dojo.parser.instantiate([dojo.byId("myDiv")], {dojoType: "my.custom.type", _started: false});
+
+``todoc: scoping a parser call to node by stringId|domNode``
+
 Parser syntax
 =============
 Inside your HTML you mark nodes for the parser by setting dojoType, to specify the class of the widget, and other attributes (to specify parameters to the widget.   For example:
@@ -48,6 +81,36 @@ Inside your HTML you mark nodes for the parser by setting dojoType, to specify t
 
 
 The parser will scan the entire DOM for ``dojoType`` attributes, and create new instances from nodes like this.
+
+Boolean parameters
+------------------
+
+Due to HTML subtleties, for boolean parameters that are false, it's best not to specify the attribute at all.   For example, to specify an enabled button (where the `disabled` property is false), simply don't specify anything for disabled:
+
+.. code-block :: html
+
+  <input dojoType="dijit.form.Button">
+
+Further, in standard HTML (as opposed to XHTML), the special parameters `checked` and `disabled` and `selected` should be specified as single keywords without a value:
+
+.. code-block :: html
+
+  <input dojoType="dijit.form.Button" disabled>
+  <input dojoType="dijit.form.CheckBox" checked>
+
+In XHTML they should be specified in the official format of repeating the attribute name as the value:
+
+.. code-block :: html
+
+  <input dojoType="dijit.form.Button" disabled="disabled"/>
+  <input dojoType="dijit.form.CheckBox" checked="checked"/>
+
+Although specifying disabled="true" will disable a widget, note that the following syntax should not be used as it's unreliable whether it evaluates to true or false:
+
+.. code-block :: html
+
+  <input dojoType="dijit.form.Button" disabled=""/>
+
 
 Date parameters
 ---------------
@@ -65,6 +128,18 @@ Incidentally, this is also how dates are returned to the server when a form is s
 .. code-block :: html
 
   <div dojoType=... when="now"></div>
+
+
+Type parameter
+--------------
+The parameter named `type` must always be specified for a dijit.form.Button widget.   Although the default value of `type` for a dijit.form.Button is "button", if no type is specified then IE8 (and other newer browsers) will interpret the type as "submit".
+
+.. code-block :: html
+
+  <button dojoType="dijit.form.Button" type="button">hello world</button>
+
+
+This is because in the newest version of the HTML specification, the default `type` value for <button> nodes is "submit", not "button".
 
 
 Function parameters
@@ -215,41 +290,15 @@ If you don't want to set a default value for an attribute, you can give it an em
   * new Date("") = a date/time
 
 
-Setting the parser behavior
----------------------------
-
-``todoc: parseOnLoad`` parseOnLoad:false by default, parseOnLoad:true optional, parseOnLoad:true makes addOnLoad call after parsing. howto set parseOnLoad
-
-``NEW in 1.3:``  Beginning in release 1.3 of dojo, you can manually call dojo.parser.instantiate on any node - and pass in an additional mixin to specify options, such as dojoType, etc.  The values in the mixin would override any values in your node.  For example:
-
-.. code-block :: html
-
-  <div id="myDiv" name="ABC" value="1"></div>
-
-You can manually call the parser's instantiate function (which does the "Magical Typing") by doing:
-
-.. code-block :: javascript
-
-  dojo.parser.instantiate([dojo.byId("myDiv")], {dojoType: "my.custom.type"});
-
-Calling instantiate in this way will return to you a list of instances that were created.  Note that the first parameter to instantiate is an array of nodes...even if it's one-element you need to wrap it in an array
-
-``NEW in 1.4:``  You specify that you do not want subwidgets to be started if you pass _started: false in your mixin.  For example:
-
-.. code-block :: javascript
-
-  dojo.parser.instantiate([dojo.byId("myDiv")], {dojoType: "my.custom.type", _started: false});
-
-``todoc: scoping a parser call to node by stringId|domNode``
 
 
 Caveats
--------
+=======
 
 ``todoc: re-parsing, duplicate id's``
 
 Examples
---------
+========
 
 Load some HTML content from a `remote URL <quickstart/ajax>`_, and convert the nodes decorated with ``dojoType``'s into widgets:
 
@@ -275,7 +324,6 @@ Delay page-level parsing until after some custom code (having set parseOnLoad:fa
 
 
 
-========
 See Also
 ========
 
