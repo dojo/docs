@@ -64,6 +64,7 @@ For example, given the class:
   dojo.declare("my.custom.type", null, {
     name: "",
     value: 0,
+    when: new Date(),
     objectVal: null,
     anotherObject: null,
     arrayVal: [],
@@ -75,7 +76,7 @@ And HTML node:
 
 .. code-block :: html
 
-  <div dojoType="my.custom.type" name="nm" value="5" objectVal="{a: 1, b:'c'}" 
+  <div dojoType="my.custom.type" name="nm" value="5" when="2008-1-1" objectVal="{a: 1, b:'c'}" 
          anotherObject="namedObj" arrayVal="a,b,c,1,2" typedArray="['a','b','c',1,2]"
          _privateVal="5" anotherValue="more"></div>
 
@@ -86,6 +87,7 @@ The parser would create an object and pass it paramaters of:
   {
     name: "nm",                                 // Just a simple string
     value: 5,                                   // Typed to an integer
+    when: dojo.date.stamp.fromISOString("2008-1-1"); // Typed to a date
     objectVal: {a: 1, b:'c'},                   // Typed to an object
     anotherObject: dojo.getObject("namedObj"),  // For strings, try getting the object via dojo.getObject
     arrayVal: ["a","b","c","1","2"],            // When typing to an array, all entries are strings
@@ -117,6 +119,35 @@ Calling instantiate in this way will return to you a list of instances that were
   dojo.parser.instantiate([dojo.byId("myDiv")], {dojoType: "my.custom.type", _started: false});
 
 
+Dates
+-----
+Speecial notes about date types:
+
+* Regardless of the locale of the client or server, dates are specified to the parser in ISO format:
+
+.. code-block :: html
+
+  <div dojoType=... when="2009-1-31"></div>
+
+Incidentally, this is also how dates are returned to the server when a form is submitted.
+
+
+* To specify a value as today's date (or the current time, when specifying a time), use the keyword "now":
+
+.. code-block :: html
+
+  <div dojoType=... when="now"></div>
+
+
+* In your widget class, to specify that an object is of type Date but not give it a specific value, use new Date(""):
+
+
+.. code-block :: javascript
+
+  dojo.declare("my.custom.type", null, {
+    when: new Date(""),  // the NaN of dates
+    ...
+  });
 
 Caveats
 -------
