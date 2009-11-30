@@ -216,11 +216,12 @@ Nesting an Editor With FullScreen in BorderContainer
   .. javascript::
 
     <script>
-      dojo.require("dijit.form.Button");
       dojo.require("dijit.Editor");
       dojo.require("dijit._editor.plugins.FullScreen");
       dojo.require("dijit.layout.BorderContainer");
       dojo.require("dijit.layout.ContentPane");
+      dojo.require("dojo.parser");	// scan page for widgets and instantiate them
+    </script>
 
   .. cv:: css
 
