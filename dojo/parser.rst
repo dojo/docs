@@ -14,8 +14,28 @@ The Dojo Parser is an optional module which is used to convert specially decorat
 
 This is not limited to Dijit, or `dojo.declare <dojo/declare>`_. 
 
-Using the Parser
-------------------
+Inside your HTML you mark nodes for the parser by setting the dojoType attribute, to specify the class of the widget, and other attributes, to specify parameters to the widget.   For example:
+
+.. code-block :: html
+
+  <input dojoType="dijit.form.TextBox" name="nm" value="hello world">
+
+
+The parser can scan the entire DOM for ``dojoType`` attributes, and create new instances from nodes like this.
+
+The parser also allows function parameters and connections to be done via <script> tags, for example:
+
+.. code-block :: html
+
+    <div dojoType=...>
+        <script type="dojo/connect" event="functionToConnectTo">
+           console.log("I will execute in addition to functionToConnectTo().");
+        </script>
+    </div>
+
+
+Getting Started
+---------------
 
 ==================
 Loading the Parser
@@ -52,14 +72,6 @@ To run the parser when your page loads, add a djConfig="parseOnLoad: true" to yo
 
 Parser syntax
 -------------
-Inside your HTML you mark nodes for the parser by setting dojoType, to specify the class of the widget, and other attributes (to specify parameters to the widget.   For example:
-
-.. code-block :: html
-
-  <input dojoType="dijit.form.TextBox" name="nm" value="hello world">
-
-
-The parser will scan the entire DOM for ``dojoType`` attributes, and create new instances from nodes like this.
 
 ==================
 Boolean parameters
@@ -191,7 +203,7 @@ To execute code on instantiation, use the same format but don't specify an event
 
 *Arguments*:
 
-For functions that take (named) parameters, specify them in an `args` attribute.  For example, onChange() gets a value argument, so to reference it do:
+For functions that take (named) parameters, specify them in an `args` attribute.  For example, onChange() gets a value parameter, so to reference it do:
 
 .. code-block :: html
 
@@ -201,7 +213,7 @@ For functions that take (named) parameters, specify them in an `args` attribute.
         </script>
     </div>
 
-`args` is a comma separated list of attribute names.
+`args` is a comma separated list of parameter names.
 
 *this*:
 
