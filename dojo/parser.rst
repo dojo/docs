@@ -3,19 +3,23 @@
 The Dojo Parser
 ===============
 
-:Status: Draft
+:Status: Contributed
 :Version: 1.0
 :Authors: Peter Higgins, Nathan Toone, Bill Keese, kolban
 
 .. contents::
-    :depth: 2
+    :depth: 3
 
 The Dojo Parser is an optional module which is used to convert specially decorated nodes in the DOM and convert them into `Dijits <dijit>`_. By `decorated` we mean use of a `dojoType` attribute. Any "Class" (or object, such as the ones created by `dojo.declare <dojo/declare>`_) can be instantiated by using a `dojoType` attribute on some node in the DOM, and create a widget out of it.
 
 This is not limited to Dijit, or `dojo.declare <dojo/declare>`_. 
 
-Loading the Parser
+Using the Parser
 ------------------
+
+==================
+Loading the Parser
+==================
 
 To include the Dojo parser on your page, require the module `dojo.parser`:
 
@@ -25,8 +29,9 @@ To include the Dojo parser on your page, require the module `dojo.parser`:
 
 ``note:`` dijit._Templated require()'s dojo.parser, so a lot of examples don't include this step (dijit._Templated is loaded by most every Dijit). It is always safer to explicitly `require <dojo/require>`_ the module than to assume it has been loaded.
 
+==================
 Running the Parser
-------------------
+==================
 
 There are two ways to run the dojo.parser: manually, or before onLoad.
 
@@ -44,35 +49,9 @@ To run the parser when your page loads, add a djConfig="parseOnLoad: true" to yo
 			djConfig="parseOnLoad: true"></script>
 
 
-Setting the parser behavior
----------------------------
-
-``todoc: parseOnLoad`` parseOnLoad:false by default, parseOnLoad:true optional, parseOnLoad:true makes addOnLoad call after parsing. howto set parseOnLoad
-
-``NEW in 1.3:``  Beginning in release 1.3 of dojo, you can manually call dojo.parser.instantiate on any node - and pass in an additional mixin to specify options, such as dojoType, etc.  The values in the mixin would override any values in your node.  For example:
-
-.. code-block :: html
-
-  <div id="myDiv" name="ABC" value="1"></div>
-
-You can manually call the parser's instantiate function (which does the "Magical Typing") by doing:
-
-.. code-block :: javascript
-
-  dojo.parser.instantiate([dojo.byId("myDiv")], {dojoType: "my.custom.type"});
-
-Calling instantiate in this way will return to you a list of instances that were created.  Note that the first parameter to instantiate is an array of nodes...even if it's one-element you need to wrap it in an array
-
-``NEW in 1.4:``  You specify that you do not want subwidgets to be started if you pass _started: false in your mixin.  For example:
-
-.. code-block :: javascript
-
-  dojo.parser.instantiate([dojo.byId("myDiv")], {dojoType: "my.custom.type", _started: false});
-
-``todoc: scoping a parser call to node by stringId|domNode``
 
 Parser syntax
-=============
+-------------
 Inside your HTML you mark nodes for the parser by setting dojoType, to specify the class of the widget, and other attributes (to specify parameters to the widget.   For example:
 
 .. code-block :: html
@@ -82,8 +61,9 @@ Inside your HTML you mark nodes for the parser by setting dojoType, to specify t
 
 The parser will scan the entire DOM for ``dojoType`` attributes, and create new instances from nodes like this.
 
+==================
 Boolean parameters
-------------------
+==================
 
 Due to HTML subtleties, for boolean parameters that are false, it's best not to specify the attribute at all.   For example, to specify an enabled button (where the `disabled` property is false), simply don't specify anything for disabled:
 
@@ -112,8 +92,9 @@ Although specifying disabled="true" will disable a widget, note that the followi
   <input dojoType="dijit.form.Button" disabled=""/>
 
 
+===============
 Date parameters
----------------
+===============
 * Regardless of the locale of the client or server, dates are specified to the parser in ISO format:
 
 .. code-block :: html
@@ -130,8 +111,9 @@ Incidentally, this is also how dates are returned to the server when a form is s
   <div dojoType=... when="now"></div>
 
 
+==============
 Type parameter
---------------
+==============
 The parameter named `type` must always be specified for a dijit.form.Button widget.   Although the default value of `type` for a dijit.form.Button is "button", if no type is specified then IE8 (and other newer browsers) will interpret the type as "submit".
 
 .. code-block :: html
@@ -142,8 +124,9 @@ The parameter named `type` must always be specified for a dijit.form.Button widg
 This is because in the newest version of the HTML specification, the default `type` value for <button> nodes is "submit", not "button".
 
 
+===================
 Function parameters
--------------------
+===================
 There are two ways to specify a function parameter to a widget, either via an attribute or a script tag (see below).   To specify a function as an attribute you can either specify the name of a function:
 
 .. code-block :: html
@@ -161,8 +144,9 @@ Alternately, you can inline the text of a function:
   <div dojoType=... onClick="alert('I was clicked');"></div>
 
 
+===========
 Script tags
------------
+===========
 Functional parameters can also be specified via script tags embedded inside the widget (as a direct child of the node with dojoType specified).  There are three types of script tags supported:
 
 *Connect to a function*:
@@ -232,8 +216,17 @@ Note that `this` points to the widget object.
     </div>
 
 
+
+
+
 Writing widgets
-===============
+---------------
+
+This section discusses how to write widgets that the parser can understand.
+
+===============================
+Specifying parameters and types
+===============================
 
 HTML sets all attributes on nodes as strings.  However, when the parser instantiates your nodes, it looks at the prototype of the class you are trying to instantiate (via dojoType attribute) and trys to make a "best guess" at what type your value should be.  This requires that all attributes you want to be passed in via the parser have a corresponding attribute in the class you are trying to instantiate.
 
@@ -290,15 +283,56 @@ If you don't want to set a default value for an attribute, you can give it an em
   * new Date("") = a date/time
 
 
+=============
+markupFactory
+=============
+
+As listed above, the parser expects widget constructors to follow a certain format (where the first argument is a hash of attribute names/values, and the second is the srcNodeRef.
+
+If you are retrofitting an existing class to work with the parser, and the constructor does not follow this format, simply create a markupFactory method (a static method) which takes those two parameters and creates a new instance of the widget
+
+.. code-block :: javascript
+
+   markupFactory: function(params, srcNodeRef){
+        ...
+        return newWidget;
+   }
+
+
+Setting the parser behavior
+---------------------------
+
+``todoc: parseOnLoad`` parseOnLoad:false by default, parseOnLoad:true optional, parseOnLoad:true makes addOnLoad call after parsing. howto set parseOnLoad
+
+``NEW in 1.3:``  Beginning in release 1.3 of dojo, you can manually call dojo.parser.instantiate on any node - and pass in an additional mixin to specify options, such as dojoType, etc.  The values in the mixin would override any values in your node.  For example:
+
+.. code-block :: html
+
+  <div id="myDiv" name="ABC" value="1"></div>
+
+You can manually call the parser's instantiate function (which does the "Magical Typing") by doing:
+
+.. code-block :: javascript
+
+  dojo.parser.instantiate([dojo.byId("myDiv")], {dojoType: "my.custom.type"});
+
+Calling instantiate in this way will return to you a list of instances that were created.  Note that the first parameter to instantiate is an array of nodes...even if it's one-element you need to wrap it in an array
+
+``NEW in 1.4:``  You specify that you do not want subwidgets to be started if you pass _started: false in your mixin.  For example:
+
+.. code-block :: javascript
+
+  dojo.parser.instantiate([dojo.byId("myDiv")], {dojoType: "my.custom.type", _started: false});
+
+``todoc: scoping a parser call to node by stringId|domNode``
 
 
 Caveats
-=======
-
+-------
 ``todoc: re-parsing, duplicate id's``
 
 Examples
-========
+--------
 
 Load some HTML content from a `remote URL <quickstart/ajax>`_, and convert the nodes decorated with ``dojoType``'s into widgets:
 
@@ -325,7 +359,7 @@ Delay page-level parsing until after some custom code (having set parseOnLoad:fa
 
 
 See Also
-========
+--------
 
 - `Understanding The Parser <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/understanding-parser>`_ - Part of "The book of Dojo 0.9"
 - `Introduction to the Parser <http://dojocampus.org/content/2008/03/08/the-dojo-parser/>`_
