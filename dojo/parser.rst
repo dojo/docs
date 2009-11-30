@@ -4,8 +4,6 @@ The Dojo Parser
 ===============
 
 
-``TODOC`` -- A very brief writeup is available here: http://dojocampus.org/content/2008/03/08/the-dojo-parser/
-
 The Dojo Parser is an optional module which is used to convert specially decorated nodes in the DOM and convert them into `Dijits <dijit>`_. By `decorated` we mean use of a `dojoType` attribute. Any "Class" (or object, such as the ones created by `dojo.declare <dojo/declare>`_) can be instantiated by using a `dojoType` attribute on some node in the DOM, and create a widget out of it.
 
 This is not limited to Dijit, or `dojo.declare <dojo/declare>`_. 
@@ -32,28 +30,137 @@ To execute the parser manually, simply call the function ``parse``:
   
   dojo.parser.parse();
 
-This will scan the entire DOM for ``dojoType`` attributes, and create new instances from the nodes.
+To run the parser when your page loads, add a djConfig="parseOnLoad: true" to your dojo script tag:
 
-``todoc: scoping a parser call to node by stringId|domNode``
+.. code-block :: html
 
-``todoc: running parser onload``
+		<script type="text/javascript" src="dojo/dojo.js"
+			djConfig="parseOnLoad: true"></script>
 
-Setting the parser behavior
----------------------------
 
-``todoc: parseOnLoad`` parseOnLoad:false by default, parseOnLoad:true optional, parseOnLoad:true makes addOnLoad call after parsing. howto set parseOnLoad
+Parser syntax
+=============
+Inside your HTML you mark nodes for the parser by setting dojoType, to specify the class of the widget, and other attributes (to specify parameters to the widget.   For example:
 
-Instantiating a Node
---------------------
+.. code-block :: html
 
-HTML sets all attributes on nodes as strings.  However, when the parser instantiates your nodes, it looks at the prototype of the class you are trying to instantiate (via dojoType attribute) and trys to make a "best guess" at what type your value should be.  This requires that all attributes you want to be passed in via the parser have a corresponding empty class member in the class you are trying to instantiate.
+  <input dojoType="dijit.form.TextBox" name="nm" value="hello world">
 
-Empty values of types are as follows:
-  * 0 = an integer
-  * "" = a string
-  * null = an object
-  * [] = an array
 
+The parser will scan the entire DOM for ``dojoType`` attributes, and create new instances from nodes like this.
+
+Date parameters
+---------------
+* Regardless of the locale of the client or server, dates are specified to the parser in ISO format:
+
+.. code-block :: html
+
+  <div dojoType=... when="2009-1-31"></div>
+
+Incidentally, this is also how dates are returned to the server when a form is submitted.
+
+
+* To specify a value as today's date (or the current time, when specifying a time), use the keyword "now":
+
+.. code-block :: html
+
+  <div dojoType=... when="now"></div>
+
+
+Function parameters
+-------------------
+There are two ways to specify a function parameter to a widget, either via an attribute or a script tag (see below).   To specify a function as an attribute you can either specify the name of a function:
+
+.. code-block :: html
+
+  <script>
+     function myOnClick(){ ... }
+  </script>
+  <div dojoType=... onClick="myOnClick"></div>
+
+
+Alternately, you can inline the text of a function:
+
+.. code-block :: html
+
+  <div dojoType=... onClick="alert('I was clicked');"></div>
+
+
+Script tags
+-----------
+Functional parameters can also be specified via script tags embedded inside the widget (as a direct child of the node with dojoType specified).  There are three types of script tags supported:
+
+*Connect to a function*:
+
+To perform a dojo.connect() on a method in a widget, use type="dojo/connect" inside a script node:
+
+.. code-block :: html
+
+    <div dojoType=...>
+        <script type="dojo/connect" event="functionToConnectTo">
+           console.log("I will execute in addition to functionToConnectTo().");
+        </script>
+    </div>
+
+*Override a function*:
+
+Sometimes you need to override a function in a widget.   Most commonly that happens when you need to specify a function that returns a value.   (The value returned from dojo.connect()'d functions is ignored.)
+
+In that case use the type="dojo/method" syntax:
+
+.. code-block :: html
+
+    <div dojoType=...>
+        <script type="dojo/method" event="functionToOverride">
+           console.log("I will execute instead of functionToOverride().");
+        </script>
+    </div>
+
+
+*Execute code on instantiation*:
+
+To execute code on instantiation, use the same format but don't specify an event flag:
+
+.. code-block :: html
+
+    <div dojoType=...>
+        <script type="dojo/method">
+           console.log("I will execute on instantiation");
+        </script>
+    </div>
+
+
+*Arguments*:
+
+For functions that take (named) parameters, specify them in an `args` attribute.  For example, onChange() gets a value argument, so to reference it do:
+
+.. code-block :: html
+
+    <div dojoType=...>
+        <script type="dojo/connect" event="onChange" args="value">
+           console.log("new value is " + value);
+        </script>
+    </div>
+
+`args` is a comma separated list of attribute names.
+
+*this*:
+
+Note that `this` points to the widget object.
+
+.. code-block :: html
+
+    <div dojoType=...>
+        <script type="dojo/connect" event="onChange" args="value">
+           console.log("onChange for " + this.id);
+        </script>
+    </div>
+
+
+Writing widgets
+===============
+
+HTML sets all attributes on nodes as strings.  However, when the parser instantiates your nodes, it looks at the prototype of the class you are trying to instantiate (via dojoType attribute) and trys to make a "best guess" at what type your value should be.  This requires that all attributes you want to be passed in via the parser have a corresponding attribute in the class you are trying to instantiate.
 
 Private members (those that begin with an underscore (_) ) are not mapped in from the source node.
 
@@ -62,7 +169,7 @@ For example, given the class:
 .. code-block :: javascript
 
   dojo.declare("my.custom.type", null, {
-    name: "",
+    name: "default value",
     value: 0,
     when: new Date(),
     objectVal: null,
@@ -98,6 +205,21 @@ Note that _privateVal is not passed in (since it is private), and anotherValue i
 
 The parser automatically will call the startup() function of all nodes when it is finished parsing (if the function exists, ie for dijit widgets)
 
+If you don't want to set a default value for an attribute, you can give it an empty value in your prototype.  Empty values of types are as follows:
+
+  * NaN = an integer
+  * "" = a string
+  * null = an object
+  * [] = an array
+  * function(){} = a function
+  * new Date("") = a date/time
+
+
+Setting the parser behavior
+---------------------------
+
+``todoc: parseOnLoad`` parseOnLoad:false by default, parseOnLoad:true optional, parseOnLoad:true makes addOnLoad call after parsing. howto set parseOnLoad
+
 ``NEW in 1.3:``  Beginning in release 1.3 of dojo, you can manually call dojo.parser.instantiate on any node - and pass in an additional mixin to specify options, such as dojoType, etc.  The values in the mixin would override any values in your node.  For example:
 
 .. code-block :: html
@@ -118,36 +240,8 @@ Calling instantiate in this way will return to you a list of instances that were
 
   dojo.parser.instantiate([dojo.byId("myDiv")], {dojoType: "my.custom.type", _started: false});
 
+``todoc: scoping a parser call to node by stringId|domNode``
 
-Dates
------
-Speecial notes about date types:
-
-* Regardless of the locale of the client or server, dates are specified to the parser in ISO format:
-
-.. code-block :: html
-
-  <div dojoType=... when="2009-1-31"></div>
-
-Incidentally, this is also how dates are returned to the server when a form is submitted.
-
-
-* To specify a value as today's date (or the current time, when specifying a time), use the keyword "now":
-
-.. code-block :: html
-
-  <div dojoType=... when="now"></div>
-
-
-* In your widget class, to specify that an object is of type Date but not give it a specific value, use new Date(""):
-
-
-.. code-block :: javascript
-
-  dojo.declare("my.custom.type", null, {
-    when: new Date(""),  // the NaN of dates
-    ...
-  });
 
 Caveats
 -------
@@ -186,3 +280,4 @@ See Also
 ========
 
 - `Understanding The Parser <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/understanding-parser>`_ - Part of "The book of Dojo 0.9"
+- `Introduction to the Parser <http://dojocampus.org/content/2008/03/08/the-dojo-parser/>`_
