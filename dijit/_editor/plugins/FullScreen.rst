@@ -28,7 +28,7 @@ Limitations
 ===========
 
 * The FullScreen plugin can only expand the editor to the size of its current 'window' object.  so if you have dojo embedded in an iframe in your page, the maximum it can make the editor is the size of the iframe containing it.
-* The FullScreen plugin works best when the editor is a direct child of <body>.  Nesting it in layout containers will generally work, but you may experience some issues.  Please report those issues to us via the `tracker system <bugs.dojotoolkit.org>`_ and we will try to address them if possible.  Please see the section on `FullScreen mode and Layout Containers <http://docs.dojocampus.org/dijit/_editor/plugins/FullScreen>`_ for more details.
+* The FullScreen plugin works best when the editor is a direct child of <body>.  Nesting it in layout containers will generally work, but you may experience some issues.  Please report those issues to us via the `tracker system <bugs.dojotoolkit.org>`_ and we will try to address them if possible.  Please see the section on `FullScreen mode and Layout Containers <http://docs.dojocampus.org/dijit/_editor/plugins/FullScreen#full-screen-mode-and-layoutcontainers>`_ for more details.
 * When using FullScreen plugin on an editor contained within a layout container, such as BorderContainer or Tabcontainer, make sure that the Editor is wrapped within a content pane.  This is to avoid issues with the border container directly altering style information on the editor when the browser is resized.  The ContentPane acts as a buffer between the BroderContainer resize control and Editor.  
 * FullScreen mode requires that you define your Dojo theme on the <body> element of your page.  Example: 
 
