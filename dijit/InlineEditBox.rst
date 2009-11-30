@@ -124,11 +124,7 @@ TextBox with autoSave
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
 | Close the TextBox, saving changes..           | Enter	       | Keyboard focus is on the closed InlineEditBox.              |
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
-| Revert the last entry.                        | Esc          | If the user has not entered data, the Textbox is closed.    |
-+-----------------------------------------------+--------------+-------------------------------------------------------------+
-| Close the Textarea, discarding changes.       | Esc          | If the user has entered data, the Esc must be pressed two   |
-|                                               |              | times; the first time the data will be reverted; the second |
-|                                               |              | time the Textbox will close.                                |    
+| Close the TextBox, discarding changes.        | Esc          | Cancels the edit, discarding any changes.                   |   
 +-----------------------------------------------+--------------+-------------------------------------------------------------+  
 
 
@@ -146,11 +142,7 @@ Textarea with autoSave
 |                                               |              | TextBoxes to close the textarea. The user would have to     |
 |                                               |              | use something like Tab and Shift + Tab                      |
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
-| Revert the last entry.                        | Esc          | If the user has not entered data, the Textarea is closed.   |
-+-----------------------------------------------+--------------+-------------------------------------------------------------+
-| Close the Textarea, discarding changes.       | Esc          | If the user has entered data, the Esc must be pressed two   |
-|                                               |              | times; the first time the data will be reverted; the second |
-|                                               |              | time the Textarea will close.                               |    
+| Close the Textarea, discarding changes.       | Esc          | Cancels the edit, discarding any changes.                   | 
 +-----------------------------------------------+--------------+-------------------------------------------------------------+   
 
                                                                
@@ -169,8 +161,6 @@ TextBox or TextArea without autoSave
 | Close the TextBox/TextArea, saving changes.   | Tab to save  | Keyboard focus is on the closed InlineEditBox.              |
 |                                               | button and   |                                                             |
 |                                               | press Enter  |                                                             |
-+-----------------------------------------------+--------------+-------------------------------------------------------------+
-| Revert the last entry.                        | Esc          | If the user has not entered data, the escape key is ignored.|
 +-----------------------------------------------+--------------+-------------------------------------------------------------+
 | Close the Textbox/TextArea, discarding changes| Tab to cancel| Keyboard focus is on the closed InlineEditBox.              |
 |                                               | button and   |                                                             |
