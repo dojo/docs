@@ -29,7 +29,13 @@ Limitations
 
 * The FullScreen plugin can only expand the editor to the size of its current 'window' object.  so if you have dojo embedded in an iframe in your page, the maximum it can make the editor is the size of the iframe containing it.
 * The FullScreen plugin works best when the editor is a direct child of <body>.  Nesting it in layout containers will generally work, but you may experience some issues.  Please report those issues to us via the `tracker system <bugs.dojotoolkit.org>`_ and we will try to address them if possible.  Please see the section on `FullScreen mode and Layout Containers <http://docs.dojocampus.org/dijit/_editor/plugins/FullScreen>`_ for more details.
+* FullScreen mode requires that you define your Dojo theme on the <body> element of your page.  Example: 
 
+.. code-block :: html
+
+  <body class="tundra"> 
+    Your content here.
+  <body>
 
 =====
 Usage
@@ -74,6 +80,12 @@ Example:
 .. code-block :: html
 
   <div dojoType="dijit.Editor" id="editor" extraPlugins="[name: 'fullscreen', zIndex: 900}]"></div>
+
+
+=====================================
+Full Screen mode and LayoutContainers
+=====================================
+Layout containers put restrictions on their children content in order to force specific layout flows.  Such restrictions are often in the CSS definitions, and do things such as applying 'position: absolute' as a CSS property.  These styles can cause issues with the Editor and FullScreen mode.  The editor works around them by removing classes
 
 
 ===================
