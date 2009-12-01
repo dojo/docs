@@ -184,7 +184,7 @@ DataGrid options
 ----------------
 In addition to the options for the columns, there are also options available for the DataGrid itself.
 
-jsid
+jsId
   The name of a JavaScript variable that will be created that will hold the grid object.  This can then be referenced in scripts.
 store
   The name of JavaScript variable that holds the store object used to get data for the grid.
