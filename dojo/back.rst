@@ -154,7 +154,7 @@ A simple demo of dojo.back - it's bookmarkable and based on the tests/back.html
   .. cv:: html
 
         <script type="text/javascript" src="http://o.aolcdn.com/dojo/1.3.1/dojo/dojo.xd.js.uncompressed.js"
-                djConfig="parseOnLoad: true, dojoIframeHistoryUrl:'http://localhost:8080/rawnutr/dojo/dojo/resources/iframe_history.html'">
+                djConfig="parseOnLoad: true">
         </script>
         <script type="text/javascript" src="http://o.aolcdn.com/dojo/1.3.1/dojo/back.js" ></script>
         <script type="text/javascript">dojo.back.init();</script>
