@@ -56,10 +56,10 @@ The following steps show a typical usage of EnhancedGrid:
       // Row/Column drag-drop feature                  
       dojo.require("dojox.grid.enhanced.plugins.DnD"); 
       // Declarative pop-up menu feature           
-      dojo.require("dojox.grid.enhanced.plugins.Menu");   
-      // Nested sorting feature        
-      dojo.require("dojox.grid.enhanced.plugins.NestedSorting"); 
-      // Indirect selection(check box/radio button selection) feature      
+      dojo.require("dojox.grid.enhanced.plugins.Menu");
+      // Nested sorting feature
+      dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
+      // Indirect selection(check box/radio button selection) feature
       dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");   
       ...
   </script>
@@ -274,6 +274,17 @@ Usage
   </script>
 
 It is unlikely that the row headers will be desired when indirect selection is used. The following code removes the row headers from the grid.
+.. code-block :: javascript
+  :linenos:
+
+  ... with HTML markup
+  <div id="grid" dojoType="dojox.grid.EnhancedGrid" plugins="{indirectSelection: true}" rowSelector="0px" ... />
+   
+  ... with Javascript
+  <script>
+    var grid = new dojox.grid.EnhancedGrid({id: "grid", plugins: {indirectSelection: true}, rowSelector: "0px", ...}, dojo.byId('gridDiv'));
+  </script>
+
 
 Scenario
 --------
@@ -326,6 +337,19 @@ Note that extended selection is also enabled through the row headers as well.
 
 Tips
 ----
+* When the "Indirect Selection" feature is enabled, you could handle row selection programmatically as follows.
+
+.. code-block :: javascript
+  :linenos:
+
+  <script>
+      for(var i = 0; i < selectedRows.length/*Array of selected row index*/;  i++){
+         grid.rowSelectCell.toggleRow(selectedRows[i], true);
+      }
+  </script>
+
+
+
 
 * When the "Indirect Selection" feature is enabled, you could handle row selection programmatically as follows.
 
