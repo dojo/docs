@@ -100,6 +100,8 @@ A simple demo of dojo.back - it's bookmarkable and based on the tests/back.html
 **BROKEN**
 **this isn't working in the sandbox - needs to be a fullblown page ... leaving it here till i figure out if it can be done**
 
+dojo.back needs either a local dojo.js or a local iframe_history.html
+
 
 .. cv-compound::
 
