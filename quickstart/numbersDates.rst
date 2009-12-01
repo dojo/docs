@@ -7,8 +7,8 @@ Parsing, Formatting, and Validating: Dates and Numbers
 :Version: 1.0
 :Author: CraigRiecke, AdamPeller
 
-These widgets augment the functionality of the ``<INPUT type="text">`` tag.   
-The base widget dijit.form.Textbox by itself can trim, change case, and require input.  
+These widgets augment the functionality of the ``<INPUT type="text">`` tag.
+The base widget dijit.form.Textbox by itself can trim, change case, and require input.
 dijit.form.ValidationTextbox extends this by validating the input when the box loses focus.  The other widgets further extend the validation function with range and format checking.  Internal to the MappedTextBox widget subclass are two INPUT elements.  One interacts with the user obeying local customs, the other is hidden and represents the named form element to submit data to the server using a normalized serialization.  By default, the widget will discover the appropriate locale and behavior `as specified by Dojo
 <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/i18n/specifying-locale>`_.
 
@@ -17,10 +17,10 @@ For example, when using a NumberTextBox in the United States, an optional comma 
 Constraints
 -----------
 
-To override the defaults, you can use the "constraints" attribute.  "constraints" is an 
-object passed to functions responsible for validating, parsing, and formatting the data in the box, and 
-various properties may be provided to override system or locale-specific defaults.  Constraints are handled in Dojo low-level routines in 
-`dojo.date <dojo/date>`_, dojo.currency and dojo.number, and you can refer to the API documentation for complete details.  We summarize them here for convenience:</p>
+To override the defaults, you can use the "constraints" attribute.  "constraints" is an
+object passed to functions responsible for validating, parsing, and formatting the data in the box, and
+various properties may be provided to override system or locale-specific defaults.  Constraints are handled in Dojo low-level routines in
+`dojo.date <dojo/date>`_, dojo.currency and dojo.number, and you can refer to the API documentation for complete details.  We summarize them here for convenience:
 
 Number Constraints
 ------------------
@@ -42,7 +42,7 @@ Number Pattern Characters
 .. csv-table:: Number Pattern Characters
    :header: "Symbol", "Location", "Localized?", "Meaning"
    :widths: 5,10,7,20
-   
+
    "0","Number","Yes","Digit"
    "1-9","Number","Yes","'1' through '9' indicate rounding."
    "@","Number","No","Significant digit"
@@ -76,7 +76,7 @@ Date Constraints
 .. csv-table:: Date Pattern Characters
    :header: "Letter","Date or Time Component","Presentation","Examples"
    :widths: 5,15,10,10
-   
+
    "G ","Era designator ","Text ","AD"
    "y ","Year ","Year ","1996; 96"
    "M ","Month in year ","Month ","July; Jul; 07"
@@ -104,7 +104,7 @@ The following examples show how date and time patterns are interpreted in the U.
 
 .. csv-table:: Title
    :header: "Date and Time Pattern","Result"
-   
+
     "yyyy.MM.dd G 'at' HH:mm:ss "," 	2001.07.04 AD at 12:08:56 PDT"
     "EEE, MMM d, ''y"," 	Wed, Jul 4, '01"
     "h:mm "," 	12:08 PM"
