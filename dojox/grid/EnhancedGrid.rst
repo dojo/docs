@@ -58,9 +58,9 @@ The following steps show a typical usage of EnhancedGrid:
       // Declarative pop-up menu feature
       dojo.require("dojox.grid.enhanced.plugins.Menu");
       // Nested sorting feature
-      dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
-      // Indirect selection(check box/radio button selection) feature
-      dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");
+dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
+// Indirect selection(check box/radio button selection) feature
+dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");
       ...
   </script>
 
@@ -277,10 +277,10 @@ Usage
 
 .. code-block :: html
   :linenos:
+
   //with HTML markup
   <div id="grid" dojoType="dojox.grid.EnhancedGrid" plugins="{indirectSelection: true}" rowSelector="0px" ... />
  
-
   //with Javascript
   <script>
     var grid = new dojox.grid.EnhancedGrid({id: "grid", plugins: {indirectSelection: true}, rowSelector: "0px", ...}, dojo.byId('gridDiv'));
@@ -361,6 +361,24 @@ Tips
       for(var i = 0; i < selectedRows.length/*Array of selected row index*/;  i++){
          grid.rowSelectCell.toggleRow(selectedRows[i], true);
       }
+  </script>
+
+* When in non-‘single’ selection mode, it’s also easy to select or deselect all rows by:
+
+.. code-block :: javascript
+  :linenos:
+
+  <script>
+      dijit.byId("grid").rowSelectCell.toggleAllSelection(true|false);
+  </script>
+
+* Another handy usage is to enable or disable a check box or radio button for a certain row by:
+
+.. code-block :: javascript
+  :linenos:
+
+  <script>
+      dijit.byId('grid').rowSelectCell.setDisabled(rowIndex, true|false);
   </script>
 
 * A topic named "rowSelectionChangedTopic" will be published when row selections are changed. The topic can be subscribed to with the following code.
