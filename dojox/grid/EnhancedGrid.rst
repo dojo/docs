@@ -58,9 +58,9 @@ The following steps show a typical usage of EnhancedGrid:
       // Declarative pop-up menu feature
       dojo.require("dojox.grid.enhanced.plugins.Menu");
       // Nested sorting feature
-dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
-// Indirect selection(check box/radio button selection) feature
-dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");
+      dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
+      // Indirect selection(check box/radio button selection) feature
+      dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");
       ...
   </script>
 
@@ -338,20 +338,6 @@ Note that extended selection is also enabled through the row headers as well.
 
 Tips
 ----
-* When the "Indirect Selection" feature is enabled, you could handle row selection programmatically as follows.
-
-.. code-block :: javascript
-  :linenos:
-
-  <script>
-      for(var i = 0; i < selectedRows.length/*Array of selected row index*/;  i++){
-         grid.rowSelectCell.toggleRow(selectedRows[i], true);
-      }
-  </script>
-
-
-
-
 * When the "Indirect Selection" feature is enabled, you could handle row selection programmatically as follows.
 
 .. code-block :: javascript
