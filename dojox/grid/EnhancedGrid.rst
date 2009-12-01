@@ -275,19 +275,13 @@ Usage
 
 * It is unlikely that the row headers will be desired when indirect selection is used. The following code removes the row headers from the grid.
 
-  ... with HTML markup
-
 .. code-block :: html
   :linenos:
-
+  //with HTML markup
   <div id="grid" dojoType="dojox.grid.EnhancedGrid" plugins="{indirectSelection: true}" rowSelector="0px" ... />
  
 
-  ... with Javascript
-
-.. code-block :: javascript
-  :linenos:
-
+  //with Javascript
   <script>
     var grid = new dojox.grid.EnhancedGrid({id: "grid", plugins: {indirectSelection: true}, rowSelector: "0px", ...}, dojo.byId('gridDiv'));
   </script>
