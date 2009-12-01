@@ -153,6 +153,8 @@ A simple demo of dojo.back - it's bookmarkable and based on the tests/back.html
 
   .. cv:: html
 
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/dojo/1.3/dojo/dojo.xd.js" djConfig="parseOnLoad: true">
+        </script>
         <script type="text/javascript" src="http://o.aolcdn.com/dojo/1.3.1/dojo/back.js" ></script>
         <script type="text/javascript">dojo.back.init();</script>
         <div style="padding-bottom: 20px; width: 100%; border-bottom: 1px solid gray">
