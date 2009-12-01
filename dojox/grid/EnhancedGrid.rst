@@ -52,15 +52,15 @@ The following steps show a typical usage of EnhancedGrid:
 
   <script type="text/javascript">
       // Required for all Enhanced features
-      dojo.require("dojox.grid.EnhancedGrid");  
-      // Row/Column drag-drop feature                  
+      dojo.require("dojox.grid.EnhancedGrid");
+      // Row/Column drag-drop feature
       dojo.require("dojox.grid.enhanced.plugins.DnD"); 
-      // Declarative pop-up menu feature           
+      // Declarative pop-up menu feature
       dojo.require("dojox.grid.enhanced.plugins.Menu");
       // Nested sorting feature
       dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
       // Indirect selection(check box/radio button selection) feature
-      dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");   
+      dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");
       ...
   </script>
 
@@ -277,11 +277,12 @@ Usage
 
   ... with HTML markup
 
-.. code-block :: javascript
+.. code-block :: html
   :linenos:
 
   <div id="grid" dojoType="dojox.grid.EnhancedGrid" plugins="{indirectSelection: true}" rowSelector="0px" ... />
  
+
   ... with Javascript
 
 .. code-block :: javascript
