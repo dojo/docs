@@ -51,12 +51,16 @@ The following steps show a typical usage of EnhancedGrid:
   :linenos:
 
   <script type="text/javascript">
-      dojo.require("dojox.grid.EnhancedGrid");                          // Required for all Enhanced features
-      dojo.require("dojox.grid.enhanced.plugins.DnD");                  // Row/Column drag-drop feature
-      dojo.require("dojox.grid.enhanced.plugins.Menu");                 // Declarative pop-up menu feature
-      dojo.require("dojox.grid.enhanced.plugins.NestedSorting");        // Nested sorting feature
-      dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");    // Indirect selection
-                                                                        // (check box/radio button selection) feature
+      // Required for all Enhanced features
+      dojo.require("dojox.grid.EnhancedGrid");  
+      // Row/Column drag-drop feature                  
+      dojo.require("dojox.grid.enhanced.plugins.DnD"); 
+      // Declarative pop-up menu feature           
+      dojo.require("dojox.grid.enhanced.plugins.Menu");   
+      // Nested sorting feature        
+      dojo.require("dojox.grid.enhanced.plugins.NestedSorting"); 
+      // Indirect selection(check box/radio button selection) feature      
+      dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");   
       ...
   </script>
 
