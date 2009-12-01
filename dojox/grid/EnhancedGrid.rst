@@ -274,6 +274,7 @@ Usage
   </script>
 
 It is unlikely that the row headers will be desired when indirect selection is used. The following code removes the row headers from the grid.
+
 .. code-block :: javascript
   :linenos:
 
