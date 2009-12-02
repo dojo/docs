@@ -93,7 +93,7 @@ Empty all nodes in a list by reference
     .red { color: white; min-width: 30px; min-height: 30px; 
         border: 1px #4d4d4d solid; margin-top: 4px; margin-right: 5px; 
         float: left; background-color: red }
-    #progButtonNode2 { clear: both }
+    #panel { clear: both }
     </style>
 
   .. javascript::
@@ -135,8 +135,10 @@ Empty all nodes in a list by reference
     <div class="green">greenNode</div>
     <div class="red">redNode</div>
 
-    <button id="progButtonNode2" type="button"></button>
-    <div id="result2"></div>
+    <div id="panel">
+        <button id="progButtonNode2" type="button"></button>
+        <div id="result2"></div>
+    </div>
 
 
 ========
