@@ -27,10 +27,6 @@ Top priority: dojo.js
 
   needed: full page
 
-* `dojo.empty <dojo/empty>`_
-
-  needed: review necessary
-
 * `dojo.provide <dojo/provide>`_
 
   needed: review necessary
