@@ -27,10 +27,6 @@ Top priority: dojo.js
 
   needed: full page
 
-* `dojo.isAlien <dojo/isAlien>`_
-
-  needed: a proper test against isAlien() (in the example)
-
 * `dojo.withGlobal <dojo/withGlobal>`_
 
   needed: Review and additional use causes.  Very spartan right now.
