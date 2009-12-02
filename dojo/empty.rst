@@ -107,7 +107,7 @@ Empty all nodes in a list by reference
             label: "Empty all red nodes",
             onClick: function(){
                 // Empty all nodes in a list by reference:
-                dojo.query(".go").forEach(dojo.empty);
+                dojo.query(".red").forEach(dojo.empty);
                 dojo.byId("result2").innerHTML = "All red nodes were emtpied.";
             }
         }, "progButtonNode2");
