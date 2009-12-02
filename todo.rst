@@ -27,10 +27,6 @@ Top priority: dojo.js
 
   needed: full page
 
-* `dojo.connectPublisher <dojo/connectPublisher>`_
-
-  needed: review necessary
-
 * `dojo.isAlien <dojo/isAlien>`_
 
   needed: a proper test against isAlien() (in the example)
