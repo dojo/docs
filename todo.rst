@@ -27,10 +27,6 @@ Top priority: dojo.js
 
   needed: full page
 
-* `dojo.withGlobal <dojo/withGlobal>`_
-
-  needed: Review and additional use causes.  Very spartan right now.
-
 * `dojo.empty <dojo/empty>`_
 
   needed: review necessary
