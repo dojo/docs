@@ -29,9 +29,6 @@ Usage
  <script type="text/javascript">
    // Destroy a node byId:
    dojo.destroy("someId");
-
-  // Destroy all nodes in a list by reference:
-  dojo.query(".someNode").forEach(dojo.destroy);
  </script>
 
 This function only works with DomNodes, and returns nothing.
