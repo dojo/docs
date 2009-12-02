@@ -87,8 +87,8 @@ Empty all nodes in a list by reference
   .. css::
 
     <style type="text/css">
-    .stay { width: 30px; height: 30px; border: 1px #4d4d4d solid; margin-top: 4px; margin-right: 5px; float: left; background-color: green }
-    .go { width: 30px; height: 30px; border: 1px #4d4d4d solid; margin-top: 4px; margin-right: 5px; float: left; background-color: red }
+    .stay { color: white; min-width: 30px; min-height: 30px; border: 1px #4d4d4d solid; margin-top: 4px; margin-right: 5px; float: left; background-color: green }
+    .go { color: white; min-width: 30px; min-height: 30px; border: 1px #4d4d4d solid; margin-top: 4px; margin-right: 5px; float: left; background-color: red }
     </style>
 
   .. javascript::
