@@ -6,6 +6,8 @@ Docu Wiki ToDo
 .. contents::
    :depth: 2
 
+With V1.3 each new feature needs a proper documentation at docs.dojocampus.org - otherwise it will not be included in DojoToolkit. But besides that, there is still a lot of old stuff without proper documentation. 
+
 The following pages need more love:
 
 
@@ -261,14 +263,6 @@ Priority 4: DojoX
 * `dojox.widget.rotator.Wipe <dojox/widget/rotator/Wipe>`_ 
 
   needed: full page
-
-
-
-==================================
-New features for Dojo Toolkit V1.3
-==================================
-
-With V1.3 each new feature needs a proper documentation at docs.dojocampus.org - otherwise it will not be included in DojoToolkit.
 
 
 ==================================
