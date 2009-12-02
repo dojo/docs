@@ -58,14 +58,19 @@ Widgets are classes, created with dojo.declare. All widgets inherit from dijit._
      All attributes listed in attributeMap are applied to the DOM, and attributes for which there are custom setters (see `attributes <quickstart/writingWidgets/attributes>`_, those custom setters are called
 
 - postCreate
-   This is typically the workhorse of a custom widget. The widget has been rendered (but note that sub-widgets in the containerNode have not!)
+   This is typically the workhorse of a custom widget. The widget has been rendered (but note that sub-widgets in the containerNode have not!).   The widget though may not be attached to the DOM yet so *you shouldn't do any sizing calculations in this method*.
 
 - startup
-    If you need to be sure parsing and creation of any child widgets has completed, use startup.  This is often used for layout widgets like BorderContainer.
+    If you need to be sure parsing and creation of any child widgets has completed, use startup.  This is often used for layout widgets like BorderContainer.   If the widget does JS sizing, then startup() should call resize(), which does the sizing. 
 
 - destroy
      Implement destroy if you have special tear-down work to do (the superclasses will take care of most of it for you.
 
+Other methods
+-------------
+
+- resize
+    All widgets that do JS sizing should have a method called resize(), that lays out the widget.   Resize() should be called from startup() and will also be called by parent widgets like `dijit.layout.ContentPane <dijit/layout/ContentPane>`_.
 
 this.inherited()
 ----------------
