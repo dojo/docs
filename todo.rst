@@ -31,12 +31,6 @@ Top priority: dojo.js
 
   needed: review necessary
 
-* `dojo.destroy <dojo/destroy>`_
-
-  needed: review necessary
-
-  Group DOM Query & Manipulation related pages into a book section (we need both, a task-oriented overview and a reference page with examples)
-
 * `dojo.provide <dojo/provide>`_
 
   needed: review necessary
