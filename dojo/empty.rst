@@ -87,8 +87,12 @@ Empty all nodes in a list by reference
   .. css::
 
     <style type="text/css">
-    .stay { color: white; min-width: 30px; min-height: 30px; border: 1px #4d4d4d solid; margin-top: 4px; margin-right: 5px; float: left; background-color: green }
-    .go { color: white; min-width: 30px; min-height: 30px; border: 1px #4d4d4d solid; margin-top: 4px; margin-right: 5px; float: left; background-color: red }
+    .green { color: white; min-width: 30px; min-height: 30px; 
+        border: 1px #4d4d4d solid; margin-top: 4px; margin-right: 5px; 
+        float: left; background-color: green }
+    .red { color: white; min-width: 30px; min-height: 30px; 
+        border: 1px #4d4d4d solid; margin-top: 4px; margin-right: 5px; 
+        float: left; background-color: red }
     </style>
 
   .. javascript::
@@ -114,19 +118,25 @@ Empty all nodes in a list by reference
   .. html::
     :label: Some DomNodes
 
-    <div class="stay">green</div>
-    <div class="stay">green</div>
-    <div class="go">red</div>
-    <div class="stay">green</div>
-    <div class="stay">green</div>
-    <div class="stay">green</div>
-    <div class="go">red</div>
-    <div class="go">red</div>
-    <div class="stay">green</div>
-    <div class="stay">green</div>
-    <div class="go">red</div>
+    <div class="green">greenNode</div>
+    <div class="green">greenNode</div>
+    <div class="red">redNode</div>
+    <div class="green">greenNode</div>
+    <div class="green">greenNode</div>
+    <div class="red">redNode</div>
+    <div class="red">redNode</div>
+    <div class="green">greenNode</div>
+    <div class="green">greenNode</div>
+    <div class="red">redNode</div>
+    <div class="red">redNode</div>
+    <div class="red">redNode</div>
+    <div class="green">greenNode</div>
+    <div class="green">greenNode</div>
+    <div class="red">redNode</div>
+
     <button id="progButtonNode2" type="button"></button>
     <div id="result2"></div>
+
 
 ========
 See also
