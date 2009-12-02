@@ -4,7 +4,7 @@ dijit.InlineEditBox
 ===================
 
 :Project owner: Bill Keese
-:Available: since V1.2
+:Available: since V1.0
 
 .. contents::
     :depth: 3
