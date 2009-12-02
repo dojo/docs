@@ -114,18 +114,17 @@ Empty all nodes in a list by reference
   .. html::
     :label: Some DomNodes
 
-    <div class="stay">&nbsp;</div>
-    <div class="stay">&nbsp;</div>
-    <div class="go">&nbsp;</div>
-    <div class="stay">&nbsp;</div>
-    <div class="go">&nbsp;</div>
-    <div class="stay">&nbsp;</div>
-    <div class="stay">&nbsp;</div>
-    <div class="go">&nbsp;</div>
-    <div class="go">&nbsp;</div>
-    <div class="stay">&nbsp;</div>
-    <div class="stay">&nbsp;</div>
-    <div class="go">&nbsp;</div>
+    <div class="stay">green</div>
+    <div class="stay">green</div>
+    <div class="go">red</div>
+    <div class="stay">green</div>
+    <div class="stay">green</div>
+    <div class="stay">green</div>
+    <div class="go">red</div>
+    <div class="go">red</div>
+    <div class="stay">green</div>
+    <div class="stay">green</div>
+    <div class="go">red</div>
     <button id="progButtonNode2" type="button"></button>
     <div id="result2"></div>
 
