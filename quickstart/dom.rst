@@ -259,25 +259,24 @@ Cross-browser Considerations
 
 Destroying Nodes
 ----------------
-To destroy a node: (Since version 1.0)
 
-.. code-block :: javascript
+In order to destroy a single node or a list of nodes, Dojo Toolkit provides the following functions:
 
-   dojo._destroyElement(node);
+* Since V1.3:
 
-```New With dojo v1.3:```
+  * `dojo.destroy(node) <dojo/destroy>`_
 
-A public alias to the above destroy method:
+* From V1.0 to V1.2:
 
-.. code-block :: javascript
-
-  dojo.destroy(node);
-
+  * dojo._destroyElement(node);
 
 
 ========
-See Also
+See also
 ========
+
 Here are a list of Web references on the subject of DOM
 
-- `Document Object Model (DOM) Technical Reports <http://www.w3.org/DOM/DOMTR>`_ - The official specifications from the W3 on the DOM.
+* `Document Object Model (DOM) Technical Reports <http://www.w3.org/DOM/DOMTR>`_
+
+  The official specifications from the W3 on the DOM.
