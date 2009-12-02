@@ -93,6 +93,7 @@ Empty all nodes in a list by reference
     .red { color: white; min-width: 30px; min-height: 30px; 
         border: 1px #4d4d4d solid; margin-top: 4px; margin-right: 5px; 
         float: left; background-color: red }
+    #progButtonNode2 { clear: both }
     </style>
 
   .. javascript::
