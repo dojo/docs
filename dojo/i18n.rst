@@ -13,18 +13,11 @@ Utility classes to enable loading of resources for internationalization.
 
 Used exclusively with `dojo.requireLocalization <dojo/requireLocalization>`_.
 
-============
-Introduction
-============
-
-dojo.i18n.getLocalization gets a reference to an Object with localized strings, as loaded by dojo.requireLocalization()
-
-
 =====
 Usage
 =====
 
-See `Internationalization Quickstart <quickstart/internationalization/index>`_ for more information.
+dojo.i18n.getLocalization gets a reference to an Object with localized strings, as loaded by dojo.requireLocalization()
 
 .. code-block :: javascript
  :linenos:
@@ -39,4 +32,5 @@ See `Internationalization Quickstart <quickstart/internationalization/index>`_ f
 See also
 ========
 
+* `Internationalization Quickstart <quickstart/internationalization/index>`_
 * `Translatable Resource bundles <quickstart/internationalization/resource-bundling>`_
