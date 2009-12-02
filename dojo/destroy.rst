@@ -40,3 +40,10 @@ node
   // Destroy all nodes in a list by reference:
   dojo.query(".someNode").forEach(dojo.destroy);
  </script>
+
+
+========
+See also
+========
+
+* `DOM Utilities <quickstart/dom>`_
