@@ -13,6 +13,7 @@ dijit.InlineEditBox
 InlineEditBox is best described as a behavior on some text on the page, such that clicking that text brings up an editor, and when the text is saved, the screen is reverted to it's original state (but with the new text). The editor is created on-demand, so as to not slow down page load.
 
 
+=========================
 Programatic InlineEditBox
 =========================
 
@@ -43,6 +44,7 @@ Programatic InlineEditBox
 Note that it was created with autoSave=false to make save/cancel buttons appear.
 Otherwise, the return key will end the edit, which is not appropriate for a multi-line edit.
 
+======
 Markup
 ======
 
@@ -61,6 +63,7 @@ Creation from markup is even easier.  Here's an example with an initial value.
 
     <span dojoType="dijit.InlineEditBox" editor="dijit.form.NumberSpinner" editorParams="{constraints: {places:0} }" width="70px" title="quantity">15</span>
 
+===================
 Initial blank value
 ===================
 
@@ -81,12 +84,15 @@ Note also that the width argument is important so to indicate the editors width,
     <span dojoType="dijit.InlineEditBox" editor="dijit.form.NumberTextBox" title="quantity" width="70px"></span>
 
 
+=============
 Notes on i18n
 =============
 
 Note that the web server is responsible for the initial formatting of the data.
 For example, if you are display a large number, it would be formatted as 123,456,789.55 in the United States but as 123.456.789,00 in some European countries.   InlineEditBox expects the number to be formatted in the page's locale and will fail if it can't parse it according to that locale.
 
+
+=============
 Accessibility
 =============
 
