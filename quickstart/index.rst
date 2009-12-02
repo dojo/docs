@@ -79,7 +79,7 @@ Widget developers notes:
 ------------------------
 * `Writing Widgets <quickstart/writingWidgets>`_
 * `Widget Hierarchies <quickstart/widgetHierarchies>`_
-* `Layout Widget Hierarchies <quickstart/widgetHierarchies>`_
+* `Layout Widget Hierarchies <quickstart/layoutWidgetHierarchies>`_
 
 
 =======================
