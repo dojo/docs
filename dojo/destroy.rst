@@ -23,13 +23,6 @@ dojo.destroy removes a node from its parent, clobbering it and all of its childr
 Usage
 =====
 
-This function only works with DomNodes, and returns nothing.
-
-Parameters:
-
-node
-  A String ID or DomNode reference of the element to be destroyed.
-
 .. code-block :: javascript
  :linenos:
 
@@ -41,6 +34,14 @@ node
   dojo.query(".someNode").forEach(dojo.destroy);
  </script>
 
+This function only works with DomNodes, and returns nothing.
+
+=========  ==============  =============================================================================
+Parameter  Type            Description
+=========  ==============  =============================================================================
+node       String|DomNode  A String ID or DomNode reference of the element to be destroyed.
+=========  ==============  =============================================================================
+  
 
 ========
 See also
