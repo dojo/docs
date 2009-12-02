@@ -3,8 +3,6 @@
 dojo.destroy
 ============
 
-:Status: Draft
-:Version: 1.0
 :Project owner: ?--
 :Available: since V?
 
@@ -42,26 +40,3 @@ node
   // Destroy all nodes in a list by reference:
   dojo.query(".someNode").forEach(dojo.destroy);
  </script>
-
-
-
-========
-Examples
-========
-
-Programmatic example
---------------------
-
-TODO: example
-
-Declarative example
--------------------
-
-TODO: example
-
-
-========
-See also
-========
-
-* TODO: links to other related articles
