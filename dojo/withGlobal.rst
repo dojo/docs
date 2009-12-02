@@ -3,7 +3,7 @@
 dojo.withGlobal
 ===============
 
-:Version: 1.0
+:Project owner: ?
 :Available: since V0.9
 
 .. contents::
