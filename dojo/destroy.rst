@@ -4,7 +4,7 @@ dojo.destroy
 ============
 
 :Project owner: ?--
-:Available: since V?
+:Available: since V1.3
 
 .. contents::
    :depth: 2
