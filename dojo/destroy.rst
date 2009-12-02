@@ -80,6 +80,57 @@ Destroy a single node
     <div id="result1"></div>
 
 
+Destroy all nodes in a list by reference
+----------------------------------------
+
+.. code-example::
+
+  .. css::
+
+    <style type="text/css">
+    .stay { width: 30px; height: 30px; border: 1px #4d4d4d solid; margin-top: 4px; margin-right: 5px; float: left; background-color: green }
+    .go { width: 30px; height: 30px; border: 1px #4d4d4d solid; margin-top: 4px; margin-right: 5px; float: left; background-color: red }
+    </style>
+
+  .. javascript::
+    :label: Destroy all Nodes in a list by reference
+
+    <script type="text/javascript">
+    dojo.require("dijit.form.Button");
+
+    dojo.addOnLoad(function(){
+        // Create a button programmatically:
+        var button2 = new dijit.form.Button({
+            label: "Destroy all red nodes",
+            onClick: function(){
+                // Destroy all nodes in a list by reference:
+                dojo.query(".go").forEach(dojo.destroy);
+                dojo.byId("result2").innerHTML = "All red nodes were destroyed.";
+            }
+        }, "progButtonNode2");
+
+    });
+    </script>
+
+  .. html::
+    :label: Some DomNodes to destroy
+
+    <div class="stay">&nbsp;</div>
+    <div class="stay">&nbsp;</div>
+    <div class="go">&nbsp;</div>
+    <div class="stay">&nbsp;</div>
+    <div class="go">&nbsp;</div>
+    <div class="stay">&nbsp;</div>
+    <div class="stay">&nbsp;</div>
+    <div class="go">&nbsp;</div>
+    <div class="go">&nbsp;</div>
+    <div class="stay">&nbsp;</div>
+    <div class="stay">&nbsp;</div>
+    <div class="go">&nbsp;</div>
+    <button id="progButtonNode2" type="button"></button>
+    <div id="result2"></div>
+
+
 ========
 See also
 ========
