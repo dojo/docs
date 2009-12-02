@@ -6,7 +6,7 @@ Docu Wiki ToDo
 .. contents::
    :depth: 2
 
-With V1.3 each new feature needs a proper documentation at docs.dojocampus.org - otherwise it will not be included in DojoToolkit. But besides that, there is still a lot of old stuff without proper documentation. 
+Starting with V1.3 each new feature needs a proper documentation at docs.dojocampus.org - otherwise it will not be included in DojoToolkit. But besides that, there is still a lot of old stuff without proper documentation. 
 
 The following pages need more love:
 
