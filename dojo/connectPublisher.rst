@@ -3,8 +3,6 @@
 dojo.connectPublisher
 =====================
 
-:Status: Draft
-:Version: 1.0
 :Project owner: Alex Russell
 :Available: since V0.9
 
