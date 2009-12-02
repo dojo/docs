@@ -3,10 +3,8 @@
 dojo.i18n
 =========
 
-:Status: Draft
-:Version: 1.0
-:Project owner: ?--
-:Available: since V?
+:Project owner: Adam Peller
+:Available: since V1.0
 
 .. contents::
    :depth: 2
@@ -26,7 +24,7 @@ dojo.i18n.getLocalization gets a reference to an Object with localized strings, 
 Usage
 =====
 
-See internationalization quick start for more information.
+See `Internationalization Quickstart <quickstart/internationalization/index>`_ for more information.
 
 .. code-block :: javascript
  :linenos:
@@ -41,4 +39,4 @@ See internationalization quick start for more information.
 See also
 ========
 
-* http://docs.dojocampus.org/quickstart/internationalization/resource-bundling
+* `Translatable Resource bundles <quickstart/internationalization/resource-bundling>`_
