@@ -3,9 +3,7 @@
 dojo.back
 =========
 
-:Status: Contributed, Draft
-:Version: 1.0
-:Available: 1.0
+:Available: since V1.0
 
 .. contents::
     :depth: 2
