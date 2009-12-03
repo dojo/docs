@@ -3,22 +3,52 @@
 dijit.Tooltip
 =============
 
-:Status: Draft
-:Version: 1.3
-:Authors: Doug Hays, Bill Keese
-:Developers: Bill Keese
+:Authors: Doug Hays, Bill Keese, Marcus Reimann
+:Project owner: Bill Keese
 :Available: since V1.0
 
 .. contents::
     :depth: 2
 
-=====
-Usage
-=====
+============
+Introduction
+============
 
 Tooltip is similar to the title="" attribute in regular HTML, but is much more flexible. You can control the display timing, and specify arbitrary (rich-text) HTML for the tooltip contents.
 
 Note that if you want your tooltip to contain a form or something that the user clicks on / focuses on, you should use the `dijit.TooltipDialog <dijit/TooltipDialog>`_ instead.
+
+
+=====
+Usage
+=====
+
+.. code-block :: javascript
+ :linenos:
+
+ <script type="text/javascript">
+   dojo.require("dijit.Tooltip");
+   new dijit.Tooltip({
+      connectId: ["exampleNode"],
+      label: "the text for the tooltip"
+   });
+ </script>
+
+=========  =========================  =============================================================================
+Parameter  Type                       Description
+=========  =========================  =============================================================================
+connectId  Array of Strings|DomNodes  Id's of domNodes to attach the tooltip to. When user hovers over any of the specified dom nodes, the tooltip will appear. Note: Currently connectId can only be specified on initialization, it cannot be changed via attr('connectId', ...) Note: in 2.0 this will be renamed to connectIds for less confusion.
+label      String                     Text to display in the tooltip. Specified as innerHTML when creating the widget from markup.
+position   Array of Strings           This variable controls the position of tooltips, if the position is not specified to the Tooltip widget or TextBox widget itself. It's an array of strings with the following values: 
+                                      
+                                      * before: places tooltip to the left of the target node/widget, or to the right in the case of RTL scripts like Hebrew and Arabic
+                                      * after: places tooltip to the right of the target node/widget, or to the left in the case of RTL scripts like Hebrew and Arabic
+                                      * above: tooltip goes above target node
+                                      * below: tooltip goes below target node
+                                      
+                                      The list is positions is tried, in order, until a position is found where the tooltip fits within the viewport.
+                                      Be careful setting this parameter. A value of "above" may work fine until the user scrolls the screen so that there's no room above the target node. Nodes with drop downs, like DropDownButton or FilteringSelect, are especially problematic, in that you need to be sure that the drop down and tooltip don't overlap, even when the viewport is scrolled so that there is only room below (or above) the target node, but not both.
+=========  =========================  =============================================================================
 
 ========
 Examples
@@ -47,7 +77,8 @@ Here's a tooltip created programatically:
 
          <span id="wordOfTheDay2">Longanimity</span>
 
-''Note that connectId is an array, since it can contain multiple nodes to connect to.''
+The property "connectId" is an array, since it can contain multiple nodes to connect to.
+
 
 Declarative markup
 ------------------
@@ -87,6 +118,7 @@ And here's a tooltip created from markup connected to a `dijit.form.Button <diji
 ===================
 Tooltip Positioning
 ===================
+
 By default, dijit tries to find a place to display the tooltip to the left or the right of the target element.
 You can control the search path for positions via a global setting like:
 
