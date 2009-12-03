@@ -46,7 +46,7 @@ position   Array of Strings           This variable controls the position of too
                                       * above: tooltip goes above target node
                                       * below: tooltip goes below target node
                                       
-                                      The list is positions is tried, in order, until a position is found where the tooltip fits within the viewport.
+                                      The list of positions is tried, in order, until a position is found where the tooltip fits within the viewport.
                                       Be careful setting this parameter. A value of "above" may work fine until the user scrolls the screen so that there's no room above the target node. Nodes with drop downs, like DropDownButton or FilteringSelect, are especially problematic, in that you need to be sure that the drop down and tooltip don't overlap, even when the viewport is scrolled so that there is only room below (or above) the target node, but not both.
 =========  =========================  =============================================================================
 
