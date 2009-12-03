@@ -37,9 +37,7 @@ Usage
 =========  =========================  =============================================================================
 Parameter  Type                       Description
 =========  =========================  =============================================================================
-connectId  Array of Strings|DomNodes  Id's of domNodes to attach the tooltip to. When user hovers over any of the specified dom nodes, the tooltip will appear. 
-                                      Note: Currently connectId can only be specified on initialization, it cannot be changed via attr('connectId', ...) 
-                                      Note: in 2.0 this will be renamed to connectIds for less confusion.
+connectId  Array of Strings|DomNodes  Id's of domNodes to attach the tooltip to. When user hovers over any of the specified dom nodes, the tooltip will appear. Note: Currently connectId can only be specified on initialization, it cannot be changed via attr('connectId', ...). Note: in 2.0 this will be renamed to connectIds for less confusion.
 label      String                     Text to display in the tooltip. Specified as innerHTML when creating the widget from markup.
 position   Array of Strings           This variable controls the position of tooltips, if the position is not specified to the Tooltip widget or TextBox widget itself. The property "connectId" is an array, since it can contain multiple nodes to connect to. The following values are possible:
                                       
