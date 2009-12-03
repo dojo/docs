@@ -3,10 +3,8 @@
 dojox.rpc.Rest
 ==============
 
-:Status: Draft
-:Version: 1.0
 :Authors: Marcus Reimann, Kris Zyp
-:Developers: Bryan Forbes, Dustin Machi, Kris Zyp
+:Project owner: Kris Zyp
 :Available: since V1.2
 
 .. contents::
@@ -110,3 +108,10 @@ You can also use the SMD service to generate a REST service:
 
     var services = dojox.rpc.Service({services: {myRestService: {transport: "REST",...
     services.myRestService("parameters");
+
+
+========
+See also
+========
+
+* `dojox.rpc <dojox/rpc>`_
