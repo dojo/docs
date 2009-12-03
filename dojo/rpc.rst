@@ -38,5 +38,8 @@ See also
   Extended classes to communicate via Remote Procedure Calls (RPC) with Backend Servers
 
 * `dojox.rpc.Service <dojox/rpc/Service>`_
+
+  The foundation of most dojox.RPC transportation
+
 * `dojox.rpc.Rest <dojox/rpc/Rest>`_
 * `dojox.rpc.OfflineRest <dojox/rpc/OfflineRest>`_
