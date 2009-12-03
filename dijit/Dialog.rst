@@ -30,6 +30,7 @@ Usage
    // create the dialog:
    myDialog = new dijit.Dialog({
        title: "My Dialog",
+       content: "test content",
        style: "width: 300px"
    });
  </script>
