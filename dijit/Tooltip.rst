@@ -39,7 +39,7 @@ Parameter  Type                       Description
 =========  =========================  =============================================================================
 connectId  Array of Strings|DomNodes  Id's of domNodes to attach the tooltip to. When user hovers over any of the specified dom nodes, the tooltip will appear. Note: Currently connectId can only be specified on initialization, it cannot be changed via attr('connectId', ...) Note: in 2.0 this will be renamed to connectIds for less confusion.
 label      String                     Text to display in the tooltip. Specified as innerHTML when creating the widget from markup.
-position   Array of Strings           This variable controls the position of tooltips, if the position is not specified to the Tooltip widget or TextBox widget itself. It's an array of strings with the following values: 
+position   Array of Strings           This variable controls the position of tooltips, if the position is not specified to the Tooltip widget or TextBox widget itself. The property "connectId" is an array, since it can contain multiple nodes to connect to. The following values are possible:
                                       
                                       * before: places tooltip to the left of the target node/widget, or to the right in the case of RTL scripts like Hebrew and Arabic
                                       * after: places tooltip to the right of the target node/widget, or to the left in the case of RTL scripts like Hebrew and Arabic
@@ -76,8 +76,6 @@ Here's a tooltip created programatically:
   .. cv:: html
 
          <span id="wordOfTheDay2">Longanimity</span>
-
-The property "connectId" is an array, since it can contain multiple nodes to connect to.
 
 
 Declarative markup
