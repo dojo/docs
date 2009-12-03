@@ -4,13 +4,16 @@
 dijit.Dialog
 ============
 
-:Status: Draft
-:Version: 1.0
 :Available: since V?
 :jsDoc: http://api.dojotoolkit.org/jsdoc/HEAD/dijit.Dialog
 
 .. contents::
     :depth: 2
+
+
+============
+Introduction
+============
 
 Dijit's modal Dialog Box simulates a regular GUI dialog box. The contents can be arbitrary HTML, but are most often a form or a short paragraph. The user can close the dialog box without acting by clicking on the X button in the top-right corner.
 
@@ -19,7 +22,17 @@ Dijit's modal Dialog Box simulates a regular GUI dialog box. The contents can be
 Usage
 =====
 
-The Dialog and underlay append themselves to the ``<body>`` element, which requires you apply your theme className there (as no other elements parent the Dialog.domNode). You need ``<body class="tundra">`` (or some other applicable theme name) in order for the Dialog to be styled.
+The Dialog and underlay append themselves to the ``<body>`` element (no other elements parent the Dialog.domNode). Therefore you have to add a ``class="tundra"`` attribute (or some other applicable theme name) to your <body> tag, in order to show the Dialog with the right styles:
+
+.. code-block :: html
+
+ <html>
+ <head>
+ ...
+ </head>
+ <body class="tundra">
+ ...
+ </body>
 
 
 ========
