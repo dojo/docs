@@ -543,6 +543,9 @@ These sections cover the available projects shipped with the Dojo Toolkit:
   * `dojox.rpc.OfflineRest <dojox/rpc/OfflineRest>`_
   * `dojox.rpc.ProxiedPath <dojox/rpc/ProxiedPath>`_
   * `dojox.rpc.Rest <dojox/rpc/Rest>`_
+
+    Provides a HTTP REST service with full range REST verbs include GET, PUT, POST and DELETE
+
   * `dojox.rpc.Service <dojox/rpc/Service>`_
 
     The foundation of most dojox.RPC transportation
