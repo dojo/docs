@@ -210,6 +210,10 @@ Priority 4: DojoX
 
   needed: full page
 
+* `dojox.layout.ExpandoPane <dojox/layout/ExpandoPane>`_
+
+  needed: full page
+
 * `dojox.widget.FisheyeList <dojox/widget/FisheyeList>`_ 
 
   needed: full page
