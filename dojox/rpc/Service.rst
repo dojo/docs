@@ -3,8 +3,6 @@
 dojox.rpc.Service
 =================
 
-:Status: Contributed, Draft
-:Version: 1.0
 :Author: Kris Zyp and Dustin Machi
 :Available: since V?
 
