@@ -65,9 +65,9 @@ Here's a tooltip created programatically:
   .. cv:: css
 
     <style type="text/css">
-    .bar1 { background-color: #ffa0a0; width: 17px; height: 74px; padding: 5px; position: absolute; top: 100px;}
-    .bar2 { background-color: #ffd4a0; width: 17px; height: 45px; padding: 5px; position: absolute; top: 129px;}
-    .bar3 { background-color: #fff79e; width: 17px; height: 30px; padding: 5px; position: absolute; top: 144px;}
+    .bar1 { background-color: #ffa0a0; width: 17px; height: 74px; padding: 5px; position: absolute; top: 100px; left: 10px; }
+    .bar2 { background-color: #ffd4a0; width: 17px; height: 45px; padding: 5px; position: absolute; top: 129px; left: 30px; }
+    .bar3 { background-color: #fff79e; width: 17px; height: 30px; padding: 5px; position: absolute; top: 144px; left: 50px; }
     </style>
 
 
