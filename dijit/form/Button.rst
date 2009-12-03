@@ -6,8 +6,8 @@ dijit.form.Button
 :Status: Draft
 :Version: 1.0
 :Authors: Becky Gibson, Doug Hays, Bill Keese, Nikolai Onken, Marcus Reimann
-:Developers: ?-
-:Available: since V?
+:Project owner: Bill Keese
+:Available: since V0.9
 
 .. contents::
     :depth: 2
