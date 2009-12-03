@@ -545,6 +545,8 @@ These sections cover the available projects shipped with the Dojo Toolkit:
   * `dojox.rpc.Rest <dojox/rpc/Rest>`_
   * `dojox.rpc.Service <dojox/rpc/Service>`_
 
+    The foundation of most dojox.RPC transportation
+
 * `dojox.secure <dojox/secure>`_
 * `dojox.sketch <dojox/sketch>`_
 * `dojox.sql <dojox/sql>`_
