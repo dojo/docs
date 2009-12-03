@@ -42,4 +42,7 @@ See also
   The foundation of most dojox.RPC transportation
 
 * `dojox.rpc.Rest <dojox/rpc/Rest>`_
+
+  Provides a HTTP REST service with full range REST verbs include GET, PUT, POST and DELETE
+
 * `dojox.rpc.OfflineRest <dojox/rpc/OfflineRest>`_
