@@ -62,21 +62,44 @@ Here's a tooltip created programatically:
 
 .. cv-compound::
 
+  .. cv:: css
+
+    <style type="text/css">
+    .bar1 { background-color: #ffa0a0; width: 17px; height: 74px; padding: 5px; position: absolute; top: 100px;}
+    .bar2 { background-color: #ffd4a0; width: 17px; height: 45px; padding: 5px; position: absolute; top: 129px;}
+    .bar3 { background-color: #fff79e; width: 17px; height: 30px; padding: 5px; position: absolute; top: 144px;}
+    </style>
+
+
   .. cv:: javascript
 
         <script>
            dojo.require("dijit.Tooltip");
            dojo.addOnLoad(function(){
+              // create a new Tooltip and connect it to bar1 and bar4
               new dijit.Tooltip({
-                  connectId: ["wordOfTheDay2"],
-                  label: "a <i>disposition</i> to bear injuries patiently : <b>forbearance</b>"
+                  connectId: ["bar1", "bar4"],
+                  label: "value <b>74</b>"
+              });
+              // create a new Tooltip and connect it to bar2
+              new dijit.Tooltip({
+                  connectId: ["bar2"],
+                  label: "value <b>45</b>"
+              });
+              // create a new Tooltip and connect it to bar3
+              new dijit.Tooltip({
+                  connectId: ["bar3"],
+                  label: "value <b>30</b>"
               });
            });
         </script>
 
   .. cv:: html
 
-         <span id="wordOfTheDay2">Longanimity</span>
+         <span id="bar1" class="bar1">&nbsp;</span>
+         <span id="bar2" class="bar2">&nbsp;</span>
+         <span id="bar3" class="bar3">&nbsp;</span>
+         <span id="bar4" class="bar1">&nbsp;</span>
 
 
 Declarative markup
