@@ -202,6 +202,10 @@ Priority 4: DojoX
 
   needed: full page
 
+* `dojox.layout.ContentPane <dojox/layout/ContentPane>`_
+
+  needed: full page
+
 * `dojox.widget.FisheyeList <dojox/widget/FisheyeList>`_ 
 
   needed: full page
