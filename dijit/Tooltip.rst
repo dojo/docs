@@ -91,22 +91,16 @@ Here's a tooltip created programatically:
                   connectId: ["bar3"],
                   label: "value <b>30</b>"
               });
-              // create a new Tooltip and connect it to panel
-              new dijit.Tooltip({
-                  connectId: ["panel"],
-                  label: "scroll over the <b>colored bars</b>"
-              });
            });
         </script>
 
   .. cv:: html
 
-    <div id="panel">
-        <span id="bar1" class="bar1">&nbsp;</span>
-        <span id="bar2" class="bar2">&nbsp;</span>
-        <span id="bar3" class="bar3">&nbsp;</span>
-        <span id="bar4" class="bar1">&nbsp;</span>
-    </div>
+    <span id="bar1" class="bar1">&nbsp;</span>
+    <span id="bar2" class="bar2">&nbsp;</span>
+    <span id="bar3" class="bar3">&nbsp;</span>
+    <span id="bar4" class="bar1">&nbsp;</span>
+    <div>Point your mouse over a colored bar</div>
 
 
 Declarative markup
