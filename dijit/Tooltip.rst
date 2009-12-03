@@ -56,6 +56,13 @@ And here's a tooltip created from markup connected to a `dijit.form.Button <diji
 
 .. cv-compound::
 
+  .. cv:: css
+
+    <style type="text/css">
+    .box { color: white; background-color: #ba2929; width: 200px; height: 50px; padding: 10px; }
+    </style>
+
+
   .. cv:: javascript
 
         <script>
@@ -65,10 +72,10 @@ And here's a tooltip created from markup connected to a `dijit.form.Button <diji
 
   .. cv:: html
 
-        <div style="background-color: #ba2929; width: 200px; height: 50px; padding: 10px; color: white">Example content above button</div>
+        <div class="box">Example content above button</div>
         <button id="buttonId" dojoType="dijit.form.Button">Longanimity</button>
         <button id="button2" dojoType="dijit.form.Button">Tooltip below</button>
-        <div style="background-color: #ba2929; width: 200px; height: 50px; padding: 10pxx; color: white">Example content below button</div>
+        <div class="box">Example content below button</div>
         <div dojoType="dijit.Tooltip" connectId="buttonId" position="above">
             a <i>disposition</i> to bear injuries patiently : <b>forbearance</b>
         </div>
