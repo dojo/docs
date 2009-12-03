@@ -541,6 +541,9 @@ These sections cover the available projects shipped with the Dojo Toolkit:
   * `dojox.rpc.JsonRPC <dojox/rpc/JsonRPC>`_
   * `dojox.rpc.LocalStorageRest <dojox/rpc/LocalStorageRest>`_
   * `dojox.rpc.OfflineRest <dojox/rpc/OfflineRest>`_
+
+    Provides automatic offline capabilities to the JsonRest/JsonRestStore modules
+
   * `dojox.rpc.ProxiedPath <dojox/rpc/ProxiedPath>`_
   * `dojox.rpc.Rest <dojox/rpc/Rest>`_
 
