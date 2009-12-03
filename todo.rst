@@ -214,9 +214,13 @@ Priority 4: DojoX
 
   needed: full page
 
-* `dojox.layout.GridContainer <dojox/layout/GridContainer`>_
+* `dojox.layout.GridContainer <dojox/layout/GridContainer>`_
 
   needed: params, examples, adding/removing regions, columns
+
+* `dojox.layout.RadioGroup <dojox/layout/RadioGroup>`_
+
+  needed: full page
 
 * `dojox.widget.FisheyeList <dojox/widget/FisheyeList>`_ 
 
