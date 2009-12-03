@@ -230,6 +230,10 @@ Priority 4: DojoX
 
   needed: full page
 
+* `dojox.layout.ToggleSplitter <dojox/layout/ToggleSplitter>`_
+
+  needed: full page
+
 * `dojox.widget.FisheyeList <dojox/widget/FisheyeList>`_ 
 
   needed: full page
