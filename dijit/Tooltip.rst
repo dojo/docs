@@ -100,7 +100,7 @@ Here's a tooltip created programatically:
     <span id="bar2" class="bar2">&nbsp;</span>
     <span id="bar3" class="bar3">&nbsp;</span>
     <span id="bar4" class="bar1">&nbsp;</span>
-    <div>Point your mouse over a colored bar</div>
+    <div>Move your mouse over a colored bar</div>
 
 
 Declarative markup
