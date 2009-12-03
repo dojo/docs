@@ -46,3 +46,5 @@ See also
   Provides a HTTP REST service with full range REST verbs include GET, PUT, POST and DELETE
 
 * `dojox.rpc.OfflineRest <dojox/rpc/OfflineRest>`_
+
+  Provides automatic offline capabilities to the JsonRest/JsonRestStore modules
