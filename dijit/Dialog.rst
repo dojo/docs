@@ -35,7 +35,7 @@ Usage
    });
  </script>
 
-After creating a Dialog, the Dialog (and the underlay) moves itself right behind the <body> element within the DOM, so it can overlay the entire webpage. So, after this move no other elements parent the Dialog.domNode. Therefore you have to add a ``class="tundra"`` attribute (or some other applicable theme name) to your <body> tag, in order to show the Dialog with the right styles:
+After creating a Dialog, the Dialog (and the underlay) moves itself right behind the <body> element within the DOM, so it can overlay the entire webpage. With this move no other elements parent the Dialog.domNode. Therefore you have to add a ``class="tundra"`` attribute (or some other applicable theme name) to your <body> tag, in order to show the Dialog with the right styles:
 
 .. code-block :: html
 
