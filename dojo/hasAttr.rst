@@ -17,7 +17,9 @@ Checks a node for the presence of an attribute.
 Introduction
 ============
 
-``dojo.hasAttr()`` is a companion function for `dojo.attr <dojo/attr>`_. It checks if an attribute is present on a DOM node, and returns the truthy value if it is there, and falsy value otherwise. It doesn't check if there is a property with such name, so be careful, when using it.
+``dojo.hasAttr()`` is a companion function for `dojo.attr <dojo/attr>`_. It checks if an attribute is present on a DOM node, and returns the truthy value if it is there, and falsy value otherwise.
+
+Since 1.4 it will return true for standard properties that can't have a corresponding attribute, e.g., ``innerHTML`` or ``class``.
 
 
 =====
@@ -63,15 +65,7 @@ The following example will check for several attributes.
       }
       function showAttribute(name){
         var result = dojo.hasAttr("model", name);
-        /*
-        var wrapper = dojo.create("div", null, "out");
-        dojo.create("input", {
-          type: "checkbox",
-          disabled: true,
-          checked: result
-        }, wrapper);
-        dojo.create("span", {innerHTML: " has " + name}, wrapper);
-        */
+        // I don't use dojo.create() here because it was not available in 1.2
         var wrapper = dojo.doc.createElement("div");
         dojo.place(wrapper, "out");
         wrapper.innerHTML = "<input type='checkbox' disabled='disabled' " +
