@@ -25,7 +25,7 @@ On top of that several browsers deal with attribute setting and getting in diffe
 
   node.setAttribute("style", "border:1px solid #ff0033;");
 
-for instance won't work in IE. 
+for instance won't work in IE.
 
 In Dojo you can do the same thing working in all browsers using following method
 
@@ -56,9 +56,9 @@ The following example will set several attributes such as the "tabindex" and "na
                     innerHTML: "New Content"
           });
       }
-      
+
       function displayAttributes(){
-          dojo.attr("console", "innerHTML", 
+          dojo.attr("console", "innerHTML",
              "tabindex: "+dojo.attr("testNode", "tabindex")+"\n" +
              "name: "+dojo.attr("testNode", "name")+"\n" +
              "innerHTML: "+dojo.attr("testNode", "innerHTML")+"\n"
@@ -87,7 +87,7 @@ This example will demonstrate how you can set events using dojo.attr().  You sho
           dojo.attr("testNodeTwo", "onmouseover", function(evt){
             dojo.attr("consoleOne", "innerHTML", "The mouse is over");
           });
-   
+
           dojo.attr("testNodeTwo", "onclick", function(evt){
             dojo.attr("consoleOne", "innerHTML", "The mouse was clicked");
           });
@@ -124,4 +124,7 @@ The following example will set the "style" attribute of the given dom node. dojo
 See also
 ========
 
+* `dojo.hasAttr <dojo/hasAttr>`_
+* `dojo.removeAttr <dojo/removeAttr>`_
+* `dojo.getNodeProp <dojo/getNodeProp>`_
 * `DOM Attributes and The Dojo Toolkit 1.2 <http://www.sitepen.com/blog/2008/10/23/dom-attributes-and-the-dojo-toolkit-12/>`_
