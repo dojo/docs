@@ -26,6 +26,7 @@ Usage
 =====
 
 .. code-block :: javascript
+ :linenos:
 
  dojo.style(node, style, value);
 
