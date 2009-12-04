@@ -86,6 +86,6 @@ See also
 * `dojo.attr <dojo/attr>`_
 * `dojo.removeAttr <dojo/removeAttr>`_
 * `dojo.getNodeProp <dojo/getNodeProp>`_
-* `NodeList.attr <NodeList/attr>`_
+* `dojo.NodeList.attr <dojo/NodeList/attr>`_
 * `dojo.style <dojo/style>`_
 * `DOM Attributes and The Dojo Toolkit 1.2 <http://www.sitepen.com/blog/2008/10/23/dom-attributes-and-the-dojo-toolkit-12/>`_
