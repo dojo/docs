@@ -1,9 +1,9 @@
 #format dojo_rst
 
 dojo.attr
-===============
+=========
 
-:Status: Draft
+:Status: Final
 :Version: 1.0
 :Available: since 1.2
 
