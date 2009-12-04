@@ -35,6 +35,25 @@ In Dojo you can do the same thing working in all browsers using following method
 
   dojo.attr(node, "style", {border:"1px solid #ff0033"});
 
+=====
+Usage
+=====
+
+.. code-block :: javascript
+ :linenos:
+
+ dojo.attr(node, attr, value);
+
+node
+  id or reference of the DOM node to get/set style for
+
+attr
+  the attribute property name or an object with key/value pairs suitable for setting each property.
+
+value
+  If passed, sets value on the node for an attribute, handling cross-browser concerns.
+
+
 ========
 Examples
 ========
