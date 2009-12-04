@@ -63,7 +63,6 @@ The following example will check for several attributes.
       }
       function showAttribute(name){
         var result = dojo.hasAttr("model", name);
-        alert(result);
         /*
         var wrapper = dojo.create("div", null, "out");
         dojo.create("input", {
@@ -77,6 +76,7 @@ The following example will check for several attributes.
         dojo.place(wrapper, "out");
         wrapper.innerHTML = "<input type='checkbox' disabled='disabled' checked='" +
           (result ? "checked" : "") + "'> has " + name;
+        alert(wrapper.innerHTML);
       }
     </script>
 
