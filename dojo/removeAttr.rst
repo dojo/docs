@@ -40,10 +40,10 @@ attr
 Examples
 ========
 
-Testing for attributes
-----------------------
+Removing an attribute
+---------------------
 
-The following example will check for several attributes.
+The following example will remove ``disabled`` from the ``input`` node.
 
 .. cv-compound::
 
