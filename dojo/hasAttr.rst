@@ -82,7 +82,7 @@ The following example will check for several attributes.
   .. cv:: html
 
     <p><input id="model" name="model" baz="foo"> &mdash; our model node we will use to test for attributes</p>
-    <p><button dojoType="dijit.form.Button" id="buttonOne" onClick="checkAttributes();">Check attributes</button></p>
+    <p><button onclick="checkAttributes();">Check attributes</button></p>
     <p id="out"></p>
 
 ========
