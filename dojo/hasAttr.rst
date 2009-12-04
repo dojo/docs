@@ -55,10 +55,11 @@ The following example will check for several attributes.
     <script type="text/javascript">
       function checkAttributes(){
         showAttribute("id");
-        showAttribute("name");
         showAttribute("type");
+        showAttribute("name");
         showAttribute("innerHTML");
-        showAttribute("abracadabra");
+        showAttribute("foo");
+        showAttribute("baz");
       }
       function showAttribute(name){
         var result = dojo.hasAttr("model", name);
@@ -74,7 +75,7 @@ The following example will check for several attributes.
 
   .. cv:: html
 
-    <p><input id="model" name="model"> &mdash; our model node we will use to test for attributes</p>
+    <p><input id="model" name="model" baz="foo"> &mdash; our model node we will use to test for attributes</p>
     <p><button dojoType="dijit.form.Button" id="buttonOne" onClick="checkAttributes();">Check attributes</button></p>
     <p id="out"></p>
 
