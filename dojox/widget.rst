@@ -5,8 +5,8 @@ dojox.widget
 
 :Status: Draft
 :Version: 1.0
-:Authors: Peter Higgins, Nikolai Onken, Marcus Reimann, Josh Trutwin, Benjamin Schell, Shane O'Sullivan
-:Developers: Shane O'Sullivan, Peter Higgins, Nathan Toone, Karl Tiedt, Alex Russell, Nikolai Onken, Adam Peller, Benjamin Schell
+:Authors: Chris Barber, Peter Higgins, Nikolai Onken, Marcus Reimann, Josh Trutwin, Benjamin Schell, Shane O'Sullivan
+:Developers: Shane O'Sullivan, Chris Barber, Peter Higgins, Nathan Toone, Karl Tiedt, Alex Russell, Nikolai Onken, Adam Peller, Benjamin Schell
 :Available: since V?
 
 .. contents::
@@ -24,6 +24,10 @@ Here is an up to date list of dojox.widget components. Note: Some of these are n
 * `dojox.widget.AnalogGauge <dojox/widget/AnalogGauge>`_
 
   A circular gauge with a variety of indicators, used to display numerical data
+
+* `dojox.widget.AutoRotator <dojox/widget/AutoRotator>`_
+
+  A rotator that automatically transitions between child nodes.
 
 * `dojox.widget.BarGauge <dojox/widget/BarGauge>`_
 
@@ -84,6 +88,10 @@ Here is an up to date list of dojox.widget components. Note: Some of these are n
 * `dojox.widget.RollingList <dojox/widget/RollingList>`_
 
   A rolling list that can be tied to a data store with children
+
+* `dojox.widget.Rotator <dojox/widget/Rotator>`_
+
+  A widget for rotating through child nodes using transitions.
 
 * `dojox.widget.SortList <dojox/widget/SortList>`_
 
