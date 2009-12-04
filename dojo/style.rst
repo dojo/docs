@@ -111,7 +111,7 @@ Passing a node and a style property returns the current normalized, computed val
         give me the color
         <script type="dojo/method" event="onClick" args="evt">
             // Get the color property from DOM node "poorboy2":
-            alert(dojo.style("poorboy", "color"));
+            alert(dojo.style("poorboy2", "color"));
         </script>
     </div>
 
