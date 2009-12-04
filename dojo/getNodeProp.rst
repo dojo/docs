@@ -53,15 +53,30 @@ The following example reads effective values from the ``input`` node.
   .. cv:: javascript
 
     <script type="text/javascript">
-      function remAttr(){
-        dojo.removeAttr("model", "disabled");
+      function checkAttributes(){
+        showAttribute("id");
+        showAttribute("type");
+        showAttribute("name");
+        showAttribute("value");
+        showAttribute("innerHTML");
+        showAttribute("foo");
+        showAttribute("baz");
+      }
+      function showAttribute(name){
+        var result = dojo.getPropName("model", name);
+        // I don't use dojo.create() here because it was not available in 1.2
+        var wrapper = dojo.doc.createElement("div");
+        dojo.place(wrapper, "out");
+        wrapper.innerHTML = name + " is '" + result + '";
       }
     </script>
 
   .. cv:: html
 
-    <p><input id="model" name="model" disabled="disabled" value="some text"> &mdash; our model node</p>
-    <p><button onclick="remAttr();">Removed "disabled"</button></p>
+    <p><input id="model" name="model" baz="foo"> &mdash; our model node</p>
+    <p><button onclick="checkAttributes();">Check attributes</button></p>
+    <p id="out"></p>
+
 
 ========
 See also
