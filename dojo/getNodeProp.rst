@@ -5,7 +5,7 @@ dojo.getNodeProp
 
 :Status: Final
 :Version: 1.0
-:Available: since 1.2
+:Available: since 1.4
 
 .. contents::
    :depth: 2
@@ -49,6 +49,7 @@ Reading current values
 The following example reads effective values from the ``input`` node.
 
 .. cv-compound::
+  :version: local
 
   .. cv:: javascript
 
@@ -67,7 +68,7 @@ The following example reads effective values from the ``input`` node.
         // I don't use dojo.create() here because it was not available in 1.2
         var wrapper = dojo.doc.createElement("div");
         dojo.place(wrapper, "out");
-        wrapper.innerHTML = name + " is '" + result + '";
+        wrapper.innerHTML = name + " is '" + result + "'";
       }
     </script>
 
