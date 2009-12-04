@@ -103,7 +103,7 @@ This example will demonstrate how you can set events using dojo.attr().  You sho
 Setting styles
 --------------
 
-The following example will set the "style" attribute of the given dom node. dojo.attr() takes a hash as it's argument just like `dojo.style <dojo/style>`_
+The following example will set the "style" attribute of the given dom node. When you set "style" with `dojo.attr()` it delegates the work to `dojo.style() <dojo/style`_.
 
 .. cv-compound::
 
@@ -128,4 +128,5 @@ See also
 * `dojo.removeAttr <dojo/removeAttr>`_
 * `dojo.getNodeProp <dojo/getNodeProp>`_
 * `NodeList.attr <NodeList/attr>`_
+* `dojo.style <dojo/style>`_
 * `DOM Attributes and The Dojo Toolkit 1.2 <http://www.sitepen.com/blog/2008/10/23/dom-attributes-and-the-dojo-toolkit-12/>`_
