@@ -176,7 +176,7 @@ DOM
 
     Modifying DOM node attributes
 
-  * `NodeList.attr <NodeList/attr>`_
+  * `dojo.NodeList.attr <dojo/NodeList/attr>`_
 
     Set/Get attributes for nodes in the list
 
