@@ -75,7 +75,7 @@ The following example will check for several attributes.
 
   .. cv:: html
 
-    <p><input id="model" name="model" baz="foo"> &mdash; our model node we will use to test for attributes</p>
+    <p><input id="model" name="model" baz="foo"> &mdash; our model node</p>
     <p><button onclick="checkAttributes();">Check attributes</button></p>
     <p id="out"></p>
 
