@@ -75,7 +75,7 @@ Constructor takes 2 parameters:
       * ``data`` --- a data item itself. The creator can "massage" or even replace it.
       * ``type`` --- an array of strings, which identify the type of this item. It is used during the DnD operation to select compatible targets.
 
-  * ``skipForm`` --- a Boolean flag. If it is true, the container passes selection and dragging operations to the browser, otherwise it suppresses them. By default it is false.
+  * ``skipForm`` --- a Boolean flag. If it is true, the container passes selection and dragging operations to the browser, otherwise it suppresses them. It is useful when draggable items include text form elements that can be edited. By default it is false.
   * ``dropParent`` --- a DOM node below the main node, which serves as a physical container for data item nodes. It can be used to structure the visual design of your container. This value will be assigned to ``parent`` attribute of the container (see below).
 
 During the construction the constructor checks immediate children of ``parent`` attribute (see below) for the presence of ``dojoDndItem`` class. All such items are added as container's children automatically. It is assumed that you already built the visual representation of the data item, so the creator function is not involved. Instead the necessary triplet formed like that:
