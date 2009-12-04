@@ -16,7 +16,7 @@ A getter/setter for styles on a DOM node.
 Introduction
 ============
 
-Accesses styles on a node. If 2 arguments are passed, acts as a getter. If 3 arguments are passed, acts as a setter. 
+Accesses styles on a node. If 2 arguments are passed, acts as a getter. If 3 arguments are passed, acts as a setter.
 
 See the Tips section below for caveats on getting style information, like when using a compound style value (like background or border), and getting node dimensions.
 
@@ -26,11 +26,8 @@ Usage
 =====
 
 .. code-block :: javascript
- :linenos:
 
- <script type="text/javascript">
-   dojo.style(node, style, value);
- </script>
+ dojo.style(node, style, value);
 
 node
   id or reference of the DOM node to get/set style for
@@ -77,7 +74,7 @@ Passing only an ID or node returns the computed style object of the node:
         <script type="dojo/method" event="onClick" args="evt">
             // Get the style from DOM node "poorboy":
             var s = dojo.style("poorboy");
-            for(var i in s){ 
+            for(var i in s){
                 var n = dojo.doc.createElement('li');
                 n.innerHTML = i + " = <span class='prop'>" + s[i] + "</span>, ";
                 dojo.place(n, "poorboy_styles", "last");
@@ -236,11 +233,11 @@ dojo.NodeList implements .style() using the same syntax, omitting the "node" par
 Tips
 ====
 
-* If the CSS style property is hyphenated, the JavaScript property is camelCased. 
+* If the CSS style property is hyphenated, the JavaScript property is camelCased.
 
   for example: "font-size" becomes "fontSize", and so on
 
-* You will get a "TypeError: n is null", if you call dojo.style() on a non existent DOM node. It's more safe to use dojo.query("#a").style("b","c"); 
+* You will get a "TypeError: n is null", if you call dojo.style() on a non existent DOM node. It's more safe to use dojo.query("#a").style("b","c");
 
 * dojo.style uses getComputedStyle to get the style value, so the value will be a calculated value, not just the immediate node.style value.
 
