@@ -74,9 +74,8 @@ The following example will check for several attributes.
         */
         var wrapper = dojo.doc.createElement("div");
         dojo.place(wrapper, "out");
-        wrapper.innerHTML = "<input type='checkbox' disabled='disabled' checked='" +
-          (result ? "checked" : "") + "'> has " + name;
-        alert(result + " " + (typeof result));
+        wrapper.innerHTML = "<input type='checkbox' disabled='disabled' " +
+          (result ? "checked='checked'" : "") + "> has " + name;
       }
     </script>
 
