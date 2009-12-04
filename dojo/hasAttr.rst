@@ -63,6 +63,7 @@ The following example will check for several attributes.
       }
       function showAttribute(name){
         var result = dojo.hasAttr("model", name);
+        alert(result);
         /*
         var wrapper = dojo.create("div", null, "out");
         dojo.create("input", {
