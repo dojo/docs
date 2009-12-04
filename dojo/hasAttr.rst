@@ -64,7 +64,7 @@ The following example will check for several attributes.
   .. cv:: html
 
     <p><button dojoType="dijit.form.Button" id="buttonOne" onClick="checkAttributes();">Check attributes</button></p>
-    <p style="display: none;"><input type="checkbox" name="hasId" readonly="readonly"> has id</p>
+    <p style="display: none;"><input type="checkbox" name="hasId" disabled="disabled"> has id</p>
 
 ========
 See also
