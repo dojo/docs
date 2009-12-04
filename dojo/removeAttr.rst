@@ -17,7 +17,7 @@ Removes an attribute.
 Introduction
 ============
 
-``dojo.removeAttr()`` removes an attribute. It is modeled after DOM's `removeAttribute <https://developer.mozilla.org/En/DOM/Element.removeAttribute>`_, but unlike the latter it normalizes standard attribute names to smooth over differences between browsers, or to provide convenient aliases, e.g., "className" is aliased to "class", and so on. The same algorithm is used by `dojo.attr <dojo/attr>`_.
+``dojo.removeAttr()`` removes an attribute. It is modeled after DOM's `removeAttribute <https://developer.mozilla.org/En/DOM/Element.removeAttribute>`_, but unlike the latter it normalizes standard attribute names to smooth over differences between browsers, or to provide convenient aliases, e.g., ``className`` is aliased to ``class``, and so on. The same algorithm is used by `dojo.attr <dojo/attr>`_.
 
 
 =====
