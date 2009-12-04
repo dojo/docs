@@ -57,7 +57,7 @@ The following example will check for several attributes.
 
   .. cv:: html
 
-    <p><input id="model" name="model" disabled="disabled"> &mdash; our model node</p>
+    <p><input id="model" name="model" disabled="disabled" value="some text"> &mdash; our model node</p>
     <p><button onclick="remAttr();">Removed "disabled"</button></p>
 
 ========
