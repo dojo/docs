@@ -17,23 +17,12 @@ A getter and setter for DOM attributes, events and CSS styles
 Introduction
 ============
 
-dojo.attr() gives you a unified API to deal with DOM Node attribute modifications. Attributes such as "style" and "onclick" or other event attributes are not real attributes but shortcuts to their respective objects or event handlers.
-On top of that several browsers deal with attribute setting and getting in different ways
+``dojo.attr()`` gives you a unified API to deal with DOM Node attribute and property values. It checks an attribute and if there is a property with the same name, it will get/set its value. Otherwise it will work with DOM node attributes.
 
-.. code-block :: javascript
- :linenos:
+On top of that several browsers deal with attribute setting and getting in different ways.
 
-  node.setAttribute("style", "border:1px solid #ff0033;");
+If an attribute was not specified for the DOM node, it will return a falsy value (see `dojo.hasAttr <dojo/hasAttr>`_). If you want to get a default value for missing attributes, use `dojo.getPropNode <dojo/getPropNode>`_, which always falls back to properties, if they are available.
 
-for instance won't work in IE.
-
-In Dojo you can do the same thing working in all browsers using following method
-
-
-.. code-block :: javascript
- :linenos:
-
-  dojo.attr(node, "style", {border:"1px solid #ff0033"});
 
 =====
 Usage
