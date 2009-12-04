@@ -64,7 +64,7 @@ The following example reads effective values from the ``input`` node.
         showAttribute("baz");
       }
       function showAttribute(name){
-        var result = dojo.getPropName("model", name);
+        var result = dojo.getnodeProp("model", name);
         // I don't use dojo.create() here because it was not available in 1.2
         var wrapper = dojo.doc.createElement("div");
         dojo.place(wrapper, "out");
