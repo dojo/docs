@@ -17,7 +17,7 @@ A getter and setter for DOM attributes, events and CSS styles
 Introduction
 ============
 
-dojo.attr() gives you a unified api to deal with DOM Node attribute modifications. Attributes such as "style" and "onclick" or other event attributes are not real attributes but shortcuts to their respective objects or event handlers.
+dojo.attr() gives you a unified API to deal with DOM Node attribute modifications. Attributes such as "style" and "onclick" or other event attributes are not real attributes but shortcuts to their respective objects or event handlers.
 On top of that several browsers deal with attribute setting and getting in different ways
 
 .. code-block :: javascript
@@ -76,7 +76,7 @@ The following example will set several attributes such as the "tabindex" and "na
 Setting events
 --------------
 
-This example will demonstrate how you can set events using dojo.attr().  You shoul still consider using `dojo.connect <dojo/connect>`_ when you are dealing with events since you are getting lots more possibilities and granularitiy with using `dojo.connect <dojo/connect>`_.  In particular you get a handle to later disconnect the event.
+This example will demonstrate how you can set events using dojo.attr().  You should still consider using `dojo.connect <dojo/connect>`_ when you are dealing with events since you are getting lots more possibilities and granularity with using `dojo.connect <dojo/connect>`_.  In particular you get a handle to later disconnect the event.
 
 .. cv-compound::
 
