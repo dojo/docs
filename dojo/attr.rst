@@ -76,7 +76,7 @@ The following example will set several attributes such as the "tabindex" and "na
 Setting events
 --------------
 
-This example will demonstrate how you can set events using dojo.attr().  You should still consider using `dojo.connect <dojo/connect>`_ when you are dealing with events since you are getting lots more possibilities and granularity with using `dojo.connect <dojo/connect>`_.  In particular you get a handle to later disconnect the event.
+This example will demonstrate how you can set events using dojo.attr(). You should still consider using `dojo.connect <dojo/connect>`_ when you are dealing with events since you are getting lots more possibilities and granularity with using `dojo.connect <dojo/connect>`_.  In particular you get a handle to later disconnect the event.
 
 .. cv-compound::
 
@@ -103,7 +103,7 @@ This example will demonstrate how you can set events using dojo.attr().  You sho
 Setting styles
 --------------
 
-The following example will set the "style" attribute of the given dom node. When you set "style" with `dojo.attr()` it delegates the work to `dojo.style() <dojo/style`_.
+The following example will set the "style" attribute of the given dom node. When you set "style" with dojo.attr() it delegates the work to `dojo.style() <dojo/style>`_.
 
 .. cv-compound::
 
