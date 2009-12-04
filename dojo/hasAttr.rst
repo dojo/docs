@@ -54,17 +54,29 @@ The following example will check for several attributes.
 
     <script type="text/javascript">
       function checkAttributes(){
-        var node = dojo.query("[name=hasId]")[0];
-        var hasId = dojo.hasAttr(node, "id");
-        dojo.attr(node, "checked", hasId);
-        dojo.style(node.parentNode, "display", "");
+        showAttribute("id");
+        showAttribute("name");
+        showAttribute("type");
+        showAttribute("innerHTML");
+        showAttribute("abracadabra");
+      }
+      function showAttribute(name){
+        var result = dojo.hasAttr("model", name);
+        var wrapper = dojo.create("div", null, "out");
+        dojo.create("input", {
+          type: "checkbox",
+          disabled: true,
+          checked: result
+        }, wrapper);
+        dojo.create("span", {innerHTML: " has " + name}, wrapper);
       }
     </script>
 
   .. cv:: html
 
+    <p><input id="model" name="model"> &mdash; our model node we will use to test for attributes</p>
     <p><button dojoType="dijit.form.Button" id="buttonOne" onClick="checkAttributes();">Check attributes</button></p>
-    <p style="display: none;"><input type="checkbox" name="hasId" disabled="disabled"> has id</p>
+    <p id="out"></p>
 
 ========
 See also
