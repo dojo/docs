@@ -176,13 +176,15 @@ DOM
 
     Modifying DOM node attributes
 
-  * NodeList.attr
+  * `NodeList.attr <NodeList/attr>`_
 
     Set/Get attributes for nodes in the list
 
-  * dojo.hasAttr
+  * `dojo.hasAttr <dojo/hasAttr>`_
 
-  * dojo.removeAttr
+  * `dojo.removeAttr <dojo/removeAttr>`_
+
+  * `dojo.getNodeProp <dojo/getNodeProp>`_
 
   * `dojo.formToObject <dojo/formToObject>`_
 
