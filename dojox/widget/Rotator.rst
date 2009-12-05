@@ -61,7 +61,7 @@ Programmatic examples
 
 Example showing how the Rotator can create the pane DOM nodes for you.
 
-.. code-block :: javascript
+.. code-block :: html
  :linenos:
 
  <script type="text/javascript">
@@ -89,7 +89,7 @@ Example showing how the Rotator can create the pane DOM nodes for you.
 
 Example showing how the Rotator will use DOM nodes that already exist.
 
-.. code-block :: javascript
+.. code-block :: html
  :linenos:
 
  <script type="text/javascript">
