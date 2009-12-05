@@ -22,20 +22,20 @@ Here is an up to date list of dojox.widget.rotator components:
 
 * `dojox.widget.rotator.Controller <dojox/widget/rotator/Controller>`_
 
-  Description goes here
+  A controller that manipulates a Rotator or AutoRotator.
 
 * `dojox.widget.rotator.Fade <dojox/widget/rotator/Fade>`_
 
-  Description goes here
+  Provides fading and crossfading transitions for Rotators.
 
 * `dojox.widget.rotator.Pan <dojox/widget/rotator/Pan>`_
 
-  Description goes here
+  Provides panning and continuous panning transitions for Rotators.
 
 * `dojox.widget.rotator.Slide <dojox/widget/rotator/Slide>`_
 
-  Description goes here
+  Provides sliding transitions for Rotators.
 
 * `dojox.widget.rotator.Wipe <dojox/widget/rotator/Wipe>`_
 
-  Description goes here
+  Provides wiping transitions for Rotators.
