@@ -61,7 +61,7 @@ Examples
 Programmatic example
 --------------------
 
-Example showing how the Rotator can create the pane DOM nodes for you.
+Example showing how the AutoRotator can create the pane DOM nodes for you.
 
 .. code-block :: html
  :linenos:
@@ -74,7 +74,8 @@ Example showing how the Rotator can create the pane DOM nodes for you.
        {
          transition: "dojox.widget.rotator.fade",
          duration: 2500,
-         pause
+         pauseOnManualChange: true,
+         suspendOnHover: true,
          panes: [
            { className: "pane", innerHTML: "Pane 1" },
            { className: "pane", innerHTML: "Pane 2" },
@@ -94,8 +95,43 @@ Example showing how the Rotator can create the pane DOM nodes for you.
 Declarative example
 -------------------
 
-TODO: example
+Example of an AutoRotator that cycles to 4 random panes, then pauses.
 
+.. code-block :: html
+ :linenos:
+ 
+ <script type="text/javascript">
+   dojo.require("dojox.widget.AutoRotator");
+   dojo.require("dojox.widget.rotator.fade");
+ </script>
+ 
+ <div dojoType="dojox.widget.AutoRotator" id="myRotator" jsId="myRotatorInstance" transition="dojox.widget.rotator.crossFade" duration="2500" random="true" cycles="4">
+   <div>Pane 1</div>
+   <div>Pane 2</div>
+   <div>Pane 3</div>
+ </div>
+ 
+ <button onclick="myRotatorInstance.prev();">Prev</button>
+ <button onclick="myRotatorInstance.next();">Next</button>
+
+Example of using the "wait for event" feature. The 2nd pane will wait for a event to be published by the button before proceeding.
+
+.. code-block :: html
+ :linenos:
+ 
+ <script type="text/javascript">
+   dojo.require("dojox.widget.AutoRotator");
+   dojo.require("dojox.widget.rotator.fade");
+ </script>
+ 
+ <div dojoType="dojox.widget.AutoRotator" class="rotator" jsId="myRotator3" duration="2000" transition="dojox.widget.rotator.crossFade">
+   <div class="pane">Pane 1</div>
+   <div class="pane" waitForEvent="myEvent">
+     Pane 2<br>
+     <button onclick="dojo.publish('myEvent')">Continue!</button>
+   </div>
+   <div class="pane">Pane 3</div>
+ </div>
 
 ========
 See also
