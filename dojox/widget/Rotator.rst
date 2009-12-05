@@ -63,7 +63,7 @@ Example showing how the Rotator can create the pane DOM nodes for you.
 
 .. code-block :: html
  :linenos:
-
+ 
  <script type="text/javascript">
    dojo.require("dojox.widget.Rotator");
    dojo.require("dojox.widget.rotator.fade");
@@ -84,8 +84,8 @@ Example showing how the Rotator can create the pane DOM nodes for you.
  
  <div id="myRotator"></div>
  
- <button onclick="dojo.publish("myRotator/rotator/control", ['prev']);">Prev</button>
- <button onclick="dojo.publish("myRotator/rotator/control", ['next']);">Next</button>
+ <button onclick="dojo.publish('myRotator/rotator/control', ['prev']);">Prev</button>
+ <button onclick="dojo.publish('myRotator/rotator/control', ['next']);">Next</button>
 
 Example showing how the Rotator will use DOM nodes that already exist.
 
@@ -113,8 +113,8 @@ Example showing how the Rotator will use DOM nodes that already exist.
    <div class="pane">Pane 2</div>
  </div>
  
- <button onclick="dojo.publish("myRotator/rotator/control", ['prev']);">Prev</button>
- <button onclick="dojo.publish("myRotator/rotator/control", ['next']);">Next</button>
+ <button onclick="dojo.publish('myRotator/rotator/control', ['prev']);">Prev</button>
+ <button onclick="dojo.publish('myRotator/rotator/control', ['next']);">Next</button>
 
 Declarative examples
 --------------------
