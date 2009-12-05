@@ -169,6 +169,48 @@ Example of controlling a Rotator by referencing its instance. We define a jsId s
  <button onclick="myRotatorInstance.prev();">Prev</button>
  <button onclick="myRotatorInstance.next();">Next</button>
 
+Example of using different transitions per pane.
+
+.. code-block :: html
+ :linenos:
+ 
+ <script type="text/javascript">
+   dojo.require("dojox.widget.Rotator");
+   dojo.require("dojox.widget.rotator.Fade");
+   dojo.require("dojox.widget.rotator.Pan");
+   dojo.require("dojox.widget.rotator.Slide");
+   dojo.require("dojox.widget.rotator.Wipe");
+ </script>
+ 
+ <div dojoType="dojox.widget.Rotator" id="myRotator" jsId="myRotatorInstance" transition="dojox.widget.rotator.crossFade">
+   <div>Pane 1</div>
+   <div transition="dojox.widget.rotator.panRight">Pane 2</div>
+   <div transition="dojox.widget.rotator.slideLeft">Pane 3</div>
+   <div transition="dojox.widget.rotator.wipeDown">Pane 4</div>
+ </div>
+ 
+ <button onclick="myRotatorInstance.prev();">Prev</button>
+ <button onclick="myRotatorInstance.next();">Next</button>
+
+Example of using passing in transition parameters. In this case, the `Pan <dojox/widget/rotator/Pan>`_ transition is told to do a continuous pan from the current pane to the target pane while transitioning to any panes in between. We also specify a duration of the actual pan transition and tell it to do a quick transition.
+
+.. code-block :: html
+ :linenos:
+ 
+ <script type="text/javascript">
+   dojo.require("dojox.widget.Rotator");
+   dojo.require("dojox.widget.rotator.Pan");
+ </script>
+ 
+ <div dojoType="dojox.widget.Rotator" id="myRotator" jsId="myRotatorInstance" transition="dojox.widget.rotator.pan" transitionParams="continuous:true,quick:true,duration:500">
+   <div>Pane 1</div>
+   <div>Pane 2</div>
+   <div>Pane 3</div>
+ </div>
+ 
+ <button onclick="myRotatorInstance.prev();">Prev</button>
+ <button onclick="myRotatorInstance.next();">Next</button>
+
 =================
 Subscribed Topics
 =================
@@ -184,8 +226,12 @@ This allows you to publish to this topic and control the Rotator. It will invoke
 Parameters
 ----------
 
-* action [string] - The name of a method of the Rotator to run such as "prev", "next", and "go". If the action is not a valid method of the Rotator or its subclass, then a warning is thrown to the console.
-* args [anything] - One or more arguments to pass to the action. If the action is "go", then you may pass in the number of the pane you want to go to.
+================  ========  ======================================================================
+Parameter         Type      Description
+================  ========  ======================================================================
+action            String    The name of a method of the Rotator to run such as "prev", "next", and "go". If the action is not a valid method of the Rotator or its subclass, then a warning is thrown to the console.
+args              Anything  One or more arguments to pass to the action. If the action is "go", then you may pass in the number of the pane you want to go to.
+================  ========  ======================================================================
 
 Example
 -------
@@ -193,10 +239,19 @@ Example
 .. code-block :: html
  :linenos:
  
- <div dojoType="dojox.widget.Rotator" id="myRotator"></div>
+ <script type="text/javascript">
+   dojo.require("dojox.widget.Rotator");
+ </script>
+ 
+ <div dojoType="dojox.widget.Rotator" id="myRotator">
+   <div>Pane 1</div>
+   <div>Pane 2</div>
+   <div>Pane 3</div>
+ </div>
+ 
  <button onclick="dojo.publish('myRotator/rotator/control', ['prev']);">Prev</button>
  <button onclick="dojo.publish('myRotator/rotator/control', ['next']);">Next</button>
- <button onclick="dojo.publish('myRotator/rotator/control', ['go', 1]);">Goto Pane 1</button>
+ <button onclick="dojo.publish('myRotator/rotator/control', ['go', 2]);">Goto Pane 2</button>
 
 ================
 Published Topics
@@ -213,9 +268,13 @@ By subscribing to this topic, you can hook into various events fired by the Rota
 Parameters
 ----------
 
-* type [string] - The type of notification.
-* rotator [dojox.widget.Rotator] - The instance of the Rotator.
-* params [object?] - Various parameters associated with the event.
+================  ====================  ======================================================================
+Parameter         Type                  Description
+================  ====================  ======================================================================
+type              String                The type of notification.
+rotator           dojox.widget.Rotator  The instance of the Rotator.
+params            Object?               Various parameters associated with the event.
+================  ====================  ======================================================================
 
 Example
 -------
