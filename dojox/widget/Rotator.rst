@@ -25,15 +25,15 @@ The Rotator does not rely on dijit.  It is designed to be as lightweight as poss
 Usage
 =====
 
+================  ======  ======================================================================
+Parameter         Type    Description
+================  ======  ======================================================================
+transition        String  The name of a function that is passed two panes nodes and a duration, then returns a dojo.Animation object. The default value is "dojox.widget.rotator.swap".
+transitionParams  String  Parameters for the transition. The string is read in and eval'd as an object.  If the duration is absent, the default value will be used.
+panes             Array   Array of panes to be created in the Rotator. Each array element will be passed as attributes to a dojo.create() call.
+================  ======  ======================================================================
+
 The Rotator should be declared using a block element such as a <div>. Direct descendant nodes are the panes to be rotated. The Rotator will accept any DOM node for a rotator pane, however a block element (such as <div> or <img>) or a element with display:block is recommended. For best results, each rotator pane should be the same height and width as the Rotator container node and consider setting overflow to hidden.
-
-==========
-Attributes
-==========
-
-* transition [string] - The name of a function that is passed two panes nodes and a duration, then returns a dojo.Animation object. The default value is "dojox.widget.rotator.swap".
-* transitionParams [string] - Parameters for the transition. The string is read in and eval'd as an object.  If the duration is absent, the default value will be used.
-* panes [array] - Array of panes to be created in the Rotator. Each array element will be passed as attributes to a dojo.create() call.
 
 ========
 Examples
@@ -42,7 +42,7 @@ Examples
 Programmatic examples
 ---------------------
 
-This example show you how the Rotator can create the pane DOM nodes for you.
+Example showing how the Rotator can create the pane DOM nodes for you.
 
 .. code-block :: javascript
  :linenos:
@@ -70,7 +70,7 @@ This example show you how the Rotator can create the pane DOM nodes for you.
  <button onclick="dojo.publish("myRotator/rotator/control", ['prev']);">Prev</button>
  <button onclick="dojo.publish("myRotator/rotator/control", ['next']);">Next</button>
 
-This example show you how the Rotator will use DOM nodes that already exist.
+Example showing how the Rotator will use DOM nodes that already exist.
 
 .. code-block :: javascript
  :linenos:
@@ -99,10 +99,52 @@ This example show you how the Rotator will use DOM nodes that already exist.
  <button onclick="dojo.publish("myRotator/rotator/control", ['prev']);">Prev</button>
  <button onclick="dojo.publish("myRotator/rotator/control", ['next']);">Next</button>
 
-Declarative example
--------------------
+Declarative examples
+--------------------
 
-TODO: example
+Example showing how to create a minimal Rotator instance.
+
+.. code-block :: html
+ :linenos:
+
+ <script type="text/javascript">
+   dojo.require("dojox.widget.Rotator");
+ </script>
+ <div dojoType="dojox.widget.Rotator">
+   <div>Pane 1</div>
+   <div>Pane 2</div>
+   <div>Pane 3</div>
+ </div>
+
+Example using the crossfade transition.
+
+.. code-block :: html
+ :linenos:
+ 
+ <script type="text/javascript">
+   dojo.require("dojox.widget.Rotator");
+   dojo.require("dojox.widget.rotator.Fade");
+ </script>
+ <div dojoType="dojox.widget.Rotator" transition="dojox.widget.rotator.crossFade">
+   <div>Pane 1</div>
+   <div>Pane 2</div>
+   <div>Pane 3</div>
+ </div>
+
+Example of controlling a Rotator by referencing its instance. We define a jsId so that the 
+
+.. code-block :: html
+ :linenos:
+ 
+ <script type="text/javascript">
+   dojo.require("dojox.widget.Rotator");
+   dojo.require("dojox.widget.rotator.Fade");
+ </script>
+ <div dojoType="dojox.widget.Rotator" jsId="" transition="dojox.widget.rotator.crossFade">
+   <div>Pane 1</div>
+   <div>Pane 2</div>
+   <div>Pane 3</div>
+ </div>
 
 =================
 Subscribed Topics
