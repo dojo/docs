@@ -295,10 +295,10 @@ Example
 Waiting for Event Topic
 =======================
 
-The Rotator contains plumbing for bypassing automated transitioning implemented by subclasses such as the `AutoRotator <dojox/widget/AutoRotator>`_. It allows you to specify per pane the name of a topic to listen for before continuing to the next pane. Visit the `AutoRotator <dojox/widget/AutoRotator>`_ page for a code example.
+The Rotator contains plumbing for bypassing automated transitioning implemented by subclasses such as the `dojox.widget.AutoRotator <dojox/widget/AutoRotator>`_. It allows you to specify per pane the name of a topic to listen for before continuing to the next pane. Visit the `dojox.widget.AutoRotator <dojox/widget/AutoRotator>`_ page for a code example.
 
 ========
 See also
 ========
 
-* `AutoRotator <dojox/widget/AutoRotator>`_ extends this Rotator adding automatic transitioning.
+* `dojox.widget.AutoRotator <dojox/widget/AutoRotator>`_ extends this Rotator adding automatic transitioning.
