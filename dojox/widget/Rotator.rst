@@ -70,9 +70,8 @@ This allows you to publish to this topic and control the Rotator. It will invoke
 Parameters
 ----------
 
-action [string] - The name of a method of the Rotator to run such as "prev", "next", and "go". If the action is not a valid method of the Rotator or its subclass, then a warning is thrown to the console.
-
-args [anything] - One or more arguments to pass to the action. If the action is "go", then you may pass in the number of the pane you want to go to.
+* action [string] - The name of a method of the Rotator to run such as "prev", "next", and "go". If the action is not a valid method of the Rotator or its subclass, then a warning is thrown to the console.
+* args [anything] - One or more arguments to pass to the action. If the action is "go", then you may pass in the number of the pane you want to go to.
 
 Example
 -------
@@ -102,11 +101,9 @@ By subscribing to this topic, you can hook into various events fired by the Rota
 Parameters
 ----------
 
-type [string] - The type of notification.
-
-rotator [dojox.widget.Rotator] - The instance of the Rotator.
-
-params [object?] - Various parameters associated with the event.
+* type [string] - The type of notification.
+* rotator [dojox.widget.Rotator] - The instance of the Rotator.
+* params [object?] - Various parameters associated with the event.
 
 Example
 -------
@@ -129,4 +126,4 @@ Example
 See also
 ========
 
-* TODO: links to other related articles
+* `AutoRotator <dojox/widget/AutoRotator>`_ extends this Rotator adding automatic transitions.
