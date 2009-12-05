@@ -35,6 +35,23 @@ panes             Array   Array of panes to be created in the Rotator. Each arra
 
 The Rotator should be declared using a block element such as a <div>. Direct descendant nodes are the panes to be rotated. The Rotator will accept any DOM node for a rotator pane, however a block element (such as <div> or <img>) or a element with display:block is recommended. For best results, each rotator pane should be the same height and width as the Rotator container node and consider setting overflow to hidden.
 
+The following examples will use the following CSS:
+
+.. code-block :: css
+ :linenos:
+ 
+ #myRotator {
+   border: solid 1px #000;
+   height: 100px;
+   width: 400px;
+ }
+ 
+ .pane {
+   height: 100px;
+   overflow: hidden;
+   width: 400px;
+ }
+
 ========
 Examples
 ========
@@ -66,7 +83,7 @@ Example showing how the Rotator can create the pane DOM nodes for you.
  </script>
  
  <div id="myRotator"></div>
-
+ 
  <button onclick="dojo.publish("myRotator/rotator/control", ['prev']);">Prev</button>
  <button onclick="dojo.publish("myRotator/rotator/control", ['next']);">Next</button>
 
@@ -95,7 +112,7 @@ Example showing how the Rotator will use DOM nodes that already exist.
    <div class="pane">Pane 1</div>
    <div class="pane">Pane 2</div>
  </div>
-
+ 
  <button onclick="dojo.publish("myRotator/rotator/control", ['prev']);">Prev</button>
  <button onclick="dojo.publish("myRotator/rotator/control", ['next']);">Next</button>
 
@@ -110,6 +127,7 @@ Example showing how to create a minimal Rotator instance.
  <script type="text/javascript">
    dojo.require("dojox.widget.Rotator");
  </script>
+ 
  <div dojoType="dojox.widget.Rotator">
    <div>Pane 1</div>
    <div>Pane 2</div>
@@ -125,13 +143,14 @@ Example using the crossfade transition.
    dojo.require("dojox.widget.Rotator");
    dojo.require("dojox.widget.rotator.Fade");
  </script>
+ 
  <div dojoType="dojox.widget.Rotator" transition="dojox.widget.rotator.crossFade">
    <div>Pane 1</div>
    <div>Pane 2</div>
    <div>Pane 3</div>
  </div>
 
-Example of controlling a Rotator by referencing its instance. We define a jsId so that the 
+Example of controlling a Rotator by referencing its instance. We define a jsId so that the dojo.parser will create a global JavaScript variable pointing to our Rotator instance.
 
 .. code-block :: html
  :linenos:
@@ -140,11 +159,15 @@ Example of controlling a Rotator by referencing its instance. We define a jsId s
    dojo.require("dojox.widget.Rotator");
    dojo.require("dojox.widget.rotator.Fade");
  </script>
- <div dojoType="dojox.widget.Rotator" jsId="" transition="dojox.widget.rotator.crossFade">
+ 
+ <div dojoType="dojox.widget.Rotator" id="myRotator" jsId="myRotatorInstance" transition="dojox.widget.rotator.crossFade">
    <div>Pane 1</div>
    <div>Pane 2</div>
    <div>Pane 3</div>
  </div>
+ 
+ <button onclick="myRotatorInstance.prev();">Prev</button>
+ <button onclick="myRotatorInstance.next();">Next</button>
 
 =================
 Subscribed Topics
