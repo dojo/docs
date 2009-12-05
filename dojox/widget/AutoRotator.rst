@@ -124,7 +124,7 @@ Example of using the "wait for event" feature. The 2nd pane will wait for a even
    dojo.require("dojox.widget.rotator.fade");
  </script>
  
- <div dojoType="dojox.widget.AutoRotator" class="rotator" jsId="myRotator3" duration="2000" transition="dojox.widget.rotator.crossFade">
+ <div dojoType="dojox.widget.AutoRotator" class="rotator" jsId="myRotatorInstance" duration="2000" transition="dojox.widget.rotator.crossFade">
    <div class="pane">Pane 1</div>
    <div class="pane" waitForEvent="myEvent">
      Pane 2<br>
@@ -132,9 +132,12 @@ Example of using the "wait for event" feature. The 2nd pane will wait for a even
    </div>
    <div class="pane">Pane 3</div>
  </div>
+ 
+ <button onclick="myRotatorInstance.prev();">Prev</button>
+ <button onclick="myRotatorInstance.next();">Next</button>
 
 ========
 See also
 ========
 
-* TODO: links to other related articles
+* `dojox.widget.Rotator <dojox/widget/Rotator>`_ is the base class of the AutoRotator.
