@@ -21,24 +21,19 @@ A small, fast, extensible, awesome rotator that cycles, with transitions, throug
 
 The Rotator does not rely on dijit.  It is designed to be as lightweight as possible.  Controllers and transitions have been externalized so builds can be as optimized with only the components you want to use. 
 
-For best results, each rotator pane should be the same height and width as the Rotator container node and consider setting overflow to hidden. While the Rotator will accept any DOM node for a rotator pane, a block element or element with display:block is recommended.
-
-
-
 =====
 Usage
 =====
 
-TODO: how to use the component/class/method
+The Rotator should be declared using a block element such as a <div>. Direct descendant nodes are the panes to be rotated. The Rotator will accept any DOM node for a rotator pane, however a block element (such as <div> or <img>) or a element with display:block is recommended. For best results, each rotator pane should be the same height and width as the Rotator container node and consider setting overflow to hidden.
 
-.. code-block :: javascript
- :linenos:
+==========
+Attributes
+==========
 
- <script type="text/javascript">
-   // your code
- </script>
-
-
+* transition [string] - 
+* transitionParams [string] - 
+* panes [array] - 
 
 ========
 Examples
@@ -47,13 +42,38 @@ Examples
 Programmatic example
 --------------------
 
-TODO: example
+This example show you how the Rotator can create the pane DOM nodes for you.
+
+.. code-block :: javascript
+ :linenos:
+
+ <script type="text/javascript">
+   dojo.require("dojox.widget.Rotator");
+   dojo.require("dojox.widget.rotator.fade");
+   dojo.addOnLoad(function(){
+     new dojox.widget.Rotator(
+       {
+         transition: "dojox.widget.rotator.fade",
+         panes: [
+           { className: "pane", innerHTML: "pane 1" },
+           { className: "pane", innerHTML: "pane 2" },
+           { className: "pane", innerHTML: "pane 3" }
+         ]
+       },
+       dojo.byId("myRotator");
+     );
+   });
+ </script>
+ 
+ <div id="myRotator"></div>
+
+ <button onclick="dojo.publish("myRotator/rotator/control", ['prev']);">Prev</button>
+ <button onclick="dojo.publish("myRotator/rotator/control", ['next']);">Next</button>
 
 Declarative example
 -------------------
 
 TODO: example
-
 
 =================
 Subscribed Topics
@@ -83,8 +103,6 @@ Example
  <button onclick="dojo.publish('myRotator/rotator/control', ['prev']);">Prev</button>
  <button onclick="dojo.publish('myRotator/rotator/control', ['next']);">Next</button>
  <button onclick="dojo.publish('myRotator/rotator/control', ['go', 1]);">Goto Pane 1</button>
-
-
 
 ================
 Published Topics
@@ -120,10 +138,14 @@ Example
    });
  </script>
 
+=======================
+Waiting for Event Topic
+=======================
 
+The Rotator contains plumbing for bypassing automated transitioning implemented by subclasses such as the `AutoRotator <dojox/widget/AutoRotator>`_. It allows you to specify per pane the name of a topic to listen for before continuing to the next pane. Visit the `AutoRotator <dojox/widget/AutoRotator>`_ page for a code example.
 
 ========
 See also
 ========
 
-* `AutoRotator <dojox/widget/AutoRotator>`_ extends this Rotator adding automatic transitions.
+* `AutoRotator <dojox/widget/AutoRotator>`_ extends this Rotator adding automatic transitioning.
