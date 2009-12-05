@@ -63,7 +63,7 @@ Example showing how the Rotator can create the pane DOM nodes for you.
 
 .. code-block :: html
  :linenos:
- 
+
  <script type="text/javascript">
    dojo.require("dojox.widget.Rotator");
    dojo.require("dojox.widget.rotator.fade");
@@ -91,7 +91,7 @@ Example showing how the Rotator will use DOM nodes that already exist.
 
 .. code-block :: html
  :linenos:
- 
+
  <script type="text/javascript">
    dojo.require("dojox.widget.Rotator");
    dojo.require("dojox.widget.rotator.fade");
