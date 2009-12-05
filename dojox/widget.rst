@@ -12,7 +12,7 @@ dojox.widget
 .. contents::
     :depth: 2
 
-This is a collection of standalone widgets for use in your website. Each individual widget is independent of the others, and carries it's own level of completeness, stability, and documentation, and don't typically fall into any other classification of use, like `dojox.form <dojox/form>`_ or `dojox.layout <dojox/layout>`_
+This is a collection of standalone widgets for use in your website. Each individual widget is independent of the others, and carries it's own level of completeness, stability, and documentation, and doesn't typically fall into any other classification of use, like `dojox.form <dojox/form>`_ or `dojox.layout <dojox/layout>`_
 
 
 =================
