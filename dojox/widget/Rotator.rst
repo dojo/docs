@@ -31,16 +31,16 @@ The Rotator should be declared using a block element such as a <div>. Direct des
 Attributes
 ==========
 
-* transition [string] - 
-* transitionParams [string] - 
-* panes [array] - 
+* transition [string] - The name of a function that is passed two panes nodes and a duration, then returns a dojo.Animation object. The default value is "dojox.widget.rotator.swap".
+* transitionParams [string] - Parameters for the transition. The string is read in and eval'd as an object.  If the duration is absent, the default value will be used.
+* panes [array] - Array of panes to be created in the Rotator. Each array element will be passed as attributes to a dojo.create() call.
 
 ========
 Examples
 ========
 
-Programmatic example
---------------------
+Programmatic examples
+---------------------
 
 This example show you how the Rotator can create the pane DOM nodes for you.
 
@@ -55,9 +55,9 @@ This example show you how the Rotator can create the pane DOM nodes for you.
        {
          transition: "dojox.widget.rotator.fade",
          panes: [
-           { className: "pane", innerHTML: "pane 1" },
-           { className: "pane", innerHTML: "pane 2" },
-           { className: "pane", innerHTML: "pane 3" }
+           { className: "pane", innerHTML: "Pane 1" },
+           { className: "pane", innerHTML: "Pane 2" },
+           { className: "pane", innerHTML: "Pane 3" }
          ]
        },
        dojo.byId("myRotator");
@@ -66,6 +66,35 @@ This example show you how the Rotator can create the pane DOM nodes for you.
  </script>
  
  <div id="myRotator"></div>
+
+ <button onclick="dojo.publish("myRotator/rotator/control", ['prev']);">Prev</button>
+ <button onclick="dojo.publish("myRotator/rotator/control", ['next']);">Next</button>
+
+This example show you how the Rotator will use DOM nodes that already exist.
+
+.. code-block :: javascript
+ :linenos:
+
+ <script type="text/javascript">
+   dojo.require("dojox.widget.Rotator");
+   dojo.require("dojox.widget.rotator.fade");
+   dojo.addOnLoad(function(){
+     // add a 3rd pane
+     dojo.create("div", { className: "pane", innerHTML: "pane3" }, "myRotator");
+ 
+     new dojox.widget.Rotator(
+       {
+         transition: "dojox.widget.rotator.fade"
+       },
+       dojo.byId("myRotator");
+     );
+   });
+ </script>
+ 
+ <div id="myRotator">
+   <div class="pane">Pane 1</div>
+   <div class="pane">Pane 2</div>
+ </div>
 
  <button onclick="dojo.publish("myRotator/rotator/control", ['prev']);">Prev</button>
  <button onclick="dojo.publish("myRotator/rotator/control", ['next']);">Next</button>
