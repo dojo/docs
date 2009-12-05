@@ -35,6 +35,12 @@ panes             Array   Array of panes to be created in the Rotator. Each arra
 
 The Rotator should be declared using a block element such as a <div>. Direct descendant nodes are the panes to be rotated. The Rotator will accept any DOM node for a rotator pane, however a block element (such as <div> or <img>) or a element with display:block is recommended. For best results, each rotator pane should be the same height and width as the Rotator container node and consider setting overflow to hidden.
 
+There may be z-index issues for complex layouts. The z-index of the current pane is 1 and the z-index of the pane that is about to be transitioned in is 2.
+
+If the rotator node isn't explicitly positioned, then it will automatically position the rotator node relative so that the panes can be positioned absolute.
+
+You can do some interesting things by stacking multiple rotators on top of each other, then wiring up the topics so that they all transition at the same time.
+
 The following examples will use the following CSS:
 
 .. code-block :: css
