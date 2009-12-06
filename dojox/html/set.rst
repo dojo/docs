@@ -17,9 +17,10 @@ Extensions to content setting utilities in dojo.html
 Introduction
 ============
 
-dojox.html.set and its helper dojox.html._ContentSetter extend the content-setting available in their `dojo.html <dojo.html>`_ counterparts, by adding support for executing scripts, adding style. The _ContentSetter provides this functionality to the dojox `ContentPane <dojox.layout.ContentPane>`_.
+dojox.html.set and its helper dojox.html._ContentSetter extend the content-setting available in their `dojo.html <dojo/html>`_ counterparts, by adding support for executing scripts, adding style. The _ContentSetter provides this functionality to the dojox `ContentPane <dojox.layout.ContentPane>`_.
 
-While loading content with script and style blocks is perhaps a questionable practice, there are valid use cases, and times when this is the only option available.  
+Be careful: Loading content with script and style blocks is often a questionable practice. A more secure and recommended solution is, to load just pure data with the help of the available Dojo datastores. But beside this general principle, there are also valid use cases, and times when loading content with scripts is the only option available. In such cases, dojox.html.set() can help you.
+
 
 =====
 Usage
@@ -49,4 +50,4 @@ TODO: example
 See also
 ========
 
-* TODO: links to other related articles
+* `Quickstart Tutorial: Using Dojo Data <quickstart/data/usingdatastores>`_
