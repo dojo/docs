@@ -3,8 +3,6 @@
 dojox.widget.AutoRotator
 ========================
 
-:Status: Draft
-:Version: 1.0
 :Project owner: Chris Barber
 :Available: since V1.4
 
@@ -13,11 +11,13 @@ dojox.widget.AutoRotator
 
 A rotator that automatically transitions between child nodes.
 
+
 ============
 Introduction
 ============
 
 Adds automatic rotating to the `dojox.widget.Rotator <dojox/widget/Rotator>`_. The AutoRotator has parameters that control how user input can affect the rotator including a suspend when hovering over the rotator and pausing when the user manually advances to another pane.
+
 
 =====
 Usage
@@ -37,22 +37,6 @@ reverse              boolean  Causes the rotator to rotate in reverse order. The
 
 The AutoRotator follows the same general Guidelines as the `dojox.widget.Rotator <dojox/widget/Rotator>`_.
 
-The following examples will use the following CSS:
-
-.. code-block :: css
- :linenos:
- 
- #myRotator {
-   border: solid 1px #000;
-   height: 100px;
-   width: 400px;
- }
- 
- .pane {
-   height: 100px;
-   overflow: hidden;
-   width: 400px;
- }
 
 ========
 Examples
@@ -63,78 +47,165 @@ Programmatic example
 
 Example showing how the AutoRotator can create the pane DOM nodes for you.
 
-.. code-block :: html
- :linenos:
- 
- <script type="text/javascript">
-   dojo.require("dojox.widget.AutoRotator");
-   dojo.require("dojox.widget.rotator.fade");
-   dojo.addOnLoad(function(){
-     new dojox.widget.AutoRotator(
-       {
-         transition: "dojox.widget.rotator.fade",
-         duration: 2500,
-         pauseOnManualChange: true,
-         suspendOnHover: true,
-         panes: [
-           { className: "pane", innerHTML: "Pane 1" },
-           { className: "pane", innerHTML: "Pane 2" },
-           { className: "pane", innerHTML: "Pane 3" }
-         ]
-       },
-       dojo.byId("myRotator");
-     );
-   });
- </script>
- 
- <div id="myRotator"></div>
- 
- <button onclick="dojo.publish('myRotator/rotator/control', ['prev']);">Prev</button>
- <button onclick="dojo.publish('myRotator/rotator/control', ['next']);">Next</button>
+.. code-example::
+  :version: local
+
+  .. css::
+
+    <style type="text/css">
+        .rotator{
+            background-color:#fff;
+            border:solid 1px #e5e5e5;
+            width:400px;
+            height:100px;
+            overflow:hidden;
+        }
+        .pane{
+            background-color:#fff;
+            width:400px;
+            height:100px;
+            overflow:hidden;
+        }
+    </style>
+
+  .. javascript::
+
+    <script type="text/javascript">
+        dojo.require("dojox.widget.AutoRotator");
+        dojo.require("dojox.widget.rotator.Fade");
+        dojo.addOnLoad(function(){
+            new dojox.widget.Rotator(
+                {
+                    transition: "dojox.widget.rotator.fade"
+                    duration: 2500,
+                    pauseOnManualChange: true,
+                    suspendOnHover: true,
+                    panes: [
+                    { className: "pane", innerHTML: "Pane 0" },
+                    { className: "pane", innerHTML: "Pane 1" },
+                    { className: "pane", innerHTML: "Pane 2" }
+                    ]
+
+                },
+                dojo.byId("myAutoRotator1")
+            );
+        });
+    </script>
+
+  .. html::
+
+    <div id="myAutoRotator1" class="rotator"></div>
+
+    <button onclick="dojo.publish('myAutoRotator1/rotator/control', ['prev']);">Prev</button>
+    <button onclick="dojo.publish('myAutoRotator1/rotator/control', ['next']);">Next</button>
+
 
 Declarative example
 -------------------
 
 Example of an AutoRotator that cycles to 4 random panes, then pauses.
 
-.. code-block :: html
- :linenos:
- 
- <script type="text/javascript">
-   dojo.require("dojox.widget.AutoRotator");
-   dojo.require("dojox.widget.rotator.fade");
- </script>
- 
- <div dojoType="dojox.widget.AutoRotator" id="myRotator" jsId="myRotatorInstance" transition="dojox.widget.rotator.crossFade" duration="2500" random="true" cycles="4">
-   <div>Pane 1</div>
-   <div>Pane 2</div>
-   <div>Pane 3</div>
- </div>
- 
- <button onclick="myRotatorInstance.prev();">Prev</button>
- <button onclick="myRotatorInstance.next();">Next</button>
+.. code-example::
+  :version: local
+
+  .. css::
+
+    <style type="text/css">
+        .rotator{
+            background-color:#fff;
+            border:solid 1px #e5e5e5;
+            width:400px;
+            height:100px;
+            overflow:hidden;
+        }
+        .pane{
+            background-color:#fff;
+            width:400px;
+            height:100px;
+            overflow:hidden;
+        }
+    </style>
+
+  .. javascript::
+
+    <script type="text/javascript">
+        dojo.require("dojox.widget.AutoRotator");
+        dojo.require("dojox.widget.rotator.Fade");
+    </script>
+  
+  .. html::
+
+    <div dojoType="dojox.widget.AutoRotator" class="rotator" id="myAutoRotator2" jsId="myAutoRotatorInstance2" transition="dojox.widget.rotator.crossFade" duration="2500" random="true" cycles="4">
+        <div class="pane">Pane 0</div>
+        <div class="pane">Pane 1</div>
+        <div class="pane">Pane 2</div>
+    </div>
+
+    <button onclick="myAutoRotatorInstance2.prev();">Prev</button>
+    <button onclick="myAutoRotatorInstance2.next();">Next</button>
+
 
 Example of using the "wait for event" feature. The 2nd pane will wait for a event to be published by the button before proceeding.
 
-.. code-block :: html
- :linenos:
- 
- <script type="text/javascript">
-   dojo.require("dojox.widget.AutoRotator");
-   dojo.require("dojox.widget.rotator.fade");
- </script>
- 
- <div dojoType="dojox.widget.AutoRotator" class="rotator" jsId="myRotatorInstance" duration="2000" transition="dojox.widget.rotator.crossFade">
-   <div class="pane">Pane 1</div>
-   <div class="pane" waitForEvent="myEvent">
-     Pane 2<br>
-     <button onclick="dojo.publish('myEvent')">Continue!</button>
-   </div>
-   <div class="pane">Pane 3</div>
- </div>
- 
- <button onclick="myRotatorInstance.prev();">Prev</button>
- <button onclick="myRotatorInstance.next();">Next</button>
+.. code-example::
+  :version: local
+
+  .. css::
+
+    <style type="text/css">
+        .rotator{
+            background-color:#fff;
+            border:solid 1px #e5e5e5;
+            width:400px;
+            height:100px;
+            overflow:hidden;
+        }
+        .pane{
+            background-color:#fff;
+            width:400px;
+            height:100px;
+            overflow:hidden;
+            padding: 20px;
+        }
+        .pane0{
+            background-color:#fff79e;
+        }
+        .pane1{
+            background-color:#fff79e;
+        }
+        .pane2{
+            background-color:#fff79e;
+        }
+    </style>
+
+  .. javascript::
+
+    <script type="text/javascript">
+        dojo.require("dojox.widget.AutoRotator");
+        dojo.require("dojox.widget.rotator.Fade");
+    </script>
+  
+  .. html::
+
+    <div dojoType="dojox.widget.AutoRotator" class="rotator" id="myAutoRotator3" jsId="myAutoRotatorInstance3" duration="2000" transition="dojox.widget.rotator.crossFade">
+        <div class="pane pane0">
+            <h1>Dojo</h1>
+            <p>Tons of features like CSS-based queries, event handling, animations, Ajax, class-based programming, and a package system</p>
+        </div>
+        <div class="pane pane1" waitForEvent="myEvent">
+            <h1>Dijit</h1>
+            <p>Dojo's themeable, accessible, easy-to-customize UI Library<br>
+            <button onclick="dojo.publish('myEvent')">Continue!</button></p>
+        </div>
+        <div class="pane pane2">
+            <h1>DojoX</h1>
+            <p>Dojo eXtensions</p>
+        </div>
+    </div>
+
+    <button onclick="myAutoRotatorInstance3.prev();">Prev</button>
+    <button onclick="myAutoRotatorInstance3.next();">Next</button>
+
 
 ========
 See also
