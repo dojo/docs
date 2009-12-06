@@ -51,3 +51,5 @@ See also
 ========
 
 * `Quickstart Tutorial: Using Dojo Data <quickstart/data/usingdatastores>`_
+
+  As a more secure alternative for loading pure data
