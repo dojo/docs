@@ -11,30 +11,21 @@ dojox.layout.RotatorContainer
 .. contents::
    :depth: 2
 
-dojox.layout.RotatorContainer is an extended StackContainer suited for presentational purposes.
-
+dojox.layout.RotatorContainer is an extended StackContainer that automatically crossfades between child panes and display navigation in the form of tabs or a pager.
 
 ============
 Introduction
 ============
 
-TODO: introduce the component/class/method
+The RotatorContainer cycles through the child panes with a crossfade transition.
 
+If you're looking for a more lightweight and powerful rotator, please check out the `dojox.widget.AutoRotator <dojox/widget/AutoRotator>`_.
 
 =====
 Usage
 =====
 
 TODO: how to use the component/class/method
-
-.. code-block :: javascript
- :linenos:
-
- <script type="text/javascript">
-   // your code
- </script>
-
-
 
 ========
 Examples
@@ -48,11 +39,28 @@ TODO: example
 Declarative example
 -------------------
 
-TODO: example
-
+.. code-block :: html
+ :linenos:
+ 
+ <script type="text/javascript">
+   dojo.require("dojox.layout.RotatorContainer");
+   dojo.require("dijit.layout.ContentPane");
+ </script>
+ 
+ <div dojoType="dojox.layout.RotatorContainer" id="myRotator" showTabs="true" autoStart="true" transitionDelay="5000">
+   <div id="pane1" dojoType="dijit.layout.ContentPane" title="1">
+     Pane 1!
+   </div>
+   <div id="pane2" dojoType="dijit.layout.ContentPane" title="2">
+     Pane 2!
+   </div>
+   <div id="pane3" dojoType="dijit.layout.ContentPane" title="3" transitionDelay="10000">
+     Pane 3 with overrided transitionDelay!
+   </div>
+ </div>
 
 ========
 See also
 ========
 
-* TODO: links to other related articles
+* `dojox.widget.AutoRotator <dojox/widget/AutoRotator>`_ extends this Rotator adding automatic transitioning.
