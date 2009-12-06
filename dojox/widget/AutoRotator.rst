@@ -124,6 +124,15 @@ Example of an AutoRotator that cycles to 4 random panes, then pauses.
             height:100px;
             overflow:hidden;
         }
+        .pane0{
+            background-color:#fff79e;
+        }
+        .pane1{
+            background-color:#ffd4a0;
+        }
+        .pane2{
+            background-color:#ffa0a0;
+        }
     </style>
 
   .. javascript::
@@ -136,13 +145,10 @@ Example of an AutoRotator that cycles to 4 random panes, then pauses.
   .. html::
 
     <div dojoType="dojox.widget.AutoRotator" class="rotator" id="myAutoRotator2" jsId="myAutoRotatorInstance2" transition="dojox.widget.rotator.crossFade" duration="2500" random="true" cycles="4">
-        <div class="pane">Pane 0</div>
-        <div class="pane">Pane 1</div>
-        <div class="pane">Pane 2</div>
+        <div class="pane pane0">Pane 0</div>
+        <div class="pane pane1">Pane 1</div>
+        <div class="pane pane2">Pane 2</div>
     </div>
-
-    <button onclick="myAutoRotatorInstance2.prev();">Prev</button>
-    <button onclick="myAutoRotatorInstance2.next();">Next</button>
 
 
 Example of using the "wait for event" feature. The 2nd pane will wait for a event to be published by the button before proceeding.
