@@ -41,22 +41,6 @@ If the rotator node isn't explicitly positioned, then it will automatically posi
 
 You can do some interesting things by stacking multiple rotators on top of each other, then wiring up the topics so that they all transition at the same time.
 
-The following examples will use the following CSS:
-
-.. code-block :: css
- :linenos:
- 
- #myRotator {
-   border: solid 1px #000;
-   height: 100px;
-   width: 400px;
- }
- 
- .pane {
-   height: 100px;
-   overflow: hidden;
-   width: 400px;
- }
 
 ========
 Examples
@@ -167,14 +151,14 @@ Example of controlling a Rotator by referencing its instance. We define a jsId s
         .rotator{
             background-color:#fff;
             border:solid 1px #e5e5e5;
-            width:384px;
-            height:90px;
+            width:400px;
+            height:100px;
             overflow:hidden;
         }
         .pane{
             background-color:#fff;
-            width:384px;
-            height:90px;
+            width:400px;
+            height:100px;
             overflow:hidden;
         }
     </style>
@@ -209,14 +193,14 @@ Example of using different transitions per pane.
         .rotator{
             background-color:#fff;
             border:solid 1px #e5e5e5;
-            width:384px;
-            height:90px;
+            width:400px;
+            height:100px;
             overflow:hidden;
         }
         .pane{
             background-color:#fff;
-            width:384px;
-            height:90px;
+            width:400px;
+            height:100px;
             overflow:hidden;
         }
     </style>
@@ -254,14 +238,14 @@ Example of using passing in transition parameters. In this case, the `Pan <dojox
         .rotator{
             background-color:#fff;
             border:solid 1px #e5e5e5;
-            width:384px;
-            height:90px;
+            width:400px;
+            height:100px;
             overflow:hidden;
         }
         .pane{
             background-color:#fff;
-            width:384px;
-            height:90px;
+            width:400px;
+            height:100px;
             overflow:hidden;
         }
     </style>
@@ -310,22 +294,45 @@ args              Anything  One or more arguments to pass to the action. If the 
 Example
 -------
 
-.. code-block :: html
- :linenos:
- 
- <script type="text/javascript">
-   dojo.require("dojox.widget.Rotator");
- </script>
- 
- <div dojoType="dojox.widget.Rotator" id="myRotator">
-   <div>Pane 1</div>
-   <div>Pane 2</div>
-   <div>Pane 3</div>
- </div>
- 
- <button onclick="dojo.publish('myRotator/rotator/control', ['prev']);">Prev</button>
- <button onclick="dojo.publish('myRotator/rotator/control', ['next']);">Next</button>
- <button onclick="dojo.publish('myRotator/rotator/control', ['go', 2]);">Goto Pane 2</button>
+.. code-example::
+  :version: local
+
+  .. css::
+
+    <style type="text/css">
+        .rotator{
+            background-color:#fff;
+            border:solid 1px #e5e5e5;
+            width:400px;
+            height:100px;
+            overflow:hidden;
+        }
+        .pane{
+            background-color:#fff;
+            width:400px;
+            height:100px;
+            overflow:hidden;
+        }
+    </style>
+
+  .. javascript::
+
+    <script type="text/javascript">
+        dojo.require("dojox.widget.Rotator");
+    </script>
+
+  .. html::
+
+    <div dojoType="dojox.widget.Rotator" class="rotator" id="myRotator4">
+        <div class="pane">Pane 1</div>
+        <div class="pane">Pane 2</div>
+        <div class="pane">Pane 3</div>
+    </div>
+
+    <button onclick="dojo.publish('myRotator4/rotator/control', ['prev']);">Prev</button>
+    <button onclick="dojo.publish('myRotator4/rotator/control', ['next']);">Next</button>
+    <button onclick="dojo.publish('myRotator4/rotator/control', ['go', 2]);">Goto Pane 2</button>
+
 
 ================
 Published Topics
