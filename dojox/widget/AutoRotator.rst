@@ -57,14 +57,15 @@ Example showing how the AutoRotator can create the pane DOM nodes for you.
             background-color:#fff;
             border:solid 1px #e5e5e5;
             width:400px;
-            height:100px;
+            height:180px;
             overflow:hidden;
         }
         .pane{
             background-color:#fff;
             width:400px;
-            height:100px;
+            height:180px;
             overflow:hidden;
+            padding: 10px;
         }
         .pane0{
             background-color:#fff79e;
