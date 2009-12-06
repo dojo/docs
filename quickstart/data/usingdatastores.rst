@@ -44,7 +44,7 @@ Datastores provide access to data through a standardized interface for talking t
 See also
 ========
 
-* Dojo Toolkit comes with a wide range of Datastores:
+Dojo Toolkit comes with a wide range of Datastores:
 
-  * Basic datastores `dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`_ and `dojo.data.ItemFileWriteStore <dojo/data/ItemFileWriteStore>`_
-  * `List of additional available Datastores <dojox/data>`_
+* Basic datastores `dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`_ and `dojo.data.ItemFileWriteStore <dojo/data/ItemFileWriteStore>`_
+* `List of additional available Datastores <dojox/data>`_
