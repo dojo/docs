@@ -1,7 +1,7 @@
 #format dojo_rst
 
 dojox.html.set
-===============
+==============
 
 :Authors: Sam Foster, Bill Keese, Frederic, Marcus Reimann
 :Project owner: ?
