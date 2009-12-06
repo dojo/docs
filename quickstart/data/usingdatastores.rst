@@ -38,3 +38,13 @@ Datastores provide access to data through a standardized interface for talking t
   How to issue a fetch of data that returns data items in sorted order.
 
 * `FAQ (frequent questions about using dojo.data) <quickstart/data/usingdatastores/faq>`_
+
+
+========
+See also
+========
+
+* Dojo Toolkit comes with a wide range of Datastores:
+
+  * Basic datastores `dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`_ and `dojo.data.ItemFileWriteStore <dojo/data/ItemFileWriteStore>`_
+  * `List of additional available Datastores <dojox/data>`_
