@@ -128,6 +128,7 @@ Declarative examples
 Example showing how to create a minimal Rotator instance.
 
 .. code-example::
+  :version: local
 
   .. javascript::
 
