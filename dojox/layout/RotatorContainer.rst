@@ -63,4 +63,4 @@ Declarative example
 See also
 ========
 
-* `dojox.widget.AutoRotator <dojox/widget/AutoRotator>`_ extends this Rotator adding automatic transitioning.
+* `dojox.widget.AutoRotator <dojox/widget/AutoRotator>`_ is a replacement widget for the RotatorContainer that is more lightweight and has more features.
