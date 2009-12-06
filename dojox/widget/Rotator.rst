@@ -3,8 +3,6 @@
 dojox.widget.Rotator
 ====================
 
-:Status: Draft
-:Version: 1.0
 :Project owner: Chris Barber
 :Available: since V1.4
 
@@ -20,6 +18,7 @@ Introduction
 A small, fast, extensible, awesome rotator that cycles, with transitions, through panes (child nodes) displaying only one at a time and ties into controllers used to change state.
 
 The Rotator does not rely on dijit.  It is designed to be as lightweight as possible.  Controllers and transitions have been externalized so builds can be as optimized with only the components you want to use. 
+
 
 =====
 Usage
@@ -50,32 +49,55 @@ Programmatic examples
 ---------------------
 
 Example showing how the Rotator can create the pane DOM nodes for you.
+ 
+.. code-example::
+  :version: local
 
-.. code-block :: html
- :linenos:
- 
- <script type="text/javascript">
-   dojo.require("dojox.widget.Rotator");
-   dojo.require("dojox.widget.rotator.fade");
-   dojo.addOnLoad(function(){
-     new dojox.widget.Rotator(
-       {
-         transition: "dojox.widget.rotator.fade",
-         panes: [
-           { className: "pane", innerHTML: "Pane 0" },
-           { className: "pane", innerHTML: "Pane 1" },
-           { className: "pane", innerHTML: "Pane 2" }
-         ]
-       },
-       dojo.byId("myRotator");
-     );
-   });
- </script>
- 
- <div id="myRotator"></div>
- 
- <button onclick="dojo.publish('myRotator/rotator/control', ['prev']);">Prev</button>
- <button onclick="dojo.publish('myRotator/rotator/control', ['next']);">Next</button>
+  .. css::
+
+    <style type="text/css">
+        .rotator{
+            background-color:#fff;
+            border:solid 1px #e5e5e5;
+            width:400px;
+            height:100px;
+            overflow:hidden;
+        }
+        .pane{
+            background-color:#fff;
+            width:400px;
+            height:100px;
+            overflow:hidden;
+        }
+    </style>
+
+  .. javascript::
+
+    <script type="text/javascript">
+        dojo.require("dojox.widget.Rotator");
+        dojo.require("dojox.widget.rotator.Fade");
+        dojo.addOnLoad(function(){
+            new dojox.widget.Rotator(
+                {
+                    transition: "dojox.widget.rotator.fade",
+                    panes: [
+                        { className: "pane", innerHTML: "Pane 0" },
+                        { className: "pane", innerHTML: "Pane 1" },
+                        { className: "pane", innerHTML: "Pane 2" }
+                    ]
+                },
+                dojo.byId("myRotator");
+            );
+        });
+    </script>
+
+  .. html::
+
+    <div id="myRotator" class="rotator"></div>
+
+    <button onclick="dojo.publish('myRotator/rotator/control', ['prev']);">Prev</button>
+    <button onclick="dojo.publish('myRotator/rotator/control', ['next']);">Next</button>
+
 
 Example showing how the Rotator will use DOM nodes that already exist.
 
