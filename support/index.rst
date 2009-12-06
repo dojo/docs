@@ -1,10 +1,10 @@
 #format dojo_rst
 
-.. contents::
-   :depth: 2
-
 Support for the Dojo Toolkit
 ============================
+
+.. contents::
+   :depth: 2
 
 Dojo is a `hundred point <http://dojofoundation.org/about/hundredpoint>`_ open source project with a `liberal license <http://dojotoolkit.org/license>`_. As such, there is no official entity that promises free support. However, the developers and community provide a number of ways in which support may be found, both free and commercial. 
 
