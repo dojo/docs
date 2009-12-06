@@ -129,7 +129,7 @@ Example showing how the Rotator will use DOM nodes that already exist.
         dojo.require("dojox.widget.rotator.Fade");
         dojo.addOnLoad(function(){
             // add a 3rd pane
-            dojo.create("div", { className: "pane", innerHTML: "pane3" }, "myRotator2");
+            dojo.create("div", { className: "pane", innerHTML: "dynamically added Pane" }, "myRotator2");
             
             new dojox.widget.Rotator(
                 {
