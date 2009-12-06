@@ -101,32 +101,55 @@ Example showing how the Rotator can create the pane DOM nodes for you.
 
 Example showing how the Rotator will use DOM nodes that already exist.
 
-.. code-block :: html
- :linenos:
+.. code-example::
+  :version: local
 
- <script type="text/javascript">
-   dojo.require("dojox.widget.Rotator");
-   dojo.require("dojox.widget.rotator.fade");
-   dojo.addOnLoad(function(){
-     // add a 3rd pane
-     dojo.create("div", { className: "pane", innerHTML: "pane3" }, "myRotator2");
- 
-     new dojox.widget.Rotator(
-       {
-         transition: "dojox.widget.rotator.fade"
-       },
-       dojo.byId("myRotator2");
-     );
-   });
- </script>
- 
- <div id="myRotator2">
-   <div class="pane">Pane 0</div>
-   <div class="pane">Pane 1</div>
- </div>
- 
- <button onclick="dojo.publish('myRotator2/rotator/control', ['prev']);">Prev</button>
- <button onclick="dojo.publish('myRotator2/rotator/control', ['next']);">Next</button>
+  .. css::
+
+    <style type="text/css">
+        .rotator{
+            background-color:#fff;
+            border:solid 1px #e5e5e5;
+            width:400px;
+            height:100px;
+            overflow:hidden;
+        }
+        .pane{
+            background-color:#fff;
+            width:400px;
+            height:100px;
+            overflow:hidden;
+        }
+    </style>
+
+  .. javascript::
+
+    <script type="text/javascript">
+        dojo.require("dojox.widget.Rotator");
+        dojo.require("dojox.widget.rotator.Fade");
+        dojo.addOnLoad(function(){
+            // add a 3rd pane
+            dojo.create("div", { className: "pane", innerHTML: "pane3" }, "myRotator2");
+            
+            new dojox.widget.Rotator(
+                {
+                    transition: "dojox.widget.rotator.fade"
+                },
+                dojo.byId("myRotator2")
+            );
+        });
+    </script>
+
+  .. html::
+
+    <div id="myRotator2" class="rotator">
+        <div class="pane">Pane 0</div>
+        <div class="pane">Pane 1</div>
+    </div>
+
+    <button onclick="dojo.publish('myRotator2/rotator/control', ['prev']);">Prev</button>
+    <button onclick="dojo.publish('myRotator2/rotator/control', ['next']);">Next</button>
+
 
 Declarative examples
 --------------------
