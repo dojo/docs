@@ -127,6 +127,24 @@ Declarative examples
 
 Example showing how to create a minimal Rotator instance.
 
+.. code-example::
+
+  .. javascript::
+
+    <script type="text/javascript">
+        dojo.require("dojox.widget.Rotator");
+    </script>
+
+  .. html::
+
+    <div dojoType="dojox.widget.Rotator">
+        <div>Pane 1</div>
+        <div>Pane 2</div>
+        <div>Pane 3</div>
+    </div>
+
+
+
 .. code-block :: html
  :linenos:
 
