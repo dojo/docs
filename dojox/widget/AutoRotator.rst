@@ -203,9 +203,6 @@ Example of using the "wait for event" feature. The 2nd pane will wait for a even
         </div>
     </div>
 
-    <button onclick="myAutoRotatorInstance3.prev();">Prev</button>
-    <button onclick="myAutoRotatorInstance3.next();">Next</button>
-
 
 ========
 See also
