@@ -127,25 +127,6 @@ Declarative examples
 
 Example showing how to create a minimal Rotator instance.
 
-.. code-example::
-  :version: local
-
-  .. javascript::
-
-    <script type="text/javascript">
-        dojo.require("dojox.widget.Rotator");
-    </script>
-
-  .. html::
-
-    <div dojoType="dojox.widget.Rotator">
-        <div>Pane 1</div>
-        <div>Pane 2</div>
-        <div>Pane 3</div>
-    </div>
-
-
-
 .. code-block :: html
  :linenos:
 
@@ -193,6 +174,29 @@ Example of controlling a Rotator by referencing its instance. We define a jsId s
  
  <button onclick="myRotatorInstance.prev();">Prev</button>
  <button onclick="myRotatorInstance.next();">Next</button>
+
+
+.. code-example::
+  :version: local
+
+  .. javascript::
+
+    <script type="text/javascript">
+        dojo.require("dojox.widget.Rotator");
+        dojo.require("dojox.widget.rotator.Fade");
+    </script>
+
+  .. html::
+
+    <div dojoType="dojox.widget.Rotator" id="myRotator" jsId="myRotatorInstance" transition="dojox.widget.rotator.crossFade">
+        <div>Pane 1</div>
+        <div>Pane 2</div>
+        <div>Pane 3</div>
+    </div>
+ 
+    <button onclick="myRotatorInstance.prev();">Prev</button>
+    <button onclick="myRotatorInstance.next();">Next</button>
+
 
 Example of using different transitions per pane.
 
