@@ -62,9 +62,9 @@ Example showing how the Rotator can create the pane DOM nodes for you.
        {
          transition: "dojox.widget.rotator.fade",
          panes: [
+           { className: "pane", innerHTML: "Pane 0" },
            { className: "pane", innerHTML: "Pane 1" },
-           { className: "pane", innerHTML: "Pane 2" },
-           { className: "pane", innerHTML: "Pane 3" }
+           { className: "pane", innerHTML: "Pane 2" }
          ]
        },
        dojo.byId("myRotator");
@@ -99,8 +99,8 @@ Example showing how the Rotator will use DOM nodes that already exist.
  </script>
  
  <div id="myRotator">
+   <div class="pane">Pane 0</div>
    <div class="pane">Pane 1</div>
-   <div class="pane">Pane 2</div>
  </div>
  
  <button onclick="dojo.publish('myRotator/rotator/control', ['prev']);">Prev</button>
@@ -119,9 +119,9 @@ Example showing how to create a minimal Rotator instance.
  </script>
  
  <div dojoType="dojox.widget.Rotator">
+   <div>Pane 0</div>
    <div>Pane 1</div>
    <div>Pane 2</div>
-   <div>Pane 3</div>
  </div>
 
 Example using the crossfade transition.
@@ -135,9 +135,9 @@ Example using the crossfade transition.
  </script>
  
  <div dojoType="dojox.widget.Rotator" transition="dojox.widget.rotator.crossFade">
+   <div>Pane 0</div>
    <div>Pane 1</div>
    <div>Pane 2</div>
-   <div>Pane 3</div>
  </div>
 
 Example of controlling a Rotator by referencing its instance. We define a jsId so that the dojo.parser will create a global JavaScript variable pointing to our Rotator instance.
@@ -173,9 +173,9 @@ Example of controlling a Rotator by referencing its instance. We define a jsId s
   .. html::
 
     <div dojoType="dojox.widget.Rotator" class="rotator" id="myRotator" jsId="myRotatorInstance" transition="dojox.widget.rotator.crossFade">
+        <div class="pane">Pane 0</div>
         <div class="pane">Pane 1</div>
         <div class="pane">Pane 2</div>
-        <div class="pane">Pane 3</div>
     </div>
  
     <button onclick="myRotatorInstance.prev();">Prev</button>
@@ -218,10 +218,10 @@ Example of using different transitions per pane.
   .. html::
 
     <div dojoType="dojox.widget.Rotator" class="rotator" id="myRotator2" jsId="myRotatorInstance2" transition="dojox.widget.rotator.crossFade">
-        <div class="pane">Pane 1</div>
-        <div class="pane" transition="dojox.widget.rotator.panRight">Pane 2</div>
-        <div class="pane" transition="dojox.widget.rotator.slideLeft">Pane 3</div>
-        <div class="pane" transition="dojox.widget.rotator.wipeDown">Pane 4</div>
+        <div class="pane">Pane 0</div>
+        <div class="pane" transition="dojox.widget.rotator.panRight">Pane 1</div>
+        <div class="pane" transition="dojox.widget.rotator.slideLeft">Pane 2</div>
+        <div class="pane" transition="dojox.widget.rotator.wipeDown">Pane 3</div>
     </div>
 
     <button onclick="myRotatorInstance2.prev();">Prev</button>
@@ -260,9 +260,9 @@ Example of using passing in transition parameters. In this case, the `Pan <dojox
   .. html::
 
     <div dojoType="dojox.widget.Rotator" class="rotator" id="myRotator3" jsId="myRotatorInstance3" transition="dojox.widget.rotator.pan" transitionParams="continuous:true,quick:true,duration:500">
+        <div class="pane">Pane 0</div>
         <div class="pane">Pane 1</div>
         <div class="pane">Pane 2</div>
-        <div class="pane">Pane 3</div>
     </div>
 
     <button onclick="myRotatorInstance3.prev();">Prev</button>
@@ -324,9 +324,9 @@ Example
   .. html::
 
     <div dojoType="dojox.widget.Rotator" class="rotator" id="myRotator4">
+        <div class="pane">Pane 0</div>
         <div class="pane">Pane 1</div>
         <div class="pane">Pane 2</div>
-        <div class="pane">Pane 3</div>
     </div>
 
     <button onclick="dojo.publish('myRotator4/rotator/control', ['prev']);">Prev</button>
