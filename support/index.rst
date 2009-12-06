@@ -35,8 +35,8 @@ Maling list
 * `The dojo-interest mailing list <http://mail.dojotoolkit.org/mailman/listinfo/dojo-interest>`_
 * `More info <support/nabble>`_ on the mailing list and the nabble archive.
 
-IRC
----
+Chat
+----
 
 * IRC: #dojo at irc.freenode.net
 
