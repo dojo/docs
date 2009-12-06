@@ -157,13 +157,13 @@ Example of using the "wait for event" feature. The 2nd pane will wait for a even
             background-color:#fff;
             border:solid 1px #e5e5e5;
             width:400px;
-            height:100px;
+            height:180px;
             overflow:hidden;
         }
         .pane{
             background-color:#fff;
             width:400px;
-            height:100px;
+            height:180px;
             overflow:hidden;
             padding: 10px;
         }
@@ -171,10 +171,10 @@ Example of using the "wait for event" feature. The 2nd pane will wait for a even
             background-color:#fff79e;
         }
         .pane1{
-            background-color:#fff79e;
+            background-color:#ffd4a0;
         }
         .pane2{
-            background-color:#fff79e;
+            background-color:#ffa0a0;
         }
     </style>
 
