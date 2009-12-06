@@ -66,6 +66,15 @@ Example showing how the AutoRotator can create the pane DOM nodes for you.
             height:100px;
             overflow:hidden;
         }
+        .pane0{
+            background-color:#fff79e;
+        }
+        .pane1{
+            background-color:#ffd4a0;
+        }
+        .pane2{
+            background-color:#ffa0a0;
+        }
     </style>
 
   .. javascript::
@@ -81,9 +90,9 @@ Example showing how the AutoRotator can create the pane DOM nodes for you.
                     pauseOnManualChange: true,
                     suspendOnHover: true,
                     panes: [
-                    { className: "pane", innerHTML: "Pane 0" },
-                    { className: "pane", innerHTML: "Pane 1" },
-                    { className: "pane", innerHTML: "Pane 2" }
+                    { className: "pane pane0", innerHTML: "Pane 0" },
+                    { className: "pane pane1", innerHTML: "Pane 1" },
+                    { className: "pane pane2", innerHTML: "Pane 2" }
                     ]
 
                 },
