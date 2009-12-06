@@ -24,7 +24,7 @@ Here is an up to date list of dojox.widget components. Note: Some of these are n
 
 * `dojox.widget.AutoRotator <dojox/widget/AutoRotator>`_
 
-  A rotator that automatically transitions between child nodes.
+  A rotator that automatically transitions between child nodes
 
 * `dojox.widget.BarGauge <dojox/widget/BarGauge>`_
 
@@ -76,7 +76,7 @@ Here is an up to date list of dojox.widget components. Note: Some of these are n
 
 * `dojox.widget.PlaceholderMenuItem <dojox/widget/PlaceholderMenuItem>`_
 
-  A menu item that can be used as a placeholder.
+  A menu item that can be used as a placeholder
 
 * `dojox.widget.Roller <dojox/widget/Roller>`_
 
@@ -88,7 +88,7 @@ Here is an up to date list of dojox.widget components. Note: Some of these are n
 
 * `dojox.widget.Rotator <dojox/widget/Rotator>`_
 
-  A widget for rotating through child nodes using transitions.
+  A widget for rotating through child nodes using transitions
 
 * `dojox.widget.SortList <dojox/widget/SortList>`_
 
@@ -96,7 +96,7 @@ Here is an up to date list of dojox.widget components. Note: Some of these are n
 
 * `dojox.widget.Standby <dojox/widget/Standby>`_
  
-  A small 'This section is busy' overlay blocking widget.
+  A small 'This section is busy' overlay blocking widget
 
 * `dojox.widget.Toaster <dojox/widget/Toaster>`_
 
