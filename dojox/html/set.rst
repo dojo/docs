@@ -52,7 +52,6 @@ Set content with styles
 -----------------------
 
 .. code-example::
-  :version: local
 
   .. javascript::
 
