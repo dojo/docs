@@ -86,7 +86,7 @@ Example showing how the Rotator can create the pane DOM nodes for you.
                         { className: "pane", innerHTML: "Pane 2" }
                     ]
                 },
-                dojo.byId("myRotator1");
+                dojo.byId("myRotator1")
             );
         });
     </script>
