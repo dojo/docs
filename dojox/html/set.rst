@@ -29,11 +29,20 @@ Usage
 .. code-block :: javascript
  :linenos:
 
-  dojox.html.set(node, htmlString {
+  dojox.html.set(node, content, {
       executeScripts: true, 
       scriptHasHooks: false,
       renderStyles: true
   });
+
+===========  =======================  ======================================================================
+Parameter    Type                     Description
+===========  =======================  ======================================================================
+node         DomNode  	              The parent element that will receive the content.
+content      String|DomNode|NodeList  The content to be set on the parent element. This can be an html string, a node reference or a NodeList, dojo.NodeList, Array or other enumerable list of nodes.
+params       Object                   Optional. Optional flags/properties to configure the content-setting. See dojo.html._ContentSetter
+===========  =======================  ======================================================================
+
 
 ========
 Examples
@@ -42,8 +51,29 @@ Examples
 Programmatic example
 --------------------
 
-TODO: example
+.. code-example::
 
+  .. javascript::
+
+    <script type="text/javascript">
+        dojo.require("dojox.html.set");
+        dojo.addOnLoad(function(){
+            dojox.html.set(
+                dojo.byId("myNode1"), 
+                "<div style='background-color: #dffadb; padding: 10px;'>The content.</div>"
+                +"<div style='background-color: #faefdb; padding: 10px;'>It can be an html string, a node reference or a NodeList, dojo.NodeList, Array or other enumerable list of nodes</div>", 
+                {
+                    executeScripts: false, 
+                    scriptHasHooks: false,
+                    renderStyles: true
+                }
+            );
+        });
+    </script>
+
+  .. html::
+
+    <div id="myNode1">I'm an empty node</div>
 
 
 ========
