@@ -158,24 +158,6 @@ Example using the crossfade transition.
 
 Example of controlling a Rotator by referencing its instance. We define a jsId so that the dojo.parser will create a global JavaScript variable pointing to our Rotator instance.
 
-.. code-block :: html
- :linenos:
- 
- <script type="text/javascript">
-   dojo.require("dojox.widget.Rotator");
-   dojo.require("dojox.widget.rotator.Fade");
- </script>
- 
- <div dojoType="dojox.widget.Rotator" id="myRotator" jsId="myRotatorInstance" transition="dojox.widget.rotator.crossFade">
-   <div>Pane 1</div>
-   <div>Pane 2</div>
-   <div>Pane 3</div>
- </div>
- 
- <button onclick="myRotatorInstance.prev();">Prev</button>
- <button onclick="myRotatorInstance.next();">Next</button>
-
-
 .. code-example::
   :version: local
 
@@ -218,45 +200,90 @@ Example of controlling a Rotator by referencing its instance. We define a jsId s
 
 Example of using different transitions per pane.
 
-.. code-block :: html
- :linenos:
- 
- <script type="text/javascript">
-   dojo.require("dojox.widget.Rotator");
-   dojo.require("dojox.widget.rotator.Fade");
-   dojo.require("dojox.widget.rotator.Pan");
-   dojo.require("dojox.widget.rotator.Slide");
-   dojo.require("dojox.widget.rotator.Wipe");
- </script>
- 
- <div dojoType="dojox.widget.Rotator" id="myRotator" jsId="myRotatorInstance" transition="dojox.widget.rotator.crossFade">
-   <div>Pane 1</div>
-   <div transition="dojox.widget.rotator.panRight">Pane 2</div>
-   <div transition="dojox.widget.rotator.slideLeft">Pane 3</div>
-   <div transition="dojox.widget.rotator.wipeDown">Pane 4</div>
- </div>
- 
- <button onclick="myRotatorInstance.prev();">Prev</button>
- <button onclick="myRotatorInstance.next();">Next</button>
+.. code-example::
+  :version: local
+
+  .. css::
+
+    <style type="text/css">
+        .rotator{
+            background-color:#fff;
+            border:solid 1px #e5e5e5;
+            width:384px;
+            height:90px;
+            overflow:hidden;
+        }
+        .pane{
+            background-color:#fff;
+            width:384px;
+            height:90px;
+            overflow:hidden;
+        }
+    </style>
+
+  .. javascript::
+
+    <script type="text/javascript">
+        dojo.require("dojox.widget.Rotator");
+        dojo.require("dojox.widget.rotator.Fade");
+        dojo.require("dojox.widget.rotator.Pan");
+        dojo.require("dojox.widget.rotator.Slide");
+        dojo.require("dojox.widget.rotator.Wipe");
+    </script>
+  
+  .. html::
+
+    <div dojoType="dojox.widget.Rotator" class="rotator" id="myRotator2" jsId="myRotatorInstance2" transition="dojox.widget.rotator.crossFade">
+        <div class="pane">Pane 1</div>
+        <div class="pane" transition="dojox.widget.rotator.panRight">Pane 2</div>
+        <div class="pane" transition="dojox.widget.rotator.slideLeft">Pane 3</div>
+        <div class="pane" transition="dojox.widget.rotator.wipeDown">Pane 4</div>
+    </div>
+
+    <button onclick="myRotatorInstance2.prev();">Prev</button>
+    <button onclick="myRotatorInstance2.next();">Next</button>
 
 Example of using passing in transition parameters. In this case, the `Pan <dojox/widget/rotator/Pan>`_ transition is told to do a continuous pan from the current pane to the target pane while transitioning to any panes in between. We also specify a duration of the actual pan transition and tell it to do a quick transition.
 
-.. code-block :: html
- :linenos:
- 
- <script type="text/javascript">
-   dojo.require("dojox.widget.Rotator");
-   dojo.require("dojox.widget.rotator.Pan");
- </script>
- 
- <div dojoType="dojox.widget.Rotator" id="myRotator" jsId="myRotatorInstance" transition="dojox.widget.rotator.pan" transitionParams="continuous:true,quick:true,duration:500">
-   <div>Pane 1</div>
-   <div>Pane 2</div>
-   <div>Pane 3</div>
- </div>
- 
- <button onclick="myRotatorInstance.prev();">Prev</button>
- <button onclick="myRotatorInstance.next();">Next</button>
+.. code-example::
+  :version: local
+
+  .. css::
+
+    <style type="text/css">
+        .rotator{
+            background-color:#fff;
+            border:solid 1px #e5e5e5;
+            width:384px;
+            height:90px;
+            overflow:hidden;
+        }
+        .pane{
+            background-color:#fff;
+            width:384px;
+            height:90px;
+            overflow:hidden;
+        }
+    </style>
+
+  .. javascript::
+
+    <script type="text/javascript">
+        dojo.require("dojox.widget.Rotator");
+        dojo.require("dojox.widget.rotator.Pan");
+    </script>
+
+  .. html::
+
+    <div dojoType="dojox.widget.Rotator" class="rotator" id="myRotator3" jsId="myRotatorInstance3" transition="dojox.widget.rotator.pan" transitionParams="continuous:true,quick:true,duration:500">
+        <div class="pane">Pane 1</div>
+        <div class="pane">Pane 2</div>
+        <div class="pane">Pane 3</div>
+    </div>
+
+    <button onclick="myRotatorInstance3.prev();">Prev</button>
+    <button onclick="myRotatorInstance3.next();">Next</button>
+
 
 =================
 Subscribed Topics
