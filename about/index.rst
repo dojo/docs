@@ -29,7 +29,8 @@ If you are missing things or have ideas, then
 
 * update our `ToDo list <todo>`_
 * read the `Documentation guidelines <howto>`_ and insert your own bits of knowledge
-* don't hesitate to contact the documentation team.
+* don't hesitate to contact the documentation team
+* try the `available support options for the Dojo Toolkit <support/index>`_.
 
 ============
 Contributing
