@@ -50,10 +50,6 @@ Here is an up to date list of dojox.widget components. Note: Some of these are n
 
   A widget to run DocTests inside an HTML page
 
-* `dojox.widget.FeedPortlet <dojox/widget/Portlet>`_
-
-  An enhanced Portlet which can load both remote and local Atom and RSS feeds, displaying them as a list
-
 * `dojox.widget.FilePicker <dojox/widget/FilePicker>`_
 
   A specialized version of RollingList that handles file informatione
@@ -85,6 +81,10 @@ Here is an up to date list of dojox.widget components. Note: Some of these are n
 * `dojox.widget.Portlet <dojox/widget/Portlet>`_
 
   An enhanced TitlePane designed to be used with the dojox.layout.GridContainer
+
+  * `dojox.widget.FeedPortlet <dojox/widget/Portlet>`_
+
+    An enhanced Portlet which can load both remote and local Atom and RSS feeds, displaying them as a list
 
 * `dojox.widget.Roller <dojox/widget/Roller>`_
 
