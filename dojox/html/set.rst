@@ -52,6 +52,7 @@ Programmatic example
 --------------------
 
 .. code-example::
+  :version: local
 
   .. javascript::
 
