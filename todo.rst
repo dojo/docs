@@ -158,10 +158,6 @@ Priority 4: DojoX
 
   needed: full page
 
-* `dojox.html.set <dojox/html/set>`_
-
-  needed: examples
-
 * `dojox.html.styles <dojox/html/styles>`_
 
   needed: full page
