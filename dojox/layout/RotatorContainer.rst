@@ -19,13 +19,29 @@ Introduction
 
 The RotatorContainer cycles through the child panes with a crossfade transition.
 
-If you're looking for a more lightweight and powerful rotator, please check out the `dojox.widget.AutoRotator <dojox/widget/AutoRotator>`_.
+This widget is on the verge of being deprecated. It has been replaced by the `dojox.widget.AutoRotator <dojox/widget/AutoRotator>`_, a lightweight version that has more features and doesn't require dijit.
 
 =====
 Usage
 =====
 
-TODO: how to use the component/class/method
+Since the RotatorContainer is a layout widget, it's children must be a layout widget such as a `dijit.layout.ContentPane <dijit/layout/ContentPane>`_.
+
+====================  =======  ========================================================================================
+Parameter             Type     Description
+====================  =======  ========================================================================================
+showTabs              boolean  Sets the display of the tabs. The tabs are actually a StackController. The child's title is used for the tab's label.
+transitionDelay       int      The delay in milliseconds before transitioning to the next child.
+transition            string   The type of transition to perform when switching children. A null transition will transition instantly.
+transitionDuration    int      The duration of the transition in milliseconds.
+autoStart             boolean  Starts the timer to transition children upon creation.
+suspendOnHover        boolean  Pause the rotator when the mouse hovers over it.
+pauseOnManualChange   boolean  Pause the rotator when the tab is changed or the pager's next/previous buttons are clicked.
+reverse               boolean  Causes the rotator to rotate in reverse order.
+pagerId               string   ID the pager widget.
+cycles                int      Number of cycles before pausing.
+pagerClass            string   The declared Class of the Pager used for this Widget
+====================  =======  ========================================================================================
 
 ========
 Examples
