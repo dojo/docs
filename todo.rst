@@ -238,10 +238,6 @@ Priority 4: DojoX
 
   needed: full page
 
-* `dojox.widget.AutoRotator <dojox/widget/AutoRotator>`_ 
-
-  needed: full page
-
 * `dojox.widget.rotator.Controller <dojox/widget/rotator/Controller>`_ 
 
   needed: full page
