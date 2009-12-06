@@ -3,10 +3,9 @@
 dojox.html.set
 ===============
 
-:Status: Draft
-:Version: 1.0
-:Authors: Sam Foster, Bill Keese, Frederic ?
-:Available: since 1.2
+:Authors: Sam Foster, Bill Keese, Frederic, Marcus Reimann
+:Project owner: ?
+:Available: since V1.2
 
 .. contents::
    :depth: 2
@@ -29,6 +28,7 @@ Usage
 .. code-block :: javascript
  :linenos:
 
+  dojo.require("dojox.html._base");
   dojox.html.set(node, content, {
       executeScripts: true, 
       scriptHasHooks: false,
@@ -57,7 +57,7 @@ Programmatic example
   .. javascript::
 
     <script type="text/javascript">
-        dojo.require("dojox.html.set");
+        dojo.require("dojox.html._base");
         dojo.addOnLoad(function(){
             dojox.html.set(
                 dojo.byId("myNode1"), 
