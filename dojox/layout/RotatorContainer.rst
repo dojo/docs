@@ -5,8 +5,8 @@ dojox.layout.RotatorContainer
 
 :Status: Draft
 :Version: 1.0
-:Project owner: ?--
-:Available: since V?
+:Project owner: Chris Barber
+:Available: since V1.2
 
 .. contents::
    :depth: 2
