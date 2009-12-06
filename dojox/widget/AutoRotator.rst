@@ -76,7 +76,7 @@ Example showing how the AutoRotator can create the pane DOM nodes for you.
         dojo.addOnLoad(function(){
             new dojox.widget.Rotator(
                 {
-                    transition: "dojox.widget.rotator.fade"
+                    transition: "dojox.widget.rotator.fade",
                     duration: 2500,
                     pauseOnManualChange: true,
                     suspendOnHover: true,
@@ -194,8 +194,8 @@ Example of using the "wait for event" feature. The 2nd pane will wait for a even
         </div>
         <div class="pane pane1" waitForEvent="myEvent">
             <h3>Dijit</h3>
-            <p>Dojo's themeable, accessible, easy-to-customize UI Library<br>
-            <button onclick="dojo.publish('myEvent')">Continue!</button></p>
+            <p>Dojo's themeable, accessible, easy-to-customize UI Library</p>
+            <p><button onclick="dojo.publish('myEvent')">Continue!</button></p>
         </div>
         <div class="pane pane2">
             <h3>DojoX</h3>
