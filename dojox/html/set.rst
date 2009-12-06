@@ -59,16 +59,18 @@ Set content with styles
     <script type="text/javascript">
         dojo.require("dojox.html._base");
         dojo.addOnLoad(function(){
-            dojox.html.set(
-                dojo.byId("myNode1"), 
-                "<div style='background-color: #dffadb; padding: 10px;'>The content.</div>"
-                +"<div style='background-color: #faefdb; padding: 10px;'>It can be an html string, a node reference or a NodeList, dojo.NodeList, Array or other enumerable list of nodes</div>", 
-                {
-                    executeScripts: false, 
-                    scriptHasHooks: false,
-                    renderStyles: true
-                }
-            );
+            var content = "<div style='background-color: #dffadb; padding: 10px;'>"
+                +"The content."
+                + "</div>"
+                +"<div style='background-color: #faefdb; padding: 10px;'>"
+                + "It can be an html string, a node reference or a NodeList, "
+                + "dojo.NodeList, Array or other enumerable list of nodes."
+                + "</div>";
+            dojox.html.set(dojo.byId("myNode1"), content, {
+                executeScripts: false, 
+                scriptHasHooks: false,
+                renderStyles: true
+            });
         });
     </script>
 
