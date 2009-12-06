@@ -19,6 +19,11 @@ Before asking for help
 
 Check the FAQ, the mailing list archives, the forums, firebug, and the source
 
+
+============
+Free support
+============
+
 FAQ
 ---
 
