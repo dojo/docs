@@ -179,6 +179,24 @@ Example of controlling a Rotator by referencing its instance. We define a jsId s
 .. code-example::
   :version: local
 
+  .. css::
+
+    <style type="text/css">
+        .rotator{
+            background-color:#fff;
+            border:solid 1px #e5e5e5;
+            width:384px;
+            height:90px;
+            overflow:hidden;
+        }
+        .pane{
+            background-color:#fff;
+            width:384px;
+            height:90px;
+            overflow:hidden;
+        }
+    </style>
+
   .. javascript::
 
     <script type="text/javascript">
@@ -188,10 +206,10 @@ Example of controlling a Rotator by referencing its instance. We define a jsId s
 
   .. html::
 
-    <div dojoType="dojox.widget.Rotator" id="myRotator" jsId="myRotatorInstance" transition="dojox.widget.rotator.crossFade">
-        <div>Pane 1</div>
-        <div>Pane 2</div>
-        <div>Pane 3</div>
+    <div dojoType="dojox.widget.Rotator" class="rotator" id="myRotator" jsId="myRotatorInstance" transition="dojox.widget.rotator.crossFade">
+        <div class="pane">Pane 1</div>
+        <div class="pane">Pane 2</div>
+        <div class="pane">Pane 3</div>
     </div>
  
     <button onclick="myRotatorInstance.prev();">Prev</button>
