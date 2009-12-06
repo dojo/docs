@@ -90,9 +90,9 @@ Example showing how the AutoRotator can create the pane DOM nodes for you.
                     pauseOnManualChange: true,
                     suspendOnHover: true,
                     panes: [
-                    { className: "pane pane0", innerHTML: "Pane 0" },
-                    { className: "pane pane1", innerHTML: "Pane 1" },
-                    { className: "pane pane2", innerHTML: "Pane 2" }
+                        { className: "pane pane0", innerHTML: "<h3>Dojo</h3><p>Tons of features like CSS-based queries, event handling, animations, Ajax, class-based programming, and a package system</p>" },
+                        { className: "pane pane1", innerHTML: "<h3>Dijit</h3><p>Dojo's themeable, accessible, easy-to-customize UI Library</p>" },
+                        { className: "pane pane2", innerHTML: "<h3>DojoX</h3><p>Dojo eXtensions</p>" }
                     ]
 
                 },
