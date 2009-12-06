@@ -3,10 +3,8 @@
 dojox.widget.rotator
 ====================
 
-:Status: Draft
-:Version: 1.0
-:Authors: Chris Barber
-:Developers: Chris Barber
+:Author: Chris Barber
+:Project owner: Chris Barber
 :Available: since V1.4
 
 .. contents::
