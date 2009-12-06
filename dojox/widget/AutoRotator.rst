@@ -3,6 +3,7 @@
 dojox.widget.AutoRotator
 ========================
 
+:Authors: Chris Barber, Marcus Reimann
 :Project owner: Chris Barber
 :Available: since V1.4
 
