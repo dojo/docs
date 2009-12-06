@@ -588,6 +588,10 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
     A circular gauge with a variety of indicators, used to display numerical data
 
+  * `dojox.widget.AutoRotator <dojox/widget/AutoRotator>`_
+
+    A rotator that automatically transitions between child nodes
+
   * `dojox.widget.BarGauge <dojox/widget/BarGauge>`_
 
     A horizontal bar gauge with a few indicators, used to display numerical data
@@ -611,6 +615,10 @@ These sections cover the available projects shipped with the Dojo Toolkit:
   * `dojox.widget.DocTester <dojox/widget/DocTester>`_
 
     A widget to run DocTests inside an HTML page
+
+  * `dojox.widget.FeedPortlet <dojox/widget/Portlet>`_
+
+    An enhanced Portlet which can load both remote and local Atom and RSS feeds, displaying them as a list
 
   * `dojox.widget.FilePicker <dojox/widget/FilePicker>`_
 
@@ -642,11 +650,7 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
   * `dojox.widget.Portlet <dojox/widget/Portlet>`_
 
-    An enhanced TitlePane designed to be used with the dojox.layout.GridContainer.
-
-  * `dojox.widget.FeedPortlet <dojox/widget/Portlet>`_
-
-    An enhanced Portlet which can load both remote and local Atom and RSS feeds, displaying them as a list.
+    An enhanced TitlePane designed to be used with the dojox.layout.GridContainer
 
   * `dojox.widget.Roller <dojox/widget/Roller>`_
 
@@ -655,6 +659,10 @@ These sections cover the available projects shipped with the Dojo Toolkit:
   * `dojox.widget.RollingList <dojox/widget/RollingList>`_
 
     A rolling list that can be tied to a data store with children
+
+  * `dojox.widget.Rotator <dojox/widget/Rotator>`_
+
+    A widget for rotating through child nodes using transitions
 
   * `dojox.widget.SortList <dojox/widget/SortList>`_
 
