@@ -48,8 +48,8 @@ params       Object                   Optional. Optional flags/properties to con
 Examples
 ========
 
-Programmatic example
---------------------
+Set content with styles
+-----------------------
 
 .. code-example::
   :version: local
