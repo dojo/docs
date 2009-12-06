@@ -165,7 +165,7 @@ Example of using the "wait for event" feature. The 2nd pane will wait for a even
             width:400px;
             height:100px;
             overflow:hidden;
-            padding: 20px;
+            padding: 10px;
         }
         .pane0{
             background-color:#fff79e;
@@ -189,16 +189,16 @@ Example of using the "wait for event" feature. The 2nd pane will wait for a even
 
     <div dojoType="dojox.widget.AutoRotator" class="rotator" id="myAutoRotator3" jsId="myAutoRotatorInstance3" duration="2000" transition="dojox.widget.rotator.crossFade">
         <div class="pane pane0">
-            <h1>Dojo</h1>
+            <h3>Dojo</h3>
             <p>Tons of features like CSS-based queries, event handling, animations, Ajax, class-based programming, and a package system</p>
         </div>
         <div class="pane pane1" waitForEvent="myEvent">
-            <h1>Dijit</h1>
+            <h3>Dijit</h3>
             <p>Dojo's themeable, accessible, easy-to-customize UI Library<br>
             <button onclick="dojo.publish('myEvent')">Continue!</button></p>
         </div>
         <div class="pane pane2">
-            <h1>DojoX</h1>
+            <h3>DojoX</h3>
             <p>Dojo eXtensions</p>
         </div>
     </div>
