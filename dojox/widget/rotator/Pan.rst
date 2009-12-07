@@ -26,7 +26,7 @@ The pan rotator transition is not an instantiated object, but rather a series of
 
 These functions are invoked by the rotator and may be different per pane.
 
-Each function is passed an object containing information about the rotator's current and next pane which are to be panned, then returns a dojo.Animation object describing the animated sequence. You do not need to concern yourself with this detail to use this transition.
+Each function is passed an object containing information about the rotator's current and next pane which are to be panned, then returns a dojo.Animation object describing the animated sequence. The "transitionParams" defined for the rotator instance will be passed into the transition function. You do not need to concern yourself with this detail to use this transition.
 
 pan()
 -----
