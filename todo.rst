@@ -234,10 +234,6 @@ Priority 4: DojoX
 
   add changes from http://trac.dojotoolkit.org/changeset/20698 (allow the line stroke style to be customized)
 
-* `dojox.widget.rotator.Fade <dojox/widget/rotator/Fade>`_ 
-
-  needed: full page
-
 * `dojox.widget.rotator.Slide <dojox/widget/rotator/Slide>`_ 
 
   needed: full page
