@@ -153,9 +153,9 @@ Example using different pan directions for each pane.
     </div>
 
     <button onclick="dojo.publish('myAutoRotator2/rotator/control', ['prev']);">Prev</button>
-    <button onclick="dojo.publish('myAutoRotator2/rotator/control', ['go', 0]);">Go 1</button>
-    <button onclick="dojo.publish('myAutoRotator2/rotator/control', ['go', 1]);">Go 2</button>
-    <button onclick="dojo.publish('myAutoRotator2/rotator/control', ['go', 2]);">Go 3</button>
+    <button onclick="dojo.publish('myAutoRotator2/rotator/control', ['go', 0]);">Go 1 (pan left)</button>
+    <button onclick="dojo.publish('myAutoRotator2/rotator/control', ['go', 1]);">Go 2 (pan down)</button>
+    <button onclick="dojo.publish('myAutoRotator2/rotator/control', ['go', 2]);">Go 3 (pan right)</button>
     <button onclick="dojo.publish('myAutoRotator2/rotator/control', ['next']);">Next</button>
 
 
