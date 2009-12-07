@@ -97,9 +97,11 @@ Example showing how the AutoRotator can create the pane DOM nodes for you.
 
     <script type="text/javascript">
         dojo.require("dojox.widget.AutoRotator");
+        dojo.require("dojox.widget.rotator.Controller");
         dojo.require("dojox.widget.rotator.Fade");
+
         dojo.addOnLoad(function(){
-            new dojox.widget.AutoRotator(
+            var myAutoRotatorInstance1 = new dojox.widget.AutoRotator(
                 {
                     transition: "dojox.widget.rotator.fade",
                     duration: 2500,
@@ -114,12 +116,18 @@ Example showing how the AutoRotator can create the pane DOM nodes for you.
                 },
                 dojo.byId("myAutoRotator1")
             );
+
+            new dojox.widget.rotator.Controller(
+                { rotator: myAutoRotatorInstance1 },
+                dojo.byId("myRotatorController")
+            );
         });
     </script>
 
   .. html::
 
     <div id="myAutoRotator1" class="rotator"></div>
+    <div id="myRotatorController"></div>
 
     <button onclick="dojo.publish('myAutoRotator1/rotator/control', ['prev']);">Prev</button>
     <button onclick="dojo.publish('myAutoRotator1/rotator/control', ['next']);">Next</button>
