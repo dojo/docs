@@ -230,10 +230,6 @@ Priority 4: DojoX
 
   needed: full page
 
-* `dojox.widget.rotator.Controller <dojox/widget/rotator/Controller>`_ 
-
-  needed: full page
-
 * `dojox.widget.DataPresentation <dojox/widget/DataPresentation>`_
 
   add changes from http://trac.dojotoolkit.org/changeset/20698 (allow the line stroke style to be customized)
