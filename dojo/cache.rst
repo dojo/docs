@@ -3,8 +3,6 @@
 dojo.cache
 ==========
 
-:Status: Draft
-:Version: 1.0
 :Project owner: James Burke
 :Available: since V1.4
 
@@ -33,7 +31,11 @@ Usage
 
 ``dojo.cache`` takes the following arguments:
 
-dojo.cache(module, url, configValue)
+.. code-block :: javascript
+ :linenos:
+
+  dojo.require("dojo.cache");
+  dojo.cache(module, url, configValue);
 
 Here is the definition of arguments:
 
