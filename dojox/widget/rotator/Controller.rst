@@ -128,8 +128,6 @@ Example showing how the AutoRotator can create the pane DOM nodes for you.
 Declarative example
 -------------------
 
-Example of an AutoRotator that cycles to 4 random panes, then pauses.
-
 .. code-example::
   :version: local
 
@@ -164,76 +162,23 @@ Example of an AutoRotator that cycles to 4 random panes, then pauses.
 
     <script type="text/javascript">
         dojo.require("dojox.widget.AutoRotator");
+        dojo.require("dojox.widget.rotator.Controller");
         dojo.require("dojox.widget.rotator.Fade");
     </script>
   
   .. html::
 
-    <div dojoType="dojox.widget.AutoRotator" class="rotator" id="myAutoRotator2" jsId="myAutoRotatorInstance2" transition="dojox.widget.rotator.crossFade" duration="2500" random="true" cycles="4">
+    <div dojoType="dojox.widget.AutoRotator" class="rotator" id="myAutoRotator2" jsId="myAutoRotatorInstance2" transition="dojox.widget.rotator.crossFade" duration="2500">
         <div class="pane pane0">Pane 0</div>
         <div class="pane pane1">Pane 1</div>
         <div class="pane pane2">Pane 2</div>
     </div>
 
+    <h3>Default Controller</h3>
+    <div dojoType="dojox.widget.rotator.Controller" rotator="myAutoRotatorInstance2"></div>
 
-Example of using the "wait for event" feature. The 2nd pane will wait for a event to be published by the button before proceeding.
-
-.. code-example::
-  :version: local
-
-  .. css::
-
-    <style type="text/css">
-        .rotator{
-            background-color:#fff;
-            border:solid 1px #e5e5e5;
-            width:400px;
-            height:180px;
-            overflow:hidden;
-        }
-        .pane{
-            background-color:#fff;
-            width:400px;
-            height:180px;
-            overflow:hidden;
-            padding: 10px;
-        }
-        .pane0{
-            background-color:#fff79e;
-        }
-        .pane1{
-            background-color:#ffd4a0;
-        }
-        .pane2{
-            background-color:#ffa0a0;
-        }
-    </style>
-
-  .. javascript::
-
-    <script type="text/javascript">
-        dojo.require("dojox.widget.AutoRotator");
-        dojo.require("dojox.widget.rotator.Fade");
-    </script>
-  
-  .. html::
-
-    <div dojoType="dojox.widget.AutoRotator" class="rotator" id="myAutoRotator3" jsId="myAutoRotatorInstance3" duration="2000" transition="dojox.widget.rotator.crossFade">
-        <div class="pane pane0">
-            <h3>Dojo</h3>
-            <p>Tons of features like CSS-based queries, event handling, animations, Ajax, class-based programming, and a package system</p>
-        </div>
-        <div class="pane pane1" waitForEvent="myEvent">
-            <h3>Dijit</h3>
-            <p>Dojo's themeable, accessible, easy-to-customize UI Library</p>
-            <p><button onclick="dojo.publish('myEvent')">Continue!</button></p>
-        </div>
-        <div class="pane pane2">
-            <h3>DojoX</h3>
-            <p>Dojo eXtensions</p>
-        </div>
-    </div>
-
+    <h3>Prev, Numbers, Next</h3>
+    <div dojoType="dojox.widget.rotator.Controller" rotator="myAutoRotatorInstance2" commands="prev,#,next"></div>
 
 ========
 See also
