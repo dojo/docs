@@ -1,7 +1,7 @@
 #format dojo_rst
 
-dojox.widget.rotator.Pan
-========================
+dojox.widget.rotator.Slide
+==========================
 
 :Authors: Chris Barber
 :Project owner: Chris Barber
@@ -180,6 +180,6 @@ See also
 
 * `dojox.widget.Rotator <dojox/widget/Rotator>`_ rotates through a series of panes using a transitions.
 * `dojox.widget.AutoRotator <dojox/widget/AutoRotator>`_ adds automatic rotating to a Rotator.
-* `dojox.widget.rotator.Pan <dojox/widget/rotator/Fade>`_ is a fade and crossfade transition for the Rotator.
+* `dojox.widget.rotator.Fade <dojox/widget/rotator/Fade>`_ is a fade and crossfade transition for the Rotator.
 * `dojox.widget.rotator.Pan <dojox/widget/rotator/Pan>`_ is a pan and continuous pan transition for the Rotator.
 * `dojox.widget.rotator.Wipe <dojox/widget/rotator/Wipe>`_ is a wiping transition for the Rotator.
