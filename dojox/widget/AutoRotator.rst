@@ -27,13 +27,13 @@ Usage
 ===================  =======  ======================================================================
 Parameter            Type     Description
 ===================  =======  ======================================================================
-suspendOnHover       boolean  Pause the rotator when the mouse hovers over it. The default value is false.
+suspendOnHover       boolean  Pause the rotator when the mouse hovers over it. The default value is "false".
 duration             int      The time in milliseconds before transitioning to the next pane.  The default value is 4000 (4 seconds).
-autoStart            boolean  Starts the timer to transition children upon creation. The default value is true.
-pauseOnManualChange  boolean  Pause the rotator when the pane is changed or a controller's next or previous buttons are clicked. The default value is false.
+autoStart            boolean  Starts the timer to transition children upon creation. The default value is "true".
+pauseOnManualChange  boolean  Pause the rotator when the pane is changed or a controller's next or previous buttons are clicked. The default value is "false".
 cycles               int      Number of cycles before pausing. By default, it will cycle indefinitely.
-random               boolean  Determines if the panes should cycle randomly. The default value is false.
-reverse              boolean  Causes the rotator to rotate in reverse order. The default value is false.
+random               boolean  Determines if the panes should cycle randomly. The default value is "false".
+reverse              boolean  Causes the rotator to rotate in reverse order. The default value is "false".
 ===================  =======  ======================================================================
 
 The AutoRotator follows the same general Guidelines as the `dojox.widget.Rotator <dojox/widget/Rotator>`_.
