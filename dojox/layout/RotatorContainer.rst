@@ -31,9 +31,9 @@ Since the RotatorContainer is a layout widget, it's children must be a layout wi
 Parameter             Type     Description
 ====================  =======  ========================================================================================
 showTabs              boolean  Sets the display of the tabs. The tabs are actually a StackController. The child's title is used for the tab's label. The default value is "true".
-transitionDelay       int      The delay in milliseconds before transitioning to the next child. The default value is 5000.
+transitionDelay       int      The delay in milliseconds before transitioning to the next child. The default value is 5000 (5 seconds).
 transition            string   The type of transition to perform when switching children. A null transition will transition instantly. The default value is "fade".
-transitionDuration    int      The duration of the transition in milliseconds. The default value is 1000.
+transitionDuration    int      The duration of the transition in milliseconds. The default value is 1000 (1 second).
 autoStart             boolean  Starts the timer to transition children upon creation. The default value is "true".
 suspendOnHover        boolean  Pause the rotator when the mouse hovers over it. The default value is "false".
 pauseOnManualChange   boolean  Pause the rotator when the tab is changed or the pager's next/previous buttons are clicked.
