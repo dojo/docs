@@ -407,6 +407,7 @@ Several new plugins for the dijit.Editor RTE have been provided as dojox modules
 * `Preview <dojox/editor/plugins/Preview>`_:  A plugin that lets you preview the editor content in a separate window with different CSS styles and stylesheets applied than what are used in the editor.
 * `Save <dojox/editor/plugins/Save>`_:  A plugin that simplifes adding a save toolbar action for posting editor content back to a specified url.
 * `ToolbarLineBreak <dojox/editor/plugins/ToolbarLineBreak>`_:  A simple plugin that provides a way to break the editor toolbar into multiple lines.
+* `InsertEntity <dojox/editor/plugins/InsertEntity>`_:  An **experimental** plugin that allows you to do 'symbol' inserts from a select list of entity symbols.
 * `NormalizeIndentOutdent <dojox/editor/plugins/NormalizeIndentOutdent>`_:  An **experimental** plugin that tries to normalize indent and outdent behavior across browsers.
 * `FindReplace <dojox/editor/plugins/FindReplace>`_:  An **experimental** plugin that adds a find/replace toolbar that can be toggled to appear underneath the main toolbar.  The plugin provides find and replace text capability to the editor.
 * `Breadcrumb <dojox/editor/plugins/Breadcrumb>`_:  An **experimental** plugin that adds a footer toolbar that shows you what node you are in and all its ansestor nodes.  It also provides actions such as selecting all content, deleting the element, and moving the cursor to the start or end of the element contents.
