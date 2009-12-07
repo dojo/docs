@@ -30,17 +30,17 @@ Since the RotatorContainer is a layout widget, it's children must be a layout wi
 ====================  =======  ========================================================================================
 Parameter             Type     Description
 ====================  =======  ========================================================================================
-showTabs              boolean  Sets the display of the tabs. The tabs are actually a StackController. The child's title is used for the tab's label.
-transitionDelay       int      The delay in milliseconds before transitioning to the next child.
-transition            string   The type of transition to perform when switching children. A null transition will transition instantly.
-transitionDuration    int      The duration of the transition in milliseconds.
-autoStart             boolean  Starts the timer to transition children upon creation.
-suspendOnHover        boolean  Pause the rotator when the mouse hovers over it.
+showTabs              boolean  Sets the display of the tabs. The tabs are actually a StackController. The child's title is used for the tab's label. The default value is "true".
+transitionDelay       int      The delay in milliseconds before transitioning to the next child. The default value is 5000.
+transition            string   The type of transition to perform when switching children. A null transition will transition instantly. The default value is "fade".
+transitionDuration    int      The duration of the transition in milliseconds. The default value is 1000.
+autoStart             boolean  Starts the timer to transition children upon creation. The default value is "true".
+suspendOnHover        boolean  Pause the rotator when the mouse hovers over it. The default value is "false".
 pauseOnManualChange   boolean  Pause the rotator when the tab is changed or the pager's next/previous buttons are clicked.
-reverse               boolean  Causes the rotator to rotate in reverse order.
+reverse               boolean  Causes the rotator to rotate in reverse order. The default value is "false".
 pagerId               string   ID the pager widget.
 cycles                int      Number of cycles before pausing.
-pagerClass            string   The declared Class of the Pager used for this Widget
+pagerClass            string   The declared Class of the Pager used for this widget. The default value is "dojox.layout.RotatorPager".
 ====================  =======  ========================================================================================
 
 ========
