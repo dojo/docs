@@ -27,14 +27,16 @@ The Dojo build system will inline the HTML as a string where the ``dojo.cache`` 
 Usage
 =====
 
-``dojo.cache`` is a Dojo Core module, not part of Dojo Base so you need to *dojo.require("dojo.cache")* to load it.
+``dojo.cache`` is a Dojo Core module, not part of Dojo Base so you need to *dojo.require("dojo.cache")* to load it:
+
+.. code-block :: javascript
+
+  dojo.require("dojo.cache");
 
 ``dojo.cache`` takes the following arguments:
 
 .. code-block :: javascript
- :linenos:
 
-  dojo.require("dojo.cache");
   dojo.cache(module, url, configValue);
 
 Here is the definition of arguments:
