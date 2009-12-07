@@ -141,7 +141,7 @@ Example using different pan directions for each pane.
 
     <script type="text/javascript">
         dojo.require("dojox.widget.AutoRotator");
-        dojo.require("dojox.widget.rotator.Fade");
+        dojo.require("dojox.widget.rotator.Pan");
     </script>
   
   .. html::
@@ -151,6 +151,12 @@ Example using different pan directions for each pane.
         <div class="pane pane1" transition="dojox.widget.rotator.panDown">Pane 1</div>
         <div class="pane pane2" transition="dojox.widget.rotator.panRight">Pane 2</div>
     </div>
+
+    <button onclick="dojo.publish('myAutoRotator2/rotator/control', ['prev']);">Prev</button>
+    <button onclick="dojo.publish('myAutoRotator2/rotator/control', ['go', 0]);">Go 1</button>
+    <button onclick="dojo.publish('myAutoRotator2/rotator/control', ['go', 1]);">Go 2</button>
+    <button onclick="dojo.publish('myAutoRotator2/rotator/control', ['go', 2]);">Go 3</button>
+    <button onclick="dojo.publish('myAutoRotator2/rotator/control', ['next']);">Next</button>
 
 
 ========
