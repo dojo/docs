@@ -47,11 +47,6 @@ pagerClass            string   The declared Class of the Pager used for this Wid
 Examples
 ========
 
-Programmatic example
---------------------
-
-TODO: example
-
 Declarative example
 -------------------
 
