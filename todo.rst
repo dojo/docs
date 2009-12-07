@@ -58,7 +58,7 @@ Priority 2: Dojo Core
 
 * `dojo.currency <dojo/currency>`_
 
-  needed: full page
+  needed: setting locale in Dojo, binary floating point issues
 
 * `dojo.rpc.JsonpService <dojo/rpc/JsonpService>`_
 
