@@ -147,9 +147,9 @@ Example using different pan directions for each pane.
   .. html::
 
     <div dojoType="dojox.widget.AutoRotator" class="rotator" id="myAutoRotator2" jsId="myAutoRotatorInstance2" transition="dojox.widget.rotator.panLeft" duration="2500">
-        <div class="pane pane0">Pane 0</div>
-        <div class="pane pane1" transition="dojox.widget.rotator.panDown">Pane 1</div>
-        <div class="pane pane2" transition="dojox.widget.rotator.panRight">Pane 2</div>
+        <div class="pane pane0">Pane 0<br/>Panning down to Pane 1</div>
+        <div class="pane pane1" transition="dojox.widget.rotator.panDown">Pane 1<br/>Panning right to Pane 2</div>
+        <div class="pane pane2" transition="dojox.widget.rotator.panRight">Pane 2<br/>Using default transition to pan left to Pane 0</div>
     </div>
 
     <button onclick="dojo.publish('myAutoRotator2/rotator/control', ['prev']);">Prev</button>
