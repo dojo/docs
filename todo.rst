@@ -238,10 +238,6 @@ Priority 4: DojoX
 
   needed: full page
 
-* `dojox.widget.rotator.Pan <dojox/widget/rotator/Pan>`_ 
-
-  needed: full page
-
 * `dojox.widget.rotator.Slide <dojox/widget/rotator/Slide>`_ 
 
   needed: full page
