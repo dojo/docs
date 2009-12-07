@@ -218,10 +218,6 @@ Priority 4: DojoX
 
   needed: full page
 
-* `dojox.layout.RotatorContainer <dojox/layout/RotatorContainer>`_
-
-  needed: full page
-
 * `dojox.layout.ScrollPane <dojox/layout/ScrollPane>`_
 
   needed: full page
