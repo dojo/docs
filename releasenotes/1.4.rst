@@ -544,8 +544,15 @@ dojox.widget
 ------------
 
 * dojox.widget.Portlet added. An extended version of the dijit.TitlePane, designed to be used with the dojox.layout.GridContainer.
-* dojox.widget.Rotator and dojox.widget.AutoRotator added. The rotator is a lightweight non-dijit widget that rotates through child nodes. Support for pan, slide, wipe, and fade transitions. Includes dojox.widget.rotator.Controller for manipulating a rotator.
 * Bug fixes for dojox.widget.Calendar3Pane, which now selects the correct year.
+
+dojox.widget.Rotator, dojox.widget.AutoRotator and dojox.widget.rotator.Controller
+----------------------------------------------------------------------------------
+
+* The new `dojox.widget.Rotator <dojox/widget/Rotator>`_ is a lightweight non-dijit widget that rotates through child nodes.
+* The new `dojox.widget.AutoRotator <dojox/widget/AutoRotator>`_ is a rotator which automatically transitions between child nodes.
+* Both widgets have support for pan, slide, wipe, and fade transitions.
+* Includes `dojox.widget.rotator.Controller <dojox/widget/rotator/Controller>`_ for manipulating a rotator.
 
 dojox.widget.DataPresentation
 -----------------------------
