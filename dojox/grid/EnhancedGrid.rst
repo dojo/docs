@@ -241,7 +241,7 @@ Using the nested sorting feature is pretty simple as shown below:
 
 * Use nested sorting feature
 
-  ... with HTML markup
+  With HTML markup
     
 .. code-block :: html
   :linenos:
@@ -249,7 +249,7 @@ Using the nested sorting feature is pretty simple as shown below:
   <div id="grid" store="store1" dojoType="dojox.grid.EnhancedGrid" plugins="{nestedSorting: true}" >
   </div>
 
-  ... with JavaScript  <<< '''This isn't code. Not sure how to fix'''
+  With JavaScript  <<< '''This isn't code. Not sure how to fix'''
     
 .. code-block :: javascript
   :linenos:
