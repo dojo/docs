@@ -15,7 +15,7 @@ The following pages need more love:
 Top priority: dojo.js
 =====================
 
-* `dojo.Animation <dojo/Animation>`_
+* `dojo.Animation <dojo/Animation>`_ ``peller, slightlyoff, dante``
 
   needed: full page
 
@@ -122,6 +122,10 @@ Priority 4: DojoX
 
   needed: full page
 
+* `dojox.DataGrid <dojox/DataGrid>`_ ``bforbes, toonetown``
+
+  needed: Introduction, Grid 1.2 Changes, Usage, Parameter "selection mode", Example "sorting data at the server", Example "Large datasets", Tips
+
 * `dojox/data/QueryReadStore/example <dojox/data/QueryReadStore/example>`_
 
   This example is unfinished, should we delete it?
@@ -150,9 +154,9 @@ Priority 4: DojoX
 
   needed: split apart into multiple pages for each major concept, add inline gfx demos
 
-* `dojox.DataGrid <dojox/DataGrid>`_ ``bforbes, toonetown``
+* `dojox.html.ellipsis <dojox/html/ellipsis>`_
 
-  needed: Introduction, Grid 1.2 Changes, Usage, Parameter "selection mode", Example "sorting data at the server", Example "Large datasets", Tips
+  needed: full page
 
 * `dojox.html.metrics <dojox/html/metrics>`_
 
@@ -161,6 +165,7 @@ Priority 4: DojoX
 * `dojox.html.styles <dojox/html/styles>`_
 
   needed: full page
+
 
 * `dojox.image.Badge <dojox/image/Badge>`_
 
