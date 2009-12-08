@@ -29,13 +29,11 @@ IO Pipeline Topics
 * By default, the topics are turned off. To enable them, set **djConfig.ioPublish = true**. After they are globally enabled, you can disable them for specific IO requests by setting **ioPublish: false** in the arg object you pass to dojo.xhr*, dojo.io.script.get() or dojo.io.iframe.send().
 * See `IO Pipeline Topics <dojo/ioPipelineTopics>`_ for more information.
 
-
 dojo.addClass
 -------------
 
 * Added support for space-separated class names, and arrays of class names.
 * See `dojo.addClass <dojo/addClass>`_ for more information.
-
 
 dojo.addOnLoad
 --------------
@@ -43,13 +41,11 @@ dojo.addOnLoad
 * There was a dojo.require/onload fix done for Firefox browsers (see `Ticket #8976 <http://bugs.dojotoolkit.org/ticket/8976>`_).
 * See also `dojo.addOnLoad <dojo/addOnLoad>`_
 
-
 dojo.cache
 ----------
 
 * A new method has been added for caching data from files. In particular it's used in templated widgets in conjunction with templateString, rather than templatePath.
 * See also `dojo.cache <dojo/cache>`_
-
 
 dojo.cldr (Dojo i18n)
 ---------------------
@@ -57,13 +53,11 @@ dojo.cldr (Dojo i18n)
 * The cultural tables have been updated to version 1.7.1 of the Unicode CLDR http://unicode.org/cldr
 * See also `dojo.cldr <dojo/cldr>`_
 
-
 dojo.contentHandlers
 --------------------
 
 * Exposed previously "private" dojo._contentHandlers as a public way to write custom XHR handleAs functions
 * See also `dojo.contentHandlers <dojo/contentHandlers>`_
-
 
 dojo.coord
 ----------
@@ -71,20 +65,17 @@ dojo.coord
 * This method in Dojo Base has been deprecated in Dojo 1.4. The returned object is a mixin of `dojo.position <dojo/position>`_ and `dojo.marginBox <dojo/marginBox>`_. Because the x/y position is based on the border-box and the (w)idth/(h)eight attributes represent the margin-box, there was considerable confusion on correctly using the returned object. The new method `dojo.position <dojo/position>`_ performs much faster. Users needing the l/t/w/h attributes from this method can continue to use `dojo.marginBox <dojo/marginBox>`_.
 * See also `dojo.position <dojo/position>`_
 
-
 dojo.declare
 ------------
 
 * A drop-in replacement is committed, which is generally faster, and introduces enhancements to the familiar functionality. The announcement link: http://groups.google.com/group/dojo-interest/msg/4a22b20587e91d27
 * See also `dojo.declare <dojo/declare>`_
 
-
 dojo.fieldToObject
 ------------------
 
 * A new method in Dojo Base (part of dojo.js) that is related to dojo.formToObject(), except instead of converting a whole form to an object, it just converts one form field. Pass it a DOM Node for the field, or the ID of the form field as a string. dojo.fieldToObject returns the value encoded in a form field as as a string or an array of strings. Disabled form elements and unchecked radio and checkboxes are skipped. Multi-select elements are returned as an array of string values.
 * See `dojo.fieldToObject <dojo/fieldToObject>`_ for more information.
-
 
 dojo.fx (Dojo Base FX)
 ----------------------
@@ -96,13 +87,11 @@ dojo.fx (Dojo Base FX)
 * each property can now be a function, returning either a value, or and object to pass as the value
 * See also `dojo.fx <dojo/fx>`_
 
-
 dojo.hash
 ---------
 
 * A new method for monitoring, getting and setting the hash value. dojo.hash provides hashchange notification using a new published topic "/dojo/hashchange", enabling cross-browser back/forward support and bookmarkability in AJAX applications. The native HTML 5 onhashchange event is used behind the scenes in browsers that support it.
 * See also `dojo.hash <dojo/hash>`_
-
 
 dojo.NodeList-traverse and dojo.NodeList-manipulate
 ---------------------------------------------------
@@ -150,13 +139,11 @@ dojo.NodeList-traverse and dojo.NodeList-manipulate
 
 * Both mixins are modeled after the jQuery APIs that have the same names.
 
-
 dojo.position
 -------------
 
 * A new method in Dojo Base (part of dojo.js) that returns the beginning x/y of a DOM node's border-box as well as it's width and height. An optional boolean parameter can be specified to change the default coordinate origin point from the viewport to the document root.
 * See also `dojo.position <dojo/position>`_
-
 
 dojo.ready
 ----------
@@ -164,13 +151,11 @@ dojo.ready
 * A new alias for `dojo.addOnLoad <dojo/addOnLoad>`_.
 * See also `dojo.ready <dojo/ready>`_
 
-
 dojo.removeClass
 ----------------
 
 * Added support for space-separated class names, arrays of class names, and the ability to remove all classes, if no class was specified.
 * See `dojo.removeClass <dojo/removeClass>`_ for more information.
-
 
 dojo.replace
 ------------
@@ -290,6 +275,7 @@ Most dijit.form widgets fire the onChange event after a value change has been de
 
 attr("value", val, false)
 ~~~~~~~~~~~~~~~~~~~~~~~~~
+
 attr() (as a setter) has been enhanced to take optional arguments.   The most common case for this is attr("value", val, false) which sets the value of a form widget without calling onChange().   (The third argument is called priorityChange.)
 
 dijit.form.Button
@@ -370,10 +356,11 @@ dojox.charting
 * See also `dojox.charting <dojox/charting>`_
 
 dojox.charting.DataChart
-------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 * The new DataChart simplifies the task of connecting Data Stores to a Chart.
 * See also `dojox.charting.DataChart <dojox/charting/DataChart>`_
+
 
 dojox.data.jsonPathStore
 ------------------------
@@ -395,7 +382,6 @@ dojox.drawing
 * dojox.drawing is similar to Sketch, but with an extensible architecture that allows for plugins.
 * See also `dojox.drawing <dojox/drawing>`_
 
-
 dojox.editor.plugins
 --------------------
 
@@ -412,7 +398,6 @@ Several new plugins for the dijit.Editor RTE have been provided as dojox modules
 * `FindReplace <dojox/editor/plugins/FindReplace>`_:  An **experimental** plugin that adds a find/replace toolbar that can be toggled to appear underneath the main toolbar.  The plugin provides find and replace text capability to the editor.
 * `Breadcrumb <dojox/editor/plugins/Breadcrumb>`_:  An **experimental** plugin that adds a footer toolbar that shows you what node you are in and all its ansestor nodes.  It also provides actions such as selecting all content, deleting the element, and moving the cursor to the start or end of the element contents.
 * See also `dojox.editor.plugins <dojox/editor/plugins>`_
-
 
 dojox.encoding.crypto.RSAKey
 ----------------------------
@@ -444,7 +429,6 @@ dojox.form.FileUploader
 
 * The improved FileUploader actually landed in a "dot release", 1.3.1, but 1.4 adds some bug fixes. The new FileUploader adds many features, and the display is now quite robust. The Flash uploader is now an actual Flash button with an emulated HTML style, so that it can be used in cases where it was broken before, like in scrolling boxes. The HTML uploader too has been improved so that it is not floating on the page, allowing for more complex display cases and less UI breakage.
 * See also `dojox.form.FileUploader <dojox/form/FileUploader>`_
-
 
 dojox.fx
 --------
@@ -527,7 +511,6 @@ dojox.jq
 
 * dojox.jq is a very experimental module aimed at trying to match the jQuery API as close as possible, but using Dojo underneath. It is still very rough, and there is no fx API support yet.
 
-
 dojox.layout
 ------------
 
@@ -545,15 +528,14 @@ dojox.off
 
 * the dojox.off subproject was removed because it is no longer supported.  It is still available for download in Dojo 1.3.
 
-
 dojox.widget
 ------------
 
 * dojox.widget.Portlet added. An extended version of the dijit.TitlePane, designed to be used with the dojox.layout.GridContainer.
 * Bug fixes for dojox.widget.Calendar3Pane, which now selects the correct year.
 
-dojox.widget.Rotator, dojox.widget.AutoRotator and dojox.widget.rotator.Controller
-----------------------------------------------------------------------------------
+dojox.widget.Rotator, AutoRotator and Co.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * The new `dojox.widget.Rotator <dojox/widget/Rotator>`_ is a lightweight non-dijit widget that rotates through child nodes.
 * The new `dojox.widget.AutoRotator <dojox/widget/AutoRotator>`_ is a rotator which automatically transitions between child nodes.
@@ -561,7 +543,7 @@ dojox.widget.Rotator, dojox.widget.AutoRotator and dojox.widget.rotator.Controll
 * Includes `dojox.widget.rotator.Controller <dojox/widget/rotator/Controller>`_ for manipulating a rotator.
 
 dojox.widget.DataPresentation
------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * The new DataPresentation widget connects to a data store in a simple manner, and also provides some additional convenience mechanisms for connecting to common data sources without needing to explicitly construct a Dojo data store.
 * The widget can then present the data in several forms: as a graphical chart, as a tabular grid, or as display panels presenting meta-data (title, creation information, etc) from the data.
