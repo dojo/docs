@@ -27,7 +27,6 @@ EnhancedGrid (dojox.grid.EnhancedGrid) provides a rich set of features that enha
 
 EnhancedGrid features are implemented as plugins which can be loaded on demand. As a result, the required features must first declared before they can be used.
 
-
 .. code-example::
   :toolbar: themes, versions, dir
   :version: local
@@ -42,36 +41,35 @@ EnhancedGrid features are implemented as plugins which can be loaded on demand. 
 		dojo.require("dojox.grid.enhanced.plugins.Menu");
 		dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
 		dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");
-		dojo.require("dojox.data.CsvStore");
+        dojo.require("dojox.data.CsvStore");
+    
+        dojo.addOnLoad(function(){
+          // our test data store for this example:
+          var store = new dojox.data.CsvStore({ url: '{{ baseUrl }}dojox/grid/tests/support/movies.csv' });
 
-		var layout = [{
-			defaultCell: { width: 8, editable: false, type: dojox.grid.cells._Widget },
-			rows:
-			[
-				{ field: "Genre", width: '6'},
-				{ field: "Artist", width: '10'},
-				{ field: "Year", width: '6'},
-				{ field: "Album", width: '12'},
-				{ field: "Name", width: '17'},
-				{ field: "Length", width: '6'},
-				{ field: "Track", width: '6'},
-				{ field: "Composer", width: '15'}				
-			]}
-		];
+          // set the layout structure:
+          var layout = [
+              { field: 'Title', name: 'Title of Movie', width: '200px' },
+              { field: 'Year', name: 'Year', width: '50px' },
+              { field: 'Producer', name: 'Producer', width: 'auto' }
+          ];
 
-		var csvStore1 = new dojox.data.CsvStore({id:'csvStore1', url:"{{ baseUrl }}dojox/grid/tests/enhanced/support/music-for-demo.part.csv"});
+          // create a new grid:
+          var grid = new dojox.grid.EnhancedGrid({
+              query: { Title: '*' },
+              store: store,
+              clientSort: true,
+              rowSelector: '20px',
+              structure: layout,
+              plugins : {nestedSorting: true, dnd: true, indirectSelection: {name: "Selection", width:"70px", styles:"text-align: center;"}}
+          }, document.createElement('div'));
 
-		dojo.addOnLoad(function(){
-			var grid = new dojox.grid.EnhancedGrid({
-				id: "grid3",
-				store: csvStore1,
-				structure: layout,
-				rowSelector: '20px',
-				plugins : {nestedSorting: true, dnd: true, indirectSelection: {name: "Selection", width:"70px", styles:"text-align: center;"}, menus:{headerMenu:"headerMenu", rowMenu:"rowMenu", cellMenu:"cellMenu", selectedRegionMenu:"selectedRegionMenu"}}
-			}, dojo.byId('gridDiv'));
-			grid.startup();
-		});
+          // append the new grid to the div "gridContainer4":
+          dojo.byId("gridDiv").appendChild(grid.domNode);
 
+          // Call startup, in order to render the grid:
+          grid.startup();
+        });
     </script>
 
   .. html::
@@ -83,7 +81,8 @@ EnhancedGrid features are implemented as plugins which can be loaded on demand. 
     <style type="text/css">
         @import "{{ baseUrl }}dojox/grid/resources/Grid.css";
         @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
-	@import "{{ baseUrl }}dojox/grid/enhanced/resources/{{ theme }}EnhancedGrid.css";
+		@import "{{ baseUrl }}dojox/grid/enhanced/resources/{{ theme }}EnhancedGrid.css";
+		@import "{{ baseUrl }}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
 
         .dojoxGrid table {
             margin: 0;
@@ -95,7 +94,6 @@ EnhancedGrid features are implemented as plugins which can be loaded on demand. 
             margin: 0;
         }
     </style>
-
 
 =====
 Usage
