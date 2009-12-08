@@ -439,7 +439,7 @@ Usage
 
 * Use indirect selection feature with check boxes
 
- ... with HTML markup
+... with HTML markup
     
 .. code-block :: javascript
   :linenos:
@@ -447,7 +447,7 @@ Usage
   <div id="grid" dojoType="dojox.grid.EnhancedGrid" plugins="{indirectSelection: true}" >
   </div>
 
- ... with JavaScript
+... with JavaScript
     
 .. code-block :: javascript
   :linenos:
@@ -458,7 +458,7 @@ Usage
 
 * Use indirect selection feature with radio buttons
 
-  ... with HTML markup
+... with HTML markup
     
 .. code-block :: javascript
   :linenos:
@@ -466,7 +466,7 @@ Usage
   <div id="grid" dojoType="dojox.grid.EnhancedGrid" plugins="{indirectSelection: true}"  selectionMode="single" ... >
   </div>
 
-    ... with JavaScript  <<< '''This isn't code. Not sure how to fix'''
+... with JavaScript
     
 .. code-block :: javascript
   :linenos:
@@ -677,7 +677,7 @@ Usage
 
 * Use menu feature
 
-    ... with HTML markup
+... with HTML markup
     
 .. code-block :: javascript
   :linenos:
@@ -698,7 +698,7 @@ Usage
       </div>
   </div>
 
-    ... with JavaScript  <<< '''This isn't code. Not sure how to fix'''
+... with JavaScript
     
 .. code-block :: javascript
   :linenos:
@@ -815,14 +815,14 @@ To use this feature, you need to first enable the "DnD" plugin.
 
 * To use DnD feature
 
-    ... with HTML markup
+... with HTML markup
     
 .. code-block :: javascript
   :linenos:
 
   <div id="grid" store="store1" dojoType="dojox.grid.EnhancedGrid" plugins="{dnd: true}"  rowSelector="20px" ... ></div>
 
-    ... with JavaScript  <<< '''This isn't code. Not sure how to fix'''
+... with JavaScript
     
 .. code-block :: javascript
   :linenos:
