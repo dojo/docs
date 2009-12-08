@@ -154,10 +154,6 @@ Priority 4: DojoX
 
   needed: split apart into multiple pages for each major concept, add inline gfx demos
 
-* `dojox.html.ellipsis <dojox/html/ellipsis>`_
-
-  needed: full page
-
 * `dojox.html.metrics <dojox/html/metrics>`_
 
   needed: full page
