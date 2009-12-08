@@ -540,8 +540,8 @@ dojox.math.BigInteger
 
 * Implementation of arbitrary large integer numbers by Tom Wu. Ported as an experimental module. See http://www-cs-students.stanford.edu/~tjw/jsbn/ for details.
 
-dojox.off removed
------------------
+dojox.off
+---------
 
 * the dojox.off subproject was removed because it is no longer supported.  It is still available for download in Dojo 1.3.
 
