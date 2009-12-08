@@ -31,56 +31,52 @@ EnhancedGrid features are implemented as plugins which can be loaded on demand. 
 .. code-example::
   :toolbar: themes, versions, dir
   :version: local
-  :width: 680
-  :height: 400
+  :width: 480
+  :height: 300
 
   .. javascript::
 
     <script type="text/javascript">
-	dojo.require("dojox.grid.EnhancedGrid");
-	dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
+        dojo.require("dojox.grid.DataGrid");
         dojo.require("dojox.data.CsvStore");
     
         dojo.addOnLoad(function(){
           // our test data store for this example:
-          var store = new dojox.data.CsvStore({ url: '{{ baseUrl }}dojox/grid/tests/support/movies.csv' });
+          var store4 = new dojox.data.CsvStore({ url: '{{ baseUrl }}dojox/grid/tests/support/movies.csv' });
 
           // set the layout structure:
-          var layout = [
+          var layout4 = [
               { field: 'Title', name: 'Title of Movie', width: '200px' },
               { field: 'Year', name: 'Year', width: '50px' },
               { field: 'Producer', name: 'Producer', width: 'auto' }
           ];
 
           // create a new grid:
-          var grid = new dojox.grid.EnhancedGrid({
+          var grid4 = new dojox.grid.DataGrid({
               query: { Title: '*' },
-              store: store,
+              store: store4,
               clientSort: true,
               rowSelector: '20px',
-              structure: layout,
-              plugins : {nestedSorting: true}
+              structure: layout4
           }, document.createElement('div'));
 
           // append the new grid to the div "gridContainer4":
-          dojo.byId("gridDiv").appendChild(grid.domNode);
+          dojo.byId("gridContainer4").appendChild(grid4.domNode);
 
           // Call startup, in order to render the grid:
-          grid.startup();
+          grid4.startup();
         });
     </script>
 
   .. html::
 
-    <div id="gridDiv" style="width: 100%; height: 100%;"></div>
+    <div id="gridContainer4" style="width: 100%; height: 100%;"></div>
 
   .. css::
 
     <style type="text/css">
         @import "{{ baseUrl }}dojox/grid/resources/Grid.css";
         @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
-		@import "../../enhanced/resources/{{ theme }}EnhancedGrid.css";
-		@import "../../enhanced/resources/EnhancedGrid_rtl.css";
 
         .dojoxGrid table {
             margin: 0;
@@ -92,6 +88,7 @@ EnhancedGrid features are implemented as plugins which can be loaded on demand. 
             margin: 0;
         }
     </style>
+
 
 =====
 Usage
