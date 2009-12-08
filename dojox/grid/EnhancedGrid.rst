@@ -55,7 +55,7 @@ EnhancedGrid features are implemented as plugins which can be loaded on demand. 
           ];
 
           // create a new grid:
-          var grid = new dojox.grid.DataGrid({
+          var grid = new dojox.grid.EnhancedGrid({
               query: { Title: '*' },
               store: store,
               clientSort: true,
