@@ -38,6 +38,7 @@ EnhancedGrid features are implemented as plugins which can be loaded on demand. 
 
     <script type="text/javascript">
         dojo.require("dojox.grid.DataGrid");
+        dojo.require("dojox.grid.EnhancedGrid");
         dojo.require("dojox.data.CsvStore");
     
         dojo.addOnLoad(function(){
