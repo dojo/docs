@@ -31,8 +31,8 @@ EnhancedGrid features are implemented as plugins which can be loaded on demand. 
 .. code-example::
   :toolbar: themes, versions, dir
   :version: local
-  :width: 480
-  :height: 300
+  :width: 680
+  :height: 400
 
   .. javascript::
 
