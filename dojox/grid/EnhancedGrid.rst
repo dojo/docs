@@ -37,7 +37,7 @@ EnhancedGrid features are implemented as plugins which can be loaded on demand. 
 
     <script type="text/javascript">
 		dojo.require("dojox.grid.EnhancedGrid");
-		// dojo.require("dojox.grid.enhanced.plugins.DnD");
+		dojo.require("dojox.grid.enhanced.plugins.DnD");
 		// dojo.require("dojox.grid.enhanced.plugins.Menu");
 		dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
 		// dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");
@@ -61,7 +61,7 @@ EnhancedGrid features are implemented as plugins which can be loaded on demand. 
               clientSort: true,
               rowSelector: '20px',
               structure: layout,
-              plugins : {nestedSorting: false, dnd: false}
+              plugins : {nestedSorting: false, dnd: true}
           }, document.createElement('div'));
 
           // append the new grid to the div "gridContainer4":
