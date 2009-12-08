@@ -39,7 +39,6 @@ EnhancedGrid features are implemented as plugins which can be loaded on demand. 
     <script type="text/javascript">
 		dojo.require("dojox.grid.EnhancedGrid");
 		dojo.require("dojox.grid.enhanced.plugins.DnD");
-		dojo.require("dojox.grid.enhanced.plugins.Menu");
 		dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
 		dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");
         dojo.require("dojox.data.CsvStore");
