@@ -40,10 +40,10 @@ EnhancedGrid features are implemented as plugins which can be loaded on demand. 
         dojo.require("dojox.grid.DataGrid");
         dojo.require("dojox.grid.EnhancedGrid");
 	dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
-	// dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");
+	dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");
 	dojo.require("dojox.grid.enhanced.plugins.DnD");
         dojo.require("dojox.data.CsvStore");
-    console = {log: function(){}, debug: function(){}};
+    if(!console) console = {log: function(){}, debug: function(){}};
         dojo.addOnLoad(function(){
           // our test data store for this example:
           var store4 = new dojox.data.CsvStore({ url: '{{ baseUrl }}dojox/grid/tests/support/movies.csv' });
