@@ -44,11 +44,8 @@ EnhancedGrid features are implemented as plugins which can be loaded on demand. 
         dojo.require("dojox.data.CsvStore");
 dojo.require("dojo.parser");    
 
-          // our test data store for this example:
-          var store = new dojox.data.CsvStore({ url: '{{ baseUrl }}dojox/grid/tests/support/movies.csv' });
 		var csvStore1 = new dojox.data.CsvStore({id:'csvStore1', url:"{{ baseUrl }}dojox/grid/tests/enhanced/support/music-for-demo.part.csv"});
 
-          // set the layout structure:
 		var layout = [{
 			defaultCell: { width: 8, editable: false, type: dojox.grid.cells._Widget },
 			rows:
@@ -64,25 +61,6 @@ dojo.require("dojo.parser");
 			]}
 		];
 
-/*
-        dojo.addOnLoad(function(){
-         // create a new grid:
-          var grid = new dojox.grid.EnhancedGrid({
-              query: { Title: '*' },
-              store: store,
-              clientSort: true,
-              rowSelector: '20px',
-              structure: layout,
-              plugins : {nestedSorting: false, dnd: false}
-          }, document.createElement('div'));
-
-          // append the new grid to the div "gridContainer4":
-          dojo.byId("gridDiv").appendChild(grid.domNode);
-
-          // Call startup, in order to render the grid:
-          grid.startup();
-        });
-*/
     </script>
 
   .. html::
