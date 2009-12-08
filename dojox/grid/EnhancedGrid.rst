@@ -40,7 +40,7 @@ EnhancedGrid features are implemented as plugins which can be loaded on demand. 
 		dojo.require("dojox.grid.enhanced.plugins.DnD");
 		dojo.require("dojox.grid.enhanced.plugins.Menu");
 		dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
-		dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");
+		// dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");
 		dojo.require("dojox.data.CsvStore");
 		dojo.require("dojo.parser");
 
@@ -66,7 +66,7 @@ EnhancedGrid features are implemented as plugins which can be loaded on demand. 
   .. html::
 
 		<div id="grid2" dojoType="dojox.grid.EnhancedGrid" query="{ Track: '*' }" rowsPerPage="30" selectionMode="single"
-			plugins='{nestedSorting: true, dnd: true, indirectSelection: {name: "Selection", width:"60px", styles:"text-align: center;"}, menus:{headerMenu:"headerMenu", rowMenu:"rowMenu", cellMenu:"cellMenu", selectedRegionMenu:"selectedRegionMenu"}}'
+			plugins='{nestedSorting: true, dnd: true}'
 			store="csvStore1" structure="layout" rowSelector="20px"  
 		</div>
 
