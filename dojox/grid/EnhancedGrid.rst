@@ -243,7 +243,7 @@ Using the nested sorting feature is pretty simple as shown below:
 
     ... with HTML markup
     
-.. code-block :: javascript
+.. code-block :: html
   :linenos:
 
   <div id="grid" store="store1" dojoType="dojox.grid.EnhancedGrid" plugins="{nestedSorting: true}" ... >
