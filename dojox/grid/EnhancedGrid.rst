@@ -61,7 +61,7 @@ EnhancedGrid features are implemented as plugins which can be loaded on demand. 
               clientSort: true,
               rowSelector: '20px',
               structure: layout,
-              plugins : {nestedSorting: true, dnd: true, indirectSelection: {name: "Selection", width:"70px", styles:"text-align: center;"}}
+              plugins : {nestedSorting: false, dnd: false, indirectSelection: {name: "Selection", width:"70px", styles:"text-align: center;"}}
           }, document.createElement('div'));
 
           // append the new grid to the div "gridContainer4":
