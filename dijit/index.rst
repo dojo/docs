@@ -27,7 +27,7 @@ Widgets
     * `a11y Requirements <dijit-a11y-req>`_
     * `a11y Statement <dijit-a11y-statement>`_
 
-* `dijit._Calendar <dijit/_Calendar>`_
+* `dijit.Calendar <dijit/Calendar>`_
 * `dijit.ColorPalette <dijit/ColorPalette>`_
 * `dijit.Declaration <dijit/Declaration>`_
 * `dijit.Dialog <dijit/Dialog>`_
