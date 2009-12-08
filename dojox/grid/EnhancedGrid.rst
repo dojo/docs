@@ -38,13 +38,11 @@ EnhancedGrid features are implemented as plugins which can be loaded on demand. 
     <script type="text/javascript">
 		dojo.require("dojox.grid.EnhancedGrid");
 		dojo.require("dojox.grid.enhanced.plugins.DnD");
-		// dojo.require("dojox.grid.enhanced.plugins.Menu");
+		dojo.require("dojox.grid.enhanced.plugins.Menu");
 		dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
 		dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");
-        dojo.require("dojox.data.CsvStore");
-dojo.require("dojo.parser");    
-
-		var csvStore1 = new dojox.data.CsvStore({id:'csvStore1', url:"{{ baseUrl }}dojox/grid/tests/enhanced/support/music-for-demo.part.csv"});
+		dojo.require("dojox.data.CsvStore");
+		dojo.require("dojo.parser");
 
 		var layout = [{
 			defaultCell: { width: 8, editable: false, type: dojox.grid.cells._Widget },
@@ -60,6 +58,8 @@ dojo.require("dojo.parser");
 				{ field: "Composer", width: '15'}				
 			]}
 		];
+
+		var csvStore1 = new dojox.data.CsvStore({id:'csvStore1', url:"{{ baseUrl }}dojox/grid/tests/enhanced/support/music-for-demo.part.csv"});
 
     </script>
 
