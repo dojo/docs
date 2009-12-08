@@ -4,9 +4,8 @@
 dojo.position
 =============
 
-:Status: Draft
-:Version: 1.0
-:Available: since 1.4
+:Project owner: Doug Hays
+:Available: since V1.4
 
 .. contents::
    :depth: 2
@@ -24,13 +23,16 @@ The dojo.position function is used to obtain position and size information about
 
 for a node with a width of 300px and a height of 150px, with page absolute coordinates of 700px on the x-axis and 900px on the y-axis.
 
-==============
-Usage Examples
-==============
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------
-Example 1:  Center a small DOM node (with background image) over a larger DOM node (the frame) both vertically and horizontally relative to the document root
--------------------------------------------------------------------------------------------------------------------------------------------------------------
+========
+Examples
+========
+
+------------------------------
+Center a DOM node over another
+------------------------------
+
+This example shows how to center a small DOM node (with background image) over a larger DOM node (the frame) both vertically and horizontally relative to the document root.
 
 .. cv-compound ::
   :version: 1.4-2.0
@@ -78,9 +80,11 @@ Example 1:  Center a small DOM node (with background image) over a larger DOM no
       }
     </style>
 
+
 ----------------------------------------------------
 Comparison of various DOM node position/size methods
 ----------------------------------------------------
+
 To see the effect of dojo.position's includeScroll boolean parameter, scroll the window down and click the 15x120 content area.
 
 .. code-example ::
@@ -134,9 +138,9 @@ To see the effect of dojo.position's includeScroll boolean parameter, scroll the
     </table>
 
 
-
 =====
 Notes
 =====
+
 * Remember that page coordinates start as the top leftmost of the page is 0px, 0px
 * dojo.coords is deprecated starting in Dojo 1.4 since it's a mixin of the much faster dojo.position and dojo.marginBox
