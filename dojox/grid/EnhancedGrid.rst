@@ -246,7 +246,7 @@ Using the nested sorting feature is pretty simple as shown below:
 .. code-block :: html
   :linenos:
 
-  <div id="grid" store="store1" dojoType="dojox.grid.EnhancedGrid" plugins="{nestedSorting: true}" ... >
+  <div id="grid" store="store1" dojoType="dojox.grid.EnhancedGrid" plugins="{nestedSorting: true}" >
   </div>
 
     ... with JavaScript  <<< '''This isn't code. Not sure how to fix'''
