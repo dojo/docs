@@ -3,8 +3,7 @@
 dojo.contentHandlers
 ====================
 
-:Status: Draft
-:Version: 1.4
+:Project owner: Peter Higgins
 :Available: since V1.4
 
 .. contents::
@@ -12,11 +11,16 @@ dojo.contentHandlers
 
 dojo.contentHandlers is an object containing several pre-defined "handlers" for Ajax traffic, exposed as a public API to allow your own custom handlers to be mixed in.
 
+
 =====
 Usage
 =====
 
-The most common usage of contentHandlers is indirect. When making an Ajax call, the "handleAs" attribute is used to lookup in the dojo.contentHandlers dictionary. The function defined in the dictionary with a matching key is called, passing the XHR object used for the Ajax call. The **return** value from a contentHandler function is then passed to any "load", "handle" or callback functions. 
+The most common usage of contentHandlers is indirect. When making an Ajax call, the "handleAs" attribute is used to lookup in the dojo.contentHandlers dictionary. The function defined in the dictionary with a matching key is called, passing the XHR object used for the Ajax call. The **return** value from a contentHandler function is then passed to any "load", "handle" or callback functions.
+
+
+Default contentHandler
+----------------------
 
 The default contentHandler is text, and requires no action:
 
@@ -33,31 +37,37 @@ The default contentHandler is text, and requires no action:
  </script>
 
 
-
-==================
 Available Handlers
-==================
+------------------
 
 There are several pre-defined contentHandlers available to use. The value represents the key in the handlers map. 
 
-  * **text** (default) - Simply returns the response text
-  * **json** - Converts response text into a JSON object
-  * **xml** - Returns a XML document
-  * **javascript** - Evaluates the response text
-  * **json-comment-filtered** - A (arguably unsafe) handler to preventing JavaScript hijacking
-  * **json-comment-optional** - A handler which detects the presence of a filtered response and toggles between json or json-comment-filtered appropriately. 
+* **text** (default) - Simply returns the response text
+* **json** - Converts response text into a JSON object
+* **xml** - Returns a XML document
+* **javascript** - Evaluates the response text
+* **json-comment-filtered** - A (arguably unsafe) handler to preventing JavaScript hijacking
+* **json-comment-optional** - A handler which detects the presence of a filtered response and toggles between json or json-comment-filtered appropriately.
+
+
+========
+Examples
+========
   
-Programmatic example
---------------------
+Using a pre-defined handler
+---------------------------
+
+This example shows, how to use the pre-defined json contentHandler:
 
 .. code-block :: javascript
   :linenos:
 
   dojo.xhrGet({
-      url:"foo.json", 
+      url:"foo.json",
+      // here comes the contentHandler:
       handleAs: "json",
       load: function(data){
-          if(data && !data.error){ 
+          if(data && !data.error){
              // see if our response contains an `error` member. { error:"Something is wrong" } for example
           }else{
              // something went wrong :)
@@ -65,9 +75,9 @@ Programmatic example
       }
   });
 
-=========================
+
 Creating a custom handler
-=========================
+-------------------------
 
 To create a custom contentHandler, simply mix a new key into the dojo.contentHandlers object defining the 'handleAs' value. The XHR object is passed to this function. For example: 
 
@@ -110,6 +120,7 @@ For instance, we can create a handler that will populate a node with the respons
   });
 
 This will inject foo.html content into a node with id="someId". 
+
 
 =====
 Notes
