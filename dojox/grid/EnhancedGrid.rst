@@ -41,34 +41,40 @@ EnhancedGrid features are implemented as plugins which can be loaded on demand. 
 		dojo.require("dojox.grid.enhanced.plugins.Menu");
 		dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
 		// dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");
-		dojo.require("dojox.data.CsvStore");
-		dojo.require("dojo.parser");
+        dojo.require("dojox.data.CsvStore");
+    
+        dojo.addOnLoad(function(){
+          // our test data store for this example:
+          var store = new dojox.data.CsvStore({ url: '{{ baseUrl }}dojox/grid/tests/support/movies.csv' });
 
-		var layout = [{
-			defaultCell: { width: 8, editable: false, type: dojox.grid.cells._Widget },
-			rows:
-			[
-				{ field: "Genre", width: '6'},
-				{ field: "Artist", width: '10'},
-				{ field: "Year", width: '6'},
-				{ field: "Album", width: '12'},
-				{ field: "Name", width: '17'},
-				{ field: "Length", width: '6'},
-				{ field: "Track", width: '6'},
-				{ field: "Composer", width: '15'}				
-			]}
-		];
+          // set the layout structure:
+          var layout = [
+              { field: 'Title', name: 'Title of Movie', width: '200px' },
+              { field: 'Year', name: 'Year', width: '50px' },
+              { field: 'Producer', name: 'Producer', width: 'auto' }
+          ];
 
-		var csvStore1 = new dojox.data.CsvStore({id:'csvStore1', url:"{{ baseUrl }}dojox/grid/tests/enhanced/support/music-for-demo.part.csv"});
+          // create a new grid:
+          var grid = new dojox.grid.EnhancedGrid({
+              query: { Title: '*' },
+              store: store,
+              clientSort: true,
+              rowSelector: '20px',
+              structure: layout,
+              plugins : {nestedSorting: false, dnd: false}
+          }, document.createElement('div'));
 
+          // append the new grid to the div "gridContainer4":
+          dojo.byId("gridDiv").appendChild(grid.domNode);
+
+          // Call startup, in order to render the grid:
+          grid.startup();
+        });
     </script>
 
   .. html::
 
-		<div id="grid2" dojoType="dojox.grid.EnhancedGrid" query="{ Track: '*' }" rowsPerPage="30" selectionMode="single"
-			plugins='{nestedSorting: true, dnd: true}'
-			store="csvStore1" structure="layout" rowSelector="20px"  
-		</div>
+    <div id="gridDiv" style="width: 100%; height: 100%;"></div>
 
   .. css::
 
