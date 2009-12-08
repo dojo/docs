@@ -39,6 +39,7 @@ EnhancedGrid features are implemented as plugins which can be loaded on demand. 
     <script type="text/javascript">
         dojo.require("dojox.grid.DataGrid");
         dojo.require("dojox.grid.EnhancedGrid");
+	dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
         dojo.require("dojox.data.CsvStore");
     
         dojo.addOnLoad(function(){
@@ -79,6 +80,7 @@ EnhancedGrid features are implemented as plugins which can be loaded on demand. 
     <style type="text/css">
         @import "{{ baseUrl }}dojox/grid/resources/Grid.css";
         @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
+	@import "../../enhanced/resources/tundraEnhancedGrid.css";
 
         .dojoxGrid table {
             margin: 0;
