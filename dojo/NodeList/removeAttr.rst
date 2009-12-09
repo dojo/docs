@@ -58,7 +58,7 @@ The following example removes ``disabled`` from nodes.
   .. cv:: html
 
     <p><input name="one" disabled="disabled" value="some text"></p>
-    <p><input name="two" type="checkbox" disabled="disabled" checked="checked" value="two"></p>
+    <p><label><input name="two" type="checkbox" disabled="disabled" checked="checked" value="two">&nbsp;a checkbox</label></p>
     <p><button onclick="remAttr();">Remove "disabled"</button></p>
 
 
