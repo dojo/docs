@@ -83,9 +83,19 @@ The following example reads effective values from the ``input`` node.
 See also
 ========
 
+DOM operations:
+
 * `dojo.attr <dojo/attr>`_
 * `dojo.hasAttr <dojo/hasAttr>`_
-* `dojo.removeAttr<dojo/removeAttr>`_
-* `dojo.NodeList.attr <dojo/NodeList/attr>`_
+* `dojo.removeAttr <dojo/attr>`_
 * `dojo.style <dojo/style>`_
+
+NodeList:
+
+* `dojo.NodeList <dojo/NodeList>`_
+* `dojo.NodeList.attr <dojo/NodeList/attr>`_
+* `dojo.NodeList.removeAttr <dojo/NodeList/removeAttr>`_
+
+External links:
+
 * `DOM Attributes and The Dojo Toolkit 1.2 <http://www.sitepen.com/blog/2008/10/23/dom-attributes-and-the-dojo-toolkit-12/>`_
