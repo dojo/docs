@@ -22,29 +22,14 @@ This function is one of many helpers used by the dojo Xhr subsystem for handling
 Usage
 =====
 
-Usage is simple and straightforward, you pass the form node or the string id of a form node to convert. The function will hand back a JavaScript object of the name/value pairs from the form elements. The values are either strings or arrays. If a checkbox group has a single item selected the function will return a string value; if several, an array.
+Usage is simple and straightforward, you pass the form node or the string id of a form node to convert:
 
 .. code-block :: javascript
  :linenos:
 
- <script type="text/javascript">
-   var formId = "myId";
-   var formObj = dojo.formToObject(formId);
+   var formObj = dojo.formToObject("myId");.
 
-   //Assuming a form of:
-   // <form id="myform">
-   //    <input type="text" name="field1" value="value1">
-   //    <input type="text" name="field2" value="value2">
-   //    <input type="button" name="someButton" value="someValue">
-   // </form>
-   //
-   //The structure of formObj will be:
-   // {
-   //   field1: "value1",
-   //   field2: "value2"
-   // }
-   //Note the button was skipped.
- </script>
+The function will hand back a JavaScript object of the name/value pairs from the form elements. The values are either strings or arrays. If a checkbox group has a single item selected, the function will return a string value; if several, an array.
 
 
 ========
@@ -112,16 +97,14 @@ Using formToObject to create an object version of a form with dijit widgets
 
   .. html:: 
 
-    <button id="convertFormDigits" dojoType="dijit.form.Button">Click to convert the form to an object</button><br><br>
-    <b>The FORM</b><br><br>
+    <p>The FORM</p>
     <form id="myform2">
-       <input type="text" dojoType="dijit.form.TextBox" name="field1" value="value1">
-       <input type="text" dojoType="dijit.form.TextBox" name="field2" value="value2">
-       <input id="mycheck" dojoType="dijit.form.CheckBox" name="field3" value="agreed" checked> <label for="mycheck">I agree</label>
-       <button dojoType="dijit.form.Button" name="someButton" value="someValue">someValue</button>
+       <p><input type="text" dojoType="dijit.form.TextBox" name="field1" value="value1"><br>
+       <input type="text" dojoType="dijit.form.TextBox" name="field2" value="value2"><br>
+       <input id="mycheck" dojoType="dijit.form.CheckBox" name="field3" value="agreed" checked> <label for="mycheck">I agree</label></p>
     </form>
-    <br><br>
-    <b>The form as an object:</b>
+    <p><button id="convertFormDigits" dojoType="dijit.form.Button">Click to convert the form to an object</button></p>
+    <p>The form as an object:</p>
     <pre id="formObject2"></pre>
 
 
