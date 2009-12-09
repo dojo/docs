@@ -63,10 +63,10 @@ Using formToObject to create an object version of a form
         dojo.connect(dijit.byId("convertForm"), "onClick", function(){
            var formObject1 =  dojo.formToObject("myform");
 
-           //Attach it into the dom as pretty-printed text.
+           // Attach it into the dom as pretty-printed text.
            dojo.byId("formObject").innerHTML = dojo.toJson(formObject1, true);
         });
-      };
+      });
     </script>
 
   .. html:: 
