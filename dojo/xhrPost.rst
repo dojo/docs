@@ -35,7 +35,7 @@ dojo.xhrPost supported object properties
 All of the dojo.xhrGet `object properties <dojo/xhrGet#dojo-xhrget-supported-object-properties>`_
 
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
-|**form**          |For posting FORM data, you can provide either the DOM node of your form or the ID of the form. The xhrPost will convert     |
+|**form**          |For posting FORM data, you can provide either the DOM node of your form or the ID of the form. xhrPost will convert         |
 |                  |this into proper POST format and send it with the post data.  If a url is not set in the args to dojo.xhrPost, then it tries|
 |                  |to extract the url from the form 'action' attribute.                                                                        |
 |                  |                                                                                                                            |
