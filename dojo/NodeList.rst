@@ -410,10 +410,12 @@ Array Methods
 DOM Methods
 -----------
 
+Click on a method name to see a documentation page for it.
+
 :`attr <dojo/NodeList/attr>`_:
-  Attribute getter/setter for this list of nodes - Mimics `dojo.attr <dojo/attr>`_, excluding the node passed.
-:removeAttr:
-  **New in 1.4** - Forcefully remove the passed attribute from a node.
+  Attribute getter/setter for this list of nodes. Mimics `dojo.attr <dojo/attr>`_, excluding the node passed.
+:`removeAttr <dojo/NodeList/removeAttr>`_:
+  **New in 1.4** - Forcefully remove the passed attribute from a node. Mimics `dojo.removeAttr <dojo/removeAttr>`_.
 :style:
   Get or set styles to the nodes in this list. For more information see `dojo.style <dojo/style>`_
 :addClass:
