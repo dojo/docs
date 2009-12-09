@@ -45,11 +45,12 @@ Removing an attribute
 The following example removes ``disabled`` from nodes.
 
 .. cv-compound::
+  :version: local
 
   .. cv:: javascript
 
     <script type="text/javascript">
-      function enable(){
+      function remAttr(){
         dojo.query("input").removeAttr("disabled");
       }
     </script>
@@ -58,7 +59,7 @@ The following example removes ``disabled`` from nodes.
 
     <p><input name="one" disabled="disabled" value="some text"></p>
     <p><input name="two" type="checkbox" disabled="disabled" checked="checked" value="two"></p>
-    <p><button onclick="enable();">Enable</button></p>
+    <p><button onclick="remAttr();">Removed "disabled"</button></p>
 
 
 ========
