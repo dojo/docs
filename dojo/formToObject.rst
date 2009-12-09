@@ -56,7 +56,7 @@ Using formToObject to create an object version of a form
 
 .. code-example::
   
-  .. javascript
+  .. javascript::
 
     <script>
       function convertForm() {
@@ -94,7 +94,7 @@ Using formToObject to create an object version of a form with dijit widgets
 
 .. code-example::
   
-  .. javascript
+  .. javascript::
 
     <script type="text/javascript">
       dojo.require("dijit.form.TextBox");
@@ -111,7 +111,7 @@ Using formToObject to create an object version of a form with dijit widgets
       });
     </script>
 
-  .. html 
+  .. html:: 
 
     <button id="convertFormDigits" dojoType="dijit.form.Button">Click to convert the form to an object</button><br><br>
     <b>The FORM</b><br><br>
