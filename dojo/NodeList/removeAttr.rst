@@ -17,7 +17,7 @@ Removes an attribute from a list f DOM nodes.
 Introduction
 ============
 
-``NodeList.removeAttr`` adapts `dojo.attr <dojo/removeAttr>`_ for use with node lists by applying it to every node in the list.
+``NodeList.removeAttr`` adapts `dojo.removeAttr <dojo/removeAttr>`_ for use with node lists by applying it to every node in the list.
 
 See `dojo.removeAttr <dojo/removeAttr>`_ for more details.
 
@@ -56,8 +56,8 @@ The following example removes ``disabled`` from nodes.
 
   .. cv:: html
 
-    <p><input name="one"></p>
-    <p><input name="two" type="checkbox"></p>
+    <p><input name="one" disabled="disabled" value="some text"></p>
+    <p><input name="two" type="checkbox" disabled="disabled" checked="checked" value="two"></p>
     <p><button onclick="enable();">Enable</button></p>
 
 
@@ -65,14 +65,19 @@ The following example removes ``disabled`` from nodes.
 See also
 ========
 
-* `dojo.removeAttr <dojo/removeAttr>`_
+DOM operations:
 
+* `dojo.removeAttr <dojo/removeAttr>`_
 * `dojo.attr <dojo/attr>`_
 * `dojo.hasAttr <dojo/hasAttr>`_
 * `dojo.getNodeProp <dojo/getNodeProp>`_
 * `dojo.style <dojo/style>`_
 
+NodeList:
+
 * `dojo.NodeList <dojo/NodeList>`_
 * `dojo.NodeList.attr <dojo/NodeList/attr>`_
+
+External links:
 
 * `DOM Attributes and The Dojo Toolkit 1.2 <http://www.sitepen.com/blog/2008/10/23/dom-attributes-and-the-dojo-toolkit-12/>`_
