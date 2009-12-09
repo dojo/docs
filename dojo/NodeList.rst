@@ -11,14 +11,14 @@ dojo.NodeList
 .. contents::
     :depth: 2
 
-**NodeLists** are standard Arrays, decorated with many helpful functions which act on each DOM Node in the list. 
+**NodeLists** are standard Arrays, decorated with many helpful functions which act on each DOM Node in the list.
 
 
 ============
 Introduction
 ============
 
-`dojo.query <dojo/query>`_ returns instances of ``dojo.NodeList``: 
+`dojo.query <dojo/query>`_ returns instances of ``dojo.NodeList``:
 
 .. code-block :: javascript
   :linenos:
@@ -30,7 +30,7 @@ Introduction
   // hide each element
   nl.style("display","none");
 
-You can also create NodeLists manually and since NodeLists are "just an Array" all of the Array methods you already know Just Work (TM): 
+You can also create NodeLists manually and since NodeLists are "just an Array" all of the Array methods you already know Just Work (TM):
 
 .. code-block :: javascript
   :linenos:
@@ -39,10 +39,10 @@ You can also create NodeLists manually and since NodeLists are "just an Array" a
   var nl = new dojo.NodeList();
   nl.push(dojo.byId("someId"));
   nl.push(dojo.byId("someOtherId"));
-  
+
   // hide both
   nl.style("display", "none");
- 
+
 The helper functions attached to the NodeList typically return the same instance of the ``NodeList``, allowing you to call several methods in a row:
 
 .. code-block :: javascript
@@ -72,7 +72,7 @@ The `entire NodeList API <http://api.dojotoolkit.org/jsdoc/dojo/HEAD/dojo.NodeLi
 
   dojo.query("div > h2").forEach(function(node, index, array){
       // append content to each h2 as a direct child of a <div>
-      node.innerHTML += " - found"; 
+      node.innerHTML += " - found";
   });
 
 The syntax is the same as `dojo.forEach <dojo/forEach>`_ except that the first parameter (the array) is implicitly provided. This pattern is repeated throught the ``dojo.NodeList`` API.
@@ -81,13 +81,13 @@ For instance, `dojo.style() <dojo/style>`_ styles a single Node around a defined
 
 .. code-block :: javascript
   :linenos:
-  
+
   // all elements with class="hidden"
   dojo.query(".hidden").
     style({ opacity:0, visibility:"visible" }).
     removeClass("hidden").
     addClass("readyToFade");
-   
+
 As is the case for ``removeClass()``, ``addClass()``, ``place()``, and most other DOM-related functions in NodeList. All return the same NodeList, which allows for chaining. An exception is ``NodeList.coords``, which returns an array of the coordinate values of the matched nodes when called as a getter.
 
 .. code-block :: javascript
@@ -124,11 +124,11 @@ You can pass any event you would to `dojo.connect <dojo/connect>`_, and expect t
        dojo.fadeIn({ node: evt.target }).play();
      });
 
-Supported are ``onclick``, ``onmouseenter``, ``onmouseleave``, ``onmouseover``, ``omouseout``, ``ondblclick``, all the `normal dom events <quickstart/events>`_ you'd expect, and as of 1.2, ``onsubmit``, ``onload``, and ``onerror``. 
+Supported are ``onclick``, ``onmouseenter``, ``onmouseleave``, ``onmouseover``, ``omouseout``, ``ondblclick``, all the `normal dom events <quickstart/events>`_ you'd expect, and as of 1.2, ``onsubmit``, ``onload``, and ``onerror``.
 
-.. code-block :: javascript 
+.. code-block :: javascript
   :linenos:
- 
+
    // setup some basic hovering behavior:
    dojo.query(".foo.bar")
        .onmouseenter(function(e){
@@ -139,7 +139,7 @@ Supported are ``onclick``, ``onmouseenter``, ``onmouseleave``, ``onmouseover``, 
        })
    ;
 
-The Event object is the same as Dojo's normalized event when using dojo.connect. 
+The Event object is the same as Dojo's normalized event when using dojo.connect.
 
 .. code-block :: javascript
   :linenos:
@@ -151,7 +151,7 @@ The Event object is the same as Dojo's normalized event when using dojo.connect.
     e.preventDefault();
 
     dojo.xhrPost({
-      form:"myForm", 
+      form:"myForm",
       load: function(data){
         console.log('server said: ', data);
       }
@@ -180,7 +180,7 @@ Or, "Writing Your Own Plugins": Adding your own code to the dojo.NodeList class 
 
   dojo.query(".greenText").makeRed();
 
-The import part being ``'return this'``, ensuring any following chains will work. 
+The import part being ``'return this'``, ensuring any following chains will work.
 
 
 ===================
@@ -196,7 +196,7 @@ To keep the Base size to a minimum, some NodeList functionality is provided by e
 
   dojo.addOnLoad(function(){
     dojo.query(".readyToFade").fadeIn().play();
-  }); 
+  });
 
 The NodeList animations do *not* return the NodeList instance. Instead, they return the created ``_Animation`` object, which you have to explictly call ``.play()`` on.
 
@@ -364,9 +364,9 @@ Array Methods
 .. code-block :: javascript
   :linenos:
 
-  // dojo.require("dojo.NodeList-traverse"); must be added in your code to use dojo.query().children() (new in 1.4)  
+  // dojo.require("dojo.NodeList-traverse"); must be added in your code to use dojo.query().children() (new in 1.4)
   var areOnlyChildren = dojo.query("a").
-    every(function(node){ 
+    every(function(node){
        return dojo.query(node.parentNode).children().length == 1
     });
 
@@ -396,7 +396,7 @@ Array Methods
   }).style("backgroundColor", "yellow");
 
   // the same filtering using a CSS selector
-  dojo.query("*").filter("p").styles("backgroundColor", "yellow"); 
+  dojo.query("*").filter("p").styles("backgroundColor", "yellow");
 
 :query:
   Searches under all of the nodes in this list for nodes that match the passed query. Returns a flattened ``NodeList`` of all matching elements (can be chained).
@@ -410,10 +410,10 @@ Array Methods
 DOM Methods
 -----------
 
-:attr:
-  Attribute getter/setter for this list of nodes - Mimics dojo.attr, excluding the node passed. TODOC
+:`attr <dojo/NodeList/attr>`_:
+  Attribute getter/setter for this list of nodes - Mimics `dojo.attr <dojo/attr>`_, excluding the node passed.
 :removeAttr:
-  **New in 1.4** - Forcefully remove the passed attribute from a node. 
+  **New in 1.4** - Forcefully remove the passed attribute from a node.
 :style:
   Get or set styles to the nodes in this list. For more information see `dojo.style <dojo/style>`_
 :addClass:
