@@ -73,20 +73,18 @@ Using formToObject to create an object version of a form
 
   .. html:: 
 
-    <button id="convertForm" dojoType="dijit.form.Button">Click to convert the form to an object</button><br><br>
-    <b>The FORM</b><br><br>
+    <p>The FORM</p>
     <form id="myform">
-       text1: <input type="text" name="text1" value="value1"><br />
-       text2: <input type="text" name="text2" value="value2"><br />
-       cb_group.foo: <input id="f6_checkbox1" type="checkbox" name="cb_group" value="foo" checked><br />
-       cb_group.boo: <input id="f6_checkbox2" type="checkbox" name="cb_group" value="boo"><br />
-       radio_group.baz: <input id="f6_radio1" type="radio" name="radio_group" value="baz"><br />
-       radio_group.bam: <input id="f6_radio2" type="radio" name="radio_group" value="bam" checked><br />
-       radio_group.baf: <input id="f6_radio3" type="radio" name="radio_group" value="baf"><br />
-       <input type="button" name="someButton" value="someValue">
+       <p>text1: <input type="text" name="text1" value="value1"><br>
+       text2: <input type="text" name="text2" value="value2"><br>
+       cb_group.foo: <input id="f6_checkbox1" type="checkbox" name="cb_group" value="foo" checked><br>
+       cb_group.boo: <input id="f6_checkbox2" type="checkbox" name="cb_group" value="boo"><br>
+       radio_group.baz: <input id="f6_radio1" type="radio" name="radio_group" value="baz"><br>
+       radio_group.bam: <input id="f6_radio2" type="radio" name="radio_group" value="bam" checked><br>
+       radio_group.baf: <input id="f6_radio3" type="radio" name="radio_group" value="baf"></p>
     </form>
-    <br><br>
-    <b>The form as an object:</b>
+    <p><button id="convertForm" dojoType="dijit.form.Button">Click to convert the form to an object</button></p>
+    <p>The form as an object:</p>
     <pre id="formObject"></pre>
 
 
