@@ -59,6 +59,8 @@ Using formToObject to create an object version of a form
   .. javascript::
 
     <script type="text/javascript">
+      dojo.require("dijit.form.Button");
+
       dojo.addOnLoad(function(){
         dojo.connect(dijit.byId("convertForm"), "onClick", function(){
            var formObject1 =  dojo.formToObject("myform");
