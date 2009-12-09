@@ -58,15 +58,25 @@ The following example will remove ``disabled`` from the ``input`` node.
   .. cv:: html
 
     <p><input id="model" name="model" disabled="disabled" value="some text"> &mdash; our model node</p>
-    <p><button onclick="remAttr();">Removed "disabled"</button></p>
+    <p><button onclick="remAttr();">Remove "disabled"</button></p>
 
 ========
 See also
 ========
 
+DOM operations:
+
 * `dojo.attr <dojo/attr>`_
 * `dojo.hasAttr <dojo/hasAttr>`_
 * `dojo.getNodeProp <dojo/getNodeProp>`_
-* `dojo.NodeList.attr <dojo/NodeList/attr>`_
 * `dojo.style <dojo/style>`_
+
+NodeList:
+
+* `dojo.NodeList <dojo/NodeList>`_
+* `dojo.NodeList.removeAttr <dojo/NodeList/removeAttr>`_
+* `dojo.NodeList.attr <dojo/NodeList/attr>`_
+
+External links:
+
 * `DOM Attributes and The Dojo Toolkit 1.2 <http://www.sitepen.com/blog/2008/10/23/dom-attributes-and-the-dojo-toolkit-12/>`_
