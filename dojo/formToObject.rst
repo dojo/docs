@@ -61,10 +61,10 @@ Using formToObject to create an object version of a form
     <script type="text/javascript">
       dojo.addOnLoad(function(){
         dojo.connect(dijit.byId("convertForm"), "onClick", function(){
-           var formObject =  dojo.formToObject("myform");
+           var formObject1 =  dojo.formToObject("myform");
 
            //Attach it into the dom as pretty-printed text.
-           dojo.byId("formObject").innerHTML = dojo.toJson(formObject, true);
+           dojo.byId("formObject").innerHTML = dojo.toJson(formObject1, true);
         });
       };
     </script>
@@ -102,10 +102,10 @@ Using formToObject to create an object version of a form with dijit widgets
 
       dojo.addOnLoad(function(){
         dojo.connect(dijit.byId("convertFormDigits"), "onClick", function(){
-           var formObject =  dojo.formToObject("myform2");
+           var formObject2 =  dojo.formToObject("myform2");
 
            // Attach it into the dom as pretty-printed text.
-           dojo.byId("formObject2").innerHTML = dojo.toJson(formObject, true);
+           dojo.byId("formObject2").innerHTML = dojo.toJson(formObject2, true);
         });
       });
     </script>
