@@ -36,8 +36,8 @@ The function will hand back a JavaScript object of the name/value pairs from the
 Examples
 ========
 
-Using formToObject to create an object version of a form
---------------------------------------------------------
+Create an object version of a form
+----------------------------------
 
 .. code-example::
   
@@ -73,8 +73,8 @@ Using formToObject to create an object version of a form
     <pre id="formObject"></pre>
 
 
-Using formToObject to create an object version of a form with dijit widgets
----------------------------------------------------------------------------
+Create an object version of a form with Dijit widgets
+-----------------------------------------------------
 
 .. code-example::
   
