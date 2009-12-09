@@ -132,9 +132,19 @@ The following example will set the "style" attribute of the given dom node. When
 See also
 ========
 
-* `dojo.hasAttr <dojo/hasAttr>`_
-* `dojo.removeAttr <dojo/removeAttr>`_
+DOM operations:
+
 * `dojo.getNodeProp <dojo/getNodeProp>`_
-* `dojo.NodeList.attr <dojo.NodeList/attr>`_
+* `dojo.hasAttr <dojo/hasAttr>`_
+* `dojo.removeAttr <dojo/attr>`_
 * `dojo.style <dojo/style>`_
+
+NodeList:
+
+* `dojo.NodeList <dojo/NodeList>`_
+* `dojo.NodeList.attr <dojo/NodeList/attr>`_
+* `dojo.NodeList.removeAttr <dojo/NodeList/removeAttr>`_
+
+External links:
+
 * `DOM Attributes and The Dojo Toolkit 1.2 <http://www.sitepen.com/blog/2008/10/23/dom-attributes-and-the-dojo-toolkit-12/>`_
