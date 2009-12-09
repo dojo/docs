@@ -58,16 +58,15 @@ Using formToObject to create an object version of a form
   
   .. javascript::
 
-    <script>
-      function convertForm() {
+    <script type="text/javascript">
+      dojo.addOnLoad(function(){
         dojo.connect(dijit.byId("convertForm"), "onClick", function(){
            var formObject =  dojo.formToObject("myform");
 
            //Attach it into the dom as pretty-printed text.
            dojo.byId("formObject").innerHTML = dojo.toJson(formObject, true);
         });
-      }
-      dojo.addOnLoad(convertForm);
+      };
     </script>
 
   .. html:: 
@@ -75,8 +74,8 @@ Using formToObject to create an object version of a form
     <button id="convertForm" dojoType="dijit.form.Button">Click to convert the form to an object</button><br><br>
     <b>The FORM</b><br><br>
     <form id="myform">
-       field1: <input type="text" name="field1" value="value1"><br />
-       field2: <input type="text" name="field2" value="value2"><br />
+       text1: <input type="text" name="text1" value="value1"><br />
+       text2: <input type="text" name="text2" value="value2"><br />
        cb_group.foo: <input id="f6_checkbox1" type="checkbox" name="cb_group" value="foo" checked><br />
        cb_group.boo: <input id="f6_checkbox2" type="checkbox" name="cb_group" value="boo"><br />
        radio_group.baz: <input id="f6_radio1" type="radio" name="radio_group" value="baz"><br />
