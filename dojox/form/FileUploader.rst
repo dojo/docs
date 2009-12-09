@@ -69,9 +69,13 @@ FileUploader Functionality 1.3.2 - 1.4
 
 FileUploader is now a widget and **DOES** create a button. You do not have to pass a button in. Passing a button is still supported until version 1.5 to maintain backwards compatibility, but it is not recommended. Just create your uploader like any other widget.
 
-*NOTE*
+IMPORTANT NOTE
+--------------
 
 While the FileUploader instantiates like a widget, it has limitations due to the fact that it has to manage a Flash plugin. Before it is built, it inspects the DOM and checks style information. Due to this process it needs to happen right away. Currently The FileUploader cannot be placed in a TabContainer unless it is in the tab that displays first. There may also be problems with placing it in other widgets unless it displays right away. Placing it in a Dialog box is supported, but this support should be considered very experimental, as it hasn't been very thoroughly tested (and there have been reports that it doesn't work). Making the FileUploader work in these deferred-build environments will take some time, and I can't give an estimate for when that will be.  
+
+Creation
+--------
 
 The button styles are now recreated in Flash, so there is no longer an invisible Flash movie with *wmode=transparent*. This way the Flash button is actually placed inline with the DOM, not floating above it and contstantly resetting its position. The "Windows Firefox clickable bug" should be fixed (and hopefully some Linux problems).
 
