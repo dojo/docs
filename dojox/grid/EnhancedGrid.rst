@@ -38,6 +38,7 @@ EnhancedGrid features are implemented as plugins which can be loaded on demand. 
     <script type="text/javascript" src="{{ baseUrl }}dojo/dojo.js.uncompressed.js"></script>
     <script type="text/javascript">
 	dojo._loadPath = function(/*String*/relpath, /*String?*/module, /*Function?*/cb){
+		var d = dojo;
 		var uri = ((relpath.charAt(0) == '/' || relpath.match(/^\w+:/)) ? "" : d.baseUrl) + relpath;
 		try{
 			return !module ? d._loadUri(uri, cb) : d._loadUriAndCheck(uri, module, cb); // Boolean
