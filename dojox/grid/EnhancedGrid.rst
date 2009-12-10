@@ -303,7 +303,7 @@ ARIA attributes "aria-label" and "aria-sort" are used for screen readers.
 | Unary sort choice  | aria-sort           | Sorting state, e.g. "descending"                                           |
 +--------------------+---------------------+----------------------------------------------------------------------------+
 |                    | aria-label          | Normal sate - "Column 2 Genre single sort"                                 |
-|                    |                     |  Hovered - "Column 2 Genre - Press space to choose descending nested sort" |
+|                    |                     | Hovered - "Column 2 Genre - Press space to choose descending nested sort"  |
 +--------------------+---------------------+----------------------------------------------------------------------------+
 | Nested sort choice | aria-sort           | Sorting state, e.g. "descending"                                           |
 +--------------------+---------------------+----------------------------------------------------------------------------+
@@ -488,8 +488,8 @@ Keyboard Support
 +===========================+================================================================================+
 | UP/Down arrow keys        | Navigate keyboard focus across cells that contain radio buttons or check boxes |
 +---------------------------+--------------------------------------------------------------------------------+
-| SPACE key	            | ?	Radio button - select a row                                                  |
-|                           | ?	Check box - select or de-select a row.                                       |
+| SPACE key	            | -	Radio button - select a row                                                  |
+|                           | -	Check box - select or de-select a row.                                       |
 +---------------------------+--------------------------------------------------------------------------------+
 | SHIFT + Click             | Select or de-select a range of rows                                            |
 | SHIFT + SPACE key         |                                                                                |
