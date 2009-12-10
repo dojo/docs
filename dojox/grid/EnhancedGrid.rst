@@ -37,12 +37,6 @@ EnhancedGrid features are implemented as plugins which can be loaded on demand. 
 
     <script type="text/javascript" src="{{ baseUrl }}dojo/dojo.js.uncompressed.js"></script>
     <script type="text/javascript">
-		dojo.require("dojox.grid.cells");
-		dojo.require("dijit.form.DateTextBox");
-		dojo.require("dijit.form.TimeTextBox");
-		dojo.require("dijit.form.ComboBox");
-		dojo.require("dojo.data.ItemFileReadStore");
-		dojo.require("dijit.form.CheckBox");
 		dojo.require("dijit.form.TextBox");
 		dojo.require("dijit.form.NumberSpinner");
 		dojo.require("dijit.form.NumberTextBox");
