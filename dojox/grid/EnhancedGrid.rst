@@ -43,8 +43,8 @@ EnhancedGrid features are implemented as plugins which can be loaded on demand. 
 		try{
 			return !module ? d._loadUri(uri, cb) : d._loadUriAndCheck(uri, module, cb); // Boolean
 		}catch(e){
-			if(!console) console = window.console;
-			console.error(e);
+			// if(!console) console = window.console;
+			window.console.error(e);
 			return false; // Boolean
 		}
 	}
