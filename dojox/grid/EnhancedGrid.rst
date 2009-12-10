@@ -135,22 +135,3 @@ Nested Sorting
 ==============
 
 This feature enhances the single sorting feature of base DataGrid. Nested sorting allows users to sort on one or more columns concurrently and also control the sort direction and order. Finally, columns can be removed from the sort without disturbing the rest of the sort.
-
-.. code-example::
-  :toolbar: themes, versions, dir
-  :version: local
-  :width: 480
-  :height: 300
-
-  .. javascript::
-
-    <script type="text/javascript">
-		dojo.require("dojox.grid.EnhancedGrid");
-		dojo.require("dojox.grid.enhanced.plugins.DnD");
-		dojo.require("dojox.grid.enhanced.plugins.Menu");
-		dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
-		// dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");
-        dojo.require("dojox.data.CsvStore");
-    
-        dojo.addOnLoad(function(){
-          // our 
