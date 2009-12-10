@@ -27,6 +27,22 @@ EnhancedGrid (dojox.grid.EnhancedGrid) provides a rich set of features that enha
 
 EnhancedGrid features are implemented as plugins which can be loaded on demand. As a result, the required features must first declared before they can be used.
 
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+      dojo.require("dijit.Editor");
+    </script>
+
+  .. cv:: html
+
+      <div dojoType="dijit.Editor" id="editor1" onChange="console.log('editor1 onChange handler: ' + arguments[0])">
+        <p>This instance is created from a div directly with default toolbar and plugins</p>
+      </div>
+
+
+
 .. code-example::
   :toolbar: themes, versions, dir
   :version: local
@@ -36,7 +52,6 @@ EnhancedGrid features are implemented as plugins which can be loaded on demand. 
   .. javascript::
 
     <script type="text/javascript">
-		dojo.require("dijit.Editor");
     </script>
 
   .. html::
