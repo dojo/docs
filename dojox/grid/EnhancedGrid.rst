@@ -51,7 +51,9 @@ EnhancedGrid features are implemented as plugins which can be loaded on demand. 
 
 
 		dojo.require("dojox.grid.cells.dijit");
-		dojo.require("dojox.grid.EnhancedGrid");
+		dojo.require("dojox.grid.DataGrid");
+
+		// dojo.require("dojox.grid.EnhancedGrid");
 		// dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
         dojo.require("dojox.data.CsvStore");
     
@@ -67,7 +69,7 @@ EnhancedGrid features are implemented as plugins which can be loaded on demand. 
           ];
 
           // create a new grid:
-          var grid = new dojox.grid.EnhancedGrid({
+          var grid = new dojox.grid.DataGrid({
               query: { Title: '*' },
               store: store,
               clientSort: true,
