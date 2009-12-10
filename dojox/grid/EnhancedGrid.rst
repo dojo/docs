@@ -37,19 +37,18 @@ EnhancedGrid features are implemented as plugins which can be loaded on demand. 
 
     <script type="text/javascript" src="{{ baseUrl }}dojo/dojo.js.uncompressed.js"></script>
     <script type="text/javascript">
-
-dojo.require("dojox.grid.cells");
-dojo.require("dijit.form.DateTextBox");
-dojo.require("dijit.form.TimeTextBox");
-dojo.require("dijit.form.ComboBox");
-dojo.require("dojo.data.ItemFileReadStore");
-dojo.require("dijit.form.CheckBox");
-dojo.require("dijit.form.TextBox");
-dojo.require("dijit.form.NumberSpinner");
-dojo.require("dijit.form.NumberTextBox");
-dojo.require("dijit.form.CurrencyTextBox");
-dojo.require("dijit.form.HorizontalSlider");
-dojo.require("dijit.Editor");
+		dojo.require("dojox.grid.cells");
+		dojo.require("dijit.form.DateTextBox");
+		dojo.require("dijit.form.TimeTextBox");
+		dojo.require("dijit.form.ComboBox");
+		dojo.require("dojo.data.ItemFileReadStore");
+		dojo.require("dijit.form.CheckBox");
+		dojo.require("dijit.form.TextBox");
+		dojo.require("dijit.form.NumberSpinner");
+		dojo.require("dijit.form.NumberTextBox");
+		dojo.require("dijit.form.CurrencyTextBox");
+		dojo.require("dijit.form.HorizontalSlider");
+		dojo.require("dijit.Editor");
 
     </script>
 
@@ -302,13 +301,13 @@ ARIA attributes "aria-label" and "aria-sort" are used for screen readers.
 +--------------------+---------------------+----------------------------------------------------------------------------+
 | Unary sort choice  | aria-sort           | Sorting state, e.g. "descending"                                           |
 +--------------------+---------------------+----------------------------------------------------------------------------+
-|                    | aria-label          | Normal sate - "Column 2 Genre single sort"                                 |
-|                    |                     | Hovered - "Column 2 Genre - Press space to choose descending nested sort"  |
+|                    | aria-label          | - Normal sate - "Column 2 Genre single sort"                                 |
+|                    |                     | - Hovered - "Column 2 Genre - Press space to choose descending nested sort"  |
 +--------------------+---------------------+----------------------------------------------------------------------------+
 | Nested sort choice | aria-sort           | Sorting state, e.g. "descending"                                           |
 +--------------------+---------------------+----------------------------------------------------------------------------+
-|                    | aria-label          | Normal sate - "Column 2 Genre nested sort sort position 1"                 |
-|                    |                     | Hovered - "Column 2 Genre - Press space to choose descending nested sort"  |
+|                    | aria-label          | - Normal sate - "Column 2 Genre nested sort sort position 1"                 |
+|                    |                     | - Hovered - "Column 2 Genre - Press space to choose descending nested sort"  |
 +--------------------+---------------------+----------------------------------------------------------------------------+
 
 Note: In Firefox v.3.5, JAWS10 doesn't announce all the above ARIA attributes appropriately. This will be addressed when newer JAWS and Firefox versions are released.
