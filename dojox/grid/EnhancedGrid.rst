@@ -28,6 +28,7 @@ EnhancedGrid (dojox.grid.EnhancedGrid) provides a rich set of features that enha
 EnhancedGrid features are implemented as plugins which can be loaded on demand. As a result, the required features must first declared before they can be used.
 
 Editor
+
 .. cv-compound::
 
   .. cv:: javascript
@@ -43,6 +44,7 @@ Editor
       </div>
 
 EnhancedGrid
+
 .. cv-compound::
 
   .. cv:: javascript
@@ -88,6 +90,7 @@ EnhancedGrid
       <div id="gridDiv"></div>
 
 Old
+
 .. code-example::
   :toolbar: themes, versions, dir
   :version: local
