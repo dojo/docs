@@ -50,7 +50,7 @@ EnhancedGrid features are implemented as plugins which can be loaded on demand. 
 	}
 
 
-		dojo.require("dojox.grid.cells.dijit");
+		// dojo.require("dojox.grid.cells.dijit");
 		dojo.require("dojox.grid.DataGrid");
 
 		// dojo.require("dojox.grid.EnhancedGrid");
