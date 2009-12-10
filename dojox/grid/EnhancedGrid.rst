@@ -279,6 +279,24 @@ Accessibility
 Keyboard Support
 ~~~~~~~~~~~~~~~~
 
+==============================================    ===============================================
+Action                                            Key
+==============================================    ===============================================
+Navigate into the grid			          The column header section and the data section are two separate tab stops in the grid. Press tab to put focus into the column header. With focus on a column header, press tab to set focus into the data portion of the grid. Focus will go to the data cell which last had focus in the grid or to the first data cell if focus had not been previously set into the grid in this session. 
+Navigate between column headers	                  With focus on a column header, use the left and right arrow keys to move between column headers.
+Navigate between data cells		          With focus on a data cell, use the left, right, up, down, pageup and pagedown arrow keys to move between data cells. The grid may load additional content as it is scrolled which may result in a delay.  Focus should appear on the appropriate cell once the data has completed loading.
+Sort a column					  With focus on a column header press the enter key to sort the column. Focus remains in the column header after the sort.
+Edit a cell				          If the cell is editable, pressing enter with focus on the cell will put it into edit mode.
+Cancel edit mode				  When a cell is being edited, pressing escape will cancel edit mode. 
+End edit mode					  When a cell is being edited, pressing enter will accept the change and end edit mode.
+Focus editable cells				  With focus on an editable cell, pressing tab will move focus to the next editable cell in editing mode.  Pressing shift-tab will move focus to the previous editable cell in editing mode.  Note there are still some issues when traversing row boundaries.
+Invoke an onrowclick event	                  If the grid row has an onrowclick event, it can be invoked by pressing enter with focus on a cell in the row.
+Select a row				          With focus on a cell in a row, press the space bar.
+Select contiguous rows			          Select a row, hold down the shift key and arrow up or down to a new row, press the space bar to select the rows between the original row and the new row.
+Select discontinuous rows		          Select a row,  hold down the control key and use the arrow keys to navigate to a new row,  continue holding the control key and press the space bar to add the new row to the selection. 
+==============================================    ===============================================
+
+
 ============                    ================
 **Key**                         **Action**
 ============                    ================
