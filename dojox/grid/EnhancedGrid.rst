@@ -279,13 +279,9 @@ Accessibility
 Keyboard Support
 ~~~~~~~~~~~~~~~~
 
-========================                    ================
-**Key**                                     **Action**
-========================                    ================
-LEFT/RIGHT arrow keys                       Moves the keyboard focus among column headers and regions within a column header
-SPACE key                                   Chooses the sorting choice with the keyboard focus
-========================                    ================
-
+|| '''Key''' || '''Action''' ||
+|| LEFT/RIGHT arrow keys || Moves the keyboard focus among column headers and regions within a column header ||
+|| SPACE key             || Chooses the sorting choice with the keyboard focus ||
 
   * The above keys are only effective when keyboard focus is within the column headers.
 
@@ -294,33 +290,14 @@ Screen Readers
 
 ARIA attributes "aria-label" and "aria-sort" are used for screen readers.
 
-+--------------+---------------+--------------------------------------+
-| **Region** | **ARIA + **ARIA Attribute Value** +
-| | Attribute** + +
-+--------------+---------------+--------------------------------------+
-| Select | aria-label | Column name +
-| region | | +
-+--------------+---------------+--------------------------------------+
-| Unary sort | aria-sort | Sorting state, e.g. "descending" +
-| choice | | +
-+--------------+---------------+--------------------------------------+
-| | aria-label | Normal sate - "Column 2 Genre +
-| | | single sort" +
-| | | +
-| | | Hovered - "Column 2 Genre - +
-| | | Press space to choose descending +
-| | | nested sort" +
-+--------------+---------------+--------------------------------------+
-| Nested sort | aria-sort | Sorting state, e.g. "descending" +
-| choice | | +
-+--------------+---------------+--------------------------------------+
-| | aria-label | Normal sate - "Column 2 Genre +
-| | | nested sort sort position 1" +
-| | | +
-| | | Hovered - "Column 2 Genre - +
-| | | Press space to choose descending +
-| | | nested sort" +
-+--------------+---------------+--------------------------------------+
+
+|| '''Region''' ||	'''ARIA Attribute''' ||	'''ARIA Attribute Value''' ||
+|| Select region ||	aria-label ||	Column name ||
+|| Unary sort choice ||	aria-sort ||	Sorting state, e.g. "descending" ||
+||  || aria-label || Normal sate - "Column 2 Genre single sort" [[BR]] Hovered - "Column 2 Genre - Press space to choose descending nested sort" ||
+|| Nested sort choice || aria-sort || Sorting state, e.g. "descending" ||
+||  || aria-label || Normal sate - "Column 2 Genre nested sort sort position 1" [[BR]] Hovered - "Column 2 Genre - Press space to choose descending nested sort" ||
+		
 
 Note: In Firefox v.3.5, JAWS10 doesn't announce all the above ARIA attributes appropriately. This will be addressed when newer JAWS and Firefox versions are released.
 
@@ -494,25 +471,12 @@ Accessibility
 Keyboard Support
 ~~~~~~~~~~~~~~~~
 
-+---------------+--------------------------------+
-| **Key** | **Action** +
-+---------------+--------------------------------+
-| UP/Down | Navigate keyboard focus across +
-| arrow keys | cells that contain radio +
-| | buttons or check boxes +
-+---------------+--------------------------------+
-| SPACE key | * Radio button - select a row +
-| | * Check box - select or +
-| | de-select a row +
-+---------------+--------------------------------+
-| SHIFT + Click | Select or de-select a range +
-| SHIFT + | of rows +
-| SPACE key | +
-+---------------+--------------------------------+
-| SHIFT+ | Extend the selection or +
-| UP/Down | de-selection - only for +
-| arrow keys | check boxes +
-+---------------+--------------------------------+
+||'''Key'''||''Action'''||
+||UP/Down arrow keys ||Navigate keyboard focus across cells that contain radio buttons or check boxes ||
+|| SPACE key	|| ?	Radio button - select a row [[BR]] ?	Check box - select or de-select a row. ||
+|| SHIFT + Click [[BR]] SHIFT + SPACE key || Select or de-select a range of rows ||
+|| SHIFT+ UP/Down arrow keys || Extend the selection or de-selection - only for check boxes . ||
+
 
   * The above keys are only effective when keyboard focus is in the first column that contains radio buttons or check boxes.
 
@@ -832,25 +796,12 @@ Accessibility
 Keyboard Support
 ~~~~~~~~~~~~~~~~
 
-+------------+--------------------------------+
-| **Key** | **Action** +
-+------------+--------------------------------+
-| UP/Down | Navigate keyboard focus across +
-| arrow keys | row headers +
-+------------+--------------------------------+
-| Left/Right | Navigate keyboard focus across +
-| arrow keys | column headers +
-+------------+--------------------------------+
-| SPACE key | Select a row or column +
-+------------+--------------------------------+
-| SHIFT+ | Extend the column selection or +
-| Left/Right | de-selection +
-| arrow keys | +
-+------------+--------------------------------+
-| SHIFT+ | Extend the row selection or +
-| UP/Down | de-selection +
-| arrow keys | +
-+------------+--------------------------------+
+||'''Key'''||'''Action'''||
+|| UP/Down arrow keys || Navigate keyboard focus across row headers ||
+|| Left/Right arrow keys || Navigate keyboard focus across column headers ||
+|| SPACE key || Select a row or column ||
+|| SHIFT+ Left/Right arrow keys || 	Extend the column selection or de-selection ||
+|| SHIFT + UP/Down arrow keys	|| Extend the row selection or de-selection ||
 
   * The above key bindings are only effective when keyboard focus is in row headers or select regions of column headers.
 
@@ -992,17 +943,9 @@ Accessibility
 Keyboard Support
 ~~~~~~~~~~~~~~~~
 
-+------------+--------------------------------+
-| **Key** | **Action** +
-+------------+--------------------------------+
-| CTRL + | Move row(s) upward or downward +
-| UP/Down | by one row +
-| arrow keys | +
-+------------+--------------------------------+
-| CTRL + | Move column(s) leftward +
-| LEFT/RIGHT | or rightward by one column +
-| arrow keys | +
-+------------+--------------------------------+
+||'''Key'''||'''Action'''||
+|| CTRL + UP/Down arrow keys || Move row(s) upward or downward by one row. ||
+|| CTRL + LEFT/RIGHT arrow keys || Move column(s) leftward or rightward by one column. ||
 
 ============
 Known Issues
