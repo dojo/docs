@@ -34,7 +34,7 @@ EnhancedGrid features are implemented as plugins which can be loaded on demand. 
   :height: 300
 
   .. javascript::
-
+<script type="text/javascript" src="{{ baseUrl }}dojo/dojo.js.uncompressed.js"></script>
     <script type="text/javascript">
 		dojo.require("dojox.grid.cells.dijit");
 		dojo.require("dojox.grid.EnhancedGrid");
