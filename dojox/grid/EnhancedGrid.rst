@@ -37,6 +37,7 @@ EnhancedGrid features are implemented as plugins which can be loaded on demand. 
 
     <script type="text/javascript" src="{{ baseUrl }}dojo/dojo.js.uncompressed.js"></script>
     <script type="text/javascript">
+/*
 	dojo._loadPath = function(/*String*/relpath, /*String?*/module, /*Function?*/cb){
 		var d = dojo;
 		var uri = ((relpath.charAt(0) == '/' || relpath.match(/^\w+:/)) ? "" : d.baseUrl) + relpath;
@@ -48,9 +49,9 @@ EnhancedGrid features are implemented as plugins which can be loaded on demand. 
 			return false; // Boolean
 		}
 	}
+*/
 
-
-		// dojo.require("dojox.grid.cells.dijit");
+		dojo.require("dojox.grid.cells.dijit");
 		dojo.require("dojox.grid.DataGrid");
 
 		// dojo.require("dojox.grid.EnhancedGrid");
