@@ -35,10 +35,8 @@ EnhancedGrid features are implemented as plugins which can be loaded on demand. 
 
   .. javascript::
 
-    <script type="text/javascript" src="{{ baseUrl }}dojo/dojo.js.uncompressed.js"></script>
     <script type="text/javascript">
 		dojo.require("dijit.Editor");
-
     </script>
 
   .. html::
@@ -133,40 +131,6 @@ This feature enhances the single sorting feature of base DataGrid. Nested sortin
   .. javascript::
 
     <script type="text/javascript">
-  dojo.require("dojox.grid.EnhancedGrid");
-  dojo.require("dojox.grid.enhanced.plugins.DnD");
-  dojo.require("dojox.grid.enhanced.plugins.Menu");
-  dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
-  // dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");
-        dojo.require("dojox.data.CsvStore");
-    
-        dojo.addOnLoad(function(){
-          // our test data store for this example:
-          var store = new dojox.data.CsvStore({ url: '{{ baseUrl }}dojox/grid/tests/support/movies.csv' });
-
-          // set the layout structure:
-          var layout = [
-              { field: 'Title', name: 'Title of Movie', width: '200px' },
-              { field: 'Year', name: 'Year', width: '50px' },
-              { field: 'Producer', name: 'Producer', width: 'auto' }
-          ];
-
-          // create a new grid:
-          var grid = new dojox.grid.EnhancedGrid({
-              query: { Title: '*' },
-              store: store,
-              clientSort: true,
-              rowSelector: '20px',
-              structure: layout,
-              plugins : {nestedSorting: true, dnd: false}
-          }, document.createElement('div'));
-
-          // append the new grid to the div "gridContainer4":
-          dojo.byId("gridDiv").appendChild(grid.domNode);
-
-          // Call startup, in order to render the grid:
-          grid.startup();
-        });
     </script>
 
   .. html::
@@ -321,40 +285,6 @@ Please note indirect selection is completely dependent on the selection mode of 
   .. javascript::
 
     <script type="text/javascript">
-  dojo.require("dojox.grid.EnhancedGrid");
-  dojo.require("dojox.grid.enhanced.plugins.DnD");
-  dojo.require("dojox.grid.enhanced.plugins.Menu");
-  dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
-  // dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");
-        dojo.require("dojox.data.CsvStore");
-    
-        dojo.addOnLoad(function(){
-          // our test data store for this example:
-          var store = new dojox.data.CsvStore({ url: '{{ baseUrl }}dojox/grid/tests/support/movies.csv' });
-
-          // set the layout structure:
-          var layout = [
-              { field: 'Title', name: 'Title of Movie', width: '200px' },
-              { field: 'Year', name: 'Year', width: '50px' },
-              { field: 'Producer', name: 'Producer', width: 'auto' }
-          ];
-
-          // create a new grid:
-          var grid = new dojox.grid.EnhancedGrid({
-              query: { Title: '*' },
-              store: store,
-              clientSort: true,
-              rowSelector: '20px',
-              structure: layout,
-              plugins : {nestedSorting: true, dnd: false}
-          }, document.createElement('div'));
-
-          // append the new grid to the div "gridContainer4":
-          dojo.byId("gridDiv").appendChild(grid.domNode);
-
-          // Call startup, in order to render the grid:
-          grid.startup();
-        });
     </script>
 
   .. html::
@@ -553,40 +483,6 @@ With this new feature, users can add context menus either through declarative HT
   .. javascript::
 
     <script type="text/javascript">
-  dojo.require("dojox.grid.EnhancedGrid");
-  dojo.require("dojox.grid.enhanced.plugins.DnD");
-  dojo.require("dojox.grid.enhanced.plugins.Menu");
-  dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
-  // dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");
-        dojo.require("dojox.data.CsvStore");
-    
-        dojo.addOnLoad(function(){
-          // our test data store for this example:
-          var store = new dojox.data.CsvStore({ url: '{{ baseUrl }}dojox/grid/tests/support/movies.csv' });
-
-          // set the layout structure:
-          var layout = [
-              { field: 'Title', name: 'Title of Movie', width: '200px' },
-              { field: 'Year', name: 'Year', width: '50px' },
-              { field: 'Producer', name: 'Producer', width: 'auto' }
-          ];
-
-          // create a new grid:
-          var grid = new dojox.grid.EnhancedGrid({
-              query: { Title: '*' },
-              store: store,
-              clientSort: true,
-              rowSelector: '20px',
-              structure: layout,
-              plugins : {nestedSorting: true, dnd: false}
-          }, document.createElement('div'));
-
-          // append the new grid to the div "gridContainer4":
-          dojo.byId("gridDiv").appendChild(grid.domNode);
-
-          // Call startup, in order to render the grid:
-          grid.startup();
-        });
     </script>
 
   .. html::
@@ -688,40 +584,6 @@ As noted above, swipe-select is also possible when the check box mode of Indirec
   .. javascript::
 
     <script type="text/javascript">
-  dojo.require("dojox.grid.EnhancedGrid");
-  dojo.require("dojox.grid.enhanced.plugins.DnD");
-  dojo.require("dojox.grid.enhanced.plugins.Menu");
-  dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
-  // dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");
-        dojo.require("dojox.data.CsvStore");
-    
-        dojo.addOnLoad(function(){
-          // our test data store for this example:
-          var store = new dojox.data.CsvStore({ url: '{{ baseUrl }}dojox/grid/tests/support/movies.csv' });
-
-          // set the layout structure:
-          var layout = [
-              { field: 'Title', name: 'Title of Movie', width: '200px' },
-              { field: 'Year', name: 'Year', width: '50px' },
-              { field: 'Producer', name: 'Producer', width: 'auto' }
-          ];
-
-          // create a new grid:
-          var grid = new dojox.grid.EnhancedGrid({
-              query: { Title: '*' },
-              store: store,
-              clientSort: true,
-              rowSelector: '20px',
-              structure: layout,
-              plugins : {nestedSorting: true, dnd: false}
-          }, document.createElement('div'));
-
-          // append the new grid to the div "gridContainer4":
-          dojo.byId("gridDiv").appendChild(grid.domNode);
-
-          // Call startup, in order to render the grid:
-          grid.startup();
-        });
     </script>
 
   .. html::
@@ -874,40 +736,6 @@ Note:
   .. javascript::
 
     <script type="text/javascript">
-  dojo.require("dojox.grid.EnhancedGrid");
-  dojo.require("dojox.grid.enhanced.plugins.DnD");
-  dojo.require("dojox.grid.enhanced.plugins.Menu");
-  dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
-  // dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");
-        dojo.require("dojox.data.CsvStore");
-    
-        dojo.addOnLoad(function(){
-          // our test data store for this example:
-          var store = new dojox.data.CsvStore({ url: '{{ baseUrl }}dojox/grid/tests/support/movies.csv' });
-
-          // set the layout structure:
-          var layout = [
-              { field: 'Title', name: 'Title of Movie', width: '200px' },
-              { field: 'Year', name: 'Year', width: '50px' },
-              { field: 'Producer', name: 'Producer', width: 'auto' }
-          ];
-
-          // create a new grid:
-          var grid = new dojox.grid.EnhancedGrid({
-              query: { Title: '*' },
-              store: store,
-              clientSort: true,
-              rowSelector: '20px',
-              structure: layout,
-              plugins : {nestedSorting: true, dnd: false}
-          }, document.createElement('div'));
-
-          // append the new grid to the div "gridContainer4":
-          dojo.byId("gridDiv").appendChild(grid.domNode);
-
-          // Call startup, in order to render the grid:
-          grid.startup();
-        });
     </script>
 
   .. html::
