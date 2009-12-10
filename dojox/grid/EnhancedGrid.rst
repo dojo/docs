@@ -37,8 +37,6 @@ EnhancedGrid features are implemented as plugins which can be loaded on demand. 
 
     <script type="text/javascript" src="{{ baseUrl }}dojo/dojo.js.uncompressed.js"></script>
     <script type="text/javascript">
-		dojo.require("dijit.form.CurrencyTextBox");
-		dojo.require("dijit.form.HorizontalSlider");
 		dojo.require("dijit.Editor");
 
     </script>
