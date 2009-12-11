@@ -741,10 +741,10 @@ As noted above, swipe-select is also possible when the check box mode of Indirec
               clientSort: true,
               rowSelector: '20px',
               structure: layout,
-              plugins : {nestedSorting: true, dnd: true}
+              plugins : {dnd: true}
           }, document.createElement('div'));
 
-          // append the new grid to the div "gridContainer4":
+          // append the new grid to the div "":
           dojo.byId("gridDiv").appendChild(grid.domNode);
 
           // Call startup, in order to render the grid:
@@ -761,8 +761,8 @@ As noted above, swipe-select is also possible when the check box mode of Indirec
     <style type="text/css">
         @import "{{ baseUrl }}dojox/grid/resources/Grid.css";
         @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
-  @import "{{ baseUrl }}dojox/grid/enhanced/resources/{{ theme }}EnhancedGrid.css";
-  @import "{{ baseUrl }}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
+        @import "{{ baseUrl }}dojox/grid/enhanced/resources/{{ theme }}EnhancedGrid.css";
+        @import "{{ baseUrl }}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
 
         .dojoxGrid table {
             margin: 0;
