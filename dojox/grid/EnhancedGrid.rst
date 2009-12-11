@@ -100,10 +100,11 @@ Old
     <script type="text/javascript" src="{{ baseUrl }}dojo/dojo.js.uncompressed.js"></script> 
     <script type="text/javascript">
 
-        // dojo.declare("dijit.Editor", null, {});
-	dojo.connect(dojo, "require", function(module) {
+	var _dr = dojo.require;
+	dojo.require = function(module) {
 		if(module == "dijit.Editor") return ;
-	});
+		_dr(module);
+	}
 
 		dojo.require("dojox.grid.cells.dijit");
 
