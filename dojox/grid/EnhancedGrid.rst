@@ -100,9 +100,10 @@ Old
     <script type="text/javascript" src="{{ baseUrl }}dojo/dojo.js.uncompressed.js"></script> 
     <script type="text/javascript">
 
-        dojo.declare("dijit.Editor", null, {});
+        // dojo.declare("dijit.Editor", null, {});
 
-		dojo.require("dojox.grid.cells.dijit");
+		dojo.declare("dojox.grid.cells.dijit", null, {});
+		// dojo.require("dojox.grid.cells.dijit");
 
 		dojo.require("dojox.grid.EnhancedGrid");
 		dojo.require("dojox.data.CsvStore");
