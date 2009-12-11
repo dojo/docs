@@ -379,9 +379,9 @@ Please note indirect selection is completely dependent on the selection mode of 
 	dojo.require("dojox.grid.cells.dijit");
 
 	dojo.require("dojox.grid.EnhancedGrid");
-	dojo.require("dojox.grid.enhanced.plugins.DnD");
-	dojo.require("dojox.grid.enhanced.plugins.Menu");
-	dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
+	// dojo.require("dojox.grid.enhanced.plugins.DnD");
+	// dojo.require("dojox.grid.enhanced.plugins.Menu");
+	// dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
 	dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");
         dojo.require("dojox.data.CsvStore");
     
