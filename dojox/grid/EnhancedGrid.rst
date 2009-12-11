@@ -96,6 +96,7 @@ Old
   :height: 300
 
   .. javascript::
+
     <script type="text/javascript" src="{{ baseUrl }}dojo/dojo.js.uncompressed.js"></script> 
     <script type="text/javascript">
         dojo.require("dijit.Editor");
