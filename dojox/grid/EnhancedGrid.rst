@@ -403,7 +403,7 @@ Please note indirect selection is completely dependent on the selection mode of 
               clientSort: true,
               rowSelector: '20px',
               structure: layout,
-              plugins : {nestedSorting: true, dnd: true, indirectSelection: {name: "Selection", width:"70px", styles:"text-align: center;"}}
+              plugins : {indirectSelection: {name: "Selection", width:"70px", styles:"text-align: center;"}}
           }, document.createElement('div'));
 
           // append the new grid to the div "gridContainer4":
