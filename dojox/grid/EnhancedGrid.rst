@@ -378,6 +378,8 @@ Please note indirect selection is completely dependent on the selection mode of 
 	dojo.require("dojox.grid.cells.dijit");
 
 	dojo.require("dojox.grid.EnhancedGrid");
+	dojo.require("dojox.grid.enhanced.plugins.DnD");
+	dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
 	dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");
         dojo.require("dojox.data.CsvStore");
     
@@ -393,7 +395,7 @@ Please note indirect selection is completely dependent on the selection mode of 
           ];
 
           // create a new grid:
-          var grid = new dojox.grid.EnhancedGrid({
+          var grid2 = new dojox.grid.EnhancedGrid({
               query: { Title: '*' },
               store: store,
               clientSort: true,
@@ -403,16 +405,16 @@ Please note indirect selection is completely dependent on the selection mode of 
           }, document.createElement('div'));
 
           // append the new grid to the div "gridContainer4":
-          dojo.byId("gridDiv").appendChild(grid.domNode);
+          dojo.byId("gridDiv2").appendChild(grid.domNode);
 
           // Call startup, in order to render the grid:
-          grid.startup();
+          grid2.startup();
         });
     </script>
 
   .. html::
 
-    <div id="gridDiv" style="width: 100%; height: 100%;"></div>
+    <div id="gridDiv2" style="width: 100%; height: 100%;"></div>
 
   .. css::
 
