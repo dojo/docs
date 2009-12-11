@@ -379,9 +379,6 @@ Please note indirect selection is completely dependent on the selection mode of 
 	dojo.require("dojox.grid.cells.dijit");
 
 	dojo.require("dojox.grid.EnhancedGrid");
-	// dojo.require("dojox.grid.enhanced.plugins.DnD");
-	// dojo.require("dojox.grid.enhanced.plugins.Menu");
-	// dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
 	dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");
         dojo.require("dojox.data.CsvStore");
     
@@ -710,6 +707,7 @@ As noted above, swipe-select is also possible when the check box mode of Indirec
 
   .. javascript::
 
+    <script type="text/javascript" src="{{ baseUrl }}dojo/dojo.js.uncompressed.js"></script> 
     <script type="text/javascript">
 
 	var _dr = dojo.require;
@@ -903,6 +901,7 @@ Note:
 
   .. javascript::
 
+    <script type="text/javascript" src="{{ baseUrl }}dojo/dojo.js.uncompressed.js"></script> 
     <script type="text/javascript">
 
 	var _dr = dojo.require;
