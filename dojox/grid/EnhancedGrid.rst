@@ -50,10 +50,8 @@ EnhancedGrid
   .. cv:: javascript
 
     <script type="text/javascript">
-		dojo.require("dojox.grid.cells.dijit");
 
-		dojo.require("dojox.grid.EnhancedGrid");
-		dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
+		dojo.require("dojox.grid.DataGrid");
 		dojo.require("dojox.data.CsvStore");
 
 		var layout = [{
@@ -74,7 +72,7 @@ EnhancedGrid
 		var store = new dojox.data.CsvStore({ url: '{{ baseUrl }}dojox/grid/tests/support/movies.csv' });
 		
 		dojo.addOnLoad(function(){
-			var grid = new dojox.grid.EnhancedGrid({
+			var grid = new dojox.grid.DataGrid({
 				id: "grid3",
 				store: store,
 				structure: layout,
