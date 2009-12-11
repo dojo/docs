@@ -99,22 +99,41 @@ Old
 
     <script type="text/javascript" src="{{ baseUrl }}dojo/dojo.js.uncompressed.js"></script> 
     <script type="text/javascript">
-        dojo.require("dijit._Widget");
-        dojo.require("dijit._editor.selection");
-        dojo.require("dijit._editor.range");
-        dojo.require("dijit._editor.html");
 
-        dojo.declare("dijit._editor.RichText", null, {});
-        // dojo.require("dijit._editor.RichText");
+        dojo.declare("dijit.Editor", null, {});
 
-        dojo.require("dijit._Widget");
+		dojo.require("dojox.grid.cells.dijit");
 
-        dojo.require("dijit._Container");
-        dojo.require("dijit._KeyNavContainer");
-        dojo.require("dijit._Templated");
+		dojo.require("dojox.grid.EnhancedGrid");
+		dojo.require("dojox.data.CsvStore");
 
-        dojo.require("dijit.Toolbar");
-        dojo.require("dijit.Editor");
+		var layout = [{
+			defaultCell: { width: 8, editable: false, type: dojox.grid.cells._Widget },
+			rows:
+			[
+				{ field: "Genre", width: '6'},
+				{ field: "Artist", width: '10'},
+				{ field: "Year", width: '6'},
+				{ field: "Album", width: '12'},
+				{ field: "Name", width: '17'},
+				{ field: "Length", width: '6'},
+				{ field: "Track", width: '6'},
+				{ field: "Composer", width: '15'}				
+			]}
+		];
+
+		var store = new dojox.data.CsvStore({ url: '{{ baseUrl }}dojox/grid/tests/support/movies.csv' });
+		
+		dojo.addOnLoad(function(){
+			var grid = new dojox.grid.EnhancedGrid({
+				id: "grid3",
+				store: store,
+				structure: layout,
+				rowSelector: '20px',
+				plugins : {nestedSorting: true}
+			}, dojo.byId('gridDiv'));
+			grid.startup();
+		});
     </script>
 
   .. html::
