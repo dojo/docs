@@ -110,7 +110,7 @@ Old
 
         dojo.require("dijit._Container");
         dojo.require("dijit._KeyNavContainer");
-        dojo.require("dijit._Templated");
+        // dojo.require("dijit._Templated");
 
         dojo.require("dijit.Toolbar");
         // dojo.require("dijit.Editor");
