@@ -98,7 +98,7 @@ Old
   .. javascript::
 
     <script type="text/javascript">
-dojo.require("dijit.Toolbar");
+        dojo.require("dijit.Toolbar");
     </script>
 
   .. html::
