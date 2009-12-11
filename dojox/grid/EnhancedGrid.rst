@@ -606,12 +606,79 @@ With this new feature, users can add context menus either through declarative HT
 
   .. javascript::
 
+    <script type="text/javascript" src="{{ baseUrl }}dojo/dojo.js.uncompressed.js"></script> 
     <script type="text/javascript">
+
+	var _dr = dojo.require;
+	dojo.require = function(module) {
+		if(module == "dijit.Editor") return ;
+		_dr(module);
+	}
+
+	dojo.require("dojox.grid.cells.dijit");
+
+	dojo.require("dojox.grid.EnhancedGrid");
+	dojo.require("dojox.grid.enhanced.plugins.DnD");
+        dojo.require("dojox.data.CsvStore");
+    
+        dojo.addOnLoad(function(){
+          // our test data store for this example:
+          var store = new dojox.data.CsvStore({ url: '{{ baseUrl }}dojox/grid/tests/support/movies.csv' });
+
+          // set the layout structure:
+          var layout = [
+              { field: 'Title', name: 'Title of Movie', width: '200px' },
+              { field: 'Year', name: 'Year', width: '50px' },
+              { field: 'Producer', name: 'Producer', width: 'auto' }
+          ];
+
+          // create a new grid:
+          var grid = new dojox.grid.EnhancedGrid({
+              query: { Title: '*' },
+              store: store,
+              clientSort: true,
+              rowSelector: '20px',
+              structure: layout,
+              plugins : {menus:{headerMenu:"headerMenu", rowMenu:"rowMenu", cellMenu:"cellMenu", selectedRegionMenu:"selectedRegionMenu"}}
+          }, document.createElement('div'));
+
+          // append the new grid to the div "gridContainer4":
+          dojo.byId("gridDiv").appendChild(grid.domNode);
+
+          // Call startup, in order to render the grid:
+          grid.startup();
+        });
     </script>
+
 
   .. html::
 
-    <div id="gridDiv" style="width: 100%; height: 100%;"></div>
+	<div id="gridDiv" style="width: 100%; height: 100%;">
+		<div dojoType="dijit.Menu" id="headerMenu"  style="display: none;">
+			<div dojoType="dijit.MenuItem">Header Menu Item 1</div>
+			<div dojoType="dijit.MenuItem">Header Menu Item 2</div>
+			<div dojoType="dijit.MenuItem">Header Menu Item 3</div>
+			<div dojoType="dijit.MenuItem">Header Menu Item 4</div>
+		</div>
+		<div dojoType="dijit.Menu" id="rowMenu"  style="display: none;">
+			<div dojoType="dijit.MenuItem">Row Menu Item 1</div>
+			<div dojoType="dijit.MenuItem">Row Menu Item 2</div>
+			<div dojoType="dijit.MenuItem">Row Menu Item 3</div>
+			<div dojoType="dijit.MenuItem">Row Menu Item 4</div>
+		</div>
+		<div dojoType="dijit.Menu" id="cellMenu"  style="display: none;">
+			<div dojoType="dijit.MenuItem">Cell Menu Item 1</div>
+			<div dojoType="dijit.MenuItem">Cell Menu Item 2</div>
+			<div dojoType="dijit.MenuItem">Cell Menu Item 3</div>
+			<div dojoType="dijit.MenuItem">Cell Menu Item 4</div>
+		</div>
+		<div dojoType="dijit.Menu" id="selectedRegionMenu"  style="display: none;">
+			<div dojoType="dijit.MenuItem">Action 1 for Selected Region</div>
+			<div dojoType="dijit.MenuItem">Action 2 for Selected Region</div>
+			<div dojoType="dijit.MenuItem">Action 3 for Selected Region</div>
+			<div dojoType="dijit.MenuItem">Action 4 for Selected Region</div>
+		</div>	
+	</div>
 
   .. css::
 
