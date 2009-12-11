@@ -101,9 +101,11 @@ Old
     <script type="text/javascript">
 
         // dojo.declare("dijit.Editor", null, {});
+	dojo.connect(dojo, "require", function(module) {
+		if(module == "dijit.Editor") return ;
+	});
 
-		dojo.declare("dojox.grid.cells.dijit", null, {});
-		// dojo.require("dojox.grid.cells.dijit");
+		dojo.require("dojox.grid.cells.dijit");
 
 		dojo.require("dojox.grid.EnhancedGrid");
 		dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
