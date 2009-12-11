@@ -367,6 +367,7 @@ Please note indirect selection is completely dependent on the selection mode of 
 
   .. javascript::
 
+    <script type="text/javascript" src="{{ baseUrl }}dojo/dojo.js.uncompressed.js"></script> 
     <script type="text/javascript">
 
 	var _dr = dojo.require;
@@ -379,6 +380,7 @@ Please note indirect selection is completely dependent on the selection mode of 
 
 	dojo.require("dojox.grid.EnhancedGrid");
 	dojo.require("dojox.grid.enhanced.plugins.DnD");
+	dojo.require("dojox.grid.enhanced.plugins.Menu");
 	dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
 	dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");
         dojo.require("dojox.data.CsvStore");
@@ -395,34 +397,34 @@ Please note indirect selection is completely dependent on the selection mode of 
           ];
 
           // create a new grid:
-          var grid2 = new dojox.grid.EnhancedGrid({
+          var grid = new dojox.grid.EnhancedGrid({
               query: { Title: '*' },
               store: store,
               clientSort: true,
               rowSelector: '20px',
               structure: layout,
-              plugins : {dnd: true, indirectSelection: {name: "Selection", width:"70px", styles:"text-align: center;"}}
+              plugins : {nestedSorting: true, dnd: true, indirectSelection: {name: "Selection", width:"70px", styles:"text-align: center;"}}
           }, document.createElement('div'));
 
           // append the new grid to the div "gridContainer4":
-          dojo.byId("gridDiv2").appendChild(grid.domNode);
+          dojo.byId("gridDiv").appendChild(grid.domNode);
 
           // Call startup, in order to render the grid:
-          grid2.startup();
+          grid.startup();
         });
     </script>
 
   .. html::
 
-    <div id="gridDiv2" style="width: 100%; height: 100%;"></div>
+    <div id="gridDiv" style="width: 100%; height: 100%;"></div>
 
   .. css::
 
     <style type="text/css">
         @import "{{ baseUrl }}dojox/grid/resources/Grid.css";
         @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
-  @import "{{ baseUrl }}dojox/grid/enhanced/resources/{{ theme }}EnhancedGrid.css";
-  @import "{{ baseUrl }}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
+		@import "{{ baseUrl }}dojox/grid/enhanced/resources/{{ theme }}EnhancedGrid.css";
+		@import "{{ baseUrl }}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
 
         .dojoxGrid table {
             margin: 0;
