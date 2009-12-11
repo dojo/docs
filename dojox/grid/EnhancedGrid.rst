@@ -27,68 +27,6 @@ EnhancedGrid (dojox.grid.EnhancedGrid) provides a rich set of features that enha
 
 EnhancedGrid features are implemented as plugins which can be loaded on demand. As a result, the required features must first declared before they can be used.
 
-Editor
-
-.. cv-compound::
-
-  .. cv:: javascript
-
-    <script type="text/javascript">
-      dojo.require("dijit.Editor");
-    </script>
-
-  .. cv:: html
-
-      <div dojoType="dijit.Editor" id="editor1" onChange="console.log('editor1 onChange handler: ' + arguments[0])">
-        <p>This instance is created from a div directly with default toolbar and plugins</p>
-      </div>
-
-EnhancedGrid
-
-.. cv-compound::
-
-  .. cv:: javascript
-
-    <script type="text/javascript">
-
-		dojo.require("dojox.grid.DataGrid");
-		dojo.require("dojox.data.CsvStore");
-
-		var layout = [{
-			defaultCell: { width: 8, editable: false, type: dojox.grid.cells._Widget },
-			rows:
-			[
-				{ field: "Genre", width: '6'},
-				{ field: "Artist", width: '10'},
-				{ field: "Year", width: '6'},
-				{ field: "Album", width: '12'},
-				{ field: "Name", width: '17'},
-				{ field: "Length", width: '6'},
-				{ field: "Track", width: '6'},
-				{ field: "Composer", width: '15'}				
-			]}
-		];
-
-		var store = new dojox.data.CsvStore({ url: '{{ baseUrl }}dojox/grid/tests/support/movies.csv' });
-		
-		dojo.addOnLoad(function(){
-			var grid = new dojox.grid.DataGrid({
-				id: "grid3",
-				store: store,
-				structure: layout,
-				rowSelector: '20px',
-				plugins : {nestedSorting: true}
-			}, dojo.byId('gridDiv'));
-			grid.startup();
-		});
-    </script>
-
-  .. cv:: html
-
-      <div id="gridDiv"></div>
-
-Old
-
 .. code-example::
   :toolbar: themes, versions, dir
   :version: local
@@ -106,39 +44,42 @@ Old
 		_dr(module);
 	}
 
-		dojo.require("dojox.grid.cells.dijit");
+	dojo.require("dojox.grid.cells.dijit");
 
-		dojo.require("dojox.grid.EnhancedGrid");
-		dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
-		dojo.require("dojox.data.CsvStore");
+	dojo.require("dojox.grid.EnhancedGrid");
+	dojo.require("dojox.grid.enhanced.plugins.DnD");
+	dojo.require("dojox.grid.enhanced.plugins.Menu");
+	dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
+	dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");
+        dojo.require("dojox.data.CsvStore");
+    
+        dojo.addOnLoad(function(){
+          // our test data store for this example:
+          var store = new dojox.data.CsvStore({ url: '{{ baseUrl }}dojox/grid/tests/support/movies.csv' });
 
-		var layout = [{
-			defaultCell: { width: 8, editable: false, type: dojox.grid.cells._Widget },
-			rows:
-			[
-				{ field: "Genre", width: '6'},
-				{ field: "Artist", width: '10'},
-				{ field: "Year", width: '6'},
-				{ field: "Album", width: '12'},
-				{ field: "Name", width: '17'},
-				{ field: "Length", width: '6'},
-				{ field: "Track", width: '6'},
-				{ field: "Composer", width: '15'}				
-			]}
-		];
+          // set the layout structure:
+          var layout = [
+              { field: 'Title', name: 'Title of Movie', width: '200px' },
+              { field: 'Year', name: 'Year', width: '50px' },
+              { field: 'Producer', name: 'Producer', width: 'auto' }
+          ];
 
-		var store = new dojox.data.CsvStore({ url: '{{ baseUrl }}dojox/grid/tests/support/movies.csv' });
-		
-		dojo.addOnLoad(function(){
-			var grid = new dojox.grid.EnhancedGrid({
-				id: "grid3",
-				store: store,
-				structure: layout,
-				rowSelector: '20px',
-				plugins : {nestedSorting: true}
-			}, dojo.byId('gridDiv'));
-			grid.startup();
-		});
+          // create a new grid:
+          var grid = new dojox.grid.EnhancedGrid({
+              query: { Title: '*' },
+              store: store,
+              clientSort: true,
+              rowSelector: '20px',
+              structure: layout,
+              plugins : {nestedSorting: true, dnd: true, indirectSelection: {name: "Selection", width:"70px", styles:"text-align: center;"}}
+          }, document.createElement('div'));
+
+          // append the new grid to the div "gridContainer4":
+          dojo.byId("gridDiv").appendChild(grid.domNode);
+
+          // Call startup, in order to render the grid:
+          grid.startup();
+        });
     </script>
 
   .. html::
