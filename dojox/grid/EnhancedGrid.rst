@@ -106,6 +106,7 @@ Old
 		// dojo.require("dojox.grid.cells.dijit");
 
 		dojo.require("dojox.grid.EnhancedGrid");
+		dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
 		dojo.require("dojox.data.CsvStore");
 
 		var layout = [{
