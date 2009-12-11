@@ -105,16 +105,16 @@ Old
         dojo.require("dijit._editor.html");
 
         dojo.declare("dijit._editor.RichText", null, {});
-        dojo.require("dijit._editor.RichText");
+        // dojo.require("dijit._editor.RichText");
 
         dojo.require("dijit._Widget");
 
         dojo.require("dijit._Container");
         dojo.require("dijit._KeyNavContainer");
-        // dojo.require("dijit._Templated");
+        dojo.require("dijit._Templated");
 
         dojo.require("dijit.Toolbar");
-        // dojo.require("dijit.Editor");
+        dojo.require("dijit.Editor");
     </script>
 
   .. html::
