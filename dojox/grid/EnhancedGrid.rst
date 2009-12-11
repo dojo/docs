@@ -619,6 +619,9 @@ With this new feature, users can add context menus either through declarative HT
 
 	dojo.require("dojox.grid.EnhancedGrid");
 	dojo.require("dojox.grid.enhanced.plugins.DnD");
+	dojo.require("dojox.grid.enhanced.plugins.Menu");
+	dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
+	dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");
         dojo.require("dojox.data.CsvStore");
     
         dojo.addOnLoad(function(){
@@ -649,7 +652,6 @@ With this new feature, users can add context menus either through declarative HT
           grid.startup();
         });
     </script>
-
 
   .. html::
 
@@ -685,8 +687,8 @@ With this new feature, users can add context menus either through declarative HT
     <style type="text/css">
         @import "{{ baseUrl }}dojox/grid/resources/Grid.css";
         @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
-  @import "{{ baseUrl }}dojox/grid/enhanced/resources/{{ theme }}EnhancedGrid.css";
-  @import "{{ baseUrl }}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
+		@import "{{ baseUrl }}dojox/grid/enhanced/resources/{{ theme }}EnhancedGrid.css";
+		@import "{{ baseUrl }}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
 
         .dojoxGrid table {
             margin: 0;
@@ -698,6 +700,7 @@ With this new feature, users can add context menus either through declarative HT
             margin: 0;
         }
     </style>
+
 
 Usage
 -----
