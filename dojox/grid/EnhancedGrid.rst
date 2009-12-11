@@ -104,10 +104,12 @@ Old
         dojo.require("dijit._editor.range");
         dojo.require("dijit._editor.html");
 
-        dojo.require("dijit._editor.RichText");
+        // dojo.require("dijit._editor.RichText");
 
         dojo.require("dijit._Widget");
-        dojo.require("dijit._KeyNavContainer");
+
+        dojo.require("dijit._Container");
+        // dojo.require("dijit._KeyNavContainer");
         dojo.require("dijit._Templated");
 
         // dojo.require("dijit.Toolbar");
