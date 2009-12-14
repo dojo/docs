@@ -122,7 +122,7 @@ A basic example follows:
 .. code-block :: javascript
  :linenos:
  
- var uploader = new dojox.form.FileUploader(
+ var uploader = new dojox.form.FileUploader({
      hoverClass:"uploadHover",
      activeClass:"uploadBtn",
      pressClass:"uploadPress",
