@@ -128,7 +128,7 @@ A basic example follows:
      pressClass:"uploadPress",
      disabledClass:"uploadDisable",
      uploadUrl:pathToUploadServerScript
- }, "myDiv");
+ }, "btn");
  
 Or, using the same CSS, create it as markup:
 
