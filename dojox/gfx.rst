@@ -1446,7 +1446,7 @@ DOCTYPE
 
 Not all doctypes will work with VML because VML was invented before the doctype, and has for the most part not been updated since.
 
-The following doctype has been shown to work in a majority of cases. The additional styles also help with display problems of some shape types.
+The following doctype has been shown to work in a majority of cases (and may be required for IE8). The additional styles also help with display problems of some shape types.
 
 .. code-block :: html
 
@@ -1460,6 +1460,13 @@ The following doctype has been shown to work in a majority of cases. The additio
     v\:rect, v\:roundrect, v\:line, v\:polyline, v\:curve, v\:arc, v\:oval, v\:image, v\:shape, v\:group, v\:skew, 
     v\:stroke, v\:fill {behavior:url(#default#VML); display:inline-block }
   </style>
+
+NOTE:
+    If IE8 gives you problems (and at the time of this writing, it was broken) you can force the browser to render as IE7 by inserting this in the head:
+
+.. code-block :: html
+ 
+  <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"/>
  
 TODO: To be certain of this doctype fix, it would be good to list a few doctypes that are known to *not* work.
 
