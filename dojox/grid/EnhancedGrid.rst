@@ -157,7 +157,6 @@ The following steps show a typical usage of EnhancedGrid:
       ...>
   </div>
 
-TODO:  Add a live EDG demo here
 
 ==============
 Nested Sorting
@@ -505,7 +504,6 @@ Scenario
 
 * Indirect selection by radio buttons
 
-TODO: use a live demo
 
 .. image:: radio-buttons.png
 
