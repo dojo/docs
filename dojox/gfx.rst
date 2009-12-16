@@ -1440,6 +1440,29 @@ In the example above SVG will be tried first, if it fails Silverlight will be tr
 
 **It is important to note:** there isn't currently a way to include all the required renderers in a single file (such as a layer created by a custom Dojo Build). Not only would the size be prohibitive, each of the renderers re-defining the API would cause severe errors.
 
+=======
+DOCTYPE
+=======
+
+Not all doctypes will work with VML because VML was invented before the doctype, and has for the most part not been updated since.
+
+The following doctype has been shown to work in a majority of cases. The additional styles also help with display problems of some shape types.
+
+.. code-block :: html
+
+  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:v="urn:schemas-microsoft-com:vml"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+ 
+  <style>
+    v\:rect, v\:roundrect, v\:line, v\:polyline, v\:curve, v\:arc, v\:oval, v\:image, v\:shape, v\:group, v\:skew, 
+    v\:stroke, v\:fill {behavior:url(#default#VML); display:inline-block }
+  </style>
+ 
+TODO: To be certain of this doctype fix, it would be good to list a few doctypes that are known to *not* work.
+
 =====
 Demos
 =====
