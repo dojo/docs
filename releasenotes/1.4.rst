@@ -142,7 +142,7 @@ dojo.NodeList-traverse and dojo.NodeList-manipulate
 dojo.position
 -------------
 
-* A new method in Dojo Base (part of dojo.js) that returns the beginning x/y of a DOM node's border-box as well as it's width and height. An optional boolean parameter can be specified to change the default coordinate origin point from the viewport to the document root.
+* A new method in Dojo Base (part of dojo.js) that returns the beginning x/y of a DOM node's border-box as well as its width and height. An optional boolean parameter can be specified to change the default coordinate origin point from the viewport to the document root.
 * See also `dojo.position <dojo/position>`_
 
 dojo.ready
@@ -236,7 +236,7 @@ dijit.Tree
 * Multi-character search. Typing "al" will jump directly to first node starting with "al".
 * new Path and selectedItem attributes to get/set the current tree item (`#9339 <http://bugs.dojotoolkit.org/ticket/9339>`_)
 * Multi-parented items support. Tree can support items with multiple parents, as long as this doesn't cause a loop. (`#9361 <http://bugs.dojotoolkit.org/ticket/9361>`_)
-* Deferred child load option on TreeStoreModel. Option added to deferring calling loadItem() on a data store item until it's children need to be read. Performance boost for JsonRestStore. (`#9575 <http://bugs.dojotoolkit.org/ticket/9575>`_)
+* Deferred child load option on TreeStoreModel. Option added to deferring calling loadItem() on a data store item until its children need to be read. Performance boost for JsonRestStore. (`#9575 <http://bugs.dojotoolkit.org/ticket/9575>`_)
 * getTooltip() method can set tooltip on each tree node
 * onLoad() event when tree is fully loaded
 * autoExpand=true flag to initially expand all nodes in the tree
@@ -258,10 +258,10 @@ dijit.layout.TabContainer / dijit.layout.AccordionContainer
 dijit.layout.ContentPane
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-* ContentPane now acts as a full layout widget, calling resize() on it's child widgets when (not before) it is made visible, avoiding problems with children being initialized while hidden.
+* ContentPane now acts as a full layout widget, calling resize() on its child widgets when (not before) it is made visible, avoiding problems with children being initialized while hidden.
 * Consequently ContentPane now defines isContainer and isLayoutContainer:
-     * isContainer's meaning was widened to include any widget that calls startup() on it's children, not just widgets that extend dijit._Container
-     * isLayoutContainer's meaning was widened to include any widget that calls resize() on it's children, not just widgets that extend dijit.layout._LayoutContainer
+     * isContainer's meaning was widened to include any widget that calls startup() on its children, not just widgets that extend dijit._Container
+     * isLayoutContainer's meaning was widened to include any widget that calls resize() on its children, not just widgets that extend dijit.layout._LayoutContainer
 * Fixes related to resizing and href loading, including avoiding premature href loading for ContentPanes in nested TabContainers
 * See also `dijit.layout.ContentPane <dijit/layout/ContentPane>`_
 
@@ -271,7 +271,7 @@ dijit.form
 onChange event handling
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Most dijit.form widgets fire the onChange event after a value change has been detected. With some widgets, this event fired synchronously before the attr('value',val) returned, while on other widgets, the event was asynchronous. In order to return control to the browser's UI thread sooner, and also to collapse onChange events that fire faster tha the user handler can execute, the events will always fire asynchronously now, and consecutive, unprocessed onChange events will be collapsed into single events. User code that assumed onChange would always fire synchronously after a value change will have to be modified.
+Most dijit.form widgets fire the onChange event after a value change has been detected. With some widgets, this event fired synchronously before the attr('value',val) returned, while on other widgets, the event was asynchronous. In order to return control to the browser's UI thread sooner, and also to collapse onChange events that fire faster than the user handler can execute, the events will always fire asynchronously now, and consecutive, unprocessed onChange events will be collapsed into single events. User code that assumed onChange would always fire synchronously after a value change will have to be modified.
 
 attr("value", val, false)
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -584,4 +584,4 @@ Here are some common issues people have had when upgrading (ie, migrating) from 
 
 1. if your widgets are using templatePath you should ideally update them to use templateString with dojo.cache() instead, or alternately, minimally, make sure that they set templateString to null (to override the templateString setting from a superclass).
 2. ContentPane acts more as a layout widget than before, defining isLayoutContainer: true. This may break some custom subclasses.
-3. the startup code for widgetsInTemplate has changed; if you have a custom widget that manually adds sub-widgets into it's DOM, be sure to add those sub-widgets to this._startupWidgets[] and also this._supportingWidgets[]. Alternately you can set _earlyTemplatedStartup to true to get the 1.3 behavior
+3. the startup code for widgetsInTemplate has changed; if you have a custom widget that manually adds sub-widgets into its DOM, be sure to add those sub-widgets to this._startupWidgets[] and also this._supportingWidgets[]. Alternately you can set _earlyTemplatedStartup to true to get the 1.3 behavior
