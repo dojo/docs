@@ -100,6 +100,34 @@ ValidationTextBox also supports functions that generate regular expressions. Hav
 		invalidMessage="Zip codes after 5, county name before then.">
         <label for="zip2">Also 5-Digit U.S. Zipcode only</label>
 
+==========
+Attributes
+==========
+
+The following attributes can be specified when you create a ValidationTextBox.
+
+:required:
+    Whether the field is required or not. false by default.
+:promptMessage:
+    Tooltip text that appears when the text box is on focus. Null by default.
+:invalidMessage:
+    Tooltip text that appears when the content of the text box is invalid. Null by default. 
+:constraints:
+    TBC.
+:regExp:
+    Regular expression pattern to be used for validation. If this is used, do not use regExpGen.
+:regExpGen:
+    TBC. If this is used, do not use regExp.
+:tooltipPosition:
+    Define where Tooltip will appear.
+:isValid():
+    Method that calls validator function.
+:validator():
+    Method that determines whether the content of the text box is valid. Called at these events: onblur, oninit, onkeypress.
+:displayMessage():
+    Method that displays validation errors or prompt messages. Uses dijit.Tooltip by default.
+
+
 =============
 Accessibility
 =============
