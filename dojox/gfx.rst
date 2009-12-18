@@ -3,8 +3,6 @@
 dojox.gfx
 =========
 
-:Status: Draft
-:Version: beta
 :Authors: Eugene Lazutkin, Kun Xi, Chris Mitchell
 
 .. contents::
