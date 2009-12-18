@@ -3,8 +3,6 @@
 dojox.grid.EnhancedGrid
 =======================
 
-:Status: Draft
-:Version: Experimental
 :Project owner: Nathan Toone
 :Available: since V.1.4
 
