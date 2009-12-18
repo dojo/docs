@@ -18,8 +18,6 @@ A ValidationTextBox is an <input>-like widget that checks to make sure the user'
 
 Note that a ValidationTextBox by itself *will not* prevent invalid entries from submission. To ensure they're not, simply surround your form with a `dijit.form.Form <dijit.form.Form>`_ widget.
 
-ValidationTextBox (and the widgets that extend it) also provide  the ability to display a "promptMessage", a tooltip that appears whenever the field is empty.
-
 
 =====
 Usage
@@ -31,7 +29,7 @@ The following attributes can be specified when you create a ValidationTextBox:
 Parameter        Type           Description
 ===============  =============  ======================================================================
 required                        Whether the field is required or not. false by default.
-promptMessage                   Tooltip text that appears when the text box is on focus. Null by default.
+promptMessage                   Tooltip text that appears when the text box is empty and on focus. Null by default.
 invalidMessage                  Tooltip text that appears when the content of the text box is invalid. Null by default. 
 constraints                     TBC.
 regExp                          Regular expression pattern to be used for validation. If this is used, do not use regExpGen.
@@ -39,11 +37,13 @@ regExpGen                       TBC. If this is used, do not use regExp.
 tooltipPosition                 Define where Tooltip will appear.
 ===============  =============  ======================================================================
 
-:isValid():
+Methods:
+
+isValid()
     Method that calls validator function.
-:validator():
+validator()
     Method that determines whether the content of the text box is valid. Called at these events: onblur, oninit, onkeypress. See also: `tips <dijit/form/ValidationTextBox-tricks>`_.
-:displayMessage():
+displayMessage()
     Method that displays validation errors or prompt messages. Uses dijit.Tooltip by default.
 
 
