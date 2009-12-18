@@ -83,6 +83,12 @@ There are currently a small set of nice features that can be plugged into the di
   
   **This plugin is new to the Dojo Toolkit 1.4.**
 
+* `dojox.editor.plugins.CollapsibleToolbar <dojox/editor/plugins/CollapsibleToolbar >`_ -- **STABLE**
+
+  A plugin that modifies the header of the grid and converts it to a collapsible toolbar.  This plugin has been well tested and is known to work well in all browsers supported by dojo.
+  
+  **This plugin is new to the Dojo Toolkit 1.5.**
+
 ========
 See Also
 ========
