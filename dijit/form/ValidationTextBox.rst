@@ -3,10 +3,8 @@
 dijit.form.ValidationTextBox
 ============================
 
-:Status: Draft
-:Version: 1.3
 :Authors: Becky Gibson, Doug Hays, Bill Keese, Craig Riecke
-:Developers: Doug Hays, Bill Keese
+:Project owners: Doug Hays, Bill Keese
 :Available: since V1.0
 
 .. contents::
@@ -22,7 +20,32 @@ Note that a ValidationTextBox by itself *will not* prevent invalid entries from 
 
 ValidationTextBox (and the widgets that extend it) also provide  the ability to display a "promptMessage", a tooltip that appears whenever the field is empty.
 
-Tips, tricks and edge cases for ValidationTextBox are documented in `here <dijit/form/ValidationTextBox-tricks>`_.
+
+=====
+Usage
+=====
+
+The following attributes can be specified when you create a ValidationTextBox:
+
+===============  =============  ======================================================================
+Parameter        Type           Description
+===============  =============  ======================================================================
+required                        Whether the field is required or not. false by default.
+promptMessage                   Tooltip text that appears when the text box is on focus. Null by default.
+invalidMessage                  Tooltip text that appears when the content of the text box is invalid. Null by default. 
+constraints                     TBC.
+regExp                          Regular expression pattern to be used for validation. If this is used, do not use regExpGen.
+regExpGen                       TBC. If this is used, do not use regExp.
+tooltipPosition                 Define where Tooltip will appear.
+===============  =============  ======================================================================
+
+:isValid():
+    Method that calls validator function.
+:validator():
+    Method that determines whether the content of the text box is valid. Called at these events: onblur, oninit, onkeypress. See also: `tips <dijit/form/ValidationTextBox-tricks>`_.
+:displayMessage():
+    Method that displays validation errors or prompt messages. Uses dijit.Tooltip by default.
+
 
 ========
 Examples
@@ -102,33 +125,6 @@ ValidationTextBox also supports functions that generate regular expressions. Hav
 		invalidMessage="Zip codes after 5, county name before then.">
         <label for="zip2">Also 5-Digit U.S. Zipcode only</label>
 
-==========
-Attributes
-==========
-
-The following attributes can be specified when you create a ValidationTextBox.
-
-:required:
-    Whether the field is required or not. false by default.
-:promptMessage:
-    Tooltip text that appears when the text box is on focus. Null by default.
-:invalidMessage:
-    Tooltip text that appears when the content of the text box is invalid. Null by default. 
-:constraints:
-    TBC.
-:regExp:
-    Regular expression pattern to be used for validation. If this is used, do not use regExpGen.
-:regExpGen:
-    TBC. If this is used, do not use regExp.
-:tooltipPosition:
-    Define where Tooltip will appear.
-:isValid():
-    Method that calls validator function.
-:validator():
-    Method that determines whether the content of the text box is valid. Called at these events: onblur, oninit, onkeypress. See also: `tips <dijit/form/ValidationTextBox-tricks>`_.
-:displayMessage():
-    Method that displays validation errors or prompt messages. Uses dijit.Tooltip by default.
-
 
 =============
 Accessibility
@@ -150,3 +146,9 @@ Known Issues
 Sometimes the popup message supplied by invalidMessage attribute may be unnecessary. For example, omitting a required field already displays an icon when the cursor leaves the field. In these cases you can omit the "invalidMessage" parameter, but keep in mind that good labels and instructions are still necessary for accessibility, i.e. if the invalid popup will not be displayed then there must be clear instructional text indicating the field is required.
 
 As of the Dojo 1.0 release and beyond: Window-Eyes 6.1 speaks "read only" for fields that have been marked with the ARIA property invalid=true even though the field is still editable.
+
+========
+See also
+========
+
+* `Tips, tricks and edge cases for dijit.form.ValidationTextBox <dijit/form/ValidationTextBox-tricks>`_.
