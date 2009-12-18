@@ -1,23 +1,20 @@
 #format dojo_rst
 
+dojox.form.FileUploader
+=======================
 
-:Status: Up to date
-:Version: 1.4
 :Project owner: Mike Wilcox
 :Author: Mike Wilcox
 :Available: since 1.1
 
 .. contents::
   :depth: 3
-  
-=======================
-dojox.form.FileUploader
-=======================
-
-Basic Description
------------------
 
 Handles multiple file uploading to a server. 
+
+=====
+Usage
+=====
 
 CDN Note
 --------
