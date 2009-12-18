@@ -4,9 +4,7 @@
 dojo.NodeList
 =============
 
-:Status: Draft
-:Version: 1.0
-:Available: since Version 0.9
+:Available: since V 0.9
 
 .. contents::
     :depth: 2
