@@ -3,10 +3,8 @@
 Dojo Build System
 =================
 
-:Status: Draft
-:Version: 1.0
-:Project owner: (docs) Scott Jenkins
-:Available: since 1.0
+:Authors: Scott Jenkins
+:Available: since V1.0
 
 .. contents::
    :depth: 3
