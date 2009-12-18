@@ -170,10 +170,10 @@ There's always things that can be done to improve the LightboxNano. Here's a cou
 * Add support for displaying a caption.
 * Add support for dojox.embed to play Flash or Quicktime movies.
 
-======================
-Additional Information
-======================
+========
+See also
+========
 
-Further information can be found here: http://www.cb1inc.com/category/general/lightboxnano
+* Further information can be found here: http://www.cb1inc.com/category/general/lightboxnano
 
-The test file can be found here: http://www.cb1inc.com/dojo-1.2/dojox/image/tests/test_LightboxNano.html
+* The test file can be found here: http://www.cb1inc.com/dojo-1.2/dojox/image/tests/test_LightboxNano.html
