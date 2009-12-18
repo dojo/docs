@@ -3,9 +3,7 @@
 dojo.NodeList.removeAttr
 ========================
 
-:Status: Final
-:Version: 1.0
-:Available: since 1.4
+:Available: since V1.4
 
 .. contents::
    :depth: 2
