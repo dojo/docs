@@ -3,10 +3,8 @@
 dojox.data.JsonRestStore
 ========================
 
-:Status: Draft
-:Version: 1.0
 :Authors: Kris Zyp
-:Developers: Kris Zyp
+:Project owner: Kris Zyp
 :Available: since V1.2
 
 .. contents::
@@ -53,6 +51,7 @@ Features
 
 8. Works directly with all current data bound widgets in dijit, including `dijit.Tree <dijit/Tree>`_, `dijit.form.ComboButton <dijit/form/ComboButton>`_, and as well `dojox.grid <dojox/grid>`_.
 
+
 =====
 Usage
 =====
@@ -95,12 +94,12 @@ syncMode
 Examples
 ========
 
-
 .. code-block :: javascript
 
  store = new dojox.data.JsonRestStore({target:"/Table/", idAttribute:"id"});
  ... or ...
  store = new dojox.data.JsonRestStore({service:myService, syncMode: true});
+
 
 ====================
 JsonRestStore + Grid
@@ -122,9 +121,11 @@ The Dojo Grid is designed to work with the Dojo Data API, so the JsonRestStore c
 
 Now we have grid that connected to our store and when you edit data in the grid the changes are automatically sent back to the store.
 
+
 ==========================
 Implementing a REST Server
 ==========================
+
 The JsonRestStore follows RFC 2616 (http://www.ietf.org/rfc/rfc2616.txt) whenever possible to define to interaction with server. JsonRestStore uses an HTTP GET request to retrieve data, a PUT request to change items, a DELETE request to delete items, and a POST request to create new items. It is recommended that the server follow a URL structure for resources:
 
  /{Table}/{id}
@@ -138,6 +139,7 @@ When creating new items, the JsonRestStore will POST to the target URL for the s
 The server can also assign or change properties of the object (such an id or default values) in the response to a POST (or any other request), by simply returning the updated JSON representation of the item in the body of the response.
 
 Note that in PHP, sometimes setting the Location will erroneously trigger a 302 status code which will cause JsonRestStore to fail. Per RFC 2616, the correct response to a POST that creates a new resource is to return a 201 status code with the Location header. In PHP, you must set the status code as well as the Location header if you want to avoid a 302 response.
+
 
 ======
 Paging
@@ -159,6 +161,7 @@ Transactions
 JsonRestStore provides transaction state information so that servers can implement transactions that correspond to the Dojo Data it saves if desired (this is not necessary for a server to implement in order to support REST). Transactions are indicated by a X-Transaction header in the modifications requests. If the X-Transaction header has a value of open, this means that further requests will be delivered that should be included in the current transaction. Once a request is received without an X-Transaction header of open, the server can commit all the changes from the current request and the previous requests that indicated an open transaction. It is recommended that you utilize deterministic request ordering and page sessions if you implement JsonRestStore directed transactions on the server.
 
 JsonRestStore also features a shared repository of transactional data between all JsonRestStore instances. Therefore, if you save a change, all the JsonRestStore data store’s unsaved data will be committed. This means that you don’t have to track which data stores have modified data, and it also means that you transactions can involve modifications across multiple data stores and corresponding server tables.
+
 
 ========
 See also
