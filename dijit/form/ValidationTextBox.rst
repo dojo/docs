@@ -22,6 +22,8 @@ Note that a ValidationTextBox by itself *will not* prevent invalid entries from 
 
 ValidationTextBox (and the widgets that extend it) also provide  the ability to display a "promptMessage", a tooltip that appears whenever the field is empty.
 
+Tips, tricks and edge cases for ValidationTextBox are documented in `here <dijit/form/ValidationTextBox-tricks>`_.
+
 ========
 Examples
 ========
@@ -123,7 +125,7 @@ The following attributes can be specified when you create a ValidationTextBox.
 :isValid():
     Method that calls validator function.
 :validator():
-    Method that determines whether the content of the text box is valid. Called at these events: onblur, oninit, onkeypress.
+    Method that determines whether the content of the text box is valid. Called at these events: onblur, oninit, onkeypress. See also: `tips <dijit/form/ValidationTextBox-tricks>`_.
 :displayMessage():
     Method that displays validation errors or prompt messages. Uses dijit.Tooltip by default.
 
