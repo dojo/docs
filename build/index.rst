@@ -3,7 +3,7 @@
 Dojo Build System
 =================
 
-:Authors: Peter Higgins, Scott Jenkins, Alex Russell
+:Authors: James Burke, Peter Higgins, Scott Jenkins, Alex Russell, Josh Trutwin
 :Available: since V1.0
 
 .. contents::
