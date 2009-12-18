@@ -3,9 +3,7 @@
 dojo.attr
 =========
 
-:Status: Final
-:Version: 1.0
-:Available: since 1.2
+:Available: since V1.2
 
 .. contents::
    :depth: 2
