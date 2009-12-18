@@ -3,8 +3,6 @@
 dojox.data.CsvStore
 ===================
 
-:Status: Contributed, Draft
-:Version: 1.0
 :Author: Jared Jurkiewicz
 :Available: since V1.0
 
