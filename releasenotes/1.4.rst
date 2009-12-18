@@ -502,9 +502,23 @@ dojox.html.format
 dojox.image
 -----------
 
+dojox.image.Lightbox
+~~~~~~~~~~~~~~~~~~~~
+
 * Significant fixes and improvements in dojox.image.Lightbox. see: `[17205] <http://bugs.dojotoolkit.org/changeset/17205>`_
+* See also `dojox.image.Lightbox <dojox/image/Lightbox>`_
+
+dojox.image.SlideShow
+~~~~~~~~~~~~~~~~~~~~~
+
 * Bug fixes for dojox.image.SlideShow to deal with autoLoad and autoStart issues. see `[20285] <http://bugs.dojotoolkit.org/changeset/20285>`_
+* See also `dojox.image.SlideShow <dojox/image/SlideShow>`_
+
+dojox.image.LightboxNano
+~~~~~~~~~~~~~~~~~~~~~~~~
+
 * Extended the dojox.image.LightboxNano to show more than one image with a single LBN instance.
+* See also `dojox.image.LightboxNano <dojox/image/LightboxNano>`_
 
 dojox.jq
 --------
