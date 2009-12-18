@@ -62,7 +62,7 @@ You also need to include the CSS for it.  For example:
   </style>
 
 
-And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the CollaspibleToolbar plugin!  You can click the collapse icon to collapse the toolbar, and the expand icon to bring it back
+And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the CollapsibleToolbar plugin!  You can click the collapse icon to collapse the toolbar, and the expand icon to bring it back
 
 ========
 Examples
