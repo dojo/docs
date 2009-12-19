@@ -3,11 +3,8 @@
 dojox.editor.plugins.PrettyPrint
 ================================
 
-:Status: Draft
-:Version: 1.0
-:Project Owner: Jared Jurkiewicz
+:Project owner: Jared Jurkiewicz
 :Authors: Jared Jurkiewicz
-:Developers: Jared Jurkiewicz
 :Available: since V1.4
 
 .. contents::
@@ -204,8 +201,6 @@ Configured indent and line length
     <br>
     <textarea style="width: 100%; height: 100px;" id="output" readonly="true">
     </textarea>
-
-
 
 
 ========
