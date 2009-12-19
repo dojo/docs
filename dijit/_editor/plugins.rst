@@ -3,8 +3,6 @@
 dijit.editor.plugins
 ====================
 
-:Status: Draft
-:Version: 1.0
 :Project owner: Bill Keese
 :Available: since V1.0
 
