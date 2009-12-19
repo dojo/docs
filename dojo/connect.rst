@@ -41,7 +41,7 @@ Usage
 =========  ===============  ==================================================
 Parameter  Type             Description
 =========  ===============  ==================================================
-obj        Object|null      The source object for the event function. Defaults to <code>dojo.global</code> if null. If obj is a DOM node, the connection is delegated to the DOM event manager (unless dontFix is true).
+obj        Object|null      The source object for the event function. Defaults to dojo.global if null. If obj is a DOM node, the connection is delegated to the DOM event manager (unless dontFix is true).
 event      String           name of the event function in obj. I.e. identifies a property obj[event].
 context    Object|null      The object that method will receive as "this". If context is null and method is a function, then method inherits the context of event. If method is a string then context must be the source object object for method (context[method]). If context is null, dojo.global is used.
 method     String|Function  A function reference, or name of a function in context. The function identified by method fires after event does. method receives the same arguments as the event. See context argument comments for information on method's scope.
