@@ -3,10 +3,7 @@
 JavaScript events and Dojo
 ==========================
 
-:Status: Draft
-:Version: 1.0
 :Authors: Matt Bowen, Peter Higgins, Bill Keese, Nikolai Onken
-:Developers: Scott Miles etc.
 :Available: since V0.9
 
 .. contents::
