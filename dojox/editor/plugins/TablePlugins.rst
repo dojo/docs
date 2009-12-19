@@ -3,10 +3,7 @@
 dojox.editor.plugins.TablePlugins
 =================================
 
-:Status: Contributed, Draft
-:Version: 1.2
 :Author: Mike Wilcox
-
 
 A series of plugins that give the Editor the ability to create and edit HTML tables. The list of Table Plugins are:
  - Insert Table 
@@ -22,6 +19,7 @@ A series of plugins that give the Editor the ability to create and edit HTML tab
 
 Any or all of the plugins may be used, although they tend to work together so it would usually be all of them with the exception of the Table Contextmenu which adds right-click functionality to a table and could be used alone with Insert Table.
 
+=======
 Example
 =======
 
@@ -78,6 +76,3 @@ Although the code for the Editor is complex, it is quite simple to implement:
       </table> 
     </div>
     </div>
-
-
-That's it.
