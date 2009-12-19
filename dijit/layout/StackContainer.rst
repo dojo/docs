@@ -3,9 +3,7 @@
 dijit.layout.StackContainer
 ===========================
 
-:Status: Draft
-:Version: 1.0
-:Available: since 1.0
+:Available: since V1.0
 
 .. contents::
     :depth: 2
@@ -139,9 +137,9 @@ Here you will see a declaratively created StackContainer
 
   .. cv:: html
 
-    <button id="previous" onClick="dijit.byId('stackContainer').back()" dojoType="dijit.form.Button"><</button>
+    <button id="previous" onClick="dijit.byId('stackContainer').back()" dojoType="dijit.form.Button"></button>
     <span dojoType="dijit.layout.StackController" containerId="stackContainer"></span>
-    <button id="next" onClick="dijit.byId('stackContainer').forward()" dojoType="dijit.form.Button">></button>
+    <button id="next" onClick="dijit.byId('stackContainer').forward()" dojoType="dijit.form.Button"></button>
   
     <div dojoType="dijit.layout.StackContainer" id="stackContainer">
       <div dojoType="dijit.layout.ContentPane" title="Questions">
