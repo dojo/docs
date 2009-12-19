@@ -4,8 +4,6 @@
 dojo.connect
 ============
 
-:Status: Draft
-:Version: 1.0
 :Project owner: ?--
 :Available: since V?
 
@@ -38,7 +36,17 @@ Usage
 
 .. code-block :: javascript
   
-  dojo.connect(obj: Object, event: String, context: Object, method: String|Function, dontFix: Boolean);
+  dojo.connect(obj, event, context, method, dontFix);
+
+=========  ===============  ==================================================
+Parameter  Type             Description
+=========  ===============  ==================================================
+obj        Object|null      The source object for the event function. Defaults to <code>dojo.global</code> if null. If obj is a DOM node, the connection is delegated to the DOM event manager (unless dontFix is true).
+event      String           name of the event function in obj. I.e. identifies a property obj[event].
+context    Object|null      The object that method will receive as "this". If context is null and method is a function, then method inherits the context of event. If method is a string then context must be the source object object for method (context[method]). If context is null, dojo.global is used.
+method     String|Function  A function reference, or name of a function in context. The function identified by method fires after event does. method receives the same arguments as the event. See context argument comments for information on method's scope.
+dontFix    Boolean          Optional. If obj is a DOM node, set dontFix to true to prevent delegation of this connection to the DOM event manager.
+=========  ===============  ==================================================
 
 
 ========
