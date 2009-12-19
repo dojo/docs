@@ -3,10 +3,8 @@
 dojox.editor.plugins.CollapsibleToolbar
 =======================================
 
-:Status: Draft
-:Version: 1.0
 :Authors: Jared Jurkiewicz
-:Developers: Jared Jurkiewicz
+:Project owner: Jared Jurkiewicz
 :Available: since V1.4
 
 .. contents::
