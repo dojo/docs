@@ -66,9 +66,10 @@ The PrettyPrint plugin supports three options that control how it formats the te
 |                                   |document.  Must be non-negative.  If negative, null, or undefined,   |                        |
 |                                   |then the line has no maximum length and will not be split into       |                        |
 |                                   |multiple lines.   Note that lineLength does not take into account    |                        |
-|                                   |current indention.  Also, it splints at the next available whitespace|                        |
+|                                   |current indention.  Also, it splits at the next available whitespace |                        |
 |                                   |past the denoted split point, so lines will often be slightly longer |                        |
-|                                   |than specified.                                                      |                        |
+|                                   |than specified.  This is to handle cases were an entire word could be|                        |
+|                                   |longer than lineLength.  Counting backwards would not work.          |                        |
 +-----------------------------------+---------------------------------------------------------------------+------------------------+
 | entityMap                         |An array of entity character mappings to encode special characters to| NO                     |
 |                                   |If not provided, then it uses the the following encodings for        |                        |
