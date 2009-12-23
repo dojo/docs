@@ -540,4 +540,3 @@ See Also
 ========
 
 * There's a `DropDown Select <dojox/form/DropDownSelect>`_ widget in the `dojox.form <dojox/form>`_ project that's similar to FilteringSelect but without the search ability. It can support rich text in both the drop down and in a closed state (to display the selected item).
-* For further examples ( including how to set a sort order ) see the tests page for this dijit here : http://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/form/_autoComplete.html?testWidget=dijit.form.FilteringSelect 
