@@ -132,3 +132,11 @@ While you can use `dojo.create <dojo/create>`_ to set attributes on the existing
   // duplicating the next line with dojo.attr()
   //var n = dojo.create(node, { innerHTML: "<p>hi</p>" });
   var n = dojo.attr(node, { innerHTML: "<p>hi</p>" });
+
+========
+See also
+========
+
+* `dojo.destroy <dojo/destroy>`_
+* `dojo.empty <dojo/empty>`_
+* `DOM Utilities <quickstart/dom>`_
