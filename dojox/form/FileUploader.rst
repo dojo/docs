@@ -249,6 +249,8 @@ The FileUploader has many advanced properties to handle most situations.
 
 **postData**: The data that will be sent via POST to the server along with the uploaded files. This data object can bet set on instantiation, and the data will be sent to the server with each file on every upload. You can also pass postData in the upload method as an object argument which can be different with each upload.
 
+Note: as of 1.4.0 there is a bug: http://bugs.dojotoolkit.org/ticket/10559 where postData is not being sent for flash based uploaders where uploadOnChange is also true.
+
 **htmlFieldName**: The name of the field of the fileInput that the server is expecting. See "Server Side Code" below.
 
 **flashFieldName**: The name of the field of the flash uploaded files that the server is expecting. See "Server Side Code" below.
