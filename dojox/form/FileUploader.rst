@@ -208,6 +208,8 @@ Use *dojo.connect* to connect to the *onChange*, *onProgress* and *onComplete* m
 
 Use *upload* to initiate the upload after files have been selected. Or set *uploadOnChange* to true to initiate upload automatically after the selection.
 
+Note that the "dataArray" param above is always an array, even if selectMultipleFiles is set to false.  
+
 Updated: Be careful not to construct the connect so that it sends a mouse event to the upload method (as this example used to do). The upload method expects no arguments or one argument to use as postData. The mouse event will be treated as postData and throw an error. This is fixed in the trunk but exists in 1.32.
 
 .. code-block :: javascript
@@ -394,6 +396,15 @@ The return string with an error might look like:
  :linenos:
 
  "file=uploaded/PIC01.jpg,name=PIC01.jpg,width=320,height=240,type=jpg,error=Not recognized file type"
+
+You can also send back arbitrary parameters from your server-side script in the comma-delimitted format described below.  For example, adding variables foo and abc:
+
+.. code-block :: text
+ :linenos:
+
+ "file=uploaded/PIC01.jpg,name=PIC01.jpg,width=320,height=240,type=jpg,foo=bar,abc=123"
+
+Then you can access these variables in the client-side functions using dataArray[i].additionalParams.foo and dataArray[i].additionalParams.abc.
 
 If *htmlFieldName* is used, the code on the client side gets pretty tricky, as an iframe is necessary for the file-post, and reading back from that iframe presents problems. In order to read the iframe return data accurately cross browser, the code needs to be wrapped in a *<textarea>*. You can see the code for this on the very last line of UploadFiles.php. Note that the textarea needs to be outside of the PHP. Example:
 
