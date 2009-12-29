@@ -133,4 +133,5 @@ See also
 ========
 
 * `dojo.empty <dojo/empty>`_
+* `dojo.create <dojo/create>`_
 * `DOM Utilities <quickstart/dom>`_
