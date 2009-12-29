@@ -397,7 +397,7 @@ The return string with an error might look like:
 
  "file=uploaded/PIC01.jpg,name=PIC01.jpg,width=320,height=240,type=jpg,error=Not recognized file type"
 
-You can also send back arbitrary parameters from your server-side script in the comma-delimitted format described below.  For example, adding variables foo and abc:
+You can also send back arbitrary parameters from your server-side script using this comma-delimitted format.  For example, adding variables foo and abc:
 
 .. code-block :: text
  :linenos:
