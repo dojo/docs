@@ -1,6 +1,6 @@
 #format dojo_rst
 
-dojo.queryToObject
+dojo.objectToQuery
 ==================
 
 :Status: Draft
