@@ -22,7 +22,7 @@ A Dojo custom build speeds performance by doing the following:
 
 #. First, it groups together modules into ''layers''.  A layer, which is one big .js file, loads faster than the individual .js modules that comprise it
 #. Second, it ''interns'' external non-JavaScript files.  This is most important for Dijit templates, which are kept in a separate HTML file.  Interning pulls the entire file in and assigns it to a string.
-#. Third, it smooshes the layer down with ShrinkSafe.  ShrinkSafe removes unneeded whitepsace and comments, and compacts variable names down to smaller ones.  This file downloads and parses faster than the original.
+#. Third, it smooshes the layer down with ShrinkSafe.  ShrinkSafe removes unneeded whitespace and comments, and compacts variable names down to smaller ones.  This file downloads and parses faster than the original.
 #. Finally, it copies all non-layered scripts to the appropriate places.  While this doesn't speed anything up, it ensures that all Dojo modules can be loaded, even if not present in a layer.  If you use a particular module only once or twice, keeping it out of the layers makes those layers load faster.
 
 The catch?  You have to designate the modules in each layer with a ''profile'', which is something like a Makefile or Ant script.  But that's not too hard if you know your app well.
