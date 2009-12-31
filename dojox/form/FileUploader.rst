@@ -408,6 +408,8 @@ You can also send back arbitrary parameters from your server-side script using t
 
 Then you can access these variables in the client-side functions using dataArray[i].additionalParams.foo and dataArray[i].additionalParams.abc.
 
+Note: there is an open ticket http://bugs.dojotoolkit.org/ticket/10576 - when the uploader is set/forced to HTML mode, additionalParams is not created on the client side.  
+
 If *htmlFieldName* is used, the code on the client side gets pretty tricky, as an iframe is necessary for the file-post, and reading back from that iframe presents problems. In order to read the iframe return data accurately cross browser, the code needs to be wrapped in a *<textarea>*. You can see the code for this on the very last line of UploadFiles.php. Note that the textarea needs to be outside of the PHP. Example:
 
 .. code-block :: html
