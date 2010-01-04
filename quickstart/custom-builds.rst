@@ -213,6 +213,7 @@ How to use xdomain builds in web pages
 
 * In **djConfig**, add **useXDomain = true**.
 * In **djConfig**, add a modulePaths object that maps where to find your modules.
+* **Only use dojo.require()** to load xdomain layers. Do not reference the .xd.js file for the layer file. The one exception is dojo.xd.js. If your layer does not map to a real module name, then specify a resourceName: property for that layer in your build profile. The other option is to load the built .js file (not .xd.js file) in a script tag.
 * Register a callback function to get notification of when the packages are loaded by using **dojo.addOnLoad()**.
 * Optional: set a wait time in milliseconds (**djConfig.xdWaitSeconds**) that specifies how long the resource loader should wait for a resource to load until returning an error. Since script elements do not give information about failed or long-running requests, this timeout is used to prevent infinite waiting in the browser. An exception will be thrown to indicate a load error. The default xdWaitSeconds is 15.
 
