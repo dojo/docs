@@ -344,6 +344,10 @@ dijit.WidgetSet enhancements
 * forEach, some, every, filter and map now accept a 'thisObj' as second or third param (after callback)
 
 
+dijit.popup
+~~~~~~~~~~~
+dijit.popup.prepare() was renamed to moveOffScreen() for clarity about what the function actually does.
+ 
 =====
 DojoX
 =====
