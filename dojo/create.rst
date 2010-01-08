@@ -8,13 +8,27 @@ dojo.create
 .. contents::
    :depth: 2
 
-A convenient DOM creation, manipulation and placement utility shorthand. It is designed to simplify the frequently used sequence of DOM manipulation: create a node, set attributes on it, and place it in the DOM. It can be used with existing nodes too, if you want to assign new attributes and place it afterwards.
+A convenient DOM creation, manipulation and placement utility shorthand. 
+
+
+============
+Introduction
+============
+
+dojo.create() is designed to simplify the frequently used sequence of DOM manipulation: 
+
+* create a node, 
+* set attributes on it, 
+* and place it in the DOM. 
+
+It can be used with existing nodes too, if you want to assign new attributes and place it afterwards.
 
 To see this utility in context, read the `DOM Quick Start <quickstart/dom>`_ first.
 
-========
-Overview
-========
+
+=====
+Usage
+=====
 
 The function takes up to four arguments:
 
@@ -22,27 +36,39 @@ dojo.create(tag, attrs, refNode, pos);
 
 Here is the definition of arguments:
 
-tag
-  Can be a string or a DOM node. If it is a string, it will be treated as a node tag name, which will be used to create a new node.
+=========  ===========  =======================================================
+Parameter  Type         Description
+=========  ===========  =======================================================
+tag        String|Node  Can be a string or a DOM node. If it is a string, it 
+                        will be treated as a node tag name, which will be used 
+                        to create a new node.
+                        When creating a node the owner document of ``refNode`` 
+                        is used. If ``refNode`` is ``null`` or unspecified, 
+                        `dojo.doc <dojo/doc>`_ is used.
+attrs      Object|null  A dictionary of attributes to be set on ``node``. 
+                        This parameter is passed to `dojo.attr <dojo/attr>`_ 
+                        unmodified after the node is created.
+                        Can be ``null`` or undefined meaning 
+                        "don't set any attributes". You should always specify 
+                        it explicitly (as ``null``) if you want to specify 
+                        the rest of arguments.
+refNode    String|null  A string (interpreted as an id of a DOM node) or 
+                        a DOM node. This parameter is passed to 
+                        `dojo.place <dojo/place>`_ unmodified after the node is 
+                        created, and attributes are set.
+                        Can be omitted meaning "don't place the node".
+pos        String|null  Optional argument. Can be a number or one of the 
+                        following strings: "before", "after", "replace", "only", 
+                        "first", or "last". If omitted, "last" is assumed. 
+                        This parameter is passed to `dojo.place <dojo/place>`_ 
+                        unmodified after the node is created, and attributes 
+                        are set. Please see `dojo.place <dojo/place>`_ 
+                        for more details and examples.
+=========  ===========  =======================================================
 
-  Notes:
-
-  - When creating a node the owner document of ``refNode`` is used. If ``refNode`` is ``null`` or unspecified, ``dojo.doc`` is used.
-
-attrs
-  A dictionary of attributes to be set on ``node``. This parameter is passed to `dojo.attr <dojo/attr>`_ unmodified after the node is created.
-
-  Can be ``null`` or undefined meaning "don't set any attributes". You should always specify it explicitly (as ``null``) if you want to specify the rest of arguments.
-
-refNode
-  A string (interpreted as an id of a DOM node) or a DOM node. This parameter is passed to `dojo.place <dojo/place>`_ unmodified after the node is created, and attributes are set.
-
-  Can be omitted meaning "don't place the node".
-
-pos
-  Optional argument. Can be a number or one of the following strings: "before", "after", "replace", "only", "first", or "last". If omitted, "last" is assumed. This parameter is passed to `dojo.place <dojo/place>`_ unmodified after the node is created, and attributes are set. Please see `dojo.place <dojo/place>`_ for more details and examples.
 
 The function returns a DOM node it created with ``tag`` or the first argument, if it was a DOM node.
+
 
 ========
 Examples
