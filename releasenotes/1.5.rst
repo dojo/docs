@@ -14,6 +14,8 @@ Dojo Core
 Dijit
 =====
 
+_CssStateMixin: new mixin for widgets that set CSS classes on their nodes depending on hover/active/focused state, and also semantic state (checked, selected, disabled, etc.)
+
 =====
 DojoX
 =====
