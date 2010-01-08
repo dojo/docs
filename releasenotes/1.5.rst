@@ -6,4 +6,19 @@ Dojo 1.5 Release Notes (in progress)
 .. contents::
    :depth: 3
 
-Nothing to see here yet, will be filled in as 1.5 work progresses.
+=========
+Dojo Core
+=========
+
+=====
+Dijit
+=====
+
+=====
+DojoX
+=====
+
+Editor
+------
+
+- Smiley plugin (existed in 1.4 but wasn't working; now it does)
