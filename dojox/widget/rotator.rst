@@ -22,6 +22,10 @@ Here is an up to date list of dojox.widget.rotator components:
 
   A controller that manipulates a Rotator or AutoRotator.
 
+* `dojox.widget.rotator.ThumbnailController <dojox/widget/rotator/ThumbnailController>`_
+
+  A rotator controller that displays thumbnails of each rotator pane.
+
 * `dojox.widget.rotator.Fade <dojox/widget/rotator/Fade>`_
 
   Provides fading and crossfading transitions for Rotators.
