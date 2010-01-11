@@ -41,7 +41,7 @@ Usage of this plugin is quite simple and painless.  The first thing you need to 
 .. code-block :: javascript
  
     dojo.require("dijit.Editor");
-    dojo.require("dojox.editor.plugins.CollapsibleToolbat");
+    dojo.require("dojox.editor.plugins.CollapsibleToolbar");
 
 
 Once it has been required in, all you have to do is include it in the list of extraPlugins as the first plugin (or the first plugin of the plugins property if you're reorganizing the toolbar) to enable it in your editor instance.  For example:
