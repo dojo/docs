@@ -10,17 +10,17 @@ dojox.widget.rotator.ThumbnailController
 .. contents::
    :depth: 2
 
-A controller that manipulates a `dojox.widget.Rotator <dojox/widget/Rotator>`_ or `dojox.widget.AutoRotator <dojox/widget/AutoRotator>`_.
+A controller that manipulates a `dojox.widget.Rotator <dojox/widget/Rotator>`_ or `dojox.widget.AutoRotator <dojox/widget/AutoRotator>`_ by displaying thumbnails for each pane.
 
 ============
 Introduction
 ============
 
-Todo!
+The ThumbnailController will look at each of the rotator's panes and only if the node is an <img> tag, then it will create an thumbnail of the pane's image using the <img> tag's "thumbsrc" or "src" attribute.
 
-You may also have multiple Controllers tied to a single Rotator instance.
+You may have multiple Controllers tied to a single Rotator instance.
 
-The Controller's DOM node may also be styled for positioning or other styled preferences.
+The size of the thumbnails and the style of the selected thumbnail is controlled using CSS. The Controller's DOM node may also be styled for positioning or other styled preferences.
 
 =====
 Usage
