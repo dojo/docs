@@ -39,8 +39,6 @@ Examples
 Programmatic example
 --------------------
 
-Example showing how the AutoRotator can create the pane DOM nodes for you.
-
 .. code-example::
   :version: local
 
