@@ -1,7 +1,7 @@
 #format dojo_rst
 
 dojox.widget.rotator.ThumbnailController
-===============================
+========================================
 
 :Authors: Chris Barber
 :Project owner: Chris Barber
