@@ -134,7 +134,9 @@ To validate a form you use the `isValid()` function. Lets take at a simple examp
 Using native form elements
 --------------------------
 
-dijit.form.Form can also handle any type of native form element, though you have to do validation yourself.  The Form widget below will validate only when you have entered both a name in the ValidationTextBox widget AND when you have selected 1 of the native HTML radio buttons.
+dijit.form.Form doesn't fully support native elements as children.  In particular, myForm.attr("value") will return an Object listing all the values of the contained widgets, but it won't list the values of the contained native <input> elements.
+
+It is possible to submit a dijit.form.Form with native elements to the server, via standard (non-ajax) form submission.   Both types of values (widgets and plain <input> elements) will be submitted.   However, in that case the app has to do validation itself.  The Form widget below will validate only when you have entered both a name in the ValidationTextBox widget AND when you have selected 1 of the native HTML radio buttons.
 
 .. cv-compound::
 
