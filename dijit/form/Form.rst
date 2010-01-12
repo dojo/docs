@@ -70,7 +70,7 @@ Declarative example
             </tr>
         </table>
 
-        <button dojoType="dijit.form.Button" onClick="console.log(myForm.getValues())">Get Values from form!</button>
+        <button dojoType="dijit.form.Button" type=button onClick="console.log(myForm.getValues())">Get Values from form!</button>
         <button dojoType="dijit.form.Button" type="submit" name="submitButton" value="Submit">Submit</button>
         <button dojoType="dijit.form.Button" type="reset">Reset</button>
     </div>
