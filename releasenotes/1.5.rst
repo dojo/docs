@@ -23,29 +23,29 @@ To use this mixin in custom widgets:
 
 1. require _CssStateMixin and mix it in to the widget:
     
+.. code-block :: javascript
+
     dojo.require("dijit._CssStateMixin");
-    
     ...
+    dojo.declare(myWidget, [ ..., dijit._CssStateMixin], ...
+
+*Note that all form widgets already inherit _CssStateMixin through _FormWidget, so they should skip this step*
+
+
+2. set baseClass if not already set *(form widgets already set baseClass)*
     
-    dojo.declare(..., [ ..., dijit._CssStateMixin],
+.. code-block :: javascript
 
-Note that all form widgets already inherit _CssStateMixin through _FormWidget, so they should skip this step.
-
-
-2. set baseClass if not already set (form widgets already set baseClass)
-    
     baseClass: "dijitSlider",
 
 3. (If you want CSS class settings on widget subnodes, like the up/down buttons on the slider, then) set cssStateNodes attribute:
     
-    cssStateNodes: {
-   
-       incrementButton: "dijitSliderIncrementButton",
-    
+.. code-block :: javascript
+
+    cssStateNodes: {  
+       incrementButton: "dijitSliderIncrementButton",   
        decrementButton: "dijitSliderDecrementButton",
-    
        focusNode: "dijitSliderThumb"
-    
     }
 
 The left side (ex: incrementButton) is the dojoAttachPoint name, and the right side ("dijitSliderIncrementButton") is used to construct the CSS class name to apply to the node.
@@ -61,42 +61,78 @@ If you have modified widget templates to dijit widgets, you will probably have s
 
 In addition, if you have custom CSS rules, there were a few changes about form widget classes with nested buttons, seen in http://bugs.dojotoolkit.org/changeset/21117:
 
-.dijitSpinnerUpArrowHover .dijitUpArrowButton --> .dijitSpinner .dijitUpArrowButtonHover
+Spinner:
 
-.dijitSpinnerUpArrowActive .dijitUpArrowButton --> .dijitSpinner .dijitUpArrowButtonActive
+====================================================== =============================================        ===========
+Old                                                    New                                                  Description
+====================================================== =============================================        ===========
+.dijitSpinnerUpArrowHover .dijitUpArrowButton          .dijitSpinner .dijitUpArrowButtonHover
+.dijitSpinnerUpArrowActive .dijitUpArrowButton         .dijitSpinner .dijitUpArrowButtonActive
+.dijitSpinnerDownArrowHover .dijitDownArrowButton      .dijitSpinner .dijitDownArrowButtonHover
+.dijitSpinnerDownArrowActive .dijitDownArrowButton     .dijitSpinner .dijitDownArrowButtonActive
+====================================================== =============================================        ===========
 
-.dijitSpinnerDownArrowHover .dijitDownArrowButton --> .dijitSpinner .dijitDownArrowButtonHover
+ComboButton:
 
-.dijitSpinnerDownArrowActive .dijitDownArrowButton --> .dijitSpinner .dijitDownArrowButtonActive
-
-
-.dijitComboButtonHover .dijitButtonContents --> .dijitComboButton .dijitButtonContentsHover
-
-.dijitComboButtonActive .dijitButtonContents --> .dijitComboButton .dijitButtonContentsActive
-
-.dijitComboButtonDownArrowHover .dijitDownArrowButton --> .dijitComboButton .dijitDownArrowButtonHover
-
-.dijitComboButtonDownArrowActive .dijitDownArrowButton --> .dijitComboButton .dijitDownArrowButtonActive
+====================================================== =============================================        ===========
+Old                                                    New                                                  Description
+====================================================== =============================================        ===========
+.dijitComboButtonHover .dijitButtonContents            .dijitComboButton .dijitButtonContentsHover
+.dijitComboButtonActive .dijitButtonContents           .dijitComboButton .dijitButtonContentsActive
+.dijitComboButtonDownArrowHover .dijitDownArrowButton  .dijitComboButton .dijitDownArrowButtonHover
+.dijitComboButtonDownArrowActive .dijitDownArrowButton .dijitComboButton .dijitDownArrowButtonActive
+====================================================== =============================================        ===========
 
 
 Other changes occurred to CSS selectors to standardize the names, as follows:
 
-.dijitAccordionFocused --> .dijitAccordionTitleFocused   (the accordion title is focused, not the pane contents)
-.dijitAccordionTitle-hover --> .dijitAccordionTitleHover
-.dijitAccordionTitle-selected --> .dijitAccordionTitleSelected
+Accordion:
 
-.dijitTab .closeButton --> .dijitTabCloseButton
-.dijitTab .closeButton-hover --> .dijitTabCloseButtonHover   (close button for individual tab)
-.dijitTabBtnDisabled --> .dijitTabDisabled   (left and right scroll buttons on tab strip)
-.dijitTab .closeImage --> .dijitTabCloseIcon   (icon inside of close button)
-.dijitTab .closeText --> .dijitTabCloseText      (text inside of close button, for a11y)
+====================================================== =============================================        ===========
+Old                                                    New                                                  Description
+====================================================== =============================================        ===========
+.dijitAccordionFocused                                 .dijitAccordionTitleFocused                          The accordion title is focused, not the pane contents
+.dijitAccordionTitle-hover                             .dijitAccordionTitleHover
+.dijitAccordionTitle-selected                          .dijitAccordionTitleSelected
+====================================================== =============================================        ===========
 
-.dijitDialogCloseIcon-hover --> dijitDialogCloseIconHover
+TabContainer:
 
-.dijitTreeNodeHover  --> dijitTreeRowHover   (on the TreeNode.rowNode domNode)
-.dijitTreeNodeSelected --> .dijitTreeRowSelected
+====================================================== =============================================        ===========
+Old                                                    New                                                  Description
+====================================================== =============================================        ===========
+.dijitTab .closeButton                                 .dijitTabCloseButton
+.dijitTab .closeButton-hover                           .dijitTabCloseButtonHover                            close button for individual tab
+.dijitTabBtnDisabled                                   .dijitTabDisabled                                    left and right scroll buttons on tab strip
+.dijitTab .closeImage                                  .dijitTabCloseIcon                                   icon inside of close button
+.dijitTab .closeText                                   .dijitTabCloseText                                   text inside of close button, for a11y
+====================================================== =============================================        ===========
 
-.dijitTitlePaneTitle-hover --> .dijitTitlePaneHover
+Dialog:
+
+====================================================== =============================================        ===========
+Old                                                    New                                                  Description
+====================================================== =============================================        ===========
+.dijitDialogCloseIcon-hover                            .dijitDialogCloseIconHover
+====================================================== =============================================        ===========
+
+Tree:
+
+====================================================== =============================================        ===========
+Old                                                    New                                                  Description
+====================================================== =============================================        ===========
+.dijitTreeNodeHover                                    .dijitTreeRowHover                                   on the TreeNode.rowNode domNode
+.dijitTreeNodeSelected                                 .dijitTreeRowSelected
+====================================================== =============================================        ===========
+
+
+TitlePane:
+
+====================================================== =============================================        ===========
+Old                                                    New                                                  Description
+====================================================== =============================================        ===========
+.dijitTitlePaneTitle-hover                             .dijitTitlePaneHover
+====================================================== =============================================        ===========
 
 
 
