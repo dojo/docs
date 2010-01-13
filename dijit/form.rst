@@ -91,6 +91,10 @@ TextArea
 Select widgets
 --------------
 
+* `dijit.form.Select <dijit/form/Select>`_
+
+  A styleable drop down select box (similar to html select element)
+
 * `dijit.form.ComboBox <dijit/form/ComboBox>`_
 
   This is often called "auto complete" and perhaps should be listed in the "Input widgets" section above since it allows the user to type any value and just gives suggested completions
