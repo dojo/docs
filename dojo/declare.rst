@@ -3,8 +3,6 @@
 dojo.declare
 ============
 
-:Status: Final
-:Version: 1.0
 :Available: since V0.9
 
 .. contents::
@@ -25,7 +23,32 @@ This section has some pretty abstract stuff, and you may wish to skip it on the 
 Basic Usage
 ===========
 
-``dojo.declare`` accepts up to three arguments. The first is the optional (since 1.4) global name of the Class to declare, and is a string representation of the name. If you don't specify it, the class is assumed to be anonymous. It is your responsibility to assign it to a variable. The second is either ``null`` (no base class), an object (a base class) or an array of objects (multiple inheritance). The third is an object hash of properties to be mixed in after all other inheritance has been solved.
+``dojo.declare`` accepts up to three arguments:
+
+==========  ====================  ==================================================
+Parameter   Type                  Description
+==========  ====================  ==================================================
+className   String|null           The optional global name of the Class to declare. 
+
+                                  The className will be used as a global name for a
+                                  created constructor.
+
+                                  If you don't specify it, the class is assumed to 
+                                  be anonymous (new since V1.4). 
+
+                                  If you specify it, the name will be stored in the
+                                  property "declaredClass" in the created prototype.
+superclass  null|Object|Object[]  This parameter is either null (no base class), an 
+                                  object (a base class) or an array of objects 
+                                  (multiple inheritance). 
+props       Object                An object whose properties are copied (mixed in)
+                                  to the created prototype after all other inheritance
+                                  has been solved.
+
+                                  You can add an instance-initialization function 
+                                  by making it a property named "constructor".
+==========  ====================  ==================================================
+
 
 .. code-block :: javascript
   :linenos:
