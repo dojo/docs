@@ -51,6 +51,7 @@ props       Object                An object whose properties are copied (mixed i
                                   by making it a property named "constructor".
 ==========  ====================  ==================================================
 
+Example:
 
 .. code-block :: javascript
   :linenos:
