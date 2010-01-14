@@ -20,12 +20,12 @@ This function is a helper function that wraps the `dojo.animateProperty <dojo/an
 Parameters
 ==========
 
-The *dojo.fx.wipeIn* takes an object as its parameter.  This object defines what dom node to act on, how long the wipe in should take (in milliseconds, and an optional easing function.  As with all dojo apis, refer to the API docs for the most up to date information on parameters.  These are listed for convenience.
+The *dojo.fx.slideTo* takes an object as its parameter.  This object defines what dom node to act on, how long the slide to should take (in milliseconds, and an optional easing function.  As with all dojo apis, refer to the API docs for the most up to date information on parameters.  These are listed for convenience.
 
 +-------------------------------+--------------------------------------------------------------------------------------------+
 +**Parameter**                  |**Description**                                                                             |
 +-------------------------------+--------------------------------------------------------------------------------------------+
-| node                          |The domNode or node id to wipe in.                                                          |
+| node                          |The domNode or node id to slide.                                                            |
 |                               |                                                                                            |
 |                               |**required**                                                                                |
 +-------------------------------+--------------------------------------------------------------------------------------------+
@@ -37,12 +37,12 @@ The *dojo.fx.wipeIn* takes an object as its parameter.  This object defines what
 |                               |                                                                                            |
 |                               |**optional**                                                                                |
 +-------------------------------+--------------------------------------------------------------------------------------------+
-| duration                      |How long, in milliseconds, should the wipe take.  The default is 350 milliseconds           |
+| duration                      |How long, in milliseconds, should the slide take.  The default is 350 milliseconds          |
 |                               |(.3 seconds).                                                                               |
 |                               |                                                                                            |
 |                               |**optional**                                                                                |
 +-------------------------------+--------------------------------------------------------------------------------------------+
-| easing                        |An easing function to apply to the effect, such as exponential wipe in, bouncing wipe in,   |
+| easing                        |An easing function to apply to the effect, such as exponential slide, bouncing slide,       |
 |                               |etc.  Dojo provides a number of easing functions in module                                  |
 |                               |`dojo.fx.easing <dojo/fx/easing>`_                                                          |
 |                               |                                                                                            |
@@ -70,7 +70,7 @@ Example 1:  Slide a dom node right 200 pixels.
       dojo.require("dijit.form.Button");
       dojo.require("dojo.fx");
       function basicSlideToSetup(){
-         //Function linked to the button to trigger the wipe.
+         //Function linked to the button to trigger the slide.
          function slideIt(amt) {
             var slideArgs = {
               node: "basicNode",
