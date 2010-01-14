@@ -28,7 +28,7 @@ Basic Usage
 ==========  ====================  ==================================================
 Parameter   Type                  Description
 ==========  ====================  ==================================================
-className   String|null           The optional global name of the Class to declare. 
+className   String|null           The optional name of the Class to declare. 
 
                                   The className will be used as a global name for a
                                   created constructor.
@@ -38,9 +38,11 @@ className   String|null           The optional global name of the Class to decla
 
                                   If you specify it, the name will be stored in the
                                   property "declaredClass" in the created prototype.
-superclass  null|Object|Object[]  This parameter is either null (no base class), an 
-                                  object (a base class) or an array of objects 
-                                  (multiple inheritance). 
+superclass  null|Object|Object[]  This parameter is either 
+
+                                  * null (no base class), 
+                                  * an object (a base class) or 
+                                  * an array of objects (multiple inheritance). 
 props       Object                An object whose properties are copied (mixed in)
                                   to the created prototype after all other inheritance
                                   has been solved.
