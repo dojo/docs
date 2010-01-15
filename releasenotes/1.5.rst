@@ -96,6 +96,8 @@ Old                                                    New                      
 .dijitAccordionTitle-selected                          .dijitAccordionTitleSelected
 ====================================================== =============================================        ===========
 
+In addition, the accordion layout was changed so that every pane is surrounded by a dijitInnerAccordionContainer <div>, which holds the title and the content, similar to a TitlePane.   If you are subclassing AccordionContainer or doing something else related to the internals of AccordionContainer you may need to update your code.
+
 TabContainer:
 
 ====================================================== =============================================        ===========
