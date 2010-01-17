@@ -143,6 +143,7 @@ InlineEditBox:
 Old                                                    New                                                  Description
 ====================================================== =============================================        ===========
 .dijitInlineEditBoxDisplayMode-hover                   .dijitInlineEditBoxDisplayModeHover
+.dijitInlineEditBoxDisplayMode-disabled                .dijitInlineEditBoxDisplayModeDisabled               equivalent to a plain <div> or <span>, clicking has no effect
 ====================================================== =============================================        ===========
 
 =====
