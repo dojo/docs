@@ -40,6 +40,12 @@ attr
 value
   If passed, sets value on the node for an attribute, handling cross-browser concerns.
 
+This function can be used to associate a function with an event. Please note that:
+
+* Only functions are supported. If you want to use strings, convert them to functions first.
+* Setting an event handler removes a previously set event handler, if it was set with ``dojo.attr()`` too.
+* Internally it uses `dojo.connect <dojo/connect>`_ to attach an event handler. See `dojo.connect <dojo/connect>`_ for more details on event processing.
+* Unlike `dojo.connect <dojo/connect>`_ no handle is returned. It means that there is no simple way to remove the event handler: use ``dojo.attr()`` to set event handlers only in simple cases. Always consider to use `dojo.connect <dojo/connect>`_ and `dojo.disconnect <dojo/disconnect>`_ instead.
 
 ========
 Examples
