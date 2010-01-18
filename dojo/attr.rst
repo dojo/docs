@@ -40,7 +40,10 @@ attr
 value
   If passed, sets value on the node for an attribute, handling cross-browser concerns.
 
-This function can be used to associate a function with an event. Please note that:
+Notes on event handlers
+-----------------------
+
+This function can be used to associate a function with a DOM event. Please note that:
 
 * Only functions are supported. If you want to use strings, convert them to functions first.
 * Setting an event handler removes a previously set event handler, if it was set with ``dojo.attr()`` too.
