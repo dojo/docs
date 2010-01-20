@@ -3,8 +3,6 @@
 dijit.form.TextBox
 ==================
 
-:Status: Draft
-:Version: 1.3
 :Authors: Becky Gibson, Doug Hays, Bill Keese, Nikolai Onken, Marcus Reimann, Craig Riecke
 :Developers: Doug Hays, Bill Keese
 :Available: since V1.0
