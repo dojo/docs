@@ -4,6 +4,7 @@
 dijit.Declaration
 =================
 
+:Author: Bill Keese
 :Project owner: Bill Keese
 :Available: since V1.2
 
