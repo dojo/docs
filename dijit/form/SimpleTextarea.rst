@@ -3,8 +3,6 @@
 dijit.form.SimpleTextarea
 =========================
 
-:Status: Draft
-:Version: 1.3
 :Authors: Doug Hays, Bill Keese, Nikolai Onken
 :Developers: Doug Hays, Bill Keese
 :Available: since V1.0
