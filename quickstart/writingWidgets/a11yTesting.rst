@@ -3,8 +3,6 @@
 Testing Widgets for Accessibility
 =================================
 
-:Status: Contributed
-:Version: 1.2
 :Author: Becky Gibson
 
 
@@ -53,7 +51,7 @@ Below is a picture of the diijt Tree with Inspect Objects running and the Show I
 Testing with Accessibility Probe (AccProbe)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`Accessibility Probe <http://www.eclipse.org/actf/downloads/tools/accprobe/index.php>`_ is an under development Eclipse RCP-based stand-alone Java aplication that combines inspection, event-monitoring, and hierarchical viewing of accessible objects and their properties. It is currently only available for the Windows platform but does support both Microsoft Active Accessibility (MSAA) and IAccessible2-enabled applications.  IAccessible2 is an extension to MSAA to support some of the more complex ARIA roles and is used in Firefox 3. The AccProbe is also more accessible than MS Inspect and is another option for ARIA and focus testing. It works in a similar manner to Inspect in that it provided focus tracking and inspection of ARIA role and state values. 
+`Accessibility Probe <http://www.eclipse.org/actf/downloads/tools/accprobe/index.php>`_ is an under development Eclipse RCP-based stand-alone Java aplication that combines inspection, event-monitoring, and hierarchical viewing of accessible objects and their properties. It is currently only available for the Windows platform but does support both Microsoft Active Accessibility (MSAA) and IAccessible2-enabled applications. IAccessible2 is an extension to MSAA to support some of the more complex ARIA roles and is used in Firefox 3. The AccProbe is also more accessible than MS Inspect and is another option for ARIA and focus testing. It works in a similar manner to Inspect in that it provided focus tracking and inspection of ARIA role and state values. 
 
 Testing using a screen reader
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -90,14 +88,14 @@ With images turned off the widgets should still be usable. Since no images are l
 Test for Font Size Changes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The widgets should still be usable if the font size of the page is changed.  Increase and decrease the font size and make certain that the widget still renders correctly.  Some problems can occur when the height or width of a widget is set using pixels.  When the font size increases it may no longer fit within the height or width specified.  One example is creating a toolbar and setting its height: 25px.  When the system is in high contrast mode, the toolbar images are replaced by text.  If that text size is increased it may not fit within the 25px toolbar height and be clipped.  Instead of setting the height using pixels use ems or % instead.  
+The widgets should still be usable if the font size of the page is changed. Increase and decrease the font size and make certain that the widget still renders correctly. Some problems can occur when the height or width of a widget is set using pixels. When the font size increases it may no longer fit within the height or width specified. One example is creating a toolbar and setting its height: 25px. When the system is in high contrast mode, the toolbar images are replaced by text. If that text size is increased it may not fit within the 25px toolbar height and be clipped. Instead of setting the height using pixels use ems or % instead.
 
 Each browser has a different mechanism for changing font size:
 
 - Firefox 2 - select View Text Size Increase or press ctrl + or View Text Size Decrease or press ctrl -
-- Firefox 3 - select View Zoom Text Only.  Firefox 3 also will zoom the entire page, including imeages, using View Zoom In or press ctrl + to increase and View Zoom Out or press ctrl - to decrease
+- Firefox 3 - select View Zoom Text Only. Firefox 3 also will zoom the entire page, including imeages, using View Zoom In or press ctrl + to increase and View Zoom Out or press ctrl - to decrease
 - IE 6 - select View Text Size and pick from Largest, Larger, Medium, Smaller, or Smallest
-- IE 7 - select View Text Size and pick from Largest, Larger, Medium, Smaller, or Smallest.  IE 7 will also zoom the entire page using Page Zoom Zoom In or press ctrl + and Page Zoom Zoom Out or press ctrl -.  
+- IE 7 - select View Text Size and pick from Largest, Larger, Medium, Smaller, or Smallest. IE 7 will also zoom the entire page using Page Zoom Zoom In or press ctrl + and Page Zoom Zoom Out or press ctrl -.
 - Safari - select View Make Text Bigger or press ctrl + or View Make Text Smaller or press ctrl -
 
 (on the Mac use the apple key in place of the ctrl key)
