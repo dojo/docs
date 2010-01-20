@@ -4,8 +4,6 @@
 dijit.layout.TabContainer
 =========================
 
-:Status: Draft
-:Version: 1.0
 :Authors: Becky Gibson, Peter Higgins, Bill Keese, Nikolai Onken, Marcus Reimann
 :Developers: ?-
 :Available: since V?
