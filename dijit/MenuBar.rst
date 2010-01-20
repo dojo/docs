@@ -3,7 +3,7 @@
 dijit.MenuBar
 =============
 
-:Authors: Bill Keese
+:Author: Bill Keese
 
 .. contents::
     :depth: 2
