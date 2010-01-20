@@ -3,11 +3,9 @@
 dijit.form.DateTextBox
 ======================
 
-:Status: Draft
-:Version: 1.3
 :Authors: Becky Gibson, Doug Hays, Craig Riecke, Adam Peller
 :Developers: Doug Hays, Bill Keese
-:Available: since 0.9
+:Available: since V0.9
 
 .. contents::
     :depth: 2
