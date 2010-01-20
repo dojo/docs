@@ -3,11 +3,9 @@
 dijit.Tree
 ==========
 
-:Status: Draft
-:Version: 1.0
 :Authors: Bill Keese, Nikolai Onken, Marcus Reimann
 :Developers: Bill Keese
-:Available: since 0.9
+:Available: since V0.9
 
 .. contents::
     :depth: 2
