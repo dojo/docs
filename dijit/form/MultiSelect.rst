@@ -3,8 +3,6 @@
 dijit.form.MultiSelect
 ======================
 
-:Status: Draft
-:Version: 1.0
 :Authors: Doug Hays, Steve Peart
 :Developers: Doug Hays, Peter Higgins, Bill Keese, Nathan Toone
 :Available: since V?
