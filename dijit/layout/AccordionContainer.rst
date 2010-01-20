@@ -3,8 +3,6 @@
 dijit.layout.AccordionContainer
 ===============================
 
-:Status: Draft
-:Version: 1.0
 :Authors: Becky Gibson, Nikolai Onken
 :Developers: ?-
 :Available: since V?
