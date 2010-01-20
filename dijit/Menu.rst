@@ -3,13 +3,18 @@
 dijit.Menu
 ==========
 
+:Authors: Bill Keese
+:jsDoc: http://api.dojotoolkit.org/jsdoc/1.3/dijit.Menu
+
 .. contents::
     :depth: 2
 
-:Status: Draft
-:Version: 1.2
-:Authors: Bill Keese
-:jsDoc: http://api.dojotoolkit.org/jsdoc/1.3/dijit.Menu
+A Menu widget
+
+
+============
+Introduction
+============
 
 The Menu widget is used for three types of menus:
 
@@ -17,10 +22,15 @@ The Menu widget is used for three types of menus:
   * drop down menu from `dijit.form.ComboButton <dijit/form/ComboButton>`_, `dijit.form.DropDownButton <dijit/form/DropDownButton>`_, and `dijit.MenuBar <dijit/MenuBar>`_ widgets.
   * statically positioned menu on the screen, typically a left-hand-side navigation menu
 
-MenuItem widgets are the actual items in the menu. The PopupMenuItem is like a MenuItem, but displays a submenu or other widget to the right . A PopupMenuItem always has two child nodes: a tag with the displayed label (usually in a SPAN tag), and a widget to be popped up, typically a dijit.Menu widget.
+MenuItem widgets are the actual items in the menu. The PopupMenuItem is like a MenuItem, but displays a submenu or other widget to the right. A PopupMenuItem always has two child nodes: a tag with the displayed label (usually in a SPAN tag), and a widget to be popped up, typically a dijit.Menu widget.
 
-A programatically created menu
-------------------------------
+
+========
+Examples
+========
+
+Programmatic example
+--------------------
 
 .. cv-compound::
 
@@ -72,6 +82,8 @@ A programatically created menu
     <span id="prog_menu">Right click me to get a menu</span>
 
 
+Declarative markup
+------------------
 
 Creation from markup is even easier.
 This example creates a context menu for the whole window.
@@ -112,9 +124,9 @@ This example creates a context menu for the whole window.
 
 Note that popup menus should be hidden via specifying style="display: none".  Hiding the menu indirectly via a class won't work (in that the menu will remain invisible even when it's supposed to be displayed).
 
-
 Navigation Menus
-================
+----------------
+
 The Menu widget can also be used for left-hand-side (style) navigation menus, which are functionally equivalent to MenuBar's, but appear vertically (just like a popup menu).   In this case may want to modify the CSS so that the entire left hand column is one color, rather than just the Menu itself.
 
 Usage to display a Menu statically is the same as context menus, except that you don't specify style="display: none" or contextMenuForWindow or any connect ids.
@@ -146,6 +158,8 @@ Usage to display a Menu statically is the same as context menus, except that you
 		</div>
 	</div>
 
+
+=============
 Accessibility
 =============
 
@@ -171,6 +185,7 @@ Known Issues
 When reading a menu item on Firefox 2, JAWS 8 may say "submenu" for an item that does not have a submenu. This will be fixed in Firefox 3.
 
 
+====================
 Implementation Notes
 ====================
 
