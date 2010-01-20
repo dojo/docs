@@ -5,8 +5,6 @@
 dijit.ColorPalette
 ==================
 
-:Status: Draft
-:Version: 1.0
 :Authors: Bill Keese, Nikolai Onken, Jared Jurkiewicz
 :Developers: Declan Fahey, Bill Keese, Adam Peller, Becky Gibson, Pete Higgins
 :Available: since V1.0
