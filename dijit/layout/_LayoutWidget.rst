@@ -3,10 +3,6 @@
 dijit._LayoutWidget
 ===================
 
-:Status: Contributed, Draft
-:Version: finished
-:Authors: ?--
-
 .. contents::
     :depth: 2
 
