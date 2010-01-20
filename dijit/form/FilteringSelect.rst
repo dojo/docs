@@ -3,8 +3,6 @@
 dijit.form.FilteringSelect
 ==========================
 
-:Status: Draft
-:Version: 1.3
 :Authors: Doug Hays, Nikolai Onken
 :Developers: Doug Hays, Bill Keese
 :Available: since V1.0
