@@ -4,8 +4,6 @@
 dijit.layout.BorderContainer
 ============================
 
-:Status: Draft
-:Version: 1.0
 :Authors: Becky Gibson, Bill Keese, Nikolai Onken, Marcus Reimann
 :Developers: ?-
 :Available: since V?
