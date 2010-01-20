@@ -3,8 +3,6 @@
 dijit._Templated
 ================
 
-:Status: Draft
-:Version: 1.0
 :Project owner: Bill Keese
 :Available: since V0.9
 
