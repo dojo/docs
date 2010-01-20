@@ -3,11 +3,12 @@
 dijit.Toolbar
 =============
 
+:Project owner: Bill Keese
+:Available: since V?
+
 .. contents::
     :depth: 2
 
-:Project owner: Bill Keese
-:Available: since V?
 
 ============
 Introduction
@@ -129,7 +130,7 @@ By using `dijit.form.DropDownButton <dijit/form/DropDownButton>`_ and `dijit.for
 Accessibility
 =============
 
-Note the use of showLabel="false" above.   We've specified a label but then hidden it.  This is important for accessibility reasons, so that users that can't see the icon still know what the button does.
+Note the use of showLabel="false" above. We've specified a label but then hidden it. This is important for accessibility reasons, so that users that can't see the icon still know what the button does.
 
 Keyboard
 --------
