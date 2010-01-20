@@ -3,21 +3,29 @@
 dijit.MenuBar
 =============
 
+:Authors: Bill Keese
+
 .. contents::
     :depth: 2
 
-:Status: Draft
-:Version: 1.3
-:Authors: Bill Keese
-
 The MenuBar widget models a typical menu bar like the quintessential "File" menu on (virtually?) all programs.
+
+
+============
+Introduction
+============
 
 PopupMenuBarItem widgets are the actual items in the menu, and like PopupMenuItem it displays a submenu or other widget below it. A PopupMenuBarItem always has two child nodes: a tag with the displayed label (usually in a SPAN tag), and a widget to be popped up, typically a dijit.Menu widget.
 
 There's also a MenuBarItem widget if you need an entry in your MenuBar that *doesn't* have a drop down.
 
-A programatically created MenuBar
----------------------------------
+
+========
+Examples
+========
+
+Programmatic example
+--------------------
 
 .. cv-compound::
 
@@ -68,6 +76,10 @@ A programatically created MenuBar
 
      <div id="wrapper"></div>
 
+
+Declarative markup
+------------------
+
 Creation from markup is even easier.
 
 .. cv-compound::
@@ -102,6 +114,7 @@ Creation from markup is even easier.
 	</div>
 
 
+=============
 Accessibility
 =============
 
@@ -119,7 +132,8 @@ Close a submenu                               Esc, or use right arrow to navigat
 ==========================================    =================================================
 
 
-Implementation Notes
-====================
+========
+See also
+========
 
-See `dijit.Menu <dijit/Menu>`_.
+* See `dijit.Menu <dijit/Menu>`_.
