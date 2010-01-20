@@ -3,7 +3,20 @@
 dijit.TooltipDialog
 ===================
 
-A variant on Dialog Box is dijit.TooltipDialog. This displays a tooltip that contains form elements (like a dialog).
+:Authors: Bill Keese, Nikolai Onken, Marcus Reimann
+:Available: since V0.9
+
+.. contents::
+    :depth: 2
+
+A variant on Dialog Box is dijit.TooltipDialog.
+
+
+============
+Introduction
+============
+
+The dijit.TooltipDialog displays a tooltip that contains form elements (like a dialog).
 
 Although both Dialog and TooltipDialog are modal, TooltipDialog can be closed by clicking anywhere on the screen, whereas for Dialog you must click on the [x] mark of the Dialog.
 
