@@ -3,17 +3,19 @@
 dijit.TooltipDialog
 ===================
 
-:Status: Draft
-:Version: 1.2
-
 A variant on Dialog Box is dijit.TooltipDialog. This displays a tooltip that contains form elements (like a dialog).
 
 Although both Dialog and TooltipDialog are modal, TooltipDialog can be closed by clicking anywhere on the screen, whereas for Dialog you must click on the [x] mark of the Dialog.
 
 A TooltipDialog can only be opened as a drop down from another widget, usually `dijit.form.DropDownButton`.
 
+
+========
 Examples
---------
+========
+
+Programmatic example
+--------------------
 
 The first example shows how to create a TooltipDialog and DropDownButton programmatically.
 
@@ -47,6 +49,10 @@ The first example shows how to create a TooltipDialog and DropDownButton program
 
     <div id="dropdownButtonContainer"></div>
 
+
+Declarative markup
+------------------
+
 As usual you can create the TooltipDialog and DropDown button widget declaratively using the dojoType attribute.
 When created declaratively the DropDownButton node has two children, one for the label of the button,
 and the other for the drop-down widget that's displayed when you press the button.
@@ -75,11 +81,13 @@ Here's one displaying a TooltipDialog:
       </div>
     </div>
 
+
+=============
 Accessibility
--------------
+=============
 
 Keyboard
-~~~~~~~~
+--------
 
 ============================================================    =================================================
 Action                                                          Key
