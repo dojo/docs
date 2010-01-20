@@ -6,10 +6,8 @@
 dijit.Calendar
 ===============
 
-:Status: Contributed, Draft
-:Version: 1.4
 :Authors: Adam Peller
-:Developers: Adam Peller
+:Project owner: Adam Peller
 
 .. contents::
     :depth: 2
