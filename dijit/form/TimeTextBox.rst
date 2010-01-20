@@ -3,8 +3,6 @@
 dijit.form.TimeTextBox
 ======================
 
-:Status: Draft
-:Version: 1.0
 :Authors: Doug Hays, Nikolai Onken, Marcus Reimann, Craig Riecke
 :Developers: ?-
 :Available: since V?
