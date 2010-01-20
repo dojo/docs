@@ -3,8 +3,8 @@
 dojo.style
 ==========
 
-:Version: 1.0
-:Available: since V?
+:Authors: James Burke, Peter Higgins, Eugene Lazutkin, Marcus Reimann
+:Available: since V1.0
 
 .. contents::
    :depth: 2
