@@ -3,8 +3,6 @@
 dijit.form.CurrencyTextBox
 ==========================
 
-:Status: Draft
-:Version: 1.3
 :Authors: Becky Gibson, Doug Hays, Bill Keese, Craig Riecke
 :Developers: Doug Hays, Bill Keese
 :Available: since V1.0
