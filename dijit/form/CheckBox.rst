@@ -3,8 +3,6 @@
 dijit.form.CheckBox
 ===================
 
-:Status: Draft
-:Version: 1.0
 :Authors: Becky Gibson, Doug Hays, Bill Keese, Nikolai Onken
 :Developers: ?-
 :Available: since V?
