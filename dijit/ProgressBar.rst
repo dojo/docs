@@ -3,13 +3,15 @@
 dijit.ProgressBar
 =================
 
-:Status: Draft
-:Version: 1.2
-
 A ProgressBar gives dynamic feedback on the progress of a long-running operation. The progress can be updated by JavaScript function calls. This method works best for long-running JavaScript operations, or a series of JavaScript XHR calls to the server.
 
+
+========
 Examples
---------
+========
+
+Declarative markup
+------------------
 
 .. cv-compound::
 
@@ -41,8 +43,11 @@ Examples
     
     <br /><input type="button" value="Go!" onclick="download();" />
 
+
+=============
 Accessibility
--------------
+=============
+
 The progress bar is made accessible by providing a solid border around the visual progress indicator. This border is visible in high contrast mode as well as when images are turned off.
 
 The internalProgress div is assigned the ARIA role of progressbar The valuenow attribute is updated as the progress is updated. In releases prior to 1.0 no valuemin and valuemax values are provided since the valuenow attribute may be a string provided by the Web developer. In 1.0 and later releases The ARIA valuenow property is set to the ProgressBar's progress value. The valuemin and valuemax properties are set to 0 and the ProgressBar's maximum, respectively.
