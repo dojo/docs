@@ -3,17 +3,41 @@
 dijit.TitlePane
 ===============
 
+:Authors: Bill Keese, Marcus Reimann
+:Project owner: Bill Keese
+
 .. contents::
     :depth: 2
 
-:Status: Draft
-:Version: 1.2
-:Authors: Bill Keese
 
-A TitlePane is a pane that can be opened or collapsed, with a title on top. The visibility of the pane's contents is toggled by activating an arrow "button" on the title bar via the mouse or keyboard.  It extends `ContentPane <dijit/layout/ContentPane>`_ but since it isn't used inside other layout widgets it's not in the dijit.layout module.
+============
+Introduction
+============
 
-Programatic TitlePane
----------------------
+A TitlePane is a pane that can be opened or collapsed, with a title on top. The visibility of the pane's contents is toggled by activating an arrow "button" on the title bar via the mouse or keyboard. It extends `ContentPane <dijit/layout/ContentPane>`_ but since it isn't used inside other layout widgets it's not in the dijit.layout module.
+
+
+=====
+Usage
+=====
+
+The constructor for TitlePane takes the following possible parameters in its keyword arguments:
+
+=========  ==================================  ==================================================
+Parameter  Type                                Description
+=========  ==================================  ==================================================
+title      String                              The title to be displayed in the pane header. The default is an empty string.
+content    DomNode | NodeList | dijit._Widget  The content (innerHTML) to be displayed in the pane.
+open       Boolean                             Boolean option whether or not to display the pane contents. The default is true.
+=========  ==================================  ==================================================
+
+
+========
+Examples
+========
+
+Programmatic example
+--------------------
 
 .. cv-compound::
 
@@ -34,9 +58,9 @@ Programatic TitlePane
     <div id="holder"></div>
 
 
+Declarative markup
+------------------
 
-Markup
-------
 Creation from markup is even easier.
 
 .. cv-compound::
@@ -84,24 +108,13 @@ For example:
       </div>
     </div>
 
-Constructor Parameters
-----------------------
 
-The constructor for TitlePane takes the following possible parameters in its keyword arguments:
-
-+--------------------------+--------------------------------------------------------------------------------------------------------+
-|**Parameter**             |**Description**                                                                                         |
-+--------------------------+--------------------------------------------------------------------------------------------------------+
-|title                     |The title to be displayed in the pane header. The default is an empty string.                           |
-+--------------------------+--------------------------------------------------------------------------------------------------------+
-|open                      |Boolean option whether or not to display the pane contents. The default is true.                        |
-+--------------------------+--------------------------------------------------------------------------------------------------------+
-
+=============
 Accessibility
--------------
+=============
 
 Keyboard
-~~~~~~~~
+--------
 
 Each title pane title is included in the tab order of the document.
 
@@ -113,6 +126,6 @@ Navigate into an opened title pane      tab
 ===================================     =====================================================
 
 Screen Reader Information
-~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------
 
 The title pane container will have an ARIA labelledby property which points to the id of the title pane title. The title pane title has the ARIA role of button and property of haspopup=true to indicate that it controls the display of the pane. The role of button is used to indicate to the user that an action will occur when the button is activated. The tilte pane container will have an ARIA role of region which will be supported in Firefox 3 and identified by future versions of the screen readers.
