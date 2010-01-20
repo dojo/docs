@@ -3,8 +3,6 @@
 dijit.form.RadioButton
 ======================
 
-:Status: Draft
-:Version: 1.0
 :Authors: Becky Gibson, Doug Hays, Nikolai Onken
 :Developers: ?-
 :Available: since V?
