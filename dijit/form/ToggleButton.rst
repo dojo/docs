@@ -3,8 +3,6 @@
 dijit.form.ToggleButton
 =======================
 
-:Status: Draft
-:Version: 1.0
 :Authors: Doug Hays
 :Developers: ?-
 :Available: since V?
