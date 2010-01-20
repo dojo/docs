@@ -3,19 +3,22 @@
 dijit._Templated
 ================
 
+:Authors: Peter Higgins, Bill Keese, Nikolai Onken
 :Project owner: Bill Keese
 :Available: since V0.9
 
 .. contents::
    :depth: 2
 
+
 ============
 Introduction
 ============
 
-dijit._Templated is a mixin for most widgets in dijit.  It takes an HTML template, and creates the widget's DOM tree according to that template.  In other words, it implements buildRendering() for you.
+dijit._Templated is a mixin for most widgets in dijit. It takes an HTML template, and creates the widget's DOM tree according to that template. In other words, it implements buildRendering() for you.
 
 Note that the underscore in the name implies not that _Template is a private class, but rather that it's a mixin, rather than a widget.
+
 
 =====
 Usage
@@ -34,9 +37,11 @@ Mixin dijit._Templated when you declare your widget:
 
 and then instead of defining buildRendering(), define a ``templateString``.
 
+
 ============
 The template
 ============
+
 The template is specified in the widget attribute ``templateString``, and points to some HTML w/a `single root node`, with special attributes on the tags, plus possibly substitution variables, etc.
 
 It can either be specified as a literal string:
@@ -89,6 +94,7 @@ When using the ``widgetsInTemplate`` parameter, a dojoAttachPoint on the widget 
 
 dojoAttachEvent
 ---------------
+
 dojoAttachEvent will automatically setup a connection from an event on the DOM node (onclick in this case) to call a method in the widget (in this case increment().
 
 Here's an example of dojoAttachPoint and dojoAttachEvent:
@@ -134,12 +140,14 @@ Here's an example of dojoAttachPoint and dojoAttachEvent:
 
 waiRole and waiState
 --------------------
-These attributes are for accessibility, and define the role of DOM nodes such as "tree".   See `Creating Accessible Widgets <writingWidgets/a11y>`_ for more information.
+
+These attributes are for accessibility, and define the role of DOM nodes such as "tree". See `Creating Accessible Widgets <writingWidgets/a11y>`_ for more information.
 
 
 containerNode
 -------------
-Often a widget declared in markup will have contents, i.e. it will contain some other DOM.   For example:
+
+Often a widget declared in markup will have contents, i.e. it will contain some other DOM. For example:
 
 .. code-block:: html
 
@@ -181,7 +189,8 @@ For example:
 
 Substitution variables
 ----------------------
-A template can also reference substitution variables like ${title}.   ${title} references the title attribute of the widget.
+
+A template can also reference substitution variables like ${title}. ${title} references the title attribute of the widget.
 
 However, this is not recommended, as (due to implementation details) it only handles setting of the title on widget instantiation. In other words, myWidget.attr('title', 'My new title') won't work if you use substitution variables.
 
@@ -191,6 +200,7 @@ See the section on attributeMap in `Writing Widgets <quickstart/writingWidgets>`
 ===========================
 Widgets inside the Template
 ===========================
+
 So what if we want the widget to have a widget inside of the template, as in ...:
 
 .. code-block :: html
@@ -206,7 +216,8 @@ dijit.Declaration-based widget classes automatically set widgetsInTemplate to tr
 
 dojoAttachPoint
 ---------------
-In this case, the dojoAttachPoint becomes a pointer to the sub-widget, not to a DOM node.  For example, with this template:
+
+In this case, the dojoAttachPoint becomes a pointer to the sub-widget, not to a DOM node. For example, with this template:
 
 .. code-block :: html
 
@@ -222,10 +233,10 @@ You can do this in your widget code:
   this.start.attr('value', new Date());
 
 
-
 dojoAttachEvent
 ---------------
-dojoAttachEvent also functions to attach a widget event (not a DOM event) on the sub widget to the main widget.  For example, consider InlineEditBox which embeds dijit buttons into it's own template:
+
+dojoAttachEvent also functions to attach a widget event (not a DOM event) on the sub widget to the main widget. For example, consider InlineEditBox which embeds dijit buttons into it's own template:
 
 .. code-block :: html
 
@@ -241,9 +252,10 @@ dojoAttachEvent also functions to attach a widget event (not a DOM event) on the
 The onClick event on the dijit.form.Button will call InlineEditBox.save().
 
 
-The widgetsInTemplate feature does not support adding layout widgets as children.  In particular there are issues with startup() and resize() calls to the children.
+The widgetsInTemplate feature does not support adding layout widgets as children. In particular there are issues with startup() and resize() calls to the children.
 
-Also note that a widget's getChildren() method and similar methods will *not* include the widgets declared in the template, but rather just the widgets inside the containerNode.   This is because the widgets declared in the template are internal objects, effectively hidden from widget users.  In other words, only the developer of the widget knows that it internally contains widgets.
+Also note that a widget's getChildren() method and similar methods will *not* include the widgets declared in the template, but rather just the widgets inside the containerNode. This is because the widgets declared in the template are internal objects, effectively hidden from widget users. In other words, only the developer of the widget knows that it internally contains widgets.
+
 
 ===============
 Common Pitfalls
@@ -255,7 +267,8 @@ Common Pitfalls
 
 3. Avoid a trailing </div> at the end of your template
 
-4. For widgetsInTemplate, don't try to make the root node itself a widget.   That's not supported (that would make the top node the root of two separate widgets and we can't support that).
+4. For widgetsInTemplate, don't try to make the root node itself a widget. That's not supported (that would make the top node the root of two separate widgets and we can't support that).
+
 
 ========
 See also
