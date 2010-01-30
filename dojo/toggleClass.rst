@@ -3,10 +3,8 @@
 dojo.toggleClass
 ================
 
-:Status: Final
-:Version: 1.4
 :Project owner: Eugene Lazutkin
-:Available: since 0.9
+:Available: since V0.9
 
 .. contents::
    :depth: 2
