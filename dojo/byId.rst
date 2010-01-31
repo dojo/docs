@@ -4,9 +4,7 @@
 dojo.byId
 =========
 
-:Status: Draft
-:Version: 1.0
-:Available: since V?
+:Available: since V0.3
 
 .. contents::
     :depth: 2
