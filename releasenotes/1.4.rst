@@ -603,3 +603,4 @@ Here are some common issues people have had when upgrading (ie, migrating) from 
 1. if your widgets are using templatePath you should ideally update them to use templateString with dojo.cache() instead, or alternately, minimally, make sure that they set templateString to null (to override the templateString setting from a superclass).
 2. ContentPane acts more as a layout widget than before, defining isLayoutContainer: true. This may break some custom subclasses.
 3. the startup code for widgetsInTemplate has changed; if you have a custom widget that manually adds sub-widgets into its DOM, be sure to add those sub-widgets to this._startupWidgets[] and also this._supportingWidgets[]. Alternately you can set _earlyTemplatedStartup to true to get the 1.3 behavior
+4. If your TabContainer is too wide (you must have set width=100% in your markup?), specify controllerWidget=""dijit.layout.TabController" (see `Ticket #10495 <http://bugs.dojotoolkit.org/ticket/10495>`_).
