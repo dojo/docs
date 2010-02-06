@@ -68,9 +68,9 @@ Index
 
 This is the start of the index:
 
-DojoBook_
+DojoBook
 
 Proposals
 ---------
 
-dojo.Node_ 
+dojo/Node_ 
