@@ -111,7 +111,7 @@ Example:
 onSubmit
 ~~~~~~~~
 
-This callback is called when ``onsubmit`` event was raised in any way. It should return ``false`` to stop submit_ from happening. The default implementation calculates onValid_ and returns its value. It prevents the form from submitting if any form widget was not valid.
+This callback is called when ``onsubmit`` event was raised in any way. It should return ``false`` to stop submit_ from happening. The default implementation calculates onValid and returns its value. It prevents the form from submitting if any form widget was not valid.
 
 The method takes one parameter: the event object.
 
