@@ -11,7 +11,7 @@ dojo.provide
 .. contents::
    :depth: 2
 
-dojo.provide is a core part of the dojo packaging system. It enables telling the package manager that a specific package has been loaded. Asides from the functioning, there has been mention that it automatically instantiates objects corresponding to the namespace it is passed.
+dojo.provide is a core part of the dojo module system. It tells the loader that a specific module has been loaded.
 
 
 ============
@@ -25,34 +25,27 @@ Each javascript source file must have at least one dojo.provide() call at the to
 Usage
 =====
 
-TODO: how to use the component/class/method
+dojo.provide is an integral part of Dojo's module system and its loader. dojo.provide() tells the loader that the a module has been provided for the given name. It also creates a JavaScript object for the name.
+
+This code example is for a my/module.js file. Note the convention of placing the dojo.provide call before dojo.require calls.
 
 .. code-block :: javascript
  :linenos:
 
  <script type="text/javascript">
-   // your code
+   dojo.provide("my.module");
+
+   dojo.require("dojo.io.script");
+
+   //dojo.provide made sure that my.module was created as a JavaScript object,
+   //so properties can be assigned to it:
+   my.module.name = "my module";
  </script>
 
-
-
-========
-Examples
-========
-
-Programmatic example
---------------------
-
-TODO: example
-
-Declarative example
--------------------
-
-TODO: example
-
+Multiple dojo.provide calls can live in a file, but outside of built layer, it is normal just to see one for the module that matches the file name.
 
 ========
 See also
 ========
 
-* TODO: links to other related articles
+* `dojo.require <dojo/require>`_
