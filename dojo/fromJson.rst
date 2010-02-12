@@ -14,7 +14,7 @@ Parses a JSON string to return a JavaScript object.
 Introduction
 ============
 
-This function creates a JavaScript object from a passed JSON string, such as one created by `dojo.toJson <dojo.toJson>`_ or the response data from an `Ajax <quickstart/ajax>`_ call with ``handleAs:"json"`` enabled.
+This function creates a JavaScript object from a passed JSON string, such as one created by `dojo.toJson <dojo/toJson>`_ or the response data from an `Ajax <quickstart/ajax>`_ call with ``handleAs:"json"`` enabled.
 
 .. code-block :: javascript
   :linenos:
