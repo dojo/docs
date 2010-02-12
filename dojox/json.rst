@@ -3,7 +3,7 @@
 dojox.json
 ==========
 
-:Authors: Kris Zyp
+:Author: Kris Zyp
 :Project owner: Kris Zyp
 :Available: since V1.2
 
