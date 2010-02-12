@@ -390,7 +390,7 @@ Custom Namespace Scenarios
 Same Domain
 ~~~~~~~~~~~
 
-A same domain build creating a layer including both Dojo and custom namespace components:  `Custom module build <build/scenario-customModule>`_
+A same domain build creating a layer including both Dojo and custom namespace components: `Custom module build <build/customBase>`_
 
 Cross Domain 
 ~~~~~~~~~~~~
