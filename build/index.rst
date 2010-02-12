@@ -395,7 +395,7 @@ A same domain build creating a layer including both Dojo and custom namespace co
 Cross Domain 
 ~~~~~~~~~~~~
 
-A custom name space build which uses a cross domain built Dojo distribution for Dojo, dijit, and dojox resources, and a local file system build of the custom namespace for custom resources:  `Cross domain custom name space build <build/scenario-xDomainCustomModule>`_
+A custom name space build which uses a cross domain built Dojo distribution for Dojo, dijit, and dojox resources, and a local file system build of the custom namespace for custom resources:  `Cross domain custom name space build <build/xDomain>`_
 
 
 Advanced and Special Purpose Scenarios
