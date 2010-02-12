@@ -3,8 +3,6 @@
 dojo.fromJson
 =============
 
-:Status: Draft
-:Version: 1.0
 :Available: since v0.9
 
 .. contents::
