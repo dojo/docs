@@ -37,5 +37,5 @@ TODOC: Date objects in objects
 See Also:
 =========
 
-* `dojo.fromJson <dojo.fromJson>`_ 
-* `dojo.objectToQuery <dojo.objectToQuery>`_
+* `dojo.fromJson <dojo/fromJson>`_ 
+* `dojo.objectToQuery <dojo/objectToQuery>`_
