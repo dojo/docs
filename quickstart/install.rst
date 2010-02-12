@@ -6,8 +6,6 @@
 Installing Dojo
 ===============
 
-:Status: Draft
-:Version: 1.0
 :Authors: Peter Higgins, Nikolai Onken
 
 .. contents::
