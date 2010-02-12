@@ -43,5 +43,5 @@ Usage
 See also
 ========
 
-* `dojo.toJson <dojo.toJson>`_ 
-* `dojo.queryToObject <dojo.queryToObject>`_ 
+* `dojo.toJson <dojo/toJson>`_ 
+* `dojo.queryToObject <dojo/queryToObject>`_ 
