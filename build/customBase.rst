@@ -3,16 +3,14 @@
 build customBase
 ================
 
-:Status: Draft
-:Version: 1.0
-:Project owner: (docs) Scott Jenkins
+:Author: Scott Jenkins
+:Project owner: ?
 :Available: since V?
 
 .. contents::
    :depth: 2
 
 Custom base is used to make an extremely small file size version of dojo.js.
-
 
 
 ============
@@ -24,6 +22,7 @@ Normally, when the builder system creates ``dojo.js`` it includes the entire bas
 However, in some cases, such as creating web applications intended for use on smart phones, you may desire to create an even smaller ``dojo.js``.  Using ``customBase`` you can achieve minimal Dojo versions as small as approximately 6k (including the stubs described below).
 
 This is a very advanced feature, and if you think you need to use it, you should think carefully first. If after careful consideration, you still want to use this feature, be very, very careful and document it thoroughly for your own understanding.
+
 
 ===============================
 dojo.require for base functions
@@ -72,7 +71,6 @@ You just end up with the following from ``dojo/_base/_loader``, basically, just 
    * ``loader.js``
 
 
-
 ============================
 Including Specific Resources
 ============================
@@ -116,9 +114,11 @@ finds "indexOf" in the module, it will add in a
 ``dojo.require("dojo._base.array")``, but that ``indexOf`` in the module could
 have been a String method call.
 
+
 ================
 Known Bugs
 ================
+
 ``customBase: true`` should not be used with ``djConfig.require``. There is a
 bug where the ``djConfig.require`` will not be included correctly
 depending on if you leave out ``dojo._base.browser``:
