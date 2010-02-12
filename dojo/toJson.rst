@@ -3,9 +3,7 @@
 dojo.toJson
 ===========
 
-:Status: Draft
-:Version: 1.0
-:Available: since 0.9
+:Available: since V0.9
 
 .. contents::
    :depth: 2
