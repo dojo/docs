@@ -47,4 +47,5 @@ TODO: example
 See also
 ========
 
+* For a working example, see: http://archive.dojotoolkit.org/nightly/dojotoolkit/dojox/image/tests/test_Badge.html
 * TODO: links to other related articles
