@@ -232,4 +232,4 @@ The name of the topic is retrieved by calling the getShowTopicName method on the
 See Also
 ==========
 For a full example of the Slideshow, see the test file at
-http://archive.dojotoolkit.org/nightly/dojotoolkit/dojox/image/tests/tes...
+http://archive.dojotoolkit.org/nightly/dojotoolkit/dojox/image/tests/test_SlideShow.html
