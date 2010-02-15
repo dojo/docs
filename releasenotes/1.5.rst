@@ -108,6 +108,10 @@ Old                                                    New                      
 .dijitTabBtnDisabled                                   .dijitTabDisabled                                    left and right scroll buttons on tab strip
 .dijitTab .closeImage                                  .dijitTabCloseIcon                                   icon inside of close button
 .dijitTab .closeText                                   .dijitTabCloseText                                   text inside of close button, for a11y
+.tabStripButton img                                    .dijitTabStripIcon                                   class for tabstrip's scroll-left, scroll-right, and menu icons
+.tabStripMenuButton img                                .dijitTabStripMenuIcon                               icon to show menu (listing all tabs)
+.tabStripSlideButtonLeft img                           .dijitTabStripSlideLeftIcon                          icon to scroll tabs to left
+.tabStripSlideButtonRight img                          .dijitTabStripSlideRightIcon                         icon to scroll tabs to right
 ====================================================== =============================================        ===========
 
 Dialog:
