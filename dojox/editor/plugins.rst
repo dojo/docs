@@ -87,6 +87,12 @@ There are currently a small set of nice features that can be plugged into the di
   
   **This plugin is new to the Dojo Toolkit 1.5.**
 
+* `dojox.editor.plugins.Blockquote <dojox/editor/plugins/Blockquote>`_ -- **STABLE**
+
+  A plugin that adds a blockquoting button to the toolbar.  All text that is part of a block of text will be wrapped in a blockquote tag when applied, or removed from a blockquote tag when untoggled.  It will also work across large selections, blockquoting each chunk of text and inline elements as a blockquote block.  This plugin has been well tested and is known to work well in all browsers supported by dojo.
+  
+  **This plugin is new to the Dojo Toolkit 1.5.**
+
 ========
 See Also
 ========
