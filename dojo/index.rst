@@ -72,6 +72,10 @@ Language Utilities
 
   Function that generates a wrapper function that ensures a function will only ever execute globally.
 
+* `dojo.delegate <dojo/delegate>`_
+
+  Returns a new object which "looks" to obj for properties which it does not have a value for.
+
 * `dojo.isString <dojo/isString>`_
 
   Checks if the parameter is a String
