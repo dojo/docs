@@ -3,15 +3,13 @@
 dojox.widget.Pager
 ==================
 
-:Status: Draft
-:Version: 1.0
-:Project owner: Nikolai Onken
-:Available: since V?
+:Project owner: Peter Higgins
+:Available: since V1.1.1
 
 .. contents::
    :depth: 2
 
-TODO: short summary of the component/class/method
+A Pager, displaying a list of sized nodes.
 
 
 ============
@@ -25,8 +23,6 @@ TODO: introduce the component/class/method
 Usage
 =====
 
-TODO: how to use the component/class/method
-
 .. code-block :: javascript
  :linenos:
 
@@ -34,6 +30,7 @@ TODO: how to use the component/class/method
    // your code
  </script>
 
+This Widget uses dojo.data, Dojo's uniform and consistent data access layer.
 
 
 ========
@@ -82,4 +79,5 @@ Declarative example: Horizontal Pager
 See also
 ========
 
-* TODO: links to other related articles
+* `Using Datastores <quickstart/data/usingdatastores>`_
+* `Planned cleanups and enhancements for dojox.widget.Pager <http://trac.dojotoolkit.org/ticket/8012>`_
