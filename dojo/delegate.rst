@@ -52,11 +52,11 @@ Programmatic example
  :linenos:
 
  <script type="text/javascript">
-   var foo = { bar: "baz" };
-   var thinger = dojo.delegate(foo, { thud: "xyzzy"});
-   thinger.bar == "baz"; // delegated to foo
-   foo.thud == undefined; // by definition
-   thinger.thud == "xyzzy"; // mixed in from props
-   foo.bar = "thonk";
-   thinger.bar == "thonk"; // still delegated to foo's bar
+   var anOldObject = { bar: "baz" };
+   var myNewObject = dojo.delegate(anOldObject, { thud: "xyzzy"});
+   myNewObject.bar == "baz"; // delegated to anOldObject
+   anOldObject.thud == undefined; // by definition
+   myNewObject.thud == "xyzzy"; // mixed in from props
+   anOldObject.bar = "thonk";
+   myNewObject.bar == "thonk"; // still delegated to foo's bar
  </script>
