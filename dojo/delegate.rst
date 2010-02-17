@@ -27,7 +27,7 @@ Usage
  :linenos:
 
  <script type="text/javascript">
-   var myNewObject = dojo.delegate(myOldObject, { myNewProperty: "value or text"});
+   var myNewObject = dojo.delegate(anOldObject, { myNewProperty: "value or text"});
  </script>
 
 dojo.delegate accepts two arguments:
