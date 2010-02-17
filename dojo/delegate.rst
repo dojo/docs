@@ -58,5 +58,5 @@ Programmatic example
    anOldObject.thud == undefined; // by definition
    myNewObject.thud == "xyzzy"; // mixed in from props
    anOldObject.bar = "thonk";
-   myNewObject.bar == "thonk"; // still delegated to foo's bar
+   myNewObject.bar == "thonk"; // still delegated to anOldObject's bar
  </script>
