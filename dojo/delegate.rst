@@ -3,8 +3,6 @@
 dojo.delegate
 =============
 
-:Status: Draft
-:Author: ?--
 :Project owner: ?--
 :Available: since V?
 
@@ -62,10 +60,3 @@ Programmatic example
    foo.bar = "thonk";
    thinger.bar == "thonk"; // still delegated to foo's bar
  </script>
-
-
-========
-See also
-========
-
-* TODO: links to other related articles
