@@ -11,14 +11,14 @@ dojo.delegate
 .. contents::
    :depth: 2
 
-TODO: short summary of the component/class/method 
+Returns a new object which "looks" to obj for properties which it does not have a value for. Optionally takes a bag of properties to seed the returned object with initially.
 
 
 ============
 Introduction
 ============
 
-TODO: introduce the component/class/method
+This is a small implementaton of the Boodman/Crockford delegation pattern in JavaScript. An intermediate object constructor mediates the prototype chain for the returned object, using it to delegate down to obj for property lookup when object-local lookup fails. This can be thought of similarly to ES4's "wrap", save that it does not act on types but rather on pure objects.
 
 
 =====
