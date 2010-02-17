@@ -41,6 +41,9 @@ props       object                An object containing properties to assign to t
                                   returned object.
 ==========  ====================  ==================================================
 
+dojo.delegate returns an Object of anonymous type.
+
+
 ========
 Examples
 ========
