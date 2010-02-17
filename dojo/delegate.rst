@@ -25,6 +25,13 @@ This is a small implementaton of the Boodman/Crockford delegation pattern in Jav
 Usage
 =====
 
+.. code-block :: javascript
+ :linenos:
+
+ <script type="text/javascript">
+   var thinger = dojo.delegate(foo, { thud: "xyzzy"});
+ </script>
+
 dojo.delegate accepts two arguments:
 
 ==========  ====================  ==================================================
@@ -36,7 +43,12 @@ props       object                An object containing properties to assign to t
                                   returned object.
 ==========  ====================  ==================================================
 
-Example:
+========
+Examples
+========
+
+Programmatic example
+--------------------
 
 .. code-block :: javascript
  :linenos:
@@ -50,21 +62,6 @@ Example:
    foo.bar = "thonk";
    thinger.bar == "thonk"; // still delegated to foo's bar
  </script>
-
-
-========
-Examples
-========
-
-Programmatic example
---------------------
-
-TODO: example
-
-Declarative example
--------------------
-
-TODO: example
 
 
 ========
