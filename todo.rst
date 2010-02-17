@@ -23,6 +23,10 @@ Top priority: dojo.js
 
   needed: full page
 
+* `dojo.delegate <dojo/delegate>`_
+
+  needed: full page
+
 * `dojo.eval <dojo/eval>`_
 
   needed: full page
