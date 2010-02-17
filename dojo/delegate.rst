@@ -25,15 +25,31 @@ This is a small implementaton of the Boodman/Crockford delegation pattern in Jav
 Usage
 =====
 
-TODO: how to use the component/class/method
+dojo.delegate accepts two arguments:
+
+==========  ====================  ==================================================
+Parameter   Type                  Description
+==========  ====================  ==================================================
+obj         object                The object to delegate to for properties not found
+                                  directly on the return object or in props.
+props       object                An object containing properties to assign to the 
+                                  returned object.
+==========  ====================  ==================================================
+
+Example:
 
 .. code-block :: javascript
  :linenos:
 
  <script type="text/javascript">
-   // your code
+   var foo = { bar: "baz" };
+   var thinger = dojo.delegate(foo, { thud: "xyzzy"});
+   thinger.bar == "baz"; // delegated to foo
+   foo.thud == undefined; // by definition
+   thinger.thud == "xyzzy"; // mixed in from props
+   foo.bar = "thonk";
+   thinger.bar == "thonk"; // still delegated to foo's bar
  </script>
-
 
 
 ========
