@@ -5,7 +5,7 @@ dojox.editor.plugins.Blockquote
 
 :Authors: Jared Jurkiewicz
 :Project owner: Jared Jurkiewicz
-:Available: since V1.4
+:Available: since V1.5
 
 .. contents::
     :depth: 2
