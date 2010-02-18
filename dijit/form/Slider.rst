@@ -7,12 +7,41 @@ dijit.form.Slider
 :Developers: ?-
 :Available: since V?
 
+
 .. contents::
     :depth: 2
 
-A **dijit.form.HorizontalSlider** or **dijit.form.VerticalSlider** is a scale with a handle you can drag up/down or left/right to select a value. 
+============
+Introduction
+============
+
+A **dijit.form.HorizontalSlider** or **dijit.form.VerticalSlider** is a scale with a handle you can drag left/right or up/down to select a value. 
+
+=====
+Usage
+=====
 
 
+.. code-block :: javascript
+ :linenos:
+
+ <script type="text/javascript">
+  dojo.require("dijit.form.Slider");
+  var slider = new dijit.form.HorizontalSlider({
+  }, "mySlider");
+ </script>
+
+Here are some of the constructor parameters:
+
+==============  ====================  =============================================================================
+Parameter       Type                       Description
+==============  ====================  =============================================================================
+value           integer               Initial value of the slider (``0``)
+showButtons     boolean               Whether to show or not buttons at each end of the slider (``true``)
+minimum         integer               Minimum value of the slider (``0``)
+maximum         integer               Maximum value of the slider (``100``)
+discreteValues  integer               Number of "steps" in the slider. For exemple if ``discreteValues`` is ``3``, you'll have 3 steps: ``minimum``, ``maximum`` and a value in the middle
+==============  ====================  =============================================================================
 
 ========
 Examples
