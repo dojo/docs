@@ -20,7 +20,7 @@ Features
 
 This plugin provides the following
 
-* A buttona nd icon representing paste from Word.
+* A button and icon representing paste from Word.
 * An input dialog for pasting content from Word Processors for processing before being injected into the dijit Editor.
 * It makes use of dojox.html.format to also try to clean up and normalize the HTML as much as possible.
 
