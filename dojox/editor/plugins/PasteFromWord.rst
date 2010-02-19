@@ -37,8 +37,13 @@ Usage of this plugin is quite simple and painless.  The first thing you need to 
     dojo.require("dijit.Editor");
     dojo.require("dojox.editor.plugins.PasteFromWord");
 
-
 You then need to import its CSS.  This is done by just adding a link tag to the header.  Something like:
+
+.. code-block :: html
+
+  <style>
+    @import "dojox/editor/plugins/resources/css/PasteFromWord.css";
+  </style>
 
 Once it has been required in, all you have to do is include it in the list of extraPlugins you want to load into the editor.  For example:
 
