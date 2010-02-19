@@ -8,10 +8,33 @@ dojox.timing
 :Authors: Tom Trenka, Wolfram Kriesing, Jonathan Bond-Caron, Pete Higgins
 
 DojoX Timing is a project that deals with any kind of advanced use of timing
-constructs.  The central object, dojox.timing.Timer (included by default), is
-a simple object that fires a callback on each tick of the timer, as well as 
-when starting or stopping it.  The interval of each tick is settable, but the
-default is 1 second--useful for driving something such as a clock.
+constructs.
+
+==================
+dojox.timing.Timer
+==================
+
+The central object of ``dojox.timing`` is ``dojox.timing.Timer``
+(included by default), is a simple object that fires a callback
+on each tick of the timer, as well as when starting or stopping it.
+The interval of each tick is settable, but the default is 1
+second--useful for driving something such as a clock.
+
+.. code-block :: javascript
+  
+  dojo.require('dojox.timing');
+  t = new dojox.timing.Timer(1000);
+  t.onTick = function() {
+   console.info("One second elapsed");
+  }
+  t.onStart = function() {
+   console.info("Starting timer");
+  }
+  t.start();
+
+==============
+Other elements
+==============
 
 dojox.timing.Streamer is an object designed to facilitate streaming/buffer-type
 scenarios; it takes an input and an output function, will execute the output
