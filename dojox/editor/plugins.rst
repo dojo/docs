@@ -93,7 +93,7 @@ There are currently a small set of nice features that can be plugged into the di
   
   **This plugin is new to the Dojo Toolkit 1.5.**
 
-* `dojox.editor.plugins.PasteFromWord<dojox/editor/plugins/PasteFromWord>`_ -- **BETA**
+* `dojox.editor.plugins.PasteFromWord <dojox/editor/plugins/PasteFromWord>`_ -- **BETA**
 
   A plugin that adds a 'paste from word' icon to the toolbar.  It opens a dialog where content from Word or similar programs can be pasted in, then filters are run against the input to remove extraneous HTML that causes the editor difficulty, leaving the injected content cleaner HTML.
   
