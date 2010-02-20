@@ -42,6 +42,22 @@ Another bug found is uploading multiple files more than once causes onComplete t
 
 http://bugs.dojotoolkit.org/ticket/9646
 
+Dojo Version 1.4.0
+------------------
+
+This version has some serious upgrades, including a more robust upload system that has been tested to upload 500 files and 500 megs. This version also fixes several bugs including the ability to display the uploader in a Dialog.
+
+Dojo Version 1.5.0
+------------------
+
+This version adds the ability to use the uploader in a TabContainer. However:
+
+**IMPORTANT NOTE:** 
+
+There is a serious limitation in the Flash version for Firefox and Safari in TabContainers. When a node in those browsers is hidden (or essentially repainted which can mean other style applications) the SWF is reloaded. This means that if you browse for a file but don't upload upload it, change the tab and return, the files will no longer be in the FileUploader. This problem can be seen when tabbing between Tab 1 and Tab 2 and observing the console logs and you will see the SWF reinitializes. This problem does not exist in Internet Explorer. The HTML version of the Uploader should also work fine.
+
+See form/tests/test_FileUploaderTabs.html for the workaround. It floats a div above the tab container and moves it on and off screen as the tab is toggled. 
+
 Updating Your Release
 ---------------------
 
