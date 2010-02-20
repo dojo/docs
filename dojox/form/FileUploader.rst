@@ -72,8 +72,9 @@ Another limitation with using Flash is passing data back and forth. There is a p
 
 Currently the only workaround is to *don't do that*.
 
+=====================
 Updating Your Release
----------------------
+=====================
 
 I often suggest to people who are not able to use the 1.3.2 or trunk version of Dojo to copy over the latest uploader files. The involved files would be:
 
