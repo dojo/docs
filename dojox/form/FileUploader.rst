@@ -50,9 +50,11 @@ This version has some serious upgrades, including a more robust upload system th
 Dojo Version 1.5.0
 ------------------
 
-This version adds the ability to use the uploader in a TabContainer. However:
-
-**IMPORTANT NOTE:** 
+This version adds the ability to use the uploader in a TabContainer. However, see the next section.
+ 
+===============
+IMPORTANT NOTES
+===============
 
 There is a serious limitation in the Flash version for Firefox and Safari in TabContainers. When a node in those browsers is hidden (or essentially repainted which can mean other style applications) the SWF is reloaded. This means that if you browse for a file but don't upload upload it, change the tab and return, the files will no longer be in the FileUploader. This problem can be seen when tabbing between Tab 1 and Tab 2 and observing the console logs and you will see the SWF reinitializes. This problem does not exist in Internet Explorer. The HTML version of the Uploader should also work fine.
 
@@ -63,6 +65,12 @@ While the FileUploader instantiates like a widget, it has limitations due to the
 *var f = new dojox.form.FileUploader(props).placeAt(anything);*
 
 ...will not work. There may also be problems with placing it in other widgets unless it displays right away, although as of 1.5 these problems have mostly been worked out.  
+
+Another limitation with using Flash is passing data back and forth. There is a problem with passing variable names with illegal characters, like:
+
+*{form["my-var"]: "foo")*
+
+Currently the only workaround is to *don't do that*.
 
 Updating Your Release
 ---------------------
