@@ -275,7 +275,9 @@ The FileUploader has many advanced properties to handle most situations.
 
 **postData**: The data that will be sent via POST to the server along with the uploaded files. This data object can bet set on instantiation, and the data will be sent to the server with each file on every upload. You can also pass postData in the upload method as an object argument which can be different with each upload.
 
-Note: as of 1.4.0 there is a bug: http://bugs.dojotoolkit.org/ticket/10559 where postData is not being sent for flash based uploaders where uploadOnChange is also true.
+Note: as of 1.4.0 there is a bug: http://bugs.dojotoolkit.org/ticket/10559 where postData is not being sent for flash based uploaders where uploadOnChange is also true. This is fixed in 1.5.
+
+**Returned postData**: Post data is regurgitated to the uploader in the tests. Your case may be different. The SWF returns postdata in an *additionalParams* object, and it is in this object in which the postdata can be found in the onComplete object. The reason for this was originally to get around AS3 issues, but it turns out to be a good system, as it prevents post data variables from overwriting standard variables such as 'name' or 'file'.
 
 **htmlFieldName**: The name of the field of the fileInput that the server is expecting. See "Server Side Code" below.
 
