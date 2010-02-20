@@ -58,6 +58,12 @@ There is a serious limitation in the Flash version for Firefox and Safari in Tab
 
 See form/tests/test_FileUploaderTabs.html for the workaround. It floats a div above the tab container and moves it on and off screen as the tab is toggled. 
 
+While the FileUploader instantiates like a widget, it has limitations due to the fact that it has to manage a Flash plugin. Before it is built, it inspects the DOM and checks style information. Due to this process there needs to be a node to inspect, so dojo 1.4 functionality like:
+
+*var f = new dojox.form.FileUploader(props).placeAt(anything);*
+
+...will not work. There may also be problems with placing it in other widgets unless it displays right away, although as of 1.5 these problems have mostly been worked out.  
+
 Updating Your Release
 ---------------------
 
@@ -77,15 +83,10 @@ and optionally:
 Note that if you are moving these files into Dojo 1.2 or less, you will have to change some of the code in the FileUploader to not use the 1.3 html method dojo.destroy() and replace it with the previous version of dojo._destroyElement()
 
 ======================================
-FileUploader Functionality 1.3.2 - 1.4
+FileUploader Functionality 1.3.2 - 1.5
 ======================================
 
-FileUploader is now a widget and **DOES** create a button. You do not have to pass a button in. Passing a button is still supported until version 1.5 to maintain backwards compatibility, but it is not recommended. Just create your uploader like any other widget.
-
-IMPORTANT NOTE
---------------
-
-While the FileUploader instantiates like a widget, it has limitations due to the fact that it has to manage a Flash plugin. Before it is built, it inspects the DOM and checks style information. Due to this process it needs to happen right away. Currently The FileUploader cannot be placed in a TabContainer unless it is in the tab that displays first. There may also be problems with placing it in other widgets unless it displays right away. Placing it in a Dialog box is supported, but this support should be considered very experimental, as it hasn't been very thoroughly tested (and there have been reports that it doesn't work). Making the FileUploader work in these deferred-build environments will take some time, and I can't give an estimate for when that will be.  
+FileUploader is now a widget and **DOES** create a button. You do not have to pass a button in. Passing a button is still supported until version 1.5 to maintain backwards compatibility, but it is not recommended. In a majority of cases, you can create your uploader like any other widget. 
 
 Setup
 -----
