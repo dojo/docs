@@ -25,7 +25,7 @@ Top priority: dojo.js
 
 * `dojo.eval <dojo/eval>`_
 
-  needed: full page
+  needed: review
 
 * `dojo.provide <dojo/provide>`_
 
