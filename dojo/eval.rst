@@ -11,48 +11,43 @@ dojo.eval
 .. contents::
    :depth: 2
 
-Evaluate some string of JavaScript
+Evaluate some string of JavaScript in global context.
 
 
 ============
 Introduction
 ============
 
-TODO: introduce the component/class/method
+Evaluates the given string into window (global) scope rather than in current scope. Use this rather than ``eval``.
 
 
 =====
 Usage
 =====
 
-TODO: how to use the component/class/method
-
 .. code-block :: javascript
  :linenos:
 
  <script type="text/javascript">
-   // your code
+  dojo.declare('Foo', null, {
+    foo: function() {
+      eval('var fooBar = "bar"');
+    }
+  });
+
+  var foo = new Foo();
+  foo.foo();
+  // This will generate a "ReferenceError fooBar is not defined"
+  console.info(fooBar)
+
+
+  dojo.declare('Bar', null, {
+    bar: function() {
+      dojo.eval('var barBaz = "baz"');
+    }
+  });
+  var bar = new Bar();
+  bar.bar();
+  // Show "baz" !
+  console.info(barBaz);
  </script>
-
-
-
-========
-Examples
-========
-
-Programmatic example
---------------------
-
-TODO: example
-
-Declarative example
--------------------
-
-TODO: example
-
-
-========
-See also
-========
-
-* TODO: links to other related articles
