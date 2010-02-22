@@ -577,8 +577,8 @@ Util
 Build System/buildscripts
 -------------------------
 
-* Using Google's Closure Compiler is now supported in the build system.
-* See the `Advanced Build Topics docs <build/index#using-google-s-closure-compiler>`_.
+* Using Google's Closure Compiler is now supported in the build system. See the `Advanced Build Topics docs <build/index#using-google-s-closure-compiler>`_.
+* If/when Dojo 1.4.2 is released, by default the copyTests option defaults to false instead of true. This was done to help reduce the possibility of copying tests in their builds, extra files and more security concerns to worry about.
 
 Checkstyle
 ----------
