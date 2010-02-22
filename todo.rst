@@ -50,7 +50,7 @@ Priority 2: Dojo Core
 
 * `dojo.cookie <dojo/cookie>`_
 
-  needed: Introduction, usage info
+  needed: review
 
 * `dojo.currency <dojo/currency>`_
 
