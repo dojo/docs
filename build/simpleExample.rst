@@ -27,7 +27,7 @@ Like most parts of Dojo the build system has been designed to be both powerful a
 Example 1
 =========
 
-Download [[FIXME: link to zip file ]] and unzip. Note: Because the source release of Dojo is quite large it isn't included in the zip file. Once you've unpacked the zip, go to js/dojo-src run getDojo.sh. Then repeat this withing the js/dojo-1.4.1 directory. These scripts will download the base dojo releases for you and unzip them into the locations used by the build system.
+Download [[attachment:dojoBuildSystemExample.zip]] and unzip. Note: Because the source release of Dojo is quite large it isn't included in the zip file. Once you've unpacked the zip, go to js/dojo-src run getDojo.sh. Then repeat this withing the js/dojo-1.4.1 directory. These scripts will download the base dojo releases for you and unzip them into the locations used by the build system.
 
 As an aside, I think it's good practise to have a completely clean dojo release every time you do a build. If you want to patch it, you should create a 'patches' module in your own namespace and add the patches either as part of the build process, or by writing code that updates itself. Otherwise upgrades will be very painful. The way this example has been structured you can delete the entire dojo-src or dojo-1.4.1 directories at any time and replace with a fresh build.
 
@@ -64,6 +64,16 @@ Resource Name
 -------------
 
 During the build, Dojo will move all the files from 'dojo-src' to 'resourceName'. It will then create the layer, do all the smushing of JS and CSS and put all that stuff under 'resourceName' as well. So you need to change <script type="text/javascript" src="js/dojo-release/dojo/dojo.js"> to <script type="text/javascript" src="js/releaseName/dojo/layerName.js"> (you might want to include dojo.js as well, depending on if your layer contains all the bits of Dojo you need as well as all the dijits and your own code). You also want to change the location of the CSS so you grab the smushed CSS as well. (Like with JS, smushing the CSS into a single file loads more quickly because it reduces the number of HTTP requests and removes comments, which allows the CSS parser in your browser to decipher it more quickly). The build system also makes a copy of all the files, after being minimized, in your release. This means you don't have to add modules that are used infrequently to your layers - any dojo.require() calls for modules that are not loaded will be loaded via XHR instead.  Remember, Dojo locates files relative to dojo.js, and you've just changed the location of dojo.js at the beginning of this paragraph, so you need to move everything else too!
+
+Pros of this approach
+---------------------
+ * Dojo released code and your code kept separately
+ * Can include multiple layers on a page easily
+
+Cons of this approach
+---------------------
+
+ * Obviously you are not going to keep two copies of your HTML files kicking around, so you have to change the contents of the file on the server side depending on if you are in a live or development environment
 
 =========
 Example 2
