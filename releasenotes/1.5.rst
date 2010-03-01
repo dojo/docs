@@ -65,7 +65,7 @@ Note that there's no event handling code for hover/active/focus CSS needed in th
 Migration
 ~~~~~~~~~
 
-If you have modified widget templates to dijit widgets, you will probably have some onmouseenter/onmouseleave/onfocus/onblur handlers that should be removed.
+If you have modified widget templates to dijit widgets, you will probably have some onmouseenter/onmouseleave/onfocus/onblur handlers that should be removed.   In particular, _onMouse() has been removed from _FormWidget so you should remove calls to it from custom templates.
 
 In addition, if you have custom CSS rules, there were a few changes about form widget classes with nested buttons, seen in http://bugs.dojotoolkit.org/changeset/21117:
 
@@ -166,6 +166,22 @@ Old                                                    New                      
 .RichTextEditable                                      .dijitEditor                                         editor's root node
 ====================================================== =============================================        ===========
 
+
+dijit.popup
+-----------
+Dijit.popup shouldn't be shortcutted.   This will work:
+
+.. code-block :: javascript
+
+   dijit.popup.open({...});
+
+However, this will not:
+
+.. code-block :: javascript
+
+   var open = dijit.popup.open;
+   open({...});
+
 =====
 DojoX
 =====
@@ -174,3 +190,12 @@ Editor
 ------
 
 - Smiley plugin (existed in 1.4 but wasn't working; now it does)
+
+====
+Util
+====
+
+Build System/buildscripts
+-------------------------
+
+* By default the copyTests option defaults to false instead of true now. This was done to help reduce the possibility of copying tests in their builds, extra files and more security concerns to worry about.
