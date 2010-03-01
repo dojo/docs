@@ -30,6 +30,8 @@ Gray out the screen
   .. cv :: javascript
 
     <script>
+       dojo.require("dojo.window");
+        
         function block(){
             var vs = dojo.window.getBox(),
             div = dojo.create("div", { 
