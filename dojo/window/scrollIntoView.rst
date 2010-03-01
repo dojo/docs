@@ -30,7 +30,7 @@ Two buttons
   .. cv :: html 
 
     <button type=button id=button1 onclick="dojo.window.scrollIntoView('button2');">scroll to button 2</button>
-    <div style="height: 500px; border: 1px solid black>
+    <div style="height: 500px; border: 1px solid black">
         div to separate buttons
     </div>
     <button type=button id=button2 onclick="dojo.window.scrollIntoView('button1');">scroll to button 1</button>
