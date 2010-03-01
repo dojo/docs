@@ -17,6 +17,8 @@ Some functions from dijit have been moved to dojo core (with stubs left in dijit
  - dojo.require("dojo.uacss") will add classes to the <html> node like dj_ie, representing the browser, browser version, box model, etc.  Formerly dojo.require("dijit.sniff").
  - dojo.window.getBox() get's the viewport size.   Formerly dijit.getViewport().
  - dojo.window.get() converts a document to the corresponding window.   Formerly dijit.getDocumentWindow()
+ - dojo.window.scrollIntoView(): scrolls a node into view, similar to node.scrollIntoView() but working around browser quirks.   Formerly dijit.scrollIntoView().
+
 
 =====
 Dijit
