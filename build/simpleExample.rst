@@ -27,7 +27,7 @@ Like most parts of Dojo the build system has been designed to be both powerful a
 Example 1
 =========
 
-Download [[attachment:dojoBuildSystemExample.zip]] and unzip. Note: Because the source release of Dojo is quite large it isn't included in the zip file. Once you've unpacked the zip, go to js/dojo-src run getDojo.sh. Then repeat this withing the js/dojo-1.4.1 directory. These scripts will download the base dojo releases for you and unzip them into the locations used by the build system.
+Download dojoBuildSystemExample.zip (click 'AttachFile' at the bottom of the page, and then 'get') and unzip. Note: Because the source release of Dojo is quite large it isn't included in the zip file. Once you've unpacked the zip, go to js/dojo-src run getDojo.sh. Then repeat this withing the js/dojo-1.4.1 directory. These scripts will download the base dojo releases for you and unzip them into the locations used by the build system.
 
 As an aside, I think it's good practise to have a completely clean dojo release every time you do a build. If you want to patch it, you should create a 'patches' module in your own namespace and add the patches either as part of the build process, or by writing code that updates itself. Otherwise upgrades will be very painful. The way this example has been structured you can delete the entire dojo-src or dojo-1.4.1 directories at any time and replace with a fresh build.
 
