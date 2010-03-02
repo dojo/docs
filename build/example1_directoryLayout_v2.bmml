@@ -1,0 +1,34 @@
+<mockup version="1.0" skin="sketch" measuredW="1317" measuredH="689" mockupW="1055" mockupH="645">
+  <controls>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Image" x="252" y="34" w="-1" h="-1" measuredW="452" measuredH="594" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>../../../../Scratch/Screenshot-4.png</src>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::VCurly" x="438" y="84" w="180" h="130" measuredW="180" measuredH="140" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Release%20version%20of%20Dojo%2C%20used%20for%20Development</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::VCurly" x="438" y="314" w="180" h="158" measuredW="180" measuredH="140" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Source%20version%20of%20Dojo%2C%20used%20for%20Building%20only</text>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::VCurly" x="438" y="214" w="281" h="100" measuredW="180" measuredH="140" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Built%20version%20of%20Dojo%2C%20used%20for%20Deployment.%20Built%20by%20the%20Build%20system%2C%20never%20edited%20by%20humans%21</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::VCurly" x="438" y="472" w="229" h="106" measuredW="180" measuredH="140" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Your%20custom%20Dojo%20modules%20go%20here.%20These%20are%20used%20in%20Development%2C%20but%20not%20Deployment.</text>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::Tree" x="885" y="36" w="422" h="643" measuredW="300" measuredH="588" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>f%20data%0AF%20dojo-1.4.1%0A.f%20dijit%0A.f%20dojo%0A.f%20dojox%0A%20-getDojo.sh%0AF%20dojo-ourRelease%0A.f%20dijit%0A.f%20dojo%0A.f%20yourCompany%0AF%20dojo-src%0A.f%20dijit%0A.f%20dojo%0A.f%20dojox%0A.f%20util%0A%20-getDojo.sh%0AF%20yourCompany%0A.F%20example%0A%20%20-AccordionPane.js%0A%20%20-ComboBox.js%0A-exampleRelease.profile.js%0A-makeRelease.sh%20</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
