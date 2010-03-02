@@ -34,6 +34,7 @@ As an aside, I think it's good practise to have a completely clean Dojo release 
 Now, to do a build, go to the 'js' directory and run 'makeRelease.sh' (again, you can't run this on Windows directly). This runs the Dojo build system and creates another directory called dojo-ourRelease that sits alongside the dojo-src and dojo-1.4.1 directories. See the image below.
 
 .. image :: attachment:example1_directoryLayout.png
+(image created with Balsamiq Mockup. BMML source is attached as well if this needs updating)
 
 The general idea is as follows:
 
