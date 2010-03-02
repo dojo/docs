@@ -11,8 +11,6 @@ Simple Buildsystem Examples
 .. contents::
    :depth: 2
 
-**Note: As of 1st March 2010 this page is under active development. Please come back soon!**
-
 This document provides some simple examples of using the Dojo build system, how to layout your directory structure and other best practices.
 
 ============
