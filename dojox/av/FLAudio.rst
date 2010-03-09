@@ -40,8 +40,8 @@ play() is the key method for controlling the playlist. As usual, an object is pa
 .. code-block :: javascript
  :linenos:
 
- mySound.play({id:'Ola', position:0, volume:.9, pan:-1});
- mySound.play({id:'Hio', position:0, volume:.8, pan:1});
+ mySound.doPlay({id:'Ola', position:0, volume:.9, pan:-1});
+ mySound.doPlay({id:'Hio', position:0, volume:.8, pan:1});
 
 And they will effectively play simultaneously.
 
