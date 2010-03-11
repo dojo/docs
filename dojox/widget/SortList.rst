@@ -8,6 +8,10 @@ dojox.widget.SortList
 
 TODO: description
 
+
+
+
+
 ========
 Examples
 ========
@@ -55,12 +59,9 @@ Example 1:  Raw, degradable UL list
   .. cv:: css
     :label: A simple set of css rules
 
+    <link rel="stylesheet" type="text/css" href="http://archive.dojotoolkit.org/nightly/dojotoolkit/dojox/widget/SortList/SortList.css">
     <style type="text/css">
-      html, body {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-      }
+
     </style>
 
 
