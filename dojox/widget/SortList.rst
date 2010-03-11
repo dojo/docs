@@ -59,10 +59,7 @@ Example 1:  Raw, degradable UL list
   .. cv:: css
     :label: A simple set of css rules
 
-    <link rel="stylesheet" type="text/css" href="http://archive.dojotoolkit.org/nightly/dojotoolkit/dojox/widget/SortList/SortList.css">
-    <style type="text/css">
-
-    </style>
+    <link rel="stylesheet" type="text/css" href="http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dojox/widget/SortList/SortList.css">
 
 
 Example 2:  SortList using a Store
@@ -93,10 +90,7 @@ Example 2:  SortList using a Store
   .. cv:: css
     :label: A simple set of css rules
 
-    <link rel="stylesheet" type="text/css" href="http://archive.dojotoolkit.org/nightly/dojotoolkit/dojox/widget/SortList/SortList.css">
-    <style type="text/css">
-
-    </style>
+    <link rel="stylesheet" type="text/css" href="http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dojox/widget/SortList/SortList.css">
 
 TODO: programmatic examples
 
