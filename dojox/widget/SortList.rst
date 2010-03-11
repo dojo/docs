@@ -37,7 +37,7 @@ Example 1:  Raw, degradable UL list
   .. cv:: html
     :label: SortList From Markup
     
-	<ul dojoType="dojox.widget.SortList" title="SortList From Markup" sortable="true" style="width:200px; height:200px;">
+	<ul dojoType="dojox.widget.SortList" title="SortList From Markup" sortable="false" style="width:200px; height:200px;">
 		<li>one</li>
 		<li>two</li>
 		<li>three</li>
