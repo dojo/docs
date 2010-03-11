@@ -86,7 +86,7 @@ Example 2:  SortList using a Store
   .. cv:: html
     :label: SortList  and Store From Markup
     
-    <div dojoType="dojo.data.ItemFileReadStore" url="http://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/_data/countries.json" jsId="stateStore"></div>
+    <div dojoType="dojo.data.ItemFileReadStore" url="http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/countries.json" jsId="stateStore"></div>
     <ul dojoType="dojox.widget.SortList" store="stateStore" title="sortable List" style="width:200px; height:200px;"></ul>
 
   
