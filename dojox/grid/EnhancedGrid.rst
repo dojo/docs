@@ -35,14 +35,6 @@ EnhancedGrid features are implemented as plugins which can be loaded on demand. 
 
     <script type="text/javascript">
 
-	var _dr = dojo.require;
-	dojo.require = function(module) {
-		if(module == "dijit.Editor") return ;
-		_dr(module);
-	}
-
-	dojo.require("dojox.grid.cells.dijit");
-
 	dojo.require("dojox.grid.EnhancedGrid");
 	dojo.require("dojox.grid.enhanced.plugins.DnD");
 	dojo.require("dojox.grid.enhanced.plugins.Menu");
@@ -65,7 +57,6 @@ EnhancedGrid features are implemented as plugins which can be loaded on demand. 
           var grid = new dojox.grid.EnhancedGrid({
               query: { Title: '*' },
               store: store,
-              clientSort: true,
               rowSelector: '20px',
               structure: layout,
               plugins : {nestedSorting: true, dnd: true, indirectSelection: {name: "Selection", width:"70px", styles:"text-align: center;"}}
