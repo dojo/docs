@@ -35,6 +35,7 @@ EnhancedGrid features are implemented as plugins which can be loaded on demand. 
 
     <script type="text/javascript" src="{{ baseUrl }}dojo/dojo.js.uncompressed.js"></script> 
     <script type="text/javascript">
+
 	var _dr = dojo.require;
 	dojo.require = function(module) {
 		if(module == "dijit.Editor") return ;
