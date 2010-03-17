@@ -340,7 +340,7 @@ Other Advanced Topics
 ---------------------
 The following build topics are for expert users, and not needed for routine builds:
 
-    * conditional inclusion via the `excludeStart and exludeStop <build/exclude>`_ pragmas
+    * conditional inclusion via the `excludeStart and excludeStop <build/exclude>`_ pragmas
     * prevent inlining of a resource named in a dojo.require with `keepRequires <build/keepRequires>`_
     * layerDependencies
     * discard
