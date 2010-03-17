@@ -33,7 +33,6 @@ EnhancedGrid features are implemented as plugins which can be loaded on demand. 
 
   .. javascript::
 
-    <script type="text/javascript" src="{{ baseUrl }}dojo/dojo.js.uncompressed.js"></script> 
     <script type="text/javascript">
 
 	var _dr = dojo.require;
@@ -87,9 +86,9 @@ EnhancedGrid features are implemented as plugins which can be loaded on demand. 
   .. css::
 
     <style type="text/css">
-        @import "{{ baseUrl }}dojox/grid/resources/Grid.css";
-        @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
-		@import "{{ baseUrl }}dojox/grid/enhanced/resources/{{ theme }}EnhancedGrid.css";
+        @import "{{ baseUrl }}dojo/resources/dojo.css";
+        @import "{{ baseUrl }}dijit/themes/tundra/tundra.css";
+		@import "{{ baseUrl }}dojox/grid/enhanced/resources/tundraEnhancedGrid.css";
 		@import "{{ baseUrl }}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
 
         .dojoxGrid table {
