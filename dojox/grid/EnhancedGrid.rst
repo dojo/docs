@@ -23,80 +23,6 @@ EnhancedGrid (dojox.grid.EnhancedGrid) provides a rich set of features that enha
 * Selecting multiple rows or columns by swiping
 * Moving multiple rows or columns with drag-n-drop
 
-
-
-.. code-example::
-  :toolbar: themes, versions, dir
-  :version: local
-  :width: 480
-  :height: 300
-
-  .. javascript::
-
-    <script type="text/javascript">
-        dojo.require("dojox.grid.DataGrid");
-        dojo.require("dojox.data.CsvStore");
-    
-        dojo.addOnLoad(function(){
-          // our test data store for this example:
-          var store4 = new dojox.data.CsvStore({ url: '{{ baseUrl }}dojox/grid/tests/support/movies.csv' });
-
-          // set the layout structure:
-          var layout4 = [
-              { field: 'Title', name: 'Title of Movie', width: '200px' },
-              { field: 'Year', name: 'Year', width: '50px' },
-              { field: 'Producer', name: 'Producer', width: 'auto' }
-          ];
-
-          // create a new grid:
-          var grid4 = new dojox.grid.DataGrid({
-              query: { Title: '*' },
-              store: store4,
-              clientSort: true,
-              rowSelector: '20px',
-              structure: layout4
-          }, document.createElement('div'));
-
-          // append the new grid to the div "gridContainer4":
-          dojo.byId("gridContainer4").appendChild(grid4.domNode);
-
-          // Call startup, in order to render the grid:
-          grid4.startup();
-        });
-    </script>
-
-  .. html::
-
-    <div id="gridContainer4" style="width: 100%; height: 100%;"></div>
-
-  .. css::
-
-    <style type="text/css">
-        @import "{{ baseUrl }}dojox/grid/resources/Grid.css";
-        @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
-
-        .dojoxGrid table {
-            margin: 0;
-        }
-
-        html, body {
-            width: 100%;
-            height: 100%;
-            margin: 0;
-        }
-    </style>
-
-
-
-
-
-
-
-
-
-
-
-
 EnhancedGrid features are implemented as plugins which can be loaded on demand. As a result, the required features must first declared before they can be used.
 
 .. code-example::
@@ -107,13 +33,16 @@ EnhancedGrid features are implemented as plugins which can be loaded on demand. 
 
   .. javascript::
 
+    <script type="text/javascript" src="{{ baseUrl }}dojo/dojo.js.uncompressed.js"></script> 
     <script type="text/javascript">
+	dojo.require("dojox.grid.cells.dijit");
+
 	dojo.require("dojox.grid.EnhancedGrid");
 	dojo.require("dojox.grid.enhanced.plugins.DnD");
 	dojo.require("dojox.grid.enhanced.plugins.Menu");
 	dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
 	dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");
-            dojo.require("dojox.data.CsvStore");
+        dojo.require("dojox.data.CsvStore");
     
         dojo.addOnLoad(function(){
           // our test data store for this example:
@@ -151,9 +80,9 @@ EnhancedGrid features are implemented as plugins which can be loaded on demand. 
   .. css::
 
     <style type="text/css">
-        @import "{{ baseUrl }}dojox/grid/resources/Grid.css";
-        @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
-		@import "{{ baseUrl }}dojox/grid/enhanced/resources/{{ theme }}EnhancedGrid.css";
+        @import "{{ baseUrl }}dojo/resources/dojo.css";
+        @import "{{ baseUrl }}dijit/themes/tundra/tundra.cs";
+		@import "{{ baseUrl }}enhanced/resources/tundraEnhancedGrid.css";
 		@import "{{ baseUrl }}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
 
         .dojoxGrid table {
