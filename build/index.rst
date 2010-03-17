@@ -328,9 +328,9 @@ And place the compiler.jar file somewhere you can easily reference. Then use the
 
 .. code-block :: text
 
-  java -classpath ../shrinksafe/js.jar;../closurecompiler/compiler.jar optimize=closure layerOptimize=closure org.mozilla.javascript.tools.shell.Main build.js
+  java -classpath "../shrinksafe/js.jar;../closurecompiler/compiler.jar" org.mozilla.javascript.tools.shell.Main build.js optimize=closure layerOptimize=closure build.js
 
-and place your build arguments on the same line after that text. Change the ../closurecompiler/compiler.jar path to the path where you keep Closure's compiler.jar.
+and place your build arguments on the same line after that text. Change the ../closurecompiler/compiler.jar path to the path where you keep Closure's compiler.jar.  And when setting up a classpath for the JVM, use a semi-colon (;) on Windows and a colon (:) on all other platforms.
 
 If you run into errors, you might want to try downloading rhino from:
 http://www.mozilla.org/rhino/download.html
