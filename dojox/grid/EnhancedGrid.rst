@@ -40,9 +40,9 @@ EnhancedGrid features are implemented as plugins which can be loaded on demand. 
 	dojo.require = function(module) {
 		if(module == "dijit.Editor") return ;
 		_dr(module);
-            }
-	
-dojo.require("dojox.grid.cells.dijit");
+	}
+
+	dojo.require("dojox.grid.cells.dijit");
 
 	dojo.require("dojox.grid.EnhancedGrid");
 	dojo.require("dojox.grid.enhanced.plugins.DnD");
@@ -87,9 +87,9 @@ dojo.require("dojox.grid.cells.dijit");
   .. css::
 
     <style type="text/css">
-        @import "{{ baseUrl }}dojo/resources/dojo.css";
-        @import "{{ baseUrl }}dijit/themes/tundra/tundra.cs";
-		@import "{{ baseUrl }}enhanced/resources/tundraEnhancedGrid.css";
+        @import "{{ baseUrl }}dojox/grid/resources/Grid.css";
+        @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
+		@import "{{ baseUrl }}dojox/grid/enhanced/resources/{{ theme }}EnhancedGrid.css";
 		@import "{{ baseUrl }}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
 
         .dojoxGrid table {
