@@ -15,7 +15,7 @@ Enhanced DataGrid adds numerous useful features to dojox.grid.
 Introduction
 ============
 
-EnhancedGrid (dojox.grid.EnhancedGrid) provides a rich set of features that enhance the capabilities of base DataGrid. The following accessible enhancements are implemented in Dojo 1.4:
+EnhancedGrid (dojox.grid.EnhancedGrid) provides a rich set of features that enhance the capabilities of base DataGrid. The following accessible enhancements are implemented in Dojo 1.4:xxxxxxxxxxxxxxxxx
 
 * Nested Sorting
 * Built-in support for Indirect Selection (radio buttons and check boxes)
