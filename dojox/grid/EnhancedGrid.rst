@@ -35,7 +35,12 @@ EnhancedGrid features are implemented as plugins which can be loaded on demand. 
 
     <script type="text/javascript" src="{{ baseUrl }}dojo/dojo.js.uncompressed.js"></script> 
     <script type="text/javascript">
-	dojo.require("dojox.grid.cells.dijit");
+	var _dr = dojo.require;
+	dojo.require = function(module) {
+		if(module == "dijit.Editor") return ;
+		_dr(module);
+	
+dojo.require("dojox.grid.cells.dijit");
 
 	dojo.require("dojox.grid.EnhancedGrid");
 	dojo.require("dojox.grid.enhanced.plugins.DnD");
