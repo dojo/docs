@@ -39,6 +39,10 @@ A new theme for dijit has been released for dijit and the grid called claro (nee
 
 The theme supports both LTR and RTL and all the browsers (including IE6, albeit with graceful degradation of some styling).
 
+input widget sizing
+-------------------
+The width/height of input widgets (TextBox, ValidationTextBox, ComboBox/FilteringSelect, NumberSpinner) has been standardized.   Previously the height or width of these widgets could differ by a few pixels making the UI look a little off.
+
 widget dir parameter
 --------------------
 An app can now set different text-rendering directions for different widgets, via the dir attribute.  Note that this attribute can only be set at creation.   Combined with the parser change above this allows things like a portal page where different portlets are in different languages, or a page in an RTL language like Hebrew or Arabic but with one section in English.
