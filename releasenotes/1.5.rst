@@ -20,9 +20,37 @@ Some functions from dijit have been moved to dojo core (with stubs left in dijit
  - dojo.window.scrollIntoView(): scrolls a node into view, similar to node.scrollIntoView() but working around browser quirks.   Formerly dijit.scrollIntoView().
 
 
+parser dir handling
+-------------------
+The parser has been refactored and now is cognizant of dir=rtl and dir=ltr settings on nodes (with or without dojoType specified).   If a node has a dir setting, then all the widgets beneath that node are created with that dir attribute specified.
+
+TODO: document new args for dir to parser.parse()
+
 =====
 Dijit
 =====
+
+claro theme
+-----------
+A new theme for dijit has been released for dijit and the grid called claro (nee lucid).    This theme has two main aims:
+
+   - allow designers to easily customize the theme, specifically allowing any color scheme without designing new images
+   - fit and finish of a professional theme
+
+The theme supports both LTR and RTL and all the browsers (including IE6, albeit with graceful degradation of some styling).
+
+widget dir parameter
+--------------------
+An app can now set different text-rendering directions for different widgets, via the dir attribute.  Note that this attribute can only be set at creation.   Combined with the parser change above this allows things like a portal page where different portlets are in different languages, or a page in an RTL language like Hebrew or Arabic but with one section in English.
+
+Tundra and claro themes support mixed RTL and LTR pages.
+
+Internally, this feature is implemented by dir=rtl widgets applying a CSS class like dijitTextBoxRtl (the widget's baseClass + "Rtl") to the widget's root node, in addition to applying the plain baseClass like dijitTextBox.   The tundra and claro themes have been modified to reference those per widget CSS classes rather than referencing the dijitRtl class applied to the BODY node.
+
+
+placeholder
+-----------
+The HTML5 placeholder parameter (also known as a "hint") has been implemented for all TextBox based widgets.   This is some gray example or hint text that the widget displays inside the input arrow such as "John Doe" or "Your Name".   The text disappears when the user focuses the field.
 
 _CssStateMixin
 --------------
