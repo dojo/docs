@@ -225,6 +225,11 @@ Editor
 
 - Smiley plugin (existed in 1.4 but wasn't working; now it does)
 
+Charting
+--------
+
+New map chart widget (dojox.charting.map) that makes it easy to display fairly detailed maps of the USA, Europe, Asia, World etc. Double-clicking on any state/country toggles zoom-in and zoom-out, with suitable tooltip info being displayed.
+
 ====
 Util
 ====
