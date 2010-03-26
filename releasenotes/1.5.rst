@@ -30,7 +30,7 @@ TODO: document new args for dir to parser.parse()
 Dijit
 =====
 
-claro theme
+Claro theme
 -----------
 A new theme for dijit has been released for dijit and the grid called claro (nee lucid).    This theme has two main aims:
 
@@ -42,6 +42,24 @@ The theme supports both LTR and RTL and all the browsers (including IE6, albeit 
 ColorPalette
 ------------
 Now supports attr("value", ...) and indicates the currently selected color via a thin black border.   The editor's foreground and background color plugins also indicate the color of the currently selected text (or if no text is selected, the text around the caret).
+
+Dialog
+------
+The dialog widget now supports an "action bar", a gray bar at the bottom of the dialog with action buttons, typically OK and cancel.  Simply create your dialog as before but separate the dialog contents from the buttons like this:
+
+.. code-block :: javascript
+
+	<div dojoType="dijit.Dialog">
+		<div class="dijitDialogPaneContentArea">
+			...
+		</div>
+		
+		<div class="dijitDialogPaneActionBar">
+			<button dojoType="dijit.form.Button" type="submit" id="ok">OK</button>
+			<button dojoType="dijit.form.Button" type="cancel" id="cancel">Cancel</button>
+		</div>
+	</div>
+
 
 input widget sizing
 -------------------
