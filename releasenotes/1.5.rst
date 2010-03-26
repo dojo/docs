@@ -39,6 +39,10 @@ A new theme for dijit has been released for dijit and the grid called claro (nee
 
 The theme supports both LTR and RTL and all the browsers (including IE6, albeit with graceful degradation of some styling).
 
+ColorPalette
+------------
+Now supports attr("value", ...) and indicates the currently selected color via a thin black border.   The editor's foreground and background color plugins also indicate the color of the currently selected text (or if no text is selected, the text around the caret).
+
 input widget sizing
 -------------------
 The width/height of input widgets (TextBox, ValidationTextBox, ComboBox/FilteringSelect, NumberSpinner) has been standardized.   Previously the height or width of these widgets could differ by a few pixels making the UI look a little off.
