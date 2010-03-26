@@ -20,12 +20,6 @@ Some functions from dijit have been moved to dojo core (with stubs left in dijit
  - dojo.window.scrollIntoView(): scrolls a node into view, similar to node.scrollIntoView() but working around browser quirks.   Formerly dijit.scrollIntoView().
 
 
-parser dir handling
--------------------
-The parser has been refactored and now is cognizant of dir=rtl and dir=ltr settings on nodes (with or without dojoType specified).   If a node has a dir setting, then all the widgets beneath that node are created with that dir attribute specified.
-
-TODO: document new args for dir to parser.parse()
-
 =====
 Dijit
 =====
@@ -41,7 +35,9 @@ The theme supports both LTR and RTL and all the browsers (including IE6, albeit 
 
 ColorPalette
 ------------
-Now supports attr("value", ...) and indicates the currently selected color via a thin black border.   The editor's foreground and background color plugins also indicate the color of the currently selected text (or if no text is selected, the text around the caret).
+The styling was changed to put a white border around each color swatch, so that it's clear when the dark swatches are being hovered or focused.   In addition, focus was decoupled from hovering.
+
+Additionally, ColorPalette now supports attr("value", ...) (both as a getter and setter), and indicates the currently selected color via a thin black border around that color.   The editor's foreground and background color plugins also indicate the color of the currently selected text (or if no text is selected, the text around the caret).
 
 Dialog
 ------
@@ -61,22 +57,53 @@ The dialog widget now supports an "action bar", a gray bar at the bottom of the 
 	</div>
 
 
-input widget sizing
--------------------
-The width/height of input widgets (TextBox, ValidationTextBox, ComboBox/FilteringSelect, NumberSpinner) has been standardized.   Previously the height or width of these widgets could differ by a few pixels making the UI look a little off.
+Input Widgets
+-------------
+The HTML5 placeholder parameter (also known as a "hint") has been implemented for all TextBox based widgets.   Placeholder is gray example or hint text that the widget displays inside the input area of empty form fields, such as "John Doe" or "Your Name".   The text disappears when the user focuses the field.
 
-widget dir parameter
---------------------
-An app can now set different text-rendering directions for different widgets, via the dir attribute.  Note that this attribute can only be set at creation.   Combined with the parser change above this allows things like a portal page where different portlets are in different languages, or a page in an RTL language like Hebrew or Arabic but with one section in English.
+Also, the width/height of the input widgets (TextBox, ValidationTextBox, ComboBox/FilteringSelect, NumberSpinner) has been standardized.   Previously the height or width of these widgets could differ by a few pixels making the UI look a little off.
+
+Bidi enhancements
+-----------------
+An app can now set text-rendering direction per-widget, via the dir attribute.  Possible settings are "ltr" (left-to-right, used by most languages) and "rtl" (for Arabic and Hebrew).   Previously all the widgets rendered in the same direction, the direction of the page. Note that this attribute can only be set at creation.   For example:
+
+.. code-block :: javascript
+
+	<div dojoType="dijit.Editor" dir="rtl">
+		...
+	</div>
+	<div dojoType="dijit.Editor" dir="ltr">
+		...
+	</div>
+
+
+Also, the parser has been refactored and now is cognizant of dir=rtl and dir=ltr settings on nodes (with or without dojoType specified).   If a node has a dir setting, then all the widgets beneath that node are created with that dir attribute specified.  For example:
+
+.. code-block :: javascript
+
+
+	<div dir="ltr">
+		<input dojoType="dijit.TextBox">
+		<input dojoType="dijit.TextBox">
+		<input dojoType="dijit.TextBox">
+	</div>
+	<div dir="rtl">
+		<input dojoType="dijit.TextBox">
+		<input dojoType="dijit.TextBox">
+		<input dojoType="dijit.TextBox">
+	</div>
+
+
+
+TODO: document new args for dir to parser.parse()
+
+These two changes allow things like a portal page where different portlets are in different languages, or a page in an RTL language like Hebrew or Arabic but with one section in English.
 
 Tundra and claro themes support mixed RTL and LTR pages.
 
 Internally, this feature is implemented by dir=rtl widgets applying a CSS class like dijitTextBoxRtl (the widget's baseClass + "Rtl") to the widget's root node, in addition to applying the plain baseClass like dijitTextBox.   The tundra and claro themes have been modified to reference those per widget CSS classes rather than referencing the dijitRtl class applied to the BODY node.
 
 
-placeholder
------------
-The HTML5 placeholder parameter (also known as a "hint") has been implemented for all TextBox based widgets.   This is some gray example or hint text that the widget displays inside the input arrow such as "John Doe" or "Your Name".   The text disappears when the user focuses the field.
 
 _CssStateMixin
 --------------
