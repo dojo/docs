@@ -67,7 +67,7 @@ Bidi enhancements
 -----------------
 An app can now set text-rendering direction per-widget, via the dir attribute.  Possible settings are "ltr" (left-to-right, used by most languages) and "rtl" (for Arabic and Hebrew).   Previously all the widgets rendered in the same direction, the direction of the page. Note that this attribute can only be set at creation.   For example:
 
-.. code-block :: javascript
+.. code-block :: html
 
 	<div dojoType="dijit.Editor" dir="rtl">
 		...
@@ -79,7 +79,7 @@ An app can now set text-rendering direction per-widget, via the dir attribute.  
 
 Also, the parser has been refactored and now is cognizant of dir=rtl and dir=ltr settings on nodes (with or without dojoType specified).   If a node has a dir setting, then all the widgets beneath that node are created with that dir attribute specified.  For example:
 
-.. code-block :: javascript
+.. code-block :: html
 
 
 	<div dir="ltr">
@@ -95,7 +95,14 @@ Also, the parser has been refactored and now is cognizant of dir=rtl and dir=ltr
 
 
 
-TODO: document new args for dir to parser.parse()
+The parser can also take a flag specifying default dir and lang for inherited widgets:
+
+.. code-block :: javascript
+
+      dojo.parser.parse({rootNode: ..., inherited: {dir: rtl, lang: "ar-ag"} });
+
+(In general though it's not necessary to specify, as the parser will pick up the documents default direction and language.)
+
 
 These two changes allow things like a portal page where different portlets are in different languages, or a page in an RTL language like Hebrew or Arabic but with one section in English.
 
@@ -103,7 +110,7 @@ Tundra and claro themes support mixed RTL and LTR pages.
 
 Internally, this feature is implemented by dir=rtl widgets applying a CSS class like dijitTextBoxRtl (the widget's baseClass + "Rtl") to the widget's root node, in addition to applying the plain baseClass like dijitTextBox.   The tundra and claro themes have been modified to reference those per widget CSS classes rather than referencing the dijitRtl class applied to the BODY node.
 
-
+Finally, note that although (as before) lang can be set on a per-widget basis, the translations used by dojo (default tooltips, loading messages, etc.) are still one language per page.
 
 _CssStateMixin
 --------------
