@@ -67,14 +67,10 @@ Bidi enhancements
 -----------------
 An app can now set text-rendering direction per-widget, via the dir attribute.  Possible settings are "ltr" (left-to-right, used by most languages) and "rtl" (for Arabic and Hebrew).   Previously all the widgets rendered in the same direction, the direction of the page. Note that this attribute can only be set at creation.   For example:
 
-.. code-block :: html
+.. code-block :: javascript
 
-	<div dojoType="dijit.Editor" dir="rtl">
-		...
-	</div>
-	<div dojoType="dijit.Editor" dir="ltr">
-		...
-	</div>
+    new dijit.Editor({dir: "rtl"}, srcNodeRef);
+    new dijit.Editor({dir: "ltr"}, srcNodeRef);
 
 
 Also, the parser has been refactored and now is cognizant of dir=rtl and dir=ltr settings on nodes (with or without dojoType specified).   If a node has a dir setting, then all the widgets beneath that node are created with that dir attribute specified.  For example:
