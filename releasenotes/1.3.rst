@@ -3,7 +3,7 @@
 Dojo 1.3 Release Notes
 =======================
 
-These are the release notes for the Dojo Toolkit V1.3 release.
+These are the release notes for the Dojo Toolkit 1.3 release.
 
 .. contents::
   :depth: 3
