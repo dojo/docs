@@ -66,6 +66,8 @@ While the FileUploader instantiates like a widget, it has limitations due to the
 
 ...will not work. There may also be problems with placing it in other widgets unless it displays right away, although as of 1.5 these problems have mostly been worked out.  
 
+If you need to manually manage when an initially hidden flash-based file uploader is shown and have it created properly see this ticket: http://bugs.dojotoolkit.org/ticket/10920
+
 Another limitation with using Flash is passing data back and forth. There is a problem with passing variable names with illegal characters, like:
 
 *{form["my-var"]: "foo")*
