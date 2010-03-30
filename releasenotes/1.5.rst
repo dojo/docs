@@ -282,6 +282,12 @@ Editor
 
 - Smiley plugin (existed in 1.4 but wasn't working; now it does)
 
+- `dojox.editor.plugins.CollapsibleToolbar <dojox/editor/plugins/CollapsibleToolbar>`_ -- A plugin that modifies the header of the grid and converts it to a collapsible toolbar.  This plugin has been well tested and is known to work well in all browsers supported by dojo.
+
+- `dojox.editor.plugins.Blockquote <dojox/editor/plugins/Blockquote>`_ -- A plugin that adds a blockquoting button to the toolbar.  All text that is part of a block of text will be wrapped in a blockquote tag when applied, or removed from a blockquote tag when untoggled.  It will also work across large selections, blockquoting each chunk of text and inline elements as a blockquote block.  This plugin has been well tested and is known to work well in all browsers supported by dojo.
+
+- `dojox.editor.plugins.PasteFromWord <dojox/editor/plugins/PasteFromWord>`_ -- A plugin that adds a 'paste from word' icon to the toolbar.  It opens a dialog where content from Word or similar programs can be pasted in, then filters are run against the input to remove extraneous HTML that causes the editor difficulty, leaving the injected content cleaner HTML.
+
 
 Mobile
 ------
