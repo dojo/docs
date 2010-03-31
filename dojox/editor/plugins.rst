@@ -101,7 +101,7 @@ There are currently a small set of nice features that can be plugged into the di
 
 * `dojox.editor.plugins.InsertAnchor <dojox/editor/plugins/InsertAnchor>`_ -- **STABLE**
 
-  A plugin that adds an 'insrt anchor' icon to the toolbar.  An anchor is a specialized <a> tag used for linking to specific sections of a document.  The plugin highlights (makes visible), via css what is an anchor in the page.  It also allows doe double-click editing of anchors.
+  A plugin that adds an 'insert anchor' icon to the toolbar.  An anchor is a specialized <a> tag used for linking to specific sections of a document.  The plugin highlights (makes visible), via css what is an anchor in the page.  It also allows doe double-click editing of anchors.
   
   **This plugin is new to the Dojo Toolkit 1.5.**
 
