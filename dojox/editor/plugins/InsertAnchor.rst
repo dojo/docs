@@ -83,7 +83,7 @@ Basic Usage
 
     <b>Move the cursor around and select blockquote to blockquote a section of the document.</b>
     <br>
-    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['insertAnchor']">
+    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['insertanchor']">
     <div>
     <br>
     blah blah & blah!
