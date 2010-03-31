@@ -64,7 +64,7 @@ Charting enhancements
    - Chart axis labels can now be rotated (clockwise or anticlockwise ) through any desired angle.
    - Data series now support 'nulls' ( no data available )
    - Allow a combination of theme-based and custom styles 
-   - Several incremental enhancements to the DataPresentation widget, including
+   - Several incremental enhancements to the DataPresentation widget, including support for custom tooltips, layout/wrapping options for the chart legend, ability to supress the chart labels  and 'hooks' into the rendering.
 
 
 Input Widgets
