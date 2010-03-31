@@ -56,6 +56,8 @@ The dialog widget now supports an "action bar", a gray bar at the bottom of the 
 		</div>
 	</div>
 
+Charting enhancements
+---------------------
 
 Input Widgets
 -------------
