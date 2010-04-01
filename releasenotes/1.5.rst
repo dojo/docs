@@ -129,7 +129,7 @@ The parser can also take a flag specifying default dir and lang for inherited wi
 
 .. code-block :: javascript
 
-      dojo.parser.parse({rootNode: ..., inherited: {dir: rtl, lang: "ar-ag"} });
+      dojo.parser.parse({rootNode: ..., inherited: {dir: rtl, lang: "ar-eg"} });
 
 (In general though it's not necessary to specify, as the parser will pick up the documents default direction and language.)
 
