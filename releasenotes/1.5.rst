@@ -10,6 +10,11 @@ Dojo 1.5 Release Notes (in progress)
 Dojo Core
 =========
 
+dojo.cldr
+---------
+
+Updated cultural tables to use CLDR 1.8 (unicode.org/cldr) for formatting of numbers, currencies, and dates.
+
 dojo.Deferred, dojo.when
 ------------------------
 dojo.Deferred was refactored for side effect free chaining, such that you can execute code like:
@@ -338,3 +343,4 @@ Build System/buildscripts
 -------------------------
 
 * By default the copyTests option defaults to false instead of true now. This was done to help reduce the possibility of copying tests in their builds, extra files and more security concerns to worry about.
+* Updated cldr scripts to use CLDR version 1.8 (see dojo.cldr)
