@@ -1,7 +1,7 @@
 #format dojo_rst
 
 dojox.date.islamic
-=================
+==================
 
 :Status: Draft
 :Version: 1.0
@@ -46,7 +46,7 @@ Code snippet below illustrates most common usage of Islamic calendar.
   </body></html>
 
 Islamic calendar package
------------------------
+------------------------
 
 Islamic calendar package comprises of following two files:
 
@@ -54,7 +54,7 @@ Islamic calendar package comprises of following two files:
     * dojox.date.islamic.locale includes implementation of functions responsible for conversion between two possible representations of Islamic date: String representation and Date object. It also provides date formatting capabilities.
 
 Islamic calendar and DateTextBox
--------------------------------
+--------------------------------
 
 Islamic calendar implemented in this package can be used in conjunction with DateTextBox in order to provide graphical date picker for Islamic calendar. For example, image below illustrates DateTextBox using Islamic calendar with default language set to Islamic.
 
