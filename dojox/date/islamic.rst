@@ -11,7 +11,7 @@ dojox.date.islamic
 .. contents::
    :depth: 2
 
-Implements the traditional Islamic(Hijri) calendar. This is the civil calendar in Saudi Arabia and the liturgical calendar of the Islamic faith worldwide.
+Implements the traditional Islamic (Hijri) calendar. This is the civil calendar in Saudi Arabia and the liturgical calendar of the Islamic faith worldwide.
 
 ============
 Introduction
@@ -40,7 +40,6 @@ Code snippet below illustrates most common usage of Islamic calendar.
        type="text" 
        dojoType="dijit.form.DateTextBox" 
        datePackage = "dojox.date.islamic"
-       lang="en"
        constraints="{min:'2008-03-01',max:'2009-04-01',datePattern:'dd MMMM yyyy'}"
     >
   </body></html>
@@ -76,10 +75,10 @@ The code snippet below illustrates conversion between two possible representatio
    var options = {datePattern:'EEEE dd MMMM yyyy HH:mm:ss', selector:'date'}; 
 
    // converts string representation of Islamic date to Date object
-   var dateHij = dojox.date.islamic.locale.parse("ÇáÓÈÊ 14 ÕÝÑ 1431 12:14:50", options); 
+   var dateHij = dojox.date.islamic.locale.parse("الأربعاء 04 صفر 1431 12:30:25", options); 
 
    // formats Islamic date object and serialize it into a string
-   var dateHijString = dojox.date.islamic.locale.format(dateHij,options); 
+   var dateHijString = dojox.date.islamic.locale.format(dateHij, options); 
   </script>
 
 
@@ -104,7 +103,6 @@ Code snippet below illustrates usage of Islamic calendar in the context of graph
        type="text" 
        dojoType="dijit.form.DateTextBox" 
        datePackage = "dojox.date.islamic"
-       lang="en"
        constraints="{min:'2008-03-01',max:'2009-04-01',datePattern:'dd MMMM yyyy'}"
     >
   </body></html>
