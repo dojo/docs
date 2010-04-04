@@ -323,11 +323,10 @@ To be moved:
 
 Pending:
 
-- Improved support for gradient/pattern fills
-- Charting animation (grow/zoom) for areas, lines and markers
-- Chart axis labels can now be rotated (clockwise or anticlockwise ) through any desired angle.
 - Data series now support 'nulls' ( no data available )
 - Allow a combination of theme-based and custom styles
+- Charting animation (grow/zoom) for areas, lines and markers
+- Chart axis labels can now be rotated (clockwise or anticlockwise ) through any desired angle.
 
 
 Editor
