@@ -464,20 +464,22 @@ Accessibility
 Keyboard
 --------
 
-================================    ===============
-Action	                            Key
-================================    ===============
-Navigate to first tree item*        Tab
-Navigate to the next sibling        Down arrow
-Navigate to the previous sibling    Up arrow
-Open a subtree                      Right arrow
-Close a subtree                     Left arrow
-Navigate to open subtree            Right arrow
-Navigate to parent                  Left arrow
-Activate a tree item                Enter
-================================    ===============
+===================================  ===============
+Action	                             Key
+===================================  ===============
+Navigate into tree*                  Tab
+Navigate to the next sibling         Down arrow
+Navigate to the previous sibling     Up arrow
+Open a subtree                       Right arrow
+Close a subtree                      Left arrow
+Navigate to open subtree             Right arrow
+Navigate to parent                   Left arrow
+Activate a tree item                 Enter
+Navigate to first tree node          Home
+Navigate to last visible tree node   End
+===================================  ===============
 
-* Note: The last tree item focused will be in the Tab order.
+* Note: The most recently focused tree item will be in the Tab order.
 
 
 Keyboard searching
