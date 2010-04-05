@@ -432,7 +432,7 @@ If you don't want to display the grid lines for a Tree then simply write CSS rul
 Hover effect
 ------------
 
-Due to implementation details, the hover effect for tree nodes is done with a near-transparent image:
+Due to implementation details, on the tundra, soria, and nihilo themes the hover effect for tree nodes is done with a near-transparent image:
 
 .. code-block:: css
 
@@ -447,6 +447,8 @@ Due to implementation details, the hover effect for tree nodes is done with a ne
 So in order to change the hover effect you would need to create a new image (with for example 95% transparency), and write a CSS rule to override the one above.
 
 You can also remove the hover effect altogether by just writing a CSS rule that sets background-image to none, overriding the above rule.
+
+On the claro theme, the hover effect is done via a background-color (combined with a white gradient background image), so changing the hover effect just involves changing that background color.
 
 =============
 More examples
@@ -476,6 +478,11 @@ Activate a tree item                Enter
 ================================    ===============
 
 * Note: The last tree item focused will be in the Tab order.
+
+
+Keyboard searching
+------------------
+Tree items can also be accessed by typing alphanumeric characters.  For example, typing "A" will navigate from the currently focused node to the next node that begins with the letter A (case insensitive).   Typing "Al" will navigate to the next node that starts with "Al".  Only the nodes that are visible are searched, not nodes that are hidden inside a closed node.   The nodes are searched in the order that they appear on the screen, from the focused node downwards and then looping back up to the top of the tree.
 
 Known Issues
 ------------
