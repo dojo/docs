@@ -83,6 +83,7 @@ See the section on limitations.
 Limitations
 ===========
 
+* While in ViewSource mode, you cannot use 'editor.getValue()' or 'editor.attr("value")' to access the contents of the source mode view.  This is intentional to help prevent XSS style attacks.  The content is not accessible by the editor APIs until it has been applied and filtered by the ViewSource Plugin and Editor to try and strip out dangerous tag structures, such as <script> and similar.
 * By default the plugin will strip any <script>, <iframe> or comment tags from the document.  This is to avoid XSS.  While these filters can be disabled, it is highly, highly recommended to leave them enabled.
 * If readOnly mode is enabled, then it will persist for the life of the plugin.  This is to help avoid XSS injection attacks as well.  The same can be said for the enabling and disabling of filters.
 * While this plugin does its best to try and help prevent XSS attacks, **the server side should always filter the incoming content for attack vectors anyway**.  This is because that since the editor runs in the client (browser), and browsers by their very nature are rather insecure, content sent from them should never be trusted.  Always do positive validation, where you assume the data coming from the client is bad and it must be proven to be good before it is allowed in the system.
