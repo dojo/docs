@@ -375,7 +375,7 @@ Known Issues
   * In IE 8 with JAWS 10 the dialog information and title is not spoken. This is due to the fact that IE 8 does not support the ARIA labelledby property that is used to assign the title to the dialog.  
 
 * There are focus issues when the dialog is created via an href. Due to timing issues focus may not be properly set nor properly trapped
-  in the dialog. For accessibility reasons, dialogs created via href are not recommended. This issue will be addressed in a future release.
+  in the dialog. For accessibility reasons, dialogs created via href are not recommended. This issue has been addressed in the 1.5 release.
 * When loading Dialog content with the href property, there can be issues with scrolling in IE7: If the loaded content contains dijit.layout elements and the Dialog content is larger than the size of the dialog, the layout dijits do not scroll properly in IE7. The workaround for this issue is to set the 'position:relative' style to the dialog.containerNode: 
 * Dialogs with no focusable items cause problems for screen readers.  If the dialog has no focusable items, set the tabindex="0" on the container element of the text.  This will set focus to that container when the dialog is opened and will cause JAWS to speak the title of the dialog and the user will know that a dialog has been opened.
 
