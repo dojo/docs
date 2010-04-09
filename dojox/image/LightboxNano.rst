@@ -121,8 +121,8 @@ Standard way to declaratively create the LightboxNano
  
  <script src="/path/to/dojo.js" type="text/javascript"></script>
  <script type="text/javascript">
-     dojo.require("dojo.parser");
      dojo.require("dojox.image.LightboxNano");
+     dojo.require("dojo.parser");
  </script>
  
  <a dojoType="dojox.image.LightboxNano" href="/path/to/large/image.jpg">
