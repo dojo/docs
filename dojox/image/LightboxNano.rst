@@ -136,8 +136,8 @@ Should you want to destroy the LightboxNano, you'll need to use the jsid. You ca
  
  <script src="/path/to/dojo.js" type="text/javascript"></script>
  <script type="text/javascript">
-     dojo.require("dojo.parser");
      dojo.require("dojox.image.LightboxNano");
+     dojo.require("dojo.parser");
  </script>
  
  <a dojoType="dojox.image.LightboxNano" jsid="myLightboxNano" href="/path/to/large/image.jpg">
