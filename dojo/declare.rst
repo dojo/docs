@@ -28,26 +28,26 @@ Basic Usage
 ==========  ====================  ==================================================
 Parameter   Type                  Description
 ==========  ====================  ==================================================
-className   String|null           The optional name of the Class to declare. 
+className   String|null           The optional name of the Class to declare.
 
                                   The className will be used as a global name for a
                                   created constructor.
 
-                                  If you don't specify it, the class is assumed to 
-                                  be anonymous (new since V1.4). 
+                                  If you don't specify it, the class is assumed to
+                                  be anonymous (new since V1.4).
 
                                   If you specify it, the name will be stored in the
                                   property "declaredClass" in the created prototype.
-superclass  null|Object|Object[]  This parameter is either 
+superclass  null|Object|Object[]  This parameter is either
 
-                                  * null (no base class), 
-                                  * an object (a base class) or 
-                                  * an array of objects (multiple inheritance). 
+                                  * null (no base class),
+                                  * an object (a base class) or
+                                  * an array of objects (multiple inheritance).
 props       Object                An object whose properties are copied (mixed in)
                                   to the created prototype after all other inheritance
                                   has been solved.
 
-                                  You can add an instance-initialization function 
+                                  You can add an instance-initialization function
                                   by making it a property named "constructor".
 ==========  ====================  ==================================================
 
@@ -626,7 +626,7 @@ Every constructor created by ``dojo.declare`` defines some convenience methods.
 extend
 ~~~~~~
 
-This constructor method adds new properties to the constructor's prototype the same way as `dojo.extend <dojo/extend>`_ works. The difference is that it annotates function properties them the same way ``dojo.declare`` does. These changes will be propagated to all classes and object where this class constructor was a superclass.
+This constructor method adds new properties to the constructor's prototype the same way as `dojo.extend <dojo/extend>`_ works. The difference is that it annotates function properties the same way ``dojo.declare`` does. These changes will be propagated to all classes and object where this class constructor was a superclass.
 
 The method has one argument: an object to mix in. It returns the constructor itself, which can be used for chained calls.
 
@@ -635,11 +635,11 @@ Example:
 .. code-block :: javascript
   :linenos:
 
-  var A = dojo.declare(null,
+  var A = dojo.declare(null, {
     m1: function(){
       // ...
     }
-  };
+  });
 
   A.extend({
     m1: function(){
@@ -656,6 +656,78 @@ Example:
   a.m2();
 
 Internally this method uses `dojo.safeMixin <dojo/safeMixin>`_.
+
+*Important note:* Do not forget that ``dojo.declare`` uses mixins to build a constructor from several bases. Remember that only the first base is inherited, the rest is mixed in by copying properties. It means that if you ``extend`` a constructor's prototype that was already used as a mixin and its methods became top methods in the chain of inheritance, these top methods whoud not be replaced because they are already copied.
+
+Example:
+
+.. code-block :: javascript
+  :linenos:
+
+  var A = dojo.declare(null, {
+    m1: function(){ console.log("A org"); },
+    m2: function(){ console.log("A org"); }
+  });
+
+  var B = dojo.declare(null, {
+    m2: function(){ this.inherited(arguments); console.log("B org"); },
+    m3: function(){ this.inherited(arguments); console.log("B org"); }
+  });
+
+  var C = dojo.declare(null, {
+    m3: function(){ this.inherited(arguments); console.log("C org"); },
+    m4: function(){ this.inherited(arguments); console.log("C org"); }
+  });
+
+  var ABC = dojo.declare([A, B, C], {});
+
+  // now A is the true base, B and C are mixed in
+
+  var abc = new ABC();
+
+  abc instanceof A; // true
+  abc instanceof B; // false
+  abc instanceof C; // false
+
+  // use isInstanceOf() to check if you include
+  // proper mixins
+
+
+  // let's list top methods:
+  // m1 comes from A (inherited)
+  // m2 comes from B (copied)
+  // m3 comes from C (copied)
+  // m4 comes from D (copied)
+
+  abc.m1(); // A org
+  abc.m2(); // A org, B org
+  abc.m3(); // B org, C org
+  abc.m4(); // C org
+
+  // let's extend() all prototypes
+
+  A.extend({
+    m1: function(){ console.log("A new"); },
+    m2: function(){ console.log("A new"); }
+  });
+
+  B.extend({
+    m2: function(){ this.inherited(arguments); console.log("B new"); },
+    m3: function(){ this.inherited(arguments); console.log("B new"); }
+  });
+
+  C.extend({
+    m3: function(){ this.inherited(arguments); console.log("C new"); },
+    m4: function(){ this.inherited(arguments); console.log("C new"); }
+  });
+
+  // observe that top copied methods are not changed
+
+  abc.m1(); // A new
+  abc.m2(); // A new, B org
+  abc.m3(); // B new, C org
+  abc.m4(); // C org
+
 
 Class methods
 -------------
