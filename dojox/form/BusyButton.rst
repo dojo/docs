@@ -5,14 +5,27 @@ dojox.form.BusyButton
 
 :Status: Draft
 :Version: Beta
-:Author: Nikolai Onken
+:Project owner: Nikolai Onken
+:Available: since V?
+
+.. contents::
+   :depth: 2
 
 BusyButton is a simple widget which provides implementing more user friendly form submission.
-When a form gets submitted bu a user, many time it is recommended to disable the submit buttons to prevent double submittion.
+
+============
+Introduction
+============
+
+When a form gets submitted by a user, many time it is recommended to disable the submit buttons to prevent double submittion.
 BusyButton provides a simple set of features for this purpose
 
+========
 Examples
---------
+========
+
+Programmatic example
+--------------------
 
 The first example shows you how to create a nifty button programatically
 
@@ -43,6 +56,8 @@ The first example shows you how to create a nifty button programatically
       @import url(/moin_static163/js/dojo/trunk/dojox/form/resources/BusyButton.css);
     </style>
 
+Declarative example
+-------------------
 
 This example show how to use the busy button without internal timeout. Once you receive a server response from the server (than can include a timeout from the server) you can and should change the status of the button.
 
@@ -134,3 +149,10 @@ The last example uses a little bit of trickery to create a button which is disab
     <style type="text/css">
       @import url(/moin_static163/js/dojo/trunk/dojox/form/resources/BusyButton.css);
     </style>
+
+
+==============
+Known Problems
+==============
+
+* This Widget doesn't work using Internet Explorer 8. The error is well known and reported as bug `#9075 <http://bugs.dojotoolkit.org/ticket/9075>`_
