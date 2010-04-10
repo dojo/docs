@@ -657,7 +657,7 @@ Example:
 
 Internally this method uses `dojo.safeMixin <dojo/safeMixin>`_.
 
-*Important note:* Do not forget that ``dojo.declare`` uses mixins to build a constructor from several bases. Remember that only the first base is inherited, the rest is mixed in by copying properties. It means that if you ``extend`` a constructor's prototype that was already used as a mixin and its methods became top methods in the chain of inheritance, these top methods whoud not be replaced because they are already copied.
+**Important note:** Do not forget that ``dojo.declare`` uses mixins to build a constructor from several bases. Remember that only the first base is inherited, the rest is mixed in by copying properties. It means that if you ``extend`` a constructor's prototype that was already used as a mixin and its methods became top methods in the chain of inheritance, these top methods would not be replaced because they are already copied.
 
 Example:
 
@@ -691,7 +691,6 @@ Example:
 
   // use isInstanceOf() to check if you include
   // proper mixins
-
 
   // let's list top methods:
   // m1 comes from A (inherited)
@@ -727,6 +726,8 @@ Example:
   abc.m2(); // A new, B org
   abc.m3(); // B new, C org
   abc.m4(); // C org
+
+You can see that copied methods were not replaced in ``ABC`` and ``abc``.
 
 
 Class methods
