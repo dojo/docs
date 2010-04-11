@@ -59,30 +59,6 @@ dojo.Stateful
 -------------
 
 A new generic interface and base class for getting, setting, and watching for property changes (with getters and setters) in a consistent manner.
-
-Coming with this, the recommended way to set properties changes from
-
-.. code-block :: javascript
-
-   this.attr('value', node.property); // old way and now deprecated
-
-to
-
-.. code-block :: javascript
-
-   this.set('value', node.property); // new since 1.5
-
-The same for getting properties:
-
-.. code-block :: javascript
-
-   this.attr('property'); // old way and now deprecated
-
-changes to
-
-.. code-block :: javascript
-
-   this.get('property'); // new since 1.5
  
 See also: 
 
@@ -346,6 +322,37 @@ However, this will not:
 
    var open = dijit.popup.open;
    open({...});
+
+
+widget.attr()
+-------------
+
+In order to make code clearer, Dojo Toolkit 1.5 will start to use the get()/set() pattern for code-controlled property access instead of the former used .attr()-Method, which has handled both gets and sets.
+
+Coming with this, the recommended way to set properties of Dijits changes from
+
+.. code-block :: javascript
+
+   widget.attr('property', 'value'); // old way and now deprecated for Dijits
+
+to
+
+.. code-block :: javascript
+
+   widget.set('property', 'value'); // new since 1.5
+
+The same for getting properties:
+
+.. code-block :: javascript
+
+   widget.attr('property'); // old way and now deprecated for Dijits
+
+changes to
+
+.. code-block :: javascript
+
+   widget.get('property'); // new since 1.5
+
 
 =====
 DojoX
