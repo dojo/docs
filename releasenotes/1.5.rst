@@ -17,6 +17,7 @@ Updated cultural tables to use CLDR 1.8 (unicode.org/cldr) for formatting of num
 
 dojo.Deferred, dojo.when
 ------------------------
+
 dojo.Deferred was refactored for side effect free chaining, such that you can execute code like:
 
 .. code-block :: javascript
@@ -46,12 +47,47 @@ Finally, dojo.when() is a method that will take either a Deferred or a plain val
 
 dojo.window, dojo.uacss
 -----------------------
+
 Some functions from dijit have been moved to dojo core (with stubs left in dijit for backwards compatibility).
 
  - dojo.require("dojo.uacss") will add classes to the <html> node like dj_ie, representing the browser, browser version, box model, etc.  Formerly dojo.require("dijit.sniff").
  - dojo.window.getBox() get's the viewport size.   Formerly dijit.getViewport().
  - dojo.window.get() converts a document to the corresponding window.   Formerly dijit.getDocumentWindow()
  - dojo.window.scrollIntoView(): scrolls a node into view, similar to node.scrollIntoView() but working around browser quirks.   Formerly dijit.scrollIntoView().
+
+dojo.Stateful
+-------------
+
+A new generic interface and base class for getting, setting, and watching for property changes (with getters and setters) in a consistent manner.
+
+Coming with this, the recommended way to set properties changes from
+
+.. code-block :: javascript
+
+   this.attr('value', node.property); // old way and now deprecated
+
+to
+
+.. code-block :: javascript
+
+   this.set('value', node.property); // new since 1.5
+
+The same for getting properties:
+
+.. code-block :: javascript
+
+   this.attr("value", newValue); // old way and now deprecated
+
+changes to
+
+.. code-block :: javascript
+
+   this.set("value", newValue); // new since 1.5
+ 
+See also: 
+
+* `Documentation dojo.Stateful (todo) <dojo/Stateful>`_
+* `Ticket #10839 <http://bugs.dojotoolkit.org/ticket/10839d>`_
 
 
 =====
@@ -291,7 +327,7 @@ Tree
 ----
 Decoupled concepts of "focused node" and "selected node", so that:
 
-   1. A tree doesn't start with any node mark as selected.   App needs to call attr("selectedItem", ...) or attr("path", ...) to mark the currently selected node.  It's unclear what should happen when the user clicks a node (especially when clicking a branch node that merely causes the node to open).  For now, clicking a node does not select it.
+   1. A tree doesn't start with any node mark as selected.   App needs to call attr("selectedItem", ...) or attr("path", ...) to mark the currently selected node.  Clicking a node will also select it, but not clicking the expando (plus-sign).
 
    2. Using arrow keys to navigate in a Tree will not change the selected item.
 
