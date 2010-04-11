@@ -76,13 +76,13 @@ The same for getting properties:
 
 .. code-block :: javascript
 
-   this.attr("value", newValue); // old way and now deprecated
+   this.attr('property'); // old way and now deprecated
 
 changes to
 
 .. code-block :: javascript
 
-   this.set("value", newValue); // new since 1.5
+   this.get('property'); // new since 1.5
  
 See also: 
 
