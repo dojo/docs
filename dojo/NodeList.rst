@@ -206,7 +206,7 @@ Array Methods
 -------------
 
 :at:
-  Returns one (or more) elements from the list in a new ``NodeList`` based on integer index. This is a fast way to wrap elements in a ``NodeList``, exposing all the manipulation and DOM conveniences easily (can be chained):
+  Returns one (or more) elements from the list in a new ``NodeList`` based on integer index. This is a fast way to wrap elements in a ``NodeList``, exposing all the manipulation and DOM conveniences easily (can be chained). 
 
 .. code-block :: javascript
   :linenos:
@@ -217,6 +217,25 @@ Array Methods
   // get the 3rd and 5th elements:
   var ofInterest = dojo.query(".stories").at(2, 4);
 
+.. code-block :: javascript
+  :linenos:
+  
+  // new in Dojo 1.5, .at() can accept negative indices
+  dojo.query("a").at(0, -1).onclick(fn); 
+  
+Incidentally, you can .end() out of a NodeList returned from .at, providing you access to the original NodeList before filtering.
+
+.. code-block :: javascript
+  :linenos:
+  
+  dojo.query("a")
+      .at(0)
+         .onclick(function(e){ ... })
+      .end() // back to main <a> list
+      .forEach(function(n){
+            makePretty(n);
+      });
+    
 :forEach:
   like `dojo.forEach <dojo/forEach>`_ but with current list as the first parameter. Has the same API as `Array.forEach <https://developer.mozilla.org/en/Core_JavaScript_1.5_Reference/Objects/Array/forEach>`_ in browsers that support it. Returns the source NodeList (can be chained).
 
@@ -431,19 +450,49 @@ Click on a method name to see a documentation page for it.
 :addContent:
   TODOC
 :empty:
-  TODOC
+  Empties the content of the nodes in this list, leaving the nodes in place. see `dojo.empty <dojo/empty>`_
 :coords:
-  TODOC
+  Partially "deprecated", using NodeList.position is recommended in Dojo 1.4 and higher. Returns the coordinate values
+  of all the nodes in this list. 
+:position:
+  Returns the coordinate values of all the nodes in this list. 
 
 
 Event Methods
 -------------
 
 :connect:
-  TODOC
+  Connect to an event of all the nodes in this list. Follows the pattern of `dojo.connect <dojo/connect>`_, though assumes each node in the list to be the target to connect to.
+  
+.. code-block :: javascript
+  :linenos:
+  
+  dojo.query("a.external").connect("onclick", function(e){
+    // `this` here refers to the node, as we've not explicitly set the context to something
+  });
+  
+  dojo.query("form").connect("onsubmit", function(){});
+  
+As a convenience, several common events are mapped as direct function calls. For example, the two following query() calls have identical results:
 
-Other events methods that do what you think: ``onblur``, ``onfocus``, ``onchange``, ``onclick``, ``onerror``, ``onkeydown``, ``onkeypress``, ``onkeyup``, ``onload``, ``onmousedown``, ``onmouseenter``, ``onmouseleave``, ``onmousemove``, ``onmouseout``, ``onmouseover``, ``onmouseup``, and ``onsubmit``.
+.. code-block :: javascript
+  :linenos:   
+  
+  var fn = function(e){ console.warn(e.target); }
+  dojo.query("a").onclick(fn);
+  dojo.query("a").connect("onclick", fn);
 
+The full list of methods that are mapped in this way are: ``onblur``, ``onfocus``, ``onchange``, ``onclick``, ``onerror``, ``onkeydown``, ``onkeypress``, ``onkeyup``, ``onload``, ``onmousedown``, ``onmouseenter``, ``onmouseleave``, ``onmousemove``, ``onmouseout``, ``onmouseover``, ``onmouseup``, and ``onsubmit``.
+
+It is also possible to manipulate the scope of the callback, just as `dojo.connect <dojo/connect>`_ would:
+
+.. code-block :: javascript
+  :linenos:
+  
+  // both call obj.method(e) in context of obj onclick:
+  dojo.query("a").onclick(obj, "method"); 
+  dojo.query("a").onclick(obj, obj.method);
+  
 Animation
 ---------
 
