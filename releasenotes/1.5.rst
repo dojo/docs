@@ -151,7 +151,7 @@ The parser can also take a flag specifying default dir and lang for inherited wi
 
 These two changes allow things like a portal page where different portlets are in different languages, or a page in an RTL language like Hebrew or Arabic but with one section in English.
 
-Tundra and claro themes support mixed RTL and LTR pages.
+Tundra and Claro themes support mixed RTL and LTR pages.
 
 Internally, this feature is implemented by dir=rtl widgets applying a CSS class like dijitTextBoxRtl (the widget's baseClass + "Rtl") to the widget's root node, in addition to applying the plain baseClass like dijitTextBox.   The tundra and claro themes have been modified to reference those per widget CSS classes rather than referencing the dijitRtl class applied to the BODY node.
 
