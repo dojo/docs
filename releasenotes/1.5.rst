@@ -72,12 +72,13 @@ Dijit
 
 Claro theme
 -----------
-A new theme for dijit has been released for dijit and the grid called claro (nee lucid).    This theme has two main aims:
+A new theme for dijit has been released for dijit and the grid called Claro (nee Lucid).  The Claro theme has several main aims:
 
-   - allow designers to easily customize the theme, specifically allowing any color scheme without designing new images
-   - fit and finish: gradient coloring, drop shadows, rounded corners, CSS animations (on webkit and mozilla), fixed missing hover and active states, etc.
+   - It delivers a modern and engaging visual style for rich internet applications using the Dojo Dijit library with the visual enhancements of transparent gradient background images, drop shadows, and appropriate CSS animation (on webkit and mozilla)
+   - It delivers the 'fit and finish' professional quality with consistent padding, font treatment and alignment; and fixed missing expected hover, active and selected behavioral states in widgets.
+   - It improves ease of customizing the theme CSS that is allowing designers to easily create their own them by styling elements such padding and color without designing new images. 
 
-The theme supports both LTR and RTL and all the browsers, including IE6, albeit with graceful degradation of some styling (no gradient shading and slightly jagged edges on some icons).
+The Claro theme supports both LTR and RTL and all the browsers, including IE6, albeit with graceful degradation of some styling (no gradient shading, square corners and 8-bit colored icons).
 
 ColorPalette
 ------------
