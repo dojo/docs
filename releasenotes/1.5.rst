@@ -74,7 +74,7 @@ Claro theme
 -----------
 A new theme for dijit has been released for dijit and the grid called Claro (nee Lucid).  The Claro theme has several main aims:
 
-   - It delivers a modern and engaging visual style for rich internet applications using the Dojo Dijit library with the visual enhancements of transparent gradient background images, drop shadows, and appropriate CSS animation (on webkit and mozilla)
+   - It delivers a modern and engaging visual style for rich internet applications using the Dojo Dijit library, with the visual enhancements of transparent gradient background images, drop shadows, and appropriate CSS animation (on webkit and mozilla)
    - It delivers the 'fit and finish' professional quality with consistent padding, font treatment and alignment; and fixed missing expected hover, active and selected behavioral states in widgets.
    - It improves ease of customizing the theme CSS that is allowing designers to easily create their own them by styling elements such padding and color without designing new images. 
 
