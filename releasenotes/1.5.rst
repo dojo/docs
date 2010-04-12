@@ -333,8 +333,8 @@ However, this will not:
    open({...});
 
 
-widget.attr()
--------------
+_widget.attr()
+--------------
 
 In order to make code clearer, Dojo Toolkit 1.5 will start to use the get()/set() pattern for code-controlled property access instead of the former used .attr()-Method, which has handled both gets and sets.
 
