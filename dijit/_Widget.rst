@@ -3,7 +3,7 @@
 dijit._Widget
 =============
 
-:Authors: Bill Keese, Nikolai Onken
+:Authors: Bill Keese, Nikolai Onken, Marcus Reimann
 :Project owner: Bill Keese
 :Available: since V0.9
 
@@ -91,9 +91,9 @@ In all cases its good practice to assume that you are overriding a method that m
 Attributes
 ==========
 
-Perhaps the most important feature of _Widget is the ability to set attributes at widget initialization, or to change their valuse later on in the widget's lifecycle.
+Perhaps the most important feature of _Widget is the ability to set attributes at widget initialization, or to change their values later on in the widget's lifecycle.
 
-dijit._Widget implements the attr() method to do this. For example, this call will set a DateTextBox's value to the current date:
+dijit._Widget has implemented the attr() method to do this. For example, this call will set a DateTextBox's value to the current date:
 
 .. code-block:: javascript
 
@@ -105,7 +105,33 @@ This call will tell us if a TitlePane is opened or closed:
 
    myTitlePane.attr('open')
 
-attr() makes use of:
+In order to make code clearer, Dojo Toolkit 1.5 will start to use the get()/set() pattern for code-controlled property access instead of the former used .attr()-Method, which has handled both gets and sets.
+
+Coming with this, the recommended way to set properties of Dijits changes from
+
+.. code-block :: javascript
+
+   widget.attr('property', 'value'); // old way and now deprecated for Dijits
+
+to
+
+.. code-block :: javascript
+
+   widget.set('property', 'value'); // new since 1.5
+
+The same for getting properties:
+
+.. code-block :: javascript
+
+   widget.attr('property'); // old way and now deprecated for Dijits
+
+changes to
+
+.. code-block :: javascript
+
+   widget.get('property'); // new since 1.5
+
+attr() and also get()/set() make use of:
 
   * the attributeMap
   * custom setters/getters
