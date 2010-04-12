@@ -166,6 +166,11 @@ _CssStateMixin
 
 New mixin for widgets that set CSS classes on their nodes depending on hover/active/focused state, and also semantic state (checked, selected, disabled, etc.).  Most of the dijit widgets have been updated to use this mixin.   As a result, there are more selectors available than before, such as CSS classes for when the slider handle is hovered or when the increment button is depressed.
 
+For the following widgets, the behavioural states of hover, active (mouse down) and selected (focus) have been added:
+dijit.Calendar
+dijit.ColorPalette
+dijit.Dialog
+
 To use this mixin in custom widgets:
 
 1. require _CssStateMixin and mix it in to the widget:
