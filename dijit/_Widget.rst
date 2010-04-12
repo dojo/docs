@@ -131,10 +131,13 @@ changes to
 
    widget.get('property'); // new since 1.5
 
+The attributeMap and custom setters/getters
+-------------------------------------------
+
 attr() and also get()/set() make use of:
 
-  * the attributeMap
-  * custom setters/getters
+* the attributeMap
+* custom setters/getters
 
 The attributeMap specifies a mapping of widget attributes into the DOM tree for the widget. It can map a TitlePane's title to the DOM node listing the title, for example.
 
