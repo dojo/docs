@@ -80,6 +80,8 @@ A new theme for dijit has been released for dijit and the grid called Claro (nee
 
 The Claro theme supports both LTR and RTL and all the browsers, including IE6, albeit with graceful degradation of some styling (no gradient shading, square corners and 8-bit colored icons).
 
+For more details on Claro and theming, see `http://docs.dojocampus.org/dijit-themes`_.
+
 ColorPalette
 ------------
 The styling was changed to put a white border around each color swatch, so that it's clear when the dark swatches are being hovered or focused.   In addition, focus was decoupled from hovering.
