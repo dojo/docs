@@ -166,10 +166,46 @@ _CssStateMixin
 
 New mixin for widgets that set CSS classes on their nodes depending on hover/active/focused state, and also semantic state (checked, selected, disabled, etc.).  Most of the dijit widgets have been updated to use this mixin.   As a result, there are more selectors available than before, such as CSS classes for when the slider handle is hovered or when the increment button is depressed.
 
-For the following widgets, the behavioural states of hover, active (mouse down) and selected (focus) have been added:
-dijit.Calendar
-dijit.ColorPalette
-dijit.Dialog
+For the following widgets, the behavioral states of hover, active (mouse down) and selected (focus), have been added:
+
+    - dijit.Calendar
+    - dijit.ColorPalette
+    - dijit.Dialog
+    - dijit.Editor
+    - dijit.InlineEditBox
+    - dijit.Menu
+    - dijit.MenuBar
+    - dijit.ProgressBar
+    - dijit.TitlePane
+    - dijit.Toolbar
+    - dijit.Tree
+    - dijit.form.CurrencyTextBox
+    - dijit.form.DateTextBox
+    - dijit.form.NumberSpinner
+    - dijit.form.NumberTextBox
+    - dijit.form.SimpleTextarea
+    - dijit.form.Textarea
+    - dijit.form.TextBox
+    - dijit.form.TimeTextBox
+    - dijit.form.ValidationTextBox
+    - dijit.form.ComboBox
+    - dijit.form.MultiSelect
+    - dijit.form.FilteringSelect
+    - dijit.form.Select
+    - dijit.form.Button
+    - dijit.form.ComboButton
+    - dijit.form.DropDownButton
+    - dijit.form.ToggleButton
+    - dijit.form.CheckBox
+    - dijit.form.Form
+    - dijit.form.RadioButton
+    - dijit.form.Slider
+    - dijit.layout.AccordionContainer
+    - dijit.layout.BorderContainer
+    - dijit.layout.ContentPane
+    - dijit.layout.TabContainer
+    - dojox.grid.EnhancedGrid
+    - dojox.grid.enhancedDataGrid
 
 To use this mixin in custom widgets:
 
