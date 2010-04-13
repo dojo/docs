@@ -83,6 +83,11 @@ Programmatic horizontal example
     <div id="rangeSlider"></div>
     <p><input type="text" id="sliderValue" /></p>
 
+  .. cv:: css
+
+    <style type="text/css">
+      @import url(/moin_static163/js/dojo/trunk/dojox/form/resources/RangeSlider.css);
+    </style>
 
 Programmatic vertical example with rulers
 -----------------------------------------
@@ -117,6 +122,12 @@ Programmatic vertical example with rulers
 
     <div id="vertical"></div>
 
+  .. cv:: css
+
+    <style type="text/css">
+      @import url(/moin_static163/js/dojo/trunk/dojox/form/resources/RangeSlider.css);
+    </style>
+
 Declarative horizontal example
 ------------------------------
 
@@ -138,6 +149,12 @@ Declarative horizontal example
         </script>
     </div>
     <p><input type="text" id="sliderValue" /></p>
+
+  .. cv:: css
+
+    <style type="text/css">
+      @import url(/moin_static163/js/dojo/trunk/dojox/form/resources/RangeSlider.css);
+    </style>
 
 =============
 Accessibility
