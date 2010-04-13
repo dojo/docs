@@ -67,7 +67,7 @@ Programmatic example
         var rangeSlider = new dojox.form.HorizontalRangeSlider({
           name: "rangeSlider",
           value: [2,6],
-          minimum: 0,
+          minimum: 1,
           maximum: 10,
           intermediateChanges: true,
           style: "width:300px;",
@@ -97,10 +97,10 @@ Declarative example
 
   .. cv:: html
 
-    <div id="horizontalSlider" dojoType="dojox.form.HorizontalRangeSlider"
-        value="2,6" minimum="0" maximum="10" intermediateChanges="true"
+    <div id="rangeSlider" dojoType="dojox.form.HorizontalRangeSlider"
+        value="2,6" minimum="1" maximum="10" intermediateChanges="true"
         showButtons="false" style="width:300px;">
-        <script type="dojo/method" event="onChange" args="item">
+        <script type="dojo/method" event="onChange" args="value">
             dojo.byId("sliderValue").value = value;
         </script>
     </div>
