@@ -114,3 +114,212 @@ Methods are assumed to be public, but are considered protected by default if the
 		        //            protected extension
 		        ...
 		}
+
+
+====================
+Method-Specific Tags
+====================
+
+* **callback**: This method represents a location that a user can connect to (i.e. using dojo.connect) to receive notification that some event happened, such as a user clicking a button or an animation completing. For example:
+
+
+	.. code-block :: javascript
+		:linenos:
+	
+		onClick: function(){
+		        // summary:
+		        //            Called when the user clicks the widget
+		        // tags:
+		        //            callback
+		        ...
+		}
+		
+* **extension**: Unlike a normal protected method, we mark a function as an extension if the default functionality isn't how we want the method to ultimately behave. This is for things like lifecycle methods (e.g. postCreate) or methods where a subclass is expected to change some basic default functionality (e.g. buildRendering). A callback is just a notification that some event happened, an extension is where the widget code is expecting a method to return a value or perform some action. For example, on a calendar: 
+
+.. code-block :: javascript
+	:linenos:
+	
+	isDisabledDate: function(date){
+	        // summary:
+	        //            Return true if the specified date should be disabled (i.e. grayed
+	        //            out and unclickable)
+	        // description:
+	        //            Override this method to define special days to gray out, such as
+	        //            weekends or (for an airline) black-out days when discount fares
+	        //            aren't available.
+	        // tags:
+	        //            extension
+	        ...
+	}
+
+============================
+General Function Information
+============================
+
+.. code-block :: javascript
+	:linenos:
+
+	Foo = function(){
+	  // summary:
+	  //        Soon we will have enough treasure to rule all of New Jersey.
+	  // description:
+	  //        Or we could just get a new roommate. Look, you go find him. He
+	  //        don't yell at you.  All I ever try to do is make him smile and sing
+	  //        around him and dance around him and he just lays into me. He told
+	  //        me to get in the freezer 'cause there was a carnival in there.
+	  // returns:
+	  //        Look, a Bananarama tape!
+	}
+
+
+==================
+Object Information
+==================
+
+Has no description of what it returns
+
+.. code-block :: javascript
+	:linenos:
+
+	var mcChris = {
+	  // summary:
+	  //        Dingle, engage the rainbow machine!
+	  // description:
+	  //        Tell you what, I wish I was--oh my g--that beam,
+	  //        coming up like that, the speed, you might wanna adjust that.
+	  //        It really did a number on my back, there. I mean, and I don't
+	  //        wanna say whiplash, just yet, cause that's a little too far,
+	  //        but, you're insured, right?
+	}
+	
+========================================
+Function Assembler Information (declare)
+========================================
+
+If the declaration passes a constructor, the summary and description must be filled in there. If you do not pass a constructor, the comment block can be created in the passed mixins object.
+For example:
+
+.. code-block :: javascript
+	:linenos:
+
+	dojo.declare(
+	  "Steve",
+	  null,
+	  {
+	    // summary:
+	    //    Phew, this sure is relaxing, Frylock.
+	    // description:
+	    //    Thousands of years ago, before the dawn of
+	    //    man as we knew him, there was Sir Santa of Claus: an
+	    //    ape-like creature making crude and pointless toys out
+	    //    of dino-bones, hurling them at chimp-like creatures with
+	    //    crinkled hands regardless of how they behaved the
+	    //    previous year.
+	    // returns:
+	    //    Unless Carl pays tribute to the Elfin Elders in space.
+	  }
+	);
+
+==========
+Parameters
+==========
+
+Simple Types
+------------
+
+Types should (but don't have to) appear in the main parameter definition block. For example:
+
+.. code-block :: javascript
+	:linenos:
+
+	function(/*String*/ foo, /*int*/  bar)...
+	
+Type Modifiers
+--------------
+
+There are some modifiers you can add after the type:
+
+* ? means optional
+* ... means the last parameter repeats indefinitely
+* [] means an array
+
+.. code-block :: javascript
+	:linenos:
+	
+	function(/*String?*/ foo, /*int...*/  bar, /*String[]?*/ baz){ }
+
+Full Parameter Summaries
+------------------------
+
+If you want to also add a summary, you can do so in the initial comment block. If you've declared a type in the parameter definition, you do not need to redeclare it here. 
+
+.. code-block :: javascript
+	:linenos:
+
+	function(foo, bar){
+	  // foo: String
+	  //        used for being the first parameter
+	  // bar: int
+	  //        used for being the second parameter
+	}
+
+
+=========
+Variables
+=========
+
+Instance variables, prototype variables and external variables can all be defined in the same way. There are many ways that a variable might get assigned to this function, and locating them all inside of the actual function they reference is the best way to not lose track of them, or accidentally comment them multiple times.
+
+.. code-block :: javascript
+	:linenos:
+
+	function Foo(){
+	  // myString: String
+	  // times: int
+	  //        How many times to print myString
+	  // separator: String
+	  //        What to print out in between myString*
+	  this.myString = "placeholder text";
+	  this.times = 5;
+	}
+	Foo.prototype.setString = function(myString){
+	  this.myString = myString;
+	}
+	Foo.prototype.toString = function(){
+	  for(int i = 0; i < this.times; i++){
+	    console.log(this.myString, foo.separator);
+	  }
+	}
+	Foo.separator = "=====";
+
+
+
+=================
+Tagging Variables
+=================
+
+Variables can be tagged by placing them in a whitespace-separated format before the type value between [ and ] characters. The tags available for variables are the same as outlined in the main tags, plus a few variable-specific additions:
+
+* **deprecated**: In methods, the doc system can search for dojo.deprecated calls. But variables will need specific declarations that they are deprecated.
+
+	.. code-block :: javascript
+
+	  // label: [deprecated readonly] String
+	  //            A label thingie
+	  label: ""
+
+* **const**: A widget attribute that can be used for configuration, but can only have its value assigned during initialization. This means that changing this value on a widget instance (even with the attr method) will be a no-op.
+
+	.. code-block :: javascript
+
+		// id: [const] String
+		//            A unique, opaque ID string that can be assigned by users...
+		id: ""
+
+* **readonly**: This property is intended to be read and cannot be specified during initialization, or changed after initialization.
+
+	.. code-block :: javascript
+
+		// domNode: [readonly] DomNode
+		//            This is our visible representation of the widget...
+		domNode: null
