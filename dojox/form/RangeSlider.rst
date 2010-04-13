@@ -61,7 +61,6 @@ Programmatic example
 
     <script type="text/javascript">
       dojo.require("dojox.form.RangeSlider");
-      dojo.require("dijit.form.Textbox"); //included in example only, not required by component
 
       dojo.addOnLoad(function(){
 
@@ -82,7 +81,7 @@ Programmatic example
   .. cv:: html
 
     <div id="rangeSlider"></div>
-    <p><input type="text" id="sliderValue" dojoType="dijit.form.TextBox" /></p>
+    <p><input type="text" id="sliderValue" /></p>
 
 
 Declarative example
