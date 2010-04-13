@@ -92,16 +92,18 @@ Programmatic vertical example with rulers
 
     <script type="text/javascript">
       dojo.require("dojox.form.RangeSlider");
-      var vertical = dojo.byId("vertical");
-      var rulesNode = document.createElement('div');
-      vertical.appendChild(rulesNode);
-      var sliderRules = new dijit.form.VerticalRule({
+
+      dojo.addOnLoad(function(){
+        var vertical = dojo.byId("vertical");
+        var rulesNode = document.createElement("div");
+        vertical.appendChild(rulesNode);
+        var sliderRules = new dijit.form.VerticalRule({
             count:11,
             style:"width:5px;"
         }, rulesNode);
-      var slider = new dojox.form.VerticalRangeSlider({
+        var slider = new dojox.form.VerticalRangeSlider({
           name: "vertical",
-          value: 6,
+          value: [2,6],
           minimum: -10,
           maximum: 10,
           intermediateChanges: true,
