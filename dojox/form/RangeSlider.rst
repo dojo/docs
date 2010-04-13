@@ -97,7 +97,7 @@ Declarative example
 
   .. cv:: html
 
-    <div id="horizontalSlider" dojoType="dijit.form.HorizontalSlider"
+    <div id="horizontalSlider" dojoType="dojox.form.HorizontalRangeSlider"
         value="-4,6" minimum="-10" maximum="10" discreteValues="11"
         intermediateChanges="true"
         showButtons="false" style="width:400px;">   
