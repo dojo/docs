@@ -64,7 +64,7 @@ Programmatic example
 
       dojo.addOnLoad(function(){
 
-        var rangeSlider = new dijit.form.HorizontalRangeSlider({
+        var rangeSlider = new dojox.form.HorizontalRangeSlider({
           name: "rangeSlider",
           value: [-5,5],
           minimum: -10,
@@ -87,7 +87,22 @@ Programmatic example
 Declarative example
 -------------------
 
-TODO: example
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+      dojo.require("dojox.form.RangeSlider");
+    </script>
+
+  .. cv:: html
+
+    <div id="horizontalSlider" dojoType="dijit.form.HorizontalSlider"
+        value="-4,6" minimum="-10" maximum="10" discreteValues="11"
+        intermediateChanges="true"
+        showButtons="false" style="width:400px;">   
+    </div>
+
 
 
 ========
