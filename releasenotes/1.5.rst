@@ -447,6 +447,8 @@ Editor
 
 * `dojox.editor.plugins.InsertAnchor <dojox/editor/plugins/InsertAnchor>`_ -- A plugin that adds an 'insert anchor' icon to the toolbar.  An anchor is a specialized <a> tag used for linking to specific sections of a document.  The plugin highlights (makes visible), via css what is an anchor in the page.  It also allows for double-click editing of anchors.
 
+* `dojox.editor.plugins.FindReplace <dojox/editor/plugins/FindReplace>`_ -- This plugin was updated to improve its layout and keyboard interaction based on input from a user experience development team.  Feature-wise it remains the same, but the input and button layout is improved.
+
 
 GFX
 ---
