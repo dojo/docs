@@ -435,3 +435,9 @@ Which Documentation-Specific Syntax To Use
 Documenting in another file reduces the chance that your code will break code parsing. It's a good idea from this perspective to use the separate file style as much as possible.
 
 There are many situations where you can't do this, in which case you should use the inline-comment syntax. There is also a fear that people will forget to keep documentation in sync as they add new invisible mixed in fields. If this is a serious concern, you can also use the inline comment syntax.
+
+===========================
+Validating your docs markup
+===========================
+
+If you are a developer who has marked their code up using this syntax and want to test to make sure it is correct, you can run the doctool yourself locally. `See Generating API Documentation <util/doctools/generate>`_. There is also a tool to quickly view simple parsing found in util/docscripts/_browse.php
