@@ -340,4 +340,4 @@ As mentioned above, the dojox/fx module provides additional effects over and bey
 Animation in Dojo 1.5 widgets
 =============================
 
-Using the latest in CSS3 along with the Dojo APIs increases the performance of animation and makes it easier for designers to code the animation using CSS3. See 'Themes and theming <http://docs.dojocampus.org/dijit-themes for more information>'_
+Using the latest in CSS3 along with the Dojo APIs increases the performance of animation and makes it easier for designers to code the animation using CSS3. See `Themes and theming <http://docs.dojocampus.org/dijit-themes>`_ for more information.
