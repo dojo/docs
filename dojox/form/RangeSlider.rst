@@ -92,6 +92,7 @@ Programmatic vertical example with rulers
 
     <script type="text/javascript">
       dojo.require("dojox.form.RangeSlider");
+      dojo.require("dijit.form.VerticalRule");
 
       dojo.addOnLoad(function(){
         var vertical = dojo.byId("vertical");
