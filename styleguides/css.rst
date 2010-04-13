@@ -18,11 +18,11 @@ Dijit comes with a very powerful theming system.
 
 baseClass
 ---------
-All dijit widgets have a baseClass atttribute which can be specified (overridden) as an initialization parameter.  For example,
+All dijit widgets have a baseClass attribute which can be specified (overridden) as an initialization parameter.  For example,
 
 .. code-block :: html
 
-  <div dojoType=dijit.layout.TabContainer baseClass=myTabContainer>
+  <div dojoType="dijit.layout.TabContainer" baseClass="myTabContainer"></div>
 
 This lets the designer completely override the style of the widget because none of the CSS rules in dijit.css, tundra.css etc. are applied, since the patterns reference .dijitTabContainer.
 
