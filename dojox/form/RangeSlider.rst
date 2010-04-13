@@ -12,13 +12,13 @@ dojox.form.RangeSlider
 .. contents::
    :depth: 2
 
-The RangeSlider is a descendant of **dijit.form.Slider** that allows a selection of a range of values.
+The RangeSlider is a descendant of `dijit.form.Slider <dijit/form/Slider>`_ that allows a selection of a range of values.
 
 ============
 Introduction
 ============
 
-The RangeSlider differs from the **dijit.form.Slider** by providing two handles that allow you to select a range of values across the scale.
+The RangeSlider differs from the `dijit.form.Slider <dijit/form/Slider>`_ by providing two handles that allow you to select a range of values across the scale.
 
 
 =====
@@ -53,8 +53,8 @@ discreteValues       integer               Number of "steps" in the slider. For 
 Examples
 ========
 
-Programmatic example
---------------------
+Programmatic horizontal example
+-------------------------------
 .. cv-compound::
 
   .. cv:: javascript
@@ -84,8 +84,38 @@ Programmatic example
     <p><input type="text" id="sliderValue" /></p>
 
 
-Declarative example
--------------------
+Programmatic vertical example with rulers
+-----------------------------------------
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+      dojo.require("dojox.form.RangeSlider");
+      var vertical = dojo.byId("vertical");
+      var rulesNode = document.createElement('div');
+      vertical.appendChild(rulesNode);
+      var sliderRules = new dijit.form.VerticalRule({
+            count:11,
+            style:"width:5px;"
+        }, rulesNode);
+      var slider = new dojox.form.VerticalRangeSlider({
+          name: "vertical",
+          value: 6,
+          minimum: -10,
+          maximum: 10,
+          intermediateChanges: true,
+          style: "height:300px;"
+        }, vertical);
+      });
+    </script>
+
+  .. cv:: html
+
+    <div id="vertical"></div>
+
+Declarative horizontal example
+------------------------------
 
 .. cv-compound::
 
@@ -106,10 +136,14 @@ Declarative example
     </div>
     <p><input type="text" id="sliderValue" /></p>
 
+=============
+Accessibility
+=============
 
+TODO: provide accessibility information
 
 ========
 See also
 ========
 
-* TODO: links to other related articles
+* See `dijit.form.Slider <dijit/form/Slider>`_ for more information.
