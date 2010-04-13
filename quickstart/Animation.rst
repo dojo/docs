@@ -335,3 +335,9 @@ Text Effects
 ============
 
 As mentioned above, the dojox/fx module provides additional effects over and beyond these basic animation capabilities.  On of the effects in the dojox package that is especially neat is effects that can operate on text directly, which can allow you to easily do animations such as exploding all the characters in a paragraph all over your page.  Make sure to check out these additional text effects once you understand the basics.
+
+=============================
+Animation in Dojo 1.5 widgets
+=============================
+
+Using the latest in CSS3 along with the Dojo APIs increases the performance of animation and makes it easier for designers to code the animation using CSS3. See 'Themes and theming <http://docs.dojocampus.org/dijit-themes for more information>'_
