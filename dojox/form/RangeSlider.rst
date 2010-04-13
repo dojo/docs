@@ -98,10 +98,13 @@ Declarative example
   .. cv:: html
 
     <div id="horizontalSlider" dojoType="dojox.form.HorizontalRangeSlider"
-        value="2,6" minimum="0" maximum="10" discreteValues="11"
-        intermediateChanges="true"
-        showButtons="false" style="width:300px;">   
+        value="2,6" minimum="0" maximum="10" intermediateChanges="true"
+        showButtons="false" style="width:300px;">
+        <script type="dojo/method" event="onChange" args="item">
+            dojo.byId("sliderValue").value = value;
+        </script>
     </div>
+    <p><input type="text" id="sliderValue" /></p>
 
 
 
