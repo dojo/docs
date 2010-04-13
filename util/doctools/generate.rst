@@ -23,7 +23,7 @@ In `Dojo Inline Documentation <util/doctools/markup>`_ we detailed the markup sy
 Defining Namespaces
 ===================
 
-The namespaces are defined in util/docscripts/modules, using a simple properties file. This should be named ``your_namespace.module.properties`` (e.g. ``util/docscripts/modules/mycompany.module.properties``) and it contains a simple namspace to dojo-relative-path mapping: 
+The namespaces are defined in util/docscripts/modules, using a simple properties file. This should be named ``your_namespace.module.properties`` (e.g. ``util/docscripts/modules/mycompany.module.properties``) and it contains a simple namespace to path mapping: 
 
 .. code-block :: javascript
 	:linenos:
