@@ -18,7 +18,7 @@ The RangeSlider is a descendant of `dijit.form.Slider <dijit/form/Slider>`_ that
 Introduction
 ============
 
-The RangeSlider differs from the `dijit.form.Slider <dijit/form/Slider>`_ by providing two handles that allow you to select a range of values across the scale.
+The RangeSlider differs from the `dijit.form.Slider <dijit/form/Slider>`_ by providing two handles that allow you to select a range of values across the scale.  There is the **dojox.form.HorizontalRangeSlider** and the **dojox.form.VerticalRangeSlider** which provide a horizontal and vertical version respectively.
 
 
 =====
@@ -67,7 +67,7 @@ Programmatic horizontal example
         var rangeSlider = new dojox.form.HorizontalRangeSlider({
           name: "rangeSlider",
           value: [2,6],
-          minimum: 1,
+          minimum: -10,
           maximum: 10,
           intermediateChanges: true,
           style: "width:300px;",
@@ -142,7 +142,7 @@ Declarative horizontal example
   .. cv:: html
 
     <div id="rangeSlider" dojoType="dojox.form.HorizontalRangeSlider"
-        value="2,6" minimum="1" maximum="10" intermediateChanges="true"
+        value="2,6" minimum="-10" maximum="10" intermediateChanges="true"
         showButtons="false" style="width:300px;">
         <script type="dojo/method" event="onChange" args="value">
             dojo.byId("sliderValue").value = value;
@@ -155,6 +155,8 @@ Declarative horizontal example
     <style type="text/css">
       @import url(/moin_static163/js/dojo/trunk/dojox/form/resources/RangeSlider.css);
     </style>
+
+**NOTE** In delarative mode, the value of the attribute ``value`` is specified as a comma delimited string and not as an array (e.g. ``value="2,6"`` and not ``value="[2,6]"``.
 
 =============
 Accessibility
