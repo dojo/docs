@@ -27,7 +27,6 @@ When parsing a comment block, we give the parser a list of "keys" to look for. T
 Formatting: Each keyword should be on a line by itself, with a space before and a colon after. For variable names there's a type after the colon. The content associated with the keyword is indented by two tabs. For example:
 
 .. code-block :: javascript
-	:linenos:
 
 	// summary:
 	//            This is the summary for the method.
@@ -79,8 +78,7 @@ Methods are assumed to be public, but are considered protected by default if the
 * **protected**: The method can be called or overriden by subclasses but should not be accessed (directly) by a user. For example: 
 
 	.. code-block :: javascript
-		:linenos:
-	
+		
 		postCreate: function(){
 		        // summary:
 		        //            Called after a widget's dom has been setup
@@ -91,8 +89,7 @@ Methods are assumed to be public, but are considered protected by default if the
 * **private**: The method or property is not intended for use by anything other than the class itself. For example:
 
 	.. code-block :: javascript
-		:linenos:
-
+	
 		_attrToDom: function(/*String*/ attr, /*String*/  value){
 		        // summary:
 		        //            Reflect a widget attribute (title, tabIndex, duration etc.) to
@@ -105,8 +102,7 @@ Methods are assumed to be public, but are considered protected by default if the
 * **multiple tags**: Multiple tags can separated by spaces: 
 
 	.. code-block :: javascript
-		:linenos:
-
+	
 		parse: function(/*Node*/ node){
 		        // summary:
 		        //            Parse things.
@@ -124,8 +120,7 @@ Method-Specific Tags
 
 
 	.. code-block :: javascript
-		:linenos:
-	
+		
 		onClick: function(){
 		        // summary:
 		        //            Called when the user clicks the widget
@@ -137,7 +132,6 @@ Method-Specific Tags
 * **extension**: Unlike a normal protected method, we mark a function as an extension if the default functionality isn't how we want the method to ultimately behave. This is for things like lifecycle methods (e.g. postCreate) or methods where a subclass is expected to change some basic default functionality (e.g. buildRendering). A callback is just a notification that some event happened, an extension is where the widget code is expecting a method to return a value or perform some action. For example, on a calendar: 
 
 .. code-block :: javascript
-	:linenos:
 	
 	isDisabledDate: function(date){
 	        // summary:
@@ -157,7 +151,6 @@ General Function Information
 ============================
 
 .. code-block :: javascript
-	:linenos:
 
 	Foo = function(){
 	  // summary:
@@ -179,7 +172,6 @@ Object Information
 Has no description of what it returns
 
 .. code-block :: javascript
-	:linenos:
 
 	var mcChris = {
 	  // summary:
@@ -200,7 +192,6 @@ If the declaration passes a constructor, the summary and description must be fil
 For example:
 
 .. code-block :: javascript
-	:linenos:
 
 	dojo.declare(
 	  "Steve",
@@ -230,7 +221,6 @@ Simple Types
 Types should (but don't have to) appear in the main parameter definition block. For example:
 
 .. code-block :: javascript
-	:linenos:
 
 	function(/*String*/ foo, /*int*/  bar)...
 	
@@ -244,7 +234,6 @@ There are some modifiers you can add after the type:
 * [] means an array
 
 .. code-block :: javascript
-	:linenos:
 	
 	function(/*String?*/ foo, /*int...*/  bar, /*String[]?*/ baz){ }
 
@@ -254,7 +243,6 @@ Full Parameter Summaries
 If you want to also add a summary, you can do so in the initial comment block. If you've declared a type in the parameter definition, you do not need to redeclare it here. 
 
 .. code-block :: javascript
-	:linenos:
 
 	function(foo, bar){
 	  // foo: String
@@ -271,7 +259,6 @@ Variables
 Instance variables, prototype variables and external variables can all be defined in the same way. There are many ways that a variable might get assigned to this function, and locating them all inside of the actual function they reference is the best way to not lose track of them, or accidentally comment them multiple times.
 
 .. code-block :: javascript
-	:linenos:
 
 	function Foo(){
 	  // myString: String
@@ -323,3 +310,128 @@ Variables can be tagged by placing them in a whitespace-separated format before 
 		// domNode: [readonly] DomNode
 		//            This is our visible representation of the widget...
 		domNode: null
+
+
+
+==============================
+Variable Comments in an Object
+==============================
+
+The parser takes the comments in between object values and applies the same rules as if they were in the initial comment block:
+
+.. code-block :: javascript
+
+	{
+	  // key: String
+	  //        A simple value
+	  key: "value",
+	  // key2: String
+	  //        Another simple value
+	}
+
+============
+Return Value
+============
+
+Because a function can return multiple types, the types should be declared on the same line as the return statement, and the comment must be the last thing on the line. If all the return types are the same, the parser uses that return type. If they're different, the function is considered to return "mixed". For example:
+
+.. code-block :: javascript
+
+	function(){
+	  if(arguments.length){
+	    return "You passed argument(s)"; // String
+	  }else{
+	    return false; // Boolean
+	  }
+	}
+
+Note: The return type should be on the same line as the return statement. The first example is invalid, the second is valid:
+
+.. code-block :: javascript
+
+	function(){
+	  return {
+	    foo: "bar" // return Object
+	  }
+	}
+	function(){
+	  return { // return Object
+	    foo: "bar"
+	  }
+	}
+
+
+============================
+Documentation-Specific Code
+============================
+
+Sometimes objects are constructed in a way that is hard to see from just looking through source. Or we might pass a generic object and want to let the user know what fields they can put in this object. In order to do this, there are two solutions:
+
+Inline Commented-Out Code
+-------------------------
+
+There are some instances where you might want an object or function to appear in documentation, but not in Dojo, nor in your build. To do this, start a comment block with ``/*=====``. The number of ``=`` can be 5 or more.
+
+The parser simply replaces the ``/*=====`` and ``=====*/`` with whitespace at the very start, so you must be very careful about your syntax.
+
+.. code-block :: javascript
+
+	dojo.mixin(wwwizard, {
+	/*=====
+	  // url: String
+	  //        The location of the file
+	  url: "",
+	  // mimeType: String
+	  //        text/html, text/xml, etc
+	  mimeType: "",
+	=====*/
+	  // somethingElse: Boolean
+	  //        Put something else here
+	  somethingElse: "eskimo"
+	});
+
+Code in a Separate File
+-----------------------
+
+Doing this allows us to see syntax highlighting in our text editor, and we can worry less about breaking the syntax of the file that's actually in the code-base during parsing. It's nothing more complicated that writing a normal JS file, with a ``dojo.provide`` call.
+
+The trade-off is that it's harder to maintain documentation-only files. It's a good idea to only have one of these per the namespace depth you're at. eg in the same directory that the file you're documenting is. We'll see an example of its use in the next section.
+
+===================
+Documenting a kwArg
+===================
+
+A lot of Dojo uses keyword-style arguments (kwArg). It's difficult to describe how to use them sometimes. One option is to provide a pseudo-object describing its behavior. So we'll create ``module/_arg.js`` and do the following:
+
+.. code-block :: javascript
+
+	dojo.provide("module._arg");
+	module._arg.myFuncArgs = function(/*Object*/ kwArgs){
+	  // url: String
+	  //        Location of the thing to use
+	  // mimeType: String
+	  //        Mimetype to return data as
+	        this.url = kwArgs.url;
+	        this.mimeType = kwArgs.mimeType;
+	}
+
+This describes a real object that mimics the functionality of the generic object you would normally pass, but also provides documentation of what fields it has and what they do.
+
+To associate this object with the originating function, do this:
+
+.. code-block :: javascript
+
+	var myFunc = function(/*module._arg.myFuncArgs*/  kwArgs){
+	  console.log(kwArgs.url);
+	  console.log(kwArgs.mimeType);
+	}
+
+Since we didn't do a ``dojo.require`` on module._arg, it won't get included, but the documentation parser will still provide a link to it, allowing the user to see its functionality. This pseudo object may also be included in-line using the ``/*===== =====*/`` syntax. For an example of how to do this inline, see "dojo.__FadeArgs" pseudo code in dojo/_base/fx.js, used to document ``dojo.fadeIn()`` and ``dojo.fadeOut()``
+
+==========================================
+Which Documentation-Specific Syntax To Use
+==========================================
+
+Documenting in another file reduces the chance that your code will break code parsing. It's a good idea from this perspective to use the separate file style as much as possible.
+
+There are many situations where you can't do this, in which case you should use the inline-comment syntax. There is also a fear that people will forget to keep documentation in sync as they add new invisible mixed in fields. If this is a serious concern, you can also use the inline comment syntax.
