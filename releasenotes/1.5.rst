@@ -428,9 +428,9 @@ To be moved:
 Pending:
 
 * Data series now support nulls ( ie. no data available ) `#10898 <http://bugs.dojotoolkit.org/ticket/10898>`_ 
-* Allow a combination of theme-based and custom styles
-* Charting animation (grow/zoom) for areas, lines and markers
-* Chart axis labels can now be rotated (clockwise or anticlockwise ) through any desired angle.
+* Allow a combination of theme-based and custom styles  `#10897 <http://bugs.dojotoolkit.org/ticket/10897>`_ 
+* Charting animation (grow/zoom) for areas, lines and markers  `#10856 <http://bugs.dojotoolkit.org/ticket/10856>`_ 
+* Chart axis labels can now be rotated (clockwise or anticlockwise ) through any desired angle.  `#10888 <http://bugs.dojotoolkit.org/ticket/10888>`_ 
 
 
 
