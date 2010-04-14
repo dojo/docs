@@ -427,7 +427,7 @@ To be moved:
 
 Pending:
 
-* `Data series now support 'nulls' ( no data available ) #10898 <http://bugs.dojotoolkit.org/ticket/10898>`
+* `Data series now support nulls ( ie. no data available ) #10898 <http://bugs.dojotoolkit.org/ticket/10898>`
 * Allow a combination of theme-based and custom styles
 * Charting animation (grow/zoom) for areas, lines and markers
 * Chart axis labels can now be rotated (clockwise or anticlockwise ) through any desired angle.
