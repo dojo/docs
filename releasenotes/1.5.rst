@@ -423,7 +423,7 @@ Charting
 
 To be moved:
 
-* New 'Map Chart' widget ( dojox.charting.Map ) provides an easy way to display geographical map data.  ( eg: maps for USA, Europe, Asia etc... )
+* New 'Map Chart' widget ( dojox.charting.Map ) provides an easy way to display geographical map data.  ( eg: maps for USA, Europe, Asia etc... )  `#10647 <http://bugs.dojotoolkit.org/ticket/10647>`_
 
 Pending:
 
