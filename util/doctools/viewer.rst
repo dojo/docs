@@ -17,13 +17,13 @@ Setup and population of the viewer app with API data
 Introduction
 ============
 
-Running the api docs extraction/generation tool (generate.php) produces either json or xml output - this is the raw data. To format and process this data into useful, browseable documentation you need a viewer application. This page steps you through the process to setup a web app like `dojotoolkit.org/api http://dojotoolkit.org/api/`_ and how to populate it with your docs data
+Running the api docs extraction/generation tool (generate.php) produces either json or xml output - this is the raw data. To format and process this data into useful, browseable documentation you need a viewer application. This page steps you through the process to setup a web app like `dojotoolkit.org/api <http://dojotoolkit.org/api/>`_ and how to populate it with your docs data
 
 =============
 Prerequisites
 =============
 
-`dojotoolkit.org/api http://dojotoolkit.org/api/`_ is a PHP-based web application, using XSLT to transform the XML output from generate.php and to create a readable and usable documentation UI. You will need: 
+Dojo's `API Viewer <http://dojotoolkit.org/api/>`_ is a PHP-based web application, using XSLT to transform the XML output from generate.php and to create a readable and usable documentation UI. You will need: 
 
 * A **web server**, with **PHP 5** installed and configured. 
 * A Subversion (svn) client. This walkthrough will assume a command-line svn client
