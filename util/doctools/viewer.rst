@@ -70,3 +70,10 @@ Customizing the Viewer
 ======================
 
 Point out theme contents for title, welcome page text
+
+See Also
+========
+- `Dojo documentation tools overview <util/doctools>`_
+- `API doc syntax <util/doctools/markup>`_ - how to markup API documentation in your code
+- `Running the generation tools <util/doctools/generate>`_ - directories setup, defining custom namespaces, configuring and running the generation tools
+- `Viewing the API output data <util/doctools/viewer>`_ - how to setup and load the extracted API data into a web-based viewer
