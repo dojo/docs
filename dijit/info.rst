@@ -160,7 +160,7 @@ With the following markup:
 .. code-block :: html
   :linenos:
  
-    <div id="myDialog" dojoType="dijit.Dialog" title="A Dialog"><p class="innerContent">Content<</p>/div>
+    <div id="myDialog" dojoType="dijit.Dialog" title="A Dialog"><p class="innerContent">Content</p>/div>
 
 The Dialog instance would be available through the byId call to `myDialog`:
 
