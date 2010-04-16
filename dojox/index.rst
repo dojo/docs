@@ -222,6 +222,10 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
     A date-like class representing the Hebrew calendar
 
+* `dojox.drawing <dojox/drawing>`_
+
+  Vector graphics drawing editor
+
 * `dojox.dtl <dojox/dtl>`_
 
   Django Template Language implementation
@@ -300,7 +304,7 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
   * `dojox.form.RangeSlider <dojox/form/RangeSlider>`_
 
-    description?
+    A widget that allows a range of values to be selected along a scale
 
   * `dojox.form.Rating <dojox/form/Rating>`_
 
