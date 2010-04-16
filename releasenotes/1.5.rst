@@ -59,8 +59,8 @@ dojo.Stateful
 -------------
 
 A new generic interface and base class for getting, setting, and watching for property changes (with getters and setters) in a consistent manner.
- 
-See also: 
+
+See also:
 
 * `Documentation dojo.Stateful (todo) <dojo/Stateful>`_
 * `Ticket #10839 <http://bugs.dojotoolkit.org/ticket/10839d>`_
@@ -76,7 +76,7 @@ A new theme for Dijit and the dojox.Grid is called Claro (nee Lucid).  The Claro
 
    - to deliver a modern and engaging visual style for rich internet applications using the Dojo Dijit library, with the visual enhancements of transparent gradient background images, drop shadows, and appropriate CSS animation (on webkit and mozilla);
    - to deliver the 'fit and finish' professional quality with consistent padding, font treatment and alignment; and fix missing expected behavioral states (hover, active and selected) in widgets;
-   - to improve ease of customizing the theme CSS that allows designers to easily create their own theme by styling elements such as padding and color, without designing new background images. 
+   - to improve ease of customizing the theme CSS that allows designers to easily create their own theme by styling elements such as padding and color, without designing new background images.
 
 The Claro theme supports both left-to-right (LTR) and right-to-left (RTL) display, and all Dojo 1.5 supported browsers: IE (6, 7 and 8); FF (3.0, 3.5 and 3.6); Safari 4.0 and Chrome (3.0 and 4.0), albeit with graceful degradation of some styling: no 24 bit PNG's in IE6; and no rounded corners in IE6,7 and 8.
 
@@ -413,13 +413,14 @@ DojoX
 Charting
 --------
 
-* Several incremental enhancements to the DataPresentation widget, including support for custom tooltips, layout/wrapping options for the chart legend, ability to suppress the chart labels,   and 'hooks' into the rendering.
+* Several incremental enhancements to the DataPresentation widget, including support for custom tooltips, layout/wrapping options for the chart legend, ability to suppress the chart labels, and 'hooks' into the rendering.
 * Comprehensive support for space-based gradients.
-* Themes can specify arbitrary fills, including gradients and patterns.
+* Themes can specify arbitrary fills, including linear and radial gradients.
+* Unified theme overrides at the plot, series, and individual data value level.
 * Bar and Column-based charts now support objects as values (you can specify custom tooltips, colors, fills now).
 * Scatter plot implements a gradient field-style color-coding.
+* Charting animation (grow/zoom) for areas, lines and markers plot.
 * Numerous bugfixes.
-
 
 To be moved:
 
@@ -427,12 +428,9 @@ To be moved:
 
 Pending:
 
-* Data series now support nulls ( ie. no data available ) `#10898 <http://bugs.dojotoolkit.org/ticket/10898>`_ 
-* Allow a combination of theme-based and custom styles  `#10897 <http://bugs.dojotoolkit.org/ticket/10897>`_ 
-* Charting animation (grow/zoom) for areas, lines and markers  `#10856 <http://bugs.dojotoolkit.org/ticket/10856>`_ 
-* Chart axis labels can now be rotated (clockwise or anticlockwise ) through any desired angle.  `#10888 <http://bugs.dojotoolkit.org/ticket/10888>`_ 
-
-
+* Data series now support nulls ( ie. no data available ) `#10898 <http://bugs.dojotoolkit.org/ticket/10898>`_
+* Charting animation (grow/zoom) for areas, lines and markers  `#10856 <http://bugs.dojotoolkit.org/ticket/10856>`_
+* Chart axis labels can now be rotated (clockwise or anticlockwise ) through any desired angle.  `#10888 <http://bugs.dojotoolkit.org/ticket/10888>`_
 
 Editor
 ------
