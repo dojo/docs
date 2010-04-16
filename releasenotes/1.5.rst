@@ -181,33 +181,13 @@ For the following widgets, the behavioral states of hover, active (mouse down) a
     | dijit.TitlePane
     | dijit.Toolbar
     | dijit.Tree
-    | dijit.form.CurrencyTextBox
-    | dijit.form.DateTextBox
-    | dijit.form.NumberSpinner
-    | dijit.form.NumberTextBox
-    | dijit.form.SimpleTextarea
-    | dijit.form.Textarea
-    | dijit.form.TextBox
-    | dijit.form.TimeTextBox
-    | dijit.form.ValidationTextBox
-    | dijit.form.ComboBox
-    | dijit.form.MultiSelect
-    | dijit.form.FilteringSelect
-    | dijit.form.Select
-    | dijit.form.Button
-    | dijit.form.ComboButton
-    | dijit.form.DropDownButton
-    | dijit.form.ToggleButton
-    | dijit.form.CheckBox
-    | dijit.form.Form
-    | dijit.form.RadioButton
-    | dijit.form.Slider
     | dijit.layout.AccordionContainer
     | dijit.layout.BorderContainer
     | dijit.layout.ContentPane
     | dijit.layout.TabContainer
     | dojox.grid.EnhancedGrid
     | dojox.grid.enhancedDataGrid
+
 
 To use this mixin in custom widgets:
 
@@ -375,6 +355,10 @@ However, this will not:
    var open = dijit.popup.open;
    open({...});
 
+
+form widgets
+------------
+If you have custom widgets extending _FormWidget, with templates referencing ${nameAttrSetting}, should change the reference to ${!nameAttrSetting}.  This is for issues with escaping special characters.
 
 new get()/set() and deprecated attr()
 -------------------------------------
