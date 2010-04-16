@@ -23,6 +23,7 @@ A big "thank you" goes to
 * Olle Jonsson,
 * Jared Jurkiewicz,
 * Bill Keese, 
+* Kitson P. Kelly,
 * Tobias Klipstein, 
 * kolban,
 * Wolfram Kriesing,
