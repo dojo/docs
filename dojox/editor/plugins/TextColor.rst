@@ -65,7 +65,7 @@ And that's it.  The editor instance you can reference by 'dijit.byId("editor")' 
 Limitations
 ===========
 
-* The dojox.widget.ColorPicker has some CSS issues when combined with certain themes on certain browsers.
+* The dojox.widget.ColorPicker has some CSS issues when combined with certain themes on certain browsers.  For example, claro theme on Google Chrome renders a bit off.
 * The plugin is **not** A11Y (accessibility) compliant since the dojox.widget.ColorPicker is not A11Y compliant.
 
 ========
