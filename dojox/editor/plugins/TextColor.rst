@@ -1,7 +1,7 @@
 #format dojo_rst
 
-dijit._editor.plugins.TextColor
-===============================
+dojox.editor.plugins.TextColor
+==============================
 
 :Status: Draft
 :Version: 1.0
