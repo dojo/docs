@@ -48,7 +48,7 @@ You also need to include the CSS for it.  For example:
 .. code-block :: html
 
   <style>
-    @import "dojox/editor/plugins/resources/css/InsertAnchor.css";
+    @import "dojox/editor/plugins/resources/css/TextColor.css";
   </style>
 
 
@@ -60,6 +60,13 @@ Once it has been required in, all you have to do is include it in the list of ex
 
 
 And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the dojox variant of the TextColor plugin!  You can use the buttons to alter the colors of selected text.
+
+===========
+Limitations
+===========
+
+* The dojox.widget.ColorPicker has some CSS issues when combined with certain themes on certain browsers.
+* The plugin is **not** A11Y (accessibility) compliant since the dojox.widget.ColorPicker is not A11Y compliant.
 
 ========
 Examples
