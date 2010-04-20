@@ -100,46 +100,50 @@ addPlot() accepts 2 parameters, a name and an arguments array. The name is impor
 
 Available 2D chart types include:
 
- * **Default** - Universal line chart capable to draw lines, fill areas under them, and placing markers at data points.
- * **Lines** - Basic line chart. Uses Default.
- * **Areas** - Area under data line(s) will be filled. Uses Default.
- * **Markers** - Lines with markers. Uses Default.
- * **MarkersOnly** - Markers, sans lines. Uses Default.
- * **Stacked** - Data sets charted in relation to the previous data set. Extension of Default.
- * **StackedLines** - Stacked data sets using lines. Uses Stacked.
- * **StackedAreas** - Stacked data sets with filled areas under chart lines. Uses Stacked.
- * **Bars** - Horizontal bars.
- * **ClusteredBars** - Horizontal bars with clustered data sets. Uses Bars.
- * **StackedBars** - Stacked data sets with horizontal bars. Uses Bars.
- * **Columns** - Vertical bars.
- * **ClusteredColumns** - Vertical bars with clustered data sets. Uses Columns.
- * **StackedColumns** - Stacked data sets with vertical bars. Uses Columns.
- * **Pie** - Goes great with punch!
- * **Scatter** - Similar to MarkerOnly, yet capable to chart using gradient fields.
- * **Grid** - For adding a grid layer to your chart.
+ * Line charts:
+   * **Default** - Universal line chart capable to draw lines, fill areas under them, and placing markers at data points. This plot type is used if no plot type was specified when adding it to a chart.
+   * **Lines** - Basic line chart. Uses Default.
+   * **Areas** - Area under data line(s) will be filled. Uses Default.
+   * **Markers** - Lines with markers. Uses Default.
+   * **MarkersOnly** - Markers, sans lines. Uses Default.
+ * Stacked line charts:
+   * **Stacked** - Data sets charted in relation to the previous data set. Extension of Default.
+   * **StackedLines** - Stacked data sets using lines. Uses Stacked.
+   * **StackedAreas** - Stacked data sets with filled areas under chart lines. Uses Stacked.
+ * Bars:
+   * **Bars** - Horizontal bars.
+   * **ClusteredBars** - Horizontal bars with clustered data sets. Uses Bars.
+   * **StackedBars** - Stacked data sets with horizontal bars. Uses Bars.
+ * Columns:
+   * **Columns** - Vertical bars.
+   * **ClusteredColumns** - Vertical bars with clustered data sets. Uses Columns.
+   * **StackedColumns** - Stacked data sets with vertical bars. Uses Columns.
+ * Miscellaneous:
+   * **Pie** - Goes great with punch!
+   * **Scatter** - Similar to MarkerOnly, yet capable to chart using gradient fields.
+   * **Grid** - For adding a grid layer to your chart.
 
 With any of the lines, areas or markers types you have five specific options. First, there are three options for controlling aspects of **lines**, **areas**, and **markers**. These are often defined by the chosen plot type, but can be changed to get other behaviors. The lines option determines whether or not lines are used to connect data points. If the areas type is selected, the area below the data line will be filled. The markers option will determine if markers are placed at data points.
 
 .. code-block :: javascript
   :linenos:
 
-  chart1.addPlot("default", {type: "StackedAreas", lines: true, areas: true,
-  	markers: false});
+  chart1.addPlot("default", {type: "StackedAreas", lines: true, areas: true, markers: false});
 
 There are also two graphical options, **tension** and **shadows**.
 
 Tension allows you to add some curve to the lines on you plot. By default this option is set to "" which is off. Other valid values are:
 
- * "X" for a cubic bezier smooth lines.
- * "x" is similar to "X" but assumes that the point set is closed (a loop). It can be used when plotting XY data.
- * "S" for a quadratic bezier smooth lines.
+ * **"X"** for a cubic bezier smooth lines.
+ * **"x"** is similar to "X" but assumes that the point set is closed (a loop). It can be used when plotting true XY data.
+ * **"S"** for a quadratic bezier smooth lines.
 
-Shadows allow you to add a shadow effect, and can be a `dojox.gfx`_ stroke object with two extra parameters: dx and dy, which represent the offset to the right, and the offset down, respectively. Negative values can be specified for the dx and dy parameters to produce a shadow that is to the left or above the chart line.
+Shadows allow you to add a shadow effect, and can be a `dojox.gfx <dojox/gfx>`_ stroke object with two extra parameters: dx and dy, which represent the offset to the right, and the offset down, respectively. Negative values can be specified for the dx and dy parameters to produce a shadow that is to the left or above the chart line.
 
 .. code-block :: javascript
   :linenos:
 
-  chart1.addPlot("default", {type: "StackedLines", tension: "S", shadows: {dx: 2, dy: 2, dw: 2}});
+  chart1.addPlot("default", {type: "StackedLines", tension: "S", shadows: {dx: 2, dy: 2}});
 
 Bar, column, and candle stick graph types have some unique option to control width of columns:
 
@@ -198,7 +202,7 @@ Shadows and curve can be added to the lines, and markers on data points as follo
   :linenos:
 
   chart1.addPlot("default", {type: "Lines", markers: true,
-  	tension:3, shadows: {dx: 2, dy: 2, dw: 2}});
+  	tension: "X", shadows: {dx: 2, dy: 2}});
 
 The resulting chart looks like this:
 
