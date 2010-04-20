@@ -45,7 +45,7 @@ Introduction
 Dojo's Charting module provides a way to quickly and easily add great looking and functional dynamic charts and graphs to your web pages. All you need is a tiny bit of JavaScript skills and a copy of Dojo.
 
 =====
-Usage 
+Usage
 =====
 
 Here is an example that is typical of a starting point for creating a Dojo Chart:
@@ -61,9 +61,9 @@ Here is an example that is typical of a starting point for creating a Dojo Chart
     <div id="simplechart" style="width: 250px; height: 150px; margin: 5px auto 0px auto;"></div>
 
   .. javascript::
- 
+
     <script type="text/javascript">
-      dojo.require("dojox.charting.Chart2D"); 
+      dojo.require("dojox.charting.Chart2D");
       makeCharts = function(){
   	var chart1 = new dojox.charting.Chart2D("simplechart");
   	chart1.addPlot("default", {type: "Lines"});
@@ -73,7 +73,7 @@ Here is an example that is typical of a starting point for creating a Dojo Chart
   	chart1.render();
       };
       dojo.addOnLoad(makeCharts);
-    </script>    
+    </script>
 
 Take a look at the source and you will see that it is simple to create charts.
 
@@ -100,53 +100,66 @@ addPlot() accepts 2 parameters, a name and an arguments array. The name is impor
 
 Available 2D chart types include:
 
-  * **Areas** - Area under data line(s) will be filled
-  * **Bars** - Horizontal bars.
-  * **ClusteredBars** - Horizontal bars with clustered data sets
-  * **ClusteredColumns** - Vertical bars with clustered data sets
-  * **Columns** - Vertical bars
-  * **Grid** - For adding a grid layer to your chart
-  * **Lines** - Basic line chart
-  * **Markers** - Lines with markers
-  * **MarkersOnly** - Markers, sans lines
-  * **Pie** - Goes great with punch!
-  * **Scatter** - Cooler name for MarkersOnly
-  * **Stacked** - Data sets charted in relation to the previous data set.
-  * **StackedAreas** - Stacked data sets with filled areas under chart lines
-  * **StackedBars** - Stacked data sets with horizontal bars
-  * **StackedColumns** - Stacked data sets with vertical bars
-  * **StackedLines** - Stacked data sets using lines
+ * **Default** - Universal line chart capable to draw lines, fill areas under them, and placing markers at data points.
+ * **Lines** - Basic line chart. Uses Default.
+ * **Areas** - Area under data line(s) will be filled. Uses Default.
+ * **Markers** - Lines with markers. Uses Default.
+ * **MarkersOnly** - Markers, sans lines. Uses Default.
+ * **Stacked** - Data sets charted in relation to the previous data set. Extension of Default.
+ * **StackedLines** - Stacked data sets using lines. Uses Stacked.
+ * **StackedAreas** - Stacked data sets with filled areas under chart lines. Uses Stacked.
+ * **Bars** - Horizontal bars.
+ * **ClusteredBars** - Horizontal bars with clustered data sets. Uses Bars.
+ * **StackedBars** - Stacked data sets with horizontal bars. Uses Bars.
+ * **Columns** - Vertical bars.
+ * **ClusteredColumns** - Vertical bars with clustered data sets. Uses Columns.
+ * **StackedColumns** - Stacked data sets with vertical bars. Uses Columns.
+ * **Pie** - Goes great with punch!
+ * **Scatter** - Similar to MarkerOnly, yet capable to chart using gradient fields.
+ * **Grid** - For adding a grid layer to your chart.
 
 With any of the lines, areas or markers types you have five specific options. First, there are three options for controlling aspects of **lines**, **areas**, and **markers**. These are often defined by the chosen plot type, but can be changed to get other behaviors. The lines option determines whether or not lines are used to connect data points. If the areas type is selected, the area below the data line will be filled. The markers option will determine if markers are placed at data points.
 
 .. code-block :: javascript
   :linenos:
 
-  chart1.addPlot("default", {type: "StackedAreas", lines: true, areas: true, 
+  chart1.addPlot("default", {type: "StackedAreas", lines: true, areas: true,
   	markers: false});
 
-There are also two graphical options, **tension** and **shadows**. Tension allows you to add some curve to the lines on you plot. By default this option is set to 0 which is off. A tension in the range from 2 to 4 should be a good range for natural looking curves. For some crazy effects try setting the tension to values < 1 or negative. Shadows allow you to add a shadow effect, and consists of an array of three parameters, dx, dy and dw, which represent the offset to the right, the offset down, and the width of the shadow line, respectively. Negative values can be specified for the dx and dy parameters to produce a shadow that is to the left or above the chart line.
+There are also two graphical options, **tension** and **shadows**.
+
+Tension allows you to add some curve to the lines on you plot. By default this option is set to "" which is off. Other valid values are:
+
+ * "X" for a cubic bezier smooth lines.
+ * "x" is similar to "X" but assumes that the point set is closed (a loop). It can be used when plotting XY data.
+ * "S" for a quadratic bezier smooth lines.
+
+Shadows allow you to add a shadow effect, and can be a `dojox.gfx`_ stroke object with two extra parameters: dx and dy, which represent the offset to the right, and the offset down, respectively. Negative values can be specified for the dx and dy parameters to produce a shadow that is to the left or above the chart line.
 
 .. code-block :: javascript
   :linenos:
 
-  chart1.addPlot("default", {type: "StackedLines",tension:3, 
-  	shadows: {dx: 2, dy: 2, dw: 2}});
+  chart1.addPlot("default", {type: "StackedLines", tension: "S", shadows: {dx: 2, dy: 2, dw: 2}});
 
-Bar and column graph types have 1 unique option: they will accept a gap parameter that determines the spacing between your bars or columns in pixels.
+Bar, column, and candle stick graph types have some unique option to control width of columns:
+
+ * **gap** - determines the spacing between your bars or columns in pixels.
+ * **minBarSize** - defines the *minimal* width of a column/candle, or a height of bar.
+ * **maxBarSize** - defines the *maximal* width of a column/candle, or a height of bar.
+
+All three restrictions are applied in the following order: gap, minBarSize, maxBarSize.
 
 .. code-block :: javascript
   :linenos:
 
-  chart1.addPlot("default", {type: "Bars", gap: 5});
+  chart1.addPlot("default", {type: "Bars", gap: 5, minBarSize: 3, maxBarSize: 20});
 
 For any chart type that supports axes, you can also define custom names to your axes here. By default they are “x” and “y”, but this option becomes useful if you wish to have a chart with multiple plots and multiple axes.
 
 .. code-block :: javascript
   :linenos:
 
-  chart1.addPlot("default", {type: "Bars", hAxis: "cool x", 
-  	vAxis: "super y"});
+  chart1.addPlot("default", {type: "Bars", hAxis: "cool x", vAxis: "super y"});
 
 Pie charts have a separate list of parameters. Here are the parameters for the pie chart, from Pie.js:
 
@@ -166,15 +179,15 @@ Pie charts have a separate list of parameters. Here are the parameters for the p
   	font: "",
   	fontColor: "",
   	radius: 0
-  },  
+  },
 
-One other type with unique options is the grid. This plot type will draw grid lines along the tick marks and supports the following four boolean options to determine if lines will be displayed at the horizontal or vertical and major or minor axis tick marks. 
+One other type with unique options is the grid. This plot type will draw grid lines along the tick marks and supports the following four boolean options to determine if lines will be displayed at the horizontal or vertical and major or minor axis tick marks.
 
 .. code-block :: javascript
   :linenos:
 
   chart1.addPlot("default", {type: "Grid",
-          hMajorLines: true, 
+          hMajorLines: true,
           hMinorLines: false,
           vMajorLines: true,
           vMinorLines: false});
@@ -184,7 +197,7 @@ Shadows and curve can be added to the lines, and markers on data points as follo
 .. code-block :: javascript
   :linenos:
 
-  chart1.addPlot("default", {type: "Lines", markers: true, 
+  chart1.addPlot("default", {type: "Lines", markers: true,
   	tension:3, shadows: {dx: 2, dy: 2, dw: 2}});
 
 The resulting chart looks like this:
@@ -202,7 +215,7 @@ One last feature I’d like to touch on is adding multiple plots to the same cha
   chart1.addAxis("x");
   chart1.addAxis("y", {vertical: true});
   chart1.addSeries("Series 1", [1, 2, 2, 3, 4, 5, 5, 7]);
-  chart1.addSeries("Series 2", [1, 1, 4, 2, 1, 6, 4, 3], 
+  chart1.addSeries("Series 2", [1, 1, 4, 2, 1, 6, 4, 3],
   	{plot: "other", stroke: {color:"blue"}, fill: "lightblue"});
   chart1.render();
 
@@ -219,7 +232,7 @@ The first option is vertical, this determines if the axis is vertical or horizon
   :linenos:
 
   chart1.addPlot("default", {type: "Lines", hAxis: "x", vAxis: "y"});
-  chart1.addAxis("x"); 
+  chart1.addAxis("x");
   chart1.addAxis("y", {vertical: true});
 
 Next we have the fixUpper and fixLower options, which align the ticks and have 4 available options; major, minor, micro, and none. These default to none, and when set will force the end bounds to align to the corresponding tick division. If none is chosen, the end bounds will be the highest and lowest values in your data set. Another related option is the includeZero option, which will make your lower bound be zero. If your lowest data value is negative the includeZero option has no effect.
@@ -243,7 +256,7 @@ Now let’s examine the leftBottom option. This option defaults to true, and alo
   chart1.addAxis("other x", {leftBottom: false});
   chart1.addAxis("other y", {vertical: true, leftBottom: false});
   chart1.addSeries("Series 1", [1, 2, 2, 3, 4, 5, 5, 7]);
-  chart1.addSeries("Series 2", [1, 1, 4, 2, 1, 6, 4, 3], 
+  chart1.addSeries("Series 2", [1, 1, 4, 2, 1, 6, 4, 3],
           {plot: "other", stroke: {color:"blue"}, fill: "lightblue"}
   );
   chart1.render();
@@ -280,7 +293,7 @@ The natural property forces all ticks to be on natural numbers, and fixed which 
 .. code-block :: javascript
   :linenos:
 
-  natural: false		
+  natural: false
   fixed: true
 
 Axis Stepping
@@ -303,11 +316,11 @@ The color of the axis, the color and length of your tick marks and the font and 
 .. code-block :: javascript
   :linenos:
 
-  chart1.addAxis("other y", {vertical: true, 
-	leftBottom: false, 
+  chart1.addAxis("other y", {vertical: true,
+	leftBottom: false,
 	max: 7,
 	stroke: "green",
-	font: "normal normal bold 14pt Tahoma", 
+	font: "normal normal bold 14pt Tahoma",
 	fontColor: "red",
 	majorTick: {color: "red", length: 6},
 	minorTick: {stroke: "black", length: 3}
@@ -326,9 +339,9 @@ You can also add a grid at your tick marks to your entire chart by adding a Grid
   chart1.addPlot("Grid", {type: "Grid",
   	hAxis: "other x",
   	vAxis: "other y",
-  	hMajorLines: true,	
-  	hMinorLines: false,	
-  	vMajorLines: true,	
+  	hMajorLines: true,
+  	hMinorLines: false,
+  	vMajorLines: true,
   	vMinorLines: false
   });
 
@@ -337,15 +350,15 @@ TODO: Grid Plot Example
 Using Custom Axis Labels
 ------------------------
 
-Dojo Charts provide the ability to assign custom labels to any axis. Make sure to allow sufficient space in your div for the text to display properly. 
+Dojo Charts provide the ability to assign custom labels to any axis. Make sure to allow sufficient space in your div for the text to display properly.
 Here is an example using abbreviated month names with a Columns plot.
 
 .. code-block :: javascript
   :linenos:
 
-  chart1.addAxis("x", { 
-  	labels: [{value: 1, text: "Jan"}, {value: 2, text: "Feb"}, 
-  		{value: 3, text: "Mar"}, {value: 4, text: "Apr"}, 
+  chart1.addAxis("x", {
+  	labels: [{value: 1, text: "Jan"}, {value: 2, text: "Feb"},
+  		{value: 3, text: "Mar"}, {value: 4, text: "Apr"},
   		{value: 5, text: "May"}, {value: 6, text: "Jun"},
   		{value: 7, text: "Jul"}, {value: 8, text: "Aug"},
   		{value: 9, text: "Sep"}, {value: 10, text: "Oct"},
@@ -364,7 +377,7 @@ There are only a few options to cover for the addSeries() call. First up is stro
 .. code-block :: javascript
   :linenos:
 
-  chart1.addSeries("Series 1", [1, 2, 4, 5, 5, 7], {stroke: {color: "blue", width: 2}, 
+  chart1.addSeries("Series 1", [1, 2, 4, 5, 5, 7], {stroke: {color: "blue", width: 2},
   	fill: "lightblue"});
 
 The other option is marker and it allows you to define custom markers using SVG path segments. Here are some of marker types as defined in the Dojo Charting source code. Note that each is just defined internally as an SVG path:
@@ -372,12 +385,12 @@ The other option is marker and it allows you to define custom markers using SVG 
 .. code-block :: javascript
   :linenos:
 
-  CIRCLE:		"m-3,0 c0,-4 6,-4 6,0 m-6,0 c0,4 6,4 6,0", 
-  SQUARE:		"m-3,-3 l0,6 6,0 0,-6 z", 
-  DIAMOND:	"m0,-3 l3,3 -3,3 -3,-3 z", 
-  CROSS:		"m0,-3 l0,6 m-3,-3 l6,0", 
-  X:		"m-3,-3 l6,6 m0,-6 l-6,6", 
-  TRIANGLE:	"m-3,3 l3,-6 3,6 z", 
+  CIRCLE:		"m-3,0 c0,-4 6,-4 6,0 m-6,0 c0,4 6,4 6,0",
+  SQUARE:		"m-3,-3 l0,6 6,0 0,-6 z",
+  DIAMOND:	"m0,-3 l3,3 -3,3 -3,-3 z",
+  CROSS:		"m0,-3 l0,6 m-3,-3 l6,0",
+  X:		"m-3,-3 l6,6 m0,-6 l-6,6",
+  TRIANGLE:	"m-3,3 l3,-6 3,6 z",
   TRIANGLE_INVERTED:"m-3,-3 l3,6 3,-6 z"
 
 Now take a look at these options in action using our above example:
@@ -396,7 +409,7 @@ For any non “stacked” line plot type you can specify coordinate pairs. You n
 .. code-block :: javascript
   :linenos:
 
-  chart1.addSeries("Series A", [{x: 1, y: 5}, {x: 1.5, y: 1.7}, 
+  chart1.addSeries("Series A", [{x: 1, y: 5}, {x: 1.5, y: 1.7},
   	{x: 2, y: 9}, {x: 5, y: 3}]);
   chart1.addSeries("Series B", [{x: 3, y: 8.5}, {x: 4.2, y: 6}, {x: 5.4, y: 2}]);
 
@@ -515,14 +528,14 @@ Dojo Charting provides methods to control arbitrary zooming to drill down to the
 +-----------------------------------+---------------------------------------------------------------------------------------------------------------+
 | **Name**                          | **Description**                                                                                               |
 +-----------------------------------+---------------------------------------------------------------------------------------------------------------+
-| setAxisWindow(name, scale, offset)|Defines a window on the named axis with a scale factor.                                                        | 
+| setAxisWindow(name, scale, offset)|Defines a window on the named axis with a scale factor.                                                        |
 |                                   |**scale** must be >= 1.                                                                                        |
 |                                   |**offset** should be >= 0.                                                                                     |
 |                                   |For example if I have an array of 10 numeric values, and I want to show them ##3-8,                            |
 |                                   |chart.setWindow(”x”, 3, 2) will do the trick.                                                                  |
 |                                   |This call affects only plots attached to the named axis, other plots are unaffected.                           |
 +-----------------------------------+---------------------------------------------------------------------------------------------------------------+
-| setWindow(sx, sy, dx, dy)         |Sets scale and offsets on all plots of the chart.                                                              | 
+| setWindow(sx, sy, dx, dy)         |Sets scale and offsets on all plots of the chart.                                                              |
 |                                   |**sx** specifies the magnification factor on horizontal axes. It should be >= 1.                               |
 |                                   |**sy** specifies the magnification factor on vertical axes. It should be >= 1.                                 |
 |                                   |**dx** specifies the offset of the horizontal axes in pixels. It should be >= 0.                               |
@@ -667,7 +680,7 @@ All action objects implement the following methods (no parameters are expected b
 +----------------+----------------------------------------------------------------------------------------------------------------------------------+
 | **Name**       | **Description**                                                                                                                  |
 +----------------+----------------------------------------------------------------------------------------------------------------------------------+
-| connect()      |Connect and start handling events. By default, when an action is created, it is connected.                                        | 
+| connect()      |Connect and start handling events. By default, when an action is created, it is connected.                                        |
 |                |You may need to call fullRender() on your chart object to activate the sending of messages.                                       |
 |                |Typically you create an action object after you define plots, but before the first render() call; it takes care of everything.    |
 +----------------+----------------------------------------------------------------------------------------------------------------------------------+
@@ -683,8 +696,8 @@ All actions can be constructed like this:
   :linenos:
 
   var a = new dojox.charting.action2d.Magnify(
-    chart1, 
-    "default", 
+    chart1,
+    "default",
     {duration: 200, scale: 1.1});
 
 The first parameter is a chart. The second parameter is the name of a plot. The third parameter is an object (property bag) with all relevant keyword parameters.
@@ -704,7 +717,7 @@ One of the easiest ways to use Dojo Charting is is to use the Chart2D widget. Th
       style="width: 300px; height: 300px;">
     <div class="plot" name="default" type="Pie" radius="100"
         fontColor="black" labelOffset="-20"></div>
-    <div class="series" name="Series C" store="tableStore" 
+    <div class="series" name="Series C" store="tableStore"
         valueFn="Number(x)"></div>
     <div class="action" type="Tooltip"></div>
     <div class="action" type="MoveSlice" shift="2"></div>
@@ -775,9 +788,9 @@ Here is a pie chart, with slice information shown onmouseover and a legend:
       var chartTwo = new dc.Chart2D("chartTwo");
       chartTwo.setTheme(dc.themes.MiamiNice)
          .addPlot("default", {
-            type: "Pie", 
-            font: "normal normal 11pt Tahoma", 
-            fontColor: "black", 
+            type: "Pie",
+            font: "normal normal 11pt Tahoma",
+            fontColor: "black",
             labelOffset: -30,
             radius: 80
       }).addSeries("Series A", [
@@ -817,7 +830,7 @@ TODO: How to use animations.
 
         dojo.addOnLoad(function(){
             var m = dojox.gfx3d.matrix;
-            var chart3d = new dojox.charting.Chart3D("chart3d", 
+            var chart3d = new dojox.charting.Chart3D("chart3d",
                 {
                     lights:   [{direction: {x: 5, y: 5, z: -5}, color: "white"}],
                     ambient:  {color:"white", intensity: 2},
@@ -825,20 +838,20 @@ TODO: How to use animations.
                 },
                 [m.cameraRotateXg(10), m.cameraRotateYg(-10), m.scale(0.8), m.cameraTranslate(-50, -50, 0)]
             );
-            
+
             var bars3d_a = new dojox.charting.plot3d.Bars(500, 500, {gap: 10, material: "yellow"});
             bars3d_a.setData([1,2,3,2,1,2,3,4,5]);
             chart3d.addPlot(bars3d_a);
-            
+
             var bars3d_b = new dojox.charting.plot3d.Bars(500, 500, {gap: 10, material: "red"});
             bars3d_b.setData([2,3,4,3,2,3,4,5,5]);
             chart3d.addPlot(bars3d_b);
-            
+
             var bars3d_c = new dojox.charting.plot3d.Bars(500, 500, {gap: 10, material: "blue"});
             bars3d_c.setData([3,4,5,4,3,4,5,5,5]);
             chart3d.addPlot(bars3d_c);
-            
-            chart3d.generate().render();            
+
+            chart3d.generate().render();
         });
     </script>
 
