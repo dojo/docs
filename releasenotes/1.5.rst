@@ -432,6 +432,8 @@ Editor
 
 * `dojox.editor.plugins.FindReplace <dojox/editor/plugins/FindReplace>`_ -- This plugin was updated to improve its layout and keyboard interaction based on input from a user experience development team.  Feature-wise it remains the same.
 
+* `dojox.editor.plugins.TextColor <dojox/editor/plugins/TextColor>`_ - A plugin that implements color selectors for text color and background color of test using the dojox.widget.ColorPicker instead of dijit.ColorPalette.
+
 
 GFX
 ---
