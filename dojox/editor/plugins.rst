@@ -105,6 +105,11 @@ There are currently a small set of nice features that can be plugged into the di
   
   **This plugin is new to the Dojo Toolkit 1.5.**
 
+* `dojox.editor.plugins.TextColor <dojox/editor/plugins/TextColor>`_ -- **STABLE**
+
+  A plugin that implements color selectors for text color and background color of test using the dojox.widget.ColorPicker instead of dijit.ColorPalette.
+  
+  **This plugin is new to the Dojo Toolkit 1.5.**
 
 ========
 See Also
