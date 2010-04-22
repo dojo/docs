@@ -54,28 +54,33 @@ Declarative example
   .. cv:: javascript
 
     <script type="text/javascript">
-      dojo.require("dijit.layout.BorderContainer");
       dojo.require("dijit.layout.ContentPane");
+      dojo.require("dijit.layout.BorderContainer");
       dojo.require("dojox.layout.ExpandoPane");
     </script>
 
   .. cv:: html
 
-    <div id="bc" style="width:100%; height:100%; padding: 5px;" 
-      dojoType="dijit.layout.BorderContainer">
-        <div dojoType="dojox.layout.ExpandoPane" splitter="true" 
-          duration="125" region="left" title="Left Section" id="leftPane"
-          maxWidth="125" style="width: 125px;">I am the ExpandoPane content!
-        </div>
-        <div dojoType="dijit.layout.ContentPane" region="center" splitter="true">
-          This is a normal ContentPane.
-        </div>
+    <div dojoType="dijit.layout.BorderContainer" design="sidebar" gutters="true" liveSplitters="true" id="borderContainer">
+      <div dojoType="dijit.layout.ContentPane" splitter="true" region="leading" style="width: 100px;">Hi</div>
+      <div dojoType="dijit.layout.ContentPane" splitter="true" region="center">Hi, I'm center</div>
     </div>
 
   .. cv:: css
 
     <style type="text/css">
       @import url("/moin_static163/js/dojo/trunk/dojox/layout/resources/ExpandoPane.css");
+
+      html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+      }
+
+      #borderContainer {
+        width: 100%;
+        height: 100%;
+      }
     </style>
 
 
