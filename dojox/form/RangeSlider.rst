@@ -5,7 +5,7 @@ dojox.form.RangeSlider
 
 :Status: Draft
 :Version: 1.0
-:Authors: Kitson P. Kelly
+:Authors: ?--
 :Project owner: ?--
 :Available: since V?
 
