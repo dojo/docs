@@ -29,7 +29,7 @@ The ExpandoPane is used in a similar way to the way a dijit `ContentPane <dijit/
 
 You should ensure that you include the ExpandoPane CSS in your application in order to have the pane render properly:
 
-.. code-block :: javascript
+.. code-block :: css
  :linenos:
 
  <style type="text/css">
