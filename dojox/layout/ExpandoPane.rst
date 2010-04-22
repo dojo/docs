@@ -62,7 +62,7 @@ Declarative example
   .. cv:: html
 
     <div dojoType="dijit.layout.BorderContainer" design="sidebar" gutters="true" liveSplitters="true" id="borderContainer">
-      <div dojoType="dojox.layout.ExpandoPane" title="Left Expando" maxWidth="100" splitter="true" region="leading" style="width: 100px;">Hi. I'm the Expando Pane</div>
+      <div dojoType="dojox.layout.ExpandoPane" title="Left Expando" maxWidth="275" splitter="true" region="leading" style="width: 275px;">Hi. I'm the Expando Pane</div>
       <div dojoType="dijit.layout.ContentPane" splitter="true" region="center">Hi, I'm center</div>
     </div>
 
