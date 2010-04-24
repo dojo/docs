@@ -330,16 +330,16 @@ When creating widgets programmatically, you create the parent first, then add th
 
   // create a TabContainer as the center pane in the BorderContainer,
   // which itself contains two children
-  var tc = new dijit.layout.TabContainer({region: "center");
-  var tab1 = new dijit.layout.ContentPane({title: "tab 1"},
-      tab2 = new dijit.layout.ContentPane({title: "tab 2"};
+  var tc = new dijit.layout.TabContainer({region: "center"});
+  var tab1 = new dijit.layout.ContentPane({title: "tab 1"}),
+      tab2 = new dijit.layout.ContentPane({title: "tab 2"});
   tc.addChild( tab1 );
   tc.addChild( tab2 );
   bc.addChild(tc);
 
   // put the top level widget into the document, and then call startup()
   document.appendChild(bc.domNode);
-  tc.startup();
+  bc.startup();
 
 Note that:
 
