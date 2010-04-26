@@ -264,9 +264,9 @@ Nesting those inside of the BorderContainer will look like this:
 
 There are three types of elements in that example:
 
-   1. BorderContainer: displays all it's children at once in top/bottom/left/right/center positions
-   2. StackContainers: containers that display one child at a time
-   3. Leafs: leaf nodes containing content
+1. BorderContainer: displays all it's children at once in top/bottom/left/right/center positions
+2. StackContainers: containers that display one child at a time
+3. Leafs: leaf nodes containing content
 
 The StackContainers in dijit are the AccordionContainer, TabContainer, or StackContainer itself. They all do basically the same thing, but look different.
 
@@ -310,7 +310,8 @@ Programmatic Creation and Lifecycle
 
 This section discusses programmatic creation, destruction, etc.
 
-*Creation:*
+Creation
+--------
 
 When creating widgets programmatically, you create the parent first, then add the children, and grandchildren... and finally call startup(). Startup() is called once on the top element in the hierarchy, after the whole hierarchy has been setup and the element inserted.
 
@@ -343,14 +344,15 @@ When creating widgets programmatically, you create the parent first, then add th
 
 Note that:
 
-  * startup() is called once on the top most widget only
-  * (when possible) call startup last, after children have been added
-  * before startup() is called the top widget's node (BorderContainer in this example) must be attached to the document somewhere, so that node can size itself correctly
-  * top node in the hierarchy  (BorderContainer in this example) has a specified size; other nodes typically don't have a size (except for nodes on the edges of BorderContainer) because their size is determined by the parent.
+* startup() is called once on the top most widget only
+* (when possible) call startup last, after children have been added
+* before startup() is called the top widget's node (BorderContainer in this example) must be attached to the document somewhere, so that node can size itself correctly
+* top node in the hierarchy  (BorderContainer in this example) has a specified size; other nodes typically don't have a size (except for nodes on the edges of BorderContainer) because their size is determined by the parent.
 
-*Adult Life :-):*
+Add Children
+------------
 
-After startup() has been called you can freely add remove children, like for example:
+After startup() has been called you can freely add children, like for example:
 
 .. code-block :: javascript
   :linenos:
@@ -366,6 +368,13 @@ or:
   // add a tab to the TabContainer
   tc.addChild( new dijit.layout.ContentPane({title: "tab 3"});
 
+Note that:
+
+* you don't need to call startup() on the new children; it's called automatically when you add them to a hierarchy which has already been started.
+
+Remove Children
+---------------
+
 Removing children is done w/the pointer to the child widget:
 
 .. code-block :: javascript
@@ -377,10 +386,10 @@ Removing children is done w/the pointer to the child widget:
 
 Note that:
 
-  * you don't need to call startup() on the new children; it's called automatically when you add them to a hierarchy which has already been started.
-  * removeChild() doesn't destroy the widget, it just detaches it.
+* removeChild() doesn't destroy the widget, it just detaches it.
 
-*Destruction:*
+Destruction
+-----------
 
 Typically you destroy a widget and all it's descendants, like this:
 
@@ -389,15 +398,16 @@ Typically you destroy a widget and all it's descendants, like this:
 
   bc.destroyRecursive();
 
+
 ========
 Resizing
 ========
 
 The resize function for widgets layout widgets serves two purposes:
 
-  * set the size of the widget
-  * make the widget adjust the size of it's children
-  * children resize recursively
+* set the size of the widget
+* make the widget adjust the size of it's children
+* children resize recursively
 
 Usually you pass a size to the resize method, like:
 
