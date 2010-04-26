@@ -398,10 +398,8 @@ Typically you destroy a widget and all it's descendants, like this:
 
   bc.destroyRecursive();
 
-
-========
 Resizing
-========
+--------
 
 The resize function for widgets layout widgets serves two purposes:
 
