@@ -342,4 +342,4 @@ Animation in Dojo 1.5 widgets
 
 Using the latest in CSS3 along with the Dojo APIs increases the performance of animation and makes it easier for designers to code the animation using CSS3. 
 
-See details on application of animation in specific Digits in `Themes and theming <dijit-themes#animation>`  - customization.
+See details on application of animation in specific Digits in `Themes and theming <dijit-themes#animation>`_.
