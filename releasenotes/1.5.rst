@@ -113,7 +113,23 @@ The dialog widget now supports an "action bar", a gray bar at the bottom of the 
 Input Widgets
 -------------
 
+new placeHolder parameter
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
 The HTML5 placeholder parameter (also known as a "hint") has been implemented for all TextBox based widgets.   Placeholder is gray example or hint text that the widget displays inside the input area of empty form fields, such as "John Doe" or "Your Name".   The text disappears when the user focuses the field.
+
+In order to use it, submit a parameter "placeHolder" to your widget:
+
+.. code-block :: javascript
+
+   myTextBox = new dijit.form.TextBox({
+       name: "firstname", 
+       value: "" /* no or empty value! */, 
+       placeHolder: "type in your name" 
+   }, "firstname");
+
+standardized width/height of input widgets
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Also, the width/height of the input widgets (TextBox, ValidationTextBox, ComboBox/FilteringSelect, NumberSpinner) has been standardized.   Previously the height or width of these widgets could differ by a few pixels making the UI look a little off.
 
