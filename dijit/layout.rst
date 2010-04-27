@@ -339,7 +339,7 @@ When creating widgets programmatically, you create the parent first, then add th
   bc.addChild(tc);
 
   // put the top level widget into the document, and then call startup()
-  document.appendChild(bc.domNode);
+  document.body.appendChild(bc.domNode);
   bc.startup();
 
 Note that:
