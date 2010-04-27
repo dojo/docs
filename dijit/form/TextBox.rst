@@ -10,7 +10,13 @@ dijit.form.TextBox
 .. contents::
     :depth: 2
 
-TextBox is a basic <input type="text">-style form control. It has rudimentary text-scrubbing functions that trim or proper-casify text, but
+TextBox is a basic <input type="text">-style form control. 
+
+============
+Introduction
+============
+
+dijit.form.TextBox has rudimentary text-scrubbing functions that trim or proper-casify text, but
 it does not validate the entered text. Like all Dijit controls, TextBox inherits the design theme, so it's better to use this than an
 HTML control, even if you don't have to do any input scrubbing. However:
 
@@ -86,8 +92,6 @@ Sizing a text box is done through the CSS width on the text box dom node.  Typic
     <style type="text/css">
     </style>
 
-
-
 Getting and Manipulating the Value
 ----------------------------------
 
@@ -122,6 +126,21 @@ Getting and manipulating the value is a trivial matter.  It is done through the 
 
     <style type="text/css">
     </style>
+
+Using the placeholder parameter
+-------------------------------
+
+Coming with Dojo 1.5 the HTML5 placeholder parameter (also known as a "hint") has been implemented for all TextBox based widgets. Placeholder is gray example or hint text that the widget displays inside the input area of empty form fields, such as "John Doe" or "Your Name". The text disappears when the user focuses the field.
+
+In order to use it, submit a parameter "placeHolder" to your widget:
+
+.. code-block :: javascript
+
+   myTextBox = new dijit.form.TextBox({
+       name: "firstname", 
+       value: "" /* no or empty value! */, 
+       placeHolder: "type in your name" 
+   }, "firstname");
 
 
 
