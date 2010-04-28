@@ -52,7 +52,7 @@ fig 1.
 
   .. cv:: html
 
-    <iframe width='100%'  height='520px' src="http://dleadt.torolab.ibm.com/dl/dojo_1_5/dojox/geo/charting/tests/test1.html"></iframe>
+    <iframe width='100%'  height='440px' src="http://dleadt.torolab.ibm.com/dl/dojo_1_5/dojox/geo/charting/tests/test1.html"></iframe>
 
 
    
