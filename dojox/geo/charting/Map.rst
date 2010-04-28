@@ -52,7 +52,7 @@ fig 1.
 
   .. cv:: html
 
-    <iframe width='100%'  height='100%' src="http://www.google.com"></iframe>
+    <iframe width='100%'  height='600px' src="http://www.dojotoolkit.org"></iframe>
 
 
    
