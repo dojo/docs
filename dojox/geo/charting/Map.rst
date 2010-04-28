@@ -16,7 +16,7 @@ dojox.geo.charting.Map
 Overview
 --------
 
-A dojo widget to render map information map "shapefile" data. 
+A dojo widget to render map information "shapefile" data. 
 
 .. code-block :: javascript
  :linenos:
@@ -52,7 +52,7 @@ fig 1.
 
   .. cv:: html
 
-    <iframe width='100%'  height='360px' src="http://dleadt.torolab.ibm.com/dl/dojo_1_5/dojox/geo/charting/tests/test1.html"></iframe>
+    <iframe width='100%'  height='350px' src="http://dleadt.torolab.ibm.com/dl/dojo_1_5/dojox/geo/charting/tests/test1.html"></iframe>
 
 
    
