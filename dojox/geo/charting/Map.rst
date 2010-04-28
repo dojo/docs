@@ -107,58 +107,5 @@ fig 1.
 
 
 
+[[HTML(<iframe src="http://www.dojotoolkit.org" width="100%"  height="600"></iframe>)]]
 
-
-
-
-
-
-
-
-
-
-
-fig 2.
-
-.. cv-compound::
-  :type: inline
-  :height: 430
-  :version: 1.5
-
-  .. cv:: javascript
-
-		<script type="text/javascript" djConfig="parseOnLoad:true,gfxRenderer:'svg,vml,silverlight'" src="../../../../dojo/dojo.js"></script>
-		<script type="text/javascript">
-			dojo.require("dojox.geo.charting.Map");
-			dojo.addOnLoad(function(){
-				var USStates = new dojox.geo.charting.Map("USStates", "../resources/data/USStates.json");
-				USStates.setMarkerData("../resources/markers/USStates.json");
-			});
-		</script>
-  .. cv:: html
-
-		<h1>Simple Maps,support zoom in and zoom out.</h1>
-		<div class="mapContainer" style="display:block;" id="USStates"></div>
-
-  .. cv:: css
-
-    <style type="text/css">
-			@import "../../../../dojo/resources/dojo.css";
-			@import "../../../../dijit/tests/css/dijitTests.css";
-			@import "../../../../dijit/themes/tundra/tundra.css";
-			@import "../resources/Map.css";
-			.mapContainer {
-				display: none;
-				width: 810px;
-				height: 400px;
-				border: solid 1px;
-			}
-			
-			.mapVerticalContainer {
-				display: none;
-				width: 405px;
-				height: 500px;
-				border: solid 1px;
-			}
-
-    </style>
