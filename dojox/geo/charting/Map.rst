@@ -97,6 +97,8 @@ fig 1.
     <div id="legenddiv"></div>
     <div id="chartdiv" style="width: 650px; height: 300px;"></div>  
 
+    [[HTML(<iframe src="http://www.dojotoolkit.org" width="100%"  height="600"></iframe>)]]
+
   .. cv:: css
 
     <style type="text/css">
@@ -106,6 +108,4 @@ fig 1.
 
 
 
-
-[[HTML(<iframe src="http://www.dojotoolkit.org" width="100%"  height="600"></iframe>)]]
 
