@@ -55,7 +55,7 @@ fig 1.
     <iframe width='100%'  height='320px' src="http://dleadt.torolab.ibm.com/dl/dojo_1_5/dojox/geo/charting/tests/test1.html"></iframe>
 
 
-fig 2.
+fig 2. Map connect with DataChart (Click on map)
 
 .. cv-compound::
   :type: inline
