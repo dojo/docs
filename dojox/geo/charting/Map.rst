@@ -34,25 +34,3 @@ A dojo widget to render map information map "shapefile" data.
  
  <h1>Simple Maps,support zoom in and zoom out.</h1>
  <div class="mapContainer" style="display:block;" id="USStates"></div>
-
-
-
-fig 1.
-
-.. cv-compound::
-  :type: inline
-  :height: 430
-  :version: 1.4
-
-  
-  .. cv:: html
-
-    <div id="legenddiv"></div>
-    <div id="chartdiv" style="width: 650px; height: 300px;"></div>  
-
-    <iframe src="http://www.dojotoolkit.org" width="100%"  height="600"></iframe>
-
-  .. cv:: css
-
-
-
