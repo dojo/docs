@@ -109,4 +109,16 @@ fig 1.
 
     </style>
 
+fig 2.
+
+.. cv-compound::
+  :type: inline
+  :height: 430
+  :version: 1.4
+
+  .. cv:: html
+
+    <iframe src="http://www.google.com"></iframe>
+
+
    
