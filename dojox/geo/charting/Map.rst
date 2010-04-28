@@ -123,7 +123,7 @@ fig 2.
 .. cv-compound::
   :type: inline
   :height: 430
-  :version: 1.4
+  :version: 1.5
 
   .. cv:: javascript
 
