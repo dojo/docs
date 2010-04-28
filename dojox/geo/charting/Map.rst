@@ -43,7 +43,7 @@ A dojo widget to render map information map "shapefile" data.
 
 
 
-fig 2.
+fig 1.
 
 .. cv-compound::
   :type: inline
@@ -52,7 +52,7 @@ fig 2.
 
   .. cv:: html
 
-    <iframe src="http://www.google.com"></iframe>
+    <iframe width='100%'  height='600px' src="http://www.google.com"></iframe>
 
 
    
