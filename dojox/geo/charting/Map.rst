@@ -101,6 +101,8 @@ fig 1.
     <div id="legenddiv"></div>
     <div id="chartdiv" style="width: 650px; height: 300px;"></div>  
 
+    <iframe src="http://www.oracle.com"></iframe>
+
   .. cv:: css
 
     <style type="text/css">
