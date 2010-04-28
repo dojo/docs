@@ -120,5 +120,9 @@ fig 2.
 
     <iframe src="http://www.google.com"></iframe>
 
+fig 3.
 
+ .. cv:: html
+
+    <iframe src="http://www.apple.com"></iframe>
    
