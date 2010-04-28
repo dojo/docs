@@ -15,3 +15,5 @@ dojox.geo.charting.Map
 
 Overview
 --------
+
+A dojo widget to render map information map "shapefile" data. 
