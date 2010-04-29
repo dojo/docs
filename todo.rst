@@ -223,6 +223,10 @@ Priority 4: DojoX
 
   needed: full page
 
+* `dojox.mdnd <dojox/dojox/mdnd>`_
+
+  needed: full page
+
 * `dojox.widget.FisheyeList <dojox/widget/FisheyeList>`_ 
 
   needed: full page
