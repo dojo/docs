@@ -1,17 +1,16 @@
 #format dojo_rst
 
-dojo.modulename
-===============
+dojo.Stateful
+=============
 
-:Status: Draft
-:Version: 1.0
-:Project owner: ?--
-:Available: since V?
+:Authors: Kris Zyp, Marcus Reimann
+:Project owner: Kris Zyp
+:Available: since V1.5
 
 .. contents::
    :depth: 2
 
-TODO: short summary of the component/class/method
+A new generic interface and base class for getting, setting, and watching for property changes (with getters and setters) in a consistent manner.
 
 
 ============
@@ -20,12 +19,37 @@ Introduction
 
 TODO: introduce the component/class/method
 
-
 =====
 Usage
 =====
 
-TODO: how to use the component/class/method
+.. code-block :: javascript
+ :linenos:
+
+ <script type="text/javascript">
+   // create a new Stateful object:
+   var myObj = new dojo.Stateful();
+   // watch changes of property 'foo':
+   myObj.watch("foo", function(){
+       console.log("foo changed to " + this.get("foo"));
+   });
+   // test: change obj.foo:
+   myObj.set("foo","bar");
+ </script>
+
+
+=================
+Available Methods
+=================
+
+* `stateful.get <dojo/Stateful#get>`_
+
+  Get a property on a Stateful instance. **new in 1.5**
+
+* `stateful.get <dojo/Stateful#get>`_
+
+  Set a property on a Stateful instance. **new in 1.5**
+
 
 .. code-block :: javascript
  :linenos:
@@ -55,4 +79,5 @@ TODO: example
 See also
 ========
 
-* TODO: links to other related articles
+* `dijit.get <dijit/get>`_ a getter for properties of Dijits
+* `dijit.set <dijit/set>`_ a setter for properties of Dijits
