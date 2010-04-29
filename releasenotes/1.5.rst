@@ -62,7 +62,7 @@ A new generic interface and base class for getting, setting, and watching for pr
 
 See also:
 
-* `Documentation dojo.Stateful (todo) <dojo/Stateful>`_
+* `dojo.Stateful <dojo/Stateful>`_
 * `Ticket #10839 <http://bugs.dojotoolkit.org/ticket/10839d>`_
 
 
