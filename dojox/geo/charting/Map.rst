@@ -36,13 +36,6 @@ A dojo widget to render map information "shapefile" data.
  <div class="mapContainer" style="display:block;" id="USStates"></div>
 
 
-
-
-
-
-
-
-
 fig 1.
 
 .. cv-compound::
