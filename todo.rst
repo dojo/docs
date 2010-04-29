@@ -23,14 +23,6 @@ Top priority: dojo.js
 
   needed: full page
 
-* `dojo.eval <dojo/eval>`_
-
-  needed: review
-
-* `dojo.provide <dojo/provide>`_
-
-  needed: review necessary
-
 * `dojo.moduleUrl <dojo/moduleUrl>`_
 
   needed: review necessary
