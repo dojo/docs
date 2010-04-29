@@ -46,18 +46,37 @@ Available Methods
 
   Get a property on a Stateful instance. **new in 1.5**
 
-* `stateful.get <dojo/Stateful#get>`_
+* `stateful.set <dojo/Stateful#set>`_
 
   Set a property on a Stateful instance. **new in 1.5**
 
+
+get
+---
+
+Get a property on a Stateful instance. **new in 1.5**
 
 .. code-block :: javascript
  :linenos:
 
  <script type="text/javascript">
-   // your code
+   // create a new Stateful object with foo = 3:
+   var myObj = new dojo.Stateful({foo: 3});
+   // call the getter for property 'foo':
+   myObj.get('foo');  // returns 3
+   // alternative syntax:
+   myObj.foo;         // returns 3
  </script>
 
+
+set
+---
+
+Set a property on a Stateful instance. **new in 1.5**
+
+
+watch
+-----
 
 
 ========
