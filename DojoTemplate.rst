@@ -51,6 +51,10 @@ Available Methods
   Set a property on a Stateful instance. **new in 1.5**
 
 
+========
+Examples
+========
+
 get
 ---
 
@@ -68,30 +72,47 @@ Get a property on a Stateful instance. **new in 1.5**
    myObj.foo;         // returns 3
  </script>
 
-
 set
 ---
 
 Set a property on a Stateful instance. **new in 1.5**
 
+Sets named properties on a stateful object and notifies any watchers of 
+the property. A programmatic setter may be defined in subclasses.
+
+.. code-block :: javascript
+ :linenos:
+
+ <script type="text/javascript">
+   // create a new Stateful object:
+   myObj = new dojo.Stateful();
+   // watch changes of each property:
+   myObj.watch(function(name, oldValue, value){
+       // this will be called on the set below
+   }
+   myObj.set(foo, 5);
+ </script>
+
+set() may also be called with a hash of name/value pairs, ex:
+
+.. code-block :: javascript
+ :linenos:
+
+ <script type="text/javascript">
+   // create a new Stateful object:
+   myObj = new dojo.Stateful();
+   // The following is equivalent to calling 
+   // set(foo, "Howdy") and set(bar, 3):
+   myObj.set({
+       foo: "Howdy",
+       bar: 3
+   })
+ </script>
 
 watch
 -----
 
 
-========
-Examples
-========
-
-Programmatic example
---------------------
-
-TODO: example
-
-Declarative example
--------------------
-
-TODO: example
 
 
 ========
