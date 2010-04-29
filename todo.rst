@@ -193,7 +193,7 @@ Priority 4: DojoX
 
 * `dojox.layout.ExpandoPane <dojox/layout/ExpandoPane>`_
 
-  needed: full page
+  needed: programmatic example
 
 * `dojox.layout.GridContainer <dojox/layout/GridContainer>`_
 
