@@ -130,10 +130,6 @@ Priority 4: DojoX
 
   needed: full page
 
-* `dojox.form.RangeSlider <dojox/form/RangeSlider>`_
-
-  needed: full page
-
 * `dojox.form.TimeSpinner <dojox/form/TimeSpinner>`_
 
   needed: full page
