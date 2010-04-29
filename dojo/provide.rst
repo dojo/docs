@@ -3,8 +3,6 @@
 dojo.provide
 ============
 
-:Status: Draft
-:Version: 1.0
 :Project owner: ?--
 :Available: since V?
 
