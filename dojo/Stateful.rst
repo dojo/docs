@@ -27,6 +27,8 @@ Usage
  :linenos:
 
  <script type="text/javascript">
+   dojo.require('dojo.Stateful'); 
+
    // create a new Stateful object:
    var myObj = new dojo.Stateful();
    // watch changes of property 'foo':
