@@ -146,7 +146,6 @@ Priority 4: DojoX
 
   needed: full page
 
-
 * `dojox.image.Badge <dojox/image/Badge>`_
 
   needed: full page
@@ -211,7 +210,11 @@ Priority 4: DojoX
 
   needed: full page
 
-* `dojox.mdnd <dojox/dojox/mdnd>`_
+* `dojox.mdnd <dojox/mdnd>`_
+
+  needed: full page
+
+* `dojox.mobile <dojox/mobile>`_
 
   needed: full page
 
