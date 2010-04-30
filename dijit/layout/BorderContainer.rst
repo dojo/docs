@@ -48,6 +48,20 @@ Layout modes
 
 BorderContainer operates in a choice of two layout modes: the design attribute may be set to "headline" (by default) or "sidebar". With the "headline" layout, the top and bottom sections extend the entire width of the box and the remaining regions are placed in the middle. With the "sidebar" layout, the side panels take priority, extending the full height of the box.
 
+Regions
+-------
+
+Each child element can have an attribute "region" which indicates where it should be positionned (most names are self explainatory):
+
+  * top;
+  * bottom;
+  * right;
+  * left;
+  * center;
+  * leading: used have flexible layout in left-to-right/right-to-left environments. In ltr, it will be equivalent to left, in rtl equivalent to right;
+  * trailing: right in ltr, left in rtl.
+
+**Caution**: Do not use trailing/leading together with left/right.
 
 ========
 Examples
