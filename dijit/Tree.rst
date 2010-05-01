@@ -235,7 +235,7 @@ Updating a Tree
 
 People often ask:
 
-  * how do I update a tree (adding or deleting items?
+  * how do I update a tree (adding or deleting items)?
 
 You can't update the tree directly, but rather you need to update the model.   Usually the model is connected to a data store and in that case you need to update the data store.  Thus, you need to use a data store that allows updates (through it's official API), like `dojo.data.ItemFileWriteStore <dojo/data/ItemFileWriteStore>`_.
 
