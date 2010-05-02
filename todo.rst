@@ -25,7 +25,7 @@ Top priority: dojo.js
 
 * `dojo.moduleUrl <dojo/moduleUrl>`_
 
-  needed: review necessary
+  needed: full page
 
 
 =====================
