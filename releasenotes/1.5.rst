@@ -123,9 +123,9 @@ In order to use it, submit a parameter "placeHolder" to your widget:
 .. code-block :: javascript
 
    myTextBox = new dijit.form.TextBox({
-       name: "firstname", 
-       value: "" /* no or empty value! */, 
-       placeHolder: "type in your name" 
+       name: "firstname",
+       value: "" /* no or empty value! */,
+       placeHolder: "type in your name"
    }, "firstname");
 
 standardized width/height of input widgets
@@ -413,16 +413,27 @@ DojoX
 Charting
 --------
 
-* Several incremental enhancements to the DataPresentation widget, including support for custom tooltips, layout/wrapping options for the chart legend, ability to suppress the chart labels, and 'hooks' into the rendering.
+Major update of charting themes:
+
 * Comprehensive support for space-based gradients.
 * Themes can specify arbitrary fills, including linear and radial gradients.
 * Unified theme overrides at the plot, series, and individual data value level.
-* Bar and Column-based charts now support objects as values (you can specify custom tooltips, colors, fills now).
 * Scatter plot implements a gradient field-style color-coding.
+* New utilities to build your own gradients, and gradient-based charting themes.
+* Brand new charting themes based on new facilities:
+
+  * Julie by Julie Santilli -- versatile clean theme with whopping 32 different gradients.
+  * Chris by Christopher Anderson -- bright crisp-looking presentation-ready theme.
+  * PrimaryColors -- subtle gradients balance bright colors refreshing this classic primary color based theme.
+  * ThreeD -- extends PrimaryColors by adding 3D cylinder look to all bar- and column-based plots.
+
+General enhancements:
+
+* Several incremental enhancements to the DataPresentation widget, including support for custom tooltips, layout/wrapping options for the chart legend, ability to suppress the chart labels, and 'hooks' into the rendering.
+* Bar and Column-based charts now support objects as values (you can specify custom tooltips, colors, fills now).
 * Charting animation (grow/zoom) for areas, lines and markers plot.
 * Support for missing values (nulls) across all plots.
 * Numerous bugfixes.
-
 
 DnD
 ---
