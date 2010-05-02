@@ -11,9 +11,9 @@ Starting with V1.3 each new feature needs a proper documentation at docs.dojocam
 The following pages need more love:
 
 
-=====================
-Top priority: dojo.js
-=====================
+=======
+dojo.js
+=======
 
 * `dojo.Animation <dojo/Animation>`_ ``peller, slightlyoff, dante``
 
@@ -28,9 +28,9 @@ Top priority: dojo.js
   needed: full page
 
 
-=====================
-Priority 2: Dojo Core
-=====================
+=========
+Dojo Core
+=========
 
 * `dojo.AdapterRegistry <dojo/AdapterRegistry>`_
 
@@ -61,9 +61,9 @@ Priority 2: Dojo Core
   needed: full page
 
 
-=================
-Priority 3: Dijit
-=================
+=====
+Dijit
+=====
 
 * `dijit._HasDropDown <dijit/_HasDropDown>`_
 
@@ -78,9 +78,9 @@ Priority 3: Dijit
   needed: full page
 
 
-=================
-Priority 4: DojoX
-=================
+=====
+DojoX
+=====
 
 * `dojox.analytics <dojox/analytics>`_ ``dmachi, phiggins``
 
