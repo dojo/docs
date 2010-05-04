@@ -44,6 +44,7 @@ Finally, dojo.when() is a method that will take either a Deferred or a plain val
           ...
     });
 
+See `blog post <http://www.sitepen.com/blog/2010/05/03/robust-promises-with-dojo-deferred-1-5/>`_ for more information.
 
 dojo.window, dojo.uacss
 -----------------------
@@ -64,6 +65,7 @@ See also:
 
 * `dojo.Stateful <dojo/Stateful>`_
 * `Ticket #10839 <http://bugs.dojotoolkit.org/ticket/10839d>`_
+* `Stateful blog post <http://www.sitepen.com/blog/2010/05/04/consistent-interaction-with-stateful-objects-in-dojo/>`_
 
 
 =====
