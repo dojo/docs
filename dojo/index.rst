@@ -262,7 +262,7 @@ Effects
 
   **1.4+** previously dojo._Animation, the class behind all dojo.fx
 
-* `dojo.anim <dojo/animateProperty>`_
+* `dojo.anim <dojo/anim>`_
 
   Shorthand version of animateProperty using positional arguments
 
