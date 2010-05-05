@@ -41,8 +41,6 @@ Features
   * TabPane - A basic container for tab content (used in conjunction with Tab Container)
   * ProgressIndicator - A native-looking progress bar/display page.
 
----- /!\ '''Edit conflict - other version:''' ----
-
 =====
 Usage
 =====
@@ -55,8 +53,12 @@ Loading the javascript:
  
     // Load the basic mobile widgetry and support code. 
     dojo.require("dojox.mobile");
+
     // Load the lightweight parser.  dojo.parser can also be used, but it requires much more code to be loaded.
     dojo.require("dojox.mobile.parser");
+
+    // Load the lightweight parser.  dojo.parser can also be used, but it requires much more code to be loaded.
+    dojo.requireIf(dojo.isWebKit, "dojox.mobile.compat");
 
 
 Selecting the CSS to apply (iphone or android currently) is equally simple:
@@ -67,7 +69,6 @@ Selecting the CSS to apply (iphone or android currently) is equally simple:
     @import "dojox/editor/plugins/resources/css/TextColor.css";
   </style>
 
----- /!\ '''Edit conflict - your version:''' ----
 
 =====
 Usage
