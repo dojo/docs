@@ -78,7 +78,7 @@ Basic example, view to view swapping:
 
 .. code-example::
   :djConfig: parseOnLoad: true
-  :version: 1.5
+  :version: local 
 
   .. javascript::
 
