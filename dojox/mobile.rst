@@ -25,6 +25,7 @@ Features
 * CSS3 Animations where possible.  This provides high-speed, smooth, animations on WebKit based browsers.  For non-webkit based browsers, a 'compat' module exists to mimic most of the animations by using dojo.animateProperty.
 * CSS themes for Apple's iPhone and Google Android based mobile phones to mimic look and feel.
 * A series of lightweight widgets to mimic basic mobile device native interfaces, including:
+
   * View - A single 'page')
   * Switch - An on/off toggle-style button.)
   * Button - Styled to match the device)
