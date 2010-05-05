@@ -40,3 +40,27 @@ Features
   * Tab Container - A basic native-looking tab container.
   * TabPane - A basic container for tab content (used in conjunction with Tab Container)
   * ProgressIndicator - A native-looking progress bar/display page.
+
+=====
+Usage
+=====
+
+Loading the basic dojox.mobile codebase is extremely simple.  It's a couple requires and then selecting the CSS.  That's it.
+
+Loading the javascript:
+
+.. code-block :: javascript
+ 
+    // Load the basic mobile widgetry and support code. 
+    dojo.require("dojox.mobile");
+    // Load the lightweight parser.  dojo.parser can also be used, but it requires much more code to be loaded.
+    dojo.require("dojox.mobile.parser");
+
+
+Selecting the CSS to apply (iphone or android currently) is equally simple:
+
+.. code-block :: html
+
+  <style>
+    @import "dojox/editor/plugins/resources/css/TextColor.css";
+  </style>
