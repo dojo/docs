@@ -57,8 +57,8 @@ Loading the javascript:
     // Load the lightweight parser.  dojo.parser can also be used, but it requires much more code to be loaded.
     dojo.require("dojox.mobile.parser");
 
-    // Load the lightweight parser.  dojo.parser can also be used, but it requires much more code to be loaded.
-    dojo.requireIf(dojo.isWebKit, "dojox.mobile.compat");
+    // Load the compat layer if the incoming browser isn't webkit based
+    dojo.requireIf(!dojo.isWebKit, "dojox.mobile.compat");
 
 
 Selecting the CSS to apply (iphone or android currently) is equally simple:
