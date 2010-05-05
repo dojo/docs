@@ -19,10 +19,6 @@ dojo.js
 
   needed: full page
 
-* `dojo.anim <dojo/anim>`_
-
-  needed: full page
-
 * `dojo.moduleUrl <dojo/moduleUrl>`_
 
   needed: full page
