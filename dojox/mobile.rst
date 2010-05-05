@@ -25,17 +25,17 @@ Features
 * CSS3 Animations where possible.  This provides high-speed, smooth, animations on WebKit based browsers.  For non-webkit based browsers, a 'compat' module exists to mimic most of the animations by using dojo.animateProperty.
 * CSS themes for Apple's iPhone and Google Android based mobile phones to mimic look and feel.
 * A series of lightweight widgets to mimic basic mobile device native interfaces, including:
-** View - A single 'page')
-** Switch - An on/off toggle-style button.)
-** Button - Styled to match the device)
-** Heading - Styled to match the device)
-** Round-corner rectangle boxes.
-** Edge-To-Edge category heading.
-** Round Corner - List of rounded-corner rectangles for data display.
-** Edge to Edge List - A basic list.
-** ListItem - Basic list items to use in the various list containers.
-** IconContainer - A container to house icons for actions/events.
-** IconItem - A idget for representing an icon and associated actions.
-** Tab Container - A basic native-looking tab container.
-** TabPane - A basic container for tab content (used in conjunction with Tab Container)
-** ProgressIndicator - A native-looking progress bar/display page.
+  * View - A single 'page')
+  * Switch - An on/off toggle-style button.)
+  * Button - Styled to match the device)
+  * Heading - Styled to match the device)
+  * Round-corner rectangle boxes.
+  * Edge-To-Edge category heading.
+  * Round Corner - List of rounded-corner rectangles for data display.
+  * Edge to Edge List - A basic list.
+  * ListItem - Basic list items to use in the various list containers.
+  * IconContainer - A container to house icons for actions/events.
+  * IconItem - A idget for representing an icon and associated actions.
+  * Tab Container - A basic native-looking tab container.
+  * TabPane - A basic container for tab content (used in conjunction with Tab Container)
+  * ProgressIndicator - A native-looking progress bar/display page.
