@@ -66,7 +66,7 @@ Selecting the CSS to apply (iphone or android currently) is equally simple:
 .. code-block :: html
 
   <style>
-    @import "dojox/editor/plugins/resources/css/TextColor.css";
+    @import "dojox/mobile/themes/iphone/iphone.css";
   </style>
 
 
@@ -74,29 +74,58 @@ Selecting the CSS to apply (iphone or android currently) is equally simple:
 Usage
 =====
 
-Loading the basic dojox.mobile codebase is extremely simple.  It's a couple requires and then selecting the CSS.  That's it.
+Basic example, view to view swapping:
 
-Loading the javascript:
+.. code-example::
+  :djConfig: parseOnLoad: true
+  :version: 1.5
 
-.. code-block :: javascript
- 
-    // Load the basic mobile widgetry and support code. 
-    dojo.require("dojox.mobile");
+  .. javascript::
+
+    <script>
+      // Load the basic mobile widgetry and support code. 
+      dojo.require("dojox.mobile");
+
+      // Load the lightweight parser.  dojo.parser can also be used, but it requires much more code to be loaded.
+      dojo.require("dojox.mobile.parser");
+
+      // Load the compat layer if the incoming browser isn't webkit based
+      dojo.requireIf(!dojo.isWebKit, "dojox.mobile.compat");
+    </script>
+
+  .. css::
+
+    <style>
+      @import "{{baseUrl}}dojox/mobile/themes/iphone/iphone.css";
+    </style>
     
-    // Load the lightweight parser.  dojo.parser can also be used, but it requires much more code to be loaded.
-    dojo.require("dojox.mobile.parser");
+  .. html::
 
-    // Load the non-webkit animation compat package (if necessary)
-    dojo.requireIf(dojo.isWebKit, "dojox.mobile.compat");
+    <div id="main" dojoType="dojox.mobile.View" selected="true">
+      <h1 dojoType="dojox.mobile.Heading">Settings</h1>
+      <ul dojoType="dojox.mobile.EdgeToEdgeList">
+        <li dojoType="dojox.mobile.ListItem" icon="{{baseUrl}}dojox/mobile/tests/images/a-icon-2-41x41.png">
+          Coolness Mode
+          <div class="mblItemSwitch" dojoType="dojox.mobile.Switch"></div>
+        </li>
+        <li dojoType="dojox.mobile.ListItem" icon="{{baseUrl}}dojox/mobile/tests/images/a-icon-2-41x41.png" rightText="mac" moveTo="disco">
+          Disco Room
+        </li>
+        <li dojoType="dojox.mobile.ListItem" icon="images/a-icon-2-41x41.png" rightText="AcmePhone" moveTo="disco">
+          Carrier
+        </li>
+      </ul>
+    </div>
 
-
-Selecting the CSS to apply (iphone or android currently) is equally simple:
-
-.. code-block :: html
-
-  <style>
-    @import "dojox/editor/plugins/resources/css/TextColor.css";
-  </style>
-
-
----- /!\ '''End of edit conflict''' ----
+    <div id="disco" dojoType="dojox.mobile.View">
+      <h1 dojoType="dojox.mobile.Heading">Hello</h1>
+      <ul dojoType="dojox.mobile.EdgeToEdgeList">
+        <ul dojoType="dojox.mobile.EdgeToEdgeList">
+        <li dojoType="dojox.mobile.ListItem" moveTo="main">
+          I'm a square, man.
+        </li>
+        <li dojoType="dojox.mobile.ListItem" moveTo="main">
+          Leave Disco Room
+        </li>
+      </ul>
+    </div>
