@@ -27,38 +27,24 @@ The `dojo.Animation` object returned from `dojo.anim` will be already playing wh
 Usage
 =====
 
+Here is the definition of arguments:
 
+===========  ==============  ======================================================================
+Parameter    Type            Description
+===========  ==============  ======================================================================
+node         DOMNode|String  Can be a DOM node or the id of a node (as string) to animate CSS properties on.
 
-dojo.anim = function(   /*DOMNode|String*/      node,
-                                                        /*Object*/                      properties,
-                                                        /*Integer?*/            duration,
-                                                        /*Function?*/           easing,
-                                                        /*Function?*/           onEnd,
-                                                        /*Integer?*/            delay){
-                //      node:
-                //              a DOM node or the id of a node to animate CSS properties on
-                //      duration:
-                //              The number of milliseconds over which the animation
-                //              should run. Defaults to the global animation default duration
-                //              (350ms).
-                //      easing:
-                //              An easing function over which to calculate acceleration
-                //              and deceleration of the animation through its duration.
-                //              A default easing algorithm is provided, but you may
-                //              plug in any you wish. A large selection of easing algorithms
-                //              are available in `dojo.fx.easing`.
-                //      onEnd:
-                //              A function to be called when the animation finishes
-                //              running.
-                //      delay:
-                //              The number of milliseconds to delay beginning the
-                //              animation by. The default is 0.
-                //      example:
-                //              Fade out a node
-                //      |       dojo.anim("id", { opacity: 0 });
-                //      example:
-                //              Fade out a node over a full second
-                //      |       dojo.anim("id", { opacity: 0 }, 1000);
+properties   Object
+
+duration     Integer         The number of milliseconds over which the animation should run. Defaults to the global animation default duration (350ms).
+
+easing       Function        An easing function over which to calculate acceleration and deceleration of the animation through its duration. A default easing algorithm is provided, but you may plug in any you wish. A large selection of easing algorithms are available in `dojo.fx.easing`.
+
+onEnd        Function        A function to be called when the animation finishes running.
+
+delay        Integer         The number of milliseconds to delay beginning the animation by. The default is 0.
+===========  ==============  ======================================================================
+
 
 ========
 Examples
