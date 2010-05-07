@@ -89,7 +89,7 @@ Programmatic example
             id: 'dynPortlet1',
             closable: false,
             dndType: 'Portlet',
-            title: 'dynamically created Portlet "dynPortlet1" at Pos 0-0',
+            title: 'Portlet "dynPortlet1"',
             content: portletContent1
         });
         // create a new TooltipDialog:
