@@ -41,6 +41,7 @@ Programmatic example
 --------------------
 
 .. code-example::
+  :version: local
 
   .. css::
     :label: The CSS
