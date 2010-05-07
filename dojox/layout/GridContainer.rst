@@ -76,13 +76,13 @@ Programmatic example
             allowAutoScroll: false,
             withHandles: true,
             dragHandleClass: 'dijitTitlePaneTitle',
-            style: {width:'1000px'},
+            style: {width:'100%'},
             acceptTypes: ['Portlet'],
             isOffset: true
         }, 'placeHere'); 
         // prepare some Content for the Portlet:
         var portletContent=[
-            dojo.create('div', {innerHTML: 'Some content within the Portlet.'})
+            dojo.create('div', {innerHTML: 'Some content within the Portlet "p0_0".'})
         ];
         // create a new Portlet:
         var portlet=new dojox.widget.Portlet({
@@ -104,7 +104,7 @@ Programmatic example
         });
         // add the DropDownButton to the Portlet:
         portlet.addChild(testButton);
-        // add the Portlet to the GridContainer:
+        // add the first Portlet to the GridContainer:
         gridContainer.addChild(portlet);
         // startup GridContainer:
         gridContainer.startup();
