@@ -4,8 +4,8 @@ dojox.layout.GridContainer
 ==========================
 
 :Status: Draft
-:Version: 1.0
-:Project owner: ?--
+'Authors: Peter Higgins, Shane O'Sullivan, Marcus Reimann
+:Project owner: Shane O'Sullivan
 :Available: since V1.3
 
 .. contents::
@@ -81,16 +81,16 @@ Programmatic example
             isOffset: true
         }, 'placeHere'); 
         // prepare some Content for the Portlet:
-        var portletContent=[
-            dojo.create('div', {innerHTML: 'Some content within the Portlet "p0_0".'})
+        var portletContent1 = [
+            dojo.create('div', {innerHTML: 'Some content within the Portlet "dynPortlet1".'})
         ];
         // create a new Portlet:
-        var portlet=new dojox.widget.Portlet({
-            id: 'p0_0',
+        var portlet1 = new dojox.widget.Portlet({
+            id: 'dynPortlet1',
             closable: false,
             dndType: 'Portlet',
-            title: 'Portlet at Pos 0-0',
-            content: portletContent
+            title: 'dynamically created Portlet "dynPortlet1" at Pos 0-0',
+            content: portletContent1
         });
         // create a new TooltipDialog:
         var tooltipDialog=new dijit.TooltipDialog({
@@ -103,9 +103,9 @@ Programmatic example
             dropDown: tooltipDialog
         });
         // add the DropDownButton to the Portlet:
-        portlet.addChild(testButton);
+        portlet1.addChild(testButton);
         // add the first Portlet to the GridContainer:
-        gridContainer.addChild(portlet);
+        gridContainer.addChild(portlet1);
         // startup GridContainer:
         gridContainer.startup();
     });
