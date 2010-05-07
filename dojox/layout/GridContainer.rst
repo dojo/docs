@@ -4,7 +4,7 @@ dojox.layout.GridContainer
 ==========================
 
 :Status: Draft
-'Authors: Peter Higgins, Shane O'Sullivan, Marcus Reimann
+:Authors: Peter Higgins, Shane O'Sullivan, Marcus Reimann
 :Project owner: Shane O'Sullivan
 :Available: since V1.3
 
