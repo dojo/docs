@@ -481,7 +481,7 @@ GFX
 Layout
 ------
 
-GridContainer is revamped using `MDnD`_, GridContainerLite is introduced.
+GridContainer is revamped using `MDnD`_, GridContainerLite is introduced. The usage of GridContainer remains more or less the same, with the only change being the acceptTypes attribute.  Previously this accepted a comma separated list of class names, e.g. 'dojox.widget.Portlet,dijit.layout.ContentPane'.  This has changed to accept any arbitrary string, which should match up to the 'dndType' attribute on the child widgets, e.g. on the GridContainer, acceptTypes="Portlet,SomeCustomWidget" , and on the child widgets, dndType="Portlet" or dndType="SomeCustomWidget
 
 
 MDnD
