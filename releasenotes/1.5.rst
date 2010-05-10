@@ -10,6 +10,11 @@ Dojo 1.5 Release Notes (in progress)
 Dojo Core
 =========
 
+Running Dojo in a Firefox extension
+-----------------------------------
+
+If you are using a source distribution of Dojo and want to use it inside a Firefox extension, be sure to set djConfig.hostEnv = "ff_ext" before including dojo.js for it to work correctly.
+
 dojo.cldr
 ---------
 
