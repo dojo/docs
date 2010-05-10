@@ -437,6 +437,18 @@ General enhancements:
 * Support for missing values (nulls) across all plots.
 * Numerous bugfixes.
 
+CSS3
+----
+New dojo.style extension to support for the transform and transform-origin properties:
+
+.. code-block :: javascript
+
+   dojo.require("dojox.html.ext-dojo.style");
+   dojo.style("myNode", "transformOrigin", "0 0");
+   dojo.style("myNode", "transform", "skew(10deg) rotate(20deg");
+
+Internet Explorer 5.5+, Safari 3.1+, Firefox 3.5+, Chrome/Chromium and Opera 10.50+ are supported.
+
 DnD
 ---
 
