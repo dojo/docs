@@ -276,7 +276,7 @@ Most dijit.form widgets fire the onChange event after a value change has been de
 attr("value", val, false)
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-attr() (as a setter) has been enhanced to take optional arguments.   The most common case for this is attr("value", val, false) which sets the value of a form widget without calling onChange().   (The third argument is called priorityChange.)
+attr() (as a setter) has been enhanced to take optional arguments.   The most common case for this is attr("value", val, false) which sets the value of a form widget without calling onChange().   (The third argument is called priorityChange.) When priorityChange is true (default), onChange() will fire only when the new value is different than the value that the previous onChange() reported.
 
 dijit.form.Button
 ~~~~~~~~~~~~~~~~~
