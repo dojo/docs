@@ -28,7 +28,7 @@ Features
 * CSS themes for Apple's iPhone and Google Android based mobile phones to mimic look and feel.
 * A series of lightweight widgets to mimic basic mobile device native interfaces, including:
 
-  * View - A single 'page')
+  * `View <dojox/mobile/View>`_- A single 'page'
   * Switch - An on/off toggle-style button.)
   * Button - Styled to match the device)
   * Heading - Styled to match the device)
