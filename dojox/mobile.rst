@@ -34,8 +34,8 @@ Features
   * `Heading <dojox/mobile/Heading>`_ - Styled to match the device
   * `Round-corner-rectangle-boxes. <dojox/mobile/RoundRect>`_
   * `Edge-To-Edge category <dojox/mobile/EdgeToEdgeCategory>`_
+  * Edge to Edge List - A basic list of items with equal width.
   * Round Corner - List of rounded-corner rectangles for data display.
-  * Edge to Edge List - A basic list.
   * ListItem - Basic list items to use in the various list containers.
   * IconContainer - A container to house icons for actions/events.
   * IconItem - A idget for representing an icon and associated actions.
