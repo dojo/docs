@@ -12,7 +12,7 @@ dojox.mobile.Switch
 .. contents::
     :depth: 2
 
-Switch is a toggle switch with a sliding knob. You can either tap or slide the knob to toggle the switch.
+Switch is a toggle switch with a sliding knob. You can either tap or slide the knob to toggle the switch.  It has the usual events of a switch, such as onClick and onStateChanged which fire when the switch is manipulated.
 
 **Constructor Parameters**
 
