@@ -32,7 +32,7 @@ Features
   * `Switch <dojox/mobile/Switch>`_ - An on/off toggle-style button.
   * `Button <dojox/mobile/Button>`_ - Styled to match the device.
   * `Heading <dojox/mobile/Heading>`_ - Styled to match the device
-  * 1Round-corner-rectangle-boxes. <dojox/mobile/RoundRect>`_
+  * `Round-corner-rectangle-boxes. <dojox/mobile/RoundRect>`_
   * Edge-To-Edge category heading.
   * Round Corner - List of rounded-corner rectangles for data display.
   * Edge to Edge List - A basic list.
