@@ -33,7 +33,7 @@ Features
   * `Button <dojox/mobile/Button>`_ - Styled to match the device.
   * `Heading <dojox/mobile/Heading>`_ - Styled to match the device
   * `Round-corner-rectangle-boxes. <dojox/mobile/RoundRect>`_
-  * Edge-To-Edge category heading.
+  * `Edge-To-Edge category <dojox/mobile/EdgeToEdgeCategory>`_
   * Round Corner - List of rounded-corner rectangles for data display.
   * Edge to Edge List - A basic list.
   * ListItem - Basic list items to use in the various list containers.
