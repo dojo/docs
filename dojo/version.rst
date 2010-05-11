@@ -46,3 +46,11 @@ The members of the `dojo.version` object are integers, and can be checked indivi
 It is important to note the `dojo.version` value is easily set as part of the build process (`version=1.2.0`), and should not be relied upon in production code. It is meant as a simple utility for determining which particular version of Dojo is loaded on a page, mostly for debugging purposes.
 
 The `revision` member refers to the SVN revision used to create the version. You can inspect individual changesets at `the Dojo bug tracker <http://bugs.dojotoolkit.org/changeset>`_
+
+.. example ::
+
+  :js:
+
+    <script type="text/javascript">
+        alert(dojo.version);
+    </script>
