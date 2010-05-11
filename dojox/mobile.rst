@@ -29,7 +29,7 @@ Features
 * A series of lightweight widgets to mimic basic mobile device native interfaces, including:
 
   * `View <dojox/mobile/View>`_- A single 'page'
-  * Switch - An on/off toggle-style button.)
+  * `Switch <dojox/mobile/Switch>`_ - An on/off toggle-style button.)
   * Button - Styled to match the device)
   * Heading - Styled to match the device)
   * Round-corner rectangle boxes.
