@@ -98,9 +98,9 @@ Selecting the CSS to apply (iphone or android currently) is equally simple:
   </style>
 
 
-=====
-Usage
-=====
+========
+Examples
+========
 
 Basic example, view to view swapping:
 
