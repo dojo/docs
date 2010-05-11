@@ -1,7 +1,7 @@
 #format dojo_rst
 
-dojox.mobile.Heading
-====================
+dojox.mobile.RounRect
+=====================
 
 :Status: Draft
 :Version: 1.0
