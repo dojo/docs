@@ -47,7 +47,7 @@ It is important to note the `dojo.version` value is easily set as part of the bu
 
 The `revision` member refers to the SVN revision used to create the version. You can inspect individual changesets at `the Dojo bug tracker <http://bugs.dojotoolkit.org/changeset>`_
 
-.. example ::
+.. code-example ::
 
   :js:
 
