@@ -16,6 +16,8 @@ Have you wanted to build applications for the iPhone, Android, or other similar 
 
 The code is deliberately kept as lightweight as possible, using CSS3 animations and the like to perform the effects.  There is a compat.js, which will simulate most of the effects using dojo.animateProperty and dojox.gfx where possible on browsers such as FireFox and IE.  It will not load by default, it has to be required in separately.
 
+**Note that use of dijit._Container, dijit._Contained, dijit._Templated, and dojo.query is intentionally avoided to reduce download code size. **
+
 ========
 Features
 ========
