@@ -43,6 +43,18 @@ Features
   * TabPane - A basic container for tab content (used in conjunction with Tab Container)
   * ProgressIndicator - A native-looking progress bar/display page.
 
+====================
+Internationalization
+====================
+
+dojo.i18n is NOT used for dojox.mobile because:
+
+  * Use of it increases the code size, which affects cachability of the content.
+  * Not good for client-side runtime performance, which is important for mobile devices.  The lookup time matters to lighter devices such as a phone.  It has the added advantage of extending battery life due to avoiding CPU cycles for string manipulations.
+
+**Recommended approach is to substitute localized strings on the server**
+ 
+
 =====
 Usage
 =====
