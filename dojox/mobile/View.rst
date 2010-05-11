@@ -12,7 +12,7 @@ dojox.mobile.View
 .. contents::
     :depth: 2
 
-View is a container widget that represents entire mobile device screen. One html page can have multiple Views. In that case, only one View is visible and the others are invisible. The user can navigate through views with animated transition effects.
+View is a container widget that represents entire mobile device screen. One html page can have multiple Views but only one View is visible at a time.  The user can navigate through views with animated transition effects.
 
 **Constructor Parameters**
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
