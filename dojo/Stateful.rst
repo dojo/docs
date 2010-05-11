@@ -17,7 +17,7 @@ A new generic interface and base class for getting, setting, and watching for pr
 Introduction
 ============
 
-TODO: introduce the component/class/method
+dojo.Stateful provides the ability to get and set named properties in conjunction with the ability to monitor these properties for changes. dojo.Stateful is intended to be a base class that can be extended by other components that wish to support watchable properties. This can be very useful for creating live bindings that utilize current property states and must react to any changes in properties.
 
 =====
 Usage
@@ -33,7 +33,7 @@ Usage
    var myObj = new dojo.Stateful();
    // watch changes of property 'foo':
    myObj.watch("foo", function(){
-       console.log("foo changed to " + this.get("foo"));
+       console.log("foo changed to " + myObj.get("foo"));
    });
    // test: change obj.foo:
    myObj.set("foo","bar");
