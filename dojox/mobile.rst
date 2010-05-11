@@ -54,6 +54,20 @@ dojo.i18n is NOT used for dojox.mobile because:
 
 **Recommended approach is to substitute localized strings on the server**
  
+===========================
+Cross-Browser Compatibility
+===========================
+
+Dojox.mobile supports not only webkit-based mobile browsers, but also non-CSS3 PC browsers such as IE and (older) Firefox browsers. The CSS3 compatibility module (dojox.mobile.compat) is provided to support non-CSS3 browsers.  By default compatibility is not loaded, so if you require your application to work on older browsers (or desktop browsers), you need to conditionally import the dojox.mobile.compat package as part of its initialization.  See the example below:
+
+.. code-block :: javascript
+
+  dojo.require("dojox.mobile");
+  dojo.requireIf(!dojo.isWebKit, "dojox.mobile.compat");
+
+If dojox.mobile.compat is loaded, it directly replaces some of the methods of the dojox.mobile widgets to use emulation techniques for the normally CSS3 based animations.  This way, your applications do not need to be changed, and thus html pages remains the same regardless of whether this compatibility module is used or not.
+
+Note:  dojox.mobile.compat automatically loads the compatibility CSS files. It searches the current page for <link> elements, and tries to load corresponding -compat.css files. For example, if it finds .../themes/iphone/iphone.css, it loads .../themes/iphone/iphone-compat.css. In order for this mechanism to work out, you should use the link tags to include the theme CSS files instead of @import statements. 
 
 =====
 Usage
