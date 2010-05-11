@@ -30,7 +30,7 @@ Features
 
   * `View <dojox/mobile/View>`_- A single 'page'
   * `Switch <dojox/mobile/Switch>`_ - An on/off toggle-style button.
-  * Button - Styled to match the device)
+  * `Button <dojox/mobile/Button>`_ - Styled to match the device.
   * Heading - Styled to match the device)
   * Round-corner rectangle boxes.
   * Edge-To-Edge category heading.
