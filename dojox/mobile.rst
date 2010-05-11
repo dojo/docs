@@ -94,7 +94,7 @@ Selecting the CSS to apply (iphone or android currently) is equally simple:
 .. code-block :: html
 
   <style>
-    @import "dojox/mobile/themes/iphone/iphone.css";
+    <link rel="stylesheet" type="text/css" href="dojox/mobile/themes/iphone/iphone.css">
   </style>
 
 
