@@ -210,10 +210,6 @@ DojoX
 
   needed: full page
 
-* `dojox.mobile <dojox/mobile>`_
-
-  needed: full page
-
 * `dojox.widget.FisheyeList <dojox/widget/FisheyeList>`_ 
 
   needed: full page
