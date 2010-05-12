@@ -38,7 +38,7 @@ A dojo widget to render map information "shapefile" data.
 
 
 
-fig 1. Map connect with DataChart (Click on map)
+fig 1. Map (Click on map)
 
 .. cv-compound::
   :type: inline
@@ -50,7 +50,7 @@ fig 1. Map connect with DataChart (Click on map)
     <iframe width='100%'  height='320px' src="http://www-01.ibm.com/software/ucd/dojo/dojox/geo/charting/tests/test_maps.html"></iframe> 
 
 
-fig 2.
+fig 2. Map with associated DataChart (Click on map)
 
 .. cv-compound::
   :type: inline
@@ -62,7 +62,7 @@ fig 2.
     <iframe width='100%'  height='320px' src="http://www-01.ibm.com/software/ucd/dojo/dojox/geo/charting/tests/test_mapWithCharting.html"></iframe>
 
 
-fig 3. Map connect with DataChart (Click on map)
+fig 3. Map with Legend (Click on map)
 
 .. cv-compound::
   :type: inline
