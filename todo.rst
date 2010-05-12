@@ -48,10 +48,6 @@ Dojo Core
 
   needed: full page
 
-* `dojo.rpc.RpcService <dojo/rpc/RpcService>`_
-
-  needed: full page
-
 
 =====
 Dijit
