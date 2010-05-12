@@ -11,7 +11,7 @@ dojo.data.ItemFileReadStore
 .. contents::
   :depth: 2
 
-Dojo core provides an implementation of a read-only datastore, ItemFileReadStore. This store reads the JSON structured contents from an http endpoint (service or URL), or from an in-memory JavaScript object, and stores all the items in-memory for simple and quick access. ItemFileReadStore is designed to allow for flexibility in how it represents item hierarchy, references, and custom data types. It also provides options for which attribute can act as the unique identifier (for dojo.data.api.Identity), and which attribute can be used as a general label for an item. This store has an expectation that data is provided to in a specific though very flexible, format. All of the examples on this page demonstrate the general format expected.
+Dojo core provides an implementation of a read-only datastore, ItemFileReadStore. This store reads the JSON structured contents from an http endpoint (service or URL), or from an in-memory JavaScript object, and stores all the items in-memory for simple and quick access. ItemFileReadStore is designed to allow for flexibility in how it represents item hierarchy, references, and custom data types. It also provides options for which an attribute can act as the unique identifier (for dojo.data.api.Identity), and which attribute can be used as a general label for an item. This store has an expectation that data is provided to in a specific though very flexible, format. All of the examples on this page demonstrate the general format expected.
 
 **Points of Consideration:**
 
