@@ -69,7 +69,7 @@ fig 3.
 
   .. cv:: html
 
-    <iframe width='100%'  height='320px' src="http://dleadt.torolab.ibm.com/dl/dojo_1_5/dojox/geo/charting/tests/test1.html"></iframe>
+    <iframe width='100%'  height='320px' src="http://www-01.ibm.com/software/ucd/dojo/dojox/geo/charting/tests/test_mapWithLegend.html"></iframe>
 
 
 fig 4. Map connect with DataChart (Click on map)
