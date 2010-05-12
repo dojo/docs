@@ -11,7 +11,7 @@ dojo.rpc.JsonService
 .. contents::
    :depth: 2
 
-dojo.rpc.JsonService is a JSON RPC service (sounds silly...).
+dojo.rpc.JsonService is a generic JSON RPC service.
 
 
 ============
