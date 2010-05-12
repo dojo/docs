@@ -57,4 +57,29 @@ fig 2. Map connect with DataChart (Click on map)
 
   .. cv:: html
 
+    <iframe width='100%'  height='320px' src="http://dleadt.torolab.ibm.com/dl/dojo_1_5/dojox/geo/charting/tests/test2.html"></iframe> 
+
+
+fig 3.
+
+.. cv-compound::
+  :type: inline
+  :height: 430
+  :version: 1.4
+
+  .. cv:: html
+
+    <iframe width='100%'  height='320px' src="http://dleadt.torolab.ibm.com/dl/dojo_1_5/dojox/geo/charting/tests/test1.html"></iframe>
+
+
+fig 4. Map connect with DataChart (Click on map)
+
+.. cv-compound::
+  :type: inline
+  :height: 430
+  :version: 1.4
+
+  .. cv:: html
+
     <iframe width='100%'  height='320px' src="http://dleadt.torolab.ibm.com/dl/dojo_1_5/dojox/geo/charting/tests/test2.html"></iframe>   
+  
