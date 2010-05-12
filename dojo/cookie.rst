@@ -3,9 +3,6 @@
 dojo.cookie
 ===========
 
-:Status: Draft
-:Version: 0.9
-
 .. contents::
   :depth: 3
 
