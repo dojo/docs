@@ -36,7 +36,9 @@ A dojo widget to render map information "shapefile" data.
  <div class="mapContainer" style="display:block;" id="USStates"></div>
 
 
-fig 1.
+
+
+fig 1. Map connect with DataChart (Click on map)
 
 .. cv-compound::
   :type: inline
@@ -45,22 +47,10 @@ fig 1.
 
   .. cv:: html
 
-    <iframe width='100%'  height='320px' src="http://dleadt.torolab.ibm.com/dl/dojo_1_5/dojox/geo/charting/tests/test1.html"></iframe>
+    <iframe width='100%'  height='320px' src="http://www-01.ibm.com/software/ucd/dojo/dojox/geo/charting/tests/test_maps.html"></iframe> 
 
 
-fig 2. Map connect with DataChart (Click on map)
-
-.. cv-compound::
-  :type: inline
-  :height: 430
-  :version: 1.4
-
-  .. cv:: html
-
-    <iframe width='100%'  height='320px' src="http://dleadt.torolab.ibm.com/dl/dojo_1_5/dojox/geo/charting/tests/test2.html"></iframe> 
-
-
-fig 3.
+fig 2.
 
 .. cv-compound::
   :type: inline
@@ -69,10 +59,10 @@ fig 3.
 
   .. cv:: html
 
-    <iframe width='100%'  height='320px' src="http://www-01.ibm.com/software/ucd/dojo/dojox/geo/charting/tests/test_mapWithLegend.html"></iframe>
+    <iframe width='100%'  height='320px' src="http://www-01.ibm.com/software/ucd/dojo/dojox/geo/charting/tests/test_mapWithCharting.html"></iframe>
 
 
-fig 4. Map connect with DataChart (Click on map)
+fig 3. Map connect with DataChart (Click on map)
 
 .. cv-compound::
   :type: inline
@@ -81,5 +71,5 @@ fig 4. Map connect with DataChart (Click on map)
 
   .. cv:: html
 
-    <iframe width='100%'  height='320px' src="http://dleadt.torolab.ibm.com/dl/dojo_1_5/dojox/geo/charting/tests/test2.html"></iframe>   
+    <iframe width='100%'  height='320px' src="http://www-01.ibm.com/software/ucd/dojo/dojox/geo/charting/tests/test_mapWithLegend.html"></iframe>   
   
