@@ -111,7 +111,7 @@ There are currently a small set of nice features that can be plugged into the di
   
   **This plugin is new to the Dojo Toolkit 1.5.**
 
-* `dojox.editor.plugins.NormalizeStyle <dojox/editor/plugins/NormalizeStyle>`_ -- **STABLE**
+* `dojox.editor.plugins.NormalizeStyle <dojox/editor/plugins/NormalizeStyle>`_ -- **EXPERIMENTAL**
 
   A headless plugin that adds pre and post filters to convert incoming and outgoing editor content into CSS styling (use of span with style attributes), or semantic (use of <b>, </i>, type tags), for common formatting options.  The mode it uses for output is configurable.  The mode it uses for input is determined by browser to try and use the right input mode so that the native browser commands operate reasonably well on the input.
   
