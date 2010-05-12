@@ -36,10 +36,6 @@ Dojo Core
 
   needed: full page
 
-* `dojo.cookie <dojo/cookie>`_
-
-  needed: review
-
 * `dojo.currency <dojo/currency>`_
 
   needed: setting locale in Dojo, binary floating point issues
