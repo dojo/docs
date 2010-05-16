@@ -444,7 +444,7 @@ General enhancements:
 
 CSS3
 ----
-New dojo.style extension to support for the transform and transform-origin properties:
+New dojo.style extension to support the transform and transform-origin properties:
 
 .. code-block :: javascript
 
@@ -479,6 +479,10 @@ Editor
 * `dojox.editor.plugins.FindReplace <dojox/editor/plugins/FindReplace>`_ -- This plugin was updated to improve its layout and keyboard interaction based on input from a user experience development team.  Feature-wise it remains the same.
 
 * `dojox.editor.plugins.TextColor <dojox/editor/plugins/TextColor>`_ - A plugin that implements color selectors for text color and background color of test using the dojox.widget.ColorPicker instead of dijit.ColorPalette.
+
+* `dojox.editor.plugins.NormalizeStyle <dojox/editor/plugins/NormalizeStyle>`_ -- An experimental headless plugin that adds pre and post filters to convert incoming and outgoing editor content into CSS styling (use of span with style attributes), or semantic (use of <b>, </i>, type tags), for common formatting options. The mode it uses for output is configurable. The mode it uses for input is determined by browser to try and use the right input mode so that the native browser commands operate reasonably well on the input.
+
+
 
 
 Geo
