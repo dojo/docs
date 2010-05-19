@@ -44,7 +44,7 @@ Once it has been required in, all you have to do is include it in the list of ex
 
   <div dojoType="dijit.Editor" id="editor" extraPlugins="['normalizestyle']"></div>
 
-And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the PrettyPrint plugin!
+And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the NormalizeStyle plugin!
 
 Configuring NormalizeStyle Options
 ----------------------------------
@@ -57,7 +57,7 @@ The NormalizeStyle plugin supports two options that control how it formats the t
 | mode                              |String indicating whether to use semantic or css styling.            | NO                     |
 |                                   |Allowed values are: 'semantic' or 'css'.  The default is 'semantic'  |                        |
 +-----------------------------------+---------------------------------------------------------------------+------------------------+
-| condenseSpans                     |A boolean flag indicating that it should try to condense span tags   |                        |
+| condenseSpans                     |A boolean flag indicating that it should try to condense span tags   | NO                     |
 |                                   |with styles where possible.  The default is true.                    |                        |
 +-----------------------------------+---------------------------------------------------------------------+------------------------+
 
