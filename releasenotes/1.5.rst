@@ -431,8 +431,12 @@ Major update of charting themes:
 
   * Julie by Julie Santilli -- versatile clean theme with whopping 32 different gradients.
   * Chris by Christopher Anderson -- bright crisp-looking presentation-ready theme.
+  * Tom by Tom Trenka -- designed for dark backgrounds this theme makes your data to shine on a page.
   * PrimaryColors -- subtle gradients balance bright colors refreshing this classic primary color based theme.
-  * ThreeD -- extends PrimaryColors by adding 3D cylinder look to all bar- and column-based plots.
+  * ThreeD -- extends PrimaryColors by adding 3D cylinder look to all bar- and column-based plots, and subtle shadows to others.
+  * Electric by Tom Trenka -- present your data with bright neon colors on dark background.
+  * Charged by Tom Trenka -- a twin of Electric but for light backgrounds.
+  * Renkoo by Tom Trenka -- nostalgic pastel colors for dark backgrounds.
 
 General enhancements:
 
