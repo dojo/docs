@@ -28,8 +28,10 @@ API updates
 Task                                                      Done
 ========================================================  ===================
 Check/Repair Syntax errors                                tbd
-Copy exported API files into the release folder           tbd
+Copy exported API files into the release folder*          tbd
 ========================================================  ===================
+
+\* only necessary for final releases
 
 
 ============
@@ -43,8 +45,10 @@ Check Release Notes                                       tbd
 Export static docs                                        tbd
 Check/Repair Syntax errors                                tbd
 Quality check of exported docs                            tbd
-Copy exported docs into the release folder                tbd
+Copy exported docs into the release folder*               tbd
 ========================================================  ===================
+
+\* only necessary for final releases
 
 
 ================
@@ -55,10 +59,12 @@ Homepage updates
 Task                                                      Done
 ========================================================  ===================
 Update version at Download page                           tbd
-Update links to new release at Download page              tbd
-Update symlink current-stable/ to the new release         tbd
+Update links to new release at Download page*             tbd
+Update symlink current-stable/ to the new release*        tbd
 Blog post about new release                               tbd
 ========================================================  ===================
+
+\* only necessary for final releases
 
 
 ====================
