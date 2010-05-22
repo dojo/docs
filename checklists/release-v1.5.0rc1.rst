@@ -31,9 +31,9 @@ Task                                                      Done
 Check Release Notes                                       tbd
 Export static docs                                        tbd
 Check/Repair Syntax errors                                tbd
+Quality check of exported docs                            tbd
 Copy exported docs into the release folder                tbd
 ========================================================  ===================
-
 
 
 ================
@@ -43,6 +43,19 @@ Homepage updates
 ========================================================  ===================
 Task                                                      Done
 ========================================================  ===================
-Update Download page                                      tbd
+Update version at Download page                           tbd
+Update links to new release at Download page              tbd
+Update symlink current-stable/ to the new release         tbd
 Blog post about new release                               tbd
+========================================================  ===================
+
+
+============
+Trac updates
+============
+
+========================================================  ===================
+Task                                                      Done
+========================================================  ===================
+Update version numbers within trac                        tbd
 ========================================================  ===================
