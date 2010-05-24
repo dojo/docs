@@ -249,7 +249,7 @@ This will add the new remote pane after the first pane (0).
 Closing A Tab 
 -------------
 
-A common action for ``closable`` tabs is to register an ``onClose`` function on the child, returning true or false to indicate weather or not the closing should take place:
+A common action for ``closable`` tabs is to register an ``onClose`` function on the child, returning true or false to indicate whether or not the closing should take place:
 
 .. code-example::
 
