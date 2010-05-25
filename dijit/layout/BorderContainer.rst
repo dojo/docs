@@ -247,7 +247,7 @@ You can use a BorderContainer inside your own dijit template with a bit of care 
         I must master it,<br/>
         as I must master my life.
       </div>
-      div dojoType="dijit.layout.ContentPane" region="center" splitter="false">
+      <div dojoType="dijit.layout.ContentPane" region="center" splitter="false">
         <div id="mydijitDestination" style="width: 100%; height: 100%"></div>
       </div>
     </div>
