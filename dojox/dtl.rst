@@ -3,13 +3,17 @@
 dojox.dtl
 =========
 
-:Status: Draft
-:Version: experimental
 :Authors: Neil Roberts
+:Project owner: ?--
+:Available: since V?
+
+.. contents::
+   :depth: 2
 
 The Django Template Language (DTL) uses a system of templates that can be compiled
 once and rendered indefinitely afterward. Templates consist of simple tags
 and filters.
+
 
 ========
 Overview
@@ -48,6 +52,7 @@ allows for new DOM-centric capabilities.
       </ul>
     </div>
 
+
 =============
 Markup Syntax
 =============
@@ -55,6 +60,7 @@ Markup Syntax
 Since Dojo implements markup just as it is in Django's implementation, the best place to visit would be `The Django Book`_ or the `Django Template Language Documentation`_.
 
 But in case you are just itching to know what it looks like, it's made up of some simple parts: ``{% tags %}``, ``{{ variables }}``, ``{{ variables|filtered }}`` and ``{{ variables|more:"advanced"|filtering }}``. Sometimes tags have groupings of tags, sometimes they work alone.
+
 
 =====================
 Template Constructors
@@ -67,6 +73,7 @@ We have 2 base constructors when using DTL outside of a widget: ``dojox.dtl.Temp
 ``DomTemplate`` is an extension to ``Template``, which means in terms of size that it's the full size of ``Template`` plus some more code. But using ``DomTemplate``, you can do direct DOM manipulation. This means that if a node is inside of an ``{% if %}`` block, it will be removed from DOM if the logic is false, and will be added to DOM if the logic is true.
 
 Both of these constructors can take either plain text or a URL.
+
 
 ==============================
 Using the Template Constructor
@@ -123,6 +130,8 @@ To use, make sure you require the ``dojox.dtl.ext-dojo.NodeList`` module, which 
       dojo.query(".fruit").dtl("Fruit is: {{ fruit }}", { fruit: "apple" });
     </script>
 
+
+================
 Writing a Widget
 ================
 
@@ -153,6 +162,8 @@ The template will be rendered using the widget object as its context. If you don
       });
     </script>
 
+
+====================================
 Differences with the ``extends`` tag
 ====================================
 
@@ -180,6 +191,8 @@ The significantly better way is partly outlined in the section above on ``dojo.m
       }
     });
 
+
+=======================================
 Differences with the ``Context`` Object
 =======================================
 
