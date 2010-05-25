@@ -3,8 +3,8 @@
 dojox.gfx
 =========
 
-:Project owner: ?--
 :Authors: Eugene Lazutkin, Kun Xi, Chris Mitchell
+:Project owner: ?--
 :Available: since V?
 
 .. contents::
