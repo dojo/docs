@@ -191,6 +191,7 @@ You can use a BorderContainer inside your own dijit template with a bit of care 
 
 .. cv-compound::
   :djConfig: parseOnLoad: true
+  :type: inline
   :height: 400
   :width: 660
 
