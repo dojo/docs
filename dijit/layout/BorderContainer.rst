@@ -191,6 +191,7 @@ You can use a BorderContainer inside your own dijit template with a bit of care 
 
 .. cv-compound::
   :djConfig: parseOnLoad: true
+  :type: inline
   :height: 400
   :width: 660
 
@@ -217,7 +218,7 @@ You can use a BorderContainer inside your own dijit template with a bit of care 
                         '</div></div>'
             });
             // it's now safe to allow creation of our dijit instance
-            createButton.attr('disabled', false);
+            dijit.byId('createButton').attr('disabled', false);
         });
     </script>
 
@@ -225,9 +226,10 @@ You can use a BorderContainer inside your own dijit template with a bit of care 
   
   .. cv:: html
     :label: The markup
+
     <div dojoType="dijit.layout.BorderContainer" gutters="true" id="borderContainerThree" >
       <div dojoType="dijit.layout.ContentPane" region="top">
-        <div dojoType="dijit.form.Button" jsId="createButton" disabled="true">Create Inner Dijit
+        <div dojoType="dijit.form.Button" id="createButton" disabled="true">Create Inner Dijit
           <script type="dojo/connect" event="onClick">
             // Create a new instance
             var newdijit = new MyDijit( {}, dojo.create('DIV'));
