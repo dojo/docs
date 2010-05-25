@@ -38,7 +38,13 @@ Available methods
   * Text
   * TextPath
 
-* Shape Properties: Colors, Strokes, Fills & Fonts
+* Shape Properties
+
+  * Colors
+  * Strokes
+  * Fills
+  * Fonts
+
 * Common Shape Methods
 * Coordinates and Transformations
 * Utilities
