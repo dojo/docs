@@ -236,7 +236,7 @@ You can use a BorderContainer inside your own dijit template with a bit of care 
             // Create a new instance
             console.log("XXX Create dijit...");
             var newdijit = new MyDijit( {}, dojo.create('DIV'));
-            console.log("XXX place dijit...");
+            console.log("XXX place dijit in: ", dojo.byId('mydijitDestination'));
             newdijit.placeAt(dojo.byId('mydijitDestination'));
             newdijit.startup();
             console.log("XXX Create dijit OK");
