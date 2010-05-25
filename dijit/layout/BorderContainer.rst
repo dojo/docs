@@ -234,9 +234,12 @@ You can use a BorderContainer inside your own dijit template with a bit of care 
         <div dojoType="dijit.form.Button" id="createButton" disabled="true">Create Inner Dijit
           <script type="dojo/connect" event="onClick">
             // Create a new instance
+            console.log("XXX Create dijit...");
             var newdijit = new MyDijit( {}, dojo.create('DIV'));
+            console.log("XXX place dijit...");
             newdijit.placeAt(dojo.byId('mydijitDestination'));
             newdijit.startup();
+            console.log("XXX Create dijit OK");
           </script>
         </div>
       </div>
