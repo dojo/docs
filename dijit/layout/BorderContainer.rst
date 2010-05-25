@@ -203,7 +203,6 @@ You can use a BorderContainer inside your own dijit template with a bit of care 
         dojo.require("dijit.form.Button");
 
         dojo.addOnLoad(function() {
-            console.log("XXX onload here");
             dojo.declare("MyDijit",
                 [dijit._Widget, dijit._Templated], {
                     widgetsInTemplate: true,
@@ -217,10 +216,8 @@ You can use a BorderContainer inside your own dijit template with a bit of care 
                         '</div>' +
                         '</div></div>'
             });
-            console.log("XXX declare OK");
             // it's now safe to allow creation of our dijit instance
             dijit.byId('createButton').attr('disabled', false);
-            console.log("XXX onload finished");
         });
     </script>
 
@@ -234,12 +231,9 @@ You can use a BorderContainer inside your own dijit template with a bit of care 
         <div dojoType="dijit.form.Button" id="createButton" disabled="true">Create Inner Dijit
           <script type="dojo/connect" event="onClick">
             // Create a new instance
-            console.log("XXX Create dijit...");
             var newdijit = new MyDijit( {}, dojo.create('DIV'));
-            console.log("XXX place dijit in: ", dojo.byId('mydijitDestination'));
             newdijit.placeAt(dojo.byId('mydijitDestination'));
             newdijit.startup();
-            console.log("XXX Create dijit OK");
           </script>
         </div>
       </div>
@@ -254,7 +248,7 @@ You can use a BorderContainer inside your own dijit template with a bit of care 
         as I must master my life.
       </div>
       <div dojoType="dijit.layout.BorderContainer" liveSplitters="false" design="sidebar" region="center" id="mainSplit">
-        <div id="mydijitDestination"></div>
+        <div id="mydijitDestination" style="width: 100%; height: 100%"></div>
       </div>
     </div>
 
