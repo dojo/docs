@@ -198,29 +198,29 @@ You can use a BorderContainer inside your own dijit template with a bit of care 
     :label: The dojo requires
 
     <script type="text/javascript">
-		dojo.require("dijit.layout.BorderContainer");
-		dojo.require("dijit.layout.ContentPane");
-		dojo.require("dijit.form.Button");
+        dojo.require("dijit.layout.BorderContainer");
+        dojo.require("dijit.layout.ContentPane");
+        dojo.require("dijit.form.Button");
 
-		dojo.declare("MyDijit",
-			[dijit._Widget, dijit._Templated], {
-				widgetsInTemplate: true,
-				templateString: '<div style="width: 100%; height: 100%;">' +
-					'<div dojoType="dijit.layout.BorderContainer" design="headline" ' +
-					'  style="width: 100%; height: 100%;" dojoAttachPoint="outerBC">' +
-					'<div dojoType="dijit.layout.ContentPane" region="center">MyDijit - Center content goes here.</div>' +
-					'<div dojoType="dijit.layout.ContentPane" region="bottom">MyDijit - Bottom : ' +
-					' <div dojoType="dijit.form.Button">A Button</div>' +
-					'</div>' +
-					'</div></div>'
-		});
+        dojo.declare("MyDijit",
+            [dijit._Widget, dijit._Templated], {
+            widgetsInTemplate: true,
+            templateString: '<div style="width: 100%; height: 100%;">' +
+                '<div dojoType="dijit.layout.BorderContainer" design="headline" ' +
+                '  style="width: 100%; height: 100%;" dojoAttachPoint="outerBC">' +
+                '<div dojoType="dijit.layout.ContentPane" region="center">MyDijit - Center content goes here.</div>' +
+                '<div dojoType="dijit.layout.ContentPane" region="bottom">MyDijit - Bottom : ' +
+                ' <div dojoType="dijit.form.Button">A Button</div>' +
+                '</div>' +
+                '</div></div>'
+        });
 
-		dojo.addOnLoad(function() {
-			// Create a new instance
-			var newdijit = new MyDijit( {}, dojo.create('DIV'));
-			newdijit.placeAt(dojo.byId('mydijitDestination'));
-			newdijit.startup();
-		});
+        dojo.addOnLoad(function() {
+            // Create a new instance
+            var newdijit = new MyDijit( {}, dojo.create('DIV'));
+            newdijit.placeAt(dojo.byId('mydijitDestination'));
+            newdijit.startup();
+            });
     </script>
 
   The markup has to look as follows
@@ -231,13 +231,13 @@ You can use a BorderContainer inside your own dijit template with a bit of care 
     <div dojoType="dijit.layout.BorderContainer" gutters="true" id="borderContainerThree" >
       <div dojoType="dijit.layout.ContentPane" region="left" splitter="false">
         OUTER LEFT<br/>
-		This is my content.<br/>
-		There is much like it,<br/>
-		but this is mine.<br/>
-		My content is my best friend.<br/>
-		It is my life.<br/>
-		I must master it,<br/>
-		as I must master my life.
+        This is my content.<br/>
+        There is much like it,<br/>
+        but this is mine.<br/>
+        My content is my best friend.<br/>
+        It is my life.<br/>
+        I must master it,<br/>
+        as I must master my life.
       </div>
       <div dojoType="dijit.layout.BorderContainer" liveSplitters="false" design="sidebar" region="center" id="mainSplit">
         <div id="mydijitDestination"></div>
