@@ -214,13 +214,6 @@ You can use a BorderContainer inside your own dijit template with a bit of care 
                 '</div>' +
                 '</div></div>'
         });
-
-        dojo.addOnLoad(function() {
-            // Create a new instance
-            var newdijit = new MyDijit( {}, dojo.create('DIV'));
-            newdijit.placeAt(dojo.byId('mydijitDestination'));
-            newdijit.startup();
-            });
     </script>
 
   The markup has to look as follows
@@ -229,6 +222,16 @@ You can use a BorderContainer inside your own dijit template with a bit of care 
     :label: The markup
 
     <div dojoType="dijit.layout.BorderContainer" gutters="true" id="borderContainerThree" >
+      <div dojoType="dijit.layout.ContentPane" region="top">
+        <div dojoType="dijit.form.Button">
+          <script type="dojo/connect" method="onClick">
+            // Create a new instance
+            var newdijit = new MyDijit( {}, dojo.create('DIV'));
+            newdijit.placeAt(dojo.byId('mydijitDestination'));
+            newdijit.startup();
+          </script>
+        </div>
+      </div>
       <div dojoType="dijit.layout.ContentPane" region="left" splitter="false">
         OUTER LEFT<br/>
         This is my content.<br/>
