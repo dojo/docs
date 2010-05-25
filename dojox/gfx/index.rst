@@ -24,19 +24,19 @@ TODO: introduce the component/class/method
 Available methods
 =================
 
-* Individual graphics objects
+* `Individual graphics objects <dojox/gfx/graphicsObjects>`_
 
-  * Surface
-  * Group
-  * Rectangle
-  * Circle
-  * Ellipse
-  * Line
-  * Polyline
-  * Path
-  * Image
-  * Text
-  * TextPath
+  * `Surface <dojox/gfx/surface>`_
+  * `Group <dojox/gfx/group>`_
+  * `Rectangle <dojox/gfx/rectangle>`_
+  * `Circle <dojox/gfx/circle>`_
+  * `Ellipse <dojox/gfx/ellipse>`_
+  * `Line <dojox/gfx/line>`_
+  * `Polyline <dojox/gfx/polyline>`_
+  * `Path <dojox/gfx/path>`_
+  * `Image <dojox/gfx/image>`_
+  * `Text <dojox/gfx/text>`_
+  * `TextPath <dojox/gfx/textPath>`_
 
 * Shape Properties
 
