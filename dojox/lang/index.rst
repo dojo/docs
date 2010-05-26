@@ -8,7 +8,7 @@ dojox.lang
 .. contents::
    :depth: 2
 
-TODO: short summary of the component/class/method
+JavaScript language extensions for supporting AOP, FP and other language constructs.
 
 
 ========
