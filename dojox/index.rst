@@ -461,15 +461,15 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
 * `dojox.lang <dojox/lang>`_
 
-  Implementation of common functional operations, and provisions, aspect-oriented helpers
+  JavaScript language extensions for supporting AOP, FP and other language constructs
 
-  * `dojox.lang.observable <dojox/lang/observable>`_
+  * `dojox.lang.aspect <dojox/lang/aspect>`_
 
-    Provides construction of objects that such that property access and modification can be controlled
+    Provides a framework for aspect-oriented programming.
 
-  * `dojox.lang.typed <dojox/lang/typed>`_
+  * `dojox.lang.async <dojox/lang/async>`_
 
-    Provides type checking for JavaScript classes, enforcing types on properties and method parameters using JSON Schema definitions
+    Provides helpers for event-driven programming.
 
   * `dojox.lang.docs <dojox/lang/docs>`_
 
@@ -478,6 +478,18 @@ These sections cover the available projects shipped with the Dojo Toolkit:
   * `dojox.lang.functional <dojox/lang/functional>`_
 
     Functional language constructs, including currying and lambda
+
+  * `dojox.lang.observable <dojox/lang/observable>`_
+
+    Provides construction of objects such that property access and modification can be controlled, i.e. provides a form of getters/setters
+
+  * `dojox.lang.oo <dojox/lang/oo>`_
+
+    Provides mixers to support traits and mixins for object-oriented programming.
+
+  * `dojox.lang.typed <dojox/lang/typed>`_
+
+    Provides type checking for JavaScript classes, enforcing types on properties and method parameters using JSON Schema definitions.
 
 * `dojox.layout <dojox/layout>`_
 
