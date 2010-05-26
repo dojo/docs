@@ -3,10 +3,8 @@
 dojox.lang.docs
 ===============
 
-:Status: Draft
-:Version: 1.0
 :Authors: Kris Zyp
-:Developers: Kris Zyp
+:Project owner: Kris Zyp
 :Available: since V1.2
 
 .. contents::
