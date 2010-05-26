@@ -3,9 +3,7 @@
 dojo._base.lang
 ===============
 
-:Status: Draft
-:Version: 1.0
-:Available: since V?
+:Available: since V0.9
 
 .. contents::
     :depth: 2
@@ -42,3 +40,10 @@ Features
 * `dojo.isAlien <dojo/isAlien>`_
 
   Checks if the parameter is a built-in function
+
+
+========
+See also
+========
+
+* `dojox.lang <dojox/lang/index>`_
