@@ -459,7 +459,7 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
   A query system for JavaScript objects
 
-* `dojox.lang <dojox/lang>`_
+* `dojox.lang <dojox/lang/index>`_
 
   JavaScript language extensions for supporting AOP, FP and other language constructs
 
