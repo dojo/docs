@@ -4,7 +4,7 @@ dojox.lang
 ==========
 
 :Authors: ?--
-:Project owner: ?--
+:Project owner: Eugene Lazutkin, Kris Zyp
 :Available: since V?
 
 .. contents::
@@ -13,41 +13,37 @@ dojox.lang
 TODO: short summary of the component/class/method
 
 
-============
-Introduction
-============
-
-TODO: introduce the component/class/method
-
-
-=====
-Usage
-=====
-
-TODO: how to use the component/class/method
-
-.. code-block :: javascript
- :linenos:
-
- <script type="text/javascript">
-   // your code
- </script>
-
-
-
 ========
-Examples
+Features
 ========
 
-Programmatic example
---------------------
+* `dojox.lang.functional <dojox/lang/functional>`_
 
-TODO: example
+  Provides lambda functions, and common functional operations.
 
-Declarative example
--------------------
+* `dojox.lang.aspect <dojox/lang/aspect>`_
 
-TODO: example
+  Provides a framework for aspect-oriented programming.
+
+* `dojox.lang.oo <dojox/lang/oo>`_
+
+  Provides mixers to support traits and mixins for object-oriented programming.
+
+* `dojox.lang.async <dojox/lang/async>`_
+
+  Provides helpers for event-driven programming.
+
+* `dojox.lang.observable <dojox/lang/observable>`_
+
+  Provides construction of objects that such that property access and modification can be controlled, i.e. provides a form of getters/setters.
+
+* `dojox.lang.typed <dojox/lang/typed>`_
+
+  Provides type checking for JavaScript classes, enforcing types on properties and method parameters using JSON Schema definitions.
+
+* `dojox.lang.docs <dojox/lang/docs>`_
+
+  Provides schemas on Dojo's classes from the API documentation. This can used for runtime access to class metadata information such as descriptions and type information. This can be used in conjunction with dojox.lang.typed to enforce typing on Dojo's classes using the API information.
 
 
 ========
