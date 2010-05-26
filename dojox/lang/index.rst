@@ -3,9 +3,7 @@
 dojox.lang
 ==========
 
-:Authors: Eugene Lazutkin, Kris Zyp
-:Project owner: Eugene Lazutkin, Kris Zyp
-:Available: since V?
+:Available: since V1.2
 
 .. contents::
    :depth: 2
