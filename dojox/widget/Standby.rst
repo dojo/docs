@@ -48,7 +48,8 @@ Constructor params/attributes
 +------------------------+--------------------------------------------------------------------------+--------------------+
 |zIndex                  |A specific zIndex value to position the overlay at.  Defaults to 'auto'   | 1.4                |
 |                        |which means the widget will try to figure out what to use.  For usage in  |                    |
-|                        |overlaying dijit.Dialog contained widgets, then you will need to set this |                    |
+|                        |overlaying dijit.Dialog contained widgets, or other containers that modify|                    |
+|                        |zIndex, , then you will need to set this                                  |                    |
 |                        |value to something like '1000'                                            |                    |
 +------------------------+--------------------------------------------------------------------------+--------------------+
 |duration                |The time, in milliseconds, that the fadein or fadeout should take.        | 1.4                |
