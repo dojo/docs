@@ -3,8 +3,6 @@
 dojox.widget.Standby
 ====================
 
-:Status: Draft
-:Version: 1.4
 :Project owner: Jared Jurkiewicz
 :Available: since V1.3
 
