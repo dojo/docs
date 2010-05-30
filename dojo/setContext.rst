@@ -3,8 +3,6 @@
 dojo.setContext
 ===============
 
-:Status: Draft
-:Version: 1.0
 :Available: since V?
 
 .. contents::
