@@ -3,15 +3,14 @@
 dojox.gfx.utils.toJson
 ======================
 
-:Status: Contributed, Draft
-:Version: 1.4
-:Author: Eugene Lazukin, Jared Jurkiewicz
+:Authors: Eugene Lazukin, Jared Jurkiewicz
 :Available: since V1.0
 
 .. contents::
   :depth: 2
 
-The *dojox.gfx.utils.toJson* is a helper function designed to serialize a dojox.gfx.Surface object into a JSON representation for sa variety of scenarios, such as sending it across the wire to save, using it to copy a surface, and so on.  The function itself is simple to use.  
+The *dojox.gfx.utils.toJson* is a helper function designed to serialize a dojox.gfx.Surface object into a JSON representation for a variety of scenarios, such as sending it across the wire to save, using it to copy a surface, and so on. The function itself is simple to use.  
+
 
 =====
 Usage
@@ -28,8 +27,13 @@ So basic usage is:
 
   var json = dojox.gfx.utils.toJson(mySurface);
 
-Functional Exaple 
------------------
+
+========
+Examples
+========
+
+Programmatic example
+--------------------
 
 .. cv-compound ::
   
