@@ -71,3 +71,10 @@ You can also run dojox.lang.typed.typeCheckAllClasses() to add type checking to 
  		...
 
 All classes declared with dojo.declare from this point on can have schema definitions for typing purposes.
+
+
+========
+See also
+========
+
+* `dojox.lang.docs <dojox/lang/docs>`_
