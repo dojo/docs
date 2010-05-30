@@ -43,6 +43,10 @@ Features
 
   Provides type checking for JavaScript classes, enforcing types on properties and method parameters using JSON Schema definitions.
 
+* `dojox.lang.utils <dojox/lang/utils>`_
+
+  Object handling utilities for changing two objects to the same type, updating properties of objects from another object and merge two objects.
+
 
 ========
 See also
