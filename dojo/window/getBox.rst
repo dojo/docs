@@ -15,7 +15,7 @@ Gets the size of the viewport.
 Introduction
 ============
 
-The viewport is the part of the document that's visible on the screen. This means, the part that's scrolled out of view is not part of the viewport. In order to get the size of the viewport, you can use dojo.window.getBox().
+The viewport is the part of the document that's visible on the screen. This means, the part of the document that's scrolled out of view is not part of the viewport. In order to get the size of the viewport, you can use dojo.window.getBox().
 
 =====
 Usage
