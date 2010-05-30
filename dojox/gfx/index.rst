@@ -20,9 +20,9 @@ Introduction
 TODO: introduce the component/class/method
 
 
-=================
-Available methods
-=================
+========
+Features
+========
 
 * `Individual graphics objects <dojox/gfx/graphicsObjects>`_
 
