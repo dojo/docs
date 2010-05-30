@@ -48,11 +48,6 @@ Programmatic example
 
 TODO: example
 
-Declarative example
--------------------
-
-TODO: example
-
 
 ========
 See also
