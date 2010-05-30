@@ -3,8 +3,6 @@
 dojo.window.scrollIntoView
 ==========================
 
-:Status: Draft
-:Version: 1.0
 :Available: since V1.5
 
 .. contents::
