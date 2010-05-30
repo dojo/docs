@@ -48,6 +48,9 @@ Features
 * Common Shape Methods
 * Coordinates and Transformations
 * Utilities
+
+  * `Serialization functions <dojox/gfx/utils>`_ to serialize a dojox.gfx.Surface into a variety of forms, from GFX Objects, to JSON, to even SVG text across all browsers
+
 * Considerations and Caveats
 
 
