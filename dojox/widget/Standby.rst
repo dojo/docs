@@ -84,8 +84,8 @@ As of the Dojo Toolkit 1.4, the Standby widget has added events that you can lis
 Examples
 ========
 
-Example 1: Basic usage
-----------------------
+Basic usage
+-----------
 
 .. code-example ::
   
@@ -138,8 +138,8 @@ Example 1: Basic usage
     </style>
 
 
-Example 2: Programmatic creation
---------------------------------
+Programmatic creation
+---------------------
 
 .. cv-compound ::
   
@@ -193,8 +193,8 @@ Example 2: Programmatic creation
     </style>
 
 
-Example 3: Changing overlay color
----------------------------------
+Changing overlay color
+----------------------
 
 .. cv-compound ::
   
@@ -247,8 +247,8 @@ Example 3: Changing overlay color
     </style>
 
 
-Example 4: Changing overlay color and image
--------------------------------------------
+Changing overlay color and image
+--------------------------------
 
 .. cv-compound ::
   
@@ -301,8 +301,10 @@ Example 4: Changing overlay color and image
     </style>
 
 
-Example 5: Showing curved border cloning (works on Firefix and Safari only)
----------------------------------------------------------------------------
+Showing curved border cloning 
+-----------------------------
+
+This example works on Firefix and Safari only.
 
 .. cv-compound ::
   
@@ -354,8 +356,8 @@ Example 5: Showing curved border cloning (works on Firefix and Safari only)
       }
     </style>
 
-Example 6: Overlaying a dijit.form.TextBox
-------------------------------------------
+Overlaying a dijit.form.TextBox
+-------------------------------
 
 .. cv-compound ::
   
