@@ -13,6 +13,7 @@ dojox.lang.docs
 **dojox.lang.docs** provides schemas on Dojo's classes based on the API 
 documentation. 
 
+
 ============
 Introduction
 ============
@@ -20,6 +21,7 @@ Introduction
 **dojox.lang.docs** can used for runtime access to class metadata information
 such as descriptions and type information. This can be used in conjunction with
 **dojox.lang.typed** to enforce typing on Dojo's classes using the API information.
+
 
 =====
 Usage
@@ -37,3 +39,10 @@ dojox.lang.docs should be used with the -src distribution of Dojo, as it must be
  dijit.ColorPalette.description -> description of ColorPalette
  dijit.ColorPalette.properties.defaultTimeout.description -> description of the defaultTimeout property
  dijit.ColorPalette.properties.defaultTimeout.type -> "number", the type of the defaultTimeout property
+
+
+========
+See also
+========
+
+* `dojox.lang.typed <dojox/lang/typed>`_
