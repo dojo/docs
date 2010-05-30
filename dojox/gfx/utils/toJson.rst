@@ -75,3 +75,12 @@ Programmatic example
     <b>JSON Serialization</b>
     <pre id="json">
     </pre>
+
+
+========
+See also
+========
+
+* `dojox.gfx.utils.fromJson <dojox/gfx/utils/fromJson>`_
+
+  Rebuild the dojox.gfx.Surface object from the provided JSON
