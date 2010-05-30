@@ -23,7 +23,7 @@ Usage
 
 .. code-block :: javascript
 
-  // Load the function:
+  // Load the window-related functions:
   dojo.require("dojo.window");
 
   // Get the viewport-size of the document:
