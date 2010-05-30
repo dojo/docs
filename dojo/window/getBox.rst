@@ -3,8 +3,6 @@
 dojo.window.getBox
 ==================
 
-:Status: Draft
-:Version: 1.0
 :Available: since V1.5
 
 .. contents::
@@ -12,11 +10,27 @@ dojo.window.getBox
 
 Gets the size of the viewport.
 
+
 ============
 Introduction
 ============
 
-Returns the size of the viewport (the part of the document that's visible on the screen, not including the part that's scrolled out of view).
+The viewport is the part of the document that's visible on the screen. This means, the part that's scrolled out of view is not part of the viewport. In order to get the size of the viewport, you can use dojo.window.getBox().
+
+=====
+Usage
+=====
+
+.. code-block :: javascript
+
+  // Load the function:
+  dojo.require("dojo.window");
+
+  // Get the viewport-size of the document:
+  var vs = dojo.window.getBox();
+
+  console.log('viewport size:', ' width: ', vs.w, ', height: ', vs.h, ', left: ', vs.l, ', top: ', vs.t);
+
 
 ========
 Examples
