@@ -53,4 +53,14 @@ TODO: example
 See also
 ========
 
-* TODO: links to other related articles
+* `dojox.gfx.utils.deserialize <dojox/gfx/utils/deserialize>`_
+
+  Rebuild the dojox.gfx.Surface object from the provided JS representation.
+
+* `dojox.gfx.utils.toJson <dojox/gfx/utils/toJson>`_
+
+  Serialize the passed surface object to JSON form
+
+* `dojox.gfx.utils.toSvg <dojox/gfx/utils/toSvg>`_ 
+
+  Serialize the passed surface object to SVG text.
