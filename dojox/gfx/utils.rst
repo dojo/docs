@@ -35,4 +35,4 @@ Provided functions
 
   Serialize the passed surface object to SVG text.
 
-  **Note:** This function call returns a deferred as serialization is async on some browsers.
+  **Note:** This function call is async on some browsers and returns a deferred object.
