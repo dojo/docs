@@ -4,20 +4,12 @@
 dojo.window
 ===========
 
-:Status: Draft
-:Version: 1.0
 :Available: since V1.5
 
 .. contents::
     :depth: 2
 
-
-
-============
-Introduction
-============
-
-**dojo.window** contains functions related to the viewport:
+**dojo.window** contains functions related to the viewport.
 
 
 ========
