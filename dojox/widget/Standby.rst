@@ -31,10 +31,8 @@ For more custom control, you can also set the 'color' attribute on the widget to
 
 Also, for Dojo 1.3 users ... please remember to import the dojox/widget/Standby/Standby.css into your page. The CSS contains specific positioning details for the divs in the template that are needed for it to display properly.  Dojo 1.4 users do not need a CSS import, the CSS was inlined into the template.
 
-
-=============================
 Constructor params/attributes
-=============================
+-----------------------------
 
 +------------------------+--------------------------------------------------------------------------+--------------------+
 |**Parameter**           |**Description**                                                           |**Available Since** |
@@ -65,18 +63,16 @@ Constructor params/attributes
 |                        |The default is 500ms.                                                     |                    |
 +------------------------+--------------------------------------------------------------------------+--------------------+
 
-================
 Useful functions
-================
+----------------
 
 The following functions are useful for controlling the state of the Standby widget:
 
 * **show** - This function triggers the fadeIn effect of the widget. It will do nothing if the widget is already displaying.
 * **hide** - This function triggers the fadeOut effect of the widget. It will do nothing if the widget is already hidden.
 
-======
 Events
-======
+------
 
 As of the Dojo Toolkit 1.4, the Standby widget has added events that you can listen to via dojo.connect. These events allow you to track the state and do things when it is shown or hidden. The events are denoted below:
 
