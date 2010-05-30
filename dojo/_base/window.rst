@@ -3,8 +3,6 @@
 dojo._base.window
 =================
 
-:Status: Draft
-:Version: 1.0
 :Available: since V?
 
 .. contents::
