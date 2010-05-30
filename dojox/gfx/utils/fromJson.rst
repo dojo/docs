@@ -3,15 +3,14 @@
 dojox.gfx.utils.fromJson
 ========================
 
-:Status: Contributed, Draft
-:Version: 1.4
-:Author: Eugene Lazukin, Jared Jurkiewicz
+:Authors: Eugene Lazukin, Jared Jurkiewicz
 :Available: since V1.0
 
 .. contents::
   :depth: 2
 
 The *dojox.gfx.utils.fromJson* is a helper function designed to take a JSON serialized dojox.gfx.Surface object and restore its contents into another dojox.gfx.Surface. The function itself is simple to use.  
+
 
 =====
 Usage
@@ -29,8 +28,13 @@ So basic usage is:
   var mySurface = dojox.gfx.createSurface(newNode, 200, 200);
   dojox.gfx.utils.toJson(mySurface, json);
 
-Functional Exaple 
------------------
+
+========
+Examples
+========
+
+Programmatic example
+--------------------
 
 .. cv-compound ::
   
@@ -72,3 +76,12 @@ Functional Exaple
     <b>JSON restored surface:</b>
     <div id="gfxObject2">
     </div>
+
+
+========
+See also
+========
+
+* `dojox.gfx.utils.toJson <dojox/gfx/utils/toJson>`_
+
+  Serialize the passed surface object to JSON form
