@@ -10,8 +10,7 @@ dojox.gfx.utils.serialize
 .. contents::
    :depth: 2
 
-TODO: short summary of the component/class/method
-
+Serialize the passed surface object to JavaScript Object form.
 
 ============
 Introduction
