@@ -455,6 +455,15 @@ If you have modified widget templates to dijit widgets, you will probably have s
 
 In addition, if you have custom CSS rules, there were a few changes about form widget classes with nested buttons, seen in http://bugs.dojotoolkit.org/changeset/21117:
 
+To update CSS class names in your custom CSS rules, run the script dijitCss14to15.sed in util/migration.   (If you are running windows you'll need cygwin or some unix utilities):
+
+.. code-block:: sh
+
+    sed -f dojoPath/util/migration/dijitCss14to15.sed -i .bak $(find myCssDirectoryPath -name '*.css' -print)
+
+
+Alternately you can manually update the names as per the tables below.
+
 Spinner:
 
 ====================================================== =============================================        ===========
