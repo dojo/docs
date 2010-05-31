@@ -247,109 +247,6 @@ After the steps above, CSS classes will automatically be applied to the slider d
 
 Note that there's no event handling code for hover/active/focus CSS needed in the widget template
 
-Migration
-~~~~~~~~~
-
-If you have modified widget templates to dijit widgets, you will probably have some onmouseenter/onmouseleave/onfocus/onblur handlers that should be removed.   In particular, _onMouse() has been removed from _FormWidget so you should remove calls to it from custom templates.
-
-In addition, if you have custom CSS rules, there were a few changes about form widget classes with nested buttons, seen in http://bugs.dojotoolkit.org/changeset/21117:
-
-Spinner:
-
-====================================================== =============================================        ===========
-Old                                                    New                                                  Description
-====================================================== =============================================        ===========
-.dijitSpinnerUpArrowHover .dijitUpArrowButton          .dijitSpinner .dijitUpArrowButtonHover
-.dijitSpinnerUpArrowActive .dijitUpArrowButton         .dijitSpinner .dijitUpArrowButtonActive
-.dijitSpinnerDownArrowHover .dijitDownArrowButton      .dijitSpinner .dijitDownArrowButtonHover
-.dijitSpinnerDownArrowActive .dijitDownArrowButton     .dijitSpinner .dijitDownArrowButtonActive
-====================================================== =============================================        ===========
-
-ComboButton:
-
-====================================================== =============================================        ===========
-Old                                                    New                                                  Description
-====================================================== =============================================        ===========
-.dijitComboButtonHover .dijitButtonContents            .dijitComboButton .dijitButtonContentsHover
-.dijitComboButtonActive .dijitButtonContents           .dijitComboButton .dijitButtonContentsActive
-.dijitComboButtonDownArrowHover .dijitDownArrowButton  .dijitComboButton .dijitDownArrowButtonHover
-.dijitComboButtonDownArrowActive .dijitDownArrowButton .dijitComboButton .dijitDownArrowButtonActive
-====================================================== =============================================        ===========
-
-
-Other changes occurred to CSS selectors to standardize the names, as follows:
-
-Accordion:
-
-====================================================== =============================================        ===========
-Old                                                    New                                                  Description
-====================================================== =============================================        ===========
-.dijitAccordionFocused                                 .dijitAccordionTitleFocused                          The accordion title is focused, not the pane contents
-.dijitAccordionTitle-hover                             .dijitAccordionTitleHover
-.dijitAccordionTitle-selected                          .dijitAccordionTitleSelected
-====================================================== =============================================        ===========
-
-In addition, the accordion layout was changed so that every pane is surrounded by a dijitInnerAccordionContainer <div>, which holds the title and the content, similar to a TitlePane.   If you are subclassing AccordionContainer or doing something else related to the internals of AccordionContainer you may need to update your code.
-
-TabContainer:
-
-====================================================== =============================================        ===========
-Old                                                    New                                                  Description
-====================================================== =============================================        ===========
-.dijitTab .closeButton                                 .dijitTabCloseButton
-.dijitTab .closeButton-hover                           .dijitTabCloseButtonHover                            close button for individual tab
-.dijitTabBtnDisabled                                   .dijitTabDisabled                                    left and right scroll buttons on tab strip
-.dijitTab .closeImage                                  .dijitTabCloseIcon                                   icon inside of close button
-.dijitTab .closeText                                   .dijitTabCloseText                                   text inside of close button, for a11y
-.tabStripButton img                                    .dijitTabStripIcon                                   class for tabstrip's scroll-left, scroll-right, and menu icons
-.tabStripMenuButton img                                .dijitTabStripMenuIcon                               icon to show menu (listing all tabs)
-.tabStripSlideButtonLeft img                           .dijitTabStripSlideLeftIcon                          icon to scroll tabs to left
-.tabStripSlideButtonRight img                          .dijitTabStripSlideRightIcon                         icon to scroll tabs to right
-====================================================== =============================================        ===========
-
-Dialog:
-
-====================================================== =============================================        ===========
-Old                                                    New                                                  Description
-====================================================== =============================================        ===========
-.dijitDialogCloseIcon-hover                            .dijitDialogCloseIconHover
-====================================================== =============================================        ===========
-
-Tree:
-
-====================================================== =============================================        ===========
-Old                                                    New                                                  Description
-====================================================== =============================================        ===========
-.dijitTreeNodeHover                                    .dijitTreeRowHover                                   on the TreeNode.rowNode domNode
-.dijitTreeNodeSelected                                 .dijitTreeRowSelected
-====================================================== =============================================        ===========
-
-
-TitlePane:
-
-====================================================== =============================================        ===========
-Old                                                    New                                                  Description
-====================================================== =============================================        ===========
-.dijitTitlePaneTitle-hover                             .dijitTitlePaneTitleHover
-====================================================== =============================================        ===========
-
-
-InlineEditBox:
-
-====================================================== =============================================        ===========
-Old                                                    New                                                  Description
-====================================================== =============================================        ===========
-.dijitInlineEditBoxDisplayMode-hover                   .dijitInlineEditBoxDisplayModeHover
-.dijitInlineEditBoxDisplayMode-disabled                .dijitInlineEditBoxDisplayModeDisabled               equivalent to a plain <div> or <span>, clicking has no effect
-====================================================== =============================================        ===========
-
-Editor:
-
-====================================================== =============================================        ===========
-Old                                                    New                                                  Description
-====================================================== =============================================        ===========
-.RichTextEditable                                      .dijitEditor                                         editor's root node
-====================================================== =============================================        ===========
 
 
 Tree
@@ -362,26 +259,6 @@ Decoupled concepts of "focused node" and "selected node", so that:
 2. Using arrow keys to navigate in a Tree will not change the selected item.
 
 
-dijit.popup
------------
-
-Dijit.popup shouldn't be shortcutted. This will work:
-
-.. code-block :: javascript
-
-   dijit.popup.open({...});
-
-However, this will not:
-
-.. code-block :: javascript
-
-   var open = dijit.popup.open;
-   open({...});
-
-
-form widgets
-------------
-If you have custom widgets extending _FormWidget, with templates referencing ${nameAttrSetting}, should change the reference to ${!nameAttrSetting}.  This is for issues with escaping special characters.
 
 new get()/set() and deprecated attr()
 -------------------------------------
@@ -530,3 +407,145 @@ Build System/buildscripts
 
 * By default the copyTests option defaults to false instead of true now. This was done to help reduce the possibility of copying tests in their builds, extra files and more security concerns to worry about.
 * Updated cldr scripts to use CLDR version 1.8 (see dojo.cldr)
+
+
+=========
+Migration
+=========
+
+As usual dojo is API backwards-compatible with previous 1.x versions.   There were however some CSS changes, plus a few gotchas.
+
+
+get/set
+-------
+attr() is being phased out in favor of get() and set().   The old attr() is still supported (with a deprecation warning) so old code
+should continue to work.
+
+However, if you have classes that define custom get()/set() methods, they will conflict with the get()/set() methods added to _Widget, or
+with any class that extends dojo._Stateful.
+
+dijit.popup
+-----------
+
+Dijit.popup shouldn't be shortcutted. This will work:
+
+.. code-block :: javascript
+
+   dijit.popup.open({...});
+
+However, this will not:
+
+.. code-block :: javascript
+
+   var open = dijit.popup.open;
+   open({...});
+
+
+form widgets
+------------
+If you have custom widgets extending _FormWidget, with templates referencing ${nameAttrSetting}, should change the reference to ${!nameAttrSetting}.  This is for issues with escaping special characters.
+
+
+Dijit CSS
+---------
+
+If you have modified widget templates to dijit widgets, you will probably have some onmouseenter/onmouseleave/onfocus/onblur handlers that should be removed.   In particular, _onMouse() has been removed from _FormWidget so you should remove calls to it from custom templates.
+
+In addition, if you have custom CSS rules, there were a few changes about form widget classes with nested buttons, seen in http://bugs.dojotoolkit.org/changeset/21117:
+
+Spinner:
+
+====================================================== =============================================        ===========
+Old                                                    New                                                  Description
+====================================================== =============================================        ===========
+.dijitSpinnerUpArrowHover .dijitUpArrowButton          .dijitSpinner .dijitUpArrowButtonHover
+.dijitSpinnerUpArrowActive .dijitUpArrowButton         .dijitSpinner .dijitUpArrowButtonActive
+.dijitSpinnerDownArrowHover .dijitDownArrowButton      .dijitSpinner .dijitDownArrowButtonHover
+.dijitSpinnerDownArrowActive .dijitDownArrowButton     .dijitSpinner .dijitDownArrowButtonActive
+====================================================== =============================================        ===========
+
+ComboButton:
+
+====================================================== =============================================        ===========
+Old                                                    New                                                  Description
+====================================================== =============================================        ===========
+.dijitComboButtonHover .dijitButtonContents            .dijitComboButton .dijitButtonContentsHover
+.dijitComboButtonActive .dijitButtonContents           .dijitComboButton .dijitButtonContentsActive
+.dijitComboButtonDownArrowHover .dijitDownArrowButton  .dijitComboButton .dijitDownArrowButtonHover
+.dijitComboButtonDownArrowActive .dijitDownArrowButton .dijitComboButton .dijitDownArrowButtonActive
+====================================================== =============================================        ===========
+
+
+Other changes occurred to CSS selectors to standardize the names, as follows:
+
+Accordion:
+
+====================================================== =============================================        ===========
+Old                                                    New                                                  Description
+====================================================== =============================================        ===========
+.dijitAccordionFocused                                 .dijitAccordionTitleFocused                          The accordion title is focused, not the pane contents
+.dijitAccordionTitle-hover                             .dijitAccordionTitleHover
+.dijitAccordionTitle-selected                          .dijitAccordionTitleSelected
+====================================================== =============================================        ===========
+
+In addition, the accordion layout was changed so that every pane is surrounded by a dijitInnerAccordionContainer <div>, which holds the title and the content, similar to a TitlePane.   If you are subclassing AccordionContainer or doing something else related to the internals of AccordionContainer you may need to update your code.
+
+TabContainer:
+
+====================================================== =============================================        ===========
+Old                                                    New                                                  Description
+====================================================== =============================================        ===========
+.dijitTab .closeButton                                 .dijitTabCloseButton
+.dijitTab .closeButton-hover                           .dijitTabCloseButtonHover                            close button for individual tab
+.dijitTabBtnDisabled                                   .dijitTabDisabled                                    left and right scroll buttons on tab strip
+.dijitTab .closeImage                                  .dijitTabCloseIcon                                   icon inside of close button
+.dijitTab .closeText                                   .dijitTabCloseText                                   text inside of close button, for a11y
+.tabStripButton img                                    .dijitTabStripIcon                                   class for tabstrip's scroll-left, scroll-right, and menu icons
+.tabStripMenuButton img                                .dijitTabStripMenuIcon                               icon to show menu (listing all tabs)
+.tabStripSlideButtonLeft img                           .dijitTabStripSlideLeftIcon                          icon to scroll tabs to left
+.tabStripSlideButtonRight img                          .dijitTabStripSlideRightIcon                         icon to scroll tabs to right
+====================================================== =============================================        ===========
+
+Dialog:
+
+====================================================== =============================================        ===========
+Old                                                    New                                                  Description
+====================================================== =============================================        ===========
+.dijitDialogCloseIcon-hover                            .dijitDialogCloseIconHover
+====================================================== =============================================        ===========
+
+Tree:
+
+====================================================== =============================================        ===========
+Old                                                    New                                                  Description
+====================================================== =============================================        ===========
+.dijitTreeNodeHover                                    .dijitTreeRowHover                                   on the TreeNode.rowNode domNode
+.dijitTreeNodeSelected                                 .dijitTreeRowSelected
+====================================================== =============================================        ===========
+
+
+TitlePane:
+
+====================================================== =============================================        ===========
+Old                                                    New                                                  Description
+====================================================== =============================================        ===========
+.dijitTitlePaneTitle-hover                             .dijitTitlePaneTitleHover
+====================================================== =============================================        ===========
+
+
+InlineEditBox:
+
+====================================================== =============================================        ===========
+Old                                                    New                                                  Description
+====================================================== =============================================        ===========
+.dijitInlineEditBoxDisplayMode-hover                   .dijitInlineEditBoxDisplayModeHover
+.dijitInlineEditBoxDisplayMode-disabled                .dijitInlineEditBoxDisplayModeDisabled               equivalent to a plain <div> or <span>, clicking has no effect
+====================================================== =============================================        ===========
+
+Editor:
+
+====================================================== =============================================        ===========
+Old                                                    New                                                  Description
+====================================================== =============================================        ===========
+.RichTextEditable                                      .dijitEditor                                         editor's root node
+====================================================== =============================================        ===========
