@@ -424,6 +424,8 @@ should continue to work.
 However, if you have classes that define custom get()/set() methods, they will conflict with the get()/set() methods added to _Widget, or
 with any class that extends dojo._Stateful.
 
+Also, dojo.connect() calls on attr() should be changed to connecting to set().
+
 dijit.popup
 -----------
 
