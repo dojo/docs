@@ -91,6 +91,11 @@ The Claro theme supports both left-to-right (LTR) and right-to-left (RTL) displa
 See `Themes and Theming <http://docs.dojocampus.org/dijit-themes>`_ for more information on Dijit themes (Claro, Tundra, Nihilo and Soria)
 and 1.5 theme updates.
 
+Notes on switching from another theme to claro
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Claro's .dijitTreeIcon class doesn't specify a width/height.   If you are defining custom icons for tree folders (or for anything else, for that matter), be sure that they specify a width/height.
+
 ColorPalette
 ------------
 
