@@ -161,8 +161,6 @@ DOM
 
     Destroy a DOM element
 
-  * NodeList.destroy
-
   * `dojo.empty <dojo/empty>`_
 
     Empty the contents of a DOM element
