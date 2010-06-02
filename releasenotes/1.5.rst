@@ -448,6 +448,24 @@ However, this will not:
    open({...});
 
 
+_Container.getChildren()
+------------------------
+Code like
+
+.. code-block :: javascript
+
+   myWidget.getChildren().forEach(...);
+
+should be changed to
+
+.. code-block :: javascript
+
+   dojo.forEach(myWidget.getChildren(), ...);
+
+
+Although getChildren() was always documented as returning a plain array, in version 1.4 it actually returned an array with methods like forEach() and filter(), so some user code may be depending on that.
+
+
 form widgets
 ------------
 If you have custom widgets extending _FormWidget, with templates referencing ${nameAttrSetting}, should change the reference to ${!nameAttrSetting}.  This is for issues with escaping special characters.
