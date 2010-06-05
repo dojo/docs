@@ -117,6 +117,12 @@ There are currently a small set of nice features that can be plugged into the di
   
   **This plugin is new to the Dojo Toolkit 1.5.**
 
+* `dojox.editor.plugins.StatusBar <dojox/editor/plugins/StatusBar>`_ -- **EXPERIMENTAL**
+
+  A plugin that adds a new footer bar to the editor that allows uders to post status to the editor.  The posting can be done through direct setting of the value attribute of editor.statusBar, or via a topic.  It also has an optional 'resizer' handle for use when the editor is outside of a sizing content pane.
+  
+  **This plugin is new to the Dojo Toolkit 1.5.**
+
 ========
 See Also
 ========
