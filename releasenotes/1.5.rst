@@ -368,8 +368,8 @@ Editor
 
 * `dojox.editor.plugins.NormalizeStyle <dojox/editor/plugins/NormalizeStyle>`_ -- An experimental headless plugin that adds pre and post filters to convert incoming and outgoing editor content into CSS styling (use of span with style attributes), or semantic (use of <b>, </i>, type tags), for common formatting options. The mode it uses for output is configurable. The mode it uses for input is determined by browser to try and use the right input mode so that the native browser commands operate reasonably well on the input.
 
-
-
+* `dojox.editor.plugins.StatusBar <dojox/editor/plugins/StatusBar>`_ --  An experimental plugin that adds a new footer bar to the editor that allows users to post status to the editor.  The posting can be done through direct setting of the value attribute of editor.statusBar, or via a topic.  It also has an optional 'resizer' handle for use when the editor is outside of a sizing content pane.
+  
 
 Geo
 ---
