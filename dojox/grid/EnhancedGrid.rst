@@ -23,7 +23,7 @@ EnhancedGrid (dojox.grid.EnhancedGrid) provides a rich set of features that enha
 * Selecting multiple rows or columns by swiping
 * Moving multiple rows or columns with drag-n-drop
 
-
+The following is a demo of the base Dojo DataGrid.
 
 
 
