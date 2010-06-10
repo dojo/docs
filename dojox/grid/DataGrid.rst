@@ -995,9 +995,9 @@ There are times when you may wish to update the content of the grid. For example
   var grid = dijit.byId("gridId");
   grid.setStore(newStore);
 
-====================
-Accessibility in 1.3
-====================
+===============================
+Accessibility in 1.3 and Beyond
+===============================
 
 Keyboard
 --------
@@ -1016,25 +1016,28 @@ Focus editable cells				  With focus on an editable cell, pressing tab will move
 Invoke an onrowclick event	                  If the grid row has an onrowclick event, it can be invoked by pressing enter with focus on a cell in the row.
 Select a row				          With focus on a cell in a row, press the space bar.
 Select contiguous rows			          Select a row, hold down the shift key and arrow up or down to a new row, press the space bar to select the rows between the original row and the new row.
-Select discontinuous rows		          Select a row,  hold down the control key and use the arrow keys to navigate to a new row,  continue holding the control key and press the space bar to add the new row to the selection. 
+Select discontinuous rows		          Select a row,  hold down the control key and use the arrow keys to navigate to a new row,  continue holding the control key and press the space bar to add the new row to the selection.
+Change column size (1.4)                          Set focus to a column header, hold shift+control and press the left or right arrow key so change the column size.
 ==============================================    ===============================================
 
 Known Issues
 ------------
 
-The DataGrid is still not completely accessible.
+The basic DataGrid is accessible however, some advanced features are not.  
 
 Keyboard
 ~~~~~~~~
 
-* There is currently no keyboard mechanism to change column size in 1.3. This has been fixed as of the April 11, 2009 build.  Set focus to a column header, hold shift+control and press the left or right arrow key so change the column size.
-* Keyboard navigation does NOT skip hidden columns. This has been fixed as of the April 18, 2009 build.  Hidden colummns are now skipped when arrowing through the column headers and data.
+* There is no keyboard mechanism to change column size in 1.3. This was added in 1.4.  
+* Keyboard navigation does NOT skip hidden columns in 1.3. This was fixed in 1.4. Hidden colummns are now skipped when arrowing through the column headers and data.
 * There is no keyboard support for drag and drop. If you rely on drag and drop to reorder columns, you must provide an alternative keyboard mechanisism (dialog box, context menu, etc.) to perform the same function. 
+* Tree Grids are not supported for Accessibility.
+* Developers who add additional features via scripting, such as hidden rows, are responsible for the accessibility of the added feature(s).
+* Invoking links within cells via the keyboard is not supported.  
 
 Screen Reader
 ~~~~~~~~~~~~~
-
-The JAWS 10 screen reader will announce the column headers and will speak the contents of cells.  However, it does not yet announce sorting order nor does it indicate whether or not a cell is editable. Accessibility work is continuing on the grid. 
+The DojoX DataGrid is a complicated widget created via Scripting.  It has been enabled with `WAI-ARIA <http://www.w3.org/WAI/intro/aria>`_  properties, but unfortunately the current browsers (Firefox 3.5+ and IE 8) and screen readers (JAWS 11) do not fully support all of those properties.  Thus, information about the grid readonly, row selection and column sort status are not spoken by the screen reader.  There is still additional work on the part of the screen reader for information about row and column headers to be correctly spoken as the user traverses the data cells. Better support is expected in future versions of the browsers and screen readers and the Dojox DataGrid will be updated, as necessary, to take advantage of the additional ARIA support.  
 
 
 ========
