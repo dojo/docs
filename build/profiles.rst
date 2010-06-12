@@ -115,7 +115,7 @@ layerDependencies
    Note
       All layers have an implicit dependency on dojo.js, but additional layerDependencies may be specified.
 
-      Layer dependency should be specified based on the perquisite layer's path, not its name.
+      Layer dependency should be specified based on the prerequisite layer's name property in the profile.  this is typically something like ``'../app/layer.js'``
 
 keepRequires
    Optional.  Changes the behavior of the layer dependency list, by causing specified ``dojo.require`` statements found within the dependent modules to not be included in the layer build.  
