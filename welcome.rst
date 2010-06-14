@@ -15,7 +15,7 @@ The Official Dojo Documentation
 `Getting started <quickstart/index>`_
 =====================================
 
-* `Getting started with some simple steps <quickstart/gettingstarted>`_
+* `Quick start instructions <quickstart/gettingstarted>`_
 
 * `Installation instructions & Tutorials <quickstart/index>`_
 
