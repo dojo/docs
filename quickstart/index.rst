@@ -12,15 +12,15 @@ Getting started
    :alt: Dojo Documentation
    :class: logowelcome;
 
-* `Getting started with some simple steps <quickstart/gettingstarted>`_
+* `Getting started fast <quickstart/gettingstarted>`_
 
 ============
 Installation
 ============
 
-* `How to Install the Dojo Toolkit <quickstart/install>`_
-* `Configuring Dojo <djConfig>`_
+* `Configuring Dojo with the djConfig variable <djConfig>`_
 * `Using Dojo from a CDN <quickstart/cross-domain>`_
+* `Local installation guide <quickstart/install>`_
 
 
 ==================
@@ -30,24 +30,22 @@ Base Functionality
 JavaScript Extensions
 ---------------------
 
-* `Functions used *everywhere* <quickstart/dojo-basics>`_
-* `Browser Sniffing <quickstart/browser-sniffing>`_
+* `Dojo basics <quickstart/dojo-basics>`_
 * `Arrays <quickstart/arrays>`_
+* `Browser Sniffing <quickstart/browser-sniffing>`_
 * `Parsing, Formatting and Validating Numbers and Dates <quickstart/numbersDates>`_
-* Todo: classes
-* Todo: inheritance
-* Todo: mixins
+* `OOP with dojo.declare() <quickstart/oop>`_
 
 AJAX
 ----
 
 * `AJAX <quickstart/ajax>`_
-* `Back buttons <quickstart/back>`_
+* `Back button and history integration <quickstart/back>`_
 
 DOM Manipulation & CSS Queries
 ------------------------------
 
-* `DOM Manipulation and dojo.query() <quickstart/dom>`_
+* `dojo.query() and other DOM magic <quickstart/dom>`_
 
 Events
 ------
