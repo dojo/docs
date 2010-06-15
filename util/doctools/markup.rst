@@ -74,7 +74,6 @@ Tags
 Tags are used to help the documentation tool group things by purpose and to provide other modifiers that the language doesn't necesarily provide (public, private, protected, etc.). Most tags are ad-hoc, which is to say you can invent your own, but several are pre-defined and used throughout Dojo code. Most UIs that show documentation understand at least public, private, protected, callback, and extension.
 Methods are assumed to be public, but are considered protected by default if they start with a _prefix. This means that the only time you'd use protected is if you don't want someone to use a function without a _prefix, and the only time you'd use private is if you don't want someone to touch your method at all.
 
-
 * **protected**: The method can be called or overriden by subclasses but should not be accessed (directly) by a user. For example: 
 
 	.. code-block :: javascript
@@ -110,6 +109,11 @@ Methods are assumed to be public, but are considered protected by default if the
 		        //            protected extension
 		        ...
 		}
+
+A Note
+------
+
+The current API tools (for displaying the documentation) not only assumes that any variable beginning with a _prefix is considered private, but also assumes that any method beginning with the phrase "on" is an event handler (i.e. onFoo, onClick, onmouseover).
 
 
 ====================
