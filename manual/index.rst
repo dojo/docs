@@ -67,7 +67,7 @@ Utilities and Miscellaneous
 The Dojo build system is used to create efficient optimized packages of JavaScript and CSS, customized for a given application or website. You can take advantage of this powerful tool to help structure your development and speed up your applications.
 
 `Multiple Versions of Dojo on a Page <multiversion/index>`_
------------------------------------
+------------------------------------------------------------
 
 Dojo has special configuration and build options to allow you to use different versions of Dojo on the same page.
 
