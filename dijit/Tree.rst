@@ -89,7 +89,7 @@ Creating a programmatic tree is very simple:
 
       dojo.addOnLoad(function(){
         var store = new dojo.data.ItemFileReadStore({
-            url: "http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/countries.json" 
+            url: "http://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/_data/countries.json" 
         });
         
         var treeModel = new dijit.tree.ForestStoreModel({
@@ -128,7 +128,7 @@ A markup tree
   .. cv:: html
 
     <div dojoType="dojo.data.ItemFileReadStore" jsId="continentStore"
-      url="http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/countries.json"></div>
+      url="http://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/_data/countries.json"></div>
     <div dojoType="dijit.tree.ForestStoreModel" jsId="continentModel" 
       store="continentStore" query="{type:'continent'}"
       rootId="continentRoot" rootLabel="Continents" childrenAttrs="children"></div>
