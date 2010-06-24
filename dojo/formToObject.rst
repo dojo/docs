@@ -15,7 +15,7 @@ Helper function for converting a HTML form to a JavaScript Object
 Introduction
 ============
 
-This function is one of many helpers used by the dojo Xhr subsystem for handling AJAX style requests. This particular function takes a HTML form node and converts the form elements into a JavaScript object of name/value pairs. Disabled form elements, buttons, and other non-valued HTML elements are skipped. The resulting object can then be processed however you like. Note that the form can contain dijit.form.* items.
+This function is one of many helpers used by the dojo Xhr subsystem for handling AJAX style requests. This particular function takes a HTML form node and converts the form elements into a JavaScript object of name/value pairs. Disabled form elements, buttons, elements with just an id attribute but no name attribute, and other non-valued HTML elements are skipped. The resulting object can then be processed however you like. Note that the form can contain dijit.form.* items.
 
 
 =====
