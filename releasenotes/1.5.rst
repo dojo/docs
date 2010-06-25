@@ -12,9 +12,18 @@ Browser support
 
 The following browsers are supported. If a browser is not supported, it still may work, but no effort is taken to test unsupported browsers and any specific fix for an unsupported browser is likely not to be done:
 
+
+---- /!\ '''Edit conflict - other version:''' ----
 * Firefox 3.0 through 3.6 supported.
 * Safari 4/Safari 5 and Chrome 4/Chrome 5.
 * IE6, IE7, IE8 all supported.
+
+---- /!\ '''Edit conflict - your version:''' ----
+* Firefox 3.0 through 3.6
+* Safari 4/Safari 5 and Chrome 4/Chrome 5.
+* IE6, IE7, IE8
+
+---- /!\ '''End of edit conflict''' ----
 * Latest Opera (Opera 10) (Dojo core only).
 
 
