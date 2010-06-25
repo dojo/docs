@@ -6,6 +6,18 @@ Dojo 1.5 Release Notes
 .. contents::
    :depth: 3
 
+===============
+Browser support
+===============
+
+The following browsers are supported. If a browser is not supported, it still may work, but no effort is taken to test unsupported browsers and any specific fix for an unsupported browser is likely not to be done:
+
+* Firefox 3.0 through 3.6 supported.
+* Safari 4/Safari 5 and Chrome 3/Chrome 4, but not previous versions.
+* IE6, IE7, IE8 all supported.
+* Latest Opera (Opera 10) (Dojo core only).
+
+
 =========
 Dojo Core
 =========
@@ -313,7 +325,7 @@ Major update of charting themes:
 
   * Julie by Julie Santilli -- versatile clean theme with whopping 32 different gradients.
   * Chris by Christopher Anderson -- bright crisp-looking presentation-ready theme.
-  * Tom by Tom Trenka -- designed for dark backgrounds this theme makes your data to shine on a page.
+  * Tom by Tom Trenka -- designed for dark backgrounds this theme makes your data shine on a page.
   * PrimaryColors -- subtle gradients balance bright colors refreshing this classic primary color based theme.
   * ThreeD -- extends PrimaryColors by adding 3D cylinder look to all bar- and column-based plots, and subtle shadows to others.
   * Electric by Tom Trenka -- present your data with bright neon colors on dark background.
@@ -323,9 +335,15 @@ Major update of charting themes:
 General enhancements:
 
 * Several incremental enhancements to the DataPresentation widget, including support for custom tooltips, layout/wrapping options for the chart legend, ability to suppress the chart labels, and 'hooks' into the rendering.
-* Bar and Column-based charts now support objects as values (you can specify custom tooltips, colors, fills now).
+* Bar and Column-based charts now support objects as values (you can specify custom tooltips, colors, fills).
 * Charting animation (grow/zoom) for areas, lines and markers plot.
 * Support for missing values (nulls) across all plots.
+* Added new type of axis: the Invisible axis. WHile it is not drawn (like the empty axis), you can still affect plot's behavior by change geometric properties of this axis.
+* Added light-weight reordering of plots and series.
+* Event-related enhancements:
+
+  * "Indirect" events are sent to all subscribers to notify them that the other plot has an event in progress. It gives them chance to update controlled visuals and UI elements.
+
 * Numerous bugfixes.
 
 CSS3
@@ -369,7 +387,7 @@ Editor
 * `dojox.editor.plugins.NormalizeStyle <dojox/editor/plugins/NormalizeStyle>`_ -- An experimental headless plugin that adds pre and post filters to convert incoming and outgoing editor content into CSS styling (use of span with style attributes), or semantic (use of <b>, </i>, type tags), for common formatting options. The mode it uses for output is configurable. The mode it uses for input is determined by browser to try and use the right input mode so that the native browser commands operate reasonably well on the input.
 
 * `dojox.editor.plugins.StatusBar <dojox/editor/plugins/StatusBar>`_ --  An experimental plugin that adds a new footer bar to the editor that allows users to post status to the editor.  The posting can be done through direct setting of the value attribute of editor.statusBar, or via a topic.  It also has an optional 'resizer' handle for use when the editor is outside of a sizing content pane.
-  
+
 
 Geo
 ---
