@@ -13,7 +13,7 @@ Browser support
 The following browsers are supported. If a browser is not supported, it still may work, but no effort is taken to test unsupported browsers and any specific fix for an unsupported browser is likely not to be done:
 
 * Firefox 3.0 through 3.6 supported.
-* Safari 4/Safari 5 and Chrome 3/Chrome 4, but not previous versions.
+* Safari 4/Safari 5 and Chrome 4/Chrome 5.
 * IE6, IE7, IE8 all supported.
 * Latest Opera (Opera 10) (Dojo core only).
 
