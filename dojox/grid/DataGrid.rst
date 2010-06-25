@@ -203,7 +203,9 @@ columnReordering
 headerMenu
   A menu can be associated with a header.  This attribute names a ``dijit.Menu`` which is displayed when the header is clicked.
 autoHeight
-  A value that defines the height of the table in rows.
+  If true, automatically expand grid's height to fit data. If numeric, defines the maximum rows of data displayed (if the grid contains less than **autoHeight** rows, it will be shrunk).
+autoWidth
+  Automatically set width depending on columns width
 singleClickEdit
   A boolean value that defines whether a single or double click is needed to enter cell editing mode.
 loadingMessage
