@@ -339,13 +339,15 @@ General enhancements:
 * Bar and Column-based charts now support objects as values (you can specify custom tooltips, colors, fills).
 * Charting animation (grow/zoom) for areas, lines and markers plot.
 * Support for missing values (nulls) across all plots.
-* Added new type of axis: the Invisible axis. WHile it is not drawn (like the empty axis), you can still affect plot's behavior by change geometric properties of this axis.
+* Added new type of axis: the Invisible axis. While it is not drawn (like the empty axis), you can still affect plot's behavior by change geometric properties of this axis.
 * Added light-weight reordering of plots and series.
 * Event-related enhancements:
 
-  * "Indirect" events are sent to all subscribers to notify them that the other plot has an event in progress. It gives them chance to update controlled visuals and UI elements.
+  * "Indirect" events are sent to all subscribers to notify them that the other plot has an event in progress. It gives them a chance to update controlled visuals and UI elements.
+  * Programmatic events: fire existing events, or your own synthetic events causing actions to modify your plots dynamically.
 
-* Numerous bugfixes.
+* Added DataSeries: a bridge for dojo.data stores. It can be used as a regular series, and supports all proper dojo.data APIs including the notifications updating a chart on the fly, when the underlying data is updated.
+* Numerous bug fixes.
 
 CSS3
 ----
