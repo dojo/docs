@@ -123,14 +123,15 @@ The dialog widget now supports an "action bar", a gray bar at the bottom of the 
 
 .. code-block :: html
 
-	<div dojoType="dijit.Dialog">
+	<div dojoType="dijit.Dialog" id="myDialog">
 		<div class="dijitDialogPaneContentArea">
 			...
 		</div>
 
 		<div class="dijitDialogPaneActionBar">
 			<button dojoType="dijit.form.Button" type="submit" id="ok">OK</button>
-			<button dojoType="dijit.form.Button" type="cancel" id="cancel">Cancel</button>
+			<button dojoType="dijit.form.Button" type="button" onClick="dijit.byId('myDialog').onCancel();" 
+					id="cancel">Cancel</button>
 		</div>
 	</div>
 
