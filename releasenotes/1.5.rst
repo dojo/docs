@@ -405,6 +405,21 @@ GFX
 * SVGWeb (SVG on Flash) is supported as an option for SVG renderer. Useful if you stuck with supporting IE6-IE8 and don't want to use VML.
 * Numerous bugfixes.
 
+Lang
+----
+
+Added new module: `dojox.lang.async <dojox/lang/async>`_. It helps to arrange the order of asynchronous operations (the ones that return dojo.Deferred). Following arrangements are supported:
+
+* Sequentially: start the next operation, as soon as the previous one is finished successfully.
+* In parallel: start all operations at the same time and wait for all of them to finish.
+* Competitively: start all operations in parallel and wait until the first one finishes, then cancel the remaining ones.
+* Selectively: emulates the switch() statement --- run an operation asynchronously, and depending on its result select and run another one from an array of choices.
+* Selectively II: emulates the if() statement --- run an operation asynchronously, and depending on its result select and run another one from two choices.
+* Continuously: emulates the while() loop --- run an operation asynchronously, and depending on its result run another operation asynchronously, and repeats the loop, or break the loop.
+
+Adapter modules are provided for common asynchronous operations: events, topics, and timers.
+
+Using this module it is possible to build highly asynchronous complex operations using simple building blocks.
 
 Layout
 ------
