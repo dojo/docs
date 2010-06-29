@@ -508,6 +508,25 @@ form widgets
 If you have custom widgets extending _FormWidget, with templates referencing ${nameAttrSetting}, should change the reference to ${!nameAttrSetting}.  This is for issues with escaping special characters.
 
 
+TextBox
+-------
+The TextBox template was changed to be similar to ValidationTextBox, where the <input> is surrounded by a <div>.
+
+For a TextBox with id=foo, to apply styling to the <input>, as before, make a rule on #foo:
+
+.. code-block :: css
+
+    #foo { font: ... }
+
+To apply styling to the outer node, make a rule on #widget_foo:
+
+.. code-block :: css
+
+    #widget_foo { margin: 2em; }
+
+
+See `#11133 <http://bugs.dojotoolkit.org/ticket/11133>`_ for more details.
+
 Dijit CSS
 ---------
 
