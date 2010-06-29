@@ -109,6 +109,16 @@ Notes on switching from another theme to claro
 
 Claro's .dijitTreeIcon class doesn't specify a width/height.   If you are defining custom icons for tree folders (or for anything else, for that matter), be sure that they specify a width/height.
 
+Also, in TabContainer, tabs without icons will be <16px tall, which will cause a height disparity if some of your tabs have icons and others don't.  You can either add a min-height rule:
+
+.. code-block :: css
+
+    .dijitTab .tabLabel {
+	min-height: 12px;
+    }
+
+or alternately specify a 1x16 blank icon for all of your "non-icon" tabs.
+
 ColorPalette
 ------------
 
