@@ -140,7 +140,7 @@ The dialog widget now supports an "action bar", a gray bar at the bottom of the 
 
 		<div class="dijitDialogPaneActionBar">
 			<button dojoType="dijit.form.Button" type="submit" id="ok">OK</button>
-			<button dojoType="dijit.form.Button" type="button" onClick="dijit.byId('myDialog').onCancel();" 
+			<button dojoType="dijit.form.Button" type="button" onClick="dijit.byId('myDialog').onCancel();"
 					id="cancel">Cancel</button>
 		</div>
 	</div>
@@ -358,6 +358,7 @@ General enhancements:
   * Programmatic events: fire existing events, or your own synthetic events causing actions to modify your plots dynamically.
 
 * Added DataSeries: a bridge for dojo.data stores. It can be used as a regular series, and supports all proper dojo.data APIs including the notifications updating a chart on the fly, when the underlying data is updated.
+* Added rotated axis labels.
 * Numerous bug fixes.
 
 CSS3
