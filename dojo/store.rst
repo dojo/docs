@@ -172,3 +172,22 @@ things would be in place to achieve anything you could with Dojo Data.
 The one thing I did intentionally omit was getLabel/getLabelAttributes,
 as I think is clearly a UI concern. It would be easy enough to include a
 labelProperty property on the store, but I don't think it is necessary.
+
+
+= Core Functionality to be Shipped with Dojo =
+
+Having an interface/API is not enough, we want to ship good out-of-the-box object stores that developers can readily utilize for common use cases and easily extend and customize. We also need good modular components for building stores. We could have the following two core stores based on the typical pattern of in-memory and server-based data stores:
+
+* dojo.store.Memory - An in-memory object store that queries, modifies, and accesses client-side in-memory data. This would fulfill the conceptual role of ItemFileReadStore/ItemFileWriteStore
+
+* dojo.store.JsonRest - An server-oriented JSON/REST object store that queries, modifies, and accesses data through RESTful HTTP requests. This would fulfill the conceptual role of JsonRestStore/QueryReadStore/ServiceStore.
+
+We should also move in the direction of providing composable functionality by providing store "wrappers" or store "middleware" that takes a store and add functionality. A couple key store wrappers:
+
+* dojo.store.Cache - Adds caching capability to the store. This eliminates the need for a base store to deal with caching concerns.
+
+* dojo.store.JsonSchema - Handles validation of data through JSON Schema as well object referencing through JSON Schema's link definitions.
+
+With this one could easily mix and match wrappers and base stores to achieve various types of functionality.
+
+Another utility module would be a query helper.
