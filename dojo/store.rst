@@ -32,6 +32,7 @@ exactly the same for sync and async except that async returns
 promises/deferreds instead of plain values. The interface requires no
 other knowledge of specific callbacks to operate.
 
+* Objects returned from the data store (via query or get) should be plain JavaScript objects whose properties can be typically accessed and modified through standard property access.
 
 = Dojo Store API = 
 
@@ -75,7 +76,7 @@ available in this property. This is included so an additional layer
 could add referential integrity cleanup on object deletion (which is a
 pain to implement).
 
-The following methods are defined as possible methods available on the
+Objects returned from store should primarily be treated as normal hash objects and have standard JavaScript properties to access their data and modify their data. However, the following methods are defined as possible methods that may also be available on the
 objects returned by the store (once again, they are optional). These methods should *not* be the
 object's own properties (hasOwnProperty(methodName) should return
 false), but rather should be inherited from one of the object's
