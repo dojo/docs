@@ -415,6 +415,7 @@ GFX
 
 * VML renderer simulates linear gradients of SVG now.
 * SVGWeb (SVG on Flash) is supported as an option for SVG renderer. Useful if you stuck with supporting IE6-IE8 and don't want to use VML.
+* Batch support for SVG operations speeds up the creation time for big scenes.
 * Numerous bugfixes.
 
 Lang
