@@ -32,6 +32,7 @@ exactly the same for sync and async except that async returns
 promises/deferreds instead of plain values. The interface requires no
 other knowledge of specific callbacks to operate.
 
+
 = Dojo Store API = 
 
 Every method in the API is optional, it's presence indicating support for that feature. Every method can return a promise (except where noted otherwise) to represent an asynchronous completion of the action. (Some of these are still wavering a bit in W3C's object store API):
@@ -48,44 +49,47 @@ count - Number of objects to return
 sort - Follows the Dojo Data sort definition
 queryOptions - Follows the Dojo Data queryOptions definition
 
+* put(object, options) - Saves the given object. options.id (optional) indicates the identifier.
 
-put(object, options) - Saves the given object. options.overwrite
-indicates if the object should be a new object or an update (or either
-if overwrite is not included).
+* add(object, options) - Create a new object. options.id (optional) indicates the identifier.
 
-delete(id) - Delete the object by id.
+* delete(id) - Delete the object by id.
 
-transaction() - Starts a transaction and returns a transaction object.
+* transaction() - Starts a transaction and returns a transaction object.
 The transaction object should include:
-commit() - Commits all the changes that took place during the transaction.
-abort() - Aborts all the changes that took place during the transaction.
+
+** commit() - Commits all the changes that took place during the transaction.
+
+** abort() - Aborts all the changes that took place during the transaction.
+
 Note that a store user might not call transaction() prior to using put,
 delete, etc. in which case these operations effectively could be thought
 of as  "auto-commit" style actions.
 
 Store properties:
-idProperty - Name of the property to use as the identifier
 
-data - If the store has a collection of cached objects, it can make this
+* idProperty - Name of the property to use as the identifier
+
+* data - If the store has a collection of cached objects, it can make this
 available in this property. This is included so an additional layer
 could add referential integrity cleanup on object deletion (which is a
 pain to implement).
 
 The following methods are defined as possible methods available on the
-objects returned by the store. These methods should *not* be the
+objects returned by the store (once again, they are optional). These methods should *not* be the
 object's own properties (hasOwnProperty(methodName) should return
 false), but rather should be inherited from one of the object's
 prototypes). This is to ensure ease of enumeration of data properties.
 Once again, all of these methods are optional, and all may return
 promises if the operation will be performed asynchronously:
 
-get(property) - Returns the value of the given property. Normally
+* get(property) - Returns the value of the given property. Normally
 property values can be accessed with normal JavaScript member expresions
 (object.property -> value), but if get() is implemented, than
 get(property) should be used to retrieve property values. This allows
 for lazy evaluation of properties.
 
-set(property, value) - Sets the property value. Normally property values
+* set(property, value) - Sets the property value. Normally property values
 can be mutated with normal JavaScript member expresions (object.property
 = value), but if set() is implemented, than set(property, value) should
 be used to modify property values.
@@ -96,11 +100,7 @@ indicates that the object may not be fully loaded.
 save() - Saves the loaded object. This should generally be shorthand for
 store.put(object);
 
-subscribe(event, callback) - Listens for changes to this object.
-[Perhaps using the events from resultSet.subscribe (except that onAdd
-can't be fired for existing objects). I am not sure about this one yet.
-I do think that it would be nice if we could provide the same interface
-for subscribing to property changes for these store objects and widgets.]
+watch(property, callback) - Listens for changes to this object.
 
 getId() - Normally a store just uses a single property (identified by
 idProperty) for the object identity. However, a store may provide
@@ -112,6 +112,7 @@ attribution, cache directives, history, or version information.
 (addresses #3126, #3127)
 
 == Subscriptions/Watches ==
+
 One can subscribe to changes in data through the subscribe method on the result set (the object returned from a query). The subscribe method has the following signature:
 
   subscribe(event, callback)
