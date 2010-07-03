@@ -17,9 +17,9 @@ Dojo Store is an uniform interface for the access and manipulation of stored dat
 Design Goals
 ============
 
-* We want to make it very easy to for people to implement their own object stores, essentially one should easily be able to write something up handle the communication to their server without having to deal with much more than writing the XHR calls. Higher level functionality can be built on this. A key to this strategy is a very simple API, that requires a minimal amount of required complexity to implement.
+* We want to make it very easy to for people to implement their own object stores, essentially one should easily be able to write something up handle the communication to their server without having to deal with much more than writing the `XHR calls <dojo/_base/xhr>`_. Higher level functionality can be built on this. A key to this strategy is a very simple API, that requires a minimal amount of required complexity to implement.
 
-* We want to maintain the same level of functionality that Dojo Data provided. While there will be very little (if any) core parts of the object store API that MUST be implemented, there will numerous parts that can be implemented to incrementally add functionality. Optional functionality will be determined through feature detection (checking to see if a method exists). As I noted in the meeting, having lots of optional features does shift some complexity from the store implementors to the anyone who wishes to use stores in a completely generic fashion. However, I believe that our widgets are the primary generic store users, and that most application developers are working with a known store, with a known set of implemented features. In particular, if they know they are using a sync store, the interaction with the store becomes extremely simple. For now I will suggest that basically every method is optional, and the presence of the method indicates support for that feature. However, practically one would at least need to implement get and query, a store without read capabilities is pretty useless, but that should be self-evident.
+* We want to maintain the same level of functionality that `Dojo Data <dojo/data>`_ provided. While there will be very little (if any) core parts of the object store API that MUST be implemented, there will numerous parts that can be implemented to incrementally add functionality. Optional functionality will be determined through feature detection (checking to see if a method exists). As I noted in the meeting, having lots of optional features does shift some complexity from the store implementors to the anyone who wishes to use stores in a completely generic fashion. However, I believe that our widgets are the primary generic store users, and that most application developers are working with a known store, with a known set of implemented features. In particular, if they know they are using a sync store, the interaction with the store becomes extremely simple. For now I will suggest that basically every method is optional, and the presence of the method indicates support for that feature. However, practically one would at least need to implement get and query, a store without read capabilities is pretty useless, but that should be self-evident.
 
 * Every method can be implemented sync or async. The interface is the exactly the same for sync and async except that async returns promises/deferreds instead of plain values. The interface requires no other knowledge of specific callbacks to operate.
 
@@ -32,39 +32,32 @@ Dojo Store API
 
 Every method in the API is optional, it's presence indicating support for that feature. Every method can return a promise (except where noted otherwise) to represent an asynchronous completion of the action. (Some of these are still wavering a bit in W3C's object store API):
 
-* get(id)
+=====================  ======================================================================
+Method                 Description
+=====================  ======================================================================
+get(id)                Retrieves an object by its identifier, returning the object.
 
-  Retrieves an object by its identifier, returning the object.
+query(query, options)  Queries the store using the provided query. The returned value should be an array or a promise with forEach, map, filter, reduce, subscribe, and close methods, and a totalCount property (the totalCount may be a promise). The options parameter is modeled after the Dojo Data keywordArgs and may include:
 
-* query(query, options)
+                       * start - Starting offset
+                       * count - Number of objects to return
+                       * sort - Follows the Dojo Data sort definition
+                       * queryOptions - Follows the Dojo Data queryOptions definition
 
-  Queries the store using the provided query. The returned value should be an array or a promise with forEach, map, filter, reduce, subscribe, and close methods, and a totalCount property (the totalCount may be a promise). The options parameter is modeled after the Dojo Data keywordArgs and may include:
+put(object, options)   Saves the given object. options.id (optional) indicates the identifier.
 
-   * start - Starting offset
-   * count - Number of objects to return
-   * sort - Follows the Dojo Data sort definition
-   * queryOptions - Follows the Dojo Data queryOptions definition
+add(object, options)   Create a new object. options.id (optional) indicates the identifier.
 
-* put(object, options)
+delete(id)             Delete the object by id.
 
-  Saves the given object. options.id (optional) indicates the identifier.
+transaction()          Starts a transaction and returns a transaction object. The transaction object should include:
 
-* add(object, options)
+                       * commit() - Commits all the changes that took place during the transaction.
+                       * abort() - Aborts all the changes that took place during the transaction.
 
-  Create a new object. options.id (optional) indicates the identifier.
+                       Note that a store user might not call transaction() prior to using put, delete, etc. in which case these operations effectively could be thought of as  "auto-commit" style actions.
+=====================  ======================================================================
 
-* delete(id)
-
-  Delete the object by id.
-
-* transaction()
-
-  Starts a transaction and returns a transaction object. The transaction object should include:
-
-   * commit() - Commits all the changes that took place during the transaction.
-   * abort() - Aborts all the changes that took place during the transaction.
-
-  Note that a store user might not call transaction() prior to using put, delete, etc. in which case these operations effectively could be thought of as  "auto-commit" style actions.
 
 Store properties:
 
