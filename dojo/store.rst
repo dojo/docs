@@ -56,17 +56,29 @@ Objects returned from store should primarily be treated as normal hash objects a
 
 * get(property) - Returns the value of the given property. Normally property values can be accessed with normal JavaScript member expresions (object.property -> value), but if get() is implemented, than get(property) should be used to retrieve property values. This allows for lazy evaluation of properties.
 
-* set(property, value) - Sets the property value. Normally property values can be mutated with normal JavaScript member expresions (object.property = value), but if set() is implemented, than set(property, value) should be used to modify property values.
+* set(property, value)
 
-* load() - Fully loads the current object. If this method is present, it indicates that the object may not be fully loaded.
+  Sets the property value. Normally property values can be mutated with normal JavaScript member expresions (object.property = value), but if set() is implemented, than set(property, value) should be used to modify property values.
 
-* save() - Saves the loaded object. This should generally be shorthand for store.put(object);
+* load()
 
-* watch(property, callback) - Listens for changes to this object.
+  Fully loads the current object. If this method is present, it indicates that the object may not be fully loaded.
 
-* getId() - Normally a store just uses a single property (identified by idProperty) for the object identity. However, a store may provide getId() on the objects to create more complex identities (such as composite identities).
+* save()
 
-* getMetadata() - Returns any metadata about the object. This may include attribution, cache directives, history, or version information. (addresses #3126, #3127)
+  Saves the loaded object. This should generally be shorthand for store.put(object);
+
+* watch(property, callback)
+
+  Listens for changes to this object.
+
+* getId()
+
+  Normally a store just uses a single property (identified by idProperty) for the object identity. However, a store may provide getId() on the objects to create more complex identities (such as composite identities).
+
+* getMetadata()
+
+  Returns any metadata about the object. This may include attribution, cache directives, history, or version information. (addresses #3126, #3127)
 
 
 =====================
@@ -79,9 +91,17 @@ One can subscribe to changes in data through the subscribe method on the result 
 
 Where an event can be:
 
- * onAdd - An object was created or modified such that the object now belongs in the set of objects defined by the query.
- * onUpdate - An object that belongs to the set of objects defined by the query was modified and still belongs to the query's set of objects.
- * onRemove - An object that belongs to the set of objects defined by the query was modified or deleted and no longer belongs to the query's set of objects.
+* onAdd
+
+  An object was created or modified such that the object now belongs in the set of objects defined by the query.
+
+* onUpdate
+
+  An object that belongs to the set of objects defined by the query was modified and still belongs to the query's set of objects.
+
+* onRemove
+
+  An object that belongs to the set of objects defined by the query was modified or deleted and no longer belongs to the query's set of objects.
 
 When close() is called on a result set, notifications will no longer be fired.
 
@@ -105,15 +125,23 @@ Core Functionality to be Shipped with Dojo
 
 Having an interface/API is not enough, we want to ship good out-of-the-box object stores that developers can readily utilize for common use cases and easily extend and customize. We also need good modular components for building stores. We could have the following two core stores based on the typical pattern of in-memory and server-based data stores:
 
- * dojo.store.Memory - An in-memory object store that queries, modifies, and accesses client-side in-memory data. This would fulfill the conceptual role of ItemFileReadStore/ItemFileWriteStore
+* dojo.store.Memory
 
- * dojo.store.JsonRest - An server-oriented JSON/REST object store that queries, modifies, and accesses data through RESTful HTTP requests. This would fulfill the conceptual role of JsonRestStore/QueryReadStore/ServiceStore.
+  An in-memory object store that queries, modifies, and accesses client-side in-memory data. This would fulfill the conceptual role of ItemFileReadStore/ItemFileWriteStore
+
+* dojo.store.JsonRest
+
+  An server-oriented JSON/REST object store that queries, modifies, and accesses data through RESTful HTTP requests. This would fulfill the conceptual role of JsonRestStore/QueryReadStore/ServiceStore.
 
 We should also move in the direction of providing composable functionality by providing store "wrappers" or store "middleware" that takes a store and add functionality. A couple key store wrappers:
 
- * dojo.store.Cache - Adds caching capability to the store. This eliminates the need for a base store to deal with caching concerns.
+* dojo.store.Cache
 
- * dojo.store.JsonSchema - Handles validation of data through JSON Schema as well object referencing through JSON Schema's link definitions.
+  Adds caching capability to the store. This eliminates the need for a base store to deal with caching concerns.
+
+* dojo.store.JsonSchema
+
+  Handles validation of data through JSON Schema as well object referencing through JSON Schema's link definitions.
 
 With this one could easily mix and match wrappers and base stores to achieve various types of functionality.
 
