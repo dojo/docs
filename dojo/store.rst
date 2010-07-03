@@ -109,21 +109,23 @@ Subscriptions/Watches
 
 One can subscribe to changes in data through the subscribe method on the result set (the object returned from a query). The subscribe method has the following signature:
 
-  subscribe(event, callback)
+==========================  ======================================================================
+Method                      Description
+==========================  ======================================================================
+subscribe(event, callback)  Where an event can be:
 
-Where an event can be:
+                            * onAdd
 
-* onAdd
+                              An object was created or modified such that the object now belongs in the set of objects defined by the query.
 
-  An object was created or modified such that the object now belongs in the set of objects defined by the query.
+                            * onUpdate
 
-* onUpdate
+                              An object that belongs to the set of objects defined by the query was modified and still belongs to the query's set of objects.
 
-  An object that belongs to the set of objects defined by the query was modified and still belongs to the query's set of objects.
+                            * onRemove
 
-* onRemove
-
-  An object that belongs to the set of objects defined by the query was modified or deleted and no longer belongs to the query's set of objects.
+                              An object that belongs to the set of objects defined by the query was modified or deleted and no longer belongs to the query's set of objects.
+==========================  ======================================================================
 
 When close() is called on a result set, notifications will no longer be fired.
 
