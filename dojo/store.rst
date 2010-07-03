@@ -1,3 +1,5 @@
+#format dojo_rst
+
 dojox.store
 ===========
 
