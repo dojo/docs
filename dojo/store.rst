@@ -1,6 +1,19 @@
+dojox.store
+===========
+
+:Authors: Kris Zyp
+:Project owner: Kris Zyp
+:Available: coming with V1.6
+
+.. contents::
+  :depth: 2
+
 Dojo Store is an uniform interface for the access and manipulation of stored data. Dojo Store is intended to supercede, integrate, and improve upon the Dojo Data API and Dojo Storage API with a simple, easy to implement and extend API, based on HTML5/W3C's IndexedDB object store API.
 
-= Design Goals =
+
+============
+Design Goals
+============
 
  * We want to make it very easy to for people to implement their own object stores, essentially one should easily be able to write something up handle the communication to their server without having to deal with much more than writing the XHR calls. Higher level functionality can be built on this. A key to this strategy is a very simple API, that requires a minimal amount of required complexity to implement.
 
@@ -10,7 +23,10 @@ Dojo Store is an uniform interface for the access and manipulation of stored dat
 
  * Objects returned from the data store (via query or get) should be plain JavaScript objects whose properties can be typically accessed and modified through standard property access.
 
-= Dojo Store API =
+
+==============
+Dojo Store API
+==============
 
 Every method in the API is optional, it's presence indicating support for that feature. Every method can return a promise (except where noted otherwise) to represent an asynchronous completion of the action. (Some of these are still wavering a bit in W3C's object store API):
 
@@ -49,7 +65,10 @@ Objects returned from store should primarily be treated as normal hash objects a
 
  * getMetadata() - Returns any metadata about the object. This may include attribution, cache directives, history, or version information. (addresses #3126, #3127)
 
-== Subscriptions/Watches ==
+
+=====================
+Subscriptions/Watches
+=====================
 
 One can subscribe to changes in data through the subscribe method on the result set (the object returned from a query). The subscribe method has the following signature:
 
@@ -77,7 +96,9 @@ We will need to include a helper mixin or wrapper to make it easy to implement t
 I believe this generally facilitates all of the Dojo Data functionality. Some of it may require some composition, but I think most of the needed things would be in place to achieve anything you could with Dojo Data. The one thing I did intentionally omit was getLabel/getLabelAttributes, as I think is clearly a UI concern. It would be easy enough to include a labelProperty property on the store, but I don't think it is necessary.
 
 
-= Core Functionality to be Shipped with Dojo =
+==========================================
+Core Functionality to be Shipped with Dojo
+==========================================
 
 Having an interface/API is not enough, we want to ship good out-of-the-box object stores that developers can readily utilize for common use cases and easily extend and customize. We also need good modular components for building stores. We could have the following two core stores based on the typical pattern of in-memory and server-based data stores:
 
