@@ -30,6 +30,9 @@ Design Goals
 Dojo Store API
 ==============
 
+Store methods
+-------------
+
 Every method in the API is optional, it's presence indicating support for that feature. Every method can return a promise (except where noted otherwise) to represent an asynchronous completion of the action. (Some of these are still wavering a bit in W3C's object store API):
 
 ===========================================  ======================================================================
