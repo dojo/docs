@@ -39,6 +39,7 @@ Every method in the API is optional, it's presence indicating support for that f
 * query(query, options)
 
   Queries the store using the provided query. The returned value should be an array or a promise with forEach, map, filter, reduce, subscribe, and close methods, and a totalCount property (the totalCount may be a promise). The options parameter is modeled after the Dojo Data keywordArgs and may include:
+
    * start - Starting offset
    * count - Number of objects to return
    * sort - Follows the Dojo Data sort definition
@@ -59,6 +60,7 @@ Every method in the API is optional, it's presence indicating support for that f
 * transaction()
 
   Starts a transaction and returns a transaction object. The transaction object should include:
+
    * commit() - Commits all the changes that took place during the transaction.
    * abort() - Aborts all the changes that took place during the transaction.
 
