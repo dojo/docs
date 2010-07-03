@@ -74,43 +74,42 @@ data         Array of Objects  If the store has a collection of cached objects, 
 ===========  ================  ======================================================================
 
 
-Query objects
--------------
+Result Sets
+-----------
 
 Objects returned from store should primarily be treated as normal hash objects and have standard JavaScript properties to access their data and modify their data. However, the following methods are defined as possible methods that may also be available on the objects returned by the store (once again, they are optional). These methods should '''not''' be the object's own properties (hasOwnProperty(methodName) should return false), but rather should be inherited from one of the object's prototypes). This is to ensure ease of enumeration of data properties.  Once again, all of these methods are optional, and all may return promises if the operation will be performed asynchronously:
 
-===========================================================  ======================================================================
-Method                                                       Description
-===========================================================  ======================================================================
-`get(property) <dojo/store/queryObject/get>`_                Returns the value of the given property.
+=========================================================  ======================================================================
+Method                                                     Description
+=========================================================  ======================================================================
+`get(property) <dojo/store/resultset/get>`_                Returns the value of the given property.
 
-                                                             Normally property values can be accessed with normal JavaScript member expresions (object.property -> value), but if get() is implemented, than get(property) should be used to retrieve property values. This allows for lazy evaluation of properties.
+                                                           Normally property values can be accessed with normal JavaScript member expresions (object.property -> value), but if get() is implemented, than get(property) should be used to retrieve property values. This allows for lazy evaluation of properties.
 
-`set(property, value) <dojo/store/queryObject/set>`_         Sets the property value.
+`set(property, value) <dojo/store/resultset/set>`_         Sets the property value.
 
-                                                             Normally property values can be mutated with normal JavaScript member expresions (object.property = value), but if set() is implemented, than set(property, value) should be used to modify property values.
+                                                           Normally property values can be mutated with normal JavaScript member expresions (object.property = value), but if set() is implemented, than set(property, value) should be used to modify property values.
 
-`load() <dojo/store/queryObject/load>`_                      Fully loads the current object.
+`load() <dojo/store/resultset/load>`_                      Fully loads the current object.
 
-                                                             If this method is present, it indicates that the object may not be fully loaded.
+                                                           If this method is present, it indicates that the object may not be fully loaded.
 
-`save() <dojo/store/queryObject/save>`_                      Saves the loaded object.
+`save() <dojo/store/resultset/save>`_                      Saves the loaded object.
 
-                                                             This should generally be shorthand for store.put(object);
+                                                           This should generally be shorthand for store.put(object);
 
-`watch(property, callback) <dojo/store/queryObject/watch>`_  Listens for changes to this object.
+`watch(property, callback) <dojo/store/resultset/watch>`_  Listens for changes to this object.
 
-`getId() <dojo/store/queryObject/getId>`_                    Normally a store just uses a single property (identified by idProperty) for the object identity. However, a store may provide getId() on the objects to create more complex identities (such as composite identities).
+`getId() <dojo/store/resultset/getId>`_                    Normally a store just uses a single property (identified by idProperty) for the object identity. However, a store may provide getId() on the objects to create more complex identities (such as composite identities).
 
-`getMetadata() <dojo/store/queryObject/getMetadata>`_        Returns any metadata about the object. 
+`getMetadata() <dojo/store/resultset/getMetadata>`_        Returns any metadata about the object. 
 
-                                                             This may include attribution, cache directives, history, or version information. (addresses #3126, #3127)
-===========================================================  ======================================================================
+                                                           This may include attribution, cache directives, history, or version information. (addresses #3126, #3127)
+=========================================================  ======================================================================
 
 
-=====================
 Subscriptions/Watches
-=====================
+---------------------
 
 One can subscribe to changes in data through the subscribe method on the result set (the object returned from a query). The subscribe method has the following signature:
 
