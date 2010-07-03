@@ -10,7 +10,7 @@ dojo.store
 .. contents::
   :depth: 2
 
-Dojo Store is an uniform interface for the access and manipulation of stored data. Dojo Store is intended to supercede, integrate, and improve upon the Dojo Data API and Dojo Storage API with a simple, easy to implement and extend API, based on HTML5/W3C's IndexedDB object store API.
+Dojo Store is an uniform interface for the access and manipulation of stored data. Dojo Store is intended to supercede, integrate, and improve upon the Dojo Data API and Dojo Storage API with a simple, easy to implement and extend API, based on `HTML5/W3C's IndexedDB object store API <http://www.w3.org/TR/IndexedDB/#object-store-sync>`_.
 
 
 ============
