@@ -32,29 +32,53 @@ Dojo Store API
 
 Every method in the API is optional, it's presence indicating support for that feature. Every method can return a promise (except where noted otherwise) to represent an asynchronous completion of the action. (Some of these are still wavering a bit in W3C's object store API):
 
-* get(id) - Retrieves an object by its identifier, returning the object.
-* query(query, options) - Queries the store using the provided query. The returned value should be an array or a promise with forEach, map, filter, reduce, subscribe, and close methods, and a totalCount property (the totalCount may be a promise). The options parameter is modeled after the Dojo Data keywordArgs and may include:
+* get(id)
+
+  Retrieves an object by its identifier, returning the object.
+
+* query(query, options)
+
+  Queries the store using the provided query. The returned value should be an array or a promise with forEach, map, filter, reduce, subscribe, and close methods, and a totalCount property (the totalCount may be a promise). The options parameter is modeled after the Dojo Data keywordArgs and may include:
    * start - Starting offset
    * count - Number of objects to return
    * sort - Follows the Dojo Data sort definition
    * queryOptions - Follows the Dojo Data queryOptions definition
-* put(object, options) - Saves the given object. options.id (optional) indicates the identifier.
-* add(object, options) - Create a new object. options.id (optional) indicates the identifier.
-* delete(id) - Delete the object by id.
-* transaction() - Starts a transaction and returns a transaction object.  The transaction object should include:
+
+* put(object, options)
+
+  Saves the given object. options.id (optional) indicates the identifier.
+
+* add(object, options)
+
+  Create a new object. options.id (optional) indicates the identifier.
+
+* delete(id)
+
+  Delete the object by id.
+
+* transaction()
+
+  Starts a transaction and returns a transaction object. The transaction object should include:
    * commit() - Commits all the changes that took place during the transaction.
    * abort() - Aborts all the changes that took place during the transaction.
 
-Note that a store user might not call transaction() prior to using put, delete, etc. in which case these operations effectively could be thought of as  "auto-commit" style actions.
+  Note that a store user might not call transaction() prior to using put, delete, etc. in which case these operations effectively could be thought of as  "auto-commit" style actions.
 
 Store properties:
 
-* idProperty - Name of the property to use as the identifier
-* data - If the store has a collection of cached objects, it can make this available in this property. This is included so an additional layer could add referential integrity cleanup on object deletion (which is a pain to implement).
+* idProperty
+
+  Name of the property to use as the identifier
+
+* data
+
+  If the store has a collection of cached objects, it can make this available in this property. This is included so an additional layer could add referential integrity cleanup on object deletion (which is a pain to implement).
 
 Objects returned from store should primarily be treated as normal hash objects and have standard JavaScript properties to access their data and modify their data. However, the following methods are defined as possible methods that may also be available on the objects returned by the store (once again, they are optional). These methods should '''not''' be the object's own properties (hasOwnProperty(methodName) should return false), but rather should be inherited from one of the object's prototypes). This is to ensure ease of enumeration of data properties.  Once again, all of these methods are optional, and all may return promises if the operation will be performed asynchronously:
 
-* get(property) - Returns the value of the given property. Normally property values can be accessed with normal JavaScript member expresions (object.property -> value), but if get() is implemented, than get(property) should be used to retrieve property values. This allows for lazy evaluation of properties.
+* get(property)
+
+  Returns the value of the given property. Normally property values can be accessed with normal JavaScript member expresions (object.property -> value), but if get() is implemented, than get(property) should be used to retrieve property values. This allows for lazy evaluation of properties.
 
 * set(property, value)
 
