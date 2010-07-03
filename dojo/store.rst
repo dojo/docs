@@ -30,8 +30,19 @@ Design Goals
 Dojo Store API
 ==============
 
-Store methods
--------------
+Properties
+----------
+
+===========  ================  ======================================================================
+Property     Type              Description
+===========  ================  ======================================================================
+idProperty   String            Name of the property to use as the identifier
+data         Array of Objects  If the store has a collection of cached objects, it can make this available in this property. This is included so an additional layer could add referential integrity cleanup on object deletion (which is a pain to implement).
+===========  ================  ======================================================================
+
+
+Methods
+-------
 
 Every method in the API is optional, it's presence indicating support for that feature. Every method can return a promise (except where noted otherwise) to represent an asynchronous completion of the action. (Some of these are still wavering a bit in W3C's object store API):
 
@@ -66,19 +77,9 @@ Method                                       Description
 ===========================================  ======================================================================
 
 
-Store properties
-----------------
-
-===========  ================  ======================================================================
-Property     Type              Description
-===========  ================  ======================================================================
-idProperty   String            Name of the property to use as the identifier
-data         Array of Objects  If the store has a collection of cached objects, it can make this available in this property. This is included so an additional layer could add referential integrity cleanup on object deletion (which is a pain to implement).
-===========  ================  ======================================================================
-
-
+===========
 Result Sets
------------
+===========
 
 Objects returned from store should primarily be treated as normal hash objects and have standard JavaScript properties to access their data and modify their data. However, the following methods are defined as possible methods that may also be available on the objects returned by the store (once again, they are optional). These methods should '''not''' be the object's own properties (hasOwnProperty(methodName) should return false), but rather should be inherited from one of the object's prototypes). This is to ensure ease of enumeration of data properties.  Once again, all of these methods are optional, and all may return promises if the operation will be performed asynchronously:
 
