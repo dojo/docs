@@ -76,6 +76,10 @@ Method                                       Description
                                              Note that a store user might not call transaction() prior to using put, delete, etc. in which case these operations effectively could be thought of as  "auto-commit" style actions.
 ===========================================  ======================================================================
 
+* How is about a dojo.store.clear() method?
+
+  Will clear all the (cached) data array of the store.
+
 
 ===========
 Result Sets
