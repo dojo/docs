@@ -17,13 +17,13 @@ Dojo Store is an uniform interface for the access and manipulation of stored dat
 Design Goals
 ============
 
- * We want to make it very easy to for people to implement their own object stores, essentially one should easily be able to write something up handle the communication to their server without having to deal with much more than writing the XHR calls. Higher level functionality can be built on this. A key to this strategy is a very simple API, that requires a minimal amount of required complexity to implement.
+* We want to make it very easy to for people to implement their own object stores, essentially one should easily be able to write something up handle the communication to their server without having to deal with much more than writing the XHR calls. Higher level functionality can be built on this. A key to this strategy is a very simple API, that requires a minimal amount of required complexity to implement.
 
- * We want to maintain the same level of functionality that Dojo Data provided. While there will be very little (if any) core parts of the object store API that MUST be implemented, there will numerous parts that can be implemented to incrementally add functionality. Optional functionality will be determined through feature detection (checking to see if a method exists). As I noted in the meeting, having lots of optional features does shift some complexity from the store implementors to the anyone who wishes to use stores in a completely generic fashion. However, I believe that our widgets are the primary generic store users, and that most application developers are working with a known store, with a known set of implemented features. In particular, if they know they are using a sync store, the interaction with the store becomes extremely simple. For now I will suggest that basically every method is optional, and the presence of the method indicates support for that feature. However, practically one would at least need to implement get and query, a store without read capabilities is pretty useless, but that should be self-evident.
+* We want to maintain the same level of functionality that Dojo Data provided. While there will be very little (if any) core parts of the object store API that MUST be implemented, there will numerous parts that can be implemented to incrementally add functionality. Optional functionality will be determined through feature detection (checking to see if a method exists). As I noted in the meeting, having lots of optional features does shift some complexity from the store implementors to the anyone who wishes to use stores in a completely generic fashion. However, I believe that our widgets are the primary generic store users, and that most application developers are working with a known store, with a known set of implemented features. In particular, if they know they are using a sync store, the interaction with the store becomes extremely simple. For now I will suggest that basically every method is optional, and the presence of the method indicates support for that feature. However, practically one would at least need to implement get and query, a store without read capabilities is pretty useless, but that should be self-evident.
 
- * Every method can be implemented sync or async. The interface is the exactly the same for sync and async except that async returns promises/deferreds instead of plain values. The interface requires no other knowledge of specific callbacks to operate.
+* Every method can be implemented sync or async. The interface is the exactly the same for sync and async except that async returns promises/deferreds instead of plain values. The interface requires no other knowledge of specific callbacks to operate.
 
- * Objects returned from the data store (via query or get) should be plain JavaScript objects whose properties can be typically accessed and modified through standard property access.
+* Objects returned from the data store (via query or get) should be plain JavaScript objects whose properties can be typically accessed and modified through standard property access.
 
 
 ==============
@@ -48,24 +48,25 @@ Every method in the API is optional, it's presence indicating support for that f
 Note that a store user might not call transaction() prior to using put, delete, etc. in which case these operations effectively could be thought of as  "auto-commit" style actions.
 
 Store properties:
- * idProperty - Name of the property to use as the identifier
- * data - If the store has a collection of cached objects, it can make this available in this property. This is included so an additional layer could add referential integrity cleanup on object deletion (which is a pain to implement).
+
+* idProperty - Name of the property to use as the identifier
+* data - If the store has a collection of cached objects, it can make this available in this property. This is included so an additional layer could add referential integrity cleanup on object deletion (which is a pain to implement).
 
 Objects returned from store should primarily be treated as normal hash objects and have standard JavaScript properties to access their data and modify their data. However, the following methods are defined as possible methods that may also be available on the objects returned by the store (once again, they are optional). These methods should '''not''' be the object's own properties (hasOwnProperty(methodName) should return false), but rather should be inherited from one of the object's prototypes). This is to ensure ease of enumeration of data properties.  Once again, all of these methods are optional, and all may return promises if the operation will be performed asynchronously:
 
- * get(property) - Returns the value of the given property. Normally property values can be accessed with normal JavaScript member expresions (object.property -> value), but if get() is implemented, than get(property) should be used to retrieve property values. This allows for lazy evaluation of properties.
+* get(property) - Returns the value of the given property. Normally property values can be accessed with normal JavaScript member expresions (object.property -> value), but if get() is implemented, than get(property) should be used to retrieve property values. This allows for lazy evaluation of properties.
 
- * set(property, value) - Sets the property value. Normally property values can be mutated with normal JavaScript member expresions (object.property = value), but if set() is implemented, than set(property, value) should be used to modify property values.
+* set(property, value) - Sets the property value. Normally property values can be mutated with normal JavaScript member expresions (object.property = value), but if set() is implemented, than set(property, value) should be used to modify property values.
 
- * load() - Fully loads the current object. If this method is present, it indicates that the object may not be fully loaded.
+* load() - Fully loads the current object. If this method is present, it indicates that the object may not be fully loaded.
 
- * save() - Saves the loaded object. This should generally be shorthand for store.put(object);
+* save() - Saves the loaded object. This should generally be shorthand for store.put(object);
 
- * watch(property, callback) - Listens for changes to this object.
+* watch(property, callback) - Listens for changes to this object.
 
- * getId() - Normally a store just uses a single property (identified by idProperty) for the object identity. However, a store may provide getId() on the objects to create more complex identities (such as composite identities).
+* getId() - Normally a store just uses a single property (identified by idProperty) for the object identity. However, a store may provide getId() on the objects to create more complex identities (such as composite identities).
 
- * getMetadata() - Returns any metadata about the object. This may include attribution, cache directives, history, or version information. (addresses #3126, #3127)
+* getMetadata() - Returns any metadata about the object. This may include attribution, cache directives, history, or version information. (addresses #3126, #3127)
 
 
 =====================
