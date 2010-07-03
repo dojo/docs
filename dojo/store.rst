@@ -1,7 +1,7 @@
 #format dojo_rst
 
-dojox.store
-===========
+dojo.store
+==========
 
 :Authors: Kris Zyp
 :Project owner: Kris Zyp
@@ -32,35 +32,35 @@ Dojo Store API
 
 Every method in the API is optional, it's presence indicating support for that feature. Every method can return a promise (except where noted otherwise) to represent an asynchronous completion of the action. (Some of these are still wavering a bit in W3C's object store API):
 
-=====================  ======================================================================
-Method                 Description
-=====================  ======================================================================
-get(id)                Retrieves an object by its identifier, returning the object.
+===========================================  ======================================================================
+Method                                       Description
+===========================================  ======================================================================
+`get(id) <dojo/store/get>`_                  Retrieves an object by its identifier, returning the object.
 
-query(query, options)  Queries the store using the provided query.
+`query(query, options) <dojo/store/query>`_  Queries the store using the provided query.
 
-                       The returned value should be an array or a promise with forEach, map, filter, reduce, subscribe, and close methods, and a totalCount property (the totalCount may be a promise). The options parameter is modeled after the Dojo Data keywordArgs and may include:
+                                             The returned value should be an array or a promise with forEach, map, filter, reduce, subscribe, and close methods, and a totalCount property (the totalCount may be a promise). The options parameter is modeled after the Dojo Data keywordArgs and may include:
 
-                       * start - Starting offset
-                       * count - Number of objects to return
-                       * sort - Follows the Dojo Data sort definition
-                       * queryOptions - Follows the Dojo Data queryOptions definition
+                                             * start - Starting offset
+                                             * count - Number of objects to return
+                                             * sort - Follows the Dojo Data sort definition
+                                             * queryOptions - Follows the Dojo Data queryOptions definition
 
-put(object, options)   Saves the given object. options.id (optional) indicates the identifier.
+`put(object, options) <dojo/store/put>`_     Saves the given object. options.id (optional) indicates the identifier.
 
-add(object, options)   Create a new object. options.id (optional) indicates the identifier.
+`add(object, options) <dojo/store/add>`_     Create a new object. options.id (optional) indicates the identifier.
 
-delete(id)             Delete the object by id.
+`delete(id) <dojo/store/delete>`_            Delete the object by id.
 
-transaction()          Starts a transaction and returns a transaction object.
+`transaction() <dojo/store/transaction>`_    Starts a transaction and returns a transaction object.
 
-                       The transaction object should include:
+                                             The transaction object should include:
 
-                       * commit() - Commits all the changes that took place during the transaction.
-                       * abort() - Aborts all the changes that took place during the transaction.
+                                             * commit() - Commits all the changes that took place during the transaction.
+                                             * abort() - Aborts all the changes that took place during the transaction.
 
-                       Note that a store user might not call transaction() prior to using put, delete, etc. in which case these operations effectively could be thought of as  "auto-commit" style actions.
-=====================  ======================================================================
+                                             Note that a store user might not call transaction() prior to using put, delete, etc. in which case these operations effectively could be thought of as  "auto-commit" style actions.
+===========================================  ======================================================================
 
 
 Store properties:
@@ -74,33 +74,33 @@ data         Array of Objects  If the store has a collection of cached objects, 
 
 Objects returned from store should primarily be treated as normal hash objects and have standard JavaScript properties to access their data and modify their data. However, the following methods are defined as possible methods that may also be available on the objects returned by the store (once again, they are optional). These methods should '''not''' be the object's own properties (hasOwnProperty(methodName) should return false), but rather should be inherited from one of the object's prototypes). This is to ensure ease of enumeration of data properties.  Once again, all of these methods are optional, and all may return promises if the operation will be performed asynchronously:
 
-=========================  ======================================================================
-Method                     Description
-=========================  ======================================================================
-get(property)              Returns the value of the given property.
+===============================================  ======================================================================
+Method                                           Description
+===============================================  ======================================================================
+`get(property) <dojo/store/get>`_                Returns the value of the given property.
 
-                           Normally property values can be accessed with normal JavaScript member expresions (object.property -> value), but if get() is implemented, than get(property) should be used to retrieve property values. This allows for lazy evaluation of properties.
+                                                 Normally property values can be accessed with normal JavaScript member expresions (object.property -> value), but if get() is implemented, than get(property) should be used to retrieve property values. This allows for lazy evaluation of properties.
 
-set(property, value)       Sets the property value.
+`set(property, value) <dojo/store/set>`_         Sets the property value.
 
-                           Normally property values can be mutated with normal JavaScript member expresions (object.property = value), but if set() is implemented, than set(property, value) should be used to modify property values.
+                                                 Normally property values can be mutated with normal JavaScript member expresions (object.property = value), but if set() is implemented, than set(property, value) should be used to modify property values.
 
-load()                     Fully loads the current object.
+`load() <dojo/store/load>`_                      Fully loads the current object.
 
-                           If this method is present, it indicates that the object may not be fully loaded.
+                                                 If this method is present, it indicates that the object may not be fully loaded.
 
-save()                     Saves the loaded object.
+`save() <dojo/store/save>`_                      Saves the loaded object.
 
-                           This should generally be shorthand for store.put(object);
+                                                 This should generally be shorthand for store.put(object);
 
-watch(property, callback)  Listens for changes to this object.
+`watch(property, callback) <dojo/store/watch>`_  Listens for changes to this object.
 
-getId()                    Normally a store just uses a single property (identified by idProperty) for the object identity. However, a store may provide getId() on the objects to create more complex identities (such as composite identities).
+`getId() <dojo/store/getId>`_                    Normally a store just uses a single property (identified by idProperty) for the object identity. However, a store may provide getId() on the objects to create more complex identities (such as composite identities).
 
-getMetadata()              Returns any metadata about the object. 
+`getMetadata() <dojo/store/getMetadata>`_        Returns any metadata about the object. 
 
-                           This may include attribution, cache directives, history, or version information. (addresses #3126, #3127)
-=========================  ======================================================================
+                                                 This may include attribution, cache directives, history, or version information. (addresses #3126, #3127)
+===============================================  ======================================================================
 
 
 =====================
