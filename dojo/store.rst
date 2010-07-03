@@ -163,11 +163,11 @@ Having an interface/API is not enough, we want to ship good out-of-the-box objec
 
 We should also move in the direction of providing composable functionality by providing store "wrappers" or store "middleware" that takes a store and add functionality. A couple key store wrappers:
 
-* `dojo.store.Cache <dojo/store/Cache >`_
+* `dojo.store.Cache <dojo/store/Cache>`_
 
   Adds caching capability to the store. This eliminates the need for a base store to deal with caching concerns.
 
-* `dojo.store.JsonSchema <dojo/store/JsonSchema >`_
+* `dojo.store.JsonSchema <dojo/store/JsonSchema>`_
 
   Handles validation of data through JSON Schema as well object referencing through JSON Schema's link definitions.
 
