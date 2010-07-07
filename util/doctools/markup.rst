@@ -445,3 +445,12 @@ Validating your docs markup
 ===========================
 
 If you are a developer who has marked their code up using this syntax and want to test to make sure it is correct, you can run the doctool yourself locally. `See Generating API Documentation <util/doctools/generate>`_. There is also a tool to quickly view simple parsing found in util/docscripts/_browse.php
+
+
+========
+See Also
+========
+
+- `Dojo documentation tools overview <util/doctools>`_
+- `Running the generation tools <util/doctools/generate>`_ - directories setup, defining custom namespaces, configuring and running the generation tools
+- `Viewing the API output data <util/doctools/viewer>`_ - how to setup and load the extracted API data into a web-based viewer
