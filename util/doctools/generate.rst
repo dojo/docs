@@ -65,3 +65,12 @@ The parser is typically run from the command-line. It is invoked like so:
 Use the ``outfile`` argument to place the output in the directory/file of your choice. You'll need to create any interceding directories. 
 
 Parsing a large codebase (like dojo/dijit/dojox) may take several minutes. 
+
+
+========
+See Also
+========
+
+- `Dojo documentation tools overview <util/doctools>`_
+- `API doc syntax <util/doctools/markup>`_ - how to markup API documentation in your code
+- `Viewing the API output data <util/doctools/viewer>`_ - how to setup and load the extracted API data into a web-based viewer
