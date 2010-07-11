@@ -368,7 +368,7 @@ dojo.<span class="me1">attr</span><span class="br0">&#40;</span>node, <span clas
  
 <h3>Markup Guidelines</h3> 
 
-Dojo's API documentation is written inline in the code, similar to JavaDoc.  See the <a href="util/doctools/markup">Dojo Inline Documentation</a> for information on dojo's proprietary format.
+Dojo's API documentation is written inline in the code, similar to JavaDoc.  See the <a href="/util/doctools/markup">Dojo Inline Documentation</a> for information on dojo's proprietary format.
 
 <h2><a id="CSS" name="CSS">CSS</a></h2> 
 <p>The CSS styling basically inherits all the rules from JavaScript, that means "key: value" looks like in JS, etc. Therefore a CSS file might look like this:</p> 
