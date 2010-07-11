@@ -9,7 +9,7 @@
 
 	<p>This document follows the basic outline of the Java Programming Conventions Guide, a copy of which may be found at <a class="reference" href="http://geosoft.no/javastyle.html">http://geosoft.no/javastyle.html</a>.</p> 
  
-	<p>Widget authors are expected to adhere to this style guide and also to the <a href="http://dojotoolkit.org/developer/A11yReq">Dojo Accessibility Design Requirements</a> guidelines.</p> 
+	<p>Widget authors are expected to adhere to this style guide and also to the <a href="/dijit-a11y-req">Dojo Accessibility Design Requirements</a> guidelines.</p> 
  
 	<h2><a id="General" name="General">General</a></h2> 
 	<p>Any violation to this guide is allowed if it enhances readability.</p> 
