@@ -35,6 +35,13 @@ What's New
 * `Release Notes <releasenotes/index>`_
 
 
+====================
+Developer's Notebook
+====================
+
+* `Information useful to developers <developer>`_
+
+
 =======================================
 `About the Dojo Documentation <about>`_
 =======================================
