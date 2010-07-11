@@ -241,3 +241,364 @@ Here are some example tests modeling common UI interactions. These tests were ge
  * http://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/form/robot/test_Slider.html (drag and drop of percent width Slider)
  * http://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/form/robot/test_Spinner.html (holding a key down to test a typematic widget, mouse wheel support in doh.robot)
  * http://archive.dojotoolkit.org/nightly/dojotoolkit/dojo/tests/dnd/robot/test_dnd.html (drag and drop of elements into containers)
+
+
+================================================
+Separating Robot Test Code From Application Code
+================================================
+
+The previous sections describe methods for unit testing: they assume that you are perfectly ok with modifying the test page to contain DOH test code. But what if you are testing application code, say during an acceptance test phase, and you absolutely can't modify your application code? Or what if you are using doh.robot for accessibility testing and you want to test the tab order of your *application* and not the tab order of some insignificant unit test? The methods described in the previous post just won't work for you: you would also have to insert test code into your application logic, which is bad. What you really want is a test framework that can run in the background and won't interfere with your application code.
+
+Clicking links
+--------------
+The previous sections also assumed that your tests are constrained to one page. What if you need to write a test that clicks a link or a form submit button? This is a very common requirement for testing Web applications: your customer gives you user stories, scenarios an end-user might face while visiting your Web site. The user is naturally going to click links that change the page. But all of the examples you have seen so far of the DOH test framework assume that the DOH framework lives in the Web page and is destroyed when the page changes. You might wonder how to keep the DOH test framework running even as the the robot navigates away from the page that DOH first loaded.
+
+What dijit.robotx can do for you
+--------------------------------
+dijit.robotx can load an arbitrary application and run automated doh.robot test scripts on the application environment. This serves two purposes:
+
+ 1. It enables you to execute automated tests on release candidate builds of your applications, with no modifications to your application.
+ 2. It enables you to write long-lived tests that can smartly cross page boundaries and continue execution.
+
+This is huge. Whereas with the plain doh.robot you had to insert test code into your application code, now with dijit.robotx you can keep your test code somewhere else. And whereas with doh.robot you had to embed test code into every page that the user story visited to ensure that the robot kept moving, now with dijit.robotx you can write the entire user story into just one file that spans any number of page changes in the user story. And whereas with doh.robot you had to upgrade your application to Dojo 1.2 to take full advantage of the robot's features, with dijit.robotx you can test any Web application with zero modifications, irrespective of the AJAX framework the application uses.
+
+The dijit.robotx API
+--------------------
+The dijit.robotx include mixes in two functions:doh.robot.initRobot() and doh.robot.waitForPageToLoad(), into the doh.robot namespace, which exactly map to the two features listed above.
+
+doh.robot.initRobot()
+~~~~~~~~~~~~~~~~~~~~~
+You use initRobot() to load an application for testing. Here is the syntax:
+
+.. code-block:: javascript
+
+    initRobot: function(/*String*/ url){
+        // summary:
+        //            Opens the application at the specified URL for testing, redirecting dojo to point to the application environment instead of the test environment.
+        //
+
+        // url:
+        //            URL to open. Any of the test's dojo.doc calls (e.g. dojo.byId()), and any dijit.registry calls (e.g. dijit.byId()) will point to elements and widgets inside this application.
+        //
+    }
+
+When you call initRobot, the browser loads the application into a frame and points the test's Dojo context to the frame's content. This means:
+
+The global variable dojo.doc will point to your application's document.
+Functions part of Dojo, like dojo.byId(), will fetch elements from your application's context.
+If you application uses Dijit widgets, the test script will use the application's Dijit registry, so dijit.byId will point to widgets in your application.
+Standard global variables, like window and document, will point to the test script's environment, not the application environment.
+You will only be able to assign variables their values once the tests execute.
+I stress the last point. initRobot returns immediately, before your application is finished loading. If you create variables outside of the scope of a test block and try to assign them values or DOM elements from your applicaiton, they will all be invalid, because the application hasn't loaded yet.
+
+So what do you do? Declare your variable names like you normally would, but don't assign them values yet. Instead, make your first test assign the values. That way, you are guaranteed that your application's environment is available.
+
+Example
+~~~~~~~
+Here is an example of a test that uses initRobot. The test is interacting with a completely separate page consisting of three dijit.Spinner widgets, residing here: http://archive.dojotoolkit.org/nightly/checkout/dijit/tests/form/test_Spinner.html
+Notice that there is no robot code in the page that the robot is testing. Now here is the separate test script that is automating that page:
+
+.. code-block:: html
+
+    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                "http://www.w3.org/TR/html4/strict.dtd">
+    <html>
+        <head>
+                <title>doh.robot Spinner Test</title>
+    
+                <style>
+                        @import "../../../../util/doh/robot/robot.css";
+                </style>
+    
+                <!-- required: dojo.js -->
+                <script type="text/javascript" src="../../../../dojo/dojo.js"
+                        djConfig="isDebug: true, parseOnLoad: true"></script>
+    
+                <script type="text/javascript">
+                        dojo.require("dijit.dijit"); // optimize: load dijit layer
+                        dojo.require("dijit.robotx"); // load the robot
+    
+                        dojo.addOnLoad(function(){
+                                // declare variables but do not assign them values
+                                var spin1;
+                                var spin2;
+                                var spin3;
+                                var safeClick;
+                                var delta=1; // redefine with doh.robot.mouseWheelSize when it is available
+    
+                                // the initRobot call goes here
+                                doh.robot.initRobot('../test_Spinner.html');
+    
+                                doh.register("setUp",{
+                                        name: "setUp",
+                                        timeout: 15000,
+                                        setUp:function(){
+                                                // assign variables HERE
+                                                spin1=dijit.byId('integerspinner1');
+                                                spin2=dijit.byId('integerspinner2');
+                                                spin3=dijit.byId('realspinner1');
+                                                safeClick=dojo.byId('form1');
+                                        },
+                                        runTest: function(){
+                                                // assert onChange not fired
+                                                doh.is("not fired yet!",dojo.byId('oc1').value);
+                                                doh.is(1,spin1.smallDelta);
+                                                var s=": 900\n"
+                                                +"integerspinner1: 900\n"
+                                                +": not fired yet!\n"
+                                                +": 1,000\n"
+                                                +"integerspinner2: 1000\n"
+                                                +": \n"
+                                                +"integertextbox3: NaN\n"
+                                                +": 1.0\n"
+                                                +"realspinner1: 1\n";
+                                                doh.is(s, dojo.doc.displayData().replace(/[a-zA-Z0-9_]*_displayed_/g, ""));
+                                        }
+                                });
+                                doh.register("arrowButton",{
+                                        name: "spinner1_invalid",
+                                        timeout: 15000,
+                                        runTest: function(){
+                                                // assert invalid works
+                                                var d=new doh.Deferred();
+                                                doh.robot.mouseMoveAt(spin1.focusNode,500);
+                                                doh.robot.mouseClick({left:true},500);
+                                                doh.robot.sequence(function(){
+                                                        spin1.focusNode.value="";
+                                                },500);
+                                                doh.robot.typeKeys("0.5",500,300);
+                                                doh.robot.sequence(function(){
+                                                        try{
+                                                                doh.is(false,spin1.isValid());
+                                                                d.callback(true);
+                                                        }catch(e){
+                                                                d.errback(e);
+                                                        }
+                                                },500);
+                                                return d;
+                                        },
+
+                                        tearDown:function(){
+                                                spin1.attr('value',1);
+                                        }
+                                });
+                                // ... some more tests
+                                // all tests registered; notify DOH
+                                doh.run();
+                        });
+                </script>
+        </head>
+
+See the real test in action/view the full source code:
+http://archive.dojotoolkit.org/nightly/checkout/dijit/tests/form/robot/Spinner_a11y.html and ttp://archive.dojotoolkit.org/nightly/checkout/dijit/tests/form/robot/Spinner_mouse.html
+
+The test consists of 5 steps:
+  1. The test declares variables spin1-3, to store convenient references to the Spinner widgets when the application loads.
+  2. The test calls initRobot, passing the URL of the page it wants to test.
+  3. The test registers a setUp test to assign the variables spin1-3 their values. Note that you are not required to have a test named setUp; this is just a sensible name for a test whose purpose is to assign variables their values.
+  4. The test registers any number of DOH tests, such as the "spinner1_invalid" test here, as usual. The test assumes that it is executing in the context of the application.
+  5. The test calls doh.run() to tell DOH that all tests are registered.
+
+When your external application loads and DOH receives the doh.run() call from the test script, DOH begins executing your tests on the application.
+
+Digression: cross-domain security
+---------------------------------
+The initRobot call in the above example loads an application that resides on the same server. If your testing requirements enable you to stash your tests on the same server as your application, then this works just fine for you. But what if you absolutely have to test an application residing on a different domain? If you just throw the URL at initRobot, initRobot will faithfully load the application at the URL, but the browser will deny DOH access to the application's content.
+
+In this scenario, you have two options:
+  - Run the browser in trusted mode (firefox -chrome command line flag, mshta instead of IE)
+  - Trick the browser into thinking that the application and test script are running on the same server
+
+One possible implementation of to the second solution is to create a simple reverse-proxy Web server. The reverse-proxy is an ordinary Web server than joins local files and remote servers. To browsers connecting to the reverse-proxy, the application files and test files appear to be on the same server!
+
+This is easy to implement. Suppose you have an application server running an application called Application at http://192.168.0.6:8080/Application/. Your test files sit on an Apache Web server at http://192.168.0.7/tests/Application/. To fix the cross-domain problem, you want requests by the test to the application to ask for http://192.168.0.7/Application/ instead of http://192.168.0.6:8080/Application/. In your httpd.conf, you add:
+
+.. code-block:: text
+
+  LoadModule proxy_module modules/mod_proxy.so
+  LoadModule proxy_http_module modules/mod_proxy_http.so
+  LoadModule rewrite_module modules/mod_rewrite.so
+  <IfModule mod_rewrite.c>
+  RewriteEngine on
+  RewriteRule     /Application/(.*)    http://192.168.0.6:8080/Application/$1 [P]
+  </IfModule>
+
+Now the reverse-proxy will silently route requests from http://192.168.0.7/Application/ to http://192.168.0.8:8080/Application/. You can write your initRobot call to load your application with this relative URL:
+doh.robot.initRobot('/Application/');
+To load your tests, you still use the URL to your test server: http://192.168.0.7/tests/Application/, and the browser will think that your application resides on the same server, so doh.robot will work.
+
+By all means though, if your testing requirements enable you to physically put your test files on the same server as your application, go for it.
+
+waitForPageToLoad
+-----------------
+You can load an external application, so now you want to click links and open new pages within that application. Here is the syntax for waitForPageToLoad:
+
+.. code-block:: javascript
+
+    waitForPageToLoad: function(/*Function*/ submitActions){
+        // summary:
+        //           Notifies DOH that the doh.robot is about to make a page change in the application it is driving,
+        //            returning a doh.Deferred object the user should return in their runTest function as part of a DOH test.
+        //
+        // description:
+        //           Notifies DOH that the doh.robot is about to make a page change in the application it is driving,
+        //            returning a doh.Deferred object the user should return in their runTest function as part of a DOH test.
+        //            Example:
+        //                  runTest:function(){
+        //                        return waitForPageToLoad(function(){ doh.robot.keyPress(dojo.keys.ENTER, 500); });
+        //                  }
+        //
+        // submitActions:
+        //            The doh.robot will execute the actions the test passes into the submitActions argument (like clicking the submit button),
+        //            expecting these actions to create a page change (like a form submit).
+        //            After these actions execute and the resulting page loads, the next test will start.
+        //
+    }
+
+waitForPageToLoad takes a function called submitActions. The robot expects submitActions to contain the final instructions you want to execute on this page. For example, if you want to navigate away from the page by clicking a link, your submitActions function should contain doh.robot instructions that click the link. The DOH runner will wait while the robot is executing code in this block until it receives a page load event. When that happens, DOH loads the next test you registered and proceeds from there.
+
+waitForPageToLoad returns a Deferred object. The idea is that you can, in turn, return this Deferred object to DOH so that it knows to halt execution of further tests until the next page loads.
+
+Example
+~~~~~~~
+The following sample uses waitForPageToLoad to test a user story for PlantsByWebSphereAjax, an application available in IBM WebSphere Application Server Feature Pack for Web 2.0. The user story flows like this:
+
+The user is looking to buy flowers on PlantsByWebSphereAjax.
+The user adds two flowers to the shopping cart.
+The user clicks checkout.
+When the next page loads (a login screen), the user logs onto the website.
+When the next page loads (a shipping info page), the user fills in the shipping info and credit card information to finalize the sale.
+PlantsByWebSphereAjax contains a shopping cart built on Dojo DnD. Users literally drag images of products into the shopping cart to select them for purchase. When the user is ready to check the items out, the user clicks the checkout button and the contents of the DnD container are submitted to the server-side logic for processing.
+
+In the following sample, the robot uses initRobot to load the application. In the test, the robot acts just like a user and drags an item into the shopping cart. The robot uses waitForPageToLoad to click the checkout button, triggering a page to a login page. After the login page appears, the robot fills in its credentials. The robot again uses waitForPageToLoad to click login. The robot fills in its address and credit card information and the test concludes.
+
+.. code-block:: javascript
+
+        doh.robot.initRobot('/PlantsByWebSphereAjax/');
+        
+        doh.register('user_story1',{
+                name: 'selectitems',
+                timeout: 60000,
+                runTest: function(){
+                        var d = new doh.Deferred();
+    
+                        // select a flower
+                        doh.robot.mouseMoveAt('dijit_layout__TabButton_1', 500, 1000, 47, 6);
+                        doh.robot.mouseClick({left:true, middle:false, right:false}, 1000);
+                        doh.robot.mouseMoveAt(function(){ return dojo.doc.getElementsByTagName('IMG')[15]; }, 8000, 1500, 58, 45);
+                        doh.robot.mouseClick({left:true, middle:false, right:false}, 1000);
+    
+                        // add selected flower to cart
+                        doh.robot.mouseMoveAt(function(){ return dojo.doc.getElementsByTagName('BUTTON')[0]; }, 5000, 2000, 36, 15);
+                        doh.robot.mouseClick({left:true, middle:false, right:false}, 1000);
+    
+                        // next page
+                        doh.robot.mouseMoveAt(function(){ return dojo.doc.getElementsByTagName('A')[15]; }, 1000, 2000, 12, 10);
+                        doh.robot.mouseClick({left:true, middle:false, right:false}, 1000);
+    
+                        // drag flower into shopping cart
+                        doh.robot.mouseMoveAt(function(){ return dojo.doc.getElementsByTagName('IMG')[14]; }, 5000, 1000, 63, 75);
+                        doh.robot.mousePress({left:true, middle:false, right:false}, 1000);
+                        doh.robot.mouseMoveAt(function(){ return dojo.byId('shoppingCart'); }, 5000, 1000);
+                        doh.robot.mouseRelease({left:true, middle:false, right:false}, 1000);
+    
+                        // assert price==$16
+                        doh.robot.sequence(function(){
+                                if(/\$16/.test(dijit.byId('ibm_widget_HtmlShoppingCart_0').cartTotalPrice.innerHTML)){
+                                        d.callback(true);
+                                }else{
+                                        d.errback(new Error('Expected string containing $16, got '+dijit.byId('ibm_widget_HtmlShoppingCart_0').cartTotalPrice.innerHTML));
+                                }
+                        }, 1000);
+                        return d;
+                }
+        });
+        
+        // use waitForPageToLoad to click the checkout button
+        // tests will wait for the next page to load
+        doh.register('user_story1',{
+                name: 'selectitems_pagechange',
+                timeout: 60000,
+                runTest: function(){
+                        return doh.robot.waitForPageToLoad(function(){
+                                // click submit
+                                doh.robot.mouseMoveAt(function(){
+                                        return dojo.byId('checkout_button');
+                                }, 1623, 801);
+                                doh.robot.mouseClick({left:true, middle:false, right:false}, 992);
+                        });
+                }
+        });
+        
+        // next page has loaded; continue executing tests
+        // in this case, the next page of the user story is a login page
+        doh.register('user_story1',{
+                name: 'login',
+                timeout: 60000,
+                runTest: function(){
+                        // log user in
+                        var d = new doh.Deferred();
+                        doh.robot.mouseMoveAt(function(){ return dojo.byId('email'); }, 500, 1000);
+                        doh.robot.mouseClick({left:true, middle:false, right:false}, 500);
+                        doh.robot.typeKeys("username", 500, 5000);
+                        doh.robot.keyPress(dojo.keys.TAB, 500);
+                        doh.robot.typeKeys("password", 500, 5000);
+                        doh.robot.sequence(function(){
+                                d.callback(true);
+                        }, 1000);
+                        return d;
+                }
+        });
+        
+        // use waitForPageToLoad to click the login button
+        doh.register('user_story1',{
+                name: 'login_pagechange',
+                timeout: 60000,
+                runTest: function(){
+                        return doh.robot.waitForPageToLoad(function(){
+                                // click login
+                                doh.robot.mouseMoveAt(function(){ return dojo.doc.getElementsByTagName('input')[2]; }, 1623, 801);
+                                doh.robot.mouseClick({left:true, middle:false, right:false}, 992);
+                        });
+                }
+        });
+        
+        doh.register('user_story1',{
+                name: 'shippinginfo',
+                timeout: 60000,
+                runTest: function(){
+                        var d = new doh.Deferred();
+                        // fill out the shipping info form
+                        // you get the idea
+                        return d;
+                }
+        });
+        doh.run();
+
+The above code uses waitForPageToLoad twice: once to click the checkout button, and once to click the login button. In each waitForPageToLoad call, you pass a function containing commands that will change the page. Let's examine the first waitForPageToLoad call more closely:
+
+.. code-block:: javascript
+
+        // use waitForPageToLoad to click the checkout button
+        // tests will wait for the next page to load
+        doh.register('user_story1',{
+                name: 'selectitems_pagechange',
+                timeout: 60000,
+                runTest: function(){
+                        return doh.robot.waitForPageToLoad(function(){
+                                // click submit
+                                doh.robot.mouseMoveAt(function(){
+                                        return dojo.byId('checkout_button');
+                                }, 1623, 801);
+                                doh.robot.mouseClick({left:true, middle:false, right:false}, 992);
+                        });
+                }
+        });
+        
+        // next page has loaded; continue executing tests
+
+As you can see from the the above snippet, you use a waitForPageToLoad call as the return value of a test. No, the test doesn't actually test anything, but it is a convenient pattern to halt DOH while the page is changing. You give the test a long timeout so the page has sufficent time to load the next page. This is the *maximum* wait; test execution will resume immediately when the next page loads.
+
+You pass waitForPageToLoad a function containing robot commands that will do something to change the page. In this example, the robot moves the mouse to the checkout button. Then, the robot clicks the left mouse button on top of the checkout button, causing the application to submit the form and go to the login page. When the login page loads, DOH resumes test execution and executes the next test; in this case, the next test is named 'login' and so it executes. You can execute any number of tests after that, and can use waitForPageToLoad any number of times to navigate to more pages as your test requires.
+
+Using waitForPageToLoad in conjunction with initRobot in this way enables you to write long-running tests that can navigate across links and form submits within your application.
