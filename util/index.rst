@@ -22,12 +22,9 @@ A standalone utility for compressing JavaScript, used by the Dojo Build System a
 
 `DOH <quickstart/doh>`_
 -----------------------
-DOH is the test harness used by dojo, similar to JUnit.
+DOH is the test harness used by dojo, similar to JUnit.  (TODO: add documentation)
 
-The util/doh/ directory also contains DOH robot (`robot doc part1 <http://o.dojotoolkit.org/2008/08/11/doh-robot-automating-web-ui-unit-tests-real-user-events>`_,
-`robot doc part2 <http://o.dojotoolkit.org/2008/10/31/doh-robot-part-2-automating-acceptance-tests-and-user-stories>`_), which allows automated keyboard/mouse testing.
-
-TODO: copy DOH robot doc into this wiki.
+The util/doh/ directory also contains `DOH Robot <util/dohrobot>`_, an API used in conjunction with DOH for automated keyboard/mouse testing.
 
 
 `The Dojo API Doc System <util/doctools>`_
