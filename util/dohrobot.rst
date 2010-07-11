@@ -1,8 +1,11 @@
 #format dojo_rst
 
-
 DOH Robot
 =========
+
+.. contents::
+    :depth: 2
+
 
 doh.robot adds an API to the Dojo Object Harness (DOH) unit test framework that enables testers to automate their UI tests using real, cross-platform, system-level input events.   This document describes the value of doh.robot for unit and accessibility testing, and how to get started using it.
 
@@ -75,16 +78,16 @@ Since there are 3 robots, you can find the latest APIs documented in util/doh/ro
     }
 
 
-delay:
-------
+delay
+-----
 Each doh.robot method takes a delay parameter. Rather than forcing you to litter your code with setTimeouts, we call setTimeout for you behind the scenes. We also do some additional thread synchronization on the Java side to ensure that your events fire in the order you called them and not the order the browser feels like evaluating the setTimeouts.
 
 As the comments show, delays are incremental. Normally, when you write setTimeouts one after another other in a sequence, you have to specify the exact time each one should execute. This is fine, but when you go back to maintain your test and decide to add new actions in between the setTimeouts, you normally have to go back and add time to each and every setTimeout. But with doh.robot's incremental model, test maintenence is easy: you can freely insert or remove commands and the doh.robot will adjust the timings for you automatically. And you don't have to worry about how long it takes a command to execute; the next doh.robot command won't happen until the current one has absolutely finished. Still, it's a good idea to give the browser's rendering system and event dispatcher enough time to catch up with the robot between commands; 500ms is a good delay to use for each command.
 
 Also, if you are making AJAX requests to a remote system, such as loading data into a Grid, keep in mind that the request might take a variable amount of time. You could just set a really long timeout, but another practice would be to dojo.connect into an event handler and continue the test from there, when you are absolutely sure that the data has arrived.
 
-duration:
----------
+duration
+--------
 Several doh.robot methods also take a duration parameter. The duration tells doh.robot approximately how much time it should take to execute the command. For example, calling doh.robot.typeKeys("dij", 500, 1800) will instruct doh.robot to start typing dij after 500ms and to wait (1800 ms)/(3 chars) = 600 ms/char before each keypress. As with the delay parameter, doh.robot automatically sequences calls to account for the duration, so you don't have to add the duration into the next command's delay; doh.robot will add it in for you at runtime.
 
 
@@ -221,8 +224,8 @@ dojox.robot.recorder
 
 doh.robot includes a powerful record feature, called dojox.robot.recorder, that can track your interactions with a unit test and play them back. Record features of other frameworks do a good job tracking user interaction with native widgets, but have some trouble recording interactions with Dojo-enabled widgets and drag and drop in general. Fortunately, dojox.robot.recorder is specifically designed to record user interaction with both native and Dojo-style widgets in mind. The recorder even generates code for drag and drop, which can be a useful guideline for writing tests that work across the different browsers you test.
 
-To use dojox.robot.recorder:
-----------------------------
+To use dojox.robot.recorder
+---------------------------
 
   1. Add dojo.require("dojox.robot.recorder") to your unit test.
   2. Load the unit test and click the body of the page.
