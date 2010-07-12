@@ -20,9 +20,9 @@ See also the documentation on `custom builds <quickstart/custom-builds>`_, about
 A standalone utility for compressing JavaScript, used by the Dojo Build System as an optional compression step, though can be used on individual files manually.
 
 
-`DOH <quickstart/doh>`_
------------------------
-DOH is the test harness used by dojo, similar to JUnit.  (TODO: add documentation)
+DOH
+---
+`DOH <util/doh>`_ is the test harness used by dojo, similar to JUnit.
 
 The util/doh/ directory also contains `DOH Robot <util/dohrobot>`_, an API used in conjunction with DOH for automated keyboard/mouse testing.
 
