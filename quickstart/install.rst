@@ -15,7 +15,7 @@ Good news! Dojo's just a bunch of files on disk so it doesn't require any specia
 
 * Install nothing! Use Dojo from AOL's Content Distribution Network (`CDN <http://dev.aol.com/dojo>`_) or from the `CDN of Google <http://code.google.com/apis/ajaxlibs/documentation/index.html#dojo>`_.
 * Install the `latest release <http://download.dojotoolkit.org/current-stable>`_ on your server
-* Install directly from `source control </install/dojo-releases>`_ ``FIXME``
+* Install directly from `source control <developer/svn>`_
 
 =================
 Use Dojo from CDN
