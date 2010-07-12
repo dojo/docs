@@ -17,6 +17,7 @@ A list of individuals who have signed Dojo CLAs:
 * Andrews, Jesse 
 * Anuruddha, Dilan 
 * Armstrong, Kevin 
+* Arnold, Brian
 * Arps, Jens 
 * Arthur, Breton
 * Ascher, David 
