@@ -15,7 +15,7 @@ Getting up-and-running with Dojo couldn't be easier. Just include this line in y
 .. code-block :: html
 
     <script type="text/javascript"
-        src="http://ajax.googleapis.com/ajax/libs/dojo/1.3/dojo/dojo.xd.js">
+        src="http://ajax.googleapis.com/ajax/libs/dojo/1.5/dojo/dojo.xd.js">
     </script>   
 
 
