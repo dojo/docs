@@ -83,6 +83,34 @@ Note also that the width argument is important so to indicate the editors width,
     <span dojoType="dijit.InlineEditBox" editor="dijit.form.NumberTextBox" title="quantity" width="70px"></span>
 
 
+================
+Rich Text Editor
+================
+
+To have an InlineEditBox with the Editor, you should use the renderAsHTML=true flag, because the editor's value is HTML rather
+than plain text.   This rule applies to any widget whose value is HTML rather than plain text.
+
+Also note that you must use a <div> tag for the InlineEditBox when it embeds an editor, not a <p> or <span>.   This avoids
+problems with nested <p> tags, since the Editor's value can contain <p> tags.   IE has errors with nested <p> tags since they are
+invalid HTML.
+
+To make the editor's initial size match the size the readonly text (ie, the size of the InlineEditBox before clicking it), set editorParams="{height: '', extraPlugins: ['dijit._editor.plugins.AlwaysShowToolbar']}"
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+      dojo.require("dijit.InlineEditBox");
+      dojo.require("dijit.Editor");
+      dojo.require("dijit._editor.plugins.AlwaysShowToolbar");
+    </script>
+
+  .. cv:: html
+
+    <div dojoType="dijit.InlineEditBox" editor="dijit.Editor" renderAsHtml="true" autoSave="false" 
+			editorParams="{height: '', extraPlugins: ['dijit._editor.plugins.AlwaysShowToolbar']}"></div>
+
 =============
 Notes on i18n
 =============
