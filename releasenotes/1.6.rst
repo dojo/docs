@@ -1,0 +1,40 @@
+#format dojo_rst
+
+Dojo 1.6 Release Notes
+======================
+
+.. contents::
+   :depth: 3
+
+===============
+Browser support
+===============
+
+The following browsers are supported. If a browser is not supported, it still may work, but no effort is taken to test unsupported browsers and any specific fix for an unsupported browser is likely not to be done:
+
+  * Firefox 3.5/3.6
+  * Safari 4/Safari 5 and Chrome 5
+  * IE6, IE7, IE8
+  * Opera 10.50 and later (Dojo core only)
+
+=========
+Dojo Core
+=========
+
+=====
+Dijit
+=====
+
+=====
+DojoX
+=====
+
+====
+Util
+====
+
+=========
+Migration
+=========
+
+As usual dojo is API backwards-compatible with previous 1.x versions.   
