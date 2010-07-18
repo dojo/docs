@@ -10,19 +10,19 @@ The Release Notes are specific to each version of the Dojo Toolkit. Please selec
 Upcoming version
 ================
 
-* `Dojo Toolkit V1.5 Release Notes <releasenotes/1.5>`_
+* `Dojo Toolkit V1.5 Release Notes <releasenotes/1.6>`_
 
 ===============
 Current version
 ===============
 
-* `Dojo Toolkit V1.4 Release Notes <releasenotes/1.4>`_
-
+* `Dojo Toolkit V1.5 Release Notes <releasenotes/1.5>`_
 
 ==============
 Older versions
 ==============
 
+* `Dojo Toolkit V1.4 Release Notes <releasenotes/1.4>`_
 * `Dojo Toolkit V1.3 Release Notes <releasenotes/1.3>`_
 * `Dojo Toolkit V1.2 Release Notes <http://o.dojotoolkit.org/book/dojo-1-2-release-notes>`_
 * `Dojo Toolkit V1.1 Release Notes <http://o.dojotoolkit.org/book/dojo-1-1-release-notes>`_
