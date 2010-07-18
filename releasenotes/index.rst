@@ -10,7 +10,7 @@ The Release Notes are specific to each version of the Dojo Toolkit. Please selec
 Upcoming version
 ================
 
-* `Dojo Toolkit V1.5 Release Notes <releasenotes/1.6>`_
+* `Dojo Toolkit V1.6 Release Notes <releasenotes/1.6>`_
 
 ===============
 Current version
