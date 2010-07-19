@@ -18,7 +18,7 @@ To use it, you just have to override default behavior by yours.
   .. cv:: html
 
     <span dojoType="dojo.data.ItemFileWriteStore" 
-        jsId="store3" url="http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/countries.json">
+        jsId="store3" url="{{ dataUrl }}dijit/tests/_data/countries.json">
     </span>
 
     <table dojoType="dojox.grid.DataGrid"
@@ -62,8 +62,8 @@ To use it, you just have to override default behavior by yours.
   .. cv:: css
 
     <style type="text/css">
-        @import "/moin_static163/js/dojo/trunk/dojox/grid/resources/Grid.css";
-        @import "/moin_static163/js/dojo/trunk/dojox/grid/resources/nihiloGrid.css";
+        @import "{{ baseUrl }}dojox/grid/resources/Grid.css";
+        @import "{{ baseUrl }}dojox/grid/resources/nihiloGrid.css";
 
         .dojoxGrid table {
             margin: 0;
