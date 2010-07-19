@@ -354,6 +354,7 @@ This example demonstrates how to use a function such as *deleteItem*. In this ca
     <script>
       dojo.require("dojo.data.ItemFileReadStore");
       dojo.require("dojo.data.ItemFileWriteStore");
+      dojo.require("dijit.form.Button");
       dojo.require("dijit.Tree");
       var storeData2 = { 
         identifier: 'name',
