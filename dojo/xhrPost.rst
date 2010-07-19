@@ -21,7 +21,8 @@ The following information should get you up and going with dojo.xhrPost().  As w
 Limitations
 ===========
 
-The limitations are the same as `dojo.xhrGet <dojo/xhrGet>`_
+* Unable to post binary data. Consider `dojo.io.iframe <dojo/io/iframe>`_
+* The limitations are the same as `dojo.xhrGet <dojo/xhrGet>`_
 
 =====
 Usage
