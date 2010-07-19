@@ -25,6 +25,15 @@ Dojo Core
 Dijit
 =====
 
+TabContainer
+------------
+- Tab icons also appear in Menu
+- Home/End keys navigate to first/last tab label
+
+Toolbar
+-------
+- Home/End keys navigate to first/last button
+
 =====
 DojoX
 =====
