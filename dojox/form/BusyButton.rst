@@ -53,7 +53,7 @@ The first example shows you how to create a nifty button programatically
   .. cv:: css
 
     <style type="text/css">
-      @import url(/moin_static163/js/dojo/trunk/dojox/form/resources/BusyButton.css);
+      @import url({{baseUrl}}dojox/form/resources/BusyButton.css);
     </style>
 
 Declarative example
@@ -76,7 +76,7 @@ This example show how to use the busy button without internal timeout. Once you 
   .. cv:: css
 
     <style type="text/css">
-      @import url(/moin_static163/js/dojo/trunk/dojox/form/resources/BusyButton.css);
+      @import url({{baseUrl}}dojox/form/resources/BusyButton.css);
     </style>
 
 Using the built-in timeout
@@ -99,7 +99,7 @@ The following example has a built-in timeout.
   .. cv:: css
 
     <style type="text/css">
-      @import url(/moin_static163/js/dojo/trunk/dojox/form/resources/BusyButton.css);
+      @import url({{baseUrl}}dojox/form/resources/BusyButton.css);
     </style>
 
 Set a new label
@@ -127,7 +127,7 @@ In this example we will set a new label by clicking on a button (this can be a s
   .. cv:: css
 
     <style type="text/css">
-      @import url(/moin_static163/js/dojo/trunk/dojox/form/resources/BusyButton.css);
+      @import url({{baseUrl}}dojox/form/resources/BusyButton.css);
     </style>
 
 Disabled BusyButton
@@ -156,7 +156,7 @@ The last example uses a little bit of trickery to create a button which is disab
   .. cv:: css
 
     <style type="text/css">
-      @import url(/moin_static163/js/dojo/trunk/dojox/form/resources/BusyButton.css);
+      @import url({{baseUrl}}dojox/form/resources/BusyButton.css);
     </style>
 
 
