@@ -113,7 +113,7 @@ Basic usage
   .. css::
 
     <style type="text/css">
-      @import "/moin_static163/js/dojo/release/dojox/widget/Standby/Standby.css";
+      @import "{{baseUrl}}dojox/widget/Standby/Standby.css";
     </style>  
     <!-- Also just define the styles inline in case the stylesheet can't be loaded. -->
     <!-- Note that for Dojo 1.4+, this is not needed at all. -->
@@ -168,7 +168,7 @@ Programmatic creation
   .. cv:: css
 
     <style type="text/css">
-      @import "/moin_static163/js/dojo/release/dojox/widget/Standby/Standby.css";
+      @import "{{baseUrl}}dojox/widget/Standby/Standby.css";
     </style>
     <!-- Also just define the styles inline in case the stylesheet can't be loaded. -->
     <!-- Note that for Dojo 1.4+, this is not needed at all. -->
@@ -222,7 +222,7 @@ Changing overlay color
   .. cv:: css
 
     <style type="text/css">
-      @import "/moin_static163/js/dojo/release/dojox/widget/Standby/Standby.css";
+      @import "{{baseUrl}}dojox/widget/Standby/Standby.css";
     </style>
     <!-- Also just define the styles inline in case the stylesheet can't be loaded. -->
     <!-- Note that for Dojo 1.4+, this is not needed at all. -->
@@ -271,12 +271,12 @@ Changing overlay color and image
     <button jsId="b7" dojoType="dijit.form.Button">Show Standby widget</button>
     <button jsId="b8" dojoType="dijit.form.Button">Hide Standby widget</button>
     <div id="basic4" style="width: 400px; height: 400px; background-color: yellow; border-style: solid; border-width: 2px;"></div>
-    <div jsId="basicStandby4" dojoType="dojox.widget.Standby" target="basic4" color="lightgray" image="/moin_static163/js/dojo/release/dojox/widget/tests/images/busy.gif"></div>
+    <div jsId="basicStandby4" dojoType="dojox.widget.Standby" target="basic4" color="lightgray" image="{{baseUrl}}dojox/widget/tests/images/busy.gif"></div>
 
   .. cv:: css
 
     <style type="text/css">
-      @import "/moin_static163/js/dojo/release/dojox/widget/Standby/Standby.css";
+      @import "{{baseUrl}}dojox/widget/Standby/Standby.css";
     </style>
     <!-- Also just define the styles inline in case the stylesheet can't be loaded. -->
     <!-- Note that for Dojo 1.4+, this is not needed at all. -->
@@ -332,7 +332,7 @@ This example works on Firefix and Safari only.
   .. cv:: css
 
     <style type="text/css">
-      @import "/moin_static163/js/dojo/release/dojox/widget/Standby/Standby.css";
+      @import "{{dataUrl}}dojox/widget/Standby/Standby.css";
     </style>
     <!-- Also just define the styles inline in case the stylesheet can't be loaded. -->
     <!-- Note that for Dojo 1.4+, this is not needed at all. -->
