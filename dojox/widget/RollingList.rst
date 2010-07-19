@@ -63,20 +63,20 @@ A simple rolling list pulling data from a read store
     
       dojo.require("dojo.data.ItemFileWriteStore");
       dojo.require("dojox.widget.RollingList");
-       alert("stall");
+      // alert("stall");
       //dojo.ready(function(){
           
-          dojo.declare("dojox.widget.RollingStore", dojo.data.ItemFileWriteStore, {
-              getLabel: function(item){
-                  return this.inherited(arguments) + " (" + this.getValue(item, "type") + ")";
-              }
-          });
+      //    dojo.declare("dojox.widget.RollingStore", dojo.data.ItemFileWriteStore, {
+      //        getLabel: function(item){
+      //            return this.inherited(arguments) + " (" + this.getValue(item, "type") + ")";
+       //       }
+      //    });
       //});
     </script>
 
   .. cv :: html
   
-    <div dojoType="dojox.widget.RollingStore" jsId="continentStore"
+    <div dojoType="dojox.widget.ItemFileWriteStore" jsId="continentStore"
         url="{{dataUrl}}dijit/tests/_data/countries.json"></div>
     <div dojoType="dojox.widget.RollingList" jsId="myList" id="myList" store="continentStore"
         query="{type:'continent'}" style="height:150px;"></div>
