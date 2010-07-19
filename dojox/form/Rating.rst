@@ -41,7 +41,7 @@ Now you are set and the rating widget should render and be useable.
 .. codeviewer::
   
   <style type="text/css">
-    @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/form/resources/Rating.css"; 
+    @import "{{baseUrl}}dojox/form/resources/Rating.css"; 
   </style>
   <script type="text/javascript">
     dojo.require("dojox.form.Rating");
