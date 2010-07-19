@@ -19,7 +19,7 @@ First, you have to set a editor for each cell, you would like to edit:
   .. cv:: html
 
     <span dojoType="dojo.data.ItemFileWriteStore" 
-        jsId="store3" url="http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/countries.json">
+        jsId="store3" url="{{ dataUrl }}dijit/tests/_data/countries.json">
     </span>
 
     <div>
@@ -51,6 +51,6 @@ First, you have to set a editor for each cell, you would like to edit:
   .. cv:: css
 
     <style type="text/css">
-	@import "/moin_static163/js/dojo/trunk/dijit/themes/nihilo/nihilo.css";
-	@import "/moin_static163/js/dojo/trunk/dojox/grid/resources/nihiloGrid.css";
+	@import "{{ baseUrl }}dijit/themes/nihilo/nihilo.css";
+	@import "{{ baseUrl }}dojox/grid/resources/nihiloGrid.css";
     </style>
