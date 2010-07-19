@@ -47,7 +47,7 @@ To set the default value for a programmatic FilteringSelect, include the *value*
     <script type="text/javascript">     
         dojo.addOnLoad(function(){
             var stateStore = new dojo.data.ItemFileReadStore({
-                url: "http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/states.json"
+                url: "{{dataUrl}}/dijit/tests/_data/states.json"
             });
             var filteringSelect = new dijit.form.FilteringSelect({
                 id: "stateSelect", 
@@ -108,7 +108,7 @@ To set the default value for this example, specify the *value* attribute (the hi
 
     <div dojoType="dojo.data.ItemFileReadStore" 
         jsId="stateStore"
-        url="http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/states.json"></div>
+        url="{{dataUrl}}/dijit/tests/_data/states.json"></div>
     <input dojoType="dijit.form.FilteringSelect"
         value="KY"
         store="stateStore"
@@ -399,7 +399,7 @@ The city ComboBox sets the state FilteringSelect value, and the state FilteringS
 
         new dijit.form.FilteringSelect(
         {   store: new dojo.data.ItemFileReadStore(
-                { url: 'http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/states.json' }
+                { url: '{{dataUrl}}/dijit/tests/_data/states.json' }
             ),
             autoComplete: true,
             style: "width: 150px;",
@@ -487,7 +487,7 @@ In this example, the FilteringSelect takes a labelFunc attribute pointing to a f
 	}
         dojo.addOnLoad(function(){
           var stateStore = new dojo.data.ItemFileReadStore({
-              url: "http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/states.json"
+              url: "{{dataUrl}}/dijit/tests/_data/states.json"
           });
           dijit.byId("fs").store = stateStore;
         });
