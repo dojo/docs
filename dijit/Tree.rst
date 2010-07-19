@@ -89,7 +89,7 @@ Creating a programmatic tree is very simple:
 
       dojo.addOnLoad(function(){
         var store = new dojo.data.ItemFileReadStore({
-            url: "http://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/_data/countries.json" 
+            url: "{{dataUrl}}/dijit/tests/_data/countries.json" 
         });
         
         var treeModel = new dijit.tree.ForestStoreModel({
@@ -128,7 +128,7 @@ A markup tree
   .. cv:: html
 
     <div dojoType="dojo.data.ItemFileReadStore" jsId="continentStore"
-      url="http://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/_data/countries.json"></div>
+      url="{{dataUrl}}/dijit/tests/_data/countries.json"></div>
     <div dojoType="dijit.tree.ForestStoreModel" jsId="continentModel" 
       store="continentStore" query="{type:'continent'}"
       rootId="continentRoot" rootLabel="Continents" childrenAttrs="children"></div>
@@ -218,7 +218,7 @@ Sometimes you don't want that "the world" top level node to show up, especially 
   .. cv:: html
 
     <div dojoType="dojo.data.ItemFileReadStore" jsId="continentStore"
-      url="http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/countries.json"></div>
+      url="{{dataUrl}}/dijit/tests/_data/countries.json"></div>
     <div dojoType="dijit.tree.ForestStoreModel" jsId="continentModel" 
       store="continentStore" query="{type:'continent'}"
       rootId="continentRoot" rootLabel="Continents" childrenAttrs="children"></div>
@@ -279,7 +279,7 @@ In addition, to enable DnD on the Tree you must dojo.require("dijit.tree.dndSour
 
       dojo.addOnLoad(function(){
         var store = new dojo.data.ItemFileWriteStore({
-            url: "http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/countries.json" 
+            url: "{{dataUrl}}/dijit/tests/_data/countries.json" 
         });
         
         var treeModel = new dijit.tree.ForestStoreModel({
@@ -323,7 +323,7 @@ If between threshold is set to a positive integer value like 5 (which represents
   .. cv:: html
 
     <div dojoType="dojo.data.ItemFileWriteStore" jsId="continentStore5"
-      url="http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/countries.json"></div>
+      url="{{dataUrl}}/dijit/tests/_data/countries.json"></div>
     
     <div dojoType="dijit.tree.ForestStoreModel" jsId="continentModel5" 
       store="continentStore5" query="{type:'continent'}"
@@ -373,7 +373,7 @@ Tree has no built-in support for context menus, but you can use the Menu widget 
 	</ul>
         
         <div dojoType="dojo.data.ItemFileReadStore" jsId="menuContinentStore"
-             url="http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/countries.json"></div>
+             url="{{dataUrl}}/dijit/tests/_data/countries.json"></div>
         
         <div dojoType="dijit.tree.ForestStoreModel" jsId="menuContinentModel" 
              store="menuContinentStore" query="{type:'continent'}"
