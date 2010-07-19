@@ -333,8 +333,16 @@ The following is a semi-complex example of the write API in action. In this exam
   .. cv:: css
 
     <style type="text/css">
+
+---- /!\ '''Edit conflict - other version:''' ----
       @import "{{baseUrl}}/dojox/grid/resources/Grid.css";
       @import "{{baseUrl}}/dojox/grid/resources/nihiloGrid.css";
+
+---- /!\ '''Edit conflict - your version:''' ----
+      @import "{{baseUrl}}dojox/grid/resources/Grid.css";
+      @import "{{baseUrl}}dojox/grid/resources/nihiloGrid.css";
+
+---- /!\ '''End of edit conflict''' ----
 
       .dojoxGrid table {
         margin: 0;
@@ -631,8 +639,16 @@ is displayed in an alert.
   .. cv:: css
 
     <style type="text/css">
+
+---- /!\ '''Edit conflict - other version:''' ----
       @import "{{baseUrl}}/dojox/grid/resources/Grid.css";
       @import "{{baseUrl}}/dojox/grid/resources/nihiloGrid.css";
+
+---- /!\ '''Edit conflict - your version:''' ----
+      @import "{{baseUrl}}dojox/grid/resources/Grid.css";
+      @import "{{baseUrl}}dojox/grid/resources/nihiloGrid.css";
+
+---- /!\ '''End of edit conflict''' ----
 
       .dojoxGrid table {
         margin: 0;
