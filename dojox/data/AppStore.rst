@@ -406,7 +406,7 @@ Example 4: Write example: Changing Title and showing in DataGrid
       ];
 
       function initGrid() {
-          grid.resize();
+          thegrid.resize();
           dojo.connect(dijit.byId("changeTitleButton"), "onClick", function(){
              function gotAllItems(items, request){
                if(items){
@@ -416,7 +416,7 @@ Example 4: Write example: Changing Title and showing in DataGrid
                    appStore2.setValue(items[i], "title", "This is new title #" + i);
                  }
                  //Requery to reload grid.  This is needed as this store does not currently implement the notification API.
-                 grid2.setQuery({});
+                 thegrid.setQuery({});
                }
              }
              appStore2.fetch({onComplete: gotAllItems});
@@ -429,7 +429,7 @@ Example 4: Write example: Changing Title and showing in DataGrid
   .. cv :: html 
 
     <div dojoType="dojox.data.AppStore" jsId="appStore2" url="{{dataUrl}}dojox/atom/tests/widget/samplefeedEdit.xml"></div>
-    <div jsId="grid2" dojoType="dojox.grid.DataGrid" store="appStore2" query="{}" structure="layout2" style="width: 600px; height: 200px;"></div>
+    <div jsId="thegrid" dojoType="dojox.grid.DataGrid" store="appStore2" query="{}" structure="layout2" style="width: 600px; height: 200px;"></div>
     <br>
     <br>
     <button id="changeTitleButton" dojoType="dijit.form.Button">Change all titles!</button> 
