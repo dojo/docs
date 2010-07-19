@@ -287,7 +287,7 @@ Searching node attributes
     <b>ISBN:  </b><input dojoType="dijit.form.TextBox" jsId="isbnBox" value="*"></input>
     <br>
     <br>
-    <div dojoType="dojox.data.XmlStore" jsId="bookStore" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/tests/stores/books.xml"></div>
+    <div dojoType="dojox.data.XmlStore" jsId="bookStore" url="{{dataUrl}}dojox/data/tests/stores/books.xml"></div>
     <div dojoType="dijit.form.Button" jsId="button3">Click to search!</div>
     <br>
     <br>
@@ -314,7 +314,7 @@ Connecting XmlStore to dijit.form.ComboBox
 
   .. cv :: html 
 
-    <div dojoType="dojox.data.XmlStore" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/tests/stores/books.xml" jsId="bookStore2"></div>
+    <div dojoType="dojox.data.XmlStore" url="{{dataUrl}}dojox/data/tests/stores/books.xml" jsId="bookStore2"></div>
     <div dojoType="dijit.form.ComboBox" store="bookStore2" searchAttr="title"></div>
 
 
@@ -340,7 +340,7 @@ Connecting XmlStore to dojox.grid.DataGrid
 
   .. cv :: html
 
-    <div dojoType="dojox.data.XmlStore" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/tests/stores/books.xml" jsId="bookStore3" label="title"></div>
+    <div dojoType="dojox.data.XmlStore" url="{{dataUrl}}dojox/data/tests/stores/books.xml" jsId="bookStore3" label="title"></div>
 
     <div id="grid" style="width: 400px; height: 300px;"
       dojoType="dojox.grid.DataGrid" 
@@ -353,8 +353,8 @@ Connecting XmlStore to dojox.grid.DataGrid
   .. cv:: css
 
     <style type="text/css">
-      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/resources/Grid.css";
-      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/resources/nihiloGrid.css";
+      @import "{{baseUrl}}dojox/grid/resources/Grid.css";
+      @import "{{baseUrl}}dojox/grid/resources/nihiloGrid.css";
 
       .dojoxGrid table {
         margin: 0;
