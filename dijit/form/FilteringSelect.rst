@@ -132,7 +132,7 @@ In this example, the FilteringSelect has been set to display the abbreviations f
         dojo.require("dojo.data.ItemFileReadStore");
         dojo.addOnLoad(function(){
           var stateStore = new dojo.data.ItemFileReadStore({
-              url: "http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/states.json"
+              url: "{{dataUrl}}/dijit/tests/_data/states.json"
           });
           dijit.byId("fs").store = stateStore;
         });
