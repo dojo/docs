@@ -98,7 +98,7 @@ Example 1: Programmatic instantiation and querying through OpenSearch
 
       //This function performs some basic dojo initialization and will do the fetch calling for this example
       function initSimple () {
-        var openSearchStore = new dojox.data.OpenSearchStore({url:"/moin_static163/js/dojo/trunk/release/dojo/dojox/data/demos/openSearchProxy.php?osd=true&url=http://intertwingly.net/search/"});
+        var openSearchStore = new dojox.data.OpenSearchStore({url:"{{dataUrl}}dojox/data/demos/openSearchProxy.php?osd=true&url=http://intertwingly.net/search/"});
 
         dojo.connect(dijit.byId("simpleFetchButton"), "onClick", function() {
           function gotResults(items, request) {
