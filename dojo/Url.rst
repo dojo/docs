@@ -6,6 +6,8 @@ dojo._Url
 :Status: Contributed, Draft
 :Version: 1.2
 
+FIXME
+
 Note: Actually I would like to close http://bugs.dojotoolkit.org/ticket/6175 and http://bugs.dojotoolkit.org/ticket/5548 before writing this chapter. The result should be a dojo.Url class that can parse and build URLs. imho (Wolfram)
 
 Basics
@@ -14,7 +16,7 @@ Basics
 .. codeviewer::
   
   <style type="text/css">
-    @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/widget/DocTester/DocTester.css"; 
+    @import "dojox/widget/DocTester/DocTester.css"; 
   </style>
   <script type="text/javascript">dojo.require("dojox.widget.DocTester");</script>
   <div dojoType="dojox.widget.DocTester">
