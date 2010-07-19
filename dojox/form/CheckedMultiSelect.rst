@@ -57,7 +57,7 @@ This example shows a simple CheckedMultiSelect widget - converted from a select 
   .. cv:: css
 
     <style type="text/css">
-      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/form/resources/CheckedMultiSelect.css";
+      @import "{{baseUrl}}dojox/form/resources/CheckedMultiSelect.css";
     </style>
 
 A radio-based CheckedMultiSelect
@@ -86,5 +86,5 @@ By not specifying "multiple=true" in your widget, you will create a widget using
   .. cv:: css
 
     <style type="text/css">
-      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/form/resources/CheckedMultiSelect.css";
+      @import "{{baseUrl}}dojox/form/resources/CheckedMultiSelect.css";
     </style>
