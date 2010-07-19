@@ -287,6 +287,7 @@ Example 2: Programmatic instantiation and querying of ATOM Feed Entry titles.
 
     <script>
       dojo.require("dojox.data.AppStore");
+      dojo.require("dijit.form.Button");
 
       //This function performs some basic dojo initialization and will do the fetch calling for this example
       function initSimple2 () {
