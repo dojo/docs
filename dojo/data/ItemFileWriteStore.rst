@@ -333,8 +333,8 @@ The following is a semi-complex example of the write API in action. In this exam
   .. cv:: css
 
     <style type="text/css">
-      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/resources/Grid.css";
-      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/resources/nihiloGrid.css";
+      @import "{{baseUrl}}/dojox/grid/resources/Grid.css";
+      @import "{{baseUrl}}/dojox/grid/resources/nihiloGrid.css";
 
       .dojoxGrid table {
         margin: 0;
@@ -631,8 +631,8 @@ is displayed in an alert.
   .. cv:: css
 
     <style type="text/css">
-      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/resources/Grid.css";
-      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/resources/nihiloGrid.css";
+      @import "{{baseUrl}}/dojox/grid/resources/Grid.css";
+      @import "{{baseUrl}}/dojox/grid/resources/nihiloGrid.css";
 
       .dojoxGrid table {
         margin: 0;
