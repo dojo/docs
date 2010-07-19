@@ -46,8 +46,8 @@ Programmatic example
   .. cv:: css
 
      <style type="text/css">
-       @import "/moin_static163/js/dojo/trunk/dojox/layout/resources/FloatingPane.css";
-       @import "/moin_static163/js/dojo/trunk/dojox/layout/resources/ResizeHandle.css";
+       @import "{{baseUrl}}dojox/layout/resources/FloatingPane.css";
+       @import "{{baseUrl}}dojox/layout/resources/ResizeHandle.css";
      </style>
 
   .. cv:: javascript
@@ -87,8 +87,8 @@ Declarative example
   .. cv:: css
 
      <style type="text/css">
-       @import "/moin_static163/js/dojo/trunk/dojox/layout/resources/FloatingPane.css";
-       @import "/moin_static163/js/dojo/trunk/dojox/layout/resources/ResizeHandle.css";
+       @import "{{baseUrl}}dojox/layout/resources/FloatingPane.css";
+       @import "{{baseUrl}}dojox/layout/resources/ResizeHandle.css";
      </style>
 
   .. cv:: javascript
