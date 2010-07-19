@@ -35,7 +35,7 @@ Grids are familiar in the client/server development world. Basically a grid is a
     
         dojo.addOnLoad(function(){
           // our test data store for this example:
-          var store4 = new dojox.data.CsvStore({ url: '{{ baseUrl }}dojox/grid/tests/support/movies.csv' });
+          var store4 = new dojox.data.CsvStore({ url: '{{ dataUrl }}dojox/grid/tests/support/movies.csv' });
 
           // set the layout structure:
           var layout4 = [
@@ -410,7 +410,7 @@ This example shows how to create a simple Grid declaratively.
   .. cv:: html
 
     <span dojoType="dojox.data.CsvStore" 
-        jsId="store1" url="{{ baseUrl }}dojox/grid/tests/support/movies.csv">
+        jsId="store1" url="{{ dataUrl }}dojox/grid/tests/support/movies.csv">
     </span>
 
     <table dojoType="dojox.grid.DataGrid"
@@ -464,7 +464,7 @@ This example shows how to create a simple Grid programmatically.
     
         dojo.addOnLoad(function(){
           // our test data store for this example:
-          var store4 = new dojox.data.CsvStore({ url: '{{ baseUrl }}dojox/grid/tests/support/movies.csv' });
+          var store4 = new dojox.data.CsvStore({ url: '{{ dataUrl }}dojox/grid/tests/support/movies.csv' });
 
           // set the layout structure:
           var layout4 = [
@@ -536,7 +536,7 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
   .. cv:: html
 
     <span dojoType="dojox.data.CsvStore" 
-        jsId="store2" url="{{ baseUrl }}dojox/grid/tests/support/movies.csv">
+        jsId="store2" url="{{ dataUrl }}dojox/grid/tests/support/movies.csv">
     </span>
 
     <p class="info">
@@ -653,7 +653,7 @@ First, you have to set a editor for each cell, you would like to edit:
   .. cv:: html
 
     <span dojoType="dojo.data.ItemFileWriteStore" 
-        jsId="store3" url="http://docs.dojocampus.org{{ baseUrl }}dijit/tests/_data/countries.json">
+        jsId="store3" url="{{ dataUrl }}dijit/tests/_data/countries.json">
     </span>
 
     <p class="info">
@@ -719,7 +719,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
   .. cv:: html
 
     <span dojoType="dojo.data.ItemFileWriteStore" 
-        jsId="store3" url="http://docs.dojocampus.org{{ baseUrl }}dijit/tests/_data/countries.json">
+        jsId="store3" url="{{ dataUrl }}dijit/tests/_data/countries.json">
     </span>
 
     <p class="info">
@@ -822,7 +822,7 @@ The Grid offers a filter() method, to filter data from the current query (client
     <span dojoType="dojox.data.CsvStore" 
         // We use the store from the examples above.
         // Please uncomment this line, if you need your own store:
-        // jsId="store2" url="{{ baseUrl }}dojox/grid/tests/support/movies.csv">
+        // jsId="store2" url="{{ dataUrl }}dojox/grid/tests/support/movies.csv">
     </span>
 
     <p class="info">
@@ -906,7 +906,7 @@ To use it, you just have to override default behavior by yours.
   .. cv:: html
 
     <span dojoType="dojo.data.ItemFileWriteStore" 
-        jsId="store3" url="http://docs.dojocampus.org{{ baseUrl }}dijit/tests/_data/countries.json">
+        jsId="store3" url="{{ dataUrl }}dijit/tests/_data/countries.json">
     </span>
 
     <table dojoType="dojox.grid.DataGrid"
