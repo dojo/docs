@@ -1031,7 +1031,7 @@ Reloading/Refreshing ItemFileReadStore from a url (Dojo Toolkit 1.4+)
          dojo.connect(dijit.byId("reloadButton2"), "onClick", function() {
             //Reset the url and call close.  Note this could be a different JSON file, but for this example, just 
             //Showing how you would set the URL.
-            reloadableStore2.url = "/moin_static163/js/dojo/trunk/release/dojo/dojox/data/tests/stores/countries.json"; 
+            reloadableStore2.url = "{{dataUrl}}/dojox/data/tests/stores/countries.json"; 
             reloadableStore2.close();
          });
       });
@@ -1039,7 +1039,7 @@ Reloading/Refreshing ItemFileReadStore from a url (Dojo Toolkit 1.4+)
 
   .. html::
 
-    <div dojoType="dojo.data.ItemFileReadStore" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/tests/stores/countries.json" jsId="reloadableStore2" urlPreventCache="true" clearOnClose="true"></div>
+    <div dojoType="dojo.data.ItemFileReadStore" url="{{dataUrl}}/dojox/data/tests/stores/countries.json" jsId="reloadableStore2" urlPreventCache="true" clearOnClose="true"></div>
     <div dojoType="dijit.form.ComboBox" store="reloadableStore2" searchAttr="name"></div>
     <div id="reloadButton2" dojoType="dijit.form.Button">Reload DataStore</div>
 
