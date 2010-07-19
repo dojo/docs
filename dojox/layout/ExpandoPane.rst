@@ -71,7 +71,7 @@ Declarative example
   .. cv:: css
 
     <style type="text/css">
-      @import url("../../moin_static183/js/dojo/trunk/dojox/layout/resources/ExpandoPane.css");
+      @import url("../../moin_static163/js/dojo/trunk/dojox/layout/resources/ExpandoPane.css");
 
       html, body {
         width: 100%;
