@@ -63,7 +63,7 @@ This example shows the standard calendar being created from code.  Include the C
   .. cv:: html
 
     <style type="text/css">
-      @import "/moin_static163/js/dojo/trunk/dojox/widget/Calendar/Calendar.css";
+      @import "{{baseUrl}}dojox/widget/Calendar/Calendar.css";
     </style>
     <div id="cal_1"></div>
     <div id="cal_1_report"></div>
@@ -90,7 +90,7 @@ This example shows just the daily calendar being instantiated, with no month or 
   .. cv:: html
 
     <style type="text/css">
-      @import "/moin_static163/js/dojo/trunk/dojox/widget/Calendar/Calendar.css";
+      @import "dojox/widget/Calendar/Calendar.css";
     </style>
     <div id="cal_2"></div>
     <div id="cal_2_report"></div>
@@ -120,7 +120,7 @@ This example shows how to construct a standard Calendar declaratively.  Note the
   .. cv:: html
 
     <style type="text/css">
-      @import "/moin_static163/js/dojo/trunk/dojox/widget/Calendar/Calendar.css";
+      @import "{{baseUrl}}dojox/widget/Calendar/Calendar.css";
     </style>
     <div id="cal_3" dojoType="dojox.widget.Calendar">
       <script type="dojo/connect" event="onValueSelected" args="date">
@@ -143,7 +143,7 @@ This example shows how to construct a Calendar declaratively, which only shows t
   .. cv:: html
 
     <style type="text/css">
-      @import "/moin_static163/js/dojo/trunk/dojox/widget/Calendar/Calendar.css";
+      @import "{{baseUrl}}dojox/widget/Calendar/Calendar.css";
     </style>
     <div id="cal_4" dojoType="dojox.widget.DailyCalendar">
       <script type="dojo/connect" event="onValueSelected" args="date">
@@ -171,7 +171,7 @@ As the calendar consists of a combination of views, it is possible to mix these 
   .. cv:: html
 
     <style type="text/css">
-      @import "/moin_static163/js/dojo/trunk/dojox/widget/Calendar/Calendar.css";
+      @import "{{baseUrl}}dojox/widget/Calendar/Calendar.css";
     </style>
     <div id="cal_5" dojoType="dojox.widget.CustomDayAndYearCalendar">
       <script type="dojo/connect" event="onValueSelected" args="date">
