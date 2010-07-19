@@ -106,7 +106,7 @@ Connecting QueryReadStore to dijit.form.ComboBox
   .. cv :: html 
 
     <b>Combo lookup of states through QueryReadStore</b><br> 
-    <div dojoType="dojox.data.QueryReadStore" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/tests/stores/QueryReadStore.php" jsId="comboStore"></div>
+    <div dojoType="dojox.data.QueryReadStore" url="{{dataUrl}}dojox/data/tests/stores/QueryReadStore.php" jsId="comboStore"></div>
     <div dojoType="dijit.form.ComboBox" store="comboStore" searchAttr="name" pageSize="100"></div>
 
 
@@ -127,5 +127,5 @@ Connecting QueryReadStore to dijit.form.FilteringSelect
   .. cv :: html 
 
     <b>FilteringSelect lookup of states through QueryReadStore</b><br> 
-    <div dojoType="dojox.data.QueryReadStore" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/tests/stores/QueryReadStore.php" jsId="comboStore2"></div>
+    <div dojoType="dojox.data.QueryReadStore" url="{{dataUrl}}dojox/data/tests/stores/QueryReadStore.php" jsId="comboStore2"></div>
     <div dojoType="dijit.form.FilteringSelect" store="comboStore2" searchAttr="name" pageSize="100"></div>
