@@ -367,6 +367,8 @@ Action                                        Key
 ==========================================    =================================================
 Navigate to next tab button                   Right arrow
 Navigate to previous tab button               Left arrow
+Navigate to first tab button                  Home
+Navigate to last tab button                   End
 Navigate into page                            Tab
 Navigate to next page                         Ctrl + page down, ctrl + tab (FF and IE6 only)
 Navigate to previous page                     Ctrl + page up, ctrl + shift + tab (FF and IE6 only)
