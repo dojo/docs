@@ -33,7 +33,7 @@ You should ensure that you include the ExpandoPane CSS in your application in or
  :linenos:
 
  <style type="text/css">
-   @import url("dojox/form/resources/ExpandoPane.css");
+   @import url("dojox/layout/resources/ExpandoPane.css");
  </style>
 
 
@@ -71,7 +71,7 @@ Declarative example
   .. cv:: css
 
     <style type="text/css">
-      @import url("/moin_static163/js/dojo/trunk/dojox/layout/resources/ExpandoPane.css");
+      @import url("../../js/dojo/trunk/dojox/layout/resources/ExpandoPane.css");
 
       html, body {
         width: 100%;
