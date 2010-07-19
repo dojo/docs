@@ -44,7 +44,7 @@ To set the default value for a programmatic ComboBox, include the *value* attrib
 
      <script type="text/javascript">     
       dojo.addOnLoad(function(){
-        var stateStore = new dojo.data.ItemFileReadStore({url: "{{dataUrl}}dijit/tests/_data/states.json"});       
+        var stateStore = new dojo.data.ItemFileReadStore({url: "{{ dataUrl }}dijit/tests/_data/states.json"});       
         var filteringSelect = new dijit.form.ComboBox({id: "stateSelect", name: "state", value: "Kentucky", store: stateStore, searchAttr: "name"}, "stateSelect");
       });
     </script>
