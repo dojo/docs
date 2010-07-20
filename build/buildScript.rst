@@ -17,7 +17,11 @@ Introduction
 
 The ``build.sh`` (unix) or ``build.bat`` (Windows) script located in the Dojo source distrubtion tree under ``\\util\buildscripts`` is used to trigger the build process.
 
-Note:  For advanced users, the command line arguments to the script are passed in to the ``build.js`` execution environment as part of the overall ``kwArgs`` object that it receives.
+**Notes**  
+
+  * For advanced users, the command line arguments to the script are passed in to the ``build.js`` execution environment as part of the overall ``kwArgs`` object that it receives.
+  
+  * Any of the following parameters can be set directly in the profile file as part of the overall `dependencies` Object 
 
 =====
 Usage
