@@ -436,9 +436,9 @@ This example demonstrates a FilteringSelect populated with 3 items: `Dojo core`,
                 identifier:"name",
                 label:"label",
                 items:[
-                        {name:"Dojo core", label:"<img src='http://www.dojotoolkit.org/sites/all/themes/dtk/img/core-home.png' />"},
-                        {name:"Dijit", label:"<img src='http://www.dojotoolkit.org/sites/all/themes/dtk/img/dijit-home.png' />"},
-                        {name:"Dojox", label:"<img src='http://www.dojotoolkit.org/sites/all/themes/dtk/img/dojox-home.png' />"}
+                        {name:"Dojo core", label:"<img src='http://o.dojotoolkit.org/sites/all/themes/dtk/img/core-home.png' />"},
+                        {name:"Dijit", label:"<img src='http://o.dojotoolkit.org/sites/all/themes/dtk/img/dijit-home.png' />"},
+                        {name:"Dojox", label:"<img src='http://o.dojotoolkit.org/sites/all/themes/dtk/img/dojox-home.png' />"}
                 ]
         };
  
