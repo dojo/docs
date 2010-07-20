@@ -21,6 +21,11 @@ The following browsers are supported. If a browser is not supported, it still ma
 Dojo Core
 =========
 
+NodeList
+--------
+closest(), orphan(), and filter() enhanced to work on any selector rather than just simple selectors.
+
+
 =====
 Dijit
 =====
