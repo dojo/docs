@@ -164,7 +164,7 @@ In pure JavaScript, this is handled by a prototype function named after the clas
 Arrays and Objects as member variables
 ======================================
 
-If your class contains arrays or other objects, they should be declared in the constructor so that each instance gets it's own copy. Simple types (literal strings and numbers) are fine to declare in the class directly.
+If your class contains arrays or other objects, they should be declared in the constructor so that each instance gets its own copy. Simple types (literal strings and numbers) are fine to declare in the class directly.
 
 
 .. code-block :: javascript
@@ -176,7 +176,7 @@ If your class contains arrays or other objects, they should be declared in the c
     strItem : "string", // one per bar
 
     constructor: function() {
-      this.someData = [ ]; // better, each bar has it's own array
+      this.someData = [ ]; // better, each bar has its own array
       this.expensiveResource = new expensiveResource(); // one per bar
     }
   });
@@ -989,7 +989,7 @@ Additionally a prototype has a special property named ``declaredClass``, if the 
 
 Every instance created by ``dojo.declare``'d class has a special property called ``_inherited``, which is used to speed up `inherited()`_ calls. Please don't touch it.
 
-Every method mixed in by ``dojo.declare`` or `dojo.safeMethod <dojo/safeMethod>`_ is annotated: a special property called ``nom`` is added. It contains a name of the method in question and used by `inherited()`_ and `getInherited()`_ to deduce the name of a superclass method. See `dojo.safeMixin <dojo/safeMixin>`_ for more details.
+Every method mixed in by ``dojo.declare`` or `dojo.safeMixin <dojo/safeMixin>`_ is annotated: a special property called ``nom`` is added. It contains a name of the method in question and used by `inherited()`_ and `getInherited()`_ to deduce the name of a superclass method. See `dojo.safeMixin <dojo/safeMixin>`_ for more details.
 
 ========
 See Also
