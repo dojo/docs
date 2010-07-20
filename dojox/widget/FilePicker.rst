@@ -56,11 +56,11 @@ A simple file picker pulling data from a dojox.data.FileStore
   .. cv :: html
   
     <div dojoType="dojox.data.FileStore" jsId="fileStore" pathAsQueryParam="true"
-        url="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/demos/stores/filestore_dojotree.php"></div>
+        url="{{dataUrl}}dojox/data/demos/stores/filestore_dojotree.php"></div>
     <div dojoType="dojox.widget.FilePicker" store="fileStore" query="{}" style="height:150px;width:50%"></div>
 
   .. cv:: css
 
     <style type="text/css">
-      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/widget/FilePicker/FilePicker.css";
+      @import "{{baseUrl}}dojox/widget/FilePicker/FilePicker.css";
     </style>
