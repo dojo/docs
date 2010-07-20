@@ -110,7 +110,7 @@ Example 1: Create an ATOM Feed model from an existing ATOM document
       //This function performs some basic dojo initialization and will do the load calling for this example
       function initSimpleAtom () {
         var xhrArgs = { 
-           url: "/moin_static163/js/dojo/trunk/release/dojo/dojox/atom/tests/widget/samplefeedEdit.xml",
+           url: "{{dataUrl}}dojox/atom/tests/widget/samplefeedEdit.xml",
            preventCache: true,
            handleAs: "xml"
         };
@@ -216,7 +216,7 @@ Example 3: Modify a loaded feed
       //This function performs some basic dojo initialization and will do the load calling for this example
       function initSimpleAtomModified() {
         var xhrArgs = { 
-           url: "/moin_static163/js/dojo/trunk/release/dojo/dojox/atom/tests/widget/samplefeedEdit.xml",
+           url: "{{dataUrl}}dojox/atom/tests/widget/samplefeedEdit.xml",
            preventCache: true,
            handleAs: "xml"
         };
