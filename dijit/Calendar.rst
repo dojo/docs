@@ -171,7 +171,7 @@ With a local custom template to change the layout (does not work against CDN)
 	<input id="calendar5" dayWidth="abbr" value="2008-03-13">
         
 
-[experimental: 1.4+] Non-Gregorian calendars
+[1.4+] Non-Gregorian calendars
 
 .. cv-compound::
   :version: 9.99
@@ -245,7 +245,7 @@ With a local custom template to change the layout (does not work against CDN)
 Note
 ====
 
-dijit._Calendar was upgraded to dijit.Calendar in version 1.4.0. An alias is provided for backwards compatibility.
+dijit._Calendar was upgraded to dijit.Calendar in version 1.4. An alias is provided for backwards compatibility.
 
 
 ========
