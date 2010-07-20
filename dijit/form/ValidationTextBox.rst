@@ -16,7 +16,7 @@ Introduction
 
 A ValidationTextBox is an <input>-like widget that checks to make sure the user's input is valid (according to a specified criterion).  It flags invalid input by changing the box color, showing an icon, and displaying a tooltip detailing the error.  
 
-Note that a ValidationTextBox by itself *will not* prevent invalid entries from submission. To ensure they're not, simply surround your form with a `dijit.form.Form <dijit.form.Form>`_ widget.
+Note that a ValidationTextBox by itself *will not* prevent invalid entries from submission. To ensure they're not, simply surround your form with a `dijit.form.Form <dijit/form/Form>`_ widget.
 
 
 =====
