@@ -1,4 +1,5 @@
 #format dojo_rst
+
 Build System:  Cross-Domain (xDomain) Builds
 ============================================
 
@@ -10,10 +11,10 @@ Build System:  Cross-Domain (xDomain) Builds
 .. contents::
    :depth: 2
 
-Content copied (pending modification) from main quickstart page:
+_Content copied (pending modification) from main quickstart page:_
 
-Cross Domain (XDomain) Builds
------------------------------
+Cross Domain (X-Domain) Builds
+------------------------------
 
 Doing an xdomain build allows you to load Dojo and your custom modules from another domain.
 
@@ -51,7 +52,7 @@ Sample xdomain build command::
   $ cd util/buildscripts
   $ build.sh profile=foo loader=xdomain xdDojoPath=http://my.server.com/path/to/buildoutputdir action=release
 
-xdDojoPath is optional. It just burns in the location of dojo, dijit and dojox into the built dojo.js. If you do not specify that option, then you will need to use djConfig.modulePaths/dojo.registerModulePath() in your HTML page to set the xdomain locations for dojo, dijit and dojox. For your own custom modules, you will have to set djConfig.modulePaths/dojo.registerModulePath() even if you us the xdDojoPath build option.
+xdDojoPath is optional. It just burns in the location of Dojo, Dijit and DojoX into the built dojo.js. If you do not specify that option, then you will need to use djConfig.modulePaths/dojo.registerModulePath() in your HTML page to set the xdomain locations for Dojo, Dijit and DojoX. For your own custom modules, you will have to set djConfig.modulePaths/dojo.registerModulePath() even if you us the xdDojoPath build option.
 
 **For Dojo 0.9 through 1.1.x**: there is a `bug about loading dojox.gfx with an xdomain build <http://trac.dojotoolkit.org/ticket/4462>`_; this is fixed in Dojo 1.2. If you want to use dojox.gfx with an xdomain build of Dojo 0.9-1.1.x, there some work-arounds exist:
 
@@ -69,7 +70,7 @@ How to use xdomain builds in web pages
 XDomain Example
 ~~~~~~~~~~~~~~~
 
-`Here is an example <http://jburke.dojotoolkit.org/demos/xdlocal/LocalAndXd.html>`_ showing how to load local modules along with an xdomain-loaded dojo and dijit. You can `download this example <http://jburke.dojotoolkit.org/demos/xdlocal/xdlocal.zip>`_.
+`Here is an example <http://jburke.dojotoolkit.org/demos/xdlocal/LocalAndXd.html>`_ showing how to load local modules along with an xdomain-loaded Dojo and Dijit. You can `download this example <http://jburke.dojotoolkit.org/demos/xdlocal/xdlocal.zip>`_.
 
 ========
 See also
