@@ -1,6 +1,6 @@
 #format dojo_rst
 
-= *Proposal* for dojo.Node object =
+== *Proposal* for dojo.Node object
 
 A dojo.Node object could be developed to be a wrapper to the standard DOM Node object and add some useful extended functionality to it. This would be much like the dojo.NodeList object, which is a wrapper for the standard Array class, and extending the DOM Node '''without''' interfering with the standard Javascript namespace. The interface this object would have would be identical in as many ways as possible to the dojo.NodeList object so that learning one would be knowning the other.
 
