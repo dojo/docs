@@ -17,7 +17,7 @@ This document provides some simple examples of using the Dojo build system, how 
 Introduction
 ============
 
-For an introduction to the build system, see `<build>`_. This page assumes you already know you want a build, but are not quite sure how to go about it. 
+For an introduction to the build system, see `the overview<build/index>`_. This page assumes you already know you want a build, but are not quite sure how to go about it. 
 
 Like most parts of Dojo the build system has been designed to be both powerful and flexible. There are a lot of different options available to tweak your system but, for the majority of first-time users, sticking to the defaults in this example will do you just fine.
 
@@ -25,7 +25,7 @@ Like most parts of Dojo the build system has been designed to be both powerful a
 Example 1
 =========
 
-Download http://docs.dojocampus.org/build/simpleExample?action=AttachFile&do=get&target=dojoBuildSystemExample.zip and unzip. Note: Because the source release of Dojo is quite large it isn't included in the zip file. Once you've unpacked the zip, go to js/dojo-src run getDojo.sh. Then repeat this within the js/dojo-1.4.1 directory. These scripts will download the base dojo releases for you and unzip them into the locations used by the build system (if you're on Windows they won't work, but are sufficiently simple and documented that following the process manually will be straight forward. If anyone wants to write a .bat script please let me know - mrtom <at> cantab <dot> net).
+Download http://docs.dojocampus.org/build/simpleExample?action=AttachFile&do=get&target=dojoBuildSystemExample.zip and unzip. Note: Because the source release of Dojo is quite large it isn't included in the zip file. Once you've unpacked the zip, go to js/dojo-src run getDojo.sh. Then repeat this within the js/dojo-| version | directory. These scripts will download the base dojo releases for you and unzip them into the locations used by the build system (if you're on Windows they won't work, but are sufficiently simple and documented that following the process manually will be straight forward. If anyone wants to write a .bat script please let me know - mrtom <at> cantab <dot> net).
 
 As an aside, I think it's good practise to have a completely clean Dojo release every time you do a build. If you want to patch it, you should create a 'patches' module in your own namespace and add the patches either as part of the build process, or by writing code that updates itself. Otherwise upgrades will be very painful. The way this example has been structured you can delete the entire dojo-src or dojo-1.4.1 directories at any time and replace with a fresh build.
 
