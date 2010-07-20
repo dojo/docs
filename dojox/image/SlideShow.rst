@@ -222,7 +222,7 @@ The name of the topic is retrieved by calling the getShowTopicName method on the
   .. cv:: css
 
    <style>
-    @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/image/resources/image.css";
+    @import "{{baseUrl}}dojox/image/resources/image.css";
    </style>
 
 
