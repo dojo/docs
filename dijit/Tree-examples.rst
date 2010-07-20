@@ -54,7 +54,7 @@ Expanding and Focusing tree nodes programatically
   .. cv:: html
 
     <div dojoType="dojo.data.ItemFileReadStore" jsId="continentStore"
-      url="http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/countries.json"></div>
+      url="{{dataUrl}}dijit/tests/_data/countries.json"></div>
     <div dojoType="dijit.tree.ForestStoreModel" jsId="continentModel" 
       store="continentStore" query="{type:'continent'}"
       rootId="continentRoot" rootLabel="Continents" childrenAttrs="children"></div>
@@ -118,7 +118,7 @@ The following example contains workaround code for this problem, as well as an e
   .. cv:: html
 
     <div dojoType="dojo.data.ItemFileReadStore" jsId="continentStore"
-      url="http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/countries.json"></div>
+      url="{{dataUrl}}dijit/tests/_data/countries.json"></div>
     <div dojoType="dijit.tree.ForestStoreModel" jsId="continentModel" 
       store="continentStore" query="{type:'continent'}"
       rootId="continentRoot" rootLabel="Continents" childrenAttrs="children"></div>
@@ -143,7 +143,7 @@ Simply set the ``openOnClick`` attribute to ``false``
   .. cv:: html
 
     <div dojoType="dojo.data.ItemFileReadStore" jsId="continentStore"
-      url="http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dijit/tests/_data/countries.json"></div>
+      url="{{dataUrl}}dijit/tests/_data/countries.json"></div>
     <div dojoType="dijit.tree.ForestStoreModel" jsId="continentModel" 
       store="continentStore" query="{type:'continent'}"
       rootId="continentRoot" rootLabel="Continents" childrenAttrs="children"></div>
