@@ -69,8 +69,8 @@ Programmatic example
     var mySound;
     dojo.addOnLoad(function(){
         mySound = new dojox.av.FLAudio({initialVolume:.5, autoPlay:false, isDebug:false, statusInterval:500});
-        mySound.load({url:"http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dojox/av/tests/audio/Ola.mp3", id:'Ola'});
-        mySound.load({url:"http://docs.dojocampus.org/moin_static163/js/dojo/trunk/dojox/av/tests/audio/Hio.mp3", id:"Hio"});
+        mySound.load({url:"{{dataUrl}}dojox/av/tests/audio/Ola.mp3", id:'Ola'});
+        mySound.load({url:"{{dataUrl}}dojox/av/tests/audio/Hio.mp3", id:"Hio"});
     });
     </script>
 
@@ -81,7 +81,7 @@ Programmatic example
     <button onclick="mySound.doPlay({index:0, volume:1, pan:-1})">Ola Left</button>
     <button onclick="mySound.doPlay({index:0, volume:.1})">Ola Quiet</button>
     <button onclick="mySound.doPlay({index:1})">Hio</button>
-    <button onclick="mySound.doPlay({id:'Ola', volume:1, pan:-1}); doPlay({id:'Hio', volume:1, pan:1});">Ola Left - Hio Right</button>
+    <button onclick="mySound.doPlay({id:'Ola', volume:1, pan:-1}); mySound.doPlay({id:'Hio', volume:1, pan:1});">Ola Left - Hio Right</button>
     <button onclick="mySound.doPlay({index:0, volume:1})">Ola Loud</button>
     <button onclick="mySound.doPlay({id:'Ola', volume:1, pan:1})">Ola Right</button>
 
