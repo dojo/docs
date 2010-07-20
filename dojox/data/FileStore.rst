@@ -183,7 +183,7 @@ Attaching the FileStore to dijit.Tree declaratively
   .. cv :: html
   
     <div>
-      <div dojoType="dojox.data.FileStore" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/demos/stores/filestore_dojotree.php" pathAsQueryParam="true" jsId="dojoFiles"></div>
+      <div dojoType="dojox.data.FileStore" url="{{dataUrl}}dojox/data/demos/stores/filestore_dojotree.php" pathAsQueryParam="true" jsId="dojoFiles"></div>
       <div dojoType="dijit.tree.ForestStoreModel" jsId="fileModel" store="dojoFiles" query="{}" rootId="DojoFiles" rootLabel="Dojo Files" childrenAttrs="children"></div>
       <div id="tree" dojoType="dijit.Tree" model="fileModel" ></div>  
     </div>
@@ -203,7 +203,7 @@ Attaching the FileStore to dijit.form.ComboBox declaratively
   .. cv :: html
 
     <div>
-      <div dojoType="dojox.data.FileStore" url="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/demos/stores/filestore_dojoxdata.php" pathAsQueryParam="true" jsId="comboStore"></div>
+      <div dojoType="dojox.data.FileStore" url="{{dataUrl}}dojox/data/demos/stores/filestore_dojoxdata.php" pathAsQueryParam="true" jsId="comboStore"></div>
       <div dojoType="dijit.form.ComboBox"  store="comboStore" searchAttr="path" value="./demos"></div> 
     </div>
 
@@ -223,7 +223,7 @@ Attaching the FileStore to dojox.grid.DataGrid declaratively
 
     <span dojoType="dojox.data.FileStore" 
       jsId="fileStore3" 
-      url="/moin_static163/js/dojo/trunk/release/dojo/dojox/data/demos/stores/filestore_dojoxdata.php" 
+      url="{{dataUrl}}dojox/data/demos/stores/filestore_dojoxdata.php" 
       pathAsQueryParam="true">
     </span>
 
@@ -247,8 +247,8 @@ Attaching the FileStore to dojox.grid.DataGrid declaratively
   .. cv:: css
 
     <style type="text/css">
-      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/resources/Grid.css";
-      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/resources/nihiloGrid.css";
+      @import "{{baseUrl}}dojox/grid/resources/Grid.css";
+      @import "{{baseUrl}}dojox/grid/resources/nihiloGrid.css";
 
       .dojoxGrid table {
         margin: 0;
