@@ -175,7 +175,7 @@ Render the current Date in several ways using format(). The inverse operation to
 .. codeviewer::
   
   <style type="text/css">
-    @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/widget/DocTester/DocTester.css"; 
+    @import "dojox/widget/DocTester/DocTester.css"; 
   </style>
   <script type="text/javascript">
     djConfig.locale = 'en'; djConfig.extraLocale = ['es', 'zh'];
