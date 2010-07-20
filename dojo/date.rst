@@ -31,7 +31,7 @@ Usage
 .. codeviewer::
   
   <style type="text/css">
-    @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/widget/DocTester/DocTester.css"; 
+    @import "{{baseUrl}}dojox/widget/DocTester/DocTester.css"; 
   </style>
   <script type="text/javascript">
     dojo.require("dojox.widget.DocTester");
