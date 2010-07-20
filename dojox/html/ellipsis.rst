@@ -58,7 +58,7 @@ Within a fixed-width div
   .. cv:: css
 
     <style type="text/css">
-      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/html/resources/ellipsis.css";
+      @import "{{baseUrl}}dojox/html/resources/ellipsis.css";
     </style>
 
 Forcing selectability in FF
@@ -81,7 +81,7 @@ Forcing selectability in FF
   .. cv:: css
 
     <style type="text/css">
-      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/html/resources/ellipsis.css";
+      @import "{{baseUrl}}dojox/html/resources/ellipsis.css";
     </style>
 
 Within a table
@@ -107,5 +107,5 @@ Within a table
   .. cv:: css
 
     <style type="text/css">
-      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/html/resources/ellipsis.css";
+      @import "{{baseUrl}}dojox/html/resources/ellipsis.css";
     </style>
