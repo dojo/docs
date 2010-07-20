@@ -172,7 +172,7 @@ of settings, and uses the FlickrRestStore data store.
    .. cv:: css
 
       <style>
-         @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/image/resources/image.css";
+         @import "{{baseUrl}}dojox/image/resources/image.css";
       <style>
  
 
