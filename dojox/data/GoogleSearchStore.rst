@@ -421,8 +421,8 @@ Searching multiple Google services at once
   .. cv:: css
 
     <style type="text/css">
-      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/resources/Grid.css";
-      @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/grid/resources/nihiloGrid.css";
+      @import "{{baseUrl}}/dojox/grid/resources/Grid.css";
+      @import "{{baseUrl}}/dojox/grid/resources/nihiloGrid.css";
 
       .dojoxGrid table {
         margin: 0;
