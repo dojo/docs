@@ -143,13 +143,11 @@ The attributeMap specifies a mapping of widget attributes into the DOM tree for 
 
 The custom setters/getters can perform any needed operation for setting/resetting a value. They are used when attributeMap won't do the job.
 
-For more details on both attributeMap and custom setters/getters, see the Writing Widgets `quickstart`_ guide.
+For more details on both attributeMap and custom setters/getters, see the Writing Widgets `QuickStart <quickstart/writingWidgets>`_ guide.
 
 
 ========
 See also
 ========
 
-* Writing Widgets `quickstart`_
-
-.. _quickstart: quickstart/writingWidgets
+* `Writing Widgets <quickstart/writingWidgets>`_
