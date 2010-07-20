@@ -332,7 +332,7 @@ This example works on Firefix and Safari only.
   .. cv:: css
 
     <style type="text/css">
-      @import "{{dataUrl}}dojox/widget/Standby/Standby.css";
+      @import "{{baseUrl}}dojox/widget/Standby/Standby.css";
     </style>
     <!-- Also just define the styles inline in case the stylesheet can't be loaded. -->
     <!-- Note that for Dojo 1.4+, this is not needed at all. -->
@@ -387,7 +387,7 @@ Overlaying a dijit.form.TextBox
   .. cv:: css
 
     <style type="text/css">
-      @import "/moin_static163/js/dojo/release/dojox/widget/Standby/Standby.css";
+      @import "{{baseUrl}}dojox/widget/Standby/Standby.css";
     </style>
     <!-- Also just define the styles inline in case the stylesheet can't be loaded. -->
     <!-- Note that for Dojo 1.4+, this is not needed at all. -->
