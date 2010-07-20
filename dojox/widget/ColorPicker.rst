@@ -28,7 +28,7 @@ To use the ColorPicker you need to first load the CSS:
 .. code-block :: html
   :linenos:
   
-    <link rel="stylesheet" href="dojotoolkit/dojox/widget/ColorPicker/ColorPicker.css" />
+    <link rel="stylesheet" href="dojox/widget/ColorPicker/ColorPicker.css" />
 
 And Require the module:
 
@@ -49,7 +49,7 @@ Programmatic example
 
   .. css::
 
-    <link rel="stylesheet" href="/moin_static163/js/dojo/trunk/dojox/widget/ColorPicker/ColorPicker.css" />
+    <link rel="stylesheet" href="{{baseUrl}}dojox/widget/ColorPicker/ColorPicker.css" />
 
   .. javascript::
 
@@ -72,7 +72,7 @@ Declarative example
 
   .. css::
 
-    <link rel="stylesheet" href="/moin_static163/js/dojo/trunk/dojox/widget/ColorPicker/ColorPicker.css" />
+    <link rel="stylesheet" href="{{baseUrl}}dojox/widget/ColorPicker/ColorPicker.css" />
 
   .. javascript::
 
@@ -92,7 +92,7 @@ A ColorPicker within a DropDownButton
 
   .. css::
 
-    <link rel="stylesheet" href="/moin_static163/js/dojo/trunk/dojox/widget/ColorPicker/ColorPicker.css" />
+    <link rel="stylesheet" href="{{baseUrl}}dojox/widget/ColorPicker/ColorPicker.css" />
 
   .. javascript::
 
