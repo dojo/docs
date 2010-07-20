@@ -21,16 +21,12 @@ Declarative markup
         dojo.require("dijit.ProgressBar");
         dojo.require("dojo.parser");
         
-        function download(){
-            // Split up bar into 10% segments
-            for (var i=1; i<=10; i++){
-                // This plays update({progress:0}) at 1nn milliseconds, 
-                // update({progress:1}) at 2nn milliseconds, etc.
-                setTimeout(
-                   "jsProgress.set({ progress: " + i + " })",
-                   (i+1)*100 + Math.floor(Math.random()*100)
-                );
-            }
+ 	var i=0;
+        function download() {
+			jsProgress.update({maximum: 10, progress: ++i});
+			if(i < 10){
+				setTimeout(download, 100 + Math.floor(Math.random() * 100));
+			}
         }
      </script>
 
