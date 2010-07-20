@@ -1,6 +1,7 @@
 #format dojo_rst
 
-= Special Dojo Build: WebKit Mobile =
+Special Dojo Build: WebKit Mobile 
+===================================
 
 This is a simple build one can run to remove a percentage of the base ``dojo.js`` by omitting branches of code designed to acommodate Internet Explorer.
 
