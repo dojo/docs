@@ -85,7 +85,7 @@ Example 1: Load an ATOM Feed
       function initSimpleAtom () {
         var conn = new dojox.atom.io.Connection();
 
-        conn.getFeed("{{baseUrl}}dojox/atom/tests/widget/samplefeedEdit.xml",
+        conn.getFeed("{{dataUrl}}dojox/atom/tests/widget/samplefeedEdit.xml",
           function(feed) {
            //Emit both the XML (As reconstructed from the Feed object and as a JSON form.
            var xml = dojo.byId("simpleAtomXml");
