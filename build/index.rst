@@ -377,7 +377,7 @@ A simple default `release build <build/scenario-release>`_ that creates the basi
 Dojo Base Only Build
 ~~~~~~~~~~~~~~~~~~~~
 
-A small Dojo `base build <build/scenario-base>`_ which only builds the Dojo core into a layer, without dijit and the other name spaces: 
+A small Dojo `base build <build/scenario-base>`_ which only builds the Dojo core into a layer, without Dijit and the other name spaces. 
 
 Basic Cross Domain Build
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -405,5 +405,3 @@ Micro Build
 ~~~~~~~~~~~
 
 An absolutely minimal build of Dojo containing just the most essential core elements, suitable for smart phones and other resource-limited hosts:  `Micro-build <build/scenario-micro>`_
-
-* Others?
