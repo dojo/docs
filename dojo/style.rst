@@ -16,7 +16,7 @@ A getter/setter for styles on a DOM node.
 Introduction
 ============
 
-Accesses styles on a node. If 2 arguments are passed, acts as a getter. If 3 arguments are passed, acts as a setter.
+Accesses styles on a node. If 2 arguments are passed and the second argument is a string acts as a getter. If 2 arguments are passed, and the second is an Object, recursively acts as a setter for the key/value paris. If 3 arguments are passed, acts as a setter for a single property.
 
 See the Tips section below for caveats on getting style information, like when using a compound style value (like background or border), and getting node dimensions.
 
