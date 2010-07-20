@@ -81,15 +81,10 @@ Cons of this approach
 
  * Obviously you are not going to keep two copies of your HTML files kicking around, so you have to change the contents of the file on the server side depending on if you are in a live or development environment.
 
-=========
-Example 2
-=========
-
-// TODO
 
 ========
 See also
 ========
 
- * `<build>`_
- * `<build/directoryLayout>`_
+ * `Build Home <build/index>`_
+ * `Directory layout <build/directoryLayout>`_
