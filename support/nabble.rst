@@ -13,7 +13,6 @@ the dojo-interest mailing list is at [[http://mail.dojotoolkit.org/mailman/listi
 
 == The Archive ==
 
-
 the mailing list is archived by Nabble and pipermail
  * current questions and posts
   * [[http://www.nabble.com/Dojo-f36462.html]]
