@@ -145,6 +145,6 @@ buildLayers=
 Examples
 ========
 
-.. code-block :: shell
+.. code-block :: javascript
 
   ./build.sh action=release,clean profile=myprofile version=1.5.0 releaseDir=myrelease
