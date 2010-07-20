@@ -261,7 +261,7 @@ A half circle gauge with two indicators overlay graphic
         console.debug(gauge);
         gauge.addIndicator(new dojox.widget.gauge.AnalogLineIndicator({
           'value': 52,
-          'color': '#D00000,
+          'color': '#D00000',
           'width': 3,
           'hover': 'Target: 52',
           'title': 'Target'
@@ -290,7 +290,7 @@ A half circle gauge with two indicators overlay graphic
       useRangeStyles="0"
       hideValues="true"
       majorTicks="{length: 5, offset: 125, interval: 5}"
-      image="{url:'/moin_static163/js/dojo/trunk/release/dojo/dojox/widget/tests/images/gaugeOverlay.png', width: 280, height: 155,x: 35, y: 38,overlay: true}">
+      image="{url:'{{dataUrl}}dojox/widget/tests/images/gaugeOverlay.png', width: 280, height: 155,x: 35, y: 38,overlay: true}">
       <div dojoType="dojox.widget.gauge.Range"
         low="0"
 	high="10"
