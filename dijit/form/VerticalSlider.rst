@@ -1,0 +1,1 @@
+#REDIRECT dijit/form/Slider
