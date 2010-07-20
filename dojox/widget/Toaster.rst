@@ -26,7 +26,7 @@ And include the CSS somewhere in your page:
 .. code-block :: html
   :linenos:
 
-    <link rel="styleheet" href="dojotoolkit/dojox/widget/Toaster/Toaster.css" />
+    <link rel="styleheet" href="dojox/widget/Toaster/Toaster.css" />
 
 
 Examples
@@ -40,7 +40,7 @@ The first example uses setContent() and show() to vary the message and display i
 
   .. cv:: css
 
-    <link rel="stylesheet" type="text/css" href="/moin_static163/js/dojo/trunk/dojox/widget/Toaster/Toaster.css" >
+    <link rel="stylesheet" type="text/css" href="{{baseUrl}}dojox/widget/Toaster/Toaster.css" >
 
   Javascript   
 
@@ -83,7 +83,7 @@ The next example does the same thing, but uses the publish/subscribe model.  The
 
   .. cv:: css
 
-    <link rel="stylesheet" type="text/css" href="/moin_static163/js/dojo/trunk/dojox/widget/Toaster/Toaster.css" >
+    <link rel="stylesheet" type="text/css" href="{{baseUrl}}dojox/widget/Toaster/Toaster.css" >
 
   Javascript   
 
@@ -122,7 +122,7 @@ This example builds a Toaster programatically and lets you set params.
 
   .. cv:: css
 
-    <link rel="stylesheet" type="text/css" href="/moin_static163/js/dojo/trunk/dojox/widget/Toaster/Toaster.css" >
+    <link rel="stylesheet" type="text/css" href="{{baseUrl}}dojox/widget/Toaster/Toaster.css" >
 
   Javascript
 
