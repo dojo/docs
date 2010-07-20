@@ -22,8 +22,8 @@ Being a subclass of dijit.Dialog, you will need to include the relevant dijit-cs
 .. code-block :: html
 
     <style type="text/css">
-     @import "/moin_static163/js/dojo/trunk/release/dojo/dijit/themes/tundra/tundra.css";
-     @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/image/resources/Lightbox.css";
+     @import "dijit/themes/tundra/tundra.css";
+     @import "dojox/image/resources/Lightbox.css";
     </style>
     <body class="tundra">
         ...
@@ -49,7 +49,7 @@ The most basic application of a Lightbox is to convert links containing ``title`
 .. codeviewer::
   
   <style type="text/css">
-    @import "/moin_static163/js/dojo/trunk/release/dojo/dojox/image/resources/Lightbox.css"; 
+    @import "dojox/image/resources/Lightbox.css"; 
   </style>
   <script type="text/javascript">
     dojo.require("dojox.image.Lightbox");
