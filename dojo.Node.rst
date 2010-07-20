@@ -1,33 +1,37 @@
 #format dojo_rst
 
-== *Proposal* for dojo.Node object
+*Proposal* for dojo.Node object
+=================================
 
 A dojo.Node object could be developed to be a wrapper to the standard DOM Node object and add some useful extended functionality to it. This would be much like the dojo.NodeList object, which is a wrapper for the standard Array class, and extending the DOM Node '''without''' interfering with the standard Javascript namespace. The interface this object would have would be identical in as many ways as possible to the dojo.NodeList object so that learning one would be knowning the other.
 
 This might simplify the object hierarchy by allowing dojo.NodeList to actually contain a list of dojo.Node's and most of the existing functionality of dojo.NodeList would be converted to just looping thought its internal array and calling the same function on each dojo.Node within.
 
-== Usage ==
+Usage
+-----
 
 Creating a dojo.Node is done using the same semantics as dojo.byId(), i.e. dojo.Node('nodeID') would return a dojo.Node wrapping the DOM node with id of 'nodeID'.
 
 Building additional functionality on top of dojo.Node would allow simple constructs like:
 
-{{{#!javascript
+.. code-block :: javascript
+
     dojo.Node('myId').css('display', 'none');
-}}}
+
 
 Compare this with the equivalent in today's Dojo:
 
-{{{#!javascript
+.. code-block :: javascript
+
     dojo.style("myId", 'display', 'none');
     dojo.query("#myId").style('display', 'none');
-}}}
 
 While not a huge difference in the number of characters, the semantic bonuses should be pretty evident.
 
 This would enable us to fill the current gap between a Nodelist, which offers rich functionality over a list of DOM nodes with simple semantics like nodelist.highlight() and nodelist.addContent(), and the DOM:element returned by dojo.byId() which is little more than a glorified data structure.
 
-== Reasoning ==
+Reasoning
+---------
 
 This idea simply follows the same design idea behind dojo.query() returning a Nodelist instead of just an Array of DOM Nodes. The Nodelist has proven to be a very powerful addition to the Dojo object library and reduces the amount of code required to do the tedious everyday tasks, which is what good API design aspires to do, and less code is easier to maintain by definition.
 
