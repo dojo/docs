@@ -183,7 +183,7 @@ Connecting dojox.grid.DataGrid
 
     <style type="text/css">
       @import "{{baseUrl}}dojox/grid/resources/Grid.css";
-      @import "{{baseUrl}}dojox/grid/resources/nihiloGrid.css";
+      @import "{{baseUrl}}dojox/grid/resources/claroGrid.css";
 
       .dojoxGrid table {
         margin: 0;
