@@ -85,7 +85,7 @@ Example 1: Load an ATOM Feed
       function initSimpleAtom () {
         var conn = new dojox.atom.io.Connection();
 
-        conn.getFeed("/moin_static163/js/dojo/trunk/release/dojo/dojox/atom/tests/widget/samplefeedEdit.xml",
+        conn.getFeed("{{baseUrl}}dojox/atom/tests/widget/samplefeedEdit.xml",
           function(feed) {
            //Emit both the XML (As reconstructed from the Feed object and as a JSON form.
            var xml = dojo.byId("simpleAtomXml");
@@ -136,7 +136,7 @@ Example 2: Update an entry in a Feed
       function initUpdateAtom () {
         var conn = new dojox.atom.io.Connection();
 
-        conn.getFeed("/moin_static163/js/dojo/trunk/release/dojo/dojox/atom/tests/widget/samplefeedEdit.xml",
+        conn.getFeed("{{dataUrl}}dojox/atom/tests/widget/samplefeedEdit.xml",
           function(feed) {
            //Emit both the XML (As reconstructed from the Feed object and as a JSON form.
            var xml = dojo.byId("simplePristineAtomXml");
@@ -147,7 +147,7 @@ Example 2: Update an entry in a Feed
            var entry = feed.getFirstEntry();
 
            //Make this updateable by pointing it to the app test pho script so it can properly post.
-           entry.setEditHref("/moin_static163/js/dojo/trunk/release/dojo/dojox/atom/tests/io/app.php");
+           entry.setEditHref("{{dataUrl}}dojox/atom/tests/io/app.php");
            entry.updated = new Date();
            entry.setTitle('<h1>New Editable Title!</h1>', 'xhtml');
            conn.updateEntry(entry, function() {
