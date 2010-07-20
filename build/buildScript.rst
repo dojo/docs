@@ -70,7 +70,7 @@ symbol=
 internStrings=true
   Turn on or off widget template file interning.
 
-  Normally, during the build process, one of the things that the builder does is take the separate HTML template files used by templated Dojo widgets (there are many of these in `Dijit <dijit\index>`_) and convert them to inline string values within the as-built source file for the widget (as well as any layers that widget is built into).  
+  Normally, during the build process, one of the things that the builder does is take the separate HTML template files used by templated Dojo widgets (there are many of these in `Dijit <dijit/index>`_) and convert them to inline string values within the as-built source file for the widget (as well as any layers that widget is built into).  
 
 scopeMap=
   Change the default dojo, dijit and dojox scope names to something else. Useful if you want to use Dojo as part of a JS library, but want to make a self-contained library with no external dojo/dijit/dojox references. Format is a string that contains no spaces, and is similar to the djConfig.scopeMap value (note that the backslashes below are required to avoid shell escaping): ``scopeMap=[[\"dojo\",\"mydojo\"],[\"dijit\",\"mydijit\"],[\"dojox\",\"mydojox\"]]``
@@ -86,7 +86,7 @@ mini=false
     * original template files (since they would have been interned)
 
 optimize=
-  Specifies how to optimize module files. If "comments" is specified, then code comments are stripped. If "shrinksafe" is specified, then Dojo Shrinksafe will be used on the files, and line returns will be removed. If "shrinksafe.keepLines" is specified, then Dojo Shrinksafe will be used on the files, and line returns will be preserved. If "packer" is specified, Then Dean Edwards' Packer will be used.
+  Specifies how to optimize module files. If "comments" is specified, then code comments are stripped. If "shrinksafe" is specified, then Dojo Shrinksafe will be used on the files, and line returns will be removed. If "shrinksafe.keepLines" is specified, then Dojo Shrinksafe will be used on the files, and line returns will be preserved. If "packer" is specified, Then Dean Edwards' Packer will be used, etc.
 
   Possible values for this parameter are:
 
@@ -96,10 +96,14 @@ optimize=
   shrinksafe.keepLines
      Use Shrinksafe to remove comments, but leave line breaks as-is, to facilitate human reading of the file (usually for debugging)
 
-  packer
-     Use Dean Edward's Packer to minify, rather than Shrinksafe.
+  closure
+     Minify with the Google Closure compiler.  Requires Java 6.
 
-     Note: the Shrinksafe minification that is used by default is much more effective in most contexts than the Packer minification.  Use this parameter only on servers which do not do their own automatic gzip compression of files being sent.  The packer minification does more extensive name mangling than Shrinksafe and so may cause difficulty in debugging. 
+  packer
+     Minify with Dean Edwards' Packer.
+
+
+     Note: the Shrinksafe minification that is used by default is much more effective in most contexts than the Packer minification.  Use this parameter only on servers which do not do their own automatic gzip compression of files being sent.  The packer minification does more extensive name mangling than Shrinksafe and so may cause difficulty in debugging.  The new Google Closure compiler, not included with this distribution, generally provides the best results.
 
 loader=default
   The type of dojo loader to use. "default" or "xdomain" are acceptable values.
@@ -125,7 +129,7 @@ profile=base
   The name of the profile to use for the build. It must be the first part of the profile file name in the profiles/ directory. For instance, to use base.profile.js, specify profile=base.
 
 layerOptimize=shrinksafe
-  Specifies how to optimize the layer files. If "comments" is specified, then code comments are stripped. If "shrinksafe" is specified, then Dojo Shrinksafe will be used on the files, and line returns will be removed. If "shrinksafe.keepLines" is specified, then Dojo Shrinksafe will be used on the layer files, and line returns will be preserved. If "packer" is specified, Then Dean Edwards' Packer will be used.
+  Specifies how to optimize the layer files. If "comments" is specified, then code comments are stripped. See the 'optimize' parameter for possible values.
 
 scopeDjConfig=
   Burn in a djConfig object into the built dojo.js file. Useful if you are making your own scoped dojo and you want a djConfig object local to your version that will not be affected by any globally declared djConfig object in the page. Value must be a string that will look like a javascript object literal once it is placed in the built source. use Dojo as part of a JS library, but want to make a self-contained library with no external dojo/dijit/dojox. Example (note that the backslashes below are required to avoid shell escaping if you type this on the command line): ``scopeDjConfig={isDebug:true,scopeMap:[[\"dojo\",\"mydojo\"],[\"dijit\",\"mydijit\"],[\"dojox\",\"mydojox\"]]}``
@@ -137,28 +141,10 @@ xdDojoScopeName=dojo
 buildLayers=
   A comma-separated list of layer names to build. Using this option means that only those layers will be built. This helps if you are doing quick development and test cycles with layers. If you have problems using this option, try removing it and doing a full build with action=clean,release. This build option assumes you have done at least one full build first.
 
-
-
-
-
-
 ========
 Examples
 ========
 
-Programmatic example
---------------------
+.. code-block :: shell
 
-TODO: example
-
-Declarative example
--------------------
-
-TODO: example
-
-
-========
-See also
-========
-
-* TODO: links to other related articles
+  ./build.sh action=release,clean profile=myprofile version=1.5.0 releaseDir=myrelease
