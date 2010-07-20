@@ -86,7 +86,7 @@ Programmatic horizontal example
   .. cv:: css
 
     <style type="text/css">
-      @import url(/moin_static163/js/dojo/trunk/dojox/form/resources/RangeSlider.css);
+      @import url({{baseUrl}}dojox/form/resources/RangeSlider.css);
     </style>
 
 Programmatic vertical example with rulers
@@ -125,7 +125,7 @@ Programmatic vertical example with rulers
   .. cv:: css
 
     <style type="text/css">
-      @import url(/moin_static163/js/dojo/trunk/dojox/form/resources/RangeSlider.css);
+      @import url({{baseUrl}}dojox/form/resources/RangeSlider.css);
     </style>
 
 Declarative horizontal example
@@ -153,7 +153,7 @@ Declarative horizontal example
   .. cv:: css
 
     <style type="text/css">
-      @import url(/moin_static163/js/dojo/trunk/dojox/form/resources/RangeSlider.css);
+      @import url({{baseUrl}}dojox/form/resources/RangeSlider.css);
     </style>
 
 **NOTE** In delarative mode, the value of the attribute ``value`` is specified as a comma delimited string and not as an array (e.g. ``value="2,6"`` and not ``value="[2,6]"``.
