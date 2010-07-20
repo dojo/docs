@@ -11,7 +11,7 @@ Build System:  Cross-Domain (xDomain) Builds
 .. contents::
    :depth: 2
 
-_Content copied (pending modification) from main quickstart page:_
+__Content copied (pending modification) from main quickstart page:__
 
 Cross Domain (X-Domain) Builds
 ------------------------------
