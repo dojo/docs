@@ -14,9 +14,7 @@ Getting up-and-running with Dojo couldn't be easier. Just include this line in y
 
 .. code-block :: html
 
-    <script type="text/javascript"
-        src="http://ajax.googleapis.com/ajax/libs/dojo/1.5/dojo/dojo.xd.js">
-    </script>   
+    <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.5/dojo/dojo.xd.js"></script>   
 
 
 Dojo's now included on your page, no install, no fuss. So what do you get for all that hard work? 
