@@ -1,6 +1,4 @@
-## page was copied from MyStartingPage
-##master-page:HomepageTemplate
-
+#format dojo_rst
 
 = *Proposal* for dojo.Node object =
 
