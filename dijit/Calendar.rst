@@ -97,7 +97,7 @@ Javascript declaration, with a restriction of +/- one week from the current date
 
 	dojo.addOnLoad(function(){
 		new dijit._Calendar({
-			value: new Date(2009, 7, 7),
+			value: new Date(),
 			isDisabledDate: function(d){
 				var d = new Date(d); d.setHours(0,0,0,0);
 				var today = new Date(); today.setHours(0,0,0,0);
