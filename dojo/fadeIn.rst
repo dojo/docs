@@ -18,8 +18,6 @@ Parameters
 
 The *dojo.fadeIn* takes an object as its parameter.  This object defines what dom node to act on, how long the fade in should take (in milliseconds, and an optional easing function.  As with all dojo apis, refer to the API docs for the most up to date information on parameters.  These are listed for convenience.
 
-http://dojotoolkit.org/api/dojo/fadeIn
-
 `FIXME: just inline API signature`
 
 ============
