@@ -21,6 +21,8 @@ mixins
 
 In addition to providing some color-specific functionality, the dojo.colors module mixes all named css3 colors and SVG 1.0 variant spellings into dojo.Colors.named, such as `aliceblue`, `azure` and so on.
 
+The module also adds a `sanitize` method to dojo.Color.prototype. This method ensures the Color object has the correct attributes, and are valid.
+
 See Also:
 =========
 
