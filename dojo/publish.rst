@@ -16,7 +16,7 @@ Publish an event to all subscribers of a `topic`. Publish is provided as part of
 Introduction
 ============
 
-`dojo.publish` is one of three topic-related functions used to publish (broadcast?) any kind of information within the application, to be received by other functions `subscrbed <dojo/subscribe>`_ to the same channel. A channel can be any string in almost any form you like. Additionally, like other Dojo `event <dojo/events>`_ functions, a `dojo.unsubscribe <dojo/unsubscribe>`_ function is provided to disconnect subscriptions to channels.
+`dojo.publish` is one of three topic-related functions used to publish (broadcast?) any kind of information within the application, to be received by other functions `subscribed <dojo/subscribe>`_ to the same channel. A channel can be any string in almost any form you like. Additionally, like other Dojo `event <quickstart/events>`_ functions, a `dojo.unsubscribe <dojo/unsubscribe>`_ function is provided to disconnect subscriptions to channels.
 
 ========
 Examples
@@ -68,7 +68,7 @@ Many other components use this topic mechanism for communication. For instance, 
 
 Additionally, the `Cometd <dojox/cometd>`_ client implements a variation of publish/subscribe/unsubscribe for it's communication. The mechanism is identical, though with comet the subscription can exist on other clients on different hosts and domains.
 
-Several `Dijit widgets <dijit>`_ use publish to alert the user (and other internal parts of their operation) about state changes. For instance, any time a new Tab is added to a `TabContainer <dijit/layout/TabContainer>`_, a message is sent out on a channel based on the id of the Tabs:
+Several `Dijit widgets <dijit/index>`_ use publish to alert the user (and other internal parts of their operation) about state changes. For instance, any time a new Tab is added to a `TabContainer <dijit/layout/TabContainer>`_, a message is sent out on a channel based on the id of the Tabs:
 
 .. code-block :: javascript
  :linenos:
