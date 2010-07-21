@@ -6,3 +6,8 @@ dojo.getComputedStyle
 Returns the computed CSS styles for a passed node.
 
 `FIXME`: inline API docs and examples
+
+See Also:
+=========
+
+* `dojo.style <dojo/style>`_
