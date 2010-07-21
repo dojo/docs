@@ -10,7 +10,6 @@ Dijit is Dojo's UI Library, and lives as a separate namespace ``dijit``. Dijit r
 
 * `About Dijit <dijit/info>`_
 
-
 =======
 Widgets
 =======
