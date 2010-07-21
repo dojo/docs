@@ -1,7 +1,7 @@
 #format dojo_rst
 
 dijit.form._FormSelectWidget
-==================
+============================
 
 A Dijit _Widget mixin providing form functionality. 
 
