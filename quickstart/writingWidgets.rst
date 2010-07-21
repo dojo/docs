@@ -103,9 +103,9 @@ Here's a simple example of a widget that creates it's own DOM tree:
 	</script>
 
   .. html::
-	:label: Nothing to do here
+      :label: Nothing to do here
 
-     <!-- Nothing to do here -->
+      <!-- Nothing to do here -->
 
 This widget doesn't do much, but it does show the minimum requirement for a (non-behavioral) widget: create a DOM tree.
 
