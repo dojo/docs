@@ -8,4 +8,4 @@ dojox.data Google-based Service Stores
 See Also:
 =========
 
-* `dojo.data <dojo/data>`
+* `dojo.data <dojo/data>`_
