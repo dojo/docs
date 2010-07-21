@@ -63,7 +63,7 @@ Dojo
         dojo.require("dojo.fx.easing");
         dojo.ready(function(){
 
-            dojo.query("#showMe").onclick(function(e){
+            dojo.query("#showMe2").onclick(function(e){
                 
                 dojo.animateProperty({
                     node: e.target,
