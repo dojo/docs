@@ -1,6 +1,1 @@
-#format dojo_rst
-
-dojox.data.GoogleVideoSearchStore
-=================================
-
-`fixme:` todoc, shaneosullivan
+#redirect dojox/data/google-stores
