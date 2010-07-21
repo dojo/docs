@@ -588,11 +588,11 @@ There's an alternate template syntax for widgets which lets you have conditional
 * DTL
 
   * `DTL manual from 1.2 <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-dtl>`_
-  * `DTL <quickstart/writingWidgets/dtl>`_  (currently the top page from the above link has been copied to `DTL_cur <dojox/dtl>`_)
+  * `DTL <dojox/dtl>`_  (currently the top page from the above link has been copied to)
 
 * Mustache
   
-  * `proposal`
+  * `just a proposal`
 
 ========
 See also
