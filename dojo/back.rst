@@ -107,7 +107,6 @@ dojo.back needs either a local dojo.js or a local iframe_history.html
 
   .. javascript::
 
-    <script type="text/javascript">
             djConfig.dojoIframeHistoryUrl = "{{dataUrl}}/dojo/back?action=AttachFile&do=get&target=iframe_history.html";
             dojo.require( "dojo.back" );
 
@@ -155,7 +154,6 @@ dojo.back needs either a local dojo.js or a local iframe_history.html
             });
 
             dojo.back.init();
-    </script>
 
   .. html::
 
