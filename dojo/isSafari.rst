@@ -1,0 +1,1 @@
+#redirect quickstart/browser-sniffing
