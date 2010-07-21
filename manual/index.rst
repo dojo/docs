@@ -25,7 +25,7 @@ Dojo
   .. cv:: javascript
 
     <script>
-        dojo.addOnLoad(function(){
+        dojo.ready(function(){
             dojo.query("#showMe").onclick(function(e){
                 var node = e.target;
 
@@ -59,7 +59,7 @@ Dojo
   .. cv:: javascript
 
     <script>
-        dojo.reqquire("dojo.fx");
+        dojo.require("dojo.fx");
         dojo.require("dojo.fx.easing");
         dojo.ready(function(){
 
