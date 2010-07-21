@@ -44,10 +44,6 @@ Dijit
 
   needed: full page
 
-* `dijit.layout.LinkPane <dijit/layout/LinkPane>`_
-
-  needed: full page
-
 
 =====
 DojoX
