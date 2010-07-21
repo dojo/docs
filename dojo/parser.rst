@@ -10,7 +10,7 @@ The Dojo Parser
 .. contents::
     :depth: 3
 
-The Dojo Parser is an optional module which is used to convert specially decorated nodes in the DOM and convert them into `Dijits <dijit>`_. By `decorated` we mean use of a `dojoType` attribute. Any "Class" (or object, such as the ones created by `dojo.declare <dojo/declare>`_) can be instantiated by using a `dojoType` attribute on some node in the DOM, and create a widget out of it.
+The Dojo Parser is an optional module which is used to convert specially decorated nodes in the DOM and convert them into `Dijits <dijit/index>`_. By `decorated` we mean use of a `dojoType` attribute. Any "Class" (or object, such as the ones created by `dojo.declare <dojo/declare>`_) can be instantiated by using a `dojoType` attribute on some node in the DOM, and create a widget out of it.
 
 This is not limited to Dijit, or `dojo.declare <dojo/declare>`_. 
 
