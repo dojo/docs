@@ -30,7 +30,6 @@ A plain Calendar widget with the formatted date below
 .. cv-compound::
   :type: inline
   :height: 350
-  :version: trunk
 
   .. cv:: javascript
 
@@ -175,7 +174,7 @@ With a local custom template to change the layout (does not work against CDN)
 [1.4+] Non-Gregorian calendars
 
 .. code-example::
-  :version: 9.99
+  :version: trunk
   :height: 340
 
   .. javascript::
