@@ -154,6 +154,5 @@ returns:
 See also
 ========
 
-* `dijit.get <dijit/get>`_ a getter for properties of Dijits
-* `dijit.set <dijit/set>`_ a setter for properties of Dijits
+* `dijit._Widget.set/get <dijit/_Widget>`_ a setter or getter for properties of Dijits
 * Introductory article on dojo.Stateful - http://www.sitepen.com/blog/2010/05/04/consistent-interaction-with-stateful-objects-in-dojo/
