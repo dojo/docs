@@ -23,7 +23,7 @@ If the widget is based on ``<form>`` element, this mixin provides the enhanced f
 Methods and properties
 ======================
 
-This section describes all public methods and properties of `dojox.form.manager._FormMixin`_ class.
+This section describes all public methods and properties of the dojox.form.manager._FormMixin class.
 
 General
 -------
@@ -124,7 +124,7 @@ Example:
 Lifecycle
 ---------
 
-Lifecycle methods are part of every widget. They are used to initialize and destroy a widget. If you mix `dojox.form.manager._FormMixin`_ in your own widget, make sure that these methods are not overwritten. If you overwrite them, make sure to call ``this.inherited(arguments)`` at the appropriate place, so they can initialize/destroy the widget properly.
+Lifecycle methods are part of every widget. They are used to initialize and destroy a widget. If you mix dojox.form.manager._FormMixin in your own widget, make sure that these methods are not overwritten. If you overwrite them, make sure to call ``this.inherited(arguments)`` at the appropriate place, so they can initialize/destroy the widget properly.
 
 startup
 ~~~~~~~
