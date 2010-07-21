@@ -20,7 +20,7 @@ This implementation differs from the dojox.sql implementation in the following w
 2. The dojox.encoding.crypto version uses a space (" ") to delimit each ciphertext block/word.  The dojox.sql
    version uses a dash ("-").
 
-Both versions preserve the way the original implementation (from Chris Veness, `http://www.movable-type.co.uk/scripts/aes.html`_)
+Both versions preserve the way the original implementation (from Chris Veness, [http://www.movable-type.co.uk/scripts/aes.html])
 uses a nonce as a hard-coded initialization vector. This nonce is included as the first block of the resulting
 ciphertext--which is why this implementation is not as useful as one might think, especially if the purpose of
 using SimpleAES is for cross-platform encrypted communication.  Because of this reason, SimpleAES is generally
