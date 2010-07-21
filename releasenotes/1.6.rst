@@ -47,6 +47,17 @@ Toolbar
 DojoX
 =====
 
+NodeList
+--------
+New project called dojox.NodeList, currently adding a delegate() method to NodeList allowing apps to setup a single handler on a root node rather than individual handlers on sub nodes.   For example:
+
+.. code-block :: javascript
+
+		dojo.query("navbar").delegate("a", "onclick", function(evt){
+		     console.log("user clicked anchor ", this.node);
+		});
+
+
 ====
 Util
 ====
