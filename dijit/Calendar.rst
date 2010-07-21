@@ -30,6 +30,7 @@ A plain Calendar widget with the formatted date below
 .. cv-compound::
   :type: inline
   :height: 350
+  :version: trunk
 
   .. cv:: javascript
 
