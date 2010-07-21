@@ -123,21 +123,11 @@ Javascript declaration, with a restriction of +/- one week from the current date
 With a local custom template to change the layout (does not work against CDN)
 
 
----- /!\ '''Edit conflict - other version:''' ----
 .. cv-compound::
   :height: 600
   :version: trunk
 
   .. cv:: javascript
-
----- /!\ '''Edit conflict - your version:''' ----
-.. code-example::
-  :height: 600
-  :version: trunk
-
-  .. javascript::
-
----- /!\ '''End of edit conflict''' ----
 
     <script type="text/javascript">
       dojo.require("dijit.dijit"); // loads the optimized dijit layer
