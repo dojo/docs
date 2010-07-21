@@ -11,19 +11,6 @@ Starting with V1.3 each new feature needs a proper documentation at docs.dojocam
 The following pages need more love:
 
 
-=======
-dojo.js
-=======
-
-* `dojo.Animation <dojo/Animation>`_ ``peller, slightlyoff, dante``
-
-  needed: full page
-
-* `dojo.moduleUrl <dojo/moduleUrl>`_
-
-  needed: full page
-
-
 =========
 Dojo Core
 =========
@@ -69,10 +56,6 @@ Dijit
 =====
 DojoX
 =====
-
-* `dojox.analytics <dojox/analytics>`_ ``dmachi, phiggins``
-
-  needed: examples or subpages?
 
 * `dojox.atom.widget.FeedViewer <dojox/atom/widget/FeedViewer>`_
 
