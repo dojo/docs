@@ -23,7 +23,7 @@ On startup this mixin inspects its body and registers all found form widgets, an
 Methods and properties
 ======================
 
-This section describes all public methods and properties of `dojox.form.manager._Mixin`_ class.
+This section describes all public methods and properties of the dojox.form.manager._Mixin class.
 
 General
 -------
@@ -212,7 +212,7 @@ This is the high-level method, which has the same signature as inspectFormWidget
 Registration
 ------------
 
-These functions can register/unregister widgets. In most cases these methods are not used directly because `dojox.form.manager._Mixin`_ registers all children form widgets automatically. But if you create/delete widgets dynamically, you should register/unregister them manually.
+These functions can register/unregister widgets. In most cases these methods are not used directly because dojox.form.manager._Mixin registers all children form widgets automatically. But if you create/delete widgets dynamically, you should register/unregister them manually.
 
 Note: `_NodeMixin <dojox/form/manager/_NodeMixin>`_ implements complimentary methods: `registerNode <dojox/form/manager/_NodeMixin#registernode>`_, `unregisterNode <dojox/form/manager/_NodeMixin#unregisternode>`_, `registerNodeDescendants <dojox/form/manager/_NodeMixin#registernodedescendants>`_, `unregisterNodeDescendants <dojox/form/manager/_NodeMixin#unregisternodedescendants>`_.
 
@@ -281,7 +281,7 @@ This method calls unregisterWidget_ for every descendant form widget of a given 
 Lifecycle
 ---------
 
-Lifecycle methods are part of every widget. They are used to initialize and destroy a widget. If you mix `dojox.form.manager._Mixin`_ in your own widget, make sure that these methods are not overwritten. If you overwrite them, make sure to call ``this.inherited(arguments)`` at the appropriate place, so they can initialize/destroy the widget properly.
+Lifecycle methods are part of every widget. They are used to initialize and destroy a widget. If you mix dojox.form.manager._Mixin in your own widget, make sure that these methods are not overwritten. If you overwrite them, make sure to call ``this.inherited(arguments)`` at the appropriate place, so they can initialize/destroy the widget properly.
 
 startup
 ~~~~~~~
@@ -338,4 +338,4 @@ This function takes an object and returns an array of all keys. It is very simil
 Technical notes
 ===============
 
-`_Mixin`_ extends `dijit._Widget <dijit/_Widget>`_ with an extra attribute: ``observer``. It makes this attribute valid for all widgets. You can read more on observers in the `dojox.form.manager event processing documentation <dojox/form/manager#event-processing>`_.
+_Mixin extends `dijit._Widget <dijit/_Widget>`_ with an extra attribute: ``observer``. It makes this attribute valid for all widgets. You can read more on observers in the `dojox.form.manager event processing documentation <dojox/form/manager#event-processing>`_.
