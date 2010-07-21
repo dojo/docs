@@ -59,7 +59,7 @@ The standard set of properties for specifying animation settings (via the Object
 
 :easing
   An easing (timing) function to apply to the effect, such as exponential curve, bounce, etc.  Dojo provides a number of easing functions in the
-`dojo.fx.easing <dojo/fx/easing>`_ module. **optional**
+  `dojo.fx.easing <dojo/fx/easing>`_ module. **optional**
 
 :rate
   By default dojo runs its animations with 50 frames/second. This can be too fast in certain scenarios when want the whole animation to run a lot slower. To change the framerate you use the rate property which defines the pause/delay between each frame. Ex. if you want 5 frames per second you should specify a rate of 200 (miliseconds between each frame **optional**
