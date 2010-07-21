@@ -73,7 +73,7 @@ Dojo
                     easing: dojo.fx.easing.elasticOut,
                     duration:1200,
                     onEnd: function(n){
-                        dojo.anim(n, { marginLeft:2 });
+                        dojo.anim(n, { marginLeft:2 }, 2000, dojo.fx.easing.bounceOut);
                     }
                 }).play();
                 
@@ -85,7 +85,7 @@ Dojo
   .. cv:: html
 
     <div id="showMe2" style="padding: 10px; margin-left:2px;">
-        Move me!
+         Click to Animate me with built in easing functions.
     </div>
 
 =====
