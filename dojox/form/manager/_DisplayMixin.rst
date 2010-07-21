@@ -25,7 +25,7 @@ This mixin is modeled after `_EnableMixin <dojox/form/manager/_EnableMixin>`_.
 Methods and properties
 ======================
 
-This section describes all public methods and properties of `dojox.form.manager._DisplayMixin`_ class.
+This section describes all public methods and properties of dojox.form.manager._DisplayMixin class.
 
 gatherDisplayState
 ~~~~~~~~~~~~~~~~~~
