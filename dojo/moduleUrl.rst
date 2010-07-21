@@ -3,56 +3,34 @@
 dojo.moduleUrl
 ==============
 
-:Status: Draft
-:Version: 1.0
-:Project owner: ?--
-:Available: since V?
+:Available: since v0.9
 
 .. contents::
    :depth: 2
 
 dojo.moduleUrl is used to return a dojo._Url object relative to a module.
 
-
-============
-Introduction
-============
-
-TODO: introduce the component/class/method
-
-
 =====
 Usage
 =====
-
-TODO: how to use the component/class/method
 
 .. code-block :: javascript
  :linenos:
 
  <script type="text/javascript">
-   // your code
+   // points to $dojoroot/dijit/form/tests/TestFile.html
+   var url = dojo.moduleUrl("dijit.form", "tests/TestFile.html"); 
+   dojo.xhrGet({
+       url: url,
+       load: function(html){  
+            dojo.byId("foo").innerHTML = html;
+       }
+   });
  </script>
-
-
-
-========
-Examples
-========
-
-Programmatic example
---------------------
-
-TODO: example
-
-Declarative example
--------------------
-
-TODO: example
-
 
 ========
 See also
 ========
 
-* TODO: links to other related articles
+* `dojo.registerModulePath <dojo/registerModulePath>`_
+* `dojo.cache <dojo/cache>`_
