@@ -73,4 +73,5 @@ DojoBook
 Proposals
 ---------
 
-dojo/Node_ 
+  * `dojo.node <dojo/node>`_
+  * `dojo.store <dojo/store>`_
