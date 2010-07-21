@@ -11,9 +11,9 @@ The Official Dojo Documentation
    :class: logowelcome;
 
 
-=====================================
+=========================================
 `Getting started <quickstart/index>`_
-=====================================
+=========================================
 
 * `Quick start instructions <quickstart/gettingstarted>`_
 
@@ -21,9 +21,9 @@ The Official Dojo Documentation
 
 
 
-=================================
+=====================================
 `Reference Guide <manual/index>`_
-=================================
+=====================================
 
 * `The programmers manual for Dojo, Dijit, DojoX with more than 400 examples <manual/index>`_
 
@@ -39,12 +39,12 @@ What's New
 Developer's Notebook
 ====================
 
-* `Information useful to developers <developer>`_
+* `Information useful to developers <developer/index>`_
 
 
-=======================================
-`About the Dojo Documentation <about>`_
-=======================================
+=================================================
+`About the Dojo Documentation <about/index>`_
+=================================================
 
 * `All about Dojo Toolkits new official documentation pages <about/index>`_ and how you can contribute. 
 * `Wondering how you can signup to contribute? <about/login>`_ 
