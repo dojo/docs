@@ -1,1 +1,1 @@
-#redirect quickstart/internationalization/resource-bundling
+#redirect dojo/i18n
