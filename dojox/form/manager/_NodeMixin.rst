@@ -23,7 +23,7 @@ On startup this mixin inspects its body and registers all found form nodes (``<i
 Methods and properties
 ======================
 
-This section describes all public methods and properties of `dojox.form.manager._NodeMixin`_ class.
+This section describes all public methods and properties of the dojox.form.manager._NodeMixin class.
 
 Value access
 ------------
@@ -132,7 +132,7 @@ What ``inspector`` does is up to you. It can modify or just read node values. It
 Registration
 ------------
 
-These functions can register/unregister form nodes. In most cases these methods are not used directly because `dojox.form.manager._NodeMixin`_ registers all children form nodes automatically. But if you create/delete nodes dynamically, you should register/unregister them manually.
+These functions can register/unregister form nodes. In most cases these methods are not used directly because dojox.form.manager._NodeMixin registers all children form nodes automatically. But if you create/delete nodes dynamically, you should register/unregister them manually.
 
 Note: methods in this section are modeled on `dojox.form.manager._Mixin's registration <dojox/form/manager/_Mixin#registration>`_.
 
@@ -193,7 +193,7 @@ This method is modeled on `dojox.form.manager._Mixin's unregisterWidgetDescendan
 Lifecycle
 ---------
 
-Lifecycle methods are part of every widget. They are used to initialize and destroy a widget. If you mix `dojox.form.manager._Mixin`_ in your own widget, make sure that these methods are not overwritten. If you overwrite them, make sure to call ``this.inherited(arguments)`` at the appropriate place, so they can initialize/destroy the widget properly.
+Lifecycle methods are part of every widget. They are used to initialize and destroy a widget. If you mix `dojox.form.manager._Mixin <dojox/form/manager/_Mixin>`_ in your own widget, make sure that these methods are not overwritten. If you overwrite them, make sure to call ``this.inherited(arguments)`` at the appropriate place, so they can initialize/destroy the widget properly.
 
 destroy
 ~~~~~~~
