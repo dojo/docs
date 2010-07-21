@@ -293,7 +293,7 @@ A common action for ``closable`` tabs is to register an ``onClose`` function on 
 TabContainer Events
 -------------------
 
-There are two methods of observing TabContainer *shenanigans*. The first, by using `dojo.subscribe </dojo/subscribe>`_. Each TabContainer `publishes </dojo/publish>`_ notices based on the *id* of the Container. Several different actions are tracked this way:
+There are two methods of observing TabContainer *shenanigans*. The first, by using `dojo.subscribe <dojo/subscribe>`_. Each TabContainer `publishes <dojo/publish>`_ notices based on the *id* of the Container. Several different actions are tracked this way:
 
 .. code-block :: javascript
   :linenos:
@@ -311,7 +311,7 @@ There are two methods of observing TabContainer *shenanigans*. The first, by usi
       console.log("Child is gone: ", child); // but not destroyed!
   });
 
-the -selectChild subscription will not execute if the selected child is already the visible Pane. It will only publish when a *different* child is selected. Notice how this differs from our other method of wiring up TabContainer events, via `dojo.connect </dojo/connect>`_:
+the -selectChild subscription will not execute if the selected child is already the visible Pane. It will only publish when a *different* child is selected. Notice how this differs from our other method of wiring up TabContainer events, via `dojo.connect <dojo/connect>`_:
 
 .. code-block :: javascript
   :linenos:
