@@ -27,24 +27,24 @@ Examples
 
 A plain Calendar widget with the formatted date below
 
-.. cv-compound::
+.. code-example::
   :type: inline
   :height: 350
   :version: trunk
 
-  .. cv:: javascript
+  .. javascript::
 
     <script type="text/javascript">
       dojo.require("dijit.dijit"); // loads the optimized dijit layer
       dojo.require("dijit._Calendar");
     </script>
 
-  .. cv:: html
+  .. html::
 
     <div dojoType="dijit._Calendar" onChange="dojo.byId('formatted').innerHTML=dojo.date.locale.format(arguments[0], {formatLength: 'full', selector:'date'})"></div>
     <p id="formatted"></p>
     
-  .. cv:: css
+  .. css::
 
     <style type="text/css">
       .{{ theme }} table.dijitCalendarContainer {
