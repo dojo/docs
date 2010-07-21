@@ -127,7 +127,7 @@ With a local custom template to change the layout (does not work against CDN)
 .. code-example::
   :type: inline
   :height: 350
-  :version: trunk
+  :version: 1.5
 
   .. javascript::
 
