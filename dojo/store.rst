@@ -49,9 +49,9 @@ Every method in the API is optional, it's presence indicating support for that f
 ===========================================  ======================================================================
 Method                                       Description
 ===========================================  ======================================================================
-`get(id) <dojo/store/get>`_                  Retrieves an object by its identifier, returning the object.
+`get(id) <dojo/store/get>`_                       Retrieves an object by its identifier, returning the object.
 
-`query(query, options) <dojo/store/query>`_  Queries the store using the provided query.
+`query(query, options) <dojo/store/query>`_       Queries the store using the provided query.
 
                                              The returned value should be an array or a promise with forEach, map, filter, reduce, subscribe, and close methods, and a totalCount property (the totalCount may be a promise). The options parameter is modeled after the Dojo Data keywordArgs and may include:
 
@@ -60,13 +60,13 @@ Method                                       Description
                                              * sort - Follows the Dojo Data sort definition
                                              * queryOptions - Follows the Dojo Data queryOptions definition
 
-`put(object, options) <dojo/store/put>`_     Saves the given object. options.id (optional) indicates the identifier.
+`put(object, options) <dojo/store/put>`_          Saves the given object. options.id (optional) indicates the identifier.
 
-`add(object, options) <dojo/store/add>`_     Create a new object. options.id (optional) indicates the identifier.
+`add(object, options) <dojo/store/add>`_          Create a new object. options.id (optional) indicates the identifier.
 
-`delete(id) <dojo/store/delete>`_            Delete the object by id.
+`delete(id) <dojo/store/delete>`_                 Delete the object by id.
 
-`transaction() <dojo/store/transaction>`_    Starts a transaction and returns a transaction object.
+`transaction() <dojo/store/transaction>`_         Starts a transaction and returns a transaction object.
 
                                              The transaction object should include:
 
@@ -78,7 +78,7 @@ Method                                       Description
 
 * How is about a dojo.store.clear() method?
 
-  Will clear all the (cached) data array of the store.
+  Will clear all the (cached) objects of the store.
 
 
 ===========
