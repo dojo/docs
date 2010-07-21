@@ -155,7 +155,7 @@ ShrinkSafe packaging change
 ---------------------------
 
 * The code for ShrinkSafe used to be applied to the Rhino JavaScript engine as a patch to the Rhino code, and Dojo used to ship with a copy of this patched file at util/shrinksafe/custom\_rhino.jar. Now, the ShrinkSafe changes are in a separate JAR file, util/shrinksafe/shrinksafe.jar, which should be used in conjunction with an unmodified js.jar (Rhino). Along with the upgrade to a newer version of Rhino, several bugs with variable references through closures have been fixed. Also, there is a new option ööescape-unicode to use JavaScript \\unnnn escapes in the code rather than injecting encoded Unicode (non-ASCII) characters. This can help avoid encoding issues. Also, null characters are always escaped using JavaScript to avoid a bug in Internet Explorer which would prematurely end the buffer (#5027) 
-* Some command line options have changed. See `migration issues <#migration>`_ for details.
+* Some command line options have changed. See the migration issues migration for details.
 
 DOH enhancements
 ----------------
