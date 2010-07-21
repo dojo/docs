@@ -14,7 +14,7 @@ When the parser runs and sees this node, a content pane will be generated with t
   
   <a href="foo.html" dojoType="dijit.layout.LinkPane">Hello</a>
 
-This can be used in other layout widgets, such as a `TabContainer <dijit/layout/TabContianer>`_:
+This can be used in other layout widgets, such as a `TabContainer <dijit/layout/TabContainer>`_:
 
 .. code-block :: html
 
