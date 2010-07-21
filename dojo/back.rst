@@ -145,12 +145,14 @@ dojo.back needs either a local dojo.js or a local iframe_history.html
                 dojo.back.addToHistory(appState);
             }
 
+            djConfig.dojoIframeHistoryUrl = "{{dataUrl}}/dojo/back?action=AttachFile&do=get&target=iframe_history.html";
+            dojo.back.init();
+
             dojo.addOnLoad(function(){
                 var link = unescape( new dojo._Url( document.URL ).fragment || "link0" );
                 var appState = new ApplicationState(data[ link ], "output", "dataOutput");
                 appState.showStateData( "initial state" );
                 dojo.back.setInitialState(appState);
-                dojo.back.init();
             });
         </script>
 
