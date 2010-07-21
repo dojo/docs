@@ -124,11 +124,12 @@ Javascript declaration, with a restriction of +/- one week from the current date
 With a local custom template to change the layout (does not work against CDN)
 
 
-.. cv-compound::
+.. code-example::
   :height: 600
+  :type: inline
   :version: trunk
 
-  .. cv:: javascript
+  .. javascript::
 
     <script type="text/javascript">
       dojo.require("dijit.dijit"); // loads the optimized dijit layer
@@ -177,7 +178,6 @@ With a local custom template to change the layout (does not work against CDN)
 
 .. code-example::
   :height: 340
-  :type: inline
   :version: trunk
 
   .. javascript::
