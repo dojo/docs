@@ -176,8 +176,9 @@ With a local custom template to change the layout (does not work against CDN)
 [1.4+] Non-Gregorian calendars
 
 .. code-example::
-  :version: trunk
   :height: 340
+  :type: inline
+  :version: trunk
 
   .. javascript::
 
