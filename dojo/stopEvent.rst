@@ -12,3 +12,8 @@ The same as calling ``event.preventDefault()`` and ``event.stopPropagation()`` o
    dojo.connect(node, "onclick", function(e){
        dojo.stopEvent(e); // click does nothing
    });
+
+See Also:
+=========
+
+* `The event QuickStart <quickstart/events>`_
