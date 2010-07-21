@@ -48,7 +48,7 @@ Animation Properties
 
 The standard set of properties for specifying animation settings (via the Object parameter to the animation function) are:
 
-:node
+::node
   The domNode reference or string id of a node to apply the animation effects to. **required**
 
 :delay
