@@ -57,34 +57,20 @@ Dojo Styleguides
 * `Styleguides <styleguides/index>`_
 
 
-===========================
-Utilities and Miscellaneous
-===========================
+=========
+Utilities
+=========
 
-`Dojo Build System <build/index>`_
------------------------------------
+Dojo has a number of utility scripts, including the `Dojo Build System <build/index>`_.
 
-The Dojo build system is used to create efficient optimized packages of JavaScript and CSS, customized for a given application or website. You can take advantage of this powerful tool to help structure your development and speed up your applications.
+* `More about Util <util>`_
+
+
+=============
+Miscellaneous
+=============
 
 `Multiple Versions of Dojo on a Page <multiversion/index>`_
-------------------------------------------------------------
+---------------------------------------------------------------
 
 Dojo has special configuration and build options to allow you to use different versions of Dojo on the same page.
-
-
-
-`The Dojo API Doc System <util/doctools>`_
--------------------------------------------
-
-Dojo uses a custom inline comment syntax which produces well structured xml, and powers the official `API Docs <http://api.dojocampus.org/>`_ . 
-
-`ShrinkSafe <shrinksafe/index>`_
----------------------------------
-
-A standalone utility for compressing JavaScript, used by the Dojo Build System as an optional compression step, though can be used on individual files manually.
-
-
-`Checkstyle <util/checkstyle>`_
----------------------------------
-
-A standalone utility for checking JavaScript files for violations of the Dojo style guide. Also includes an online tool for automatically fixing the majority of style guide violations.
