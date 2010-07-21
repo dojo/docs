@@ -88,7 +88,7 @@ ResizeHandle has a lot of options available. Some are entirely experimental, and
 Targeting a Node
 ----------------
 
-This widget accepts a number of different options for choosing which node to resize. The first, ``targetId`` is an ID of a node to use. This is first passed through `dijit.byId <dijit>`_, and checked for a widget instance of that id. If nothing is found, a DomNode with that id is searched for. Specifying a ``targetContainer`` will override both, and allow you to pass a DomNode in by direct reference.
+This widget accepts a number of different options for choosing which node to resize. The first, ``targetId`` is an ID of a node to use. This is first passed through `dijit.byId <dijit/byId>`_, and checked for a widget instance of that id. If nothing is found, a DomNode with that id is searched for. Specifying a ``targetContainer`` will override both, and allow you to pass a DomNode in by direct reference.
 
 Resize Direction
 ----------------
