@@ -132,7 +132,7 @@ Advanced Usage
 With function
 -------------
 
-For ultimate flexibility you can use `dojo.replace`_ with a function as the second argument. The function is going to be called with 4 arguments:
+For ultimate flexibility you can use dojo.replace with a function as the second argument. The function is going to be called with 4 arguments:
 
 * Whole match.
 * Name between found braces.
@@ -273,7 +273,7 @@ It is advised for the new pattern to be:
 Examples
 ========
 
-Below are real-world examples of using `dojo.replace`_.
+Below are real-world examples of using dojo.replace.
 
 Highlighting substitutions
 --------------------------
