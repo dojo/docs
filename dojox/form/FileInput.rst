@@ -46,4 +46,4 @@ See also
 ========
 
 * `FileUploader <dojox/form/FileUploader>`_
-* `IFrame IO <dojox/io/frame>`_
+* `IFrame IO <dojo/io/iframe>`_
