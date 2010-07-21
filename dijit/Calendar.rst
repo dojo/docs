@@ -141,7 +141,16 @@ With a local custom template to change the layout (does not work against CDN)
         //may load asynchronously. This also means we cannot have HTML
         //markup in the body tag for BigCalendar, but instead inject it in this
         //onload handler after BigCalendar is defined.
-       
+        dojo.declare("BigCalendar", dijit._Calendar, {
+          
+          getClassForDate: function(date){
+           if(!(date.getDate() % 10)){ return "blue"; } // apply special style to all days divisible by 10
+          }
+        });
+
+        var bigCalendar = dojo.byId("calendar5");
+        bigCalendar.setAttribute("dojoType", "BigCalendar");
+        dojo.parser.parse(bigCalendar.parentNode);       
       });     
     </script>
 
