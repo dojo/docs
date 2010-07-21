@@ -103,7 +103,7 @@ To give the user feedback about what's happening with the searches they issue, w
 
 Now when you look at the code, you will see that the total amount of setTimeout miliseconds is 1400 which is 1.4 seconds. Since we used dojo.Deferred we were able to bring down the waiting time to 700 ms, which is roughly what we might expect worst-case same-domain network lag to be. Instead of having to try to serialize a group of tasks, `DeferredList` objects let you do multiple things at once and only deal with the results.
 
-To make the above example "live", you only need to note that calls to `dojo.xhr <dojo/xhr>`_ already returned `Deferred` instances, so a function like `searchAmazon` might be re-written as:
+To make the above example "live", you only need to note that calls to `dojo.xhr <dojo/_base/xhr>`_ already returned `Deferred` instances, so a function like `searchAmazon` might be re-written as:
 
 .. cv:: javascript
 
