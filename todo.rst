@@ -19,10 +19,6 @@ Dojo Core
 
   needed: full page
 
-* `dojo.colors <dojo/colors>`_
-
-  needed: full page
-
 * `dojo.currency <dojo/currency>`_
 
   needed: setting locale in Dojo, binary floating point issues
