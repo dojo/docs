@@ -26,7 +26,7 @@ Classes defined in the model
 When the model file is loaded, several classes are defined that represent ATOM tags.  Please refer to the following table for the class names and a description of what they represent.  Each entry in the class name table also acts as a link to specific documentation about that class and what core functions it provides.
 
 +-------------------------------------------------------------------+--------------------------------------------------------------------------+
-| **Class Name**                                                    | **Description**                                                          |
+| **Class Name**                                                        | **Description**                                                              |
 +-------------------------------------------------------------------+--------------------------------------------------------------------------+
 | `dojox.atom.io.model.AtomItem <dojox/atom/io/model/AtomItem>`_        | A generic superclass used to represent specific ATOM details that are    |
 |                                                                   | common for many ATOM tags                                                | 
