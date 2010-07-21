@@ -131,23 +131,11 @@ With a local custom template to change the layout (does not work against CDN)
 
   .. javascript::
 
-    <script type="text/javascript">
-     
-    </script>
+    <script type="text/javascript">      </script>
 
   .. css::
 
-	<style>
-		#calendar5 .dijitCalendarDateTemplate { height: 50px; width: 50px; border: 1px solid #ccc; vertical-align: top }
-		#calendar5 .dijitCalendarDateLabel, #calendar5 .dijitCalendarDateTemplate { text-align: inherit }
-		#calendar5 .dijitCalendarDayLabel { font-weight: bold }
-		#calendar5 .dijitCalendarSelectedYear { font-size: 1.5em }
-		#calendar5 .dijitCalendarMonthLabel { font-family: serif; letter-spacing: 0.2em; font-size: 2em }
-		.blue { color: blue }
-                .{{ theme }} table.dijitCalendarContainer {
-                  margin: 25px auto;
-                }
-	</style>
+	<style></style>
 
   .. html::
 
