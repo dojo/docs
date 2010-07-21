@@ -153,9 +153,8 @@ dojo.back needs either a local dojo.js or a local iframe_history.html
                 var appState = new ApplicationState(data[ link ], "output", "dataOutput");
                 appState.showStateData( "initial state" );
                 dojo.back.setInitialState(appState);
+                dojo.back.init();
             });
-
-            dojo.back.init();
         </script>
 
   .. html::
