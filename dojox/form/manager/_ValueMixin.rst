@@ -23,7 +23,7 @@ The mixin provides commonly used methods to access values of individual form ele
 Methods and properties
 ======================
 
-This section describes all public methods and properties of `dojox.form.manager._ValueMixin`_ class.
+This section describes all public methods and properties of the dojox.form.manager._ValueMixin class.
 
 elementValue
 ------------
