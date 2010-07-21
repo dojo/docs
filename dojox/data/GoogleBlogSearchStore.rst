@@ -1,6 +1,1 @@
-#format dojo_rst
-
-dojox.data.GoogleBlogSearchStore
-================================
-
-`fixme:` todoc
+#redirect dojox/data/google-stores
