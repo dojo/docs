@@ -124,7 +124,7 @@ With a local custom template to change the layout (does not work against CDN)
 
 .. cv-compound::
   :height: 600
-  :version: 9.99
+  :version: trunk
 
   .. cv:: javascript
 
