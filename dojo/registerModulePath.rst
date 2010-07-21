@@ -60,7 +60,7 @@ Usage
    // now refers to "/somepath/css/"
 
    // we can set an absolute path by prefixing it with "/" or "http:"
-   dojo.registerModulePath("aoldojo", "http://o.aolcdn.com/dojo/1.3.2/dojo/");
+   dojo.registerModulePath("aoldojo", "http://o.aolcdn.com/dojo/1.5/dojo/");
  </script>
 
 ========
@@ -111,5 +111,5 @@ Note: The custom button is simply an extension of "dijit.form.Button".
 See Also
 ========
 
-* `djConfig.modulePaths <http://docs.dojocampus.org/djConfig?highlight=(modulePaths)>`_
+* `djConfig.modulePaths <http://docs.dojocampus.org/djConfig>`_
 * `dojo.moduleUrl <dojo/moduleUrl>`_
