@@ -141,7 +141,7 @@ With a local custom template to change the layout (does not work against CDN)
         //may load asynchronously. This also means we cannot have HTML
         //markup in the body tag for BigCalendar, but instead inject it in this
         //onload handler after BigCalendar is defined.
-       =
+       
       });     
     </script>
 
