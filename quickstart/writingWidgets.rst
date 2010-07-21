@@ -495,7 +495,7 @@ To see how to do this, let's see how dijit.form.Button does it for clicking. Not
 
 .. code-block :: html
 
- <div class="dijit dijitReset dijitLeft dijitInline"
+  <div class="dijit dijitReset dijitLeft dijitInline"
 	dojoAttachEvent="ondijitclick:_onButtonClick,onmouseenter:_onMouse,onmouseleave:_onMouse,onmousedown:_onMouse"
   ...
 
@@ -515,7 +515,7 @@ In Button.js you'll find:
 	return this.onClick(e);
   },
   onClick: { // nothing here: the extension point!
-   ;
+   
   }
 
 Here's what's going on. In step 1, all onClick events are redirected to the Button widget's plain old js method _onButtonClick. This in turn calls plain old _onClick, which does stuff, which then calls plain old js method onClick.
@@ -579,15 +579,20 @@ These pages list how to make your widgets accessible to people with poor/no visi
 * `Creating Accessible Widgets <quickstart/writingWidgets/a11y>`_
 * `Testing Widgets for Accessibility <quickstart/writingWidgets/a11yTesting>`_
 
-===
-DTL
-===
+============================
+Alternate Templating Engines
+============================
 
 There's an alternate template syntax for widgets which lets you have conditional code in templates and other advanced features.
 
-* `DTL manual from 1.2 <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-dtl>`_
-* `DTL <quickstart/writingWidgets/dtl>`_  (currently the top page from the above link has been copied to `DTL_cur <dojox/dtl>`_)
+* DTL
 
+  * `DTL manual from 1.2 <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-dtl>`_
+  * `DTL <quickstart/writingWidgets/dtl>`_  (currently the top page from the above link has been copied to `DTL_cur <dojox/dtl>`_)
+
+* Mustache
+  
+  * `proposal`
 
 ========
 See also
