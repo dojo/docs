@@ -20,6 +20,36 @@ Dojo
 
   The base functionality of the Dojo Toolkit, provided by just including ``dojo.js``. This includes tons of features like CSS-based queries, event handling, animations, Ajax, class-based programming, and a package system that makes getting access to the rest of Dojo a snap.
 
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script>
+        dojo.addOnLoad(function(){
+            dojo.query("#showMe").onclick(function(e){
+                var node = e.target;
+
+                var a = dojo.anim(node, {
+                    backgroundColor: "#363636",
+                    color: "#f7f7f7"
+                }, 1000);
+
+                dojo.connect(a, "onEnd", function(){
+                    dojo.anim(node, { color: "#363636" }, null, null, function(){
+                        node.innerHTML = "wow, that was easy!";
+                        dojo.anim(node, { color: "white" });
+                    });
+                });
+            });
+        });
+    </script>
+
+  .. cv:: html
+
+    <div id="showMe" style="padding: 10px;">
+        click here to see how it works
+    </div>
+
 * `Dojo Core <dojo/index#dojo-core>`_
 
   Additional stable (but optional) components for advanced animations, I/O, data, Drag and Drop and much more.
