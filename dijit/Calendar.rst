@@ -132,27 +132,7 @@ With a local custom template to change the layout (does not work against CDN)
   .. javascript::
 
     <script type="text/javascript">
-      dojo.require("dijit.dijit"); // loads the optimized dijit layer
-      dojo.require("dijit._Calendar");
-
-	dojo.addOnLoad(function(){
-		//Need to declare BigCalendar here in an addOnLoad block so that it works
-		//with xdomain loading, where the dojo.require for dijit._Calendar 
-		//may load asynchronously. This also means we cannot have HTML
-		//markup in the body tag for BigCalendar, but instead inject it in this
-		//onload handler after BigCalendar is defined.
-		dojo.declare("BigCalendar", dijit._Calendar, {
-				templatePath: "http://docs.dojocampus.org/dijit/_Calendar?action=AttachFile&do=get&target=bigCalendar.html",
-				templateString: null,  /* need this for builds */
-				getClassForDate: function(date){
-					if(!(date.getDate() % 10)){ return "blue"; } // apply special style to all days divisible by 10
-				}
-		});
-
-		var bigCalendar = dojo.byId("calendar5");
-		bigCalendar.setAttribute("dojoType", "BigCalendar");
-		dojo.parser.parse(bigCalendar.parentNode);
-	});
+     
     </script>
 
   .. css::
