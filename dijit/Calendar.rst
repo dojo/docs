@@ -126,18 +126,31 @@ With a local custom template to change the layout (does not work against CDN)
 
 .. code-example::
   :type: inline
+  :height: 350
+  :version: trunk
 
   .. javascript::
 
-    <script type="text/javascript">      </script>
-
-  .. css::
-
-	<style></style>
+    <script type="text/javascript">
+      dojo.require("dijit.dijit"); // loads the optimized dijit layer
+      dojo.require("dijit._Calendar");
+    </script>
 
   .. html::
 
-	<input id="calendar5" dayWidth="abbr" value="2008-03-13">
+    <div dojoType="dijit._Calendar" onChange="dojo.byId('formatted').innerHTML=dojo.date.locale.format(arguments[0], {formatLength: 'full', selector:'date'})"></div>
+    <p id="formatted"></p>
+    
+  .. css::
+
+    <style type="text/css">
+      .{{ theme }} table.dijitCalendarContainer {
+        margin: 25px auto;
+      }
+      #formatted {
+        text-align: center;
+      }
+    </style>
         
 
 [1.4+] Non-Gregorian calendars
