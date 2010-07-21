@@ -37,7 +37,7 @@ You also shouldn't set the width of the top/bottom panes or the height of the le
   :linenos:
 
     <style type="text/css">
-    body, html { width:100%; height:100%; margin:0; padding:0 } 
+    body, html { width:100%; height:100%; margin:0; padding:0; overflow:hidden; } 
     #borderContainer { width:100%; height:100% } 
     </style>
 
@@ -176,6 +176,7 @@ Note the tabStrip attribute on the TabContainer.
         width: 100%;
         height: 100%;
         margin: 0;
+        overflow:hidden;
       }
 
       #borderContainerTwo {
@@ -268,6 +269,7 @@ You can use a BorderContainer inside your own dijit template with a bit of care 
       #borderContainerThree {
         width: 100%;
         height: 100%;
+        overflow:hidden;
       }
     </style>
 
