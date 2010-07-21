@@ -54,6 +54,40 @@ Dojo
 
   Additional stable (but optional) components for advanced animations, I/O, data, Drag and Drop and much more.
 
+.. cv-compound::
+
+  .. cv:: javascript
+
+    <script>
+        dojo.reqquire("dojo.fx");
+        dojo.require("dojo.fx.easing");
+        dojo.ready(function(){
+
+            dojo.query("#showMe").onclick(function(e){
+                
+                dojo.animateProperty({
+                    node: e.target,
+                    properties:{
+                        marginLeft:200
+                    },
+                    easing: dojo.fx.easing.elasticOut,
+                    duration:1200,
+                    onEnd: function(n){
+                        dojo.anim(n, { marginLeft:2 });
+                    }
+                }).play();
+                
+            });
+            
+        });
+    </script>
+
+  .. cv:: html
+
+    <div id="showMe2" style="padding: 10px; margin-left:2px;">
+        Move me!
+    </div>
+
 =====
 Dijit
 =====
