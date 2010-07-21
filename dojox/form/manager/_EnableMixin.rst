@@ -23,7 +23,7 @@ The mixin provides commonly used methods to enable/disable form elements. It ope
 Methods and properties
 ======================
 
-This section describes all public methods and properties of `dojox.form.manager._EnableMixin`_ class.
+This section describes all public methods and properties of the dojox.form.manager._EnableMixin class.
 
 gatherEnableState
 ~~~~~~~~~~~~~~~~~
