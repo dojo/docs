@@ -173,11 +173,11 @@ With a local custom template to change the layout (does not work against CDN)
 
 [1.4+] Non-Gregorian calendars
 
-.. cv-compound::
+.. code-example::
   :version: 9.99
   :height: 340
 
-  .. cv:: javascript
+  .. javascript::
 
     <script type="text/javascript">
       dojo.require("dijit.dijit"); // loads the optimized dijit layer
@@ -214,7 +214,7 @@ With a local custom template to change the layout (does not work against CDN)
       }
     </script>
 
-  .. cv:: html
+  .. html::
 
     <table class="container">
       <tr>
@@ -233,7 +233,7 @@ With a local custom template to change the layout (does not work against CDN)
       </tr>
     </table>
 
-  .. cv:: css
+  .. css:
 
     <style type="text/css">
       .{{ theme }} table.dijitCalendarContainer {
