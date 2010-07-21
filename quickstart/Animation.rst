@@ -48,27 +48,30 @@ Animation Properties
 
 The standard set of properties for specifying animation settings (via the Object parameter to the animation function) are:
 
-::node
+:node:
   The domNode reference or string id of a node to apply the animation effects to. **required**
 
-:delay
+:delay:
   Delay, in milliseconds, before the animation starts.  The default is 0ms. **optional**
 
-:duration
+:duration:
   How long, in milliseconds, the animation will run.  The default is 350 milliseconds (.35 seconds) **optional** 
 
-:easing
+:easing:
   An easing (timing) function to apply to the effect, such as exponential curve, bounce, etc.  Dojo provides a number of easing functions in the
   `dojo.fx.easing <dojo/fx/easing>`_ module. **optional**
 
-:rate
-  By default dojo runs its animations with 50 frames/second. This can be too fast in certain scenarios when want the whole animation to run a lot slower. To change the framerate you use the rate property which defines the pause/delay between each frame. Ex. if you want 5 frames per second you should specify a rate of 200 (miliseconds between each frame **optional**
+:rate:
+  By default dojo runs its animations with 50 frames/second. This can be too fast in certain scenarios when want the whole animation to run a lot 
+  slower. To change the framerate you use the rate property which defines the pause/delay between each frame. Ex. if you want 5 frames per second you 
+  should specify a rate of 200 (miliseconds between each frame **optional**
 
-:repeat
+:repeat:
   How many times the animation will be played.  Default: 0. **optional**
 
-:curve
-  An array two values, or an instance of a `dojo._Line`. Used as the start and end points for a given animation. Typically not used directly by end-users, though allows usage of the Animation class outside of Node effects
+:curve:
+  An array two values, or an instance of a `dojo._Line`. Used as the start and end points for a given animation. Typically not used directly by 
+  end-users, though allows usage of the Animation class outside of Node effects
 
 Animation Events
 ----------------
