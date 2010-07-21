@@ -11,7 +11,7 @@ dojox.image.Magnifier
 .. contents::
    :depth: 2
 
-A dojox.gfx-based version of the `MagnifierLite widget <dojox.image.MagnifierLite>`_.
+A dojox.gfx-based version of the `MagnifierLite widget <dojox/image/MagnifierLite>`_.
 
 
 ============
