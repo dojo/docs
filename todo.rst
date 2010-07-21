@@ -73,10 +73,6 @@ DojoX
 
   needed: full page
 
-* `dojox.DataGrid <dojox/DataGrid>`_ ``bforbes, toonetown``
-
-  needed: Introduction, Grid 1.2 Changes, Usage, Parameter "selection mode", Example "sorting data at the server", Example "Large datasets", Tips
-
 * `dojox/data/QueryReadStore/example <dojox/data/QueryReadStore/example>`_
 
   This example is unfinished, should we delete it?
