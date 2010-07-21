@@ -244,7 +244,7 @@ Books/Magazines
 Tests
 =====
 
-* `List of the available tests for the Dojo Toolkit <tests/index>`_
+* `List of the available tests for the Dojo Toolkit <http://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/>`_
 
 
 =============
