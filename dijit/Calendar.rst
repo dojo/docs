@@ -138,8 +138,7 @@ With a local custom template to change the layout (does not work against CDN)
 
   .. html::
 
-    <div dojoType="dijit._Calendar" onChange="dojo.byId('formatted').innerHTML=dojo.date.locale.format(arguments[0], {formatLength: 'full', selector:'date'})"></div>
-    <p id="formatted"></p>
+    <input id="calendar5" dayWidth="abbr" value="2008-03-13">
     
   .. css::
 
