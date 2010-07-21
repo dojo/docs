@@ -122,11 +122,22 @@ Javascript declaration, with a restriction of +/- one week from the current date
 
 With a local custom template to change the layout (does not work against CDN)
 
+
+---- /!\ '''Edit conflict - other version:''' ----
 .. cv-compound::
   :height: 600
   :version: trunk
 
   .. cv:: javascript
+
+---- /!\ '''Edit conflict - your version:''' ----
+.. code-example::
+  :height: 600
+  :version: trunk
+
+  .. javascript::
+
+---- /!\ '''End of edit conflict''' ----
 
     <script type="text/javascript">
       dojo.require("dijit.dijit"); // loads the optimized dijit layer
@@ -152,7 +163,7 @@ With a local custom template to change the layout (does not work against CDN)
 	});
     </script>
 
-  .. cv:: css
+  .. css::
 
 	<style>
 		#calendar5 .dijitCalendarDateTemplate { height: 50px; width: 50px; border: 1px solid #ccc; vertical-align: top }
@@ -166,7 +177,7 @@ With a local custom template to change the layout (does not work against CDN)
                 }
 	</style>
 
-  .. cv:: html
+  .. html::
 
 	<input id="calendar5" dayWidth="abbr" value="2008-03-13">
         
