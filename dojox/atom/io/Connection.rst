@@ -23,7 +23,7 @@ This module simplifies performing APP by handling the configuration of all the n
 Limitations
 ===========
 
-Since this module uses the core `dojo.xhr <dojo/_base/xhr>`_ functions for performing server communication, it is limited by the browser same-domain policy for xhr requests.  This means that it can only issue requests back to the server and port that served the HTML page using the API.  For accessing alternate servers, you will need to use a proxy to broker the request to the target server.
+Since this module uses the core `dojo.xhr <dojo/xhr>`_ functions for performing server communication, it is limited by the browser same-domain policy for xhr requests.  This means that it can only issue requests back to the server and port that served the HTML page using the API.  For accessing alternate servers, you will need to use a proxy to broker the request to the target server.
 
 ======================
 Constructor Parameters
