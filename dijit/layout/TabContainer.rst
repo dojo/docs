@@ -33,7 +33,7 @@ First, we'll demonstrate a programatic TabContainer creation.
 Note that the tabs all have a fixed height.
 
 .. code-example::
-  :type: dialog
+  :type: inline
   :toolbar: versions, themes, dir
  
   .. javascript::
@@ -66,7 +66,7 @@ Note that the tabs all have a fixed height.
 
   .. html::
 
-    <div style="width: 350px; height: 300px">
+    <div style="width: 350px; height: 290px">
         <div id="tc1-prog"></div>
     </div>
 
