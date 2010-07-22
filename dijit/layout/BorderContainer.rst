@@ -270,6 +270,7 @@ You can use a BorderContainer inside your own dijit template with a bit of care 
         width: 100%;
         height: 100%;
         overflow:hidden;
+        border: none;
       }
     </style>
 
