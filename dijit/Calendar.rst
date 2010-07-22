@@ -30,6 +30,7 @@ A plain Calendar widget with the formatted date below
 .. code-example::
   :type: inline
   :height: 350
+  :version: 1.4
 
   .. javascript::
 
@@ -56,22 +57,22 @@ A plain Calendar widget with the formatted date below
 
 With an initial selection and weekends disabled
 
-.. cv-compound::
+.. code-example::
   :height: 320
   :version: 1.4
 
-  .. cv:: javascript
+  .. javascript::
 
     <script type="text/javascript">
       dojo.require("dijit.dijit"); // loads the optimized dijit layer
       dojo.require("dijit.Calendar");
     </script>
 
-  .. cv:: html
+  .. html::
 
     <div id="mycal" dojoType="dijit.Calendar" value="2009-08-07" isDisabledDate="dojo.date.locale.isWeekend"></div>
     
-  .. cv:: css
+  .. css::
 
     <style type="text/css">
       .{{ theme }} .dijitCalendarDisabledDate {
@@ -86,10 +87,11 @@ With an initial selection and weekends disabled
 
 Javascript declaration, with a restriction of +/- one week from the current date
 
-.. cv-compound::
+.. code-example::
   :height: 320
+  :version: 1.4
 
-  .. cv:: javascript
+  .. javascript::
 
     <script type="text/javascript">
       dojo.require("dijit.dijit"); // loads the optimized dijit layer
@@ -107,11 +109,11 @@ Javascript declaration, with a restriction of +/- one week from the current date
 	});
     </script>
 
-  .. cv:: html
+  .. html::
 
     <div id="mycal"></div>
     
-  .. cv:: css
+  .. css::
 
     <style type="text/css">
       .{{ theme }} table.dijitCalendarContainer {
