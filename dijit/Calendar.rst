@@ -30,18 +30,17 @@ A plain Calendar widget with the formatted date below
 .. code-example::
   :type: inline
   :height: 350
-  :version: trunk
 
   .. javascript::
 
     <script type="text/javascript">
       dojo.require("dijit.dijit"); // loads the optimized dijit layer
-      dojo.require("dijit._Calendar");
+      dojo.require("dijit.Calendar");
     </script>
 
   .. html::
 
-    <div dojoType="dijit._Calendar" onChange="dojo.byId('formatted').innerHTML=dojo.date.locale.format(arguments[0], {formatLength: 'full', selector:'date'})"></div>
+    <div dojoType="dijit.Calendar" onChange="dojo.byId('formatted').innerHTML=dojo.date.locale.format(arguments[0], {formatLength: 'full', selector:'date'})"></div>
     <p id="formatted"></p>
     
   .. css::
@@ -65,12 +64,12 @@ With an initial selection and weekends disabled
 
     <script type="text/javascript">
       dojo.require("dijit.dijit"); // loads the optimized dijit layer
-      dojo.require("dijit._Calendar");
+      dojo.require("dijit.Calendar");
     </script>
 
   .. cv:: html
 
-    <div id="mycal" dojoType="dijit._Calendar" value="2009-08-07" isDisabledDate="dojo.date.locale.isWeekend"></div>
+    <div id="mycal" dojoType="dijit.Calendar" value="2009-08-07" isDisabledDate="dojo.date.locale.isWeekend"></div>
     
   .. cv:: css
 
@@ -94,10 +93,10 @@ Javascript declaration, with a restriction of +/- one week from the current date
 
     <script type="text/javascript">
       dojo.require("dijit.dijit"); // loads the optimized dijit layer
-      dojo.require("dijit._Calendar");
+      dojo.require("dijit.Calendar");
 
 	dojo.addOnLoad(function(){
-		new dijit._Calendar({
+		new dijit.Calendar({
 			value: new Date(),
 			isDisabledDate: function(d){
 				var d = new Date(d); d.setHours(0,0,0,0);
