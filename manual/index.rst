@@ -57,6 +57,8 @@ Dojo
   Additional stable (but optional) components for advanced animations, I/O, data, Drag and Drop and much more.
 
 .. cv-compound::
+  :type: inline
+  :height: 150
 
   .. cv:: javascript
 
