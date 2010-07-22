@@ -125,7 +125,6 @@ With a local custom template to change the layout (does not work against CDN)
 
 
 .. code-example::
-  :type: inline
   :height: 350
   :version: 1.5
 
@@ -133,15 +132,15 @@ With a local custom template to change the layout (does not work against CDN)
 
     <script type="text/javascript">
       dojo.require("dijit.dijit"); // loads the optimized dijit layer
-      dojo.require("dijit._Calendar");
+      dojo.require("dijit.Calendar");
 
       dojo.addOnLoad(function(){
         //Need to declare BigCalendar here in an addOnLoad block so that it works
-        //with xdomain loading, where the dojo.require for dijit._Calendar 
+        //with xdomain loading, where the dojo.require for dijit.Calendar 
         //may load asynchronously. This also means we cannot have HTML
         //markup in the body tag for BigCalendar, but instead inject it in this
         //onload handler after BigCalendar is defined.
-        dojo.declare("BigCalendar", dijit._Calendar, {
+        dojo.declare("BigCalendar", dijit.Calendar, {
           
           getClassForDate: function(date){
            if(!(date.getDate() % 10)){ return "blue"; } // apply special style to all days divisible by 10
@@ -183,7 +182,7 @@ With a local custom template to change the layout (does not work against CDN)
 
     <script type="text/javascript">
       dojo.require("dijit.dijit"); // loads the optimized dijit layer
-      dojo.require("dijit._Calendar");
+      dojo.require("dijit.Calendar");
 
       dojo.require("dojox.date.hebrew");
       dojo.require("dojox.date.hebrew.Date");
@@ -221,15 +220,15 @@ With a local custom template to change the layout (does not work against CDN)
     <table class="container">
       <tr>
         <td>
-          <div id="hebrew" dojoType="dijit._Calendar" datePackage="dojox.date.hebrew" onValueSelected="publishDate" onChange="formatDate"></div>
+          <div id="hebrew" dojoType="dijit.Calendar" datePackage="dojox.date.hebrew" onValueSelected="publishDate" onChange="formatDate"></div>
           <div id="hebrewFormatted"></div>
         </td>
         <td>
-          <div id="islamic" dojoType="dijit._Calendar" datePackage="dojox.date.islamic" onValueSelected="publishDate" onChange="formatDate"></div>
+          <div id="islamic" dojoType="dijit.Calendar" datePackage="dojox.date.islamic" onValueSelected="publishDate" onChange="formatDate"></div>
           <div id="islamicFormatted"></div>
         </td>
         <td>
-          <div id="gregorian" dojoType="dijit._Calendar" onValueSelected="publishDate" onChange="formatDate"></div>
+          <div id="gregorian" dojoType="dijit.Calendar" onValueSelected="publishDate" onChange="formatDate"></div>
           <div id="gregorianFormatted"></div>
         </td>
       </tr>
