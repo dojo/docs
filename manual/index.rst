@@ -23,6 +23,7 @@ Dojo
 .. cv-compound::
   :type: inline
   :height: 150
+  :width: 200
 
   .. cv:: javascript
 
