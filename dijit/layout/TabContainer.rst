@@ -35,6 +35,7 @@ Note that the tabs all have a fixed height.
 .. code-example::
   :type: inline
   :toolbar: versions, themes, dir
+  :width: 400
  
   .. javascript::
 
