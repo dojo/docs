@@ -75,6 +75,8 @@ EnhancedGrid (dojox.grid.EnhancedGrid) provides a rich set of features that enha
 
 
 ----------------------------------------
+
+
 .. cv-compound::
 
   .. cv:: javascript
