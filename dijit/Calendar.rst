@@ -59,6 +59,7 @@ With an initial selection and weekends disabled
 
 .. code-example::
   :height: 320
+  :type: inline
   :version: 1.4
 
   .. javascript::
@@ -89,6 +90,7 @@ Javascript declaration, with a restriction of +/- one week from the current date
 
 .. code-example::
   :height: 320
+  :type: inline
   :version: 1.4
 
   .. javascript::
@@ -127,6 +129,7 @@ With a local custom template to change the layout (does not work against CDN)
 
 .. code-example::
   :height: 350
+  :type: inline
   :version: 1.5
 
   .. javascript::
