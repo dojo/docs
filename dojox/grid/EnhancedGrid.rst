@@ -75,33 +75,23 @@ EnhancedGrid (dojox.grid.EnhancedGrid) provides a rich set of features that enha
 
 
 ----------------------------------------
-
 .. cv-compound::
 
   .. cv:: javascript
 
     <script type="text/javascript">
-        dojo.require("dijit.form.Button");
-        dojo.require("dijit.Dialog");
+      dojo.require("dijit.TitlePane");
+
+      var tp;
+      dojo.addOnLoad(function(){
+	  tp = new dijit.TitlePane({title:"I'm a TitlePane", content: "Collapse me!"});
+          dojo.byId("holder").appendChild(tp.domNode);
+      });
     </script>
 
   .. cv:: html
 
-    <div id="sized" dojoType="dijit.Dialog" title="My scrolling dialog">
-        <div style="width: 200px; height: 100px; overflow: auto;">
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                semper sagittis velit. Cras in mi. Duis porta mauris ut ligula. Proin
-                porta rutrum lacus. Etiam consequat scelerisque quam. Nulla facilisi.
-                Maecenas luctus venenatis nulla. In sit amet dui non mi semper iaculis.
-                Sed molestie tortor at ipsum. Morbi dictum rutrum magna. Sed vitae
-                risus.</p>
-        </div>
-    </div>
-
-    <p>When pressing this button the dialog will popup (with a scrollbar):</p>
-    <button dojoType="dijit.form.Button" onClick="dijit.byId('sized').show();" type="button">Show me!</button>
-
-
+    <div id="holder"></div>
 
 
 
