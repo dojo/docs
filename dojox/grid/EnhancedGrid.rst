@@ -915,7 +915,7 @@ Note:
     
         dojo.addOnLoad(function(){
           // our test data store for this example:
-          var store = new dojox.data.CsvStore({ url: '{{ baseUrl }}dojox/grid/tests/support/movies.csv' });
+          var store = new dojox.data.CsvStore({ url: '{{ dataUrl }}dojox/grid/tests/support/movies.csv' });
 
           // set the layout structure:
           var layout = [
