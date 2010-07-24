@@ -110,6 +110,10 @@ Here is an up to date list of dojox.widget components. Note: Some of these are n
 
   A message display system, showing warnings, errors and other messages unobtrusively
 
+* `dojox.widget.TitleGroup <dojox/widget/TitleGroup>`_
+  
+  A lightweight container widgets which manages the state of children `TitlePane <dijit/TitlePane>`_ widgets. Similar to an `AccordionContainer <dijit/layout/AccordionContainer>`_ though has variable height panes.  
+
 * `dojox.widget.Wizard <dojox/widget/Wizard>`_
 
   A simple widget providing a step-by-step wizard like UI
