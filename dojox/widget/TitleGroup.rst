@@ -14,7 +14,6 @@ Examples
 .. cv-compound::
   :type: inline
   :height: 600
-  :width: 200
 
   .. cv:: css
 
