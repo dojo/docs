@@ -83,17 +83,15 @@ EnhancedGrid (dojox.grid.EnhancedGrid) provides a rich set of features that enha
 
     <script type="text/javascript">
       dojo.require("dijit.TitlePane");
-
-      var tp;
-      dojo.addOnLoad(function(){
-	  tp = new dijit.TitlePane({title:"I'm a TitlePane", content: "Collapse me!"});
-          dojo.byId("holder").appendChild(tp.domNode);
-      });
     </script>
 
   .. cv:: html
 
-    <div id="holder"></div>
+    <div id="tp2" dojoType="dijit.TitlePane" title="I'm a TitlePane Too">
+        Click arrow to close me.
+    </div>
+
+
 
 
 
