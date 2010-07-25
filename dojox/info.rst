@@ -54,3 +54,13 @@ Contributing new projects, or patches for existing projects are covered under th
 it may be distributed. Accepting a new project or patch for an existing project is left to the discretion of the project "owner", or in the case of top-level project, the DojoX BDFL (currently: Adam Peller)
 
 You are obviously more than welcome to create your own projects and modules that use the Dojo Toolkit and not contribute them to directly back to DojoX. Feel free to blog, design, and otherwise innovate using the Toolkit, and release it independently, though **contact us**, as we would love to evangelize your efforts! 
+
+External Modules
+----------------
+
+No convention currently exists for external modules in DojoX. For Dojo 2.0, the DojoX project will likely be "decoupled" and treated as entirely external through an undermined mechanism for package retrieval. 
+
+See Also
+--------
+
+* `plugd <http://github.com/phiggins42/plugd>`_
