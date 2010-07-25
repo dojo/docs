@@ -28,7 +28,7 @@ Examples
         dojo.require("dojox.widget.TitleGroup");
         dojo.require("dijit.TitlePane");
         console.warn("loaded");
-        dojo.ready(function(){
+        dojo.addOnLoad(function(){
             console.warn("in ready");
             var thegroup = new dojox.widget.TitleGroup({}, "titleGroup");
             console.wanr(thegroup);
