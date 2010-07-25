@@ -46,6 +46,10 @@ Here is an up to date list of dojox.widget components. Note: Some of these are n
 
   An extension to `dijit.Dialog <dijit/Dialog>`_
 
+* `dojox.widget.DialogSimple <dojox/widget/DialogSimple>`_
+
+  Base class for `dojox.widget.Dialog <dojox/widget/Dialog>`_
+
 * `dojox.widget.DocTester <dojox/widget/DocTester>`_
 
   A widget to run DocTests inside an HTML page
