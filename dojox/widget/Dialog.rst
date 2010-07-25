@@ -56,3 +56,4 @@ See also
 
 * `dijit.Dialog <dijit/Dialog>`_ 
 * `dojox.widget.DialogSimple <dojox/widget/DialogSimple>`_
+* `Nightly Test <http://archive.dojotoolkit.org/nightly/dojotoolkit/dojox/widget/tests/test_Dialog.html>`_
