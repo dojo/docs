@@ -33,7 +33,7 @@ You can define your account number as a djConfig parameter ``urchin``. Simply in
   <script type="text/javascript">
      var djConfig = { urchin: "UA-12345-67" };
   </script>
-  <script src="http://o.aolcdn.com/dojo/1.2/dojo/dojo.xd.js"></script>
+  <script src="http://o.aolcdn.com/dojo/1.5/dojo/dojo.xd.js"></script>
 
 or directly on the djConfig attribute of your ``dojo.js`` script tag:
 
@@ -48,19 +48,6 @@ Being a Class constructor, you can also use Urchin with a ``dojoType``. Assuming
   :linenos:
 
      <div dojoType="dojox.analytics.Urchin" acct="UA-12345-67"></div>
-
-Optional Parameters
--------------------
-
-In Dojo 1.3 and before, these parameters existed. In Dojo 1.4, they have been removed for a more robust solution. Disregard this following information if you are using Dojo 1.4 or higher. 
-
-There is only one optional parameter: ``loadInterval``. This defines the time in ms to repoll for the availability of the Google tracker. Set to a higher number for less processing, and a lower number for more frequent checks. Default is 420 in Dojo 1.2, and 42 in Dojo versions 1.3 and higher.
-
-The reduction in default interval time is the result of implementing a decaying timer, to ensure the analyitics tracker was loaded as quickly as possible, without continually running in the event the tracker is never resolved. These options are defined by the ``decay``, ``timeout``, and ``loadInterval`` parameters. ``timeout`` defines the time in ms the ``loadInterval`` can become before quitting, and the ``decay`` defines a float to increment the ``loadInterval`` by. The default ``decay`` is 0.5, incrementing the interval by 50% on each iteration. eg:
-
-100, 150, 225, 345 ...
-
-When the ``timeout`` is reached, the tracker fails. ``GAonLoad`` will not fire, so ensure you do not call a reference to the tracker until after GAonLoad fires.
 
 Ajax-API
 --------
@@ -99,3 +86,16 @@ You can also do this as a shorthand, too. If you want to prevent the automatic t
      }
   });
   
+
+Optional Parameters
+-------------------
+
+In Dojo 1.3 and before, these parameters existed. In Dojo 1.4, they have been removed for a more robust solution. Disregard this following information if you are using Dojo 1.4 or higher. 
+
+There is only one optional parameter: ``loadInterval``. This defines the time in ms to repoll for the availability of the Google tracker. Set to a higher number for less processing, and a lower number for more frequent checks. Default is 420 in Dojo 1.2, and 42 in Dojo versions 1.3 and higher.
+
+The reduction in default interval time is the result of implementing a decaying timer, to ensure the analyitics tracker was loaded as quickly as possible, without continually running in the event the tracker is never resolved. These options are defined by the ``decay``, ``timeout``, and ``loadInterval`` parameters. ``timeout`` defines the time in ms the ``loadInterval`` can become before quitting, and the ``decay`` defines a float to increment the ``loadInterval`` by. The default ``decay`` is 0.5, incrementing the interval by 50% on each iteration. eg:
+
+100, 150, 225, 345 ...
+
+When the ``timeout`` is reached, the tracker fails. ``GAonLoad`` will not fire, so ensure you do not call a reference to the tracker until after GAonLoad fires.
