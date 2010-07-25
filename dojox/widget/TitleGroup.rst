@@ -28,18 +28,19 @@ Examples
         dojo.require("dojox.widget.TitleGroup");
         dojo.require("dijit.TitlePane");
         dojo.require("dijit.form.Button");
-        setTimeout(function(){ dojo.parser.parse(); }, 500);
+        setTimeout(function(){ dojo.parser.parse(); }, 200);
     </script>
 
   .. html::
 
+    <h2>Content before</h2>
     <div id="titleGroup" dojoType="dojox.widget.TitleGroup">
         <div dojoType="dijit.TitlePane" open="true" title="Pane 1">Lorem</div>
         <div dojoType="dijit.TitlePane" open="false" title="Pane 2">Lorem <br> <div dojoType="dijit.form.Button">click</div></div>
-        <div dojoType="dijit.TitlePane" open="false" title="Pane 3"><p>Lorem<</p><p>lorem</p></div>
+        <div dojoType="dijit.TitlePane" open="false" title="Pane 3"><p>Lorem</p><p>lorem</p></div>
         <div dojoType="dijit.TitlePane" open="false" title="Pane 4"><p>Lorem</p></div>    
     </div>
-
+    <h2>Content after</h2>
 
 See Also:
 =========
