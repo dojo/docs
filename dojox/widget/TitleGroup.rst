@@ -76,7 +76,9 @@ Adding and removing children:
         pop one off
         <script type="dojo/method" event="onClick">
             dijit.registry.byClass("dijit.TitlePane").some(function(widget){
-                  console.warn("widget", widget); return true;
+                  dijit.byId("titleGroupB").removeChild(widget);
+                  widget.destroy(); 
+                  return true; // only once
             }); 
         </script>
     </div>
