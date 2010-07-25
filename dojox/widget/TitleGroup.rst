@@ -14,7 +14,7 @@ Examples
 .. cv-compound::
   :type: inline
   :height: 600
-  :version: trunk
+  :version: local
 
   .. cv:: css
 
