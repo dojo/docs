@@ -63,4 +63,4 @@ No convention currently exists for external modules in DojoX. For Dojo 2.0, the 
 See Also
 --------
 
-* `plugd <http://github.com/phiggins42/plugd>`_
+* `plugd <http://github.com/phiggins42/plugd>`_ is an example of an additional name space which does **not** follow the hypen extension policy.
