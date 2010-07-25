@@ -11,13 +11,13 @@ dojox.widget.Dialog
 .. contents::
    :depth: 2
 
-This is an extension to the stock `dijit.Dialog <dijit/Dialog>`_ providing additional sizing options, animations, and styling. 
+This is an extension to the `dojox.widget.DialogSimple <dojox/widget/DialogSimple>`_ providing additional sizing options, animations, and styling. 
 
 ============
 Introduction
 ============
 
-This widget's usage is nearly identical to the Dijit Dialog. show() and hide() change the display state, attr("title", "new title") will manipulate the title (if visible), and so on. 
+This widget's usage is nearly identical to the Dijit Dialog. show() and hide() change the display state, attr("title", "new title") will manipulate the title (if visible), and so on. The difference comes in the creation parameters set.
 
 =====
 Usage
@@ -28,7 +28,7 @@ You will need the CSS, as well as a Theme CSS file. For instance, tundra:
 .. code-block :: html
   :linenos:
 
-    <link rel="stylesheet" href="dojotoolkit/dijit/themes/tundra/tundra.css" />
+    <link rel="stylesheet" href="dojotoolkit/dijit/themes/claro/claro.css" />
     <link rel="stylesheet" href="dojotoolkit/dojox/widget/Dialog/Dialog.css" />
 
 And to require the module in:
@@ -55,3 +55,4 @@ See also
 ========
 
 * `dijit.Dialog <dijit/Dialog>`_ 
+* `dojox.widget.DialogSimple <dojox/widget/DialogSimple>`_
