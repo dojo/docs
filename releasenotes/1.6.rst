@@ -58,6 +58,10 @@ New project called dojox.NodeList, currently adding a delegate() method to NodeL
 		});
 
 
+TitleGroup
+----------
+New widget TitleGroup in dojox.widgets, like an AccordionContainer without an predefined height (i.e., the AccordionContainer version of a TabContainer with the doLayout=false)
+
 ====
 Util
 ====
