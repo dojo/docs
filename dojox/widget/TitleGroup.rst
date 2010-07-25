@@ -29,7 +29,7 @@ Examples
         dojo.require("dijit.TitlePane");
 
         dojo.ready(function(){
-            var thegroup = new dojox.widget.TitleGroup({}, "titleArea");
+            var thegroup = new dojox.widget.TitleGroup({}, "titleGroup");
             new dijit.TitlePane({ title:"Pane 1", open:true }).placeAt(thegroup);
             new dijit.TitlePane({ title:"Pane 2", open:false }).placeAt(thegroup);
             new dijit.TitlePane({ title:"Pane 3", open:false }).placeAt(thegroup);
@@ -38,7 +38,7 @@ Examples
 
   .. html::
 
-    <div id="titleArea"></div>
+    <div id="titleGroup"></div>
 
 
 See Also:
