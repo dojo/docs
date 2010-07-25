@@ -66,19 +66,29 @@ Adding and removing children:
   .. html::
 
     <h2>Content before</h2>
-    <div id="titleGroup" dojoType="dojox.widget.TitleGroup">
-        <div dojoType="dijit.TitlePane" open="true" title="Pane 2">
-            <div dojoType="dijit.form.Button">
-              click to add
-              <script type="dojo/method" event="onClick">
-                   dijit.byId("titleGroup").addChild(new dijit.TitlePane({ open:false, title:"Added " + dijit.registry.length }));
-
-              </script>
-            </div>
+    <div dojoType="dijit.form.Button">
+       click to add
+       <script type="dojo/method" event="onClick">
+            var group = dijit.byId("titleGroup);
+            var tp = new dijit.TitlePane({ opan:false, title: "Added " + dijit.registry.length });
+            group.addChild(tp);
+       </script>
+    </div>
+    <div dojoType="dijit.form.Button">
+        pop one off
+        <script type="dojo/method" event="onClick">
+            var pane = dijit.registry.byClass("dijit.TitlePane")[0]; 
+            dijit.byId("titleGroup").removeChild(pane);
+            pane.placeAt("graveyard");
+        </script>
+    </div>
+    <div id="titleGroup" style="width:300px" dojoType="dojox.widget.TitleGroup">
+        <div dojoType="dijit.TitlePane" open="true" title="Pane 1">
+            Pane 1
         </div>
     </div>
     <h2>Content after</h2>
-
+    <div id="graveyard"></div>
 
 
 See Also:
