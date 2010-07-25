@@ -3,10 +3,8 @@
 dojox.analytics.Urchin
 ======================
 
-:Status: Draft
-:Version: 1.0
-:Project owner: Peter Higgins
-:Available: since V1.2
+:Author: Peter Higgins
+:Since: 1.2.0
 
 .. contents::
    :depth: 2
