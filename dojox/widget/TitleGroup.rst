@@ -34,7 +34,7 @@ A simple declarative example:
   .. html::
 
     <h2>Content before</h2>
-    <div id="titleGroup" dojoType="dojox.widget.TitleGroup">
+    <div id="titleGroupA" dojoType="dojox.widget.TitleGroup">
         <div dojoType="dijit.TitlePane" open="true" title="Pane 1">Lorem</div>
         <div dojoType="dijit.TitlePane" open="false" title="Pane 2">Lorem <br> <div dojoType="dijit.form.Button">click</div></div>
         <div dojoType="dijit.TitlePane" open="false" title="Pane 3"><p>Lorem</p><p>lorem</p></div>
@@ -70,16 +70,16 @@ Adding and removing children:
        click to add
        <script type="dojo/method" event="onClick">
             var group = dijit.byId("titleGroup");
-            var tp = new dijit.TitlePane({ opan:false, title: "Added " + dijit.registry.length });
+            var tp = new dijit.TitlePane({ open:false, title: "Added " + dijit.registry.length });
             group.addChild(tp);
        </script>
     </div>
     <div dojoType="dijit.form.Button">
         pop one off
         <script type="dojo/method" event="onClick">
-            var pane = dijit.registry.byClass("dijit.TitlePane")[0]; 
-            dijit.byId("titleGroup").removeChild(pane);
-            pane.placeAt("graveyard");
+            dijit.registry.byClass("dijit.TitlePane").some(function(widget){
+                  console.warn("widget", widget); return true;
+            }); 
         </script>
     </div>
     <div id="titleGroup" style="width:500px" dojoType="dojox.widget.TitleGroup">
