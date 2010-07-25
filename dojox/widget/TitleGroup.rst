@@ -27,21 +27,17 @@ Examples
     <script>
         dojo.require("dojox.widget.TitleGroup");
         dojo.require("dijit.TitlePane");
-    <script>
-    <script>
-        dojo.addOnLoad(function(){
-            console.warn("in ready");
-            var thegroup = new dojox.widget.TitleGroup({}, "titleGroup");
-            console.wanr(thegroup);
-            new dijit.TitlePane({ title:"Pane 1", open:true }).placeAt(thegroup);
-            new dijit.TitlePane({ title:"Pane 2", open:false }).placeAt(thegroup);
-            new dijit.TitlePane({ title:"Pane 3", open:false }).placeAt(thegroup);
-        });
+        dojo.require("dijit.form.Button");
     </script>
 
   .. html::
 
-    <div id="titleGroup"></div>
+    <div id="titleGroup" dojoType="dojox.widget.TitleGroup">
+        <div dojoType="dijit.TitlePane" open="true" title="Pane 1">Lorem</div>
+        <div dojoType="dijit.TitlePane" open="false" title="Pane 2">Lorem <br> <div dojoType="dijit.form.Button">click</div></div>
+        <div dojoType="dijit.TitlePane" open="false" title="Pane 3"><p>Lorem<</p><p>lorem</p>/div>
+        <div dojoType="dijit.TitlePane" open="false" title="Pane 4"><p>Lorem</p></div>    
+    </div>
 
 
 See Also:
