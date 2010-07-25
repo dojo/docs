@@ -19,7 +19,7 @@ Some caveats of using DojoX:
 * Fully mature, production level code will typically remain in DojoX.
 * Not all modules in DojoX will be documented, since they are lower priority than Base and Core.  
 
-Browse the `API documentation <http://api.dojotoolkit.org/jsdoc/dojox/HEAD/dojox>`_ and `subversion repository <http://svn.dojotoolkit.org/src/dojox/trunk>`_ directly for a more complete list.
+Browse the `API documentation <http://dojotoolkit.org/api/dojox.html>`_ and `subversion repository <http://svn.dojotoolkit.org/src/dojox/trunk>`_ directly for a more complete list.
 
 Project Status
 --------------
@@ -40,9 +40,12 @@ DojoX follows the same naming conventions as Dojo and Dijit, which basically con
 * All namespaces exist withing their project name. No classes exist in the top-level dojox namespace, with one notable exception: ``dojox.Grid``. This Grid module is deprecated, and will be gone in 2.0. It will be replaced with `dojox.grid.DataGrid <dojox/grid>`_
 * No cross-namespace pollution takes place indirectly. 
 
-There is, however, a supported convention for DojoX to add or modify functionality in Dojo or Dijit: hypens. By adding a hypen to the 
-module name, it is meant to be clear the module modifies something elsewhere in Dojo. For instance, ``dojox.fx.ext-dojo.NodeList`` adds `dojox.fx <dojox/fx>`_ functionality into `dojo.NodeList <dojo/NodeList>`_, making it available from a `dojo.query <dojo/query>`_ call. 
-The rational is: Because the hypen is illegal in JavaScript variables, you will never be able to directly call an ``ext-dojo`` method directly, and the act of `requiring <dojo/require>`_ it mixes the desired functionality.
+There is, however, a supported convention for DojoX to add or modify functionality in Dojo or Dijit: **hypens**. By adding a hypen to the 
+module name, it is meant to be clear the module modifies something elsewhere in Dojo. 
+
+For instance, ``dojox.fx.ext-dojo.NodeList`` adds `dojox.fx <dojox/fx>`_ functionality into `dojo.NodeList <dojo/NodeList>`_, making it available from a `dojo.query <dojo/query>`_ call.
+
+The rational is: Because the hypen is illegal in JavaScript variables, you will never be able to directly call an ``ext-dojo`` method directly, and the act of `requiring <dojo/require>`_ it mixes the desired functionality in the appropriate place. 
 
 Contributing to DojoX
 ---------------------
@@ -50,4 +53,4 @@ Contributing to DojoX
 Contributing new projects, or patches for existing projects are covered under the same rules as Dojo and Dijit. Code must adhere to The Dojo `Style Guidelines </StyleGuide>`_, and be covered under a `Contributor License Agreement <http://dojotoolkit.org/cla>`_ to ensure
 it may be distributed. Accepting a new project or patch for an existing project is left to the discretion of the project "owner", or in the case of top-level project, the DojoX BDFL (currently: Adam Peller)
 
-You are obviously more than welcome to create your own projects and modules that use the Dojo Toolkit and not contribute them to directly back to DojoX. Feel free to blog, design, and otherwise innovate using the Toolkit, and release it independently, though **contact us**, as we could love to evangelize your efforts! 
+You are obviously more than welcome to create your own projects and modules that use the Dojo Toolkit and not contribute them to directly back to DojoX. Feel free to blog, design, and otherwise innovate using the Toolkit, and release it independently, though **contact us**, as we would love to evangelize your efforts! 
