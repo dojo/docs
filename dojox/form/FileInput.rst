@@ -3,10 +3,8 @@
 dojox.form.FileInput
 ====================
 
-:Status: Draft
-:Version: 1.2
 :Project owner: Peter Higgins
-:Available: since V1.3
+:Since: 1.3.0
 
 .. contents::
    :depth: 2
