@@ -69,7 +69,7 @@ Adding and removing children:
     <div dojoType="dijit.form.Button">
        click to add
        <script type="dojo/method" event="onClick">
-            var group = dijit.byId("titleGroup");
+            var group = dijit.byId("titleGroupB");
             var tp = new dijit.TitlePane({ open:false, title: "Added " + dijit.registry.length });
             group.addChild(tp);
        </script>
@@ -82,7 +82,7 @@ Adding and removing children:
             }); 
         </script>
     </div>
-    <div id="titleGroup" style="width:500px" dojoType="dojox.widget.TitleGroup">
+    <div id="titleGroupB" style="width:500px" dojoType="dojox.widget.TitleGroup">
         <div dojoType="dijit.TitlePane" open="true" title="Pane 1">
             Pane 1
         </div>
