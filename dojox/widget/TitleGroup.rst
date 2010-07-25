@@ -12,8 +12,6 @@ Examples
 ========
 
 .. code-example::
-  :type: inline
-  :height: 600
   :version: local
 
   .. css::
