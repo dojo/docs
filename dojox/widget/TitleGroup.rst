@@ -27,9 +27,11 @@ Examples
     <script>
         dojo.require("dojox.widget.TitleGroup");
         dojo.require("dijit.TitlePane");
-
+        console.warn("loaded");
         dojo.ready(function(){
+            console.warn("in ready");
             var thegroup = new dojox.widget.TitleGroup({}, "titleGroup");
+            console.wanr(thegroup);
             new dijit.TitlePane({ title:"Pane 1", open:true }).placeAt(thegroup);
             new dijit.TitlePane({ title:"Pane 2", open:false }).placeAt(thegroup);
             new dijit.TitlePane({ title:"Pane 3", open:false }).placeAt(thegroup);
