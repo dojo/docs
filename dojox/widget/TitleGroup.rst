@@ -11,6 +11,8 @@ A container widget which delegates a connection between children `TitlePanes <di
 Examples
 ========
 
+A simple declarative example:
+
 .. code-example::
   :version: local
 
@@ -39,6 +41,45 @@ Examples
         <div dojoType="dijit.TitlePane" open="false" title="Pane 4"><p>Lorem</p></div>    
     </div>
     <h2>Content after</h2>
+
+Adding and removing children:
+
+
+.. code-example::
+  :version: local
+
+  .. css::
+
+     <style type="text/css"> 
+        @import "{{baseUrl}}dojox/widget/TitleGroup/TitleGroup.css";
+     </style>
+
+  .. javascript::
+
+    <script>
+        dojo.require("dojox.widget.TitleGroup");
+        dojo.require("dijit.TitlePane");
+        dojo.require("dijit.form.Button");
+        setTimeout(function(){ dojo.parser.parse(); }, 200);
+    </script>
+
+  .. html::
+
+    <h2>Content before</h2>
+    <div id="titleGroup" dojoType="dojox.widget.TitleGroup">
+        <div dojoType="dijit.TitlePane" open="true" title="Pane 2">
+            <div dojoType="dijit.form.Button">
+              click to add
+              <script type="dojo/method" event="onClick">
+                   dijit.byId("titleGroup").addChild(new dijit.TitlePane({ open:false, title:"Added " + dijit.registry.length }));
+
+              </script>
+            </div>
+        </div>
+    </div>
+    <h2>Content after</h2>
+
+
 
 See Also:
 =========
