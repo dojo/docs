@@ -28,7 +28,6 @@ A simple declarative example:
         dojo.require("dojox.widget.TitleGroup");
         dojo.require("dijit.TitlePane");
         dojo.require("dijit.form.Button");
-        setTimeout(function(){ dojo.parser.parse(); }, 200);
     </script>
 
   .. html::
@@ -60,7 +59,6 @@ Adding and removing children:
         dojo.require("dojox.widget.TitleGroup");
         dojo.require("dijit.TitlePane");
         dojo.require("dijit.form.Button");
-        setTimeout(function(){ dojo.parser.parse(); }, 200);
     </script>
 
   .. html::
