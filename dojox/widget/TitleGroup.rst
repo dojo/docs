@@ -11,18 +11,18 @@ A container widget which delegates a connection between children `TitlePanes <di
 Examples
 ========
 
-.. cv-compound::
+.. code-example::
   :type: inline
   :height: 600
   :version: local
 
-  .. cv:: css
+  .. css::
 
      <style type="text/css"> 
         @import "{{baseUrl}}dojox/widget/TitleGroup/TitleGroup.css";
      </style>
 
-  .. cv:: javascript
+  .. javascript::
 
     <script>
         dojo.require("dojox.widget.TitleGroup");
@@ -36,7 +36,7 @@ Examples
         });
     </script>
 
-  .. cv:: html
+  .. html::
 
     <div id="titleArea"></div>
 
