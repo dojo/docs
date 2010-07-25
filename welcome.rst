@@ -50,3 +50,5 @@ Developer's Notebook
 * `Wondering how you can signup to contribute? <about/login>`_ 
 
   It's a wiki, so dive in to help us make it awesome!
+
+**this is a wiki-specific page, and does not appear in the static output. instead use `the manual index <manual/index>`_ for landing page**
