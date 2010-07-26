@@ -10,4 +10,5 @@ dojox.lang.async
 
 .. contents::
    :depth: 2
-JavaScript library to support EDP techniques.
+
+JavaScript library to support `EDP <http://en.wikipedia.org/wiki/Event-driven_programming>`_ techniques.
