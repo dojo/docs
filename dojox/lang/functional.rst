@@ -11,7 +11,7 @@ dojox.lang.functional
 .. contents::
    :depth: 2
 
-JavaScript language extensions for supporting `FP <http://en.wikipedia.org/wiki/Functional_Programming>`_ paradigm.
+JavaScript library to support `FP <http://en.wikipedia.org/wiki/Functional_Programming>`_ techniques.
 
 ========
 See Also
