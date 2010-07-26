@@ -18,3 +18,4 @@ See Also
 ========
 
 * `Functional fun in JavaScript with Dojo <http://lazutkin.com/blog/2008/jan/12/functional-fun-javascript-dojo/>`_
+* `Using recursion combinators in JavaScript <http://lazutkin.com/blog/2008/jun/30/using-recursion-combinators-javascript/>`_
