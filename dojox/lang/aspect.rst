@@ -11,7 +11,7 @@ dojox.lang.aspect
 .. contents::
    :depth: 2
 
-JavaScript language extensions for supporting AOP paradigm.
+JavaScript library to support AOP techniques.
 
 ========
 See Also
