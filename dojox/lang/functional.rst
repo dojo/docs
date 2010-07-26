@@ -3,7 +3,10 @@
 dojox.lang.functional
 =====================
 
-:Available: since V1.5
+:Status: In-process
+:Version: 1.0
+:Project owner: Eugene Lazutkin
+:Available: since 1.1
 
 .. contents::
    :depth: 2
