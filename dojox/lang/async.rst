@@ -10,5 +10,4 @@ dojox.lang.async
 
 .. contents::
    :depth: 2
-
-JavaScript language extensions for supporting EDP paradigm.
+JavaScript library to support EDP techniques.
