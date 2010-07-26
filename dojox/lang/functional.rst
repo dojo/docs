@@ -24,4 +24,4 @@ External references:
 
 Subprojects:
 
-* `dojox.lang.function.object <dojox/lang/function/object>`_
+* `dojox.lang.function.object <dojox/lang/functional/object>`_
