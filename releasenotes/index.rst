@@ -16,7 +16,7 @@ Upcoming version
 Current version
 ===============
 
-* `Dojo Toolkit V1.5 Release Notes <releasenotes/1.5>`_
+* `Dojo Toolkit V1.5 Release Notes <releasenotes/1.5>`_ (`Japanese <releasenotes/1.5_ja>`_)
 
 ==============
 Older versions
