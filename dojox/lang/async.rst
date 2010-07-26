@@ -3,7 +3,10 @@
 dojox.lang.async
 ================
 
-:Available: since V1.5
+:Status: In-process
+:Version: 1.0
+:Project owner: Eugene Lazutkin
+:Available: since 1.5
 
 .. contents::
    :depth: 2
