@@ -3,7 +3,10 @@
 dojox.lang.aspect
 =================
 
-:Available: since V1.2
+:Status: In-process
+:Version: 1.0
+:Project owner: Eugene Lazutkin
+:Available: since 1.2
 
 .. contents::
    :depth: 2
