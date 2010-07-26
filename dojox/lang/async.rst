@@ -1,7 +1,7 @@
 #format dojo_rst
 
-dojox.lang.asynch
-=================
+dojox.lang.async
+================
 
 :Available: since V1.5
 
