@@ -11,4 +11,4 @@ dojox.lang.oo
 .. contents::
    :depth: 2
 
-JavaScript language extensions for supporting OO paradigm.
+JavaScript library to support `OOP <http://en.wikipedia.org/wiki/Object-oriented_programming>`_ techniques.
