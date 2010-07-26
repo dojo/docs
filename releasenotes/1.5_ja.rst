@@ -1,0 +1,652 @@
+#format dojo_rst
+
+この文書は http://docs.dojocampus.org/releasenotes/1.5 の翻訳版です。もし翻訳にエラーがあったり、オリジナルの文書が更新されている場合は、英語で書かれたオリジナル文書の最新版を信頼してください。
+
+Dojo 1.5 リリース・ノート
+=========================
+
+.. contents::
+   :depth: 3
+
+====================
+サポートするブラウザ
+====================
+
+次のブラウザがサポートされています。サポートされていないブラウザの場合は、動作するかもしれませんが、テストはされていません。また、サポートされていないブラウザ固有の修正がなされることもありません。
+
+* Firefox 3.5/3.6
+* Safari 4/Safari 5 および Chrome 5
+* IE6, IE7, IE8
+* Opera 10.50 またはそれ以降 (Dojo core のみ)
+
+
+=========
+Dojo Core
+=========
+
+Firefox拡張機能(extension)内でのDojoの使用
+------------------------------------------
+
+ソースコード版のDojoをFirefox拡張機能の中から使用する場合は、dojo.jsをインクルードする前にdjConfig.hostEnv = "ff_ext"の設定をしてください。
+
+dojo.cldr
+---------
+
+数値、通貨、日付のフォーマットに使用するロケール固有データのテーブルをCLDR 1.8 (unicode.org/cldr)に更新しました。
+
+dojo.Deferred, dojo.when
+------------------------
+
+dojo.Deferredは副作用のない連結(chaining)を実現するためにリファクタリングされ、これにより次のようなコードを実行できるようになります。
+
+.. code-block :: javascript
+
+    var def = dojo.xhr(...);
+    def.then(...);
+    def.then(...);
+
+
+最初のthen()呼び出しが2回目のthen()呼び出しに渡される値に影響を与える心配はありません。
+
+次のようにして、チェインの各要素が値に影響を与えるような連結も可能です。
+
+.. code-block :: javascript
+
+      dojo.xhr(...).then(function(val){ return dojo.toJson(val); }).then(...);
+
+最後に、dojo.when()はDeferredオブジェクトまたは普通の値を取るメソッドです。Deferredオブジェクトの場合は値の準備が整った時点で、それ以外の場合は直ちに、与えられたコードを実行します。(訳注：これにより、Deferredを使った非同期処理の場合とそれ以外の同期処理の場合とで共通のコーディングスタイルを取ることができるようになります。)
+
+.. code-block :: javascript
+
+    // val might be a Deferred, or it could be (for example) a String
+    dojo.when(val, function(val){
+          ...
+    });
+
+詳細は `blog post <http://www.sitepen.com/blog/2010/05/03/robust-promises-with-dojo-deferred-1-5/>`_ (英語)を参照してください。
+
+dojo.window, dojo.uacss
+-----------------------
+
+dijitのいくつかの関数がdojo coreへ移動しました。(互換性のためにdijitにはスタブを残してあります)
+
+* dojo.require("dojo.uacss")はdj_ieなどのクラスを<html>ノードに追加します。それらは、ブラウザの種類、ブラウザのバージョン、ボックスモデルなどを表します。以前はdojo.require("dijit.sniff")でした。
+* dojo.window.getBox()はビューポートのサイズを取得します。以前はdijit.getViewport()でした。
+* dojo.window.get()はdocumentオブジェクトから対応するwindowオブジェクトを取得します。以前はdijit.getDocumentWindow()でした。
+* dojo.window.scrollIntoView()はビュー内でノードをスクロールします。node.scrollIntoView()と同様ですが、ブラウザごとの挙動の違いを吸収します。以前はdijit.scrollIntoView()でした。
+
+dojo.Stateful
+-------------
+
+一貫性のある方法で、プロパティの値の取得、設定、変更の監視を行うための、新しい汎用的なインターフェイスあるいはベースクラスとなるものです。
+
+参照:
+
+* `dojo.Stateful <dojo/Stateful>`_
+* `Ticket #10839 <http://bugs.dojotoolkit.org/ticket/10839d>`_
+* `Stateful blog post <http://www.sitepen.com/blog/2010/05/04/consistent-interaction-with-stateful-objects-in-dojo/>`_
+
+
+=====
+Dijit
+=====
+
+Claro テーマ
+------------
+ClaroはDijitとdojox.Gridの新しいテーマです。(以前はLucidと呼ばれていました。) Claroテーマには次のような狙いがあります。
+
+   - グラデーションつき背景画像、ドロップシャドウ、CSSアニメーション(webkitとmozilla用)などの視覚的効果の向上により、Dijitライブラリを使ったリッチ インターネット アプリケーションのための現代的で魅力あるビジュアル スタイルを提供する。
+   - 一貫性のあるパディング、フォントの扱い、位置揃えとともに、すぐに使えてそれだけで完結するプロフェッショナル品質を提供する。さらに、従来欠陥のあった、ウィジェットの動作状態(ホバー、アクティブ、選択)を修正する。
+   - テーマCSSのカスタマイズ性を向上する。これにより、新しい背景画像をデザインし直すことなしに、パディングや色などのスタイル要素によって、デザイナが容易に独自のテーマを作成することを可能とする。
+
+Claroテーマは、LTR(left-to-right: 左から右)、RTL(right-to-left: 右から左)のどちらの文章方向の表示もサポートします。また、Dojo 1.5がサポートするすべてのブラウザをサポートしますが、一部のスタイルはグレースフル デグラデーション（訳注：表現能力の低いブラウザでも能力に応じた見栄えが得られる工夫）になります。例えば、IE6における24ビットPNGや、IE6, IE7, IE8におけるラウンドコーナー(角丸)はサポートされません。
+
+
+Dijitテーマ(Claro, Tundra, Nihilo, Soria)に関する詳細情報および更新情報は `Themes and Theming <http://docs.dojocampus.org/dijit-themes>`_ (英語)を参照してください。
+
+他のテーマからClaroへ切り替える際の注意点
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Claroの.dijitTreeIconクラスはwidthとheightを指定していません。もしツリーフォルダー用のカスタムアイコンを定義(あるいは同様の何かを)している場合は、それらにwidthとheightが指定されていることを確認してください。
+
+また、TabContainerにおいて、アイコンを持たないタブの高さは16px未満になるため、もしアイコンを持つタブと持たないタブが混在する場合は高さが異なってしまいます。そのような場合は次のようにmin-heightを追加するか、
+
+.. code-block :: css
+
+    .dijitTab .tabLabel {
+	min-height: 12px;
+    }
+
+あるいは、アイコンを持たないタブに、サイズが1x16のブランクアイコンを指定します。
+
+ColorPalette
+------------
+
+暗い色の色見本がホバーまたはフォーカスされたときに識別しやすいように、各色見本の周囲に白いボーダーを置くようにスタイルが変更されました。また、フォーカスはホバーと分離されました。
+
+さらに、ColorPaletteはset("value", ...)とget("value")をサポートするようになり、現在選択されている色をその色の周囲の黒いボーダーで示すようになりました。
+エディタの前景色、背景色のプラグインも現在選択中のテキスト(あるいは選択テキストがない場合はテキストカーソル周囲のテキスト)の色を示すようになりました。
+
+Dialog
+------
+
+Dialogウィジェットは、ダイアログの下側にOKやキャンセルといったアクションボタンを配したグレーのバー「アクションバー」をサポートします。ダイアログは以前と同様にして作りますが、次のようにダイアログのコンテンツとボタンを分離して記述します。
+
+.. code-block :: html
+
+	<div dojoType="dijit.Dialog" id="myDialog">
+		<div class="dijitDialogPaneContentArea">
+			...
+		</div>
+
+		<div class="dijitDialogPaneActionBar">
+			<button dojoType="dijit.form.Button" type="submit" id="ok">OK</button>
+			<button dojoType="dijit.form.Button" type="button" onClick="dijit.byId('myDialog').onCancel();"
+					id="cancel">Cancel</button>
+		</div>
+	</div>
+
+
+入力ウィジェット
+----------------
+
+新しいplaceHolder属性
+~~~~~~~~~~~~~~~~~~~~~
+
+HTML5のplaceholder属性(「ヒント」としても知られる)がTextBoxベースのすべてのウィジェットに実装されました。プレースホルダは、ウィジェットが"名前を入力してください"のようなテキストを空の入力フィールド内に見本あるはヒントとしてグレーで表示するものです。テキストはユーザーがフィールドにフォーカスを当てると消えます。
+
+次のように"placeHolder"パラメータをウィジェットに指定して使います。
+
+.. code-block :: javascript
+
+   myTextBox = new dijit.form.TextBox({
+       name: "firstname",
+       value: "" /* no or empty value! */,
+       placeHolder: "type in your name"
+   }, "firstname");
+
+入力ウィジェットの幅と高さの標準化
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+入力ウィジェット(TextBox, ValidationTextBox, ComboBox/FilteringSelect, NumberSpinner)の幅と高さが標準化されました。従来はそれらのウィジェットの幅と高さは数ピクセルずつ異なることがあったため、UIの見た目がよくありませんでした。
+
+Bidiの強化
+----------
+
+アプリケーションは、dir属性によりウィジェットごとにテキストの表示方向を指定できるようになりました。設定可能な値は、"ltr"(left-to-right、ほとんどの言語で使われる)または"rtl"(アラビア語とヘブライ語)です。従来はすべてのウィジェットがページに対して指定された方向と同じ方向でレンダリングされていました。ただし、この属性は次の例のようにウィジェットの作成時にのみ指定可能であることに注意してください。
+
+.. code-block :: javascript
+
+    new dijit.Editor({dir: "rtl"}, srcNodeRef);
+    new dijit.Editor({dir: "ltr"}, srcNodeRef);
+
+
+また、parserが改訂され、DOMノードに対するdir=rtlまたはdir=ltrの設定が(dojoTypeの指定があるかどうかにかかわらず)認識されるようになりました。次の例のように、もしノードにdirが設定されている場合は、そのノード以下に存在するすべてのウィジェットがそのdirの設定に従って作成されます。
+
+.. code-block :: html
+
+
+	<div dir="ltr">
+		<input dojoType="dijit.TextBox">
+		<input dojoType="dijit.TextBox">
+		<input dojoType="dijit.TextBox">
+	</div>
+	<div dir="rtl">
+		<input dojoType="dijit.TextBox">
+		<input dojoType="dijit.TextBox">
+		<input dojoType="dijit.TextBox">
+	</div>
+
+
+
+parserはデフォルトのdirやlangを指定するフラグを取ることもできます。ウィジェットは(個別に指定がない限り)その値を継承します。
+
+.. code-block :: javascript
+
+      dojo.parser.parse({rootNode: ..., inherited: {dir: rtl, lang: "ar-eg"} });
+
+(ただし、一般的に指定の必要はありません。parserは文書のデフォルトの方向と言語を取得して使うためです。)
+
+
+これらの二つの変更により、異なる言語のポートレットが混在するポータルや、ヘブライ語またはアラビア語のページ内で一部だけ英語といったことを可能にします。
+
+TundraとClaroテーマはRTLとLTRの混在するページをサポートします。
+
+内部的にこの機能は、dir=rtlであるウィジェットに対しては、dijitTextBoxのようなウィジェットのベースクラスに加えて、dijitTextBoxRtl(ウィジェットのベースクラス名＋"Rtl")のようなCSSクラスもウィジェットのルートノードに適用することで実現しています。TundraとClaroテーマは、BODYノードに対するdijitRtlクラスではなく、ウィジェットごとのCSSクラスを参照するように修正されています。
+
+最後に、ウィジェット単位でlangを指定することは(以前と同様に)可能ではありますが、dojoで使われているメッセージの翻訳(デフォルトツールチップ、ロード中メッセージ等)は依然としてページにつき一つの言語であることに注意してください。
+
+_CssStateMixin
+--------------
+
+ホバー/アクティブ/フォーカスのステートやセマンティックステート(チェック、選択、使用不可)に応じてCSSクラスをセットするための、ウィジェットに対する新しいmixinクラスです。ほとんどのdijitウィジェットはこのmixinクラスを使用するように書き換えられました。その結果、以前より多くの種類のセレクタ、例えばスライダーのハンドルがホバーされたとかインクリメントボタンが押された等に対応するCSSクラス、が利用できるようになりました。
+
+次のウィジェットに対しては、ホバー、アクティブ(mouse down)、選択(focus)の動作状態が追加されました。
+
+    | dijit.Calendar
+    | dijit.ColorPalette
+    | dijit.Dialog
+    | dijit.Editor
+    | dijit.InlineEditBox
+    | dijit.Menu
+    | dijit.MenuBar
+    | dijit.ProgressBar
+    | dijit.TitlePane
+    | dijit.Toolbar
+    | dijit.Tree
+    | dijit.layout.AccordionContainer
+    | dijit.layout.BorderContainer
+    | dijit.layout.ContentPane
+    | dijit.layout.TabContainer
+    | dojox.grid.EnhancedGrid
+    | dojox.grid.enhancedDataGrid
+
+
+カスタムウィジェットでこのmixinクラスを使用するには、
+
+1. _CssStateMixinをrequireし、ウィジェットにmix-inする。
+
+   .. code-block :: javascript
+
+       dojo.require("dijit._CssStateMixin");
+       ...
+       dojo.declare(myWidget, [ ..., dijit._CssStateMixin], ...
+
+   *すべてのフォームウィジェットは_FormWidgetを通して_CssStateMixinを既に継承していることに注意してください。それらのウィジェットはこのステップを省略できます。*
+
+
+2. baseClassが未設定であれば設定します。 *(フォームウィジェットは既にbaseClassを設定しています)*
+
+   .. code-block :: javascript
+
+       baseClass: "dijitSlider",
+
+3. (もしスライダーのup/downボタンのようなウィジェットのサブノードに対してCSSクラスを設定したい場合は)cssStateNodes属性を設定します。
+
+   .. code-block :: javascript
+
+       cssStateNodes: {
+          incrementButton: "dijitSliderIncrementButton",
+          decrementButton: "dijitSliderDecrementButton",
+          focusNode: "dijitSliderThumb"
+       }
+
+   左側(例：incrementButton)はdojoAttachPointの名前になり、右側("dijitSliderIncrementButton")はノードに適用するCSSクラス名を生成するのに使われます。
+
+上記のステップの後、CSSクラスがスライダーのdomNodeに対して自動的に設定されます(dijitSliderHover, dijitSliderFocused等)。また、指定されたサブノードも同様です(this.incrementButton --> "dijitSliderIncrementButtonActive" CSSクラス等)。
+
+ウィジェットテンプレートで必要となる、ホバー/アクティブ/フォーカスのイベントハンドラコードは生成されませんので注意してください。
+
+
+
+Tree
+----
+
+次を実現するために、「フォーカスノード」と「選択ノード」の概念が分離されました。
+
+1. ツリーは初期状態では選択ノードを持ちません。アプリケーションは、現在の選択ノードを設定するために、set("selectedItem", ...) あるいは set("path", ...)を呼び出す必要があります。ノードをクリックすれば選択されますが、ノード展開アイコン(プラス記号)では選択されません。
+
+2. 矢印キーを使ったツリー内の移動は、(フォーカスは移動しても)選択ノードは変更しません。
+
+
+
+新しいget()/set()と廃止予定のattr()
+-----------------------------------
+
+コードをより明確にするために、Dojo 1.5では、コードによるプロパティアクセスは、以前使われていたattr()メソッド(設定と取得の両方の用途で使われていた)の代わりに、get()/set()パターンを使い始めました。
+
+これにより、Dijitのプロパティの設定の推奨される方法は、従来の次のような書き方から、
+
+.. code-block :: javascript
+
+   widget.attr('property', 'value'); // old way and now deprecated for Dijits
+
+次のような書き方になります。
+
+.. code-block :: javascript
+
+   widget.set('property', 'value'); // new since 1.5
+
+プロパティの取得も同様にして、従来の次のような書き方から、
+
+.. code-block :: javascript
+
+   widget.attr('property'); // old way and now deprecated for Dijits
+
+次のような書き方になります。
+
+.. code-block :: javascript
+
+   widget.get('property'); // new since 1.5
+
+
+=====
+DojoX
+=====
+
+Charting
+--------
+
+チャーティングテーマの主な変更点:
+
+* 領域単位の(space-based)グラデーションのサポート。(訳注：プロット領域、シェイプ領域等)
+* テーマは任意の塗りつぶし(fill)を指定可能。線形グラデーション、円形グラデーションを含む。
+* 統一されたテーマは、プロット、系列、ここのデータの値のレベルでオーバーライド。
+* 散布図(Scatter plot)は、フィールドスタイルのカラーコーディングのグラデーションを実現。
+* 独自のグラデーションやグラデーションに基づくテーマを作るための新しいユーティリティ。
+* 新しい仕組みに基づくまったく新しいテーマ群。
+
+  * Julie by Julie Santilli -- 32もの異なるグラデーションを備えた多目的でクリーンなテーマ
+  * Chris by Christopher Anderson -- 明るく明快なプレゼンテーションですぐ使えるテーマ
+  * Tom by Tom Trenka -- 暗い背景用にデザインされており、ページ内でデータが際立つテーマ
+  * PrimaryColors -- 原色ベースの古いテーマを繊細なグラデーションでリフレッシュ
+  * ThreeD -- PrimaryColorsを拡張し、バーとカラムベースのプロットには3Dシリンダーの見た目を追加、それ以外のプロットへは微妙なシャドウを追加。
+  * Electric by Tom Trenka -- 暗い背景上で、明るいネオンカラーを表示。
+  * Charged by Tom Trenka -- Electricと同じだが、明るい背景用。
+  * Renkoo by Tom Trenka -- 暗い背景用の、ノスタルジックなパステルカラー。
+
+一般的な機能強化:
+
+* DataPresentationのいつくかの機能強化。カスタムツールチップ、凡例のレイアウト/ワードラップオプション、チャートラベルの非表示、レンダリングへのフック等を含む。
+* バーおよびカラムベースのチャートは、値としてオブジェクトをサポート(カスタムのツールチップ、カラー、塗りつぶしを指定可能)
+* エリア、線、マーカーに対するチャーティングのアニメーション(伸長とズーム)
+* すべてのプロットに対して、値の欠落(null)のサポート。
+* 新しい軸のタイプを追加：不可視の軸。(軸がないのと同様に)軸の描画はされないが、軸のジオメトリを指定することにより、プロットの挙動に影響を与えることが可能。
+* プロットと系列の軽量な再配置を追加。
+* イベント関連の強化:
+
+  * 他のプロットがイベントを処理中であることを知らせるためにすべてのイベント受信者(subscriber)に"間接"イベントを送信。これによりUI更新の機会を与える。
+  * プログラム的なイベント: プロットを動的に変更するアクションを起こさせるための、既存のイベント、あるいは独自に作ったイベントの発行。
+
+* DataSeriesの追加: dojo.dataストアへのブリッジ。通常の系列として使用可能であり、すべてのdojo.data APIをサポート。データが更新されるとリアルタイムでチャートを更新する通知機能(notification)を含む。
+* 回転した軸ラベルの追加。
+* 多数のバグ修正。
+
+CSS3
+----
+transformおよびtransform-originプロパティをサポートするためのdojo.styleの新しい拡張。
+
+.. code-block :: javascript
+
+   dojo.require("dojox.html.ext-dojo.style");
+   dojo.style("myNode", "transformOrigin", "0 0");
+   dojo.style("myNode", "transform", "skew(10deg) rotate(20deg");
+
+Internet Explorer 5.5+, Safari 3.1+, Firefox 3.5+, Chrome/Chromium, Opera 10.50+がサポートされています。
+
+DnD
+---
+
+dojo.dnd関連の向上のための新しいサブプロジェクト。次を導入。
+
+* バウンディングボックスを使用したセレクション
+* プログラムによるセレクション / DnDアイテムのセレクション解除
+
+
+Editor
+------
+
+* Smileyプラグイン (1.4にも存在したが動作していませんでした。今は動作します。)
+
+* `dojox.editor.plugins.CollapsibleToolbar <dojox/editor/plugins/CollapsibleToolbar>`_ -- グリッドのヘッダーを変更し、折り畳み可能なツールバーに変換するプラグインです。このプラグインはよくテストされており、dojoがサポートするすべてのブラウザ上で動作することがわかっています。
+
+* `dojox.editor.plugins.Blockquote <dojox/editor/plugins/Blockquote>`_ -- ツールバーに引用(blockquote)ボタンを追加するプラグインです。ブロック内のテキストを<blockquote>タグで囲んだり、<blockquote>タグを外したりします。また、広範囲の選択領域に対しても適用可能で、テキストのブロックやインライン要素のそれぞれをblockquoteで囲みます。このプラグインはよくテストされており、dojoがサポートするすべてのブラウザ上で動作することがわかっています。
+
+* `dojox.editor.plugins.PasteFromWord <dojox/editor/plugins/PasteFromWord>`_ -- ツールバーに'paste from word'アイコンを追加するプラグインです。Microsoft Wordあるいは類似のプログラムの内容をペースト可能なダイアログを開き、ペーストされた入力に対してフィルターを実行し、エディタにとってはやっかいな余計なHTMLを取り除き、きれいなHTMLにします。
+
+* `dojox.editor.plugins.InsertAnchor <dojox/editor/plugins/InsertAnchor>`_ -- ツールバーに'insert anchor'アイコンを追加するプラグインです。アンカー(anchor)は<a>タグの特別な形で、文書内の特定の段落にリンクする場合に使われます。このプラグインは、ページ内のどこがアンカーであるかがわかるように、CSSを使って可視化します。また、ダブルクリックによりアンカーの編集を可能にします。
+
+* `dojox.editor.plugins.FindReplace <dojox/editor/plugins/FindReplace>`_ -- このプラグインは、UXチームからのフィードバックに基づいて、レイアウトとキーボード操作を向上させるための更新がされました。機能的には同じです。
+
+* `dojox.editor.plugins.TextColor <dojox/editor/plugins/TextColor>`_ - dijit.ColorPaletteではなくdojox.widget.ColorPickerを使ってテキスト色および背景色の選択を実装するプラグインです。
+
+* `dojox.editor.plugins.NormalizeStyle <dojox/editor/plugins/NormalizeStyle>`_ -- 共通フォーマットオプション(訳注：太字、イタリック等)に対し、CSSスタイル(<span>タグのstyle属性を使用)またはセマンティック(<b>, <i>等のタグを使用)のどちらかにエディタの内容を双方向に変換するフィルター(前処理および後処理)を追加するUIのない実験的なプラグインです。出力に使うモードは設定可能です。入力に使うモードは、スタイルに関するブラウザのネイティブコマンドがうまく動作するように適切なモードが決定されます。
+
+* `dojox.editor.plugins.StatusBar <dojox/editor/plugins/StatusBar>`_ --  ユーザーがエディタにステータスを表示させることを可能にするエディタ下部のバーを追加するプラグインです。メッセージの表示は、editor.statusBar属性に直接値をセットするか、pub/subを使って行います。また、エディタがリサイズ可能なコンテントペイン内にない場合に使えるようにオプショナルのリサイズハンドルを提供します。
+
+
+Geo
+---
+
+地理関連コードの新しいサブプロジェクト。最初のリリースでは地図ベースのチャートを提供します。サンプルとしてアメリカの州の地図を同梱します。
+
+
+GFX
+---
+
+* VMLレンダラはSVGの線形グラデーションをシミュレートするようになりました。
+* SVGレンダラのオプションとしてSVGWeb(Flash上のSVG)がサポートされます。IE6-IE8をサポートしなければならないがVMLは使いたくない場合に便利です。
+* SVGオペレーションのバッチ処理のサポートにより、大きな絵の描画速度が向上します。
+* 多数のバグが修正されました。
+
+Lang
+----
+
+新しいモジュールを追加: `dojox.lang.async <dojox/lang/async>`_. 非同期オペレーション(dojo.Deferredを返すもの)の順序を調整します。次の調整がサポートされます。
+
+* Sequentially(順次): 直前のオペレーションが成功裏に終了した直後に次のオペレーションを開始します。
+* In parallel(並列): すべてのオペレーションを同時に開始し、すべてが終了するのを待ちます。
+* Competitively(競争): すべてのオペレーションを並列に開始し、最初に終了するオペレーションを待ちます。次に残りのオペレーションは取り消します。
+* Selectively(選択): switch()文をエミュレートします。 --- オペレーションを非同期に実行し、その結果に応じて選択肢の配列の中から次に実行するオペレーションを選択します。
+* Selectively II(選択II): if()文をエミュレートします。 --- オペレーションを非同期に実行し、その結果に応じて二つの選択肢の中からオペレーションを選択し、実行します。
+* Continuously(連続): while()ループをエミュレートします。 --- オペレーションを非同期に実行し、その結果に応じて別のオペレーションを非同期に実行し、ループを繰り返すか、あるいはループを抜けます。
+
+共通の非同期操作(イベント、トピック、タイマー)に対してはアダプタモジュールが提供されます。
+
+このモジュールを使うことで、高度で複雑な非同期オペレーションを、シンプルな構成要素を使って実現することが可能になります。
+
+Layout
+------
+
+GridContainerは `MDnD`_ を使って書き直され、GridContainerLiteが導入されました。GridContainerの使い方は、acceptTypes属性の変更のみで、概ねこれまでと同じです。従来のacceptTypes属性は、例えば'dojox.widget.Portlet,dijit.layout.ContentPane'のようなコンマ区切りのリストを取りました。それは任意の文字列を取るように変更されました。その文字列は、子ウィジェットの'dndType'までマッチします。例：GridContainerにおいてacceptTypes="Portlet,SomeCustomWidget"、子ウィジェットにおいてdndType="Portlet" or dndType="SomeCustomWidget"
+
+
+MDnD
+----
+
+dojox.mdndは、dojo.dndと似たインターフェイスを使ってMoveable DnDを実現します。アバターを使うことなしにコンテナ間でノードの移動ができます。この新しい仕組みは、パネルベースのユーザーインターフェイスを実現する場合に特に便利です。
+
+
+Mobile
+------
+
+dojox.mobileはモバイル向けに特別にデザインされた軽量ウィジェットの集まりです。iPhoneとAndroid用のテーマが提供されます。ボタン、スイッチ、リスト、タブコンテナ等がサポートされています。
+
+
+====
+Util
+====
+
+ビルドシステム/ビルドスクリプト
+-------------------------------
+
+* copyTestsオプションの初期値がtrueからfalseに変更になりました。この変更は、ビルド結果にテストファイルをコピーする可能性を減らし、結果として余計なファイルや無用のセキュリティ上の懸案を減らすためになされました。
+* cldrスクリプトを更新し、CLDR version 1.8を使うようになりました。(詳細はdojo.cldrを参照)
+
+
+================
+マイグレーション
+================
+
+通例どおり、dojoは前のバージョン1.xとAPIレベルで互換性があります。しかしながら、CSSその他いくつか変更があります。
+
+
+get/set
+-------
+attr()はget()とset()に取って代わり、廃止の方向です。古いattr()はまだサポートされているため(廃止予定の警告は出ます)、古いコードは引き続き動作するはずです。
+
+しかしながら、もしあなたのクラスが独自のget()/set()メソッドを定義している場合は、それらは_Widgetあるいはdojo._Statefulの派生クラスの持つget()/set()と競合してしまうでしょう。
+
+また、attr()へ接続するdojo.connect()呼び出しは、set()への接続に変更すべきです。
+
+dijit.popup
+-----------
+
+Dijit.popupはショートカットしてはいけません。次のコードは動作します。
+
+.. code-block :: javascript
+
+   dijit.popup.open({...});
+
+しかし、次のコードは動作しません。
+
+.. code-block :: javascript
+
+   var open = dijit.popup.open;
+   open({...});
+
+
+_Container.getChildren()
+------------------------
+次のようなコードは、
+
+.. code-block :: javascript
+
+   myWidget.getChildren().forEach(...);
+
+次のように書き換える必要があります。
+
+.. code-block :: javascript
+
+   dojo.forEach(myWidget.getChildren(), ...);
+
+
+getChildren()は、これまで常にドキュメントでは単純な普通の配列を返すとされてきましたが、バージョン1.4では実際にはforEach()やfilter()といったメソッドを持つ配列が返されていたため、ユーザーコードの中にはそれに依存した書き方をしている可能性があります。
+
+
+フォームウィジェット
+--------------------
+もし_FormWidgetを拡張するカスタムウィジェットを持っていて、テンプレートで${nameAttrSetting}を参照している場合は、${!nameAttrSetting}への参照に変更する必要があります。これは、特殊文字のエスケープの問題に対処するためです。
+
+
+TextBox
+-------
+TextBoxテンプレートは、<input>が<div>に囲まれているValidationTextBoxと同様の構造になるよう変更されました。
+
+id=fooのTextBoxに対し、<input>に対してスタイルを適用したい場合は、以前のように#fooに対してルールを記述します。
+
+.. code-block :: css
+
+    #foo { font: ... }
+
+外側のノードに対してスタイルを適用したい場合は、#widget_fooに対してルールを記述します。
+
+.. code-block :: css
+
+    #widget_foo { margin: 2em; }
+
+
+詳細は `#11133 <http://bugs.dojotoolkit.org/ticket/11133>`_ を参照してください。(英語)
+
+Dijit CSS
+---------
+
+もしdijitウィジェット用のテンプレートを修正したものを持っている場合、おそらく削除すべきonmouseenter/onmouseleave/onfocus/onblurハンドラがあることでしょう。特に、_FormWidgetから_onMouse()が削除されているため、カスタムテンプレートからその呼び出しがある場合は削除する必要があります。
+
+さらに、もしカスタムCSSルールを持っている場合は、ネストされたボタンを持つフォームウィジェットのクラスにいつくかの変更があります。詳細は http://bugs.dojotoolkit.org/changeset/21117 (英語)
+
+あなたのカスタムCSSルールのクラス名を更新する場合は、util/migrationの中にあるdijitCss14to15.sedスクリプトを実行してください。   (Windowsの場合はcygwinまたは何かのunixユーティリティが必要です。):
+
+.. code-block:: sh
+
+    sed -f dojoPath/util/migration/dijitCss14to15.sed -i .bak $(find myCssDirectoryPath -name '*.css' -print)
+
+
+あるいは、次のテーブルに従って手作業で更新することもできます。
+
+Spinner:
+
+====================================================== =============================================        ===========
+Old                                                    New                                                  Description
+====================================================== =============================================        ===========
+.dijitSpinnerUpArrowHover .dijitUpArrowButton          .dijitSpinner .dijitUpArrowButtonHover
+.dijitSpinnerUpArrowActive .dijitUpArrowButton         .dijitSpinner .dijitUpArrowButtonActive
+.dijitSpinnerDownArrowHover .dijitDownArrowButton      .dijitSpinner .dijitDownArrowButtonHover
+.dijitSpinnerDownArrowActive .dijitDownArrowButton     .dijitSpinner .dijitDownArrowButtonActive
+====================================================== =============================================        ===========
+
+ComboButton:
+
+====================================================== =============================================        ===========
+Old                                                    New                                                  Description
+====================================================== =============================================        ===========
+.dijitComboButtonHover .dijitButtonContents            .dijitComboButton .dijitButtonContentsHover
+.dijitComboButtonActive .dijitButtonContents           .dijitComboButton .dijitButtonContentsActive
+.dijitComboButtonDownArrowHover .dijitDownArrowButton  .dijitComboButton .dijitDownArrowButtonHover
+.dijitComboButtonDownArrowActive .dijitDownArrowButton .dijitComboButton .dijitDownArrowButtonActive
+====================================================== =============================================        ===========
+
+
+その他、次のように、名前を標準化するためにCSSセレクタへの変更が行われました。
+
+Accordion:
+
+====================================================== =============================================        ===========
+Old                                                    New                                                  Description
+====================================================== =============================================        ===========
+.dijitAccordionFocused                                 .dijitAccordionTitleFocused                          The accordion title is focused, not the pane contents
+.dijitAccordionTitle-hover                             .dijitAccordionTitleHover
+.dijitAccordionTitle-selected                          .dijitAccordionTitleSelected
+====================================================== =============================================        ===========
+
+さらに、TitlePaneと同じようにタイトルとコンテンツを保持するdijitInnerAccordionContainer <div>によって、各ペインが取り囲まれるように、アコーディオンのレイアウトが変更されました。もしAccordionContainerをサブクラスしたり、AccordionContainerの内部実装に依存したことを行っている場合は、コードを修正する必要があるかもしれません。
+
+TabContainer:
+
+====================================================== =============================================        ===========
+Old                                                    New                                                  Description
+====================================================== =============================================        ===========
+.dijitTab .closeButton                                 .dijitTabCloseButton
+.dijitTab .closeButton-hover                           .dijitTabCloseButtonHover                            close button for individual tab
+.dijitTabBtnDisabled                                   .dijitTabDisabled                                    left and right scroll buttons on tab strip
+.dijitTab .closeImage                                  .dijitTabCloseIcon                                   icon inside of close button
+.dijitTab .closeText                                   .dijitTabCloseText                                   text inside of close button, for a11y
+.tabStripButton img                                    .dijitTabStripIcon                                   class for tabstrip's scroll-left, scroll-right, and menu icons
+.tabStripMenuButton img                                .dijitTabStripMenuIcon                               icon to show menu (listing all tabs)
+.tabStripSlideButtonLeft img                           .dijitTabStripSlideLeftIcon                          icon to scroll tabs to left
+.tabStripSlideButtonRight img                          .dijitTabStripSlideRightIcon                         icon to scroll tabs to right
+====================================================== =============================================        ===========
+
+Dialog:
+
+====================================================== =============================================        ===========
+Old                                                    New                                                  Description
+====================================================== =============================================        ===========
+.dijitDialogCloseIcon-hover                            .dijitDialogCloseIconHover
+====================================================== =============================================        ===========
+
+Tree:
+
+====================================================== =============================================        ===========
+Old                                                    New                                                  Description
+====================================================== =============================================        ===========
+.dijitTreeNodeHover                                    .dijitTreeRowHover                                   on the TreeNode.rowNode domNode
+.dijitTreeNodeSelected                                 .dijitTreeRowSelected
+====================================================== =============================================        ===========
+
+
+TitlePane:
+
+====================================================== =============================================        ===========
+Old                                                    New                                                  Description
+====================================================== =============================================        ===========
+.dijitTitlePaneTitle-hover                             .dijitTitlePaneTitleHover
+====================================================== =============================================        ===========
+
+
+InlineEditBox:
+
+====================================================== =============================================        ===========
+Old                                                    New                                                  Description
+====================================================== =============================================        ===========
+.dijitInlineEditBoxDisplayMode-hover                   .dijitInlineEditBoxDisplayModeHover
+.dijitInlineEditBoxDisplayMode-disabled                .dijitInlineEditBoxDisplayModeDisabled               equivalent to a plain <div> or <span>, clicking has no effect
+====================================================== =============================================        ===========
+
+Editor:
+
+====================================================== =============================================        ===========
+Old                                                    New                                                  Description
+====================================================== =============================================        ===========
+.RichTextEditable                                      .dijitEditor                                         editor's root node
+====================================================== =============================================        ===========
