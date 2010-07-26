@@ -24,7 +24,7 @@ TODO: introduce the component/class/method
 Features
 ========
 
-* `Individual graphics objects <dojox/gfx/graphicsObjects>`_
+* Individual graphics objects:
 
   * `Surface <dojox/gfx/surface>`_
   * `Group <dojox/gfx/group>`_
@@ -38,7 +38,7 @@ Features
   * `Text <dojox/gfx/text>`_
   * `TextPath <dojox/gfx/textPath>`_
 
-* Shape Properties
+* Shape Properties:
 
   * Colors
   * Strokes
