@@ -267,7 +267,7 @@ You can also load dialog content from another page by setting HREF attribute for
 
   .. cv:: html
 
-    <div id="external" dojoType="dijit.Dialog" title="My external dialog" href="{{dataUrl}}dojo/resources/LICENSE" style="width: 400px; height: 200px;">
+    <div id="external" dojoType="dijit.Dialog" title="My external dialog" href="{{dataUrl}}dojo/resources/LICENSE" style="overflow:auto; width: 400px; height: 200px;">
     </div>
 
     <p>When pressing this button the dialog will popup loading the dialog content using an XHR call.</p>
