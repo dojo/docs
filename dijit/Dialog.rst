@@ -254,6 +254,7 @@ External Dialog content using HREF attribute
 You can also load dialog content from another page by setting HREF attribute for the widget. Note that the Dialog doesn't execute script tags inline external content. However, it parses the page for widgets, so you can add functionality to widgets by connecting into widget extension points using declarative markup (DojoML; e.g. ``<script type="dojo/method" event="onClick">``). Other options for executing scripts are `iFrame <http://www.dojotoolkit.com/forum/dijit-dijit-0-9/dijit-support/loading-external-url-dijit-dialog>`_ and `dojox.layout.ContentPane <http://www.dojotoolkit.org/forum/dijit-dijit-0-9/dijit-support/javascript-ignored-when-loading-dijit-dialog-url>`_.
 
 .. cv-compound::
+  :height:500
 
   .. cv:: javascript
 
@@ -264,7 +265,7 @@ You can also load dialog content from another page by setting HREF attribute for
 
   .. cv:: html
 
-    <div id="external" dojoType="dijit.Dialog" title="My external dialog" href="{{dataUrl}}dojo/resources/LICENSE" style="width: 500px; height: 400px;">
+    <div id="external" dojoType="dijit.Dialog" title="My external dialog" href="{{dataUrl}}dojo/resources/LICENSE" style="width: 400px; height: 200px;">
     </div>
 
     <p>When pressing this button the dialog will popup loading the dialog content using an XHR call.</p>
