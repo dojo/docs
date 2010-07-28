@@ -36,10 +36,10 @@ And now when the xhrGet call runs the load function, it will run in the appropri
 Basic Example
 -------------
 
+Let's look at a quick example:
+
 .. code-example::
   :type: inline
-
-  Let's look at a quick example:
 
   .. javascript::
     
@@ -53,15 +53,15 @@ Basic Example
       func();
     </script>
 
-  When we open up firebug, we should get "bar" printed. That's because the scope we provided in dojo.hitch was 'myObj', so inside the function, 'this' refers to 'myObj'.
+When we open up firebug, we should get "bar" printed. That's because the scope we provided in dojo.hitch was 'myObj', so inside the function, 'this' refers to 'myObj'.
 
 Using Methods in the Scope
 --------------------------
 
+Let's say I want to call a method in a given scope. I could do:
+
 .. code-example::
   :type: inline
-
-  Let's say I want to call a method in a given scope. I could do:
 
   .. javascript::
 
@@ -76,7 +76,10 @@ Using Methods in the Scope
       func();
     </script>
   
-  But that is too much typing. If there's a method that you want to use that's already in the scope, you can just provide the method's name as the second argument.
+But that is too much typing. If there's a method that you want to use that's already in the scope, you can just provide the method's name as the second argument:
+
+.. code-example::
+  :type: inline
 
   .. javascript::
 
@@ -91,15 +94,15 @@ Using Methods in the Scope
       func();
     </script>
 
-  firebug should output "bar".
+Firebug should output "bar".
 
 Providing Arguments
 -------------------
 
+You can also provide arguments to the function you're calling. Here's an example:
+
 .. code-example::
   :type: inline
-
-  You can also provide arguments to the function you're calling. Here's an example:
 
   .. javascript::
 
@@ -114,15 +117,16 @@ Providing Arguments
       func();
     </script>
   
-  The output from firebug should be "baz bar". Any arguments provided after the first two will be passed to the function.
+The output from firebug should be "baz bar". Any arguments provided after the first two will be passed to the function.
+
 
 Real-World Examples
 -------------------
 
+Let's say I want to stop right clicking on my page. This is a one-liner with dojo.hitch.
+
 .. code-example::
   :type: inline
-
-  Let's say I want to stop right clicking on my page. This is a one-liner with dojo.hitch.
 
   .. javascript::
 
@@ -130,10 +134,10 @@ Real-World Examples
       document.onconextmenu = dojo.hitch(dojo, "stopEvent");
     </script>
 
+Ok, so another issue is, if I want to pass a function in dojo.xhrGet, and it's in an object, I can't use 'this' anymore in that function.
+
 .. code-example::
   :type: inline
-
-  Ok, so another issue is, if I want to pass a function in dojo.xhrGet, and it's in an object, I can't use 'this' anymore in that function.
 
   .. javascript::
 
@@ -150,7 +154,7 @@ Real-World Examples
       });
     </script>
 
-  The above example won't work. If we want to access this.foo, we need to have 'method' called inside of 'myObj'. Giving myObj.method to dojo.xhrGet only passes the function. You can use dojo.hitch to get around this:
+The above example won't work. If we want to access this.foo, we need to have 'method' called inside of 'myObj'. Giving myObj.method to dojo.xhrGet only passes the function. You can use dojo.hitch to get around this:
 
 .. code-example::
   :type: inline
