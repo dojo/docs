@@ -36,11 +36,11 @@ And now when the xhrGet call runs the load function, it will run in the appropri
 Basic Example
 -------------
 
+Let's look at a quick example:
+
 .. code-example::
   :type: inline
-
-  Let's look at a quick example:
-
+ 
   .. javascript::
 
     <script type="text/javascript">
@@ -53,7 +53,7 @@ Basic Example
       func();
     </script>
 
-  When we open up firebug, we should get "bar" printed. That's because the scope we provided in dojo.hitch was 'myObj', so inside the function, 'this' refers to 'myObj'.
+When we open up firebug, we should get "bar" printed. That's because the scope we provided in dojo.hitch was 'myObj', so inside the function, 'this' refers to 'myObj'.
 
 Using Methods in the Scope
 --------------------------
