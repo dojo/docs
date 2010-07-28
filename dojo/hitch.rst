@@ -42,6 +42,8 @@ Let's look at a quick example:
   :type: inline
   :toolbar: none
 
+  test
+
   .. javascript::
 
     <script type="text/javascript">
