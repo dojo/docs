@@ -40,6 +40,7 @@ Let's look at a quick example:
 
 .. code-example::
   :type: inline
+  :toolbar: none
 
   .. javascript::
 
@@ -62,6 +63,7 @@ Let's say I want to call a method in a given scope. I could do:
 
 .. code-example::
   :type: inline
+  :toolbar: none
 
   .. javascript::
 
@@ -75,11 +77,12 @@ Let's say I want to call a method in a given scope. I could do:
       var func = dojo.hitch(myObj, myObj.method);
       func();
     </script>
-  
+
 But that is too much typing. If there's a method that you want to use that's already in the scope, you can just provide the method's name as the second argument:
 
 .. code-example::
   :type: inline
+  :toolbar: none
 
   .. javascript::
 
@@ -103,6 +106,7 @@ You can also provide arguments to the function you're calling. Here's an example
 
 .. code-example::
   :type: inline
+  :toolbar: none
 
   .. javascript::
 
@@ -116,7 +120,7 @@ You can also provide arguments to the function you're calling. Here's an example
       var func = dojo.hitch(myObj, "method", "baz");
       func();
     </script>
-  
+
 The output from firebug should be "baz bar". Any arguments provided after the first two will be passed to the function.
 
 
@@ -127,6 +131,7 @@ Let's say I want to stop right clicking on my page. This is a one-liner with doj
 
 .. code-example::
   :type: inline
+  :toolbar: none
 
   .. javascript::
 
@@ -138,6 +143,7 @@ Ok, so another issue is, if I want to pass a function in dojo.xhrGet, and it's i
 
 .. code-example::
   :type: inline
+  :toolbar: none
 
   .. javascript::
 
@@ -158,6 +164,7 @@ The above example won't work. If we want to access this.foo, we need to have 'me
 
 .. code-example::
   :type: inline
+  :toolbar: none
 
   .. javascript::
 
