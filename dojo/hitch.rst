@@ -42,7 +42,7 @@ Let's look at a quick example:
   :type: inline
 
   .. javascript::
-    
+
     <script type="text/javascript">
       var myObj = {
         foo: "bar"
