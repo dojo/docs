@@ -130,18 +130,15 @@ In this example, the FilteringSelect has been set to display the abbreviations f
     <script type="text/javascript">
         dojo.require("dijit.form.FilteringSelect");
         dojo.require("dojo.data.ItemFileReadStore");
-        dojo.addOnLoad(function(){
-          var stateStore = new dojo.data.ItemFileReadStore({
-              url: "{{dataUrl}}/dijit/tests/_data/states.json"
-          });
-          dijit.byId("fs").store = stateStore;
-        });
     </script>
 
   .. cv:: html
 
-    <!--stateStore definition omitted; see above examples-->
+    <div dojoType="dojo.data.ItemFileReadStore" 
+        jsId="stateStore"
+        url="{{dataUrl}}/dijit/tests/_data/states.json"></div>
     <input dojoType="dijit.form.FilteringSelect"
+        store="stateStore"
         value="KY"
         id="fs"
         searchAttr="abbreviation"
@@ -485,20 +482,16 @@ In this example, the FilteringSelect takes a labelFunc attribute pointing to a f
 		label = label.toLowerCase();
 		return label;
 	}
-        dojo.addOnLoad(function(){
-          var stateStore = new dojo.data.ItemFileReadStore({
-              url: "{{dataUrl}}/dijit/tests/_data/states.json"
-          });
-          dijit.byId("fs").store = stateStore;
-        });
-
     </script>
 
   .. cv:: html
 
-    <!--stateStore definition omitted; see above examples-->
+    <div dojoType="dojo.data.ItemFileReadStore" 
+        jsId="stateStore"
+        url="{{dataUrl}}/dijit/tests/_data/states.json"></div>
     <input dojoType="dijit.form.FilteringSelect"
         id="fs"
+        store="stateStore"
         value="KY"
         searchAttr="name"
         name="state"
