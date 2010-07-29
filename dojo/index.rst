@@ -307,6 +307,9 @@ Events
 
   Stop an event's bubbling and propagation.
 
+* `dojo.hash <dojo/hash>`_
+ 
+  Normalized onhashchange module
 
 Document Lifecycle
 ------------------
