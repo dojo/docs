@@ -307,9 +307,6 @@ Events
 
   Stop an event's bubbling and propagation.
 
-* `dojo.hash <dojo/hash>`_
- 
-  Normalized onhashchange module
 
 Document Lifecycle
 ------------------
@@ -583,6 +580,11 @@ Dojo Core
 * `dojo.gears <dojo/gears>`_
 
   Google Gears
+
+* `dojo.hash <dojo/hash>`_
+ 
+  Normalized onhashchange module
+
 
 * `dojo.html <dojo/html>`_
 
