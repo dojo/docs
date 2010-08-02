@@ -136,7 +136,7 @@ Now lets use dojo.forEach with a list of dom nodes we retrieve using dojo.query.
 
     </ul>
 
-To break the forEach-Looop you should use dojo.some
+To break the forEach-Loop you should use dojo.some
 
 .. cv-compound::
 
