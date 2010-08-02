@@ -136,6 +136,47 @@ Now lets use dojo.forEach with a list of dom nodes we retrieve using dojo.query.
 
     </ul>
 
+To break the forEach-Looop you should use dojo.some
+
+.. cv-compound::
+
+  .. cv :: javascript
+
+    <script type="text/javascript">
+	dojo.require("dijit.form.Button");
+
+	function arrayLoopTest() {
+		var myArray = [0,1,2,3,4,5,6,7,8,9];
+		var count;
+		
+		//lets iterate ALL entrys of myArray
+		count = 0;
+		dojo.forEach(myArray, function(entry){
+			count++;
+		});
+		
+		alert("iterated "+count+" entrys (dojo.forEach)"); //will show "iterated 10 entrys"
+		
+		//lets only iterate the first 4 entrys of myArray
+		count = 0;
+		dojo.some(myArray, function(entry){
+
+			if(count >= 4)
+			{
+				return false;
+			}
+			
+			count++;
+		});
+		
+		alert("iterated "+count+" entrys (dojo.some)"); //will show "iterated 4 entrys"
+	}
+    </script>
+
+  .. cv :: html
+
+    <button dojoType="dijit.form.Button" onClick="arrayLoopTest()" type="button">Start Testloops</button>
+
 
 ===========
 dojo.filter
