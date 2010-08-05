@@ -30,7 +30,7 @@ Parameter        Type           Description
 ===============  =============  ======================================================================
 required                        Whether the field is required or not. false by default.
 promptMessage                   Tooltip text that appears when the text box is empty and on focus. Null by default.
-invalidMessage                  Tooltip text that appears when the content of the text box is invalid. Null by default. 
+invalidMessage                  Tooltip text that appears when the content of the text box is invalid. 
 constraints                     TBC.
 regExp                          Regular expression pattern to be used for validation. If this is used, do not use regExpGen.
 regExpGen                       TBC. If this is used, do not use regExp.
