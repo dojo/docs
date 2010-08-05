@@ -41,7 +41,7 @@ For a quick list of the features of D.O.H. see below:
 * Asynchronous test support (such as testing functions that ultimately use XHR)
 * A simple browser-based graphical front end and runner file.
 * Standard Unit Test Support (assertTrue, assertFalse, assertEqual, timeouts, etcera)
-* Performance tests with basic statistical computations. (As of Dojo 1.4)
+* Performance tests with basic statistical computations.
 * Java Applet (DOH Robot), for simulating user interaction to test browser input events.
 * If present, will use the Dojo Module Loader to load test files.
 * The ability to load separate HTML pages into an iframe, where the iframe contains a DOH instance and register tests.
@@ -129,9 +129,12 @@ Notes on Registering Tests
 
 * Names of functions or of test fixtures must be unique per test group.  D.O.H. records results by using the name as a hash key on the results objects.
 
------------------------------------
-Performance Tests (New to Dojo 1.4)
------------------------------------
+------------------
+Performance Tests 
+------------------
+
+(Dojo 1.4 and higher)
+
 Unit tests are excellent for testing code behavior and verifying the code works as expected across browsers.  But it's not always what you want to do.  There are times where code may work across browsers, but the code doesn't work fast on all browsers.  It would be great if there was a way to  do performance analysis of a function instead of just doing true/false unit test style testing
 
 The great news is that as of Dojo 1.4, D.O.H. has been updated to understand a different type of test fixture (or test registration), the performance test.  Tests registered in this manner work a little differently.  Instead of a single execution of 'runTest' or of the test function,  it will execute that test function many times and then calculate the average cost for a single function run.  This is powerful in determining the general function performance across browsers and identify implementations that underperform on various browsers.
@@ -317,8 +320,11 @@ Test fixtures can also do asynchronous tests.  All that has to occur for the D.O
   }
 
 
-Performance Test Fixture (setup, standalone, synchronous test) (New to dojo 1.4)
---------------------------------------------------------------------------------
+Performance Test Fixture (setup, standalone, synchronous test)
+--------------------------------------------------------------
+
+(Dojo 1.4 and higher)
+
 Performance test fixtures are just like a regular test fixture, except that it has some extra options developers make use of.  Specifically, it uses 'testType' to mark it as a "perf" test, which instructs the D.O.H. runner to treat the tests as performance and use the calibrate and execute test runner.  It also allows users to define how long a performance test should run per trial (We recommend 50ms or more to avoid JS timing issues), how many trials to run, and how long to delay between each trial to give GC time to the browser.
 
 .. code-block :: javascript
@@ -341,8 +347,11 @@ Performance test fixtures are just like a regular test fixture, except that it h
     }
   }
 
-Performance Test Fixture (setup, standalone, asynchronous test) (New to dojo 1.4)
----------------------------------------------------------------------------------
+Performance Test Fixture (setup, standalone, asynchronous test)
+---------------------------------------------------------------
+
+(Dojo 1.4 and higher)
+
 Async performance test fixtures are just like synchronous performance test fixtures.  The only difference is that these return doh.Deferreds to tell the runner framework to treat the test as async.  Note:  Performance profiling asynchronous operations will not always provide useful infomation.  By the nature of being async means its performance profile will likely vary considerably.  The below example demonstrates an async performance fixture through the use of setTimeout.
 
 .. code-block :: javascript
