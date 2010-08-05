@@ -156,6 +156,7 @@ A list of individuals who have signed Dojo CLAs:
 * Garfield, Justin 
 * Garner, Sean 
 * Garrioch, Robb N. 
+* Ge, David
 * Gerber, Achim 
 * Giammarchi, Andrea 
 * Gielczynski, Miriam 
@@ -172,6 +173,7 @@ A list of individuals who have signed Dojo CLAs:
 * Greenberg, Jeffrey 
 * Grimm, Steven 
 * Groth, Ryan 
+* Guenther, Stephan
 * Guillen, Revin 
 * Gupta, Aman 
 * Gwyn, Philip 
@@ -577,7 +579,8 @@ A list of corporations or organizations with a CLA on file:
 * Renkoo 
 * RS KLAN 
 * RusSte, Inc. 
-* Sinergis 
+* Sinergis
+* SITA  
 * SitePen, Inc. 
 * SnapLogic, Inc. 
 * Spider Strategies 
