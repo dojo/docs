@@ -173,7 +173,6 @@ A list of individuals who have signed Dojo CLAs:
 * Greenberg, Jeffrey 
 * Grimm, Steven 
 * Groth, Ryan 
-* Guenther, Stephan
 * Guillen, Revin 
 * Gupta, Aman 
 * Gwyn, Philip 
@@ -457,6 +456,7 @@ A list of individuals who have signed Dojo CLAs:
 * Steffensen, Gregory 
 * Stepanoski, Mauro Alberto
 * Stojic, Ivan 
+* Stott, Nathan Rains
 * Sulliman, Hani 
 * Sumilang, Richard 
 * Svensson, Peter 
