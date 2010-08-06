@@ -21,6 +21,14 @@ The following browsers are supported. If a browser is not supported, it still ma
 Dojo Core
 =========
 
+Dojo Object Store
+-----------------
+New API, based on the W3C IndexedDB's object store API, and intended to
+provide a next generation, simplified successor to Dojo Data and Dojo
+Storage. This is based on discussions on the dojo-dev mailing list:
+http://thread.gmane.org/gmane.comp.web.dojo.devel/12314/focus=12316.
+And the wiki page: http://docs.dojocampus.org/dojo/store.
+
 NodeList
 --------
 closest(), orphan(), and filter() enhanced to work on any selector rather than just simple selectors.
