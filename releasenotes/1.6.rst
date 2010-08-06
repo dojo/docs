@@ -18,6 +18,20 @@ The following browsers are supported. If a browser is not supported, it still ma
   * Opera 10.50 and later (Dojo core only)
 
 =========
+Dojo Base
+=========
+
+  * changes to `djConfig`:  The global djConfig object used to define runtime configuration options has been **deprecated**. Use {{{var dojoConfig = ... }}}. `djConfig` will be unsupported in 2.0. **additionally**, the custom attribute used when placed on the {{dojo.js}} script element has been changed to the standard HTML attribute `data-dojo-config`.  eg:
+
+    .. code-block :: html
+
+        <script src="dojo/dojo.js" data-dojo-config="parseOnLoad:true"></script>
+
+    .. code-block :: javascript
+ 
+        var dojoConfig = { parseOnLoad:true }
+
+=========
 Dojo Core
 =========
 
