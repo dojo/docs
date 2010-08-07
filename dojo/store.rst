@@ -3,11 +3,9 @@
 dojo.store
 ==========
 
-`PROPOSAL`
-
 :Authors: Kris Zyp
 :Project owner: Kris Zyp
-:Available: coming with V1.6
+:Available: 1.6.0
 
 .. contents::
   :depth: 2
