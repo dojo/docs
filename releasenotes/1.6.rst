@@ -50,10 +50,10 @@ NodeList
 --------
 closest(), orphan(), and filter() enhanced to work on any selector rather than just simple selectors.
 
-Parser
-------
+Parser deprecations
+-------------------
 
-  * See `#11490 <http://bugs.dojotoolkit.org/ticket/11490>`_ for the full discussion and change set 
+See `ticket #11490 <http://bugs.dojotoolkit.org/ticket/11490>`_ for the full discussion and change set 
 
   * The `jsId` attribute has been **deprecated**, and will be unsupported in 2.0. Replace all `jsId` references with `data-dojo-id`, the behavior is identical.
 
