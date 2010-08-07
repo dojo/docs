@@ -84,6 +84,16 @@ See `ticket #11490 <http://bugs.dojotoolkit.org/ticket/11490>`_ for the full dis
 Dijit
 =====
 
+InlineEditBox
+-------------
+
+Can accept an object literal or string for editor and editorWrapper attributes.
+
+_DateTimeTextBox
+----------------
+
+Can accept a string value of a date to be parsed in addition to the previous behavior of only accepting a literal Date object.
+
 ProgressBar
 -----------
 - new "label" parameter for customizing the label displayed (overriding the "12%" type default label), or for using a label with an indeterminate progress bar.    Set the label via standard label="...." markup or myProgressBar.set("label", "Loading mail...") API.
