@@ -41,11 +41,40 @@ New API, based on the W3C IndexedDB's object store API, and intended to
 provide a next generation, simplified successor to Dojo Data and Dojo
 Storage. This is based on discussions on the dojo-dev mailing list:
 http://thread.gmane.org/gmane.comp.web.dojo.devel/12314/focus=12316.
-And the wiki page: http://docs.dojocampus.org/dojo/store.
+And the `documentation <dojo/store>`.
 
 NodeList
 --------
 closest(), orphan(), and filter() enhanced to work on any selector rather than just simple selectors.
+
+Parser
+------
+
+  * See `#11490 <http://bugs.dojotoolkit.org/ticket/11490>`_ for the full discussion and change set 
+
+  * The `jsId` attribute has been **deprecated**, and will be unsupported in 2.0. Replace all `jsId` references with `data-dojo-id`, the behavior is identical.
+
+  .. code-block :: html
+ 
+     <div data-dojo-id="bar" data-dojo-type="some.Thinger">I am exported to window.bar by reference</div>
+
+  * The `dojoType` attribute has been **deprecated**, and will be unsupported in 2.0. Replace all occurrences of `dojoType` with `data-dojo-type`, as the behavior is mostly identical, with the following caveats:
+
+    * when using `data-dojo-type`, **all** widget properties **must** be stashed on a single attribute: `data-dojo-props` eg:
+
+    .. code-block :: html
+ 
+      <div data-dojo-type="dijit.form.Button" data-dojo-props="disabled:true, onClick: someNamedFunction">Click</div>
+
+    If degradation is a concern, duplicate native attributes in `data-dojo-props` and on the node reference, as widget parameters are **no longer read from the node attributes individually**. eg:
+
+    .. code-block :: html
+
+       <input data-dojo-type="dijit.form.CheckBox" data-dojo-props="checked:true" checked="checked" type="checkbox'>
+    
+  * The `event` and `args` attributes for dojo/method and dojo/connect scripts inside widgets are **deprecated**. Use `data-dojo-event` and `data-dojo-args` respectively.
+
+  * Existing behavior has been preserved until 2.0, there should be no backward compatibility issues between 1.6 and previous 1.x Dojo versions.
 
 
 =====
