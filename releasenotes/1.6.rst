@@ -41,7 +41,7 @@ New API, based on the W3C IndexedDB's object store API, and intended to
 provide a next generation, simplified successor to Dojo Data and Dojo
 Storage. This is based on discussions on the dojo-dev mailing list:
 http://thread.gmane.org/gmane.comp.web.dojo.devel/12314/focus=12316.
-And the `documentation <dojo/store>`.
+And the `documentation <dojo/store>`_.
 
 NodeList
 --------
