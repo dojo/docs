@@ -114,13 +114,6 @@ DojoC is an external svn repository used by DojoCampus for a variety of widgets,
 * `More about DojoC <dojoc/index>`_
 
 
-================
-Dojo Styleguides
-================
-
-* `Styleguides <styleguides/index>`_
-
-
 =========
 Utilities
 =========
@@ -134,7 +127,8 @@ Dojo has a number of utility scripts, including the `Dojo Build System <build/in
 Miscellaneous
 =============
 
-`Multiple Versions of Dojo on a Page <multiversion/index>`_
----------------------------------------------------------------
+* `Multiple Versions of Dojo on a Page <multiversion/index>`_ - Dojo has special configuration and build options to allow you to use different versions of Dojo on the same page.
 
-Dojo has special configuration and build options to allow you to use different versions of Dojo on the same page.
+* `Developer Notes <developer/index>`_
+* `Styleguides <styleguides/index>`_
+
