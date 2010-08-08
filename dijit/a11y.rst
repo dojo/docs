@@ -1,3 +1,4 @@
+#REDIRECT dijit/a11y/index
 #FORMAT dojo_rst
 
 Dijit Accessibility
