@@ -1,6 +1,6 @@
 #format dojo_rst
 
-この文書は http://docs.dojocampus.org/releasenotes/1.5 の翻訳版です。もし翻訳にエラーがあったり、オリジナルの文書が更新されている場合は、英語で書かれたオリジナル文書の最新版を信頼してください。
+この文書は `1.5 <releasenotes/1.5>`_ の翻訳版です。もし翻訳にエラーがあったり、オリジナルの文書が更新されている場合は、英語で書かれたオリジナル文書の最新版を信頼してください。
 
 Dojo 1.5 リリース・ノート
 =========================
@@ -102,7 +102,7 @@ ClaroはDijitとdojox.Gridの新しいテーマです。(以前はLucidと呼ば
 Claroテーマは、LTR(left-to-right: 左から右)、RTL(right-to-left: 右から左)のどちらの文章方向の表示もサポートします。また、Dojo 1.5がサポートするすべてのブラウザをサポートしますが、一部のスタイルはグレースフル デグラデーション（訳注：表現能力の低いブラウザでも能力に応じた見栄えが得られる工夫）になります。例えば、IE6における24ビットPNGや、IE6, IE7, IE8におけるラウンドコーナー(角丸)はサポートされません。
 
 
-Dijitテーマ(Claro, Tundra, Nihilo, Soria)に関する詳細情報および更新情報は `Themes and Theming <http://docs.dojocampus.org/dijit-themes>`_ (英語)を参照してください。
+Dijitテーマ(Claro, Tundra, Nihilo, Soria)に関する詳細情報および更新情報は `Themes and Theming <dijit/themes>`_ (英語)を参照してください。
 
 他のテーマからClaroへ切り替える際の注意点
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
