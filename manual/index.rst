@@ -130,5 +130,4 @@ Miscellaneous
 * `Multiple Versions of Dojo on a Page <multiversion/index>`_ - Dojo has special configuration and build options to allow you to use different versions of Dojo on the same page.
 
 * `Developer Notes <developer/index>`_
-* `Styleguides <styleguides/index>`_
-
+* `Styleguides <styleguides/index>`_ **obsolete**
