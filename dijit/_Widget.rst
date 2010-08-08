@@ -57,7 +57,7 @@ Widgets are classes, created with dojo.declare. All widgets inherit from dijit._
      `dijit._Templated <dijit/_Templated>`_ provides an implementation of buildRendering that most times will do what you need. The template is fetched/read, nodes created and events hooked up during buildRendering. The end result is assigned to this.domNode. If you don't mixin `dijit._Templated <dijit/_Templated>`_ (and most OOTB dijits do) and want to handle rendering yourself (e.g. to really streamline a simple widget, or even use a different templating system) this is where you'd do it.
 
 - setters are called
-     All attributes listed in attributeMap are applied to the DOM, and attributes for which there are custom setters (see `attributes <quickstart/writingWidgets/attributes>`_, those custom setters are called
+     All attributes listed in attributeMap are applied to the DOM, and attributes for which there are custom setters (see `attributes <quickstart/writingWidgets#attributes>`_, those custom setters are called
 
 - postCreate
    This is typically the workhorse of a custom widget. The widget has been rendered (but note that sub-widgets in the containerNode have not!). The widget though may not be attached to the DOM yet so *you shouldn't do any sizing calculations in this method*.
