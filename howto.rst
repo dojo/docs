@@ -74,9 +74,9 @@ Links
 
 If you want to link to wiki internal pages use following syntax::
 
-  `Your text <path/to/wiki/page>`_
+  `Some Link text <dijit/Dialog>`_
 
-Will create following link: `Your text <path/to/wiki/page>`_
+Will create following link: `Some Link text <dijit/Dialog>`_
 
 When you want to use the same link location twice you would do it like this::
 
