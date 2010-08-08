@@ -127,7 +127,7 @@ Dojo has a number of utility scripts, including the `Dojo Build System <build/in
 Miscellaneous
 =============
 
-* `Multiple Versions of Dojo on a Page <multiversion/index>`_ - Dojo has special configuration and build options to allow you to use different versions of Dojo on the same page.
+* `Multiple Versions of Dojo on a Page <quickstart/multiversion>`_ - Dojo has special configuration and build options to allow you to use different versions of Dojo on the same page.
 
 * `Developer Notes <developer/index>`_
 * `Styleguides <styleguides/index>`_ **obsolete**
