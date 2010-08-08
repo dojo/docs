@@ -17,14 +17,14 @@ Below are the 5 basic Dojo Accessibility requirements which must be met when cre
 
 **Visual**
 
-  + `Identification and interaction with visual elements does not rely on color alone <dijit-a11y-req#interaction-does-not-rely-on-color-alone>`_
-  + `All functionality is perceivable without color or Images <dijit-a11y-req#perceivable-without-color-or-images>`_
-  + `All functionality is visible and usable at various font sizes <dijit-a11y-req#visible-at-various-font-sizes>`_
+  + `Identification and interaction with visual elements does not rely on color alone <developer/a11y-requirements#interaction-does-not-rely-on-color-alone>`_
+  + `All functionality is perceivable without color or Images <developer/a11y-requirements#perceivable-without-color-or-images>`_
+  + `All functionality is visible and usable at various font sizes <developer/a11y-requirements#visible-at-various-font-sizes>`_
 
 **Functional**
 
-  + `All functionality is usable via the mouse and keyboard <dijit-a11y-req#usable-via-the-mouse-and-keyboard>`_
-  + `All functionality is enabled for assistive technology <dijit-a11y-req#enabled-for-assistive-technology>`_
+  + `All functionality is usable via the mouse and keyboard <developer/a11y-requirements#usable-via-the-mouse-and-keyboard>`_
+  + `All functionality is enabled for assistive technology <developer/a11y-requirements#enabled-for-assistive-technology>`_
 
 Note that this is not a comprehensive list of Web Accessibility requirements, just the list of items most likely to be encountered by a Dojo Designer or Developer. For complete Accessibility Guidelines see:
 
@@ -83,7 +83,7 @@ This requirement is intended to target low vision users who may have special dis
 
 In Windows High Contrast mode any action or function that is differentiated by color or via a CSS background image is no longer visible. Using a background color to distinguish the active tab within a tab container which meets the first requirement does not meet this requirement since there is no longer any color differentiation for the user to comprehend. An additional means of identifying the active tab, such as a different outline around the tab or underlining the tab title must be provided for this mode. Icons and visual elements created via CSS background images are no longer visible and a real <img> element or text equivalent must be provided.
 
-This requirement will take additional styles in order to meet. Dijit has code to detect high contrast mode and add a dijit-a11y class to the body element of the page. This will trigger additional styles to enable text equivalents, underlining, borders or other visual clues to make the components usable in high contrast mode. See High Contrast/Images Off in the `Dijit Accessibility Strategy <dijit-a11y-strategy>`_ section for more implementation details. Some of the mechanisms to visually identify elements in high contrast mode are to add a different border or outline, increase the border width, or add an underline or overline to text. Background-images can be replaced by text or <img> elements (but the <img> elements must also have text alternatives). Examples in the Dojo widgets include:
+This requirement will take additional styles in order to meet. Dijit has code to detect high contrast mode and add a dijit-a11y class to the body element of the page. This will trigger additional styles to enable text equivalents, underlining, borders or other visual clues to make the components usable in high contrast mode. See High Contrast/Images Off in the `Dijit Accessibility Strategy <dijit/a11y/strategy>`_ section for more implementation details. Some of the mechanisms to visually identify elements in high contrast mode are to add a different border or outline, increase the border width, or add an underline or overline to text. Background-images can be replaced by text or <img> elements (but the <img> elements must also have text alternatives). Examples in the Dojo widgets include:
 
 **a dotted border on the tab title of the active tab container**
 
@@ -183,9 +183,9 @@ When creating a new component for use on the Web follow any existing keyboard co
 Enabled for assistive technology
 --------------------------------
 
-People who use screen readers and other assistive technology need additional information about the user interface components such as the type and current state. The Accessible Rich Internet Applications specification from the W3C describes the roles and states which can be applied to scripted user interface controls. The browser interprets this addition semantic information and provides it to assistive technologies via the Accessibility API of the operating system. ARIA has been implemented in all of the widgets in the Dojo core widget set - dijit. See the Implement ARIA Specification material in the `Dijit Accessibility Strategy <dijit-a11y-strategy>`_ section.
+People who use screen readers and other assistive technology need additional information about the user interface components such as the type and current state. The Accessible Rich Internet Applications specification from the W3C describes the roles and states which can be applied to scripted user interface controls. The browser interprets this addition semantic information and provides it to assistive technologies via the Accessibility API of the operating system. ARIA has been implemented in all of the widgets in the Dojo core widget set - dijit. See the Implement ARIA Specification material in the `Dijit Accessibility Strategy <dijit/a11y/strategy>`_ section.
 
-Since ARIA is still new, assistance from a developer familiar with ARIA and assisitive technology will be needed to implement and test this feature. However, any developer can implement and test the basic ARIA roles and state. The `Dijit Accessibility Resources <dijit-a11y-resources>`_ section provides details on the api's that Dojo developers can use to implement ARIA. The `Add ARIA Information <quickstart/writingWidgets/a11y#add-aria-information>`_ part of the `Creating Accessible Widgets <quickstart/writingWidgets/a11y>`_ section has more details on implementing ARIA when creating a widget.
+Since ARIA is still new, assistance from a developer familiar with ARIA and assisitive technology will be needed to implement and test this feature. However, any developer can implement and test the basic ARIA roles and state. The `Dijit Accessibility Resources <dijit/a11y/resources>`_ section provides details on the api's that Dojo developers can use to implement ARIA. The `Add ARIA Information <quickstart/writingWidgets/a11y#add-aria-information>`_ part of the `Creating Accessible Widgets <quickstart/writingWidgets/a11y>`_ section has more details on implementing ARIA when creating a widget.
 
 How to Test
 ~~~~~~~~~~~
