@@ -101,7 +101,7 @@ A new theme for Dijit and the dojox.Grid is called Claro (nee Lucid).  The Claro
 The Claro theme supports both left-to-right (LTR) and right-to-left (RTL) display, and all Dojo 1.5 supported browsers, albeit with graceful degradation of some styling: no 24 bit PNG's in IE6; and no rounded corners in IE6, 7 and 8.
 
 
-See `Themes and Theming <dijit-themes>`_ for more information on Dijit themes (Claro, Tundra, Nihilo and Soria)
+See `Themes and Theming <dijit/themes>`_ for more information on Dijit themes (Claro, Tundra, Nihilo and Soria)
 and 1.5 theme updates.
 
 Notes on switching from another theme to claro
