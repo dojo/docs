@@ -201,12 +201,9 @@ Files
                 Expression3
             );
             
-            Note the indentation for expression continuation is indented relative to the 
-            variable name, while indentation for parameters is relative to the method being 
-            called.
+        Note the indentation for expression continuation is indented relative to the variable name, while indentation for parameters is relative to the method being called.
             
-            Note also the position of the parenthesis in the method call; positioning SHOULD 
-            be similar to the use of block notation.
+        Note also the position of the parenthesis in the method call; positioning SHOULD be similar to the use of block notation.
 
 
 Variables
