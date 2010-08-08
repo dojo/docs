@@ -7,7 +7,7 @@ dojo.fadeOut
 :Version: 1.0
 :Authors: Peter Higgins, Nikolai Onken, Marcus Reimann, Jared Jurkiewicz
 :Developers: Bryan Forbes, Peter Higgins, Eugene Lazutkin, Bill Keese, Adam Peller, Alex Russell, Dylan Schiemann, sjmiles
-:Available: since V1.0
+:Available: since v1.0.0
 
 .. contents::
     :depth: 2
@@ -18,32 +18,15 @@ This function is a helper function that wraps the `dojo.animateProperty <dojo/an
 Parameters
 ==========
 
-The *dojo.fadeOut* takes an object as its parameter.  This object defines what dom node to act on, how long the fade out should take (in milliseconds, and an optional easing function.  As with all dojo apis, refer to the API docs for the most up to date information on parameters.  These are listed for convenience.
+The *dojo.fadeOut* takes an object as its parameter.  This object defines what dom node to act on, how long the fade out should take (in milliseconds, and an optional easing function.  
 
-+-------------------------------+--------------------------------------------------------------------------------------------+
-+**Parameter**                  |**Description**                                                                             |
-+-------------------------------+--------------------------------------------------------------------------------------------+
-| node                          |The domNode or node id to fade out.                                                         |
-|                               |                                                                                            |
-|                               |**required**                                                                                |
-+-------------------------------+--------------------------------------------------------------------------------------------+
-| duration                      |How long, in milliseconds, should the fade take.  The default is 350 milliseconds           |
-|                               |(.3 seconds).                                                                               |
-|                               |                                                                                            |
-|                               |**optional**                                                                                |
-+-------------------------------+--------------------------------------------------------------------------------------------+
-| easing                        |An easing function to apply to the effect, such as exponential fade in, bouncing fade out,  |
-|                               |etc.  Dojo provides a number of easing functions in module                                  |
-|                               |`dojo.fx.easing <dojo/fx/easing>`_                                                          |
-|                               |                                                                                            |
-|                               |**optional**                                                                                |
-+-------------------------------+--------------------------------------------------------------------------------------------+
+All standard `dojo.Animation <dojo/Animation>`_ events and parameters apply, though *properties:{}* is explicitly set to control opacity, so should be omitted.
 
 ============
 Return value
 ============
 
-The *dojo.fadeOut* function returns an instance of dojo._Animation.  To execute the fadeOut, call the *play()* function on the animation.  This object can be used with other dojo animation functions, such as `dojo.fx.chain <dojo/fx/chain>`_ and `dojo.fx.combine <dojo/fx/combine>`_ to link it with other effects to perform complex animations.
+The *dojo.fadeOut* function returns an instance of `dojo.Animation <dojo/Animation>`_.  To execute the fadeOut, call the *play()* function on the animation.  This object can be used with other dojo animation functions, such as `dojo.fx.chain <dojo/fx/chain>`_ and `dojo.fx.combine <dojo/fx/combine>`_ to link it with other effects to perform complex animations.
 
 ========
 Examples
