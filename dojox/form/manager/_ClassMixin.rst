@@ -15,7 +15,7 @@ dojox.form.manager._ClassMixin
 Introduction
 ============
 
-This class is the component of the form manager. It should be used together with `_Mixin <dojox/form/manager/_Mixin>`_.
+This class is the component of the form manager. It should be used together with `\_Mixin <dojox/form/manager/_Mixin>`_.
 
 The mixin provides commonly used methods to add/remove a CSS class, or detect its presence. It operates only on form nodes and attached nodes (see `controlled elements <dojox/form/manager#controlled-elements>`_ for more classification details).
 
