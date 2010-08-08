@@ -9,14 +9,13 @@ Animations and Effects with Dojo
 .. contents::
    :depth: 2
 
-Dojo provides several layers of Animation helpers, starting with Base Dojo (dojo.js), and adding in levels of incremental additions through the module system. All Animations in Dojo revolve around a single class: dojo._Animation. The underscore denotes a private constructor, and is not meant to be created directly, but rather used as the underlying control mechanism for the flexible FX API Dojo provides.
+Dojo provides several layers of Animation helpers, starting with Base Dojo (dojo.js), and adding in levels of incremental additions through the module system. All Animations in Dojo revolve around a single class: dojo.Animation, which acts as the underlying control mechanism for the flexible FX API Dojo provides.
 
+==============================
+Getting to know dojo.Animation
+==============================
 
-===============================
-Getting to know dojo._Animation
-===============================
-
-As mentioned, dojo._Animation is the foundation class for all Dojo animations. It provides several simple methods good for controlling your animation, such as `play`, `pause`, `stop`, and `gotoPercent`. The most simple method which is required of all animations is `play`:
+As mentioned, dojo.Animation is the foundation class for all Dojo animations. It provides several simple methods good for controlling your animation, such as `play`, `pause`, `stop`, and `gotoPercent`. The most simple method which is required of all animations is `play`:
 
 .. code-block :: javascript
 	:linenos:
