@@ -1,3 +1,6 @@
 Describe build/scenario-xDomain here.
 
-TODOC
+Building an x-domain Dojo
+=========================
+
+``TODOC``
