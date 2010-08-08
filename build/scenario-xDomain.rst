@@ -1,4 +1,4 @@
-Describe build/scenario-xDomain here.
+#format dojo_rst
 
 Building an x-domain Dojo
 =========================
