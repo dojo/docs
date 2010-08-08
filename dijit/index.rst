@@ -17,14 +17,14 @@ Widgets
 * `dijit._Templated <dijit/_Templated>`_
 * `dijit._Widget <dijit/_Widget>`_
 
-  * `a11y  <dijit-a11y>`_
+  * `a11y  <dijit/a11y/index>`_
 
-    * `a11y Strategy <dijit-a11y-strategy>`_
-    * `a11y Resources <dijit-a11y-resources>`_
+    * `a11y Strategy <dijit/a11y/strategy>`_
+    * `a11y Resources <dijit/a11y/resources>`_
     * `Creating Accessible Widgets <quickstart/writingWidgets/a11y>`_
     * `Testing for Accessibility <quickstart/writingWidgets/a11yTesting>`_
-    * `a11y Requirements <dijit-a11y-req>`_
-    * `a11y Statement <dijit-a11y-statement>`_
+    * `a11y Requirements <dijit/a11y/req>`_
+    * `a11y Statement <dijit/a11y/statement>`_
 
 * `dijit._CssStateMixin <dijit/_CssStateMixin>`_
 * `dijit.Calendar <dijit/Calendar>`_
