@@ -23,7 +23,7 @@ Widgets
     * `a11y Resources <dijit/a11y/resources>`_
     * `Creating Accessible Widgets <quickstart/writingWidgets/a11y>`_
     * `Testing for Accessibility <quickstart/writingWidgets/a11yTesting>`_
-    * `a11y Requirements <dijit/a11y/req>`_
+    * `a11y Requirements <ddeveloper/a11y-requirements>`_
     * `a11y Statement <dijit/a11y/statement>`_
 
 * `dijit._CssStateMixin <dijit/_CssStateMixin>`_
