@@ -1,5 +1,8 @@
 #format dojo_rst
 
+Building a standard release
+===========================
+
 TODOC - additional details
 
 First, download and unpack a source distribution from  http://download.dojotoolkit.org/ or checkout the source from SVN.
