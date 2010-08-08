@@ -1,6 +1,9 @@
 #format dojo_rst
 
-TODOC - additional details
+Building a Base-only dojo.js
+============================
+
+``TODOC`` - additional details
 
 First, download and unpack a source distribution from http://download.dojotoolkit.org/ or checkout the dojo source from SVN.
 
