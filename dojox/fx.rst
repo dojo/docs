@@ -24,7 +24,7 @@ These are the animations provided by calling ``dojo.require("dojox.fx");``
 * dojox.fx.highlight - highlights a node for a short timespan
 * dojox.fx.fadeTo - fade a node to a defined opacity
 
-Additionally, dojox.fx requires the Dojo Core `animations <dojo/fx>`_, and creates aliases to them in the dojox.fx namespace. For instance:
+Additionally, dojox.fx includes the Dojo Core `animations <dojo/fx>`_, and creates aliases to them in the dojox.fx namespace. For instance:
 
 .. code-block :: javascript
 
@@ -65,4 +65,4 @@ Additionally, a module in dojox.fx also provides the dojox.fx.style APIs to `doj
  
   dojo.require("dojox.fx.ext-dojo.NodeList-style");
 
-Read more about CSS morphing at `dojox.fx.style docs <dojox/fx/style/>`_
+Read more about CSS morphing at `dojox.fx.style docs <dojox/fx/style>`_
