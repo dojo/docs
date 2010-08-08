@@ -20,26 +20,7 @@ This function is a helper function that wraps the `dojo.animateProperty <dojo/an
 Parameters
 ==========
 
-The *dojo.fx.wipeIn* takes an object as its parameter.  This object defines what dom node to act on, how long the wipe in should take (in milliseconds, and an optional easing function.  As with all dojo apis, refer to the API docs for the most up to date information on parameters.  These are listed for convenience.
-
-+-------------------------------+--------------------------------------------------------------------------------------------+
-+**Parameter**                  |**Description**                                                                             |
-+-------------------------------+--------------------------------------------------------------------------------------------+
-| node                          |The domNode or node id to wipe in.                                                          |
-|                               |                                                                                            |
-|                               |**required**                                                                                |
-+-------------------------------+--------------------------------------------------------------------------------------------+
-| duration                      |How long, in milliseconds, should the wipe take.  The default is 350 milliseconds           |
-|                               |(.3 seconds).                                                                               |
-|                               |                                                                                            |
-|                               |**optional**                                                                                |
-+-------------------------------+--------------------------------------------------------------------------------------------+
-| easing                        |An easing function to apply to the effect, such as exponential wipe in, bouncing wipe in,   |
-|                               |etc.  Dojo provides a number of easing functions in module                                  |
-|                               |`dojo.fx.easing <dojo/fx/easing>`_                                                          |
-|                               |                                                                                            |
-|                               |**optional**                                                                                |
-+-------------------------------+--------------------------------------------------------------------------------------------+
+The *dojo.fx.wipeIn* function takes an object as its parameter.  This object defines what dom node to act on, how long the wipe in should take (in milliseconds, and an optional easing function. All standard `dojo.Animation <dojo/Animation>`_ parameters and events apply to this function, with no additional properties included.
 
 ============
 Return value
