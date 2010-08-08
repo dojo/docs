@@ -14,13 +14,13 @@ Dijit Accessibility Statement
 Dijit Accessibility
 ===================
 
-Dojo has made a serious commitment to creating a toolkit that allows the development of accessible Web applications for all users, regardless of physical abilities. The core widget set of Dojo, dijit, is fully accessible since the 1.0 release, making Dojo the only fully accessible open source toolkit for Web 2.0 development. This means that users who require keyboard only navigation, need accomodations for low vision or who use an assistive technology, can interact with the dijit widgets. If you are new to accessibility, please refer to the `Web Accessibility Issues <dijit-a11y>`_ page for more general information about accessibility. Developers wanting further information about the implementation of accessibility within dijit and/or how to create and test accessible widgets should refer to the following accessibility information:
+Dojo has made a serious commitment to creating a toolkit that allows the development of accessible Web applications for all users, regardless of physical abilities. The core widget set of Dojo, dijit, is fully accessible since the 1.0 release, making Dojo the only fully accessible open source toolkit for Web 2.0 development. This means that users who require keyboard only navigation, need accomodations for low vision or who use an assistive technology, can interact with the dijit widgets. If you are new to accessibility, please refer to the `Web Accessibility Issues <dijit/a11y>`_ page for more general information about accessibility. Developers wanting further information about the implementation of accessibility within dijit and/or how to create and test accessible widgets should refer to the following accessibility information:
 
 * `Dijit Accessibility Strategy <dijit/a11y/strategy>`_
 * `Dojo Accessibility Resources <dijit/a11y/resources>`_
 * `Creating Accessible Widgets <quickstart/writingWidgets/a11y>`_
 * `Testing Widgets For Accessibility <quickstart/writingWidgets/a11yTesting>`_
-* `Basic A11y Requirements <dijit/a11y/req>`_
+* `Basic A11y Requirements <developer/a11y-requirements>`_
 
 In addition, the documentation for each dijit widget contains a section explaining any parameters specific to accessibility, the keyboard navigation of the component, and any open accessibility issues.
 
