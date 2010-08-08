@@ -28,7 +28,7 @@ This section describes all public methods and properties of the *dojox.form.mana
 gatherClassState
 ~~~~~~~~~~~~~~~~
 
-This method collects the presence of the specified CSS class in a dictionary object as Boolean values (``true`` means the CSS class is present). It is loosely modeled after `_EnableMixin's gatherFromValues() <dojox/form/manager/_EnableMixin#gatherenablestate>`_.
+This method collects the presence of the specified CSS class in a dictionary object as Boolean values (``true`` means the CSS class is present). It is loosely modeled after `\_EnableMixin's gatherFromValues() <dojox/form/manager/_EnableMixin#gatherenablestate>`_.
 
 There are three ways to use this method:
 
