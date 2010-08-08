@@ -91,7 +91,7 @@ Here's one displaying a `TooltipDialog <dijit/TooltipDialog>`_:
       </div>
     </div>
 
-Note that DropDownButton is often used in `dijit.Toolbar </dijit/Toolbar>`_.
+Note that DropDownButton is often used in `dijit.Toolbar <dijit/Toolbar>`_.
 
 
 =============
