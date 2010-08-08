@@ -70,7 +70,7 @@ Widgets
 
 * `Dijit, Dojo's widget Library <dijit/info>`_
 * `UI Development <quickstart/interfacedesign>`_
-* `Themes and Theming <dijit-themes>`_
+* `Themes and Theming <dijit/themes>`_
 * `DojoX Widgets <dojox/widget>`_
 
 Widget developers notes:
