@@ -23,7 +23,7 @@ The mixin provides commonly used methods to add/remove a CSS class, or detect it
 Methods and properties
 ======================
 
-This section describes all public methods and properties of the dojox.form.manager._ClassMixin class.
+This section describes all public methods and properties of the *dojox.form.manager._ClassMixin* class.
 
 gatherClassState
 ~~~~~~~~~~~~~~~~
