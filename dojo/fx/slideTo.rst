@@ -20,34 +20,11 @@ This function is a helper function that wraps the `dojo.animateProperty <dojo/an
 Parameters
 ==========
 
-The *dojo.fx.slideTo* takes an object as its parameter.  This object defines what dom node to act on, how long the slide to should take (in milliseconds, and an optional easing function.  As with all dojo apis, refer to the API docs for the most up to date information on parameters.  These are listed for convenience.
+The *dojo.fx.slideTo* function takes an object as its parameter.  This object defines what dom node to act on, how long the slide to should take (in milliseconds, and an optional easing function. All standard `dojo.Animation <dojo/Animation>`_ properties apply with the addition of two special properties for only *slideTo*:
 
-+-------------------------------+--------------------------------------------------------------------------------------------+
-+**Parameter**                  |**Description**                                                                             |
-+-------------------------------+--------------------------------------------------------------------------------------------+
-| node                          |The domNode or node id to slide.                                                            |
-|                               |                                                                                            |
-|                               |**required**                                                                                |
-+-------------------------------+--------------------------------------------------------------------------------------------+
-| top                           |The position to move the top corner of the node to in absolute pixels                       |
-|                               |                                                                                            |
-|                               |**optional**                                                                                |
-+-------------------------------+--------------------------------------------------------------------------------------------+
-| left                          |The position to move the left corner of the node to, in absolute pixels.                    |
-|                               |                                                                                            |
-|                               |**optional**                                                                                |
-+-------------------------------+--------------------------------------------------------------------------------------------+
-| duration                      |How long, in milliseconds, should the slide take.  The default is 350 milliseconds          |
-|                               |(.3 seconds).                                                                               |
-|                               |                                                                                            |
-|                               |**optional**                                                                                |
-+-------------------------------+--------------------------------------------------------------------------------------------+
-| easing                        |An easing function to apply to the effect, such as exponential slide, bouncing slide,       |
-|                               |etc.  Dojo provides a number of easing functions in module                                  |
-|                               |`dojo.fx.easing <dojo/fx/easing>`_                                                          |
-|                               |                                                                                            |
-|                               |**optional**                                                                                |
-+-------------------------------+--------------------------------------------------------------------------------------------+
+:top:  The position to move the top corner of the node to in absolute pixels
+:left:  The position to move the left corner for the node to, in absolute pixels.
+
 
 ============
 Return value
