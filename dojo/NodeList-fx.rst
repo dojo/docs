@@ -41,7 +41,23 @@ To use your newly created functions in NodeList, issue a ``dojo.query()`` call:
         });
      </script>
 
-The most important thing to note is NodeList animations return an instance of a `dojo._Animation <dojo/_Animation>`_, the foundation for all Dojo FX. This prevents further chaining, as you have to explicitly call ``.play()`` on the returned animation.
+The most important thing to note is `NodeList <dojo/NodeList>` animations return an instance of a `dojo.Animation <dojo/Animation>`_, the foundation for all Dojo FX. This prevents further chaining, as you have to explicitly call ``.play()`` on the returned animation. **New** Dojo 1.4 introduced a way to allow continued chaining with the caveat you cannot obtain a reference to the animations after they have begun. Simply pass the *auto* parameter.
+
+.. code-block :: javascript
+  :linenos:
+
+  dojo.require("dojo.NodeList-fx"); 
+  dojo.ready(function(){
+       dojo.query("li.evens")
+           .fadeOut({ 
+              duration:1000, 
+              onEnd: function(){ ... }, 
+              // begin playing immediately, and return the nodeList for further iteration
+              auto:true 
+           })
+           .onclick(doSomething)
+       ;
+  });
 
 The parameters you can specify to each animation provided are identical to their `dojo.fx <dojo/fx>`_ counterparts, omitting the ``node:`` parameter, as each node in the NodeList is passed for you.
 
