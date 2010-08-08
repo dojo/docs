@@ -3,7 +3,7 @@
 dijit.getEnclosingWidget
 ========================
 
-`this is the kind of stub that just needs pulled from the API. not much to see here`
+``FIXME:`` just inline the api reference info here
 
 Obtain a widget reference by determining the immediate-most parent Widget from some passed Node:
 
