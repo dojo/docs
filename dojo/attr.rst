@@ -19,7 +19,7 @@ Introduction
 
 On top of that several browsers deal with attribute setting and getting in different ways.
 
-If an attribute was not specified for the DOM node, it will return a falsy value (see `dojo.hasAttr <dojo/hasAttr>`_). If you want to get a default value for missing attributes, use `dojo.getPropNode <dojo/getPropNode>`_, which always falls back to properties, if they are available.
+If an attribute was not specified for the DOM node, it will return a falsy value (see `dojo.hasAttr <dojo/hasAttr>`_). If you want to get a default value for missing attributes, use `dojo.getNodeProp <dojo/getNodeProp>`_, which always falls back to properties, if they are available.
 
 
 =====
