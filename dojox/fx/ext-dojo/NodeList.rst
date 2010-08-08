@@ -1,4 +1,4 @@
-#format dojot_rst
+#format dojo_rst
 
 dojox.fx.ext-dojo.NodeList
 ==========================
