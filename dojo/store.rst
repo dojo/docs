@@ -46,19 +46,19 @@ Methods
 
 Every method in the API is optional, it's presence indicating support for that feature. Every method can return a promise (except where noted otherwise) to represent an asynchronous completion of the action. (Some of these are still wavering a bit in W3C's object store API):
 
-===========================================  ======================================================================
-Method                                       Description
-===========================================  ======================================================================
+================================================  ======================================================================
+Method                                            Description
+================================================  ======================================================================
 `get(id) <dojo/store/get>`_                       Retrieves an object by its identifier, returning the object.
 
 `query(query, options) <dojo/store/query>`_       Queries the store using the provided query.
 
-                                             The returned value should be an array or a promise with forEach, map, filter, reduce, subscribe, and close methods, and a totalCount property (the totalCount may be a promise). The options parameter is modeled after the Dojo Data keywordArgs and may include:
+                                                  The returned value should be an array or a promise with forEach, map, filter, reduce, subscribe, and close methods, and a totalCount property (the totalCount may be a promise). The options parameter is modeled after the Dojo Data keywordArgs and may include:
 
-                                             * start - Starting offset
-                                             * count - Number of objects to return
-                                             * sort - Follows the Dojo Data sort definition
-                                             * queryOptions - Follows the Dojo Data queryOptions definition
+                                                  * start - Starting offset
+                                                  * count - Number of objects to return
+                                                  * sort - Follows the Dojo Data sort definition
+                                                  * queryOptions - Follows the Dojo Data queryOptions definition
 
 `put(object, options) <dojo/store/put>`_          Saves the given object. options.id (optional) indicates the identifier.
 
@@ -68,13 +68,13 @@ Method                                       Description
 
 `transaction() <dojo/store/transaction>`_         Starts a transaction and returns a transaction object.
 
-                                             The transaction object should include:
+                                                  The transaction object should include:
 
-                                             * commit() - Commits all the changes that took place during the transaction.
-                                             * abort() - Aborts all the changes that took place during the transaction.
+                                                  * commit() - Commits all the changes that took place during the transaction.
+                                                  * abort() - Aborts all the changes that took place during the transaction.
 
-                                             Note that a store user might not call transaction() prior to using put, delete, etc. in which case these operations effectively could be thought of as  "auto-commit" style actions.
-===========================================  ======================================================================
+                                                  Note that a store user might not call transaction() prior to using put, delete, etc. in which case these operations effectively could be thought of as  "auto-commit" style actions.
+================================================  ======================================================================
 
 * How is about a dojo.store.clear() method?
 
@@ -87,33 +87,33 @@ Result Sets
 
 Objects returned from store should primarily be treated as normal hash objects and have standard JavaScript properties to access their data and modify their data. However, the following methods are defined as possible methods that may also be available on the objects returned by the store (once again, they are optional). These methods should '''not''' be the object's own properties (hasOwnProperty(methodName) should return false), but rather should be inherited from one of the object's prototypes). This is to ensure ease of enumeration of data properties.  Once again, all of these methods are optional, and all may return promises if the operation will be performed asynchronously:
 
-=========================================================  ======================================================================
-Method                                                     Description
-=========================================================  ======================================================================
-`get(property) <dojo/store/resultset/get>`_                Returns the value of the given property.
+===============================================================  ======================================================================
+Method                                                           Description
+===============================================================  ======================================================================
+`get(property) <dojo/store/resultset/get>`_                      Returns the value of the given property.
 
-                                                           Normally property values can be accessed with normal JavaScript member expresions (object.property -> value), but if get() is implemented, than get(property) should be used to retrieve property values. This allows for lazy evaluation of properties.
+                                                                 Normally property values can be accessed with normal JavaScript member expresions (object.property -> value), but if get() is implemented, than get(property) should be used to retrieve property values. This allows for lazy evaluation of properties.
 
-`set(property, value) <dojo/store/resultset/set>`_         Sets the property value.
+`set(property, value) <dojo/store/resultset/set>`_               Sets the property value.
 
-                                                           Normally property values can be mutated with normal JavaScript member expresions (object.property = value), but if set() is implemented, than set(property, value) should be used to modify property values.
+                                                                 Normally property values can be mutated with normal JavaScript member expresions (object.property = value), but if set() is implemented, than set(property, value) should be used to modify property values.
 
-`load() <dojo/store/resultset/load>`_                      Fully loads the current object.
+`load() <dojo/store/resultset/load>`_                            Fully loads the current object.
 
-                                                           If this method is present, it indicates that the object may not be fully loaded.
+                                                                 If this method is present, it indicates that the object may not be fully loaded.
 
-`save() <dojo/store/resultset/save>`_                      Saves the loaded object.
+`save() <dojo/store/resultset/save>`_                            Saves the loaded object.
 
-                                                           This should generally be shorthand for store.put(object);
+                                                                 This should generally be shorthand for store.put(object);
 
-`watch(property, callback) <dojo/store/resultset/watch>`_  Listens for changes to this object.
+`watch(property, callback) <dojo/store/resultset/watch>`_        Listens for changes to this object.
 
-`getId() <dojo/store/resultset/getId>`_                    Normally a store just uses a single property (identified by idProperty) for the object identity. However, a store may provide getId() on the objects to create more complex identities (such as composite identities).
+`getId() <dojo/store/resultset/getId>`_                          Normally a store just uses a single property (identified by idProperty) for the object identity. However, a store may provide getId() on the objects to create more complex identities (such as composite identities).
 
-`getMetadata() <dojo/store/resultset/getMetadata>`_        Returns any metadata about the object. 
+`getMetadata() <dojo/store/resultset/getMetadata>`_              Returns any metadata about the object. 
 
-                                                           This may include attribution, cache directives, history, or version information. (addresses #3126, #3127)
-=========================================================  ======================================================================
+                                                                 This may include attribution, cache directives, history, or version information. (addresses #3126, #3127)
+===============================================================  ======================================================================
 
 
 Subscriptions/Watches on Result Sets
@@ -121,25 +121,25 @@ Subscriptions/Watches on Result Sets
 
 One can subscribe to changes in data through the subscribe method on the result set (the object returned from a query). The subscribe method has the following signature:
 
-==============================================================  ======================================================================
-Method                                                          Description
-==============================================================  ======================================================================
-`subscribe(event, callback) <dojo/store/resultset/subscribe>`_  Where an event can be:
+====================================================================  ======================================================================
+Method                                                                Description
+====================================================================  ======================================================================
+`subscribe(event, callback) <dojo/store/resultset/subscribe>`_        Where an event can be:
 
-                                                                * onAdd
+                                                                      * onAdd
 
-                                                                  An object was created or modified such that the object now belongs in the set of objects defined by the query.
+                                                                        An object was created or modified such that the object now belongs in the set of objects defined by the query.
 
-                                                                * onUpdate
+                                                                      * onUpdate
 
-                                                                  An object that belongs to the set of objects defined by the query was modified and still belongs to the query's set of objects.
+                                                                        An object that belongs to the set of objects defined by the query was modified and still belongs to the query's set of objects.
 
-                                                                * onRemove
+                                                                      * onRemove
 
-                                                                  An object that belongs to the set of objects defined by the query was modified or deleted and no longer belongs to the query's set of objects.
+                                                                        An object that belongs to the set of objects defined by the query was modified or deleted and no longer belongs to the query's set of objects.
 
-`close <dojo/store/resultset/close>`_                           When close() is called on a result set, notifications will no longer be fired.
-==============================================================  ======================================================================
+`close <dojo/store/resultset/close>`_                                 When close() is called on a result set, notifications will no longer be fired.
+====================================================================  ======================================================================
 
 [Rationale: The purpose of using this style of notifications (instead of the Dojo Data notification style of events on the store) is to deal with several problems I have seen with Dojo Data notifications. First, it neglects that fact that most of the time users only want to listen to events from the queried subset of the items in the store, and that subscriptions can be costly. While subscriptions are usually cheap on the client side, carte blance subscriptions can actually be very expensive on the server side (with Comet-style notifications), forcing the server to send excessive events and then forcing the client to filter them.
 
