@@ -91,7 +91,7 @@ Naming Conventions
                 this.doSomething = function(){}
             }
             
-    #. Variables that are intended to be private, but are not closure bound, SHOULD be prepended with a ``_`` (underscore) char:
+    #. Variables that are intended to be private, but are not closure bound, SHOULD be prepended with a ``\_`` (underscore) char:
     
         .. javascript::
         
