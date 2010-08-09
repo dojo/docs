@@ -7,12 +7,14 @@ dojox.data.jsonPathStore
 :Version: 1.2
 :Authors: Dustin Machi
 :Developers: Dustin Machi
-:Available: since V1.0
+:Available: V1.0 to 1.3, Removed in 1.4
 
 .. contents::
    :depth: 2
 
-A local (in memory) store which can attach a dojo.data interface to each javascript object and uses jsonPath as the query language. It takes an arbitrary javascript object as its data structure and attaches to this data structure to present a dojo.data.api interface. Each JavaScript object in the store is an Item in dojo.data parlance.
+Note: This API was removed for the Dojo 1.4 release. http://svn.dojotoolkit.org/dojoc/dmachi/data/ contains a JsonStore that is the most suitable replacement for this in Dojo 1.4 and 1.5.
+
+A local (in memory) store which can attach a dojo.data interface to each JavaScript object and uses jsonPath as the query language. It takes an arbitrary JavaScript object as its data structure and attaches to this data structure to present a dojo.data.api interface. Each JavaScript object in the store is an Item in dojo.data parlance.
 
 ============
 Introduction
