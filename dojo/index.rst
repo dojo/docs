@@ -594,9 +594,7 @@ Dojo Core
 
   Utility classes to enable loading of resources for internationalization
 
-* `dojo.io <dojo/io>`_
-
-  Additional AJAX I/O transports
+* Additional AJAX I/O transports (dojo.io)
 
   * `dojo.io.iframe <dojo/io/iframe>`_
 
