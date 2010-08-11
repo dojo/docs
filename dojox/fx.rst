@@ -67,3 +67,11 @@ Additionally, a module in dojox.fx also provides the dojox.fx.style APIs to `doj
   dojo.require("dojox.fx.ext-dojo.NodeList-style");
 
 Read more about CSS morphing at `dojox.fx.style docs <dojox/fx/style>`_
+
+Base Dojo Extensions
+--------------------
+
+A few modules mix into the `dojo <dojo/index>`_ namespace, as denoted by their module names:
+
+* `dojox.fx.ext-dojo.complex <dojox/fx/ext-dojo/complex>`_
+* `dojox.fx.ext-dojo.reverse <dojox/fx/ext-dojo/reverse>`_
