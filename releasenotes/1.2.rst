@@ -153,7 +153,6 @@ Tooltip
 
     * made arrow smaller
 
-=====
 DojoX
 =====
  
@@ -201,7 +200,7 @@ dojox.html
           o Search document for style sheets.
           o Toggle sheets on and off (based on the W3C spec).
 
-==========================
+
 New/Enhanced DojoX Widgets
 ========================== 
  
@@ -276,7 +275,6 @@ dojox.xml.widgetParser
     * XML can be included directly within <script/> tags or externally referenced via the script tags src attribute.
     * See also [#5766] for details.
 
-====================
 new Dojo data stores
 ====================
 
@@ -337,7 +335,6 @@ dojox.data.ServiceStore
     * Fetches are routed through the service and the returned results are used as the data behind the API.
     * See also the blog post and [#5987] for details.
 
-=====================
 new Datastore Helpers
 =====================
 
@@ -374,7 +371,6 @@ dojox.rpc.OfflineRest/dojox.rpc.LocalStorageRest
 
     * dojox.rpc.OfflineRest provides auto-synchronization and caching of data for REST based applications. In particular, it is built for JsonRestStore to be used in offline mode, and it will save all data changes locally and synchronize/persist the changes to the server when connectivity is available.
 
-==========================
 new DojoX Projects/Modules
 ==========================
 
@@ -439,7 +435,6 @@ dojox.secure.sandbox
 
     * Provides support for loading web pages, JSON, and scripts from other domains using XHR (and XHR plugins) with a safe subset library and sandboxed access to the DOM.
 
-====
 Util
 ====
 
@@ -457,7 +452,6 @@ DOH: unit test framework
     * A doh.robot package has been added to allowing writing of unit tests for visual components like DnD and widgets.
     * There are also a few examples of those tests within dijit/tests/form/robot, etc.
 
-================
 Migration issues
 ================
 
@@ -532,7 +526,7 @@ Change Log/List of fixed bugs
     * Note that many of those bug reports aren't bugs in 1.0 or 1.1, but rather just refactoring work, enhancements, or bugs that appeared after the 1.1 release.
 
 What browsers are supported by this release?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+============================================
 
     * Internet Explorer 6.0 through 7.0
     * Firefox 1.5 through 3.0 (Dijit supports only FireFox 2+)
