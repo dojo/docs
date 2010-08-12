@@ -59,7 +59,6 @@ dojo.html.set()
 
     * feature added to use ContentPane like functionality outside of ContentPane.
 
-==================
 Dijit Enhancements
 ================== 
 
