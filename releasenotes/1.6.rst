@@ -1,5 +1,7 @@
 #format dojo_rst
 
+**work in progress** Current stable release notes are: `Dojo 1.5 <releasenotes/1.5>`_
+
 Dojo 1.6 Release Notes
 ======================
 
