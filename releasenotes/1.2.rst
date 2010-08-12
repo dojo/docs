@@ -532,9 +532,8 @@ Change Log/List of fixed bugs
     * Here is the list of bugs fixed in 1.2.
     * Note that many of those bug reports aren't bugs in 1.0 or 1.1, but rather just refactoring work, enhancements, or bugs that appeared after the 1.1 release.
 
-============================================
 What browsers are supported by this release?
-============================================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     * Internet Explorer 6.0 through 7.0
     * Firefox 1.5 through 3.0 (Dijit supports only FireFox 2+)
