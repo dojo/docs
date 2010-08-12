@@ -25,12 +25,14 @@ dojo.fromJson() throws exceptions
 
 See #5725 Previously, bad JSON would just result in a console error message and returning the original string. If this unspecified behavior was anticipated, you will need to catch the exception and make the assignment outside of this function, e.g.
 
-var result = text;
-try{
- result = dojo.fromJson(text);
-}catch(e){
- // squelch exception, use input as result
-}
+  .. javascript::
+  
+    var result = text;
+    try{
+     result = dojo.fromJson(text);
+    }catch(e){
+     // squelch exception, use input as result
+    }
 
 Note that the empty string -- e.g. dojo.fromJson("") -- is not a valid JSON string and will result in an exception being thrown. dojo.fromJson("\"\"") is valid and evaluates to the empty string.
 
@@ -129,12 +131,14 @@ In addition to dojo.xhrGet(), dojo.xhrPost(), dojo.xhrRawPost(), dojo.xhrPut(), 
 
 To do a HEAD request, you can do something like this:
 
-dojo.xhr("HEAD", {
-    url: "/path/to/resource"
-    load: function(result, ioArgs){
-        //Head request successful. Use ioArgs.xhr to access XMLHttpRequest properties.
-    }
-});
+  .. javascript::
+  
+    dojo.xhr("HEAD", {
+        url: "/path/to/resource"
+        load: function(result, ioArgs){
+            //Head request successful. Use ioArgs.xhr to access XMLHttpRequest properties.
+        }
+    });
 
 dojo.xhr* methods now send X-Requested-With header
 --------------------------------------------------
@@ -155,11 +159,13 @@ dojo.style()
 ------------
 
 dojo.style now accepts a bag (ie, a hash) of values, in addition to the old behavior of accepting a single name/value as the second and third arguments:
-dojo.style("thinger", {
-   "opacity": 0.5,
-   "border": "3px solid black",
-   "height": 300
-});
+
+  .. javascript::
+    dojo.style("thinger", {
+       "opacity": 0.5,
+       "border": "3px solid black",
+       "height": 300
+    });
 
 query/NodeList enhancements
 ---------------------------
@@ -243,7 +249,9 @@ DTL
 ---
 
 Many improvements to the detail library. The upshot is that you can now declare widgets where the templates have for loops, if statements, etc. For example:
-templateString: '<div><input dojoAttachEvent="onkeyup: keyUp"><ul>{% for item in items %}<li>${oldRepl} {{ item }}</li>{% endfor %}</ul></div>'
+ 
+  .. javascript::
+    templateString: '<div><input dojoAttachEvent="onkeyup: keyUp"><ul>{% for item in items %}<li>${oldRepl} {{ item }}</li>{% endfor %}</ul></div>'
 
 See the demos for examples.
 
