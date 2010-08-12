@@ -1,0 +1,333 @@
+#format dojo_rst
+
+Dojo 1.1 release notes
+======================
+
+.. contents::
+   :depth: 3
+
+Dojo 1.1 is backwards compatible with Dojo 1.0 but there are many new features, plus some changes/deprecations worth noting. See the links below for details.
+
+Here is the list of bugs fixed in 1.1.0 and 1.1.1. Note that many of those bug reports aren't bugs in 1.0, but rather just refactoring work, enhancements, or bugs that appeared after the 1.0 release.
+
+Gotchas
+=======
+
+Here we list deprecations, CSS/template changes, and bug fixes (some of which could be argued to be API changes) that you might need to look out for when upgrading from 1.0 to 1.1
+
+Localizations are available in 1.1.1
+------------------------------------
+
+The 1.1.0 release did not have translations for some of the newer strings. Dojo 1.1.1 adds many new languages, bringing Dojo's list of supported localizations up to 22.
+
+dojo.fromJson() throws exceptions
+---------------------------------
+
+See #5725 Previously, bad JSON would just result in a console error message and returning the original string. If this unspecified behavior was anticipated, you will need to catch the exception and make the assignment outside of this function, e.g.
+
+var result = text;
+try{
+ result = dojo.fromJson(text);
+}catch(e){
+ // squelch exception, use input as result
+}
+
+Note that the empty string -- e.g. dojo.fromJson("") -- is not a valid JSON string and will result in an exception being thrown. dojo.fromJson("\"\"") is valid and evaluates to the empty string.
+
+template changes
+----------------
+
+For those of you that have subclassed widgets or written custom CSS, here are a few areas to watch out for.
+
+    * Form input widgets (ValidationTextBox, ComboBox, etc): all of these were changed from using the <table> tag to <div> tags,
+    * Tabs: dijitTabInnerDiv becomes dijitTabContent now (for changing selected tabs tab appearance)
+    * Dialog, TooltipDialog: if you subclassed one of these widgets and updated the template, you need to reapply your template changes to the new template 
+
+Editor
+------
+
+There is a known issue with TEXTAREA processing of XML entities with dijit.Editor that could result in HTML source being rendered, or potentially a cross-site scripting (XSS) attack. Either have your server escape XML entities inside a TEXTAREA before instantiating your dijit.Editor or use a DIV tag for the root node instead. In the next release, the use of TEXTAREA as a root node for dijit.Editor will be deprecated. See ticket #2140 for more information.
+Form widgets API deprecations
+
+    * setDisabled(bool) deprecated in favor of setAttribute("disabled", bool). For all widgets where the end-user sets a value (ex: by typing something in or picking a choice from a drop down), the value of the widget is still controlled/accessed via setValue()/getValue(). For widgets like Button and Checkbox (see below) you do a setAttribute("value", ...) to control the value that is submitted with the form.
+    * setChecked(bool) deprecated in favor of setAttribute("checked", bool). Accordingly, StackController.onSelectChild() calls setAttribute("checked", ...) rather than setChecked() (#6492).
+    * CheckBox.getValue() changed to make serialization/deserialization of form widgets more consistent. getValue() returns CheckBox.value or "false" depending on checked state, and setValue(Boolean) will change the checked state (rather than Checked.value)
+    * new base class called dijit.form._FormValueWidget. Most custom widget that previously extended dijit.form._FormWidget should be changed to extend dijit.form._FormValueWidget instead. (The exception is for things like CheckBox where the user doesn't input a value directly.) [11982]
+    * dijit.Form widget (see #5775 for possible upgrade issues) 
+
+Layout widgets
+--------------
+
+SplitContainer and LayoutContainer deprecated in favor of BorderContainer, see below for details.
+
+Tree
+----
+
+store attribute to tree deprecated in favor of "model", which points to a new store → tree mapping class. See the blog post for details.
+
+CSS class name changes
+----------------------
+
+See #6104
+
+    * IEFixedToolbar → dijitIEFixedToolbar
+    * dijitProgressBarVertical → dijitProgressBarV
+    * dijitProgressBarHorizontal → dijitProgressBarH
+    * RuleContainer → dijitRuleContainer
+    * HorizontalRuleContainer → dijitRuleContainerH
+    * VerticalRuleContainer → dijitRuleContainerV
+    * RuleLabel → dijitRuleLabel
+    * RuleLabelContainer → dijitRuleLabelContainer
+    * HorizontalRuleLabelContainer → dijitRuleLabelContainerH
+    * VerticalRuleLabelContainer → dijitRuleLabelContainerV
+    * HorizontalRuleLabel → dijitRuleLabelH
+    * VerticalRuleLabel → dijitRuleLabelV
+    * RuleMark → dijitRuleMark
+    * HorizontalRuleMark → dijitRuleMarkH
+    * VerticalRuleMark → dijitRuleMarkV
+    * dijitHorizontalSliderBar → dijitSliderBarH
+    * dijitVerticalSliderBar → dijitSliderBarV
+    * dijitVerticalSliderBottomBumper → dijitSliderBottomBumper
+    * dijitHorizontalSliderBumper → dijitSliderBumperH
+    * dijitVerticalSliderBumper → dijitSliderBumperV
+    * dijitVerticalSliderButtonContainer → dijitSliderButtonContainerV
+    * dijitHorizontalSliderButtonContainer → dijitSliderButtonContainerH
+    * dijitHorizontalSliderDecoration → dijitSliderDecorationH
+    * dijitVerticalSliderDecoration → dijitSliderDecorationV
+    * dijitHorizontalSliderImageHandle → dijitSliderImageHandleH
+    * dijitVerticalSliderImageHandle → dijitSliderImageHandleV
+    * dijitHorizontalSliderLeftBumper → dijitSliderLeftBumper
+    * dijitHorizontalSliderMoveable → dijitSliderMoveableH
+    * dijitVerticalSliderMoveable → dijitSliderMoveableV
+    * dijitHorizontalSliderProgressBar → dijitSliderProgressBarH
+    * dijitVerticalSliderProgressBar → dijitSliderProgressBarV
+    * dijitHorizontalSliderRemainingBar → dijitSliderRemainingBarH
+    * dijitVerticalSliderRemainingBar → dijitSliderRemainingBarV
+    * dijitHorizontalSliderRightBumper → dijitSliderRightBumper
+    * dijitVerticalSliderTopBumper → dijitSliderTopBumper
+    * dijitSplitterHorizontal → dijitSplitterH
+    * dijitSplitterVertical → dijitSplitterV
+    * dijitHorizontalSliderDecrementIcon → dijitSliderDecrementIconH
+    * dijitHorizontalSliderIncrementIcon → dijitSliderIncrementIconH
+    * dijitVerticalSliderIncrementIcon → dijitSliderIncrementIconV
+    * dijitVerticalSliderDecrementIcon → dijitSliderDecrementIconV 
+
+Core
+====
+
+Multiversion support
+--------------------
+Dojo 1.1 can co-exist with other versions of Dojo. You can even rename Dojo to create your own library that uses Dojo underneath. See the Dojo Book Page on multiversion support.
+
+Loading Dojo after page load
+----------------------------
+Dojo 1.1 can can be loaded after page load (after the window.onload event fires) by setting djConfig.afterOnLoad to true. Use in conjunction with djConfig.require, to load dojo along with the modules you needed dojo.required after dojo loads. See the The test page for an example.
+
+Expanded XMLHttpRequest method
+------------------------------
+In addition to dojo.xhrGet(), dojo.xhrPost(), dojo.xhrRawPost(), dojo.xhrPut(), dojo.xhrRawPut() and dojo.xhrDelete(), there is now a general purpose XMLHttpRequest call: dojo.xhr(). It allows you to call other HTTP methods not covered by the other dojo.xhr* methods.
+
+To do a HEAD request, you can do something like this:
+
+dojo.xhr("HEAD", {
+    url: "/path/to/resource"
+    load: function(result, ioArgs){
+        //Head request successful. Use ioArgs.xhr to access XMLHttpRequest properties.
+    }
+});
+
+dojo.xhr* methods now send X-Requested-With header
+--------------------------------------------------
+
+When doing a dojo.xhr* call, you will be able to tell on the server if the request came from an XMLHttpRequest call by looking for the header "X-Requested-With" with the value of "XMLHttpRequest".
+
+Expanded cacheBust support
+--------------------------
+
+If you set djConfig.cacheBust to (new Date()).getTime(), then that value will be appended to URLs used by the loader to load modules and for retrieving dijit templates. This will force the browser to fetch that resource instead of using the browser cache, which can help during module development.
+
+dojo.attr()
+-----------
+
+dojo.attr(), dojo.hasAttr(), and dojo.removeAttr() functions added to base. Normalizes browser inconsistencies with setting and getting DOM node attributes.
+
+dojo.style()
+------------
+
+dojo.style now accepts a bag (ie, a hash) of values, in addition to the old behavior of accepting a single name/value as the second and third arguments:
+dojo.style("thinger", {
+   "opacity": 0.5,
+   "border": "3px solid black",
+   "height": 300
+});
+
+query/NodeList enhancements
+---------------------------
+
+dojo.query() results now have attr() and instantiate() methods and the style() method is updated.
+
+animation enhancements
+----------------------
+A serious animation performance issue is corrected in Dojo 1.1, a new dojo.anim() method makes building animations simpler, the default animation duration is changed from 1 second to 350ms, and the syntax for specifying final values for animated properties is simplified. See the documentation for animateProperty for details.
+
+Another notable change is the reworked code for dojo.fx.combine() and dojo.fx.chain() animation integrators. New improvements allow to integrate individual animations into more complex building blocks that still behave as trivial animations significantly simplifying complex animation tasks.
+
+Adobe AIR support
+------------------
+
+Thanks to Adobe's financial sponsorship and the hard work of SitePen and Chris Barber, Dojo now provides strong support for AIR in addition to Dojo's existing integration with Google Gears via dojox.offline
+
+Dijit
+=====
+
+Themes
+------
+
+    * new theme: nihilo
+    * soria theme completed
+    * updates to tundra theme 
+
+Form widgets
+------------
+
+New widgets
+~~~~~~~~~~~
+
+    * SimpleTextArea widget - non-auto-sizing textarea widget useful inside layout containers or fixed sized screen layouts like mail.html
+    * multi-select widget (#5359) - analogous to <select multiple=true> 
+
+Features/Bug fixes
+~~~~~~~~~~~~~~~~~~
+
+    * highlighting/focus invalid fields on attempted form submit
+    * separate edit and display mode for input widgets like NumberTextBox and CurrencyTextBox. For example, when editing US$ on an en-us locale machine, the $ sign and commas disappear
+    * input widget formatting bugs fixed (use of table abandoned)
+    * reset of forms now supported (must use dijit.Form widget) 
+
+API updates
+~~~~~~~~~~~
+
+    * setAttribute() method added for all form widgets, to set attributes like disabled, readonly, tabIndex, maxlength, etc. For all widgets where the end-user sets a value (ex: by typing something in or picking a choice from a drop down), the value of the widget is still controlled/accessed via setValue()/getValue(). For widgets like Button and Checkbox (see below) you do a setAttribute("value", ...) to control the value that is submitted with the form.
+    * CheckBox.getValue() changed to make serialization/deserialization of form widgets more consistent. getValue() returns CheckBox.value or "false" depending on checked state, and setValue(Boolean) will change the checked state (rather than Checked.value)
+    * onFocus()/onBlur() handlers for all form widget (actually for all widgets) (see #5327)
+    * dijit.Form widget fixes (see #5775 for possible upgrade issues) 
+
+Layout widgets
+--------------
+
+New BorderContainer widget (note: SplitContainer/LayoutContainer are now deprecated). BorderContainer provides a simple API for the common configuration of web pages with (a subset of) left/right/top/bottom/center panes. The implementation is smaller than SplitContainer and LayoutContainer (thus your page will download faster), and also provides smoother resizing on non-IE browsers (especially firefox). In the future after fixes to TabContainer, the smoother resizing will be more apparent.
+
+Tree
+-----
+
+There were many issues with dijit.Tree in version 1.0 regarding DnD, in addition to general issues responding to updates in the data store. Dragging items within the Tree did not work at all. These issues have been fixed for 1.1. The fixes involved referential integrity changes to dojo.data.ItemFileWriteStore as well as many updates to dijit.Tree itself, including some deprecations. See the blog post for details.
+
+Dialog, TooltipDialog
+---------------------
+
+    * can contain TabContainer or other layout widgets (#5669, #5670). When putting layout widgets inside of a Dialog/TooltipDialog, it's important NOT to initially set the dialog style="display:none". You can set style="visibility:hidden" if you want to.
+    * hitting esc on a DateTextBox won't close the whole dialog (#????)
+    * when opened focus is automatically on first field (or field w/lowest tabindex) 
+
+Miscellaneous
+-------------
+    * FF3 support
+    * allow specification of tooltip positioning (above/below/before/after)
+    * Bidi: All widgets should now be BiDi-compliant and mirror properly when dir=rtl is set on the document
+    * A11y - basically everything except Grid accessible 
+
+Dojox
+=====
+
+DTL
+---
+
+Many improvements to the detail library. The upshot is that you can now declare widgets where the templates have for loops, if statements, etc. For example:
+templateString: '<div><input dojoAttachEvent="onkeyup: keyUp"><ul>{% for item in items %}<li>${oldRepl} {{ item }}</li>{% endfor %}</ul></div>'
+
+See the demos for examples.
+
+GFX
+---
+
+animations for GFX, so you can animate strokes, fills, etc. See the career test example.
+
+  *  sketch: a drawing program on the web
+
+DojoX Charting
+--------------
+
+Soften your line charts by adding a "tension" property to the object used to add a plot (.addPlot); the lower the tension, the looser the curves. For best results, try a tension around 3; see the main chart test for examples.
+
+dojox.lang.functional
+---------------------
+
+new package for functional idioms like lambda, reduce, etc.
+
+Crypto merged with encoding
+---------------------------
+The original dojox.crypto package has been merged with the newer DojoX encoding project; dojox.crypto will be entirely removed by release 1.2.
+
+DojoX FX Easing functions
+-------------------------
+Robert Penner donated his easing functions to dojo, see the dojo-moj-oe post.
+
+dojox.highlight
+---------------
+a standalone package that works with any version of Dojo > 0.9, and provides client-side syntax highlighting of <code> blocks in a number of different programming languages.
+
+dojox.data
+----------
+
+    * new dojox.data stores
+
+Storage
+-------
+
+Flash storage ported from 0.4
+
+Jaxer
+-----
+???
+
+- more NodeList animations
+
+DojoX Widgets
+-------------
+
+New widgets:
+
+    * FisheyeLight: a lightweight fisheye-like widget with much reduced code size and better performance than the old one
+    * Wizard - ported over (or rewritten) from 0.4 (like a installation wizard)
+    * ScrollPane - pane moves automatically according to mouse position
+    * DragPane - can drag contents of pane just like a PDF reader
+    * Magnifier
+    * CheckedMultiSelect - like a select with multiple=true but displays checkboxes for each item 
+
+Updated:
+
+    * Lightbox 
+
+Util (buildscripts)
+===================
+
+New build options
+-----------------
+
+Dojo 1.1 supports the following new build options:
+
+    * cssOptimize: cssOptimize=comments will strip comments and whitespace from CSS files and also inline any CSS files that are referenced by @import rules.
+    * cssImportIgnore: cssImportIgnore takes a comma separated list of file paths. These file names will not be inlined during the cssOptimize step. The file paths used in cssImportIgnore should match the file paths used in the @import calls.
+    * buildLayers: After you do a full build, if you just want to rebuild a layer or set of layers, you can pass buildLayers=[comma separated list of layer names], and just those layers will be rebuilt. If you have problems with the option, try doing a full build and trying again.
+    * symbol: symbol=short and symbol=long will inject function names for all anonymous functions, making it easier to do some debugging in environments like IE.
+    * There are new build options associated with multiversion support. See the Multiversion Book Page for more information.
+    * Rhino builds: You can now do custom builds that target Rhino as the host environment, instead of the browser. See the example build file to see how to specify the Rhino host environment.
+
+What browsers are supported by this release?
+============================================
+
+    * Internet Explorer 6.0 through 7.0
+    * Firefox 1.5 through 2.0 (Dijit supports only FireFox 2.0)
+    * Safari 3.0
+    * Opera 9.5 (Dojo Core only)
+    * Konqueror 3.5+ (Dojo Core only)
