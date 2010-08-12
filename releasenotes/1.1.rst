@@ -161,6 +161,7 @@ dojo.style()
 dojo.style now accepts a bag (ie, a hash) of values, in addition to the old behavior of accepting a single name/value as the second and third arguments:
 
   .. javascript::
+  
     dojo.style("thinger", {
        "opacity": 0.5,
        "border": "3px solid black",
@@ -251,6 +252,7 @@ DTL
 Many improvements to the detail library. The upshot is that you can now declare widgets where the templates have for loops, if statements, etc. For example:
  
   .. javascript::
+  
     templateString: '<div><input dojoAttachEvent="onkeyup: keyUp"><ul>{% for item in items %}<li>${oldRepl} {{ item }}</li>{% endfor %}</ul></div>'
 
 See the demos for examples.
