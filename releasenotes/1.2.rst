@@ -1,0 +1,540 @@
+#format dojo_rst
+
+Dojo 1.2.0 Release Notes
+========================
+
+These are the release notes for the Dojo Toolkit V1.2 release
+
+Backwards compatibility
+-----------------------
+
+Dojo Toolkit V1.2 comes with a lot of new features and some changes/deprecations. The important message is, that most of the parts in Dojo Toolkit V1.2 are backwards compatible with Dojo Toolkit V1.0 and Dojo Toolkit V1.1. There are only a few details to be considered. See the section "Migration issues" below for details.
+Dojo core and related libraries
+ 
+Keyboard events
+---------------
+
+    * New charOrCode attribute added to keyboard events (keyChar is deprecated) so that printable and non-printable keys can be handled in same switch statement.
+    * See [#13544] and [#13547] for details.
+
+Browser detection
+-----------------
+
+    * 'falsey' values have changed  for properties like dojo.isIE, dojo.isFF, dojo.isSafari.
+    * These properties are now undefined instead of zero when the user agent is not the given browser, but continue to produce version numbers when the condition is true. This should not have any impact unless a direct comparison was made with the number zero in code. Instead, it is best to simply check the value by letting JavaScript coerce the value to a boolean, e.g. if(!dojo.isIE){...}
+
+dojo.cldr
+---------
+
+    * dojo.cldr has been updated from CLDR version 1.5.1 to 1.6.
+    * Localization tables have been updated and, as a result, formatted strings or parsing of strings from the user with packages dojo.date.locale, dojo.number or dojo.currency may be different than previous releases.
+
+djConfig.addOnLoad
+------------------
+
+    * Adds a new callback via dojo.addOnLoad.
+    * Useful when Dojo is added after the page loads and djConfig.afterOnLoad is true.
+    * Supports the same arguments as dojo.addOnLoad.
+    * When using a function reference, use djConfig.addOnLoad = function(){};.
+    * For object with function name use djConfig.addOnLoad = [myObject, "functionName"];.
+    * For object with function reference use djConfig.addOnLoad = [myObject, function(){}];
+
+try/catch behavior changed with djConfig.isDebug = true
+
+    * Some modules in Dojo Core (XHR, Deferred, dojo.addOnLoad callback code) would catch errors and either just report them in the console or did another throw which made it hard to track the origin of the error. This was done to keep the code robust and running in the page. However, for development scenarios it made it hard to track down the origin of the error.
+    * Now, those modules let the original exception bubble up, stopping JavaScript execution if djConfig.isDebug is set to true.
+    * If djConfig.isDebug is set to false (or undefined) then a try/catch is used and the error is logged to the console.
+
+dojo.fx.easing
+--------------
+
+    * The former known dojox.fx.easing has been promoted to Dojo Core, and is available by dojo.require("dojo.fx.easing").
+    * An API shim is in place for users of dojox.fx.easing, and deprecation warnings are being thrown.
+
+dojo.html.set()
+---------------
+
+    * feature added to use ContentPane like functionality outside of ContentPane.
+
+==================
+Dijit Enhancements
+================== 
+
+Usability/LookAndFeel enhancements
+----------------------------------
+
+    * With V1.2 there comes major improvements to the visual polish and the usability of the Dijit component set.
+
+_Widget.attributeMap
+--------------------
+
+    * attributeMap can now handle innerHTML and class names too.
+    * You should think of attributeMap as a binding from widget attribute to DOM nodes.
+    * See the blog post for details.
+
+_Widget.placeAt
+---------------
+
+    * placeAt() is a new domNode manipulation function, which allows you to chain and place the widget's domNode (or addChild() it to another widget) easily.
+    * See: [#14602] for details.
+
+Animations
+-----------
+
+    * The default animation time for widgets was sped up.
+    * Animations are now controllable through dojo.config.defaultDuration.
+
+BorderContainer
+---------------
+
+    * Fixed layout issues with panes resulting in missing borders or double borders.
+    * New parameter gutters=true/false (default = true) to add "margin" around all panes, even non-resizable panes, separating them from other panes and from the edge of the BorderContainer itself.
+
+Buttons
+-------
+
+    * Fixed vertical alignment and various display problems.
+
+CheckBox
+--------
+
+    * Fixed rollover effect of focused checkboxes.
+    * Indicate focus on FF/Safari the same as IE (via a hatched box around the label).
+
+ComboBox
+--------
+
+    * Highlighting of search results.
+    * See also [#6461] for details.
+
+FilteringSelect
+---------------
+
+    * No longer need to put blank value in drop down list in order for user to be able to clear the value; they can clear it w/backspace or delete key now.
+      See also [#5974] for details.
+    * Highlighting of search results.
+      See: [#6461] for details.
+
+Form validation
+---------------
+
+    * Form widgets have been enhanced so that they won't turn yellow while the user is typing because the value they have is incomplete.
+      However they will still turn yellow instantly if the value they are typing isn't valid (and can't be made valid by typing more characters)... should provide good feedback to users w/out crying wolf.
+    * Also, [#14161] add onValidStateChange connect point to dijit.form.Form widget so that custom behavior like disabled submit buttons (when the form is invalid) can be created.
+
+Menu
+----
+
+    * New CheckableMenuItem class.
+      When you select this menu item a check mark appears or disappears (like a toggle button).
+
+RadioButton
+-----------
+
+    * Indicate focus on FF/Safari the same as IE (via a hatched box around the label).
+
+Tree 
+----
+
+    * Fixed issues with horizontal scrolling and made each row white-space:nowrap, so that the label doesn't wrap around.
+    * Also fixed vertical alignment issue between icons and text.
+
+TimeTextBox
+-----------
+
+    * auto-scrolling
+    * keyboard support
+    * better styling
+
+Tooltip
+-------
+
+    * made arrow smaller
+
+=====
+DojoX
+=====
+ 
+DojoX enhancements
+
+dojox.Charting
+--------------
+
+    * new tooltips
+    * new animations
+    * support for events
+    * legends for charts
+    * New charts:
+          o Bubble plotter [#13248]
+          o intersection
+          o financial plotting
+    * Theme improvements, including simpler series color generation
+    * Large set of new themes
+
+dojox.color
+-----------
+
+    * dojox.color.Palette: a 5-color palette object. Includes the following:
+          o A palette generator using a base color, based loosely on the rules at Kuler
+          o The ability to create "color transformations", using specific HSL/HSV, CMY/CMYK, or RGB color models.
+
+dojox.gfx
+---------
+
+    * dojox.gfx.VectorFont: the ability to load SVG font definitions and use them with dojox.gfx has been added.
+    * The Silverlight renderer is reworked, numerous bug fixes, it doesn't require 3rd-party files any more.
+
+dojox.html
+----------
+
+    * dojox.html.set: a generic content setter, including adding new stylesheets and evaluating scripts (was part of ContentPane loaders, now separated for generic usage)
+    * dojox.html.metrics
+          o Formerly private to dojox.gfx, now available in dojox.html
+          o Includes translation of relative CSS values (such as medium, small, x-small, etc.) to actual pixel values
+          o Translate other CSS units (such as em, pt) to pixel values
+          o Scrollbar sizes (width and height)
+          o Ability to detect font resizing
+    * dojox.html.styles
+          o Insert and remove CSS rules.
+          o Search document for style sheets.
+          o Toggle sheets on and off (based on the W3C spec).
+
+==========================
+New/Enhanced DojoX Widgets
+========================== 
+ 
+dojox.Editor
+------------
+
+    * There are new plugins in dojox.editor for creating/modifying tables and uploading images.
+
+dojox.form.BusyButton
+---------------------
+
+    * A new Button with progresss indicator built in, for indicating processing after you press the button.
+
+dojox.form.FileUploader
+-----------------------
+
+    * A new multi-file uploader that shows progress as the files are uploading.
+    * Turns most any button into a multi-file uploader by either utilizing a SWF from the new Deft project, or in the case of non_Flash users, degrades to laying a transparent FileInput over the top of it.
+
+dojox.Grid
+----------
+
+    * The new Grid 1.2 widget is available. It offers new features and performance improvements over the existing grid including
+          o better Dojo data integration,
+          o simplified layout structures, and
+          o the ability to enable editing much more easily.
+    * The new grid is called dojox.grid.DataGrid.
+    * See the new grid documentation page and the blog post for details.
+    * Note that the API for the new grid has changed, compared to the old grid (and may change more in the future).
+    * For backwards compatibility, the old grid is still there under it's original name, dojox.Grid (but there's no maintenance going on for it).
+
+dojox.image.Badge
+-----------------
+
+    * A new fun prototype widget of looping proportions.
+    * Attach images or background images, and let loop.
+    * Coming next: dojo.data readyness.
+
+dojox.layout.GridContainer
+--------------------------
+
+    * The Grid Container is a container of children elements that are placed in a kind of grid. It displays the children elements by column (ie: the children widths are fixed by the column width of the grid but the childs heights are free). Each child is movable by drag and drop inside the Grid Container. The position of other children is automatically calculated when a child is moved.
+    * You can dynamically add/remove columns.
+    * You can use keyboard to navigate and move children.
+    * See also [#6837] for details.
+
+dojox.layout.RotatorContainer
+-----------------------------
+
+    * New widget submitted by Chris Barber.
+    * Updates to RadioGroupSlide to include z-index tracking and slideFrom direction control.
+
+dojox.widget.Wizard
+-------------------
+
+    * The formerly known dojox.widget.WizardContainer (provided by Wizard.js) has been renamed to be simply "dojox.widget.Wizard".
+    * The relationship of a dojox.widget.WizardPane to a Wizard is unchanged. Simply remove the "Container" from your dojoType or class name.
+
+dojox.fx additions
+------------------
+
+    * Added module: dojox.fx.flip - providing pseudo-3d transformations on nodes, either vertically or horizontally in two forms: dojox.fx.flip (spin around center axis) and dojox.fx.flipCube (a truer 'rotation')
+    * Added GSoC FX project from Craig Laparo:
+          o added dojox.fx.split module - providing a large collection of animation creator functions for breaking nodes into small pieces and animating transitions
+          o added dojox.fx.text module - providing a series of text animations and transitions
+
+dojox.xml.widgetParser
+----------------------
+
+    * A new XML parser for widget markup. Reads XML and instantiates dojo components.
+    * Element names refer to the dojo component to be created, attributes refer to properties or event handlers.
+    * XML can be included directly within <script/> tags or externally referenced via the script tags src attribute.
+    * See also [#5766] for details.
+
+====================
+new Dojo data stores
+====================
+
+dojox.data.JsonRestStore
+------------------------
+
+    * dojox.data.JsonRestStore is a lightweight datastore implementation of a RESTful client.
+    * Provides full read, write, and notification capabilities through standards based HTTP/REST interaction with the server using GET, PUT, POST, and DELETE commands.
+    * Supports JSON Referencing so objects can contain cyclic, multiple, cross-message, cross-table, and even cross-site references, which can be used for lazy loading.
+    * JsonRestStore is a subclass of ServiceStore
+    * See also the blog post for details.
+
+dojox.data.CouchDBRestStore
+---------------------------
+
+    * dojox.data.CouchDBRestStore is an extension of JsonRestStore to handle CouchDB's idiosyncrasies, special features, and deviations from standard HTTP Rest.
+    * NOTE: CouchDB is not designed to be run on a public facing network. There is no access control on database documents, and you should NOT rely on client side control to implement security.
+    * CouchDBRestStore is a subclass of JsonRestStore
+
+dojox.data.GoogleFeedStore
+--------------------------
+
+    * A Google AJAX API powered data store for retrieving RSS and Atom feeds from Google.
+    * The feeds can come from any source, which is specified in the "url" parameter of the query passed to the "fetch" function.
+
+dojox.data.GoogleSearchStore
+----------------------------
+
+    * Data stores to interface Google's AJAX search services.
+    * There are many subclasses of this store for particular types of searches:
+          o dojox.data.GoogleWebSearchStore
+          o dojox.data.GoogleBlogSearchStore
+          o dojox.data.GoogleLocalSearchStore
+          o dojox.data.GoogleVideoSearchStore
+          o dojox.data.GoogleNewsSearchStore
+          o dojox.data.GoogleBookSearchStore
+          o dojox.data.GoogleImageSearchStore
+    * Includes a preconfigured SMD for use with dojox.rpc.Service
+
+dojox.data.PersevereStore
+-------------------------
+
+    * dojox.data.PersevereStore is an extension of JsonRestStore to Persevere's special features.
+    * PersevereStore is a subclass of JsonRestStore
+    * See also the blog post for details.
+
+dojox.data.S3Store
+------------------
+
+    * dojox.data.S3Store is an extension of JsonRestStore to handle Amazon's S3 service using JSON data
+    * S3Store is a subclass of JsonRestStore
+    * See also the blog post for details.
+
+dojox.data.ServiceStore
+-----------------------
+
+    * ServiceStore and it's subclasses are a dojo.data implementation for any webservice.
+    * Fetches are routed through the service and the returned results are used as the data behind the API.
+    * See also the blog post and [#5987] for details.
+
+=====================
+new Datastore Helpers
+=====================
+
+dojox.data.ClientFilter
+-----------------------
+
+    * ClientFilter is an abstract class that can be used by remote data services for doing partial client side filtering, sorting, and paging, and can utilize these facilities for caching previous fetch results and querying the cached results for subsequent "narrower" queries.
+    * ClientFilter can update previous fetch result sets in response to data change notifications. This allows widgets to determine if and how to update a UI after a data notification.
+    * The ClientFilter is used by JsonRestStore/ServiceStore if it has been loaded.
+
+dojox.json.query
+----------------
+
+    * JSONQuery is a new module intended to succeed and improve upon the JSONPath module introduced in Dojo 1.1.
+    * JSONQuery provides a comprehensive set of data querying tools including filtering, recursive search, sorting, mapping, range selection, and flexible expressions with wildcard string comparisons and various operators.
+    * See the blog post for details.
+
+dojox.json.ref
+--------------
+
+    * This module provides serialization and parsing of data structures with circular, multiple, cross-message, and cross-domain references using JSON Referencing.
+    * This module supports path-based, id-based, and combined referencing techniques, and can be used for indexing purposes for data stores (JsonRest/JsonRestStore utilizes this module).
+    * See the blog post for details.
+
+dojox.json.schema
+-----------------
+
+    * This module provides JSON Schema validation.
+    * This can be used by data stores (JsonRestStore will use the validator if it has been loaded and a schema has been defined) to maintain data integrity.
+    * See the blog post for details.
+
+dojox.rpc.OfflineRest/dojox.rpc.LocalStorageRest
+------------------------------------------------
+
+    * dojox.rpc.OfflineRest provides auto-synchronization and caching of data for REST based applications. In particular, it is built for JsonRestStore to be used in offline mode, and it will save all data changes locally and synchronize/persist the changes to the server when connectivity is available.
+
+==========================
+new DojoX Projects/Modules
+==========================
+
+dojox.analytics.Urchin
+----------------------
+
+    * A Google-analytics helper, which supports lazy-loading the Google Analytics API at any point during a page lifecycle.
+    * Allows you to post-onload include Google Analytics helper, and track Ajax-y pages via a simple API, with a very small overhead.
+
+dojox.av
+--------
+
+    * New project for Audio/Video elements
+    * dojox.av.FLVideo: a player for Flash video files
+    * dojox.av.widget.Player: Dijit-based object for playing Flash media
+
+dojox.embed
+-----------
+
+    * A set of utilities that allow you to load/include Objects such as Flash and Quicktime.
+    * dojox.embed.Flash for Flash movies
+          o Create proxy information for Flash movies implementing ExternalInterface through dojox.embed.Flash.proxy
+    * dojox.embed.Quicktime for Quicktime movies
+    * dojox.embed.Object—a Dijit that can be used via markup for any dojox.embed objects available.
+
+dojox.io.windowName
+-------------------
+
+    * Provides secure cross-domain request capability. Sends a request using an iframe (POST or GET) and reads the response through the frame's window.name.
+
+dojox.io.xhrPlugins
+-------------------
+
+    * This is a registry for creating alternate XHR handlers, for example you can register to use IE8's XDomainRequest or a proxy server to handle cross-domain requests.
+
+dojox.lang.aspect
+-----------------
+
+    * dojox.lang.aspect is a new AOP library module for before/around/etc advice and other AOP features.
+    * See the blog post for details.
+
+dojox.lang.observable
+---------------------
+
+    * Provides a form of getter/setter support to objects. Observable objects can be created such that all property reads, writes, and method calls will trigger listener functions so that you can create APIs where property interaction can be controlled and monitored.
+    * This relies on VBScript hacks for IE and is somewhat limited in functionality.
+
+dojox.secure.capability
+-----------------------
+
+    * This provides object-capability JavaScript validation.
+    * This is a validator to run before eval to ensure that a script can't access or modify any objects (like global objects) outside of those specifically provided to it.
+
+dojox.secure.DOM
+----------------
+
+    * Provides a DOM facade that restricts access to a specified subtree of the DOM.
+    * The DOM facade uses getters/setters and lettables to emulate the DOM API.
+
+dojox.secure.sandbox
+--------------------
+
+    * Provides support for loading web pages, JSON, and scripts from other domains using XHR (and XHR plugins) with a safe subset library and sandboxed access to the DOM.
+
+====
+Util
+====
+
+stripConsole
+------------
+
+    * There is a new build option that will strip console.* calls in all JavaScript files that are in the build.
+          o stripConsole=normal will strip all console.* calls except console.warn and console.error.
+          o stripConsole=all will strip all console.* calls.
+          o Warning: If the use of this option leads to a OutOfMemoryError, then look at [#7698] for a solution/more details.
+
+DOH: unit test framework
+------------------------
+
+    * A doh.robot package has been added to allowing writing of unit tests for visual components like DnD and widgets.
+    * There are also a few examples of those tests within dijit/tests/form/robot, etc.
+
+================
+Migration issues
+================
+
+This sections details changes you might need to make if upgrading your app from Dojo Toolkit V1.1 to Dojo Toolkit V1.2
+
+Links to download files or execute javascript (dojo.addOnUnload() vs. dojo.addOnWindowUnload())
+
+    * Callbacks registered via dojo.addOnUnload() were previously not always fired in IE. This is now fixed, but it exposed a problem with clicking on links to download files or javascript: links -- those types of links trigger the window.onbeforeunload event, which is what triggers dojo.addOnUnload callbacks. However those types of links do not actually destroy the page. So you should be careful doing destructive operations in dojo.addOnUnload().
+    * If you need to do things like clean up circular reference to prevent IE leaks (over and above what dojo already does for you), then you can use the dojo.addOnWindowUnload() (new in Dojo 1.2), which triggers the callbacks on window.onunload. It works the same as dojo.addOnUnload, but it just fires on window.onunload, when the page is really unloading. Be careful trying to do DOM and JavaScript property access during a dojo.addOnWindowLoad() callback -- the state of the page may not be stable.
+
+Editor
+------
+
+    * Use with TEXTAREA deprecated for security reasons; use DIV instead.
+    * See also [#2140] for details.
+
+Widget.attr()
+-------------
+
+    * Widget.attr() is now the standard interface for setting/getting all widgets attributes.
+    * Old methods like setValue(), setAttribute(), and setTitle() still exist but have been deprecated.
+    * Read the blog post for details, but basically Widget.attr() works like dojo.attr().
+
+dijit._Widget.destroy()
+-----------------------
+
+    * There was technically an API change around _Widget's .destroy() method. Previously, it had documented a "finalize" parameter that did nothing. We've changed that parameter to become "preserveDom", a boolean to toggle weather destroy() will remove the domNode associated with the _Widget(this.domNode). Pass "true" and the dom will be preserved.
+    * Included is a simple test, and we've updated the FisheyeLite test to show how you can effectively start and stop the effect using .destroy().
+    * See also [#6668] for details.
+
+dijit.form.TextBox.onkeyup()
+----------------------------
+
+    * The TextBox onkeyup() method was renamed to onKeyUp for consistency across widgets. Widget events should always be mixed case while native events should always be lower case. This change also affects all TextBox subclasses such as dijit.form.NumberTextBox. Note that users using onKeyUp to listen for changes may find that paste operations are missed. It is recommended that onChange events be monitored instead, possibly coupled with the attribute intermediateChanges set to true.
+
+dojo.isGears moved to dojo.gears.available
+------------------------------------------
+
+    * Gears detection was moved to the dojo.gears module resource, so do dojo.require("dojo.gears") to get it. Then, use dojo.gears.available to get a boolean result that tells you if Gears is installed.
+
+dojo.xhr
+--------
+
+calls that use handleAs: "json-comment-filtered" are deprecated
+
+    * If you use handleAs: "json-comment-filtered" you will get a warning in the console about it.
+    * To suppress the warning, set djConfig.useCommentedJson to true.
+    * This also means djConfig.usePlainJson flag has been removed, since plain JSON is preferred, and no warning is given now for using it.
+
+dijit.layout.BorderContainer
+----------------------------
+adds margins around all panes
+ 
+    * The default value of the new parameter "gutters" is "true" so that it adds "margin" around all panes, even non-resizable panes, separating them from other panes and from the edge of the BorderContainer itself.
+
+some dojox.widgets moved to dojox.form
+--------------------------------------
+
+    * The following form-based widgets have been moved to dojox.form:
+          o dojox.form.FileInput
+          o dojox.form.MultiComboBox
+          o dojox.form.Rating
+          o dojox.form.TimeSpinner
+    * The dojox.widget project uses a convention for its resources like: dojox/widget/WidgetName/WidgetName.css ... When migrating, you will need to adjust your path to the external CSS files: FileInput.css and Rating.css both now reside in dojox/form/resources/ ...
+    * These widgets have been moved without deprecation into the dojox.form project as a permanent home more suited to the functionality.
+
+Change Log/List of fixed bugs
+-----------------------------
+
+    * The full change log is available on bugs.dojotoolkit.org.
+    * Here is the list of bugs fixed in 1.2.
+    * Note that many of those bug reports aren't bugs in 1.0 or 1.1, but rather just refactoring work, enhancements, or bugs that appeared after the 1.1 release.
+
+============================================
+What browsers are supported by this release?
+============================================
+
+    * Internet Explorer 6.0 through 7.0
+    * Firefox 1.5 through 3.0 (Dijit supports only FireFox 2+)
+    * Safari 3.1
+    * Opera 9.6 (Dojo Core only)
+    * Konqueror 3.5+ (Dojo Core only)
