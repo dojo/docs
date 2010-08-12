@@ -3,6 +3,9 @@
 Dojo 1.2.0 Release Notes
 ========================
 
+.. contents::
+   :depth: 3
+
 These are the release notes for the Dojo Toolkit V1.2 release
 
 Backwards compatibility
