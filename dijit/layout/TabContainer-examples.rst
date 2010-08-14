@@ -70,7 +70,7 @@ Tabs at the right, no strip
 
 Left Tabs
 ---------
-Tabs at the left, with a strip 
+Tabs at the left, with a strip.   Note that left, right, and bottom tabs don't work in conjunction with doLayout=false.
 
 .. cv-compound::
 
@@ -99,7 +99,7 @@ Tabs at the left, with a strip
 
 Bottom Tabs
 -----------
-Tabs at the bottom,with a strip 
+Tabs at the bottom,with a strip.   Note that left, right, and bottom tabs don't work in conjunction with doLayout=false.
 
 .. cv-compound::
 
