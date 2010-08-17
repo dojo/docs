@@ -123,6 +123,7 @@ Programmatic example
                            }, urlCell);
           dojo.create("a", {
                              href: store.getValue(item, "blogUrl"),
+                             style: {paddingLeft: "5px"},
                              innerHTML: " Blog Link"
                            }, urlCell);
         })
