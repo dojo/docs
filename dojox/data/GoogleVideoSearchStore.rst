@@ -117,6 +117,7 @@ Programmatic example
           var urlCell = dojo.create("td", {}, row);
           var link = dojo.create("a", {
                              href: store.getValue(item, "url"),
+                             target: "_blank"
                            }, urlCell);
           var thumbnail = dojo.create("img", {
                              src: store.getValue(item, "tbUrl")
