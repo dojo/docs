@@ -43,10 +43,14 @@ The pattern of using the GoogleLocalSearchStore is
   * **titleNoFormatting** The page title in plain text. This is the default field used as the label.
   * **content** A snippet of information about the page
   * **url** The URL for the item.
-  * **unescapedUrl** The URL for the item, with URL escaping. This is often more readable.
-  * **visibleUrl** The URL with no protocol specified
-  * **cacheUrl** The URL to the copy of the document cached by Google
-  * **estimatedResultCount** (aggregated per-query) estimated number of results
+  * **lat** The latitude for the place.
+  * **lng** The longitude for the place.
+  * **streetAddress** The street address
+  * **city** The city in which the place is located.
+  * **region** The region in which the place is located.
+  * **country** The country in which the place is located.
+  * **phoneNumbers** Phone numbers associated with this address. Can be one or more.
+  * **ddUrl** A URL that can be used to provide driving directions from the center of the search results to this search results
 
 .. code-block :: javascript
  :linenos:
