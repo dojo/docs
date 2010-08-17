@@ -122,6 +122,8 @@ Programmatic example
 
         // Show the table
         dojo.style(table, "display", "");
+
+        console.log("Got items ", items);
       
         dojo.forEach(items, function(item, index){
           try {
