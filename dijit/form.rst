@@ -270,3 +270,9 @@ Using the classes defined on the DOM node you can affect the styling of any sub-
   .dijitButtonFocused .dijitButtonContents {
        color: red;
    }
+
+========
+See also
+========
+
+* `Dive into Dijit Forms <http://www.sitepen.com/blog/2010/08/11/dive-into-dijit-forms/>`_
