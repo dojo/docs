@@ -169,7 +169,7 @@ Programmatic example
 
     <div>
       <span>Enter Search Text</span>
-      <input type="text" value="dojo ajax toolkit">
+      <input type="text" value="Central Park, New York">
       <button onclick="doSearch()">Search</button>
     </div>
 
