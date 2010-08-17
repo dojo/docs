@@ -106,19 +106,24 @@ Programmatic example
 
         // Show the table
         dojo.style(table, "display", "");
-
+        var emptyArr = [];
       
         dojo.forEach(items, function(item, index){
           var row = dojo.create("tr", {}, tableBody);
   
           var numberCell = dojo.create("td", {innerHTML: index}, row);
 
-          var titleCell = dojo.create("td", {innerHTML: store.getValue(item, "titleNoFormatting")}, row);
+          var authors = store.getValue(item, "authors") || emptyArr;
+
+          dojo.create("td", {innerHTML: store.getValue(item, "titleNoFormatting")}, row);
+          dojo.create("td", {innerHTML: authors.join(", ") }, row);
+          dojo.create("td", {innerHTML: store.getValue(item, "pageCount") }, row);
 
           var urlCell = dojo.create("td", {}, row);
           dojo.create("a", {
                              href: store.getValue(item, "unescapedUrl"),
-                             innerHTML: store.getValue(item, "unescapedUrl")
+                             innerHTML: "Link",
+                             target: "_blank"
                            }, urlCell);
         })
       };
@@ -151,7 +156,9 @@ Programmatic example
       <thead>
         <th>#</th>
         <th>Title</th>
-        <th>URL</th>
+        <th>Authors</th>
+        <th>Page Count</th>
+        <th>Link</th>
       </thead>
       <tbody>
       </tbody>
