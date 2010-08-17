@@ -101,24 +101,33 @@ addPlot() accepts 2 parameters, a name and an arguments array. The name is impor
 Available 2D chart types include:
 
  * Line charts:
+
    * **Default** - Universal line chart capable to draw lines, fill areas under them, and placing markers at data points. This plot type is used if no plot type was specified when adding it to a chart.
    * **Lines** - Basic line chart. Uses Default.
    * **Areas** - Area under data line(s) will be filled. Uses Default.
    * **Markers** - Lines with markers. Uses Default.
    * **MarkersOnly** - Markers, sans lines. Uses Default.
+
  * Stacked line charts:
+
    * **Stacked** - Data sets charted in relation to the previous data set. Extension of Default.
    * **StackedLines** - Stacked data sets using lines. Uses Stacked.
    * **StackedAreas** - Stacked data sets with filled areas under chart lines. Uses Stacked.
+
  * Bars:
+
    * **Bars** - Horizontal bars.
    * **ClusteredBars** - Horizontal bars with clustered data sets. Uses Bars.
    * **StackedBars** - Stacked data sets with horizontal bars. Uses Bars.
+
  * Columns:
+
    * **Columns** - Vertical bars.
    * **ClusteredColumns** - Vertical bars with clustered data sets. Uses Columns.
    * **StackedColumns** - Stacked data sets with vertical bars. Uses Columns.
+
  * Miscellaneous:
+
    * **Pie** - Goes great with punch!
    * **Scatter** - Similar to MarkerOnly, yet capable to chart using gradient fields.
    * **Grid** - For adding a grid layer to your chart.
@@ -867,6 +876,8 @@ TODO: How to use animations.
 See also
 ========
 
+* `Dive into Dojo Charting <http://www.sitepen.com/blog/2010/07/13/dive-into-dojo-charting/>`_
+* `Dive into Dojo Chart Theming <http://www.sitepen.com/blog/2010/07/26/dojo-chart-theming/>`_
 * `A Beginner’s Guide to Dojo Charting, Part 1 of 2 <http://www.sitepen.com/blog/2008/06/06/a-beginners-guide-to-dojo-charting-part-1-of-2/>`_
 * `A Beginner’s Guide to Dojo Charting, Part 2 of 2 <http://www.sitepen.com/blog/2008/06/16/a-beginners-guide-to-dojo-charting-part-2-of-2/>`_
 * `Dojo Charting: Widgets, Tooltips, and Legend <http://www.sitepen.com/blog/2008/06/12/dojo-charting-widgets-tooltips-and-legend/>`_
