@@ -122,11 +122,9 @@ Programmatic example
 
         // Show the table
         dojo.style(table, "display", "");
-
-        console.log("Got items ", items);
       
         for(var index in items){
-          try {
+          
           var item = items[index];
           var row = dojo.create("tr", {}, tableBody);
   
@@ -150,9 +148,7 @@ Programmatic example
           dojo.create("img", {
                              src: store.getValue(item, "staticMapUrl")
                            }, mapLink );
-          }catch(e){
-            console.log("Caught ", e, " with item ", item);
-          }
+          
         }
       };
 
