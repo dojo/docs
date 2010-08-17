@@ -119,12 +119,14 @@ Programmatic example
           var urlCell = dojo.create("td", {}, row);
           dojo.create("a", {
                              href: store.getValue(item, "postUrl"),
-                             innerHTML: "Post Link "
+                             innerHTML: "Post Link ",
+                             target: "_blank"
                            }, urlCell);
           dojo.create("a", {
                              href: store.getValue(item, "blogUrl"),
                              style: {paddingLeft: "5px"},
-                             innerHTML: " Blog Link"
+                             innerHTML: " Blog Link",
+                             target: "_blank"
                            }, urlCell);
         })
       };
