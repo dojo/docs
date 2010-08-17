@@ -23,7 +23,7 @@ dojox.data.GoogleLocalSearchStore is a read only data store that can be used to 
 Usage
 =====
 
-The pattern of using the GoogleSearchStore is
+The pattern of using the GoogleLocalSearchStore is
  * Instantiate the class, passing in whatever variables required, all of which are optional.  These include:
 
   * **label** The argument to use as the label.  This is used when the **getLabel** function is called to retrieve the correct part of the data item.  You generally shouldn't set this.
@@ -31,7 +31,12 @@ The pattern of using the GoogleSearchStore is
   * **lang** The language you want the results returned in.  This defaults to the browsers' language.
   * **urlPreventCache** Specifies whether or not to forcibly prevent caching of results.  This defaults to true.
 
- * Call the **fetch** method, passing it the search query and the function to call when the query is completed.  The only supported attribute of the query is **text**, the text to search for.
+ * Call the **fetch** method, passing it the search query and the function to call when the query is completed.  The query can accept up to three attributes
+
+  * **text** The text to search for.
+  * **centerLatLong** Comma-separated lat & long for the center of the search (e.g. "48.8565,2.3509")
+  * **searchSpan** Comma-separated lat & long degrees indicating the size of the desired search area (e.g. "0.065165,0.194149")
+
  * Iterate over the results, calling the **getValue** function to retrieve values from each result item.  The pieces of data in each result item are
 
   * **title** The page title in HTML format
