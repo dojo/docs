@@ -51,6 +51,8 @@ The pattern of using the GoogleLocalSearchStore is
   * **country** The country in which the place is located.
   * **phoneNumbers** Phone numbers associated with this address. Can be one or more.
   * **ddUrl** A URL that can be used to provide driving directions from the center of the search results to this search results
+  * **ddUrlToHere** A URL that can be used to provide driving directions from this search result to a user specified location
+  * **staticMapUrl** A URL to a static image showing the location of the place on a map
 
 .. code-block :: javascript
  :linenos:
