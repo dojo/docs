@@ -102,7 +102,8 @@ Programmatic example
       var callbackFunction = function(items /* Array */) {
 
         var table = dojo.byId("resultTable");
-        var tableBody = table.tBodies[0];      
+        var tableBody = table.tBodies[0];
+        dojo.empty(tableBody);
 
         // Show the table
         dojo.style(table, "display", "");
