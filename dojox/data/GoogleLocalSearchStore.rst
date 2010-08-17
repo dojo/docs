@@ -148,7 +148,7 @@ Programmatic example
                              src: store.getValue(item, "staticMapUrl")
                            }, mapLink );
           }catch(e){
-            console.log("Caught ", e);
+            console.log("Caught ", e, " with item ", item);
           }
         })
       };
