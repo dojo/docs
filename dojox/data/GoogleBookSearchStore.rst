@@ -115,6 +115,8 @@ Programmatic example
 
           var authors = store.getValue(item, "authors") || emptyArr;
 
+          console.log("authors = ", authors);
+
           dojo.create("td", {innerHTML: store.getValue(item, "titleNoFormatting")}, row);
           dojo.create("td", {innerHTML: authors.join(", ") }, row);
           dojo.create("td", {innerHTML: store.getValue(item, "pageCount") }, row);
