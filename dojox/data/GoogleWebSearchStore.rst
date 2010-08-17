@@ -1,7 +1,7 @@
 #format dojo_rst
 
-dojox.data.GoogleSearchStore
-============================
+dojox.data.GoogleWebSearchStore
+===============================
 
 :Status: Draft
 :Version: 1.0
@@ -104,8 +104,7 @@ Programmatic example
       var callbackFunction = function(items /* Array */) {
 
         var table = dojo.byId("resultTable");
-        var tableBody = table.tBodies[0];
-        dojo.empty(tableBody);
+        var tableBody = table.tBodies[0];      
 
         // Show the table
         dojo.style(table, "display", "");
