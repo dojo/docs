@@ -99,7 +99,7 @@ Programmatic example
 
       var store = new dojox.data.GoogleSearchStore();
 
-      var query = {text: "dojo ajax toolkit"};
+      var query = {text: dojo.byId("searchInput").value};
 
       var callbackFunction = function(items /* Array */) {
 
@@ -145,7 +145,7 @@ Programmatic example
 
     <div>
       <span>Enter Search Text</span>
-      <input type="text" value="dojo ajax toolkit">
+      <input type="text" value="dojo ajax toolkit" id="searchInput">
       <button onclick="doSearch()">Search</button>
     </div>
 
