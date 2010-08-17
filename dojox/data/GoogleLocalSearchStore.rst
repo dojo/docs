@@ -124,6 +124,7 @@ Programmatic example
         dojo.style(table, "display", "");
       
         dojo.forEach(items, function(item, index){
+          try {
           var row = dojo.create("tr", {}, tableBody);
   
           var numberCell = dojo.create("td", {innerHTML: index}, row);
@@ -146,6 +147,9 @@ Programmatic example
           dojo.create("img", {
                              src: store.getValue(item, "staticMapUrl")
                            }, mapLink );
+          }catch(e){
+            console.log("Caught ", e);
+          }
         })
       };
 
