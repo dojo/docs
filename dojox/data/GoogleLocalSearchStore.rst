@@ -110,18 +110,18 @@ Programmatic example
 
     function doSearch() {
 
-      var store = new dojox.data.GoogleSearchStore();
+      var store = new dojox.data.GoogleLocalSearchStore();
 
-      var query = {text: "dojo ajax toolkit"};
+      var query = {text: dojo.byId("searchInput").value};
 
       var callbackFunction = function(items /* Array */) {
 
         var table = dojo.byId("resultTable");
-        var tableBody = table.tBodies[0];      
+        var tableBody = table.tBodies[0];
+        dojo.empty(tableBody);
 
         // Show the table
         dojo.style(table, "display", "");
-
       
         dojo.forEach(items, function(item, index){
           var row = dojo.create("tr", {}, tableBody);
@@ -132,9 +132,20 @@ Programmatic example
 
           var urlCell = dojo.create("td", {}, row);
           dojo.create("a", {
-                             href: store.getValue(item, "unescapedUrl"),
-                             innerHTML: store.getValue(item, "unescapedUrl")
+                             href: store.getValue(item, "ddUrl"),
+                             innerHTML: "Directions",
+                             target: "_blank"
                            }, urlCell);
+
+
+          var mapCell = dojo.create("td", {}, row);
+          var mapLink = dojo.create("a", {
+                             href: store.getValue(item, "url"),                             
+                             target: "_blank"
+                           }, mapCell );
+          dojo.create("img", {
+                             src: store.getValue(item, "staticMapUrl")
+                           }, mapLink );
         })
       };
 
