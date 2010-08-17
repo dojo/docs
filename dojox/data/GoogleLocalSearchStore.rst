@@ -169,7 +169,7 @@ Programmatic example
 
     <div>
       <span>Enter Search Text</span>
-      <input type="text" value="Central Park, New York">
+      <input type="text" value="Central Park, New York" id="searchInput">
       <button onclick="doSearch()">Search</button>
     </div>
 
