@@ -53,15 +53,20 @@ The pattern of using the GoogleLocalSearchStore is
   * **ddUrl** A URL that can be used to provide driving directions from the center of the search results to this search results
   * **ddUrlToHere** A URL that can be used to provide driving directions from this search result to a user specified location
   * **staticMapUrl** A URL to a static image showing the location of the place on a map
+  * **viewport** Recommended viewport for the query results (same for all results in a query).  This contains the following
+
+   * **center** contains lat, lng properties
+   * **span** lat, lng properties for the viewport span
+   * **ne, sw** lat, lng properties for the viewport corners
 
 .. code-block :: javascript
  :linenos:
 
  <script type="text/javascript">
   dojo.require("dojox.data.GoogleSearchStore"); 
-  var store = new dojox.data.GoogleSearchStore();
+  var store = new dojox.data.GoogleLocalSearchStore();
 
-  var query = {text: "dojo ajax toolkit"};
+  var query = {text: "central park, new york"};
 
   var callbackFunction = function(items /* Array */) {
     
@@ -69,8 +74,8 @@ The pattern of using the GoogleLocalSearchStore is
     dojo.forEach(items, function(item){
       console.log ("Title is " + store.getValue(item, "title"));
       console.log ("Url is " + store.getValue(item, "unescapedUrl"));
-      console.log ("Summary Content is " + store.getValue(item, "content"));
-      console.log ("Cached page is at Url is " + store.getValue(item, "cacheUrl"));
+      console.log ("Directions are at  " + store.getValue(item, "ddUrl"));
+      console.log ("Static map available at " + store.getValue(item, "staticMapUrl"));
     })
   };
 
