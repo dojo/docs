@@ -125,8 +125,9 @@ Programmatic example
 
         console.log("Got items ", items);
       
-        dojo.forEach(items, function(item, index){
+        for(var index in items){
           try {
+          var item = items[index];
           var row = dojo.create("tr", {}, tableBody);
   
           var numberCell = dojo.create("td", {innerHTML: index}, row);
@@ -152,7 +153,7 @@ Programmatic example
           }catch(e){
             console.log("Caught ", e, " with item ", item);
           }
-        })
+        }
       };
 
       var onErrorFunction = function() {
