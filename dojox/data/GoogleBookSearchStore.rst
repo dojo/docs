@@ -114,8 +114,9 @@ Programmatic example
           var numberCell = dojo.create("td", {innerHTML: index}, row);
 
           var authors = store.getValue(item, "authors") || emptyArr;
-
-          console.log("authors = ", authors);
+          if(!dojo.isArray(authors)){
+            authors = [authors];
+          }
 
           dojo.create("td", {innerHTML: store.getValue(item, "titleNoFormatting")}, row);
           dojo.create("td", {innerHTML: authors.join(", ") }, row);
