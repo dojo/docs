@@ -1,7 +1,7 @@
 #format dojo_rst
 
 dojox.data.GoogleImageSearchStore
-===============================
+=================================
 
 :Status: Draft
 :Version: 1.0
