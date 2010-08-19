@@ -37,7 +37,7 @@ Limitations
       var editor = dijit.byId("myEditor");
 
       editor .onLoadDeferred.addCallback(function(){
-        editor.atte("value", "<b>This is new content.</b>");
+        editor.attr("value", "<b>This is new content.</b>");
       });
     });
   </script>
@@ -252,7 +252,7 @@ There are several additional editor plugins provided by dijit and are listed out
 +---------------------------------------------+-----------------+----------------------------------------------------------------------+
 |**Plugin**                                   |**Short Name(s)**|**Description**                                                       |
 +---------------------------------------------+-----------------+----------------------------------------------------------------------+
-|dijit._editor.plugins.ToggleDir              |toggleDir        |A toolbar button for toggling the eidtor contents between             |
+|dijit._editor.plugins.ToggleDir              |toggleDir        |A toolbar button for toggling the editor contents between             |
 |                                             |                 |Right-To-Left and Left-ToRight                                        |
 +---------------------------------------------+-----------------+----------------------------------------------------------------------+
 |dijit._editor.plugins.TextColor              |foreColor and    |A plugin that provides two actions for altering text color in the     |
@@ -334,6 +334,26 @@ DojoX (Dojo eXtensions) contains even more plugins for improving the capabilitie
 |dojox.editor.plugins.FindReplace             |findreplace           |A plugin that provides a find and replace togglable toolbar to the    |
 |                                             |                      |editor.  This plugin is experimental.                                 |
 |                                             |                      |**New to Dojo toolkit 1.4.**                                          |
++---------------------------------------------+----------------------+----------------------------------------------------------------------+
+|dojox.editor.plugins.PasteFromWord           |pastefromword         |A plugin that provides paste window for content from Microsoft Word   |
+|                                             |                      |and similar formats and tries to filter out bad classnames, styles,   |
+|                                             |                      |and so on.                                                            |
+|                                             |                      |**New to Dojo toolkit 1.5.**                                          |
++---------------------------------------------+----------------------+----------------------------------------------------------------------+
+|dojox.editor.plugins.InsertAnchor            |insertanchor          |A simple plugin for inserting anchors (named hash points) in the page |
+|                                             |                      |**New to Dojo toolkit 1.5.**                                          |
++---------------------------------------------+----------------------+----------------------------------------------------------------------+
+|dojox.editor.plugins.CollapsibleToolbar      |collapsibletoolbar    |A simple plugin for allowing the collapse of the top button tooolbar  |
+|                                             |                      |for more editor space.                                                |
+|                                             |                      |**New to Dojo toolkit 1.5.**                                          |
++---------------------------------------------+----------------------+----------------------------------------------------------------------+
+|dojox.editor.plugins.TextColor               |foreColor             |A varient of the dijit._editor.plugins.TextColor that uses the        |
+|                                             |hiliteColor           |dojox.widget.ColorPicker as the color selector.                       |
+|                                             |                      |**New to Dojo toolkit 1.5.**                                          |
++---------------------------------------------+----------------------+----------------------------------------------------------------------+
+|dojox.editor.plugins.Blockquote              |blockquote            |A plugin for marking a section as a quite by wrapping it in a         | 
+|                                             |                      |blockquote tag.                                                       |
+|                                             |                      |**New to Dojo toolkit 1.5.**                                          |
 +---------------------------------------------+----------------------+----------------------------------------------------------------------+
 
 
