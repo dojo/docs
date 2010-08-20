@@ -207,6 +207,7 @@ dijit.Dialog
 
 * Multiple dialogs can now be shown (with one dialog launching over another).
 * Dialog supports aria-describedby to make it more accessible to screen readers.
+* Dialog now hides via ``display: none`` rather than using visibility and positioning.  While this should not cause problems within Dijit itself, it is possible it may lead to surprises in any custom code that may have relied on computed position of elements within a hidden Dialog.
 * See also `dijit.Dialog <dijit/Dialog>`_
 
 dijit.Menu
