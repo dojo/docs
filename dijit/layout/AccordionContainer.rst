@@ -99,3 +99,11 @@ Navigate into page                            Tab
 Navigate to next page                         Ctrl + page down, ctrl + tab (except IE7)
 Navigate to previous page                     Ctrl + page up
 ==========================================    =================================================
+
+
+
+=============
+Blueprint
+=============
+
+The following is a blueprint for creating an accordion container widget:
