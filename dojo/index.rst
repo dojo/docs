@@ -606,6 +606,10 @@ Dojo Core
 
 * `dojo.jaxer <dojo/jaxer>`_
 
+* `dojo.NodeList-data <dojo/NodeList-data>`_
+
+  Adds a .data() and .removeData() API to `dojo.query <dojo/query>`_ operations
+
 * `dojo.NodeList-fx <dojo/NodeList-fx>`_
 
   Adds dojo.fx animation support to dojo.query()
