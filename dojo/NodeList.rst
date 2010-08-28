@@ -196,7 +196,17 @@ To keep the Base size to a minimum, some NodeList functionality is provided by e
     dojo.query(".readyToFade").fadeIn().play();
   });
 
-The NodeList animations do *not* return the NodeList instance. Instead, they return the created ``_Animation`` object, which you have to explictly call ``.play()`` on.
+The NodeList animations do *not* return the NodeList instance. Instead, they return the created ``Animation`` object, which you have to explictly call ``.play()`` on.
+
+Additional Extensions
+---------------------
+
+  * `dojo.NodeList-data <dojo/NodeList-data>`_ - provides ``data`` and ``removeData`` APIs
+  * `dojo.NodeList-traverse <dojo/NodeList-traverse>`_ - provides a variety of DOM Traversal APIs, like ``parents`` and ``closest``
+  * `dojo.NodeList-manipulate <dojo/NodeList-manipulate>`_ - additional DOM Manipulation APIs
+  * `dojo.NodeList-fx <dojo/NodeList-fx>`_ - Provides `dojo.Animation <dojo/Animation>`_ support to NodeLists
+  * `dojo.NodeList-html <dojo/NodeList-html>`_ - Advanced content-setter functionality (with `dojo.parser <dojo/parser>`_ support. 
+
 
 ===========
 API Details
