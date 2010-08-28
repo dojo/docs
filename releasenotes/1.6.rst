@@ -82,6 +82,14 @@ See `ticket #11490 <http://bugs.dojotoolkit.org/ticket/11490>`_ for the full dis
   * Existing behavior has been preserved until 2.0, there should be no backward compatibility issues between 1.6 and previous 1.x Dojo versions.
 
 
+Performance boost
+-----------------
+Two new methods are added to Dojo core, which can be used to improve performance when using IE6 and IE7.
+
+  * dojo.replaceClass is a public method that replaces one or more CSS classes with one or more new CSS classes.  This method modified the className property on a DOM node once rather than twice, resulting in better performance.
+
+  * dojo._getMarginSize, a private method that returns the width and height of a node, and is a lightweight alternative to dojo.marginBox.
+
 =====
 Dijit
 =====
