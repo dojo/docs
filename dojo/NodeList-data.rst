@@ -23,7 +23,7 @@ Using data()
 
 The API to *data* is very simple. Each node has some arbitrary object hash of data items. Set a data item by key by passing a string key name, and some data to set at that position.
 
-.. js::
+.. javascript::
 
   dojo.query("#mynode").data("datakey", "This is the data I'm setting");
 
