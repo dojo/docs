@@ -86,6 +86,14 @@ See `ticket #11490 <http://bugs.dojotoolkit.org/ticket/11490>`_ for the full dis
 Dijit
 =====
 
+Performance boost
+-----------------
+Many performance tweaks have been made to increase performance on IE6 and IE7, see `Shane's blog post <http://shaneosullivan.wordpress.com/2010/08/28/dojo-gets-a-speed-boost-on-ie6-and-ie7/>`_ for details.
+
+watch()
+-------
+watch() has been implemented for widgets, to monitor changes to widget attributes.  (TODO: fill in example when feature is complete)
+
 InlineEditBox
 -------------
 
