@@ -80,14 +80,59 @@ This is useful when needing to set multiple independent data keys. Note how this
 
 Here were stashing this object at the key *stuff*, as compared to the previous example where each of the object keys we used as data keys.
 
-Getting Back Data
------------------
+Various Return Types
+--------------------
+
+There are several different types of returns that can come from *NodeList.data*. First, when acting as a setter, *data* returns the NodeList, so you can continue chaining.
+
+.. javascript::
+
+  dojo.query("#bar").data("foo", 10).onclick(function(){ alert(dojo.query(this).data("foo")[0] == 10) });
+
+When acting as a getter, NodeList.data *always* returns an Array. The array is populated with either the data at the requested key, or the entire data set if called with no arguments.
+
+.. javascript::
+
+  dojo.query("#bar").data("a", "b").data("c", "d").data({ e:[1,2,3] };
+  // calling with no arguments return _entire_ data set bound to node. 
+  var data = dojo.query("#bar").data()[0];
+  console.log(data.a, data.c, data.e); // logs "b" "d" [1,2,3]
+
+Private APIs
+------------
+
+Though nonstandard, NodeList-data provides several "private" APIs. These functions are used with the NodeList "adapters", and mixed in from the single-node variant. If you are more comfortable with using direct node access, feel free to use these APIs. There name may change, but their function signature cannot, as the power the public *data* and *removeData* exported to `NodeList <dojo/NodeList>`_
+
+:dojo._nodeData(node, key, value): Can be called by passing a String or DomNode reference in the first position. All other arguments are shifted over.
+:dojo._removeData(node, key): Can be called by passing a String or DomNode reference in the first position. 
+
+Here is a comparison:
+
+.. javascript::
+
+   // setters:
+   dojo.query("#bar").data("baz", 10);
+   dojo._nodeData("bar", "baz", 10);
+
+   // getter, _nodeData does _not_ return an Array:
+   var data = dojo.query("#bar").data("baz")[0];
+   var dat2 = dojo._nodeData("bar", "baz"); 
+
+   if(data == dat2){ alert("see?") }
 
 
 ============
 Data Removal
 ============
 
+The *removeData* API works nearly the same as *data*. Calling *removeData* with no arguments will erase all data bound to the node, and passing a string key name will erase the data under the key of the same name in the cache. 
+
+.. javascript::
+
+   dojo.query("#bar").removeData(); // erases all information
+   dojo.query("#baz").removeData("e"); // removed [1,2,3] for instance
+
+There is, however, no way to remove a list of keys. 
 
 =====================
 Memory Considerations
@@ -99,3 +144,4 @@ See Also:
 =========
 
   * `dojo.data <dojo/data>`_ - dojo.data is an opaque Data API, unrelated to direct node references. More powerful and abstract than this node-data module. 
+  * `dijit._Widget <dijit/_Widget>`_ - If you have complex data and relationships between components and nodes, perhaps you are thinking about it wrong. dijit._Widget provides another take on data-node binding by providing an API to Objects exclusively, each bound to at the least a top-level DomNode. This base class powers the entire Dijit UI library, and is very small. 
