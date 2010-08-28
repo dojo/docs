@@ -104,7 +104,7 @@ Private APIs
 Though nonstandard, NodeList-data provides several "private" APIs. These functions are used with the NodeList "adapters", and mixed in from the single-node variant. If you are more comfortable with using direct node access, feel free to use these APIs. There name may change, but their function signature cannot, as the power the public *data* and *removeData* exported to `NodeList <dojo/NodeList>`_
 
 :dojo._nodeData(node, key, value): Can be called by passing a String or DomNode reference in the first position. All other arguments are shifted over.
-:dojo._removeData(node, key): Can be called by passing a String or DomNode reference in the first position. 
+:dojo._removeNodeData(node, key): Can be called by passing a String or DomNode reference in the first position. 
 
 Here is a comparison:
 
