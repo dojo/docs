@@ -140,7 +140,7 @@ Memory Considerations
 
 
 =========
-See Also:
+See Also
 =========
 
   * `dojo.data <dojo/data>`_ - dojo.data is an opaque Data API, unrelated to direct node references. More powerful and abstract than this node-data module. 
