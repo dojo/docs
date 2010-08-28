@@ -29,7 +29,7 @@ The API to *data* is very simple. Each node has some arbitrary object hash of da
 
 Now, the node with id="mynode" has a string data item under the key *datakey*. We can later get this data by calling *data* with only the key name:
 
-.. js::
+.. javascript::
 
   var mydata = dojo.query("#mynode").data("datakey");
   if(mydata[0] == "This is the data I'm setting"){ alert("see?"); }
@@ -38,14 +38,14 @@ Notice we need to access the return of `dojo.query <dojo/query>`_ as if it were 
 
 We can set any type of data at some key name, be it a String, Array, Object, and even functions. 
 
-.. js::
+.. javascript::
 
   dojo.query("#someNode").data("myarray", [1,2]);
   dojo.query("#diffNode").data("handlerFunction", function(){ ... }); 
 
 Or an example of using an object has *as* the actual data:
 
-.. js:: 
+.. javascript::
 
   dojo.query("#navNode").data("special-information", {
        huh: "the Data at `special-information` is this complex object",
