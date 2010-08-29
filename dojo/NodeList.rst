@@ -159,6 +159,7 @@ The Event object is the same as Dojo's normalized event when using dojo.connect.
 
 This example prevents the form from submitting and instead uses Ajax to send the data to the form's ``action=""`` url in an unobtrusive manner.
 
+An event delegation API is providing in `dojox.NodeList.delegate <dojox/NodeList/delegate>`_
 
 ==================
 Extending NodeList
@@ -206,6 +207,7 @@ Additional Extensions
   * `dojo.NodeList-manipulate <dojo/NodeList-manipulate>`_ - additional DOM Manipulation APIs
   * `dojo.NodeList-fx <dojo/NodeList-fx>`_ - Provides `dojo.Animation <dojo/Animation>`_ support to NodeLists
   * `dojo.NodeList-html <dojo/NodeList-html>`_ - Advanced content-setter functionality (with `dojo.parser <dojo/parser>`_ support. 
+  * `dojox.NodeList.delegate <dojox/NodeList/delegate>`_ - Event delegation for dojo.NodeList
 
 
 ===========
