@@ -56,10 +56,10 @@ Example
         click here to see how it works
     </div>
 
-
 ========
 See also
 ========
 
 * `Using Dojo from a CDN <quickstart/cross-domain>`_
 * `Installation instructions & Tutorials <quickstart/index>`_
+* `Dojo Base API CheatSheet <http://download.dojotoolkit.org/current-stable/cheat.html>`_ - covers all the API's provided from including ``dojo.js`` on a page.
