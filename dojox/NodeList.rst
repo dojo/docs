@@ -6,7 +6,7 @@ dojox.NodeList
 .. contents::
     :depth: 2
 
-:autor: bill
+:author: bill
 :since: 1.6.0
 
 A project containing modules which explicitly extend `dojo.NodeList <dojo/NodeList>`_, which is the result of calling `dojo.query <dojo/query>`_
