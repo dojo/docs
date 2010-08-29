@@ -52,6 +52,10 @@ NodeList
 --------
 closest(), orphan(), and filter() enhanced to work on any selector rather than just simple selectors.
 
+NodeList-data
+-------------
+New module, providing ``data`` and ``removeData`` API's to dojo.NodeList. See `NodeList-data <dojo/NodeList-data>`_
+
 Parser deprecations
 -------------------
 
