@@ -543,6 +543,7 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
   A collection of various advanced math functions
 
+* `dojox.NodeList <dojox/NodeList>`_ - Additional extensions to `dojo.NodeList <dojo/NodeList>`_
 * `dojox.off <dojox/off>`_
 * `dojox.presentation <dojox/presentation>`_
 * `dojox.resources <dojox/resources>`_
