@@ -17,6 +17,12 @@ Provides a simple Data abstraction API to `dojo.NodeList <dojo/NodeList>`_, whic
 
 The public APIs for the module are exposed on `dojo.NodeList <dojo/NodeList>`_ as *data* and *removeData*. The *data* method acts as a setter getter, and *removeData* does as it's name suggests: remove all or some data from this node reference.
 
+The include the **data** APIs in your environment issue an appropriate `dojo.require <dojo/require>`_ call:
+
+.. javascript ::
+
+  dojo.require("dojo.NodeList-data");
+
 ============
 Using data()
 ============
