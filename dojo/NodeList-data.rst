@@ -132,12 +132,20 @@ The *removeData* API works nearly the same as *data*. Calling *removeData* with 
    dojo.query("#bar").removeData(); // erases all information
    dojo.query("#baz").removeData("e"); // removed [1,2,3] for instance
 
-There is, however, no way to remove a list of keys. 
+There is, however, no way to remove a list of keys. An example of how to do so would look like:
+
+.. javascript::
+
+  var remover = dojo.partial(dojo._removeNodeData, "nodeId");
+  dojo.forEach(["key", "otherkey", "somekey"], remover);
 
 =====================
 Memory Considerations
 =====================
 
+There is no automatic node-deletion tracking going on. If you bind data to a node, and destroy that node directly or indirectly, the data will persist in the cache. In small pages, the memory consumption of this data cache is probably not worth considering. In large pages, or single-page-ajax apps that seldom or never refresh, the memory could increase indefinitely, leading to what could be perceived as a *leak*. It is **highly** recommended you manually clear out data on nodes you no longer need. If this is not a possibility due to engineering, or loose coupling, a single garbage collection API is provided: ``dojo._gcNodeData()``
+
+You can call ``_gcNodeData`` at any time. It will remove items from the cache for nodes that no longer exist in the DOM. This function could be **wildly** expensive, especially on pages with a large DOM. Again, though this API is provided, it is **highly** recommended you manually manage your Data items if in a scenario leading to these potential "leaks". 
 
 =========
 See Also
