@@ -3,7 +3,7 @@
 Dojo Build System
 =================
 
-:Authors: James Burke, Peter Higgins, Scott Jenkins, Alex Russell, Josh Trutwin
+:Authors: James Burke, Peter Higgins, Scott Jenkins, Alex Russell, Josh Trutwin, Kris Zyp
 :Available: since V1.0
 
 .. contents::
@@ -338,6 +338,7 @@ The build process can also automatically generate a profile and build layers bas
 We could a build:
 
 .. code-block :: text
+  
   build htmlFiles=ui.html profile=ui action=release
 
 The build process will then generate a profile with two layers, one for dijit/dijit and one for acme/ui. The acme/ui layer will have a layer dependency defined so that the modules in dijit/dijit are not loaded twice. In this case, because a profile was specified, the generated profile will be written to buildscripts/profile/ui.profile.js (and the build process will continue). This file could be edited/tweaked to later do a manual build process (without HTML-based generation) in the future. If a profile (or profileFile) is not specified, the build process will generate the layers without writing the profile to disk (it will just be generated in memory).
