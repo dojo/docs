@@ -156,6 +156,10 @@ New base class dialog and small refactoring of `dojox.widget.Dialog <dojox/widge
 Util
 ====
 
+Build
+-----
+The build now supports auto-generation of profiles from HTML files with the new htmlFiles and htmlDir build parameters.
+
 =========
 Migration
 =========
