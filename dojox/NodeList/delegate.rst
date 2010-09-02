@@ -39,8 +39,7 @@ Example
 =======
 
 .. code-example::
-
-
+  :type: inline
 
   .. html::
     :label: a navigation bar
@@ -50,7 +49,6 @@ Example
         <a href="#" id="mail">mail</a>
         <a href="#" id="calendar">calendar</a>
     </div>
-
 
   .. javascript::
     :label: dojo.delegate in action
