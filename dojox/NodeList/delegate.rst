@@ -40,6 +40,7 @@ Example
 
 .. code-example::
   :type: inline
+  :version: 1.6
 
   .. html::
     :label: a navigation bar
