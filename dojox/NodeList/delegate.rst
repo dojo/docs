@@ -45,20 +45,22 @@ Example
     :label: a navigation bar
 
     <div id="navbar">
-        <a href="#" id="home">home</a>
-        <a href="#" id="mail">mail</a>
-        <a href="#" id="calendar">calendar</a>
+        <a href="#" id="home">home</a> &nbsp;
+        <a href="#" id="mail">mail</a> &nbsp;
+        <a href="#" id="calendar">calendar</a> &nbsp;
     </div>
 
   .. javascript::
     :label: dojo.delegate in action
 
     <script type="text/javascript">
+    dojo.require("dojox.NodeList.delegate");
     dojo.addOnLoad(function(){
       dojo.query("#navbar").delegate("a", "onclick", function(evt){
           alert("clicked " + dojo.attr(this, "id"));
           dojo.stopEvent(evt);
       });
+    });
     </script>
 
 ========
