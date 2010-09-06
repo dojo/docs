@@ -67,11 +67,11 @@ In this example, in the util/buildscripts/profiles directory, you will create a 
 
   dependencies ={
 
-    layers:  [ 
+    layers:  [
         {
         name: "mydojo.js",
         dependencies: [
-            "dijit.Button", 
+            "dijit.Button",
             "dojox.wire.Wire",
             "dojox.wire.XmlWire",
             "explosive.space.Modulator"
@@ -123,7 +123,7 @@ profileFile
   A file path to the the profile file. Use this if your profile is outside of the profiles directory. Do not specify the "profile" build option if you use "profileFile" Default: ""
 
 action
-  The build action(s) to run. Can be a comma-separated list, like action=clean,release. The possible build actions are: clean, release Default: "help".  
+  The build action(s) to run. Can be a comma-separated list, like action=clean,release. The possible build actions are: clean, release Default: "help".
 
   Note:  the ''release'' action automatically implies the ''clean'' action, *except* when you have used the advanced parameter ''buildLayers'' in your profile.
 
@@ -137,7 +137,7 @@ releaseName
   The name of the release. A directory inside 'releaseDir' will be created with this name Default: "dojo"
 
 releaseDir
-  The top level release directory where builds end up. The 'releaseName' directories will be placed inside this directory Default: "../../release/" 
+  The top level release directory where builds end up. The 'releaseName' directories will be placed inside this directory Default: "../../release/"
 
 loader
   The type of dojo loader to use. "default" or "xdomain" are acceptable values." defaultValue: "default"
@@ -201,7 +201,7 @@ Sample xdomain build command::
   $ cd util/buildscripts
   $ build.sh profile=foo loader=xdomain xdDojoPath=http://my.server.com/path/to/buildoutputdir action=release
 
-xdDojoPath is optional. It just burns in the location of dojo, dijit and dojox into the built dojo.js. If you do not specify that option, then you will need to use djConfig.modulePaths/dojo.registerModulePath() in your HTML page to set the xdomain locations for dojo, dijit and dojox. For your own custom modules, you will have to set djConfig.modulePaths/dojo.registerModulePath() even if you us the xdDojoPath build option.
+xdDojoPath is optional. It just burns in the location of dojo, dijit and dojox into the built dojo.js. If you do not specify that option, then you will need to use djConfig.modulePaths/dojo.registerModulePath() in your HTML page to set the xdomain locations for dojo, dijit and dojox. For your own custom modules, you will have to set djConfig.modulePaths/dojo.registerModulePath() even if you use the xdDojoPath build option.
 
 **For Dojo 0.9 through 1.1.x there is a `bug about loading dojox.gfx with an xdomain build <http://trac.dojotoolkit.org/ticket/4462>`_.**. This is fixed in Dojo 1.2. If you want to use dojox.gfx with an xdomain build of Dojo 0.9-1.1.x, there are some workarounds until the bug gets fixed:
 
@@ -233,7 +233,7 @@ XDomain Example
   * layers
   * css
 * file structure
-  
+
 link to full docs to cover:
 
 * excludeStart/Stop
