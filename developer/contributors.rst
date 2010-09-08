@@ -168,6 +168,7 @@ A list of individuals who have signed Dojo CLAs:
 * Golebski, Marcin 
 * Gordon, Max 
 * Gorman, Mitch 
+* Gornick, Joseph Richard
 * Grainger, Brendan 
 * Green, Amit 
 * Greenberg, Jeffrey 
@@ -340,6 +341,7 @@ A list of individuals who have signed Dojo CLAs:
 * Obermann, Gerhard 
 * Ogilvie, Cyan Jon 
 * Onken, Nikolai 
+* Oriol, Guillaume
 * Overton, James Alexander 
 * Oyapero, Owalabi 
 * Papayan, Vladislav 
