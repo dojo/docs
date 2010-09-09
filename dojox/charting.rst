@@ -455,7 +455,76 @@ For pie type charts you can specify additional information: the text label for e
 Using dojo.data Data Sources with Charts
 ----------------------------------------
 
-TODO
+dojox.charting.DataSeries is used to connect to `dojo.data <dojo/data>`_ stores. User should create it and pass it instead of a data array in chart.addSeries() call.
+
+DataSeries' constructor has following parameters:
+
+====== ========================== ======= ===========
+Name   Type                       Default Description
+====== ========================== ======= ===========
+store  object                     none    Data store to use. Should implement at least `dojo.data.api.Read <dojo/data/api/Read>`_ and `dojo.data.api.Identity <dojo/data/api/Identity>`_. If it implements `dojo.data.api.Notification <dojo/data/api/Notification>`_, it will be used to redraw chart dynamically.
+kwArgs object                     none    Used for fetching items. Will vary depending upon store. See `dojo.data.api.Read.fetch() <dojo/data/api/Read#fetch>`_ for details.
+value  object | function | string “value” Function, which takes a store, and an object handle, and produces an output possibly inspecting the store's item. Or a dictionary object, which tells what names to extract from an object and how to map them to an output. Or a field name to be used as a numeric output.
+====== ========================== ======= ===========
+
+DataSeries doesn't define any user-facing methods.
+
+The “value” argument allows to supply complex values for some charts (OHLC, candle stick), and additional values for customization purposes (text labels, tooltips, and so on).
+
+Example of a function that can be used to extract values:
+
+.. code-block :: javascript
+  :linenos:
+
+  function trans1(store, item){
+    // let's create our object
+    var o = {
+      x: store.getValue(item, "order"),
+      y: store.getValue(item, "value"),
+      tooltip: store.getValue(item, "title"),
+      color: store.getValue(item, "urgency") ? "red" : "green"
+    };
+    // we can massage the object, if we want, and return it
+    return o;
+  }
+
+If a dictionary is supplied, it is used to pull and rename values. For example, we can emulate (partially, without “color”, which requires an algorithmic processing) the example above using a dictionary like that:
+
+.. code-block :: javascript
+  :linenos:
+
+  {
+    x: "order",
+    y: "value",
+    tooltip: "title"
+  }
+
+The effect will be the same as the following function was applied to extract values:
+
+.. code-block :: javascript
+  :linenos:
+
+  function trans2(store, item){
+    var o = {
+      x: store.getValue(item, "order"),
+      y: store.getValue(item, "value"),
+      tooltip: store.getValue(item, "title")
+    };
+    return o;
+  }
+
+A dictionary is enough for most transformations. You can use it to cherry-pick desired fields and map them to elements recognized by Charting. But for truly custom processing a function is available.
+
+If a field name is specified, it is used to pull one (numeric) value. The effect will be the same as the following function was applied to extract a value:
+
+.. code-block :: javascript
+  :linenos:
+
+  var field = "abc";
+  function trans3(store, item){
+    return store.getValue(item, field);
+  }
+
 
 Changing Color Themes
 ---------------------
