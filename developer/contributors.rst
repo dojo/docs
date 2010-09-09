@@ -166,6 +166,7 @@ A list of individuals who have signed Dojo CLAs:
 * Goessner, Stefan 
 * Goldstein, Peter
 * Golebski, Marcin 
+* Goncharov, Mykyta Sergiyovych
 * Gordon, Max 
 * Gorman, Mitch 
 * Gornick, Joseph Richard
