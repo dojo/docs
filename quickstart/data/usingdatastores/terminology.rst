@@ -41,7 +41,7 @@ Terms
 |               |                              |name/value pairs as thequery format for consistency between stores.                             |
 +---------------+------------------------------+------------------------------------------------------------------------------------------------+
 | dojo.data.API | JDBC or ODBC                 |The standard set of functions that datastore implements. The dojo.data.api module includes      |
-|               |                              |includes a set of APIs (such as Read and Write) and a datastore can implement one or more of the|
+|               |                              |a set of APIs (such as Read and Write) and a datastore can implement one or more of the         |
 |               |                              |APIs.                                                                                           |
 +---------------+------------------------------+------------------------------------------------------------------------------------------------+
 | internal data |                              |The private data structures that a datastore uses to cache data in local memory                 |
