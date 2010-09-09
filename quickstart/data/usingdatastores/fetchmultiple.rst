@@ -251,7 +251,7 @@ Loading all items through the onItem callback
              }
              
              //Fetch the data.  
-             foodStore.fetch({onBegin: clearOldList, onItem: gotItem, onError: fetchFailed});
+             foodStore2.fetch({onBegin: clearOldList, onItem: gotItem, onError: fetchFailed});
            }
 
            //Link the click event of the button to driving the fetch.
