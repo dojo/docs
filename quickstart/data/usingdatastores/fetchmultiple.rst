@@ -239,7 +239,7 @@ Loading all items through the onItem callback
                var list = dojo.byId("list2");
                if (list) {
                  if (item) { 
-                   list.appendChild(document.createTextNode(foodStore.getValue(item, "name")));
+                   list.appendChild(document.createTextNode(foodStore2.getValue(item, "name")));
                    list.appendChild(document.createElement("br"));
                  }
                }
