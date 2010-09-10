@@ -36,6 +36,11 @@ dojo.xhrPost supported object properties
 All of the dojo.xhrGet `object properties <dojo/xhrGet#dojo-xhrget-supported-object-properties>`_
 
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
+|**content**       |A JavaScript object of name/string value pairs. xhrPost will convert this into proper POST format and send it with the post |
+|                  |data.                                                                                                                       |
+|                  |                                                                                                                            |
+|                  |**This parameter is optional**                                                                                              |
++------------------+----------------------------------------------------------------------------------------------------------------------------+
 |**form**          |For posting FORM data, you can provide either the DOM node of your form or the ID of the form. xhrPost will convert         |
 |                  |this into proper POST format and send it with the post data.  If a url is not set in the args to dojo.xhrPost, then it tries|
 |                  |to extract the url from the form 'action' attribute.                                                                        |
@@ -45,10 +50,12 @@ All of the dojo.xhrGet `object properties <dojo/xhrGet#dojo-xhrget-supported-obj
 |**postData**      |A string of data you wish to send as the post body.  dojo.xhrPost (and dojo.rawXhrPost), do not do any processing of this   |
 |                  |It is merely passed through as the POST body.                                                                               |
 |                  |                                                                                                                            |
-|                  |                                                                                                                            |
 |                  |**This parameter is optional**                                                                                              |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
 
+**content**, **form**, and **postData** are mutually exclusive parameters. Please use only one at a time.
+
+If you want to send some parameters in a query string, while making POST, you should include them in url yourself. Dojo provides a special helper for that: `dojo.objectToQuery() <dojo/objectToQuery>`_, which can convert a dictionary into a valid query string --- just like `dojo.xhrGet <dojo/xhrGet>`_ does.
 
 Return type (dojo.Deferred)
 ---------------------------
