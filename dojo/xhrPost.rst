@@ -37,7 +37,8 @@ All of the dojo.xhrGet `object properties <dojo/xhrGet#dojo-xhrget-supported-obj
 
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
 |**content**       |A JavaScript object of name/string value pairs. xhrPost will convert this into proper POST format and send it with the post |
-|                  |data.                                                                                                                       |
+|                  |data. Note that this parameter is handled differently from `dojo.xhrGet <dojo/xhrGet>`_, which encodes it as a query string |
+|                  |in url.                                                                                                                     |
 |                  |                                                                                                                            |
 |                  |**This parameter is optional**                                                                                              |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
@@ -73,7 +74,7 @@ Examples
 
 
 For specific examples of how to use dojo.xhrPost, please refer to the following.  You can use Firebug with Firefox to see dojo making the xhr requests and the generated POST data.  For Internet Explorer, you will need to use a debugging proxy like 'Charles'.
- 
+
 Example 1: dojo.xhrPost call to send a form
 -------------------------------------------
 
@@ -106,17 +107,17 @@ Example 1: dojo.xhrPost call to send a form
               dojo.byId("response").innerHTML = "Form posted.";
             },
             error: function(error){
-              //We'll 404 in the demo, but that's okay.  We don't have a 'postIt' service on the 
+              //We'll 404 in the demo, but that's okay.  We don't have a 'postIt' service on the
               //docs server.
               dojo.byId("response").innerHTML = "Form posted.";
             }
           }
           //Call the asynchronous xhrPost
           dojo.byId("response").innerHTML = "Form being sent..."
-          var deferred = dojo.xhrPost(xhrArgs);  
+          var deferred = dojo.xhrPost(xhrArgs);
         });
       }
-      dojo.addOnLoad(sendForm);     
+      dojo.addOnLoad(sendForm);
     </script>
 
   .. html::
@@ -138,7 +139,7 @@ Example 2: dojo.xhrPost call to send some text data
 ---------------------------------------------------
 
 .. code-example::
-  
+
   .. javascript::
 
     <script type="text/javascript">
@@ -158,14 +159,14 @@ Example 2: dojo.xhrPost call to send some text data
               dojo.byId("response2").innerHTML = "Message posted.";
             },
             error: function(error){
-              //We'll 404 in the demo, but that's okay.  We don't have a 'postIt' service on the 
+              //We'll 404 in the demo, but that's okay.  We don't have a 'postIt' service on the
               //docs server.
               dojo.byId("response2").innerHTML = "Message posted.";
             }
           }
           dojo.byId("response2").innerHTML = "Message being sent..."
           //Call the asynchronous xhrPost
-          var deferred = dojo.xhrPost(xhrArgs);  
+          var deferred = dojo.xhrPost(xhrArgs);
         });
       }
       dojo.addOnLoad(sendText);
