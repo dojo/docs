@@ -23,6 +23,11 @@ The following browsers are supported. If a browser is not supported, it still ma
 Dojo Base
 =========
 
+asynchronous loader
+-------------------
+TODO (placeholder for `dojo sie loader <http://dojo-sie.altoviso.com/index>`_)
+
+
 djConfig deprecated
 -------------------
 
