@@ -33,7 +33,7 @@ Examples
 Programmatic example using a data store
 ---------------------------------------
 
-To set the default value for a programmatic FilteringSelect, include the *value* attribute (the hidden text value to be submitted) in the attribute list passed to the constructor.
+To set the default value for a programmatic FilteringSelect, include the *value* attribute (the hidden text value to be submitted) in the attribute list passed to the constructor.  To get the current value, get the *value* attribute.  To get the text currently displayed in the textbox (usually the labelAttribute from the DataItem of the store item currently selected), get the *displayedValue* attribute (see `TextBox <dijit/form/TextBox>`_).
 
 .. cv-compound::
 
@@ -63,7 +63,8 @@ To set the default value for a programmatic FilteringSelect, include the *value*
 
     <input id="stateSelect">
     <p>
-        <button onClick="alert(dijit.byId('stateSelect').attr('value'))">Get value</button>
+        <button onClick="alert(dijit.byId('stateSelect').get('value'))">Get value</button>
+        <button onClick="alert(dijit.byId('stateSelect').get('displayedValue'))">Get displayed value</button>
     </p>
 
 Declarative markup using native select and option tags
