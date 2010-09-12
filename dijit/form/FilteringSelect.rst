@@ -33,7 +33,7 @@ Examples
 Programmatic example using a data store
 ---------------------------------------
 
-To set the default value for a programmatic FilteringSelect, include the *value* attribute (the hidden text value to be submitted) in the attribute list passed to the constructor.  To get the current value, get the *value* attribute.  To get the text currently displayed in the textbox (usually the labelAttribute from the DataItem of the store item currently selected), get the *displayedValue* attribute (see `TextBox <dijit/form/TextBox>`_).
+To set the default value for a programmatic FilteringSelect, include the *value* attribute (the hidden text value to be submitted) in the attribute list passed to the constructor.  To get the current value (the identity of the currently selected store item), get the *value* attribute.  To get the text currently displayed in the textbox (the value of the currently selected store item's attribute indicated by the FilteringSelect's ``searchAttr`` property), get the *displayedValue* attribute.
 
 .. cv-compound::
 
