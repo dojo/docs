@@ -10,35 +10,11 @@ dojo.store
 .. contents::
   :depth: 2
 
-Dojo Store is an uniform interface for the access and manipulation of stored data. Dojo Store is intended to supercede, integrate, and improve upon the Dojo Data API and Dojo Storage API with a simple, easy to implement and extend API, based on `HTML5/W3C's IndexedDB object store API <http://www.w3.org/TR/IndexedDB/#object-store-sync>`_.
-
-
-============
-Design Goals
-============
-
-* We want to make it very easy to for people to implement their own object stores, essentially one should easily be able to write something up handle the communication to their server without having to deal with much more than writing the `XHR calls <dojo/_base/xhr>`_. Higher level functionality can be built on this. A key to this strategy is a very simple API, that requires a minimal amount of required complexity to implement.
-
-* We want to maintain the same level of functionality that `Dojo Data <dojo/data>`_ provided. While there will be very little (if any) core parts of the object store API that MUST be implemented, there will numerous parts that can be implemented to incrementally add functionality. Optional functionality will be determined through feature detection (checking to see if a method exists). As I noted in the meeting, having lots of optional features does shift some complexity from the store implementors to the anyone who wishes to use stores in a completely generic fashion. However, I believe that our widgets are the primary generic store users, and that most application developers are working with a known store, with a known set of implemented features. In particular, if they know they are using a sync store, the interaction with the store becomes extremely simple. For now I will suggest that basically every method is optional, and the presence of the method indicates support for that feature. However, practically one would at least need to implement get and query, a store without read capabilities is pretty useless, but that should be self-evident.
-
-* Every method can be implemented sync or async. The interface is the exactly the same for sync and async except that async returns promises/deferreds instead of plain values. The interface requires no other knowledge of specific callbacks to operate.
-
-* Objects returned from the data store (via query or get) should be plain JavaScript objects whose properties can be typically accessed and modified through standard property access.
-
+Dojo Store is an uniform interface for the access and manipulation of stored data. Dojo Store is intended to supercede, integrate, and improve upon the Dojo Data API and Dojo Storage API with a simple, easy to implement and extend API, based on `HTML5/W3C's IndexedDB object store API <http://www.w3.org/TR/IndexedDB/#object-store-sync>`_. The Dojo Storage API (implemented in `dojox.storage <dojox/storage>`_)  is already a compatible subset of the the Dojo object store API.
 
 ==============
 Dojo Store API
 ==============
-
-Properties
-----------
-
-===========  ================  ======================================================================
-Property     Type              Description
-===========  ================  ======================================================================
-idProperty   String            Name of the property to use as the identifier
-data         Array of Objects  If the store has a collection of cached objects, it can make this available in this property. This is included so an additional layer could add referential integrity cleanup on object deletion (which is a pain to implement).
-===========  ================  ======================================================================
 
 
 Methods
@@ -53,7 +29,7 @@ Method                                            Description
 
 `query(query, options) <dojo/store/query>`_       Queries the store using the provided query.
 
-                                                  The returned value should be an array or a promise with forEach, map, filter, reduce, subscribe, and close methods, and a totalCount property (the totalCount may be a promise). The options parameter is modeled after the Dojo Data keywordArgs and may include:
+                                                  The returned value should be an array or a promise with forEach, map, filter, reduce, subscribe, and optional close and watch methods, and a total property (the total may be a promise). The options parameter is modeled after the Dojo Data keywordArgs and may include:
 
                                                   * start - Starting offset
                                                   * count - Number of objects to return
@@ -64,7 +40,11 @@ Method                                            Description
 
 `add(object, options) <dojo/store/add>`_          Create a new object. options.id (optional) indicates the identifier.
 
-`delete(id) <dojo/store/delete>`_                 Delete the object by id.
+`remove(id) <dojo/store/delete>`_                 Delete the object by id.
+
+`getIdentity(object) <dojo/store/getIdentity>`_   Returns an object's identity
+
+`queryEngine(query, options) <dojo/store/queryEngine>`_ This takes a query and query options and returns a function that can execute the provided query on a JavaScript array. The queryEngine may be replace to provide more sophisticated querying capabilities. The returned query function may have a "matches" property that can be used to determine if an object matches the query.
 
 `transaction() <dojo/store/transaction>`_         Starts a transaction and returns a transaction object.
 
@@ -80,10 +60,20 @@ Method                                            Description
 
   Will clear all the (cached) objects of the store.
 
+Properties
+----------
 
-===========
-Result Sets
-===========
+===========  ================  ======================================================================
+Property     Type              Description
+===========  ================  ======================================================================
+idProperty   String            Name of the property to use as the identifier
+data         Array of Objects  If the store has a collection of cached objects, it can make this available in this property. This is included so an additional layer could add referential integrity cleanup on object deletion (which is a pain to implement).
+===========  ================  ======================================================================
+
+
+================
+Returned Objects
+================
 
 Objects returned from store should primarily be treated as normal hash objects and have standard JavaScript properties to access their data and modify their data. However, the following methods are defined as possible methods that may also be available on the objects returned by the store (once again, they are optional). These methods should '''not''' be the object's own properties (hasOwnProperty(methodName) should return false), but rather should be inherited from one of the object's prototypes). This is to ensure ease of enumeration of data properties.  Once again, all of these methods are optional, and all may return promises if the operation will be performed asynchronously:
 
@@ -116,30 +106,79 @@ Method                                                           Description
 ===============================================================  ======================================================================
 
 
-Subscriptions/Watches on Result Sets
-------------------------------------
+====================
+Watching Result Sets
+====================
 
-One can subscribe to changes in data through the subscribe method on the result set (the object returned from a query). The subscribe method has the following signature:
+One can listen for changes in data through the watch method on the result set (the object returned from a query). The watch method has the following signature:
 
 ====================================================================  ======================================================================
 Method                                                                Description
 ====================================================================  ======================================================================
-`subscribe(event, callback) <dojo/store/resultset/subscribe>`_        Where an event can be:
-
-                                                                      * onAdd
-
-                                                                        An object was created or modified such that the object now belongs in the set of objects defined by the query.
-
-                                                                      * onUpdate
-
-                                                                        An object that belongs to the set of objects defined by the query was modified and still belongs to the query's set of objects.
-
-                                                                      * onRemove
-
-                                                                        An object that belongs to the set of objects defined by the query was modified or deleted and no longer belongs to the query's set of objects.
+`watch(listener) <dojo/store/resultset/subscribe>`_                   The listener function is called with following arguments:
+                                                                      listener(index, existingObjectId, newObject);
+                                                                      
+                                                                      The index value indicates the position in the result set that changed. 
+                                                                      If this value is undefined, it indicates that the store was unable to 
+                                                                      determine where in the result set the change took place.
+                                                                      The existingObjectId indicates the object id of the object that formerly
+                                                                      existed at the index position. If this value is undefined it indicates the 
+                                                                      object was inserted into the position.
+                                                                      The newObject indicates the new object that fills the given index position. 
+                                                                      If this is undefined it indicates that the previous object was (indicated by 
+                                                                      the existingObjectId) was removed from the result set.
 
 `close <dojo/store/resultset/close>`_                                 When close() is called on a result set, notifications will no longer be fired.
 ====================================================================  ======================================================================
+
+==========================================
+Core Stores included with Dojo
+==========================================
+
+The following stores, store wrappers, and utilities ship with Dojo. These provide a solid base of good modular components for using stores and building more complex store technology. The following two core stores based on the typical pattern of in-memory and server-based data stores:
+
+* `dojo.store.Memory <dojo/store/Memory>`_
+
+  An in-memory object store that queries, modifies, and accesses client-side in-memory data. This can be created with a simple array of JavaScript objects.
+
+* `dojo.store.JsonRest <dojo/store/JsonRest>`_
+
+  An server-oriented JSON/REST object store that queries, modifies, and accesses data through RESTful HTTP requests. This would fulfill the conceptual role of JsonRestStore/QueryReadStore/ServiceStore.
+
+There is also an adapter store for using legacy Dojo Data stores with the new API:
+
+* `dojo.store.DataStore <dojo/store/DataStore>`_
+
+We are also moving in the direction of providing composable functionality by providing store "wrappers" or store "middleware" that takes a store and adds functionality. Several key store wrappers:
+
+* `dojo.store.Watchable <dojo/store/Watchable>`_ This augments a store with the data monitoring capability, adding a watch method on the query result sets that notifies of data changes.
+
+* Future: `dojo.store.Cache <dojo/store/Cache>`_
+
+  Adds caching capability to the store. This eliminates the need for a base store to deal with caching concerns.
+
+* Future `JsonSchema`_
+
+  Handles validation of data through JSON Schema as well object referencing through JSON Schema's link definitions.
+
+With this one can easily mix and match wrappers and base stores to achieve various types of functionality. A common pattern may be:
+
+store = dojo.store.Watchable(new dojo.store.Memory({data: someData}));
+
+There are also a couple of utility modules:
+
+* `dojo.store.util.SimpleQueryEngine <dojo/store/util/SimpleQueryEngine>`_
+
+  This is basic query engine that provides simple object hash style filtering or function based filtering.
+
+* `dojo.store.util.QueryResults <dojo/store/util/QueryResults>`_
+
+  This utility will take an array or a promise for an array and return a result set object with all the standard iterative methods that should be available on a result set (forEach, map, and filter).
+
+
+
+Rationale
+---------
 
 [Rationale: The purpose of using this style of notifications (instead of the Dojo Data notification style of events on the store) is to deal with several problems I have seen with Dojo Data notifications. First, it neglects that fact that most of the time users only want to listen to events from the queried subset of the items in the store, and that subscriptions can be costly. While subscriptions are usually cheap on the client side, carte blance subscriptions can actually be very expensive on the server side (with Comet-style notifications), forcing the server to send excessive events and then forcing the client to filter them.
 
@@ -155,30 +194,14 @@ We will need to include a helper mixin or wrapper to make it easy to implement t
 I believe this generally facilitates all of the Dojo Data functionality. Some of it may require some composition, but I think most of the needed things would be in place to achieve anything you could with Dojo Data. The one thing I did intentionally omit was getLabel/getLabelAttributes, as I think is clearly a UI concern. It would be easy enough to include a labelProperty property on the store, but I don't think it is necessary.
 
 
-==========================================
-Core Functionality to be Shipped with Dojo
-==========================================
+============
+Design Goals
+============
 
-Having an interface/API is not enough, we want to ship good out-of-the-box object stores that developers can readily utilize for common use cases and easily extend and customize. We also need good modular components for building stores. We could have the following two core stores based on the typical pattern of in-memory and server-based data stores:
+* We want to make it very easy to for people to implement their own object stores, essentially one should easily be able to write something up handle the communication to their server without having to deal with much more than writing the `XHR calls <dojo/_base/xhr>`_. Higher level functionality can be built on this. A key to this strategy is a very simple API, that requires a minimal amount of required complexity to implement.
 
-* `dojo.store.Memory <dojo/store/Memory>`_
+* We want to maintain the same level of functionality that `Dojo Data <dojo/data>`_ provided. While there will be very little (if any) core parts of the object store API that MUST be implemented, there will numerous parts that can be implemented to incrementally add functionality. Optional functionality will be determined through feature detection (checking to see if a method exists). As I noted in the meeting, having lots of optional features does shift some complexity from the store implementors to the anyone who wishes to use stores in a completely generic fashion. However, I believe that our widgets are the primary generic store users, and that most application developers are working with a known store, with a known set of implemented features. In particular, if they know they are using a sync store, the interaction with the store becomes extremely simple. For now I will suggest that basically every method is optional, and the presence of the method indicates support for that feature. However, practically one would at least need to implement get and query, a store without read capabilities is pretty useless, but that should be self-evident.
 
-  An in-memory object store that queries, modifies, and accesses client-side in-memory data. This would fulfill the conceptual role of ItemFileReadStore/ItemFileWriteStore
+* Every method can be implemented sync or async. The interface is the exactly the same for sync and async except that async returns promises/deferreds instead of plain values. The interface requires no other knowledge of specific callbacks to operate.
 
-* `dojo.store.JsonRest <dojo/store/JsonRest>`_
-
-  An server-oriented JSON/REST object store that queries, modifies, and accesses data through RESTful HTTP requests. This would fulfill the conceptual role of JsonRestStore/QueryReadStore/ServiceStore.
-
-We should also move in the direction of providing composable functionality by providing store "wrappers" or store "middleware" that takes a store and add functionality. A couple key store wrappers:
-
-* `dojo.store.Cache <dojo/store/Cache>`_
-
-  Adds caching capability to the store. This eliminates the need for a base store to deal with caching concerns.
-
-* `dojo.store.JsonSchema <dojo/store/JsonSchema>`_
-
-  Handles validation of data through JSON Schema as well object referencing through JSON Schema's link definitions.
-
-With this one could easily mix and match wrappers and base stores to achieve various types of functionality.
-
-Another utility module would be a query helper.
+* Objects returned from the data store (via query or get) should be plain JavaScript objects whose properties can be typically accessed and modified through standard property access.
