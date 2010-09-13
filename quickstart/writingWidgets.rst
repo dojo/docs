@@ -358,6 +358,14 @@ or alternately just
 		disabled: "focusNode"
   },
 
+using attributes
+
+.. code-block :: javascript
+
+  attributeMap: {
+		img: {node: "imageNode", type: "attribute", attribute: "src" }
+  },
+
 Both code blocks copy the widget's "disabled" attribute onto the focusNode DOM node in the template.
 
 
