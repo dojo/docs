@@ -50,7 +50,7 @@ Examples
  // do something with the initial result set
  results.forEach(insertRow);
  
-// now listen for any changes
+ // now listen for any changes
  results.watch(function(index, existingObjectId, newObject){
    if(existingObjectId){ // existing object removed
      removeRow(index);
