@@ -44,7 +44,7 @@ Method                                            Description
 
 `getIdentity(object) <dojo/store/getIdentity>`_   Returns an object's identity
 
-`queryEngine(query, options) <dojo/store/queryEngine>`_ This takes a query and query options and returns a function that can execute the provided query on a JavaScript array. The queryEngine may be replace to provide more sophisticated querying capabilities. The returned query function may have a "matches" property that can be used to determine if an object matches the query.
+queryEngine(query, options)                       This takes a query and query options and returns a function that can execute the provided query on a JavaScript array. The queryEngine may be replace to provide more sophisticated querying capabilities. The returned query function may have a "matches" property that can be used to determine if an object matches the query.
 
 `transaction() <dojo/store/transaction>`_         Starts a transaction and returns a transaction object.
 
