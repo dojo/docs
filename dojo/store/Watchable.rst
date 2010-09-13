@@ -68,3 +68,8 @@ Examples
  
  // if this object was in the result set, it will trigger a watch event
  store.remove(2);
+
+Client Side Query Awareness
+---------------------------
+
+In the example above the memory store provides a queryEngine that the Watchable store leverages to determine the whether or not an object belongs in a result set, and where in the result set it belongs. If you are using a server side store like the JsonRest store, you will need to provide a queryEngine in order for the update objects to be properly included or excluded from queries. If a queryEngine is not available, watch listener will be called with an undefined index.
