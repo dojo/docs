@@ -10,7 +10,7 @@ dojo.store.Watchable
 .. contents::
     :depth: 3
 
-**dojo.store.Watchable** is a object store wrapper that adds support for notification of data changes to query result sets. The query result sets returned from a watchable store will include a watch function that can be used to monitor for changes. This store follows the new `Dojo Object Store API <dojo/store>`_.
+**dojo.store.Watchable** is an object store wrapper that adds support for notification of data changes to query result sets. The query result sets returned from a watchable store will include a watch function that can be used to monitor for changes. This store follows the new `Dojo Object Store API <dojo/store>`_.
 
 
 ============
