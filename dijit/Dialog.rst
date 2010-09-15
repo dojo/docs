@@ -248,6 +248,80 @@ To simply close the dialog, click the Cancel button, which calls the hide() func
         }
     </script>
 
+Terms and Conditions Dialog
+----------------------------------
+
+This example shows a Dialog that will ask the user to accept or decline the terms and conditions.
+
+.. cv-compound::
+
+  
+  .. cv:: html
+
+    <div dojoType="dijit.Dialog" id="formDialog" title="Accept or decline agreement terms" execute="alert('submitted w/args:\n' + dojo.toJson(arguments[0], true));">
+        <h1>Agreement Terms</h1>
+	
+        <div dojoType="dijit.layout.ContentPane" style="width:400px; border:1px solid #b7b7b7; background:#fff; padding:8px; margin:0 auto; height:200px; overflow:auto; " href="../../dojo/LICENSE"></div>
+	
+        <br>
+        <table>
+            <tr>
+                <td>
+                    <input type="radio" dojoType="dijit.form.RadioButton" name="agreement" id="radioOne" value="accept" onclick="accept"/>
+                    <label for="radioOne">
+                        I accept the terms of this agreement
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="radio" dojoType="dijit.form.RadioButton" name="agreement" id="radioTwo" value="decline" onclick="decline"/>
+                    <label for="radioTwo">
+                        I decline 
+                    </label>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <p>
+        When pressing this button the dialog will popup:
+    </p>
+		
+    <label id="decision" style="color:#FF0000;">
+        Terms and conditions have not been accepted.
+    </label>
+    <button id="termsButton" dojoType="dijit.form.Button" type="button">
+        View terms and conditions to accept
+    </button>
+
+  .. cv:: javascript
+    :label: The javascript, put this wherever you want the dialog creation to happen
+
+    <script type="text/javascript">
+        dojo.require("dijit.form.Button");
+        dojo.require("dijit.Dialog");
+        dojo.require("dijit.form.RadioButton");
+
+        dojo.addOnLoad(function() {
+            formDlg = dijit.byId("formDialog");
+            // connect to the button so we display the dialog on click:
+            dojo.connect(dijit.byId("termsButton"), "onClick", formDlg, "show");
+        });
+			
+        function accept(){
+            dojo.byId("decision").innerHTML = "Terms and conditions have been accepted.";
+            dojo.style("decision", "color", "#00CC00");
+            dijit.byId("formDialog").hide();
+        }
+			
+        function decline(){
+            dojo.byId("decision").innerHTML = "Terms and conditions have not been accepted.";
+            dojo.style("decision", "color", "#FF0000");
+            dijit.byId("formDialog").hide();
+        }
+			
+    </script>
+
 External Dialog content using HREF attribute
 --------------------------------------------
 
