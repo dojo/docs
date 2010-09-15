@@ -304,7 +304,6 @@ This example shows a Dialog that will ask the user to accept or decline the term
 
         dojo.addOnLoad(function() {
             formDlg = dijit.byId("formDialog");
-            // connect to the button so we display the dialog on click:
             dojo.connect(dijit.byId("termsButton"), "onClick", formDlg, "show");
         });
 			
