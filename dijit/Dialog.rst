@@ -232,7 +232,6 @@ To simply close the dialog, click the Cancel button, which calls the hide() func
 
         dojo.addOnLoad(function(){	
             formDlg = dijit.byId("formDialog");
-            // connect to the button so we display the dialog on click:
             dojo.connect(dijit.byId("buttonThree"), "onClick", formDlg, "show");
         });
 
