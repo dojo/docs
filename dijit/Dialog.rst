@@ -261,7 +261,7 @@ This example shows a Dialog that will ask the user to accept or decline the term
     <div dojoType="dijit.Dialog" id="formDialog" title="Accept or decline agreement terms" execute="alert('submitted w/args:\n' + dojo.toJson(arguments[0], true));">
         <h1>Agreement Terms</h1>
 	
-        <div dojoType="dijit.layout.ContentPane" style="width:400px; border:1px solid #b7b7b7; background:#fff; padding:8px; margin:0 auto; height:200px; overflow:auto; " href="../../dojo/LICENSE"></div>
+        <div dojoType="dijit.layout.ContentPane" style="width:400px; border:1px solid #b7b7b7; background:#fff; padding:8px; margin:0 auto; height:150px; overflow:auto; " href="../dojo/LICENSE"></div>
 	
         <br>
         <table>
@@ -304,6 +304,7 @@ This example shows a Dialog that will ask the user to accept or decline the term
 
         dojo.addOnLoad(function() {
             formDlg = dijit.byId("formDialog");
+            // connect to the button so we display the dialog on click:
             dojo.connect(dijit.byId("termsButton"), "onClick", formDlg, "show");
         });
 			
