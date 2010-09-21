@@ -135,6 +135,8 @@ get
   A JavaScript function that is called which returns the value to be shown in the cell.  The function is passed two parameters.  The first is the row index in the DataGrid.  The second is the DataStore record/item.  Given these two parameters, the function is expected to know what to return.  It should *not* be a dijit Widget as that is not parsed.  Care should be taken that the ``item`` parameter is not null.  Tests have shown that the function may be called more often than it should be and this is highlighted with an ``item = null``.
 hidden
   This boolean property can be used to hide a column in the table.  If its value is ``true`` the column is hidden.  If ``false`` the column is displayed.
+sortInfo
+  A numerical value indicating what column should be sorted in the grid.  e.g. "1" would mean "first column, ascending order.  "-2" would mean "second column, descending order".  Note that this replaces the alternative approach of providing queryOptions to the store's fetch() invocation.  Defined on dojox.grid._Grid.
 
 The value of the text between a ``<th>`` and ``</th>`` is used as the header label for the column.
 
