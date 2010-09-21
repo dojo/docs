@@ -343,7 +343,7 @@ filter
 sort
   TBD
 canSort
-  TBD
+  canSort is called by the grid to determine if each column should be sortable.  It takes a single integer argument representing the column index, which is positive for ascending order and negative for descending order, and should return true if that column should be sortable in that direction, and false if not.  For example, to only allow the second column to be sortable, in either direction: "function canSort(col) { return Math.abs(col) === 2; }"
 getSortProps
   TBD
 removeSelectedRows
