@@ -335,7 +335,8 @@ A list of individuals who have signed Dojo CLAs:
 * Nelson, Stephen 
 * Neuberg, Bradley Keith 
 * Newbill, Christopher 
-* Newlau, Andrei 
+* Newlau, Andrei
+* Nguyen, TA 
 * Nguyen, Thanh (Tom) 
 * Noheda, Jose 
 * Nucera, Roberto 
@@ -552,6 +553,7 @@ A list of corporations or organizations with a CLA on file:
 * Atomic Labs, Inc. 
 * BEA Systems 
 * Cambridge Semantics, Inc. 
+* Certus Technology Associates Limited:  Ian Bamsey, John Harris, Robert Pumphrey
 * Claritum, Ltd 
 * Clipperz SRl 
 * Cogini Hong Kong Limited 
