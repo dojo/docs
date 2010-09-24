@@ -37,3 +37,25 @@ A potentially confusing result of the above actually provides us a lot of flexib
   });
 
 The side-effect of this is a documentation nightmare. Now ``every`` Dijit appears to have a region variable, when in fact it is just there for the benefit of BorderContainer. 
+
+Example :  dojo.extend vs dojo.mixin
+-------------------------------------
+
+.. code-block :: javascript
+  :linenos:
+
+    //define a class
+    var myClass = function() {
+        this.defaultProp = "default value";
+    };
+    myClass.prototype = new myClass();
+    console.log("the class (unmodified):", dojo.toJson(myClass.prototype));
+    
+    // extend the class
+    dojo.extend(myClass, {"extendedProp": "extendedValue"});
+    console.log("the class (modified with dojo.extend):", dojo.toJson(myClass.prototype));
+    
+    var t = new myClass();
+    // add new properties to the instance of our class
+    dojo.mixin(t, {"myProp": "myValue"});
+    console.log("the instance (modified with dojo.mixin):", dojo.toJson(t));
