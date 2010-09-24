@@ -573,6 +573,7 @@ A list of corporations or organizations with a CLA on file:
 * IBM 
 * Indico Group 
 * Laszlo Systems, Inc. 
+* Livando.com
 * Media Hive 
 * Meebo 
 * Mobular Technologies 
