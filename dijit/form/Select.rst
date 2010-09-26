@@ -71,6 +71,44 @@ This example shows a simple Select widget - converted from a select tag.
     </select>
 
 
+A simple programmatic Select
+----------------------------
+
+This example shows how you can set up the same select as the previous example, but programmatically.
+
+.. cv-compound::
+  :version: local
+
+  .. cv:: javascript
+
+    <script>
+      if(dojo.version.toString() < "1.4"){
+          dojo.require("dojox.form.DropDownSelect");
+      }else{
+          dojo.require("dijit.form.Select");
+      }
+      
+      dojo.ready(function() {
+        // create dijit.form.Select as a simple wrapper to dojox.form.DropDownSelect for Dojo < 1.4
+        if(!dijit.form.Select){
+            dojo.declare("dijit.form.Select", dojox.form.DropDownSelect, {});
+        }
+        
+        // now create the widget
+        new dijit.form.Select({
+          name: 'select',
+          options: [
+            { label: 'TN', value: 'Tennessee' },
+            { label: 'VA', value: 'Virginia', selected: true },
+            { label: 'WA', value: 'Washington' },
+            { label: 'FL', value: 'Florida' },
+            { label: 'CA', value: 'California' }
+          ]
+        }).placeAt(dojo.body());
+      });
+    </script>
+
+
 A "styled" Select
 -----------------
 
