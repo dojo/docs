@@ -32,6 +32,57 @@ Additionally, the required CSS files must be included in your page for proper op
   * dojox/layout/resources/GridContainer.css
   * dojox/layout/resources/DndGridContainer.css
 
+By requiring the GridContainer, two new attributes are mixed into the dijit._Widget class:
+
+  * column: Holds the current column a widget is in. (If any). Defaults to "1"
+  * dragRestriction: Is the widget draggable? You can use this to prohibit the dragging of a specific Widget
+
+To figure out which column you widget is in, use
+
+.. code-block :: javascript
+  :linenos:
+  
+  dijit.byId("exampleId").column;
+
+If it doesn't work for you, make sure that you have the latest version from trunk, as this feature was broken in Dojo 1.5.0.
+
+============
+Toggling DnD
+============
+
+There might be several use-cases where you want to turn the drag & drop on or off. (For instance, you might offer some kind of "edit mode", where the dnd will work and otherwise it will be turned off)
+
+This is very easy and can be done by calling:
+
+.. code-block :: javascript
+  :linenos:
+  
+  dijit.byId("gridContainer").enableDnd(); // Enables DND
+  // or
+  dijit.byId("gridContainer").disableDnd(); // Disables DND
+
+==================================
+Getting notified about DnD-Actions
+==================================
+
+The GridContainer uses the dojox.mdnd package to publish drag & drop events.
+
+If you want to get notified of any event, use the following: (The event names are self explanatory)
+
+.. code-block :: javascript
+  :linenos:
+
+  dojo.subscribe("/dojox/mdnd/drag/start", null, function(source, nodes, copy, target) {
+      // Your Code here
+  });
+
+  dojo.subscribe("/dojox/mdnd/drag/cancel", null, function(source, nodes, copy, target) {
+      // Your Code here
+  });
+
+  dojo.subscribe("/dojox/mdnd/drop", null, function(source, nodes, copy, target) {
+      // Your Code here 
+  });
 
 ========
 Examples
