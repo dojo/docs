@@ -204,6 +204,7 @@ A list of individuals who have signed Dojo CLAs:
 * Hixon, Alexander 
 * Hjelte, Henrik 
 * Hockey, Benjamin James 
+* Hofbauer, Christian
 * Hoffman, Uwe 
 * Holm, Torkel 
 * Horoszowski, Matthew 
