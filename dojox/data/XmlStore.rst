@@ -360,3 +360,10 @@ Connecting XmlStore to dojox.grid.DataGrid
         margin: 0;
       }
     </style>
+
+
+=============
+More examples
+=============
+
+There are `more extensive examples <dojox/data/XmlStore-examples>`_ of using the xmlstore
