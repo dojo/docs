@@ -19,7 +19,7 @@ todo
 		dojo.require("dijit.tree.TreeStoreModel");
 
 		dojo.ready(function() {
-			//hookXmlStore();
+			hookXmlStore();
 
 			var myxml = '<?xml version="1.0" encoding="utf-8"?><root><node><description>Node 1 Description</description><node><heading>1</heading><description>Node 2 Description</description><node><heading>1.1.a</heading><description>Node 3 Description</description></node><node><heading>1.1.b</heading><description>Node 4 Description</description></node></node></node></root>';
 
@@ -41,7 +41,7 @@ todo
 		});
 
 
-
+     hookXmlStore = function() {
 
 			dojo.provide("my.data.XmlStringStore");
 			dojo.require("dojox.data.XmlStore");
@@ -73,7 +73,7 @@ todo
 				}
 			});
 
-
+     });
     </script>
 
   .. cv:: html
