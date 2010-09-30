@@ -18,6 +18,8 @@ the next step is to use the dojox.xml.parser to read the xml string.
     <script type="text/javascript">
 		dojo.require("dijit.Tree");
 		dojo.require("dijit.tree.TreeStoreModel");
+		dojo.require("dojox.data.XmlStore");
+		dojo.require("dojox.xml.parser");
 
 		dojo.ready(function() {
 			hookXmlStore();
@@ -44,10 +46,6 @@ the next step is to use the dojox.xml.parser to read the xml string.
 
 		hookXmlStore = function() {
 
-			dojo.provide("my.data.XmlStringStore");
-			dojo.require("dojox.data.XmlStore");
-			dojo.require("dojox.xml.parser");
-			
 			dojo.declare("my.data.XmlStringStore", [dojox.data.XmlStore], {
 				constructor: function(args){
 					this.inherited("constructor", arguments);
