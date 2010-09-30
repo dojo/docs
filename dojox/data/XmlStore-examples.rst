@@ -15,8 +15,10 @@ todo
   .. cv:: javascript
 
     <script type="text/javascript">
+		dojo.require("dojox.data.XmlStore");
 		dojo.require("dijit.Tree");
 		dojo.require("dijit.tree.TreeStoreModel");
+		dojo.require("dojox.xml.parser");
 
 		dojo.ready(function() {
 			hookXmlStore();
@@ -41,7 +43,7 @@ todo
 		});
 
 
-     hookXmlStore = function() {
+		hookXmlStore = function() {
 
 			dojo.provide("my.data.XmlStringStore");
 			dojo.require("dojox.data.XmlStore");
@@ -73,7 +75,7 @@ todo
 				}
 			});
 
-     });
+		};
     </script>
 
   .. cv:: html
