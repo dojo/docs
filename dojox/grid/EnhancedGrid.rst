@@ -550,7 +550,24 @@ Tips
   :linenos:
 
   dijit.byId('grid').selection.selected[rowIndex] // returns true or false
+
+* It's also possible to make some customization for the indirect selection column
+
+.. code-block :: javascript
+  :linenos:
+
+  <div id="grid" dojoType="dojox.grid.EnhancedGrid" plugins="{indirectSelection: {name: 'Selection', width:'70px', styles:'text-align: right;'}}" ...></div>
     
+or 
+
+.. code-block :: javascript
+  :linenos:
+
+<script>
+    var grid = new dojox.grid.EnhancedGrid({id: "grid", plugins: {indirectSelection: {name: "Selection", width:"70px", styles:"text-align: center;"}, ...}, dojo.byId('gridDiv'));
+</script>
+    
+
 ========================
 Declarative Context Menu
 ========================
