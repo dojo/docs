@@ -556,7 +556,7 @@ Tips
 .. code-block :: javascript
   :linenos:
 
-  <div id="grid" dojoType="dojox.grid.EnhancedGrid" plugins="{indirectSelection: {name: 'Selection', width:'70px', styles:'text-align: right;'}}" ...></div>
+  <div id="grid" dojoType="dojox.grid.EnhancedGrid" plugins="{indirectSelection:{name:'Selection',width:'70px',styles:'text-align: right;'}}" ...></div>
     
 or 
 
@@ -564,7 +564,7 @@ or
   :linenos:
 
   <script>
-    var grid = new dojox.grid.EnhancedGrid({id: "grid", plugins: {indirectSelection: {name: "Selection", width:"70px", styles:"text-align: center;"}, ...}, dojo.byId('gridDiv'));
+    var grid = new dojox.grid.EnhancedGrid({id:"grid", plugins:{indirectSelection:{name:"Selection",width:"70px",styles:"text-align: center;"}, ...}, dojo.byId('gridDiv'));
   </script>
 
   
