@@ -551,7 +551,7 @@ Tips
 
   dijit.byId('grid').selection.selected[rowIndex] // returns true or false
 
-* It's also possible to make some customization for the indirect selection column
+* It's also possible to make some customizations for the indirect selection column
 
 .. code-block :: javascript
   :linenos:
@@ -560,13 +560,15 @@ Tips
     
 or 
 
+
 .. code-block :: javascript
   :linenos:
 
-<script>
+  <script>
     var grid = new dojox.grid.EnhancedGrid({id: "grid", plugins: {indirectSelection: {name: "Selection", width:"70px", styles:"text-align: center;"}, ...}, dojo.byId('gridDiv'));
-</script>
-    
+  </script>
+
+  
 
 ========================
 Declarative Context Menu
