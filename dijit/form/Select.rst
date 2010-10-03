@@ -114,7 +114,7 @@ Setting Width
 
 By default, the width of the select widget will be to fit the width of the selected item.  However, you can specify a width on the select to force a fixed width.
 
-.. code-example:
+.. code-example::
 
   .. javascript::
 
@@ -133,3 +133,5 @@ By default, the width of the select widget will be to fit the width of the selec
         <option type="separator"></option>
         <option value="CA">California</option>
     </select>
+
+The above example also demonstrates using type="separator" to get dividing lines between groups of options.
