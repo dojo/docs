@@ -31,7 +31,7 @@ There is also a required CSS file. All three widgets share a single sheet of rul
 .. code-block :: html
   :linenos:
 
-    <link rel="stylesheet" href="$dojo/dojox/form/resources/FileInput.css" />
+    <link rel="stylesheet" href="dojo/dojox/form/resources/FileInput.css" />
 
 The three types are described as:
 
