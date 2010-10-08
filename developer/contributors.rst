@@ -585,6 +585,7 @@ A list of corporations or organizations with a CLA on file:
 * PIXAR 
 * RedHat 
 * Renkoo 
+* Riptano Incorporated
 * RS KLAN 
 * RusSte, Inc. 
 * Sinergis
