@@ -1,7 +1,7 @@
 #format dojo_rst
 
-dojox.editor.plugins.SpellCheck
-================================
+dojox.editor.plugins.SpellCheck (Under Construction)
+====================================================
 
 :Authors: He Gu Yi
 :Project owner: Jared Jurkiewicz
@@ -48,7 +48,7 @@ Usage of this plugin is simple and painless. The first thing you need to do is r
   ...
   </div>
 
-Configure the server-side php file. Rename dojox\editor\tests\spellCheck.php.disable to dojox\editor\tests\spellCheck.php. Then just declare the plugin and configure it as follows. Note that the location of SpellCheck.css may be changed according to the actual environment.
+Configure the server-side php file. Rename dojox\editor\tests\spellCheck.php.disable to dojox\editor\tests\spellCheck.php. These two php files are used to check a list of given words and return a list with suggested words. Then just declare the plugin and configure it as follows. Note that the location of SpellCheck.css may be changed according to the actual environment.
 
 .. code-block :: html
 
