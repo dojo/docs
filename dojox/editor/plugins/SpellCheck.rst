@@ -133,7 +133,7 @@ Then you can type Enter in the Not found text field or click Replace to replace 
 
 Note that when the content of the Not found text field is changed, its label will be changed to Replace with.
 
-.. image:: ReplaceWidth.png
+.. image:: ReplaceWith.png
 
 Replace All
 -----------
