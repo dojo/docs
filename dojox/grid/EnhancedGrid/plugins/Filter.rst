@@ -92,7 +92,7 @@ This filter plugin is only available for EnhancedGrid. Use the following stateme
 Plugin Declaration
 ------------------
 
-The declaration name of this plugin is '''filter'''. It is declared in the '''plugins''' property of grid.
+The declaration name of this plugin is ``filter`` . It is declared in the ``plugins`` property of grid.
 
 If your grid is created declaratively:
 
@@ -119,33 +119,37 @@ If your grid is created in JavaScript:
     }
   });
 
-As shown in the above code, you can simply set the "GridFilter" property to true or false (disabled), or further configure it in an argument object.
+As shown in the above code, you can simply set the ``filter`` property to true or false (disabled), or further configure it in an argument object.
 
-The available filter configuration properties are
+All the available filter configuration properties are
 
-====================  ========  ===============  ================================================================================================================
-Property              Type      Default Value    Description
-====================  ========  ===============  ================================================================================================================
-itemsName             String    "items"          The name of the items in the data store. 
-                                                 For example, if the data in the store are records of songs, you may set it to "songs", 
-                                                 so the filter bar will display "10 of 100 songs" instead of "10 of 100 items".
-cacheSize             Integer   -1               The cache size of the filter. Only valid when using client filter. 
-                                                 The client filter will cache the filtered data for future use,avoiding duplicate filtering. 
-                                                 Any negative value or zero means "cache all" (the cache size is infinite).
-                                                 Note: A positive cache size is only meaningful when there is too much store data at server-side 
-                                                 to be loaded completely to client-side, or it's not possible to implement a server-side filter.
-fetchAll              Boolean   true             If true, the grid will filter every item in the data store on the first fetch query. 
-                                                 If false, the grid will stop fetching as soon as one page of filtered data is collected. 
-                                                 (The page size can be configured by the "rowsPerPage" property of grid).
-                                                 The default value is true, because client-side filter is most likely used for small data stores.
-disabledConditions    Object    undefined        Disable some condition for some type or "anycolumn", so the user will not see them in the condition Select box.
-isServerSide          Boolean   false            If this is true, the actual filtering work will be taken over by the server. 
-                                                 This is used to switch between client-side filter and server-side filter.
-isStateful            Boolean   false            If this is true, and isServerSide is set to true, the filter definition will only be sent when it is defined, 
-                                                 and it should be remembered at serverside until it is changed.
-url                   String    ""               When both isServerSide and isStateful are true, this is a place to set the server url, 
-                                                 if it cannot be retrieved by store.url.
-====================  ========  ===============  ================================================================================================================
+=========================  ========  ===============  ================================================================================================================
+Property                   Type      Default Value    Description
+=========================  ========  ===============  ================================================================================================================
+itemsName                  String    "items"          The name of the items in the data store. 
+                                                      For example, if the data in the store are records of songs, you may set it to "songs", 
+                                                      so the filter bar will display "10 of 100 songs" instead of "10 of 100 items".
+closeFilterbarButton       Boolean   false            Whether to hide the close-filterbar button.
+cacheSize                  Integer   -1               The cache size of the filter. Only valid when using client filter. 
+                                                      The client filter will cache the filtered data for future use,avoiding duplicate filtering. 
+                                                      Any negative value or zero means "cache all" (the cache size is infinite).
+                                                      Note: A positive cache size is only meaningful when there is too much store data at server-side 
+                                                      to be loaded completely to client-side, or it's not possible to implement a server-side filter.
+fetchAll                   Boolean   true             If true, the grid will filter every item in the data store on the first fetch query. 
+                                                      If false, the grid will stop fetching as soon as one page of filtered data is collected. 
+                                                      (The page size can be configured by the "rowsPerPage" property of grid).
+                                                      The default value is true, because client-side filter is most likely used for small data stores.
+disabledConditions         Object    undefined        Disable some condition for some type or "anycolumn", so the user will not see them in the condition Select box.
+isServerSide               Boolean   false            If this is true, the actual filtering work will be taken over by the server. 
+                                                      This is used to switch between client-side filter and server-side filter.
+isStateful                 Boolean   false            If this is true, and isServerSide is set to true, the filter definition will only be sent when it is defined, 
+                                                      and it should be remembered at serverside until it is changed.
+url                        String    ""               When both isServerSide and isStateful are true, this is a place to set the server url, 
+                                                      if it cannot be retrieved by store.url.
+setupFilterQuery           Function  undefined        If you'd like to use a stateless server side filter, you'll have to modify the request object, so as to add in 
+                                                      the filter definition. The signiture of this function is setupFilterQuery(commands, request). See the last
+                                                      section for details.
+=========================  ========  ===============  ================================================================================================================
 
 Column Configuration
 --------------------
@@ -209,31 +213,34 @@ The UI of this plugin consists of 3 components: a filter bar within the grid, a 
 Filter Bar
 ----------
 
-.. image::
+.. image:: filterbar.png
 
 Clicking the button on the filter bar will show the Filter Definition Dialog with a default value of "Any Column". 
 
-.. image::
+.. image:: filterbar-definefilterbtn.png
 
 Clicking directly on the filter bar will also show the Filter Definition Dialog, but setting the value of the "Column" field to the column that the mouse is over.
 
-.. image::
+.. image:: filterbar-somecolumn.png
 
 Hovering over the filterbar for 300 msec will trigger the Filter Status Tooltip.
 
-.. image::
+.. image:: filterbar-showtooltip.png
 
 When there's a filter defined, The clear filter button is shown.
 
-.. image::
+.. image:: filterbar-clearbtn.png
 
-At the right end of the filter bar, there's a close-filterbar button. This button can be hidden when "hideCloseFilterBarButton" is true.
+If ``closeFilterbarButton`` is true, there will be a close-filterbar button at the right end of the filter bar.
 
-When the filter bar is hidden, there is a function to bring it out: showFilterBar
+.. image:: filterbar-closebtn.png
+
+When the filter bar is hidden, there is a function to bring it out: ``showFilterBar``
 
 Actually there's a set of APIs related to filterbar:
 
-showFilterBar(toShow, useAnim, animArgs): Show/Hide filter bar
+showFilterBar(toShow, useAnim, animArgs):
+	Show/Hide filter bar
 
 ==============  ==================  ==========================  =============================================
 Arguments       Type                Optional/Mandatory          Description
@@ -243,52 +250,57 @@ useAnim         Boolean             Optional(default to true)   When showing/hid
 animArgs        dojo.__AnimArgs     Optional                    Customized animation properties.
 ==============  ==================  ==========================  =============================================
 
-toggleFilterBar(useAnim, animArgs): Toggle the filter bar. Will call showFilterBar.
-Please refer to the useAnim/animArgs arguments for showFilterBar method.
+toggleFilterBar(useAnim, animArgs):
+	Toggle the filter bar. Will call ``showFilterBar``. Please refer to the useAnim/animArgs arguments for showFilterBar method.
 
-isFilterBarShown(): Check the visibility of filter bar. Return boolean.
+isFilterBarShown():
+	Check the visibility of filter bar. Return boolean.
+
 
 Filter Definition Dialog
 ------------------------
 
+.. image:: defdialog.png
+
 The Filter Definition Dialog is designed to define filter conditions with either of the following structures:
+
 1. [rule 1 for column A] and [rule 2 for column B] and [rule 3 for column C]
+
 2. [rule 1 for column A] or [rule 2 for column B] or [rule 3 for column C]
 
-.. image::
+.. image:: defdialog-rulerelation.png
 
 Use the "Add Rule" button to add a rule. If there are already 3 rules, this button will be disabled.
 Every rule is regarded as a simple sentence with the following structure:
 
-[Column] [Condition Verb] [Value]
+``[Column] [Condition Verb] [Value]``
 
-For example:
-
-Column "Age", "is less than", 26
+For example: ``Column "Age", "is less than", 26``
 
 Different data types have different sets of conditions and different kinds of form widgets.
 
 The value field for Number type only accepts number. 
+
+.. image:: defdialog-numbervaluebox.png
+
 The value field for String type can have auto-complete capability (if set autoComplete in the grid structure). 
-DateTextBox and TimeTextBox used for Date and Time types, respectively:
 
-.. image::
+.. image:: defdialog-stringvaluebox.png
 
-The "range" condition for "date" and "time" types represents a closed range.
+DateTextBox and TimeTextBox used for Date and Time types, respectively.
 
-.. image::
+And the ``range`` condition for ``date`` and ``time`` types represents a closed range.
 
-Once a rule is defined, you can check it's content by hovering at the title of that rule:
-
-.. image::
+.. image:: defdialog-rangevaluebox.png
 
 
 Filter Status Tooltip
 ---------------------
 
+.. image:: statustooltip-multirule.png
+
 When a filter exists, the Filter Status Tooltip shows every rule of the current filter. If there are multiple rules, you can delete some of them by clicking the red 'X' at the right side of every rule.
 
-.. image::
 
 =====================================
 Introduction to Server-Side Filtering
@@ -296,12 +308,14 @@ Introduction to Server-Side Filtering
 
 If the store is too big to perform efficient client-side filtering, you can implement your own server-side filter logic along with your data store implementation.
 
+To enable server-side filtering, just set the ``isServerSide`` property to true.
+
 Basic Protocol
 --------------
 
-To enable server-side filtering, just set the "isServerSide" property to true.
-By default, the server side is assumed to be stateless (REST style). In this case, you should send the filter definition to server side by yourself.
+By default, the server side is assumed to be stateless (REST style). In this case, you should send the filter definition to server side along with the fetch request of the store.
 You can do this by modifying the request object every time before store.fetch is called.
+
 For example:
 
 .. code-block :: javascript
@@ -327,7 +341,9 @@ For example:
     }
   }
 
-If you'd like to use a stateful server (which means the filter definition will only be sent when it is defined, and it should be remembered at serverside until it is changed) you can set the "isStateful" property:
+Thus the filter definition will be sent to the server along with the request.
+  
+If you'd like to use a stateful server, which means the filter definition will only be sent when it is defined, and it should be remembered at serverside until it is changed, you can set the '''isStateful''' property:
 
 .. code-block :: javascript
   :linenos:
@@ -363,13 +379,13 @@ filter      JSON String  No                 {...}                A command to se
                                                                  This field should not co-exist with the "clear" field. If they both exist, this field has higher priority.
 ==========  ===========  =================  ===================  ==========================================================================================================
 
-When the web page loads, the first POST that the server receives is the "clear" command. It ensures that there's no filter defined in the session. 
+When the web page loads, the first POST that the server receives is the ``clear`` command. It ensures that there's no filter defined in the session. 
 
-.. image::
+.. image:: clearfilter-protocol.png
 
-Every time the user defines a filter, the server will receive a "filter" command. This command contains a JSON string representing the filter definition, which is covered in the next section.
+Every time the user defines a filter, the server will receive a ``filter`` command. This command contains a JSON string representing the filter definition, which is covered in the next section.
 
-.. image::
+.. image:: definefilter-protocol.png
 
 The Filter Definition
 ---------------------
@@ -394,7 +410,7 @@ isCol  Boolean     No                 true                If "op" is a datatype,
 =====  ==========  =================  ==================  =====================================================================================================================================
 
 
-So the JSON object is nothing more than an object with 2 fields: "op" and "data". For example, The following filter definition means:
+So the JSON object is nothing more than an object with 2 fields: ``op`` and ``data``. For example, The following filter definition means:
 
 The data of the "Field Name" column, whose data type is string, equals to "some message".
 
@@ -407,33 +423,33 @@ The data of the "Field Name" column, whose data type is string, equals to "some 
     //  and | or | not | all | any | equal | less | lessEqual | larger | largerEqual | contains | startsWith | endsWith
     //Currently supported datatypes are:
     //  string | number | date | time
-    "op": "equal",
-
+    op: "equal",
+    
     //data: Array | string | number
     //The data of the corresponding "op". If "op" is actually an operator, this field must be an array, 
     //which contains a list of deeper level filter expressions.
-    "data": [
+    data: [
       {
-        "op": "string",
-
+        op: "string",
+        
         //data: Array | string | number
         //If "op" is a datatype, and there is no "isCol" field, this "data" field is a value of this type.
-        "data": "some message"
+        data: "some message"
       },
       {
-        "op": "string",
-
+        op: "string",
+        
         //isCol: Boolean
         //If this field exists and is, or can be converted to, true, 
         //then this expression represents a column in the store, 
         //and the corresponding "data" field represents the field name of this column.
-        "isCol": true,
-
+        isCol: true,
+        
         //data: Array | string | number
         //If "op" is a datatype, and the property "isCol" is true, 
         //this "data" field represents the field name of a column in the data store, 
         //so the server implementer can get the value of this field, and transform it to the specified datatype.
-        "data": "Field Name"
+        data: "Field Name"
       }
     ]
   }
@@ -441,7 +457,7 @@ The data of the "Field Name" column, whose data type is string, equals to "some 
 Supported Operators
 -------------------
 
-Here is a summary of all supported operators. The "Name" of each operator is passed as the "op" field in the filter definition.
+Here is a summary of all supported operators used in filter definition. The "Name" of each operator is passed as the ``op`` field in the filter definition.
 
 ===========  ====================================  =======================  ================================================================================
 Name         Valid Data Types                      Number of Operands       Meaning
