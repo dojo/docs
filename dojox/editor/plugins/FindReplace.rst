@@ -3,7 +3,7 @@
 dojox.editor.plugins.FindReplace
 ================================
 
-:Authors: Jared Jurkiewicz
+:Authors: Jared Jurkiewicz, He Gu Yi
 :Project owner: Jared Jurkiewicz
 :Available: since V1.4
 
@@ -26,7 +26,6 @@ Limitations
 ===========
 
 * This plugin does not work in Opera.
-* Searching backwards does not work well in Internet Explorer.
 
 =====
 Usage
@@ -60,17 +59,58 @@ You also need to include the CSS for it.  For example:
 
 And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the FindReplace plugin!  To display the find/replace toolbar, click the find/replace toggle button in the main toolbar.  The find/replace toolbar will then appear beneath the main toolbar.  
 
-========
-Behavior
-========
+==============
+User Interface
+==============
 
-* The find button will not enable until text has been entered into the find field.
-* The replace button will not enable until text is in both the find and replace fields.
+This updated plugin provides the user with some basic find and replace functions. Click the Find and Replace button to open the toolbar.
 
-To replace a single instance of a word, enter the word in the find box, then enter its replacement in the replacement box.  Click find and it will highlight the first occurance.  Then click replace to replace it.  To find the next one, click find again.
+.. image :: FindReplace.png
 
-To replace all occurances, simply enter the text to find, the text to replace it with, click the 'All Occurances' checkbox, then click replace.  It will interatively search the document from the current cursor position and replace all instances it finds.
+Find
+----
 
+Enter the text in Find text field and click Find button or press ENTER key to perform a search.
+
+* The first found text will be highlighted.
+* When the last occurrence is found, a tooltip dialog is displayed to indicate the end of the search.
+* Regular expression is *NOT* supported.
+* Select Match case to search the text with case.
+* Select Backwards to search the text from the the current focus toward the beginning.
+
+.. image :: Find.png
+
+Replace
+-------
+
+Enter the text to be replaced in Find text field and enter the replacement text in Replace with text field. Click Replace button or press ENTER key to perform a replacement.
+
+* If current selection matches the text to be replaced, replace the current selection and move to the next found text.
+* If current selection does not match the text to be replaced, move to the next match.
+* When the last occurrence is found, a tooltip dialog is displayed to indicate the end of the replacement.
+* Regular expression is *NOT* supported.
+* Select Match case to search the text with case.
+* Select Backwards to search the text from the current focus to the beginning.
+
+.. image :: Replace.png
+
+Replace All
+-----------
+
+Enter the text to be replaced in Find text field and enter the replacement text in the Replace with text field. Click Replace All button to perform a full text replacement.
+
+* All the matching text will be replaced and a tooltip dialog will be displayed to indicate the number of replacements.
+* Regular expression is *NOT* supported.
+* Select Match case to search the text with case.
+* Select Backwards to search the text from the end to the beginning.
+
+.. image :: ReplaceAll.png
+
+===================
+A11Y Considerations
+===================
+
+All fields within the FindReplace toolbar can be accessed with the keyboard.
 
 ========
 Examples
