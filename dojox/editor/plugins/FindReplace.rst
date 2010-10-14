@@ -92,7 +92,7 @@ Enter the text to be replaced in Find text field and enter the replacement text 
 * Select Match case to search the text with case.
 * Select Backwards to search the text from the current focus to the beginning.
 
-.. image :: Replace.png
+.. image :: ReplaceWord.png
 
 Replace All
 -----------
