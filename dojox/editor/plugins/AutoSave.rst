@@ -139,7 +139,6 @@ Basic Usage
 
     <script>
       dojo.require("dijit.Editor");
-      dojo.require("dojox.editor.plugins.AutoSave");
     </script>
 
   .. css::
