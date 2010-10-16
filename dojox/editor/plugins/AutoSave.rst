@@ -132,13 +132,14 @@ Basic Usage
 -----------
 
 .. code-example::
-  :djConfig: parseOnLoad: true
+  :djConfig: parseOnLoad: true, isDebug: true
   :version: 1.6
 
   .. javascript::
 
     <script>
       dojo.require("dijit.Editor");
+      dojo.require("dojox.editor.plugins.AutoSave");
     </script>
 
   .. css::
@@ -151,7 +152,7 @@ Basic Usage
 
     <b>Click the down arrow and select Set Auto-Save Interval... to save at intervals</b>
     <br>
-    <div dojoType="dijit.Editor" height="250px"id="input">
+    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['autosave']">
     <div>
     <br>
     blah blah & blah!
