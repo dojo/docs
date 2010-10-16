@@ -139,20 +139,20 @@ Basic Usage
 
     <script>
       dojo.require("dijit.Editor");
-      dojo.require("dojox.editor.plugins.AutoSave");
+      dojo.require("dojox.editor.plugins.FindReplace");
     </script>
 
   .. css::
 
     <style>
-      @import "{{baseUrl}}dojox/editor/plugins/resources/css/AutoSave.css";
+      @import "{{baseUrl}}dojox/editor/plugins/resources/css/FindReplace.css";
     </style>
     
   .. html::
 
-    <b>Click the down arrow and select Set Auto-Save Interval... to save at intervals</b>
+    <b>Toggle the find/replace toolbar by clicking its menu bar button.</b>
     <br>
-    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['autosave']">
+    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['findreplace']">
     <div>
     <br>
     blah blah & blah!
