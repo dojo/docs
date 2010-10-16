@@ -1,7 +1,7 @@
 #format dojo_rst
 
 dojox.editor.plugins.ColorTableCell (Under Construction)
-====================================================
+========================================================
 
 :Authors: He Gu Yi
 :Project owner: Jared Jurkiewicz
