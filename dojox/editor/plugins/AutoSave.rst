@@ -132,8 +132,8 @@ Basic Usage
 -----------
 
 .. code-example::
-  :djConfig: parseOnLoad: true, isDebug: true
-  :version: 1.6
+  :djConfig: parseOnLoad: true
+  :version: 1.5
 
   .. javascript::
 
