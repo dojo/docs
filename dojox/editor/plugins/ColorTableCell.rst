@@ -1,7 +1,7 @@
 #format dojo_rst
 
 dojox.editor.plugins.ColorTableCell (Under Construction)
-========================================================
+====================================================
 
 :Authors: He Gu Yi
 :Project owner: Jared Jurkiewicz
@@ -86,7 +86,7 @@ All fields within the setting dialog can be accessed with the keyboard.
 Limitations
 ===========
 
-None.
+In IE, we have to press and drag the mouse to select the cell (just like what we do to select a piece of text), which is quite different from that of the other browsers.
 
 ========
 Examples
