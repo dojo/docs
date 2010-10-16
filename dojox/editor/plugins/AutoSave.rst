@@ -133,7 +133,7 @@ Basic Usage
 
 .. code-example::
   :djConfig: parseOnLoad: true
-  :version: 1.5
+  :version: 1.4
 
   .. javascript::
 
