@@ -133,26 +133,26 @@ Basic Usage
 
 .. code-example::
   :djConfig: parseOnLoad: true
-  :version: 1.4
+  :version: 1.6
 
   .. javascript::
 
     <script>
       dojo.require("dijit.Editor");
-      dojo.require("dojox.editor.plugins.FindReplace");
+      dojo.require("dojox.editor.plugins.AutoSave");
     </script>
 
   .. css::
 
     <style>
-      @import "{{baseUrl}}dojox/editor/plugins/resources/css/FindReplace.css";
+      @import "{{baseUrl}}dojox/editor/plugins/resources/css/AutoSave.css";
     </style>
     
   .. html::
 
-    <b>Toggle the find/replace toolbar by clicking its menu bar button.</b>
+    <b>Click the down arrow and select Set Auto-Save Interval... to save at intervals</b>
     <br>
-    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['findreplace']">
+    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['autosave']">
     <div>
     <br>
     blah blah & blah!
