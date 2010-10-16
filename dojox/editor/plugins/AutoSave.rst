@@ -152,7 +152,7 @@ Basic Usage
 
     <b>Click the down arrow and select Set Auto-Save Interval... to save at intervals</b>
     <br>
-    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['autosave']">
+    <div dojoType="dijit.Editor" height="250px"id="input">
     <div>
     <br>
     blah blah & blah!
