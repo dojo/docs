@@ -44,6 +44,14 @@ Examples
 
 ``TODOC:`` show off some of the sizing options.
 
+Resize an existing Dialog:
+.. code-block :: javascript
+  :linenos:
+
+  dlg.set("dimensions", [400, 200]); // [width, height]
+  dlg.layout(); //starts the resize
+
+
 =====
 Notes
 =====
