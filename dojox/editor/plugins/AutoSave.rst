@@ -81,11 +81,11 @@ Save the content immediately
 
 There are two ways to save the content immediately.
 
-* Click the Save button icon to save the content.
+* Click the **Save** button icon to save the content.
 
 .. image :: SaveNow.png
 
-* Or Click the down arrow next to the Save icon and then click Save when the dropdown menu is displayed.
+* Or Click the down arrow next to the **Save** icon and then click **Save** when the dropdown menu is displayed.
 
 .. image :: SaveMenu.png
 
@@ -96,15 +96,15 @@ After the content being saved, a tooltip dialog will be displayed to show the ti
 Enable auto-save
 ----------------
 
-To enable auto-save, click the down arrow and select Set Auto-Save Interval ....
+To enable auto-save, click the down arrow and select **Set Auto-Save Interval ....**
 
 .. image :: IntervalMenu.png
 
-The Auto-Save window will be displayed and the default auto-save interval is 5 minutes, which is specified by the interval argument when the plugin is declared.
+The **Auto-Save** window will be displayed and the default auto-save interval is 5 minutes, which is specified by the interval argument when the plugin is declared.
 
 * Enter an alternative interval value in the text field if necessary.
-* Click Set Interval to save the interval and enable auto-save.
-* Or click Cancel to disable auto-save.
+* Click **Set Interval** to save the interval and enable auto-save.
+* Or click **Cancel** to disable auto-save.
 
 .. image :: SetInterval.png
 
