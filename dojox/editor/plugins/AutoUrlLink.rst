@@ -16,7 +16,7 @@ Have you ever wanted to turn the URL you entered in the document into a hyperlin
 Features
 ========
 
-Once required in and enabled, this plugin can turn a URL like (such as http, https and ftp) string into a hyperlink.
+Once required in and enabled, this plugin can turn a URL like string (such as http, https and ftp) into a hyperlink.
 
 =====
 Usage
