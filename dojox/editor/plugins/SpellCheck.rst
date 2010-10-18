@@ -48,7 +48,7 @@ Usage of this plugin is simple and painless. The first thing you need to do is r
   ...
   </div>
 
-Configure the server-side php file. Rename dojox\editor\tests\spellCheck.php.disable to dojox\editor\tests\spellCheck.php. These two php files are used to check a list of given words and return a list with suggested words. Then just declare the plugin and configure it as follows. Note that the location of SpellCheck.css may be changed according to the actual environment.
+Configure the server-side php file. Rename **dojox/editor/tests/spellCheck.php.disable** to **dojox/editor/tests/spellCheck.php**. The php file is used to check a list of given words and return a list with suggested words. Then just declare the plugin and configure it as follows. Note that the location of SpellCheck.css may be changed according to the actual environment.
 
 .. code-block :: html
 
@@ -91,47 +91,47 @@ User Interface
 Batch Spell Check
 -----------------
 
-Click the Batch Spell Check button to open the dialog. SpellCheck will highlight all the unrecognized words and the first unrecognized word will be selected and shown in the Not found text field.
+Click the **Batch Spell Check** button to open the dialog. SpellCheck will highlight all the unrecognized words and the first unrecognized word will be selected and shown in the **Not found** text field.
 
 .. image:: BatchSpellCheck.png
 
 Skip
 ----
 
-There are two ways to ignore the word in the Not found text field and move to the next word. The ignored word will be considered recognized as long as the editor is not destroyed.
+There are two ways to ignore the word in the **Not found** text field and move to the next word. The ignored word will be considered recognized as long as the editor is not destroyed.
 
-* Click the Skip button.
-* Or type Enter in the Not found text field. 
+* Click the **Skip** button.
+* Or type **Enter** in the **Not found** text field. 
 
 .. image:: Skip.png
 
 Skip All
 --------
 
-Skip All to ignore the word displayed in the Not found text field and all similarly spelled words. All the similarly spelled words will be considered recognized as long as the editor is not destroyed.
+**Skip All** to ignore the word displayed in the **Not found** text field and all similarly spelled words. All the similarly spelled words will be considered recognized as long as the editor is not destroyed.
 
 .. image:: SkipAll.png
 
 Add to dictionary
 -----------------
 
-Click Add to dictionary to add this word into the dictionary.
+Click **Add to dictionary** to add this word into the dictionary.
 
 .. image:: AddToDictionary.png
 
 Replace
 -------
 
-Take either one of the following two actions to address an unrecognized word displayed in the Not found text field.
+Take either one of the following two actions to address an unrecognized word displayed in the **Not found** text field.
 
-* Select a right one from the Suggestions list box.
-* Replace it directly in the Not found text field.
+* Select a right one from the **Suggestions** list box.
+* Replace it directly in the **Not found** text field.
 
-Then you can type Enter in the Not found text field or click Replace to replace the unrecognized one with the new one and move to the next unrecognized word.
+Then you can type **Enter** in the **Not found** text field or click **Replace** to replace the unrecognized one with the new one and move to the next unrecognized word.
 
 .. image:: Replace.png
 
-Note that when the content of the Not found text field is changed, its label will be changed to Replace with.
+Note that when the content of the **Not found** text field is changed, its label will be changed to **Replace with**.
 
 .. image:: ReplaceWith.png
 
@@ -140,31 +140,31 @@ Replace All
 
 Take either one of the following two actions if the word is unrecognized.
 
-* Select a right one from the Suggestions list box.
-* Repace it directly in the Not found text field.
+* Select a right one from the **Suggestions** list box.
+* Replace it directly in the **Not found** text field.
 
-Then click Replace All to replace all the occurrence of this word with the new one and move to the next unrecognized word.
+Then click **Replace All** to replace all the occurrence of this word with the new one and move to the next unrecognized word.
 
 Cancel
 ------
 
-Click Cancel to stop the replacement.
+Click **Cancel** to stop the replacement.
 
 .. image:: Cancel.png
 
 Interactive Spell Check
 -----------------------
 
-The interactive mode is on by setting the argument interactive: true when declaring the plugin. It will perform the check as the user types.
+The interactive mode is on by setting the argument **interactive: true** when declaring the plugin. It will perform the check as the user types.
 
 .. image:: InteractiveSpellCheck.png
 
 Right click on the unrecognized word and the context menu will be displayed. You can take one of the following actions.
 
 * Select a suggested word.
-* Click Skip this to skip this word.
-* Click Skip all like this to skip all the word like this.
-* Click Add to dictionary to add this word into the dictionary.
+* Click **Skip this** to skip this word.
+* Click **Skip all** like this to skip all the word like this.
+* Click **Add to dictionary** to add this word into the dictionary.
 
 .. image:: Menu.png
 
