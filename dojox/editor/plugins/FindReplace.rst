@@ -70,39 +70,39 @@ This updated plugin provides the user with some basic find and replace functions
 Find
 ----
 
-Enter the text in Find text field and click Find button or press ENTER key to perform a search.
+Enter the text in **Find** text field and click **Find** button or press **ENTER** key to perform a search.
 
 * The first found text will be highlighted.
 * When the last occurrence is found, a tooltip dialog is displayed to indicate the end of the search.
-* Regular expression is *NOT* supported.
-* Select Match case to search the text with case.
-* Select Backwards to search the text from the current focus toward the beginning.
+* Regular expression is **NOT** supported.
+* Select **Match case** to search the text with case.
+* Select **Backwards** to search the text from the current focus toward the beginning.
 
 .. image :: Find.png
 
 Replace
 -------
 
-Enter the text to be replaced in Find text field and enter the replacement text in Replace with text field. Click Replace button or press ENTER key to perform a replacement.
+Enter the text to be replaced in **Find** text field and enter the replacement text in **Replace with** text field. Click **Replace** button or press **ENTER** key to perform a replacement.
 
 * If current selection matches the text to be replaced, replace the current selection and move to the next found text.
 * If current selection does not match the text to be replaced, move to the next match.
 * When the last occurrence is found, a tooltip dialog is displayed to indicate the end of the replacement.
-* Regular expression is *NOT* supported.
-* Select Match case to search the text with case.
-* Select Backwards to search the text from the current focus to the beginning.
+* Regular expression is **NOT** supported.
+* Select **Match** case to search the text with case.
+* Select **Backwards** to search the text from the current focus to the beginning.
 
 .. image :: ReplaceWord.png
 
 Replace All
 -----------
 
-Enter the text to be replaced in Find text field and enter the replacement text in the Replace with text field. Click Replace All button to perform a full text replacement.
+Enter the text to be replaced in **Find** text field and enter the replacement text in the **Replace** with text field. Click **Replace All** button to perform a full text replacement.
 
 * All the matching text will be replaced and a tooltip dialog will be displayed to indicate the number of replacements.
-* Regular expression is *NOT* supported.
-* Select Match case to search the text with case.
-* Select Backwards to search the text from the end to the beginning.
+* Regular expression is **NOT** supported.
+* Select **Match case** to search the text with case.
+* Select **Backwards** to search the text from the end to the beginning.
 
 .. image :: ReplaceAll.png
 
@@ -110,7 +110,7 @@ Enter the text to be replaced in Find text field and enter the replacement text 
 A11Y Considerations
 ===================
 
-All fields within the FindReplace toolbar can be accessed with the keyboard.
+All fields within the **FindReplace** toolbar can be accessed with the keyboard.
 
 ========
 Examples
