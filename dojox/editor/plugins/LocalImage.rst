@@ -56,14 +56,14 @@ Then just declare the plugin and configure it as follows. Note that the location
     dojo.require("dojox.editor.plugins.LocalImagePlugin");
     ...
   </script>
-  <div dojoType="dijit.Editor" id="editor1" extraPlugins="[{name: 'LocalImage', uploadable: true, uploadUrl: '../../form/tests/UploadFile.php', baseImageUrl: '../../form/tests/', fileMask: '*.jpg;*.jpeg;*.gif;*.png;*.bmp'}]>
+  <div dojoType="dijit.Editor" id="editor1" extraPlugins="[{name: 'LocalImage', uploadable: true, uploadUrl: '../../form/tests/UploadFile.php', baseImageUrl: '../../form/tests/', fileMask: '*.jpg;*.jpeg;*.gif;*.png;*.bmp'}]">
   ...
   </div>
 
 If you are running the demo in Dojo SDK, configure the server-side php files as follows.
 
-* Rename dojox\form\tests\cLOG.php.disable to dojox\form\tests\cLOG.php
-* Rename dojox\form\tests\UploadFile.php.disable to dojox\form\tests\UploadFile.php
+* Rename **dojox/form/tests/cLOG.php.disable** to **dojox/form/tests/cLOG.php**
+* Rename **dojox/form/tests/UploadFile.php.disable** to **dojox/form/tests/UploadFile.php**
 
 And that's it. The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the LocalImage plugin!
 
@@ -78,43 +78,49 @@ uploadable                Boolean            True          False                
 uploadUrl                 String             True          <empty string>           Specify the url that the image is uploaded to.
                                                                                     If the argument uploadable is false or not specified, this argument is ignored.
 baseImageUrl              String             True          <empty string>           The prefix of the image url on the server.
-                                                                                    For example, an image is uploaded and stored at the following
-                                                                                    location http://www.myhost.com/images/uploads/test.jpg.
+                                                                                    For example, an image is uploaded and stored at the following location.
+
+                                                                                    http://www.myhost.com/images/uploads/test.jpg
+
                                                                                     When the image is uploaded, the server returns "uploads/test.jpg" as
                                                                                     the relative path. So the baseImageUrl should be set to
                                                                                     "http://www.myhost.com/images/" so that the client can retrieve the image from
-                                                                                    the server. If the image file is located on the same domain as that of the current
+                                                                                    the server.
+
+                                                                                    If the image file is located on the same domain as that of the current
                                                                                     web page, baseImageUrl can be a relative path. For example:
-                                                                                    baseImageUrl = "images/" and the server returns "uploads/test.jpg".
+\
+                                                                                    baseImageUrl = "images/" and the server returns "uploads/test.jpg"
+
                                                                                     The complete URL of the image file is "images/upload/test.jpg".
                                                                                     If the argument uploadable is false or not specified, this argument is ignored.
-fileMask                  String             True          "*.jpg;*.jpeg;*.gif;     Specify the acceptable image type.
-                                                           *.png;*.bmp"             The default value is "*.jpg;*.jpeg;*.gif;*.png;*.bmp".                       
+fileMask                  String             True          "\*.jpg;\*.jpeg;\*.gif;  Specify the acceptable image type.
+                                                           \*.png;\*.bmp"           The default value is "\*.jpg;\*.jpeg;\*.gif;\*.png;\*.bmp".                       
 ========================  =================  ============  =======================  ===================================================================================
 
 ==============
 User Interface
 ==============
 
-LocalImagePlugin is a plugin for dijit.Editor, which provides the user with the ability to insert images from both network and local files. Click Insert Image to open the tooltip dialog,
+LocalImagePlugin is a plugin for dijit.Editor, which provides the user with the ability to insert images from both network and local files. Click **Insert Image** to open the tooltip dialog,
 
 .. image :: LocalImage.png
 
 Insert a local image file
 -------------------------
 
-Click Browse... to select a local file and describe it in the Description which will be displayed when the image can't be displayed. Then click Insert to insert the image.
+Click **Browse...** to select a local file and describe it in the **Description** which will be displayed when the image can't be displayed. Then click **Insert** to insert the image.
 
 .. image :: BrowseLocal.png
 
-If the image type is not acceptable, a warning icon will be displayed and the Insert button is disabled.
+If the image type is not acceptable, a warning icon will be displayed and the **Insert** button is disabled.
 
 .. image :: Warning.png
 
 Insert an online image
 ----------------------
 
-Enter the url of the file in the Image field and enter its alternative description in the Description filed which will show when the image can't be displayed. Then click Insert to insert the online image.
+Enter the url of the file in the **Image** field and enter its alternative description in the **Description** filed which will show when the image can't be displayed. Then click **Insert** to insert the online image.
 
 .. image :: InsertOnline.png
 
@@ -124,9 +130,9 @@ Edit the image
 There are two ways to edit the inserted image.
 
 * Double click the image
-* Or click on the image and then click Insert Image.
+* Or click on the image and then click **Insert Image** icon.
 
-The dialog will be displayed with Image field and Description field poplulated if available. Click Insert to confirm the modification to the image.
+The dialog will be displayed with **Image** field and **Description** field populated if available. Click **Insert** to confirm the modification to the image.
 
 .. image :: EditImage.png
 
