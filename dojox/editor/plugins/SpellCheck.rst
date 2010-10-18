@@ -48,7 +48,9 @@ Usage of this plugin is simple and painless. The first thing you need to do is r
   ...
   </div>
 
-Configure the server-side php file. Rename **dojox/editor/tests/spellCheck.php.disable** to **dojox/editor/tests/spellCheck.php**. The php file is used to check a list of given words and return a list with suggested words. Then just declare the plugin and configure it as follows. Note that the location of SpellCheck.css may be changed according to the actual environment.
+Configure the server-side php file. Rename **dojox/editor/tests/spellCheck.php.disable** to **dojox/editor/tests/spellCheck.php**. The php file is used to check a list of given words and return a list with suggested words.
+
+Then just declare the plugin and configure it as follows. Note that the location of SpellCheck.css may be changed according to the actual environment.
 
 .. code-block :: html
 
