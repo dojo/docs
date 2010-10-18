@@ -10,18 +10,13 @@ dojox.editor.plugins.ResizeTableColumn (Under Construction)
 .. contents::
     :depth: 2
 
-Have you ever wanted to resize the width of the table column by dragging in the editor's document? This plug-in is for you.
+Have you ever wanted to resize the width of the table column by dragging the edge of the table columnin the editor's document? This plug-in is for you.
 
 ========
 Features
 ========
 
-Once required in and enabled, this plugin provides the users with the ability to resize the width of the table column in the editor.
-
-* The width of the column can be changed by dragging and dropping the edge of the column.
-* The delta width is either taken from or added to the adjacent column on the trailing edge
-* Sizing the rightmost or leftmost columns affects only those columns.
-* The leading and trailing columns can only be sized to the extent of the containing div. 
+Once required in and enabled, this plugin provides the users with the ability to resize the width of the table column by dragging the edge of the column in the editor.
 
 =====
 Usage
