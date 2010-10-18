@@ -19,7 +19,7 @@ Features
 Once required in and enabled, this plugin provides the following features to dijit.Editor.
 
 * The ability to find text with modifiers of matching case and searching backwards from current position.
-* The ability to replace text, with a modifier to replace all occurances in the document past the current position.
+* The ability to replace text, with a modifier to replace all occurrences in the document past the current position.
 
 ===========
 Limitations
@@ -76,7 +76,7 @@ Enter the text in Find text field and click Find button or press ENTER key to pe
 * When the last occurrence is found, a tooltip dialog is displayed to indicate the end of the search.
 * Regular expression is *NOT* supported.
 * Select Match case to search the text with case.
-* Select Backwards to search the text from the the current focus toward the beginning.
+* Select Backwards to search the text from the current focus toward the beginning.
 
 .. image :: Find.png
 
