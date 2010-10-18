@@ -10,7 +10,7 @@ dojox.editor.plugins.AutoSave (Under Construction)
 .. contents::
     :depth: 2
 
-Have you ever wanted to save your editing content at intervals so that you won't lost it by accident? This plug-in is for you.
+Have you ever wanted to save your editing content at intervals so that you won't lose it by accident? This plugin is for you.
 
 ========
 Features
@@ -69,7 +69,7 @@ Argument Name             Data Type          Optional      Default Value        
 name                      String             False         autosave                 The name of this plugin. It should always be "autosave".
 url                       String             False         <empty string>           The service url which the content of the editor is submitted to.
 interval                  Number             True          5                        Specify the interval to perform the save action.
-                                                                                    If it is not specified, the default value is 5 ( minutes).
+                                                                                    If it is not specified, the default value is 5 (minutes).
 ========================  =================  ============  =======================  =============================================================================
 
 ==============
