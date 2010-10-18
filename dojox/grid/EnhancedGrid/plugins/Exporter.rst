@@ -1,7 +1,7 @@
 #format dojo_rst
 
-dojox.grid.EnhancedGrid
-=======================
+dojox.grid.EnhancedGrid.plugins.Exporter
+========================================
 
 :Project owner: Nathan Toone
 :Available: since V.1.6
