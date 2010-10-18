@@ -6,7 +6,7 @@ dojox.grid.EnhancedGrid
 :Project owner: Nathan Toone
 :Available: since V.1.6
 
-Enhanced DataGrid adds numerous useful features to dojox.grid.
+Exporter plugin provides functions to export the grid data into a given format.
 
 .. contents::
    :depth: 2
