@@ -62,6 +62,7 @@ User Interface
 ==============
 
 TablePlugin is a plugin for dijit.Editor, which provides the users with the ability to change the background color of table cells.
+
 Select one or more cells and click the toolbar icon to open the setting dialog. The default color is the current background color of the last cell in the selection.
 
 .. image :: OpenDialog.png
