@@ -55,22 +55,25 @@ Then just declare the plugin and configure it as follows.
   ...
   </div>
 
-And that's it. The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the AutoSave plugin!
+And that's it. The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the ColorTableCell plugin!
 
 ==============
 User Interface
 ==============
 
-TablePlugin is a plugin for dijit.Editor, which provides the users with the ability to change the background color of tables.
-Select one or more cells and click icon to open the setting dialog. The default color is the current background color of the last cell in the selection.
+TablePlugin is a plugin for dijit.Editor, which provides the users with the ability to change the background color of table cells.
+Select one or more cells and click the toolbar icon to open the setting dialog. The default color is the current background color of the last cell in the selection.
 
 .. image :: OpenDialog.png
 
-There are three ways to set the background color.
+There are four ways to set the background color.
 
-* Set the color by drag&drop.
-* Set the value of RGB( r g b h s v).
+* Set the color by pick a color on the palette.
+* Set RGB value.
+* Set HSV value.
 * Set the value in hex directly.
+
+Click **Set** button to set the color or click **Cancel** button to cancel the setting.
 
 .. image :: SettingDialog.png
 
