@@ -3,6 +3,7 @@
 dojox.grid.EnhancedGrid.plugins.Exporter
 ========================================
 
+:Authors: Zhu Xiao Wen
 :Project owner: Nathan Toone
 :Available: since V.1.6
 
