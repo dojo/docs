@@ -101,7 +101,7 @@ If your grid is created declaratively:
 	<div id="grid" dojoType="dojox.grid.EnhancedGrid" 
 	  store="mystore" structure="mystructure" 
 	  plugins="{
-		filter: /* a Boolean value or an argument object */{}
+		filter: /* a Boolean value or an configuration object */{}
 	}" ></div>
 
 If your grid is created in JavaScript:
@@ -114,20 +114,20 @@ If your grid is created in JavaScript:
     store:"mystore",
     structure:"mystructure",
     plugins:{
-      filter: /* a Boolean value or an argument object */{}
+      filter: /* a Boolean value or an configuration object */{}
     }
   });
 
-As shown in the above code, you can simply set the ``filter`` property to true or false (disabled), or further configure it in an argument object.
+As shown in the above code, you can simply set the ``filter`` property to true or false (disabled), or further configure it in an configuration object.
 
-All the available filter configuration properties are
+All the available configuration properties are:
 
 =========================  ========  ===============  ================================================================================================================
 Property                   Type      Default Value    Description
 =========================  ========  ===============  ================================================================================================================
 itemsName                  String    "items"          The name of the items in the data store. 
                                                       For example, if the data in the store are records of songs, you may set it to "songs", 
-                                                      so the filter bar will display "10 of 100 songs" instead of "10 of 100 items".
+                                                      so the filter bar will display "10 of 100 songs" instead of "10 of 100 items" when there's some filter applied.
 closeFilterbarButton       Boolean   false            Whether to hide the close-filterbar button.
 cacheSize                  Integer   -1               The cache size of the filter. Only valid when using client filter. 
                                                       The client filter will cache the filtered data for future use,avoiding duplicate filtering. 
@@ -394,7 +394,7 @@ The Filter plugin will create a JSON object for the defined filter with the foll
 
 This structure represents an expression, which consists of operators and operands (data). The operands can further contain expressions, that is, deeper level of operators and operands.
 
-All available properties in this filter definition JSON is listed below:
+All available properties in this filter definition JSON are listed below:
 
 =====  ==========  =================  ==================  =====================================================================================================================================
 Name   Data Type   Always Available   Value For Example   Description
