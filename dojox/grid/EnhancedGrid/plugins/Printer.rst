@@ -3,10 +3,11 @@
 dojox.grid.EnhancedGrid.plugins.Printer
 =======================================
 
+:Authors: Zhu Xiao Wen
 :Project owner: Nathan Toone
 :Available: since V.1.6
 
-Printer plugins provides some convenient methods to print the grid data.
+Printer plugin provides some convenient methods to print the grid data.
 
 .. contents::
    :depth: 2
@@ -141,3 +142,13 @@ grid_row                 Available for all grid content rows                    
 
 You can use these classes directly in your CSS files, and pass them to the cssFiles argument mentioned above.
 But you cannot define your own CSS classes.
+
+========
+See Also
+========
+
+* `dojox.grid.DataGrid <dojox/grid/DataGrid>`_ - The base grid
+* `dojox.grid.EnhancedGrid <dojox/grid/EnhancedGrid>`_ - The enhanced grid supporting plugins
+* `dojox.grid.EnhancedGrid.plugins <dojox/grid/EnhancedGrid/plugins>`_ - Overview of the plugins of enhanced grid
+* `dojox.grid.EnhancedGrid.plugins.Exporter <dojox/grid/EnhancedGrid/plugins/Exporter>`_ - The Exporter plugin
+* `dojox.grid.TreeGrid <dojox/grid/TreeGrid>`_ - Grid with collapsable rows and model-based (`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`_) structure
