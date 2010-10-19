@@ -6,7 +6,7 @@ dojox.grid.EnhancedGrid.plugins.CellFromatter
 :Project owner: Nathan Toone
 :Available: since V.1.6
 
-CellFromatter plugin provides convenient 
+CellFromatter plugin provides convenient ways to format date/time/number/currency data in the grid.
 
 .. contents::
    :depth: 2
@@ -40,7 +40,7 @@ The declaration name of this plugin is ``cellFormatter`` . It is declared in the
 
 If your grid is created declaratively:
 
-.. code-block :: javascript
+.. code-block :: html
   :linenos:
 
   <div id="grid" dojoType="dojox.grid.EnhancedGrid" 
@@ -85,7 +85,7 @@ To transform the data of a column (for example, it's of type date), just set the
         format: { datePattern: "MMMM d, yyyy" }    //The pattern to be shown in grid
       }}
     ]
-  }]
+  }];
 
 This will first **parse** the data in the "workingDate" column using the pattern "yyyy-MM-dd", then **format** it to pattern "MMMM d, yyyy" for the grid to show.
 
@@ -120,7 +120,7 @@ If both ``parse`` and ``format`` are omitted, the whole cellFormatter object is 
         timePattern: "yyyy-MM-dd" //Format to this pattern.
       }}
     ]
-  }]
+  }];
 
 When dojo's Default parse/format Can Not Meed Your Requirements
 ---------------------------------------------------------------
@@ -144,7 +144,7 @@ If standard parse/format arguments can not meet your requirements, you can imple
         }
       }}
     ]
-  }]
+  }];
 
 
 More Examples
