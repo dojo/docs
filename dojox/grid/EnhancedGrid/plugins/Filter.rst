@@ -3,6 +3,7 @@
 dojox.grid.EnhancedGrid.plugins.Filter
 ======================================
 
+:Authors: Zhu Xiao Wen
 :Project owner: Nathan Toone
 :Available: since V.1.6
 
@@ -43,9 +44,7 @@ Filter is a plugin for dojox.grid.EnhancedGrid. It's designed to filter the grid
 
       // create a new grid:
       var grid = new dojox.grid.EnhancedGrid({
-        query: { Title: '*' },
         store: store,
-        rowSelector: '20px',
         structure: layout,
         plugins : {
         }
@@ -96,7 +95,7 @@ The declaration name of this plugin is ``filter`` . It is declared in the ``plug
 
 If your grid is created declaratively:
 
-.. code-block :: javascript
+.. code-block :: html
 	:linenos:
 
 	<div id="grid" dojoType="dojox.grid.EnhancedGrid" 
@@ -339,7 +338,7 @@ For example:
     }else{
       //no filter is valid. 
     }
-  }
+  };
 
 Thus the filter definition will be sent to the server along with the request.
   
@@ -476,3 +475,13 @@ contains     string                                2                        The 
 startsWith   string                                2                        The value of the 1st operand starts with that of the 2nd operand
 endsWith     string                                2                        The value of the 1st operand ends with that of the 2nd operand
 ===========  ====================================  =======================  ================================================================================
+
+
+========
+See Also
+========
+
+* `dojox.grid.DataGrid <dojox/grid/DataGrid>`_ - The base grid
+* `dojox.grid.EnhancedGrid <dojox/grid/EnhancedGrid>`_ - The enhanced grid supporting plugins
+* `dojox.grid.EnhancedGrid.plugins <dojox/grid/EnhancedGrid/plugins>`_ - Overview of the plugins of enhanced grid
+* `dojox.grid.TreeGrid <dojox/grid/TreeGrid>`_ - Grid with collapsable rows and model-based (`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`_) structure
