@@ -414,8 +414,7 @@ So the JSON object is nothing more than an object with 2 fields: ``op`` and ``da
 The data of the "Field Name" column, whose data type is string, equals to "some message".
 
 .. code-block :: javascript
-  :linenos:
-
+  
   {
     //op: String
     //The name of an operator or a data type. Currently supported operators are:
