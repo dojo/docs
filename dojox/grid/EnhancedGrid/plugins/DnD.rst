@@ -42,13 +42,13 @@ The declaration name of this plugin is ``dnd`` . It is declared in the ``plugins
 If your grid is created declaratively:
 
 .. code-block :: javascript
-	:linenos:
+  :linenos:
 
-	<div id="grid" dojoType="dojox.grid.EnhancedGrid" 
-	  store="mystore" structure="mystructure" 
-	  plugins="{
-		dnd: /* a Boolean value or an argument object */{}
-	}" ></div>
+  <div id="grid" dojoType="dojox.grid.EnhancedGrid" 
+    store="mystore" structure="mystructure" 
+    plugins="{
+      dnd: /* a Boolean value or an argument object */{}
+  }" ></div>
 
 If your grid is created in JavaScript:
 
@@ -84,24 +84,24 @@ dndConfig          Object    {}               Enable/disable dnd for every dragg
 Here is an example on how to set dndConfig:
 
 .. code-block :: javascript
-	:linenos:
-	
-	GridDnD: {
-		dndConfig: {
-			//Configure in a hierarchical manner.
-			row: {
-				out: false, //This rule has lower priority, it'll be overwritten.
-				within: false
-			},
-			//Both orders are correct.
-			out: {
-				row: true, //This rule has higher priority, it'll be valid.
-				cell: false
-			},
-			//Set a whole group of situations
-			in: false
-		}
-	}
+  :linenos:
+  
+  GridDnD: {
+    dndConfig: {
+      //Configure in a hierarchical manner.
+      row: {
+        out: false, //This rule has lower priority, it'll be overwritten.
+        within: false
+      },
+      //Both orders are correct.
+      out: {
+        row: true, //This rule has higher priority, it'll be valid.
+        cell: false
+      },
+      //Set a whole group of situations
+      in: false
+    }
+  }
 
 Currently, the following situations are supported:
 
@@ -220,53 +220,53 @@ The following example shows how to use these events to drag a grid row to a form
 The HTML is:
 
 .. code-block :: html
-	:linenos:
-	
-	<div id="grid" dojoType="dojox.grid.EnhancedGrid" store="test_store" structure="layout" rowSelector="20px"
-		plugins="{
-			griddnd: {copyOnly: true}
-		}"
-	></div>
-	<form id="songForm" class="container">
-		<table>
-			<tr>
-				<td><label for="inputName">Song name</label></td>
-				<td><input id="inputName" type="text" /></td>
-			</tr>
-			<tr>
-				<td><label for="inputAuthor">Artist</label></td>
-				<td><input id="inputAuthor" type="text" /></td>
-			</tr>
-			<tr>
-				<td><label for="inputAlbum">Album</label></td>
-				<td><input id="inputAlbum" type="text" /></td>
-			</tr>
-		</table>
-	</form>
+  :linenos:
+  
+  <div id="grid" dojoType="dojox.grid.EnhancedGrid" store="test_store" structure="layout" rowSelector="20px"
+    plugins="{
+      griddnd: {copyOnly: true}
+    }"
+  ></div>
+  <form id="songForm" class="container">
+    <table>
+      <tr>
+        <td><label for="inputName">Song name</label></td>
+        <td><input id="inputName" type="text" /></td>
+      </tr>
+      <tr>
+        <td><label for="inputAuthor">Artist</label></td>
+        <td><input id="inputAuthor" type="text" /></td>
+      </tr>
+      <tr>
+        <td><label for="inputAlbum">Album</label></td>
+        <td><input id="inputAlbum" type="text" /></td>
+      </tr>
+    </table>
+  </form>
 
 The JavaScript code is:
 
 .. code-block :: javascript
-	:linenos:
-	
-	<script type="text/javascript">
-		//var layout = ...
-		//var test_store = ...
-		
-		dojo.addOnLoad(function(){
-			var formTarget = new dojox.grid.enhanced.plugins.GridSource(dojo.byId("songForm"),{
-				isSource: false,
-				insertNodesForGrid: false
-			});
-			dojo.connect(formTarget, "onDropGridRows", function(grid, rowIndexes){
-				var s = grid.store,
-					row = rowIndexes[0];
-				dojo.attr(dojo.byId("inputName"), "value", s.getValue(grid.getItem(row), "Name"));
-				dojo.attr(dojo.byId("inputAuthor"), "value", s.getValue(grid.getItem(row), "Artist"));
-				dojo.attr(dojo.byId("inputAlbum"), "value", s.getValue(grid.getItem(row), "Album"));
-			});
-		});
-	</script>
+  :linenos:
+
+  <script type="text/javascript">
+  //var layout = ...
+  //var test_store = ...
+    
+    dojo.addOnLoad(function(){
+      var formTarget = new dojox.grid.enhanced.plugins.GridSource(dojo.byId("songForm"),{
+        isSource: false,
+        insertNodesForGrid: false
+      });
+      dojo.connect(formTarget, "onDropGridRows", function(grid, rowIndexes){
+        var s = grid.store,
+            row = rowIndexes[0];
+        dojo.attr(dojo.byId("inputName"), "value", s.getValue(grid.getItem(row), "Name"));
+        dojo.attr(dojo.byId("inputAuthor"), "value", s.getValue(grid.getItem(row), "Artist"));
+        dojo.attr(dojo.byId("inputAlbum"), "value", s.getValue(grid.getItem(row), "Album"));
+      });
+    });
+  </script>
 
 And here is the effect:
 
