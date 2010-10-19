@@ -226,7 +226,7 @@ Hovering over the filterbar for 300 msec will trigger the Filter Status Tooltip.
 
 .. image:: filterbar-showtooltip.png
 
-When there's a filter defined, The clear filter button is shown.
+When there's a filter defined, the clear filter button will be shown, and the status tip will look like this:
 
 .. image:: filterbar-clearbtn.png
 
@@ -287,6 +287,8 @@ The value field for String type can have auto-complete capability (if set autoCo
 .. image:: defdialog-stringvaluebox.png
 
 DateTextBox and TimeTextBox used for Date and Time types, respectively.
+
+.. image:: defdialog-timevaluebox.png
 
 And the ``range`` condition for ``date`` and ``time`` types represents a closed range.
 
@@ -390,6 +392,9 @@ The Filter Definition
 ---------------------
 
 The Filter plugin will create a JSON object for the defined filter with the following recursive structure: 
+
+.. image:: serverfilter-datastruct.png
+
 This structure represents an expression, which consists of operators and operands (data). The operands can further contain expressions, that is, deeper level of operators and operands.
 
 All available properties in this filter definition JSON is listed below:
