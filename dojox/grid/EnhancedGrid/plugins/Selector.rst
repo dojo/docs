@@ -3,6 +3,7 @@
 dojox.grid.EnhancedGrid.plugins.Selector
 ========================================
 
+:Authors: Zhu Xiao Wen
 :Project owner: Nathan Toone
 :Available: since V.1.6
 
@@ -35,14 +36,14 @@ The declaration name of this plugin is ``selector`` . It is declared in the ``pl
 
 If your grid is created declaratively:
 
-.. code-block :: javascript
+.. code-block :: html
   :linenos:
 
   <div id="grid" dojoType="dojox.grid.EnhancedGrid" 
     store="mystore" structure="mystructure" 
     plugins="{
-      selector: /* a Boolean value or an argument object */{}
-    }" ></div>
+      selector: /* a Boolean value or an configuration object */{}
+  }" ></div>
 
 If your grid is created in JavaScript:
 
@@ -54,13 +55,13 @@ If your grid is created in JavaScript:
     store:"mystore",
     structure:"mystructure",
     plugins:{
-      selector: /* a Boolean value or an argument object */{}
+      selector: /* a Boolean value or an configuration object */{}
     }
   });
 
-As shown in the above code, you can simply set the ``selector`` property to true or false (disabled), or further configure it in an argument object.
+As shown in the above code, you can simply set the ``selector`` property to true or false (disabled), or further configure it in an configuration object.
 
-In the argument object, you can further configure the selection mode for rows/columns/cells:
+In the configuration object, you can further configure the selection mode for rows/columns/cells:
 
 ==========  =================  ===============  ===============================================================================================
 Property    Type               Default Value    Description
@@ -93,11 +94,12 @@ Click Range Selection      Click mouse selection button at the start point;     
 
 Here the selection "object" can be rows, columns or cells.
 
-The user can also press and hold CTRL key while selecting, to modify (deselect) the current selection.
+The user can also press and hold **CTRL** key while selecting, to modify (deselect) the current selection.
 
 Here's some demos for selecting operations:
 
 Swipe range selection using mouse:
+
 .. image:: selector-row-swiperangemouse.gif
 
 .. image:: selector-cell-swiperangemouse.gif
@@ -268,3 +270,12 @@ includeExceptions   Boolean             Optional(default to false)      Only mea
                                                                         If true, all selected rows/cols, even they are partly selected, are all returned.
 [return]            __SelectItem[]                                      Array of selected items.
 ==================  ==================  ==============================  ==================================================================================
+
+========
+See Also
+========
+
+* `dojox.grid.DataGrid <dojox/grid/DataGrid>`_ - The base grid
+* `dojox.grid.EnhancedGrid <dojox/grid/EnhancedGrid>`_ - The enhanced grid supporting plugins
+* `dojox.grid.EnhancedGrid.plugins <dojox/grid/EnhancedGrid/plugins>`_ - Overview of the plugins of enhanced grid
+* `dojox.grid.TreeGrid <dojox/grid/TreeGrid>`_ - Grid with collapsable rows and model-based (`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`_) structure
