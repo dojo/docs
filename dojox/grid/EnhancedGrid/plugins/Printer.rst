@@ -42,14 +42,14 @@ The declaration name of this plugin is ``printer`` . It is declared in the ``plu
 
 If your grid is created declaratively:
 
-.. code-block :: javascript
+.. code-block :: html
   :linenos:
 
   <div id="grid" dojoType="dojox.grid.EnhancedGrid" 
     store="mystore" structure="mystructure" 
     plugins="{
       printer: true
-    }" ></div>
+  }" ></div>
 
 If your grid is created in JavaScript:
 
