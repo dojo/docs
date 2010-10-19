@@ -382,11 +382,8 @@ filter      JSON String  No                 {...}                A command to se
 
 When the web page loads, the first POST that the server receives is the ``clear`` command. It ensures that there's no filter defined in the session. 
 
-.. image:: clearfilter-protocol.png
-
 Every time the user defines a filter, the server will receive a ``filter`` command. This command contains a JSON string representing the filter definition, which is covered in the next section.
 
-.. image:: definefilter-protocol.png
 
 The Filter Definition
 ---------------------
