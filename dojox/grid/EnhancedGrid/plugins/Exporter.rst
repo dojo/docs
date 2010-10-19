@@ -48,14 +48,14 @@ The declaration name of this plugin is ``exporter`` . It is declared in the ``pl
 
 If your grid is created declaratively:
 
-.. code-block :: javascript
+.. code-block :: html
   :linenos:
 
   <div id="grid" dojoType="dojox.grid.EnhancedGrid" 
     store="mystore" structure="mystructure" 
     plugins="{
       exporter: true
-    }" ></div>
+  }" ></div>
 
 If your grid is created in JavaScript:
 
@@ -130,7 +130,7 @@ _ExportWriter – The Base Class
 
 This is an abstract class for all of the writers used in the Exporter plugin. It applies the strategy pattern to break the export work into several stages, and provides interfaces for all of them. Implementations might choose to override some of the functions in this class thus providing their own functionality. The Exporter will go through the grid row by row. In every row, all the Views will be reached and the header row is only handled once. The APIs exposed by this class to implementors is shown below. You can implement them by extending "dojox.grid.enhanced.plugins.exporter._ExportWriter".
 
-beforeHeader
+beforeHeader(grid):
 	We are going to start moving through the grid. Is there anything we should do now?
 
 =========  ========================  ==============================================================
@@ -141,10 +141,10 @@ grid       dojox.grid.EnhancedGrid   The grid widget.
                                      false: skip the header row, won't call afterHeader.
 =========  ========================  ==============================================================
 
-afterHeader
+afterHeader():
 	The header has been handled.
 
-beforeContent
+beforeContent(items):
 	We are ready to go through all the contents(items).
 	
 =========  ========================  ==============================================================
@@ -155,10 +155,10 @@ items      Array                     All the items fetched from the store.
                                      false: skip all the contents, won't call afterContent.
 =========  ========================  ==============================================================
 
-afterContent
+afterContent():
 	We have finished the entire grid travel. Do some clean up work if you need to.
 	
-beforeContentRow
+beforeContentRow(argObj):
 	Before handling a line of data (not a header).
 
 =========  ========================  =========================================================================
@@ -170,7 +170,7 @@ argObj     Object                    An object with at least the following conte
                                      false: skip the current data row, won't call afterContentRow.
 =========  ========================  =========================================================================
 
-afterContentRow
+afterContentRow(argObj):
 	After handling a line of data (not header).
 
 =========  ========================  =========================================================================
@@ -180,7 +180,7 @@ argObj     Object                    An object with at least the following conte
                                      { grid, isHeader, row,rowIdx, spCols }
 =========  ========================  =========================================================================
 
-beforeView
+beforeView(argObj):
 	Before handling a view.
 
 =========  ========================  =========================================================================
@@ -192,7 +192,7 @@ argObj     Object                    An object with at least the following conte
                                      false: skip the current view, won't call afterView.
 =========  ========================  =========================================================================
 
-afterView
+afterView(argObj):
 	After handling a view.
 
 =========  ========================  =========================================================================
@@ -202,7 +202,7 @@ argObj     Object                    An object with at least the following conte
                                       { grid, isHeader, row, rowIdx, spCols }
 =========  ========================  =========================================================================
 
-beforeSubrow
+beforeSubrow(argObj):
 	Before handling a subrow (defined in the grid structure as "rows").
 
 =========  ========================  =========================================================================
@@ -212,7 +212,7 @@ argObj     Object                    An object with at least the following conte
                                      false: skip the current subrow, won't call afterSubrow.
 =========  ========================  =========================================================================
 
-afterSubrow
+afterSubrow(argObj):
 	After handling a subrow (defined in the grid structure as "rows").
 
 =========  ========================  =========================================================================
@@ -222,7 +222,7 @@ argObj     Object                    An object with at least the following conte
                                      { grid, isHeader, row, rowIdx, view, viewIdx, subrow, subrowIdx, spCols }
 =========  ========================  =========================================================================
 
-handleCell
+handleCell(argObj):
 	Handle a header cell or data cell.
 
 =========  ========================  =========================================================================
@@ -233,7 +233,7 @@ argObj     Object                    An object with at least the following conte
                                      cell, cellIdx, spCols, colOffset }
 =========  ========================  =========================================================================
 
-toString
+toString():
 	Export to a string.
 	
 =========  ========================  ===========================
