@@ -3,10 +3,11 @@
 dojox.grid.EnhancedGrid.plugins.Cookie
 ======================================
 
+:Authors: Zhu Xiao Wen
 :Project owner: Nathan Toone
 :Available: since V.1.6
 
-Cookie plugin provides a convenient ways to persist grid properties like column width, sorting order, etc.
+Cookie plugin provides a convenient ways to persist grid properties like column width, sorting order, etc, so the grid will look same when the page is reloaded, or when the grid is re-created with the same id.
 
 .. contents::
    :depth: 2
@@ -126,3 +127,12 @@ Here is some examples on how to use the API:
   
   //Check whether cookie is used in this grid
   var isEnabled = grid.cookieEnabled();
+
+========
+See Also
+========
+
+* `dojox.grid.DataGrid <dojox/grid/DataGrid>`_ - The base grid
+* `dojox.grid.EnhancedGrid <dojox/grid/EnhancedGrid>`_ - The enhanced grid supporting plugins
+* `dojox.grid.EnhancedGrid.plugins <dojox/grid/EnhancedGrid/plugins>`_ - Overview of the plugins of enhanced grid
+* `dojox.grid.TreeGrid <dojox/grid/TreeGrid>`_ - Grid with collapsable rows and model-based (`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`_) structure
