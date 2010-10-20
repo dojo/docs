@@ -25,6 +25,7 @@ These plugins are loaded on demand, so they must be required and declared before
 * `CellMerge <dojox/grid/EnhancedGrid/plugins/CellMerge>`_ - Support for merging adjacent cells within a row.
 * `Cookie <dojox/grid/EnhancedGrid/plugins/Cookie>`_ - Persistence of grid features, like column width, column order, and sorting order.
 * `Search <dojox/grid/EnhancedGrid/plugins/Search>`_ - Support of searching the grid by regular expressions as well as wildcard patterns.
+* `CellFormatter <dojox/grid/EnhancedGrid/plugins/CellFormatter>`_ - Convenient configs to display date/time/number/currency in desired format.
 
 ========
 See Also
