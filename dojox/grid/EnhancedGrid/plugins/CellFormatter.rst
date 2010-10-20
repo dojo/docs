@@ -3,6 +3,7 @@
 dojox.grid.EnhancedGrid.plugins.CellFromatter
 =============================================
 
+:Authors: Zhu Xiao Wen
 :Project owner: Nathan Toone
 :Available: since V.1.6
 
@@ -191,3 +192,12 @@ Long integer in data store, shown as formatted date string:
       }}
     ]
   }];
+
+========
+See Also
+========
+
+* `dojox.grid.DataGrid <dojox/grid/DataGrid>`_ - The base grid
+* `dojox.grid.EnhancedGrid <dojox/grid/EnhancedGrid>`_ - The enhanced grid supporting plugins
+* `dojox.grid.EnhancedGrid.plugins <dojox/grid/EnhancedGrid/plugins>`_ - Overview of the plugins of enhanced grid
+* `dojox.grid.TreeGrid <dojox/grid/TreeGrid>`_ - Grid with collapsable rows and model-based (`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`_) structure
