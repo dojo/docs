@@ -3,6 +3,7 @@
 dojox.grid.EnhancedGrid.plugins.DnD
 ===================================
 
+:Authors: Zhu Xiao Wen
 :Project owner: Nathan Toone
 :Available: since V.1.6
 
@@ -169,7 +170,7 @@ Copy cells across grids
 
 If selected cells do not form a rectangle, they can not be dragged:
 
-.. image:: dnd-cannotdndshape.gif
+.. image:: dnd-cannotdndshape.png
 
 Because the grid lazy loads store data, and extended selection is supported, it is possible to select rows or cells that are not loaded to the client side yet. If this situation occurs, it's not allowed to "drop" these unloaded objects to another grid:
 
@@ -224,7 +225,7 @@ The HTML is:
   
   <div id="grid" dojoType="dojox.grid.EnhancedGrid" store="test_store" structure="layout" rowSelector="20px"
     plugins="{
-      griddnd: {copyOnly: true}
+      dnd: {copyOnly: true}
     }"
   ></div>
   <form id="songForm" class="container">
@@ -250,9 +251,8 @@ The JavaScript code is:
   :linenos:
 
   <script type="text/javascript">
-  //var layout = ...
-  //var test_store = ...
-    
+	dojo.require("dojox.grid.enhanced.plugins.GridSource");
+	
     dojo.addOnLoad(function(){
       var formTarget = new dojox.grid.enhanced.plugins.GridSource(dojo.byId("songForm"),{
         isSource: false,
@@ -293,3 +293,13 @@ Arguments       Type                Optional/Mandatory               Description
 ==============  ==================  ===============================  ===================
 config          Object              Mandatory                        Same as dndConfig.
 ==============  ==================  ===============================  ===================
+
+========
+See Also
+========
+
+* `dojox.grid.DataGrid <dojox/grid/DataGrid>`_ - The base grid
+* `dojox.grid.EnhancedGrid <dojox/grid/EnhancedGrid>`_ - The enhanced grid supporting plugins
+* `dojox.grid.EnhancedGrid.plugins <dojox/grid/EnhancedGrid/plugins>`_ - Overview of the plugins of enhanced grid
+* `dojox.grid.EnhancedGrid.plugins.Selector <dojox/grid/EnhancedGrid/plugins>`_ - The selector plugin of enhanced grid
+* `dojox.grid.TreeGrid <dojox/grid/TreeGrid>`_ - Grid with collapsable rows and model-based (`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`_) structure
