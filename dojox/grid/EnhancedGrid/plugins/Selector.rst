@@ -191,7 +191,6 @@ Arguments "start point" and "end point" can be one of __SelectColItem, __SelectR
   
   =====*/
 
-The argument "currentSelections" is an object with the following structure:
 
 To connect to these events, just say (for example):
 
@@ -250,7 +249,7 @@ end             Integer | __SelectCellItem     Mandatory                       I
                                                                                If type if "cell", this is the right-bottom cell of the range.
 ==============  =============================  ==============================  ==============================================================================
 
-clear(type)
+clear(type):
 	Clear all selections of given type.
 
 ==============  ==================  ==============================  =================================================
@@ -259,7 +258,7 @@ Arguments       Type                Optional/Mandatory              Description
 type            String              Optional(default to undefined)  "row" or "col" or "cell". If omitted, clear all.
 ==============  ==================  ==============================  =================================================
 
-getSelected(type, includeExceptions)
+getSelected(type, includeExceptions):
 	Get an array of selected items. (__SelectItem[])
 
 ==================  ==================  ==============================  ==================================================================================
