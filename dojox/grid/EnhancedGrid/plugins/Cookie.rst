@@ -89,10 +89,11 @@ All the persistable grid features will be stored in cookie by default. If you'd 
   });
 
 The cookie names of currently supported grid features are:
-* cellWidth
-* sortProps
-* columnOrder
-* nestedSortProps  (only available when nestedSorting plugin is used)
+
+* **cellWidth**
+* **sortProps**
+* **columnOrder**
+* **nestedSortProps**  (only available when nestedSorting plugin is used)
 
 =====
 Usage
