@@ -304,6 +304,10 @@ In addition, to enable DnD on the Tree you must dojo.require("dijit.tree.dndSour
 
 You can also specify custom checkAcceptance() and checkItemAcceptance() to accept/reject items to the tree.   (The former function operates at the Tree level, and the latter operates per Tree node, allowing things like rejecting dropping items onto leaf nodes.)
 
+Further examples
+----------------
+
+If you are interested in further examples, please make sure you have glanced at the unit tests. For the 1.5 release, you can find a good example here: http://download.dojotoolkit.org/release-1.5.0/dojo-release-1.5.0/dijit/tests/tree/test_Tree_DnD.html
 
 betweenThreshold
 ----------------
