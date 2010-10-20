@@ -41,7 +41,7 @@ The declaration name of this plugin is ``cellMerge`` . It is declared in the ``p
 
 If your grid is created declaratively:
 
-.. code-block :: javascript
+.. code-block :: html
   :linenos:
 
   <div id="grid" dojoType="dojox.grid.EnhancedGrid" 
@@ -73,6 +73,7 @@ mergedCells                Array     []               Used to define pre-merged 
 =========================  ========  ===============  =================================================================================================
 
 Merged cell object structure:
+
 ===========  ============================  =====================  =============================================================================================================
 Property     Type                          Optional/Mandatory     Description
 ===========  ============================  =====================  =============================================================================================================
