@@ -595,6 +595,7 @@ A list of corporations or organizations with a CLA on file:
 * Spider Strategies 
 * Sun Microsystems, Inc. 
 * Suretec Systems, Ltd. 
+* The Frontier Group
 * Tietoteema Oy 
 * University of Toronto 
 * UC Davis 
