@@ -94,13 +94,13 @@ The Mechanism of Rendering
 
 For dojox.grid.TreeGrid, the root item and all of its children/sub-children would be rendered in a single row:
 
-.. image:: ltg_1.jpg
+.. image:: ltg1.jpg
 
 This might case performance issue when there are huge children item, because all of them will be rendered at a single time.
 
 Regarding dojox.grid.LazyTreeGrid, each item would be rendered in a single row:
 
-.. image:: ltg_2.jpg
+.. image:: ltg2.jpg
 
 =====
 Usage
