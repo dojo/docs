@@ -234,7 +234,7 @@ The attributes of "colSpans" object (0, 1, 2, ...) indicate what level it is. Th
 Examples
 ========
 
-For example of the LazyTreeGrid with a ForestStoreModel and client side data source, please see the file dojox/grid/tests/test_treegrid_lazyloading.html. For the example which with a LazyTreeGridStoreModel and server side data source, please see http://9.123.237.211:8088/TreeGrid/TreeGrid.jsp(internal&temporary)
+For example of the LazyTreeGrid with a ForestStoreModel and client side data source, please see the file dojox/grid/tests/test_treegrid_lazyloading.html. For the example which with a LazyTreeGridStoreModel and server side data source, please see `http://9.123.237.211:8088/TreeGrid/TreeGrid.jsp <http://9.123.237.211:8088/TreeGrid/TreeGrid.jsp>`_ (internal&temporary)
 
 ========
 See Also
