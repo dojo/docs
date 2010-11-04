@@ -129,7 +129,7 @@ debugContainerId: "yourContainerId"
   If specified, when the page is rendered dojo will look for an element with the specified id and will put the Firebug Lite console window inside that element. This allows developers extra control over the display of the console window and to easily reference it in their own scripts. By default the div containing the console window does not have an id associated with it.
 
 debugAtAllCosts: true
-  This setting offers advanced functionality for debugging your own classes. There is much more information here on `this tutorial on debugging with dojo <http://dojotoolkit.org/book/book-dojo/part-4-meta-dojo-making-your-dojo-code-run-faster-and-better/debugging-facilities/deb>`_.
+  This setting offers advanced functionality for debugging your own classes. There is much more information here on `this tutorial on debugging with dojo <http://dojotoolkit.org/book/book-dojo/part-4-meta-dojo-making-your-dojo-code-run-faster-and-better/debugging-facilities/deb>`_. This will break your application, if you pass a variable to dojo.require() instead of a string literal.
 
 Language and Localization Settings in djConfig
 ----------------------------------------------
