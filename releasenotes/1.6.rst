@@ -157,6 +157,18 @@ Dialog
 ------
 New base class dialog and small refactoring of `dojox.widget.Dialog <dojox/widget/Dialog>`_ to use `Dialog Simple mixin <dojox/widget/DialogSimple>`_
 
+Editor
+------
+New plugins are now available for the following features:
+  * `Auto-save  <http://docs.dojocampus.org/dojox/editor/plugins/AutoSave>`_
+  * `Find/Replace  <http://docs.dojocampus.org/dojox/editor/plugins/FindReplace>`_
+  * `Paste image inline  <http://docs.dojocampus.org/dojox/editor/plugins/LocalImage>`_
+  * `Batch spell check  <http://docs.dojocampus.org/dojox/editor/plugins/SpellCheck>`_
+  * `Recognize URL as a link  <http://docs.dojocampus.org/dojox/editor/plugins/AutoUrlLink>`_
+  * `Set color on table cells, row, columns (background)  <http://docs.dojocampus.org/dojox/editor/plugins/ColorTableCell>`_
+  * `Spell Check as You Type  <http://docs.dojocampus.org/dojox/editor/plugins/SpellCheck>`_
+  * `Size table column via drag  <http://docs.dojocampus.org/dojox/editor/plugins/ResizeTableColumn>`_
+  
 ====
 Util
 ====
