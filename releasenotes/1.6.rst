@@ -160,6 +160,7 @@ New base class dialog and small refactoring of `dojox.widget.Dialog <dojox/widge
 Editor
 ------
 New plugins are now available for the following features:
+
   * `Auto-save  <http://docs.dojocampus.org/dojox/editor/plugins/AutoSave>`_
   * `Find/Replace  <http://docs.dojocampus.org/dojox/editor/plugins/FindReplace>`_
   * `Paste image inline  <http://docs.dojocampus.org/dojox/editor/plugins/LocalImage>`_
