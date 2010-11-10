@@ -37,7 +37,7 @@ Note that there can be at most one child marked for each region.  There must alw
 
 Setting sizes
 -------------
-Sizes are specified for the edge regions in pixels or percentage using CSS -- height to top and bottom, width for the sides. You might specify a top region of height:100px and a left region of width:50%. The center typically does not have any dimensions specified in CSS and resizes automatically to fill the remaining space.
+Sizes are specified for the edge regions in pixels or percentage using CSS -- height to top and bottom, width for the sides. You might specify a top region of height:100px and a left region of width:50%. The center must not have any dimensions specified in CSS as it resizes automatically to fill the remaining space.
 
 Besides setting the size of the BorderContainer itself, you generally need to set the width of the leading and trailing (left and the right) panes.
 You shouldn't need to set the height of the top/bottom panes as that can be determined automatically.
