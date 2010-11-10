@@ -33,7 +33,7 @@ Each child element must have an attribute "region" which indicates where it shou
 
 **Caution**: Do not use trailing/leading together with left/right.
 
-Note that there can be at most one child marked for each region.
+Note that there can be at most one child marked for each region.  There must always be one region marked 'center'.
 
 Setting sizes
 -------------
