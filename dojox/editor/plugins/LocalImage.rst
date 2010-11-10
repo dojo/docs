@@ -1,6 +1,6 @@
 #format dojo_rst
 
-dojox.editor.plugins.LocalImage (Under Construction)
+dojox.editor.plugins.InsertImage (Under Construction)
 ====================================================
 
 :Authors: He Gu Yi
