@@ -37,14 +37,11 @@ Note that there can be at most one child marked for each region.  There must alw
 
 Setting sizes
 -------------
-Sizes are specified for the edge regions in pixels or percentage using CSS -- height to top and bottom, width for the sides. You might specify a top region of height:100px and a left region of width:50%. The center must not have any dimensions specified in CSS as it resizes automatically to fill the remaining space.
+Sizes are specified for the edge regions in pixels or percentage using CSS -- height for top and bottom and width for the sides. You might specify a top region of height:100px and a left region of width:50%. The center must not have any dimensions specified in CSS as it resizes automatically to fill the remaining space.  Do not set the width of the top/bottom panes or the height of the left/right panes as that would be meaningless.
 
 Besides setting the size of the BorderContainer itself, you generally need to set the width of the leading and trailing (left and the right) panes.
 You shouldn't need to set the height of the top/bottom panes as that can be determined automatically.
 
-Of course, you shouldn't set the size of the center pane, since it's size is determined from whatever is left over after
-placing the left/right/top/bottom panes.
-You also shouldn't set the width of the top/bottom panes or the height of the left/right panes as that would be meaningless.
 
 ``note:`` In order to set the overall size of a BorderContainer to the full size of the viewport, the `<body>` element needs an explicit size set as well as a size on the BorderContainer itself:
 
