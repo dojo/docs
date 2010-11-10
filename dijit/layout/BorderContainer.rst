@@ -51,15 +51,15 @@ BorderContainer operates in a choice of two layout modes: the design attribute m
 Regions
 -------
 
-Each child element can have an attribute "region" which indicates where it should be positionned (most names are self explainatory):
+Each child element must have an attribute "region" which indicates where it should be positioned (most names are self explainatory):
 
-  * top;
-  * bottom;
-  * right;
-  * left;
-  * center;
-  * leading: used have flexible layout in left-to-right/right-to-left environments. In ltr, it will be equivalent to left, in rtl equivalent to right;
-  * trailing: right in ltr, left in rtl.
+  * top
+  * bottom
+  * right
+  * left
+  * center
+  * leading: used have flexible layout in left-to-right/right-to-left environments. In ltr, it will be equivalent to left, in rtl equivalent to right
+  * trailing: opposite of 'leading': right in ltr, left in rtl
 
 **Caution**: Do not use trailing/leading together with left/right.
 
