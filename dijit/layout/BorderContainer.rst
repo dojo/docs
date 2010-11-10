@@ -187,14 +187,13 @@ Note the tabStrip attribute on the TabContainer.
 BorderContainer Inside A Dijit Template
 ---------------------------------------
 
-NOTE: This example will only work with dojo version 1.4 or later, so you may need to select 'Trunk Local' from the Version dropdown.  It will not work with 1.3.
-
 You can use a BorderContainer inside your own dijit template with a bit of care to call startup() on your dijit after it has been added to the DOM, so that its contained BorderContainer can lay itself out.
 
 .. cv-compound::
   :djConfig: parseOnLoad: true
   :height: 400
   :width: 660
+  :version: 1.5
 
   .. cv:: javascript
     :label: The dojo requires
