@@ -129,7 +129,7 @@ There are currently a small set of nice features that can be plugged into the di
   
   **This plugin is new to the Dojo Toolkit 1.6.**
 
-* `dojox.editor.plugins.LocalImage  <dojox/editor/plugins/LocalImage>`_ -- **STABLE**
+* `dojox.editor.plugins.InsertImage <dojox/editor/plugins/InsertImage>`_ -- **STABLE**
 
   A plugin that allows the user to insert a local or hosted image into the textstream.
   
