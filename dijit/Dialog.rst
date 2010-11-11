@@ -256,20 +256,20 @@ If you want to handle the onSubmit event like a traditional <form> element, you 
 
     <div dojoType="dijit.Dialog" id="formDialog2" title="Form Dialog" style="display: none">
         <form dojoType="dijit.form.Form">
-            <div class="dijitDialogPaneContentArea">
-                <script type="dojo/event" event="onSubmit" args="e">
-                    dojo.stopEvent(e); // prevent the default submit
-                    if (!this.isValid()) { window.alert('Please fix fields'); return; }
+            <script type="dojo/event" event="onSubmit" args="e">
+                dojo.stopEvent(e); // prevent the default submit
+                if (!this.isValid()) { window.alert('Please fix fields'); return; }
 
-                    window.alert("Would submit here via xhr");
-                    // dojo.xhrPost( {
-                    //      url: 'foo.com/handler',
-                    //      content: { field: 'go here' },
-                    //      handleAs: 'json'
-                    //      load: function(data) { .. },
-                    //      error: function(data) { .. }
-                    //  });
-                </script>
+                window.alert("Would submit here via xhr");
+                // dojo.xhrPost( {
+                //      url: 'foo.com/handler',
+                //      content: { field: 'go here' },
+                //      handleAs: 'json'
+                //      load: function(data) { .. },
+                //      error: function(data) { .. }
+                //  });
+            </script>
+            <div class="dijitDialogPaneContentArea">
 
                 <label for='foo'>Foo:</label><div dojoType="dijit.form.ValidationTextBox" required="true"></div>
             </div>
