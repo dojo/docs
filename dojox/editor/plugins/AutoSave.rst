@@ -72,7 +72,7 @@ interval                  Number             True          5                    
                                                                                     If it is not specified, the default value is 5 (minutes).
 ========================  =================  ============  =======================  =============================================================================
 
-Set up The Server
+Set up the server
 -----------------
 
 If you want to use this feature in your application, you need to understand the protocol this feature adopts to communicate with the application server.
