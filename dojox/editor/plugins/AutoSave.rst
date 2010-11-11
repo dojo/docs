@@ -72,6 +72,17 @@ interval                  Number             True          5                    
                                                                                     If it is not specified, the default value is 5 (minutes).
 ========================  =================  ============  =======================  =============================================================================
 
+Set up The Server
+-----------------
+
+If you want to use this feature in your application, you need to understand the protocol this feature adopts to communicate with the application server.
+
+AutoSave uses POST method to pass the current content to the server-side piece. The body of the POST request is filled with the editor's content. The server can get the content directly from the POST body. For example, in PHP environment:
+
+.. code-block :: php
+
+  print(htmlentities($HTTP_RAW_POST_DATA));
+
 ==============
 User Interface
 ==============
