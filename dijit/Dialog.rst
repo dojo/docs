@@ -247,6 +247,61 @@ To simply close the dialog, click the Cancel button, which calls the hide() func
         }
     </script>
 
+If you want to handle the onSubmit event like a traditional <form> element, you will need to employ a <form> either as a traditional HTML element or as a ''dijit.form.Form''.  This example shows a Dialog with an embedded Form which handles the onSubmit event, validation, and an xhrPost to the server.
+
+.. cv-compound::
+
+  
+  .. cv:: html
+
+    <div dojoType="dijit.Dialog" id="formDialog2" title="Form Dialog" style="display: none">
+        <form dojoType="dijit.form.Form">
+            <div class="dijitDialogPaneContentArea">
+                <script type="dojo/event" event="onSubmit" args="e">
+                    dojo.stopEvent(e); // prevent the default submit
+                    if (!this.isValid()) { window.alert('Please fix fields'); return; }
+
+                    window.alert("Would submit here via xhr");
+                    // dojo.xhrPost( {
+                    //      url: 'foo.com/handler',
+                    //      content: { field: 'go here' },
+                    //      handleAs: 'json'
+                    //      load: function(data) { .. },
+                    //      error: function(data) { .. }
+                    //  });
+                </script>
+
+                <label for='foo'>Foo:</label><div dojoType="dijit.form.ValidationTextBox" required="true"></div>
+            </div>
+            <div class="dijitDialogPaneActionBar">
+                    <button dojoType="dijit.form.Button" type="submit">OK</button>
+                    <button dojoType="dijit.form.Button" type="button"
+                        onClick="dijit.byId('formDialog2').hide();">Cancel</button>
+            </div>
+         </form>
+    </div>
+
+    <p>When pressing this button the dialog will popup:</p>
+    <button id="buttonThree" dojoType="dijit.form.Button" type="button">Show me!</button>
+
+  .. cv:: javascript
+    :label: The javascript, arranges for the dialog to appear
+
+    <script type="text/javascript">
+        dojo.require("dijit.form.Form");
+        dojo.require("dijit.form.Button");
+        dojo.require("dijit.Dialog");
+        dojo.require("dijit.form.TextBox");
+        dojo.require("dijit.form.DateTextBox");
+        dojo.require("dijit.form.TimeTextBox");
+
+        dojo.addOnLoad(function(){	
+            var formDlg = dijit.byId("formDialog2");
+            dojo.connect(dijit.byId("buttonThree"), "onClick", formDlg, "show");
+        });
+
+    </script>
+
 Terms and Conditions Dialog
 ----------------------------------
 
