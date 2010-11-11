@@ -86,6 +86,7 @@ A list of individuals who have signed Dojo CLAs:
 * Clark, Patrick
 * Clayton, David 
 * Clemmons, Eric 
+* Cochran, Samuel
 * Comer, Kevin 
 * Conaway, Kevin 
 * Conlon, Martin John 
@@ -151,6 +152,7 @@ A list of individuals who have signed Dojo CLAs:
 * Frohman, Lance 
 * Fryer, Anthony 
 * Fudge, David 
+* Galipo, Don
 * Ganegedara, Hiran Shyanaka 
 * Garcia, John 
 * Gardner, Brett 
@@ -180,6 +182,7 @@ A list of individuals who have signed Dojo CLAs:
 * Gupta, Aman 
 * Gwyn, Philip 
 * Hakansson, Finn 
+* Hale, Mark
 * Hamilton, Gabe 
 * Hampton, Shawn 
 * Hanbanchong, Aphichit 
@@ -216,7 +219,8 @@ A list of individuals who have signed Dojo CLAs:
 * Ippolito, Robert 
 * Irish, Paul 
 * Irrschik, Manuels 
-* Irwin, Matthew 
+* Irwin, Matthew
+* Issakov, Antony 
 * Jenkins, Adam 
 * Jenkins, Scott 
 * Johansson, Fredrik 
@@ -236,7 +240,8 @@ A list of individuals who have signed Dojo CLAs:
 * Kantor, Ilia 
 * Karr, David 
 * Katz, Omer
-* Keese, Bill 
+* Keese, Bill
+* Kelly, Dirk 
 * Kime, Matthew
 * Kimmel, Maximilian 
 * Kingma, D. 
@@ -288,6 +293,7 @@ A list of individuals who have signed Dojo CLAs:
 * Machi, Dustin 
 * Maclennan, Caleb 
 * Madineni, Pradeep 
+* Maquire, Jordan
 * Malage, Osandi Chirantra Midreviy 
 * Malpass, Ian Andrew 
 * Manninen, Juho 
@@ -397,6 +403,7 @@ A list of individuals who have signed Dojo CLAs:
 * Sagolaev, Ivan 
 * Saint-Just Philippe 
 * Sakar, Ahmet Taha 
+* Salipo, Dan
 * Salminen, Jukka 
 * Salt, Kevin 
 * Sanders, Robert 
@@ -471,14 +478,17 @@ A list of individuals who have signed Dojo CLAs:
 * Szklanny, Les 
 * Tan, Yi 
 * Tanfous, Hassen Ben 
+* Tangey, Greg
 * Tarassenko, Gleb 
 * Taylor, Michael A. 
+* Taylor, Jamie
 * Teer, Ellis 
 * Tempelton, Sean 
 * Teulings, Tijs 
 * Tiedt, Karl 
 * Tilley, Travis 
-* Tipling, Bjorn 
+* Tipling, Bjorn
+* Todd, Aaron 
 * Toone, Nathan 
 * Trank, Aaron 
 * Trenka, Ron 
@@ -500,7 +510,8 @@ A list of individuals who have signed Dojo CLAs:
 * Venkatachalam, Vidyasagar 
 * Vettervanta 
 * Vichas, Deno 
-* Vincze, Gabor 
+* Vincze, Gabor
+* Visic, Mario 
 * Von Klipstein, Tobias 
 * Wagener, Peter 
 * Waite, Robert 
