@@ -167,7 +167,7 @@ Skip All
 Add to dictionary
 -----------------
 
-Click **Add to dictionary** to add this word into the dictionary.
+Click **Add to dictionary** to add this word into the dictionary. The dictionary is on the server side, which is wordlist.txt in the demo application provided by Dojo SDK. This word will be regarded as a correct one from then on.
 
 .. image:: AddToDictionary.png
 
