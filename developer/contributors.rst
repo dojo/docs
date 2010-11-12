@@ -468,6 +468,7 @@ A list of individuals who have signed Dojo CLAs:
 * Stefaniuk, Daniel 
 * Steffensen, Gregory 
 * Stepanoski, Mauro Alberto
+* Stern, David
 * Stojic, Ivan 
 * Stott, Nathan Rains
 * Sulliman, Hani 
