@@ -77,7 +77,7 @@ Set up the server
 
 If you want to use this feature in your application, you need to understand the protocol this feature adopts to communicate with the application server.
 
-AutoSave uses POST method to pass the current content to the server-side piece. The body of the POST request is filled with the editor's content. The server can get the content directly from the POST body. For example, in PHP environment:
+AutoSave uses POST method to pass the current content to the server-side piece. The body of the POST request is filled with the editor's content. The server can get the content directly from the POST body. For example, in PHP environment, $HTTP_RAW_POST_DATA contains the content to be saved.
 
 .. code-block :: php
 
