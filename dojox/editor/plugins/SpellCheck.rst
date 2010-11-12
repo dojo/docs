@@ -48,7 +48,10 @@ Usage of this plugin is simple and painless. The first thing you need to do is r
   ...
   </div>
 
-Configure the server-side php file. Rename **dojox/editor/tests/spellCheck.php.disable** to **dojox/editor/tests/spellCheck.php**. The php file is used to check a list of given words and return a list with suggested words.
+Configure the server-side php file.
+
+* Rename **dojox/editor/tests/spellCheck.php.disabled** to **dojox/editor/tests/spellCheck.php**. The php file is used to check a list of given words and return a list with suggested words.
+* Rename **dojox/editor/tests/PorterStemmer.php.disabled** to **dojox/editor/tests/PorterStemmer**.
 
 Then just declare the plugin and configure it as follows. Note that the location of SpellCheck.css may be changed according to the actual environment.
 
@@ -85,6 +88,53 @@ bufferLength              Number             True          100                  
 <other arguments>         N/A                True          N/A                      Any other argument that will be passed to the server untouched.
                                                                                     For example, lang: 'en', enableDebugging: true, etc. 
 ========================  =================  ============  =======================  =============================================================================
+
+Set up the server
+-----------------
+
+The demo php application provided by Dojo SDK consists of three parts: spellCheck.php, PorterStemmer.php and wordlist.txt
+
+* **spellCheck.php** - This php file is used to receive the request words, check them and response with suggested words.
+* **PorterStemmer.php** - This php file implements PorterStemmer algorithm to remove the suffixes of English words automatically.
+* **wordlist.txt** - This text file contains the words, which is used as a dictionary.
+
+If you want to use this feature in your application, you need to understand the protocol this feature adopts to communicate with the server.
+
+SpellCheck adopts JSONP protocol and uses GET request to send the words that are to be checked. Suppose we have a plugin declaration as follows.
+
+.. code-block :: html
+
+  <div dojoType="dijit.Editor" id="editor" extraPlugins="[{name: 'SpellCheck', url: 'spellCheck.php', interactive: true, timeout: 20, bufferLength: 100, lang: 'en'}]">
+
+The request may look like the following:
+
+.. code-block :: html
+
+  GET spellCheck.php?lang=EN&action=query&content=the%20is%20a%20demo%20to%20show%20how%20use%20spell%20check%20plugin%20you%20need%20php%20server%20test%20this%20please%20enable%20dojox%20editor&callback=dojo.io.script.jsonp_dojoIoScript1._jsonpCallback
+
+We have three parameters in the request: content, callback and lang.
+
+* **content** - The word list to be checked. The words are divided by space char. It may look like "thi is an errir".
+* **callback** - This one is the name of callback function. For more information, please refer to JSONP specification.
+* **lang** - This parameter is specified by the user. It could be any paramenter here as long as it is declared in the plugin declaration.
+
+What the server-side piece response should follow the format below:
+
+.. code-block :: javascript
+
+  callbackName(
+    response:[
+      {text: "word1", suggestion: ["w11", "w12"]},
+      {text: "word2", suggestion: ["w21", "w22"]},
+      ...
+    ]
+  );
+
+The callbackName gets from the "callback" parameter in the request. And you should not rename "response", "text" and "suggestion" in the template to other words. The response may look like the following.
+
+.. code-block :: javascript
+
+  dojo.io.script.jsonp_dojoIoScript1._jsonpCallback({response:[{"text":"spellcheck","suggestion":[]},{"text":"porterstemmer","suggestion":[]},{"text":"i","suggestion":[]},{"text":"errir","suggestion":["terror"]},{"text":"thi","suggestion":["hit","the","thin","this","tie"]},{"text":"wrng","suggestion":["warn","wrong"]},{"text":"txt","suggestion":["tax"]}]});
 
 ==============
 User Interface
