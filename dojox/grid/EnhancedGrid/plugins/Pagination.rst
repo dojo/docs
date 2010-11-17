@@ -127,11 +127,11 @@ description                Boolean|String|Integer   true             Indicates w
                                                                      Indicates the width of the current position dislay when it is set to a String/Integer, if description is set to
                                                                      a negative number, 0, "0" etc, the current position dislapy will not be displayed, otherwise, it will define the
                                                                      width of the current position display in given unit(default is pixels).
-sizeSwitch                 Boolean/String/Integer   true             Indicates whether or not display the page length menu. if it is set to a boolean.
+sizeSwitch                 Boolean|String|Integer   true             Indicates whether or not display the page length menu. if it is set to a boolean.
                                                                      Indicates the width of the page length menu when it is set to a String/Integer, if description is set to
                                                                      a negative number, 0, "0" etc, the page length menu will not be displayed, otherwise, it will define the
                                                                      width of the page length menu in given unit(default is pixels).
-pageStepper                Boolean/String/Integer   true             Indicates whether or not display the page navigation choices. if it is set to a boolean.
+pageStepper                Boolean|String|Integer   true             Indicates whether or not display the page navigation choices. if it is set to a boolean.
                                                                      Indicates the width of the page navigation choices when it is set to a String/Integer, if description is set to
                                                                      a negative number, 0, "0" etc, the page navigation choices will not be displayed, otherwise, it will define the
                                                                      width of the page navigation choices in given unit(default is pixels).
