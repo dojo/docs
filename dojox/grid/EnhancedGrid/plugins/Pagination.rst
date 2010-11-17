@@ -120,22 +120,31 @@ As shown in the above code, you can simply set the ``pagination`` property to ``
 
 Below is all of pagination configuration arguments:
 
-=========================  ========  ===============  ================================================================================================================
-Property                   Type      Default Value    Description
-=========================  ========  ===============  ================================================================================================================
-showDescription            Boolean   true             Indicates whether or not display the current position display.
-showSizeSwitch             Boolean   true             Indicates whether or not display the page length menu.
-showPageStepper            Boolean   true             Indicates whether or not display the page navigation choices.
-showGotoButton             Boolean   true             Indicates whether or not the go to page button.
-barPosition                String    "bottom"         Indicates the pagination control bar's position. 
-                                                      There are three options: top (place the pagination bar top of the grid); bottom (place the pagination bar bottom
-                                                      of the grid); both (place the pagination bar both the top and bottom of the grid).
-itemTitle                  String    "item"           Customize the unit of the items displayed on the description.
-pageSizeArr                Array     ["10", "25",     Customize the page length menu options. The element of the array must be a integer string or 
-                                     "50", "100",     "All"(case-insensitive).
-                                     "All"]           
-maxPageStep                integer   7                Indicates how many page navigation choices will be displayed (Suggested that the value should be less than 10).
-=========================  ========  ===============  ================================================================================================================
+=========================  =======================  ===============  ================================================================================================================
+Property                   Type                     Default Value    Description
+=========================  =======================  ===============  ================================================================================================================
+description                Boolean|String|Integer   true             Indicates whether or not display the current position display if it is set to a boolean.
+                                                                     Indicates the width of the current position dislay when it is set to a String/Integer, if description is set to
+                                                                     a negative number, 0, "0" etc, the current position dislapy will not be displayed, otherwise, it will define the
+                                                                     width of the current position display in given unit(default is pixels).
+sizeSwitch                 Boolean/String/Integer   true             Indicates whether or not display the page length menu. if it is set to a boolean.
+                                                                     Indicates the width of the page length menu when it is set to a String/Integer, if description is set to
+                                                                     a negative number, 0, "0" etc, the page length menu will not be displayed, otherwise, it will define the
+                                                                     width of the page length menu in given unit(default is pixels).
+pageStepper                Boolean/String/Integer   true             Indicates whether or not display the page navigation choices. if it is set to a boolean.
+                                                                     Indicates the width of the page navigation choices when it is set to a String/Integer, if description is set to
+                                                                     a negative number, 0, "0" etc, the page navigation choices will not be displayed, otherwise, it will define the
+                                                                     width of the page navigation choices in given unit(default is pixels).
+gotoButton                 Boolean                  false            Indicates whether or not the go to page button.
+position                   String                   "bottom"         Indicates the pagination control bar's position. 
+                                                                     There are three options: top (place the pagination bar top of the grid); bottom (place the pagination bar bottom
+                                                                     of the grid); both (place the pagination bar both the top and bottom of the grid).
+itemTitle                  String                   "item"           Customize the unit of the items displayed on the description.
+pageSizeArr                Array                    ["10", "25",     Customize the page length menu options. The element of the array must be a integer string or 
+                                                    "50", "100",     "All"(case-insensitive).
+                                                    "All"]           
+maxPageStep                integer                  7                Indicates how many page navigation choices will be displayed (Suggested that the value should be less than 10).
+=========================  =======================  ===============  ================================================================================================================
 
 =====
 Usage
@@ -194,6 +203,10 @@ prevPage            N/A                                    N/A      Function to 
 gotoFirstPage       N/A                                    N/A      Jump to first page
 gotoLastPage        N/A                                    N/A      Jump to last page
 changePageSize      size(integer): size of items per page  N/A      Change size of items per page
+scrollToRow         rowIndex(integer): row index           N/A      Override the grid.ScrollToRow().
+                                                                    Scroll to give row automatically, if the given 
+                                                                    row is not in this page, will jump to the right
+                                                                    page and scroll to the row
 showGotoPageButton  flag(boolean): Indicator of show/hide  N/A      Function to show/hide the Goto page button
                     the Goto page button                            dynamically
 ==================  =====================================  =======  ================================================
