@@ -59,6 +59,7 @@ Example 1: Using formToQuery to create an query string version of a form
   .. cv :: javascript
 
     <script>
+      dojo.require("dijit.form.Button");
       function convertForm() {
         dojo.connect(dijit.byId("convertForm"), "onClick", function(){
            var formQuery = dojo.formToQuery("myform");
@@ -72,7 +73,7 @@ Example 1: Using formToQuery to create an query string version of a form
 
   .. cv :: html 
 
-    <button id="convertForm" dojoType="dijit.form.Button">Click to convert the form to an object</button><br><br>
+    <button id="convertForm" dojoType="dijit.form.Button" type="button">Click to convert the form to an object</button><br><br>
     <b>The FORM</b><br><br>
     <form id="myform">
        <input type="text" name="field1" value="value1">
@@ -93,20 +94,20 @@ Example 2: Using formToQuery to create a query string version of a form with dij
     <script>
       dojo.require("dijit.form.TextBox");
       dojo.require("dijit.form.Button");
-      function convertFormDigits() {
-        dojo.connect(dijit.byId("convertFormDigits"), "onClick", function(){
+      function convertFormDijits() {
+        dojo.connect(dijit.byId("convertFormDijits"), "onClick", function(){
            var formQuery=  dojo.formToQuery("myform2");
 
            //Attach it into the dom as pretty-printed text.
            dojo.byId("formQuery2").innerHTML = formQuery;
         });
       }
-      dojo.addOnLoad(convertFormDigits);
+      dojo.addOnLoad(convertFormDijits);
     </script>
 
   .. cv :: html 
 
-    <button id="convertFormDigits" dojoType="dijit.form.Button">Click to convert the form to an object</button><br><br>
+    <button id="convertFormDijits" dojoType="dijit.form.Button">Click to convert the form to an object</button><br><br>
     <b>The FORM</b><br><br>
     <form id="myform2">
        <input type="text" dojoType="dijit.form.TextBox" name="field1" value="value1">
