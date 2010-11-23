@@ -3,8 +3,6 @@
 dojo.objectToQuery
 ==================
 
-:Status: Draft
-:Version: 1.0
 :Available: since V0.9
 
 .. contents::
@@ -55,6 +53,7 @@ Example 1: Using dojo.objectToQuery to create a query string and assign it to a 
   .. cv :: javascript
 
     <script>
+      dojo.require("dijit.form.Button");
       function convertQuery() {
         dojo.connect(dijit.byId("convertQuery"), "onClick", function(){
            var uri =  "http://uri.some.org/context";
@@ -76,7 +75,7 @@ Example 1: Using dojo.objectToQuery to create a query string and assign it to a 
 
   .. cv :: html 
 
-    <button id="convertQuery" dojoType="dijit.form.Button">Click to update the URI with a query generated from an object</button><br><br>
+    <button id="convertQuery" dojoType="dijit.form.Button" type="button">Click to update the URI with a query generated from an object</button><br><br>
     <b>The URI</b><br><br>
     http://uri.some.org/context
     <br><br>
