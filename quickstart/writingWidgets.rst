@@ -394,7 +394,7 @@ Here's an example of a behavioral widget (it uses the DOM node from the supplied
 				open: true,
 	
 				_setOpenAttr: function(/*Boolean*/ open){
-					this.open = open;
+					this._set("open", open);
 					dojo.style(this.domNode, "display", open ? "block" : "none");
 				}
 			});
@@ -407,12 +407,15 @@ Here's an example of a behavioral widget (it uses the DOM node from the supplied
   .. html::
 
 	<span dojoType="HidePane" open="false" jsId="pane">This pane is initially hidden</span>
-	<button onclick="pane.attr('open', true);">show</button>
-	<button onclick="pane.attr('open', false);">hide</button>
+	<button onclick="pane.set('open', true);">show</button>
+	<button onclick="pane.set('open', false);">hide</button>
 
 Custom setters are quite common. Usually you don't need a custom getter (as the default action
-for attr('foo') is to access Widget.foo), but for something like Editor where it's impractical to constantly
+for get('foo') is to access Widget.foo), but for something like Editor where it's impractical to constantly
 keep Editor.value up to date, writing a custom _getValueAttr() accessor makes sense.
+
+Note in the above example the use of this._set("open", open).    This saves the current value of the
+"open" attribute calling any handlers registered with watch(), to monitor attribute changes.
 
 Life cycle
 ----------
