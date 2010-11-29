@@ -14,7 +14,7 @@ Browser support
 
 The following browsers are supported. If a browser is not supported, it still may work, but no effort is taken to test unsupported browsers and any specific fix for an unsupported browser is likely not to be done:
 
-  * Firefox 3.6/4.0
+  * Firefox 3.6
   * Safari 4/Safari 5 and Chrome 5
   * IE6, IE7, IE8
   * Opera 10.50 and later (Dojo core only)
@@ -25,7 +25,7 @@ Dojo Base
 
 asynchronous loader
 -------------------
-TODO (placeholder for `dojo sie loader <http://dojo-sie.altoviso.com/index>`_)
+TODO for Rawld (placeholder for `dojo sie loader <http://dojo-sie.altoviso.com/index>`_)
 
 
 djConfig deprecated
@@ -109,7 +109,28 @@ Many performance tweaks have been made to increase performance on IE6 and IE7, s
 
 watch()
 -------
-watch() has been implemented for widgets, to monitor changes to widget attributes.  (TODO: fill in example when feature is complete)
+Watch() has been implemented for widgets, to monitor changes to widget attributes.  For example:
+
+.. code-block :: javascript
+
+   myTitlePane.watch("open", function(attr, oldVal, newVal){
+      console.log("pane is now " + (newVal ? "opened" : "closed"));
+   })
+
+All the widgets in dijit have been upgraded to support watch, but owners of dojox/ widgets and custom widgets will
+need to do their own updates if they want watch() to work for them.
+
+There's a new Widget._set(name, val) method to perform a
+this[name]=val and then send watch notifications if the value changed.
+Widgets call this from custom setters (ex: _setDisabledAttr()) rather
+than setting attributes in "this" directly.
+
+In general, converting a widget to support watch for all it's attributes centers around computing attribute
+values all the time, rather than on a get("....") call. For example,
+clicking a TreeNode will send watch events for selectedItem and path, so
+the _getPathAttr() and _getSelectedItemAttr() methods had to be replaced
+by code in the TreeNode click handler (see `[23189]  <http://bugs.dojotoolkit.org/changeset/23189/dijit/trunk/Tree.js>`_).
+That's also a good example of how some attributes are dependent on each other: changed selectedItem affects the path, and vice-versa.
 
 InlineEditBox
 -------------
