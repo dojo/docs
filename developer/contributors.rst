@@ -227,7 +227,8 @@ A list of individuals who have signed Dojo CLAs:
 * Johansson, Niklas 
 * Johansyah, Robertus Harmawon 
 * Johns, Morris Peter 
-* Johnson, Aaron 
+* Johnson, Aaron
+* Johnson, Samuel B 
 * Joldersma, Benjamin 
 * Jones, Randall 
 * Jones, Russell 
