@@ -4,7 +4,7 @@
 Themes and Theming
 ==================
 
-:Version: 1.3
+:Version: 1.6
 
 .. contents::
   :depth: 2
@@ -12,6 +12,31 @@ Themes and Theming
 
 Dijit Themes lend a consistent look and feel to widgets. Themes are collections of images (icons and background images) and CSS files that bring a common visual style (font, color, texture, layout, animation, etc) to all the widgets.  Dijit comes bundled with four themes which can be used as is, modified, and users can write their own themes too. Both global theming (such as at a container level) and widget-specific theming is doable.
 
+Themes must be included by the inclusion of the theme's root file from the relative position in the source tree:
+
+.. code-block :: html
+
+  <link rel="stylesheet" href="lib/dijit/themes/tundra/tundra.css">
+
+and by the addition of a theme class name on a parent element. By using the ``<body>`` tag, we are able to ensure all widgets in the page have the same CSS rules (some widgets like `Dialog <dijit/Dialog>`_ intentionally attach themselves to the ``<body>`` element, so no styling is present if the class identifier is on some child node):
+
+.. code-block :: html
+
+  <html>
+  <head>
+      <title>Hello, Dijit</title>
+      <link rel="stylesheet" href="lib/dijit/themes/tundra/tundra.css">
+      <script src="lib/dojo/dojo.js"></script>
+      <script type="text/javascript">
+         dojo.require("dijit.Dialog");
+      </script>
+  </head>
+  <body class="tundra">
+      <h1>Hello, Dijit</h1>
+  </body>
+  </html>
+
+It is recommended you include the theme CSS file **before** ``dojo.js`` to avoid any potential latency issues.
 
 ================
 Available Themes
@@ -36,7 +61,7 @@ A new theme for Dijit and the dojox.Grid is called Claro (nee Lucid).  The Claro
 The Claro theme supports both left-to-right (LTR) and right-to-left (RTL) display, and all Dojo 1.5 supported browsers: IE (6, 7 and 8); FF (3.0, 3.5 and 3.6); Safari 4.0/5.0 and Chrome 3, 4 and 5, albeit with graceful degradation of some styling: no 24 bit PNG's in IE6; and no rounded corners in IE6, 7 and 8.
 
 
-Claro will be accessibility and globalization compliant in Dojo 1.5.
+Claro is accessibility and globalization compliant.
 
 
 IE7 sample:
