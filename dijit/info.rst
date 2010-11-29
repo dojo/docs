@@ -55,7 +55,7 @@ The declarative method requires you include the `dojo.parser <dojo/parser>`_ and
          myDialog.show();
      });
   </script>
-  <div id="foobar" dojoType="dijit.Dialog" title="Foo!">
+  <div data-dojo-type="dijit.Dialog" data-dojo-params=" id:'foobar', title:'Foo!' ">
      <p>I am some content</p>
   </div> 
 
@@ -107,57 +107,6 @@ This will cause the creator to use the node with id="makeADialog", and turn it i
   var dialog = new dijit.Dialog({ title:"From Source byId" }, "makeADialog");
   dialog.show();
 
-Locating Widgets
-----------------
-
-There are many ways to locate a widget in a page, and access a reference to that Widget. Widget's are Objects: collections of attributes and DomNode references. Once you have a reference to a widget, you can use that object (or any of its member properties) through that widget. There are three "main" ways to access a widget:
-
-The simplest way to access a widget is `dijit.byId <dijit/byId>`_. When the widget is created, if the Node used to create the widget (eg: srcNodeRef) had a DOM attribute ``id``, that becomes the widget's id in the `dijit.registry <dijit/registry>`_.
-
-With the following markup:
-
-.. code-block :: html
-  :linenos:
- 
-  <div id="myDialog" dojoType="dijit.Dialog" title="A Dialog"><p class="innerContent">Content</p>/div>
-
-The Dialog instance would be available through the byId call to `myDialog`:
-
-.. code-block :: javascript
-  :linenos:
-
-  dijit.byId("myDialog").show(); // show my dialog instance
-
-If the ID is unknown for some reason, the function `dijit.getEnclosingWidget <dijit/getEnclosingWidget>`_ can be used by passing any child DOM Node reference. Again using the above markup, if we pass a reference to the ``p`` element inside the widget to ``getEnclosingWidget``, we will again be returned a reference to the Dialog:
-
-.. code-block :: javascript
-  :linenos:
-
-  var node = dojo.query("p.innerContent")[0]; // a domNode found by query
-  var w = dijit.getEnclosingWidget(node); // find the widget this node is in
-  w.show();
-
-The last, most common method, is a lot like ``getEnclosingWidget``, though it only works if the node passed is the widget's ``.domNode`` member (aka: the top-level node in the template, or the node used to create the widget instance):
-
-.. code-block :: javascript
-  :linenos:
-
-  var w = dijit.byId("myDialog");
-  var node = w.domNode; // this is a bad example, but illustrates the relationship
-  var widget = dijit.byNode(node); // now, w == widget 
-  widget.show(); 
-
-Note: it typically doesn't take that many lines to use `dijit.byNode <dijit/byNode>`_, this was a crafted example to illustrate the relationship between widgets and its ``domNode`` property. Most typically one would use ``byNode`` in some kind of event handler outside of the widget code:
-
-.. code-block :: javascript
-  :linenos:
-
-  dojo.connect(someNode, "onclick", function(e){
-      var w = dijit.byNode(e.target); 
-      if(w){ w.show(); }
-  });
-
-There are other ways of accessing and manipulating widgets, mostly involving the `dijit.registry <dijit/registry>`_, a collection of all widgets active on a page. 
 
 ==========
 Attributes
@@ -166,6 +115,8 @@ Attributes
 Widgets have attributes much like DOM nodes.  The attributes are one of the two main interfaces to programatically
 interact with the widget.   (The other interface is through event handlers like onClick().)
 
+set() and get()
+---------------
 In general attributes can be both set at initialization
 and modified after the widget is created, although some attributes, like "id" and "type", which are marked [const], can only be set
 at initialization.   Other attributes, like "focused", which are marked [readonly], can only be read.
@@ -226,6 +177,30 @@ There are several attributes common to (most) all Dijit instances. These appear 
 
 
 ======
+Events
+======
+The other interface for dealing with widgets is to setup event handlers.   For example:
+
+.. code-block :: javascript
+
+  new dijit.form.Button({
+       label: 'Click me!',
+       onClick: function(evt){ console.log("clicked!"); }
+  })
+
+Event handlers can be setup programatically (as above), or declaratively, like:
+
+.. code-block :: html
+  :linenos:
+
+  <div data-dojo-type="dijit.Dialog" data-dojo-params=" id:'foobar', title:'Foo!' ">
+     <script type="dojo/connect" data-dojo-event="onClick" data-dojo-args="evt">
+           console.log("clicked, event object is ", evt);
+     </script>
+     <p>I am some content</p>
+  </div> 
+
+======
 Themes
 ======
 
@@ -240,6 +215,58 @@ Dijit i18n/a11y
 
 Everything in Dijit is designed to be globally accessible -- to accommodate users with different languages and cultures as well as those with different abilities.  Language translations, bi-directional text, and cultural representation of things like numbers and dates are all encapsulated within the widgets.  Server interactions are done in a way that makes no assumptions about local conventions.  All widgets are keyboard accessible and using the standard Dijit theme, usable in high-contrast mode as well as by screen readers.  These features are baked in so that, as much as possible, all users are treated equally.
 
+================
+Locating Widgets
+================
+
+There are many ways to locate a widget in a page, and access a reference to that Widget. Widget's are Objects: collections of attributes and DomNode references. Once you have a reference to a widget, you can use that object (or any of its member properties) through that widget. There are three "main" ways to access a widget:
+
+The simplest way to access a widget is `dijit.byId <dijit/byId>`_. When the widget is created, if the Node used to create the widget (eg: srcNodeRef) had a DOM attribute ``id``, that becomes the widget's id in the `dijit.registry <dijit/registry>`_.
+
+With the following markup:
+
+.. code-block :: html
+  :linenos:
+ 
+  <div id="myDialog" dojoType="dijit.Dialog" title="A Dialog"><p class="innerContent">Content</p>/div>
+
+The Dialog instance would be available through the byId call to `myDialog`:
+
+.. code-block :: javascript
+  :linenos:
+
+  dijit.byId("myDialog").show(); // show my dialog instance
+
+If the ID is unknown for some reason, the function `dijit.getEnclosingWidget <dijit/getEnclosingWidget>`_ can be used by passing any child DOM Node reference. Again using the above markup, if we pass a reference to the ``p`` element inside the widget to ``getEnclosingWidget``, we will again be returned a reference to the Dialog:
+
+.. code-block :: javascript
+  :linenos:
+
+  var node = dojo.query("p.innerContent")[0]; // a domNode found by query
+  var w = dijit.getEnclosingWidget(node); // find the widget this node is in
+  w.show();
+
+The last, most common method, is a lot like ``getEnclosingWidget``, though it only works if the node passed is the widget's ``.domNode`` member (aka: the top-level node in the template, or the node used to create the widget instance):
+
+.. code-block :: javascript
+  :linenos:
+
+  var w = dijit.byId("myDialog");
+  var node = w.domNode; // this is a bad example, but illustrates the relationship
+  var widget = dijit.byNode(node); // now, w == widget 
+  widget.show(); 
+
+Note: it typically doesn't take that many lines to use `dijit.byNode <dijit/byNode>`_, this was a crafted example to illustrate the relationship between widgets and its ``domNode`` property. Most typically one would use ``byNode`` in some kind of event handler outside of the widget code:
+
+.. code-block :: javascript
+  :linenos:
+
+  dojo.connect(someNode, "onclick", function(e){
+      var w = dijit.byNode(e.target); 
+      if(w){ w.show(); }
+  });
+
+There are other ways of accessing and manipulating widgets, mostly involving the `dijit.registry <dijit/registry>`_, a collection of all widgets active on a page. 
 
 ==================
 Behavioral widgets
