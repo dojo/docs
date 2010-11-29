@@ -78,7 +78,7 @@ is identical to:
   <script type="text/javascript">
      dojo.require("dijit.Dialog");
   </script>
-  <div dojoType="dijit.Dialog" title="Hello Dijit!" id="someId"></div>
+  <div data-dojo-type="dijit.Dialog" data-dojo-params=" title:'Hello Dijit!', id:'someId' "></div>
 
 The declarative method requires you include the `dojo.parser <dojo/parser>`_ and have either ``djConfig.parseOnLoad`` set to true, or you manually call ``dojo.parser.parse()`` when you would like the widgets (dijits) to be created.
 
@@ -91,8 +91,7 @@ The declarative method requires you include the `dojo.parser <dojo/parser>`_ and
      dojo.addOnLoad(function(){
          // dojo.byId("foobar") would only be a normal domNode. 
          var myDialog = dijit.byId("foobar");
-         // .attr() is only available in 1.2; For previous versions, use .setContent("<p>replaced!</p>");
-         myDialog.attr("content", "<p>I've been replaced!</p>"); 
+        myDialog.set("content", "<p>I've been replaced!</p>"); 
          myDialog.show();
      });
   </script>
@@ -107,7 +106,7 @@ If you need a reference to a the actual Node used to display the widget, Dijit s
 
   var thinger = dijit.byId("foobar");
   dojo.place(thinger.domNode, dojo.body(), "last");
-  // functionally equilivant to:
+  // functionally equivalent to:
   // dojo.body().appendChild(thinger.domNode);
 
 When creating widgets programatically, pass an id:"" parameter:
@@ -129,7 +128,7 @@ Otherwise, a unique ID will be generated for you:
   :linenos:
 
   var dialog = new dijit.Dialog({ title:"No ID" })
-  console.log(dialog.id); 
+  console.log(dialog.get("id")); 
   
 All Dijits follow the same programmatic convention. Create a new instance with the JavaScript ``new`` function, pass an object-hash of properties and functions (in this case, title:""), and supply an optional "source node reference". 
 
@@ -204,29 +203,43 @@ There are other ways of accessing and manipulating widgets, mostly involving the
 Attributes
 ==========
 
-Widgets have initialization parameters and attributes that can be read/write after initialization.
-In general it's the same list, although certain attributes (like id and type) can only be set
-during initialization.
+Widgets have attributes much like DOM nodes.  The attributes are one of the two main interfaces to programatically
+interact with the widget.   (The other interface is through event handlers like onClick().)
+
+In general attributes can be both set at initialization
+and modified after the widget is created, although some attributes, like "id" and "type", which are marked [const], can only be set
+at initialization.   Other attributes, like "focused", which are marked [readonly], can only be read.
 
 This basically mirrors how vanilla HTML DOM nodes work, although the syntax is a bit different.
-Specifically, to get/set attributes after initialization, you need to use the ``attr()`` method:
+Specifically, to get/set attributes after initialization, you need to use the ``get()`` and ``set()`` methods:
 
 .. code-block :: javascript
 
   // set title
-  myTitlePane.attr('title', 'hello world');
+  myTitlePane.set('title', 'hello world');
 
   // find out if button is disabled
-  var dis = myButton.attr('disabled');
+  var dis = myButton.get('disabled');
 
   // set to the current date
-  myDateTextBox.attr('value', new Date());
+  myDateTextBox.set('value', new Date());
 
-It also supports a hash API like `dojo.attr() <dojo/attr>`_, for setting multiple attributes:
+Set() also supports a hash API like `dojo.attr() <dojo/attr>`_, for setting multiple attributes:
 
 .. code-block :: javascript
 
-  myInput.attr({ tabIndex: 3, disabled: true, value: 'hi'});
+  myInput.set({ tabIndex: 3, disabled: true, value: 'hi'});
+
+watch()
+-------
+Attributes can also be monitored for changes.   For example:
+
+.. code-block :: javascript
+
+   myTitlePane.watch("open", function(attr, oldVal, newVal){
+      console.log("pane is now " + (newVal ? "opened" : "closed"));
+   });
+
 
 Common Attributes of Dijits
 ---------------------------
@@ -241,7 +254,7 @@ There are several attributes common to (most) all Dijit instances. These appear 
   // hide a widget with id="myThiner"
   dojo.style(dijit.byId("myThinger").domNode, "display", "none"); 
 
-* .containerNode - If a widget uses a template to create complex markup and has inner markup to be displayed within the widget, the containerNode member is a reference to the node where the content was moved to. For example with a `dijit.Dialog <dijit/Dialog>`_ only the surrounding domNode is used to create the widget, and any contents of that node are set inside the template's `containerNode`. When using .attr() to set and load content, this is the node that will be targeted for that content.
+* .containerNode - If a widget uses a template to create complex markup and has inner markup to be displayed within the widget, the containerNode member is a reference to the node where the content was moved to. For example with a `dijit.Dialog <dijit/Dialog>`_ only the surrounding domNode is used to create the widget, and any contents of that node are set inside the template's `containerNode`. When using .set() to set and load content, this is the node that will be targeted for that content.
 
 * declaredClass - this is actually a relic of `dojo.declare <dojo/declare>`_, which is how widgets are defined. The declaredClass is a string equal to the fully qualified name of the widget class.
 
