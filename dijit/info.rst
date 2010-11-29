@@ -191,13 +191,12 @@ The other interface for dealing with widgets is to setup event handlers.   For e
 Event handlers can be setup programatically (as above), or declaratively, like:
 
 .. code-block :: html
-  :linenos:
 
-  <div data-dojo-type="dijit.Dialog" data-dojo-params=" id:'foobar', title:'Foo!' ">
+  <div data-dojo-type="dijit.form.Button">
      <script type="dojo/connect" data-dojo-event="onClick" data-dojo-args="evt">
            console.log("clicked, event object is ", evt);
      </script>
-     <p>I am some content</p>
+     Click me!
   </div> 
 
 ======
