@@ -229,31 +229,7 @@ There are several attributes common to (most) all Dijit instances. These appear 
 Themes
 ======
 
-Dijit comes bundled with four themes: Claro (new in Dojo 1.5), Tundra, Soria, and Nihilo. Themes are collections of images (icons and background images) and CSS, and brings a common visual style and color scheme to all the widgets. You can override the theme by container or by widget element to add nuance and flair. Themes must be included by the inclusion of the theme's root file from the relative position in the source tree:
-
-.. code-block :: html
-
-  <link rel="stylesheet" href="lib/dijit/themes/tundra/tundra.css">
-
-and by the addition of a theme class name on a parent element. By using the ``<body>`` tag, we are able to ensure all widgets in the page have the same CSS rules (some widgets like `Dialog <dijit/Dialog>`_ intentionally attach themselves to the ``<body>`` element, so no styling is present if the class identifier is on some child node):
-
-.. code-block :: html
-
-  <html>
-  <head>
-      <title>Hello, Dijit</title>
-      <link rel="stylesheet" href="lib/dijit/themes/tundra/tundra.css">
-      <script src="lib/dojo/dojo.js"></script>
-      <script type="text/javascript">
-         dojo.require("dijit.Dialog");
-      </script>
-  </head>
-  <body class="tundra">
-      <h1>Hello, Dijit</h1>
-  </body>
-  </html>
-
-It is recommended you include the theme CSS file **before** ``dojo.js`` to avoid any potential latency issues.
+Dijit comes bundled with four themes: Claro (new in Dojo 1.5), Tundra, Soria, and Nihilo. Themes are collections of images (icons and background images) and CSS, and brings a common visual style and color scheme to all the widgets. You can override the theme by container or by widget element to add nuance and flair.
 
 To learn more about themes, see `Dijit Themes and Theming <dijit/themes>`_.
 
