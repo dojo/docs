@@ -351,6 +351,7 @@ A list of individuals who have signed Dojo CLAs:
 * O Shea, Sean 
 * Obermann, Gerhard 
 * Ogilvie, Cyan Jon 
+* Oliver, Vicky
 * Onken, Nikolai 
 * Oriol, Guillaume
 * Overton, James Alexander 
