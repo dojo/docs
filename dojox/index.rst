@@ -222,6 +222,10 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
     A date-like class representing the Hebrew calendar
 
+  * `dojox.date.islamic <dojox/date/islamic>`_
+
+    A date-like class representing the Islamic or Hijri calendar
+
 * `dojox.drawing <dojox/drawing>`_
 
   Vector graphics drawing editor
