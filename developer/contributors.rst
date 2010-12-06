@@ -328,6 +328,7 @@ A list of individuals who have signed Dojo CLAs:
 * Monroe, Daniel 
 * Montes, Luis 
 * Morawski, Jason 
+* Moreira, Jose
 * Motovilov, Max 
 * Mott, Carla V. 
 * Muhlestein, Dennis 
