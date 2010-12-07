@@ -115,7 +115,7 @@ One can listen for changes in data through the observe method on the result set 
 =======================================================================  =======================================================================  
 Method                                                                   Description
 =======================================================================  =======================================================================
-`observe(listener) <dojo/store/resultset/subscribe>`_                    The listener function is called with following arguments:
+observe(listener) <dojo/store/resultset/subscribe>                       The listener function is called with following arguments:
                                                                          listener(object, removedFrom, insertedInto);
                                                                       
                                                                          The object parameter indicates the object that was create, modified, or 
