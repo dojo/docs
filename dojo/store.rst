@@ -107,26 +107,26 @@ Method                                                           Description
 
 
 ====================
-Watching Result Sets
+Observing Result Sets
 ====================
 
-One can listen for changes in data through the watch method on the result set (the object returned from a query). The watch method has the following signature:
+One can listen for changes in data through the observe method on the result set (the object returned from a query). The observe method has the following signature:
 
 ====================================================================  ======================================================================
 Method                                                                Description
 ====================================================================  ======================================================================
-`watch(listener) <dojo/store/resultset/subscribe>`_                   The listener function is called with following arguments:
-                                                                      listener(index, existingObjectId, newObject);
+`observe(listener) <dojo/store/resultset/subscribe>`_                   The listener function is called with following arguments:
+                                                                      listener(object, removedFrom, insertedInto);
                                                                       
-                                                                      The index value indicates the position in the result set that changed. 
-                                                                      If this value is undefined, it indicates that the store was unable to 
-                                                                      determine where in the result set the change took place.
-                                                                      The existingObjectId indicates the object id of the object that formerly
-                                                                      existed at the index position. If this value is undefined it indicates the 
-                                                                      object was inserted into the position.
-                                                                      The newObject indicates the new object that fills the given index position. 
-                                                                      If this is undefined it indicates that the previous object was (indicated by 
-                                                                      the existingObjectId) was removed from the result set.
+                                                                      The object parameter indicates the object that was create, modified, or 
+                                                                      deleted. * The removedFrom parameter indicates the index in the result 
+                                                                      array where the object used to be. If the value is -1, then the object 
+                                                                      is an addition to this result set (due to a new object being created, or 
+                                                                      changed such that it is a part of the result set). * The insertedInto 
+                                                                      parameter indicates the index in the result array where the object should be 
+                                                                      now. If the value is -1, then the object is a removal from this result set 
+                                                                      (due to an object being deleted, or changed such that it is not a part of 
+                                                                      the result set).
 
 `close <dojo/store/resultset/close>`_                                 When close() is called on a result set, notifications will no longer be fired.
 ====================================================================  ======================================================================
@@ -151,7 +151,7 @@ There is also an adapter store for using legacy Dojo Data stores with the new AP
 
 We are also moving in the direction of providing composable functionality by providing store "wrappers" or store "middleware" that takes a store and adds functionality. Several key store wrappers:
 
-* `dojo.store.Watchable <dojo/store/Watchable>`_ This augments a store with the data monitoring capability, adding a watch method on the query result sets that notifies of data changes.
+* `dojo.store.Observable <dojo/store/Observable>`_ This augments a store with the data monitoring capability, adding a observe method on the query result sets that notifies of data changes.
 
 * Future: `dojo.store.Cache <dojo/store/Cache>`_
 
@@ -163,7 +163,7 @@ We are also moving in the direction of providing composable functionality by pro
 
 With this one can easily mix and match wrappers and base stores to achieve various types of functionality. A common pattern may be:
 
-store = dojo.store.Watchable(new dojo.store.Memory({data: someData}));
+store = dojo.store.Observable(new dojo.store.Memory({data: someData}));
 
 There are also a couple of utility modules:
 
