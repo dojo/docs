@@ -2,7 +2,7 @@
 
 
 dojo.store.Observable
-====================
+=====================
 
 :Authors: Kris Zyp
 :Project owner: Kris Zyp
