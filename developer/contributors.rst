@@ -13,7 +13,8 @@ A list of individuals who have signed Dojo CLAs:
 * Algesten, Martin 
 * Allen, Robert 
 * Alpert, John Izaaic 
-* Ambrosi, Lucas 
+* Ambrosi, Lucas
+* Anderson, Christian O. 
 * Andrews, Jesse 
 * Anuruddha, Dilan 
 * Armstrong, Kevin 
@@ -163,6 +164,7 @@ A list of individuals who have signed Dojo CLAs:
 * Gerber, Achim 
 * Giammarchi, Andrea 
 * Gielczynski, Miriam 
+* Gilbert, Alain
 * Gill, Rawld 
 * Girard, Wade
 * Glebovskiy, Alexander 
@@ -600,6 +602,7 @@ A list of corporations or organizations with a CLA on file:
 * PIXAR 
 * RedHat 
 * Renkoo 
+* Respondify AB: Christian O. Anderson
 * Riptano Incorporated
 * RS KLAN 
 * RusSte, Inc. 
