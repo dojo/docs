@@ -1,5 +1,5 @@
-
 #format dojo_rst
+
 
 dojo.store.Observable
 ====================
