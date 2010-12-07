@@ -77,9 +77,9 @@ Returned Objects
 
 Objects returned from store should primarily be treated as normal hash objects and have standard JavaScript properties to access their data and modify their data. However, the following methods are defined as possible methods that may also be available on the objects returned by the store (once again, they are optional). These methods should '''not''' be the object's own properties (hasOwnProperty(methodName) should return false), but rather should be inherited from one of the object's prototypes). This is to ensure ease of enumeration of data properties.  Once again, all of these methods are optional, and all may return promises if the operation will be performed asynchronously:
 
-===============================================================  ======================================================================
+===============================================================  ===============================================================
 Method                                                           Description
-===============================================================  ======================================================================
+===============================================================  ===============================================================
 `get(property) <dojo/store/resultset/get>`_                      Returns the value of the given property.
 
                                                                  Normally property values can be accessed with normal JavaScript member expresions (object.property -> value), but if get() is implemented, than get(property) should be used to retrieve property values. This allows for lazy evaluation of properties.
@@ -103,7 +103,7 @@ Method                                                           Description
 `getMetadata() <dojo/store/resultset/getMetadata>`_              Returns any metadata about the object. 
 
                                                                  This may include attribution, cache directives, history, or version information. (addresses #3126, #3127)
-===============================================================  ======================================================================
+===============================================================  ===============================================================
 
 
 =====================
