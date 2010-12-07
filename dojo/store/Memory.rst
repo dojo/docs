@@ -47,6 +47,6 @@ Examples
 See Also
 ========
 
-You may also wish to use the Watchable store wrapper to add notifications of changes to data:
+You may also wish to use the Observable store wrapper to add notifications of changes to data:
 
-`dojo/store/Watchable <dojo/store/Watchable>`_
+`dojo/store/Observable <dojo/store/Observable>`_
