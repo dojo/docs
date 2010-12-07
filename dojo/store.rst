@@ -131,9 +131,9 @@ Method                                                                Descriptio
 `close <dojo/store/resultset/close>`_                                 When close() is called on a result set, notifications will no longer be fired.
 ====================================================================  ======================================================================
 
-==========================================
+==============================
 Core Stores included with Dojo
-==========================================
+==============================
 
 The following stores, store wrappers, and utilities ship with Dojo. These provide a solid base of good modular components for using stores and building more complex store technology. The following two core stores based on the typical pattern of in-memory and server-based data stores:
 
