@@ -15,7 +15,7 @@ Browser support
 The following browsers are supported. If a browser is not supported, it still may work, but no effort is taken to test unsupported browsers and any specific fix for an unsupported browser is likely not to be done:
 
   * Firefox 3.6
-  * Safari 4/Safari 5 and Chrome 5
+  * Safari 4/Safari 5 and Chrome 8
   * IE6, IE7, IE8
   * Opera 10.50 and later (Dojo core only)
 
@@ -61,10 +61,10 @@ NodeList-data
 -------------
 New module, providing ``data`` and ``removeData`` API's to dojo.NodeList. See `NodeList-data <dojo/NodeList-data>`_
 
-Parser deprecations
--------------------
+Parser
+------
 
-See `ticket #11490 <http://bugs.dojotoolkit.org/ticket/11490>`_ for the full discussion and change set 
+The parser has been enhanced to support HTML5 compliant attribute names.  See `ticket #11490 <http://bugs.dojotoolkit.org/ticket/11490>`_ for the full discussion and change set:
 
   * The `jsId` attribute has been **deprecated**, and will be unsupported in 2.0. Replace all `jsId` references with `data-dojo-id`, the behavior is identical.
 
@@ -90,6 +90,7 @@ See `ticket #11490 <http://bugs.dojotoolkit.org/ticket/11490>`_ for the full dis
 
   * Existing behavior has been preserved until 2.0, there should be no backward compatibility issues between 1.6 and previous 1.x Dojo versions.
 
+Also, there's a new "scope" parameter to the parser to control which attribute names it searches for.   This is mainly used in conjunction with multi-version support, for example if dojo 1.6 and dojo 1.4 are loaded onto the same page, it allows searching for dojo16Type and data-dojo16-type instead of dojoType and data-dojo-type.
 
 Performance boost
 -----------------
@@ -155,6 +156,10 @@ Toolbar
 -------
 - Home/End keys navigate to first/last button
 
+ValidationTextBox
+-----------------
+- state attribute now has new "Incomplete" value to indicate a required but empty field, or a field where the value isn't valid but the user is still typing (ex: a DateTextBox where the user has only typed "12/31/" and still needs to enter the year.
+
 =====
 DojoX
 =====
@@ -203,4 +208,16 @@ The build now supports auto-generation of profiles from HTML files with the new 
 Migration
 =========
 
-As usual dojo is API backwards-compatible with previous 1.x versions.   
+As usual dojo is API backwards-compatible with previous 1.x versions.   There are a few things to be aware of though:
+
+Claro's reset CSS
+-----------------
+The claro theme no longer automatically includes its CSS reset file for page level elements (H1, H2, P, etc.)    If you want that CSS please import dijit/themes/claro/document.css, in the same way that you import dojo/resources/dojo.css.
+
+Popups and drop downs
+---------------------
+For accessibility reasons the `dijit.popup <dijit/popup>`_ code now hides popup / dropdown widgets with style="display: none" rather than style="visiblity:hidden; top: -9999px".   (Actually that style is on a wrapper node.)   This may cause issues for popup / drop down  widgets that do layout on initialization.   In that case you should defer the layout until the first onShow() call for the widget.
+
+BorderContainer border
+----------------------
+The `dijit.layout.BorderContainer <dijit/layout/BorderContainer>`_ widget now has no predefined border.   You can specify a border via a style tag if your application needs one.   However, aesthetically the widget should have no border in most cases, including when it's at 100% of the viewport size, or when it's nested inside another layout widget.
