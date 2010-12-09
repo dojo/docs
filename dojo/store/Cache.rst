@@ -31,6 +31,8 @@ Examples
 
  store.get(1) -> Returns the object with an id of 1 by making a GET request
  store.get(1) -> Returns the object, using the local memory cache
+ store.put({id:2, name:"two"}) -> Stores the object in both master and cache store
+ store.get(2) -> Returns the object, using the local memory cache
 
 ===
 API
