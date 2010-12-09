@@ -144,16 +144,17 @@ Theme-specific and widget-specific CSS:
   dijit/
     themes/
       claro/
-      claro.css  <-- Imports the theme-specific CSS files for all the widgets
-      claro_rtl.css  <-- Imports the theme-specific CSS files for all the widgets for right-to-left (BiDi) language support
-      common.css  <-- Theme-specific styling; Claro\common.css overrides dojo.css
-      widgetX.css  <-- Some Dijit widget CSS files
-        form/
-          widgetX.css  <-- Form-based Dijit widget CSS files
-          common.css
-          common_rlt.css
-        layout/
-          widgetX.css   <-- Layout-based Dijit widget CSS files
+        claro.css  <-- Imports the theme-specific CSS files for all the widgets
+        document.css  <-- CSS reset file tailored to claro theme, similar to dojo.css.   Include instead of dojo.css.
+        claro_rtl.css  <-- Imports the theme-specific CSS files for all the widgets for right-to-left (BiDi) language support
+        common.css  <-- Theme-specific styling across widgets
+        widgetX.css  <-- Some Dijit widget CSS files
+          form/
+            widgetX.css  <-- Form-based Dijit widget CSS files
+            common.css
+            common_rtl.css
+          layout/
+            widgetX.css   <-- Layout-based Dijit widget CSS files
 
 
 The themeX.css file has rules like:
