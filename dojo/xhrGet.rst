@@ -111,6 +111,9 @@ dojo.xhrGet supported object properties
 |                  |without having to put a lot of logic into your load function to check for error conditions.  The first parameter passed to  |
 |                  |the error function is a JavaScript Error object indicating what the failure was.                                            |
 |                  |                                                                                                                            |
+|                  |  **Note:** If you cancel the XHR, the error callback will be triggered, think about it if you handle errors with a "try    |
+|                  |  again" mechanism, since you may reschedule a canceled request                                                             |
+|                  |                                                                                                                            |
 |                  |**This parameter is optional**                                                                                              |
 +------------------+----------------------------------------------------------------------------------------------------------------------------+
 |**handle**        |Sometimes you want to do something regardless of whether a call completes or fails.  Thats where handle comes it, it will be|
