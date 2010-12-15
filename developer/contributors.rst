@@ -613,6 +613,7 @@ A list of corporations or organizations with a CLA on file:
 * Spider Strategies 
 * Sun Microsystems, Inc. 
 * Suretec Systems, Ltd. 
+* TeamPatent, LLC: Rocky Kahn, Heng Liu
 * The Frontier Group
 * Tietoteema Oy 
 * University of Toronto 
