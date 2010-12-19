@@ -87,3 +87,33 @@ Example
       border: 1px solid #000;
     }
     </style>
+
+====================
+Custom Mover Example
+====================
+
+Here is an example of a custom mover allowing to move an object with 5 pixels steps when Control key is pressed while dragging:
+
+.. code-block :: javascript
+
+  dojo.declare("dojo.dnd.StepMover", dojo.dnd.Mover, {
+    onMouseMove: function(e) {
+      dojo.dnd.autoScroll(e);
+      var m = this.marginBox;
+      if(e.ctrlKey) {
+        this.host.onMove(this, {l: parseInt((m.l + e.pageX) / 5) * 5, t: parseInt((m.t + e.pageY) / 5) * 5});
+      } else {
+        this.host.onMove(this, {l: m.l + e.pageX, t: m.t + e.pageY});
+      }
+      dojo.stopEvent(e);
+    }
+  });
+
+
+Create your ''Moveable'' as:
+
+.. code-block :: javascript
+
+  new dojo.dnd.Moveable(node, {
+    mover: dojo.dnd.StepMover
+  });
