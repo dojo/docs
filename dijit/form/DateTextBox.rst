@@ -159,6 +159,14 @@ Sometimes you may want to input and display years in a format with only 2-digit 
 Accessibility
 =============
 
+Version 1.6
+-----------
+As of 1.6, full keyboard support has been added to the Calendar dropdown used by the DateTextBox.  See the Accessibility Section in `dijit.Calendar <dijit/Calendar>`_ for the keyboard commands to navigate the Calendar drop down. To navigate the DateTextBox with the JAWS 12 screen reader, JAWS must be in virtual cursor off mode. With focus on the DateTextBox field JAWS will announce the DateTextBox as an edit combo.  The user presses the down arrow key to open the Calendar and set focus onto the date specified in the text box.  Use table navigation to navigate through the Calendar.
+
+
+Previous to 1.6
+---------------
+
 See the Accessibility Section in `dijit.form.ValidationTextBox <dijit/form/ValidationTextBox>`_
 
 The calendar popup associated with the DateTextBox is not yet keyboard accessible.  However, the DateTextBox will still meet accessibility requirments as long as the developer provides the validation parameters promptMessage and invalidMessage when creating the DateTextBox (note that there is a default invalidMessage but not a promptMessage).  These messages are implemented in a format that is accessible to all users.   
