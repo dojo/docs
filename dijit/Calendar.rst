@@ -258,3 +258,31 @@ See Also
 ========
 
   * `dojox.widget.Calendar <dojox/widget/Calendar>`_ - An enhanced but still experimental calendar widget which has additional capabilities like year-only views and animation effects.
+
+
+=============
+Accessibility 
+=============
+
+As of 1.6 full keyboard support has been implemented for the Calendar.  
+
+Keyboard
+--------
+
+==========================================    =================================================
+Action                                        Key
+==========================================    =================================================
+Navigate between date cells                   Left, Right, Up, and down arrows
+Navigate to same day in next month            Page-down
+Navigate to same day in previous month        Page-up
+Navigate to same day in next year             Control+Page-down
+Navigate to same day in previous year         Control+Page-up
+Navigate to first day in month                Home
+Navigate to last day in month                 End
+Select the date                               Enter
+==========================================    =================================================
+
+Screen Reader Issues
+--------------------
+
+The Calendar has been implemented as a table so standard table announcements and navigation work as expected with JAWS 12. As the user arrows through the table the day number is announced.  As the user moves from column to column the weekday column headers are announced as well.  For en-us locales these are the first letters of the days of the week: S, M, T, W, T, F, S.  The month name is also included when it changes. The current year has been assigned as the label for the Calendar table and is also announced when it changes.  
