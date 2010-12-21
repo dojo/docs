@@ -140,7 +140,7 @@ position                   String                   "bottom"         Indicates t
                                                                      There are three options: top (place the pagination bar top of the grid); bottom (place the pagination bar bottom
                                                                      of the grid); both (place the pagination bar both the top and bottom of the grid).
 itemTitle                  String                   "item"           Customize the unit of the items displayed on the description.
-pageSizeArr                Array                    ["10", "25",     Customize the page length menu options. The element of the array must be a integer string or 
+pageSizes                  Array                    ["10", "25",     Customize the page length menu options. The element of the array must be a integer string or 
                                                     "50", "100",     "All"(case-insensitive).
                                                     "All"]           
 maxPageStep                integer                  7                Indicates how many page navigation choices will be displayed (Suggested that the value should be less than 10).
