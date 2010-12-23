@@ -133,6 +133,10 @@ the _getPathAttr() and _getSelectedItemAttr() methods had to be replaced
 by code in the TreeNode click handler (see `[23189]  <http://bugs.dojotoolkit.org/changeset/23189/dijit/trunk/Tree.js>`_).
 That's also a good example of how some attributes are dependent on each other: changed selectedItem affects the path, and vice-versa.
 
+Claro Theme / Custom Themes
+---------------------------
+Did some cleanup to the claro theme, and also converted the theme files to less format to make it easy to roll custom themes.   See the README file in dijit/themes/claro for details, but basically you can make your own theme by modifying the settings in dijit/themes/claro/variables.css.
+
 InlineEditBox
 -------------
 
