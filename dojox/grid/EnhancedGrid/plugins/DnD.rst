@@ -294,6 +294,14 @@ Arguments       Type                Optional/Mandatory               Description
 config          Object              Mandatory                        Same as dndConfig.
 ==============  ==================  ===============================  ===================
 
+=================
+Known Limitations
+=================
+
+* Multiple row layout is not supported by this DnD plugin.
+* Please be careful when dragging a numeric cell to a string cell (or visi versa), since sorting will have problems after that. This is because comparing string value and number value always returns false.
+
+
 ========
 See Also
 ========
