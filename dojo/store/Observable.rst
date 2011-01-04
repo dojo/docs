@@ -36,6 +36,8 @@ The listener function is called with following arguments:
 * The removedFrom parameter indicates the index in the result array where the object used to be. If the value is -1, then the object is an addition to this result set (due to a new object being created, or changed such that it is a part of the result set).
 * The insertedInto parameter indicates the index in the result array where the object should be now. If the value is -1, then the object is a removal from this result set (due to an object being deleted, or changed such that it is not a part of the result set).
 
+The observe() method returns an object with a cancel() method that can be called to stop observing the given result set.
+
 ========
 Examples
 ========
@@ -52,7 +54,7 @@ Examples
  results.forEach(insertRow);
  
  // now listen for any changes
- results.observe(function(object, removedFrom, insertedInto){
+ var observeHandle = results.observe(function(object, removedFrom, insertedInto){
    if(removedFrom > -1){ // existing object removed
      removeRow(removedFrom);
    }
@@ -70,6 +72,8 @@ Examples
  // if this object was in the result set, it will trigger a observe event
  store.remove(2);
 
+ // done observing, any further modifications will not trigger our listener
+ observeHandle.cancel();
 Client Side Query Awareness
 ---------------------------
 
