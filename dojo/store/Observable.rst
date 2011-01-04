@@ -71,9 +71,11 @@ Examples
  
  // if this object was in the result set, it will trigger a observe event
  store.remove(2);
-
+ 
  // done observing, any further modifications will not trigger our listener
  observeHandle.cancel();
+
+
 Client Side Query Awareness
 ---------------------------
 
