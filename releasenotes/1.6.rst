@@ -23,9 +23,28 @@ The following browsers are supported. If a browser is not supported, it still ma
 Dojo Base
 =========
 
-asynchronous loader
--------------------
-TODO for Rawld (placeholder for `dojo sie loader <http://dojo-sie.altoviso.com/index>`_)
+AMD format for modules
+----------------------
+Many of dojo's modules have been converted to `AMD format <http://requirejs.org/docs/api.html>`_,
+where each module is wrapped in a define() function, rather than the old dojo.provide() and dojo.require() syntax.
+
+The 1.6 loader does not support the entirety of the AMD format, and it is not
+asynchronous. We are planning on two new loaders in the future, a more
+complete sync one and an async one.
+
+Of course, the 1.6 loader also has
+back-compat support for dojo.require and dojo.provide, of course.
+
+In 1.6, If you want to do asynchronous loading of modules, you need to do it yourself, see `this template for loading dojo using RequireJS <https://github.com/neonstalwart/dojo-requirejs-template>`_.
+
+You can write your own modules in AMD format (and you would need to
+if you want them to work with RequireJS) and use them with the 1.6
+loader, but it is not fully supported and is pretty fragile right now.
+Of course if you follow the coding of Dojo modules it should probably
+work (since they work), but the build and loader are not very robust
+and complete for the full range of AMD possibilities.
+
+See also the `dojo sie loader <http://dojo-sie.altoviso.com/index>`_.
 
 
 djConfig deprecated
