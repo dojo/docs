@@ -535,6 +535,15 @@ Under dojox.charting.themes, you will find a variety of predefined color themes 
 
   chart1.setTheme(dojox.charting.themes.PlotKit.blue);
 
+*Note*: If you are using a theme that includes gradients, for the gradients to show in Safari 5.x you *must* use:
+
+.. code-block :: javascript
+  :linenos:
+
+   <!DOCTYPE HTML>
+
+at the top of any HTML file the chart is displayed in.
+
 Chart Events
 ------------
 
