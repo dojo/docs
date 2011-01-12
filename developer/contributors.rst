@@ -613,6 +613,7 @@ A list of corporations or organizations with a CLA on file:
 * SnapLogic, Inc. 
 * Spider Strategies 
 * Sun Microsystems, Inc. 
+* SUPSI
 * Suretec Systems, Ltd. 
 * TeamPatent, LLC: Rocky Kahn, Heng Liu
 * The Frontier Group
