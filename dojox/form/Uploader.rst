@@ -143,6 +143,12 @@ The Flash plugin has other properties specific to that file.
 Methods
 -------
 
+Because the Uploader without plugins doesn't upload, there are only the following methods:
+
+ - **reset** Clears the list of selected files.
+ - **getFileList** Returns an array of objects representing the file data.
+
+Technically, the Uploader does not have any public methods. When using the plugins however, the following methods will be available:
  - **upload** This method uploads the files and any data passed as an argument.
  - **submit** This method uploads the files and if a form element is passed as an argument, it is converted into a JavaScript object.
 
