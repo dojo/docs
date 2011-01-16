@@ -133,7 +133,18 @@ Other Properties
 ----------------
 
  - **flashFieldName** Is the text appended to the *name* property. This is necessary so the server can tell what type of file data it is dealing with. 
+ - **multiple** Whether multiple files can or cannot be selected.
+ - **url** If you don't supply an *action* in your form, supply an *url* to upload to.
+ - **label** The text used in the button.
+ - **tabIndex** Defauts to "0". You ay change this to change the tab order on the page.
  
+The Flash plugin has other properties specific to that file.
+
+Methods
+-------
+
+ - **upload** This method uploads the files and any data passed as an argument.
+ - **submit** This method uploads the files and if a form element is passed as an argument, it is converted into a JavaScript object.
 
 ===========
 Server Side
