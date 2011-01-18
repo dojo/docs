@@ -33,9 +33,9 @@ asynchronous. We are planning on two new loaders in the future, a more
 complete sync one and an async one.
 
 Of course, the 1.6 loader also has
-back-compat support for dojo.require and dojo.provide, of course.
+back-compat support for dojo.require and dojo.provide.
 
-In 1.6, If you want to do asynchronous loading of modules, you need to do it yourself, see `this template for loading dojo using RequireJS <https://github.com/neonstalwart/dojo-requirejs-template>`_.
+In 1.6, if you want to do asynchronous loading of modules, you need to do it yourself, see `this template for loading dojo using RequireJS <https://github.com/neonstalwart/dojo-requirejs-template>`_.
 
 You can write your own modules in AMD format (and you would need to
 if you want them to work with RequireJS) and use them with the 1.6
@@ -218,6 +218,26 @@ New plugins are available for the following features:
   * `Set color on table cells, row, columns (background)  <http://docs.dojocampus.org/dojox/editor/plugins/ColorTableCell>`_
   * `Spell Check as You Type  <http://docs.dojocampus.org/dojox/editor/plugins/SpellCheck>`_
   * `Size table column via drag  <http://docs.dojocampus.org/dojox/editor/plugins/ResizeTableColumn>`_
+
+EnhancedGrid
+------
+An improved plugin mechanism which can support a rich set of new features as plugins:
+* `Filter <dojox/grid/EnhancedGrid/plugins/Filter>`_ - Support for defining rules to filter grid data for various data types.
+* `Exporter <dojox/grid/EnhancedGrid/plugins/Exporter>`_ - With an export framework, exporting grid to various formats are possible.
+* `Printer <dojox/grid/EnhancedGrid/plugins/Printer>`_ - Some convenient functions to print grid.
+* `Selector <dojox/grid/EnhancedGrid/plugins/Selector>`_ - Uniformed extended selection support for rows, columns and even cells. 
+* `DnD <dojox/grid/EnhancedGrid/plugins/DnD>`_ - Drag-and-drop support for rows/columns/cells, both within grid and out of grid.
+* `Pagination <dojox/grid/EnhancedGrid/plugins/Pagination>`_ - A different approach to demonstrate huge data store other than virtual scrolling.
+* `CellMerge <dojox/grid/EnhancedGrid/plugins/CellMerge>`_ - Support for merging adjacent cells within a row.
+* `Cookie <dojox/grid/EnhancedGrid/plugins/Cookie>`_ - Persistence of grid features, like column width, column order, and sorting order.
+* `Search <dojox/grid/EnhancedGrid/plugins/Search>`_ - Support of searching the grid by regular expressions as well as wildcard patterns.
+* `CellFormatter <dojox/grid/EnhancedGrid/plugins/CellFormatter>`_ - Convenient configs to display date/time/number/currency in desired format.
+
+LazyTreeGrid
+------
+Provides a new way to support lazy loading(virtual scrolling) for nested children rows, and it's now possible to support a large data set for TreeGrid
+
+  * `Lazy loading tree grid  <http://docs.dojocampus.org/dojox/grid/LazyTreeGrid>`_
   
 ====
 Util
