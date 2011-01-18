@@ -80,3 +80,14 @@ Client Side Query Awareness
 ---------------------------
 
 In the example above the memory store provides a queryEngine that the Observable store leverages to determine the whether or not an object belongs in a result set, and where in the result set it belongs. If you are using a server side store like the JsonRest store, you will need to provide a queryEngine in order for the update objects to be properly included or excluded from queries. If a queryEngine is not available, observe listener will be called with an undefined index.
+
+Triggering Notification Events
+------------------------------
+
+The Observable wrapper also adds a notify() method on the store itself. The notify method can be called if an notification of a data change from an external source is needed. The signature of notify() is:
+
+.. code-block :: javascript
+
+ store.notify(object, existingId);
+
+If the object parameter is omitted, it indicates a deletion. If the existingId parameter is omitted, it indicates a new object. If both parameters are included, it in indicates an updated object.
