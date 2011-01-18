@@ -220,7 +220,7 @@ New plugins are available for the following features:
   * `Size table column via drag  <http://docs.dojocampus.org/dojox/editor/plugins/ResizeTableColumn>`_
 
 EnhancedGrid
-------
+------------
 An improved plugin mechanism which can support a rich set of new features as plugins:
 * `Filter <dojox/grid/EnhancedGrid/plugins/Filter>`_ - Support for defining rules to filter grid data for various data types.
 * `Exporter <dojox/grid/EnhancedGrid/plugins/Exporter>`_ - With an export framework, exporting grid to various formats are possible.
@@ -234,7 +234,7 @@ An improved plugin mechanism which can support a rich set of new features as plu
 * `CellFormatter <dojox/grid/EnhancedGrid/plugins/CellFormatter>`_ - Convenient configs to display date/time/number/currency in desired format.
 
 LazyTreeGrid
-------
+------------
 Provides a new way to support lazy loading(virtual scrolling) for nested children rows, and it's now possible to support a large data set for TreeGrid
 
   * `Lazy loading tree grid  <http://docs.dojocampus.org/dojox/grid/LazyTreeGrid>`_
