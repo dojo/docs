@@ -219,9 +219,10 @@ New plugins are available for the following features:
   * `Spell Check as You Type  <http://docs.dojocampus.org/dojox/editor/plugins/SpellCheck>`_
   * `Size table column via drag  <http://docs.dojocampus.org/dojox/editor/plugins/ResizeTableColumn>`_
 
+
 EnhancedGrid
 ------------
-An improved plugin mechanism which can support a rich set of new features as plugins:
+An improved plugin mechanism as well as a rich set of new features plugins:
 
   * `Filter <dojox/grid/EnhancedGrid/plugins/Filter>`_ - Support for defining rules to filter grid data for various data types.
   * `Exporter <dojox/grid/EnhancedGrid/plugins/Exporter>`_ - With an export framework, exporting grid to various formats are possible.
@@ -234,11 +235,12 @@ An improved plugin mechanism which can support a rich set of new features as plu
   * `Search <dojox/grid/EnhancedGrid/plugins/Search>`_ - Support of searching the grid by regular expressions as well as wildcard patterns.
   * `CellFormatter <dojox/grid/EnhancedGrid/plugins/CellFormatter>`_ - Convenient configs to display date/time/number/currency in desired format.
 
+
 LazyTreeGrid
 ------------
-Provides a new way to support lazy loading(virtual scrolling) for nested children rows, and it's now possible to support a large data set for TreeGrid
+Provides a new way to support lazy loading(virtual scrolling) for nested children rows, and it's now possible to support a large data set(with huge children rows) for TreeGrid
 
-  * `Lazy loading tree grid  <http://docs.dojocampus.org/dojox/grid/LazyTreeGrid>`_
+  * `Lazy loading tree grid  <dojox/grid/LazyTreeGrid>`_
   
 ====
 Util
