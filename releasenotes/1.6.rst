@@ -239,7 +239,7 @@ LazyTreeGrid
 ------------
 Provides a new way to support lazy loading(virtual scrolling) for nested children rows, and it's now possible to support a large data set(with huge children rows) for TreeGrid
 
-  * `Lazy loading tree grid  <dojox/grid/LazyTreeGrid>`_
+  * `LazyTreeGrid  <dojox/grid/LazyTreeGrid>`_
   
 ====
 Util
