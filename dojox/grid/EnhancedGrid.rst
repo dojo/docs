@@ -853,6 +853,7 @@ Usage
 	      plugins : {menus: menusObject},
 	      dojo.byId('gridDiv'));
 
+
 Tips
 ----
 TODO: tips - bind events to onxxContextMenu(e)
