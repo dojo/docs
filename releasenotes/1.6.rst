@@ -222,7 +222,7 @@ New plugins are available for the following features:
 
 DataGrid
 ------------
-A set of high priority `defects <http://bugs.dojotoolkit.org/query?status=closed&component=DojoX+Grid&summary=!~Enhanced&milestone=1.6&order=priority&type=defect&col=id&col=summary&col=owner&col=priority>`_ have been fixed(still in progress)
+A set of high priority `defects <http://bugs.dojotoolkit.org/query?status=closed&component=DojoX+Grid&summary=!~Enhanced&milestone=1.6&order=priority&type=defect&col=id&col=summary&col=owner&col=priority>`_ have been fixed including auto Height related issues， editable support and performance tweaks etc. (still in progress)
 
 
 EnhancedGrid
