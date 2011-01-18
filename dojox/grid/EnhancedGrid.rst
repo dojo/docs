@@ -815,45 +815,6 @@ Usage
       plugins: {menus:{headerMenu:’headerMenu‘, rowMenu:’rowMenu‘, cellMenu:’cellMenu‘, selectedRegionMenu:’selectedRegionMenu‘}}, ...},
       dojo.byId('gridDiv'));
 
-... with JavaScript (using a programmatic menu)
-.. code-block :: javascript
-  :linenos:
-
-	var menusObject = {
-		headerMenu: new dijit.Menu(),
-		rowMenu: new dijit.Menu(),
-		cellMenu: new dijit.Menu(),
-		selectedRegionMenu: new dijit.Menu()
-	};
-	menusObject.headerMenu.addChild(new dijit.MenuItem({label: "Header Menu Item 1"}));
-	menusObject.headerMenu.addChild(new dijit.MenuItem({label: "Header Menu Item 2"}));
-	menusObject.headerMenu.addChild(new dijit.MenuItem({label: "Header Menu Item 3"}));
-	menusObject.headerMenu.addChild(new dijit.MenuItem({label: "Header Menu Item 4"}));
-	menusObject.headerMenu.startup();
-
-	menusObject.rowMenu.addChild(new dijit.MenuItem({label: "Row Menu Item 1"}));
-	menusObject.rowMenu.addChild(new dijit.MenuItem({label: "Row Menu Item 2"}));
-	menusObject.rowMenu.addChild(new dijit.MenuItem({label: "Row Menu Item 3"}));
-	menusObject.rowMenu.addChild(new dijit.MenuItem({label: "Row Menu Item 4"}));
-	menusObject.rowMenu.startup();
-
-	menusObject.cellMenu.addChild(new dijit.MenuItem({label: "Cell Menu Item 1"}));
-	menusObject.cellMenu.addChild(new dijit.MenuItem({label: "Cell Menu Item 2"}));
-	menusObject.cellMenu.addChild(new dijit.MenuItem({label: "Cell Menu Item 3"}));
-	menusObject.cellMenu.addChild(new dijit.MenuItem({label: "Cell Menu Item 4"}));
-	menusObject.cellMenu.startup();
-
-	menusObject.selectedRegionMenu.addChild(new dijit.MenuItem({label: "Action 1 for Selected Region"}));
-	menusObject.selectedRegionMenu.addChild(new dijit.MenuItem({label: "Action 2 for Selected Region"}));
-	menusObject.selectedRegionMenu.addChild(new dijit.MenuItem({label: "Action 3 for Selected Region"}));
-	menusObject.selectedRegionMenu.addChild(new dijit.MenuItem({label: "Action 4 for Selected Region"}));
-	menusObject.selectedRegionMenu.startup();
-			
-	  var grid = new dojox.grid.EnhancedGrid({id: "grid",
-	      plugins : {menus: menusObject},
-	      dojo.byId('gridDiv'));
-
-
 Tips
 ----
 TODO: tips - bind events to onxxContextMenu(e)
