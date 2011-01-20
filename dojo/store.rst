@@ -54,6 +54,11 @@ queryEngine(query, options)                       This takes a query and query o
                                                   * abort() - Aborts all the changes that took place during the transaction.
 
                                                   Note that a store user might not call transaction() prior to using put, delete, etc. in which case these operations effectively could be thought of as  "auto-commit" style actions.
+
+getChildren(object, options)                      Returns the children of an object. The options parameter may include the same properties as query options
+
+getMetadata(object)                               Returns any metadata about the object. 
+                                                  This may include attribution, cache directives, history, or version information. (addresses #3126, #3127)
 ================================================  ======================================================================
 
 * How is about a dojo.store.clear() method?
@@ -75,35 +80,7 @@ data         Array of Objects  If the store has a collection of cached objects, 
 Returned Objects
 ================
 
-Objects returned from store should primarily be treated as normal hash objects and have standard JavaScript properties to access their data and modify their data. However, the following methods are defined as possible methods that may also be available on the objects returned by the store (once again, they are optional). These methods should '''not''' be the object's own properties (hasOwnProperty(methodName) should return false), but rather should be inherited from one of the object's prototypes). This is to ensure ease of enumeration of data properties.  Once again, all of these methods are optional, and all may return promises if the operation will be performed asynchronously:
-
-===============================================================  ===============================================================
-Method                                                           Description
-===============================================================  ===============================================================
-`get(property) <dojo/store/resultset/get>`_                      Returns the value of the given property.
-
-                                                                 Normally property values can be accessed with normal JavaScript member expresions (object.property -> value), but if get() is implemented, than get(property) should be used to retrieve property values. This allows for lazy evaluation of properties.
-
-`set(property, value) <dojo/store/resultset/set>`_               Sets the property value.
-
-                                                                 Normally property values can be mutated with normal JavaScript member expresions (object.property = value), but if set() is implemented, than set(property, value) should be used to modify property values.
-
-`load() <dojo/store/resultset/load>`_                            Fully loads the current object.
-
-                                                                 If this method is present, it indicates that the object may not be fully loaded.
-
-`save() <dojo/store/resultset/save>`_                            Saves the loaded object.
-
-                                                                 This should generally be shorthand for store.put(object);
-
-`watch(property, callback) <dojo/store/resultset/watch>`_        Listens for changes to this object.
-
-`getId() <dojo/store/resultset/getId>`_                          Normally a store just uses a single property (identified by idProperty) for the object identity. However, a store may provide getId() on the objects to create more complex identities (such as composite identities).
-
-`getMetadata() <dojo/store/resultset/getMetadata>`_              Returns any metadata about the object. 
-
-                                                                 This may include attribution, cache directives, history, or version information. (addresses #3126, #3127)
-===============================================================  ===============================================================
+Objects returned from store should primarily be treated as normal hash objects and have standard JavaScript properties to access their data and modify their data. However, methods may also be defined on the objects returned by the store (once again, they are optional). These methods should '''not''' be the object's own properties (hasOwnProperty(methodName) should return false), but rather should be inherited from one of the object's prototypes). This is to ensure ease of enumeration of data properties.  In particular, a store may choose to return objects that are instances of dojo.Stateful (although none of the core stores do this).
 
 
 =====================
@@ -112,24 +89,16 @@ Observing Result Sets
 
 One can listen for changes in data through the observe method on the result set (the object returned from a query). The observe method has the following signature:
 
-=======================================================================  =======================================================================  
-Method                                                                   Description
-=======================================================================  =======================================================================
-observe(listener) <dojo/store/resultset/subscribe>                       The listener function is called with following arguments:
-                                                                         listener(object, removedFrom, insertedInto);
+========================================================  =======================================================================  
+Method                                                    Description
+========================================================  =======================================================================
+`observe(listener) <dojo/store/resultset/subscribe>`_     The listener function is called with following arguments:
+                                                          listener(object, removedFrom, insertedInto);
                                                                       
-                                                                         The object parameter indicates the object that was create, modified, or 
-                                                                         deleted. * The removedFrom parameter indicates the index in the result 
-                                                                         array where the object used to be. If the value is -1, then the object 
-                                                                         is an addition to this result set (due to a new object being created, or 
-                                                                         changed such that it is a part of the result set). * The insertedInto 
-                                                                         parameter indicates the index in the result array where the object should be 
-                                                                         now. If the value is -1, then the object is a removal from this result set 
-                                                                         (due to an object being deleted, or changed such that it is not a part of 
-                                                                         the result set).
+                                                          The object parameter indicates the object that was create, modified, or deleted. * The removedFrom parameter indicates the index in the result array where the object used to be. If the value is -1, then the object is an addition to this result set (due to a new object being created, or changed such that it is a part of the result set). * The insertedInto parameter indicates the index in the result array where the object should be now. If the value is -1, then the object is a removal from this result set (due to an object being deleted, or changed such that it is not a part of the result set).
 
-`close <dojo/store/resultset/close>`_                                    When close() is called on a result set, notifications will no longer be fired.
-=======================================================================  =======================================================================
+`close <dojo/store/resultset/close>`_                     When close() is called on a result set, notifications will no longer be fired.
+========================================================  =======================================================================
 
 ==============================
 Core Stores included with Dojo
