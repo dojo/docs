@@ -182,7 +182,7 @@ Basic example, view to view swapping:
         <li dojoType="dojox.mobile.ListItem" icon="{{baseUrl}}dojox/mobile/tests/images/i-icon-2.png" rightText="mac" moveTo="disco">
           Disco Room
         </li>
-        <li dojoType="dojox.mobile.ListItem" icon="images/i-icon-3.png" rightText="AcmePhone" moveTo="disco">
+        <li dojoType="dojox.mobile.ListItem" icon="{{baseUrl}}dojox/mobile/tests/images/i-icon-3.png" rightText="AcmePhone" moveTo="disco">
           Carrier
         </li>
       </ul>
