@@ -9,7 +9,7 @@ dojox.form.MultiComboBox
 .. contents::
    :depth: 2
 
-This widget is an extension to `<dijit/form/ComboBox> ComboBox`_ to allow "tag" style input using a datastore.
+This widget is an extension to `ComboBox <dijit/form/ComboBox>`_ to allow "tag" style input using a datastore.
 
 ============
 Introduction
