@@ -154,7 +154,7 @@ Customizing the polling loop frequency
 
  .. code-block :: javascript
 
-  dojo.config.hashPollFrequency = 200;
+  var djConfig = { hashPollFrequency: 200 };
 
  ..
 
@@ -173,6 +173,6 @@ XD Dojo
 
  .. code-block :: javascript
 
-  dojo.config.dojoBlankHtmlUrl = '/blank.html';
+  var djConfig = { dojoBlankHtmlUrl: '/blank.html' };
 
  ..
