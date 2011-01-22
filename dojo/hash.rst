@@ -150,22 +150,29 @@ Advanced
 ========
 
 Customizing the polling loop frequency
- For browsers that don't support the onhashchange event natively, a polling loops monitors the URL for changes. The default duration of this polling loop is 100 ms.  To customize this value, add "hashPollFrequency" to djConfig.
+ For browsers that don't support the onhashchange event natively, a polling loops monitors the URL for changes. The default duration of this polling loop is 100 ms.  To customize this value, add "hashPollFrequency" to dojo config.
 
  .. code-block :: javascript
 
-   djConfig = {
-       hashPollFrequency: 200
-   }
+  dojo.config.hashPollFrequency = 200;
 
  ..
 
 Encoding/Decoding
- dojo.hash automatically decodes the hash value when you use it as a getter.  As a setter, it is up to the consumer to properly encode the pieces of input that should be encoded.  Anything with HTML encoding (i.e. &amp;) must be encoded with encodeURIComponent before being passed into dojo.hash due to discrepancies between browsers (Firefox decodes HTML encoding automatically before setting the URL, IE does not).
+ dojo.hash does not attempt to do any encoding or decoding.  There are many cases where consumers of dojo.hash want unencoded slashes, etc, so it's up to the consumer to encode and decode where appropriate. Anything with HTML encoding (i.e. &amp;) must be encoded with encodeURIComponent before being passed into dojo.hash due to discrepancies between browsers (Firefox decodes HTML encoding automatically before setting the URL, IE does not).
 
 
  .. code-block :: javascript
 
    dojo.hash(encodeURIComponent("hash with &amp; HTML encoding"))
+
+ ..
+
+XD Dojo
+ If you're using cross-domain Dojo, you must specify a local copy of a blank HTML page via 'dojoBlankHtmlUrl' configuration parameter.  If you don't, dojo.hash will not work in IE 6 or IE 7.
+
+ .. code-block :: javascript
+
+  dojo.config.dojoBlankHtmlUrl = '/blank.html';
 
  ..
