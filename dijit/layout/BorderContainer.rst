@@ -6,7 +6,7 @@ dijit.layout.BorderContainer
 
 :Authors: Becky Gibson, Bill Keese, Nikolai Onken, Marcus Reimann
 :Developers: ?-
-:Available: since V?
+:Available: since V.2
 
 .. contents::
     :depth: 2
@@ -31,9 +31,9 @@ Each child element must have an attribute "region" which indicates where it shou
   * leading: used have flexible layout in left-to-right/right-to-left environments. In ltr, it will be equivalent to left, in rtl equivalent to right
   * trailing: opposite of 'leading': right in ltr, left in rtl
 
-**Caution**: Do not use trailing/leading together with left/right.
+There can be multiple widgets for each region, in which case their order (i.e. closeness to the edge of the BorderContainer) is controlled by their relative layoutPriority settings.
 
-Note that there can be at most one child marked for each region.  There must always be one region marked 'center'.
+There must always be one region marked 'center'.
 
 Setting sizes
 -------------
@@ -60,7 +60,8 @@ Layout modes
 
 BorderContainer operates in a choice of two layout modes: the design attribute may be set to "headline" (by default) or "sidebar". With the "headline" layout, the top and bottom sections extend the entire width of the box and the remaining regions are placed in the middle. With the "sidebar" layout, the side panels take priority, extending the full height of the box.
 
-
+However, the layoutPriority setting for child panes overrides the design attribute on the BorderContainer.   In other words, if the top and bottom sections have a lower layoutPriority then the left and right panes then the top and bottom panes will extend the entire width of the box.
+ 
 ========
 Examples
 ========
@@ -109,7 +110,50 @@ Declarative example
       }
     </style>
 
-More advanced example
+
+Using layoutPriority
+--------------------
+
+This example uses layoutPriority to include two left panes in one BorderContainer:
+
+.. cv-compound::
+  :type: inline
+  :height: 400
+  :width: 660
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+      dojo.require("dijit.layout.ContentPane");
+      dojo.require("dijit.layout.BorderContainer");
+    </script>
+  
+  .. cv:: html
+    
+    <div dojoType="dijit.layout.BorderContainer" design="sidebar" gutters="true" liveSplitters="true" id="layoutPriorityBorderContainer">
+      <div dojoType="dijit.layout.ContentPane" splitter="true" region="leading" layoutPriority="1" style="width: 100px;">Left #1</div>
+      <div dojoType="dijit.layout.ContentPane" splitter="true" region="leading" layoutPriority="2" style="width: 100px;">Left #2</div>
+      <div dojoType="dijit.layout.ContentPane" splitter="true" region="center">Hi, I'm center</div>
+    </div>
+  
+  .. cv:: css
+ 
+    <style type="text/css">
+      html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        overflow:hidden;
+      }
+
+      #layoutPriorityBorderContainer {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+
+
+Nested Layout Widgets
 ---------------------
 
 Lets take a look at a more advanced example of using BorderContainer and other layout widgets.
@@ -137,12 +181,11 @@ Note the tabStrip attribute on the TabContainer.
   .. cv:: html
     :label: The markup
 
-    <div dojoType="dijit.layout.BorderContainer" gutters="true" id="borderContainerTwo" >
+    <div dojoType="dijit.layout.BorderContainer" gutters="true" id="borderContainerTwo" liveSplitters="false">
       <div dojoType="dijit.layout.ContentPane" region="top" splitter="false">
         Hi, usually here you would have important information, maybe your company logo, or functions you need to access all the time..  
       </div>	
-      <div dojoType="dijit.layout.BorderContainer" liveSplitters="false" design="sidebar" region="center" id="mainSplit">
-        <div dojoType="dijit.layout.AccordionContainer" minSize="20" style="width: 300px;" id="leftAccordion" region="leading" splitter="true">
+      <div dojoType="dijit.layout.AccordionContainer" minSize="20" style="width: 300px;" id="leftAccordion" region="leading" splitter="true">
           <div dojoType="dijit.layout.AccordionPane" title="One fancy Pane">
           </div>
           <div dojoType="dijit.layout.AccordionPane" title="Another one">
@@ -151,8 +194,8 @@ Note the tabStrip attribute on the TabContainer.
           </div>
           <div dojoType="dijit.layout.AccordionPane" title="Last, but not least">
           </div>
-        </div><!-- end AccordionContainer -->
-        <div dojoType="dijit.layout.TabContainer" region="center" tabStrip="true">
+      </div><!-- end AccordionContainer -->
+      <div dojoType="dijit.layout.TabContainer" region="center" tabStrip="true">
           <div dojoType="dijit.layout.ContentPane" title="My first tab" selected="true">
             Lorem ipsum and all around...
           </div>
@@ -162,9 +205,8 @@ Note the tabStrip attribute on the TabContainer.
           <div dojoType="dijit.layout.ContentPane" title="My last tab" closable="true">
             Lorem ipsum and all around - last...
           </div>
-        </div>
-      </div>
-    </div>
+      </div><!-- end TabContainer -->
+    </div><!-- end BorderContainer -->
 
   .. cv:: css
     :label: A few simple css rules
