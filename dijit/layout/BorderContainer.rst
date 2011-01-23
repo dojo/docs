@@ -69,14 +69,14 @@ Examples
 Declarative example
 -------------------
 
-.. cv-compound::
+.. code-example::
   :type: inline
   :height: 400
   :width: 660
 
   Lets specify a simple BorderContainer with a left and center region
 
-  .. cv:: javascript
+  .. javascript::
 
     <script type="text/javascript">
       dojo.require("dijit.layout.ContentPane");
@@ -85,7 +85,7 @@ Declarative example
 
   The markup has to look as follows
   
-  .. cv:: html
+  .. html::
     :label: A dijit button
     
     <div dojoType="dijit.layout.BorderContainer" design="sidebar" gutters="true" liveSplitters="true" id="borderContainer">
@@ -93,7 +93,7 @@ Declarative example
       <div dojoType="dijit.layout.ContentPane" splitter="true" region="center">Hi, I'm center</div>
     </div>
   
-  .. cv:: css
+  .. css::
     :label: A simple set of css rules
 
     <style type="text/css">
@@ -116,19 +116,20 @@ Using layoutPriority
 
 This example uses layoutPriority to include two left panes in one BorderContainer:
 
-.. cv-compound::
+.. code-example::
   :type: inline
   :height: 400
   :width: 660
+  :version: 1.6
 
-  .. cv:: javascript
+  .. javascript::
 
     <script type="text/javascript">
       dojo.require("dijit.layout.ContentPane");
       dojo.require("dijit.layout.BorderContainer");
     </script>
   
-  .. cv:: html
+  .. html::
     
     <div dojoType="dijit.layout.BorderContainer" design="sidebar" gutters="true" liveSplitters="true" id="layoutPriorityBorderContainer">
       <div dojoType="dijit.layout.ContentPane" splitter="true" region="leading" layoutPriority="1" style="width: 100px;">Left #1</div>
@@ -136,7 +137,7 @@ This example uses layoutPriority to include two left panes in one BorderContaine
       <div dojoType="dijit.layout.ContentPane" splitter="true" region="center">Hi, I'm center</div>
     </div>
   
-  .. cv:: css
+  .. css::
  
     <style type="text/css">
       html, body {
@@ -160,13 +161,13 @@ Lets take a look at a more advanced example of using BorderContainer and other l
 This example uses two BorderContainers to allow to, left and right content areas. 
 Note the tabStrip attribute on the TabContainer.
 
-.. cv-compound::
+.. code-example::
   :djConfig: parseOnLoad: true
   :type: inline
   :height: 400
   :width: 660
 
-  .. cv:: javascript
+  .. javascript::
     :label: The dojo requires
 
     <script type="text/javascript">
@@ -178,7 +179,7 @@ Note the tabStrip attribute on the TabContainer.
 
   The markup has to look as follows
   
-  .. cv:: html
+  .. html::
     :label: The markup
 
     <div dojoType="dijit.layout.BorderContainer" gutters="true" id="borderContainerTwo" liveSplitters="false">
@@ -208,7 +209,7 @@ Note the tabStrip attribute on the TabContainer.
       </div><!-- end TabContainer -->
     </div><!-- end BorderContainer -->
 
-  .. cv:: css
+  .. css::
     :label: A few simple css rules
 
     <style type="text/css">
@@ -231,13 +232,13 @@ BorderContainer Inside A Dijit Template
 
 You can use a BorderContainer inside your own dijit template with a bit of care to call startup() on your dijit after it has been added to the DOM, so that its contained BorderContainer can lay itself out.
 
-.. cv-compound::
+.. code-example::
   :djConfig: parseOnLoad: true
   :height: 400
   :width: 660
   :version: 1.5
 
-  .. cv:: javascript
+  .. javascript::
     :label: The dojo requires
 
     <script type="text/javascript">
@@ -266,7 +267,7 @@ You can use a BorderContainer inside your own dijit template with a bit of care 
 
   The markup has to look as follows
   
-  .. cv:: html
+  .. html::
     :label: The markup
 
     <div dojoType="dijit.layout.BorderContainer" gutters="true" id="borderContainerThree" >
@@ -295,7 +296,7 @@ You can use a BorderContainer inside your own dijit template with a bit of care 
       </div>
     </div>
 
-  .. cv:: css
+  .. css::
     :label: A few simple css rules
 
     <style type="text/css">
