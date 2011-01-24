@@ -127,6 +127,9 @@ Using dual handlers
 
 The other contentHandlers are all functions. If you like, you can define a new handler that acts as if it were another handler and doing something else. Simply call the other contentHandler passing the xhr reference you were passed in your custom handler:
 
+.. code-block :: javascript
+ :linenos:
+
     dojo.contentHandlers.wrappedJSON = function(xhr){
         // like handleAs:"json", but mixes an additional bit into the response always.
         var json = dojo.contentHandles.json(xhr);
@@ -148,6 +151,9 @@ Overwriting a handler
 ---------------------
 
 Standard AOP techniques apply. If you find yourself needing to *replace* a contentHandler but preserve the original beahvior, simply duck-punch around it:
+
+.. code-block :: javascript
+ :linenos:
 
     // a handler that always escapes html fragments. not exceptionally useful though:
     var oldtext = dojo.contentHandlers.text;
