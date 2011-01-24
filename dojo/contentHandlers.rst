@@ -119,7 +119,41 @@ For instance, we can create a handler that will populate a node with the respons
        node: "someId"
   });
 
-This will inject foo.html content into a node with id="someId". 
+This will inject foo.html content into a node with id="someId". A side effect of the above example would be any callbacks passed to something handled by the "loadNode" contentHandler would not also get a copy of the content. You should return a value from a contentHandler.
+
+
+Using dual handlers
+-------------------
+
+The other contentHandlers are all functions. If you like, you can define a new handler that acts as if it were another handler and doing something else. Simply call the other contentHandler passing the xhr reference you were passed in your custom handler:
+
+    dojo.contentHandlers.wrappedJSON = function(xhr){
+        // like handleAs:"json", but mixes an additional bit into the response always.
+        var json = dojo.contentHandles.json(xhr);
+        return dojo.mixin(json, { _wrapped_by_app:true });
+    };
+
+    dojo.xhrGet({
+        url:"users.json",
+        handleAs:"wrappedJSON",
+        load: function(data){
+            if(data._wrapped_by_app){
+                console.log("neat!");
+            }
+        }
+    });
+
+
+Overwriting a handler
+---------------------
+
+Standard AOP techniques apply. If you find yourself needing to *replace* a contentHandler but preserve the original beahvior, simply duck-punch around it:
+
+    // a handler that always escapes html fragments. not exceptionally useful though:
+    var oldtext = dojo.contentHandlers.text;
+    dojo.contentHandles.text = function(xhr){
+        return oldtext.apply(this, arguments).reaplce("<", "&lt;");
+    };
 
 
 =====
