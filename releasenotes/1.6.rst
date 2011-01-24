@@ -57,7 +57,7 @@ The global djConfig object used to define runtime configuration options has been
         <script src="dojo/dojo.js" data-dojo-config="parseOnLoad:true"></script>
 
     .. code-block :: javascript
- 
+
         var dojoConfig = { parseOnLoad:true }
 
 =========
@@ -88,7 +88,7 @@ The parser has been enhanced to support HTML5 compliant attribute names.  See `t
   * The `jsId` attribute has been **deprecated**, and will be unsupported in 2.0. Replace all `jsId` references with `data-dojo-id`, the behavior is identical.
 
   .. code-block :: html
- 
+
      <div data-dojo-id="bar" data-dojo-type="some.Thinger">I am exported to window.bar by reference</div>
 
   * The `dojoType` attribute has been **deprecated**, and will be unsupported in 2.0. Replace all occurrences of `dojoType` with `data-dojo-type`, as the behavior is mostly identical, with the following caveats:
@@ -96,7 +96,7 @@ The parser has been enhanced to support HTML5 compliant attribute names.  See `t
     * when using `data-dojo-type`, **all** widget properties **must** be stashed on a single attribute: `data-dojo-props` eg:
 
     .. code-block :: html
- 
+
       <div data-dojo-type="dijit.form.Button" data-dojo-props="disabled:true, onClick: someNamedFunction">Click</div>
 
     If degradation is a concern, duplicate native attributes in `data-dojo-props` and on the node reference, as widget parameters are **no longer read from the node attributes individually**. eg:
@@ -104,7 +104,7 @@ The parser has been enhanced to support HTML5 compliant attribute names.  See `t
     .. code-block :: html
 
        <input data-dojo-type="dijit.form.CheckBox" data-dojo-props="checked:true" checked="checked" type="checkbox'>
-    
+
   * The `event` and `args` attributes for dojo/method and dojo/connect scripts inside widgets are **deprecated**. Use `data-dojo-event` and `data-dojo-args` respectively.
 
   * Existing behavior has been preserved until 2.0, there should be no backward compatibility issues between 1.6 and previous 1.x Dojo versions.
@@ -187,6 +187,20 @@ ValidationTextBox
 DojoX
 =====
 
+Charting
+--------
+New features:
+
+* Spider Chart.
+* New interactive legend: a new legend for all dojo charts that allows the end-user to click and select/deselect which of the chart series should be displayed on the chart.
+
+General enhancements:
+
+* Support having a general chart title at the top or bottom side.
+* Support adding axis titles at left/right/top/bottom side.
+* Enable shortening labels when labels intersected with each other.
+* Smart label for pie chart: labels laid automatically without overlapping on each other.
+
 NodeList
 --------
 New project called dojox.NodeList, currently adding a delegate() method to NodeList allowing apps to setup a single handler on a root node rather than individual handlers on sub nodes.   For example:
@@ -232,7 +246,7 @@ An improved plugin mechanism as well as a rich set of new features:
   * `Filter <dojox/grid/EnhancedGrid/plugins/Filter>`_ - Support for defining rules to filter grid content in various data types.
   * `Exporter <dojox/grid/EnhancedGrid/plugins/Exporter>`_ - Support for exporting grid content to various formats.
   * `Printer <dojox/grid/EnhancedGrid/plugins/Printer>`_ - Provide convenient ways to printing grid.
-  * `Selector <dojox/grid/EnhancedGrid/plugins/Selector>`_ - Unified extended selection support for rows, columns and cells. 
+  * `Selector <dojox/grid/EnhancedGrid/plugins/Selector>`_ - Unified extended selection support for rows, columns and cells.
   * `DnD <dojox/grid/EnhancedGrid/plugins/DnD>`_ - Drag-and-drop support for rows/columns/cells, both within grid and out of grid.
   * `Pagination <dojox/grid/EnhancedGrid/plugins/Pagination>`_ - A different approach to work with huge data set besides the default virtual scrolling way
   * `CellMerge <dojox/grid/EnhancedGrid/plugins/CellMerge>`_ - Support for merging adjacent cells within a row.
@@ -245,7 +259,7 @@ LazyTreeGrid
 Provides a new way to support lazy loading(virtual scrolling) for nested children rows, and it's now possible to support a large data set(with huge children rows) for TreeGrid
 
   * `LazyTreeGrid  <dojox/grid/LazyTreeGrid>`_
-  
+
 ====
 Util
 ====
