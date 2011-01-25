@@ -192,14 +192,14 @@ Charting
 New features:
 
 * Spider Chart.
-* New interactive legend: a new legend for all dojo charts that allows the end-user to click and select/deselect which of the chart series should be displayed on the chart.
+* New Interactive Legend - A new legend for all dojo charts that allows the end-user to click and select/deselect which of the chart series should be displayed on the chart.
 
 General enhancements:
 
-* Support having a general chart title at the top or bottom side.
-* Support adding axis titles at left/right/top/bottom side.
-* Enable shortening labels when labels overlapped with each other.
-* Smart label for pie chart: labels laid automatically without overlapping on each other.
+* Charting Title - Support having a general chart title at the top or bottom side.
+* Axis Title - Support adding axis titles at left/right/top/bottom side.
+* Label Shortening - Enable shortening labels when labels overlapped with each other.
+* Smart Label for Pie - Labels laid automatically without overlapping on each other.
 
 Gantt
 --------
