@@ -198,7 +198,7 @@ General enhancements:
 
 * Support having a general chart title at the top or bottom side.
 * Support adding axis titles at left/right/top/bottom side.
-* Enable shortening labels when labels intersected with each other.
+* Enable shortening labels when labels overlapped with each other.
 * Smart label for pie chart: labels laid automatically without overlapping on each other.
 
 Gantt
