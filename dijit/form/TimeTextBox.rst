@@ -22,6 +22,7 @@ Introduction
 * validates against locale-sepcific `i18n <dojo/i18n>`_ rules
 * also validates against developer-provided ``constraints`` like ``min``, ``max``, etc.
 
+`Options defined by the dojo.date package <quickstart/numbersDates#date-constraints>`_ to alter the way times are formatted and parsed can be specified in the TimeTextBox ``constraints`` object.
 
 =====
 Usage
