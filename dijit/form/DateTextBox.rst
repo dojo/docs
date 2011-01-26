@@ -23,6 +23,8 @@ Introduction
 * validates against locale-specific `i18n <quickstart/internationalization/index>`_ rules
 * also validates against developer-provided ``constraints`` like ``min``, ``max``, valid days of the week, etc.
 
+`Options defined by the dojo.date package <quickstart/numbersDates#date-constraints>`_ to alter the way dates are formatted and parsed can be specified in the DateTextBox ``constraints`` object.
+
 Standard Date Format
 --------------------
 
@@ -35,6 +37,7 @@ Another problem is that your application may interact with various users in diff
 ISO formatted date values sort properly as strings and are lighter-weight than Javascript Date objects, which make them convenient for programming.
 
 The DateTextBox widget uses a hidden form element with the *NAME* of the original tag to submit the ISO data; the form element provided for user interaction is an additional form element instantiated only for this purpose.  When you access the DateTextBox value attribute programmatically from the widget using JavaScript, you must use a native Javascript Date object, e.g. new Date(2007, 11, 25) The time portion of the Date object is ignored.
+
 
 ========
 Examples
