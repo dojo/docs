@@ -621,6 +621,7 @@ A list of corporations or organizations with a CLA on file:
 * University of Toronto 
 * UC Davis 
 * UPW Innovative IT - Losungen GMBH 
+* Uxebu Consulting, Ltd. & Co.KG: Nikolai Onken, Wolfram Kriesing, David Aurclio, Jens Arps, Tobias Schneider, Stephan Scidt, Tobias con Klipstein
 * VMWare, Inc.  Scott Andrews, Jeremy Grelle
 * Weswit S.R.L. 
 * Wotan, LLC 
