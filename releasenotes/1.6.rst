@@ -289,3 +289,7 @@ For accessibility reasons the `dijit.popup <dijit/popup>`_ code now hides popup 
 BorderContainer border
 ----------------------
 The `dijit.layout.BorderContainer <dijit/layout/BorderContainer>`_ widget now has no predefined border.   You can specify a border via a style tag if your application needs one.   However, aesthetically the widget should have no border in most cases, including when it's at 100% of the viewport size, or when it's nested inside another layout widget.
+
+DojoX Form manager
+------------------
+In dojox.form.manager._Mixin, the watch() method has been renamed to watching() to avoid a clash with Stateful's / dijit._Widget's watch() method.
