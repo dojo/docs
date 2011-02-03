@@ -570,6 +570,7 @@ A list of corporations or organizations with a CLA on file:
 * AOL, LLC 
 * Asseverate Limited
 * Atomic Labs, Inc. 
+* BBC: Matthew Wood, Chris Warren, Ian Pouncey, Richard Hodgson, Thomas Yandell, Michael Mathews
 * BEA Systems 
 * Cambridge Semantics, Inc. 
 * Certus Technology Associates Limited:  Ian Bamsey, John Harris, Robert Pumphrey
