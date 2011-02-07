@@ -387,6 +387,7 @@ A list of individuals who have signed Dojo CLAs:
 * Pupius, Dan 
 * Rahalski, Vitali 
 * Reed, Joshua Allen 
+* Rees, David
 * Reicke, Craig 
 * Reimann, Marcus 
 * Remeika, Bob 
