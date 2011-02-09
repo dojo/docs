@@ -34,7 +34,7 @@ The listener function is called with following arguments:
 
 * The object parameter indicates the object that was create, modified, or deleted. 
 * The removedFrom parameter indicates the index in the result array where the object used to be. If the value is -1, then the object is an addition to this result set (due to a new object being created, or changed such that it is a part of the result set).
-* The insertedInto parameter indicates the index in the result array where the object should be now. If the value is -1, then the object is a removal from this result set (due to an object being deleted, or changed such that it is not a part of the result set).
+* The insertedInto parameter indicates the index in the result array where the object should be now. If the value is -1, then the object is a removal from this result set (due to an object being deleted, or changed such that it is not a part of the result set). If the store does not have a queryEngine, it may not be possible to determine the index of a newly created object, and the index will default to the store's defaultIndex property or 0 if the property is not present.
 
 The observe() method returns an object with a cancel() method that can be called to stop observing the given result set.
 
