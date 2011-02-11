@@ -285,6 +285,19 @@ The one thing you may have noticed is that using multiple axes changes the persp
   min: 0
   max: 7
 
+Axis Title
+-----------
+
+The position, the orientation and color of the axis tilte can be specified as follows. You can make the title face to the axis by set "titleOrientation" as "axis", and face away from the axis by set it as "away".
+
+.. code-block :: javascript
+  :linenos:
+
+  title: "Revenue(million)"
+  titleGap: 15
+  titleFontColor: "orange"
+  titleOrientation: "axis"
+
 Enabling and disabling tick marks
 ---------------------------------
 
