@@ -82,6 +82,25 @@ Charting Basics
 
 As part of configuring any Chart, you'll need to define Plots, Axes and Series data. Plots describe how data is to be visualized.  Axes describe the dimensions of data that are being visualized and includes things like specifying labels.  Series describes the Data itself that the chart will visualize.
 
+Adding Title
+------------
+
+You can add a general title to the chart, and the title can be specified on position and font styles. Here comes a example:
+
+  * **titlePos** - determine adding title at the top/bottom to the chart.
+  * **titleGap** - determine the spacing between title and the chart.
+
+.. code-block :: javascript
+  :linenos:
+
+  var chart = new dojox.charting.Chart("test", {
+    title: "Production(Quantity)", 
+    titlePos: "bottom", 
+    titleGap: 25,
+    titleFont: "normal normal normal 15pt Arial",
+    titleFontColor: "orange"
+  })
+
 Adding Plots
 ------------
 
