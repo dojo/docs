@@ -412,6 +412,22 @@ Here is an example using abbreviated month names with a Columns plot.
 
 TODO: Month Labels Example
 
+Axis Label Shortening
+---------------------
+
+Axis labels will be overlapped with each other if there are some long labels. The the label shortening rule can be specified as follows.
+
+  * **trailingSymbol** - define the symbol replacing the omitted part of label.
+  * **maxLabelSize** - define the max length of label in pixel.
+
+.. code-block :: javascript
+  :linenos:
+
+  trailingSymbol:"..."
+  maxLabelCharCount: 20
+  maxLabelSize: 30
+
+
 Connecting Charts to Data and Specifying a Data Series
 ------------------------------------------------------
 
