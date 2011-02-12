@@ -85,10 +85,17 @@ As part of configuring any Chart, you'll need to define Plots, Axes and Series d
 Adding Title
 ------------
 
-You can add a general title to the chart, and the title can be specified on position and font styles. Here comes a example:
+You can add a general title to the chart, and the title can be specified on position and font styles. Here are related parameters:
 
-  * **titlePos** - determine adding title at the top/bottom to the chart.
-  * **titleGap** - determine the spacing between title and the chart.
+======== =========== ======= ===========
+Name     Type        Default Description
+======== =========== ======= ===========
+titlePos string      top     determine adding title at the top/bottom to the chart.
+titleGap number      20      determine the spacing between title and the chart.
+title    string      null    chart title text.
+======== =========== ======= ===========
+
+And here comes an example:
 
 .. code-block :: javascript
   :linenos:
@@ -306,16 +313,16 @@ The one thing you may have noticed is that using multiple axes changes the persp
 
 Axis Title
 -----------
+Adding title to axis, the position, the orientation and color of the axis tilte can be specified. Here are related parameter as follows.
 
-The position, the orientation and color of the axis tilte can be specified as follows. You can make the title face to the axis by set "titleOrientation" as "axis", and face away from the axis by set it as "away".
-
-.. code-block :: javascript
-  :linenos:
-
-  title: "Revenue(million)"
-  titleGap: 15
-  titleFontColor: "orange"
-  titleOrientation: "axis"
+================ =========== ======= ===========
+Name             Type        Default Description
+================ =========== ======= ===========
+title            string      null    axis title text.
+titleGap         number      15      the spacing between title and corresponding axis, measured by pixed.
+titleFontColor   string      black   axis title font color.
+titleOrientation string      axis    determine the title orientation to the axis, facing to the axis by set as "axis", or facing away from the axis by set as "away".
+================ =========== ======= ===========
 
 Enabling and disabling tick marks
 ---------------------------------
@@ -417,15 +424,13 @@ Axis Label Shortening
 
 Axis labels will be overlapped with each other if there are some long labels. The label shortening rules can be specified as follows.
 
-  * **trailingSymbol** - define the symbol replacing the omitted part of label.
-  * **maxLabelSize** - define the max length of label in pixel.
-
-.. code-block :: javascript
-  :linenos:
-
-  trailingSymbol:"..."
-  maxLabelCharCount: 20
-  maxLabelSize: 30
+================= =========== ======= ===========
+Name              Type        Default Description
+================= =========== ======= ===========
+trailingSymbol    string      null    define the symbol replacing the omitted part of label.
+maxLabelSize      number      0       define the max length of label in pixel.
+maxLabelCharCount number      0       define the max count of characters in label.
+================= =========== ======= ===========
 
 Smart Label for Pie
 -------------------
