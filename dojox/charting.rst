@@ -204,7 +204,7 @@ Pie charts have a separate list of parameters. Here are the parameters for the p
   	fixed: true,
   	precision: 1,
   	labelOffset: 20,
-  	labelStyle: "default",      // default/rows/auto
+  	labelStyle: "default",      // default/columns/rows/auto
   	htmlLabels: true            // use HTML to draw labels
   },
   optionalParams: {
@@ -427,6 +427,16 @@ Axis labels will be overlapped with each other if there are some long labels. Th
   maxLabelCharCount: 20
   maxLabelSize: 30
 
+Smart Label for Pie
+-------------------
+
+Listing labels at both sides of the pie, it keeps labels from overlapping with each other. The smart label can be specified as follows.
+
+.. code-block :: javascript
+  :linenos:
+
+  labelWiring: "ccc"
+  labelStyle:  "columns"
 
 Connecting Charts to Data and Specifying a Data Series
 ------------------------------------------------------
