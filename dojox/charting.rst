@@ -430,7 +430,7 @@ Axis labels will be overlapped with each other if there are some long labels. Th
 Smart Label for Pie
 -------------------
 
-Listing labels at both sides of the pie, it keeps labels from overlapping with each other. The smart label can be specified as follows.
+Listing labels on both sides of the pie, it keeps labels from overlapping with each other. The smart label can be specified as follows.
 
 .. code-block :: javascript
   :linenos:
