@@ -90,7 +90,7 @@ You can add a general title to the chart, and the title can be specified on posi
 ======== =========== ======= ===========
 Name     Type        Default Description
 ======== =========== ======= ===========
-titlePos string      top     determine adding title at the top/bottom to the chart.
+titlePos string      top     determine adding title at the top/bottom of the chart.
 titleGap number      20      determine the spacing between title and the chart.
 title    string      null    chart title text.
 ======== =========== ======= ===========
@@ -313,15 +313,15 @@ The one thing you may have noticed is that using multiple axes changes the persp
 
 Axis Title
 -----------
-Adding title to axis, the position, the orientation and color of the axis tilte can be specified. Here are related parameter as follows.
+Adding title to axis, the position, orientation and color of the axis tilte can be specified. Here are related parameter as follows.
 
 ================ =========== ======= ===========
 Name             Type        Default Description
 ================ =========== ======= ===========
 title            string      null    axis title text.
-titleGap         number      15      the spacing between title and corresponding axis, measured by pixed.
+titleGap         number      15      the spacing between title and corresponding axis, measured by pixel.
 titleFontColor   string      black   axis title font color.
-titleOrientation string      axis    determine the title orientation to the axis, facing to the axis by set as "axis", or facing away from the axis by set as "away".
+titleOrientation string      axis    determine the title orientation to the axis, facing to the axis by "axis", or facing away from the axis by "away".
 ================ =========== ======= ===========
 
 Enabling and disabling tick marks
@@ -422,7 +422,7 @@ TODO: Month Labels Example
 Axis Label Shortening
 ---------------------
 
-Axis labels will be overlapped with each other if there are some long labels. The label shortening rules can be specified as follows.
+Axis labels will be overlapped with each other if there are some long labels. The label shortening rules can be specified by parameters as follows.
 
 ================= =========== ======= ===========
 Name              Type        Default Description
