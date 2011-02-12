@@ -880,6 +880,16 @@ You can add a legend widget to your charts using dojox.charting.widget.Legend.  
 
 For a pie chart, the behavior of a Legend is different: if the chart was specified with an array of numbers, it will use numbers. Otherwise it will check object properties in the following order: “legend”, “text”, and the numeric value.
 
+Interactive Legend Widget
+-------------------------
+An interactive legend for all dojo charts that allows the end-user to click and select/deselect which of the chart series should be displayed on the chart. And series will be highlighted when corresponding legend icon is hovered. By default the border and the body of series vanished when series deselected, you can set "outline" as "true" to keep the border of vanished series. The declaration of interactive legend is as follows.
+
+.. code-block :: javascript
+  :linenos:
+
+  var selectableLegend = new dojox.charting.widget.SelectableLegend({chart: chart1, outline: true},"selectableLegend");
+
+
 ========
 Examples
 ========
