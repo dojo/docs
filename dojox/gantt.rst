@@ -27,7 +27,7 @@ Usage
 
 The following step shows how to create a typical gantt chart in dojo.
 
-Step 1: Add related CSS file and required javacript:
+Step 1: Import related CSS file and required javacript:
 
 .. code-block :: javascript
   :linenos:
@@ -40,7 +40,7 @@ Step 1: Add related CSS file and required javacript:
     ...
   </script>
 
-Step 2: Declare gantt chart
+Step 2: Declare gantt chart.
 
 .. code-block :: javascript
   :linenos:
@@ -53,4 +53,38 @@ Step 2: Declare gantt chart
     withResource: true			//optional: display the resource chart or not
   }, "gantt"); 				//"gantt" is the node container id of gantt chart widget
 
-Step 3: 
+Step 3: Add project with tasks.
+
+.. code-block :: javascript
+  :linenos:
+
+  var projec = new dojox.gantt.GanttProjectItem({
+    id: 1,
+    name: "Development Project",
+    startDate: new Date(2006, 5, 11)
+  });
+  var taskRequirement = new dojox.gantt.GanttTaskItem({
+    id: 1,
+    name: "Requirement",
+    startTime: new Date(2006, 5, 11),
+    duration: 50,
+    percentage: 50,
+    taskOwner: "Jack"
+  });
+  var taskAnalysis = new dojox.gantt.GanttTaskItem({
+    id: 2,
+    name: "Analysis",
+    startTime: new Date(2006, 5, 18),
+    duration: 40,
+    percentage: 80,
+    previousTaskId: "1",
+    taskOwner: "Michael"
+  });
+
+  project.addTask(taskRequirement);
+  project.addTask(taskAnalysis);
+
+  ganttChart.addProject(project);
+				
+  // Initialize and Render
+  ganttChart.init();
