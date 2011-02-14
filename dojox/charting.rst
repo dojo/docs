@@ -155,6 +155,7 @@ Available 2D chart types include:
  * Miscellaneous:
 
    * **Pie** - Goes great with punch!
+   * **Spider** - A very effective tool for comparing multiple entities based on different characteristics
    * **Scatter** - Similar to MarkerOnly, yet capable to chart using gradient fields.
    * **Grid** - For adding a grid layer to your chart.
 
@@ -219,6 +220,49 @@ Pie charts have a separate list of parameters. Here are the parameters for the p
   	fontColor: "",
   	radius: 0
   },
+
+Spider chart also keeps a separate list of parameters. Here comes the parameters of spider chart.
+
+.. code-block :: javascript
+  :linenos:
+
+  defaultParams: {
+    precision:1,
+    labelOffset:     -10,		// axis title offset
+    divisions:       3,			// axis tick count
+    axisColor:       "",		// spider axis color
+    axisWidth:       0,			// spider axis stroke width
+    spiderColor:     "",		// spider web color
+    spiderWidth:     0,			// spider web stroke width
+    seriesWidth:     0,			// plot border with
+    seriesFillAlpha: 0.2,		// plot fill opacity
+    markerSize:      3,			// radius of plot vertex (px)
+    spiderType:	     "polygon", 	// style of spider web, "polygon" or "circle"
+    animationType:   dojo.fx.easing.backOut,
+  }
+
+And here is an example for spider chart:
+
+.. code-block :: javascript
+  :linenos:
+
+  chart.addPlot("default", {
+    type: 		"Spider",
+    labelOffset: 	 -10,
+    divisions: 	 	 5,
+    seriesFillAlpha:	 0.2,
+    markerSize:  	 3,
+    precision:		 0,
+    spiderType:	 	 "ploygon"
+  });
+  chart.addSeries("China", {data: {"GDP": 2,"area": 6,"population": 2000,"inflation": 15,"growth": 12}}, { fill: "blue" });
+  chart.addSeries("USA", {data: {"GDP": 3,"area": 20,"population": 1500,"inflation": 10,"growth": 3}}, { fill: "green" });
+  ...
+  chart.addSeries("Canada", {data: {"GDP": 1,"area": 18,"population": 300,"inflation": 3,"growth": 15}}, { fill: "purple" });
+  chart.render();
+		
+  var legend = new dc.widget.SelectableLegend({chart: chart, horizontal: true}, "legend");
+
 
 One other type with unique options is the grid. This plot type will draw grid lines along the tick marks and supports the following four boolean options to determine if lines will be displayed at the horizontal or vertical and major or minor axis tick marks.
 
