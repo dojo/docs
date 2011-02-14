@@ -319,7 +319,8 @@ A list of individuals who have signed Dojo CLAs:
 * McMaster, Doug 
 * McNab, David 
 * Melo, Vinicius 
-* Meschian, Rouben 
+* Meschian, Rouben
+* Metyas, Remoun 
 * Michelangeli, Enzo 
 * Michopoulos, Haris 
 * Migazzi, Pascal 
