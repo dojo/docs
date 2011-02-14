@@ -348,7 +348,7 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
   * `dojox.fx.wipeTo <dojox/fx/wipeTo>`_
 
-* `dojox.gantt<dojox/gantt>`_
+* `dojox.gantt <dojox/gantt>`_
 
   A project and resource management tool
 
