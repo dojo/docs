@@ -183,6 +183,10 @@ ValidationTextBox
 -----------------
 - state attribute now has new "Incomplete" value to indicate a required but empty field, or a field where the value isn't valid but the user is still typing (ex: a DateTextBox where the user has only typed "12/31/" and still needs to enter the year.
 
+_WidgetBase
+-----------
+A new widget base class called _WidgetBase has been added.   It's lighter weight than _Widget and useful as an alternative to _Widget for lightweight/mobile widgets.   _Widget's functionality and API haven't changed.
+
 =====
 DojoX
 =====
