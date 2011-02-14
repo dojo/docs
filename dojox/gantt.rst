@@ -24,3 +24,21 @@ GanttChart(dojox.gantt.GanttChart) is an integrated widget for project and resou
 =====
 Usage
 =====
+
+The following step shows how to create a typical gantt chart in dojo.
+
+Step 1: Add related CSS file and required javacript:
+
+.. code-block :: javascript
+  :linenos:
+
+  <link type="text/css" rel="stylesheet" href="{baseUrl}/dijit/themes/claro/claro.css">
+  <link type="text/css" rel="stylesheet" href="{baseUrl}/dojox/gantt/resources/gantt.css">
+  ...
+  <script>
+
+Step 2: Add required features:
+
+.. code-block :: javascript
+  :linenos:
+
