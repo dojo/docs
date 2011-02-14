@@ -1,0 +1,54 @@
+#format dojo_rst
+
+**work in progress** Current stable release notes are: `Dojo 1.6 <releasenotes/1.6>`_
+
+Dojo 1.6 Release Notes
+======================
+
+.. contents::
+   :depth: 3
+
+===============
+Browser support
+===============
+
+The following browsers are supported. If a browser is not supported, it still may work, but no effort is taken to test unsupported browsers and any specific fix for an unsupported browser is likely not to be done:
+
+  * Firefox 3.6/4.0
+  * Safari 5 and Chrome 9
+  * IE6, IE7, IE8, IE9
+  * Opera 10.50 and later (Dojo core only)
+
+=========
+Dojo Base
+=========
+
+AMD
+---
+Completion of AMD conversion (Rawld etc. please fill this in)
+
+=========
+Dojo Core
+=========
+
+=====
+Dijit
+=====
+
+_TemplatedMixin, _WidgetsInTemplateMixin
+----------------------------------------
+A new mixin called _TemplatedMixin has been added.  It's lighter weight than _Templated and supports templated widgets which *don't* have widgets in templates.  New widgets should be built using _TemplatedMixin.   Additionally, widgets that need the widgetsInTemplate functionality should also mixin _WidgetsInTemplateMixin.
+
+_Templated's functionality and API haven't changed.
+
+=====
+DojoX
+=====
+
+====
+Util
+====
+
+=========
+Migration
+=========
