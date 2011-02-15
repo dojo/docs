@@ -56,7 +56,7 @@ Handling status codes for xhrPost is the same as handling them for xhrGet.  Plea
 Examples
 ========
 
-For specific examples of how to use dojo.xhrPut, please refer to the following.  Firefox's Firebug does not show PUT content, unfortunately, so the only way to see the PUT content on the wire is to use a debugging proxy like 'Charles'.
+For specific examples of how to use dojo.xhrPut, please refer to the following.  PUT content can be observed in Firebug's Net tab, as well as by using a debugging proxy like 'Charles'.
  
 Example 1: dojo.xhrPut call to send some text data
 --------------------------------------------------
