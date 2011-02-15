@@ -105,16 +105,23 @@ Toolbar
 
 Gantt chart toolbar provides some handy controls like zooming time line time zone, and save/load button for gannt chart data.
 
-Enlarge/Shrink Time Line
+Enlarge Time Line: it shows a more accurate time line when it enlarged.
 
 .. image:: enlargeTimeLine.png
 
+Shrink Time Line: it shows a more general time line when it shrink.
+
+
 .. image:: shrinkTimeLine.png
 
+Zoom in Time Zone
 
+.. image:: zoomInTimezone.png
 
-Zooming Time Zone
------------------
+Zoom out Time Zone
+
+.. image:: zoomOutTimezone.png
+
 
 ============
 Project Tree
