@@ -112,7 +112,7 @@ Enlarge Time Line: it shows a more accurate time line when it enlarged.
 Shrink Time Line: it shows a more general time line when it shrink.
 
 
-.. image:: shrinkTimeLine.png
+.. image:: shrinkTimeline.png
 
 Zoom in Time Zone
 
@@ -127,11 +127,23 @@ Zoom out Time Zone
 Project Tree
 ============
 
+Project tree shows all the projects and their tasks, each task has a visual bar in task cascade view in the same row. It shows the task menu when task item is hovered. The menu lists many functionality of task.
+
+.. image:: taskMenu.png
 
 =================
 Task Cascade View
 =================
 
+The task cascade view shows the task sequence and dependency between them. The "task bar" can be modified on starting time by moving horizontally, and set task duration by draging the right end of it.
+
+.. image:: dragTaskBar.png
+
 =============
 Resource View
 =============
+
+Resource view shows the people resource occupation and the what task the resource occupied to. The following image indicates the Jack's resource occupation, the lighter blue bar shows the resource occupation on relevant task.
+
+.. image:: resourceView.png
+ 
