@@ -7,6 +7,8 @@ The Dojo team uses Subversion for source control. Those familiar with CVS will f
 
 Authoritative documentation on Subversion is available `here <http://svnbook.red-bean.com/>`_.
 
+.. contents ::
+
 ===================
 Why Source Control?
 ===================
