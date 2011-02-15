@@ -102,3 +102,15 @@ previousTaskId   number|string null    The id of previous task.
 =======
 Toolbar
 =======
+
+Gantt chart toolbar provides some handy controls like zooming time line time zone, and save/load button for gannt chart data.
+
+
+============
+Project Tree
+============
+
+
+============
+Project Tree
+============
