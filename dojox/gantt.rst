@@ -76,7 +76,7 @@ Step 3: Add project with tasks.
     name: "Analysis",
     startTime: new Date(2006, 5, 18),
     duration: 40,
-    percentage: 80,
+    percentage: 0,
     previousTaskId: "1",
     taskOwner: "Michael"
   });
@@ -88,3 +88,17 @@ Step 3: Add project with tasks.
 				
   // Initialize and Render
   ganttChart.init();
+
+There are several imported parameters in ``dojox.gantt.GanttTaskItem`` declaration as follows.
+
+================ ============= ======= ===========
+Name             Type          Default Description
+================ ============= ======= ===========
+duration         number        8       Task duration in hours.
+percentage       number        0       Task progress in percentage, 50 for 50%.
+previousTaskId   number|string null    The id of previous task. 
+================ ============= ======= ===========
+
+=======
+Toolbar
+=======
