@@ -105,12 +105,23 @@ Toolbar
 
 Gantt chart toolbar provides some handy controls like zooming time line time zone, and save/load button for gannt chart data.
 
+Enlarge/Shrink Time Line
+------------------------
+
+
+
+Zooming Time Zone
+-----------------
 
 ============
 Project Tree
 ============
 
 
-============
-Project Tree
-============
+=================
+Task Cascade View
+=================
+
+=============
+Resource View
+=============
