@@ -27,7 +27,7 @@ Examples
 
  var objectStore = new dojo.store.JsonRest({target:"/Table/"});
 
- var dataStore = new dojo.data.ObjectStore({objectProvider: objectStore});
+ var dataStore = new dojo.data.ObjectStore({objectStore: objectStore});
 
  // we can now use dataStore with any legacy Dojo Data consumer
  var grid = new dojox.data.DataGrid({
