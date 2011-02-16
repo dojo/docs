@@ -584,6 +584,7 @@ A list of corporations or organizations with a CLA on file:
 * Curam Software 
 * DFKI GmbH 
 * Defence Science &amp; Technology Organisation 
+* DoYouSoft
 * Elastic Path Software, Inc. 
 * Emerald Hand, Inc. 
 * Engineering Solutions &amp; Products, Inc. 
