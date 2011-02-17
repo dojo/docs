@@ -227,7 +227,7 @@ Connecting HtmlStore to dijit.form.ComboBox
     </table>
 
     <b>Combo lookup of isbn</b><br> 
-    <div dojoType="dojox.data.HtmlStore" dataId="myData" jsId="comboStore"></div>
+    <div dojoType="dojox.data.HtmlStore" dataId="myData" jsId="comboStore" trimWhitespace="true"></div>
     <div dojoType="dijit.form.ComboBox" store="comboStore" searchAttr="isbn"></div>
 
 
@@ -295,7 +295,7 @@ Connecting HtmlStore to dojox.grid.DataGrid
     <br>
 
     <b>dojox.grid.DataGrid connected to the above table:</b><br> 
-    <div dojoType="dojox.data.HtmlStore" dataId="myData2" jsId="gridStore"></div>
+    <div dojoType="dojox.data.HtmlStore" dataId="myData2" jsId="gridStore" trimWhitespace="true"></div>
     <div style="width: 400px; height: 200px;">
       <div id="grid" 
         dojoType="dojox.grid.DataGrid" 
@@ -349,7 +349,7 @@ Connecting HtmlStore with List to dijit.form.ComboBox
     <br>
 
     <b>dijit.form.ComboBox connected to the above list:</b><br> 
-    <div dojoType="dojox.data.HtmlStore" dataId="myList2" jsId="comboStore2"></div>
+    <div dojoType="dojox.data.HtmlStore" dataId="myList2" jsId="comboStore2" trimWhitespace="true"></div>
     <div dojoType="dijit.form.ComboBox" store="comboStore2" searchAttr="name"></div>
 
 
@@ -384,5 +384,5 @@ Connecting HtmlStore with DIV collection to dijit.form.ComboBox
     <br>
 
     <b>dijit.form.ComboBox connected to the above list:</b><br> 
-    <div dojoType="dojox.data.HtmlStore" dataId="divList2" jsId="comboStore3"></div>
+    <div dojoType="dojox.data.HtmlStore" dataId="divList2" jsId="comboStore3" trimWhitespace="true"></div>
     <div dojoType="dijit.form.ComboBox" store="comboStore3" searchAttr="name"></div>
