@@ -328,6 +328,7 @@ Connecting HtmlStore with List to dijit.form.ComboBox
     <script>
       dojo.require("dojox.data.HtmlStore");
       dojo.require("dojox.grid.DataGrid");
+      dojo.require("dijit.form.ComboBox");
     </script>
 
   .. cv :: html 
@@ -363,6 +364,7 @@ Connecting HtmlStore with DIV collection to dijit.form.ComboBox
     <script>
       dojo.require("dojox.data.HtmlStore");
       dojo.require("dojox.grid.DataGrid");
+      dojo.require("dijit.form.ComboBox");
     </script>
 
   .. cv :: html 
