@@ -301,6 +301,7 @@ A list of individuals who have signed Dojo CLAs:
 * Malage, Osandi Chirantra Midreviy 
 * Malpass, Ian Andrew 
 * Manninen, Juho 
+* Manteau, Pierre-Emmanuel
 * Marginian, David 
 * Marginian, David Brian 
 * Mark, David 
@@ -377,7 +378,6 @@ A list of individuals who have signed Dojo CLAs:
 * Perminov, Ilya 
 * Petrov, Stamen 
 * Phetra, Polawat 
-* Pierre-Emmanuel, Manteau
 * Pillai, Anand I. 
 * Pliam, John 
 * Plumlee, Scott 
