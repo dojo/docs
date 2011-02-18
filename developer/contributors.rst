@@ -377,6 +377,7 @@ A list of individuals who have signed Dojo CLAs:
 * Perminov, Ilya 
 * Petrov, Stamen 
 * Phetra, Polawat 
+& Pierre-Emmanuel, Manteau
 * Pillai, Anand I. 
 * Pliam, John 
 * Plumlee, Scott 
