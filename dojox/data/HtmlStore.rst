@@ -146,6 +146,10 @@ The constructor for HtmlTableStore takes the following possible parameters in it
 |              |true HtmlStore ignores that whitespace (strips it off), when it indexes the attribute     |                      |
 |              |headers and when it retrieves values.  The default is false for backwards compatibility.  |                      |
 +--------------+------------------------------------------------------------------------------------------+----------------------+
+|fetchOnCreate |**New to Dojo 1.6** Pre 1.6, the store populated itself on creation.  This cause issues   | boolean              |
+|              |the target node was in a dialog.  So population was deferred to later.  This flag allows  |                      |
+|              |to get the old behavior back if they need it.                                             |                      |
++--------------+------------------------------------------------------------------------------------------+----------------------+
 
 
 ===============
