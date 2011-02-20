@@ -301,6 +301,11 @@ Known Limitations
 * Multiple row layout is not supported by this DnD plugin.
 * Please be careful when dragging a numeric cell to a string cell (or visi versa), since sorting will have problems after that. This is because comparing string value and number value always returns false.
 
+=================
+TODO
+=================
+
+* Samples for how to use the mapping info for changed rows/columns/cells
 
 ========
 See Also
