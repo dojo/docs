@@ -19,6 +19,85 @@ Introduction
 Exporter is a plugin for dojox.grid.EnhancedGrid. It is designed as a framework to help implement various export formats for grid, e.g. CSV, HTML table, MS Excel, odt etc. The plugin itself does not export anything, it only goes through the grid row by row calling the implementation's interface. It's the implementation's responsibility to transform the grid content to some desired format.
 The following of this document first describes how to use the export functions of some existing implementations. And then introduces the API of this framework in detail.
 
+.. code-example::
+  :toolbar: themes, versions, dir
+  :version: local
+  :width: 480
+  :height: 300
+
+  .. javascript::
+
+	<script type="text/javascript" src="{{ baseUrl }}dojox/grid/tests/enhanced/support/test_write_store_music.js"></script>
+	<script type="text/javascript">
+		dojo.require("dojox.grid.EnhancedGrid");
+		dojo.require("dojox.grid.enhanced.plugins.exporter.CSVWriter");
+		
+		function exportAll(){
+			dijit.byId("grid").exportGrid("csv", function(str){
+				dojo.byId("output").value = str;
+			});
+		};
+		function exportSelected(){
+			var str = dijit.byId("grid").exportSelected("csv");
+			dojo.byId("output").value = str;
+		};
+		
+		dojo.addOnLoad(function(){
+			//See the ItemFileWriteStore defined in test_write_store_music.js
+			var store = test_store[0];
+			
+			var layout = [
+				{ field: "id"},
+				{ field: "Genre"},
+				{ field: "Artist"},
+				{ field: "Album"},
+				{ field: "Name"},
+				{ field: "Track"},
+				{ field: "Download Date"},
+				{ field: "Last Played"}
+			];
+			
+			var grid = new dojox.grid.EnhancedGrid({
+				id: 'grid',
+				store: store,
+				structure: layout,
+				plugins: {
+					exporter: true
+				}
+			});
+			grid.placeAt('gridContainer');
+			grid.startup();
+		});
+	</script>
+
+  .. html::
+
+	<div id="gridContainer"></div>
+	<button onclick="exportAll()">Export all to CSV</button>
+	<button onclick="exportSelected()">Export Selected Rows to CSV</button>
+	<br />
+	<textarea id="output"></textarea>
+
+  .. css::
+
+    <style type="text/css">
+    @import "{{ baseUrl }}dojo/resources/dojo.css";
+    @import "{{ baseUrl }}dijit/themes/{{ theme }}/{{ theme }}.css";
+    @import "{{ baseUrl }}dijit/themes/{{ theme }}/document.css";
+    @import "{{ baseUrl }}dojox/grid/enhanced/resources/{{ theme }}/EnhancedGrid.css";
+    @import "{{ baseUrl }}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
+	
+	#output{
+		width: 100%;
+		height: 150px;
+	}
+	#gridContainer{
+		width: 100%; 
+		height: 250px;
+	}
+    </style>
+
+
 =============
 Configuration
 =============
