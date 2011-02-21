@@ -18,6 +18,130 @@ Introduction
 
 This plugin is based on the Exporter plugin. Actually, an export writer, TableWriter, is used to transfer the grid data to HTML tables. This simple plugin decorates these HTML tables with customized CSS styles and table properties, and forms a complete HTML page for printing.
 
+.. code-example::
+  :toolbar: themes, versions, dir
+  :version: local
+  :width: 400
+  :height: 300
+
+  .. javascript::
+
+	<script type="text/javascript" src="{{ baseUrl }}dojox/grid/tests/enhanced/support/test_write_store_music.js"></script>
+	<script type="text/javascript">
+		dojo.require("dojox.grid.EnhancedGrid");
+		dojo.require("dojox.grid.enhanced.plugins.Printer");
+		
+		var cssFiles = [
+			"{{ baseUrl }}dojox/grid/tests/enhanced/support/print_style1.css", 
+			"{{ baseUrl }}dojox/grid/tests/enhanced/support/print_style2.css"
+		];
+		function printAll(){
+			dijit.byId("grid").printGrid({
+				title: "Music Store - All",
+				cssFiles: cssFiles
+			});
+		}
+		function printSelected(){
+			dijit.byId("grid").printSelected({
+				title: "Music Store - Selected",
+				cssFiles: cssFiles
+			});
+		}
+		function printCustomized(){
+			dijit.byId("grid").printGrid({
+				title: "Music Store - Customized",
+				cssFiles: cssFiles,
+				fetchArgs: {
+					start: 0,
+					count: 10
+				}
+			});
+		}
+		function preview(str){
+			var win = window.open();
+			win.document.open();
+			win.document.write(str);
+			//Adjust row height/view width for multi-view grid
+			dijit.byId("grid").normalizePrintedGrid(win.document);
+			win.document.close();
+		}
+		function previewAll(){
+			dijit.byId("grid").exportToHTML({
+				title: "Music Store - All",
+				cssFiles: cssFiles
+			}, preview);
+		}
+		function previewSelected(){
+			dijit.byId("grid").exportSelectedToHTML({
+				title: "Music Store - Selected",
+				cssFiles: cssFiles
+			}, preview);
+		}
+		function previewCustomized(){
+			dijit.byId("grid").exportToHTML({
+				title: "Music Store - Customized",
+				cssFiles: cssFiles,
+				fetchArgs: {
+					start: 0,
+					count: 10
+				}
+			}, preview);
+		}
+		
+		
+		dojo.addOnLoad(function(){
+			//See the ItemFileWriteStore defined in test_write_store_music.js
+			var store = test_store[0];
+			
+			var layout = [
+				{ field: "id"},
+				{ field: "Genre"},
+				{ field: "Artist"},
+				{ field: "Album"},
+				{ field: "Name"},
+				{ field: "Track"},
+				{ field: "Download Date"},
+				{ field: "Last Played"}
+			];
+			
+			var grid = new dojox.grid.EnhancedGrid({
+				id: 'grid',
+				store: store,
+				structure: layout,
+				plugins: {
+					printer: true
+				}
+			});
+			grid.placeAt('gridContainer');
+			grid.startup();
+		});
+	</script>
+
+  .. html::
+
+	<div id="gridContainer"></div>
+	<button onclick="printAll()">Print All</button>
+	<button onclick="printSelected()">Print Selected</button>
+	<button onclick="printCustomized()">Print First 10 Rows</button>
+	<button onclick="previewAll()">Preview All</button>
+	<button onclick="previewSelected()">Preview Selected</button>
+	<button onclick="previewCustomized()">Preview First 10 Rows</button>
+
+  .. css::
+
+    <style type="text/css">
+    @import "{{ baseUrl }}dojo/resources/dojo.css";
+    @import "{{ baseUrl }}dijit/themes/{{ theme }}/{{ theme }}.css";
+    @import "{{ baseUrl }}dijit/themes/{{ theme }}/document.css";
+    @import "{{ baseUrl }}dojox/grid/enhanced/resources/{{ theme }}/EnhancedGrid.css";
+    @import "{{ baseUrl }}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
+	
+	#gridContainer{
+		width: 100%; 
+		height: 250px;
+	}
+    </style>
+
 =============
 Configuration
 =============
