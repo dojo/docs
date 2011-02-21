@@ -11,8 +11,129 @@ Selector plugin provides extended selection for columns, rows and cells.
 
 .. contents::
    :depth: 2
-   
+
+============
+Introduction
+============
+
 Selector is a plugin for dojox.grid.EnhancedGrid. It supports extended selection for columns, rows, and cells.
+
+.. code-example::
+  :toolbar: themes, versions, dir
+  :version: local
+  :width: 480
+  :height: 300
+
+  .. javascript::
+
+	<script type="text/javascript">
+		dojo.require("dojo.data.ItemFileWriteStore");
+		dojo.require("dojox.grid.EnhancedGrid");
+		dojo.require("dojox.grid.enhanced.plugins.Selector");
+	</script>
+	<script type="text/javascript" src="{{ baseUrl }}dojox/grid/tests/enhanced/support/test_write_store_dnd.js"></script>
+	<script type="text/javascript">
+		var store = test_store[0];
+		
+		var layout = [{
+			defaultCell: {width: 3},
+			rows: [
+				{field: "A"},
+				{field: "B"},
+				{field: "C"},
+				{field: "D"},
+				{field: "E"},
+				{field: "F"},
+				{field: "G", hidden: true},
+				{field: "H", hidden: true},
+				{field: "I", hidden: true},
+				{field: "J"},
+				{field: "K"},
+				{field: "L"},
+				{field: "M"},
+				{field: "N"},
+				{field: "O"},
+				{field: "P"},
+				{field: "Q"},
+				{field: "R"},
+				{field: "S"},
+				{field: "T"},
+				{field: "U"},
+				{field: "V"},
+				{field: "W"},
+				{field: "X"},
+				{field: "Y"},
+				{field: "Z"}
+			]
+		}];
+		function setSelectConfig(type, mode, selected){
+			if(selected){
+				var config = {};
+				config[type] = mode;
+				dijit.byId('grid').setupSelectorConfig(config);
+			}
+		};
+	</script>
+
+  .. html::
+
+	<div id="grid" dojoType="dojox.grid.EnhancedGrid" store="store" structure="layout" rowSelector="20px"
+		canSort="function(){return false;}",
+		plugins='{
+			selector: {}
+		}'>
+	</div>
+	<table class="cfgtable" border="1">
+		<thead>
+			<tr>
+				<th>Select</th>
+				<th>Disabled</th>
+				<th>Single</th>
+				<th>Multi</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Row</td>
+				<td><input type="radio" name="rowCfg" onchange="setSelectConfig('row', 'disabled', this.checked)"/></td>
+				<td><input type="radio" name="rowCfg" onchange="setSelectConfig('row', 'single', this.checked)"/></td>
+				<td><input type="radio" name="rowCfg" onchange="setSelectConfig('row', 'multi', this.checked)" checked="checked"/></td>
+			</tr>
+			<tr>
+				<td>Column</td>
+				<td><input type="radio" name="colCfg" onchange="setSelectConfig('col', 'disabled', this.checked)"/></td>
+				<td><input type="radio" name="colCfg" onchange="setSelectConfig('col', 'single', this.checked)"/></td>
+				<td><input type="radio" name="colCfg" onchange="setSelectConfig('col', 'multi', this.checked)" checked="checked"/></td>
+			</tr>
+			<tr>
+				<td>Cell</td>
+				<td><input type="radio" name="cellCfg" onchange="setSelectConfig('cell', 'disabled', this.checked)"/></td>
+				<td><input type="radio" name="cellCfg" onchange="setSelectConfig('cell', 'single', this.checked)"/></td>
+				<td><input type="radio" name="cellCfg" onchange="setSelectConfig('cell', 'multi', this.checked)" checked="checked"/></td>
+			</tr>
+		</tbody>
+	</table>
+
+  .. css::
+
+    <style type="text/css">
+    @import "{{ baseUrl }}dojo/resources/dojo.css";
+    @import "{{ baseUrl }}dijit/themes/{{ theme }}/{{ theme }}.css";
+    @import "{{ baseUrl }}dijit/themes/{{ theme }}/document.css";
+    @import "{{ baseUrl }}dojox/grid/enhanced/resources/{{ theme }}/EnhancedGrid.css";
+    @import "{{ baseUrl }}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
+	
+	.cfgtable th,
+	.cfgtable td{
+		font-weight: bolder;
+		padding: 3px;
+	}
+	#grid{
+		width: 600px;
+		height: 400px;
+	}
+    </style>
+
 
 =============
 Configuration
