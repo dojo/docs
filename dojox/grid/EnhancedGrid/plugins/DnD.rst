@@ -28,9 +28,9 @@ DnD is a plugin for dojox.grid.EnhancedGrid. It provides supports for drag-and-d
 
 	<script type="text/javascript">
 		dojo.require("dojo.data.ItemFileWriteStore");
+		dojo.require("dijit.form.CheckBox");
 		dojo.require("dojox.grid.EnhancedGrid");
 		dojo.require("dojox.grid.enhanced.plugins.DnD");
-		dojo.require("dijit.form.CheckBox");
 	</script>
 	<script type="text/javascript" src="{{ baseUrl }}dojox/grid/tests/enhanced/support/test_write_store_dnd.js"></script>
 	<script type="text/javascript">
