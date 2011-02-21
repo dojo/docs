@@ -26,49 +26,86 @@ Filter is a plugin for dojox.grid.EnhancedGrid. It's designed to filter the grid
 
   .. javascript::
 
-    <script type="text/javascript">
-    dojo.require("dojox.grid.EnhancedGrid");
-    dojo.require("dojox.grid.enhanced.plugins.DnD");
-    dojo.require("dojox.data.CsvStore");
-    
-    dojo.addOnLoad(function(){
-      // our test data store for this example:
-      var store = new dojox.data.CsvStore({ url: '{{ dataUrl }}dojox/grid/tests/support/movies.csv' });
-
-      // set the layout structure:
-      var layout = [
-        { field: 'Title', name: 'Title of Movie', width: '200px' },
-        { field: 'Year', name: 'Year', width: '50px' },
-        { field: 'Producer', name: 'Producer', width: 'auto' }
-      ];
-
-      // create a new grid:
-      var grid = new dojox.grid.EnhancedGrid({
-        store: store,
-        structure: layout,
-        plugins : {
-        }
-      }, document.createElement('div'));
-
-      // append the new grid to the div "gridContainer4":
-      dojo.byId("gridDiv").appendChild(grid.domNode);
-
-      // Call startup, in order to render the grid:
-      grid.startup();
-    });
-    </script>
+	<script type="text/javascript" src="../dojox/grid/tests/enhanced/support/test_write_store_music.js"></script>
+	<script type="text/javascript">
+		dojo.require("dojox.grid.EnhancedGrid");
+		dojo.require("dojox.grid.enhanced.plugins.Filter");
+		
+		//In case you've close the filter bar, here's a way to bring it up.
+		function showFilterBar(){
+			dijit.byId('grid').showFilterBar(true);
+		};
+		
+		dojo.addOnLoad(function(){
+			//See the ItemFileWriteStore defined in test_write_store_music.js
+			var store = test_store[0];
+			
+			var layout = [
+				{ field: "id", datatype:"number"},
+				{ field: "Genre", datatype:"string"},
+				{ field: "Artist", datatype:"string",
+					//Declare that we need the ComboBox for suggestions (autoComplete by default)
+					autoComplete: true
+				},
+				{ field: "Album", datatype:"string",
+					//Declare that we need the ComboBox for suggestions 
+					autoComplete: true,
+					//Configure the ComboBox, so that it does not auto-complete our input
+					dataTypeArgs: {
+						autoComplete: false
+					}
+				},
+				{ field: "Name", datatype:"string",
+					//Declare that we do not need the following conditions for this column 
+					disabledConditions: ["contains", "notcontains"]
+				},
+				{ field: "Track", datatype:"number"},
+				{ field: "Download Date", datatype:"date",
+					//Declare how the data in store should be parsed to a Date object.
+					dataTypeArgs: {
+						datePattern: "yyyy/M/d"
+					}
+				},
+				{ field: "Last Played", datatype:"time",
+					//Declare how the data in store should be parsed to a Date object.
+					dataTypeArgs: {
+						timePattern: "HH:mm:ss"
+					}
+				}
+			];
+			
+			var grid = new dojox.grid.EnhancedGrid({
+				id: 'grid',
+				store: store,
+				structure: layout,
+				plugins: {
+					filter: {
+						//Show the closeFilterbarButton at the filter bar
+						closeFilterbarButton: true,
+						//Set the maximum rule count to 5
+						ruleCount: 5,
+						//Set the name of the items
+						itemsName: "songs"
+					}
+				}
+			});
+			grid.placeAt('gridContainer');
+			grid.startup();
+		});
+	</script>
 
   .. html::
 
-    <div id="gridDiv" style="width: 100%; height: 100%;"></div>
+    <div id="gridContainer" style="width: 100%; height: 400px;"></div>
 
   .. css::
 
     <style type="text/css">
-    @import "{{ baseUrl }}dojo/resources/dojo.css";
-    @import "{{ baseUrl }}dijit/themes/{{ theme }}/{{ theme }}.css";
-    @import "{{ baseUrl }}dojox/grid/enhanced/resources/{{ theme }}EnhancedGrid.css";
-    @import "{{ baseUrl }}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
+    @import "../dojo/resources/dojo.css";
+    @import "../dijit/themes/claro/claro.css";
+    @import "../dijit/themes/claro/document.css";
+    @import "../dojox/grid/enhanced/resources/claro/EnhancedGrid.css";
+    @import "../dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
     </style>
 
 
@@ -286,7 +323,7 @@ The value field for String type can have auto-complete capability (if set autoCo
 
 .. image:: defdialog-stringvaluebox.png
 
-DateTextBox and TimeTextBox used for Date and Time types, respectively.
+DateTextBox and TimeTextBox are used for Date and Time types, respectively.
 
 .. image:: defdialog-timevaluebox.png
 
