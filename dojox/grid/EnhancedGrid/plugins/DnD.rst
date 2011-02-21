@@ -18,6 +18,208 @@ Introduction
 
 DnD is a plugin for dojox.grid.EnhancedGrid. It provides supports for drag-and-drop grid rows/column/cells. Users can not only move rows/columns/cells within a grid by dragging them, but also drag them out of grid to other widgets (can be another grid).
 
+.. code-example::
+  :toolbar: themes, versions, dir
+  :version: local
+  :width: 800
+  :height: 300
+
+  .. javascript::
+
+	<script type="text/javascript">
+		dojo.require("dojo.data.ItemFileWriteStore");
+		dojo.require("dojox.grid.EnhancedGrid");
+		dojo.require("dojox.grid.enhanced.plugins.DnD");
+		dojo.require("dijit.form.CheckBox");
+	</script>
+	<script type="text/javascript" src="../dojox/grid/tests/enhanced/support/test_write_store_dnd.js"></script>
+	<script type="text/javascript">
+		var layout1 = [{
+			defaultCell: {width: 3},
+			rows: [
+				{field: "A"},
+				{field: "B"},
+				{field: "C"},
+				{field: "D"},
+				{field: "E"},
+				{field: "F"},
+				{field: "G", hidden: true},
+				{field: "H", hidden: true},
+				{field: "I", hidden: true},
+				{field: "J"},
+				{field: "K"},
+				{field: "L"},
+				{field: "M"},
+				{field: "N"},
+				{field: "O"},
+				{field: "P"},
+				{field: "Q"},
+				{field: "R"},
+				{field: "S"},
+				{field: "T"},
+				{field: "U"},
+				{field: "V"},
+				{field: "W"},
+				{field: "X"},
+				{field: "Y"},
+				{field: "Z"}
+			]
+		}];
+		var store_copy = new dojo.data.ItemFileWriteStore({
+			data: test_store_data[0]
+		});
+		function setIdentifierForNewItem(item, store, index){
+			var attrs = store.getIdentityAttributes(item);
+			for(var i = attrs.length - 1; i >= 0; --i){
+				item[attrs[i]] = index + (new Date()).getTime();
+			}
+			return item;
+		};
+		function setDnDConfig(gridId, type, mode, selected){
+			var config = {};
+			config[type] = {};
+			config[type][mode] = selected;
+			dijit.byId(gridId).setupDnDConfig(config);
+		};
+		function setCopyOnly(gridId, selected){
+			dijit.byId(gridId).dndCopyOnly(selected);
+		};
+		dojo.addOnLoad(function(){
+			dojo.query("input.cfgbox").forEach(function(cb){
+				cb.checked = true;
+			});
+			dojo.query("input.copyonlyCBox").forEach(function(cb){
+				cb.checked = false;
+			});
+		});
+	</script>
+
+  .. html::
+
+	<div class="myblock">
+		<h3>Grid 1</h3>
+		<div id="grid1" dojoType="dojox.grid.EnhancedGrid"
+			canSort="function(){return false;}",
+			plugins='{
+				dnd: {
+					"setIdentifierForNewItem": setIdentifierForNewItem,
+					"dndConfig": {
+					}
+				}
+			}' store="test_store[0]" structure="layout1" rowSelector="20px">
+		</div>
+	</div>
+	<div class="myblock">
+		<h3>Grid 2</h3>
+		<div id="grid2" dojoType="dojox.grid.EnhancedGrid"
+			canSort="function(){return false;}",
+			plugins='{
+				dnd: {
+					"setIdentifierForNewItem": setIdentifierForNewItem,
+					"dndConfig": {
+					}
+				}
+			}' store="store_copy" structure="layout1" rowSelector="20px">
+		</div>
+	</div>
+	<div class="myblock">
+		<h3>Grid 1 Configuration</h3>
+		<label style="font-weight: bolder;">Copy Only</label><input class="copyonlyCBox" type="checkbox" onchange="setCopyOnly('grid1', this.checked)" />
+		<table class="cfgtable" border="1">
+			<thead>
+				<tr>
+					<th>Drag</th>
+					<th>Within</th>
+					<th>In</th>
+					<th>Out</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Rows</td>
+					<td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid1', 'row', 'within', this.checked)"/></td>
+					<td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid1', 'row', 'in', this.checked)"/></td>
+					<td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid1', 'row', 'out', this.checked)"/></td>
+				</tr>
+				<tr>
+					<td>Columns</td>
+					<td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid1', 'col', 'within', this.checked)"/></td>
+					<td>Not implemented</td>
+					<td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid1', 'col', 'out', this.checked)"/></td>
+				</tr>
+				<tr>
+					<td>Cells</td>
+					<td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid1', 'cell', 'within', this.checked)"/></td>
+					<td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid1', 'cell', 'in', this.checked)"/></td>
+					<td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid1', 'cell', 'out', this.checked)"/></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="myblock">
+		<h3>Grid 2 Configuration</h3>
+		<label style="font-weight: bolder;">Copy Only</label><input class="copyonlyCBox" type="checkbox" onchange="setCopyOnly('grid2', this.checked)" />
+		<table class="cfgtable" border="1">
+			<thead>
+				<tr>
+					<th>Drag</th>
+					<th>Within</th>
+					<th>In</th>
+					<th>Out</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Rows</td>
+					<td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid2', 'row', 'within', this.checked)"/></td>
+					<td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid2', 'row', 'in', this.checked)"/></td>
+					<td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid2', 'row', 'out', this.checked)"/></td>
+				</tr>
+				<tr>
+					<td>Columns</td>
+					<td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid2', 'col', 'within', this.checked)"/></td>
+					<td>Not implemented</td>
+					<td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid2', 'col', 'out', this.checked)"/></td>
+				</tr>
+				<tr>
+					<td>Cells</td>
+					<td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid2', 'cell', 'within', this.checked)"/></td>
+					<td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid2', 'cell', 'in', this.checked)"/></td>
+					<td><input type="checkbox" class="cfgbox" onchange="setDnDConfig('grid2', 'cell', 'out', this.checked)"/></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+  .. css::
+
+    <style type="text/css">
+    @import "{{ baseUrl }}dojo/resources/dojo.css";
+    @import "{{ baseUrl }}dijit/themes/{{ theme }}/{{ theme }}.css";
+    @import "{{ baseUrl }}dijit/themes/{{ theme }}/document.css";
+    @import "{{ baseUrl }}dojox/grid/enhanced/resources/{{ theme }}/EnhancedGrid.css";
+    @import "{{ baseUrl }}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
+
+	.myblock{
+		float: left;
+		margin: 10px;
+		margin-top: 0;
+	}
+	.cfgtable th,
+	.cfgtable td{
+		font-weight: bolder;
+		padding: 3px;
+	}
+	h3{
+		margin: 0;
+	}
+	#grid1, #grid2{
+		margin-bottom: 0px;
+		width: 30em;
+		height: 30em;
+	}
+    </style>
+
 =============
 Configuration
 =============
@@ -301,11 +503,6 @@ Known Limitations
 * Multiple row layout is not supported by this DnD plugin.
 * Please be careful when dragging a numeric cell to a string cell (or visi versa), since sorting will have problems after that. This is because comparing string value and number value always returns false.
 
-=================
-TODO
-=================
-
-* Samples for how to use the mapping info for changed rows/columns/cells
 
 ========
 See Also
