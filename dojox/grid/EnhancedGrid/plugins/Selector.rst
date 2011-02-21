@@ -21,8 +21,8 @@ Selector is a plugin for dojox.grid.EnhancedGrid. It supports extended selection
 .. code-example::
   :toolbar: themes, versions, dir
   :version: local
-  :width: 480
-  :height: 300
+  :width: 650
+  :height: 450
 
   .. javascript::
 
