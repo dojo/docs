@@ -22,8 +22,8 @@ The following of this document first describes how to use the export functions o
 .. code-example::
   :toolbar: themes, versions, dir
   :version: local
-  :width: 480
-  :height: 300
+  :width: 600
+  :height: 450
 
   .. javascript::
 
