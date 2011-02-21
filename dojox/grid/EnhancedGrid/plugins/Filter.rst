@@ -26,7 +26,7 @@ Filter is a plugin for dojox.grid.EnhancedGrid. It's designed to filter the grid
 
   .. javascript::
 
-	<script type="text/javascript" src="../dojox/grid/tests/enhanced/support/test_write_store_music.js"></script>
+	<script type="text/javascript" src="{{ baseUrl }}dojox/grid/tests/enhanced/support/test_write_store_music.js"></script>
 	<script type="text/javascript">
 		dojo.require("dojox.grid.EnhancedGrid");
 		dojo.require("dojox.grid.enhanced.plugins.Filter");
@@ -101,11 +101,11 @@ Filter is a plugin for dojox.grid.EnhancedGrid. It's designed to filter the grid
   .. css::
 
     <style type="text/css">
-    @import "../dojo/resources/dojo.css";
-    @import "../dijit/themes/claro/claro.css";
-    @import "../dijit/themes/claro/document.css";
-    @import "../dojox/grid/enhanced/resources/claro/EnhancedGrid.css";
-    @import "../dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
+    @import "{{ baseUrl }}dojo/resources/dojo.css";
+    @import "{{ baseUrl }}dijit/themes/{{ theme }}/{{ theme }}.css";
+    @import "{{ baseUrl }}dijit/themes/{{ theme }}/document.css";
+    @import "{{ baseUrl }}dojox/grid/enhanced/resources/{{ theme }}/EnhancedGrid.css";
+    @import "{{ baseUrl }}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
     </style>
 
 
