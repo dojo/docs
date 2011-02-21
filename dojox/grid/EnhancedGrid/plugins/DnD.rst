@@ -32,7 +32,7 @@ DnD is a plugin for dojox.grid.EnhancedGrid. It provides supports for drag-and-d
 		dojo.require("dojox.grid.enhanced.plugins.DnD");
 		dojo.require("dijit.form.CheckBox");
 	</script>
-	<script type="text/javascript" src="../dojox/grid/tests/enhanced/support/test_write_store_dnd.js"></script>
+	<script type="text/javascript" src="{{ baseUrl }}dojox/grid/tests/enhanced/support/test_write_store_dnd.js"></script>
 	<script type="text/javascript">
 		var layout1 = [{
 			defaultCell: {width: 3},
