@@ -22,7 +22,7 @@ DnD is a plugin for dojox.grid.EnhancedGrid. It provides supports for drag-and-d
   :toolbar: themes, versions, dir
   :version: local
   :width: 800
-  :height: 300
+  :height: 600
 
   .. javascript::
 
@@ -202,7 +202,7 @@ DnD is a plugin for dojox.grid.EnhancedGrid. It provides supports for drag-and-d
 
 	.myblock{
 		float: left;
-		margin: 10px;
+		margin: 5px;
 		margin-top: 0;
 	}
 	.cfgtable th,
@@ -215,8 +215,8 @@ DnD is a plugin for dojox.grid.EnhancedGrid. It provides supports for drag-and-d
 	}
 	#grid1, #grid2{
 		margin-bottom: 0px;
-		width: 30em;
-		height: 30em;
+		width: 650px;
+		height: 600px;
 	}
     </style>
 
