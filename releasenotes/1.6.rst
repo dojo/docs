@@ -44,6 +44,8 @@ Of course if you follow the coding of Dojo modules it should probably
 work (since they work), but the build and loader are not very robust
 and complete for the full range of AMD possibilities.
 
+For more information on AMD in Dojo 1.6, see `this article on the SitePen blog <http://www.sitepen.com/blog/2011/02/14/asynchronous-modules-come-to-dojo-1-6/>`_.
+
 See also the `dojo sie loader <http://dojo-sie.altoviso.com/index>`_.
 
 
