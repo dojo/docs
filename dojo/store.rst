@@ -174,3 +174,9 @@ Design Goals
 * Every method can be implemented sync or async. The interface is the exactly the same for sync and async except that async returns promises/deferreds instead of plain values. The interface requires no other knowledge of specific callbacks to operate.
 
 * Objects returned from the data store (via query or get) should be plain JavaScript objects whose properties can be typically accessed and modified through standard property access.
+
+========
+See Also
+========
+
+* `SitePen Blog Post on Object Stores <http://www.sitepen.com/blog/2011/02/15/dojo-object-stores/>`_
