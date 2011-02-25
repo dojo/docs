@@ -21,55 +21,90 @@ Pagination is a plugin for dojox.grid.EnhnacedGrid. It's designed to allow the u
 .. code-example::
   :toolbar: themes, versions, dir
   :version: local
-  :width: 480
+  :width: 680
   :height: 300
 
   .. javascript::
 
-    <script type="text/javascript">
-    dojo.require("dojox.grid.EnhancedGrid");
-    dojo.require("dojox.grid.enhanced.plugins.Pagination");
-    dojo.require("dojox.data.CsvStore");
-    
-    dojo.addOnLoad(function(){
-      // our test data store for this example:
-      var store = new dojox.data.CsvStore({ url: '{{ dataUrl }}dojox/grid/tests/support/movies.csv' });
-
-      // set the layout structure:
-      var layout = [
-        { field: 'Title', name: 'Title of Movie', width: '200px' },
-        { field: 'Year', name: 'Year', width: '50px' },
-        { field: 'Producer', name: 'Producer', width: 'auto' }
-      ];
-
-      // create a new grid:
-      var grid = new dojox.grid.EnhancedGrid({
-        store: store,
-        structure: layout,
-        plugins : {
-        }
-      }, document.createElement('div'));
-
-      // append the new grid to the div "gridContainer4":
-      dojo.byId("gridDiv").appendChild(grid.domNode);
-
-      // Call startup, in order to render the grid:
-      grid.startup();
-    });
-    </script>
+	<script type="text/javascript" src="{{ baseUrl }}dojox/grid/tests/enhanced/support/test_write_store_music.js"></script>
+	<script type="text/javascript">
+		dojo.require("dojox.grid.EnhancedGrid");
+		dojo.require("dojox.grid.enhanced.plugins.Pagination");
+				
+		dojo.addOnLoad(function(){
+			//See the ItemFileWriteStore defined in test_write_store_music.js
+			var store = test_store[0];
+			
+			var layout = [
+				{ field: "id", datatype:"number"},
+				{ field: "Genre", datatype:"string"},
+				{ field: "Artist", datatype:"string",
+					//Declare that we need the ComboBox for suggestions (autoComplete by default)
+					autoComplete: true
+				},
+				{ field: "Album", datatype:"string",
+					//Declare that we need the ComboBox for suggestions 
+					autoComplete: true,
+					//Configure the ComboBox, so that it does not auto-complete our input
+					dataTypeArgs: {
+						autoComplete: false
+					}
+				},
+				{ field: "Name", datatype:"string",
+					//Declare that we do not need the following conditions for this column 
+					disabledConditions: ["contains", "notcontains"]
+				},
+				{ field: "Track", datatype:"number"},
+				{ field: "Download Date", datatype:"date",
+					//Declare how the data in store should be parsed to a Date object.
+					dataTypeArgs: {
+						datePattern: "yyyy/M/d"
+					}
+				},
+				{ field: "Last Played", datatype:"time",
+					//Declare how the data in store should be parsed to a Date object.
+					dataTypeArgs: {
+						timePattern: "HH:mm:ss"
+					}
+				}
+			];
+			
+			var grid = new dojox.grid.EnhancedGrid({
+				id: 'grid',
+				store: store,
+				structure: layout,
+				plugins: {
+					pagination: {
+						pageSizes: ["10", "25", "50", "100", "All"],	// Array, custom the items per page menu
+				                // itemTitle: "entrys", 	// String, custom the item' title of description
+				                description: true,
+				                sizeSwitch: true,
+				                pageStepper: true",
+				                gotoButton: true,
+				                maxPageStep: 7,		// Integer, custom how many page step will be displayed
+				                position: "bottom"	// String, custom the position of the pagination bar
+					}
+				}
+			});
+			grid.placeAt('gridContainer');
+			grid.startup();
+		});
+	</script>
 
   .. html::
 
-    <div id="gridDiv" style="width: 100%; height: 100%;"></div>
+    <div id="gridContainer" style="width: 100%; height: 400px;"></div>
 
   .. css::
 
     <style type="text/css">
     @import "{{ baseUrl }}dojo/resources/dojo.css";
     @import "{{ baseUrl }}dijit/themes/{{ theme }}/{{ theme }}.css";
-    @import "{{ baseUrl }}dojox/grid/enhanced/resources/{{ theme }}EnhancedGrid.css";
+    @import "{{ baseUrl }}dijit/themes/{{ theme }}/document.css";
+    @import "{{ baseUrl }}dojox/grid/enhanced/resources/{{ theme }}/EnhancedGrid.css";
     @import "{{ baseUrl }}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
     </style>
+
 
 =============
 Configuration
