@@ -583,11 +583,11 @@ Usage Examples
 How many items are in my store?
 -------------------------------
 
-There is no simple method call to return the number of items, and without digging into private variables (which one should never do) you have to do the following:
+There is no simple method call to return the number of items, and without digging into private variables (which one should never do) you have to do something like the following:
 
 .. code-block :: javascript
 
-  store.fetch({ query:"*", onComplete: function(items){ console.log("There are ", items.length, " items in this store."); }})
+  store.fetch({ onBegin: function(total){ console.log("There are ", total, " items in this store."); } });
 
 Connecting ItemFileReadStore to ComboBox
 ----------------------------------------
