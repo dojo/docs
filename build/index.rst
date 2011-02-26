@@ -289,7 +289,7 @@ This illustrates the most important command line parameters to the build system:
 ``releaseName``
     By specifying an empty ``releaseName`` parameter, we over-rid the default of ``dojo``, clobbering the generation of a named sub-directory in the output ``/js/release/`` directory. This makes it somewhat simpler to deal with paths at development time, but if you are creating versioned builds, you may chose to specify something like ``r1234`` to indicate a unique build number which you can then check in. Note that specifying a blank ``releaseName`` does not work in version of Dojo prior to 1.3.
 
-Once we've run the build script, all we need to do to use our new-fangled, much-faster layer file is to change the directory we point our ``<script>`` tags at. Intead of using the source files located in ``/js/src/<modulename>``, we now look for them in ``/js/release/<modulename>``:
+Once we've run the build script, all we need to do to use our new-fangled, much-faster layer file is to change the directory we point our ``<script>`` tags at. Intead of using the source files located in ``/js/src/<modulename>``, we now look for them in ``/js/release/<modulename>``, and request our layer file(s) right after ``dojo.js`` (as layers implicitly omit dojo base):
 
 .. code-block :: html
 
