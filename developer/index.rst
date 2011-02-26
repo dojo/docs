@@ -16,4 +16,6 @@ This section contains or links to information useful to contributors/committers 
 
 * `Source control access <developer/svn>`_
 
+* `Using Trac and Dojo / Notes for Committers <developer/bugs>`_
+
 * `Projects <developer/projects>`_ - roadmap and planned future projects
