@@ -303,18 +303,6 @@ Once we've run the build script, all we need to do to use our new-fangled, much-
   <script type="text/javascript" src="/js/release/acme/mylayer.js"></script>
 
 
-
-TODOC: everything. outline here:
-
-    * summary
-    * requirements / setup DONE
-    * creating a profile
-    * command line arguments
-    * special builds: * layers * css
-    * file structure
-
-link to full docs to cover:
-
 =================================
 Auto-generated Profiles from HTML
 =================================
@@ -443,3 +431,17 @@ Micro Build
 ~~~~~~~~~~~
 
 An absolutely minimal build of Dojo containing just the most essential core elements, suitable for smart phones and other resource-limited hosts:  `Micro-build <build/scenario-micro>`_
+
+
+========
+See Also
+========
+
+* `Build Profiles <build/profiles>`_
+* `Build Script <build/buildScript>`_
+* `Simple Build System Example <build/simpleExample>`_
+
+
+TODOC:
+
+    * special builds: * layers * css
