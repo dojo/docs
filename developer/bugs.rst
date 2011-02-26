@@ -91,7 +91,7 @@ If the ticket is a feature request and is beyond the scope of the current versio
 
 ``future`` means: "I like this idea but [for this reason] it can't happen now." Patches are **always** welcome, and greatly increase the likelihood of a request being filled. 
 
-There should be **absolutely no** tickets in the ``tdb`` state when a major release is cut. This ensures we've **at least** inspected every incoming ticket to determine the severity of the report. 
+There should be **absolutely no** tickets in the ``tbd`` state when a major release is cut. This ensures we've **at least** inspected every incoming ticket to determine the severity of the report. 
 
 Tickets assigned but not "accepted" are considered fair game. A patch submission can come from anywhere. A Component owner "owns" the tickets, but can simply reassign should another developer want to work on said ticket. 
 
@@ -156,7 +156,7 @@ To use a commit message to close a ticket, use the ``fixes`` keyword:
 
     $ svn commit -m "fixes #12345 - thanks for all the fish UserWhoSubmittedThePatch"
     
-This will mark the ticket as ``closed`` linking the changeset to the ticket as ``refs`` would. Do **not** close a ticket in a ``tdb`` milestone.
+This will mark the ticket as ``closed`` linking the changeset to the ticket as ``refs`` would. Do **not** close a ticket in a ``tbd`` milestone.
 
 A form of JSLint is being run as a pre-commit hook. Your commit will be denied if this linting fails. You can override this by including ``!strict`` in your commit message. 
 
