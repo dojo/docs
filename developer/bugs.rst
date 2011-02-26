@@ -93,6 +93,10 @@ If the ticket is a feature request and is beyond the scope of the current versio
 
 There should be **absolutely no** tickets in the ``tdb`` state when a major release is cut. This ensures we've _at least_ inspected every incoming ticket to determine the severity of the report. 
 
+Tickets assigned but not "accepted" are considered fair game. A patch submission can come from anywhere. A Component owner "owns" the tickets, but can simply reassign should another developer want to work on said ticket. 
+
+When you "accept" a ticket for a given milestone, you are indicating you are or will be focused on that item. Unless the ticket requests further contribution, it is likely you will receive none. It is your duty to ensure all your "accepted" tickets are marked in an appropriate milestone prior to every major release. 
+
 Patches
 -------
 
