@@ -14,7 +14,7 @@ At the Dojo Project we use Trac for issue tracking. These are some notes about t
 Logging In
 ----------
 
-The bug tracker (http://bugs.dojotoolkit.org) uses the LDAP information from the overall Dojo Foundation (http://my.dojofoundation.org). Register for a Dojo Foundation account, and login to Trac via the auth dialog using those credentials. **note** this username/password combination will work on all Dojo Sites, eg: http://docs.dojocampus.org
+The `bug tracker <http://bugs.dojotoolkit.org>`_ uses the LDAP information from the overall `Dojo Foundation (http://dojofoundation.org). `Register for a Dojo Foundation account <http://my.dojofoundation.org>`_ and login to Trac via the auth dialog using those credentials. **note** this username/password combination will work on all Dojo Sites, eg: http://docs.dojocampus.org
 
 Getting Notified
 ~~~~~~~~~~~~~~~~
@@ -72,5 +72,92 @@ When working in DojoX, if no Component is more accurate than the top level ``doj
 
 This indicates to the ``FloatingPane`` owner a fix covered under CLA lives in this ticket.
 
+Dijit prefers the module name be included in the summary, when in the "component" ``Dijit``, eg:
+
+.. code-block :: bash
+
+    [regression] TabContainer: Title Heights collapse when ...
+    
+Owning a ticket
+~~~~~~~~~~~~~~~
+
+There are two states for tickets. Every ticket is "assigned to" a user (though sometimes the user is listed as ``anonymous``). Component owners are automatically "assigned" the ticket, with a milestone of ``tbd``. If you have ``tdb`` tickets, they need to be examined. A cursory scan of a ticket can sometimes resolve issues very quickly.
+
+If the ticket indicates a bug, a working test case is required. Live links are discouraged, as they typically rot. Standalone html pages including the minimal steps to reproduce the issue should be attached. Leave in the ``tdb`` state, but request a followup from the user. 
+
+If the ticket is a feature request, use your discretion. If the feature is reasonable and you are willing to create a patch (or the user has supplied a patch and documentation for said feature), mark the milestone to the next major version and close upon committing. New features **do not** go into branch releases, as they are reserved for critical bugs only. 
+
+If the ticket is a feature request and is beyond the scope of the current version goals, requires further discussion or design, mark the ticket in whatever version you plan to complete the task, or the more generic ``future`` milestone.
+
+``future`` means: "I like this idea but [for this reason] it can't happen now." Patches are **always** welcome, and greatly increase the likelihood of a request being filled. 
+
+There should be **absolutely no** tickets in the ``tdb`` state when a major release is cut. This ensures we've _at least_ inspected every incoming ticket to determine the severity of the report. 
+
 Patches
 -------
+
+Patches should be attached to tickets in unified diff format, with a ``.patch`` or ``.diff`` extension. 
+
+Creating
+~~~~~~~~
+
+To create a patch, use `svn diff`:
+
+.. code-block :: bash
+
+    $ svn up
+    At revision [xxxx].
+    $ svn st
+    M dojox/layout/FloatingPane.js
+    $ svn diff > floatingpane.patch
+
+Merging
+~~~~~~~
+    
+To apply a user supplied patch (from commandline):
+
+.. code-block :: bash
+
+    $ svn up
+    At revision [xxxx]
+    $ patch < floatingpane.patch
+
+Using the ``-pN`` command line argument allows you to strip paths from the original diff. For example, the above structure would require you strip two levels of the patch. This needs to align based on where you apply the patch from in the tree versus from where the user was when creating the patch. 
+
+.. code-block :: bash
+
+    $ svn up
+    At revision [xxxx]
+    $ cd dojox/layout
+    $ patch -p 2 < floatingpane.patch
+    
+Many IDE's have SVN integration and can easily apply patches from this format.
+
+``TODOC:`` anyone use an IDE to do this?
+
+Commit Messages
+---------------
+
+All commit messages should be descriptive of the change. "Fixed it" is generally considered a bad commit message. "Fixed layout regression in FooBar" would suffice. 
+
+The ``dojo``, ``dijit``, and ``util`` repositories require tickets to reference. When you commit with a ``refs`` keyword, the commit message will be put in a comment on the ticket with a link to the changeset. 
+
+.. code-block :: bash
+
+    $ svn commit -m "refs #12345 - added updated thinger to the dohicky that was conflicting with DoHickyConflictr"
+    
+To use a commit message to close a ticket, use the ``fixes`` keyword:
+
+.. code-block :: bash
+
+    $ svn commit -m "fixes #12345 - thanks for all the fish UserWhoSubmittedThePatch"
+    
+This will mark the ticket as ``closed`` linking the changeset to the ticket as ``refs`` would. Do **not** close a ticket in a ``tdb`` milestone.
+
+A form of JSLint is being run as a pre-commit hook. Your commit will be denied if this linting fails. You can override this by including ``!strict`` in your commit message. 
+
+.. code-block :: bash
+
+    $ svn commit -m "refs #90210, the thing was broken before and apparently is very sloppy. lint is unhappy. \!strict"
+    
+You may or may not have to escape the ``!`` depending on your terminal.
