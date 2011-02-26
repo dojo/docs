@@ -14,7 +14,7 @@ At the Dojo Project we use Trac for issue tracking. These are some notes about t
 Logging In
 ----------
 
-The `bug tracker <http://bugs.dojotoolkit.org>`_ uses the LDAP information from the overall `Dojo Foundation (http://dojofoundation.org). `Register for a Dojo Foundation account <http://my.dojofoundation.org>`_ and login to Trac via the auth dialog using those credentials. **note** this username/password combination will work on all Dojo Sites, eg: http://docs.dojocampus.org
+The `bug tracker <http://bugs.dojotoolkit.org>`_ uses the LDAP information from the overall `Dojo Foundation <http://dojofoundation.org>`_. `Register for a Dojo Foundation account <http://my.dojofoundation.org>`_ and login to Trac via the auth dialog using those credentials. **note** this username/password combination will work on all Dojo Sites, eg: http://docs.dojocampus.org
 
 Getting Notified
 ~~~~~~~~~~~~~~~~
