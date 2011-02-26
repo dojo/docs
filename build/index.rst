@@ -35,7 +35,7 @@ You load a layer file into your web page using the normal `<script>` tags, simil
   <!-- dojo.js always provides the package system and base utilities -->
   <script type="text/javascript" src="/js/src/dojo/dojo.js"></script>
   
-  <!-- we want dijit.js to be treated like a layer of its own -->
+  <!-- we want to use the stock dijit.js layer which combines base dijit modules -->
   <script type="text/javascript" src="/js/src/dijit/dijit.js"></script>
   
   <!-- include the rest of the modules we need -->
@@ -296,7 +296,7 @@ Once we've run the build script, all we need to do to use our new-fangled, much-
   <!-- dojo.js always provides the package system and base utilities -->
   <script type="text/javascript" src="/js/release/dojo/dojo.js"></script>
   
-  <!-- we want dijit.js to be treated like a layer of its own -->
+  <!-- we want to use the stock dijit.js layer which combines base dijit modules -->
   <script type="text/javascript" src="/js/release/dijit/dijit.js"></script>
   
   <!-- include the rest of the modules we need -->
