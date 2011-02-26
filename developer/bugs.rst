@@ -67,7 +67,7 @@ Various ``[meta]`` style tags can be added to the summary to assist in understan
 
 When working in DojoX, if no Component is more accurate than the top level ``dojox``, use ``dojox`` and include a ``[meta]`` tag using the component name. Do this recursively in projects with components. eg: If a bug is against ``dojox.layout.FloatingPane``, the Component would be ``DojoX Layout`` and the meta tag would be: ``[FloatingPane]``, making the summary look something like:
 
-.. code-clock ::
+.. code-block ::
 
     [patch][cla][FloatingPane] Fails to start when created in an iframe
 
