@@ -25,9 +25,9 @@ Every method in the API is optional, it's presence indicating support for that f
 ================================================  ======================================================================
 Method                                            Description
 ================================================  ======================================================================
-`get(id) <dojo/store/get>`_                       Retrieves an object by its identifier, returning the object.
+get(id)                                           Retrieves an object by its identifier, returning the object.
 
-`query(query, options) <dojo/store/query>`_       Queries the store using the provided query.
+query(query, options)                             Queries the store using the provided query.
 
                                                   The returned value should be an array or a promise with forEach, map, filter, reduce, subscribe, and optional close and watch methods, and a total property (the total may be a promise). The options parameter is modeled after the Dojo Data keywordArgs and may include:
 
@@ -36,17 +36,17 @@ Method                                            Description
                                                   * sort - Follows the Dojo Data sort definition
                                                   * queryOptions - Follows the Dojo Data queryOptions definition
 
-`put(object, options) <dojo/store/put>`_          Saves the given object. options.id (optional) indicates the identifier.
+put(object, options)                              Saves the given object. options.id (optional) indicates the identifier.
 
-`add(object, options) <dojo/store/add>`_          Create a new object. options.id (optional) indicates the identifier.
+add(object, options)                              Create a new object. options.id (optional) indicates the identifier.
 
-`remove(id) <dojo/store/delete>`_                 Delete the object by id.
+remove(id)                                        Delete the object by id.
 
-`getIdentity(object) <dojo/store/getIdentity>`_   Returns an object's identity
+getIdentity(object)                               Returns an object's identity
 
 queryEngine(query, options)                       This takes a query and query options and returns a function that can execute the provided query on a JavaScript array. The queryEngine may be replace to provide more sophisticated querying capabilities. The returned query function may have a "matches" property that can be used to determine if an object matches the query.
 
-`transaction() <dojo/store/transaction>`_         Starts a transaction and returns a transaction object.
+transaction()                                     Starts a transaction and returns a transaction object.
 
                                                   The transaction object should include:
 
@@ -60,10 +60,6 @@ getChildren(object, options)                      Returns the children of an obj
 getMetadata(object)                               Returns any metadata about the object. 
                                                   This may include attribution, cache directives, history, or version information. (addresses #3126, #3127)
 ================================================  ======================================================================
-
-* How is about a dojo.store.clear() method?
-
-  Will clear all the (cached) objects of the store.
 
 Properties
 ----------
@@ -92,7 +88,7 @@ One can listen for changes in data through the observe method on the result set 
 ========================================================  =======================================================================  
 Method                                                    Description
 ========================================================  =======================================================================
-`observe(listener) <dojo/store/resultset/subscribe>`_     The listener function is called with following arguments:
+observe(listener)                                         The listener function is called with following arguments:
                                                           listener(object, removedFrom, insertedInto);
                                                                       
                                                           The object parameter indicates the object that was create, modified, or deleted. * The removedFrom parameter indicates the index in the result array where the object used to be. If the value is -1, then the object is an addition to this result set (due to a new object being created, or changed such that it is a part of the result set). * The insertedInto parameter indicates the index in the result array where the object should be now. If the value is -1, then the object is a removal from this result set (due to an object being deleted, or changed such that it is not a part of the result set).
@@ -122,17 +118,19 @@ We are also moving in the direction of providing composable functionality by pro
 
 * `dojo.store.Observable <dojo/store/Observable>`_ This augments a store with the data monitoring capability, adding a observe method on the query result sets that notifies of data changes.
 
-* Future: `dojo.store.Cache <dojo/store/Cache>`_
+* `dojo.store.Cache <dojo/store/Cache>`_
 
   Adds caching capability to the store. This eliminates the need for a base store to deal with caching concerns.
 
-* Future `JsonSchema`_
+* Future: `JsonSchema`_
 
   Handles validation of data through JSON Schema as well object referencing through JSON Schema's link definitions.
 
 With this one can easily mix and match wrappers and base stores to achieve various types of functionality. A common pattern may be:
 
-store = dojo.store.Observable(new dojo.store.Memory({data: someData}));
+.. code-block :: javascript
+
+  store = dojo.store.Observable(new dojo.store.Memory({data: someData}));
 
 There are also a couple of utility modules:
 
