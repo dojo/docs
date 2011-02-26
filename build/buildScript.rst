@@ -129,7 +129,7 @@ version=0.0.0.dev
 
   This parameter does not affect the names of the directories created by the build system.
 
-profile=base
+profile=
   The name of the profile to use for the build. It must be the first part of the profile file name in the profiles/ directory. For instance, to use base.profile.js, specify profile=base.
 
 layerOptimize=shrinksafe
