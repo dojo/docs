@@ -81,9 +81,9 @@ Dijit prefers the module name be included in the summary, when in the "component
 Owning a ticket
 ~~~~~~~~~~~~~~~
 
-There are two states for tickets. Every ticket is "assigned to" a user (though sometimes the user is listed as ``anonymous``). Component owners are automatically "assigned" the ticket, with a milestone of ``tbd``. If you have ``tdb`` tickets, they need to be examined. A cursory scan of a ticket can sometimes resolve issues very quickly.
+There are two states for tickets. Every ticket is "assigned to" a user (though sometimes the user is listed as ``anonymous``). Component owners are automatically "assigned" the ticket, with a milestone of ``tbd``. If you have ``tbd`` tickets, they need to be examined. A cursory scan of a ticket can sometimes resolve issues very quickly.
 
-If the ticket indicates a bug, a working test case is required. Live links are discouraged, as they typically rot. Standalone html pages including the minimal steps to reproduce the issue should be attached. Leave in the ``tdb`` state, but request a followup from the user. 
+If the ticket indicates a bug, a working test case is required. Live links are discouraged, as they typically rot. Standalone html pages including the minimal steps to reproduce the issue should be attached. Leave in the ``tbd`` state, but request a followup from the user. 
 
 If the ticket is a feature request, use your discretion. If the feature is reasonable and you are willing to create a patch (or the user has supplied a patch and documentation for said feature), mark the milestone to the next major version and close upon committing. New features **do not** go into branch releases, as they are reserved for critical bugs only. 
 
@@ -91,7 +91,7 @@ If the ticket is a feature request and is beyond the scope of the current versio
 
 ``future`` means: "I like this idea but [for this reason] it can't happen now." Patches are **always** welcome, and greatly increase the likelihood of a request being filled. 
 
-There should be **absolutely no** tickets in the ``tdb`` state when a major release is cut. This ensures we've _at least_ inspected every incoming ticket to determine the severity of the report. 
+There should be **absolutely no** tickets in the ``tdb`` state when a major release is cut. This ensures we've **at least** inspected every incoming ticket to determine the severity of the report. 
 
 Tickets assigned but not "accepted" are considered fair game. A patch submission can come from anywhere. A Component owner "owns" the tickets, but can simply reassign should another developer want to work on said ticket. 
 
