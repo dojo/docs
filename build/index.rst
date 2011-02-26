@@ -440,6 +440,7 @@ See Also
 * `Build Profiles <build/profiles>`_
 * `Build Script <build/buildScript>`_
 * `Simple Build System Example <build/simpleExample>`_
+* `Scaffolding a Buildable Dojo Application <http://blog.rebeccamurphey.com/scaffolding-a-buildable-dojo-application>`_
 
 
 TODOC:
