@@ -112,7 +112,13 @@ The parser has been enhanced to support HTML5 compliant attribute names.  See `t
 
        <input data-dojo-type="dijit.form.CheckBox" data-dojo-props="checked:true" checked="checked" type="checkbox'>
 
-  * The `event` and `args` attributes for dojo/method and dojo/connect scripts inside widgets are **deprecated**. Use `data-dojo-event` and `data-dojo-args` respectively.
+  * The `event` and `args` attributes for script tags of type="dojo/method" and type="dojo/connect" are **deprecated**. Use `data-dojo-event` and `data-dojo-args` respectively.
+
+    .. code-block :: html
+
+ 	<form data-dojo-type="dijit.form.Form" ...>
+		<script type="dojo/method" data-dojo-event="onSubmit">
+                    ...
 
   * Existing behavior has been preserved until 2.0, there should be no backward compatibility issues between 1.6 and previous 1.x Dojo versions.
 
