@@ -25,29 +25,34 @@ Dojo Base
 
 AMD format for modules
 ----------------------
-Many of dojo's modules have been converted to `AMD format <http://requirejs.org/docs/api.html>`_,
-where each module is wrapped in a define() function, rather than the old dojo.provide() and dojo.require() syntax.
+All modules in dojo and dijit have been converted to comply with the `CommonJS <http://www.commonjs.org>`_
+`Modules/AsynchronousDefinition <http://wiki.commonjs.org/wiki/Modules/AsynchronousDefinition>`_ (AMD) proposal. This is
+a *preparatory* step on the way to full AMD support in version 1.7 and beyond. Unless you are an early adopter of
+using dojo with an AMD loader, these changes should be transparent to you. For version 1.6:
 
-The 1.6 loader does not support the entirety of the AMD format, and it is not
-asynchronous. We are planning on two new loaders in the future, a more
-complete sync one and an async one.
+  * ``dojo.provide`` and ``dojo.require`` have been replaced by AMD ``define`` in all dojo and dijit modules; dojox 
+    conversions are variable.
+  * a fairly complete simulation of the AMD ``define`` function has been added to the synchronous loader (this allows the
+    converted dojo and dijit modules to work); otherwise, the synchronous loader remains unchanged and fully
+    supports ``dojo.provide`` and ``dojo.require``. 
+  * the dojo build system transforms the converted modules back to use ``dojo.provide`` and ``dojo.require``.
 
-Of course, the 1.6 loader also has
-back-compat support for dojo.require and dojo.provide.
+Asynchronous module loading is considered experimental and is not officially supported in version 1.6. For early adopters,
+you can find experimental dojo and dijit package support in ``dojo/lib`` and ``dijit/lib``.
 
-In 1.6, if you want to do asynchronous loading of modules, you need to do it yourself, see `this template for loading dojo using RequireJS <https://github.com/neonstalwart/dojo-requirejs-template>`_.
+Dojo does not include an AMD loader. Two loaders are known to work with dojo and dijit.
 
-You can write your own modules in AMD format (and you would need to
-if you want them to work with RequireJS) and use them with the 1.6
-loader, but it is not fully supported and is pretty fragile right now.
-Of course if you follow the coding of Dojo modules it should probably
-work (since they work), but the build and loader are not very robust
-and complete for the full range of AMD possibilities.
+  * bdLoad: available at `http://bdframework.org/bdLoad/index.html <http://bdframework.org/bdLoad/index.html>`_
+  * RequireJS: available at `http://requirejs.org <http://requirejs.org>`_
 
-For more information on AMD in Dojo 1.6, see `this article on the SitePen blog <http://www.sitepen.com/blog/2011/02/14/asynchronous-modules-come-to-dojo-1-6/>`_.
+For more detailed information on using Dojo with asynchronous modules and loaders see:
 
-See also the `dojo sie loader <http://dojo-sie.altoviso.com/index>`_.
-
+  * `Dojo version 1.6 and Asynchronous Loading <http://bdframework.org/bdLoad/docs/dojo-v16-amd/dojo-v16-amd.html>`_
+  * `Asynchronous Modules Come to Dojo 1.6 <http://www.sitepen.com/blog/2011/02/14/asynchronous-modules-come-to-dojo-1-6/>`_
+  * `Demonstration of load performance with Dojo <http://bdframework.org/bdLoad/demos/load/demo.html>`_
+  * `Template for loader dojo using RequireJS <https://github.com/neonstalwart/dojo-requirejs-template>`_
+  * `bdLoad's Dojo page <http://bdframework.org/bdLoad/dojo.html>`_
+  * `RequireJS's Dojo page  <http://requirejs.org/docs/dojo.html>`_
 
 djConfig deprecated
 -------------------
