@@ -83,7 +83,7 @@ Objects returned from store should primarily be treated as normal hash objects a
 Observing Result Sets
 =====================
 
-One can listen for changes in data through the observe method on the result set (the object returned from a query). The observe method has the following signature:
+When a store is wrapped with ``dojo.store.Observable``, one can listen for changes in data through the observe method on the result set (the object returned from a query). The observe method has the following signature:
 
 ========================================================  =======================================================================  
 Method                                                    Description
@@ -93,7 +93,7 @@ observe(listener)                                         The listener function 
                                                                       
                                                           The object parameter indicates the object that was create, modified, or deleted. * The removedFrom parameter indicates the index in the result array where the object used to be. If the value is -1, then the object is an addition to this result set (due to a new object being created, or changed such that it is a part of the result set). * The insertedInto parameter indicates the index in the result array where the object should be now. If the value is -1, then the object is a removal from this result set (due to an object being deleted, or changed such that it is not a part of the result set).
 
-`close <dojo/store/resultset/close>`_                     When close() is called on a result set, notifications will no longer be fired.
+close                                                     When close() is called on a result set, notifications will no longer be fired.
 ========================================================  =======================================================================
 
 ==============================
@@ -122,7 +122,7 @@ We are also moving in the direction of providing composable functionality by pro
 
   Adds caching capability to the store. This eliminates the need for a base store to deal with caching concerns.
 
-* Future: `JsonSchema`_
+* Future: JsonSchema
 
   Handles validation of data through JSON Schema as well object referencing through JSON Schema's link definitions.
 
