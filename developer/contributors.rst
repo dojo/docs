@@ -222,6 +222,7 @@ A list of individuals who have signed Dojo CLAs:
 * Irish, Paul 
 * Irrschik, Manuels 
 * Irwin, Matthew
+* Isik, Hakan
 * Issakov, Antony 
 * James, Stephen
 * Jenkins, Adam 
