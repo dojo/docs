@@ -56,3 +56,4 @@ Migration
 Dijit
 -----
 - Many widgets which used to include the parser no longer do.   If your page isn't parsing, check that you remembered the dojo.require("dojo.parser") call
+- Many widgets which used to extend _Templated now extend _TemplatedMixin.   If you have custom widgets that extend standard widgets, and use widgetsInTemplate: true, you may need to also mixin dijit._WidgetsInTemplate
