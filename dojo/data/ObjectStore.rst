@@ -34,3 +34,12 @@ Examples
    store: dataStore,
    ...
  });
+
+====================
+Implementation Notes
+====================
+
+ObjectStore's logic for the ``fetch`` function assumes that if the given query is an object, it is a map of key/value pairs.  It then proceeds to create regular expressions out of each value in the map, but makes the original value available via the ``toString`` method.  This means that for a dojo.store implementation to operate successfully when run through the ``dojo.data.ObjectStore`` adapter, one of two things must be true of the dojo.store's ``query`` implementation for handling query objects:
+
+* it must be capable of handling values in the object as regular expressions (e.g. ``dojo.store.Memory`` by way of ``dojo.store.util.SimpleQueryEngine``)
+* (or) it must call toString (perhaps implicitly) on each value (e.g. ``dojo.store.JsonRest`` by way of ``encodeURIComponent``).
