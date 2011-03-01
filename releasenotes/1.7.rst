@@ -52,3 +52,7 @@ Util
 =========
 Migration
 =========
+
+Dijit
+-----
+- Many widgets which used to include the parser no longer do.   If your page isn't parsing, check that you remembered the dojo.require("dojo.parser") call
