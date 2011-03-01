@@ -41,6 +41,11 @@ A new mixin called _TemplatedMixin has been added.  It's lighter weight than _Te
 
 _Templated's functionality and API haven't changed.
 
+_CalendarLite
+-------------
+TODO: Bill
+
+
 =====
 DojoX
 =====
@@ -57,3 +62,4 @@ Dijit
 -----
 - Many widgets which used to include the parser no longer do.   If your page isn't parsing, check that you remembered the dojo.require("dojo.parser") call
 - Many widgets which used to extend _Templated now extend _TemplatedMixin.   If you have custom widgets that extend standard widgets, and use widgetsInTemplate: true, you may need to also mixin dijit._WidgetsInTemplate
+- The dijit.Calendar template has been modified to have ${!dayCellsHtml} and ${!dateRowsHtml} variables for the M-F (days of week) row, and the 1-31 days-of-the-month cells.  Custom calendar templates should be updated to contain these variables rather than markup for those sections.  If custom versions of Calendar need to modify the structure of days-of-week or days-of-month cells, they can override the new Calendar attributes: dowTemplateString, dateTemplateString, and weekTemplateString.
