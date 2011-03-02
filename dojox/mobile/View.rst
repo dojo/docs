@@ -40,7 +40,7 @@ Declarative example
 
 In this example, there are two Views, "view1" and "view2", and the user can move the views back and forth.
 
-.. code-block :: javascript
+.. code-block :: html
 
   <div id="view1" dojoType="dojox.mobile.View" selected="true">
     <h1 dojoType="dojox.mobile.Heading">View 1</h1>
