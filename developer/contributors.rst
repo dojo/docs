@@ -91,6 +91,7 @@ A list of individuals who have signed Dojo CLAs:
 * Comer, Kevin 
 * Conaway, Kevin 
 * Conlon, Martin John 
+* Conroy, Matt
 * Cooper, James Cameron
 * Cope, Wesley D. 
 * Coquet, Miguel 
