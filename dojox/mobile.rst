@@ -30,6 +30,7 @@ Features
 
   * `View <dojox/mobile/View>`_- A single 'view'
   * `ScrollableView <dojox/mobile/ScrollableView>`_- A view with touch scroll
+  * `FlippableView <dojox/mobile/FlippableView>`_- A view that can be swiped horizontally
   * `Switch <dojox/mobile/Switch>`_ - An on/off toggle-style button.
   * `Button <dojox/mobile/Button>`_ - Styled to match the device.
   * `Heading <dojox/mobile/Heading>`_ - Styled to match the device
