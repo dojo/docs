@@ -279,6 +279,12 @@ Provides a new way to support lazy loading(virtual scrolling) for nested childre
 
   * `LazyTreeGrid  <dojox/grid/LazyTreeGrid>`_
 
+Uploader
+--------
+An HTML5 file input that handles multiple file selections, upload progress, and deprecates to a SWF file for non-HTML5 compliant browsers (ergo, IE6-IE9) The dojox.form.Uploader is an improvement upon, and replaces the dojox.form.FileUploader. Uploader works very well in Dialogs and Tabs, which were the bane of FielUploader.
+
+  * `Uploader  <dojox/form/Uploader>`_
+
 ====
 Util
 ====
