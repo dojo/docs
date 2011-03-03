@@ -229,6 +229,7 @@ notContains				string
 notStartsWith			string 
 notEndsWith				string 
 range					date, time 
+isEmpty				number, string, date, time, boolean 
 ======================	===================================
 
 =====
@@ -503,6 +504,7 @@ largerEqual  number                                2                        The 
 contains     string                                2                        The value of the 1st operand contains that of the 2nd operand
 startsWith   string                                2                        The value of the 1st operand starts with that of the 2nd operand
 endsWith     string                                2                        The value of the 1st operand ends with that of the 2nd operand
+isEmpty      string, number, date, time, boolean   1                        The value is empty
 ===========  ====================================  =======================  ================================================================================
 
 
