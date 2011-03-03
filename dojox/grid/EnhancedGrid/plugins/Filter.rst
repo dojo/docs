@@ -166,15 +166,6 @@ itemsName                  String    "items"          The name of the items in t
                                                       For example, if the data in the store are records of songs, you may set it to "songs", 
                                                       so the filter bar will display "10 of 100 songs" instead of "10 of 100 items" when there's some filter applied.
 closeFilterbarButton       Boolean   false            Whether to hide the close-filterbar button.
-cacheSize                  Integer   -1               The cache size of the filter. Only valid when using client filter. 
-                                                      The client filter will cache the filtered data for future use,avoiding duplicate filtering. 
-                                                      Any negative value or zero means "cache all" (the cache size is infinite).
-                                                      Note: A positive cache size is only meaningful when there is too much store data at server-side 
-                                                      to be loaded completely to client-side, or it's not possible to implement a server-side filter.
-fetchAll                   Boolean   true             If true, the grid will filter every item in the data store on the first fetch query. 
-                                                      If false, the grid will stop fetching as soon as one page of filtered data is collected. 
-                                                      (The page size can be configured by the "rowsPerPage" property of grid).
-                                                      The default value is true, because client-side filter is most likely used for small data stores.
 disabledConditions         Object    undefined        Disable some condition for some type or "anycolumn", so the user will not see them in the condition Select box.
 isServerSide               Boolean   false            If this is true, the actual filtering work will be taken over by the server. 
                                                       This is used to switch between client-side filter and server-side filter.
