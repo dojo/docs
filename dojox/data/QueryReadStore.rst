@@ -12,7 +12,7 @@ dojox.data.QueryReadStore
   :depth: 2
 
 
-QueryReadStore is very similar to ItemReadStore. They both use JSON as their exchange format. The difference is in the way they query data. ItemReadStore makes one fetch from the server, and handles all sorting and filtering in the client. That's fine for hundreds of records, even thousands. But for hundreds of thousands of records or slow Internet connections, that's less feasible.
+QueryReadStore is very similar to `ItemFileReadStore <dojo/data/ItemFileReadStore>`_. They both use JSON as their exchange format. The difference is in the way they query data. ItemFileReadStore makes one fetch from the server, and handles all sorting and filtering in the client. That's fine for hundreds of records, even thousands. But for hundreds of thousands of records or slow Internet connections, that's less feasible.
 
 ==============
 Supported APIs
