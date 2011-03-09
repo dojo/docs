@@ -23,6 +23,8 @@ When the user edits the value, or when sending data to the server, or when retre
 
 To further restrict/validate user input, this widget makes additional numeric ``constraints`` properties (``min`` and ``max``) available to the developer.
 
+**Warning**: if you use programmatic creation without direct value, be sure to cast your value to ``Number`` (``value: Number(input.value)``) otherwise you'll get strange results (unformatted values and errors depending on locales).
+
 
 ========
 Examples
