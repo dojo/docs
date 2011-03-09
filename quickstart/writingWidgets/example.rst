@@ -76,7 +76,17 @@ As we said earlier, it's preferrable to separate the template out into a differe
 
 Note how we assign classes to each major part, so we can apply design as CSS styles. We're also using dojoAttachPoint="aString" so the parser makes these nodes available to us in code at the location this.fileInput.
 
-For now, let's make sure our widget starts up, and looks right. Let's make some simple css rules using the class names we set in our template:
+There's one more thing: the base class _Widget automatically copies certain attributes like `id` and `name` to the widget's top level node.
+Since we don't want that functionality in this case, we should override it, by adding the following code to the widget's
+javascript:
+
+.. code-block :: javascript
+
+    _setIdAttr: null,
+    _setNameAttr: null
+
+
+OK, let's make sure our widget starts up, and looks right. Let's make some simple css rules using the class names we set in our template:
 
 .. code-block :: css
 
