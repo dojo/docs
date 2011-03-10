@@ -253,7 +253,7 @@ And here is an example for spider chart:
     seriesFillAlpha:	 0.2,
     markerSize:  	 3,
     precision:		 0,
-    spiderType:	 	 "ploygon"
+    spiderType:	 	 "polygon"
   });
   chart.addSeries("China", {data: {"GDP": 2,"area": 6,"population": 2000,"inflation": 15,"growth": 12}}, { fill: "blue" });
   chart.addSeries("USA", {data: {"GDP": 3,"area": 20,"population": 1500,"inflation": 10,"growth": 3}}, { fill: "green" });
