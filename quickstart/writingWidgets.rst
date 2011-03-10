@@ -228,7 +228,7 @@ So, putting that all together the source becomes:
 Attributes
 ==========
 
-All widgets have attributes that can be set on widget creation, or changed during the use of the widget, much like DOM nodes have attributes.   The main difference is that to get/set widget attributes after creation, you need to call the attr() method.
+All widgets have attributes that can be set on widget creation, or changed during the use of the widget, much like DOM nodes have attributes.   The main difference is that to get/set widget attributes after creation, you need to call the set() and get() methods.
 
 But how do you as a widget writer make your widget have attributes, and handle when the caller changes their value?
 
@@ -239,23 +239,23 @@ As a widget writer, you need to declare all your widget parameters in the protot
 .. code-block:: javascript
 
 	// label: String
-	// Button label
+	//      Button label
 	label: "push me"
 
 .. code-block:: javascript
 
 	// duration: Integer
-	// Milliseconds to fade in/out
+	//      Milliseconds to fade in/out
 	duration: 100
 
 .. code-block:: javascript
 
 	// open: Boolean
-	// Whether pane is visible or hidden
+	//      Whether pane is visible or hidden
 	open: true
 
 Note that all the documentation for an attribute needs to go next
-to the attribute definition, even when you need special documentation about how attr() performs for that
+to the attribute definition, even when you need special documentation about how set() performs for that
 widget.  For example:
 
 .. code-block:: javascript
@@ -268,11 +268,13 @@ widget.  For example:
   value: new Date()
 
 
-attributeMap
-------------
-Often widget attributes are mapped into the widget's DOM.   For example, a TitlePane has a "title" parameter which becomes the innerHTML of the TitlePane.titleNode DOM node (where titleNode is defined as a dojoAttachPoint, see above).
+Mapping widget attributes to DOMNode attributes
+-----------------------------------------------
+Often widget attributes are mapped into the widget's DOM.  For example, the tabIndex setting on a widget should map to that widget's focusNode.
 
-You might think that that mapping would be specified inside of the widget's template, but actually it's specified in something called the "attributeMap".  attributeMap can map widget attributes to DOM node attributes, innerHTML, or class.
+This is not done by putting ${...} strings inside the widget's template.   Actually, most of the time, the mapping happens automatically.   Standard DOMNode attributes like tabIndex, alt, aria-labelledby, etc. are copied to the widget's "focusNode" if it's defined, or to the "domNode" otherwise.
+
+You can also explicitly specify mappings to DOM node attributes, innerHTML, or class, overriding the default behavior.   This allows more complicated mappings, like when TitlePane has a "title" parameter which becomes the innerHTML of the TitlePane.titleNode DOM node (where titleNode is defined as a dojoAttachPoint, see above).
 
 That explanation is confusing, but an example will help.
 
@@ -283,7 +285,7 @@ Here's a simple widget for displaying a business card.  The widget has 3 paramet
   * CSS class name to apply to name
 
 
-Each parameter is specified in the attributeMap to say how it relates to the template:
+Each parameter has a corresponding _setXXXAttr to say how it relates to the template:
 
 .. code-example::
   :djConfig: parseOnLoad: false
@@ -297,22 +299,23 @@ Each parameter is specified in the attributeMap to say how it relates to the tem
 	
 		dojo.addOnLoad(function(){
 			dojo.declare("BusinessCard", [dijit._Widget, dijit._Templated], {
-				// Initialization parameters
-				name: "unknown",
-				nameClass: "employeeName",
-				phone: "unknown",
-	
 				templateString:
 					"<div class='businessCard'>" +
 						"<div>Name: <span dojoAttachPoint='nameNode'></span></div>" +
 						"<div>Phone #: <span dojoAttachPoint='phoneNode'></span></div>" +
 					"</div>",
 	
-				attributeMap: {
-					name: { node: "nameNode", type: "innerHTML" },
-					nameClass: { node: "nameNode", type: "class" },
-					phone: { node: "phoneNode", type: "innerHTML" },
 				}
+
+				// Attributes
+				name: "unknown",
+				_setNameAttr: { node: "nameNode", type: "innerHTML" },
+
+				nameClass: "employeeName",
+				_setNameClassAttr: { node: "nameNode", type: "class" },
+
+				phone: "unknown",
+				_setPhoneAttr: { node: "phoneNode", type: "innerHTML" }
 			});
 	
 			// Call the parser manually so it runs after our widget is defined
@@ -340,41 +343,36 @@ Each parameter is specified in the attributeMap to say how it relates to the tem
 	<span dojoType="BusinessCard" name="John Smith" phone="(800) 555-1212"></span>
 	<span dojoType="BusinessCard" name="Jack Bauer" nameClass="specialEmployeeName" phone="(800) CALL-CTU"></span>
 
-Also note how the first example uses the default value of nameClass whereas the second example uses a custom value.   We could also have made a parameter called "class", and mapped it to this.domNode.   Note though that you need to put quotes around the name as it's a reserved word in javascript.
 
 To map a widget attribute to a DOM node attribute, you do:
 
 .. code-block :: javascript
 
-  attributeMap: {
-		disabled: {node: "focusNode", type: "attribute" }
-  },
+  _setDisabledAttr: {node: "focusNode", type: "attribute" }
+
 
 or alternately just
 
 .. code-block :: javascript
 
-  attributeMap: {
-		disabled: "focusNode"
-  },
+  _setDisabledAttr: "focusNode"
 
-using attributes
+Both code blocks copy the widget's "disabled" attribute onto the focusNode DOM node in the template.
+
+A more complicated example to map an attribute called "img" to this.imageNode.src:
 
 .. code-block :: javascript
 
-  attributeMap: {
-		img: {node: "imageNode", type: "attribute", attribute: "src" }
-  },
+  _setImgAttr: {node: "imageNode", type: "attribute", attribute: "src" }
 
-Both code blocks copy the widget's "disabled" attribute onto the focusNode DOM node in the template.
 
 
 Custom setters/getters
 ----------------------
 
-When you have an attribute where setting/getting it is more complicated than attributeMap can
-handle, you need to write custom getters/setters for it. The naming convention (for an attribute named foo) is _setFooAttr() and
-_getFooAttr(). attr() will automatically detect and call these custom setters.
+When you have an attribute where setting/getting it is more complicated than an object like above can
+handle, you need to write custom getters/setters methods for it.   Like above, the naming convention (for an attribute named foo) is _setFooAttr() and
+_getFooAttr(). set() and get() will automatically detect and call these custom setters.
 
 Here's an example of a behavioral widget (it uses the DOM node from the supplied markup) that has an "open" attribute that controls whether the widget is hidden or shown:
 
