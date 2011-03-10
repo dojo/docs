@@ -15,7 +15,7 @@ Browser support
 The following browsers are supported. If a browser is not supported, it still may work, but no effort is taken to test unsupported browsers and any specific fix for an unsupported browser is likely not to be done:
 
   * Firefox 3.6/4.0
-  * Safari 5 and Chrome 9
+  * Safari 5 and Chrome 10
   * IE6, IE7, IE8, IE9
   * Opera 10.50 and later (Dojo core only)
 
@@ -85,3 +85,12 @@ Dijit
 - Many widgets which used to extend _Templated now extend _TemplatedMixin.   If you have custom widgets that extend standard widgets, and use widgetsInTemplate: true, you may need to also mixin dijit._WidgetsInTemplate
 
 - The dijit.Calendar template has been modified to have ${!dayCellsHtml} and ${!dateRowsHtml} variables for the M-F (days of week) row, and the 1-31 days-of-the-month cells.  Custom calendar templates should be updated to contain these variables rather than markup for those sections.  If custom versions of Calendar need to modify the structure of days-of-week or days-of-month cells, they can override the new Calendar attributes: dowTemplateString, dateTemplateString, and weekTemplateString.
+
+- The following widgets and mixins have been split off to their own files, so be sure to require them explicitly if you are using them:
+
+   * dijit.form.DropDownButton (formerly in dijit/form/Button)
+   * dijit.form.ComboButton (formerly in dijit/form/Button)
+   * dijit.form.ToggleButton (formerly in dijit/form/Button)
+   * dijit.form.MappedTextBox (formerly in dijit/form/ValidationTextBox)
+   * dijit.form.RangeBoundTextBox (formerly in dijit/form/ValidationTextBox)
+   * dijit.form.RadioButton (formerly in dijit/form/Checkbox)
