@@ -181,6 +181,10 @@ ProgressBar
 -----------
 - new "label" parameter for customizing the label displayed (overriding the "12%" type default label), or for using a label with an indeterminate progress bar.    Set the label via standard label="...." markup or myProgressBar.set("label", "Loading mail...") API.
 
+Dialog
+------
+- ``onHide`` is now called *after* the dialog's hide animation finishes.  (e.g. now it's safe to destroy the dialog, if desired.)
+
 TabContainer
 ------------
 - Tab icons also appear in Menu
