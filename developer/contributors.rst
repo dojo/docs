@@ -53,6 +53,7 @@ A list of individuals who have signed Dojo CLAs:
 * Bond, Edward 
 * Bordet, Simone 
 * Bottard, Eric 
+* Bouchon, Paul
 * Boyer, Marc 
 * Braid, Cameron 
 * Braun, Terry 
