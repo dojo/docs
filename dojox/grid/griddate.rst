@@ -24,7 +24,7 @@ Editable Date Field with Date Object in Store
 		dojo.require("dojo.data.ItemFileWriteStore");
 		dojo.require("dojox.grid.DataGrid");
 		//dojo.require("dojox.grid.cells.dijit");
-		//dojo.require("dojo.date.stamp");
+		dojo.require("dojo.date.stamp");
 		
 		var store = new dojo.data.ItemFileWriteStore({
 			data: {
