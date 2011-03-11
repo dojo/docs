@@ -598,7 +598,7 @@ A list of corporations or organizations with a CLA on file:
 * GCGF 
 * Global Media Systems 
 * GreenPlum 
-* IBM 
+* IBM:Adam Peller, Becky Gibson, David Boloker, William Keese, Christopher Mitchell, Douglas Hays, Jared Jurkiewicz,William Higgins,Richard Backhouse
 * Indico Group 
 * Laszlo Systems, Inc. 
 * Livando.com
