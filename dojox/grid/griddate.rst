@@ -23,8 +23,8 @@ Editable Date Field with Date Object in Store
 	<script type="text/javascript">
 		dojo.require("dojo.data.ItemFileWriteStore");
 		dojo.require("dojox.grid.DataGrid");
-		dojo.require("dojox.grid.cells.dijit");
-		dojo.require("dojo.date.stamp");
+		//dojo.require("dojox.grid.cells.dijit");
+		//dojo.require("dojo.date.stamp");
 		
 		var store = new dojo.data.ItemFileWriteStore({
 			data: {
@@ -46,10 +46,10 @@ Editable Date Field with Date Object in Store
 		var layout = [
 			{name: 'Index', field: 'id'},
 			{name: 'Date', field: 'date', editable: true, width: 10,
-				type: dojox.grid.cells.DateTextBox, 
+				//type: dojox.grid.cells.DateTextBox, 
 				//Override the default getValue function
-				getValue: getDate,
-				constraint: {formatLength: 'long', selector: "date"}
+				//getValue: getDate,
+				//constraint: {formatLength: 'long', selector: "date"}
 			}
 		];
 	</script>
