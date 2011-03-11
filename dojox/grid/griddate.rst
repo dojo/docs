@@ -16,7 +16,7 @@ Editable Date Field with Date Object in Store
   :toolbar: themes, versions, dir
   :version: local
   :width: 200
-  :height: 150
+  :height: 200
 
   .. javascript::
 
@@ -78,7 +78,7 @@ Editable Date Field with ISO Format in Store
   :toolbar: themes, versions, dir
   :version: local
   :width: 200
-  :height: 150
+  :height: 200
 
   .. javascript::
 
@@ -141,7 +141,7 @@ Editable Date Field with Custom Format in Store
   :toolbar: themes, versions, dir
   :version: local
   :width: 200
-  :height: 150
+  :height: 200
 
   .. javascript::
 
@@ -213,7 +213,7 @@ Dijit Date Field with Integer in Store
   :toolbar: themes, versions, dir
   :version: local
   :width: 300
-  :height: 150
+  :height: 200
 
   .. javascript::
 
