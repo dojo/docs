@@ -1,0 +1,134 @@
+#format dojo_rst
+
+dojox.mobile.TabBar
+===================
+
+:Status: Draft
+:Version: 1.0
+:Authors: Yoshiroh Kamiyama
+:Developers: Yoshiroh Kamiyama
+:Available: since V1.6
+
+.. contents::
+    :depth: 2
+
+TabBar is a container widget that has typically multiple TabBarButtons which controls visibility of views. It can be used as a tab container. There was dojox.mobile.TabContainer in dojo-1.5, but it is obsolete. In dojo-1.6, use TabBar instead of TabContainer.
+
+.. image:: TabBar.png
+
+======================
+Constructor Parameters
+======================
+
++--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
+|Parameter     |Type      |Default  |Description                                                                                                |
++--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
+|iconBase      |String    |         |The default icon path for child items. If a child item does not have its own icon parameter specified,     |
+|              |          |         |this value is used as its icon path. This parameter is especially useful when all or most of the icons are |
+|              |          |         |the same, or you use CSS sprite icons, where you specify an aggregated icon image with this parameter and  |
+|              |          |         |an icon position for each icon.                                                                            |
++--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
+|iconPos       |String    |         |The default icon position for child items. This parameter is especially useful when all or most of the     |
+|              |          |         |icons are the same.                                                                                        |
++--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
+|barType       |String    |tabBar   |"tabBar"(default) or "segmentedControl".                                                                   |
++--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
+
+=====
+Usage
+=====
+
+TabBar is in a separate module file from _base.js. You need to dojo.require TabBar as below.
+
+.. code-block :: javascript
+
+  dojo.require("dojox.mobile.TabBar");
+
+========
+Examples
+========
+
+Tab Bar
+-------
+
+.. code-block :: html
+
+  <ul dojoType="dojox.mobile.TabBar">
+    <li dojoType="dojox.mobile.TabBarButton" icon1="images/tab-icon-16.png" icon2="images/tab-icon-16h.png" moveTo="view1" selected="true">New</li>
+    <li dojoType="dojox.mobile.TabBarButton" icon1="images/tab-icon-15.png" icon2="images/tab-icon-15h.png" moveTo="view2">What's Hot</li>
+    <li dojoType="dojox.mobile.TabBarButton" icon1="images/tab-icon-10.png" icon2="images/tab-icon-10h.png" moveTo="view3">Genius</li>
+  </ul>
+
+.. image:: TabBar-example1.png
+
+Tab Bar (CSS Sprite)
+--------------------
+
+In this example, an aggregated icon image as below is used for each TabBarButton icon. This way the number of requests to the server can be reduced and thus the performance could be improved.
+
+.. image:: tab-icons.png
+
+(tab-icons.png)
+
+.. code-block :: html
+
+  <ul dojoType="dojox.mobile.TabBar" iconBase="images/tab-icons.png">
+    <li dojoType="dojox.mobile.TabBarButton" iconPos1="0,0,29,29" iconPos2="29,0,29,29" selected="true">Featured</li>
+    <li dojoType="dojox.mobile.TabBarButton" iconPos1="0,29,29,29" iconPos2="29,29,29,29">Categories</li>
+    <li dojoType="dojox.mobile.TabBarButton" iconPos1="0,58,29,29" iconPos2="29,58,29,29">Top 25</li>
+    <li dojoType="dojox.mobile.TabBarButton" iconPos1="0,87,29,29" iconPos2="29,87,29,29">Search</li>
+    <li dojoType="dojox.mobile.TabBarButton" iconPos1="0,116,29,29" iconPos2="29,116,29,29">Updates</li>
+  </ul>
+
+.. image:: TabBar-example2.png
+
+Segmented Control
+-----------------
+
+.. code-block :: html
+
+  <ul dojoType="dojox.mobile.TabBar" barType="segmentedControl">
+    <li dojoType="dojox.mobile.TabBarButton" icon1="images/tab-icon-16.png" icon2="images/tab-icon-16h.png" moveTo="view1" selected="true">New</li>
+    <li dojoType="dojox.mobile.TabBarButton" icon1="images/tab-icon-15.png" icon2="images/tab-icon-15h.png" moveTo="view2">What's Hot</li>
+    <li dojoType="dojox.mobile.TabBarButton" icon1="images/tab-icon-10.png" icon2="images/tab-icon-10h.png" moveTo="view3">Genius</li>
+  </ul>
+
+.. image:: TabBar-example3.png
+
+Grouped Tab Bar
+---------------
+
+TabBar forms kind of tab container whose panes are views. You may, however, want to treat the entire tab container as one view. In such cases, you can nest the view classes as shown in the following example. In this example, view1, view2, and view3 are in the top level view group1. You can move to the hello view from view1 or view2, and then return to top level view (=group1) instead of a specific child view (view1, view2, or view3). When you return to group1, the currently visible view in group1 is shown.
+
+.. code-block :: html
+
+  <div id="group1" dojoType="dojox.mobile.View" selected="true">
+    <ul dojoType="dojox.mobile.TabBar" barType="segmentedControl" fixed="top">
+      <li dojoType="dojox.mobile.TabBarButton" moveTo="view1" selected="true">New</li>
+      <li dojoType="dojox.mobile.TabBarButton" moveTo="view2">What's Hot</li>
+      <li dojoType="dojox.mobile.TabBarButton" moveTo="view3">Genius</li>
+    </ul>
+
+    <div id="view1" dojoType="dojox.mobile.ScrollableView" selected="true">
+      <ul dojoType="dojox.mobile.EdgeToEdgeList">
+	<li dojoType="dojox.mobile.ListItem" moveTo="hello">Hello</li>
+      </ul>
+    </div>
+
+    <div id="view2" dojoType="dojox.mobile.ScrollableView">
+      <ul dojoType="dojox.mobile.RoundRectList">
+	<li dojoType="dojox.mobile.ListItem" moveTo="hello">Hello</li>
+      </ul>
+    </div>
+
+    <div id="view3" dojoType="dojox.mobile.ScrollableView">
+      <div dojoType="dojox.mobile.RoundRect" shadow="true">View3</div>
+    </div>
+  </div>
+
+  <div dojoType="dojox.mobile.ScrollableView" id="hello">
+    <h1 dojoType="dojox.mobile.Heading" back="Group1" moveTo="group1">Hello</h1>
+    <div dojoType="dojox.mobile.RoundRect" shadow="true">Hello View</div>
+  </div>
+
+.. image:: TabBar-group-anim.gif
