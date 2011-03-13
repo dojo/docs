@@ -31,19 +31,21 @@ Features
   * `View <dojox/mobile/View>`_- A single 'view'
   * `ScrollableView <dojox/mobile/ScrollableView>`_- A view with touch scroll
   * `FlippableView <dojox/mobile/FlippableView>`_- A view that can be swiped horizontally
-  * `Switch <dojox/mobile/Switch>`_ - An on/off toggle-style button.
-  * `Button <dojox/mobile/Button>`_ - Styled to match the device.
   * `Heading <dojox/mobile/Heading>`_ - Styled to match the device
-  * `Round-corner-rectangle-boxes. <dojox/mobile/RoundRect>`_
-  * `Edge-To-Edge category <dojox/mobile/EdgeToEdgeCategory>`_
-  * Edge to Edge List - A basic list of items with equal width.
-  * Round Corner - List of rounded-corner rectangles for data display.
-  * ListItem - Basic list items to use in the various list containers.
-  * IconContainer - A container to house icons for actions/events.
-  * IconItem - A idget for representing an icon and associated actions.
-  * Tab Container - A basic native-looking tab container.
-  * TabPane - A basic container for tab content (used in conjunction with Tab Container)
-  * ProgressIndicator - A native-looking progress bar/display page.
+  * `RoundRect <dojox/mobile/RoundRect>`_ - Rounded-corner rectangle boxes.
+  * `RoundRectCategory <dojox/mobile/RoundRectCategory>`_ - Rounded-corner list category
+  * `EdgeToEdgeCategory <dojox/mobile/EdgeToEdgeCategory>`_ - Edge-To-Edge list category
+  * `RoundRectList <dojox/mobile/RoundRectList>`_ - List of rounded-corner rectangles for data display.
+  * `EdgeToEdgeList <dojox/mobile/EdgeToEdgeList>`_ - A basic list of items with equal width.
+  * `ListItem <dojox/mobile/ListItem>`_ - Basic list items to use in the various list containers.
+  * `Switch <dojox/mobile/Switch>`_ - An on/off toggle-style button.
+  * `IconContainer <dojox/mobile/IconContainer>`_ - A container to house icons for actions/events.
+  * `IconItem <dojox/mobile/IconItem>`_ - A widget for representing an icon and associated actions.
+  * `Button <dojox/mobile/Button>`_ - A button that changes the color when pressed.
+  * `ToolBarButton <dojox/mobile/ToolBarButton>`_ - A button that is placed in the Heading widget.
+  * `TabBar <dojox/mobile/TabBar>`_ - A bar that can have TabBarButtons to control visibility of views.
+  * `TabBarButton <dojox/mobile/TabBarButton>`_ - A button that is placed in the TabBar widget.
+  * `ProgressIndicator <dojox/mobile/ProgressIndicator>`_ - A round spinning graphical indicator.
 
 ====================
 Internationalization
