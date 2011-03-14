@@ -1003,15 +1003,15 @@ There are times when you may wish to update the content of the grid. For example
 Layout multiple views by percentage
 -----------------------------------
 
-Percentages can be used for Grid layout, it can be used either for cell or view. There is one important tip - explicit view widths(either in percentage or in *px | *em) are necessary, and followings are typical usage samples:
+Percentages can be used with Grid layout either as view or cell widths, but there is one important tip - explicit view widths are necessary(either in percentage | px | em), e.g.
 
 .. code-block :: javascript
   :linenos:
 
   var layout =[{width:'80%',//1st view 
-  	        cells:[{name: 'Column 1', field: 'col1', width: "80%"},{name: 'Column 2', field: 'col1', width: "20%"}]},	       
-               {width:'20%', //2nd view
-	        cells:[{name: 'Column 3', field: 'col1'}]}];
+  cells:[{name: 'Column 1', field: 'col1', width: "80%"},{name: 'Column 2', field: 'col1', width: "20%"}]},	       
+  {width:'20%', //2nd view
+  cells:[{name: 'Column 3', field: 'col1'}]}];
 
 ===============================
 Accessibility in 1.3 and Beyond
