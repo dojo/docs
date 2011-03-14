@@ -1010,9 +1010,9 @@ Percentages can be used with Grid layout for view or cell width, and there is on
 
   var layout = [
      {width:'80%',//1st view
-      cells:[{name:'Column 1',field:'col1',width:"60%"},{name:'Column 2',field:'col1',width:"40%"}]},	       
+     cells:[{name:'Column 1',field:'col1',width:"60%"},{name:'Column 2',field:'col2',width:"40%"}]},
      {width:'20%',// 2nd view
-      cells:[{name: 'Column 3', field: 'col1'}]} 
+     cells:[{name:'Column 3',field:'col3'}]}
   ];
 
 ===============================
