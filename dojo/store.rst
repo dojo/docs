@@ -29,16 +29,19 @@ get(id)                                           Retrieves an object by its ide
 
 query(query, options)                             Queries the store using the provided query.
 
-                                                  The returned value should be an array or a promise with forEach, map, filter, reduce, subscribe, and optional close and watch methods, and a total property (the total may be a promise). The options parameter is modeled after the Dojo Data keywordArgs and may include:
+                                                  The returned value should be an array or a promise with forEach, map, filter, reduce, subscribe, and optional close and watch methods, and a total property (the total may be a promise). The options parameter may include the following properties (all our optional):
 
                                                   * start - Starting offset
                                                   * count - Number of objects to return
-                                                  * sort - Follows the Dojo Data sort definition
-                                                  * queryOptions - Follows the Dojo Data queryOptions definition
+                                                  * sort - This is an array of sort definitions, where each definition contains an "attribute" property indicating which property to sort on and a "descending" property indicating the direction of sort. For example: [{attribute:"price, descending: true}]. If the sort parameter is omitted, then the natural order of the store may be applied if there is a natural order.
 
-put(object, options)                              Saves the given object. options.id (optional) indicates the identifier.
+put(object, options)                              Saves the given object. The (optional) options argument may be an object with the following properties (each of these is optional and advisory, stores are not required to implement or respond to each property):
+                                                  * id - Indicates the identity of the object if a new object is created
+                                                  * before - If the collection of objects in the store has a natural ordering, this indicates that the created or updated object should be placed before the object specified by the value of this property.
+                                                  * parent - If the store is hierarchical (with single parenting) this property indicates the new parent of the created or updated object.
+                                                  * overwrite - If this is provided as a boolean it indicates that the object should or should not overwrite an existing object. A value of true indicates that a new object should not be created, the operation should update an existing object. A value of false indicates that an existing object should not be updated, a new object should be created (which is the same as an add() operation). When this property is not provided, either an update or creation is acceptable.
 
-add(object, options)                              Create a new object. options.id (optional) indicates the identifier.
+add(object, options)                              Create a new object. The (optional) options argument is defined the same as put() (except overwrite is assumed to be false).
 
 remove(id)                                        Delete the object by id.
 
