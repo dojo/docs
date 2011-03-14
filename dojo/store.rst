@@ -36,6 +36,7 @@ query(query, options)                             Queries the store using the pr
                                                   * sort - This is an array of sort definitions, where each definition contains an "attribute" property indicating which property to sort on and a "descending" property indicating the direction of sort. For example: [{attribute:"price, descending: true}]. If the sort parameter is omitted, then the natural order of the store may be applied if there is a natural order.
 
 put(object, options)                              Saves the given object. The (optional) options argument may be an object with the following properties (each of these is optional and advisory, stores are not required to implement or respond to each property):
+
                                                   * id - Indicates the identity of the object if a new object is created
                                                   * before - If the collection of objects in the store has a natural ordering, this indicates that the created or updated object should be placed before the object specified by the value of this property.
                                                   * parent - If the store is hierarchical (with single parenting) this property indicates the new parent of the created or updated object.
