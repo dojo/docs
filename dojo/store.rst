@@ -38,7 +38,7 @@ query(query, options)                             Queries the store using the pr
 put(object, options)                              Saves the given object. The (optional) options argument may be an object with the following properties (each of these is optional and advisory, stores are not required to implement or respond to each property):
 
                                                   * id - Indicates the identity of the object if a new object is created
-                                                  * before - If the collection of objects in the store has a natural ordering, this indicates that the created or updated object should be placed before the object specified by the value of this property.
+                                                  * before - If the collection of objects in the store has a natural ordering, this indicates that the created or updated object should be placed before the object specified by the value of this property. A value of null indicates that the object should be last.
                                                   * parent - If the store is hierarchical (with single parenting) this property indicates the new parent of the created or updated object.
                                                   * overwrite - If this is provided as a boolean it indicates that the object should or should not overwrite an existing object. A value of true indicates that a new object should not be created, the operation should update an existing object. A value of false indicates that an existing object should not be updated, a new object should be created (which is the same as an add() operation). When this property is not provided, either an update or creation is acceptable.
 
