@@ -1003,7 +1003,7 @@ There are times when you may wish to update the content of the grid. For example
 Layout multiple views by percentage
 -----------------------------------
 
-Percentages can be used with Grid layout for view or cell width, and there is one important tip - explicit view widths are necessary(either in percentage | px | em), e.g.
+Percentages can be used with Grid layout for view|cell width, but there is one important precondition - explicit view widths are required (in percentage or px or em), e.g.
 
 .. code-block :: javascript
   :linenos:
