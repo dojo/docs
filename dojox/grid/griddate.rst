@@ -26,7 +26,7 @@ Localized Date Field
 		dojo.require("dojo.date.stamp");
 		dojo.require("dojo.date.locale");
 		
-		var store = new dojo.data.ItemFileWriteStore({
+		var store = new dojo.data.ItemFileReadStore({
 			data: {
 				identifier: "id",
 				items: [
