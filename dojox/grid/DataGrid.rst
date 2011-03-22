@@ -1074,6 +1074,8 @@ See also
 
 * `Grid Plugin API <dojox/grid/pluginAPI>`_
 
+* `Demos on how to display and edit date value in grid cells <dojox/grid/griddate>`_
+
 * `Introducing the 1.2 DataGrid <http://www.sitepen.com/blog/2008/07/14/dojo-12-grid/>`_
 * `New Features in Dojo Grid 1.2 <http://www.sitepen.com/blog/2008/10/22/new-features-in-dojo-grid-12/>`_
 * `Dojo Grids: Diving Deeper <http://www.sitepen.com/blog/2007/11/13/dojo-grids-diving-deeper/>`_
