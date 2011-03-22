@@ -23,7 +23,6 @@ Localized Date Field
 	<script type="text/javascript">
 		dojo.require("dojo.data.ItemFileReadStore");
 		dojo.require("dojox.grid.DataGrid");
-		dojo.require("dojox.grid.cells.dijit");
 		dojo.require("dojo.date.stamp");
 		dojo.require("dojo.date.locale");
 		
