@@ -9,7 +9,7 @@ Grid Demos - Cells with DateTextBox
 
 
 =============================================================
-Editable Date Field in Custom Format with ISO Format in Store
+Localized Date Field
 =============================================================
 
 .. code-example::
@@ -21,9 +21,10 @@ Editable Date Field in Custom Format with ISO Format in Store
   .. javascript::
 
 	<script type="text/javascript">
-		dojo.require("dojo.data.ItemFileWriteStore");
+		dojo.require("dojo.data.ItemFileReadStore");
 		dojo.require("dojox.grid.DataGrid");
 		dojo.require("dojox.grid.cells.dijit");
+		dojo.require("dojo.date.stamp");
 		dojo.require("dojo.date.locale");
 		
 		var store = new dojo.data.ItemFileWriteStore({
@@ -38,27 +39,17 @@ Editable Date Field in Custom Format with ISO Format in Store
 				]
 			}
 		});
-
-		var storePattern = 'yyyy-MM-dd';
-		var displayPattern = 'yyyy, MMMM, d';
 		
 		function formatDate(datum){
-			var d = dojo.date.locale.parse(datum, {selector: 'date', datePattern: storePattern});
-			return dojo.date.locale.format(d, {selector: 'date', datePattern: displayPattern});
-		}
-		
-		function getDate(){
-			return dojo.date.locale.format(this.widget.get('value'), {selector: 'date', datePattern: storePattern});
+			//Format the value in store, so as to be displayed.
+			var d = dojo.date.stamp.fromISOString(datum);
+			return dojo.date.locale.format(d, {selector: 'date', formatLength: 'long'});
 		}
 		
 		var layout = [
 			{name: 'Index', field: 'id'},
-			{name: 'Date', field: 'date', editable: true, width: 10,
-				type: dojox.grid.cells.DateTextBox,
-				formatter: formatDate, 
-				//Override the default getValue function
-				getValue: getDate,
-				constraint: {datePattern: displayPattern}
+			{name: 'Date', field: 'date', width: 10,
+				formatter: formatDate	//Custom format, change the format in store. 
 			}
 		];
 	</script>
@@ -81,8 +72,10 @@ Editable Date Field in Custom Format with ISO Format in Store
     </style>
 
 ========================================================
-Date Field in DateTextBox dijit with ISO Format in Store
+Editable Localized Date Field
 ========================================================
+
+Note: In editing mode, the text box will show the data in store, which is ISO format in this case; and no validation is provided.
 
 .. code-example::
   :toolbar: themes, versions, dir
@@ -95,9 +88,8 @@ Date Field in DateTextBox dijit with ISO Format in Store
 	<script type="text/javascript">
 		dojo.require("dojo.data.ItemFileWriteStore");
 		dojo.require("dojox.grid.DataGrid");
-		dojo.require("dojox.grid.cells.dijit");
+		dojo.require("dojo.date.stamp");
 		dojo.require("dojo.date.locale");
-		dojo.require("dijit.form.DateTextBox");
 		
 		var store = new dojo.data.ItemFileWriteStore({
 			data: {
@@ -111,21 +103,18 @@ Date Field in DateTextBox dijit with ISO Format in Store
 				]
 			}
 		});
-
-		var storePattern = 'yyyy-MM-dd';
-		var displayPattern = 'yyyy, MMMM, d';
 		
-		function dijitDate(datum){
-			return new dijit.form.DateTextBox({
-				value: dojo.date.locale.parse(datum, {selector: 'date', datePattern: storePattern}),
-				constraints: {datePattern: displayPattern}
-			});
+		function formatDate(datum){
+			//Format the value in store, so as to be displayed.
+			var d = dojo.date.stamp.fromISOString(datum);
+			return dojo.date.locale.format(d, {selector: 'date', formatLength: 'long'});
 		}
 		
 		var layout = [
 			{name: 'Index', field: 'id'},
-			{name: 'Date', field: 'date', width: 16,
-				formatter: dijitDate
+			{name: 'Date', field: 'date', width: 10,
+				formatter: formatDate,	//Custom format, change the format in store. 
+				editable: true			//Editable cell, will show ISO format in a text box
 			}
 		];
 	</script>
@@ -149,7 +138,7 @@ Date Field in DateTextBox dijit with ISO Format in Store
 
 
 ===============================================================
-Editable Date Field in Custom Format with Date Objects in Store
+Editable Localized Date Field - use DateTextBox when editing
 ===============================================================
 
 .. code-example::
@@ -165,30 +154,115 @@ Editable Date Field in Custom Format with Date Objects in Store
 		dojo.require("dojox.grid.DataGrid");
 		dojo.require("dojox.grid.cells.dijit");
 		dojo.require("dojo.date.stamp");
+		dojo.require("dojo.date.locale");
 		
 		var store = new dojo.data.ItemFileWriteStore({
 			data: {
 				identifier: "id",
 				items: [
-					{id: 1, date: new Date(1262275200000)},
-					{id: 2, date: new Date(1299168000000)},
-					{id: 3, date: new Date(1299513600000)},
-					{id: 4, date: new Date(1171382400000)},
-					{id: 5, date: new Date(1230220800000)}
+					{id: 1, date: '2010-01-01'},
+					{id: 2, date: '2011-03-04'},
+					{id: 3, date: '2011-03-08'},
+					{id: 4, date: '2007-02-14'},
+					{id: 5, date: '2008-12-26'}
 				]
 			}
 		});
-
-		function formatDate(inDatum){
-			return dojo.date.stamp.toISOString(inDatum, {selector: 'date'});
+		
+		function formatDate(datum){
+			//Format the value in store, so as to be displayed.
+			var d = dojo.date.stamp.fromISOString(datum);
+			return dojo.date.locale.format(d, {selector: 'date', formatLength: 'long'});
+		}
+		
+		function getDateValue(){
+			//Override the default getValue function for dojox.grid.cells.DateTextBox
+			return dojo.date.stamp.toISOString(this.widget.get('value'));
 		}
 		
 		var layout = [
 			{name: 'Index', field: 'id'},
-			{name: 'Date', field: 'date', editable: true, width: 10,
-				type: dojox.grid.cells.DateTextBox, 
-				formatter: formatDate,
-				constraint: {formatLength: 'long', selector: 'date'}
+			{name: 'Date', field: 'date', width: 10,
+				formatter: formatDate,				//Custom format, change the format in store. 
+				editable: true,						//Editable cell
+				type: dojox.grid.cells.DateTextBox,	//Use DateTextBox in editing mode
+				getValue: getDateValue,				//Translate the value of DateTextBox to something the store can understand.
+				constraint: {formatLength: 'long'}	//Format the date value shown in DateTextBox
+			}
+		];
+	</script>
+
+  .. html::
+
+   <div id="grid" dojoType="dojox.grid.DataGrid" store="store" structure="layout"></div>
+
+  .. css::
+
+    <style type="text/css">
+    @import "{{ baseUrl }}/dojo/resources/dojo.css";
+    @import "{{ baseUrl }}/dijit/themes/{{ theme }}/{{ theme }}.css";	
+    @import "{{ baseUrl }}/dojox/grid/resources/{{ theme }}Grid.css";
+	
+	#grid{
+		width: 100%;
+		height: 100%;
+	}
+    </style>
+
+================================================================
+Editable Custom Format Date Field - use DateTextBox when editing
+================================================================
+
+.. code-example::
+  :toolbar: themes, versions, dir
+  :version: local
+  :width: 200
+  :height: 200
+
+  .. javascript::
+
+	<script type="text/javascript">
+		dojo.require("dojo.data.ItemFileWriteStore");
+		dojo.require("dojox.grid.DataGrid");
+		dojo.require("dojox.grid.cells.dijit");
+		dojo.require("dojo.date.locale");
+		
+		var store = new dojo.data.ItemFileWriteStore({
+			data: {
+				identifier: "id",
+				items: [
+					//Not ISO format in store
+					{id: 1, date: '2010/01/01'},
+					{id: 2, date: '2011/03/04'},
+					{id: 3, date: '2011/03/08'},
+					{id: 4, date: '2007/02/14'},
+					{id: 5, date: '2008/12/26'}
+				]
+			}
+		});
+		
+		var storePattern = 'yyyy/MM/dd';
+		var displayPattern = 'yyyy, MMMM, d';
+		
+		function formatDate(datum){
+			//Format the value in store, so as to be displayed.
+			var d = dojo.date.locale.parse(datum, {selector: 'date', datePattern: storePattern});
+			return dojo.date.locale.format(d, {selector: 'date', datePattern: displayPattern});
+		}
+		
+		function getDateValue(){
+			//Override the default getValue function for dojox.grid.cells.DateTextBox
+			return dojo.date.locale.format(this.widget.get('value'), {selector: 'date', datePattern: storePattern});
+		}
+		
+		var layout = [
+			{name: 'Index', field: 'id'},
+			{name: 'Date', field: 'date', width: 10,
+				formatter: formatDate,						//Custom format, change the format in store. 
+				editable: true,								//Editable cell
+				type: dojox.grid.cells.DateTextBox,			//Use DateTextBox in editing mode
+				getValue: getDateValue,						//Translate the value of DateTextBox to something the store can understand.
+				constraint: {datePattern: displayPattern}	//Format the date value shown in DateTextBox
 			}
 		];
 	</script>
