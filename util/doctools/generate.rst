@@ -17,20 +17,20 @@ Running the doctools parser to extract API documentation data
 Introduction
 ============
 
-In `Dojo Inline Documentation <util/doctools/markup>`_ we detailed the markup syntax and conventions available to document your API inline in your code. These inline docs can be extracted using the doctools parser - a php-based script available in util/docscripts in your svn checkout of the Dojo Toolkit. The parser generates xml and/or json of the entirety of the configured namespaces (dojo, dijit and dojox by default). 
+In `Dojo Inline Documentation <util/doctools/markup>`_ we detailed the markup syntax and conventions available to document your API inline in your code. These inline docs can be extracted using the doctools parser - a php-based script available in util/docscripts in your svn checkout of the Dojo Toolkit. The parser generates xml and/or json of the entirety of the configured namespaces (dojo, dijit and dojox by default).
 
 ===================
 Defining Namespaces
 ===================
 
-The namespaces are defined in util/docscripts/modules, using a simple properties file. This should be named ``your_namespace.module.properties`` (e.g. ``util/docscripts/modules/mycompany.module.properties``) and it contains a simple namespace to path mapping: 
+The namespaces are defined in util/docscripts/modules, using a simple properties file. This should be named ``your_namespace.module.properties`` (e.g. ``util/docscripts/modules/mycompany.module.properties``) and it contains a simple namespace to path mapping:
 
 .. code-block :: javascript
 	:linenos:
-	
+
 	location = ../mycompany
 
-The path is relative to the directory docscripts directory (the directory generate.php is located in). You may also use an fully qualified, absolute path to your namespace's directory. 
+The path is relative to the directory docscripts directory (the directory generate.php is located in). You may also use an fully qualified, absolute path to your namespace's directory.
 
 =============
 Sanity Checks
@@ -42,7 +42,7 @@ For quick sanity checks of your docs you can load up util/docscripts/_browse2.ph
 Parser Usage
 ============
 
-The parser is typically run from the command-line. It is invoked like so: 
+The parser is typically run from the command-line. It is invoked like so:
 
 .. code-block :: javascript
 
@@ -58,13 +58,19 @@ The parser is typically run from the command-line. It is invoked like so:
 	# Comma-separated list of serializations. "xml" and "json" supported
 	php generate.php --serialize=xml,json
 
-	# Runs only the custom namespace, 
+	# Runs only the custom namespace,
 	# serializes to mycompany.xml in the util/mycompany directory
 	php generate.php --outfile=../../apiout/mycompany mycompany
 
-Use the ``outfile`` argument to place the output in the directory/file of your choice. You'll need to create any interceding directories. 
+	# Specifies storage type. "file" (default) and "resource" currently supported.
+	# Since dojo 1.7, a faster "hash" storage is added, which becomes the default.
+	php generate.php --store=file
+	php generate.php --store=mysql --db_host=localhost --db_user=api --db_password=password --db_name=api
 
-Parsing a large codebase (like dojo/dijit/dojox) may take several minutes. 
+
+Use the ``outfile`` argument to place the output in the directory/file of your choice. You'll need to create any interceding directories.
+
+Parsing a large codebase (like dojo/dijit/dojox) may take several minutes.
 
 
 ========
