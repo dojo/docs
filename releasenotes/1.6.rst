@@ -315,6 +315,27 @@ BorderContainer border
 ----------------------
 The `dijit.layout.BorderContainer <dijit/layout/BorderContainer>`_ widget now has no predefined border.   You can specify a border via a style tag if your application needs one.   However, aesthetically the widget should have no border in most cases, including when it's at 100% of the viewport size, or when it's nested inside another layout widget.
 
+Showing dialog from hyperlink
+-----------------------------
+Since dijit.Dialog.show() now returns a Deferred, and due to peculiarities in FF 3.6 (and perhaps other browsers/versions), this won't work correctly:
+
+.. code-block :: html
+
+   <a href="javascript: dialog.show()">show</a>
+
+Instead of showing the Dialog, it will change the browser's URL.    The workaround is to do:
+
+.. code-block :: html
+
+   <a href="javascript: dialog.show() && undefined">show</a>
+
+Alternately, stop using A tags with "href" as a way to execute javascript, and use onclick instead.
+
+.. code-block :: html
+
+   <span onclick="dialog.show()">show</a>
+
+
 DojoX Form manager
 ------------------
 In dojox.form.manager._Mixin, the watch() method has been renamed to watching() to avoid a clash with Stateful's / dijit._Widget's watch() method.
