@@ -38,6 +38,7 @@ A list of individuals who have signed Dojo CLAs:
 * Basler, Mark 
 * Bates, Simon 
 * Baz, David 
+* Beard, Jacob Evan
 * Belongi, Mignon 
 * Benton, Morgan 
 * Berkhout, Just 
