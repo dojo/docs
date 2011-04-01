@@ -57,8 +57,8 @@ In this example, there are two Views, "view1" and "view2", and the user can move
 
 .. image:: View-anim.gif
 
-Declarative example
--------------------
+Programmatic example
+--------------------
 
 .. code-block :: javascript
 
