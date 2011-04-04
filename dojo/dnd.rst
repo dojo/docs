@@ -1,4 +1,4 @@
-#format dojo_rst
+﻿#format dojo_rst
 
 dojo.dnd package
 ================
@@ -137,7 +137,9 @@ The heart of the Container is the ``map`` attribute:
   * ``data`` --- an associated data item.
   * ``type`` --- an associated array of types.
 
-It is not recommended to access ``map`` directly. There are several utility functions to access it. They can be used to virtualize the map, and you can use them with ``dojo.connect()`` so you know when DnD items are added/removed/accessed and use it to customize the behavior:
+Note that ``map`` does not contain a reference to any DOM nodes; its purpose is to store metadata (``data`` and ``type``) associated with the DOM node.  For example, if you wish to programmatically move a dnd item from one ``Source`` to another, you must perform DOM manipulations in addition to moving the item from one ``Source``'s ``map`` to the other ``Source``'s ``map``.
+
+However, It is not recommended to access ``map`` directly. There are several utility functions to access it. They can be used to virtualize the map, and you can use them with ``dojo.connect()`` so you know when DnD items are added/removed/accessed and use it to customize the behavior:
 
 * ``getItem(id)`` --- returns an object with ``data`` and ``type`` described above, which are associated with the node corresponding to that ``id``.
 * ``setItem(id, obj)`` --- associates an object ``obj`` with this ``id``. ``obj`` should define ``data`` and ``type`` attributes.
