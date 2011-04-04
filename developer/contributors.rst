@@ -352,6 +352,7 @@ A list of individuals who have signed Dojo CLAs:
 * Nasonov, Igor 
 * Neden, Sean 
 * Nelson, Stephen 
+* Nepomnyashy, Marat
 * Neuberg, Bradley Keith 
 * Newbill, Christopher 
 * Newlau, Andrei
