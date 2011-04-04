@@ -17,7 +17,7 @@ dojo.store.Cache
 Introduction
 ============
 
-The Cache store provides caching capabilities for stores. The Cache store takes two stores, a master store and caching store. The master store is considered the data authority, all modifications go to the master store, and when data is not available in the cache, it is retrieved from the master store. The caching store is used to record cached data from master store. Doing get() and query() call results are added to the cache (unless they don't meet provided criteria). Data modifications are also mirrored in the caching store. A typical usage of dojo.store.Cache would be to use a JsonRest store as the master store, and a Memory store as the caching store.
+The Cache store provides caching capabilities for stores. The Cache store takes two stores, a master store and caching store. The master store is considered the data authority, all modifications go to the master store, and when data is not available in the cache, it is retrieved from the master store. The caching store is used to record cached data from master store. Doing get() and query() call results are added to the cache (unless they don't meet provided criteria), but only get() uses the cache, whereas query() uses the master store. If you want to a query to come from the cache, directly call query() on the caching store. Data modifications are also mirrored in the caching store. A typical usage of dojo.store.Cache would be to use a JsonRest store as the master store, and a Memory store as the caching store.
 
 ========
 Examples
