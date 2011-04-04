@@ -6,7 +6,7 @@ Dojo Developer's Notebook
 .. contents::
     :depth: 2
 
-This section contains or links to information useful to contributors/committers to dojo:
+This section contains or links to information useful to contributors or committers to dojo:
 
 * `Style guide <developer/styleguide>`_
 
