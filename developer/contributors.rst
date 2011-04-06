@@ -321,6 +321,7 @@ A list of individuals who have signed Dojo CLAs:
 * Mayfield, Justin 
 * McCallister, Brian 
 * McCullough, Ryan 
+* McGee, Daniel
 * McMaster, Doug 
 * McNab, David 
 * Medeiros, Miller H. Borges
