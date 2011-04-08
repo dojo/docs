@@ -55,4 +55,16 @@ See also
 ========
 
 * `Executing JavaScript inside Content Panes <http://dojocampus.org/content/2008/07/30/executing-javascript-inside-content-panes/>`_
-* through the use of the scriptHasHooks setting, a `Deferred instance <dojo/Deferred>`_, onLoadDeferred and it's addCallback , you can simulate the dojo.addOnLoad behavior from inside the loaded content. 
+* through the use of the scriptHasHooks setting, a `Deferred instance <dojo/Deferred>`_, onLoadDeferred and it's addCallback , you can simulate the dojo.addOnLoad behavior from inside the loaded content.
+* An alternative is to set scriptHasHooks=true, and have content like this in your loaded content:
+
+.. code-block :: javascript
+ :linenos:
+
+ <script>
+   dojo.connect(_container_,"onLoad", function() {
+      /* your script */
+   });
+ </script>"
+
+This will connect your local function to the onLoad callback of the enclosing ContentPane.
