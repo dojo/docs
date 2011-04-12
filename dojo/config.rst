@@ -1,7 +1,7 @@
 #format dojo_rst
 
-dojoConfig
-==========
+dojo.config
+===========
 
 :Available: since V0.4
 
@@ -15,7 +15,7 @@ Configuring Dojo with dojoConfig (formerly known as djConfig)
 Introduction
 ============
 
-Dojo allows developers to override certain global settings that control how the framework operates:
+Dojo allows developers to override certain global settings that control how the framework operates, including:
 
 * When using dojo.parser to trigger automatic parsing of dijit objects
 * During the debugging phase of application development
@@ -27,32 +27,32 @@ Dojo allows developers to override certain global settings that control how the 
 Usage
 =====
 
-How to Define dojoConfig
-------------------------
+How to Populate dojo.config
+---------------------------
 
-dojoConfig is a global JavaScript object that is typically created in one of three ways:
+dojo.config is an object defined during Dojo's bootstrap process, which can be populated in one of three ways:
 
 * By specifying its properties in the data-dojo-config="..." attribute of the <script> element in which the dojo core gets included in the document (but see the **warning** below)
-* By explicitly creating the dojoConfig object BEFORE including the dojo core (i.e. dojo.js)
+* By explicitly creating a dojoConfig object BEFORE including the dojo core (i.e. dojo.js)
 * By inclusion within a custom build.
 
 Each of these methods will be explained now.
 
-1. Specifying dojoConfig options via the data-dojo-config="..." attribute
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1. Specifying dojo.config options via the data-dojo-config="..." attribute
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Perhaps the most common way to specify dojoConfig is via the data-dojo-config="..." attribute of the <script> tag that is used to include the dojo framework in the page (i.e. dojo.js). Typically this looks something like this:
+A common way to populate dojo.config is via the data-dojo-config="..." attribute of the <script> tag that is used to include the dojo framework in the page (i.e. dojo.js). Typically this looks something like this:
 
 .. code-block :: javascript
   :linenos:
 
-  <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-  <html>
+  <!DOCTYPE HTML>
+  <html lang="en">
   <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Dojo dojoConfig Tutorial</title>
+      <title>Dojo dojo.config Tutorial</title>
       <script type="text/javascript"
-              src="http://o.aolcdn.com/dojo/1.4.2/dojo/dojo.xd.js"
+              src="http://o.aolcdn.com/dojo/1.6.0/dojo/dojo.xd.js"
               data-dojo-config="parseOnLoad: true, isDebug: true"></script>
   </head>
   <body>
@@ -60,22 +60,22 @@ Perhaps the most common way to specify dojoConfig is via the data-dojo-config=".
   </body>
   </html>
 
-Note that the use of the data- attribute is new and recommended since 1.6. The old djConfig attribute is deprecated but will continue to work until 2.0.
+Note that the use of the data- attribute in the script tag is new and recommended since 1.6. The old djConfig attribute is deprecated but will continue to work until 2.0.
 
 The content of the data-dojo-config="..." attribute is a comma-delimited list of name/value pairs the same as one would use when creating any JavaScript object.
 
-**Warning:  This approach will not work correctly if** your code goes through a proxy that re-writes the HTML and possibly inlines script src files in the HTML. One known case this happens is with UMTS broadband connections. Favor approach #2 below for those cases.
+**Warning:  This approach may not work correctly if** your code goes through a proxy that re-writes the HTML and possibly inlines script src files in the HTML. One known case this happens is with UMTS broadband connections. Favor approach #2 below for those cases.
 
-2. Explicitly creating the dojoConfig object BEFORE including the dojo core
+2. Explicitly creating a dojoConfig object BEFORE including the dojo core
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In cases where lots of attributes must be set in the dojoConfig object, or for developers who prefer not to use dojo's non-standard attributes, the dojoConfig object can be created explicitly BEFORE the main dojo.js library is included in the document. This looks something like:
+In cases where lots of attributes must be set in the dojo.config object, or for developers who prefer not to use the data attribute, dojo.config can be populated by declaring a dojoConfig variable BEFORE the main dojo.js library is included in the document. This looks something like:
 
 .. code-block :: javascript
   :linenos:
 
-  <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-  <html>
+  <!DOCTYPE HTML>
+  <html lang="en">
   <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <title>Dojo dojoConfig Tutorial</title>
@@ -87,15 +87,17 @@ In cases where lots of attributes must be set in the dojoConfig object, or for d
               extraLocale: ['ja-jp']
           };
       </script>
-      <script type="text/javascript" src="http://o.aolcdn.com/dojo/1.4.2/dojo/dojo.xd.js"></script>
+      <script type="text/javascript" src="http://o.aolcdn.com/dojo/1.6.0/dojo/dojo.xd.js"></script>
   </head>
   <body>
       <p>...</p>
   </body>
   </html>
 
-As of Dojo 1.6, the old spelling djConfig has been deprecated in favor of dojoConfig. The old version will continue to work until 2.0.  
+As of Dojo 1.6, the variable name djConfig has been deprecated in favor of dojoConfig. The old spelling will continue to work until 2.0.  
 Note in this example that we've explicitly set a locale for this dojo instance (i.e. US English), and also specified that alongside that the locale resources for Japanese be loaded as well.
+
+Both the data-dojo-config script attribute and the dojoConfig global have the same result - their properties are copied over into dojo.config. In the data attribute case, no dojoConfig global gets created; after bootstrap, dojo.config is the single source of truth for configuration properties. For that reason it is also typically treated as a read-only object - use one of these 2 methods for providing initial values. For brevity's sake, we'll speak of dojoConfig properties from here on. 
 
 3. Including dojoConfig in a Custom Build
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
