@@ -34,7 +34,7 @@ djConfig is a global JavaScript object that is typically created in one of three
 
 * By specifying its properties in the djConfig="..." attribute of the <script> element in which the dojo core gets included in the document (but see the **warning** below)
 * By explicitly creating the djConfig object BEFORE including the dojo core (i.e. dojo.js)
-* By inclusion within a custom build using the builder tool included in the Dojo Toolbox
+* By inclusion within a custom build.
 
 Each of these methods will be explained now.
 
@@ -94,20 +94,15 @@ In cases where lots of attributes must be set in the djConfig object, or for dev
 
 Note in this example that we've explicitly set a locale for this dojo instance (i.e. US English), and also specified that alongside that the locale resources for Japanese be loaded as well.
 
-3. Including djConfig in the Dojo Toolbox Builder
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+3. Including djConfig in a Custom Build
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When creating a custom build it is possible to include the djConfig object into the build via the scopeDjConfig parameter. The `Dojo Toolbox Builder <http://www.sitepen.com/labs/toolbox/>`_ provides a GUI interface via which to do this. The text box for filling in the djConfig object is on the "Advanced Config" tab:
-
-.. image:: DojoToolboxBuilder_djConfig.jpg
-  :alt: Dojo Toolbox Builder djConfig setting;
-
-Note that if you click on the "Command" button at the top of the window, you can see that filling in the djConfig object box sets the scopeDjConfig variable. You can learn more about the scopeDjConfig parameter in the `Dojo Book page on custom builds <http://dojotoolkit.org/book/dojo-book-0-9/part-4-meta-dojo/package-system-and-custom-builds>`_ [except I think this page needs to be updated]. The SitePen blog also has a `good introductory tutorial on using the Dojo Toolbox Builder <http://www.sitepen.com/blog/2008/07/08/dojo-toolbox-first-look/>`__.
+When creating a custom build it is possible to bake the djConfig object into the build via the scopeDjConfig parameter. You can learn more about the scopeDjConfig parameter in the `Dojo build system build script docs <http://dojotoolkit.org/reference-guide/build/buildScript.html>`_.
 
 djConfig Parameters
 -------------------
 
-So now that you know *how* to set global parameters for dojo using djConfig, you'd probably like to know *what* parameters are available for setting. For a quick reference, check out the `djConfig API page <http://api.dojotoolkit.org/jsdoc/dojo/HEAD/djConfig>`_. 
+So now that you know *how* to set global parameters for dojo using djConfig, you'd probably like to know *what* parameters are available for setting. For a quick reference, check out the `dojo.config API page <http://dojotoolkit.org/api/dojo/config>`_. 
 
 The parameters you specify in djConfig are meant to **override** the default settings and do several basic things:
 
@@ -129,7 +124,7 @@ debugContainerId: "yourContainerId"
   If specified, when the page is rendered dojo will look for an element with the specified id and will put the Firebug Lite console window inside that element. This allows developers extra control over the display of the console window and to easily reference it in their own scripts. By default the div containing the console window does not have an id associated with it.
 
 debugAtAllCosts: true
-  This setting offers advanced functionality for debugging your own classes. There is much more information here on `this tutorial on debugging with dojo <http://dojotoolkit.org/book/book-dojo/part-4-meta-dojo-making-your-dojo-code-run-faster-and-better/debugging-facilities/deb>`_. This will break your application, if you pass a variable to dojo.require() instead of a string literal.
+  This setting forces the use of the xdomain loader to ensure all loaded modules have their own script tag. This gives you real line numbers in error messages and a complete list of script urls in most debugging tools. There is much more information here on `this tutorial on debugging with dojo <http://dojotoolkit.org/reference-guide/quickstart/debugging.html>`_. Note, this will break your application, if you pass a variable to dojo.require() instead of a string literal, and if you have code that relies on the synchronous loader i.e. not wrapped in dojo.ready/dojo.addOnLoad.
 
 Language and Localization Settings in djConfig
 ----------------------------------------------
