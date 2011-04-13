@@ -141,6 +141,7 @@ A list of individuals who have signed Dojo CLAs:
 * Ferrydiansyah, Reza 
 * Field, Terry 
 * Firsov, Olekasandr 
+* Fitzgerald, Nick
 * Fitzgerald, Patrick 
 * Follia, Pierpaolo 
 * Forbes, Bryan 
