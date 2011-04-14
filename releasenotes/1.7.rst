@@ -27,9 +27,21 @@ AMD
 ---
 Completion of AMD conversion (Rawld etc. please fill this in)
 
+
 =========
 Dojo Core
 =========
+
+Parser
+------
+The parser has been enhanced so you can specify browser native attributes just like native tags, but specify other attributes in data-dojo-props, for example:
+
+   .. code-block :: html
+
+       <input data-dojo-type="dijit.form.TextBox" name="dept"
+            data-dojo-props="scrollOnFocus: true"/>
+
+We've also fixed a number of parser bugs like how buttons with no type specified because type=submit on IE, rather than type=button.
 
 =====
 Dijit
