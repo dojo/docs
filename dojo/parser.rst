@@ -14,20 +14,20 @@ The Dojo Parser is an optional module which is used to convert specially decorat
 
 This is not limited to Dijit, or `dojo.declare <dojo/declare>`_. 
 
-Inside your HTML you mark nodes for the parser by setting the dojoType attribute, to specify the class of the widget, and other attributes, to specify parameters to the widget.   For example:
+Inside your HTML you mark nodes for the parser by setting the data-dojo-type attribute, to specify the class of the widget, and other attributes, to specify parameters to the widget.   For example:
 
 .. code-block :: html
 
-  <input dojoType="dijit.form.TextBox" name="nm" value="hello world">
+  <input data-dojo-type="dijit.form.TextBox" name="nm" value="hello world">
 
 
-The parser can scan the entire DOM for ``dojoType`` attributes, and create new instances from nodes like this.
+The parser can scan the entire DOM for ``data-dojo-type`` attributes, and create new instances from nodes like this.
 
 The parser also allows function parameters and connections to be done via <script> tags, for example:
 
 .. code-block :: html
 
-    <div dojoType=...>
+    <div data-dojo-type=...>
         <script type="dojo/connect" event="functionToConnectTo">
            console.log("I will execute in addition to functionToConnectTo().");
         </script>
@@ -48,6 +48,8 @@ To include the Dojo parser on your page, require the module `dojo.parser`:
   dojo.require("dojo.parser");
 
 ``note:`` dijit._Templated require()'s dojo.parser, so a lot of examples don't include this step (dijit._Templated is loaded by most every Dijit). It is always safer to explicitly `require <dojo/require>`_ the module than to assume it has been loaded.
+
+Also, starting in 1.7, many widgets extend `dijit._TemplatedMixin <dijit/_TemplatedMixin>` rather than `dijit._Templated <dijit/_Templated>`, so the parser isn't included in that case.
 
 ==================
 Running the Parser
@@ -73,6 +75,18 @@ To run the parser when your page loads, add a djConfig="parseOnLoad: true" to yo
 Parser syntax
 -------------
 
+=====================
+Specifying parameters
+=====================
+
+Attributes which correspond to native HTML attributes appear directly in the markup.    Custom widget parameters are put into the data-dojo-props field.   For example:
+
+.. code-block :: html
+
+       <input data-dojo-type="dijit.form.TextBox" name="dept"
+            data-dojo-props="scrollOnFocus: true"/>
+
+
 ==================
 Boolean parameters
 ==================
@@ -81,27 +95,27 @@ Due to HTML subtleties, for boolean parameters that are false, it's best not to 
 
 .. code-block :: html
 
-  <input dojoType="dijit.form.Button">
+  <input data-dojo-type="dijit.form.Button">
 
 Further, in standard HTML (as opposed to XHTML), the special parameters `checked` and `disabled` and `selected` should be specified as single keywords without a value:
 
 .. code-block :: html
 
-  <input dojoType="dijit.form.Button" disabled>
-  <input dojoType="dijit.form.CheckBox" checked>
+  <input data-dojo-type="dijit.form.Button" disabled>
+  <input data-dojo-type="dijit.form.CheckBox" checked>
 
 In XHTML they should be specified in the official format of repeating the attribute name as the value:
 
 .. code-block :: html
 
-  <input dojoType="dijit.form.Button" disabled="disabled"/>
-  <input dojoType="dijit.form.CheckBox" checked="checked"/>
+  <input data-dojo-type="dijit.form.Button" disabled="disabled"/>
+  <input data-dojo-type="dijit.form.CheckBox" checked="checked"/>
 
 Although specifying disabled="true" will disable a widget, note that the following syntax should not be used as it's unreliable whether it evaluates to true or false:
 
 .. code-block :: html
 
-  <input dojoType="dijit.form.Button" disabled=""/>
+  <input data-dojo-type="dijit.form.Button" disabled=""/>
 
 
 ===============
@@ -111,7 +125,7 @@ Date parameters
 
 .. code-block :: html
 
-  <div dojoType=... when="2009-1-31"></div>
+  <div data-dojo-type=... when="2009-1-31"></div>
 
 Incidentally, this is also how dates are returned to the server when a form is submitted.
 
@@ -120,21 +134,7 @@ Incidentally, this is also how dates are returned to the server when a form is s
 
 .. code-block :: html
 
-  <div dojoType=... when="now"></div>
-
-
-==============
-Type parameter
-==============
-The parameter named `type` must always be specified for a dijit.form.Button widget.   Although the default value of `type` for a dijit.form.Button is "button", if no type is specified then IE8 (and other newer browsers) will interpret the type as "submit".
-
-.. code-block :: html
-
-  <button dojoType="dijit.form.Button" type="button">hello world</button>
-
-
-This is because in the newest version of the HTML specification, the default `type` value for <button> nodes is "submit", not "button".
-
+  <div data-dojo-type=... when="now"></div>
 
 ===================
 Function parameters
@@ -146,14 +146,14 @@ There are two ways to specify a function parameter to a widget, either via an at
   <script>
      function myOnClick(){ ... }
   </script>
-  <div dojoType=... onClick="myOnClick"></div>
+  <div data-dojo-type=... onClick="myOnClick"></div>
 
 
 Alternately, you can inline the text of a function:
 
 .. code-block :: html
 
-  <div dojoType=... onClick="alert('I was clicked');"></div>
+  <div data-dojo-type=... onClick="alert('I was clicked');"></div>
 
 
 ===========
@@ -167,7 +167,7 @@ To perform a dojo.connect() on a method in a widget, use type="dojo/connect" ins
 
 .. code-block :: html
 
-    <div dojoType=...>
+    <div data-dojo-type=...>
         <script type="dojo/connect" event="functionToConnectTo">
            console.log("I will execute in addition to functionToConnectTo().");
         </script>
@@ -181,7 +181,7 @@ In that case use the type="dojo/method" syntax:
 
 .. code-block :: html
 
-    <div dojoType=...>
+    <div data-dojo-type=...>
         <script type="dojo/method" event="functionToOverride">
            console.log("I will execute instead of functionToOverride().");
         </script>
@@ -194,7 +194,7 @@ To execute code on instantiation, use the same format but don't specify an event
 
 .. code-block :: html
 
-    <div dojoType=...>
+    <div data-dojo-type=...>
         <script type="dojo/method">
            console.log("I will execute on instantiation");
         </script>
@@ -207,7 +207,7 @@ For functions that take (named) parameters, specify them in an `args` attribute.
 
 .. code-block :: html
 
-    <div dojoType=...>
+    <div data-dojo-type=...>
         <script type="dojo/connect" event="onChange" args="value">
            console.log("new value is " + value);
         </script>
