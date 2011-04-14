@@ -38,7 +38,7 @@ is identical to:
   <script type="text/javascript">
      dojo.require("dijit.Dialog");
   </script>
-  <div data-dojo-type="dijit.Dialog" data-dojo-props=" title:'Hello Dijit!', id:'someId' "></div>
+  <div data-dojo-type="dijit.Dialog" title="Hello Dijit!" id="someId"></div>
 
 The declarative method requires you include the `dojo.parser <dojo/parser>`_ and have either ``djConfig.parseOnLoad`` set to true, or you manually call ``dojo.parser.parse()`` when you would like the widgets (dijits) to be created.
 
@@ -55,7 +55,7 @@ The declarative method requires you include the `dojo.parser <dojo/parser>`_ and
          myDialog.show();
      });
   </script>
-  <div data-dojo-type="dijit.Dialog" data-dojo-props=" id:'foobar', title:'Foo!' ">
+  <div data-dojo-type="dijit.Dialog" id="foobar" title="Foo!">
      <p>I am some content</p>
   </div> 
 
