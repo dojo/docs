@@ -902,6 +902,12 @@ The first parameter is a chart. The second parameter is the name of a plot. The 
 
 As you can see from the example above you can mixin several actions. In order to avoid unnecessary interference between actions, use your best judgment when selecting them. Try to avoid actions that modify the same visual attributes, like geometry. You can safely mix Tooltip, Highlight, and one geometric action (Magnify, MoveSlice, or Shake).
 
+=================
+Charts as Widgets
+=================
+
+In addition to using the charts programmatically as shown in previous sections, one can declare the chart and its various elements in markup using a chart widget based on the Dijit component model.
+
 The Chart Widget
 ----------------
 
