@@ -156,3 +156,18 @@ Layout
   * `dijit.layout.ContentPane <dijit/layout/ContentPane>`_
   * `dijit.layout.StackContainer <dijit/layout/StackContainer>`_
   * `dijit.layout.TabContainer <dijit/layout/TabContainer>`_
+
+=====================================
+Note about programmatic instantiation
+=====================================
+
+For most of the dijit widgets, you can provide a ``refNode`` which is a placeholder to position your node. Beware that any attribute set on it (form action, input value, `etc`.) won't be taken into account. If you want to degrade nicely and have a non-JS compatible version of your site and avoid duplicating attributes on controls and on instantiation, you should use ``dojo.parser``:
+
+.. code-block :: javascript
+
+ // All attributes of myNode will be preserved in the widget
+ dojo.parser.instantiate([ myNode ], {
+   dojoType: "dijit.form.ValidationTextBox"[,
+   dojoSpecificAttr1: value,
+   dojoSpecificAttr2: value]
+ })
