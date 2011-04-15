@@ -106,3 +106,5 @@ Dijit
    * dijit.form.MappedTextBox (formerly in dijit/form/ValidationTextBox)
    * dijit.form.RangeBoundTextBox (formerly in dijit/form/ValidationTextBox)
    * dijit.form.RadioButton (formerly in dijit/form/Checkbox)
+
+- Menu.js no longer includes MenuItem, PopupMenuItem, CheckedMenuItem, or MenuSeparator.    Be sure to require those widgets explicitly if you are using them.
