@@ -200,9 +200,11 @@ dojo.filter
 
 .. code-block :: javascript
 
-  dojo.filter(array, callback, thisObject)
+  filteredArray = dojo.filter(unfilteredArray, callback, thisObject)
 
-There are many cases when you have an array and want to filter it by a certain condition, say you have an array of people with a last name. You would like to filter those having a certain last name. Lets take a look at anexample
+There are many cases when you have an array and want to filter it by a certain condition, ``dojo.filter`` will only keep values from ``unfilteredArray`` for which ``callback`` returns ``true``. The original array is not modified.
+
+Say you have an array of people with a last name. You would like to filter those having a certain last name. Lets take a look at anexample
 
 .. cv-compound::
 
