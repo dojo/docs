@@ -167,7 +167,7 @@ For most of the dijit widgets, you can provide a ``refNode`` which is a placehol
 
  // All attributes of myNode will be preserved in the widget
  dojo.parser.instantiate([ myNode ], {
-   dojoType: "dijit.form.ValidationTextBox"[,
+   dojoType: "dijit.form.ValidationTextBox",
    dojoSpecificAttr1: value,
-   dojoSpecificAttr2: value]
+   dojoSpecificAttr2: value
  })
