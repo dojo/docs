@@ -69,7 +69,7 @@ All Widgets, that are similar to <input>:
 
 * `dijit.form.TextBox <dijit/form/TextBox>`_
 
-  A basic <input type="text">-style form control
+  A basic <input type="text">-style form control. You can use ``type="hidden"`` to have hidden inputs compatible with ``dijit.form.Form``.
 
 * `dijit.form.TimeTextBox <dijit/form/TimeTextBox>`_
 
