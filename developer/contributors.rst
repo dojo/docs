@@ -85,6 +85,7 @@ A list of individuals who have signed Dojo CLAs:
 * Cho, Youngho 
 * Chong, Petra 
 * Christiansen, Jason 
+* Chung, Stephen
 * Cisternino, Antonio
 * Clark, Patrick
 * Clayton, David 
