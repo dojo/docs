@@ -108,7 +108,7 @@ distribution defines the dojo package to contain the following modules:
   * dojo/_base/url:: contains the dojo._Url (this was contains in dojo/_base/_loader/loader.js in v1.6-)
 
   * dojo/_base/lang, dojo/_base/array, dojo/_base/declare, dojo/_base/connect, dojo/_base/Deferred, dojo/_base/json, and
-  dojo/_base/Color - contains standard dojo base machinery as per the v1.x line
+    dojo/_base/Color - contains standard dojo base machinery as per the v1.x line
 
   * dojo/_firebug/firebug - conditionally loaded as part of dojo base if the configuration flag isDebug is true
 
