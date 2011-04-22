@@ -1,6 +1,7 @@
 #format dojo_rst
 
-= dojo loader and bootstrap =
+dojo loader and bootstrap
+=========================
 
 :Status: Draft
 :Version: 1.7+
@@ -11,8 +12,9 @@
 
 Design Description of the Dojo Loader and Bootstrap
 
-
-== Introduction ==
+============
+Introduction
+============
 
 Dojo may used in a variety of environments, loaded with any of several AMD-compliant loaders, configured through three
 mechanisms, and optimized with the Dojo build system. All of these features are implemented in the Dojo loader and
@@ -23,11 +25,15 @@ developers (that is, developers working on Dojo proper) that need to quickly und
 loader and bootstrap subsystems. Advanced users will also find this information useful in pushing the toolkit in
 atypical applications.
 
-== External References ==
+===================
+External References
+===================
 
 TODOC
 
-== Overall Design ==
+==============
+Overall Design
+==============
 
 The dojo loader is contained in the resource dojo/dojo.js. Although the loader includes several extensions, at its core
 it is simply a CommonJS AMD-compliant loader. When the loader is operating in a non-browser environment, it loads a
@@ -132,7 +138,9 @@ dojo.config, so there is no need to explicitly include dojo/_base/config). For e
 functions defined in dojo/_base/lang; therefore, the AMD dependency vector found in dojo/_base/array explicitly includes
 dojo/_base/lang.
 
-== The Dojo Loader ==
+===============
+The Dojo Loader
+===============
 
 The Dojo loader is contained in the resource dojo/dojo.js. It is a CommonJS AMD-compliant loader, complete with plugin
 support, that defines the following extentions:
@@ -158,12 +166,22 @@ support, that defines the following extentions:
 
   * Module deleting API
 
-== The has.js API ==
+===============
+The has.js API
+===============
 
-== User Configuration ==
+===============
+User Configuration
+===============
 
-== Configuration Switch Reference ==
+===============
+Configuration Switch Reference
+===============
 
-== has.js Feature Reference ==
+===============
+has.js Feature Reference
+===============
 
-== Changes from v1.6 ==
+===============
+Changes from v1.6
+===============
