@@ -116,17 +116,16 @@ distribution defines the dojo package to contain the following modules:
     if the browser environment is detected in dojo/main via the has! plugin.
 
   * dojo/_base/window, dojo/_base/event, dojo/_base/html, dojo/_base/NodeList, dojo/_base/query, dojo/_base/xhr,
-  dojo/_base/fx - contains standard dojo base machinery included in browser environments as per the v1.x line. This are
-  the modules listed in dojo/_base/browser
+    dojo/_base/fx - contains standard dojo base machinery included in browser environments as per the v1.x line. This are
+    the modules listed in dojo/_base/browser
 
 The module dojo (which resolve to the module dojo/main) causes all of the module listed above to be loaded. Put another
 way, writing...
 
-{{{
+.. code-block :: javascript
   define(["dojo"], function(dojo) {
     // do something spectacular...
   });
-}}}
 
 ...causes the factory function given above to have access to the dojo base API.
 
@@ -170,18 +169,18 @@ support, that defines the following extentions:
 The has.js API
 ===============
 
-===============
+==================
 User Configuration
-===============
+==================
 
-===============
+==============================
 Configuration Switch Reference
-===============
+==============================
 
-===============
+========================
 has.js Feature Reference
-===============
+========================
 
-===============
+=================
 Changes from v1.6
-===============
+=================
