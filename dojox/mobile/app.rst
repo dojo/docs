@@ -49,6 +49,17 @@ Note that all JS inclusions are static because some browsers may fail on ``dojo.
 
 This simple examples defines an application whose main scene is "main". When calling ``dojox.mobile.app.init()``, the framework will try to fetch the scene template and its JS initialization code. By default templates are under ``app/views/[scene]/[scene]-scene.html`` and "Assistants" (that is, JS initialization code) is under ``app/assistants/[scene]-assistant.js``. If you want to modify this, you'll have to redeclare ``dojox.mobile.app.resolveTemplate`` and ``dojox.mobile.app.resolveAssistant``.
 
+To load an initial scene other than 'main', set the 'initialScene' value in appInfo to the name of that scene, e.g. 
+
+.. code-block:: html
+
+  var appInfo = {
+          id: "com.mycompany.myapp",
+          title: "My Mobile application",
+          initialScene: 'mycustomscene'
+        };
+
+
 ==============
 View resources
 ==============
@@ -72,21 +83,21 @@ Assistants
 Each view should come with an assistant, which is responsible for the JS setup of the scene. It must extend ``dojox.mobile.app.SceneAssistant`` which provides three methods:
 
  * ``setup()``: called once the scene has been loaded but not displayed. If you want to parse your view, you'll have to do it there through the ``parse()`` method of the ``controller`` field of the assistant;
- * ``activate(data)``: called every time the view is made visible. Data will contains optional data transmitted by the leaved view;
- * ``deactivate()``: called each time the view is hidden.
+ * ``activate(data)``: called every time the view is made visible. Data will contains optional data transmitted by the previous view;
+ * ``deactivate()``: called each time the view is hidden and when it is destroyed.
 
-You can access to the SceneController of the assistant's scene through its field ``controller``.
+You can access to the SceneController of the assistant's scene through its field ``controller``, e.g. from any scene assistant use this.controller.
 
 ===============
 SceneController
 ===============
 
-SceneController handles scene local cinematic and thus contains methods to manipulate the current scene. Assistants have a field ``controller`` which is set to their scene's controller.
+SceneController provides utilities for a scene assistant, and also takes care of instantiating an assistant and calling it's lifecycle methods. Assistants have a field ``controller`` which is set to their scene's controller.
 
  * ``parse((optional)node)``: Parses the current scene for widgets. As all scenes reside in the same DOM, you cannot call ``dojo.parser.parse()`` directly or you may instantiate widgets twice;
  * ``query(selector, (optional)node)``: calls ``dojo.query`` ensuring that results will belongs to the controller's scene if no ``node`` is provided;
- * ``showAlertDialog({title: '', text: '', buttons: [{btnClass: 'cssClass', label: ''}], defaultButtonLabel: '', onChose: function(pressedButton) {} })``: Display an alert dialog, if no buttons are provided, a simple "OK" one is created;
- * ``popSubMenu({ choices: [{className: 'cssClass', label: '', value: ''}], onChoose: function(value) {}, fromNode: node})``: display a popup menu whose entries are ``choices``. ``onChoose`` with the selected value. If ``fromNode`` is null, menu will be displayed roughly on the top of the screen.
+ * ``showAlertDialog({title: '', text: '', buttons: [{btnClass: 'cssClass', label: ''}], defaultButtonLabel: '', onChose: function(pressedButton) {} })``: Display an alert dialog, if no buttons are provided, a simple "OK" one is created.  You can alternatively show an alert dialog from anywhere by calling dojo.publish("/dojox/mobile/app/alert", params), where the params variable is the same as that passed to showAlertDialog;
+ * ``popupSubMenu({ choices: [{className: 'cssClass', label: '', value: ''}], onChoose: function(value) {}, fromNode: node})``: display a popup menu whose entries are ``choices``. ``onChoose`` with the selected value. If ``fromNode`` is null, menu will be displayed roughly on the top of the screen.
 
 ===============
 StageController
@@ -94,6 +105,6 @@ StageController
 
 Stage controller handle global application behavior and thus provide various application level methods. The application StageController is available through ``dojox.mobile.app.getStageController()`` or the ``stageController`` property of a SceneController.
 
- * ``pushScene(sceneName, params)``: Loads and execute scene ``sceneName``. ``params`` will be passed to the Assistant constructor. Transition effect between scenes can be controller through the ``effect`` attribute of the StageController or predefined using ``djConfig.mobileAnim`` property;
- * ``popScene(data)``: goes back to the scene we were before the current one (if any). ``data`` will be passed to the ``activate`` method of the scene;
+ * ``pushScene(sceneName, params)``: Loads and execute scene ``sceneName``. ``params`` will be passed to the Assistant constructor, and also to the Assistant's activate() method the first time it is called. Transition effect between scenes can be controlled through the ``effect`` attribute of the StageController or predefined using ``djConfig.mobileAnim`` property;
+ * ``popScene(data)``: goes back to the scene we were before the current one (if any). ``data`` will be passed to the ``activate`` method of the scene.  You can alternatively use dojo.publish to pop a scene, without needing access to the StageController, by calling dojo.publish("/dojox/mobile/app/goback");
  * ``popScenesTo(sceneName, data)``: "rewinds" the scenes until the current one is ``sceneName``.
