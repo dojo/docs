@@ -123,6 +123,7 @@ The module dojo (which resolve to the module dojo/main) causes all of the module
 way, writing...
 
 .. code-block :: javascript
+
   define(["dojo"], function(dojo) {
     // do something spectacular...
   });
