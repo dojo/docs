@@ -41,7 +41,7 @@ single environment-dependent resource that provides machinery and configuration 
 to operate in that environment. These resources are located at dojo/_base/config<environment>.js; currently there
 are two such resources:
 
-  * dojo/_base/configNode.js: contains machinery necessary to bootstrap into node.js
+  * `dojo/_base/configNode.js`: contains machinery necessary to bootstrap into node.js
 
   * dojo/_base/configRhino.js: contains machinery necessary to bootstrap into Rhino
 
