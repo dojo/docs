@@ -8,7 +8,7 @@ dojo loader and bootstrap
 :Author: Rawld Gill
 
 .. contents::
-   :depth: 2
+   :depth: 3
 
 Design Description of the Dojo Loader and Bootstrap
 
@@ -508,7 +508,7 @@ module multiplication used the addition API during it's own definition, for exam
 
 ...this *cannot* be loaded asynchronously.
 
-There is another problem getting applications contructed for the v1.x synchronous loader to load asynchronouls since
+There is another problem getting applications contructed for the v1.x synchronous loader to load asynchronously since
 these programs typically depend on dojo being initialized with the dojo synchronous loader and dojo base APIs immediately
 upon return from injecting dojo.js. For example, v1.x code often looks like this:
 
