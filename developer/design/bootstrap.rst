@@ -1,7 +1,7 @@
 #format dojo_rst
 
-dojo loader and bootstrap
-=========================
+The Dojo Loader and Bootstrap
+=============================
 
 :Status: Draft
 :Version: 1.7+
@@ -16,14 +16,20 @@ Design Description of the Dojo Loader and Bootstrap
 Introduction
 ============
 
-Dojo may used in a variety of environments, loaded with any of several AMD-compliant loaders, configured through three
-mechanisms, and optimized with the Dojo build system. All of these features are implemented in the Dojo loader and
-bootstrap. This document describes the design and rational of these two foundational subsystems.
+Dojo v1.7 includes a new loader and refactored bootstrap that adds several exciting new features. For users with
+significant published applications, v1.7 maintains 100% compatibility with v1.6, and legacy user can simply ignore these
+new features.
 
-This document is not necessary material for normal Dojo users. It is intended for expert Javascript programmers and Dojo
-developers (that is, developers working on Dojo proper) that need to quickly understand the internal design of the the
-loader and bootstrap subsystems. Advanced users will also find this information useful in pushing the toolkit in
-atypical applications.
+For those interested in leveraging the new features available in v1.7, Dojo may used in a variety of environments,
+loaded with any of several AMD-compliant loaders, configured through three mechanisms, and highly optimized with the new
+Dojo build system. All of these features are implemented in the Dojo loader and bootstrap. This document describes the
+design and rational of these two foundational subsystems.
+
+This document is not necessary material for normal Dojo users. It is intended for Javascript programmers that want to
+quickly understand the internal design of the the loader and bootstrap subsystems. Advanced users will also find this
+information useful in pushing the toolkit in atypical applications. While this document does include some examples, it
+is not tutorial in nature but rather intended to be a design description of the dojo loader and bootstrap. The external
+reference section provides references to documents more tutorial in nature.
 
 ===================
 External References
@@ -589,6 +595,177 @@ the hypothetical and problematic multiplication module can be expressed with def
 Now this module can be loaded with any AMD-compliant loader in full asynchronous mode. Notice that this is a reasonable
 method to quickly convert a project based on the v1.x synchronous loader API into an AMD-compliant code base.
 
+Protecting Module Factory Functions
+---------------------------------------------
+
+When the loader applies a factory function, that application can be optionally protected by a try-catch block depending on the
+has feature "loader-catchApi". The defaultConfig provided in dojo.js set has("loader-catchApi") to true. Sometimes it is
+conventient to not catch this exception during debugging, and the laoder-catchApi allows this behavior.
+
+The Error API
+-------------
+
+The loader includes a new error signaling API at require.onError, a function that takes two arguments:
+
+messageId
+  (string) an error topic to publish
+
+args
+  (array of anything) The arguments to be applied to each onError subscriber
+
+Upon application, onError publishes the messageId topic and args to all onError subscribers. Any subscriber may
+choose to return true which is the passed back to the caller of require.onError as a signal that a subscriber has taken
+action to clear the error condition and the caller may continue (the semantics of continue are determined by
+the caller). Typically, if a subscriber does not signal it's OK to continue, the caller should simply rethrow
+the error.
+
+Routines may subscribe to onError by the method require.onError.subscribe, a function that takes a listener function as
+a the single argument and returns a function that unsubscribes the listener.
+
+The vector require.onError.log records the pair of parameters received for each application of onError.
+
+The error API is has-bracketed by the has feature "loader-errorApi"; if the has feature loadder-errorApi is false then
+onError is defined as given by defaultConfig (if any) or no-op.
+
+The loader uses the error API with messageIds as follows:
+
+loader/exec
+  when a factory function throws; if at least one listener returns true, then the loader proceeds as if the error never
+  happened; otherwise, the loader rethrows the error and the module is never executed; a complete application crash is
+  likely; notice the symetry between this behavior and loader/failed-sync
+
+loader/failed-sync
+  when synchronously retrieving and evaluating modules in the v1.x backcompat layer throws; if at least one listener
+  returns true, then the loader proceeds as if the error never happened; otherwise, the loader rethrows the error and
+  the module is never properly loaded; a complete application crash is likely; notice the symetry between this behavior and
+  loader/exec
+
+loader/multiple-define
+  when an attempt is made to define and already-defined module; the loader ignores the duplicate definition and proceeds
+  as if the error never happened
+
+loader/timeout
+  when the time as prescribed by the configuration variable waitSeconds has expired while waiting for one of more
+  modules to arrive; the loader proceeds as if the error never happened
+
+loader/onLoad
+  when a callback to require.ready throws; if at least one listener returns true, then the loader proceeds as if the
+  error never happened; otherwise, the loader rethrows the error and the callback is never executed; a complete
+  application crash is likely
+
+
+The Trace API
+-------------
+
+The loader includes a new trace API at require.trace, a function that takes two arguments:
+
+group
+  (string) a trace group identifier
+
+args
+  (array) a vector of arguments to output to the console
+
+If the value of require.trace.group[group] is truthy, then the args are output to the conole via require.log.
+require.log calls console.log iff it exists; otherwise, it executes a no-op.
+
+Tracing may be turned completely on or off by the property require.trace.on, a boolean. When trace is on, only trace
+groups set truthy in require.trace.group are traced as indicated above.
+
+Individual trace groups may be turned on/off by the function require.trace.set, which accepts either a hash of
+(group-identifiers, values) or a single group-identifier, value parameter pair. For example...
+
+.. code-block :: javascript
+
+  // set trace groups via a hash
+  require.trace.set({
+    "some-trace-group":1,  // turn tracing on for some-trace-group
+    "some-other-group:"0,  // turn tracing off for some-other-group
+  });
+
+  // set a single group
+  require.trae.set("yet-another-group", 1);
+
+The trace API is has-bracketed by the has feature "loader-traceApi".
+
+The loader defines several trace group ids:
+
+loader-inject
+  traces when the loader injects a URL
+
+loader-define
+  traces when the global define function is applied
+
+loader-runFactory
+  traces with the factory function for a module is executed
+
+loader-execModule
+  traces when a module is executed (that is, it's dependencies are traversed and executed as required and then its
+  factory is executed
+
+loader-execModule-out
+  traces when a module has completed execution
+
+loader-defineModule
+  traces when a module is defined internally by the loader (calling global define often results in putting a module's
+  definition parameters on an internal definition queue that is executed later
+
+has-bracketed Features
+----------------------
+
+The loader defines the following has features and backets code so that individual features may be excluded in builds as indicated:
+
+loader-provides-xhr
+  If true, causes the loader to define the feature require.getXhr, which returns a new XHR object to be defined.
+
+loader-timeoutApi
+  If true, causes the loader to define the feature the signals an error after the time prescribed by the configuration
+  variable timeout expires and one or more requested modules have failed to arrive
+
+loader-traceApi
+  If true, causes the loader to define the trace API.
+
+loader-errorApi
+  If true, causes the loader to define the error API.
+
+loader-logApi
+  if true, causes the loader to define the log API.
+
+loader-injectApi
+  TODOC
+
+loader-catchApi
+  TODOC
+
+loader-pageLoadApi
+  TODOC
+
+loader-priority-readyApi
+  TODOC
+
+loader-publish-privates
+  TODOC
+
+loader-getTextApi
+  TODOC
+
+loader-configApi
+  TODOC
+
+dojo-sniff
+  TODOC
+
+dojo-loader
+  TODOC
+
+dojo-boot
+  TODOC
+
+dojo-test-xd
+  TODOC
+
+dojo-test-sniff
+  TODOC
+
 ===============
 The has.js API
 ===============
@@ -649,6 +826,13 @@ This code will be optimized by the Closure Compiler to eliminate the outer if-st
 This design is used throughout the loader definition and any feature that may not be needed by a class of applications
 is bracketed by a has.js feature test. This requires the loader to implement the has.js API, and this implementation is
 among the very first lines of code in the loader definition.
+
+The loader defines the following has feature values:
+
+  * host-browser: true
+  * dom: as indicated by environment
+  * loader-isDojo: true
+  * loader-hasApi: true
 
 ==================
 User Configuration
