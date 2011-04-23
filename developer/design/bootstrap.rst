@@ -249,8 +249,8 @@ RequireJS configuration object) is as given above.
 
 The application of the anonymous function is bracketed by a build pragma (this is the only build pragma that exists in
 the dojo loader and bootstrap as of v1.7). This allows the build program to replace this chunk of code with an
-application-specific configuration, possibly allowing all other configuration machinery to be discarded from the build
-and saving a substantial amount of unnecessary code.
+application-specific configuration, possibly allowing all other configuration machinery to be discarded, saving a
+substantial amount of unnecessary code.
 
 defaultConfig
 ~~~~~~~~~~~~~
@@ -306,7 +306,7 @@ consumed, and sniffed config overrides any values also found in userConfig.
 The sniffing and consuming of configuration data is the third task executed in the loader definition (after has.js API
 definition and environment detection/configuration), thus allowing the configuration close control over the loader
 definition. In particular, has.js feature values can be set in the configuration to control the precise features
-available in the loader which allows testing various loader configurations without necesstating a build.
+available in the loader which allows testing various loader configurations without necessitating a build.
 
 Configuration after Loader Definition
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -357,45 +357,57 @@ When the loader "consumes" configuration data, no matter the time (during loader
 filters out items from the configuration hash being consumed that are known to the loader and applies those values. The
 loader "knows" the following items:
 
-  async:: (boolean) sets the loaders operation to asynchronous operation if truthy, synchronous otherwise.
+async
+  (boolean) sets the loaders operation to asynchronous operation if truthy, synchronous otherwise.
 
-  waitSeconds:: (integer) sets the number of seconds to wait for demanded modules to arrive before signaling an error
+waitSeconds
+  (integer) sets the number of seconds to wait for demanded modules to arrive before signaling an error
 
-  urlArgs:: (string) suffix to append to script URLs to bust browser caches
+urlArgs
+  (string) suffix to append to script URLs to bust browser caches
 
-  baseUrl:: (string) the prefix to prepend to all computed URLs that are not absolute
+baseUrl
+  (string) the prefix to prepend to all computed URLs that are not absolute
 
-  locale:: (string) sets the value of require.locale which may be used by other code
+locale
+  (string) sets the value of require.locale which may be used by other code
 
-  has:: (map) map from has feature name to static value of feature test; augments (does not replace) the has cache
-  accordingly
+has
+  (map) map from has feature name to static value of feature test; augments (does not replace) the has cache accordingly
 
-  pathTransforms:: (vector of function(string)-->(string | falsy)) vector of transforms to append to the end of the
-  pathTransforms vector
+pathTransforms
+  (vector of function(string)-->(string | falsy)) vector of transforms to append to the end of the pathTransforms vector
 
-  packages:: (vector of packageInfo) CommonJS package information; augments (does not replace in toto) current package
-  info; any existing packages mentioned are replaced with new information.
+packages
+  (vector of packageInfo) CommonJS package information; augments (does not replace in toto) current package info; any
+  existing packages mentioned are replaced with new information.
 
-  pacakgePaths:: (hash of packagePathInfo) CommonJS package path information; augments (does not replace in toto) current
-  package info; any existing packages mentioned are replaced with new information.
+pacakgePaths 
+  (hash of packagePathInfo) CommonJS package path information; augments (does not replace in toto) current package info;
+  any existing packages mentioned are replaced with new information.
 
-  packageMap:: (map: packageName --> packageName) gives a map of package name mentioned in modules to package name know
-  by loader; augments (does not replace in toto) current packageMap
+packageMap 
+  (map: packageName --> packageName) gives a map of package name mentioned in modules to package name know by loader;
+  augments (does not replace in toto) current packageMap
 
-  cache:: (map: package-qualified-name --> function()) gives a map from package-qualified-name to function that causes
-  the module named to be defined (not executed).
+cache 
+  (map: package-qualified-name --> function()) gives a map from package-qualified-name to function that causes the module
+  named to be defined (not executed).
 
-  deps:: (vector of module identifiers) gives the set of modules to require immediately after the loader defines itself;
-  valid only prior to/during loader definition
+deps 
+  (vector of module identifiers) gives the set of modules to require immediately after the loader defines itself; valid
+  only prior to/during loader definition
 
-  callback:: (function) gives the function to call after deps have been loaded; see deps; valid only prior to/during
-  loader definition
+callback
+  (function) gives the function to call after deps have been loaded; see deps; valid only prior to/during loader
+  definition
 
-  ready:: (function) gives a function to call upon meeting the ready condition; valid only prior to/during
-  loader definition
+ready 
+  (function) gives a function to call upon meeting the ready condition; valid only prior to/during loader definition
 
-  trace:: (map: trace-group --> boolean) give a map from trace group name (string) to boolean to say which trace groups
-  are active; valid only prior to/during loader definition; use require.trace.set after loader definition to set trace values.
+trace
+  (map: trace-group --> boolean) give a map from trace group name (string) to boolean to say which trace groups are
+  active; valid only prior to/during loader definition; use require.trace.set after loader definition to set trace values.
 
 Notice that most of the historical dojo configuration parameters (e.g., isDebug, modulePaths, etc.) are not
 mentioned. Instead, *any* configuration parameter (known or unknown to the loader) is blindly pushed into the loader
