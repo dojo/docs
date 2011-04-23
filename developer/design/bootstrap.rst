@@ -415,6 +415,8 @@ property require.rawConfig. This allows *any* library or application (dojo inclu
 variables, and further allows a single mechanism for setting configuration variables. The dojo boostrap module
 dojo/_base/config uses this mechanism to gain access to any configuration data sniffed by the loader.
 
+All v1.6- configuration variables remain for v1.7. The semantics of debugAtAllCosts have changed; see "Modes of Operation".
+
 Configuration data is pushed into require.rawConfig by single-level mixing. Consider the following example:
 
 .. code-block :: javascript
@@ -433,7 +435,7 @@ Configuration data is pushed into require.rawConfig by single-level mixing. Cons
   // now, require.rawConfig is {someValue:3, someOtherValue:2, yetOtherValue:4}
 
 This naive mixing causes the full value of complex configuration variables like hashes (e.g., the has configuration
-variable) to be improperly aggregated in require.rawConfig. This is not a problem for configuration variables know to
+variable) to be improperly aggregated in require.rawConfig. This is not a problem for configuration variables known to
 the loader since the loader processes such variables immediately. For client code, the loader includes the function
 require.onConfig which allows users to register a listener function that is passed the configuration object specific to
 a particular application of configuration data as well as the aggregate configuration contained in require.rawConfig.
@@ -445,12 +447,12 @@ By default, the v1.7+ dojo loader operates in synchronous mode in order to maint
 that all modules, including AMD modules, are retrived via synchronous XHR.
 
 In order to put the loader in asynchronous mode, set the configuration variable async to truthy via one of the
-configuration mechanisms. For example, to set via dojoConig, write:
+configuration mechanisms. For example, to set via dojoConfig, write:
 
 .. code-block :: javascript
 
   <script type="text/javascript">
-    require = {async:1};
+    var dojoConfig = {async:1};
   </script>
   <script type="text/javascript" src="path/to/dojo.js">
   </script>
@@ -459,10 +461,7 @@ Or to set via data-dojo-config, write:
 
 .. code-block :: javascript
 
-  <script 
-    type="text/javascript" 
-    src="path/to/dojo.js">
-    data-dojo-config="async:1">
+  <script type="text/javascript" src="path/to/dojo.js" data-dojo-config="async:1">
   </script>
 
 The loader must remain in synchronous mode to faithfully implement the v1.x synchronous API (dojo.require, dojo.provide,
@@ -470,6 +469,7 @@ et al). However, it is possible to execute the v1.x synchronous API asynchronous
 on dojo.require'd modules during definition. Consider the following example or the hypothetical module "multiplication":
 
 .. code-block :: javascript
+
   dojo.provide("multiplication");
   dojo.require("addition");
   
@@ -486,6 +486,7 @@ defined before the multiplication API (multiplication.mult) is applied. If code 
 the case, then then the v1.x module can be loaded asynchronously. For example,
 
 .. code-block :: javascript
+
   dojo.require("multiplication");
 
   dojo.ready(function() {
@@ -496,6 +497,7 @@ On the other hand, if the code was not protected by dojo.ready, it could *not* b
 module multiplication used the addition API during it's own definition, for example, ...
 
 .. code-block :: javascript
+
   dojo.provide("multiplication");
   dojo.require("addition");
 
@@ -511,6 +513,7 @@ these programs typically depend on dojo being initialized with the dojo synchron
 upon return from injecting dojo.js. For example, v1.x code often looks like this:
 
 .. code-block :: javascript
+
   <script type="text/javascript" src="path/to/dojo.js">
   </script>
   <script type="text/javascript">
@@ -531,6 +534,7 @@ dojo module has been fully loaded synchronously (i.e., bootstrap and dojo base h
 is fully defined upon return from injecting dojo.js. For example...
 
 .. code-block :: javascript
+
   <script type="text/javascript" src="path/to/dojo.js", data-dojo-config="debugAtAllCosts:1">
   </script>
   <script type="text/javascript">
@@ -565,6 +569,7 @@ option of expressing modules--even modules expressed using dojo.require et al--i
 the hypothetical and problematic multiplication module can be expressed with define as follows:
 
 .. code-block :: javascript
+
   define("multiplication", ["dojo", "addition"], function(dojo){
     dojo.getObject("multiplication", true);
     //dojo.provide("multiplication");
