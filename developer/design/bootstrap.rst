@@ -17,19 +17,17 @@ Introduction
 ============
 
 Dojo v1.7 includes a new loader and refactored bootstrap that adds several exciting new features. For users with
-significant published applications, v1.7 maintains 100% compatibility with v1.6, and legacy user can simply ignore these
+significant published applications, v1.7 maintains 100% compatibility with v1.6 and legacy user can simply ignore these
 new features.
 
-For those interested in leveraging the new features available in v1.7, Dojo may used in a variety of environments,
+Consequent to the enhancements and new features available in v1.7, Dojo may used in a variety of environments,
 loaded with any of several AMD-compliant loaders, configured through three mechanisms, and highly optimized with the new
 Dojo build system. All of these features are implemented in the Dojo loader and bootstrap. This document describes the
 design and rational of these two foundational subsystems.
 
 This document is not necessary material for normal Dojo users. It is intended for Javascript programmers that want to
 quickly understand the internal design of the the loader and bootstrap subsystems. Advanced users will also find this
-information useful in pushing the toolkit in atypical applications. While this document does include some examples, it
-is not tutorial in nature but rather intended to be a design description of the dojo loader and bootstrap. The external
-reference section provides references to documents more tutorial in nature.
+information useful in pushing the toolkit in atypical applications.
 
 ===================
 External References
@@ -42,9 +40,10 @@ Overall Design
 ==============
 
 The dojo loader is contained in the resource dojo/dojo.js. Although the loader includes several extensions, at its core
-it is simply a CommonJS AMD-compliant loader. When the loader is operating in a non-browser environment, it loads a
-single environment-dependent resource that provides machinery necessary for the loader to operate in that
-environment. These resources are located at dojo/_base/config<environment>.js; currently there are two such resources:
+it is simply a CommonJS AMD-compliant loader. The loader assumes the browser environment. When it is executed in a
+non-browser environment, it automatically detects the environment and then loads a single environment-dependent resource
+that provides machinery necessary for the loader to operate in that environment. These resources are located at
+dojo/_base/config<environment>.js; currently there are two such resources:
 
   * dojo/_base/configNode.js: contains machinery necessary to bootstrap into node.js
 
@@ -55,41 +54,44 @@ The dojo bootstrap proceeds as follows:
   1. The has.js API implementation is defined. This is contained in the loader and the module dojo/has (this module
   does not depend on any other modules).
 
-  2. The user configuration is sniffed and aggregated as required; this machinery is contained in the loader and the
-  module dojo/_base/config (this module depends on dojo/has).
+  2. The user configuration is sniffed and consumed; this machinery is contained in the loader and the module
+  dojo/_base/config (this module depends on dojo/has).
 
   3. The dojo object is created and popluated with the absolute minimum API as controlled by has.js feature settings and
-  any user configuration provided by Items 1 and 2, above. This machinery is contained in the module dojo/_base/kernel
-  (this module depends on dojo/has and dojo/_base/config).
+  any configuration provided by Items 1 and 2, above. This machinery is contained in the module dojo/_base/kernel (this
+  module depends on dojo/has and dojo/_base/config).
 
   4. The dojo object is populated by various APIs defined in the so-called "dojo base" modules.
+
+  5. Additional modules as specified in the configuration deps or require variables are loaded.
 
 The bootstrap sequence can be initiated be either the dojo loader (dojo/dojo.js) or a foreign AMD loader. In either
 case, the bootstrap sequence is controlled by the module "dojo" which maps to dojo/main.js. In it's standard
 configuration, the dojo loader automatically loads the dojo module.
 
-As indicated above, the has.js and configuration machinery is defined in both the loader and individual modules, with
+As indicated above, the has.js and configuration machinery are defined in both the loader and individual modules, with
 some overlapping implementation existing. Since the dojo loader requires both the has.js API and configuration in order
 to define itself, these features must be implemented in the loader. On the other hand, when dojo is loaded by a
 foreign loader, the dojo loader's has.js and configuration machinery is not available and therefore must be defined by
 other means.
 
-The configuration machinery is has-bracketed in the loader and may be completely discarded in a build by
-providing a static configuration object to the loader define function (see xxx, below). This allows stripping *both* the
-loader configuration machinery and the configuration module from an optimized build, saving approximately xxx bytes.
+The configuration machinery is has-bracketed in the loader and may be completely discarded in a build by providing a
+static configuration object to the loader define function (see defaultConfig, below). This allows stripping *both* the
+loader configuration machinery and the configuration module from an optimized build, saving a substantial amount of
+code.
 
 There are two alternate designs to solve the problem of duplicate code. One would force foreign loaders to load the dojo
 loader and then include code in the dojo loader that detects when another AMD loader is already on the page, and if so
-detected, skip the dojo loader definition leaving only the has.js and config machinery to be executed. Since there is
+detected, skip the dojo loader definition leaving only the has.js and config machinery to be executed. Since there are
 only about 40 lines of duplicated code in the selected design and this code is has-bracketed so that it can be discarded
-during a build, this alternate design was adjudicated as sloppy and ineffecient and therefore not employed.
+during a build, this alternate design was adjudicated as sloppy and ineffecient.
 
-The other alternative is to include a micro loader in the loader that loads the has.js and config modules
-and, if the dojo loader was the first AMD loader on the page, loads its own definition. Since the AMD loader API is
-expected to be defined after the loader is injected into the page (or application), some kind of delay proxy would
-also have to be implemented while the loader was waiting to be fully defined. Clearly, this adds complexity, would
-likely require many more than 40 lines of code, and would therefore be an irrational design choice for the sole purpose
-of saving 40 lines of duplicate code.
+The other alternative is to include a micro loader in the loader that loads the has.js and config modules and, if the
+dojo loader was the first AMD loader on the page, loads its own definition. Since the AMD loader API is expected to be
+defined after the loader is injected into the page (or application), a delay proxy would also have to be implemented
+while the loader was waiting to be fully defined. Clearly, this adds complexity, would likely require many more than 40
+lines of code, and would therefore be an irrational design choice for the sole purpose of saving 40 lines of duplicate
+code.
 
 When the module "dojo" is demanded, all standard dojo distributions provide much more machinery than described
 so-far. However, the bootstrap is designed so that users could conceivably configure the system to provide nothing more
@@ -102,7 +104,7 @@ be constructed that are optimized with respect to size. Accordingly, all bootstr
 orthogonal.
 
 Once dojo/_base/kernel has been defined, typically the remainder of so-called "dojo base" is defined. Historically, the
-contents of dojo base have been defined by the resource dojo/_base.js. As of 1.7, dojo is constructed as a CommonJs package
+contents of dojo base have been defined by the resource dojo/_base.js. As of v1.7, dojo is constructed as a CommonJS package
 and the contents of the dojo package is given by the module "dojo" which maps to dojo/main.js. The standard dojo
 distribution defines the dojo package to contain the following modules:
 
@@ -130,7 +132,7 @@ distribution defines the dojo package to contain the following modules:
     dojo/_base/fx - contains standard dojo base machinery included in browser environments as per the v1.x line. This are
     the modules listed in dojo/_base/browser
 
-The module dojo (which resolve to the resource dojo/main.js) causes all of the module listed above to be loaded. Put another
+The module dojo (which resolves to the resource dojo/main.js) causes all of the module listed above to be loaded. Put another
 way, writing...
 
 .. code-block :: javascript
@@ -159,21 +161,21 @@ support and the following extentions:
 
   * has.js API
 
-  * Static configuration, thereby allowing all configuration machinery to be discarded in built versions
+  * Optional static configuration, thereby allowing all configuration machinery to be discarded in built versions
 
-  * Sniffing of the script node that injected dojo.js and then sniffing the attribute data-dojo-config on
-    that node for of configuration data
+  * Optional sniffing of the script node that injected dojo.js and then sniffing the attributes data-dojo-config and djConfig on
+    that node for configuration data
 
-  * try-catch protection around all factory/callback/ready functions
+  * Optional try-catch protection around all factory/callback/ready functions
 
-  * Priority ready queue which allows ordered execution of callbacks inserted into the ready queue
+  * Optional Priority ready queue which allows ordered execution of callbacks inserted into the ready queue
 
-  * XHR factory API
+  * Optional XHR factory API
 
-  * getText API which allows retreiving the result of an HTTP GET transaction either synchronously or
+  * Optional getText API which allows retreiving the result of an HTTP GET transaction either synchronously or
     asynchronously
 
-  * Timeout API which signals an error after a prescribed time has expired and one or more requested modules
+  * Optional timeout API which signals an error after a prescribed time has expired and one or more requested modules
     have failed to arrive
 
   * Optional module injection, which allows building loaders *without* script injection machinery (the modules are
@@ -182,21 +184,21 @@ support and the following extentions:
   * Optional and configurable script injection API, which allows configuring the loader for environments other than the
     browser and/or bulding a loader without injection machinery (see previous item)
 
-  * Sniffing for DOH-provided configuration data
+  * Optional sniffing for DOH-provided configuration data
 
-  * Aggregating and applying configuration data from various sources
+  * Optional aggregating and applying configuration data from various sources
 
-  * DOM content loaded detection and signalling machinery
+  * Optional DOM content loaded detection and signalling machinery
 
-  * Minimal console logging machinery
+  * Optional console logging machinery
 
-  * Tracing API, including extensive debugging information available through the AMD require function
+  * Optional tracing API, including extensive debugging information available through the AMD require function
 
-  * Error signally and resolution control API
+  * Optional error signally and resolution control API
 
-  * Machinery to allow implementing the dojo v1.x synchronous loader as an extension to the loader
+  * Optional machinery to allow implementing the dojo v1.x synchronous loader as an extension to the loader
 
-  * Module deleting API
+  * Optional module deleting API
 
 The has.js API is used throughout the loader definition and any feature that may not be needed by a particular application
 is bracketed by a has.js feature test. This design has many advantages:
@@ -208,7 +210,7 @@ is bracketed by a has.js feature test. This design has many advantages:
 
   * The design uses no extra-lingual constructs (e.g., build pragmas), and is therefore less complex and more familiar.
 
-Of the extentions listed above, only the has.js is non-optional, and any or all of the remaining extensions can be
+Of the extentions listed above, only the has.js is not optional, and any or all of the remaining extensions can be
 discarded as part of an built/optimized program. The has.js API comes in at less than 10 lines of code, so its cost is
 trivial.
 
@@ -254,9 +256,9 @@ Global djConfig is allowed for backcompat in the v1.x line. The perference of do
 RequireJS configuration object) is as given above.
 
 The application of the anonymous function is bracketed by a build pragma (this is the only build pragma that exists in
-the dojo loader and bootstrap as of v1.7). This allows the build program to replace this chunk of code with an
+the dojo loader and bootstrap as of v1.7). This allows the build program to replace this code fragment with an
 application-specific configuration, possibly allowing all other configuration machinery to be discarded, saving a
-substantial amount of unnecessary code.
+substantial amount of code.
 
 defaultConfig
 ~~~~~~~~~~~~~
@@ -275,10 +277,10 @@ replaced by a function that reads and then compiles a file.
 
 The task of adding support for a new environment includes three steps:
 
-  1. Add a has.js feature test to detect the new environment.
+  1. Add a has.js feature test to detect the new environment (requires modification of dojo.js).
 
   2. Add a has-bracketed code fragment to the loader that evaluates an environment-specific configuration resource when
-     the target environment is detected.
+     the target environment is detected (requires modification of dojo.js).
 
   3. Construct an environment-specific configuration resource.
 
@@ -289,7 +291,7 @@ dojo/_base/configNode.js for examples.
 As mentioned above, defaultConfig may also be used in built versions of the loader to provide highly optimized
 bootstraps. For example, the loader's modules hash could be prepopulated with a set of modules. If this technique were
 used to include all the modules that a particular application requires for its lifetime, then all of the injection
-machinery can be discarded, saving a substantial amount of code. Notice that the operation of the loader as viewed from
+machinery could be discarded, saving a substantial amount of code. Notice that the operation of the loader as viewed from
 client code does not change in such a configuration: the loader functions require and define still exist and behave in
 the standard fashion. In fact, the internal loader code paths remain unchanged. It just so happens that since all
 required modules happen to already be in the modules hash, there is never a need to call the loader function
@@ -341,7 +343,7 @@ of modules.
 How Configuration Data is Consumed by the Loader
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Recall that configuration data can come from any of several sources:
+Recall that configuration data can originate from any of several sources:
 
   * defaultConfig
   * optionally, one of global dojoConfig, djConfig, or require
@@ -470,9 +472,10 @@ Or to set via data-dojo-config, write:
   <script type="text/javascript" src="path/to/dojo.js" data-dojo-config="async:1">
   </script>
 
-The loader must remain in synchronous mode to faithfully implement the v1.x synchronous API (dojo.require, dojo.provide,
-et al). However, it is possible to execute the v1.x synchronous API asynchronously, so long as the modules do not relay
-on dojo.require'd modules during definition. Consider the following example or the hypothetical module "multiplication":
+The loader must remain in synchronous mode to faithfully implement the v1.x synchronous loader API (dojo.require,
+dojo.provide, et al). However, it is possible to execute the v1.x synchronous API asynchronously, so long as the modules
+do not relay on dojo.require'd modules during definition. Consider the following example or the hypothetical module
+"multiplication":
 
 .. code-block :: javascript
 
@@ -500,7 +503,7 @@ the case, then then the v1.x module can be loaded asynchronously. For example,
   })
 
 On the other hand, if the code was not protected by dojo.ready, it could *not* be loaded asynchronously. Further, if the
-module multiplication used the addition API during it's own definition, for example, ...
+module multiplication used the addition API during it's own definition, then it could *not* be loaded asynchronously. For example,
 
 .. code-block :: javascript
 
@@ -511,8 +514,6 @@ module multiplication used the addition API during it's own definition, for exam
   multiplication.version.addition= addition.version;
 
   // the rest of multiplication's definition
-
-...this *cannot* be loaded asynchronously.
 
 There is another problem getting applications contructed for the v1.x synchronous loader to load asynchronously since
 these programs typically depend on dojo being initialized with the dojo synchronous loader and dojo base APIs immediately
@@ -600,7 +601,7 @@ Protecting Module Factory Functions
 
 When the loader applies a factory function, that application can be optionally protected by a try-catch block depending on the
 has feature "loader-catchApi". The defaultConfig provided in dojo.js set has("loader-catchApi") to true. Sometimes it is
-conventient to not catch this exception during debugging, and the laoder-catchApi allows this behavior.
+convenient to not catch this exception during debugging; setting the loader-catchApi has feature to false allows this behavior.
 
 The Error API
 -------------
@@ -625,7 +626,7 @@ a the single argument and returns a function that unsubscribes the listener.
 The vector require.onError.log records the pair of parameters received for each application of onError.
 
 The error API is has-bracketed by the has feature "loader-errorApi"; if the has feature loadder-errorApi is false then
-onError is defined as given by defaultConfig (if any) or no-op.
+onError is defined as given by defaultConfig (if any), otheriwse, no-op.
 
 The loader uses the error API with messageIds as follows:
 
@@ -634,7 +635,7 @@ loader/exec
   happened; otherwise, the loader rethrows the error and the module is never executed; a complete application crash is
   likely; notice the symetry between this behavior and loader/failed-sync
 
-loader/failed-sync
+loader/sync-inject
   when synchronously retrieving and evaluating modules in the v1.x backcompat layer throws; if at least one listener
   returns true, then the loader proceeds as if the error never happened; otherwise, the loader rethrows the error and
   the module is never properly loaded; a complete application crash is likely; notice the symetry between this behavior and
@@ -659,13 +660,13 @@ The Trace API
 
 The loader includes a new trace API at require.trace, a function that takes two arguments:
 
-group
+groupId
   (string) a trace group identifier
 
 args
-  (array) a vector of arguments to output to the console
+  (array or anything convertible to string) a vector of arguments to output to the console
 
-If the value of require.trace.group[group] is truthy, then the args are output to the conole via require.log.
+If the value of require.trace.group[groupId] is truthy, then the args are output to the conole via require.log.
 require.log calls console.log iff it exists; otherwise, it executes a no-op.
 
 Tracing may be turned completely on or off by the property require.trace.on, a boolean. When trace is on, only trace
@@ -709,16 +710,28 @@ loader-defineModule
   traces when a module is defined internally by the loader (calling global define often results in putting a module's
   definition parameters on an internal definition queue that is executed later
 
+
+The Log API
+-------------
+
+The loader include an alias to console.log at require.log. If the environment does not include a console logging API,
+then require.log is set to no-op. This solves the particularly irritating problem of logging throwing errors in old IE
+platforms without adding a synthetic console (e.g., Firebug Light). Not also, that during loader bootstrap, it's impossible
+to depend on a synthetic console even if one will eventually be defined.
+
+The definition of the alias is has-bracketed by the has feature "loader-logApi". If the feature is statically set false,
+then require.log is unconditionally mapped to no-op.
+
 has-bracketed Features
 ----------------------
 
 The loader defines the following has features and backets code so that individual features may be excluded in builds as indicated:
 
 loader-provides-xhr
-  If true, causes the loader to define the feature require.getXhr, which returns a new XHR object to be defined.
+  If true, causes the loader to define the API require.getXhr, which returns a new XHR object to be defined.
 
 loader-timeoutApi
-  If true, causes the loader to define the feature the signals an error after the time prescribed by the configuration
+  If true, causes the loader to define the feature that signals an error after the time prescribed by the configuration
   variable timeout expires and one or more requested modules have failed to arrive
 
 loader-traceApi
@@ -728,124 +741,244 @@ loader-errorApi
   If true, causes the loader to define the error API.
 
 loader-logApi
-  if true, causes the loader to define the log API.
+  If true, causes the loader to define the log API.
 
 loader-injectApi
-  TODOC
+  If true, causes the loader to define loader-internal module injection machinery.
 
 loader-catchApi
-  TODOC
+  If true, causes the loader to protect factory functions with a try-catch block.
 
 loader-pageLoadApi
-  TODOC
+  If true, causes the loader do define DOMContentLoad detection machinery.
 
 loader-priority-readyApi
-  TODOC
+  If true, causes the loader to define the priority ready queue API.
 
 loader-publish-privates
-  TODOC
+  If true, causes the loader to publish the internal loader functions, isEmpty, isFunction, isString, isArray, forEach,
+  setIns, setDel, mix, uid, on, execQ, defQ, waiting, loadQ, checkComplete, computeMapProg, runMapProg, compactPath,
+  transformPath, getModuleInfo as properties of the global require function.
 
 loader-getTextApi
-  TODOC
+  If true, causes the loader to define the getText API.
 
 loader-configApi
-  TODOC
+  If true, causes the loader to define machinery to consume configuration objects.
 
 dojo-sniff
-  TODOC
+  If true, causes the loader to define machinery to sniff the document for configuration information.
 
-dojo-loader
-  TODOC
+dojo-sync-loader
+  If true, causes the loader to define machinery to support implementing the dojo synchronous loader API
 
 dojo-boot
-  TODOC
-
-dojo-test-xd
-  TODOC
+  If true, causes the loader to automatically load the module "dojo".
 
 dojo-test-sniff
-  TODOC
+  If true, causes the loader to define machinery to sniff configuration from window.parent.require("doh").testConfig.
 
 ===============
 The has.js API
 ===============
 
-Particular applications may discard some or all of the features listed above by building an optimized version of the
-loader with the Dojo build system. Typically, an appplication simply requires the AMD modules that define the machinery
-upon which the application depends. This technique is not possible within the loader's definition because module loading
-is not available until the loader is defined. Instead, each optional feature is bracketed with a has feature test. For
-example, the module deleting API is implemented as follows:
+v1.7 includes an implementation of the has.js API, complete with build program support. The API is quite simple, yet
+allows for concise feature description and detection code. Since the has.js API is not extra-lingual (like build
+pragmas), has feature values can be hard set during testing without necessitating a build, and the configuration
+mechinism allows for setting has feature values. As of v1.7 the Dojo project is working towards replacing all build
+pragmas with has brackets.
+
+Although the has.js project is focused on browser feature detection, the Dojo project is using the API in a more-general
+manner to describe and detect *any* feature that may be optionally included/excluded in various run-time or build-time
+environments.
+
+The has.js API Implementation
+-----------------------------
+
+The implementation of the API is so trivial that, rather than describing it in English, I've simple included it in toto:
 
 .. code-block :: javascript
 
-  if(has("loader-undefApi")){
-  	req.undef = function(moduleId){
-  		// In order to reload a module, it must be undefined (this routine) and then re-requested.
-  		// This is useful for testing frameworks (at least).
-  		var pqn = getModule(moduleId, 0).pqn;
-  		setDel(modules, pqn);
-  		setDel(waiting, pqn);
-  	};
-  }
+  var
+  	isBrowser=
+  		// the most fundamental decision: are we in the browser?
+  		typeof window!="undefined" &&
+  		typeof location!="undefined" &&
+  		typeof document!="undefined" &&
+  		window.location==location && window.document==document,
+  
+  	// has API variables
+  	global = this,
+  	doc = isBrowser && document,
+  	element = doc && doc.createElement("DiV"),
+  	cache = {};
+  
+  has = function(name){
+  	//	summary:
+  	//		Return the current value of the named feature.
+  	//
+  	//	name: String|Integer
+  	//		The name (if a string) or identifier (if an integer) of the feature to test.
+  	//
+  	//	description:
+  	//		Returns the value of the feature named by name. The feature must have been
+  	//		previously added to the cache by has.add.
+  
+  	return cache[name] = typeof cache[name]=="function" ? cache[name](global, doc, element) : cache[name]; // Boolean
+  };
+  
+  has.cache = cache;
+  
+  has.add = function(name, test, now, force){
+  	// summary:
+  	//	 Register a new feature test for some named feature.
+  	//
+  	// name: String|Integer
+  	//	 The name (if a string) or identifier (if an integer) of the feature to test.
+  	//
+  	// test: Function
+  	//	 A test function to register. If a function, queued for testing until actually
+  	//	 needed. The test function should return a boolean indicating
+  	//	 the presence of a feature or bug.
+  	//
+  	// now: Boolean?
+  	//	 Optional. Omit if `test` is not a function. Provides a way to immediately
+  	//	 run the test and cache the result.
+  	//
+  	// force: Boolean?
+  	//	 Optional. If the test already exists and force is truthy, then the existing
+  	//	 test will be replaced; otherwise, add does not replace an existing test (that
+  	//	 is, by default, the first test advice wins).
+  
+  	(typeof cache[name]=="undefined" || force) && (cache[name]= test);
+  	return now && has(name);
+  };
 
-During testing, this feature can be included/excluded by setting the has feature "loader-undefApi" true/false. The dojo
-build application can be used to keep the feature run-time selectable as depicted above or unconditionally discard or
-include the has-bracketed code fragment by setting a built-time value for the has feature "loader-undefApi". For
-example, if this feature is not needed in a particular application, the build-time value for "loader-undefApi" can be
-set to false which will cause the build program to emmit the following code:
+This implementation is included in the loader (dojo.js) and the dojo/has module. The dojo/has module does not re-define
+the API if it detects the API has been already defined by the dojo loader; further the API definition in dojo/has is
+itself has-bracketed so that is may be discarded in a build.
+
+The implementation is very similar to that found in the has.js project with a couple of extensions:
+
+  * the cache of feature tests/values is exposed at has.cache
+
+  * an optional fourth parameter is available to has.add which indicates an existing test should be replaced. Typically,
+    it is undesireable to replace an existing test as some run-time configuration decisions may have already been made
+    based on the current value. Further, the dojo allows setting has feature values via the configuration. If has.add
+    were allowed to replace an existing feature test, then user has feature configuration would be overwritten as
+    feature tests were encountered in library code. By following the "first feature test definition wins" strategy, user
+    configuration will trump has.add applications that occur later in the execution sequence. On the other hand, in some
+    testing scenarios, it may be convenient to intentionally replace a feature test or value. Ergo, first feature test
+    definition wins *unless* explicitly overridden by setting the force parameter to truthy.
+
+  * feature identifiers may be integers; this is used in a build to save space compared to the typically verbose feature
+    names (note: this idiom ought to also work in the has.js implementation provided by the has.js project, though it is
+    not specifically so documented).
+
+has.js API Usage Idioms
+-----------------------
+
+Has feature descriptions are encapsulated when has.add is applied to add the feature test. Often the feature is simply a
+boolean configuration switch, for example:
 
 .. code-block :: javascript
 
-  if(0 && has("loader-undefApi")){
-  	req.undef = function(moduleId){
-  		// In order to reload a module, it must be undefined (this routine) and then re-requested.
-  		// This is useful for testing frameworks (at least).
-  		var pqn = getModule(moduleId, 0).pqn;
-  		setDel(modules, pqn);
-  		setDel(waiting, pqn);
-  	};
-  }
+  has.add("dojo-sniff", 1);
 
-And this code will be discarded by the Google Closure Compiler. Similarly, setting the build-time value for
-"loader-undefApi" to true will cause the build program to emmit the following code:
+Code expressed conditional on a has feature is bracketed by as has application:
 
 .. code-block :: javascript
 
-  if(1 || has("loader-undefApi")){
-  	req.undef = function(moduleId){
-  		// In order to reload a module, it must be undefined (this routine) and then re-requested.
-  		// This is useful for testing frameworks (at least).
-  		var pqn = getModule(moduleId, 0).pqn;
-  		setDel(modules, pqn);
-  		setDel(waiting, pqn);
-  	};
+  if(has("dojo-sniff")){
+    // configuration sniffing code goes here
   }
 
-This code will be optimized by the Closure Compiler to eliminate the outer if-statement.
+If a particular feature test is used in a single location, then that test should be defined just prior to that
+location. For example:
 
-This design is used throughout the loader definition and any feature that may not be needed by a class of applications
-is bracketed by a has.js feature test. This requires the loader to implement the has.js API, and this implementation is
-among the very first lines of code in the loader definition.
+.. code-block :: javascript
 
-The loader defines the following has feature values:
+  has.add("dojo-register-openAjax",
+  	typeof OpenAjax != "undefined"
+  );
+  if (has("dojo-register-openAjax")) {
+  	OpenAjax.hub.registerLibrary(dojo._scopeName, "http://dojotoolkit.org", dojo.version.toString());
+  }
 
-  * host-browser: true
-  * dom: as indicated by environment
-  * loader-isDojo: true
-  * loader-hasApi: true
+Notice how the code is highly self-documenting.
 
-==================
-User Configuration
-==================
+If a particular feature test is used in multiple locations, then that test should be defined in a single location that
+is most natural to the test implementor/user(s). For example, if a subsystem, say drag-and-drop, uses a feature test, say
+"dnd-someFeature", in many locations, and further, drag-and-drop has some common module, say dnd/common, then it is
+reasonable to put the dnd-someFeature test in the dnd/common module. In general, the test should be promoted up
+the dependency tree to a point where it's inclusion is guaranteed by the time it's needed. The final fallback dojo/has
+is always available.
 
-==============================
-Configuration Switch Reference
-==============================
+Has feature values can be set in user configuration via the has configuration variable. To set has value prior to loader
+definition, use dojoConfig or require; for example:
 
-========================
-has.js Feature Reference
-========================
+.. code-block :: javascript
 
-=================
-Changes from v1.6
-=================
+  <script type="text/javascript">
+    var dojoConfig= {
+      has:{
+        "dojo-sniff":0,     // don't define sniffing code
+        "dnd-someFeature":1 // hard set dnd-someFeature to true
+      }
+    }
+  </script>
+
+Unless the code passes through a has.add application for either of dojo-sniff of dnd-someFeature with force set true,
+these has feature values are hard set as prescribed above.
+
+Has features can also be set during normal code execution:
+
+.. code-block :: javascript
+
+  require({
+    has:{
+      someApi-someFeature:1,
+      someApi-anotherFeature:0
+    }
+  });
+  
+  define(["dojo", "some/api"], function(dojo, theApi){
+  });
+
+This forces the has features someApi-someFeature and someApi-anotherFeature to be hard set as prescribed--assuming that
+no value already exists for these feature tests. Caution is required here since it is unclear from the code whether or
+not the configuration will affect the some/api modules as intended. If the prescribed has feature tests were already
+defined, then setting them via configuration will not change their values. Further, if the module some/api was already
+loaded, then changing has feature tests cannot affect the definition of the module.
+
+has.js Build Design
+-------------------
+
+The full value of the has.js API is only realized when optimizing code for a particular application/environment. The
+build system executes three kinds of optimizations:
+
+  * for feature values known at build time, the bracketing if statements are removed and the bracketed code is either
+    unconditionally executed or also discarded (depending upon the static value of the if condition).
+
+  * for feature values known at build time, the feature test definition (the has.add application for the feature) is
+    unconditionally discarded
+
+  * for feature values determined at run time, the feature names are replaced with integers, thereby saving the space
+    required by the often verbose feature names.
+
+The build application replaces has feature tests with values known at build-time with the constants 0 (if the feature is
+known to be false) or 1 (if the feature is known to be true). Further, the has.add application is prefixed with "0 && "
+for all features with values known at build-time. For example, assume the has feature "dojo-sniff" is hard set to false
+at build-time, then the following code would be emmitted by the build program
+
+.. code-block :: javascript
+
+  // the feature test definition
+  0 && has.add("dojo-sniff", 1);
+
+  // a feature test usage
+  if(0){
+    // configuration sniffing code goes here
+  }
+
+When this code is processed by the Google Closure Compiler in simple mode, all of the definitions will be eliminated.
