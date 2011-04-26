@@ -92,19 +92,15 @@ Migration
 
 Dijit
 -----
-- Many widgets which used to include the parser no longer do.   If your page isn't parsing, check that you remembered the dojo.require("dojo.parser") call
+- You may need to explicitly require the following modules which were getting implicitly loaded before:
+
+   * dojo.parser (many widgets which used to include the parser no longer do)
+   * dijit.form.DropDownButton, dijit.form.ComboButton, dijit.form.ToggleButton (formerly in dijit/form/Button)
+   * dijit.form.MappedTextBox, dijit.form.RangeBoundTextBox (formerly in dijit/form/ValidationTextBox)
+   * dijit.form.RadioButton (formerly in dijit/form/Checkbox)
+   * dijit.MenuItem, dijit.PopupMenuItem, dijit.CheckedMenuItem, dijit.MenuSeparator (previously pulled in by dijit.Menu)
+   * TooltipDialog (previously pulled in by dijit.Dialog)
 
 - Many widgets which used to extend _Templated now extend _TemplatedMixin.   If you have custom widgets that extend standard widgets, and use widgetsInTemplate: true, you may need to also mixin dijit._WidgetsInTemplate
 
 - The dijit.Calendar template has been modified to have ${!dayCellsHtml} and ${!dateRowsHtml} variables for the M-F (days of week) row, and the 1-31 days-of-the-month cells.  Custom calendar templates should be updated to contain these variables rather than markup for those sections.  If custom versions of Calendar need to modify the structure of days-of-week or days-of-month cells, they can override the new Calendar attributes: dowTemplateString, dateTemplateString, and weekTemplateString.
-
-- The following widgets and mixins have been split off to their own files, so be sure to require them explicitly if you are using them:
-
-   * dijit.form.DropDownButton (formerly in dijit/form/Button)
-   * dijit.form.ComboButton (formerly in dijit/form/Button)
-   * dijit.form.ToggleButton (formerly in dijit/form/Button)
-   * dijit.form.MappedTextBox (formerly in dijit/form/ValidationTextBox)
-   * dijit.form.RangeBoundTextBox (formerly in dijit/form/ValidationTextBox)
-   * dijit.form.RadioButton (formerly in dijit/form/Checkbox)
-
-- Menu.js no longer includes MenuItem, PopupMenuItem, CheckedMenuItem, or MenuSeparator.    Be sure to require those widgets explicitly if you are using them.
