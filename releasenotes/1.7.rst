@@ -6,7 +6,7 @@ Dojo 1.7 Release Notes
 ======================
 
 .. contents::
-   :depth: 3
+   :depth: 2
 
 ===============
 Browser support
@@ -73,6 +73,24 @@ And with the code below, myWidget.set("title", "hello world") will set this.titl
 This replaces attributeMap, which is deprecated and will be removed in 2.0.
 
 
+dijit/focus, dijit/place, and dijit/popup
+-----------------------------------------
+The focus, place, and popup modules in dijit/_base have been promoted to dijit/, so they can be included explicitly by applications that don't want to include all of dijit/_base.
+
+There are a few API changes in the top level modules compared to the ones in dijit/_base (although for backwards compatibility the modules in dijit/_base maintain their old API):
+
+  - Popup.around() (analogous to dijit.popup.placeAroundElement()) takes a position parameter like ["before", "after"] rather than a set of tuples like {BL: "TL", ...}.   In other words, popup.around() replaces dijit.popup.placeAroundElement() but instead of dijit.getPopupAroundAlignment(xyz), just pass in xzy directly.
+  - dijit/focus doesn't include the selection related code, just focus related code
+  - dijit/focus provides watch() and on() methods to monitor the focused node and active widgets, rather than publishing topics focusNode, widgetBlur, and widgetFocus
+  - some methods in dijit/_base/popup used to take DOMNodes or widgets as a parameter; now they just take a widget
+
+Also note that the new dijit/popup module is only available through the new AMD API, ex:
+
+   .. code-block :: javascript
+
+      require(["dijit/popup"], function(popup){ popup.open(...); });
+
+ 
 _CalendarLite
 -------------
 TODO: Bill
