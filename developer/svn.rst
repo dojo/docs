@@ -135,6 +135,24 @@ The downloads are an OS X installer package. Install it, at which point the inst
 
 Next, take a minute to update your svn config settings.
 
+Committing a Patch
+------------------
+When you commit patches, there are several important magic strings that you should be aware of to make sure your changes get properly associated with trac tickets.
+
+::
+
+    svn commit -m "{magic strings} Commit message here" names/of/files
+
+**"fixes #123456"** --- Where 123456 is the ticket number will automatically update the ticket about the commit and closes it as fixed.
+
+**"refs #123456"** --- Where 123456 is the ticket number will automatically update the ticket about the commit and keeps it in the current state. Useful when a patch is in multiple parts, or provides a partial solution.
+
+You can have several "refs" and "fixes" per commit --- it all should work. Useful for dealing with related tickets.
+
+The third magic string is **"!strict"** --- We lint on commit to try to detect problems with code and sometimes trac rejects even an innocent code change. Note: This commit checking appears to be turned off for DojoX at this time.
+
+If you forget to include these strings, you can still manually close the ticket using trac, but make sure to add a comment, like "[12345] fixes this ticket." where 12345 is the changeset number, so that trac adds a hyperlink to the commits for the ticket properly.
+
 ===================
 SVN Config Settings
 ===================
