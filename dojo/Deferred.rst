@@ -113,3 +113,4 @@ See Also
 * `dojo.when() <dojo/when>`_
 * `dojo.xhrGet() <dojo/xhrGet>`_
 * Article on the new design of Deferreds in 1.5: http://www.sitepen.com/blog/2010/05/03/robust-promises-with-dojo-deferred-1-5/
+* Tutorial "Getting Started with Deferreds" at http://dojotoolkit.org/documentation/tutorials/1.6/deferreds/
