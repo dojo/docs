@@ -137,7 +137,11 @@ EnhanedGrid can also be run with a flexible combination of the various plugins, 
       ...>
   </div>
 
-Following below is a full list of EnahancedGrid plugins, please refer to the separate doc page for more detail usage:
+=============================
+EnhancedGrid plugin list
+=============================
+
+Following below is a full list of EnahancedGrid plugins, please refer to the separate doc page for more details:
 
 * 'Nested Sorting' - Multiple column sorting
 * 'Indirect Selection' - Selecting rows with radio buttons or check boxes
