@@ -13,23 +13,25 @@ dojox.grid.EnhancedGrid
 Introduction
 ============
 
-EnhancedGrid (dojox.grid.EnhancedGrid) provides a rich set of features that enhance the capabilities of base DataGrid:
+EnhancedGrid (dojox.grid.EnhancedGrid) provides a rich set of features that enhance the capabilities of base DataGrid. All these features are implemented as separate plugins which can be loaded on demand, and the required features must be first declared before they can be used. 
 
-  * 'Nested Sorting'_ - Multiple column sorting
-  * 'Indirect Selection'_ - Selecting rows with radio buttons or check boxes
-  * 'Declarative context menus'_ - Context menus for header, row, cell and selected regions
+Following below is the full list of EnahancedGrid plugins:
+
+  * 'Nested Sorting' - Multiple column sorting
+  * 'Indirect Selection' - Selecting rows with radio buttons or check boxes
+  * 'Declarative context menus' - Context menus for header, row, cell and selected regions
   * `Filter <dojox/grid/EnhancedGrid/plugins/Filter>`_ - Support for defining rules to filter grid content in various data types.
-  * `Exporter <dojox/grid/EnhancedGrid/plugins/Exporter>`_ - Support for exporting grid content to various formats.
-  * `Printer <dojox/grid/EnhancedGrid/plugins/Printer>`_ - Provide convenient ways to printing grid.
+  * `Exporter <dojox/grid/EnhancedGrid/plugins/Exporter>`_ - Exporting grid content to various formats.
+  * `Printer <dojox/grid/EnhancedGrid/plugins/Printer>`_ - Providing convenient ways to printing grid.
   * `Selector <dojox/grid/EnhancedGrid/plugins/Selector>`_ - Unified extended selection support for rows, columns and cells. 
   * `DnD <dojox/grid/EnhancedGrid/plugins/DnD>`_ - Drag-and-drop support for rows/columns/cells, both within grid and out of grid.
   * `Pagination <dojox/grid/EnhancedGrid/plugins/Pagination>`_ - A different approach to work with huge data set besides the default virtual scrolling way
-  * `CellMerge <dojox/grid/EnhancedGrid/plugins/CellMerge>`_ - Support for merging adjacent cells within a row.
+  * `CellMerge <dojox/grid/EnhancedGrid/plugins/CellMerge>`_ - Merging adjacent cells within a row.
   * `Cookie <dojox/grid/EnhancedGrid/plugins/Cookie>`_ - Persistence of grid preferences, like column width, column order and sorting order.
   * `Search <dojox/grid/EnhancedGrid/plugins/Search>`_ - Support for searching the grid by regular expressions as well as wildcard pattern.
 
 
-EnhancedGrid features are implemented as plugins which can be loaded on demand. As a result, the required features must first declared before they can be used.
+
 
 .. code-example::
   :toolbar: themes, versions, dir
