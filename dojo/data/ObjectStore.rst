@@ -17,7 +17,7 @@ dojo.data.ObjectStore
 Introduction
 ============
 
-The ObjectStore is very simple to use, you simply provide a object store to the constructor (in the objectProvider property of the first argument) and you can use this data store with any Dojo Data compliant widget or other consumer.
+The ObjectStore is very simple to use, you simply provide a object store to the constructor (in the objectStore property of the first argument) and you can use this data store with any Dojo Data compliant widget or other consumer.
 
 ========
 Examples
