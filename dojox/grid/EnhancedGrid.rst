@@ -16,11 +16,11 @@ Introduction
 EnhancedGrid (dojox.grid.EnhancedGrid) provides a rich set of features that enhance the capabilities of base DataGrid. All these features are implemented as separate plugins which can be loaded on demand, and the required features must be first declared before they can be used. 
 
 
-====================================
-Run EnhancedGrid without any plugins
-====================================
+================================
+Run EnhancedGrid without plugins
+================================
 
-This is the most simple way to run up an EnhancedGrid, which is actually the same as a base DataGrid since no plugins are turned on.
+This is the most simple way to run up an EnhancedGrid, and in the scenario, it's actually the same as a base DataGrid since no plugins are turned on.
 
 .. code-example::
   :toolbar: themes, versions, dir
@@ -84,9 +84,9 @@ This is the most simple way to run up an EnhancedGrid, which is actually the sam
         }
     </style>
 
-=============================
-Run EnhancedGrid with plugins
-=============================
+=====================================
+Run EnhancedGrid with various plugins
+=====================================
 
 EnhanedGrid can also be run with a flexible combination of the various plugins, and a typical usage will look like:
 
