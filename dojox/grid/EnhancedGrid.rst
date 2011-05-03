@@ -17,19 +17,18 @@ EnhancedGrid (dojox.grid.EnhancedGrid) provides a rich set of features that enha
 
 Following below is the full list of EnahancedGrid plugins:
 
-  * 'Nested Sorting' - Multiple column sorting
-  * 'Indirect Selection' - Selecting rows with radio buttons or check boxes
-  * 'Declarative context menus' - Context menus for header, row, cell and selected regions
-  * `Filter <dojox/grid/EnhancedGrid/plugins/Filter>`_ - Support for defining rules to filter grid content in various data types.
-  * `Exporter <dojox/grid/EnhancedGrid/plugins/Exporter>`_ - Exporting grid content to various formats.
-  * `Printer <dojox/grid/EnhancedGrid/plugins/Printer>`_ - Providing convenient ways to printing grid.
-  * `Selector <dojox/grid/EnhancedGrid/plugins/Selector>`_ - Unified extended selection support for rows, columns and cells. 
-  * `DnD <dojox/grid/EnhancedGrid/plugins/DnD>`_ - Drag-and-drop support for rows/columns/cells, both within grid and out of grid.
-  * `Pagination <dojox/grid/EnhancedGrid/plugins/Pagination>`_ - A different approach to work with huge data set besides the default virtual scrolling way
-  * `CellMerge <dojox/grid/EnhancedGrid/plugins/CellMerge>`_ - Merging adjacent cells within a row.
-  * `Cookie <dojox/grid/EnhancedGrid/plugins/Cookie>`_ - Persistence of grid preferences, like column width, column order and sorting order.
-  * `Search <dojox/grid/EnhancedGrid/plugins/Search>`_ - Support for searching the grid by regular expressions as well as wildcard pattern.
-
+* 'Nested Sorting' - Multiple column sorting
+* 'Indirect Selection' - Selecting rows with radio buttons or check boxes
+* 'Declarative context menus' - Context menus for header, row, cell and selected regions
+* `Filter <dojox/grid/EnhancedGrid/plugins/Filter>`_ - Support for defining rules to filter grid content in various data types.
+* `Exporter <dojox/grid/EnhancedGrid/plugins/Exporter>`_ - Exporting grid content to various formats.
+* `Printer <dojox/grid/EnhancedGrid/plugins/Printer>`_ - Providing convenient ways to printing grid.
+* `Selector <dojox/grid/EnhancedGrid/plugins/Selector>`_ - Unified extended selection support for rows, columns and cells. 
+* `DnD <dojox/grid/EnhancedGrid/plugins/DnD>`_ - Drag-and-drop support for rows/columns/cells, both within grid and out of grid.
+* `Pagination <dojox/grid/EnhancedGrid/plugins/Pagination>`_ - A different approach to work with huge data set besides the default virtual scrolling way
+* `CellMerge <dojox/grid/EnhancedGrid/plugins/CellMerge>`_ - Merging adjacent cells within a row.
+* `Cookie <dojox/grid/EnhancedGrid/plugins/Cookie>`_ - Persistence of grid preferences, like column width, column order and sorting order.
+* `Search <dojox/grid/EnhancedGrid/plugins/Search>`_ - Support for searching the grid by regular expressions as well as wildcard pattern.
 
 
 
@@ -43,10 +42,6 @@ Following below is the full list of EnahancedGrid plugins:
 
     <script type="text/javascript">
 	dojo.require("dojox.grid.EnhancedGrid");
-	dojo.require("dojox.grid.enhanced.plugins.DnD");
-	dojo.require("dojox.grid.enhanced.plugins.Menu");
-	dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
-	dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");
         dojo.require("dojox.data.CsvStore");
     
         dojo.addOnLoad(function(){
@@ -65,8 +60,7 @@ Following below is the full list of EnahancedGrid plugins:
               query: { Title: '*' },
               store: store,
               rowSelector: '20px',
-              structure: layout,
-              plugins : {nestedSorting: true, dnd: true, indirectSelection: {name: "Selection", width:"70px", styles:"text-align: center;"}}
+              structure: layout}
           }, document.createElement('div'));
 
           // append the new grid to the div "gridContainer4":
@@ -86,8 +80,8 @@ Following below is the full list of EnahancedGrid plugins:
     <style type="text/css">
         @import "{{ baseUrl }}dojo/resources/dojo.css";
         @import "{{ baseUrl }}dijit/themes/{{ theme }}/{{ theme }}.css";
-		@import "{{ baseUrl }}dojox/grid/enhanced/resources/{{ theme }}EnhancedGrid.css";
-		@import "{{ baseUrl }}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
+	@import "{{ baseUrl }}dojox/grid/enhanced/resources/{{ theme }}/EnhancedGrid.css";
+	@import "{{ baseUrl }}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
 
         .dojoxGrid table {
             margin: 0;
@@ -113,7 +107,7 @@ The following steps show a typical usage of EnhancedGrid:
 
   <style type="text/css">
       @import "../../../../dijit/themes/claro/claro.css";
-      @import "../../enhanced/resources/claroEnhancedGrid.css";
+      @import "../../enhanced/resources/claro/EnhancedGrid.css";
       ...
   </style>
 
