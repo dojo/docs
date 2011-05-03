@@ -25,10 +25,10 @@ Following below is the full list of EnahancedGrid plugins:
 * `Printer <dojox/grid/EnhancedGrid/plugins/Printer>`_ - Providing convenient ways to printing grid.
 * `Selector <dojox/grid/EnhancedGrid/plugins/Selector>`_ - Unified extended selection support for rows, columns and cells. 
 * `DnD <dojox/grid/EnhancedGrid/plugins/DnD>`_ - Drag-and-drop support for rows/columns/cells, both within grid and out of grid.
-* `Pagination <dojox/grid/EnhancedGrid/plugins/Pagination>`_ - A different approach to work with huge data set besides the default virtual scrolling way
+* `Pagination <dojox/grid/EnhancedGrid/plugins/Pagination>`_ - Pagination approach to work with huge data set besides the default virtual scrolling way
 * `CellMerge <dojox/grid/EnhancedGrid/plugins/CellMerge>`_ - Merging adjacent cells within a row.
-* `Cookie <dojox/grid/EnhancedGrid/plugins/Cookie>`_ - Persistence of grid preferences, like column width, column order and sorting order.
-* `Search <dojox/grid/EnhancedGrid/plugins/Search>`_ - Support for searching the grid by regular expressions as well as wildcard pattern.
+* `Cookie <dojox/grid/EnhancedGrid/plugins/Cookie>`_ - Persisting grid preferences, e.g column width|order and sorting order.
+* `Search <dojox/grid/EnhancedGrid/plugins/Search>`_ - Searching the grid by regular expressions as well as wildcard pattern.
 
 
 
@@ -61,7 +61,7 @@ Following below is the full list of EnahancedGrid plugins:
               store: store,
               rowSelector: '20px',
               structure: layout}
-          }, document.createElement('div'));
+          , document.createElement('div'));
 
           // append the new grid to the div "gridContainer4":
           dojo.byId("gridDiv").appendChild(grid.domNode);
