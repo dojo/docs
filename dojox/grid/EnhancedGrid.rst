@@ -15,22 +15,12 @@ Introduction
 
 EnhancedGrid (dojox.grid.EnhancedGrid) provides a rich set of features that enhance the capabilities of base DataGrid. All these features are implemented as separate plugins which can be loaded on demand, and the required features must be first declared before they can be used. 
 
-Following below is the full list of EnahancedGrid plugins:
 
-* 'Nested Sorting' - Multiple column sorting
-* 'Indirect Selection' - Selecting rows with radio buttons or check boxes
-* 'Declarative context menus' - Context menus for header, row, cell and selected regions
-* `Filter <dojox/grid/EnhancedGrid/plugins/Filter>`_ - Support for defining rules to filter grid content in various data types.
-* `Exporter <dojox/grid/EnhancedGrid/plugins/Exporter>`_ - Exporting grid content to various formats.
-* `Printer <dojox/grid/EnhancedGrid/plugins/Printer>`_ - Providing convenient ways to printing grid.
-* `Selector <dojox/grid/EnhancedGrid/plugins/Selector>`_ - Unified extended selection support for rows, columns and cells. 
-* `DnD <dojox/grid/EnhancedGrid/plugins/DnD>`_ - Drag-and-drop support for rows/columns/cells, both within grid and out of grid.
-* `Pagination <dojox/grid/EnhancedGrid/plugins/Pagination>`_ - Pagination approach to work with huge data set besides the default virtual scrolling way
-* `CellMerge <dojox/grid/EnhancedGrid/plugins/CellMerge>`_ - Merging adjacent cells within a row.
-* `Cookie <dojox/grid/EnhancedGrid/plugins/Cookie>`_ - Persisting grid preferences, e.g column width|order and sorting order.
-* `Search <dojox/grid/EnhancedGrid/plugins/Search>`_ - Searching the grid by regular expressions as well as wildcard pattern.
+====================================
+Run EnhancedGrid without any plugins
+====================================
 
-
+This is the most simple way to run up an EnhancedGrid, which is actually the same as a base DataGrid since no plugins are turned on.
 
 .. code-example::
   :toolbar: themes, versions, dir
@@ -94,13 +84,13 @@ Following below is the full list of EnahancedGrid plugins:
         }
     </style>
 
-=====
-Usage
-=====
+=============================
+Run EnhancedGrid with plugins
+=============================
 
-The following steps show a typical usage of EnhancedGrid:
+EnhanedGrid can also be run with a flexible combination of the various plugins, and a typical usage will look like::
 
-1. Import related CSS
+1. Import theme CSS
 
 .. code-block :: javascript
   :linenos:
@@ -131,7 +121,7 @@ The following steps show a typical usage of EnhancedGrid:
       ...
   </script>
 
-3. Use features:
+3. Use feature plugins:
 
 .. code-block :: javascript
   :linenos:
@@ -145,6 +135,22 @@ The following steps show a typical usage of EnhancedGrid:
       selectedRegionMenu:'selectedRegionMenu'}}"
       ...>
   </div>
+
+Following below is a full list of EnahancedGrid plugins, please refer to the separate doc page for more detail usage:
+
+* 'Nested Sorting' - Multiple column sorting
+* 'Indirect Selection' - Selecting rows with radio buttons or check boxes
+* 'Declarative context menus' - Context menus for header, row, cell and selected regions
+* `Filter <dojox/grid/EnhancedGrid/plugins/Filter>`_ - Support for defining rules to filter grid content in various data types.
+* `Exporter <dojox/grid/EnhancedGrid/plugins/Exporter>`_ - Exporting grid content to various formats.
+* `Printer <dojox/grid/EnhancedGrid/plugins/Printer>`_ - Providing convenient ways to printing grid.
+* `Selector <dojox/grid/EnhancedGrid/plugins/Selector>`_ - Unified extended selection support for rows, columns and cells. 
+* `DnD <dojox/grid/EnhancedGrid/plugins/DnD>`_ - Drag-and-drop support for rows/columns/cells, both within grid and out of grid.
+* `Pagination <dojox/grid/EnhancedGrid/plugins/Pagination>`_ - Pagination approach to work with huge data set besides the default virtual scrolling way
+* `CellMerge <dojox/grid/EnhancedGrid/plugins/CellMerge>`_ - Merging adjacent cells within a row.
+* `Cookie <dojox/grid/EnhancedGrid/plugins/Cookie>`_ - Persisting grid preferences, e.g column width|order and sorting order.
+* `Search <dojox/grid/EnhancedGrid/plugins/Search>`_ - Searching the grid by regular expressions as well as wildcard pattern.
+
 
 
 ==============
