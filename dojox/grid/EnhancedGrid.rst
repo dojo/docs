@@ -3,10 +3,8 @@
 dojox.grid.EnhancedGrid
 =======================
 
-:Project owner: Nathan Toone
+:Project owner: Evan Huang
 :Available: since V.1.4
-
-Enhanced DataGrid adds numerous useful features to dojox.grid.
 
 .. contents::
    :depth: 2
@@ -15,13 +13,20 @@ Enhanced DataGrid adds numerous useful features to dojox.grid.
 Introduction
 ============
 
-EnhancedGrid (dojox.grid.EnhancedGrid) provides a rich set of features that enhance the capabilities of base DataGrid. The following accessible enhancements are implemented in Dojo 1.4:
+EnhancedGrid (dojox.grid.EnhancedGrid) provides a rich set of features that enhance the capabilities of base DataGrid:
 
-* Nested Sorting
-* Built-in support for Indirect Selection (radio buttons and check boxes)
-* Declarative context menus
-* Selecting multiple rows or columns by swiping
-* Moving multiple rows or columns with drag-n-drop
+  * 'Nested Sorting'_ - Multiple column sorting
+  * 'Indirect Selection'_ - Selecting rows with radio buttons or check boxes
+  * 'Declarative context menus'_ - Context menus for header, row, cell and selected regions
+  * `Filter <dojox/grid/EnhancedGrid/plugins/Filter>`_ - Support for defining rules to filter grid content in various data types.
+  * `Exporter <dojox/grid/EnhancedGrid/plugins/Exporter>`_ - Support for exporting grid content to various formats.
+  * `Printer <dojox/grid/EnhancedGrid/plugins/Printer>`_ - Provide convenient ways to printing grid.
+  * `Selector <dojox/grid/EnhancedGrid/plugins/Selector>`_ - Unified extended selection support for rows, columns and cells. 
+  * `DnD <dojox/grid/EnhancedGrid/plugins/DnD>`_ - Drag-and-drop support for rows/columns/cells, both within grid and out of grid.
+  * `Pagination <dojox/grid/EnhancedGrid/plugins/Pagination>`_ - A different approach to work with huge data set besides the default virtual scrolling way
+  * `CellMerge <dojox/grid/EnhancedGrid/plugins/CellMerge>`_ - Support for merging adjacent cells within a row.
+  * `Cookie <dojox/grid/EnhancedGrid/plugins/Cookie>`_ - Persistence of grid preferences, like column width, column order and sorting order.
+  * `Search <dojox/grid/EnhancedGrid/plugins/Search>`_ - Support for searching the grid by regular expressions as well as wildcard pattern.
 
 
 EnhancedGrid features are implemented as plugins which can be loaded on demand. As a result, the required features must first declared before they can be used.
