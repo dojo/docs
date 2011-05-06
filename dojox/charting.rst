@@ -718,8 +718,8 @@ The event handler receives one argument. While it tries to unify information for
 |                |                                         |Undefined for all other elements                                               |           |
 +----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
 
-Zooming, Scrolling, and Panning by API
---------------------------------------
+Zooming, Scrolling, and Panning APIs
+------------------------------------
 
 Dojo Charting provides methods to control arbitrary zooming to drill down to the smallest details of your chart, scrolling, and panning (moving the chart with you mouse in two dimensions). Note that the latter functionality can be taxing on the browser, but the new generation of browsers (Firefox 3, Safari 3, Opera 9.5) are up to the task.
 
@@ -756,11 +756,13 @@ Coming with the Dojo 1.2 release, Charting will also support customized events, 
 Actions & Animated Effects
 ==========================
 
-Actions are self-contained objects, which use events to implement certain effects when users interact with a chart. In general they are designed to attract attention and indicate which charting element is selected, or to show additional information.
+Actions are self-contained objects, which use events to implement certain effects when users interact with a chart. Actions are either interacting with a plot of the chart and inheriting from PlotAction or interacting with the chart itself and inheriting ChartAction.
 
-While you can create your own actions, we took liberty to package some generally useful actions. The default library contains five classes: Highlight, Magnify, MoveSlice, Shake, and Tooltip. All of them take advantage of the Dojo animation support. It is the best to see them live on the demo page (it demonstrates examples of legends as well).
+In general plot actions they are designed to attract attention and indicate which charting element is selected, or to show additional information while chart actions usually modify charting properties such as the zoom level.
 
-All actions except Tooltip support the following common keyword parameters:
+While you can create your own actions, we took liberty to package some generally useful actions. The default library contains five plot actions classes: Highlight, Magnify, MoveSlice, Shake, and Tooltip. All of them take advantage of the Dojo animation support. It is the best to see them live on the demo page (it demonstrates examples of legends as well). It also contains four chart actions classes: MouseZoomAndPan, MouseIndicator, TouchZoomAndPan and TouchIndicator.
+
+All plot actions except Tooltip support the following common keyword parameters:
 
 +----------+----------+--------------------------+----------------------------------------------------------------------------------+
 | **Name** | **Type** | **Default**              | **Description**                                                                  |
@@ -869,6 +871,67 @@ The default text function checks if a data point is an object, and uses an optio
 The picture below demonstrates Tooltip, and Highlight actions.
 
 TODO: Example Tooltip and Highlight
+
+MouseZoomAndPan
+---------------
+
+This action zooms and pans the chart on mouse gestures. You can zoom the chart using the mouse wheel and you can pan the chart while dragging the mouse over it. Zoom in and out actions are also available on Ctrl + + and Ctrl + - keystroke. Finally you can alternate between the fit mode and zoom mode using double click.
+
+MouseZoomAndPan supports several additional parameters:
+
++----------+----------+-------------+-------------------------------------------------------------------------------+
+| **Name** | **Type** | **Default** | **Description**                                                               |
++----------+----------+-------------+-------------------------------------------------------------------------------+
+|xxx       |Number    |2 	    |The value to scale an element.                                                 |
++----------+----------+-------------+-------------------------------------------------------------------------------+
+
+TODO: example
+
+MouseIndicator
+--------------
+
+This action display a data indicator on the the chart when dragging the mouse over the chart.
+
+MouseIndicator supports several additional parameters:
+
++----------+----------+-------------+-------------------------------------------------------------------------------+
+| **Name** | **Type** | **Default** | **Description**                                                               |
++----------+----------+-------------+-------------------------------------------------------------------------------+
+|xxx       |Number    |2 	    |The value to scale an element.                                                 |
++----------+----------+-------------+-------------------------------------------------------------------------------+
+
+TODO: example
+
+TouchZoomAndPan
+---------------
+
+This action zooms and pans the chart on touch gestures. You can zoom in using pinch gesture and zoom out using spread gesture. You can pan the chart moving a single touch on the screen. Finally you can alternate between the fit mode and zoom mode using double tap gesture. This is particularly useful on mobile devices.
+
+TouchZoomAndPan supports several additional parameters:
+
++----------+----------+-------------+-------------------------------------------------------------------------------+
+| **Name** | **Type** | **Default** | **Description**                                                               |
++----------+----------+-------------+-------------------------------------------------------------------------------+
+|xxx       |Number    |2 	    |The value to scale an element.                                                 |
++----------+----------+-------------+-------------------------------------------------------------------------------+
+
+TODO: example
+
+TouchIndicator
+--------------
+
+This action display a data indicator on the the chart when touching the chart. If there is a single touch point the data indicator displays the value of the data point closest to the touch point. If there are two touch points the data indicator display the data variation between the two touch points.
+
+TouchIndicator supports several additional parameters:
+
++----------+----------+-------------+-------------------------------------------------------------------------------+
+| **Name** | **Type** | **Default** | **Description**                                                               |
++----------+----------+-------------+-------------------------------------------------------------------------------+
+|xxx       |Number    |2 	    |The value to scale an element.                                                 |
++----------+----------+-------------+-------------------------------------------------------------------------------+
+
+TODO: example
+
 
 Using Actions
 -------------
