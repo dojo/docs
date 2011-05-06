@@ -917,15 +917,23 @@ TODO: example
 TouchZoomAndPan
 ---------------
 
-This action zooms and pans the chart on touch gestures. You can zoom in using pinch gesture and zoom out using spread gesture. You can pan the chart moving a single touch on the screen. Finally you can alternate between the fit mode and zoom mode using double tap gesture. This is particularly useful on mobile devices.
+This action zooms and pans the chart on touch gestures. You can zoom out using pinch gesture and zoom in using spread gesture. You can pan the chart moving a single touch on the screen. Finally you can alternate between the fit mode and zoom mode using double tap gesture. This is particularly useful on mobile devices.
 
 TouchZoomAndPan supports several additional parameters:
 
-+----------+----------+-------------+-------------------------------------------------------------------------------+
-| **Name** | **Type** | **Default** | **Description**                                                               |
-+----------+----------+-------------+-------------------------------------------------------------------------------+
-|xxx       |Number    |2 	    |The value to scale an element.                                                 |
-+----------+----------+-------------+-------------------------------------------------------------------------------+
++---------------------+----------+-------------+-------------------------------------------------------------------------------+
+| **Name**            | **Type** | **Default** | **Description**                                                               |
++---------------------+----------+-------------+-------------------------------------------------------------------------------+
+|axis                 |String    |"x"          |The axis name                                                                  |
++---------------------+----------+-------------+-------------------------------------------------------------------------------+
+|scaleFactor          |Number    |1.2          |The scale factor applied on double tap                                         |
++---------------------+----------+-------------+-------------------------------------------------------------------------------+
+|maxScale             |Number    |100          |The maximum scale accepted by the chart action                                 |
++---------------------+----------+-------------+-------------------------------------------------------------------------------+
+|enableScroll         |Boolean   |true         |Whether touch drag gesture pans the chart                                      |
++---------------------+----------+-------------+-------------------------------------------------------------------------------+
+|enableZoom           |Boolean   |true         |Whether touch pinch and spread gesture should zoom out or in the chart         |
++---------------------+----------+-------------+-------------------------------------------------------------------------------+
 
 TODO: example
 
