@@ -718,8 +718,8 @@ The event handler receives one argument. While it tries to unify information for
 |                |                                         |Undefined for all other elements                                               |           |
 +----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
 
-Zooming, Scrolling, and Panning
--------------------------------
+Zooming, Scrolling, and Panning by API
+--------------------------------------
 
 Dojo Charting provides methods to control arbitrary zooming to drill down to the smallest details of your chart, scrolling, and panning (moving the chart with you mouse in two dimensions). Note that the latter functionality can be taxing on the browser, but the new generation of browsers (Firefox 3, Safari 3, Opera 9.5) are up to the task.
 
@@ -741,7 +741,7 @@ Dojo Charting provides methods to control arbitrary zooming to drill down to the
 |                                   |All chart's axes (and, by extension, plots) will be affected)                                                  |
 +-----------------------------------+---------------------------------------------------------------------------------------------------------------+
 
-Both methods on Chart perform sanity checks, and won't allow you to scroll outside of axis’ boundaries, or zoom out too far.
+Both methods on Chart perform sanity checks, and won't allow you to scroll outside of axis’ boundaries, or zoom out too far. You can also zoom and pan using mouse and touch gestures, see Actions & Animated Effects section.
 
 Updating Charts and Events
 --------------------------
