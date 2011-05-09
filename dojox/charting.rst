@@ -741,7 +741,7 @@ Dojo Charting provides methods to control arbitrary zooming to drill down to the
 |                                   |All chart's axes (and, by extension, plots) will be affected)                                                  |
 +-----------------------------------+---------------------------------------------------------------------------------------------------------------+
 
-Both methods on Chart perform sanity checks, and won't allow you to scroll outside of axis’ boundaries, or zoom out too far. You can also zoom and pan using mouse and touch gestures, see Actions & Animated Effects section.
+Both methods on Chart perform sanity checks, and won't allow you to scroll outside of axis’ boundaries, or zoom out too far. Starting with Dojo Toolkit 1.7 you can also zoom and pan using mouse and touch gestures, see Actions & Animated Effects section.
 
 Updating Charts and Events
 --------------------------
@@ -756,7 +756,7 @@ Coming with the Dojo 1.2 release, Charting will also support customized events, 
 Actions & Animated Effects
 ==========================
 
-Actions are self-contained objects, which use events to implement certain effects when users interact with a chart. Actions are either interacting with a plot of the chart and inheriting from PlotAction or interacting with the chart itself and inheriting ChartAction.
+Actions are self-contained objects, which use events to implement certain effects when users interact with a chart. Actions are either interacting with a plot of the chart and inheriting from PlotAction interacting with the chart itself and inheriting ChartAction. The latter type of actions are available starting with Dojo Toolkit 1.7.
 
 In general plot actions they are designed to attract attention and indicate which charting element is selected, or to show additional information while chart actions usually modify charting properties such as the zoom level.
 
