@@ -906,11 +906,21 @@ This action display a data indicator on the the chart when dragging the mouse ov
 
 MouseIndicator supports several additional parameters:
 
-+----------+----------+-------------+-------------------------------------------------------------------------------+
-| **Name** | **Type** | **Default** | **Description**                                                               |
-+----------+----------+-------------+-------------------------------------------------------------------------------+
-|xxx       |Number    |2 	    |The value to scale an element.                                                 |
-+----------+----------+-------------+-------------------------------------------------------------------------------+
++---------------------+----------+-------------+-------------------------------------------------------------------------------+
+| **Name**            | **Type** | **Default** | **Description**                                                               |
++---------------------+----------+-------------+-------------------------------------------------------------------------------+
+|series               |String    |null         |The series name                                                                |
++---------------------+----------+-------------+-------------------------------------------------------------------------------+
+|autoScroll           |Boolean   |true         |Whether when moving indicator the chart is automatically scrolled              |
++---------------------+----------+-------------+-------------------------------------------------------------------------------+
+|vertical             |Boolean   |true         |Whether the indicator is vertical or not                                       |
++---------------------+----------+-------------+-------------------------------------------------------------------------------+
+|fixed                |Boolean   |true         |Whether a fixed precision must be applied to displayed value                   |
++---------------------+----------+-------------+-------------------------------------------------------------------------------+
+|vertical             |Number    |0            |The precision at which to round values for display                             |
++---------------------+----------+-------------+-------------------------------------------------------------------------------+
+
+It also includes several styling additional parameters that allows to change the color if the indicator test, background, line... These style properties can also be set on the Chart theme.
 
 TODO: example
 
@@ -944,11 +954,23 @@ This action display a data indicator on the the chart when touching the chart. I
 
 TouchIndicator supports several additional parameters:
 
-+----------+----------+-------------+-------------------------------------------------------------------------------+
-| **Name** | **Type** | **Default** | **Description**                                                               |
-+----------+----------+-------------+-------------------------------------------------------------------------------+
-|xxx       |Number    |2 	    |The value to scale an element.                                                 |
-+----------+----------+-------------+-------------------------------------------------------------------------------+
++---------------------+----------+-------------+-------------------------------------------------------------------------------+
+| **Name**            | **Type** | **Default** | **Description**                                                               |
++---------------------+----------+-------------+-------------------------------------------------------------------------------+
+|series               |String    |null         |The series name                                                                |
++---------------------+----------+-------------+-------------------------------------------------------------------------------+
+|autoScroll           |Boolean   |true         |Whether when moving indicator the chart is automatically scrolled              |
++---------------------+----------+-------------+-------------------------------------------------------------------------------+
+|vertical             |Boolean   |true         |Whether the indicator is vertical or not                                       |
++---------------------+----------+-------------+-------------------------------------------------------------------------------+
+|dualIndicator        |Boolean   |false        |Whether a double touch on the chart creates an indicator showing trend         |
++---------------------+----------+-------------+-------------------------------------------------------------------------------+
+|fixed                |Boolean   |true         |Whether a fixed precision must be applied to displayed value                   |
++---------------------+----------+-------------+-------------------------------------------------------------------------------+
+|vertical             |Number    |0            |The precision at which to round values for display                             |
++---------------------+----------+-------------+-------------------------------------------------------------------------------+
+
+It also includes several styling additional parameters that allows to change the color if the indicator test, background, line... These style properties can also be set on the Chart theme.
 
 TODO: example
 
