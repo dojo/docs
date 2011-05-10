@@ -91,9 +91,9 @@ Also note that the new dijit/popup module is only available through the new AMD 
       require(["dijit/popup"], function(popup){ popup.open(...); });
 
  
-_CalendarLite
--------------
-TODO: Bill
+CalendarLite
+------------
+dijit.CalendarLite is a new widget aimed towards mobile use.   It's like Calendar but doesn't have keyboard support or a drop down to select the month.
 
 
 =====
@@ -124,7 +124,8 @@ Dijit
    * dijit.form.MappedTextBox, dijit.form.RangeBoundTextBox (formerly in dijit/form/ValidationTextBox)
    * dijit.form.RadioButton (formerly in dijit/form/Checkbox)
    * dijit.MenuItem, dijit.PopupMenuItem, dijit.CheckedMenuItem, dijit.MenuSeparator (previously pulled in by dijit.Menu)
-   * TooltipDialog (previously pulled in by dijit.Dialog)
+   * dijit.TooltipDialog (previously pulled in by dijit.Dialog)
+   * dijit.layout.AccordionPane (previously pulled in by AccordionContainer).  Or better yet, instead of requiring AccordionPane, just use dijit.layout.ContentPane instead.
 
 - Many widgets which used to extend _Templated now extend _TemplatedMixin.   If you have custom widgets that extend standard widgets, and use widgetsInTemplate: true, you may need to also mixin dijit._WidgetsInTemplate
 
