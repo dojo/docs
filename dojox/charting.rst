@@ -194,6 +194,15 @@ All three restrictions are applied in the following order: gap, minBarSize, maxB
 
   chart1.addPlot("default", {type: "Bars", gap: 5, minBarSize: 3, maxBarSize: 20});
 
+In addition the bar and column graph types can benefit from gfx shapes caching when rendered in order to improve further rendering performances. To enable this option do the following:
+
+.. code-block :: javascript
+  :linenos:
+
+  chart1.addPlot("default", {type: "Columns", enableCache: true});
+
+Note that you should enable it only if you except the chart to re-render often like for example when you intend to zoom it in or out in order to not penalize first rendering for nothing.
+
 For any chart type that supports axes, you can also define custom names to your axes here. By default they are “x” and “y”, but this option becomes useful if you wish to have a chart with multiple plots and multiple axes.
 
 .. code-block :: javascript
