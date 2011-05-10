@@ -130,6 +130,7 @@ Dijit
    * dijit.MenuItem, dijit.PopupMenuItem, dijit.CheckedMenuItem, dijit.MenuSeparator (previously pulled in by dijit.Menu)
    * dijit.TooltipDialog (previously pulled in by dijit.Dialog)
    * dijit.layout.AccordionPane (previously pulled in by AccordionContainer).  Or better yet, instead of requiring AccordionPane, just use dijit.layout.ContentPane instead.
+   * dijit.ToolbarSeparator (previously pulled in by dijit.Toolbar)
 
 - Many widgets which used to extend _Templated now extend _TemplatedMixin.   If you have custom widgets that extend standard widgets, and use widgetsInTemplate: true, you may need to also mixin dijit._WidgetsInTemplate
 
