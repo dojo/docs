@@ -137,3 +137,11 @@ Dijit
 - The dijit.Calendar template has been modified to have ${!dayCellsHtml} and ${!dateRowsHtml} variables for the M-F (days of week) row, and the 1-31 days-of-the-month cells.  Custom calendar templates should be updated to contain these variables rather than markup for those sections.  If custom versions of Calendar need to modify the structure of days-of-week or days-of-month cells, they can override the new Calendar attributes: dowTemplateString, dateTemplateString, and weekTemplateString.
 
 - If you have specified a custom labelFunc() for a dijit.form.ComboBox/FilteringSelect, it will be passed an item and store of the new `dojo.store <dojo/store>`_ API.   This generally won't be a problem unless you are depending on internals of the item (ex: depending on item being a DOMNode rather than a javascript hash), or accessing the store as a global variable rather than as the second parameter to the labelFunc() callback.
+
+- If you want to allow for rich text saving with back/forward actions, you must add a text area to your page with the id==dijit._scopeName + "._editor.RichText.value" (typically "dijit._editor.RichText.value). For example:
+
+   .. code-block :: javascript
+
+	<textarea id="dijit._editor.RichText.value" style="display:none;position:absolute;top:-100px;left:-100px;height:3px;width:3px;overflow:hidden;"></textarea>
+
+Previously this was done automatically in general (although it was always necessary for XD builds).
