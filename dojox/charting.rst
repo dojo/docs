@@ -897,7 +897,19 @@ MouseZoomAndPan supports several additional parameters:
 |keyZoomModifier      |String    |1.2          |Which keyboard modifier should used for keyboard zoom in and out               |
 +---------------------+----------+-------------+-------------------------------------------------------------------------------+
 
-TODO: example
+Here is an example showing how to attach a MouseZoomAndPan action to the chart and configure it:
+
+.. code-block :: javascript
+  :linenos:
+
+  var chart = new dojox.charting.Chart("test");
+  chart.addAxis("x", {type : "Default", enableCache: true});
+  chart.addAxis("y", {vertical: true});
+  chart.addPlot("default", {type: "Columns", enableCache: true});
+  chart.addSeries("Series A", [ ... ]);
+  new dojox.charting.action2d.MouseZoomAndPan(chart, "default", { axis: "x", "none" });
+  chart.render()
+
 
 MouseIndicator
 --------------
@@ -922,7 +934,25 @@ MouseIndicator supports several additional parameters:
 
 It also includes several styling additional parameters that allows to change the color if the indicator test, background, line... These style properties can also be set on the Chart theme.
 
-TODO: example
+Here is an example showing how to attach a MouseIndicator action to the chart and configure it:
+
+.. code-block :: javascript
+  :linenos:
+
+  var chart = new dojox.charting.Chart("test");
+  chart.addAxis("x", {type : "Default", enableCache: true});
+  chart.addAxis("y", {vertical: true});
+  chart.addPlot("default", {type: "Columns", enableCache: true});
+  chart.addSeries("Series A", [ ... ]);
+  new dojox.charting.action2d.MouseIndicator(chart, "default", { series: "Series A", 
+      font: "normal normal bold 12pt Tahoma",	
+      fillFunc: function(v){
+	return v.y>55?"green":"red";
+      }, 	
+      labelFunc: function(v){
+        return "x: "+v.x+", y:"+v.y;
+      }});
+  chart.render();
 
 TouchZoomAndPan
 ---------------
@@ -945,7 +975,19 @@ TouchZoomAndPan supports several additional parameters:
 |enableZoom           |Boolean   |true         |Whether touch pinch and spread gesture should zoom out or in the chart         |
 +---------------------+----------+-------------+-------------------------------------------------------------------------------+
 
-TODO: example
+Here is an example showing how to attach a TouchZoomAndPan action to the chart and configure it:
+
+.. code-block :: javascript
+  :linenos:
+
+  var chart = new dojox.charting.Chart("test");
+  chart.addAxis("x", {type : "Default", enableCache: true});
+  chart.addAxis("y", {vertical: true});
+  chart.addPlot("default", {type: "Columns", enableCache: true});
+  chart.addSeries("Series A", [ ... ]);
+  new dojox.charting.action2d.TouchZoomAndPan(chart, "default", { axis: "x" });
+  chart.render()
+
 
 TouchIndicator
 --------------
@@ -972,7 +1014,27 @@ TouchIndicator supports several additional parameters:
 
 It also includes several styling additional parameters that allows to change the color if the indicator test, background, line... These style properties can also be set on the Chart theme.
 
-TODO: example
+Here is an example showing how to attach a TouchIndicator action to the chart and configure it:
+
+.. code-block :: javascript
+  :linenos:
+
+  var chart = new dojox.charting.Chart("test");
+  chart.addAxis("x", {type : "Default", enableCache: true});
+  chart.addAxis("y", {vertical: true});
+  chart.addPlot("default", {type: "Columns", enableCache: true});
+  chart.addSeries("Series A", [ ... ]);
+  new dojox.charting.action2d.TouchIndicator(chart, "default", { 
+     series: "Series A", dualIndicator : true, font: "normal normal bold 16pt Tahoma", 
+     fillFunc: function(v1, v2){
+	if(v2){
+	  return v2.y>v1.y?"green":"red";
+        }else{
+	  return "white";
+	}
+     }
+  });
+  chart.render();
 
 
 Using Actions
