@@ -344,6 +344,17 @@ Now let’s examine the leftBottom option. This option defaults to true, and alo
   );
   chart1.render();
 
+Finally another option is the enableCache parameter. If your axis are meant to be often re-rendered (that is the case for example if you use a mouse or touch zoom action on the chart) it might be good to cache the underlying gfx objects and not re-create them. For that do:
+
+.. code-block :: javascript
+  :linenos:
+
+  chart1.addSeries("Series 2", [1, 1, 4, 2, 1, 6, 4, 3],
+          {plot: "other", stroke: {color:"blue"}, fill: "lightblue", enableCache: true}
+  );
+  
+As doing this caching will slow down a little bit the first rendering you must enable it only if you the axis will change over time and that you will thus benefit from it.
+
 Multiple Axes
 -------------
 
@@ -440,6 +451,18 @@ You can also add a grid at your tick marks to your entire chart by adding a Grid
   	vMajorLines: true,
   	vMinorLines: false
   });
+
+Similarly to the axis if your grid is changing often you can use the enableCache option to improve further renderings:
+
+.. code-block :: javascript
+  :linenos:
+
+  chart1.addPlot("Grid", {type: "Grid",
+  	hAxis: "other x",
+  	vAxis: "other y",
+  	enableCache: true
+  });
+  
 
 TODO: Grid Plot Example
 
