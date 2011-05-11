@@ -124,7 +124,8 @@ GeoCharting
 
   - Various improvements of the dojox.geo.charting module like tooltip management, color change animation when changing data series.
   - New dataStore structure, new data binding between the map element and the dataStore element.
-  - Allow interactive zoom/pan of the map using either mouse or touch gestures.
+  - Allow interactive zoom/pan of the map using either mouse or touch gestures, through the installation of dedicated interactor classes.
+  - New Map Dijit component wrapping the non-dijit dojox.geo.charting Map component, for easier integration
   - Use of AMD module format.
 
 Gfx
