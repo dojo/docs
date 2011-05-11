@@ -5,7 +5,7 @@ dojo.extend
 
 Dojo extend works much like `dojo.mixin <dojo/mixin>`_, though works directly on an object's prototype. Following the same pattern as mixin, dojo.extend mixes members from the right-most object into the first object, modifying the object directly.
 
-We can use extend to extend functionality into existing classes. Consider the following:
+We can use dojo.extend to extend functionality into existing classes. Consider the following:
 
 .. code-block :: javascript
   :linenos:
