@@ -111,6 +111,20 @@ Charting
   - Various improvement to improve performances on particular on mobile devices (new enableCache parameter on most plot type to allow caching and reuse of gfx shapes)
   - use of AMD module format 
 
+OpenLayers
+----------
+
+  - New dojox.geo.openlayers mapping package based on the OpenLayers library (See http://www.openlayers.org/ ).
+  - Allow user to add georeferenced Gfx shapes on a background map.
+  - Allow user to place georeferenced widgets on the map.
+  - Use of AMD module format.
+
+GeoCharting
+-----------
+
+  - Various improvements of the dojox.geo.charting module.
+  - Allow interactive zoom/pan of the map using either mouse or touch gestures.
+
 Gfx
 --------
 
