@@ -703,12 +703,30 @@ disconnect(token)
 
 See the api documentation of dojo.connect() and dojo.disconnect() for more details.
 
+From 1.7, the gfx shape targeted by a mouse event can be retrieved from the event received in the handler via the event.gfxTarget property. For example:
+
+  .. code-block :: javascript
+
+    group.connect(“onmouseclick”, function(e) { var s = e.gfxTarget; s.setFill(“red”); });
+
 Implementation notes
 ~~~~~~~~~~~~~~~~~~~~
 
 Shape-specific methods are used to hide the complexity of event handling for non-HTML DOM based renderers (e.g., Silverlight).
 
-Canvas doesn't support event processing. We may implement it externally in the future.
+The 1.7 release introduces a new experimental canvas renderer with input event support. It is enabled by default when the gfxRenderer is set to ‘canvas’. In case you don’t want to use this new implementation but the legacy one, set the ‘canvasEvent’ property to false in the dojo config. For example:
+
+  .. code-block :: javascript
+
+    djConfig: { canvasEvent:false, forceGfxRenderer:’canvas’ } will select the legacy canvas renderer implementation.
+
+The new canvas renderer supports the following events: oncontextmenu, onclick, ondblclick, onmouseenter, onmouseleave, onmouseout, onmousedown, touchstart, mouseup, touchend, onmouseover, onmousemove, touchmove, keydown, keyup.
+
+The implementation has the following limitations:
+
+* because the canvas API does not have a DOM representation (like SVG), shape.getEventSource() returns the surface rawNode.
+* events do not bubble beyond the surface node.
+* the current hit testing implementation may have a performance cost depending on the number of shapes in the scene.
 
 Silverlight supports following events: onclick, onmouseenter, onmouseleave, onmousedown, onmouseup, onmousemove, onkeydown, onkeyup.
 If you want to target the broadest range of renderers, you are advised to restrict yourself to this list of events.
