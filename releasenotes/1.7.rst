@@ -122,8 +122,10 @@ OpenLayers
 GeoCharting
 -----------
 
-  - Various improvements of the dojox.geo.charting module.
+  - Various improvements of the dojox.geo.charting module like tooltip management, color change animation when changing data series.
+  - New dataStore structure, new data binding between the map element and the dataStore element.
   - Allow interactive zoom/pan of the map using either mouse or touch gestures.
+  - Use of AMD module format.
 
 Gfx
 --------
