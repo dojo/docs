@@ -103,7 +103,16 @@ The old `dojo.data API <dojo/data/api/Read>`_ is still supported.
 =====
 DojoX
 =====
-
+Gauges
+-------
+  - The gauges that were previously located in the dojox.widget namespace have been moved to dojox.gauges.
+  - Several new indicators have been added to create your custom gauges, for example a text indicator to draw the value of the gauge as a text.
+  - The circular gauge can now be created clockwise or counter-clockwise.
+  - The layout of labels in the circular scale are improved.
+  - Gauges now support touch interaction on mobile devices.
+  - dojox.gauges now uses the AMD module format
+  - Three new pre-built gauges with a glossy look are now available : The GlossyHorizontalGauge, the GlossyCircularGauge and the GlossySemiCircularGauge.
+ 
 Charting
 --------
 
