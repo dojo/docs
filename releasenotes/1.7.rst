@@ -110,6 +110,7 @@ Charting
   - New zoom, pan, data indicator interactions have been committed in the action2d package. They allow users to interact with the chart using either mouse or touch gestures.
   - Various improvement to improve performances on particular on mobile devices (new enableCache parameter on most plot type to allow caching and reuse of gfx shapes)
   - use of AMD module format 
+  - Bidi text support has been added through two BidiSupport classes (one for dojox.charting, one for dojox.charting.widget) to require in your application in order for Bidi text support to be activated.
 
 OpenLayers
 ----------
