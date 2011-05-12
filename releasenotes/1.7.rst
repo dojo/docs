@@ -110,18 +110,18 @@ Charting
   - New zoom, pan, data indicator interactions have been committed in the action2d package. They allow users to interact with the chart using either mouse or touch gestures.
   - Various improvement to improve performances on particular on mobile devices (new enableCache parameter on most plot type to allow caching and reuse of gfx shapes)
   - use of AMD module format 
-  - Bidi text support has been added through two BidiSupport classes (one for dojox.charting, one for dojox.charting.widget) to require in your application in order for Bidi text support to be activated.
+  - Bidi text support has been added through two BidiSupport classes (one for dojox.charting, one for dojox.charting.widget). This classes need  to be required by your application in order for Bidi text support to be enabled.
 
-OpenLayers
-----------
+OpenLayers Maps
+---------------
 
   - New dojox.geo.openlayers mapping package based on the OpenLayers library (See http://www.openlayers.org/ ).
   - Allow user to add georeferenced Gfx shapes on a background map.
   - Allow user to place georeferenced widgets on the map.
   - Use of AMD module format.
 
-GeoCharting
------------
+GeoCharting Maps
+----------------
 
   - Various improvements of the dojox.geo.charting module like tooltip management, color change animation when changing data series.
   - New dataStore structure, new data binding between the map element and the dataStore element.
@@ -130,7 +130,7 @@ GeoCharting
   - Use of AMD module format.
 
 Gfx
---------
+---
 
   - Add input events support to canvas renderer. It is enabled by default and can be disabled by setting the djConfig 'canvasEvent' flag to 'false'.
   - The gfx shape targeted by a mouse event can be retrieved from the event itself by means of the 'gfxTarget' event property:
