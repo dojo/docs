@@ -153,6 +153,8 @@ second member (path)
 
 Note:  If you have a custom module namespace outside of the Dojo source distribution tree, you will need to specify it in the prefix list as similarly to:
 
+Note: It is entirely incorrect to include a 'dojo' prefix (i.e. "dojo", "../dojo") in the prefixes.  This will prevent anything being copied to the releaseDir and break the build.
+
 .. code-block :: javascript
 
         prefixes: [
