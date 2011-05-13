@@ -306,8 +306,8 @@ There are a couple of ways to set the selector engine. First, we can define the 
 
 .. code-block :: html
 
-  &lt;script data-dojo-config="selectorEngine='css2.1'" src="dojo/dojo.js">
-  &lt;/script>
+  <script data-dojo-config="selectorEngine='css2.1'" src="dojo/dojo.js">
+  </script>
 
 You can also specify the selector engine level you are dependent on for each of your module. This is done by indicating the CSS selector engine level after ! in the dojo/query module id. For example, if your module needed to do a CSS3 level query, you could write:
 
@@ -328,8 +328,8 @@ Once installed, you can use the selector engine module id as specified selector 
 
 .. code-block :: html
 
-  &lt;script data-dojo-config="selectorEngine='sizzle/sizzle'" src="dojo/dojo.js">
-  &lt;/script>
+  <script data-dojo-config="selectorEngine='sizzle/sizzle'" src="dojo/dojo.js">
+  </script>
 
 or set Slick as the engine for a particular module:
 
