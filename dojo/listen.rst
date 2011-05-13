@@ -5,7 +5,7 @@ dojo/listen
 
 :Authors: Kris Zyp
 :Project owner: Kris Zyp
-:Available: 1.6.0
+:Available: 1.7.0
 
 .. contents::
   :depth: 2
