@@ -84,9 +84,9 @@ The eventType parameter may also be an extension event. An extension event is a 
     listen(node, mouse.enter, hoverHandler);
   });
 
-You can also create your own extension event. An extension event is simply a function (or any object with a call() method) that will be called with two parameters. The first parameter is the target and the second is the listener.
+You can also create your own extension events. An extension event is simply a function (or any object with a call() method) that will be called with two parameters. The first parameter is the target and the second is the listener.
 
-The module's listen function also has several properties/functions on it for additional functionality.
+The module's listen function also has several others properties/functions on it for additional functionality:
 
 selector function
 -----------------
@@ -111,7 +111,7 @@ The listen.dispatch function provides a normalized mechanism for firing events. 
 * eventProperties.bubbles - This indicates that the event should bubble up, first firing on the target object, next on the target object's parent (parentNode) and so on until it reaches the top of the DOM or bubbling is stopped. Bubbling is stopped when a listener calls event.stopPropagation().
 * eventProperties.cancelable - This indicates that the event's default action can be cancelled. The default action is cancelled by a listener by calling event.preventDefault(). The dispatch method does not perform any default action, it returns a value allowing the calling code to perform any default action.
 
-The dispatch function returns the event object unless the event is cancelable and is cancelled by one of the listeners, in which case it will return false. For example,
+The dispatch function returns the event object unless the event is cancelable and is cancelled by one of the listeners, in which case it will return false. For example:
 
 .. code-block :: javascript
 
@@ -130,7 +130,7 @@ The dispatch function returns the event object unless the event is cancelable an
 pausable function
 -----------------
 
-The listen.pausable function provides a means for pausing an event listener, will still preserving the listeners order and state. The listen.pausable() function can be called just like listen() (with the same arguments). The only difference is the returned signal handler will include pause() and resume() methods. The pause() method will cause the listener to not be called when the specified event takes place. The resume() method will cause the listener to be called again. For example, we could write:
+The listen.pausable function provides a means for pausing an event listener, while still preserving the listeners order and state. The listen.pausable() function can be called just like listen() (with the same arguments). The only difference is the returned signal handler will include pause() and resume() methods. The pause() method will cause the listener to not be called when the specified event takes place. The resume() method will cause the listener to be called again. For example, we could write:
 
 .. code-block :: javascript
 
@@ -142,7 +142,7 @@ The listen.pausable function provides a means for pausing an event listener, wil
 Evented Base Class
 ------------------
 
-The listen module also provides an Evented property with a class that can be used as a base class or mixing for JavaScript classes that have their own events. The Evented class provides two methods, on(eventType, listener) and emit(eventType, eventObject) which correspond to listen() and listen.dispatch() with the target being the instance object. For example, we could create a class:
+The listen module also provides an Evented property that is a class that can be used as a base class or mixin for JavaScript classes that have their own events. The Evented class provides two methods, on(eventType, listener) and emit(eventType, eventObject) which correspond to listen() and listen.dispatch() with the target being the instance object. For example, we could create a class:
 
 .. code-block :: javascript
 
