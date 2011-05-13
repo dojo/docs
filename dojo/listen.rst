@@ -99,24 +99,24 @@ The listen.selector function can be used to apply event delegation when extensio
     listen(node, listen.selector(".myClass", mouse.enter), myClassHoverHandler);
   });
 
-dispatch function
+emit function
 -----------------
 
-The listen.dispatch function provides a normalized mechanism for firing events. This method will trigger an event using the native event facilities when available, and will emulate these facilities otherwise. The dispatch function takes three arguments (the first two closely mirror the listen function):
+The listen.emit function provides a normalized mechanism for dispatching events. This method will dispatch an event using the native event facilities when available, and will emulate these facilities otherwise. The emit function takes three arguments (the first two closely mirror the listen function):
 
 * target - This is the target object (typically a DOM node) that will be the source of the event. The target object may be a host object with it's own event capabilities (like DOM elements or the window), or it may be a plain JavaScript object.
 * eventType - This is the name of the event type to be dispatched (like "select"). This event may be a standard event (like "click") or a custom event (like "finished").
 * eventProperties - This is an object with the properties of the event to be dispatched. Generally you should align your properties with W3C standards. Two properties are of particular importance:
 
 * eventProperties.bubbles - This indicates that the event should bubble up, first firing on the target object, next on the target object's parent (parentNode) and so on until it reaches the top of the DOM or bubbling is stopped. Bubbling is stopped when a listener calls event.stopPropagation().
-* eventProperties.cancelable - This indicates that the event's default action can be cancelled. The default action is cancelled by a listener by calling event.preventDefault(). The dispatch method does not perform any default action, it returns a value allowing the calling code to perform any default action.
+* eventProperties.cancelable - This indicates that the event's default action can be cancelled. The default action is cancelled by a listener by calling event.preventDefault(). The emit method does not perform any default action, it returns a value allowing the calling code to perform any default action.
 
-The dispatch function returns the event object unless the event is cancelable and is cancelled by one of the listeners, in which case it will return false. For example:
+The emit function returns the event object unless the event is cancelable and is cancelled by one of the listeners, in which case it will return false. For example:
 
 .. code-block :: javascript
 
   define(["dojo/listen"], function(listen){
-    var event = listen.dispatch(button, "click", {
+    var event = listen.emit(button, "click", {
       bubbles: true,
       cancelable: true,
       which: 1
@@ -142,7 +142,7 @@ The listen.pausable function provides a means for pausing an event listener, whi
 Evented Base Class
 ------------------
 
-The listen module also provides an Evented property that is a class that can be used as a base class or mixin for JavaScript classes that have their own events. The Evented class provides two methods, on(eventType, listener) and emit(eventType, eventObject) which correspond to listen() and listen.dispatch() with the target being the instance object. For example, we could create a class:
+The listen module also provides an Evented property that is a class that can be used as a base class or mixin for JavaScript classes that have their own events. The Evented class provides two methods, on(eventType, listener) and emit(eventType, eventObject) which correspond to listen() and listen.emit() with the target being the instance object. For example, we could create a class:
 
 .. code-block :: javascript
 
