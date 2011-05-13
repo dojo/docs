@@ -17,6 +17,7 @@ dojo/listen API
 ===============
 
 The module's value is a listen function that can be directly called to add an event listener. The listen function is the form:
+
 .. code-block :: javascript
 
   listen(target, eventType, listener);
