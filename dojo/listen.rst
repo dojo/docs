@@ -25,7 +25,7 @@ The following parameters should be provided to the listen function:
 
 * target - This is the target object (typically a DOM node) that will be the source of the events. The target object may be a host object with it's own event capabilities (like DOM elements or the window), or it may be a plain JavaScript object.
 * eventType - This is the name of the event to be listening for (like "click"). This may include a (CSS) selector to specify the target nodes to listen for.
-* listener - This is the function that will be called when this event takes place. The listener function will be called with 'this' as the target object (or the element targeted by the selector in the case of event delegation) and the first and only argument will be the event. The event object is normalized to have the important standard properties and methods of a W3C event.
+* listener - This is the function that will be called when this event takes place. The listener function will be called with 'this' as the target object (or the element targeted by the selector in the case of event delegation) and the first and only argument will be the event. The event object is normalized to have the important standard properties and methods of a W3C event (target properties, preventDefault(), stopPropagation()).
 
 The basic usage looks like:
 
