@@ -148,6 +148,17 @@ Gfx
 
       group.connect("onmousedown", function(evt){ var s = evt.gfxTarget; ... });
 
+MVC
+---
+  dojox.mvc is a new experimental dojox project about separation of MVC concerns on the client, thereby easing the development of data-rich applications using Dojo (enterprise apps, IT apps, CRUD scenarios, patterns like master-detail and others). This first release contains:
+
+  - A first-class data model which can talk to data stores
+  - Data binding mixin that allows widgets or arbitrary view components to bind to locations in above data model
+  - MVC containers like group (for hierarchical data) and repeat (for repeating data i.e. arrays)
+  - MVC widgets such as data-bound output and data-driven simple UI generator
+  - Samples for number of data-rich patterns that can be built using the above
+
+
 ====
 Util
 ====
