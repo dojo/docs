@@ -713,6 +713,10 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
     A message display system, showing warnings, errors and other messages unobtrusively
 
+  * `dojox.widget.UpgradeBar <dojox/widget/UpgradeBar>`_
+
+    Shows the "yellow bar" at the top of the screen when the user is to be notified that they should upgrade their browser or a plugin.
+
   * `dojox.widget.Wizard <dojox/widget/Wizard>`_
 
     A simple widget providing a step-by-step wizard like UI
