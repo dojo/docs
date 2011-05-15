@@ -322,6 +322,10 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
     description?
 
+  * `dojox.form.Uploader <dojox/form/Uploader>`_
+
+    A widget that adds functionality to a standard HTML file input. It hides the actual uploader and substitutes a dijit.form.Button.
+
 * `dojox.fx <dojox/fx>`_
 
   Extension animations to the core dojo FX project
