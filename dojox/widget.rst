@@ -116,7 +116,11 @@ Here is an up to date list of dojox.widget components. Note: Some of these are n
 
 * `dojox.widget.TitleGroup <dojox/widget/TitleGroup>`_
   
-  A lightweight container widgets which manages the state of children `TitlePane <dijit/TitlePane>`_ widgets. Similar to an `AccordionContainer <dijit/layout/AccordionContainer>`_ though has variable height panes.  
+  A lightweight container widgets which manages the state of children `TitlePane <dijit/TitlePane>`_ widgets. Similar to an `AccordionContainer <dijit/layout/AccordionContainer>`_ though has variable height panes.
+
+* `dojox.widget.UpgradeBar <dojox/widget/UpgradeBar>`_
+
+  Shows the "yellow bar" at the top of the screen when the user is to be notified that they should upgrade their browser or a plugin.
 
 * `dojox.widget.Wizard <dojox/widget/Wizard>`_
 
