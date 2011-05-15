@@ -42,6 +42,10 @@ Available Widgets
 
   A new multi-file uploader that shows progress as the files are uploading
 
+* `dojox.form.ListInput <dojox/form/ListInput>`_
+
+  The ListInput widget allows you to create a list of elements.
+
 * `dojox.form.manager <dojox/form/manager>`_
 
   A package to manage complex event-driven dynamic forms
