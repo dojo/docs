@@ -77,3 +77,7 @@ Available Widgets
 * `dojox.form.TimeSpinner <dojox/form/TimeSpinner>`_
 
   description?
+
+* `dojox.form.Uploader <dojox/form/Uploader>`_
+
+  A widget that adds functionality to a standard HTML file input. It hides the actual uploader and substitutes a dijit.form.Button.
