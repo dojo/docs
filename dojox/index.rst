@@ -286,6 +286,10 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
     A new multi-file uploader that shows progress as the files are uploading
 
+  * `dojox.form.FileUploader <dojox/form/ListInput>`_
+
+    The ListInput widget allows you to create a list of elements.
+
   * `dojox.form.manager <dojox/form/manager/index>`__
 
     A package to manage complex event-driven dynamic forms
