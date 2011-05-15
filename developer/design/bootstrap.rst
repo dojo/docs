@@ -252,7 +252,7 @@ The loader definition (contained in dojo.js) takes the form of an anonymous func
   //>>excludeEnd("replaceLoaderConfig")
 
 
-Global djConfig is allowed for backcompat in the v1.x line. The perference of dojoConfig, djConfig, or require (the
+Global djConfig is allowed for backcompat in the v1.x line. The preference of dojoConfig, djConfig, or require (the
 RequireJS configuration object) is as given above.
 
 The application of the anonymous function is bracketed by a build pragma (this is the only build pragma that exists in
@@ -352,7 +352,7 @@ Recall that configuration data can originate from any of several sources:
 
 And configuration data can be targeted to any of several desitinations:
 
-  1. The loader--either the dojo loader of a foreign loader
+  1. The loader--either the dojo loader or a foreign loader
   2. dojo, dijit, or some other library
   3. The has.js API, specifying static has feature values or has feature tests
   4. Application code
