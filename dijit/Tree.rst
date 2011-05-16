@@ -454,6 +454,10 @@ You can also remove the hover effect altogether by just writing a CSS rule that 
 
 On the claro theme, the hover effect is done via a background-color (combined with a white gradient background image), so changing the hover effect just involves changing that background color.
 
+=============
+Miscellaneous
+=============
+
 Persistence
 -----------
 By default, a Tree will remember which branches were opened/closed.   To use this feature you must specify an id for the Tree.   To disable the feature, set the "persist" parameter to false.
