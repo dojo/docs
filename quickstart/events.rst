@@ -269,6 +269,42 @@ Or, by using `dojo.forEach <dojo/forEach>`_, passing ``dojo.disconnect`` as a fu
   dojo.forEach(objectConnections, dojo.disconnect);
 
 
+Gotchas with direct references to functions
+-------------------------------------------
+Note that the first connection to a function actually modifies the function, by wrapping it another function.   So that
+
+.. code-block :: javascript
+
+  dojo.connect(foo, bar);
+
+is like saying:
+
+.. code-block :: javascript
+
+  var originalFoo = foo;
+  foo = function(){ originalFoo(); bar(); }
+
+
+This means that you need to be careful with code that directly references (the original) function foo(), including other dojo.connect() calls.   For example, the code below *won't* work correctly:
+
+.. code-block :: javascript
+
+  dojo.connect(first, foo);
+  dojo.connect(foo, bar);
+
+Calling first() will call foo(), but not bar(), since it's calling the original foo() method rather than the wrapped foo() method shown above.
+
+This issue doesn't exist when calling methods on object, for example:
+
+.. code-block :: javascript
+
+  dojo.connect(myFunc, object, "method");
+  dojo.connect(object, method, bar);
+
+
+In this case calling myFunc() will call the new object.method(), which will then call bar().
+
+
 ================
 The Event Object
 ================
