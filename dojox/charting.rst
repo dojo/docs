@@ -14,7 +14,6 @@ dojox.charting
 Dojo comes with an amazing charting library, in the form of dojox.charting. A large number of features are supported, with new ones being added constantly.
 
 .. code-example::
-  :version: 1.3-1.6
 
   .. javascript::
 
