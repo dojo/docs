@@ -18,7 +18,7 @@ Dojo comes with an amazing charting library, in the form of dojox.charting. A la
   .. javascript::
 
     <script type="text/javascript">
-    dojo.require("dojox.charting.Chart");
+    dojo.require("dojox.charting.Chart2D");
     dojo.require("dojox.charting.axis2d.Default");
     dojo.require("dojox.charting.plot2d.Default");
     dojo.require("dojox.charting.themes.Wetland");
