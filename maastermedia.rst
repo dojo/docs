@@ -9,4 +9,5 @@ Our wish is a common growth.
 We recently joined Dojo Foundation for contributing to Dojo Toolkit project.
 
 Peter Kokot
+
 http://www.maastermedia.com
