@@ -128,3 +128,60 @@ Here is an example of a series object :
 		color: "#CE6342"
 	}]
  }
+
+
+Interacting with the Map
+------------------------
+
+Here, we instantiate the appropriate interactors and connect them to the Map component. For example (extending previous code samples)  :
+
+.. code-block :: javascript
+ :linenos:
+    
+ dojo.require("dojox.geo.charting.MouseInteractionSupport");
+ dojo.require("dojox.geo.charting.KeyboardInteractionSupport");
+
+ dojo.addOnLoad(function(){
+	// install mouse navigation
+	var mouseInteraction = new dojox.geo.charting.MouseInteractionSupport(map,{enablePan:true,enableZoom:true});
+	mouseInteraction.connect();
+	// install keyboard navigation
+	var keyboardInteraction = new dojox.geo.charting.KeyboardInteractionSupport(map, {enableZoom: true});
+        	keyboardInteraction.connect();
+
+ });
+
+The interactors can be configured via the object passed as second parameter. Please refer to API documentation for further details.
+
+Using Dijits
+------------
+
+Two Dijits are provided in this module : dojox.geo.charting.widget.Map and dojox.geo.charting.widget.Legend
+
+the Map widget wraps an above Map component to ease its integration along other Dijits.
+It can be fully configured in the markup declaration
+
+.. code-block :: html
+ :linenos:
+ 
+ <div id="mapWidget" dojoType="dojox.geo.charting.widget.Map" 
+	shapeData="resources/data/US_States_intermediate.json"
+	dataStore="csvStore" series="resources/data/series.json"  markerData="resources/data/markers.json" showTooltips="false"
+	animateOnResize="false" colorAnimationDuration="300"
+	adjustMapCenterOnResize="true" adjustMapScaleOnResize="true" dataBindingAttribute="2009"
+	dataBindingValueFunction="getPopulationForYear"  enableMouseSupport="true"
+	enableMousePan="true" enableMouseZoom="true"
+	onFeatureClick="onFeatureClick" enableFeatureZoom="false" enableTouchSupport="true"
+	style="height: 100%; width: 100%;">
+ </div>
+
+Legend, as its name supposes, displays a legend describing map color scheme.
+
+.. code-block :: html
+ :linenos:
+ 
+ <div id="mapLegend" dojoType="dojox.geo.charting.widget.Legend" map="dijit.byId('mapWidget').getInnerMap()"
+	swatchSize="10" horizontal="false">
+ </div> 
+
+The map attribute connects this Legend Dijit to the above Map Dijit inner map.
