@@ -261,6 +261,7 @@ A list of individuals who have signed Dojo CLAs:
 * Klubnik, Justin 
 * Knapp, Matthew 
 * Koberg, Robert S. 
+* Kokot, Peter
 * Kolba, Nicholas 
 * Komarneni, Vamsikrishna 
 * Koonce, Grayson
@@ -608,6 +609,7 @@ A list of corporations or organizations with a CLA on file:
 * Laszlo Systems, Inc. 
 * Leorent, GmbH: Michael Rasmussen
 * Livando.com
+* Maastermedia
 * Media Hive 
 * Meebo 
 * Mobular Technologies 
