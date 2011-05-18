@@ -139,6 +139,18 @@ Gfx
 
       group.connect("onmousedown", function(evt){ var s = evt.gfxTarget; ... });
 
+Mobile
+------
+ - BlackBerry theme has been added.
+ - dojox.mobile.deviceTheme is a device theme loader, which detects the mobile device being used and automatically loads an appropriate theme
+ - New SpinWheel widget allows you to select values from spin wheels. Two variations, SpinWheelDatePicker and SpinWheelTimePicker, are also available.
+ - New Carousel widget shows a list of images from which you can select an item.
+ - New RoundRectDataList and EdgeToEdgeDataList widgets are data-driven versions of the RoundRectList and EdgeToEdgeList.
+ - New PageIndicator widget shows the current page of swap views with small dots. I can be used with SwapView or Carousel.
+ - Several new transition animations have been added: Dissolve, Flip2, Cover, Reveal, Slide Vertical, Cover Vertical, Reveal Vertical, Swirl, Zoom In/Out, and Scale In/Out.
+ - The FlippableView widget has been renamed to SwapView.
+ - dojox.mobile now uses the AMD module format
+
 MVC
 ---
   dojox.mvc is a new experimental dojox project about separation of MVC concerns on the client, thereby easing the development of data-rich applications using Dojo (enterprise apps, IT apps, CRUD scenarios, patterns like master-detail and others). This first release contains:
