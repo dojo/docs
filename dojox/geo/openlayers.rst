@@ -229,5 +229,7 @@ The following code shows how to display a point at the New York location. A circ
     });
    </script>
 
+You can also place polylines on the map. In this case, you will need to create a dojox.geo.openlayers.LineString geometry so that the points defining the polyline are geo-referenced. The follwing example shows how to create a polyline joining some major towns of the world.
 
+ 
  
