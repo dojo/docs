@@ -14,10 +14,18 @@ Browser support
 
 The following browsers are supported. If a browser is not supported, it still may work, but no effort is taken to test unsupported browsers and any specific fix for an unsupported browser is likely not to be done:
 
+Desktop
   * Firefox 3.6/4.0
   * Safari 5 and Chrome 10
   * IE6, IE7, IE8, IE9
   * Opera 10.50 and later (Dojo core only)
+
+Mobile
+  * iOS 4.x (Safari)
+  * Android 2.2,2.3,3.0 (Default browser on TBD specific devices)
+  * Blackberry 6 bundle 695 (Tested on Torch 9800)
+  * Mobile compatibility on desktop browsers: IE8,IE9, 3.6/4.0,Safari5,Chrome 10
+ 
 
 =========
 Dojo Base
