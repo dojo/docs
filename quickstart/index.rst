@@ -18,7 +18,7 @@ Getting started
 Installation
 ============
 
-* `Configuring Dojo with the djConfig variable <djConfig>`_
+* `Configuring Dojo with dojoConfig <dojo/config>`_
 * `Using Dojo from a CDN <quickstart/cross-domain>`_
 * `Local installation guide <quickstart/install>`_
 
