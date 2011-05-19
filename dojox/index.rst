@@ -360,6 +360,10 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
   A project and resource management tool
 
+* `dojox.geo <dojox/geo>`_
+
+  A module to display geographical content
+
 * `dojox.gfx <dojox/gfx>`_
 
   Cross-browser vector graphics API
