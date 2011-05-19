@@ -29,9 +29,11 @@ The data series (i.e. the color scheme for different value ranges)  is also a Js
 Two Dijits components are provided, one acting a a widget wrapper for the Map component, the other as a legend explaining map colors.
 
 Several interactor classes can be installed on the Map component, to allow navigation - mainly zoom,pan and select - on different hardware configurations :
-	- mouse interactor for usual desktop use
-	- keyboard interactor for accessibility purposes 
-	- touch interactor (for touch devices)
+
+
+  - mouse interactor for usual desktop use
+  - keyboard interactor for accessibility purposes 
+  - touch interactor (for touch devices)
 
 
 Instantiate Map component
@@ -42,13 +44,13 @@ First, instantiate the Map component, and associate it with the DOM Node contain
 .. code-block :: javascript
  :linenos:
     
- dojo.require("dojox.geo.charting.Map");
-
- dojo.addOnLoad(function(){
-	//create new map
-	var map = new dojox.geo.charting.Map("USStates", "../resources/data/USStates.json");
-	//add outside map marker file
-	map.setMarkerData("../resources/markers/USStates.json");
+ require(["dojox/geo/charting/Map",function(){
+	dojo.ready(function(){
+		//create new map
+		var map = new dojox.geo.charting.Map("USStates", "../resources/data/USStates.json");
+		//add outside map marker file
+		map.setMarkerData("../resources/markers/USStates.json");
+	});
  });
 
  
@@ -74,27 +76,27 @@ Here, we extend the previous code sample to illustrate how to connect to data :
 
 .. code-block :: javascript
  :linenos:
-    
- dojo.require("dojox.geo.charting.Map");
- dojo.require("dojo.data.ItemFileWriteStore");
 
- dojo.addOnLoad(function(){
-	//create new map
-	var map = new dojox.geo.charting.Map("USStates", "../resources/data/USStates.json");
-	//add outside map marker file
-	map.setMarkerData("../resources/markers/USStates.json");
+ require(["dojox/geo/charting/Map","dojo.data.ItemFileWriteStore",function(){
+	dojo.ready(function(){
+		//create new map
+		var map = new dojox.geo.charting.Map("USStates", "../resources/data/USStates.json");
+		//add outside map marker file
+		map.setMarkerData("../resources/markers/USStates.json");
 				
-	//instantiate a dataStore
-	var dataStore = new dojo.data.ItemFileWriteStore({
-		url: "datastore/dataStore.json"
-	});
+		//instantiate a dataStore
+		var dataStore = new dojo.data.ItemFileWriteStore({
+			url: "datastore/dataStore.json"
+		});
 								
-	// set it on the map
-	map.setDataStore(dataStore, "product A");
+		// set it on the map
+		map.setDataStore(dataStore, "product A");
 
-	// associate with series (i.e. color scheme)
-	map.addSeries("../resources/data/series.json");
+		// associate with series (i.e. color scheme)
+		map.addSeries("../resources/data/series.json");
+	});
  });
+    
 
 The above call to setDataStore on the map implicitely calls setDataBindingAttribute with "product A" value (passed in parameter). This tells the Map component
 what property value of dataStore items should be used to set the value on map elements (aka Feature instances).
@@ -137,18 +139,24 @@ Here, we instantiate the appropriate interactors and connect them to the Map com
 
 .. code-block :: javascript
  :linenos:
-    
- dojo.require("dojox.geo.charting.MouseInteractionSupport");
- dojo.require("dojox.geo.charting.KeyboardInteractionSupport");
 
- dojo.addOnLoad(function(){
-	// install mouse navigation
-	var mouseInteraction = new dojox.geo.charting.MouseInteractionSupport(map,{enablePan:true,enableZoom:true});
-	mouseInteraction.connect();
-	// install keyboard navigation
-	var keyboardInteraction = new dojox.geo.charting.KeyboardInteractionSupport(map, {enableZoom: true});
+ require(["dojox/geo/charting/Map",
+	  "dojox.geo.charting.MouseInteractionSupport",
+	  "dojox.geo.charting.KeyboardInteractionSupport",function(){
+	dojo.ready(function(){
+		//create new map
+		var map = new dojox.geo.charting.Map("USStates", "../resources/data/USStates.json");
+		//add outside map marker file
+		map.setMarkerData("../resources/markers/USStates.json");
+				
+		// install mouse navigation
+		var mouseInteraction =
+			new dojox.geo.charting.MouseInteractionSupport(map,{enablePan:true,enableZoom:true});
+		mouseInteraction.connect();
+		// install keyboard navigation
+		var keyboardInteraction = new dojox.geo.charting.KeyboardInteractionSupport(map, {enableZoom: true});
         	keyboardInteraction.connect();
-
+	});
  });
 
 The interactors can be configured via the object passed as second parameter. Please refer to API documentation for further details.
