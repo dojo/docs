@@ -146,7 +146,7 @@ Mobile
  - New SpinWheel widget allows you to select values from spin wheels. Two variations, SpinWheelDatePicker and SpinWheelTimePicker, are also available.
  - New Carousel widget shows a list of images from which you can select an item.
  - New RoundRectDataList and EdgeToEdgeDataList widgets are data-driven versions of the RoundRectList and EdgeToEdgeList.
- - New PageIndicator widget shows the current page of swap views with small dots. I can be used with SwapView or Carousel.
+ - New PageIndicator widget shows the current page of swap views with small dots. It can be used with SwapView or Carousel.
  - Several new transition animations have been added: Dissolve, Flip2, Cover, Reveal, Slide Vertical, Cover Vertical, Reveal Vertical, Swirl, Zoom In/Out, and Scale In/Out.
  - The FlippableView widget has been renamed to SwapView.
  - dojox.mobile now uses the AMD module format
