@@ -231,5 +231,63 @@ The following code shows how to display a point at the New York location. A circ
 
 You can also place polylines on the map. In this case, you will need to create a dojox.geo.openlayers.LineString geometry so that the points defining the polyline are geo-referenced. The follwing example shows how to create a polyline joining some major towns of the world.
 
- 
- 
+
+.. code-block :: javascript
+ :linenos:
+  
+ <script type="text/javascript">
+   require([ "dojox/geo/openlayers/Map", "dojox/geo/openlayers/GfxLayer",
+             "dojox/geo/openlayers/GeometryFeature" ], function(){
+
+   var towns = [ {
+      name : 'Sydney',
+      x : 151.20732,
+      y : -33.86785
+   }, {
+      name : 'Shanghai',
+      x : 121.45806,
+      y : 31.22222
+    }, {
+      name : 'Moscow',
+      x : 37.61556,
+      y : 55.75222
+    }, {
+      name : 'London',
+      x : -0.12574,
+      y : 51.50853
+    }, {
+      name : 'Toronto',
+      x : -79.4163,
+      y : 43.70011
+    }, {
+      name : 'Buenos Aires',
+      x : -58.37723,
+      y : -34.61315
+    }, {
+      name : 'Kinshasa',
+      x : 15.32146,
+      y : -4.32459
+    }, {
+      name : 'Cairo',
+      x : 31.24967,
+      y : 30.06263
+    } ];
+  
+    dojo.addOnLoad(function(){
+      // create a map widget and place it on the page.
+      var map = new dojox.geo.openlayers.Map("map");
+      // create a GfxLayer
+      var layer = new dojox.geo.openlayers.GfxLayer();
+      // towns objects already have a x and y field. 
+      var pts = new dojox.geo.openlayers.LineString(towns);
+      // create a GeometryFeature
+      var f = new dojox.geo.openlayers.GeometryFeature(pts);
+      // set the shape stroke property
+      f.setStroke([ 0, 0, 0 ]);
+      // add the feature to the layer
+      layer.addFeature(f);
+      // add layer to the map
+      map.addLayer(layer);	
+    });
+  });
+ </script>
