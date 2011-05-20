@@ -27,6 +27,7 @@ Mobile
   * Android 2.2,2.3,3.0 
   * Blackberry 6 
   * Mobile compatibility on desktop browsers: IE8,IE9, Firefox 3.6/4.0, Safari5, Chrome 11
+
   TODO: Link to page with specific vendor device models tested on 
 
 =========
