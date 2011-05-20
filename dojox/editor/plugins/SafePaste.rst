@@ -12,7 +12,7 @@ dojox.editor.plugins.SafePaste
 
 Have you ever worried about users pasting in script tags or the like into editor content without any sanitation?  Have you ever wanted to strip specific tag names from a paste? Is so, then this plugin is intended for you.
 
-This plugin extends the 'PasteFromWord' plugin that intercepts and halts native paste events and requires the user to paste the content in a processing dialog before injecting it into the Editor body.  The dialog is required because browser security does not allow JavaScript to access paste contents directly, it has to be browser-native processed.  The dialog scripts out script tags, any user-requested tags, and removes all the app-specific stuff, such as classes, styles, and such from Microsoft Word.
+This plugin extends the 'PasteFromWord' plugin.  This one adds paste interception and halts native paste events.   A dialog is presented where the user must paste the content.   The content is processed and then injected into the main editor body.  The dialog is required because browser security does not allow JavaScript to access clipboard contents directly, it has to be browser-native inserted into the dialog first.  The dialog scripts out script tags, any user-requested tags, and removes all the app-specific stuff, such as classes, styles, and such from Microsoft Word.
 
 ========
 Features
