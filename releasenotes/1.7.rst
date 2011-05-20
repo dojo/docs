@@ -26,7 +26,7 @@ Mobile
   * iOS 4.x (Safari)
   * Android 2.2,2.3,3.0 (Default browser on TBD specific devices)
   * Blackberry 6 bundle 695 (Tested on Torch 9800)
-  * Mobile compatibility on desktop browsers: IE8,IE9, 3.6/4.0,Safari5,Chrome 10
+  * Mobile compatibility on desktop browsers: IE8,IE9, Firefox 3.6/4.0, Safari5, Chrome 11
  
 
 =========
