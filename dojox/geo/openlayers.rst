@@ -372,6 +372,7 @@ Positioning widgets on the map
 The OpenLayers Map component allows to position dijit widgets on the map. To do that, the widget must be described with a dojox.geo.openlayers.WidgetFeature class. The descriptor of the widget includes the creation method of the widget and the coordinates at which the widget should be positioned. Once created with the widget descriptor, the WidgetFeature has to be added in a layer to be displayed.
 
 The descriptor passed to the Widget feature is an object containing the following fields:
+
  - createWidget: Function for widget creation. Must return a `dijit._Widget`.
  - dojoType: The class of a widget to create;
  - dijitId: The digitId of an existing widget.
