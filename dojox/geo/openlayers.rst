@@ -11,7 +11,7 @@ dojox.geo.openlayers
 :Available: since V.1.7
 
 .. contents::
-   :depth: 2
+   :depth: 3
 
 Overview
 --------
@@ -23,6 +23,7 @@ This Map component is intended to display a background map with graphical GFX or
 
 Instantiate an OpenLayers Map component
 ---------------------------------------
+
 You can either instantiate a OpenLayers Map component in a programmatic way or using a markup definition. In both cases, you will need to import the OpenLayers library. This library is available at the openlayers.org site.
 
 Programmatic way of creating a Map component:
@@ -229,8 +230,7 @@ The following code shows how to display a point at the New York location. A circ
     });
    </script>
 
-You can also place polylines on the map. In this case, you will need to create a dojox.geo.openlayers.LineString geometry so that the points defining the polyline are geo-referenced. The follwing example shows how to create a polyline joining some major towns of the world.
-
+You can also place polylines on the map. In this case, you will need to create a dojox.geo.openlayers.LineString geometry so that the points defining the polyline are geo-referenced. The following example shows how to create a polyline joining some major towns of the world.
 
 .. code-block :: javascript
  :linenos:
@@ -291,3 +291,80 @@ You can also place polylines on the map. In this case, you will need to create a
     });
   });
  </script>
+
+You can also place combination of geometries using a dojox.geo.openlayer.Collection geometry which can hold any combination of existing geometries. Here is an example that shows how to use this collection geometry:
+
+.. code-block :: javascript
+ :linenos:
+ 
+ <script type="text/javascript">  
+   require([ "dojox/geo/openlayers/Map", "dojox/geo/openlayers/GfxLayer",
+             "dojox/geo/openlayers/GeometryFeature" ], function(){
+     var towns = [ {
+       name : 'Sydney',
+       x : 151.20732,
+       y : -33.86785
+     }, {
+     name : 'Shanghai',
+       x : 121.45806,
+       y : 31.22222
+     }, {
+     name : 'Moscow',
+       x : 37.61556,
+       y : 55.75222
+     }, {
+     name : 'London',
+       x : -0.12574,
+       y : 51.50853
+     }, {
+     name : 'Toronto',
+       x : -79.4163,
+       y : 43.70011
+     }, {
+     name : 'Buenos Aires',
+       x : -58.37723,
+       y : -34.61315
+     }, {
+     name : 'Kinshasa',
+       x : 15.32146,
+       y : -4.32459
+     }, {
+     name : 'Cairo',
+       x : 31.24967,
+       y : 30.06263
+     } ];
+
+     dojo.addOnLoad(function(){
+       // create a map widget and place it on the page.
+       var map = new dojox.geo.openlayers.Map("map");
+      // create a GfxLayer
+      var layer = new dojox.geo.openlayers.GfxLayer();
+      // The array of geometries
+      var a = [];
+      // towns objects already have a x and y field. 
+      var pts = new dojox.geo.openlayers.LineString(towns);
+      a.push(pts);
+      // make a point for each line.
+      dojo.forEach(towns, function(t){
+        var p = new dojox.geo.openlayers.Point(t);
+        a.push(p);
+     });
+     var col = new dojox.geo.openlayers.Collection(a);
+     // create a GeometryFeature
+     var f = new dojox.geo.openlayers.GeometryFeature(col);
+     // set the shape properties, fill and stroke
+     f.setStroke([ 0, 0, 0 ]);
+     f.setShapeProperties({
+       r : 10
+     });
+     // add the feature to the layer
+     layer.addFeature(f);
+     // add layer to the map
+     map.addLayer(layer);
+     // fit to New York with 0.1 degrees extent   
+   });
+ });
+ </script>
+
+Positioning widgets on the map
+------------------------------
