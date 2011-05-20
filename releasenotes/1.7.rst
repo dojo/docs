@@ -21,7 +21,7 @@ Desktop
   * IE6, IE7, IE8, IE9
   * Opera 10.50 and later (Dojo core only)
 
-Mobile
+Mobile (dojox/mobile)
 
   * iOS 4.x (Safari)
   * Android 2.2,2.3,3.0 
