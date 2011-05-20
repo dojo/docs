@@ -377,7 +377,94 @@ You can also place combination of geometries using a dojox.geo.openlayers.Collec
  });
  </script>
 
-You also might want to display a specific shape on the map. For 
+You also might want to display a specific shape on the map. For that, you can redefine the `createShape` function of the GeometryFeature and create the shape you want. This methods takes the dojox.gfx.Surface as parameter that can be used to create the shape.
+
+Example that shows a star at Paris location:
+
+.. code-block :: javascript
+ :linenos:
+ 
+ <script type="text/javascript">
+  require([ "dojox/geo/openlayers/Map", "dojox/geo/openlayers/GfxLayer",
+      "dojox/geo/openlayers/Point", "dojox/geo/openlayers/GeometryFeature" ], function(){
+
+    dojo.addOnLoad(function(){
+
+      // create a map widget and place it on the page.
+      var map = new dojox.geo.openlayers.Map("map");
+
+      // This Paris
+
+      var paris = {
+        latitude : 48.866667,
+        longitude : 2.333333
+      };
+      // create a GfxLayer
+      var layer = new dojox.geo.openlayers.GfxLayer();
+      // create a OpenLayers Point geometry at New York location
+      var p = new dojox.geo.openlayers.Point({
+        x : paris.longitude,
+        y : paris.latitude
+      });
+      // create a GeometryFeature
+      var f = new dojox.geo.openlayers.GeometryFeature(p);
+      // create a star graphic
+      f.createShape = myCreateShape;      
+      f.setStroke([ 0, 0, 0 ]);      
+      f.setFill([ 0, 128, 128 ]);
+      // add the feature to the layer
+      layer.addFeature(f);
+      // add layer to the map
+      map.addLayer(layer);
+      // fit to Paris with 0.1 degrees extent
+      map.fitTo({
+        position : [ paris.longitude, paris.latitude ],
+        extent : 0.1
+      });
+    });
+
+    function myCreateShape(s){
+      var r1 = 20;
+      var r2 = 50;
+      var branches = 10;
+      var start = 2;
+      console.log("create star " + r1);
+      var star = makeStarShape(r1, r2, branches, start);
+      var path = s.createPath();
+      path.setShape({
+        path : star
+      });
+      return path;
+    }
+
+    function makeStarShape(r1, r2, b, start){
+      var precision = 2;
+      var TPI = Math.PI * 2;
+      var di = TPI / b;
+      if (!start)
+        start = Math.PI;
+      var s = null;
+      var end = start + TPI;
+      for ( var i = start; i < end; i += di) {
+        var c1 = Math.cos(i);
+        var s1 = Math.sin(i);
+        var i2 = i + di / 2;
+        var c2 = Math.cos(i2);
+        var s2 = Math.sin(i2);
+        if (s == null) {
+          s = "M" + (s1 * r1).toFixed(precision) + "," + (c1 * r1).toFixed(precision) + " ";
+        } else {
+          s += "L" + (s1 * r1).toFixed(precision) + "," + (c1 * r1).toFixed(precision) + " ";
+        }
+        s += "L" + (s2 * r2).toFixed(precision) + "," + (c2 * r2).toFixed(precision) + " ";
+      }
+      s += "z";
+      return s;
+    }
+  });
+ </script>
+ 
+
 Positioning widgets on the map
 ------------------------------
 
