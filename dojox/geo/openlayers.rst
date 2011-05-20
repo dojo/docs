@@ -20,11 +20,14 @@ Dojo's dojox.geo.openlayers module provides a mapping component based on the Ope
 
 This Map component is intended to display a background map with graphical GFX or widget overlay. The background map can come from various online map providers such as OpenStreetMap, Google Maps of ESRI Maps. Note that you may have to include specific map provider javascript library in order to have access to the corresponding mapping service.  
 
-
 Instantiate an OpenLayers Map component
 ---------------------------------------
 
-You can either instantiate a OpenLayers Map component in a programmatic way or using a markup definition. In both cases, you will need to import the OpenLayers library. This library is available at the openlayers.org site.
+You can either instantiate a OpenLayers Map component in a programmatic way or using a markup definition. In both cases, you will need to import the OpenLayers library. This library is available at the openlayers.org site and you can include it in your page with the following script tag :
+
+ - <script type="text/javascript" src="http://openlayers.org/api/OpenLayers.js"></script>
+
+Here are some examples of how to create a basic OpenLayers Map component :
 
 Programmatic way of creating a Map component:
 
@@ -68,7 +71,7 @@ Creating a Map using markup declaration:
 Changing the base layer type
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When creating a map, a base layer is automatically created. The default base layer type is an OpenSreetMap layer whose type is dojox.geo.openlayers.baseLayerType.OSM. It shows the background map by connecting to the OpenStreeMap server.
+When creating a map, a background base layer is automatically created. The default base layer type is an OpenSreetMap layer whose type is dojox.geo.openlayers.baseLayerType.OSM. It shows the background map by connecting to the OpenStreeMap server.
 You can change the base layer type to access another map provider by calling setBaseLayerType or by setting the baseLayerType attribute on the widget's markup.
 
 Available base layer types are :
@@ -81,7 +84,15 @@ Available base layer types are :
   - dojox.geo.openlayers.BaseLayerType.YAHOO: 	  The Yahoo Maps base layer type selector.
   - dojox.geo.openlayers.BaseLayerType.ARCGIS:        The ESRI ARCGis base layer selector.
 
-Note that if you attempt to access a mapping provider like Google Maps or Yahoo Maps, you will have to include the specific mapping provider API.
+Note that if you attempt to access a mapping provider like Google Maps or Yahoo Maps, you will have to include the specific mapping provider API in your application.
+
+Here are the JavaScript API needed to access specific map provider :
+
+ - Google API : <script src="http://maps.google.com/maps/api/js?v=3&amp;sensor=false"></script>
+ - Microsoft Virtual Hearth: <script src='http://dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=6.3'></script>
+ - Yahoo Maps: <script src="http://api.maps.yahoo.com/ajaxymap?v=3.0&appid=euzuro-openlayers"></script>
+
+Some examples of how to set/change the base layer type:
 
 .. code-block :: javascript
  :linenos:
@@ -186,7 +197,7 @@ Markup version:
 Positioning shapes on the map
 -----------------------------
 
-The OpenLayers mapping component allows to position GFX shapes on the map at a specified location. The location of the shape is specified as longitude and latitude coordinates. To place such a shape on the map, you will need to insert a dedicated dojox.geo.openlayer.GfxLayer layer in the map and add dojox.geo.openlayers.GeometryFeature s to it. The GeometryFeature class defines the position and the type of shape to display. 
+The OpenLayers mapping component allows to position GFX shapes on the map at specified locations. The location of the shape is specified as longitude and latitude coordinates. To place such a shape on the map, you will need to insert a dedicated dojox.geo.openlayer.GfxLayer layer in the map and add dojox.geo.openlayers.GeometryFeature s to it. The GeometryFeature class defines the position and the type of shape to display. 
 
 The following code shows how to display a point at the New York location. A circle is displayed as it is the default GFX shape to be displayed for a Point geometry.
 
@@ -292,7 +303,7 @@ You can also place polylines on the map. In this case, you will need to create a
   });
  </script>
 
-You can also place combination of geometries using a dojox.geo.openlayer.Collection geometry which can hold any combination of existing geometries. Here is an example that shows how to use this collection geometry:
+You can also place combination of geometries using a dojox.geo.openlayers.Collection geometry which can hold any combination of existing geometries. Here is an example that shows how to use this collection geometry:
 
 .. code-block :: javascript
  :linenos:
@@ -366,6 +377,7 @@ You can also place combination of geometries using a dojox.geo.openlayer.Collect
  });
  </script>
 
+You also might want to display a specific shape on the map. For 
 Positioning widgets on the map
 ------------------------------
 
