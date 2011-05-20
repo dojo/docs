@@ -368,3 +368,81 @@ You can also place combination of geometries using a dojox.geo.openlayer.Collect
 
 Positioning widgets on the map
 ------------------------------
+
+The OpenLayers Map component allows to position dijit widgets on the map. To do that, the widget must be described with a dojox.geo.openlayers.WidgetFeature class. The descriptor of the widget includes the creation method of the widget and the coordinates at which the widget should be positioned. Once created with the widget descriptor, the WidgetFeature has to be added in a layer to be displayed.
+
+The descriptor passed to the Widget feature is an object containing the following fields:
+ - createWidget: Function for widget creation. Must return a `dijit._Widget`.
+ - dojoType: The class of a widget to create;
+ - dijitId: The digitId of an existing widget.
+ - widget: An already created widget.
+ - width: The width of the widget.
+ - height: The height of the widget.
+ - longitude: The longitude, in decimal degrees where to place the widget.
+ - latitude: The latitude, in decimal degrees where to place the widget.
+
+Here is an example that shows a pie chart at New York location:
+
+.. code-block :: javascript
+ :linenos:
+ 
+ <script type="text/javascript">
+  require([ "dojox/geo/openlayers/Map", "dojox/geo/openlayers/Layer",
+      "dojox/geo/openlayers/WidgetFeature", "dojox/charting/widget/Chart",
+      "dojox/charting/widget/Chart2D", "dojox/charting/plot2d/Pie",
+      "dojox/charting/themes/PlotKit/blue" ], function(){
+    dojo.addOnLoad(function(){
+
+      // create a map widget and place it on the page.
+      var map = new dojox.geo.openlayers.Map("map");
+      
+      // This is New York
+      var ny = {
+        latitude : 40.71427,
+        longitude : -74.00597
+      };
+
+      var div = dojo.create("div", {}, dojo.body());
+      var chart = new dojox.charting.widget.Chart({
+        margins : {
+          l : 0,
+          r : 0,
+          t : 0,
+          b : 0
+        }
+      }, div);
+      var c = chart.chart;
+      c.addPlot("default", {
+        type : "Pie",
+        radius : 50,
+        labelOffset : 100,
+        fontColor : "black",
+        fontSize : 20
+      });
+
+      var ser = [ 2, 8, 12, 3 ];
+      c.addSeries("Series", ser);
+      c.setTheme(dojox.charting.themes.PlotKit.blue);
+      c.render();
+      c.theme.plotarea.fill = undefined;
+
+      descr = {
+        longitude : ny.longitude,
+        latitude : ny.latitude,
+        widget : chart,
+        width : 120,
+        height : 120
+      };
+      feature = new dojox.geo.openlayers.WidgetFeature(descr);
+
+      layer = new dojox.geo.openlayers.Layer();
+      layer.addFeature(feature);
+      map.addLayer(layer);
+      // fit to New York with 0.1 degrees extent
+      map.fitTo({
+        position : [ ny.longitude, ny.latitude ],
+        extent : 0.1
+      });
+    });
+  });
+ </script>
