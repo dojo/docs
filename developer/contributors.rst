@@ -416,6 +416,7 @@ A list of individuals who have signed Dojo CLAs:
 * Ruffles, Tim
 * Ruggia, Pablo 
 * Ruggier, Mario 
+* Ruoss, Stefan
 * Ruspini, Daniel 
 * Russell, Matthew A. 
 * Russell, Robert "Alex" 
