@@ -18,7 +18,7 @@ A string containing the current locale as defined by Dojo.
 Introduction
 ============
 
-dojo.locale contains the locale for loading localized resources, specified according to `RFC 3066 <http://www.ietf.org/rfc/rfc3066.txt>`_. This string can be specified with the help of djConfig.locale.
+dojo.locale contains the locale for loading localized resources, specified according to `RFC 3066 <http://www.ietf.org/rfc/rfc3066.txt>`_. This string can be specified with the help of dojoConfig.locale.
 
 
 =====
@@ -39,4 +39,4 @@ A simple call of dojo.locale.
 See also
 ========
 
-* `Language and Localization Settings in djConfig <djConfig#language-and-localization-settings-in-djconfig>`_
+* `Language and Localization Settings in dojoConfig <dojo/config#language-and-localization-settings-in-dojoconfig>`_
