@@ -305,8 +305,6 @@ Each parameter has a corresponding _setXXXAttr to say how it relates to the temp
 						"<div>Phone #: <span dojoAttachPoint='phoneNode'></span></div>" +
 					"</div>",
 	
-				}
-
 				// Attributes
 				name: "unknown",
 				_setNameAttr: { node: "nameNode", type: "innerHTML" },
