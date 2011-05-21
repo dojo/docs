@@ -24,7 +24,7 @@ How does Dojo find the locale?
 
 By default, Dojo derives the user locale setting from the navigator browser object, the only locale information available from Javascript. The browser locale is determined during browser installation and is not easily configurable. Note that this is not the same as the locale in the preferences dialog which can be used to accompany HTTP requests; there is unfortunately no way to access that locale from the client without a server round-trip. 
 
-The user's locale may easily be overridden on a page prior to the Dojo bootstrap by setting the `djConfig.locale <djConfig#language-and-localization-settings-in-djconfig>`_ property. Of course, setting this property in a static way defeats internationalization for other users. This setting may be established by a server to achieve personalization of web applications, where a user may be able to select their locale or this information may be available through some other means. 
+The user's locale may easily be overridden on a page prior to the Dojo bootstrap by setting the `dojoConfig.locale <dojo/config#language-and-localization-settings-in-dojoconfig>`_ property. Of course, setting this property in a static way defeats internationalization for other users. This setting may be established by a server to achieve personalization of web applications, where a user may be able to select their locale or this information may be available through some other means. 
 
 Once Dojo is loaded, it is not possible to change the locale for the page.
 
@@ -33,13 +33,13 @@ Once Dojo is loaded, it is not possible to change the locale for the page.
 What about deprecated locale support?
 =====================================
 
-Several locales used since the early days of the Internet `have been deprecated <http://www.loc.gov/standards/iso639-2/php/code_changes.php>`_ in favor of new codes. These include 'iw' for Hebrew in favor of 'he'. Also, 'in' in favor of 'id' for Indonesian, 'no' in favor of 'nb' Norwegian Bokmål (to differentiate from Nynorsk), and 'ji' became 'yi' for Yiddish. Dojo tries to adhere to the latest specifications. Unfortunately, some applications still use the deprecated codes, most notably the JDK. The best practice when dealing with these technologies is to run a transformation on the string before assigning to djConfig.locale to assure that the new locale codes are used.
+Several locales used since the early days of the Internet `have been deprecated <http://www.loc.gov/standards/iso639-2/php/code_changes.php>`_ in favor of new codes. These include 'iw' for Hebrew in favor of 'he'. Also, 'in' in favor of 'id' for Indonesian, 'no' in favor of 'nb' Norwegian Bokmål (to differentiate from Nynorsk), and 'ji' became 'yi' for Yiddish. Dojo tries to adhere to the latest specifications. Unfortunately, some applications still use the deprecated codes, most notably the JDK. The best practice when dealing with these technologies is to run a transformation on the string before assigning to dojoConfig.locale to assure that the new locale codes are used.
 
 
 ===================================
 Using many locales at the same time
 ===================================
 
-In the unusual case where multiple locales are used on a single page, the `djConfig.extraLocale <djConfig#language-and-localization-settings-in-djconfig>`_ property must be set, prior to bootstrap, listing the additional locales as elements in an array, otherwise they will not work at runtime. 
+In the unusual case where multiple locales are used on a single page, the `dojoConfig.extraLocale <dojo/config#language-and-localization-settings-in-dojoconfig>`_ property must be set, prior to bootstrap, listing the additional locales as elements in an array, otherwise they will not work at runtime. 
 
 Optionally, one of these extra locales may be passed into routines like dojo.date.format or Dijit widgets using the 'lang' attribute, but such use cases are rare. Typically, the one locale is sufficient to localize the entire page and the locale should not be applied to any one specific widget or API.
