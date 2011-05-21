@@ -20,7 +20,7 @@ Dojo Base is the functionality you get by just including a stock built dojo.js o
 Configuring Dojo
 ----------------
 
-* `djConfig <djConfig>`_
+* `dojoConfig <dojo/config>`_
 
   Possibility to override certain global settings that control how the framework operates
 
