@@ -17,12 +17,12 @@ Locale Setting in Dojo
 
 There is a slight difference in the locale naming conventions between Dojo and Java. Dojo uses "-" (hyphen) as the separator for concatenate language code, country code, and variants, whereas Java uses an "_" (underline). For example, "zh_CN" in Java is similar to "zh-cn" in Dojo.
 
-Like the default locale in Java, Dojo has a global locale value that is stored in a global variable: dojo.locale. This default locale value affects the behavior of several locale-related functions and widgets. The value of dojo.locale is not supposed to be changed. You should use djConfig.locale to initialize this value.
+Like the default locale in Java, Dojo has a global locale value that is stored in a global variable: dojo.locale. This default locale value affects the behavior of several locale-related functions and widgets. The value of dojo.locale is not supposed to be changed. You should use dojoConfig.locale to initialize this value.
 
-You must set djConfig.locale in all files to achieve server-based personalization
----------------------------------------------------------------------------------
+You must set dojoConfig.locale in all files to achieve server-based personalization
+-----------------------------------------------------------------------------------
 
-If djConfig.locale is undefined, Dojo will consult the browser's navigator object for the setting chosen at browser install time. Note that this is unrelated to the locale setting in the preferences dialog, which is for interaction with the server only. To provide personalization from the server to control locale settings in an application, you must set djConfig.locale in the page at the server side, prior to loading dojo.js. For example, here is a JSP page that sets the default locale for Dojo:
+If dojoConfig.locale is undefined, Dojo will consult the browser's navigator object for the setting chosen at browser install time. Note that this is unrelated to the locale setting in the preferences dialog, which is for interaction with the server only. To provide personalization from the server to control locale settings in an application, you must set dojoConfig.locale in the page at the server side, prior to loading dojo.js. For example, here is a JSP page that sets the default locale for Dojo:
 
 .. code-block :: html
  :linenos:
@@ -32,7 +32,7 @@ If djConfig.locale is undefined, Dojo will consult the browser's navigator objec
  String actualLocale = ResourceBundle.getBundle("my.app.test",
      request.getLocale()).getLocale().toString().replace('_', '-');
  %>
- <script type="text/javascript" src="../dojo/dojo.js" djconfig="locale: '<%=userLocale%>'">
+ <script type="text/javascript" src="../dojo/dojo.js" data-dojo-config="locale: '<%=userLocale%>'">
  </script>
  ...
 
@@ -108,19 +108,19 @@ Then you can use the dojo.requireLocalization function to load resource bundles 
 
 When you get the bundle object, you can use it as a normal JSON object (a hash) to get messages. If you modify values in the bundle object, the original global bundle object will not be affected.
 
-You should use djConfig.locale to set the default locale and extra locales, and use only dojo.requireLocalization without the locale parameter.
------------------------------------------------------------------------------------------------------------------------------------------------
+You should use dojoConfig.locale to set the default locale and extra locales, and use only dojo.requireLocalization without the locale parameter.
+-------------------------------------------------------------------------------------------------------------------------------------------------
 
-djConfig.locale overrides the browser's default locale as specified by the navigator Javascript object. This setting is effective for the entire page and must be declared prior to loading dojo.js. djConfig.extraLocale establishes additional locales whose resource bundles will be made available. This is used rarely to accomodate multiple languages on a single page. No other locales may be used on the page.
+dojoConfig.locale overrides the browser's default locale as specified by the navigator Javascript object. This setting is effective for the entire page and must be declared prior to loading dojo.js. dojoConfig.extraLocale establishes additional locales whose resource bundles will be made available. This is used rarely to accomodate multiple languages on a single page. No other locales may be used on the page.
 
-If you omit the locale parameter when calling the dojo.requireLocalization function, the function will load the resource bundles for locales in djConfig.locale as well as for all the locales in djConfig.extraLocale.
+If you omit the locale parameter when calling the dojo.requireLocalization function, the function will load the resource bundles for locales in dojoConfig.locale as well as for all the locales in dojoConfig.extraLocale.
 
 For example, if you define:
 
 .. code-block :: javascript
  :linenos:
 
- <script type="text/javascript" src="../dojo/dojo.js" djconfig="locale: 'zh-cn', extraLocale: ['zh-tw', 'fr']">
+ <script type="text/javascript" src="../dojo/dojo.js" data-dojo-config="locale: 'zh-cn', extraLocale: ['zh-tw', 'fr']">
  </script>
 
 then the following two code blocks are equal:
