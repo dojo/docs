@@ -12,7 +12,9 @@ The base widget dijit.form.Textbox by itself can trim, change case, and require 
 dijit.form.ValidationTextbox extends this by validating the input when the box loses focus.  The other widgets further extend the validation function with range and format checking.  Internal to the MappedTextBox widget subclass are two INPUT elements.  One interacts with the user obeying local customs, the other is hidden and represents the named form element to submit data to the server using a normalized serialization.  By default, the widget will discover the appropriate locale and behavior `as specified by Dojo
 <http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/i18n/specifying-locale>`_.
 
-For example, when using a NumberTextBox in the United States, an optional comma is used for the thousands separator and a period for a decimal separator when interacting with the user.  For German users, a period is used for the thousands separator and a comma for the decimal separator.  Other locales may have different conventions.  When sending data to the server or interpreting the "value" attribute, numbers are represented simply as JavaScript formats them with a period for decimal and no thousands separators.  This representation is unambiguous, so other applications may interact with this data without assuming any locale-specific behavior.  With DateTextBox, a subset of the ISO-8601 format (e.g. 12-31-2006) is used for the value attribute.  For CurrencyTextBox, a number is transmitted, and it is the responsibility of the developer to associate the ISO-4217 country code with the amount to qualify what type of currency is indicated.  All of these behaviors are considered Dojo and JSON best practices, but may be customized as described below.
+For example, when using a NumberTextBox in the United States, an optional comma is used for the thousands separator and a period for a decimal separator when interacting with the user.  For German users, a period is used for the thousands separator and a comma for the decimal separator.  Other locales may have different conventions.  When using currencies, the currency type must be specified, but it may be represented differently according to locale.  The US Dollar (USD) will simply have a "$" symbol when used in the United States, but that would be ambiguous in Canada, so US$ is used instead.
+
+When sending data to the server or interpreting the "value" attribute, numbers are represented simply as JavaScript formats them with a period for decimal and no thousands separators.  This representation is unambiguous, so other applications may interact with this data without assuming any locale-specific behavior.  With DateTextBox, a subset of the ISO-8601 format (e.g. 12-31-2006) is used for the value attribute.  For CurrencyTextBox, a number is transmitted, and it is the responsibility of the developer to associate the ISO-4217 country code with the amount to qualify what type of currency is indicated.  All of these behaviors are considered Dojo and JSON best practices, but may be customized as described below.
 
 Constraints
 -----------
@@ -28,7 +30,7 @@ Number Constraints
 - ``currency``: (currency only) the ISO-4217 currency code, a three letter sequence like "USD"
   See `<http://en.wikipedia.org/wiki/ISO_4217>`_ for a current list.
 - ``fractional``:  (currency only) where places are implied by pattern or explicit 'places' parameter, whether to include the fractional portion.
-- ``locale``:  override the locale on this widget only, choosing from djConfig.extraLocale
+- ``locale``:  override the locale on this widget only, choosing from dojoConfig.extraLocale
 - ``pattern``:  override localized convention with this pattern.  As a result, all users will see the same behavior, regardless of locale, and your application may not be globalized.  See `<http://www.unicode.org/reports/tr35/#Number_Format_Patterns>`_.
 - ``places``:  number of decimal places to accept.
 - ``strict``:  strict parsing, false by default.  When strict mode is false, certain allowances are made to be more tolerant of user input, such as 'am' instead of 'a.m.', some white space may be optional, etc.
@@ -67,7 +69,7 @@ Date Constraints
 - ``clickableIncrement`` (TimeTextBox): ISO-8601 string representing the amount by which every clickable element in the time picker increases. Set in non-Zulu time, without a time zone. Example: "T00:15:00" creates 15 minute increments. Must divide visibleIncrement evenly.
 - ``datePattern,timePattern``: override localized convention with this pattern.  As a result, all users will see the same behavior, regardless of locale, and your application may not be globalized.  See `<http://www.unicode.org/reports/tr35/#Date_Format_Patterns>`_
 - ``formatLength``: choose from formats appropriate to the locale -- long, short, medium or full (plus any custom additions).  Defaults to 'short'
-- ``locale``:  override the locale on this widget only, choosing from djConfig.extraLocale
+- ``locale``:  override the locale on this widget only, choosing from dojoConfig.extraLocale
 - ``selector``: choice of 'time', 'date' (default: date and time)
 - ``strict``: false by default.  If true, parsing matches exactly by regular expression.  If false, more tolerant matching is used for abbreviations and some white space.
 - ``visibleIncrement`` (TimeTextBox): ISO-8601-style string representing the amount by which every element with a visible time in the time picker increases.  Set in non Zulu time, without a time zone or date.  Example: "T01:00:00" creates text in every 1 hour increment.
