@@ -23,7 +23,7 @@ For example, look at the following date formatted using the default locale for t
  :linenos:
 
  <script type="text/javascript">
-   // the page must specify djConfig.extraLocale: 'zh-cn' 
+   // the page must specify dojoConfig.extraLocale: 'zh-cn' 
    // to bootstrap the environment with support for an extra locale
    dojo.require("dojo.date.locale");
 
