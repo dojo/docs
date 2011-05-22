@@ -19,9 +19,9 @@ As with all dojo._base components, these functions are included within Dojo Base
 Features
 ========
 
-* `djConfig <djConfig>`_
+* `dojoConfig <dojo/config>`_
 
-  Configuring Dojo with djConfig
+  Configuring Dojo with dojoConfig
 
 * `dojo.addOnLoad <dojo/addOnLoad>`_
 
