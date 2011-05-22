@@ -63,7 +63,7 @@ The standard set of properties for specifying animation settings (via the Object
 :rate:
   By default dojo runs its animations with 50 frames/second. This can be too fast in certain scenarios when want the whole animation to run a lot 
   slower. To change the framerate you use the rate property which defines the pause/delay between each frame. Ex. if you want 5 frames per second you 
-  should specify a rate of 200 (miliseconds between each frame **optional**
+  should specify a rate of 200 (milliseconds between each frame **optional**
 
 :repeat:
   How many times the animation will be played.  Default: 0. **optional**
