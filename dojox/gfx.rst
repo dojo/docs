@@ -718,7 +718,7 @@ The 1.7 release introduces a new experimental canvas renderer with input event s
 
   .. code-block :: javascript
 
-    djConfig: { canvasEvent:false, forceGfxRenderer:’canvas’ } will select the legacy canvas renderer implementation.
+    dojoConfig: { canvasEvent:false, forceGfxRenderer:’canvas’ } will select the legacy canvas renderer implementation.
 
 The new canvas renderer supports the following events: oncontextmenu, onclick, ondblclick, onmouseenter, onmouseleave, onmouseout, onmousedown, touchstart, mouseup, touchend, onmouseover, onmousemove, touchmove, keydown, keyup.
 
@@ -1446,11 +1446,11 @@ Considerations and Caveats
 
 The GFX system uses a series of underlying renderers for whichever browser loads the API. The renderer is determined at load time, and defines the entire API using whatever the browser is capable of: Silverlight or VML in IE, SVG in iPhone, Firefox and Safari, and a light-weight canvas variant are available.
 
-To define specifically which renderers can be used, and their relative priority, set the 'gfxRenderer' value in djConfig as a comma delimited string value, e.g. to specify that only SVG, Silverlight and VML should be used, and not Canvas, use:
+To define specifically which renderers can be used, and their relative priority, set the 'gfxRenderer' value in dojoConfig as a comma delimited string value, e.g. to specify that only SVG, Silverlight and VML should be used, and not Canvas, use:
 
 .. code-block :: html
 
-  <script type="text/javascript" src="dojo/dojo.js" djConfig="parseOnLoad:true,gfxRenderer:'svg,silverlight,vml'"></script>
+  <script type="text/javascript" src="dojo/dojo.js" data-dojo-config="parseOnLoad:true,gfxRenderer:'svg,silverlight,vml'"></script>
 
 In the example above SVG will be tried first, if it fails Silverlight will be tried, and the last one will be VML.
 
