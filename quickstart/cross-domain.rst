@@ -83,8 +83,10 @@ Caveats and Gotchas
 
 .. code-block :: html
 
-  <script>
-    dojo.config.dojoBlankHtmlUrl = '/blank.html';
+  <script type="text/javascript">
+    var dojoConfig = {
+      dojoBlankHtmlUrl = '/blank.html'
+    };
   </script>
 
 Multiple modules (dojo.io.iframe, dijit.Editor, dojo.back) require this to properly function under XD Dojo. **Note:** The dijit.Editor/dijit._editor.RichText has a bug in release 1.1.0 where it was not using this djConfig parameter. It is fixed in Dojo 1.1.1 and later.
@@ -101,6 +103,11 @@ Usage example
   <script src="http://www.google.com/jsapi"></script>
   <script>google.load("dojo", "1.2");</script>
   <script>
+      var dojoConfig = {
+          parseOnLoad = true,
+          dojoBlankHtmlUrl = '/blank.html'
+      };
+      
       function loader () {
           dojo.require ("dijit.Editor");
           dojo.addOnLoad(callback);
@@ -110,8 +117,6 @@ Usage example
           new dijit.Editor ({}, dojo.byId("editorNode"));
       }
 
-      dojo.config.parseOnLoad = true;
-      dojo.config.dojoBlankHtmlUrl = '/blank.html';
       dojo.addOnLoad(loader);
   </script>
 
@@ -126,8 +131,8 @@ To use Dojo from a CDN alongside your own local/custom namespace, you must regis
 .. code-block :: html
   :linenos:
 
-        <script type="text/javascript">
-          dojoConfig={
+      <script type="text/javascript">
+          var dojoConfig={
             parseOnLoad: true, 
             isDebug: true,
             baseUrl: "./",
