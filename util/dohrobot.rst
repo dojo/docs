@@ -315,7 +315,7 @@ Notice that there is no robot code in the page that the robot is testing. Now he
     
                 <!-- required: dojo.js -->
                 <script type="text/javascript" src="../../../../dojo/dojo.js"
-                        djConfig="isDebug: true, parseOnLoad: true"></script>
+                        data-dojo-config="isDebug: true, parseOnLoad: true"></script>
     
                 <script type="text/javascript">
                         dojo.require("dijit.dijit"); // optimize: load dijit layer
