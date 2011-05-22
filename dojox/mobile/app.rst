@@ -105,6 +105,6 @@ StageController
 
 Stage controller handle global application behavior and thus provide various application level methods. The application StageController is available through ``dojox.mobile.app.getStageController()`` or the ``stageController`` property of a SceneController.
 
- * ``pushScene(sceneName, params)``: Loads and execute scene ``sceneName``. ``params`` will be passed to the Assistant constructor, and also to the Assistant's activate() method the first time it is called. Transition effect between scenes can be controlled through the ``effect`` attribute of the StageController or predefined using ``djConfig.mobileAnim`` property;
+ * ``pushScene(sceneName, params)``: Loads and execute scene ``sceneName``. ``params`` will be passed to the Assistant constructor, and also to the Assistant's activate() method the first time it is called. Transition effect between scenes can be controlled through the ``effect`` attribute of the StageController or predefined using ``dojoConfig.mobileAnim`` property;
  * ``popScene(data)``: goes back to the scene we were before the current one (if any). ``data`` will be passed to the ``activate`` method of the scene.  You can alternatively use dojo.publish to pop a scene, without needing access to the StageController, by calling dojo.publish("/dojox/mobile/app/goback");
  * ``popScenesTo(sceneName, data)``: "rewinds" the scenes until the current one is ``sceneName``.
