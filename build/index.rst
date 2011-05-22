@@ -315,7 +315,7 @@ The build process can also automatically generate a profile and build layers bas
     <html>
       <head>
         <script type="text/javascript" src="dojo/dojo.js"
-                djConfig="isDebug: true, parseOnLoad: true">
+                data-dojo-config="isDebug: true, parseOnLoad: true">
         </script>
         <script type="text/javascript">
             dojo.require("dijit.dijit");
