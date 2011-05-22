@@ -187,9 +187,9 @@ Implications/Limitations
 Module-specific Notes
 ~~~~~~~~~~~~~~~~~~~~~
 
-**dojo.io.iframe.create(), dijit.Editor, dijit._editor.RichText**: You need to save dojo/resources/blank.html to the same domain as your HTML page and set djConfig.dojoBlankHtmlUrl to the path on that domain. **Note:** The dijit.Editor/dijit._editor.RichText has a bug in release 1.1.0 where it was not using this djConfig parameter. It is fixed in Dojo 1.1.1 and later.
+**dojo.io.iframe.create(), dijit.Editor, dijit._editor.RichText**: You need to save dojo/resources/blank.html to the same domain as your HTML page and set dojoConfig.dojoBlankHtmlUrl to the path on that domain. **Note:** The dijit.Editor/dijit._editor.RichText has a bug in release 1.1.0 where it was not using this dojoConfig parameter. It is fixed in Dojo 1.1.1 and later.
 
-**dojo.back**: You need to save dojo/resources/blank.html to the same domain as your HTML page and set djConfig.dojoIframeHistoryUrl to the path on that domain.
+**dojo.back**: You need to save dojo/resources/blank.html to the same domain as your HTML page and set dojoConfig.dojoIframeHistoryUrl to the path on that domain.
 
 **dojox.flash.Info()**: It uses document.write() which will cause problems if dojox.flash is loaded via dojo.require().
 
@@ -201,7 +201,7 @@ Sample xdomain build command::
   $ cd util/buildscripts
   $ build.sh profile=foo loader=xdomain xdDojoPath=http://my.server.com/path/to/buildoutputdir action=release
 
-xdDojoPath is optional. It just burns in the location of dojo, dijit and dojox into the built dojo.js. If you do not specify that option, then you will need to use djConfig.modulePaths/dojo.registerModulePath() in your HTML page to set the xdomain locations for dojo, dijit and dojox. For your own custom modules, you will have to set djConfig.modulePaths/dojo.registerModulePath() even if you use the xdDojoPath build option.
+xdDojoPath is optional. It just burns in the location of dojo, dijit and dojox into the built dojo.js. If you do not specify that option, then you will need to use dojoConfig.modulePaths/dojo.registerModulePath() in your HTML page to set the xdomain locations for dojo, dijit and dojox. For your own custom modules, you will have to set dojoConfig.modulePaths/dojo.registerModulePath() even if you use the xdDojoPath build option.
 
 **For Dojo 0.9 through 1.1.x:** there is a `bug about loading dojox.gfx with an xdomain build <http://trac.dojotoolkit.org/ticket/4462>`_. This is **fixed in Dojo 1.2**. If you want to use dojox.gfx with an xdomain build of Dojo 0.9-1.1.x, there are some workarounds until the bug gets fixed:
 
@@ -211,11 +211,11 @@ xdDojoPath is optional. It just burns in the location of dojo, dijit and dojox i
 How to use xdomain builds in web pages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* In **djConfig**, add **useXDomain = true**.
-* In **djConfig**, add a modulePaths object that maps where to find your modules.
+* In **dojoConfig**, add **useXDomain = true**.
+* In **dojoConfig**, add a modulePaths object that maps where to find your modules.
 * **Only use dojo.require()** to load xdomain layers. Do not reference the .xd.js file for the layer file. The one exception is dojo.xd.js. If your layer does not map to a real module name, then specify a resourceName: property for that layer in your build profile. The other option is to load the built .js file (not .xd.js file) in a script tag.
 * Register a callback function to get notification of when the packages are loaded by using **dojo.addOnLoad()**.
-* Optional: set a wait time in milliseconds (**djConfig.xdWaitSeconds**) that specifies how long the resource loader should wait for a resource to load until returning an error. Since script elements do not give information about failed or long-running requests, this timeout is used to prevent infinite waiting in the browser. An exception will be thrown to indicate a load error. The default xdWaitSeconds is 15.
+* Optional: set a wait time in milliseconds (**dojoConfig.xdWaitSeconds**) that specifies how long the resource loader should wait for a resource to load until returning an error. Since script elements do not give information about failed or long-running requests, this timeout is used to prevent infinite waiting in the browser. An exception will be thrown to indicate a load error. The default xdWaitSeconds is 15.
 
 XDomain Example
 ~~~~~~~~~~~~~~~
