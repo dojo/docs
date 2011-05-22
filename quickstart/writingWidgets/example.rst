@@ -195,7 +195,7 @@ The real file input tag in the DOM goes away our templated input gets put in it'
                 @import "../FileInput/FileInput.css"; 
         </style>
         <script type="text/javascript" src="../../../dojo/dojo.js" 
-                   djConfig="isDebug:true, parseOnLoad: true"></script>
+                   data-dojo-config="isDebug:true, parseOnLoad: true"></script>
         <script type="text/javascript">
                 dojo.require("dojox.widget.FileInput"); 
                 dojo.require("dojo.parser");    // scan page for widgets and instantiate them
