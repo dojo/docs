@@ -50,7 +50,7 @@ The rational is: Because the hypen is illegal in JavaScript variables, you will 
 Contributing to DojoX
 ---------------------
 
-Contributing new projects, or patches for existing projects are covered under the same rules as Dojo and Dijit. Code must adhere to The Dojo `Style Guidelines </StyleGuide>`_, and be covered under a `Contributor License Agreement <http://dojotoolkit.org/cla>`_ to ensure
+Contributing new projects, or patches for existing projects are covered under the same rules as Dojo and Dijit. Code must adhere to The Dojo `Style Guidelines <developer/styleguide>`_, and be covered under a `Contributor License Agreement <http://dojotoolkit.org/cla>`_ to ensure
 it may be distributed. Accepting a new project or patch for an existing project is left to the discretion of the project "owner", or in the case of top-level project, the DojoX BDFL (currently: Adam Peller)
 
 You are obviously more than welcome to create your own projects and modules that use the Dojo Toolkit and not contribute them to directly back to DojoX. Feel free to blog, design, and otherwise innovate using the Toolkit, and release it independently, though **contact us**, as we would love to evangelize your efforts! 
