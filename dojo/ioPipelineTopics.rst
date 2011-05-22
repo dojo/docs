@@ -16,7 +16,7 @@ Topics that are published via `dojo.publish <dojo/publish>`_ that correspond to 
 Introduction
 ============
 
-As of Dojo 1.4, there are topics that are published for the pipeline used to handle all IO operations. dojo.xhr, dojo.io.script and dojo.io.iframe all use the IO pipeline, so they can all publish the pipeline topics. By default, the topics are turned off. To enable them, set **djConfig.ioPublish = true**. After they are globally enabled, you can disable them for specific IO requests by setting **ioPublish: false** in the arg object you pass to dojo.xhr*(), dojo.io.script.get() or dojo.io.iframe.send().
+As of Dojo 1.4, there are topics that are published for the pipeline used to handle all IO operations. dojo.xhr, dojo.io.script and dojo.io.iframe all use the IO pipeline, so they can all publish the pipeline topics. By default, the topics are turned off. To enable them, set **dojoConfig.ioPublish = true**. After they are globally enabled, you can disable them for specific IO requests by setting **ioPublish: false** in the arg object you pass to dojo.xhr*(), dojo.io.script.get() or dojo.io.iframe.send().
 
 =====
 Usage
