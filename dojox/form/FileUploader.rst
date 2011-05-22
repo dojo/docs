@@ -19,7 +19,7 @@ Usage
 CDN Note
 --------
 
-FileUploader does work with the Google and AOL CDNs, but because of cross domain issues, you need to run the SWF locally, and point to its location with djConfig.uploaderPath. 
+FileUploader does work with the Google and AOL CDNs, but because of cross domain issues, you need to run the SWF locally, and point to its location with dojoConfig.uploaderPath. 
 
 Dojo Version 1.2.x
 ------------------
