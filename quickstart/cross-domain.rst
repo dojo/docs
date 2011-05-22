@@ -121,13 +121,13 @@ Usage example
 Using CDN with Local modules
 ============================
 
-To use Dojo from a CDN alongside your own local/custom namespace, you must register the module path via djConfig:
+To use Dojo from a CDN alongside your own local/custom namespace, you must register the module path via dojoConfig:
 
 .. code-block :: html
   :linenos:
 
         <script type="text/javascript">
-          djConfig={
+          dojoConfig={
             parseOnLoad: true, 
             isDebug: true,
             baseUrl: "./",
