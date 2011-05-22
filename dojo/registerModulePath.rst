@@ -19,13 +19,13 @@ Introduction
 
 Dojo maps module names used in dojo.require calls to paths names. By default, Dojo uses a couple pieces of information to map a module name to a path name:
 
-The first part is dojo.baseUrl: the path to the Dojo directory. For example, assume the path to dojo.js is "/web/scripts/dojo-1.3/dojo/dojo.js". The baseUrl is "/web/scripts/dojo-1.3/dojo/". Dojo automatically determines this path, but you can explicitly set it via djConfig.baseUrl.
+The first part is dojo.baseUrl: the path to the Dojo directory. For example, assume the path to dojo.js is "/web/scripts/dojo-1.3/dojo/dojo.js". The baseUrl is "/web/scripts/dojo-1.3/dojo/". Dojo automatically determines this path, but you can explicitly set it via dojoConfig.baseUrl.
 
 Next, Dojo assumes that the path for any module names that start with a prefix other than "dojo" are in a sibling directory to the dojo directory.
 
 For instance, if "/web/scripts/dojo-1.3/dojo/dojo.js" is the path to dojo.js, and you do dojo.require("some.module"), Dojo will try to load the JavaScript file using the path "/web/scripts/dojo-1.3/some/module.js".
 
-If you want to load "some.module" from a different path, dojo.registerModulePath can be used to change the path. However, it is more common to use djConfig.modulePaths instead of dojo.registerModulePath directly. Dojo will call dojo.registerModulePath for each entry in djConfig.modulePaths.
+If you want to load "some.module" from a different path, dojo.registerModulePath can be used to change the path. However, it is more common to use dojoConfig.modulePaths instead of dojo.registerModulePath directly. Dojo will call dojo.registerModulePath for each entry in dojoConfig.modulePaths.
 
 Note that the path given to dojo.registerModulePath is always assumed to be relative to dojo.baseUrl, unless the module path starts with at "/" or "http". In those cases, dojo.baseUrl will not be used to determine the final path.
 
@@ -114,5 +114,5 @@ Note: The custom button is simply an extension of "dijit.form.Button".
 See Also
 ========
 
-* `djConfig.modulePaths <http://docs.dojocampus.org/djConfig>`_
+* `dojoConfig.modulePaths <dojo/config#finding-resources-in-non-standard-locations>`_
 * `dojo.moduleUrl <dojo/moduleUrl>`_
