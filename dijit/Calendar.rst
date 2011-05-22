@@ -12,7 +12,7 @@ dijit.Calendar
 .. contents::
     :depth: 2
 
-The Calendar widget displays a localized month-view calendar and allows the user to navigate months and years and select a date.  It is typically used as part of the `DateTextBox <dijit/form/DateTextBox>`_ which includes a text box and uses the Calendar as a drop-down. Localizations for hundreds of languages and cultures are included as part of the Dojo Toolkit.  The locale will be chosen based on the djConfig.locale setting of your page, using navigator.language by default.
+The Calendar widget displays a localized month-view calendar and allows the user to navigate months and years and select a date.  It is typically used as part of the `DateTextBox <dijit/form/DateTextBox>`_ which includes a text box and uses the Calendar as a drop-down. Localizations for hundreds of languages and cultures are included as part of the Dojo Toolkit.  The locale will be chosen based on the dojoConfig.locale setting of your page, using navigator.language by default.
 
 Navigating between months is possible with the arrow icons, and the next and previous year may be clicked to change to that year.  Holding the mouse down on these controls will repeat the action.  Starting with version 1.4, the month name is a drop-down control for selecting a different month.
 
@@ -279,7 +279,7 @@ Navigate to same day in next year             Control+Page-down
 Navigate to same day in previous year         Control+Page-up
 Navigate to first day in month                Home
 Navigate to last day in month                 End
-Select the date                               Enter
+Select the date                               Enter, Space
 ==========================================    =================================================
 
 Screen Reader Issues
