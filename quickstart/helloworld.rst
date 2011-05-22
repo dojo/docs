@@ -42,7 +42,7 @@ Once we have setup the directory and file structure for the tutorial, we will ne
         @import "dojoroot/dojo/resources/dojo.css"
     </style>
     <script type="text/javascript" src="dojoroot/dojo/dojo.js" 
-      djConfig="parseOnLoad: true"></script>
+      data-dojo-config="parseOnLoad: true"></script>
   </head>
 
   <body class="tundra">
@@ -460,7 +460,7 @@ Finding more resources
 
 I hope you've enjoyed this tutorial and found it informative. No doubt though, you will need more information on Dojo and how it and it's widgets work. Below is a list of links that will point you in the right direction.
 
-1. `The documentation page for Dojo <http://dojotoolkit.org/docs/>`_ with links to all documentation.
+1. `The documentation page for Dojo <http://dojotoolkit.org/documentation/>`_ with links to all documentation.
 
 #. `The Dojo event system <http://www.dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/event-system>`_. How you can link functions to the normal JS events the Dojo way.
 
