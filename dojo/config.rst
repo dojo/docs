@@ -178,7 +178,7 @@ skipIeDomLoaded: false
 
 
 defaultDuration: 200
-  Global setting for duration of animations in milliseconds.
+  Default duration, in milliseconds, for wipe and fade animations within dijits. Assigned to dijit.defaultDuration.
 
 Configuring dojox Modules
 -------------------------
