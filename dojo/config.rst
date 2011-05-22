@@ -178,7 +178,7 @@ skipIeDomLoaded: false
 
 
 defaultDuration: 200
-  Global setting for duration of animations in miliseconds.
+  Global setting for duration of animations in milliseconds.
 
 Configuring dojox Modules
 -------------------------
