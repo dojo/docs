@@ -63,12 +63,12 @@ To execute the parser manually, simply call the function ``parse``:
   
   dojo.parser.parse();
 
-To run the parser when your page loads, add a djConfig="parseOnLoad: true" to your dojo script tag:
+To run the parser when your page loads, add a data-dojo-config="parseOnLoad: true" to your dojo script tag:
 
 .. code-block :: html
 
 		<script type="text/javascript" src="dojo/dojo.js"
-			djConfig="parseOnLoad: true"></script>
+			data-dojo-config="parseOnLoad: true"></script>
 
 
 
