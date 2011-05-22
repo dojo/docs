@@ -42,12 +42,12 @@ Just pass an array of url's to the function:
       dojox.image.preload(["pic.png", "face.jpg", "http://example.com/logo.gif"]);
   }); 
 
-Alternately, you can specify a list of url's as an array to a djConfig parameter before dojo.js is loaded with the `preloadImages` option:
+Alternately, you can specify a list of url's as an array to a dojoConfig parameter before dojo.js is loaded with the `preloadImages` option:
 
 .. code-block :: javascript
   :linenos:
 
-  var djConfig = { 
+  var dojoConfig = { 
       preloadImages:["foo.jpg", "bar.png"]
   }
 
