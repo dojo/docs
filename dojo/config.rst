@@ -102,7 +102,7 @@ Both the data-dojo-config script attribute and the dojoConfig global have the sa
 3. Including dojoConfig in a Custom Build
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When creating a custom build it is possible to bake the dojoConfig object into the build via the scopeDjConfig parameter. You can learn more about the scopeDjConfig parameter in the `Dojo build system build script docs <http://dojotoolkit.org/reference-guide/build/buildScript.html>`_.
+When creating a custom build it is possible to bake the dojoConfig object into the build via the scopeDjConfig parameter. You can learn more about the scopeDjConfig parameter in the `Dojo build system build script docs <build/buildScript>`_.
 
 dojoConfig Parameters
 ---------------------
@@ -129,7 +129,7 @@ debugContainerId: "yourContainerId"
   If specified, when the page is rendered dojo will look for an element with the specified id and will put the Firebug Lite console window inside that element. This allows developers extra control over the display of the console window and to easily reference it in their own scripts. By default the div containing the console window does not have an id associated with it.
 
 debugAtAllCosts: true
-  This setting forces the use of the xdomain loader to ensure all loaded modules have their own script tag. This gives you real line numbers in error messages and a complete list of script urls in most debugging tools. There is much more information here on `this tutorial on debugging with dojo <http://dojotoolkit.org/reference-guide/quickstart/debugging.html>`_. Note, this will break your application, if you pass a variable to dojo.require() instead of a string literal, and if you have code that relies on the synchronous loader i.e. not wrapped in dojo.ready/dojo.addOnLoad.
+  This setting forces the use of the xdomain loader to ensure all loaded modules have their own script tag. This gives you real line numbers in error messages and a complete list of script urls in most debugging tools. There is much more information here on `this tutorial on debugging with dojo <quickstart/debugging>`_. Note, this will break your application, if you pass a variable to dojo.require() instead of a string literal, and if you have code that relies on the synchronous loader i.e. not wrapped in dojo.ready/dojo.addOnLoad.
 
 Language and Localization Settings in dojoConfig
 ------------------------------------------------
@@ -175,6 +175,10 @@ afterOnLoad: true
 
 skipIeDomLoaded: false
   For IE only, skip the DOMContentLoaded hack used. Sometimes it can cause an Operation Aborted error if the rest of the page triggers script defers before the DOM is ready. If this is config value is set to true, then dojo.addOnLoad callbacks will not be triggered until the page load event, which is after images and iframes load. If you want to trigger the callbacks sooner, you can put a script block in the bottom of your HTML that calls dojo._loadInit();. If you are using multiversion support, change "dojo." to the appropriate scope name for dojo.
+
+
+defaultDuration: 200
+  Global setting for duration of animations in miliseconds.
 
 Configuring dojox Modules
 -------------------------
