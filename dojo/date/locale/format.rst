@@ -26,7 +26,7 @@ By default, this method formats both date and time from dateObject. Formatting p
 Usage
 =====
 
-By simply passing a Javascript Date object to dojo.date.locale.format, Dojo will use the locale passed as djConfig.locale or the browser's default to handle the formats, and you may choose from a variety of formats: short, medium, full, or long.
+By simply passing a Javascript Date object to dojo.date.locale.format, Dojo will use the locale passed as dojoConfig.locale or the browser's default to handle the formats, and you may choose from a variety of formats: short, medium, full, or long.
 
 Various other options are available to format the date. You may choose to process only the date, only the time, or both, and you may decide to use your own custom datePattern or timePattern. 
 
@@ -178,7 +178,10 @@ Render the current Date in several ways using format(). The inverse operation to
     @import "dojox/widget/DocTester/DocTester.css"; 
   </style>
   <script type="text/javascript">
-    djConfig.locale = 'en'; djConfig.extraLocale = ['es', 'zh'];
+    var dojoConfig = {
+        locale: 'en',
+        extraLocale: ['es', 'zh']
+    };
   </script>
   <script type="text/javascript">
     dojo.require("dojox.widget.DocTester");
@@ -189,7 +192,7 @@ Render the current Date in several ways using format(). The inverse operation to
     });
   </script>
   <div id="docTest">
-    >>> dojo.date.locale.format(new Date(2007,2,23,6,6,6), {formatLength: "short", locale: "es"}); // locale must match an identifier included in djConfig bootstrap, and is normally not specified here (used here for demonstration purposes)
+    >>> dojo.date.locale.format(new Date(2007,2,23,6,6,6), {formatLength: "short", locale: "es"}); // locale must match an identifier included in dojoConfig bootstrap, and is normally not specified here (used here for demonstration purposes)
     "23/03/07 06:06"
     >>> dojo.date.locale.format(new Date(2007,2,23,6,6,6), {selector: "date", formatLength: "short", locale: "es"});
     "23/03/07"
