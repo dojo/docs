@@ -23,22 +23,22 @@ To use, require the Urchin module into your page, and create a new instance:
 
 The most important attribute (parameter) would be the `acct` value, which should be the ID Google prodivded during signup.
 
-You can define your account number as a djConfig parameter ``urchin``. Simply include the key and a value however you set djConfig, either before ``dojo.js`` is loaded:
+You can define your account number as a dojoConfig parameter ``urchin``. Simply include the key and a value however you set dojoConfig, either before ``dojo.js`` is loaded:
 
 .. code-block :: javascript
   :linenos: 
 
   <script type="text/javascript">
-     var djConfig = { urchin: "UA-12345-67" };
+     var dojoConfig = { urchin: "UA-12345-67" };
   </script>
   <script src="http://o.aolcdn.com/dojo/1.5/dojo/dojo.xd.js"></script>
 
-or directly on the djConfig attribute of your ``dojo.js`` script tag:
+or directly on the data-dojo-config attribute of your ``dojo.js`` script tag:
 
 .. code-block :: javascript
   :linenos:
 
-   <script src="js/dojo/dojo.js" djConfig="urchin: UA-12345-67"></script>
+   <script src="js/dojo/dojo.js" data-dojo-config="urchin: UA-12345-67"></script>
 
 Being a Class constructor, you can also use Urchin with a ``dojoType``. Assuming you have ``dojo.require``'d the Urchin module, and have parseOnLoad:true (or manually run the `parser <dojo/parser>`_), you simply need to add a tag somewhere in your page:
 
