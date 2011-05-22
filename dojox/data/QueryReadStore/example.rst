@@ -43,7 +43,7 @@ The directory structure should look like this when you are done:
             @import "dojo/resources/dojo.css";
             @import "dijit/themes/tundra/tundra.css";
         </style>
-        <script type="text/javascript" src="dojo/dojo.js" djConfig="isDebug: true, parseOnLoad: true"></script>
+        <script type="text/javascript" src="dojo/dojo.js" data-dojo-config="isDebug: true, parseOnLoad: true"></script>
         <script type="text/javascript">
             dojo.require("dijit.form.ComboBox");
             dojo.require("dijit.form.FilteringSelect");
