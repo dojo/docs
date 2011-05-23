@@ -1229,8 +1229,35 @@ Here is a pie chart, with slice information shown onmouseover and a legend:
 
 Animated Chart
 --------------
+.. cv-compound::
 
-TODO: How to use animations.
+  .. cv:: javascript
+
+    <script type="text/javascript">
+    dojo.require("dojox.charting.Chart2D");
+    dojo.require("dojox.charting.axis2d.Default");
+    dojo.require("dojox.charting.plot2d.ClusteredColumns");
+    dojo.require("dojo.fx.easing");
+ 
+    dojo.addOnLoad(function(){
+        new dojox.charting.Chart(node)).
+         setTheme(dojox.charting.themes.Tufte).
+	 addAxis("x", { fixLower: "minor", fixUpper: "minor", natural: true }).
+	 addAxis("y", { vertical: true, fixLower: "major", fixUpper: "major", includeZero: true }).
+	 addPlot("default", { type: "ClusteredColumns", gap: 10, animate: { duration: 2000, easing: dojo.fx.easing.bounceInOut } }).
+	 addSeries("Series A", [ 2, 1, 0.5, -1, -2 ] ).
+ 	 addSeries("Series B", [ -2, -1, -0.5, 1, 2 ] ).
+ 	 addSeries("Series C", [ 1, 0.5, -1, -2, -3 ] ).
+	 addSeries("Series D", [ 0.7, 1.5, -1.2, -1.25, 3 ] ).
+	 render();
+	}
+    });
+    </script>
+
+  .. cv:: html
+
+    <div id="chart" style="width: 300px; height: 300px;"></div>
+
 
 3D Chart
 --------
