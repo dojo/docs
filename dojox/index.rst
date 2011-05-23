@@ -360,6 +360,14 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
   A project and resource management tool
 
+* `dojox.gauges <dojox/gauges>`_
+
+  A collection of gauge widgets used to display numerical data
+
+  * `dojox.gauges.GlossyCircularGauge <dojox/gauges/GlossyCircularGauge>`_
+
+    A circular glossy gauge with a variety of indicators, used to display numerical data
+
 * `dojox.geo <dojox/geo>`_
 
   A module to display geographical content
