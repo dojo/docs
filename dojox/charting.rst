@@ -1238,6 +1238,8 @@ Animated Chart
     dojo.require("dojox.charting.axis2d.Default");
     dojo.require("dojox.charting.plot2d.ClusteredColumns");
     dojo.require("dojo.fx.easing");
+    dojo.require("dojox.charting.themes.Tufte");
+
  
     dojo.addOnLoad(function(){
         var chart = new dojox.charting.Chart(node);
