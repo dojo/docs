@@ -1240,8 +1240,8 @@ Animated Chart
     dojo.require("dojo.fx.easing");
  
     dojo.addOnLoad(function(){
-        new dojox.charting.Chart(node)).
-         setTheme(dojox.charting.themes.Tufte).
+        var chart = new dojox.charting.Chart(node);
+        chart.setTheme(dojox.charting.themes.Tufte).
 	 addAxis("x", { fixLower: "minor", fixUpper: "minor", natural: true }).
 	 addAxis("y", { vertical: true, fixLower: "major", fixUpper: "major", includeZero: true }).
 	 addPlot("default", { type: "ClusteredColumns", gap: 10, animate: { duration: 2000, easing: dojo.fx.easing.bounceInOut } }).
@@ -1256,7 +1256,7 @@ Animated Chart
 
   .. cv:: html
 
-    <div id="chart" style="width: 300px; height: 300px;"></div>
+    <div id="node" style="width: 300px; height: 300px;"></div>
 
 
 3D Chart
