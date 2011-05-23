@@ -1250,7 +1250,6 @@ Animated Chart
  	 addSeries("Series C", [ 1, 0.5, -1, -2, -3 ] ).
 	 addSeries("Series D", [ 0.7, 1.5, -1.2, -1.25, 3 ] ).
 	 render();
-	}
     });
     </script>
 
