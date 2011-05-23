@@ -465,6 +465,37 @@ Example that shows a star at Paris location:
  </script>
  
 
+The styling of the GFX shapes is done through the setFill and setStroke methods of the GeometryFeature class. These fill and stroke parameters are simply passed to the shape at display time and depend on the kind of shape displayed. 
+
+The shape can also be configured a with the setShapeProperties method. These properties are passed to the GFX shape object via the setShape method of the GFX shape so the two followinf code are equivalent.
+
+.. code-block :: javascript
+ :linenos:
+ 
+ var f = new dojox.geo.openlayers.GeometryFeature(p);
+ // create a graphic as a group
+ f.createShape = function(s){
+   return s.createPath();
+ };
+ var star = makeStarShape(20, 50, 10, 2);
+ f.setShapeProperties({
+  path : star
+ });
+
+.. code-block :: javascript
+ :linenos:
+ 
+ var f = new dojox.geo.openlayers.GeometryFeature(p);
+ // create a graphic as a group
+ f.createShape = function(s){
+   var path = s.createPath();
+   var star = makeStarShape(20, 50, 10, 2);
+   path.setShape({
+     path : star
+   });
+   return path;
+ };
+
 Positioning widgets on the map
 ------------------------------
 
