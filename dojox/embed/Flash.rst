@@ -11,7 +11,7 @@ dojox.embed.Flash
 .. contents::
    :depth: 2
 
-TODO: short summary of the component/class/method
+Base functionality to insert a flash movie into a document on the fly.
 
 
 ============
@@ -31,10 +31,13 @@ TODO: how to use the component/class/method
  :linenos:
 
  <script type="text/javascript">
-   // your code
+   dojo.require("dojox.embed.Flash");
+   dojo.addOnLoad(function(){
+       var movie=new dojox.embed.Flash({ path: '/path-to-swf/test.swf' }, "flash");
+   });
  </script>
 
-
+ <div id="flash">Alternative flash content</div>
 
 ========
 Examples
