@@ -20,6 +20,8 @@ Dojo's dojox.geo.openlayers module provides a mapping component based on the Ope
 
 This Map component is intended to display a background map with graphical GFX or widget overlay. The background map can come from various online map providers such as OpenStreetMap, Google Maps of ESRI Maps. Note that you may have to include specific map provider javascript library in order to have access to the corresponding mapping service.  
 
+In any cases, you will have to include the OpenLayers library in order to use the dojox.geo.openlayers module.
+
 Instantiate an OpenLayers Map component
 ---------------------------------------
 
