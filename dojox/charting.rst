@@ -1242,7 +1242,7 @@ Animated Chart
 
  
     dojo.addOnLoad(function(){
-        var chart = new dojox.charting.Chart(node);
+        var chart = new dojox.charting.Chart2D(animChart);
         chart.setTheme(dojox.charting.themes.Tufte).
 	 addAxis("x", { fixLower: "minor", fixUpper: "minor", natural: true }).
 	 addAxis("y", { vertical: true, fixLower: "major", fixUpper: "major", includeZero: true }).
@@ -1257,7 +1257,7 @@ Animated Chart
 
   .. cv:: html
 
-    <div id="node" style="width: 300px; height: 300px;"></div>
+    <div id="animChart" style="width: 300px; height: 300px;"></div>
 
 
 3D Chart
