@@ -161,6 +161,14 @@ Mobile
  - Several new transition animations have been added: Dissolve, Flip2, Cover, Reveal, Slide Vertical, Cover Vertical, Reveal Vertical, Swirl, Zoom In/Out, and Scale In/Out.
  - The FlippableView widget has been renamed to SwapView.
  - dojox.mobile now uses the AMD module format
+ - TextBox widget moved from mobile/app/ to mobile/.
+ - New Tooltip widget to popup a container for either simple text or another wiget.
+ - New Overlay widget to slide up form the bottom another input widget, and then slides down when done.
+ - New Opener widget adds runtime screen-size detection and uses Tooltip for the larger mobile devices, and Overlay on small-screen devices.
+ - New ComboBox widget (still experimental) that combines searchable text input similar to dijit.form.ComboBox.
+ - New ExpandingTextarea widget grows and shrinks vertically as needed to accomodate the end-user text.
+ - New Slider widget to enable users to easily adjust a value with touch/dragging gestures.
+ - New HTML form input widget wrappers (Textarea, CheckBox, RadioButton) to allow simple form constructs to be used with various dijit container/dialog widgets.
 
 MVC
 ---
