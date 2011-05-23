@@ -17,5 +17,5 @@ At the time of writing (Dojo Toolkit 1.3 release), ``dojox.embed`` comprises thr
 constructors:
 
 * `dojox.embed.Flash <dojox/embed/Flash>`_
-* `dojox.embed.Quicktime <dojox/embed/Quicktime>`_
 * `dojox.embed.Object <dojox/embed/Object>`_
+* `dojox.embed.Quicktime <dojox/embed/Quicktime>`_
