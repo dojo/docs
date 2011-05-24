@@ -1236,7 +1236,7 @@ Here is a clustered bar chart with a rendering animation:
 
   .. cv:: html
 
-    <div id="animChart" style="width: 500px; height: 500px;"></div>
+    <div id="animChart" style="width: 300px; height: 300px;"></div>
 
   .. cv:: javascript
 
