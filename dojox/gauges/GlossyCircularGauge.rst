@@ -5,8 +5,8 @@ dojox.gauges.GlossyCircularGauge
 
 :Status: Draft
 :Version: 1.0
-:Project owner: Philippe Toussaint
-:Available: since V1.6
+:Project owner: Emmanuel Tissandier, Philippe Toussaint
+:Available: since V?
 
 .. contents::
    :depth: 2
