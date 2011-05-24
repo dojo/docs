@@ -66,6 +66,8 @@ Declare the markup container node for the Map component :
  <h1>Simple Maps,support zoom in and zoom out.</h1>
  <div class="mapContainer" style="display:block;" id="USStates"></div>
 
+Here is a basic demo:
+
 .. code-example::
   :type: inline
   :height: 340
@@ -82,14 +84,14 @@ Declare the markup container node for the Map component :
       dojo.require("dojox.geo.charting.Map");
       dojo.addOnLoad(function(){
 		//create new map
-		var map = new dojox.geo.charting.Map("USStates", "../resources/data/USStates.json");
+		var map = new dojox.geo.charting.Map("USStates", "dojox/geo/charting/resources/data/USStates.json");
 		//add outside map marker file
-		map.setMarkerData("../resources/markers/USStates.json");
+		map.setMarkerData("dojox/geo/charting/resources/markers/USStates.json");
 	});
     </script>
 
 Data binding
-------------------
+------------
 
 The purpose of this Map component is to represent figures on a map. Hence the need for connecting the component with a dataStore object.
 
