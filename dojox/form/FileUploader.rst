@@ -51,7 +51,12 @@ Dojo Version 1.5.0
 ------------------
 
 This version adds the ability to use the uploader in a TabContainer. However, see the next section.
- 
+
+Dojo Version 1.6.0
+------------------
+
+dojox.form.FileUploader is now deprecated. Use `dojox.form.Uploader <dojox/form/Uploader>`_ instead.
+
 ===============
 IMPORTANT NOTES
 ===============
