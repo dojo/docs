@@ -46,9 +46,9 @@ Introduction
 
 Dojo's Charting module provides a way to quickly and easily add great looking and functional dynamic charts and graphs to your web pages. All you need is a tiny bit of JavaScript skills and a copy of Dojo.
 
-=====
-Usage
-=====
+===============
+Charting Basics
+===============
 
 Here is an example that is typical of a starting point for creating a Dojo Chart:
 
@@ -79,13 +79,11 @@ Here is an example that is typical of a starting point for creating a Dojo Chart
 
 Take a look at the source and you will see that it is simple to create charts.
 
-Charting Basics
----------------
-
 As part of configuring any Chart, you'll need to define Plots, Axes and Series data. Plots describe how data is to be visualized.  Axes describe the dimensions of data that are being visualized and includes things like specifying labels.  Series describes the Data itself that the chart will visualize.
 
+============
 Adding Title
-------------
+============
 
 You can add a general title to the chart, and the title can be specified on position and font styles. Here are related parameters:
 
@@ -109,6 +107,10 @@ And here comes an example:
     titleFont: "normal normal normal 15pt Arial",
     titleFontColor: "orange"
   })
+
+================
+Plots Management
+================
 
 Adding Plots
 ------------
@@ -315,6 +317,54 @@ One last feature I’d like to touch on is adding multiple plots to the same cha
 
 The charting library is also very flexible in terms of combining chart types, as well as multiple axes. You can set up custom labels for a specific axis, you can set up custom markers for points on a number of different types of charts, and you can even create your own themes for a chart!
 
+Smart Label for Pie
+-------------------
+
+Listing labels on both sides of the pie, it keeps labels from overlapping with each other. The smart label can be specified as follows.
+
+.. code-block :: javascript
+  :linenos:
+
+  labelWiring: "ccc"
+  labelStyle:  "columns"
+
+
+Adding a Background Grid Plot
+-----------------------------
+
+You can also add a grid at your tick marks to your entire chart by adding a Grid plot. The grid plot allows you to turn the grid on and off for major and minor ticks in both directions, and you can assign axes names if you have multiple axes. Let’s add a grid to the other axes in our above example.
+
+.. code-block :: javascript
+  :linenos:
+
+  chart1.addPlot("Grid", {type: "Grid",
+  	hAxis: "other x",
+  	vAxis: "other y",
+  	hMajorLines: true,
+  	hMinorLines: false,
+  	vMajorLines: true,
+  	vMinorLines: false
+  });
+
+Similarly to the axis if your grid is changing often you can use the enableCache option to improve further renderings:
+
+.. code-block :: javascript
+  :linenos:
+
+  chart1.addPlot("Grid", {type: "Grid",
+  	hAxis: "other x",
+  	vAxis: "other y",
+  	enableCache: true
+  });
+  
+
+TODO: Grid Plot Example
+
+
+===============
+Axis Management
+===============
+
 Specifying Axes
 ---------------
 
@@ -446,37 +496,6 @@ The color of the axis, the color and length of your tick marks and the font and 
 
 TODO: Axis Properties Example
 
-Adding a Background Grid Plot
------------------------------
-
-You can also add a grid at your tick marks to your entire chart by adding a Grid plot. The grid plot allows you to turn the grid on and off for major and minor ticks in both directions, and you can assign axes names if you have multiple axes. Let’s add a grid to the other axes in our above example.
-
-.. code-block :: javascript
-  :linenos:
-
-  chart1.addPlot("Grid", {type: "Grid",
-  	hAxis: "other x",
-  	vAxis: "other y",
-  	hMajorLines: true,
-  	hMinorLines: false,
-  	vMajorLines: true,
-  	vMinorLines: false
-  });
-
-Similarly to the axis if your grid is changing often you can use the enableCache option to improve further renderings:
-
-.. code-block :: javascript
-  :linenos:
-
-  chart1.addPlot("Grid", {type: "Grid",
-  	hAxis: "other x",
-  	vAxis: "other y",
-  	enableCache: true
-  });
-  
-
-TODO: Grid Plot Example
-
 Using Custom Axis Labels
 ------------------------
 
@@ -510,16 +529,9 @@ maxLabelSize      number      0       define the max length of label in pixel.
 maxLabelCharCount number      0       define the max count of characters in label.
 ================= =========== ======= ===========
 
-Smart Label for Pie
--------------------
-
-Listing labels on both sides of the pie, it keeps labels from overlapping with each other. The smart label can be specified as follows.
-
-.. code-block :: javascript
-  :linenos:
-
-  labelWiring: "ccc"
-  labelStyle:  "columns"
+===============
+Data Management
+===============
 
 Connecting Charts to Data and Specifying a Data Series
 ------------------------------------------------------
@@ -666,9 +678,10 @@ If a field name is specified, it is used to pull one (numeric) value. The effect
     return store.getValue(item, field);
   }
 
-
+=====================
 Changing Color Themes
----------------------
+=====================
+
 Under dojox.charting.themes, you will find a variety of predefined color themes for use with Dojo Charting.  Just make sure to require the theme you want to use, and then set the theme on your chart as follows:
 
 .. code-block :: javascript
@@ -684,6 +697,10 @@ Under dojox.charting.themes, you will find a variety of predefined color themes 
    <!DOCTYPE HTML>
 
 at the top of any HTML file the chart is displayed in.
+
+=================
+Events Management
+=================
 
 Chart Events
 ------------
@@ -752,8 +769,18 @@ The event handler receives one argument. While it tries to unify information for
 |                |                                         |Undefined for all other elements                                               |           |
 +----------------+-----------------------------------------+-------------------------------------------------------------------------------+-----------+
 
+Updating Charts and Events
+--------------------------
+
+Charting was designed with periodic updating in mind. Say you have an application that remotely monitors something: the stock market, a database server, etc. With dojox.charting, you can set up a chart and then simply update the series on the charts--resulting in a fast, fluid monitoring experience. In fact, charting has been used for such things as remote CPU monitoring.
+
+TODO: please explain more. How does this work? Show an example.
+
+Coming with the Dojo 1.2 release, Charting will also support customized events, such as tooltip attachment and mouseover actions!
+
+====================================
 Zooming, Scrolling, and Panning APIs
-------------------------------------
+====================================
 
 Dojo Charting provides methods to control arbitrary zooming to drill down to the smallest details of your chart, scrolling, and panning (moving the chart with you mouse in two dimensions). Note that the latter functionality can be taxing on the browser, but the new generation of browsers (Firefox 3, Safari 3, Opera 9.5) are up to the task.
 
@@ -776,15 +803,6 @@ Dojo Charting provides methods to control arbitrary zooming to drill down to the
 +-----------------------------------+---------------------------------------------------------------------------------------------------------------+
 
 Both methods on Chart perform sanity checks, and won't allow you to scroll outside of axis’ boundaries, or zoom out too far. Starting with Dojo Toolkit 1.7 you can also zoom and pan using mouse and touch gestures, see Actions & Animated Effects section.
-
-Updating Charts and Events
---------------------------
-
-Charting was designed with periodic updating in mind. Say you have an application that remotely monitors something: the stock market, a database server, etc. With dojox.charting, you can set up a chart and then simply update the series on the charts--resulting in a fast, fluid monitoring experience. In fact, charting has been used for such things as remote CPU monitoring.
-
-TODO: please explain more. How does this work? Show an example.
-
-Coming with the Dojo 1.2 release, Charting will also support customized events, such as tooltip attachment and mouseover actions!
 
 ==========================
 Actions & Animated Effects
