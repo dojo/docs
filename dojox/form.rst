@@ -40,7 +40,7 @@ Available Widgets
 
 * `dojox.form.FileUploader <dojox/form/FileUploader>`_
 
-  A new multi-file uploader that shows progress as the files are uploading
+  Deprecated old multi-file uploader that shows progress as the files are uploading. Use `dojox.form.Uploader <dojox/form/Uploader>`_ instead.
 
 * `dojox.form.ListInput <dojox/form/ListInput>`_
 
