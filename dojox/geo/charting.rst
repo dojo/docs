@@ -66,12 +66,10 @@ Declare the markup container node for the Map component :
  <h1>Simple Maps,support zoom in and zoom out.</h1>
  <div class="mapContainer" style="display:block;" id="USStates"></div>
 
-hello
-
 .. code-example::
   :type: inline
-  :height: 250
-  :width: 360
+  :height: 340
+  :width: 520
   :toolbar: versions
 
   .. html::
