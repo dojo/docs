@@ -367,7 +367,7 @@ When a plot is rendered an animation can be triggered. For that an animate param
 
 .. code-block :: javascript
 
-  chart1.addPlot("cols", {type: "Columns", animate: { duration: 1000, easing: dojox.fx.eaasing.linearEase } });
+  chart1.addPlot("cols", {type: "Columns", animate: { duration: 1000, easing: dojox.fx.easing.linear} });
   
 
 
