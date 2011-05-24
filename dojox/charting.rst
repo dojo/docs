@@ -360,6 +360,16 @@ Similarly to the axis if your grid is changing often you can use the enableCache
 
 TODO: Grid Plot Example
 
+Plots Animation
+---------------
+
+When a plot is rendered an animation can be triggered. For that an animate parameter must be passed to the plot as below:
+
+.. code-block :: javascript
+
+  chart1.addPlot("cols", {type: "Columns", animate: { duration: 1000, easing: dojox.fx.eaasing.linearEase } });
+  
+
 
 ===============
 Axis Management
