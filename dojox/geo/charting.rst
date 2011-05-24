@@ -7,7 +7,7 @@ dojox.geo.charting
 :Status: Draft
 :Version: Experimental
 :Project owner: Dean Williams
-:Author: Qi Ruan,Erwan Aullas
+:Author: Qi Ruan, Erwan Aullas
 :Available: since V.1.5
 
 .. contents::
