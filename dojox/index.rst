@@ -276,7 +276,7 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
   * `dojox.form.FileInput <dojox/form/FileInput>`_ (covers base, Auto, and Blind)
 
-    A series of experimental Vanilla input type="file" widgets for uploading files. See also `FileUploader <dojox/form/FileUploader>`_
+    A series of experimental Vanilla input type="file" widgets for uploading files. See also `dojox.form.Uploader <dojox/form/Uploader>`_
 
   * `dojox.form.FilePickerTextBox <dojox/form/FilePickerTextBox>`_
 
@@ -284,7 +284,7 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
   * `dojox.form.FileUploader <dojox/form/FileUploader>`_
 
-    A new multi-file uploader that shows progress as the files are uploading
+    Deprecated old multi-file uploader that shows progress as the files are uploading. Use `dojox.form.Uploader <dojox/form/Uploader>`_ instead.
 
   * `dojox.form.ListInput <dojox/form/ListInput>`_
 
