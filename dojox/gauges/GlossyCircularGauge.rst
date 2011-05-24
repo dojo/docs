@@ -22,6 +22,46 @@ This gauge widget provides a way to display data on a circular gauge with a glos
 
 The glossy circular gauge widget is entirely built upon the dojox.gfx package and as such, works extremely well across many browsers. The way to conceptually understand how the gauge widget works is that it is effectively a layering of a series of indicators to display the background shpae, the major and minor ticks, the needle...
 
+.. code-example::
+  :type: inline
+  :height: 250
+  :width: 360
+  :toolbar: versions
+
+  .. javascript::
+
+    <script type="text/javascript">
+        dojo.require("dijit.dijit"); // optimize: load dijit layer
+        dojo.require("dijit.layout.BorderContainer");
+        dojo.require("dijit.layout.ContentPane");
+        dojo.require("dijit.TitlePane");
+        
+        dojo.require('dojox.gauges.GlossyCircularGauge');
+        dojo.require("dojo.parser");
+        
+        dojo.addOnLoad(sample);
+        
+        var glossyCircular = null;
+        
+        function sample(){
+        
+        	// create an glossy Circular Gauge
+        	glossyCircular = new dojox.gauges.GlossyCircularGauge({
+        		background: [255, 255, 255, 0],
+        		title: 'Value',
+        		id: "glossyGauge",
+        		width: 300,
+        		height: 300
+        	}, dojo.byId("CircularGauge"));
+        	glossyCircular.startup();
+        }
+    </script>
+
+  .. html::
+
+    <div id="CircularGauge"></div>
+
+
 =====
 Usage
 =====
