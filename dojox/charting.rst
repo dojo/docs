@@ -108,9 +108,9 @@ And here comes an example:
     titleFontColor: "orange"
   })
 
-================
-Plots Management
-================
+==================
+Working with Plots
+==================
 
 Adding Plots
 ------------
@@ -381,9 +381,9 @@ Basically these are the same parameters than the ones passe to dojo.Animation. S
 See `Animated Chart <dojox/charting#animated-chart>`_ for a full example.
 
 
-===============
-Axis Management
-===============
+================
+Configuring Axis
+================
 
 Specifying Axes
 ---------------
