@@ -1234,10 +1234,6 @@ Here is a clustered bar chart with a rendering animation:
 
 .. cv-compound::
 
-  .. cv:: html
-
-    <div id="animChart" style="width: 300px; height: 300px;"></div>
-
   .. cv:: javascript
 
     <script type="text/javascript">
@@ -1249,7 +1245,7 @@ Here is a clustered bar chart with a rendering animation:
   
  
       dojo.addOnLoad(function(){
-          var animChart = new dojox.charting.Chart2D(animChart);
+          var animChart = new dojox.charting.Chart2D("animChart");
           animChart.setTheme(dojox.charting.themes.Tufte).
   	   addAxis("x", { fixLower: "minor", fixUpper: "minor", natural: true }).
      	   addAxis("y", { vertical: true, fixLower: "major", fixUpper: "major", includeZero: true }).
@@ -1261,6 +1257,11 @@ Here is a clustered bar chart with a rendering animation:
 	   render();
       });
     </script>
+
+  .. cv:: html
+
+    <div id="animChart" style="width: 300px; height: 300px;"></div>
+
 
 
 3D Chart
