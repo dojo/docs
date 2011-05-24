@@ -28,6 +28,10 @@ The glossy circular gauge widget is entirely built upon the dojox.gfx package an
   :width: 360
   :toolbar: versions
 
+  .. html::
+
+    <div id="CircularGauge"></div>
+
   .. javascript::
 
     <script type="text/javascript">
@@ -45,9 +49,6 @@ The glossy circular gauge widget is entirely built upon the dojox.gfx package an
         dojo.addOnLoad(makeGauge );
     </script>
 
-  .. html::
-
-    <div id="CircularGauge"></div>
 
 
 =====
