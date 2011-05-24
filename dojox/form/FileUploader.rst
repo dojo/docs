@@ -10,7 +10,7 @@ dojox.form.FileUploader
 .. contents::
   :depth: 3
 
-Handles multiple file uploading to a server. 
+Handles multiple file uploading to a server. DEPRECATED: dojox.form.FileUploader is no longer supported and will be removed in 2.0. Suggested that you use `dojox.form.Uploader <dojox/form/Uploader>`_ instead.
 
 =====
 Usage
