@@ -363,12 +363,22 @@ TODO: Grid Plot Example
 Plots Animation
 ---------------
 
-When a plot is rendered an animation can be triggered. For that an animate parameter must be passed to the plot as below:
+When a plot is rendered an animation can be triggered. In order to enable this, an animate parameter must be passed to the plot as shown below:
 
 .. code-block :: javascript
 
   chart1.addPlot("cols", {type: "Columns", animate: { duration: 1000, easing: dojox.fx.easing.linear} });
   
+
+The animate parameter is itself an object that can takes several parameters including:
+
+* duration: the duration of the animation
+* easing: the easing function to use for the animation
+* rate: the animation rate
+
+Basically these are the same parameters than the ones passe to dojo.Animation. See `Animation quickstart <quickstart/Animation#animation-properties>`_ documentation for details.
+
+See `Animated Chart <dojox/charting#animated-chart>`_ for a full example.
 
 
 ===============
@@ -1290,6 +1300,7 @@ Here is a clustered bar chart with a rendering animation:
 
     <div id="animChart" style="width: 300px; height: 300px;"></div>
 
+See `Plots Animation <dojox/charting#plots-animation>`_ for more details.
 
 
 3D Chart
