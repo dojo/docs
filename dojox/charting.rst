@@ -1249,8 +1249,8 @@ Here is a clustered bar chart with a rendering animation:
   
  
       dojo.addOnLoad(function(){
-          var chart = new dojox.charting.Chart2D(animChart);
-          chart.setTheme(dojox.charting.themes.Tufte).
+          var animChart = new dojox.charting.Chart2D(animChart);
+          animChart.setTheme(dojox.charting.themes.Tufte).
   	   addAxis("x", { fixLower: "minor", fixUpper: "minor", natural: true }).
      	   addAxis("y", { vertical: true, fixLower: "major", fixUpper: "major", includeZero: true }).
   	   addPlot("default", { type: "ClusteredColumns", gap: 10, animate: { duration: 2000, easing: dojo.fx.easing.bounceInOut } }).
