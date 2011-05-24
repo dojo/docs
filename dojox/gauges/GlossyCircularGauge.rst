@@ -31,22 +31,9 @@ The glossy circular gauge widget is entirely built upon the dojox.gfx package an
   .. javascript::
 
     <script type="text/javascript">
-        dojo.require("dijit.dijit"); // optimize: load dijit layer
-        dojo.require("dijit.layout.BorderContainer");
-        dojo.require("dijit.layout.ContentPane");
-        dojo.require("dijit.TitlePane");
-        
-        dojo.require('dojox.gauges.GlossyCircularGauge');
-        dojo.require("dojo.parser");
-        
-        dojo.addOnLoad(sample);
-        
-        var glossyCircular = null;
-        
-        function sample(){
-        
-        	// create an glossy Circular Gauge
-        	glossyCircular = new dojox.gauges.GlossyCircularGauge({
+        dojo.require('dojox.gauges.GlossyCircularGauge');                
+        makeGauge = function(){
+        	var glossyCircular = new dojox.gauges.GlossyCircularGauge({
         		background: [255, 255, 255, 0],
         		title: 'Value',
         		id: "glossyGauge",
@@ -54,7 +41,8 @@ The glossy circular gauge widget is entirely built upon the dojox.gfx package an
         		height: 300
         	}, dojo.byId("CircularGauge"));
         	glossyCircular.startup();
-        }
+        };
+        dojo.addOnLoad(makeGauge );
     </script>
 
   .. html::
