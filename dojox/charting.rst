@@ -378,7 +378,7 @@ The animate parameter is itself an object that can takes several parameters incl
 
 Basically these are the same parameters than the ones passe to dojo.Animation. See `Animation quickstart <quickstart/Animation#animation-properties>`_ documentation for details.
 
-See `Animated Chart <dojox/charting#animated-chart>`_ for a full example.
+See `Animated Chart <dojox/charting#id1>`_ for a full example.
 
 
 ================
