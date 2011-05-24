@@ -24,8 +24,8 @@ The glossy circular gauge widget is entirely built upon the dojox.gfx package an
 
 .. code-example::
   :type: inline
-  :height: 250
-  :width: 360
+  :height: 500
+  :width: 500
   :toolbar: versions
 
   .. html::
