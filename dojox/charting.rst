@@ -1229,7 +1229,14 @@ Here is a pie chart, with slice information shown onmouseover and a legend:
 
 Animated Chart
 --------------
+
+Here is a clustered bar chart with a rendering animation:
+
 .. cv-compound::
+
+  .. cv:: html
+
+    <div id="animChart" style="width: 500px; height: 500px;"></div>
 
   .. cv:: javascript
 
@@ -1254,10 +1261,6 @@ Animated Chart
 	   render();
       });
     </script>
-
-  .. cv:: html
-
-    <div id="animChart" style="width: 500px; height: 500px;"></div>
 
 
 3D Chart
