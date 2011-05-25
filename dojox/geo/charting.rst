@@ -67,6 +67,7 @@ Declare the markup container node for the Map component :
  <div class="mapContainer" style="display:block;" id="USStates"></div>
 
 
+
 Data binding
 ------------
 
