@@ -89,8 +89,8 @@ Here is a basic demo:
 		//add outside map marker file
 		map.setMarkerData(dojo.moduleUrl('dojox.geo.charting', 'resources/markers/USStates.json'));
 		// install mouse navigation
-		var mouseInteraction = new dojox.geo.charting.MouseInteractionSupport(map,{enablePan:true,enableZoom:true});
-		mouseInteraction.connect();
+		//var mouseInteraction = new dojox.geo.charting.MouseInteractionSupport(map,{enablePan:true,enableZoom:true});
+		//mouseInteraction.connect();
 	});
     </script>
 
