@@ -420,6 +420,7 @@ A list of individuals who have signed Dojo CLAs:
 * Ruspini, Daniel 
 * Russell, Matthew A. 
 * Russell, Robert "Alex" 
+* Safiev, Anuarbek
 * Sagolaev, Ivan 
 * Saint-Just Philippe 
 * Sakar, Ahmet Taha 
