@@ -76,21 +76,21 @@ Here is a basic demo:
 
   .. html::
 
-..    <div class="mapContainer" style="display:block;" id="USStates"></div>
+    <div class="mapContainer" style="display:block;" id="USStates"></div>
 
   .. javascript::
 
-..    <script type="text/javascript">
-..      dojo.require("dojox.geo.charting.Map");
-..      dojo.addOnLoad(function(){
-..		//create new map
-..		var map = new dojox.geo.charting.Map("USStates",  dojo.moduleUrl('dojox.geo.charting', 'resources/data/USStates.json'));
-..		//add outside map marker file
-..		map.setMarkerData(dojo.moduleUrl('dojox.geo.charting', 'resources/markers/USStates.json'));
-..		// install mouse navigation
-..		map.fitToMapContents();
-..	});
- ..   </script>
+    <script type="text/javascript">
+      dojo.require("dojox.geo.charting.Map");
+      dojo.addOnLoad(function(){
+		//create new map
+		var map = new dojox.geo.charting.Map("USStates",  dojo.moduleUrl('dojox.geo.charting', 'resources/data/USStates.json'));
+		//add outside map marker file
+		map.setMarkerData(dojo.moduleUrl('dojox.geo.charting', 'resources/markers/USStates.json'));
+		// install mouse navigation
+		map.fitToMapContents();
+	});
+   </script>
 
 Data binding
 ------------
