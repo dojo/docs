@@ -81,12 +81,16 @@ Here is a basic demo:
   .. javascript::
 
     <script type="text/javascript">
-      dojo.require("dojox.geo.charting.Map");
+	dojo.require("dojox.geo.charting.Map");
+	dojo.require("dojox.geo.charting.MouseInteraction");
       dojo.addOnLoad(function(){
 		//create new map
 		var map = new dojox.geo.charting.Map("USStates",  dojo.moduleUrl('dojox.geo.charting', 'resources/data/USStates.json'));
 		//add outside map marker file
 		map.setMarkerData(dojo.moduleUrl('dojox.geo.charting', 'resources/markers/USStates.json'));
+		// install mouse navigation
+		var mouseInteraction = new dojox.geo.charting.MouseInteractionSupport(map,{enablePan:true,enableZoom:true});
+		mouseInteraction.connect();
 	});
     </script>
 
