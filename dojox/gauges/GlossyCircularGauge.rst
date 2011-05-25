@@ -23,31 +23,6 @@ This gauge widget provides a way to display data on a circular gauge with a glos
 The glossy circular gauge widget is entirely built upon the dojox.gfx package and as such, works extremely well across many browsers. The way to conceptually understand how the gauge widget works is that it is effectively a layering of a series of indicators to display the background shpae, the major and minor ticks, the needle...
 
 
-.. code-example::
-  :type: inline
-  :height: 250
-  :width: 360
-  :toolbar: versions
-
-  .. html::
-
-    <div id="simplechart" style="width: 250px; height: 150px; margin: 5px auto 0px auto;"></div>
-
-  .. javascript::
-
-    <script type="text/javascript">
-      dojo.require("dojox.charting.Chart2D");
-      makeCharts = function(){
-  	var chart1 = new dojox.charting.Chart2D("simplechart");
-  	chart1.addPlot("default", {type: "Lines"});
-  	chart1.addAxis("x");
-  	chart1.addAxis("y", {vertical: true});
-  	chart1.addSeries("Series 1", [1, 2, 2, 3, 4, 5, 5, 7]);
-  	chart1.render();
-      };
-      dojo.addOnLoad(makeCharts);
-    </script>
-
 
 .. code-example::
   :type: inline
