@@ -30,7 +30,7 @@ The glossy circular gauge widget is entirely built upon the dojox.gfx package an
 
   .. html::
 
-    <div id="CircularGauge" style="width: 490px; height: 490px"></div>
+    <div id="CircularGauge" ></div>
 
   .. javascript::
 
