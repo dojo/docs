@@ -37,7 +37,7 @@ The glossy circular gauge widget is entirely built upon the dojox.gfx package an
 
     <script type="text/javascript">
         dojo.require('dojox.gauges.GlossyCircularGauge');                
-        makeGauge = function(){
+        OOOmakeGauge = function(){
         	var glossyCircular = new dojox.gauges.GlossyCircularGauge({
         		background: [255, 255, 255, 0],
         		title: 'Value',
