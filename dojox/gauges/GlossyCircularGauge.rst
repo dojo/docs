@@ -92,7 +92,7 @@ Here are the other customizable parameters.
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
 | textIndicatorVisible     |  "true"                                 |  Indicated if the text displaying the current value is visible |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
-| textIndicatorColor       |  "#c4c4c4"                              |  The color of the text displaying the current value            |                                           |
+| textIndicatorColor       |  "#c4c4c4"                              |  The color of the text displaying the current value            |                                           
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
 | majorTicksLabelPlacement |  "inside"                               |                                                                |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
