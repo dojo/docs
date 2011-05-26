@@ -17,7 +17,7 @@ dojo.mixin is a simple utility function for mixing objects together. Mixin combi
 Simple Mixes
 ============
 
-Merge two objects (join two objects) with dojo.mixin:
+Merge two objects (join two objects) together with dojo.mixin:
 
 .. code-block :: javascript
   :linenos:
