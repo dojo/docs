@@ -108,13 +108,15 @@ The HTML <div> element to display the gauge widget:
 
 .. code-block :: html
   :linenos:  
+  
     <div id="CircularGauge" ></div>
 
 
 The Javascript code creating the gauge:
 
-.. code-block :: html
+.. code-block :: javascript
   :linenos:
+  
     <script type="text/javascript">
         dojo.require('dijit.form.Button');
         dojo.require('dojox.gauges.GlossyCircularGauge');                
