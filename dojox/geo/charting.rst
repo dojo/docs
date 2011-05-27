@@ -66,46 +66,6 @@ Declare the markup container node for the Map component :
  <h1>Simple Maps,support zoom in and zoom out.</h1>
  <div class="mapContainer" style="display:block;" id="USStates"></div>
 
-Here is a basic demo:
-
-.. code-example::
-  :type: inline
-  :height: 340
-  :width: 520
-  :toolbar: versions
-
-  .. html::
-
-    <div class="mapContainer" style="display:block;" id="USStates"></div>
-
-  .. javascript::
-
-    <script type="text/javascript">
-      dojo.require("dojox.geo.charting.Map");
-      dojo.addOnLoad(function(){
-
-		var dataOk = function(data) {console.log("received data");};
-		var fileUrl = dojo.moduleUrl('dojox.geo.charting', 'resources/data/USStates.json');
-		var file2Url = dojo.moduleUrl('dojox.geo.charting', '_Feature.js');
-			
-		console.log(""+fileUrl);
-		console.log(""+file2Url);
-
-		dojo.xhrGet({
-			url: fileUrl ,
-			
-			handleAs: "javascript",
-			load: "dataOk"
-		});
-
-		//create new map
-		//var map = new dojox.geo.charting.Map("USStates",  dojo.moduleUrl('dojox.geo.charting', 'resources/data/USStates.json'));
-		//add outside map marker file
-		//map.setMarkerData(dojo.moduleUrl('dojox.geo.charting', 'resources/markers/USStates.json'));
-		// install mouse navigation
-		//map.fitToMapContents();
-	});
-   </script>
 
 Data binding
 ------------
