@@ -109,21 +109,21 @@ Examples
 
   .. html::
 
-    <div id="CircularGauge" ></div>
+    <div id="SemiCircularGauge" ></div>
 
   .. javascript::
 
     <script type="text/javascript">
         dojo.require('dijit.form.Button');
-        dojo.require('dojox.gauges.GlossyCircularGauge');                
+        dojo.require('dojox.gauges.GlossySemiCircularGauge');                
         makeGauge = function(){
-        	var glossyCircular = new dojox.gauges.GlossyCircularGauge({
+        	var glossyCircular = new dojox.gauges.GlossySemiCircularGauge({
         		background: [255, 255, 255, 0],
         		title: 'Value',
         		id: "glossyGauge",
         		width: 300,
         		height: 300
-        	}, dojo.byId("CircularGauge"));
+        	}, dojo.byId("SemiCircularGauge"));
         	glossyCircular.startup();
         };
         dojo.addOnLoad(makeGauge );
