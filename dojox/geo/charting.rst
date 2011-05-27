@@ -86,7 +86,7 @@ Here is a basic demo:
 
 		var dataOk = function(data) {console.log("received data");};
 		var fileUrl = dojo.moduleUrl('dojox.geo.charting', 'resources/data/USStates.json');
-		var file2Url = dojo.moduleUrl('dojox.geo.charting', '_Feature.js');
+		var file2Url = dojo.moduleUrl('dojox.geo.charting', '_Feature.xd.js');
 			
 		console.log(""+fileUrl);
 		console.log(""+file2Url);
