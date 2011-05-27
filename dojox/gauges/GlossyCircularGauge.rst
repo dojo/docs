@@ -24,10 +24,6 @@ The glossy circular gauge widget is entirely built upon the dojox.gfx package an
 
 
 
-
-
-
-
 =====
 Usage
 =====
