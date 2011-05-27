@@ -83,6 +83,17 @@ Here is a basic demo:
     <script type="text/javascript">
       dojo.require("dojox.geo.charting.Map");
       dojo.addOnLoad(function(){
+
+		var dataOk = function(data) {console.log("received data");};
+		var fileUrl = dojo.moduleUrl('dojox.geo.charting', 'resources/data/USStates.json');			
+
+		dojo.xhrGet({
+			url: fileUrl ,
+			handleAs: "json",
+			sync: true,
+			load: "dataOk"
+		});
+
 		//create new map
 		var map = new dojox.geo.charting.Map("USStates",  dojo.moduleUrl('dojox.geo.charting', 'resources/data/USStates.json'));
 		//add outside map marker file
