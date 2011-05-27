@@ -99,11 +99,11 @@ Here is a basic demo:
 		});
 
 		//create new map
-		var map = new dojox.geo.charting.Map("USStates",  dojo.moduleUrl('dojox.geo.charting', 'resources/data/USStates.json'));
+		//var map = new dojox.geo.charting.Map("USStates",  dojo.moduleUrl('dojox.geo.charting', 'resources/data/USStates.json'));
 		//add outside map marker file
-		map.setMarkerData(dojo.moduleUrl('dojox.geo.charting', 'resources/markers/USStates.json'));
+		//map.setMarkerData(dojo.moduleUrl('dojox.geo.charting', 'resources/markers/USStates.json'));
 		// install mouse navigation
-		map.fitToMapContents();
+		//map.fitToMapContents();
 	});
    </script>
 
