@@ -268,7 +268,7 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
   * `dojox.form.DropDownSelect <dojox/form/DropDownSelect>`_
 
-    A styleable drop down select box (similar to html select element)
+    A styleable drop down select box (similar to html select element). Moved to dijit.form.Select. See also `dijit.form.Select <dijit/form/Select>`_
 
   * `dojox.form.DropDownStack <dojox/form/DropDownStack>`_
 
