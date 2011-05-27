@@ -531,4 +531,4 @@ When using JAWS 10 with IE 8 all of the visible choices in the ComboBox are spok
 See Also
 ========
 
-* There's a `DropDown Select <dojox/form/DropDownSelect>`_ widget in the `dojox.form <dojox/form>`_ project that's similar to FilteringSelect but without the search ability. It can support rich text in both the drop down and in a closed state (to display the selected item).
+* There's a `Select <dijit/form/Select>`_ widget in the `dijit.form <dijit/form>`_ project that's similar to FilteringSelect but without the search ability. It can support rich text in both the drop down and in a closed state (to display the selected item).
