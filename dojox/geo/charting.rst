@@ -94,7 +94,7 @@ Here is a basic demo:
 		dojo.xhrGet({
 			url: file2Url ,
 			
-			sync: true,
+			handleAs: "javascript",
 			load: "dataOk"
 		});
 
