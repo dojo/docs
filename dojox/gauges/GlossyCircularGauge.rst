@@ -24,33 +24,7 @@ The glossy circular gauge widget is entirely built upon the dojox.gfx package an
 
 
 
-.. code-example::
-  :type: inline
-  :height: 500
-  :width: 500
-  :toolbar: versions
 
-  .. html::
-
-    <div id="CircularGauge" ></div>
-
-  .. javascript::
-
-    <script type="text/javascript">
-        dojo.require('dijit.form.Button');
-        dojo.require('dojox.gauges.GlossyCircularGauge');                
-        makeGauge = function(){
-        	var glossyCircular = new dojox.gauges.GlossyCircularGauge({
-        		background: [255, 255, 255, 0],
-        		title: 'Value',
-        		id: "glossyGauge",
-        		width: 300,
-        		height: 300
-        	}, dojo.byId("CircularGauge"));
-        	glossyCircular.startup();
-        };
-        dojo.addOnLoad(makeGauge );
-    </script>
 
 
 
@@ -74,11 +48,11 @@ Here are the other customizable parameters.
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
 | value                    |  "0"                                    |  The current value.                                            |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
-| majorTicksInterval       |  "10"                                   |                                                                |
+| majorTicksInterval       |  "10"                                   |  The interval beetwen each majors tick                         |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
 | majorTicksColor          |  "#c4c4c4"                              |  Color of the major tick marks on the scale                    |   
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
-| minorTicksInterval       |  "5"                                    |                                                                | 
+| minorTicksInterval       |  "5"                                    |  The interval beetwen each minor tick                          | 
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
 | minorTicksColor          |  "#c4c4c4"                              |  Color of the minor tick marks on the scale                    |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
@@ -86,13 +60,13 @@ Here are the other customizable parameters.
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
 | needleColor              |  "#c4c4c4"                              |  Color of the needle                                           | 
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
-| font                     |  "normal normal normal 10pt sans-serif" |                                                                |
+| font                     |  "normal normal normal 10pt sans-serif" |  Definition of the font used to display the values on the scale|
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
-| textIndicatorFont        |  "normal normal normal 20pt sans-serif" |                                                                |
+| textIndicatorFont        |  "normal normal normal 20pt sans-serif" |  Definition of the font used to display the current value      |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
-| textIndicatorVisible     |  "true"                                 |  Indicated if the text displaying the current value is visible |
+| textIndicatorVisible     |  "true"                                 |  Indicates if the text displaying the current value is visible |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
-| textIndicatorColor       |  "#c4c4c4"                              |  The color of the text displaying the current value            |                                           
+| textIndicatorColor       |  "#c4c4c4"                              |  The color of the text displaying the current value            |                  
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
 | majorTicksLabelPlacement |  "inside"                               |                                                                |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
@@ -111,6 +85,46 @@ Here are the other customizable parameters.
 Indicators
 ==========
 
+A gauge is made of several parts called "indicators". These parts are created by the gauge when its startup function is called.
+
+There are 3 indicators included as a part of the glossy circular Gauge widget:
+
++-----------------------------------------+---------------------------------------------------------------------------------------------+
+| Indicator class                         | Description                                                                                 |
++=========================================+=============================================================================================+
+| dojox.gauges.TextIndicator              | Draws the value of the gauge as text.                                                       |
++-----------------------------------------+---------------------------------------------------------------------------------------------+
+| dojox.gauges.GlossyCircularGaugeNeedle  |An indicator similar to the needle on a variety of gauges                                    |
++-----------------------------------------+---------------------------------------------------------------------------------------------+
+| dojox.gauges.AnalogCircleIndicator      | An indicator drawing a circle, used to display the tick marks in the GlossyCircularGauge    |
++-----------------------------------------+---------------------------------------------------------------------------------------------+
+
+
+
 ========
 Examples
 ========
+
+.. code-example::
+
+  .. html::
+
+    <div id="CircularGauge" ></div>
+
+  .. javascript::
+
+    <script type="text/javascript">
+        dojo.require('dijit.form.Button');
+        dojo.require('dojox.gauges.GlossyCircularGauge');                
+        makeGauge = function(){
+        	var glossyCircular = new dojox.gauges.GlossyCircularGauge({
+        		background: [255, 255, 255, 0],
+        		title: 'Value',
+        		id: "glossyGauge",
+        		width: 300,
+        		height: 300
+        	}, dojo.byId("CircularGauge"));
+        	glossyCircular.startup();
+        };
+        dojo.addOnLoad(makeGauge );
+    </script>
