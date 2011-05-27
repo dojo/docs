@@ -101,14 +101,20 @@ There are 3 indicators included as a part of the glossy circular Gauge widget:
 Examples
 ========
 
-.. code-example::
+Speedometer style gauge (programmatic)
+---------------------------------------------------------------
 
-  .. html::
+The HTML <div> element to display the gauge widget:
 
+.. code-block :: html
+  :linenos:  
     <div id="CircularGauge" ></div>
 
-  .. javascript::
 
+The Javascript code creating the gauge:
+
+.. code-block :: html
+  :linenos:
     <script type="text/javascript">
         dojo.require('dijit.form.Button');
         dojo.require('dojox.gauges.GlossyCircularGauge');                
