@@ -92,7 +92,7 @@ Here is a basic demo:
 		console.log(""+file2Url);
 
 		dojo.xhrGet({
-			url: file2Url ,
+			url: fileUrl ,
 			
 			handleAs: "javascript",
 			load: "dataOk"
