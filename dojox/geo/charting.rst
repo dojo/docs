@@ -88,8 +88,8 @@ Here is a basic demo:
 		var fileUrl = dojo.moduleUrl('dojox.geo.charting', 'resources/data/USStates.json');
 		var file2Url = dojo.moduleUrl('dojox.geo.charting', '_Feature.js');
 			
-		console.log(fileUrl);
-		console.log(file2Url);
+		console.log(""+fileUrl);
+		console.log(""+file2Url);
 
 		dojo.xhrGet({
 			url: file2Url ,
