@@ -95,6 +95,13 @@ There are 3 indicators included as a part of the glossy circular Gauge widget:
 | dojox.gauges.AnalogCircleIndicator      | An indicator drawing a circle, used to display the tick marks in the GlossyCircularGauge    |
 +-----------------------------------------+---------------------------------------------------------------------------------------------+
 
+======
+Ranges
+======
+
+You can add colored areas on the background of the gauge to emphasize some range of values. A range is defined by a low and high value, 
+by a size and a color. The color can be a gradient, and on a circular gauge, a range will be represented by an arc.
+
 
 
 ========
