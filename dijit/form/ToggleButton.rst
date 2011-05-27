@@ -40,7 +40,7 @@ Let's create a ToggleButton widget programatically, initially unchecked:
 
   .. cv:: html
  
-    <button id="programmatic"><button>
+    <button id="programmatic"></button>
 
 Declarative example
 -------------------
