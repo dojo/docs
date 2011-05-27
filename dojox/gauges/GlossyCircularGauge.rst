@@ -100,7 +100,8 @@ Ranges
 ======
 
 You can add colored areas on the background of the gauge to emphasize some range of values. A range is defined by a low and high value, 
-by a size and a color. The color can be a gradient, and on a circular gauge, a range will be represented by an arc.
+by a size and a color. The color can be a gradient, and on a circular gauge a range will be represented by an arc.
+It is possible to add several ranges on a gauge.
 
 
 
@@ -139,3 +140,42 @@ The Javascript code creating the gauge:
         };
         dojo.addOnLoad(makeGauge );
     </script>
+    
+    
+A gauge with two ranges (programmatic)
+---------------------------------------------------------------
+
+.. code-block :: html
+  :linenos:  
+    
+        <div dojoType="dojox.gauges.GlossyCircularGauge"
+             id="csGaugeMargin"
+             value="0"
+             width="170"
+             height="100"
+             min="-150"
+             max="150"
+             majorTicksInterval="150"
+             minorTicksInterval="50"
+             background="[255, 255, 255, 0]"
+             title="Margin"
+             noChange="true"
+             textIndicatorFont="normal small-caps bold 12pt Arial"
+             radius="40"
+             majorTicksLabelPlacement="outside"
+             majorTicksColor="white"
+             textIndicatorVisible="false">
+          <div dojoType="dojox.gauges.Range"
+               low="-150"
+               high="0"
+               size="5"
+               color="{'type': 'linear', 'colors': [{offset: 0, color:'#FF0000'}, {offset: 1, color: '#FFFF00'}] }">
+          </div>
+          <div dojoType="dojox.gauges.Range"
+               low="0"
+               high="150"
+               size="5"
+               color="{'type': 'linear', 'colors': [{offset: 0, color:'#FFFF00'}, {offset: 1, color: '#00FF00'}] }">
+          </div>
+        </div>		
+    
