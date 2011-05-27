@@ -300,7 +300,7 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
   * `dojox.form.MultiComboBox <dojox/form/MultiComboBox>`_
 
-    description?
+    Extension to ComboBox to allow "tag" style input using a datastore using a delimeter.
 
   * `dojox.form.PasswordValidator <dojox/form/PasswordValidator>`_
 
