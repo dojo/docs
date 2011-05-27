@@ -89,7 +89,7 @@ Here is a basic demo:
 
 		dojo.xhrGet({
 			url: fileUrl ,
-			handleAs: "json",
+			
 			sync: true,
 			load: "dataOk"
 		});
