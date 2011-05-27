@@ -85,10 +85,11 @@ Here is a basic demo:
       dojo.addOnLoad(function(){
 
 		var dataOk = function(data) {console.log("received data");};
-		var fileUrl = dojo.moduleUrl('dojox.geo.charting', 'resources/data/USStates.json');			
+		var fileUrl = dojo.moduleUrl('dojox.geo.charting', 'resources/data/USStates.json');
+		var file2Url = dojo.moduleUrl('dojox.geo.charting', '_Feature.js');			
 
 		dojo.xhrGet({
-			url: fileUrl ,
+			url: file2Url ,
 			
 			sync: true,
 			load: "dataOk"
