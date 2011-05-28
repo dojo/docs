@@ -47,6 +47,11 @@ Declarative example
 
     <div dojoType="dojox.form.ListInput" id="fruit" name="fruit" value="Apples,Oranges,Pears"></div>
 
+  .. cv:: css
+
+    <style type="text/css">
+      @import "{{baseUrl}}dojox/form/resources/ListInput.css";
+    </style>
 
 Programmatic example
 --------------------
@@ -76,6 +81,11 @@ Programmatic example
     <div id="dynamic"></div>
     <p><button onClick="alert(dijit.byId('dynamic').attr('value'))">Get value</button></p>
 
+  .. cv:: css
+
+    <style type="text/css">
+      @import "{{baseUrl}}dojox/form/resources/ListInput.css";
+    </style>
 
 =============
 Accessibility
