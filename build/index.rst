@@ -132,7 +132,7 @@ To use the build system, you must have the following:
 
         .. image :: dojo-download-src.png
 
-        You can also obtain a source build of dojo from the Subversion source code tree.  TODOC:  Link to subversion page when it is available.
+        You can also obtain a source build of dojo from the `Subversion source code tree <http://svn.dojotoolkit.org/src/>`_.
 
     2.  **A Java runtime envionment, version 1.4.2 or higher** on the machine you will use to create your custom build.  
 
