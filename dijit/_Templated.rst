@@ -125,7 +125,7 @@ Here's an example of dojoAttachPoint and dojoAttachEvent:
 						"&nbsp; count: <span dojoAttachPoint='counter'>0</span>" +
 					"</div>",
 
-				 increment: function(){
+				 increment: function(evt){
 				 	this.counter.innerHTML = ++this._i;
 				 }
 			});
@@ -175,7 +175,7 @@ For example:
 			[dijit._Widget, dijit._Templated], {
 				templateString:
 				    "<button dojoAttachPoint='containerNode' dojoAttachEvent='onclick: onClick'></button>",
-                                onClick: function(){
+                                onClick: function(evt){
                                         alert("Awesome!!");
                                 }
 			});
