@@ -159,24 +159,28 @@ As shown in the above code, you can simply set the ``filter`` property to true o
 
 All the available configuration properties are:
 
-=========================  ========  ===============  ================================================================================================================
-Property                   Type      Default Value    Description
-=========================  ========  ===============  ================================================================================================================
-itemsName                  String    "items"          The name of the items in the data store. 
-                                                      For example, if the data in the store are records of songs, you may set it to "songs", 
-                                                      so the filter bar will display "10 of 100 songs" instead of "10 of 100 items" when there's some filter applied.
-closeFilterbarButton       Boolean   false            Whether to hide the close-filterbar button.
-disabledConditions         Object    undefined        Disable some condition for some type or "anycolumn", so the user will not see them in the condition Select box.
-isServerSide               Boolean   false            If this is true, the actual filtering work will be taken over by the server. 
-                                                      This is used to switch between client-side filter and server-side filter.
-isStateful                 Boolean   false            If this is true, and isServerSide is set to true, the filter definition will only be sent when it is defined, 
-                                                      and it should be remembered at serverside until it is changed.
-url                        String    ""               When both isServerSide and isStateful are true, this is a place to set the server url, 
-                                                      if it cannot be retrieved by store.url.
-setupFilterQuery           Function  undefined        If you'd like to use a stateless server side filter, you'll have to modify the request object, so as to add in 
-                                                      the filter definition. The signiture of this function is setupFilterQuery(commands, request). See the last
-                                                      section for details.
-=========================  ========  ===============  ================================================================================================================
+=========================      ========  ===============  ================================================================================================================
+Property                       Type      Default Value    Description
+=========================      ========  ===============  ================================================================================================================
+itemsName                      String    "items"          The name of the items in the data store. 
+                                                          For example, if the data in the store are records of songs, you may set it to "songs", 
+                                                          so the filter bar will display "10 of 100 songs" instead of "10 of 100 items" when there's some filter applied.
+closeFilterbarButton           Boolean   false            Whether to hide the close-filterbar button.
+ruleCount                      Number    3                The maximum rule count of a filter. Defult to 3. If set to 0, infinite rules are supported. 
+ruleCountToConfirmClearFilter  Number    2                If the filter rule count is larger than or equal to this value, then a confirm dialog will show when clearing filter.
+                                                          If set to less than 1 or null, then always show the confirm dialog. If set to Infinity, then never show the 
+                                                          confirm dialog. Default to 2.
+disabledConditions             Object    undefined        Disable some condition for some type or "anycolumn", so the user will not see them in the condition Select box.
+isServerSide                   Boolean   false            If this is true, the actual filtering work will be taken over by the server. 
+                                                          This is used to switch between client-side filter and server-side filter.
+isStateful                     Boolean   false            If this is true, and isServerSide is set to true, the filter definition will only be sent when it is defined, 
+                                                          and it should be remembered at serverside until it is changed.
+url                            String    ""               When both isServerSide and isStateful are true, this is a place to set the server url, 
+                                                          if it cannot be retrieved by store.url.
+setupFilterQuery               Function  undefined        If you'd like to use a stateless server side filter, you'll have to modify the request object, so as to add in 
+                                                          the filter definition. The signiture of this function is setupFilterQuery(commands, request). See the last
+                                                          section for details.
+=========================      ========  ===============  ================================================================================================================
 
 Column Configuration
 --------------------
