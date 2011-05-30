@@ -1,7 +1,7 @@
 #format dojo_rst
 
-dojox.gauges.GlossyCircularGauge
-================================
+dojox.gauges.GlossyHorizontalGauge
+==================================
 
 :Status: Draft
 :Version: 1.0
@@ -98,7 +98,7 @@ by a size and a color. The color can be a gradient. It is possible to add severa
 Examples
 ========
 
-Speedometer style gauge (programmatic)
+Slider style gauge (programmatic)
 ---------------------------------------------------------------
 
 The HTML <div> element to display the gauge widget:
