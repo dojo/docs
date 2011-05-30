@@ -159,9 +159,9 @@ As shown in the above code, you can simply set the ``filter`` property to true o
 
 All the available configuration properties are:
 
-=========================      ========  ===============  ================================================================================================================
+=============================  ========  ===============  ================================================================================================================
 Property                       Type      Default Value    Description
-=========================      ========  ===============  ================================================================================================================
+=============================  ========  ===============  ================================================================================================================
 itemsName                      String    "items"          The name of the items in the data store. 
                                                           For example, if the data in the store are records of songs, you may set it to "songs", 
                                                           so the filter bar will display "10 of 100 songs" instead of "10 of 100 items" when there's some filter applied.
@@ -180,7 +180,7 @@ url                            String    ""               When both isServerSide
 setupFilterQuery               Function  undefined        If you'd like to use a stateless server side filter, you'll have to modify the request object, so as to add in 
                                                           the filter definition. The signiture of this function is setupFilterQuery(commands, request). See the last
                                                           section for details.
-=========================      ========  ===============  ================================================================================================================
+=============================  ========  ===============  ================================================================================================================
 
 Column Configuration
 --------------------
