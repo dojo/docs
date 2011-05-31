@@ -3,7 +3,19 @@
 dojox.gauges
 ============
 
-A collection of gauge widgets used to display numerical data. 
+:Authors: Philippe Toussaint
+:Developers: Emmanuel Tissandier, Philippe Toussaint
+
+.. contents::
+    :depth: 2
+
+This is a collection of gauge widgets used to display numerical data.
+
+
+=================
+Available Gauges
+=================
+
 
 * `dojox.gauges.AnalogGauge <dojox/gauges/AnalogGauge>`_
   A circular gauge with a variety of indicators, used to display numerical data
