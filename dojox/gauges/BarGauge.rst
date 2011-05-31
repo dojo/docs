@@ -27,7 +27,7 @@ Usage
 
 As demonstrated in the examples below, creating a bar gauge widget requires a few attributes: width and height of the gauge surface, width and height of the area the ranges should cover, and an x/y location for the placement of the range areas. Ranges can either be added in the constructor or after creation using the addRange[s] functions.  A gauge can have a few advanced features, such as an image overlaid on top of the gauge, a gradient background, and CSS styled ranges. CSS styled ranges are used by setting the 'useRangeStyles' attribute to the number of CSS classes that have been created for this purpose, then creating those classes as .dojoxGaugeRangeN where N is the number of the range. CSS styled ranges are not available when the renderer is VML.
 
-Indicators can be handled separate of the gauge. In other words, once an indicator has been created and added to the gauge, one can update the value of the indicator by simply calling the update function on the indicator (rather than having to have a handle on the gauge itself). New indicators can be created by inheriting from dojox.widget._Indicator and overriding the appropriate functions (draw is the most important).
+Indicators can be handled separate of the gauge. In other words, once an indicator has been created and added to the gauge, one can update the value of the indicator by simply calling the update function on the indicator (rather than having to have a handle on the gauge itself). New indicators can be created by inheriting from dojox.gauges._Indicator and overriding the appropriate functions (draw is the most important).
 
 ==========
 Indicators
