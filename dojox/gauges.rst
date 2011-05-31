@@ -12,9 +12,9 @@ dojox.gauges
 This is a collection of gauge widgets used to display numerical data.
 
 
-=================
-Available Gauges
-=================
+===========
+Base gauges
+===========
 
 
 * `dojox.gauges.AnalogGauge <dojox/gauges/AnalogGauge>`_
@@ -23,6 +23,10 @@ Available Gauges
 * `dojox.gauges.BarGauge <dojox/gauges/BarGauge>`_
   A horizontal bar gauge with a few indicators, used to display numerical data
   
+=================
+Predefined gauges
+=================
+
 * `dojox.gauges.GlossyCircularGauge <dojox/gauges/GlossyCircularGauge>`_
   A cirular gauge with a glossy appearance
 
