@@ -63,7 +63,7 @@ Notice we didn't call ``dojo.addOnLoad(init());`` ... The additional () causes t
 dojo.byId
 =========
 
-This is more or less an alias to ``document.getElementsById``. Simply pass ``dojo.byId`` a string, and the domNode with that id is returned. Notice how we wrap the byId call in an ``addOnLoad`` function -- You should not use or manipulate the DOM before onLoad has fired, as a general rule.
+This is more or less an alias to ``document.getElementById``. Simply pass ``dojo.byId`` a string, and the domNode with that id is returned. Notice how we wrap the byId call in an ``addOnLoad`` function -- You should not use or manipulate the DOM before onLoad has fired, as a general rule.
 
 .. code-block :: javascript
 
@@ -74,7 +74,7 @@ This is more or less an alias to ``document.getElementsById``. Simply pass ``doj
 
 ``.innerHTML`` is a basic property of DOM Elements. Here, we're setting the content of the node with ``id="someNode"`` to say "found me!"
 
-Note: in some cases (in *lesser* browsers), ``document.getElementsById`` doesn't actually return the Node you desire. ``dojo.byId`` normalizes this, and is the recommended way of accessing nodes byId. ``dojo.byId`` is similar to Prototype's ``$("someId")``, and jQuery's ``$("#someId")`` syntax, though Dojo uses a safely-namespaced function for it's query engine: ``dojo.query("#someId")`` (see: `dojo.query <dojo/query>`__) to avoid conflicts.
+Note: in some cases (in *lesser* browsers), ``document.getElementById`` doesn't actually return the Node you desire. ``dojo.byId`` normalizes this, and is the recommended way of accessing nodes byId. ``dojo.byId`` is similar to Prototype's ``$("someId")``, and jQuery's ``$("#someId")`` syntax, though Dojo uses a safely-namespaced function for it's query engine: ``dojo.query("#someId")`` (see: `dojo.query <dojo/query>`__) to avoid conflicts.
 
 
 ==========
