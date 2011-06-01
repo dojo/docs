@@ -39,7 +39,7 @@ The following code has a subtle bug:
   <head>
   <title>Fix me!</title>
       <style type="text/css">
-  	@import "http://o.aolcdn.com/dojo/1.6/dijit/themes/tundra/tundra.css";
+  	  @import "http://o.aolcdn.com/dojo/1.6/dijit/themes/tundra/tundra.css";
           @import "http://o.aolcdn.com/dojo/1.6/dojo/resources/dojo.css"
       </style>
   	<script type="text/javascript" src="http://o.aolcdn.com/dojo/1.6/dojo/dojo.xd.js"
@@ -180,7 +180,7 @@ Nope, there's no property in dojo that looks like newWidth. Finally, we spot our
 Method 2: The "debugger" Statement
 ----------------------------------
 
-Alternatively you can set a "poor person's breakpoint" in the code. Just insert the debugger; statement, which is a legal JavaScript reserved word.
+Alternatively you can set a "poor man's breakpoint" in the code. Just insert the debugger; statement, which is a legal JavaScript reserved word.
 
 ::
 
@@ -190,13 +190,12 @@ Alternatively you can set a "poor person's breakpoint" in the code. Just insert 
 
 This statement stops the code and brings you to a Firebug command prompt. It appears the code has stopped at ... huh?
 
-[inline:debugging4.png]
-
 That's a side effect of running dojo/event code. The breakpoints don't seem correct at all.
 
 But just click the Console tab and now you can examine variables or execute just about any JavaScript you want. In this case, we look at the dojo.newWidth property, which has nothing in it. But "dojo" does and we examine it by console.dir(dojo). Basically all the logging features of method 1 are available to type here.
 
-[inline:debugging3.png]
+.. image:: debugging3.png
+   :alt: Firebug console
 
 To Follow The dojo.require Trail, Use Dojo Locally
 --------------------------------------------------
@@ -211,11 +210,11 @@ Since that code is now running, we try a minor variant which sets the button to 
   <head>
   <title>Fix me!</title>
       <style type="text/css">
-          @import "http://o.aolcdn.com/dojo/1.0.0/dijit/themes/tundra/tundra.css";
-          @import "http://o.aolcdn.com/dojo/1.0.0/dojo/resources/dojo.css"
+          @import "http://o.aolcdn.com/dojo/1.6/dijit/themes/tundra/tundra.css";
+          @import "http://o.aolcdn.com/dojo/1.6/dojo/resources/dojo.css"
       </style>
       <script type="text/javascript" src="http://o.aolcdn.com/dojo/1.0.0/dojo/dojo.xd.js"
-              djConfig="parseOnLoad: true"></script>
+              data-dojo-config="parseOnLoad: true"></script>
       <script type="text/javascript">
           dojo.require("dojo.parser");
           dojo.require("dijit.form.Button");
@@ -238,16 +237,17 @@ You can find out for sure by using a local copy of Dojo. CDN Dojo is very quiet 
 .. code-block :: html
 
   <style type="text/css">
-          @import "http://o.aolcdn.com/dojo/1.0.0/dijit/themes/tundra/tundra.css";
-          @import "http://o.aolcdn.com/dojo/1.0.0/dojo/resources/dojo.css"
+          @import "/dojoroot/dijit/themes/tundra/tundra.css";
+          @import "/dojoroot/dojo/resources/dojo.css"
       </style>
-      <script type="text/javascript" src="http://o.aolcdn.com/dojo/1.0.0/dojo/dojo.xd.js"
-              djConfig="parseOnLoad: true"></script>
+      <script type="text/javascript" src="/dojoroot/dojo/dojo.js"
+              data-dojo-config="parseOnLoad: true"></script>
 
 
 Yields the following on the console
 
-[inline:debugging5.png]
+.. image:: debugging4.png
+   :alt: Firebug http requests
 
 You see every Dojo Core and Dijit Component loaded. Sure enough, dojo.colors is not in the list, so we add a dojo.require statement
 
@@ -262,7 +262,8 @@ Unfortunately, that doesn't fix the problem either. When styling errors occur, i
 
 So we click Inspect and point at the screen button
 
-[inline:debugging6.png]
+.. image:: debugging5.png
+   :alt: Firebug DOM inspection
 
 The right-hand side of the console tells what styles and style rules are applied to this class. Crossed-off lines are styles that have been overriden. Very nice!
 
@@ -285,7 +286,7 @@ So here's a piece of HTML code and a reusable Dojo-based widget:
           @import "/dojoroot/dojo/resources/dojo.css"
       </style>
       <script type="text/javascript" src="/dojoroot/dojo/dojo.js"
-              djConfig="parseOnLoad: true"></script>
+              data-dojo-config="parseOnLoad: true"></script>
       <script type="text/javascript">
           dojo.require("dojo.parser");
           dojo.require("dojobook.online-book.debugging.BuggyWidget");
@@ -320,7 +321,7 @@ But by simply setting the debugAtAllCosts flag to true:
 .. code-block :: html
 
   <script type="text/javascript" src="/dojoroot/dojo/dojo.js"
-              djConfig="parseOnLoad: true, debugAtAllCosts: true"></script>
+              data-dojo-config="parseOnLoad: true, debugAtAllCosts: true"></script>
 
 
 the displayed error location will now be correct:
@@ -341,4 +342,4 @@ the displayed error location will now be correct:
           @import "<?= $loadLocation ?>/dojo/resources/dojo.css"
       </style>
       <script type="text/javascript" src="<?= $loadLocation ?>/dojo/dojo<?= $useXd ?>.js"
-              djConfig="<?= $djConfig ?>"></script>
+              data-dojo-config="<?= $djConfig ?>"></script>
