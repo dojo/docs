@@ -61,7 +61,7 @@ Without Firebug, this code may pop up an unhelpful dialog box (IE) or display no
 
 With Firebug the error is easier to spot. First, there's an indicator at the bottom right hand corner.
 
-{{debugging1.png}}
+{{attachment:debugging1.png}}
 
 You click on the "1 Error" message and the Firebug console pops up:
 
