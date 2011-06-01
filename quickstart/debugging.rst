@@ -20,8 +20,8 @@ To use Firebug Lite, you must include the isDebug config parameter like so:
 
 .. code-block :: html
 
-  <script type="text/javascript" src="http://o.aolcdn.com/dojo/1.0.0//dojo/dojo.js"
-          djConfig="parseOnLoad: true, isDebug: true"></script>
+  <script type="text/javascript" src="http://o.aolcdn.com/dojo/1.6/dojo/dojo.js"
+          data-dojo-config="parseOnLoad: true, isDebug: true"></script>
 
 
 This parameter has no effect on Firefox browsers with Firebug already present. So including this parameter makes your debugging code usable in IE, Safari, and Firefox with no changes.
@@ -61,7 +61,7 @@ Without Firebug, this code may pop up an unhelpful dialog box (IE) or display no
 
 With Firebug the error is easier to spot. First, there's an indicator at the bottom right hand corner.
 
-[inline:debugging1.png]
+{{debugging1.png}}
 
 You click on the "1 Error" message and the Firebug console pops up:
 
