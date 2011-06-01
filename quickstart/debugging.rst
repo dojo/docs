@@ -61,7 +61,8 @@ Without Firebug, this code may pop up an unhelpful dialog box (IE) or display no
 
 With Firebug the error is easier to spot. First, there's an indicator at the bottom right hand corner.
 
-[[attachment:debugging1.png]]
+.. image:: debugging1.png
+   :alt: Debugging with Firebug
 
 You click on the "1 Error" message and the Firebug console pops up:
 
