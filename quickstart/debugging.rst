@@ -39,11 +39,11 @@ The following code has a subtle bug:
   <head>
   <title>Fix me!</title>
       <style type="text/css">
-  	@import "http://o.aolcdn.com/dojo/1.0.0/dijit/themes/tundra/tundra.css";
-          @import "http://o.aolcdn.com/dojo/1.0.0/dojo/resources/dojo.css"
+  	@import "http://o.aolcdn.com/dojo/1.6/dijit/themes/tundra/tundra.css";
+          @import "http://o.aolcdn.com/dojo/1.6/dojo/resources/dojo.css"
       </style>
-  	<script type="text/javascript" src="http://o.aolcdn.com/dojo/1.0.0/dojo/dojo.js"
-  	        djConfig="parseOnLoad: true, isDebug: true"></script>
+  	<script type="text/javascript" src="http://o.aolcdn.com/dojo/1.6/dojo/dojo.xd.js"
+  	        data-dojo-config="parseOnLoad: true, isDebug: true"></script>
   	<script type="text/javascript">
   		dojo.require("dojo.parser");
   		dojo.require("dijit.form.Textbox");
@@ -51,7 +51,7 @@ The following code has a subtle bug:
   </head>
   <body class="tundra">
   <form>
-  What's the 411? <input type="text" size="20" name="info"  dojoType="dijit.form.TextBox"
+  What's the 411? <input type="text" size="20" name="info" dojoType="dijit.form.TextBox"
              trim="true" propercase="true" /><br>
   </body>
   </html>
@@ -61,12 +61,13 @@ Without Firebug, this code may pop up an unhelpful dialog box (IE) or display no
 
 With Firebug the error is easier to spot. First, there's an indicator at the bottom right hand corner.
 
-.. image:: debugging1.png
+.. image:: debugging1a.png
    :alt: Debugging with Firebug
 
 You click on the "1 Error" message and the Firebug console pops up:
 
-[inline:debugging2.png]
+.. image:: debugging2.png
+   :alt: Firebug console
 
 Looking back at your code, you notice the capitalization on "Textbox" in the dojo.require is wrong. That's a common mistake, but easily fixed. It's also common to forget the dojo.require, or to misspell the class in the dojoType attribute. In each case, Firebug will set you straight.
 
@@ -85,11 +86,11 @@ The following code has an error:
   <head>
   <title>Fix me!</title>
       <style type="text/css">
-          @import "http://o.aolcdn.com/dojo/1.0.0/dijit/themes/tundra/tundra.css";
-          @import "http://o.aolcdn.com/dojo/1.0.0/dojo/resources/dojo.css"
+          @import "http://o.aolcdn.com/dojo/1.6/dijit/themes/tundra/tundra.css";
+          @import "http://o.aolcdn.com/dojo/1.6/dojo/resources/dojo.css"
       </style>
-      <script type="text/javascript" src="http://o.aolcdn.com/dojo/1.0.0/dojo/dojo.xd.js"
-              djConfig="parseOnLoad: true"></script>
+      <script type="text/javascript" src="http://o.aolcdn.com/dojo/1.6/dojo/dojo.xd.js"
+              data-dojo-config="parseOnLoad: true"></script>
       <script type="text/javascript">
           dojo.require("dojo.parser");
           dojo.require("dijit.form.Button");
@@ -135,11 +136,13 @@ Clearly alert's just not powerful enough. In Dojo logging, you can associate mes
 
 In the Firebug console, the messages will appear like this:
 
-[inline:firebug_logging.png]
+.. image:: firebug_logging.png
+   :alt: Firebug logging
 
 In IE, they will appear like this:
 
-[inline:firebug_ie_capture.png]
+.. image:: firebug_ie_capture.png
+   :alt: Firebug logging
 
 Another useful method, console.dir() dumps variable contents to the screen. While console.log works fine for strings and integers, console.dir prints more complex variables - objects, arrays, arrays of objects, or whatever. For example:
 
@@ -147,13 +150,14 @@ Another useful method, console.dir() dumps variable contents to the screen. Whil
 
   console.dir([
      {attribute: "last_name", sortDescending: true},
-     {attribute: "last_name", sortDescending: true}
+     {fruits: ["apple", "orange", "pear"], sortDescending: true}
   ]);
 
 
 produces:
 
-[inline:firebug_logging2.png]
+.. image:: firebug_logging2.png
+   :alt: Firebug logging
 
 So in our example above, we write:
 
