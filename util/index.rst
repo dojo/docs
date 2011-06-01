@@ -31,7 +31,7 @@ The util/doh/ directory also contains `DOH Robot <util/dohrobot>`_, an API used 
 `The Dojo API Doc System <util/doctools>`_
 ----------------------------------------------
 
-Dojo uses a custom inline comment syntax which produces well structured xml, and powers the official `API Docs <http://api.dojocampus.org/>`_ .
+Dojo uses a custom inline comment syntax which produces well structured xml, and powers the official `API Docs <http://dojotoolkit.org/api/>`_ .
 
 The doc system is powered by the docscripts/ directory, where generate.php extracts the inline documentation into an api.xml file, and the jsdoc/ directory, which generates web pages to display the doc.
 
