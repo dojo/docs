@@ -364,9 +364,25 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
   A collection of gauge widgets used to display numerical data
 
+  * `dojox.gauges.AnalogGauge <dojox/gauges/AnalogGauge>`_
+
+    A circular gauge with a variety of indicators, used to display numerical data
+
+  * `dojox.gauges.BarGauge <dojox/gauges/BarGauge>`_
+
+    A horizontal bar gauge with a few indicators, used to display numerical data
+
   * `dojox.gauges.GlossyCircularGauge <dojox/gauges/GlossyCircularGauge>`_
 
-    A circular glossy gauge with a variety of indicators, used to display numerical data
+    A cirular gauge.
+
+  * `dojox.gauges.GlossySemiCircularGauge <dojox/gauges/GlossySemiCircularGauge>`_
+
+    A semi cirular gauge.
+
+  * `dojox.gauges.GlossyHorizontalGauge <dojox/gauges/GlossyHorizontalGauge>`_
+
+    An horizontal gauge.
 
 * `dojox.geo <dojox/geo>`_
 
