@@ -270,6 +270,8 @@ The right-hand side of the console tells what styles and style rules are applied
 Debugging External Classes With debugAtAllCosts
 -----------------------------------------------
 
+This section does not work as expected with dojo version 1.6 (http://bugs.dojotoolkit.org/ticket/12608). AMD loading and debugAtAllCosts will be available again in full potential probably in 1.7.
+
 dojo/method and dojo/event scripts are good for short, non-reusable snippets of code. But when you start building reusable components, you'll be storing your code into Dojo-declared classes instead. The good news is the more you make this switch, the easier your debugging task will be.
 
 So here's a piece of HTML code and a reusable Dojo-based widget:
@@ -280,7 +282,7 @@ So here's a piece of HTML code and a reusable Dojo-based widget:
               "http://www.w3.org/TR/html4/strict.dtd">
   <html>
   <head>
-  <title>Goolica Tax Form</title>
+  <title>Fix me!</title>
       <style type="text/css">
           @import "/dojoroot/dijit/themes/tundra/tundra.css";
           @import "/dojoroot/dojo/resources/dojo.css"
@@ -314,7 +316,8 @@ So here's a piece of HTML code and a reusable Dojo-based widget:
 
 Running this code, you will see an error appear, but it's nowhere near the right location:
 
-[inline:debugging8.png]
+.. image:: debugging6.png
+   :alt: Debugging without debugAtAllCosts
 
 But by simply setting the debugAtAllCosts flag to true:
 
@@ -326,15 +329,16 @@ But by simply setting the debugAtAllCosts flag to true:
 
 the displayed error location will now be correct:
 
-[inline:debugging7.png]
+.. image:: debugging7.png
+   :alt: Debugging with debugAtAllCosts
 
 '''Important!''' you should always remove debugAtAllCosts from production code. It slows down the client unnecessarily. Rather than manually inserting and removing them, I like to delegate that job to a server side language like PHP:
 
 ::
 
   <?php
-  $djConfig     = $inProduction ? "parseOnLoad: true" : "parseOnLoad: true, debugAtAllCosts: true";
-  $loadLocation = $inProduction ? "http://o.aolcdn.com/dojo/1.0.0" : "/dojoroot";
+  $dojoConfig   = $inProduction ? "parseOnLoad: true" : "parseOnLoad: true, debugAtAllCosts: true";
+  $loadLocation = $inProduction ? "http://o.aolcdn.com/dojo/1.?" : "/dojoroot";
   $useXd        = $inProduction ? ".xd" : "";
   ?>
       <style type="text/css">
@@ -342,4 +346,4 @@ the displayed error location will now be correct:
           @import "<?= $loadLocation ?>/dojo/resources/dojo.css"
       </style>
       <script type="text/javascript" src="<?= $loadLocation ?>/dojo/dojo<?= $useXd ?>.js"
-              data-dojo-config="<?= $djConfig ?>"></script>
+              data-dojo-config="<?= $dojoConfig ?>"></script>
