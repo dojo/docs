@@ -139,7 +139,7 @@ We'll bypass how to use the raw ``DomTemplate`` object (we'll get into that late
 
 Both of the solutions covered here work almost exactly like ``dijit._Templated``, which is covered elsewhere in the book. To use the text version, mix in ``dojox.dtl._Templated`` and to use the HTML version, mix in ``dojox.dtl._DomTemplated``.
 
-These objects will use ``templatePath``, ``templateString``, and use the ``dojoAttachPoint`` and ``dojoAttachEvent`` node attributes.
+These objects will use ``templatePath``, ``templateString``, and use the ``data-dojo-attach-point`` and ``data-dojo-attach-event`` node attributes.
 
 It adds a single function: ``render``. This function is to be used in the event of re-rendering. One of the main reasons for re-render would be if not all data was available during instantiation. The template will be rendered during creation even if you don't call the ``render`` function.
 
@@ -203,7 +203,7 @@ Unlike the page serving model of Django, we can keep our ``Context`` objects aro
 
 Some new functions are added to allow tags to communicate with the rendering object.
 
-* ``setThis``: Sets the object on which to perform operations. Used by the ``attach``/``dojoAttachPoint`` attribute tag, for example.
+* ``setThis``: Sets the object on which to perform operations. Used by the ``attach``/``data-dojo-attach-point`` attribute tag, for example.
 * ``getThis``: Used by tags, gets the currently set ``this`` object.
 
 .. _The Django Book: http://www.djangobook.com/en/2.0/chapter04/
