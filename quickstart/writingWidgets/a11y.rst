@@ -28,12 +28,12 @@ Here is an example of using widget connect to handle the ondijitclick event on t
 
   this.connect(this.focusNode, "ondijitclick", "_dijitClick");
 
-The ondijitclick event can also be specified in the template via the dojoAttachEvent mechanism:
+The ondijitclick event can also be specified in the template via the data-dojo-attach-event mechanism:
 
 .. code-block :: javascript
 
   <span class="dijit dijitReset dijitLeft dijitInline"
-	dojoAttachEvent="ondijitclick:_onButtonClick,onmouseenter:_onMouse,onmouseleave:_onMouse">
+	data-dojo-attach-event="ondijitclick:_onButtonClick,onmouseenter:_onMouse,onmouseleave:_onMouse">
 
 Trapping Key Events
 -------------------
