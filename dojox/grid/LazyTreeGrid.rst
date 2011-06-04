@@ -181,7 +181,7 @@ LazyTreeGrid does not support nested structure, as well as aggregate and itemAgg
 .. code-block :: javascript
   :linenos:
   
-  <table jsid="grid" dojoType="dojox.grid.LazyTreeGrid" rowsPerPage=25
+  <table data-dojo-id="grid" dojoType="dojox.grid.LazyTreeGrid" rowsPerPage=25
       rowSelector="20px" treeModel="forestStoreModel">
     <thead>
       <tr>
