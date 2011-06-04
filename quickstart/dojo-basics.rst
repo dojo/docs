@@ -81,7 +81,7 @@ Note: in some cases (in *lesser* browsers), ``document.getElementById`` doesn't 
 dijit.byId
 ==========
 
-``dojo.byId`` works exclusively on Dom Elements. Dijit is Dojo's widgeting system, and builds on Core Dojo functionality. Every widget generated in a page has a unique ID, just as native Dom Elements should, though with one *huge* difference: Dijit's are objects. An excellent article articulating this difference can be found at `DojoCampus <http://dojocampus.org/content/2008/05/06/jsid-dijitbyid-and-dojobyid/>`_, but the basics are: 
+``dojo.byId`` works exclusively on Dom Elements. Dijit is Dojo's widgeting system, and builds on Core Dojo functionality. Every widget generated in a page has a unique ID, just as native Dom Elements should, though with one *huge* difference: Dijit's are objects. Difference can be found at `data-dojo-id, dijit.byId() and dojo.byId() <dijit/byId#data-dojo-id-dijit-byid-and-dojo-byid>`_, but the basics are: 
 
 * If you are using just a normal domNode, use dojo.byId
 * If you are working with a Dijit, use dijit.byId
