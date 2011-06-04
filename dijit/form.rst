@@ -217,18 +217,18 @@ To style any of the form controls, the first thing to do is to look at the templ
 .. code-block:: html
 
   <span class="dijit dijitReset dijitLeft dijitInline"
-	dojoAttachEvent="ondijitclick:_onButtonClick,onmouseenter:_onMouse,onmouseleave:_onMouse,onmousedown:_onMouse"
+	data-dojo-attach-event="ondijitclick:_onButtonClick,onmouseenter:_onMouse,onmouseleave:_onMouse,onmousedown:_onMouse"
 	><span class="dijitReset dijitRight dijitInline"
 		><span class="dijitReset dijitInline dijitButtonNode"
 			><button class="dijitReset dijitStretch dijitButtonContents"
-				dojoAttachPoint="titleNode,focusNode" 
+				data-dojo-attach-point="titleNode,focusNode" 
 				name="${name}" type="${type}" value="${value}" waiRole="button" waiState="labelledby-${id}_label"
-				><span class="dijitReset dijitInline" dojoAttachPoint="iconNode" 
+				><span class="dijitReset dijitInline" data-dojo-attach-point="iconNode" 
 					><span class="dijitReset dijitToggleButtonIconChar">&#10003;</span 
 				></span 
 				><span class="dijitReset dijitInline dijitButtonText" 
 					id="${id}_label"  
-					dojoAttachPoint="containerNode"
+					data-dojo-attach-point="containerNode"
 				></span
 			></button
 		></span
