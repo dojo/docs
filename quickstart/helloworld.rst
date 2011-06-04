@@ -462,9 +462,9 @@ I hope you've enjoyed this tutorial and found it informative. No doubt though, y
 
 1. `The documentation page for Dojo <http://dojotoolkit.org/documentation/>`_ with links to all documentation.
 
-#. `The Dojo event system <http://www.dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/event-system>`_. How you can link functions to the normal JS events the Dojo way.
+#. `Events with Dojo <http://dojotoolkit.org/documentation/tutorials/1.6/events/>`_. How you can link functions to the normal JS events the Dojo way.
 
-#. `Dojo XmlHttpRequest <http://www.dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/ajax-transports>`_. The foundation for AJAX in Dojo.
+#. `Dojo XmlHttpRequest <dojo/xhr>`_. The foundation for AJAX in Dojo.
 
 #. `The File Upload Widget <http://www.dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/manipulating-widgets-through-code/writing-yo-0>`_. Widgets! Components! Does the complete tour of the creation of a fully functional UI component and it's usage.
 
