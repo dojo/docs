@@ -61,20 +61,20 @@ As we said earlier, it's preferrable to separate the template out into a differe
 
   <div class="dijitFileInput">
         <input id="${id}" class="dijitFileInputReal" type="file" 
-                   dojoAttachPoint="fileInput" name="${name}" />
+                   data-dojo-attach-point="fileInput" name="${name}" />
         <div class="dijitFakeInput">
                 <input class="dijitFileInputVisible" type="text" 
-                           dojoAttachPoint="focusNode, inputNode" />
+                           data-dojo-attach-point="focusNode, inputNode" />
                 <span class="dijitFileInputText" 
-                           dojoAttachPoint="titleNode">${label}</span>
-                <span class="dijitFileInputButton" dojoAttachPoint="cancelNode" 
-                        dojoAttachEvent="onclick:_onClick">
+                           data-dojo-attach-point="titleNode">${label}</span>
+                <span class="dijitFileInputButton" data-dojo-attach-point="cancelNode" 
+                        data-dojo-attach-event="onclick:_onClick">
                         ${cancelText}
                 </span>
         </div>
   </div>
 
-Note how we assign classes to each major part, so we can apply design as CSS styles. We're also using dojoAttachPoint="aString" so the parser makes these nodes available to us in code at the location this.fileInput.
+Note how we assign classes to each major part, so we can apply design as CSS styles. We're also using data-dojo-attach-point="aString" so the parser makes these nodes available to us in code at the location this.fileInput.
 
 There's one more thing: the base class _Widget automatically copies certain attributes like `id` and `name` to the widget's top level node.
 Since we don't want that functionality in this case, we should override it, by adding the following code to the widget's
@@ -120,7 +120,7 @@ Looks good!
 
 Connecting the Elements with Events
 -----------------------------------
-dojoAttachEvent="onclick: _onClick" connects the onclick event of this.cancelNode to this._onClick, the method we are about to define (otherwise dojo.hitch will throw an error mentioning something about _onClick not having properties). We'll get to the onClick handler for the cancel button, and the reasons for having to do it later.
+data-dojo-attach-event="onclick: _onClick" connects the onclick event of this.cancelNode to this._onClick, the method we are about to define (otherwise dojo.hitch will throw an error mentioning something about _onClick not having properties). We'll get to the onClick handler for the cancel button, and the reasons for having to do it later.
 
 We also need to implement a simple onchange listener, like the article hints, so that when our onchange is detected in on our real file input (this.fileInput), we will call this._matchValue() to steal the value from it, and populate our visible input:
 
