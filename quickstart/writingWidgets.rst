@@ -594,7 +594,6 @@ There's an alternate template syntax for widgets which lets you have conditional
 
 * DTL
 
-  * `DTL manual from 1.2 <http://dojotoolkit.org/book/dojo-book-0-9/part-5-dojox/dojox-dtl>`_
   * `DTL <dojox/dtl>`_  (currently the top page from the above link has been copied to)
 
 * Mustache
@@ -610,4 +609,3 @@ See also
 * `Example: File Upload Dialog Box <quickstart/writingWidgets/example>`_
 * `Dropdowns and Popups <quickstart/writingWidgets/popups>`_
 * `Intro to behavioral and templated <http://dojocampus.org/content/2008/04/20/what-is-a-_widget/>`_
-* `The Memo <http://dojotoolkit.org/book/dojo-book-0-4/part-4-more-widgets/writing-your-own-widget/memo>`_ - doc about writing a simple widget from scratch
