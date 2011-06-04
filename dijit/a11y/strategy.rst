@@ -25,13 +25,13 @@ Within the dialog template there is an additional span that contains the charact
 .. code-block :: javascript
 
   <div class="dijitDialog" tabindex="-1" waiRole="dialog" waiState="labelledby-${id}_title">
-    <div dojoAttachPoint="titleBar" class="dijitDialogTitleBar">
-      <span dojoAttachPoint="titleNode" class="dijitDialogTitle" id="${id}_title">${title}</span>
-      <span dojoAttachPoint="closeButtonNode" class="dijitDialogCloseIcon" dojoAttachEvent="onclick: onCancel">
-        <span dojoAttachPoint="closeText" class="closeText">x</span>
+    <div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar">
+      <span data-dojo-attach-point="titleNode" class="dijitDialogTitle" id="${id}_title">${title}</span>
+      <span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="onclick: onCancel">
+        <span data-dojo-attach-point="closeText" class="closeText">x</span>
       </span>
     </div>
-    <div dojoAttachPoint="containerNode" class="dijitDialogPaneContent"></div>
+    <div data-dojo-attach-point="containerNode" class="dijitDialogPaneContent"></div>
   </div>
 
 This span has a style of .closeText which is defined as follows:
