@@ -50,7 +50,7 @@ A fine example of executed code
 
     <script type="text/javascript">
     dojo.declare("foohooo", [dijit._Widget,dijit._Templated], {
-       templateString: '<div dojoAttachEvent="onclick: _foo">Example: <span dojoAttachPoint="containerNode"></span></div>',
+       templateString: '<div data-dojo-attach-event="onclick: _foo">Example: <span data-dojo-attach-point="containerNode"></span></div>',
        _foo: function(){
           alert("foo");
        }
@@ -85,7 +85,7 @@ This code example shows you how to create a widget programatically, awesome isn'
 
    <script type="text/css">
    dojo.declare("foohoo", [dijit._Widget,dijit._Templated], {
-      templateString: '<div dojoAttachEvent="onclick: _foo">Example: <span dojoAttachPoint="containerNode"></span></div>',
+      templateString: '<div data-dojo-attach-event="onclick: _foo">Example: <span data-dojo-attach-point="containerNode"></span></div>',
       _foo: function(){
          alert("foo");
       }
