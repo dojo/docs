@@ -1,13 +1,3 @@
-## Please edit system and help pages ONLY in the moinmaster wiki! For more
-## information, please see MoinMaster:MoinPagesEditorGroup.
-##master-page:HomepagePrivatePageTemplate
-##master-date:Unknown-Date
-## IMPORTANT NOTE:
-## When you use this page as a template for creating your homepage's groups page:
-##  * please remove all lines starting with two hashes (##)
-##  * except the acl line, please keep that, but remove one hash, so it reads #acl ...
-##  * the "ME" will be automatically replaced with your name when you save the page
-##acl kiuma:read,write,delete,revert
 #format dojo_rst
 
 dojo.dnd.Source
@@ -26,7 +16,8 @@ A Source is a d&d container that may act both like a source and a target for d&d
 
 If you have not to do particular requirements, you'll use this class most of the times when you need draggable items, but there are particular cases where you need subclassing and the dojo.dnd package does not always behave as you might expect.
 
-.. codeviewer::
+.. code-block :: html
+  :linenos:
 
   <style type="text/css">
      .dndContainer {
@@ -45,10 +36,11 @@ If you have not to do particular requirements, you'll use this class most of the
     <div class="dojoDndItem">item3</div>
   </div>
 
-What above is good if you want to reorder items, but is usually not sufficient because I think you want to transfer items from a place to another like, for eample a user-role definition.
-So let's keep with another example:
 
-.. codeviewer::
+What above is good if you want to reorder items, but is usually not sufficient because I think you want to transfer items from a place to another like, for example a user-role definition. So let's keep with another example.
+
+.. code-block :: html
+  :linenos:
 
   <style type="text/css">
      fieldset.dndContainer {
@@ -60,11 +52,11 @@ So let's keep with another example:
         float: left;
         margin-right: 5px;
      }
-  </style> 
+  </style>
   <script type="text/javascript">
     dojo.require("dojo.dnd.Source");
   </script>
-  <div class="userRoleContainer"
+  <div class="userRoleContainer">
     <fieldset class="dndContainer availableRoles" dojoType="dojo.dnd.Source">
       <legend>Available roles</legend>
       <div class="dojoDndItem">admin</div>
@@ -81,7 +73,8 @@ This is all good, but suppose that your page has two kind of d&d, a cart-basket 
 So,what you don't want is to put a coupon into the cart-basket and a product into the coupons one, suppose also that the coupon basket accepts card points (yes youo provide a customer with a recharceable card.
 So you'll have to mark a Source container with an accept tag attribute (comma separated) to accepts particular items, and you have to mark every draggable item with the appropriate type using dndType tag attribute.
 
-.. codeviewer::
+.. code-block :: html
+  :linenos:
 
   <style type="text/css">
      fieldset.dndContainer {
@@ -102,7 +95,7 @@ So you'll have to mark a Source container with an accept tag attribute (comma se
   <script type="text/javascript">
     dojo.require("dojo.dnd.Source");
   </script>
-  <div class="cartContainer"
+  <div class="cartContainer">
     <fieldset class="dndContainer products" dojoType="dojo.dnd.Source" accept="product">
       <legend>Items</legend>
       <div class="dojoDndItem" dndType="product">apple</div>
@@ -113,7 +106,7 @@ So you'll have to mark a Source container with an accept tag attribute (comma se
       <legend>Cart</legend>
     </fieldset>
   </div>
-  <div class="paymentContainer"
+  <div class="paymentContainer">
     <fieldset class="dndContainer couponsAndPoints" dojoType="dojo.dnd.Source" accept="coupon, point">
       <legend>Items</legend>
       <div class="dojoDndItem" dndType="coupon">$ 10.00</div>
@@ -141,7 +134,8 @@ And yes, we need a bit of javascript now!
 
 The example below shows what just explained:
 
-.. codeviewer::
+.. code-block :: html
+ :linenos:
 
   <style type="text/css">
      fieldset.dndContainer {
@@ -162,7 +156,7 @@ The example below shows what just explained:
   <script type="text/javascript">
     dojo.require("dojo.dnd.Source");
   </script>
-  <div class="cartContainer"
+  <div class="cartContainer">
     <fieldset id="items" class="dndContainer products" dojoType="dojo.dnd.Source" accept="cartItem" copyOnly="true">
       <script type="dojo/connect" event="onDndDrop" args="source, nodes, copy, target">
           var basket = dojo.byId('basket'); 
@@ -235,7 +229,7 @@ The example below shows what just explained:
       <legend>Cart</legend>
     </fieldset>
   </div>
-  <div class="paymentContainer"
+  <div class="paymentContainer">
     <fieldset class="dndContainer couponsAndPoints" dojoType="dojo.dnd.Source" accept="coupon, point">
       <legend>Cart</legend>
       <div class="dojoDndItem" dndType="coupon">$ 10.00</div>
@@ -252,49 +246,48 @@ The example below shows what just explained:
 Now we may want to get back our "dojo.dnd.Source" reference, suppose infact that we are performing an xhr call, and we want to replace the content of an element where there is a dojo.dnd.Source.
 For example we might want to use the innerHTML property to replace such content, then we'll need to reparse the element content with the dojo parser. 
 
-.. cv-compound::
- 
-  .. cv:: javascript
-
+.. code-example::
+  
+  .. javascript::
+    :label: Javascript code
     <script type="text/javascript">
-    //<!--
-    dojo.require('dijit.form.Button');
-    dojo.require('dojo.parser');
-    dojo.require('dojo.dnd.Source');
-    generateRandomContent = function () {
-      var strartPoint = Math.floor(Math.random()*10);
-      var htmlContent = "<div dojotype='dijit.form.Button' onclick='sample.updateNumberDragging()'>Generate random content</div>\n";
-      htmlContent += "<fieldset class='dndContainer numbers' dojoType='dojo.dnd.Source' accept='number'>\n"; 
-      htmlContent += "<script type='dojo/connect' event='onDndDrop' args='source, nodes, copy, target'>\nconsole.debug('dropping ' + nodes[0].innerHTML + '...');\n</script>\n"; 
-      htmlContent += "<legend>Numbers</legend>\n"; 
-      for (var i = strartPoint; i < strartPoint + 10; i++) {
-        htmlContent += "<div class='dojoDndItem' dndType='number'>"+i+"</div>\n"; 
-      } 
-      htmlContent += "</fieldset></div>\n"; 
-      var numberDragging = dojo.byId('numberDragging');
-      dojo.forEach(
-        dojo.query(['widgetid']).map(dijit.byNode),
-        function (widget) {
-          if (widget) {widget.destroy();}
-        });
-      numberDragging.innerHTML = htmlContent;
-      dojo.parser.parse(numberDragging);
-      dojo.connect(dojo.byId('buttonGenerator'),
+      dojo.require('dijit.form.Button');
+      dojo.require('dojo.parser');
+      dojo.require('dojo.dnd.Source');
+      generateRandomContent = function () {
+        var strartPoint = Math.floor(Math.random()*10);
+        var htmlContent = "<div dojotype='dijit.form.Button' onclick='sample.updateNumberDragging()'>Generate random content</div>\n";
+        htmlContent += "<fieldset class='dndContainer numbers' dojoType='dojo.dnd.Source' accept='number'>\n"; 
+        htmlContent += "<script type='dojo/connect' event='onDndDrop' args='source, nodes, copy, target'>\nconsole.debug('dropping ' + nodes[0].innerHTML + '...');\n</script>\n"; 
+        htmlContent += "<legend>Numbers</legend>\n"; 
+        for (var i = strartPoint; i < strartPoint + 10; i++) {
+          htmlContent += "<div class='dojoDndItem' dndType='number'>"+i+"</div>\n"; 
+        } 
+        htmlContent += "</fieldset></div>\n"; 
+        var numberDragging = dojo.byId('numberDragging');
+        dojo.forEach(
+          dojo.query(['widgetid']).map(dijit.byNode),
+          function (widget) {
+            if (widget) {widget.destroy();}
+          });
+        numberDragging.innerHTML = htmlContent;
+        dojo.parser.parse(numberDragging);
+        dojo.connect(dojo.byId('buttonGenerator'),
                    'onclick',
                    generateRandomContent);
-    };
-    dojo.addOnLoad(function () {
-      alert(1);
-      dojo.connect(dojo.byId('buttonGenerator'),
+      };
+      dojo.addOnLoad(function () {
+        alert(1);
+        dojo.connect(dojo.byId('buttonGenerator'),
                    'onclick',
                    generateRandomContent);
-    }
-    //-->
+      }
     </script>
 
-  .. cv:: html
+  .. html::
+    :label: Dragging html
 
-    <div id="numberDragging">      
+    <div id="numberDragging">
       <div id="buttonGenerator" dojotype='dijit.form.Button'>Generate random content</div>
       <fieldset class='dndContainer numbers' dojoType='dojo.dnd.Source' accept='number'>
         <script type="dojo/connect" event="onDndDrop" args="source, nodes, copy, target">
@@ -317,8 +310,6 @@ For example we might want to use the innerHTML property to replace such content,
 
 We can then use the special data-dojo-id tag attribute, that allows us to map a global variable provided by data-dojo-id over our dojo.dnd.Source. See `data-dojo-id, dijit.byId() and dojo.byId() <dijit/byId#data-dojo-id-dijit-byid-and-dojo-byid>`_ for more info.
 
-
-
 Finished? ...not yet!
 
 dojo.dnd.Source and its parents dojo.dnd.Selector and dojo.dnd.Container are a little strange classes.
@@ -326,22 +317,21 @@ dojo.dnd.Source and its parents dojo.dnd.Selector and dojo.dnd.Container are a l
 First, once attacched to a tag element via dojotype tag attribute, you are not able to get the dojo.dndSource instance anymore, it will be 'lost'
 inside the window.document.
 
-In addiction the initialize (and the destroy too) method doesn't behave like you might expect as described here http://docs.dojocampus.org/dojo/dnd#subclassing-dnd-classes
+In addiction the initialize (and the destroy too) method doesn't behave like you might expect as described here `dojo.dnd subclassing <dojo/dnd#subclassing-dnd-classes>`_
 
-.. cv-compound::
- 
-  .. cv:: javascript
+.. code-example::
+  
+  .. javascript::
 
     <script type="text/javascript">
-    dojo.require('dijit.form.Button');
- 
+      dojo.require("dijit.form.Button");
     </script>
 
-  .. cv:: html
-    
+  .. html::
+
     <div id="numberDragging2">      
       <div onclick="alert(sample);">show sample</div> 
-      <div dojotype='dijit.form.Button' onclick='sample.updateNumberDragging()'>Generate random content</div>
+      <div dojoType="dijit.form.Button" onclick="sample.updateNumberDragging()">Generate random content</div>
     </div>
 
-ok....
+Ok, we are finished...
