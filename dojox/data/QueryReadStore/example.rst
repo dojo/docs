@@ -63,7 +63,7 @@ The directory structure should look like this when you are done:
         </script>
     </head>
     <body class="tundra">
-        <div dojoType="ComboBoxReadStore" jsId="store"
+        <div dojoType="ComboBoxReadStore" data-dojo-id="store"
              url="dojox/data/stores/QueryReadStore.php"
              requestMethod="get">
         </div>
