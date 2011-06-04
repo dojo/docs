@@ -129,7 +129,7 @@ Standard way to declaratively create the LightboxNano
      <img src="/path/to/small/image.jpg">
  </a>
 
-Should you want to destroy the LightboxNano, you'll need to use the jsid. You can view more info about using the jsid on http://dojocampus.org/content/2008/05/06/jsid-dijitbyid-and-dojobyid/.
+Should you want to destroy the LightboxNano, you'll need to use the data-dojo-id. You can view more info about using the data-dojo-id on `data-dojo-id, dijit.byId() and dojo.byId() <dijit/byId#data-dojo-id-dijit-byid-and-dojo-byid>`_.
 
 .. code-block :: javascript
  :linenos:
@@ -140,7 +140,7 @@ Should you want to destroy the LightboxNano, you'll need to use the jsid. You ca
      dojo.require("dojo.parser");
  </script>
  
- <a dojoType="dojox.image.LightboxNano" jsid="myLightboxNano" href="/path/to/large/image.jpg">
+ <a dojoType="dojox.image.LightboxNano" data-dojo-id="myLightboxNano" href="/path/to/large/image.jpg">
      <img src="/path/to/small/image.jpg">
  </a>
 
