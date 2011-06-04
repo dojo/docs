@@ -71,33 +71,36 @@ When using a built or released Dijit tree, the build will ``internStrings``, con
 
 The tags in the template can have these special attributes, in addition to typical attributes like class:
 
-  * dojoAttachPoint
-  * dojoAttachEvent
+  * data-dojo-attach-point
+  * data-dojo-attach-event
   * waiRole
   * waiState
 
-dojoAttachPoint
----------------
+data-dojo-attach-point
+----------------------
+(before dojo 1.6 a.k.a. dojoAttachPoint)
+
 In the JavaScript of a widget, you often might wish to refer to some of its html template's dom nodes directly. In this case the widget will need to access the <span> with the count in order to change the value.
 
 You might think the widget author could just use ids in the html template, and then dojo.byId() in the widget's js. But if she does, then if two or more widget instances are created, they'll all have the same ids!  Obviously code will blow up then.
 
 Instead, you the widget author do the following:
 
-1. In your widget template's html, for every node that these variables are supposed to correspond to (eg point to), you add the attribute: dojoAttachPoint="yourVariableNameHere".
+1. In your widget template's html, for every node that these variables are supposed to correspond to (eg point to), you add the attribute: data-dojo-attach-point="yourVariableNameHere".
 
 2. In your widget's js, you use (without declaring them) variables for these nodes. In this case you will access this.counter.
 
-The reason the variables are undeclared is that when the code in _Templated scans the html in step 1, and it finds the variables in the dojoAttachPoint attribute, it adds those variables to your widget class, dynamically.
+The reason the variables are undeclared is that when the code in _Templated scans the html in step 1, and it finds the variables in the data-dojo-attach-point attribute, it adds those variables to your widget class, dynamically.
 
-When using the ``widgetsInTemplate`` parameter, a dojoAttachPoint on the widget node in the template will refer to the widget instance rather than the Dom Node.
+When using the ``widgetsInTemplate`` parameter, a data-dojo-attach-point on the widget node in the template will refer to the widget instance rather than the Dom Node.
 
-dojoAttachEvent
----------------
+data-dojo-attach-event
+----------------------
+(before dojo 1.6 a.k.a. dojoAttachEvent)
 
-dojoAttachEvent will automatically setup a connection from an event on the DOM node (onclick in this case) to call a method in the widget (in this case increment().
+data-dojo-attach-event will automatically setup a connection from an event on the DOM node (onclick in this case) to call a method in the widget (in this case increment().
 
-Here's an example of dojoAttachPoint and dojoAttachEvent:
+Here's an example of data-dojo-attach-point and data-dojo-attach-event:
 
 .. code-example::
   :djConfig: parseOnLoad: false
@@ -153,7 +156,7 @@ Often a widget declared in markup will have contents, i.e. it will contain some 
 
   <button dojoType="dijit.form.Button">press me</button>
 
-If the template defines dojoAttachPoint="containerNode", the children from the srcNodeRef will be copied to this node.
+If the template defines data-dojo-attach-point="containerNode", the children from the srcNodeRef will be copied to this node.
 
 For example:
 
@@ -214,16 +217,16 @@ When using this template in a directly extended widget class, you will need to s
 
 dijit.Declaration-based widget classes automatically set widgetsInTemplate to true.
 
-dojoAttachPoint
----------------
+data-dojo-attach-point
+----------------------
 
-In this case, the dojoAttachPoint becomes a pointer to the sub-widget, not to a DOM node. For example, with this template:
+In this case, the data-dojo-attach-point becomes a pointer to the sub-widget, not to a DOM node. For example, with this template:
 
 .. code-block :: html
 
   <div class="combinedDateTime">
-     <div dojoType="dijit.form.DateTextBox" dojoAttachPoint="start"></div>
-     <div dojoType="dijit.form.TimeTextBox" dojoAttachPoint="end"></div>
+     <div dojoType="dijit.form.DateTextBox" data-dojo-attach-point="start"></div>
+     <div dojoType="dijit.form.TimeTextBox" data-dojo-attach-point="end"></div>
   </div>
 
 You can do this in your widget code:
@@ -233,19 +236,19 @@ You can do this in your widget code:
   this.start.attr('value', new Date());
 
 
-dojoAttachEvent
----------------
+data-dojo-attach-event
+----------------------
 
-dojoAttachEvent also functions to attach a widget event (not a DOM event) on the sub widget to the main widget. For example, consider InlineEditBox which embeds dijit buttons into it's own template:
+data-dojo-attach-event also functions to attach a widget event (not a DOM event) on the sub widget to the main widget. For example, consider InlineEditBox which embeds dijit buttons into it's own template:
 
 .. code-block :: html
 
-  <fieldset dojoAttachPoint="editNode" waiRole="presentation" style="position: absolute; visibility:hidden" class="dijitReset dijitInline"
-	dojoAttachEvent="onkeypress: _onKeyPress"
-	><div dojoAttachPoint="editorPlaceholder"></div
-	><span dojoAttachPoint="buttonContainer"
-		><button class='saveButton' dojoAttachPoint="saveButton" dojoType="dijit.form.Button" dojoAttachEvent="onClick:save" disabled="true">${buttonSave}</button
-		><button class='cancelButton' dojoAttachPoint="cancelButton" dojoType="dijit.form.Button" dojoAttachEvent="onClick:cancel">${buttonCancel}</button
+  <fieldset data-dojo-attach-point="editNode" waiRole="presentation" style="position: absolute; visibility:hidden" class="dijitReset dijitInline"
+	data-dojo-attach-event="onkeypress: _onKeyPress"
+	><div data-dojo-attach-point="editorPlaceholder"></div
+	><span data-dojo-attach-point="buttonContainer"
+		><button class='saveButton' data-dojo-attach-point="saveButton" dojoType="dijit.form.Button" data-dojo-attach-event="onClick:save" disabled="true">${buttonSave}</button
+		><button class='cancelButton' data-dojo-attach-point="cancelButton" dojoType="dijit.form.Button" data-dojo-attach-event="onClick:cancel">${buttonCancel}</button
 	></span
   ></fieldset>
 
