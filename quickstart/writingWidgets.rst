@@ -182,11 +182,11 @@ Next, we modify the template above with some commands for _Templated:
 .. code-block:: html
 
   <div>
-	<button dojoAttachEvent='onclick: increment'>press me</button>
-	&nbsp;count: <span dojoAttachPoint='counter'>0</span>"
+	<button data-dojo-attach-event='onclick: increment'>press me</button>
+	&nbsp;count: <span data-dojo-attach-point='counter'>0</span>"
   </div>
 
-dojoAttachPoint and dojoAttachEvent are documented in detail on the `dijit._Templated <dijit/_Templated>`_ page, but the important thing to note is that dojoAttachEvent sets up a listener for events on the DOM nodes, and dojoAttachPoint sets up a pointer to the DOM nodes.
+data-dojo-attach-point and data-dojo-attach-event are documented in detail on the `dijit._Templated <dijit/_Templated>`_ page, but the important thing to note is that data-dojo-attach-event sets up a listener for events on the DOM nodes, and data-dojo-attach-point sets up a pointer to the DOM nodes.
 
 So, putting that all together the source becomes:
 
@@ -274,7 +274,7 @@ Often widget attributes are mapped into the widget's DOM.  For example, the tabI
 
 This is not done by putting ${...} strings inside the widget's template.   Actually, most of the time, the mapping happens automatically.   Standard DOMNode attributes like tabIndex, alt, aria-labelledby, etc. are copied to the widget's "focusNode" if it's defined, or to the "domNode" otherwise.
 
-You can also explicitly specify mappings to DOM node attributes, innerHTML, or class, overriding the default behavior.   This allows more complicated mappings, like when TitlePane has a "title" parameter which becomes the innerHTML of the TitlePane.titleNode DOM node (where titleNode is defined as a dojoAttachPoint, see above).
+You can also explicitly specify mappings to DOM node attributes, innerHTML, or class, overriding the default behavior.   This allows more complicated mappings, like when TitlePane has a "title" parameter which becomes the innerHTML of the TitlePane.titleNode DOM node (where titleNode is defined as a data-dojo-attach-point, see above).
 
 That explanation is confusing, but an example will help.
 
@@ -460,7 +460,7 @@ In the common case of non-behavioral widgets (that create a new DOM tree to repl
 
 The attach point where that input is copied is called containerNode.   In other words, if you check myButton.containerNode.innerHTML in the above example, it will be "press me".
 
-For widgets that mixin _Templated, that is handled automatically, as long as the template specifies dojoAttachPoint="containerNode".
+For widgets that mixin _Templated, that is handled automatically, as long as the template specifies data-dojo-attach-point="containerNode".
 
 
 Having said all that, now we define the widget, referencing this template via the templateString attribute.   Note that often the template is stored in a file, and in that case templateString should reference the file via `dojo.cache() <dojo/cache>`_.
@@ -498,17 +498,17 @@ Let's say you've written a widget, and when the user clicks on it, something hap
 
 To see how to do this, let's see how dijit.form.Button does it for clicking. Note that we need to distinguish between DOM events, which happen on DOM elements; and widget events, which fire when things happen in the widget. (To make this clearer: DOM onclick might fire on elements in your widget, but you would only want the widget's onClick (Note: camelCase!) to fire when your widget is an "enabled" state.)
 
-1. In your template html, on the html elements you want to have fire DOM events, add the attribute dojoAttachEvent as follows. Here's some of the dijit Button's Button.html (with ... where I've left stuff out):
+1. In your template html, on the html elements you want to have fire DOM events, add the attribute data-dojo-attach-event as follows. Here's some of the dijit Button's Button.html (with ... where I've left stuff out):
 
 .. code-block :: html
 
   <div class="dijit dijitReset dijitLeft dijitInline"
-	dojoAttachEvent="ondijitclick:_onButtonClick,onmouseenter:_onMouse,onmouseleave:_onMouse,onmousedown:_onMouse"
+	data-dojo-attach-event="ondijitclick:_onButtonClick,onmouseenter:_onMouse,onmouseleave:_onMouse,onmousedown:_onMouse"
   ...
 
 The onclick refers to the DOM event on this div. The _onButtonClick refers to a plain old js method in Button.js. By plain old js method, I mean it's not a DOM event handler. It's plain old js, written by some dijit programmer.
 
-2. In your widget's js file, define the plain old js method in dojoAttachEvent, as well as an "extension point" method for your programmer to override.
+2. In your widget's js file, define the plain old js method in data-dojo-attach-event, as well as an "extension point" method for your programmer to override.
 
 In Button.js you'll find:
 
