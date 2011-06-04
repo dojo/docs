@@ -121,21 +121,21 @@ Here is an example of setting the role in the diijt tree template. The domNode i
 .. code-block :: javascript
 
   <div class="dijitTreeContainer" style="" waiRole="tree" 
-    dojoAttachEvent="onclick:_onClick,onkeypress:_onKeyPress"></div>
+    data-dojo-attach-event="onclick:_onClick,onkeypress:_onKeyPress"></div>
 
 The role or state can also be specified via variables. This example shows an excerpt from the dijit button template that sets the role and state on the button element.
 
 .. code-block :: javascript
 
   <div class="dijit dijitLeft dijitInline dijitButton"
-    dojoAttachEvent="onclick:_onButtonClick,onmouseenter:_onMouse,onmouseleave:_onMouse,onmousedown:_onMouse">
+    data-dojo-attach-event="onclick:_onButtonClick,onmouseenter:_onMouse,onmouseleave:_onMouse,onmousedown:_onMouse">
     <div class='dijitRight'>
-      <button class="dijitStretch dijitButtonNode dijitButtonContents" dojoAttachPoint="focusNode,titleNode"
+      <button class="dijitStretch dijitButtonNode dijitButtonContents" data-dojo-attach-point="focusNode,titleNode"
         type="${type}" waiRole="button" waiState="labelledby-${id}_label">
-        <span class="dijitInline ${iconClass}" dojoAttachPoint="iconNode">
+        <span class="dijitInline ${iconClass}" data-dojo-attach-point="iconNode">
           <span class="dijitToggleButtonIconChar">&#10003</span>
         </span>
-        <span class="dijitButtonText" id="${id}_label" dojoAttachPoint="containerNode">${label}</span>
+        <span class="dijitButtonText" id="${id}_label" data-dojo-attach-point="containerNode">${label}</span>
       </button>
     </div>
   </div>
