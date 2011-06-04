@@ -13,9 +13,9 @@ Here's an example of a declarative initialization for a TreeStoreModel and for t
 
 .. code-block :: html
 
-	<div dojoType="dojo.data.ItemFileWriteStore" jsId="store"
+	<div dojoType="dojo.data.ItemFileWriteStore" data-dojo-id="store"
 		url="../tests/_data/treeTest.json"></div>
-	<div dojoType="dijit.tree.TreeStoreModel" jsId="model"
+	<div dojoType="dijit.tree.TreeStoreModel" data-dojo-id="model"
 		childrenAttrs="kids"
 		store="store" query="{id:'root'}"></div>
 
@@ -30,7 +30,7 @@ data store a child references it's parent rather than vice-versa.
 
 .. code-block :: html
 
-	<div dojoType="dijit.tree.TreeStoreModel" jsId="model" store="store">
+	<div dojoType="dijit.tree.TreeStoreModel" data-dojo-id="model" store="store">
 		<script type="dojo/method" event="getChildren" args="item, onComplete">
 			return store.fetch({query: {parent: store.getIdentity(item)}, onComplete: onComplete});
 		</script>
