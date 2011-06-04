@@ -315,7 +315,7 @@ For example we might want to use the innerHTML property to replace such content,
     </div>
 
 
-We can then use the jsId dojo tag attribute, that allow us to map a global variavle provided by jsId over our dojo.dnd.Source, see http://dojocampus.org/content/2008/05/06/jsid-dijitbyid-and-dojobyid/ for more info.
+We can then use the special data-dojo-id tag attribute, that allows us to map a global variable provided by data-dojo-id over our dojo.dnd.Source. See `data-dojo-id, dijit.byId() and dojo.byId() <dijit/byId#data-dojo-id-dijit-byid-and-dojo-byid>`_ for more info.
 
 
 
