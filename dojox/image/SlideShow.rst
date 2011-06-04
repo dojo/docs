@@ -124,7 +124,7 @@ dojox.data.FlickrRestStore. Next, create a request object, which optionally cont
  :linenos:
  
    <div dojoType="dojox.image.SlideShow" id="slideshow1" > </div>
-   <div jsId="imageItemStore" dojoType="dojo.data.ItemFileReadStore" url="images.json"></div>
+   <div data-dojo-id="imageItemStore" dojoType="dojo.data.ItemFileReadStore" url="images.json"></div>
    <script type="text/javascript">
       dojo.addOnLoad(function() {
          //Define the request, saying that 20 records should be fetched at a time, 
