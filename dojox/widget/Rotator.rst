@@ -186,7 +186,7 @@ Example using the crossfade transition.
    <div>Pane 2</div>
  </div>
 
-Example of controlling a Rotator by referencing its instance. We define a jsId so that the dojo.parser will create a global JavaScript variable pointing to our Rotator instance.
+Example of controlling a Rotator by referencing its instance. We define a data-dojo-id so that the dojo.parser will create a global JavaScript variable pointing to our Rotator instance.
 
 .. code-example::
   :version: local
