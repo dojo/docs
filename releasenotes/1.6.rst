@@ -118,6 +118,8 @@ The parser has been enhanced to support HTML5 compliant attribute names.  See `t
 		<script type="dojo/method" data-dojo-event="onSubmit">
                     ...
 
+  * The `dojoAttachEvent` and `dojoAttachPoint` attributes have been **deprecated**, and will be unsupported in 2.0. Replace all `dojoAttachEvent` attributes with `data-dojo-attach-event` and all `dojoAttachPoint` attributes with `data-dojo-attach-point`. The behavior is identical.
+
   * Existing behavior has been preserved until 2.0, there should be no backward compatibility issues between 1.6 and previous 1.x Dojo versions.
 
 Also, there's a new "scope" parameter to the parser to control which attribute names it searches for.   This is mainly used in conjunction with multi-version support, for example if dojo 1.6 and dojo 1.4 are loaded onto the same page, it allows searching for dojo16Type and data-dojo16-type instead of dojoType and data-dojo-type.
