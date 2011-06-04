@@ -35,7 +35,7 @@ Prerequisites
 You need the following installed on your computer to run Dojo's build system:
 
 * `Java <http://java.sun.com/>`_ 1.4.2 or later (Java 1.5 recommended).
-* A source build of Dojo, which you can obtain at http://download.dojotoolkit.org/.  The source builds are suffixed with "-src". If you want to download the latest code from the Subversion code repository, see the `Using Subversion <http://dojotoolkit.org/book/dojo-book-0-9/part-4-meta-dojo/get-code-subversion>`_ page.
+* A source build of Dojo, which you can obtain at http://download.dojotoolkit.org/.  The source builds are suffixed with "-src". If you want to download the latest code from the Subversion code repository, see the `Using Subversion <http://dojotoolkit.org/community/usingSubversion>`_ page.
 
 Profiles and Command Line Parameters
 ------------------------------------
