@@ -29,7 +29,7 @@ Usage
 ==========  =======  ======================================================================
 Parameter   Type     Description
 ==========  =======  ======================================================================
-rotator     string   The name of an instance of a Rotator widget defined by jsId.
+rotator     string   The name of an instance of a Rotator widget defined by data-dojo-id.
 ==========  =======  ======================================================================
 
 ========
