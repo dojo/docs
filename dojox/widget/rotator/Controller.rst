@@ -36,7 +36,7 @@ Usage
 ==========  =======  ======================================================================
 Parameter   Type     Description
 ==========  =======  ======================================================================
-rotator     string   The name of an instance of a Rotator widget defined by jsId.
+rotator     string   The name of an instance of a Rotator widget defined by data-dojo-id.
 commands    string   A comma-separated list of commands. The default value is "prev,play/pause,info,next".
 ==========  =======  ======================================================================
 
