@@ -17,7 +17,7 @@ Utilizes DojoX GFX to allow for SVG and VML vector graphics drawing in the brows
 Drawing is similar to DojoX Sketch, but is designed to be more versatile extendable and customizable.
 
 
-Drawing currently only initiates from HTML, although it's technically not a Dijit to keep the file size light. But if Dijit is available, Drawing will register itself with it and can be accessed dijit.byId('myDrawing'). If Dijit is not available, Drawing creates a registry in the Dijit stub so it can still be accessed via dijit.byId. However, it's recommended to simply use jsId in the markup.
+Drawing currently only initiates from HTML, although it's technically not a Dijit to keep the file size light. But if Dijit is available, Drawing will register itself with it and can be accessed dijit.byId('myDrawing'). If Dijit is not available, Drawing creates a registry in the Dijit stub so it can still be accessed via dijit.byId. However, it's recommended to simply use data-dojo-id in the markup.
 
 The files are laid out as such:
 
