@@ -17,7 +17,7 @@ Properties to Set
 this.containerNode
 ------------------
 
-The widget must have a containerNode property (typically declared in the template, dojoAttachPoint="containerNode").
+The widget must have a containerNode property (typically declared in the template, data-dojo-attach-point="containerNode").
 All the child widgets will be put under here.
 
 baseClass
