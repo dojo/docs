@@ -466,7 +466,7 @@ I hope you've enjoyed this tutorial and found it informative. No doubt though, y
 
 #. `Dojo XmlHttpRequest <dojo/xhr>`_. The foundation for AJAX in Dojo.
 
-#. `The File Upload Widget <http://www.dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/manipulating-widgets-through-code/writing-yo-0>`_. Widgets! Components! Does the complete tour of the creation of a fully functional UI component and it's usage.
+#. `Writing custom widgets <quickstart/writingWidgets>`_. Create your own widget.
 
 #. `Dojo Unit Tests <http://svn.dojotoolkit.org/dojo/dojo/trunk/tests/>`_ from current nightly build (good for learning how things work)
 
