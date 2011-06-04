@@ -13,6 +13,10 @@ Getting started
    :class: logowelcome;
 
 * `Getting started fast <quickstart/gettingstarted>`_
+* `Hello World tutorial <quickstart/helloworld>`_
+* `History of Dojo <quickstart/introduction/history>`_
+* `Licensing <quickstart/introduction/licensing>`_
+* `Why Choose Dojo? <quickstart/introduction/whydojo>`_
 
 ============
 Installation
@@ -35,6 +39,7 @@ JavaScript Extensions
 * `Browser Sniffing <quickstart/browser-sniffing>`_
 * `Parsing, Formatting and Validating Numbers and Dates <quickstart/numbersDates>`_
 * `OOP with dojo.declare() <quickstart/oop>`_
+* `Dojo Topic System <quickstart/topics>`_
 
 AJAX
 ----
@@ -135,3 +140,4 @@ See also
 ========
 
 * `Key Links <key-links>`_ - a collection of current and useful Dojo demos and tutorials
+* `Multiple Versions of Dojo on a Page <quickstart/multiversion>`_ - Dojo has special configuration and build options to allow you to use different versions of Dojo on the same page.
