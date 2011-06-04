@@ -14,9 +14,9 @@ Here's an example of a declarative initialization for a TreeStoreModel and for t
 
 .. code-block :: html
 
-	<div dojoType="dojo.data.ItemFileReadStore" jsId="continentStore"
+	<div dojoType="dojo.data.ItemFileReadStore" data-dojo-id="continentStore"
 		url="_data/countries.json"></div>
-	<div dojoType="dijit.tree.ForestStoreModel" jsId="continentModel" 
+	<div dojoType="dijit.tree.ForestStoreModel" data-dojo-id="continentModel" 
 		store="continentStore" query="{type:'continent'}"
 		rootId="continentRoot" rootLabel="Continents" childrenAttrs="children"></div>
 
