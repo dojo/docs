@@ -47,7 +47,7 @@ Creating a Gallery and setting a simple data source
   </script>
 
   <div id="gallery1" dojoType="dojox.image.Gallery"></div>
-  <div jsId="imageItemStore" dojoType="dojo.data.ItemFileReadStore" url="images.json"></div>
+  <div data-dojo-id="imageItemStore" dojoType="dojo.data.ItemFileReadStore" url="images.json"></div>
 
 
 Creating a Gallery with a FlickrRestStore
