@@ -122,7 +122,7 @@ Testing
 Debugging
 ---------
 
-TODOC: firebug lite, isDebug, debugAtAllCosts, console.*
+* `Debugging tutorial <quickstart/debugging>`_
 
 Tuning
 ------
