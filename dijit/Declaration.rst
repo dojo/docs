@@ -67,8 +67,8 @@ The code doesn't display anything itself, so it's best to place it right after t
 
 
 
-Methods, dojoAttachPoint, and dojoAttachEvent
----------------------------------------------
+Methods, data-dojo-attach-point, and data-dojo-attach-event
+-----------------------------------------------------------
 
 The example below defines a widget named "HideButton" that will hide itself when clicked, and then creates two HideButtons:
 
@@ -76,7 +76,7 @@ The example below defines a widget named "HideButton" that will hide itself when
 .. cv:: html
 
 	<div dojoType="dijit.Declaration" widgetClass="HideButton">
-		XXX<button dojoAttachEvent="onclick: myClickHandler" dojoAttachPoint="containerNode"></button>XXX
+		XXX<button data-dojo-attach-event="onclick: myClickHandler" data-dojo-attach-point="containerNode"></button>XXX
 		<script type='dojo/method' event='myClickHandler'>
 			this.domNode.style.display="none";
 		</script>
@@ -88,7 +88,7 @@ The example below defines a widget named "HideButton" that will hide itself when
 A few things to note here:
 
    * using the <script type='dojo/method'> tag, you can define methods in the widget
-   * dojoAttachEvent and dojoAttachPoint work the same as in `dijit._Templated <dijit/_Templated>`_
+   * data-dojo-attach-event and data-dojo-attach-point work the same as in `dijit._Templated <dijit/_Templated>`_
 
 Extending Other Widgets
 -----------------------
@@ -99,7 +99,7 @@ HideButton2 extends HideButton (above) and changes the template (but keeps the o
 .. cv:: html
 
 	<span dojoType="dijit.Declaration" widgetClass="HideButton2" mixins="HideButton">
-		YYY<button dojoAttachEvent="onclick: myClickHandler" dojoAttachPoint="containerNode"></button>YYY
+		YYY<button data-dojo-attach-event="onclick: myClickHandler" data-dojo-attach-point="containerNode"></button>YYY
 	</span>
 	<button dojoType="HideButton2">Hide me extended</button>
 	<button dojoType="HideButton2">Hide me extended #2</button>
