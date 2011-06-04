@@ -19,7 +19,7 @@ Dojo Book Outline
 * `Quick Installation <http://dojotoolkit.org/book/dojo-book-0-9/part-1-life-dojo/quick-installation>`_. 
   maps to: `How to Install the Dojo Toolkit <quickstart/install>`_ (complete)
 * `Hello World - Dojo for the Attention-Impaired <http://dojotoolkit.org/book/dojo-book-0-9/hello-world-tutorial>`_. maps to: `Hello world <quickstart/helloworld>`_ -- [[JChimene]] <<DateTime(2008-08-01T11:36:45-0700)>> (complete)
-* `Debugging Tutorial <http://dojotoolkit.org/book/book-dojo/part-4-meta-dojo-making-your-dojo-code-run-faster-and-better/debugging-facilities/deb>`_.  maps to: `Debugging <quickstart/debugging>`_ (1/2 done: sfoster)
+* `Debugging Tutorial <http://dojotoolkit.org/book/book-dojo/part-4-meta-dojo-making-your-dojo-code-run-faster-and-better/debugging-facilities/deb>`_.  maps to: `Debugging <quickstart/debugging>`_ (complete)
 * `Dojo Introduction <http://dojotoolkit.org/book/dojo-book-0-9/introduction>`_.  maps to: `Introduction <quickstart/introduction>`_ (N/A, don't need to copy over)
 
   * `Dojo Licensing <http://dojotoolkit.org/book/dojo-book-0-9/introduction/licensing>`_.  maps to: `Licensing <quickstart/introduction/licensing>`_  (complete)
