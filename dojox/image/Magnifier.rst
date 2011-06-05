@@ -46,7 +46,7 @@ destroys it.
 
   <button dojoType="dijit.form.Button" id="foob">Make It
   
-    <script type="dojo/method" event="onClick">
+    <script type="dojo/method" data-dojo-event="onClick">
        this.setAttribute("disabled",true);
        dijit.byId("foobd").setAttribute("disabled",false);
        new dojox.image.Magnifier({ scale:4.2, glassSize:200 },"foobar");
@@ -54,7 +54,7 @@ destroys it.
   </button>
 
   <button dojoType="dijit.form.Button" id="foobd" disabled="disabled">Destroy It
-    <script type="dojo/method" event="onClick">
+    <script type="dojo/method" data-dojo-event="onClick">
 	this.setAttribute("disabled",true);
 	dijit.byId("foobar").destroy();
 	console.log('layout changed:');
