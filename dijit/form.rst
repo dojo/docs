@@ -222,7 +222,7 @@ To style any of the form controls, the first thing to do is to look at the templ
 		><span class="dijitReset dijitInline dijitButtonNode"
 			><button class="dijitReset dijitStretch dijitButtonContents"
 				data-dojo-attach-point="titleNode,focusNode" 
-				name="${name}" type="${type}" value="${value}" waiRole="button" waiState="labelledby-${id}_label"
+				name="${name}" type="${type}" value="${value}" role="button" aria-labelledby="${id}_label"
 				><span class="dijitReset dijitInline" data-dojo-attach-point="iconNode" 
 					><span class="dijitReset dijitToggleButtonIconChar">&#10003;</span 
 				></span 
