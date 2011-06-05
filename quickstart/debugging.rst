@@ -19,6 +19,7 @@ Still not convinced? That's OK too. If you use Internet Explorer or Safari, you 
 To use Firebug Lite, you must include the isDebug config parameter like so:
 
 .. code-block :: html
+  :linenos:
 
   <script type="text/javascript" src="http://o.aolcdn.com/dojo/1.6/dojo/dojo.js"
           data-dojo-config="parseOnLoad: true, isDebug: true"></script>
@@ -32,6 +33,7 @@ Faulty dojo.require's and the Firebug Console
 The following code has a subtle bug:
 
 .. code-block :: html
+  :linenos:
 
   <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
               "http://www.w3.org/TR/html4/strict.dtd">
@@ -78,7 +80,8 @@ Errors In Dojo/Method and Dojo/Event Code
 
 The following code has an error:
 
-::
+.. code-block :: html
+  :linenos:
 
   <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
               "http://www.w3.org/TR/html4/strict.dtd">
@@ -100,7 +103,7 @@ The following code has an error:
   <body class="tundra">
   <div dojoType="dijit.form.Button">
      Click to break!
-     <script type="dojo/event" event="onClick">
+     <script type="dojo/event" data-dojo-event="onClick">
         this.domNode.style.width = dojo.newWidth;
      </script>
   </div>
@@ -126,6 +129,7 @@ Why not just use alert() ? The trusty JavaScript alert() is a favorite debugging
 Clearly alert's just not powerful enough. In Dojo logging, you can associate messages with severity, just like in log4j. The following code illustrates the five severity levels:
 
 .. code-block :: javascript
+  :linenos:
 
   console.log("Nothing happening");
   console.debug("Checking to make sure nothing happened");
@@ -147,6 +151,7 @@ In IE, they will appear like this:
 Another useful method, console.dir() dumps variable contents to the screen. While console.log works fine for strings and integers, console.dir prints more complex variables - objects, arrays, arrays of objects, or whatever. For example:
 
 .. code-block :: javascript
+  :linenos:
 
   console.dir([
      {attribute: "last_name", sortDescending: true},
@@ -161,7 +166,8 @@ produces:
 
 So in our example above, we write:
 
-::
+.. code-block :: javascript
+  :linenos:
 
   console.debug("dojo.newWidth is" + dojo.newWidth);
   this.domNode.style.width = dojo.newWidth;
@@ -169,7 +175,8 @@ So in our example above, we write:
 
 Running this, we quickly find that dojo.newWidth is undefined. Maybe we spelled it wrong? To quickly find out, we change the debugging statement to:
 
-::
+..code-block :: javascript
+  :linenos:
 
   console.dir("dojo is" + dojo);
   this.domNode.style.width = dojo.newWidth;
@@ -182,7 +189,8 @@ Method 2: The "debugger" Statement
 
 Alternatively you can set a "poor man's breakpoint" in the code. Just insert the debugger; statement, which is a legal JavaScript reserved word.
 
-::
+.. code-block :: javascript
+  :linenos:
 
   debugger;
   this.domNode.style.width = dojo.newWidth;
@@ -203,6 +211,7 @@ To Follow The dojo.require Trail, Use Dojo Locally
 Since that code is now running, we try a minor variant which sets the button to blue:
 
 .. code-block :: html
+  :linenos:
 
   <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
               "http://www.w3.org/TR/html4/strict.dtd">
@@ -223,7 +232,7 @@ Since that code is now running, we try a minor variant which sets the button to 
   <body class="tundra">
   <div dojoType="dijit.form.Button">
      Click to break!
-     <script type="dojo/event" event="onClick">
+     <script type="dojo/event" data-dojo-event="onClick">
         this.domNode.style.backgroundColor = dojo.Color.named.aliceblue;
      </script>
   </div>
@@ -235,6 +244,7 @@ You check the console ... no errors there. But that dojo.Color.named.aliceblue i
 You can find out for sure by using a local copy of Dojo. CDN Dojo is very quiet about the modules it loads. Local Dojo is very noisy. So, assuming our local copy of Dojo is installed on the web server underneath /dojoroot, the following change:
 
 .. code-block :: html
+  :linenos:
 
   <style type="text/css">
           @import "/dojoroot/dijit/themes/tundra/tundra.css";
@@ -277,6 +287,7 @@ dojo/method and dojo/event scripts are good for short, non-reusable snippets of 
 So here's a piece of HTML code and a reusable Dojo-based widget:
 
 .. code-block :: html
+  :linenos:
 
   <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
               "http://www.w3.org/TR/html4/strict.dtd">
@@ -300,7 +311,8 @@ So here's a piece of HTML code and a reusable Dojo-based widget:
   </html>
 
 
-::
+.. code-block :: javascript
+  :linenos:
 
   dojo.provide("dojobook.online-book.debugging.BuggyWidget");
   dojo.require("dijit._Widget");
@@ -322,6 +334,7 @@ Running this code, you will see an error appear, but it's nowhere near the right
 But by simply setting the debugAtAllCosts flag to true:
 
 .. code-block :: html
+  :linenos:
 
   <script type="text/javascript" src="/dojoroot/dojo/dojo.js"
               data-dojo-config="parseOnLoad: true, debugAtAllCosts: true"></script>
@@ -334,7 +347,8 @@ the displayed error location will now be correct:
 
 '''Important!''' you should always remove debugAtAllCosts from production code. It slows down the client unnecessarily. Rather than manually inserting and removing them, I like to delegate that job to a server side language like PHP:
 
-::
+.. code-block :: html
+  :linenos:
 
   <?php
   $dojoConfig   = $inProduction ? "parseOnLoad: true" : "parseOnLoad: true, debugAtAllCosts: true";
