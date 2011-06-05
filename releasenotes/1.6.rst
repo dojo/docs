@@ -120,9 +120,10 @@ The parser has been enhanced to support HTML5 compliant attribute names.  See `t
 
   * The `dojoAttachEvent` and `dojoAttachPoint` attributes have been **deprecated**, and will be unsupported in 2.0. Replace all `dojoAttachEvent` attributes with `data-dojo-attach-event` and all `dojoAttachPoint` attributes with `data-dojo-attach-point`. The behavior is identical.
 
-.. code-block :: html
+  .. code-block :: html
 
  	<button data-dojo-attach-point="cancelButton" data-dojo-type="dijit.form.Button" data-dojo-attach-event="onClick:cancel">Cancel</button>
+
 
   * Existing behavior has been preserved until 2.0, there should be no backward compatibility issues between 1.6 and previous 1.x Dojo versions.
 
@@ -131,17 +132,20 @@ Also, there's a new "scope" parameter to the parser to control which attribute n
 a11y
 ----
 
-* The `waiRole` and `waiState` attributes have been **deprecated**, and will be unsupported in 2.0. Replace them with `role` and `aria-?stateName?`. The behavior is identical.
+  * The `waiRole` and `waiState` attributes have been **deprecated**, and will be unsupported in 2.0. Replace them with `role` and `aria-?stateName?`. The behavior is identical.
 
-For instance. Replace:
-.. code-block :: html
+  For instance. Replace:
 
-  <span waiRole="treeitem" waiState="selected-false"></span>
+  .. code-block :: html
 
-With:
-.. code-block :: html
+      <span waiRole="treeitem" waiState="selected-false"></span>
 
-  <span role="treeitem" aria-selected="false"></span>
+
+  With:
+  
+  .. code-block :: html
+
+      <span role="treeitem" aria-selected="false"></span>
 
 
 Performance boost
