@@ -229,7 +229,7 @@ __________________
 Using an ASP Server
 ___________________
 
-.. code-block::
+.. code-block:: html
   :linenos:
 
   <%
@@ -267,7 +267,7 @@ _________________________
 Using a Java Server (JSP)
 _________________________
 
-.. code-block::
+.. code-block:: html
   :linenos:
 
   <%
