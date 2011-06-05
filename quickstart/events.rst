@@ -459,7 +459,7 @@ or in markup using the script tag:
 .. code-block :: html
 
   <div dojoType="dijit.form.Button">
-     <script type="dojo/method" event="onClick">
+     <script type="dojo/method" data-dojo-event="onClick">
         ...
      </script>
      Click me!
