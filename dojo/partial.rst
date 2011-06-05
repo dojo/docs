@@ -22,7 +22,7 @@ Lets take a quick look at a pseudo-code example of using partial:
   dojo.xhrGet(args);  
 
 Okay, so that will invoke the dataLoaded function when the xhrGet function returns ... but load of xhrGet expects param structure of:
-load(data, ioargs).  So how the heck to we make sure that xhrGet's expectations are honored even with that new first param called 'someFirstParam'?  Enter dojo.partial!  Here's how you would do it:
+load(data, ioargs).  So how the heck do we make sure that xhrGet's expectations are honored even with that new first param called 'someFirstParam'?  Enter dojo.partial!  Here's how you would do it:
 
 .. code-block :: javascript
 
@@ -34,7 +34,7 @@ load(data, ioargs).  So how the heck to we make sure that xhrGet's expectations 
   }
   dojo.xhrGet(args);  
 
-What that doe sis create a new function that wraps dataLoaded and affixes the first parameter with the value "firstValue".  Note that dojo.partial allows you to do N parameters, so you can keep defining as many values as you want for fixed-value parameters of a function.
+What that does is create a new function that wraps dataLoaded and affixes the first parameter with the value "firstValue".  Note that dojo.partial allows you to do N parameters, so you can keep defining as many values as you want for fixed-value parameters of a function.
 
 Basic Example
 -------------
@@ -69,4 +69,4 @@ See Also:
 =========
 
 * `Blog post <http://o.dojotoolkit.org/2008/04/09/dojo-data-notification-events-and-easy-passing-store-references-generic-event-handlers>`_ about using dojo.partial with Data Stores.
-* `API docs <http://api.dojotoolkit.org/jsdoc/1.3/dojo.partial>`_
+* `API docs <http://dojotoolkit.org/api/dojo.partial>`_
