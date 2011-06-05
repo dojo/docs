@@ -1,13 +1,2 @@
-#REDIRECT dijit/a11y/index
-#FORMAT dojo_rst
-
-Dijit Accessibility
-===================
-
-  * `Dijit Accessibility Resources <dijit/a11y/resources>`_
-  * `Dijit Accessibility Strategy <dijit/a11y/strategy>`_
-
-See Also:
-=========
-
-  * `Developer Accessibility Requirements <developer/a11y-requirements>`_
+#redirect dijit/a11y/index
+#format dojo_rst
