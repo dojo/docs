@@ -109,15 +109,15 @@ Example:
     <input type="text" name="e03" value="e03" observer="log,disabler">
     <span data-dojo-attach-point="n01" class="dojoFormValue">&nbsp;</span>
     <span data-dojo-attach-point="n02" data-dojo-attach-event="onclick: clicked">test</span>
-    <script type="dojo/method" event="log" args="value,name">
+    <script type="dojo/method" data-dojo-event="log" data-dojo-args="value,name">
       console.log(name, " = ", value);
     </script>
-    <script type="dojo/method" event="disabler" args="value,name">
+    <script type="dojo/method" data-dojo-event="disabler" data-dojo-args="value,name">
       if(value.length > 5){
         this.disable([name]);
       }
     </script>
-    <script type="dojo/method" event="clicked">
+    <script type="dojo/method" data-dojo-event="clicked">
       console.log("we got clicked!");
     </script>
   </div>
