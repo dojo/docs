@@ -182,7 +182,7 @@ In that case use the type="dojo/method" syntax:
 .. code-block :: html
 
     <div data-dojo-type=...>
-        <script type="dojo/method" event="functionToOverride">
+        <script type="dojo/method" data-dojo-event="functionToOverride">
            console.log("I will execute instead of functionToOverride().");
         </script>
     </div>
