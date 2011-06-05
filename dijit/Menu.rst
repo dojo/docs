@@ -4,7 +4,7 @@ dijit.Menu
 ==========
 
 :Authors: Bill Keese
-:jsDoc: http://api.dojotoolkit.org/jsdoc/1.3/dijit.Menu
+:jsDoc: http://dojotoolkit.org/api/dijit.Menu
 
 .. contents::
     :depth: 2
@@ -169,8 +169,13 @@ Keyboard
 ==========================================    =================================================
 Action                                        Key
 ==========================================    =================================================
-Open a context menu                           On Windows: shift-f10 or the Windows context menu key
-                                              On Firefox on the Macintosh: ctrl-space. On Safari 4 on Mac: VO+shift+m (VO is usually control+opton)
+Open a context menu                           On Windows: shift-f10 or the Windows context menu key.
+
+                                              On Firefox on the Macintosh: ctrl-space.
+
+                                              On Safari 4 or Chrome on Mac: VO+shift+m (VO is usually control+opton).
+                                              But to use this keyboard sequence (on Safari or Chrome) the voice-over option on safari or chrome(in System Prefences / Universal Access) must be turned on.
+
 Navigate menu items                           Up and down arrow keys
 Activate a menu item                          Spacebar or enter
 Open a submenu                                Spacebar, enter, or right arrow
