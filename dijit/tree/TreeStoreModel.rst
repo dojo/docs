@@ -31,10 +31,10 @@ data store a child references it's parent rather than vice-versa.
 .. code-block :: html
 
 	<div dojoType="dijit.tree.TreeStoreModel" data-dojo-id="model" store="store">
-		<script type="dojo/method" event="getChildren" args="item, onComplete">
+		<script type="dojo/method" data-dojo-event="getChildren" data-dojo-args="item, onComplete">
 			return store.fetch({query: {parent: store.getIdentity(item)}, onComplete: onComplete});
 		</script>
-		<script type="dojo/method" event="mayHaveChildren" args="item">
+		<script type="dojo/method" data-dojo-event="mayHaveChildren" data-dojo-args="item">
 			var type = store.getValue(item, "type");
 			return (type == "continent" || type == "country");
 		</script>
