@@ -73,8 +73,8 @@ The tags in the template can have these special attributes, in addition to typic
 
   * data-dojo-attach-point
   * data-dojo-attach-event
-  * waiRole
-  * waiState
+  * role
+  * aria-*
 
 data-dojo-attach-point
 ----------------------
@@ -141,8 +141,10 @@ Here's an example of data-dojo-attach-point and data-dojo-attach-event:
 	<span dojoType="FancyCounter">press me</span>
 
 
-waiRole and waiState
---------------------
+role and aria-*
+---------------
+
+(Before Dojo Toolkit v1.6 there were waiRole and waiState.)
 
 These attributes are for accessibility, and define the role of DOM nodes such as "tree". See `Creating Accessible Widgets <quickstart/writingWidgets/a11y>`_ for more information.
 
@@ -243,7 +245,7 @@ data-dojo-attach-event also functions to attach a widget event (not a DOM event)
 
 .. code-block :: html
 
-  <fieldset data-dojo-attach-point="editNode" waiRole="presentation" style="position: absolute; visibility:hidden" class="dijitReset dijitInline"
+  <fieldset data-dojo-attach-point="editNode" role="presentation" style="position: absolute; visibility:hidden" class="dijitReset dijitInline"
 	data-dojo-attach-event="onkeypress: _onKeyPress"
 	><div data-dojo-attach-point="editorPlaceholder"></div
 	><span data-dojo-attach-point="buttonContainer"
