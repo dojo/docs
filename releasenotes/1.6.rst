@@ -129,25 +129,6 @@ The parser has been enhanced to support HTML5 compliant attribute names.  See `t
 
 Also, there's a new "scope" parameter to the parser to control which attribute names it searches for.   This is mainly used in conjunction with multi-version support, for example if dojo 1.6 and dojo 1.4 are loaded onto the same page, it allows searching for dojo16Type and data-dojo16-type instead of dojoType and data-dojo-type.
 
-a11y
-----
-
-  * The `waiRole` and `waiState` attributes have been **deprecated**, and will be unsupported in 2.0. Replace them with `role` and `aria-?stateName?`. The behavior is identical.
-
-  For instance. Replace:
-
-  .. code-block :: html
-
-      <span waiRole="treeitem" waiState="selected-false"></span>
-
-
-  With:
-  
-  .. code-block :: html
-
-      <span role="treeitem" aria-selected="false"></span>
-
-
 Performance boost
 -----------------
 Two new methods are added to Dojo core, which can be used to improve performance when using IE6 and IE7.
@@ -227,6 +208,25 @@ ValidationTextBox
 _WidgetBase
 -----------
 A new widget base class called _WidgetBase has been added.   It's lighter weight than _Widget and useful as an alternative to _Widget for lightweight/mobile widgets.   _Widget's functionality and API haven't changed.
+
+a11y
+----
+
+  * The `waiRole` and `waiState` attributes have been **deprecated**, and will be unsupported in 2.0. Replace them with `role` and `aria-?stateName?`. The behavior is identical.
+
+  For instance. Replace:
+
+  .. code-block :: html
+
+      <span waiRole="treeitem" waiState="selected-false"></span>
+
+
+  With:
+  
+  .. code-block :: html
+
+      <span role="treeitem" aria-selected="false"></span>
+
 
 =====
 DojoX
