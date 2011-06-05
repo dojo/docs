@@ -548,7 +548,7 @@ or alternately this:
 .. code-block :: html
 
   <div dojoType="dijit.form.Button">
-	<script type="dojo/method" event="onClick" args="evt">
+	<script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
 	  alert('Woohoo! I'm using the extension point "onClick"!!');
 	</script>
 	 press me
