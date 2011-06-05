@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>Dojo: Hello World!</title>
+    <!-- SECTION 1 -->
+    <style type="text/css">
+        @import "dojoroot/dijit/themes/tundra/tundra.css";
+        @import "dojoroot/dojo/resources/dojo.css"
+    </style>
+    <script type="text/javascript" src="dojoroot/dojo/dojo.js" 
+            data-dojo-config="parseOnLoad: true">
+    </script>
+    <!-- SECTION 2 -->
+    <script type="text/javascript">
+        // Load Dojo's code relating to the Button widget
+        dojo.require("dijit.form.Button");
+    </script>
+    <script type="text/javascript">
+        function helloCallback(data,ioArgs) {
+            alert(data);
+        }       
+        function helloError(data, ioArgs) {
+            alert('Error when retrieving data from the server!');
+        }
+  </script>
+</head>
+
+<body class="tundra">
+    <button data-dojo-type="dijit.form.Button" id="helloButton">
+        Hello World!
+        <script type="dojo/method" data-dojo-event="onClick">
+            dojo.xhrGet({
+                url: 'response.txt',
+                load: helloCallback,
+                error: helloError
+            });
+        </script>
+    </button>
+</body>
+</html>
