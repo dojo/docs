@@ -77,7 +77,7 @@ The example below defines a widget named "HideButton" that will hide itself when
 
 	<div dojoType="dijit.Declaration" widgetClass="HideButton">
 		XXX<button data-dojo-attach-event="onclick: myClickHandler" data-dojo-attach-point="containerNode"></button>XXX
-		<script type='dojo/method' event='myClickHandler'>
+		<script type='dojo/method' data-dojo-event='myClickHandler'>
 			this.domNode.style.display="none";
 		</script>
 	</div>
@@ -111,7 +111,7 @@ The mixins attribute tells which classes you widget will be based on. You can in
 dojo/connect
 ------------
 
-As an alternate to <script type="dojo/method">, you can use <script type="dojo/connect">.   The latter will additional code rather than overriding an already defined method.
+As an alternate to <script type="dojo/method">, you can use <script type="dojo/connect">. The latter will additional code rather than overriding an already defined method.
 
 However, you can get the same effect using <script type="dojo/method"> and calling this.inherited(arguments).
 
@@ -121,7 +121,7 @@ An example of dojo/connect is:
 
   <div dojoType="dijit.Declaration" widgetClass="simpleConnectedWidget" >
      Just a plain ol' piece of text
-     <script type="dojo/connect" event="dblclick">
+     <script type="dojo/connect" data-dojo-event="dblclick">
         console.debug("Ouch!  I've been double-clicked");
      </script>
   </div>
