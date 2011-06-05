@@ -433,7 +433,7 @@ or in markup as:
 .. code-block :: html
 
   <div dojoType="dijit.form.Button">
-     <script type="dojo/connect" event="onClick">
+     <script type="dojo/connect" data-dojo-event="onClick">
         ...
      </script>
      Click me!
