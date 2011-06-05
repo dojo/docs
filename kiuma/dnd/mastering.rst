@@ -158,7 +158,7 @@ The example below shows what just explained:
   </script>
   <div class="cartContainer">
     <fieldset id="items" class="dndContainer products" dojoType="dojo.dnd.Source" accept="cartItem" copyOnly="true">
-      <script type="dojo/connect" event="onDndDrop" args="source, nodes, copy, target">
+      <script type="dojo/connect" data-dojo-event="onDndDrop" data-dojo-args="source, nodes, copy, target">
           var basket = dojo.byId('basket'); 
           if ((target != source) && (target.node.id == 'items')) {
               dojo.forEach(nodes, function(node){
@@ -189,7 +189,7 @@ The example below shows what just explained:
       <div dndType="cartItem" class="dojoDndItem" title="pear" quantity="0"><span class="quantity"></span> pear</div>
     </fieldset>
     <fieldset id="basket" class="dndContainer basket" dojoType="dojo.dnd.Source" accept="cartItem" copyOnly="true">
-      <script type="dojo/connect" event="onDndDrop" args="source, nodes, copy, target">
+      <script type="dojo/connect" data-dojo-event="onDndDrop" data-dojo-args="source, nodes, copy, target">
           var basket = dojo.byId('basket');  
           if ((target != source) && (target.node.id == 'basket')) { 
               dojo.forEach(nodes, function(node){
@@ -250,6 +250,8 @@ For example we might want to use the innerHTML property to replace such content,
   
   .. javascript::
     :label: Javascript code
+    :linenos:
+
     <script type="text/javascript">
       dojo.require('dijit.form.Button');
       dojo.require('dojo.parser');
@@ -286,11 +288,12 @@ For example we might want to use the innerHTML property to replace such content,
 
   .. html::
     :label: Dragging html
+    :linenos:
 
     <div id="numberDragging">
       <div id="buttonGenerator" dojotype='dijit.form.Button'>Generate random content</div>
       <fieldset class='dndContainer numbers' dojoType='dojo.dnd.Source' accept='number'>
-        <script type="dojo/connect" event="onDndDrop" args="source, nodes, copy, target">
+        <script type="dojo/connect" data-dojo-event="onDndDrop" data-dojo-args="source, nodes, copy, target">
           console.debug("dropping " + nodes[0].innerHTML + "...");
         </script>
         <legend>Numbers</legend>
