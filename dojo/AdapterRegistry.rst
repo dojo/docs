@@ -36,7 +36,7 @@ Example
 
 There is also possible to unregister adapter from registry however there are performance problems on a large registry.
 
-.. code-block:: javscript
+.. code-block:: javascript
   :linenos:
 
   reg.unregister("handleArr");
