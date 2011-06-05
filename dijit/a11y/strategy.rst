@@ -24,7 +24,7 @@ Within the dialog template there is an additional span that contains the charact
 
 .. code-block :: javascript
 
-  <div class="dijitDialog" tabindex="-1" waiRole="dialog" waiState="labelledby-${id}_title">
+  <div class="dijitDialog" tabindex="-1" role="dialog" aria-labelledby="${id}_title">
     <div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar">
       <span data-dojo-attach-point="titleNode" class="dijitDialogTitle" id="${id}_title">${title}</span>
       <span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="onclick: onCancel">
