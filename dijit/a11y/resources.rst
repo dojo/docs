@@ -114,13 +114,13 @@ This example removes the valuenow property from an indeterminate progress bar.
 Setting Role and State in the Widget Template
 ---------------------------------------------
 
-The role and state can also be set via the widget template using the waiRole or waiState prefix. Setting the role in the template is the same as setting it via scripting – the dijit.setWaiRole() method will be called during widget instantiation. Simply add the waiRole=”actualrole” or waiState=”state-value” parameters into the template markup for the element. The element will be passed as the nodeObj into the dijit.setWaiRole() and dijit.setWaiState() methods. The state is specified as a state name and value pair, the state is separated from the value using the hyphen character (-): state-value. Multiple states can be set within the template by separating the state-value pairs with a comma. This mechanism is useful when templates are used to create the objects requiring a role value and when the state is known at creation time.
+The role and state can also be set via the widget template using the role or aria-* prefix. Setting the role in the template is the same as setting it via scripting – the dijit.setWaiRole() method will be called during widget instantiation. Simply add the role=”actualrole” or aria-state=”value” parameters into the template markup for the element. The element will be passed as the nodeObj into the dijit.setWaiRole() and dijit.setWaiState() methods. The state is specified as a state name in attribute (aria-stateName) and state value. This mechanism is useful when templates are used to create the objects requiring a role value and when the state is known at creation time.
 
 Here is an example of setting the role in the diijt tree template. The domNode is given the “tree” role.
 
 .. code-block :: javascript
 
-  <div class="dijitTreeContainer" style="" waiRole="tree" 
+  <div class="dijitTreeContainer" style="" role="tree" 
     data-dojo-attach-event="onclick:_onClick,onkeypress:_onKeyPress"></div>
 
 The role or state can also be specified via variables. This example shows an excerpt from the dijit button template that sets the role and state on the button element.
@@ -131,7 +131,7 @@ The role or state can also be specified via variables. This example shows an exc
     data-dojo-attach-event="onclick:_onButtonClick,onmouseenter:_onMouse,onmouseleave:_onMouse,onmousedown:_onMouse">
     <div class='dijitRight'>
       <button class="dijitStretch dijitButtonNode dijitButtonContents" data-dojo-attach-point="focusNode,titleNode"
-        type="${type}" waiRole="button" waiState="labelledby-${id}_label">
+        type="${type}" role="button" aria-labelledby="${id}_label">
         <span class="dijitInline ${iconClass}" data-dojo-attach-point="iconNode">
           <span class="dijitToggleButtonIconChar">&#10003</span>
         </span>
