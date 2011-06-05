@@ -5,7 +5,7 @@ dijit.Dialog
 ============
 
 :Available: since V?
-:jsDoc: http://api.dojotoolkit.org/jsdoc/HEAD/dijit.Dialog
+:jsDoc: http://dojotoolkit.org/api/dijit.Dialog
 
 .. contents::
     :depth: 2
