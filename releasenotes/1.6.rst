@@ -218,14 +218,14 @@ a11y
 
   .. code-block :: html
 
-      <span waiRole="treeitem" waiState="selected-false"></span>
+      <span waiRole="treeitem" waiState="selected-false,haspopup-true"></span>
 
 
   With:
   
   .. code-block :: html
 
-      <span role="treeitem" aria-selected="false"></span>
+      <span role="treeitem" aria-selected="false" aria-haspopup="true"></span>
 
 
 =====
