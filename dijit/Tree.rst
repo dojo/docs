@@ -186,7 +186,7 @@ to return a separate class name based on the type of item:
 .. code-block :: javascript
   :linenos:
 
-  <script type="dojo/method" event="getIconClass" args="item, opened">
+  <script type="dojo/method" data-dojo-event="getIconClass" data-dojo-args="item, opened">
       if(item == this.model.root) {
           return (opened ? "customFolderOpenedIcon" : "customFolderClosedIcon");
       } else {
