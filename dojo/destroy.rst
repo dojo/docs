@@ -135,3 +135,4 @@ See also
 * `dojo.empty <dojo/empty>`_
 * `dojo.create <dojo/create>`_
 * `DOM Utilities <quickstart/dom>`_
+* `How to destroy a dijit widget <dijit/_Widget#lifecycle>`_
