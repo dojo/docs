@@ -66,13 +66,18 @@ Widgets are classes, created with dojo.declare. All widgets inherit from dijit._
     If you need to be sure parsing and creation of any child widgets has completed, use startup. This is often used for layout widgets like BorderContainer. If the widget does JS sizing, then startup() should call resize(), which does the sizing. 
 
 - destroy
-     Implement destroy if you have special tear-down work to do (the superclasses will take care of most of it for you. Example on how to destroy a widget:
+     Implement destroy if you have special tear-down work to do (the superclasses will take care of most of it for you. Examples on how to destroy a widget:
 
   .. code-block:: javascript
     :linenos:
 
     var widget = new dijit.form.TextBox({name: "firstname"}, "inputId");
     widget.destroy();
+
+  .. code-block:: javascript
+    :linenos:
+
+    dijit.byId("dijitId").destroy();
 
 
 Other methods
