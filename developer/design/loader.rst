@@ -22,7 +22,7 @@ TODO
 New Loader Overview
 ===================
 
-Dojo v1.7 includes a new loader that adds several exciting new features. To begin, the new loader fully implements the
+Dojo v1.7 includes a new loader that adds several exciting features. To begin, the new loader fully implements the
 `CommonJS`_ `Modules/Asynchronous Definition`_ (AMD) specification. This is an exciting new standard for writing and loading
 modules that dramatically improves code portability and interoperability. Equally important, it allows modules to be
 loaded asynchronously by injecting script elements which has two key benefits:
@@ -351,7 +351,7 @@ processes are put in place:
 
 One thing to notice is that the moment the loader enters xdomain mode, even synchronous modules start executing
 asynchronously. So, if the loader happens to be in the middle of tracing the dependency tree implied by several
-inter-dependent synchronous modules, any further `dojo.require` * applications will cause a module to be downloaded (if
+inter-dependent synchronous modules, any further `dojo.require`* applications will cause a module to be downloaded (if
 it's not already on board), but will return immediately without executing the module. 
 
 The conversion process used to convert a synchronous module to an AMD module is given as follows:
@@ -360,7 +360,7 @@ The conversion process used to convert a synchronous module to an AMD module is 
      for many versions. However, it's not perfect and can be fooled (e.g., when Javascript comment delimiters are
      contained in strings.
 
-  2. The module text is scanned for synchronous `dojo.require` * applications; all discovered applications are evaluated
+  2. The module text is scanned for synchronous `dojo.require`* applications; all discovered applications are evaluated
      to determine the set of modules upon which them scanned module depends.
 
   3. An AMD module is constructed by prefixing the module text with `define(deps, function() {`, where deps the list of
@@ -383,3 +383,5 @@ Debugging
 =========
 
 TODO
+
+.. _CommonJS: http://www.commonjs.org/
