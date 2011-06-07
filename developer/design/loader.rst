@@ -23,7 +23,7 @@ New Loader Overview
 ===================
 
 Dojo v1.7 includes a new loader that adds several exciting features. To begin, the new loader fully implements the
-`CommonJS`_ `Modules/Asynchronous Definition`_ (AMD) specification. This is an exciting new standard for writing and loading
+`CommonJS`_ `Modules/AsynchronousDefinition`_ (AMD) specification. This is an exciting new standard for writing and loading
 modules that dramatically improves code portability and interoperability. Equally important, it allows modules to be
 loaded asynchronously by injecting script elements which has two key benefits:
 
@@ -385,3 +385,4 @@ Debugging
 TODO
 
 .. _CommonJS: http://www.commonjs.org/
+.. _Modules/AsynchronousDefinition: http://wiki.commonjs.org/wiki/Modules/AsynchronousDefinition
