@@ -85,7 +85,7 @@ A markup example:
 .. code-block :: html
  :linenos:
  
- <div dojoType="dojox.widget.UpgradeBar" id="upgradeBar" permDismiss="true">
+ <div dojoType="dojox.widget.UpgradeBar" id="upgradeBar" noRemindButton="Don't Remind Me Again">
      <div validate="dojo.isIE<7">
          <span>Unrecognized device attempting to read Internet files. Recommend that you:"</span>
          <a href="http://www.getfirefox.net/">Get Firefox</a>	
