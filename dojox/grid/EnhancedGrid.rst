@@ -174,5 +174,3 @@ See also
 * `dojox.grid.TreeGrid <dojox/grid/TreeGrid>`_
 
   This grid offers support for collapsable rows and model-based (`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`_) structure
-
-* `dojox.grid.EnhancedGrid.plugins <dojox/grid/EnhancedGrid/plugins>`_ - Overview of the plugins of enhanced grid
