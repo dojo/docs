@@ -171,4 +171,4 @@ See also
 
 * `dojox.grid.TreeGrid <dojox/grid/TreeGrid>`_ - This grid offers support for collapsable rows and model-based (`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`_) structure
 
-* `dojox.grid.DataGrid <dojox/grid/LazyTreeGrid>`_ - Provides lazy loading and virtual scrolling for huge children rows
+* `dojox.grid.LazyTreeGrid <dojox/grLazyTreeGridid/>`_ - Provides lazy loading and virtual scrolling for huge children rows
