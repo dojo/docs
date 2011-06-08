@@ -13,7 +13,7 @@ dojox.grid.EnhancedGrid
 Introduction
 ============
 
-EnhancedGrid (dojox.grid.EnhancedGrid) provides a rich set of features that enhance the capabilities of base DataGrid. All these features are implemented as separate plugins which can be loaded on demand, and the required features must be first declared before they can be used. 
+EnhancedGrid (dojox.grid.EnhancedGrid) provides a rich set of features that enhance the capabilities of base DataGrid. All these features are implemented as separate plugins which can be loaded on demand, the required features must be declared before used. 
 
 
 ================================
