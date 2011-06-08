@@ -127,21 +127,21 @@ The following are typical scenarios using nested sorts:
 
 * Once the sort choice is selected for the 'Genre' column, the grid rows will be sorted ascending based on by the values in Genre. Note that the keyboard focus moves to the sort choice in response to the mouse click. The graphical label of the sort choice is a downward caret since the function would be a descending sort.
 
-.. image:: sort-2.png
+.. image:: ../../sort-2.png
 
 * Then the nested sort tip is shown when the mouse hovers over a other column headers.
 * Clicking region "A" in the figure below will execute a nested sort, and the rows will be sorted by Artist in this example within Genre.
 * Clicking region "B" will reset the sort, and the rows will be sorted by Artist alone.
 
-.. image:: nested-sort-1.new.png
+.. image:: ../../nested-sort-1.new.png
 
 * Once a column is sorted ascending, the sort choice changes to a sort descending choice.
 
-.. image:: descending-sort-1.png
+.. image:: ../../descending-sort-1.png
 
 * Once a column is sorted descending, the sort choice changes to a 'remove sort' function (see the figure below). When a column is removed from the sort, other columns in the sort will be adjusted to reflect the new sort order. For example, Year would become the second column in the sort if it had previously been the third.
 
-.. image:: remove-sort.png
+.. image:: ../../remove-sort.png
 
 To summarize, the sort choice cycles among sort-ascending, sort-descending, and remove sort functions.
 
