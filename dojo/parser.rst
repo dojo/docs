@@ -4,13 +4,13 @@ The Dojo Parser
 ===============
 
 :Status: Contributed
-:Version: 1.0
+:Version: 1.7
 :Authors: Peter Higgins, Nathan Toone, Bill Keese, kolban
 
 .. contents::
     :depth: 3
 
-The Dojo Parser is an optional module which is used to convert specially decorated nodes in the DOM and convert them into `Dijits <dijit/index>`_. By `decorated` we mean use of a `dojoType` attribute. Any "Class" (or object, such as the ones created by `dojo.declare <dojo/declare>`_) can be instantiated by using a `dojoType` attribute on some node in the DOM, and create a widget out of it.
+The Dojo Parser is an optional module which is used to convert specially decorated nodes in the DOM and convert them into `Dijits <dijit/index>`_. By `decorated` we mean use of a `data-dojo-type` (dojoType) attribute. Any "Class" (or object, such as the ones created by `dojo.declare <dojo/declare>`_) can be instantiated by using a `data-dojo-type` attribute on some node in the DOM, and create a widget out of it.
 
 This is not limited to Dijit, or `dojo.declare <dojo/declare>`_. 
 
@@ -28,7 +28,7 @@ The parser also allows function parameters and connections to be done via <scrip
 .. code-block :: html
 
     <div data-dojo-type=...>
-        <script type="dojo/connect" event="functionToConnectTo">
+        <script type="dojo/connect" data-dojo-event="functionToConnectTo">
            console.log("I will execute in addition to functionToConnectTo().");
         </script>
     </div>
@@ -159,7 +159,7 @@ Alternately, you can inline the text of a function:
 ===========
 Script tags
 ===========
-Functional parameters can also be specified via script tags embedded inside the widget (as a direct child of the node with dojoType specified).  There are three types of script tags supported:
+Functional parameters can also be specified via script tags embedded inside the widget (as a direct child of the node with data-dojo-type specified).  There are different types of script tags supported:
 
 *Connect to a function*:
 
@@ -168,7 +168,7 @@ To perform a dojo.connect() on a method in a widget, use type="dojo/connect" ins
 .. code-block :: html
 
     <div data-dojo-type=...>
-        <script type="dojo/connect" event="functionToConnectTo">
+        <script type="dojo/connect" data-dojo-event="functionToConnectTo">
            console.log("I will execute in addition to functionToConnectTo().");
         </script>
     </div>
@@ -203,17 +203,17 @@ To execute code on instantiation, use the same format but don't specify an event
 
 *Arguments*:
 
-For functions that take (named) parameters, specify them in an `args` attribute.  For example, onChange() gets a value parameter, so to reference it do:
+For functions that take (named) parameters, specify them in an `data-dojo-args` attribute.  For example, onChange() gets a value parameter, so to reference it do:
 
 .. code-block :: html
 
     <div data-dojo-type=...>
-        <script type="dojo/connect" event="onChange" args="value">
+        <script type="dojo/connect" data-dojo-event="onChange" data-dojo-args="value">
            console.log("new value is " + value);
         </script>
     </div>
 
-`args` is a comma separated list of parameter names.
+`data-dojo-args` is a comma separated list of parameter names.
 
 *this*:
 
@@ -221,8 +221,8 @@ Note that `this` points to the widget object.
 
 .. code-block :: html
 
-    <div dojoType=...>
-        <script type="dojo/connect" event="onChange" args="value">
+    <div data-dojo-type=...>
+        <script type="dojo/connect" data-dojo-event="onChange" data-dojo-args="value">
            console.log("onChange for " + this.id);
         </script>
     </div>
@@ -240,7 +240,7 @@ This section discusses how to write widgets that the parser can understand.
 Specifying parameters and types
 ===============================
 
-HTML sets all attributes on nodes as strings.  However, when the parser instantiates your nodes, it looks at the prototype of the class you are trying to instantiate (via dojoType attribute) and trys to make a "best guess" at what type your value should be.  This requires that all attributes you want to be passed in via the parser have a corresponding attribute in the class you are trying to instantiate.
+HTML sets all attributes on nodes as strings.  However, when the parser instantiates your nodes, it looks at the prototype of the class you are trying to instantiate (via data-dojo-type attribute) and trys to make a "best guess" at what type your value should be.  This requires that all attributes you want to be passed in via the parser have a corresponding attribute in the class you are trying to instantiate.
 
 Private members (those that begin with an underscore (_) ) are not mapped in from the source node.
 
@@ -263,7 +263,7 @@ And HTML node:
 
 .. code-block :: html
 
-  <div dojoType="my.custom.type" name="nm" value="5" when="2008-1-1" objectVal="{a: 1, b:'c'}" 
+  <div data-dojo-type="my.custom.type" name="nm" value="5" when="2008-1-1" objectVal="{a: 1, b:'c'}" 
          anotherObject="namedObj" arrayVal="a,b,c,1,2" typedArray="['a','b','c',1,2]"
          _privateVal="5" anotherValue="more"></div>
 
@@ -316,7 +316,7 @@ Setting the parser behavior
 
 ``todoc: parseOnLoad`` parseOnLoad:false by default, parseOnLoad:true optional, parseOnLoad:true makes addOnLoad call after parsing. howto set parseOnLoad
 
-``NEW in 1.3:``  Beginning in release 1.3 of dojo, you can manually call dojo.parser.instantiate on any node - and pass in an additional mixin to specify options, such as dojoType, etc.  The values in the mixin would override any values in your node.  For example:
+``NEW in 1.3:``  Beginning in release 1.3 of dojo, you can manually call dojo.parser.instantiate on any node - and pass in an additional mixin to specify options, such as dojoType, etc.  The values in the mixin would override any values in your node. For example:
 
 .. code-block :: html
 
@@ -336,6 +336,29 @@ Calling instantiate in this way will return to you a list of instances that were
 
   dojo.parser.instantiate([dojo.byId("myDiv")], {dojoType: "my.custom.type", _started: false});
 
+``NEW in 1.6:``  Dojo V1.6 started to use data-dojo-type html5 attribute instead of dojoType. When using new data-dojo-type attribute other attributes must be put in data-dojo-props attribute because of performance improvement like so:
+
+.. code-block :: html
+
+  <a href="document.html"
+     data-dojo-type="my.custom.type"
+     data-dojo-props="href: 'document.html', 
+       title: 'Lorem ipsum',
+       objectVal:{a: 1, b:'c'},
+       typedArray:['a','b','c',1,2],
+       unstandardAttr: 'value'"
+     title="Lorem ipsum">Lorem ipsum link</a>
+
+``NEW in 1.7:`` Since data-dojo-props leads to duplication, there is again possible to use both data-dojo-props attribute like in 1.6 in addition to node attributes:
+
+.. code-block :: html
+
+  <a href="document.html"
+     data-dojo-type="my.custom.type"
+     data-dojo-props="objectVal:{a: 1, b:'c'},
+       typedArray:['a','b','c',1,2]"
+     title="Lorem ipsum" unstandardAttr="value">Lorem ipsum link</a>
+
 ``todoc: scoping a parser call to node by stringId|domNode``
 
 
@@ -346,7 +369,7 @@ Caveats
 Examples
 --------
 
-Load some HTML content from a `remote URL <quickstart/ajax>`_, and convert the nodes decorated with ``dojoType``'s into widgets:
+Load some HTML content from a `remote URL <quickstart/ajax>`_, and convert the nodes decorated with ``data-dojo-type``'s into widgets:
 
 .. code-block :: javascript
 
