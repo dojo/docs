@@ -4,7 +4,7 @@ dojox.grid.EnhancedGrid.plugins.Exporter
 ========================================
 
 :Authors: Zhu Xiao Wen
-:Project owner: Nathan Toone
+:Project owner: Evan Huang
 :Available: since V.1.6
 
 Exporter plugin provides functions to export the grid data into a given format.
@@ -105,7 +105,7 @@ Configuration
 Prerequisites
 -------------
 
-This exporter plugin is only available for EnhancedGrid. So require the EnhancedGrid first:
+This exporter plugin is only available for EnhancedGrid. So please require EnhancedGrid first:
 
 .. code-block :: javascript
   :linenos:
