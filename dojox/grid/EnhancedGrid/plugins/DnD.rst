@@ -4,7 +4,7 @@ dojox.grid.EnhancedGrid.plugins.DnD
 ===================================
 
 :Authors: Zhu Xiao Wen
-:Project owner: Nathan Toone
+:Project owner: Evan Huang
 :Available: since V.1.6
 
 DnD plugin supports drag-and-drop of grid rows/column/cells.
@@ -227,7 +227,7 @@ Configuration
 Prerequisites
 -------------
 
-This DnD plugin is only available for EnhancedGrid, so use the following statement in the head of your HTML file:
+This DnD plugin is only available for EnhancedGrid, so please use the following statement at first:
 
 .. code-block :: javascript
   :linenos:
