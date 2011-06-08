@@ -31,7 +31,7 @@ This is the most simple way to run up an EnhancedGrid, and in the scenario, it's
   .. javascript::
 
     <script type="text/javascript">
-	dojo.require("dojox.grid.EnhancedGrid");
+	dojo.require("dojox.grid.DataGrid");
         dojo.require("dojox.data.CsvStore");
     
         dojo.addOnLoad(function(){
@@ -88,7 +88,7 @@ This is the most simple way to run up an EnhancedGrid, and in the scenario, it's
 Run EnhancedGrid with various plugins
 =====================================
 
-EnhanedGrid can also be run with a flexible combination of the various plugins, and a typical usage will look like:
+EnhanedGrid can also be run with a flexible combination of the various plugins, a typical usage will look like:
 
 
 1. Import theme CSS
