@@ -20,7 +20,7 @@ With this new feature, users can add context menus either through declarative HT
 * Cell menu
 * Row menu
 
-...with HTML markup
+HTML markup usage sample
 
 .. code-example::
   :toolbar: themes, versions, dir
@@ -110,7 +110,7 @@ With this new feature, users can add context menus either through declarative HT
         }
     </style>
 
-...with Javascript
+Javascript usage sample
 
 .. code-example::
   :toolbar: themes, versions, dir
