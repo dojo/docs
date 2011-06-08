@@ -4,7 +4,7 @@ dojox.grid.EnhancedGrid.plugins.Pagination
 ==========================================
 
 :Authors: Wang Qiang
-:Project owner: Nathan Toone
+:Project owner: Evan Huang
 :Available: since V.1.6
 
 Pagination plugin provides paging functionality for grid. 
@@ -113,7 +113,7 @@ Configuration
 Prerequisites
 -------------
 
-The pagination plugin is only available for EnhancedGrid. Use the following statement in the head of your HTML file:
+The pagination plugin is only available for EnhancedGrid. Please use the following statement at first:
 
 .. code-block :: javascript
   :linenos:
@@ -175,7 +175,7 @@ position                   String                   "bottom"         Indicates t
                                                                      There are three options: top (place the pagination bar top of the grid); bottom (place the pagination bar bottom
                                                                      of the grid); both (place the pagination bar both the top and bottom of the grid).
 itemTitle                  String                   "item"           Customize the unit of the items displayed on the description.
-pageSizes                  Array                    ["10", "25",     Customize the page length menu options. The element of the array must be a integer string or 
+pageSizes                  Array                    ["10", "25",     Customize the page length menu options. The element of the array must be an integer string or 
                                                     "50", "100",     "All"(case-insensitive).
                                                     "All"]           
 maxPageStep                integer                  7                Indicates how many page navigation choices will be displayed (Suggested that the value should be less than 10).
