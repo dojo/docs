@@ -1,7 +1,7 @@
 #format dojo_rst
 
 dojox.grid.EnhancedGrid.plugins.NestedSorting
-======================================
+=============================================
 
 :Authors: Zhu Xiao Wen
 :Project owner: Evan Huang
@@ -12,10 +12,8 @@ Cookie plugin provides a convenient ways to persist grid properties like column 
 .. contents::
    :depth: 2
 
-
-
 ==============
-Nested Sorting
+Introduction
 ==============
 
 This feature enhances the single sorting feature of base DataGrid. Nested sorting allows users to sort on one or more columns concurrently and also control the sort direction and order. Finally, columns can be removed from the sort without disturbing the rest of the sort.
