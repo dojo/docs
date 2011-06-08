@@ -97,8 +97,8 @@ EnhanedGrid can also be run with a flexible combination of the various plugins, 
   :linenos:
 
   <style type="text/css">
-      @import "../../../../dijit/themes/claro/claro.css";
-      @import "../../enhanced/resources/claro/EnhancedGrid.css";
+      @import "dijit/themes/claro/claro.css";
+      @import "dojox/grid/enhanced/resources/claro/EnhancedGrid.css";
       ...
   </style>
 
@@ -143,7 +143,7 @@ EnhancedGrid plugin list
 
 Following below is a full list of EnahancedGrid plugins, please refer to the separate doc page for more details:
 
-* 'Nested Sorting' - Multiple column sorting
+* 'Nested Sorting <dojox/grid/EnhancedGrid/plugins/NestedSorting>' - Multiple column sorting
 * 'Indirect Selection' - Selecting rows with radio buttons or check boxes
 * 'Declarative context menus' - Context menus for header, row, cell and selected regions
 * `Filter <dojox/grid/EnhancedGrid/plugins/Filter>`_ - Support for defining rules to filter grid content in various data types.
