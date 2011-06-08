@@ -1,0 +1,269 @@
+#format dojo_rst
+
+dojox.grid.EnhancedGrid.plugins.Menu
+=============================================
+
+:Authors: Evan Huang
+:Project owner: Evan Huang
+:Available: since V.1.6
+
+.. contents::
+   :depth: 2
+
+==============
+Introduction
+==============
+
+With this new feature, users can add context menus either through declarative HTML markup or JavaScript. The following menu types are supported:
+
+* Header cell menu
+* Cell menu
+* Row menu
+
+...with HTML markup
+
+.. code-example::
+  :toolbar: themes, versions, dir
+  :version: local
+  :width: 480
+  :height: 300
+
+  .. javascript::
+
+    <script type="text/javascript">
+	dojo.require("dojox.grid.EnhancedGrid");
+	dojo.require("dojox.grid.enhanced.plugins.Menu");
+        dojo.require("dojox.data.CsvStore");
+    
+        dojo.addOnLoad(function(){
+          // our test data store for this example:
+          var store = new dojox.data.CsvStore({ url: '{{ dataUrl }}dojox/grid/tests/support/movies.csv' });
+
+          // set the layout structure:
+          var layout = [
+              { field: 'Title', name: 'Title of Movie', width: '200px' },
+              { field: 'Year', name: 'Year', width: '50px' },
+              { field: 'Producer', name: 'Producer', width: 'auto' }
+          ];
+
+          // create a new grid:
+          var grid = new dojox.grid.EnhancedGrid({
+              query: { Title: '*' },
+              store: store,
+              clientSort: true,
+              rowSelector: '20px',
+              structure: layout,
+              plugins : {menus:{headerMenu:"headerMenu", rowMenu:"rowMenu", cellMenu:"cellMenu", selectedRegionMenu:"selectedRegionMenu"}}
+          }, document.createElement('div'));
+
+          // append the new grid to the div "gridContainer4":
+          dojo.byId("gridDiv").appendChild(grid.domNode);
+
+          // Call startup, in order to render the grid:
+          grid.startup();
+        });
+    </script>
+
+  .. html::
+
+	<div id="gridDiv" style="width: 100%; height: 100%;">
+		<div dojoType="dijit.Menu" id="headerMenu"  style="display: none;">
+			<div dojoType="dijit.MenuItem">Header Menu Item 1</div>
+			<div dojoType="dijit.MenuItem">Header Menu Item 2</div>
+			<div dojoType="dijit.MenuItem">Header Menu Item 3</div>
+			<div dojoType="dijit.MenuItem">Header Menu Item 4</div>
+		</div>
+		<div dojoType="dijit.Menu" id="rowMenu"  style="display: none;">
+			<div dojoType="dijit.MenuItem">Row Menu Item 1</div>
+			<div dojoType="dijit.MenuItem">Row Menu Item 2</div>
+			<div dojoType="dijit.MenuItem">Row Menu Item 3</div>
+			<div dojoType="dijit.MenuItem">Row Menu Item 4</div>
+		</div>
+		<div dojoType="dijit.Menu" id="cellMenu"  style="display: none;">
+			<div dojoType="dijit.MenuItem">Cell Menu Item 1</div>
+			<div dojoType="dijit.MenuItem">Cell Menu Item 2</div>
+			<div dojoType="dijit.MenuItem">Cell Menu Item 3</div>
+			<div dojoType="dijit.MenuItem">Cell Menu Item 4</div>
+		</div>
+		<div dojoType="dijit.Menu" id="selectedRegionMenu"  style="display: none;">
+			<div dojoType="dijit.MenuItem">Action 1 for Selected Region</div>
+			<div dojoType="dijit.MenuItem">Action 2 for Selected Region</div>
+			<div dojoType="dijit.MenuItem">Action 3 for Selected Region</div>
+			<div dojoType="dijit.MenuItem">Action 4 for Selected Region</div>
+		</div>	
+	</div>
+
+  .. css::
+
+    <style type="text/css">
+		@import "{{ baseUrl }}dojox/grid/enhanced/resources/{{ theme }}EnhancedGrid.css";
+		@import "{{ baseUrl }}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
+
+        .dojoxGrid table {
+            margin: 0;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+    </style>
+
+...with Javascript
+
+.. code-example::
+  :toolbar: themes, versions, dir
+  :version: local
+  :width: 480
+  :height: 300
+
+  .. javascript::
+
+    <script type="text/javascript">
+	dojo.require("dojox.grid.EnhancedGrid");
+	dojo.require("dojox.grid.enhanced.plugins.Menu");
+        dojo.require("dojox.data.CsvStore");
+    
+        dojo.addOnLoad(function(){
+          // our test data store for this example:
+          var store = new dojox.data.CsvStore({ url: '{{ dataUrl }}dojox/grid/tests/support/movies.csv' });
+
+          // set the layout structure:
+          var layout = [
+              { field: 'Title', name: 'Title of Movie', width: '200px' },
+              { field: 'Year', name: 'Year', width: '50px' },
+              { field: 'Producer', name: 'Producer', width: 'auto' }
+          ];
+
+	   //programmatic menus
+		var menusObject = {
+			headerMenu: new dijit.Menu(),
+			rowMenu: new dijit.Menu(),
+			cellMenu: new dijit.Menu(),
+			selectedRegionMenu: new dijit.Menu()
+		};
+		menusObject.headerMenu.addChild(new dijit.MenuItem({label: "Header Menu Item 1"}));
+		menusObject.headerMenu.addChild(new dijit.MenuItem({label: "Header Menu Item 2"}));
+		menusObject.headerMenu.addChild(new dijit.MenuItem({label: "Header Menu Item 3"}));
+		menusObject.headerMenu.addChild(new dijit.MenuItem({label: "Header Menu Item 4"}));
+		menusObject.headerMenu.startup();
+		
+		menusObject.rowMenu.addChild(new dijit.MenuItem({label: "Row Menu Item 1"}));
+		menusObject.rowMenu.addChild(new dijit.MenuItem({label: "Row Menu Item 2"}));
+		menusObject.rowMenu.addChild(new dijit.MenuItem({label: "Row Menu Item 3"}));
+		menusObject.rowMenu.addChild(new dijit.MenuItem({label: "Row Menu Item 4"}));
+		menusObject.rowMenu.startup();
+		
+		menusObject.cellMenu.addChild(new dijit.MenuItem({label: "Cell Menu Item 1"}));
+		menusObject.cellMenu.addChild(new dijit.MenuItem({label: "Cell Menu Item 2"}));
+		menusObject.cellMenu.addChild(new dijit.MenuItem({label: "Cell Menu Item 3"}));
+		menusObject.cellMenu.addChild(new dijit.MenuItem({label: "Cell Menu Item 4"}));
+		menusObject.cellMenu.startup();
+		
+		menusObject.selectedRegionMenu.addChild(new dijit.MenuItem({label: "Action 1 for Selected Region"}));
+		menusObject.selectedRegionMenu.addChild(new dijit.MenuItem({label: "Action 2 for Selected Region"}));
+		menusObject.selectedRegionMenu.addChild(new dijit.MenuItem({label: "Action 3 for Selected Region"}));
+		menusObject.selectedRegionMenu.addChild(new dijit.MenuItem({label: "Action 4 for Selected Region"}));
+		menusObject.selectedRegionMenu.startup();
+		
+	      
+          // create a new grid:
+          var grid = new dojox.grid.EnhancedGrid({
+              query: { Title: '*' },
+              store: store,
+              clientSort: true,
+              rowSelector: '20px',
+              structure: layout,
+              plugins : {menus: menusObject}
+          }, document.createElement('div'));
+
+          // append the new grid to the div "gridContainer4":
+          dojo.byId("gridDiv").appendChild(grid.domNode);
+
+          // Call startup, in order to render the grid:
+          grid.startup();
+        });
+    </script>
+
+  .. html::
+
+	<div id="gridDiv" style="width: 100%; height: 100%;">
+
+	</div>
+
+  .. css::
+
+    <style type="text/css">
+		@import "{{ baseUrl }}dojox/grid/enhanced/resources/{{ theme }}EnhancedGrid.css";
+		@import "{{ baseUrl }}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
+
+        .dojoxGrid table {
+            margin: 0;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+    </style>
+
+
+Usage
+-----
+
+* Declare menu feature plugin
+
+.. code-block :: javascript
+  :linenos:
+
+  <script type="text/javascript">
+      dojo.require("dojox.grid.EnhancedGrid");
+      dojo.require("dojox.grid.enhanced.plugins.Menu");
+      ...
+  </script>
+
+* Use menu feature
+
+... with HTML markup
+    
+.. code-block :: javascript
+  :linenos:
+
+  <div id="grid" dojoType="dojox.grid.EnhancedGrid"
+      plugins="{menus:{headerMenu:’headerMenu‘, rowMenu:’rowMenu‘, cellMenu:’cellMenu‘, selectedRegionMenu:’selectedRegionMenu‘}}" ... >
+      <div dojoType="dijit.Menu" id="headerMenu" style="display: none;">
+          <div dojoType="dijit.MenuItem">Header Menu Item 1</div>
+      </div>
+      <div dojoType="dijit.Menu" id="rowMenu" style="display: none;">
+          <div dojoType="dijit.MenuItem">Row Menu Item 1</div>
+      </div>
+      <div dojoType="dijit.Menu" id="cellMenu" style="display: none;">
+          <div dojoType="dijit.MenuItem">Cell Menu Item 1</div>
+      </div>
+      <div dojoType="dijit.Menu" id="selectedRegionMenu" style="display: none;">
+          <div dojoType="dijit.MenuItem">Action 1 for Selected Region</div>
+      </div>
+  </div>
+
+... with JavaScript (using a markup menu)
+    
+.. code-block :: javascript
+  :linenos:
+
+  var grid = new dojox.grid.EnhancedGrid({id: "grid",
+      plugins: {menus:{headerMenu:’headerMenu‘, rowMenu:’rowMenu‘, cellMenu:’cellMenu‘, selectedRegionMenu:’selectedRegionMenu‘}}, ...},
+      dojo.byId('gridDiv'));
+
+Tips
+----
+TODO: tips - bind events to onxxContextMenu(e)
+
+
+========
+See Also
+========
+
+* `dojox.grid.EnhancedGrid <dojox/grid/EnhancedGrid>`_ - The enhanced grid supporting plugins
+* `dojox.grid.EnhancedGrid.plugins <dojox/grid/EnhancedGrid/plugins>`_ - Overview of the plugins of enhanced grid
