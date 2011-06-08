@@ -4,10 +4,10 @@ dojox.grid.EnhancedGrid.plugins.Selector
 ========================================
 
 :Authors: Zhu Xiao Wen
-:Project owner: Nathan Toone
+:Project owner: Evan Huang
 :Available: since V.1.6
 
-Selector plugin provides extended selection for columns, rows and cells.
+Selector plugin provides various selection ways for for columns, rows and cells.
 
 .. contents::
    :depth: 2
@@ -16,7 +16,7 @@ Selector plugin provides extended selection for columns, rows and cells.
 Introduction
 ============
 
-Selector is a plugin for dojox.grid.EnhancedGrid. It supports extended selection for columns, rows, and cells.
+Selector is a plugin for dojox.grid.EnhancedGrid. It supports various selection ways including swipe selection, extended selection etc.
 
 .. code-example::
   :toolbar: themes, versions, dir
