@@ -3,11 +3,9 @@
 dojox.grid.EnhancedGrid.plugins.NestedSorting
 =============================================
 
-:Authors: Zhu Xiao Wen
+:Authors: Evan Huang
 :Project owner: Evan Huang
 :Available: since V.1.6
-
-Cookie plugin provides a convenient ways to persist grid properties like column width, sorting order, etc, so the grid will look same when the page is reloaded, or when the grid is re-created with the same id.
 
 .. contents::
    :depth: 2
@@ -67,7 +65,7 @@ This feature enhances the single sorting feature of base DataGrid. Nested sortin
   .. css::
 
     <style type="text/css">
-        @import "{{ baseUrl }}dojox/grid/enhanced/resources/{{ theme }}EnhancedGrid.css";
+        @import "{{ baseUrl }}dojox/grid/enhanced/resources/{{ theme }}/EnhancedGrid.css";
         @import "{{ baseUrl }}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
 
         .dojoxGrid table {
@@ -125,7 +123,7 @@ The following are typical scenarios using nested sorts:
 
 * When there is no sorting established, a unary (single) sort caret is shown when the mouse hovers over a column. The upward direction of the caret reflects that this will result in an ascending sort.
 
-.. image:: sort-1.new.png
+.. image:: ../../sort-1.new.png
 
 * Once the sort choice is selected for the 'Genre' column, the grid rows will be sorted ascending based on by the values in Genre. Note that the keyboard focus moves to the sort choice in response to the mouse click. The graphical label of the sort choice is a downward caret since the function would be a descending sort.
 
@@ -195,7 +193,5 @@ Note: In Firefox v.3.5, JAWS10 doesn't announce all the above ARIA attributes ap
 See Also
 ========
 
-* `dojox.grid.DataGrid <dojox/grid/DataGrid>`_ - The base grid
 * `dojox.grid.EnhancedGrid <dojox/grid/EnhancedGrid>`_ - The enhanced grid supporting plugins
 * `dojox.grid.EnhancedGrid.plugins <dojox/grid/EnhancedGrid/plugins>`_ - Overview of the plugins of enhanced grid
-* `dojox.grid.TreeGrid <dojox/grid/TreeGrid>`_ - Grid with collapsable rows and model-based (`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`_) structure
