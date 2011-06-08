@@ -31,7 +31,7 @@ This is the most simple way to run up an EnhancedGrid, and in the scenario, it's
   .. javascript::
 
     <script type="text/javascript">
-	dojo.require("dojox.grid.DataGrid");
+	dojo.require("dojox.grid.EnhancedGrid");
         dojo.require("dojox.data.CsvStore");
     
         dojo.addOnLoad(function(){
