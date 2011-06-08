@@ -109,15 +109,9 @@ EnhanedGrid can also be run with a flexible combination of the various plugins, 
   :linenos:
 
   <script type="text/javascript">
-      // Required for all Enhanced features
       dojo.require("dojox.grid.EnhancedGrid");
-      // Row/Column drag-drop feature
       dojo.require("dojox.grid.enhanced.plugins.DnD"); 
-      // Declarative pop-up menu feature
-      dojo.require("dojox.grid.enhanced.plugins.Menu");
-      // Nested sorting feature
       dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
-      // Indirect selection(check box/radio button selection) feature
       dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");
       ...
   </script>
@@ -128,14 +122,9 @@ EnhanedGrid can also be run with a flexible combination of the various plugins, 
   :linenos:
 
   <div id="grid" dojoType="dojox.grid.EnhancedGrid" 
-      plugins="{nestedSorting: true, dnd: true, indirectSelection: true,  // Each required feature must be turned on
-      menus:{
-      headerMenu:'headerMenu',  //References menus defined declaratively below
-      rowMenu:'rowMenu',
-      cellMenu:'cellMenu',
-      selectedRegionMenu:'selectedRegionMenu'}}"
-      ...>
+      plugins="{nestedSorting: true, dnd: true, indirectSelection: true, ...}" ...>
   </div>
+
 
 =============================
 EnhancedGrid plugin list
