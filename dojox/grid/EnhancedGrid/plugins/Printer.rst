@@ -4,7 +4,7 @@ dojox.grid.EnhancedGrid.plugins.Printer
 =======================================
 
 :Authors: Zhu Xiao Wen
-:Project owner: Nathan Toone
+:Project owner: Evan Huang
 :Available: since V.1.6
 
 Printer plugin provides some convenient methods to print the grid data.
@@ -16,7 +16,7 @@ Printer plugin provides some convenient methods to print the grid data.
 Introduction
 ============
 
-This plugin is based on the Exporter plugin. Actually, an export writer, TableWriter, is used to transfer the grid data to HTML tables. This simple plugin decorates these HTML tables with customized CSS styles and table properties, and forms a complete HTML page for printing.
+This plugin is based on the Exporter plugin. Actually, an export writer - TableWriter, is used to transfer the grid data to HTML tables. This simple plugin decorates these HTML tables with customized CSS styles and table properties, and then forms a complete HTML page for printing.
 
 .. code-example::
   :toolbar: themes, versions, dir
@@ -149,7 +149,7 @@ Configuration
 Prerequisites
 -------------
 
-This printer plugin is only available for EnhancedGrid, so use the following statement in the head of your HTML file:
+This printer plugin is only available for EnhancedGrid, so please use the following statement at first:
 
 .. code-block :: javascript
   :linenos:
