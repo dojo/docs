@@ -122,7 +122,7 @@ EnhanedGrid can also be run with a flexible combination of the various plugins, 
   :linenos:
 
   <div id="grid" dojoType="dojox.grid.EnhancedGrid" 
-      plugins="{nestedSorting: true, dnd: true, indirectSelection: true, ...}" ...>
+      plugins="{dnd: true, nestedSorting: true, indirectSelection: true, ...}" ...>
   </div>
 
 
