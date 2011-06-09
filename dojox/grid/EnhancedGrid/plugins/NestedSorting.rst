@@ -113,6 +113,44 @@ Using the nested sorting feature is pretty simple as shown below:
   <script>
       var grid = new dojox.grid.EnhancedGrid({id: "grid", store: "store1", plugins: {nestedSorting: true}, ...}, dojo.byId("gridDiv"));
   </script>
+
+* Set default sorting order with sortFields
+   
+.. code-block :: html
+  :linenos:
+
+  grid = new dojox.grid.EnhancedGrid({
+      id: "grid",
+      //default sorting order
+      sortFields: [{attribute: 'col4', descending: false},{attribute: 'col7', descending: true}],
+      plugins: {nestedSorting: true}
+  }, div);
+  grid.startup();
+
+* Set new sorting order dynamically
+   
+.. code-block :: html
+  :linenos:
+
+  var newSortFields = [{attribute: 'col3', descending: true},{attribute: 'col1', descending: false}];
+  grid.setSortIndex(newSortFields);
+
+* Prevent column(s) from being sorted by canSort()
+   
+.. code-block :: html
+  :linenos:
+
+  grid = new dojox.grid.EnhancedGrid({
+      id: "grid",
+      //prevent some columns from being sorted
+      //column index 0 and column with field 'col6' are disabled for being sorted
+      canSort: function(colIndex, field){
+          return colIndex != 0 && field != 'col6';
+      },
+      plugins: {nestedSorting: true}
+  }, div);
+  grid.startup();
+
     
 When nested sorting is enabled, you can also use comparatorMap for custom sorting; see `dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`_ on DojoCampus.org for more details.
 
