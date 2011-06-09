@@ -119,7 +119,7 @@ with JavaScript way
 .. code-block :: html
   :linenos:
 
-  grid = new dojox.grid.EnhancedGrid({
+  var grid = new dojox.grid.EnhancedGrid({
       id: "grid",
       //default sorting order
       sortFields: [{attribute: 'col4', descending: false},{attribute: 'col7', descending: true}],
@@ -140,7 +140,7 @@ with JavaScript way
 .. code-block :: html
   :linenos:
 
-  grid = new dojox.grid.EnhancedGrid({
+  var grid = new dojox.grid.EnhancedGrid({
       id: "grid",
       //prevent some columns from being sorted
       //column index 0 and column with field 'col6' are disabled for being sorted
@@ -150,7 +150,6 @@ with JavaScript way
       plugins: {nestedSorting: true}
   }, div);
   grid.startup();
-
     
 When nested sorting is enabled, you can also use comparatorMap for custom sorting; see `dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`_ on DojoCampus.org for more details.
 
