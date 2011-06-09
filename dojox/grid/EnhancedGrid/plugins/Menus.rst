@@ -16,9 +16,11 @@ Introduction
 
 With this new feature, users can add context menus either through declarative HTML markup or JavaScript. The following menu types are supported:
 
-* Header cell menu
-* Cell menu
+* Header menu
 * Row menu
+* Cell menu
+* Selected region menu
+  - Selected regions could be selected rows, columns or cells
 
 HTML markup usage sample
 
@@ -258,7 +260,28 @@ Usage
 
 Tips
 ----
-TODO: tips - bind events to onxxContextMenu(e)
+How to get row/column index when the menu is popped up?
+
+There will be four events fired corresponding to appropriate context menu types:
+
+* onRowContextMenu(e)
+* onCellContextMenu(e)
+* onHeaderCellContextMenu(e)
+* onSelectedRegionContextMenu(e)
+
+And the event contains {rowIndex: xxx, cellIndex:xx}, so following is a quick sample:
+
+.. code-block :: javascript
+  :linenos:
+
+  <script type="text/javascript">
+      dojo.connect(grid, 'onRowContextMenu', function(e){
+          var rowIndex = e.rowIndex;
+          var colIndex = e.cellIndex;
+      });
+  </script>
+
+
 
 
 ========
