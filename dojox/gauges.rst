@@ -27,10 +27,10 @@ Predefined gauges with glossy appearance
 ========================================
 
 * `dojox.gauges.GlossyCircularGauge <dojox/gauges/GlossyCircularGauge>`_
-  A cirular gauge.
+  A circular gauge.
 
 * `dojox.gauges.GlossySemiCircularGauge <dojox/gauges/GlossySemiCircularGauge>`_
-  A semi cirular gauge.
+  A semi circular gauge.
 
 * `dojox.gauges.GlossyHorizontalGauge <dojox/gauges/GlossyHorizontalGauge>`_
-  A horizontal gauge.
+  An horizontal gauge.
