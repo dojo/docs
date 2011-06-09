@@ -156,17 +156,15 @@ Scenario
 * Indirect selection by radio buttons
 
 
-.. image:: ../../radio-buttons.png
+.. image:: indirect1.png
 
 * Indirect selection by check boxes
 
 Besides selecting or deselecting rows by clicking on check boxes, the SHIFT key can be held during the 2nd click to select or deselect a range of rows.
 
-.. image:: ../../extended-selection-checkboxes.gif
-
 * An additional selection technique is to swipe through check boxes (mouse down on the first, drag through the adjacent check boxes and then release on the last).
 
-.. image:: ../../swipe-checkbox.gif
+.. image:: indirect2.png
 
 Accessibility
 -------------
