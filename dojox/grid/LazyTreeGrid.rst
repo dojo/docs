@@ -6,7 +6,7 @@ dojox.grid.LazyTreeGrid
 :Status: Draft
 :Version: 1.0
 :Authors: Wang Qiang
-:Project owner: Nathan Toone
+:Project owner: Evan Huang
 :Available: since V1.6
 
 .. contents::
