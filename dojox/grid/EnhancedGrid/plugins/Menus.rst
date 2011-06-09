@@ -294,15 +294,14 @@ Tips
   grid.selection.getSelected()
 
 
-2. When `Selector <dojox/grid/EnhancedGrid/plugins/Selector>` plugin if turned on, we can get the selected rows/column/cell by the following way:
+2. When `Selector <Selector>`_ plugin if turned on, we can get the selected rows/column/cell by the following way:
 
 .. code-block :: javascript
   :linenos:
 
   grid.plugin('selector').getSelected('row'|'col'|'cell');
 
-
-- More details please refer to `Selector <dojox/grid/EnhancedGrid/plugins/Selector>` plugin
+More details please refer to `Selector <Selector>`_ plugin
 
 
 ========
