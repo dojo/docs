@@ -156,7 +156,7 @@ Scenario
 * Indirect selection by radio buttons
 
 
-.. image:: indirect1.png
+.. image:: indirect1-1.png
 
 * Indirect selection by check boxes
 
@@ -190,8 +190,25 @@ Keyboard Support
 
 Note that extended selection is also enabled through the row headers as well.
 
-Tips
-----
+Usages
+------
+* Turn on Select All checkbox in the column header
+
+.. code-block :: javascript
+  :linenos:
+
+  <div id="grid" dojoType="dojox.grid.EnhancedGrid" plugins="{indirectSelection:{headerSelector:true, ...}}" ...></div>
+
+* Listen to events when the check box/radio button is checked/unchecked
+
+.. code-block :: javascript
+  :linenos:
+
+  dojo.connect(grid.selection, 'onSelected'|'onDeselected', function(rowIndex){...})
+
+  //when Select All checkbox is changed
+  dojo.connect(grid.rowSelectCell, 'toggleAllSelection', function(newValue){...})
+
 * When the "Indirect Selection" feature is enabled, you could handle row selection programmatically as follows.
 
 .. code-block :: javascript
@@ -221,19 +238,12 @@ Tips
       dijit.byId('grid').rowSelectCell.setDisabled(rowIndex, true|false);
   </script>
 
-* A topic named "rowSelectionChangedTopic" will be published when row selections are changed. The topic can be subscribed to with the following code.
-
-.. code-block :: javascript
-  :linenos:
-
-  dojo.subscribe(dijit.byId('grid').rowSelectionChangedTopic, function(){...});
-
 * You can check whether a certain row is selected with the following code.
 
 .. code-block :: javascript
   :linenos:
 
-  dijit.byId('grid').selection.selected[rowIndex] // returns true or false
+  dijit.byId('grid').selection.isSelected(rowIndex) // returns true or false
 
 * It's also possible to make some styling customizations for the indirect selection column.
 
@@ -250,6 +260,13 @@ or
   <script>
     var grid = new dojox.grid.EnhancedGrid({id:"grid", plugins:{indirectSelection:{name:"Selection",width:"70px",styles:"text-align:center;"}, ...}, dojo.byId('gridDiv'));
   </script>
+
+
+============
+Known Issues
+============
+
+* There are known compatibility issues when Indirect Selection is used together with `Selector <Selector>`_ plugin
 
 
 ========
