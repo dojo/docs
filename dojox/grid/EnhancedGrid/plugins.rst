@@ -16,6 +16,9 @@ Plugin List
 
 These plugins are loaded on demand, so they must be required and declared before being used.
 
+  * `Nested Sorting <dojox/grid/EnhancedGrid/plugins/NestedSorting>`_ - Multiple column sorting
+  * `Indirect Selection <dojox/grid/EnhancedGrid/plugins/IndirectSelection>`_ - Selecting rows with radio buttons or check boxes
+  * `Declarative context menus <dojox/grid/EnhancedGrid/plugins/Menus>`_ - Context menus for header, row, cell and selected regions
   * `Filter <dojox/grid/EnhancedGrid/plugins/Filter>`_ - Support for defining rules to filter grid content in various data types.
   * `Exporter <dojox/grid/EnhancedGrid/plugins/Exporter>`_ - Support for exporting grid content to various formats.
   * `Printer <dojox/grid/EnhancedGrid/plugins/Printer>`_ - Provide convenient ways to printing grid.
