@@ -289,7 +289,6 @@ Tips
 
 .. code-block :: javascript
   :linenos:
-
   grid.selection.getSelected()
 
 
@@ -297,11 +296,10 @@ Tips
 
 .. code-block :: javascript
   :linenos:
-
   grid.plugin('selector').getSelected('row'|'col'|'cell');
 
 
-   - More details please refer to `Selector <dojox/grid/EnhancedGrid/plugins/Selector>` plugin
+- More details please refer to `Selector <dojox/grid/EnhancedGrid/plugins/Selector>` plugin
 
 
 ========
