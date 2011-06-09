@@ -14,7 +14,7 @@ dojox.grid.EnhancedGrid.plugins.Menu
 Introduction
 ==============
 
-With this new feature, users can add context menus either through declarative HTML markup or JavaScript. The following menu types are supported:
+With this feature, users can add context menus either through declarative HTML markup or JavaScript. The following menu types are supported:
 
 * Header menu
 * Row menu
@@ -262,14 +262,14 @@ Usage
 Listening to Menu Events
 ------------------------
 
-There will be four events fired corresponding to the appropriate context menu types:
+There will be four events fired corresponding to the appropriate menu types:
 
 * onRowContextMenu(e)
 * onCellContextMenu(e)
 * onHeaderCellContextMenu(e)
 * onSelectedRegionContextMenu(e)
 
-And the event contains rowIndex and cellIndex as parameters, so following is a quick sample shows how to get row/column index when the menu popped up:
+The Event parameter contains rowIndex and cellIndex, so following is a quick sample shows how to get row/column index when the menu popped up:
 
 .. code-block :: javascript
   :linenos:
@@ -284,9 +284,9 @@ And the event contains rowIndex and cellIndex as parameters, so following is a q
 
 Tips
 ----
-* How to get selected rows or columns when the menu is popped up?
+* How to get selected rows, columns or even cells when the menu is popped up?
 
-1. Normally when `Selector <dojox/grid/EnhancedGrid/plugins/Selector>` plugin is off, we can get selected rows by: 
+1. Normally, when `Selector <dojox/grid/EnhancedGrid/plugins/Selector>`_ plugin is off, we can get selected rows by: 
 
 .. code-block :: javascript
   :linenos:
@@ -294,7 +294,7 @@ Tips
   grid.selection.getSelected()
 
 
-2. When `Selector <Selector>`_ plugin if turned on, we can get the selected rows/column/cell by the following way:
+2. When `Selector <Selector>`_ plugin if turned on, we can get the selected rows/column/cell with the following way:
 
 .. code-block :: javascript
   :linenos:
