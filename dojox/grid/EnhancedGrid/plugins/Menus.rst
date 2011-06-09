@@ -285,10 +285,12 @@ And the event contains rowIndex and cellIndex as parameters, so following is a q
 Tips
 ----
 * How to get selected rows or columns when the menu is popped up?
+
 1. Normally when `Selector <dojox/grid/EnhancedGrid/plugins/Selector>` plugin is off, we can get selected rows by: 
 
 .. code-block :: javascript
   :linenos:
+
   grid.selection.getSelected()
 
 
@@ -296,6 +298,7 @@ Tips
 
 .. code-block :: javascript
   :linenos:
+
   grid.plugin('selector').getSelected('row'|'col'|'cell');
 
 
