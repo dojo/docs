@@ -258,18 +258,18 @@ Usage
       plugins: {menus:{headerMenu:’headerMenu‘, rowMenu:’rowMenu‘, cellMenu:’cellMenu‘, selectedRegionMenu:’selectedRegionMenu‘}}, ...},
       dojo.byId('gridDiv'));
 
-Tips
-----
-How to get row/column index when the menu is popped up?
 
-There will be four events fired corresponding to appropriate context menu types:
+Listening to Menu Events
+------------------------
+
+There will be four events fired corresponding to the appropriate context menu types:
 
 * onRowContextMenu(e)
 * onCellContextMenu(e)
 * onHeaderCellContextMenu(e)
 * onSelectedRegionContextMenu(e)
 
-And the event contains {rowIndex: xxx, cellIndex:xx}, so following is a quick sample:
+And the event contains rowIndex and cellIndex as parameters, so following is a quick sample shows how to get row/column index when the menu popped up:
 
 .. code-block :: javascript
   :linenos:
@@ -281,7 +281,24 @@ And the event contains {rowIndex: xxx, cellIndex:xx}, so following is a quick sa
       });
   </script>
 
+Tips
+----
+* How to get selected rows or columns when the menu is popped up?
+1. Normally when `Selector <dojox/grid/EnhancedGrid/plugins/Selector>` plugin is off, we can get selected rows by: 
 
+.. code-block :: javascript
+  :linenos:
+
+  grid.selection.getSelected()
+
+2. When `Selector <dojox/grid/EnhancedGrid/plugins/Selector>` plugin if turned on, we can get the selected rows/column/cell by the following way:
+
+.. code-block :: javascript
+  :linenos:
+
+  grid.plugin('selector').getSelected('row'|'col'|'cell');
+
+   - More details please refer to `Selector <dojox/grid/EnhancedGrid/plugins/Selector>` plugin
 
 
 ========
