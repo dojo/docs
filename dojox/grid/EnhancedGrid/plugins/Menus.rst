@@ -301,7 +301,7 @@ Tips
 
   grid.plugin('selector').getSelected('row'|'col'|'cell');
 
-More details please refer to `Selector <Selector>`_ plugin
+  More details please refer to `Selector <Selector>`_ plugin
 
 
 ========
