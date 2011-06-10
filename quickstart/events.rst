@@ -244,7 +244,7 @@ In the above code, the first argument is the context of "baz," the second argume
 
 .. code-block :: javascript
 
-  objectConnections[1] = dojo.connect(foo, globalGuy);
+  objectConnections[1] = dojo.connect("foo", globalGuy);
 
 Now, whenever foo is called, globalGuy will also fire. As you might expect, connecting a method to a global function, or vice versa, is logical and simple:
 
@@ -432,7 +432,7 @@ or in markup as:
 
 .. code-block :: html
 
-  <div dojoType="dijit.form.Button">
+  <div data-dojo-type="dijit.form.Button">
      <script type="dojo/connect" data-dojo-event="onClick">
         ...
      </script>
@@ -452,13 +452,13 @@ or in markup:
 
 .. code-block :: html
 
-   <button dojoType="dijit.form.Button" onClick="myFunc">Click me!</button>
+   <button data-dojo-type="dijit.form.Button" onClick="myFunc">Click me!</button>
 
 or in markup using the script tag:
 
 .. code-block :: html
 
-  <div dojoType="dijit.form.Button">
+  <div data-dojo-type="dijit.form.Button">
      <script type="dojo/method" data-dojo-event="onClick">
         ...
      </script>
@@ -514,9 +514,9 @@ By way of example, consider a Spinner widget inside of a ContentPane inside of a
 
 .. code-block :: html
 
-  <div dojoType="dijit.layout.TabContainer">
-     <div dojoType="dijit.layout.ContentPane" ...>
-        <input dojoType="dijit.form.NumberSpinner" ...>
+  <div data-dojo-type="dijit.layout.TabContainer">
+     <div data-dojo-type="dijit.layout.ContentPane" ...>
+        <input data-dojo-type="dijit.form.NumberSpinner" ...>
      </div>
   </div>
 
