@@ -87,6 +87,7 @@ Speedometer style gauge (programmatic)
 ---------------------------------------------------------------
 
 .. cv-compound::
+
    :version: local
 
    .. cv:: html
