@@ -64,15 +64,20 @@ Here are the other customizable parameters.
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
 | textIndicatorColor       |  "#c4c4c4"                              |  The color of the text displaying the current value            |                  
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
-| majorTicksLabelPlacement |  "inside"                               |                                                                |
+| majorTicksLabelPlacement |  "inside"                               |  Indicates how label are placed relatively to the tick marks:  |
+|                          |                                         |  either "inside" or "outside". "inside" means between the ticks|
+|                          |                                         |  and the center of the gauge, and "outide" means between the   |
+|                          |                                         |  gauges's border and the tick marks                            |                           
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
-| noChange                 |  "true"                                 |                                                                |
+| noChange                 |  "true"                                 |  Indicates if user can change the value of the gauge by        |
+|                          |                                         |  interacting with the needle                                   |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
-| title                    |  "title"                                |                                                                |
+| title                    |  "title"                                |  The title displayed in the needle's tooltip                   |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
-| scalePrecision           |  "0"                                    |                                                                |
+| scalePrecision           |  "0"                                    |  The precision for the formating of numbers in the scale       |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
-| textIndicatorPrecision   |  "0"                                    |                                                                |
+| textIndicatorPrecision   |  "0"                                    |  The precision for the formating of numbers in the text        |
+|                          |                                         | indicator                                                      |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
 
 
