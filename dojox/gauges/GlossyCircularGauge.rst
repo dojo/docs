@@ -19,9 +19,7 @@ Introduction
 ============
 
 This gauge widget is based on dojox.gauges.AnalogGauge. It provides a way to display data on a circular gauge with a glossy appearance, such as a speedometer or a pressure gauge, for displaying a finite data value at a point in time.
-
-The glossy circular gauge widget is entirely built upon the dojox.gfx. The way to conceptually understand how the gauge widget works is that it is effectively a layering of a series of indicators to display the background shape, the major and minor ticks, the needle...
-
+This is a gauge is created with predefined indicators and thus is ready to use.
 
 
 =====
