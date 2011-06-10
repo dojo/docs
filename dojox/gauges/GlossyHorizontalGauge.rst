@@ -60,38 +60,13 @@ Here are the other customizable parameters.
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
 | textIndicatorFont        |  "normal normal normal 20pt sans-serif" |  Definition of the font used to display the current value      |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
-| noChange                 |  "true"                                 |                                                                |
+| noChange                 |  "true"                                 |  Indicates if user can change the value of the gauge by        |
+|                          |                                         |  interacting with the cursor                                   |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
-| title                    |  "title"                                |                                                                |
+| title                    |  "title"                                |  The title displayed in the needle's tooltip                   |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
-| scalePrecision           |  "0"                                    |                                                                |
+| scalePrecision           |  "0"                                    |  The precision for the formating of numbers in the scale       |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
-
-
-
-==========
-Indicators
-==========
-
-A gauge is made of several parts called "indicators". These parts are created by the gauge when its startup function is called.
-
-Here are the indicators included as a part of the glossy horinzontal gauge widget:
-
-+-----------------------------------------+---------------------------------------------------------------------------------------------+
-| Indicator class                         | Description                                                                                 |
-+=========================================+=============================================================================================+
-| dojox.gauges.GlossyHorizontalGaugeMarker| An indicator similar to the cursor on a variety of gauges                                   |
-+-----------------------------------------+---------------------------------------------------------------------------------------------+
-| dojox.gauges.BarCircleIndicator         | An indicator drawing a circle, used to display the tick marks in the gauge                  |
-+-----------------------------------------+---------------------------------------------------------------------------------------------+
-
-======
-Ranges
-======
-
-You can add colored areas on the background of the gauge to emphasize some range of values. A range is defined by a low and high value, 
-by a size and a color. The color can be a gradient. It is possible to add several ranges on a gauge.
-
 
 
 ========
