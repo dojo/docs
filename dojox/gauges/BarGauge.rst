@@ -33,10 +33,12 @@ Indicators can be handled separate of the gauge. In other words, once an indicat
 Indicators
 ==========
 
-There are 2 indicators provided by default for use with the Bar Gauge widget:
+There are several indicators provided by default for use with the Bar Gauge widget:
 
 * BarLineIndicator - The default indicator for the Bar Gauge, it can be used to create tick marks (with an offset) or to indicate a value on the gauge as a vertical line
 * BarIndicator - A bar that extends from the minimum edge of the gauge to it's current value.  It is 'resized' rather than 'moved' to change the value.
+* TextIndicator - Draws the value of the gauge as text.
+
 
 ========
 Examples
