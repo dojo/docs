@@ -77,37 +77,8 @@ Here are the other customizable parameters.
 | scalePrecision           |  "0"                                    |  The precision for the formating of numbers in the scale       |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
 | textIndicatorPrecision   |  "0"                                    |  The precision for the formating of numbers in the text        |
-|                          |                                         | indicator                                                      |
+|                          |                                         |  indicator                                                     |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
-
-
-
-==========
-Indicators
-==========
-
-A gauge is made of several parts called "indicators". These parts are created by the gauge when its startup function is called.
-
-There are 3 indicators included as a part of the glossy circular Gauge widget:
-
-+-----------------------------------------+---------------------------------------------------------------------------------------------+
-| Indicator class                         | Description                                                                                 |
-+=========================================+=============================================================================================+
-| dojox.gauges.TextIndicator              | Draws the value of the gauge as text.                                                       |
-+-----------------------------------------+---------------------------------------------------------------------------------------------+
-| dojox.gauges.GlossyCircularGaugeNeedle  |An indicator similar to the needle on a variety of gauges                                    |
-+-----------------------------------------+---------------------------------------------------------------------------------------------+
-| dojox.gauges.AnalogCircleIndicator      | An indicator drawing a circle, used to display the tick marks in the GlossyCircularGauge    |
-+-----------------------------------------+---------------------------------------------------------------------------------------------+
-
-======
-Ranges
-======
-
-You can add colored areas on the background of the gauge to emphasize some range of values. A range is defined by a low and high value, 
-by a size and a color. The color can be a gradient, and on a circular gauge a range will be represented by an arc.
-It is possible to add several ranges on a gauge.
-
 
 
 ========
@@ -147,7 +118,7 @@ The Javascript code creating the gauge:
     </script>
     
     
-A gauge with two ranges (programmatic)
+An other gauge sample
 ---------------------------------------------------------------
 
 .. code-block :: html
@@ -170,17 +141,5 @@ A gauge with two ranges (programmatic)
              majorTicksLabelPlacement="outside"
              majorTicksColor="white"
              textIndicatorVisible="false">
-          <div dojoType="dojox.gauges.Range"
-               low="-150"
-               high="0"
-               size="5"
-               color="{'type': 'linear', 'colors': [{offset: 0, color:'#FF0000'}, {offset: 1, color: '#FFFF00'}] }">
-          </div>
-          <div dojoType="dojox.gauges.Range"
-               low="0"
-               high="150"
-               size="5"
-               color="{'type': 'linear', 'colors': [{offset: 0, color:'#FFFF00'}, {offset: 1, color: '#00FF00'}] }">
-          </div>
         </div>		
     
