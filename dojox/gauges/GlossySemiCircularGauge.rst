@@ -24,10 +24,6 @@ The glossy semi circular gauge widget is entirely built upon the dojox.gfx packa
 
 
 
-
-
-
-
 =====
 Usage
 =====
@@ -68,36 +64,21 @@ Here are the other customizable parameters.
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
 | textIndicatorColor       |  "#c4c4c4"                              |  The color of the text displaying the current value            |                  
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
-| majorTicksLabelPlacement |  "inside"                               |                                                                |
+| majorTicksLabelPlacement |  "inside"                               |  Indicates how label are placed relatively to the tick marks:  |
+|                          |                                         |  either "inside" or "outside". "inside" means between the ticks|
+|                          |                                         |  and the center of the gauge, and "outide" means between the   |
+|                          |                                         |  gauges's border and the tick marks                            |                           
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
-| noChange                 |  "true"                                 |                                                                |
+| noChange                 |  "true"                                 |  Indicates if user can change the value of the gauge by        |
+|                          |                                         |  interacting with the needle                                   |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
-| title                    |  "title"                                |                                                                |
+| title                    |  "title"                                |  The title displayed in the needle's tooltip                   |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
-| scalePrecision           |  "0"                                    |                                                                |
+| scalePrecision           |  "0"                                    |  The precision for the formating of numbers in the scale       |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
-| textIndicatorPrecision   |  "0"                                    |                                                                |
+| textIndicatorPrecision   |  "0"                                    |  The precision for the formating of numbers in the text        |
+|                          |                                         |  indicator                                                     |
 +--------------------------+-----------------------------------------+----------------------------------------------------------------+
-
-
-
-==========
-Indicators
-==========
-
-A gauge is made of several parts called "indicators". These parts are created by the gauge when its startup function is called.
-
-There are 3 indicators included as a part of the glossy circular Gauge widget:
-
-+-----------------------------------------+---------------------------------------------------------------------------------------------+
-| Indicator class                         | Description                                                                                 |
-+=========================================+=============================================================================================+
-| dojox.gauges.TextIndicator              | Draws the value of the gauge as text.                                                       |
-+-----------------------------------------+---------------------------------------------------------------------------------------------+
-| dojox.gauges.GlossyCircularGaugeNeedle  |An indicator similar to the needle on a variety of gauges                                    |
-+-----------------------------------------+---------------------------------------------------------------------------------------------+
-| dojox.gauges.AnalogCircleIndicator      | An indicator drawing a circle, used to display the tick marks in the GlossyCircularGauge    |
-+-----------------------------------------+---------------------------------------------------------------------------------------------+
 
 
 
