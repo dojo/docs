@@ -88,7 +88,7 @@ This is the most simple way to run up an EnhancedGrid, and in this scenario, it'
 Run EnhancedGrid with various plugins
 =====================================
 
-EnhanedGrid can also be run with a flexible combination of the various plugins, a typical usage will look like:
+EnhanedGrid can also be run with a flexible combination of various plugins, a typical usage will look like:
 
 
 1. Import theme CSS
