@@ -19,7 +19,7 @@ Introduction
 ============
 
 This gauge widget is based on dojox.gauges.AnalogGauge. It provides a way to display data on a circular gauge with a glossy appearance, such as a speedometer or a pressure gauge, for displaying a finite data value at a point in time.
-This is a gauge is created with predefined indicators and thus is ready to use.
+It is created with predefined indicators and thus is ready to use.
 
 
 =====
