@@ -6,12 +6,12 @@ dojox.gauges.GlossySemiCircularGauge
 :Status: Draft
 :Version: 1.0
 :Project owner: Emmanuel Tissandier, Philippe Toussaint
-:Available: since V?
+:Available: since V1.7
 
 .. contents::
    :depth: 2
 
-A glossy semi circular gauge with a variety of indicators, used to display numerical data.
+A glossy semi circular gauge, used to display numerical data.
 
 
 ============
