@@ -18,9 +18,8 @@ A glossy horizontal gauge with a variety of indicators, used to display numerica
 Introduction
 ============
 
-This gauge widget is based on dojox.gauges.BarGauge. It provides a way to display data on a horizontal gauge with a glossy appearance, for displaying a finite data value at a point in time. 
-
-The glossy horizontal gauge widget is entirely built upon the dojox.gfx package. The way to conceptually understand how the gauge widget works is that it is effectively a layering of a series of indicators to display the background shape, the major and minor ticks, the value indicator...
+This gauge widget is based on dojox.gauges.BarGauge. It provides a way to display data on a horizontal gauge with a glossy appearance, for displaying a finite data value at a point in time.
+It is created with predefined indicators and thus is ready to use.
 
 
 
