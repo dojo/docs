@@ -16,18 +16,18 @@ Plugin List
 
 These plugins are loaded on demand, so they must be required and declared before being used.
 
-  * `Nested Sorting <dojox/grid/EnhancedGrid/plugins/NestedSorting>`_ - Multiple column sorting
-  * `Indirect Selection <dojox/grid/EnhancedGrid/plugins/IndirectSelection>`_ - Selecting rows with radio buttons or check boxes
-  * `Declarative context menus <dojox/grid/EnhancedGrid/plugins/Menus>`_ - Context menus for header, row, cell and selected regions
-  * `Filter <dojox/grid/EnhancedGrid/plugins/Filter>`_ - Support for defining rules to filter grid content in various data types.
-  * `Exporter <dojox/grid/EnhancedGrid/plugins/Exporter>`_ - Support for exporting grid content to various formats.
-  * `Printer <dojox/grid/EnhancedGrid/plugins/Printer>`_ - Provide convenient ways to printing grid.
-  * `Selector <dojox/grid/EnhancedGrid/plugins/Selector>`_ - Unified extended selection support for rows, columns and cells. 
-  * `DnD <dojox/grid/EnhancedGrid/plugins/DnD>`_ - Drag-and-drop support for rows/columns/cells, both within grid and out of grid.
-  * `Pagination <dojox/grid/EnhancedGrid/plugins/Pagination>`_ - A different approach to work with huge data set besides the default virtual scrolling way
-  * `CellMerge <dojox/grid/EnhancedGrid/plugins/CellMerge>`_ - Support for merging adjacent cells within a row.
-  * `Cookie <dojox/grid/EnhancedGrid/plugins/Cookie>`_ - Persistence of grid preferences, like column width, column order and sorting order.
-  * `Search <dojox/grid/EnhancedGrid/plugins/Search>`_ - Support for searching the grid by regular expressions as well as wildcard pattern.
+* `Nested Sorting <dojox/grid/EnhancedGrid/plugins/NestedSorting>`_ - Multiple column sorting
+* `Indirect Selection <dojox/grid/EnhancedGrid/plugins/IndirectSelection>`_ - Selecting rows with radio button or check box
+* `Declarative context menus <dojox/grid/EnhancedGrid/plugins/Menus>`_ - Context menus for row, column, header and selected regions
+* `Filter <dojox/grid/EnhancedGrid/plugins/Filter>`_ - Support for defining rules to filter grid content with various data types.
+* `Exporter <dojox/grid/EnhancedGrid/plugins/Exporter>`_ - Exporting grid content to various formats.
+* `Printer <dojox/grid/EnhancedGrid/plugins/Printer>`_ - Providing convenient ways to print grid.
+* `Selector <dojox/grid/EnhancedGrid/plugins/Selector>`_ - Unified extended selection support for rows, columns and cells. 
+* `DnD <dojox/grid/EnhancedGrid/plugins/DnD>`_ - Drag-and-drop support for rows/columns/cells, either within grid or out of grid.
+* `Pagination <dojox/grid/EnhancedGrid/plugins/Pagination>`_ - Pagination approach to work with huge data set besides the default virtual scrolling way
+* `CellMerge <dojox/grid/EnhancedGrid/plugins/CellMerge>`_ - Merging adjacent cells within a row.
+* `Cookie <dojox/grid/EnhancedGrid/plugins/Cookie>`_ - Grid preferences persistence e.g column width|order and sorting order.
+* `Search <dojox/grid/EnhancedGrid/plugins/Search>`_ - Searching grid content by regular expressions or simple wildcard pattern.
 
 ========
 See Also
