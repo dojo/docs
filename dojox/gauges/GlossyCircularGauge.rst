@@ -86,18 +86,13 @@ Examples
 Speedometer style gauge (programmatic)
 ---------------------------------------------------------------
 
-The HTML <div> element to display the gauge widget:
+.. cv-compound::
 
-.. code-block :: html
-  :linenos:  
+   .. cv:: html
   
     <div id="CircularGauge" ></div>
 
-
-The Javascript code creating the gauge:
-
-.. code-block :: javascript
-  :linenos:
+  .. cv:: javascript
   
     <script type="text/javascript">
         dojo.require('dijit.form.Button');
@@ -119,10 +114,9 @@ The Javascript code creating the gauge:
 An other gauge sample
 ---------------------------------------------------------------
 
-.. code-block :: html
-  :linenos:  
-    
-        <div dojoType="dojox.gauges.GlossyCircularGauge"
+.. cv-compound::
+   .. cv:: html
+          <div dojoType="dojox.gauges.GlossyCircularGauge"
              id="csGaugeMargin"
              value="0"
              width="170"
