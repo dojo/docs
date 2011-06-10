@@ -19,9 +19,7 @@ Introduction
 ============
 
 This gauge widget is based on dojox.gauges.AnalogGauge. It provides a way to display data on a semi circular gauge with a glossy appearance.
-
-The glossy semi circular gauge widget is entirely built upon the dojox.gfx package. The way to conceptually understand how the gauge widget works is that it is effectively a layering of a series of indicators to display the background shpae, the major and minor ticks, the needle...
-
+It is created with predefined indicators and thus is ready to use.
 
 
 =====
