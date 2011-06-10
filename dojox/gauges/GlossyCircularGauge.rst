@@ -117,7 +117,9 @@ An other gauge sample
 ---------------------------------------------------------------
 
 .. cv-compound::
+
    .. cv:: html
+
           <div dojoType="dojox.gauges.GlossyCircularGauge"
              id="csGaugeMargin"
              value="0"
