@@ -130,7 +130,7 @@ EnhanedGrid can also be run with a flexible combination of various plugins, a ty
 EnhancedGrid plugin list
 =============================
 
-Following is a complete list of EnahancedGrid plugins, please refer to the separate page for more details:
+Following is a complete list of EnahancedGrid plugins, please refer to the separate page for detail usages:
 
 * `Nested Sorting <dojox/grid/EnhancedGrid/plugins/NestedSorting>`_ - Multiple column sorting
 * `Indirect Selection <dojox/grid/EnhancedGrid/plugins/IndirectSelection>`_ - Selecting rows with radio button or check box
