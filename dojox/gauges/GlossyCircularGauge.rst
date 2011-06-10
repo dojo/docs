@@ -118,6 +118,8 @@ An other gauge sample
 
 .. cv-compound::
 
+   :version: local
+
    .. cv:: html
 
           <div dojoType="dojox.gauges.GlossyCircularGauge"
