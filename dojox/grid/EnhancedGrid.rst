@@ -20,7 +20,7 @@ EnhancedGrid (dojox.grid.EnhancedGrid) provides a rich set of features that enha
 Run EnhancedGrid without plugins
 ================================
 
-This is the most simple way to run up an EnhancedGrid, and in the scenario, it's actually the same as a base DataGrid since no plugins are turned on.
+This is the most simple way to run up an EnhancedGrid, and in this scenario, it's basically the same as a base DataGrid since no plugins are turned on.
 
 .. code-example::
   :toolbar: themes, versions, dir
