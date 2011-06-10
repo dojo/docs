@@ -34,12 +34,15 @@ Indicators can be handled separate of the gauge. In other words, once an indicat
 Indicators
 ==========
 
-There are 4 indicators included as a part of the Analog Gauge widget:
+There are several indicators included as a part of the Analog Gauge widget:
 
 * AnalogLineIndicator - Is used to create the tick marks (with an offset from the middle).  Can also be used as a value indicator (without the offset).  See first example.
 * AnalogArrowIndicator - Behaves and looks similar to the line indicator, but has an arrow head at the end.
 * AnalogNeedleIndicator - An indicator similar to the needle on a variety of gauges.  Has a central circular hub and a triangular shaft that tapers to a point.
 * AnalogArcIndicator - Draws an arc around the center of the gauge.  Can be made wider or narrower by varying the width.  Useful for making a gradient track towards the end of a gauge (see test file).
+* TextIndicator - Draws the value of the gauge as text.
+* AnalogCircleIndicator - An indicator drawing a circle, used to display the tick marks of the scale.
+
 
 ========
 Examples
