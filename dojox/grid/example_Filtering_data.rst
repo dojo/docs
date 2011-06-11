@@ -20,7 +20,7 @@ The Grid offers a filter() method, to filter data from the current query (client
     <span dojoType="dojox.data.CsvStore" 
         // We use the store from the examples above.
         // Please uncomment this line, if you need your own store:
-        // jsId="store2" url="{{dataUrl}}dojox/grid/tests/support/movies.csv">
+        // data-dojo-id="store2" url="{{dataUrl}}dojox/grid/tests/support/movies.csv">
     </span>
 
     <div>
@@ -29,7 +29,7 @@ The Grid offers a filter() method, to filter data from the current query (client
     </div>
 
     <table dojoType="dojox.grid.DataGrid"
-        jsId="grid3"
+        data-dojo-id="grid3"
         store="store2"
         query="{ Title: '*' }"
         clientSort="true"
