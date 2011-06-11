@@ -162,7 +162,7 @@ Example showing how to create a minimal Rotator instance.
    dojo.require("dojox.widget.Rotator");
  </script>
  
- <div dojoType="dojox.widget.Rotator">
+ <div data-dojo-type="dojox.widget.Rotator">
    <div>Pane 0</div>
    <div>Pane 1</div>
    <div>Pane 2</div>
