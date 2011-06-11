@@ -42,9 +42,9 @@ Usage
  <script type="text/javascript">
    dojo.require("dojox.widget.Calendar");
  </script>
- <div dojoType="dojox.widget.Calendar"></div>
+ <div data-dojo-type="dojox.widget.Calendar"></div>
 
-As shown in the example above, the ''dojox/widget/Calendar/Calendar.css'' CSS file must be included on the page, the JavaScript can be loaded using ''dojo.require("dojox.widget.Calendar")'', and a calendar can be placed on the page using the ''dojoType'' attribute.
+As shown in the example above, the ''dojox/widget/Calendar/Calendar.css'' CSS file must be included on the page, the JavaScript can be loaded using ''dojo.require("dojox.widget.Calendar")'', and a calendar can be placed on the page using the ''data-dojo-type'' attribute.
 
 
 ========
@@ -122,8 +122,8 @@ This example shows how to construct a standard Calendar declaratively.  Note the
     <style type="text/css">
       @import "{{baseUrl}}dojox/widget/Calendar/Calendar.css";
     </style>
-    <div id="cal_3" dojoType="dojox.widget.Calendar">
-      <script type="dojo/connect" event="onValueSelected" args="date">
+    <div id="cal_3" data-dojo-type="dojox.widget.Calendar">
+      <script type="dojo/connect" data-dojo-event="onValueSelected" data-dojo-args="date">
         dojo.byId("cal_3_report").innerHTML = date;
       </script>
     </div>
@@ -146,7 +146,7 @@ This example shows how to construct a Calendar declaratively, which only shows t
       @import "{{baseUrl}}dojox/widget/Calendar/Calendar.css";
     </style>
     <div id="cal_4" dojoType="dojox.widget.DailyCalendar">
-      <script type="dojo/connect" event="onValueSelected" args="date">
+      <script type="dojo/connect" data-dojo-event="onValueSelected" data-dojo-args="date">
         dojo.byId("cal_4_report").innerHTML = date;
       </script>
     </div>
@@ -174,7 +174,7 @@ As the calendar consists of a combination of views, it is possible to mix these 
       @import "{{baseUrl}}dojox/widget/Calendar/Calendar.css";
     </style>
     <div id="cal_5" dojoType="dojox.widget.CustomDayAndYearCalendar">
-      <script type="dojo/connect" event="onValueSelected" args="date">
+      <script type="dojo/connect" data-dojo-event="onValueSelected" data-dojo-args="date">
         dojo.byId("cal_5_report").innerHTML = date;
       </script>
     </div>
