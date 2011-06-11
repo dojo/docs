@@ -108,7 +108,7 @@ Note: The custom button is simply an extension of "dijit.form.Button".
 
 .. code-block :: html
 
-    <span dojoType="my.form.Button">my.form.button</span>
+    <span data-dojo-type="my.form.Button">my.form.button</span>
 
 ========
 See Also
