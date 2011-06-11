@@ -124,8 +124,8 @@ Here's an example of data-dojo-attach-point and data-dojo-attach-event:
 
 				templateString:
 					"<div>" +
-						"<button dojoAttachEvent='onclick: increment'>press me</button>" +
-						"&nbsp; count: <span dojoAttachPoint='counter'>0</span>" +
+						"<button data-dojo-attach-event='onclick: increment'>press me</button>" +
+						"&nbsp; count: <span data-dojo-attach-point='counter'>0</span>" +
 					"</div>",
 
 				 increment: function(evt){
@@ -179,7 +179,7 @@ For example:
 		        dojo.declare("MyButton",
 			[dijit._Widget, dijit._Templated], {
 				templateString:
-				    "<button dojoAttachPoint='containerNode' dojoAttachEvent='onclick: onClick'></button>",
+				    "<button data-dojo-attach-point='containerNode' data-dojo-attach-event='onclick: onClick'></button>",
                                 onClick: function(evt){
                                         alert("Awesome!!");
                                 }
