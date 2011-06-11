@@ -74,7 +74,7 @@ Declarative example
 
   .. cv:: html
 
-    <div dojoType="dijit.layout.ContentPane">
+    <div data-dojo-type="dijit.layout.ContentPane">
       Hi, pretty boring huh?
     </div>
 
