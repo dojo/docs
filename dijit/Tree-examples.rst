@@ -53,12 +53,12 @@ Expanding and Focusing tree nodes programatically
 
   .. cv:: html
 
-    <div dojoType="dojo.data.ItemFileReadStore" jsId="continentStore"
+    <div dojoType="dojo.data.ItemFileReadStore" data-dojo-id="continentStore"
       url="{{dataUrl}}dijit/tests/_data/countries.json"></div>
-    <div dojoType="dijit.tree.ForestStoreModel" jsId="continentModel" 
+    <div dojoType="dijit.tree.ForestStoreModel" data-dojo-id="continentModel" 
       store="continentStore" query="{type:'continent'}"
       rootId="continentRoot" rootLabel="Continents" childrenAttrs="children"></div>
-    <div dojoType="dijit.Tree" jsId="mytree" openOnClick="true"
+    <div dojoType="dijit.Tree" data-dojo-id="mytree" openOnClick="true"
         model="continentModel" showRoot="false" persist="false"></div>
     <div dojoType="dijit.form.Button" onClick="selectNode();">Highlight the node!</div>
 
@@ -117,12 +117,12 @@ The following example contains workaround code for this problem, as well as an e
 
   .. cv:: html
 
-    <div dojoType="dojo.data.ItemFileReadStore" jsId="continentStore"
+    <div dojoType="dojo.data.ItemFileReadStore" data-dojo-id="continentStore"
       url="{{dataUrl}}dijit/tests/_data/countries.json"></div>
-    <div dojoType="dijit.tree.ForestStoreModel" jsId="continentModel" 
+    <div dojoType="dijit.tree.ForestStoreModel" data-dojo-id="continentModel" 
       store="continentStore" query="{type:'continent'}"
       rootId="continentRoot" rootLabel="Continents" childrenAttrs="children"></div>
-    <div dojoType="dijit.Tree" jsId="mytree2" openOnClick="true"
+    <div dojoType="dijit.Tree" data-dojo-id="mytree2" openOnClick="true"
         model="continentModel" showRoot="false" persist="false"></div>
     <div dojoType="dijit.form.Button" onClick="selectNode();">Highlight the node!</div>
 
@@ -142,9 +142,9 @@ Simply set the ``openOnClick`` attribute to ``false``
 
   .. cv:: html
 
-    <div dojoType="dojo.data.ItemFileReadStore" jsId="continentStore"
+    <div dojoType="dojo.data.ItemFileReadStore" data-dojo-id="continentStore"
       url="{{dataUrl}}dijit/tests/_data/countries.json"></div>
-    <div dojoType="dijit.tree.ForestStoreModel" jsId="continentModel" 
+    <div dojoType="dijit.tree.ForestStoreModel" data-dojo-id="continentModel" 
       store="continentStore" query="{type:'continent'}"
       rootId="continentRoot" rootLabel="Continents" childrenAttrs="children"></div>
 
