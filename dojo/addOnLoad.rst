@@ -90,12 +90,12 @@ Lets dynamically include code on button press and fire an event once the code is
     });
 
     function loadCode(){
-      alert("About to dojo.require dijit.layout.BorderContainer. Currently is is: "+dijit.layout.BorderContainer);
+      alert("About to dojo.require dijit.layout.BorderContainer.");
       dojo.require("dijit.layout.BorderContainer");
       
-      // add a dojo.adOnLoad
+      // add a dojo.addOnLoad
       dojo.addOnLoad(function(){
-        alert("This fires after BorderContainer is included. Now it is: "+dijit.layout.BorderContainer);
+        alert("This fires after BorderContainer is included. Now it is: " + dijit.layout.BorderContainer);
       });
     }
 
