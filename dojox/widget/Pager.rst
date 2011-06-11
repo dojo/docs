@@ -64,7 +64,7 @@ Declarative example: Horizontal Pager
   .. cv:: html
 
     <!-- the datastore -->
-    <div dojoType="dojo.data.ItemFileReadStore" jsId="pagerStore" id="pagerStore" 
+    <div dojoType="dojo.data.ItemFileReadStore" data-dojo-id="pagerStore" id="pagerStore" 
         url="{{dataUrl}}dojox/widget/tests/_pager-data.json"></div>
 
     <h2>Horizontal Pager</h2>
