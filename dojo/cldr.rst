@@ -94,7 +94,7 @@ The following example prints out the monetary data (places and round) for EUR (E
   .. cv:: html
 
     <button id="monetaryButton" dojoType="dijit.form.Button" type="button">Get Monetary data for EUR (Euro)
-        <script type="dojo/method" event="onClick">
+        <script type="dojo/method" data-dojo-event="onClick">
             // the ISO 4217 currency code for Euro:
             var iso = 'EUR';
             // get monetary data:
