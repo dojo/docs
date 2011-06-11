@@ -68,7 +68,7 @@ Connecting dijit.form.ComboBox
 
   .. cv :: html 
 
-    <div dojoType="dojo.data.ItemFileReadStore" data="storeData" jsId="countryStore"></div>
+    <div dojoType="dojo.data.ItemFileReadStore" data="storeData" data-dojo-id="countryStore"></div>
     <div dojoType="dijit.form.ComboBox" store="countryStore" searchAttr="name"></div>
 
 
@@ -98,8 +98,8 @@ Connecting dijit.Tree
 
   .. cv :: html 
 
-    <div dojoType="dojo.data.ItemFileReadStore" data="storeData" jsId="countryStore"></div>
-    <div dojoType="dijit.tree.ForestStoreModel" jsId="countryModel" store="countryStore" query="{}" rootId="Countries" rootLabel="Countries"></div>
+    <div dojoType="dojo.data.ItemFileReadStore" data="storeData" data-dojo-id="countryStore"></div>
+    <div dojoType="dijit.tree.ForestStoreModel" data-dojo-id="countryModel" store="countryStore" query="{}" rootId="Countries" rootLabel="Countries"></div>
     <div dojoType="dijit.Tree" model="countryModel"></div>
 
     
@@ -129,7 +129,7 @@ Connecting dijit.form.FilteringSelect
 
   .. cv :: html 
 
-    <div dojoType="dojo.data.ItemFileReadStore" data="storeData" jsId="countryStore"></div>
+    <div dojoType="dojo.data.ItemFileReadStore" data="storeData" data-dojo-id="countryStore"></div>
     <div dojoType="dijit.form.FilteringSelect" store="countryStore" searchAttr="name"></div>
 
 
@@ -168,7 +168,7 @@ Connecting dojox.grid.DataGrid
   .. cv :: html
 
     <div style="width: 400px; height: 300px;">
-      <div dojoType="dojo.data.ItemFileReadStore" jsId="countryStoreForGrid" data="storeData"></div>
+      <div dojoType="dojo.data.ItemFileReadStore" data-dojo-id="countryStoreForGrid" data="storeData"></div>
       <div id="grid" 
         dojoType="dojox.grid.DataGrid" 
         store="countryStoreForGrid" 
