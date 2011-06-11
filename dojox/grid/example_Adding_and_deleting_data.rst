@@ -19,7 +19,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
   .. cv:: html
 
     <span dojoType="dojo.data.ItemFileWriteStore" 
-        jsId="store3"
+        data-dojo-id="store3"
         url="{{ dataUrl }}dijit/tests/_data/countries.json">
     </span>
 
@@ -29,7 +29,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
     </div>
 
     <table dojoType="dojox.grid.DataGrid"
-        jsId="grid5"
+        data-dojo-id="grid5"
         store="store3"
         query="{ name: '*' }"
         rowsPerPage="20"
