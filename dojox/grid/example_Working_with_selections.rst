@@ -45,9 +45,9 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
         </thead>
     </table>
 
-    <div dojoType="dijit.form.Button">
+    <div data-dojo-type="dijit.form.Button">
         get all Selected Items
-        <script type="dojo/method" event="onClick" args="evt">
+        <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
             // Get all selected items from the Grid:
             var items = grid2.selection.getSelected();
             if(items.length){
