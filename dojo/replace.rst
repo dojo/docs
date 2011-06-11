@@ -49,7 +49,6 @@ You can see this code in action:
   :toolbar: none
   :width:  600
   :height: 400
-  :version: local
   :djConfig: parseOnLoad: false
 
   A complex object can be used with dojo.replace.
