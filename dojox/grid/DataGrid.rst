@@ -184,7 +184,7 @@ DataGrid options
 ----------------
 In addition to the options for the columns, there are also options available for the DataGrid itself.
 
-jsId
+data-dojo-id
   The name of a JavaScript variable that will be created that will hold the grid object.  This can then be referenced in scripts.
 store
   The name of JavaScript variable that holds the store object used to get data for the grid.
@@ -248,7 +248,7 @@ Data for the grid comes from a data store.  The data can be specified declarativ
   :linenos:
 
   <span dojoType="dojo.data.ItemFileWriteStore" 
-     jsId="myStore" url="/myData.json">
+     data-dojo-id="myStore" url="/myData.json">
   </span>
 
 Programatically, a store can be assigned to a DataGrid with the ``setStore(myStore)`` method call.
@@ -412,7 +412,7 @@ This example shows how to create a simple Grid declaratively.
   .. cv:: html
 
     <span dojoType="dojox.data.CsvStore" 
-        jsId="store1" url="{{ dataUrl }}dojox/grid/tests/support/movies.csv">
+        data-dojo-id="store1" url="{{ dataUrl }}dojox/grid/tests/support/movies.csv">
     </span>
 
     <table dojoType="dojox.grid.DataGrid"
@@ -538,7 +538,7 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
   .. cv:: html
 
     <span dojoType="dojox.data.CsvStore" 
-        jsId="store2" url="{{ dataUrl }}dojox/grid/tests/support/movies.csv">
+        data-dojo-id="store2" url="{{ dataUrl }}dojox/grid/tests/support/movies.csv">
     </span>
 
     <p class="info">
@@ -548,7 +548,7 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
     </p>
 
     <table dojoType="dojox.grid.DataGrid"
-        jsId="grid2"
+        data-dojo-id="grid2"
         store="store2"
         query="{ Title: '*' }"
         clientSort="true"
@@ -655,7 +655,7 @@ First, you have to set a editor for each cell, you would like to edit:
   .. cv:: html
 
     <span dojoType="dojo.data.ItemFileWriteStore" 
-        jsId="store3" url="{{ dataUrl }}dijit/tests/_data/countries.json">
+        data-dojo-id="store3" url="{{ dataUrl }}dijit/tests/_data/countries.json">
     </span>
 
     <p class="info">
@@ -664,7 +664,7 @@ First, you have to set a editor for each cell, you would like to edit:
     </p>
 
     <table dojoType="dojox.grid.DataGrid"
-        jsId="grid3"
+        data-dojo-id="grid3"
         store="store3"
         query="{ name: '*' }"
         rowsPerPage="20"
@@ -721,7 +721,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
   .. cv:: html
 
     <span dojoType="dojo.data.ItemFileWriteStore" 
-        jsId="store3" url="{{ dataUrl }}dijit/tests/_data/countries.json">
+        data-dojo-id="store3" url="{{ dataUrl }}dijit/tests/_data/countries.json">
     </span>
 
     <p class="info">
@@ -729,7 +729,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
     </p>
 
     <table dojoType="dojox.grid.DataGrid"
-        jsId="grid5"
+        data-dojo-id="grid5"
         store="store3"
         query="{ name: '*' }"
         rowsPerPage="20"
@@ -824,7 +824,7 @@ The Grid offers a filter() method, to filter data from the current query (client
     <span dojoType="dojox.data.CsvStore" 
         // We use the store from the examples above.
         // Please uncomment this line, if you need your own store:
-        // jsId="store2" url="{{ dataUrl }}dojox/grid/tests/support/movies.csv">
+        // data-dojo-id="store2" url="{{ dataUrl }}dojox/grid/tests/support/movies.csv">
     </span>
 
     <p class="info">
@@ -833,7 +833,7 @@ The Grid offers a filter() method, to filter data from the current query (client
     </p>
  
     <table dojoType="dojox.grid.DataGrid"
-        jsId="grid3"
+        data-dojo-id="grid3"
         store="store2"
         query="{ Title: '*' }"
         clientSort="true"
@@ -908,11 +908,11 @@ To use it, you just have to override default behavior by yours.
   .. cv:: html
 
     <span dojoType="dojo.data.ItemFileWriteStore" 
-        jsId="store3" url="{{ dataUrl }}dijit/tests/_data/countries.json">
+        data-dojo-id="store3" url="{{ dataUrl }}dijit/tests/_data/countries.json">
     </span>
 
     <table dojoType="dojox.grid.DataGrid"
-        jsId="grid6"
+        data-dojo-id="grid6"
         store="store3"
         query="{ name: '*' }"
         rowsPerPage="20"
