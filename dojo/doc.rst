@@ -44,7 +44,8 @@ Example usage of dojo.doc as replacement for document calls
   
   .. cv :: javascript
 
-    <script>
+    <script type="text/javascript">
+      dojo.require("dijit.form.Button");
       function addText() {
         dojo.connect(dijit.byId("addTextButton"), "onClick", function(){
            var newText = dojo.doc.createTextNode("New Text!");
@@ -52,7 +53,7 @@ Example usage of dojo.doc as replacement for document calls
            dojo.doc.body.appendChild(dojo.doc.createElement("br"));
         });
       }
-      addText();
+      dojo.addOnLoad(addText);
     </script>
 
   .. cv :: html 
