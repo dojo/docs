@@ -19,7 +19,7 @@ First, you have to set a editor for each cell, you would like to edit:
   .. cv:: html
 
     <span dojoType="dojo.data.ItemFileWriteStore" 
-        jsId="store3" url="{{ dataUrl }}dijit/tests/_data/countries.json">
+        data-dojo-id="store3" url="{{ dataUrl }}dijit/tests/_data/countries.json">
     </span>
 
     <div>
@@ -28,7 +28,7 @@ First, you have to set a editor for each cell, you would like to edit:
     </div>
 
     <table dojoType="dojox.grid.DataGrid"
-        jsId="grid3"
+        data-dojo-id="grid3"
         store="store3"
         query="{ name: '*' }"
         rowsPerPage="20"
