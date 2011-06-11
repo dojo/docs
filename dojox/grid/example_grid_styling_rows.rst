@@ -18,11 +18,11 @@ To use it, you just have to override default behavior by yours.
   .. cv:: html
 
     <span dojoType="dojo.data.ItemFileWriteStore" 
-        jsId="store3" url="{{ dataUrl }}dijit/tests/_data/countries.json">
+        data-dojo-id="store3" url="{{ dataUrl }}dijit/tests/_data/countries.json">
     </span>
 
     <table dojoType="dojox.grid.DataGrid"
-        jsId="grid6"
+        data-dojo-id="grid6"
         store="store3"
         query="{ name: '*' }"
         rowsPerPage="20"
