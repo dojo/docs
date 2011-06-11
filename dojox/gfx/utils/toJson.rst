@@ -69,7 +69,7 @@ Programmatic example
   .. cv :: html 
 
     <div id="gfxObject"></div>
-    <div dojoType="dijit.form.Button" id="button">Click me to serialize the GFX object to JSON!</div>
+    <div data-dojo-type="dijit.form.Button" id="button">Click me to serialize the GFX object to JSON!</div>
     <br>
     <br>  
     <b>JSON Serialization</b>
