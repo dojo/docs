@@ -65,7 +65,7 @@ This example shows a simple file picker text box pulling data from a dojox.data.
 
   .. cv :: html
 
-    <div dojoType="dojox.data.FileStore" jsId="fileStore" pathAsQueryParam="true"
+    <div dojoType="dojox.data.FileStore" data-dojo-id="fileStore" pathAsQueryParam="true"
         url="{{dataUrl}}dojox/data/demos/stores/filestore_dojotree.php"></div>
     <input require="true" name="fileName" type="text" dojoType="dojox.form.FilePickerTextBox"
         constraints="{store:fileStore, query:{}}" />
