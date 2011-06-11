@@ -128,7 +128,7 @@ Example Usage
     <input dojoType="dijit.form.TextBox" style="width:50em;" id="urlText" value="http://news.google.com/nwshp?hl=en&amp;tab=wn&amp;output=atom"></input>
     <br>
     <div dojoType="dijit.form.Button" id="searchButton">Search!</div>
-    <div dojoType="dojox.data.GoogleFeedStore" jsId="feedStore"></div>
+    <div data-dojo-type="dojox.data.GoogleFeedStore" data-dojo-id="feedStore"></div>
     <br>
     <br>
     <div style="width: 750px; height: 300px;">
