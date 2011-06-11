@@ -56,7 +56,7 @@ An example 2-level TreeGrid defined via HTMl would look like this:
 
 .. code-block :: html
 
-  <table dojoType="dojox.grid.TreeGrid" >
+  <table data-dojo-type="dojox.grid.TreeGrid">
     <thead>
       <tr>
         <th field="field1" width="200px">Field 1</th>
@@ -108,7 +108,7 @@ NOTE: itemAggregates are specified for *direct children* only - for example, in 
 
 .. code-block :: html
 
-  <table dojoType="dojox.grid.TreeGrid" >
+  <table data-dojo-type="dojox.grid.TreeGrid">
     <thead>
       <tr>
         <th field="field1" width="200px">Field 1</th>
