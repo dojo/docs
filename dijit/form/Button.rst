@@ -68,8 +68,8 @@ As usual you can create the button widget declaratively using the dojoType attri
 
   .. cv:: html
 
-    <button dojoType="dijit.form.Button" type="button">Click me too!
-        <script type="dojo/method" event="onClick" args="evt">
+    <button data-dojo-type="dijit.form.Button" type="button">Click me too!
+        <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
             // Do something:
             dojo.byId("result2").innerHTML += "Thank you! ";
         </script>
