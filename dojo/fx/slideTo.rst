@@ -51,8 +51,8 @@ Example 1:  Slide a dom node right 200 pixels.
          function slideIt(amt) {
             var slideArgs = {
               node: "basicNode",
-              top: (dojo.coords("basicNode").t).toString(),
-              left: (dojo.coords("basicNode").l + amt).toString(),
+              top: (dojo.marginBox("basicNode").t).toString(),
+              left: (dojo.marginBox("basicNode").l + amt).toString(),
               unit: "px"
             };
             dojo.fx.slideTo(slideArgs).play();
