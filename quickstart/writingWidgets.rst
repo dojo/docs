@@ -206,8 +206,8 @@ So, putting that all together the source becomes:
 				_i: 0,
 	
 				templateString: "<div>" +
-					"<button dojoAttachEvent='onclick: increment'>press me</button>" +
-					"&nbsp; count: <span dojoAttachPoint='counter'>0</span>" +
+					"<button data-dojo-attach-event='onclick: increment'>press me</button>" +
+					"&nbsp; count: <span data-dojo-attach-point='counter'>0</span>" +
 					"</div>",
 	
 				increment: function(){
@@ -301,8 +301,8 @@ Each parameter has a corresponding _setXXXAttr to say how it relates to the temp
 			dojo.declare("BusinessCard", [dijit._Widget, dijit._Templated], {
 				templateString:
 					"<div class='businessCard'>" +
-						"<div>Name: <span dojoAttachPoint='nameNode'></span></div>" +
-						"<div>Phone #: <span dojoAttachPoint='phoneNode'></span></div>" +
+						"<div>Name: <span data-dojo-attach-point='nameNode'></span></div>" +
+						"<div>Phone #: <span data-dojo-attach-point='phoneNode'></span></div>" +
 					"</div>",
 	
 				// Attributes
@@ -454,7 +454,7 @@ Often a widget declared in markup will have contents, i.e. it will contain some 
 
 .. code-block:: html
 
-  <button dojoType="dijit.form.Button">press me</button>
+  <button data-dojo-type="dijit.form.Button">press me</button>
 
 In the common case of non-behavioral widgets (that create a new DOM tree to replace the <button> node in the above example), the widgets need to copy the DOM tree inside of the <button> declaration to the widget's new DOM tree.
 
@@ -478,7 +478,7 @@ Having said all that, now we define the widget, referencing this template via th
 		dojo.addOnLoad(function(){
 			dojo.declare("MyButton",[dijit._Widget, dijit._Templated], {
 				templateString:
-					"<button dojoAttachPoint='containerNode'></button>"
+					"<button data-dojo-attach-point='containerNode'></button>"
 			});
 	
 			// Call the parser manually so it runs after our widget is defined
@@ -488,7 +488,7 @@ Having said all that, now we define the widget, referencing this template via th
 
   .. html::
 
-	<button dojoType="MyButton">press me</button>
+	<button data-dojo-type="MyButton">press me</button>
 
 
 =========================
