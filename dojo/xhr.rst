@@ -64,7 +64,7 @@ dojo.xhr allows you to submit all the values of your form with minimal effort:
 
   .. cv:: html
 
-    <form dojoType="dijit.form.Form" id="myForm" jsId="myForm"
+    <form dojoType="dijit.form.Form" id="myForm" data-dojo-id="myForm"
         encType="multipart/form-data" action="" method="">
         <label for="name">Name:</label> 
         <input dojoType="dijit.form.ValidationTextBox" 
