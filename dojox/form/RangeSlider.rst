@@ -144,7 +144,7 @@ Declarative horizontal example
     <div id="rangeSlider" dojoType="dojox.form.HorizontalRangeSlider"
         value="2,6" minimum="-10" maximum="10" intermediateChanges="true"
         showButtons="false" style="width:300px;">
-        <script type="dojo/method" event="onChange" args="value">
+        <script type="dojo/method" data-dojo-event="onChange" data-dojo-args="value">
             dojo.byId("sliderValue").value = value;
         </script>
     </div>
