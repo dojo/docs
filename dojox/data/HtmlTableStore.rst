@@ -150,7 +150,7 @@ Connecting HtmlTableStore to dijit.form.ComboBox
     </table>
 
     <b>Combo lookup of isbn</b><br> 
-    <div dojoType="dojox.data.HtmlTableStore" tableId="myData" jsId="comboStore"></div>
+    <div dojoType="dojox.data.HtmlTableStore" tableId="myData" data-dojo-id="comboStore"></div>
     <div dojoType="dijit.form.ComboBox" store="comboStore" searchAttr="isbn"></div>
 
 
@@ -218,7 +218,7 @@ Connecting HtmlTableStore to dojox.grid.DataGrid
     <br>
 
     <b>dojox.grid.DataGrid connected to the above table:</b><br> 
-    <div dojoType="dojox.data.HtmlTableStore" tableId="myData2" jsId="gridStore"></div>
+    <div dojoType="dojox.data.HtmlTableStore" tableId="myData2" data-dojo-id="gridStore"></div>
     <div style="width: 400px; height: 200px;">
       <div id="grid" 
         dojoType="dojox.grid.DataGrid" 
