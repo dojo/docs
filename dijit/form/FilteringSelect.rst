@@ -108,7 +108,7 @@ To set the default value for this example, specify the *value* attribute (the hi
   .. cv:: html
 
     <div dojoType="dojo.data.ItemFileReadStore" 
-        jsId="stateStore"
+        data-dojo-id="stateStore"
         url="{{dataUrl}}/dijit/tests/_data/states.json"></div>
     <input dojoType="dijit.form.FilteringSelect"
         value="KY"
@@ -136,7 +136,7 @@ In this example, the FilteringSelect has been set to display the abbreviations f
   .. cv:: html
 
     <div dojoType="dojo.data.ItemFileReadStore" 
-        jsId="stateStore"
+        data-dojo-id="stateStore"
         url="{{dataUrl}}/dijit/tests/_data/states.json"></div>
     <input dojoType="dijit.form.FilteringSelect"
         store="stateStore"
@@ -488,7 +488,7 @@ In this example, the FilteringSelect takes a labelFunc attribute pointing to a f
   .. cv:: html
 
     <div dojoType="dojo.data.ItemFileReadStore" 
-        jsId="stateStore"
+        data-dojo-id="stateStore"
         url="{{dataUrl}}/dijit/tests/_data/states.json"></div>
     <input dojoType="dijit.form.FilteringSelect"
         id="fs"
