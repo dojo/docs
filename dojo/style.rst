@@ -70,7 +70,7 @@ Passing only an ID or node returns the computed style object of the node:
     <div id="poorboy" class="style1">Don't look at me - I'm just a poor DOM node.</div>
     <ul id="poorboy_styles"></ul>
 
-    <div dojoType="dijit.form.Button">
+    <div data-dojo-type="dijit.form.Button">
         get the current style
         <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
             // Get the style from DOM node "poorboy":
@@ -107,7 +107,7 @@ Passing a node and a style property returns the current normalized, computed val
 
     <div id="poorboy2" class="style2">I will tell you anything...</div>
 
-    <div dojoType="dijit.form.Button">
+    <div data-dojo-type="dijit.form.Button">
         give me the color
         <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
             // Get the color property from DOM node "poorboy2":
@@ -138,7 +138,7 @@ Passing a node, a style property, and a value changes the current display of the
 
     <div id="poorboy3" class="style3">I don't like this green</div>
 
-    <div dojoType="dijit.form.Button">
+    <div data-dojo-type="dijit.form.Button">
         give me another color
         <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
             // Set the color 'red' to DOM node "poorboy3":
@@ -171,7 +171,7 @@ Passing a node, an object-style style property sets each of the values in turn a
 
     <div id="poorboy4" class="style4"><span class="nib">NIB</span><br/>NODE IN BLACK</div>
 
-    <div dojoType="dijit.form.Button">
+    <div data-dojo-type="dijit.form.Button">
         set multiple style properties
         <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
             // Set the color to 'white', background-color to "black", padding to "20px" to DOM node "poorboy4":
@@ -216,7 +216,7 @@ dojo.NodeList implements .style() using the same syntax, omitting the "node" par
         </ul>
     </div>
 
-    <div dojoType="dijit.form.Button">
+    <div data-dojo-type="dijit.form.Button">
         change the style for each point
         <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
             // Set the backgroundColor, color and opacity
