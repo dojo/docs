@@ -109,7 +109,7 @@ If you'd like onChange to fire after every button click, set the attribute inter
        id="temperatureCelsius"
        constraints="{min:0,max:40}"
        value="15">
-      <script type="dojo/connect" event="onChange">
+      <script type="dojo/connect" data-dojo-event="onChange">
         // dojo.filter() applies a boolean function to each array element
         // and returns an array of matches.  In our case, the over:
         // attributes are sorted downwards, so the first return element
