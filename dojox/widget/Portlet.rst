@@ -277,8 +277,8 @@ This examples shows Portlets as they are intended to be used, inside a dojox.lay
           <div>
              Drag me around by clicking on my title bar.
           </div>
-          <div dojoType="dojox.widget.Calendar">
-            <script type="dojo/connect" event="onValueSelected" args="date">
+          <div data-dojo-type="dojox.widget.Calendar">
+            <script type="dojo/connect" data-dojo-event="onValueSelected" data-dojo-args="date">
               dojo.byId("dateGoesHere").innerHTML = "Date Selected: " + date.toString();
             </script>
           </div>
