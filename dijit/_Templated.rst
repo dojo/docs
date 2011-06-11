@@ -138,7 +138,7 @@ Here's an example of data-dojo-attach-point and data-dojo-attach-event:
 
   .. html::
 
-	<span dojoType="FancyCounter">press me</span>
+	<span data-dojo-type="FancyCounter">press me</span>
 
 
 role and aria-*
@@ -156,7 +156,7 @@ Often a widget declared in markup will have contents, i.e. it will contain some 
 
 .. code-block:: html
 
-  <button dojoType="dijit.form.Button">press me</button>
+  <button data-dojo-type="dijit.form.Button">press me</button>
 
 If the template defines data-dojo-attach-point="containerNode", the children from the srcNodeRef will be copied to this node.
 
@@ -190,7 +190,7 @@ For example:
 
   .. html::
 
-	<button dojoType="MyButton">press me</button>
+	<button data-dojo-type="MyButton">press me</button>
 
 Substitution variables
 ----------------------
@@ -211,8 +211,8 @@ So what if we want the widget to have a widget inside of the template, as in ...
 .. code-block :: html
 
   <div class="combinedDateTime">
-     <div dojoType="dijit.form.DateTextBox"></div>
-     <div dojoType="dijit.form.TimeTextBox"></div>
+     <div data-dojo-type="dijit.form.DateTextBox"></div>
+     <div data-dojo-type="dijit.form.TimeTextBox"></div>
   </div>
 
 When using this template in a directly extended widget class, you will need to set the property widgetsInTemplate: true. Why? Because a widget inside a template requires some recursive parsing, which may be slow if you're drawing thousands of widgets ... especially if there is nothing extra to parse. Therefore, it is false by default.
@@ -227,8 +227,8 @@ In this case, the data-dojo-attach-point becomes a pointer to the sub-widget, no
 .. code-block :: html
 
   <div class="combinedDateTime">
-     <div dojoType="dijit.form.DateTextBox" data-dojo-attach-point="start"></div>
-     <div dojoType="dijit.form.TimeTextBox" data-dojo-attach-point="end"></div>
+     <div data-dojo-type="dijit.form.DateTextBox" data-dojo-attach-point="start"></div>
+     <div data-dojo-type="dijit.form.TimeTextBox" data-dojo-attach-point="end"></div>
   </div>
 
 You can do this in your widget code:
@@ -249,8 +249,8 @@ data-dojo-attach-event also functions to attach a widget event (not a DOM event)
 	data-dojo-attach-event="onkeypress: _onKeyPress"
 	><div data-dojo-attach-point="editorPlaceholder"></div
 	><span data-dojo-attach-point="buttonContainer"
-		><button class='saveButton' data-dojo-attach-point="saveButton" dojoType="dijit.form.Button" data-dojo-attach-event="onClick:save" disabled="true">${buttonSave}</button
-		><button class='cancelButton' data-dojo-attach-point="cancelButton" dojoType="dijit.form.Button" data-dojo-attach-event="onClick:cancel">${buttonCancel}</button
+		><button class='saveButton' data-dojo-attach-point="saveButton" data-dojo-type="dijit.form.Button" data-dojo-attach-event="onClick:save" disabled="true">${buttonSave}</button
+		><button class='cancelButton' data-dojo-attach-point="cancelButton" data-dojo-type="dijit.form.Button" data-dojo-attach-event="onClick:cancel">${buttonCancel}</button
 	></span
   ></fieldset>
 
