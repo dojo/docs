@@ -46,17 +46,17 @@ The Grid offers a filter() method, to filter data from the current query (client
         </thead>
     </table>
 
-    <div dojoType="dijit.form.Button">
+    <div data-dojo-type="dijit.form.Button">
         filter movies
-        <script type="dojo/method" event="onClick" args="evt">
+        <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
             // Filter the movies from the data store:
             grid3.filter({Title: "T*"});
         </script>
     </div>
 
-    <div dojoType="dijit.form.Button">
+    <div data-dojo-type="dijit.form.Button">
         show all movies
-        <script type="dojo/method" event="onClick" args="evt">
+        <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
             // reset the filter:
             grid3.filter({Title: "*"});
         </script>
