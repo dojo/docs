@@ -84,10 +84,10 @@ The following shows what events you can connect to and how to do this using inli
   </script>
   <p id="inlineEvents">
     <span dojoType="dojox.form.Rating" numStars="10">
-      <script type="dojo/event" event="onChange">
+      <script type="dojo/event" data-dojo-event="onChange">
         dojo.query('#inlineEvents .value')[0].innerHTML = this.value;
       </script>
-      <script type="dojo/event" event="onMouseOver" args="evt,value">
+      <script type="dojo/event" data-dojo-event="onMouseOver" data-dojo-args="evt,value">
         dojo.query('#inlineEvents .hoverValue')[0].innerHTML = value;
       </script>
     </span>
