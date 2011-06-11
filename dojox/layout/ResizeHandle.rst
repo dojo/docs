@@ -132,10 +132,10 @@ By specifying a maxHeight/maxWidth at startup, a special instance object is crea
 
   var handle = dijit.byId("thatHandle");
   dojo.subscribe("/dojo/dnd/stop", function(n){
-      var xy = dojo.coords(handle.targetDomNode);
+      var xy = dojo.marginBox(handle.targetDomNode);
       handle.maxSize = {
           // calculate new max based on where we are
-          w: xy.w - offset, h: xy.w - offset
+          w: xy.w - offset, h: xy.h - offset
       }
   }); 
 
