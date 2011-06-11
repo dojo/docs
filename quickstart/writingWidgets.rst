@@ -402,7 +402,7 @@ Here's an example of a behavioral widget (it uses the DOM node from the supplied
 
   .. html::
 
-	<span dojoType="HidePane" open="false" jsId="pane">This pane is initially hidden</span>
+	<span dojoType="HidePane" open="false" data-dojo-id="pane">This pane is initially hidden</span>
 	<button onclick="pane.set('open', true);">show</button>
 	<button onclick="pane.set('open', false);">hide</button>
 
