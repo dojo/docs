@@ -70,7 +70,7 @@ Programmatic example
 
     <b>Original surface:</b>
     <div id="gfxObject"></div>
-    <div dojoType="dijit.form.Button" id="button">Click me to copy the surface via JSON to another surface!</div>
+    <div data-dojo-type="dijit.form.Button" id="button">Click me to copy the surface via JSON to another surface!</div>
     <br>
     <br>  
     <b>JSON restored surface:</b>
