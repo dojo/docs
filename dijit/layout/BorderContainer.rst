@@ -236,7 +236,6 @@ You can use a BorderContainer inside your own dijit template with a bit of care 
   :djConfig: parseOnLoad: true
   :height: 400
   :width: 660
-  :version: 1.5
 
   .. javascript::
     :label: The dojo requires
@@ -253,7 +252,7 @@ You can use a BorderContainer inside your own dijit template with a bit of care 
                     // Note: would be a call to dojo.cache() in a 'proper' dijit
                     templateString: '<div style="width: 100%; height: 100%;">' +
                         '<div dojoType="dijit.layout.BorderContainer" design="headline" ' +
-                        '  style="width: 100%; height: 100%;" dojoAttachPoint="outerBC">' +
+                        '  style="width: 100%; height: 100%;" data-dojo-attach-point="outerBC">' +
                         '<div dojoType="dijit.layout.ContentPane" region="center">MyDijit - Center content goes here.</div>' +
                         '<div dojoType="dijit.layout.ContentPane" region="bottom">MyDijit - Bottom : ' +
                         ' <div dojoType="dijit.form.Button">A Button</div>' +
