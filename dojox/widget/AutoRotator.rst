@@ -49,7 +49,6 @@ Programmatic example
 Example showing how the AutoRotator can create the pane DOM nodes for you.
 
 .. code-example::
-  :version: local
 
   .. css::
 
@@ -117,7 +116,6 @@ Declarative example
 Example of an AutoRotator that cycles to 4 random panes, then pauses.
 
 .. code-example::
-  :version: local
 
   .. css::
 
@@ -165,7 +163,6 @@ Example of an AutoRotator that cycles to 4 random panes, then pauses.
 Example of using the "wait for event" feature. The 2nd pane will wait for a event to be published by the button before proceeding.
 
 .. code-example::
-  :version: local
 
   .. css::
 
