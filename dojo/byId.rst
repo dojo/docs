@@ -100,7 +100,7 @@ The following example lets a node by id dissapear from the screen
 
   .. cv:: html
 
-    <button dojoType="dijit.form.Button" id="buttonOne">Hide Me!</button> <button dojoType="dijit.form.Button" id="buttonTwo">Show Me!</button>
+    <button data-dojo-type="dijit.form.Button" id="buttonOne">Hide Me!</button> <button data-dojo-type="dijit.form.Button" id="buttonTwo">Show Me!</button>
     <div id="findMe">Hiya!</div>
 
   .. cv:: css
