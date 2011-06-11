@@ -74,7 +74,7 @@ Setup
 Markup
 ------
 
-To use the Uploader, simply require it and use the appropriate dojoType in an input within a form:
+To use the Uploader, simply require it and use the appropriate data-dojo-type in an input within a form:
 
 .. code-block :: javascript
  :linenos:
