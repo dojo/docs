@@ -69,7 +69,7 @@ See it in action:
   .. cv:: html
 
     <div id="example1">This node will be changed.</div>
-    <button id="button1" dojoType="dijit.form.Button" type="button">Toggle class</button>
+    <button id="button1" data-dojo-type="dijit.form.Button" type="button">Toggle class</button>
 
 
 Forcefully add a class
@@ -111,7 +111,7 @@ See it in action:
   .. cv:: html
 
     <div id="example2" class="additionalStyle">This node will be changed.</div>
-    <button id="button2" dojoType="dijit.form.Button" type="button">Add a class forcefully</button>
+    <button id="button2" data-dojo-type="dijit.form.Button" type="button">Add a class forcefully</button>
 
 
 Toggle multiple nodes
@@ -157,7 +157,7 @@ See it in action:
         <div>This node also.</div>
         <div>And this is the last one.</div>
     </div>
-    <button id="button3" dojoType="dijit.form.Button" type="button">Toggle multiple nodes</button>
+    <button id="button3" data-dojo-type="dijit.form.Button" type="button">Toggle multiple nodes</button>
 
 =====================
 Technical information
