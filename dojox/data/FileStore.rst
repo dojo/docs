@@ -183,8 +183,8 @@ Attaching the FileStore to dijit.Tree declaratively
   .. cv :: html
   
     <div>
-      <div dojoType="dojox.data.FileStore" url="{{dataUrl}}dojox/data/demos/stores/filestore_dojotree.php" pathAsQueryParam="true" jsId="dojoFiles"></div>
-      <div dojoType="dijit.tree.ForestStoreModel" jsId="fileModel" store="dojoFiles" query="{}" rootId="DojoFiles" rootLabel="Dojo Files" childrenAttrs="children"></div>
+      <div dojoType="dojox.data.FileStore" url="{{dataUrl}}dojox/data/demos/stores/filestore_dojotree.php" pathAsQueryParam="true" data-dojo-id="dojoFiles"></div>
+      <div dojoType="dijit.tree.ForestStoreModel" data-dojo-id="fileModel" store="dojoFiles" query="{}" rootId="DojoFiles" rootLabel="Dojo Files" childrenAttrs="children"></div>
       <div id="tree" dojoType="dijit.Tree" model="fileModel" ></div>  
     </div>
 
@@ -203,7 +203,7 @@ Attaching the FileStore to dijit.form.ComboBox declaratively
   .. cv :: html
 
     <div>
-      <div dojoType="dojox.data.FileStore" url="{{dataUrl}}dojox/data/demos/stores/filestore_dojoxdata.php" pathAsQueryParam="true" jsId="comboStore"></div>
+      <div dojoType="dojox.data.FileStore" url="{{dataUrl}}dojox/data/demos/stores/filestore_dojoxdata.php" pathAsQueryParam="true" data-dojo-id="comboStore"></div>
       <div dojoType="dijit.form.ComboBox"  store="comboStore" searchAttr="path" value="./demos"></div> 
     </div>
 
@@ -222,7 +222,7 @@ Attaching the FileStore to dojox.grid.DataGrid declaratively
   .. cv :: html
 
     <span dojoType="dojox.data.FileStore" 
-      jsId="fileStore3" 
+      data-dojo-id="fileStore3" 
       url="{{dataUrl}}dojox/data/demos/stores/filestore_dojoxdata.php" 
       pathAsQueryParam="true">
     </span>
