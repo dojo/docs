@@ -129,8 +129,8 @@ Loading all items through callbacks
 
   .. cv :: html 
 
-    <div dojoType="dojo.data.ItemFileReadStore" data="storeData" jsId="foodStore"></div>
-    <div dojoType="dijit.form.Button" jsId="button">Click me for a list!</div>
+    <div dojoType="dojo.data.ItemFileReadStore" data="storeData" data-dojo-id="foodStore"></div>
+    <div data-dojo-type="dijit.form.Button" data-dojo-id="button">Click me for a list!</div>
     <br>
     <br>
     <span id="list">
@@ -263,8 +263,8 @@ Loading all items through the onItem callback
 
   .. cv :: html 
 
-    <div dojoType="dojo.data.ItemFileReadStore" data="storeData2" jsId="foodStore2"></div>
-    <div dojoType="dijit.form.Button" jsId="button2">Click me for a list!</div>
+    <div dojoType="dojo.data.ItemFileReadStore" data="storeData2" data-dojo-id="foodStore2"></div>
+    <div data-dojo-type="dijit.form.Button" data-dojo-id="button2">Click me for a list!</div>
     <br>
     <br>
     <span id="list2">
