@@ -75,9 +75,9 @@ dojo.xhr allows you to submit all the values of your form with minimal effort:
             trim="true" 
             maxLength="30" />         
 
-        <div dojoType="dijit.form.Button">
+        <div data-dojo-type="dijit.form.Button">
             Submit
-            <script type="dojo/method" event="onClick" args="evt">
+            <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
                 // We are using dojo.xhrGet in this example, but
                 // you can also use dojo.xhrPost or dojo.xhrPut.
                 dojo.xhrGet({
