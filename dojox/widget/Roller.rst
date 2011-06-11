@@ -16,11 +16,11 @@ The module provides dojox.widget.Roller, which fades through the items, as well 
 Creating A Roller
 -----------------
 
-The most simple way of creating a Roller is by using the dojoType attribute:
+The most simple way of creating a Roller is by using the data-dojo-type attribute:
 
 .. code-block :: html
 
-    <ul dojoType="dojox.widget.Roller">
+    <ul data-dojo-type="dojox.widget.Roller">
         <li>Item 1</li>
         <li>Item 2</li>
         <li>Item 3</li>
