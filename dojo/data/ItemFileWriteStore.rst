@@ -310,14 +310,14 @@ The following is a semi-complex example of the write API in action. In this exam
 
   .. cv :: html 
 
-    <div dojoType="dojo.data.ItemFileWriteStore" data="geoData" jsId="geoStore"></div>
+    <div dojoType="dojo.data.ItemFileWriteStore" data="geoData" data-dojo-id="geoStore"></div>
     <b>Set the population to assign to all items</b>
     <br>
     <br>
-    <div dojoType="dijit.form.NumberSpinner" jsId="spinner" value="10000"></div>
+    <div dojoType="dijit.form.NumberSpinner" data-dojo-id="spinner" value="10000"></div>
     <br>
     <br>
-    <div dojoType="dijit.form.Button" jsId="button2">Update all geography items populations!</div>
+    <div dojoType="dijit.form.Button" data-dojo-id="button2">Update all geography items populations!</div>
     <br>
     <br>
     <div id="grid"  
@@ -423,13 +423,13 @@ This example demonstrates how to use a function such as *deleteItem*. In this ca
 
   .. cv :: html 
 
-    <div dojoType="dojo.data.ItemFileWriteStore" data="storeData2" jsId="geographyStore2"></div>
+    <div dojoType="dojo.data.ItemFileWriteStore" data="storeData2" data-dojo-id="geographyStore2"></div>
     <b>Before pressing delete, be sure to expand out the tree so you can see nodes (items), being removed from it.</b>
     <br>
-    <div dojoType="dijit.form.Button" jsId="button3">Delete All Cities!</div>
+    <div data-dojo-type="dijit.form.Button" data-dojo-id="button3">Delete All Cities!</div>
     <br>
     <br>
-    <div dojoType="dijit.tree.ForestStoreModel" jsId="geographyModel2" store="geographyStore2" query="{type: 'continent'}" rootId="Geography" rootLabel="Geography"></div>
+    <div dojoType="dijit.tree.ForestStoreModel" data-dojo-id="geographyModel2" store="geographyStore2" query="{type: 'continent'}" rootId="Geography" rootLabel="Geography"></div>
     <div dojoType="dijit.Tree" model="geographyModel2"></div>
 
 ItemFileWriteStore changes reflected in dojox.data.DataGrid (with _saveCustom)
@@ -610,14 +610,14 @@ is displayed in an alert.
 
   .. cv :: html 
 
-    <div dojoType="dojo.data.ItemFileWriteStore" data="geoData2" jsId="geoStore2"></div>
+    <div dojoType="dojo.data.ItemFileWriteStore" data="geoData2" data-dojo-id="geoStore2"></div>
     <b>Set the population to assign to all items of type city</b>
     <br>
     <br>
-    <div dojoType="dijit.form.NumberSpinner" jsId="spinner2" value="10000"></div>
+    <div dojoType="dijit.form.NumberSpinner" data-dojo-id="spinner2" value="10000"></div>
     <br>
     <br>
-    <div dojoType="dijit.form.Button" jsId="button3">Update all geography items of type city with a new population!</div>
+    <div dojoType="dijit.form.Button" data-dojo-id="button3">Update all geography items of type city with a new population!</div>
     <br>
     <br>
     <div id="grid2"   
