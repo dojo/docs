@@ -33,7 +33,7 @@ Declarative example
 
   .. cv:: html
 
-    <div dojoType="dijit.form.Form" id="myForm" jsId="myForm"
+    <div dojoType="dijit.form.Form" id="myForm" data-dojo-id="myForm"
     encType="multipart/form-data" action="" method="">
         <script type="dojo/method" event="onReset">
             return confirm('Press OK to reset widget values');
@@ -103,7 +103,7 @@ To validate a form you use the `isValid()` function. Lets take at a simple examp
 
   .. cv:: html
 
-    <div dojoType="dijit.form.Form" id="myFormTwo" jsId="myFormTwo"
+    <div dojoType="dijit.form.Form" id="myFormTwo" data-dojo-id="myFormTwo"
     encType="multipart/form-data" action="" method="">
         <table style="border: 1px solid #9f9f9f;" cellspacing="10">
             <tr>
@@ -154,7 +154,7 @@ The `validate()` function does some extra UI related work, including highlightin
 
   .. cv:: html
 
-    <div dojoType="dijit.form.Form" id="myFormTwo" jsId="myFormTwo"
+    <div dojoType="dijit.form.Form" id="myFormTwo" data-dojo-id="myFormTwo"
     encType="multipart/form-data" action="" method="">
         <table style="border: 1px solid #9f9f9f;" cellspacing="10">
             <tr>
@@ -200,7 +200,7 @@ It is possible to submit a dijit.form.Form with native elements to the server, v
 
   .. cv:: html
 
-    <div dojoType="dijit.form.Form" id="myFormThree" jsId="myFormThree"
+    <div dojoType="dijit.form.Form" id="myFormThree" data-dojo-id="myFormThree"
     encType="multipart/form-data" action="" method="">
         <script type="dojo/method" event="validate">
            return dojo.query('INPUT[name=order]','myFormThree').filter(function(n){return n.checked}).length > 0 &&
