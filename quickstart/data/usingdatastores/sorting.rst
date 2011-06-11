@@ -149,8 +149,8 @@ Showing how sort attributes affect ordering
 
   .. cv :: html 
 
-    <div dojoType="dojo.data.ItemFileReadStore" data="storeData" jsId="foodStore"></div>
-    <div dojoType="dijit.form.Button" jsId="button">Click me to show sorted and unsorted lists!</div>
+    <div dojoType="dojo.data.ItemFileReadStore" data="storeData" data-dojo-id="foodStore"></div>
+    <div data-dojo-type="dijit.form.Button" data-dojo-id="button">Click me to show sorted and unsorted lists!</div>
     <br>
     <br>
     <b>Sorted List (Sorted by Aisle first and Name second):</b>
