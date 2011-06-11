@@ -793,8 +793,8 @@ Sample 1:  Listing nature pictures
 
   .. cv :: html 
 
-    <div dojoType="dojox.data.PicasaStore" jsId="flickrStore"></div>
-    <div dojoType="dijit.form.Button" jsId="button">Find nature pictures!</div>
+    <div data-dojo-type="dojox.data.PicasaStore" data-dojo-id="flickrStore"></div>
+    <div data-dojo-type="dijit.form.Button" data-dojo-id="button">Find nature pictures!</div>
     <br>
     <br>
     <span id="list">
