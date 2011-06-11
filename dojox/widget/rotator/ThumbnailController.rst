@@ -39,10 +39,8 @@ Examples
 Programmatic example
 --------------------
 
-WARNING! Following example is just a template and not a real example. The Dojo version on Dojo Campus doesn't contain the ThumbnailController yet.
 
 .. code-example::
-  :version: local
 
   .. css::
 
@@ -118,7 +116,6 @@ Declarative example
 WARNING! Following example is just a template and not a real example. The Dojo version on Dojo Campus doesn't contain the ThumbnailController yet.
 
 .. code-example::
-  :version: local
 
   .. css::
 
@@ -157,7 +154,7 @@ WARNING! Following example is just a template and not a real example. The Dojo v
   
   .. html::
 
-    <div dojoType="dojox.widget.AutoRotator" class="rotator" id="myAutoRotator2" jsId="myAutoRotatorInstance2" transition="dojox.widget.rotator.crossFade" duration="2500">
+    <div dojoType="dojox.widget.AutoRotator" class="rotator" id="myAutoRotator2" data-dojo-id="myAutoRotatorInstance2" transition="dojox.widget.rotator.crossFade" duration="2500">
         <div class="pane pane0">Pane 0</div>
         <div class="pane pane1">Pane 1</div>
         <div class="pane pane2">Pane 2</div>
