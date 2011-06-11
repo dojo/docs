@@ -118,13 +118,13 @@ By default, the width of the select widget will be to fit the width of the selec
 
   .. javascript::
 
-    <script>
+    <script type="text/javascript">
           dojo.require("dijit.form.Select");
     </script>
 
   .. html::
 
-    <select jsId="s3" name="s3" id="s3" style="width: 150px;" dojoType="dijit.form.Select">
+    <select data-dojo-id="s3" name="s3" id="s3" style="width: 150px;" dojoType="dijit.form.Select">
         <option value="AL">Alabama</option>
         <option value="AK">Alaska</option>
         <option type="separator"></option>
