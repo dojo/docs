@@ -155,7 +155,7 @@ Example of an AutoRotator that cycles to 4 random panes, then pauses.
   
   .. html::
 
-    <div dojoType="dojox.widget.AutoRotator" class="rotator" id="myAutoRotator2" jsId="myAutoRotatorInstance2" transition="dojox.widget.rotator.crossFade" duration="2500" random="true" cycles="4">
+    <div dojoType="dojox.widget.AutoRotator" class="rotator" id="myAutoRotator2" data-dojo-id="myAutoRotatorInstance2" transition="dojox.widget.rotator.crossFade" duration="2500" random="true" cycles="4">
         <div class="pane pane0">Pane 0</div>
         <div class="pane pane1">Pane 1</div>
         <div class="pane pane2">Pane 2</div>
@@ -204,7 +204,7 @@ Example of using the "wait for event" feature. The 2nd pane will wait for a even
   
   .. html::
 
-    <div dojoType="dojox.widget.AutoRotator" class="rotator" id="myAutoRotator3" jsId="myAutoRotatorInstance3" duration="2000" transition="dojox.widget.rotator.crossFade">
+    <div dojoType="dojox.widget.AutoRotator" class="rotator" id="myAutoRotator3" data-dojo-id="myAutoRotatorInstance3" duration="2000" transition="dojox.widget.rotator.crossFade">
         <div class="pane pane0">
             <h3>Dojo</h3>
             <p>Tons of features like CSS-based queries, event handling, animations, Ajax, class-based programming, and a package system</p>
