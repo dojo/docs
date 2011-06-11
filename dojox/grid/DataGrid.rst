@@ -566,9 +566,9 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
     </table>
 
     <p class="container">
-    <span dojoType="dijit.form.Button">
+    <span data-dojo-type="dijit.form.Button">
         get all Selected Items
-        <script type="dojo/method" event="onClick" args="evt">
+        <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
             // Get all selected items from the Grid:
             var items = grid2.selection.getSelected();
             if(items.length){
@@ -750,9 +750,9 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
     </table>
 
     <p class="container">
-      <span dojoType="dijit.form.Button">
+      <span data-dojo-type="dijit.form.Button">
           Add Row
-          <script type="dojo/method" event="onClick" args="evt">
+          <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
               // set the properties for the new item:
               var myNewItem = {type: "country", name: "Fill this country name"}; 
               // Insert the new item into the store:
@@ -761,9 +761,9 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
           </script>
       </span>
     
-      <span dojoType="dijit.form.Button">
+      <span data-dojo-type="dijit.form.Button">
           Remove Selected Rows
-          <script type="dojo/method" event="onClick" args="evt">
+          <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
               // Get all selected items from the Grid:
               var items = grid5.selection.getSelected();
               if(items.length){
@@ -851,17 +851,17 @@ The Grid offers a filter() method, to filter data from the current query (client
     </table>
 
     <p class="container">
-    <span dojoType="dijit.form.Button">
+    <span data-dojo-type="dijit.form.Button">
         filter movies
-        <script type="dojo/method" event="onClick" args="evt">
+        <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
             // Filter the movies from the data store:
             grid3.filter({Title: "T*"});
         </script>
     </span>
 
-    <span dojoType="dijit.form.Button">
+    <span data-dojo-type="dijit.form.Button">
         show all movies
-        <script type="dojo/method" event="onClick" args="evt">
+        <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
             // reset the filter:
             grid3.filter({Title: "*"});
         </script>
@@ -919,7 +919,7 @@ To use it, you just have to override default behavior by yours.
         clientSort="true"
         style="width: 100%; height: 100%;"
         rowSelector="20px">
-        <script type="dojo/method" event="onStyleRow" args="row">
+        <script type="dojo/method" data-dojo-event="onStyleRow" data-dojo-args="row">
 	     //The row object has 4 parameters, and you can set two others to provide your own styling
 	     //These parameters are :
 	     //	-- index : the row index
