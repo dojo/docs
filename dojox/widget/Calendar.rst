@@ -145,7 +145,7 @@ This example shows how to construct a Calendar declaratively, which only shows t
     <style type="text/css">
       @import "{{baseUrl}}dojox/widget/Calendar/Calendar.css";
     </style>
-    <div id="cal_4" dojoType="dojox.widget.DailyCalendar">
+    <div id="cal_4" data-dojo-type="dojox.widget.DailyCalendar">
       <script type="dojo/connect" data-dojo-event="onValueSelected" data-dojo-args="date">
         dojo.byId("cal_4_report").innerHTML = date;
       </script>
@@ -173,7 +173,7 @@ As the calendar consists of a combination of views, it is possible to mix these 
     <style type="text/css">
       @import "{{baseUrl}}dojox/widget/Calendar/Calendar.css";
     </style>
-    <div id="cal_5" dojoType="dojox.widget.CustomDayAndYearCalendar">
+    <div id="cal_5" data-dojo-type="dojox.widget.CustomDayAndYearCalendar">
       <script type="dojo/connect" data-dojo-event="onValueSelected" data-dojo-args="date">
         dojo.byId("cal_5_report").innerHTML = date;
       </script>
