@@ -49,9 +49,9 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
         </thead>
     </table>
 
-    <div dojoType="dijit.form.Button">
+    <div data-dojo-type="dijit.form.Button">
         Add Row
-        <script type="dojo/method" event="onClick" args="evt">
+        <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
             // set the properties for the new item:
             var myNewItem = {type: "country", name: "Fill this country name"}; 
             // Insert the new item into the store:
@@ -60,9 +60,9 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
         </script>
     </div>
     
-    <div dojoType="dijit.form.Button">
+    <div data-dojo-type="dijit.form.Button">
         Remove Selected Rows
-        <script type="dojo/method" event="onClick" args="evt">
+        <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
             // Get all selected items from the Grid:
             var items = grid5.selection.getSelected();
             if(items.length){
