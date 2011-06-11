@@ -64,17 +64,17 @@ Adding and removing children:
   .. html::
 
     <h2>Content before</h2>
-    <div dojoType="dijit.form.Button">
+    <div data-dojo-type="dijit.form.Button">
        click to add
-       <script type="dojo/method" event="onClick">
+       <script type="dojo/method" data-dojo-event="onClick">
             var group = dijit.byId("titleGroupB");
             var tp = new dijit.TitlePane({ open:false, title: "Added " + dijit.registry.length });
             group.addChild(tp);
        </script>
     </div>
-    <div dojoType="dijit.form.Button">
+    <div data-dojo-type="dijit.form.Button">
         pop one off
-        <script type="dojo/method" event="onClick">
+        <script type="dojo/method" data-dojo-event="onClick">
             dijit.registry.byClass("dijit.TitlePane").some(function(widget){
                   dijit.byId("titleGroupB").removeChild(widget);
                   widget.destroy(); 
