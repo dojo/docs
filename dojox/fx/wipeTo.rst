@@ -41,8 +41,8 @@ Wiping in a node with "display: none; position: absolute;"
   .. cv:: html
 
     <div style="height: 250px;">
-      <button data-dojo-type="dijit.form.Button" onClick="wipeInOne">Wipe in</button>
-      <button data-dojo-type="dijit.form.Button" onClick="wipeOutOne">Wipe out</button>
+      <button data-dojo-type="dijit.form.Button" onclick="wipeInOne">Wipe in</button>
+      <button data-dojo-type="dijit.form.Button" onclick="wipeOutOne">Wipe out</button>
       <div id="wipeDisplayNode" style="height: 200px; position: absolute; top: 30px; width: 500px; background: #ccc; display: none;">
         <div style="padding: 10px;">Hi friends</div>
       </div>
