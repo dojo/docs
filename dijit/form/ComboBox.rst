@@ -92,7 +92,7 @@ To set the default value for this example, specify the *value* attribute in the 
 
   .. cv:: html
 
-    <div dojoType="dojo.data.ItemFileReadStore" jsId="stateStore"
+    <div dojoType="dojo.data.ItemFileReadStore" data-dojo-id="stateStore"
         url="{{dataUrl}}/dijit/tests/_data/states.json"></div>
     <input dojoType="dijit.form.ComboBox"
                 value="Kentucky"
