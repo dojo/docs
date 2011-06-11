@@ -57,7 +57,7 @@ Example 1:  Fade out a dom node
 
   .. cv :: html 
 
-    <button dojoType="dijit.form.Button" id="basicFadeButton">Fade It Out!</button>
+    <button data-dojo-type="dijit.form.Button" id="basicFadeButton">Fade It Out!</button>
     <div id="basicFadeNode" style="width: 100px; height: 100px; background-color: red;"></div>
 
 
@@ -87,7 +87,7 @@ Example 2:  Fade in a dom node with a custom duration
 
   .. cv :: html 
 
-    <button dojoType="dijit.form.Button" id="basicFadeButton2">Fade It Out Slow!</button>
+    <button data-dojo-type="dijit.form.Button" id="basicFadeButton2">Fade It Out Slow!</button>
     <div id="basicFadeNode2" style="width: 100px; height: 100px; background-color: red;"></div>
 
 
@@ -120,7 +120,7 @@ Example 3:  Fade in a dom node with an easing function
 
   .. cv :: html 
 
-    <button dojoType="dijit.form.Button" id="basicFadeButton3">Fade It Out Slow with Expo Easing!</button>
+    <button data-dojo-type="dijit.form.Button" id="basicFadeButton3">Fade It Out Slow with Expo Easing!</button>
     <div id="basicFadeNode3" style="width: 100px; height: 100px; background-color: red;"></div>
 
 ========
