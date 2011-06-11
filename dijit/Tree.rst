@@ -135,7 +135,7 @@ A markup tree
 
     <div dojoType="dijit.Tree" id="mytree"
       model="continentModel" openOnClick="true">
-      <script type="dojo/method" event="onClick" args="item">
+      <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="item">
         alert("Execute of node " + continentStore.getLabel(item)
             +", population=" + continentStore.getValue(item, "population"));
       </script>
