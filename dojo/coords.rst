@@ -78,7 +78,7 @@ Example 2:  Look up a positioned dijit and calculate its coordinates
 
   .. cv :: html 
 
-    <div id="textbox" dojoType="dijit.form.TextBox"></div>
+    <div id="textbox" data-dojo-type="dijit.form.TextBox"></div>
     <br>
     <br>
     <span id="infoSpan"></span>
