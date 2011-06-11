@@ -18,7 +18,7 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
   .. cv:: html
 
     <span dojoType="dojox.data.CsvStore" 
-        jsId="store2" url="{{dataUrl}}dojox/grid/tests/support/movies.csv">
+        data-dojo-id="store2" url="{{dataUrl}}dojox/grid/tests/support/movies.csv">
     </span>
 
     <div>
@@ -28,7 +28,7 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
     </div>
 
     <table dojoType="dojox.grid.DataGrid"
-        jsId="grid2"
+        data-dojo-id="grid2"
         store="store2"
         query="{ Title: '*' }"
         clientSort="true"
