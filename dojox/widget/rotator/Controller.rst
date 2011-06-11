@@ -63,7 +63,6 @@ Programmatic example
 Example showing how the AutoRotator can create the pane DOM nodes for you.
 
 .. code-example::
-  :version: local
 
   .. css::
 
@@ -137,7 +136,6 @@ Declarative example
 -------------------
 
 .. code-example::
-  :version: local
 
   .. css::
 
@@ -176,7 +174,7 @@ Declarative example
   
   .. html::
 
-    <div dojoType="dojox.widget.AutoRotator" class="rotator" id="myAutoRotator2" jsId="myAutoRotatorInstance2" transition="dojox.widget.rotator.crossFade" duration="2500">
+    <div dojoType="dojox.widget.AutoRotator" class="rotator" id="myAutoRotator2" data-dojo-id="myAutoRotatorInstance2" transition="dojox.widget.rotator.crossFade" duration="2500">
         <div class="pane pane0">Pane 0</div>
         <div class="pane pane1">Pane 1</div>
         <div class="pane pane2">Pane 2</div>
