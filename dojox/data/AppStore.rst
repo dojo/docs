@@ -367,8 +367,8 @@ Example 3: Connecting AppStore to DataGrid
 
   .. cv :: html 
 
-    <div dojoType="dojox.data.AppStore" jsId="appStore" url="{{dataUrl}}dojox/atom/tests/widget/samplefeedEdit.xml"></div>
-    <div jsId="grid" dojoType="dojox.grid.DataGrid" store="appStore" query="{}" structure="layout" style="width: 600px; height: 200px;"></div>
+    <div dojoType="dojox.data.AppStore" data-dojo-id="appStore" url="{{dataUrl}}dojox/atom/tests/widget/samplefeedEdit.xml"></div>
+    <div data-dojo-id="grid" dojoType="dojox.grid.DataGrid" store="appStore" query="{}" structure="layout" style="width: 600px; height: 200px;"></div>
     <br>
     <br>
     <span id="list2">
@@ -428,8 +428,8 @@ Example 4: Write example: Changing Title and showing in DataGrid
 
   .. cv :: html 
 
-    <div dojoType="dojox.data.AppStore" jsId="appStore2" url="{{dataUrl}}dojox/atom/tests/widget/samplefeedEdit.xml"></div>
-    <div jsId="thegrid" dojoType="dojox.grid.DataGrid" store="appStore2" query="{}" structure="layout2" style="width: 600px; height: 200px;"></div>
+    <div dojoType="dojox.data.AppStore" data-dojo-id="appStore2" url="{{dataUrl}}dojox/atom/tests/widget/samplefeedEdit.xml"></div>
+    <div data-dojo-id="thegrid" dojoType="dojox.grid.DataGrid" store="appStore2" query="{}" structure="layout2" style="width: 600px; height: 200px;"></div>
     <br>
     <br>
     <button id="changeTitleButton" dojoType="dijit.form.Button">Change all titles!</button> 
