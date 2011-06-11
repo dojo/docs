@@ -52,7 +52,6 @@ Programmatic examples
 Example showing how the Rotator can create the pane DOM nodes for you.
  
 .. code-example::
-  :version: local
 
   .. css::
 
@@ -103,7 +102,6 @@ Example showing how the Rotator can create the pane DOM nodes for you.
 Example showing how the Rotator will use DOM nodes that already exist.
 
 .. code-example::
-  :version: local
 
   .. css::
 
@@ -189,7 +187,6 @@ Example using the crossfade transition.
 Example of controlling a Rotator by referencing its instance. We define a data-dojo-id so that the dojo.parser will create a global JavaScript variable pointing to our Rotator instance.
 
 .. code-example::
-  :version: local
 
   .. css::
 
@@ -218,7 +215,7 @@ Example of controlling a Rotator by referencing its instance. We define a data-d
 
   .. html::
 
-    <div dojoType="dojox.widget.Rotator" class="rotator" id="myRotator3" jsId="myRotatorInstance3" transition="dojox.widget.rotator.crossFade">
+    <div dojoType="dojox.widget.Rotator" class="rotator" id="myRotator3" data-dojo-id="myRotatorInstance3" transition="dojox.widget.rotator.crossFade">
         <div class="pane">Pane 0</div>
         <div class="pane">Pane 1</div>
         <div class="pane">Pane 2</div>
@@ -231,7 +228,6 @@ Example of controlling a Rotator by referencing its instance. We define a data-d
 Example of using different transitions per pane.
 
 .. code-example::
-  :version: local
 
   .. css::
 
@@ -263,7 +259,7 @@ Example of using different transitions per pane.
   
   .. html::
 
-    <div dojoType="dojox.widget.Rotator" class="rotator" id="myRotator4" jsId="myRotatorInstance4" transition="dojox.widget.rotator.crossFade">
+    <div dojoType="dojox.widget.Rotator" class="rotator" id="myRotator4" data-dojo-id="myRotatorInstance4" transition="dojox.widget.rotator.crossFade">
         <div class="pane">Pane 0</div>
         <div class="pane" transition="dojox.widget.rotator.panRight">Pane 1</div>
         <div class="pane" transition="dojox.widget.rotator.slideLeft">Pane 2</div>
@@ -276,7 +272,6 @@ Example of using different transitions per pane.
 Example of using passing in transition parameters. In this case, the `Pan <dojox/widget/rotator/Pan>`_ transition is told to do a continuous pan from the current pane to the target pane while transitioning to any panes in between. We also specify a duration of the actual pan transition and tell it to do a quick transition.
 
 .. code-example::
-  :version: local
 
   .. css::
 
@@ -305,7 +300,7 @@ Example of using passing in transition parameters. In this case, the `Pan <dojox
 
   .. html::
 
-    <div dojoType="dojox.widget.Rotator" class="rotator" id="myRotator5" jsId="myRotatorInstance5" transition="dojox.widget.rotator.pan" transitionParams="continuous:true,quick:true,duration:500">
+    <div dojoType="dojox.widget.Rotator" class="rotator" id="myRotator5" data-dojo-id="myRotatorInstance5" transition="dojox.widget.rotator.pan" transitionParams="continuous:true,quick:true,duration:500">
         <div class="pane">Pane 0</div>
         <div class="pane">Pane 1</div>
         <div class="pane">Pane 2</div>
@@ -341,7 +336,6 @@ Example
 -------
 
 .. code-example::
-  :version: local
 
   .. css::
 
