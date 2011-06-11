@@ -73,7 +73,7 @@ Example 1: Using formToQuery to create an query string version of a form
 
   .. cv :: html 
 
-    <button id="convertForm" dojoType="dijit.form.Button" type="button">Click to convert the form to an object</button><br><br>
+    <button id="convertForm" data-dojo-type="dijit.form.Button" type="button">Click to convert the form to an object</button><br><br>
     <b>The FORM</b><br><br>
     <form id="myform">
        <input type="text" name="field1" value="value1">
@@ -107,7 +107,7 @@ Example 2: Using formToQuery to create a query string version of a form with dij
 
   .. cv :: html 
 
-    <button id="convertFormDijits" dojoType="dijit.form.Button">Click to convert the form to an object</button><br><br>
+    <button id="convertFormDijits" data-dojo-type="dijit.form.Button">Click to convert the form to an object</button><br><br>
     <b>The FORM</b><br><br>
     <form id="myform2">
        <input type="text" dojoType="dijit.form.TextBox" name="field1" value="value1">
