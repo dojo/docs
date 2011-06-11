@@ -82,7 +82,7 @@ Declarative example
 
   .. html::
 
-    <div dojoType="dojox.widget.ColorPicker" id="picker2"></div>
+    <div data-dojo-type="dojox.widget.ColorPicker" id="picker2"></div>
 
 
 A ColorPicker within a DropDownButton
@@ -103,11 +103,11 @@ A ColorPicker within a DropDownButton
 
   .. html::
 
-    <div dojoType="dijit.form.DropDownButton">
+    <div data-dojo-type="dijit.form.DropDownButton">
         <span>
             ColorPicker
         </span>
-        <div dojoType="dojox.widget.ColorPicker" id="picker3"></div>
+        <div data-dojo-type="dojox.widget.ColorPicker" id="picker3"></div>
     </div>
 
 
