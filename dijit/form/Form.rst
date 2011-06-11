@@ -35,11 +35,11 @@ Declarative example
 
     <div dojoType="dijit.form.Form" id="myForm" data-dojo-id="myForm"
     encType="multipart/form-data" action="" method="">
-        <script type="dojo/method" event="onReset">
+        <script type="dojo/method" data-dojo-event="onReset">
             return confirm('Press OK to reset widget values');
         </script>
 
-        <script type="dojo/method" event="onSubmit">
+        <script type="dojo/method" data-dojo-event="onSubmit">
             if(this.validate()){
                 return confirm('Form is valid, press OK to submit');
             } else {
@@ -202,11 +202,11 @@ It is possible to submit a dijit.form.Form with native elements to the server, v
 
     <div dojoType="dijit.form.Form" id="myFormThree" data-dojo-id="myFormThree"
     encType="multipart/form-data" action="" method="">
-        <script type="dojo/method" event="validate">
+        <script type="dojo/method" data-dojo-event="validate">
            return dojo.query('INPUT[name=order]','myFormThree').filter(function(n){return n.checked}).length > 0 &&
            dijit.form.Form.prototype.validate.apply(this, arguments);
         </script>
-        <script type="dojo/method" event="onSubmit">
+        <script type="dojo/method" data-dojo-event="onSubmit">
             var f = dojo.byId("myFormThree");
             var s = "";
             for(var i = 0; i < f.elements.length; i++){
