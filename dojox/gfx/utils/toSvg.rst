@@ -97,7 +97,7 @@ Programmatic example
   .. html::
 
     <div id="gfxObject"></div>
-    <div dojoType="dijit.form.Button" id="button">Click me to serialize the GFX object to SVG!</div>
+    <div data-dojo-type="dijit.form.Button" id="button">Click me to serialize the GFX object to SVG!</div>
     <br>
     <br>  
     <b>SVGSerialization</b>
