@@ -116,9 +116,26 @@ really makes sense to use it in combination with other widgets or elements on a 
 
 
 .. code-block :: javascript
- :linenos:
+  :linenos:
 
   <div dojoType="dojox.image.ThumbnailPicker" id="picker1" useLoadNotifier="true"> </div>
+
+
+Setting size of thumbnails
+--------------------------
+
+Setting size of thumbnails is currently possible with use of CSS style definitions:
+
+.. code-block :: css
+  :linenos:
+
+  .thumbWrapper img {
+    height: 200px;
+    max-width: 144px;
+  }
+  .thumbOuter.thumbHoriz, .thumbHoriz .thumbScroller {
+    height: 200px;
+  }
 
 
 Example
@@ -174,7 +191,7 @@ of settings, and uses the FlickrRestStore data store.
       <style>
          @import "{{baseUrl}}dojox/image/resources/image.css";
       <style>
- 
+
 
 ========
 See also
