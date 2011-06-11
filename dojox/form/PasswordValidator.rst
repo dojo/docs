@@ -97,7 +97,7 @@ This example shows a password validator, and prompts the for the current passwor
   .. cv :: html
 
     <div dojoType="dojox.form.PasswordValidator" name="password">
-        <script type="dojo/method" event="pwCheck" args="password">
+        <script type="dojo/method" data-dojo-event="pwCheck" data-dojo-args="password">
             /* NOTE: DO NOT EVER EVER EVER DO THIS - ONLY AN EXAMPLE */
             return password == "password"
         </script>
