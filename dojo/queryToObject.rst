@@ -68,7 +68,7 @@ Example 1: Using queryToObject to create a JavaScript form of a query
 
   .. cv :: html 
 
-    <button id="convertQuery" dojoType="dijit.form.Button">Click to convert query portion of URI</button><br><br>
+    <button id="convertQuery" data-dojo-type="dijit.form.Button">Click to convert query portion of URI</button><br><br>
     <b>The URI</b><br><br>
     http://uri.some.org/context?foo=bar&foo=bar2&bit=byte
     <br><br>
