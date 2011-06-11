@@ -113,7 +113,6 @@ Programmatic example
 Declarative example
 -------------------
 
-WARNING! Following example is just a template and not a real example. The Dojo version on Dojo Campus doesn't contain the ThumbnailController yet.
 
 .. code-example::
 
