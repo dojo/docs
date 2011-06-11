@@ -150,7 +150,7 @@ Simply set the ``openOnClick`` attribute to ``false``
 
     <div dojoType="dijit.Tree" id="mytree"
       model="continentModel" openOnClick="false">
-      <script type="dojo/method" event="onClick" args="item">
+      <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="item">
         alert("Execute of node " + continentStore.getLabel(item)
             +", population=" + continentStore.getValue(item, "population"));
       </script>
