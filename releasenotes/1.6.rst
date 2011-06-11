@@ -92,9 +92,9 @@ The parser has been enhanced to support HTML5 compliant attribute names.  See `t
 
   * The `jsId` attribute has been **deprecated**, and will be unsupported in 2.0. Replace all `jsId` references with `data-dojo-id`, the behavior is identical.
 
-  .. code-block :: html
+    .. code-block :: html
 
-     <div data-dojo-id="bar" data-dojo-type="some.Thinger">I am exported to window.bar by reference</div>
+       <div data-dojo-id="bar" data-dojo-type="some.Thinger">I am exported to window.bar by reference</div>
 
   * The `dojoType` attribute has been **deprecated**, and will be unsupported in 2.0. Replace all occurrences of `dojoType` with `data-dojo-type`, as the behavior is mostly identical, with the following caveats:
 
@@ -112,22 +112,32 @@ The parser has been enhanced to support HTML5 compliant attribute names.  See `t
 
   * The `event` and `args` attributes for script tags of type="dojo/method" and type="dojo/connect" are **deprecated**. Use `data-dojo-event` and `data-dojo-args` respectively.
 
+    Replace all:
+
     .. code-block :: html
 
- 	<form data-dojo-type="dijit.form.Form" ...>
-		<script type="dojo/method" data-dojo-event="onSubmit" data-dojo-args="evt">
+      <form data-dojo-type="dijit.form.Form" ...>
+        <script type="dojo/method" event="onSubmit" args="evt">
+                    ...
+
+    with:
+
+    .. code-block :: html
+
+      <form data-dojo-type="dijit.form.Form" ...>
+        <script type="dojo/method" data-dojo-event="onSubmit" data-dojo-args="evt">
                     ...
 
   * The `dojoAttachEvent` and `dojoAttachPoint` attributes have been **deprecated**, and will be unsupported in 2.0. Replace all `dojoAttachEvent` attributes with `data-dojo-attach-event` and all `dojoAttachPoint` attributes with `data-dojo-attach-point`. The behavior is identical.
 
-  .. code-block :: html
+    .. code-block :: html
 
- 	<button data-dojo-attach-point="cancelButton" data-dojo-type="dijit.form.Button" data-dojo-attach-event="onClick:cancel">Cancel</button>
+      <button data-dojo-attach-point="cancelButton" data-dojo-type="dijit.form.Button" data-dojo-attach-event="onClick:cancel">Cancel</button>
 
 
   * Existing behavior has been preserved until 2.0, there should be no backward compatibility issues between 1.6 and previous 1.x Dojo versions.
 
-Also, there's a new "scope" parameter to the parser to control which attribute names it searches for.   This is mainly used in conjunction with multi-version support, for example if dojo 1.6 and dojo 1.4 are loaded onto the same page, it allows searching for dojo16Type and data-dojo16-type instead of dojoType and data-dojo-type.
+Also, there's a new "scope" parameter to the parser to control which attribute names it searches for. This is mainly used in conjunction with multi-version support, for example if dojo 1.6 and dojo 1.4 are loaded onto the same page, it allows searching for dojo16Type and data-dojo16-type instead of dojoType and data-dojo-type.
 
 Performance boost
 -----------------
