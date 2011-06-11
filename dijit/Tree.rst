@@ -127,9 +127,9 @@ A markup tree
 
   .. cv:: html
 
-    <div dojoType="dojo.data.ItemFileReadStore" jsId="continentStore"
+    <div dojoType="dojo.data.ItemFileReadStore" data-dojo-id="continentStore"
       url="{{dataUrl}}/dijit/tests/_data/countries.json"></div>
-    <div dojoType="dijit.tree.ForestStoreModel" jsId="continentModel" 
+    <div dojoType="dijit.tree.ForestStoreModel" data-dojo-id="continentModel" 
       store="continentStore" query="{type:'continent'}"
       rootId="continentRoot" rootLabel="Continents" childrenAttrs="children"></div>
 
@@ -217,9 +217,9 @@ Sometimes you don't want that "the world" top level node to show up, especially 
 
   .. cv:: html
 
-    <div dojoType="dojo.data.ItemFileReadStore" jsId="continentStore"
+    <div dojoType="dojo.data.ItemFileReadStore" data-dojo-id="continentStore"
       url="{{dataUrl}}/dijit/tests/_data/countries.json"></div>
-    <div dojoType="dijit.tree.ForestStoreModel" jsId="continentModel" 
+    <div dojoType="dijit.tree.ForestStoreModel" data-dojo-id="continentModel" 
       store="continentStore" query="{type:'continent'}"
       rootId="continentRoot" rootLabel="Continents" childrenAttrs="children"></div>
     
@@ -326,10 +326,10 @@ If between threshold is set to a positive integer value like 5 (which represents
 
   .. cv:: html
 
-    <div dojoType="dojo.data.ItemFileWriteStore" jsId="continentStore5"
+    <div dojoType="dojo.data.ItemFileWriteStore" data-dojo-id="continentStore5"
       url="{{dataUrl}}/dijit/tests/_data/countries.json"></div>
     
-    <div dojoType="dijit.tree.ForestStoreModel" jsId="continentModel5" 
+    <div dojoType="dijit.tree.ForestStoreModel" data-dojo-id="continentModel5" 
       store="continentStore5" query="{type:'continent'}"
       rootId="continentRoot" rootLabel="Continents" childrenAttrs="children"></div>
     
@@ -376,10 +376,10 @@ Tree has no built-in support for context menus, but you can use the Menu widget 
 		<li dojoType="dijit.MenuItem">Item #2</li>
 	</ul>
         
-        <div dojoType="dojo.data.ItemFileReadStore" jsId="menuContinentStore"
+        <div dojoType="dojo.data.ItemFileReadStore" data-dojo-id="menuContinentStore"
              url="{{dataUrl}}/dijit/tests/_data/countries.json"></div>
         
-        <div dojoType="dijit.tree.ForestStoreModel" jsId="menuContinentModel" 
+        <div dojoType="dijit.tree.ForestStoreModel" data-dojo-id="menuContinentModel" 
              store="menuContinentStore" query="{type:'continent'}"
              rootId="continentRoot" rootLabel="Continents" childrenAttrs="children"></div>
             
