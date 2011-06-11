@@ -29,7 +29,7 @@ To use it, you just have to override default behavior by yours.
         clientSort="true"
         style="width: 400px; height: 200px;"
         rowSelector="20px">
-        <script type="dojo/method" event="onStyleRow" args="row">
+        <script type="dojo/method" data-dojo-event="onStyleRow" data-dojo-args="row">
 	     //The row object has 4 parameters, and you can set two others to provide your own styling
 	     //These parameters are :
 	     //	-- index : the row index
