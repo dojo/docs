@@ -14,7 +14,6 @@ Examples
 A simple declarative example:
 
 .. code-example::
-  :version: local
 
   .. css::
 
@@ -45,7 +44,6 @@ Adding and removing children:
 
 
 .. code-example::
-  :version: local
 
   .. css::
 
