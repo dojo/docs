@@ -74,7 +74,7 @@ Lets dynamically include code on button press and fire an event once the code is
   .. cv:: html
     :label: A dijit button
 
-    <button dojoType="dijit.form.Button" id="buttonOne">Click me!</button>
+    <button data-dojo-type="dijit.form.Button" id="buttonOne">Click me!</button>
 
   The JavaScript code fires a dojo.require when you click the button.
 
