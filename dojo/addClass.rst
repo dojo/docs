@@ -65,7 +65,7 @@ See it in action:
   .. cv:: html
 
     <div id="example1">This node will be changed.</div>
-    <button id="button1" dojoType="dijit.form.Button" type="button">Add class</button>
+    <button id="button1" data-dojo-type="dijit.form.Button" type="button">Add class</button>
 
 
 Add several classes as a string
@@ -108,7 +108,7 @@ See it in action:
   .. cv:: html
 
     <div id="example1">This node will be changed.</div>
-    <button id="button1" dojoType="dijit.form.Button" type="button">Add classes</button>
+    <button id="button1" data-dojo-type="dijit.form.Button" type="button">Add classes</button>
 
 
 Add several classes as an array
@@ -151,7 +151,7 @@ See it in action:
   .. cv:: html
 
     <div id="example1">This node will be changed.</div>
-    <button id="button1" dojoType="dijit.form.Button" type="button">Add classes</button>
+    <button id="button1" data-dojo-type="dijit.form.Button" type="button">Add classes</button>
 
 
 Add to multiple nodes
@@ -197,7 +197,7 @@ See it in action:
         <div>This node also.</div>
         <div>And this is the last one.</div>
     </div>
-    <button id="button3" dojoType="dijit.form.Button" type="button">Add to multiple nodes</button>
+    <button id="button3" data-dojo-type="dijit.form.Button" type="button">Add to multiple nodes</button>
 
 
 ========
