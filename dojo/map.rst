@@ -9,8 +9,32 @@ dojo.map
 .. contents::
    :depth: 3
 
+Applies callback to each element of given array and returns an Array with the results.
+
+
+============
+Introduction
+============
+
+This function corresponds to the JavaScript 1.6 Array.map() method, with one difference: when run over sparse arrays, this implemenation passes the "holes" in the sparse array to the callback function with a value of undefined. JavaScript 1.6's map skips the holes in the sparse array. For more details, see: https://developer.mozilla.org/en/Core_JavaScript_1.5_Reference/Objects/Array/map
+
+
+=====
+Usage
+=====
+
+.. code-block :: javascript
+ :linenos:
+
+ <script type="text/javascript">
+   var changedArray = dojo.map([1, 2, 3, 4], function(item){ return item+1 });
+   console.log(changedArray); //returns [2, 3, 4, 5]
+ </script>
+
+
+========
 Examples
---------
+========
 
 This example shows you how to use dojo.map with a simple array. All values of the array will get doubled:
 
