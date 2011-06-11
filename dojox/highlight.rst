@@ -85,11 +85,11 @@ There are several themes available:
 Using Highlight
 ---------------
 
-After loading in the highlight engine, and putting the CSS on the page, the only remaining step it to highlight the nodes. Highlight acts on ``<code>`` blocks. It can be instantiated just as any other widget in Dojo by using the dojoType:
+After loading in the highlight engine, and putting the CSS on the page, the only remaining step it to highlight the nodes. Highlight acts on ``<code>`` blocks. It can be instantiated just as any other widget in Dojo by using the data-dojo-type:
 
 .. code-block :: html
 
-      <code dojoType="dojox.highlight.Code">var foo = dojo.map([1,2,3,4,5], function(n){ return n % 2 });</code>
+      <code data-dojo-type="dojox.highlight.Code">var foo = dojo.map([1,2,3,4,5], function(n){ return n % 2 });</code>
 
 Or by calling ``dojox.highlight.init(someNode)``. 
 
@@ -126,4 +126,4 @@ Highlight can also be used via the dojox.highlight.processString function
   .. cv:: html
 
     <div id="demoCode1">Select a from b where a = 2;</div>
-    <button dojoType="dijit.form.Button" id="buttonOne" onClick="highlight();">Highlight Code</button>
+    <button data-dojo-type="dijit.form.Button" id="buttonOne" onClick="highlight();">Highlight Code</button>
