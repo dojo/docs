@@ -85,9 +85,9 @@ Test against isString()
   .. cv:: html
 
     <div style="height: 100px;">
-        <button dojoType="dijit.form.Button">
+        <button data-dojo-type="dijit.form.Button">
             t = 1000;
-            <script type="dojo/method" event="onClick" args="evt">
+            <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
                 // Set t:
                 t = 1000;
 
@@ -95,9 +95,9 @@ Test against isString()
                 testIt();
             </script>
         </button>
-        <button dojoType="dijit.form.Button">
+        <button data-dojo-type="dijit.form.Button">
             t = "text";
-            <script type="dojo/method" event="onClick" args="evt">
+            <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
                 // Set t:
                 t = "text";
 
@@ -105,9 +105,9 @@ Test against isString()
                 testIt();
             </script>
         </button>
-        <button dojoType="dijit.form.Button">
+        <button data-dojo-type="dijit.form.Button">
             t = [1, 2, 3];
-            <script type="dojo/method" event="onClick" args="evt">
+            <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
                 // Set t:
                 t = [1, 2, 3];
 
@@ -115,9 +115,9 @@ Test against isString()
                 testIt();
             </script>
         </button>
-        <button dojoType="dijit.form.Button">
+        <button data-dojo-type="dijit.form.Button">
             t = { "property": 'value' };
-            <script type="dojo/method" event="onClick" args="evt">
+            <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
                 // Set t:
                 t = { "property": 'value' };
 
@@ -125,9 +125,9 @@ Test against isString()
                 testIt();
             </script>
         </button>
-        <button dojoType="dijit.form.Button">
+        <button data-dojo-type="dijit.form.Button">
             t = function(a, b){ return a };
-            <script type="dojo/method" event="onClick" args="evt">
+            <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
                 // Set t:
                 t = function(a, b){ return a } ;
 
