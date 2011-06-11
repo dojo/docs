@@ -62,9 +62,9 @@ Declarative example
                  dojoType="dojox.image.MagnifierLite"
                       src="http://www.zelda-infinite.com/games/zelda1/overworld.png" /> 
 
-                <button dojoType="dijit.form.Button" id="foob">
+                <button data-dojo-type="dijit.form.Button" id="foob">
 			Make It
-			<script type="dojo/method" event="onClick">
+			<script type="dojo/method" data-dojo-event="onClick">
 				this.setAttribute("disabled",true);
 				dijit.byId("foobd").setAttribute("disabled",false);
 				new dojox.image.MagnifierLite({ scale:4.2, glassSize:200 },"foobar1");
@@ -73,7 +73,7 @@ Declarative example
 
 		<button dojoType="dijit.form.Button" id="foobd" disabled="disabled">
 			Destroy It
-			<script type="dojo/method" event="onClick">
+			<script type="dojo/method" data-dojo-event="onClick">
 				dijit.byId("foob").setAttribute("disabled",false);
 				this.setAttribute("disabled",true);
 				dijit.byId("foobar").destroy(true);
