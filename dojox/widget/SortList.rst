@@ -86,7 +86,7 @@ Example 2:  SortList using a Store
     
     <div dojoType="dojo.data.ItemFileReadStore"
          url="{{ dataUrl }}dijit/tests/_data/countries.json"
-         jsId="stateStore"></div>
+         data-dojo-id="stateStore"></div>
     <ul dojoType="dojox.widget.SortList" store="stateStore" title="sortable List" style="width:200px; height:200px;"></ul>
 
   
