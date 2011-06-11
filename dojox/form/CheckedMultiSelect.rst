@@ -75,7 +75,7 @@ By not specifying "multiple=true" in your widget, you will create a widget using
 
   .. cv :: html
 
-    <select jsId="ss1" name="ss1" dojoType="dojox.form.CheckedMultiSelect">
+    <select data-dojo-id="ss1" name="ss1" dojoType="dojox.form.CheckedMultiSelect">
           <option value="TN">Tennessee</option>
           <option value="VA" selected="selected">Virginia</option>
           <option value="WA">Washington</option>
