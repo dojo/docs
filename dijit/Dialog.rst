@@ -72,7 +72,7 @@ The first example creates a Dialog via markup from an existing DOM node:
 
     <p>When pressing this button the dialog will popup:</p>
     <button id="buttonOne" dojoType="dijit.form.Button" type="button">Show me!
-        <script type="dojo/method" event="onClick" args="evt">
+        <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
             // Show the Dialog:
             dijit.byId("dialogOne").show();
         </script>
@@ -256,7 +256,7 @@ If you want to handle the onSubmit event like a traditional <form> element, you 
 
     <div dojoType="dijit.Dialog" id="formDialog2" title="Form Dialog" style="display: none">
         <form dojoType="dijit.form.Form">
-            <script type="dojo/event" event="onSubmit" args="e">
+            <script type="dojo/event" data-dojo-event="onSubmit" data-dojo-args="e">
                 dojo.stopEvent(e); // prevent the default submit
                 if (!this.isValid()) { window.alert('Please fix fields'); return; }
 
