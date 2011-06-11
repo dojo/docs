@@ -44,7 +44,7 @@ destroys it.
  :linenos:
 
 
-  <button dojoType="dijit.form.Button" id="foob">Make It
+  <button data-dojo-type="dijit.form.Button" id="foob">Make It
   
     <script type="dojo/method" data-dojo-event="onClick">
        this.setAttribute("disabled",true);
