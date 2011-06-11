@@ -13,7 +13,7 @@ It's hard for you to leave well-enough alone. We give you widgets, and now you w
 
 No problem! Dijit components are extendible, so you can make changes without touching the source code. In a way, you already do this by specifying your own attributes - e.g. sliders that go from 0-100 look different than those going from 0-200. But sometimes you need to go further. Maybe you need to create different behavior for onClick, or substitute a custom validation routine. This kind of modification uses extension points described in Common Attributes. You can add your own code to extension points through markup or through pure JavaScript calls to dojo.declare.
 
-You can also create Dijit classes from scratch. Again, you can do this either through markup - using the dijit.Declaration dojoType attribute - or through dojo.declare.
+You can also create Dijit classes from scratch. Again, you can do this either through markup - using the dijit.Declaration data-dojo-type attribute - or through dojo.declare.
 
 
 =====================
@@ -58,7 +58,7 @@ The simplest widget you can create is a *behavioral* widget, i.e., a widget that
   .. html::
 	:label: Instantiate the widget in markup
 
-	<span dojoType="MyFirstBehavioralWidget">hi</span>
+	<span data-dojo-type="MyFirstBehavioralWidget">hi</span>
 
 This is merely creating a javascript object (of type MyFirstBehavioralWidget) associated with the <span> in the original markup.  You would create a postCreate() method referencing this.domNode that did connections, etc. to do something interesting w/that DOM node.
 
@@ -148,7 +148,7 @@ Now let's write a widget that performs some javascript.   We'll setup an onclick
   .. html::
 	:label: Instantiate declaratively
 
-	<span dojoType="Counter"></span>
+	<span data-dojo-type="Counter"></span>
 
 postCreate() is called after buildRendering() is finished, and is typically used for connections etc. that can't be done until the DOM tree has been created.
 
@@ -222,7 +222,7 @@ So, putting that all together the source becomes:
 
   .. html::
 
-	<span dojoType="FancyCounter">press me</span>
+	<span data-dojo-type="FancyCounter">press me</span>
 
 ==========
 Attributes
@@ -338,8 +338,8 @@ Each parameter has a corresponding _setXXXAttr to say how it relates to the temp
 
   .. html::
 
-	<span dojoType="BusinessCard" name="John Smith" phone="(800) 555-1212"></span>
-	<span dojoType="BusinessCard" name="Jack Bauer" nameClass="specialEmployeeName" phone="(800) CALL-CTU"></span>
+	<span data-dojo-type="BusinessCard" data-dojo-props="name:'John Smith', phone:'(800) 555-1212'"></span>
+	<span data-dojo-type="BusinessCard" data-dojo-props="name:'Jack Bauer', nameClass:'specialEmployeeName', phone:'(800) CALL-CTU'"></span>
 
 
 To map a widget attribute to a DOM node attribute, you do:
@@ -402,7 +402,7 @@ Here's an example of a behavioral widget (it uses the DOM node from the supplied
 
   .. html::
 
-	<span dojoType="HidePane" open="false" data-dojo-id="pane">This pane is initially hidden</span>
+	<span data-dojo-type="HidePane" data-dojo-props="open:false" data-dojo-id="pane">This pane is initially hidden</span>
 	<button onclick="pane.set('open', true);">show</button>
 	<button onclick="pane.set('open', false);">hide</button>
 
@@ -541,13 +541,13 @@ Step 3 shows how the widget user can add their custom function, without having t
 
 .. code-block :: html
 
-  <button dojoType="dijit.form.Button" onClick="alert('Woohoo! I'm using the extension point "onClick"!!');">press me</button>
+  <button data-dojo-type="dijit.form.Button" onClick="alert('Woohoo! I'm using the extension point "onClick"!!');">press me</button>
 
 or alternately this:
 
 .. code-block :: html
 
-  <div dojoType="dijit.form.Button">
+  <div data-dojo-type="dijit.form.Button">
 	<script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
 	  alert('Woohoo! I'm using the extension point "onClick"!!');
 	</script>
