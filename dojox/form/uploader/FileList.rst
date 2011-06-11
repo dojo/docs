@@ -21,7 +21,7 @@ Setup
 Markup
 ------
 
-To use the FileList, simply require it and use the appropriate dojoType in an element inside or outside of a form (it is not a form element so will not affect the form action). A key property to be used is *uploaderId* which is the ID of the Uploader that FileList will connect to.
+To use the FileList, simply require it and use the appropriate data-dojo-type in an element inside or outside of a form (it is not a form element so will not affect the form action). A key property to be used is *uploaderId* which is the ID of the Uploader that FileList will connect to.
 
 .. code-block :: javascript
  :linenos:
