@@ -56,7 +56,7 @@ Decoding HTML and LATIN-1 entities in a text string
       &amp;lt;/sometag&amp;gt;
     </textarea>
     <br>
-    <button id="bEncode1" dojoType="dijit.form.Button">Press me to decode!</button>
+    <button id="bEncode1" data-dojo-type="dijit.form.Button">Press me to decode!</button>
     <br>
     <textarea style="width: 100%; height: 100px;" id="output1" readonly="true">
     </textarea>
@@ -95,7 +95,7 @@ Decoding custom entities in a text string
       </sometag>
     </textarea>
     <br>
-    <button id="bEncode2" dojoType="dijit.form.Button">Press me to decode!</button>
+    <button id="bEncode2" data-dojo-type="dijit.form.Button">Press me to decode!</button>
     <br>
     <textarea style="width: 100%; height: 100px;" id="output2" readonly="true">
     </textarea>
