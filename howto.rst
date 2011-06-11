@@ -372,6 +372,8 @@ To fix this, at this moment you can use following parameters within the template
 +---------------+
 | {{ theme }}   |
 +---------------+
+| {{ dataUrl }} |
++---------------+
 
 An example if this in action (simply change the version and you will see what it does)
 
@@ -384,6 +386,7 @@ An example if this in action (simply change the version and you will see what it
 
     <p>Current Dojo baseUrl: <strong>{{ baseUrl }}</strong></p>
     <p>Current Dojo theme: <strong>{{ theme }}</strong></p>
+    <p>Current Dojo dataUrl: <strong>{{ dataUrl }}</strong></p>
 
 CodeGlass style
 ---------------
