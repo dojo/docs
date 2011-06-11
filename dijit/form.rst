@@ -179,12 +179,12 @@ Because they're easy to mix and match, novice Dojo users often combine Dijit for
 
 Never fear.  For every HTML control, there's a Dijit equivalent that does the same thing, and obeys most of the HTML attributes.
 
-* <input type="text"> becomes dojoType="dijit.form.TextBox", dojoType="dijit.form.ValidationTextBox", dojoType="dijit.form.NumberTextBox", etc.
-* <input type="checkbox"> becomes dojoType="dijit.form.Checkbox"
-* <textarea> becomes dojoType="dijit.form.Textarea" or dojoType="dijit.form.SimpleTextArea"
-* <select> becomes dojoType="dijit.FilteringSelect"
-* <input type="radio"> becomes dojoType="dijit.form.RadioButton"
-* <button> (or <input type="submit"> etc.) becomes dojotype="dijit.form.Button"
+* <input type="text"> becomes data-dojo-type="dijit.form.TextBox", data-dojo-type="dijit.form.ValidationTextBox", data-dojo-type="dijit.form.NumberTextBox", etc.
+* <input type="checkbox"> becomes data-dojo-type="dijit.form.Checkbox"
+* <textarea> becomes data-dojo-type="dijit.form.Textarea" or data-dojo-type="dijit.form.SimpleTextArea"
+* <select> becomes data-dojo-type="dijit.FilteringSelect"
+* <input type="radio"> becomes data-dojo-type="dijit.form.RadioButton"
+* <button> (or <input type="submit"> etc.) becomes data-dojo-type="dijit.form.Button"
 
 
 .. _mapped:
@@ -198,9 +198,9 @@ Many of the form controls have a concept of "displayed value" vs. "serialized va
 
 .. code-block :: html
 
-  <div dojoType=dijit.form.NumberSpinner value="1000">
+  <div data-dojo-type="dijit.form.NumberSpinner" data-dojo-props="value:1000">
 
-(note the "value" keyword).  But when it's displayed in America it looks like "1,000" (with the comma).   And if they user types in "1,234,567", it gets sent back to the server as "123456789".
+(note the "value" keyword). But when it's displayed in America it looks like "1,000" (with the comma). And if they user types in "1,234,567", it gets sent back to the server as "123456789".
 
 This is handled internally by having two <input> fields in the widget:
 
