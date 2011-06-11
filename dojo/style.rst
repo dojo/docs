@@ -72,7 +72,7 @@ Passing only an ID or node returns the computed style object of the node:
 
     <div dojoType="dijit.form.Button">
         get the current style
-        <script type="dojo/method" event="onClick" args="evt">
+        <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
             // Get the style from DOM node "poorboy":
             var s = dojo.style("poorboy");
             for(var i in s){
@@ -109,7 +109,7 @@ Passing a node and a style property returns the current normalized, computed val
 
     <div dojoType="dijit.form.Button">
         give me the color
-        <script type="dojo/method" event="onClick" args="evt">
+        <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
             // Get the color property from DOM node "poorboy2":
             alert(dojo.style("poorboy2", "color"));
         </script>
@@ -140,7 +140,7 @@ Passing a node, a style property, and a value changes the current display of the
 
     <div dojoType="dijit.form.Button">
         give me another color
-        <script type="dojo/method" event="onClick" args="evt">
+        <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
             // Set the color 'red' to DOM node "poorboy3":
             dojo.style("poorboy3", "color", "red");
         </script>
@@ -173,7 +173,7 @@ Passing a node, an object-style style property sets each of the values in turn a
 
     <div dojoType="dijit.form.Button">
         set multiple style properties
-        <script type="dojo/method" event="onClick" args="evt">
+        <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
             // Set the color to 'white', background-color to "black", padding to "20px" to DOM node "poorboy4":
             dojo.style("poorboy4", {
                 "backgroundColor": "black",
@@ -218,7 +218,7 @@ dojo.NodeList implements .style() using the same syntax, omitting the "node" par
 
     <div dojoType="dijit.form.Button">
         change the style for each point
-        <script type="dojo/method" event="onClick" args="evt">
+        <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
             // Set the backgroundColor, color and opacity
             // for each node found by dojo.query:
             dojo.query(".sweet").style({
