@@ -159,7 +159,7 @@ Alternately, you can inline the text of a function:
 ===========
 Script tags
 ===========
-Functional parameters can also be specified via script tags embedded inside the widget (as a direct child of the node with data-dojo-type specified).  There are different types of script tags supported:
+Functional parameters can also be specified via script tags embedded inside the widget (as a direct child of the node with data-dojo-type specified). There are different types of script tags supported:
 
 *Connect to a function*:
 
@@ -167,23 +167,23 @@ To perform a dojo.connect() on a method in a widget, use type="dojo/connect" ins
 
 .. code-block :: html
 
-    <div data-dojo-type=...>
-        <script type="dojo/connect" data-dojo-event="functionToConnectTo">
-           console.log("I will execute in addition to functionToConnectTo().");
+    <div data-dojo-type="someType">
+        <script type="dojo/connect" data-dojo-event="methodOfSomeType">
+           console.log("I will execute in addition to methodOfSomeType().");
         </script>
     </div>
 
 *Override a function*:
 
-Sometimes you need to override a function in a widget.   Most commonly that happens when you need to specify a function that returns a value.   (The value returned from dojo.connect()'d functions is ignored.)
+Sometimes you need to override a function in a widget.   Most commonly that happens when you need to specify a function that returns a value. (The value returned from dojo.connect()'d functions is ignored.)
 
 In that case use the type="dojo/method" syntax:
 
 .. code-block :: html
 
-    <div data-dojo-type=...>
-        <script type="dojo/method" data-dojo-event="functionToOverride">
-           console.log("I will execute instead of functionToOverride().");
+    <div data-dojo-type="someType">
+        <script type="dojo/method" data-dojo-event="methodOfSomeType">
+           console.log("I will execute instead of methodOfSomeType().");
         </script>
     </div>
 
@@ -213,7 +213,15 @@ For functions that take (named) parameters, specify them in an `data-dojo-args` 
         </script>
     </div>
 
-`data-dojo-args` is a comma separated list of parameter names.
+`data-dojo-args` is a comma separated list of parameter names. This example overrides TreeStoreModel's method getChildren:
+
+.. code-block :: html
+
+    <div data-dojo-type="dijit.tree.TreeStoreModel" store="store">
+        <script type="dojo/method" data-dojo-event="getChildren" data-dojo-args="item, onComplete">
+            return store.fetch({query: {parent: store.getIdentity(item)}, onComplete: onComplete});
+        </script>
+    </div>
 
 *this*:
 
