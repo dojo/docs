@@ -19,7 +19,7 @@ Basics
     @import "dojox/widget/DocTester/DocTester.css"; 
   </style>
   <script type="text/javascript">dojo.require("dojox.widget.DocTester");</script>
-  <div dojoType="dojox.widget.DocTester">
+  <div data-dojo-type="dojox.widget.DocTester">
     >>> (new dojo._Url("http://localhost:8080/home/")).scheme
     "http"
     >>> (new dojo._Url("http://localhost:8080/home/")).host
