@@ -142,7 +142,7 @@ Declarative horizontal example
   .. cv:: html
 
     <div id="rangeSlider" data-dojo-type="dojox.form.HorizontalRangeSlider"
-        data-dojo-props="value:'2,6', minimum:-10, maximum:10, intermediateChanges:true,
+        data-dojo-props="value:[2,6], minimum:-10, maximum:10, intermediateChanges:true,
         showButtons:false" style="width:300px;">
         <script type="dojo/method" data-dojo-event="onChange" data-dojo-args="value">
             dojo.byId("sliderValue").value = value;
