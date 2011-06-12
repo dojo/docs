@@ -32,8 +32,8 @@ Declarative markup
 
   .. cv:: html
 
-    <div dojoType="dijit.ProgressBar" style="width:300px" 
-         data-dojo-id="jsProgress" id="downloadProgress" maximum="10"></div>
+    <div data-dojo-type="dijit.ProgressBar" style="width:300px" 
+         data-dojo-id="jsProgress" id="downloadProgress" data-dojo-props="maximum:10"></div>
     
     <br /><input type="button" value="Go!" onclick="download();" />
 
