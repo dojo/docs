@@ -47,7 +47,7 @@ dojo.indexOf lets you easily determine the index of an element in an array. It l
   .. cv :: html
 
     <div>The content of our test array is ["foo", "hoo", "zoo"].</div>
-    <button id="refButton1" dojoType="dijit.form.Button" onClick="testIndxOf()" type="button">Show the index of the word 'zoo' within the array.</button>
+    <button id="refButton1" data-dojo-type="dijit.form.Button" onClick="testIndxOf()" type="button">Show the index of the word 'zoo' within the array.</button>
     <div id="result1"></div>
 
 
