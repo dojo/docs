@@ -33,11 +33,17 @@ TODO: how to use the component/class/method
  <script type="text/javascript">
    dojo.require("dojox.embed.Flash");
    dojo.addOnLoad(function(){
-       var movie=new dojox.embed.Flash({ path: '/path-to-swf/test.swf' }, "flash");
+     var movie = new dojox.embed.Flash({
+       path: '/path-to-swf/flash.swf',
+       width: '100%'
+       height: 700,
+       params: {wmode: 'opaque'}
+       vars: {customFlashVariable: 'value'}
+     }, "flashContainer");
    });
  </script>
 
- <div id="flash">Alternative flash content</div>
+ <div id="flashContainer">Alternative flash content</div>
 
 ========
 Examples
