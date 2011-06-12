@@ -45,7 +45,7 @@ Declarative example
 
   .. cv:: html
 
-    <div data-dojo-type="dojox.form.ListInput" id="fruit" data-dojo-props="name:'fruit', value:[Apples,Oranges,Pears]"></div>
+    <div data-dojo-type="dojox.form.ListInput" id="fruit" data-dojo-props="name:'fruit', value:['Apples','Oranges','Pears']"></div>
 
   .. cv:: css
 
