@@ -335,15 +335,15 @@ To have different sections of your document that are different themes, you just 
 
   <body class=claro>
     ...
-        <div dojoType="dijit.layout.TabContainer">
-                <div dojoType="dijit.layout.ContentPane" label="Tab1" class="tundra">
-                        <input dojoType="dijit.form.TextBox">
-                        <button dojoType="dijit.form.Button">Tundra Button</button>
+        <div data-dojo-type="dijit.layout.TabContainer">
+                <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="label:'Tab1'" class="tundra">
+                        <input data-dojo-type="dijit.form.TextBox">
+                        <button data-dojo-type="dijit.form.Button">Tundra Button</button>
                         ...
                 </div>
-                <div dojoType="dijit.layout.ContentPane" label="Tab2" class="soria">
-                        <input dojoType="dijit.form.TextBox">
-                        <button dojoType="dijit.form.Button">Soria Button</button>
+                <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="label:'Tab2'" class="soria">
+                        <input data-dojo-type="dijit.form.TextBox">
+                        <button data-dojo-type="dijit.form.Button">Soria Button</button>
                         ...
                 </div>
         </div>
@@ -680,15 +680,15 @@ Then you would reference the override class in a similar way to the above:
 
 .. code-block :: html
 
-  <div dojoType="dijit.layout.TabContainer">
-        <div dojoType="dijit.layout.ContentPane" label="Tab1" class="yellowForm">
-                <input dojoType="dijit.form.TextBox">
-                <button dojoType="dijit.form.Button">Yellow Button</button>
+  <div data-dojo-type="dijit.layout.TabContainer">
+        <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="label:'Tab1'" class="yellowForm">
+                <input data-dojo-type="dijit.form.TextBox">
+                <button data-dojo-type="dijit.form.Button">Yellow Button</button>
                 ...
         </div>
-        <div dojoType="dijit.layout.ContentPane" label="Tab2" class="blueForm">
-                <input dojoType="dijit.form.TextBox">
-                <button dojoType="dijit.form.Button">Blue Button</button>
+        <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="label:'Tab2'" class="blueForm">
+                <input data-dojo-type="dijit.form.TextBox">
+                <button data-dojo-type="dijit.form.Button">Blue Button</button>
                 ...
         </div>
   </div>
