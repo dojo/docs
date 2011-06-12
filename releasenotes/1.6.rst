@@ -55,7 +55,7 @@ For more detailed information on using Dojo with asynchronous modules and loader
 djConfig deprecated
 -------------------
 
-The global djConfig object used to define runtime configuration options has been **deprecated**. Use {{{var dojoConfig = ... }}}. `djConfig` will be unsupported in 2.0. **additionally**, the custom attribute used when placed on the {{dojo.js}} script element has been changed to the standard HTML attribute `data-dojo-config`.  eg:
+The global djConfig object used to define runtime configuration options has been **deprecated**. Use ``var dojoConfig = ...`` . `djConfig` will be unsupported in 2.0. **Additionally**, the custom attribute used when placed on the ``dojo.js`` script element has been changed to the standard HTML attribute `data-dojo-config`.  eg:
 
     .. code-block :: html
 
