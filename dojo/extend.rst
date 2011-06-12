@@ -20,7 +20,7 @@ The way the `dojo.parser <dojo/parser>`_ works, a custom attribute on the node w
 .. code-block :: html
   :linenos:
   
-     <div dojoType="dijit.TitlePane" randomAttribute="newValue"></div>
+     <div data-dojo-type="dijit.TitlePane" data-dojo-props="randomAttribute:'newValue'"></div>
 
 After the extend, any new instances of a TitlePane will have the 'randomAttribute' member mixed into the instance. dojo.extend affects all future instances of a Class (or rather, any object with a .prototype). 
 
