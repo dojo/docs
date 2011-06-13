@@ -78,7 +78,7 @@ Format some HTML markup
 
 .. code-example::
   :djConfig: parseOnLoad: true
-  :version: 1.4
+  :version: 1.6-2.0
 
   .. javascript::
 
@@ -131,7 +131,7 @@ Format some HTML markup
     </li>
     </ul>
     </textarea>
-    <button id="bFormat" dojoType="dijit.form.Button">Press me to format!</button>
+    <button id="bFormat" data-dojo-type="dijit.form.Button">Press me to format!</button>
     <br>
     <textarea style="width: 100%; height: 100px;" id="output" readonly="true">
     </textarea>
@@ -142,7 +142,7 @@ Format some HTML markup with three space indent
 
 .. code-example::
   :djConfig: parseOnLoad: true
-  :version: 1.4
+  :version: 1.6-2.0
 
   .. javascript::
 
@@ -195,7 +195,7 @@ Format some HTML markup with three space indent
     </li>
     </ul>
     </textarea>
-    <button id="bFormat" dojoType="dijit.form.Button">Press me to format!</button>
+    <button id="bFormat" data-dojo-type="dijit.form.Button">Press me to format!</button>
     <br>
     <textarea style="width: 100%; height: 100px;" id="output" readonly="true">
     </textarea>
@@ -205,7 +205,7 @@ Format some HTML markup with three space indent and 20 character line wrap
 
 .. code-example::
   :djConfig: parseOnLoad: true
-  :version: 1.4
+  :version: 1.6-2.0
 
   .. javascript::
 
@@ -258,7 +258,7 @@ Format some HTML markup with three space indent and 20 character line wrap
     </li>
     </ul>
     </textarea>
-    <button id="bFormat" dojoType="dijit.form.Button">Press me to format!</button>
+    <button id="bFormat" data-dojo-type="dijit.form.Button">Press me to format!</button>
     <br>
     <textarea style="width: 100%; height: 100px;" id="output" readonly="true">
     </textarea>
@@ -322,7 +322,7 @@ Format some HTML markup with three space indent and 20 character line wrap, XHTM
     </li>
     </ul>
     </textarea>
-    <button id="bFormat" dojoType="dijit.form.Button">Press me to format!</button>
+    <button id="bFormat" data-dojo-type="dijit.form.Button">Press me to format!</button>
     <br>
     <textarea style="width: 100%; height: 100px;" id="output" readonly="true">
     </textarea>
