@@ -88,7 +88,6 @@ The following example removes two classes: "style1" and "style2" from the node "
 See it in action:
 
 .. cv-compound::
-  :version: local
 
   .. css::
     :label: The CSS
@@ -131,7 +130,6 @@ The following example removes two classes: "style1" and "style2" from the node "
 See it in action:
 
 .. cv-compound::
-  :version: local
 
   .. css::
     :label: The CSS
@@ -174,7 +172,6 @@ The following example removes all classes from the node "example1":
 See it in action:
 
 .. cv-compound::
-  :version: local
 
   .. css::
     :label: The CSS
