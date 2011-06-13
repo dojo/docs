@@ -78,8 +78,8 @@ Example 1:  Toggle a DOM node (with defaults)
 
   .. cv :: html 
 
-    <button dojoType="dijit.form.Button" id="hideButton">Hide the node!</button>
-    <button dojoType="dijit.form.Button" id="showButton">Show the node!</button>
+    <button data-dojo-type="dijit.form.Button" id="hideButton">Hide the node!</button>
+    <button data-dojo-type="dijit.form.Button" id="showButton">Show the node!</button>
     <div id="basicNode" style="width: 200px; background-color: red;">
       <b>This is a container of random content to toggle!</b>
     </div>
@@ -110,8 +110,8 @@ Example 2:  Toggle a DOM node with custom durations
 
   .. cv :: html 
 
-    <button dojoType="dijit.form.Button" id="hideButton1">Hide the node!</button>
-    <button dojoType="dijit.form.Button" id="showButton1">Show the node!</button>
+    <button data-dojo-type="dijit.form.Button" id="hideButton1">Hide the node!</button>
+    <button data-dojo-type="dijit.form.Button" id="showButton1">Show the node!</button>
     <div id="basicNode1" style="width: 200px; background-color: red;">
       <b>This is a container of random content to toggle!</b>
     </div>
@@ -142,8 +142,8 @@ Example 2:  Toggle a DOM node with custom animation functions
 
   .. cv :: html 
 
-    <button dojoType="dijit.form.Button" id="hideButton2">Hide the node!</button>
-    <button dojoType="dijit.form.Button" id="showButton2">Show the node!</button>
+    <button data-dojo-type="dijit.form.Button" id="hideButton2">Hide the node!</button>
+    <button data-dojo-type="dijit.form.Button" id="showButton2">Show the node!</button>
     <div id="basicNode2" style="width: 200px; background-color: red;">
       <b>This is a container of random content to toggle!</b>
     </div>
