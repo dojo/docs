@@ -4,7 +4,9 @@
 dijit.Dialog
 ============
 
-:Available: since V?
+Status: Contributed
+:Available: since V0.1.0
+:Version: V1.6
 :jsDoc: http://dojotoolkit.org/api/dijit.Dialog
 
 .. contents::
@@ -35,7 +37,7 @@ Usage
    });
  </script>
 
-After creating a Dialog, the Dialog (and the underlay) moves itself right behind the <body> element within the DOM, so it can overlay the entire webpage. With this move no other elements parent the Dialog.domNode. Therefore you have to add a ``class="tundra"`` attribute (or some other applicable `theme name <dijit/themes>`_) to your <body> tag, in order to show the Dialog with the right styles:
+After creating a Dialog, the Dialog (and the underlay) moves itself right behind the <body> element within the DOM, so it can overlay the entire webpage. With this move no other elements parent the Dialog.domNode. Therefore you have to add a ``class="claro"`` attribute (or some other applicable `theme name <dijit/themes>`_) to your <body> tag, in order to show the Dialog with the right styles:
 
 .. code-block :: html
 
@@ -43,7 +45,7 @@ After creating a Dialog, the Dialog (and the underlay) moves itself right behind
  <head>
  ...
  </head>
- <body class="tundra">
+ <body class="claro">
  ...
  </body>
 
@@ -71,7 +73,7 @@ The first example creates a Dialog via markup from an existing DOM node:
     </div>
 
     <p>When pressing this button the dialog will popup:</p>
-    <button id="buttonOne" dojoType="dijit.form.Button" type="button">Show me!
+    <button id="buttonOne" data-dojo-type="dijit.form.Button" type="button">Show me!
         <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
             // Show the Dialog:
             dijit.byId("dialogOne").show();
@@ -148,7 +150,7 @@ If you wish to alter the default color for the underlay, you do so in CSS. The u
     </div>
 
     <p>When pressing this button the dialog will popup:</p>
-    <button id="button4" dojoType="dijit.form.Button" type="button">Show me!</button>
+    <button id="button4" data-dojo-type="dijit.form.Button" type="button">Show me!</button>
 
   .. cv:: javascript
 
@@ -176,7 +178,6 @@ To simply close the dialog, click the Cancel button, which calls the hide() func
 
 .. cv-compound::
 
-  
   .. cv:: html
 
     <div dojoType="dijit.Dialog" id="formDialog" title="Form Dialog"
@@ -218,7 +219,7 @@ To simply close the dialog, click the Cancel button, which calls the hide() func
     </div>
 
     <p>When pressing this button the dialog will popup:</p>
-    <button id="buttonThree" dojoType="dijit.form.Button" type="button">Show me!</button>
+    <button id="buttonThree" data-dojo-type="dijit.form.Button" type="button">Show me!</button>
 
   .. cv:: javascript
     :label: The javascript, put this wherever you want the dialog creation to happen
@@ -251,11 +252,10 @@ If you want to handle the onSubmit event like a traditional <form> element, you 
 
 .. cv-compound::
 
-  
   .. cv:: html
 
     <div dojoType="dijit.Dialog" id="formDialog2" title="Form Dialog" style="display: none">
-        <form dojoType="dijit.form.Form">
+        <form data-dojo-type="dijit.form.Form">
             <script type="dojo/event" data-dojo-event="onSubmit" data-dojo-args="e">
                 dojo.stopEvent(e); // prevent the default submit
                 if (!this.isValid()) { window.alert('Please fix fields'); return; }
@@ -282,7 +282,7 @@ If you want to handle the onSubmit event like a traditional <form> element, you 
     </div>
 
     <p>When pressing this button the dialog will popup:</p>
-    <button id="buttonThree" dojoType="dijit.form.Button" type="button">Show me!</button>
+    <button id="buttonThree" data-dojo-type="dijit.form.Button" type="button">Show me!</button>
 
   .. cv:: javascript
     :label: The javascript, arranges for the dialog to appear
@@ -309,7 +309,6 @@ This example shows a Dialog that will ask the user to accept or decline the term
 
 .. cv-compound::
 
-  
   .. cv:: html
 
     <div dojoType="dijit.Dialog" id="formDialog" title="Accept or decline agreement terms" execute="alert('submitted w/args:\n' + dojo.toJson(arguments[0], true));">
@@ -346,7 +345,7 @@ This example shows a Dialog that will ask the user to accept or decline the term
     <label id="decision" style="color:#FF0000;">
         Terms and conditions have not been accepted.
     </label>
-    <button id="termsButton" dojoType="dijit.form.Button" type="button">
+    <button id="termsButton" data-dojo-type="dijit.form.Button" type="button">
         View terms and conditions to accept
     </button>
 
@@ -524,3 +523,11 @@ Known Issues
           position:'relative',
   });
   
+========
+See also
+========
+
+* `dojox.widget.DialogSimple <dojox.widget.DialogSimple>`_ - mixin of dijit.Dialog and dojox.layout.ContentPane
+* `dojox.widget.Dialog <dojox.widget.Dialog>`_- more flexible dialog allowing animations and different styles/theme support
+* `dojox.image.Lightbox <dojox.image.Lightbox>`_- a dojo-based Lightbox implementation
+* `dojox.image.Lightbox <dojox.image.LightboxNano>`_- a simple "nano" version of the dojox.image.Lightbox (without captions, descriptions...)
