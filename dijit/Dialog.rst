@@ -4,7 +4,7 @@
 dijit.Dialog
 ============
 
-Status: Contributed
+:Status: Contributed
 :Available: since V0.1.0
 :Version: V1.6
 :jsDoc: http://dojotoolkit.org/api/dijit.Dialog
@@ -527,7 +527,7 @@ Known Issues
 See also
 ========
 
-* `dojox.widget.DialogSimple <dojox.widget.DialogSimple>`_ - mixin of dijit.Dialog and dojox.layout.ContentPane
-* `dojox.widget.Dialog <dojox.widget.Dialog>`_ - more flexible dialog allowing animations and different styles/theme support
-* `dojox.image.Lightbox <dojox.image.Lightbox>`_ - a dojo-based Lightbox implementation
-* `dojox.image.LightboxNano <dojox.image.LightboxNano>`_ - a simple "nano" version of the dojox.image.Lightbox (without captions, descriptions...)
+* `dojox.widget.DialogSimple <dojox/widget/DialogSimple>`_ - mixin of dijit.Dialog and dojox.layout.ContentPane
+* `dojox.widget.Dialog <dojox/widget/Dialog>`_ - more flexible dialog allowing animations and different styles/theme support
+* `dojox.image.Lightbox <dojox/image/Lightbox>`_ - a dojo-based Lightbox implementation
+* `dojox.image.LightboxNano <dojox/image/LightboxNano>`_ - a simple "nano" version of the dojox.image.Lightbox (without captions, descriptions...)
