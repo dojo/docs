@@ -63,7 +63,7 @@ This is the most simple way to run up an EnhancedGrid, and in this scenario, it'
               id: 'grid',
               store: store,              
               structure: layout,
-              rowSelector: '15px'},
+              rowSelector: '20px'},
             document.createElement('div'));
 
           // append the new grid to the div
@@ -87,8 +87,8 @@ This is the most simple way to run up an EnhancedGrid, and in this scenario, it'
 	@import "{{baseUrl}}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
 
         #grid {
-            width:40em;
-            height:20em;
+            width:38em;
+            height:18em;
         }
     </style>
 
