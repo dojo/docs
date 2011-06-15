@@ -24,7 +24,7 @@ This is the most simple way to run up an EnhancedGrid, and in this scenario, it'
 
 .. code-example::
   :toolbar: themes, versions, dir
-  :width: 550
+  :width: 500
   :height: 400
 
   .. javascript::
@@ -52,9 +52,9 @@ This is the most simple way to run up an EnhancedGrid, and in this scenario, it'
 	
 	  //set up layout
 	  var layout = [[
-		{name: 'Column 1', field: 'id', width: "50px"},
-		{name: 'Column 2', field: 'col2', width: "80px"},
-		{name: 'Column 3', field: 'col3', width: "250px"},
+		{name: 'Column 1', field: 'id'},
+		{name: 'Column 2', field: 'col2'},
+		{name: 'Column 3', field: 'col3', width: "230px"},
 		{name: 'Column 4', field: 'col4'}
 	  ]];
 
