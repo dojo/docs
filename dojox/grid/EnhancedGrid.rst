@@ -54,7 +54,7 @@ This is the most simple way to run up an EnhancedGrid, and in this scenario, it'
 	  var layout = [[
 		{name: 'Column 1', field: 'id'},
 		{name: 'Column 2', field: 'col2'},
-		{name: 'Column 3', field: 'col3', width: "230px"},
+		{name: 'Column 3', field: 'col3', width: "220px"},
 		{name: 'Column 4', field: 'col4'}
 	  ]];
 
