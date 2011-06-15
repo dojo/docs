@@ -85,15 +85,7 @@ This is the most simple way to run up an EnhancedGrid, and in this scenario, it'
 	@import "{{baseUrl}}dojox/grid/enhanced/resources/{{theme}}/EnhancedGrid.css";
 	@import "{{baseUrl}}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
 
-        .dojoxGrid table {
-            margin: 0;
-        }
 
-        html, body {
-            width: 100%;
-            height: 100%;
-            margin: 0;
-        }
     </style>
 
 =====================================
