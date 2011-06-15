@@ -22,6 +22,68 @@ Run EnhancedGrid without plugins
 
 This is the most simple way to run up an EnhancedGrid, and in this scenario, it's basically the same as a base DataGrid since no plugins are turned on.
 
+
+.. cv-compound::
+
+  The most simple way to run up an EnhancedGrid(without any plugins)
+
+  .. cv::css
+
+    <style type="text/css">
+        @import "{{ baseUrl }}dojo/resources/dojo.css";
+        @import "{{ baseUrl }}dijit/themes/{{ theme }}/{{ theme }}.css";
+	@import "{{ baseUrl }}dojox/grid/enhanced/resources/{{ theme }}/EnhancedGrid.css";
+	@import "{{ baseUrl }}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
+
+        .dojoxGrid table {
+            margin: 0;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+    </style>
+  
+  .. cv:: html
+
+    <div id="gridDiv" style="width: 100%; height: 100%;"></div>
+
+  .. cv:: javascript
+
+    <script type="text/javascript">
+	dojo.require("dojox.grid.EnhancedGrid");
+        dojo.require("dojox.data.CsvStore");
+    
+        dojo.addOnLoad(function(){
+          // our test data store for this example:
+          var store = new dojox.data.CsvStore({ url: '{{ dataUrl }}dojox/grid/tests/support/movies.csv' });
+
+          // set the layout structure:
+          var layout = [
+              { field: 'Title', name: 'Title of Movie', width: '200px' },
+              { field: 'Year', name: 'Year', width: '50px' },
+              { field: 'Producer', name: 'Producer', width: 'auto' }
+          ];
+
+          // create a new grid:
+          var grid = new dojox.grid.EnhancedGrid({
+              query: { Title: '*' },
+              store: store,
+              rowSelector: '20px',
+              structure: layout}
+          , document.createElement('div'));
+
+          // append the new grid to the div "gridContainer4":
+          dojo.byId("gridDiv").appendChild(grid.domNode);
+
+          // Call startup, in order to render the grid:
+          grid.startup();
+        });
+    </script>
+
+
 .. code-example::
   :toolbar: themes, versions, dir
   :version: local
