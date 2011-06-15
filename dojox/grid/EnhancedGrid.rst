@@ -22,68 +22,6 @@ Run EnhancedGrid without plugins
 
 This is the most simple way to run up an EnhancedGrid, and in this scenario, it's basically the same as a base DataGrid since no plugins are turned on.
 
-
-.. cv-compound::
-
-  The most simple way to run up an EnhancedGrid(without any plugins)
-
-  .. cv:: css
-
-    <style type="text/css">
-        @import "{{baseUrl}}dojo/resources/dojo.css";
-        @import "{{baseUrl}}dijit/themes/claro/claro.css";
-	@import "{{baseUrl}}dojox/grid/enhanced/resources/claro/EnhancedGrid.css";
-	@import "{{baseUrl}}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
-
-        .dojoxGrid table {
-            margin: 0;
-        }
-
-        html, body {
-            width: 100%;
-            height: 100%;
-            margin: 0;
-        }
-    </style>
-  
-  .. cv:: html
-
-    <div id="gridDiv" style="width: 100%; height: 100%;"></div>
-
-  .. cv:: javascript
-
-    <script type="text/javascript">
-	dojo.require("dojox.grid.EnhancedGrid");
-        dojo.require("dojox.data.CsvStore");
-    
-        dojo.addOnLoad(function(){
-          // our test data store for this example:
-          var store = new dojox.data.CsvStore({ url: '{{baseUrl}}dojox/grid/tests/support/movies.csv' });
-
-          // set the layout structure:
-          var layout = [
-              { field: 'Title', name: 'Title of Movie', width: '200px' },
-              { field: 'Year', name: 'Year', width: '50px' },
-              { field: 'Producer', name: 'Producer', width: 'auto' }
-          ];
-
-          // create a new grid:
-          var grid = new dojox.grid.EnhancedGrid({
-              query: { Title: '*' },
-              store: store,
-              rowSelector: '20px',
-              structure: layout}
-          , document.createElement('div'));
-
-          // append the new grid to the div "gridContainer4":
-          dojo.byId("gridDiv").appendChild(grid.domNode);
-
-          // Call startup, in order to render the grid:
-          grid.startup();
-        });
-    </script>
-
-
 .. code-example::
   :toolbar: themes, versions, dir
   :width: 480
@@ -92,32 +30,45 @@ This is the most simple way to run up an EnhancedGrid, and in this scenario, it'
   .. javascript::
 
     <script type="text/javascript">
-	dojo.require("dojox.grid.EnhancedGrid");
-        dojo.require("dojox.data.CsvStore");
+        dojo.require("dojox.grid.EnhancedGrid");
+        dojo.require("dojo.data.ItemFileWriteStore");
     
         dojo.addOnLoad(function(){
-          // our test data store for this example:
-          var store = new dojox.data.CsvStore({ url: '{{baseUrl}}dojox/grid/tests/support/movies.csv' });
-
-          // set the layout structure:
-          var layout = [
-              { field: 'Title', name: 'Title of Movie', width: '200px' },
-              { field: 'Year', name: 'Year', width: '50px' },
-              { field: 'Producer', name: 'Producer', width: 'auto' }
-          ];
+	  //set up data store
+	  var data = {
+		identifier: 'id',
+		items: []
+	  };
+	  var data_list = [ 
+		{ col1: "normal", col2: false, col3: 'But are not followed by two hexadecimal', col4: 29.91},
+		{ col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
+		{ col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
+	  ];
+	  var rows = 20;
+	  for(var i=0, l=data_list.length; i<rows; i++){
+		data.items.push(dojo.mixin({ id: i }, data_list[i%l]));
+	  }
+	  var store = new dojo.data.ItemFileWriteStore({data: data});
+	
+	  //set up layout
+	  var layout = [[
+		{name: 'Column 1', field: 'id'},
+		{name: 'Column 2', field: 'col2'},
+		{name: 'Column 3', field: 'col3', width: "200px"},
+		{name: 'Column 4', field: 'col4'}
+	  ]];
 
           // create a new grid:
           var grid = new dojox.grid.EnhancedGrid({
-              query: { Title: '*' },
-              store: store,
-              rowSelector: '20px',
-              structure: layout}
-          , document.createElement('div'));
+              store: store,              
+              structure: layout,
+              rowSelector: '20px'},
+            document.createElement('div'));
 
-          // append the new grid to the div "gridContainer4":
+          // append the new grid to the div
           dojo.byId("gridDiv").appendChild(grid.domNode);
 
-          // Call startup, in order to render the grid:
+          // Call startup() to render the grid
           grid.startup();
         });
     </script>
