@@ -95,8 +95,8 @@ This is the most simple way to run up an EnhancedGrid, and in this scenario, it'
             height: 90%
         }
         #grid {
-            width:50em;
-            height:20em;
+            width:35em;
+            height:15em;
         }
     </style>
 
