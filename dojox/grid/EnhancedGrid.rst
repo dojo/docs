@@ -60,7 +60,6 @@ This is the most simple way to run up an EnhancedGrid, and in this scenario, it'
 
           // create a new grid:
           var grid = new dojox.grid.EnhancedGrid({
-              id:'grid',
               store: store,              
               structure: layout,
               rowSelector: '20px'},
@@ -86,7 +85,7 @@ This is the most simple way to run up an EnhancedGrid, and in this scenario, it'
 	@import "{{baseUrl}}dojox/grid/enhanced/resources/{{theme}}/EnhancedGrid.css";
 	@import "{{baseUrl}}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
 
-	body {
+	html, body {
 	    width: 100%;
 	    height: 100%;
 	}
