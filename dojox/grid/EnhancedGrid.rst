@@ -24,8 +24,8 @@ This is the most simple way to run up an EnhancedGrid, it's basically the same a
 
 .. code-example::
   :toolbar: themes, versions, dir
-  :width: 530
-  :height: 350
+  :width: 550
+  :height: 330
 
   .. javascript::
 
