@@ -82,8 +82,8 @@ This is the most simple way to run up an EnhancedGrid, it's basically the same a
 
     <style type="text/css">
         @import "{{baseUrl}}dojo/resources/dojo.css";
-        @import "{{baseUrl}}dijit/themes/{{theme}}/{{theme}}.css";
-	@import "{{baseUrl}}dojox/grid/enhanced/resources/{{theme}}/EnhancedGrid.css";
+        @import "{{baseUrl}}dijit/themes/claro/claro.css";
+	@import "{{baseUrl}}dojox/grid/enhanced/resources/claro/EnhancedGrid.css";
 	@import "{{baseUrl}}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
 
         /*Grid need a explicit width/height by default*/
