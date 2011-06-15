@@ -24,8 +24,8 @@ This is the most simple way to run up an EnhancedGrid, and in this scenario, it'
 
 .. code-example::
   :toolbar: themes, versions, dir
-  :width: 500
-  :height: 300
+  :width: 520
+  :height: 320
 
   .. javascript::
 
@@ -87,8 +87,8 @@ This is the most simple way to run up an EnhancedGrid, and in this scenario, it'
 	@import "{{baseUrl}}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
 
         #grid {
-            width:38em;
-            height:18em;
+            width: 40em;
+            height: 20em;
         }
     </style>
 
