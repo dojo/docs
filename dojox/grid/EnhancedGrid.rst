@@ -30,10 +30,10 @@ This is the most simple way to run up an EnhancedGrid, and in this scenario, it'
   .. cv:: css
 
     <style type="text/css">
-        @import "{{baseUrl}}/dojo/resources/dojo.css";
-        @import "{{baseUrl}}/dijit/themes/claro/claro.css";
-	@import "{{baseUrl}}/dojox/grid/enhanced/resources/claro/EnhancedGrid.css";
-	@import "{{baseUrl}}/dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
+        @import "{{baseUrl}}dojo/resources/dojo.css";
+        @import "{{baseUrl}}dijit/themes/claro/claro.css";
+	@import "{{baseUrl}}dojox/grid/enhanced/resources/claro/EnhancedGrid.css";
+	@import "{{baseUrl}}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
 
         .dojoxGrid table {
             margin: 0;
@@ -58,7 +58,7 @@ This is the most simple way to run up an EnhancedGrid, and in this scenario, it'
     
         dojo.addOnLoad(function(){
           // our test data store for this example:
-          var store = new dojox.data.CsvStore({ url: '{{baseUrl}}/dojox/grid/tests/support/movies.csv' });
+          var store = new dojox.data.CsvStore({ url: '{{baseUrl}}dojox/grid/tests/support/movies.csv' });
 
           // set the layout structure:
           var layout = [
@@ -86,7 +86,6 @@ This is the most simple way to run up an EnhancedGrid, and in this scenario, it'
 
 .. code-example::
   :toolbar: themes, versions, dir
-  :version: local
   :width: 480
   :height: 300
 
@@ -98,7 +97,7 @@ This is the most simple way to run up an EnhancedGrid, and in this scenario, it'
     
         dojo.addOnLoad(function(){
           // our test data store for this example:
-          var store = new dojox.data.CsvStore({ url: '{{baseUrl}}/dojox/grid/tests/support/movies.csv' });
+          var store = new dojox.data.CsvStore({ url: '{{baseUrl}}dojox/grid/tests/support/movies.csv' });
 
           // set the layout structure:
           var layout = [
@@ -131,8 +130,8 @@ This is the most simple way to run up an EnhancedGrid, and in this scenario, it'
 
     <style type="text/css">
         @import "{{baseUrl}}dojo/resources/dojo.css";
-        @import "{{baseUrl}}dijit/themes/{{ theme }}/{{ theme }}.css";
-	@import "{{baseUrl}}dojox/grid/enhanced/resources/{{ theme }}/EnhancedGrid.css";
+        @import "{{baseUrl}}dijit/themes/{{theme}}/{{theme}}.css";
+	@import "{{baseUrl}}dojox/grid/enhanced/resources/{{theme}}/EnhancedGrid.css";
 	@import "{{baseUrl}}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
 
         .dojoxGrid table {
