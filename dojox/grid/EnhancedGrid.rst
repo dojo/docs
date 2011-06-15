@@ -76,7 +76,7 @@ This is the most simple way to run up an EnhancedGrid, and in this scenario, it'
 
   .. html::
 
-    <div id="gridDiv" style="width: 100%; height: 100%;"></div>
+    <div id="gridDiv"></div>
 
   .. css::
 
@@ -86,10 +86,14 @@ This is the most simple way to run up an EnhancedGrid, and in this scenario, it'
 	@import "{{baseUrl}}dojox/grid/enhanced/resources/{{theme}}/EnhancedGrid.css";
 	@import "{{baseUrl}}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
 
-	#grid {
-	    width: 60em;
-	    height: 50em;
+	body {
+	    width: 100%;
+	    height: 100%;
 	}
+        #gridDiv {
+            width: 90%;
+            height: 90%
+        }
     </style>
 
 =====================================
