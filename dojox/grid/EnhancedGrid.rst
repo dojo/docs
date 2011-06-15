@@ -44,7 +44,7 @@ This is the most simple way to run up an EnhancedGrid, and in this scenario, it'
 		{ col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
 		{ col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
 	  ];
-	  var rows = 20;
+	  var rows = 60;
 	  for(var i=0, l=data_list.length; i<rows; i++){
 		data.items.push(dojo.mixin({ id: i }, data_list[i%l]));
 	  }
@@ -60,6 +60,7 @@ This is the most simple way to run up an EnhancedGrid, and in this scenario, it'
 
           // create a new grid:
           var grid = new dojox.grid.EnhancedGrid({
+              id: 'grid',
               store: store,              
               structure: layout,
               rowSelector: '20px'},
@@ -85,13 +86,17 @@ This is the most simple way to run up an EnhancedGrid, and in this scenario, it'
 	@import "{{baseUrl}}dojox/grid/enhanced/resources/{{theme}}/EnhancedGrid.css";
 	@import "{{baseUrl}}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
 
-	html, body {
+	html2, body2 {
 	    width: 100%;
 	    height: 100%;
 	}
-        #gridDiv {
+        #gridDiv2 {
             width: 90%;
             height: 90%
+        }
+        #grid {
+            width:50em;
+            height:20em;
         }
     </style>
 
