@@ -88,7 +88,7 @@ This is the most simple way to run up an EnhancedGrid, it's basically the same a
 
         /*Grid need a explicit width/height by default*/
         #grid {
-            width: 42em;
+            width: 41em;
             height: 20em;
         }
     </style>
