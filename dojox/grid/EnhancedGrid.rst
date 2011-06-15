@@ -20,7 +20,7 @@ EnhancedGrid (dojox.grid.EnhancedGrid) provides a rich set of features that enha
 Run EnhancedGrid without plugins
 ================================
 
-This is the most simple way to run up an EnhancedGrid, and in this scenario, it's basically the same as a base DataGrid since no plugins are turned on.
+This is the most simple way to run up an EnhancedGrid, it's basically the same as a base DataGrid since no plugins are turned on.
 
 .. code-example::
   :toolbar: themes, versions, dir
@@ -86,7 +86,7 @@ This is the most simple way to run up an EnhancedGrid, and in this scenario, it'
 	@import "{{baseUrl}}dojox/grid/enhanced/resources/{{theme}}/EnhancedGrid.css";
 	@import "{{baseUrl}}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
 
-        //Grid need a explicit width/height by default
+        /*Grid need a explicit width/height by default*/
         #grid {
             width: 40em;
             height: 20em;
