@@ -48,6 +48,7 @@ Dojo Core
 
 dojo/on
 -------
+
 This new module provides a new event handling system with support for a number of new features including:
  - event delegation - Event types can include selectors to specify targets like on(list, "li:click", onListItemClickHandler);
  - extension events - Custom event types can be used (and created). New dojo.gestures implement extension events.
@@ -62,8 +63,9 @@ This also sheds some of the legacy keypress event handling code (best practice i
 
 dojo/query
 ----------
-This new module provides access to the DOM querying functionality (like dojo.query). However, this module can also be loaded with alternate selector engines like Sizzle, Slick, or the new Dojo lite query selector engine.
+This new module provides access to the DOM querying functionality (like dojo.query). This module can also be loaded with alternate selector engines like Sizzle, Slick, or the new Dojo lite query selector engine or with minimum CSS compliance levels for auto selector engine selection. In asynchronous mode (see new Dojo config settings), dojo/query will load the lite engine to use native browser querySelectAll, and only load the full acme selector engine if needed. dojo/query works with the new has() branching functionality to make it easy to create browser specific builds with the minimal selector engine needed for the browser.
 
+dojo/store/Observable
 Parser
 ------
 The parser has been enhanced so you can specify browser native attributes just like native tags, but specify other attributes in data-dojo-props, for example:
