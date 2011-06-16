@@ -220,6 +220,7 @@ A list of individuals who have signed Dojo CLAs:
 * Horoszowski, Matthew 
 * Horowitz, Richard 
 * Hu, Jian 
+* Huang, Ming Zhe 
 * Humphreys, Martin 
 * Hussenet, Claude 
 * Ionushonis, Victoria 
@@ -573,6 +574,7 @@ A list of individuals who have signed Dojo CLAs:
 * Zammetti, Frank 
 * Zastrow, Bettina 
 * Zhang, Carrie 
+* Zhang, Stephen 
 * Zipkin, Joel 
 * Zyp, Kris
 
@@ -597,6 +599,8 @@ A list of corporations or organizations with a CLA on file:
 * DFKI GmbH 
 * Defence Science &amp; Technology Organisation 
 * DoYouSoft
+* Easy!Designs: Aaron Gustafson, Matt Harris, Daniel Ryan
+* EasyESI, Inc.: AJ Shakar
 * Elastic Path Software, Inc. 
 * Emerald Hand, Inc. 
 * Engineering Solutions &amp; Products, Inc. 
