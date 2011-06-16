@@ -1,8 +1,7 @@
-
 #format dojo_rst
 
 dojo/on
-===========
+=======
 
 :Authors: Kris Zyp
 :Project owner: Kris Zyp
@@ -13,9 +12,9 @@ dojo/on
 
 The dojo/on module is a general-purpose event handler, providing normalized event listening and event dispatching functionality. This module is designed to be lightweight and fast, based on modern browsers' event model.
 
-===============
+===========
 dojo/on API
-===============
+===========
 
 The module's value is an on function that can be directly called to add an event listener. The on function is the form:
 
