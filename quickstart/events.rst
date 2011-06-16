@@ -250,7 +250,7 @@ Now, whenever foo is called, globalGuy will also fire. As you might expect, conn
 
 .. code-block :: javascript
 
-  objectConnections[2] = dojo.connect(foo, anotherObject, "afterBaz");
+  objectConnections[2] = dojo.connect("foo", anotherObject, "afterBaz");
   objectConnections[3] = dojo.connect(someObject, "baz", globalGuy);
 
 Disconnecting
