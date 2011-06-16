@@ -38,10 +38,31 @@ AMD
 ---
 Completion of AMD conversion (Rawld etc. please fill this in)
 
+dojo.connect
+------------
+This has been refactored to use the new dojo/on module for event handling. See dojo/on below for more information.
 
 =========
 Dojo Core
 =========
+
+dojo/on
+-------
+This new module provides a new event handling system with support for a number of new features including:
+ - event delegation - Event types can include selectors to specify targets like on(list, "li:click", onListItemClickHandler);
+ - extension events - Custom event types can be used (and created). New dojo.gestures implement extension events.
+ - pausable events - Event handling can be paused with the on.pausable function.
+ - execute-once events - Listeners can be set to fire only once with on.once.
+ - emitting events - Native style events can be dispatched with on.emit(target, "click", event);
+ - self-contained handles - Objects returned on() calls contain remove() method to directly stop listening to an event.
+ - touch event normalization - Touch events are normalized across Android, iOS, etc.
+ - has()-based feature detection - This makes possible to create browser specific builds that exclude unneeded features (like IE normalization)
+
+This also sheds some of the legacy keypress event handling code (best practice is to use keydown instead), and reduces code size. 
+
+dojo/query
+----------
+This new module provides access to the DOM querying functionality (like dojo.query). However, this module can also be loaded with alternate selector engines like Sizzle, Slick, or the new Dojo lite query selector engine.
 
 Parser
 ------
