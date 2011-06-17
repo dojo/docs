@@ -28,7 +28,7 @@ Filter is a plugin for dojox.grid.EnhancedGrid. It's designed to filter the grid
 	<script type="text/javascript">
 		dojo.require("dojo.data.ItemFileWriteStore");
 		dojo.require("dojox.grid.EnhancedGrid");
-		dojo.require("dojox.grid.enhanced.plugins.Filter");
+		//dojo.require("dojox.grid.enhanced.plugins.Filter");
 
 		var data = {
 			identifier: 'id',
@@ -190,14 +190,14 @@ Filter is a plugin for dojox.grid.EnhancedGrid. It's designed to filter the grid
 				store: store,
 				structure: layout,
 				plugins: {
-					filter: {
+					/*filter: {
 						//Show the closeFilterbarButton at the filter bar
 						closeFilterbarButton: true,
 						//Set the maximum rule count to 5
 						ruleCount: 5,
 						//Set the name of the items
 						itemsName: "songs"
-					}
+					}*/
 				}
 			});
 			grid.placeAt('gridContainer');
