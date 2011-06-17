@@ -200,11 +200,11 @@ The following of this document first describes how to use the export functions o
     @import "{{ baseUrl }}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
 	
 	#output{
-		width: 100%;
+		width: 95%;
 		height: 150px;
 	}
 	#gridContainer{
-		width: 100%; 
+		width: 95%; 
 		height: 250px;
 	}
     </style>
