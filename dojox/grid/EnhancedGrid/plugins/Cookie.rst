@@ -3,8 +3,8 @@
 dojox.grid.EnhancedGrid.plugins.Cookie
 ======================================
 
-:Authors: Zhu Xiao Wen
-:Project owner: Nathan Toone
+:Authors: Oliver Zhu
+:Project owner: Evan Huang
 :Available: since V.1.6
 
 Cookie plugin provides a convenient ways to persist grid properties like column width, sorting order, etc, so the grid will look same when the page is reloaded, or when the grid is re-created with the same id.
@@ -101,18 +101,28 @@ Usage
 
 This plugin exposes the following methods to the grid:
 
-cookieEnabled(cookieName, toEnable):
+setCookieEnabled(cookieName, toEnable):
 	If a grid feature (maybe a plugin) wants to persist something in the cookie, it will provide a name for this feature. Users can use this name to enable/disable the persistance of this feature.
 
 ==============  ==================  ==========================  ==============================================================================================
 Arguments       Type                Optional/Mandatory          Description
 ==============  ==================  ==========================  ==============================================================================================
+cookieName      String              Mandatory                   A name of a grid feature. If null or undefined, this function will apply to all supported 
+                                                                grid features.
+toEnable        Boolean             Mandatory                   To enable cookie for a grid feature or not.
+==============  ==================  ==========================  ==============================================================================================
+
+getCookieEnabled(cookieName):
+	Check whether the cookie support of a paticular grid feature is enabled.
+
+==============  ==================  ==========================  ==============================================================================================
+Arguments       Type                Optional/Mandatory          Description
+==============  ==================  ==========================  ==============================================================================================
 cookieName      String              Optional                    A name of a grid feature. If omitted, this function will apply to all supported grid features.
-toEnable        Boolean             Optional                    To enable cookie for a grid feature or not. If omitted, this function is a getter.
-[return]        Boolean|undefined                               Return boolean when toEnable is undefined. 
-                                                                If cookieName is valid, return whether the cookie of this grid feature is enabled.
+[return]        Boolean                                         If cookieName is valid, return whether the cookie of this grid feature is enabled.
                                                                 If no arguments exist, return whether cookie is enabled for this grid.
 ==============  ==================  ==========================  ==============================================================================================
+
 
 removeCookie():
 	Clear the grid cookie.
