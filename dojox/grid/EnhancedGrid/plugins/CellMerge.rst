@@ -20,7 +20,7 @@ CellMerge is a plugin for dojox.grid.EnhancedGrid. It provides functions to merg
 
 .. code-example::
   :toolbar: themes, versions, dir
-  :width: 480
+  :width: 600
   :height: 500
 
   .. javascript::
@@ -178,7 +178,9 @@ CellMerge is a plugin for dojox.grid.EnhancedGrid. It provides functions to merg
 				plugins: {
 					cellMerge: {
 						mergedCells: [
-							{row: 0, start: 0, end: 5, major: 2}
+							{row: 0, start: 0, end: 5, major: 2},
+							{row: 2, start: 2, end: 4, major: 3},
+							{row: 3, start: 1, end: 6, major: 1}
 						]
 					}
 				}
@@ -249,23 +251,6 @@ CellMerge is a plugin for dojox.grid.EnhancedGrid. It provides functions to merg
 			<tr>
 				<td colspan="2"><button onclick="mergeCells()">Merge Cells by Index</button></td>
 			</tr>
-		</table>
-		<h3>The Merged Cells</h3>
-		<table id="tblMergedCells" class="merged" cellpadding="1px" cellspacing="5px">
-			<thead><tr>
-				<th>
-					Row Index
-				</th>
-				<th>
-					Start Column
-				</th>
-				<th>
-					End Column
-				</th>
-				<th>
-					Major Column
-				</th>
-			</tr></thead>
 		</table>
 	</div>
 
