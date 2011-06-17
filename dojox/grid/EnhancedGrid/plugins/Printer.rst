@@ -328,6 +328,22 @@ args            Object              Optional(default to {})     Including title,
 
 exportToHTML
 	Export to HTML string, but do NOT print. Users can use this to implement print preview.
+	When exporting multi-view grid, the proper width of each view and the height of each row won't be valid until the exported string is put into a document. So in this case, you will need to call grid.normalizePrintedGrid(doc):
+
+.. code-block :: javascript
+  :linenos:
+
+  grid.exportToHTML({
+    ...
+  }, function(str){
+    //Preview the printed grid in a separate window.
+    var win = window.open();
+    win.document.open();
+    win.document.write(str);
+	//Normalize the printed grid, so the width and height of each view and row are correct.
+    grid.normalizePrintedGrid(win.document);
+    win.document.close();
+  });
 
 ==============  ==================  ==========================  =======================================================
 Arguments       Type                Optional/Mandatory          Description
@@ -338,11 +354,13 @@ onExported      function(string)    Mandatory                   Callback functio
 
 exportSelectedToHTML
 	Export selected rows to HTML string, but do NOT print. Users can use this to implement print preview.
+	You'll also probably need to call grid.normalizePrintedGrid(doc), see the above explanation.
 
 ==============  ==================  ==========================  ====================================================
 Arguments       Type                Optional/Mandatory          Description
 ==============  ==================  ==========================  ====================================================
 args            Object              Optional(default to {})     Including title, cssFiles and writerArgs
+onExported      function(string)    Mandatory                   Callback function, do something with the result string.
 ==============  ==================  ==========================  ====================================================
 
 The content of the args parameter for the above functions is:
