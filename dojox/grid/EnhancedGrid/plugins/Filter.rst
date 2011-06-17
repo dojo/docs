@@ -37,7 +37,6 @@ Filter is a plugin for dojox.grid.EnhancedGrid. It's designed to filter the grid
 			items: []
 		};
 		var data_list = [
-			//{"Heard": false, "Checked": "True", "Genre":" ",	"Artist":"	",	"Year":0,	"Album":"\n",	"Name":undefined,	"Length":"Length",	"Track":0,	"Composer":"Composer",	"Download Date":"Download Date",	"Last Played":"Last Played"},
 			{"Heard": true, "Checked": "True", "Genre":"Easy Listening",	"Artist":"Bette Midler",	"Year":2003,	"Album":"Bette Midler Sings the Rosemary Clooney Songbook",	"Name":"Hey There",	"Length":"03:31",	"Track":4,	"Composer":"Ross, Jerry 1926-1956 -w Adler, Richard 1921-",	"Download Date":"1923/4/9",	"Last Played":"04:32:49"},
 			{"Heard": true, "Checked": "True", "Genre":"Classic Rock",	"Artist":"Jimi Hendrix",	"Year":1993,	"Album":"Are You Experienced",	"Name":"Love Or Confusion",	"Length":"03:15",	"Track":4,	"Composer":"Jimi Hendrix",	"Download Date":"1947/12/6",	"Last Played":"03:47:49"},
 			{"Heard": true, "Checked": "True", "Genre":"Jazz",	"Artist":"Andy Narell",	"Year":1992,	"Album":"Down the Road",	"Name":"Sugar Street",	"Length":"07:00",	"Track":8,	"Composer":"Andy Narell",	"Download Date":"1906/3/22",	"Last Played":"21:56:15"},
@@ -139,56 +138,55 @@ Filter is a plugin for dojox.grid.EnhancedGrid. It's designed to filter the grid
 			{"Heard": true, "Checked": "True", "Genre":"Jazz",	"Artist":"Andy Narell",	"Year":1989,	"Album":"Little Secrets",	"Name":"Don't Look Back",	"Length":"09:39",	"Track":6,	"Composer":"Andy Narell",	"Download Date":"1907/3/5",	"Last Played":"23:29:04"},
 			{"Heard": true, "Checked": "True", "Genre":"Progressive Rock",	"Artist":"Dixie dregs",	"Year":1978,	"Album":"What if",	"Name":"What if",	"Length":"05:02",	"Track":3,	"Composer":"Steve Morse",	"Download Date":"1992/3/28",	"Last Played":"00:22:30"}
 		];
-		var len = data_list.length;
-		var rounds = 1;
-		for(var i=0; i < rounds * len; ++i){
-			data.items.push(dojo.mixin({'id': i+1 }, data_list[i%len]));
+
+		var i, len;
+		for(i=0, len = data_list.length; i < len; ++i){
+			data.items.push(dojo.mixin({'id': i + 1 }, data_list[i % len]));
 		}
 		
-		var store = new dojo.data.ItemFileWriteStore({data: data}));
+		var store = new dojo.data.ItemFileWriteStore({data: data});
 		
+		var layout = [
+			{ field: "id", datatype:"number"},
+			{ field: "Genre", datatype:"string"},
+			{ field: "Artist", datatype:"string",
+				//Declare that we need the ComboBox for suggestions (autoComplete by default)
+				autoComplete: true
+			},
+			{ field: "Album", datatype:"string",
+				//Declare that we need the ComboBox for suggestions 
+				autoComplete: true,
+				//Configure the ComboBox, so that it does not auto-complete our input
+				dataTypeArgs: {
+					autoComplete: false
+				}
+			},
+			{ field: "Name", datatype:"string",
+				//Declare that we do not need the following conditions for this column 
+				disabledConditions: ["contains", "notcontains"]
+			},
+			{ field: "Track", datatype:"number"},
+			{ field: "Download Date", datatype:"date",
+				//Declare how the data in store should be parsed to a Date object.
+				dataTypeArgs: {
+					datePattern: "yyyy/M/d"
+				}
+			},
+			{ field: "Last Played", datatype:"time",
+				//Declare how the data in store should be parsed to a Date object.
+				dataTypeArgs: {
+					timePattern: "HH:mm:ss"
+				}
+			}
+		];
+
 		//In case you've close the filter bar, here's a way to bring it up.
 		function showFilterBar(){
 			dijit.byId('grid').showFilterBar(true);
-		};
+		}
 		
 		dojo.addOnLoad(function(){
-			//See the ItemFileWriteStore defined in test_write_store_music.js
-			var store = test_store[0];
 			
-			var layout = [
-				{ field: "id", datatype:"number"},
-				{ field: "Genre", datatype:"string"},
-				{ field: "Artist", datatype:"string",
-					//Declare that we need the ComboBox for suggestions (autoComplete by default)
-					autoComplete: true
-				},
-				{ field: "Album", datatype:"string",
-					//Declare that we need the ComboBox for suggestions 
-					autoComplete: true,
-					//Configure the ComboBox, so that it does not auto-complete our input
-					dataTypeArgs: {
-						autoComplete: false
-					}
-				},
-				{ field: "Name", datatype:"string",
-					//Declare that we do not need the following conditions for this column 
-					disabledConditions: ["contains", "notcontains"]
-				},
-				{ field: "Track", datatype:"number"},
-				{ field: "Download Date", datatype:"date",
-					//Declare how the data in store should be parsed to a Date object.
-					dataTypeArgs: {
-						datePattern: "yyyy/M/d"
-					}
-				},
-				{ field: "Last Played", datatype:"time",
-					//Declare how the data in store should be parsed to a Date object.
-					dataTypeArgs: {
-						timePattern: "HH:mm:ss"
-					}
-				}
-			];
 			
 			var grid = new dojox.grid.EnhancedGrid({
 				id: 'grid',
