@@ -22,7 +22,7 @@ The following of this document first describes how to use the export functions o
 .. code-example::
   :toolbar: themes, versions, dir
   :width: 600
-  :height: 600 
+  :height: 550 
 
   .. javascript::
 
