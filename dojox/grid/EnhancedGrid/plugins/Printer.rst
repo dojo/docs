@@ -21,7 +21,7 @@ This plugin is based on the Exporter plugin. Actually, an export writer, TableWr
 .. code-example::
   :toolbar: themes, versions, dir
   :width: 400
-  :height: 300
+  :height: 500
 
   .. javascript::
 
