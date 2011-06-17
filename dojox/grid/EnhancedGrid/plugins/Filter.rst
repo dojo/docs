@@ -25,7 +25,6 @@ Filter is a plugin for dojox.grid.EnhancedGrid. It's designed to filter the grid
 
   .. javascript::
 
-	<script type="text/javascript" src="{{ baseUrl }}dojox/grid/tests/enhanced/support/test_write_store_music.js"></script>
 	<script type="text/javascript">
 		dojo.require("dojox.grid.EnhancedGrid");
 		dojo.require("dojo.data.ItemFileWriteStore");
