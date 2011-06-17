@@ -21,7 +21,7 @@ Filter is a plugin for dojox.grid.EnhancedGrid. It's designed to filter the grid
 .. code-example::
   :toolbar: themes, versions, dir
   :width: 480
-  :height: 300
+  :height: 500
 
   .. javascript::
 
