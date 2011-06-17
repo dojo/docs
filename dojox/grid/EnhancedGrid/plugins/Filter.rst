@@ -209,6 +209,7 @@ Filter is a plugin for dojox.grid.EnhancedGrid. It's designed to filter the grid
   .. html::
 
     <div id="gridContainer" style="width: 100%; height: 400px;"></div>
+	<button onclick='showFilterBar()'>Show Filter Bar</button>
 
   .. css::
 
