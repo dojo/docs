@@ -185,6 +185,7 @@ The following of this document first describes how to use the export functions o
   .. html::
 
 	<div id="gridContainer"></div>
+	<br />
 	<button onclick="exportAll()">Export all to CSV</button>
 	<button onclick="exportSelected()">Export Selected Rows to CSV</button>
 	<br />
@@ -199,12 +200,12 @@ The following of this document first describes how to use the export functions o
     @import "{{ baseUrl }}dojox/grid/enhanced/resources/{{ theme }}/EnhancedGrid.css";
     @import "{{ baseUrl }}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
 	
-	#output{
-		width: 95%;
+	#output {
+		width: 100%;
 		height: 150px;
 	}
-	#gridContainer{
-		width: 95%; 
+	#gridContainer {
+		width: 100%; 
 		height: 250px;
 	}
     </style>
