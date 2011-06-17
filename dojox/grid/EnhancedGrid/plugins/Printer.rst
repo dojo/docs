@@ -360,7 +360,6 @@ exportSelectedToHTML
 Arguments       Type                Optional/Mandatory          Description
 ==============  ==================  ==========================  ====================================================
 args            Object              Optional(default to {})     Including title, cssFiles and writerArgs
-onExported      function(string)    Mandatory                   Callback function, do something with the result string.
 ==============  ==================  ==========================  ====================================================
 
 The content of the args parameter for the above functions is:
