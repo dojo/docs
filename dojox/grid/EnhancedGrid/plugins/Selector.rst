@@ -4,10 +4,10 @@ dojox.grid.EnhancedGrid.plugins.Selector
 ========================================
 
 :Authors: Zhu Xiao Wen
-:Project owner: Evan Huang
+:Project owner: Nathan Toone
 :Available: since V.1.6
 
-Selector plugin provides various selection ways for for columns, rows and cells.
+Selector plugin provides extended selection for columns, rows and cells.
 
 .. contents::
    :depth: 2
@@ -16,13 +16,12 @@ Selector plugin provides various selection ways for for columns, rows and cells.
 Introduction
 ============
 
-Selector is a plugin for dojox.grid.EnhancedGrid. It supports various ways for extended selection.
+Selector is a plugin for dojox.grid.EnhancedGrid. It supports extended selection for columns, rows, and cells.
 
 .. code-example::
   :toolbar: themes, versions, dir
-  :version: local
   :width: 650
-  :height: 600
+  :height: 700
 
   .. javascript::
 
@@ -30,11 +29,27 @@ Selector is a plugin for dojox.grid.EnhancedGrid. It supports various ways for e
 		dojo.require("dojo.data.ItemFileWriteStore");
 		dojo.require("dojox.grid.EnhancedGrid");
 		dojo.require("dojox.grid.enhanced.plugins.Selector");
-	</script>
-	<script type="text/javascript" src="{{ baseUrl }}dojox/grid/tests/enhanced/support/test_write_store_dnd.js"></script>
-	<script type="text/javascript">
-		var store = test_store[0];
-		
+
+		var data = {
+			identifier: 'id',
+			label: 'id',
+			items: []
+		};
+		var cols = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+		var data_list = [];
+		var i, row, j;
+		for(i = 0; i < 100; ++i){
+			row = {};
+			for(j = 0; j < cols.length; ++j){
+				row[cols[j]] = (i + 1) + cols[j];
+			}
+			data_list.push(row);
+		}
+		var len = data_list.length;
+		for(i=0; i < len ; ++i){
+			data.items.push(dojo.mixin({ 'id': i+1 }, data_list[i]));
+		}	
+
 		var layout = [{
 			defaultCell: {width: 3},
 			rows: [
@@ -73,16 +88,28 @@ Selector is a plugin for dojox.grid.EnhancedGrid. It supports various ways for e
 				dijit.byId('grid').setupSelectorConfig(config);
 			}
 		};
+
+		dojo.ready(function(){
+			var store = new dojo.data.ItemFileWriteStore({data: data});
+
+			var grid = new dojox.grid.EnhancedGrid({
+				id: "grid",
+				store: store,
+				structure: layout,
+				rowSelector: "20px",
+				canSort: function(){return false;},
+				plugins: {
+					selector: true
+				}
+			});
+			grid.placeAt('gridContainer');
+			grid.startup();
+		});
 	</script>
 
   .. html::
 
-	<div id="grid" dojoType="dojox.grid.EnhancedGrid" store="store" structure="layout" rowSelector="20px"
-		canSort="function(){return false;}",
-		plugins='{
-			selector: {}
-		}'>
-	</div>
+	<div id="gridContainer"></div>
 	<table class="cfgtable" border="1">
 		<thead>
 			<tr>
@@ -128,7 +155,7 @@ Selector is a plugin for dojox.grid.EnhancedGrid. It supports various ways for e
 		font-weight: bolder;
 		padding: 3px;
 	}
-	#grid{
+	#gridContainer {
 		width: 600px;
 		height: 400px;
 	}
@@ -142,7 +169,7 @@ Configuration
 Prerequisites
 -------------
 
-This selector plugin is only available for EnhancedGrid, so please use the following statement at first:
+This selector plugin is only available for EnhancedGrid, so use the following statement in the head of your HTML file:
 
 .. code-block :: javascript
   :linenos:
