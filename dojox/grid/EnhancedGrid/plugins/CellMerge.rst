@@ -277,6 +277,11 @@ CellMerge is a plugin for dojox.grid.EnhancedGrid. It provides functions to merg
     @import "{{ baseUrl }}dijit/themes/{{ theme }}/document.css";
     @import "{{ baseUrl }}dojox/grid/enhanced/resources/{{ theme }}/EnhancedGrid.css";
     @import "{{ baseUrl }}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
+	
+	#gridContainer {
+		width: 100%;
+		height: 300px;
+	}
     </style>
 
 
