@@ -20,7 +20,6 @@ Filter is a plugin for dojox.grid.EnhancedGrid. It's designed to filter the grid
 
 .. code-example::
   :toolbar: themes, versions, dir
-  :version: local
   :width: 480
   :height: 300
 
