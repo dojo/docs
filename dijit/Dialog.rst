@@ -531,3 +531,4 @@ See also
 * `dojox.widget.Dialog <dojox/widget/Dialog>`_ - more flexible dialog allowing animations and different styles/theme support
 * `dojox.image.Lightbox <dojox/image/Lightbox>`_ - a dojo-based Lightbox implementation
 * `dojox.image.LightboxNano <dojox/image/LightboxNano>`_ - a simple "nano" version of the dojox.image.Lightbox (without captions, descriptions...)
+* `dijit/TooltipDialog <dijit/TooltipDialog>`_ - modal tooltip
