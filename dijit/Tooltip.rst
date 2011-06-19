@@ -159,3 +159,9 @@ Known Issues
 When using Firefox 2 with JAWS 9, the tooltip text is spoken twice. This has been fixed in Firefox 3. 
 
 Tooltips are not spoken in IE 8 with JAWS 10. This is because Dijit Tooltips are implemented using the ARIA alert role and IE 8 does not support that role.   A ticket (http://bugs.dojotoolkit.org/ticket/3957) has been filed to modify Dijit Tooltips to use the ARIA tooltip role since that role is now supported in Firefox 3 and IE 8
+
+========
+See also
+========
+
+* `dojox.widget.DynamicTooltip <dojox/widget/DynamicTooltip>`_ - addition to dijit.Tooltip functionality allowing remotely loaded content to appear
