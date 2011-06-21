@@ -3,7 +3,7 @@
 dojox.grid.EnhancedGrid.plugins.Selector
 ========================================
 
-:Authors: Zhu Xiao Wen
+:Authors: Oliver Zhu
 :Project owner: Evan Huang
 :Available: since V.1.6
 
