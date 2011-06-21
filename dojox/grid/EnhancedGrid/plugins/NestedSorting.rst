@@ -18,66 +18,76 @@ This feature enhances the single sorting feature of base DataGrid. Nested sortin
 
 .. code-example::
   :toolbar: themes, versions, dir
-  :version: local
-  :width: 480
-  :height: 300
+  :width: 550
+  :height: 330
 
   .. javascript::
 
     <script type="text/javascript">
-	dojo.require("dojox.grid.EnhancedGrid");
-	dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
-        dojo.require("dojox.data.CsvStore");
+        dojo.require("dojox.grid.EnhancedGrid");
+        dojo.require("dojo.data.ItemFileWriteStore");
     
         dojo.addOnLoad(function(){
-          // our test data store for this example:
-          var store = new dojox.data.CsvStore({ url: '{{ dataUrl }}dojox/grid/tests/support/movies.csv' });
-
-          // set the layout structure:
-          var layout = [
-              { field: 'Title', name: 'Title of Movie', width: '200px' },
-              { field: 'Year', name: 'Year', width: '50px' },
-              { field: 'Producer', name: 'Producer', width: 'auto' }
-          ];
+	  //set up data store
+	  var data = {
+		identifier: 'id',
+		items: []
+	  };
+	  var data_list = [ 
+		{ col1: "normal", col2: false, col3: 'But are not followed by two hexadecimal', col4: 29.91},
+		{ col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
+		{ col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
+	  ];
+	  var rows = 60;
+	  for(var i=0, l=data_list.length; i<rows; i++){
+		data.items.push(dojo.mixin({ id: i }, data_list[i%l]));
+	  }
+	  var store = new dojo.data.ItemFileWriteStore({data: data});
+	
+	  //set up layout
+	  var layout = [[
+		{name: 'Column 1', field: 'id'},
+		{name: 'Column 2', field: 'col2'},
+		{name: 'Column 3', field: 'col3', width: "230px"},
+		{name: 'Column 4', field: 'col4'}
+	  ]];
 
           // create a new grid:
           var grid = new dojox.grid.EnhancedGrid({
-              query: { Title: '*' },
-              store: store,
-              clientSort: true,
-              rowSelector: '20px',
+              id: 'grid',
+              store: store,              
               structure: layout,
-              plugins : {nestedSorting: true}
-          }, document.createElement('div'));
+              rowSelector: '20px',
+              plugins : {nestedSorting: true}},
+            document.createElement('div'));
 
-          // append the new grid to the div "gridContainer4":
+          // append the new grid to the div
           dojo.byId("gridDiv").appendChild(grid.domNode);
 
-          // Call startup, in order to render the grid:
+          // Call startup() to render the grid
           grid.startup();
         });
     </script>
 
   .. html::
 
-    <div id="gridDiv" style="width: 100%; height: 100%;"></div>
+    <div id="gridDiv"></div>
 
   .. css::
 
     <style type="text/css">
-        @import "{{ baseUrl }}dojox/grid/enhanced/resources/{{ theme }}/EnhancedGrid.css";
-        @import "{{ baseUrl }}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
+        @import "{{baseUrl}}dojo/resources/dojo.css";
+        @import "{{baseUrl}}dijit/themes/claro/claro.css";
+	@import "{{baseUrl}}dojox/grid/enhanced/resources/claro/EnhancedGrid.css";
+	@import "{{baseUrl}}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
 
-        .dojoxGrid table {
-            margin: 0;
-        }
-
-        html, body {
-            width: 100%;
-            height: 100%;
-            margin: 0;
+        /*Grid need a explicit width/height by default*/
+        #grid {
+            width: 43em;
+            height: 20em;
         }
     </style>
+
 
 Usage
 -----
