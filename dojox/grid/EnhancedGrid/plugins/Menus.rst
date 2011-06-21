@@ -247,7 +247,7 @@ Usage
 
 * Use menu feature
 
-... with HTML markup
+ with HTML markup
     
 .. code-block :: javascript
   :linenos:
@@ -268,7 +268,7 @@ Usage
       </div>
   </div>
 
-... with JavaScript (using a markup menu)
+with JavaScript (using a markup menu)
     
 .. code-block :: javascript
   :linenos:
