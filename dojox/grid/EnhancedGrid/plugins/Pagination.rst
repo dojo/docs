@@ -76,7 +76,7 @@ Pagination is a plugin for dojox.grid.EnhnacedGrid. It's designed to allow the u
                document.createElement('div'));
 
           // append the new grid to the div
-          grid.placeAt('gridDiv');
+          dojo.byId("gridDiv").appendChild(grid.domNode);
 
           // Call startup() to render the grid
           grid.startup();
@@ -86,7 +86,6 @@ Pagination is a plugin for dojox.grid.EnhnacedGrid. It's designed to allow the u
   .. html::
 
 	<div id="gridDiv"></div>
-
 
   .. css::
 
