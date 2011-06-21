@@ -175,6 +175,8 @@ pageSizes                  Array                    ["10", "25",     Customize t
                                                     "50", "100",     "All"(case-insensitive).
                                                     "All"]           
 maxPageStep                integer                  7                Indicates how many page navigation choices will be displayed (Suggested that the value should be less than 10).
+defaultPageSize            integer                  n/a              The page size used by default
+defaultPage                integer                  n/a              Which page will be displayed by default
 =========================  =======================  ===============  ================================================================================================================
 
 =====
@@ -241,18 +243,6 @@ scrollToRow         rowIndex(integer): row index           N/A      Override the
 showGotoPageButton  flag(boolean): Indicator of show/hide  N/A      Function to show/hide the Goto page button
                     the Goto page button                            dynamically
 ==================  =====================================  =======  ================================================
-
-====
-Tips
-====
-* Set the default page size and displayed page
-
-.. code-block :: javascript
-  :linenos:
-
-  <script>
-    var grid = new dojox.grid.EnhancedGrid({plugins:{pagination:{defaultPageSize: 25, defaultPage: 2, ...}, ...}, ...}, dojo.byId('gridDiv'));
-  </script>
 
 
 ========
