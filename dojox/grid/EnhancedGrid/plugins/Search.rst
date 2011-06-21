@@ -3,8 +3,8 @@
 dojox.grid.EnhancedGrid.plugins.Search
 =========================================
 
-:Authors: Zhu Xiao Wen
-:Project owner: Nathan Toone
+:Authors: Oliver Zhu
+:Project owner: Evan Huang
 :Available: since V.1.6
 
 Search plugin provides a method to search the grid data by regular expressions or wildcard patterns.
