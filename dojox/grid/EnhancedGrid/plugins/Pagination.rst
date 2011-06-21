@@ -71,8 +71,8 @@ Pagination is a plugin for dojox.grid.EnhnacedGrid. It's designed to allow the u
 		                gotoButton: true,
 		                maxPageStep: 7,		// Integer, custom how many page step will be displayed
 		                position: "bottom"	// String, custom the position of the pagination bar
-			}
-		}}, document.createElement('div'));
+			}}, 
+               document.createElement('div'));
 
           // append the new grid to the div
           grid.placeAt('gridDiv');
