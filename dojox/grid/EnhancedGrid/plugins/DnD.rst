@@ -118,7 +118,7 @@ DnD is a plugin for dojox.grid.EnhancedGrid. It provides supports for drag-and-d
 				canSort: function(){return false;},
 				plugins: {
 					dnd: {
-						setIdentifierForNewItem: sentIdentifierForNewItem,
+						setIdentifierForNewItem: setIdentifierForNewItem,
 						dndConfig: {}
 					}
 				}
@@ -134,7 +134,7 @@ DnD is a plugin for dojox.grid.EnhancedGrid. It provides supports for drag-and-d
 				canSort: function(){return false;},
 				plugins: {
 					dnd: {
-						setIdentifierForNewItem: sentIdentifierForNewItem,
+						setIdentifierForNewItem: setIdentifierForNewItem,
 						dndConfig: {}
 					}
 				}
