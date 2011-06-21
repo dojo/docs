@@ -175,8 +175,8 @@ pageSizes                  Array                    ["10", "25",     Customize t
                                                     "50", "100",     "All"(case-insensitive).
                                                     "All"]           
 maxPageStep                integer                  7                Indicates how many page navigation choices will be displayed (Suggested that the value should be less than 10).
-defaultPageSize            integer                  n/a              The page size used by default
-defaultPage                integer                  n/a              Which page will be displayed by default
+defaultPageSize            integer                  pageSizes[0]     The page size used by default
+defaultPage                integer                  1 - first page   Which page will be displayed by default
 =========================  =======================  ===============  ================================================================================================================
 
 =====
