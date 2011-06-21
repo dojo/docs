@@ -106,7 +106,7 @@ DnD is a plugin for dojox.grid.EnhancedGrid. It provides supports for drag-and-d
 		function setCopyOnly(gridId, selected){
 			dijit.byId(gridId).dndCopyOnly(selected);
 		}
-		dojo.addOnLoad(function(){
+		dojo.ready(function(){
 			var store1 = new dojo.data.ItemFileWriteStore({data: data});
 			var store2 = new dojo.data.ItemFileWriteStore({data: data1});
 
