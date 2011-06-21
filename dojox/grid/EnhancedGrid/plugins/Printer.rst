@@ -3,8 +3,8 @@
 dojox.grid.EnhancedGrid.plugins.Printer
 =======================================
 
-:Authors: Zhu Xiao Wen
-:Project owner: Nathan Toone
+:Authors: Oliver Zhu
+:Project owner: Evan Huang
 :Available: since V.1.6
 
 Printer plugin provides some convenient methods to print the grid data.
