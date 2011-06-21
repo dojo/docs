@@ -63,13 +63,13 @@ Pagination is a plugin for dojox.grid.EnhnacedGrid. It's designed to allow the u
               rowSelector: '20px',
 		plugins: {
 			pagination: {
-				pageSizes: ["10", "25", "50", "100", "All"],
+				pageSizes: ["25", "50", "100", "All"],
 		                description: true,
 		                sizeSwitch: true,
 		                pageStepper: true,
 		                gotoButton: true,
                                 //page step to be displayed
-		                maxPageStep: 7,
+		                maxPageStep: 6,
                                 //position of the pagination bar
 		                position: "bottom"
 			}}}, 
