@@ -20,91 +20,87 @@ Pagination is a plugin for dojox.grid.EnhnacedGrid. It's designed to allow the u
 
 .. code-example::
   :toolbar: themes, versions, dir
-  :version: local
-  :width: 680
-  :height: 300
+  :width: 550
+  :height: 330
 
   .. javascript::
 
-	<script type="text/javascript" src="{{ baseUrl }}dojox/grid/tests/enhanced/support/test_write_store_music.js"></script>
-	<script type="text/javascript">
-		dojo.require("dojox.grid.EnhancedGrid");
-		dojo.require("dojox.grid.enhanced.plugins.Pagination");
-				
-		dojo.addOnLoad(function(){
-			//See the ItemFileWriteStore defined in test_write_store_music.js
-			var store = test_store[0];
-			
-			var layout = [
-				{ field: "id", datatype:"number"},
-				{ field: "Genre", datatype:"string"},
-				{ field: "Artist", datatype:"string",
-					//Declare that we need the ComboBox for suggestions (autoComplete by default)
-					autoComplete: true
-				},
-				{ field: "Album", datatype:"string",
-					//Declare that we need the ComboBox for suggestions 
-					autoComplete: true,
-					//Configure the ComboBox, so that it does not auto-complete our input
-					dataTypeArgs: {
-						autoComplete: false
-					}
-				},
-				{ field: "Name", datatype:"string",
-					//Declare that we do not need the following conditions for this column 
-					disabledConditions: ["contains", "notcontains"]
-				},
-				{ field: "Track", datatype:"number"},
-				{ field: "Download Date", datatype:"date",
-					//Declare how the data in store should be parsed to a Date object.
-					dataTypeArgs: {
-						datePattern: "yyyy/M/d"
-					}
-				},
-				{ field: "Last Played", datatype:"time",
-					//Declare how the data in store should be parsed to a Date object.
-					dataTypeArgs: {
-						timePattern: "HH:mm:ss"
-					}
-				}
-			];
-			
-			var grid = new dojox.grid.EnhancedGrid({
-				id: 'grid',
-				store: store,
-				structure: layout,
-				plugins: {
-					pagination: {
-						pageSizes: ["10", "25", "50", "100", "All"],	// Array, custom the items per page menu
-				                // itemTitle: "entrys", 	// String, custom the item' title of description
-				                description: true,
-				                sizeSwitch: true,
-				                pageStepper: true",
-				                gotoButton: true,
-				                maxPageStep: 7,		// Integer, custom how many page step will be displayed
-				                position: "bottom"	// String, custom the position of the pagination bar
-					}
-				}
-			});
-			grid.placeAt('gridContainer');
-			grid.startup();
-		});
-	</script>
+    <script type="text/javascript">
+        dojo.require("dojox.grid.EnhancedGrid");
+        dojo.require("dojox.grid.enhanced.plugins.Pagination");
+        dojo.require("dojo.data.ItemFileWriteStore");        
+    
+        dojo.addOnLoad(function(){
+	  //set up data store
+	  var data = {
+		identifier: 'id',
+		items: []
+	  };
+	  var data_list = [ 
+		{ col1: "normal", col2: false, col3: 'But are not followed by two hexadecimal', col4: 29.91},
+		{ col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
+		{ col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
+	  ];
+	  var rows = 60;
+	  for(var i=0, l=data_list.length; i<rows; i++){
+		data.items.push(dojo.mixin({ id: i }, data_list[i%l]));
+	  }
+	  var store = new dojo.data.ItemFileWriteStore({data: data});
+	
+	  //set up layout
+	  var layout = [[
+		{name: 'Column 1', field: 'id'},
+		{name: 'Column 2', field: 'col2'},
+		{name: 'Column 3', field: 'col3', width: "230px"},
+		{name: 'Column 4', field: 'col4'}
+	  ]];
+
+          // create a new grid:
+          var grid = new dojox.grid.EnhancedGrid({
+              id: 'grid',
+              store: store,              
+              structure: layout,
+              rowSelector: '20px',
+		plugins: {
+			pagination: {
+				pageSizes: ["10", "25", "50", "100", "All"],	// Array, custom the items per page menu
+		                // itemTitle: "entrys", 	// String, custom the item' title of description
+		                description: true,
+		                sizeSwitch: true,
+		                pageStepper: true",
+		                gotoButton: true,
+		                maxPageStep: 7,		// Integer, custom how many page step will be displayed
+		                position: "bottom"	// String, custom the position of the pagination bar
+			}
+		}}, document.createElement('div'));
+
+          // append the new grid to the div
+          grid.placeAt('gridDiv');
+
+          // Call startup() to render the grid
+          grid.startup();
+        });
+    </script>
 
   .. html::
 
-    <div id="gridContainer" style="width: 100%; height: 400px;"></div>
+	<div id="gridDiv"></div>
+
 
   .. css::
 
     <style type="text/css">
-    @import "{{ baseUrl }}dojo/resources/dojo.css";
-    @import "{{ baseUrl }}dijit/themes/{{ theme }}/{{ theme }}.css";
-    @import "{{ baseUrl }}dijit/themes/{{ theme }}/document.css";
-    @import "{{ baseUrl }}dojox/grid/enhanced/resources/{{ theme }}/EnhancedGrid.css";
-    @import "{{ baseUrl }}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
-    </style>
+        @import "{{baseUrl}}dojo/resources/dojo.css";
+        @import "{{baseUrl}}dijit/themes/claro/claro.css";
+	@import "{{baseUrl}}dojox/grid/enhanced/resources/claro/EnhancedGrid.css";
+	@import "{{baseUrl}}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
 
+        /*Grid need a explicit width/height by default*/
+        #grid {
+            width: 43em;
+            height: 20em;
+        }
+    </style>
 
 =============
 Configuration
