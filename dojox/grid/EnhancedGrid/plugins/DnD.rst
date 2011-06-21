@@ -3,7 +3,7 @@
 dojox.grid.EnhancedGrid.plugins.DnD
 ===================================
 
-:Authors: Zhu Xiao Wen
+:Authors: Oliver Zhu
 :Project owner: Evan Huang
 :Available: since V.1.6
 
@@ -20,7 +20,6 @@ DnD is a plugin for dojox.grid.EnhancedGrid. It provides supports for drag-and-d
 
 .. code-example::
   :toolbar: themes, versions, dir
-  :version: local
   :width: 650
   :height: 600
 
@@ -31,10 +30,29 @@ DnD is a plugin for dojox.grid.EnhancedGrid. It provides supports for drag-and-d
 		dojo.require("dijit.form.CheckBox");
 		dojo.require("dojox.grid.EnhancedGrid");
 		dojo.require("dojox.grid.enhanced.plugins.DnD");
-	</script>
-	<script type="text/javascript" src="{{ baseUrl }}dojox/grid/tests/enhanced/support/test_write_store_dnd.js"></script>
-	<script type="text/javascript">
-		var layout1 = [{
+
+		var data = {
+			identifier: 'id',
+			label: 'id',
+			items: []
+		};
+		var cols = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+		var data_list = [];
+		var i, row, j;
+		for(i = 0; i < 100; ++i){
+			row = {};
+			for(j = 0; j < cols.length; ++j){
+				row[cols[j]] = (i + 1) + cols[j];
+			}
+			data_list.push(row);
+		}
+		var len = data_list.length;
+		for(i = 0; i < len ; ++i){
+			data.items.push(dojo.mixin({ 'id': i + 1 }, data_list[i]));
+		}
+		var data1 = dojo.clone(data);
+		
+		var layout = [{
 			defaultCell: {width: 3},
 			rows: [
 				{field: "A"},
@@ -65,26 +83,54 @@ DnD is a plugin for dojox.grid.EnhancedGrid. It provides supports for drag-and-d
 				{field: "Z"}
 			]
 		}];
-		var store_copy = new dojo.data.ItemFileWriteStore({
-			data: test_store_data[0]
-		});
+
 		function setIdentifierForNewItem(item, store, index){
 			var attrs = store.getIdentityAttributes(item);
 			for(var i = attrs.length - 1; i >= 0; --i){
 				item[attrs[i]] = index + (new Date()).getTime();
 			}
 			return item;
-		};
+		}
 		function setDnDConfig(gridId, type, mode, selected){
 			var config = {};
 			config[type] = {};
 			config[type][mode] = selected;
 			dijit.byId(gridId).setupDnDConfig(config);
-		};
+		}
 		function setCopyOnly(gridId, selected){
 			dijit.byId(gridId).dndCopyOnly(selected);
-		};
+		}
 		dojo.addOnLoad(function(){
+			var store1 = new dojo.data.ItemFileWriteStore({data: data});
+			var store2 = new dojo.data.ItemFileWriteStore({data: data1});
+
+			var grid1 = new dojox.grid.EnhancedGrid({
+				id: 'grid1',
+				store: store1, 
+				structure: layout,
+				rowSelector: '20px',
+				canSort: function(){return false;},
+				plugins: {
+					dnd: {
+						setIdentifierForNewItem: sentIdentifierForNewItem,
+						dndConfig: {}
+					}
+				}
+			});
+			grid1.placeAt('gridContainer1');
+
+			var grid2 = new dojox.grid.EnhancedGrid({
+				id: 'grid2',
+				canSort: function(){return false;},
+				plugins: {
+					dnd: {
+						setIdentifierForNewItem: sentIdentifierForNewItem,
+						dndConfig: {}
+					}
+				}
+			});
+			grid2.placeAt('gridContainer2');
+
 			dojo.query("input.cfgbox").forEach(function(cb){
 				cb.checked = true;
 			});
@@ -98,29 +144,11 @@ DnD is a plugin for dojox.grid.EnhancedGrid. It provides supports for drag-and-d
 
 	<div class="myblock">
 		<h3>Grid 1</h3>
-		<div id="grid1" dojoType="dojox.grid.EnhancedGrid"
-			canSort="function(){return false;}",
-			plugins='{
-				dnd: {
-					"setIdentifierForNewItem": setIdentifierForNewItem,
-					"dndConfig": {
-					}
-				}
-			}' store="test_store[0]" structure="layout1" rowSelector="20px">
-		</div>
+		<div id="gridContainer1"></div>
 	</div>
 	<div class="myblock">
 		<h3>Grid 2</h3>
-		<div id="grid2" dojoType="dojox.grid.EnhancedGrid"
-			canSort="function(){return false;}",
-			plugins='{
-				dnd: {
-					"setIdentifierForNewItem": setIdentifierForNewItem,
-					"dndConfig": {
-					}
-				}
-			}' store="store_copy" structure="layout1" rowSelector="20px">
-		</div>
+		<div id="gridContainer2"></div>
 	</div>
 	<div class="myblock">
 		<h3>Grid 1 Configuration</h3>
@@ -213,7 +241,7 @@ DnD is a plugin for dojox.grid.EnhancedGrid. It provides supports for drag-and-d
 	h3{
 		margin: 0;
 	}
-	#grid1, #grid2{
+	#gridContainer1, #gridContainer2{
 		margin-bottom: 0px;
 		width: 300px;
 		height: 300px;
@@ -227,7 +255,7 @@ Configuration
 Prerequisites
 -------------
 
-This DnD plugin is only available for EnhancedGrid, so please use the following statement at first:
+This DnD plugin is only available for EnhancedGrid, so use the following statement in the head of your HTML file:
 
 .. code-block :: javascript
   :linenos:
@@ -347,6 +375,8 @@ Dragging Rows
 Dragging Cells
 
 .. image:: dnd-within-cells.gif
+
+
 
 DnD across Grids
 ----------------
