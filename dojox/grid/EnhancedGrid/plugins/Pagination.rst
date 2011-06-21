@@ -41,7 +41,7 @@ Pagination is a plugin for dojox.grid.EnhnacedGrid. It's designed to allow the u
 		{ col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
 		{ col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
 	  ];
-	  var rows = 60;
+	  var rows = 200;
 	  for(var i=0, l=data_list.length; i<rows; i++){
 		data.items.push(dojo.mixin({ id: i }, data_list[i%l]));
 	  }
