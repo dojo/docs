@@ -242,6 +242,18 @@ showGotoPageButton  flag(boolean): Indicator of show/hide  N/A      Function to 
                     the Goto page button                            dynamically
 ==================  =====================================  =======  ================================================
 
+Tips
+----
+* Set the default displayed page
+
+.. code-block :: javascript
+  :linenos:
+
+  <script>
+    var grid = new dojox.grid.EnhancedGrid({plugins:{pagination:{defaultPage: 3}, ...}, ...}, dojo.byId('gridDiv'));
+  </script>
+
+
 ========
 See Also
 ========
