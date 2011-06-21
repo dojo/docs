@@ -64,7 +64,7 @@ Please note indirect selection is completely dependent on the selection mode of 
               store: store,              
               structure: layout,
               rowSelector: '20px',
-              plugins: {indirectSelection: {headerSelector:true, width:"70px", styles:"text-align: center;"}}},
+              plugins: {indirectSelection: {headerSelector:true, width:"40px", styles:"text-align: center;"}}},
             document.createElement('div'));
 
           // append the new grid to the div
