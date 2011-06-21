@@ -247,7 +247,7 @@ Usage
 
 * Use menu feature
 
- with HTML markup
+with HTML markup
     
 .. code-block :: javascript
   :linenos:
