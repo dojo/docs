@@ -49,7 +49,7 @@ HTML markup usage sample
 	  ];
 	  var rows = 60;
 	  for(var i=0, l=data_list.length; i<rows; i++){
-		data.items.push(dojo.mixin({ id: i }, data_list[i%l]));
+		data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
 	  }
 	  var store = new dojo.data.ItemFileWriteStore({data: data});
 	
@@ -150,7 +150,7 @@ Javascript usage sample
 	  ];
 	  var rows = 60;
 	  for(var i=0, l=data_list.length; i<rows; i++){
-		data.items.push(dojo.mixin({ id: i }, data_list[i%l]));
+		data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
 	  }
 	  var store = new dojo.data.ItemFileWriteStore({data: data});
 	
