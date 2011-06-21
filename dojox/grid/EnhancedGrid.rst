@@ -46,7 +46,7 @@ This is the most simple way to run up an EnhancedGrid, it's basically the same a
 	  ];
 	  var rows = 60;
 	  for(var i=0, l=data_list.length; i<rows; i++){
-		data.items.push(dojo.mixin({ id: i }, data_list[i%l]));
+		data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
 	  }
 	  var store = new dojo.data.ItemFileWriteStore({data: data});
 	
