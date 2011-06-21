@@ -26,6 +26,7 @@ This feature enhances the single sorting feature of base DataGrid. Nested sortin
     <script type="text/javascript">
         dojo.require("dojox.grid.EnhancedGrid");
         dojo.require("dojo.data.ItemFileWriteStore");
+        dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
     
         dojo.addOnLoad(function(){
 	  //set up data store
