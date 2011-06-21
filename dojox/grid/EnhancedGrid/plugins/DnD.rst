@@ -52,7 +52,7 @@ DnD is a plugin for dojox.grid.EnhancedGrid. It provides supports for drag-and-d
 		}
 		var data1 = dojo.clone(data);
 		
-		var layout = [{
+		var layout1 = [{
 			defaultCell: {width: 3},
 			rows: [
 				{field: "A"},
@@ -61,13 +61,19 @@ DnD is a plugin for dojox.grid.EnhancedGrid. It provides supports for drag-and-d
 				{field: "D"},
 				{field: "E"},
 				{field: "F"},
-				{field: "G", hidden: true},
-				{field: "H", hidden: true},
-				{field: "I", hidden: true},
+				{field: "G"},
+				{field: "H"},
+				{field: "I"},
 				{field: "J"},
 				{field: "K"},
 				{field: "L"},
-				{field: "M"},
+				{field: "M"}
+			]
+		}];
+
+		var layout2 = [{
+			defaultCell: {width: 3},
+			row: [
 				{field: "N"},
 				{field: "O"},
 				{field: "P"},
@@ -107,7 +113,7 @@ DnD is a plugin for dojox.grid.EnhancedGrid. It provides supports for drag-and-d
 			var grid1 = new dojox.grid.EnhancedGrid({
 				id: 'grid1',
 				store: store1, 
-				structure: layout,
+				structure: layout1,
 				rowSelector: '20px',
 				canSort: function(){return false;},
 				plugins: {
@@ -118,9 +124,13 @@ DnD is a plugin for dojox.grid.EnhancedGrid. It provides supports for drag-and-d
 				}
 			});
 			grid1.placeAt('gridContainer1');
+			grid1.startup();
 
 			var grid2 = new dojox.grid.EnhancedGrid({
 				id: 'grid2',
+				store: store2,
+				structure: layout2,
+				rowSelector: '20px',
 				canSort: function(){return false;},
 				plugins: {
 					dnd: {
@@ -130,6 +140,7 @@ DnD is a plugin for dojox.grid.EnhancedGrid. It provides supports for drag-and-d
 				}
 			});
 			grid2.placeAt('gridContainer2');
+			grid2.startup();
 
 			dojo.query("input.cfgbox").forEach(function(cb){
 				cb.checked = true;
