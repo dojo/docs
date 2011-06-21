@@ -184,10 +184,10 @@ This plugin is based on the Exporter plugin. Actually, an export writer, TableWr
 			}, preview);
 		}
 		function previewSelected(){
-			dijit.byId("grid").exportSelectedToHTML({
+			preview(dijit.byId("grid").exportSelectedToHTML({
 				title: "Music Store - Selected",
 				cssFiles: cssFiles
-			}, preview);
+			}));
 		}
 		function previewCustomized(){
 			dijit.byId("grid").exportToHTML({
