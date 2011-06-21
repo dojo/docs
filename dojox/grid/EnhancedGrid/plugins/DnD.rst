@@ -73,7 +73,7 @@ DnD is a plugin for dojox.grid.EnhancedGrid. It provides supports for drag-and-d
 
 		var layout2 = [{
 			defaultCell: {width: 3},
-			row: [
+			rows: [
 				{field: "N"},
 				{field: "O"},
 				{field: "P"},
