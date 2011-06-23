@@ -251,10 +251,6 @@ Tips
 See also
 ========
 
-* `Dojo’s got style <http://dojocampus.org/content/2008/04/01/dojos-got-style/>`_
-
-  dojo.style() tutorial from Peter Higgins
-
 * `dojo.addClass <dojo/addClass>`_
 * `dojo.hasClass <dojo/hasClass>`_
 * `dojo.removeClass <dojo/removeClass>`_
