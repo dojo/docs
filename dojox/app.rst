@@ -60,6 +60,14 @@ Sample
 Comparison with dojox.mobile.app
 ================================
 
+The main difference between dojox.app and dojox.mobile.app is listed as following.
+dojox.app enables the model binding 
+dojox.app uses scene/view structure to enable the nested scene or view which resembles the composite design pattern. It does not mean dojox.mobile.app cannot do that but it needs coding to implement that.
+dojox.app contains the layout mechanism to ensure the content at different application/scene/view level work well together
+dojox.mobile.app manage the navigation history in StageController by using a history stack. dojox.app manage the navigation history through HTML5 pushState standard and delegate it to browser enabled history management.
+
 .. image:: /Diagram3.png
 
 .. image:: /Diagram1.png
+
+Here is the sequence diagram to reflect the difference in the navigation management.
