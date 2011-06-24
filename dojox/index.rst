@@ -16,6 +16,10 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
   * `dojox.analytics.Urchin <dojox/analytics/Urchin>`_
 
+* `dojox.app <dojox/app>`_
+
+  Implements the application framework using dojox.mvc for web application on desktop and mobile platforms
+
 * `dojox.atom <dojox/atom>`_
 
   Implements the Atom Syndication Format and Atom Publishing Protocol
