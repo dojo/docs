@@ -23,3 +23,8 @@ There are two core libraries that will need to work together to accomplish these
 dojox.app - A library that provides high-level application controllers, defined by metadata which describes the overall structure and navigation of the application and it’s views.
 
 dojox.mvc - A library that provides the ability to have view concerns separated from model or data concerns but have simple bindings or connections between them that can keep either side in sync, as well as respond to events or actions.  The library also provides the ability to generate data-bound forms and views dynamically, built on key elements of mvc and app. 
+
+=============
+Usage
+=============
+Application structure overview.
