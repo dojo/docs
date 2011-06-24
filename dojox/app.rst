@@ -29,4 +29,4 @@ Usage
 =============
 Application structure overview.
 
-.. image::/Diagram1.png
+.. image:: /Diagram1.png
