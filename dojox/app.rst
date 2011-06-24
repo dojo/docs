@@ -59,3 +59,5 @@ Sample
 ================================
 Comparison with dojox.mobile.app
 ================================
+
+.. image:: /Diagram2.png
