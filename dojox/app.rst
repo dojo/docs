@@ -28,4 +28,5 @@ dojox.mvc - A library that provides the ability to have view concerns separated 
 Usage
 =============
 Application structure overview.
-[[attachment:Diagram1.png]]
+
+.. image::/Diagram1.png
