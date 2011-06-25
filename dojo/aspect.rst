@@ -30,11 +30,11 @@ The target is the object with the method. The methodName is the name of the meth
 .. code-block :: javascript
 
   define(["dojo/aspect"], function(aspect){
-    aspect.after(dojo, "xhr", function(response){
+    aspect.after(dojo, "xhr", function(deferred){
       // this is called after any dojo.xhr call
     });
-	// this will execute the original dojo.xhr method and then our advising function
-	dojo.xhr("GET", {...}); 
+    // this will execute the original dojo.xhr method and then our advising function
+    dojo.xhr("GET", {...}); 
   });
 
 We can also load dojo/aspect with dojo.require("dojo.aspect") to make it available globally as dojo.aspect:
@@ -50,9 +50,9 @@ The advising function can return a value to replace the final return value of th
 
 .. code-block :: javascript
 
-  aspect.after(dojo, "xhr", function(response){
+  aspect.after(dojo, "xhr", function(deferred){
     // returning a value replaces the return value
-    return response.then(function(response){
+    return deferred.then(function(response){
       return dojo.fromJson(response);
     });
   });
@@ -82,15 +82,15 @@ The target is the object with the method. The methodName is the name of the meth
   define(["dojo/aspect"], function(aspect){
     aspect.before(dojo, "xhr", function(method, args){
       // this is called before any dojo.xhr call
-	  if(method == "PUT"){
-	    // if the method is PUT, change it to a POST and put the method in the parameter string
-	    args.url += "?x-method=PUT";
-		// return the new args
-		return ["POST", args];
-	  }
+      if(method == "PUT"){
+        // if the method is PUT, change it to a POST and put the method in the parameter string
+        args.url += "?x-method=PUT";
+	// return the new args
+	return ["POST", args];
+      }
     });
-	// this will execute the original our advising function and then dojo.xhr
-	dojo.xhr("PUT", {...}); 
+    // this will execute the original our advising function and then dojo.xhr
+    dojo.xhr("PUT", {...}); 
   });
 
 around
@@ -108,11 +108,12 @@ The target is the object with the method. The methodName is the name of the meth
 
   define(["dojo/aspect"], function(aspect){
     aspect.around(dojo, "xhr", function(originalXhr){
-	  return function(method, args){
-	    // doing something before the original call
+      return function(method, args){
+        // doing something before the original call
         var result = originalXhr(method, args);
-		// doing something after the original call
-		return result;
+        // doing something after the original call
+        return result;
+      }
     });	
-	dojo.xhr("PUT", {...}); 
+    dojo.xhr("PUT", {...}); 
   });
