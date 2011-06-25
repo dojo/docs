@@ -223,9 +223,68 @@ OpenLayers Maps
 Util
 ====
 
+The build tool has been replaced, but it supports the same options as before.   It now runs on node.js too (in addition to rhino).   (TODO: Rawld, fill this in)
+
 =========
 Migration
 =========
+
+Loader/Builder related
+----------------------
+
+<script>
+````````
+Previously you may have been loading modules or layers via script tags, ex:
+
+   .. code-block :: html
+
+      <script src="/mysite/app/MyWidget.js">
+
+This no longer works, and will give errors about "foo multiply defined".   Instead you must load it through dojo.require():
+
+   .. code-block :: javascript
+
+      dojo.require("app.MyWidget");
+
+Or the new AMD require() API.
+
+
+Global variables
+````````````````
+If your JS files included into a build want to declare global variables, perhaps to be used by widgets, ex:
+
+   .. code-block :: html
+
+      <script>
+         function myOnClick(){ ... }
+      </script>
+      ...
+      <button dojoType="dijit.form.Button" onClick="myOnClick">...</button>
+
+Then you need to declare them with this syntax:
+
+   .. code-block :: html
+
+      <script>
+         myOnClick = function(){ ... }
+      </script>
+
+The following syntax will not work, and will give errors about not being able to find the symbox:
+
+   .. code-block :: html
+
+      <script>
+         function myOnClick(){ ... }
+      </script>
+
+Nor will this:
+
+   .. code-block :: html
+
+      <script>
+         var myOnClick = function(){ ... };
+      </script>
+
 
 Dijit
 -----
