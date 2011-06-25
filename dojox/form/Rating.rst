@@ -32,13 +32,14 @@ Quick Start
 
 The following example shows how the default widget works. Make it work by
 
-#. using the attribute ``dojoType="dojox.form.Rating"`` on the node that shall contain the rating widget
+#. using the attribute ``data-dojo-type="dojox.form.Rating"`` on the node that shall contain the rating widget
 #. require the code by adding ``dojo.require("dojox.form.Rating");`` in your JS code
 #. import the CSS file ``<style type="text/css">@import "dojox/form/resources/Rating.css";</style>``, otherwise it won't know how to style and what images to use.
 
 Now you are set and the rating widget should render and be useable.
 
-.. codeviewer::
+.. code-block :: html
+  :linenos:
   
   <style type="text/css">
     @import "dojox/form/resources/Rating.css"; 
@@ -47,7 +48,7 @@ Now you are set and the rating widget should render and be useable.
     dojo.require("dojox.form.Rating");
   </script>
 
-  <div dojoType="dojox.form.Rating"></div>
+  <div data-dojo-type="dojox.form.Rating"></div>
 
 You can **reset the number of stars to 0** by clicking on the currently selected star. For example, if two stars are currently selected click on the second star again and no star will be selected.
 
@@ -57,7 +58,8 @@ Standard options
 
 This example shows how to use additional attributes to customize the widget. The attribute ``numStars="10"`` tells the widget to show ten stars, ``value="4"`` sets the initially selected number of stars. 
 
-.. codeviewer::
+.. code-block :: html
+  :linenos:
   
   <style type="text/css">
     @import "dojox/form/resources/Rating.css"; 
@@ -66,7 +68,7 @@ This example shows how to use additional attributes to customize the widget. The
     dojo.require("dojox.form.Rating");
   </script>
 
-  <div dojoType="dojox.form.Rating" numStars="10" value="4"></div>
+  <div data-dojo-type="dojox.form.Rating" data-dojo-props="numStars:10,value:4"></div>
 
 
 Events via inline script
@@ -74,7 +76,8 @@ Events via inline script
 
 The following shows what events you can connect to and how to do this using inline script blocks.
 
-.. codeviewer::
+.. code-block :: html
+  :linenos:
   
   <style type="text/css">
     @import "dojox/form/resources/Rating.css"; 
@@ -83,7 +86,7 @@ The following shows what events you can connect to and how to do this using inli
     dojo.require("dojox.form.Rating");
   </script>
   <p id="inlineEvents">
-    <span dojoType="dojox.form.Rating" numStars="10">
+    <span data-dojo-type="dojox.form.Rating" data-dojo-props="numStars:10">
       <script type="dojo/event" data-dojo-event="onChange">
         dojo.query('#inlineEvents .value')[0].innerHTML = this.value;
       </script>
@@ -102,7 +105,8 @@ Events via dojo.connect()
 
 The next example shows how you can do the same as above, just using the default connect methods, which is the most common way and probably fits best when working in big projects and when you need a separation of markup and JavaScript source code.
 
-.. codeviewer::
+.. code-block :: html
+  :linenos:
   
   <style type="text/css">
     @import "dojox/form/resources/Rating.css"; 
@@ -110,17 +114,17 @@ The next example shows how you can do the same as above, just using the default 
   <script type="text/javascript">
     dojo.require("dojox.form.Rating");
     dojo.addOnLoad(function() {
-      var widget = dijit.byId("connectRating");
-      dojo.connect(widget, "onChange", function() {
-        dojo.query('#defaultConnect .value')[0].innerHTML = widget.value;
-      });
-      dojo.connect(widget, "onMouseOver", function(evt, value) {
-          dojo.query('#defaultConnect .hoverValue')[0].innerHTML = value;
-      });
+        var widget = dijit.byId("connectRating");
+        dojo.connect(widget, "onChange", function() {
+            dojo.query('#defaultConnect .value')[0].innerHTML = widget.value;
+        });
+        dojo.connect(widget, "onMouseOver", function(evt, value) {
+            dojo.query('#defaultConnect .hoverValue')[0].innerHTML = value;
+        });
     });
   </script>
   <p id="defaultConnect">
-    <span id="connectRating" dojoType="dojox.form.Rating" numStars="10"></span>
+    <span id="connectRating" data-dojo-type="dojox.form.Rating" data-dojo-props="numStars:10"></span>
     <br /><br />
     The value is: <b><span class="value">0</span></b><br />
     The mouse is over: <b><span class="hoverValue">0</span></b>
@@ -130,7 +134,8 @@ The next example shows how you can do the same as above, just using the default 
 Inside a dojo form
 ------------------
 
-.. codeviewer::
+.. code-block :: html
+  :linenos:
   
   <style type="text/css">
     @import "dojox/form/resources/Rating.css"; 
@@ -141,17 +146,17 @@ Inside a dojo form
     dojo.require("dijit.form.FilteringSelect");
     dojo.require("dijit.form.Button");
   </script>
-  <form dojoType="dijit.form.Form">
-    <select dojoType="dijit.form.FilteringSelect">
+  <form data-dojo-type="dijit.form.Form">
+    <select data-dojo-type="dijit.form.FilteringSelect">
       <option>Does</option>
       <option>this</option>
       <option>work?</option>
     </select>
 
     <br /><br />
-    <div dojoType="dojox.form.Rating" numStars="5" value="1"></div>
+    <div data-dojo-type="dojox.form.Rating" data-dojo-props="numStars:5,value:1"></div>
     <br /><br />
-    <button dojoType="dijit.form.Button">Click me</button>
+    <button data-dojo-type="dijit.form.Button">Click me</button>
   </form>
 
 
@@ -159,7 +164,8 @@ Inside a dojo form
 Customized stars
 ----------------
 
-.. codeviewer::
+.. code-block :: html
+  :linenos:
   
   <style type="text/css">
     @import "dojox/form/resources/Rating.css";
@@ -186,5 +192,5 @@ Customized stars
   </script>
  
   <div id="myRating">
-    <div dojoType="dojox.form.Rating" numStars="6" value="2"></div>
+    <div data-dojo-type="dojox.form.Rating" data-dojo-props="numStars:6,value:2"></div>
   </div>
