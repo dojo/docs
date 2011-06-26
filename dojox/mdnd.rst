@@ -32,21 +32,21 @@ TODO: how to use the component/class/method
 .. code-block :: html
   :linenos:
 
-  dojo.require("dojox.mdnd.AreaManager");
-  dojo.require("dojox.mdnd.DropIndicator");
-  dojo.require("dojox.mdnd.dropMode.DefaultDropMode");
+  <script type="text/javascript">
+    dojo.require("dojox.mdnd.AreaManager");
+    dojo.require("dojox.mdnd.DropIndicator");
+    dojo.require("dojox.mdnd.dropMode.DefaultDropMode");
 
-  var init = function(){
-  var m = dojox.mdnd.areaManager();
-  m.areaClass = "dndArea";
-  m.dragHandleClass = "dragHandle";
-  m.registerByClass();
-  };
+    var init = function(){
+      var m = dojox.mdnd.areaManager();
+      m.areaClass = "dndArea";
+      m.dragHandleClass = "dragHandle";
+      m.registerByClass();
+    };
 
-  dojo.addOnLoad(init);
-
+    dojo.addOnLoad(init);
+  </script>
   ...
-
   <div style="position:absolute; top:80px; left:50px;">
     <h2>Accepts Type1 items</h2>
     <div class="dndArea container" accept="type1">
