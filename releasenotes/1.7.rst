@@ -286,6 +286,13 @@ Nor will this:
       </script>
 
 
+Dore Core
+---------
+
+HTML
+````
+- dojo._getBorderBox() has been removed, use dojo.position() instead
+
 Dijit
 -----
 - Many widgets which used to extend _Templated now extend _TemplatedMixin.   If you have custom widgets that extend standard widgets, and use widgetsInTemplate: true, you may need to also mixin dijit._WidgetsInTemplate
