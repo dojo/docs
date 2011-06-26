@@ -251,7 +251,7 @@ Or the new AMD require() API.
 
 Global variables
 ````````````````
-If your JS files included into a build want to declare global variables, perhaps to be used by widgets, ex:
+If your JS files want to declare global variables, perhaps to be used by widgets, ex:
 
    .. code-block :: html
 
