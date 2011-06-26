@@ -66,13 +66,38 @@ Application loads dojox.app configuration file and create view, scene, model wit
 
 Here is the configuration instruction table.
 
++-----------------------+-----------------------------------------------------------------------+
+| **Configuration**     | **Description**                                                       |
++-----------------------+-----------------------------------------------------------------------+
+|id                     |Id of dojox.app application                                            |
++-----------------------+-----------------------------------------------------------------------+
+|name                   |Name of dojox.app application                                          |
++-----------------------+-----------------------------------------------------------------------+
+|description            |Description of dojox.app application                                   |
++-----------------------+-----------------------------------------------------------------------+
+|splash                 |Splash screen of dojox.app application (reserved but not implemented)  |
++-----------------------+-----------------------------------------------------------------------+
+|dependencies           |Dependencies of dojox.app application. It can be defined as global     |
+|                       |dependencies for application or as view dependencies in a view.        |
++-----------------------+-----------------------------------------------------------------------+
+|modules                |Modules for the application. These are basically used as the mixins in |
+|                       |dojo.declare() for the application. They modify the top level behavior |
+|                       |of the application, how it processes the config or any other life cycle|
++-----------------------+-----------------------------------------------------------------------+
+|stores                 |Define dojo data stores which are used by dojox.app data model. A data |
+|                       |store is composed by store name, store type and store parameters.      |
++-----------------------+-----------------------------------------------------------------------+
+|models                 |Models and instantiation parameters for the models including 'type' as |
+|                       |a property allows one to override the class that will be used for the  |
+|                       |model. By default it is dojox.mvc.model.                               |
++-----------------------+-----------------------------------------------------------------------+
+|defaultView            |The name of the scene/view to load when the application is initialized.|
++-----------------------+-----------------------------------------------------------------------+
+|defaultTransition      |The default type of animation for the view transition.                 |   
++-----------------------+-----------------------------------------------------------------------+
+|views                  |The children views/scenes of the application or current scene.         |
++-----------------------+-----------------------------------------------------------------------+
 
-||'''A'''||'''B'''||'''C'''||
-||1      ||2      ||3      ||
-
-
-||'''Configuration'''||'''Description'''          ||'''Sample'''    ||
-||id                 ||Id of dojox.app application||"id": "modelApp"||
 
 dojox.app.view
 dojox.app.view provides a view like dojox.mobile.View. It contains a template string which will be rendered with user defined template segments. A view should have no child view. 
