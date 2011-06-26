@@ -32,6 +32,37 @@ Application structure overview.
 
 .. image:: /Diagram1.png
 
+To create and startup a dojox.app application, a dojox.app configuration JSON is needed to initialize the application. Here are the necessary files to start an application.
+An html (index.html) is needed to load dojo.js and a javascript file included in index.html is used to create the application.
+
+Index.html
+
+.. code-block :: html
+
+  <!-- load dojo.js -->
+  <script type="text/javascript" src="../../../../dojo/dojo.js"></script>
+  <!-- load dojox.app startup file, the actual  launcher -->
+  <script type="text/javascript" src="multiSceneApp.js"></script>
+
+multiSceneApp.js
+
+.. code-block :: javascript
+
+  //Get current path
+  var path = window.location.pathname;
+  if (path.charAt(path.length)!="/"){
+    path = path.split("/");
+    path.pop();
+    path=path.join("/");
+  }
+  //register current application module path
+  dojo.registerModulePath("app",path);
+  //load configuration json file
+  require(["dojo/_base/html","dojox/app/main", "dojo/text!app/config.json"],function(dojo,Application,config){
+    //startup the application
+    app = Application(eval("(" + config + ")"));
+  });
+
 dojox.app.view
 dojox.app.view provides a view like dojox.mobile.View. It contains a template string which will be rendered with user defined template segments. A view should have no child view. 
 
