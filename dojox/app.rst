@@ -1,3 +1,4 @@
+#format dojo_rst
 dojox.app
 =========
 
