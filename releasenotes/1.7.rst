@@ -41,6 +41,8 @@ Dojo now fully supports asynchronous loading of AMD modules. Asynchronous loadin
 
       <script data-dojo-config="async: true" src="dojo.js"></script>
 
+Note that in async mode many modules which were implicitly loaded before now (including dojo.parser) need to be explicitly loaded.   Be sure to list all the modules you are directly using in the require() list (or via the deprecated dojo.require() syntax).
+
 Completion of AMD conversion (Rawld etc. please fill this in)
 
 dojo.connect
