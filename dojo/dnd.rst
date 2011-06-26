@@ -771,4 +771,5 @@ Note that your src path may vary and you may need to do a custom build to includ
 See also
 ========
 
-* `dojo.dnd.Moveable <dojo/dnd/Moveable>`_
+* `dojo.dnd.Moveable <dojo/dnd/Moveable>`_ Makes a DOM node moveable using the mouse.
+* `dojox.mdnd <dojox/mdnd>`_ Experimental coordinates based moveable drag and drop. 
