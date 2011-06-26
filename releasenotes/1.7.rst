@@ -294,6 +294,10 @@ HTML
 - dojo._getBorderBox() has been removed, use dojo.position() instead
 - dojo._setOpacity() has been removed, use dojo.style(node, "opacity", ...) instead
 
+dojo.moduleUrl()
+````````````````
+dojo.moduleUrl() returns a string instead of an object.   It won't affect most apps, unless you are accessing the internal members, ex: dojo.moduleUrl(...).uri.
+
 Dijit
 -----
 - Many widgets which used to extend _Templated now extend _TemplatedMixin.   If you have custom widgets that extend standard widgets, and use widgetsInTemplate: true, you may need to also mixin dijit._WidgetsInTemplate
