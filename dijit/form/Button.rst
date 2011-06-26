@@ -56,7 +56,7 @@ The first example shows how to create a button programmatically.
 Declarative example
 -------------------
 
-As usual you can create the button widget declaratively using the dojoType attribute
+As usual you can create the button widget declaratively using the data-dojo-type attribute
 
 .. cv-compound::
 
@@ -92,7 +92,7 @@ Buttons can have icons and labels, and sometimes they just display an icon, but 
 
   .. cv:: html
 
-    <button dojoType="dijit.form.Button" iconClass="dijitEditorIcon dijitEditorIconCut" showLabel="false" type="button">cut</button>
+    <button data-dojo-type="dijit.form.Button" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconCut', showLabel: false" type="button">cut</button>
 
 
 Change the icon
@@ -118,7 +118,7 @@ You can change an icon of a Button using its iconClass attribute. Following exam
 
   .. cv:: html
 
-    <button dojoType="dijit.form.Button" id="toggleButton" iconClass="dijitEditorIcon dijitEditorIconCut" type="button">Click me!</button>
+    <button data-dojo-type="dijit.form.Button" id="toggleButton" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconCut'" type="button">Click me!</button>
 
 
 =============
@@ -147,3 +147,14 @@ Screen Reader
 ~~~~~~~~~~~~~
 
 In order to identify the button description to the screen reader, all buttons should include a label parameter even if the showLabel parameter is set to false.
+
+========
+See also
+========
+
+* `dijit.form.ComboButton <dijit/form/ComboButton>`_ - regular button with an arrow on the right to show a drop down (often a menu)
+* `dijit.form.DropDownButton <dijit/form/DropDownButton>`_ - displays some kind of drop down, often a menu, when pressed
+* `dijit.form.ToggleButton <dijit/form/ToggleButton>`_ - combination of Button and Checkbox widget
+* `dojox.form.BusyButton <dojox/form/BusyButton>`_ - implements more user friendly form submission
+* `dojox.mobile.Button <dojox/mobile/Button>`_ - simple button widget for mobiles
+* `dojox.mobile.ToolBarButton <dojox/mobile/ToolBarButton>`_ - button placed in the Heading widget for mobiles
