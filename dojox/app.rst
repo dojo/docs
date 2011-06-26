@@ -63,6 +63,17 @@ multiSceneApp.js
     app = Application(eval("(" + config + ")"));
   });
 
+Application loads dojox.app configuration file and create view, scene, model with templateHTML. env provides dojo runtime environment for dojox.app and history cache users operation.
+
+Here is the configuration instruction table.
+
+ || one || two || three ||
+ || four || five || six ||
+
+
+||'''Configuration'''||'''Description'''          ||'''Sample'''    ||
+||id                 ||Id of dojox.app application||"id": "modelApp"||
+
 dojox.app.view
 dojox.app.view provides a view like dojox.mobile.View. It contains a template string which will be rendered with user defined template segments. A view should have no child view. 
 
