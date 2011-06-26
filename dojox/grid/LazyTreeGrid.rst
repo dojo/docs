@@ -145,7 +145,7 @@ query                                 Object                               null 
                                                                                                                      An example query that is a query object would be like: { attrFoo: "value*"}. Which generally 
                                                                                                                      means match all items where they have an attribute named attrFoo, with a value that starts 
                                                                                                                      with 'value'. It is more like a simple filter because that only be used to compare items' 
-                                                                                                                     attribute and query object atribute are equal or not.
+                                                                                                                     attribute and query object attribute are equal or not.
 treeModel                             dijit.tree.ForestStoreModel          null                                      This parameter is used instead of using aggregates in dojox.grid.TreeGrid. Its mainly role 
                                       /dojox.grid.LazyTreeGridStoreModel                                             in Lazy-loading-TreeGrid is to indicate the children attribute name of data item.
 colSpans                              Object                               null                                      A Json object that flexibly defines detail column spans for all levels. This is a new 
