@@ -130,10 +130,10 @@ And here's a tooltip created from markup connected to a `dijit.form.Button <diji
         <button id="buttonId" data-dojo-type="dijit.form.Button">Longanimity</button>
         <button id="button2" data-dojo-type="dijit.form.Button">Tooltip below</button>
         <div class="box">Example content below button</div>
-        <div dojoType="dijit.Tooltip" connectId="buttonId" position="above">
+        <div data-dojo-type="dijit.Tooltip" data-dojo-props="connectId:'buttonId',position:'above'">
             a <i>disposition</i> to bear injuries patiently : <b>forbearance</b>
         </div>
-        <div dojoType="dijit.Tooltip" connectId="button2" position="below">
+        <div data-dojo-type="dijit.Tooltip" data-dojo-props="connectId:'button2,position:'below'">
             a <i>disposition</i> to bear injuries patiently : <b>forbearance</b>
         </div>
 
@@ -164,4 +164,5 @@ Tooltips are not spoken in IE 8 with JAWS 10. This is because Dijit Tooltips are
 See also
 ========
 
+* `dijit.TooltipDialog <dijit/TooltipDialog>`_ - displays a tooltip that contains form elements (like a dialog)
 * `dojox.widget.DynamicTooltip <dojox/widget/DynamicTooltip>`_ - addition to dijit.Tooltip functionality allowing remotely loaded content to appear
