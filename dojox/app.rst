@@ -67,8 +67,9 @@ Application loads dojox.app configuration file and create view, scene, model wit
 
 Here is the configuration instruction table.
 
- || one || two || three ||
- || four || five || six ||
+
+||'''A'''||'''B'''||'''C'''||
+||1      ||2      ||3      ||
 
 
 ||'''Configuration'''||'''Description'''          ||'''Sample'''    ||
