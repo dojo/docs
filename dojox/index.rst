@@ -595,6 +595,10 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
   A collection of various advanced math functions
 
+* `dojox.mdnd <dojox/mdnd>`_
+
+  Experimental coordinates based moveable drag and drop. Use stable `dojo.dnd <dojo/dnd>` instead.
+
 * `dojox.mobile <dojox/mobile>`_
 
   A collection of utilities to get native look&feel on webapps for iPhone/iPad/Android
