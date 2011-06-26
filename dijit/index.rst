@@ -26,6 +26,8 @@ Widgets
     * `a11y Requirements <developer/a11y-requirements>`_
     * `a11y Statement <dijit/a11y/statement>`_
 
+  * `Themes and Theming <dijit/themes>`_
+
 * `dijit._CssStateMixin <dijit/_CssStateMixin>`_
 * `dijit.Calendar <dijit/Calendar>`_
 * `dijit.ColorPalette <dijit/ColorPalette>`_
