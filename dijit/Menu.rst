@@ -99,24 +99,24 @@ This example creates a context menu for the whole window.
 
   .. cv:: html
 
-	<div dojoType="dijit.Menu" id="windowContextMenu" contextMenuForWindow="true" style="display: none;">
-		<div dojoType="dijit.MenuItem" iconClass="dijitEditorIcon dijitEditorIconCut"
-			onClick="alert('not actually cutting anything, just a test!')">Cut</div>
-		<div dojoType="dijit.MenuItem" iconClass="dijitEditorIcon dijitEditorIconCopy"
-			onClick="alert('not actually copying anything, just a test!')">Copy</div>
-		<div dojoType="dijit.MenuItem" iconClass="dijitEditorIcon dijitEditorIconPaste"
-			onClick="alert('not actually pasting anything, just a test!')">Paste</div>
-		<div dojoType="dijit.MenuSeparator"></div>
-		<div dojoType="dijit.PopupMenuItem">
+	<div data-dojo-type="dijit.Menu" id="windowContextMenu" data-dojo-props="contextMenuForWindow:true" style="display: none;">
+		<div data-dojo-type="dijit.MenuItem" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconCut',
+			onClick:function(){alert('not actually cutting anything, just a test!')}">Cut</div>
+		<div data-dojo-type="dijit.MenuItem" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconCopy',
+			onClick:function(){alert('not actually copying anything, just a test!')}">Copy</div>
+		<div data-dojo-type="dijit.MenuItem" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconPaste',
+			onClick:function(){alert('not actually pasting anything, just a test!')}">Paste</div>
+		<div data-dojo-type="dijit.MenuSeparator"></div>
+		<div data-dojo-type="dijit.PopupMenuItem">
 			<span>Enabled Submenu</span>
-			<div dojoType="dijit.Menu" id="submenu1">
-				<div dojoType="dijit.MenuItem" onClick="alert('Submenu 1!')">Submenu Item One</div>
-				<div dojoType="dijit.MenuItem" onClick="alert('Submenu 2!')">Submenu Item Two</div>
+			<div data-dojo-type="dijit.Menu" id="submenu1">
+				<div data-dojo-type="dijit.MenuItem" data-dojo-props="onClick:function(){alert('Submenu 1!')}">Submenu Item One</div>
+				<div data-dojo-type="dijit.MenuItem" data-dojo-props="onClick:function(){alert('Submenu 2!')}">Submenu Item Two</div>
 			</div>
 		</div>
-		<div dojoType="dijit.PopupMenuItem">
+		<div data-dojo-type="dijit.PopupMenuItem">
 			<span>Popup of something other than a menu</span>
-			<div dojoType="dijit.ColorPalette"></div>
+			<div data-dojo-type="dijit.ColorPalette"></div>
 		</div>
 	</div>
 
@@ -141,19 +141,19 @@ Usage to display a Menu statically is the same as context menus, except that you
 
   .. cv:: html
 
-	<div dojoType="dijit.Menu" id="navMenu">
-		<div dojoType="dijit.MenuItem" iconClass="dijitEditorIcon dijitEditorIconCut"
-			onClick="alert('drama!')">Drama</div>
-		<div dojoType="dijit.MenuItem" iconClass="dijitEditorIcon dijitEditorIconCopy"
-			onClick="alert('comedy!')">Comedy</div>
-		<div dojoType="dijit.MenuItem" iconClass="dijitEditorIcon dijitEditorIconPaste"
-			onClick="alert('romance!')">Romance</div>
-		<div dojoType="dijit.MenuSeparator"></div>
-		<div dojoType="dijit.PopupMenuItem">
+	<div data-dojo-type="dijit.Menu" id="navMenu">
+		<div data-dojo-type="dijit.MenuItem" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconCut',
+			onClick:function(){alert('drama!')}">Drama</div>
+		<div data-dojo-type="dijit.MenuItem" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconCopy',
+			onClick:function(){alert('comedy!')}">Comedy</div>
+		<div data-dojo-type="dijit.MenuItem" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconPaste',
+			onClick:function(){alert('romance!')}">Romance</div>
+		<div data-dojo-type="dijit.MenuSeparator"></div>
+		<div data-dojo-type="dijit.PopupMenuItem">
 			<span>Action</span>
-			<div dojoType="dijit.Menu" id="submenu2">
-				<div dojoType="dijit.MenuItem" onClick="alert('diehard!')">Diehard</div>
-				<div dojoType="dijit.MenuItem" onClick="alert('indiana!')">Indiana Jones</div>
+			<div data-dojo-type="dijit.Menu" id="submenu2">
+				<div data-dojo-type="dijit.MenuItem" data-dojo-props="onClick:function(){alert('diehard!')}">Diehard</div>
+				<div data-dojo-type="dijit.MenuItem" onclick="alert('indiana!')">Indiana Jones</div>
 			</div>
 		</div>
 	</div>
