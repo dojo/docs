@@ -55,7 +55,7 @@ In this example, we borrow some of the toolbar buttons from the Editor.
     <span id="toolbar"></span>
 
 
-Note that iconClass is a CSS class that's been defined by the theme, see `Themes <dijit-themes>`_ for details.
+Note that iconClass is a CSS class that's been defined by the theme, see `Themes <dijit/themes>`_ for details.
 
 Declarative example
 -------------------
