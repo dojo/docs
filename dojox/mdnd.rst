@@ -27,7 +27,7 @@ PureSource is just a rewrite of dojo.dnd.Source to only allow drag start and no 
 Usage
 =====
 
-TODO: how to use the component/class/method
+How to use the component:
 
 .. code-block :: html
   :linenos:
