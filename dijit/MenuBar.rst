@@ -101,7 +101,7 @@ Creation from markup is even easier.
 			<span>File</span>
 			<div data-dojo-type="dijit.Menu" id="fileMenu">
 				<div data-dojo-type="dijit.MenuItem" onclick="alert('file 1')">File #1</div>
-				<div data-dojo-type="dijit.MenuItem" data-dojo-props="onClick:'alert(\'file 2\');'">File #2</div>
+				<div data-dojo-type="dijit.MenuItem" data-dojo-props="onClick:function(){alert('file 2');}">File #2</div>
 			</div>
 		</div>
 		<div data-dojo-type="dijit.PopupMenuBarItem">
