@@ -287,6 +287,21 @@ Nor will this:
          var myOnClick = function(){ ... };
       </script>
 
+This is especially true for builds.
+
+debugAtAllCosts
+```````````````
+The debugAtAllCosts djConfig flag is no longer supported, and will be ignored.
+
+Possible workarounds for a particular app are:
+
+ * Convert the app to AMD and load with async:true, thereby using a standard AMD
+loader which script-injects everything.
+
+ * Do a build, which converts all legacy modules to AMD modules. (Note: to do
+a true conversion that takes advantage of all of the features of AMD and
+removes things like dojo.getObject requires more work than the build app can
+do mechanically.)
 
 Dore Core
 ---------
