@@ -298,6 +298,11 @@ The application configuration json data is used to declare views, models and the
     }	
   }
 
+Sample render result
+
+.. image :: /pic1.png
+
+.. image :: /pic2.png
 
 ================================
 Comparison with dojox.mobile.app
