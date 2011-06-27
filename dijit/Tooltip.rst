@@ -133,7 +133,7 @@ And here's a tooltip created from markup connected to a `dijit.form.Button <diji
         <div data-dojo-type="dijit.Tooltip" data-dojo-props="connectId:'buttonId',position:'above'">
             a <i>disposition</i> to bear injuries patiently : <b>forbearance</b>
         </div>
-        <div data-dojo-type="dijit.Tooltip" data-dojo-props="connectId:'button2,position:'below'">
+        <div data-dojo-type="dijit.Tooltip" data-dojo-props="connectId:'button2',position:'below'">
             a <i>disposition</i> to bear injuries patiently : <b>forbearance</b>
         </div>
 
