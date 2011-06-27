@@ -25,11 +25,38 @@ dojox.app - A library that provides high-level application controllers, defined 
 dojox.mvc - A library that provides the ability to have view concerns separated from model or data concerns but have simple bindings or connections between them that can keep either side in sync, as well as respond to events or actions.  The library also provides the ability to generate data-bound forms and views dynamically, built on key elements of mvc and app. 
 
 =============
-Usage
+Overview
 =============
 Application structure overview.
 
 .. image:: /Diagram1.png
+
+Components in dojox.app
+
+dojox.app.view
+dojox.app.view provides a view like dojox.mobile.View. It contains a template string which will be rendered with user defined template segments. A view should have no child view. 
+
+dojox.app.bind
+dojox.app.bind used to query dojox.mvc widgets, get and set binding data for each widgets with  "ref" or data-dojo-props="ref: xxx" tag. dojoType, data-dojo-type, ref and data-dojo-props are compatible in a view.
+
+dojox.app.model
+dojox.app.model create statefulModel data source with JSON data or dojo data store. The data model can be binded to a dojox.mvc widget by dojox.app.bind.
+
+dojox.app.scene
+dojox.app.scene used to create the layout for each view, transition to next view, resize layout to fit the display area. A scene can contains more than one views or child scenes. The difference between scene and view is that scene can have multiple children scenes views but view does not have child.
+
+dojox.app.module.env
+dojox.app.module.env provides dojo, dijit, dojox environment.
+
+dojox.app.module.histroy
+dojox.app.module.histroy used to cache transition history which can back to the latest view. A view can use 'transitionOptions' or 'href' to configure transition to next view, and the next view also can back to the original one. 
+
+dojox.app.main – Application
+dojox.app.main(Application) used to create a dojox.ap application by the configuration in config.json. The main function includes: load configuration, load data from data source, create views, create data models, bind data models to views by dojox.app.bind, create scenes between views, parse application by dojo.parser.parse. The application can be started by doing this.
+
+=============
+Usage
+=============
 
 To create and startup a dojox.app application, a dojox.app configuration JSON is needed to initialize the application. Here are the necessary files to start an application.
 An html (index.html) is needed to load dojo.js and a javascript file included in index.html is used to create the application.
@@ -97,28 +124,6 @@ Here is the configuration instruction table.
 +-----------------------+-----------------------------------------------------------------------+
 |views                  |The children views/scenes of the application or current scene.         |
 +-----------------------+-----------------------------------------------------------------------+
-
-
-dojox.app.view
-dojox.app.view provides a view like dojox.mobile.View. It contains a template string which will be rendered with user defined template segments. A view should have no child view. 
-
-dojox.app.bind
-dojox.app.bind used to query dojox.mvc widgets, get and set binding data for each widgets with  "ref" or data-dojo-props="ref: xxx" tag. dojoType, data-dojo-type, ref and data-dojo-props are compatible in a view.
-
-dojox.app.model
-dojox.app.model create statefulModel data source with JSON data or dojo data store. The data model can be binded to a dojox.mvc widget by dojox.app.bind.
-
-dojox.app.scene
-dojox.app.scene used to create the layout for each view, transition to next view, resize layout to fit the display area. A scene can contains more than one views or child scenes. The difference between scene and view is that scene can have multiple children scenes views but view does not have child.
-
-dojox.app.module.env
-dojox.app.module.env provides dojo, dijit, dojox environment.
-
-dojox.app.module.histroy
-dojox.app.module.histroy used to cache transition history which can back to the latest view. A view can use 'transitionOptions' or 'href' to configure transition to next view, and the next view also can back to the original one. 
-
-dojox.app.main – Application
-dojox.app.main(Application) used to create a dojox.ap application by the configuration in config.json. The main function includes: load configuration, load data from data source, create views, create data models, bind data models to views by dojox.app.bind, create scenes between views, parse application by dojo.parser.parse. The application can be started by doing this.
 
 ============
 Sample
