@@ -33,26 +33,26 @@ Application structure overview.
 
 Components in dojox.app
 
-dojox.app.view
-dojox.app.view provides a view like dojox.mobile.View. It contains a template string which will be rendered with user defined template segments. A view should have no child view. 
+`dojox.app.view <dojox/app/view>`_
+- dojox.app.view provides a view like dojox.mobile.View. It contains a template string which will be rendered with user defined template segments. A view should have no child view. 
 
-dojox.app.bind
-dojox.app.bind used to query dojox.mvc widgets, get and set binding data for each widgets with  "ref" or data-dojo-props="ref: xxx" tag. dojoType, data-dojo-type, ref and data-dojo-props are compatible in a view.
+`dojox.app.bind <dojox/app/bind>`_
+- dojox.app.bind used to query dojox.mvc widgets, get and set binding data for each widgets with  "ref" or data-dojo-props="ref: xxx" tag. dojoType, data-dojo-type, ref and data-dojo-props are compatible in a view.
 
-dojox.app.model
-dojox.app.model create statefulModel data source with JSON data or dojo data store. The data model can be binded to a dojox.mvc widget by dojox.app.bind.
+`dojox.app.model <dojox/app/model>`_
+- dojox.app.model create statefulModel data source with JSON data or dojo data store. The data model can be binded to a dojox.mvc widget by dojox.app.bind.
 
-dojox.app.scene
-dojox.app.scene used to create the layout for each view, transition to next view, resize layout to fit the display area. A scene can contains more than one views or child scenes. The difference between scene and view is that scene can have multiple children scenes views but view does not have child.
+`dojox.app.scene <dojox/app/scene>`_
+- dojox.app.scene used to create the layout for each view, transition to next view, resize layout to fit the display area. A scene can contains more than one views or child scenes. The difference between scene and view is that scene can have multiple children scenes views but view does not have child.
 
-dojox.app.module.env
-dojox.app.module.env provides dojo, dijit, dojox environment.
+`dojox.app.module.env <dojox/app/module/env>`_
+- dojox.app.module.env provides dojo, dijit, dojox environment.
 
-dojox.app.module.histroy
-dojox.app.module.histroy used to cache transition history which can back to the latest view. A view can use 'transitionOptions' or 'href' to configure transition to next view, and the next view also can back to the original one. 
+`dojox.app.module.histroy <dojox/app/module/history>`_
+- dojox.app.module.histroy used to cache transition history which can back to the latest view. A view can use 'transitionOptions' or 'href' to configure transition to next view, and the next view also can back to the original one. 
 
-dojox.app.main – Application
-dojox.app.main(Application) used to create a dojox.ap application by the configuration in config.json. The main function includes: load configuration, load data from data source, create views, create data models, bind data models to views by dojox.app.bind, create scenes between views, parse application by dojo.parser.parse. The application can be started by doing this.
+`dojox.app.main <dojox/app/main>`_
+- dojox.app.main(Application) is used to create a dojox.ap application by the configuration in config.json. The main function includes: load configuration, load data from data source, create views, create data models, bind data models to views by dojox.app.bind, create scenes between views, parse application by dojo.parser.parse. The application can be started by doing this.
 
 =============
 Usage
