@@ -15,6 +15,11 @@ Widgets
 =======
 
 * `dijit._Templated <dijit/_Templated>`_
+
+  This is deprecated as of **1.6+**, `dijit._TemplatedMixin <dijit/_TemplatedMixin>`_ should be used instead and if necessary `dijit._WidgetsInTemplateMixin <dijit/_WidgetsInTemplateMixin>`_
+
+* `dijit._TemplatedMixin <dijit/_TemplatedMixin>`_
+* `dijit._WidgetsInTemplateMixin <dijit/_WidgetsInTemplateMixin>`_
 * `dijit._Widget <dijit/_Widget>`_
 
   * `a11y  <dijit/a11y/index>`_
@@ -30,6 +35,7 @@ Widgets
 
 * `dijit._CssStateMixin <dijit/_CssStateMixin>`_
 * `dijit.Calendar <dijit/Calendar>`_
+* `dijit.CalendarLite <dijit/CalendarLite>`_
 * `dijit.ColorPalette <dijit/ColorPalette>`_
 * `dijit.Declaration <dijit/Declaration>`_
 * `dijit.Dialog <dijit/Dialog>`_
@@ -156,6 +162,7 @@ Layout
   * `dijit.layout.AccordionContainer <dijit/layout/AccordionContainer>`_
   * `dijit.layout.BorderContainer <dijit/layout/BorderContainer>`_
   * `dijit.layout.ContentPane <dijit/layout/ContentPane>`_
+  * `dijit.layout.LinkPane <dijit/layout/LinkPane>`_
   * `dijit.layout.StackContainer <dijit/layout/StackContainer>`_
   * `dijit.layout.TabContainer <dijit/layout/TabContainer>`_
 
