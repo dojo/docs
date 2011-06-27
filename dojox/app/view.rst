@@ -13,7 +13,7 @@ Sample
 ==============
 Sample application configuration for dojox.app.view
 
-.. code-block :: json
+.. code-block :: javascript
 
   "home": { 
     "type": "dojox.app.view",
