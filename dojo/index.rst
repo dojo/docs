@@ -662,6 +662,26 @@ Dojo Core
 
     RPC service class
 
+* `dojo.store <dojo/store>`_
+
+  **1.6+** Dojo Store is an uniform interface for the access and manipulation of stored data that will eventually replace `dojo.data <dojo/data>`_
+
+  * `dojo.store.Memory <dojo/store/Memory>`_
+
+    A data access interface for in memory storage
+
+  * `dojo.store.JsonRest <dojo/store/JsonRest>`_
+
+    A data access interface for a RESTful service providing JSON data
+
+  * `dojo.store.Observable <dojo/store/Observable>`_
+
+    A wrapper for data stores that are observable
+
+  * `dojo.store.Cache <dojo/store/Cache>`_
+
+    A wrapper for data stores that are cacheable
+
 * `dojo.string <dojo/string>`_
 
   String utilities for Dojo
