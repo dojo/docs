@@ -128,6 +128,176 @@ Here is the configuration instruction table.
 ============
 Sample
 ============
+Sample application html page:
+index.html
+
+.. code-block :: html
+
+  <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/> 
+      <meta name="apple-mobile-web-app-capable" content="yes" /> 
+      <title>Sample App</title> 
+      <link href="../../../mobile/themes/iphone/base.css" rel="stylesheet"></link>
+      
+      <script type="text/javascript" src="../../../../dojo/dojo.js"></script>
+      <!-- the actual application launcher -->
+      <script type="text/javascript" src="sampleApp.js"></script>
+      
+    </head>
+    <body>
+    </body>
+  </html>
+
+Sample application creation script:
+sampleApp.js
+
+The actual configuration for the application is loaded by dojo/text module and is passed into call back as the “config” variable. Then the JSON string is resolved to JSON object and is used to create the application.
+
+.. code-block :: javascript
+
+  var path = window.location.pathname;
+  if (path.charAt(path.length)!="/"){
+    path = path.split("/");
+    path.pop();
+    path=path.join("/");	
+  }
+  dojo.registerModulePath("app",path);
+  require(["dojo","dojox/app/main", "dojo/text!app/config.json", "dojox/json/ref"],function(dojo,Application,config,ref){
+    app = Application(dojox.json.ref.fromJson(config));
+  });
+
+Sample application configuration:
+
+The application configuration json data is used to declare views, models and their relationship in the application. The application will control the views loading and views/models binding.
+
+.. code-block :: javascript
+
+  {
+    "id": "sampleApp",
+    "name": "Sample App",
+    "description": "A Sample App",
+    "splash": "splash",
+    
+    //Dependencies for the application. The modules in the dependencies array object will be
+    //loaded before application is started.
+    "dependencies": [
+      "dojox/mobile/TabBar",
+      "dojox/mobile/RoundRect",
+      "dojox/mobile/TabBarButton",
+      "dojox/mobile/Button",
+      "dojox/mobile/RoundRect",
+      "dojox/mobile/Heading"
+    ],
+    
+    //stores we are using 
+    "stores": {
+      "namesStore":{
+        "type": "dojo.store.Memory",
+        "params": {//parameters used to initialize the data store
+          "data": "modelApp.names"
+        }
+      },
+      "repeatStore":{
+        "type": "dojo.store.Memory",
+        "params": {
+          "data": "modelApp.repeatData"
+        }
+      }
+    },
+  
+    //models and instantiation parameters for the models. Including 'type' as a property
+    // allows one to overide the class that will be used for the model.  By default it is
+    // dojox/mvc/model
+    // The model declared at application level will be initialized before application startup
+    // The model declared at scene/view level will be initialized before scene/view loaded
+    "models": {
+      "names": {
+        "params":{
+          "store": {"$ref":"#stores.namesStore"}
+        }	       
+      }
+    }, 
+    
+    // Modules for the app.  The are basically used as the second
+    // array of mixins in a dojo.declare().  Modify the top level behavior
+    // of the app, how it processes the config or any other life cycle
+    // by creating and including one or more of these
+    "modules": [
+      "dojox/app/module/env",
+      "dojox/app/module/history"
+    ],
+    
+    "template": "application.html",
+    
+    //the name of the scene to load when the app is initialized.
+    "defaultView": "home", 
+    
+    //The default animation effect of transition between sub scenes and views of
+    // this application. 
+    "defaultTransition": "slide",
+    
+    //scenes are groups of views and models loaded at once
+    //scenes and view in the application all have access to application level models
+    "views": {
+      //simple view without any children views or scenes
+      //views can has its own dependencies which will be loaded
+      //before the view is first intialized.
+      "home": { 
+        "type": "dojox.app.view",
+        "dependencies":[
+          "dojox/mobile/RoundRectList",
+          "dojox/mobile/ListItem", 
+          "dojox/mobile/EdgeToEdgeCategory"
+        ],
+        "template": "views/simple/home.html"
+      },
+    
+      //simple scene which loads all views and shows the default first
+      "main":{
+        //all views in the main scene will be bound to the user model
+        "models": [],
+        "type": "dojox.app.scene",
+        "template": "simple.html",	
+        "defaultView": "main",
+        "defaultTransition": "slide",
+        //the views available to this scene
+        "views": { 
+          "main":{
+            "template": "views/simple/main.html"
+          },
+          "second":{
+            "template": "views/simple/second.html" 
+          },
+          "third":{
+            "template": "views/simple/third.html" 
+          }
+        },
+        "dependencies":[ 
+          "dojox/mobile/RoundRectList",
+          "dojox/mobile/ListItem",
+          "dojox/mobile/EdgeToEdgeCategory",
+          "dojox/mobile/EdgeToEdgeList"
+        ]
+      },
+      "repeat": {
+        "type": "dojox.app.view",
+        //model declared at scene/view level will be accessible to this scene/view
+        // or its children.
+        "models": {
+          "repeatmodels": {
+            "params":{
+              "store": {"$ref":"#stores.repeatStore"}
+            }           
+          }
+        },
+        "template": "views/repeat.html",
+        "dependencies":["dojox/mobile/TextBox"]
+      }
+    }	
+  }
+
 
 ================================
 Comparison with dojox.mobile.app
