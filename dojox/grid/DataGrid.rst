@@ -973,7 +973,7 @@ Showing localized datetime data in grid is a very common requirement. Here's an 
 .. code-example::
   :toolbar: themes, versions, dir
   :width: 400
-  :height: 400
+  :height: 300
 
   .. javascript::
 
@@ -1043,7 +1043,7 @@ Note: In editing mode, the text box will show the data in store, which is ISO fo
 .. code-example::
   :toolbar: themes, versions, dir
   :width: 400
-  :height: 200
+  :height: 300
 
   .. javascript::
 
@@ -1083,9 +1083,7 @@ Note: In editing mode, the text box will show the data in store, which is ISO fo
 			var grid = new dojox.grid.DataGrid({
 				id: 'grid',
 				store: store,
-				structure: layout,
-				autoWidth: true,
-				autoHeight: true
+				structure: layout
 			});
 			grid.placeAt('gridContainer');
 			grid.startup();
@@ -1113,7 +1111,7 @@ Using DateTextBox in editing mode will provide excellent user experience.
 .. code-example::
   :toolbar: themes, versions, dir
   :width: 400
-  :height: 400
+  :height: 300
 
   .. javascript::
 
@@ -1161,9 +1159,7 @@ Using DateTextBox in editing mode will provide excellent user experience.
 			var grid = new dojox.grid.DataGrid({
 				id: 'grid',
 				store: store,
-				structure: layout,
-				autoWidth: true,
-				autoHeight: true
+				structure: layout
 			});
 			grid.placeAt('gridContainer');
 			grid.startup();
@@ -1191,7 +1187,7 @@ Sometimes (maybe in most cases), the date values in store are not in standard fo
 .. code-example::
   :toolbar: themes, versions, dir
   :width: 400
-  :height: 400
+  :height: 300
 
   .. javascript::
 
@@ -1245,9 +1241,7 @@ Sometimes (maybe in most cases), the date values in store are not in standard fo
 			var grid = new dojox.grid.DataGrid({
 				id: 'grid',
 				store: store,
-				structure: layout,
-				autoWidth: true,
-				autoHeight: true
+				structure: layout
 			});
 			grid.placeAt('gridContainer');
 			grid.startup();
