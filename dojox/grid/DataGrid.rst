@@ -972,7 +972,6 @@ Showing localized datetime data in grid is a very common requirement. Here's an 
 
 .. code-example::
   :toolbar: themes, versions, dir
-  :version: local
   :width: 200
   :height: 200
 
@@ -1037,7 +1036,6 @@ Note: In editing mode, the text box will show the data in store, which is ISO fo
 
 .. code-example::
   :toolbar: themes, versions, dir
-  :version: local
   :width: 200
   :height: 200
 
@@ -1102,7 +1100,6 @@ Using DateTextBox in editing mode will provide excellent user experience.
 
 .. code-example::
   :toolbar: themes, versions, dir
-  :version: local
   :width: 200
   :height: 200
 
@@ -1176,7 +1173,6 @@ Sometimes (maybe in most cases), the date values in store are not in standard fo
 
 .. code-example::
   :toolbar: themes, versions, dir
-  :version: local
   :width: 200
   :height: 200
 
