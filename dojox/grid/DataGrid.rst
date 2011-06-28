@@ -1021,7 +1021,7 @@ Showing localized datetime data in grid is a very common requirement. Here's an 
 
   .. html::
 
-   <div id="gridContainer" style="width: 100%; height: 100%;"></div>
+   <div id="gridContainer" style="width: 100%; height: 400px;"></div>
 
   .. css::
 
@@ -1090,7 +1090,7 @@ Note: In editing mode, the text box will show the data in store, which is ISO fo
 
   .. html::
 
-   <div id="gridContainer" style="width: 100%; height: 100%;"></div>
+   <div id="gridContainer" style="width: 100%; height: 400px;"></div>
 
   .. css::
 
