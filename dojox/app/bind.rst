@@ -79,7 +79,7 @@ Sample application configuration for data to be bound
     }
   }
 
-Sample view template for data binding
+Sample view template for data binding - simple.html
 
 .. code-block :: html
 
@@ -102,3 +102,11 @@ Sample view template for data binding
   </div>
 
 Sample UI rendering result with data bound
+
+.. image :: /pic1.png
+
+Sample Summary
+
+In this sample, “stores” use “modelApp.names” data to create a  dojo.store.Memory store  named “namesStore”. While “models” use “namesStore” to create a dojox.mvc.StatefulModel model. Then simple.html template bind the model to  infoGroup with ref="'names.0'", and each  dojox.mobile.TextBox widget bind a data with “ref” property.
+
+After the application startup, you can see the data was bound to the view (in the red rectangle) and there's no data operation in user's code to complete this function.
