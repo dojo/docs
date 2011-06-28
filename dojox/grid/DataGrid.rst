@@ -983,19 +983,6 @@ Showing localized datetime data in grid is a very common requirement. Here's an 
 		dojo.require("dojo.date.stamp");
 		dojo.require("dojo.date.locale");
 		
-		var store = new dojo.data.ItemFileReadStore({
-			data: {
-				identifier: "id",
-				items: [
-					{id: 1, date: '2010-01-01'},
-					{id: 2, date: '2011-03-04'},
-					{id: 3, date: '2011-03-08'},
-					{id: 4, date: '2007-02-14'},
-					{id: 5, date: '2008-12-26'}
-				]
-			}
-		});
-		
 		function formatDate(datum){
 			//Format the value in store, so as to be displayed.
 			var d = dojo.date.stamp.fromISOString(datum);
@@ -1008,11 +995,33 @@ Showing localized datetime data in grid is a very common requirement. Here's an 
 				formatter: formatDate	//Custom format, change the format in store. 
 			}
 		];
+
+		dojo.ready(function(){
+			var store = new dojo.data.ItemFileReadStore({
+				data: {
+					identifier: "id",
+					items: [
+						{id: 1, date: '2010-01-01'},
+						{id: 2, date: '2011-03-04'},
+						{id: 3, date: '2011-03-08'},
+						{id: 4, date: '2007-02-14'},
+						{id: 5, date: '2008-12-26'}
+					]
+				}
+			});
+			var grid = new dojox.grid.DataGrid({
+				id: 'grid',
+				store: store,
+				structure: layout
+			});
+			grid.placeAt('gridContainer');
+			grid.startup();
+		});
 	</script>
 
   .. html::
 
-   <div id="grid" dojoType="dojox.grid.DataGrid" store="store" structure="layout"></div>
+   <div id="gridContainer"></div>
 
   .. css::
 
@@ -1021,7 +1030,7 @@ Showing localized datetime data in grid is a very common requirement. Here's an 
     @import "{{ baseUrl }}/dijit/themes/{{ theme }}/{{ theme }}.css";	
     @import "{{ baseUrl }}/dojox/grid/resources/{{ theme }}Grid.css";
 	
-	#grid{
+	#gridContainer{
 		width: 100%;
 		height: 100%;
 	}
@@ -1047,19 +1056,6 @@ Note: In editing mode, the text box will show the data in store, which is ISO fo
 		dojo.require("dojo.date.stamp");
 		dojo.require("dojo.date.locale");
 		
-		var store = new dojo.data.ItemFileWriteStore({
-			data: {
-				identifier: "id",
-				items: [
-					{id: 1, date: '2010-01-01'},
-					{id: 2, date: '2011-03-04'},
-					{id: 3, date: '2011-03-08'},
-					{id: 4, date: '2007-02-14'},
-					{id: 5, date: '2008-12-26'}
-				]
-			}
-		});
-		
 		function formatDate(datum){
 			//Format the value in store, so as to be displayed.
 			var d = dojo.date.stamp.fromISOString(datum);
@@ -1073,11 +1069,32 @@ Note: In editing mode, the text box will show the data in store, which is ISO fo
 				editable: true			//Editable cell, will show ISO format in a text box
 			}
 		];
+		dojo.ready(function(){
+			var store = new dojo.data.ItemFileWriteStore({
+				data: {
+					identifier: "id",
+					items: [
+						{id: 1, date: '2010-01-01'},
+						{id: 2, date: '2011-03-04'},
+						{id: 3, date: '2011-03-08'},
+						{id: 4, date: '2007-02-14'},
+						{id: 5, date: '2008-12-26'}
+					]
+				}
+			});
+			var grid = new dojox.grid.DataGrid({
+				id: 'grid',
+				store: store,
+				structure: layout
+			});
+			grid.placeAt('gridContainer');
+			grid.startup();
+		});
 	</script>
 
   .. html::
 
-   <div id="grid" dojoType="dojox.grid.DataGrid" store="store" structure="layout"></div>
+   <div id="gridContainer"></div>
 
   .. css::
 
@@ -1086,7 +1103,7 @@ Note: In editing mode, the text box will show the data in store, which is ISO fo
     @import "{{ baseUrl }}/dijit/themes/{{ theme }}/{{ theme }}.css";	
     @import "{{ baseUrl }}/dojox/grid/resources/{{ theme }}Grid.css";
 	
-	#grid{
+	#gridContainer{
 		width: 100%;
 		height: 100%;
 	}
@@ -1112,18 +1129,7 @@ Using DateTextBox in editing mode will provide excellent user experience.
 		dojo.require("dojo.date.stamp");
 		dojo.require("dojo.date.locale");
 		
-		var store = new dojo.data.ItemFileWriteStore({
-			data: {
-				identifier: "id",
-				items: [
-					{id: 1, date: '2010-01-01'},
-					{id: 2, date: '2011-03-04'},
-					{id: 3, date: '2011-03-08'},
-					{id: 4, date: '2007-02-14'},
-					{id: 5, date: '2008-12-26'}
-				]
-			}
-		});
+		
 		
 		function formatDate(datum){
 			//Format the value in store, so as to be displayed.
@@ -1146,11 +1152,32 @@ Using DateTextBox in editing mode will provide excellent user experience.
 				constraint: {formatLength: 'long'}	//Format the date value shown in DateTextBox
 			}
 		];
+		dojo.ready(function(){
+			var store = new dojo.data.ItemFileWriteStore({
+				data: {
+					identifier: "id",
+					items: [
+						{id: 1, date: '2010-01-01'},
+						{id: 2, date: '2011-03-04'},
+						{id: 3, date: '2011-03-08'},
+						{id: 4, date: '2007-02-14'},
+						{id: 5, date: '2008-12-26'}
+					]
+				}
+			});
+			var grid = new dojox.grid.DataGrid({
+				id: 'grid',
+				store: store,
+				structure: layout
+			});
+			grid.placeAt('gridContainer');
+			grid.startup();
+		});
 	</script>
 
   .. html::
 
-   <div id="grid" dojoType="dojox.grid.DataGrid" store="store" structure="layout"></div>
+   <div id="gridContainer"></div>
 
   .. css::
 
@@ -1159,7 +1186,7 @@ Using DateTextBox in editing mode will provide excellent user experience.
     @import "{{ baseUrl }}/dijit/themes/{{ theme }}/{{ theme }}.css";	
     @import "{{ baseUrl }}/dojox/grid/resources/{{ theme }}Grid.css";
 	
-	#grid{
+	#gridContainer{
 		width: 100%;
 		height: 100%;
 	}
@@ -1184,19 +1211,7 @@ Sometimes (maybe in most cases), the date values in store are not in standard fo
 		dojo.require("dojox.grid.cells.dijit");
 		dojo.require("dojo.date.locale");
 		
-		var store = new dojo.data.ItemFileWriteStore({
-			data: {
-				identifier: "id",
-				items: [
-					//Not ISO format in store
-					{id: 1, date: '2010/01/01'},
-					{id: 2, date: '2011/03/04'},
-					{id: 3, date: '2011/03/08'},
-					{id: 4, date: '2007/02/14'},
-					{id: 5, date: '2008/12/26'}
-				]
-			}
-		});
+		
 		
 		var storePattern = 'yyyy/MM/dd';
 		var displayPattern = 'yyyy, MMMM, d';
@@ -1222,11 +1237,33 @@ Sometimes (maybe in most cases), the date values in store are not in standard fo
 				constraint: {datePattern: displayPattern}	//Format the date value shown in DateTextBox
 			}
 		];
+		dojo.ready(function(){
+			var store = new dojo.data.ItemFileWriteStore({
+				data: {
+					identifier: "id",
+					items: [
+						//Not ISO format in store
+						{id: 1, date: '2010/01/01'},
+						{id: 2, date: '2011/03/04'},
+						{id: 3, date: '2011/03/08'},
+						{id: 4, date: '2007/02/14'},
+						{id: 5, date: '2008/12/26'}
+					]
+				}
+			});
+			var grid = new dojox.grid.DataGrid({
+				id: 'grid',
+				store: store,
+				structure: layout
+			});
+			grid.placeAt('gridContainer');
+			grid.startup();
+		});
 	</script>
 
   .. html::
 
-   <div id="grid" dojoType="dojox.grid.DataGrid" store="store" structure="layout"></div>
+   <div id="gridContainer"></div>
 
   .. css::
 
@@ -1235,7 +1272,7 @@ Sometimes (maybe in most cases), the date values in store are not in standard fo
     @import "{{ baseUrl }}/dijit/themes/{{ theme }}/{{ theme }}.css";	
     @import "{{ baseUrl }}/dojox/grid/resources/{{ theme }}Grid.css";
 	
-	#grid{
+	#gridContainer{
 		width: 100%;
 		height: 100%;
 	}
