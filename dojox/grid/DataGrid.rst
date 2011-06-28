@@ -983,20 +983,20 @@ Showing localized datetime data in grid is a very common requirement. Here's an 
 		dojo.require("dojo.date.stamp");
 		dojo.require("dojo.date.locale");
 		
-		function formatDate(datum){
-			//Format the value in store, so as to be displayed.
-			var d = dojo.date.stamp.fromISOString(datum);
-			return dojo.date.locale.format(d, {selector: 'date', formatLength: 'long'});
-		}
-		
-		var layout = [
-			{name: 'Index', field: 'id'},
-			{name: 'Date', field: 'date', width: 10,
-				formatter: formatDate	//Custom format, change the format in store. 
-			}
-		];
-
 		dojo.ready(function(){
+			function formatDate(datum){
+				//Format the value in store, so as to be displayed.
+				var d = dojo.date.stamp.fromISOString(datum);
+				return dojo.date.locale.format(d, {selector: 'date', formatLength: 'long'});
+			}
+			
+			var layout = [
+				{name: 'Index', field: 'id'},
+				{name: 'Date', field: 'date', width: 10,
+					formatter: formatDate	//Custom format, change the format in store. 
+				}
+			];
+		
 			var store = new dojo.data.ItemFileReadStore({
 				data: {
 					identifier: "id",
@@ -1021,7 +1021,7 @@ Showing localized datetime data in grid is a very common requirement. Here's an 
 
   .. html::
 
-   <div id="gridContainer"></div>
+   <div id="gridContainer" style="width: 100%; height: 100%;"></div>
 
   .. css::
 
@@ -1029,11 +1029,6 @@ Showing localized datetime data in grid is a very common requirement. Here's an 
     @import "{{ baseUrl }}/dojo/resources/dojo.css";
     @import "{{ baseUrl }}/dijit/themes/{{ theme }}/{{ theme }}.css";	
     @import "{{ baseUrl }}/dojox/grid/resources/{{ theme }}Grid.css";
-	
-	#gridContainer{
-		width: 100%;
-		height: 100%;
-	}
     </style>
 
 
