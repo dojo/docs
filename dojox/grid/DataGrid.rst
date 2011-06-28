@@ -1197,9 +1197,6 @@ Sometimes (maybe in most cases), the date values in store are not in standard fo
 		dojo.require("dojox.grid.cells.dijit");
 		dojo.require("dojo.date.locale");
 		
-		
-		
-
 		dojo.ready(function(){
 			var storePattern = 'yyyy/MM/dd';
 			var displayPattern = 'yyyy, MMMM, d';
@@ -1250,7 +1247,7 @@ Sometimes (maybe in most cases), the date values in store are not in standard fo
 
   .. html::
 
-   <div id="gridContainer" style="width: 100%; heigth: 200px;"></div>
+   <div id="gridContainer" style="width: 100%; height: 200px;"></div>
 
   .. css::
 
