@@ -1012,7 +1012,9 @@ Showing localized datetime data in grid is a very common requirement. Here's an 
 			var grid = new dojox.grid.DataGrid({
 				id: 'grid',
 				store: store,
-				structure: layout
+				structure: layout,
+				autoWidth: true,
+				autoHeight: true
 			});
 			grid.placeAt('gridContainer');
 			grid.startup();
@@ -1021,7 +1023,7 @@ Showing localized datetime data in grid is a very common requirement. Here's an 
 
   .. html::
 
-   <div id="gridContainer" style="width: 100%; height: 400px;"></div>
+   <div id="gridContainer" style="width: 100%; height: 200px;"></div>
 
   .. css::
 
@@ -1041,7 +1043,7 @@ Note: In editing mode, the text box will show the data in store, which is ISO fo
 .. code-example::
   :toolbar: themes, versions, dir
   :width: 400
-  :height: 400
+  :height: 200
 
   .. javascript::
 
@@ -1081,7 +1083,9 @@ Note: In editing mode, the text box will show the data in store, which is ISO fo
 			var grid = new dojox.grid.DataGrid({
 				id: 'grid',
 				store: store,
-				structure: layout
+				structure: layout,
+				autoWidth: true,
+				autoHeight: true
 			});
 			grid.placeAt('gridContainer');
 			grid.startup();
@@ -1090,7 +1094,7 @@ Note: In editing mode, the text box will show the data in store, which is ISO fo
 
   .. html::
 
-   <div id="gridContainer" style="width: 100%; height: 400px;"></div>
+   <div id="gridContainer" style="width: 100%; height: 200px;"></div>
 
   .. css::
 
@@ -1157,7 +1161,9 @@ Using DateTextBox in editing mode will provide excellent user experience.
 			var grid = new dojox.grid.DataGrid({
 				id: 'grid',
 				store: store,
-				structure: layout
+				structure: layout,
+				autoWidth: true,
+				autoHeight: true
 			});
 			grid.placeAt('gridContainer');
 			grid.startup();
@@ -1166,7 +1172,7 @@ Using DateTextBox in editing mode will provide excellent user experience.
 
   .. html::
 
-   <div id="gridContainer" style="width: 100%; height: 100%;"></div>
+   <div id="gridContainer" style="width: 100%; height: 200px;"></div>
 
   .. css::
 
@@ -1239,7 +1245,9 @@ Sometimes (maybe in most cases), the date values in store are not in standard fo
 			var grid = new dojox.grid.DataGrid({
 				id: 'grid',
 				store: store,
-				structure: layout
+				structure: layout,
+				autoWidth: true,
+				autoHeight: true
 			});
 			grid.placeAt('gridContainer');
 			grid.startup();
@@ -1248,7 +1256,7 @@ Sometimes (maybe in most cases), the date values in store are not in standard fo
 
   .. html::
 
-   <div id="gridContainer" style="width: 100%; heigth: 100%;"></div>
+   <div id="gridContainer" style="width: 100%; heigth: 200px;"></div>
 
   .. css::
 
