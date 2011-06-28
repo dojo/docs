@@ -25,10 +25,10 @@ dojox.app.view sample template - views/simple/home.html
 
 .. code-block :: html
 
-  <div class="view mblView">
-    <h1 dojoType="dojox.mobile.RoundRectCategory" style="text-align:center;vertical-align:middle;margin-left:0px;padding-left:0px"><div>Welcome to Dojo Mobile Showcase</div>
-    <img src="images/welcomeLogo.png"/>
-    </h1>
+  <div style="background:#c5ccd3;width: 100%; height: 100%;"  class="view mblView"> 
+    <div dojoType="dojox.mobile.RoundRect" shadow="true">
+      This is the content of the home scene. Hello World.
+    </div>
   </div>
 
 Sample render result
