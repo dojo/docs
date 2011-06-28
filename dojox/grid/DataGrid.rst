@@ -965,57 +965,6 @@ To use it, you just have to override default behavior by yours.
         }
     </style>
 
-
-====
-Tips
-====
-
-Creating a grid in a node with display: none
---------------------------------------------
-
-It is not possible to create a grid as a child of a node which is set to be not displayed (display: none).
-If you need to do this though for some reason you can set the grids visibility to "hidden" and its position offscreen 
-
-Hiding the Headers of a Grid
-----------------------------
-
-You can hide the columns of a Grid by using normal css:
-
-.. code-block :: html
-  :linenos:
-
-  .dojoxGrid-header { display:none; }
-
-
-Refreshing the content of a grid
---------------------------------
-
-There are times when you may wish to update the content of the grid. For example, a button on the screen may cause an xhrGet to retrieve a new set of information that you want to display in the table. The following code snippet can be used to update the grid:
-
-.. code-block :: javascript
-  :linenos:
-
-  var newStore = new dojo.data.ItemFileReadStore({data: {... some data ...});
-  var grid = dijit.byId("gridId");
-  grid.setStore(newStore);
-
-
-Layout multiple views by percentage
------------------------------------
-
-Percentages can be used with Grid layout for view or cell width, but there is one important precondition - explicit view widths are required in percentage, 'px' or 'em' in order to make the percentages work appropriately, e.g.
-
-.. code-block :: javascript
-  :linenos:
-
-  var layout = [
-     {width: '80%',//1st view
-     cells: [{name: 'Column 1', field: 'col1', width: "60%"}, {name: 'Column 2', field: 'col2', width: "40%"}]},
-     {width: '20%',// 2nd view
-     cells: [{name: 'Column 3', field: 'col3'}]}
-  ];
-
-
 Localized Date Field
 --------------------
 
@@ -1295,6 +1244,58 @@ Sometimes (maybe in most cases), the date values in store are not in standard fo
 		height: 100%;
 	}
     </style>
+
+
+
+
+====
+Tips
+====
+
+Creating a grid in a node with display: none
+--------------------------------------------
+
+It is not possible to create a grid as a child of a node which is set to be not displayed (display: none).
+If you need to do this though for some reason you can set the grids visibility to "hidden" and its position offscreen 
+
+Hiding the Headers of a Grid
+----------------------------
+
+You can hide the columns of a Grid by using normal css:
+
+.. code-block :: html
+  :linenos:
+
+  .dojoxGrid-header { display:none; }
+
+
+Refreshing the content of a grid
+--------------------------------
+
+There are times when you may wish to update the content of the grid. For example, a button on the screen may cause an xhrGet to retrieve a new set of information that you want to display in the table. The following code snippet can be used to update the grid:
+
+.. code-block :: javascript
+  :linenos:
+
+  var newStore = new dojo.data.ItemFileReadStore({data: {... some data ...});
+  var grid = dijit.byId("gridId");
+  grid.setStore(newStore);
+
+
+Layout multiple views by percentage
+-----------------------------------
+
+Percentages can be used with Grid layout for view or cell width, but there is one important precondition - explicit view widths are required in percentage, 'px' or 'em' in order to make the percentages work appropriately, e.g.
+
+.. code-block :: javascript
+  :linenos:
+
+  var layout = [
+     {width: '80%',//1st view
+     cells: [{name: 'Column 1', field: 'col1', width: "60%"}, {name: 'Column 2', field: 'col2', width: "40%"}]},
+     {width: '20%',// 2nd view
+     cells: [{name: 'Column 3', field: 'col3'}]}
+  ];
 
 
 ===============================
