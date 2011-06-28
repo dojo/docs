@@ -9,7 +9,7 @@ dijit._TemplatedMixin
 .. contents::
     :depth: 2
 
-**dijit.TemplatedMixin** is a Mixin for widgets that are instantiated from a template.  This is lighter than the deprecated `dijit._Templated <dijit/Templated>`_ and requires the inclusion of `dijit._WidgetsInTemplateMixin <dijit/_WidgetsInTemplateMixin>`_ if there are other widgets in the template.
+**dijit._TemplatedMixin** is a Mixin for widgets that are instantiated from a template.  This is lighter than the deprecated `dijit._Templated <dijit/Templated>`_ and requires the inclusion of `dijit._WidgetsInTemplateMixin <dijit/_WidgetsInTemplateMixin>`_ if there are other widgets in the template.
 
 =====
 Usage
