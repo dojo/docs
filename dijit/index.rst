@@ -16,7 +16,7 @@ Widgets
 
 * `dijit._Templated <dijit/_Templated>`_
 
-  This is deprecated as of **1.6+**, `dijit._TemplatedMixin <dijit/_TemplatedMixin>`_ should be used instead and if necessary `dijit._WidgetsInTemplateMixin <dijit/_WidgetsInTemplateMixin>`_
+  This is deprecated as of **1.7+**, `dijit._TemplatedMixin <dijit/_TemplatedMixin>`_ should be used instead and if necessary `dijit._WidgetsInTemplateMixin <dijit/_WidgetsInTemplateMixin>`_
 
 * `dijit._TemplatedMixin <dijit/_TemplatedMixin>`_
 * `dijit._WidgetsInTemplateMixin <dijit/_WidgetsInTemplateMixin>`_
@@ -36,6 +36,9 @@ Widgets
 * `dijit._CssStateMixin <dijit/_CssStateMixin>`_
 * `dijit.Calendar <dijit/Calendar>`_
 * `dijit.CalendarLite <dijit/CalendarLite>`_
+
+  **1.7+** A lighter version of `dijit.Calendar <dijit/Calendar>`_, more geared for mobile devices (e.g. does not have keyboard navigation)
+
 * `dijit.ColorPalette <dijit/ColorPalette>`_
 * `dijit.Declaration <dijit/Declaration>`_
 * `dijit.Dialog <dijit/Dialog>`_
@@ -56,12 +59,12 @@ Widgets
 
 
 =============
-Form handling
+Form Handling
 =============
 
 * `dijit.form <dijit/form>`_
 
-  * text boxes
+  * Text Boxes
 
     * `dijit.form.CurrencyTextBox <dijit/form/CurrencyTextBox>`_
 
@@ -71,6 +74,10 @@ Form handling
 
       An easy-to-use date entry control which allows either typing or choosing a date from any calendar widget
 
+    * `dijit.form.MappedTextBox <dijit/form/MappedTextBox>`_
+
+      A subclass of `dijit.form.ValidationTextBox <dijit/form/ValidationTextBox>`_ that is designed to be a base class for widgets that have a visible formatted display value, and a serializable value in a hidden input field which is actually sent to the server.
+
     * `dijit.form.NumberSpinner <dijit/form/NumberSpinner>`_
 
       A input widget which restricts input to numeric input and offers down and up arrow buttons to "spin" the number up and down
@@ -78,6 +85,10 @@ Form handling
     * `dijit.form.NumberTextBox <dijit/form/NumberTextBox>`_
 
       A input widget which restricts input to numeric input
+
+    * `dijit.form.RangeBoundTextBox <dijit/form/RangeBoundTextBox>`_
+
+      A base class for textbox form widgets which define a range of valid values.
 
     * `dijit.form.SimpleTextarea <dijit/form/SimpleTextarea>`_
 
@@ -97,7 +108,9 @@ Form handling
 
     * `dijit.form.ValidationTextBox <dijit/form/ValidationTextBox>`_
 
-  * select type widgets
+      A class for textbox widgets with the ability to validate content of various types and provide user feedback.
+
+  * Select Type Widgets
 
     * `dijit.form.Select <dijit/form/Select>`_
 
@@ -115,7 +128,7 @@ Form handling
 
       Allows the selection of multiple items (similar to ``<select multiple>``)
 
-  * buttons
+  * Buttons
 
     * `dijit.form.Button <dijit/form/Button>`_
 
@@ -133,7 +146,7 @@ Form handling
 
       A cross between a Button and a Checkbox widget
 
-  * other controls
+  * Other Form Widgets
 
     * `dijit.form.CheckBox <dijit/form/CheckBox>`_
 
@@ -143,14 +156,37 @@ Form handling
 
       Corresponds to a <form> itself; wraps other widgets
 
+    * `dijit.form.HorizontalRule <dijit/form/HorizontalRule>`_
+
+      Horizontal ruler to use with a `dijit.form.HorizontalSlider <dijit/form/HorizontalSlider>`_.
+
+    * `dijit.form.HorizontalRuleLabels <dijit/form/HorizontalRuleLabels>`_
+
+      Horizontal ruler labels to use with a `dijit.form.HorizontalSlider <dijit/form/HorizontalSlider>`_.
+
+    * `dijit.form.HorizontalSlider <dijit/form/HorizontalSlider>`_
+
+      A scale with a handle you can drag left or right to select a value.
+
     * `dijit.form.RadioButton <dijit/form/RadioButton>`_
 
       To select one choice from a list
 
     * `dijit.form.Slider <dijit/form/Slider>`_
 
-      A scale with a handle you can drag up/down or left/right to select a value
+      **DEPRECATED** A scale with a handle you can drag up/down or left/right to select a value.  Require `dijit.form.HorizontalSlider <dijit/form/HorizontalSlider>`_ and `dijit.form.VerticalSlider <dijit/form/VerticalSlider>`_ explicitly.
 
+    * `dijit.form.VerticalRule <dijit/form/VerticalRule>`_
+
+      Vertical ruler to use with a `dijit.form.VerticalSlider <dijit/form/VerticalSlider>`_.
+
+    * `dijit.form.VerticalRuleLabels <dijit/form/VerticalRuleLabels>`_
+
+      Vertical ruler labels to use with a `dijit.form.VerticalSlider <dijit/form/VerticalSlider>`_.
+
+    * `dijit.form.VerticalSlider <dijit/form/VerticalSlider>`_
+
+      A vertical scale with a handle you can drag up or down to select a value.
 
 ======
 Layout
