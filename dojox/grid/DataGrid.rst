@@ -1103,8 +1103,8 @@ Note: In editing mode, the text box will show the data in store, which is ISO fo
     </style>
 
 
-Using Dijit to edit a Date Field
---------------------------------
+Using a dijit widget to edit a Date Field
+-----------------------------------------
 
 Using dijit.form.DateTextBox in editing mode will provide an improved user experience with easy date selection.  Like everything in Dijit, the user experience is localized and respects cultural conventions.  constraint is used to pass along properties to the DateTextBox widget.
 
@@ -1179,8 +1179,8 @@ Using dijit.form.DateTextBox in editing mode will provide an improved user exper
     </style>
 
 
-Using dijit to edit a Date Field - with custom patterns
--------------------------------------------------------
+Using a dijit widget to edit a Date Field - with custom patterns
+----------------------------------------------------------------
 
 Although ISO dates are recommended as a convenient and culturally neutral data format, the values in store may not be provided this way, so we have to parse them to convert them to Date objects.  Here the constraint object is also used to pass along a custom formatter to override the default cultural user behavior with a different display.
 
