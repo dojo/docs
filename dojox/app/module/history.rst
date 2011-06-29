@@ -53,3 +53,41 @@ To start backward transition, all we need to do is to add a back button on the H
 =====================
 Sample
 =====================
+Sample excerpt of view template with regarding to navigation and history
+
+main.html
+
+.. code-block :: html
+
+  <ul dojoType="dojox.mobile.RoundRectList" iconBase="../images/i-icon-all.png">
+    <h2 dojoType="dojox.mobile.EdgeToEdgeCategory">Main Scene Views</h2>
+  
+    <li dojoType="dojox.mobile.ListItem" iconPos="0,0,29,29" clickable="false">
+      Main Scene::Main View (Current View)
+    </li>
+    <li dojoType="dojox.mobile.ListItem" iconPos="0,0,29,29"  clickable="true" transitionOptions='{title:"Main Scene::SecondView",target:"main,second",url: "#main,second"}'>
+      Main Scene::Second View
+    </li>
+    <li dojoType="dojox.mobile.ListItem" iconPos="0,0,29,29"  clickable="true" transitionOptions='{title:"Main Scene::ThirdView",target:"main,third",url: "#main,third"}'>
+      Main Scene::Third View
+    </li>
+  </ul>
+
+second.html
+
+.. code-block :: html
+
+  <h1 dojoType="dojox.mobile.Heading" back="Back">View simple/second</h1>
+  <div dojoType="dojox.mobile.RoundRect" shadow="true">
+    <a href="#main,main">to main,main</a><br>
+    <a href="#main,second">to main,second</a><br>
+    <a href="#main,third">to main,third</a><br>
+  </div>
+  <div dojoType="dojox.mobile.RoundRect" shadow="true">
+    <a href="#tabscene,tab2">to tabscene,tab2</a><br>
+  </div>
+
+Sample views are rendered as following
+
+.. image :: /pic1.png
+.. image :: /pic2.png
