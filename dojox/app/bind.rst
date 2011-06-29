@@ -12,7 +12,7 @@ dojox.app.bind provides a function to query dojox.mvc widgets, get and set bindi
 Binding API
 ==============
 
-Method Signature
+Method signature of the bind function dojox.app.bind provides.
 
 .. code-block :: javascript
 
