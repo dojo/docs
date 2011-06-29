@@ -52,7 +52,7 @@ Components in dojox.app
 - dojox.app.module.history manages transition forward and backward between views/scenes. A view can use 'transitionOptions' or 'href' to navigate forward or backward by utilizing HTML5 history API. 
 
 `dojox.app.main <dojox/app/main>`_
-- dojox.app.main(Application) is used to create a dojox.ap application by the configuration in config.json. The main function includes: load configuration, load data from data source, create views, create data models, bind data models to views by dojox.app.bind, create scenes between views, parse application by dojo.parser.parse. The application can be started by doing this.
+- dojox.app.main(Application) is used to create a dojox.app application by the configuration in config.json. The main function includes: load configuration, load data from data source, create views, create data models, bind data models to views by dojox.app.bind, create scenes between views, parse application by dojo.parser.parse. The application can be started by doing this.
 
 =============
 Usage
