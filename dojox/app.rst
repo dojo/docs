@@ -43,7 +43,7 @@ Components in dojox.app
 - dojox.app.model creates statefulModel data source with JSON data or dojo data store. The data model can be binded to a dojox.mvc widget by dojox.app.bind.
 
 `dojox.app.scene <dojox/app/scene>`_
-- dojox.app.scene is used to create the layout for each view, transition to next view, resize layout to fit the display area. A scene can contains more than one views or child scenes. The difference between scene and view is that scene can have multiple children scenes views but view does not have child.
+- dojox.app.scene is used to create the layout for each child view, manage the transition between views, resize layout to fit the display area. A scene can contains one or more children views or scenes. The difference between scene and view is that scene can have multiple children scenes views but view does not have child.
 
 `dojox.app.module.env <dojox/app/module/env>`_
 - dojox.app.module.env provides dojo, dijit, dojox environment.
