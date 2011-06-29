@@ -1,6 +1,6 @@
 #format dojo_rst
 dojox.app.module.history
-=================
+============================
 
 :Status: Draft
 :Version: 1.0
