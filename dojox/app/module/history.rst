@@ -1,5 +1,5 @@
 #format dojo_rst
-dojox.app.history
+dojox.app.module.history
 =================
 
 :Status: Draft
