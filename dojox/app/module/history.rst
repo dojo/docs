@@ -14,7 +14,7 @@ Usage
 
 Forward transition using transitionOptions
 
-trasitionOptions can be used on any dojox.mobile widgets which inherited from dojox.mobile._ItemBase
+trasitionOptions can be used on any dojox.mobile widgets which inherited from dojox.mobile._ItemBase. The following sample will result in transition to the 'second' view in 'main' scene of the application.
 
 .. code-block :: html
 
@@ -35,4 +35,21 @@ transitionOptions attributes
 |                   |browser's address bar after the transition.                    |                |
 +-------------------+---------------------------------------------------------------+----------------+
 
-Forward transition using 
+Forward transition using href
+
+Besides the transitionOptions on mobile widgets, href attribute in hyperlink can also start the transition in dojox.app. Following sample will result in transition to 'main' view of 'main' scene.
+
+.. code-block :: html
+
+  <a href="#main,main">to main,main</a>
+
+Backward transition
+To start backward transition, all we need to do is to add a back button on the Heading widgets of dojox.mobile. The back attribute declares the back button label on the heading in the following sample.
+
+.. code-block :: html
+
+  <h1 dojoType="dojox.mobile.Heading" back="Home">Data Binding Example</h1>
+
+=====================
+Sample
+=====================
