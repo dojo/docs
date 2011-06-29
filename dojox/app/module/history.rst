@@ -89,5 +89,6 @@ second.html
 
 Sample views are rendered as following
 
-.. image :: /pic1.png
+.. image :: /pic1.png  
+  
 .. image :: /pic2.png
