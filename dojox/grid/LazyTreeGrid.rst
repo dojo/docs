@@ -12,13 +12,117 @@ dojox.grid.LazyTreeGrid
 .. contents::
    :depth: 2
 
-This is a stub help page for the new dojox.grid.LazyTreeGrid which is still in progress. The information on this page may be out-of-date due to the fact that the API for the TreeGrid is still very much in flux.
+This is a stub help page for the new dojox.grid.LazyTreeGrid which is still in progress. The information on this page may be out-of-date due to the fact that the API for the LazyTreeGrid is still very much in flux.
 
 ============
 Introduction
 ============
 
 The Lazy-loading-TreeGrid(dojox.grid.LazyTreeGrid) is an extension of dojox.grid.TreeGrid, it is specifically designed for data store with huge nested-level rows. For the reason of the original TreeGrid can only do lazy-load on the 1st-level items, it doesn’t work well with large number of nested-level items. The Lazy-loading-TreeGrid renders each data item as an independent row no matter which level it is, and reuse the virtual scrolling model of DataGrid for paging of either top/nested level rows. This Widget inherits from dojo.grid.TreeGrid, hence all methods and properties pertaining to that Widget are also applicable.
+
+.. code-example::
+  :toolbar: themes, versions, dir
+  :width: 550
+  :height: 330
+
+  .. javascript::
+
+    <script type="text/javascript">
+        dojo.require("dojox.grid.LazyTreeGrid");
+        dojo.require("dijit.tree.ForestStoreModel");
+        dojo.require("dojo.data.ItemFileWriteStore");        
+    
+        dojo.addOnLoad(function(){
+	  //set up data store
+	  	var data = { identifier: 'name',
+	  label: 'name',
+	  items: [
+	    { name:'Africa', type:'continent', children:[
+	    { name:'Egypt', type:'country' }, 
+	    { name:'Kenya', type:'country', children:[
+		{ name:'Nairobi', type:'city', adults: 70400, popnum: 2940911 },
+		{ name:'Mombasa', type:'city', adults: 294091, popnum: 707400 } ]
+	    },
+	    { name:'Sudan', type:'country', children:
+		{ name:'Khartoum', type:'city', adults: 480293, popnum: 1200394 } 
+	    } ]
+	    },
+	    { name:'Asia', type:'continent', children:[
+	        { name:'China', type:'country' },
+	        { name:'India', type:'country' },
+	        { name:'Russia', type:'country' },
+	        { name:'Mongolia', type:'country' } ]
+	    },
+	    { name:'Australia', type:'continent', population:'21 million', children:
+		{ name:'Commonwealth of Australia', type:'country', population:'21 million'}
+	    },
+	    { name:'Europe', type:'continent', children:[
+		{ name:'Germany', type:'country' },
+		{ name:'France', type:'country' },
+		{ name:'Spain', type:'country' },
+		{ name:'Italy', type:'country' } ]
+	    },
+	    { name:'North America', type:'continent', children:[
+		{ name:'Mexico', type:'country',  population:'108 million', area:'1,972,550 sq km', children:[
+		    { name:'Mexico City', type:'city', adults: 120394, popnum: 19394839, population:'19 million', timezone:'-6 UTC'},
+		    { name:'Guadalajara', type:'city', adults: 1934839, popnum: 4830293, population:'4 million', timezone:'-6 UTC' } ]
+		},
+		{ name:'Canada', type:'country',  population:'33 million', area:'9,984,670 sq km', children:[
+		    { name:'Ottawa', type:'city', adults: 230493, popnum: 9382019, population:'0.9 million', timezone:'-5 UTC'},
+		    { name:'Toronto', type:'city', adults: 932019, popnum: 2530493, population:'2.5 million', timezone:'-5 UTC' }]
+		},
+		{ name:'United States of America', type:'country' } ]
+	    },
+	    { name:'South America', type:'continent', children:[
+		{ name:'Brazil', type:'country', population:'186 million' },
+		{ name:'Argentina', type:'country', population:'40 million' } ]
+	    } ]
+	  };
+	  var store = new dojo.data.ItemFileWriteStore({data: data});
+          var model = new dijit.tree.ForestStoreModel({store: store, childrenAttrs: 'children'});
+	
+	  //set up layout
+	  var layout = [[
+		{name: 'Name', field: 'name'},
+		{name: 'Type', field: 'type'},
+		{name: 'Population', field: 'population'},
+		{name: 'Area', field: 'area'}
+	  ]];
+
+          // create a new grid:
+          var grid = new dojox.grid.LazyTreeGrid({
+              id: 'grid',
+              treeModel: model,              
+              structure: layout,
+              rowSelector: '20px'
+	  }, document.createElement('div'));
+
+          // append the new grid to the div
+          dojo.byId("gridDiv").appendChild(grid.domNode);
+
+          // Call startup() to render the grid
+          grid.startup();
+        });
+    </script>
+
+  .. html::
+
+	<div id="gridDiv"></div>
+
+  .. css::
+
+    <style type="text/css">
+        @import "{{baseUrl}}dojo/resources/dojo.css";
+        @import "{{baseUrl}}dijit/themes/claro/claro.css";
+        @import "{{baseUrl}}dojox/grid/resources/Grid.css"
+	@import "{{baseUrl}}dojox/grid/resources/claroGrid.css";
+
+        /*Grid need a explicit width/height by default*/
+        #grid {
+            width: 43em;
+            height: 20em;
+        }
+    </style>
 
 Supported Data Structure
 ------------------------
@@ -157,7 +261,11 @@ TreeModel
 
 LazyTreeGrid must have a TreeModel, the TreeModel could be the dijit.tree.ForestStoreModel/dojox.grid.LazyTreeGridStoreModel, or a custom TreeModel that inherited from them.
 
-When using a dijit.tree.ForestStoreModel, the children items won't be lazy loaded but still could be lazy rendered. This is more applicable to the situation small data or data stored on client side. The dojo.grid.LazyTreeGridStoreModel is designed for lazy loading children items, it will call store.fetch() with a query object {parentId: value} and start index, count number when LazyTreeGrid ask for sub-rows and these sub-items are not be loaded. There is a attribute called "serverStore" of LazyTreeGridStoreModel, this attribute indicate whether or not the data with flatted data structure is stored in server side (the data structure SHOULD BE nested when data is stored in client side since lazy loading would not be needed in that case), default is false. an example LazyTreeGridStoreModel definition would look like this:
+The dojox.grid.LazyTreeGridStoreModel is designed for lazy loading children items, it will call store.fetch() with a query object {parentId: value} and start index, count number when LazyTreeGrid ask for sub-rows and these sub-items are not be loaded. There is a attribute called "serverStore" of LazyTreeGridStoreModel, this attribute indicate whether or not the data with flatted data structure is stored in server side (the data structure SHOULD BE nested when data is stored in client side since lazy loading would not be needed in that case), default is false.
+
+When using a dijit.tree.ForestStoreModel, or using dojox.grid.LazyTreeGridStoreModel with setting parameter "serverStore" to false, the children items won't be lazy loaded but all of the root rows and sub rows would still be lazy rendered. This is more applicable to the situation small data or data stored on client side. 
+
+An example LazyTreeGridStoreModel definition would look like this:
 
 .. code-block :: javascript
   :linenos:
