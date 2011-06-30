@@ -318,4 +318,4 @@ dojox.mobile.app manage the navigation history in StageController by using a his
 
 Here is the sequence diagram to reflect the difference in the navigation management.
 
-.. image:: /Diagram4.png
+.. image:: /Diagram5.png
