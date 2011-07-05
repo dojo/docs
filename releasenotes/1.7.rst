@@ -16,14 +16,14 @@ The following browsers are supported. If a browser is not supported, it still ma
 
 Desktop
 
-  * Firefox 3.6/4.0
+  * Firefox 3.6,4.0,5.0
   * Safari 5 and Chrome 11
   * IE6, IE7, IE8, IE9
   * Opera 10.50 and later (Dojo core only)
 
 Mobile (dojox/mobile)
 
-  * iOS 4.x (Safari)
+  * iOS 4.x (Safari) (including all Dijit widgets except Editor, Dialog)
   * Android 2.2,2.3,3.0 
   * Blackberry 6 
   * Mobile compatibility on desktop browsers: IE8,IE9, Firefox 3.6/4.0, Safari5, Chrome 11
@@ -37,6 +37,7 @@ Dojo Base
 AMD
 ---
 Dojo now fully supports asynchronous loading of AMD modules. Asynchronous loading mode can be entered by setting the dojo config of "async" to true:
+
    .. code-block :: html
 
       <script data-dojo-config="async: true" src="dojo.js"></script>
@@ -57,6 +58,7 @@ dojo/on
 -------
 
 This new module provides a new event handling system with support for a number of new features including:
+
  - event delegation - Event types can include selectors to specify targets like on(list, "li:click", onListItemClickHandler);
  - extension events - Custom event types can be used (and created). New dojo.gestures implement extension events.
  - pausable events - Event handling can be paused with the on.pausable function.
@@ -186,7 +188,7 @@ Gfx
 
 Mobile
 ------
- - BlackBerry theme has been added.
+ - BlackBerry OS6 theme has been added.
  - dojox.mobile.deviceTheme is a device theme loader, which detects the mobile device being used and automatically loads an appropriate theme
  - New SpinWheel widget allows you to select values from spin wheels. Two variations, SpinWheelDatePicker and SpinWheelTimePicker, are also available.
  - New Carousel widget shows a list of images from which you can select an item.
