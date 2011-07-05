@@ -1321,12 +1321,17 @@ However, in Dojo 1.7, a new attribute named 'keepSelection' is added trying to m
   :linenos:
 
   var grid = new dojox.grid.DataGrid({keepSelection: true}, div);
+
   var grid = new dojox.grid.EnhancedGrid({keepSelection: true}, div);
+
   var grid = new dojox.grid.TreeGrid({keepSelection: true}, div);
+
   var grid = new dojox.grid.LazyTreeGrid({keepSelection: true}, div);
+
 
 But please note:
 1. Key precondition - Store Identifier(id) is required since id is the only way used for differentiating datastore items.
+
 2. Known issue - it might not be accurate if some unloaded rows are selected by range(e.g.SHIFT + click)
 
 
