@@ -1310,6 +1310,27 @@ Percentages can be used with Grid layout for view or cell width, but there is on
   ];
 
 
+Keep row selection
+------------------
+
+Keeping row selection across various actions e.g. sorting, filtering is a known limitation of Grid especially when used with a server side store, as items are emptied and newly fetch after sorting, and Grid is unconscious of the mapping between selected row index and the new items.
+
+However, in Dojo 1.7, a new attribute named 'keepSelection' is added trying to make it works under some scenario, the 'keepSelection' attr can be applied to any Grid types including DataGrid, EnhancedGrid, TreeGrid or LazyTreeGrid e.g
+
+.. code-block :: html
+  :linenos:
+
+  var grid = new dojox.grid.DataGrid({keepSelection: true}, div);
+  var grid = new dojox.grid.EnhancedGrid({keepSelection: true}, div);
+  var grid = new dojox.grid.TreeGrid({keepSelection: true}, div);
+  var grid = new dojox.grid.LazyTreeGrid({keepSelection: true}, div);
+
+But please note:
+1. Key precondition - Store Identifier(id) is required since id is the only way used for differentiating datastore items.
+2. Known issue - it might not be accurate if some unloaded rows are selected by range(e.g.SHIFT + click)
+
+
+
 ===============================
 Accessibility in 1.3 and Beyond
 ===============================
