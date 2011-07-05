@@ -204,6 +204,13 @@ Mobile
  - New Slider widget to enable users to easily adjust a value with touch/dragging gestures.
  - New HTML form input widget wrappers (Textarea, CheckBox, RadioButton) to allow simple form constructs to be used with various dijit container/dialog widgets.
 
+ Limitations:
+
+ - The flip transition animation does not work on Android 2.2/2.3. The rotateY/rotateZ webkit-transform do not work on Android 2.2/2.3, thus the flip animation does not work on those devices.
+ - ScrollableView often freezes on HTC Android devices, such as HTC Evo, HTC Desire, etc. The problem occurs especially when you perform another scroll operation while the screen is still scrolling. This is not a dojo-specific issue because other JavaScript toolkits have the same problem. There are no workarounds available at present.
+ - Depending on user application's DOM structure, sometimes the Cover and Vertical Slide animations do not work well on Android devices. A ScrollableView that is placed in an overflow:hidden element tends to cause this problem.
+ - Sometimes touching an html form control, such as an input field or a button, on ScrollableView on Android devices does not set focus to it. Sometimes it is successful if you try a couple of times.
+
 MVC
 ---
   dojox.mvc is a new experimental dojox project about separation of MVC concerns on the client, thereby easing the development of data-rich applications using Dojo (enterprise apps, IT apps, CRUD scenarios, patterns like master-detail and others). This first release contains:
