@@ -94,7 +94,7 @@ By forcing a function wrapper around the test logic we are able to defer executi
 Dojo 1.7 Feature Names
 ======================
 
-The following feature tests are available in Dojo 1.7.  This table shows the module in which the feature test is added, and the name of the feature test.  View the module to understand exactly how the test is performed (explicit testing, inference, user agent sniff etc.)
+The following feature tests are available in Dojo 1.7.  This table shows the module in which the feature test is added, and the name of the feature test.  View the source code of each module to understand exactly how the test is performed (explicit testing, inference, user agent sniff etc.)
 
 .. code-block :: javascript
  :linenos:
@@ -103,7 +103,7 @@ The following feature tests are available in Dojo 1.7.  This table shows the mod
   dojo/_base/config.js , dojo-sniff
   dojo/_base/connect.js , events-keypress-typed
   dojo/_base/event.js , dom-addeventlistener
-  dojo/_base/kernel.js , config-
+  dojo/_base/kernel.js , config-* // All djConfig properties are added dynamically
   dojo/_base/kernel.js , dojo-guarantee-console
   dojo/_base/kernel.js , bug-for-in-skips-shadowed
   dojo/_base/kernel.js , dojo-debug-messages
@@ -125,7 +125,7 @@ The following feature tests are available in Dojo 1.7.  This table shows the mod
   dojo/_base/xhr.js , native-xhr
   dojo/dojo.js , host-node
   dojo/dojo.js , host-rhino
-  dojo/dojo.js , config-
+  dojo/dojo.js , config-* // All djConfig properties are added dynamically
   dojo/dojo.js , dojo-force-activex-xhr
   dojo/dojo.js , native-xhr
   dojo/dojo.js , ie-event-behavior
@@ -153,7 +153,6 @@ The following feature tests are available in Dojo 1.7.  This table shows the mod
   dojo/selector/_loader.js , dom-qsa3
   dojo/selector/lite.js , dom-matches-selector
   dojo/selector/lite.js , dom-qsa
-  util/build/main.js , is-windows
   util/build/main.js , is-windows
 
 Note: The above list was generated automatically with the following script in the root of the src dir, and edited manually:
