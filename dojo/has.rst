@@ -20,6 +20,8 @@ Browser sniffing and feature inference are flawed techniques for detecting brows
 
 Although the signature of the has() API conforms to the has.js implementation and feature names, Dojo modules implement their own version of has() tests, as some shortcuts and inferences are already available in the toolkit.
 
+Dojo Core and Dijit modules make use of has() feature detection in 1.7.  There are still a number of dojox projects that continue to use dojo.isXXX ua sniffing.  These remaining projects will likely be converted to use has() in the 1.8 timeframe.
+
 ========
 Usage
 ========
