@@ -28,6 +28,16 @@ Ternary has() conditional expressions can also be used during module loading for
 Usage
 ========
 
+Dojo's implementation of has() is provided by the dojo/has.js module.  In order to use this module, it must be added to your module's define dependency list, for example:
+
+.. code-block :: javascript
+ :linenos:
+
+  define(["dojo/has", "dojo/_base/kernel"], function(has, dojo){
+   // Use has() and has.add() as in examples below...
+  });
+ 
+
 Currently, the testing convention is `has('somefeature')` returns Boolean, e.g.:
 
 .. code-block :: javascript
