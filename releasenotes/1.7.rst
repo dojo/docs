@@ -46,6 +46,10 @@ Note that in async mode many modules which were implicitly loaded before now (in
 
 Completion of AMD conversion (Rawld etc. please fill this in)
 
+has.js
+------
+Dojo 1.7 introduces support for the `has() feature detection api <dojo/has>`_.  Most Dojo core and dijit modules have been converted to use feature detection.  This work will continue for 1.8.
+
 dojo.connect
 ------------
 This has been refactored to use the new dojo/on module for event handling. See dojo/on below for more information.
