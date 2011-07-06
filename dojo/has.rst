@@ -1,0 +1,100 @@
+#format dojo_rst
+
+dojo.store
+==========
+
+:Authors: Chris Mitchell, Pete Higgins
+:Project owner: Kris Zyp
+:Available: 1.7.0
+
+.. contents::
+  :depth: 2
+
+========
+About
+========
+
+Dojo 1.7 introduces a standard feature testing and detection api, based on conventions established by the awesome 'has.js project <https://github.com/phiggins42/has.js>`_ 
+
+Browser sniffing and feature inference are flawed techniques for detecting browser support in client side JavaScript, as well as an API for adding new tests that can be used later when features need to be detected. The goal of the Dojo has() API is to provide a standard feature testing and feature detection module for use in Dojo modules. 
+
+Although the signature of the has() API conforms to the has.js implementation and feature names, Dojo modules implement their own version of has() tests, as some shortcuts and inferences are already available in the toolkit.
+
+========
+Usage
+========
+
+Currently, the testing convention is `has('somefeature')` returns Boolean, e.g.:
+
+.. code-block :: javascript
+ :linenos:
+
+ if(has("function-bind")){
+    // your environment has a native Function.prototype.bind
+ }else{
+    // you'll have to workaround or degrade because the feature's not available in your environment. 
+ }
+    
+In the real world, this may translate into something like:
+
+.. code-block :: javascript
+ :linenos:
+
+ mylibrary.trim = has("string-trim") ? function(str){
+     return (str || "").trim();
+ } : function(str){
+     /* do the regexp based string trimming you feel like using */
+ }
+
+By using this approach, we can easily defer to browser-native versions of common functions and can also isolate non-standard codepaths. As browsers change over time (hopefully converging on standard api's), non-standard codepaths can more easily be pruned by build tools.  
+Using this approach also simplifies the ability to prune browser-specific codepaths.  For example, if you're only interested in webkit environments, non-webkit feature paths can more easily be stripped out in a build, resulting in smaller more targetted code being sent to clients.
+
+Running `has()` is a one-time cost, deferred until needed. After first run, subsequent `has()` checks are cached and return immediately.
+
+There are also groups working on server-side has() optimizations, to precompute the cache of tests to reduce startup times.
+
+--------------------
+Testing Registration
+--------------------
+
+Each test is self-contained. Register a test with `has.add()`:
+
+.. code-block :: javascript
+ :linenos:
+
+ has.add("some-test-name", function(global, document, anElement){
+   // global is a reference to global scope, document is the same
+   // anElement only exists in browser enviroments, and can be used
+   // as a common element from which to do DOM working.
+   // ALWAYS CLEAN UP AFTER YOURSELF in a test. No leaks, thanks. 
+   // return a Boolean from here.
+   return true; 
+ });
+    
+You can register and run a test immediately by passing a truthy value after the test function:
+
+.. code-block :: javascript
+ :linenos:
+
+ has.add("some-other-test", function(){
+   return false; // Boolean
+ }, true)
+
+This is preferred over what would seem a much more effective version:
+
+.. code-block :: javascript
+ :linenos:
+
+ // this is not wrapped in a function, and should be:
+ has.add("some-other-test", ("foo" in bar)); // or whatever
+    
+By forcing a function wrapper around the test logic we are able to defer execution until needed, as well as provide a normalized way for each test to have its own execution context. This way, we can remove some or all the tests we do not need in whatever upstream library should adopt _has_.
+
+========
+See Also
+========
+
+* `has.js standard feature test names (this page can be also used to test your browser's capabilities) <http://dante.dojotoolkit.org/hasjs/tests/runTests.html>`_
+* `has.js project (here you'll find standard tests and feature names) <https://github.com/phiggins42/has.js>`_
+
+Some portions of this document were copied with permission from has.js project.  Thanks to the has.js team for this work!
