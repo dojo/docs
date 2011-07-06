@@ -14,7 +14,7 @@ has
 About
 ========
 
-Dojo 1.7 introduces a standard feature testing and detection api, based on conventions established by the awesome 'has.js project <https://github.com/phiggins42/has.js>`_ 
+Dojo 1.7 introduces a standard feature testing and detection api, based on conventions established by the awesome `has.js project <https://github.com/phiggins42/has.js>`_.
 
 Browser sniffing and feature inference are flawed techniques for detecting browser support in client side JavaScript, as well as an API for adding new tests that can be used later when features need to be detected. The goal of the Dojo has() API is to provide a standard feature testing and feature detection module for use in Dojo modules. 
 
