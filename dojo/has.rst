@@ -90,6 +90,80 @@ This is preferred over what would seem a much more effective version:
     
 By forcing a function wrapper around the test logic we are able to defer execution until needed, as well as provide a normalized way for each test to have its own execution context. This way, we can remove some or all the tests we do not need in whatever upstream library should adopt _has_.
 
+======================
+Dojo 1.7 Feature Names
+======================
+
+The following feature tests are available in Dojo 1.7.  This table shows the module in which the feature test is added, and the name of the feature test.  View the module to understand exactly how the test is performed (explicit testing, inference, user agent sniff etc.)
+
+.. code-block :: javascript
+ :linenos:
+
+  dojo/_base/browser.js , config-selectorEngine
+  dojo/_base/config.js , dojo-sniff
+  dojo/_base/connect.js , events-keypress-typed
+  dojo/_base/event.js , dom-addeventlistener
+  dojo/_base/kernel.js , config-
+  dojo/_base/kernel.js , dojo-guarantee-console
+  dojo/_base/kernel.js , bug-for-in-skips-shadowed
+  dojo/_base/kernel.js , dojo-debug-messages
+  dojo/_base/kernel.js , dojo-moduleUrl
+  dojo/_base/loader.js , config-publishRequireResult
+  dojo/_base/sniff.js , opera
+  dojo/_base/sniff.js , air
+  dojo/_base/sniff.js , khtml
+  dojo/_base/sniff.js , webKit
+  dojo/_base/sniff.js , chrome
+  dojo/_base/sniff.js , mac
+  dojo/_base/sniff.js , safari
+  dojo/_base/sniff.js , mozilla
+  dojo/_base/sniff.js , ie
+  dojo/_base/sniff.js , ff
+  dojo/_base/sniff.js , quirks
+  dojo/_base/sniff.js , ios
+  dojo/_base/sniff.js , vml
+  dojo/_base/xhr.js , native-xhr
+  dojo/dojo.js , host-node
+  dojo/dojo.js , host-rhino
+  dojo/dojo.js , config-
+  dojo/dojo.js , dojo-force-activex-xhr
+  dojo/dojo.js , native-xhr
+  dojo/dojo.js , ie-event-behavior
+  dojo/dom/class.js , dom-classList
+  dojo/has.js , host-browser
+  dojo/has.js , dom
+  dojo/has.js , dojo-dom-ready-api
+  dojo/has.js , dojo-sniff
+  dojo/has.js , dom-addeventlistener
+  dojo/has.js , touch
+  dojo/has.js , device-width
+  dojo/has.js , agent-ios
+  dojo/has.js , agent-android
+  dojo/i18n.js , dojo-v1x-i18n-Api
+  dojo/json.js , json-parse
+  dojo/json.js , json-stringify
+  dojo/main.js , dojo-load-firebug-console
+  dojo/main.js , dojo-config-require
+  dojo/mouse.js , dom-quirks
+  dojo/mouse.js , events-mouseenter
+  dojo/on.js , jscript
+  dojo/on.js , event-orientationchange
+  dojo/ready.js , dojo-config-addOnLoad
+  dojo/selector/_loader.js , dom-qsa2.1
+  dojo/selector/_loader.js , dom-qsa3
+  dojo/selector/lite.js , dom-matches-selector
+  dojo/selector/lite.js , dom-qsa
+  util/build/main.js , is-windows
+  util/build/main.js , is-windows
+
+Note: The above list was generated automatically with the following script in the root of the src dir, and edited manually:
+
+.. code-block :: javascript
+ :linenos:
+
+  grep -r --include=*.js "has.add(\"" * | awk -F"[ \t\":,]+" '{ print " ",$1,",", $3}' 
+
+
 ========
 See Also
 ========
