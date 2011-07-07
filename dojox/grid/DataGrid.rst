@@ -18,79 +18,6 @@ A visual grid/table much like a spreadsheet.
 Introduction
 ============
 
-
-.. cv-compound::
-
-  .. cv:: javascript
-
-    <script type="text/javascript">
-        dojo.require("dojox.grid.EnhancedGrid");
-        dojo.require("dojo.data.ItemFileWriteStore");
-    
-        dojo.addOnLoad(function(){
-	  /*set up data store*/
-	  var data = {
-		identifier: 'id',
-		items: []
-	  };
-	  var data_list = [ 
-		{ col1: "normal", col2: false, col3: 'But are not followed by two hexadecimal', col4: 29.91},
-		{ col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
-		{ col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
-	  ];
-	  var rows = 60;
-	  for(var i=0, l=data_list.length; i<rows; i++){
-		data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
-	  }
-	  var store = new dojo.data.ItemFileWriteStore({data: data});
-	
-	  /*set up layout*/
-	  var layout = [[
-		{'name': 'Column 1', 'field': 'id'},
-		{'name': 'Column 2', 'field': 'col2'},
-		{'name': 'Column 3', 'field': 'col3', 'width': '230px'},
-		{'name': 'Column 4', 'field': 'col4', 'width': '230px'}
-	  ]];
-
-          /*create a new grid:*/
-          var grid = new dojox.grid.EnhancedGrid({
-              id: 'grid',
-              store: store,              
-              structure: layout,
-              rowSelector: '20px'},
-            document.createElement('div'));
-
-          /*append the new grid to the div*/
-          dojo.byId("gridDiv").appendChild(grid.domNode);
-
-          /*Call startup() to render the grid*/
-          grid.startup();
-        });
-    </script>
-
-  .. cv:: html
-
-    <div id="gridDiv"></div>
-
-   .. cv:: css
-
-    <style type="text/css">
-        @import "{{baseUrl}}dojo/resources/dojo.css";
-        @import "{{baseUrl}}dijit/themes/claro/claro.css";
-	@import "{{baseUrl}}dojox/grid/enhanced/resources/claro/EnhancedGrid.css";
-	@import "{{baseUrl}}dojox/grid/enhanced/resources/EnhancedGrid_rtl.css";
-
-        /*Grid need a explicit width/height by default*/
-        #grid {
-            width: 45em;
-            height: 20em;
-        }
-    </style>
-
-
-
-
-
 Grids are familiar in the client/server development world. Basically a grid is a kind of mini spreadsheet, commonly used to display details on master-detail forms. From HTML terms, a grid is a "super-table" with its own scrollable viewport.
 
 .. cv-compound::
@@ -1042,12 +969,11 @@ Formatting a Date Field
 
 Showing localized datetime data in grid is a very common requirement. Here's an example on how to do this using the formatter function, complete with localization.
 
-.. code-example::
-  :toolbar: themes, versions, dir
+.. cv-compound::
   :width: 400
   :height: 300
 
-  .. javascript::
+  .. cv:: javascript
 
 	<script type="text/javascript">
 		dojo.require("dojo.data.ItemFileReadStore");
@@ -1057,7 +983,7 @@ Showing localized datetime data in grid is a very common requirement. Here's an 
 		
 		dojo.ready(function(){
 			function formatDate(datum){
-				//Format the value in store, so as to be displayed.
+				/* Format the value in store, so as to be displayed.*/
 				var d = dojo.date.stamp.fromISOString(datum);
 				return dojo.date.locale.format(d, {selector: 'date', formatLength: 'long'});
 			}
@@ -1065,7 +991,7 @@ Showing localized datetime data in grid is a very common requirement. Here's an 
 			var layout = [
 				{name: 'Index', field: 'id'},
 				{name: 'Date', field: 'date', width: 10,
-					formatter: formatDate	//Custom format, change the format in store. 
+					formatter: formatDate	/*Custom format, change the format in store. */
 				}
 			];
 		
@@ -1093,11 +1019,11 @@ Showing localized datetime data in grid is a very common requirement. Here's an 
 		});
 	</script>
 
-  .. html::
+  .. cv:: html
 
    <div id="gridContainer" style="width: 100%; height: 200px;"></div>
 
-  .. css::
+  .. cv:: css
 
     <style type="text/css">
     @import "{{ baseUrl }}/dojo/resources/dojo.css";
