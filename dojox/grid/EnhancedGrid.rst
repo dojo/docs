@@ -56,19 +56,6 @@ testing...
 		{name: 'Column 4', field: 'col4'}
 	  ]];
 
-          // create a new grid:
-          var grid = new dojox.grid.EnhancedGrid({
-              id: 'grid',
-              store: store,              
-              structure: layout,
-              rowSelector: '20px'},
-            document.createElement('div'));
-
-          // append the new grid to the div
-          dojo.byId("gridDiv").appendChild(grid.domNode);
-
-          // Call startup() to render the grid
-          grid.startup();
         });
     </script>
 
