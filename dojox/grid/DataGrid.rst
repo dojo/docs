@@ -76,8 +76,9 @@ Grids are familiar in the client/server development world. Basically a grid is a
    .. cv:: css
 
     <style type="text/css">
-        @import "{{ baseUrl }}dojox/grid/resources/Grid.css";
         @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
+        /*following css dependency can be removed for v 1.7+*/
+        @import "{{baseUrl}}dojox/grid/enhanced/resources/{{ theme }}EnhancedGrid.css";
 
         /*Grid need a explicit width/height by default*/
         #grid {
