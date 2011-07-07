@@ -31,18 +31,6 @@ testing...
         dojo.require("dojox.grid.EnhancedGrid");
         dojo.require("dojo.data.ItemFileWriteStore");
     
-        dojo.addOnLoad(function(){
-	  //set up data store
-	  var data = {
-		identifier: 'id',
-		items: []
-	  };
-	  var data_list = [ 
-		{ col1: "normal", col2: false, col3: 'But are not followed by two hexadecimal', col4: 29.91},
-		{ col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
-		{ col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
-	  ];
-        });
     </script>
 
   .. cv:: html
