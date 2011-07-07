@@ -51,10 +51,10 @@ testing...
 
           // create a new grid:
           var grid = new dojox.grid.EnhancedGrid({
-              id: 'grid',
-              store: store,              
-              structure: layout,
-              rowSelector: '20px'},
+              'id': 'grid',
+              'store': store,              
+              'structure': layout,
+              'rowSelector': '20px'},
             document.createElement('div'));
 
           // append the new grid to the div
