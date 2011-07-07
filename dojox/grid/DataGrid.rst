@@ -742,93 +742,105 @@ Adding and Deleting data
 
 If you want to add (remove) data programatically, you just have to add (remove) it from the underlying data store.
 Since DataGrid is "DataStoreAware", changes made to the store will be reflected automatically in the DataGrid.
- 
-.. cv-compound::
-  :djConfig: parseOnLoad: true
-  :version: local
-  :height: 480
 
+.. cv-compound::
+ 
   .. cv:: javascript
 
     <script type="text/javascript">
         dojo.require("dojox.grid.DataGrid");
-        dojo.require("dojo.data.ItemFileWriteStore");
         dojo.require("dijit.form.Button");
+        dojo.require("dojo.data.ItemFileWriteStore");
+    
+        dojo.addOnLoad(function(){
+	  /*set up data store*/
+	  var data = {
+		items: []
+	  };
+	  var data_list = [ 
+		{ col1: "normal", col2: false, col3: 'But are not followed by two hexadecimal', col4: 29.91},
+		{ col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
+		{ col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
+	  ];
+	  var rows = 60;
+	  for(var i=0, l=data_list.length; i<rows; i++){
+		data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
+	  }
+	  var store = new dojo.data.ItemFileWriteStore({data: data});
+	
+	  /*set up layout*/
+	  var layout = [[
+		{'name': 'Column 1', 'field': 'col1', 'width': '100px'},
+		{'name': 'Column 2', 'field': 'col2', 'width': '100px'},
+		{'name': 'Column 3', 'field': 'col3', 'width': '200px'},
+                {'name': 'Column 4', 'field': 'col4', 'width': '120px'}
+	  ]];
+
+          /*create a new grid:*/
+          var grid = new dojox.grid.DataGrid({
+              id: 'grid',
+              store: store,              
+              structure: layout,
+              rowSelector: '20px'},
+            document.createElement('div'));
+
+          /*append the new grid to the div*/
+          dojo.byId("gridDiv").appendChild(grid.domNode);
+
+          /*Call startup() to render the grid*/
+          grid.startup();
+        });
     </script>
 
   .. cv:: html
-
-    <span dojoType="dojo.data.ItemFileWriteStore" 
-        data-dojo-id="store3" url="{{ dataUrl }}dijit/tests/_data/countries.json">
-    </span>
 
     <p class="info">
         This example shows, how to add/remove rows
     </p>
 
-    <table dojoType="dojox.grid.DataGrid"
-        data-dojo-id="grid5"
-        store="store3"
-        query="{ name: '*' }"
-        rowsPerPage="20"
-        clientSort="true"
-        style="width: 100%; height: 300px;"
-        rowSelector="20px">
-        <thead>
-            <tr>
-                <th width="200px" 
-                    field="name">Country/Continent Name</th>
-                <th width="auto" 
-                    field="type" 
-                    cellType="dojox.grid.cells.Select" 
-                    options="country,city,continent" 
-                    editable="true">Type</th>
-            </tr>
-        </thead>
-    </table>
-
     <p class="container">
       <span data-dojo-type="dijit.form.Button">
           Add Row
           <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
-              // set the properties for the new item:
-              var myNewItem = {type: "country", name: "Fill this country name"}; 
-              // Insert the new item into the store:
-              // (we use store3 from the example above in this example)
-              store3.newItem(myNewItem);
+              /* set the properties for the new item: */
+              var myNewItem = {col1: "Mediate", col2: true, col3: 'Newly added values', col4: 8888}; 
+              /* Insert the new item into the store:*/
+              store.newItem(myNewItem);
           </script>
       </span>
     
       <span data-dojo-type="dijit.form.Button">
           Remove Selected Rows
           <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
-              // Get all selected items from the Grid:
-              var items = grid5.selection.getSelected();
+              /* Get all selected items from the Grid: */
+              var items = grid.selection.getSelected();
               if(items.length){
-                  // Iterate through the list of selected items.
-                  // The current item is available in the variable 
-                  // "selectedItem" within the following function:
+                  /* Iterate through the list of selected items.
+                     The current item is available in the variable 
+                     "selectedItem" within the following function: */
                   dojo.forEach(items, function(selectedItem) {
                       if(selectedItem !== null) {
-                          // Delete the item from the data store:
-                          store3.deleteItem(selectedItem);
-                      } // end if
-                  }); // end forEach
-              } // end if
+                          /* Delete the item from the data store: */
+                          store.deleteItem(selectedItem);
+                      } /* end if */
+                  }); /* end forEach */
+              } /* end if */
           </script>
       </span>
     </p>
 
-  .. cv:: css
+    <div id="gridDiv"></div>
+
+   .. cv:: css
 
     <style type="text/css">
-	@import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
+        @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
 
-        html, body {
-            width: 100%;
-            margin: 0;
+        /*Grid need a explicit width/height by default*/
+        #grid {
+            width: 43em;
+            height: 20em;
         }
-
         .container {
             text-align: center;
             margin: 10px;
@@ -838,6 +850,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
             margin: 10px;
         }
     </style>
+
 
 Filtering data
 --------------
