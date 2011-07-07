@@ -403,32 +403,39 @@ A simple Grid
 This example shows how to create a simple Grid declaratively.
 
 .. cv-compound::
-  :djConfig: parseOnLoad: true
-  :version: local
-
+ 
   .. cv:: javascript
 
     <script type="text/javascript">
         dojo.require("dojox.grid.DataGrid");
-        dojo.require("dojox.data.CsvStore");
+        dojo.require("dojo.data.ItemFileWriteStore");
+    
+	  /*set up data store*/
+	  var data = {
+		identifier: 'id',
+		items: []
+	  };
+	  var data_list = [ 
+		{ col1: "normal", col2: false, col3: 'But are not followed by two hexadecimal', col4: 29.91},
+		{ col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
+		{ col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
+	  ];
+	  var rows = 60;
+	  for(var i=0, l=data_list.length; i<rows; i++){
+		data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
+	  }
+	  var store = new dojo.data.ItemFileWriteStore({data: data});
     </script>
 
   .. cv:: html
 
-    <span dojoType="dojox.data.CsvStore" 
-        data-dojo-id="store1" url="{{ dataUrl }}dojox/grid/tests/support/movies.csv">
-    </span>
-
-    <table dojoType="dojox.grid.DataGrid"
-        store="store1"
-        query="{ Title: '*' }"
-        clientSort="true"
-        style="width: 100%; height: 100%;"
-        rowSelector="20px">
+    <table id="grid" dojoType="dojox.grid.DataGrid" store="store" rowSelector="20px">
         <thead>
             <tr>
-                <th width="300px" field="Title">Title of Movie</th>
-                <th width="50px">Year</th>
+                <th width="100px" field="id">Column 1</th>
+                <th width="100px" field="col2">Column 2</th>
+                <th width="200px" field="col3">Column 3</th>
+                <th width="120px" field="col4">Column 4</th>
             </tr>
             <tr>
                 <th colspan="2">Producer</th>
@@ -436,20 +443,15 @@ This example shows how to create a simple Grid declaratively.
         </thead>
     </table>
 
-  .. cv:: css
+   .. cv:: css
 
     <style type="text/css">
-        @import "{{ baseUrl }}dojox/grid/resources/Grid.css";
         @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
 
-        .dojoxGrid table {
-            margin: 0;
-        }
-
-        html, body {
-            width: 100%;
-            height: 100%;
-            margin: 0;
+        /*Grid need a explicit width/height by default*/
+        #grid {
+            width: 43em;
+            height: 20em;
         }
     </style>
 
