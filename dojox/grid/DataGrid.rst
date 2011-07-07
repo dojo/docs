@@ -50,7 +50,7 @@ Grids are familiar in the client/server development world. Basically a grid is a
 		{'name': 'Column 1', 'field': 'id', 'width': '100px'},
 		{'name': 'Column 2', 'field': 'col2', 'width': '100px'},
 		{'name': 'Column 3', 'field': 'col3', 'width': '200px'},
-                {'name': 'Column 4', 'field': 'col4', 'width': '120px'}
+                {'name': 'Column 4', 'field': 'col4', 'width': '150px'}
 	  ]];
 
           /*create a new grid:*/
@@ -841,86 +841,94 @@ Filtering data
 The Grid offers a filter() method, to filter data from the current query (client-side filtering).
 
 .. cv-compound::
-  :djConfig: parseOnLoad: true
-  :version: local
-  :height: 480
-
+ 
   .. cv:: javascript
 
     <script type="text/javascript">
         dojo.require("dojox.grid.DataGrid");
-        dojo.require("dojox.data.CsvStore");
         dojo.require("dijit.form.Button");
+        dojo.require("dojo.data.ItemFileWriteStore");
+    
+        dojo.addOnLoad(function(){
+	  /*set up data store*/
+	  var data = {
+		identifier: 'id',
+		items: []
+	  };
+	  var data_list = [ 
+		{ col1: "normal", col2: false, col3: 'But are not followed by two hexadecimal', col4: 29.91},
+		{ col1: "important", col2: true, col3: 'Because a % sign always indicates', col4: 9.33},
+		{ col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
+	  ];
+	  var rows = 60;
+	  for(var i=0, l=data_list.length; i<rows; i++){
+		data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
+	  }
+	  var store = new dojo.data.ItemFileWriteStore({data: data});
+	
+	  /*set up layout*/
+	  var layout = [[
+		{'name': 'Column 1', 'field': 'id', 'width': '100px'},
+		{'name': 'Column 2', 'field': 'col2', 'width': '100px'},
+		{'name': 'Column 3', 'field': 'col3', 'width': '200px'},
+                {'name': 'Column 4', 'field': 'col4', 'width': '150px'}
+	  ]];
+
+          /*create a new grid:*/
+          grid = new dojox.grid.DataGrid({
+              id: 'grid',
+              store: store,              
+              structure: layout,
+              rowSelector: '20px'},
+            document.createElement('div'));
+
+          /*append the new grid to the div*/
+          dojo.byId("gridDiv").appendChild(grid.domNode);
+
+          /*Call startup() to render the grid*/
+          grid.startup();
+        });
     </script>
 
   .. cv:: html
-
-    <span dojoType="dojox.data.CsvStore" 
-        // We use the store from the examples above.
-        // Please uncomment this line, if you need your own store:
-        // data-dojo-id="store2" url="{{ dataUrl }}dojox/grid/tests/support/movies.csv">
-    </span>
 
     <p class="info">
         Click on the button "filter movies" to filter the current data (only movies with title "T*" will be visible).<br />
         Click on the button "show all movies" to remove the filter.
     </p>
- 
-    <table dojoType="dojox.grid.DataGrid"
-        data-dojo-id="grid3"
-        store="store2"
-        query="{ Title: '*' }"
-        clientSort="true"
-        style="width: 100%; height: 300px;"
-        rowSelector="20px">
-        <thead>
-            <tr>
-                <th width="300px" field="Title">Title of Movie</th>
-                <th width="50px">Year</th>
-            </tr>
-            <tr>
-                <th colspan="2">Producer</th>
-            </tr> 
-        </thead>
-    </table>
 
-    <p class="container">
+    <div id="gridDiv"></div>
+
+    <p>
     <span data-dojo-type="dijit.form.Button">
         filter movies
         <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
-            // Filter the movies from the data store:
-            grid3.filter({Title: "T*"});
+            /* Filter the movies from the data store: */
+            grid.filter({col2: true});
         </script>
     </span>
 
     <span data-dojo-type="dijit.form.Button">
-        show all movies
+        show all
         <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
-            // reset the filter:
-            grid3.filter({Title: "*"});
+            /* reset the filter: */
+            grid.filter({col2: '*'});
         </script>
     </span>
     </p>
 
-  .. cv:: css
+   .. cv:: css
 
     <style type="text/css">
-	@import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
+        @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
 
-        html, body {
-            width: 100%;
-            margin: 0;
-        }
-
-        .container {
-            text-align: center;
-            margin: 10px;
-        }
-
-        .info {
-            margin: 10px;
+        /*Grid need a explicit width/height by default*/
+        #grid {
+            width: 43em;
+            height: 15em;
         }
     </style>
+
 
 Grid styling: Rows
 ------------------
