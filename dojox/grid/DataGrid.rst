@@ -71,7 +71,7 @@ Grids are familiar in the client/server development world. Basically a grid is a
 
   .. cv:: html
 
-    <div id="gridDiv" style="width: 100%; height: 100%;"></div>
+    <div id="gridDiv" style="width: 70%; height: 80%;"></div>
 
    .. cv:: css
 
