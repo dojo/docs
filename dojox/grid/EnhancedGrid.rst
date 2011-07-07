@@ -122,7 +122,7 @@ This is the most simple way to run up an EnhancedGrid, it's basically the same a
         dojo.require("dojo.data.ItemFileWriteStore");
     
         dojo.addOnLoad(function(){
-	  //set up data store
+	  /*set up data store*/
 	  var data = {
 		identifier: 'id',
 		items: []
@@ -138,7 +138,7 @@ This is the most simple way to run up an EnhancedGrid, it's basically the same a
 	  }
 	  var store = new dojo.data.ItemFileWriteStore({data: data});
 	
-	  //set up layout
+	  /*set up layout*/
 	  var layout = [[
 		{'name': 'Column 1', 'field': 'id'},
 		{'name': 'Column 2', 'field': 'col2'},
@@ -146,7 +146,7 @@ This is the most simple way to run up an EnhancedGrid, it's basically the same a
 		{'name': 'Column 4', 'field': 'col4'}
 	  ]];
 
-          // create a new grid:
+          /*create a new grid:*/
           var grid = new dojox.grid.EnhancedGrid({
               id: 'grid',
               store: store,              
@@ -154,10 +154,10 @@ This is the most simple way to run up an EnhancedGrid, it's basically the same a
               rowSelector: '20px'},
             document.createElement('div'));
 
-          //append the new grid to the div
+          /*append the new grid to the div*/
           dojo.byId("gridDiv").appendChild(grid.domNode);
 
-          // Call startup() to render the grid
+          /*Call startup() to render the grid*/
           grid.startup();
         });
     </script>
