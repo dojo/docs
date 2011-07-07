@@ -47,13 +47,13 @@ testing...
 	  }
 	  var store = new dojo.data.ItemFileWriteStore({data: data});
           
-          var layout = [[{'name': 'Column 1', 'field': 'id'}]];
+          var layout = [[{name: 'Column 1', 'field': 'id'}]];
 
             var grid = new dojox.grid.EnhancedGrid({
-              'id': 'grid',
-              'store': store,              
-              'structure': layout,
-              'rowSelector': '20px'},
+              id: 'grid',
+              store: store,              
+              structure: layout,
+              rowSelector: '20px'},
             document.createElement('div'));
 
           /*append the new grid to the div*/
