@@ -82,7 +82,7 @@ Grids are familiar in the client/server development world. Basically a grid is a
 
         /*Grid need a explicit width/height by default*/
         #grid {
-            width: 32em;
+            width: 30em;
             height: 18em;
         }
     </style>
