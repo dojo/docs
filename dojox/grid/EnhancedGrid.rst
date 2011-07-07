@@ -56,10 +56,10 @@ testing...
               'rowSelector': '20px'},
             document.createElement('div'));
 
-          // append the new grid to the div
+
           dojo.byId("gridDiv").appendChild(grid.domNode);
 
-          // Call startup() to render the grid
+
           grid.startup();
 
         });
