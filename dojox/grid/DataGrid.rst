@@ -21,6 +21,8 @@ Introduction
 Grids are familiar in the client/server development world. Basically a grid is a kind of mini spreadsheet, commonly used to display details on master-detail forms. From HTML terms, a grid is a "super-table" with its own scrollable viewport.
 
 .. cv-compound::
+  :width: 480
+  :height: 300
 
   .. cv:: javascript
 
@@ -50,7 +52,7 @@ Grids are familiar in the client/server development world. Basically a grid is a
 		{'name': 'Column 1', 'field': 'id'},
 		{'name': 'Column 2', 'field': 'col2'},
 		{'name': 'Column 3', 'field': 'col3', 'width': '230px'},
-		{'name': 'Column 4', 'field': 'col4'}
+		{'name': 'Column 4', 'field': 'col4', width: 'auto'}
 	  ]];
 
           /*create a new grid:*/
@@ -71,7 +73,7 @@ Grids are familiar in the client/server development world. Basically a grid is a
 
   .. cv:: html
 
-    <div id="gridDiv"></div>
+    <div id="gridDiv" style="width: 100%; height: 100%;"></div>
 
    .. cv:: css
 
@@ -79,11 +81,12 @@ Grids are familiar in the client/server development world. Basically a grid is a
         @import "{{ baseUrl }}dojox/grid/resources/Grid.css";
         @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
 
-        /*Grid need a explicit width/height by default*/
-        #grid {
-            width: 43em;
-            height: 20em;
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
         }
+
     </style>
 
 
