@@ -425,7 +425,7 @@ This example shows how to create a simple Grid declaratively.
 	  for(var i=0, l=data_list.length; i<rows; i++){
 		data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
 	  }
-	  var store = new dojo.data.ItemFileWriteStore({data: data});
+	  store = new dojo.data.ItemFileWriteStore({data: data});
     </script>
 
   .. cv:: html
@@ -535,8 +535,6 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
 
 .. cv-compound::
   :djConfig: parseOnLoad: true
-
-  :height: 480
 
   .. cv:: javascript
 
