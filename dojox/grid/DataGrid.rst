@@ -755,6 +755,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
         dojo.addOnLoad(function(){
 	  /*set up data store*/
 	  var data = {
+                identifier: 'id',
 		items: []
 	  };
 	  var data_list = [ 
@@ -762,22 +763,22 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
 		{ col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
 		{ col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
 	  ];
-	  var rows = 8;
-	  for(var i=0, l=data_list.length; i<rows; i++){
+	  var rows = 6;
+	  for(i=0, l=data_list.length; i<rows; i++){
 		data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
 	  }
-	  var store = new dojo.data.ItemFileWriteStore({data: data});
+	  store = new dojo.data.ItemFileWriteStore({data: data});
 	
 	  /*set up layout*/
 	  var layout = [[
-		{'name': 'Column 1', 'field': 'col1', 'width': '100px'},
+		{'name': 'Column 1', 'field': 'id', 'width': '100px'},
 		{'name': 'Column 2', 'field': 'col2', 'width': '100px'},
 		{'name': 'Column 3', 'field': 'col3', 'width': '200px'},
                 {'name': 'Column 4', 'field': 'col4', 'width': '120px'}
 	  ]];
 
           /*create a new grid:*/
-          var grid = new dojox.grid.DataGrid({
+          grid = new dojox.grid.DataGrid({
               id: 'grid',
               store: store,              
               structure: layout,
@@ -804,7 +805,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
           Add Row
           <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
               /* set the properties for the new item: */
-              var myNewItem = {col1: "Mediate", col2: true, col3: 'Newly added values', col4: 8888}; 
+              var myNewItem = {id: (++i), col1: "Mediate", col2: true, col3: 'Newly added values', col4: 8888}; 
               /* Insert the new item into the store:*/
               store.newItem(myNewItem);
           </script>
