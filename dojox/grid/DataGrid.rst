@@ -21,8 +21,6 @@ Introduction
 Grids are familiar in the client/server development world. Basically a grid is a kind of mini spreadsheet, commonly used to display details on master-detail forms. From HTML terms, a grid is a "super-table" with its own scrollable viewport.
 
 .. cv-compound::
-  :width: 400
-  :height: 300
  
   .. cv:: javascript
 
@@ -485,7 +483,7 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
     <script type="text/javascript">
         dojo.require("dojox.grid.DataGrid");
         dojo.require("dojo.data.ItemFileWriteStore");
-        dojo.require("dijit.form.Button")
+        dojo.require("dijit.form.Button");
     
         dojo.addOnLoad(function(){
 	  /*set up data store*/
