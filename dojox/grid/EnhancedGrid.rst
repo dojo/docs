@@ -16,6 +16,31 @@ Introduction
 EnhancedGrid (dojox.grid.EnhancedGrid) provides a rich set of features that enhance the capabilities of base DataGrid. All these features are implemented as separate plugins which can be loaded on demand, the required features must be declared before used. 
 
 
+.. cv-compound::
+
+  .. cv:: javascript
+
+     <script type="text/javascript">
+        dojo.require("dijit.ProgressBar");
+        dojo.require("dojo.parser");
+        
+ 	var i=0;
+        function download() {
+			jsProgress.update({maximum: 10, progress: ++i});
+			if(i < 10){
+				setTimeout(download, 100 + Math.floor(Math.random() * 100));
+			}
+        }
+     </script>
+
+  .. cv:: html
+
+    <div data-dojo-type="dijit.ProgressBar" style="width:300px" 
+         data-dojo-id="jsProgress" id="downloadProgress" data-dojo-props="maximum:10"></div>
+    
+    <br /><input type="button" value="Go!" onclick="download();" />
+
+
 
 testing...
 
