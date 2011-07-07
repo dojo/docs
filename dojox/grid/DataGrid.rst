@@ -59,6 +59,7 @@ Grids are familiar in the client/server development world. Basically a grid is a
               id: 'grid',
               store: store,              
               structure: layout,
+              autoWidth: true,
               rowSelector: '20px'},
             document.createElement('div'));
 
@@ -83,7 +84,7 @@ Grids are familiar in the client/server development world. Basically a grid is a
         /*Grid need a explicit width/height by default*/
         #grid {
             width: 30em;
-            height: 16em;
+            height: 18em;
         }
     </style>
 
