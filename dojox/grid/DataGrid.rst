@@ -1199,31 +1199,31 @@ Although ISO dates are recommended as a convenient and culturally neutral data f
 			var displayPattern = 'yyyy, MMMM, d';
 		
 			function formatDate(datum){
-				//Format the value in store, so as to be displayed.
+				/*Format the value in store, so as to be displayed.*/
 				var d = dojo.date.locale.parse(datum, {selector: 'date', datePattern: storePattern});
 				return dojo.date.locale.format(d, {selector: 'date', datePattern: displayPattern});
 			}
 		
 			function getDateValue(){
-				//Override the default getValue function for dojox.grid.cells.DateTextBox
+				/*Override the default getValue function for dojox.grid.cells.DateTextBox*/
 				return dojo.date.locale.format(this.widget.get('value'), {selector: 'date', datePattern: storePattern});
 			}
 		
 			var layout = [
 				{name: 'Index', field: 'id'},
 				{name: 'Date', field: 'date', width: 10,
-					formatter: formatDate,						//Custom format, change the format in store. 
-					editable: true,								//Editable cell
-					type: dojox.grid.cells.DateTextBox,			//Use DateTextBox in editing mode
-					getValue: getDateValue,						//Translate the value of DateTextBox to something the store can understand.
-					constraint: {datePattern: displayPattern}	//Format the date value shown in DateTextBox
+					formatter: formatDate,	/*Custom format, change the format in store. */
+					editable: true,		/*Editable cell*/
+					type: dojox.grid.cells.DateTextBox,/*Use DateTextBox in editing mode*/
+					getValue: getDateValue,	/*Translate the value of DateTextBox to something the store can understand.*/
+					constraint: {datePattern: displayPattern}/*Format the date value shown in DateTextBox*/
 				}
 			];
 			var store = new dojo.data.ItemFileWriteStore({
 				data: {
 					identifier: "id",
 					items: [
-						//Not ISO format in store
+						/*Not ISO format in store*/
 						{id: 1, date: '2010/01/01'},
 						{id: 2, date: '2011/03/04'},
 						{id: 3, date: '2011/03/08'},
