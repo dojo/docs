@@ -589,9 +589,7 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
         Select a single row or multiple rows in the Grid (click on the Selector on the left side of each row). 
         After that, a click on the Button "get all Selected Items" will show you each attribute/value of the
         selected rows.
-    </p>
-
-    <div id="gridDiv"></div>
+    </p>    
 
     <p class="container">
     <span data-dojo-type="dijit.form.Button">
@@ -623,6 +621,8 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
         </script>
     </span>
     </p>
+
+    <div id="gridDiv"></div>
 
 
    .. cv:: css
