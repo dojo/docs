@@ -21,8 +21,6 @@ Introduction
 Grids are familiar in the client/server development world. Basically a grid is a kind of mini spreadsheet, commonly used to display details on master-detail forms. From HTML terms, a grid is a "super-table" with its own scrollable viewport.
 
 .. cv-compound::
-  :width: 480
-  :height: 300
 
   .. cv:: javascript
 
@@ -81,7 +79,7 @@ Grids are familiar in the client/server development world. Basically a grid is a
 
         /*Grid need a explicit width/height by default*/
         #grid {
-            width: 43em;
+            width: 40em;
             height: 20em;
         }
     </style>
