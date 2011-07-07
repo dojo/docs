@@ -18,16 +18,61 @@ Base functionality to insert a flash movie into a document on the fly.
 Introduction
 ============
 
-TODO: introduce the component/class/method
+Embedding flash media in HTML can be done in different ways. Internet Explorer uses object tag for flash content, on the other hand Chrome, Firefox, Opera and Safari use embed tag. You can combine both worlds with the following approach:
+
+.. code-block :: html
+ :linenos:
+
+ <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="100%" height="700" id="flash1" name="flash1">
+   <param name="movie" value="flash.swf">
+   <param name="allowfullscreen" value="true">
+   <param name='allowscriptaccess" value="always">
+   <param name="flashvars" value="var_1=value_1&var_2=value_2">
+   <embed id="flash1"
+          name="flash1"
+          src="flash.swf"
+          width="100%"
+          height="700"
+          allowscriptaccess="always"
+          allowfullscreen="true"
+          flashvars="var_1=value_1&var_2=value_2"
+   />
+ </object>
+
+What if user's browser does not have Adobe flash player installed?
+
+Object tag can use codebase attribute and embed attribute can use pluginspace attribute. They define locations where and which flash player version browser should download in case of missing plugin:
+
+.. code-block :: html
+ :linenos:
+
+ <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="100%" height="700" id="flash1" name="flash1" codebase="http://fpdownload.adobe.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0">
+   <param name="movie" value="flash.swf">
+   <param name="allowfullscreen" value="true">
+   <param name='allowscriptaccess" value="always">
+   <param name="flashvars" value="var_1=value_1&var_2=value_2">
+   <embed id="flash1"
+          name="flash1"
+          src="flash.swf"
+          width="100%"
+          height="700"
+          allowscriptaccess="always"
+          allowfullscreen="true"
+          flashvars="var_1=value_1&var_2=value_2"
+          pluginspace="http://www.adobe.com/go/getflashplayer"
+   />
+ </object>
+
+However this is old and not very user friendly method. By using codebase and pluginspace attributes you impose flash plugin to user. However there is a better way, where dojo comes in. With dojo you can use alternative content.
 
 
 =====
 Usage
 =====
 
-TODO: how to use the component/class/method
+Flash embedding with dojo is as simple as:
 
-.. code-block :: javascript
+.. code-block :: html
  :linenos:
 
  <script type="text/javascript">
@@ -35,15 +80,19 @@ TODO: how to use the component/class/method
    dojo.addOnLoad(function(){
      var movie = new dojox.embed.Flash({
        path: '/path-to-swf/flash.swf',
-       width: '100%'
+       width: '100%',
        height: 700,
-       params: {wmode: 'opaque'}
+       params: {wmode: 'opaque'},
        vars: {customFlashVariable: 'value'}
      }, "flashContainer");
    });
  </script>
 
- <div id="flashContainer">Alternative flash content</div>
+ <div id="flashContainer">
+   <h1>Alternative flash content</h1>
+   <a href="http://get.adobe.com/flashplayer/"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" /></a>
+ </div>
+
 
 ========
 Examples
@@ -52,16 +101,47 @@ Examples
 Programmatic example
 --------------------
 
-TODO: example
+.. code-block :: html
+ :linenos:
+
+ <script type="text/javascript">
+   dojo.require("dojox.embed.Flash");
+   dojo.addOnLoad(function(){
+     var movie = new dojox.embed.Flash({
+       path: '/path-to-swf/flash.swf',
+       width: '100%',
+       height: 700,
+       params: {wmode: 'opaque'},
+       vars: {customFlashVariable: 'value'}
+     }, "flashContainer");
+   });
+ </script>
+
+ <div id="flashContainer">
+   <h1>Alternative flash content</h1>
+   <a href="http://get.adobe.com/flashplayer/"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" /></a>
+ </div>
+
 
 Declarative example
 -------------------
 
-TODO: example
+.. code-block :: html
+ :linenos:
+
+ <script type="text/javascript">
+   dojo.require("dojo.parser");
+   dojo.require("dojox.embed.Flash");
+ </script>
+
+ <div data-dojo-type="dojox.embed.Flash" data-dojo-props="path:'/path-to-swf/flash.swf', width:'100%', height:300">
+   <h1>Alternative flash content</h1>
+   <a href="http://get.adobe.com/flashplayer/"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" /></a>
+ </div>
 
 
 ========
 See also
 ========
 
-* TODO: links to other related articles
+* `dojox.embed <dojox/embed>`_ Base code for embedding external objects like Flash, Quicktime
