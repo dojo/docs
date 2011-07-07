@@ -1038,12 +1038,11 @@ Editable Date Field
 Sometimes it's not enough to just show the datetime data, so here's another example on how to make the date field editable.
 Note: In editing mode, the text box will show the data in store, which is ISO format in this case; and no validation is provided.
 
-.. code-example::
-  :toolbar: themes, versions, dir
+.. cv-compound::
   :width: 400
   :height: 300
 
-  .. javascript::
+  .. cv:: javascript
 
 	<script type="text/javascript">
 		dojo.require("dojo.data.ItemFileWriteStore");
@@ -1054,7 +1053,7 @@ Note: In editing mode, the text box will show the data in store, which is ISO fo
 
 		dojo.ready(function(){
 			function formatDate(datum){
-				//Format the value in store, so as to be displayed.
+				/* Format the value in store, so as to be displayed.*/
 				var d = dojo.date.stamp.fromISOString(datum);
 				return dojo.date.locale.format(d, {selector: 'date', formatLength: 'long'});
 			}
@@ -1062,8 +1061,8 @@ Note: In editing mode, the text box will show the data in store, which is ISO fo
 			var layout = [
 				{name: 'Index', field: 'id'},
 				{name: 'Date', field: 'date', width: 10,
-					formatter: formatDate,	//Custom format, change the format in store. 
-					editable: true			//Editable cell, will show ISO format in a text box
+					formatter: formatDate,	/*Custom format, change the format in store. */
+					editable: true	/*Editable cell, will show ISO format in a text box*/
 				}
 			];
 			var store = new dojo.data.ItemFileWriteStore({
@@ -1088,11 +1087,11 @@ Note: In editing mode, the text box will show the data in store, which is ISO fo
 		});
 	</script>
 
-  .. html::
+  .. cv:: html
 
    <div id="gridContainer" style="width: 100%; height: 200px;"></div>
 
-  .. css::
+  .. cv:: css
 
     <style type="text/css">
     @import "{{ baseUrl }}/dojo/resources/dojo.css";
@@ -1122,24 +1121,24 @@ Using dijit.form.DateTextBox in editing mode will provide an improved user exper
 		
 		dojo.ready(function(){
 			function formatDate(datum){
-				//Format the value in store, so as to be displayed.
+				/*Format the value in store, so as to be displayed.*/
 				var d = dojo.date.stamp.fromISOString(datum);
 				return dojo.date.locale.format(d, {selector: 'date', formatLength: 'long'});
 			}
 		
 			function getDateValue(){
-				//Override the default getValue function for dojox.grid.cells.DateTextBox
+				/*Override the default getValue function for dojox.grid.cells.DateTextBox*/
 				return dojo.date.stamp.toISOString(this.widget.get('value'));
 			}
 		
 			var layout = [
 				{name: 'Index', field: 'id'},
 				{name: 'Date', field: 'date', width: 10,
-					formatter: formatDate,				//Custom format, change the format in store. 
-					editable: true,						//Editable cell
-					type: dojox.grid.cells.DateTextBox,	//Use DateTextBox in editing mode
-					getValue: getDateValue,				//Translate the value of DateTextBox to something the store can understand.
-					constraint: {formatLength: 'long'}	//Format the date value shown in DateTextBox
+					formatter: formatDate,	/*Custom format, change the format in store. */
+					editable: true,		/*Editable cell*/
+					type: dojox.grid.cells.DateTextBox, /*Use DateTextBox in editing mode*/
+					getValue: getDateValue,	/*Translate the value of DateTextBox to something the store can understand.*/
+					constraint: {formatLength: 'long'} /*Format the date value shown in DateTextBox*/
 				}
 			];
 			var store = new dojo.data.ItemFileWriteStore({
