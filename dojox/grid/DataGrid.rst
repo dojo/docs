@@ -585,7 +585,7 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
 
   .. cv:: html
 
-   <p class="info">
+   <p>
         Select a single row or multiple rows in the Grid (click on the Selector on the left side of each row). 
         After that, a click on the Button "get all Selected Items" will show you each attribute/value of the
         selected rows.
@@ -593,7 +593,7 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
 
     <div id="gridDiv"></div>
 
-    <p class="container">
+    <p>
     <span data-dojo-type="dijit.form.Button">
         get all Selected Items
         <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
@@ -786,12 +786,12 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
 
   .. cv:: html
 
-    <p class="info">
+    <p>
         This example shows, how to add/remove rows
     </p>
     <div id="gridDiv"></div>
 
-    <p class="container">
+    <p>
       <span data-dojo-type="dijit.form.Button">
           Add Row
           <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
@@ -893,15 +893,15 @@ The Grid offers a filter() method, to filter data from the current query (client
   .. cv:: html
 
     <p class="info">
-        Click on the button "filter movies" to filter the current data (only movies with title "T*" will be visible).<br />
-        Click on the button "show all movies" to remove the filter.
+        Click on the button "Filter" to filter the current data (only rows with Column 2 = true will be visible).<br />
+        Click on the button "Show all" to remove the filter.
     </p>
 
     <div id="gridDiv"></div>
 
     <p>
     <span data-dojo-type="dijit.form.Button">
-        filter movies
+        Filter
         <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
             /* Filter the movies from the data store: */
             grid.filter({col2: true});
@@ -909,7 +909,7 @@ The Grid offers a filter() method, to filter data from the current query (client
     </span>
 
     <span data-dojo-type="dijit.form.Button">
-        show all
+        Show all
         <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
             /* reset the filter: */
             grid.filter({col2: '*'});
