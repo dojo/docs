@@ -549,7 +549,7 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
   .. cv:: html
 
     <span dojoType="dojox.data.CsvStore" 
-        data-dojo-id="store2" url="{{ dataUrl }}dojox/grid/tests/support/movies.csv">
+        data-dojo-id="store2" url="{{ baseUrl }}dojox/grid/tests/support/movies.csv">
     </span>
 
     <p class="info">
