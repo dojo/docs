@@ -62,6 +62,36 @@ The first example shows how to create a TooltipDialog and DropDownButton program
 
     <div id="dropdownButtonContainer"></div>
 
+A TooltipDialog may be popped up from any node.
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+	<script type="text/javascript">
+          dojo.require("dijit.TooltipDialog");
+
+          dojo.addOnLoad(function(){
+              var myTooltipDialog = new dijit.TooltipDialog({
+                  id: 'myTooltipDialog',
+                  style: "width: 300px;", 
+                  content: "<img src='http://ajax.googleapis.com/ajax/libs/dojo/1.5/dijit/themes/claro/images/loadingAnimation.gif' alt='' />"
+              });
+              
+              dojo.connect(dijit.byId('myTooltipDialog'), 'onMouseLeave', function() {
+                  dijit.popup.close(dijit.byId('myTooltipDialog'));
+              });
+                  
+              dijit.popup.open({
+                popup: dijit.byId('myTooltipDialog'), around: dojo.byId('thenode')
+              });
+	 });
+       </script>
+
+  .. cv:: html
+
+    <div id="thenode">Here is a node.</div>
+
 
 Declarative markup
 ------------------
