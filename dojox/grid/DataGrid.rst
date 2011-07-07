@@ -437,9 +437,6 @@ This example shows how to create a simple Grid declaratively.
                 <th width="200px" field="col3">Column 3</th>
                 <th width="120px" field="col4">Column 4</th>
             </tr>
-            <tr>
-                <th colspan="2">Producer</th>
-            </tr>
         </thead>
     </table>
 
