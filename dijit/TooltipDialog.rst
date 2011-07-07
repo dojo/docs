@@ -78,12 +78,13 @@ A TooltipDialog may be popped up from any node.
                   content: "<img src='http://ajax.googleapis.com/ajax/libs/dojo/1.5/dijit/themes/claro/images/loadingAnimation.gif' alt='' />"
               });
               
-              dojo.connect(dijit.byId('myTooltipDialog'), 'onMouseLeave', function() {
-                  dijit.popup.close(dijit.byId('myTooltipDialog'));
+              dojo.connect(myTooltipDialog, 'onMouseLeave', function() {
+                  dijit.popup.close(myTooltipDialog);
               });
                   
               dijit.popup.open({
-                popup: dijit.byId('myTooltipDialog'), around: dojo.byId('thenode')
+                popup: myTooltipDialog,
+                around: dojo.byId('thenode')
               });
 	 });
        </script>
