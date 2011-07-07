@@ -71,7 +71,7 @@ Grids are familiar in the client/server development world. Basically a grid is a
 
   .. cv:: html
 
-    <div id="gridDiv" style="width: 70%; height: 80%;"></div>
+    <div id="gridDiv"></div>
 
    .. cv:: css
 
@@ -79,10 +79,10 @@ Grids are familiar in the client/server development world. Basically a grid is a
         @import "{{ baseUrl }}dojox/grid/resources/Grid.css";
         @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
 
-        html, body {
-            width: 100%;
-            height: 100%;
-            margin: 0;
+        /*Grid need a explicit width/height by default*/
+        #grid {
+            width: 43em;
+            height: 20em;
         }
     </style>
 
