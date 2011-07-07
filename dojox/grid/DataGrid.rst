@@ -403,7 +403,7 @@ A simple Grid
 This example shows how to create a simple Grid declaratively.
 
 .. cv-compound::
-   :djConfig: parseOnLoad: true
+  :djConfig: parseOnLoad: true
 
   .. cv:: javascript
 
