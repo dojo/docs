@@ -21,7 +21,7 @@ Introduction
 Grids are familiar in the client/server development world. Basically a grid is a kind of mini spreadsheet, commonly used to display details on master-detail forms. From HTML terms, a grid is a "super-table" with its own scrollable viewport.
 
 .. cv-compound::
-  :width: 500
+  :width: 480
   :height: 320
 
   .. cv:: javascript
@@ -51,14 +51,15 @@ Grids are familiar in the client/server development world. Basically a grid is a
 	  var layout = [[
 		{'name': 'Column 1', 'field': 'id'},
 		{'name': 'Column 2', 'field': 'col2'},
-		{'name': 'Column 3', 'field': 'col3', 'width': '200px'}
+		{'name': 'Column 3', 'field': 'col3', 'width': '230px'}
 	  ]];
 
           /*create a new grid:*/
           var grid = new dojox.grid.DataGrid({
               id: 'grid',
               store: store,              
-              structure: layout, rowSelector: '20px'},
+              structure: layout,
+              rowSelector: '20px'},
             document.createElement('div'));
 
           /*append the new grid to the div*/
