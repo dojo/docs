@@ -36,7 +36,8 @@ testing...
 	  var data = {
 		identifier: 'id',
 		items: []
-	  };   
+	  };
+        });
     </script>
 
   .. cv:: html
