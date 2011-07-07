@@ -400,63 +400,6 @@ The following examples are for the new Grid 1.2.
 A simple Grid
 -------------
 
-This example shows how to create a simple Grid declaratively.
-
-.. cv-compound::
-  :djConfig: parseOnLoad: true
-
-  .. cv:: javascript
-
-    <script type="text/javascript">
-        dojo.require("dojox.grid.DataGrid");
-        dojo.require("dojo.data.ItemFileWriteStore");
-    
-	  /*set up data store*/
-	  var data = {
-		identifier: 'id',
-		items: []
-	  };
-	  var data_list = [ 
-		{ col1: "normal", col2: false, col3: 'But are not followed by two hexadecimal', col4: 29.91},
-		{ col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
-		{ col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
-	  ];
-	  var rows = 60;
-	  for(var i=0, l=data_list.length; i<rows; i++){
-		data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
-	  }
-	  store = new dojo.data.ItemFileWriteStore({data: data});
-    </script>
-
-  .. cv:: html
-
-    <table id="grid" dojoType="dojox.grid.DataGrid" store="store" rowSelector="20px">
-        <thead>
-            <tr>
-                <th width="100px" field="id">Column 1</th>
-                <th width="100px" field="col2">Column 2</th>
-                <th width="200px" field="col3">Column 3</th>
-                <th width="120px" field="col4">Column 4</th>
-            </tr>
-        </thead>
-    </table>
-
-   .. cv:: css
-
-    <style type="text/css">
-        @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
-
-        /*Grid need a explicit width/height by default*/
-        #grid {
-            width: 43em;
-            height: 20em;
-        }
-    </style>
-
-
-Programmatically creating a DataGrid
-------------------------------------
-
 This example shows how to create a simple Grid programmatically.
 
 .. cv-compound::
@@ -980,7 +923,7 @@ To use it, you just have to override default behavior by yours.
 	     if(item){
 		var type = store.getValue(item, "col2", null);
 		if(!!type){
-		    row.customStyles += "color:red;";
+		    row.customStyles += "color:blue;";
 	        }
 	     }
 	     grid.focus.styleRow(row);
