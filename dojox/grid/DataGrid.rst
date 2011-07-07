@@ -47,10 +47,10 @@ Grids are familiar in the client/server development world. Basically a grid is a
 	
 	  /*set up layout*/
 	  var layout = [[
-		{'name': 'Column 1', 'field': 'id'},
-		{'name': 'Column 2', 'field': 'col2', 'width': '150px'},
+		{'name': 'Column 1', 'field': 'id', 'width': '100px'},
+		{'name': 'Column 2', 'field': 'col2', 'width': '100px'},
 		{'name': 'Column 3', 'field': 'col3', 'width': '200px'},
-                {'name': 'Column 4', 'field': 'col4', 'width': '230px'}
+                {'name': 'Column 4', 'field': 'col4', 'width': '120px'}
 	  ]];
 
           /*create a new grid:*/
@@ -77,8 +77,6 @@ Grids are familiar in the client/server development world. Basically a grid is a
 
     <style type="text/css">
         @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
-        /*following css dependency can be removed for v 1.7+*/
-        @import "{{baseUrl}}dojox/grid/enhanced/resources/{{ theme }}EnhancedGrid.css";
 
         /*Grid need a explicit width/height by default*/
         #grid {
