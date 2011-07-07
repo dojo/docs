@@ -460,60 +460,67 @@ Programmatically creating a DataGrid
 This example shows how to create a simple Grid programmatically.
 
 .. cv-compound::
-  :version: local
-
+ 
   .. cv:: javascript
 
     <script type="text/javascript">
         dojo.require("dojox.grid.DataGrid");
-        dojo.require("dojox.data.CsvStore");
+        dojo.require("dojo.data.ItemFileWriteStore");
     
         dojo.addOnLoad(function(){
-          // our test data store for this example:
-          var store4 = new dojox.data.CsvStore({ url: '{{ dataUrl }}dojox/grid/tests/support/movies.csv' });
+	  /*set up data store*/
+	  var data = {
+		identifier: 'id',
+		items: []
+	  };
+	  var data_list = [ 
+		{ col1: "normal", col2: false, col3: 'But are not followed by two hexadecimal', col4: 29.91},
+		{ col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
+		{ col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
+	  ];
+	  var rows = 60;
+	  for(var i=0, l=data_list.length; i<rows; i++){
+		data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
+	  }
+	  var store = new dojo.data.ItemFileWriteStore({data: data});
+	
+	  /*set up layout*/
+	  var layout = [[
+		{'name': 'Column 1', 'field': 'id', 'width': '100px'},
+		{'name': 'Column 2', 'field': 'col2', 'width': '100px'},
+		{'name': 'Column 3', 'field': 'col3', 'width': '200px'},
+                {'name': 'Column 4', 'field': 'col4', 'width': '120px'}
+	  ]];
 
-          // set the layout structure:
-          var layout4 = [
-              { field: 'Title', name: 'Title of Movie', width: '200px' },
-              { field: 'Year', name: 'Year', width: '50px' },
-              { field: 'Producer', name: 'Producer', width: 'auto' }
-          ];
+          /*create a new grid:*/
+          var grid = new dojox.grid.DataGrid({
+              id: 'grid',
+              store: store,              
+              structure: layout,
+              rowSelector: '20px'},
+            document.createElement('div'));
 
-          // create a new grid:
-          var grid4 = new dojox.grid.DataGrid({
-              query: { Title: '*' },
-              store: store4,
-              clientSort: true,
-              rowSelector: '20px',
-              structure: layout4
-          }, document.createElement('div'));
+          /*append the new grid to the div*/
+          dojo.byId("gridDiv").appendChild(grid.domNode);
 
-          // append the new grid to the div "gridContainer4":
-          dojo.byId("gridContainer4").appendChild(grid4.domNode);
-
-          // Call startup, in order to render the grid:
-          grid4.startup();
+          /*Call startup() to render the grid*/
+          grid.startup();
         });
     </script>
 
   .. cv:: html
 
-    <div id="gridContainer4" style="width: 100%; height: 100%;"></div>
+    <div id="gridDiv"></div>
 
-  .. cv:: css
+   .. cv:: css
 
     <style type="text/css">
-        @import "{{ baseUrl }}dojox/grid/resources/Grid.css";
         @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
 
-        .dojoxGrid table {
-            margin: 0;
-        }
-
-        html, body {
-            width: 100%;
-            height: 100%;
-            margin: 0;
+        /*Grid need a explicit width/height by default*/
+        #grid {
+            width: 43em;
+            height: 20em;
         }
     </style>
 
@@ -528,7 +535,7 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
 
 .. cv-compound::
   :djConfig: parseOnLoad: true
-  :version: local
+
   :height: 480
 
   .. cv:: javascript
