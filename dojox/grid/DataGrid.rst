@@ -489,7 +489,7 @@ This example shows how to create a simple Grid programmatically.
 		{'name': 'Column 1', 'field': 'id', 'width': '100px'},
 		{'name': 'Column 2', 'field': 'col2', 'width': '100px'},
 		{'name': 'Column 3', 'field': 'col3', 'width': '200px'},
-                {'name': 'Column 4', 'field': 'col4', 'width': '120px'}
+                {'name': 'Column 4', 'field': 'col4', 'width': '150px'}
 	  ]];
 
           /*create a new grid:*/
@@ -687,7 +687,7 @@ First, you have to set a editor for each cell, you would like to edit:
 		{'name': 'Column 1', 'field': 'id', 'width': '100px'},
 		{'name': 'Column 2', 'field': 'col2', 'width': '100px', editable: true, type: dojox.grid.cells.CheckBox,styles: 'text-align: center;'},
 		{'name': 'Column 3', 'field': 'col3', 'width': '200px', editable: true},
-                {'name': 'Column 4', 'field': 'col4', 'width': '120px', editable: true}
+                {'name': 'Column 4', 'field': 'col4', 'width': '150px', editable: true}
 	  ]];
 
           /*create a new grid:*/
@@ -765,7 +765,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
 		{'name': 'Column 1', 'field': 'id', 'width': '100px'},
 		{'name': 'Column 2', 'field': 'col2', 'width': '100px'},
 		{'name': 'Column 3', 'field': 'col3', 'width': '200px'},
-                {'name': 'Column 4', 'field': 'col4', 'width': '120px'}
+                {'name': 'Column 4', 'field': 'col4', 'width': '150px'}
 	  ]];
 
           /*create a new grid:*/
