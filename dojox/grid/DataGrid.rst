@@ -671,6 +671,7 @@ First, you have to set a editor for each cell, you would like to edit:
     <script type="text/javascript">
         dojo.require("dojox.grid.DataGrid");
         dojo.require("dojo.data.ItemFileWriteStore");
+        dojo.require("dojox.grid.cells.dijit");
     
         dojo.addOnLoad(function(){
 	  /*set up data store*/
@@ -692,7 +693,7 @@ First, you have to set a editor for each cell, you would like to edit:
 	  /*set up layout*/
 	  var layout = [[
 		{'name': 'Column 1', 'field': 'id', 'width': '100px'},
-		{'name': 'Column 2', 'field': 'col2', 'width': '100px'},
+		{'name': 'Column 2', 'field': 'col2', 'width': '100px', editable: true, type: dojox.grid.cells.CheckBox},
 		{'name': 'Column 3', 'field': 'col3', 'width': '200px', editable: true},
                 {'name': 'Column 4', 'field': 'col4', 'width': '120px', editable: true}
 	  ]];
