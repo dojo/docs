@@ -71,11 +71,9 @@ This is the most simple way to run up an EnhancedGrid, it's basically the same a
         });
     </script>
 
-
   .. cv:: html
 
     <div id="gridDiv"></div>
-
 
    .. cv:: css
 
