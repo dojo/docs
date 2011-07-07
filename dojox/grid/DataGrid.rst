@@ -610,7 +610,7 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
                            "attribute" within the following function: */
                         dojo.forEach(grid.store.getAttributes(selectedItem), function(attribute) {
                             /* Get the value of the current attribute:*/
-                            var value = grid2.store.getValues(selectedItem, attribute);
+                            var value = grid.store.getValues(selectedItem, attribute);
                             /* Now, you can do something with this attribute/value pair.
                                Our short example shows the attribute together
                                with the value in an alert box, but we are sure, that
