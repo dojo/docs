@@ -56,7 +56,7 @@ testing...
               'rowSelector': '20px'},
             document.createElement('div'));
 
-          //append the new grid to the div
+          /*append the new grid to the div*/
           dojo.byId("gridDiv").appendChild(grid.domNode);
 
 
