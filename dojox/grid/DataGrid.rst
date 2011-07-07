@@ -56,8 +56,7 @@ Grids are familiar in the client/server development world. Basically a grid is a
           var grid = new dojox.grid.DataGrid({
               id: 'grid',
               store: store,              
-              structure: layout,
-              rowSelector: '20px'},
+              structure: layout
             document.createElement('div'));
 
           /*append the new grid to the div*/
