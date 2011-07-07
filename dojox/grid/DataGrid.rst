@@ -937,75 +937,89 @@ The DataGrid provides extension points which allows you to apply custom css clas
 To use it, you just have to override default behavior by yours.
 
 .. cv-compound::
-  :djConfig: parseOnLoad: true
-  :version: local
-
+ 
   .. cv:: javascript
 
     <script type="text/javascript">
         dojo.require("dojox.grid.DataGrid");
         dojo.require("dojo.data.ItemFileWriteStore");
+    
+        dojo.addOnLoad(function(){
+	  /*set up data store*/
+	  var data = {
+		identifier: 'id',
+		items: []
+	  };
+	  var data_list = [ 
+		{ col1: "normal", col2: true, col3: 'But are not followed by two hexadecimal', col4: 29.91},
+		{ col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
+		{ col1: "important", col2: true, col3: 'Signs can be selectively', col4: 19.34}
+	  ];
+	  var rows = 60;
+	  for(var i=0, l=data_list.length; i<rows; i++){
+		data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
+	  }
+	  var store = new dojo.data.ItemFileWriteStore({data: data});
+	
+	  /*set up layout*/
+	  var layout = [[
+		{'name': 'Column 1', 'field': 'id', 'width': '150px'},
+		{'name': 'Column 2', 'field': 'col2', 'width': '100px'},
+		{'name': 'Column 3', 'field': 'col3', 'width': '200px'},
+                {'name': 'Column 4', 'field': 'col4', 'width': '150px'}
+	  ]];
+
+          function myStyleRow(row){
+	     /* The row object has 4 parameters, and you can set two others to provide your own styling
+	        These parameters are :
+	      	-- index : the row index
+	     	-- selected: wether the row is selected
+	     	-- over : wether the mouse is over this row
+	     	-- odd : wether this row index is odd. */
+	     var item = grid.getItem(row.index);
+	     if(item){
+		var type = store.getValue(item, "col2", null);
+		if(!!type){
+		    row.customStyles += "color:red;";
+	        }
+	     }
+	     grid.focus.styleRow(row);
+	     grid.edit.styleRow(row);
+          }
+
+          /*create a new grid:*/
+          grid = new dojox.grid.DataGrid({
+              id: 'grid',
+              store: store,              
+              structure: layout,
+              onStyleRow: myStyleRow,
+              rowSelector: '20px'},
+            document.createElement('div'));
+
+          /*append the new grid to the div*/
+          dojo.byId("gridDiv").appendChild(grid.domNode);
+
+          /*Call startup() to render the grid*/
+          grid.startup();
+        });
     </script>
 
   .. cv:: html
 
-    <span dojoType="dojo.data.ItemFileWriteStore" 
-        data-dojo-id="store3" url="{{ dataUrl }}dijit/tests/_data/countries.json">
-    </span>
+    <div id="gridDiv"></div>
 
-    <table dojoType="dojox.grid.DataGrid"
-        data-dojo-id="grid6"
-        store="store3"
-        query="{ name: '*' }"
-        rowsPerPage="20"
-        clientSort="true"
-        style="width: 100%; height: 100%;"
-        rowSelector="20px">
-        <script type="dojo/method" data-dojo-event="onStyleRow" data-dojo-args="row">
-	     //The row object has 4 parameters, and you can set two others to provide your own styling
-	     //These parameters are :
-	     //	-- index : the row index
-	     //	-- selected: wether the row is selected
-	     //	-- over : wether the mouse is over this row
-	     //	-- odd : wether this row index is odd.
-	     var item = grid6.getItem(row.index);
-	     if(item){
-		var type = store3.getValue(item,"type",null);
-		if(type == "continent"){
-		    row.customStyles += "color:red;";
-	        }
-	     }
-	     grid6.focus.styleRow(row);
-	     grid6.edit.styleRow(row);
-	</script>
-        <thead>
-            <tr>
-                <th width="200px" 
-                    field="name">Country/Continent Name</th>
-                <th width="auto" 
-                    field="type" 
-                    cellType="dojox.grid.cells.Select" 
-                    options="country,city,continent" 
-                    editable="true">Type</th>
-            </tr>
-        </thead>
-    </table>
-
-  .. cv:: css
+   .. cv:: css
 
     <style type="text/css">
         @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
 
-        .dojoxGrid table {
-            margin: 0;
-        }
-
-        html, body {
-            width: 100%;
-            height: 100%;
-            margin: 0;
+        /*Grid need a explicit width/height by default*/
+        #grid {
+            width: 43em;
+            height: 20em;
         }
     </style>
+
 
 Formatting a Date Field
 -----------------------
