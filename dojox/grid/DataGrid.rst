@@ -21,8 +21,6 @@ Introduction
 Grids are familiar in the client/server development world. Basically a grid is a kind of mini spreadsheet, commonly used to display details on master-detail forms. From HTML terms, a grid is a "super-table" with its own scrollable viewport.
 
 .. cv-compound::
-  :width: 480
-  :height: 300
 
   .. cv:: javascript
 
@@ -51,8 +49,7 @@ Grids are familiar in the client/server development world. Basically a grid is a
 	  var layout = [[
 		{'name': 'Column 1', 'field': 'id'},
 		{'name': 'Column 2', 'field': 'col2'},
-		{'name': 'Column 3', 'field': 'col3', 'width': '230px'},
-		{'name': 'Column 4', 'field': 'col4', width: 'auto'}
+		{'name': 'Column 3', 'field': 'col3', 'width': '230px'}
 	  ]];
 
           /*create a new grid:*/
@@ -86,7 +83,6 @@ Grids are familiar in the client/server development world. Basically a grid is a
             height: 100%;
             margin: 0;
         }
-
     </style>
 
 
