@@ -762,7 +762,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
 		{ col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
 		{ col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
 	  ];
-	  var rows = 60;
+	  var rows = 8;
 	  for(var i=0, l=data_list.length; i<rows; i++){
 		data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
 	  }
@@ -797,6 +797,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
     <p class="info">
         This example shows, how to add/remove rows
     </p>
+    <div id="gridDiv"></div>
 
     <p class="container">
       <span data-dojo-type="dijit.form.Button">
@@ -829,8 +830,6 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
       </span>
     </p>
 
-    <div id="gridDiv"></div>
-
    .. cv:: css
 
     <style type="text/css">
@@ -839,15 +838,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
         /*Grid need a explicit width/height by default*/
         #grid {
             width: 43em;
-            height: 20em;
-        }
-        .container {
-            text-align: center;
-            margin: 10px;
-        }
-
-        .info {
-            margin: 10px;
+            height: 15em;
         }
     </style>
 
