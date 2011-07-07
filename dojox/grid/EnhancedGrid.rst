@@ -46,7 +46,8 @@ testing...
 		data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
 	  }
 	  var store = new dojo.data.ItemFileWriteStore({data: data});
-
+          
+          var layout = [[{'name': 'Column 1'}]];
 
         });
     </script>
