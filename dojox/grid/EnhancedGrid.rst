@@ -48,9 +48,7 @@ testing...
 	  var store = new dojo.data.ItemFileWriteStore({data: data});
 
 	  //set up layout
-	  var layout = [[
-		{name: 'Column 1', field: 'id'}
-	  ]];
+	  var layout = [[{name: 'Column 1'}]];
 
         });
     </script>
