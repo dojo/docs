@@ -47,7 +47,7 @@ testing...
 	  }
 	  var store = new dojo.data.ItemFileWriteStore({data: data});
           
-          var layout = [[{name: 'Column 1', 'field': 'id'}]];
+          var layout = [[{name: 'Column 1', field: 'id'}]];
 
             var grid = new dojox.grid.EnhancedGrid({
               id: 'grid',
