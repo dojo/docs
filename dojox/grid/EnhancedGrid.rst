@@ -56,7 +56,7 @@ testing...
               'rowSelector': '20px'},
             document.createElement('div'));
 
-
+          //append the new grid to the div
           dojo.byId("gridDiv").appendChild(grid.domNode);
 
 
@@ -154,7 +154,7 @@ This is the most simple way to run up an EnhancedGrid, it's basically the same a
               rowSelector: '20px'},
             document.createElement('div'));
 
-          // append the new grid to the div
+          //append the new grid to the div
           dojo.byId("gridDiv").appendChild(grid.domNode);
 
           // Call startup() to render the grid
