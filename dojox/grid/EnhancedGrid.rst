@@ -47,7 +47,7 @@ testing...
 	  /*set up layout*/
 	  var layout = [[
 		{'name': 'Column 1', 'field': 'id'},
-		{'name': 'Column 2', 'field': 'col1'}
+		{'name': 'Column 2', 'field': 'id'}
 	  ]];
 
           /*create a new grid:*/
