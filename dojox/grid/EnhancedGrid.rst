@@ -110,12 +110,9 @@ testing...
 
 This is the most simple way to run up an EnhancedGrid, it's basically the same as a base DataGrid since no plugins are turned on.
 
-.. code-example::
-  :toolbar: themes, versions, dir
-  :width: 550
-  :height: 330
+.. cv-compound::
 
-  .. javascript::
+  .. cv:: javascript
 
     <script type="text/javascript">
         dojo.require("dojox.grid.EnhancedGrid");
@@ -162,11 +159,11 @@ This is the most simple way to run up an EnhancedGrid, it's basically the same a
         });
     </script>
 
-  .. html::
+  .. cv:: html
 
     <div id="gridDiv"></div>
 
-  .. css::
+   .. cv:: css
 
     <style type="text/css">
         @import "{{baseUrl}}dojo/resources/dojo.css";
