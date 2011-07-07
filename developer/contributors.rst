@@ -615,6 +615,7 @@ A list of corporations or organizations with a CLA on file:
 * Laszlo Systems, Inc. 
 * Leorent, GmbH: Michael Rasmussen
 * Livando.com
+* LUCIAD NV: Tom Makieu, Thomas Neiaynck
 * Maastermedia
 * Media Hive 
 * Meebo 
