@@ -44,6 +44,8 @@ Dojo now fully supports asynchronous loading of AMD modules. Asynchronous loadin
 
 Note that in async mode many modules which were implicitly loaded before now (including dojo.parser) need to be explicitly loaded.   Be sure to list all the modules you are directly using in the require() list (or via the deprecated dojo.require() syntax).
 
+Note that many core and dijit modules have been converted to use minimal dependencies in 1.7, to support lighter footprint when used in conjunction with async loading, and AMD module format and async loading is now a fully supported feature in 1.7; however, as part of this effort, exported objects returned from dojo core modules should be treated as subject to change.  Work on tightening exported module return values/api's will continue through 1.8.
+
 Completion of AMD conversion (Rawld etc. please fill this in)
 
 has.js
