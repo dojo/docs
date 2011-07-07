@@ -53,7 +53,6 @@ testing...
         dojo.require("dojo.data.ItemFileWriteStore");
     
         dojo.addOnLoad(function(){
-	  /*set up data store*/
 	  var data = {
 		identifier: 'id',
 		items: []
@@ -69,12 +68,10 @@ testing...
 	  }
 	  var store = new dojo.data.ItemFileWriteStore({data: data});
 	
-	  /*set up layout*/
 	  var layout = [[
 		{name: 'Column 1', field: 'id'}
 	  ]];
 
-          /*create a new grid:*/
           var grid = new dojox.grid.EnhancedGrid({
               id: 'grid',
               store: store,              
@@ -82,10 +79,8 @@ testing...
               rowSelector: '20px'},
             document.createElement('div'));
 
-          /*append the new grid to the div*/
           dojo.byId("gridDiv").appendChild(grid.domNode);
 
-          /*Call startup() to render the grid*/
           grid.startup();
         });
     </script>
