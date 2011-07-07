@@ -534,92 +534,107 @@ Working with selections
 To get the current selected rows of the grid, you can use the method yourGrid.selection.getSelected(). You will get an array of the selected items. The following code shows an example:
 
 .. cv-compound::
-  :djConfig: parseOnLoad: true
-
+ 
   .. cv:: javascript
 
     <script type="text/javascript">
         dojo.require("dojox.grid.DataGrid");
-        dojo.require("dojox.data.CsvStore");
-        dojo.require("dijit.form.Button");
+        dojo.require("dojo.data.ItemFileWriteStore");
+        dojo.require("dijit.form.Button")
+    
+        dojo.addOnLoad(function(){
+	  /*set up data store*/
+	  var data = {
+		identifier: 'id',
+		items: []
+	  };
+	  var data_list = [ 
+		{ col1: "normal", col2: false, col3: 'But are not followed by two hexadecimal', col4: 29.91},
+		{ col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
+		{ col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
+	  ];
+	  var rows = 60;
+	  for(var i=0, l=data_list.length; i<rows; i++){
+		data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
+	  }
+	  var store = new dojo.data.ItemFileWriteStore({data: data});
+	
+	  /*set up layout*/
+	  var layout = [[
+		{'name': 'Column 1', 'field': 'id', 'width': '100px'},
+		{'name': 'Column 2', 'field': 'col2', 'width': '100px'},
+		{'name': 'Column 3', 'field': 'col3', 'width': '200px'},
+                {'name': 'Column 4', 'field': 'col4', 'width': '120px'}
+	  ]];
+
+          /*create a new grid:*/
+          grid = new dojox.grid.DataGrid({
+              id: 'grid',
+              store: store,              
+              structure: layout,
+              rowSelector: '20px'},
+            document.createElement('div'));
+
+          /*append the new grid to the div*/
+          dojo.byId("gridDiv").appendChild(grid.domNode);
+
+          /*Call startup() to render the grid*/
+          grid.startup();
+        });
     </script>
 
   .. cv:: html
 
-    <span dojoType="dojox.data.CsvStore" 
-        data-dojo-id="store2" url="{{ baseUrl }}dojox/grid/tests/support/movies.csv">
-    </span>
-
-    <p class="info">
+   <p class="info">
         Select a single row or multiple rows in the Grid (click on the Selector on the left side of each row). 
         After that, a click on the Button "get all Selected Items" will show you each attribute/value of the
         selected rows.
     </p>
 
-    <table dojoType="dojox.grid.DataGrid"
-        data-dojo-id="grid2"
-        store="store2"
-        query="{ Title: '*' }"
-        clientSort="true"
-        style="width: 100%; height: 300px;"
-        rowSelector="20px">
-        <thead>
-            <tr>
-                <th width="300px" field="Title">Title of Movie</th>
-                <th width="50px">Year</th>
-            </tr>
-            <tr>
-                <th colspan="2">Producer</th>
-            </tr> 
-        </thead>
-    </table>
+    <div id="gridDiv"></div>
 
     <p class="container">
     <span data-dojo-type="dijit.form.Button">
         get all Selected Items
         <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="evt">
-            // Get all selected items from the Grid:
-            var items = grid2.selection.getSelected();
+            /* Get all selected items from the Grid: */
+            var items = grid.selection.getSelected();
             if(items.length){
-                // Iterate through the list of selected items.
-                // The current item is available in the variable 
-                // "selectedItem" within the following function:
+                /* Iterate through the list of selected items.
+                   The current item is available in the variable 
+                   "selectedItem" within the following function: */
                 dojo.forEach(items, function(selectedItem) {
                     if(selectedItem !== null) {
-                        // Iterate through the list of attributes of each item.
-                        // The current attribute is available in the variable
-                        // "attribute" within the following function:
-                        dojo.forEach(grid2.store.getAttributes(selectedItem), function(attribute) {
-                            // Get the value of the current attribute:
+                        /* Iterate through the list of attributes of each item.
+                           The current attribute is available in the variable
+                           "attribute" within the following function: */
+                        dojo.forEach(grid.store.getAttributes(selectedItem), function(attribute) {
+                            /* Get the value of the current attribute:*/
                             var value = grid2.store.getValues(selectedItem, attribute);
-                            // Now, you can do something with this attribute/value pair.
-                            // Our short example shows the attribute together
-                            // with the value in an alert box, but we are sure, that
-                            // you'll find a more ambitious usage in your own code:
+                            /* Now, you can do something with this attribute/value pair.
+                               Our short example shows the attribute together
+                               with the value in an alert box, but we are sure, that
+                               you'll find a more ambitious usage in your own code:*/
                             alert('attribute: ' + attribute + ', value: ' + value);
-                        }); // end forEach
-                    } // end if
-                }); // end forEach
-            } // end if
+                        }); /* end forEach */
+                    } /* end if */
+                }); /* end forEach */
+            } /* end if */
         </script>
     </span>
     </p>
 
-  .. cv:: css
+
+   .. cv:: css
 
     <style type="text/css">
-        @import "{{ baseUrl }}dojox/grid/resources/Grid.css";
         @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
 
-        .dojoxGrid table {
-            margin: 0;
+        /*Grid need a explicit width/height by default*/
+        #grid {
+            width: 43em;
+            height: 20em;
         }
-
-        html, body {
-            width: 100%;
-            margin: 0;
-        }
-
         .container {
             text-align: center;
         }
