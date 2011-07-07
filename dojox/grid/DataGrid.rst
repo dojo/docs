@@ -48,7 +48,7 @@ Grids are familiar in the client/server development world. Basically a grid is a
 	  /*set up layout*/
 	  var layout = [[
 		{'name': 'Column 1', 'field': 'id'},
-		{'name': 'Column 2', 'field': 'col2'},
+		{'name': 'Column 2', 'field': 'col2', 'width': '150px'},
 		{'name': 'Column 3', 'field': 'col3', 'width': '200px'},
                 {'name': 'Column 4', 'field': 'col4', 'width': '230px'}
 	  ]];
