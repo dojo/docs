@@ -564,7 +564,7 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
 		{'name': 'Column 1', 'field': 'id', 'width': '100px'},
 		{'name': 'Column 2', 'field': 'col2', 'width': '100px'},
 		{'name': 'Column 3', 'field': 'col3', 'width': '200px'},
-                {'name': 'Column 4', 'field': 'col4', 'width': '120px'}
+                {'name': 'Column 4', 'field': 'col4', 'width': '150px'}
 	  ]];
 
           /*create a new grid:*/
@@ -632,7 +632,7 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
         /*Grid need a explicit width/height by default*/
         #grid {
             width: 43em;
-            height: 20em;
+            height: 15em;
         }
     </style>
 
