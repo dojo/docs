@@ -31,13 +31,7 @@ testing...
         dojo.require("dojox.grid.EnhancedGrid");
         dojo.require("dojo.data.ItemFileWriteStore");
 
-        dojo.addOnLoad(function(){
-	  //set up data store
-	  var data = {
-		identifier: 'id',
-		items: []
-	  };
-        });
+        dojo.addOnLoad(function(){});
     </script>
 
   .. cv:: html
