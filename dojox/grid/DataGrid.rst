@@ -589,7 +589,9 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
         Select a single row or multiple rows in the Grid (click on the Selector on the left side of each row). 
         After that, a click on the Button "get all Selected Items" will show you each attribute/value of the
         selected rows.
-    </p>    
+    </p>
+
+    <div id="gridDiv"></div>
 
     <p class="container">
     <span data-dojo-type="dijit.form.Button">
@@ -622,9 +624,6 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
     </span>
     </p>
 
-    <div id="gridDiv"></div>
-
-
    .. cv:: css
 
     <style type="text/css">
@@ -634,13 +633,6 @@ To get the current selected rows of the grid, you can use the method yourGrid.se
         #grid {
             width: 43em;
             height: 20em;
-        }
-        .container {
-            text-align: center;
-        }
-
-        .info {
-            margin: 10px;
         }
     </style>
 
@@ -717,8 +709,7 @@ First, you have to set a editor for each cell, you would like to edit:
   .. cv:: html
 
     <p class="info">
-        This example shows, how to make the column "Type" editable.
-        In order to select a new value, you have to double click on the current value in the second column.
+        This example shows how to make columns editable. Please double click any of column 2, column 3 or column 4 to change the cell value.
     </p>
 
 
@@ -763,7 +754,7 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
 		{ col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
 		{ col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
 	  ];
-	  var rows = 6;
+	  var rows = 5;
 	  for(i=0, l=data_list.length; i<rows; i++){
 		data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
 	  }
