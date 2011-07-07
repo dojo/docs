@@ -665,63 +665,76 @@ Grid allows you to edit your data easily and send the changed values back to you
 First, you have to set a editor for each cell, you would like to edit:
 
 .. cv-compound::
-  :djConfig: parseOnLoad: true
-  :version: local
-  :height: 480
-
+ 
   .. cv:: javascript
 
     <script type="text/javascript">
         dojo.require("dojox.grid.DataGrid");
         dojo.require("dojo.data.ItemFileWriteStore");
+    
+        dojo.addOnLoad(function(){
+	  /*set up data store*/
+	  var data = {
+		identifier: 'id',
+		items: []
+	  };
+	  var data_list = [ 
+		{ col1: "normal", col2: false, col3: 'But are not followed by two hexadecimal', col4: 29.91},
+		{ col1: "important", col2: false, col3: 'Because a % sign always indicates', col4: 9.33},
+		{ col1: "important", col2: false, col3: 'Signs can be selectively', col4: 19.34}
+	  ];
+	  var rows = 60;
+	  for(var i=0, l=data_list.length; i<rows; i++){
+		data.items.push(dojo.mixin({ id: i+1 }, data_list[i%l]));
+	  }
+	  var store = new dojo.data.ItemFileWriteStore({data: data});
+	
+	  /*set up layout*/
+	  var layout = [[
+		{'name': 'Column 1', 'field': 'id', 'width': '100px'},
+		{'name': 'Column 2', 'field': 'col2', 'width': '100px'},
+		{'name': 'Column 3', 'field': 'col3', 'width': '200px', editable: true},
+                {'name': 'Column 4', 'field': 'col4', 'width': '120px', editable: true}
+	  ]];
+
+          /*create a new grid:*/
+          var grid = new dojox.grid.DataGrid({
+              id: 'grid',
+              store: store,              
+              structure: layout,
+              rowSelector: '20px'},
+            document.createElement('div'));
+
+          /*append the new grid to the div*/
+          dojo.byId("gridDiv").appendChild(grid.domNode);
+
+          /*Call startup() to render the grid*/
+          grid.startup();
+        });
     </script>
 
   .. cv:: html
-
-    <span dojoType="dojo.data.ItemFileWriteStore" 
-        data-dojo-id="store3" url="{{ dataUrl }}dijit/tests/_data/countries.json">
-    </span>
 
     <p class="info">
         This example shows, how to make the column "Type" editable.
         In order to select a new value, you have to double click on the current value in the second column.
     </p>
 
-    <table dojoType="dojox.grid.DataGrid"
-        data-dojo-id="grid3"
-        store="store3"
-        query="{ name: '*' }"
-        rowsPerPage="20"
-        clientSort="true"
-        style="width: 100%; height: 300px;"
-        rowSelector="20px">
-        <thead>
-            <tr>
-                <th width="200px" 
-                    field="name">Country/Continent Name</th>
-                <th width="auto" 
-                    field="type" 
-                    cellType="dojox.grid.cells.Select" 
-                    options="country,city,continent" 
-                    editable="true">Type</th>
-            </tr>
-        </thead>
-    </table>
 
-  .. cv:: css
+    <div id="gridDiv"></div>
+
+   .. cv:: css
 
     <style type="text/css">
-	@import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
+        @import "{{ baseUrl }}dojox/grid/resources/{{ theme }}Grid.css";
 
-        html, body {
-            width: 100%;
-            margin: 0;
-        }
-
-        .info {
-            margin: 10px;
+        /*Grid need a explicit width/height by default*/
+        #grid {
+            width: 43em;
+            height: 20em;
         }
     </style>
+
 
 Adding and Deleting data
 ------------------------
