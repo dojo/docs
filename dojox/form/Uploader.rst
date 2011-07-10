@@ -251,3 +251,30 @@ If IFrame plugin is used, the code on the client side gets tricky, as reading ba
 For non-PHP devs, this translates into a JSON string, wrapped in a textarea, returned as HTML. I know it's screwy, but that's how it works.
 
 If you are having problems getting *onComplete* to fire, look at this code first. Often the problem is the server side code is not catching the field name for whatever reason (perhaps the client and server names don't match) and the code is falling to the end of the page and returning a textarea when it shouldn't. 
+
+========
+Examples
+========
+
+This example shows how to use Flash and IFrame plugins for both cases (browsers with and without flash).
+
+.. code-block :: html
+ :linenos:
+  <script type="text/javascript">
+    dojo.require("dojox.form.Uploader");
+    dojo.require("dojox.embed.Flash");
+    if(dojox.embed.Flash.available) {
+      dojo.require("dojox.form.uploader.plugins.Flash");
+    } else {
+      dojo.require("dojox.form.uploader.plugins.IFrame");
+    }
+    dojo.addOnLoad(function(){
+      var u = new dojox.form.Uploader({
+        label: "Select files",
+        multiple: true,
+        uploadOnSelect: true,
+        url: "UploadFile.php",
+      }, "uploader");
+  </script>
+
+  <div id="uploader"></div>
