@@ -102,7 +102,7 @@ ValidationTextBox also supports functions that generate regular expressions. Hav
 
     <script type="text/javascript">
       dojo.require("dijit.form.ValidationTextBox");
-      function after5(constraints){
+      var after5 = function(constraints){
           var date=new Date();
 	  if(date.getHours() >= 17){
               return "\\d{5}";
