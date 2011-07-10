@@ -116,7 +116,7 @@ ValidationTextBox also supports functions that generate regular expressions. Hav
 
     <input type="text" name="zip" value="00000" id="zip2"
         data-dojo-type="dijit.form.ValidationTextBox"
-        data-dojo-props="regExpGen:'after5', required:true, invalidMessage:'Zip codes after 5, county name before then.'">
+        data-dojo-props="regExpGen:after5, required:true, invalidMessage:'Zip codes after 5, county name before then.'">
     <label for="zip2">Also 5-Digit U.S. Zipcode only</label>
 
 
