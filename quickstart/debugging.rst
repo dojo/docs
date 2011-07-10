@@ -3,6 +3,9 @@
 Debugging Tutorial
 ==================
 
+.. contents::
+    :depth: 2
+
 Dojo is very lean and speedy, and uses some very clever tricks to save memory and time. The downside: Dojo does not contain much error trapping, which would bloat and slow down the code. If your code is not behaving, some of the resulting errors can look mighty puzzling at first.
 
 No worries! Here are a few tips to make you a confident, successful bug finder. Knowing these ahead of time will make your Dojo learning curve less steep.
