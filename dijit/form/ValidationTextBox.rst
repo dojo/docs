@@ -80,18 +80,16 @@ The regular expression syntax comes directly from JavaScript. The start and endi
 
   .. cv:: javascript
 
-     <script type="text/javascript">
-     dojo.require("dijit.form.ValidationTextBox");
-     </script>
+    <script type="text/javascript">
+        dojo.require("dijit.form.ValidationTextBox");
+    </script>
 
   .. cv:: html
 
-	<input type="text" name="zip" value="00000"
-		dojoType="dijit.form.ValidationTextBox"
-		regExp="\d{5}"
-		required="true"
-		invalidMessage="Invalid zip code.">
-        <label for="zip">Also 5-Digit U.S. Zipcode only</label>
+    <input type="text" name="zip" value="00000"
+        data-dojo-type="dijit.form.ValidationTextBox"
+        data-dojo-props="regExp:'\\d{5}', required:true, invalidMessage:'Invalid zip code.'">
+    <label for="zip">Also 5-Digit U.S. Zipcode only</label>
 
 Generate regular expressions
 ----------------------------
@@ -102,26 +100,24 @@ ValidationTextBox also supports functions that generate regular expressions. Hav
 
   .. cv:: javascript
 
-     <script type="text/javascript">
-     dojo.require("dijit.form.ValidationTextBox");
-     function after5(constraints){
-	   var date=new Date();
-	   if(date.getHours() >= 17){
-		  return "\\d{5}";
-	   }else{ 
+    <script type="text/javascript">
+      dojo.require("dijit.form.ValidationTextBox");
+      function after5(constraints){
+          var date=new Date();
+	  if(date.getHours() >= 17){
+              return "\\d{5}";
+          }else{ 
 		  return "\\D+";
-	   }
-     }
+         }
+       }
      </script>
 
   .. cv:: html
 
-	<input type="text" name="zip" value="00000" id="zip2"
-		dojoType="dijit.form.ValidationTextBox"
-		regExpGen="after5"
-		required="true"
-		invalidMessage="Zip codes after 5, county name before then.">
-        <label for="zip2">Also 5-Digit U.S. Zipcode only</label>
+    <input type="text" name="zip" value="00000" id="zip2"
+        data-dojo-type="dijit.form.ValidationTextBox"
+        data-dojo-props="regExpGen:'after5', required:true, invalidMessage:'Zip codes after 5, county name before then.'">
+    <label for="zip2">Also 5-Digit U.S. Zipcode only</label>
 
 
 =============
