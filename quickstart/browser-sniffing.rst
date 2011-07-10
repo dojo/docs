@@ -51,7 +51,8 @@ Examples
 
 Here's a live sample to show how it works:
 
-.. codeviewer::
+.. code-block::
+  :linenos:
 
   <script type="text/javascript">
   function makeFancyAnswer(who){
