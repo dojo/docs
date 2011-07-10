@@ -68,7 +68,7 @@ ValidationTextBox widgets usually use Regular Expression validation, as in the f
 
     <input type="text" name="phone" id="phone" value="someTestString"
         data-dojo-type="dijit.form.ValidationTextBox"
-        data-dojo-props="regExp:'[\w]+', required:true, invalidMessage:'Invalid Non-Space Text.'">
+        data-dojo-props="regExp:'[\\w]+', required:true, invalidMessage:'Invalid Non-Space Text.'">
     <label for="phone">Phone number, no spaces</label>
 
 Using regular expressions
