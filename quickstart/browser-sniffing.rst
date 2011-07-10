@@ -51,7 +51,7 @@ Examples
 
 Here's a live sample to show how it works:
 
-.. code-block::
+.. code-block:: html
   :linenos:
 
   <script type="text/javascript">
