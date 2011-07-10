@@ -17,7 +17,7 @@ Dijit Basics
 
 You can use Dijit in one of two ways: **declaratively** by using special attributes inside of regular HTML tags, and **programmatically** through JavaScript (you are welcome to mix-and-match the two styles as you see fit). You have the same options either way. 
 
-.. code-block :: html
+.. code-block :: javascript
   :linenos:
 
   dojo.require("dijit.Dialog"); 
@@ -125,6 +125,7 @@ This basically mirrors how vanilla HTML DOM nodes work, although the syntax is a
 Specifically, to get/set attributes after initialization, you need to use the ``get()`` and ``set()`` methods:
 
 .. code-block :: javascript
+ :linenos:
 
   // set title
   myTitlePane.set('title', 'hello world');
@@ -138,6 +139,7 @@ Specifically, to get/set attributes after initialization, you need to use the ``
 Set() also supports a hash API like `dojo.attr() <dojo/attr>`_, for setting multiple attributes:
 
 .. code-block :: javascript
+ :linenos:
 
   myInput.set({ tabIndex: 3, disabled: true, value: 'hi'});
 
@@ -146,6 +148,7 @@ watch()
 Attributes can also be monitored for changes.   For example:
 
 .. code-block :: javascript
+ :linenos:
 
    myTitlePane.watch("open", function(attr, oldVal, newVal){
       console.log("pane is now " + (newVal ? "opened" : "closed"));
@@ -182,6 +185,7 @@ Events
 The other interface for dealing with widgets is to setup event handlers.   For example:
 
 .. code-block :: javascript
+ :linenos:
 
   new dijit.form.Button({
        label: 'Click me!',
@@ -191,6 +195,7 @@ The other interface for dealing with widgets is to setup event handlers.   For e
 Event handlers can be setup programatically (as above), or declaratively, like:
 
 .. code-block :: html
+ :linenos:
 
   <div data-dojo-type="dijit.form.Button">
      <script type="dojo/connect" data-dojo-event="onClick" data-dojo-args="evt">
@@ -227,7 +232,7 @@ With the following markup:
 .. code-block :: html
   :linenos:
  
-  <div id="myDialog" dojoType="dijit.Dialog" title="A Dialog"><p class="innerContent">Content</p>/div>
+  <div id="myDialog" data-dojo-type="dijit.Dialog" title="A Dialog"><p class="innerContent">Content</p>/div>
 
 The Dialog instance would be available through the byId call to `myDialog`:
 
@@ -274,6 +279,7 @@ Behavioral widgets
 In general, widgets create their own DOM structure.  For example,
 
 .. code-block :: javascript
+ :linenos:
 
   var b = new dijit.form.Button({label: "press me"})
 
@@ -282,8 +288,9 @@ will create a new widget, where b.domNode can be inserted into the document at t
 When instantiated declaratively,
 
 .. code-block :: html
+ :linenos:
 
-   <button dojoType="dijit.form.Button">press me</button>
+   <button data-dojo-type="dijit.form.Button">press me</button>
 
 Note that the original button node is thrown away, after scanning the node for attribute settings and innerHTML.
 The new DOM automatically replaces the old button node.
@@ -293,14 +300,16 @@ However, there's another type of widget called a "behavioral widget" that merely
 When using behavioral widgets, you need to specify a source DOM node for them to operate on.  For example:
 
 .. code-block :: javascript
+ :linenos:
 
    new dojox.widget.FishEyeLite({...}, "mySourceDom");
 
 This comes naturally if you are instantiating from markup.  For example, a behavioral widget to add a confirm dialog to an anchor might be used like this:
 
 .. code-block :: html
+ :linenos:
 
-   <a href="..." dojoType="dojoc.widget.ConfirmAnchor">
+   <a href="..." data-dojo-type="dojoc.widget.ConfirmAnchor">
 
 Dijit doesn't have any behavioral widgets, given that it's meant to be able to be used in a purely programmatic setting (without requiring the developer to create any skeletal ``sourceDOM`` nodes), but it is a useful paradigm for some applications, and is supported by Dijit. 
 
