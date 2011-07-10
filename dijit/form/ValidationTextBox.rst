@@ -60,18 +60,16 @@ ValidationTextBox widgets usually use Regular Expression validation, as in the f
 
   .. cv:: javascript
 
-     <script type="text/javascript">
-     dojo.require("dijit.form.ValidationTextBox");
-     </script>
+    <script type="text/javascript">
+      dojo.require("dijit.form.ValidationTextBox");
+    </script>
 
   .. cv:: html
 
-	<input type="text" name="phone" id="phone" value="someTestString"
-		dojoType="dijit.form.ValidationTextBox"
-		regExp="[\w]+"
-		required="true"
-		invalidMessage="Invalid Non-Space Text.">
-        <label for="phone">Phone number, no spaces</label>
+    <input type="text" name="phone" id="phone" value="someTestString"
+        data-dojo-type="dijit.form.ValidationTextBox"
+        data-dojo-props="regExp:'[\w]+', required:true, invalidMessage='Invalid Non-Space Text.'">
+    <label for="phone">Phone number, no spaces</label>
 
 Using regular expressions
 -------------------------
