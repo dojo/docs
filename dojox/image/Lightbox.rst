@@ -124,7 +124,7 @@ Additionally, you can add groups of images to a LightboxDialog, and show them as
     dialog.show({ group:"group3", href:"foo.png" });
   }
 
-To close a dialog programatically, simply call .hide()
+To close a dialog programmatically, simply call .hide()
 
 .. code-block :: javascript
 
@@ -168,7 +168,7 @@ Lightbox and LightboxDialog are not fully accessible, though provide basic keybo
 Tips & Tricks
 =============
 
-By using a 'private' method, you can programatically control the LightboxDialog when displaying groups of images. The functions are named _nextImage(), and _prevImage(), though may later become public as .next() and .prev().  
+By using a 'private' method, you can programmatically control the LightboxDialog when displaying groups of images. The functions are named _nextImage(), and _prevImage(), though may later become public as .next() and .prev().  
 
 .. code-block :: javascript
 
