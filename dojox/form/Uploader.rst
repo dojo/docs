@@ -119,8 +119,9 @@ Programmatic creation is also supported as shown in the following example that i
  dojo.require("dojox.form.Uploader");
  dojo.require("dojox.form.uploader.plugins.Flash");
  
- var u = new dojox.form.Uploader({label:"Programmatic Uploader", multiple:true, uploadOnSelect:true, url:"UploadFile.php"}, "idOfDivOrFileInput");
- 
+ var u = new dojox.form.Uploader({label:"Programmatic Uploader", multiple:true, uploadOnSelect:true, url:"UploadFile.php"});
+ dojo.byId("myDiv").appendChild(u.domNode);
+
 
 The "name" Property
 -------------------
