@@ -75,23 +75,25 @@ A TooltipDialog may be popped up from any node.
               var myTooltipDialog = new dijit.TooltipDialog({
                   id: 'myTooltipDialog',
                   style: "width: 300px;", 
-                  content: "<img src='http://ajax.googleapis.com/ajax/libs/dojo/1.5/dijit/themes/claro/images/loadingAnimation.gif' alt='' />"
+                  content: "<p>I have a mouse leave event handler that will close the dialog."
               });
               
               dojo.connect(myTooltipDialog, 'onMouseLeave', function() {
                   dijit.popup.close(myTooltipDialog);
               });
-                  
-              dijit.popup.open({
-                popup: myTooltipDialog,
-                around: dojo.byId('thenode')
+
+              dojo.connect(dojo.byId('thenode'), 'onmouseenter', function() {
+                  dijit.popup.open({
+                    popup: myTooltipDialog,
+                    around: dojo.byId('thenode')
+                  });
               });
 	 });
        </script>
 
   .. cv:: html
 
-    <div id="thenode">Here is a node.</div>
+    <div id="thenode">Move the mouse over me to pop up the dialog.</div>
 
 
 Declarative markup
