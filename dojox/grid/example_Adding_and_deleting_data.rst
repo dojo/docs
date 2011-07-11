@@ -3,7 +3,7 @@
 Adding and Deleting data
 ------------------------
 
-If you want to add (remove) data programatically, you just have to add (remove) it from the underlying data store.
+If you want to add (remove) data programmatically, you just have to add (remove) it from the underlying data store.
 Since DataGrid is "DataStoreAware", changes made to the store will be reflected automatically in the DataGrid.
  
 .. cv-compound::
