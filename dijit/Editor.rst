@@ -75,7 +75,7 @@ Programmatic example
 --------------------
 
 Of course, the editor can be created programmatically in addition to declaratively,
-although even when created programatically you need to specify a source DOM node to replace:
+although even when created programmatically you need to specify a source DOM node to replace:
 
 .. cv:: html
 
