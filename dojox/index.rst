@@ -603,6 +603,10 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
   A collection of utilities to get native look&feel on webapps for iPhone/iPad/Android
 
+* `dojox.mvc <dojox/mvc>`_
+
+  A collection of features for enabling Model-View-Controller (MVC) patterns in Dojo
+
 * `dojox.NodeList <dojox/NodeList>`_ - Additional extensions to `dojo.NodeList <dojo/NodeList>`_
 * `dojox.off <dojox/off>`_
 * `dojox.presentation <dojox/presentation>`_
