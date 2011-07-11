@@ -145,7 +145,7 @@ Basic example, input-output sync:
 
 .. code-example::
   :djConfig: parseOnLoad: true
-  :version: trunk 
+  :version: 1.7 
 
   .. javascript::
 
