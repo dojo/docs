@@ -52,7 +52,7 @@ This number spinner starts at 1000, and holds a number from 9 to 1550.  Each up 
 Sizing the Box
 --------------
 
-The default NumberSpinner looks a bit large for numbers 9-1550.  You can set the size of the enclosing box by setting the style attribute, like most Dijit form controls can.  Here, we'll use a programatically-created NumberSpinner:
+The default NumberSpinner looks a bit large for numbers 9-1550.  You can set the size of the enclosing box by setting the style attribute, like most Dijit form controls can.  Here, we'll use a programmatically-created NumberSpinner:
 
 .. cv-compound::
 
