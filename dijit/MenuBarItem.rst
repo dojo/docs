@@ -12,8 +12,8 @@ dijit.MenuBarItem
 
 These are the items in the Menubar that may be clickable but does not spawn a submenu when pressed or hovered over.
 
-A programatically created MenuBarItem
--------------------------------------
+A programmatically created MenuBarItem
+--------------------------------------
 
 .. cv-compound::
 
