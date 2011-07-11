@@ -27,7 +27,6 @@ The menu item can be disabled as follows:
 This widget is helpful in cases where the user has to toggle particular column/row, on/off as and when it is required. The examples below illustrate the usage of the widget.
 
 
-
 Examples
 ========
 
@@ -117,19 +116,19 @@ Declarative example
 	
   .. cv:: html
   
-	  <div dojoType="dijit.MenuBar">
-	        <div dojoType="dijit.PopupMenuBarItem">
+	  <div data-dojo-type="dijit.MenuBar">
+	        <div data-dojo-type="dijit.PopupMenuBarItem">
 	                <span>View</span>
-	                <div dojoType="dijit.Menu">
-				<div dojoType="dijit.CheckedMenuItem" onChange="toolBar(arguments[0])">Navigation bar</div>
-	                        <div dojoType="dijit.MenuItem" onClick="alert('you just clicked Status bar')">Status bar</div>
+	                <div data-dojo-type="dijit.Menu">
+				<div data-dojo-type="dijit.CheckedMenuItem" data-dojo-props="onChange:function(){toolBar(arguments[0])}">Navigation bar</div>
+	                        <div data-dojo-type="dijit.MenuItem" data-dojo-props="onClick:function(){alert('Status bar clicked')}">Status bar</div>
 	                </div>
 	        </div>
 	</div>
-	<div dojoType="dijit.MenuBar" id="tools">
-		<div dojoType="dijit.MenuBarItem" onClick="alert('I go nowhere!! just a clickable item')">Back</div>
-		<div dojoType="dijit.MenuBarItem" onClick="alert('Oops..No way to go..')">Forward</div>
-		<div dojoType="dijit.MenuBarItem" onClick="alert('Refresh button clicked!!')">Refresh</div>
+	<div data-dojo-type="dijit.MenuBar" id="tools">
+		<div data-dojo-type="dijit.MenuBarItem" data-dojo-props="onClick:function(){alert('Back button clicked.')}">Back</div>
+		<div data-dojo-type="dijit.MenuBarItem" data-dojo-props="onClick:function(){alert('Forward button clicked')}">Forward</div>
+		<div data-dojo-type="dijit.MenuBarItem" data-dojo-props="onClick:function(){alert('Refresh button clicked!')}">Refresh</div>
 	</div>
 	
 Accessibility
