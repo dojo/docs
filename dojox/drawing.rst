@@ -114,7 +114,7 @@ Manipulating the Drawing
 
 * Data Structures
 
- Each Stencil has its own data and point structure. Either *data* or *points*, but not both, can be used when programatically inserting Stencils or importing data as shown below. Data structures are loosely modeled on those from DojoX GFX. *data* shows the object properties, and *points* shows which array slot corresponds to which point on the stencil. Unless noted, all arguments are numbers **without** units (such as *px*). A point is an object with two properties, *x* and *y*, each a number. The structures are as follows:
+ Each Stencil has its own data and point structure. Either *data* or *points*, but not both, can be used when programmatically inserting Stencils or importing data as shown below. Data structures are loosely modeled on those from DojoX GFX. *data* shows the object properties, and *points* shows which array slot corresponds to which point on the stencil. Unless noted, all arguments are numbers **without** units (such as *px*). A point is an object with two properties, *x* and *y*, each a number. The structures are as follows:
 	 
 	* ellipse
 		data:
@@ -266,7 +266,7 @@ DojoX Drawing contains several methods to manipulate the drawing. Most of these 
 	Any actions taken on the drawing should happen within this function or after it's called. This event is similar to dojo.addOnLoad; it fires when the canvas is ready.
 		
 **addStencil**
-	To programatically add a Stencil to the drawing, use the *addStencil* method with two arguments, the basic Stencil type, and a object properties, which should include either the Stencil data or Stencil points.
+	To programmatically add a Stencil to the drawing, use the *addStencil* method with two arguments, the basic Stencil type, and a object properties, which should include either the Stencil data or Stencil points.
  
 .. code-block :: javascript
  :linenos:
