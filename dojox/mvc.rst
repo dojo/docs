@@ -85,7 +85,7 @@ Declarative example
 Basic example, input-output sync:
 
 .. cv-compound::
-
+  :version: 1.7
   .. cv:: javascript
 
 	<script type="text/javascript">
