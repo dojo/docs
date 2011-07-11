@@ -29,7 +29,7 @@ Examples
 Programmatic example
 --------------------
 
-First, we'll demonstrate a programatic TabContainer creation.
+First, we'll demonstrate a programmatic TabContainer creation.
 Note that the tabs all have a fixed height.
 
 .. code-example::
