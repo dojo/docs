@@ -40,7 +40,7 @@ Examples
 Default color palette
 ---------------------
 
-Default color palette, created programatically:
+Default color palette, created programmatically:
 
 .. cv-compound::
 
