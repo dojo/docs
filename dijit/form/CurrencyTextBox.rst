@@ -45,11 +45,12 @@ In this example using USD, both dollars and cents are required.
 
         <label for="income1">U.S. Dollars</label>
 	<input type="text" name="income1" id="income1" value="54775.53"
-		dojoType="dijit.form.CurrencyTextBox"
-		required="true"
-		constraints="{fractional:true}"
-		currency="USD"
-		invalidMessage="Invalid amount.  Cents are required.">
+		data-dojo-type="dijit.form.CurrencyTextBox"
+		data-dojo-props="required:true,
+		constraints:{fractional:true},
+		currency:'USD',
+                value:'54775.53'
+		invalidMessage:'Invalid amount. Cents are required.'">
 
 
 
