@@ -27,7 +27,7 @@ Initialise the Tree after onLoad Event has Fired
         // do work here
     });
 
-Expanding and Focusing tree nodes programatically
+Expanding and Focusing tree nodes programmatically
 -------------------------------------------------
 
 ``New in 1.4``
