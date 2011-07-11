@@ -468,6 +468,6 @@ I hope you've enjoyed this tutorial and found it informative. No doubt though, y
 
 #. `Writing custom widgets <quickstart/writingWidgets>`_. Create your own widget.
 
-#. `Dojo Unit Tests <http://svn.dojotoolkit.org/src/dojo/trunk/tests/>`_ from current nightly build (good for learning how things work)
+#. `Dojo Unit Tests <http://archive.dojotoolkit.org/nightly/dojotoolkit/dojo/trunk/tests/>`_ from current nightly build (good for learning how things work)
 
-#. `Dijit Unit Tests <http://svn.dojotoolkit.org/src/dijit/trunk/tests/>`_ from the current nightly build (good for learning how widgets work)
+#. `Dijit Unit Tests <http://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/trunk/tests/>`_ from the current nightly build (good for learning how widgets work)
