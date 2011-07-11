@@ -27,7 +27,7 @@ Examples
 Programmatic example
 --------------------
 
-The first example shows you how to create a nifty button programatically
+The first example shows you how to create a nifty button programmatically
 
 .. cv-compound::
 
