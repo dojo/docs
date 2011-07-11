@@ -51,6 +51,34 @@ Loading the basic dojox.mvc codebase is extremely simple.
 ========
 Examples
 ========
+
+Declarative example
+-------------------
+
+In this example using USD, both dollars and cents are required.
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+	<script type="text/javascript">
+		dojo.require("dijit.form.CurrencyTextBox");
+	</script>
+
+  .. cv:: html
+
+        <label for="income1">U.S. Dollars</label>
+	<input type="text" name="income1" id="income1" value="54775.53"
+		dojoType="dijit.form.CurrencyTextBox"
+		required="true"
+		constraints="{fractional:true}"
+		currency="USD"
+		invalidMessage="Invalid amount.  Cents are required.">
+
+
+
+
+
 Declarative example
 -------------------
 
