@@ -178,7 +178,7 @@ So in our example above, we write:
 
 Running this, we quickly find that dojo.newWidth is undefined. Maybe we spelled it wrong? To quickly find out, we change the debugging statement to:
 
-..code-block :: javascript
+.. code-block :: javascript
   :linenos:
 
   console.dir("dojo is" + dojo);
