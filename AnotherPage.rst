@@ -31,7 +31,7 @@ A fine example of executed code
     .fohooo { color: #15d32a; font-size: 16px; }
     </style>
 
-  The html snippet simply defines the markup of your code. Dojo will then parse the dom nodes and create the widgets programatically. Usually the lifecycle goes as follows
+  The html snippet simply defines the markup of your code. Dojo will then parse the dom nodes and create the widgets programmatically. Usually the lifecycle goes as follows
     
     * Programmatic code generation
     * Dom manipulation
@@ -79,7 +79,7 @@ And some normal executed code
 Here is my rest syntax
 ======================
 
-This code example shows you how to create a widget programatically, awesome isn't it?
+This code example shows you how to create a widget programmatically, awesome isn't it?
 
 .. codeviewer::
 
