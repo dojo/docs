@@ -56,7 +56,7 @@ If doing something simple like testing a browser or version, a try/catch is not 
 Examples
 --------
 
-A programatic example:
+A programmatic example:
 
 .. code-block :: javascript
  :linenos:
