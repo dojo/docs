@@ -78,7 +78,7 @@ Here's a simple example of a widget that creates it's own DOM tree:
   :djConfig: parseOnLoad: false
 
   .. javascript::
-	:label: Define the widget and instantiate programatically
+	:label: Define the widget and instantiate programmatically
 
 	<script>
 		dojo.require('dijit._Widget');
@@ -93,7 +93,7 @@ Here's a simple example of a widget that creates it's own DOM tree:
 					this.domNode = dojo.create("button", {innerHTML: "push me"});
 				}
 			});
-			// Create the widget programatically
+			// Create the widget programmatically
 			(new MyFirstWidget()).placeAt(dojo.body());
 	
 			// Call the parser manually so it runs after our widget is defined
