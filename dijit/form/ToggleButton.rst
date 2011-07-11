@@ -20,7 +20,7 @@ Examples
 Programmatic example
 --------------------
 
-Let's create a ToggleButton widget programatically, initially unchecked:
+Let's create a ToggleButton widget programmatically, initially unchecked:
 
 .. cv-compound::
 
