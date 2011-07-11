@@ -114,7 +114,7 @@ The next example does the same thing, but uses the publish/subscribe model.  The
     </div>
     <input type="button" onclick="surpriseMe()" value="Click here for Publish Subscribe toaster"/>
 
-This example builds a Toaster programatically and lets you set params. 
+This example builds a Toaster programmatically and lets you set params. 
 
 .. cv-compound::
 
@@ -200,5 +200,5 @@ This example builds a Toaster programatically and lets you set params.
 Additional Considerations:
 
 - Toasters defined in Dialogs
-- Creating Toaster programatically
+- Creating Toaster programmatically
 - Multiple Toasters
