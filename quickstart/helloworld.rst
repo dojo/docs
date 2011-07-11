@@ -7,6 +7,9 @@ Hello, World!
 :Version: 1.2
 :Author: JChimene
 
+.. contents::
+    :depth: 2
+
 The purpose of this tutorial is to provide a starting point for users who are new to Dojo. Whilst every effort is made to introduce as much as possible about Dojo, it is impossible to include more of the detailed information since to do so would be counterproductive and confusing to new users. For more information on the concepts introduced here, please see the links to other resources at the end of this document (Finding More Resources).
 
 Requirements
@@ -468,6 +471,6 @@ I hope you've enjoyed this tutorial and found it informative. No doubt though, y
 
 #. `Writing custom widgets <quickstart/writingWidgets>`_. Create your own widget.
 
-#. `Dojo Unit Tests <http://archive.dojotoolkit.org/nightly/dojotoolkit/dojo/trunk/tests/>`_ from current nightly build (good for learning how things work)
+#. `Dojo Unit Tests <http://archive.dojotoolkit.org/nightly/dojotoolkit/dojo/tests/>`_ from current nightly build (good for learning how things work)
 
-#. `Dijit Unit Tests <http://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/trunk/tests/>`_ from the current nightly build (good for learning how widgets work)
+#. `Dijit Unit Tests <http://archive.dojotoolkit.org/nightly/dojotoolkit/dijit/tests/>`_ from the current nightly build (good for learning how widgets work)
