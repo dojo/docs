@@ -60,7 +60,7 @@ In this example using USD, both dollars and cents are required.
 
 .. cv-compound::
   :djConfig: parseOnLoad: true
-  :version: 1.6
+  :version: 1.7
   :toolbar: none
 
   .. cv:: javascript
