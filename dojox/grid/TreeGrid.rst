@@ -24,7 +24,7 @@ This Widget inherits from dojo.grid.DataGrid and hence all methods and propertie
 Usage
 =====
 
-A tree grid can either be defined declaratively in HTML or programatically. For the most part, the TreeGrid follows the same structure and formatting as dojox.grid.DataGrid with the following exceptions:
+A tree grid can either be defined declaratively in HTML or programmatically. For the most part, the TreeGrid follows the same structure and formatting as dojox.grid.DataGrid with the following exceptions:
 
   * TreeGrid can only contain a single view - and that view must only contain a single row
   * TreeGrid operates off the concept of "levels" - which are 0-based. That is, level 1 are the items that are children of a top-level item
