@@ -39,8 +39,6 @@ Usage
 
 Loading the basic dojox.mvc codebase is extremely simple.
 
-Loading the javascript:
-
 .. code-block :: javascript
  
     // Load the basic MVC support, including the data binding mixin.
