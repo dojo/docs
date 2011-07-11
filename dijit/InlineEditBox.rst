@@ -12,9 +12,9 @@ dijit.InlineEditBox
 InlineEditBox is best described as a behavior on some text on the page, such that clicking that text brings up an editor, and when the text is saved, the screen is reverted to it's original state (but with the new text). The editor is created on-demand, so as to not slow down page load.
 
 
-=========================
-Programatic InlineEditBox
-=========================
+==========================
+Programmatic InlineEditBox
+==========================
 
 .. cv-compound::
 
