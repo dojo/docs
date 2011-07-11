@@ -49,7 +49,7 @@ In this example using USD, both dollars and cents are required.
 		data-dojo-props="required:true,
 		constraints:{fractional:true},
 		currency:'USD',
-                value:'54775.53'
+                value:'54775.53',
 		invalidMessage:'Invalid amount. Cents are required.'">
 
 
