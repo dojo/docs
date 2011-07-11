@@ -145,7 +145,7 @@ Basic example, input-output sync:
 
 .. code-example::
   :djConfig: parseOnLoad: true
-  :version: 1.7 
+  :baseUrl: http://docs.dojocampus.org/moin_static185/js/dojo/trunk/dojo/dojo.js 
 
   .. javascript::
 
