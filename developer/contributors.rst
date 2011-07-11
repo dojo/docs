@@ -74,6 +74,7 @@ A list of individuals who have signed Dojo CLAs:
 * Carpenter, Lee 
 * Carreira, Jason 
 * Carrera, Daniel 
+* Carstensen, Brian
 * Cartier, Dennis
 * Caudill, Mark 
 * Cavalier, Brian
