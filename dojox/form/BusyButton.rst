@@ -71,7 +71,7 @@ This example show how to use the busy button without internal timeout. Once you 
 
   .. cv:: html
 
-    <button dojoType="dojox.form.BusyButton" busyLabel="Sending data...">Send data</button>
+    <button data-dojo-type="dojox.form.BusyButton" data-dojo-props="busyLabel:'Sending data...'">Send data</button>
 
   .. cv:: css
 
@@ -94,7 +94,7 @@ The following example has a built-in timeout.
 
   .. cv:: html
 
-   <button dojoType="dojox.form.BusyButton" busyLabel="For 10 seconds" timeout="10000">Hold your breath</button>
+   <button data-dojo-type="dojox.form.BusyButton" data-dojo-props="busyLabel:'For 10 seconds', timeout:10000">Hold your breath</button>
 
   .. cv:: css
 
@@ -122,7 +122,8 @@ In this example we will set a new label by clicking on a button (this can be a s
 
   .. cv:: html
 
-   <button dojoType="dojox.form.BusyButton" id="buttonChargeback" busyLabel="Canceling payment...">Cancel payment</button> <button dojoType="dijit.form.Button" id="buttonChangeState">Change state</button>
+    <button data-dojo-type="dojox.form.BusyButton" id="buttonChargeback" data-dojo-props="busyLabel:'Canceling payment...'">Cancel payment</button> 
+    <button data-dojo-type="dijit.form.Button" id="buttonChangeState">Change state</button>
 
   .. cv:: css
 
@@ -151,7 +152,7 @@ The last example uses a little bit of trickery to create a button which is disab
 
   .. cv:: html
 
-   <button dojoType="dojox.form.BusyButton" id="buttonLicense" isBusy="true" busyLabel="Please read the agreement..." timeout="10000">I Agree</button>
+   <button data-dojo-type="dojox.form.BusyButton" id="buttonLicense" data-dojo-props="isBusy:true, busyLabel:'Please read the agreement...', timeout:10000">I Agree</button>
 
   .. cv:: css
 
