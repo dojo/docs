@@ -213,7 +213,7 @@ Usage
 Prerequisites
 -------------
 
-The dojox.grid.LazyTreeGrid can either be defined declaratively in HTML or programatically. For the most part, the dojox.grid.LazyTreeGrid follows the same structure and formatting as dojox.grid.TreeGrid with the following exceptions:
+The dojox.grid.LazyTreeGrid can either be defined declaratively in HTML or programmatically. For the most part, the dojox.grid.LazyTreeGrid follows the same structure and formatting as dojox.grid.TreeGrid with the following exceptions:
 
   * LazyTreeGrid must have a TreeModel, the TreeModel could be the dijit.tree.ForestStoreModel/dojox.grid.LazyTreeGridStoreModel, or a custom TreeModel that inherited from them.
   * LazyTreeGrid structures does not contain “children” values for nested level rows.(See dojox.grid.TreeGrid - Structure Definition)
