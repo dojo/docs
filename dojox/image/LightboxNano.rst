@@ -221,4 +221,4 @@ See also
 
 * Further information can be found here: http://www.cb1inc.com/category/general/lightboxnano
 
-* The test file can be found here: http://www.cb1inc.com/dojo-1.2/dojox/image/tests/test_LightboxNano.html
+* The test file can be found here: http://archive.dojotoolkit.org/nightly/dojotoolkit/dojox/image/tests/test_LightboxNano.html
