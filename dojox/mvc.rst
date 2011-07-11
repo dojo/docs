@@ -51,6 +51,67 @@ Loading the basic dojox.mvc codebase is extremely simple.
 ========
 Examples
 ========
+Declarative example
+-------------------
+
+Basic example, input-output sync:
+
+.. cv-compound::
+
+  .. cv:: javascript
+
+	<script type="text/javascript">
+      // Load the parser, we'll use the declarative data binding syntax (ref).
+      dojo.require("dojo.parser");
+
+      // Load the dijits we need.
+      dojo.require("dijit.form.Button");
+      dojo.require("dijit.form.TextBox");
+
+      // Load the basic MVC support, Output and Group .
+      dojo.require("dojox.mvc");
+      dojo.require("dojox.mvc.Group");
+      dojo.require("dojox.mvc.Output");
+
+      var model = dojox.mvc.newStatefulModel({ data : {
+           "First" : "John",
+           "Last"  : "Doe",
+           "Email" : "jdoe@example.com"
+      }});
+	</script>
+
+  .. cv:: html
+
+    <div id="main">
+      <div class="row">
+        <label class="cell" for="firstnameInput">First:</label>
+        <input class="cell" id="firstnameInput" data-dojo-type="dijit.form.TextBox"
+               data-dojo-props="ref: model.First"></input>
+        <!-- Content in output below will always be in sync with value of textbox above -->
+        <span data-dojo-type="dojox.mvc.Output" data-dojo-props="ref: model.First">
+          (first name is: ${this.value})
+        </span>
+      </div>
+      <div class="row">
+        <label class="cell" for="lastnameInput">Last:</label>
+        <input class="cell" id="lastnameInput" data-dojo-type="dijit.form.TextBox"
+               data-dojo-props="ref: model.Last"></input>
+        <span data-dojo-type="dojox.mvc.Output" data-dojo-props="ref: model.Last">
+          (last name is: ${this.value})
+        </span>
+      </div>
+      <div class="row">
+        <label class="cell" for="emailInput">Email:</label>
+        <input class="cell" id="emailInput" data-dojo-type="dijit.form.TextBox"
+               data-dojo-props="ref: model.Email"></input>
+        <span data-dojo-type="dojox.mvc.Output" data-dojo-props="ref: model.Email">
+          (email is: ${this.value})
+        </span>
+      </div>
+      <br/>Model:
+      <button id="reset" type="button" data-dojo-type="dijit.form.Button" data-dojo-props="onClick: function(){model.reset();}">Reset</button>
+    </div>
+
 
 Basic example, input-output sync:
 
