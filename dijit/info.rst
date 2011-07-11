@@ -69,14 +69,14 @@ If you need a reference to a the actual Node used to display the widget, Dijit s
   // functionally equivalent to:
   // dojo.body().appendChild(thinger.domNode);
 
-When creating widgets programatically, pass an id:"" parameter:
+When creating widgets programmatically, pass an id:"" parameter:
 
 .. code-block :: javascript
   :linenos:
 
   var dialog = new dijit.Dialog({
      id:"myDialog",
-     title:"Programatic"
+     title:"Programmatic"
   });
   dialog.startup();
   // compare them:
@@ -112,7 +112,7 @@ This will cause the creator to use the node with id="makeADialog", and turn it i
 Attributes
 ==========
 
-Widgets have attributes much like DOM nodes.  The attributes are one of the two main interfaces to programatically
+Widgets have attributes much like DOM nodes.  The attributes are one of the two main interfaces to programmatically
 interact with the widget.   (The other interface is through event handlers like onClick().)
 
 set() and get()
@@ -160,7 +160,7 @@ Common Attributes of Dijits
 
 There are several attributes common to (most) all Dijit instances. These appear as members to a widget instance, and can be accessed once you have a reference to the widget by one of the methods mentioned above.  Some of the more popular are:
 
-* .domNode - The top-level node in the widget. All widgets have a DOM Node attached to them, either through the srcNodeRef passed during instantiation, or a one created by the widget framework when declaring one programatically. This is a `real` DOM Node, and is common in all Dijits. If you wish to show or hide a widget, for example, you would modify the CSS property ``display`` for the .domNode:
+* .domNode - The top-level node in the widget. All widgets have a DOM Node attached to them, either through the srcNodeRef passed during instantiation, or a one created by the widget framework when declaring one programmatically. This is a `real` DOM Node, and is common in all Dijits. If you wish to show or hide a widget, for example, you would modify the CSS property ``display`` for the .domNode:
 
 .. code-block :: javascript
  :linenos:
@@ -192,7 +192,7 @@ The other interface for dealing with widgets is to setup event handlers.   For e
        onClick: function(evt){ console.log("clicked!"); }
   })
 
-Event handlers can be setup programatically (as above), or declaratively, like:
+Event handlers can be setup programmatically (as above), or declaratively, like:
 
 .. code-block :: html
  :linenos:
