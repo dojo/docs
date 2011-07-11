@@ -85,7 +85,7 @@ Declarative example
 Basic example, input-output sync:
 
 .. cv-compound::
-  :version: 1.7
+ 
   .. cv:: javascript
 
 	<script type="text/javascript">
@@ -145,7 +145,7 @@ Basic example, input-output sync:
 
 .. code-example::
   :djConfig: parseOnLoad: true
-  :version: local 
+  :version: trunk 
 
   .. javascript::
 
