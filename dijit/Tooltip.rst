@@ -58,7 +58,7 @@ Examples
 Programmatic example
 --------------------
 
-Here's a tooltip created programatically:
+Here's a tooltip created programmatically:
 
 .. cv-compound::
 
