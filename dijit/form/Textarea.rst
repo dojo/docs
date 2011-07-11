@@ -20,7 +20,7 @@ Examples
 Programmatic example
 --------------------
 
-First we will create a Textarea widget programatically. Notice how we pass the *name*, *style* and *value* parameters into the object creation.
+First we will create a Textarea widget programmatically. Notice how we pass the *name*, *style* and *value* parameters into the object creation.
 
 .. cv-compound::
 
