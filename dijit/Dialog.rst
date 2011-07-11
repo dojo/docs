@@ -119,7 +119,7 @@ Now lets create a dialog programmatically, and change the dialog's content dynam
         dojo.addOnLoad(function(){	
             // create the dialog:
             secondDlg = new dijit.Dialog({
-                title: "Programatic Dialog Creation",
+                title: "Programmatic Dialog Creation",
                 style: "width: 300px"
             });
         });
