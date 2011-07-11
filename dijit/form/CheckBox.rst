@@ -28,7 +28,7 @@ Examples
 Programmatic example
 --------------------
 
-Let's create a checkbox programatically, initially unchecked:
+Let's create a checkbox programmatically, initially unchecked:
 
 .. cv-compound::
 
