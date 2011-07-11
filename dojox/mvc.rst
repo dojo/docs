@@ -56,11 +56,17 @@ Declarative example
 -------------------
 
 In this example using USD, both dollars and cents are required.
+.. code-example::
+  :djConfig: parseOnLoad: true
+  :width: 680
+  :height: 450
+  :type: inline
+  :version: 1.6-2.0
+  :toolbar: none
 
 .. cv-compound::
 
   .. cv:: javascript
- :version: 1.6-2.0
 
 	<script type="text/javascript">
 		dojo.require("dijit.form.CurrencyTextBox");
