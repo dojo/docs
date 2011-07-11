@@ -95,7 +95,7 @@ This Widget inherits from dojo.grid._Grid and hence all methods and properties p
 Usage
 =====
 
-At a high level, a DataGrid can be defined either declaratively in HTML markup or programatically in JavaScript.  In markup, the following high level structure is defined:
+At a high level, a DataGrid can be defined either declaratively in HTML markup or programmatically in JavaScript.  In markup, the following high level structure is defined:
 
 .. code-block :: html
   :linenos:
@@ -142,7 +142,7 @@ hidden
 
 The value of the text between a ``<th>`` and ``</th>`` is used as the header label for the column.
 
-The structure of the table can also be set programatically.  The ``<table>`` attribute called ``structure`` can name an object that defines the cell structure.
+The structure of the table can also be set programmatically.  The ``<table>`` attribute called ``structure`` can name an object that defines the cell structure.
 
 Event handling
 --------------
@@ -255,7 +255,7 @@ Data for the grid comes from a data store.  The data can be specified declarativ
      data-dojo-id="myStore" url="/myData.json">
   </span>
 
-Programatically, a store can be assigned to a DataGrid with the ``setStore(myStore)`` method call.
+Programmatically, a store can be assigned to a DataGrid with the ``setStore(myStore)`` method call.
 
 It should be noted that as of grid 1.3.1, the grid searched your datastore and converts all < to &lt; to avoid a cross-site scripting attack. Site developers who can guarantee that their data is safe can add a formatter function to convert all &lt; back to < if they need the datastore information parsed by the browser. 
 
@@ -674,7 +674,7 @@ First, you have to set a editor for each cell, you would like to edit:
 Adding and Deleting data
 ------------------------
 
-If you want to add (remove) data programatically, you just have to add (remove) it from the underlying data store.
+If you want to add (remove) data programmatically, you just have to add (remove) it from the underlying data store.
 Since DataGrid is "DataStoreAware", changes made to the store will be reflected automatically in the DataGrid.
 
 .. cv-compound::
