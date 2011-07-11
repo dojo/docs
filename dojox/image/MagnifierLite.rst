@@ -56,7 +56,7 @@ Declarative example
        
   .. cv:: html
 
-       <p>Programatic: (destroy() removes this.domNode)<br></p>	
+       <p>Programmatic: (destroy() removes this.domNode)<br></p>	
 		
        <img id="foobar" style="width:585px; height:201px" scale="7" glassSize="185" 
                  dojoType="dojox.image.MagnifierLite"
