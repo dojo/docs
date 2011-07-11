@@ -26,7 +26,7 @@ The most simple way of creating a Roller is by using the data-dojo-type attribut
         <li>Item 3</li>
     </ul>
 
-You can of course convert an existing ``<ul>`` into a roller programatically, most easily accomplished by using an id="" attribute:
+You can of course convert an existing ``<ul>`` into a roller programmatically, most easily accomplished by using an id="" attribute:
 
 .. code-block :: html
 
@@ -41,7 +41,7 @@ You can of course convert an existing ``<ul>`` into a roller programatically, mo
         });
     </script>
 
-Or, create one entirely programatically, by passing an ``items:`` Array
+Or, create one entirely programmatically, by passing an ``items:`` Array
 
 .. code-block :: javascript
 
