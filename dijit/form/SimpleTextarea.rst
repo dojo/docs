@@ -19,7 +19,7 @@ Examples
 Programmatic example
 --------------------
 
-First we will create a SimpleTextarea widget programatically. Notice how we pass the *name*, *rows* and *cols* parameters into the object creation.  The *value* attribute can be set with the widget's attr('value', text) method.
+First we will create a SimpleTextarea widget programmatically. Notice how we pass the *name*, *rows* and *cols* parameters into the object creation.  The *value* attribute can be set with the widget's attr('value', text) method.
 
 .. cv-compound::
 
