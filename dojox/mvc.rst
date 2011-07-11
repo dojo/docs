@@ -57,6 +57,7 @@ Basic example, input-output sync:
 .. code-example::
   :djConfig: parseOnLoad: true
   :version: local
+  :toolbars: versions, themes
 
   .. javascript::
 
