@@ -75,7 +75,7 @@ Small color palette, created declaratively:
 
   .. cv:: html
 
-     <div dojoType="dijit.ColorPalette" onChange="alert(this.value);" palette="3x4"></div>
+     <div data-dojo-type="dijit.ColorPalette" data-dojo-props="onChange:function(){alert(this.value);}, palette:'3x4'"></div>
 
 
 =============
