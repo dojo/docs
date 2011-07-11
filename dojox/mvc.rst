@@ -60,13 +60,15 @@ In this example using USD, both dollars and cents are required.
 
 .. cv-compound::
   :djConfig: parseOnLoad: true
-  :version: 1.7
+  :version: 1.6
   :toolbar: none
 
   .. cv:: javascript
 
 	<script type="text/javascript">
 		dojo.require("dijit.form.CurrencyTextBox");
+
+                console.log("dojo.version = "+dojo.version); 
 	</script>
 
   .. cv:: html
