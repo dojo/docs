@@ -56,15 +56,15 @@ Declarative example
 -------------------
 
 In this example using USD, both dollars and cents are required.
-.. code-example::
+
+
+.. cv-compound::
   :djConfig: parseOnLoad: true
   :width: 680
   :height: 450
   :type: inline
   :version: 1.6-2.0
   :toolbar: none
-
-.. cv-compound::
 
   .. cv:: javascript
 
