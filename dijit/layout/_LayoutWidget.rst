@@ -48,7 +48,7 @@ in the markup below:
        <div dojoType="dijit.layout.ContentPane" title=...>...</div>
      </div>
 
-However, addChild() is called when children are added programatically, like:
+However, addChild() is called when children are added programmatically, like:
 
 .. code-block:: javascript
 
@@ -91,7 +91,7 @@ They can reference the this._started field to detect this state.
 The distinction is important. Consider SplitContainer's lifecycle:
 
   1. initial children may be specified in markup
-  2. or if programatic creation, addChild() is called for each (initial child)
+  2. or if programmatic creation, addChild() is called for each (initial child)
   3. up to this point no sizing processing has been done
   4. SplitContainer domNode is added to the document
   5. startup() is called
