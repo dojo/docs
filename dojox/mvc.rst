@@ -64,7 +64,7 @@ Basic example, input-output sync:
 
     <script>
       // Load the parser, we'll use the declarative data binding syntax (ref).
-      dojo.require("dojox.parser");
+      dojo.require("dojo.parser");
 
       // Load the dijits we need.
       dojo.require("dijit.form.Button");
