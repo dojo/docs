@@ -34,7 +34,7 @@ dojo.indexOf lets you easily determine the index of an element in an array. It l
 
     var arrIndxOf = ["foo", "hoo", "zoo"];
 
-    function testIndxOf() {
+    var testIndxOf = function() {
         var position = dojo.indexOf(arrIndxOf, "zoo");
         dojo.place(
             "<p>The index of the word 'zoo' within the array is " + position + "</p>", 
