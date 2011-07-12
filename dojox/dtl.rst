@@ -44,7 +44,7 @@ allows for new DOM-centric capabilities.
 
   .. html::
  
-    <div dojoType="dojox.dtl.Inline" id="inline" context="{items: ['apple', 'banana', 'orange']}">
+    <div data-dojo-type="dojox.dtl.Inline" id="inline" data-dojo-props="context:{items: ['apple', 'banana', 'orange']}">
       <ul>
         {% for item in items %}
           <li>{{ item }}</li>
