@@ -21,7 +21,7 @@ Pagination is a plugin for dojox.grid.EnhnacedGrid. It's designed to allow the u
 .. code-example::
   :toolbar: themes, versions, dir
   :width: 550
-  :height: 330
+  :height: 350
 
   .. javascript::
 
