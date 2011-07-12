@@ -54,7 +54,7 @@ Expanding and Focusing tree nodes programmatically
   .. cv:: html
 
     <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-id="continentStore"
-      data-dojo-props="url:'{{dataUrl}}dijit/tests/_data/countries.json'"></div>
+      data-dojo-props="url:'{{ dataUrl }}dijit/tests/_data/countries.json'"></div>
     <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="continentModel" 
       data-dojo-props="store:continentStore, query:{type:'continent'},
       rootId:'continentRoot', rootLabel:'Continents', childrenAttrs:'children'"></div>
