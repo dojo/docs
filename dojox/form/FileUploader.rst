@@ -166,8 +166,8 @@ Or, using the same CSS, create it as markup:
 .. code-block :: html
  :linenos:
 
- <div class="uploadBtn" dojoType="dojox.form.FileUploader" hoverClass="uploadHover" pressClas="uploadPress"
-      activeClass="uploadBtn" disabledClass="uploadDisable" uploadUrl="../serverpage.php">Select Files</div>
+ <div class="uploadBtn" data-dojo-type="dojox.form.FileUploader" data-dojo-props="hoverClass:'uploadHover', pressClas:'uploadPress',
+      activeClass:'uploadBtn', disabledClass:'uploadDisable', uploadUrl:'../serverpage.php'">Select Files</div>
 
 
 Dependencies
