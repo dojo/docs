@@ -324,7 +324,7 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
   * `dojox.form.TimeSpinner <dojox/form/TimeSpinner>`_
 
-    description?
+    This widget is the same as dijit.form.NumberSpinner, but for the time component of a date object instead
 
   * `dojox.form.Uploader <dojox/form/Uploader>`_
 
