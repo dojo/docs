@@ -80,7 +80,7 @@ Form Handling
 
     * `dijit.form.NumberSpinner <dijit/form/NumberSpinner>`_
 
-      A input widget which restricts input to numeric input and offers down and up arrow buttons to "spin" the number up and down
+      An input widget which restricts input to numeric input and offers down and up arrow buttons to "spin" the number up and down
 
     * `dijit.form.NumberTextBox <dijit/form/NumberTextBox>`_
 
