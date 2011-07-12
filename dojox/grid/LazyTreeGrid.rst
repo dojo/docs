@@ -114,7 +114,7 @@ The Lazy-loading-TreeGrid(dojox.grid.LazyTreeGrid) is an extension of dojox.grid
     <style type="text/css">
         @import "{{baseUrl}}dojo/resources/dojo.css";
         @import "{{baseUrl}}dijit/themes/claro/claro.css";
-        @import "{{baseUrl}}dojox/grid/resources/Grid.css"
+        @import "{{baseUrl}}dojox/grid/resources/Grid.css";
 	@import "{{baseUrl}}dojox/grid/resources/claroGrid.css";
 
         /* Grid need a explicit width/height by default */
