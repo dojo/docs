@@ -565,6 +565,7 @@ includes a way to directly retrieve module values from the module namespace main
 require signature:
 
 .. code-block :: javascript
+
   require(
     moduleId // string
   ); 
@@ -726,7 +727,7 @@ segment of x1/x2/.../xi/xi+1/.../xn. I'll use this language when describing path
 
 According to the AMD specification, the segments may be any legal JavaScript identifier, and, by convention, are
 camel-case. Most AMD loaders, including dojo's, are more relaxed than this and accept characters outside the Javascript
-identifier alphabet. That said, I strongly recommend using only the characters in [A-Za-z0-9_-]. Whatever you do, do not
+identifier alphabet. That said, I strongly recommend using only the characters in ```[A-Za-z0-9_-]```. Whatever you do, do not
 use the characters !, *, ?, /, or \ in module names; these will only lead to problems.
 
 Given the nature module identifiers, the loader effectively maintains a hierarchical namespace. Naturally, this
@@ -906,6 +907,8 @@ myApp/someSubModule
 
 Paths can also give a path segment that's relative. For example, assume you have the following tree of modules:
 
+.. code-block :: javascript
+
 scripts/
   dtk/
     dojo/
@@ -1031,6 +1034,8 @@ scripts/experimental/dojo/cookie.
 But consider what happens when the module identifier you want to map is the parent segment of a tree of modules. For
 example, consider this tree of modules:
 
+.. code-block :: 
+
 scripts/
   myApp/
     myApi.js
@@ -1074,6 +1079,7 @@ Fortunately, the solution is trivial. Simply install the two util packages in tw
 identify the two trees as two different packages to the loader. For example:
 
 .. code-block :: javascript
+
   var dojoConfig = {
     baseUrl: "./",
     packages: [{
@@ -1089,6 +1095,7 @@ You can access the packages through require:
 
 
 .. code-block :: javascript
+
   require(["util1", "util2"], function(util1, util2) {
     // make client happy
   });
@@ -1288,24 +1295,24 @@ take five extra lines:
 
 .. code-block :: javascript
 
-define(["dojo"], function(dojo) {
-  var cache = {};
-  return {
-    load: function(require, id, loaded) {
-      var url= require.toUrl(id);
-      if(url in cache){
-        return cache[url];
-      } else {
-        dojo.xhrGet({
-          url: url,
-          load: function(text) {
-            loaded(cache[url] = text);
-          }
-        });
-      }
-   }
-  };
-})
+  define(["dojo"], function(dojo) {
+    var cache = {};
+    return {
+      load: function(require, id, loaded) {
+        var url= require.toUrl(id);
+        if(url in cache){
+          return cache[url];
+        } else {
+          dojo.xhrGet({
+            url: url,
+            load: function(text) {
+              loaded(cache[url] = text);
+            }
+          });
+        }
+     }
+    };
+  })
 
 Dojo v1.7 includes several key plugins:
 
@@ -1773,7 +1780,7 @@ The conversion process used to convert an unbuild legacy module to an AMD module
      include legacy API applications is new and was added to limit the damange regex-based comment removal can
      cause. Remember, this method is far from perfect and can be fooled (e.g., when Javascript comment delimiters are
      contained in strings). For the record, the regular expression used to find comments is
-     /(\/\*([\s\S]*?)\*\/|\/\/(.*)$)/mg.
+     ```/(\/\*([\s\S]*?)\*\/|\/\/(.*)$)/mg```.
 
   2. The module text is scanned for the legacy loader functions dojo.require, dojo.provide, dojo.loadInit,
      dojo.requireIf, dojo.requireAfterIf, dojo.platformRequire, and dojo.requireLocalization. When found, the text of
