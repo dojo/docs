@@ -33,7 +33,7 @@ The Lazy-loading-TreeGrid(dojox.grid.LazyTreeGrid) is an extension of dojox.grid
         dojo.require("dojo.data.ItemFileWriteStore");        
     
         dojo.addOnLoad(function(){
-	  //set up data store
+	  /* set up data store */
 	  	var data = { identifier: 'name',
 	  label: 'name',
 	  items: [
@@ -79,17 +79,17 @@ The Lazy-loading-TreeGrid(dojox.grid.LazyTreeGrid) is an extension of dojox.grid
 	    } ]
 	  };
 	  var store = new dojo.data.ItemFileWriteStore({data: data});
-          var model = new dijit.tree.ForestStoreModel({store: store, childrenAttrs: 'children'});
+          var model = new dijit.tree.ForestStoreModel({store: store, childrenAttrs: ['children']});
 	
-	  //set up layout
-	  var layout = [[
+	  /* set up layout */
+	  var layout = [
 		{name: 'Name', field: 'name'},
 		{name: 'Type', field: 'type'},
 		{name: 'Population', field: 'population'},
 		{name: 'Area', field: 'area'}
-	  ]];
+	  ];
 
-          // create a new grid:
+          /* create a new grid: */
           var grid = new dojox.grid.LazyTreeGrid({
               id: 'grid',
               treeModel: model,              
@@ -97,10 +97,10 @@ The Lazy-loading-TreeGrid(dojox.grid.LazyTreeGrid) is an extension of dojox.grid
               rowSelector: '20px'
 	  }, document.createElement('div'));
 
-          // append the new grid to the div
+          /* append the new grid to the div */
           dojo.byId("gridDiv").appendChild(grid.domNode);
 
-          // Call startup() to render the grid
+          /* Call startup() to render the grid */
           grid.startup();
         });
     </script>
@@ -117,12 +117,13 @@ The Lazy-loading-TreeGrid(dojox.grid.LazyTreeGrid) is an extension of dojox.grid
         @import "{{baseUrl}}dojox/grid/resources/Grid.css"
 	@import "{{baseUrl}}dojox/grid/resources/claroGrid.css";
 
-        /*Grid need a explicit width/height by default*/
+        /* Grid need a explicit width/height by default */
         #grid {
             width: 43em;
             height: 20em;
         }
     </style>
+
 
 Supported Data Structure
 ------------------------
