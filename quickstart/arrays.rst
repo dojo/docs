@@ -137,9 +137,9 @@ Now lets use dojo.forEach with a list of dom nodes we retrieve using dojo.query.
 
     var arr = ["apples", "kiwis", "pineapples"];
     var populateQueryData = function(){
-      dojo.query("li").forEach(function(item, i){
+      dojo.forEach(arr, function(item, i){
         var li = dojo.doc.createElement("li");
-        li.innerHTML = i+1+". "+item.innerHTML;
+        li.innerHTML = i+1+". "+item;
         dojo.byId("forEachQuery-items").appendChild(li);
       });
     }
