@@ -54,6 +54,7 @@ Note that it's defining two widget parameters:
 And then it's defining a template
 
 .. code-block:: html
+ :linenos:
 
 		<span>${name}</span>
 		<a href="update.php?id=${empid}">update</a>
@@ -73,7 +74,8 @@ Methods, data-dojo-attach-point, and data-dojo-attach-event
 The example below defines a widget named "HideButton" that will hide itself when clicked, and then creates two HideButtons:
 
 
-.. cv:: html
+.. code-block:: html
+ :linenos:
 
 	<div data-dojo-type="dijit.Declaration" data-dojo-props="widgetClass:'HideButton'">
 		XXX<button data-dojo-attach-event="onclick: myClickHandler" data-dojo-attach-point="containerNode"></button>XXX
@@ -96,7 +98,8 @@ Often dijit.Declaration is used to define a widget as an extension of another wi
 
 HideButton2 extends HideButton (above) and changes the template (but keeps the onclick handler).  Here we define HideButton2 and then create two HideButton2's:
 
-.. cv:: html
+.. code-block:: html
+ :linenos:
 
 	<span data-dojo-type="dijit.Declaration" data-dojo-props="widgetClass:'HideButton2', mixins:'HideButton'">
 		YYY<button data-dojo-attach-event="onclick: myClickHandler" data-dojo-attach-point="containerNode"></button>YYY
@@ -117,7 +120,8 @@ However, you can get the same effect using <script type="dojo/method"> and calli
 
 An example of dojo/connect is:
 
-.. code-block :: html
+.. code-block:: html
+ :linenos:
 
   <div data-dojo-type="dijit.Declaration" data-dojo-props="widgetClass:'simpleConnectedWidget'">
      Just a plain ol' piece of text
