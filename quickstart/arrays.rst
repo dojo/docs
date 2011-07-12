@@ -74,7 +74,7 @@ dojo.lastIndexOf lets you easily determine the last index of an element in an ar
 
     var arrLastIndxOf = ["foo", "hoo", "zoo", "shoe", "zoo", "nuu"];
 
-    function testLastIndxOf() {
+    var testLastIndxOf = function() {
         var position = dojo.lastIndexOf(arrLastIndxOf , "zoo");
         dojo.place(
             "<p>The last index of the word 'zoo' within the array is " + position + "</p>", 
@@ -87,7 +87,7 @@ dojo.lastIndexOf lets you easily determine the last index of an element in an ar
   .. cv :: html
 
     <div>The content of our test array is ["foo", "hoo", "zoo", "shoe", "zoo", "nuu"].</div>
-    <button id="refButton2" dojoType="dijit.form.Button" onClick="testLastIndxOf()" type="button">Show the last index of the word 'zoo' within the array.</button>
+    <button id="refButton2" data-dojo-type="dijit.form.Button" data-dojo-props="onClick:testLastIndxOf" type="button">Show the last index of the word 'zoo' within the array.</button>
     <div id="result2"></div>
 
 
@@ -110,7 +110,7 @@ Note the "i" variable which returns the current position of an iteration
     dojo.require("dijit.form.Button"); // this is just to make the demo look nicer
 
     var arrFruit = ["apples", "kiwis", "pineapples"];
-    function populateData(){
+    var populateData = function(){
       dojo.forEach(arrFruit, function(item, i){
         var li = dojo.doc.createElement("li");
         li.innerHTML = i+1+". "+item;
@@ -121,7 +121,7 @@ Note the "i" variable which returns the current position of an iteration
 
   .. cv :: html
 
-    <button dojoType="dijit.form.Button" onClick="populateData()" type="button">Populate data</button>
+    <button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:populateData" type="button">Populate data</button>
     <ul id="forEach-items">
 
     </ul>
@@ -136,7 +136,7 @@ Now lets use dojo.forEach with a list of dom nodes we retrieve using dojo.query.
     dojo.require("dijit.form.Button"); // this is just to make the demo look nicer
 
     var arr = ["apples", "kiwis", "pineapples"];
-    function populateQueryData(){
+    var populateQueryData = function(){
       dojo.query("li").forEach(function(item, i){
         var li = dojo.doc.createElement("li");
         li.innerHTML = i+1+". "+item.innerHTML;
@@ -147,7 +147,7 @@ Now lets use dojo.forEach with a list of dom nodes we retrieve using dojo.query.
 
   .. cv :: html
 
-    <button dojoType="dijit.form.Button" onClick="populateQueryData()" type="button">Populate data</button>
+    <button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:populateQueryData" type="button">Populate data</button>
     <ul id="forEachQuery-items">
 
     </ul>
@@ -191,7 +191,7 @@ To break the forEach-Loop you should use dojo.some
 
   .. cv :: html
 
-    <button dojoType="dijit.form.Button" onClick="arrayLoopTest()" type="button">Start Testloops</button>
+    <button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:function(){arrayLoopTest()}" type="button">Start Testloops</button>
 
 
 ===========
@@ -224,7 +224,7 @@ Say you have an array of people with a last name. You would like to filter those
                {surname: "Washington", name: "Dan"}, 
                {surname: "Dojo", name: "Master"}];
 
-    function filterArray(){
+    var filterArray = function(){
       var filteredArr = dojo.filter(arr, function(item){
         return item.surname == "Washington";
       });
@@ -245,7 +245,7 @@ Say you have an array of people with a last name. You would like to filter those
 
   .. cv :: html
 
-    <button dojoType="dijit.form.Button" onClick="filterArray()" type="button">Filter array</button>
+    <button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:filterArray" type="button">Filter array</button>
     <div style="width: 300px; float: left;">
     Filtered items<br />(only people with "Washington" as surname)
     <ul id="filtered-items">
@@ -278,7 +278,7 @@ Another great function provided by Dojo is dojo.map. dojo.map lets you run a fun
 
     var arrSalary = [200, 300, 1500, 5, 4500];
 
-    function raiseSalary(){
+    var raiseSalary = function(){
       var raisedSalaries = dojo.map(arrSalary, function(item){
         return item+(item/100)*10;
       });
@@ -299,7 +299,7 @@ Another great function provided by Dojo is dojo.map. dojo.map lets you run a fun
 
   .. cv :: html
 
-    <button dojoType="dijit.form.Button" onClick="raiseSalary()" type="button">Raise the salary</button>
+    <button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:raiseSalary" type="button">Raise the salary</button>
     <div style="width: 300px; float: left;">
     Peoples salaries after raise:
     <ul id="filteredSalary-items">
@@ -337,7 +337,7 @@ Now your bank policies only allows you to give each client one credit over 1 mil
 
     var arrIndxSome = [200000, 500000, 350000, 1000000, 75, 3];
 
-    function testIndxSome() {
+    var testIndxSome = function() {
         if (dojo.some(arrIndxSome, function(item){ return item>=1000000})) {
             result = 'yes, there are';
         } else {
@@ -354,7 +354,7 @@ Now your bank policies only allows you to give each client one credit over 1 mil
   .. cv :: html
 
     <div>The content of our test array is [200000, 500000, 350000, 1000000, 75, 3].</div>
-    <button id="refButton6" dojoType="dijit.form.Button" onClick="testIndxSome()" type="button">Are there some items >=1000000 within the array?</button>
+    <button id="refButton6" data-dojo-type="dijit.form.Button" data-dojo-props="onClick:testIndxSome" type="button">Are there some items >=1000000 within the array?</button>
     <div id="result6"></div>
 
 
@@ -379,7 +379,7 @@ An example:
 
     var arrIndxEvery = [{'month': 'january', 'income': 2000}, {'month': 'february', 'income': 3200}, {'month': 'march', 'income': 2100}];
 
-    function testIndxSome() {
+    var testIndxSome = function() {
         if (dojo.every(arrIndxEvery , function(item){ return item.income>=3000})) {
             result = 'yes, he is allowed';
         } else {
@@ -396,5 +396,5 @@ An example:
   .. cv :: html
 
     <div>The content of our test array is [{'month': 'january', 'income': 2000}, {'month': 'february', 'income': 3200}, {'month': 'march', 'income': 2100}].</div>
-    <button id="refButton7" dojoType="dijit.form.Button" onClick="testIndxSome()" type="button">Is the client allowed to get the credit?</button>
+    <button id="refButton7" data-dojo-type="dijit.form.Button" data-dojo-props="onClick:testIndxSome" type="button">Is the client allowed to get the credit?</button>
     <div id="result7"></div>
