@@ -83,10 +83,10 @@ The Lazy-loading-TreeGrid(dojox.grid.LazyTreeGrid) is an extension of dojox.grid
 	
 	  /* set up layout */
 	  var layout = [
-		{name: 'Name', field: 'name'},
-		{name: 'Type', field: 'type'},
-		{name: 'Population', field: 'population'},
-		{name: 'Area', field: 'area'}
+		{name: 'Name', field: 'name', width: '30%'},
+		{name: 'Type', field: 'type', width: '30%'},
+		{name: 'Population', field: 'population', width: '20%'},
+		{name: 'Area', field: 'area', width: '20%'}
 	  ];
 
           /* create a new grid: */
