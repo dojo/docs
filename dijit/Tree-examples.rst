@@ -144,7 +144,7 @@ Simply set the ``openOnClick`` attribute to ``false``
 
     <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-id="continentStore"
       data-dojo-props="url:'{{dataUrl}}dijit/tests/_data/countries.json'"></div>
-    <div dojoType="dijit.tree.ForestStoreModel" data-dojo-id="continentModel" 
+    <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="continentModel" 
       data-dojo-props="store:continentStore, query:{type:'continent'},
       rootId:'continentRoot', rootLabel:'Continents', childrenAttrs:'children'"></div>
 
