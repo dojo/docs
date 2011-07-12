@@ -28,7 +28,7 @@ Initialise the Tree after onLoad Event has Fired
     });
 
 Expanding and Focusing tree nodes programmatically
--------------------------------------------------
+--------------------------------------------------
 
 ``New in 1.4``
 
@@ -53,14 +53,14 @@ Expanding and Focusing tree nodes programmatically
 
   .. cv:: html
 
-    <div dojoType="dojo.data.ItemFileReadStore" data-dojo-id="continentStore"
-      url="{{dataUrl}}dijit/tests/_data/countries.json"></div>
-    <div dojoType="dijit.tree.ForestStoreModel" data-dojo-id="continentModel" 
-      store="continentStore" query="{type:'continent'}"
-      rootId="continentRoot" rootLabel="Continents" childrenAttrs="children"></div>
-    <div dojoType="dijit.Tree" data-dojo-id="mytree" openOnClick="true"
-        model="continentModel" showRoot="false" persist="false"></div>
-    <div dojoType="dijit.form.Button" onClick="selectNode();">Highlight the node!</div>
+    <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-id="continentStore"
+      data-dojo-props="url:'{{dataUrl}}dijit/tests/_data/countries.json'"></div>
+    <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="continentModel" 
+      data-dojo-props="store:continentStore, query:{type:'continent'},
+      rootId:'continentRoot', rootLabel:'Continents', childrenAttrs:'children"></div>
+    <div data-dojo-type="dijit.Tree" data-dojo-id="mytree"
+      data-dojo-props="openOnClick:true, model:'continentModel', showRoot:false, persist:false"></div>
+    <div data-dojo-type="dijit.form.Button" data-dojo-props="onClick:function(){selectNode();}">Highlight the node!</div>
 
 One problem with using 'path' is that you must know the full path to the node in your data your are trying to select.
 
@@ -117,14 +117,14 @@ The following example contains workaround code for this problem, as well as an e
 
   .. cv:: html
 
-    <div dojoType="dojo.data.ItemFileReadStore" data-dojo-id="continentStore"
-      url="{{dataUrl}}dijit/tests/_data/countries.json"></div>
-    <div dojoType="dijit.tree.ForestStoreModel" data-dojo-id="continentModel" 
-      store="continentStore" query="{type:'continent'}"
-      rootId="continentRoot" rootLabel="Continents" childrenAttrs="children"></div>
-    <div dojoType="dijit.Tree" data-dojo-id="mytree2" openOnClick="true"
-        model="continentModel" showRoot="false" persist="false"></div>
-    <div dojoType="dijit.form.Button" onClick="selectNode();">Highlight the node!</div>
+    <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-id="continentStore"
+      data-dojo-props="url:'{{dataUrl}}dijit/tests/_data/countries.json'"></div>
+    <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="continentModel" 
+      data-dojo-props="store:continentStore,query:{type:'continent'},
+      rootId:'continentRoot', rootLabel:'Continents', childrenAttrs:'children'"></div>
+    <div data-dojo-type="dijit.Tree" data-dojo-id="mytree2"
+      data-dojo-props="openOnClick:true, model:'continentModel', showRoot:false, persist:false"></div>
+    <div data-dojo-type="dijit.form.Button" data-dojo-props="onClick:function(){selectNode();}">Highlight the node!</div>
 
 How can I prevent expanding of nodes when clicking on them?
 -----------------------------------------------------------
@@ -142,14 +142,14 @@ Simply set the ``openOnClick`` attribute to ``false``
 
   .. cv:: html
 
-    <div dojoType="dojo.data.ItemFileReadStore" data-dojo-id="continentStore"
-      url="{{dataUrl}}dijit/tests/_data/countries.json"></div>
+    <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-id="continentStore"
+      data-dojo-props="url:'{{dataUrl}}dijit/tests/_data/countries.json'"></div>
     <div dojoType="dijit.tree.ForestStoreModel" data-dojo-id="continentModel" 
-      store="continentStore" query="{type:'continent'}"
-      rootId="continentRoot" rootLabel="Continents" childrenAttrs="children"></div>
+      data-dojo-props="store:continentStore, query:{type:'continent'},
+      rootId:'continentRoot', rootLabel:'Continents', childrenAttrs:'children'"></div>
 
-    <div dojoType="dijit.Tree" id="mytree"
-      model="continentModel" openOnClick="false">
+    <div data-dojo-type="dijit.Tree" id="mytree"
+      data-dojo-props="model:'continentModel', openOnClick:false">
       <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="item">
         alert("Execute of node " + continentStore.getLabel(item)
             +", population=" + continentStore.getValue(item, "population"));
