@@ -56,9 +56,9 @@ And then it's defining a template
 .. code-block:: html
  :linenos:
 
-		<span>${name}</span>
-		<a href="update.php?id=${empid}">update</a>
-		<a href="delete.php?id=${empid}">delete</a>
+ <span>${name}</span>
+ <a href="update.php?id=${empid}">update</a>
+ <a href="delete.php?id=${empid}">delete</a>
 
 And finally that it's using the widget parameters name and empid in the template, as the substitution variables ${name} and ${empid}.
 
@@ -77,14 +77,14 @@ The example below defines a widget named "HideButton" that will hide itself when
 .. code-block:: html
  :linenos:
 
-	<div data-dojo-type="dijit.Declaration" data-dojo-props="widgetClass:'HideButton'">
-		XXX<button data-dojo-attach-event="onclick: myClickHandler" data-dojo-attach-point="containerNode"></button>XXX
-		<script type='dojo/method' data-dojo-event='myClickHandler'>
-			this.domNode.style.display="none";
-		</script>
-	</div>
-	<button data-dojo-type="HideButton">Click to hide</button>
-	<button data-dojo-type="HideButton">Click to hide #2</button>
+ <div data-dojo-type="dijit.Declaration" data-dojo-props="widgetClass:'HideButton'">
+   XXX<button data-dojo-attach-event="onclick: myClickHandler" data-dojo-attach-point="containerNode"></button>XXX
+   <script type='dojo/method' data-dojo-event='myClickHandler'>
+     this.domNode.style.display="none";
+   </script>
+ </div>
+ <button data-dojo-type="HideButton">Click to hide</button>
+ <button data-dojo-type="HideButton">Click to hide #2</button>
 
 
 A few things to note here:
@@ -101,11 +101,11 @@ HideButton2 extends HideButton (above) and changes the template (but keeps the o
 .. code-block:: html
  :linenos:
 
-	<span data-dojo-type="dijit.Declaration" data-dojo-props="widgetClass:'HideButton2', mixins:'HideButton'">
-		YYY<button data-dojo-attach-event="onclick: myClickHandler" data-dojo-attach-point="containerNode"></button>YYY
-	</span>
-	<button data-dojo-type="HideButton2">Hide me extended</button>
-	<button data-dojo-type="HideButton2">Hide me extended #2</button>
+ <span data-dojo-type="dijit.Declaration" data-dojo-props="widgetClass:'HideButton2', mixins:'HideButton'">
+   YYY<button data-dojo-attach-event="onclick: myClickHandler" data-dojo-attach-point="containerNode"></button>YYY
+ </span>
+ <button data-dojo-type="HideButton2">Hide me extended</button>
+ <button data-dojo-type="HideButton2">Hide me extended #2</button>
 
 
 The mixins attribute tells which classes you widget will be based on. You can include more than one class here - each separated by commas. The first class is not technically a mixin - it's the parent class of this new widget.
@@ -123,12 +123,12 @@ An example of dojo/connect is:
 .. code-block:: html
  :linenos:
 
-  <div data-dojo-type="dijit.Declaration" data-dojo-props="widgetClass:'simpleConnectedWidget'">
-     Just a plain ol' piece of text
-     <script type="dojo/connect" data-dojo-event="dblclick">
-        console.debug("Ouch!  I've been double-clicked");
-     </script>
-  </div>
+ <div data-dojo-type="dijit.Declaration" data-dojo-props="widgetClass:'simpleConnectedWidget'">
+   Just a plain ol' piece of text
+   <script type="dojo/connect" data-dojo-event="dblclick">
+     console.debug("Ouch!  I've been double-clicked");
+   </script>
+ </div>
 
 Every widget declared with class simpleConnectedWidget will have the handler connected to it.
 
