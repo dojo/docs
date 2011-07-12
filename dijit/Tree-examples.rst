@@ -57,7 +57,7 @@ Expanding and Focusing tree nodes programmatically
       data-dojo-props="url:'{{dataUrl}}dijit/tests/_data/countries.json'"></div>
     <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="continentModel" 
       data-dojo-props="store:continentStore, query:{type:'continent'},
-      rootId:'continentRoot', rootLabel:'Continents', childrenAttrs:'children"></div>
+      rootId:'continentRoot', rootLabel:'Continents', childrenAttrs:'children'"></div>
     <div data-dojo-type="dijit.Tree" data-dojo-id="mytree"
       data-dojo-props="openOnClick:true, model:'continentModel', showRoot:false, persist:false"></div>
     <div data-dojo-type="dijit.form.Button" data-dojo-props="onClick:function(){selectNode();}">Highlight the node!</div>
