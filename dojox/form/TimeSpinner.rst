@@ -34,11 +34,13 @@ Programmatic example
 
  <script type="text/javascript">
    dojo.require("dojox.form.TimeSpinner");
-   var s = new dojox.form.TimeSpinner({
-     required: true,
-     smallDelta: 1,
-     largeDelta: 30               
-   }, "spinner");
+   dojo.addOnLoad(function(){
+     var s = new dojox.form.TimeSpinner({
+       required: true,
+       smallDelta: 1,
+       largeDelta: 30
+     }, "timespinner");
+   });
  </script>
  
  <input type="text" id="spinner" />
