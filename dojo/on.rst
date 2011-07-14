@@ -24,7 +24,7 @@ The module's value is an on function that can be directly called to add an event
 
 The following parameters should be provided to the on function:
 
-* target - This is the target object (typically a DOM node) that will be the source of the events. The target object may be a host object with it's own event capabilities (like DOM elements or the window), or it may be a plain JavaScript object.
+* target - This is the target object (typically a DOM node) that will be the source of the events. The target object may be a host object with it's own event capabilities (like DOM elements or the window), or it may be a plain JavaScript object. This argument is optional, and if omitted, on() will events on the window if that event is available there, or on the publish/subscribe hub.
 * eventType - This is the name of the event to be listening for (like "click"). This may include a (CSS) selector to specify the target nodes to listen for.
 * listener - This is the function that will be called when this event takes place. The listener function will be called with 'this' as the target object (or the element targeted by the selector in the case of event delegation) and the first and only argument will be the event. The event object is normalized to have the important standard properties and methods of a W3C event (target properties, preventDefault(), stopPropagation()).
 
@@ -104,7 +104,7 @@ emit function
 
 The on.emit function provides a normalized mechanism for dispatching events. This method will dispatch an event using the native event facilities when available, and will emulate these facilities otherwise. The emit function takes three arguments (the first two closely mirror the on function):
 
-* target - This is the target object (typically a DOM node) that will be the source of the event. The target object may be a host object with it's own event capabilities (like DOM elements or the window), or it may be a plain JavaScript object.
+* target - This is the target object (typically a DOM node) that will be the source of the event. The target object may be a host object with it's own event capabilities (like DOM elements or the window), or it may be a plain JavaScript object. This argument is optional, and if omitted the event is published on publish/subscribe hub.
 * eventType - This is the name of the event type to be dispatched (like "select"). This event may be a standard event (like "click") or a custom event (like "finished").
 * eventProperties - This is an object with the properties of the event to be dispatched. Generally you should align your properties with W3C standards. Two properties are of particular importance:
 
@@ -147,6 +147,18 @@ The on.once function allows you to register a listener that will be called just 
 .. code-block :: javascript
 
   on.once(finishedButton, "click", onFinished);
+
+Publish/Subscribe
+-----------------
+
+Dojo provides a centralize hub for publishing and subscribing to global messages by topic. One can subscribe to these messages by using on() without the first target argument, and one can publish by using on.emit() with the first target argument. For example:
+
+.. code-block :: javascript
+
+  on("some/topic", listener); // listener will be called when a message is published for this topic
+  ...
+  on.emit("some/topic", "hi there", "additional arguments"); // publish a message
+
 
 Evented Base Class
 ------------------
