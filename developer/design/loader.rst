@@ -24,8 +24,8 @@ elements which has two key benefits:
   * Modules can be downloaded asynchronously and concurrently, thereby decreasing page load times by as much as
     10x.
 
-  * Since all Javascript code is contained within a script element, the code much more debugger-friendly than eval'd
-    code.
+  * Since all Javascript code is contained within a script element, the code is much more debugger-friendly compared to
+    eval'd code.
 
 Both of these features are missing from the v1.6- dojo loader which downloads Javascript resources with synchronous XHR
 and uses Javascript eval to execute the code.
@@ -59,14 +59,49 @@ backcompat.
 dojo.js
 =======
 
-TODO: this applies to the source version...
+For the version 1.x line, the Dojo Toolkit is comprised of five source trees:
 
-Prior to v1.7, dojo.js caused both the dojo loader and the dojo base library bootstrap to be defined. This design has
-been refactored so that dojo.js now holds the loader and nothing else. In fact, it is possible to use dojo's loader and
-not load any of the dojo library. When the loader is evaluated in an application, if it is synchronous mode
-(the default for v1.x; I'll describe the various modes in xxx), it loads the base dojo library automatically. Also, in
-synchronous mode, the Dojo synchronous loader API (dojo.require and the rest) is fully defined and available. So, to
-load dojo, simply write:
+dojo 
+  The dojo Javascript library: the loader, has.js, browser sniffing, language extensions, class system, various
+  asynchronous/event programming APIs, document and window load and unload detection, DOM functions including effects,
+  XHR/script/iFrame, data, store, i18n, RPC, drag-and-drop, i18n, and a few other miscellaneous APIs.
+
+dijit
+  The Dojo Toolkit widget system and many widgets. dijit depends on dojo.
+
+dojox
+  Various extentions (dojox==="dojo extensions") to dojo and dijit.
+
+util
+  Tools supporting the the Dojo Toolkit ecosystem, in particular DOH ("dojo objective harness", a testing framework),
+  the dojo build system, and the dojo documentation parser.
+
+demos
+  Several demonstrations of the toolkit. (Note: the demos tree is never included in any packaged distributions; you must pull
+  it from the project repository.)
+
+Releases of the Dojo Toolkit are available in two different kinds of packages:
+
+  * Compressed and optimized for immediate deployment: each Javascript resource has been processed by a minifier that
+    makes the resource size smaller. The minifier removes whitespace and comments, and applies certain other code
+    transformations (for example, local variables are renamed to use short names) that makes the resource size smaller
+    yet functionally equivalent. Also some resources are actually aggregates of several resources. For example dojo.js
+    contains the dojo.js resource concatenated with several other resources that define the so-called dojo "base" API
+    (the base API is defined by the the tree of resources implied by the resource dojo/main.js). Notice that
+    "compressed" does not mean data compression (e.g. zipped); in this context, it means minified.
+
+  * Source package: the Javascript resources appear exactly as they do in the code repository.
+
+Current releases are always available from http://dojotoolkit.org/download. If you are doing any significant
+development, you should download a copy of the source version to your local machine and reference that resource
+tree. My descriptions that follow assume the source package.
+
+Prior to v1.7, dojo.js caused both the dojo loader and the dojo library bootstrap to be defined. This design has been
+refactored so that dojo.js now holds the loader and nothing else. In fact, it is possible to use dojo's loader and not
+load any of the dojo library. When the loader is evaluated in an application, if it is synchronous mode (the default for
+v1.x; I'll describe the various modes in xxx), it loads the dojo base API automatically. Also, in synchronous mode,
+the Dojo legacy loader API (dojo.require and the rest) is fully defined and available. So, to load dojo, simply
+write:
 
 .. code-block :: html
 
@@ -90,8 +125,8 @@ Notice that if the loader is put in asynchronous AMD mode by setting the configu
 nothing is automatically loaded and it is left up to the application to decide which modules to load via the AMD API
 (described in detail in xxx).
 
-As we explore the new loader, we'll see that many features are controlled by configuration, including the has.js API. So
-let's cover the mechanics of how to set and change the configuration first.
+As we explore the new loader, we'll see that many features are controlled by configuration. So let's cover the mechanics
+of how to set and change the configuration first.
 
 =================================
 Configuring the Loader (and Dojo)
@@ -101,7 +136,7 @@ Configuration data is passed to the loader in a Javascript object that holds a m
 value. As shown in the example above, the object can be passed by specifying it as the value of the data-dojo-config
 attribute of the script element that injects dojo.js. When the object is passed using this method, the opening and
 closing curly-brackets must be ommitted from the object expression. The text value of data-dojo-config must be a
-valid Javascript expression that, when surrounded by those missing curly-brackets, has the value of a Javascript object. Here's a
+Javascript expression that, when surrounded by those missing curly-brackets, has the value of a Javascript object. Here's a
 simple example:
 
 .. code-block :: html
@@ -157,9 +192,9 @@ configuration through require:
 
 In summary, there are three ways to pass configuration data to the loader:
 
-  1. before the loader is injected via dojoConfig.
-  2. in the script element that injects the loader via the data-dojo-config attribute.
-  3. after the loader is injected via the AMD global require function.
+  1. before the loader is defined via dojoConfig
+  2. in the script element that injects the loader via the data-dojo-config attribute
+  3. after the loader is defined via the AMD global require function
 
 As far as the loader is concerned, dojo (and dijit and dojox) are just libraries to load, and they have no special
 status. Yet, in designing the system, we didn't want to define two configuration APIs, one for the loader and one for
@@ -171,12 +206,12 @@ controlling complexity.
 
 Here's how it works. When a configuration object is passed to the loader through any of the three methods described
 above, the loader filters out any configuration variables that it understands and applies them to it's own runtime
-state. It also copies (via the Javascript assignment operator) all properties in the passed configuration object into
-the property require.rawConfig (an object). Recall that require is a global function defined by the loader, so library
-and/or application code can access any configuration data that was provided to the loader. This is all that's needed
-when considering dojoConfig or data-dojo-config configuration since such configuration data will be stuffed into
-require.rawConfig when the loader is defined and never changed. However, more is needed when configuration data is
-added/changed during the lifetime of the application through the require function (method [3], above).
+state. It also copies (via the Javascript assignment operator) all properties in the configuration object into the
+property rawConfig (an object), a member the global require function. So library and/or application code can access any
+configuration data that was provided to the loader. This is all that's needed when considering dojoConfig or
+data-dojo-config configuration since such configuration data will be stuffed into require.rawConfig when the loader is
+defined and never changed. However, more is needed when configuration data is added/changed during the lifetime of the
+application through the require function (method [3], above).
 
 The loader includes a connectable event that is signaled whenever configuration data is received. The function
 require.on allows client code to connect to this event; it has the following signature:
@@ -242,14 +277,14 @@ And then later using that test:
   }
 
 Though trivial, this API controls the complexity of feature detection and feature-dependent code branching. It's
-function set is minimal, orthoginal, and nicely self-documenting. But there's more.
+function set is minimal, orthogonal, and nicely self-documenting. But there's more.
 
-Consider how a library like dojo, that must work correctly on both the desktop and various other platforms, might be optimized
-for an application targeted at just the iPhone. In such a case, the application developer knows that addEventListener
-will always be available. So every occurence of has("dom-addeventlistener") can be replaced with true and the test for the
-dom-addeventlistener feature can be removed. In fact, a build system can do this. For example, if the dojo build
-application is given a profile that indicates has("dom-addeventlistener") is static and true, it will transform the code
-above as follows:
+Consider how a library like dojo, that must work correctly on both the desktop and various other platforms, might be
+optimized for an application targeted at just the iPhone. In such a case, the application developer knows that
+addEventListener will always be available. So every occurence of has("dom-addeventlistener") can be replaced with true
+and the test for the dom-addeventlistener feature can be removed. In fact, this can be done automatically by a
+program. For example, if the dojo build system is given a profile that indicates has("dom-addeventlistener") is
+static and true, it will transform the code above as follows:
 
 
 .. code-block :: html
@@ -271,7 +306,7 @@ be removed, resulting in the following code:
 
 When these techniques are applied to significant libraries like dojo (and, large, multi-platform-targeted applications), very
 large space savings are possible. These savings are particularly important in the mobile environment where bandwidth
-and cache size are more limited than the typical desktop environment.
+and cache size are more limited than in the typical desktop environment.
 
 Of course there are many reasons other than feature availability that cause code to be used/unused. For example, recall
 that configuration can be passed by the data-dojo-config attribute in the script element that loads dojo.js. The
@@ -280,12 +315,13 @@ attribute is useless if the configuration for a particular application is set vi
 
 In most situations like this, the best design is to factor out such code into a separate module that is then simply not
 loaded when not needed. But is some cases, the sniffing code being one of them, this is not possible. Still, by
-bracketing the code with a has.js feature test, the code can be eliminated when an application is optimized with a build
-system like dojo's build system.
+bracketing the code with a has.js feature test, the code can be eliminated when an application is optimized by dojo's
+build system.
 
-Since the loader can't rely on a module system to bootstrap itself, many of its features are has-bracketed. Consquently,
-the loader must define the has.js API. The definition included with the loader is 100% compatible with the API published
-by the has.js project, but includes a couple of additional features. It is so trivial, here it is in its entirety:
+Since the loader cannot rely on a module system to bootstrap itself and therefore cannot conditionally include modules,
+many of its features are has-bracketed. Consquently, the loader must define the has.js API. The definition included with
+the loader is 100% compatible with the API published by the has.js project, but includes a couple of additional
+features. It is so trivial, here it is in its entirety:
 
 .. code-block :: html
 
@@ -309,10 +345,10 @@ by the has.js project, but includes a couple of additional features. It is so tr
 
 There are two features the implementation shown above has that the has.js project does not:
 
-  * the cache of tests (a map from test name to test or test result) is public at has.cache
+  * the cache of tests (has.cache, a map from test name to test or test result) is public
 
   * the function has.add includes an optional forth parameter, force, that can be used to over-write an existing
-    test. This is useful when a user configuration is allowed to override a default configuration.
+    test. This is useful to conditionally override an existing or default configuration.
 
 The loader initializes the has cache with several tests (see xxx for a list of these tests). User configuration can
 override any of these and/or add more tests by specifying a has configuration variable (an object just like
@@ -365,36 +401,44 @@ of the configuration given (and the reason we named the feature as such).
 Vocabulary
 ==========
 
-We need to cover one more prerequisite before describing the AMD API and the legacy dojo synchronous API: we need to
+We need to cover one more prerequisite before describing the AMD API and the dojo legacy loader API: we need to
 develop some vocabulary.
 
-A module is embodied as a chunk of Javascript code. Usually a single module is contained in a single addressable (e.g., by URL or
-filename) resource, though it is possible for a single resource to contain the code for several modules. The purpose of
-the loader is deceptively simple:
+A module is embodied as a chunk of Javascript code. The purpose of the loader is deceptively simple:
 
-  * cause a chunk of Javascript code that represents a module to be evaluated in such a manner that it produces a result
-    defined as the "module value" given by the particular chunk of code
+  * cause the chunk of Javascript code that represents a particular module to be evaluated in such a manner that it
+    produces a result defined as the "module value" given by the particular chunk of code
+
   * associate a name with the module value; naturally, the name is termed the "module identifier" of MID
+
   * given the MID of an existing association, return the module value of that association
 
-In short, the loader defines a namespace of module values and provides an API to insert and retrieve elements from that
+Although it is possible for a single resource to contain the code for several modules, to do so is a bad practice and a
+single module should be contained in a single addressable (e.g., by URL or filename) resource.
+
+The loader defines a namespace of module values and provides an API to insert and retrieve elements from that
 namespace. I'll call this the "module namespace".
 
 Inserting a module value into this namespace usually involves several steps:
 
   1. [requested] The client application demands a particular module value by providing a module identifier.
+
   2. The loader resolves the module identifier into an address (typically a URL or filename) suitable for the method
      required to retrieve the Javascript code that embodies the particular module.
-  3. [loaded] The loader takes the necessary actions to load the text from the resolved address into the execution environment.
+
+  3. [loaded] The loader takes the necessary actions to load the text from the resolved address into the execution
+      environment.
+
   4. [defined] The loader evaluates the code. As we'll see when we discuss the various loader APIs, this may result in the final
      module value or a factory that must be executed to get the final module value.
+
   5. [executed] If Step 4 provided a factory, then any other module values that the factory may require to execute are resolved and
      the factory is execute resulting in the final module value.
 
-You can see that words like "loaded", "evaluated", and "defined" may apply equally well to any of Steps 3-5. I've marked
-each step with the word in square brackets that I'll use in this document. Lastly, I'll use the work "resolve" to
+You can see that words like "loaded", "evaluated", and "defined" may apply equally well to different steps. I've marked
+each step with the word in square brackets that I'll use in this tutorial. Lastly, I'll use the work "resolve" to
 describe the entire process. For example to resolve the module identifier "myProject/myModule" is to execute Steps 2-5 so
-that the value of the module indicated by "myProject/myModule" is entered into the module namespace and my may be
+that the value of the module indicated by "myProject/myModule" is entered into the module namespace and may be
 retrieved. Note that after a module is resolved, the loader remembers the association between module identifier and
 module value so that future requests can be answered immediately without having to rerun the process.
 
@@ -405,16 +449,16 @@ accomplish Steps 3 and 4 as one action.
 
 There are two loader APIs available:
 
-  * the CommonJS `Modules/Asynchronous Definition`_ (AMD) API; I'll term this the AMD API.
-  * the Dojo loader API with consists of `dojo.require()`, `dojo.provide()`, `dojo.requireIf()`, `dojo.requireAfterIf()`,
-    `dojo.platformRequire()`, and `dojo.requireLocalization()`; I'll term this the legacy synchronous API.
+  * the CommonJS `Modules/Asynchronous Definition`_ (AMD) API; I'll term this the "AMD API".
+  * the Dojo loader API which consists of `dojo.require()`, `dojo.provide()`, `dojo.requireIf()`, `dojo.requireAfterIf()`,
+    `dojo.platformRequire()`, and `dojo.requireLocalization()`; I'll term this the "legacy loader API".
 
 ===========
 The AMD API
 ===========
 
 This is the hot new API that is being adopted by many Javascript libraries. The core API is simple,
-containing but two functions: require and define. Both of these functions reside in the global namespace and are
+containing but two functions, require and define. Both of these functions reside in the global namespace and are
 available after the loader itself has been defined.
 
 The global function require causes JavaScript resources to be evaluated; it has the following signature:
@@ -437,7 +481,7 @@ prescribed processing has completed prior to it's return. However, because Dojo 
 loader is put in asynchronous AMD mode by setting the configuration variable async to truthy but not "sync" or
 "legacyAsync". For example the values true or 1 will work. Asynchronous AMD mode means the loader is operating as
 intended by the AMD specification; for the remainder of the description of the AMD API, I'll assume the loader is in
-asynchronous AMD mode. See for a description of how the loader works when in a legacy mode.
+asynchronous AMD mode. See xxx for a description of how the loader works when in a legacy mode.
 
 In order to understand how require works, we must understand...
 
@@ -448,17 +492,16 @@ In order to understand how require works, we must understand...
 
 Let's answer the second question first.
 
-In the browser environment, JavaScript resources are usually loaded by attaching a script element to the head element
-with its src attribute pointing to the resource. I say "usually" because the dojo loader allows JavaScript
-resources to be precached with the Dojo Builder; also, the dojo loader can operate in nonbrowser
-environments.
+In the browser environment, JavaScript resources are usually loaded by attaching a script element to the document with
+its src attribute pointing to the resource. I say "usually" because the dojo loader allows JavaScript resources to be
+precached (typically arranged by the dojo build system); also, the dojo loader can operate in nonbrowser environments.
 
 In general, the loader has no control about what a script actually does; in some environments, the loader doesn't even
 have control over the order of execution of demanded scripts. Further, notice that since a script may be loaded by
 attaching a script element to the document, the loader has no way of collecting a result from the script. Instead, the
-script must explicitly publish a result to the loader. This is the purpose of the second core function, define.
+script must explicitly inform the loader how to create a module value. This is the purpose of the second core function, define.
 
-The global function define publishes the value of a module to the loader; it has the following signature:
+The global function define informs the loader how to create a module value; it has the following signature:
 
 .. code-block :: javascript
 
@@ -468,15 +511,57 @@ The global function define publishes the value of a module to the loader; it has
     factory        // (any)
   )
 
-define causes the modules given by the module identifiers contained in dependencies to be resolved and then associates
-the value implied by factory with the identifier given by moduleId and remembers the association. If factory is a
-function, then the module value is computed by applying the function to the values of the modules implied by the
-dependency vector; otherwise, the module value is taken to be the value of factory directly. Just like require, assuming
-the AMD API and no Dojo backcompat extensions, define is asynchronous and returns immediately with no guarantee that all
-of the prescribed processing has completed prior to it's return. 
+If factory is a function, then the module value is created by applying the function to the values of the modules implied
+by the dependency vector; otherwise, then module value is taken to be the value of factory directly.
 
-If moduleId is missing, then the loader derives moduleId from the module identifier in the dependency vector that caused
-the resource that contained the define application to be loaded. For example, if the code...
+Note carefully: the purpose of define is to inform the loader how to create a module value and enter a (module
+identifier, module value) pair into the module names when the given module is demanded for the first time consequent to
+resolving the dependencies of a require or another define application. Consider the following code:
+
+.. code-block :: javascript
+
+  var someValue = 5;
+  define("my/module", {value:someValue});
+  define("my/otherModule", ["my/module"], function(myModule){
+	return 10 * myModule.value;
+  });
+
+  // point 1
+
+  require(["my/otherModule"], function(otherModule){
+    // prints 50 to the console
+    console.log(otherModule);
+  });
+
+  someValue = 10;
+  require(["my/otherModule"], function(otherModule){
+    // prints 50 to the console
+    console.log(otherModule);
+  });
+
+At point 1, the loader "knows" how to create the module values for my/module and my/otherModule when and if they are
+requested. It has *not* created those values and entered their (name, value) pairs into the module namespace because they
+have not been demanded. After point 1, when the first require is applied, the loader attempts to resolve my/otherModule. Since
+my/otherModule depends on my/module, the loader attempts to resolve my/module. This causes the loader enter the pair
+("my/Module", {value:5}) into the module namespace. Accordingly, the factory function for my/otherModule is applied to
+the value of myModule, {value:5}, causing the result of the factory to be 50 and the pair ("my/otherModule", 50) to be
+entered into the module namespace. Finally, the callback given in the first require call is applied to the value of
+my/otherModule, 50, causing 50 to be printed to the console.
+
+When the second require call is applied, the loader notices that my/otherModule has already been entered into the module
+namespace and simply applies the callback to the value of my/otherModule, still 50, again ausing 50 to be printed to the
+console. The important point is that once a module value has been entered into the module namespace it is not recomputed
+each time it is demanded.
+
+Just like require assuming the AMD API and no Dojo backcompat extensions, define is asynchronous and returns
+immediately. 
+
+Though not prohibited, it would be odd to include a dependencies argument when the factory argument is not a
+function. However, if such dependencies are included, they will be resolved before the module value is created as given
+by the factory argument.
+
+If the moduleId argument is missing, then the loader derives moduleId from the module identifier in the dependency
+vector that caused the resource that contained the define application to be loaded. For example, if the code...
 
 .. code-block :: javascript
 
@@ -497,18 +582,18 @@ explain why later.
 
 We can now see how the loader becomes aware of module values:
 
-  * the dependency vector in either a require or define application demands modules
+  * The dependency vector in either a require or define application demands modules.
 
   * define applications contained in resources loaded consequent to those demands cause the loader to associate a module
     value with a module identifier and remember the association.
 
-Note carefully that simply presenting a module definition to the loader with a define application will not cause the
-modules given in the dependency vector to be resolved and the factory to be executed. In order to cause a module, say myModule, to be
-resolved, it must be demanded either directly, via a require application, or indirectly, via a require
-application that demanded another module that contained myModule in its dependency graph.
+Again, simply presenting a module definition to the loader with a define application will not cause the modules given in
+the dependency vector to be resolved and the factory to be executed.
 
-The values passed to either the callback argument (in the case of require) or the factory argument (in the case of
-define, when factory is a function) are just module values previously associated with module identifiers. For example,
+Notice how the dependencies and callback parameters in the require function work exactly like the dependencies and
+factory parameters in the define function. The values passed to either the callback argument (in the case of require) or
+the factory argument (in the case of define, when factory is a function) are just module values previously associated
+with module identifiers. For example,
 
 .. code-block :: javascript
 
@@ -561,8 +646,7 @@ There's one last detail about retrieving module values we need to cover. What if
 somewhere in your application wants a module, say dijit/layout/TabContainer, and further, that chunk of code is not
 part of a callback or factory function or didn't include dijit/layout/TabContainer in the dependency vector, yet that same
 random chunk of code happens to know that dijit/layout/TabContainer has been defined? To solve this problem, the loader
-includes a way to directly retrieve module values from the module namespace maintained by the loader with the alternate
-require signature:
+defines the alternate require signature:
 
 .. code-block :: javascript
 
@@ -790,25 +874,28 @@ algorithm are the module identifier (denoted "mid" below) to be mapped and, opti
      map the top-level segment in mid to perhaps another top-level name. I'll describe the implications of this step in
      xxx; for the remainder of this section, assume that, if a packageMap exists, it always maps x to x.
 
-  4. If the first segment of mid is identical to a package name, then note that mid indicates a module in the given
+  4. Look up the mid computed in Step 3 in the aliases map. The aliases map is a configuration variable that maps one
+     absolute module identifier to another. If the mid is succesfully mapped, then restart the process at Step 3 with
+     the mapped mid. I'll describe the purpose and details of the aliases map in xxx.
+
+  5. If the first segment of mid is identical to a package name, then note that mid indicates a module in the given
      package; call this package packageOfMid; further, if mid consists of exactly one segment, then append "/" and the
      value of the main configuration variable for packageOfMid to mid. Otherwise, when the first segment of mid does not
      name a known package, note that mid is not a member of a package.
 
-  5. Attempt to apply paths: find the longest module identifier fragment in paths (if any) that matches mid after Step
-     3. If such a fragment is found, set URL to mid after replacing the matched fragment of mid with the mapped path.
+  6. Attempt to apply paths: find the longest module identifier fragment in paths (if any) that matches mid after Step
+     5. If such a fragment is found, set URL to mid after replacing the matched fragment of mid with the mapped path.
 
-  6. If no paths were found in Step 4 and mid references a module in a package, set URL to mid after replacing the first
-     segment (the package name) with location, where location is the location configuration variable for the given
-     package.
+  7. If no paths were found in Step 6 and mid references a module in a package, set URL to mid after replacing the first
+     segment (the package name) with the location configuration variable for the given package.
 
-  7. If neither Step 4 or 5 were applied and has("config-tlmSiblingOfDojo") is truthy, then set URL to "../" + mid.
+  8. If neither Step 6 or 7 were applied and has("config-tlmSiblingOfDojo") is truthy, then set URL to "../" + mid.
 
-  8. If none of Steps 4, 5, or 6 were applied then set URL to mid.
+  9. If none of Steps 6, 7, or 8 were applied then set URL to mid.
 
-  9. If URL is not absolute, then prefix URL with the configuration variable baseUrl.
+  10. If URL is not absolute, then prefix URL with the configuration variable baseUrl.
 
-  10. Append the suffix ".js".
+  11. Append the suffix ".js".
 
 Yes, when viewed in toto, it's complicated. And probably more time has been spent on various mailing lists debating this
 algorithm than any other part of the AMD loader specification. Fortunately, there are just a few common patterns that
