@@ -59,6 +59,11 @@ The on function is also available on queried NodeList's with the NodeList on() m
   
   dojo.query("button").on("click", buttonClickHandler);
 
+Normalization
+-------------
+
+One of the key benefits of using dojo/on is that it provides event normalization, event listeners will receive an event object with the properties defined by the W3C event model, even in Internet Explorer. Generally, dojo/on does not normalize non-standard properties. There are some non-standard geometry properties that are often desirable, that are not normalized by dojo/on. The dojo/dom-geometry module provides a normalizeEvent function that can be used to normalize the pageX, pageY, layerX, and layerY properties on events.
+
 Event Delegation
 ----------------
 The on function also provides event delegation functionality. One can use a selector in the event type name to indicate the nodes that are targetted for event listening. The on function will then use respond to event bubbling (this only works for bubbling events) and trigger the listener when the appropriate child nodes trigger the event. The format for  selector-based event listening is to use "<selector>:<eventType>" as the eventType. For example, to listen for click events on elements with the myClass class name, we could do:
