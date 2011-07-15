@@ -4,7 +4,7 @@ dojox.form.DropDownSelect
 =========================
 
 :Status: Draft
-:Version: 1.2
+:Version: 1.7
 :Project owner: Nathan Toone
 :Available: since V1.2
 
@@ -50,7 +50,7 @@ This example shows a simple DropDownSelect widget - converted from a select tag.
 
   .. cv :: html
 
-    <select name="select" dojoType="dojox.form.DropDownSelect">
+    <select name="select" data-dojo-type="dojox.form.DropDownSelect">
         <option value="TN">Tennessee</option>
         <option value="VA" selected="selected">Virginia</option>
         <option value="WA">Washington</option>
@@ -79,7 +79,7 @@ When styling the entries of a DropDownSelect, you must use div and span tags, in
 
   .. cv :: html
 
-    <div name="select" value="AK" dojoType="dojox.form.DropDownSelect">
+    <div name="select" value="AK" data-dojo-type="dojox.form.DropDownSelect">
         <span value="AL"><b>Alabama</b></span>
         <span value="AK"><font color="red">A</font><font color="orange">l</font><font color="yellow">a</font><font color="green">s</font><font color="blue">k</font><font color="purple">a</font></span>
         <span value="AZ"><i>Arizona</i></span>
