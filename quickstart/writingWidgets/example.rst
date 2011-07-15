@@ -178,7 +178,7 @@ So now we have our widget and our basic styles. We include this widget in our pa
 
 .. code-block :: html
 
-  <input type="file" name="uploadFile" dojoType="dojox.widget.FileInput">
+  <input type="file" name="uploadFile" data-dojo-type="dojox.widget.FileInput">
 
 The real file input tag in the DOM goes away our templated input gets put in it's place. But if JavaScript is not present, it stays a regular HTML input tag, so it degrades nicely. Here is a sample test page to work with:
 
@@ -206,7 +206,7 @@ The real file input tag in the DOM goes away our templated input gets put in it'
         <input type="file" id="normal" name="inputFile" />
         <h3>The default dojox.widget.FileInput:</h3>
         
-        <input dojoType="dojox.widget.FileInput" id="default" name="uploadFile" />
+        <input data-dojo-type="dojox.widget.FileInput" id="default" name="uploadFile" />
   </body>
   </html>
 
