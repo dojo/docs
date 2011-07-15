@@ -21,7 +21,7 @@ To use, require the Urchin module into your page, and create a new instance:
       new dojox.analytics.Urchin({ acct:"UA-12345-67" });
   });
 
-The most important attribute (parameter) would be the `acct` value, which should be the ID Google prodivded during signup.
+The most important attribute (parameter) would be the `acct` value, which should be the ID Google provided during signup.
 
 You can define your account number as a dojoConfig parameter ``urchin``. Simply include the key and a value however you set dojoConfig, either before ``dojo.js`` is loaded:
 
@@ -40,12 +40,12 @@ or directly on the data-dojo-config attribute of your ``dojo.js`` script tag:
 
    <script src="js/dojo/dojo.js" data-dojo-config="urchin: UA-12345-67"></script>
 
-Being a Class constructor, you can also use Urchin with a ``dojoType``. Assuming you have ``dojo.require``'d the Urchin module, and have parseOnLoad:true (or manually run the `parser <dojo/parser>`_), you simply need to add a tag somewhere in your page:
+Being a Class constructor, you can also use Urchin with a ``data-dojo-type``. Assuming you have ``dojo.require``'d the Urchin module, and have parseOnLoad:true (or manually run the `parser <dojo/parser>`_), you simply need to add a tag somewhere in your page:
 
 .. code-block :: html
   :linenos:
 
-     <div dojoType="dojox.analytics.Urchin" acct="UA-12345-67"></div>
+     <div data-dojo-type="dojox.analytics.Urchin" data-dojo-params="acct:'UA-12345-67'"></div>
 
 Ajax-API
 --------
@@ -71,7 +71,7 @@ You can do this as often as you like during the lifetime of a single page view.
        tracker.trackPageView("/some-otherURL");
    });
 
-This is provided only as a convenience, and to have a reliable way of being alerted when Google Ananlytics is ready. 
+This is provided only as a convenience, and to have a reliable way of being alerted when Google Analytics is ready. 
 
 You can also do this as a shorthand, too. If you want to prevent the automatic tracking, and only track a custom-ajax page onload:
 
@@ -92,7 +92,7 @@ In Dojo 1.3 and before, these parameters existed. In Dojo 1.4, they have been re
 
 There is only one optional parameter: ``loadInterval``. This defines the time in ms to repoll for the availability of the Google tracker. Set to a higher number for less processing, and a lower number for more frequent checks. Default is 420 in Dojo 1.2, and 42 in Dojo versions 1.3 and higher.
 
-The reduction in default interval time is the result of implementing a decaying timer, to ensure the analyitics tracker was loaded as quickly as possible, without continually running in the event the tracker is never resolved. These options are defined by the ``decay``, ``timeout``, and ``loadInterval`` parameters. ``timeout`` defines the time in ms the ``loadInterval`` can become before quitting, and the ``decay`` defines a float to increment the ``loadInterval`` by. The default ``decay`` is 0.5, incrementing the interval by 50% on each iteration. eg:
+The reduction in default interval time is the result of implementing a decaying timer, to ensure the analytics tracker was loaded as quickly as possible, without continually running in the event the tracker is never resolved. These options are defined by the ``decay``, ``timeout``, and ``loadInterval`` parameters. ``timeout`` defines the time in ms the ``loadInterval`` can become before quitting, and the ``decay`` defines a float to increment the ``loadInterval`` by. The default ``decay`` is 0.5, incrementing the interval by 50% on each iteration. eg:
 
 100, 150, 225, 345 ...
 
