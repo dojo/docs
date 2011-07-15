@@ -79,7 +79,7 @@ One way you could show the user the value of your Slider is to create a textbox 
   .. cv:: html
 
     <div id="slider"></div>
-    <p><input type="text" id="sliderValue" dojoType="dijit.form.TextBox" /></p>
+    <p><input type="text" id="sliderValue" data-dojo-type="dijit.form.TextBox" /></p>
 
 
 Programmatic example of a vertical slider
@@ -137,7 +137,7 @@ And here we create a slider declaratively. Note that we set the value of the "di
     <div id="horizontalSlider" dojoType="dijit.form.HorizontalSlider"
         value="6" minimum="-10" maximum="10" discreteValues="11"
         intermediateChanges="true"
-        showButtons="false" style="width:400px;">   
+        showButtons="false" style="width:400px;" name="horizontalSlider">   
       <ol dojoType="dijit.form.HorizontalRuleLabels" container="topDecoration"
           style="height:1.5em;font-size:75%;color:gray;">
         <li> </li>
