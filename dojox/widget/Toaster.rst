@@ -59,9 +59,8 @@ The first example uses setContent() and show() to vary the message and display i
 
   .. cv:: html
 
-    <div dojoType="dojox.widget.Toaster" 
-         id="first_toaster" 
-         positionDirection="br-left" >
+    <div data-dojo-type="dojox.widget.Toaster" data-dojo-props="positionDirection:'br-left'"
+         id="first_toaster">
     </div>
     <input type="button" onclick="surpriseMe()" value="Click here to see Toaster"/>
 
@@ -106,11 +105,10 @@ The next example does the same thing, but uses the publish/subscribe model.  The
 
   .. cv:: html
 
-    <div dojoType="dojox.widget.Toaster" 
+    <div data-dojo-type="dojox.widget.Toaster" 
+         data-dojo-props="positionDirection:'br-left', duration:0, messageTopic:'testMessageTopic'"
          id="publish_subscribe_toaster" 
-         positionDirection="br-left" 
-         duration="0" 
-         messageTopic="testMessageTopic">
+         >
     </div>
     <input type="button" onclick="surpriseMe()" value="Click here for Publish Subscribe toaster"/>
 
