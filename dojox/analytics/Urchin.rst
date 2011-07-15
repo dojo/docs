@@ -45,7 +45,7 @@ Being a Class constructor, you can also use Urchin with a ``data-dojo-type``. As
 .. code-block :: html
   :linenos:
 
-     <div data-dojo-type="dojox.analytics.Urchin" data-dojo-params="acct:'UA-12345-67'"></div>
+     <div data-dojo-type="dojox.analytics.Urchin" data-dojo-props="acct:'UA-12345-67'"></div>
 
 Ajax-API
 --------
