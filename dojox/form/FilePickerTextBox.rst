@@ -65,10 +65,10 @@ This example shows a simple file picker text box pulling data from a dojox.data.
 
   .. cv :: html
 
-    <div dojoType="dojox.data.FileStore" data-dojo-id="fileStore" pathAsQueryParam="true"
-        url="{{dataUrl}}dojox/data/demos/stores/filestore_dojotree.php"></div>
-    <input require="true" name="fileName" type="text" dojoType="dojox.form.FilePickerTextBox"
-        constraints="{store:fileStore, query:{}}" />
+    <div data-dojo-type="dojox.data.FileStore" data-dojo-props="pathAsQueryParam:true, url:'{{dataUrl}}dojox/data/demos/stores/filestore_dojotree.php'"
+         data-dojo-id="fileStore"></div>
+    <input require="true" name="fileName" type="text" data-dojo-type="dojox.form.FilePickerTextBox"
+         data-dojo-props="constraints:{store:fileStore, query:{}}" />
 
   .. cv:: css
 
