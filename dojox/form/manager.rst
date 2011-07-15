@@ -67,7 +67,7 @@ Example:
   :linenos:
 
   <div data-dojo-type="dojox.form.Manager">
-    <input type="checkbox" dojoType="dijit.form.CheckBox" name="w01" value="w01">
+    <input type="checkbox" data-dojo-type="dijit.form.CheckBox" name="w01" value="w01">
     <input type="text" name="e03" value="e03">
     <span data-dojo-attach-point="n01" class="dojoFormValue">&nbsp;</span>
     <span data-dojo-attach-point="n02">test</span>
@@ -105,7 +105,7 @@ Example:
   :linenos:
 
   <div data-dojo-type="dojox.form.Manager">
-    <input type="checkbox" dojoType="dijit.form.CheckBox" name="w01" value="w01" observer="log">
+    <input type="checkbox" data-dojo-type="dijit.form.CheckBox" name="w01" value="w01" observer="log">
     <input type="text" name="e03" value="e03" observer="log,disabler">
     <span data-dojo-attach-point="n01" class="dojoFormValue">&nbsp;</span>
     <span data-dojo-attach-point="n02" data-dojo-attach-event="onclick: clicked">test</span>
