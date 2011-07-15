@@ -461,7 +461,7 @@ This is the hot new API that is being adopted by many Javascript libraries. The 
 containing but two functions, require and define. Both of these functions reside in the global namespace and are
 available after the loader itself has been defined.
 
-The global function require causes JavaScript resources to be evaluated; it has the following signature:
+The global function require causes Javascript resources to be evaluated; it has the following signature:
 
 .. code-block :: javascript
 
@@ -472,8 +472,8 @@ The global function require causes JavaScript resources to be evaluated; it has 
   )
 
 If configuration is provided, then it is passed through the loader's configuration API as described above. Next, the
-JavaScript modules implied by the strings contained in dependencies (if any) are resolved, and finally callback (if any) is
-applied to the results of those module values. require does not return any useful information.
+Javascript modules implied by the strings contained in dependencies (if any) are resolved, and finally callback (if any) is
+applied those resolved module values. require does not return any useful information.
 
 As far as the AMD API is concerned, require is an asynchronous function, and there is no guarantee that all of the
 prescribed processing has completed prior to it's return. However, because Dojo must maintain backcompat for the version
@@ -485,15 +485,15 @@ asynchronous AMD mode. See xxx for a description of how the loader works when in
 
 In order to understand how require works, we must understand...
 
-  * how a particular module identifier given in dependencies is resolved into some chunk of JavaScript code
+  * how a particular module identifier given in dependencies is resolved into some chunk of Javascript code
   
-  * how a particular chunk of JavaScript code is evaluated and returns a value to the loader which may then be passed to
+  * how a particular chunk of Javascript code is evaluated and returns a value to the loader which may then be passed to
     callback
 
 Let's answer the second question first.
 
-In the browser environment, JavaScript resources are usually loaded by attaching a script element to the document with
-its src attribute pointing to the resource. I say "usually" because the dojo loader allows JavaScript resources to be
+In the browser environment, Javascript resources are usually loaded by attaching a script element to the document with
+its src attribute pointing to the resource. I say "usually" because the dojo loader allows Javascript resources to be
 precached (typically arranged by the dojo build system); also, the dojo loader can operate in nonbrowser environments.
 
 In general, the loader has no control about what a script actually does; in some environments, the loader doesn't even
@@ -512,11 +512,16 @@ The global function define informs the loader how to create a module value; it h
   )
 
 If factory is a function, then the module value is created by applying the function to the values of the modules implied
-by the dependency vector; otherwise, then module value is taken to be the value of factory directly.
+by the dependency vector; otherwise, the module value is taken to be the value of factory directly. Though not
+prohibited, it would be odd to include a dependencies argument when the factory argument is not a function. However, if
+such dependencies are included, they will be resolved before the module value is created as given by the factory
+argument. Just like require assuming the AMD API and no Dojo backcompat extensions, define is asynchronous and returns
+immediately.
 
-Note carefully: the purpose of define is to inform the loader how to create a module value and enter a (module
-identifier, module value) pair into the module names when the given module is demanded for the first time consequent to
-resolving the dependencies of a require or another define application. Consider the following code:
+Note carefully: define does *not* directly create a module value. The purpose of define is to inform the loader how
+to create a module value and enter a (module identifier, module value) pair into the module namespare when the given
+module is demanded for the first time consequent to resolving the dependencies of a require or another define
+application. Consider the following code:
 
 .. code-block :: javascript
 
@@ -549,19 +554,18 @@ entered into the module namespace. Finally, the callback given in the first requ
 my/otherModule, 50, causing 50 to be printed to the console.
 
 When the second require call is applied, the loader notices that my/otherModule has already been entered into the module
-namespace and simply applies the callback to the value of my/otherModule, still 50, again ausing 50 to be printed to the
-console. The important point is that once a module value has been entered into the module namespace it is not recomputed
-each time it is demanded.
+namespace and simply applies the callback to the value of my/otherModule, still 50, again causing 50 to be printed to the
+console. There are two, very important principles to understand about the AMD loader API.
 
-Just like require assuming the AMD API and no Dojo backcompat extensions, define is asynchronous and returns
-immediately. 
+  * A module value is not created until it is demanded. This further implies that simply presenting a module definition
+    to the loader with a define application will not cause the modules given in the dependency vector to be resolved and
+    the factory to be executed.,
 
-Though not prohibited, it would be odd to include a dependencies argument when the factory argument is not a
-function. However, if such dependencies are included, they will be resolved before the module value is created as given
-by the factory argument.
+  * Once a module value has been entered into the module namespace it is not recomputed each time it is demanded.
 
-If the moduleId argument is missing, then the loader derives moduleId from the module identifier in the dependency
-vector that caused the resource that contained the define application to be loaded. For example, if the code...
+Notice that the moduleId argument is optional in define. If missing, the loader derives moduleId from the module
+identifier in the dependency vector that caused the resource that contained the define application to be loaded. For
+example, if the code...
 
 .. code-block :: javascript
 
@@ -576,24 +580,26 @@ vector that caused the resource that contained the define application to be load
     sub: function(x, y) { return x - y; }
   });
 
-...then the loader can derive that the define application has the implied moduleId of "mathLib/arithmetic". In almost
-all cases, moduleId should not be provided explicitly in a define application, but rather should be implied. I'll
-explain why later.
+...then the loader can derive that the define application has the implied moduleId of "mathLib/arithmetic". Of course
+this only works if a particular resource contains at most one define application with a missing moduleId argument. These
+observations indicate a best practice (in xxx, I show you how this best practice helps module portability).
 
-We can now see how the loader becomes aware of module values:
+  * moduleId should not be provided explicitly in a define application
+
+  * a resource that defines a module should contain a single define application. In particular, multiple define
+    applications should be avoided.
+
+We've now answered the first question about require, how the loader becomes aware of module values:
 
   * The dependency vector in either a require or define application demands modules.
 
   * define applications contained in resources loaded consequent to those demands cause the loader to associate a module
     value with a module identifier and remember the association.
 
-Again, simply presenting a module definition to the loader with a define application will not cause the modules given in
-the dependency vector to be resolved and the factory to be executed.
-
-Notice how the dependencies and callback parameters in the require function work exactly like the dependencies and
-factory parameters in the define function. The values passed to either the callback argument (in the case of require) or
-the factory argument (in the case of define, when factory is a function) are just module values previously associated
-with module identifiers. For example,
+The dependencies and callback parameters in the require function work exactly like the dependencies and factory
+parameters in the define function. The values passed to either the callback argument (in the case of require) or the
+factory argument (in the case of define, when factory is a function) are just module values previously associated with
+module identifiers. For example,
 
 .. code-block :: javascript
 
@@ -636,7 +642,7 @@ names are not significant to the loader. For example, this is perfectly legal, i
     }
   );
 
-Of course this all assumes that any module identifier specified in a dependency vector always results in loading a
+The discussion so far assumes that any module identifier specified in a dependency vector always results in loading a
 script that includes a define application. But, what if you just want to download and evaluate a chunk of code that
 doesn't define a module? That's OK too. The loader machinery will detect when the resource has been evaluated and notice
 that a module was not defined. In this case the loader simply notes that the module isn't really a module, but just a
@@ -656,15 +662,14 @@ defines the alternate require signature:
 
 When require is provided a single string argument, that argument is interpreted as a module identifier and require
 returns the current value associated with that module identifier. If the given module has not been defined, then the
-loader throws an exception, giving a message that the module has not been resolved.
+loader throws an exception.
 
 While there are legitimate uses for this form of require, I recommend you avoid it since it tends to open up a potential
 program error in your application when the module you think is defined actually is not.
 
-Let's step back for a moment and thing about the high-level design of the AMD API. At its core, the API defines a
-namespace that may be populated and accessed asynchronously. Names (module identifiers) are inserted into the namespace
-with define, and retrieved from the namespace through the dependency vectors of require and define or the alternate
-require signature mentioned above.
+To recap, at its core, the AMD API defines a namespace that may be populated and accessed asynchronously. Names (module
+identifiers) are inserted into the namespace with define, and values are retrieved from the namespace through the
+dependency vectors of require and define or the alternate require signature mentioned above.
 
 This namespace can be used by application authors to manage the global namespace. This idea is sometimes misconstrued:
 it is wrong to say the loader "doesn't allow global variables." The loader has no control over such matters. It is up to
@@ -723,7 +728,7 @@ Recall that the moduleId argument can be implied. So, we can write...
 
   require("myPackage/myModule");
 
-...and then, in the JavaScript resource implied by myPackage/myModule, write...
+...and then, in the Javascript resource implied by myPackage/myModule, write...
 
 .. code-block :: javascript
 
@@ -797,11 +802,82 @@ arranges for this require to resolve module identifiers with respect to the refe
 provided. This context-sensitive require function is termed a "context require". The resulting code now abides by the
 best practice of always using relative module identifiers when defining a module.
 
+=============
+Alias Modules
+=============
+
+Consider the following module definition:
+
+.. code-block :: javascript
+
+  // this is the resource for the module "my/text"
+  define(["your/text"], function(yourText) {
+	return yourText;
+  });
+
+Now, ask yourself, are the values of the two text lexical variables in the following two require applications equivalent?
+
+.. code-block :: javascript
+
+  require(["my/text"], function(text){
+    // do something
+  });
+
+  require(["your/text"], function(text){
+    // do something
+  });
+
+Answer: yes, they are equivalent. And it would not matter if your/text was demanded before my/text.
+
+This is what I call the "alias module pattern". It is useful when an application uses multiple libraries that reference
+then same logical module with different names. 
+
+An example of this problem is found in the common text module, which loads a text resource through the plugin API (see
+xxx). RequireJS defined this module early on, and several libraries depend on the module as defined by RequireJS. Dojo
+also defines the module. However, Dojo's implementation, while 100% compatible with RequireJs's implementation, is both
+smaller (because it can leverage dojo.xhr) and contains more features (it includes dojo.cache for backcompat). If you
+are building an application that includes both dojo and some other library that relies on RequireJS's text module, it
+would be ineffecient to include both Dojo's and RequireJS's text module. This problem can be solved by aliasing
+RequireJS's text module to Dojo's text module like this:
+
+.. code-block :: javascript
+
+  define("text" , ["dojo/text"], function(text) {
+	return text;
+  });
+
+While this code is perfectly legal, there are better ways to express this alias. For one thing, the module provides a
+moduleId argument which breaks a best practice we established. In order to avoid that, you could simply replace the
+"text" module resource with the content given above. But that's not a great option for a couple of reasons. First, to
+edit another module's resource contents it to take ownership of that module, which utterly defeats the idea of
+leveraging modules authored by external sources. Second, such a "hard" replacement would cause every library that
+depended on the text to depend on dojo/text. Maybe that's not desireable.
+
+
+There's another problem as well. The alias module given above will only work if it is consumed by the loader before the
+text module is demanded. Consider the following example:
+
+.. code-block :: javascript
+
+  require(["text"], function(text){
+    // do something with text
+  });
+
+  define("text" , ["dojo/text"], function(text) {
+	return text;
+  });
+
+In this case, the whole idea fails. The require application resolves the original text module and the define
+application attempts to redefine that module, which results in an error. For the most part, when expressing modules with
+AMD define, the order in which modules are defined is unimportant. In this case, order is relevant. While this is fairly
+easy to solve by taking care in the way your program is expressed, that fact that there is one more detail to worry
+about is unpleasant.
+
+Fortunately, the dojo loader has a solution to this problem that I'll describe in the next section.
+
 ===========================================
 Resolving Module Identifiers into Addresses
 ===========================================
-
-Let's now turn to the question of how the loader resolves a module identifier into a resource URL. 
 
 Module identifiers look like file system paths, for example, dijit/form/Button. They are given by a sequence of names
 separated by forward-slashes. Each individual name is termed a segment, with the "first" or "top-level" segment being
@@ -809,12 +885,17 @@ the left-most segment. Given two segments, the left segment is said to be more s
 of like significant dijits in numbers). Similarly, given a segment x1/x2/.../xn, x1/x2/.../xi is said to be the parent
 segment of x1/x2/.../xi/xi+1/.../xn. I'll use this language when describing path matching.
 
-According to the AMD specification, the segments may be any legal JavaScript identifier, and, by convention, are
+According to the AMD specification, the segments may be any legal Javascript identifier, and, by convention, are
 camel-case. Most AMD loaders, including dojo's, are more relaxed than this and accept characters outside the Javascript
-identifier alphabet. That said, I strongly recommend using only the characters in ```[A-Za-z0-9_-]```. Whatever you do, do not
+identifier alphabet. That said, I strongly recommend using only the characters in [A-Za-z0-9_-]. Whatever you do, do not
 use the characters !, *, ?, /, or \ in module names; these will only lead to problems.
 
-Given the nature module identifiers, the loader effectively maintains a hierarchical namespace. Naturally, this
+The goal of resolving a module identifier is to come up with an addess that can be used load the resource. In the
+browser, the address is a URL that can be used to set the src attribute of a script element that is injected into the
+document. In non-browser environments like Rhino or node.js, the address is a filename. In either case, I'll term the
+address (or fragment of the addess) a "path" in the descriptions that follow.
+
+Given the nature of module identifiers, the loader effectively maintains a hierarchical namespace. Naturally, this
 namespace tends to map onto a file system hierarchy that's tyically made available through an HTTP server. I say "tends"
 because we'll see there are lots of ways to affect the mapping of a module name. The various methods of mapping module
 identifiers to resource URLs are a two-edged sword. It allows client code to remap individual modules, branches in
@@ -823,25 +904,23 @@ examples that should cover all the common use cases.
 
 The following configuration variables control how module identifiers are mapped to URLs:
 
-  * baseUrl: (string, a path fragment) after all mapping has been completed as described below, if the
-    resulting URL is relative, then baseUrl is prepended to that URL
+  * baseUrl: (string, a path) a path to prepend to a computed path if the computed path is relative as described by the
+    process below.
 
-  * paths: (object) map from a module identifier fragment to path. A fragement defined as all or part of a module
-    identifier. If it is not a complete module identifier, then it is one or more of the most significant segments of a
-    set of module identifiers. For example, given the module identifiers a/x/c and a/y/c, a is a fragment that matches
-    both identifiers while a/x and a/y are fragments that only match one of the other, and a/x/c and a/y/c are fragments
-    that are also complete module identifiers and match one or the other exactly. When matching paths, the most-specific
-    match wins. For example, a/x is more specific than a. 
+  * paths: (object) a map from a module identifier fragment to path. When matching paths,
+    the most-specific match wins. For example, a/x is more specific than a.
+
+  * aliases: (object) a map from a module identifier to another module identifier.
 
   * the has.js feature config-tlmSiblingOfDojo: if truthy, then non-package top-level modules not mentioned in paths
-    are assumed to be siblings of dojo. See the algorithm below for further details.
+    are assumed to be siblings of dojo.
 
   * package configuration: described next
 
-A package, among other things, is a hierarchy of inter-dependent modules that publish a cohesive API. dojo (that is, the
-dojo tree, not the whole toolkit) and dijit (the dijit tree) are examples of packages. Packages can have extensive
-configuration variables, and the CommonJS Package specification describes many of these. However, as far as the dojo
-loader is concerned, only three are important:
+A package, among other things, is a hierarchy of inter-dependent modules that, hopefully, publish a cohesive API. dojo
+(that is, the dojo tree) and dijit (the dijit tree) are examples of packages. Packages can have extensive configuration
+variables, and the CommonJS Package specification describes many of these. However, as far as the dojo loader is
+concerned, only three are important:
 
   * location: the path to the root of the hierarchy at which the package resides
 
@@ -851,16 +930,12 @@ loader is concerned, only three are important:
   * packageMap: an optional configuration variable that maps package names given inside a package to different names
     know to the loader. This mapping allows packages to be relocated under different names. We'll see this is a very
     powerful way to handle the problem of an application that needs to load two different packages with the same name
-    and/or two different versions of the same package. (note: packageMap is only useful to the dojo loader (currently other
-    loaders do not support this).
+    and/or two different versions of the same package. (note: packageMap is only useful to the dojo loader; currently other
+    loaders do not support this feature).
 
-There are a number of ways (too many!) to specify a package configuration. See xxx for details. For this discussion, the
-important thing to understand is that, no matter how the configuration is specified, a package configuration will define
-at least the two properties location and main, and the optional property packageMap may also be defined.
-
-We now have enough to describe the algorithm that maps module identifiers to URls. The entering arguments to the
-algorithm are the module identifier (denoted "mid" below) to be mapped and, optionally, a reference module (denoted
-"rm" below) (see xxx).
+We now have enough to describe the algorithm that maps module identifiers to a path. The entering arguments to the
+algorithm are the module identifier (denoted "mid") to be mapped, and, optionally, a reference module (denoted
+"rm").
 
   1. If mid is relative and rm is not provided, an exception is thrown--the mid is not rational.
 
@@ -871,31 +946,34 @@ algorithm are the module identifier (denoted "mid" below) to be mapped and, opti
      criteria, an exception is thrown--the mid is not rational.
   
   3. If rm is given, and rm is a member of a package, and that package has a package map, then apply that package map to
-     map the top-level segment in mid to perhaps another top-level name. I'll describe the implications of this step in
-     xxx; for the remainder of this section, assume that, if a packageMap exists, it always maps x to x.
+     map the top-level segment. This application will either map that segment to another top-level name or default to the
+     identify map (x implies x). I'll describe the implications of this step in xxx; for the remainder of this section,
+     assume that, if a packageMap exists, it always maps x to x.
 
-  4. Look up the mid computed in Step 3 in the aliases map. The aliases map is a configuration variable that maps one
-     absolute module identifier to another. If the mid is succesfully mapped, then restart the process at Step 3 with
-     the mapped mid. I'll describe the purpose and details of the aliases map in xxx.
+  4. Look up the mid computed in Step 3 in the aliases map. If the mid is mapped, then restart the process at Step 3
+     with the mapped mid.
 
   5. If the first segment of mid is identical to a package name, then note that mid indicates a module in the given
-     package; call this package packageOfMid; further, if mid consists of exactly one segment, then append "/" and the
-     value of the main configuration variable for packageOfMid to mid. Otherwise, when the first segment of mid does not
+     package; call this package package-of-mid; further, if mid consists of exactly one segment, then append "/" and the
+     value of the main configuration variable for package-of-mid to mid. Otherwise, when the first segment of mid does not
      name a known package, note that mid is not a member of a package.
 
-  6. Attempt to apply paths: find the longest module identifier fragment in paths (if any) that matches mid after Step
-     5. If such a fragment is found, set URL to mid after replacing the matched fragment of mid with the mapped path.
+  6. Attempt to apply paths: find the longest module identifier fragment, always starting with the first segment, in
+     paths that matches mid after Step 5 (if any). If such a fragment is found, set the result to mid after replacing the
+     matched fragment of mid with the mapped path.
 
-  7. If no paths were found in Step 6 and mid references a module in a package, set URL to mid after replacing the first
+  7. If no paths were found in Step 6 and mid references a module in a package, set the result to mid after replacing the first
      segment (the package name) with the location configuration variable for the given package.
 
-  8. If neither Step 6 or 7 were applied and has("config-tlmSiblingOfDojo") is truthy, then set URL to "../" + mid.
+  8. If neither Step 6 or 7 were applied and has("config-tlmSiblingOfDojo") is truthy, then set the result to "../" + mid.
 
-  9. If none of Steps 6, 7, or 8 were applied then set URL to mid.
+  9. If none of Steps 6, 7, or 8 were applied then set the result to mid.
 
-  10. If URL is not absolute, then prefix URL with the configuration variable baseUrl.
+  10. If result is not absolute, then prefix result with the configuration variable baseUrl.
 
-  11. Append the suffix ".js".
+  11. Append the suffix ".js" to result.
+
+result now holds the path implied by (mid, rm).
 
 Yes, when viewed in toto, it's complicated. And probably more time has been spent on various mailing lists debating this
 algorithm than any other part of the AMD loader specification. Fortunately, there are just a few common patterns that
@@ -930,8 +1008,8 @@ and dojox packages. Here's the package configuration for the source release.
     location:'../demos'
   }]
 
-Given this configuration and further assuming baseUrl===path/to/dtk/dojo, here are some examples of how a module
-identifier is mapped to a URL:
+Given this configuration and further assuming that baseUrl is automatically calculated by the loader to be
+path/to/dtk/dojo, here are some examples of how a module identifier is mapped to a path:
 
 dojo
   dojo => dojo/main (Step 3)
@@ -996,13 +1074,13 @@ Paths can also give a path segment that's relative. For example, assume you have
 
 .. code-block :: javascript
 
-scripts/
-  dtk/
-    dojo/
-    dijit/
-    dojox/
-  myApp/
-  experimental/
+  scripts/
+    dtk/
+      dojo/
+      dijit/
+      dojox/
+    myApp/
+    experimental/
 
 In this case myApp is not a sibling of dojo. Since myApp is reachable from the automatically-computed baseUrl
 that points to script/dtk/dojo, a paths entry that gives the path for myApp relative to baseUrl will do the job:
@@ -1104,7 +1182,7 @@ myApp
 
 As long as a given module identifier is not also a parent segment of another module identifier, you can map that module
 identifier anywhere. For example, maybe you are experimenting with a new module that replaces dojo/cookie. In this case,
-you want all dojo modules to map as usual, but you want dojo/cookie to map to the URL scripts/experimental/dojo/cookie. All
+you want all dojo modules to map as usual, but you want dojo/cookie to map to scripts/experimental/dojo/cookie. All
 that's needed to achieve this is add an entry into paths.
 
 .. code-block :: javascript
@@ -1123,12 +1201,12 @@ example, consider this tree of modules:
 
 .. code-block :: 
 
-scripts/
-  myApp/
-    myApi.js
-    myApi/
-      helper1.js
-      helper2.js
+  scripts/
+    myApp/
+      myApi.js
+      myApi/
+        helper1.js
+        helper2.js
 
 On one hand, myApp/myApi is a module, but it's also a parent segment for the modules identifiers myApp/myApi/helper1 and
 myApp/myApi/helper2. So the entry myApp/myApi:"path/to/another/myApi" in the paths map would also result in mapping the
@@ -1147,6 +1225,53 @@ entries to get the original helpers. Here's what that would look like:
 
 That's pretty verbose and not very convenient. But this is also a highly unusal configuration that you'll rarely, if
 ever, need.
+
+Lastly, let's readdress module aliases. Recall at the end of the section that described module aliases, I gave an
+example of how to alias the module text to dojo/text. Here's that code again:
+
+.. code-block :: javascript
+
+  define("text" , ["dojo/text"], function(text) {
+	return text;
+  });
+
+Now that we know about the power of mapping module identifiers to paths, we could improve this by eliminating the
+moduleId argument. First, locate the module within your application tree, say at myApp/text
+
+.. code-block :: javascript
+
+  // resource resides at myApp/text
+  define(["dojo/text"], function(text) {
+	return text;
+  });
+
+Next, add a paths configuration:
+
+.. code-block :: javascript
+
+    require({
+      paths:{
+        text:"path/to/myApp/text"
+      }
+    });
+
+Now, when the module text is demanded, the algorithm will load the resource located at path/to/myApp/text. This is much
+better than replacing the text module with the alias module since we're now maintaining our own code rather than another
+library's code. But, there's an even-better solution.
+
+Notice that Step 4 in the algorithm, completely eliminates the need for explicit alias modules. In fact, all that's
+needed is a little configuration like this:
+
+.. code-block :: javascript
+
+    require({
+      aliases:[
+        ["text","dojo/text"
+      ]
+    });
+
+With this, whenever text is seen in a dependency argument to require or define, value of the dojo/text module will be
+returned--exactly the desired result! So far, once again, the dojo loader is the only loader that has this feature.
 
 ============================
 Relocating Module Namespaces
@@ -1195,8 +1320,8 @@ Or in your own module definitions through define:
     // make client happy
   });
 
-The loader maps "util1" and "util2" into the URLs ./packages/util1/lib/main.js and ./packages/util2/lib/main.js,
-respectively. Assuming the util package authors followed the best practice and did not explicitly provide a moduleId
+The loader maps "util1" and "util2" into the paths ./packages/util1/lib/main.js and ./packages/util2/lib/main.js,
+respectively. Assuming the util package authors followed best practice and did not explicitly provide a moduleId
 argument in the define applications that create their modules, the loader provides the names "util1" and "util2" as
 derived from the module identifiers that caused the respective scripts to be evaluated.
 
@@ -1297,11 +1422,87 @@ This design replaces the so-called "multi-version" design in dojo v1.6- and elim
 implemented in RequireJS. Notice that, unlike the multi-version design, no build is required to deploy a relocated
 package. It's all a matter of simple configuration. This is a quite powerful feature and only dojo has it.
 
-============================
-Module Aliases
-============================
+=====================================
+CommonJS require, exports, and module
+=====================================
 
-Coming soon.
+The AMD specification reserves three top-level module identifiers: require, exports, and module. These are only relevant
+in the context of a dependency vector given as an argument to AMD define.
+
+We already discussed require in xxx. Recall it works just like global require except that it resolves relative module
+identifiers with respect to the module defined by the define application that contained require in it's dependencies
+argument. That's a mouthful; consider it in code:
+
+.. code-block :: javascript
+
+  // assume the following define application defines the module someLib/someModule
+  define(["require"], function(require)
+    require(["./some/other/module"], function(someOtherModule){
+	  // etc.
+	});
+  });
+
+In this case, the module ./some/other/module is resolved with respect to the reference module someLib/someModule, causing Step
+2 of the module identifier to path resolution algorithm to compute the module someApp/some/other/module.
+
+The module identifier module provides an object that contains the property id that contains a unique identifier (a
+string) for the module defined by the define application that contained module in its dependences argument (just like
+require). Further module.id must cause require(module.id) to return the module value associated with the module from
+which module.id originated. Here is the previous example with a module dependency added:
+
+  // assume the following define application defines the module someLib/someModule
+  var globalReferenceToSomeAppSomeModuleId;
+  define(["require", "module"], function(require, module)
+    require(["./some/other/module"], function(someOtherModule){
+	  // etc.
+	});
+
+	console.log(module.id);
+
+	// don't do this at home; this is just an acedemic example
+	globalReferenceToSomeAppSomeModuleId = module.id
+  });
+
+Just like context require resolves its dependencies with respect to the reference module someLib/someModule, module.id gives
+a unique indentifier with respect to the module someLib/someModule. Assuming the code above and further that the module
+someLib/someModule was resolved at some point in a program's control flow, then the statement....
+
+.. code-block :: javascript
+
+  var someAppSomeModuleValue = require(globalReferenceToSomeAppSomeModuleId);
+
+...retrieves the value associated with someLib/someModule synchronously. 
+
+Be careful with your assumptions about the actual value of globalReferenceToSomeAppSomeModuleId. Suppose the module
+someLib/someModule is a member of the package someLib and further that someLib was relocated to someLib1 (maybe there
+was another library also named someLib that needed to be used in the same application). In this case
+globalReferenceToSomeAppSomeModuleId would actually have the value someLib1/someModule.
+
+Let's finish up with the exports module identifier. exports provides an alternate method to return the module
+value. Instead of returning the value explicitly by a return statement in the factory function, exports provides a
+Javascript object that may be used as a hash to return a set of values. For example, the following two module
+definitions accomplish the same semantics:
+
+.. code-block :: javascript
+
+  define([], function(){
+    return {
+      someProperty:"hello",
+      someOtherProperty:"world"
+    };
+  });
+
+
+  define([exports], function(exports){
+    exports.someProperty:"hello";
+    exports.someOtherProperty:"world";
+  });
+
+Notice in particular that the factory in the second define application did not explicitly return a value. If it did,
+exports would have been ignored.
+
+exports is used for compatibility with other CommonJS modules, primarily modules written for node.js. I see not
+advantage to using it and recommend you avoid it.
 
 =======
 Plugins
@@ -1415,12 +1616,6 @@ Dojo v1.7 includes several key plugins:
 
   * dojo/loadInit: causes dojo.loadInit callbacks then other legacy API functions to be executed--in particular
     dojo.require[After]If--that are associated with a module (see xxx)
-
-===========================
-CommonJS exports and module
-===========================
-
-Coming Soon
 
 =====================
 The Legacy Loader API
@@ -2035,31 +2230,176 @@ reomvoed (notice the 0 &&) and all dojo.required modules are already on board.
 Undefining and Reloading Modules
 ================================
 
-Coming Soon
+The dojo loader provides the method undef that's a property of global require or any context require:
 
-==================
-Window load Detect
-==================
+.. code-block :: javascript
 
-Coming Soon
+  require.undef(
+    mid // (string)
+  )
+
+Not surprisingly, require.undef removes a (module identifier, module value) from the module namespace.
+
+If require is global require, then mid must be an absolute module identifier; otherwise mid can be either an absolute or
+relative module identifier, where relative module identifiers are relative to the reference module identifier given by the
+context require.
+
+require.undef is primarily interesting for test frameworks that desire to load and unload the module under test without
+having to reload the entire application.
+
+=====================
+Window load Detection
+=====================
+
+Typically, the loader is the first and often only script explicitly contained within an HTML document. Usually, all
+other scripts are loaded by the loader. I'll stop short of calling this a best practice, but you should think long and
+hard before hard-coding additional script elements within a particular HTML resource.
+
+This being the case, the loader holds a special status among all scripts executed by a particular HTML document in that
+it's often the only script that can be guaranteed to catch the document.DOMContentLoaded and window.load signals. Put
+another way, it's impossible to guarantee catching these events on all popular browsers within a normal AMD module
+without support from the loader.
+
+In order to solve this problem, the dojo loader connects to the window.load event with a listener that sets
+document.readyState to "complete" if it's not already set as such. This allows a normal AMD module to rely on
+document.readyState even in browsers that do not properly support this property. An example use case is found in the
+dojo/domReady plugin that calls loaded upon achieving DOMContentLoaded or better.
 
 ===============
 Error Reporting
 ===============
 
-Coming Soon
+When things go wrong, the loader signals the "error" event just like it signals the "config" event as described in
+xxx. So, in order to monitor loader errors, simply connect via require.on like this:
+
+.. code-block :: html
+
+  function handleError(error){
+    console.log(error.src, error.id);
+  }
+  
+  require.on("error", handleError);
+
+Upon any reportable loader error, the loader will signal all registered handlers. The first argument is always a loader
+error object that contains the properties src, which is always set to "dojoLoader" and id, which gives a string
+identifier indicating the particular error. The loader defines the following error identifiers:
+
+factoryThrew
+  A module factory function threw an exception.
+
+xhrFailed 
+  An XHR failed to retrieve a module resource. Typically, this indicates an HTML 404 error, that is often caused
+  by a configuration problem with paths, aliases, packages, and/or baseUrl.
+
+multipleDefine
+  AMD define was applied referencing a module that is already defined. The number one cause if this problem is
+  explicitly injecting modules with a script element in the HTML document. Use the loader; don't use script
+  elements. Also, providing explicit module identifier arguments tends to increase the likelyhood of this error.
+
+timeout
+  The period prescribed by the configuration variable waitSeconds expired since the last module was requested yet all
+  modules have not arrived. Typically, this indicates an HTML 404 error, that is often caused
+  by a configuration problem with paths, aliases, packages, and/or baseUrl.
+
+defineIe
+  An anonymous define application was executed in an Internet Explorer environment, yet it was impossible to determine
+  the implied module identifier. defineIe errors are usually the same kinds of problems indicated by multipleDefine.
+
+Loader errors are often impossible to recover from. If you application demands a module that maps to a path that
+does not exist, there's nothing the loader can do to fix that situation. However, some kinds of applications may
+attempt to load modules that are unreliable. Further, those applications may have a strategy to deal with such
+occurences. Those applications can use the error reporting API to apply such strategies.
 
 =========
 Debugging
 =========
 
-Coming Soon
+Debugging highly asynchronous processes like loading a tree of AMD modules can be tricky. Frankly, debugging a problem
+deep in a dependency tree of synchronous modules is no less vexing. Here are a few pointers to make this task
+manageable.
+
+  * The most common error for programmers used to the legacy loader API is to express a module indentifier using dots
+    instead of slashes. If you have to bounce back and forth between both APIs, you'll be makeing the opposite error
+    too.
+
+  * A common syntax error that's not well reported in some browsers it to miss a comma in a dependencies argument.
+
+  * A common programming error is to mix up the module identifiers in the dependencies argument compared to the
+    parameter names in the callback (in the case of require) or factory (in the case of define) functions.
+
+  * In some browsers, in some circumstances, inserting breakpoints will change then asynchronous flow. This can be
+    frustrating when your application fails without breakpoints but succeeds otherwise. It generally indicates the
+    program is depending on the modules being defined in a certain order. Well-designed AMD modules will contain no such
+    requirement.
+
+  * Sometimes one browser's debugger just works better than anothers. And it's not always the same debugger that's
+    best. If I'm working a really hard problem, I'll try it in Firefox/Firebug, Chrome, and, believe-it-or-not, IE. As
+    much as we all complain about IE, it can sometimes point the way to a problem earlier in the execution sequence
+    which can sometimes point to the solution. Also, recent Firefox/Firebug releases have been flakey. I keep a Firefox
+    3.6.x, Firebug 1.6.x virtual machine around...which brings up another point. If you're doing professional
+    development, you must have several virtual machines available.
+
+Unlike other loaders, the dojo loader exposes its internal state for inspection during debugging. You'll find this
+extremely valuable when tackling hard problems. Inspect the global require function. You'll see all of the important
+loader internal variables:
+
+async
+  Boolean, describing the mode of the loader.
+
+legacyMode
+  String, describing the legacy mode of the loader (if in a legacy mode at all).
+
+baseUrl
+  The baseUrl configuration variable.
+
+paths
+  The paths configuration variable.
+
+packs
+  The package configuration. This is synthesized from any passed package configuration.
+
+waiting
+  The set of modules resources the loader has requested but have not yet arrived. If the loader seems to stall look here
+  second; look in your debugger network panel for 404 errors first.
+
+execQ
+  The queue of modules scheduled to execute. If this queue seems stalled, then there is almost certainly another
+  problem, probably 404 errors, syntax errors, or naming errors elsewhere.
+
+modules
+  The module namespace. Each entry holds all information about each module known to the loader:
+
+    * result holds the module value
+
+    * injected holds the loaded state (one of 0, "requested", "arrived")
+
+    * executed holds the executed state of a factory (one of 0, "executing", "executed")
+
+    * pid holds the owning package (if any)
+
+    * url holds the address the loader has computed for the resource that defines the module
+
+    * def holds the factory
+
+Warning: this data is exposed and discussed here to help with debugging chores. Do not use it in your own code, it may
+change!
+
+The source version of the loader also contains tracing machinery to show when a module is injected, defined, and
+executed.
+
+TODO: finish tracing description
 
 =======================
 Nonbrowser Environments
 =======================
 
-Coming Soon
+As of v1.7, the dojo loader supports Rhino and node.js. In the browser environment, then module identifier to path
+resolution algorithm returns a path that is a URL, and that URL is used to either script inject the module or retrieve
+the module via synchronous or asynchronous XHR (depending on the loader operating mode). 
+
+In non-browser environments, the path is a filename and the particular environment's file system library is used to
+retrieve the module synchronously. This essentially results in the loader operating in synchronous AMD mode. However,
+this is just an implemenation detail; from the loader client perspective, it "just works".
 
 ==================================
 Changing the Default Configuration
