@@ -93,6 +93,26 @@ Flash embedding with dojo is as simple as:
    <a href="http://get.adobe.com/flashplayer/"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" /></a>
  </div>
 
+======================
+Constructor Parameters
+======================
+
++---------------+------------------------------------------------------------------------------+------------------------------+
+|**Parameter**  |**Description**                                                               |**Type**                      |
++---------------+------------------------------------------------------------------------------+------------------------------+
+|path           |Path to swf flash file                                                        |String                        |
++---------------+------------------------------------------------------------------------------+------------------------------+
+|width          |Width of the embedded flash.                                                  |Number | String               |
++---------------+------------------------------------------------------------------------------+------------------------------+
+|height         |Height of the embedded flash                                                  |Number | String               |
++---------------+------------------------------------------------------------------------------+------------------------------+
+|params         |A set of key/value pairs that you want to define in the resultant markup      |Object                        |
++---------------+------------------------------------------------------------------------------+------------------------------+
+|vars           |A set of key/value pairs that the Flash movie will interpret as FlashVars     |Object                        |
++---------------+------------------------------------------------------------------------------+------------------------------+
+|expressInstall |Whether or not to include any kind of expressInstall info. Default is false.  |Boolean                       |
++---------------+------------------------------------------------------------------------------+------------------------------+
+
 
 ========
 Examples
