@@ -76,10 +76,10 @@ A simple rolling list pulling data from a read store
 
   .. cv :: html
   
-    <div dojoType="dojo.data.ItemFileWriteStore" data-dojo-id="continentStore"
-        url="{{dataUrl}}dijit/tests/_data/countries.json"></div>
-    <div dojoType="dojox.widget.RollingList" data-dojo-id="myList" id="myList" store="continentStore"
-        query="{type:'continent'}" style="height:150px;"></div>
+    <div data-dojo-type="dojo.data.ItemFileWriteStore" data-dojo-id="continentStore"
+        data-dojo-props="url:'{{dataUrl}}dijit/tests/_data/countries.json'"></div>
+    <div data-dojo-type="dojox.widget.RollingList" data-dojo-id="myList" id="myList"
+        data-dojo-props="store:continentStore, query:{type:'continent'}" style="height:150px;"></div>
 
   .. cv:: css
 
