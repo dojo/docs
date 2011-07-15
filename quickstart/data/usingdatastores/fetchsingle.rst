@@ -94,7 +94,7 @@ This example shows how to fetch items by their identity programmatically.
 
   .. cv :: html 
 
-    Pick a grocery item: <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-params="data:'storeData'" data-dojo-id="foodStore"></div>
+    Pick a grocery item: <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-params="data:storeData" data-dojo-id="foodStore"></div>
     <div data-dojo-type="dijit.form.ComboBox" data-dojo-params="store:'foodStore', searchAttr:'name'" data-dojo-id="combo"></div>
     <br>
     <br>
