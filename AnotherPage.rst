@@ -41,7 +41,7 @@ A fine example of executed code
 
     <div id="fohooo" class="fohooo">Click Me</div>
     <div id="fohooooooo" class="fohooo">Don't click Me</div>
-    <div dojoType="foohooo" class="fohooo">Or Me</div>
+    <div data-dojo-type="foohooo" class="fohooo">Or Me</div>
 
   This is the jscript code of your example. Simple past both HMTL and Jscript into the browser.
 
@@ -72,7 +72,7 @@ And some normal executed code
 
    <script type="text/javascript">dojo.require("dijit.form.Button");</script>
    <div class="nihilo">
-      <div dojoType="dijit.form.Button">whatever</div>
+      <div data-dojo-type="dijit.form.Button">whatever</div>
    </div>
 
 
@@ -95,7 +95,7 @@ This code example shows you how to create a widget programmatically, awesome isn
    });
    </script>
    <div id="fohoo">Click Me</div>
-   <div dojoType="foohoo">Or Me</div>
+   <div data-dojo-type="foohoo">Or Me</div>
 
 Here is my rest syntax
 ======================
