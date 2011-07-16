@@ -310,24 +310,24 @@ The following is a semi-complex example of the write API in action. In this exam
 
   .. cv :: html 
 
-    <div dojoType="dojo.data.ItemFileWriteStore" data="geoData" data-dojo-id="geoStore"></div>
+    <div data-dojo-type="dojo.data.ItemFileWriteStore" data-dojo-props="data:geoData" data-dojo-id="geoStore"></div>
     <b>Set the population to assign to all items</b>
     <br>
     <br>
-    <div dojoType="dijit.form.NumberSpinner" data-dojo-id="spinner" value="10000"></div>
+    <div data-dojo-type="dijit.form.NumberSpinner" data-dojo-id="spinner" value="10000"></div>
     <br>
     <br>
-    <div dojoType="dijit.form.Button" data-dojo-id="button2">Update all geography items populations!</div>
+    <div data-dojo-type="dijit.form.Button" data-dojo-id="button2">Update all geography items populations!</div>
     <br>
     <br>
     <div id="grid"  
       style="width: 400px; height: 300px;"
-      dojoType="dojox.grid.DataGrid" 
-      store="geoStore" 
-      structure="layoutGeo" 
-      query="{}"
-      queryOptions="{'deep':true}" 
-      rowsPerPage="40">
+      data-dojo-type="dojox.grid.DataGrid" 
+      data-dojo-props="store:geoStore,
+      structure:layoutGeo,
+      query:{},
+      queryOptions:{'deep':true},
+      rowsPerPage:40">
     </div>
 
   .. cv:: css
@@ -423,14 +423,14 @@ This example demonstrates how to use a function such as *deleteItem*. In this ca
 
   .. cv :: html 
 
-    <div dojoType="dojo.data.ItemFileWriteStore" data="storeData2" data-dojo-id="geographyStore2"></div>
+    <div data-dojo-type="dojo.data.ItemFileWriteStore" data-dojo-props="data:storeData2" data-dojo-id="geographyStore2"></div>
     <b>Before pressing delete, be sure to expand out the tree so you can see nodes (items), being removed from it.</b>
     <br>
     <div data-dojo-type="dijit.form.Button" data-dojo-id="button3">Delete All Cities!</div>
     <br>
     <br>
-    <div dojoType="dijit.tree.ForestStoreModel" data-dojo-id="geographyModel2" store="geographyStore2" query="{type: 'continent'}" rootId="Geography" rootLabel="Geography"></div>
-    <div dojoType="dijit.Tree" model="geographyModel2"></div>
+    <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="geographyModel2" data-dojo-props="store:geographyStore2, query:{type: 'continent'}, rootId:'Geography', rootLabel:'Geography'"></div>
+    <div data-dojo-type="dijit.Tree" data-dojo-props="model:geographyModel2"></div>
 
 ItemFileWriteStore changes reflected in dojox.data.DataGrid (with _saveCustom)
 ------------------------------------------------------------------------------
@@ -610,24 +610,24 @@ is displayed in an alert.
 
   .. cv :: html 
 
-    <div dojoType="dojo.data.ItemFileWriteStore" data="geoData2" data-dojo-id="geoStore2"></div>
+    <div data-dojo-type="dojo.data.ItemFileWriteStore" data-dojo-props="data:geoData2" data-dojo-id="geoStore2"></div>
     <b>Set the population to assign to all items of type city</b>
     <br>
     <br>
-    <div dojoType="dijit.form.NumberSpinner" data-dojo-id="spinner2" value="10000"></div>
+    <div data-dojo-type="dijit.form.NumberSpinner" data-dojo-id="spinner2" value="10000"></div>
     <br>
     <br>
-    <div dojoType="dijit.form.Button" data-dojo-id="button3">Update all geography items of type city with a new population!</div>
+    <div data-dojo-type="dijit.form.Button" data-dojo-id="button3">Update all geography items of type city with a new population!</div>
     <br>
     <br>
     <div id="grid2"   
       style="width: 400px; height: 300px;"
-      dojoType="dojox.grid.DataGrid" 
-      store="geoStore2" 
-      structure="layoutGeo2" 
-      query="{}"
-      queryOptions="{'deep':true}" 
-      rowsPerPage="40">
+      data-dojo-type="dojox.grid.DataGrid" 
+      data-dojo-props="store:geoStore2,
+      structure:layoutGeo2,
+      query:{},
+      queryOptions:{'deep':true},
+      rowsPerPage:40">
     </div>
 
   .. cv:: css
