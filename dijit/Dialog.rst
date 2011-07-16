@@ -322,7 +322,7 @@ This example shows a Dialog that will ask the user to accept or decline the term
         <table>
             <tr>
                 <td>
-                    <input type="radio" data-dojo-type="dijit.form.RadioButton" name="agreement" id="radioOne" value="accept" onclick="accept"/>
+                    <input type="radio" data-dojo-type="dijit.form.RadioButton" name="agreement" id="radioOne" value="accept" data-dojo-props="onClick:accept"/>
                     <label for="radioOne">
                         I accept the terms of this agreement
                     </label>
@@ -330,7 +330,7 @@ This example shows a Dialog that will ask the user to accept or decline the term
             </tr>
             <tr>
                 <td>
-                    <input type="radio" data-dojo-type="dijit.form.RadioButton" name="agreement" id="radioTwo" value="decline" onclick="decline"/>
+                    <input type="radio" data-dojo-type="dijit.form.RadioButton" name="agreement" id="radioTwo" value="decline" data-dojo-props="onClick:decline"/>
                     <label for="radioTwo">
                         I decline 
                     </label>
@@ -362,13 +362,13 @@ This example shows a Dialog that will ask the user to accept or decline the term
             dojo.connect(dijit.byId("termsButton"), "onClick", formDlg, "show");
         });
 			
-        function accept(){
+        var accept = function(){
             dojo.byId("decision").innerHTML = "Terms and conditions have been accepted.";
             dojo.style("decision", "color", "#00CC00");
             dijit.byId("formDialog").hide();
         }
 			
-        function decline(){
+        var decline = function(){
             dojo.byId("decision").innerHTML = "Terms and conditions have not been accepted.";
             dojo.style("decision", "color", "#FF0000");
             dijit.byId("formDialog").hide();
