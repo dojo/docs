@@ -93,7 +93,7 @@ Simple Example, one column and no styling
 
   .. html::
 
-    <div dojoType="dojox.layout.TableContainer" cols="1" id="tc1">
+    <div data-dojo-type="dojox.layout.TableContainer" data-dojo-props="cols:1" id="tc1">
       <div dojoType="dijit.form.TextBox" title="First Name:" value="Michael"></div>
       <div dojoType="dijit.form.TextBox" title="Last Name:" value="Collins"></div>
       <div dojoType="dijit.form.CheckBox" title="Employed"></div>
@@ -122,7 +122,7 @@ Two Columns, Label Styling
 
   .. html::
 
-    <div dojoType="dojox.layout.TableContainer" cols="2" id="tc1" customClass="justLabels">
+    <div data-dojo-type="dojox.layout.TableContainer" data-dojo-props="cols:2, customClass:'justLabels'" id="tc1">
       <div dojoType="dijit.form.TextBox" title="First Name:" value="Eamonn"></div>
       <div dojoType="dijit.form.TextBox" title="Last Name:" value="De Valera"></div>
       <div dojoType="dijit.form.CheckBox" title="Employed"></div>
@@ -163,7 +163,7 @@ Two Columns, Label and Value cell Styling
 
   .. html::
 
-    <div dojoType="dojox.layout.TableContainer" cols="2" id="tc1" customClass="labelsAndValues">
+    <div data-dojo-type="dojox.layout.TableContainer" data-dojo-props="cols:2, customClass:'labelsAndValues'" id="tc1">
       <div dojoType="dijit.form.TextBox" title="First Name:" value="Patrick"></div>
       <div dojoType="dijit.form.TextBox" title="Last Name:" value="Pearse"></div>
       <div dojoType="dijit.form.CheckBox" title="Employed"></div>
@@ -210,7 +210,7 @@ Using Colspan
 
   .. html::
 
-    <div dojoType="dojox.layout.TableContainer" cols="4" id="tc1" customClass="labelsAndValues" >
+    <div data-dojo-type="dojox.layout.TableContainer" data-dojo-props="cols:4, customClass:'labelsAndValues'" id="tc1">
       <div dojoType="dijit.form.TextBox" title="First Name:" colspan="2" value="Tom"></div>
       <div dojoType="dijit.form.TextBox" title="Last Name:" colspan="2" value="Clarke"></div>
       <textarea dojoType="dijit.form.Textarea" id="texteditor" style="width:100%;" colspan="4" title="Personal Details">Hi, I'm a hacker, I have no  personal details to speak of, but I can write a widget in under a minute!
@@ -328,7 +328,7 @@ Setting the Label Width
 
   .. html::
 
-    <div dojoType="dojox.layout.TableContainer" cols="2" id="tc1" customClass="labelsAndValues" labelWidth="10">
+    <div data-dojo-type="dojox.layout.TableContainer" data-dojo-props="cols:2, customClass:'labelsAndValues', labelWidth:10" id="tc1">
       <div dojoType="dijit.form.TextBox" title="1" value="United States"></div>
       <div dojoType="dijit.form.TextBox" title="2" value="Ireland"></div>
       <div dojoType="dijit.form.TextBox" title="3" value="Italy"></div>
