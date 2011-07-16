@@ -45,7 +45,7 @@ set the <b>numberThumbs</b> attribute, e.g.
 .. code-block :: javascript
  :linenos:
  
-  <div dojoType="dojox.image.ThumbnailPicker" id="picker1" numberThumbs="4"> </div>
+  <div data-dojo-type="dojox.image.ThumbnailPicker" id="picker1" data-dojo-props="numberThumbs:4"> </div>
 
 
 
@@ -59,8 +59,8 @@ optionally contains a query. e.g.
 .. code-block :: javascript
  :linenos:
  
-  <div dojoType="dojox.image.ThumbnailPicker" id="picker1" > </div>
-  <div data-dojo-id="imageItemStore" dojoType="dojo.data.ItemFileReadStore" url="images.json"></div>
+  <div data-dojo-type="dojox.image.ThumbnailPicker" id="picker1"></div>
+  <div data-dojo-id="imageItemStore" data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="url:'images.json'"></div>
   <script type="text/javascript">
      dojo.addOnLoad(function() {
      //Define the request, saying that 20 records should be fetched at a time, 
@@ -87,7 +87,7 @@ horizontal, either omit the isHorizontal attribute, or set it to "true", e.g.
 .. code-block :: javascript
  :linenos:
 
-  <div dojoType="dojox.image.ThumbnailPicker" id="picker1" isHorizontal="false"> </div>
+  <div data-dojo-type="dojox.image.ThumbnailPicker" id="picker1" data-dojo-props="isHorizontal:false"> </div>
 
 
 Enabling/disabling following hyperlinks
@@ -101,7 +101,7 @@ the link in the current window, set the hyperlinkTarget attribute to "this". e.g
 .. code-block :: javascript
  :linenos:
 
-  <div dojoType="dojox.image.ThumbnailPicker" id="picker1" useHyperlink="true" hyperlinkTarget="this"> </div>
+  <div data-dojo-type="dojox.image.ThumbnailPicker" id="picker1" data-dojo-props="useHyperlink:true, hyperlinkTarget:this"> </div>
 
 Notification of load status for images
 --------------------------------------
@@ -118,7 +118,7 @@ really makes sense to use it in combination with other widgets or elements on a 
 .. code-block :: javascript
   :linenos:
 
-  <div dojoType="dojox.image.ThumbnailPicker" id="picker1" useLoadNotifier="true"> </div>
+  <div data-dojo-type="dojox.image.ThumbnailPicker" id="picker1" data-dojo-props="useLoadNotifier:true"> </div>
 
 
 Setting size of thumbnails
@@ -183,8 +183,8 @@ of settings, and uses the FlickrRestStore data store.
        This ThumbnailPicker should have 4 thumbnails, witheach of them linking
        to a URL when clicked on, changing the current page.  The cursor should also change when over an image.
        The widget is laid out in the default horizontal layout.
-       <div id="thumbPicker1" dojoType="dojox.image.ThumbnailPicker" numberThumbs="4" useHyperlink="true" 
-       hyperlinkTarget="this"></div>
+       <div id="thumbPicker1" data-dojo-type="dojox.image.ThumbnailPicker" data-dojo-props="numberThumbs:4, useHyperlink:true,
+       hyperlinkTarget:this"></div>
 
    .. cv:: css
 
