@@ -302,7 +302,7 @@ Sample code:  Detecting child items and lazy-loading items on demand
 --------------------------------------------------------------------
 
 .. code-block :: javascript
- :linenos
+ :linenos:
 
   var store = new dojo.data.ItemFileReadStore({url: "countries.json"});
 
