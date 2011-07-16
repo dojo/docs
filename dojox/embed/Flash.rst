@@ -18,7 +18,7 @@ Base functionality to insert a flash movie into a document on the fly.
 Introduction
 ============
 
-Embedding flash media in HTML can be done in different ways. Internet Explorer uses object tag for flash content, on the other hand Chrome, Firefox, Opera and Safari use embed tag. You can combine both worlds with the following approach:
+Embedding flash media in HTML can be done in different ways. Usually the following method is used:
 
 .. code-block :: html
  :linenos:
@@ -39,9 +39,7 @@ Embedding flash media in HTML can be done in different ways. Internet Explorer u
    />
  </object>
 
-What if user's browser does not have Adobe flash player installed?
-
-Object tag can use codebase attribute and embed attribute can use pluginspace attribute. They define locations where and which flash player version browser should download in case of missing plugin:
+Here object tag is used for IE and old Netscape's embed tag is used for other browsers. What if user's browser does not have Adobe flash player installed? Object tag can use codebase attribute and embed attribute can use pluginspace attribute. They define locations where and which flash player version browser should download in case of missing plugin:
 
 .. code-block :: html
  :linenos:
@@ -63,7 +61,24 @@ Object tag can use codebase attribute and embed attribute can use pluginspace at
    />
  </object>
 
-However this is old and not very user friendly method. By using codebase and pluginspace attributes you impose flash plugin to user. However there is a better way, where dojo comes in. With dojo you can use alternative content.
+However this is an old and not very user friendly method. By using codebase and pluginspace attributes you impose flash plugin to user. Besides this code is not markup compliant because it uses embed tag if used with non html5 doctypes. Very popular and bullet proof method of flash embedding in today's browsers is:
+
+.. code-block :: html
+ :linenos:
+ 
+ <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="100%" height="700">
+   <param name="movie" value="flash.swf" />
+   <!--[if !IE]>-->
+     <object type="application/x-shockwave-flash" data="flash.swf" width="100%" height="700">
+   <!--<![endif]-->
+     <h1>Alternative flash content</h1>
+     <a href="http://get.adobe.com/flashplayer/"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" /></a>
+   <!--[if !IE]>-->
+     </object>
+   <!--<![endif]-->
+ </object>
+
+This method uses two object tags. First object tag is for IE, second is for other browsers.
 
 
 =====
@@ -118,6 +133,8 @@ Constructor Parameters
 +------------------+------------------------------------------------------------------------------+---------------------------+
 
 
+
+
 ========
 Examples
 ========
@@ -162,6 +179,13 @@ Declarative example
    <h1>Alternative flash content</h1>
    <a href="http://get.adobe.com/flashplayer/"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" /></a>
  </div>
+
+
+==========
+Background
+==========
+
+
 
 
 ========
