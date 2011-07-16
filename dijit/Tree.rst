@@ -127,14 +127,14 @@ A markup tree
 
   .. cv:: html
 
-    <div dojoType="dojo.data.ItemFileReadStore" data-dojo-id="continentStore"
-      url="{{dataUrl}}/dijit/tests/_data/countries.json"></div>
-    <div dojoType="dijit.tree.ForestStoreModel" data-dojo-id="continentModel" 
-      store="continentStore" query="{type:'continent'}"
-      rootId="continentRoot" rootLabel="Continents" childrenAttrs="children"></div>
+    <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-id="continentStore"
+      data-dojo-props="url:'{{dataUrl}}/dijit/tests/_data/countries.json'"></div>
+    <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="continentModel" 
+      data-dojo-props="store:continentStore, query:{type:'continent'},
+      rootId:'continentRoot', rootLabel:'Continents', childrenAttrs:'children'"></div>
 
-    <div dojoType="dijit.Tree" id="mytree"
-      model="continentModel" openOnClick="true">
+    <div data-dojo-type="dijit.Tree" id="mytree"
+      data-dojo-props="model:'continentModel', openOnClick:true">
       <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="item">
         alert("Execute of node " + continentStore.getLabel(item)
             +", population=" + continentStore.getValue(item, "population"));
@@ -217,14 +217,14 @@ Sometimes you don't want that "the world" top level node to show up, especially 
 
   .. cv:: html
 
-    <div dojoType="dojo.data.ItemFileReadStore" data-dojo-id="continentStore"
-      url="{{dataUrl}}/dijit/tests/_data/countries.json"></div>
-    <div dojoType="dijit.tree.ForestStoreModel" data-dojo-id="continentModel" 
-      store="continentStore" query="{type:'continent'}"
-      rootId="continentRoot" rootLabel="Continents" childrenAttrs="children"></div>
+    <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-id="continentStore"
+      data-dojo-props="url:'{{dataUrl}}/dijit/tests/_data/countries.json'"></div>
+    <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="continentModel" 
+      data-dojo-props="store:continentStore, query:{type:'continent'},
+      rootId:'continentRoot', rootLabel:'Continents', childrenAttrs:'children'"></div>
     
-    <div dojoType="dijit.Tree" id="mytree2"
-      model="continentModel" showRoot="false">
+    <div data-dojo-type="dijit.Tree" id="mytree2"
+      data-dojo-props="model:'continentModel', showRoot:false">
     </div>
 
 Note that you can hide or show the root item regardless of whether that root item is fabricated or corresponds to a real item in the store.
@@ -326,16 +326,16 @@ If between threshold is set to a positive integer value like 5 (which represents
 
   .. cv:: html
 
-    <div dojoType="dojo.data.ItemFileWriteStore" data-dojo-id="continentStore5"
-      url="{{dataUrl}}/dijit/tests/_data/countries.json"></div>
+    <div data-dojo-type="dojo.data.ItemFileWriteStore" data-dojo-id="continentStore5"
+      data-dojo-props="url:'{{dataUrl}}/dijit/tests/_data/countries.json'"></div>
     
-    <div dojoType="dijit.tree.ForestStoreModel" data-dojo-id="continentModel5" 
-      store="continentStore5" query="{type:'continent'}"
-      rootId="continentRoot" rootLabel="Continents" childrenAttrs="children"></div>
+    <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="continentModel5" 
+      data-dojo-props="store:continentStore5, query:{type:'continent'},
+      rootId:'continentRoot', rootLabel:'Continents', childrenAttrs:'children'"></div>
     
-    <div dojoType="dijit.Tree" id="mytree5"
-      dndController="dijit.tree.dndSource" betweenThreshold="5" showRoot="false"
-      model="continentModel5" openOnClick="true">
+    <div data-dojo-type="dijit.Tree" id="mytree5"
+      data-dojo-props="dndController:'dijit.tree.dndSource', betweenThreshold:5, showRoot:false,
+      model:'continentModel5', openOnClick:true">
     </div>
 
 
@@ -371,20 +371,20 @@ Tree has no built-in support for context menus, but you can use the Menu widget 
 
   .. cv:: html
 
-	<ul dojoType="dijit.Menu" id="tree_menu" style="display: none;">
-		<li dojoType="dijit.MenuItem" onClick="alert('Hello world');">Item #1</li>
-		<li dojoType="dijit.MenuItem">Item #2</li>
+	<ul data-dojo-type="dijit.Menu" id="tree_menu" style="display: none;">
+		<li data-dojo-type="dijit.MenuItem" data-dojo-props="onClick:function(){alert('Hello world');}">Item #1</li>
+		<li data-dojo-type="dijit.MenuItem">Item #2</li>
 	</ul>
         
-        <div dojoType="dojo.data.ItemFileReadStore" data-dojo-id="menuContinentStore"
-             url="{{dataUrl}}/dijit/tests/_data/countries.json"></div>
+        <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-id="menuContinentStore"
+             data-dojo-props="url:'{{dataUrl}}/dijit/tests/_data/countries.json'"></div>
         
-        <div dojoType="dijit.tree.ForestStoreModel" data-dojo-id="menuContinentModel" 
-             store="menuContinentStore" query="{type:'continent'}"
-             rootId="continentRoot" rootLabel="Continents" childrenAttrs="children"></div>
+        <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="menuContinentModel" 
+             data-dojo-props="store:menuContinentStore, query:{type:'continent'},
+             rootId:'continentRoot', rootLabel:'Continents', childrenAttrs:'children'"></div>
             
-	<div dojoType="dijit.Tree" id="menuTree"
-		model="menuContinentModel" showRoot="false" openOnClick="true">
+	<div data-dojo-type="dijit.Tree" id="menuTree"
+             data-dojo-props="model:'menuContinentModel', showRoot:false, openOnClick:true">
                  
 		<script type="dojo/connect">
 			var menu = dijit.byId("tree_menu");
