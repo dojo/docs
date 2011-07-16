@@ -91,6 +91,7 @@ Flash embedding with dojo is as simple as:
  :linenos:
 
  <script type="text/javascript">
+   dojo.require("dojo.parser");
    dojo.require("dojox.embed.Flash");
    dojo.addOnLoad(function(){
      var movie = new dojox.embed.Flash({
