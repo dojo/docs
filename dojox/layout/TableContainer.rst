@@ -75,7 +75,6 @@ Simple Example, one column and no styling
 -----------------------------------------
 
 .. code-example::
-  :version: local
 
   Load the required JavaScript files. These include the TableContainer itself, along with the three other widgets that it contains.
 
