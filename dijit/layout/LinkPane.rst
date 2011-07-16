@@ -12,16 +12,16 @@ When the parser runs and sees this node, a content pane will be generated with t
 
 .. code-block :: html
   
-  <a href="foo.html" dojoType="dijit.layout.LinkPane">Hello</a>
+  <a href="foo.html" data-dojo-type="dijit.layout.LinkPane">Hello</a>
 
 This can be used in other layout widgets, such as a `TabContainer <dijit/layout/TabContainer>`_:
 
 .. code-block :: html
 
-  <div dojoType="dijit.layout.TabContainer" style="height:300px; width:500px">
-      <a href="page1.html" dojoType="dijit.layout.LinkPane">Tab 1</a>
-      <a href="page2.html" dojoType="dijit.layout.LinkPane">Tab 2</a>
-      <a href="page3.html" dojoType="dijit.layout.LinkPane">Tab 3</a>
+  <div data-dojo-type="dijit.layout.TabContainer" style="height:300px; width:500px">
+      <a href="page1.html" data-dojo-type="dijit.layout.LinkPane">Tab 1</a>
+      <a href="page2.html" data-dojo-type="dijit.layout.LinkPane">Tab 2</a>
+      <a href="page3.html" data-dojo-type="dijit.layout.LinkPane">Tab 3</a>
   </div>
 
 See Also:
