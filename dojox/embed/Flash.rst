@@ -181,13 +181,6 @@ Declarative example
  </div>
 
 
-==========
-Background
-==========
-
-
-
-
 ========
 See also
 ========
