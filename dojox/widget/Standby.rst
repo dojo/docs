@@ -108,7 +108,7 @@ Basic usage
     <button data-dojo-id="b1" data-dojo-type="dijit.form.Button">Show Standby widget</button>
     <button data-dojo-id="b2" data-dojo-type="dijit.form.Button">Hide Standby widget</button>
     <div id="basic" style="width: 300px; height: 150px; background-color: yellow; border-style: solid; border-width: 2px;"></div>
-    <div data-dojo-id="basicStandby1" dojoType="dojox.widget.Standby" target="basic"></div>
+    <div data-dojo-id="basicStandby1" data-dojo-type="dojox.widget.Standby" data-dojo-props="target:'basic'"></div>
 
   .. css::
 
@@ -217,7 +217,7 @@ Changing overlay color
     <button data-dojo-id="b5" data-dojo-type="dijit.form.Button">Show Standby widget</button>
     <button data-dojo-id="b6" data-dojo-type="dijit.form.Button">Hide Standby widget</button>
     <div id="basic3" style="width: 300px; height: 150px; background-color: yellow; border-style: solid; border-width: 2px;"></div>
-    <div data-dojo-id="basicStandby3" dojoType="dojox.widget.Standby" target="basic3" color="red"></div>
+    <div data-dojo-id="basicStandby3" data-dojo-type="dojox.widget.Standby" data-dojo-props="target:'basic3', color:'red'"></div>
 
   .. cv:: css
 
@@ -271,7 +271,7 @@ Changing overlay color and image
     <button data-dojo-id="b7" data-dojo-type="dijit.form.Button">Show Standby widget</button>
     <button data-dojo-id="b8" data-dojo-type="dijit.form.Button">Hide Standby widget</button>
     <div id="basic4" style="width: 400px; height: 400px; background-color: yellow; border-style: solid; border-width: 2px;"></div>
-    <div data-dojo-id="basicStandby4" dojoType="dojox.widget.Standby" target="basic4" color="lightgray" image="{{baseUrl}}dojox/widget/tests/images/busy.gif"></div>
+    <div data-dojo-id="basicStandby4" data-dojo-type="dojox.widget.Standby" data-dojo-props="target:'basic4', color:'lightgray', image:'{{baseUrl}}dojox/widget/tests/images/busy.gif'"></div>
 
   .. cv:: css
 
@@ -327,7 +327,7 @@ This example works on Firefix and Safari only.
     <button data-dojo-id="b9" data-dojo-type="dijit.form.Button">Show Standby widget</button>
     <button data-dojo-id="b10" data-dojo-type="dijit.form.Button">Hide Standby widget</button>
     <div id="basic5" style="width: 200px; height: 200px; background-color: yellow; border-style: solid; border-width: 2px; -moz-border-radius: 20px; -webkit-border-radius: 20px;"></div>
-    <div data-dojo-id="basicStandby5" dojoType="dojox.widget.Standby" target="basic5" color="lightgray"></div>
+    <div data-dojo-id="basicStandby5" data-dojo-type="dojox.widget.Standby" data-dojo-props="target:'basic5', color:'lightgray'"></div>
 
   .. cv:: css
 
@@ -381,8 +381,8 @@ Overlaying a dijit.form.TextBox
     <button data-dojo-id="b11" data-dojo-type="dijit.form.Button">Show Standby widget</button>
     <button data-dojo-id="b12" data-dojo-type="dijit.form.Button">Hide Standby widget</button>
     <br><br>
-    <input type="text" dojoType="dijit.form.TextBox" id="dijitWidget"></input>
-    <div data-dojo-id="basicStandby6" dojoType="dojox.widget.Standby" target="dijitWidget"></div>
+    <input type="text" data-dojo-type="dijit.form.TextBox" id="dijitWidget"></input>
+    <div data-dojo-id="basicStandby6" data-dojo-type="dojox.widget.Standby" data-dojo-type="target:'dijitWidget'"></div>
 
   .. cv:: css
 
