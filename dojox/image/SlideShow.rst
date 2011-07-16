@@ -43,7 +43,7 @@ use the code below
 .. code-block :: javascript
  :linenos:
 
-  <div dojoType="dojox.image.SlideShow" id="slideshow1" slideshowInterval="3"> </div>
+  <div data-dojo-type="dojox.image.SlideShow" id="slideshow1" data-dojo-props="slideshowInterval:3"> </div>
 
 
 Overriding the Title Template
@@ -61,8 +61,8 @@ For example:
 .. code-block :: javascript
  :linenos:
  
-  <div dojoType="dojox.image.SlideShow" id="slideshow1" 
-     titleTemplate="My title is '@title', this is image @current out of @total">
+  <div data-dojo-type="dojox.image.SlideShow" id="slideshow1" 
+     data-dojo-props="titleTemplate:'My title is: @title, this is image @current out of @total'">
   </div>
 
 
@@ -78,8 +78,8 @@ dimensions is greater.
 .. code-block :: javascript
  :linenos:
  
-  <div dojoType="dojox.image.SlideShow" id="slideshow1" 
-     imageWidth="600" imageHeight="300">
+  <div data-dojo-type="dojox.image.SlideShow" id="slideshow1" 
+     data-dojo-props="imageWidth:600, imageHeight:300">
   </div>
 
 
@@ -93,7 +93,7 @@ parameter to "false". e.g.
 .. code-block :: javascript
  :linenos:
 
-  <div dojoType="dojox.image.SlideShow" id="slideshow1" autoLoad="false">
+  <div data-dojo-type="dojox.image.SlideShow" id="slideshow1" data-dojo-props="autoLoad:false">
   </div>
 
 
@@ -109,7 +109,7 @@ layout. To disable this resizing behavior, set the fixedHeight attribute to "tru
 .. code-block :: javascript
  :linenos:
  
-   <div dojoType="dojox.image.SlideShow" id="slideshow1" fixedHeight="true">
+   <div data-dojo-type="dojox.image.SlideShow" id="slideshow1" data-dojo-props="fixedHeight:true">
    </div>
 
 
@@ -123,8 +123,8 @@ dojox.data.FlickrRestStore. Next, create a request object, which optionally cont
 .. code-block :: javascript
  :linenos:
  
-   <div dojoType="dojox.image.SlideShow" id="slideshow1" > </div>
-   <div data-dojo-id="imageItemStore" dojoType="dojo.data.ItemFileReadStore" url="images.json"></div>
+   <div data-dojo-type="dojox.image.SlideShow" id="slideshow1"></div>
+   <div data-dojo-id="imageItemStore" data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="url:'images.json'"></div>
    <script type="text/javascript">
       dojo.addOnLoad(function() {
          //Define the request, saying that 20 records should be fetched at a time, 
@@ -217,7 +217,7 @@ The name of the topic is retrieved by calling the getShowTopicName method on the
     This SlideShow should display five photos, and not loop. It should also not
     open a URL when the image is clicked.  AutoLoading of images is also disabled.
     The time between images in a SlideShow is 1 second.  The widget should not resize to fit the image
-    <div id="slideshow2" dojoType="dojox.image.SlideShow" noLink="true" loop="false" autoLoad="false" slideshowInterval="1" fixedHeight="true"> </div>
+    <div id="slideshow2" data-dojo-type="dojox.image.SlideShow" data-dojo-props="noLink:true, loop:false, autoLoad:false, slideshowInterval:1, fixedHeight:true"> </div>
 
   .. cv:: css
 
