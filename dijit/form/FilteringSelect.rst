@@ -84,7 +84,7 @@ NOTE: if you do not specify a selected option, the browser will select the first
 
   .. cv:: html
 
-    <select dojoType="dijit.form.FilteringSelect" id="fruit" name="fruit">
+    <select data-dojo-type="dijit.form.FilteringSelect" id="fruit" name="fruit">
         <option value="AP">Apples</option>
         <option value="OR" selected>Oranges</option>
         <option value="PE" >Pears</option>
@@ -107,13 +107,12 @@ To set the default value for this example, specify the *value* attribute (the hi
 
   .. cv:: html
 
-    <div dojoType="dojo.data.ItemFileReadStore" 
+    <div data-dojo-type="dojo.data.ItemFileReadStore" 
         data-dojo-id="stateStore"
-        url="{{dataUrl}}/dijit/tests/_data/states.json"></div>
-    <input dojoType="dijit.form.FilteringSelect"
+        data-dojo-props="url:'{{dataUrl}}/dijit/tests/_data/states.json'"></div>
+    <input data-dojo-type="dijit.form.FilteringSelect"
         value="KY"
-        store="stateStore"
-        searchAttr="name"
+        data-dojo-props="store:stateStore, searchAttr:'name'"
         name="state"
         id="stateInput">
 
@@ -135,14 +134,13 @@ In this example, the FilteringSelect has been set to display the abbreviations f
 
   .. cv:: html
 
-    <div dojoType="dojo.data.ItemFileReadStore" 
+    <div data-dojo-type="dojo.data.ItemFileReadStore" 
         data-dojo-id="stateStore"
-        url="{{dataUrl}}/dijit/tests/_data/states.json"></div>
-    <input dojoType="dijit.form.FilteringSelect"
-        store="stateStore"
+        data-dojo-props="url:'{{dataUrl}}/dijit/tests/_data/states.json'"></div>
+    <input data-dojo-type="dijit.form.FilteringSelect"
+        data-dojo-props="store:stateStore, searchAttr:'abbreviation'"
         value="KY"
         id="fs"
-        searchAttr="abbreviation"
         name="abbreviatedstate">
 
 Codependent FilteringSelect/ComboBox widgets
@@ -475,7 +473,7 @@ In this example, the FilteringSelect takes a labelFunc attribute pointing to a f
     <script type="text/javascript">
         dojo.require("dijit.form.FilteringSelect");
         dojo.require("dojo.data.ItemFileReadStore");
-	function myLabelFunc(item, store){
+	myLabelFunc = function (item, store){
 		var label=store.getValue(item, 'name');
 		// DEMO: uncomment to chop off a character
 		//label=label.substr(0, label.length-1);
@@ -487,17 +485,14 @@ In this example, the FilteringSelect takes a labelFunc attribute pointing to a f
 
   .. cv:: html
 
-    <div dojoType="dojo.data.ItemFileReadStore" 
+    <div data-dojo-type="dojo.data.ItemFileReadStore" 
         data-dojo-id="stateStore"
-        url="{{dataUrl}}/dijit/tests/_data/states.json"></div>
-    <input dojoType="dijit.form.FilteringSelect"
+        data-dojo-props="url:'{{dataUrl}}/dijit/tests/_data/states.json'"></div>
+    <input data-dojo-type="dijit.form.FilteringSelect"
+        data-dojo-props="store:stateStore, labelFunc:myLabelFunc, searchAttr:'name'"
         id="fs"
-        store="stateStore"
         value="KY"
-        searchAttr="name"
-        name="state"
-        labelFunc="myLabelFunc">
-
+        name="state">
 
 
 =============
