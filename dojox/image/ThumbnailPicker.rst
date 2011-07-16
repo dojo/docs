@@ -145,10 +145,12 @@ This example will put a horizontal dojox.image.ThumbnailPicker widget on a page,
 of settings, and uses the FlickrRestStore data store.
  
 .. code-example::
+ :djConfig: parseOnLoad: false
 
    .. cv:: javascript
 
         <script type="text/javascript">
+        dojo.require("dojo.parser");
         dojo.require("dojox.image.ThumbnailPicker");
         dojo.require("dojox.data.FlickrRestStore");
 
