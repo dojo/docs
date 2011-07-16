@@ -929,7 +929,7 @@ segment of x1/x2/.../xi/xi+1/.../xn. I'll use this language when describing path
 According to the AMD specification, the segments may be any legal Javascript identifier, and, by convention, are
 camel-case. Most AMD loaders, including dojo's, are more relaxed than this and accept characters outside the Javascript
 identifier alphabet. That said, I strongly recommend using only the characters in ``[A-Za-z0-9_-]``. Whatever you do, do not
-use the characters !, *, ?, /, or \ in module names; these will only lead to problems.
+use the characters !, \*, ?, /, or \ in module names; these will only lead to problems.
 
 Our goal in this section is to transform a module identifier into an addess that points to the resource indicated by the
 module identifier. In the browser, the address is a URL that can be used to inject a script element or execute an XHR
