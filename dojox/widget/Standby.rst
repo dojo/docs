@@ -382,7 +382,7 @@ Overlaying a dijit.form.TextBox
     <button data-dojo-id="b12" data-dojo-type="dijit.form.Button">Hide Standby widget</button>
     <br><br>
     <input type="text" data-dojo-type="dijit.form.TextBox" id="dijitWidget"></input>
-    <div data-dojo-id="basicStandby6" data-dojo-type="dojox.widget.Standby" data-dojo-type="target:'dijitWidget'"></div>
+    <div data-dojo-id="basicStandby6" data-dojo-type="dojox.widget.Standby" data-dojo-props="target:'dijitWidget'"></div>
 
   .. cv:: css
 
