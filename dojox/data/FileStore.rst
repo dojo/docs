@@ -78,6 +78,7 @@ Query Structure
 The dojox.data.FileStore query structure follows that of dojo.data.ItemFileReadStore. It is an object-based query structure where the store queries for file items using patterns defined for the attributes to be matched. For example a query object of:
 
 .. code-block :: javascript
+ :linenos:
 
   {  
     name: "foo*.txt"
@@ -151,7 +152,8 @@ Simple programmatic usage
 
 A complete code example of querying the entire filesystem for a wildcard matched file:
 
-:: 
+.. code-block :: javascript
+ :linenos:
 
   var fileStore = new dojox.data.FileStore({url: "myService.php", pathAsQueryParam: true});
     function searchDone(items, request){
@@ -183,9 +185,9 @@ Attaching the FileStore to dijit.Tree declaratively
   .. cv :: html
   
     <div>
-      <div dojoType="dojox.data.FileStore" url="{{dataUrl}}dojox/data/demos/stores/filestore_dojotree.php" pathAsQueryParam="true" data-dojo-id="dojoFiles"></div>
-      <div dojoType="dijit.tree.ForestStoreModel" data-dojo-id="fileModel" store="dojoFiles" query="{}" rootId="DojoFiles" rootLabel="Dojo Files" childrenAttrs="children"></div>
-      <div id="tree" dojoType="dijit.Tree" model="fileModel" ></div>  
+      <div data-dojo-type="dojox.data.FileStore" data-dojo-props="url:'{{dataUrl}}dojox/data/demos/stores/filestore_dojotree.php', pathAsQueryParam:true" data-dojo-id="dojoFiles"></div>
+      <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="fileModel" data-dojo-props="store:dojoFiles, query:{}, rootId:'DojoFiles', rootLabel:'Dojo Files', childrenAttrs:'children'"></div>
+      <div id="tree" data-dojo-type="dijit.Tree" data-dojo-props="model:fileModel" ></div>  
     </div>
 
 Attaching the FileStore to dijit.form.ComboBox declaratively
@@ -203,8 +205,8 @@ Attaching the FileStore to dijit.form.ComboBox declaratively
   .. cv :: html
 
     <div>
-      <div dojoType="dojox.data.FileStore" url="{{dataUrl}}dojox/data/demos/stores/filestore_dojoxdata.php" pathAsQueryParam="true" data-dojo-id="comboStore"></div>
-      <div dojoType="dijit.form.ComboBox"  store="comboStore" searchAttr="path" value="./demos"></div> 
+      <div data-dojo-type="dojox.data.FileStore" data-dojo-props="url:'{{dataUrl}}dojox/data/demos/stores/filestore_dojoxdata.php', pathAsQueryParam:true" data-dojo-id="comboStore"></div>
+      <div data-dojo-type="dijit.form.ComboBox" data-dojo-props="store:comboStore, searchAttr:'path'" value="./demos"></div> 
     </div>
 
 Attaching the FileStore to dojox.grid.DataGrid declaratively
@@ -221,18 +223,18 @@ Attaching the FileStore to dojox.grid.DataGrid declaratively
 
   .. cv :: html
 
-    <span dojoType="dojox.data.FileStore" 
+    <span data-dojo-type="dojox.data.FileStore" 
       data-dojo-id="fileStore3" 
-      url="{{dataUrl}}dojox/data/demos/stores/filestore_dojoxdata.php" 
-      pathAsQueryParam="true">
+      data-dojo-props="url:'{{dataUrl}}dojox/data/demos/stores/filestore_dojoxdata.php',
+      pathAsQueryParam:true">
     </span>
 
-    <table dojoType="dojox.grid.DataGrid"
-        store="fileStore3"
-        query="{}"
-        queryOptions="{deep:true}"
-        sortFields="[{'attribute':'path', 'descending': false}]"
-        clientSort="true"
+    <table data-dojo-type="dojox.grid.DataGrid"
+        data-dojo-props="store:fileStore3,
+        query:{},
+        queryOptions:{deep:true},
+        sortFields:[{'attribute':'path','descending':false}],
+        clientSort:true"
         style="width: 400px; height: 200px;">
       <thead>
         <tr>
