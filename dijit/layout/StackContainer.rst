@@ -137,15 +137,15 @@ Here you will see a declaratively created StackContainer
 
   .. cv:: html
 
-    <button id="previous" onClick="dijit.byId('stackContainer').back()" dojoType="dijit.form.Button">&lt;</button>
-    <span dojoType="dijit.layout.StackController" containerId="stackContainer"></span>
-    <button id="next" onClick="dijit.byId('stackContainer').forward()" dojoType="dijit.form.Button">&gt;</button>
+    <button id="previous" data-dojo-type="dijit.form.Button" data-dojo-props="onClick:function(){dijit.byId('stackContainer').back()}">&lt;</button>
+    <span data-dojo-type="dijit.layout.StackController" data-dojo-props="containerId:'stackContainer'"></span>
+    <button id="next" data-dojo-type="dijit.form.Button" data-dojo-props="onClick:function(){dijit.byId('stackContainer').forward()}">&gt;</button>
   
-    <div dojoType="dijit.layout.StackContainer" id="stackContainer">
-      <div dojoType="dijit.layout.ContentPane" title="Questions">
+    <div data-dojo-type="dijit.layout.StackContainer" id="stackContainer">
+      <div data-dojo-type="dijit.layout.ContentPane" title="Questions">
       Please answer following questions
       </div>
-      <div dojoType="dijit.layout.ContentPane" title="Answers">
+      <div data-dojo-type="dijit.layout.ContentPane" title="Answers">
       Here is what you should have answered :P
       </div>
     </div>
