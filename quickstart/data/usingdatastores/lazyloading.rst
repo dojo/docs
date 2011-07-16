@@ -142,6 +142,7 @@ Example 2:  A hierarchical format without references
 ----------------------------------------------------
 
 .. code-block :: javascript
+ :linenos:
 
   { identifier: 'name',
     items: [
@@ -260,6 +261,7 @@ Sample code:  Detecting child items
 -----------------------------------
 
 .. code-block :: javascript
+ :linenos:
 
   var store = new dojo.data.ItemFileReadStore({url: "countries.json"});
 
@@ -300,6 +302,7 @@ Sample code:  Detecting child items and lazy-loading items on demand
 --------------------------------------------------------------------
 
 .. code-block :: javascript
+ :linenos
 
   var store = new dojo.data.ItemFileReadStore({url: "countries.json"});
 
