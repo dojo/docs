@@ -284,11 +284,11 @@ Searching node attributes
   .. cv :: html 
 
 
-    <b>ISBN:  </b><input dojoType="dijit.form.TextBox" data-dojo-id="isbnBox" value="*"></input>
+    <b>ISBN:  </b><input data-dojo-type="dijit.form.TextBox" data-dojo-id="isbnBox" value="*"></input>
     <br>
     <br>
-    <div dojoType="dojox.data.XmlStore" data-dojo-id="bookStore" url="{{dataUrl}}/dojox/data/tests/stores/books.xml"></div>
-    <div dojoType="dijit.form.Button" data-dojo-id="button3">Click to search!</div>
+    <div data-dojo-type="dojox.data.XmlStore" data-dojo-id="bookStore" data-dojo-props="url:'{{dataUrl}}/dojox/data/tests/stores/books.xml'"></div>
+    <div data-dojo-type="dijit.form.Button" data-dojo-id="button3">Click to search!</div>
     <br>
     <br>
     <b>Query used: </b><span id="query"></span
@@ -314,8 +314,8 @@ Connecting XmlStore to dijit.form.ComboBox
 
   .. cv :: html 
 
-    <div dojoType="dojox.data.XmlStore" url="{{dataUrl}}dojox/data/tests/stores/books.xml" data-dojo-id="bookStore2"></div>
-    <div dojoType="dijit.form.ComboBox" store="bookStore2" searchAttr="title"></div>
+    <div data-dojo-type="dojox.data.XmlStore" data-dojo-props="url:'{{dataUrl}}dojox/data/tests/stores/books.xml'" data-dojo-id="bookStore2"></div>
+    <div data-dojo-type="dijit.form.ComboBox" data-dojo-props="store:bookStore2, searchAttr:'title'"></div>
 
 
 Connecting XmlStore to dojox.grid.DataGrid
@@ -340,14 +340,14 @@ Connecting XmlStore to dojox.grid.DataGrid
 
   .. cv :: html
 
-    <div dojoType="dojox.data.XmlStore" url="{{dataUrl}}dojox/data/tests/stores/books.xml" data-dojo-id="bookStore3" label="title"></div>
+    <div data-dojo-type="dojox.data.XmlStore" data-dojo-props="url:'{{dataUrl}}dojox/data/tests/stores/books.xml', label:'text'" data-dojo-id="bookStore3"></div>
 
     <div id="grid" style="width: 400px; height: 300px;"
-      dojoType="dojox.grid.DataGrid" 
-      store="bookStore3" 
-      structure="layoutBooks" 
-      query="{}"
-      rowsPerPage="40">
+      data-dojo-type="dojox.grid.DataGrid" 
+      data-dojo-props="store:bookStore3,
+      structure:layoutBooks,
+      query:{},
+      rowsPerPage:40">
     </div>
 
   .. cv:: css
