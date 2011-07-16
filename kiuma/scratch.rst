@@ -39,7 +39,7 @@ If you have not to do particular requirements, you'll use this class most of the
   <script type="text/javascript">
     dojo.require("dojo.dnd.Source");
   </script>
-  <div class="dndContainer" dojoType="dojo.dnd.Source">
+  <div class="dndContainer" data-dojo-type="dojo.dnd.Source">
     <div class="dojoDndItem">item1</div>
     <div class="dojoDndItem">item2</div>
     <div class="dojoDndItem">item3</div>
@@ -65,13 +65,13 @@ So let's keep with another example:
     dojo.require("dojo.dnd.Source");
   </script>
   <div class="userRoleContainer"
-    <fieldset class="dndContainer availableRoles" dojoType="dojo.dnd.Source">
+    <fieldset class="dndContainer availableRoles" data-dojo-type="dojo.dnd.Source">
       <legend>Available roles</legend>
       <div class="dojoDndItem">admin</div>
       <div class="dojoDndItem">guest</div>
       <div class="dojoDndItem">publisher</div>
     </fieldset>
-    <fieldset class="dndContainer assignedRoles" dojoType="dojo.dnd.Source">
+    <fieldset class="dndContainer assignedRoles" data-dojo-type="dojo.dnd.Source">
       <legend>Assigned roles</legend>
       <div class="dojoDndItem">user</div>
     </fieldset>
@@ -103,25 +103,25 @@ So you'll have to mark a Source container with an accept tag attribute (comma se
     dojo.require("dojo.dnd.Source");
   </script>
   <div class="cartContainer"
-    <fieldset class="dndContainer products" dojoType="dojo.dnd.Source" accept="product">
+    <fieldset class="dndContainer products" data-dojo-type="dojo.dnd.Source" data-dojo-props="accept:'product'">
       <legend>Items</legend>
       <div class="dojoDndItem" dndType="product">apple</div>
       <div class="dojoDndItem" dndType="product">pear</div>
       <div class="dojoDndItem" dndType="product">orange</div>
     </fieldset>
-    <fieldset class="dndContainer basket" dojoType="dojo.dnd.Source" accept="product">
+    <fieldset class="dndContainer basket" data-dojo-type="dojo.dnd.Source" data-dojo-props="accept:'product'">
       <legend>Cart</legend>
     </fieldset>
   </div>
   <div class="paymentContainer"
-    <fieldset class="dndContainer couponsAndPoints" dojoType="dojo.dnd.Source" accept="coupon, point">
+    <fieldset class="dndContainer couponsAndPoints" data-dojo-type="dojo.dnd.Source" data-dojo-props="accept:['coupon', 'point']">
       <legend>Items</legend>
       <div class="dojoDndItem" dndType="coupon">$ 10.00</div>
       <div class="dojoDndItem" dndType="coupon">$ 5.00</div>
       <div class="dojoDndItem" dndType="point">1 points ($ 1.00)</div>
       <div class="dojoDndItem" dndType="point">2 points ($ 2.00)</div>
     </fieldset>
-    <fieldset class="dndContainer basketPoints" dojoType="dojo.dnd.Source" accept="coupon, point">
+    <fieldset class="dndContainer basketPoints" data-dojo-type="dojo.dnd.Source" data-dojo-props="accept:['coupon', 'point']">
       <legend>Paiment basket</legend>
     </fieldset>
   </div>
