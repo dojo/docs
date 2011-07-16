@@ -58,7 +58,7 @@ This example shows how to create a menu and combo button programmatically.
 Declarative example
 -------------------
 
-As usual you can create the ComboButton widget declaratively using the dojoType attribute.
+As usual you can create the ComboButton widget declaratively using the data-dojo-type attribute.
 When created declaratively the DropDownButton node has two children, one for the label of the button,
 and the other for the drop-down widget that's displayed when you press the button.
 
@@ -73,11 +73,11 @@ and the other for the drop-down widget that's displayed when you press the butto
 
   .. cv:: html
 
-    <div dojoType="dijit.form.ComboButton">
+    <div data-dojo-type="dijit.form.ComboButton">
       <span>get all mail</span>
-      <div dojoType="dijit.Menu">
-        <div dojoType="dijit.MenuItem" onClick="console.log('hi!')">Yahoo</div>
-        <div dojoType="dijit.MenuItem" onClick="console.log('ho!')">Google</div>
+      <div data-dojo-type="dijit.Menu">
+        <div data-dojo-type="dijit.MenuItem" data-dojo-props="onClick:function(){console.log('hi!')}">Yahoo</div>
+        <div data-dojo-type="dijit.MenuItem" data-dojo-props="onClick:function(){console.log('ho!')}">Google</div>
       </div>
     </div>
 
