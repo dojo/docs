@@ -88,22 +88,22 @@ This will animate a node from it's natural height to 200px (on hover), then back
 Declarative example
 -------------------
 
-Simply add a ``dojoType``:
+Simply add a ``data-dojo-type``:
 
 .. code-block :: html
   :linenos:
 
     <ul>
-       <li dojoType="dojox.widget.FisheyeLite" properties="left:10">hi</li>
+       <li data-dojo-type="dojox.widget.FisheyeLite" data-dojo-props="properties:{left:10}">hi</li>
     </ul>
 
-When instantiating, either programmatically or declaratively, the source DOM Node (with the dojoType, or the widget.domNode member) becomes the target node for the animations. Alternately, you can supply a target somewhere within the sourceNode by adding a class ``fisheyeTarget`` to some node. 
+When instantiating, either programmatically or declaratively, the source DOM Node (with the data-dojo-type, or the widget.domNode member) becomes the target node for the animations. Alternately, you can supply a target somewhere within the sourceNode by adding a class ``fisheyeTarget`` to some node. 
 
 .. code-block :: html
   :linenos:
   
     <ul>
-       <li dojoType="dojox.widget.FisheyeLite" properties="height:10">
+       <li data-dojo-type="dojox.widget.FisheyeLite" data-dojo-props="properties:{height:10}">
            <p>Content</p><div class="fisheyeTarget">target for animations</div>
        </li>
     </ul>
