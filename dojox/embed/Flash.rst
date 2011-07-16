@@ -109,9 +109,8 @@ Flash embedding with dojo is as simple as:
    <a href="http://get.adobe.com/flashplayer/"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" /></a>
  </div>
 
-======================
 Constructor Parameters
-======================
+----------------------
 
 +------------------+------------------------------------------------------------------------------+---------------------------+
 |**Parameter**     |**Description**                                                               |**Type**                   |
@@ -143,6 +142,28 @@ Constructor Parameters
 |                  |supported.                                                                    |                           |
 +------------------+------------------------------------------------------------------------------+---------------------------+
 
+Params
+------
+
+In constructor of dojox.embed.Flash there is params variable. For flash following params are possible:
+
+* allowfullscreen - defines whether or not browser allows flash to go fullscreen
+* allownetworking
+* allowscriptaccess
+* base
+* bgcolor
+* devicefont
+* flashvars
+* loop
+* menu
+* play
+* quality
+* salign
+* seamlesstabbing
+* scale
+* swliveconnect
+* wmode - ("transparent" | "opaque" | "window")
+  
 
 ========
 Examples
@@ -195,3 +216,4 @@ See also
 ========
 
 * `dojox.embed <dojox/embed>`_ Base code for embedding external objects like Flash, Quicktime
+* http://kb2.adobe.com/cps/127/tn_12701.html - Flash object and embed tag
