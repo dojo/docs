@@ -21,6 +21,7 @@ The following dojo.data APIs are implemented by OpmlStore
 The following example shows an Opml data source:
 
 .. code-block :: xml
+ :linenos:
 
   <?xml version="1.0" encoding="ISO-8859-1"?>
   <opml version="1.0">
