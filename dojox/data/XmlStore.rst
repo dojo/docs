@@ -128,7 +128,8 @@ Query Syntax
 
 The fetch method query syntax for XmlStore is simple and straightforward. It allows for a list of attributes to match against in an AND fashion, just like `dojo.data.ItemFileReadStore <dojo/data/ItemFileReadStore>`_. For example, the following query object will locate all items that have attributes of those names that match both of those values:
 
-::
+.. code-block :: javascript
+ :linenos:
 
   { foo:"bar", bit:"bite"}
 
@@ -137,13 +138,15 @@ Examples
 
 To find all items with attribute foo that start with bar, the query would be:
 
-::
+.. code-block :: javascript
+ :linenos:
 
   { foo:"bar*"}
 
 To find all items with attribute foo the value of which ends with ar and ignoring only the first character, the query would be:
 
-::
+.. code-block :: html
+ :linenos:
   
   { foo:"?ar"}
 
@@ -177,7 +180,8 @@ For these examples, we'll assume a data source as defined by the example data fo
 Query for all books that start with ISBN: A9B57
 -----------------------------------------------
 
-.. code-block :: javascript 
+.. code-block :: javascript
+ :linenos:
 
   var store = new dojox.data.XmlStore({url: "books.xml", rootItem: "book"});
   var gotBooks = function(items, request){
@@ -193,6 +197,7 @@ Query for all books that start with ISBN: A9B57 Case insensitively
 ------------------------------------------------------------------
 
 .. code-block :: javascript
+ :linenos:
 
   var store = new dojox.data.XmlStore({url: "books.xml", rootItem: "book"});
   var gotBooks = function(items, request){
