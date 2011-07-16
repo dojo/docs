@@ -55,13 +55,13 @@ Creation from markup is more simpler and structured.
 
   .. cv:: html
 
-	<div id="menubar" dojoType="dijit.MenuBar">
-	    <div dojoType="dijit.PopupMenuBarItem" id="Item Menu">
+	<div id="menubar" data-dojo-type="dijit.MenuBar">
+	    <div data-dojo-type="dijit.PopupMenuBarItem" id="Item Menu">
 	    <span>Items</span>
-	        <div dojoType="dijit.Menu" id="fileMenu">
-	            <div dojoType="dijit.MenuItem" onClick="alert('Item 1')">Item #1</div>
-	            <div dojoType="dijit.MenuItem" onClick="alert('Item 2')">Item #2</div>
-	            <div dojoType="dijit.MenuItem" onClick="alert('Item 3')" disabled="true">Item #3</div>
+	        <div data-dojo-type="dijit.Menu" id="fileMenu">
+	            <div data-dojo-type="dijit.MenuItem" data-dojo-props="onClick:function(){alert('Item 1')}">Item #1</div>
+	            <div data-dojo-type="dijit.MenuItem" data-dojo-props="onClick:function(){alert('Item 2')}">Item #2</div>
+	            <div data-dojo-type="dijit.MenuItem" data-dojo-props="onClick:function(){alert('Item 3')}, disabled:true">Item #3</div>
                 </div>
             </div>
         </div>
