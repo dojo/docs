@@ -34,7 +34,7 @@ Please note indirect selection is completely dependent on the selection mode of 
         dojo.require("dojox.grid.enhanced.plugins.IndirectSelection");
     
         dojo.addOnLoad(function(){
-	  //set up data store
+	  /*set up data store*/
 	  var data = {
 		identifier: 'id',
 		items: []
@@ -50,7 +50,7 @@ Please note indirect selection is completely dependent on the selection mode of 
 	  }
 	  var store = new dojo.data.ItemFileWriteStore({data: data});
 	
-	  //set up layout
+	  /*set up layout*/
 	  var layout = [[
 		{name: 'Column 1', field: 'id'},
 		{name: 'Column 2', field: 'col2'},
@@ -58,7 +58,7 @@ Please note indirect selection is completely dependent on the selection mode of 
 		{name: 'Column 4', field: 'col4'}
 	  ]];
 
-          // create a new grid:
+          /* create a new grid:*/
           var grid = new dojox.grid.EnhancedGrid({
               id: 'grid',
               store: store,              
@@ -67,10 +67,10 @@ Please note indirect selection is completely dependent on the selection mode of 
               plugins: {indirectSelection: {headerSelector:true, width:"40px", styles:"text-align: center;"}}},
             document.createElement('div'));
 
-          // append the new grid to the div
+          /* append the new grid to the div*/
           dojo.byId("gridDiv").appendChild(grid.domNode);
 
-          // Call startup() to render the grid
+          /* Call startup() to render the grid*/
           grid.startup();
         });
     </script>
