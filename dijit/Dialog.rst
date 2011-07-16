@@ -106,7 +106,7 @@ Now lets create a dialog programmatically, and change the dialog's content dynam
   .. cv:: html
     
     <p>When pressing this button the dialog will popup. Notice this time there is no DOM node with content for the dialog:</p>
-    <button id="buttonTwo" dojoType="dijit.form.Button" onClick="showDialogTwo();" type="button">Show me!</button>
+    <button id="buttonTwo" data-dojo-type="dijit.form.Button" data-dojo-props="onClick:showDialogTwo" type="button">Show me!</button>
 
   .. cv:: javascript
     :label: The javascript, put this wherever you want the dialog creation to happen
@@ -123,7 +123,7 @@ Now lets create a dialog programmatically, and change the dialog's content dynam
                 style: "width: 300px"
             });
         });
-        function showDialogTwo(){
+        showDialogTwo = function(){
             // set the content of the dialog:
             secondDlg.attr("content", "Hey, I wasn't there before, I was added at " + new Date() + "!");
             secondDlg.show();
