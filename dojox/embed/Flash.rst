@@ -39,7 +39,7 @@ Embedding flash media in HTML can be done in different ways. Usually the followi
    />
  </object>
 
-Here object tag is used for IE and old Netscape's embed tag is used for other browsers. What if user's browser does not have Adobe flash player installed? Object tag can use codebase attribute and embed attribute can use pluginspace attribute. They define locations where and which flash player version browser should download in case of missing plugin:
+Here object tag is used for IE and old Netscape's embed tag is used for other browsers. What if user's browser does not have Adobe flash player installed? Object tag can use codebase attribute and embed attribute can use pluginspage attribute. They define locations where and which flash player version browser should download in case of missing plugin:
 
 .. code-block :: html
  :linenos:
@@ -47,7 +47,7 @@ Here object tag is used for IE and old Netscape's embed tag is used for other br
  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="100%" height="700" id="flash1" name="flash1" codebase="http://fpdownload.adobe.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0">
    <param name="movie" value="flash.swf">
    <param name="allowfullscreen" value="true">
-   <param name='allowscriptaccess" value="always">
+   <param name="allowscriptaccess" value="always">
    <param name="flashvars" value="var_1=value_1&var_2=value_2">
    <embed id="flash1"
           name="flash1"
@@ -57,11 +57,11 @@ Here object tag is used for IE and old Netscape's embed tag is used for other br
           allowscriptaccess="always"
           allowfullscreen="true"
           flashvars="var_1=value_1&var_2=value_2"
-          pluginspace="http://www.adobe.com/go/getflashplayer"
+          pluginspage="http://www.adobe.com/go/getflashplayer"
    />
  </object>
 
-However this is an old and not very user friendly method. By using codebase and pluginspace attributes you impose flash plugin to user. Besides this code is not markup compliant because it uses embed tag if used with non html5 doctypes. Very popular and bullet proof method of flash embedding in today's browsers is:
+However this is an old and not very user friendly method. By using codebase and pluginspage attributes you impose flash plugin to user. In this case browser notifies user for missing plugins. Besides this code is not markup compliant because it uses embed tag if used with non html5 doctypes. Very popular and bullet proof method of flash embedding in today's browsers is:
 
 .. code-block :: html
  :linenos:
