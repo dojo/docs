@@ -33,7 +33,8 @@ Example XML Input
 
 The store is designed so that it can read generic XML and present back nodes as dojo.data items.  The following is an example of an XML document that this store can read:
 
-::
+.. code-block :: html
+ :linenos:
 
   <?xml version="1.0" encoding="ISO-8859-1"?>
   <books>
