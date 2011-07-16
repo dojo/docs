@@ -390,7 +390,7 @@ Searching multiple Google services at once
           style="width: 750px; height: 300px;"
           data-dojo-type="dojox.grid.DataGrid" 
           data-dojo-props="store:webStore,
-          structure:'layoutResults',
+          structure:layoutResults,
           query:{text:'Dojo'},
           rowsPerPage:40">
         </div>
@@ -400,7 +400,7 @@ Searching multiple Google services at once
           <div id="imageGrid" 
             data-dojo-type="dojox.grid.DataGrid" 
             data-dojo-props="store:imageStore,
-            structure:'layoutResults',
+            structure:layoutResults,
             query:{text:'Dojo'},
             rowsPerPage:40">
           </div>
@@ -411,7 +411,7 @@ Searching multiple Google services at once
           style="width: 750px; height: 300px;"
           data-dojo-type="dojox.grid.DataGrid" 
           data-dojo-props="store:newsStore,
-          structure:'layoutResults',
+          structure:layoutResults,
           query:{text:'Dojo'},
           rowsPerPage:40">
         </div>
