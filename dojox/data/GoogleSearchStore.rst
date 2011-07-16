@@ -376,7 +376,7 @@ Searching multiple Google services at once
     <b>Input search text:</b>
     <br>
     <br>
-    <div data-dojo-type="dijit.form.TextBox" width="50" id="searchText" value="Dojo"></div>
+    <div data-dojo-type="dijit.form.TextBox" width="50" id="searchText" data-dojo-props="value:'Dojo'" value="Dojo"></div>
     <br>
     <div data-dojo-type="dijit.form.Button" id="searchButton">Search!</div>
     <div data-dojo-type="dojox.data.GoogleWebSearchStore" data-dojo-id="webStore"></div>
