@@ -56,8 +56,8 @@ The following code has a subtle bug:
   </head>
   <body class="tundra">
   <form>
-  What's the 411? <input type="text" size="20" name="info" dojoType="dijit.form.TextBox"
-             trim="true" propercase="true" /><br>
+  What's the 411? <input type="text" size="20" name="info" data-dojo-type="dijit.form.TextBox"
+             data-dojo-props="trim:true, propercase:true" /><br>
   </body>
   </html>
 
@@ -74,7 +74,7 @@ You click on the "1 Error" message and the Firebug console pops up:
 .. image:: debugging2.png
    :alt: Firebug console
 
-Looking back at your code, you notice the capitalization on "Textbox" in the dojo.require is wrong. That's a common mistake, but easily fixed. It's also common to forget the dojo.require, or to misspell the class in the dojoType attribute. In each case, Firebug will set you straight.
+Looking back at your code, you notice the capitalization on "Textbox" in the dojo.require is wrong. That's a common mistake, but easily fixed. It's also common to forget the dojo.require, or to misspell the class in the data-dojo-type attribute. In each case, Firebug will set you straight.
 
 Firebug Lite will give you a similar console, but it will appear naturally at the bottom of your browser window. To turn it off, you must set the isDebug flag to false and run the page again.
 
@@ -104,7 +104,7 @@ The following code has an error:
       </script>
   </head>
   <body class="tundra">
-  <div dojoType="dijit.form.Button">
+  <div data-dojo-type="dijit.form.Button">
      Click to break!
      <script type="dojo/event" data-dojo-event="onClick">
         this.domNode.style.width = dojo.newWidth;
@@ -233,7 +233,7 @@ Since that code is now running, we try a minor variant which sets the button to 
       </script>
   </head>
   <body class="tundra">
-  <div dojoType="dijit.form.Button">
+  <div data-dojo-type="dijit.form.Button">
      Click to break!
      <script type="dojo/event" data-dojo-event="onClick">
         this.domNode.style.backgroundColor = dojo.Color.named.aliceblue;
@@ -309,7 +309,7 @@ So here's a piece of HTML code and a reusable Dojo-based widget:
       </script>
   </head>
   <body class="tundra">
-      <div dojoType="dojobook.online-book.debugging.BuggyWidget"></div>
+      <div data-dojo-type="dojobook.online-book.debugging.BuggyWidget"></div>
   </body>
   </html>
 
