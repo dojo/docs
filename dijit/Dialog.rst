@@ -362,13 +362,13 @@ This example shows a Dialog that will ask the user to accept or decline the term
             dojo.connect(dijit.byId("termsButton"), "onClick", formDlg, "show");
         });
 			
-        var accept = function(){
+        accept = function(){
             dojo.byId("decision").innerHTML = "Terms and conditions have been accepted.";
             dojo.style("decision", "color", "#00CC00");
             dijit.byId("formDialog").hide();
         }
 			
-        var decline = function(){
+        decline = function(){
             dojo.byId("decision").innerHTML = "Terms and conditions have not been accepted.";
             dojo.style("decision", "color", "#FF0000");
             dijit.byId("formDialog").hide();
