@@ -38,12 +38,12 @@ Usage
    dojo.require("dojox.av.widget.Status");
  </script>
 
- <div dojoType="dojox.av.widget.Player" playerWidth="100%">
-    <div controlType="video" initialVolume=".1" mediaUrl="video/Grog.flv" autoPlay="true" isDebug="false" dojoType="dojox.av.FLVideo"></div>
-    <div controlType="play" dojoType="dojox.av.widget.PlayButton"></div>
-    <div controlType="volume" dojoType="dojox.av.widget.VolumeButton"></div>
-    <div controlType="progress" dojoType="dojox.av.widget.ProgressSlider"></div>
-    <div controlType="status" dojoType="dojox.av.widget.Status"></div>
+ <div data-dojo-type="dojox.av.widget.Player" data-dojo-props="playerWidth:'100%'">
+    <div data-dojo-type="dojox.av.FLVideo" data-dojo-props="controlType:'video', initialVolume:0.1, mediaUrl:'video/Grog.flv', autoPlay:true, isDebug:false"></div>
+    <div data-dojo-type="dojox.av.widget.PlayButton" data-dojo-props="controlType:'play'"></div>
+    <div data-dojo-type="dojox.av.widget.VolumeButton" data-dojo-props="controlType:'volume'"></div>
+    <div data-dojo-type="dojox.av.widget.ProgressSlider" data-dojo-props="controlType:'progress'"></div>
+    <div data-dojo-type="dojox.av.widget.Status" data-dojo-props="controlType:'status'"></div>
  </div>
 
 See the test file in the SDK for more information.
