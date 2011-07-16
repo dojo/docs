@@ -55,7 +55,7 @@ Input Data Format
 
 The input data format is the standard `ATOM <http://en.wikipedia.org/wiki/Atom_(standard)>`_ feed format.  An example of an ATOM feed is below:
 
-.. code-block :: javascript
+.. code-block :: xml
  :linenos:
 
   <?xml version='1.0' encoding='utf-8'?>
@@ -272,7 +272,7 @@ Example 1: Programmatic instantiation and querying of ATOM Feeds.
 
   .. cv :: html 
 
-    <div dojoType="dijit.form.Button" id="simpleFetchButton">Click me to search the store and display feed titles</div>
+    <div data-dojo-type="dijit.form.Button" id="simpleFetchButton">Click me to search the store and display feed titles</div>
     <br>
     <br>
     <span id="list">
@@ -319,7 +319,7 @@ Example 2: Programmatic instantiation and querying of ATOM Feed Entry titles.
 
   .. cv :: html 
 
-    <div dojoType="dijit.form.Button" id="simpleFetchButton2">Click me to search the entries for titles with 'Editable'</div>
+    <div data-dojo-type="dijit.form.Button" id="simpleFetchButton2">Click me to search the entries for titles with 'Editable'</div>
     <br>
     <br>
     <span id="list2">
@@ -367,8 +367,8 @@ Example 3: Connecting AppStore to DataGrid
 
   .. cv :: html 
 
-    <div dojoType="dojox.data.AppStore" data-dojo-id="appStore" url="{{dataUrl}}dojox/atom/tests/widget/samplefeedEdit.xml"></div>
-    <div data-dojo-id="grid" dojoType="dojox.grid.DataGrid" store="appStore" query="{}" structure="layout" style="width: 600px; height: 200px;"></div>
+    <div data-dojo-type="dojox.data.AppStore" data-dojo-id="appStore" data-dojo-props="url:'{{dataUrl}}dojox/atom/tests/widget/samplefeedEdit.xml'"></div>
+    <div data-dojo-id="grid" data-dojo-type="dojox.grid.DataGrid" data-dojo-props="store:appStore, query:{}, structure:layout" style="width: 600px; height: 200px;"></div>
     <br>
     <br>
     <span id="list2">
@@ -428,11 +428,11 @@ Example 4: Write example: Changing Title and showing in DataGrid
 
   .. cv :: html 
 
-    <div dojoType="dojox.data.AppStore" data-dojo-id="appStore2" url="{{dataUrl}}dojox/atom/tests/widget/samplefeedEdit.xml"></div>
-    <div data-dojo-id="thegrid" dojoType="dojox.grid.DataGrid" store="appStore2" query="{}" structure="layout2" style="width: 600px; height: 200px;"></div>
+    <div data-dojo-type="dojox.data.AppStore" data-dojo-id="appStore2" data-dojo-props="url:'{{dataUrl}}dojox/atom/tests/widget/samplefeedEdit.xml'"></div>
+    <div data-dojo-id="thegrid" data-dojo-type="dojox.grid.DataGrid" data-dojo-props="store:appStore2, query:{}, structure:layout2" style="width: 600px; height: 200px;"></div>
     <br>
     <br>
-    <button id="changeTitleButton" dojoType="dijit.form.Button">Change all titles!</button> 
+    <button id="changeTitleButton" data-dojo-type="dijit.form.Button">Change all titles!</button> 
   
   .. cv:: css
 
