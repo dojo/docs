@@ -175,8 +175,8 @@ Query for all Spices  (Basic query)
 
   .. cv :: html 
 
-    <div dojoType="dojo.data.ItemFileReadStore" data="storeData" data-dojo-id="foodStore"></div>
-    <div dojoType="dijit.form.Button" data-dojo-id="button">Click to find the spices!</div>
+    <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="data:storeData" data-dojo-id="foodStore"></div>
+    <div data-dojo-type="dijit.form.Button" data-dojo-id="button">Click to find the spices!</div>
     <br>
     <br>
     <span id="list">
@@ -259,8 +259,8 @@ Query for all food in aisles starting with C
 
   .. cv :: html 
 
-    <div dojoType="dojo.data.ItemFileReadStore" data="storeData2" data-dojo-id="foodStore2"></div>
-    <div dojoType="dijit.form.Button" data-dojo-id="button2">Click to find the items in an aisle starting with C!</div>
+    <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="data:storeData2" data-dojo-id="foodStore2"></div>
+    <div data-dojo-type="dijit.form.Button" data-dojo-id="button2">Click to find the items in an aisle starting with C!</div>
     <br>
     <br>
     <span id="list2">
@@ -375,17 +375,17 @@ Enter your own query for name and aisle
   .. cv :: html 
 
 
-    <b>Name:  </b><input dojoType="dijit.form.TextBox" data-dojo-id="nameBox" value="*"></input>
+    <b>Name:  </b><input data-dojo-type="dijit.form.TextBox" data-dojo-id="nameBox" value="*"></input>
     <br>
     <br>
-    <b>Aisle: </b><input dojoType="dijit.form.TextBox" data-dojo-id="aisleBox" value="*"></input>
+    <b>Aisle: </b><input data-dojo-type="dijit.form.TextBox" data-dojo-id="aisleBox" value="*"></input>
     <br>
     <br>
-    <b>Case Insensitive: </b><div dojoType="dijit.form.CheckBox" checked="false" data-dojo-id="checkBox"></div>
+    <b>Case Insensitive: </b><div data-dojo-type="dijit.form.CheckBox" checked="false" data-dojo-id="checkBox"></div>
     <br>
     <br>
-    <div dojoType="dojo.data.ItemFileReadStore" data="storeData3" data-dojo-id="foodStore3"></div>
-    <div dojoType="dijit.form.Button" data-dojo-id="button3">Click to search!</div>
+    <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="data:storeData3" data-dojo-id="foodStore3"></div>
+    <div data-dojo-type="dijit.form.Button" data-dojo-id="button3">Click to search!</div>
     <br>
     <br>
     <b>Query used: </b><span id="query"></span>
