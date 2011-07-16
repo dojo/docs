@@ -137,8 +137,8 @@ Connecting OpmlStore to dijit.form.ComboBox
 
   .. cv :: html 
 
-    <div dojoType="dojox.data.OpmlStore" url="{{dataUrl}}dojox/data/tests/stores/geography.xml" data-dojo-id="geoStore"></div>
-    <div dojoType="dijit.form.ComboBox" store="geoStore" searchAttr="text"></div>
+    <div data-dojo-type="dojox.data.OpmlStore" data-dojo-props="url:'{{dataUrl}}dojox/data/tests/stores/geography.xml'" data-dojo-id="geoStore"></div>
+    <div data-dojo-type="dijit.form.ComboBox" data-dojo-props="store:geoStore, searchAttr:'text'"></div>
 
 
 Connecting OpmlStore to dijit.Tree
@@ -158,9 +158,9 @@ Connecting OpmlStore to dijit.Tree
 
   .. cv :: html 
 
-    <div dojoType="dojox.data.OpmlStore" url="{{dataUrl}}dojox/data/tests/stores/geography.xml" data-dojo-id="geoStore2" label="text"></div>
-    <div dojoType="dijit.tree.ForestStoreModel" data-dojo-id="geoModel" store="geoStore2" query="{}" rootId="Geography" rootLabel="Geography"></div>
-    <div dojoType="dijit.Tree" model="geoModel"></div>
+    <div data-dojo-type="dojox.data.OpmlStore" data-dojo-props="url:'{{dataUrl}}dojox/data/tests/stores/geography.xml', label:'text'" data-dojo-id="geoStore2"></div>
+    <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="geoModel" data-dojo-props="store:geoStore2, query:{}, rootId:'Geography', rootLabel:'Geography'"></div>
+    <div data-dojo-type="dijit.Tree" data-dojo-props="model:geoModel"></div>
 
     
 Connecting OpmlStore to dojox.grid.DataGrid
@@ -187,16 +187,16 @@ Connecting OpmlStore to dojox.grid.DataGrid
 
   .. cv :: html
 
-    <div dojoType="dojox.data.OpmlStore" url="{{dataUrl}}dojox/data/tests/stores/geography.xml" data-dojo-id="geoStore3" label="text"></div>
+    <div data-dojo-type="dojox.data.OpmlStore" data-dojo-props="url:'{{dataUrl}}dojox/data/tests/stores/geography.xml', label:'text'" data-dojo-id="geoStore3"></div>
 
     <div style="width: 400px; height: 300px;">
       <div id="grid" 
-        dojoType="dojox.grid.DataGrid" 
-        store="geoStore3" 
-        structure="layoutGeo" 
-        query="{}"
-        queryOptions="{'deep':true}" 
-        rowsPerPage="40">
+        data-dojo-type="dojox.grid.DataGrid" 
+        data-dojo-props="store:geoStore3,
+        structure:layoutGeo,
+        query:{},
+        queryOptions:{deep:true},
+        rowsPerPage:40">
       </div>
     </div>
 
