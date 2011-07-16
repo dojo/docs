@@ -68,8 +68,8 @@ Connecting dijit.form.ComboBox
 
   .. cv :: html 
 
-    <div dojoType="dojo.data.ItemFileReadStore" data="storeData" data-dojo-id="countryStore"></div>
-    <div dojoType="dijit.form.ComboBox" store="countryStore" searchAttr="name"></div>
+    <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="data:storeData" data-dojo-id="countryStore"></div>
+    <div data-dojo-type="dijit.form.ComboBox" data-dojo-props="store:countryStore, searchAttr:'name'"></div>
 
 
 Connecting dijit.Tree
@@ -98,9 +98,9 @@ Connecting dijit.Tree
 
   .. cv :: html 
 
-    <div dojoType="dojo.data.ItemFileReadStore" data="storeData" data-dojo-id="countryStore"></div>
-    <div dojoType="dijit.tree.ForestStoreModel" data-dojo-id="countryModel" store="countryStore" query="{}" rootId="Countries" rootLabel="Countries"></div>
-    <div dojoType="dijit.Tree" model="countryModel"></div>
+    <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="data:storeData" data-dojo-id="countryStore"></div>
+    <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="countryModel" data-dojo-props="store:countryStore, query:{}, rootId:'Countries', rootLabel:'Countries'"></div>
+    <div data-dojo-type="dijit.Tree" data-dojo-props="model:'countryModel'"></div>
 
     
 Connecting dijit.form.FilteringSelect
@@ -129,8 +129,8 @@ Connecting dijit.form.FilteringSelect
 
   .. cv :: html 
 
-    <div dojoType="dojo.data.ItemFileReadStore" data="storeData" data-dojo-id="countryStore"></div>
-    <div dojoType="dijit.form.FilteringSelect" store="countryStore" searchAttr="name"></div>
+    <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="data:storeData" data-dojo-id="countryStore"></div>
+    <div data-dojo-type="dijit.form.FilteringSelect" data-dojo-props="store:countryStore, searchAttr:'name'"></div>
 
 
 Connecting dojox.grid.DataGrid
@@ -168,14 +168,14 @@ Connecting dojox.grid.DataGrid
   .. cv :: html
 
     <div style="width: 400px; height: 300px;">
-      <div dojoType="dojo.data.ItemFileReadStore" data-dojo-id="countryStoreForGrid" data="storeData"></div>
+      <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-id="countryStoreForGrid" data-dojo-props="data:storeData"></div>
       <div id="grid" 
-        dojoType="dojox.grid.DataGrid" 
-        store="countryStoreForGrid" 
-        structure="layoutCountries" 
-        queryOptions="{deep:true}"
-        query="{}" 
-        rowsPerPage="40">
+        data-dojo-type="dojox.grid.DataGrid" 
+        data-dojo-props="store:countryStoreForGrid,
+        structure:'layoutCountries',
+        queryOptions:{deep:true},
+        query:{},
+        rowsPerPage:40">
       </div>
     </div>
 
