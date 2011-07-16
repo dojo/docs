@@ -300,7 +300,7 @@ Example of using passing in transition parameters. In this case, the `Pan <dojox
 
   .. html::
 
-    <div data-dojo-type="dojox.widget.Rotator" class="rotator" id="myRotator5" data-dojo-id="myRotatorInstance5" data-dojo-props="transition:'dojox.widget.rotator.pan', transitionParams:'{continuous:true,quick:true,duration:500}'">
+    <div data-dojo-type="dojox.widget.Rotator" class="rotator" id="myRotator5" data-dojo-id="myRotatorInstance5" data-dojo-props="transition:'dojox.widget.rotator.pan', transitionParams:'continuous:true,quick:true,duration:500'">
         <div class="pane">Pane 0</div>
         <div class="pane">Pane 1</div>
         <div class="pane">Pane 2</div>
