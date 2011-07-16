@@ -134,7 +134,7 @@ A markup tree
       rootId:'continentRoot', rootLabel:'Continents', childrenAttrs:'children'"></div>
 
     <div data-dojo-type="dijit.Tree" id="mytree"
-      data-dojo-props="model:'continentModel', openOnClick:true">
+      data-dojo-props="model:continentModel, openOnClick:true">
       <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="item">
         alert("Execute of node " + continentStore.getLabel(item)
             +", population=" + continentStore.getValue(item, "population"));
@@ -224,7 +224,7 @@ Sometimes you don't want that "the world" top level node to show up, especially 
       rootId:'continentRoot', rootLabel:'Continents', childrenAttrs:'children'"></div>
     
     <div data-dojo-type="dijit.Tree" id="mytree2"
-      data-dojo-props="model:'continentModel', showRoot:false">
+      data-dojo-props="model:continentModel, showRoot:false">
     </div>
 
 Note that you can hide or show the root item regardless of whether that root item is fabricated or corresponds to a real item in the store.
@@ -335,7 +335,7 @@ If between threshold is set to a positive integer value like 5 (which represents
     
     <div data-dojo-type="dijit.Tree" id="mytree5"
       data-dojo-props="dndController:'dijit.tree.dndSource', betweenThreshold:5, showRoot:false,
-      model:'continentModel5', openOnClick:true">
+      model:continentModel5, openOnClick:true">
     </div>
 
 
@@ -384,7 +384,7 @@ Tree has no built-in support for context menus, but you can use the Menu widget 
              rootId:'continentRoot', rootLabel:'Continents', childrenAttrs:'children'"></div>
             
 	<div data-dojo-type="dijit.Tree" id="menuTree"
-             data-dojo-props="model:'menuContinentModel', showRoot:false, openOnClick:true">
+             data-dojo-props="model:menuContinentModel, showRoot:false, openOnClick:true">
                  
 		<script type="dojo/connect">
 			var menu = dijit.byId("tree_menu");
