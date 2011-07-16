@@ -2315,7 +2315,7 @@ this:
   });
 
 Since my.module was demanded, the loader will attempt to resolve its dependency list and then run its factory
-function. This causes dojo/loadInit to resolve "*loadInit_8" (the loader guarantees this is a unique synthetic module
+function. This causes dojo/loadInit to resolve ``"\*loadInit_8"`` (the loader guarantees this is a unique synthetic module
 identifier). In doing so, dojo/loadInit causes the def function to be executed, passing the value of the global myDojo
 object. This causes the dojo.loadInit function contained in the def function to be executed. Let's assume
 document.someMagicSomething has a value of 1. This will cause the loadInit callback to set my.module.switch to 1. As the
