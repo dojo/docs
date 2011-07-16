@@ -147,37 +147,37 @@ Filter is a plugin for dojox.grid.EnhancedGrid. It's designed to filter the grid
 			{ field: "id", datatype:"number"},
 			{ field: "Genre", datatype:"string"},
 			{ field: "Artist", datatype:"string",
-				//Declare that we need the ComboBox for suggestions (autoComplete by default)
+				/*Declare that we need the ComboBox for suggestions (autoComplete by default)*/
 				autoComplete: true
 			},
 			{ field: "Album", datatype:"string",
-				//Declare that we need the ComboBox for suggestions 
+				/*Declare that we need the ComboBox for suggestions */
 				autoComplete: true,
-				//Configure the ComboBox, so that it does not auto-complete our input
+				/*Configure the ComboBox, so that it does not auto-complete our input*/
 				dataTypeArgs: {
 					autoComplete: false
 				}
 			},
 			{ field: "Name", datatype:"string",
-				//Declare that we do not need the following conditions for this column 
+				/*Declare that we do not need the following conditions for this column */
 				disabledConditions: ["contains", "notcontains"]
 			},
 			{ field: "Track", datatype:"number"},
 			{ field: "Download Date", datatype:"date",
-				//Declare how the data in store should be parsed to a Date object.
+				/*Declare how the data in store should be parsed to a Date object.*/
 				dataTypeArgs: {
 					datePattern: "yyyy/M/d"
 				}
 			},
 			{ field: "Last Played", datatype:"time",
-				//Declare how the data in store should be parsed to a Date object.
+				/*Declare how the data in store should be parsed to a Date object.*/
 				dataTypeArgs: {
 					timePattern: "HH:mm:ss"
 				}
 			}
 		];
 
-		//In case you've close the filter bar, here's a way to bring it up.
+		/*In case you've close the filter bar, here's a way to bring it up.*/
 		function showFilterBar(){
 			dijit.byId('grid').showFilterBar(true);
 		}
@@ -192,11 +192,11 @@ Filter is a plugin for dojox.grid.EnhancedGrid. It's designed to filter the grid
 				structure: layout,
 				plugins: {
 					filter: {
-						//Show the closeFilterbarButton at the filter bar
+						/*Show the closeFilterbarButton at the filter bar*/
 						closeFilterbarButton: true,
-						//Set the maximum rule count to 5
+						/*Set the maximum rule count to 5*/
 						ruleCount: 5,
-						//Set the name of the items
+						/*Set the name of the items*/
 						itemsName: "songs"
 					}
 				}
