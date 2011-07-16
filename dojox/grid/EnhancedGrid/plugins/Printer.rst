@@ -173,7 +173,7 @@ This plugin is based on the Exporter plugin. Actually, an export writer, TableWr
 			var win = window.open();
 			win.document.open();
 			win.document.write(str);
-			//Adjust row height/view width for multi-view grid
+			/*Adjust row height/view width for multi-view grid*/
 			dijit.byId("grid").normalizePrintedGrid(win.document);
 			win.document.close();
 		}
