@@ -145,7 +145,6 @@ This example will put a horizontal dojox.image.ThumbnailPicker widget on a page,
 of settings, and uses the FlickrRestStore data store.
  
 .. code-example::
- :djConfig: parseOnLoad: true
 
    .. cv:: javascript
 
@@ -190,7 +189,7 @@ of settings, and uses the FlickrRestStore data store.
    .. cv:: css
 
       <style>
-         /*@import "{{baseUrl}}dojox/image/resources/image.css";*/
+         @import "{{baseUrl}}dojox/image/resources/image.css";
       <style>
 
 
