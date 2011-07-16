@@ -178,7 +178,7 @@ Example using the crossfade transition.
    dojo.require("dojox.widget.rotator.Fade");
  </script>
  
- <div dojoType="dojox.widget.Rotator" transition="dojox.widget.rotator.crossFade">
+ <div data-dojo-type="dojox.widget.Rotator" data-dojo-props="transition:'dojox.widget.rotator.crossFade'">
    <div>Pane 0</div>
    <div>Pane 1</div>
    <div>Pane 2</div>
@@ -215,7 +215,7 @@ Example of controlling a Rotator by referencing its instance. We define a data-d
 
   .. html::
 
-    <div dojoType="dojox.widget.Rotator" class="rotator" id="myRotator3" data-dojo-id="myRotatorInstance3" transition="dojox.widget.rotator.crossFade">
+    <div data-dojo-type="dojox.widget.Rotator" class="rotator" id="myRotator3" data-dojo-id="myRotatorInstance3" data-dojo-props="transition:'dojox.widget.rotator.crossFade'">
         <div class="pane">Pane 0</div>
         <div class="pane">Pane 1</div>
         <div class="pane">Pane 2</div>
@@ -259,7 +259,7 @@ Example of using different transitions per pane.
   
   .. html::
 
-    <div dojoType="dojox.widget.Rotator" class="rotator" id="myRotator4" data-dojo-id="myRotatorInstance4" transition="dojox.widget.rotator.crossFade">
+    <div data-dojo-type="dojox.widget.Rotator" class="rotator" id="myRotator4" data-dojo-id="myRotatorInstance4" data-dojo-props="transition:'dojox.widget.rotator.crossFade'">
         <div class="pane">Pane 0</div>
         <div class="pane" transition="dojox.widget.rotator.panRight">Pane 1</div>
         <div class="pane" transition="dojox.widget.rotator.slideLeft">Pane 2</div>
@@ -300,7 +300,7 @@ Example of using passing in transition parameters. In this case, the `Pan <dojox
 
   .. html::
 
-    <div dojoType="dojox.widget.Rotator" class="rotator" id="myRotator5" data-dojo-id="myRotatorInstance5" transition="dojox.widget.rotator.pan" transitionParams="continuous:true,quick:true,duration:500">
+    <div data-dojo-type="dojox.widget.Rotator" class="rotator" id="myRotator5" data-dojo-id="myRotatorInstance5" data-dojo-props="transition:'dojox.widget.rotator.pan', transitionParams:{continuous:true,quick:true,duration:500}">
         <div class="pane">Pane 0</div>
         <div class="pane">Pane 1</div>
         <div class="pane">Pane 2</div>
@@ -363,7 +363,7 @@ Example
 
   .. html::
 
-    <div dojoType="dojox.widget.Rotator" class="rotator" id="myRotator6">
+    <div data-dojo-type="dojox.widget.Rotator" class="rotator" id="myRotator6">
         <div class="pane">Pane 0</div>
         <div class="pane">Pane 1</div>
         <div class="pane">Pane 2</div>
@@ -403,7 +403,7 @@ Example
 .. code-block :: javascript
  :linenos:
  
- <div dojoType="dojox.widget.Rotator" id="myRotator"></div>
+ <div data-dojo-type="dojox.widget.Rotator" id="myRotator"></div>
  <script type="text/javascript">
    dojo.addOnLoad(function(){
      dojo.subscribe("myrotator/rotator/update", function(type, rotator, params){
