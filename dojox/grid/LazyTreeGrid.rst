@@ -360,5 +360,3 @@ See Also
 * `dojox.grid.TreeGrid <dojox/grid/TreeGrid>`_
 
   This grid offers support for collapsable rows and model-based (`dijit.tree.ForestStoreModel <dijit/tree/ForestStoreModel>`_) structure
-
-* `Grid Plugin API <dojox/grid/pluginAPI>`_
