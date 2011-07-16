@@ -147,7 +147,7 @@ of settings, and uses the FlickrRestStore data store.
 .. code-example::
  :djConfig: parseOnLoad: true
 
-   .. cv:: javascript
+   .. javascript::
 
         <script type="text/javascript">
         dojo.require("dojo.parser");
@@ -179,7 +179,7 @@ of settings, and uses the FlickrRestStore data store.
 
         </script>
 
-   .. cv:: html
+   .. html::
 
        <h2>From FlickrRestStore:</h2>
        This ThumbnailPicker should have 4 thumbnails, witheach of them linking
@@ -188,7 +188,7 @@ of settings, and uses the FlickrRestStore data store.
        <div id="thumbPicker1" data-dojo-type="dojox.image.ThumbnailPicker" data-dojo-props="numberThumbs:4, useHyperlink:true,
        hyperlinkTarget:this"></div>
 
-   .. cv:: css
+   .. css::
 
       <style>
          @import "{{baseUrl}}dojox/image/resources/image.css";
