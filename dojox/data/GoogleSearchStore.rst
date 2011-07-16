@@ -376,44 +376,44 @@ Searching multiple Google services at once
     <b>Input search text:</b>
     <br>
     <br>
-    <div dojoType="dijit.form.TextBox" width="50" id="searchText" value="Dojo"></div>
+    <div data-dojo-type="dijit.form.TextBox" width="50" id="searchText" value="Dojo"></div>
     <br>
-    <div dojoType="dijit.form.Button" id="searchButton">Search!</div>
-    <div dojoType="dojox.data.GoogleWebSearchStore" data-dojo-id="webStore"></div>
-    <div dojoType="dojox.data.GoogleImageSearchStore" data-dojo-id="imageStore"></div>    
-    <div dojoType="dojox.data.GoogleNewsSearchStore" data-dojo-id="newsStore"></div>
+    <div data-dojo-type="dijit.form.Button" id="searchButton">Search!</div>
+    <div data-dojo-type="dojox.data.GoogleWebSearchStore" data-dojo-id="webStore"></div>
+    <div data-dojo-type="dojox.data.GoogleImageSearchStore" data-dojo-id="imageStore"></div>    
+    <div data-dojo-type="dojox.data.GoogleNewsSearchStore" data-dojo-id="newsStore"></div>
     <br>
     <br>
-    <div dojoType="dijit.layout.TabContainer" style="width: 800px; height: 350px;" id="tabSearch">
+    <div data-dojo-type="dijit.layout.TabContainer" style="width: 800px; height: 350px;" id="tabSearch">
       <div id="tab1" title="GoogleWebSearchStore" dojoType="dijit.layout.ContentPane">
         <div id="webGrid" 
           style="width: 750px; height: 300px;"
-          dojoType="dojox.grid.DataGrid" 
-          store="webStore" 
-          structure="layoutResults"
-          query="{text:'Dojo'}" 
-          rowsPerPage="40">
+          data-dojo-type="dojox.grid.DataGrid" 
+          data-dojo-props="store:webStore,
+          structure:'layoutResults',
+          query:{text:'Dojo'},
+          rowsPerPage:40">
         </div>
       </div>
       <div id="tab2" title="GoogleImageSearchStore" dojoType="dijit.layout.ContentPane">
         <div style="width: 750px; height: 300px;">
           <div id="imageGrid" 
-            dojoType="dojox.grid.DataGrid" 
-            store="imageStore" 
-            structure="layoutResults" 
-            query="{text:'Dojo'}"   
-            rowsPerPage="40">
+            data-dojo-type="dojox.grid.DataGrid" 
+            data-dojo-props="store:imageStore,
+            structure:'layoutResults',
+            query:{text:'Dojo'},
+            rowsPerPage:40">
           </div>
         </div> 
       </div>
       <div id="tab3" title="GoogleNewsSearchStore" dojoType="dijit.layout.ContentPane">
         <div id="newsGrid" 
           style="width: 750px; height: 300px;"
-          dojoType="dojox.grid.DataGrid" 
-          store="newsStore" 
-          structure="layoutResults" 
-          query="{text:'Dojo'}" 
-          rowsPerPage="40">
+          data-dojo-type="dojox.grid.DataGrid" 
+          data-dojo-props="store:newsStore,
+          structure:'layoutResults',
+          query:{text:'Dojo'},
+          rowsPerPage:40">
         </div>
       </div>
     </div>
