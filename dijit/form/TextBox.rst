@@ -49,9 +49,8 @@ Declarative example
   .. cv:: html
 
         <input type="text" name="firstname" value="testing testing"
-		dojoType="dijit.form.TextBox"
-		trim="true" id="firstname"
-		propercase="true">
+		data-dojo-type="dijit.form.TextBox"
+		data-dojo-props="trim:true, propercase:true" id="firstname">
         <label for="firstname">Auto-trimming, Proper-casing Textbox:</label>
 
   
@@ -76,14 +75,14 @@ Sizing a text box is done through the CSS width on the text box dom node.  Typic
 
   .. cv :: html
 
-    <b>A default textbox:</b> <div dojoType="dijit.form.TextBox"></div>
+    <b>A default textbox:</b> <div data-dojo-type="dijit.form.TextBox"></div>
     <br>
-    <b>A large textbox:</b> <div style="width: 50em;" dojoType="dijit.form.TextBox"></div>
+    <b>A large textbox:</b> <div style="width: 50em;" data-dojo-type="dijit.form.TextBox"></div>
     <br>
-    <b>A small textbox:</b> <div style="width: 10em;" dojoType="dijit.form.TextBox"></div>
+    <b>A small textbox:</b> <div style="width: 10em;" data-dojo-type="dijit.form.TextBox"></div>
     <br>
 
-    <b>A programmatically sized textbox:</b> <div id="progBox" dojoType="dijit.form.TextBox"></div>
+    <b>A programmatically sized textbox:</b> <div id="progBox" data-dojo-type="dijit.form.TextBox"></div>
     <br>
 
 
@@ -117,9 +116,9 @@ Getting and manipulating the value is a trivial matter.  It is done through the 
 
   .. cv :: html
 
-    <b>A textbox with a value:</b> <input id="value0Box" dojoType="dijit.form.TextBox" value="Some value" intermediateChanges="true"></input>
+    <b>A textbox with a value:</b> <input id="value0Box" data-dojo-type="dijit.form.TextBox" value="Some value" data-dojo-props="intermediateChanges:true"></input>
     <br>
-    <b>A textbox set with a value from the above textbox:</b> <input id="value1Box" dojoType="dijit.form.TextBox"></input>
+    <b>A textbox set with a value from the above textbox:</b> <input id="value1Box" data-dojo-type="dijit.form.TextBox"></input>
     <br>
 
   .. cv:: css
