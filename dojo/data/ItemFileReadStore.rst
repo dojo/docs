@@ -615,8 +615,8 @@ Connecting ItemFileReadStore to ComboBox
 
   .. cv :: html 
 
-    <div dojoType="dojo.data.ItemFileReadStore" data="storeData2" data-dojo-id="countryStore"></div>
-    <div dojoType="dijit.form.ComboBox" store="countryStore" searchAttr="name"></div>
+    <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="data:storeData2" data-dojo-id="countryStore"></div>
+    <div data-dojo-type="dijit.form.ComboBox" data-dojo-props="store:countryStore, searchAttr:'name'"></div>
 
 Searching for all continents
 ----------------------------
@@ -724,7 +724,7 @@ Searching for all continents
 
   .. cv :: html 
 
-    <div dojoType="dojo.data.ItemFileReadStore" data="geoData" data-dojo-id="geoStore"></div>
+    <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="data:geoData" data-dojo-id="geoStore"></div>
     <div data-dojo-type="dijit.form.Button" data-dojo-id="button2">Find continents!</div>
     <br>
     <br>
@@ -839,16 +839,16 @@ Doing wildcard searches and option setting
   .. cv :: html 
 
 
-    <b>Name:  </b><input dojoType="dijit.form.TextBox" data-dojo-id="nameBox" value="*"></input>
+    <b>Name:  </b><input data-dojo-type="dijit.form.TextBox" data-dojo-id="nameBox" value="*"></input>
     <br>
     <br>
-    <b>Aisle: </b><input dojoType="dijit.form.TextBox" data-dojo-id="aisleBox" value="*"></input>
+    <b>Aisle: </b><input data-dojo-type="dijit.form.TextBox" data-dojo-id="aisleBox" value="*"></input>
     <br>
     <br>
-    <b>Case Insensitive: </b><div dojoType="dijit.form.CheckBox" checked="false" data-dojo-id="checkBox"></div>
+    <b>Case Insensitive: </b><div data-dojo-type="dijit.form.CheckBox" checked="false" data-dojo-id="checkBox"></div>
     <br>
     <br>
-    <div dojoType="dojo.data.ItemFileReadStore" data="storeData3" data-dojo-id="foodStore3"></div>
+    <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="data:storeData3" data-dojo-id="foodStore3"></div>
     <div data-dojo-type="dijit.form.Button" data-dojo-id="button3">Click to search!</div>
     <br>
     <br>
@@ -955,8 +955,8 @@ Demonstrating custom sorting
 
   .. cv :: html 
 
-    <div dojoType="dojo.data.ItemFileReadStore" data="sortData" data-dojo-id="sortStore"></div>
-    <div dojoType="dijit.form.Button" data-dojo-id="button4">Custom sort!</div>
+    <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="data:sortData" data-dojo-id="sortStore"></div>
+    <div data-dojo-type="dijit.form.Button" data-dojo-id="button4">Custom sort!</div>
     <br>
     <br>
     <span id="list4">
@@ -1016,9 +1016,9 @@ Reloading/Refreshing ItemFileReadStore from a 'data' object (Dojo Toolkit 1.4+)
 
   .. html::
 
-    <div dojoType="dojo.data.ItemFileReadStore" data="storeData10" data-dojo-id="reloadableStore1"></div>
-    <div dojoType="dijit.form.ComboBox" store="reloadableStore1" searchAttr="name"></div>
-    <div id="reloadButton1" dojoType="dijit.form.Button">Reload DataStore</div>
+    <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="data:storeData10" data-dojo-id="reloadableStore1"></div>
+    <div data-dojo-type="dijit.form.ComboBox" data-dojo-props="store:reloadableStore1, searchAttr:'name'"></div>
+    <div id="reloadButton1" data-dojo-type="dijit.form.Button">Reload DataStore</div>
 
 Reloading/Refreshing ItemFileReadStore from a url (Dojo Toolkit 1.4+)
 ---------------------------------------------------------------------
@@ -1048,9 +1048,9 @@ Reloading/Refreshing ItemFileReadStore from a url (Dojo Toolkit 1.4+)
 
   .. html::
 
-    <div dojoType="dojo.data.ItemFileReadStore" url="{{dataUrl}}/dojox/data/tests/stores/countries.json" data-dojo-id="reloadableStore2" urlPreventCache="true" clearOnClose="true"></div>
-    <div dojoType="dijit.form.ComboBox" store="reloadableStore2" searchAttr="name"></div>
-    <div id="reloadButton2" dojoType="dijit.form.Button">Reload DataStore</div>
+    <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="url:'{{dataUrl}}/dojox/data/tests/stores/countries.json', urlPreventCache:true, clearOnClose:true" data-dojo-id="reloadableStore2"></div>
+    <div data-dojo-type="dijit.form.ComboBox" data-dojo-props="store:reloadableStore2, searchAttr:'name'"></div>
+    <div id="reloadButton2" data-dojo-type="dijit.form.Button">Reload DataStore</div>
 
 
 ========
