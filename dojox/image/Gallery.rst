@@ -46,8 +46,8 @@ Creating a Gallery and setting a simple data source
   dijit.byId('gallery1').setDataStore(imageItemStore, request, itemNameMap);
   </script>
 
-  <div id="gallery1" dojoType="dojox.image.Gallery"></div>
-  <div data-dojo-id="imageItemStore" dojoType="dojo.data.ItemFileReadStore" url="images.json"></div>
+  <div id="gallery1" data-dojo-type="dojox.image.Gallery"></div>
+  <div data-dojo-id="imageItemStore" data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="url:'images.json'"></div>
 
 
 Creating a Gallery with a FlickrRestStore
@@ -82,7 +82,7 @@ Creating a Gallery with a FlickrRestStore
   
   dijit.byId('gallery1').setDataStore(flickrRestStore, request, itemNameMap);
   </script>
-  <div id="gallery1" dojoType="dojox.image.Gallery"></div>
+  <div id="gallery1" data-dojo-type="dojox.image.Gallery"></div>
 
 
 Setting the image width and height
@@ -90,7 +90,7 @@ Setting the image width and height
 .. code-block :: javascript
  :linenos:
 
-  <div id="gallery1" dojoType="dojox.image.Gallery" imageHeight="400" imageWidth="600"></div
+  <div id="gallery1" data-dojo-type="dojox.image.Gallery" data-dojo-props="imageHeight:400, imageWidth:600"></div
 
 
 Setting Page Size and AutoLoad
@@ -110,7 +110,7 @@ by setting the autoLoad attribute to "false".
 .. code-block :: javascript
  :linenos:
 
-  <div id="gallery1" dojoType="dojox.image.Gallery" pageSize="50" autoLoad="false" ></div>
+  <div id="gallery1" data-dojo-type="dojox.image.Gallery" data-dojo-props="pageSize:50, autoLoad:false" ></div>
 
 Changing the time interval in a SlideShow
 
@@ -122,4 +122,4 @@ the slideshowInterval attribute to the number of seconds required.
 .. code-block :: javascript
  :linenos:   
 
-  <div id="gallery1" dojoType="dojox.image.Gallery" slideshowInterval="5"></div>
+  <div id="gallery1" data-dojo-type="dojox.image.Gallery" data-dojo-props="slideshowInterval:5"></div>
