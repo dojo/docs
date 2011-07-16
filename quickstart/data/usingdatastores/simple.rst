@@ -100,7 +100,7 @@ Connecting dijit.Tree
 
     <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="data:storeData" data-dojo-id="countryStore"></div>
     <div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="countryModel" data-dojo-props="store:countryStore, query:{}, rootId:'Countries', rootLabel:'Countries'"></div>
-    <div data-dojo-type="dijit.Tree" data-dojo-props="model:'countryModel'"></div>
+    <div data-dojo-type="dijit.Tree" data-dojo-props="model:countryModel"></div>
 
     
 Connecting dijit.form.FilteringSelect
