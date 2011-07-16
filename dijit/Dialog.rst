@@ -185,34 +185,34 @@ To simply close the dialog, click the Cancel button, which calls the hide() func
         <table>
             <tr>
                 <td><label for="name">Name: </label></td>
-                <td><input dojoType="dijit.form.TextBox" type="text" name="name" id="name"></td>
+                <td><input data-dojo-type="dijit.form.TextBox" type="text" name="name" id="name"></td>
             </tr>
             <tr>
                 <td><label for="loc">Location: </label></td>
-                <td><input dojoType="dijit.form.TextBox" type="text" name="loc" id="loc"></td>
+                <td><input data-dojo-type="dijit.form.TextBox" type="text" name="loc" id="loc"></td>
             </tr>
             <tr>
                 <td><label for="date">Start date: </label></td>
-                <td><input dojoType="dijit.form.DateTextBox" type="text" name="sdate" id="sdate"></td>
+                <td><input data-dojo-type="dijit.form.DateTextBox" type="text" name="sdate" id="sdate"></td>
             </tr>
             <tr>
                 <td><label for="date">End date: </label></td>
-                <td><input dojoType="dijit.form.DateTextBox" type="text" name="edate" id="edate"></td>
+                <td><input data-dojo-type="dijit.form.DateTextBox" type="text" name="edate" id="edate"></td>
             </tr>
             <tr>
                 <td><label for="date">Time: </label></td>
-                <td><input dojoType="dijit.form.TimeTextBox" type="text" name="time" id="time"></td>
+                <td><input data-dojo-type="dijit.form.TimeTextBox" type="text" name="time" id="time"></td>
             </tr>
             <tr>
                 <td><label for="desc">Description: </label></td>
-                <td><input dojoType="dijit.form.TextBox" type="text" name="desc" id="desc"></td>
+                <td><input data-dojo-type="dijit.form.TextBox" type="text" name="desc" id="desc"></td>
             </tr>
             <tr>
                 <td align="center" colspan="2">
-                    <button dojoType="dijit.form.Button" type="submit"
-                        onClick="return dijit.byId('formDialog').isValid();">OK</button>
-                    <button dojoType="dijit.form.Button" type="button"
-                        onClick="dijit.byId('formDialog').hide();">Cancel</button>
+                    <button data-dojo-type="dijit.form.Button" type="submit"
+                        data-dojo-props="onClick:function(){return dijit.byId('formDialog').isValid();}">OK</button>
+                    <button data-dojo-type="dijit.form.Button" type="button"
+                        data-dojo-props="onClick:function(){dijit.byId('formDialog').hide();}">Cancel</button>
                 </td>
             </tr>
         </table>
@@ -271,12 +271,12 @@ If you want to handle the onSubmit event like a traditional <form> element, you 
             </script>
             <div class="dijitDialogPaneContentArea">
 
-                <label for='foo'>Foo:</label><div dojoType="dijit.form.ValidationTextBox" required="true"></div>
+                <label for='foo'>Foo:</label><div data-dojo-type="dijit.form.ValidationTextBox" data-dojo-props="required:true"></div>
             </div>
             <div class="dijitDialogPaneActionBar">
-                    <button dojoType="dijit.form.Button" type="submit">OK</button>
-                    <button dojoType="dijit.form.Button" type="button"
-                        onClick="dijit.byId('formDialog2').hide();">Cancel</button>
+                    <button data-dojo-type="dijit.form.Button" type="submit">OK</button>
+                    <button data-dojo-type="dijit.form.Button" type="button"
+                        data-dojo-props="onClick:function(){dijit.byId('formDialog2').hide();}">Cancel</button>
             </div>
          </form>
     </div>
@@ -322,7 +322,7 @@ This example shows a Dialog that will ask the user to accept or decline the term
         <table>
             <tr>
                 <td>
-                    <input type="radio" dojoType="dijit.form.RadioButton" name="agreement" id="radioOne" value="accept" onclick="accept"/>
+                    <input type="radio" data-dojo-type="dijit.form.RadioButton" name="agreement" id="radioOne" value="accept" onclick="accept"/>
                     <label for="radioOne">
                         I accept the terms of this agreement
                     </label>
@@ -330,7 +330,7 @@ This example shows a Dialog that will ask the user to accept or decline the term
             </tr>
             <tr>
                 <td>
-                    <input type="radio" dojoType="dijit.form.RadioButton" name="agreement" id="radioTwo" value="decline" onclick="decline"/>
+                    <input type="radio" data-dojo-type="dijit.form.RadioButton" name="agreement" id="radioTwo" value="decline" onclick="decline"/>
                     <label for="radioTwo">
                         I decline 
                     </label>
@@ -399,7 +399,7 @@ You can also load dialog content from another page by setting HREF attribute for
     </div>
 
     <p>When pressing this button the dialog will popup loading the dialog content using an XHR call.</p>
-    <button dojoType="dijit.form.Button" onClick="dijit.byId('external').show();" type="button">Show me!</button>
+    <button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:function(){dijit.byId('external').show();}" type="button">Show me!</button>
 
 
 
@@ -432,7 +432,7 @@ If you want a scrollbar on a dialog, then you need to add width/height to a div 
     </div>
 
     <p>When pressing this button the dialog will popup (with a scrollbar):</p>
-    <button dojoType="dijit.form.Button" onClick="dijit.byId('sized').show();" type="button">Show me!</button>
+    <button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:function(){dijit.byId('sized').show();}" type="button">Show me!</button>
 
 
 =============
