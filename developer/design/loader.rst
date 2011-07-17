@@ -303,13 +303,13 @@ has.js
 
 I'll describe dojo's implementation of has.js in detail, but here's a self explanatory example of adding a test:
 
-.. code-block :: html
+.. code-block :: javascript
 
   has.add("dom-addeventlistener", !!document.addEventListener);
 
 And then later using that test:
 
-.. code-block :: html
+.. code-block :: javascript
 
   if(has("dom-addeventlistener")){
     node.addEventListener("click", handler);
@@ -328,7 +328,7 @@ program. For example, if the dojo build system is given a profile that indicates
 static and true, it will transform the code above as follows:
 
 
-.. code-block :: html
+.. code-block :: javascript
 
   0 && has.add("dom-addeventlistener", !!document.addEventListener);
 
@@ -341,7 +341,7 @@ static and true, it will transform the code above as follows:
 When this code is passed on to a reasonable minifier, the had.add statement, the if condition, and the else clause will
 be removed, resulting in the following code:
 
-.. code-block :: html
+.. code-block :: javascript
 
   node.addEventListener("click", handler);
 
@@ -364,7 +364,7 @@ many of its features are has-bracketed. Consequently, the loader must define the
 the loader is 100% compatible with the API published by the has.js project, but includes a couple of additional
 features. It is so trivial, here it is in its entirety:
 
-.. code-block :: html
+.. code-block :: javascript
 
   var
     global = this, // this points to the global space
@@ -1338,8 +1338,8 @@ The AMD API includes a few utility functions:
 require.toUrl converts a name that is prefixed by a module identifier to a URL by replacing the module identifier prefix
 with the path resolved by the moduleIdToPath process. For example, let's say you've defined a
 configuration that will cause the module identifier "myApp/widgets/button" to point to the resource
-http://acmeCopy.com/myApp/widgets/button.js. In such a case, require.toUrl("myApp/widgets/templates/button.html") would return
-"http://acmeCopy.com/myApp/widgets/templates/button.html". This also works with relative ids when require is a context
+``http://acmeCopy.com/myApp/widgets/button.js``. In such a case, require.toUrl("myApp/widgets/templates/button.html") would return
+``"http://acmeCopy.com/myApp/widgets/templates/button.html"``. This also works with relative ids when require is a context
 require as described in `Relative Module Identifiers`_ and `CommonJS require, exports, and module`_.
 
 require.toAbsMid simply returns the absolute module identifier implied by the moduleId argument. In the case of global
@@ -1701,6 +1701,35 @@ Dojo v1.7 includes several key plugins:
 
   * dojo/loadInit: causes dojo.loadInit callbacks then other legacy API functions to be executed--in particular
     dojo.require[After]If--that are associated with a module (see `Legacy Cross Domain Mode`_)
+
+========================
+Generic Script Injection
+========================
+
+As described in `The AMD API`_ the dojo loader allows clients to demand a resource that does not define a module
+value. In such cases, the loader ensures the demanded resource was loaded, and then simply records ``undefined`` for the
+module value, assuming the client was simply indicating they wanted a chunk of code downloaded and evaluated. Such
+demands can occur in any require or define dependencies argument.
+
+With an appropriate configuration, it's possible to map any particular module identifier to any particular
+path. However, sometimes you'll have a single script at a hard address that's not a module and you just want to load and
+evaluate it without the fuss of the indirection a module identifier implies. In order to solve this problem, the 
+loader allows a nonmodule identifier in any require or define dependencies argument, and in such cases the item is
+interpreted as an explicit URL (browser environment) or filename (nonbrowser environment). For example,
+
+.. code-block :: javascript
+
+  require(["http://acmecorp.com/stuff.js"], function(acmeStuff) {
+    // etc.
+  });
+
+The loader interprets any of the following nonmodule identifiers as explicit addresses:
+
+* any item with a protocol (e.g., "http:" or "https:")
+
+* any item that begins with a backslash (e.g., "/acmecorp.com/stuff.js")
+
+* any item that ends with a ".js" suffix.
 
 ==============
 The Legacy API
@@ -2378,7 +2407,7 @@ Error Reporting
 When things go wrong, the loader signals the "error" event on the micro even API. So, in order to monitor loader errors,
 simply connect via require.on like this:
 
-.. code-block :: html
+.. code-block :: javascript
 
   function handleError(error){
     console.log(error.src, error.id);
@@ -2499,25 +2528,29 @@ loader proceed normally without any breakpoints and analyze the order of certain
 or executing a module. The source version of the loader contains a tracing API to facilitate this debugging
 technique. What's more, the tracing API is public, so you can use it with your own code when circumstances warrant.
 
-The tracing API resides at require.trace for global require or any context require:
+The tracing API resides at require.trace for global require and any context require:
 
 .. code-block :: javascript
 
   require.trace = function(
-    groupId, (string)
-    args (array of any)
+    groupId, // (string) the tracing group identifier to which this message belongs
+    args     // (array of any) additional data to send with trace
   )
 
   require.trace.set(
-    groupId, (string)
-    value (booleanish)
+    groupId, // (string) a tracing group identifier to turn on or off as given by value
+    value    // (booleanish) turn on or off all messages that are memebers of groupdId
   )
 
-  require.trace.on (booleanish)
+  require.trace.set(
+    groupMap, // (map:groupId --> booleanish) a map from trace group identifier to on/off value
+  )
 
-  require.trace.group (object) a map from trace group id to booleanish
+  require.trace.on // (booleanish) turn on or off all tracing
 
-Code that desires to emit trace messages applies require.trace to a groupId and an array of information to be output with
+  require.trace.group // (object) a map from trace group id to booleanish
+
+Code that desires to emit trace messages applies require.trace to a groupId and an array of information to be sent with
 a particular trace message. require.trace(groupId, args) implements the following process.
 
   1. If trace.on is falsy, then do nothing and return.
@@ -2531,16 +2564,64 @@ a particular trace message. require.trace(groupId, args) implements the followin
 
   5. Apply require.log to each item in args.
 
-Tracing can be turned on for a group by providing a value for the configuration variable trace, a map from trace group
+Tracing can be turned on or off for one of more trace groups by providing a value for the configuration variable trace, a map from trace group
 name to boolean. For example,
 
-.. code-block :: html
+.. code-block :: javascript
 
-  require({trace:{"loader-inject":1}});
+  require({
+    trace:{
+      "loader-inject":1 // turn the loader-inject group on
+      "loader-define":0 // turn the loader-define goup off
+    }
+  });
 
-Turns tracing on for the loader-inject trace event.
+Alternative, require.trace.set can be called directly; there are two forms:
 
-TODO: finish tracing description
+.. code-block :: javascript
+
+  require.trace.set{
+    "loader-inject":1 // turn the loader-inject group on
+    "loader-define":0 // turn the loader-define goup off
+  });
+
+  ...or, equivalently...
+
+  require.trace.set("loader-inject", 1);
+  require.trace.set("loader-define", 0);
+
+All tracing can be suspended by setting require.trace.on to falsy; setting require.trace.on to truthy only enables the
+groups that have been individually set to truthy as described above.
+
+The loader defines the following trace groups with associated semantics:
+
+loader-inject
+  Emits when a module is injected into the application. args[0]==="cache" if the module was in the loader cache,
+  ==="xhr" if the module was injected via an XHR transaction, and ==="script" if the module was script
+  injected. args[1]===the module identifier; args[2]===the URL/filename; for xhr only, args[3]===true if asynchronous
+  XHR, false otherwise
+
+loader-define
+  Emits when AMD define is called. args[0]===the module identifier. args[1]===the dependency vector. Notice that args give the
+  decoded values of these parameters, not the actual values at arguments[0] and arguments[1]. Often the loader does not
+  actually process the define application until the script that contains the define application completes; processing of
+  the define application is traced with by "loader-define-module" (see below).
+
+loader-exec-module
+  Emits when the loader attempts or fails to run a module's factory by first tracing the module's dependency
+  tree and running all dependent module factories. Notice that success is not guaranteed: if a dependent module is can
+  not be resolved (perhaps it has not arrived yet), then the attempt is aborted and reattempted later. args[0]==="exec"
+  on attempt, ==="abort" on failure; args[1]===the module identifier.
+
+loader-run-factory
+  Emits when the loader is about to run a module's factory; all dependencies have been satisfied. args[0]===the module identifier.
+
+loader-finish-exec
+  Emits when the loader is executing final cleanup after having successfully run a module's. This includes passing all queued
+  plugin requests to newly instantiated plugin modules and updating module values for legacy modules. args[0]===the module identifier.
+
+loader-define-module
+  Emits when the loader is about to process a previous AMD define application. See loader-define, above. args[0]===the module identifier.
 
 =======================
 Nonbrowser Environments
@@ -2554,7 +2635,59 @@ In non-browser environments, the path is a filename and the particular environme
 retrieve the module synchronously. This essentially results in the loader operating in synchronous AMD mode. However,
 this is just an implementation detail; from the loader client perspective, it "just works".
 
-TODO: explain how to write an environment config
+=====================
+Configuration Reprise
+=====================
+
+The loader is defined by an anonymous function in dojo.js. The function takes two arguments: a user-provided
+configuration and a default configuration. The application of these two arguments is bracketed by a dojo build pragma so
+that a built version can customize and/or hard set these arguments. Here's how the loader is expressed in dojo.js
+
+.. code-block :: javascript
+
+  (function(
+  	userConfig,
+  	defaultConfig
+  ){
+  	//
+  	// loader definition goes here
+  	//
+  })
+  //>>excludeStart("replaceLoaderConfig", kwArgs.replaceLoaderConfig);
+  (
+  	// userConfig
+  	this.dojoConfig || this.djConfig || this.require || {},
+  
+  	// default config
+  	{
+  		//
+  		// default configuration goes here
+  		//
+  	}
+  );
+  (function(){
+  	// must use this.require to make this work in node.js
+  	var require = this.require;
+  	!require.async && require(["dojo"]);
+  	require.bootRequire && require.apply(null, require.bootRequire);
+  })();
+  //>>excludeEnd("replaceLoaderConfig")
+
+When the loader configures itself, it consumes the default configuration first, followed by the user configuration. This
+causes the user configuration to override any default settings.
+
+Notice that so far as user configuration is concerned, the loader will consume exactly one of global dojoConfig, djConfig, or
+require (the RequireJS configuration variable), preferring dojoConfig to djConfig and djConfig to require.
+
+The little anonymous function after the application is an implementation detail. However, in the interest of giving a
+complete description, the function automatically loads dojo if the loader is in a legacy mode and appies require to
+the internal loader variable bootRequire which was computed by the loader as given the user configuration varibles deps
+and callback.
+
+The key benefit of the design is the ability to replace the arguments to the loader definition with a single static
+configuration variable. In applications where it's possible to provide all configuration up front, this allows
+constructing a built version of dojo.js that completely removes the entire configuration API, thereby saving a
+substantial abount of code. This technique is described more fully in the dojo built application tutorial.
 
 .. _CommonJS: http://www.commonjs.org/
 .. _Modules/AsynchronousDefinition: http://wiki.commonjs.org/wiki/Modules/AsynchronousDefinition
