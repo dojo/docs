@@ -1053,36 +1053,36 @@ Given this configuration and further assuming that baseUrl is automatically calc
 path/to/dtk/dojo, here are some examples of how a module identifier is mapped to a path:
 
 dojo
-  dojo => dojo/main (Step 3)
-  dojo/main => ./main (Step 5)
-  ./main => path/to/dtk/dojo/ + ./main => path/to/dtk/dojo/main (Step 8)
+  dojo ⇒ dojo/main (Step 3)
+  dojo/main ⇒ ./main (Step 5)
+  ./main ⇒ path/to/dtk/dojo/ + ./main ⇒ path/to/dtk/dojo/main (Step 8)
   path/to/dtk/dojo/main.js (Step 9)
 
 dojo/behavior
-  dojo/behavior => ./behavior (Step 5)
-  ./behavior => path/to/dtk/dojo/ + ./behavior => path/to/dtk/dojo/behavior (Step 8)
+  dojo/behavior ⇒ ./behavior (Step 5)
+  ./behavior ⇒ path/to/dtk/dojo/ + ./behavior ⇒ path/to/dtk/dojo/behavior (Step 8)
   path/to/dtk/dojo/behavior.js (Step 9)
   
 dojo/store/api/Store
-  dojo/store/api/Store => ./store/api/Store (Step 5)
-  ./store/api/Store => path/to/dtk/dojo/ + ./store/api/Store => path/to/dtk/dojo/store/api/Store (Step 8)
+  dojo/store/api/Store ⇒ ./store/api/Store (Step 5)
+  ./store/api/Store ⇒ path/to/dtk/dojo/ + ./store/api/Store ⇒ path/to/dtk/dojo/store/api/Store (Step 8)
   path/to/dtk/dojo/store/api/Store.js (Step 9)
   
 ../../_base/Deferred with reference module dojo/store/util/QueryResults
-  ../../_base/Deferred => dojo/store/util/QueryResults + /../ + ../../_base/Deferred =>
-  dojo/store/util/QueryResults/../../../_base/Deferred => dojo/_base/Deferred (Step 2)
-  dojo/_base/Deferred => ./_base/Deferred (Step 5)
-  ./_base/Deferred => path/to/dtk/dojo/ + ./_base/Deferred => path/to/dtk/dojo/_base/Deferred (Step 8)
+  ../../_base/Deferred ⇒ dojo/store/util/QueryResults + /../ + ../../_base/Deferred ⇒
+  dojo/store/util/QueryResults/../../../_base/Deferred ⇒ dojo/_base/Deferred (Step 2)
+  dojo/_base/Deferred ⇒ ./_base/Deferred (Step 5)
+  ./_base/Deferred ⇒ path/to/dtk/dojo/ + ./_base/Deferred ⇒ path/to/dtk/dojo/_base/Deferred (Step 8)
   path/to/dtk/dojo/_base/Deferred.js (Step 9)
 
 myApp
-  myApp => ../myApp (Step 6)
-  ../myApp => path/to/dtk + ../myApp => path/to/dtk/myApp (Step 8)
+  myApp ⇒ ../myApp (Step 6)
+  ../myApp ⇒ path/to/dtk + ../myApp ⇒ path/to/dtk/myApp (Step 8)
   path/to/dtk/myApp.js (Step 9)
   
 myApp/someSubModule
-  myApp/someSubModule => ../myApp/someSubModule (Step 6)
-  ../myApp/someSubModule => path/to/dtk + ../myApp/someSubModule => path/to/dtk/myApp/someSubModule (Step 8)
+  myApp/someSubModule ⇒ ../myApp/someSubModule (Step 6)
+  ../myApp/someSubModule ⇒ path/to/dtk + ../myApp/someSubModule ⇒ path/to/dtk/myApp/someSubModule (Step 8)
   path/to/dtk/myApp/someSubModule.js (Step 9)
 
 Notice how, assuming baseUrl points to the dojo tree as per the default, the top-level module identifier "myApp" is now
@@ -1104,11 +1104,11 @@ paths configuration like this:
 Since /path/to/my/App is absolute, Step 8 does not add baseUrl to the mix:
 
 myApp
-  myApp => /path/to/myApp (Step 4)
+  myApp ⇒ /path/to/myApp (Step 4)
   /path/to/myApp.js (Step 9)
   
 myApp/someSubModule
-  myApp/someSubModule => /path/to/myApp/someSubModule (Step 4)
+  myApp/someSubModule ⇒ /path/to/myApp/someSubModule (Step 4)
   /path/to/myApp/someSubModule.js (Step 9)
 
 Paths can also give a path segment that's relative. For example, assume you have the following tree of modules:
@@ -1137,14 +1137,14 @@ that points to script/dtk/dojo, a paths entry that gives the path for myApp rela
 Resulting in...
 
 myApp
-  myApp => ../../myApp (Step 4)
-  ../../myApp => path/to/dtk/dojo/ + ../../myApp => path/to/myApp (Step 8)
-  path/to/myApp => path/to/myApp.js (Step 9)
+  myApp ⇒ ../../myApp (Step 4)
+  ../../myApp ⇒ path/to/dtk/dojo/ + ../../myApp ⇒ path/to/myApp (Step 8)
+  path/to/myApp ⇒ path/to/myApp.js (Step 9)
   
 myApp/someSubModule
-  myApp => ../../myApp/someSubModule (Step 4)
-  ../../myApp/someSubModule => path/to/dtk/dojo/ + ../../myApp => path/to/myApp/someSubModule (Step 8)
-  path/to/myApp/someSubModule => path/to/myApp/someSubModule.js (Step 9)
+  myApp ⇒ ../../myApp/someSubModule (Step 4)
+  ../../myApp/someSubModule ⇒ path/to/dtk/dojo/ + ../../myApp ⇒ path/to/myApp/someSubModule (Step 8)
+  path/to/myApp/someSubModule ⇒ path/to/myApp/someSubModule.js (Step 9)
 
 This is one way to solve the problem of has("config-tlmSiblingOfDojo") forcing top-level modules to reside as sibling of
 dojo. Another way is to set has("config-tlmSiblingOfDojo") to falsy and/or explicitly set baseUrl. Often you'll do
@@ -1167,22 +1167,22 @@ both. Assuming the tree of modules given above, consider this configuration:
 Notice there is no paths mapping; we don't need one:
 
 myApp
-  myApp => scripts/ + myApp => script/myApp (Step 8)
-  scripts/myApp => scripts/myApp.js (Step 9)
+  myApp ⇒ scripts/ + myApp ⇒ script/myApp (Step 8)
+  scripts/myApp ⇒ scripts/myApp.js (Step 9)
 
 myApp/someSubModule
-  myApp => scripts/ + myApp/someSubModule => script/myApp/someSubModule (Step 8)
-  scripts/myApp/someSubModule => scripts/myApp/someSubModule.js (Step 9)
+  myApp ⇒ scripts/ + myApp/someSubModule ⇒ script/myApp/someSubModule (Step 8)
+  scripts/myApp/someSubModule ⇒ scripts/myApp/someSubModule.js (Step 9)
 
 dojo
-  dojo => dojo/main (Step 3)
-  dojo/main => dtk/dojo/main (Step 5)
-  dtk/dojo/main => scripts/dtk/dojo/ + ./main => scripts/dtk/dojo/main (Step 8)
+  dojo ⇒ dojo/main (Step 3)
+  dojo/main ⇒ dtk/dojo/main (Step 5)
+  dtk/dojo/main ⇒ scripts/dtk/dojo/ + ./main ⇒ scripts/dtk/dojo/main (Step 8)
   scripts/dtk/dojo/main.js (Step 9)
 
 dojo/behavior
-  dojo/behavior => dtk/dojo/behavior (Step 5)
-  dtk/dojo/behavior => scripts/dtk/dojo/ + ./behavior => scripts/dtk/dojo/behavior (Step 8)
+  dojo/behavior ⇒ dtk/dojo/behavior (Step 5)
+  dtk/dojo/behavior ⇒ scripts/dtk/dojo/ + ./behavior ⇒ scripts/dtk/dojo/behavior (Step 8)
   scripts/dojo/behavior.js (Step 9)
 
 Let's go ahead and make myApp a proper package:
@@ -1207,18 +1207,18 @@ Let's go ahead and make myApp a proper package:
 myApp/someSubModule maps the same, but myApp does not:
 
 myApp
-  myApp => myApp/main (Step 3)
-  myApp/main => myApp/main (Step 5)
-  myApp/main => scripts/ + myApp/main => scripts/myApp/main (Step 8)
+  myApp ⇒ myApp/main (Step 3)
+  myApp/main ⇒ myApp/main (Step 5)
+  myApp/main ⇒ scripts/ + myApp/main ⇒ scripts/myApp/main (Step 8)
   scripts/myApp/main.js (Step 9)
 
 This is probably a better design compared to cluttering the scripts directory with a bunch of top-level modules. But, it
 that's what you really want, your can do it be adding the path myApp/main:"./myApp" to the paths map:
 
 myApp
-  myApp => myApp/main (Step 3)
-  myApp/main => ./myApp (Step 4)
-  ./myApp => scripts/ + ./myApp => scripts/myApp (Step 8)
+  myApp ⇒ myApp/main (Step 3)
+  myApp/main ⇒ ./myApp (Step 4)
+  ./myApp ⇒ scripts/ + ./myApp ⇒ scripts/myApp (Step 8)
   scripts/myApp.js (Step 9)
 
 As long as a given module identifier is not also a parent segment of another module identifier, you can map that module
