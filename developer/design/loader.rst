@@ -1,4 +1,4 @@
-format dojo_rst
+#format dojo_rst
 
 The Dojo Loader
 ===============
@@ -1845,6 +1845,7 @@ actual plugin is another elegant example of the plugin design; here it is in its
     }
   });
 
+
 Dojo v1.7 includes several key plugins:
 
 * dojo/text: loads test resources and subsumes dojo.cache; it is a superset of RequireJS's text plugin.
@@ -3039,6 +3040,7 @@ dojo/dojo.js for the latest and greatest.
 		},
 		async:0
 	}
+
 
 .. _CommonJS: http://www.commonjs.org/
 .. _Modules/AsynchronousDefinition: http://wiki.commonjs.org/wiki/Modules/AsynchronousDefinition
