@@ -473,6 +473,7 @@ A list of individuals who have signed Dojo CLAs:
 * Smith, Micheil 
 * Smith, Stephen 
 * Snopek, David 
+* Snover, Colin
 * Sobol, Steve 
 * Solomenchuk, Vladimir 
 * Sorensen, Asael 
