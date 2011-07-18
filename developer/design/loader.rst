@@ -8,7 +8,7 @@ The Dojo Loader
 :Author: Rawld Gill
 
 .. contents::
-   :depth: 3
+   :depth: 2
 
 The Dojo Loader
 
@@ -54,7 +54,6 @@ changes are simple once you understand the AMD API.
 
 This tutorial explains the new loader "head to toe". If you're writing a new application, you can safely skip the parts about
 backcompat.
-
 
 =======
 dojo.js
@@ -447,12 +446,12 @@ develop some vocabulary.
 
 A module is embodied as a chunk of Javascript code. The purpose of the loader is deceptively simple:
 
-  * cause the chunk of Javascript code that represents a particular module to be evaluated in such a manner that it
-    produces a result defined as the "module value" given by the particular chunk of code
+* cause the chunk of Javascript code that represents a particular module to be evaluated in such a manner that it
+  produces a result defined as the "module value" given by the particular chunk of code
 
-  * associate a name with the module value; naturally, the name is termed the "module identifier"
+* associate a name with the module value; naturally, the name is termed the "module identifier"
 
-  * given the module identifier of an existing association, return the module value of that association
+* given the module identifier of an existing association, return the module value of that association
 
 Although it is possible for a single resource to contain the code for several modules, to do so is a bad practice and a
 single module should be contained in a single addressable (e.g., by URL or filename) resource.
@@ -464,8 +463,10 @@ Inserting a module value into this namespace usually involves several steps:
 
 1. [requested] The client application demands a particular module value by providing a module identifier.
 
-2. The loader resolves the module identifier into an address (typically a URL or filename) suitable for the method
-   required to retrieve the Javascript code that embodies the particular module.
+2. [normalized] The loader transforms the module identifier, which is almost always provided with respect to another
+   module module identifier, into an absolute module identifier as understood by the loader as well as an address
+   (typically a URL or filename) suitable to retrieve the Javascript code that embodies the particular module given the
+   current executing environment.
 
 3. [loaded] The loader takes the necessary actions to load the text from the resolved address into the execution
    environment.
@@ -918,7 +919,33 @@ Fortunately, the dojo loader has a solution to this problem that I'll describe i
 
 ===========================================
 Resolving Module Identifiers into Addresses
+Normalizing Module Identifiers
 ===========================================
+
+In this section, I'll describe how the loader computes an absolute module identifier and address given a module
+identifier that appears in a dependencies argument to AMD require or define. We'll see that the algorithm is extremely
+flexible and powerful, allowing clients to solve all kinds of module loading problems including aliases and module tree
+relocating.
+
+To begin, notice that module identifiers are usually given with respect to a reference module. The reference module for
+module identifiers found in the the dependencies argument of a define application is the module being defined;
+similarly, if the special module identifier "require" is found in the the dependencies argument of a define application,
+a so-called context require is returned, and the module being defined again indicates the reference module of that
+context require. The only place a reference module is not indicated is when module identifiers are given in the context
+of the global AMD require function.
+
+The need for a reference module is obvious when the module identifier is a relative identifier as described in
+xxx. However, even when an absolute module identifier is given, taking care to normalize that module identifier with
+respect to the reference module yeilds some powerful capabilities like the ability to load two different libraries with
+the same name.
+
+Once a module identifier is converted to an absolute module indentifier, the loader must compute an address that holds
+the resource that embodies the module.  In the browser, the address is a URL that can be used to inject a script element
+or execute an XHR transaction.  In non-browser environments like Rhino or node.js, the address is a filename. In either
+case, I'll term the address (or fragment of the address) a "path".
+
+So the goal of the normalization process is to convert a (module identifier, reference module) pair to an (absolute
+module identifier, path) pair. From now on, I'll term this process the "normalization" process.
 
 Module identifiers look like file system paths, for example, dijit/form/Button. They are given by a sequence of names
 separated by forward-slashes. Each individual name is termed a segment, with the "first" or "top-level" segment being
@@ -931,17 +958,11 @@ camel-case. Most AMD loaders, including dojo's, are more relaxed than this and a
 identifier alphabet. That said, I strongly recommend using only the characters in ``[A-Za-z0-9_-]``. Whatever you do, do not
 use the characters !, \*, ?, /, or \ in module names; these will only lead to problems.
 
-Our goal in this section is to transform a module identifier into an address that points to the resource indicated by the
-module identifier. In the browser, the address is a URL that can be used to inject a script element or execute an XHR
-transaction. In non-browser environments like Rhino or node.js, the address is a filename. In either case, I'll term the
-address (or fragment of the adders) a "path" in the descriptions that follow. From now on, I'll term the process of
-resolving a module identifier into a path as the "moduleIdToPath" process.
-
 Given the nature of module identifiers, the loader effectively maintains a hierarchical namespace. Naturally, this
-namespace tends to map onto a file system hierarchy that's typically made available through an HTTP server. I say "tends"
-because we'll see there are lots of ways to affect the mapping of a module name. The various methods of mapping module
-identifiers to resource URLs are a two-edged sword. It allows client code to remap individual modules, branches in
-module trees, and/or entire trees. But for the newcomer, all of these options can be bewildering. I'll give several
+namespace tends to map onto a file system hierarchy that's typically made available through an HTTP server. I say
+"tends" because we'll see there are lots of ways to affect the mapping of a module name. The various methods of mapping
+module identifiers to resource URLs are a two-edged sword. It allows client code to remap individual modules, branches
+in module trees, and/or entire trees. But for the newcomer, all of these options can be bewildering. I'll give several
 examples that should cover all the common use cases.
 
 The following configuration variables control how module identifiers are mapped to URLs:
@@ -949,8 +970,9 @@ The following configuration variables control how module identifiers are mapped 
 * baseUrl: (string, a path) a path to prepend to a computed path if the computed path is relative as described by the
   process below.
 
-* paths: (object) a map from a module identifier fragment to path. When matching paths,
-  the most-specific match wins. For example, a/x is more specific than a.
+* paths: (object) a map from a module identifier fragment to path fragment (in either case, the fragments may be
+  complete module identifiers/paths). Module fragments are always matched against the left-most portion of a module
+  identifier. When matching paths, the most-specific match wins. For example, a/x is more specific than a.
 
 * aliases: (object) a map from a module identifier to another module identifier.
 
@@ -959,66 +981,74 @@ The following configuration variables control how module identifiers are mapped 
 
 * package configuration: described next
 
-A package, among other things, is a hierarchy of inter-dependent modules that, hopefully, publish a cohesive API. dojo
+A package, among other things, is a hierarchy of interdependent modules that, hopefully, publish a cohesive API. dojo
 (that is, the dojo tree) and dijit (the dijit tree) are examples of packages. Packages can have extensive configuration
 variables, and the CommonJS Package specification describes many of these. However, as far as the dojo loader is
 concerned, only three are important:
 
-* location: the path to the root of the hierarchy at which the package resides
+* location: (string, a path) the path to the root of the hierarchy at which the package resides
 
-* main: the module identifier implied when a module identifier that is equivalent to just the package
-  name is given; if not specified, then the default value of "main" is assumed.
+* main: (string, a module identifier) the module identifier implied when a module identifier that is equivalent to just
+  the package name is given; if not specified, then the default value of "main" is assumed.
 
-* packageMap: an optional configuration variable that maps package names given inside a package to different names
-  know to the loader. This mapping allows packages to be relocated under different names. We'll see this is a very
-  powerful way to handle the problem of an application that needs to load two different packages with the same name
-  and/or two different versions of the same package. (note: packageMap is only useful to the dojo loader; currently other
-  loaders do not support this feature).
+* packageMap: (object, map: package identifier --> (string) package identifier) an optional configuration variable that
+  maps package names given inside a package to names know to the loader. This mapping allows packages to be relocated
+  under different names. In xxx, I'll descibe how packageMap can be used to load two different packages with the same
+  name and/or two different versions of the same package. (Note: packageMap is only useful to the dojo loader; currently
+  other loaders do not support this feature).
 
-We now have enough to describe the moduleIdToPath process. The entering arguments to the algorithm are the module identifier
-(denoted "moduleId") to be mapped, and, optionally, a reference module (denoted "rm").
+We now have enough to describe the normalization process. The entering arguments to the algorithm are the module
+identifier, denoted "moduleId"m to be normalized, and a reference module, denoted "rm"; when normalizing a module
+identifier contained in an argument to global AMD require, rm is null.
 
-1. If moduleId is relative and rm is not provided, an exception is thrown--the moduleId is not rational.
+1. If moduleId begins with a protocol (for example, "http:") or backslash, or ends with a ".js" suffix, then the assume
+   the client is not requesting a module, but rather simply requesting a chunk of Javascript be loaded and executed. In
+   this case, return the result ("not-a-module", moduleId).
 
-2. If moduleId is relative and rm is provided, then set moduleId to the module identifier given by rm + "/../" + moduleId and collapse
-   any relative segments. Relative segments are collapsed by removing all /./ and x/.. segments (where
-   x is not ..). For example a/b/c/../../d would be resolved to a/d by collapsing c/.. then b/.. At this
-   point moduleId must be an absolute module identifier and contain no relative segments; if it does not meet this
-   criteria, an exception is thrown--the moduleId is not rational.
+2. If moduleId is relative (its first character is ".") and rm is not provided, throw an exception: the moduleId is not rational.
 
-3. If rm is given, and rm is a member of a package, and that package has a package map, then apply that package map to
+3. If moduleId is relative and rm is provided, then set moduleId to the module identifier given by rm + "/../" +
+   moduleId and collapse any relative segments. Relative segments are collapsed by removing all /./ and x/.. segments
+   (where x is not ..). For example a/b/c/../../d would be resolved to a/d by collapsing c/.. then b/.. At this point
+   moduleId must be an absolute module identifier and contain no relative segments; if it does not meet this criteria,
+   throw an exception: the moduleId is not rational.
+
+4. If rm is given, and rm is a member of a package, and that package has a package map, then apply that package map to
    map the top-level segment. This application will either map that segment to another top-level name or default to the
-   identify map (x implies x). I'll describe the implications of this step in `Relocating Module Namespaces`_; for the remainder of this section,
-   assume that, if a packageMap exists, it always maps x to x.
+   identify map (x implies x). I'll describe the implications of this step in `Relocating Module Namespaces`_; for the
+   remainder of this section, assume that, if a packageMap exists, it always maps x to x.
 
-4. Look up the moduleId computed in Step 3 in the aliases map. If the moduleId is mapped, then restart the process at Step 3
-   with the mapped moduleId.
+5. Look up the moduleId computed in Step 3 in the aliases map. If the moduleId is mapped, then restart the process at
+   Step 3 with the mapped moduleId.
 
-5. If the first segment of moduleId is identical to a package name, then note that moduleId indicates a module in the given
-   package; call this package package-of-moduleId; further, if moduleId consists of exactly one segment, then append "/" and the
-   value of the main configuration variable for package-of-moduleId to moduleId. Otherwise, when the first segment of moduleId does not
-   name a known package, note that moduleId is not a member of a package.
+6. If the first segment of moduleId is identical to a package name, then note that moduleId indicates a module in the
+   given package; call this package "package-of-moduleId"; further, if moduleId consists of exactly one segment, then
+   append "/" and the value of the main configuration variable for package-of-moduleId to moduleId. Otherwise, when the
+   first segment of moduleId does not name a known package, note that moduleId is not a member of a package.
 
-6. Attempt to apply paths: find the longest module identifier fragment, always starting with the first segment, in
-   paths that matches moduleId after Step 5 (if any). If such a fragment is found, set the result to moduleId after replacing the
+At this point, moduleId has been fully normalized to an absolute module identifier known to the loader (that is, the
+reference module has no further influence on the absolute module identifier).
+
+7. Attempt to apply paths: find the longest module identifier fragment in pathe, always starting with the first segment,
+   that matches moduleId after Step 6. If such a fragment is found, set the result to moduleId after replacing the
    matched fragment of moduleId with the mapped path.
 
-7. If no paths were found in Step 6 and moduleId references a module in a package, set the result to moduleId after replacing the first
-   segment (the package name) with the location configuration variable for the given package.
+8. If no paths were found in Step 7 and moduleId references a module in a package, set the result to moduleId after
+   replacing the first segment (the package name) with the location configuration variable for the given package.
 
-8. If neither Step 6 or 7 were applied and has("config-tlmSiblingOfDojo") is truthy, then set the result to "../" + moduleId.
+9. If neither Step 7 nor 8 were applied and has("config-tlmSiblingOfDojo") is truthy, then set the result to "../" + moduleId.
 
-9. If none of Steps 6, 7, or 8 were applied then set the result to moduleId.
+10. If none of Steps 7, 8, or 9 were applied then set the result to moduleId.
 
-10. If result is not absolute, then prefix result with the configuration variable baseUrl.
+11. If result is not absolute, then prefix result with the configuration variable baseUrl.
 
-11. Append the suffix ".js" to result.
+12. Append the suffix ".js" to result.
 
 result now holds the path implied by (moduleId, rm).
 
 Yes, when viewed in toto, it's complicated. And probably more time has been spent on various mailing lists debating this
 algorithm than any other part of the AMD loader specification. Fortunately, there are just a few common patterns that
-are actually quite straightforward to understand. Let's look at some examples to get comfortable with all of this.
+are easy to understand. Let's look at some examples to get comfortable with all of this.
 
 To begin, assume that the user-provided configuration contains no packages, no paths, no baseUrl, and no value for
 has("config-tlmSiblingOfDojo"). In this case, the loader sets the default value of has("config-tlmSiblingOfDojo") to
@@ -1050,40 +1080,58 @@ and dojox packages. Here's the package configuration for the source release.
   }]
 
 Given this configuration and further assuming that baseUrl is automatically calculated by the loader to be
-path/to/dtk/dojo, here are some examples of how a module identifier is mapped to a path:
+"path/to/dtk/dojo", here are some examples of how a module identifier is mapped to a path:
 
 dojo
-  dojo ⇒ dojo/main (Step 3)
-  dojo/main ⇒ ./main (Step 5)
-  ./main ⇒ path/to/dtk/dojo/ + ./main ⇒ path/to/dtk/dojo/main (Step 8)
-  path/to/dtk/dojo/main.js (Step 9)
+
+::
+
+  dojo ⇒ dojo/main (Step 6)
+  dojo/main ⇒ ./main (Step 8)
+  ./main ⇒ path/to/dtk/dojo/ + ./main ⇒ path/to/dtk/dojo/main (Step 11)
+  path/to/dtk/dojo/main.js (Step 12)
 
 dojo/behavior
-  dojo/behavior ⇒ ./behavior (Step 5)
-  ./behavior ⇒ path/to/dtk/dojo/ + ./behavior ⇒ path/to/dtk/dojo/behavior (Step 8)
-  path/to/dtk/dojo/behavior.js (Step 9)
+
+::
+
+  dojo/behavior ⇒ ./behavior (Step 8)
+  ./behavior ⇒ path/to/dtk/dojo/ + ./behavior ⇒ path/to/dtk/dojo/behavior (Step 11)
+  path/to/dtk/dojo/behavior.js (Step 12)
   
 dojo/store/api/Store
-  dojo/store/api/Store ⇒ ./store/api/Store (Step 5)
-  ./store/api/Store ⇒ path/to/dtk/dojo/ + ./store/api/Store ⇒ path/to/dtk/dojo/store/api/Store (Step 8)
-  path/to/dtk/dojo/store/api/Store.js (Step 9)
+
+::
+
+  dojo/store/api/Store ⇒ ./store/api/Store (Step 8)
+  ./store/api/Store ⇒ path/to/dtk/dojo/ + ./store/api/Store ⇒ path/to/dtk/dojo/store/api/Store (Step 11)
+  path/to/dtk/dojo/store/api/Store.js (Step 12)
   
 ../../_base/Deferred with reference module dojo/store/util/QueryResults
+
+::
+
   ../../_base/Deferred ⇒ dojo/store/util/QueryResults + /../ + ../../_base/Deferred ⇒
-  dojo/store/util/QueryResults/../../../_base/Deferred ⇒ dojo/_base/Deferred (Step 2)
-  dojo/_base/Deferred ⇒ ./_base/Deferred (Step 5)
-  ./_base/Deferred ⇒ path/to/dtk/dojo/ + ./_base/Deferred ⇒ path/to/dtk/dojo/_base/Deferred (Step 8)
-  path/to/dtk/dojo/_base/Deferred.js (Step 9)
+  dojo/store/util/QueryResults/../../../_base/Deferred ⇒ dojo/_base/Deferred (Step 3)
+  dojo/_base/Deferred ⇒ ./_base/Deferred (Step 8)
+  ./_base/Deferred ⇒ path/to/dtk/dojo/ + ./_base/Deferred ⇒ path/to/dtk/dojo/_base/Deferred (Step 11)
+  path/to/dtk/dojo/_base/Deferred.js (Step 12)
 
 myApp
-  myApp ⇒ ../myApp (Step 6)
-  ../myApp ⇒ path/to/dtk + ../myApp ⇒ path/to/dtk/myApp (Step 8)
-  path/to/dtk/myApp.js (Step 9)
+
+::
+
+  myApp ⇒ ../myApp (Step 9)
+  ../myApp ⇒ path/to/dtk + ../myApp ⇒ path/to/dtk/myApp (Step 11)
+  path/to/dtk/myApp.js (Step 12)
   
 myApp/someSubModule
-  myApp/someSubModule ⇒ ../myApp/someSubModule (Step 6)
-  ../myApp/someSubModule ⇒ path/to/dtk + ../myApp/someSubModule ⇒ path/to/dtk/myApp/someSubModule (Step 8)
-  path/to/dtk/myApp/someSubModule.js (Step 9)
+
+::
+
+  myApp/someSubModule ⇒ ../myApp/someSubModule (Step 9)
+  ../myApp/someSubModule ⇒ path/to/dtk + ../myApp/someSubModule ⇒ path/to/dtk/myApp/someSubModule (Step 11)
+  path/to/dtk/myApp/someSubModule.js (Step 12)
 
 Notice how, assuming baseUrl points to the dojo tree as per the default, the top-level module identifier "myApp" is now
 a sibling of the dojo tree--just like has("config-tlmSiblingOfDojo") suggests. This is how the dojo v1.x line has always
@@ -1101,15 +1149,15 @@ paths configuration like this:
     }
   }
 
-Since /path/to/my/App is absolute, Step 8 does not add baseUrl to the mix:
+Since /path/to/my/App is absolute, Step 11 does not add baseUrl to the mix:
 
 myApp
   myApp ⇒ /path/to/myApp (Step 4)
-  /path/to/myApp.js (Step 9)
+  /path/to/myApp.js (Step 12)
   
 myApp/someSubModule
   myApp/someSubModule ⇒ /path/to/myApp/someSubModule (Step 4)
-  /path/to/myApp/someSubModule.js (Step 9)
+  /path/to/myApp/someSubModule.js (Step 12)
 
 Paths can also give a path segment that's relative. For example, assume you have the following tree of modules:
 
@@ -1138,13 +1186,13 @@ Resulting in...
 
 myApp
   myApp ⇒ ../../myApp (Step 4)
-  ../../myApp ⇒ path/to/dtk/dojo/ + ../../myApp ⇒ path/to/myApp (Step 8)
-  path/to/myApp ⇒ path/to/myApp.js (Step 9)
+  ../../myApp ⇒ path/to/dtk/dojo/ + ../../myApp ⇒ path/to/myApp (Step 11)
+  path/to/myApp ⇒ path/to/myApp.js (Step 12)
   
 myApp/someSubModule
   myApp ⇒ ../../myApp/someSubModule (Step 4)
-  ../../myApp/someSubModule ⇒ path/to/dtk/dojo/ + ../../myApp ⇒ path/to/myApp/someSubModule (Step 8)
-  path/to/myApp/someSubModule ⇒ path/to/myApp/someSubModule.js (Step 9)
+  ../../myApp/someSubModule ⇒ path/to/dtk/dojo/ + ../../myApp ⇒ path/to/myApp/someSubModule (Step 11)
+  path/to/myApp/someSubModule ⇒ path/to/myApp/someSubModule.js (Step 12)
 
 This is one way to solve the problem of has("config-tlmSiblingOfDojo") forcing top-level modules to reside as sibling of
 dojo. Another way is to set has("config-tlmSiblingOfDojo") to falsy and/or explicitly set baseUrl. Often you'll do
@@ -1167,23 +1215,23 @@ both. Assuming the tree of modules given above, consider this configuration:
 Notice there is no paths mapping; we don't need one:
 
 myApp
-  myApp ⇒ scripts/ + myApp ⇒ script/myApp (Step 8)
-  scripts/myApp ⇒ scripts/myApp.js (Step 9)
+  myApp ⇒ scripts/ + myApp ⇒ script/myApp (Step 11)
+  scripts/myApp ⇒ scripts/myApp.js (Step 12)
 
 myApp/someSubModule
-  myApp ⇒ scripts/ + myApp/someSubModule ⇒ script/myApp/someSubModule (Step 8)
-  scripts/myApp/someSubModule ⇒ scripts/myApp/someSubModule.js (Step 9)
+  myApp ⇒ scripts/ + myApp/someSubModule ⇒ script/myApp/someSubModule (Step 11)
+  scripts/myApp/someSubModule ⇒ scripts/myApp/someSubModule.js (Step 12)
 
 dojo
   dojo ⇒ dojo/main (Step 3)
   dojo/main ⇒ dtk/dojo/main (Step 5)
-  dtk/dojo/main ⇒ scripts/dtk/dojo/ + ./main ⇒ scripts/dtk/dojo/main (Step 8)
-  scripts/dtk/dojo/main.js (Step 9)
+  dtk/dojo/main ⇒ scripts/dtk/dojo/ + ./main ⇒ scripts/dtk/dojo/main (Step 11)
+  scripts/dtk/dojo/main.js (Step 12)
 
 dojo/behavior
   dojo/behavior ⇒ dtk/dojo/behavior (Step 5)
-  dtk/dojo/behavior ⇒ scripts/dtk/dojo/ + ./behavior ⇒ scripts/dtk/dojo/behavior (Step 8)
-  scripts/dojo/behavior.js (Step 9)
+  dtk/dojo/behavior ⇒ scripts/dtk/dojo/ + ./behavior ⇒ scripts/dtk/dojo/behavior (Step 11)
+  scripts/dojo/behavior.js (Step 12)
 
 Let's go ahead and make myApp a proper package:
 
@@ -1209,8 +1257,8 @@ myApp/someSubModule maps the same, but myApp does not:
 myApp
   myApp ⇒ myApp/main (Step 3)
   myApp/main ⇒ myApp/main (Step 5)
-  myApp/main ⇒ scripts/ + myApp/main ⇒ scripts/myApp/main (Step 8)
-  scripts/myApp/main.js (Step 9)
+  myApp/main ⇒ scripts/ + myApp/main ⇒ scripts/myApp/main (Step 11)
+  scripts/myApp/main.js (Step 12)
 
 This is probably a better design compared to cluttering the scripts directory with a bunch of top-level modules. But, it
 that's what you really want, your can do it be adding the path myApp/main:"./myApp" to the paths map:
@@ -1218,8 +1266,8 @@ that's what you really want, your can do it be adding the path myApp/main:"./myA
 myApp
   myApp ⇒ myApp/main (Step 3)
   myApp/main ⇒ ./myApp (Step 4)
-  ./myApp ⇒ scripts/ + ./myApp ⇒ scripts/myApp (Step 8)
-  scripts/myApp.js (Step 9)
+  ./myApp ⇒ scripts/ + ./myApp ⇒ scripts/myApp (Step 11)
+  scripts/myApp.js (Step 12)
 
 As long as a given module identifier is not also a parent segment of another module identifier, you can map that module
 identifier anywhere. For example, maybe you are experimenting with a new module that replaces dojo/cookie. In this case,
@@ -1335,7 +1383,7 @@ The AMD API includes a few utility functions:
   )
 
 require.toUrl converts a name that is prefixed by a module identifier to a URL by replacing the module identifier prefix
-with the path resolved by the moduleIdToPath process. For example, let's say you've defined a
+with the path resolved by the normalization process. For example, let's say you've defined a
 configuration that will cause the module identifier "myApp/widgets/button" to point to the resource
 ``http://acmeCopy.com/myApp/widgets/button.js``. In such a case, require.toUrl("myApp/widgets/templates/button.html") would return
 ``"http://acmeCopy.com/myApp/widgets/templates/button.html"``. This also works with relative ids when require is a context
@@ -1654,7 +1702,7 @@ Here is a simple text plugin implementation.
 To my eye, this is just about as beautiful as code can get!
 
 The loader decorates all require functions (global AMD require and all context-requires) with the method toUrl. toUrl
-essentially executes the moduleIdToPath algorithm given in `Resolving Module Identifiers into Addresses`_ and returns the result, the only difference
+essentially executes the normalization algorithm given in `Resolving Module Identifiers into Addresses`_ and returns the result, the only difference
 being that toUrl expects the last segment to include a file type and Step 10 (adding the .js suffix) is not
 executed. The toUrl method allows the plugin to map a module identifier without having to concern itself with the
 various configuration variables that affect this mapping.
@@ -2626,7 +2674,7 @@ loader-define-module
 Nonbrowser Environments
 =======================
 
-As of v1.7, the dojo loader supports Rhino and node.js. In the browser environment, then moduleIdToPath process returns
+As of v1.7, the dojo loader supports Rhino and node.js. In the browser environment, then normalization process returns
 a path that is a URL, and that URL is used to either script inject the module or retrieve the module via synchronous or
 asynchronous XHR (depending on the loader operating mode).
 
