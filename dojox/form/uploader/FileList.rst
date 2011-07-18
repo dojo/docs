@@ -59,4 +59,5 @@ Programmatic creation is also supported. Here the *uploader* property is used in
  dojo.byId("myDiv").appendChild(myUploader.domNode);
  
  var list = new dojox.form.uploader.FileList({uploader:myUploader});
+ dojo.byId("myDiv").appendChild(list.domNode);
  
