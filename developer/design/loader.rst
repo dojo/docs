@@ -286,7 +286,7 @@ configuration data is received. The config events passes two arguments to listen
   * rawConfig: the aggregate of all config objects sent to the loader
 
 That covers the configuration API. The various configuration variables that apply to the loader will be discussed in the
-context of the features they control. See xxx for a reference to all loader and dojo configuration variables. Since the
+context of the features they control. See `Configuration Reference`_ for a reference to all loader and dojo configuration variables. Since the
 has.js API is also used for configuration, let's look at that next.
 
 ======
@@ -390,7 +390,7 @@ There are two features the implementation shown above has that the has.js projec
 * the function has.add includes an optional forth parameter, force, that can be used to over-write an existing
   test. This is useful to conditionally override an existing or default configuration.
 
-The loader initializes the has cache with several tests (see xxx for a list of these tests). User configuration can
+The loader initializes the has cache with several tests (see `Default Configuration`_ for a list of these tests). User configuration can
 override any of these and/or add more tests by specifying a has configuration variable (an object just like
 has.cache). For example,
 
@@ -437,36 +437,21 @@ false, true) being executed. The fourth argument is true because the configurati
 data-dojo-config. This will result in has("config-tlmSiblingOfDojo") having the value of 0, which is the desired affect
 of the configuration given (and the reason we named the feature as such).
 
-==========
-Vocabulary
-==========
+===============
+The Big Picture
+===============
 
-We need to cover one more prerequisite before describing the AMD API and the dojo legacy loader API: we need to
-develop some vocabulary.
+The purpose of the loader is deceptively simple: load a chunk of Javascript code, termed a "module", into the execution
+environment. Typically, modules publish values, and the loader provides an API to insert/retrieve module values
+into/from a namespace defined and maintained by the loader. The names in the namespace are termed "module identifiers",
+and the namespace itself it termed the "module namespace".
 
-A module is embodied as a chunk of Javascript code. The purpose of the loader is deceptively simple:
-
-* cause the chunk of Javascript code that represents a particular module to be evaluated in such a manner that it
-  produces a result defined as the "module value" given by the particular chunk of code
-
-* associate a name with the module value; naturally, the name is termed the "module identifier"
-
-* given the module identifier of an existing association, return the module value of that association
-
-Although it is possible for a single resource to contain the code for several modules, to do so is a bad practice and a
-single module should be contained in a single addressable (e.g., by URL or filename) resource.
-
-The loader defines a namespace of module values and provides an API to insert and retrieve elements from that
-namespace. I'll call this the "module namespace".
-
-Inserting a module value into this namespace usually involves several steps:
+Inserting a module value into the module namespace namespace usually involves several steps:
 
 1. [requested] The client application demands a particular module value by providing a module identifier.
 
-2. [normalized] The loader transforms the module identifier, which is almost always provided with respect to another
-   module module identifier, into an absolute module identifier as understood by the loader as well as an address
-   (typically a URL or filename) suitable to retrieve the Javascript code that embodies the particular module given the
-   current executing environment.
+2. [normalized] The loader transforms the module identifier into an address (typically a URL or filename) suitable to
+   retrieve the Javascript code that embodies the particular module.
 
 3. [loaded] The loader takes the necessary actions to load the text from the resolved address into the execution
    environment.
@@ -499,9 +484,9 @@ There are two loader APIs available:
 The AMD API
 ===========
 
-This is the hot new API that is being adopted by many Javascript libraries. The core API is simple,
-containing but two functions, require and define. Both of these functions reside in the global namespace and are
-available after the loader itself has been defined.
+This is the hot new API that is being adopted by many Javascript libraries. The core API is simple, containing but two
+functions, require and define. Both of these functions reside in the global namespace and are available after the loader
+itself has been defined.
 
 The global function require causes Javascript resources to be evaluated; it has the following signature:
 
@@ -918,7 +903,6 @@ about is unpleasant.
 Fortunately, the dojo loader has a solution to this problem that I'll describe in the next section.
 
 ===========================================
-Resolving Module Identifiers into Addresses
 Normalizing Module Identifiers
 ===========================================
 
@@ -935,7 +919,7 @@ context require. The only place a reference module is not indicated is when modu
 of the global AMD require function.
 
 The need for a reference module is obvious when the module identifier is a relative identifier as described in
-xxx. However, even when an absolute module identifier is given, taking care to normalize that module identifier with
+`Relative Module Identifiers`_. However, even when an absolute module identifier is given, taking care to normalize that module identifier with
 respect to the reference module yeilds some powerful capabilities like the ability to load two different libraries with
 the same name.
 
@@ -993,9 +977,12 @@ concerned, only three are important:
 
 * packageMap: (object, map: package identifier --> (string) package identifier) an optional configuration variable that
   maps package names given inside a package to names know to the loader. This mapping allows packages to be relocated
-  under different names. In xxx, I'll descibe how packageMap can be used to load two different packages with the same
-  name and/or two different versions of the same package. (Note: packageMap is only useful to the dojo loader; currently
-  other loaders do not support this feature).
+  under different names. In `Relocating Module Namespaces`_, I'll descibe how packageMap can be used to load two
+  different packages with the same name and/or two different versions of the same package. (Note: packageMap is only
+  useful to the dojo loader; currently other loaders do not support this feature).
+
+The Normalization Process
+-------------------------
 
 We now have enough to describe the normalization process. The entering arguments to the algorithm are the module
 identifier, denoted "moduleId"m to be normalized, and a reference module, denoted "rm"; when normalizing a module
@@ -1029,7 +1016,7 @@ identifier contained in an argument to global AMD require, rm is null.
 At this point, moduleId has been fully normalized to an absolute module identifier known to the loader (that is, the
 reference module has no further influence on the absolute module identifier).
 
-7. Attempt to apply paths: find the longest module identifier fragment in pathe, always starting with the first segment,
+7. Attempt to apply paths: find the longest module identifier fragment in paths, always starting with the first segment,
    that matches moduleId after Step 6. If such a fragment is found, set the result to moduleId after replacing the
    matched fragment of moduleId with the mapped path.
 
@@ -1049,6 +1036,9 @@ result now holds the path implied by (moduleId, rm).
 Yes, when viewed in toto, it's complicated. And probably more time has been spent on various mailing lists debating this
 algorithm than any other part of the AMD loader specification. Fortunately, there are just a few common patterns that
 are easy to understand. Let's look at some examples to get comfortable with all of this.
+
+Normalization Examples
+----------------------
 
 To begin, assume that the user-provided configuration contains no packages, no paths, no baseUrl, and no value for
 has("config-tlmSiblingOfDojo"). In this case, the loader sets the default value of has("config-tlmSiblingOfDojo") to
@@ -1138,7 +1128,7 @@ a sibling of the dojo tree--just like has("config-tlmSiblingOfDojo") suggests. T
 treated top-level modules (absent a paths mapping). So, if you have applications designed and deployed with this
 assumption, the new loader won't hurt you.
 
-Maybe that's not what you want. Let's say the myApp tree resides at /path/to/myApp. This can be achieved by providing a
+Maybe that's not what you want. Let's say the myApp tree resides at "/path/to/myApp". This can be achieved by providing a
 paths configuration like this:
 
 .. code-block :: javascript
@@ -1147,21 +1137,27 @@ paths configuration like this:
     paths:{
       "myApp":"/path/to/myApp"
     }
-  }
+  };
 
-Since /path/to/my/App is absolute, Step 11 does not add baseUrl to the mix:
+Since "/path/to/my/App" is absolute, Step 11 does not add baseUrl to the mix:
 
 myApp
-  myApp ⇒ /path/to/myApp (Step 4)
+
+::
+
+  myApp ⇒ /path/to/myApp (Step 7)
   /path/to/myApp.js (Step 12)
   
 myApp/someSubModule
-  myApp/someSubModule ⇒ /path/to/myApp/someSubModule (Step 4)
+
+::
+
+  myApp/someSubModule ⇒ /path/to/myApp/someSubModule (Step 7)
   /path/to/myApp/someSubModule.js (Step 12)
 
 Paths can also give a path segment that's relative. For example, assume you have the following tree of modules:
 
-.. code-block :: javascript
+::
 
   scripts/
     dtk/
@@ -1180,21 +1176,27 @@ that points to script/dtk/dojo, a paths entry that gives the path for myApp rela
     paths:{
       "myApp":"../../myApp"
     }
-  }
+  };
 
 Resulting in...
 
 myApp
-  myApp ⇒ ../../myApp (Step 4)
+
+::
+
+  myApp ⇒ ../../myApp (Step 7)
   ../../myApp ⇒ path/to/dtk/dojo/ + ../../myApp ⇒ path/to/myApp (Step 11)
   path/to/myApp ⇒ path/to/myApp.js (Step 12)
   
 myApp/someSubModule
-  myApp ⇒ ../../myApp/someSubModule (Step 4)
+
+::
+
+  myApp ⇒ ../../myApp/someSubModule (Step 7)
   ../../myApp/someSubModule ⇒ path/to/dtk/dojo/ + ../../myApp ⇒ path/to/myApp/someSubModule (Step 11)
   path/to/myApp/someSubModule ⇒ path/to/myApp/someSubModule.js (Step 12)
 
-This is one way to solve the problem of has("config-tlmSiblingOfDojo") forcing top-level modules to reside as sibling of
+This is one way to override qhas("config-tlmSiblingOfDojo") forcing top-level modules to reside as sibling of
 dojo. Another way is to set has("config-tlmSiblingOfDojo") to falsy and/or explicitly set baseUrl. Often you'll do
 both. Assuming the tree of modules given above, consider this configuration:
 
@@ -1215,21 +1217,33 @@ both. Assuming the tree of modules given above, consider this configuration:
 Notice there is no paths mapping; we don't need one:
 
 myApp
+
+::
+
   myApp ⇒ scripts/ + myApp ⇒ script/myApp (Step 11)
   scripts/myApp ⇒ scripts/myApp.js (Step 12)
 
 myApp/someSubModule
+
+::
+
   myApp ⇒ scripts/ + myApp/someSubModule ⇒ script/myApp/someSubModule (Step 11)
   scripts/myApp/someSubModule ⇒ scripts/myApp/someSubModule.js (Step 12)
 
 dojo
-  dojo ⇒ dojo/main (Step 3)
-  dojo/main ⇒ dtk/dojo/main (Step 5)
+
+::
+
+  dojo ⇒ dojo/main (Step 4)
+  dojo/main ⇒ dtk/dojo/main (Step 8)
   dtk/dojo/main ⇒ scripts/dtk/dojo/ + ./main ⇒ scripts/dtk/dojo/main (Step 11)
   scripts/dtk/dojo/main.js (Step 12)
 
 dojo/behavior
-  dojo/behavior ⇒ dtk/dojo/behavior (Step 5)
+
+::
+
+  dojo/behavior ⇒ dtk/dojo/behavior (Step 8)
   dtk/dojo/behavior ⇒ scripts/dtk/dojo/ + ./behavior ⇒ scripts/dtk/dojo/behavior (Step 11)
   scripts/dojo/behavior.js (Step 12)
 
@@ -1250,13 +1264,16 @@ Let's go ahead and make myApp a proper package:
       name:'dijit',
       location:'dtk/dijit'
     }]
-  }
+  };
 
-myApp/someSubModule maps the same, but myApp does not:
+"myApp/someSubModule" maps the same, but "myApp" does not:
 
 myApp
-  myApp ⇒ myApp/main (Step 3)
-  myApp/main ⇒ myApp/main (Step 5)
+
+::
+
+  myApp ⇒ myApp/main (Step 4)
+  myApp/main ⇒ myApp/main (Step 8)
   myApp/main ⇒ scripts/ + myApp/main ⇒ scripts/myApp/main (Step 11)
   scripts/myApp/main.js (Step 12)
 
@@ -1264,15 +1281,17 @@ This is probably a better design compared to cluttering the scripts directory wi
 that's what you really want, your can do it be adding the path myApp/main:"./myApp" to the paths map:
 
 myApp
-  myApp ⇒ myApp/main (Step 3)
-  myApp/main ⇒ ./myApp (Step 4)
+
+::
+
+  myApp ⇒ myApp/main (Step 4)
+  myApp/main ⇒ ./myApp (Step 7)
   ./myApp ⇒ scripts/ + ./myApp ⇒ scripts/myApp (Step 11)
   scripts/myApp.js (Step 12)
 
-As long as a given module identifier is not also a parent segment of another module identifier, you can map that module
-identifier anywhere. For example, maybe you are experimenting with a new module that replaces dojo/cookie. In this case,
-you want all dojo modules to map as usual, but you want dojo/cookie to map to scripts/experimental/dojo/cookie. All
-that's needed to achieve this is add an entry into paths.
+Usually, you can map that module identifier anywhere. For example, maybe you are experimenting with a new module that
+replaces dojo/cookie. In this case, you want all dojo modules to map as usual, but you want dojo/cookie to map to
+scripts/experimental/dojo/cookie. All that's needed to achieve this is add an entry into paths.
 
 .. code-block :: javascript
 
@@ -1282,13 +1301,13 @@ that's needed to achieve this is add an entry into paths.
     }
   }
 
-Now, Step 4 will treat dojo/cookie differently than any other module identifier and map it to
+Now, Step 7 will treat dojo/cookie differently than any other module identifier and map it to
 scripts/experimental/dojo/cookie.
 
 But consider what happens when the module identifier you want to map is the parent segment of a tree of modules. For
 example, consider this tree of modules:
 
-.. code-block :: javascript
+::
 
   scripts/
     myApp/
@@ -1297,8 +1316,8 @@ example, consider this tree of modules:
         helper1.js
         helper2.js
 
-On one hand, myApp/myApi is a module, but it's also a parent segment for the modules identifiers myApp/myApi/helper1 and
-myApp/myApi/helper2. So the entry myApp/myApi:"path/to/another/myApi" in the paths map would also result in mapping the
+On one hand, "myApp/myApi" is a module, but it's also a parent segment for the modules identifiers "myApp/myApi/helper1" and
+"myApp/myApi/helper2". So the entry "myApp/myApi":"path/to/another/myApi" in the paths map would also result in mapping the
 two helper modules. More often than not, this is exactly what you'll want. If it's not, then you can add additional path
 entries to get the original helpers. Here's what that would look like:
 
@@ -1324,84 +1343,46 @@ example of how to alias the module text to dojo/text. Here's that code again:
 	return text;
   });
 
-Now that we know about the power of mapping module identifiers to paths, we could improve this by eliminating the
-moduleId argument. First, locate the module within your application tree, say at myApp/text
+Step 5 makes this explicit expression unnecessary. All that is needed is an entry into the aliases configuration
+variable:
 
 .. code-block :: javascript
 
-  // resource resides at myApp/text
-  define(["dojo/text"], function(text) {
-	return text;
+  require({
+    aliases:[
+	  ["text", "dojo/text"]
+    ]
   });
 
-Next, add a paths configuration:
+Now, when the module identifier "text" is demanded, Step 5 will normalize that module identifier to "dojo/text". In
+other words, given the aliases configuration above, all of the following statements result in exactly the same module
+value being returned for text.
 
 .. code-block :: javascript
 
-    require({
-      paths:{
-        text:"path/to/myApp/text"
-      }
-    });
+  require(["text"], function(text){ //...
+  require(["dojo/text"], function(text){ //...
+  define(["text"], function(text){ //...
+  define(["dojo/text"], function(text){ //...
 
-Now, when the module text is demanded, the algorithm will load the resource located at path/to/myApp/text. This is much
-better than replacing the text module with the alias module since we're now maintaining our own code rather than another
-library's code. But, there's an even-better solution.
-
-Notice that Step 4 in the algorithm, completely eliminates the need for explicit alias modules. In fact, all that's
-needed is a little configuration like this:
+There is a gatcha here: two different absolute module identifiers as calculated after Step 6 will always result in two
+different modules being instantiated--even if they normalize to the same path. So you can't solve the aliases problem
+with just paths. For example, assuming baseUrl points to the dojo directory, you can't alias "text" to "dojo/text" like
+this:
 
 .. code-block :: javascript
 
-    require({
-      aliases:[
-        ["text","dojo/text"
-      ]
-    });
+  require({
+    paths:{
+	  "text":"./text"
+    }
+  });
 
-With this, whenever text is seen in a dependency argument to require or define, value of the dojo/text module will be
-returned--exactly the desired result! So far, once again, the dojo loader is the only loader that has this feature.
-
-=================
-Utility Functions
-=================
-
-The AMD API includes a few utility functions:
-
-.. code-block :: javascript
-
-  require.toUrl(
-    id // (string) a resource identifier that is prefixed by a module identifier
-  )
-
-  require.toAbsMid(
-    moduleId // (string) a module identifier
-  )
-
-  require.undef(
-    moduleId // (string) a module identifier
-  )
-
-require.toUrl converts a name that is prefixed by a module identifier to a URL by replacing the module identifier prefix
-with the path resolved by the normalization process. For example, let's say you've defined a
-configuration that will cause the module identifier "myApp/widgets/button" to point to the resource
-``http://acmeCopy.com/myApp/widgets/button.js``. In such a case, require.toUrl("myApp/widgets/templates/button.html") would return
-``"http://acmeCopy.com/myApp/widgets/templates/button.html"``. This also works with relative ids when require is a context
-require as described in `Relative Module Identifiers`_ and `CommonJS require, exports, and module`_.
-
-require.toAbsMid simply returns the absolute module identifier implied by the moduleId argument. In the case of global
-require, moduleId must be an absolute module identifier, so the moduleId argument is simply returned without
-modification. However, in the case of a context require, moduleId may be relative, and is such cases, the module
-identifier is resolved with respect to the reference module as given by the context require.
-
-Not surprisingly, require.undef removes a (module identifier, module value) from the module namespace. If require is
-global require, then moduleId must be an absolute module identifier; otherwise moduleId can be either an absolute or relative
-module identifier, where relative module identifiers are resolved with respect to the reference module module given by
-the context require. require.undef is primarily interesting for test frameworks that desire to load and unload the
-module under test without having to reload the entire application.
-
-Neither require.toAbsMid nor require.undef are described in the CommonJS AMD specification; they are extensions
-available only on certain loaders, dojo being one of them.
+In this case, assuming no reference module, "text" is normalized to ("text", "path/to/dojo/text.js"). Although
+"path/to/dojo/text.js" has the same path as the module given by "dojo/text", the loader will create two separate
+instances of that module, which is probably not the effect you are looking for. The only way to get two different module
+identifiers to resolve to the same module value is to either express an explicit alias module or provide an aliases
+configuration.
 
 ============================
 Relocating Module Namespaces
@@ -1551,6 +1532,47 @@ there, the standard URL resolution algorithm proceeds as usual.
 This design replaces the so-called "multi-version" design in dojo v1.6- and eliminates the need for contexts as
 implemented in RequireJS. Notice that, unlike the multi-version design, no build is required to deploy a relocated
 package. It's all a matter of simple configuration. This is a quite powerful feature and only dojo has it.
+
+=================
+Utility Functions
+=================
+
+The AMD API includes a few utility functions:
+
+.. code-block :: javascript
+
+  require.toUrl(
+    id // (string) a resource identifier that is prefixed by a module identifier
+  )
+
+  require.toAbsMid(
+    moduleId // (string) a module identifier
+  )
+
+  require.undef(
+    moduleId // (string) a module identifier
+  )
+
+require.toUrl converts a name that is prefixed by a module identifier to a URL by replacing the module identifier prefix
+with the path resolved by the normalization process. For example, let's say you've defined a
+configuration that will cause the module identifier "myApp/widgets/button" to point to the resource
+``http://acmeCopy.com/myApp/widgets/button.js``. In such a case, require.toUrl("myApp/widgets/templates/button.html") would return
+``"http://acmeCopy.com/myApp/widgets/templates/button.html"``. This also works with relative ids when require is a context
+require as described in `Relative Module Identifiers`_ and `CommonJS require, exports, and module`_.
+
+require.toAbsMid simply returns the absolute module identifier implied by the moduleId argument. In the case of global
+require, moduleId must be an absolute module identifier, so the moduleId argument is simply returned without
+modification. However, in the case of a context require, moduleId may be relative, and is such cases, the module
+identifier is resolved with respect to the reference module as given by the context require.
+
+Not surprisingly, require.undef removes a (module identifier, module value) from the module namespace. If require is
+global require, then moduleId must be an absolute module identifier; otherwise moduleId can be either an absolute or relative
+module identifier, where relative module identifiers are resolved with respect to the reference module module given by
+the context require. require.undef is primarily interesting for test frameworks that desire to load and unload the
+module under test without having to reload the entire application.
+
+Neither require.toAbsMid nor require.undef are described in the CommonJS AMD specification; they are extensions
+available only on certain loaders, dojo being one of them.
 
 =====================================
 CommonJS require, exports, and module
@@ -1702,7 +1724,7 @@ Here is a simple text plugin implementation.
 To my eye, this is just about as beautiful as code can get!
 
 The loader decorates all require functions (global AMD require and all context-requires) with the method toUrl. toUrl
-essentially executes the normalization algorithm given in `Resolving Module Identifiers into Addresses`_ and returns the result, the only difference
+essentially executes the normalization algorithm given in `Normalizing Module Identifiers`_ and returns the result, the only difference
 being that toUrl expects the last segment to include a file type and Step 10 (adding the .js suffix) is not
 executed. The toUrl method allows the plugin to map a module identifier without having to concern itself with the
 various configuration variables that affect this mapping.
@@ -2735,6 +2757,13 @@ The key benefit of the design is the ability to replace the arguments to the loa
 configuration variable. In applications where it's possible to provide all configuration up front, this allows
 constructing a built version of dojo.js that completely removes the entire configuration API, thereby saving a
 substantial abount of code. This technique is described more fully in the dojo built application tutorial.
+
+=======================
+Configuration Reference
+=======================
+
+TODO
+
 
 .. _CommonJS: http://www.commonjs.org/
 .. _Modules/AsynchronousDefinition: http://wiki.commonjs.org/wiki/Modules/AsynchronousDefinition
