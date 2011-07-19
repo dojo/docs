@@ -159,7 +159,7 @@ To change the framerate you use the rate attribute which defines the pause betwe
     <script type="text/javascript">
     dojo.require("dijit.form.Button"); // we require the button to make our demo look fancy
     
-    function animateSlow(){
+    animateSlow = function(){
       dojo.animateProperty({
         node: dojo.byId("animateProperty"), duration: 10000,
         properties: {
@@ -169,7 +169,7 @@ To change the framerate you use the rate attribute which defines the pause betwe
       }).play();
     }
 
-    function animateDefault(){
+    animateDefault = function(){
       dojo.animateProperty({
         node: dojo.byId("animateProperty"), duration: 10000,
         properties: {
@@ -181,7 +181,7 @@ To change the framerate you use the rate attribute which defines the pause betwe
 
   .. cv:: html
 
-    <p><button dojoType="dijit.form.Button" onClick="animateDefault()">Animate (default fps)</button> <button dojoType="dijit.form.Button" onClick="animateSlow()">Animate (1 fps)</button></p>
+    <p><button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:animateDefault">Animate (default fps)</button> <button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:animateSlow">Animate (1 fps)</button></p>
     <div id="animateProperty">This will be animated</div>
 
 For more on Animations overall, see the `FX User Guide <quickstart/Animation>`_
