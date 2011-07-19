@@ -56,7 +56,7 @@ Once it has been required in, all you have to do is include it in the list of ex
 
 .. code-block :: html
 
-  <div dojoType="dijit.Editor" id="editor" extraPlugins="['fullscreen']"></div>
+  <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:['fullscreen']"></div>
 
 
 
@@ -80,7 +80,7 @@ Example:
 
 .. code-block :: html
 
-  <div dojoType="dijit.Editor" id="editor" extraPlugins="[name: 'fullscreen', zIndex: 900}]"></div>
+  <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:[name: 'fullscreen', zIndex: 900}]"></div>
 
 
 =====================================
@@ -129,7 +129,7 @@ Basic Usage
 
     <b>Press the FullScreen button or use the hotkey CTRL-SHIFT-F11 while in the editing pane and the editor will go into full screen mode</b>
     <br>
-    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['fullscreen']">
+    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:['fullscreen']">
     <div>
     <br>
     blah blah & blah!
@@ -179,7 +179,7 @@ Setting the zIndex
     <br>
     <br>
     <br>
-    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="[{name:'fullscreen', zIndex: 900}]">
+    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:[{name:'fullscreen', zIndex: 900}]">
     <div>
     <br>
     blah blah & blah!
@@ -235,11 +235,11 @@ Nesting an Editor With FullScreen in BorderContainer
 
   .. html::
 
-    <div dojoType="dijit.layout.BorderContainer" gutters="true" liveSplitters="true" style="width: 100%; height: 100%;">
-      <div dojoType="dijit.layout.ContentPane" splitter="true" region="top" style="height: 100px;"><b>This example demonstrates how to embed an editor in a BorderContainer and still use the FullScreen plugin</b></div>
-      <div dojoType="dijit.layout.ContentPane" splitter="true" region="center">
+    <div data-dojo-type="dijit.layout.BorderContainer" data-dojo-props="gutters:true,liveSplitters:true" style="width: 100%; height: 100%;">
+      <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="splitter:true, region:'top'" style="height: 100px;"><b>This example demonstrates how to embed an editor in a BorderContainer and still use the FullScreen plugin</b></div>
+      <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="splitter:true, region:'center'">
         <br>
-        <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['fullscreen']">
+        <div data-dojo-type="dijit.Editor" height="250px"id="input" data-dojo-props="extraPlugins:['fullscreen']">
           <div>
           <br>
           blah blah & blah!
