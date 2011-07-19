@@ -144,7 +144,7 @@ Basic Usage
     </div>
     <button id="eFormat" data-dojo-type="dijit.form.Button">Press me to format!</button>
     <br>
-    <textarea style="width: 100%; height: 100px;" id="output" readonly="true">
+    <textarea style="width: 100%; height: 100px;" data-dojo-id="output" readonly="true">
     </textarea>
 
 
@@ -197,7 +197,7 @@ Configured indent and line length
     </div>
     <button id="eFormat" data-dojo-type="dijit.form.Button">Press me to format!</button>
     <br>
-    <textarea style="width: 100%; height: 100px;" dojo-data-id="output" readonly="true">
+    <textarea style="width: 100%; height: 100px;" data-dojo-id="output" readonly="true">
     </textarea>
 
 
