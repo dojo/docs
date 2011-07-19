@@ -100,7 +100,6 @@ Basic Usage
 
 .. code-example::
   :djConfig: parseOnLoad: true
-  :version: 1.4
 
   .. javascript::
 
@@ -154,7 +153,6 @@ Configured indent and line length
 
 .. code-example::
   :djConfig: parseOnLoad: true
-  :version: 1.4
 
   .. javascript::
 
