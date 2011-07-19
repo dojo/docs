@@ -73,7 +73,7 @@ Creation from markup is even easier.
 
   .. cv:: html
 
-    <div id="tp2" dojoType="dijit.TitlePane" title="I'm a TitlePane Too">
+    <div id="tp2" data-dojo-type="dijit.TitlePane" data-dojo-props="title: 'I\'m a TitlePane Too'">
         Click arrow to close me.
     </div>
 
@@ -97,13 +97,13 @@ For example:
   .. cv:: html
 
     <div style="border: solid black 1px;">
-      <div dojoType="dijit.TitlePane" title="Pane #1">
+      <div data-dojo-type="dijit.TitlePane" data-dojo-props="title: 'Pane #1'">
         I'm pane #1
       </div>
-      <div dojoType="dijit.TitlePane" title="Pane #2">
+      <div data-dojo-type="dijit.TitlePane" data-dojo-props="title: 'Pane #2'">
         I'm pane #2
       </div>
-      <div dojoType="dijit.TitlePane" title="Pane #3">
+      <div data-dojo-type="dijit.TitlePane" data-dojo-props="title: 'Pane #3'">
         I'm pane #3
       </div>
     </div>
