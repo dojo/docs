@@ -115,7 +115,7 @@ A simple animation changing both background color and text color.
     <script type="text/javascript">
     dojo.require("dijit.form.Button"); // we require the button to make our demo look fancy
     
-    function statusOk(){
+    statusOk = function(){
       dojo.animateProperty({
         node: dojo.byId("statusCode"), duration: 500,
         properties: {
@@ -131,7 +131,7 @@ A simple animation changing both background color and text color.
 
   .. cv:: html
 
-    <p><button dojoType="dijit.form.Button" onClick="statusOk()">Grant access</button></p>
+    <p><button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:statusOk">Grant access</button></p>
     <div id="statusCode">Denied</div>
 
   .. cv:: css
