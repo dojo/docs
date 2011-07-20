@@ -54,7 +54,7 @@ Set a cookie by clicking on the button, reload the page and click the "Get Cooki
 
   .. cv:: html
 
-    <button dojoType="dijit.form.Button" onClick="setCookie();">Set Cookie</button> <button dojoType="dijit.form.Button" onClick="getCookie();">Get Cookie</button>
+    <button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:setCookie">Set Cookie</button> <button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:getCookie">Get Cookie</button>
 
 ========
 See also
