@@ -37,7 +37,7 @@ Example 1:  Raw, degradable UL list
   .. cv:: html
     :label: SortList From Markup
     
-	<ul dojoType="dojox.widget.SortList" title="SortList From Markup" sortable="false" style="width:200px; height:200px;">
+	<ul data-dojo-type="dojox.widget.SortList" title="SortList From Markup" data-dojo-props="sortable:false" style="width:200px; height:200px;">
 		<li>one</li>
 		<li>two</li>
 		<li>three</li>
@@ -84,10 +84,10 @@ Example 2:  SortList using a Store
   .. cv:: html
     :label: SortList  and Store From Markup
     
-    <div dojoType="dojo.data.ItemFileReadStore"
-         url="{{ dataUrl }}dijit/tests/_data/countries.json"
+    <div data-dojo-type="dojo.data.ItemFileReadStore"
+         data-dojo-props="url:{{ dataUrl }}dijit/tests/_data/countries.json'"
          data-dojo-id="stateStore"></div>
-    <ul dojoType="dojox.widget.SortList" store="stateStore" title="sortable List" style="width:200px; height:200px;"></ul>
+    <ul data-dojo-type="dojox.widget.SortList" data-dojo-props="store:stateStore" title="sortable List" style="width:200px; height:200px;"></ul>
 
   
   .. cv:: css
