@@ -151,7 +151,7 @@ Connecting HtmlTableStore to dijit.form.ComboBox
     </table>
 
     <b>Combo lookup of isbn</b><br> 
-    <div data-dojo-type="dojox.data.HtmlTableStore" data-dojo-props="tableId:'myData'" data-dojo-id="comboStore"></div>
+    <div data-dojo-type="dojox.data.HtmlTableStore" data-dojo-props="tableId:myData" data-dojo-id="comboStore"></div>
     <div data-dojo-type="dijit.form.ComboBox" data-dojo-props="store:comboStore, searchAttr:'isbn'"></div>
 
 
