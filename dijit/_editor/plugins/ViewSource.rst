@@ -46,7 +46,7 @@ Once it has been required in, all you have to do is include it in the list of ex
 
 .. code-block :: html
 
-  <div dojoType="dijit.Editor" id="editor" extraPlugins="['viewsource']"></div>
+  <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:['viewsource']"></div>
 
 
 And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the ViewSource plugin!  You can use the button or hotkey to toggle between source and RTE views.
@@ -129,7 +129,7 @@ Basic Usage
 
     <b>Toggle the View Source button to see the contents in source mode.</b>
     <br>
-    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['viewsource']">
+    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:['viewsource']">
     <div>
       <br>
       blah blah & blah!
@@ -159,7 +159,6 @@ Enabling read-only view
 
 .. code-example::
   :djConfig: parseOnLoad: true
-  :version: 1.4
 
   .. javascript::
 
@@ -173,7 +172,7 @@ Enabling read-only view
 
     <b>Toggle the View Source button to see the contents in source mode.</b>
     <br>
-    <div dojoType="dijit.Editor" height="250px" id="input" extraPlugins="[{name:'viewsource',readOnly: true}]">
+    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:[{name:'viewsource',readOnly: true}]">
     <div>
     <br>
     blah blah & blah!
@@ -204,7 +203,6 @@ Viewing Source with PrettyPrint Plugin enabled
 
 .. code-example::
   :djConfig: parseOnLoad: true
-  :version: 1.4
 
   .. javascript::
 
@@ -218,7 +216,7 @@ Viewing Source with PrettyPrint Plugin enabled
 
     <b>Toggle the View Source button to see the contents in source mode.</b>
     <br>
-    <div dojoType="dijit.Editor" height="250px" id="input" extraPlugins="[{name: 'viewsource', readOnly: true}, {name:'prettyprint', indentBy: 3}]">
+    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:[{name: 'viewsource', readOnly: true}, {name:'prettyprint', indentBy: 3}]">
     <div>
       <br>
       blah blah & blah!
@@ -248,7 +246,6 @@ Viewing Source with PrettyPrint Plugin enabled and readOnly source
 
 .. code-example::
   :djConfig: parseOnLoad: true
-  :version: 1.4
 
   .. javascript::
 
@@ -262,7 +259,7 @@ Viewing Source with PrettyPrint Plugin enabled and readOnly source
 
     <b>Toggle the View Source button to see the contents in source mode.</b>
     <br>
-    <div dojoType="dijit.Editor" height="250px" id="input" extraPlugins="[{name:'viewsource',readOnly: true}, 'prettyprint']">
+    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:[{name:'viewsource',readOnly: true}, 'prettyprint']">
     <div>
       <br>
       blah blah & blah!
@@ -309,7 +306,7 @@ This example also organizes the toolbar a bit.
 
     <b>Toggle the View Source button to see the contents in source mode.</b>
     <br>
-    <div dojoType="dijit.Editor" height="250px" id="input" plugins="[{name:'prettyprint',indentBy:3},'viewsource','fullscreen','|','undo','redo','|','cut','copy','paste','|','bold','italic','underline','strikethrough','|','insertOrderedList','insertUnorderedList','indent','outdent','|','justifyLeft','justifyRight','justifyCenter','justifyFull',{name:'dijit._editor.plugins.EnterKeyHandling',blockNodeForEnter:'DIV'}]">
+    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="plugins:[{name:'prettyprint',indentBy:3},'viewsource','fullscreen','|','undo','redo','|','cut','copy','paste','|','bold','italic','underline','strikethrough','|','insertOrderedList','insertUnorderedList','indent','outdent','|','justifyLeft','justifyRight','justifyCenter','justifyFull',{name:'dijit._editor.plugins.EnterKeyHandling',blockNodeForEnter:'DIV'}]">
     <div>
       <br>
       blah blah & blah!
