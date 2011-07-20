@@ -49,7 +49,7 @@ This example shows a simple Select widget - converted from a select tag.
 
   .. html::
 
-    <select name="select1" dojoType="dijit.form.Select">
+    <select name="select1" data-dojo-type="dijit.form.Select">
         <option value="TN">Tennessee</option>
         <option value="VA" selected="selected">Virginia</option>
         <option value="WA">Washington</option>
@@ -100,7 +100,7 @@ When styling the entries of a Select widget, you must use div and span tags, ins
 
   .. html::
 
-    <div name="select3" value="AK" dojoType="dijit.form.Select">
+    <div name="select3" value="AK" data-dojo-type="dijit.form.Select">
         <span value="AL"><b>Alabama</b></span>
         <span value="AK"><font color="red">A</font><font color="orange">l</font><font color="yellow">a</font><font color="green">s</font><font color="blue">k</font><font color="purple">a</font></span>
         <span value="AZ"><i>Arizona</i></span>
@@ -124,7 +124,7 @@ By default, the width of the select widget will be to fit the width of the selec
 
   .. html::
 
-    <select data-dojo-id="s3" name="s3" id="s3" style="width: 150px;" dojoType="dijit.form.Select">
+    <select data-dojo-id="s3" name="s3" id="s3" style="width: 150px;" data-dojo-type="dijit.form.Select">
         <option value="AL">Alabama</option>
         <option value="AK">Alaska</option>
         <option type="separator"></option>
