@@ -140,7 +140,7 @@ Example using cross-fade transition.
   
   .. html::
 
-    <div dojoType="dojox.widget.AutoRotator" class="rotator" id="myAutoRotator2" data-dojo-id="myAutoRotatorInstance2" transition="dojox.widget.rotator.crossFade" duration="2500">
+    <div data-dojo-type="dojox.widget.AutoRotator" class="rotator" id="myAutoRotator2" data-dojo-id="myAutoRotatorInstance2" data-dojo-props="transition:'dojox.widget.rotator.crossFade', duration:2500">
         <div class="pane pane0">Pane 0</div>
         <div class="pane pane1">Pane 1</div>
         <div class="pane pane2">Pane 2</div>
