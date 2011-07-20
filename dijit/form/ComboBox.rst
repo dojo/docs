@@ -69,7 +69,7 @@ Native SELECT combo-boxes always have value/description pairs, e.g. the OPTION's
 
   .. cv:: html
 
-    <select dojoType="dijit.form.ComboBox" id="fruit" name="fruit">
+    <select data-dojo-type="dijit.form.ComboBox" id="fruit" name="fruit">
       <option>Apples</option>
       <option selected>Oranges</option>
       <option>Pears</option>
@@ -92,8 +92,8 @@ To set the default value for this example, specify the *value* attribute in the 
 
   .. cv:: html
 
-    <div dojoType="dojo.data.ItemFileReadStore" data-dojo-id="stateStore"
-        url="{{dataUrl}}/dijit/tests/_data/states.json"></div>
+    <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-id="stateStore"
+        data-dojo-props="url:'{{dataUrl}}/dijit/tests/_data/states.json'"></div>
     <input dojoType="dijit.form.ComboBox"
                 value="Kentucky"
                 store="stateStore"
