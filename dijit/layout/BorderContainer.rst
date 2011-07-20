@@ -88,9 +88,9 @@ Declarative example
   .. html::
     :label: A dijit button
     
-    <div dojoType="dijit.layout.BorderContainer" design="sidebar" gutters="true" liveSplitters="true" id="borderContainer">
-      <div dojoType="dijit.layout.ContentPane" splitter="true" region="leading" style="width: 100px;">Hi</div>
-      <div dojoType="dijit.layout.ContentPane" splitter="true" region="center">Hi, I'm center</div>
+    <div data-dojo-type="dijit.layout.BorderContainer" data-dojo-props="design:'sidebar', gutters:true, liveSplitters:true" id="borderContainer">
+      <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="splitter:true, region:'leading'" style="width: 100px;">Hi</div>
+      <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="splitter:truem, region:'center'">Hi, I'm center</div>
     </div>
   
   .. css::
