@@ -73,7 +73,7 @@ Programmatic example
   .. cv:: html
 
         <div id="pFloatingPane">This is the content of the pane!</div>
-        <div dojoType="dijit.form.Button" label="Show me" onClick="pFloatingPane.show();"></div>
+        <div data-dojo-type="dijit.form.Button" data-dojo-props="label:'Show me', onClick:function(){pFloatingPane.show();}"></div>
         <br/><br/><br/><br/>
 
 
@@ -100,13 +100,13 @@ Declarative example
 
   .. cv:: html
 
-     <div dojoType="dojox.layout.FloatingPane" id="dFloatingPane"
-        title="A floating pane" resizable="true" dockable="true"
+     <div data-dojo-type="dojox.layout.FloatingPane" id="dFloatingPane"
+        title="A floating pane" data-dojo-props="resizable:true, dockable:true, title:'A floating pane'"
         style="position:absolute;top:0;left:0;width:100px;height:100px;visibility:hidden;">
      This is the content of the pane!
      </div>
      
-     <div dojoType="dijit.form.Button" label="Show me" onClick="dijit.byId('dFloatingPane').show();"></div>
+     <div data-dojo-type="dijit.form.Button" data-dojo-props="label:'Show me', onClick:function(){dijit.byId('dFloatingPane').show();}"></div>
      <!-- make campus preview div big enough: --><div style="height:280px;width:100%;"></div>
 
 ===============
