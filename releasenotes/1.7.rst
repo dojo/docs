@@ -130,7 +130,7 @@ dojo/gesture/swipe
  - Provide common single-touch swipe gestures including swipe, swipe.left|right|up|down
  - Customizable settings e.g. swipeSpeed, valid swipeRange
  
-Also please refer to `dojo/gesture <dojo/gesture>`_(TODO) for how to write a new gesture instance
+Also please refer to `dojo/gesture <dojo/gesture>`_ doc(TODO) for how to write a new gesture instance
 
 
 =====
