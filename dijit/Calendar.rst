@@ -223,11 +223,11 @@ With a local custom template to change the layout (does not work against CDN)
     <table class="container">
       <tr>
         <td>
-          <div id="hebrew" data-dojo-type="dijit.Calendar" data-dojo-props="datePackage:'dojox.date.hebrew', onValueSelected:publishDate, onChange:formatDate"></div>
+          <div id="hebrew" data-dojo-type="dijit.Calendar" data-dojo-props="datePackage:dojox.date.hebrew, onValueSelected:publishDate, onChange:formatDate"></div>
           <div id="hebrewFormatted"></div>
         </td>
         <td>
-          <div id="islamic" data-dojo-type="dijit.Calendar" data-dojo-props="datePackage:'dojox.date.islamic', onValueSelected:publishDate, onChange:formatDate"></div>
+          <div id="islamic" data-dojo-type="dijit.Calendar" data-dojo-props="datePackage:dojox.date.islamic, onValueSelected:publishDate, onChange:formatDate"></div>
           <div id="islamicFormatted"></div>
         </td>
         <td>
