@@ -18,8 +18,8 @@ First, you have to set a editor for each cell, you would like to edit:
 
   .. cv:: html
 
-    <span dojoType="dojo.data.ItemFileWriteStore" 
-        data-dojo-id="store3" url="{{ dataUrl }}dijit/tests/_data/countries.json">
+    <span data-dojo-type="dojo.data.ItemFileWriteStore" 
+        data-dojo-id="store3" data-dojo-props="url:'{{ dataUrl }}dijit/tests/_data/countries.json'">
     </span>
 
     <div>
@@ -27,14 +27,14 @@ First, you have to set a editor for each cell, you would like to edit:
         In order to select a new value, you have to double click on the current value in the second column.
     </div>
 
-    <table dojoType="dojox.grid.DataGrid"
+    <table data-dojo-type="dojox.grid.DataGrid"
         data-dojo-id="grid3"
-        store="store3"
-        query="{ name: '*' }"
-        rowsPerPage="20"
-        clientSort="true"
-        style="width: 400px; height: 200px;"
-        rowSelector="20px">
+        data-dojo-props="store:store3,
+        query:{ name: '*' },
+        rowsPerPage:20,
+        clientSort:true,
+        rowSelector:'20px'"
+        style="width: 400px; height: 200px;">
         <thead>
             <tr>
                 <th width="200px" 
