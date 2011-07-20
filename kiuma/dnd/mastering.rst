@@ -30,7 +30,7 @@ If you have not to do particular requirements, you'll use this class most of the
   <script type="text/javascript">
     dojo.require("dojo.dnd.Source");
   </script>
-  <div class="dndContainer" dojoType="dojo.dnd.Source">
+  <div class="dndContainer" data-dojo-type="dojo.dnd.Source">
     <div class="dojoDndItem">item1</div>
     <div class="dojoDndItem">item2</div>
     <div class="dojoDndItem">item3</div>
@@ -57,13 +57,13 @@ What above is good if you want to reorder items, but is usually not sufficient b
     dojo.require("dojo.dnd.Source");
   </script>
   <div class="userRoleContainer">
-    <fieldset class="dndContainer availableRoles" dojoType="dojo.dnd.Source">
+    <fieldset class="dndContainer availableRoles" data-dojo-type="dojo.dnd.Source">
       <legend>Available roles</legend>
       <div class="dojoDndItem">admin</div>
       <div class="dojoDndItem">guest</div>
       <div class="dojoDndItem">publisher</div>
     </fieldset>
-    <fieldset class="dndContainer assignedRoles" dojoType="dojo.dnd.Source">
+    <fieldset class="dndContainer assignedRoles" data-dojo-type="dojo.dnd.Source">
       <legend>Assigned roles</legend>
       <div class="dojoDndItem">user</div>
     </fieldset>
@@ -96,25 +96,25 @@ So you'll have to mark a Source container with an accept tag attribute (comma se
     dojo.require("dojo.dnd.Source");
   </script>
   <div class="cartContainer">
-    <fieldset class="dndContainer products" dojoType="dojo.dnd.Source" accept="product">
+    <fieldset class="dndContainer products" data-dojo-type="dojo.dnd.Source" data-dojo-props="accept:'product'">
       <legend>Items</legend>
       <div class="dojoDndItem" dndType="product">apple</div>
       <div class="dojoDndItem" dndType="product">pear</div>
       <div class="dojoDndItem" dndType="product">orange</div>
     </fieldset>
-    <fieldset class="dndContainer basket" dojoType="dojo.dnd.Source" accept="product">
+    <fieldset class="dndContainer basket" data-dojo-type="dojo.dnd.Source" data-dojo-props="accept:'product'">
       <legend>Cart</legend>
     </fieldset>
   </div>
   <div class="paymentContainer">
-    <fieldset class="dndContainer couponsAndPoints" dojoType="dojo.dnd.Source" accept="coupon, point">
+    <fieldset class="dndContainer couponsAndPoints" data-dojo-type="dojo.dnd.Source" data-dojo-props="accept:['coupon', 'point']">
       <legend>Items</legend>
       <div class="dojoDndItem" dndType="coupon">$ 10.00</div>
       <div class="dojoDndItem" dndType="coupon">$ 5.00</div>
       <div class="dojoDndItem" dndType="point">1 points ($ 1.00)</div>
       <div class="dojoDndItem" dndType="point">2 points ($ 2.00)</div>
     </fieldset>
-    <fieldset class="dndContainer basketPoints" dojoType="dojo.dnd.Source" accept="coupon, point">
+    <fieldset class="dndContainer basketPoints" data-dojo-type="dojo.dnd.Source" data-dojo-props="accept:['coupon', 'point']">
       <legend>Payment basket</legend>
     </fieldset>
   </div>
@@ -157,7 +157,7 @@ The example below shows what just explained:
     dojo.require("dojo.dnd.Source");
   </script>
   <div class="cartContainer">
-    <fieldset id="items" class="dndContainer products" dojoType="dojo.dnd.Source" accept="cartItem" copyOnly="true">
+    <fieldset id="items" class="dndContainer products" data-dojo-type="dojo.dnd.Source" data-dojo-props="accept:'cartItem', copyOnly:true">
       <script type="dojo/connect" data-dojo-event="onDndDrop" data-dojo-args="source, nodes, copy, target">
           var basket = dojo.byId('basket'); 
           if ((target != source) && (target.node.id == 'items')) {
@@ -188,7 +188,7 @@ The example below shows what just explained:
       <div dndType="cartItem" class="dojoDndItem" title="apple" quantity="0"><span class="quantity"></span> apple</div>
       <div dndType="cartItem" class="dojoDndItem" title="pear" quantity="0"><span class="quantity"></span> pear</div>
     </fieldset>
-    <fieldset id="basket" class="dndContainer basket" dojoType="dojo.dnd.Source" accept="cartItem" copyOnly="true">
+    <fieldset id="basket" class="dndContainer basket" data-dojo-type="dojo.dnd.Source" data-dojo-props="accept:'cartItem', copyOnly:true">
       <script type="dojo/connect" data-dojo-event="onDndDrop" data-dojo-args="source, nodes, copy, target">
           var basket = dojo.byId('basket');  
           if ((target != source) && (target.node.id == 'basket')) { 
@@ -230,14 +230,14 @@ The example below shows what just explained:
     </fieldset>
   </div>
   <div class="paymentContainer">
-    <fieldset class="dndContainer couponsAndPoints" dojoType="dojo.dnd.Source" accept="coupon, point">
+    <fieldset class="dndContainer couponsAndPoints" data-dojo-type="dojo.dnd.Source" data-dojo-props="accept:['coupon', 'point']">
       <legend>Cart</legend>
       <div class="dojoDndItem" dndType="coupon">$ 10.00</div>
       <div class="dojoDndItem" dndType="coupon">$ 5.00</div>
       <div class="dojoDndItem" dndType="point">1 points ($ 1.00)</div>
       <div class="dojoDndItem" dndType="point">2 points ($ 2.00)</div>
     </fieldset>
-    <fieldset class="dndContainer basketPoints" dojoType="dojo.dnd.Source" accept="coupon, point">
+    <fieldset class="dndContainer basketPoints" data-dojo-type="dojo.dnd.Source" data-dojo-props="accept:['coupon', 'point']">
       <legend>Payment basket</legend>
     </fieldset>
   </div>
@@ -258,8 +258,8 @@ For example we might want to use the innerHTML property to replace such content,
       dojo.require('dojo.dnd.Source');
       generateRandomContent = function () {
         var strartPoint = Math.floor(Math.random()*10);
-        var htmlContent = "<div dojotype='dijit.form.Button' onclick='sample.updateNumberDragging()'>Generate random content</div>\n";
-        htmlContent += "<fieldset class='dndContainer numbers' dojoType='dojo.dnd.Source' accept='number'>\n"; 
+        var htmlContent = "<div data-dojo-type='dijit.form.Button' data-dojo-props='onClick:function(){sample.updateNumberDragging()'>Generate random content</div>\n";
+        htmlContent += "<fieldset class='dndContainer numbers' data-dojo-type='dojo.dnd.Source' data-dojo-props=\"accept:'number'\">\n"; 
         htmlContent += "<script type='dojo/connect' data-dojo-event='onDndDrop' data-dojo-args='source, nodes, copy, target'>\nconsole.debug('dropping ' + nodes[0].innerHTML + '...');\n</script>\n"; 
         htmlContent += "<legend>Numbers</legend>\n"; 
         for (var i = strartPoint; i < strartPoint + 10; i++) {
@@ -291,8 +291,8 @@ For example we might want to use the innerHTML property to replace such content,
     :linenos:
 
     <div id="numberDragging">
-      <div id="buttonGenerator" dojotype='dijit.form.Button'>Generate random content</div>
-      <fieldset class='dndContainer numbers' dojoType='dojo.dnd.Source' accept='number'>
+      <div id="buttonGenerator" data-dojo-type='dijit.form.Button'>Generate random content</div>
+      <fieldset class='dndContainer numbers' data-dojo-type='dojo.dnd.Source' data-dojo-props="accept:'number'">
         <script type="dojo/connect" data-dojo-event="onDndDrop" data-dojo-args="source, nodes, copy, target">
           console.debug("dropping " + nodes[0].innerHTML + "...");
         </script>
@@ -317,7 +317,7 @@ Finished? ...not yet!
 
 dojo.dnd.Source and its parents dojo.dnd.Selector and dojo.dnd.Container are a little strange classes.
 
-First, once attacched to a tag element via dojotype tag attribute, you are not able to get the dojo.dndSource instance anymore, it will be 'lost'
+First, once attacched to a tag element via data-dojo-type tag attribute, you are not able to get the dojo.dndSource instance anymore, it will be 'lost'
 inside the window.document.
 
 In addiction the initialize (and the destroy too) method doesn't behave like you might expect as described here `dojo.dnd subclassing <dojo/dnd#subclassing-dnd-classes>`_
@@ -334,7 +334,7 @@ In addiction the initialize (and the destroy too) method doesn't behave like you
 
     <div id="numberDragging2">      
       <div onclick="alert(sample);">show sample</div> 
-      <div dojoType="dijit.form.Button" onclick="sample.updateNumberDragging()">Generate random content</div>
+      <div data-dojo-type="dijit.form.Button" data-dojo-props="onClick:function(){sample.updateNumberDragging()}">Generate random content</div>
     </div>
 
 Ok, we are finished...
