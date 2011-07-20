@@ -160,7 +160,7 @@ List out all the attributes and values of a key/value data set
 
   .. cv :: html 
 
-    <div dojoType="dojox.data.KeyValueStore" data="storeData" data-dojo-id="kvStore"></div>
+    <div data-dojo-type="dojox.data.KeyValueStore" data-dojo-props="data:storeData" data-dojo-id="kvStore"></div>
     <div data-dojo-type="dijit.form.Button" data-dojo-id="button">Show me the key/value info!</div>
     <br>
     <br>
@@ -202,14 +202,14 @@ Connecting key/value store to dojox.grid.DataGrid
 
 
     <b>dojox.grid.DataGrid connected to the KeyValueStore:</b><br> 
-    <div dojoType="dojox.data.KeyValueStore" data="storeData2" data-dojo-id="kvStore2"></div>
+    <div data-dojo-type="dojox.data.KeyValueStore" data-dojo-props="data:storeData2" data-dojo-id="kvStore2"></div>
     <div style="width: 400px; height: 200px;">
       <div id="grid" 
-        dojoType="dojox.grid.DataGrid" 
-        store="kvStore2" 
-        structure="layoutKeyValue" 
-        query="{}"
-        rowsPerPage="40">
+        data-dojo-type="dojox.grid.DataGrid" 
+        data-dojo-props="store:kvStore2,
+        structure:'layoutKeyValue',
+        query:{},
+        rowsPerPage:40">
       </div>
     </div>
 
@@ -248,5 +248,5 @@ Connecting key/value store to dijit.form.ComboBox
   .. cv :: html 
 
     <b>dijit.form.ComboBox connected to the KeyValueStore:</b><br> 
-    <div dojoType="dojox.data.KeyValueStore" data="storeData3" data-dojo-id="kvStore3"></div>
-    <div dojoType="dijit.form.ComboBox" store="kvStore3" searchAttr="key"></div>
+    <div data-dojo-type="dojox.data.KeyValueStore" data-dojo-props="data:storeData3" data-dojo-id="kvStore3"></div>
+    <div data-dojo-type="dijit.form.ComboBox" data-dojo-props="store:kvStore3, searchAttr:'key'"></div>
