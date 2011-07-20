@@ -127,8 +127,8 @@ EnhanedGrid can also be run with a flexible combination of various plugins, a ty
 .. code-block :: javascript
   :linenos:
 
-  <div id="grid" dojoType="dojox.grid.EnhancedGrid" 
-      plugins="{dnd: true, nestedSorting: true, indirectSelection: true, ...}" ...>
+  <div id="grid" data-dojo-type="dojox.grid.EnhancedGrid" 
+      data-dojo-props="plugins:{dnd: true, nestedSorting: true, indirectSelection: true, ...}" ...>
   </div>
 
 
