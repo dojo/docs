@@ -193,7 +193,15 @@ HTML attribute data-dojo-id saves you one more step in working with widgets by a
  myDojoId.domNode.style.height = '300px';
  myDojoId.setContent("Hello World!");
 
-Attribute data-dojo-id is not required, it is there as a convenience.
+Attribute data-dojo-id is not required, it is there as a convenience. Attribute data-dojo-id works only on dojo widgets. Note that following does not work:
+
+.. code-block :: html
+
+ <script type="text/javascript">
+   myDojoId.setContent("This content will not go in div!");
+ </script>
+
+ <div data-dojo-id="myDojoId"></div>
 
 
 
