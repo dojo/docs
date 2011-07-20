@@ -52,11 +52,11 @@ Creation from markup is more simpler and structured.
 
   .. cv:: html
 
-	<div id="menubar" dojoType="dijit.MenuBar">
-		<div dojoType="dijit.MenuBarItem" onclick="alert('Clicked on BarMenuItem');">
+	<div id="menubar" data-dojo-type="dijit.MenuBar">
+		<div data-dojo-type="dijit.MenuBarItem" data-dojo-props="onClick:function(){alert('Clicked on BarMenuItem');}">
 			Click me!
 		</div>
-		<div dojoType="dijit.MenuBarItem" disabled = "true">
+		<div data-dojo-type="dijit.MenuBarItem" data-dojo-props="disabled:true">
 			Disabled item
 		</div>
 	</div>
