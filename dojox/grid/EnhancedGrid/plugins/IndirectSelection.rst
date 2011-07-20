@@ -115,7 +115,7 @@ with HTML markup
 .. code-block :: javascript
   :linenos:
 
-  <div id="grid" dojoType="dojox.grid.EnhancedGrid" plugins="{indirectSelection: true}" >
+  <div id="grid" data-dojo-type="dojox.grid.EnhancedGrid" data-dojo-props="plugins:{indirectSelection: true}" >
   </div>
 
 with JavaScript
@@ -134,7 +134,7 @@ with HTML markup
 .. code-block :: javascript
   :linenos:
 
-  <div id="grid" dojoType="dojox.grid.EnhancedGrid" plugins="{indirectSelection: true}" selectionMode="single" ... >
+  <div id="grid" data-dojo-type="dojox.grid.EnhancedGrid" data-dojo-props="plugins:{indirectSelection: true}, selectionMode:'single'" ... >
   </div>
 
 with JavaScript
@@ -152,7 +152,7 @@ with JavaScript
   :linenos:
 
   //with HTML markup
-  <div id="grid" dojoType="dojox.grid.EnhancedGrid" plugins="{indirectSelection: true}" rowSelector="0px" ... />
+  <div id="grid" data-dojo-type="dojox.grid.EnhancedGrid" data-dojo-props="plugins:{indirectSelection: true}, rowSelector:'0px'" ... />
  
   //with Javascript
   <script>
@@ -207,7 +207,7 @@ Usages
 .. code-block :: javascript
   :linenos:
 
-  <div id="grid" dojoType="dojox.grid.EnhancedGrid" plugins="{indirectSelection:{headerSelector:true, ...}}" ...></div>
+  <div id="grid" data-dojo-type="dojox.grid.EnhancedGrid" data-dojo-props="plugins:{indirectSelection:{headerSelector:true, ...}}" ...></div>
 
 * Listen to events when the check box/radio button is checked/unchecked
 
@@ -260,7 +260,7 @@ Usages
 .. code-block :: javascript
   :linenos:
 
-  <div id="grid" dojoType="dojox.grid.EnhancedGrid" plugins="{indirectSelection:{name:'Selection',width:'70px',styles:'text-align:right;'}}" ...></div>
+  <div id="grid" data-dojo-type="dojox.grid.EnhancedGrid" data-dojo-props="plugins:{indirectSelection:{name:'Selection',width:'70px',styles:'text-align:right;'}}" ...></div>
     
 or 
 
