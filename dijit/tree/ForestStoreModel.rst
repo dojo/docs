@@ -14,11 +14,11 @@ Here's an example of a declarative initialization for a TreeStoreModel and for t
 
 .. code-block :: html
 
-	<div dojoType="dojo.data.ItemFileReadStore" data-dojo-id="continentStore"
-		url="_data/countries.json"></div>
-	<div dojoType="dijit.tree.ForestStoreModel" data-dojo-id="continentModel" 
-		store="continentStore" query="{type:'continent'}"
-		rootId="continentRoot" rootLabel="Continents" childrenAttrs="children"></div>
+	<div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-id="continentStore"
+		data-dojo-props="url:'_data/countries.json'"></div>
+	<div data-dojo-type="dijit.tree.ForestStoreModel" data-dojo-id="continentModel" 
+		data-dojo-props="store:continentStore, query:{type:'continent'},
+		rootId:'continentRoot', rootLabel:'Continents', childrenAttrs:'children'"></div>
 
 
 A few things to note here:
