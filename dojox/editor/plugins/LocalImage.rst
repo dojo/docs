@@ -1,7 +1,7 @@
 #format dojo_rst
 
-dojox.editor.plugins.InsertImage (Under Construction)
-=====================================================
+dojox.editor.plugins.LocalImage (Under Construction)
+====================================================
 
 :Authors: He Gu Yi
 :Project owner: Jared Jurkiewicz
@@ -38,7 +38,7 @@ Usage of this plugin is simple and painless. The first thing you need to do is r
     ...
   </script>
   ...
-  <div dojoType="dijit.Editor" id="editor1">
+  <div data-dojo-type="dijit.Editor" id="editor1">
   ...
   </div>
 
@@ -56,7 +56,7 @@ Then just declare the plugin and configure it as follows. Note that the location
     dojo.require("dojox.editor.plugins.LocalImagePlugin");
     ...
   </script>
-  <div dojoType="dijit.Editor" id="editor1" extraPlugins="[{name: 'LocalImage', uploadable: true, uploadUrl: '../../form/tests/UploadFile.php', baseImageUrl: '../../form/tests/', fileMask: '*.jpg;*.jpeg;*.gif;*.png;*.bmp'}]">
+  <div data-dojo-type="dijit.Editor" id="editor1" data-dojo-props="extraPlugins:[{name: 'LocalImage', uploadable: true, uploadUrl: '../../form/tests/UploadFile.php', baseImageUrl: '../../form/tests/', fileMask: '*.jpg;*.jpeg;*.gif;*.png;*.bmp'}]">
   ...
   </div>
 
@@ -97,6 +97,44 @@ baseImageUrl              String             True          <empty string>       
 fileMask                  String             True          "\*.jpg;\*.jpeg;\*.gif;  Specify the acceptable image type.
                                                            \*.png;\*.bmp"           The default value is "\*.jpg;\*.jpeg;\*.gif;\*.png;\*.bmp".                       
 ========================  =================  ============  =======================  ===================================================================================
+
+Set up the server
+-----------------
+
+This plugin uses *dojox.form.FileUploader* to transfer the local image file to the server. The file uploader is set to html mode, that is, the image file is transferred as an HTTP request attachment.
+
+The server-side expects 'uploadedfile' field in the POST data section. The value of 'uploadedfile' is the content of the uploaded image file. The server-side piece could receive it as save it as an image file.
+
+If you inspect the network in Firebug, it could be look like the following:
+
+.. code-block :: html
+
+  Content-Type: multipart/form-data; boundary=---------------------------313223033317673
+  Content-Length: 2457
+  
+  -----------------------------313223033317673
+  Content-Disposition: form-data; name="uploadedfile"; filename="test.gif"
+  Content-Type: image/gif
+  
+  GIF87a?[image file byte data here]
+  -----------------------------313223033317673-- 
+
+The server side should return a piece of html code which contains the following information:
+
+* The path to the uploaded file on the server side.
+* File name.
+* The width and height of the image.
+* Image type.
+* Image size.
+* 'additionalParams' as a list.
+
+All the information should be wrapper within a <textarea> html control. It would look something like the following.
+
+.. code-block :: html
+
+  <textarea>{"file":"..\/tests\/uploads\/1079.gif","name":"1079.gif","width":400,"height":118,"type":"gif","size":2260,"additionalParams":[]}</textarea>
+
+For more information, please refer to http://docs.dojocampus.org/dojox/form/FileUploader .
 
 ==============
 User Interface
@@ -176,7 +214,7 @@ Basic Usage
 
     <b>Click the down arrow and select Set Auto-Save Interval... to save at intervals</b>
     <br>
-    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['autosave']">
+    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:['autosave']">
     <div>
     <br>
     blah blah & blah!
