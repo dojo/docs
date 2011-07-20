@@ -18,9 +18,9 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
 
   .. cv:: html
 
-    <span dojoType="dojo.data.ItemFileWriteStore" 
+    <span data-dojo-type="dojo.data.ItemFileWriteStore" 
         data-dojo-id="store3"
-        url="{{ dataUrl }}dijit/tests/_data/countries.json">
+        data-dojo-props="url:'{{ dataUrl }}dijit/tests/_data/countries.json'">
     </span>
 
 
@@ -28,14 +28,14 @@ Since DataGrid is "DataStoreAware", changes made to the store will be reflected 
         This example shows, how to add/remove rows
     </div>
 
-    <table dojoType="dojox.grid.DataGrid"
+    <table data-dojo-type="dojox.grid.DataGrid"
         data-dojo-id="grid5"
-        store="store3"
-        query="{ name: '*' }"
-        rowsPerPage="20"
-        clientSort="true"
-        style="width: 400px; height: 200px;"
-        rowSelector="20px">
+        data-dojo-props="store:store3,
+        query:{ name: '*' },
+        rowsPerPage:20,
+        clientSort:true,
+        rowSelector:'20px'"
+        style="width: 400px; height: 200px;">
         <thead>
             <tr>
                 <th width="200px" 
