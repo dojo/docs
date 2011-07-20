@@ -151,7 +151,7 @@ Connecting CsvStore to dijit.form.ComboBox
 
   .. cv :: html 
 
-    <div id="combo" dojoType="dijit.form.ComboBox" searchAttr="firstname"></div>
+    <div id="combo" data-dojo-type="dijit.form.ComboBox" data-dojo-props="searchAttr:'firstname'"></div>
 
     
 Connecting CsvStore to dojox.grid.DataGrid
@@ -194,9 +194,9 @@ Connecting CsvStore to dojox.grid.DataGrid
   .. cv :: html
 
     <div id="grid" style="width: 350px; height: 300px;" 
-      dojoType="dojox.grid.DataGrid" 
-      query="{}" 
-      rowsPerPage="40">
+      data-dojo-type="dojox.grid.DataGrid" 
+      data-dojo-props="query:{},
+      rowsPerPage:40">
     </div>
 
   .. cv:: css
@@ -246,9 +246,9 @@ Connecting CsvStore to dojox.grid.DataGrid where the data used a different separ
   .. cv :: html
 
     <div id="grid2" style="width: 350px; height: 300px;" 
-      dojoType="dojox.grid.DataGrid" 
-      query="{}" 
-      rowsPerPage="40">
+      data-dojo-type="dojox.grid.DataGrid" 
+      data-dojo-props="query:{},
+      rowsPerPage:40">
     </div>
 
   .. cv:: css
