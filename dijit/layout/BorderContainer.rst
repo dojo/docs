@@ -131,10 +131,10 @@ This example uses layoutPriority to include two left panes in one BorderContaine
   
   .. html::
     
-    <div dojoType="dijit.layout.BorderContainer" design="sidebar" gutters="true" liveSplitters="true" id="layoutPriorityBorderContainer">
-      <div dojoType="dijit.layout.ContentPane" splitter="true" region="leading" layoutPriority="1" style="width: 100px;">Left #1</div>
-      <div dojoType="dijit.layout.ContentPane" splitter="true" region="leading" layoutPriority="2" style="width: 100px;">Left #2</div>
-      <div dojoType="dijit.layout.ContentPane" splitter="true" region="center">Hi, I'm center</div>
+    <div data-dojo-type="dijit.layout.BorderContainer" data-dojo-props="design:'sidebar', gutters:true, liveSplitters:true" id="layoutPriorityBorderContainer">
+      <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="splitter:true, region:'leading', layoutPriority:1" style="width: 100px;">Left #1</div>
+      <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="splitter:true, region:'leading', layoutPriority:2" style="width: 100px;">Left #2</div>
+      <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="splitter:true, region:'center'">Hi, I'm center</div>
     </div>
   
   .. css::
