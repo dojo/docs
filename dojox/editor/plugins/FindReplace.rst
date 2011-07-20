@@ -45,7 +45,7 @@ Once it has been required in, all you have to do is include it in the list of ex
 
 .. code-block :: html
 
-  <div dojoType="dijit.Editor" id="editor" extraPlugins="['findreplace']"></div>
+  <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:['findreplace']"></div>
 
 
 You also need to include the CSS for it.  For example:
@@ -140,7 +140,7 @@ Basic Usage
 
     <b>Toggle the find/replace toolbar by clicking its menu bar button.</b>
     <br>
-    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['findreplace']">
+    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:['findreplace']">
     <div>
     <br>
     blah blah & blah!
