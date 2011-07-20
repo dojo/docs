@@ -42,7 +42,7 @@ Once it has been required in, all you have to do is include it in the list of ex
 
 .. code-block :: html
 
-  <div dojoType="dijit.Editor" id="editor" extraPlugins="['normalizestyle']"></div>
+  <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:['normalizestyle']"></div>
 
 And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the NormalizeStyle plugin!
 
@@ -65,8 +65,8 @@ How do I configure the options?  Glad you asked.  You do it where you declare th
 
 .. code-block :: html
 
-  <div dojoType="dijit.Editor" 
-       id="editor" extraPlugins="[{name: 'normalizestyle', mode: "css", condenseSpans: false}]">
+  <div data-dojo-type="dijit.Editor" 
+       id="editor" data-dojo-props="extraPlugins:[{name: 'normalizestyle', mode: "css", condenseSpans: false}]">
   </div>
 
 
@@ -99,7 +99,7 @@ Basic Usage
 
     <b>Enter some text, then press the button to see it in encoded format</b>
     <br>
-    <div dojoType="dijit.Editor" height="100px"id="input" extraPlugins="['normalizestyle']">
+    <div data-dojo-type="dijit.Editor" height="100px" id="input" data-dojo-props="extraPlugins:['normalizestyle']">
     <div>
     <br>
     blah blah & blah!
@@ -123,7 +123,7 @@ Basic Usage
     </li>
     </ul>
     </div>
-    <button id="eFormat" dojoType="dijit.form.Button">Press me to format!</button>
+    <button id="eFormat" data-dojo-type="dijit.form.Button">Press me to format!</button>
     <br>
     <textarea style="width: 100%; height: 100px;" id="output" readonly="true">
     </textarea>
@@ -153,7 +153,7 @@ Configured css mode
 
     <b>Enter some text, then press the button to see it in encoded format</b>
     <br>
-    <div dojoType="dijit.Editor" height="100px"id="input" extraPlugins="[{name:'normalizestyle', mode: 'css'}]">
+    <div data-dojo-type="dijit.Editor" height="100px" id="input" data-dojo-props="extraPlugins:[{name:'normalizestyle', mode: 'css'}]">
     <div>
     <br>
     blah blah & blah!  This is a line longer than <b>twenty</b> characters, so it should wrap!
@@ -177,7 +177,7 @@ Configured css mode
     </li>
     </ul>
     </div>
-    <button id="eFormat" dojoType="dijit.form.Button">Press me to format!</button>
+    <button id="eFormat" data-dojo-type="dijit.form.Button">Press me to format!</button>
     <br>
     <textarea style="width: 100%; height: 100px;" id="output" readonly="true">
     </textarea>
