@@ -180,7 +180,6 @@ With a local custom template to change the layout (does not work against CDN)
 
 .. code-example::
   :height: 340
-  :version: trunk
 
   .. javascript::
 
