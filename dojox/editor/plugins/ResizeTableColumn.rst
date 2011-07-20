@@ -33,7 +33,7 @@ Usage of this plugin is simple and painless. The first thing you need to do is r
     ...
   </script>
   ...
-  <div dojoType="dijit.Editor" id="editor1">
+  <div data-dojo-type="dijit.Editor" id="editor1">
   ...
   </div>
 
@@ -46,7 +46,7 @@ Then just declare the plugin and configure it as follows.
     dojo.require("dojox.editor.plugins.ResizeTableColumn");
     ...
   </script>
-  <div dojoType="dijit.Editor" id="editor1" extraPlugins="[{name: 'dojox.editor.plugins.TablePlugins', command: 'ResizeTableColumn'}]">
+  <div data-dojo-type="dijit.Editor" id="editor1" data-dojo-props="extraPlugins:[{name: 'dojox.editor.plugins.TablePlugins', command: 'ResizeTableColumn'}]">
   ...
   </div>
 
@@ -99,7 +99,7 @@ Basic Usage
 
     <b>Click the down arrow and select Set Auto-Save Interval... to save at intervals</b>
     <br>
-    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['autosave']">
+    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:['autosave']">
     <div>
     <br>
     blah blah & blah!
