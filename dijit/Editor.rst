@@ -77,7 +77,8 @@ Programmatic example
 Of course, the editor can be created programmatically in addition to declaratively,
 although even when created programmatically you need to specify a source DOM node to replace:
 
-.. cv:: html
+.. code-block:: html
+ :linenos:
 
 	<div id="programmatic2">This div will become an auto-expanding editor.</div>
 	<button
