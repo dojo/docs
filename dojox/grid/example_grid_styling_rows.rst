@@ -17,18 +17,18 @@ To use it, you just have to override default behavior by yours.
 
   .. cv:: html
 
-    <span dojoType="dojo.data.ItemFileWriteStore" 
-        data-dojo-id="store3" url="{{ dataUrl }}dijit/tests/_data/countries.json">
+    <span data-dojo-type="dojo.data.ItemFileWriteStore" 
+        data-dojo-id="store3" data-dojo-props="url:'{{ dataUrl }}dijit/tests/_data/countries.json'">
     </span>
 
-    <table dojoType="dojox.grid.DataGrid"
+    <table data-dojo-type="dojox.grid.DataGrid"
         data-dojo-id="grid6"
-        store="store3"
-        query="{ name: '*' }"
-        rowsPerPage="20"
-        clientSort="true"
-        style="width: 400px; height: 200px;"
-        rowSelector="20px">
+        data-dojo-props="store:store3,
+        query:{ name: '*' },
+        rowsPerPage:20,
+        clientSort:true,
+        rowSelector:'20px'"
+        style="width: 400px; height: 200px;">
         <script type="dojo/method" data-dojo-event="onStyleRow" data-dojo-args="row">
 	     //The row object has 4 parameters, and you can set two others to provide your own styling
 	     //These parameters are :
