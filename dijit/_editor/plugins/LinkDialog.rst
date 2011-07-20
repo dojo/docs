@@ -55,7 +55,7 @@ Once it has been required in, all you have to do is include it in the list of ex
 
 .. code-block :: html
 
-  <div dojoType="dijit.Editor" id="editor" extraPlugins="['createLink', 'unlink', 'insertImage']"></div>
+  <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:['createLink', 'unlink', 'insertImage']"></div>
 
 
 
@@ -91,7 +91,7 @@ Basic Usage
 
     <b>Select any of the links or images below and click the appropriate button to change their properties.  Or, click where on the page you want to insert an image or a link, then click the appropriate button and create the image or link.</b>
     <br>
-    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['createLink', 'unlink', 'insertImage']">
+    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:['createLink', 'unlink', 'insertImage']">
       <br>
       <br>
       <a href="http://www.dojotoolkit.org">The best Ajax Toolkit there is, Dojo!</a>
