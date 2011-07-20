@@ -143,7 +143,7 @@ Example of a different wipe direction for each pane.
   
   .. html::
 
-    <div dojoType="dojox.widget.AutoRotator" class="rotator" id="myAutoRotator2" data-dojo-id="myAutoRotatorInstance2" transition="dojox.widget.rotator.wipeLeft" duration="2500">
+    <div data-dojo-type="dojox.widget.AutoRotator" class="rotator" id="myAutoRotator2" data-dojo-id="myAutoRotatorInstance2" data-dojo-props="transition:'dojox.widget.rotator.wipeLeft', duration:2500">
         <div class="pane pane0">Pane 0<br/>Pane 1 will wipe in from the top</div>
         <div class="pane pane1" transition="dojox.widget.rotator.wipeDown">Pane 1<br/>Pane 2 will wipe in from the right</div>
         <div class="pane pane2" transition="dojox.widget.rotator.wipeRight">Pane 2<br/>Pane 0 will use the default transition to wipe in from the left</div>
