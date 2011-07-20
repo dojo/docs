@@ -67,7 +67,7 @@ Declarative example
 			<script type="dojo/method" data-dojo-event="onClick">
 				this.setAttribute("disabled",true);
 				dijit.byId("foobd").setAttribute("disabled",false);
-				new dojox.image.MagnifierLite({ scale:4.2, glassSize:200 },"foobar1");
+				new dojox.image.MagnifierLite({ scale:4.2, glassSize:200 },"foobar");
 			</script>
 		</button>
 
