@@ -33,7 +33,7 @@ The directory structure should look like this when you are done:
 
 **Example HTML** 
 
-.. code-example :: html
+.. code_block :: html
  :linenos:
 
   <html>
