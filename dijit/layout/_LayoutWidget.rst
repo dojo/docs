@@ -43,9 +43,9 @@ in the markup below:
 
 .. code-block:: html
 
-     <div dojoType="dijit.layout.TabContainer" id="tc">
-       <div dojoType="dijit.layout.ContentPane" title=...>...</div>
-       <div dojoType="dijit.layout.ContentPane" title=...>...</div>
+     <div data-dojo-type="dijit.layout.TabContainer" id="tc">
+       <div data-dojo-type="dijit.layout.ContentPane" title=...>...</div>
+       <div data-dojo-type="dijit.layout.ContentPane" title=...>...</div>
      </div>
 
 However, addChild() is called when children are added programmatically, like:
