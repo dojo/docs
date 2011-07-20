@@ -17,7 +17,7 @@ The Grid offers a filter() method, to filter data from the current query (client
 
   .. cv:: html
 
-    <span dojoType="dojox.data.CsvStore" 
+    <span data-dojo-type="dojox.data.CsvStore" 
         // We use the store from the examples above.
         // Please uncomment this line, if you need your own store:
         // data-dojo-id="store2" url="{{dataUrl}}dojox/grid/tests/support/movies.csv">
@@ -28,13 +28,13 @@ The Grid offers a filter() method, to filter data from the current query (client
         Click on the button "show all movies" to remove the filter.
     </div>
 
-    <table dojoType="dojox.grid.DataGrid"
+    <table data-dojo-type="dojox.grid.DataGrid"
         data-dojo-id="grid3"
-        store="store2"
-        query="{ Title: '*' }"
-        clientSort="true"
-        style="width: 400px; height: 200px;"
-        rowSelector="20px">
+        data-dojo-props="store:store2,
+        query:{ Title: '*' },
+        clientSort:true,
+        rowSelector:'20px'"
+        style="width: 400px; height: 200px;">
         <thead>
             <tr>
                 <th width="300px" field="Title">Title of Movie</th>
