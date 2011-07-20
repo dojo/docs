@@ -40,7 +40,7 @@ Once it has been required in, all you have to do is include it in the list of ex
 
 .. code-block :: html
 
-  <div dojoType="dijit.Editor" id="editor" extraPlugins="['insertEntity']"></div>
+  <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:['insertEntity']"></div>
 
 
 You also need to include the CSS for it.  For example:
@@ -62,7 +62,7 @@ Something to be aware of is that if you also use the `dojox.editor.plugins.Prett
 
 .. code-block :: html
 
-  <div dojoType="dijit.Editor" id="editor" extraPlugins="['insertEntity', {name: 'prettyprint' entityMap: dojox.html.entities.html.concat(dojox.html.entities.latin)}]"></div>
+  <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:['insertEntity', {name: 'prettyprint' entityMap: dojox.html.entities.html.concat(dojox.html.entities.latin)}]"></div>
 
 The above configures prettyprint to escape all the same entities that the InsertEntity plugin can insert.
 
@@ -95,9 +95,9 @@ Basic Usage
     
   .. html::
 
-    <b>Enter some text or select a position, then push the InsertEntity button or use CTRL-SHIFT-S, to insert an entity character of your choosing at that point.  Note that viewsource and prettyprint are also enabled so that you can see the entities and their encodings.</b>
+    <b>Enter some text or select a position, then push the InsertEntity button or use CTRL-SHIFT-S, to insert an entity character of your choosing at that point. Note that viewsource and prettyprint are also enabled so that you can see the entities and their encodings.</b>
     <br>
-    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['insertentity', 'viewsource', {name: 'prettyprint', indentBy: 3,       entityMap: dojox.html.entities.html.concat(dojox.html.entities.latin)}]">
+    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:['insertentity', 'viewsource', {name: 'prettyprint', indentBy: 3, entityMap: dojox.html.entities.html.concat(dojox.html.entities.latin)}]">
     <div>
     <br>
     blah blah & blah!
