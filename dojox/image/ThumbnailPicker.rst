@@ -39,7 +39,7 @@ Number of Visible Images
 ------------------------
 
 To set the number of visible images, and thereby the width or height of horizontal and vertical widgets respectively,
-set the <b>numberThumbs</b> attribute, e.g.
+set the **numberThumbs** attribute, e.g.
 
 
 .. code-block :: javascript
