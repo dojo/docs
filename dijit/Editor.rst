@@ -30,7 +30,8 @@ Limitations
 
 * The dijit.Editor uses an iframe to separate the document being edited from the rest of the content of your page.  This helps protect your main page from being corrupted by editor content and vice-versa.  But because of it being iframe isolated, the editor initializes asynchronously.  To avoid any actions firing too early against editor content, you should make use of the 'onLoadDeferred' object of the editor.  For example, see the following example that changes the content after init completes:
 
-.. cv:: html
+.. code-example:: html
+ :linenos:
 
   <script>
     dojo.addOnLoad(function(){
