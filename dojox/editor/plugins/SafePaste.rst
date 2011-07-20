@@ -50,7 +50,7 @@ Once it has been required in, all you have to do is include it in the list of ex
 
 .. code-block :: html
 
-  <div dojoType="dijit.Editor" id="editor" extraPlugins="['safepaste']"></div>
+  <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:['safepaste']"></div>
 
 And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the SafePaste plugin!
 
@@ -74,8 +74,8 @@ How do I configure the options?  Glad you asked.  You do it where you declare th
 
 .. code-block :: html
 
-  <div dojoType="dijit.Editor" 
-       id="editor" extraPlugins="[{name: 'safepaste', width: "200px", height: "200px", stripTags: ["b", "i"]}]">
+  <div data-dojo-type="dijit.Editor" 
+       id="editor" data-dojo-props="extraPlugins:[{name: 'safepaste', width: "200px", height: "200px", stripTags: ["b", "i"]}]">
   </div>
 
 
@@ -110,7 +110,7 @@ Basic Usage
 
     <b>Clear the editor, click paste from word, then paste in content you want!</b>
     <br>
-    <div dojoType="dijit.Editor" height="100px"id="input" extraPlugins="['safepaste']">
+    <div data-dojo-type="dijit.Editor" height="100px" id="input" data-dojo-props="extraPlugins:['safepaste']">
     <div>
     <br>
     blah blah & blah!
