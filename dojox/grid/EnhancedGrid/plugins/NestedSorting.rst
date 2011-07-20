@@ -113,7 +113,7 @@ with HTML markup
 .. code-block :: html
   :linenos:
 
-  <div id="grid" store="store1" dojoType="dojox.grid.EnhancedGrid" plugins="{nestedSorting: true}" >
+  <div id="grid" store="store1" data-dojo-type="dojox.grid.EnhancedGrid" data-dojo-props="plugins:{nestedSorting: true}" >
   </div>
 
 with JavaScript way
