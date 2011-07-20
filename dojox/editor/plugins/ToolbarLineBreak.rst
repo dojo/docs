@@ -37,7 +37,7 @@ Once it has been required in, all you have to do is include it in the list of ex
 
 .. code-block :: html
 
-  <div dojoType="dijit.Editor" id="editor" extraPlugins="['||', 'fontSize', 'formatBlock', '||', 'hiliteColor']"></div>
+  <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:['||', 'fontSize', 'formatBlock', '||', 'hiliteColor']"></div>
 
 
 And that's it.  Every point in that definition where '||' is encountered, the plugin inserts a 'line break' into the toolbar between the indicated plugin buttons.  Note you can also use it inside the 'plugins=""' definition of editor too.
@@ -80,7 +80,7 @@ Basic Usage
 
     <b>Look at the toolbar, the font manipulation options are wrapped to a new line in the toolbar.</b>
     <br>
-    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['||', 'fontName', '||', 'fontSize', '||', 'formatBlock', '||', 'foreColor', 'hiliteColor']">
+    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:['||', 'fontName', '||', 'fontSize', '||', 'formatBlock', '||', 'foreColor', 'hiliteColor']">
     <div>
     <br>
     blah blah & blah!
