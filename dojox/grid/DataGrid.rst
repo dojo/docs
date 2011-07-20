@@ -100,7 +100,7 @@ At a high level, a DataGrid can be defined either declaratively in HTML markup o
 .. code-block :: html
   :linenos:
 
-  <table dojoType="dojox.grid.DataGrid" >
+  <table data-dojo-type="dojox.grid.DataGrid" >
     <thead>
       <tr>
         <th field="fieldName" width="200px">Column Name</th>
@@ -230,7 +230,7 @@ errorMessage
 .. code-block :: javascript
   :linenos:
 
-  <table dojoType="dojox.grid.DataGrid" escapeHTMLInData="false" ...>
+  <table data-dojo-type="dojox.grid.DataGrid" data-dojo-props="escapeHTMLInData:false" ...>
 
 Editing cells
 -------------
@@ -251,8 +251,8 @@ Data for the grid comes from a data store.  The data can be specified declarativ
 .. code-block :: html
   :linenos:
 
-  <span dojoType="dojo.data.ItemFileWriteStore" 
-     data-dojo-id="myStore" url="/myData.json">
+  <span data-dojo-type="dojo.data.ItemFileWriteStore" 
+     data-dojo-id="myStore" data-dojo-props="url:'/myData.json'">
   </span>
 
 Programmatically, a store can be assigned to a DataGrid with the ``setStore(myStore)`` method call.
@@ -297,7 +297,7 @@ For example:
 .. code-block :: javascript
   :linenos:
 
-  <table dojoType="dojox.grid.DataGrid" store="myTestStore" style="width: 800px; height: 300px;">
+  <table data-dojo-type="dojox.grid.DataGrid" data-dojo-props="store:myTestStore" style="width: 800px; height: 300px;">
     <thead>
       <tr>
         <th field="A" width="200px">Col1</th>
