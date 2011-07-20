@@ -144,10 +144,10 @@ Example
 This example will put a horizontal dojox.image.ThumbnailPicker widget on a page, with a variety
 of settings, and uses the FlickrRestStore data store.
  
-.. code-example::
+.. cv-compound::
   :djConfig: parseOnLoad: true
 
-  .. javascript::
+  .. cv:: javascript
 
         <script type="text/javascript">
         dojo.require("dojo.parser");
@@ -179,7 +179,7 @@ of settings, and uses the FlickrRestStore data store.
 
         </script>
 
-  .. html::
+  .. cv:: html
 
        <h2>From FlickrRestStore:</h2>
        This ThumbnailPicker should have 4 thumbnails, witheach of them linking
@@ -188,10 +188,10 @@ of settings, and uses the FlickrRestStore data store.
        <div id="thumbPicker1" data-dojo-type="dojox.image.ThumbnailPicker" data-dojo-props="numberThumbs:4, useHyperlink:true,
        hyperlinkTarget:this"></div>
 
-  .. css::
+  .. cv:: css
 
-      <style>
-         @import "{{baseUrl}}dojox/image/resources/image.css";
+      <style type="text/css">
+         @import "{{ baseUrl }}dojox/image/resources/image.css";
       <style>
 
 
