@@ -113,7 +113,7 @@ Connecting HtmlTableStore to dijit.form.ComboBox
 
   .. cv :: html 
 
-    <table id="myData" style="display: none;">
+    <table data-dojo-id="myData" style="display: none;">
     <thead>
         <tr>
             <th>isbn</th>
