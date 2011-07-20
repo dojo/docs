@@ -44,7 +44,7 @@ Usage of this plugin is simple and painless. The first thing you need to do is r
     ...
   </script>
   ...
-  <div dojoType="dijit.Editor" id="editor1">
+  <div data-dojo-type="dijit.Editor" id="editor1">
   ...
   </div>
 
@@ -66,7 +66,7 @@ Then just declare the plugin and configure it as follows. Note that the location
     dojo.require("dojox.editor.plugins.SpellCheck");
     ...
   </script>
-  <div dojoType="dijit.Editor" id="editor" extraPlugins="[{name: 'SpellCheck', url: 'spellCheck.php', interactive: true, timeout: 20, bufferLength: 100, lang: 'en'}]">
+  <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:[{name: 'SpellCheck', url: 'spellCheck.php', interactive: true, timeout: 20, bufferLength: 100, lang: 'en'}]">
   ...
   </div>
 
@@ -104,7 +104,7 @@ SpellCheck adopts JSONP protocol and uses GET request to send the words that are
 
 .. code-block :: html
 
-  <div dojoType="dijit.Editor" id="editor" extraPlugins="[{name: 'SpellCheck', url: 'spellCheck.php', interactive: true, timeout: 20, bufferLength: 100, lang: 'en'}]">
+  <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:[{name: 'SpellCheck', url: 'spellCheck.php', interactive: true, timeout: 20, bufferLength: 100, lang: 'en'}]">
 
 The request may look like the following:
 
@@ -336,7 +336,7 @@ Basic Usage
 
     <b>Toggle the find/replace toolbar by clicking its menu bar button.</b>
     <br>
-    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['findreplace']">
+    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:['findreplace']">
     <div>
     <br>
     blah blah & blah!
