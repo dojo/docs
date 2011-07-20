@@ -70,7 +70,7 @@ How do I configure the options?  Glad you asked.  You do it where you declare th
 .. code-block :: html
 
   <div data-dojo-type="dijit.Editor" 
-       id="editor" data-dojo-props="extraPlugins:[{name: 'normalizeindentoutdent', indentBy: 3, indentUnits: "em"}]">
+       id="editor" data-dojo-props="extraPlugins:[{name: 'normalizeindentoutdent', indentBy: 3, indentUnits: 'em'}]">
   </div>
 
 
