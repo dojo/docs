@@ -79,7 +79,6 @@ Basic Usage
 
 .. code-example::
   :djConfig: parseOnLoad: true
-  :version: 1.4
 
   .. javascript::
 
@@ -90,7 +89,7 @@ Basic Usage
       dojo.require("dojox.editor.plugins.NormalizeStyle");
       dojo.addOnLoad(function(){
          dojo.connect(dijit.byId("eFormat"), "onClick", function(){
-           output.value = dijit.byId("input").attr("value");
+           dojo.byId("output").innerHTML = dijit.byId("input").attr("value");
          });
       });
     </script>
@@ -134,7 +133,6 @@ Configured css mode
 
 .. code-example::
   :djConfig: parseOnLoad: true
-  :version: 1.4
 
   .. javascript::
 
@@ -144,7 +142,7 @@ Configured css mode
       dojo.require("dojox.editor.plugins.NormalizeStyle");
       dojo.addOnLoad(function(){
          dojo.connect(dijit.byId("eFormat"), "onClick", function(){
-           output.value = dijit.byId("input").attr("value");
+           dojoById("output").innerHTML = dijit.byId("input").attr("value");
          });
       });
     </script>
