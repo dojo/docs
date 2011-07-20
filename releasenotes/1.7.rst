@@ -118,15 +118,18 @@ dojo/gesture
 This new module is based on dojo.touch and dojo.on, it provides a mechanism to write gestures that can work well on difference devices including desktops(single gestures) and various touch devices. 
 
  This new module provides following functionalities(most of them are used internally by various gesture instances):
+
  - Register/un-register a global singleton gesture instance
  - Bind dojoj/on handlers for each gesture event e.g. tap, taphold, doubletap ...
  - Fire a gesture event on the target node
  
  dojo/gesture/tap
+
  - Provide common single-touch tap gestures including tap, tap.hold and tap.doubletap
  - Customizable settings e.g. threshhold for tap.hold, effective radius for a valid tap.doubletap
  
  dojo/gesture/swipe
+
  - Provide common single-touch swipe gestures including swipe, swipe.left|right|up|down
  - Customizable settings e.g. swipeSpeed, valid swipeRange
  
