@@ -40,7 +40,7 @@ Once it has been required in, all you have to do is include it in the list of ex
 
 .. code-block :: html
 
-  <div dojoType="dijit.Editor" id="editor" extraPlugins="['pageBreak']"></div>
+  <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:['pageBreak']"></div>
 
 
 You also need to include the CSS for it.  For example:
@@ -89,7 +89,7 @@ Basic Usage
 
     <b>Enter some text or select a position, then push the PageBreak button or use CTRL-SHIFT-ENTER, to insert a page break at the desired point.</b>
     <br>
-    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['pagebreak']">
+    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:['pagebreak']">
     <div>
     <br>
     blah blah & blah!
