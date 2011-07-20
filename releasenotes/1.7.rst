@@ -115,7 +115,7 @@ Please refer to `dojo/touch doc(TODO) <dojo/touch>`_ for more details.
 dojo/gesture
 ------------
 
-This new module is based on dojo.touch and dojo.on, it provides a mechanism to write gestures that can work well on difference devices including desktops(single gestures) and various touch devices. 
+Based on dojo.touch and dojo.on, this new module provides a mechanism to write gestures working well on difference devices including desktops(single gestures) and various touch devices. 
 
 This new module provides following functionalities(most of them are used internally by various gesture instances):
 
@@ -130,7 +130,7 @@ dojo/gesture/tap
  
 dojo/gesture/swipe
 
-- Provide common single-touch swipe gestures including swipe, swipe.left|right|up|down
+- Provide common single-touch swipe gestures including swipe, swipe.left | right | up | down
 - Customizable settings e.g. swipeSpeed, valid swipeRange
  
 Please also refer to `dojo/gesture doc(TODO) <dojo/gesture>`_ for how to write a new gesture instance
