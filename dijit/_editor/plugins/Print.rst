@@ -40,7 +40,7 @@ Once it has been required in, all you have to do is include it in the list of ex
 
 .. code-block :: html
 
-  <div dojoType="dijit.Editor" id="editor" extraPlugins="['print']"></div>
+  <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:['print']"></div>
 
 
 
@@ -70,7 +70,7 @@ Basic Usage
 
     <b>Enter some text then press the print button.  The browser print dialog should open and allow you to print the editor content</b>
     <br>
-    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['print']">
+    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:['print']">
     <div>
     <br>
     blah blah & blah!
