@@ -55,9 +55,9 @@ A simple file picker pulling data from a dojox.data.FileStore
 
   .. cv :: html
   
-    <div dojoType="dojox.data.FileStore" data-dojo-id="fileStore" pathAsQueryParam="true"
-        url="{{dataUrl}}dojox/data/demos/stores/filestore_dojotree.php"></div>
-    <div dojoType="dojox.widget.FilePicker" store="fileStore" query="{}" style="height:150px;width:50%"></div>
+    <div data-dojo-type="dojox.data.FileStore" data-dojo-id="fileStore" data-dojo-props="pathAsQueryParam:true,
+        url:'{{dataUrl}}dojox/data/demos/stores/filestore_dojotree.php'"></div>
+    <div data-dojo-type="dojox.widget.FilePicker" data-dojo-props="store:fileStore, query:{}" style="height:150px;width:50%"></div>
 
   .. cv:: css
 
