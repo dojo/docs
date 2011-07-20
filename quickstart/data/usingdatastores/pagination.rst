@@ -188,9 +188,9 @@ Paging over items
 
   .. cv :: html 
 
-    <div dojoType="dojo.data.ItemFileReadStore" data="storeData" data-dojo-id="foodStore"></div>
-    <div dojoType="dijit.form.Button" data-dojo-id="back">Click me for the previous page!</div>
-    <div dojoType="dijit.form.Button" data-dojo-id="forward">Click me for the next page!</div>
+    <div data-dojo-type="dojo.data.ItemFileReadStore" data-dojo-props="data:storeData" data-dojo-id="foodStore"></div>
+    <div data-dojo-type="dijit.form.Button" data-dojo-id="back">Click me for the previous page!</div>
+    <div data-dojo-type="dijit.form.Button" data-dojo-id="forward">Click me for the next page!</div>
 
     <br>
     <br>
