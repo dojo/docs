@@ -44,7 +44,7 @@ Once it has been required in, all you have to do is include the control names in
 
 .. code-block :: html
 
-  <div dojoType="dijit.Editor" id="editor" extraPlugins="['fontName', 'fontSize', 'formatBlock']"></div>
+  <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:['fontName', 'fontSize', 'formatBlock']"></div>
 
 
 
@@ -69,7 +69,7 @@ An example of disabling it is below:
 
 .. code-block :: html
 
-  <div dojoType="dijit.Editor" id="editor" extraPlugins="[{name: 'fontName', plainText: true}, {name: 'fontSize', plainText: true}, {name: 'formatBlock', plainText: true}]"></div>
+  <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:[{name: 'fontName', plainText: true}, {name: 'fontSize', plainText: true}, {name: 'formatBlock', plainText: true}]"></div>
 
 With the preview disabled, the selects show basic text only.
 
@@ -96,7 +96,7 @@ Basic Usage
 
     <b>Select any of the text below and experiment with the font options</b>
     <br>
-    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['fontName', 'fontSize', 'formatBlock']">
+    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:['fontName', 'fontSize', 'formatBlock']">
       <br>
       <br>
       <h1>This is a header</h1>
@@ -125,7 +125,7 @@ Basic Usage: Plain Text Previews
 
     <b>Select any of the text below and experiment with the font options</b>
     <br>
-    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="[{name: 'fontName', plainText: true}, {name: 'fontSize', plainText: true}, {name: 'formatBlock', plainText: true}]">
+    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:[{name: 'fontName', plainText: true}, {name: 'fontSize', plainText: true}, {name: 'formatBlock', plainText: true}]">
       <br>
       <br>
       <h1>This is a header</h1>
