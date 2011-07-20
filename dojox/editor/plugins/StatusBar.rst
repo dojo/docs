@@ -76,7 +76,6 @@ Basic Usage
 
 .. code-example::
   :djConfig: parseOnLoad: true
-  :version: 1.5
 
   .. javascript::
 
