@@ -209,9 +209,9 @@ If your grid is created declaratively:
 .. code-block :: html
   :linenos:
 
-  <div id="grid" dojoType="dojox.grid.EnhancedGrid" 
-    store="mystore" structure="mystructure" 
-    plugins="{
+  <div id="grid" data-dojo-type="dojox.grid.EnhancedGrid" 
+    data-dojo-props="store:mystore, structure:'mystructure',
+    plugins:{
       cellMerge: /* a Boolean value or an argument object */{}
   }" ></div>
 
