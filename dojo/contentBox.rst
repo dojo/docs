@@ -62,7 +62,7 @@ This example displays the return values of dojo.contentBox on a node.
     <script type="text/javascript">
       dojo.require("dijit.form.Button"); // only for the beauty :)
 
-      function getContentBox(){
+      getContentBox = function(){
         var contentBox = dojo.contentBox("nodeOne");
 
         var info = dojo.byId("boxInfo");
@@ -82,7 +82,7 @@ This example displays the return values of dojo.contentBox on a node.
 
   .. cv:: html
 
-    <button dojoType="dijit.form.Button" onClick="getContentBox()">Get content box</button>
+    <button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:getContentBox">Get content box</button>
     <div id="nodeOne" style="margin: 10px; border: 10px solid black; padding: 10px; width: 100px; height: 30px;">Hi!</div>
 
     <div id="boxInfo">
@@ -108,7 +108,7 @@ This example is showcasing the usage of dojo.contentBox as a setter, take a look
 
   .. cv:: html
 
-    <button id="cButton" dojoType="dijit.form.Button">Click to alter the content box of 'node 2'</button>
+    <button id="cButton" data-dojo-type="dijit.form.Button">Click to alter the content box of 'node 2'</button>
     <br>
     <div>
       Hi I am nested
