@@ -71,7 +71,7 @@ With an initial selection and weekends disabled
 
   .. html::
 
-    <div id="mycal" data-dojo-type="dijit.Calendar" data-dojo-props="value:'2009-08-07', isDisabledDate:'dojo.date.locale.isWeekend'"></div>
+    <div id="mycal" data-dojo-type="dijit.Calendar" data-dojo-props="value:'2009-08-07', isDisabledDate:dojo.date.locale.isWeekend"></div>
     
   .. css::
 
