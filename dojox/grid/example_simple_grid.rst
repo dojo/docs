@@ -16,16 +16,15 @@ This example shows how to create a simple Grid declaratively.
 
   .. cv:: html
 
-    <span dojoType="dojox.data.CsvStore" 
-        data-dojo-id="store1" url="{{dataUrl}}dojox/grid/tests/support/movies.csv">
+    <span data-dojo-type="dojox.data.CsvStore" 
+        data-dojo-id="store1" data-dojo-props="url:'{{dataUrl}}dojox/grid/tests/support/movies.csv'">
     </span>
 
-    <table dojoType="dojox.grid.DataGrid"
-        store="store1"
-        query="{ Title: '*' }"
-        clientSort="true"
-        style="width: 400px; height: 200px;"
-        rowSelector="20px">
+    <table data-dojo-type="dojox.grid.DataGrid"
+        data-dojo-props="store:store1,
+        query:{ Title: '*' },
+        clientSort:true, rowSelector:'20px'"
+        style="width: 400px; height: 200px;">
         <thead>
             <tr>
                 <th width="300px" field="Title">Title of Movie</th>
