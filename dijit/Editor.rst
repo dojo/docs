@@ -42,7 +42,7 @@ Limitations
     });
   </script>
 
-  <div dojoType="dijit.Editor" id="myEditor">
+  <div data-dojo-type="dijit.Editor" id="myEditor">
     <p>This is the initial content.</p>
   </div>
 
@@ -67,7 +67,7 @@ Declarative example
 
   .. cv:: html
 
-      <div dojoType="dijit.Editor" id="editor1" onChange="console.log('editor1 onChange handler: ' + arguments[0])">
+      <div data-dojo-type="dijit.Editor" id="editor1" data-dojo-props="onChange:function(){console.log('editor1 onChange handler: ' + arguments[0])}">
         <p>This instance is created from a div directly with default toolbar and plugins</p>
       </div>
 
@@ -101,8 +101,8 @@ Of course the toolbar can be reordered and customized to suit your layout needs.
 
   .. cv:: html
 
-      <div dojoType="dijit.Editor" id="editor1" onChange="console.log('editor1 onChange handler: ' + arguments[0])"
-      plugins="['cut','copy','paste','|','bold','italic','underline','strikethrough','subscript','superscript','|', 'indent', 'outdent', 'justifyLeft', 'justifyCenter', 'justifyRight']">
+      <div data-dojo-type="dijit.Editor" id="editor1" data-dojo-props="onChange:function(){console.log('editor1 onChange handler: ' + arguments[0])},
+      plugins:['cut','copy','paste','|','bold','italic','underline','strikethrough','subscript','superscript','|', 'indent', 'outdent', 'justifyLeft', 'justifyCenter', 'justifyRight']">
         <p>This instance is created with a subset of functions enabled in the order we want</p>
       </div>
 
@@ -144,9 +144,9 @@ This example adds the text color, background color, and font selection plugins t
 
   .. cv:: html
 
-      <div dojoType="dijit.Editor" id="editor2"
-	extraPlugins="['foreColor','hiliteColor',{name:'dijit._editor.plugins.FontChoice', command:'fontName', generic:true}]"
-        onChange="console.log('editor2 onChange handler: ' + arguments[0])">
+      <div data-dojo-type="dijit.Editor" id="editor2"
+	data-dojo-props="extraPlugins:['foreColor','hiliteColor',{name:'dijit._editor.plugins.FontChoice', command:'fontName', generic:true}],
+        onChange:function(){console.log('editor2 onChange handler: ' + arguments[0])}">
         <p>This instance is created with additional toolbar/ plugins</p>
       </div>
 
@@ -163,9 +163,9 @@ This example starts from scratch, thus removing some items from the toolbar (as 
 
   .. cv:: html
 
-      <div dojoType="dijit.Editor" id="editor3"
-	plugins="['bold','italic','|','createLink']"
-        onChange="console.log('editor3 onChange handler: ' + arguments[0])">
+      <div data-dojo-type="dijit.Editor" id="editor3"
+	data-dojo-props="plugins:['bold','italic','|','createLink'],
+        onChange:function(){console.log('editor3 onChange handler: ' + arguments[0])}">
         <p>This instance is created with customized toolbar/ plugins</p>
       </div>
 
@@ -382,8 +382,8 @@ The AlwaysShowToolbar plugin prevents that.  It's used along with setting height
 
   .. cv:: html
 
-        <div dojoType="dijit.Editor" id="editor5"
-	   extraPlugins="['dijit._editor.plugins.AlwaysShowToolbar']">
+        <div data-dojo-type="dijit.Editor" id="editor5"
+	   data-dojo-props="extraPlugins:['dijit._editor.plugins.AlwaysShowToolbar']">
 			<p>
 				This editor is created from a div with AlwaysShowToolbar plugin (do not forget to set height="").
 			</p>
