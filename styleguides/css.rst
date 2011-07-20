@@ -22,7 +22,7 @@ All dijit widgets have a baseClass attribute which can be specified (overridden)
 
 .. code-block :: html
 
-  <div dojoType="dijit.layout.TabContainer" baseClass="myTabContainer"></div>
+  <div data-dojo-type="dijit.layout.TabContainer" data-dojo-props="baseClass:'myTabContainer'"></div>
 
 This lets the designer completely override the style of the widget because none of the CSS rules in dijit.css, tundra.css etc. are applied, since the patterns reference .dijitTabContainer.
 
