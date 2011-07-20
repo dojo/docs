@@ -142,7 +142,7 @@ Configured css mode
       dojo.require("dojox.editor.plugins.NormalizeStyle");
       dojo.addOnLoad(function(){
          dojo.connect(dijit.byId("eFormat"), "onClick", function(){
-           dojoById("output").innerHTML = dijit.byId("input").attr("value");
+           dojo.byId("output").innerHTML = dijit.byId("input").attr("value");
          });
       });
     </script>
