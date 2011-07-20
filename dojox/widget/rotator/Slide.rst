@@ -143,7 +143,7 @@ Example of a different slide direction for each pane.
   
   .. html::
 
-    <div dojoType="dojox.widget.AutoRotator" class="rotator" id="myAutoRotator2" data-dojo-id="myAutoRotatorInstance2" transition="dojox.widget.rotator.slideLeft" duration="2500">
+    <div data-dojo-type="dojox.widget.AutoRotator" class="rotator" id="myAutoRotator2" data-dojo-id="myAutoRotatorInstance2" data-dojo-props="transition:'dojox.widget.rotator.slideLeft', duration:2500">
         <div class="pane pane0">Pane 0<br/>Pane 1 will slide in from the top</div>
         <div class="pane pane1" transition="dojox.widget.rotator.slideDown">Pane 1<br/>Pane 2 will slide in from the left</div>
         <div class="pane pane2" transition="dojox.widget.rotator.slideRight">Pane 2<br/>Pane 0 will use the default transition to slide in from the right</div>
