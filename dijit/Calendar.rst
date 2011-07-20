@@ -41,7 +41,7 @@ A plain Calendar widget with the formatted date below
 
   .. html::
 
-    <div dojoType="dijit.Calendar" onChange="dojo.byId('formatted').innerHTML=dojo.date.locale.format(arguments[0], {formatLength: 'full', selector:'date'})"></div>
+    <div data-dojo-type="dijit.Calendar" data-dojo-props="onChange:function(){dojo.byId('formatted').innerHTML=dojo.date.locale.format(arguments[0], {formatLength: 'full', selector:'date'})}"></div>
     <p id="formatted"></p>
     
   .. css::
@@ -71,7 +71,7 @@ With an initial selection and weekends disabled
 
   .. html::
 
-    <div id="mycal" dojoType="dijit.Calendar" value="2009-08-07" isDisabledDate="dojo.date.locale.isWeekend"></div>
+    <div id="mycal" data-dojo-type="dijit.Calendar" data-dojo-props="value:'2009-08-07', isDisabledDate:'dojo.date.locale.isWeekend'"></div>
     
   .. css::
 
@@ -152,7 +152,7 @@ With a local custom template to change the layout (does not work against CDN)
         });
 
         var bigCalendar = dojo.byId("calendar5");
-        bigCalendar.setAttribute("dojoType", "BigCalendar");
+        bigCalendar.setAttribute("data-dojo-type", "BigCalendar");
         dojo.parser.parse(bigCalendar.parentNode);       
       });     
     </script>
@@ -198,7 +198,7 @@ With a local custom template to change the layout (does not work against CDN)
 
       var publishing = false;
 
-      function publishDate(d){
+      publishDate = function(d){
         if(!publishing){
           publishing = true;
           dojo.publish("date", [{date: d.toGregorian ? d.toGregorian() : d, id: this.id}]);
@@ -210,7 +210,7 @@ With a local custom template to change the layout (does not work against CDN)
         dijit.registry.filter(function(widget){ return widget.id != data.id; }).forEach(function(widget){ widget.attr('value', data.date); });
       });
 
-      function formatDate(d) {
+      formatDate = function(d) {
         var datePackage = (this.id == "gregorian") ? dojo.date : dojox.date[this.id];
 	dojo.byId(this.id+"Formatted").innerHTML = datePackage.locale.format(arguments[0], {
           formatLength: 'long',
@@ -224,15 +224,15 @@ With a local custom template to change the layout (does not work against CDN)
     <table class="container">
       <tr>
         <td>
-          <div id="hebrew" dojoType="dijit.Calendar" datePackage="dojox.date.hebrew" onValueSelected="publishDate" onChange="formatDate"></div>
+          <div id="hebrew" data-dojo-type="dijit.Calendar" data-dojo-props="datePackage:'dojox.date.hebrew', onValueSelected:publishDate, onChange:formatDate"></div>
           <div id="hebrewFormatted"></div>
         </td>
         <td>
-          <div id="islamic" dojoType="dijit.Calendar" datePackage="dojox.date.islamic" onValueSelected="publishDate" onChange="formatDate"></div>
+          <div id="islamic" data-dojo-type="dijit.Calendar" data-dojo-props="datePackage:'dojox.date.islamic', onValueSelected:publishDate, onChange:formatDate"></div>
           <div id="islamicFormatted"></div>
         </td>
         <td>
-          <div id="gregorian" dojoType="dijit.Calendar" onValueSelected="publishDate" onChange="formatDate"></div>
+          <div id="gregorian" data-dojo-type="dijit.Calendar" data-dojo-props="onValueSelected:publishDate, onChange:formatDate"></div>
           <div id="gregorianFormatted"></div>
         </td>
       </tr>
