@@ -162,7 +162,7 @@ Configured indent and line length
       dojo.require("dojox.editor.plugins.PrettyPrint");
       dojo.addOnLoad(function(){
          dojo.connect(dijit.byId("eFormat"), "onClick", function(){
-           output.value = dijit.byId("input").attr("value");
+           output.attr("value", dijit.byId("input").attr("value");
          });
       });
     </script>
