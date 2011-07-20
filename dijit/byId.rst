@@ -61,7 +61,7 @@ Example 1: Locating a widget by its ID
 
   .. cv :: html 
 
-    <input id="myTextBox" dojoType="dijit.form.TextBox" type="text" value="Default Value"></input>
+    <input id="myTextBox" data-dojo-type="dijit.form.TextBox" type="text" value="Default Value"></input>
     <br><br>
     <div id="textNode" style="background-color: lightgray"></div>
 
@@ -95,7 +95,7 @@ Example 2: Locating a widget by its id and accessing its DOM node (main DOM rend
 
   .. cv :: html 
 
-    <input id="myTextBox2" dojoType="dijit.form.TextBox" type="text" value="Default Value"></input>
+    <input id="myTextBox2" data-dojo-type="dijit.form.TextBox" type="text" value="Default Value"></input>
     <br><br>
     <div id="textNode2" style="background-color: lightgray"></div>
 
@@ -130,7 +130,7 @@ Example 3: Comparing dojo.byId and dijit.byId
 
   .. cv :: html 
 
-    <input id="myTextBox3" dojoType="dijit.form.TextBox" type="text" value="Default Value"></input>
+    <input id="myTextBox3" data-dojo-type="dijit.form.TextBox" type="text" value="Default Value"></input>
     <br><br>
     <div id="textNode3" style="background-color: lightgray"></div>
 
@@ -169,7 +169,7 @@ This would set a style height property.
 dijit.byId()
 ------------
 
-dijit.byId() is a little different - first off it only works on parsed dijits either declared in markup with a dojoType attribute or programmatically. The same id attribute is used as a paramater, but what is returned in this case is an object that was created by the dojo widget system when the markup is parsed and transformed into a dijit. This allows you to change dojo-specific attributes for the widget or call methods defined in the class the dijit corresponds to (in this case, we can call methods of the ContentPane class). For Example, we can set the content of the ContentPane via setContent().
+dijit.byId() is a little different - first off it only works on parsed dijits either declared in markup with a data-dojo-type attribute or programmatically. The same id attribute is used as a paramater, but what is returned in this case is an object that was created by the dojo widget system when the markup is parsed and transformed into a dijit. This allows you to change dojo-specific attributes for the widget or call methods defined in the class the dijit corresponds to (in this case, we can call methods of the ContentPane class). For Example, we can set the content of the ContentPane via setContent().
 
 .. code-block :: javascript
 
