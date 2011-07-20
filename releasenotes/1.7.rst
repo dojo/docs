@@ -96,6 +96,19 @@ The parser has been enhanced so you can specify browser native attributes just l
 
 We've also fixed a number of parser bugs like how buttons with no type specified because type=submit on IE, rather than type=button.
 
+
+dojo/touch
+----------
+
+This new module provides a device neutral way to handle touchstart|touchmove|touchend with these native touch events(properties) normalized. dojo/touch is totally based on 'dojo/on <dojo/on>'_ and the following sample usage can work well across desktop and touch devices(Andriod 2.3/2.3 and iOS3+ for 1.7):
+
+   .. code-block :: javascript
+      
+      //listening to 'touchstart' on touch devices and 'mousedown' on desktops
+      dojo.touch.press(node, function(e){});
+
+Please refer to 'dojo.touch <dojo/touch>'_ doc for more details.
+
 =====
 Dijit
 =====
