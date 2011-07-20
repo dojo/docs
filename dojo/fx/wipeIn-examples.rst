@@ -24,14 +24,14 @@ Note that the padding of the content which gets wiped in is set on a separate in
     dojo.require("dojo.fx");
     dojo.require("dijit.form.Button");
 
-    function wipeInOne(){
+    wipeInOne = function(){
       dojo.fx.wipeIn({
         node: "wipeDisplayNode", 
         duration: 300
       }).play();
     }
 
-    function wipeOutOne(){
+    wipeOutOne = function(){
       dojo.fx.wipeOut({
         node: "wipeDisplayNode", 
         duration: 300
@@ -42,8 +42,8 @@ Note that the padding of the content which gets wiped in is set on a separate in
   .. cv:: html
 
     <div style="height: 110px;">
-      <button dojoType="dijit.form.Button" onClick="wipeInOne">Wipe in</button>
-      <button dojoType="dijit.form.Button" onClick="wipeOutOne">Wipe out</button>
+      <button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:wipeInOne">Wipe in</button>
+      <button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:wipeOutOne">Wipe out</button>
       <div id="wipeDisplayNode" style="position: absolute; top: 50px; background: #ccc; display: none;">
         <div style=" padding: 10px;">Hi friends<br />We like dojofx. don't we?</div>
       </div>
