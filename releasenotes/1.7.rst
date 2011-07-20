@@ -125,12 +125,12 @@ This new module provides following functionalities(most of them are used interna
  
 dojo/gesture/tap
 
-- Provide common single-touch tap gestures including tap, tap.hold and tap.doubletap
+- Provide common tap gestures(single touch) including tap, tap.hold and tap.doubletap
 - Customizable settings e.g. threshhold for tap.hold, effective radius for a valid tap.doubletap
  
 dojo/gesture/swipe
 
-- Provide common single-touch swipe gestures including swipe, swipe.left | right | up | down
+- Provide common swipe gestures(single touch) including swipe, swipe.left | right | up | down
 - Customizable settings e.g. swipeSpeed, valid swipeRange
  
 Please also refer to `dojo/gesture doc(TODO) <dojo/gesture>`_ for how to write a new gesture instance
@@ -191,4 +191,193 @@ dijit.CalendarLite is a new widget aimed towards mobile use.   It's like Calenda
 ComboBox, FilteringSelect
 -------------------------
 These classes have been enhanced to accept a `dojo.store <dojo/store>`_ (the new store API) for the store parameter. 
-The old 
+The old `dojo.data API <dojo/data/api/Read>`_ is still supported.
+
+=====
+DojoX
+=====
+
+Charting
+--------
+  - New zoom, pan, data indicator interactions have been committed in the action2d package. They allow users to interact with the chart using either mouse or touch gestures.
+  - Various improvement to improve performances on particular on mobile devices (new enableCache parameter on most plot type to allow caching and reuse of gfx shapes)
+  - use of AMD module format 
+  - Bidi text support has been added through two BidiSupport classes (one for dojox.charting, one for dojox.charting.widget). This classes need  to be required by your application in order for Bidi text support to be enabled.
+
+Gauges
+-------
+  - The gauges that were previously located in the dojox.widget namespace have been moved to dojox.gauges.
+  - Several new indicators have been added to create your custom gauges, for example a text indicator to draw the value of the gauge as a text.
+  - The circular gauge can now be created clockwise or counter-clockwise.
+  - The layout of labels in the circular scale are improved.
+  - Gauges now support touch interaction on mobile devices.
+  - dojox.gauges now uses the AMD module format
+  - Three new pre-built gauges with a glossy look are now available : The GlossyHorizontalGauge, the GlossyCircularGauge and the GlossySemiCircularGauge.
+
+GeoCharting Maps
+----------------
+  - Various improvements of the dojox.geo.charting module like tooltip management, color change animation when changing data series.
+  - New dataStore structure, new data binding between the map element and the dataStore element.
+  - Allow interactive zoom/pan of the map using either mouse or touch gestures, through the installation of dedicated interactor classes.
+  - New Map Dijit component wrapping the non-dijit dojox.geo.charting Map component, for easier integration.
+  - Use of AMD module format.
+
+Gfx
+---
+  - Shapes are now identified via an associated unique id (Shape.getUID()). Coupled to this, the new dojox.gfx.shape.byId() function returns the shape associated with a given id.   
+  - Add input events support to canvas renderer. It is enabled by default and can be disabled by setting the djConfig 'canvasEvent' flag to 'false'.
+  - The gfx shape targeted by a mouse event can be retrieved from the event itself by means of the 'gfxTarget' event property:
+
+   .. code-block :: javascript
+
+      group.connect("onmousedown", function(evt){ var s = evt.gfxTarget; ... });
+
+Mobile
+------
+ - BlackBerry OS6 theme has been added.
+ - dojox.mobile.deviceTheme is a device theme loader, which detects the mobile device being used and automatically loads an appropriate theme
+ - New SpinWheel widget allows you to select values from spin wheels. Two variations, SpinWheelDatePicker and SpinWheelTimePicker, are also available.
+ - New Carousel widget shows a list of images from which you can select an item.
+ - New RoundRectDataList and EdgeToEdgeDataList widgets are data-driven versions of the RoundRectList and EdgeToEdgeList.
+ - New PageIndicator widget shows the current page of swap views with small dots. It can be used with SwapView or Carousel.
+ - Several new transition animations have been added: Dissolve, Flip2, Cover, Reveal, Slide Vertical, Cover Vertical, Reveal Vertical, Swirl, Zoom In/Out, and Scale In/Out.
+ - The FlippableView widget has been renamed to SwapView.
+ - dojox.mobile now uses the AMD module format
+ - TextBox widget moved from mobile/app/ to mobile/.
+ - New Tooltip widget to popup a container for either simple text or another wiget.
+ - New Overlay widget to slide up form the bottom another input widget, and then slides down when done.
+ - New Opener widget adds runtime screen-size detection and uses Tooltip for the larger mobile devices, and Overlay on small-screen devices.
+ - New ComboBox widget (still experimental) that combines searchable text input similar to dijit.form.ComboBox.
+ - New ExpandingTextarea widget grows and shrinks vertically as needed to accomodate the end-user text.
+ - New Slider widget to enable users to easily adjust a value with touch/dragging gestures.
+ - New HTML form input widget wrappers (Textarea, CheckBox, RadioButton) to allow simple form constructs to be used with various dijit container/dialog widgets.
+
+ Limitations:
+
+ - The flip transition animation does not work on Android 2.2/2.3. The rotateY/rotateZ webkit-transform do not work on Android 2.2/2.3, thus the flip animation, which uses rotateY, does not work on those devices.
+ - The flip2 transition animation does not work on Android 2.2/2.3 especially when ScrollableView is used.
+ - ScrollableView often freezes on HTC Android devices, such as HTC Evo, HTC Desire, etc. The problem occurs especially when you perform another scroll operation while the screen is still scrolling. This is not a dojo-specific issue because other JavaScript toolkits have the same problem. There are no workarounds available at present.
+ - Sometimes touching an html form control, such as an input field or a button, on ScrollableView on Android devices does not set focus to it. Sometimes it is successful if you try a couple of times.
+
+MVC
+---
+  dojox.mvc is a new experimental dojox project about separation of MVC concerns on the client, thereby easing the development of data-rich applications using Dojo (enterprise apps, IT apps, CRUD scenarios, patterns like master-detail and others). This first release contains:
+
+  - A first-class data model which can talk to data stores
+  - Data binding mixin that allows widgets or arbitrary view components to bind to locations in above data model
+  - MVC containers like group (for hierarchical data) and repeat (for repeating data i.e. arrays)
+  - MVC widgets such as data-bound output and data-driven simple UI generator
+  - Samples for number of data-rich patterns that can be built using the above
+
+OpenLayers Maps
+---------------
+  - New dojox.geo.openlayers mapping package based on the OpenLayers library (See http://www.openlayers.org/ ).
+  - Allow user to add georeferenced Gfx shapes on a background map.
+  - Allow user to place georeferenced widgets on the map.
+  - Use of AMD module format.
+
+====
+Util
+====
+
+The build tool has been replaced, but it supports the same options as before.   It now runs on node.js too (in addition to rhino).   (TODO: Rawld, fill this in)
+
+=========
+Migration
+=========
+
+Loader/Builder related
+----------------------
+
+<script>
+````````
+Previously you may have been loading modules or layers via script tags, ex:
+
+   .. code-block :: html
+
+      <script src="/mysite/app/MyWidget.js">
+
+This no longer works, and will give errors about "foo multiply defined".   Instead you must load it through dojo.require():
+
+   .. code-block :: javascript
+
+      dojo.require("app.MyWidget");
+
+Or the new AMD require() API.
+
+
+Global variables
+````````````````
+If your JS files want to declare global variables, perhaps to be used by widgets, ex:
+
+   .. code-block :: html
+
+      <script>
+         function myOnClick(){ ... }
+      </script>
+      ...
+      <button dojoType="dijit.form.Button" onClick="myOnClick">...</button>
+
+Then you need to declare them with this syntax:
+
+   .. code-block :: html
+
+      <script>
+         myOnClick = function(){ ... }
+      </script>
+
+The following syntax will not work, and will give errors about not being able to find the symbox:
+
+   .. code-block :: html
+
+      <script>
+         function myOnClick(){ ... }
+      </script>
+
+Nor will this:
+
+   .. code-block :: html
+
+      <script>
+         var myOnClick = function(){ ... };
+      </script>
+
+This is especially true for builds.
+
+debugAtAllCosts
+```````````````
+The debugAtAllCosts djConfig flag is no longer supported, and will be ignored.
+
+Possible workarounds for a particular app are:
+
+ * Convert the app to AMD and load with async:true, thereby using a standard AMD loader which script-injects everything.
+ * Do a build, which converts all legacy modules to AMD modules. (Note: to dona true conversion that takes advantage of all of the features of AMD and removes things like dojo.getObject requires more work than the build app can do mechanically.)
+
+Dore Core
+---------
+
+HTML
+````
+- dojo._getBorderBox() has been removed, use dojo.position() instead
+- dojo._setOpacity() has been removed, use dojo.style(node, "opacity", ...) instead
+- dojo.hasClass crashes if passed a DomNode which is a Text node; application code should make sure it doesn't pass in text nodes.   (They don't have class settings anyway.)
+
+dojo.moduleUrl()
+````````````````
+dojo.moduleUrl() returns a string instead of an object.   It won't affect most apps, unless you are accessing the internal members, ex: dojo.moduleUrl(...).uri.
+
+Dijit
+-----
+- Many widgets which used to extend _Templated now extend _TemplatedMixin.   If you have custom widgets that extend standard widgets, and use widgetsInTemplate: true, you may need to also mixin dijit._WidgetsInTemplate
+
+- The dijit.Calendar template has been modified to have ${!dayCellsHtml} and ${!dateRowsHtml} variables for the M-F (days of week) row, and the 1-31 days-of-the-month cells.  Custom calendar templates should be updated to contain these variables rather than markup for those sections.  If custom versions of Calendar need to modify the structure of days-of-week or days-of-month cells, they can override the new Calendar attributes: dowTemplateString, dateTemplateString, and weekTemplateString.
+
+- If you have specified a custom labelFunc() for a dijit.form.ComboBox/FilteringSelect, it will be passed an item and store of the new `dojo.store <dojo/store>`_ API.   This generally won't be a problem unless you are depending on internals of the item (ex: depending on item being a DOMNode rather than a javascript hash), or accessing the store as a global variable rather than as the second parameter to the labelFunc() callback.
+
+- If you want to allow for rich text saving with back/forward actions, you must add a text area to your page with the id==dijit._scopeName + "._editor.RichText.value" (typically "dijit._editor.RichText.value). For example:
+
+   .. code-block :: javascript
+
+	<textarea id="dijit._editor.RichText.value" style="display:none;position:absolute;top:-100px;left:-100px;height:3px;width:3px;overflow:hidden;"></textarea>
+
+Previously this was done automatically in general (although it was always necessary for XD builds).
