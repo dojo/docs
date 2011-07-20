@@ -64,7 +64,7 @@ This example assumes all defaults, and attaches to a parent node.
 
     <div id="someNode">
         <p class="content">Node Content</p>
-        <div id="someNodeHandle" dojoType="dojox.layout.ResizeHandle" targetId="someNode"></div>
+        <div id="someNodeHandle" data-dojo-type="dojox.layout.ResizeHandle" data-dojo-props="targetId:'someNode'"></div>
     </div>
 
 The following CSS must be applied for the above example to work:
