@@ -72,7 +72,7 @@ To use the ClientFilter with a data store which offers optional support of Clien
 
    or use a Widget with a option to cache each request (for example the Grid with the queryOptions attribute:
 
-   <table queryOptions="{cache:true}" dojoType="dojox.grid.DataGrid" ...)
+   <table data-dojo-type="dojox.grid.DataGrid" data-dojo-props="queryOptions:{cache:true}" ...)
 
 The important note is that you must load ClientFilter before you dojo.require a store.
 
