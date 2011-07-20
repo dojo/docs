@@ -150,8 +150,8 @@ Connecting HtmlTableStore to dijit.form.ComboBox
     </table>
 
     <b>Combo lookup of isbn</b><br> 
-    <div dojoType="dojox.data.HtmlTableStore" tableId="myData" data-dojo-id="comboStore"></div>
-    <div dojoType="dijit.form.ComboBox" store="comboStore" searchAttr="isbn"></div>
+    <div data-dojo-type="dojox.data.HtmlTableStore" data-dojo-props="tableId:'myData'" data-dojo-id="comboStore"></div>
+    <div data-dojo-type="dijit.form.ComboBox" data-dojo-props="store:comboStore, searchAttr:'isbn'"></div>
 
 
 Connecting HtmlTableStore to dojox.grid.DataGrid
@@ -218,14 +218,14 @@ Connecting HtmlTableStore to dojox.grid.DataGrid
     <br>
 
     <b>dojox.grid.DataGrid connected to the above table:</b><br> 
-    <div dojoType="dojox.data.HtmlTableStore" tableId="myData2" data-dojo-id="gridStore"></div>
+    <div data-dojo-type="dojox.data.HtmlTableStore" data-dojo-props="tableId:'myData2'" data-dojo-id="gridStore"></div>
     <div style="width: 400px; height: 200px;">
       <div id="grid" 
-        dojoType="dojox.grid.DataGrid" 
-        store="gridStore" 
-        structure="layoutBooks" 
-        query="{}"
-        rowsPerPage="40">
+        data-dojo-type="dojox.grid.DataGrid" 
+        data-dojo-props="store:gridStore,
+        structure:'layoutBooks',
+        query:{},
+        rowsPerPage:40">
       </div>
     </div>
 
