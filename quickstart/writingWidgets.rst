@@ -164,7 +164,7 @@ The code to instantiate will look like this:
 
 .. code-block:: html
 
-  <div dojoType="FancyCounter" label="counter label">button label</div>
+  <div data-dojo-type="FancyCounter" data-dojo-props="label:'counter label'">button label</div>
 
 The first thing to do is to create some plain HTML to show you want the widget to look like:
 
