@@ -63,10 +63,10 @@ The directory structure should look like this when you are done:
         </script>
     </head>
     <body class="tundra">
-        <div dojoType="ComboBoxReadStore" data-dojo-id="store"
-             url="dojox/data/stores/QueryReadStore.php"
-             requestMethod="get">
+        <div data-dojo-type="ComboBoxReadStore" data-dojo-id="store"
+             data-dojo-props="url:'dojox/data/stores/QueryReadStore.php',
+             requestMethod:'get'">
         </div>
-        State: <input id="fs" dojoType="dijit.form.FilteringSelect" store="store" pageSize="5" />
+        State: <input id="fs" data-dojo-type="dijit.form.FilteringSelect" data-dojo-props="store:store, pageSize:5" />
     </body>
   </html>
