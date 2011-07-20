@@ -73,7 +73,7 @@ This example displays the return values of dojo.marginBox on a node.
 
   .. cv:: html
 
-    <button dojoType="dijit.form.Button" onClick="getMarginBoxOne()">Get margin box</button>
+    <button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:getMarginBoxOne">Get margin box</button>
 
     <div id="marginNodeOne">Hi, I am a marginNode, really!</div>
     
@@ -113,7 +113,7 @@ This example displays the return values of dojo.marginBox on a nested node.
 
   .. cv:: html
 
-    <button dojoType="dijit.form.Button" onClick="getMarginBoxTwo()">Get margin box</button>
+    <button data-dojo-type="dijit.form.Button" data-dojo-props="onClick:getMarginBoxTwo">Get margin box</button>
 
     <div>
       Hi I am nested
