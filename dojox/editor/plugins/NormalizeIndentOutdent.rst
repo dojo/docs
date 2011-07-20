@@ -46,7 +46,7 @@ Once it has been required in, all you have to do is include it in the list of ex
 
 .. code-block :: html
 
-  <div dojoType="dijit.Editor" id="editor" extraPlugins="['normalizeindentoutdent']"></div>
+  <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:['normalizeindentoutdent']"></div>
 
 And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the NormalizeIndentOutdent plugin!
 
@@ -69,8 +69,8 @@ How do I configure the options?  Glad you asked.  You do it where you declare th
 
 .. code-block :: html
 
-  <div dojoType="dijit.Editor" 
-       id="editor" extraPlugins="[{name: 'normalizeindentoutdent', indentBy: 3, indentUnits: "em"}]">
+  <div data-dojo-type="dijit.Editor" 
+       id="editor" data-dojo-props="extraPlugins:[{name: 'normalizeindentoutdent', indentBy: 3, indentUnits: "em"}]">
   </div>
 
 
@@ -83,7 +83,6 @@ Basic Usage
 
 .. code-example::
   :djConfig: parseOnLoad: true
-  :version: 1.4
 
   .. javascript::
 
@@ -104,7 +103,7 @@ Basic Usage
 
     <b>Enter some text, then press the button to see it in encoded format</b>
     <br>
-    <div dojoType="dijit.Editor" height="100px"id="input" extraPlugins="['normaliseindentoutdent', 'viewsource', 'prettyprint']">
+    <div data-dojo-type="dijit.Editor" height="100px" id="input" data-dojo-props="extraPlugins:['normaliseindentoutdent', 'viewsource', 'prettyprint']">
     blah blah & blah!
     <br>
     <table>
@@ -124,7 +123,7 @@ Basic Usage
     </li>
     </ul>
     </div>
-    <button id="eFormat" dojoType="dijit.form.Button">Press me to see the indents applied!</button>
+    <button id="eFormat" data-dojo-type="dijit.form.Button">Press me to see the indents applied!</button>
     <br>
     <textarea style="width: 100%; height: 100px;" id="output" readonly="true">
     </textarea>
@@ -154,7 +153,7 @@ Configured indent to be ems
 
     <b>Enter some text, then press the button to see it in encoded format</b>
     <br>
-    <div dojoType="dijit.Editor" height="100px"id="input" extraPlugins="[{name:'normalizeindentoutdent', indentBy: 3, indentUnits: "em"}, 'prettyprint', 'viewsource']">
+    <div data-dojo-type="dijit.Editor" height="100px" id="input" data-dojo-props="extraPlugins:[{name:'normalizeindentoutdent', indentBy: 3, indentUnits: "em"}, 'prettyprint', 'viewsource']">
     blah blah & <b>blah</b>!
     <br>
     <table>
@@ -174,7 +173,7 @@ Configured indent to be ems
     </li>
     </ul>
     </div>
-    <button id="eFormat" dojoType="dijit.form.Button">Press me to format!</button>
+    <button id="eFormat" data-dojo-type="dijit.form.Button">Press me to format!</button>
     <br>
     <textarea style="width: 100%; height: 100px;" id="output" readonly="true">
     </textarea>
