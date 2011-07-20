@@ -278,8 +278,8 @@ An example LazyTreeGridStoreModel definition would look like this:
   });
   
   // declarative
-  <span dojoType="dojox.grid.LazyTreeGridStoreModel" 
-    store="queryReadStore" serverStore="true" >
+  <span data-dojo-type="dojox.grid.LazyTreeGridStoreModel" 
+    data-dojo-props="store:queryReadStore, serverStore:true" >
   </span>
   
 Structure Definition
@@ -290,8 +290,8 @@ LazyTreeGrid does not support nested structure, as well as aggregate and itemAgg
 .. code-block :: javascript
   :linenos:
   
-  <table data-dojo-id="grid" dojoType="dojox.grid.LazyTreeGrid" rowsPerPage=25
-      rowSelector="20px" treeModel="forestStoreModel">
+  <table data-dojo-id="grid" data-dojo-type="dojox.grid.LazyTreeGrid" data-dojo-props="rowsPerPage:25
+      rowSelector:'20px', treeModel:'forestStoreModel'">
     <thead>
       <tr>
         <th field="name" width="150px" formatter="fmtName">Name</th>
