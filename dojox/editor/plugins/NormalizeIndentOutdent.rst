@@ -94,7 +94,7 @@ Basic Usage
       dojo.require("dojox.editor.plugins.NormalizeIndentOutdent");
       dojo.addOnLoad(function(){
          dojo.connect(dijit.byId("eFormat"), "onClick", function(){
-           output.value = dijit.byId("input").attr("value");
+           dojo.byId("output").innerHTML = dijit.byId("input").attr("value");
          });
       });
     </script>
@@ -144,7 +144,7 @@ Configured indent to be ems
       dojo.require("dojox.editor.plugins.PrettyPrint");
       dojo.addOnLoad(function(){
          dojo.connect(dijit.byId("eFormat"), "onClick", function(){
-           output.value = dijit.byId("input").attr("value");
+           dojo.byId("output").innerHTML = dijit.byId("input").attr("value");
          });
       });
     </script>
@@ -153,7 +153,7 @@ Configured indent to be ems
 
     <b>Enter some text, then press the button to see it in encoded format</b>
     <br>
-    <div data-dojo-type="dijit.Editor" height="100px" id="input" data-dojo-props="extraPlugins:[{name:'normalizeindentoutdent', indentBy: 3, indentUnits: "em"}, 'prettyprint', 'viewsource']">
+    <div data-dojo-type="dijit.Editor" height="100px" id="input" data-dojo-props="extraPlugins:[{name:'normalizeindentoutdent', indentBy: 3, indentUnits: 'em'}, 'prettyprint', 'viewsource']">
     blah blah & <b>blah</b>!
     <br>
     <table>
