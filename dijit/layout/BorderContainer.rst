@@ -269,8 +269,8 @@ You can use a BorderContainer inside your own dijit template with a bit of care 
   .. html::
     :label: The markup
 
-    <div dojoType="dijit.layout.BorderContainer" gutters="true" id="borderContainerThree" >
-      <div dojoType="dijit.layout.ContentPane" region="top">
+    <div data-dojo-type="dijit.layout.BorderContainer" data-dojo-props="gutters:true" id="borderContainerThree">
+      <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'top'">
         <div dojoType="dijit.form.Button" id="createButton" disabled="true">Create Inner Dijit
           <script type="dojo/connect" data-dojo-event="onClick">
             // Create a new instance
@@ -280,7 +280,7 @@ You can use a BorderContainer inside your own dijit template with a bit of care 
           </script>
         </div>
       </div>
-      <div dojoType="dijit.layout.ContentPane" region="left" splitter="false">
+      <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'left', splitter:false">
         OUTER LEFT<br/>
         This is my content.<br/>
         There is much like it,<br/>
@@ -290,7 +290,7 @@ You can use a BorderContainer inside your own dijit template with a bit of care 
         I must master it,<br/>
         as I must master my life.
       </div>
-      <div dojoType="dijit.layout.ContentPane" region="center" splitter="false">
+      <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'center', splitter:false">
         <div id="mydijitDestination" style="width: 100%; height: 100%"></div>
       </div>
     </div>
