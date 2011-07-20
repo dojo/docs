@@ -143,4 +143,4 @@ Declarative example
 .. code-block :: javascript
   :linenos:
 
-  <div data-dojo-id="store" dojoType="dojox.data.jsonPathStore" url="/path/to/store.js"></div>
+  <div data-dojo-id="store" data-dojo-type="dojox.data.jsonPathStore" data-dojo-props="url:'/path/to/store.js'"></div>
