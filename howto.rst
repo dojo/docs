@@ -258,12 +258,12 @@ Lets look at an example using the inline style and extra parameters in use:
   .. html::
     :label: The markup
 
-    <div dojoType="dijit.layout.BorderContainer" gutters="true" id="borderContainerTwo" >
-      <div dojoType="dijit.layout.ContentPane" region="top" splitter="false">
+    <div data-dojo-type="dijit.layout.BorderContainer" data-dojo-props="gutters:true" id="borderContainerTwo" >
+      <div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:top, splitter:false">
         Hi, usually here you would have important information, maybe your company logo, or functions you need to access all the time..  
       </div>	
-      <div dojoType="dijit.layout.BorderContainer" liveSplitters="false" design="sidebar" region="center" id="mainSplit">
-        <div dojoType="dijit.layout.AccordionContainer" minSize="20" style="width: 300px;" id="leftAccordion" region="leading" splitter="true">
+      <div data-dojo-type="dijit.layout.BorderContainer" data-dojo-props="liveSplitters:false, design:'sidebar', region:'center'" id="mainSplit">
+        <div data-dojo-type="dijit.layout.AccordionContainer" data-dojo-props="minSize:20, region:'leading', splitter:true" style="width: 300px;" id="leftAccordion">
           <div dojoType="dijit.layout.AccordionPane" title="One fancy Pane">
           </div>
           <div dojoType="dijit.layout.AccordionPane" title="Another one">
@@ -273,7 +273,7 @@ Lets look at an example using the inline style and extra parameters in use:
           <div dojoType="dijit.layout.AccordionPane" title="Last, but not least">
           </div>
         </div><!-- end AccordionContainer -->
-        <div dojoType="dijit.layout.TabContainer" region="center" tabStrip="true">
+        <div data-dojo-type="dijit.layout.TabContainer" data-dojo-props="region:'center', tabStrip:true">
           <div dojoType="dijit.layout.ContentPane" title="My first tab" selected="true">
             Lorem ipsum and all around...
           </div>
