@@ -58,8 +58,8 @@ Declarative example
 
   .. cv:: html
 
-   <div dojoType="dojox.image.FlickrBadge" rows="8" cols="3" username="dylans" 
-	tags="dojotoolkit,italy"></div>
+   <div data-dojo-type="dojox.image.FlickrBadge" data-dojo-props="rows:8, cols:3, username:'dylans',
+	tags:'dojotoolkit,italy'"></div>
 
   .. cv:: css
 
