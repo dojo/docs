@@ -47,7 +47,7 @@ Once it has been required in, all you have to do is include it in the list of ex
 
 .. code-block :: html
 
-  <div dojoType="dijit.Editor" id="editor" extraPlugins="['breadcrumb']"></div>
+  <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:['breadcrumb']"></div>
 
 
 You also need to include the CSS for it.  For example:
@@ -88,7 +88,7 @@ Basic Usage
   .. html::
 
     <br>
-    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['breadcrumb']">
+    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:['breadcrumb']">
     <div>
     <br>
     blah blah & blah!
