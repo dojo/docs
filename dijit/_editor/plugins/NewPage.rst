@@ -41,11 +41,11 @@ Once it has been required in, all you have to do is include it in the list of ex
 
 .. code-block :: html
 
-  <div dojoType="dijit.Editor" id="editor" extraPlugins="['newpage']"></div>
+  <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:['newpage']"></div>
 
 
 
-And that's it.  The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the NewPage plugin!  You can use the button to set the editor content to a 'new page'.
+And that's it. The editor instance you can reference by 'dijit.byId("editor")' is now enabled with the NewPage plugin!  You can use the button to set the editor content to a 'new page'.
 
 Custom New Content
 ------------------
@@ -54,7 +54,7 @@ To initialize the plugin with custom new page content, it is just a matter of pa
 
 .. code-block :: html
 
-  <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="[{name: 'newpage', content: 'This is some &lt;b&gt;custom&lt;/b&gt; content!'}]">
+  <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:[{name: 'newpage', content: 'This is some &lt;b&gt;custom&lt;/b&gt; content!'}]">
 
 Or programmatically:
 
@@ -86,7 +86,7 @@ Basic Usage
 
     <b>Enter some text then press the New Page button.  The editor content will then clear.</b>
     <br>
-    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['newpage']">
+    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:['newpage']">
     <div>
     <br>
     blah blah & blah!
@@ -131,7 +131,7 @@ Custom New Page Content
 
     <b>Enter some text then press the New Page button.  The editor content will then be replaced with the custom new page content.</b>
     <br>
-    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="[{name: 'newpage', content: 'This is some &lt;b&gt;custom&lt;/b&gt; content!'}]">
+    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:[{name: 'newpage', content: 'This is some &lt;b&gt;custom&lt;/b&gt; content!'}]">
     <div>
     <br>
     blah blah & blah!
