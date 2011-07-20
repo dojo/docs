@@ -39,7 +39,7 @@ Once it has been required in, all you have to do is include it in the list of ex
 
 .. code-block :: html
 
-  <div dojoType="dijit.Editor" id="editor" extraPlugins="[{name: 'save', url: 'myRemoteSaveService'}]"></div>
+  <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:[{name: 'save', url: 'myRemoteSaveService'}]"></div>
 
 
 You also need to include the CSS for it.  For example:
@@ -89,7 +89,7 @@ Basic Usage
 
     <b>Enter whatever you like in the editor, then press the 'Save' button.  The console will emit a message about no post-back URL, since there is no service assigned to the demo.</b>
     <br>
-    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['save']">
+    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:['save']">
     <div>
     <br>
     blah blah & blah!
@@ -162,7 +162,7 @@ Customizing a save
 
     <b>Enter whatever you like in the editor, then press the 'Save' button.  An alert will appear with the content before the actual save is invoked.</b>
     <br>
-    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['mySave']">       
+    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:['mySave']">       
     <div>
     <br>
     blah blah & blah!
