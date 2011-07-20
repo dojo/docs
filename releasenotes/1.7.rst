@@ -109,7 +109,7 @@ dojo/touch is based on `dojo/on <dojo/on>`_ and the following sample usage can w
       //listen to 'touchstart' on touch devices and 'mousedown' on desktops
       dojo.touch.press(node, function(e){});
 
-Please refer to `dojo/touch <dojo/touch>`_ doc(TODO) for more details.
+Please refer to `dojo/touch doc(TODO) <dojo/touch>`_ for more details.
 
 
 dojo/gesture
@@ -130,7 +130,7 @@ dojo/gesture/swipe
  - Provide common single-touch swipe gestures including swipe, swipe.left|right|up|down
  - Customizable settings e.g. swipeSpeed, valid swipeRange
  
-Also please refer to `dojo/gesture <dojo/gesture>`_ doc(TODO) for how to write a new gesture instance
+Please also refer to `dojo/gesture doc(TODO) <dojo/gesture>`_ for how to write a new gesture instance
 
 
 =====
