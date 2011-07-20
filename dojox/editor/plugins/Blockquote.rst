@@ -40,7 +40,7 @@ Once it has been required in, all you have to do is include it in the list of ex
 
 .. code-block :: html
 
-  <div dojoType="dijit.Editor" id="editor" extraPlugins="['blockquote']"></div>
+  <div data-dojo-type="dijit.Editor" id="editor" data-dojo-props="extraPlugins:['blockquote']"></div>
 
 
 You also need to include the CSS for it.  For example:
@@ -83,7 +83,7 @@ Basic Usage
 
     <b>Move the cursor around and select blockquote to blockquote a section of the document.</b>
     <br>
-    <div dojoType="dijit.Editor" height="250px"id="input" extraPlugins="['blockquote']">
+    <div data-dojo-type="dijit.Editor" height="250px" id="input" data-dojo-props="extraPlugins:['blockquote']">
     <div>
     <br>
     blah blah & blah!
