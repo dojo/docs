@@ -148,8 +148,8 @@ Example 1: Programmatic instantiation and querying through OpenSearch
 
   .. cv :: html 
 
-    <input id="searchBox" type="text" dojoType="dijit.form.TextBox" value="dojo"></input>
-    <div dojoType="dijit.form.Button" id="simpleFetchButton">Click me to search the Interwingly Blog Service</div>
+    <input id="searchBox" type="text" data-dojo-type="dijit.form.TextBox" value="dojo"></input>
+    <div data-dojo-type="dijit.form.Button" id="simpleFetchButton">Click me to search the Interwingly Blog Service</div>
     <br>
     <br>
     <div id="list"></div>
