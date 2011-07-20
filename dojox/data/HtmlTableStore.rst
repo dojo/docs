@@ -18,7 +18,8 @@ HtmlTableStore is a simple read-only store provided by Dojo and contained in the
 
 The following example shows an HTML table that this store can read:
 
-::
+.. code-block :: html
+ :linenos:
 
   <html>
   <head>
