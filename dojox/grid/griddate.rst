@@ -14,7 +14,6 @@ Localized Date Field
 
 .. code-example::
   :toolbar: themes, versions, dir
-  :version: local
   :width: 200
   :height: 200
 
@@ -78,7 +77,6 @@ Note: In editing mode, the text box will show the data in store, which is ISO fo
 
 .. code-example::
   :toolbar: themes, versions, dir
-  :version: local
   :width: 300
   :height: 200
 
@@ -142,7 +140,6 @@ Editable Localized Date Field - use DateTextBox when editing
 
 .. code-example::
   :toolbar: themes, versions, dir
-  :version: local
   :width: 200
   :height: 200
 
@@ -214,7 +211,6 @@ Editable Custom Format Date Field - use DateTextBox when editing
 
 .. code-example::
   :toolbar: themes, versions, dir
-  :version: local
   :width: 200
   :height: 200
 
