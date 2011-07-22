@@ -19,6 +19,7 @@ Input Format
 It can take in either a Javascript array, JSON string, or URL as the data source. Data is expected to be in the following format:
 
 .. code-block :: javascript
+ :linenos:
 
   [
     { "key1": "value1" },
@@ -31,6 +32,7 @@ Each 'item' retrieved from this store from this store is a JS object representin
 Such a construct can be formed from a JS object of the form { k1:v1, k2:v2, ... } with code like
 
 .. code-block :: javascript
+ :linenos:
 
   var myVar={"key1": "value1" , "key2": "value2", ... };
   var myData=[];
@@ -178,6 +180,7 @@ Connecting key/value store to dojox.grid.DataGrid
   .. cv :: javascript
 
     <script>
+      dojo.require("dojox.data.KeyValueStore");
       dojo.require("dojox.data.HtmlStore");
       dojo.require("dojox.grid.DataGrid");
 
@@ -232,7 +235,8 @@ Connecting key/value store to dijit.form.ComboBox
   
   .. cv :: javascript
 
-    <script>
+    <script type="text/javascript">
+      dojo.require("dojox.data.KeyValueStore");
       dojo.require("dojox.data.HtmlStore");
       dojo.require("dijit.form.ComboBox");
 
