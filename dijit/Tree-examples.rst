@@ -44,10 +44,8 @@ Expanding and Focusing tree nodes programmatically
         dojo.require("dijit.Tree");
         dojo.require("dijit.form.Button");
 
-        function selectNode() {
-
+        selectNode = function() {
             mytree.attr('path', [ 'continentRoot', 'NA', 'MX', 'Mexico City' ] );
-
         }
     </script>
 
@@ -60,7 +58,7 @@ Expanding and Focusing tree nodes programmatically
       rootId:'continentRoot', rootLabel:'Continents', childrenAttrs:'children'"></div>
     <div data-dojo-type="dijit.Tree" data-dojo-id="mytree"
       data-dojo-props="openOnClick:true, model:'continentModel', showRoot:false, persist:false"></div>
-    <div data-dojo-type="dijit.form.Button" data-dojo-props="onClick:function(){selectNode();}">Highlight the node!</div>
+    <div data-dojo-type="dijit.form.Button" data-dojo-props="onClick:selectNode}">Highlight the node!</div>
 
 One problem with using 'path' is that you must know the full path to the node in your data your are trying to select.
 
@@ -108,7 +106,7 @@ The following example contains workaround code for this problem, as well as an e
             }
         }
 
-        function selectNode() {
+        selectNode = function() {
 
             selectTreeNodeById(mytree2, 'Mexico City');
 
@@ -124,7 +122,7 @@ The following example contains workaround code for this problem, as well as an e
       rootId:'continentRoot', rootLabel:'Continents', childrenAttrs:'children'"></div>
     <div data-dojo-type="dijit.Tree" data-dojo-id="mytree2"
       data-dojo-props="openOnClick:true, model:'continentModel', showRoot:false, persist:false"></div>
-    <div data-dojo-type="dijit.form.Button" data-dojo-props="onClick:function(){selectNode();}">Highlight the node!</div>
+    <div data-dojo-type="dijit.form.Button" data-dojo-props="onClick:selectNode}">Highlight the node!</div>
 
 How can I prevent expanding of nodes when clicking on them?
 -----------------------------------------------------------
