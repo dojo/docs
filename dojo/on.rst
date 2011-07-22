@@ -66,7 +66,7 @@ One of the key benefits of using dojo/on is that it provides event normalization
 
 Event Delegation
 ----------------
-The on function also provides event delegation functionality. One can use a selector in the event type name to indicate the nodes that are targetted for event listening. The on function will then use respond to event bubbling (this only works for bubbling events) and trigger the listener when the appropriate child nodes trigger the event. The format for  selector-based event listening is to use "<selector>:<eventType>" as the eventType. For example, to listen for click events on elements with the myClass class name, we could do:
+The on function also provides event delegation functionality. One can use a selector in the event type name to indicate the nodes that are targetted for event listening. The on function will then use respond to event bubbling and trigger the listener when the appropriate child nodes trigger the event. The format for  selector-based event listening is to use "<selector>:<eventType>" as the eventType. For example, to listen for click events on elements with the myClass class name, we could do:
 
 .. code-block :: javascript
 
@@ -77,6 +77,8 @@ The on function also supports comma delimited event types, so we can listen for 
 .. code-block :: javascript
 
   on(document, "dblclick, button.myClass:click", clickHandler);
+
+Note that event delegation will only work on events that bubble. Most DOM events do bubble, but there are a few exceptions. The "mouseenter" and "mouseleave" events do not bubble, but "mouseover" and "mouseout" are the bubbling counterparts. The "focus" and "blur" events do not bubble, but dojo/on normalizes "focusin" and "focusout" as bubbling equivalents. Also, "scroll" events don't bubble.
 
 Extension Events
 ----------------
