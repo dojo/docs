@@ -57,7 +57,7 @@ Expanding and Focusing tree nodes programmatically
       data-dojo-props="store:continentStore, query:{type:'continent'},
       rootId:'continentRoot', rootLabel:'Continents', childrenAttrs:'children'"></div>
     <div data-dojo-type="dijit.Tree" data-dojo-id="mytree"
-      data-dojo-props="openOnClick:true, model:'continentModel', showRoot:false, persist:false"></div>
+      data-dojo-props="openOnClick:true, model:continentModel, showRoot:false, persist:false"></div>
     <div data-dojo-type="dijit.form.Button" data-dojo-props="onClick:selectNode}">Highlight the node!</div>
 
 One problem with using 'path' is that you must know the full path to the node in your data your are trying to select.
@@ -121,7 +121,7 @@ The following example contains workaround code for this problem, as well as an e
       data-dojo-props="store:continentStore,query:{type:'continent'},
       rootId:'continentRoot', rootLabel:'Continents', childrenAttrs:'children'"></div>
     <div data-dojo-type="dijit.Tree" data-dojo-id="mytree2"
-      data-dojo-props="openOnClick:true, model:'continentModel', showRoot:false, persist:false"></div>
+      data-dojo-props="openOnClick:true, model:continentModel, showRoot:false, persist:false"></div>
     <div data-dojo-type="dijit.form.Button" data-dojo-props="onClick:selectNode}">Highlight the node!</div>
 
 How can I prevent expanding of nodes when clicking on them?
@@ -147,7 +147,7 @@ Simply set the ``openOnClick`` attribute to ``false``
       rootId:'continentRoot', rootLabel:'Continents', childrenAttrs:'children'"></div>
 
     <div data-dojo-type="dijit.Tree" id="mytree"
-      data-dojo-props="model:'continentModel', openOnClick:false">
+      data-dojo-props="model:continentModel, openOnClick:false">
       <script type="dojo/method" data-dojo-event="onClick" data-dojo-args="item">
         alert("Execute of node " + continentStore.getLabel(item)
             +", population=" + continentStore.getValue(item, "population"));
