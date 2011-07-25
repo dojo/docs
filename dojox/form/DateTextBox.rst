@@ -50,6 +50,23 @@ Declarative example
 
 TODO: example
 
+======================
+Problems and Solutions
+======================
+
+The dojox.form.MonthTextBox only returns an integer value representing the selected month.  This doesn't take into account the year in which the month was selected.  You can use dojox.form.DateTextBox in conjunction with a custom popup class to enhance this situation, so that the returned value is a more useful Date object.
+
+.. code-block :: html
+ :linenos:
+
+ dojo.require("dojox.form.DateTextBox");
+ dojo.require("dojox.widget.Calendar");
+
+ <span id="dtb2" dojoType="dojox.form.DateTextBox"
+   popupClass="dojox.widget.MonthAndYearlyCalendar"
+   constraints="{datePattern: 'MMMM yyyy'}"></span>
+
+The above DateTextBox will print e.g. "November 2011" in the text box (localised according to the current locale) and return as its 'value' attribute (dijit.byId('dtb2').get('value')) a Date object for the first day in the selected month.
 
 ========
 See also
