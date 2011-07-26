@@ -80,7 +80,7 @@ The following example adds two classes: "style1" and "style2" to the node "examp
 See it in action:
 
 .. cv-compound::
-  :version: local
+ 
 
   .. css::
     :label: The CSS
