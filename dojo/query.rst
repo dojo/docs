@@ -8,6 +8,7 @@ dojo.query
     :depth: 2
 
 **dojo.query()** returns a list of DOM nodes based on a CSS selector. 
+
 **dojo/query** is the AMD module containing the query function in 1.7.
 
 
