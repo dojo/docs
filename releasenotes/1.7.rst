@@ -6,7 +6,7 @@ Dojo 1.7 Release Notes
 ======================
 
 .. contents::
-   :depth: 2
+   :depth: 3
 
 ===============
 Browser support
