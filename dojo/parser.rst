@@ -157,13 +157,14 @@ Alternately, you can inline the text of a function:
 
 
 ===========
-Script tags
+Script Tags
 ===========
-Functional parameters can also be specified via script tags embedded inside the widget (as a direct child of the node with data-dojo-type specified). There are different types of script tags supported:
+The parser allows the specification of behaviours through custom types in script blocks to extend and enhance the functionality of declarative widgets. This is done by specifying a script block that is a direct child of a node with decorate with `data-dojo-type`. There are different types of script tags supported:
 
-*Connect to a function*:
+Connecting to a Function
+~~~~~~~~~~~~~~~~~~~~~~~~
 
-To perform a dojo.connect() on a method in a widget, use type="dojo/connect" inside a script node:
+To perform a ``dojo.connect()`` on a method in a widget, use ``type="dojo/connect"`` inside a script node:
 
 .. code-block :: html
 
@@ -173,11 +174,12 @@ To perform a dojo.connect() on a method in a widget, use type="dojo/connect" ins
         </script>
     </div>
 
-*Override a function*:
+Override a Function
+~~~~~~~~~~~~~~~~~~~
 
-Sometimes you need to override a function in a widget.   Most commonly that happens when you need to specify a function that returns a value. (The value returned from dojo.connect()'d functions is ignored.)
+Sometimes you need to override a function in a widget.   Most commonly that happens when you need to specify a function that returns a value. (The value returned from ``dojo.connect()``'d functions is ignored.)
 
-In that case use the type="dojo/method" syntax:
+In that case use the ``type="dojo/method"`` syntax:
 
 .. code-block :: html
 
@@ -188,7 +190,8 @@ In that case use the type="dojo/method" syntax:
     </div>
 
 
-*Execute code on instantiation*:
+Execute Code on Instantiation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To execute code on instantiation, use the same format but don't specify an event flag:
 
@@ -201,7 +204,40 @@ To execute code on instantiation, use the same format but don't specify an event
     </div>
 
 
-*Arguments*:
+Execute Code on Change of Property
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**New in 1.7** To execute code when a value changes for a property for objects that support ``object.watch()`` the ``type="dojo/watch"`` can be used:
+
+.. code-block :: html
+
+    <div data-dojo-type=...>
+        <script type="dojo/watch" data-dojo-prop="value" data-dojo-args="prop,oldValue,newValue">
+           console.log("Property '"+prop+"' changed from '"+oldValue+"' to '"+newValue+"'");
+        </script>
+    </div>
+
+
+The ``.watch()`` function always passes three arguments when it is called, representing the property that change, the old value and then the new value.
+
+**Note** because ``data-dojo-prop`` attribute was introduced after the attribute changes of 1.6, there is no backwards support for just ``prop`` as an attribute.
+
+Execute Code when an Event Occurs
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**New in 1.7** While similar to ``dojo.connect()``, the ``type="dojo/on"`` can be used to specify ``on`` behaviour:
+
+.. code-block :: html
+
+    <div data-dojo-type=...>
+        <script type="dojo/on" data-dojo-event="click" data-dojo-args="e">
+           console.log("I was clicked!");
+        </script>
+    </div>
+
+
+Arguments
+~~~~~~~~~
 
 For functions that take (named) parameters, specify them in an `data-dojo-args` attribute.  For example, onChange() gets a value parameter, so to reference it do:
 
@@ -223,7 +259,8 @@ For functions that take (named) parameters, specify them in an `data-dojo-args` 
         </script>
     </div>
 
-*this*:
+Script Scope
+~~~~~~~~~~~~
 
 Note that `this` points to the widget object.
 
@@ -234,8 +271,6 @@ Note that `this` points to the widget object.
            console.log("onChange for " + this.id);
         </script>
     </div>
-
-
 
 
 
