@@ -587,7 +587,7 @@ A list of corporations or organizations with a CLA on file:
 * Adaptive Technology Resource Centre 
 * AG Interactive 
 * AOL, LLC 
-* Asseverate Limited
+* Asseverate Limited: Kitson Kelley (kitsonk)
 * Atomic Labs, Inc. 
 * BBC: Matthew Wood, Chris Warren, Ian Pouncey, Richard Hodgson, Thomas Yandell, Michael Mathews
 * BEA Systems 
