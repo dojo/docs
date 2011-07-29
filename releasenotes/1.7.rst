@@ -94,6 +94,36 @@ The parser has been enhanced so you can specify browser native attributes just l
        <input data-dojo-type="dijit.form.TextBox" name="dept"
             data-dojo-props="scrollOnFocus: true"/>
 
+The parser also supports the ability to specify dojo.on and object.watch declaratively by adding the support for script types "dojo/on" and "dojo/watch".
+
+An example of "dojo/on":
+
+   .. code-block :: html
+
+       <button data-dojo-type="dijit.form.Button">Click Me!
+         <script type="dojo/on" data-dojo-event="click" data-dojo-args="e">
+           console.log("I was clicked!");
+         </script>
+       </button>
+
+An example of "dojo/watch" (building on "dojo/on"):
+
+   .. code-block :: html
+
+       <button data-dojo-type="dijit.form.Button">Click Me!
+         <script type="dojo/on" data-dojo-event="click" data-dojo-args="e">
+           dijit.byId("textBox1").set("value","New Value!");
+         </script>
+       </button>
+       <div data-dojo-type="dijit.form.TextBox" id="textBox1" 
+            data-dojo-props="value: 'Old Value'">
+         <script type="dojo/watch" data-dojo-prop="value" data-dojo-args="prop,oldValue,newValue">
+           console.log("Prop '"+prop+"' was '"+oldValue+"' and is now '"+newValue+"'");
+         </script>
+       </div>
+
+Note, there is no support for deprecated "prop" as an attribute of the "dojo/watch" script tag.  The parser only recognises "data-dojo-prop".
+
 We've also fixed a number of parser bugs like how buttons with no type specified because type=submit on IE, rather than type=button.
 
 
