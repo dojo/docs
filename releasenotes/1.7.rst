@@ -94,9 +94,9 @@ The parser has been enhanced so you can specify browser native attributes just l
        <input data-dojo-type="dijit.form.TextBox" name="dept"
             data-dojo-props="scrollOnFocus: true"/>
 
-The parser also supports the ability to specify dojo.on and object.watch declaratively by adding the support for script types "dojo/on" and "dojo/watch".
+The parser also supports the ability to specify dojo.on and object.watch declaratively by adding the support for script ``type="dojo/on"`` and ``type="dojo/watch"``.
 
-An example of "dojo/on":
+An example of ``type="dojo/on"``:
 
    .. code-block :: html
 
@@ -106,7 +106,7 @@ An example of "dojo/on":
          </script>
        </button>
 
-An example of "dojo/watch" (building on "dojo/on"):
+An example of ``type="dojo/watch"`` (building on ``dojo/on``):
 
    .. code-block :: html
 
@@ -122,7 +122,7 @@ An example of "dojo/watch" (building on "dojo/on"):
          </script>
        </div>
 
-Note, there is no support for deprecated "prop" as an attribute of the "dojo/watch" script tag.  The parser only recognises "data-dojo-prop".
+**Note** there is no support for deprecated attribute ``prop`` as an attribute of the ``type="dojo/watch"`` script tag.  The parser only recognises the attribute ``data-dojo-prop``.
 
 We've also fixed a number of parser bugs like how buttons with no type specified because type=submit on IE, rather than type=button.
 
