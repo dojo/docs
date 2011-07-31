@@ -85,9 +85,9 @@ Widget developers notes:
 * `Layout Widget Hierarchies <quickstart/layoutWidgetHierarchies>`_
 
 
-=======================
-Store and Data Stores
-=======================
+======================
+Stores and Data Stores
+======================
 
 dojo.data
 ---------
