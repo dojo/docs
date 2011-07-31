@@ -129,14 +129,14 @@ While not currently implemented in either of the JSON REST consumers in Dojo, so
 Dojo and REST
 =============
 
-The Dojo RESTful consumers are fairly straight forward when it comes to REST, and there is essentially feature parity between both the `dojo.store.JsonRest <dojo/store/JsonRest>`_ and the `dojox.data.JsonRestStore <dojox/data/JsonRestStore>`_.  As Dojo moves away from the DataStore API to the new Store API, developers can expect that dojo.store.JsonRest will become the main focus of RESTful implementation in Dojo.  Currently though, most data aware widgets only consume the DataStore API, although "wrapping" the dojo.store.JsonRest with the `dojo.data.ObjectStore <dojo/data/ObjectStore>`_ is possible.
+The Dojo RESTful consumers are fairly straight forward when it comes to REST, and there is essentially feature parity between both the `dojo.store.JsonRest`_ and the `dojox.data.JsonRestStore`_.  As Dojo moves away from the DataStore API to the new Store API, developers can expect that dojo.store.JsonRest will become the main focus of RESTful implementation in Dojo.  Currently though, most data aware widgets only consume the DataStore API, although "wrapping" the dojo.store.JsonRest with the `dojo.data.ObjectStore <dojo/data/ObjectStore>`_ is possible.
 
 dojo.store.JsonRest
 -------------------
 
-Introduced in Dojo 1.6, the dojo.store.JsonRest is a good an efficient implementation of a RESTful consumer.  To make it have feature parity with the dojox.data.JsonRestStore, the developer should wrap the store in `dojo.store.Observable <dojo/store/Observable>`_ and `dojo.store.Cache <dojo/store/Cache>`_.
+Introduced in Dojo 1.6, the dojo.store.JsonRest is a good an efficient implementation of a RESTful consumer.  To make it have feature parity with the `dojox.data.JsonRestStore`_, the developer should wrap the store in `dojo.store.Observable <dojo/store/Observable>`_ and `dojo.store.Cache <dojo/store/Cache>`_.
 
-The dojo.store.JsonRest defaults to assuming the identifier property of each element is ``id``, therefore if your provider returns an elements identifier in that field, most developers simply need to specify the target URI for the collection.
+The `dojo.store.JsonRest`_ defaults to assuming the identifier property of each element is ``id``, therefore if your provider returns an elements identifier in that field, most developers simply need to specify the target URI for the collection.
 
 An example of programatically creating a full featured store would be:
 
@@ -151,7 +151,7 @@ More details can be found in their respective Dojo documentation pages.
 dojox.data.JsonRestStore
 ------------------------
 
-Introduced in Dojo 1.2, the dojox.data.JsonRestStore has been the "workhorse" of Dojo DataStores.  It provides the `Read <dojo/data/api/Read>`_, `Identity <dojo/data/api/Identity>`_, `Write <dojo/data/api/Write>`_ and `Notification <dojo/data/api/Notification>`_ dojo.data APIs.
+Introduced in Dojo 1.2, the `dojox.data.JsonRestStore`_ has been the "workhorse" of Dojo DataStores.  It provides the `Read <dojo/data/api/Read>`_, `Identity <dojo/data/api/Identity>`_, `Write <dojo/data/api/Write>`_ and `Notification <dojo/data/api/Notification>`_ dojo.data APIs.
 
 An example programmatic declaration would be:
 
@@ -161,6 +161,15 @@ An example programmatic declaration would be:
 	  target: "/users/",
 	  idAttribute: "id"
 	});
+
+An example of declarative would be:
+
+.. code-block:: html
+
+	<div data-dojo-type="dojox.data.JsonRestStore" data-dojo-id="userDataStore" 
+	    data-dojo-params="target: '/users/', idAttribute: 'id'"></div>
+
+*Note* it is necessary to use ``data-dojo-id`` with non-Widget (dijit) declarative objects, like DataStores in order to make available a JavaScript variable that can be passed to other declarative objects.  Also it should be noted that these objects do not get destroyed if their containing widget is destroyed and the variable is declared in a global scope.
 
 RESTful Conventions the Dojo Way
 --------------------------------
@@ -202,3 +211,6 @@ Examples
 
 "Tree" Type Widgets
 -------------------
+
+.. _dojox.data.JsonRestStore: dojox/data/JsonRestStore
+.. _dojo.store.JsonRest: dojo/store/JsonRest
