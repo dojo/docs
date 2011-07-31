@@ -86,12 +86,24 @@ Widget developers notes:
 
 
 =======================
-Data stores (dojo.data)
+Store and Data Stores
 =======================
+
+dojo.data
+---------
 
 * `Using Datastores <quickstart/data/usingdatastores>`_
 * `Reference manual <quickstart/data>`_
 
+dojo.store
+----------
+
+* `Using Stores <quickstart/store>`_
+
+Other Information
+-----------------
+
+* `Implementing RESTful Services Server-Side <quickstart/rest>`_
 
 =============
 Drag and Drop
