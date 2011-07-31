@@ -216,3 +216,13 @@ This creates a `new` configuration parameter named ``myCustomVariable``. To use 
   });
 
 By referencing `dojo.config.myCustomVariable` as opposed to relying on `dojoConfig.myCustomVariable` you will be able to utilize the variable safely in built versions using an alternate scopeName
+
+===============================================
+Backwards Compatibility and Order of Precedence
+===============================================
+
+For backwards compatibility, the deprecated variable ``djConfig`` is still recognized.
+
+Note, however, that if both ``dojoConfig`` and ``djConfig`` are defined, ``djConfig`` is ignored.
+
+Also note that if the ``dojoConfig`` or ``djConfig`` variable exists *and* the ``data-dojo-config`` attribute is defined, both are consumed, with values in ``data-dojo-config`` taking precedence over those in the variable.
