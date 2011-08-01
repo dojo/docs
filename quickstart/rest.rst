@@ -174,7 +174,58 @@ An example of declarative would be:
 RESTful Conventions the Dojo Way
 --------------------------------
 
-The interaction with the provider by both the Store and the DataStore
+Both the `dojo.store.JsonRest`_ and `dojox.data.JsonRestStore`_ provide some enhancements to the basic RESTful functionality.
+
+Query
+~~~~~
+
+Sorting
+~~~~~~~
+
+Widgets can specify sorting and those are passed as part of the query string of the URI on the ``GET``.  The sort is specified by the `sort` attribute in either the ``store.get()`` or ``datastore.fetch()`` function.  This gets converted into a query attribute named ``sort`` with a comma separated list of attributes with a ``+`` or ``-`` indicating if the attributes should be sorted ascending or descending.  For example, the following sort value:
+
+.. code-block:: javascript
+
+	{sort: [
+	  {attribute: "id"},
+	  {attribute: "userName", descending: true}
+	]}
+
+Would translate into the following:
+
+.. code-block:: html
+
+	GET http://example.com/users/?sort(+id,-userName)
+
+Ranges
+~~~~~~
+
+Widgets can (and do) specify a ``start`` and ``count`` attributes when accessing data.  These get translated by the Store or DataStore specifying the ``Range`` HTTP header.
+
+For example, the following:
+
+.. code-block:: javascript
+
+	{
+	  start: 5,
+	  count: 10
+	}
+
+Would result in the following HTTP request header being sent:
+
+.. code-block:: html
+
+	Range: items=5-15
+
+Any server should respond by setting the ``Content-Range`` header with the value of the range of items being returned and a total counts of all of the items that could be returned based on the query.  Because the total possible items is returned, the downstream widgets will "know" there are more items which they can retrieve.  Also the provider should respond with the amount of items they are returning, even if more items are being requested.
+
+So, if a request was for a count of 10 items starting at 5, but there are only 10 items in total, the following HTTP responde header should be set:
+
+.. code-block:: html
+
+	Content-Range: items 5-9/10
+
+`Note` ``start`` is 0 based, so starting at ``5`` means the 6th item.
 
 JSON the Dojo Way
 -----------------
