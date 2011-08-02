@@ -233,11 +233,23 @@ This example uses synchronous loading, and loads all of Dojo core.  This results
     dojo.requireIf(!dojo.isWebKit, "dojox.mobile.compat"); // (Optional) Load the compat layer if the incoming browser isn't webkit based
     // Do something with Dojo Mobile...
 
-Selecting the CSS to apply (iphone or android currently) is equally simple:
+Applying a Mobile Device Theme Using CSS
+----------------------------------------
+
+Selecting the CSS to apply (iphone, android, blackberry or custom) is equally simple:
 
 .. code-block :: html
 
   <link rel="stylesheet" type="text/css" href="dojox/mobile/themes/iphone/iphone.css"></link>
+
+Automatically Applying Mobile Device Themes Using CSS
+-----------------------------------------------------
+You can also use Dojo Mobile's automatic device detection and theme loading by adding the "dojox/mobile/deviceTheme" to your requires list.  When automatic device detection and theme loading is enabled, Dojo Mobile will insert appropriate stylesheet links dynamically into the header, based on user agent sniffing.
+
+When this approach is taken, you can also pass an additional query parameter string, device={theme id} to force a specific theme from a browser url input (this feature is useful for creating samples and demos as well as testing what a page looks like on various devices).
+
+Typical Use
+-----------
 
 Typical usage is to create one or more views in a page, and create a round rectangle list, an edge-to-edge list, an icon container, etc. in the views. You can specify an animated transition between the views.
 The following example shows how to create views and make a transition between them.
