@@ -46,6 +46,9 @@ The return value from the on function is a signal handler that has a cancel() me
     // now perform any other action
   });
 
+Use with pre-1.7-style Dojo api's
+---------------------------------
+
 The dojo/on module can also be loaded with dojo.require("dojo.on") to make available as dojo.on. For example:
 
 .. code-block :: javascript
@@ -53,16 +56,34 @@ The dojo/on module can also be loaded with dojo.require("dojo.on") to make avail
   dojo.require("dojo.on");
   dojo.on(document, "click", clickHandler);
 
+Use with query module
+---------------------
+
 The on function is also available on queried NodeList's with the NodeList on() method. For example, we could write:
 
 .. code-block :: javascript
   
+  // Dojo 1.7 preferred
+  define(["dojo/on","dojo/query"], function(on,$){
+    $("click").on(document, "click", clickHandler);
+  });
+ 
+  // Pre 1.7 style
+  dojo.require("dojo.query");
   dojo.query("button").on("click", buttonClickHandler);
 
 Normalization
 -------------
 
 One of the key benefits of using dojo/on is that it provides event normalization, event listeners will receive an event object with the properties defined by the W3C event model, even in Internet Explorer. Generally, dojo/on does not normalize non-standard properties. There are some non-standard geometry properties that are often desirable, that are not normalized by dojo/on. The dojo/dom-geometry module provides a normalizeEvent function that can be used to normalize the pageX, pageY, layerX, and layerY properties on events.
+
+Multiple Events
+---------------
+You can listen to multiple event types with a single call by comma-delimiting the event names. Then we can listen for multiple events (with delegation) with one call. For example, we can listen for touchend and dblclick:
+
+.. code-block :: javascript
+
+  on(element, "dblclick, touchend", handler);
 
 Event Delegation
 ----------------
@@ -72,7 +93,7 @@ The on function also provides event delegation functionality. One can use a sele
 
   on(document, ".myClass:click", clickHandler);
 
-The on function also supports comma delimited event types, so we can listen for multiple events (with delegation) with one call. For example, to listen for double clicks on the document and clicks on buttons with myClass class name, we could do:
+To listen for double clicks on the document and clicks on buttons with myClass class name, we could do:
 
 .. code-block :: javascript
 
