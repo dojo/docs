@@ -344,7 +344,7 @@ markupFactory
 
 As listed above, the parser expects widget constructors to follow a certain format (where the first argument is a hash of attribute names/values, and the second is the srcNodeRef.
 
-If you are retrofitting an existing class to work with the parser, and the constructor does not follow this format, simply create a markupFactory method (a static method) which takes those two parameters and creates a new instance of the widget
+If you are retrofitting an existing class to work with the parser, and the constructor does not follow this format, simply create a markupFactory method (a static method) which takes those two parameters and creates a new instance of the widget:
 
 .. code-block :: javascript
 
@@ -353,6 +353,16 @@ If you are retrofitting an existing class to work with the parser, and the const
         return newWidget;
    }
 
+In addition the markupFactory can be used to allow the widget to do something that the parser doesn't automatically support, like the parsing of child nodes of the main node.  The developer can then adjust the initialisation parameters of the widget and pass those to the constructor.  The parser passes the class constructor as the third argument when it invokes the markupFactory.  For example:
+
+.. code-block :: javascript
+
+     markupFactory: function(params, srcNodeRef, ctor) {
+       ...
+       return new ctor(params, srcNodeRef);
+     }
+
+This also ensures that subsequent descendent classes that do not override the markupFactory are created properly.
 
 Setting the parser behavior
 ---------------------------
