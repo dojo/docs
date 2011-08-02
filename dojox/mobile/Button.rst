@@ -5,14 +5,14 @@ dojox.mobile.Button
 
 :Status: Draft
 :Version: 1.0
-:Authors: Jared Jurkiewicz, Yoshiroh Kamiyama
-:Developers: Yoshiroh Kamiyama, Jared Jurkiewicz
+:Authors: Yoshiroh Kamiyama, Jared Jurkiewicz, Doug Hays
+:Developers: Yoshiroh Kamiyama, Doug Hays
 :Available: since V1.5
 
 .. contents::
     :depth: 2
 
-Button is a very simple button widget whose only capability is to change the button color when pressed and then return to normal after a given period of time.
+Button is a very simple button widget.  When pressed, it generates an onClick event and changes CSS classes temporarily to emulate a native HTML BUTTON element press-and-release.
 
 .. image:: Button.png
 
@@ -23,12 +23,15 @@ Constructor Parameters
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
 |Parameter     |Type      |Default       |Description                                                                                                |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
-|btnClass      |String 	  |mblBlueButton |A button class name. The default value is "mblBlueButton". Note that there is no relationship between this |
-|              |          |              |Button widget and the button classes that are defined in dojox/mobile/themes/buttons.css.                  |
+|baseClass     |String 	  |mblButton     |Default CSS class name used to render the button.                                                          |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
-|duration      |Number    |1000          |Duration of the selected color status in milliseconds.                                                     |
+|class         |String 	  |              |Additional CSS class names to add to baseClass                                                             |
++--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
+|duration      |Number    |1000          |Duration of the selected CSS change in milliseconds.                                                       |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
 |label         |String    |              |A label of the button. If the label is not specified, innerHTML is used as a label.                        |
++--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
+|onClick       |Function  |              |An event handler used for press notifications.                                                             |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
 
 ========
@@ -65,6 +68,13 @@ You can define your own style for Button and specify it with the btnClass parame
 
 .. code-block :: html
 
-  <button dojoType="dojox.mobile.Button" btnClass="redButton" style="width:120px">Custom Button</button>
+  <button dojoType="dojox.mobile.Button" class="redButton" style="width:120px">Custom Button</button>
 
 .. image:: Button-example2.png
+
+onClick handler
+---------------
+
+.. code-block :: html
+
+  <div data-dojo-type="dojox.mobile.Button" data-dojo-props='label:"Click me!", onClick:function(e){ alert("button clicked"); }'></div>
