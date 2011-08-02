@@ -46,7 +46,7 @@ Default Button
 
   <button dojoType="dojox.mobile.Button">Default Button</button>
 
-.. image:: Button-example1.png
+.. image:: DefaultMobileButton.png
 
 Custom Button
 -------------
