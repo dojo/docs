@@ -20,14 +20,38 @@ Usage
 
 The first argument to the dojo.when may be any value, the second argument is the callback, and the optional third argument is the error callback. If the first argument is a promise (like a dojo.Deferred object), then the callback (or error callback) will be called when the promise is resolved. If the first argument is not a promise, the callback will be call immediately (with the value passed as the first argument.
 
-
-Example 1:  Creating and calling a deferred.
--------------------------------------------------------
+Example 1:  Creating and calling a deferred (1.7+ style requires).
+------------------------------------------------------------------
 
 .. code-block :: javascript
   :linenos:
 
   <script type="text/javascript">
+    require("dojo/_base/Deferred", function(promise){ // Note, we're aliasing the Deferred module's returned api to 'promise'
+      promise.when(4, print); // this will print 4
+
+      var fourAsync = Deferred();
+      promise.when(fourAsync, print); // this will print 4, one second later when the Deferred is resolved
+      setTimeout(function(){
+        fourAsync.callback(4);
+      }, 1000);
+
+      function print(value){
+        console.log(value);
+      };
+    }
+  </script>
+
+
+
+Example 2:  Creating and calling a deferred (pre 1.7 style).
+------------------------------------------------------------
+
+.. code-block :: javascript
+  :linenos:
+
+  <script type="text/javascript">
+    dojo.require("dojo.Deferred");
     dojo.when(4, print); // this will print 4
 
     var fourAsync = dojo.Deferred();
