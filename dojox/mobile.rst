@@ -336,12 +336,15 @@ Example (using older HTML (non-validating) and mobile parser)
    32: </html>
 
 ..
+* Line 1 is the standard HTML DOCTYPE.  Example 1 is using HTML5, Example 2 uses HTML4.  HTML5 introduces data-* attribute support, so the first example uses data-dojo-type attribute names (which will validate properly) versus example 2 which uses Dojo extended attributes (non-validating).  The HTML5 style markup is preferred going forward to Dojo 2.0 (but Ex 2 will continue to be supported through 1.x releases).
 
 * Line 4 is a viewport setting, which sets the width, height and scale of the browser area used to display the content. Mobile Safari recognizes this meta tag.
 
 * Line 5 tells iPhone/iPad that the web application should run in full-screen mode.
 
 * Line 6 loads a style sheet for iPhone theme. You may want to load a different theme instead.
+
+* Line 7 loads Dojo kernel API's.  The first example is using asynchronous AMD loader, the second example uses synchronous pre-Dojo1.7 style loader.  If you debug this example with browser debug tools, you'll see that example1 loads and enters document ready state much faster than example 2.  The async loader (ex1) style is the preferred notation going forward to Dojo 2.0 (but Ex 2 will continue to be supported through 1.x releases).
 
 * Line 10 loads lightweight mobile parser, since this example uses declarative markup.  The parser will automatically instantiates the mobile widgets associated with dom elements. You can of course use the default parser (dojo/parser) instead if you're using dijit widgets on views, but the mobile parser is much smaller and has enough capability to bootstrap simple dojo application pages like this example.
 
