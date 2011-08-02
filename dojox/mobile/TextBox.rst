@@ -1,0 +1,58 @@
+#format dojo_rst
+
+dojox.mobile.TextBox
+====================
+
+:Status: Draft
+:Version: 1.0
+:Authors: Yoshiroh Kamiyama, Doug Hays
+:Developers: Yoshiroh Kamiyama, Doug Hays
+:Available: since V1.7
+
+.. contents::
+    :depth: 2
+
+TextBox is a very simple INPUT widget.
+
+
+======================
+Constructor Parameters
+======================
+
++--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
+|Parameter     |Type      |Default       |Description                                                                                                |
++--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
+|baseClass     |String 	  |mblTextBox    |Default CSS class name used to render the textbox.                                                         |
++--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
+|class         |String 	  |              |Additional CSS class names to add to baseClass.                                                            |
++--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
+|maxLength     |Number    |  (no limit)  |Maximum number of characters that can be entered in the INPUT box.                                         |
++--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
+|placeHolder   |String    |              |Prompt text to display inside the INPUT when it would otherwise be empty.                                  |
++--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
+|onChange      |Function  |              |An event handler used for INPUT change notifications.                                                      |
++--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
+
+========
+Examples
+========
+
+Simple TextBox
+--------------
+
+.. code-block :: html
+
+  <input dojoType="dojox.mobile.TextBox" placeHolder="Enter LAST name" />
+
+.. image:: SimpleMobileTextBox.png
+
+
+onChange handler in HTML5 format
+--------------------------------
+
+.. code-block :: html
+
+  <input data-dojo-type="dojox.mobile.TextBox" style="background-color:lightgray;"
+        data-dojo-props='maxLength:10, value:"some data", onChange:function(newValue){ alert("value changed to " + newValue); }' />
+
+.. image:: HTML5MobileTextbox.png
