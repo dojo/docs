@@ -14,7 +14,6 @@ dojox.mobile.Button
 
 Button is a very simple button widget.  When pressed, it generates an onClick event and changes CSS classes temporarily to emulate a native HTML BUTTON element press-and-release.
 
-.. image:: Button.png
 
 ======================
 Constructor Parameters
@@ -25,7 +24,9 @@ Constructor Parameters
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
 |baseClass     |String 	  |mblButton     |Default CSS class name used to render the button.                                                          |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
-|class         |String 	  |              |Additional CSS class names to add to baseClass                                                             |
+|class         |String 	  |              |Additional CSS class names to add to baseClass.                                                            |
++--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
+|style         |String 	  |              |Additional CSS style to add to the button node.                                                            |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
 |duration      |Number    |1000          |Duration of the selected CSS change in milliseconds.                                                       |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
@@ -43,14 +44,14 @@ Default Button
 
 .. code-block :: html
 
-  <button dojoType="dojox.mobile.Button" style="width:120px">Default Button</button>
+  <button dojoType="dojox.mobile.Button">Default Button</button>
 
 .. image:: Button-example1.png
 
 Custom Button
 -------------
 
-You can define your own style for Button and specify it with the btnClass parameter.
+You can define your own style for Button and specify it with the class and style parameters.
 
 .. code-block :: html
 
@@ -72,9 +73,9 @@ You can define your own style for Button and specify it with the btnClass parame
 
 .. image:: Button-example2.png
 
-onClick handler
----------------
+onClick handler in HTML5 format
+-------------------------------
 
 .. code-block :: html
 
-  <div data-dojo-type="dojox.mobile.Button" data-dojo-props='label:"Click me!", onClick:function(e){ alert("button clicked"); }'></div>
+  <button data-dojo-type="dojox.mobile.Button" data-dojo-props='label:"Click me!", onClick:function(e){ alert("button clicked");return true; }'></button>
