@@ -246,6 +246,47 @@ The following example shows how to create views and make a transition between th
 
 ..
 
+Example (using HTML5 validating declarative markup and mobile parser)
+
+.. html::
+
+   01:<!DOCTYPE HTML>
+   02: <html>
+   03:   <head>
+   04:     <meta name="viewport" content="width=device-width,initial-scale=1,
+       maximum-scale=1,minimum-scale=1,user-scalable=no"/>
+   05:     <meta name="apple-mobile-web-app-capable" content="yes" />
+   06:     <link href="dojox/mobile/themes/iphone/iphone.css" rel="stylesheet"></link>
+   07:     <script src="dojo/dojo.js" djConfig="async:1,parseOnLoad: true"></script>
+   08:     <script>
+   09:       require([
+   10:         "dojox/mobile/parser", 	// This mobile app uses declarative programming with fast mobile parser
+   11:         "dojox/mobile",		// This is a mobile app.
+   12:       ]); // Skip module alias and function block because we're not doing anything special...
+   13:     </script>
+   14:   </head>
+   15:   <body>
+   16:     <div id="foo" data-dojo-type="dojox.mobile.View">
+   17:       <h1 data-dojo-type="dojox.mobile.Heading">View 1</h1>
+   18:       <ul data-dojo-type="dojox.mobile.RoundRectList">
+   19:         <li data-dojo-type="dojox.mobile.ListItem" moveTo="bar" label="Hello"
+   20: 	    icon="dojox/mobile/tests/images/i-icon-1.png"></li>
+   21:       </ul>
+   22:     </div>
+   23: 
+   24:     <div id="bar" data-dojo-type="dojox.mobile.View">
+   25:       <h1 data-dojo-type="dojox.mobile.Heading" back="Home" moveTo="foo">View 2</h1>
+   26:       <ul data-dojo-type="dojox.mobile.RoundRectList">
+   27:         <li data-dojo-type="dojox.mobile.ListItem" label="World"
+   28: 	    icon="dojox/mobile/tests/images/i-icon-2.png"></li>
+   29:       </ul>
+   30:     </div>
+   31:   </body>
+   32: </html>
+..
+
+Example (using older HTML (non-validating) and mobile parser)
+
 .. html::
 
    01: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
