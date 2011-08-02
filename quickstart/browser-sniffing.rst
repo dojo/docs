@@ -1,7 +1,7 @@
 #format dojo_rst
 
-Browser Sniffing
-================
+Browser (User Agent) Sniffing
+=============================
 
 :Status: Draft
 :Version: 1.0
