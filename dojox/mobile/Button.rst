@@ -77,3 +77,5 @@ onClick handler in HTML5 format
 .. code-block :: html
 
   <button data-dojo-type="dojox.mobile.Button" data-dojo-props='label:"Click me!", onClick:function(e){ alert("button clicked");return true; }'></button>
+
+.. image:: HTML5MobileButton.png
