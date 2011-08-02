@@ -3,7 +3,7 @@
 dojox.mobile
 ============
 
-:Authors: Yoshiroh Kamiyama, Doug Hays
+:Authors: Yoshiroh Kamiyama, Doug Hays, Chris Mitchell
 :Developers: Yoshiroh Kamiyama, Doug Hays
 :Available: since V1.5
 
