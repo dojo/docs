@@ -123,7 +123,7 @@ Openers
   A 
 
 
-From Controls
+Form Controls
 -------------
 
 * `Button <dojox/mobile/Button>`_
