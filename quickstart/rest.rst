@@ -230,13 +230,82 @@ So, if a request was for a count of 10 items starting at 5, but there are only 1
 JSON the Dojo Way
 -----------------
 
+While JSON is a great way of describing arbitrary objects, it doesn't have a standard for referencing.  The good news is that Dojo solves that via `dojox.json.ref`_ which provides everything you need.  It is also generally used by the rest of the framework, including the JSON REST datastores and stores.  This gives you quite a bit of flexibility in how you provide data.
+
+Mainly, it focuses on the attribute name ``$ref`` which provides a "pointer" to the rest of the data.  In a REST services, this is a URI.  When a client requests the data from the store, and the store doesn't have it, it will attempt to fetch the data at the supplied URI.  The typical way this is used is on collection URIs to provide references to the full resource, when you only want to provide a portion of the data up front.  For example, let's assume you want to provide information about pages of a book and you have the following collection URI:
+
+.. code-block:: html
+
+	GET http://example.com/book/1/page/
+
+Which returns an array that provides some basic information, but not the content of the page, but a reference to the item:
+
+.. code-block:: javascript
+
+	[
+	  {"id": "page/1", "chapter": "1", "$ref": "page/1"},
+	  {"id": "page/2", "chapter": "1", "$ref": "page/2"},
+	  {"id": "page/3", "chapter": "1", "$ref": "page/3"}
+	]
+
+And then something tries to attempt to access an attribute of a page that isn't loaded (like ``text``) the store will attempt to do the following:
+
+.. code-block:: html
+
+	GET http://example.com/book/1/page/1/
+
+Which could result in you returning the whole object, that would have been inefficient until the consumer needed the data:
+
+.. code-block:: javascript
+
+	{
+	  "id": "1",
+	  "chapter": "1",
+	  "text": "..."
+	}
+
+The other main way to use ``$ref`` in a REST environment is to specify children.  Again, speaking about a book, we could provide a reference back when a request is made to a collection or resource URI:
+
+.. code-block:: html
+
+	GET http://example.com/book/1/
+
+Would return something like:
+
+.. code-block:: javascript
+
+	{
+	  "id": "1",
+	  "title": "My Little Book of Dojo",
+	  "author": "Kitson Kelly",
+	  "children": {"$ref":"1/page"}
+	}
+
+There is a lot more you can do with referencing, but viewing the `dojox.json.ref`_ page is the best way to get a complete picture.  Just remember that your references should contain a relative URI to the appropriate information.
 
 ==========================
 Server-Side Implementation
 ==========================
 
+As stated before, a lot of the structure of a provider's data is based on its application and how it will be consumed.  Some Widgets have specific expectations of how data is structured than can drive the need of how it is provided.  There are however some general concepts of how a JSON REST store expects things to be handled and some general good practices.
+
 General Structure
 -----------------
+
+However you impliment your RESTful service, you need to provide some basic functionality:
+
+ * Handle HTTP requests
+ * Provide HTTP responses
+ * Encode return data in JSON
+ * Decode POSTed and PUTed data from JSON
+ * Handle ranges, sorting and querying/filtering as almost every Widget expects one or all of these to be supported
+
+Other things you might want to consider:
+
+ * Support compression, since you are returning data and most browsers support it, you can save a lot of bandwidth by supporting it.
+ * Support other content types other than JSON, so that other data can be retrieved from your RESTful service.
+ * Provide method invokation to perform a server side service.
+ * Error handling and logging
 
 HTTP Response Codes
 ~~~~~~~~~~~~~~~~~~~
@@ -265,3 +334,4 @@ Examples
 
 .. _dojox.data.JsonRestStore: dojox/data/JsonRestStore
 .. _dojo.store.JsonRest: dojo/store/JsonRest
+.. _dojox.json.ref: dojox/json/ref
