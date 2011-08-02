@@ -201,19 +201,34 @@ Getting Started
 
 Loading the basic dojox.mobile codebase is extremely simple.  It's a couple requires and then selecting the CSS.  That's it.
 
-Loading the javascript:
+Loading Dojo Mobile (using Dojo 1.7+ preferred api's):
+------------------------------------------------------
+
+This example assumes Dojo script is being loaded asynchronously with "async:1" config property.  Using this approach
+helps ensure the bare minimum code is used, and loaded as fast as possible.
 
 .. code-block :: javascript
  
-    // Load the basic mobile widgetry and support code. 
-    dojo.require("dojox.mobile");
+  require([
+    "dojox/mobile/parser", 	// This mobile app uses declarative programming with fast mobile parser
+    "dojox/mobile",		// This is a mobile app.
+    "dojox/mobile/compat" 	// This mobile app supports running on desktop browsers (optional)
+  ],function(parser,mobile,compat){ Optional module alias that can then be referenced inside callback block
+    // Do something with mobile api's.  At this point Dojo Mobile api's are ready for use.
+  );
 
-    // Load the lightweight parser.  dojo.parser can also be used, but it requires much more code to be loaded.
-    dojo.require("dojox.mobile.parser");
+Loading Dojo Mobile (using Dojo pre-1.7 style api's):
+-----------------------------------------------------
 
-    // Load the compat layer if the incoming browser isn't webkit based
-    dojo.requireIf(!dojo.isWebKit, "dojox.mobile.compat");
+This example uses synchronous loading, and loads all of Dojo core.  This results in more code being loaded than the bare minimum, and uses a synchronous loader which will be slower to load modules than the above async example (preferred).
 
+.. code-block :: javascript
+ 
+     
+    dojo.require("dojox.mobile"); // Load the basic mobile widgetry and support code.
+    dojo.require("dojox.mobile.parser"); // Load the lightweight parser.  dojo.parser can also be used, but it requires much more code to be loaded.
+    dojo.requireIf(!dojo.isWebKit, "dojox.mobile.compat"); // Load the compat layer if the incoming browser isn't webkit based
+    // Do something with Dojo Mobile...
 
 Selecting the CSS to apply (iphone or android currently) is equally simple:
 
