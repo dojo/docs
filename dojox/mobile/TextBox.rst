@@ -55,4 +55,4 @@ onChange handler in HTML5 format
   <input data-dojo-type="dojox.mobile.TextBox" style="background-color:lightgray;"
         data-dojo-props='maxLength:10, value:"some data", onChange:function(newValue){ alert("value changed to " + newValue); }' />
 
-.. image:: HTML5MobileTextbox.png
+.. image:: HTML5MobileTextBox.png
