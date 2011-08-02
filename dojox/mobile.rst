@@ -199,7 +199,7 @@ Carousel
 Getting Started
 ===============
 
-Loading the basic dojox.mobile codebase is extremely simple.  It's a couple requires and then selecting the CSS.  That's it.
+Loading the basic Dojo Mobile codebase is extremely simple.  It's a couple requires and then selecting the CSS.  That's it.
 
 Loading Dojo Mobile (using Dojo 1.7+ preferred api's):
 ------------------------------------------------------
