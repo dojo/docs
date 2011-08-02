@@ -213,7 +213,7 @@ helps ensure the bare minimum code is used, and loaded as fast as possible.
     "dojox/mobile/parser", 	// This mobile app uses declarative programming with fast mobile parser
     "dojox/mobile",		// This is a mobile app.
     "dojox/mobile/compat" 	// This mobile app supports running on desktop browsers (optional)
-  ],function(parser,mobile,compat){ Optional module alias that can then be referenced inside callback block
+  ],function(parser,mobile,compat){ Optional module aliases that can then be referenced inside callback block
     // Do something with mobile api's.  At this point Dojo Mobile api's are ready for use.
   );
 
@@ -254,12 +254,12 @@ The following example shows how to create views and make a transition between th
    06:     <link href="dojox/mobile/themes/iphone/iphone.css" rel="stylesheet"></link>
    07:     <script src="dojo/dojo.js" djConfig="parseOnLoad: true"></script>
    08:     <script>
-   09:       dojo.require("dojox.mobile.parser");
-   10:       dojo.require("dojox.mobile");
-   11:       dojo.requireIf(!dojo.isWebKit, "dojox.mobile.compat");
-   12:     </script>
-   13:   </head>
-   14: 
+   09:       require([
+   10:         "dojox/mobile/parser", 	// This mobile app uses declarative programming with fast mobile parser
+   11:         "dojox/mobile",		// This is a mobile app.
+   12:       ]); // Skip module alias and function block because we're not doing anything special...
+   13:     </script>
+   14:   </head>
    15:   <body>
    16:     <div id="foo" dojoType="dojox.mobile.View">
    17:       <h1 dojoType="dojox.mobile.Heading">View 1</h1>
@@ -287,9 +287,9 @@ The following example shows how to create views and make a transition between th
 
 * Line 6 loads a style sheet for iPhone theme. You may want to load a different theme instead.
 
-* Line 9 loads dojox.mobile.parser, which instantiates dojo widgets in the page. You can of course use the default parser (dojo.parser) here, but dojox.mobile.parser is much smaller and has enough capability to bootstrap simple dojo application pages like this example.
+* Line 10 loads lightweight mobile parser, since this example uses declarative markup.  The parser will automatically instantiates the mobile widgets associated with dom elements. You can of course use the default parser (dojo/parser) instead if you're using dijit widgets on views, but the mobile parser is much smaller and has enough capability to bootstrap simple dojo application pages like this example.
 
-* Line 11 conditionally loads dojox.mobile.compat, which is a compatibility module for non-CSS3 browsers.
+  The desktop browser compatability module for non-CSS3 browsers is not used in this example, so it will likely only render properly on webkit-based browsers.
 
 * Line 16 through Line 22 is the first view. It contains a heading and a round rectangle list. This view will be shown at start up, since it is the first view and the selected="true" attribute is not specified for the second view.
 
