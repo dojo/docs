@@ -1,7 +1,7 @@
 #format dojo_rst
 
-dojox.mobile
-============
+Dojo Mobile
+===========
 
 :Authors: Yoshiroh Kamiyama, Doug Hays, Chris Mitchell
 :Developers: Yoshiroh Kamiyama, Doug Hays
@@ -14,10 +14,10 @@ dojox.mobile
 Introduction
 ============
 
-dojox.mobile provides a number of widgets that can be used to build web-based applications for mobile devices such as iPhone, Android, or BlackBerry. These widgets work best with webkit-based browsers, such as Safari or Chrome, since webkit-specific CSS3 features are extensively used. However, the widgets should work in a "graceful degradation" manner even on non-CSS3 browsers, such as IE or (older) Firefox. In that case, fancy effects, such as animation, gradient color, or round corner rectangle, may not work, but you can still operate your application.
+The Dojo Mobile package provides a number of widgets that can be used to build web-based applications for mobile devices such as iPhone, Android, or BlackBerry. These widgets work best with webkit-based browsers, such as Safari or Chrome, since webkit-specific CSS3 features are extensively used. However, the widgets should work in a "graceful degradation" manner even on non-CSS3 browsers, such as IE or (older) Firefox. In that case, fancy effects, such as animation, gradient color, or round corner rectangle, may not work, but you can still operate your application.
 Furthermore, as a separate file, a compatibility module, dojox.mobile.compat, is available, which simulates some of CSS3 features used in this module. If you use the compatibility module, fancy visual effects work better even on non-CSS3 browsers.
 
-dojox.mobile is designed to be as lightweight as possible to achieve a better user experience on mobile. It has only a few dependencies on other dojo/dijit modules. It has less dependency even on the dojo/dijit base modules, so many of the base modules can be eliminated at build time. Also, it has its own very small parser that is a subset of dojo.parser, but has enough capability to bootstrap your application.
+dojox.mobile is designed to be as lightweight as possible to achieve a better user experience on mobile. It has only a few dependencies on other dojo/dijit modules. It has less dependency even on the dojo/dijit base modules, so many of the base modules can be eliminated at build time. Also, it has its own very small parser that is a subset of the core dojo.parser, but has enough capability to bootstrap your application.
 
 .. image:: settings-i-a.png
 
@@ -105,18 +105,18 @@ Panes
 
 * `ContentPane <dojox/mobile/ContentPane>`_
 
-  A 
+  A pane that can load and display HTML content/fragments. Similar to dijit/layout/ContentPane.
 
 Openers
 -------
 
 * `Opener <dojox/mobile/Opener>`_
 
-  A 
+  A component that encapsulates the mechanism for displaying secondary views such as dialogs.  Openers take screen sizes into account and can display the next view as a slide-in dialog (phone) or inside a tooltip dialog (tablet)
 
 * `Overlay <dojox/mobile/Overlay>`_
 
-  A 
+  A component that displays a secondary view which partially occludes the original using a slide in transition effect. Useful for displaying dialogs.  
 
 * `Tooltip <dojox/mobile/Tooltip>`_
 
@@ -132,50 +132,50 @@ Form Controls
 
 * `CheckBox <dojox/mobile/CheckBox>`_
 
-  A 
+  A checkbox component displaying a boolean value.
 
 * `ComboBox <dojox/mobile/ComboBox>`_
 
-  A 
+  A combo box allowing user to edit input values with the built-in keyboard.
 
 * `ExpandingTextArea <dojox/mobile/ExpandingTextArea>`_
 
-  A 
+  A text area that can automatically adjust its dimensions based on how much content it holds.
 
 * `RadioButton <dojox/mobile/RadioButton>`_
 
-  A 
+  A component for displaying a discrete set of selectable items.
 
 * `Slider <dojox/mobile/Slider>`_
 
-  A 
+  A control that allows changing a numeric value by touching and dragging a slide handle. 
 
 * `Switch <dojox/mobile/Switch>`_
 
-  A toggle switch with a sliding knob
+  A toggle switch with a sliding knob.  Useful for displaying boolean settings.
 
 * `TextArea <dojox/mobile/TextArea>`_
 
-  A 
+  A multi-line text input control.
 
 * `TextBox <dojox/mobile/TextBox>`_
 
-  A 
+  A text input control.
 
 * `ToggleButton <dojox/mobile/ToggleButton>`_
 
-  A 
+  A button that can toggle between two states.
 
 Layout
 ------
 
 * `FixedSplitter <dojox/mobile/FixedSplitter>`_
 
-  A
+  A layout component that displays two content areas, with the position between the areas fixed at a given position.
 
 * `FixedSplitterPane <dojox/mobile/FixedSplitterPane>`_
 
-  A
+  Used for the two content areas in a fixed splitter control.
 
 Indicators
 ----------
@@ -193,7 +193,7 @@ Carousel
 
 * `Carousel <dojox/mobile/Carousel>`_
 
-  A widget that manages a list of images
+  A widget that manages a list of images or content, and displays a paging indicator.  Allows a user to flick left/right to move between content items.
 
 ===============
 Getting Started
