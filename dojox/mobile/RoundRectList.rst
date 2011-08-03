@@ -88,3 +88,24 @@ In this example, an aggregated icon image as below is used for each list item ic
   </ul>
 
 .. image:: RoundRectList-example2.png
+
+Selection mode example
+----------------------
+
+.. code-block :: html
+
+  <h2 dojoType="dojox.mobile.RoundRectCategory">Single Select</h2>
+  <ul dojoType="dojox.mobile.RoundRectList" select="single">
+    <li dojoType="dojox.mobile.ListItem" checked="true">Cube</li>
+    <li dojoType="dojox.mobile.ListItem">Dissolve</li>
+    <li dojoType="dojox.mobile.ListItem">Ripple</li>
+  </ul>
+
+  <h2 dojoType="dojox.mobile.RoundRectCategory">Multiple Select</h2>
+  <ul dojoType="dojox.mobile.RoundRectList" select="multiple">
+    <li dojoType="dojox.mobile.ListItem">Cube</li>
+    <li dojoType="dojox.mobile.ListItem">Dissolve</li>
+    <li dojoType="dojox.mobile.ListItem">Ripple</li>
+  </ul>
+
+.. image:: RoundRectList-check.png
