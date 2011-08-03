@@ -3,10 +3,8 @@
 dojox.mobile.Switch
 ===================
 
-:Status: Draft
-:Version: 1.0
-:Authors: Jared Jurkiewicz, Yoshiroh Kamiyama
-:Developers: Yoshiroh Kamiyama, Jared Jurkiewicz
+:Authors: Yoshiroh Kamiyama
+:Developers: Yoshiroh Kamiyama
 :Available: since V1.5
 
 .. contents::
@@ -23,11 +21,13 @@ Constructor Parameters
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |Parameter     |Type      |Default  |Description                                                                                                |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|value 	       |String 	  |on       |The initial state of the switch. "on" or "off". The default value is "on".                                 |
+|value 	       |String 	  |"on"     |The initial state of the switch. "on" or "off". The default value is "on".                                 |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|leftLabel     |String    |ON       |The left-side label of the switch. The default value is "ON".                                              |
+|name 	       |String 	  |""       |A name for a hidden input field, which holds the current value.                                            |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|rightLabel    |String    |OFF      |The right-side label of the switch. The default value is "OFF".                                            |
+|leftLabel     |String    |"ON"     |The left-side label of the switch.                                                                         |
++--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
+|rightLabel    |String    |"OFF"    |The right-side label of the switch.                                                                        |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 
 ========
@@ -52,6 +52,64 @@ Declarative example 2
 
 .. image:: Switch-example2.png
 
+Round Shape 1
+-------------
+
+.. code-block :: html
+
+  <div class="mblSwRoundShape1" dojoType="dojox.mobile.Switch"></div>
+
+.. image:: Switch-RoundShape1.png
+
+Round Shape 2
+-------------
+
+.. code-block :: html
+
+  <div class="mblSwRoundShape2" dojoType="dojox.mobile.Switch"></div>
+
+.. image:: Switch-RoundShape2.png
+
+Arc Shape 1
+-----------
+
+.. code-block :: html
+
+  <div class="mblSwArcShape1" dojoType="dojox.mobile.Switch"></div>
+
+.. image:: Switch-ArcShape1.png
+
+Arc Shape 2
+-----------
+
+.. code-block :: html
+
+  <div class="mblSwArcShape2" dojoType="dojox.mobile.Switch"></div>
+
+.. image:: Switch-ArcShape2.png
+
+Custom Color
+------------
+
+.. code-block :: html
+
+  <style>
+  .color1 .mblSwitchBgLeft {
+      background: -webkit-gradient(linear, left top, left bottom, from(#28B159), to(#75FBAC), color-stop(0.5, #3FEB84), color-stop(0.5, #4CEE8E));
+  }
+  .color1 .mblSwitchBgRight {
+      background: -webkit-gradient(linear, left top, left bottom, from(#CECECE), to(#FDFDFD), color-stop(0.5, #EEEEEE), color-stop(0.5, #F8F8F8));
+  }
+  .color1 .mblSwitchKnob {
+      background: -webkit-gradient(linear, left top, left bottom, from(#999999), to(#FAFAFA), color-stop(0.5, #BBBBBB), color-stop(0.5, #CACACA));
+  }
+  </style>
+
+  ...
+  <div class="mblSwRoundShape1 color1" dojoType="dojox.mobile.Switch"></div>
+
+.. image:: Switch-CustomColor.png
+
 Listening to onStateChanged
 ---------------------------
 
@@ -62,3 +120,13 @@ To listen to the changes of switch states, you can connect to the onStateChanged
   dojo.connect(dijit.byId("sw"), "onStateChanged", function(newState){
       alert("newState = "+newState); // newState is "on" or "off"
   });
+
+A setter for "value"
+--------------------
+
+To change the state of the switch programmatically, you can use a setter method for "value" as below.
+
+.. code-block :: javascript
+
+  var widget = dijit.byId("sw");
+  widget.set("value", "on"); // "on" or "off" can be set
