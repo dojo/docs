@@ -26,22 +26,20 @@ Example 1:  Creating and calling a deferred (1.7+ style requires).
 .. code-block :: javascript
   :linenos:
 
-  <script type="text/javascript">
-    require("dojo/_base/Deferred", function(promise){ // Note, we're aliasing the Deferred module's returned api to 'promise'
-      promise.when(4, print); // this will print 4
-
-      var fourAsync = Deferred();
-      promise.when(fourAsync, print); // this will print 4, one second later when the Deferred is resolved
-      setTimeout(function(){
-        fourAsync.callback(4);
-      }, 1000);
-
-      function print(value){
-        console.log(value);
-      };
-    }
-  </script>
-
+  require(["dojo/_base/Deferred"], function(Deferred){ // Note, we're aliasing the Deferred module's returned api to 'Deferred'
+    
+    Deferred.when(4, print); // this will print 4 immediately
+    
+    var fourAsync = new Deferred();
+    Deferred.when(fourAsync, print); // this will print 4, one second later when the Deferred is resolved
+    setTimeout(function(){
+      fourAsync.resolve(4);
+    }, 1000);
+    
+    function print(value){
+      console.log(value);
+    };
+  });
 
 
 Example 2:  Creating and calling a deferred (pre 1.7 style).
@@ -50,21 +48,17 @@ Example 2:  Creating and calling a deferred (pre 1.7 style).
 .. code-block :: javascript
   :linenos:
 
-  <script type="text/javascript">
-    dojo.require("dojo.Deferred");
-    dojo.when(4, print); // this will print 4
-
-    var fourAsync = dojo.Deferred();
-    dojo.when(fourAsync, print); // this will print 4, one second later when the Deferred is resolved
-    setTimeout(function(){
-      fourAsync.callback(4);
-    }, 1000);
-
-    function print(value){
-      console.log(value);
-    }
-  </script>
-
+  dojo.when(4, print); // this will print 4 immediately
+  
+  var fourAsync = new dojo.Deferred();
+  dojo.when(fourAsync, print); // this will print 4, one second later when the Deferred is resolved
+  setTimeout(function(){
+    fourAsync.callback(4);
+  }, 1000);
+  
+  function print(value){
+    console.log(value);
+  }
 
 ========
 See Also
