@@ -67,7 +67,7 @@ In this example, no ListItem is declared under RoundRectDataList. The ListItems 
 .. code-block :: html
 
   <div dojoType="dojo.data.ItemReadStore" jsId="sampleStore" url="sample.json"></div>
-  <ul dojoType="dojox.mobile.RoundRectList" store="sampleStore">
+  <ul dojoType="dojox.mobile.RoundRectDataList" store="sampleStore">
   </ul>
 
 .. code-block :: javascript
