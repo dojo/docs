@@ -3,10 +3,8 @@
 dojox.mobile.EdgeToEdgeCategory
 ===============================
 
-:Status: Draft
-:Version: 1.0
-:Authors: Jared Jurkiewicz, Yoshiroh Kamiyama
-:Developers: Yoshiroh Kamiyama, Jared Jurkiewicz
+:Authors: Yoshiroh Kamiyama
+:Developers: Yoshiroh Kamiyama
 :Available: since V1.5
 
 .. contents::
@@ -21,9 +19,9 @@ Constructor Parameters
 ======================
 
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|Parameter     |Type      |Required |Description                                                                                                |
+|Parameter     |Type      |Default  |Description                                                                                                |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|label         |String    |No       |A label of the category. If the label is not specified, innerHTML is used as a label.                      |
+|label         |String    |""       |A label of the category. If the label is not specified, innerHTML is used as a label.                      |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 
 ========
