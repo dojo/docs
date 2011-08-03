@@ -3,8 +3,6 @@
 dojox.mobile.ListItem
 =====================
 
-:Status: Draft
-:Version: 1.0
 :Authors: Yoshiroh Kamiyama
 :Developers: Yoshiroh Kamiyama
 :Available: since V1.5
@@ -16,64 +14,124 @@ ListItem represents an item of either RoundRectList or EdgeToEdgeList. There are
 
 .. image:: ListItem.png
 
+.. image:: ListItem-desc.png
+
 ======================
 Constructor Parameters
 ======================
 
+Inherited from dojox.mobile._ItemBase:
+--------------------------------------
+
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |Parameter     |Type      |Default  |Description                                                                                                |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|transition    |String    |slide    |A type of animated transition effect. "slide", "fade", "flip", or "none".                                  |
+|transition    |String    |"slide"  |A type of animated transition effect. You can choose from the standard transition types, "slide", "fade",  |
+|              |          |         |"flip", or from the extended transition types, "cover", "coverv", "dissolve", "flip2", "reveal", "revealv",|
+|              |          |         |"scaleIn", "scaleOut", "slidev", "swirl", "zoomIn", "zoomOut". If "none" is specified, transition occurs   |
+|              |          |         |immediately without animation.                                                                             |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |transitionDir |Number    |1        |The transition direction. If 1, transition forward. If -1, transition backward. For example, the slide     |
 |              |          |         |transition slides the view from right to left when dir == 1, and from left to right when dir == -1.        |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|icon          |String    |         |The icon path for the item. If icon is not specified, the iconBase parameter of the parent widget is used. |
+|icon          |String    |""       |An icon to display at the left of the item. The value can be either a path for an image file or a class    |
+|              |          |         |name of a DOM button. If icon is not specified, the iconBase parameter of the parent widget is used.       |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|iconPos       |String    |         |The position of an aggregated icon. IconPos is comma separated values like top,left,width,height           |
+|iconPos       |String    |""       |The position of an aggregated icon. IconPos is comma separated values like top,left,width,height           |
 |              |          |         |(ex. "0,0,29,29"). If iconPos is not specified, the iconPos parameter of the parent widget is used.        |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|moveTo        |String    |         |The id of the transition destination view which resides in the current page. If you add the hash sign ('#')|
+|moveTo        |String    |""       |The id of the transition destination view which resides in the current page. If you add the hash sign ('#')|
 |              |          |         |before the id, the view transition updates the hash in the browser URL so that the user can bookmark the   |
 |              |          |         |destination view. The user can also use the browser's back/forward button to navigate through the views in |
 |              |          |         |the browser history.                                                                                       |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|href          |String    |         |A URL of another web page to go to.                                                                        |
+|href          |String    |""       |A URL of another web page to go to.                                                                        |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|hrefTarget    |String    |         |A target that specifies where to open a page specified by href. The value will be passed to the 2nd        |
+|hrefTarget    |String    |""       |A target that specifies where to open a page specified by href. The value will be passed to the 2nd        |
 |              |          |         |argument of window.open().                                                                                 |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|url           |String    |         |A URL of an html fragment page or JSON data that represents a new view content (See examples below). The   |
+|url           |String    |""       |A URL of an html fragment page or JSON data that represents a new view content (See examples below). The   |
 |              |          |         |view content is loaded with XHR and inserted in the current page. Then a view transition occurs to the     |
 |              |          |         |newly created view. The view is cached so that subsequent requests would not load the content again.       |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
+|urlTarget     |String    |""       |Node id under which a new view will be created according to the url parameter. If not specified, The new   |
+|              |          |         |view will be created as a sibling of the current view.                                                     |
++--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |callback      |Function  |         |A callback function that is called when the transition has been finished. A function reference, or name of |
-|              |          |         |a function in context.                                                                                     |
+|              |String    |         |a function in context.                                                                                     |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |sync          |Boolean   |true     |If true, XHR for the view content specified with the url parameter is performed synchronously. If false, it|
 |              |          |         |is done asynchronously and the progress indicator is displayed while loading the content. This parameter is|
 |              |          |         |effective only when the url parameter is used.                                                             |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|label         |String    |         |A label of the item. If the label is not specified, innerHTML is used as a label.                          |
+|label         |String    |""       |A label of the item. If the label is not specified, innerHTML is used as a label.                          |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|rightText     |String    |         |A text to display at the right hand side of the item.                                                      |
-+--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|btnClass      |String    |         |A button class name to display at the right of the item. Button classes are defined in                     |
-|              |          |         |dojox/mobile/themes/buttons.css. (ex. "mblBluePlusButton")                                                 |
-+--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|anchorLabel   |Boolean   |false    |If true, the label text becomes a clickable anchor text. When the user clicks on the text, the             |
-|              |          |         |onAnchorLabelClicked handler is called. You can override or connect to the handler and implement any       |
-|              |          |         |action. The handler has no default action.                                                                 |
-+--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|noArrow       |Boolean   |false    |If true, the right hand side arrow is not displayed.                                                       |
-+--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
+
+Parameters of this widget:
+--------------------------
+
++--------------+----------+-------------------+-----------------------------------------------------------------------------------------------------------+
+|Parameter     |Type      |Default            |Description                                                                                                |
++--------------+----------+-------------------+-----------------------------------------------------------------------------------------------------------+
+|rightText     |String    |""                 |A right-aligned text to display on the item.                                                               |
++--------------+----------+-------------------+-----------------------------------------------------------------------------------------------------------+
+|rightIcon     |String    |""                 |An icon to display at the right hand side of the item. The value can be either a path for an image file or |
+|              |          |                   |a class name of a DOM button.                                                                              |
++--------------+----------+-------------------+-----------------------------------------------------------------------------------------------------------+
+|rightIcon2    |String    |""                 |An icon to display at the left of the rightIcon. The value can be either a path for an image file or a     |
+|              |          |                   |class name of a DOM button.                                                                                |
++--------------+----------+-------------------+-----------------------------------------------------------------------------------------------------------+
+|anchorLabel   |Boolean   |false              |If true, the label text becomes a clickable anchor text. When the user clicks on the text, the             |
+|              |          |                   |onAnchorLabelClicked handler is called. You can override or connect to the handler and implement any       |
+|              |          |                   |action. The handler has no default action.                                                                 |
++--------------+----------+-------------------+-----------------------------------------------------------------------------------------------------------+
+|noArrow       |Boolean   |false              |If true, the right hand side arrow is not displayed.                                                       |
++--------------+----------+-------------------+-----------------------------------------------------------------------------------------------------------+
+|selected      |Boolean   |false              |If true, the item is highlighted to indicate it is selected.                                               |
++--------------+----------+-------------------+-----------------------------------------------------------------------------------------------------------+
+|checked       |Boolean   |false              |If true, a check mark is displayed at the right of the item.                                               |
++--------------+----------+-------------------+-----------------------------------------------------------------------------------------------------------+
+|arrowClass    |String    |"mblDomButtonArrow"|An icon to display as an arrow. The value can be either a path for an image file or a class name of a DOM  |
+|              |          |                   |button.                                                                                                    |
++--------------+----------+-------------------+-----------------------------------------------------------------------------------------------------------+
+|checkClass    |String    |"mblDomButtonCheck"|An icon to display as a check mark. The value can be either a path for an image file or a class name of a  |
+|              |          |                   |DOM button.                                                                                                |
++--------------+----------+-------------------+-----------------------------------------------------------------------------------------------------------+
+|variableHeight|Boolean   |false              |If true, the height of the item varies according to its content. In dojo 1.6 or older, the                 |
+|              |          |                   |"mblVariableHeight" class was used for this purpose. In dojo 1.7, adding the mblVariableHeight class still |
+|              |          |                   |works for backward compatibility.                                                                          |
++--------------+----------+-------------------+-----------------------------------------------------------------------------------------------------------+
 
 ========
 Examples
 ========
 
-Example of view html fragment
------------------------------
+Declarative example
+-------------------
+
+In this example, no view transition is specified, but if you specify the one, moveTo="view1" for example, an arrow icon is displayed at the position of the rightIcon even if rightIcon is specified. In this case, if you want to change the arrow icon to another, you can use the arrowClass property instead of rightIcon.
+
+.. code-block :: html
+
+  <ul dojoType="dojox.mobile.RoundRectList">
+      <li dojoType="dojox.mobile.ListItem"
+	  icon="mblDomButtonRedCircleMinus"
+	  label="Label"
+	  rightText="rightText"
+	  rightIcon2="mblDomButtonSilverCircleDownArrow"
+	  rightIcon="mblDomButtonBlueCircleArrow"></li>
+  </ul>
+
+.. image:: ListItem-desc.png
+
+View content examples
+---------------------
+
+A new view can be created from external html fragment or JSON data specified with the url property. Below are examples of such view content. The first one is an html fragment, and the second one is equivalent JSON. They make the same view.
+
+Note that the JSON format cannot have duplicate keys at the same level, while the html format has no such limitation.
+
+html fragment:
 
 .. code-block :: html
 
@@ -92,8 +150,7 @@ Example of view html fragment
       </ul>
   </div>
 
-Example of view JSON data
--------------------------
+JSON data:
 
 .. code-block :: javascript
 
