@@ -70,6 +70,14 @@ Lists
 
   A list of items with equal width
 
+* `RoundRectDataList <dojox/mobile/RoundRectDataList>`_
+
+  RoundRectList with dojo.data support
+
+* `EdgeToEdgeDataList <dojox/mobile/EdgeToEdgeDataList>`_
+
+  EdgeToEdgeList with dojo.data support
+
 * `ListItem <dojox/mobile/ListItem>`_
 
   A list item to use in a list widget
