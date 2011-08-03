@@ -28,7 +28,7 @@ Constructor Parameters
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
 |value         |String 	  |              |Initial value of the editable text.  If omitted, then the TEXTAREA's innerHTML is used.                    |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
-|maxLength     |Number    |              |The number of characters that can be entered in the TEXTAREA (requires browser support).                   |
+|maxLength     |Number    |              |Maximum number of characters that can be entered in the TEXTAREA (requires browser support).               |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
 |placeHolder   |String    |              |Prompt text to display inside the TEXTAREA when it would otherwise be empty (requires browser support).    |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
