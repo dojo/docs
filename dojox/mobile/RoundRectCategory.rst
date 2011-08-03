@@ -3,8 +3,6 @@
 dojox.mobile.RoundRectCategory
 ==============================
 
-:Status: Draft
-:Version: 1.0
 :Authors: Yoshiroh Kamiyama
 :Developers: Yoshiroh Kamiyama
 :Available: since V1.5
@@ -21,9 +19,9 @@ Constructor Parameters
 ======================
 
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|Parameter     |Type      |Required |Description                                                                                                |
+|Parameter     |Type      |Default  |Description                                                                                                |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|label         |Boolean   |No       |A label of the category. If the label is not specified, innerHTML is used as a label.                      |
+|label         |Boolean   |""       |A label of the category. If the label is not specified, innerHTML is used as a label.                      |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 
 ========
