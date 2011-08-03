@@ -3,8 +3,6 @@
 dojox.mobile.ScrollableView
 ===========================
 
-:Status: Draft
-:Version: 1.0
 :Authors: Yoshiroh Kamiyama
 :Developers: Yoshiroh Kamiyama
 :Available: since V1.6
@@ -25,28 +23,36 @@ Constructor Parameters
 Inherited from dojox.mobile.View:
 ---------------------------------
 
-+--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|Parameter     |Type      |Required |Description                                                                                                |
-+--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|selected      |Boolean   |No       |If true, the view is displayed at startup time. The default value is false.                                |
-+--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|keepScrollPos |Boolean   |No       |If true, the scroll position is kept when transition occurs between views. The default value is true.      |
-+--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
++--------------+----------+---------+-------------------------------------------------------------------------------+
+|Parameter     |Type      |Default  |Description                                                                    |
++--------------+----------+---------+-------------------------------------------------------------------------------+
+|selected      |Boolean   |false    |If true, the view is displayed at startup time.                                |
++--------------+----------+---------+-------------------------------------------------------------------------------+
+|keepScrollPos |Boolean   |true     |If true, the scroll position is kept when transition occurs between views.     |
++--------------+----------+---------+-------------------------------------------------------------------------------+
 
 Inherited from dojox.mobile.scrollable:
 ---------------------------------------
 
-+----------------------+----------+---------+-----------------------------------------------------------------------------------------------------------------+
-|Parameter             |Type      |Required |Description                                                                                                      |
-+----------------------+----------+---------+-----------------------------------------------------------------------------------------------------------------+
-|scrollBar             |Boolean   |No       |If true, scroll bar is displayed. The default value is true.                                                     |
-+----------------------+----------+---------+-----------------------------------------------------------------------------------------------------------------+
-|scrollDir             |String    |No       |Specify a scrolling direction. "v" for vertical, "h" for horizontal, or "vh" for both. The default value is "v". |
-+----------------------+----------+---------+-----------------------------------------------------------------------------------------------------------------+
-|fadeScrollBar         |Boolean   |No       |Use the fade animation to hide scroll bar. The default value is true.                                            |
-+----------------------+----------+---------+-----------------------------------------------------------------------------------------------------------------+
-|disableFlashScrollBar |Boolean   |No       |Disable flashing of scroll bar when a view is shown. The default value is false.                                 |
-+----------------------+----------+---------+-----------------------------------------------------------------------------------------------------------------+
++----------------------+----------+---------+---------------------------------------------------------------------------------------+
+|Parameter             |Type      |Default  |Description                                                                            |
++----------------------+----------+---------+---------------------------------------------------------------------------------------+
+|scrollBar             |Boolean   |true     |If true, scroll bar is displayed.                                                      |
++----------------------+----------+---------+---------------------------------------------------------------------------------------+
+|scrollDir             |String    |"v"      |Specify a scrolling direction. "v" for vertical, "h" for horizontal, or "vh" for both. |
++----------------------+----------+---------+---------------------------------------------------------------------------------------+
+|fadeScrollBar         |Boolean   |true     |Use the fade animation to hide scroll bar.                                             |
++----------------------+----------+---------+---------------------------------------------------------------------------------------+
+|disableFlashScrollBar |Boolean   |false    |Disable flashing of scroll bar when a view is shown.                                   |
++----------------------+----------+---------+---------------------------------------------------------------------------------------+
+|threshold             |Number    |4        |Drag threshold value in pixels. The user needs to drag at least the specified pixels   |
+|                      |          |         |before a real drag operation starts.                                                   |
++----------------------+----------+---------+---------------------------------------------------------------------------------------+
+|height                |String    |""       |Explicitly specified height of the widget (ex. "300px"). If "inherit" is specified,    |
+|                      |          |         |the height is inherited from its offset parent. If "auto" is specified, the content    |
+|                      |          |         |height, which could be smaller than the entire screen height, is used. If nothing is   |
+|                      |          |         |specified, the entire screen height is used.                                           |
++----------------------+----------+---------+---------------------------------------------------------------------------------------+
 
 =====
 Usage
@@ -69,7 +75,7 @@ To make a bar widget (Heading, TabBar, or perhaps your custom bar widget) fixed-
 
 .. code-block :: html
 
-  <div id="view1" dojoType="dojox.mobile.ScrollableView" selected="true">
+  <div id="view1" dojoType="dojox.mobile.ScrollableView">
     <h1 dojoType="dojox.mobile.Heading" fixed="top">View Header Bar</h1>
     ....
     <h1 dojoType="dojox.mobile.Heading" fixed="bottom">View Footer Bar</h1>
@@ -88,7 +94,7 @@ To make a bar widget (Heading, TabBar, or perhaps your custom bar widget) fixed-
 .. code-block :: html
 
   <h1 dojoType="dojox.mobile.Heading" fixed="top">Application Header Bar</h1>
-  <div id="view1" dojoType="dojox.mobile.ScrollableView" selected="true">
+  <div id="view1" dojoType="dojox.mobile.ScrollableView">
       ....
   </div>
   <div id="view2" dojoType="dojox.mobile.ScrollableView">
