@@ -5,8 +5,8 @@ dojox.mobile.TextBox
 
 :Status: Draft
 :Version: 1.0
-:Authors: Yoshiroh Kamiyama, Doug Hays
-:Developers: Yoshiroh Kamiyama, Doug Hays
+:Authors: Doug Hays
+:Developers: Doug Hays
 :Available: since V1.7
 
 .. contents::
@@ -28,7 +28,7 @@ Constructor Parameters
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
 |maxLength     |Number    | (no limit)   |Maximum number of characters that can be entered in the INPUT box.                                         |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
-|placeHolder   |String    |              |Prompt text to display inside the INPUT when it would otherwise be empty.                                  |
+|placeHolder   |String    |              |Prompt text to display inside the INPUT when it would otherwise be empty (requires browser support).       |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
 |onChange      |Function  |              |An event handler used for INPUT change notifications.                                                      |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
