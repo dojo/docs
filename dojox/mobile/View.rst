@@ -3,10 +3,8 @@
 dojox.mobile.View
 =================
 
-:Status: Draft
-:Version: 1.0
-:Authors: Yoshiroh Kamiyama, Jared Jurkiewicz
-:Developers: Yoshiroh Kamiyama, Jared Jurkiewicz
+:Authors: Yoshiroh Kamiyama
+:Developers: Yoshiroh Kamiyama
 :Available: since V1.5
 
 .. contents::
@@ -18,18 +16,20 @@ View is a container widget that represents entire mobile device screen. One html
 Constructor Parameters
 ======================
 
-+--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|Parameter     |Type      |Required |Description                                                                                                |
-+--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|selected      |Boolean   |No       |If true, the view is displayed at startup time. The default value is false.                                |
-+--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|keepScrollPos |Boolean   |No       |If true, the scroll position is kept when transition occurs between views. The default value is true.      |
-+--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
++--------------+----------+---------+-------------------------------------------------------------------------------+
+|Parameter     |Type      |Default  |Description                                                                    |
++--------------+----------+---------+-------------------------------------------------------------------------------+
+|selected      |Boolean   |false    |If true, the view is displayed at startup time.                                |
++--------------+----------+---------+-------------------------------------------------------------------------------+
+|keepScrollPos |Boolean   |true     |If true, the scroll position is kept when transition occurs between views.     |
++--------------+----------+---------+-------------------------------------------------------------------------------+
 
 =====
 Usage
 =====
-View is a container that represents the device screen. You should place all the contents in a View. There may be one or more Views in a page. Only one of them must have the selected=true parameter so that it is displayed at startup time.
+View is a container that represents the device screen. You should place all the contents in a View. There may be one or more Views in a page. In dojo-1.6 or older, one and only one view must have the selected=true parameter so that it is displayed at startup time. In dojo-1.7, if no views have selected=true, the first view is displayed at startup time.
+
+Views can be nested to form a group of views, but view transitions should be performed between sibling views (on the same level). In an exceptional case, it is possible to move to a sibling of an ancestor. The other cases are invalid.
 
 ========
 Examples
