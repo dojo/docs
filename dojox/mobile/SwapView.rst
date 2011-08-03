@@ -1,0 +1,59 @@
+#format dojo_rst
+
+dojox.mobile.SwapView
+=====================
+
+:Authors: Yoshiroh Kamiyama
+:Developers: Yoshiroh Kamiyama
+:Available: since V1.7
+
+.. contents::
+    :depth: 2
+
+SwapView is a container widget that represents entire mobile device screen, and can be swiped horizontally. (In dojo-1.6, it was called 'FlippableView'.) SwapView is a subclass of `dojox.mobile.View <dojox/mobile/View>`_. SwapView allows the user to swipe the screen left or right to move between the views. When SwapView is swiped, it finds an adjacent SwapView to open it.
+
+======================
+Constructor Parameters
+======================
+
+Inherited from dojox.mobile.View:
+---------------------------------
+
++--------------+----------+---------+------------------------------------------------+
+|Parameter     |Type      |Default  |Description                                     |
++--------------+----------+---------+------------------------------------------------+
+|selected      |Boolean   |false    |If true, the view is displayed at startup time. |
++--------------+----------+---------+------------------------------------------------+
+
+=====
+Usage
+=====
+
+Basic usage is the same as for `dojox.mobile.View <dojox/mobile/View>`_. View transition will be performed in the order you place SwapViews in a page.
+
+========
+Examples
+========
+
+Declarative example
+-------------------
+
+In this example, there are two SwapViews, and the user can swipe the screen to move the views back and forth.
+
+.. code-block :: html
+
+  <div id="foo" dojoType="dojox.mobile.SwapView">
+    <h2 dojoType="dojox.mobile.RoundRectCategory">Page flipping demo</h2>
+    <div dojoType="dojox.mobile.RoundRect">
+      Swipe the screen left or right to flip between the views.
+    </div>
+  </div>
+
+  <div id="bar" dojoType="dojox.mobile.SwapView">
+    <h1 dojoType="dojox.mobile.Heading">View 2</h1>
+    <div dojoType="dojox.mobile.RoundRect">
+      View 2
+    </div>
+  </div>
+
+.. image:: SwapView-anim.gif
