@@ -140,6 +140,7 @@ The last example shows how one can use the color object directly to change the p
     html.style("someId", "backgroundColor", myColor);
     // This changes the background-color of the element "someId" to the color specified in myColor
   });
+
 ==========================
 Examples pre-1.7 API style
 ==========================
