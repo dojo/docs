@@ -67,8 +67,8 @@ Inherited from dojox.mobile._ItemBase:
 |label         |String    |""       |A label of the item. If the label is not specified, innerHTML is used as a label.                          |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 
-Parameters of this widget:
---------------------------
+Parameters from this widget:
+----------------------------
 
 +--------------+----------+-------------------+-----------------------------------------------------------------------------------------------------------+
 |Parameter     |Type      |Default            |Description                                                                                                |
