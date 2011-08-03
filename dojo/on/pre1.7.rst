@@ -1,3 +1,5 @@
+#format dojo_rst
+
 Using the dojo/on module with pre-AMD-style Dojo api's
 ======================================================
 
