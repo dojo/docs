@@ -3,8 +3,6 @@
 dojox.mobile.IconContainer
 ==========================
 
-:Status: Draft
-:Version: 1.0
 :Authors: Yoshiroh Kamiyama
 :Developers: Yoshiroh Kamiyama
 :Available: since V1.5
@@ -30,30 +28,33 @@ Since dojo-1.6, you need to dojo.require IconContainer because it has been moved
 Constructor Parameters
 ======================
 
-+------------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|Parameter         |Type      |Default  |Description                                                                                                |
-+------------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|defaultIcon       |String    |         |The default fall-back icon, which is displayed only when the specified icon has failed to load.            |
-+------------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|pressedIconOpacity|Number    |0.4      |If true, adds a shadow effect to the container element. The default value is false.                        |
-+------------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|transition        |String    |below    |A type of animated transition effect ("slide", "fade", "flip", or "none") or "below". If "below" is        |
-|                  |          |         |specified, the application contents are displayed below the icons. The default value is "below".           |
-+------------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|iconBase          |String    |         |The default icon path for child items. If a child item does not have its own icon parameter specified, this|
-|                  |          |         |value is used as its icon path. This parameter is especially useful when all or most of the icons are the  |
-|                  |          |         |same, or you use CSS sprite icons, where you specify an aggregated icon image with this parameter and an   |
-|                  |          |         |icon position for each icon.                                                                               |
-+------------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|iconPos           |String    |         |The default icon position for child items. This parameter is especially useful when all or most of the     |
-|                  |          |         |icons are the same.                                                                                        |
-+------------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|back              |String    |         |A label for the navigational control.                                                                      |
-+------------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|label             |String    |         |A title text of the heading. If the label is not specified, innerHTML is used as a label.                  |
-+------------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|single            |Boolean   |false    |If true, only one icon content can be opened at a time. The default value is false.                        |
-+------------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
++------------------+----------+----------------+-----------------------------------------------------------------------------------------------------------+
+|Parameter         |Type      |Default         |Description                                                                                                |
++------------------+----------+----------------+-----------------------------------------------------------------------------------------------------------+
+|defaultIcon       |String    |""              |The default fall-back icon, which is displayed only when the specified icon has failed to load.            |
++------------------+----------+----------------+-----------------------------------------------------------------------------------------------------------+
+|pressedIconOpacity|Number    |0.4             |The opacity of the pressed icon image.                                                                     |
++------------------+----------+----------------+-----------------------------------------------------------------------------------------------------------+
+|transition        |String    |"below"         |A type of animated transition effect. You can choose from the standard transition types, "slide", "fade",  |
+|                  |          |                |"flip", or from the extended transition types, "cover", "coverv", "dissolve", "flip2", "reveal", "revealv",|
+|                  |          |                |"scaleIn", "scaleOut", "slidev", "swirl", "zoomIn", "zoomOut". If "none" is specified, transition occurs   |
+|                  |          |                |immediately without animation.  If "below" is specified, the application contents are displayed below the  |
+|                  |          |                |icons.                                                                                                     |
++------------------+----------+----------------+-----------------------------------------------------------------------------------------------------------+
+|iconBase          |String    |""              |The default icon path for child items. If a child item does not have its own icon parameter specified, this|
+|                  |          |                |value is used as its icon path. This parameter is especially useful when all or most of the icons are the  |
+|                  |          |                |same, or you use CSS sprite icons, where you specify an aggregated icon image with this parameter and an   |
+|                  |          |                |icon position for each icon.                                                                               |
++------------------+----------+----------------+-----------------------------------------------------------------------------------------------------------+
+|iconPos           |String    |""              |The default icon position for child items. This parameter is especially useful when all or most of the     |
+|                  |          |                |icons are the same.                                                                                        |
++------------------+----------+----------------+-----------------------------------------------------------------------------------------------------------+
+|back              |String    |"Home"          |A label for the navigational control.                                                                      |
++------------------+----------+----------------+-----------------------------------------------------------------------------------------------------------+
+|label             |String    |"My Application"|A title text of the heading.                                                                               |
++------------------+----------+----------------+-----------------------------------------------------------------------------------------------------------+
+|single            |Boolean   |false           |If true, only one icon content can be opened at a time.                                                    |
++------------------+----------+----------------+-----------------------------------------------------------------------------------------------------------+
 
 ============================
 Lazy Loading of the contents
@@ -63,20 +64,18 @@ Each icon content may consist of one or more dojo widgets. Loading of all the ne
 
 Below is an example of lazy loading of icon contents. Before the dojo parser runs, the dojoType attributes of the lazy-load nodes are rewritten so that the specified modules (in this case, dijit.ColorPalette and dijit.ProgressBar) will not be be loaded by the parser. IconContainer loads them for you when you open icons.
 
-In this example, the requires parameter is also specified. The value is a comma-separated list of required modules that should be loaded before the content modules are loaded. For example, if you do a custom build that excludes base modules as much as possible, then you may need to specify required base modules explicitly as shown below.
-
 .. code-block :: html
 
   <ul dojoType="dojox.mobile.IconContainer" transition="below" iconBase="images/icon-1.png">
-    <li dojoType="dojox.mobile.IconItem" label="Color Palette" lazy="true" requires="dijit._base.wai,dijit._base.typematic,dojo._base.Color">
+    <li dojoType="dojox.mobile.IconItem" label="Color Palette" lazy="true">
       <div dojoType='dijit.ColorPalette'></div>
     </li>
-    <li dojoType="dojox.mobile.IconItem" label="Progress Bar" lazy="true" requires="dijit._base.wai">
+    <li dojoType="dojox.mobile.IconItem" label="Progress Bar" lazy="true">
       <div dojoType='dijit.ProgressBar'></div>
     </li>
   </ul>
 
-.. image:: IconContainer-lazy.png
+.. image:: IconContainer-lazy-17.png
 
 ========
 Examples
