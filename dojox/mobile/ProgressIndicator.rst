@@ -3,8 +3,6 @@
 dojox.mobile.ProgressIndicator
 ==============================
 
-:Status: Draft
-:Version: 1.0
 :Authors: Yoshiroh Kamiyama
 :Developers: Yoshiroh Kamiyama
 :Available: since V1.5
@@ -18,6 +16,12 @@ ProgressIndicator is a round spinning graphical representation that indicates th
 
 The spinning object is NOT an animated gif, but a collection of div elements. Non-CSS3 browsers do not have ability to rotate dom nodes. In that case, the indicator becomes a rectangle shape, not a round shape.
 
+=====
+Usage
+=====
+
+ProgressIndicator is not a widget. It is a singleton class. An instance of this class can be obtained by calling dojox.mobile.ProgressIndicator.getInstance(). The start() method of ProgressIndicator starts spinning, and the stop() method stops spinning. You need to explicitly add ProgressIndicator.domNode to somewhere visible. The stop() method automatically removes ProgressIndicator.domNode from the dom tree for you.
+
 ======================
 Constructor Parameters
 ======================
@@ -30,11 +34,24 @@ Constructor Parameters
 |colors        |Array     |         |An array of indicator colors.                                                                              |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 
-=====
-Usage
-=====
+=============
+Method Detail
+=============
 
-ProgressIndicator is not a widget. It is a singleton class. An instance of this class can be obtained by calling dojox.mobile.ProgressIndicator.getInstance(). The start() method of ProgressIndicator starts spinning, and the stop() method stops spinning. You need to explicitly add ProgressIndicator.domNode to somewhere visible. The stop() method automatically removes ProgressIndicator.domNode from the dom tree for you.
+start()
+-------
+	Starts the ProgressIndicator spinning.
+
+stop()
+------
+	Stop the ProgressIndicator spinning.
+
+setImage(/\*String\*/file)
+--------------------------
+	Set an indicator icon image file (typically animated GIF). If null is specified, restores the default spinner.
+
+	Parameters:
+		file - a path for an indicator icon image file
 
 ========
 Examples
