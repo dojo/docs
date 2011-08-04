@@ -22,7 +22,7 @@ SpinWheel is in a separate module file from _base.js. You need to dojo.require S
 
 .. code-block :: javascript
 
-  <link href="../themes/SpinWheel.css" rel="stylesheet">
+  <link href="../themes/common/SpinWheel.css" rel="stylesheet">
 
   dojo.require("dojox.mobile.SpinWheel");
 
