@@ -56,12 +56,11 @@ The on function is also available on queried NodeList's with the NodeList on() m
 .. code-block :: javascript
   
   // Dojo 1.7 preferred
-  define(["dojo/on","dojo/query"], function(on,$){
-    $("click").on(document, "click", clickHandler);
+  define(["dojo/query"], function($){
+    $("button").on("click", clickHandler);
   });
  
   // Pre 1.7 style
-  dojo.require("dojo.query");
   dojo.query("button").on("click", buttonClickHandler);
 
 Normalization
