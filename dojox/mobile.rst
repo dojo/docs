@@ -203,6 +203,26 @@ Carousel
 
   A widget that manages a list of images or content, and displays a paging indicator.  Allows a user to flick left/right to move between content items.
 
+Spin Wheel
+----------
+
+* `SpinWheel <dojox/mobile/SpinWheel>`_
+
+  A value picker component that has one or more slots.
+
+* `SpinWheelSlot <dojox/mobile/SpinWheelSlot>`_
+
+  A slot that is placed in a SpinWheel.
+
+* `SpinWheelDatePicker <dojox/mobile/SpinWheelDatePicker>`_
+
+  A date picker component that is derived from SpinWheel.
+
+* `SpinWheelTimePicker <dojox/mobile/SpinWheelTimePicker>`_
+
+  A time picker component that is derived from SpinWheel.
+
+
 ===============
 Getting Started
 ===============
