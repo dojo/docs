@@ -390,7 +390,6 @@ Programmer's Guide
 
 * `Dynamic Content Loading <dojox/mobile/dynamic-content-loading>`_
 * `Listening to Transition Events <dojox/mobile/transition-events>`_
-* `FAQ about dojox.mobile.parser <dojox/mobile/parser-faq>`_
 * `Cross-browser Support <dojox/mobile/cross-browser-support>`_
 * `Internationalization (i18n) <dojox/mobile/internationalization>`_
 * `Build <dojox/mobile/build>`_
@@ -399,4 +398,5 @@ Programmer's Guide
 Appendix
 ========
 
+* `Frequently Asked Questions <dojox/mobile/faq>`_
 * `Differences between 1.6 and 1.7 <dojox/mobile/differences-16-17>`_
