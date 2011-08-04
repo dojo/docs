@@ -3,8 +3,6 @@
 dojox.mobile.TabBarButton
 =========================
 
-:Status: Draft
-:Version: 1.0
 :Authors: Yoshiroh Kamiyama
 :Developers: Yoshiroh Kamiyama
 :Available: since V1.6
