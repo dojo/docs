@@ -20,23 +20,41 @@ Recommended approach is to substitute localized strings on a server due to the f
   * No http requests to retrieve i18n resources are necessary
   * Client-side does not need to look up the i18n resource table
 
-With that said, it is still possible to take client-side approach with dojo.i18n, although you'll have to pay a price in performance for doing so.
+You can still use a client-side approach to internationalization using Dojo's dojo/i18n module, although you'll have to pay the associated performance costs for doing so.
 
 =================
-dojox.mobile.i18n
+dojox/mobile/i18n
 =================
 
-dojox.mobile.i18n is an optional feature that simplifies localization using dojo.i18n. You can use the dojox.mobile.i18n.load() method to load a resource bundle. The method signature is the same as that of dojo.requireLocalization(). The return value is an array of localized string resources, which is returned from dojo.i18n.getLocalization().
+dojox/mobile/i18n is an optional module that simplifies localization using dojo/i18n. You can use the dojox.mobile.i18n.load() method to load a resource bundle. The method signature is the same as that of dojo.requireLocalization(). The return value is an array of localized string resources, which is returned from dojo.i18n.getLocalization().
 
 .. code-block :: javascript
 
+  // 1.7 async loader example (assumes dojoConfig set to 'async:1')
+  require(["dojox/mobile","dojox/mobile/i18n"],function(mobile,i18n){
+    var bundle = i18n.load("dojox.mobile.tests", "sample");
+  });
+
+.. code-block :: javascript
+
+  // Pre 1.7 sync loader example
   dojo.require("dojox.mobile.i18n");
   var bundle = dojox.mobile.i18n.load("dojox.mobile.tests", "sample");
 
+Alternative Approaches to i18n
+==============================
+
 It is not mandatory, but one simple approach is to use English text as resource keys. For example, as shown below, you can write as if you are writing an ordinary English application.
+
 
 .. code-block :: html
 
+  // Declarative markup using HTML5
+  <h1 data-dojo-type="dojox.mobile.Heading" back="Sunday">Day of the Week</h1>
+
+.. code-block :: html
+
+  // Declarative markup using HTML
   <h1 dojoType="dojox.mobile.Heading" back="Sunday">Day of the Week</h1>
 
 In fact, however, what you wrote are not English resource values, but resource keys, "Sunday" and "Day of the Week". That is, if you provide an Italian resource as follows,
@@ -75,4 +93,6 @@ If your resource value contains variables that have to be substituted with some 
 
 .. code-block :: javascript
 
-  dijit.byId("item1").set("label", bundle["MINUTES"].replace("%1", "30"));
+  require(["dojox/mobile","dojox/mobile/i18n","dijit/_base/manager"], function(mobile,i18n,WidgetManager){
+    WidgetManager.byId("item1").set("label", bundle["MINUTES"].replace("%1", "30"));
+  });
