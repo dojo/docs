@@ -25,7 +25,15 @@ HTML5 markup
 .. code-block :: html
 
   <select data-dojo-type="dijit.form.DataList" data-dojo-props='id:"fruit"' >
-        <option value="A">Apples</option>
-        <option value="B">Bananas</option>
-        <option value="O">Oranges</option>
+        <option value="Ap">Apples</option>
+        <option value="Ba">Bananas</option>
+        <option value="Bl">Blueberries</option>
+        <option value="Or">Oranges</option>
   </select>
+
+  <script type="text/javascript">
+        var store = dijit.byId('fruit');
+        alert('fruit that start with "B" = ' + store.query({name:/^B.*/}).map(function(option){ return option.name; }));
+  </script>
+
+.. image:: DataList.png
