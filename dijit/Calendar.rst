@@ -180,6 +180,8 @@ With a local custom template to change the layout (does not work against CDN)
 
 .. code-example::
   :height: 340
+  :type: inline
+  :version: 1.5
 
   .. javascript::
 
