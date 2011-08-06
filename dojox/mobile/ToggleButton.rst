@@ -26,7 +26,7 @@ Constructor Parameters
 +--------------+----------+---------------+-----------------------------------------------------------------------------------------------------------+
 |class         |String 	  |               |Additional CSS class names to add to baseClass.                                                            |
 +--------------+----------+---------------+-----------------------------------------------------------------------------------------------------------+
-|checked       |Boolean   | false         |Read-only boolean that returns the current state of the widget.                                            |
+|checked       |Boolean   |false          |Read-only boolean that returns the current state of the widget.                                            |
 +--------------+----------+---------------+-----------------------------------------------------------------------------------------------------------+
 |onChange      |Function  |               |An event handler used for checked state change notifications.                                              |
 +--------------+----------+---------------+-----------------------------------------------------------------------------------------------------------+
