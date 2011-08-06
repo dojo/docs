@@ -12,8 +12,7 @@ dojox.mobile.CheckBox
 .. contents::
     :depth: 2
 
-CheckBox is a very simple INPUT type="checkbox" widget. While checked, each of the widget's CSS class names are appended with "Checked" and 
-injected into the CSS class list. 
+CheckBox is a very simple INPUT type="checkbox" widget. CheckBox widgets maintain a *checked* boolean attribute (settable/gettable) that toggles on each click action.  While checked, each of the widget's CSS class names are appended with "Checked" and injected into the CSS class list. 
 
 
 ======================
