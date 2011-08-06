@@ -67,7 +67,7 @@ Using a dojo.store
   </script>
   <input type="text" data-dojo-type="dojox.mobile.ComboBox" data-dojo-props='store:colorMemoryStore, value:"Blue"'>
 
-.. image:: ComboBoxStore.png
+.. image:: ComboBoxStore2.png
 
 
 Using inline OPTION tags
