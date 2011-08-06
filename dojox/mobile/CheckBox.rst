@@ -12,7 +12,7 @@ dojox.mobile.CheckBox
 .. contents::
     :depth: 2
 
-CheckBox is a very simple INPUT type="checkbox" widget. CheckBox widgets maintain a *checked* boolean attribute (settable/gettable) that toggles on each click action.  While checked, each of the widget's CSS class names are appended with "Checked" and injected into the CSS class list. 
+CheckBox is a very simple INPUT type="checkbox" widget. CheckBox widgets maintain a *checked* boolean attribute (settable/gettable) that toggles on each click action.  While checked, each of the widget's CSS class names are appended with "Checked" and injected into the CSS class list. If embedded within a FORM element, CheckBox widgets will submit a value if in the checked state.
 
 
 ======================
@@ -28,6 +28,8 @@ Constructor Parameters
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
 |checked       |Boolean   | false        |Read-only boolean that returns the current state of the INPUT checkbox.                                    |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
+|value         |String    |on            |The value submitted on FORM submit if checked==true and the name attribute was specified.                  |
++--------------+----------+---------------+-----------------------------------------------------------------------------------------------------------+
 |onChange      |Function  |              |An event handler used for checked state change notifications.                                              |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
 
