@@ -22,13 +22,13 @@ Constructor Parameters
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
 |Parameter     |Type      |Default       |Description                                                                                                |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
-|baseClass     |String 	  |mblButton     |Default CSS class name used to render the button.                                                          |
+|baseClass     |String 	  |mblButton     |Default CSS class name used to render the widget.                                                          |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
 |class         |String 	  |              |Additional CSS class names to add to baseClass.                                                            |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
 |duration      |Number    |1000          |Duration of the selected CSS change in milliseconds.                                                       |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
-|label         |String    |              |A label of the button. If the label is not specified, innerHTML is used as a label.                        |
+|label         |String    |              |The label of the button. If the label is not specified, innerHTML is used as a label.                      |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
 |onClick       |Function  |              |An event handler used for press notifications.                                                             |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
