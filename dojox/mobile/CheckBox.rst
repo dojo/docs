@@ -22,14 +22,14 @@ Constructor Parameters
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
 |Parameter     |Type      |Default       |Description                                                                                                |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
-|baseClass     |String 	  | mblCheckBox  |Default CSS class name used to render the INPUT checkbox.                                                  |
+|baseClass     |String 	  |mblCheckBox   |Default CSS class name used to render the INPUT checkbox.                                                  |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
 |class         |String 	  |              |Additional CSS class names to add to baseClass.                                                            |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
-|checked       |Boolean   | false        |Read-only boolean that returns the current state of the INPUT checkbox.                                    |
+|checked       |Boolean   |false         |Read-only boolean that returns the current state of the INPUT checkbox.                                    |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
 |value         |String    |on            |The value submitted on FORM submit if checked==true and the name attribute was specified.                  |
-+--------------+----------+---------------+-----------------------------------------------------------------------------------------------------------+
++--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
 |onChange      |Function  |              |An event handler used for checked state change notifications.                                              |
 +--------------+----------+--------------+-----------------------------------------------------------------------------------------------------------+
 
