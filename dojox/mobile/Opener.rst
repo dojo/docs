@@ -53,4 +53,12 @@ Example
         <div id="spin1" dojoType="dojox.mobile.SpinWheelDatePicker"></div>
   </div>
 
-.. image:: SimpleMobileOpener.png
+Small screen Overlay
+--------------------
+
+.. image:: MobileOpenerOverlay.png
+
+Large screen Tooltip
+--------------------
+
+.. image:: MobileOpenerTooltip.png
