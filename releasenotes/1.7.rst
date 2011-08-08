@@ -42,7 +42,27 @@ Dojo now fully supports asynchronous loading of AMD modules. Asynchronous loadin
 
       <script data-dojo-config="async: true" src="dojo.js"></script>
 
-Note that in async mode many modules which were implicitly loaded before now (including dojo.parser) need to be explicitly loaded.   Be sure to list all the modules you are directly using in the require() list (or via the deprecated dojo.require() syntax).
+Note that in async mode many modules which were implicitly loaded before now (including dojo.parser) need to be explicitly loaded.   Be sure to list all the modules you are directly using in the require() list (or via the deprecated dojo.require() syntax).   For example:
+
+  .. code-block :: html
+
+           <script type="text/javascript" src="/dojo/dojo.js"
+              djConfig="parseOnLoad: true, async: true"></script>
+     
+          <script language="JavaScript" type="text/javascript">
+             require([
+                 "dojo/_base/html",   // needed for dojo.byId
+                 "dojo/parser",       // needed for parseOnLoad to run
+                 "dijit/_base/manager",  // needed for dijit.byId
+                 ...
+             ]);
+    
+             function update(){
+                 var viewNode = dojo.byId("view1");
+                 var view1 = dijit.byId("view1");
+                 view1.domNode.innerHTML = "...";
+             }
+           </script>
 
 Note that many core and dijit modules have been converted to use minimal dependencies in 1.7, to support lighter footprint when used in conjunction with async loading, and AMD module format and async loading is now a fully supported feature in 1.7; however, as part of this effort, exported objects returned from dojo core modules should be treated as subject to change.  Work on tightening exported module return values/api's will continue through 1.8.
 
