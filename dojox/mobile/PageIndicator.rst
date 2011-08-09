@@ -61,4 +61,4 @@ Declarative example
       <div dojoType="dojox.mobile.PageIndicator" fixed="bottom"></div>
   </body>
 
-.. image:: PageIndicator-slideshow.png
+.. image:: PageIndicator-anim.png
