@@ -26,7 +26,7 @@ Embedding flash media in HTML can be done in different ways. Usually the followi
  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="100%" height="700" id="flash1" name="flash1">
    <param name="movie" value="flash.swf">
    <param name="allowfullscreen" value="true">
-   <param name='allowscriptaccess" value="always">
+   <param name="allowscriptaccess" value="always">
    <param name="flashvars" value="var_1=value_1&var_2=value_2">
    <embed id="flash1"
           name="flash1"
