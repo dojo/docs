@@ -813,6 +813,7 @@ Every time the user defines a filter, the server will receive a ``filter`` comma
 the next section.
 
 After recieving the filter command, the server should respond with the count of filtered rows in this format:
+
 .. code-block :: javascript
   :linenos:
 
