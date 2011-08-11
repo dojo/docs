@@ -8,6 +8,12 @@ Internationalization (i18n)
 .. contents::
     :depth: 2
 
+There are a couple of approaches for internationalization of your dojox.mobile applications. From the performance perspective, the server-side approach is the best choice. However, you can of course choose a client-side approach with dojo.i18n. In some situations, you may want to use an optional feature dojox.mobile.i18n.
+
+========================
+Server-side Substitution
+========================
+
 dojox.mobile itself does not require dojo.i18n because:
 
   * Use of it increases the code size
@@ -67,7 +73,7 @@ dojox.mobile.i18n
 =================
 
 The above approach, however, requires javascript code for each UI widget that has translatable strings. That could be a pain especially when the application consists of a lot of widgets and is mainly wirtten as dojo markup.
-dojox.mobile.i18n is an optional feature that simplifies internationalization in such cases. It is a thin wrapper around dojo.i18n, and has ability to substitute strings, such as CDATA or attribute values, in dojo markup. You can use the dojox.mobile.i18n.load() method to load a resource bundle. The method signature is the same as that of dojo.requireLocalization(). The return value is an array of localized string resources, which is returned from dojo.i18n.getLocalization().
+dojox.mobile.i18n is an optional feature that simplifies internationalization in such cases. It is a thin wrapper around dojo.i18n, and has ability to replace strings, such as CDATA or attribute values, in dojo markup. You can use the dojox.mobile.i18n.load() method to load a resource bundle. The method signature is the same as that of dojo.requireLocalization(). The return value is an array of localized string resources, which is returned from dojo.i18n.getLocalization().
 
 .. code-block :: javascript
 
@@ -112,7 +118,7 @@ In this example, if you prepared a resource bundle for English, it would look li
 
 But you don't have to have English resource, because when a look-up fails, key is used as its value. That's the benefit of use of English text as resource keys. If you take this approach, you should not have English resource, since it simply increases the download size and no gain.
 
-If your resource value contains variables that have to be substituted with some given values, you need to access the resource bundle array, perform substitution, and apply the value to the widget.
+If your resource value contains variables that have to be replaced with some given values, you need to access the resource bundle array, perform substitution, and apply the value to the widget.
 
 .. code-block :: javascript
 
@@ -123,3 +129,11 @@ If your resource value contains variables that have to be substituted with some 
 .. code-block :: javascript
 
   dijit.byId("item1").set("label", bundle["MINUTES"].replace("%1", "30"));
+
+======================
+Why dojox.mobile.i18n?
+======================
+
+If you are developing custom widgets that have pre-defined translatable text inside the widgets, you have no choice. dojo.i18n is your solution.
+
+However, if you are developing dojox.mobile-based user applications that have user-defined translatable text, that is, when translatable text is given to dojox.mobile widgets, then dojo.i18n can still be your solution, but dojox.mobile.i18n may be another option, because it provides ability to replace string resource keys in dojo markup with translated text without JavaScript coding. Internationalization of your application's heading titles, button labels, list item labels, etc. are such examples.
