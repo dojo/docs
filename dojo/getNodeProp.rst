@@ -48,6 +48,12 @@ The following example reads effective values from the ``input`` node.
 
 .. cv-compound::
 
+  .. cv:: css
+
+     <style type="text/css">
+         
+     </style>
+
   .. cv:: javascript
 
     <script type="text/javascript">
