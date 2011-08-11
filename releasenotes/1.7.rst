@@ -428,6 +428,7 @@ HTML
 - dojo._getBorderBox() has been removed, use dojo.position() instead
 - dojo._setOpacity() has been removed, use dojo.style(node, "opacity", ...) instead
 - dojo.hasClass crashes if passed a DomNode which is a Text node; application code should make sure it doesn't pass in text nodes.   (They don't have class settings anyway.)
+- The private dojo._setMarginBox() and dojo._setContentSize() have been removed, and replaced with public dojo.setMarginBox() and dojo.setContentSize() functions.   The new API's take a hash (like dojo.marginBox() and dojo.contentBox()), ex:   dojo.setMarginBox(node, {h: 50, w: 30}), rather than a list of arguments like the previous private functions, ex: dojo._setMarginBox(node, NaN, NaN, 50, 30).
 
 dojo.moduleUrl()
 ````````````````
