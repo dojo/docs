@@ -47,7 +47,6 @@ Reading current values
 The following example reads effective values from the ``input`` node.
 
 .. cv-compound::
-  :version: local
 
   .. cv:: javascript
 
