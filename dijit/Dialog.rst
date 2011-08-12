@@ -180,8 +180,10 @@ To simply close the dialog, click the Cancel button, which calls the hide() func
 
   .. cv:: html
 
-    <div dojoType="dijit.Dialog" id="formDialog" title="Form Dialog"
-        onExecute="alert('submitted w/args:\n' + dojo.toJson(arguments[0], true));">
+    <div dojoType="dijit.Dialog" id="formDialog" title="Form Dialog">
+        <script type="dojo/method" event="onExecute">
+          alert('submitted w/args:\n' + dojo.toJson(this.get('value'), true));
+        </script>
         <table>
             <tr>
                 <td><label for="name">Name: </label></td>
