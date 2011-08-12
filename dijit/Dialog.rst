@@ -184,34 +184,34 @@ To simply close the dialog, click the Cancel button, which calls the hide() func
         <table>
             <tr>
                 <td><label for="name">Name: </label></td>
-                <td><input data-dojo-type="dijit.form.TextBox" type="text" name="name" id="name"></td>
+                <td><input dojoType="dijit.form.TextBox" type="text" name="name" id="name"></td>
             </tr>
             <tr>
                 <td><label for="loc">Location: </label></td>
-                <td><input data-dojo-type="dijit.form.TextBox" type="text" name="loc" id="loc"></td>
+                <td><input dojoType="dijit.form.TextBox" type="text" name="loc" id="loc"></td>
             </tr>
             <tr>
                 <td><label for="date">Start date: </label></td>
-                <td><input data-dojo-type="dijit.form.DateTextBox" type="text" name="sdate" id="sdate"></td>
+                <td><input dojoType="dijit.form.DateTextBox" type="text" name="sdate" id="sdate"></td>
             </tr>
             <tr>
                 <td><label for="date">End date: </label></td>
-                <td><input data-dojo-type="dijit.form.DateTextBox" type="text" name="edate" id="edate"></td>
+                <td><input dojoType="dijit.form.DateTextBox" type="text" name="edate" id="edate"></td>
             </tr>
             <tr>
                 <td><label for="date">Time: </label></td>
-                <td><input data-dojo-type="dijit.form.TimeTextBox" type="text" name="time" id="time"></td>
+                <td><input dojoType="dijit.form.TimeTextBox" type="text" name="time" id="time"></td>
             </tr>
             <tr>
                 <td><label for="desc">Description: </label></td>
-                <td><input data-dojo-type="dijit.form.TextBox" type="text" name="desc" id="desc"></td>
+                <td><input dojoType="dijit.form.TextBox" type="text" name="desc" id="desc"></td>
             </tr>
             <tr>
                 <td align="center" colspan="2">
-                    <button data-dojo-type="dijit.form.Button" type="submit"
-                        data-dojo-props="type:'submit',onClick:function(){return dijit.byId('formDialog').isValid();}">OK</button>
-                    <button data-dojo-type="dijit.form.Button" type="button"
-                        data-dojo-props="type:'button',onClick:function(){dijit.byId('formDialog').hide();}">Cancel</button>
+                    <button dojoType="dijit.form.Button" type="submit"
+                        onclick="return dijit.byId('formDialog').isValid();">OK</button>
+                    <button dojoType="dijit.form.Button" type="button"
+                        onclick="dijit.byId('formDialog').hide();">Cancel</button>
                 </td>
             </tr>
         </table>
