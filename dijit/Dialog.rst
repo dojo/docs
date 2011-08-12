@@ -180,10 +180,7 @@ To simply close the dialog, click the Cancel button, which calls the hide() func
 
   .. cv:: html
 
-    <div dojoType="dijit.Dialog" id="formDialog" title="Form Dialog">
-        <script type="dojo/method" event="onExecute">
-          alert('submitted w/args:\n' + dojo.toJson(this.get('value'), true));
-        </script>
+    <div dojoType="dijit.Dialog" id="formDialog" title="Form Dialog" execute="alert('submitted w/args:\n' + dojo.toJson(arguments[0], true));">
         <table>
             <tr>
                 <td><label for="name">Name: </label></td>
@@ -212,9 +209,9 @@ To simply close the dialog, click the Cancel button, which calls the hide() func
             <tr>
                 <td align="center" colspan="2">
                     <button data-dojo-type="dijit.form.Button" type="submit"
-                        data-dojo-props="onClick:function(){return dijit.byId('formDialog').isValid();}">OK</button>
+                        data-dojo-props="type:'submit',onClick:function(){return dijit.byId('formDialog').isValid();}">OK</button>
                     <button data-dojo-type="dijit.form.Button" type="button"
-                        data-dojo-props="onClick:function(){dijit.byId('formDialog').hide();}">Cancel</button>
+                        data-dojo-props="type:'button',onClick:function(){dijit.byId('formDialog').hide();}">Cancel</button>
                 </td>
             </tr>
         </table>
@@ -313,7 +310,7 @@ This example shows a Dialog that will ask the user to accept or decline the term
 
   .. cv:: html
 
-    <div dojoType="dijit.Dialog" id="formDialog" title="Accept or decline agreement terms" onExecute="alert('submitted w/args:\n' + dojo.toJson(arguments[0], true));">
+    <div dojoType="dijit.Dialog" id="formDialog" title="Accept or decline agreement terms" execute="alert('submitted w/args:\n' + dojo.toJson(arguments[0], true));">
         <h1>Agreement Terms</h1>
 	
          <div dojoType="dijit.layout.ContentPane" style="width:400px; border:1px solid #b7b7b7; background:#fff; padding:8px; margin:0 auto; height:150px; overflow:auto; ">
