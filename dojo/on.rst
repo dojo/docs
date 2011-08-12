@@ -153,7 +153,7 @@ The on.pausable function provides a means for pausing an event listener, while s
 
 .. code-block :: javascript
 
-  var buttonHandler = on(button, "click", clickHandler);
+  var buttonHandler = on.pausable(button, "click", clickHandler);
   on(disablingButton, "click", function(){
     buttonHandler.pause();
   });
