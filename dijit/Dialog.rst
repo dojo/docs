@@ -1,4 +1,3 @@
-## page was renamed from 1.2/dijit/Dialog
 #format dojo_rst
 
 dijit.Dialog
@@ -180,38 +179,39 @@ To simply close the dialog, click the Cancel button, which calls the hide() func
 
   .. cv:: html
 
-    <div dojoType="dijit.Dialog" id="formDialog" title="Form Dialog" execute="alert('submitted w/args:\n' + dojo.toJson(arguments[0], true));">
+    <div data-dojo-type="dijit.Dialog" id="formDialog" title="Form Dialog"
+        execute="alert('submitted w/args:\n' + dojo.toJson(arguments[0], true));">
         <table>
             <tr>
                 <td><label for="name">Name: </label></td>
-                <td><input dojoType="dijit.form.TextBox" type="text" name="name" id="name"></td>
+                <td><input data-dojo-type="dijit.form.TextBox" type="text" name="name" id="name"></td>
             </tr>
             <tr>
                 <td><label for="loc">Location: </label></td>
-                <td><input dojoType="dijit.form.TextBox" type="text" name="loc" id="loc"></td>
+                <td><input data-dojo-type="dijit.form.TextBox" type="text" name="loc" id="loc"></td>
             </tr>
             <tr>
                 <td><label for="date">Start date: </label></td>
-                <td><input dojoType="dijit.form.DateTextBox" type="text" name="sdate" id="sdate"></td>
+                <td><input data-dojo-type="dijit.form.DateTextBox" type="text" name="sdate" id="sdate"></td>
             </tr>
             <tr>
                 <td><label for="date">End date: </label></td>
-                <td><input dojoType="dijit.form.DateTextBox" type="text" name="edate" id="edate"></td>
+                <td><input data-dojo-type="dijit.form.DateTextBox" type="text" name="edate" id="edate"></td>
             </tr>
             <tr>
                 <td><label for="date">Time: </label></td>
-                <td><input dojoType="dijit.form.TimeTextBox" type="text" name="time" id="time"></td>
+                <td><input data-dojo-type="dijit.form.TimeTextBox" type="text" name="time" id="time"></td>
             </tr>
             <tr>
                 <td><label for="desc">Description: </label></td>
-                <td><input dojoType="dijit.form.TextBox" type="text" name="desc" id="desc"></td>
+                <td><input data-dojo-type="dijit.form.TextBox" type="text" name="desc" id="desc"></td>
             </tr>
             <tr>
                 <td align="center" colspan="2">
-                    <button dojoType="dijit.form.Button" type="submit"
-                        onclick="return dijit.byId('formDialog').isValid();">OK</button>
-                    <button dojoType="dijit.form.Button" type="button"
-                        onclick="dijit.byId('formDialog').hide();">Cancel</button>
+                    <button data-dojo-type="dijit.form.Button" type="submit"
+                        data-dojo-props="onClick:function(){return dijit.byId('formDialog').isValid();}">OK</button>
+                    <button data-dojo-type="dijit.form.Button" type="button"
+                        data-dojo-props="onClick:function(){dijit.byId('formDialog').hide();}">Cancel</button>
                 </td>
             </tr>
         </table>
@@ -361,13 +361,13 @@ This example shows a Dialog that will ask the user to accept or decline the term
             dojo.connect(dijit.byId("termsButton"), "onClick", formDlg, "show");
         });
 			
-        accept = function(){
+        var accept = function(){
             dojo.byId("decision").innerHTML = "Terms and conditions have been accepted.";
             dojo.style("decision", "color", "#00CC00");
             dijit.byId("formDialog").hide();
         }
 			
-        decline = function(){
+        var decline = function(){
             dojo.byId("decision").innerHTML = "Terms and conditions have not been accepted.";
             dojo.style("decision", "color", "#FF0000");
             dijit.byId("formDialog").hide();
