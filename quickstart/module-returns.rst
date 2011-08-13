@@ -40,3 +40,21 @@ dojo.filter
   
  `Module Syntax`: 
    array.filter
+
+dojo.every 
+-------------
+
+ `New Location`: 
+   dojo/base/_array
+  
+ `Module Syntax`: 
+   array.every
+
+dojo.some 
+-------------
+
+ `New Location`: 
+   dojo/base/_array
+  
+ `Module Syntax`: 
+   array.some
