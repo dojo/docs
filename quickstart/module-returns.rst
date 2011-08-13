@@ -11,14 +11,32 @@ This page documents the new locations for Dojo methods, that have traditionally 
 Each section below corresponds to a single AMD module, listing the methods returned along with their pre-AMD location.
 
 ==========
-dojo/array
+Dojo Base
 ==========
 
-forEach
--------
+dojo.forEach 
+-------------
 
-every
--------
+ `New Location`: 
+   dojo/base/_array
+  
+ `Method Syntax`: 
+   array.forEach
 
-forEach
-  dojo.forEach
+dojo.map 
+-------------
+
+ `New Location`: 
+   dojo/base/_array
+  
+ `Module Syntax`: 
+   array.map
+
+dojo.filter 
+-------------
+
+ `New Location`: 
+   dojo/base/_array
+  
+ `Module Syntax`: 
+   array.filter
