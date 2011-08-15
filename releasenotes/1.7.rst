@@ -16,9 +16,9 @@ The following browsers are supported. If a browser is not supported, it still ma
 
 Desktop
 
-  * Firefox 3.6,4.0,5.0
-  * Safari 5 and Chrome 11
-  * IE6, IE7, IE8, IE9
+  * Firefox 3.6, 4, 5
+  * Safari 5.0, 5.1 and Chrome 13 and later
+  * IE 6, 7, 8, 9
   * Opera 10.50 and later (Dojo core only)
 
 Mobile (dojox/mobile)
@@ -26,7 +26,7 @@ Mobile (dojox/mobile)
   * iOS 4.x (Safari) (including all Dijit widgets except Editor, Dialog)
   * Android 2.2,2.3,3.0 
   * Blackberry 6 
-  * Mobile compatibility on desktop browsers: IE8,IE9, Firefox 3.6/4.0, Safari5, Chrome 11
+  * Mobile compatibility on desktop browsers: IE 8, 9, Firefox 3.6, 4, 5, Safari 5.0, 5.1, Chrome 13 and later
 
   TODO: Link to page with specific vendor device models tested on 
 
