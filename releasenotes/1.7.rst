@@ -24,7 +24,7 @@ Desktop
 Mobile (dojox/mobile)
 
   * iOS 4.x (Safari) (including all Dijit widgets except Editor, Dialog)
-  * Android 2.2,2.3,3.0 
+  * Android 2.2, 2.3, 3.0 
   * Blackberry 6 
   * Mobile compatibility on desktop browsers: IE 8, 9, Firefox 3.6, 4, 5, Safari 5.0, 5.1, Chrome 13 and later
 
