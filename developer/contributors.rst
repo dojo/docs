@@ -45,6 +45,7 @@ A list of individuals who have signed Dojo CLAs:
 * Bernstein, Daniel
 * Bersac, Etienne 
 * Bertet, Pierre 
+* Best, Jason
 * Bevin, Geert 
 * Bhatia, Naresh 
 * Bittinger, Nathan 
