@@ -129,7 +129,7 @@ The following feature tests are available in Dojo 1.7.  This table shows the mod
   dojo/_base/sniff.js , opera
   dojo/_base/sniff.js , air
   dojo/_base/sniff.js , khtml
-  dojo/_base/sniff.js , webKit
+  dojo/_base/sniff.js , webkit
   dojo/_base/sniff.js , chrome
   dojo/_base/sniff.js , mac
   dojo/_base/sniff.js , safari
