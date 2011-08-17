@@ -10,9 +10,13 @@ Browser (User Agent) Sniffing
 .. contents::
     :depth: 2
 
-You should try to use feature detection (see dojo/has() api in 1.7) (See general overview http://dev.opera.com/articles/view/using-capability-detection/) whenever possible to write forward-compatible code branches. 
+You should always try to use feature detection (see dojo/has() api in 1.7) (See general overview http://dev.opera.com/articles/view/using-capability-detection/) whenever possible to write forward-compatible code branches. 
+
 When feature detection is an option, Dojo provides a number of ``is`` variables for browser detection, defined at runtime based that provide access to the current user agent (these are set based on parsing the current user agent string).
-As of Dojo 1.7, the user agent sniffing code has been split out into a separate module, "dojo/_base/sniff" so that when used with AMD loaders it will only be loaded in situations when it's needed.  These are the user agent properties available upon loading the "dojo/_base/sniff" module.  Note that if pre-1.7 style sync loading is used, the following api's are automatically made available to applications:
+As of Dojo 1.7, the user agent sniffing code has been split out into a separate module, "dojo/_base/sniff" so that when used with AMD loaders it will only be loaded in situations when it's needed.  These are the user agent properties available upon loading the "dojo/_base/sniff" module.  
+The sniff module augments the basic set of has() tests (dojo/has) with additional user agent based tests, so you can use the base has() api to test for browser environment and versions, just like you do for smaller features.  Using this approach in conjunction with an optimizing compiler at build time, it is possible to optimize-out unwanted code paths for specific browsers.
+
+For the remaining 1.x releases, the following api's off the dojo global object will always automatically be made available by the sniff module to applications that just load dojo, since all the dojo_/base modules are loaded, just like in versions prior to 1.7:
 
 * dojo.isIE
 * dojo.isMozilla
@@ -44,11 +48,11 @@ Each variable is only defined if the specified browser is being used. For exampl
     ...
   }
 
-======================================
-Example 1 - Dojo 1.7-style UA sniffing
-======================================
+===============================================================================
+Example 1 - Dojo 1.7-style User Agent sniffing (with minimal base dependencies)
+===============================================================================
 
-Here's a live sample to show how it works:
+Here's a live sample to show how it works, when using AMD and minimal base dependencies, so that we can show how the sniff module's return values can be mapped to has():
 
 .. code-block:: html
   :linenos:
@@ -57,27 +61,27 @@ Here's a live sample to show how it works:
   require("dojo/_base/sniff",// alias sniffing api to 'UA'
           "dojo/_base/Array",// alias array api to 'Array'
           "dojo/dom", // alias DOM api to 'DOM'
-       function (UA, Array, DOM){ 
+       function (has, array, dom){ 
 
     function makeFancyAnswer(who){
-      if(UA["is" + who]){
-        return "Yes, it's version " + UA["is" + who];
+      if(has(who)){
+        return "Yes, it's version " + has["is" + who];
       }else{ 
         return "No";
       }
     }
 
     function makeAtLeastAnswer(who, version) {
-      var answer = (UA["is" + who] >= version) ? "Yes" : "No";
-      DOM.byId("isAtLeast" + who + version).innerHTML = answer;
+      var answer = (has(who) >= version) ? "Yes" : "No";
+      dom.byId("isAtLeast" + who + version).innerHTML = answer;
     }
 
-    Array.forEach(["IE", "Mozilla", "FF", "Opera", "WebKit", "Chrome"],function(n) {
+    array.forEach(["ie", "mozilla", "ff", "opera", "webkit", "chrome"],function(n) {
       DOM.byId("answerIs" + n).innerHTML = makeFancyAnswer(n);
     });    
-    makeAtLeastAnswer("IE", 7);
-    makeAtLeastAnswer("FF", 3);
-    makeAtLeastAnswer("Opera", 9);
+    makeAtLeastAnswer("ie", 7);
+    makeAtLeastAnswer("ff", 3);
+    makeAtLeastAnswer("opera", 9);
 
   });
   </script>
