@@ -12,7 +12,7 @@ Browser (User Agent) Sniffing
 
 You should always try to use feature detection (see dojo/has() api in 1.7) (See general overview http://dev.opera.com/articles/view/using-capability-detection/) whenever possible to write forward-compatible code branches. 
 
-When feature detection is an option, Dojo provides a number of ``is`` variables for browser detection, defined at runtime based that provide access to the current user agent (these are set based on parsing the current user agent string).
+When feature detection is not an option, Dojo provides a number of ``is`` variables for browser detection, defined at runtime based that provide access to the current user agent (these are set based on parsing the current user agent string).
 As of Dojo 1.7, the user agent sniffing code has been split out into a separate module, "dojo/_base/sniff" so that when used with AMD loaders it will only be loaded in situations when it's needed.  These are the user agent properties available upon loading the "dojo/_base/sniff" module.  
 The sniff module augments the basic set of has() tests (dojo/has) with additional user agent based tests, so you can use the base has() api to test for browser environment and versions, just like you do for smaller features.  Using this approach in conjunction with an optimizing compiler at build time, it is possible to optimize-out unwanted code paths for specific browsers.
 
