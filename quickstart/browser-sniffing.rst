@@ -112,6 +112,8 @@ Here's a live sample to show how it works, when using AMD and minimal base depen
 Example 2 - Pre Dojo 1.7-style UA sniffing
 ==========================================
 
+This example has the same result, but loads much more code because it's using the full dojo api's (which consists of many smaller modules).  Note that rather than using the augmented has() api returned from the sniff module, this approach uses the older dojo.isXXX functions available on the dojo global object.
+
 .. code-block:: html
   :linenos:
 
