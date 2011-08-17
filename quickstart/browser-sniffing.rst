@@ -58,9 +58,9 @@ Here's a live sample to show how it works, when using AMD and minimal base depen
   :linenos:
 
   <script type="text/javascript">
-  require("dojo/_base/sniff",// alias sniffing api to 'UA'
-          "dojo/_base/Array",// alias array api to 'Array'
-          "dojo/dom", // alias DOM api to 'DOM'
+  require("dojo/_base/sniff",// alias sniffing api to 'has'
+          "dojo/_base/Array",// alias array api to 'array'
+          "dojo/dom", // alias DOM api to 'dom'
        function (has, array, dom){ 
 
     function makeFancyAnswer(who){
