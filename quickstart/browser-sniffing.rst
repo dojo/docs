@@ -16,7 +16,7 @@ When feature detection is not an option, Dojo provides a number of ``is`` variab
 As of Dojo 1.7, the user agent sniffing code has been split out into a separate module, "dojo/_base/sniff" so that when used with AMD loaders it will only be loaded in situations when it's needed.  These are the user agent properties available upon loading the "dojo/_base/sniff" module.  
 The sniff module augments the basic set of has() tests (dojo/has) with additional user agent based tests, so you can use the base has() api to test for browser environment and versions, just like you do for smaller features.  Using this approach in conjunction with an optimizing compiler at build time, it is possible to optimize-out unwanted code paths for specific browsers.
 
-For the remaining 1.x releases, the following api's off the dojo global object will always automatically be made available by the sniff module to applications that just load dojo, since all the dojo_/base modules are loaded, just like in versions prior to 1.7:
+For the remaining 1.x releases, the following api's off the dojo global object will always automatically be made available by the sniff module to applications that just load dojo, since all the dojo_/base modules are loaded, just like in versions prior to 1.7.  Using the has() api for user agent sniffing will be the preferred api style going forward to Dojo 2.0.
 
 * dojo.isIE
 * dojo.isMozilla
