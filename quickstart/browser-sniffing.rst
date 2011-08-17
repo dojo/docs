@@ -52,7 +52,7 @@ Each variable is only defined if the specified browser is being used. For exampl
 Example 1 - Dojo 1.7-style User Agent sniffing (with minimal base dependencies)
 ===============================================================================
 
-Here's a live sample to show how it works, when using AMD and minimal base dependencies, so that we can show how the sniff module's return values can be mapped to has():
+Here's a live sample to show how it works, when using AMD and minimal base dependencies rather than all modules that get implicitly loaded by the dojo package, so that we can show how the sniff module's return values can be mapped to has() to detect the current browser with a small amount of loaded code:
 
 .. code-block:: html
   :linenos:
@@ -77,7 +77,7 @@ Here's a live sample to show how it works, when using AMD and minimal base depen
     }
 
     array.forEach(["ie", "mozilla", "ff", "opera", "webkit", "chrome"],function(n) {
-      DOM.byId("answerIs" + n).innerHTML = makeFancyAnswer(n);
+      dom.byId("answerIs" + n).innerHTML = makeFancyAnswer(n);
     });    
     makeAtLeastAnswer("ie", 7);
     makeAtLeastAnswer("ff", 3);
