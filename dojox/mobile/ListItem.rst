@@ -36,7 +36,7 @@ Inherited from dojox.mobile._ItemBase:
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |icon          |String    |""       |An icon to display at the left of the item. The value can be either a path for an image file or a class    |
 |              |          |         |name of a DOM button. If icon is not specified, the iconBase parameter of the parent widget is used.       |
-|              |          |         |Default icon size for List Items is 29px x 29px.                                                           |
+|              |          |         |Default icon size for List Items is 29px wide by 29px height.                                              |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |iconPos       |String    |""       |The position of an aggregated icon. IconPos is comma separated values like top,left,width,height           |
 |              |          |         |(ex. "0,0,29,29"). If iconPos is not specified, the iconPos parameter of the parent widget is used.        |
