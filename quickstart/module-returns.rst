@@ -419,3 +419,16 @@ dojo.disconnect(handle)                                                         
 dojo.connectPublisher                                   ?                              ?
 dojo.isCopyKey                                          ?                              ?
 =====================================================   ============================   ====================================
+
+
+Notes
+-----
+
+Generated from:
+   - dojo core/base: http://oksoclap.com/siWDgVDJjI
+   - dijit (in progress): http://oksoclap.com/fEK8S2HvGp
+   - awk script to convert from raw data to REST format is http://oksoclap.com/LSETyLpsex
+
+TODO: roll in changes from there
+
+TODO: rename this page
