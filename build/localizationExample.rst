@@ -19,6 +19,14 @@ The dojo build system results in "layers", which are single large .js files that
 
 This document is more to do with how to arrange your source files so that the build system can work its magic.  We do not directly employ any build system switches or capabilities via ``build.sh`` or the profile .js file.
 
+There are several pages of existing documentation that describe the background and theory to the localization process:
+
+ - `Internalization Quickstart <quickstart/internalization/index>`_
+ - `getLocalization <dojo/i18n/getLocalization>`_
+ - `requireLocalization <dojo/requireLocalization>`_
+
+Here we provide a practical walkthrough of applying localisation to actual dijits and an actual build profile.
+
 ======================================================
 Starting Point - A Simple Test Dijit And Build Profile
 ======================================================
@@ -100,9 +108,9 @@ We must add a strings bundle in a `magic <http://en.wikipedia.org/wiki/Magic_%28
 .. code-block :: text
 
   testdijits/Foo.js     - The original Foo.js implementation
-  testdijits/nls/Foo.js - The new strings bundle
+  testdijits/nls/Foo.js - The new root strings bundle
 
-That is the 'default' language resource, for when no locale has been specified, or the requested locale is not available.  If we just provide that file, then every locale (fr, zh and so on) will contain that strings bundle.
+That is the ``root`` strings bundle, for when no locale has been specified, or the requested locale is not available.  If we just provide that file, then every locale (fr, zh and so on) will contain that strings bundle.
 
 Note:
   * we have not specified the strings bundle in the build profile
@@ -322,6 +330,52 @@ If you visit the page with no ``locale`` specified in the djConfig, and a browse
   Accept-Language fr,fr-fr;q=0.8,en-us;q=0.5,en;q=0.3
 
 then dojo will automatically serve the page with the ``fr`` string resources, and the dijits will automatically appear correctly to the user.
+
+================
+Trees of Locales
+================
+
+Locales can be thought of as a tree, starting at the generic ``root`` locale and descending into more specific sub-locales.  The `requireLocalization <dojo/requireLocalization>`_ page mentions that the bundles for each locale is merged to provide a single javascript object.  An example would be useful at this point.
+
+If we provide the following:
+
+.. code-block :: text
+
+  testdijits/nls/Foo.js
+  testdijits/nls/fr/Foo.js
+  testdijits/nls/fr-fr/Foo.js
+
+And they contain the following (just the strings are provided here, the full file is the syntax shown above):
+
+.. code-block :: text
+
+  testdijits/nls/Foo.js 
+        test: 'this is a test'
+  
+  testdijits/nls/fr/Foo.js
+        test: 'FRENCH this is a test FRENCH'
+  
+  testdijits/nls/fr-fr/Foo.js
+        fr_fr_test: 'FRENCH-FR this is only in the fr-fr bundle'
+
+Then our built bundles contain the following:
+
+.. code-block :: text
+
+  test/dojo/nls/testdijits_en.js
+  dojo.provide("dojo.nls.testdijits_en");dojo.provide("testdijits.nls.Foo");testdijits.nls.Foo._built=true;dojo.provide("testdijits.nls.Foo.en");testdijits.nls.Foo.en={"test":"this is a test"};dojo.provide("testdijits.nls.Bar");testdijits.nls.Bar._built=true;dojo.provide("testdijits.nls.Bar.en");testdijits.nls.Bar.en={"test":"BAR this is a test BAR"};
+
+  test/dojo/nls/testdijits_fr.js
+  dojo.provide("dojo.nls.testdijits_fr");dojo.provide("testdijits.nls.Foo");testdijits.nls.Foo._built=true;dojo.provide("testdijits.nls.Foo.fr");testdijits.nls.Foo.fr={"test":"FRENCH this is a test FRENCH"};dojo.provide("testdijits.nls.Bar");testdijits.nls.Bar._built=true;dojo.provide("testdijits.nls.Bar.fr");testdijits.nls.Bar.fr={"test":"FRENCH BAR this is a test BAR FRENCH"};
+
+  test/dojo/nls/testdijits_fr-fr.js
+  dojo.provide("dojo.nls.testdijits_fr-fr");dojo.provide("testdijits.nls.Foo");testdijits.nls.Foo._built=true;dojo.provide("testdijits.nls.Foo.fr_fr");testdijits.nls.Foo.fr_fr={"fr_fr_test":"FRENCH-FR this is only in the fr-fr bundle","test":"FRENCH this is a test FRENCH"};dojo.provide("testdijits.nls.Bar");testdijits.nls.Bar._built=true;dojo.provide("testdijits.nls.Bar.fr_fr");testdijits.nls.Bar.fr_fr={"test":"FRENCH BAR this is a test BAR FRENCH"};
+
+The important points here are:
+
+  - All language bundles contain the basic ``test`` string.
+  - The ``fr`` bundle contains the FRENCH version of ``test``.
+  - The ``fr-fr`` bundle contains both ``test`` and ``fr_fr_test``.
 
 ======================
 Multiple Custom Dijits
