@@ -307,13 +307,21 @@ Specifying ``locale: 'fr'`` in test.html results in the following network activi
   test/dojo/testdijits.js
   test/dojo/nls/testdijits_fr.js
 
-And of course, the page shows:
+So, the only string resources that are transmitted over the network are those for the ``fr`` locale for all the dijits baked into the ``testdijits`` layer.  And of course, the page shows:
 
 .. code-block :: text
 
   Here is the dijit:
   
   The string: FRENCH this is a test FRENCH
+
+If you visit the page with no ``locale`` specified in the djConfig, and a browser which is sending a suitable ``Accept-Language`` header, for example:
+
+.. code-block :: text
+
+  Accept-Language fr,fr-fr;q=0.8,en-us;q=0.5,en;q=0.3
+
+then dojo will automatically serve the page with the ``fr`` string resources, and the dijits will automatically appear correctly to the user.
 
 ======================
 Multiple Custom Dijits
