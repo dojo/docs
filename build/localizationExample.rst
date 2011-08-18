@@ -17,6 +17,8 @@ Introduction
 
 The dojo build system results in "layers", which are single large .js files that contain a concatenation (plus some magic sugar) of individual .js files from the SDK.  Localization bundles are not, by default, included in these layer .js files.  They exist in their own parallel set of .js files, and are built into their own concatenated .js file.  So, a "layer" can actually be thought of two files, a main .js file containing the Javascript implementation (and interned template strings), and a set of strings bundle .js files.
 
+This document is more to do with how to arrange your source files so that the build system can work its magic.  We do not directly employ any build system switches or capabilities via ``build.sh`` or the profile .js file.
+
 ======================================================
 Starting Point - A Simple Test Dijit And Build Profile
 ======================================================
@@ -59,7 +61,7 @@ build.sh releaseName=test profile=test action=clean,release
 
 The built layer will be in ``../../release/test/dojo/testdijits.js``.
 
-The build will also produce a localized strings bundle for the "testdijits.js" layer, but at the moment it'll be empty.  In the build directory, look in ../../release/test/dojo/nls.  You should see a file for each locale, e.g. testdijits_ar.js, testdijits_ca.js, etc.  Each will be nearly empty, with a simple provide call e.g. dojo.provide("dojo.nls.testdijits_ar");
+The build will also produce a localized strings bundle for the "testdijits.js" layer.  In the build directory, look in ../../release/test/dojo/nls.  You should see a file for each locale, e.g. testdijits_ar.js, testdijits_ca.js, etc.  Each will be nearly empty, with a simple provide call e.g. ``dojo.provide("dojo.nls.testdijits_ar");``.  This indicates that the build process has created localised strings bundles for your layer, but there were no actual strings provided to put in those bundles.
 
 A 'real world' build will contain many dijits (testdijits.Foo, testdijits.Bar, testdijits.App etc.), each with their own strings bundle.  Our aim is to make those individual strings bundles build to a single file for efficient download to the client at runtime, rather than a single network request per file.
 
@@ -91,14 +93,16 @@ So far, no localization.  Lets add a string resource.  Our Foo.js implementation
   	}
   })
 
-We must add a strings bundle in a magic directory called 'nls', like so:
+So the template contains a template variable usage, ${messages.test}.  Before the template is processed, the widget lifecycle dictates that ``postMixInProperties`` is called, which our implementation uses to prepare and make available a ``this.messages`` variable.  This is simply a variable on our dijit instance.  When the template is then processed in ``buildRendering`` later in the lifecycle, the ${messages.test} reference is resolved from ``this.messages.test``.
+
+We must add a strings bundle in a `magic <http://en.wikipedia.org/wiki/Magic_%28programming%29>`_ directory called ``nls``, like so:
 
 .. code-block :: text
 
   testdijits/Foo.js     - The original Foo.js implementation
   testdijits/nls/Foo.js - The new strings bundle
 
-That is the 'default' language resource, for when no locale has been specified, or the requested locale is not available.  If we just provide that file, then every locale (fr-fr, zh and so on) will contain that strings bundle.
+That is the 'default' language resource, for when no locale has been specified, or the requested locale is not available.  If we just provide that file, then every locale (fr, zh and so on) will contain that strings bundle.
 
 Note:
   * we have not specified the strings bundle in the build profile
@@ -155,6 +159,17 @@ To use this dijit, use a simple test file such as ``test.html``:
     
   The string: this is a test
 
+An important distinction to make here is that the original source of yours (slightly modified) is in the output build, *as well as* the compiled layer and nls resources.  This can be confusing for a beginner.  Focussing on the output build tree, in the ``test`` directory (because we specified ``releaseName=test`` on the build.sh command line):
+
+.. code-block :: text
+
+  testdijits/Foo.js        - The source testdijits/Foo.js implementation (slightly modified, see later)
+  testdijits/nls/Foo.js    - The source strings bundle
+  dojo/testdijits.js       - The compiled layer containing testdijits/Foo.js
+  dojo/nls/testdijits_*.js - Many nls resources, one per supported locale, containing testdijits/nls/Foo.js
+
+When you come to actually use your compiled layer, you'll be using the files from ``dojo/testdijits.js`` and ``dojo/nls/testdijits_*.js``, _not_ the copy of your original code, in ``testdijits/*``.
+
 ==============================================
 Optimising Performance - Using the Built Layer
 ==============================================
@@ -193,7 +208,7 @@ In the test.html file above, we only linked to the dojo.js file.  Thus, the dojo
 
 The first Foo.js is ``test/testdijits/Foo.js`` and the second is ``test/testdijits/nls/Foo.js``.  Note that I haven't had to manually load that second Foo.js file .. it has been loaded automatically by the ``dojo.getLocalization`` call.
 
-If you add ``locale: 'fr-fr'`` to the djConfig at this point, you'll see no different in the network requests, it still fetches the ``test/testdijits/nls/Foo.js`` file.  Why didn't it even bother looking for a 'fr-fr' nls file?  I'll answer this in the next section.
+If you add ``locale: 'fr'`` to the djConfig at this point, you'll see no different in the network requests, it still fetches the ``test/testdijits/nls/Foo.js`` file.  Why didn't it even bother looking for a 'fr' nls file?  I'll answer this in the next section.
 
 To use your built layer, link to it after the link to dojo.js:
 
