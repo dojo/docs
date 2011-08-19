@@ -68,4 +68,4 @@ Gray out the screen
 
   .. cv :: html 
 
-    <button type="button" onlick="block();">gray the screen</button>
+    <button type="button" onclick="block();">gray the screen</button>
