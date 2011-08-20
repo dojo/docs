@@ -269,7 +269,7 @@ There are several additional editor plugins provided by dijit and are listed out
 |                                             |insertImage      |content.  The actions handle inserting hyperlinks (<a> tags) and      |
 |                                             |                 |inserting images (<img> tags).  The plugin provides basic, but        |
 |                                             |                 |decent validating Tooltip Dialog editors for working with both types  |
-|                                             |                 |of external links.                                                    |
+|                                             |                 |of external links. See also `<dojox/editor/plugins/LocalImage>`_      |
 +---------------------------------------------+-----------------+----------------------------------------------------------------------+
 |dijit._editor.plugins.FullScreen             |fullscreen       |A toolbar button plus hotkey for invoking an                          |
 |                                             |                 |action that will toggle the editor's fullscreen mode, where it        |
@@ -344,6 +344,9 @@ DojoX (Dojo eXtensions) contains even more plugins for improving the capabilitie
 +---------------------------------------------+----------------------+----------------------------------------------------------------------+
 |dojox.editor.plugins.InsertAnchor            |insertanchor          |A simple plugin for inserting anchors (named hash points) in the page |
 |                                             |                      |**New to Dojo toolkit 1.5.**                                          |
++---------------------------------------------+----------------------+----------------------------------------------------------------------+
+|dojox.editor.plugins.LocalImage              |LocalImage            |Allows local images to be uploaded and inserted into the document.    |
+|                                             |                      |**New to Dojo toolkit 1.6.**                                          |
 +---------------------------------------------+----------------------+----------------------------------------------------------------------+
 |dojox.editor.plugins.CollapsibleToolbar      |collapsibletoolbar    |A simple plugin for allowing the collapse of the top button tooolbar  |
 |                                             |                      |for more editor space.                                                |
