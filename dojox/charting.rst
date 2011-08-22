@@ -83,6 +83,7 @@ Below are two typical examples of how to create a Dojo Chart in HTML and JavaScr
   :height: 250
   :width: 360
   :toolbar: versions
+  :version: 1.7
 
   .. html::
 
@@ -91,16 +92,16 @@ Below are two typical examples of how to create a Dojo Chart in HTML and JavaScr
   .. javascript::
 
     <script type="text/javascript">
-      dojo.require("dojox.charting.Chart2D");
-      makeCharts = function(){
-  	var chart1 = new dojox.charting.Chart2D("simplechart");
-  	chart1.addPlot("default", {type: "Lines"});
-  	chart1.addAxis("x");
-  	chart1.addAxis("y", {vertical: true});
-  	chart1.addSeries("Series 1", [1, 2, 2, 3, 4, 5, 5, 7]);
-  	chart1.render();
-      };
-      dojo.addOnLoad(makeCharts);
+      require(["dojox/chart/Chart", "dojox/charting/Lines", "dojo/ready"], function(Chart, Lines, ready){
+        ready(function(){
+  	  var chart1 = new Chart("chartamd");
+  	  chart1.addPlot("default", {type: Lines});
+  	  chart1.addAxis("x");
+  	  chart1.addAxis("y", {vertical: true});
+  	  chart1.addSeries("Series 1", [1, 2, 2, 3, 4, 5, 5, 7]);
+  	  chart1.render();
+        });
+      });
     </script>
 
 
