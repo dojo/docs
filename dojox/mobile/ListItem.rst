@@ -41,10 +41,11 @@ Inherited from dojox.mobile._ItemBase:
 |iconPos       |String    |""       |The position of an aggregated icon. IconPos is comma separated values like top,left,width,height           |
 |              |          |         |(ex. "0,0,29,29"). If iconPos is not specified, the iconPos parameter of the parent widget is used.        |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|moveTo        |String    |""       |The id of the transition destination view which resides in the current page. If you add the hash sign ('#')|
-|              |          |         |before the id, the view transition updates the hash in the browser URL so that the user can bookmark the   |
-|              |          |         |destination view. The user can also use the browser's back/forward button to navigate through the views in |
-|              |          |         |the browser history.                                                                                       |
+|moveTo        |String    |""       |The id of the transition destination view which resides in the current page. If the value has a hash sign  |
+|              |          |         |('#') before the id (e.g. #view1) and the dojo.hash module is loaded by the user application, the view     |
+|              |          |         |transition updates the hash in the browser URL so that the user can bookmark the destination view. In this |
+|              |          |         |case, the user can also use the browser's back/forward button to navigate through the views in the browser |
+|              |          |         |history. If null, transitions to a blank view. If '#', returns immediately without transition.             |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |href          |String    |""       |A URL of another web page to go to.                                                                        |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
