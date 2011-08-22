@@ -83,7 +83,7 @@ Below are two typical examples of how to create a Dojo Chart in HTML and JavaScr
   :height: 250
   :width: 360
   :toolbar: versions
-  :version: 1.7
+  :version: Trunk
 
   .. html::
 
