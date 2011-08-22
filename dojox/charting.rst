@@ -50,7 +50,7 @@ Dojo's Charting module provides a way to quickly and easily add great looking an
 Charting Basics
 ===============
 
-Here is an example that is typical of a starting point for creating a Dojo Chart:
+Below are two typical examples of how to create a Dojo Chart in HTML and JavaScript. The first example is using the historical Dojo syntax for packages and the second example is basically the same example using the new Dojo AMD syntax for modules. Both examples are strictly equivalent in term of charting features but you are encourage starting with Dojo 1.7 to use the new AMD syntax. See `AMD loader documentation <developer/design/loader>`_ for more details on AMD.
 
 .. code-example::
   :type: inline
@@ -76,6 +76,33 @@ Here is an example that is typical of a starting point for creating a Dojo Chart
       };
       dojo.addOnLoad(makeCharts);
     </script>
+
+
+.. code-example::
+  :type: inline
+  :height: 250
+  :width: 360
+  :toolbar: versions
+
+  .. html::
+
+    <div id="chartamd" style="width: 250px; height: 150px; margin: 5px auto 0px auto;"></div>
+
+  .. javascript::
+
+    <script type="text/javascript">
+      dojo.require("dojox.charting.Chart2D");
+      makeCharts = function(){
+  	var chart1 = new dojox.charting.Chart2D("simplechart");
+  	chart1.addPlot("default", {type: "Lines"});
+  	chart1.addAxis("x");
+  	chart1.addAxis("y", {vertical: true});
+  	chart1.addSeries("Series 1", [1, 2, 2, 3, 4, 5, 5, 7]);
+  	chart1.render();
+      };
+      dojo.addOnLoad(makeCharts);
+    </script>
+
 
 Take a look at the source and you will see that it is simple to create charts.
 
