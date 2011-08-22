@@ -27,7 +27,11 @@ Constructor Parameters
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |href 	       |String    |""       |A URL to open when the navigational control is pressed.                                                    |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|moveTo        |String    |""       |An id of a View to which the current view moves when the navigational control is pressed.                  |
+|moveTo        |String    |""       |The id of the transition destination view which resides in the current page. If the value has a hash sign  |
+|              |          |         |('#') before the id (e.g. #view1) and the dojo.hash module is loaded by the user application, the view     |
+|              |          |         |transition updates the hash in the browser URL so that the user can bookmark the destination view. In this |
+|              |          |         |case, the user can also use the browser's back/forward button to navigate through the views in the browser |
+|              |          |         |history. If null, transitions to a blank view. If '#', returns immediately without transition.             |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |transition    |String    |"slide"  |A type of animated transition effect. You can choose from the standard transition types, "slide", "fade",  |
 |              |          |         |"flip", or from the extended transition types, "cover", "coverv", "dissolve", "flip2", "reveal", "revealv",|
