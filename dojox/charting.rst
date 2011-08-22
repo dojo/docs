@@ -52,6 +52,8 @@ Charting Basics
 
 Below are two typical examples of how to create a Dojo Chart in HTML and JavaScript. The first example is using the historical Dojo syntax for packages and the second example is basically the same example using the new Dojo AMD syntax for modules. Both examples are strictly equivalent in term of charting features but you are encourage starting with Dojo 1.7 to use the new AMD syntax. See `AMD loader documentation <developer/design/loader>`_ for more details on AMD.
 
+In historical syntax:
+
 .. code-example::
   :type: inline
   :height: 250
@@ -77,6 +79,8 @@ Below are two typical examples of how to create a Dojo Chart in HTML and JavaScr
       dojo.addOnLoad(makeCharts);
     </script>
 
+
+In AMD syntax:
 
 .. code-example::
   :type: inline
