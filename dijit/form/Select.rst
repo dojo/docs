@@ -135,3 +135,24 @@ By default, the width of the select widget will be to fit the width of the selec
     </select>
 
 The above example also demonstrates using type="separator" to get dividing lines between groups of options.
+
+=============
+Accessibility
+=============
+
+Keyboard
+--------
+
++------------------------------------------------------+---------------+
+| **Action**                                           | **Key**       |
++------------------------------------------------------+---------------+
+| Open the menu of options (filtered by current input) | Down arrow    |
++------------------------------------------------------+---------------+
+| Navigate through the options                         | Up/Down arrow |
++------------------------------------------------------+---------------+
+| Pick an option                                       | Enter         |
++------------------------------------------------------+---------------+
+| Close the menu of options without selection          | Esc           |
++------------------------------------------------------+---------------+
+
+If the menu is open, pressing the Tab key will close the menu only.  It will not focus the next element unless you press the Tab key a second time.
