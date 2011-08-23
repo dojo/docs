@@ -10,8 +10,7 @@ dojo/on
 .. contents::
   :depth: 2
 
-The dojo/on module is a general-purpose event handler, providing normalized event listening and event dispatching functionality. This module is designed to be lightweight and fast, based on modern browsers' event model.
-
+The dojo/on module is a general-purpose event handler for DOM nodes, providing normalized event listening and event dispatching functionality. This module is designed to be lightweight and fast, based on modern browsers' event model. 
 ===========
 dojo/on API
 ===========
@@ -199,3 +198,7 @@ The on module also provides an Evented property that is a class that can be used
     ...
   });
   component.startup();
+
+Converting from dojo.connect
+----------------------------
+dojo/on can replace dojo.connect when connect is used for connecting to DOM nodes.  If you're connecting to normal JS objects and functions, use dojo/aspect instead.
