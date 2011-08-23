@@ -202,4 +202,4 @@ The on module also provides an Evented property that is a class that can be used
 
 Converting from dojo.connect
 ----------------------------
-dojo/on can replace dojo.connect when connect is used for connecting to DOM nodes.  If you're connecting to normal JS objects and functions, use dojo/aspect instead.
+dojo/on can replace dojo.connect when connect is used for connecting to DOM nodes.  If you're connecting to normal JS objects and functions, use dojo/aspect instead.  Also, note that event names may need to be changed to remove "on" from the names and lower-case the remaining event names used with dojo.connect.
