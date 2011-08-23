@@ -68,8 +68,7 @@ Note that many core and dijit modules have been converted to use minimal depende
 
 Completion of AMD conversion (Rawld etc. please fill this in)
 
-Known Limitations
------------------
+Limitations:
 Some existing Dojo <1.7 modules were designed such that they only work in sync loading mode.  These modules continue to be supported in synchronous mode using the compatibility support but are not supported in asynchrous loading mode.  The community is looking at potential replacements in the 2.0 timeframe:
 
   DTL (dojox.dtl - Django Templating) 
