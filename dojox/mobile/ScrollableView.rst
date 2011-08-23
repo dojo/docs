@@ -70,7 +70,7 @@ View header/footer bars are fixed-positioned bars that are local to the view to 
 
 To make a bar widget (Heading, TabBar, or perhaps your custom bar widget) fixed-positioned,
 
-1. Place it outside ScrollableView
+1. Place it inside ScrollableView
 2. Add fixed="top" for a header bar, or fixed="bottom" for a footer bar
 
 .. code-block :: html
