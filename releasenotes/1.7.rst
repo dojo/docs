@@ -158,7 +158,7 @@ dojo/touch
 
 This new module provides a device neutral way to handle touchstart | touchmove | touchend with the native event properties normalized. 
 
-dojo/touch is based on `dojo/on <dojo/on>`_ and the following sample usage can work well across desktop and touch devices(Andriod 2.3/2.3 and iOS3+ for 1.7):
+dojo/touch is based on `dojo/on <dojo/on>`_ and the following sample usage can work well across desktop and touch devices(Android 2.3/2.3 and iOS3+ for 1.7):
 
    .. code-block :: javascript
       
@@ -171,9 +171,9 @@ Please refer to `dojo/touch doc(TODO) <dojo/touch>`_ for more details.
 dojo/gesture
 ------------
 
-Based on dojo.touch and dojo.on, this new module provides a mechanism to write gestures working well on difference devices including desktops(single gestures) and various touch devices. 
+Based on dojo.touch and dojo.on, this new module provides a mechanism to write gestures working well on difference devices including desktop (single gestures) and various touch devices. 
 
-This new module provides following functionalities(most of them are used internally by various gesture instances):
+This new module provides following functionality:
 
 - Register/un-register a global singleton gesture instance
 - Bind dojoj/on handlers for each gesture event e.g. tap, taphold, doubletap ...
