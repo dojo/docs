@@ -32,8 +32,8 @@ Inherited from dojox.mobile._ItemBase:
 |transitionDir |Number    |1        |The transition direction. If 1, transition forward. If -1, transition backward. For example, the slide     |
 |              |          |         |transition slides the view from right to left when dir == 1, and from left to right when dir == -1.        |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|icon          |String    |""       |An icon to display at the left of the item. The value can be either a path for an image file or a class    |
-|              |          |         |name of a DOM button. If icon is not specified, the iconBase parameter of the parent widget is used.       |
+|icon          |String    |""       |An icon image to display. The value can be either a path for an image file or a class name of a DOM button.|
+|              |          |         |If icon is not specified, the iconBase parameter of the parent widget is used.                             |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |iconPos       |String    |""       |The position of an aggregated icon. IconPos is comma separated values like top,left,width,height           |
 |              |          |         |(ex. "0,0,29,29"). If iconPos is not specified, the iconPos parameter of the parent widget is used.        |
