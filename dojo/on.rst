@@ -11,6 +11,7 @@ dojo/on
   :depth: 2
 
 The dojo/on module is a general-purpose event handler for DOM nodes, providing normalized event listening and event dispatching functionality. This module is designed to be lightweight and fast, based on modern browsers' event model. 
+
 ===========
 dojo/on API
 ===========
