@@ -69,7 +69,7 @@ Parameters from this widget:
 |icon1         |String    |         |A path for the unselected (typically dark) icon. If icon is not specified, the iconBase parameter of the   |
 |              |          |         |parent widget is used.                                                                                     |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
-|icon2         |String    |         |A path for the unselected (typically highlight) icon. If icon is not specified, the iconBase parameter of  |
+|icon2         |String    |         |A path for the selected (typically highlight) icon. If icon is not specified, the iconBase parameter of    |
 |              |          |         |the parent widget or icon1 is used.                                                                        |
 +--------------+----------+---------+-----------------------------------------------------------------------------------------------------------+
 |iconPos1      |String    |         |The position of an aggregated unselected (typically dark) icon. IconPos1 is comma separated values like    |
