@@ -10,7 +10,7 @@ dojox.mobile.TabBarButton
 .. contents::
     :depth: 2
 
-TabBarButton is a button that is placed in the TabBar widget. It is a subclass of dojox.mobile.AbstractItem just like ListItem or IconItem. So, unlike Button, it has similar capability as ListItem or IconItem, such as icon support, transition, etc.
+TabBarButton is a button that is placed in the TabBar widget. It is a subclass of dojox.mobile._ItemBase just like ListItem or IconItem. So, unlike Button, it has similar capability as ListItem or IconItem, such as icon support, transition, etc.
 
 .. image:: TabBarButton.png
 
