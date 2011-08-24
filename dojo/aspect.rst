@@ -110,9 +110,9 @@ The target is the object with the method. The methodName is the name of the meth
     aspect.around(dojo, "xhr", function(originalXhr){
       return function(method, args){
         // doing something before the original call
-        var result = originalXhr(method, args);
+        var deferred = originalXhr(method, args);
         // doing something after the original call
-        return result;
+        return deferred;
       }
     });	
     dojo.xhr("PUT", {...}); 
