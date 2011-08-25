@@ -13,17 +13,18 @@ dijit/registry
 Introduction
 ============
 
-dijit/registry is a collection of all Dijit widgets within a page. It can be used for bulk operation and control of groups of widgets. In Dojo 1.6 and earlier, it is an instance of `dijit.WidgetSet <dijit/WidgetSet>`_. Starting in Dojo 1.7, it is a singleton and is accessible from the dijit/registry module.
+dijit/registry stores a collection of all the dijit widgets within a page. It is commonly used to retrieve a reference to a widget from a related piece of data (such as the widget’s DOM node or ID). It contains many functions formerly found on the root ``dijit`` object, such as ``dijit.byId`` and ``dijit.byNode``.
 
-Unlike earlier versions, starting in 1.7, dijit/registry does not include array iterator methods (forEach, filter, byClass, map, every, and some) by default. Until Dojo 2.0, including dijit.WidgetSet will re-enable these methods. If you need to iterate over the registry, call ``dijit.registry.toArray`` and use the standard `dojo/array`_ functions.
+In Dojo 1.6 and earlier, the registry is an instance of `dijit/WidgetSet`_. Starting in Dojo 1.7, it is an object.
 
-In 1.7 and beyond, dijit/registry contains many functions formerly found on the root ``dijit`` object, such as ``dijit.byId`` and ``dijit.byNode``.
+Starting in Dojo 1.7, the registry does not include array iterator methods by default (forEach, filter, byClass, map, every, and some). Requiring dijit/WidgetSet will automatically re-add these methods (until Dojo 2.0). If you need to iterate over the entire registry, it is best to call ``registry.toArray`` and use the standard `dojo/array`_ functions.
 
 =====
 Usage
 =====
 
-Retrieving a widget from the registry using a widget ID:
+Retrieving a widget from the registry using a widget ID
+-------------------------------------------------------
 
 .. code-block :: javascript
  :linenos:
@@ -32,7 +33,8 @@ Retrieving a widget from the registry using a widget ID:
       var widget = registry.byId(id);
   }
 
-Retrieving a widget from the registry using the widget’s DOM node:
+Retrieving a widget from the registry using the widget’s DOM node
+-----------------------------------------------------------------
 
 .. code-block :: javascript
  :linenos:
@@ -41,7 +43,8 @@ Retrieving a widget from the registry using the widget’s DOM node:
       var widget = registry.byNode(node);
   });
 
-Finding all TextBox widgets underneath a DOM node:
+Finding all widgets underneath a DOM node
+-----------------------------------------
 
 .. code-block :: javascript
  :linenos:
@@ -65,7 +68,8 @@ Note that ``findWidgets`` will not descend into other widgets. That is to say, i
 
 Calling ``findWidgets`` on the ``<div id="root">`` will **only** find the dijit.form.Form.
 
-Finding the nearest enclosing widget for a DOM node:
+Finding the nearest enclosing widget for a DOM node
+---------------------------------------------------
 
 .. code-block :: javascript
  :linenos:
