@@ -38,7 +38,7 @@ Retrieving a widget from the registry using a widget ID
 Retrieving a widget from the registry using the widget’s DOM node
 -----------------------------------------------------------------
 
-``registry.byNode`` returns the widget that corresponds to the given DOM node. If the DOM node is not a widget, it returns undefined.
+``registry.byNode`` returns the widget that corresponds to the given DOM node. If the DOM node does not belong to a widget, it returns undefined.
 
 .. code-block :: javascript
  :linenos:
@@ -64,7 +64,7 @@ Note that ``registry.findWidgets`` will *not* descend into widgets. That is to s
 .. code-block :: html
  :linenos:
 
-  <div id="root">
+  <div id="root" data-dojo-type="dijit.Dialog">
       <form data-dojo-type="dijit.form.Form">
           <input data-dojo-type="dijit.form.TextBox">
       </form>
@@ -75,7 +75,7 @@ Note that ``registry.findWidgets`` will *not* descend into widgets. That is to s
       </div>
   </div>
 
-Calling ``findWidgets`` on the ``<div id="root">`` would **only** return the Form widgets, not the TextBox widgets.
+Calling ``findWidgets`` on the ``root`` node would **only** return the Form widgets, not the TextBox widgets.
 
 Finding the nearest enclosing widget for a DOM node
 ---------------------------------------------------
