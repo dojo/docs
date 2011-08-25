@@ -13,7 +13,7 @@ dijit/registry
 Introduction
 ============
 
-dijit/registry is a collection of all Dijit widgets within a page. It can be used for bulk operation and control of groups of widgets. In Dojo 1.6 and earlier, it is an instance of `Dijit WidgetSet <dijit/WidgetSet>`_. Starting in Dojo 1.7, it is a singleton and is accessible from the dijit/registry module.
+dijit/registry is a collection of all Dijit widgets within a page. It can be used for bulk operation and control of groups of widgets. In Dojo 1.6 and earlier, it is an instance of `dijit.WidgetSet <dijit/WidgetSet>`_. Starting in Dojo 1.7, it is a singleton and is accessible from the dijit/registry module.
 
 Unlike earlier versions, starting in 1.7, dijit/registry does not include array iterator methods (forEach, filter, byClass, map, every, and some) by default. Until Dojo 2.0, including dijit.WidgetSet will re-enable these methods. If you need to iterate over the registry, call ``dijit.registry.toArray`` and use the standard `dojo/array`_ functions.
 
