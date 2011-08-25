@@ -26,36 +26,40 @@ Usage
 Retrieving a widget from the registry using a widget ID
 -------------------------------------------------------
 
+``registry.byId`` returns the widget that corresponds to the given ID. If no such widget exists, it returns undefined.
+
 .. code-block :: javascript
  :linenos:
 
   require(["dijit/registry"], function(registry){
-      var widget = registry.byId(id);
+      var widget = registry.byId("myWidgetId");
   }
 
 Retrieving a widget from the registry using the widget’s DOM node
 -----------------------------------------------------------------
 
+``registry.byNode`` returns the widget that corresponds to the given DOM node. If the DOM node is not a widget, it returns undefined.
+
 .. code-block :: javascript
  :linenos:
 
   require(["dijit/registry"], function(registry){
-      var widget = registry.byNode(node);
+      var widget = registry.byNode(domNode);
   });
 
 Finding all widgets underneath a DOM node
 -----------------------------------------
 
+``registry.findWidgets`` returns an array of all non-nested widgets inside the given DOM node.
+
 .. code-block :: javascript
  :linenos:
 
   require(["dojo/_base/array", "dijit/registry", "dijit/form/TextBox"], function(arrayUtil, registry, TextBox){
-      var textBoxes = arrayUtil.filter(registry.findWidgets(node), function(widget){
-        return widget.isInstanceOf(TextBox);
-      });
+      var formWidgets = registry.findWidgets(formNode);
   });
 
-Note that ``findWidgets`` will not descend into other widgets. That is to say, if you had a DOM like this:
+Note that ``registry.findWidgets`` will *not* descend into widgets. That is to say, if you had a DOM like this:
 
 .. code-block :: html
  :linenos:
@@ -64,18 +68,43 @@ Note that ``findWidgets`` will not descend into other widgets. That is to say, i
       <form data-dojo-type="dijit.form.Form">
           <input data-dojo-type="dijit.form.TextBox">
       </form>
+      <div>
+          <form data-dojo-type="dijit.form.Form">
+              <input data-dojo-type="dijit.form.TextBox">
+          </form>
+      </div>
   </div>
 
-Calling ``findWidgets`` on the ``<div id="root">`` will **only** find the dijit.form.Form.
+Calling ``findWidgets`` on the ``<div id="root">`` would **only** return the Form widgets, not the TextBox widgets.
 
 Finding the nearest enclosing widget for a DOM node
 ---------------------------------------------------
+
+``registry.getEnclosingWidget`` returns the closest widget to the given DOM node.
 
 .. code-block :: javascript
  :linenos:
 
   require(["dijit/registry"], function(registry){
-      var parentWidget = registry.getEnclosingWidget(node);
+      var parentWidget = registry.getEnclosingWidget(domNode);
+  });
+
+Note that ``getEnclosingWidget`` will check for and return the widget corresponding to the given DOM node, if one exists. For instance, given the following DOM:
+
+.. code-block :: html
+ :linenos:
+
+  <div data-dojo-type="dijit.form.Form">
+      <input id="myTextField" data-dojo-type="dijit.form.TextBox">
+  </div>
+
+The following will return the TextBox widget, **not** the Form widget:
+
+.. code-block :: javascript
+ :linenos:
+
+  require(["dojo/dom", "dijit/registry"], function(dom, registry){
+      registry.getEnclosingWidget(dom.byId("myTextField")); // returns TextBox
   });
 
 ========
