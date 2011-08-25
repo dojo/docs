@@ -33,7 +33,7 @@ Retrieving a widget from the registry using a widget ID
 
   require(["dijit/registry"], function(registry){
       var widget = registry.byId("myWidgetId");
-  }
+  });
 
 Retrieving a widget from the registry using the widget’s DOM node
 -----------------------------------------------------------------
