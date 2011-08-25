@@ -43,7 +43,7 @@ Iterating over all a list of widgets with forEach:
  :linenos:
 
   ws.forEach(function(widget, index, hash){
-     // function is run for each widget available
+    // function is run for each widget available
   });
 
 Chaining forEach and byClass calls:
@@ -52,7 +52,7 @@ Chaining forEach and byClass calls:
   :linenos:
 
   ws.forEach(function(widget){
-	  widget.containerNode.appendChild(dojo.create("div"));
+    widget.containerNode.appendChild(dojo.create("div"));
   }).byClass("dijit.Dialog").forEach(function(widget){ /* only dijit.Dialog instances */ });
 
 The functions filter, forEach, map, every and some all accept a `thisObject` in the last position. This is in line with all other Dojo array functions and allows for transparent scope manipulation:
@@ -62,7 +62,7 @@ The functions filter, forEach, map, every and some all accept a `thisObject` in 
 
   // we are in some object, like a Widget
   ws.forEach(function(widget){
-       this.addChild(widget); // add all children to the instance we are in
+    this.addChild(widget); // add all children to the instance we are in
   }, this);
 
 Filtering all even widgets from the list, then iterating over the remainder:
@@ -72,9 +72,9 @@ Filtering all even widgets from the list, then iterating over the remainder:
 
   // filter out even widgets, and iterate over the remainder
   ws.filter(function(widget, i){
-     return i % 2 == 0;
+    return i % 2 == 0;
   }).forEach(function(widget){
-     console.log(widget.id, "was an odd number in the list");
+    console.log(widget.id, "was an odd number in the list");
   }); 
 
 Retrieving all DOM nodes for the set of widgets:
@@ -84,7 +84,7 @@ Retrieving all DOM nodes for the set of widgets:
 
   // get the actual domNode which represents the widgets in this list:
   var nodes = dijit.registy.map(function(widget){
-       return widget.domNode;
+    return widget.domNode;
   });
 
 Ensuring all widgets in the list have a specific value:
@@ -93,15 +93,15 @@ Ensuring all widgets in the list have a specific value:
   :linenos:
 
   var isValid = ws.every(function(widget){ 
-       // all widgets must have a value > 0 to pass
-       return widget.attr("value") > 0;
+    // all widgets must have a value > 0 to pass
+    return widget.attr("value") > 0;
   });
   
   if(isValid){
-       // all widgets have a value > 0, proceed:
+    // all widgets have a value > 0, proceed:
   }else{
-       // something failed before we got through all widgets, something
-       // didn't pass the test
+    // something failed before we got through all widgets, something
+    // didn't pass the test
   }
 
 Looking at how many widgets are in a WidgetSet:
@@ -110,9 +110,9 @@ Looking at how many widgets are in a WidgetSet:
   :linenos:
 
   if(ws.byClass("dijit.Dialog").length){
-     // there is at least one dijit.Dialog in this WidgetSet
+    // there is at least one dijit.Dialog in this WidgetSet
   }else{
-     // none found
+    // none found
   }
 
 Looking at how many widgets are in a filtered WidgetSet:
@@ -121,7 +121,7 @@ Looking at how many widgets are in a filtered WidgetSet:
   :linenos:
 
   if(ws.filter(function(widget){ return widget.id.indexOf("baz") >= 0 }).length){
-     // there aren't any widgets in this list with "baz" in the id
+    // there aren't any widgets in this list with "baz" in the id
   }
 
 ========
