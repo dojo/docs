@@ -10,7 +10,7 @@ dijit.WidgetSet
 .. contents::
    :depth: 2
 
-A dijit.WidgetSet is a collection of Dijit widgets. It can be used for bulk operation and control of groups of widgets. In Dojo 1.7, including dijit.WidgetSet will add Array-like functions to the main dijit.registry object as well for backwards-compatibility; this behaviour will be removed in Dojo 2.0.
+A dijit.WidgetSet is a collection of Dijit widgets. It can be used for bulk operation and control of groups of widgets. In Dojo 1.7, including dijit.WidgetSet will add Array-like functions to the main `dijit/registry`_ object as well for backwards-compatibility; this behaviour will be removed in Dojo 2.0.
 
 ============
 Introduction
@@ -22,7 +22,8 @@ dijit.WidgetSet works similarly to a dojo.NodeList, treating the list of widgets
 Usage
 =====
 
-Adding widgets to a WidgetSet:
+Adding a widget to a WidgetSet
+------------------------------
 
 .. code-block :: javascript
  :linenos:
@@ -30,14 +31,16 @@ Adding widgets to a WidgetSet:
   var ws = new WidgetSet();
   ws.add(new dijit.Dialog());
 
-Removing a widget from a WidgetSet:
+Removing a widget from a WidgetSet
+----------------------------------
 
 .. code-block :: javascript
  :linenos:
 
   ws.remove("MyWidgetId");
 
-Iterating over all a list of widgets with forEach:
+Iterating over a list of widgets
+--------------------------------
 
 .. code-block :: javascript
  :linenos:
@@ -46,7 +49,16 @@ Iterating over all a list of widgets with forEach:
     // function is run for each widget available
   });
 
-Chaining forEach and byClass calls:
+Converting a WidgetSet to an array
+----------------------------------
+
+.. code-block :: javascript
+ :linenos:
+
+  var widgetArray = ws.toArray();
+
+Chaining forEach and byClass calls
+----------------------------------
 
 .. code-block :: javascript
   :linenos:
@@ -65,7 +77,10 @@ The functions filter, forEach, map, every and some all accept a `thisObject` in 
     this.addChild(widget); // add all children to the instance we are in
   }, this);
 
-Filtering all even widgets from the list, then iterating over the remainder:
+Filtering a list of widgets
+---------------------------
+
+This example filters all even widgets from the list, then iterates over the remainder:
 
 .. code-block :: javascript
   :linenos:
@@ -75,9 +90,31 @@ Filtering all even widgets from the list, then iterating over the remainder:
     return i % 2 == 0;
   }).forEach(function(widget){
     console.log(widget.id, "was an odd number in the list");
-  }); 
+  });
 
-Retrieving all DOM nodes for the set of widgets:
+Inspecting how many widgets are in a WidgetSet
+----------------------------------------------
+
+.. code-block :: javascript
+  :linenos:
+
+  if(ws.length){
+    // there is at least one widget in this WidgetSet
+  }
+
+.. code-block :: javascript
+  :linenos:
+
+  if(ws.byClass("dijit.Dialog").length){
+    // there are Dialog widgets in this set
+  }
+
+==============
+Other examples
+==============
+
+Retrieving all DOM nodes for a set of widgets
+---------------------------------------------
 
 .. code-block :: javascript
   :linenos:
@@ -87,46 +124,27 @@ Retrieving all DOM nodes for the set of widgets:
     return widget.domNode;
   });
 
-Ensuring all widgets in the list have a specific value:
+Validating all widgets in a WidgetSet
+-------------------------------------
 
 .. code-block :: javascript
   :linenos:
 
   var isValid = ws.every(function(widget){ 
     // all widgets must have a value > 0 to pass
-    return widget.attr("value") > 0;
+    return widget.isValid();
   });
   
   if(isValid){
-    // all widgets have a value > 0, proceed:
+    // all widgets are valid
   }else{
     // something failed before we got through all widgets, something
     // didn't pass the test
-  }
-
-Looking at how many widgets are in a WidgetSet:
-
-.. code-block :: javascript
-  :linenos:
-
-  if(ws.byClass("dijit.Dialog").length){
-    // there is at least one dijit.Dialog in this WidgetSet
-  }else{
-    // none found
-  }
-
-Looking at how many widgets are in a filtered WidgetSet:
-
-.. code-block :: javascript
-  :linenos:
-
-  if(ws.filter(function(widget){ return widget.id.indexOf("baz") >= 0 }).length){
-    // there aren't any widgets in this list with "baz" in the id
   }
 
 ========
 See also
 ========
 
-* `dijit.registry <dijit/registry>`_
+* `dijit/registry`_
 * `dojo.NodeList <dojo/NodeList>`_
