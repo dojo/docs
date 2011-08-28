@@ -1,5 +1,8 @@
 #format dojo_rst
 
+.. note::
+   A heavily revised version of this documentation is available at `developer/design/loader/edit1`_. It will be moved here at a later time.
+
 The Dojo Loader
 ===============
 
@@ -1768,7 +1771,7 @@ executed, it is guaranteed to have the proper renderer fully defined and availab
 
 .. code-block :: javascript
 
-  // this is the plugin that loads the correct renderer
+  // this is a sketch of a plugin that loads the correct renderer
   define("dojo/gfx/loadRenderer", [], {
     loaded:function(id, require, loaded){
       // compute the proper renderer based on the environment
@@ -1792,7 +1795,7 @@ Now, let's use the plugin in dojo/gfx:
 
 When the loader resolves dojo/gfx, it notices the first dependency is a plugin (because of the !), and  delegates this
 dependency to the module dojo/gfx/loadRenderer. It doesn't matter that there's nothing to the right of the exclamation
-point since this particular plugin doesn't need the id argument to load. The plugin loads and returns to proper
+point since this particular plugin doesn't need the id argument. The plugin loads and returns the proper
 renderer so that when dojo/gfx's factory is called it has a valid, fully resolved renderer module.
 
 This pattern is so useful that the dojo loader includes the built-in plugin dojo/load with the following semantics:
@@ -1802,13 +1805,13 @@ This pattern is so useful that the dojo loader includes the built-in plugin dojo
 
 2. It resolves all of the module identifiers computed in Step 1.
 
-3. It returns the first identifier (if any) computed in Step 2 for its loaded value.
+3. It returns the first module value (if any) as computed in Step 2 for its loaded value.
 
 For example, the dojo/gfx and dojo/gfx/loadRenderer examples sketched above could be rewritten as follows:
 
 .. code-block :: javascript
 
-  // this is the plugin that loads the correct renderer
+  // this is a sketch of a module that can be used with dojo/load to resolve a run-time-dependent renderer
   define("dojo/gfx/loadRenderer", [], {
     // compute the proper renderer based on the environment
     var properRenderer = // whatever...
