@@ -36,10 +36,6 @@ Dojo Core
 Dijit
 =====
 
-* `dijit._HasDropDown <dijit/_HasDropDown>`_
-
-  needed: full page
-
 * `dijit.form._FormSelectWidget <dijit/form/_FormSelectWidget>`_
 
   needed: full page
