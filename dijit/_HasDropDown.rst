@@ -26,7 +26,8 @@ First, mixin dijit/_HasDropDown when you create your widget:
 .. code-block :: javascript
  :linenos:
 
-  define([ "dojo/_base/declare", "dijit/_HasDropDown" ], function(declare, _HasDropDown){
+  define([ "dojo/_base/declare", "dijit/_HasDropDown" ],
+      function(declare, _HasDropDown){
       return declare(_HasDropDown, {
           …
       });
@@ -81,7 +82,8 @@ By default, _HasDropDown assumes that a dijit widget has been created and assign
 .. code-block :: javascript
  :linenos:
 
-  define([ "dojo/_base/declare", "dijit/form/Button", "dijit/_HasDropDown" ], function(declare, Button, _HasDropDown){
+  define([ "dojo/_base/declare", "dijit/form/Button", "dijit/_HasDropDown" ],
+      function(declare, Button, _HasDropDown){
       return declare([Button, _HasDropDown], {
           isLoaded: function(){
               // Returns whether or not we are loaded - if our dropdown has an href,
