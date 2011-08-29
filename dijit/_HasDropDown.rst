@@ -29,7 +29,7 @@ First, mixin dijit/_HasDropDown when you create your widget:
   define([ "dojo/_base/declare", "dijit/_HasDropDown" ],
       function(declare, _HasDropDown){
       return declare(_HasDropDown, {
-          …
+          ...
       });
   });
 
