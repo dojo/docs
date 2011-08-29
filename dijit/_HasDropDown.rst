@@ -74,8 +74,9 @@ By default, drop-downs from _HasDropDown simply appear in place. If you want to 
 
 TODO CODE
 
-See Also:
-=========
+========
+See Also
+========
 
 * `Writing Widgets <quickstart/writingWidgets>`_
 * `dijit._Widget <dijit/_Widget>`_
