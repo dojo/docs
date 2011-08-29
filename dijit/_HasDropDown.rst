@@ -67,7 +67,7 @@ By default, _HasDropDown assumes that a dijit widget has been created and assign
 .. code-block :: javascript
 
   require([ "dijit/form/Button", "dijit/_HasDropDown" ], function(Button, _HasDropDown){
-      declare("my.DynamicDropDown", [Button, _Container, _HasDropDown], {
+      declare("my.DynamicDropDownButton", [Button, _HasDropDown], {
           isLoaded: function(){
               // Returns whether or not we are loaded - if our dropdown has an href,
               // then we want to check that.
