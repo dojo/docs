@@ -64,15 +64,33 @@ Dynamic & lazy-loading drop-downs
 
 By default, _HasDropDown assumes that a dijit widget has been created and assigned to ``_HasDropDown.dropDown`` before the widget starts up. This works well for drop-downs that always contain the same content and are available immediately, but it may reduce startup performance and makes it impossible to create dynamically populated/asynchronous drop-downs. In order to work around these limitations, more advanced drop-down widgets can implement ``_HasDropDown.loadDropDown`` and ``_HasDropDown.isLoaded`` instead:
 
-TODO CODE
+..code-block :: javascript
 
-==============
-Adding effects
-==============
-
-By default, drop-downs from _HasDropDown simply appear in place. If you want to animate them in/out, this is possible by overriding ``_HasDropDown.openDropDown`` and ``_HasDropDown.closeDropDown``:
-
-TODO CODE
+  require([ "dijit/form/Button", "dijit/_HasDropDown" ], function(Button, _HasDropDown){
+      declare("my.DynamicDropDown", [Button, _Container, _HasDropDown], {
+          isLoaded: function(){
+              // Returns whether or not we are loaded - if our dropdown has an href,
+              // then we want to check that.
+              var dropDown = this.dropDown;
+              return (!!dropDown && (!dropDown.href || dropDown.isLoaded));
+          },
+      
+          loadDropDown: function(){
+              // Loads our dropdown
+              var dropDown = this.dropDown;
+              if(!dropDown){ return; }
+              if(!this.isLoaded()){
+                  var handler = dropDown.on("load", this, function(){
+                      handler.remove();
+                      this.openDropDown();
+                  });
+                  dropDown.refresh();
+              }else{
+                  this.openDropDown();
+              }
+          }
+      });
+  });
 
 ========
 See Also
@@ -81,7 +99,5 @@ See Also
 * `Writing Widgets <quickstart/writingWidgets>`_
 * `dijit._Widget <dijit/_Widget>`_
 * `dijit/form/Select`_
-* `dijit/form/ComboBoxMixin`_
 * `dijit/form/DropDownButton`_
-* `dijit/form/_AutoCompleterMixin`_
 * `dijit/popup`_
