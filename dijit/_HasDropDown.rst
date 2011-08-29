@@ -64,7 +64,7 @@ Dynamic & lazy-loading drop-downs
 
 By default, _HasDropDown assumes that a dijit widget has been created and assigned to ``_HasDropDown.dropDown`` before the widget starts up. This works well for drop-downs that always contain the same content and are available immediately, but it may reduce startup performance and makes it impossible to create dynamically populated/asynchronous drop-downs. In order to work around these limitations, more advanced drop-down widgets can implement ``_HasDropDown.loadDropDown`` and ``_HasDropDown.isLoaded`` instead:
 
-..code-block :: javascript
+.. code-block :: javascript
 
   require([ "dijit/form/Button", "dijit/_HasDropDown" ], function(Button, _HasDropDown){
       declare("my.DynamicDropDown", [Button, _Container, _HasDropDown], {
