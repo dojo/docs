@@ -44,7 +44,7 @@ Then, either set the value of ``_HasDropDown.dropDown`` to an existing widget:
       }, "myDropDownWidget");
   });
 
-Or, override the ``_HasDropDown.loadDropDown`` and ``_HasDropDown.isLoaded`` functions to allow for lazy instantiation of the drop-down (see Dynamic & lazy loading drop-downs, below).
+Or, override the ``_HasDropDown.loadDropDown`` and ``_HasDropDown.isLoaded`` functions to allow for lazy instantiation of the drop-down (see `Dynamic \& lazy-loading drop-downs`_, below).
 
 ========================
 Optional node properties
