@@ -34,7 +34,16 @@ Can I use dojox.mobile.parser for desktop dojo applications?
 
 Yes. Use of dojox.mobile.parser is not limited to mobile. It has enough capability to bootstrap simple dojo applications. This may sound strange, but dojox.mobile.parser has no dependency on dojox.mobile. (And dojox.mobile has no dependency on dojox.mobile.parser either.) So you can pick up only dojox.mobile.parser and use it for your desktop applications. Actually, this parser was originally developed for very lightweight desktop dojo applications a few years before dojox.mobile was born.
 
-I cant seem to run Dojo Mobile pages on Android devices when using libaries like PhoneGap, what am I doing wrong?
------------------------------------------------------------------------------------------------------------------
+==============
+Android Issues
+==============
+
+I can't seem to run Dojo Mobile pages on Android devices when using libaries like PhoneGap, what am I doing wrong?
+------------------------------------------------------------------------------------------------------------------
 
 There is a known bug in the Android WebKit browser implementation that does not allow files starting with an underscore '_' character to be loaded from local file system (for example when using Dojo Mobile in conjunction with PhoneGap to create a native app).  The way around this problem is to create a built version of your files (you'll want to do this anyway for performance).
+
+mblAlwaysHideAddressBar does not work on my Android device. What's going on?
+----------------------------------------------------------------------------
+
+mblAlwaysHideAddressBar does not work on some Android devices when overflow:hidden style is applied to html and body tags. This overflow:hidden style is used in some test cases including test_ScrollableMixin-custom.html for desktop browsers not to show scroll bar, but you can remove it for mobile browsers so that you can hide address bar.
