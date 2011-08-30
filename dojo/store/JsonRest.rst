@@ -99,13 +99,9 @@ For example, given the following store and request:
 
 The resulting request to the server would be:
 
-.. code-block
-
   /FooObject/?foo=value1&sortBy=+foo,-bar
 
-If ``sortParam`` is not set, the sort values is appended without a key-value pair:
-
-.. code-block
+If ``sortParam`` is not set, the sort value is appended without a key-value pair, surrounded by "sort()":
 
   /FooObject/?foo=value1&sort(+foo,-bar)
 
