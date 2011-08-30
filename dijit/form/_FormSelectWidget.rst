@@ -1,14 +1,24 @@
 #format dojo_rst
 
-dijit.form._FormSelectWidget
+dijit/form/_FormSelectWidget
 ============================
 
-A Dijit _Widget mixin providing form functionality. 
+:Author: Colin Snover
+:Project owner: Bill Keese
+:Available: since 1.4
+:Version: 1.7
 
-`FIXME`: actually describe how to use this mixin
+dijit/form/_FormSelectWidget is a dijit Widget mixin that adds functionality for working with HTML <select>-like widgets. It is used by `dijit/form/Select`_ and `dojox/form/CheckedMultiSelect`_. It extends `dijit/form/_FormSelectWidget`_ with the ability to handle multiple values and retrieve options from a `dojo/data`_ store.
 
-See Also:
-=========
+=====
+Usage
+=====
+
+TODOC
+
+========
+See also
+========
 
 * `Writing Widgets <quickstart/writingWidgets>`_
 * `dijit._Widget <dijit/_Widget>`_
