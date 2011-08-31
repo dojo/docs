@@ -14,6 +14,14 @@ dijit/form/_FormSelectWidget is a dijit Widget mixin that adds functionality for
 Usage
 =====
 
+Using options
+-------------
+
+TODOC
+
+Using store
+-----------
+
 TODOC
 
 ========
