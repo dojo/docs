@@ -244,7 +244,7 @@ DOM
 Window (dojo/_base/window)
 --------------------------
 
-from 1.7 + dojo/_base/window module collects following part of modules
+from 1.7 + dojo/_base/window module collects following part of dojo APIs
 
 * `dojo.doc <dojo/doc>`_
 
