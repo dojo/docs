@@ -5,4 +5,5 @@ dojo.ready
 
 :Version: 1.4
 
-Available in Dojo 1.4+. Just an alias for `dojo.addOnLoad <dojo/addOnLoad>`_.
+This is now the preferred function to use for ensuring that user code gets executed when dojo is done loading and initialized.
+It is currently and alias for the now deprecated `dojo.addOnLoad <dojo/addOnLoad>`_ function.
