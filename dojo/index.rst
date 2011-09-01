@@ -476,6 +476,10 @@ Miscellaneous Base
 
   Call callback with globalObject as dojo.global and globalObject.document as dojo.doc
 
+* `dojo._Url <dojo/Url>`_
+
+  dojo._Url is used to manage the url object.
+
 
 =========
 Dojo Core
