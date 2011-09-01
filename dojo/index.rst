@@ -123,14 +123,6 @@ DOM
 
   A class to handle a list of DOM nodes. Most commonly returned from a `dojo.query` call.
 
-* `dojo.doc <dojo/doc>`_
-
-  Alias for the current document
-
-* `dojo.body <dojo/body>`_
-
-  Return the body element of the document
-
 * `dojo.byId <dojo/byId>`_
 
   Select a DOM node by 'id'
@@ -248,6 +240,31 @@ DOM
   * `dojo.contentBox <dojo/contentBox>`_
 
     Getter/setter for the content-box of node
+
+Window (dojo/_base/window)
+--------------------------
+
+from 1.7 + dojo/_base/window module collects following part of modules
+
+* `dojo.doc <dojo/doc>`_
+
+  Alias for the current document.
+
+* `dojo.body <dojo/body>`_
+
+  Return the body element of the document
+
+* `dojo.setContext <dojo/setContext>`_
+
+  Changes the behavior of many core Dojo functions that deal with namespace and DOM lookup
+
+* `dojo.withGlobal <dojo/withGlobal>`_
+
+  Call callback with globalObject as dojo.global and globalObject.document as dojo.doc
+
+* `dojo.withDoc <dojo/withDoc>`_
+
+  Call callback with documentObject as dojo.doc
 
 Effects
 -------
@@ -460,21 +477,9 @@ Miscellaneous Base
 
   A string containing the current locale as defined by Dojo
 
-* `dojo.setContext <dojo/setContext>`_
-
-  Changes the behavior of many core Dojo functions that deal with namespace and DOM lookup
-
 * `dojo.version <dojo/version>`_
 
   The current version number of Dojo
-
-* `dojo.withDoc <dojo/withDoc>`_
-
-  Call callback with documentObject as dojo.doc
-
-* `dojo.withGlobal <dojo/withGlobal>`_
-
-  Call callback with globalObject as dojo.global and globalObject.document as dojo.doc
 
 * `dojo._Url <dojo/Url>`_
 
