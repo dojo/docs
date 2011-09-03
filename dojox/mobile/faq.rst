@@ -47,3 +47,12 @@ mblAlwaysHideAddressBar does not work on my Android device. What's going on?
 ----------------------------------------------------------------------------
 
 mblAlwaysHideAddressBar does not work on some Android devices when overflow:hidden style is applied to html and body tags. This overflow:hidden style is used in some test cases including test_ScrollableMixin-custom.html for desktop browsers not to show scroll bar, but you can remove it for mobile browsers so that you can hide address bar.
+
+=============
+Miscellaneous
+=============
+
+Why does <body> in many of tests html files have style="visibility:hidden;"?
+----------------------------------------------------------------------------
+	
+It is to prevent raw HTML rendering result from being shown before dojo's rendering finishes. The visibility will be restored by the initialization code in dojox.mobile.common.
