@@ -154,29 +154,18 @@ Below is all of pagination configuration arguments:
 =========================  =======================  ===============  ================================================================================================================
 Property                   Type                     Default Value    Description
 =========================  =======================  ===============  ================================================================================================================
-description                Boolean|String|Integer   true             Indicates whether or not display the current position display if it is set to a boolean.
-                                                                     Indicates the width of the current position dislay when it is set to a String/Integer, if description is set to
-                                                                     a negative number, 0, "0" etc, the current position dislapy will not be displayed, otherwise, it will define the
-                                                                     width of the current position display in given unit(default is pixels).
-sizeSwitch                 Boolean|String|Integer   true             Indicates whether or not display the page length menu. if it is set to a boolean.
-                                                                     Indicates the width of the page length menu when it is set to a String/Integer, if description is set to
-                                                                     a negative number, 0, "0" etc, the page length menu will not be displayed, otherwise, it will define the
-                                                                     width of the page length menu in given unit(default is pixels).
-pageStepper                Boolean|String|Integer   true             Indicates whether or not display the page navigation choices. if it is set to a boolean.
-                                                                     Indicates the width of the page navigation choices when it is set to a String/Integer, if description is set to
-                                                                     a negative number, 0, "0" etc, the page navigation choices will not be displayed, otherwise, it will define the
-                                                                     width of the page navigation choices in given unit(default is pixels).
-gotoButton                 Boolean                  false            Indicates whether or not the go to page button.
+description                Boolean                  true             Indicates whether or not display the current position display. Default is true (display).
+sizeSwitch                 Boolean                  true             Indicates whether or not display the page length menu. Default is true (display).                                                                
+pageStepper                Boolean                  true             Indicates whether or not display the page navigation choices. Default is true (display).
+gotoButton                 Boolean                  false            Indicates whether or not the go to page button. Default is false (not display).
 position                   String                   "bottom"         Indicates the pagination control bar's position. 
-                                                                     There are three options: top (place the pagination bar top of the grid); bottom (place the pagination bar bottom
-                                                                     of the grid); both (place the pagination bar both the top and bottom of the grid).
-itemTitle                  String                   "item"           Customize the unit of the items displayed on the description.
-pageSizes                  Array                    ["10", "25",     Customize the page length menu options. The element of the array must be an integer string or 
-                                                    "50", "100",     "All"(case-insensitive).
-                                                    "All"]           
+                                                                     There are two options: top (place the pagination bar top of the grid); bottom (place the pagination bar bottom
+                                                                     of the grid).
+pageSizes                  Array                    [10, 25, 50,     Customize the page length menu options. The element of the array should be an integer, and any other value which  
+                                                    100, Infinity]   can not be parsed to an integer will be treated as "All" option.
 maxPageStep                integer                  7                Indicates how many page navigation choices will be displayed (Suggested that the value should be less than 10).
-defaultPageSize            integer                  pageSizes[0]     The page size used by default
-defaultPage                integer                  1 - first page   Which page will be displayed by default
+defaultPageSize            integer                  pageSizes[0]     The default rows size per page when grid initialized.
+defaultPage                integer                  1 (first page)   Which page will be displayed when grid initialized.
 =========================  =======================  ===============  ================================================================================================================
 
 =====
@@ -196,7 +185,7 @@ The *page navigation choices* is the main element of the pagination. The *paging
 
 .. image:: pagination_pagestep.bmp
 
-The go to page button is an optional element. A go to page dialog will show when clicking the *Go to page* button. The grid will go to the specified page after the user enters a vaild page number and clicks the "go" button or presses ENTER. This process is canceled by clicking the "Cancel" button or pressing ESC.
+The go to page button is an optional element. A go to page dialog will show when the *Go to page* button was fired. The grid will go to the specified page after the user enters a vaild page number and clicks the "go" button or presses ENTER. This process can be canceled by clicking the "Cancel" button or pressing ESC.
 
 .. image:: pagination_gotopage.jpg
 
@@ -213,13 +202,15 @@ Accessibility
 
 Below is a summary of all supported keyboard operators.
 
-=============================  ============================================================
-Key                            Action
-=============================  ============================================================
-Tab from inside the grid       The page length menu receives the focus.
-Tab from the page length menu  The page navigation choices receive the focus.
-First/Last                     The next specific page navigation choice receives the focus.
-=============================  ============================================================
+==============================================  ===============================================================
+Key                                             Action
+==============================================  ===============================================================
+Tab/shift + Tab from outside of pagination bar  The element (one of the page length menu or page navigation 
+                                                choices) of the pagination bar will receive the focus.
+Tab/shift + Tab from inside of pagination bar   The focus will switch among the elements of the pagination bar.
+arrow key                                       The focus will move the specfic direction in current element 
+                                                area.
+==============================================  ===============================================================
 
 ==========
 Public API
@@ -227,22 +218,34 @@ Public API
 
 All available methods of the pagination are listed below:
 
-==================  =====================================  =======  ================================================
-Name                Parameters                             Return   Description
-==================  =====================================  =======  ================================================
-gotoPage            pageIdx(integer): page index           N/A      Function to handle shifting to the specific page
-nextPage            N/A                                    N/A      Function to handle shifting to the next page
-prevPage            N/A                                    N/A      Function to handle shifting to the previous page
-gotoFirstPage       N/A                                    N/A      Jump to first page
-gotoLastPage        N/A                                    N/A      Jump to last page
-changePageSize      size(integer): size of items per page  N/A      Change size of items per page
-scrollToRow         rowIndex(integer): row index           N/A      Override the grid.ScrollToRow().
-                                                                    Scroll to give row automatically, if the given 
-                                                                    row is not in this page, will jump to the right
-                                                                    page and scroll to the row
-showGotoPageButton  flag(boolean): Indicator of show/hide  N/A      Function to show/hide the Goto page button
-                    the Goto page button                            dynamically
-==================  =====================================  =======  ================================================
+==================  =====================================  =====================  =======================================================
+Name                Parameters                             Return                 Description
+==================  =====================================  =====================  =======================================================
+currentPage         page index: integer                    current page index     Function to handle shifting to the specific page,  
+                                                                                  and return the current page index. Only return the 
+                                                                                  current page index if an invalid parameter passed 
+                                                                                  in.
+currentPageSize     page size: integer                     current page size      Function to handle setting the rows per page, and   
+                                                                                  return the current page size. If an invalid parameter 
+                                                                                  passed in, only return the current page size.    
+nextPage            N/A                                    N/A                    Function to handle shifting to the next page
+prevPage            N/A                                    N/A                    Function to handle shifting to the previous page
+firstPage           N/A                                    N/A                    Jump to first page.
+lastPage            N/A                                    N/A                    Jump to last page.
+getTotalPageNum     N/A                                    The total page number  A getter to gain the total page number.
+getTotalRowCount    N/A                                    The total rows count   A getter to gain the total rows count.
+scrollToRow         rowIndex: integer                      N/A                    Override the grid.ScrollToRow().
+                                                                                  Scroll to give row automatically, if the given 
+                                                                                  row is not in this page, will jump to the right
+                                                                                  page and scroll to the row.
+showGotoPageButton  flag: boolean                          N/A                    Function to show/hide the Goto page button dynamically.                                                                                                                                                                                                                                                
+gotoPage            pageIdx: integer                       N/A                    Deprecated, please use *currentPage* method instead.
+changePageSize      size: integer                          N/A                    Deprecated, please use *currentPageSize* method instead.
+gotoNextPage        N/A                                    N/A                    Deprecated, please use *nextPage* method instead.
+gotoPrevPage        N/A                                    N/A                    Deprecated, please use *prevPage* method instead.
+gotoFirstPage       N/A                                    N/A                    Deprecated, please use *firstPage* method instead.
+gotoLastPage        N/A                                    N/A                    Deprecated, please use *lastPage* method instead.
+==================  =====================================  =====================  =======================================================
 
 
 ========
