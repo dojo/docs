@@ -343,11 +343,13 @@ The attributes of "colSpans" object (0, 1, 2, ...) indicate what level it is. Th
 Public API
 ==========
 
-All available methods of the LazyTreeGrid are listed below:
+Available public methods of the LazyTreeGrid are listed below:
 
 =========  =====================================  =====================  =======================================================
 Name       Parameters                             Return                 Description
 =========  =====================================  =====================  =======================================================
+setModel   treeModel                              N/A                    Change the LazyTreeGrid's treeModel.
+
 expand     itemId: string?                        N/A                    Function to handle expanding the row which item maching
                                                                          with the given item id.
 collapse   itemId: string?                        N/A                    Function to handle collapsing the row which item maching
