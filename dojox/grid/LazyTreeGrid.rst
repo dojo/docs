@@ -343,7 +343,7 @@ The attributes of "colSpans" object (0, 1, 2, ...) indicate what level it is. Th
 Public API
 ==========
 
-All available methods of the pagination are listed below:
+All available methods of the LazyTreeGrid are listed below:
 
 =========  =====================================  =====================  =======================================================
 Name       Parameters                             Return                 Description
