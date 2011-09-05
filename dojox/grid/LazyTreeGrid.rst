@@ -339,6 +339,23 @@ In order to display better for different levels, user could do cells merge based
   
 The attributes of "colSpans" object (0, 1, 2, ...) indicate what level it is. The level is 0-based. The value of these attributes would be a JSON object array, each element of these array would indicate the detail of column span, the start indicate the start column index of colspan, end is end column index of colspan, and the primary is index of column which content will be dispalyed (start value by default).
 
+==========
+Public API
+==========
+
+All available methods of the pagination are listed below:
+
+=========  =====================================  =====================  =======================================================
+Name       Parameters                             Return                 Description
+=========  =====================================  =====================  =======================================================
+expand     itemId: string?                        N/A                    Function to handle expanding the row which item maching
+                                                                         with the given item id.
+collapse   itemId: string?                        N/A                    Function to handle collapsing the row which item maching
+                                                                         with the given item id.
+refresh    keepState: boolean                     N/A                    Function to handle refresh the grid content with or 
+                                                                         without keep the folding state.
+=========  =====================================  =====================  =======================================================
+
 ========
 Examples
 ========
