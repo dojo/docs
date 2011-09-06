@@ -60,9 +60,6 @@ Details on dojo.every, dojo.filter, dojo.forEach, dojo.indexOf, dojo.lastIndexOf
 Language Utilities
 ------------------
 
-* `dojo.Deferred <dojo/Deferred>`_
-
-  Communication between threads
 
 * `dojo.hitch <dojo/hitch>`_
 
@@ -240,6 +237,14 @@ DOM
   * `dojo.contentBox <dojo/contentBox>`_
 
     Getter/setter for the content-box of node
+
+Deferred Utility (dojo/_base/Deferred)
+--------------------------------------
+* `dojo.Deferred <dojo/Deferred>`_
+
+  Communication between asynchronous calls
+
+
 
 Window (dojo/_base/window)
 --------------------------
