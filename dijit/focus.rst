@@ -65,6 +65,8 @@ Watching for focus changes
     });
   });
 
+Note that two changes will occur per refocus: one change will be from the old element to ``null``, and the second change will be from ``null`` to the new element.
+
 Listening for focus changes in iframes
 --------------------------------------
 
