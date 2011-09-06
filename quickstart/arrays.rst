@@ -19,7 +19,13 @@ dojo.indexOf
 
 .. code-block :: javascript
 
+  //before dojo 1.7
   dojo.indexOf(array, valueToFind, fromIndex, findLast)
+  
+  //from dojo 1.7 on
+  require(["dojo/_base/array"], function(array){
+    array.indexOf(arrayObject, valueToFind, fromIndex, findLast);
+  });
 
 
 dojo.indexOf lets you easily determine the index of an element in an array. It locates the first index of the provided value in the passed array. If the value is not found, -1 is returned.
@@ -57,8 +63,13 @@ dojo.lastIndexOf
 
 .. code-block :: javascript
 
+  //Before dojo 1.7
   dojo.lastIndexOf(array, valueToFind, fromIndex)
 
+  //From dojo 1.7 on
+  require(["dojo/_base/array"], function(array){
+    dojo.lastIndexOf(arrayObject, valueToFind, fromIndex);
+  });
 
 dojo.lastIndexOf lets you easily determine the last index of an element in an array. It locates the last index of the provided value in the passed array. If the value is not found, -1 is returned.
 
@@ -97,7 +108,13 @@ dojo.forEach
 
 .. code-block :: javascript
 
+  //Before dojo 1.7
   dojo.forEach(array, callback, fromIndex)
+
+  //From dojo 1.7 on
+  require(["dojo/_base/array"], function(array){
+    array.forEach(arrayObject, callback, fromIndex);
+  });
 
 This is a heavylifter you will use a lot when writing your apps using Dojo. dojo.forEach lets you iterate over arrays, node lists and provides you with ways to filter your results. Lets take a look at a very basic example.
 Note the "i" variable which returns the current position of an iteration
@@ -200,7 +217,13 @@ dojo.filter
 
 .. code-block :: javascript
 
+  //Before dojo 1.7
   filteredArray = dojo.filter(unfilteredArray, callback, thisObject)
+
+  //From dojo 1.7 on
+  require(["dojo/_base/array"], function(array){
+    filteredArray = array.filter(unfilteredArray, callback, thisObject);
+  });
 
 There are many cases when you have an array and want to filter it by a certain condition, ``dojo.filter`` will only keep values from ``unfilteredArray`` for which ``callback`` returns ``true``. The original array is not modified.
 
@@ -265,7 +288,13 @@ dojo.map
 
 .. code-block :: javascript
 
+  //Before dojo 1.7
   dojo.map(array, callback, thisObject)
+
+  //From dojo 1.7 on
+  require(["dojo/_base/array"], function(array){
+    array.map(arrayObject, callback, thisObject);
+  });
 
 Another great function provided by Dojo is dojo.map. dojo.map lets you run a function on all elements of an array and returns a new array with the changed values. A very good example is the "Give all my employees a 10% salary rise":
 
@@ -322,7 +351,13 @@ dojo.some
 
 .. code-block :: javascript
 
+  //Before dojo 1.7
   dojo.some(array, callback, thisObject);
+
+  //From dojo 1.7 on
+  require(["dojo/_base/array"], function(array){
+    array.some(arrayObject, callback, thisObject);
+  });
 
 Imagine you are a manager of a famous bank. A client of you comes and visits your office asking for another million dollars as a credit.
 Now your bank policies only allows you to give each client one credit over 1 million, not two, not three - though you may have several smaller credits. Even 3 credits a 500.000 - weird bank.. anyways. dojo.some is the perfect function to tell you whether an array has some of the asked values:
@@ -364,7 +399,13 @@ dojo.every
 
 .. code-block :: javascript
 
+  //Before dojo 1.7
   dojo.every(array, callback, thisObject);
+
+  //From dojo 1.7 on
+  require(["dojo/_base/array"], function(array){
+    array.every(arrayObject, callback, thisObject);
+  });
 
 Lets get back to our bank manager. A client wants another credit, but you only allow a credit if every income transfer is at least 3000,-
 An example:
