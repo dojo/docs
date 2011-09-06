@@ -24,11 +24,34 @@ Usage
 Focusing an element
 -------------------
 
+.. code-block :: javascript
+ :linenos:
+
+  require([ "dijit/focus", "dojo/dom", "dojo/domReady!" ], function(focusUtil, dom){
+    focusUtil.focus(dom.byId("foo"));
+  });
+
+Note that this function only accepts DOM nodes, not widget instances. The element to focus must also be focusable (a form element, or another element with a tabindex).
+
 Unfocusing an element
 ---------------------
 
+.. code-block :: javascript
+ :linenos:
+
+  require([ "dijit/focus" ], function(focusUtil){
+    focusUtil.curNode && focusUtil.curNode.blur();
+  });
+
 Determining the currently focused element
 -----------------------------------------
+
+.. code-block :: javascript
+ :linenos:
+
+  require([ "dijit/focus" ], function(focusUtil){
+    var activeElement = focusUtil.curNode; // returns null if there is no focused element
+  });
 
 Watching for focus changes
 --------------------------
