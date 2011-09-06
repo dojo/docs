@@ -22,7 +22,18 @@ dojo.forEach() cannot terminate a loop (save for throwing an exception). Use doj
     console.debug(queueEntries[i], "at index", i);
   }
 
-Can be written as:
+(From dojo 1.7 on) It can be written as:
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["dojo/_base/array"], function(array){
+    array.forEach(queueEntries, function(entry, i){
+      console.debug(entry, "at index", i);
+    });
+  });
+
+(Before dojo 1.7) It can be written as:
 
 .. code-block :: javascript
   :linenos:
@@ -38,12 +49,23 @@ For this simple loop, `dojo.forEach` isn't anything exciting. But combined with 
 .. code-block :: javascript
   :linenos:
 
+  //Before dojo 1.7
   dojo.forEach(
     dojo.query("select"),
     function(selectTag) {
       selectTag.disabled = true;
     }
   );
+  
+  //From dojo 1.7 on
+  require(["dojo/_base/array", "dojo/query"], function(array, query){
+    array.forEach(
+      query("select"),
+      function(selectTag) {
+        selectTag.disabled = true;
+      }
+    );
+  });
 
 How cool is that? (Answer: very!) There's no monkeying around with DOM functions, no using tedious names or id's, and it continues to work even when you add new SELECT tags.
 
@@ -52,8 +74,16 @@ Running ``dojo.forEach`` on a ``dojo.query`` result is so common, that Dojo defi
 .. code-block :: javascript
   :linenos:
 
+  //Before dojo 1.7
   dojo.query("select").forEach(function(selectTag){
       selectTag.disabled = true;
+  });
+  
+  //From dojo 1.7 on
+  require(["dojo/query"], function(query){
+    query("select").forEach(function(selectTag){
+      selectTag.disabled = true;
+    });
   });
 
 does the same thing. But that's not all! New in 1.0 you can collapse the function down to its body, passed in as a string like so:
@@ -63,7 +93,13 @@ does the same thing. But that's not all! New in 1.0 you can collapse the functio
 .. code-block :: javascript
   :linenos:
   
+  //Before dojo 1.7
   dojo.query("select").forEach("item.disabled = true;");
+
+  //From dojo 1.7 on
+  require(["dojo/query"], function(query){
+    query("select").forEach("item.disabled = true;");
+  });
 
 Ay carumba! That's a lot of functionality in a tiny 1-line package. Once you get used to the syntax, you'll never want to go back.
 
