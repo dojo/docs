@@ -289,6 +289,7 @@ A list of individuals who have signed Dojo CLAs:
 * Leonardi, David 
 * Levinson, Todd 
 * Leydier, Thierry 
+* Li, Bin
 * Lightbody, Patrick 
 * Linnenfelser, Marcel 
 * Lipps, Jonathan 
