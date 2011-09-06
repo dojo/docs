@@ -124,9 +124,17 @@ from 1.7 + dojo/dom module collects following part of dojo APIs
 
 * `dojo.byId <dojo/byId>`_
 
-  Select a DOM node by 'id'
+  Select a DOM node by 'id'.
 
-* Manipulation
+* dojo.isDescendant
+
+* dojo.setSelectable
+
+* Manipulation (dojo/dom-construct)
+
+  * dojo.toDom
+
+    Instantiates an HTML fragment returning the corresponding DOM.
 
   * `dojo.create <dojo/create>`_
 
@@ -136,18 +144,6 @@ from 1.7 + dojo/dom module collects following part of dojo APIs
 
     Place DOM nodes relative to others
 
-  * NodeList.place
-
-    Place DOM nodes in list relative to others
-
-  * NodeList.orphan
-
-  * NodeList.adopt
-
-  * NodeList.clone
-
-  * NodeList.addContent
-
   * `dojo.destroy <dojo/destroy>`_
 
     Destroy a DOM element
@@ -156,34 +152,34 @@ from 1.7 + dojo/dom module collects following part of dojo APIs
 
     Empty the contents of a DOM element
 
-  * NodeList.empty
 
-
-* Attributes
+* Attributes (dojo/dom-attr)
 
   * `dojo.attr <dojo/attr>`_
 
     Modifying DOM node attributes
 
-  * `dojo.NodeList.attr <dojo/NodeList/attr>`_
-
-    Set/Get attributes for nodes in the list
-
   * dojo.getAttr
+
+    Gets an attribute on an HTML element.
 
   * dojo.setAttr
 
+    Sets an attribute on an HTML element.
+
   * `dojo.hasAttr <dojo/hasAttr>`_
+
+    Returns true if the requested attribute is specified on the given element, and false otherwise.
 
   * `dojo.removeAttr <dojo/removeAttr>`_
 
+    Removes an attribute from an HTML element.
+
   * `dojo.getNodeProp <dojo/getNodeProp>`_
 
-  * dojo.isDescendant
+    Returns an effective value of a property or an attribute.
 
-  * dojo.setSelectable
-
-* Form
+* Form (dojo/dom-form)
 
   * `dojo.formToJson <dojo/formToJson>`_
 
@@ -191,25 +187,21 @@ from 1.7 + dojo/dom module collects following part of dojo APIs
 
   * `dojo.formToObject <dojo/formToObject>`_
 
+    Serialize a form node to a JavaScript object.
+
   * `dojo.formToQuery <dojo/formToQuery>`_
 
-* Styles
+    Returns a URL-encoded string representing the form passed as either a node or string ID identifying the form to serialize
+
+* Styles (dojo/dom-style)
 
   * `dojo.coords <dojo/coords>`_
 
     Getter for the coordinates (relative to parent and absolute) of a DOM node.  Deprecated in Dojo 1.4.
 
-  * NodeList.coords
-
-    Getter for the coordinates of each node in the list.  Deprecated in Dojo 1.4.
-
   * `dojo.position <dojo/position>`_
 
     Getter for the border-box x/y coordinates and size of a DOM node.
-
-  * NodeList.position
-
-    Calls `dojo.position <dojo/position>`_ for each node in the list and returns those objects as an Array.
 
   * `dojo.style <dojo/style>`_
 
@@ -219,7 +211,15 @@ from 1.7 + dojo/dom module collects following part of dojo APIs
 
     Return a cachable object of all computed styles for a node
 
-* Class Utilities
+  * dojo.getStyle
+
+    Accesses styles on a node.
+
+  * dojo.setStyle
+
+    Sets styles on a node.
+
+* Class (dojo/dom-class)
 
   * `dojo.hasClass <dojo/hasClass>`_
 
@@ -239,7 +239,7 @@ from 1.7 + dojo/dom module collects following part of dojo APIs
 
   * dojo.replaceClass
 
-* Geometry
+* Geometry (dojo/dom-geometry)
   
   * `dojo.marginBox <dojo/marginBox>`_
 
