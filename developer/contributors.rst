@@ -298,6 +298,7 @@ A list of individuals who have signed Dojo CLAs:
 * Lokanuvat, Sakchai 
 * Lopes, Rui Godinho 
 * Lopez, Gerald 
+* Lorentsen, Bo
 * Lowery, Ben 
 * Lucas, Brian 
 * Lulek, Marcin 
@@ -579,6 +580,7 @@ A list of individuals who have signed Dojo CLAs:
 * Zastrow, Bettina 
 * Zhang, Carrie 
 * Zhang, Stephen 
+* Zhen, Wang
 * Zipkin, Joel 
 * Zyp, Kris
 
