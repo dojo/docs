@@ -58,7 +58,12 @@ Pseudocode Example 2:  Assigning callbacks to fire when a deferred fires.
     });
   </script>
 
-The `dojo.when() <dojo/when>`_ function is also a useful tool for interacting with Deferred objects since it can provide normalization between asynchronous Deferreds and normal synchronous values.
+=============
+Deferred.when
+=============
+
+After dojo 1.7, dojo/_base/Deferred module contains the deferred.when which is the original dojo.when. The function "dojo.when" still alias to deferred.when for backward compatibility.
+The `Deferred.when()/dojo.when() <dojo/when>`_ function is a useful tool for interacting with Deferred objects since it can provide normalization between asynchronous Deferreds and normal synchronous values.
 
 Deferreds objects also have a 'promise' property that provides a read-only view of the result of the operation. This provides a safe robust object that can be passed to other functions without worry of the Deferred being mutated or improperly resolved against expectations.
 
