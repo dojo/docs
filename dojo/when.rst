@@ -2,7 +2,7 @@
 #format dojo_rst
 
 Deferred.when/dojo.when
-=============
+=======================
 
 :Status: Draft
 :Version: 1.0
