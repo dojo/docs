@@ -109,8 +109,10 @@ String Utilities
 
   Simple templates with parameterized substitutions.
 
-DOM
----
+DOM (dojo/dom)
+--------------
+
+from 1.7 + dojo/dom module collects following part of dojo APIs
 
 * `dojo.query <dojo/query>`_
 
@@ -159,10 +161,6 @@ DOM
 
 * Attributes
 
-  * `dojo.formToJson <dojo/formToJson>`_
-
-    Create an object from an form node
-
   * `dojo.attr <dojo/attr>`_
 
     Modifying DOM node attributes
@@ -171,20 +169,29 @@ DOM
 
     Set/Get attributes for nodes in the list
 
+  * dojo.getAttr
+
+  * dojo.setAttr
+
   * `dojo.hasAttr <dojo/hasAttr>`_
 
   * `dojo.removeAttr <dojo/removeAttr>`_
 
   * `dojo.getNodeProp <dojo/getNodeProp>`_
 
-  * `dojo.formToObject <dojo/formToObject>`_
-
-  * `dojo.formToQuery <dojo/formToQuery>`_
-
   * dojo.isDescendant
 
   * dojo.setSelectable
 
+* Form
+
+  * `dojo.formToJson <dojo/formToJson>`_
+
+    Create an object from an form node
+
+  * `dojo.formToObject <dojo/formToObject>`_
+
+  * `dojo.formToQuery <dojo/formToQuery>`_
 
 * Styles
 
@@ -212,24 +219,28 @@ DOM
 
     Return a cachable object of all computed styles for a node
 
-  * Class Utilities
+* Class Utilities
 
-    * `dojo.hasClass <dojo/hasClass>`_
+  * `dojo.hasClass <dojo/hasClass>`_
 
-      Returns a boolean depending on whether or not a node has a passed class string.
+    Returns a boolean depending on whether or not a node has a passed class string.
 
-    * `dojo.addClass <dojo/addClass>`_
+  * `dojo.addClass <dojo/addClass>`_
 
-      Adds a CSS class to a node.
+    Adds a CSS class to a node.
 
-    * `dojo.removeClass <dojo/removeClass>`_
+  * `dojo.removeClass <dojo/removeClass>`_
 
-      Removes a class from a Node.
+    Removes a class from a Node.
 
-    * `dojo.toggleClass <dojo/toggleClass>`_
+  * `dojo.toggleClass <dojo/toggleClass>`_
 
-      Toggles a className (or now in 1.4 an array of classNames).
+    Toggles a className (or now in 1.4 an array of classNames).
 
+  * dojo.replaceClass
+
+* Geometry
+  
   * `dojo.marginBox <dojo/marginBox>`_
 
     Getter/setter for the margin-box of node
