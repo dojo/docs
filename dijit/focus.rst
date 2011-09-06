@@ -56,5 +56,21 @@ Determining the currently focused element
 Watching for focus changes
 --------------------------
 
+.. code-block :: javascript
+ :linenos:
+
+  require([ "dijit/focus" ], function(focusUtil){
+    var handle = focusUtil.watch("curNode", function(name, oldValue, newValue){
+      console.log("Focused node was", oldValue, "now is", newValue);
+    });
+  });
+
 Listening for focus changes in iframes
 --------------------------------------
+
+.. code-block :: javascript
+ :linenos:
+
+  require([ "dijit/focus", "dojo/dom" ], function(focusUtil, dom){
+    var handle = focusUtil.registerIframe(dom.byId("myIframe"));
+  });
