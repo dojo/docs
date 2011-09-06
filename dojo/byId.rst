@@ -11,12 +11,31 @@ dojo.byId
 
 This is a simple alias to ''document.getElementById'', which not only is shorter to write, but fortunately works in all browsers. It turns a domNode reference to some Node byId, or the same node reference if passed a domNode. 
 
+=====
+Usage
+=====
+
+Dojo 1.7 (AMD)
+--------------
 
 .. code-block :: javascript
-  :linenos:
+
+  require("dojo/dom", function(dom){  // Note, dom or any other variable name can be used
+      
+      // fetch a node by id="someNode"
+      var node = dom.byId("someNode");
+
+  });
+
+
+Dojo < 1.7
+----------
+
+.. code-block :: javascript
 
   // fetch a node by id="someNode"
   var node = dojo.byId("someNode");
+
 
 The node variable is just a native domNode, with properties you can manipulate. The most common, ''innerHTML'':
 
