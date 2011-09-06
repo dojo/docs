@@ -31,7 +31,7 @@ Focusing an element
     focusUtil.focus(dom.byId("foo"));
   });
 
-Note that this function only accepts DOM nodes, not widget instances. The element to focus must also be focusable (a form element, or another element with a tabindex).
+Note that this function only accepts DOM nodes, not widget instances. The element to focus must also be focusable (a form element, or another element with a ``tabindex`` attribute).
 
 Unfocusing an element
 ---------------------
