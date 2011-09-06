@@ -1,7 +1,7 @@
 ## page was renamed from 1.2/dojo/Deferred
 #format dojo_rst
 
-dojo.when
+Deferred.when/dojo.when
 =============
 
 :Status: Draft
@@ -12,6 +12,8 @@ dojo.when
     :depth: 2
 
 dojo.when provides the ability to define a callback (and error handler) for the eventual completion of a Deferred or promise object, or any standard synchronous value. 
+
+After dojo 1.7, dojo.when is included in dojo/_base/Deferred module and can also be referred as Deferred.when. "dojo.when" is alias to Deferred.when for backward compatibility.
 
 
 =====
