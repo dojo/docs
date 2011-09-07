@@ -35,7 +35,17 @@ Pseudocode Example 1:  Creating and calling a deferred.
 
 .. code-block :: javascript
   :linenos:
+  
+  //Dojo 1.7 (AMD style)
+  <script type="text/javascript">
+    require(['dojo/_base/Deferred'],function(Deferred){
+      var deferred = new Deferred();
+      setTimeout(function(){deferred.callback({success: true}); }, 1000);
+      return deferred;
+    });
+  </script>
 
+  //Dojo < 1.7
   <script type="text/javascript">
     var deferred = new dojo.Deferred();
     setTimeout(function(){deferred.callback({success: true}); }, 1000);
