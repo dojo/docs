@@ -208,6 +208,17 @@ This creates a `new` configuration parameter named ``myCustomVariable``. To use 
 .. code-block :: javascript
   :linenos:
 
+  //Dojo 1.7 (AMD style)
+  require(['dojo/_base/declare', 'dojo/_base/config'], function(declare, config){
+    declare("my.Thinger", null, {
+      thingerColor: (config.myCustomVariable ? "wasTrue" : "wasFalse"),
+      constructor: function(){
+         if(config.myCustomVaraible){ ... }
+      }  
+    });
+  });
+  
+  //Dojo < 1.7
   dojo.declare("my.Thinger", null, {
       thingerColor: (dojo.config.myCustomVariable ? "wasTrue" : "wasFalse"),
       constructor: function(){
