@@ -112,7 +112,7 @@ DOM operations:
 * `dojo.getNodeProp <dojo/getNodeProp>`_
 * `dojo.getAttr <dojo/getAttr>`_
 * `dojo.setAttr <dojo/setAttr>`_
-* `dojo.removeAttr <dojo/attr>`_
+* `dojo.removeAttr <dojo/removeAttr>`_
 * `dojo.style <dojo/style>`_
 
 NodeList:
