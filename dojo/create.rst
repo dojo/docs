@@ -72,13 +72,22 @@ The function returns a DOM node it created with ``tag`` or the first argument, i
 Dojo 1.7 (AMD)
 --------------
 
+In dojo 1.7, dojo.create has been moved to dojo/_base/html.
+
 .. code-block :: javascript
 
-  require("dojo/dom-construct", function(ctr){  // Note, ctr or any other variable name can be used
-      
+  require("dojo/_base/html", function(dojo){     
+      // create a div node
+      var node = dojo.create("div");
+  });
+
+It's recommend to use dom-construct.get in dojo 1.7.
+
+.. code-block :: javascript
+
+  require("dojo/dom-construct", function(ctr){  // Note, ctr or any other variable name can be used     
       // create a div node
       var node = ctr.create("div");
-
   });
 
 
