@@ -46,7 +46,7 @@ Examples
 
 Dojo 1.7 (AMD)
 --------------
-In dojo 1.7, dojo.getAttr has moved to dojo/_base/html.
+In dojo 1.7, dojo.getAttr has been moved to dojo/_base/html.
 
 .. code-block :: javascript
 
@@ -65,11 +65,11 @@ It's recommend to use attr.set in dojo 1.7.
 
   require("dojo/dom-attr", function(attr){   
       // use setAttr() to set the tab index
-      attr.setAttr("nodeId", "tabIndex", 3);
+      attr.set("nodeId", "tabIndex", 3);
 
       // Again, only set style as an object hash of styles:
       var obj = { color:"#fff", backgroundColor:"#000" };
-      attr.setAttr("someNode", "style", obj);
+      attr.set("someNode", "style", obj);
   });
 
 Dojo < 1.7
