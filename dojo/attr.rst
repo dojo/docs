@@ -44,6 +44,8 @@ Dojo 1.7 (AMD)
 --------------
 In dojo 1.7, dojo.attr has moved to dojo/_base/html.
 
+It's recommend to use attr.get, attr.set to replace dojo.attr.
+
 .. code-block :: javascript
 
   require("dojo/_base/html", function(dojo){      
