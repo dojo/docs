@@ -76,5 +76,6 @@ If you don’t register an iframe, when focus changes to elements within the ifr
  :linenos:
 
   require([ "dijit/focus", "dojo/dom" ], function(focusUtil, dom){
+    // when elements in myIframe are focused, curNode will point to myIframe
     var handle = focusUtil.registerIframe(dom.byId("myIframe"));
   });
