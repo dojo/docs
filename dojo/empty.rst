@@ -27,6 +27,20 @@ Usage
 Dojo 1.7 (AMD)
 --------------
 
+In dojo 1.7, dojo.create has been moved to dojo/_base/html.
+
+.. code-block :: javascript
+ :linenos:
+
+  <script type="text/javascript">
+    require("dojo/dom-construct", function(dojo){ 
+       // Empty node's children byId:
+       dojo.empty("someId");
+    });
+  </script>
+
+It's recommend to use dom-construct empty in dojo 1.7.
+
 .. code-block :: javascript
  :linenos:
 
@@ -160,5 +174,7 @@ Empty all nodes in a list by reference
 See also
 ========
 
+* `dojo.create <dojo/create>`_
+* `dojo.place <dojo/place>`_
 * `dojo.destroy <dojo/destroy>`_
 * `DOM Utilities <quickstart/dom>`_
