@@ -44,7 +44,7 @@ In dojo 1.7, dojo.removeAttr has been moved to dojo/_base/html.
 
 .. code-block :: javascript
 
-  require("dojo/_base/html", function(dojo){   
+  require(["dojo/_base/html"], function(dojo){   
       dojo.removeAttr("model", "disabled");
   });
 
@@ -52,7 +52,7 @@ It's recommend to use attr.remove in dojo 1.7.
 
 .. code-block :: javascript
 
-  require("dojo/dom-attr", function(attr){   
+  require(["dojo/dom-attr"], function(attr){   
       attr.remove("model", "disabled");
   });
 
