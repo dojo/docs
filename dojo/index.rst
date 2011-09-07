@@ -207,11 +207,11 @@ from 1.7 + dojo/dom module collects following part of dojo APIs
 
     Return a cachable object of all computed styles for a node
 
-  * dojo.getStyle
+  * `dojo.getStyle <dojo/getStyle>`_
 
     Accesses styles on a node.
 
-  * dojo.setStyle
+  * `dojo.setStyle <dojo/setStyle>`_
 
     Sets styles on a node.
 
