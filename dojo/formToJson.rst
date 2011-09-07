@@ -26,6 +26,36 @@ Usage
 
 Usage is simple and straightforward, you pass the form node or the string id of a form node to convert.  The function will hand back a JSON string of the name/value pairs from the form elements.
 
+Dojo 1.7 (AMD)
+--------------
+
+In dojo 1.7, this API has been moved to dojo/dom-form and renamed to toJson.
+
+.. code-block :: javascript
+ :linenos:
+
+ <script type="text/javascript">
+  require(["dojo/dom-form"], function(domForm){   
+     var formId = "myId";
+     var formJson = domForm.toJson(formId);
+
+     //Assuming a form of:
+     // <form id="myform">
+     //    <input type="text" name="field1" value="value1">
+     //    <input type="text" name="field2" value="value2">
+     //    <input type="button" name="someButton" value="someValue">
+     // </form>
+     //
+     //The structure of formJson will be:
+     // {"field1":"value1","field2":"value2"}
+     //Note the button was skipped.
+  });
+ </script>
+
+
+Dojo < 1.7
+----------
+
 .. code-block :: javascript
  :linenos:
 
