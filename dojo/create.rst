@@ -193,6 +193,7 @@ While you can use `dojo.create <dojo/create>`_ to set attributes on the existing
 See also
 ========
 
+* `dojo.place <dojo/place>`_
 * `dojo.destroy <dojo/destroy>`_
 * `dojo.empty <dojo/empty>`_
 * `DOM Utilities <quickstart/dom>`_
