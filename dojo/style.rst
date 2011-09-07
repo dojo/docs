@@ -368,6 +368,8 @@ Tips
 See also
 ========
 
+* `dojo.getStyle <dojo/getStyle>`_
+* `dojo.setStyle <dojo/setStyle>`_
 * `dojo.addClass <dojo/addClass>`_
 * `dojo.hasClass <dojo/hasClass>`_
 * `dojo.removeClass <dojo/removeClass>`_
