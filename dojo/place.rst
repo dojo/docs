@@ -70,11 +70,22 @@ Usage
 Dojo 1.7 (AMD)
 --------------
 
+In dojo 1.7, dojo.create has been moved to dojo/_base/html.
+
+.. code-block :: javascript
+
+  require("dojo/_base/html", function(dojo){
+      // place node to refNode
+       dojo.place(node, refNode, "first");
+  });
+
+It's recommend to use dom-construct place in dojo 1.7.
+
 .. code-block :: javascript
 
   require("dojo/dom-construct", function(ctr){  // Note, ctr or any other variable name can be used     
-      // place node to dojo.body
-       ctr.place(node, dojo.body(), "first");
+      // place node to refNode
+       ctr.place(node, refNode, "first");
   });
 
 
@@ -83,8 +94,8 @@ Dojo < 1.7
 
 .. code-block :: javascript
 
-  // place node to dojo.body
-  dojo.place(node, dojo.body(), "first");
+  // place node to refNode
+  dojo.place(node, refNode, "first");
 
 =================
 Placement options
