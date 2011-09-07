@@ -46,7 +46,7 @@ In dojo 1.7, dojo.attr has moved to dojo/_base/html.
 
 .. code-block :: javascript
 
-  require("dojo/_base/html", function(dojo){  // Note, dojo or any other variable name can be used      
+  require("dojo/_base/html", function(dojo){      
       // get node id
       dojo.attr(node, "id");
       // set node id
