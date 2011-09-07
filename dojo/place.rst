@@ -41,13 +41,7 @@ refNode
 pos
   Optional argument. Can be a number or one of the following strings: "before", "after", "replace", "only", "first", or "last". If omitted, "last" is assumed. The value of "only" replaces all children of the refNode. If the position argument is a number, it indicates that the node should be inserted as a child of ``refNode`` with this number (counting from 0).
 
-.. code-block :: javascript
-  :linenos:
-
-  dojo.place("someId", "someOtherId", "first"); // add someId to the node someOtherId as the first-child
-
 The naming of the positions are intentionally concise.
-
 
 ``place`` returns the node it placed. In case of an HTML fragment, if it has just one root element, that element is returned directly. Otherwise a document fragment is returned. The returned node can be:
 
@@ -74,7 +68,7 @@ In dojo 1.7, dojo.create has been moved to dojo/_base/html.
 
 .. code-block :: javascript
 
-  require("dojo/_base/html", function(dojo){
+  require(["dojo/_base/html"], function(dojo){
       // place node to refNode
        dojo.place(node, refNode, "first");
   });
@@ -83,7 +77,7 @@ It's recommend to use dom-construct place in dojo 1.7.
 
 .. code-block :: javascript
 
-  require("dojo/dom-construct", function(ctr){  // Note, ctr or any other variable name can be used     
+  require(["dojo/dom-construct"], function(ctr){  // Note, ctr or any other variable name can be used     
       // place node to refNode
        ctr.place(node, refNode, "first");
   });
@@ -337,6 +331,12 @@ An alternative way to place (and create) a node is `dojo.create <dojo/create>`_.
 
   // the third and fourth options are passed to dojo.place()
   // create a div, and place(n, dojo.body(), "first");
+  // dojo 1.7 (AMD)
+  require(["dojo/dom-construct", "dojo/_base/window"], function(ctr){
+     ctr.create("div", null, win.body(), "first");
+  });
+
+  // dojo < 1.7
   dojo.create("div", null, dojo.body(), "first");
 
 ========
