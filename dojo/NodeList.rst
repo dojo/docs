@@ -898,16 +898,16 @@ Animation
 Adding animation to lists of nodes requires including the module ``dojo.NodeList-fx`` which adds the required methods to instances of ``dojo.NodeList``. They are:
 
 :anim:
-  TODOC
+  Animate one or more CSS properties for all nodes in this list. The returned animation object will already be playing when it is returned. See the docs for `dojo.anim <dojo/anim>`_ for full details.
 :fadeIn:
-  TODOC
+  Fade in all elements of this NodeList via `dojo.fadeIn <dojo/fadeIn>`_
 :fadeOut:
-  TODOC
+  Fade out all elements of this NodeList via `dojo.fadeOut <dojo/fadeOut>`_
 :slideTo:
-  TODOC
+  Slide all elements of the node list to the specified place via `dojo.fx.slideTo <dojo/fx/slideTo>`_
 :wipeIn:
-  TODOC
+  Wipe in all elements of this NodeList via `dojo.fx.wipeIn <dojo/fx/wipeIn>`_
 :wipeOut:
-  TODOC
+  Wipe out all elements of this NodeList via `dojo.fx.wipeOut <dojo/fx/wipeOut>`_
 :animateProperty:
-  TODOC
+  Animate all elements of this NodeList across the properties specified. Syntax is identical to `dojo.animateProperty <dojo/animateProperty>`_
