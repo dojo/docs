@@ -815,16 +815,16 @@ Click on a method name to see a documentation page for it.
   Add the passed class to the nodes in this list, if the class is not present, otherwise removes it. For more information see `dojo.toggleClass <dojo/toggleClass>`_
 
 :place:
-  TODOC
+  Places elements of this node list relative to the first element matched by queryOrNode. Returns the original NodeList. For more information, see `dojo.place <dojo/place>`_
 
 :orphan:
-  TODOC
+  Removes elements in this list that match the filter from their parents and returns them as a new NodeList.
 
 :adopt:
-  TODOC
+  Places any/all elements in queryOrListOrNode at a position relative to the first element in this list. Returns a dojo.NodeList of the adopted elements.
 
 :addContent:
-  TODOC
+  Add a node, NodeList or some HTML as a string to every item in the list.  Returns the original list.
 
 :empty:
   Empties the content of the nodes in this list, leaving the nodes in place. see `dojo.empty <dojo/empty>`_
