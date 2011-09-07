@@ -20,11 +20,38 @@ This function is one of many helpers used by the dojo Xhr subsystem for handling
 
 This function is used internally by `dojo.formToObject <dojo/formToObject>`_ to convert each form field to a value.
 
+
 =====
 Usage
 =====
 
 Pass the form field node or the string id of a form field node.  The function will hand back a string array for multi-select fields, a string value for other fields.
+
+Dojo 1.7 (AMD)
+--------------
+In dojo 1.7, this API has been moved to dojo/dom-form.
+
+.. code-block :: javascript
+ :linenos:
+
+ <script type="text/javascript">
+  require(["dojo/dom-form"], function(domForm){   
+     var firstInputValue = domForm.fieldToObject("firstInput");
+
+     //Assuming a form of:
+     // <form id="myform">
+     //    <input id="firstInput" type="text" name="field1" value="value1">
+     //    <input type="text" name="field2" value="value2">
+     //    <input type="button" name="someButton" value="someValue">
+     // </form>
+     //
+     //firstInputValue will be "value1"
+  });
+ </script>
+
+
+Dojo < 1.7
+----------
 
 .. code-block :: javascript
  :linenos:
