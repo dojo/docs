@@ -65,10 +65,12 @@ Watching for focus changes
     });
   });
 
-Note that two changes will occur per refocus: one change will be from the old element to ``null``, and the second change will be from ``null`` to the new element.
+Note that two changes will occur when element focus changes: the first change will be from the old element to ``null``, and the second change will be from ``null`` to the new element.
 
 Listening for focus changes in iframes
 --------------------------------------
+
+If you don’t register an iframe, when focus changes to elements within the iframe, it will not be correctly picked up by dijit/focus. Registering the iframe allows dijit/focus to determine which iframe currently has focus, but does *not* tell you which specific element inside the iframe has been focused.
 
 .. code-block :: javascript
  :linenos:
