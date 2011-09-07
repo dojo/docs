@@ -18,13 +18,22 @@ Usage
 Dojo 1.7 (AMD)
 --------------
 
+In dojo 1.7, dojo.byId has been moved to dojo/_base/html.
+
 .. code-block :: javascript
 
-  require("dojo/dom", function(dom){  // Note, dom or any other variable name can be used
-      
+  require("dojo/_base/html", function(dojo){  // Note, dom or any other variable name can be used     
+      // fetch a node by id="someNode"
+      var node = dojo.byId("someNode");
+  });
+
+It's recommend to use dom.byId replace dojo.byId.
+
+.. code-block :: javascript
+
+  require("dojo/dom", function(dom){  // Note, dom or any other variable name can be used     
       // fetch a node by id="someNode"
       var node = dom.byId("someNode");
-
   });
 
 
