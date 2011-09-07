@@ -159,11 +159,11 @@ from 1.7 + dojo/dom module collects following part of dojo APIs
 
     Modifying DOM node attributes
 
-  * dojo.getAttr
+  * `dojo.getAttr <dojo/getAttr>`_
 
     Gets an attribute on an HTML element.
 
-  * dojo.setAttr
+  * `dojo.setAttr <dojo/setAttr>`_
 
     Sets an attribute on an HTML element.
 
