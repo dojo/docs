@@ -81,7 +81,7 @@ In dojo 1.7, dojo.create has been moved to dojo/_base/html.
       var node = dojo.create("div");
   });
 
-It's recommend to use dom-construct.get in dojo 1.7.
+It's recommend to use dom-construct create in dojo 1.7.
 
 .. code-block :: javascript
 
