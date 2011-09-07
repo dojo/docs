@@ -26,7 +26,6 @@ The function takes up to three arguments:
 
   dojo.place(node, refNode, pos);
 
-
 node
   Can be a String or a DOM node. If it is a string starting with "<", it is assumed to be an HTML fragment, which will be created. Otherwise it is assumed to be an id of a DOM node. 
 
@@ -63,6 +62,29 @@ The naming of the positions are intentionally concise.
   The document fragment is a very useful tool to work with a group of arbitrary nodes, because standard DOM methods can work with it as with a regular node operating on the whole group, e.g., inserting or appending it as a whole.
 
   Note that DocumentFragment is a Node, but not an Element. It does not support ``innerHTML``, ``style``, or any other familiar attributes of the element. 
+
+=====
+Usage
+=====
+
+Dojo 1.7 (AMD)
+--------------
+
+.. code-block :: javascript
+
+  require("dojo/dom-construct", function(ctr){  // Note, ctr or any other variable name can be used     
+      // place node to dojo.body
+       ctr.place(node, dojo.body(), "first");
+  });
+
+
+Dojo < 1.7
+----------
+
+.. code-block :: javascript
+
+  // place node to dojo.body
+  dojo.place(node, dojo.body(), "first");
 
 
 =================
