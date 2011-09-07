@@ -28,11 +28,11 @@ Usage is simple and straightforward, you pass the form node or the string id of 
 
 Dojo 1.7 (AMD)
 --------------
-In dojo 1.7, this API has been moved to dojo/dom-form.
+
+In dojo 1.7, this API has been moved to dojo/dom-form and renamed to toQuery.
 
 .. code-block :: javascript
  :linenos:
-
 
  <script type="text/javascript">
   require(["dojo/dom-form"], function(domForm){
@@ -55,8 +55,6 @@ In dojo 1.7, this API has been moved to dojo/dom-form.
 
 Dojo < 1.7
 ----------
-
-In dojo 1.7, this API has been moved to dojo/dom-form and renamed to toQuery.
 
 .. code-block :: javascript
  :linenos:
