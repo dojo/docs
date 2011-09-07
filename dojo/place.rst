@@ -338,3 +338,12 @@ An alternative way to place (and create) a node is `dojo.create <dojo/create>`_.
   // the third and fourth options are passed to dojo.place()
   // create a div, and place(n, dojo.body(), "first");
   dojo.create("div", null, dojo.body(), "first");
+
+========
+See also
+========
+
+* `dojo.create <dojo/create>`_
+* `dojo.empty <dojo/empty>`_
+* `dojo.destroy <dojo/destroy>`_
+* `DOM Utilities <quickstart/dom>`_
