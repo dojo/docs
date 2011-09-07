@@ -40,6 +40,123 @@ value
   If passed, sets value on the node for style, handling cross-browser concerns. When setting a pixel value, be sure to include "px" in the value. For instance, top: "200px". Otherwise, in some cases, some browsers will not apply the style.
 
 
+Dojo 1.7 (AMD)
+--------------
+In dojo 1.7, dojo.style has been moved to dojo/_base/html.
+
+.. code-block :: javascript
+
+  require(["dojo/_base/html", "dojo/query"], function(dojo, query){      
+      // Passing only an ID or node returns the computed style object of the node:
+      dojo.style("thinger");
+
+      // Passing a node and a style property returns the current normalized, computed value for that property:
+      dojo.style("thinger", "opacity"); // 1 by default
+
+      // Passing a node, a style property, and a value changes the current display of the node and returns the new computed value
+      dojo.style("thinger", "opacity", 0.5); // == 0.5
+
+      // Passing a node, an object-style style property sets each of the values in turn and returns the computed style object of the node:
+      dojo.style("thinger", {
+              "opacity": 0.5,
+              "border": "3px solid black",
+              "height": "300px"
+      });
+
+      // When the CSS style property is hyphenated, the JavaScript property is camelCased. font-size becomes fontSize, and so on.
+      dojo.style("thinger",{
+              fontSize:"14pt",
+              letterSpacing:"1.2em"
+      });
+
+      // dojo.NodeList implements .style() using the same syntax, omitting the "node" parameter, calling dojo.style() on every element of the list. See: `dojo.query()` and `dojo.NodeList()`
+      query(".someClassName").style("visibility","hidden");
+
+      // or
+
+      query("#baz > div").style({
+             opacity:0.75,
+             fontSize:"13pt"
+      });
+  });
+
+It's recommend to use `style.get <dojo/getAttr>`_, `style.set <dojo/setAttr>`_ to replace dojo.style.
+
+.. code-block :: javascript
+
+  require(["dojo/dom-style", "dojo/query"], function(style, query){    
+      // Passing only an ID or node returns the computed style object of the node:
+      style.get("thinger");
+
+      // Passing a node and a style property returns the current normalized, computed value for that property:
+      style.get("thinger", "opacity"); // 1 by default
+
+      // Passing a node, a style property, and a value changes the current display of the node and returns the new computed value
+      style.set("thinger", "opacity", 0.5); // == 0.5
+
+      // Passing a node, an object-style style property sets each of the values in turn and returns the computed style object of the node:
+      style.set("thinger", {
+              "opacity": 0.5,
+              "border": "3px solid black",
+              "height": "300px"
+      });
+
+      // When the CSS style property is hyphenated, the JavaScript property is camelCased. font-size becomes fontSize, and so on.
+      style.set("thinger",{
+              fontSize:"14pt",
+              letterSpacing:"1.2em"
+      });
+
+      // dojo.NodeList implements .style() using the same syntax, omitting the "node" parameter, calling dojo.style() on every element of the list. See: `dojo.query()` and `dojo.NodeList()`
+      query(".someClassName").style("visibility","hidden");
+
+      // or
+
+      query("#baz > div").style({
+             opacity:0.75,
+             fontSize:"13pt"
+      });
+  });
+
+
+Dojo < 1.7
+----------
+
+.. code-block :: javascript
+
+  // Passing only an ID or node returns the computed style object of the node:
+      dojo.style("thinger");
+
+      // Passing a node and a style property returns the current normalized, computed value for that property:
+      dojo.style("thinger", "opacity"); // 1 by default
+
+      // Passing a node, a style property, and a value changes the current display of the node and returns the new computed value
+      dojo.style("thinger", "opacity", 0.5); // == 0.5
+
+      // Passing a node, an object-style style property sets each of the values in turn and returns the computed style object of the node:
+      dojo.style("thinger", {
+              "opacity": 0.5,
+              "border": "3px solid black",
+              "height": "300px"
+      });
+
+      // When the CSS style property is hyphenated, the JavaScript property is camelCased. font-size becomes fontSize, and so on.
+      dojo.style("thinger",{
+              fontSize:"14pt",
+              letterSpacing:"1.2em"
+      });
+
+      // dojo.NodeList implements .style() using the same syntax, omitting the "node" parameter, calling dojo.style() on every element of the list. See: `dojo.query()` and `dojo.NodeList()`
+      dojo.query(".someClassName").style("visibility","hidden");
+
+      // or
+
+      dojo.query("#baz > div").style({
+             opacity:0.75,
+             fontSize:"13pt"
+      });
+
+
 ========
 Examples
 ========
