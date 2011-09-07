@@ -42,7 +42,7 @@ Examples
 
 Dojo 1.7 (AMD)
 --------------
-In dojo 1.7, dojo.getAttr has moved to dojo/_base/html.
+In dojo 1.7, dojo.getAttr has been moved to dojo/_base/html.
 
 .. code-block :: javascript
 
