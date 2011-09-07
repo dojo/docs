@@ -500,6 +500,8 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 :map:
   like `dojo.map <dojo/map>`_ with the current list as the array or `Array.map <https://developer.mozilla.org/en/Core_JavaScript_1.5_Reference/Objects/Array/map>`_ in browsers that support it.  Returns a new ``dojo.NodeList`` with the mapped-in elements (can be chained).
 
+[ V1.6 and earlier ]
+
 .. code-block :: javascript
   :linenos:
 
@@ -511,6 +513,19 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
   // or using the string version:
   var parents = dojo.query("a").some("return item.parentNode;");
 
+[ V1.6 and earlier ]
+
+.. code-block :: javascript
+  :linenos:
+
+  var parents = query("a").
+    map(function(node){
+      return node.parentNode;
+    });
+
+  // or using the string version:
+  var parents = query("a").some("return item.parentNode;");
+
 :slice:
   Used for grabbing only some of the elements in the list. Like `Array.slice <http://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:slice>`_, returns a new ``dojo.NodeList`` from a subset of the current list (can be chained).
 
@@ -518,7 +533,10 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
   :linenos:
 
   // style all but the first and last:
+  // [ V1.6 and earlier ]
   dojo.query("a").slice(1, -1).addClass("emphasis");
+  // [ V1.7 AMD ]
+  query("a").slice(1, -1).addClass("emphasis");
 
 :splice:
   Useful for changing a list in-place instead of making a new copy. Like `Array.splice <http://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:splice>`_, returns a new ``dojo.NodeList`` containing the elements removed from the list (can be chained).
@@ -526,7 +544,10 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 .. code-block :: javascript
   :linenos:
 
+  // [ V1.6 and earlier ]
   var anchors = dojo.query("a");
+  // [ V1.7 AMD ]
+  var anchors = query("a");
 
   // remove 3, starting with the second
   var removed = anchors.splice(1, 3);
@@ -544,8 +565,13 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 .. code-block :: javascript
   :linenos:
 
+  // [ V1.6 and earlier ]
   var anchors = dojo.query("a");
   var bolds = dojo.query("b");
+  // [ V1.7 AMD ]
+  var anchors = query("a");
+  var bolds = query("b");
+
   var boldsAndAnchors = anchors.concat(bolds);
 
 :push:
@@ -554,13 +580,20 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 .. code-block :: javascript
   :linenos:
 
+  // [ V1.6 and earlier ]
   var anchors = dojo.query("a");
   var a = dojo.doc.createElement("a");
+  // [ V1.7 AMD ]
+  var anchors = query("a");
+  var a = baseWindow.doc.createElement("a");
+
   // add "a" and 2 copies
   anchors.push(a, a.cloneNode(), a.cloneNode());
 
 :pop:
   Like `Array.pop <http://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:pop>`_, removes the last item from the ``NodeList`` (does not chain).
+
+[ V1.6 and earlier ]
 
 .. code-block :: javascript
   :linenos:
@@ -570,8 +603,20 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
   var a = anchors.pop();
   dojo.style(a, "fontWeight", "bold");
 
+[ V1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  var anchors = query("a");
+  // remove the last item from the list
+  var a = anchors.pop();
+  style.set(a, "fontWeight", "bold");
+
 :shift:
   Like `Array.shift <http://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:shift>`_. Works like ``pop``, but instead pulls the *first* element from the list instead of the last (does not chain):
+
+[ V1.6 and earlier ]
 
 .. code-block :: javascript
   :linenos:
@@ -581,14 +626,29 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
   var a = anchors.shift();
   dojo.style(a, "fontWeight", "bold");
 
+[ V1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  var anchors = query("a");
+  // remove the first item from the list
+  var a = anchors.shift();
+  style.set(a, "fontWeight", "bold");
+
 :unshift:
   Like `Array.unshift <http://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:shift>`_. Similar to ``push``, but instead puts elements at the *front* of the list. Returns the new length of the ``NodeList`` (does not chain):
 
 .. code-block :: javascript
   :linenos:
 
+  // [ V1.6 and earlier ]
   var anchors = dojo.query("a");
   var a = dojo.doc.createElement("a");
+  // [ V1.7 AMD ]
+  var anchors = query("a");
+  var a = baseWindow.doc.createElement("a");
+
   var howMany = anchors.unshift(a);
 
 :indexOf:
@@ -597,8 +657,13 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 .. code-block :: javascript
   :linenos:
 
+  // [ V1.6 and earlier ]
   var anchors = dojo.query("a");
   var tested = dojo.byId("tested");
+  // [ V1.7 AMD ]
+  var anchors = query("a");
+  var tested = dom.byId("tested");
+
   console.debug("is it in the list?", ( anchors.indexOf(tested) != -1 ) );
 
 :lastIndexOf:
@@ -606,6 +671,8 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 
 :some:
   like `dojo.some <dojo/some>`_ and `Array.some <http://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:some>`_. Returns a boolean value indicating whether any of the items in the list match the filter function (does not chain).
+
+[ V1.6 and earlier ]
 
 .. code-block :: javascript
   :linenos:
@@ -617,6 +684,19 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 
   // or using the string version (item is the node):
   var hasFoo = dojo.query("a").some("return item.innerHTML == 'foo';");
+
+[ V1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  var hasFoo = query("a").
+    some(function(node){
+      return node.innerHTML == "foo";
+    });
+
+  // or using the string version (item is the node):
+  var hasFoo = query("a").some("return item.innerHTML == 'foo';");
 
 :every:
   like `dojo.every <dojo/every>`_ and `Array.every <http://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:every>`_. Returns a boolean value indicating whether every item in the list matches the filter function (does not chain).
