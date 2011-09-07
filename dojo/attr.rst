@@ -46,7 +46,7 @@ In dojo 1.7, dojo.attr has been moved to dojo/_base/html.
 
 .. code-block :: javascript
 
-  require("dojo/_base/html", function(dojo){      
+  require(["dojo/_base/html"], function(dojo){      
       // get node id
       dojo.attr(node, "id");
       // set node id
@@ -57,7 +57,7 @@ It's recommend to use `attr.get <dojo/getAttr>`_, `attr.set <dojo/setAttr>`_ to 
 
 .. code-block :: javascript
 
-  require("dojo/dom-attr", function(attr){      
+  require(["dojo/dom-attr"], function(attr){      
       // get node id
       attr.get(node, "id");
       // set node id
