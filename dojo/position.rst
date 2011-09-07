@@ -24,11 +24,43 @@ The dojo.position function is used to obtain position and size information about
 for a node with a width of 300px and a height of 150px, with page absolute coordinates of 700px on the x-axis and 900px on the y-axis.
 
 
+=====
+Usage
+=====
+
+Dojo 1.7 (AMD)
+--------------
+
+In dojo 1.7, this API has been moved to dojo/_base/html and is the alias of geom.position in dojo/dom-geometry.
+
+.. code-block :: javascript
+ :linenos:
+
+  require(["dojo/_base/html"], function(dojo){   
+     var obj = dojo.position(node);
+  });
+
+It's recommend to use geom.position in dojo 1.7.
+
+.. code-block :: javascript
+ :linenos:
+
+  require(["dojo/dom-geometry"], function(geom){   
+     var obj = geom.position(node);
+  });
+
+Dojo < 1.7
+----------
+
+.. code-block :: javascript
+ :linenos:
+
+ var obj = dojo.position(node);
+
 ========
 Examples
 ========
 
-------------------------------
 Center a DOM node over another
 ------------------------------
 
@@ -118,7 +150,7 @@ To see the effect of dojo.position's includeScroll boolean parameter, scroll the
     <fieldset style="display:inline;border:15px solid gray;border-width:15px 0 0 15px;margin:0px;padding:0px;font:14px monospace;background-color:white;outline:1px dotted black;">
 	<fieldset style="display:inline;border:0px;border:0px;padding:0px;width:270px;height:165px;overflow:hidden;position:relative;left:-15px;top:-15px;">
 		<div id="testNode" style="display:inline;margin:25px;border:20px solid gray;padding:30px;float:left;position:relative;left:15px;top:15px;" onclick="compareMethods()">
-			<center style="display:block;margin:0px;padding:0px;border:0px;width:120px;height:15px;background-color:gray;color:white;overflow:hidden;">15x120 content</center>
+			<center style="display:block;margin:0px;padding:0px;border:0px;width:120px;height:15px;background-color:gray;color:white;overflow:hidden;">120x15 content</center>
 			<nobr style="position:absolute;left:2px;top:2px;color:black;">padding 30px</nobr>
 			<nobr style="position:absolute;left:-18px;top:-18px;color:white;">border 20px</nobr>
 			<nobr style="position:absolute;left:-43px;top:-43px;color:black;">margin 25px</nobr>
