@@ -168,6 +168,8 @@ See also
 DOM operations:
 
 * `dojo.getNodeProp <dojo/getNodeProp>`_
+* `dojo.getAttr <dojo/getAttr>`_
+* `dojo.setAttr <dojo/setAttr>`_
 * `dojo.hasAttr <dojo/hasAttr>`_
 * `dojo.removeAttr <dojo/attr>`_
 * `dojo.style <dojo/style>`_
