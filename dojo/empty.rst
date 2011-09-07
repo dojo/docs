@@ -33,7 +33,7 @@ In dojo 1.7, dojo.create has been moved to dojo/_base/html.
  :linenos:
 
   <script type="text/javascript">
-    require("dojo/dom-construct", function(dojo){ 
+    require(["dojo/dom-construct"], function(dojo){ 
        // Empty node's children byId:
        dojo.empty("someId");
     });
@@ -45,7 +45,7 @@ It's recommend to use dom-construct empty in dojo 1.7.
  :linenos:
 
   <script type="text/javascript">
-    require("dojo/dom-construct", function(ctr){  // Note, ctr or any other variable name can be used      
+    require(["dojo/dom-construct"], function(ctr){  // Note, ctr or any other variable name can be used      
        // Empty node's children byId:
        ctr.empty("someId");
     });
