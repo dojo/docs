@@ -41,6 +41,31 @@ attr
 Examples
 ========
 
+Dojo 1.7 (AMD)
+--------------
+In dojo 1.7, dojo.getNodeProp has been moved to dojo/_base/html.
+
+.. code-block :: javascript
+
+  require("dojo/_base/html", function(dojo){   
+      dojo.getNodeProp("model", name);
+  });
+
+It's recommend to use attr.getNodeProp in dojo 1.7.
+
+.. code-block :: javascript
+
+  require("dojo/dom-attr", function(attr){   
+      attr.getNodeProp("model", name);
+  });
+
+Dojo < 1.7
+----------
+
+.. code-block :: javascript
+
+    dojo.getNodeProp("model", name);
+
 Reading current values
 ----------------------
 
@@ -89,6 +114,8 @@ See also
 DOM operations:
 
 * `dojo.attr <dojo/attr>`_
+* `dojo.getAttr <dojo/getAttr>`_
+* `dojo.setAttr <dojo/setAttr>`_
 * `dojo.hasAttr <dojo/hasAttr>`_
 * `dojo.removeAttr <dojo/attr>`_
 * `dojo.style <dojo/style>`_
