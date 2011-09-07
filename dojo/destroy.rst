@@ -32,7 +32,7 @@ In dojo 1.7, dojo.create has been moved to dojo/_base/html.
  :linenos:
 
   <script type="text/javascript">
-    require("dojo/_base/html", function(dojo){     
+    require(["dojo/_base/html"], function(dojo){     
        // Destroy a node byId:
        dojo.destroy("someId");
     });
@@ -44,7 +44,7 @@ It's recommend to use dom-construct destroy in dojo 1.7.
  :linenos:
 
   <script type="text/javascript">
-    require("dojo/dom-construct", function(ctr){  // Note, ctr or any other variable name can be used      
+    require(["dojo/dom-construct"], function(ctr){  // Note, ctr or any other variable name can be used      
        // Destroy a node byId:
        ctr.destroy("someId");
     });
@@ -164,6 +164,6 @@ See also
 
 * `dojo.empty <dojo/empty>`_
 * `dojo.create <dojo/create>`_
-* `dojo.empty <dojo/place>`_
+* `dojo.empty <dojo/empty>`_
 * `DOM Utilities <quickstart/dom>`_
 * `How to destroy a dijit widget <dijit/_Widget#lifecycle>`_
