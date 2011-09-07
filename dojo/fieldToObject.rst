@@ -70,8 +70,6 @@ Dojo < 1.7
    //firstInputValue will be "value1"
  </script>
 
-
-
 ========
 Examples
 ========
