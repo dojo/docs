@@ -701,6 +701,8 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 :every:
   like `dojo.every <dojo/every>`_ and `Array.every <http://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:every>`_. Returns a boolean value indicating whether every item in the list matches the filter function (does not chain).
 
+[ V1.6 and earlier ]
+
 .. code-block :: javascript
   :linenos:
 
@@ -713,9 +715,25 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
   // or using the string version (item is the node):
   var areOnlyChildren = dojo.query("a").every("return dojo.query(item.parentNode).children().length == 1;");
 
+[ V1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  // require(["dojo.NodeList-traverse"...]); must be added in your code to use query().children() (new in 1.4)
+  var areOnlyChildren = query("a").
+    every(function(node){
+       return query(node.parentNode).children().length == 1
+    });
+
+  // or using the string version (item is the node):
+  var areOnlyChildren = query("a").every("return dojo.query(item.parentNode).children().length == 1;");
+
 
 :filter:
   Like `dojo.filter <dojo/filter>`_ and `Array.filter <http://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:filter>`_. A new form of filter is added to support testing against simple CSS class matches. Returns a subset of the items in the list that pass the test (can be chained).
+
+[ V1.6 and earlier ]
 
 .. code-block :: javascript
   :linenos:
@@ -737,6 +755,28 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 
   // the same filtering using a CSS selector
   dojo.query("*").filter("p").styles("backgroundColor", "yellow");
+
+[ V1.7 AMD ]
+.. code-block :: javascript
+  :linenos:
+
+  // a list of anchors that are only children, same as query("a:only-child")
+  // require(["dojo.NodeList-traverse"...]); must be added in your code to use query().children() (new in 1.4)
+  var onlyChildren = query("a").
+    filter(function(node){
+      return query(node.parentNode).children().length == 1;
+    });
+
+  // anchors that also have the class ``foo`` and an attribute ``bar``:
+  var fooBarAnchors = query("a").filter(".foo[bar]");
+
+  query("*").filter(function(item){
+    // highlight every paragraph
+    return (item.nodeName == "p");
+  }).style("backgroundColor", "yellow");
+
+  // the same filtering using a CSS selector
+  query("*").filter("p").styles("backgroundColor", "yellow");
 
 :query:
   Searches under all of the nodes in this list for nodes that match the passed query. Returns a flattened ``NodeList`` of all matching elements (can be chained).
