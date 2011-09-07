@@ -50,7 +50,7 @@ In dojo 1.7, dojo.getAttr has been moved to dojo/_base/html.
 
 .. code-block :: javascript
 
-  require("dojo/_base/html", function(dojo){   
+  require(["dojo/_base/html"], function(dojo){   
       // use setAttr() to set the tab index
       dojo.setAttr("nodeId", "tabIndex", 3);
 
@@ -63,7 +63,7 @@ It's recommend to use attr.set in dojo 1.7.
 
 .. code-block :: javascript
 
-  require("dojo/dom-attr", function(attr){   
+  require(["dojo/dom-attr"], function(attr){   
       // use setAttr() to set the tab index
       attr.set("nodeId", "tabIndex", 3);
 
