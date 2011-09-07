@@ -87,5 +87,5 @@ If you don’t register an iframe, when focus changes to elements within the ifr
 See also
 ========
 
-* `dojo/Stateful`
-* `dijit/_FocusMixin`
+* `dojo/Stateful`_
+* `dijit/_FocusMixin`_
