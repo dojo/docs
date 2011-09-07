@@ -17,10 +17,10 @@ Base Dojo: dojo.js
 
 Dojo Base is the functionality you get by just including a stock built dojo.js or dojo.xd.js in your page.
 
-Configuring Dojo
-----------------
+Configuring Dojo (dojo/_base/config)
+------------------------------------
 
-* `dojoConfig <dojo/config>`_
+* `dojoConfig (dojo/_base/config) <dojo/config>`_
 
   Possibility to override certain global settings that control how the framework operates
 
