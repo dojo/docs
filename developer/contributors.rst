@@ -582,7 +582,8 @@ A list of individuals who have signed Dojo CLAs:
 * Zhang, Carrie 
 * Zhang, Stephen 
 * Zhen, Wang
-* Zipkin, Joel 
+* Zipkin, Joel
+* Zou, Ran 
 * Zyp, Kris
 
 A list of corporations or organizations with a CLA on file:
