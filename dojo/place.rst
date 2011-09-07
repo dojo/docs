@@ -23,7 +23,7 @@ The function takes up to three arguments:
 
 .. code-block :: javascript
   :linenos:
-
+  
   dojo.place(node, refNode, pos);
 
 node
@@ -85,7 +85,6 @@ Dojo < 1.7
 
   // place node to dojo.body
   dojo.place(node, dojo.body(), "first");
-
 
 =================
 Placement options
