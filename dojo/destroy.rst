@@ -23,6 +23,22 @@ dojo.destroy removes a node from its parent, clobbering it and all of its childr
 Usage
 =====
 
+Dojo 1.7 (AMD)
+--------------
+
+.. code-block :: javascript
+ :linenos:
+
+  <script type="text/javascript">
+    require("dojo/dom-construct", function(ctr){  // Note, ctr or any other variable name can be used      
+       // Destroy a node byId:
+       ctr.destroy("someId");
+    });
+  </script>
+
+Dojo < 1.7
+----------
+
 .. code-block :: javascript
  :linenos:
 
