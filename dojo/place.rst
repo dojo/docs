@@ -23,8 +23,8 @@ The function takes up to three arguments:
 
 .. code-block :: javascript
   :linenos:
-  
-  dojo.place(node, refNode, pos);
+
+    dojo.place(node, refNode, pos)
 
 node
   Can be a String or a DOM node. If it is a string starting with "<", it is assumed to be an HTML fragment, which will be created. Otherwise it is assumed to be an id of a DOM node. 
