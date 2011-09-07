@@ -1,0 +1,1 @@
+Describe dojo/getStyle here.
