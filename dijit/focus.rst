@@ -82,3 +82,10 @@ If you don’t register an iframe, when focus changes to elements within the ifr
     // we can also unregister the iframe later
     focusUtil.unregisterIframe(handle);
   });
+
+========
+See also
+========
+
+* `dojo/Stateful`
+* `dijit/_FocusMixin`
