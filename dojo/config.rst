@@ -1,7 +1,7 @@
 #format dojo_rst
 
-dojo.config
-===========
+dojo.config (dojo/_base/config)
+===============================
 
 :Available: since V0.4
 
