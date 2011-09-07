@@ -24,10 +24,26 @@ Usage
 
 Usage is simple and straightforward, you pass the form node or the string id of a form node to convert:
 
+Dojo 1.7 (AMD)
+--------------
+
+In dojo 1.7, this API has been moved to dojo/dom-form and rename to toObject.
+
 .. code-block :: javascript
  :linenos:
 
-   var formObj = dojo.formToObject("myId");.
+  require(["dojo/dom-form"], function(domForm){
+    var formObj = domForm.toObject("myId");
+  });
+
+
+Dojo < 1.7
+----------
+
+.. code-block :: javascript
+ :linenos:
+
+  var formObj = dojo.formToObject("myId");
 
 The function will hand back a JavaScript object of the name/value pairs from the form elements. The values are either strings or arrays. If a checkbox group has a single item selected, the function will return a string value; if several, an array.
 
