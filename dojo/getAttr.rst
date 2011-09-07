@@ -46,9 +46,9 @@ In dojo 1.7, dojo.getAttr has been moved to dojo/_base/html.
 
 .. code-block :: javascript
 
-  require("dojo/_base/html", function(dojo){   
+  require(["dojo/_base/html", "dojo/dom"], function(dojo, dom){   
       // get the current value of the "foo" attribute on a node
-      dojo.getAttr(dojo.byId("nodeId"), "foo");
+      dojo.getAttr(dom.byId("nodeId"), "foo");
 
       // or we can just pass the id:
       dojo.getAttr("nodeId", "foo");
@@ -58,9 +58,9 @@ It's recommend to use attr.get in dojo 1.7.
 
 .. code-block :: javascript
 
-  require("dojo/dom-attr", function(attr){   
+  require(["dojo/dom-attr", "dojo/dom"], function(attr, dom){   
       // get the current value of the "foo" attribute on a node
-      attr.get(dojo.byId("nodeId"), "foo");
+      attr.get(dom.byId("nodeId"), "foo");
 
       // or we can just pass the id:
       attr.get("nodeId", "foo");
