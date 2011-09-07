@@ -581,6 +581,7 @@ A list of individuals who have signed Dojo CLAs:
 * Zastrow, Bettina 
 * Zhang, Carrie 
 * Zhang, Stephen 
+* Zhang, Xiaoming
 * Zhen, Wang
 * Zipkin, Joel
 * Zou, Ran 
