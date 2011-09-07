@@ -23,6 +23,23 @@ dojo.empty safely removes all children of the node.
 Usage
 =====
 
+
+Dojo 1.7 (AMD)
+--------------
+
+.. code-block :: javascript
+ :linenos:
+
+  <script type="text/javascript">
+    require("dojo/dom-construct", function(ctr){  // Note, ctr or any other variable name can be used      
+       // Empty node's children byId:
+       ctr.empty("someId");
+    });
+  </script>
+
+Dojo < 1.7
+----------
+
 .. code-block :: javascript
  :linenos:
 
