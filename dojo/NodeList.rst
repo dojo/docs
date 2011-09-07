@@ -757,6 +757,7 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
   dojo.query("*").filter("p").styles("backgroundColor", "yellow");
 
 [ V1.7 AMD ]
+
 .. code-block :: javascript
   :linenos:
 
@@ -785,7 +786,10 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
   :linenos:
 
   // search for all anchor tags under several nodes:
+  // [ V1.6 and earlier ]
   var anchors = dojo.query("#foo, #bar").query("a");
+  // [ V1.7 AMD ]
+  var anchors = query("#foo, #bar").query("a");
 
 DOM Methods
 -----------
@@ -837,7 +841,9 @@ Event Methods
 
 :connect:
   Connect to an event of all the nodes in this list. Follows the pattern of `dojo.connect <dojo/connect>`_, though assumes each node in the list to be the target to connect to.
-  
+
+[ V1.6 and earlier ]
+
 .. code-block :: javascript
   :linenos:
   
@@ -846,6 +852,17 @@ Event Methods
   });
   
   dojo.query("form").connect("onsubmit", function(){});
+
+[ V1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+  
+  query("a.external").connect("onclick", function(e){
+    // `this` here refers to the node, as we've not explicitly set the context to something
+  });
+  
+  query("form").connect("onsubmit", function(){});
   
 As a convenience, several common events are mapped as direct function calls. For example, the two following query() calls have identical results:
 
@@ -853,8 +870,12 @@ As a convenience, several common events are mapped as direct function calls. For
   :linenos:   
   
   var fn = function(e){ console.warn(e.target); }
+  // [ V1.6 and earlier ]
   dojo.query("a").onclick(fn);
   dojo.query("a").connect("onclick", fn);
+  // [ V1.7 AMD ]
+  query("a").onclick(fn);
+  query("a").connect("onclick", fn);
 
 The full list of methods that are mapped in this way are: ``onblur``, ``onfocus``, ``onchange``, ``onclick``, ``onerror``, ``onkeydown``, ``onkeypress``, ``onkeyup``, ``onload``, ``onmousedown``, ``onmouseenter``, ``onmouseleave``, ``onmousemove``, ``onmouseout``, ``onmouseover``, ``onmouseup``, and ``onsubmit``.
 
@@ -864,8 +885,12 @@ It is also possible to manipulate the scope of the callback, just as `dojo.conne
   :linenos:
   
   // both call obj.method(e) in context of obj onclick:
+  // [ V1.6 and earlier ]
   dojo.query("a").onclick(obj, "method"); 
-  dojo.query("a").onclick(obj, obj.method);
+  dojo.query("a").onclick(obj, obj.method)
+  // [ V1.7 AMD ]
+  query("a").onclick(obj, "method"); 
+  query("a").onclick(obj, obj.method);
   
 Animation
 ---------
