@@ -22,7 +22,7 @@ In dojo 1.7, dojo.byId has been moved to dojo/_base/html.
 
 .. code-block :: javascript
 
-  require("dojo/_base/html", function(dojo){  // Note, dom or any other variable name can be used     
+  require(["dojo/_base/html"], function(dojo){  // Note, dom or any other variable name can be used     
       // fetch a node by id="someNode"
       var node = dojo.byId("someNode");
   });
@@ -31,7 +31,7 @@ It's recommend to use dom.byId replace dojo.byId.
 
 .. code-block :: javascript
 
-  require("dojo/dom", function(dom){  // Note, dom or any other variable name can be used     
+  require(["dojo/dom"], function(dom){  // Note, dom or any other variable name can be used     
       // fetch a node by id="someNode"
       var node = dom.byId("someNode");
   });
@@ -52,6 +52,12 @@ The node variable is just a native domNode, with properties you can manipulate. 
   :linenos:
   
   // set some node to say "Hello World"
+  // dojo 1.7 (AMD)
+  require(["dojo/dom"], function(dom){
+      dom.byId("someNode").innerHTML = "Hello World";
+  });
+
+  // dojo < 1.7
   dojo.byId("someNode").innerHTML = "Hello World";
 
 If you pass byId a domNode reference, the same node is returned:
@@ -59,9 +65,19 @@ If you pass byId a domNode reference, the same node is returned:
 .. code-block :: javascript
   :linenos:
 
+  // dojo 1.7 (AMD)
+  require(["dojo/dom"], function(dom){
+      var node = dom.byId("someNode");
+      var other = dom.byId(node);
+      console.log(node == other);
+  });
+
+  //dojo < 1.7
   var node = dojo.byId("someNode");
   var other = dojo.byId(node);
   console.log(node == other);
+
+  // output
   >>> true
 
 If you pass dojo.byId a string, and no domNode is found to match, ''undefined'' or the null object is returned (depending on the browser), which is adequate truthiness to use conditionally:
@@ -69,6 +85,17 @@ If you pass dojo.byId a string, and no domNode is found to match, ''undefined'' 
 .. code-block :: javascript
   :linenos:
 
+  // dojo 1.7 (AMD)
+  require(["dojo/dom"], function(dom){
+    var node = dom.byId("fooBar");
+    if(node){
+      node.innerHTML = "I was found!";
+    }else{
+      console.log("no node with id='fooBar' found!");
+    }
+  });
+
+  //dojo < 1.7
   var node = dojo.byId("fooBar");
   if(node){
     node.innerHTML = "I was found!";
@@ -81,6 +108,15 @@ Most (if not all) functions in Dojo accept either a string or DomNode as a param
 .. code-block :: javascript
   :linenos:
 
+  // dojo 1.7 (AMD)
+  require(["dojo/dom", "dojo/dom-style"], function(dom, style){
+    style.set(dom.byId("foo"), "opacity", 0.5);
+    // is identical to:
+    style.set("foo", "opacity", 0.5);
+  });
+  
+
+  //dojo < 1.7
   dojo.style(dojo.byId("foo"), "opacity", 0.5);
   // is identical to:
   dojo.style("foo", "opacity", 0.5);
