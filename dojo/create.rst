@@ -69,6 +69,27 @@ pos        String|null  Optional argument. Can be a number or one of the
 
 The function returns a DOM node it created with ``tag`` or the first argument, if it was a DOM node.
 
+Dojo 1.7 (AMD)
+--------------
+
+.. code-block :: javascript
+
+  require("dojo/dom-construct", function(ctr){  // Note, ctr or any other variable name can be used
+      
+      // create a div node
+      var node = ctr.create("div");
+
+  });
+
+
+Dojo < 1.7
+----------
+
+.. code-block :: javascript
+
+  // create a div node
+  var node = dojo.create("div");
+
 
 ========
 Examples
