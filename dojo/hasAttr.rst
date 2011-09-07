@@ -49,7 +49,7 @@ In dojo 1.7, dojo.hasAttr has been moved to dojo/_base/html.
 
 .. code-block :: javascript
 
-  require("dojo/_base/html", function(dojo){
+  require(["dojo/_base/html"], function(dojo){
       dojo.hasAttr("nodeId", "foo");
   });
 
@@ -57,7 +57,7 @@ It's recommend to use attr.has in dojo 1.7.
 
 .. code-block :: javascript
 
-  require("dojo/dom-attr", function(attr){   
+  require(["dojo/dom-attr"], function(attr){   
       attr.has("nodeId", "foo");
   });
 
