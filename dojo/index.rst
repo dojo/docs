@@ -199,14 +199,6 @@ from 1.7 + dojo/dom module collects following part of dojo APIs
 
 * Styles (dojo/dom-style)
 
-  * `dojo.coords <dojo/coords>`_
-
-    Getter for the coordinates (relative to parent and absolute) of a DOM node.  Deprecated in Dojo 1.4.
-
-  * `dojo.position <dojo/position>`_
-
-    Getter for the border-box x/y coordinates and size of a DOM node.
-
   * `dojo.style <dojo/style>`_
 
     A getter/setter for styles on a DOM node
@@ -244,6 +236,14 @@ from 1.7 + dojo/dom module collects following part of dojo APIs
   * dojo.replaceClass
 
 * Geometry (dojo/dom-geometry)
+
+  * `dojo.coords <dojo/coords>`_
+
+    Getter for the coordinates (relative to parent and absolute) of a DOM node.  Deprecated in Dojo 1.4.
+
+  * `dojo.position <dojo/position>`_
+
+    Getter for the border-box x/y coordinates and size of a DOM node.
   
   * `dojo.marginBox <dojo/marginBox>`_
 
