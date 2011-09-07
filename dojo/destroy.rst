@@ -38,7 +38,7 @@ In dojo 1.7, dojo.create has been moved to dojo/_base/html.
     });
   </script>
 
-It's recommend to use dom-construct create in dojo 1.7.
+It's recommend to use dom-construct destroy in dojo 1.7.
 
 .. code-block :: javascript
  :linenos:
@@ -164,5 +164,6 @@ See also
 
 * `dojo.empty <dojo/empty>`_
 * `dojo.create <dojo/create>`_
+* `dojo.empty <dojo/place>`_
 * `DOM Utilities <quickstart/dom>`_
 * `How to destroy a dijit widget <dijit/_Widget#lifecycle>`_
