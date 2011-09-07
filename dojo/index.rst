@@ -181,6 +181,10 @@ from 1.7 + dojo/dom module collects following part of dojo APIs
 
 * Form (dojo/dom-form)
 
+  * `dojo.fieldToObject <dojo/fieldToObject>`_
+
+    Serialize a form field to a JavaScript object.
+
   * `dojo.formToJson <dojo/formToJson>`_
 
     Create an object from an form node
