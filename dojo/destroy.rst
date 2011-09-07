@@ -26,6 +26,20 @@ Usage
 Dojo 1.7 (AMD)
 --------------
 
+In dojo 1.7, dojo.create has been moved to dojo/_base/html.
+
+.. code-block :: javascript
+ :linenos:
+
+  <script type="text/javascript">
+    require("dojo/_base/html", function(dojo){     
+       // Destroy a node byId:
+       dojo.destroy("someId");
+    });
+  </script>
+
+It's recommend to use dom-construct create in dojo 1.7.
+
 .. code-block :: javascript
  :linenos:
 
