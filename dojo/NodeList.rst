@@ -9,6 +9,8 @@ dojo.NodeList
 .. contents::
     :depth: 2
 
+**[Note]** Since 1.7, dojo.NodeList is defined in dojo/query.js.
+
 **NodeLists** are standard Arrays, decorated with many helpful functions which act on each DOM Node in the list.
 
 
@@ -17,6 +19,8 @@ Introduction
 ============
 
 `dojo.query <dojo/query>`_ returns instances of ``dojo.NodeList``:
+
+[ V1.6 and earlier ]
 
 .. code-block :: javascript
   :linenos:
@@ -28,7 +32,21 @@ Introduction
   // hide each element
   nl.style("display","none");
 
+[ V1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  var nl = query(".selectable");
+  // NodeLists have length like all other arrays
+  console.log( nl.length );
+
+  // hide each element
+  nl.style("display","none");
+
 You can also create NodeLists manually and since NodeLists are "just an Array" all of the Array methods you already know Just Work (TM):
+
+[ V1.6 and earlier ]
 
 .. code-block :: javascript
   :linenos:
@@ -41,7 +59,22 @@ You can also create NodeLists manually and since NodeLists are "just an Array" a
   // hide both
   nl.style("display", "none");
 
+[ V1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  // create an instance of a NodeList
+  var nl = new query.NodeList();
+  nl.push(dom.byId("someId"));
+  nl.push(dom.byId("someOtherId"));
+
+  // hide both
+  nl.style("display", "none");
+
 The helper functions attached to the NodeList typically return the same instance of the ``NodeList``, allowing you to call several methods in a row:
+
+[ V1.6 and earlier ]
 
 .. code-block :: javascript
   :linenos:
@@ -56,6 +89,21 @@ The helper functions attached to the NodeList typically return the same instance
       dojo.query(e.target).style({ opacity:1 }).toggleClass("clicked");
     });
 
+[ V1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  // get all "li" elements
+  query("ul > li").
+    // make them visible but, slightly transparent
+    style({ opacity: 0.5, visibility: "visible" }).
+    // and set a handler to make a clicked item fully opaque
+    onclick(function(e){
+      // a node to dojo.query() is a fast way to get a list
+      query(e.target).style({ opacity:1 }).toggleClass("clicked");
+    });
+
 
 =========================
 Common NodeList Functions
@@ -65,6 +113,8 @@ The `entire NodeList API <http://api.dojotoolkit.org/jsdoc/dojo/HEAD/dojo.NodeLi
 
 ``forEach`` - runs a function for each element in a NodeList. If you want the option to break out of the loop, use ``every`` or ``some`` instead.
 
+[ V1.6 and earlier ]
+
 .. code-block :: javascript
   :linenos:
 
@@ -73,9 +123,21 @@ The `entire NodeList API <http://api.dojotoolkit.org/jsdoc/dojo/HEAD/dojo.NodeLi
       node.innerHTML += " - found";
   });
 
+[ V1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  query("div > h2").forEach(function(node, index, array){
+      // append content to each h2 as a direct child of a <div>
+      node.innerHTML += " - found";
+  });
+
 The syntax is the same as `dojo.forEach <dojo/forEach>`_ except that the first parameter (the array) is implicitly provided. This pattern is repeated throught the ``dojo.NodeList`` API.
 
 For instance, `dojo.style() <dojo/style>`_ styles a single Node around a defined API. That API is mapped into ``NodeList``, dropping the node parameter and calling ``dojo.style`` on each node in the list:
+
+[ V1.6 and earlier ]
 
 .. code-block :: javascript
   :linenos:
@@ -86,12 +148,36 @@ For instance, `dojo.style() <dojo/style>`_ styles a single Node around a defined
     removeClass("hidden").
     addClass("readyToFade");
 
+[ V1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  // all elements with class="hidden"
+  query(".hidden").
+    style({ opacity:0, visibility:"visible" }).
+    removeClass("hidden").
+    addClass("readyToFade");
+
 As is the case for ``removeClass()``, ``addClass()``, ``place()``, and most other DOM-related functions in NodeList. All return the same NodeList, which allows for chaining. An exception is ``NodeList.coords``, which returns an array of the coordinate values of the matched nodes when called as a getter.
+
+[ V1.6 and earlier ]
 
 .. code-block :: javascript
   :linenos:
 
   var nl = dojo.query(".foo"); // an array of nodes, NodeList
+  var coords = nl.coords(); // an array of objects { w, h, t, l }
+  nl.forEach(function(n, i){
+     console.log(n, "has", coords[i].w, "width");
+  });
+
+[ V1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  var nl = query(".foo"); // an array of nodes, NodeList
   var coords = nl.coords(); // an array of objects { w, h, t, l }
   nl.forEach(function(n, i){
      console.log(n, "has", coords[i].w, "width");
@@ -104,6 +190,8 @@ Events with NodeLists
 
 ``NodeList.connect()`` is provided as a way to add event handlers to all DOM Nodes in the list, matching the `dojo.connect <dojo/connect>`_ API, assuming again the node to connect to is the current item in the list:
 
+[ V1.6 and earlier ]
+
 .. code-block :: javascript
   :linenos:
 
@@ -112,7 +200,19 @@ Events with NodeLists
       dojo.fadeIn({ node: evt.target }).play();
     });
 
+[ V1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  query(".readyToFade").
+    connect("onclick", function(evt){
+      baseFx.fadeIn({ node: evt.target }).play();
+    });
+
 You can pass any event you would to `dojo.connect <dojo/connect>`_, and expect the same results. As a convenience, many DOM events are exposed on ``NodeList`` directly as functions, so the above example could be written out as:
+
+[ V1.6 and earlier ]
 
 .. code-block :: javascript
   :linenos:
@@ -122,7 +222,19 @@ You can pass any event you would to `dojo.connect <dojo/connect>`_, and expect t
        dojo.fadeIn({ node: evt.target }).play();
      });
 
+[ V1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+   query(".readyToFade").
+     onclick(function(evt){
+       baseFx.fadeIn({ node: evt.target }).play();
+     });
+
 Supported are ``onclick``, ``onmouseenter``, ``onmouseleave``, ``onmouseover``, ``omouseout``, ``ondblclick``, all the `normal dom events <quickstart/events>`_ you'd expect, and as of 1.2, ``onsubmit``, ``onload``, and ``onerror``.
+
+[ V1.6 and earlier ]
 
 .. code-block :: javascript
   :linenos:
@@ -134,10 +246,26 @@ Supported are ``onclick``, ``onmouseenter``, ``onmouseleave``, ``onmouseover``, 
        })
        .onmouseleave(function(e){
            dojo.style(e.target, "opacity", 0.5);
+       });
+
+
+[ V1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+   // setup some basic hovering behavior:
+   query(".foo.bar")
+       .onmouseenter(function(e){
+           style.set(e.target, "opacity", 1);
        })
-   ;
+       .onmouseleave(function(e){
+           style.set(e.target, "opacity", 0.5);
+       });
 
 The Event object is the same as Dojo's normalized event when using dojo.connect.
+
+[ V1.6 and earlier ]
 
 .. code-block :: javascript
   :linenos:
@@ -157,15 +285,37 @@ The Event object is the same as Dojo's normalized event when using dojo.connect.
 
   });
 
+[ V1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  // make an existing form use Ajax/xhrPost
+  query("#myForm").onsubmit(function(e){
+    // note that the event is always passed and has methods not regularly
+    // supported on IE
+    e.preventDefault();
+
+    xhr.post({
+      form:"myForm",
+      load: function(data){
+        console.log('server said: ', data);
+      }
+    });
+
+  });
+
 This example prevents the form from submitting and instead uses Ajax to send the data to the form's ``action=""`` url in an unobtrusive manner.
 
-An event delegation API is providing in `dojox.NodeList.delegate <dojox/NodeList/delegate>`_
+An event delegation API is provided in `dojox.NodeList.delegate <dojox/NodeList/delegate>`_
 
 ==================
 Extending NodeList
 ==================
 
 Or, "Writing Your Own Plugins": Adding your own code to the dojo.NodeList class makes them available to dojo.query calls. Simply use `dojo.extend <dojo/extend>`_ to mix new functionality into the prototype of the ``NodeList`` class:
+
+[ V1.6 and earlier ]
 
 .. code-block :: javascript
   :linenos:
@@ -179,6 +329,20 @@ Or, "Writing Your Own Plugins": Adding your own code to the dojo.NodeList class 
 
   dojo.query(".greenText").makeRed();
 
+[ V1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  lang.extend(query.NodeList, {
+    makeRed: function(){
+      this.style({ color:"red" });
+      return this;
+    }
+  });
+
+  query(".greenText").makeRed();
+
 The import part being ``'return this'``, ensuring any following chains will work.
 
 
@@ -188,6 +352,8 @@ NodeList extensions
 
 To keep the Base size to a minimum, some NodeList functionality is provided by external modules. For instance, dojo.NodeList-fx add all the required FX/Animation code to NodeList, dojox.fx.ext-dojo.NodeList provides the animation functionality from dojox.fx, and dojo.NodeList-html adds advanced HTML manipulation functions. The hyphen in the filename is meant to indicate the module being loaded modifies an existing Class, as you won't be able to call hyphenated functions directly. Simply require in the the necessary code:
 
+[ V1.6 and earlier ]
+
 .. code-block :: javascript
   :linenos:
 
@@ -196,6 +362,19 @@ To keep the Base size to a minimum, some NodeList functionality is provided by e
   dojo.addOnLoad(function(){
     dojo.query(".readyToFade").fadeIn().play();
   });
+
+[ V1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["dojo/ready",
+    "dojo/query",
+    "dojo/NodeList-fx"], function(ready, query){
+      ready(function(){
+        query(".readyToFade").fadeIn().play();
+      });
+    });
 
 The NodeList animations do *not* return the NodeList instance. Instead, they return the created ``Animation`` object, which you have to explictly call ``.play()`` on.
 
@@ -220,6 +399,8 @@ Array Methods
 :at:
   Returns one (or more) elements from the list in a new ``NodeList`` based on integer index. This is a fast way to wrap elements in a ``NodeList``, exposing all the manipulation and DOM conveniences easily (can be chained). 
 
+[ V1.6 and earlier ]
+
 .. code-block :: javascript
   :linenos:
 
@@ -229,13 +410,31 @@ Array Methods
   // get the 3rd and 5th elements:
   var ofInterest = dojo.query(".stories").at(2, 4);
 
+[ V1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  // we only want to style the first one
+  query("a").at(0).style("fontWeight", "bold");
+
+  // get the 3rd and 5th elements:
+  var ofInterest = query(".stories").at(2, 4);
+
+
+
 .. code-block :: javascript
   :linenos:
   
   // new in Dojo 1.5, .at() can accept negative indices
-  dojo.query("a").at(0, -1).onclick(fn); 
+  // [ V1.6 and earlier ]
+  dojo.query("a").at(0, -1).onclick(fn);
+  // [ V1.7 AMD ]
+  query("a").at(0, -1).onclick(fn);
   
 Incidentally, you can .end() out of a NodeList returned from .at, providing you access to the original NodeList before filtering.
+
+[ V1.6 and earlier ]
 
 .. code-block :: javascript
   :linenos:
@@ -247,9 +446,24 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
       .forEach(function(n){
             makePretty(n);
       });
+
+[ V1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+  
+  query("a")
+      .at(0)
+         .onclick(function(e){ ... })
+      .end() // back to main <a> list
+      .forEach(function(n){
+            makePretty(n);
+      });
     
 :forEach:
   like `dojo.forEach <dojo/forEach>`_ but with current list as the first parameter. Has the same API as `Array.forEach <https://developer.mozilla.org/en/Core_JavaScript_1.5_Reference/Objects/Array/forEach>`_ in browsers that support it. Returns the source NodeList (can be chained).
+
+[ V1.6 and earlier ]
 
 .. code-block :: javascript
   :linenos:
@@ -265,6 +479,23 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 
   // or using the special shortened syntax from dojo.forEach:
   dojo.query("a").forEach("console.debug(item);");
+
+[ V1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  query("a").
+    forEach(function(node, idx, arr){
+      console.debug(node);
+    });
+
+  // alternately, use second param to provide the scope:
+  query("a").
+    forEach(console.debug, console);
+
+  // or using the special shortened syntax from dojo.forEach:
+  query("a").forEach("console.debug(item);");
 
 :map:
   like `dojo.map <dojo/map>`_ with the current list as the array or `Array.map <https://developer.mozilla.org/en/Core_JavaScript_1.5_Reference/Objects/Array/map>`_ in browsers that support it.  Returns a new ``dojo.NodeList`` with the mapped-in elements (can be chained).
