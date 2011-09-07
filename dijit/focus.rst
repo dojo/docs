@@ -70,7 +70,7 @@ Note that two changes will occur when element focus changes: the first change wi
 Listening for focus changes in iframes
 --------------------------------------
 
-If you don’t register an iframe, when focus changes to elements within the iframe, it will not be correctly picked up by dijit/focus. Registering the iframe allows dijit/focus to determine which iframe currently has focus, but does *not* tell you which specific element inside the iframe has been focused.
+If you don’t register an iframe, when focus changes to elements within the iframe, it will not be correctly picked up by dijit/focus (``curNode`` will remain ``null``). Registering the iframe allows dijit/focus to determine which iframe currently has focus, but does *not* tell you which specific element *inside* the iframe has been focused.
 
 .. code-block :: javascript
  :linenos:
