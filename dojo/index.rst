@@ -233,7 +233,7 @@ from 1.7 + dojo/dom module collects following part of dojo APIs
 
     Toggles a className (or now in 1.4 an array of classNames).
 
-  * dojo.replaceClass <dojo/replaceClass>`_
+  * `dojo.replaceClass <dojo/replaceClass>`_
 
     Replaces one or more classes on a node if not present. Operates more quickly than calling dojo.removeClass and dojo.addClass 
 
