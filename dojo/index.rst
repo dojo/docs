@@ -370,7 +370,7 @@ Events
 
   Ensure that everytime an event is called, a message is published on the topic.
 
-* `dojo.stopEvent <dojo/stopEvent>`_
+* `dojo.stopEvent <dojo/_base/event>`_
 
   Stop an event's bubbling and propagation.
 
