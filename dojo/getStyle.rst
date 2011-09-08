@@ -88,7 +88,3 @@ DOM operations:
 * `dojo.getComputedStyle <dojo/getComputedStyle>`_
 * `dojo.setStyle <dojo/setStyle>`_
 * `dojo.attr <dojo/attr>`_
-
-External links:
-
-* `DOM Attributes and The Dojo Toolkit 1.2 <http://www.sitepen.com/blog/2008/10/23/dom-attributes-and-the-dojo-toolkit-12/>`_
