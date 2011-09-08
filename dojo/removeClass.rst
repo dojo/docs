@@ -30,6 +30,33 @@ If the second argument is not specified or ``undefined``, all classes will be re
 
 Space-separated classes, arrays, and optional removing of all classes are supported since 1.4.
 
+Dojo 1.7 (AMD)
+--------------
+In dojo 1.7, dojo.removeClass has been moved to dojo/_base/html.
+
+.. code-block :: javascript
+
+  require(["dojo/_base/html"], function(dojo){   
+      // Remove a class from some node: 
+      dojo.removeClass("someNode", "firstClass"); 
+  });
+
+It's recommend to use cls.add in dojo 1.7.
+
+.. code-block :: javascript
+
+  require(["dojo/dom-class"], function(cls){   
+      // Remove a class from some node: 
+      cls.remove("someNode", "firstClass"); 
+  });
+
+Dojo < 1.7
+----------
+
+.. code-block :: javascript
+
+    // Remove a class from some node: 
+    dojo.removeClass("someNode", "firstClass"); 
 
 ========
 Examples
@@ -42,6 +69,12 @@ The following example removes the class "style1" from the node "example1":
 
 .. code-block :: javascript
 
+  //dojo 1.7 (AMD)
+  require(["dojo/dom-class"], function(cls){
+      cls.remove("example1", "style1");
+  });
+
+  // dojo < 1.7
   dojo.removeClass("example1", "style1");
 
 See it in action:
@@ -83,6 +116,12 @@ The following example removes two classes: "style1" and "style2" from the node "
 
 .. code-block :: javascript
 
+  //dojo 1.7 (AMD)
+  require(["dojo/dom-class"], function(cls){
+      cls.remove("example1", "style1 style2");
+  });
+
+  // dojo < 1.7
   dojo.removeClass("example1", "style1 style2");
 
 See it in action:
@@ -125,6 +164,12 @@ The following example removes two classes: "style1" and "style2" from the node "
 
 .. code-block :: javascript
 
+  //dojo 1.7 (AMD)
+  require(["dojo/dom-class"], function(cls){
+      cls.remove("example1", ["style1", "style2"]);
+  });
+
+  // dojo < 1.7
   dojo.removeClass("example1", ["style1", "style2"]);
 
 See it in action:
@@ -167,6 +212,12 @@ The following example removes all classes from the node "example1":
 
 .. code-block :: javascript
 
+  //dojo 1.7 (AMD)
+  require(["dojo/dom-class"], function(cls){
+      cls.remove("example1");
+  });
+
+  // dojo < 1.7
   dojo.removeClass("example1");
 
 See it in action:
@@ -209,6 +260,12 @@ Remove from multiple nodes
 
 .. code-block :: javascript
 
+  //dojo 1.7 (AMD)
+  require(["dojo/dom-class", "dojo/query"], function(cls, query){
+      query("#example3 div").removeClass("style3");
+  });
+
+  // dojo < 1.7
   dojo.query("#example3 div").removeClass("style3");
 
 See it in action:
