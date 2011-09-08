@@ -271,13 +271,25 @@ from 1.7 + dojo/dom module collects following part of dojo APIs
 
     Sets the size of the node's contents, irrespective of margins, padding, or borders. 
 
+* Property (dojo/dom-prop)
+
+  * `dojo.prop <dojo/prop>`_
+
+    Gets or sets a property on an HTML element.
+
+  * `dojo.getProp <dojo/getProp>`_
+
+    Gets a property on an HTML element. 
+
+  * `dojo.setProp <dojo/setProp>`_
+
+    Sets a property on an HTML element.
+
 Deferred Utility (dojo/_base/Deferred)
 --------------------------------------
 * `dojo.Deferred <dojo/Deferred>`_
 
   Communication between asynchronous calls
-
-
 
 Window (dojo/_base/window)
 --------------------------
