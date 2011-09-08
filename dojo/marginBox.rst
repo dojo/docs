@@ -19,24 +19,7 @@ Introduction and Usage
 
 See the `CSS spec <http://www.w3.org/TR/CSS2/box.html>`_ for details on box model and what margin-box means.
 
-This method will either return the margin-box size of a node:
-
-.. code-block :: javascript
- :linenos:
-
- <script type="text/javascript">
-   var marginBox = dojo.marginBox(domNode);
- </script>
-
-... or set the node's width/height such that it's margin-box size becomes as specified:
-
-.. code-block :: javascript
- :linenos:
-
- <script type="text/javascript">
-    // 300px x 150px
-    dojo.marginBox(domNode, {w: 300, h: 400});
- </script>
+This method will either return the margin-box size of a node or set the node's width/height such that it's margin-box size becomes as specified.
 
 In either usage it returns an object in the expected format of box. The object might look like:
 
@@ -44,6 +27,63 @@ In either usage it returns an object in the expected format of box. The object m
 
 for a node offset from its parent 50px to the left, 200px from the top with a margin width of 300px and a margin-height of 150px.
 
+=====
+Usage
+=====
+
+Dojo 1.7 (AMD)
+--------------
+
+In dojo 1.7, this API has been moved to dojo/_base/html and is the alias of geom.position in dojo/dom-geometry.
+
+.. code-block :: javascript
+ :linenos:
+
+  require(["dojo/_base/html"], function(dojo){   
+     // Get the margin-box size of a node
+     var marginBox = dojo.marginBox(domNode);
+
+     // Set domNode margin-box to 300px x 150px
+     dojo.marginBox(domNode, {w: 300, h: 400});
+  });
+
+It is also can use `dojo.getMarginBox <dojo.getMarginBox>`_ and `dojo.setMarginBox <dojo.setMarginBox>`_ to do this operation.
+
+.. code-block :: javascript
+ :linenos:
+
+  require(["dojo/_base/html"], function(dojo){   
+     // Get the margin-box size of a node
+     var marginBox = dojo.getMarginBox(domNode);
+
+     // Set domNode margin-box to 300px x 150px
+     dojo.setMarginBox(domNode, {w: 300, h: 400});
+  });
+
+It's recommend to use geom.getMarginBox and geom.setMarginBox in dojo 1.7.
+
+.. code-block :: javascript
+ :linenos:
+
+  require(["dojo/dom-geometry"], function(geom){   
+     // Get the margin-box size of a node
+     var marginBox = geom.getMarginBox(domNode);
+
+     // Set domNode margin-box to 300px x 150px
+     geom.setMarginBox(domNode, {w: 300, h: 400});
+  });
+
+Dojo < 1.7
+----------
+
+.. code-block :: javascript
+ :linenos:
+
+   // Get the margin-box size of a node
+   var marginBox = dojo.marginBox(domNode);
+
+   // Set domNode margin-box to 300px x 150px
+   dojo.marginBox(domNode, {w: 300, h: 400});
 
 ========
 Examples
@@ -175,3 +215,5 @@ See also
 ========
 
 * `dojo.contentBox <dojo/contentBox>`_
+* `dojo.getMarginBox <dojo.getMarginBox>`_
+* `dojo.setMarginBox <dojo.setMarginBox>`_ 
