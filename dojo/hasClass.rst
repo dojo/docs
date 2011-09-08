@@ -22,6 +22,35 @@ The function takes two arguments:
 
 It returns ``true`` if the node has the class, and ``false`` otherwise.
 
+Dojo 1.7 (AMD)
+--------------
+In dojo 1.7, dojo.hasClass has been moved to dojo/_base/html.
+
+.. code-block :: javascript
+
+  require(["dojo/_base/html"], function(dojo){   
+      // Do something if a node with id="someNode" has class="aSillyClassName" present
+      if(dojo.hasClass("someNode","aSillyClassName")){ ... }
+  });
+
+It's recommend to use cls.contains in dojo 1.7.
+
+.. code-block :: javascript
+
+  require(["dojo/dom-class"], function(cls){   
+      // Do something if a node with id="someNode" has class="aSillyClassName" present
+      if(cls.contains("someNode","aSillyClassName")){ ... }
+  });
+
+Dojo < 1.7
+----------
+
+.. code-block :: javascript
+
+    // Do something if a node with id="someNode" has class="aSillyClassName" present
+    if(dojo.hasClass("someNode","aSillyClassName")){ ... }
+
+
 Consider the following html:
 
 .. code-block :: html
@@ -35,6 +64,14 @@ Using ``dojo.hasClass`` to find if the node ``id="bam"`` has ``class="foo"``:
 .. code-block :: javascript
   :linenos:
 
+  // Dojo 1.7 (AMD)
+  require(["dojo/dom-class"], function(cls){   
+    if(cls.contains("bam", "foo")){
+      /* it does */
+    }
+  });
+
+  // Dojo < 1.7
   if(dojo.hasClass("bam", "foo")){
     /* it does */
   }
@@ -44,6 +81,16 @@ Using `dojo.query <dojo/query>`_ to find a node and check if it has a class:
 .. code-block :: javascript
   :linenos:
 
+  // Dojo 1.7 (AMD)
+  require(["dojo/dom-class", "dojo/query"], function(cls, query){   
+     query(".something").forEach(function(node){
+       if(cls.contains(node, "else"){
+          /* it does */
+       }
+    });
+  });
+
+  // Dojo < 1.7
   dojo.query(".something").forEach(function(node){
      if(dojo.hasClass(node, "else"){
         /* it does */
