@@ -41,6 +41,12 @@ Dojo < 1.7
     </script>
     <a href="/delete" id="delete">Delete</a>
 
+dojo.stopEvent
+==============
+
+
+TO DOC
+
 See Also:
 =========
 
