@@ -26,11 +26,11 @@ Dojo provides a solid set of battle-tested XHR wrapper functions to allow you to
 Features
 ========
 
-* `dojo.formToJson <dojo/formToJson>`_ : Convert a DOM Form to JSON.
-* `dojo.formToObject <dojo/formToObject>`_ : Convert a DOM Form to a JavaScript object.
-* `dojo.formToQuery <dojo/formToQuery>`_ : Convert a DOM Form to a query string.
-* `dojo.objectToQuery <dojo/objectToQuery>`_ : Convert a JavaScript object to a query string.
-* `dojo.queryToObject <dojo/queryToObject>`_ : Convert a query string to a JavaScript Object
+* `dojo.formToJson <dojo/formToJson>`_ : Convert a DOM Form to JSON. It is an alias to domForm.toJson function.
+* `dojo.formToObject <dojo/formToObject>`_ : Convert a DOM Form to a JavaScript object.It is an alias to domForm.toObject function.
+* `dojo.formToQuery <dojo/formToQuery>`_ : Convert a DOM Form to a query string.It is an alias to domForm.toQuery function.
+* `dojo.objectToQuery <dojo/objectToQuery>`_ : Convert a JavaScript object to a query string.It is an alias to ioq.objectToQuery function
+* `dojo.queryToObject <dojo/queryToObject>`_ : Convert a query string to a JavaScript Object.It is an alias to ioq.queryToObject function
 * `dojo.xhrDelete <dojo/xhrDelete>`_ : Use HTTP DELETE method to make an xhr call.
 * `dojo.xhrGet <dojo/xhrGet>`_ : Use HTTP GET method to make an xhr call.
 * `dojo.xhrPost <dojo/xhrPost>`_ : Use HTTP POST method to make an xhr call.
