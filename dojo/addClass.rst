@@ -22,6 +22,33 @@ The function takes two arguments:
 
 Space-separated classes and arrays are supported since 1.4.
 
+Dojo 1.7 (AMD)
+--------------
+In dojo 1.7, dojo.addClass has been moved to dojo/_base/html.
+
+.. code-block :: javascript
+
+  require(["dojo/_base/html"], function(dojo){   
+      // Add a class to some node: 
+      dojo.addClass("someNode", "anewClass");
+  });
+
+It's recommend to use cls.add in dojo 1.7.
+
+.. code-block :: javascript
+
+  require(["dojo/dom-class"], function(cls){   
+      // Add a class to some node: 
+      cls.add("someNode", "anewClass");
+  });
+
+Dojo < 1.7
+----------
+
+.. code-block :: javascript
+
+    // Add a class to some node: 
+    dojo.addClass("someNode", "anewClass");
 
 ========
 Examples
@@ -34,6 +61,12 @@ The following example adds the class "style1" to the node "example1":
 
 .. code-block :: javascript
 
+  //dojo 1.7 (AMD)
+  require(["dojo/dom-class"], function(cls){
+      cls.add("example1", "style1");
+  });
+
+  // dojo < 1.7
   dojo.addClass("example1", "style1");
 
 See it in action:
@@ -75,6 +108,12 @@ The following example adds two classes: "style1" and "style2" to the node "examp
 
 .. code-block :: javascript
 
+  //dojo 1.7 (AMD)
+  require(["dojo/dom-class"], function(cls){
+      cls.add("example1", "style1 style2");
+  });
+
+  // dojo < 1.7
   dojo.addClass("example1", "style1 style2");
 
 See it in action:
@@ -118,6 +157,12 @@ The following example adds two classes: "style1" and "style2" to the node "examp
 
 .. code-block :: javascript
 
+  //dojo 1.7 (AMD)
+  require(["dojo/dom-class"], function(cls){
+      cls.add("example1", ["style1", "style2"]);
+  });
+
+  // dojo < 1.7
   dojo.addClass("example1", ["style1", "style2"]);
 
 See it in action:
@@ -160,6 +205,12 @@ Add to multiple nodes
 
 .. code-block :: javascript
 
+  //dojo 1.7 (AMD)
+  require(["dojo/dom-class", "dojo/query"], function(cls, query){
+      query("#example3 div").add("style3");
+  });
+
+  // dojo < 1.7
   dojo.query("#example3 div").addClass("style3");
 
 See it in action:
