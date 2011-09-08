@@ -19,6 +19,26 @@ Introduction
 
 For example, `dojo.query <dojo/query>`_ references the "window" global variable when performing searches by default.
 
+Dojo 1.7 (AMD)
+--------------
+
+.. code-block :: javascript
+  :linenos:
+
+  <script type="text/javascript">
+     require(["dojo/query"], function(query) {
+        var dojoLinks = query('a');
+        var nativeLinks = document.getElementsByTagName('a');
+
+        // Returns true, as they're searching the same window.document
+        console.log(dojoLinks.length === nativeLinks.length);
+     });
+  </script>
+
+
+Dojo < 1.7
+----------
+
 .. code-block :: javascript
   :linenos:
 
@@ -42,6 +62,21 @@ By calling "dojo.setContext" (which modifies the convenience variables above), y
 =====
 Usage
 =====
+
+Dojo 1.7 (AMD)
+--------------
+
+.. code-block :: javascript
+
+  require(["dojo/_base/window"], function(win) {
+    win.setContext(window, window.document);
+    // or
+    win.setContext(myIframe.contentWindow, myIframe.contentWindow.document);
+  });
+
+
+Dojo < 1.7
+----------
 
 .. code-block :: javascript
 
@@ -83,6 +118,33 @@ HTML
 
 JavaScript
 ~~~~~~~~~~
+
+Dojo 1.7 (AMD)
+--------------
+
+.. code-block :: javascript
+ :linenos:
+
+  require(["dojo/dom", "dojo/query", "dojo/_base/window"], function(dom, query, win) {
+    var countLinks = function() {
+      var these = dom.byId('these_links');
+      var those = dom.byId('those_links');
+      var iframe = dom.byId('iframe').contentWindow;
+           
+      // Count the number of links in *this* page
+      these.value = query('a').length;
+
+      // Change context from current window to iframe
+      win.setContext(iframe.window, iframe.window.document);
+
+      // Count the number of links in the *iframe*
+      those.value = query('a').length;
+    };
+  });
+
+
+Dojo < 1.7
+----------
 
 .. code-block :: javascript
  :linenos:
