@@ -41,7 +41,7 @@ In dojo 1.7, dojo.removeClass has been moved to dojo/_base/html.
       dojo.removeClass("someNode", "firstClass"); 
   });
 
-It's recommend to use cls.add in dojo 1.7.
+It's recommend to use cls.remove in dojo 1.7.
 
 .. code-block :: javascript
 
