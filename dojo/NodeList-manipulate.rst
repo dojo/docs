@@ -95,6 +95,7 @@ Assume a DOM created by this markup:
   dojo.query("div").innerHTML("<p>Hello World</p>");
 
 [ Dojo 1.7 AMD ]
+
 .. code-block :: javascript
   :linenos:
 
@@ -274,12 +275,23 @@ Assume a DOM created by this markup:
 
 Running this code:
 
+[ Dojo 1.6 and earlier ]
+
 .. code-block :: javascript
   :linenos:
 
   dojo.require("dojo.NodeList-manipulate");
   
   dojo.query("div").append("<span>append</span>");
+
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["query", "dojo/NodeList-manipulate"], function(query){
+    query("div").append("<span>append</span>");
+  });
 
 Results in this DOM structure:
 
@@ -313,12 +325,23 @@ Assume a DOM created by this markup:
 
 Running this code:
 
+[ Dojo 1.6 and earlier ]
+
 .. code-block :: javascript
   :linenos:
 
   dojo.require("dojo.NodeList-manipulate");
   
   dojo.query("span").appendTo("p");
+
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["query", "dojo/NodeList-manipulate"], function(query){
+    query("span").appendTo("p");
+  });
 
 Results in this DOM structure:
 
@@ -350,12 +373,23 @@ Assume a DOM created by this markup:
 
 Running this code:
 
+[ Dojo 1.6 and earlier ]
+
 .. code-block :: javascript
   :linenos:
 
   dojo.require("dojo.NodeList-manipulate");
   
   dojo.query("div").prepend("<span>prepend</span>");
+
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["query", "dojo/NodeList-manipulate"], function(query){
+    query("div").prepend("<span>prepend</span>");
+  });
 
 Results in this DOM structure:
 
@@ -390,12 +424,23 @@ Assume a DOM created by this markup:
 
 Running this code:
 
+[ Dojo 1.6 and earlier ]
+
 .. code-block :: javascript
   :linenos:
 
   dojo.require("dojo.NodeList-manipulate");
   
   dojo.query("span").prependTo("p");
+
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["query", "dojo/NodeList-manipulate"], function(query){
+    query("span").prependTo("p");
+  });
 
 Results in this DOM structure:
 
@@ -427,12 +472,23 @@ Assume a DOM created by this markup:
 
 Running this code:
 
+[ Dojo 1.6 and earlier ]
+
 .. code-block :: javascript
   :linenos:
 
   dojo.require("dojo.NodeList-manipulate");
   
   dojo.query("div").after("<span>after</span>");
+
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["query", "dojo/NodeList-manipulate"], function(query){
+    query("div").after("<span>after</span>");
+  });
 
 Results in this DOM structure:
 
@@ -467,12 +523,23 @@ Assume a DOM created by this markup:
 
 Running this code:
 
+[ Dojo 1.6 and earlier ]
+
 .. code-block :: javascript
   :linenos:
 
   dojo.require("dojo.NodeList-manipulate");
   
   dojo.query("span").insertAfter("p");
+
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["query", "dojo/NodeList-manipulate"], function(query){
+    query("span").insertAfter("p");
+  });
 
 Results in this DOM structure:
 
@@ -504,12 +571,23 @@ Assume a DOM created by this markup:
 
 Running this code:
 
+[ Dojo 1.6 and earlier ]
+
 .. code-block :: javascript
   :linenos:
 
   dojo.require("dojo.NodeList-manipulate");
   
   dojo.query("div").before("<span>before</span>");
+
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["query", "dojo/NodeList-manipulate"], function(query){
+    query("div").before("<span>before</span>");
+  });
 
 Results in this DOM structure:
 
@@ -544,12 +622,23 @@ Assume a DOM created by this markup:
 
 Running this code:
 
+[ Dojo 1.6 and earlier ]
+
 .. code-block :: javascript
   :linenos:
 
   dojo.require("dojo.NodeList-manipulate");
   
   dojo.query("span").insertBefore("p");
+
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["query", "dojo/NodeList-manipulate"], function(query){
+    query("span").insertBefore("p");
+  });
 
 Results in this DOM structure:
 
@@ -585,7 +674,10 @@ Assume a DOM created by this markup:
   <b>one</b>
   <b>two</b>
 
+
 Running this code:
+
+[ Dojo 1.6 and earlier ]
 
 .. code-block :: javascript
   :linenos:
@@ -593,6 +685,15 @@ Running this code:
   dojo.require("dojo.NodeList-manipulate");
   
   dojo.query("b").wrap("<div><span></span></div>");
+
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["query", "dojo/NodeList-manipulate"], function(query){
+    query("b").wrap("<div><span></span></div>");
+  });
 
 Results in this DOM structure:
 
@@ -626,12 +727,23 @@ Assume a DOM created by this markup:
 
 Running this code:
 
+[ Dojo 1.6 and earlier ]
+
 .. code-block :: javascript
   :linenos:
 
   dojo.require("dojo.NodeList-manipulate");
   
   dojo.query(".red").wrapAll('<div class="allRed"></div>');
+
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["query", "dojo/NodeList-manipulate"], function(query){
+    query(".red").wrapAll('<div class="allRed"></div>');
+  });
 
 Results in this DOM structure:
 
@@ -673,12 +785,23 @@ Assume a DOM created by this markup:
 
 Running this code:
 
+[ Dojo 1.6 and earlier ]
+
 .. code-block :: javascript
   :linenos:
 
   dojo.require("dojo.NodeList-manipulate");
   
   dojo.query(".red").wrapInner('<span class="special"></span>');
+
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["query", "dojo/NodeList-manipulate"], function(query){
+    query(".red").wrapInner('<span class="special"></span>');
+  });
 
 Results in this DOM structure:
 
@@ -719,12 +842,23 @@ Assume a DOM created by this markup:
 
 Running this code:
 
+[ Dojo 1.6 and earlier ]
+
 .. code-block :: javascript
   :linenos:
 
   dojo.require("dojo.NodeList-manipulate");
   
   dojo.query(".red").replaceWith('<div class="green">Green</div>');
+
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["query", "dojo/NodeList-manipulate"], function(query){
+    query(".red").replaceWith('<div class="green">Green</div>');
+  });
 
 Results in this DOM structure:
 
@@ -771,12 +905,23 @@ Assume a DOM created by this markup:
 
 Running this code:
 
+[ Dojo 1.6 and earlier ]
+
 .. code-block :: javascript
   :linenos:
 
   dojo.require("dojo.NodeList-manipulate");
   
   dojo.query(".red").replaceAll(".blue");
+
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["query", "dojo/NodeList-manipulate"], function(query){
+    query(".red").replaceAll(".blue");
+  });
 
 Results in this DOM structure:
 
@@ -817,12 +962,23 @@ Assume a DOM created by this markup:
 
 Running this code:
 
+[ Dojo 1.6 and earlier ]
+
 .. code-block :: javascript
   :linenos:
 
   dojo.require("dojo.NodeList-manipulate");
   
   dojo.query(".red").clone().appendTo(".container");
+
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["query", "dojo/NodeList-manipulate"], function(query){
+    query(".red").clone().appendTo(".container");
+  });
 
 Results in this DOM structure:
 
