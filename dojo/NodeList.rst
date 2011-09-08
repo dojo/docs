@@ -11,7 +11,7 @@ dojo.NodeList
 
 **[Note]** Since 1.7, dojo.NodeList is defined in dojo/query.js.
 
-**NodeList** are standard Arrays, decorated with many helpful functions which act on each DOM Node in the list.
+**NodeList**s are standard Arrays, decorated with many helpful functions which act on each DOM Node in the list.
 
 
 ============
