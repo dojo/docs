@@ -147,15 +147,29 @@ There are several different types of returns that can come from *NodeList.data*.
 
 .. javascript::
 
+  // [ Dojo 1.6 and earlier ]
   dojo.query("#bar").data("foo", 10).onclick(function(){ alert(dojo.query(this).data("foo")[0] == 10) });
+  // [ Dojo 1.7 AMD ]
+  query("#bar").data("foo", 10).onclick(function(){ alert(query(this).data("foo")[0] == 10) });
 
 When acting as a getter, NodeList.data *always* returns an Array. The array is populated with either the data at the requested key, or the entire data set if called with no arguments.
+
+[ Dojo 1.6 and earlier ]
 
 .. javascript::
 
   dojo.query("#bar").data("a", "b").data("c", "d").data({ e:[1,2,3] };
   // calling with no arguments return _entire_ data set bound to node. 
   var data = dojo.query("#bar").data()[0];
+  console.log(data.a, data.c, data.e); // logs "b" "d" [1,2,3]
+
+[ Dojo 1.7 AMD ]
+
+.. javascript::
+
+  query("#bar").data("a", "b").data("c", "d").data({ e:[1,2,3] };
+  // calling with no arguments return _entire_ data set bound to node. 
+  var data = query("#bar").data()[0];
   console.log(data.a, data.c, data.e); // logs "b" "d" [1,2,3]
 
 Private APIs
@@ -167,6 +181,8 @@ Though nonstandard, NodeList-data provides several "private" APIs. These functio
 :dojo._removeNodeData(node, key): Can be called by passing a String or DomNode reference in the first position. 
 
 Here is a comparison:
+
+[ Dojo 1.6 and earlier ]
 
 .. javascript::
 
@@ -181,6 +197,21 @@ Here is a comparison:
    if(data == dat2){ alert("see?") }
 
 
+[ Dojo 1.7 AMD ]
+
+.. javascript::
+
+   // setters:
+   query("#bar").data("baz", 10);
+   dojo._nodeData("bar", "baz", 10);
+
+   // getter, _nodeData does _not_ return an Array:
+   var data = query("#bar").data("baz")[0];
+   var dat2 = dojo._nodeData("bar", "baz"); 
+
+   if(data == dat2){ alert("see?") }
+
+
 ============
 Data Removal
 ============
@@ -189,15 +220,28 @@ The *removeData* API works nearly the same as *data*. Calling *removeData* with 
 
 .. javascript::
 
-   dojo.query("#bar").removeData(); // erases all information
-   dojo.query("#baz").removeData("e"); // removed [1,2,3] for instance
+  // [ Dojo 1.6 and earlier ]
+  dojo.query("#bar").removeData(); // erases all information
+  dojo.query("#baz").removeData("e"); // removed [1,2,3] for instance
+  // [ Dojo 1.7 AMD ]
+  query("#bar").removeData(); // erases all information
+  query("#baz").removeData("e"); // removed [1,2,3] for instance
 
 There is, however, no way to remove a list of keys. An example of how to do so would look like:
+
+[ Dojo 1.6 and earlier ]
 
 .. javascript::
 
   var remover = dojo.partial(dojo._removeNodeData, "nodeId");
   dojo.forEach(["key", "otherkey", "somekey"], remover);
+
+[ Dojo 1.7 AMD ]
+
+.. javascript::
+
+  var remover = lang.partial(dojo._removeNodeData, "nodeId");
+  array.forEach(["key", "otherkey", "somekey"], remover);
 
 =====================
 Memory Considerations
