@@ -310,6 +310,6 @@ See also
 ========
 
 * `dojo.addClass <dojo/addClass>`_
-* `dojo.addClass <dojo/replaceClass>`_
+* `dojo.replaceClass <dojo/replaceClass>`_
 * `dojo.hasClass <dojo/hasClass>`_
 * `dojo.toggleClass <dojo/toggleClass>`_
