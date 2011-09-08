@@ -177,3 +177,5 @@ See also
 ========
 
 * `dojo.marginBox <dojo/marginBox>`_
+* `dojo.getContentBox <dojo.getContentBox>`_
+* `dojo.setContentBox <dojo.setContentBox>`_ 
