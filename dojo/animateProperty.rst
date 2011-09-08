@@ -21,6 +21,23 @@ animateProperty, like all other dojo._Animations, use a "magic object" (or "prop
 
 The syntax follows a simple pattern. The ``properties:`` key is an object hash of css properties to manipulate. The values of those keys have a number of ways of definition. 
 
+Dojo 1.7(AMD)
+-------------
+.. code-block :: javascript
+  :linenos:
+
+   require(["dojo/_base/fx"],function(fx){
+     fx.animateProperty({ 
+      node:"someId",
+      properties: {
+        width: 300
+      }
+    }).play();
+   });
+
+
+Dojo <1.7
+---------
 .. code-block :: javascript
   :linenos:
 
@@ -33,6 +50,25 @@ The syntax follows a simple pattern. The ``properties:`` key is an object hash o
 
 The above example will animate a node with id="someId" to width:300px from it's current size. Multiple CSS properties can be animated within the object hash:
 
+Dojo 1.7(AMD)
+-------------
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["dojo/_base/fx"],function(fx){
+    fx.animateProperty({ 
+    node:"someId",
+    properties: {
+        width: 300,
+        height: { end: 400, start:100 },
+        fontSize: { end:14, units:"pt" } // beware of stray comma's
+    }
+   }).play();
+  });
+  
+Dojo <1.7
+---------
 .. code-block :: javascript
   :linenos:
 
@@ -77,6 +113,33 @@ A simple, though redundant, example:
 
 **new in Dojo 1.4**: dojo.animateProperty allows a function to be directly passed to the property:
 
+
+Dojo 1.7(AMD)
+-------------
+.. code-block:: javascript
+  :linenos:
+
+  require(["dojo/_base/fx"],function(fx){
+    fx.animateProperty({
+       node:"someNode",
+       properties:{
+         height: function(node){
+           // notice 'node' being passed. Also new in Dojo 1.4
+           // can return any animateProperty syntax:
+           // return { start:5, end:2 };
+           // return 100;
+           // return { end:50, units:"pt" }
+
+           // make this node 3x it's current height
+           return dojo.marginBox(node).h * 3
+ 
+         }
+      }
+    }).play();
+  });
+
+Dojo <1.7
+---------
 .. code-block:: javascript
   :linenos:
 
