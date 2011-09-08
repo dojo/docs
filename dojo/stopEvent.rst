@@ -45,7 +45,7 @@ dojo.fixEvent
 ==============
 
 
-* `TO DOC`_
+TO DOC
 
 See Also:
 =========
