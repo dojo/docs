@@ -23,6 +23,24 @@ Usage
 
 Use this variable in place of calls to window.document.  That way you are assured you will be working against the document that is considered to be the current 'page'.  And .. by using this variable, things that alter it will still operate properly against your widget during document changes.  This is particularly important for your custom widgets if they are to be used inside iframes and the like.
 
+Dojo 1.7 (AMD)
+--------------
+
+.. code-block :: javascript
+ :linenos:
+
+ <script type="text/javascript">
+   require(["dojo/_base/window"], function(win) {
+      var currentBody = win.body();  //You can also use: dojo.body() to get the current document body.
+      var newText = win.doc.createTextNode("Some text");
+      currentBody.appendChild(newText);
+   });
+ </script>
+
+
+Dojo < 1.7
+----------
+
 .. code-block :: javascript
  :linenos:
 
