@@ -17,7 +17,7 @@ Method extensions to `dojo.NodeList <dojo/NodeList>`_/`dojo.query <dojo/query>`_
 Introduction
 ============
 
-Doing a dojo.require("dojo.NodeList-traverse") will add some addition methods to `dojo.NodeList <dojo/NodeList>`_ (the return object from a `dojo.query <dojo/query>`_ call) that allow easier traversal of the DOM as it relates to the nodes in the dojo.NodeList.
+Doing a dojo.require("dojo.NodeList-traverse") (since Dojo 1.7 you're suggested to use AMD-style module loading, e.g. require(["dojo/NodeList-traverse"])) will add some addition methods to `dojo.NodeList <dojo/NodeList>`_ (the return object from a `dojo.query <dojo/query>`_ call) that allow easier traversal of the DOM as it relates to the nodes in the dojo.NodeList.
 
 
 =====
@@ -25,6 +25,8 @@ Usage
 =====
 
 Here is a simple example showing how dojo.NodeList-traverse adds a "children" method to dojo.NodeList that can be called via the normal method chaining done with a dojo.query result:
+
+[ Dojo 1.6 and earlier ]
 
 .. code-block :: javascript
   :linenos:
@@ -35,6 +37,19 @@ Here is a simple example showing how dojo.NodeList-traverse adds a "children" me
   //and returns a dojo.NodeList object
   //to allow further chaining operations
   dojo.query("div").children();
+
+
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["dojo/query", "dojo/NodeList-traverse"], function(query){
+    //Grabs all child nodes of all divs
+    //and returns a dojo.NodeList object
+    //to allow further chaining operations
+    query("div").children();
+  });
 
 
 =========================================
@@ -64,6 +79,7 @@ Assume a DOM created by this markup:
     <div class="blue">Blue Two</div>
   </div>
 
+[ Dojo 1.6 and earlier ]
 
 .. code-block :: javascript
   :linenos:
@@ -76,6 +92,18 @@ Assume a DOM created by this markup:
   //This code returns the two divs that have the class "red" in a dojo.NodeList:
   dojo.query(".container").children(".red");
 
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["dojo/query", "dojo/NodeList-traverse"], function(query){
+    //This code returns the four child divs in a dojo.NodeList:
+    query(".container").children();
+
+    //This code returns the two divs that have the class "red" in a dojo.NodeList:
+    query(".container").children(".red");
+  });
 
 closest
 ---------
@@ -100,6 +128,7 @@ Assume a DOM created by this markup:
     <div class="blue">Blue Two</div>
   </div>
 
+[ Dojo 1.6 and earlier ]
 
 .. code-block :: javascript
   :linenos:
@@ -108,6 +137,16 @@ Assume a DOM created by this markup:
   
   //This code returns the div with class "container" in a dojo.NodeList:
   dojo.query(".red").closest(".container");
+
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["dojo/query", "dojo/NodeList-traverse"], function(query){
+    //This code returns the div with class "container" in a dojo.NodeList:
+    query(".red").closest(".container");
+  });
 
 
 parent
@@ -132,6 +171,8 @@ Assume a DOM created by this markup:
     <div class="blue"><span class="text">Blue Two</span></div>
   </div>
 
+[ Dojo 1.6 and earlier ]
+
 .. code-block :: javascript
   :linenos:
 
@@ -142,6 +183,19 @@ Assume a DOM created by this markup:
 
   //This code returns the one div with class "blue" and "first" in a dojo.NodeList:
   dojo.query(".text").parent(".first");
+
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["dojo/query", "dojo/NodeList-traverse"], function(query){
+    //This code returns the two divs with class "blue" in a dojo.NodeList:
+    query(".text").parent();
+
+    //This code returns the one div with class "blue" and "first" in a dojo.NodeList:
+    query(".text").parent(".first");
+  });
 
 
 parents
@@ -166,6 +220,8 @@ Assume a DOM created by this markup:
     <div class="blue"><span class="text">Blue Two</span></div>
   </div>
 
+[ Dojo 1.6 and earlier ]
+
 .. code-block :: javascript
   :linenos:
 
@@ -176,6 +232,19 @@ Assume a DOM created by this markup:
 
   //This code returns the one div with class "container" in a dojo.NodeList:
   dojo.query(".text").parents(".first");
+
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["dojo/query", "dojo/NodeList-traverse"], function(query){
+    //This code returns the two divs with class "blue" and the div with class "container" in a dojo.NodeList:
+    query(".text").parents();
+
+    //This code returns the one div with class "container" in a dojo.NodeList:
+    query(".text").parents(".first");
+  });
 
 siblings
 ---------
@@ -200,6 +269,8 @@ Assume a DOM created by this markup:
     <div class="blue">Blue Two</div>
   </div>
 
+[ Dojo 1.6 and earlier ]
+
 .. code-block :: javascript
   :linenos:
 
@@ -211,6 +282,20 @@ Assume a DOM created by this markup:
 
   //This code returns the two div with class "red" in a dojo.NodeList:
   dojo.query(".first").siblings(".red");
+
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["dojo/query", "dojo/NodeList-traverse"], function(query){
+    //This code returns the two div with class "red" and the other div
+    //with class "blue" that does not have "first". in a dojo.NodeList:
+    query(".first").siblings();
+
+    //This code returns the two div with class "red" in a dojo.NodeList:
+    query(".first").siblings(".red");
+  });
 
 next
 ---------
@@ -235,6 +320,8 @@ Assume a DOM created by this markup:
     <div class="blue last">Blue Two</div>
   </div>
 
+[ Dojo 1.6 and earlier ]
+
 .. code-block :: javascript
   :linenos:
 
@@ -245,6 +332,19 @@ Assume a DOM created by this markup:
 
   //This code does not match any nodes so it returns an empty dojo.NodeList:
   dojo.query(".last").next(".red");
+
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["dojo/query", "dojo/NodeList-traverse"], function(query){
+    //This code returns the div with class "red" and has innerHTML of "Red Two" in a dojo.NodeList:
+    query(".first").next();
+
+    //This code does not match any nodes so it returns an empty dojo.NodeList:
+    query(".last").next(".red");
+  });
 
 
 nextAll
@@ -270,6 +370,8 @@ Assume a DOM created by this markup:
     <div class="blue next">Blue Two</div>
   </div>
 
+[ Dojo 1.6 and earlier ]
+
 .. code-block :: javascript
   :linenos:
 
@@ -280,6 +382,19 @@ Assume a DOM created by this markup:
 
   //This code returns the one div with class "red" and innerHTML "Red Two".
   dojo.query(".first").nextAll(".red");
+
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["dojo/query", "dojo/NodeList-traverse"], function(query){
+    //This code returns the two divs with class of "next":
+    query(".first").nextAll();
+
+    //This code returns the one div with class "red" and innerHTML "Red Two".
+    query(".first").nextAll(".red");
+  });
 
 prev
 ---------
@@ -304,6 +419,8 @@ Assume a DOM created by this markup:
     <div class="blue last">Blue Two</div>
   </div>
 
+[ Dojo 1.6 and earlier ]
+
 .. code-block :: javascript
   :linenos:
 
@@ -314,6 +431,19 @@ Assume a DOM created by this markup:
 
   //This code does not match any nodes so it returns an empty dojo.NodeList:
   dojo.query(".first").prev(".blue");
+
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["dojo/query", "dojo/NodeList-traverse"], function(query){
+    //This code returns the div with class "red" and has innerHTML of "Red One" in a dojo.NodeList:
+    query(".first").prev();
+
+    //This code does not match any nodes so it returns an empty dojo.NodeList:
+    query(".first").prev(".blue");
+  });
 
 
 prevAll
@@ -341,6 +471,8 @@ Assume a DOM created by this markup:
     <div class="blue last">Blue Two</div>
   </div>
 
+[ Dojo 1.6 and earlier ]
+
 .. code-block :: javascript
   :linenos:
 
@@ -351,6 +483,19 @@ Assume a DOM created by this markup:
 
   //This code returns the one div with class "red prev" and innerHTML "Red One":
   dojo.query(".first").prevAll(".red");
+
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["dojo/query", "dojo/NodeList-traverse"], function(query){
+    //This code returns the two divs with class of "prev":
+    query(".first").prevAll();
+
+    //This code returns the one div with class "red prev" and innerHTML "Red One":
+    query(".first").prevAll(".red");
+  });
 
 
 andSelf
@@ -375,6 +520,8 @@ Assume a DOM created by this markup:
     <div class="blue">Blue Two</div>
   </div>
 
+[ Dojo 1.6 and earlier ]
+
 .. code-block :: javascript
   :linenos:
 
@@ -382,6 +529,16 @@ Assume a DOM created by this markup:
   
   //This code returns the two divs with class of "prev", as well as the div with class "second":
   dojo.query(".second").prevAll().andSelf();
+
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["dojo/query", "dojo/NodeList-traverse"], function(query){
+    //This code returns the two divs with class of "prev", as well as the div with class "second":
+    query(".second").prevAll().andSelf();
+  });
 
 
 first
@@ -405,6 +562,8 @@ Assume a DOM created by this markup:
     <div class="blue last">Blue Two</div>
   </div>
 
+[ Dojo 1.6 and earlier ]
+
 .. code-block :: javascript
   :linenos:
 
@@ -412,6 +571,16 @@ Assume a DOM created by this markup:
   
   //This code returns the div with class "blue" and "first" in a dojo.NodeList:
   dojo.query(".blue").first();
+
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["dojo/query", "dojo/NodeList-traverse"], function(query){
+    //This code returns the div with class "blue" and "first" in a dojo.NodeList:
+    query(".blue").first();
+  });
 
 
 last
@@ -435,6 +604,8 @@ Assume a DOM created by this markup:
     <div class="blue last">Blue Two</div>
   </div>
 
+[ Dojo 1.6 and earlier ]
+
 .. code-block :: javascript
   :linenos:
 
@@ -442,6 +613,16 @@ Assume a DOM created by this markup:
   
   //This code returns the last div with class "blue" in a dojo.NodeList:
   dojo.query(".blue").last();
+
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["dojo/query", "dojo/NodeList-traverse"], function(query){
+    //This code returns the last div with class "blue" in a dojo.NodeList:
+    query(".blue").last();
+  });
 
 
 even
@@ -464,6 +645,8 @@ Assume a DOM created by this markup:
     <div class="interior blue">Blue Two</div>
   </div>
 
+[ Dojo 1.6 and earlier ]
+
 .. code-block :: javascript
   :linenos:
 
@@ -471,6 +654,16 @@ Assume a DOM created by this markup:
   
   //This code returns the two divs with class "blue" in a dojo.NodeList:
   dojo.query(".interior").even();
+
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["dojo/query", "dojo/NodeList-traverse"], function(query){
+    //This code returns the two divs with class "blue" in a dojo.NodeList:
+    query(".interior").even();
+  });
 
 
 odd
@@ -493,6 +686,8 @@ Assume a DOM created by this markup:
     <div class="interior blue">Blue Two</div>
   </div>
 
+[ Dojo 1.6 and earlier ]
+
 .. code-block :: javascript
   :linenos:
 
@@ -500,3 +695,13 @@ Assume a DOM created by this markup:
   
   //This code returns the two divs with class "red" in a dojo.NodeList:
   dojo.query(".interior").odd();
+
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["dojo/query", "dojo/NodeList-traverse"], function(query){
+    //This code returns the two divs with class "red" in a dojo.NodeList:
+    query(".interior").odd();
+  });
