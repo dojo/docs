@@ -84,6 +84,8 @@ Assume a DOM created by this markup:
   <div id="foo"></div>
   <div id="bar"></div>
 
+[ Dojo 1.6 and earlier ]
+
 .. code-block :: javascript
   :linenos:
 
@@ -91,6 +93,15 @@ Assume a DOM created by this markup:
   
   //inserts <p>Hello World</p> into both divs:
   dojo.query("div").innerHTML("<p>Hello World</p>");
+
+[ Dojo 1.7 AMD ]
+.. code-block :: javascript
+  :linenos:
+
+  require(["dojo/query", "dojo/NodeList-manipulate"], function(query){
+    //inserts <p>Hello World</p> into both divs:
+    query("div").innerHTML("<p>Hello World</p>");
+  });
 
 **Example**
 
@@ -102,6 +113,8 @@ Assume a DOM created by this markup:
   <div id="foo"><p>Hello Mars</p></div>
   <div id="bar"><p>Hello World</p></div>
 
+[ Dojo 1.6 and earlier ]
+
 .. code-block :: javascript
   :linenos:
 
@@ -109,6 +122,16 @@ Assume a DOM created by this markup:
   
   //This code returns "<p>Hello Mars</p>":
   var message = dojo.query("div").innerHTML();
+
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["dojo/query", "dojo/NodeList-manipulate"], function(query){
+    //This code returns "<p>Hello Mars</p>":
+    var message = query("div").innerHTML();
+  });
 
 
 html
@@ -132,6 +155,8 @@ Assume a DOM created by this markup:
   <div id="foo"></div>
   <div id="bar"></div>
 
+[ Dojo 1.6 and earlier ]
+
 .. code-block :: javascript
   :linenos:
 
@@ -139,6 +164,16 @@ Assume a DOM created by this markup:
   
   //This code inserts "Hello World" into both divs:
   dojo.query("div").text("Hello World");
+
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["query", "dojo/NodeList-manipulate"], function(query){
+    //This code inserts "Hello World" into both divs:
+    query("div").text("Hello World");
+  });
 
 **Example**
 
@@ -149,6 +184,9 @@ Assume a DOM created by this markup:
 
   <div id="foo"><p>Hello Mars <span>today</span></p></div>
   <div id="bar"><p>Hello World</p></div>
+
+[ Dojo 1.6 and earlier ]
+
 .. code-block :: javascript
   :linenos:
 
@@ -157,6 +195,15 @@ Assume a DOM created by this markup:
   //This code returns "Hello Mars today":
   var message = dojo.query("div").text();
 
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["query", "dojo/NodeList-manipulate"], function(query{
+    //This code returns "Hello Mars today":
+    var message = dojo.query("div").text();
+  });
 
 val
 --------------------
@@ -179,16 +226,31 @@ Assume a DOM created by this markup:
     <option value="yellow" selected>Yellow</option>
   </select>
 
+[ Dojo 1.6 and earlier ]
+
 .. code-block :: javascript
   :linenos:
 
   dojo.require("dojo.NodeList-manipulate");
   
-  This code gets and sets the values for the form fields above:
+  //This code gets and sets the values for the form fields above:
   dojo.query('[type="text"]').val(); //gets value foo
   dojo.query('[type="text"]').val("bar"); //sets the input's value to "bar"
   dojo.query("select").val() //gets array value ["red", "yellow"]
   dojo.query("select").val(["blue", "yellow"]) //Sets the blue and yellow options to selected.
+
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["dojo/query", "dojo/NodeList-manipulate"], function(query){
+    //This code gets and sets the values for the form fields above:
+    query('[type="text"]').val(); //gets value foo
+    query('[type="text"]').val("bar"); //sets the input's value to "bar"
+    query("select").val() //gets array value ["red", "yellow"]
+    query("select").val(["blue", "yellow"]) //Sets the blue and yellow options to selected.
+  });
 
 
 append
