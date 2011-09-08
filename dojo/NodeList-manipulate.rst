@@ -171,7 +171,7 @@ Assume a DOM created by this markup:
 .. code-block :: javascript
   :linenos:
 
-  require(["query", "dojo/NodeList-manipulate"], function(query){
+  require(["dojo/query", "dojo/NodeList-manipulate"], function(query){
     //This code inserts "Hello World" into both divs:
     query("div").text("Hello World");
   });
@@ -201,7 +201,7 @@ Assume a DOM created by this markup:
 .. code-block :: javascript
   :linenos:
 
-  require(["query", "dojo/NodeList-manipulate"], function(query{
+  require(["dojo/query", "dojo/NodeList-manipulate"], function(query{
     //This code returns "Hello Mars today":
     var message = dojo.query("div").text();
   });
@@ -289,7 +289,7 @@ Running this code:
 .. code-block :: javascript
   :linenos:
 
-  require(["query", "dojo/NodeList-manipulate"], function(query){
+  require(["dojo/query", "dojo/NodeList-manipulate"], function(query){
     query("div").append("<span>append</span>");
   });
 
@@ -339,7 +339,7 @@ Running this code:
 .. code-block :: javascript
   :linenos:
 
-  require(["query", "dojo/NodeList-manipulate"], function(query){
+  require(["dojo/query", "dojo/NodeList-manipulate"], function(query){
     query("span").appendTo("p");
   });
 
@@ -387,7 +387,7 @@ Running this code:
 .. code-block :: javascript
   :linenos:
 
-  require(["query", "dojo/NodeList-manipulate"], function(query){
+  require(["dojo/query", "dojo/NodeList-manipulate"], function(query){
     query("div").prepend("<span>prepend</span>");
   });
 
@@ -438,7 +438,7 @@ Running this code:
 .. code-block :: javascript
   :linenos:
 
-  require(["query", "dojo/NodeList-manipulate"], function(query){
+  require(["dojo/query", "dojo/NodeList-manipulate"], function(query){
     query("span").prependTo("p");
   });
 
@@ -486,7 +486,7 @@ Running this code:
 .. code-block :: javascript
   :linenos:
 
-  require(["query", "dojo/NodeList-manipulate"], function(query){
+  require(["dojo/query", "dojo/NodeList-manipulate"], function(query){
     query("div").after("<span>after</span>");
   });
 
@@ -537,7 +537,7 @@ Running this code:
 .. code-block :: javascript
   :linenos:
 
-  require(["query", "dojo/NodeList-manipulate"], function(query){
+  require(["dojo/query", "dojo/NodeList-manipulate"], function(query){
     query("span").insertAfter("p");
   });
 
@@ -585,7 +585,7 @@ Running this code:
 .. code-block :: javascript
   :linenos:
 
-  require(["query", "dojo/NodeList-manipulate"], function(query){
+  require(["dojo/query", "dojo/NodeList-manipulate"], function(query){
     query("div").before("<span>before</span>");
   });
 
@@ -636,7 +636,7 @@ Running this code:
 .. code-block :: javascript
   :linenos:
 
-  require(["query", "dojo/NodeList-manipulate"], function(query){
+  require(["dojo/query", "dojo/NodeList-manipulate"], function(query){
     query("span").insertBefore("p");
   });
 
@@ -691,7 +691,7 @@ Running this code:
 .. code-block :: javascript
   :linenos:
 
-  require(["query", "dojo/NodeList-manipulate"], function(query){
+  require(["dojo/query", "dojo/NodeList-manipulate"], function(query){
     query("b").wrap("<div><span></span></div>");
   });
 
@@ -741,7 +741,7 @@ Running this code:
 .. code-block :: javascript
   :linenos:
 
-  require(["query", "dojo/NodeList-manipulate"], function(query){
+  require(["dojo/query", "dojo/NodeList-manipulate"], function(query){
     query(".red").wrapAll('<div class="allRed"></div>');
   });
 
@@ -799,7 +799,7 @@ Running this code:
 .. code-block :: javascript
   :linenos:
 
-  require(["query", "dojo/NodeList-manipulate"], function(query){
+  require(["dojo/query", "dojo/NodeList-manipulate"], function(query){
     query(".red").wrapInner('<span class="special"></span>');
   });
 
@@ -856,7 +856,7 @@ Running this code:
 .. code-block :: javascript
   :linenos:
 
-  require(["query", "dojo/NodeList-manipulate"], function(query){
+  require(["dojo/query", "dojo/NodeList-manipulate"], function(query){
     query(".red").replaceWith('<div class="green">Green</div>');
   });
 
@@ -919,7 +919,7 @@ Running this code:
 .. code-block :: javascript
   :linenos:
 
-  require(["query", "dojo/NodeList-manipulate"], function(query){
+  require(["dojo/query", "dojo/NodeList-manipulate"], function(query){
     query(".red").replaceAll(".blue");
   });
 
@@ -976,7 +976,7 @@ Running this code:
 .. code-block :: javascript
   :linenos:
 
-  require(["query", "dojo/NodeList-manipulate"], function(query){
+  require(["dojo/query", "dojo/NodeList-manipulate"], function(query){
     query(".red").clone().appendTo(".container");
   });
 
