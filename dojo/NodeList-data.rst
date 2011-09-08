@@ -26,6 +26,7 @@ For Dojo 1.6 and earlier, the include the *data* APIs in your environment issue 
 Since Dojo 1.7, you need to use 'require()' to import this module:
 
 .. javascript ::
+
   require(["dojo/NodeList-data"], function(nodeListData){
     // your codes here
   });
