@@ -27,6 +27,32 @@ The function takes up to three arguments:
 2. A CSS class name as a string.
 3. Optional. A Boolean flag. If ``true`` we add classes, otherwise we remove classes. If not specified, the class will be removed if it is already present on the node, and added otherwise.
 
+
+Dojo 1.7 (AMD)
+--------------
+In dojo 1.7, dojo.removeClass has been moved to dojo/_base/html.
+
+.. code-block :: javascript
+
+  require(["dojo/_base/html"], function(dojo){   
+      dojo.toggleClass("someNode", "hovered"); 
+  });
+
+It's recommend to use cls.toggle in dojo 1.7.
+
+.. code-block :: javascript
+
+  require(["dojo/dom-class"], function(cls){   
+      cls.toggle("someNode", "hovered"); 
+  });
+
+Dojo < 1.7
+----------
+
+.. code-block :: javascript
+
+    dojo.toggleClass("someNode", "hovered"); 
+
 ========
 Examples
 ========
@@ -38,6 +64,12 @@ The following example adds the class "style1" to the node "example1", if there i
 
 .. code-block :: javascript
 
+  //dojo 1.7 (AMD)
+  require(["dojo/dom-class"], function(cls){
+      cls.toggle("example1", "style1");
+  });
+
+  // dojo < 1.7
   dojo.toggleClass("example1", "style1");
 
 See it in action:
@@ -79,6 +111,12 @@ The following example adds the class "style2" to the node "example2", no matter 
 
 .. code-block :: javascript
 
+  //dojo 1.7 (AMD)
+  require(["dojo/dom-class"], function(cls){
+      cls.toggle("example2", "style2", true);
+  });
+
+  // dojo < 1.7
   dojo.toggleClass("example2", "style2", true);
 
 See it in action:
@@ -121,6 +159,12 @@ toggleClass is also available for `NodeLists <dojo/NodeList>`_, so that it's als
 
 .. code-block :: javascript
 
+  //dojo 1.7 (AMD)
+  require(["dojo/dom-class", "dojo/query"], function(cls, query){
+      query("#example3 div").toggleClass("style3");
+  });
+
+  // dojo < 1.7
   dojo.query("#example3 div").toggleClass("style3");
 
 See it in action:
@@ -168,6 +212,17 @@ This function is a simple convenience wrapper for `dojo.hasClass <dojo/hasClass>
 .. code-block :: javascript
   :linenos:
 
+  //dojo 1.7 (AMD)
+  require(["dojo/dom-class", "dojo/query"], function(cls, query){
+      dojo.toggleClass = function(node, classStr, condition){
+      if(condition === undefined){
+        condition = !cls.contains(node, classStr);
+      }
+      cls[condition ? "add" : "remove"](node, classStr);
+    };
+  });
+
+  // dojo < 1.7
   dojo.toggleClass = function(node, classStr, condition){
     if(condition === undefined){
       condition = !dojo.hasClass(node, classStr);
