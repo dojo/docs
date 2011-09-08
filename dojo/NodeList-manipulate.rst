@@ -18,7 +18,7 @@ Method extensions to `dojo.NodeList <dojo/NodeList>`_/`dojo.query <dojo/query>`_
 Introduction
 ============
 
-Doing a dojo.require("dojo.NodeList-manipulate") will add some addition methods to `dojo.NodeList <dojo/NodeList>`_ (the return object from a `dojo.query <dojo/query>`_ call) that allow easier manipulation of HTML as it relates to the nodes in the dojo.NodeList.
+Doing a dojo.require("dojo.NodeList-manipulate") (since Dojo 1.7, it's suggested to use AMD-style module loading, e.g. require(["dojo/NodeList-manipulate"]).) will add some addition methods to `dojo.NodeList <dojo/NodeList>`_ (the return object from a `dojo.query <dojo/query>`_ call) that allow easier manipulation of HTML as it relates to the nodes in the dojo.NodeList.
 
 
 =====
@@ -26,6 +26,8 @@ Usage
 =====
 
 Here is a simple example showing how dojo.NodeList-manipulate adds an "after" method to dojo.NodeList that can be called via the normal method chaining done with a dojo.query result:
+
+[ Dojo 1.6 and earlier ]
 
 .. code-block :: javascript
   :linenos:
@@ -35,6 +37,17 @@ Here is a simple example showing how dojo.NodeList-manipulate adds an "after" me
   //Add a span that says Hello World after each div in the DOM
   //by using the "after" method added by dojo.NodeList-manipulate
   dojo.query("div").after("<span>Hello World</span>");
+
+[ Dojo 1.7 AMD ]
+
+.. code-block :: javascript
+  :linenos:
+
+  require(["dojo/query", "dojo/NodeList-manipulate"], function(query){
+    //Add a span that says Hello World after each div in the DOM
+    //by using the "after" method added by dojo.NodeList-manipulate
+    query("div").after("<span>Hello World</span>");
+  });
 
 
 =========================================
