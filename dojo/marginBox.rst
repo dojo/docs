@@ -13,9 +13,9 @@ dojo.marginBox
 Getter/setter for the margin-box of node.
 
 
-======================
-Introduction and Usage
-======================
+============
+Introduction
+============
 
 See the `CSS spec <http://www.w3.org/TR/CSS2/box.html>`_ for details on box model and what margin-box means.
 
