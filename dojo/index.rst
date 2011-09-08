@@ -370,7 +370,14 @@ Events
 
   Ensure that everytime an event is called, a message is published on the topic.
 
+
+---- /!\ '''Edit conflict - other version:''' ----
 * `dojo/_base/event <dojo/_base/event>`_
+
+---- /!\ '''Edit conflict - your version:''' ----
+* `dojo._base.event <dojo/_base/event>`_
+
+---- /!\ '''End of edit conflict''' ----
 
   Stop an event's bubbling and propagation.
 
