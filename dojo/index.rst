@@ -255,6 +255,22 @@ from 1.7 + dojo/dom module collects following part of dojo APIs
 
     Getter/setter for the content-box of node
 
+  * `dojo.getMarginBox <dojo.getMarginBox>`_
+
+    Get an object that encodes the width, height, left and top positions of the node's margin box. 
+
+  * `dojo.setMarginBox <dojo.setMarginBox>`_ 
+
+    Sets the size of the node's margin box and placement (left/top), irrespective of box model. 
+
+  * `dojo.getContentBox <dojo.getContentBox>`_
+
+    Get an object that encodes the width, height, left and top positions of the node's content box, irrespective of the current box model. 
+
+  * `dojo.setContentSize <dojo.setContentSize>`_ 
+
+    Sets the size of the node's contents, irrespective of margins, padding, or borders. 
+
 Deferred Utility (dojo/_base/Deferred)
 --------------------------------------
 * `dojo.Deferred <dojo/Deferred>`_
