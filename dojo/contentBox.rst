@@ -49,7 +49,7 @@ In dojo 1.7, this API has been moved to dojo/_base/html.
      dojo.contentBox(domNode, {w: 300, h: 400});
   });
 
-It is also can use `dojo.getContentBox <dojo.getContentBox>`_ and `dojo.setContentBox <dojo.setContentBox>`_ to do this operation.
+It is also can use `dojo.getContentBox <dojo.getContentBox>`_ and `dojo.setContentSize <dojo.setContentSize>`_ to do this operation.
 
 .. code-block :: javascript
  :linenos:
@@ -59,10 +59,10 @@ It is also can use `dojo.getContentBox <dojo.getContentBox>`_ and `dojo.setConte
      var contentBox = dojo.getContentBox(domNode);
 
      // Set domNode content-box to 300px x 150px
-     dojo.setContentBox(domNode, {w: 300, h: 400});
+     dojo.setContentSize(domNode, {w: 300, h: 400});
   });
 
-It's recommend to use geom.getMarginBox and geom.setMarginBox in dojo 1.7.
+It's recommend to use geom.getMarginBox and geom.setContentSize in dojo 1.7.
 
 .. code-block :: javascript
  :linenos:
@@ -72,7 +72,7 @@ It's recommend to use geom.getMarginBox and geom.setMarginBox in dojo 1.7.
      var contentBox = geom.getContentBox(domNode);
 
      // Set domNode content-box to 300px x 150px
-     geom.setContentBox(domNode, {w: 300, h: 400});
+     geom.setContentSize(domNode, {w: 300, h: 400});
   });
 
 Dojo < 1.7
@@ -178,4 +178,4 @@ See also
 
 * `dojo.marginBox <dojo/marginBox>`_
 * `dojo.getContentBox <dojo.getContentBox>`_
-* `dojo.setContentBox <dojo.setContentBox>`_ 
+* `dojo.setContentSize <dojo.setContentSize>`_ 
