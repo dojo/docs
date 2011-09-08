@@ -48,6 +48,7 @@ A list of individuals who have signed Dojo CLAs:
 * Best, Jason
 * Bevin, Geert 
 * Bhatia, Naresh 
+* Bing, Dong
 * Bittinger, Nathan 
 * Bodzak,Lee 
 * Bolter, David 
