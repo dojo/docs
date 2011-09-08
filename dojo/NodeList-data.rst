@@ -39,13 +39,19 @@ The API to *data* is very simple. Each node has some arbitrary object hash of da
 
 .. javascript::
 
+  // [ Dojo 1.6 and earlier ]
   dojo.query("#mynode").data("datakey", "This is the data I'm setting");
+  // [ Dojo 1.7 AMD ]
+  query("#mynode").data("datakey", "This is the data I'm setting");
 
 Now, the node with id="mynode" has a string data item under the key *datakey*. We can later get this data by calling *data* with only the key name:
 
 .. javascript::
 
+  // [ Dojo 1.6 and earlier ]
   var mydata = dojo.query("#mynode").data("datakey");
+  // [ Dojo 1.7 AMD ]
+  var mydata = query("#mynode").data("datakey");
   if(mydata[0] == "This is the data I'm setting"){ alert("see?"); }
 
 Notice we need to access the return of `dojo.query <dojo/query>`_ as if it were an array, despite there only being one node in the list. *data* always returns an Array when acting as a getter. If the list has more than one item, the return array will have that many items as well. 
@@ -54,10 +60,16 @@ We can set any type of data at some key name, be it a String, Array, Object, and
 
 .. javascript::
 
+  // [ Dojo 1.6 and earlier ]
   dojo.query("#someNode").data("myarray", [1,2]);
-  dojo.query("#diffNode").data("handlerFunction", function(){ ... }); 
+  dojo.query("#diffNode").data("handlerFunction", function(){ ... });
+  // [ Dojo 1.7 AMD ]
+  query("#someNode").data("myarray", [1,2]);
+  query("#diffNode").data("handlerFunction", function(){ ... }); 
 
 Or an example of using an object has *as* the actual data:
+
+[ Dojo 1.6 and earlier ]
 
 .. javascript::
 
@@ -72,7 +84,24 @@ Or an example of using an object has *as* the actual data:
   data.anumber++;
   data.thelist.push(4);
 
+[ Dojo 1.7 AMD ]
+
+.. javascript::
+
+  query("#navNode").data("special-information", {
+       huh: "the Data at `special-information` is this complex object",
+       anumber: 42,
+       thelist: [1,2,3]
+  });
+
+  // get it back:
+  var data = query("#navNode").data("special-information")[0];
+  data.anumber++;
+  data.thelist.push(4);
+
 Like other Dojo APIs, *data* accepts an object argument, which would be mixed into the node's data set. For example:
+
+[ Dojo 1.6 and earlier ]
 
 .. javascript::
 
@@ -84,13 +113,30 @@ Like other Dojo APIs, *data* accepts an object argument, which would be mixed in
   dojo.query("#foo").data("a")[0]; // "b"
   dojo.query("#foo").data("e")[0]; // [1,2,3]
 
+[ Dojo 1.7 AMD ]
+
+.. javascript::
+
+  // like calling .data("a", 'b").data("c", "d").data("e", [1,2,3]
+  query("#foo").data({
+     a:"b", c:"d", e:[1,2,3]
+  });
+
+  query("#foo").data("a")[0]; // "b"
+  query("#foo").data("e")[0]; // [1,2,3]
+
 This is useful when needing to set multiple independent data keys. Note how this differs from calling:
 
 .. javascript::
 
-   dojo.query("#foo").data("stuff", {
-       a:"b", c:"d", e:[1,2,3]
-   }); 
+  // [ Dojo 1.6 and earlier ]
+  dojo.query("#foo").data("stuff", {
+      a:"b", c:"d", e:[1,2,3]
+  });
+  // [ Dojo 1.7 AMD ]
+  query("#foo").data("stuff", {
+      a:"b", c:"d", e:[1,2,3]
+  });
 
 Here were stashing this object at the key *stuff*, as compared to the previous example where each of the object keys we used as data keys.
 
