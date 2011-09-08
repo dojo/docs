@@ -25,6 +25,30 @@ Usage
 
 Use this function to replace the globals for a callback. Only during the callback execution, dojo.global and dojo.doc will be assigned to the values you specify.
 
+Dojo 1.7 (AMD)
+--------------
+
+.. code-block :: javascript
+ :linenos:
+
+ <script type="text/javascript">
+   require(["dojo/dom", "dojo/_base/window"], function(dom, win) {
+     var ifr = dom.byId("someIframe");
+     var newGlobal = ifr.contentWindow; // get the global scope object from the frame
+     
+     //Call a callback with different 'global' values and context. 
+     win.withGlobal(newGlobal,  function() {
+       console.log("The current dojo.global is: ", win.global);
+       console.log("The current dojo.doc is: ", win.doc);
+       console.log("The current scope is: ", this);
+     }, this); 
+   });
+ </script>
+
+
+Dojo < 1.7
+----------
+
 .. code-block :: javascript
  :linenos:
 
