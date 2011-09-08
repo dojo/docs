@@ -22,6 +22,28 @@ Usage
 
 Use this function to replace the dojo.doc reference for a specific function call. Only during that specific function execution is dojo.doc assigned the document you specify.  The below example demonstrates how to use it against an iframe document to query into the iframe and make updates.
 
+Dojo 1.7 (AMD)
+--------------
+
+.. code-block :: javascript
+ :linenos:
+
+ <script type="text/javascript">
+   require(["dojo/dom", "dojo/_base/window", "dojo/dom-style", "dojo/query"], function(dom, win, style, query) {
+     var iframeDoc = dom.byId("someFrameId").contentWindow.document;
+
+     //Call a callback with different 'global' values and context. 
+     win.withDoc(iframeDoc, function() {
+       var someDiv = query("someDiv");
+       style.set(someDiv, "color", "red");
+     }, this)); 
+   });
+ </script>
+
+
+Dojo < 1.7
+----------
+
 .. code-block :: javascript
  :linenos:
 
@@ -29,7 +51,7 @@ Use this function to replace the dojo.doc reference for a specific function call
    var iframeDoc = dojo.byId("someFrameId").contentWindow.document;
 
    //Call a callback with different 'global' values and context. 
-   dojo.withDoc(iframeDoc  function() {
+   dojo.withDoc(iframeDoc, function() {
      var someDiv = dojo.query("someDiv");
      dojo.style(someDiv, "color", "red");
    }, this)); 
