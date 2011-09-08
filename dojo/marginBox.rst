@@ -34,7 +34,7 @@ Usage
 Dojo 1.7 (AMD)
 --------------
 
-In dojo 1.7, this API has been moved to dojo/_base/html and is the alias of geom.position in dojo/dom-geometry.
+In dojo 1.7, this API has been moved to dojo/_base/html.
 
 .. code-block :: javascript
  :linenos:
