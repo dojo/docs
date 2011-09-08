@@ -794,7 +794,7 @@ Incidentally, you can .end() out of a NodeList returned from .at, providing you 
 DOM Methods
 -----------
 
-Please see `dojo/NodeList-dom <dojo/NodeList-dom>`_ for details.
+**[Note]** Since V1.7, those basic DOM API have been moved into ``dojo/NodeList-dom``. Please see `dojo/NodeList-dom <dojo/NodeList-dom>`_ for details.
 
 
 Event Methods
