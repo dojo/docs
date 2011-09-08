@@ -20,24 +20,7 @@ Introduction and Usage
 
 See the `CSS spec <http://www.w3.org/TR/CSS2/box.html>`_ for details on box model and what margin-box means.
 
-This method will either return the content-box size of a node:
-
-.. code-block :: javascript
- :linenos:
-
- <script type="text/javascript">
-   var contentBox = dojo.contentBox(domNode);
- </script>
-
-... or set the node's width/height such that it's content-box size becomes as specified:
-
-.. code-block :: javascript
- :linenos:
-
- <script type="text/javascript">
-    // 300px x 150px
-    dojo.contentBox(domNode, {w: 300, h: 400});
- </script>
+This method will either return the content-box size of a node or set the node's width/height such that it's content-box size becomes as specified.
 
 In either usage it returns an object in the expected format of box. The object might look like:
 
@@ -45,6 +28,64 @@ In either usage it returns an object in the expected format of box. The object m
 
 for a node offset from its parent 50px to the left, 200px from the top with a content-width of 300px and a content-height of 150px.
 
+
+=====
+Usage
+=====
+
+Dojo 1.7 (AMD)
+--------------
+
+In dojo 1.7, this API has been moved to dojo/_base/html.
+
+.. code-block :: javascript
+ :linenos:
+
+  require(["dojo/_base/html"], function(dojo){   
+     // Get the content-box size of a node
+     var contentBox = dojo.contentBox(domNode);
+
+     // Set domNode content-box to 300px x 150px
+     dojo.contentBox(domNode, {w: 300, h: 400});
+  });
+
+It is also can use `dojo.getContentBox <dojo.getContentBox>`_ and `dojo.setContentBox <dojo.setContentBox>`_ to do this operation.
+
+.. code-block :: javascript
+ :linenos:
+
+  require(["dojo/_base/html"], function(dojo){   
+     // Get the content-box size of a node
+     var contentBox = dojo.getContentBox(domNode);
+
+     // Set domNode content-box to 300px x 150px
+     dojo.setContentBox(domNode, {w: 300, h: 400});
+  });
+
+It's recommend to use geom.getMarginBox and geom.setMarginBox in dojo 1.7.
+
+.. code-block :: javascript
+ :linenos:
+
+  require(["dojo/dom-geometry"], function(geom){   
+     // Get the content-box size of a node
+     var contentBox = geom.getContentBox(domNode);
+
+     // Set domNode content-box to 300px x 150px
+     geom.setContentBox(domNode, {w: 300, h: 400});
+  });
+
+Dojo < 1.7
+----------
+
+.. code-block :: javascript
+ :linenos:
+
+   // Get the content-box size of a node
+   var contentBox = dojo.contentBox(domNode);
+
+   // Set domNode content-box to 300px x 150px
+    dojo.contentBox(domNode, {w: 300, h: 400});
 
 ========
 Examples
