@@ -30,7 +30,7 @@ Pass the form field node or the string id of a form field node.  The function wi
 Dojo 1.7 (AMD)
 --------------
 
-In dojo 1.7, this API has been moved to dojo/dom-form.
+In dojo 1.7, dojo.fieldToObject has been kept in dojo/xhr as a compatibility of dojo version before, it is a alias of domForm.fieldToObject in dojo/dom-form.
 
 .. code-block :: javascript
  :linenos:
