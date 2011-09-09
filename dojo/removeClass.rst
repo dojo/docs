@@ -32,7 +32,7 @@ Space-separated classes, arrays, and optional removing of all classes are suppor
 
 Dojo 1.7 (AMD)
 --------------
-In dojo 1.7, dojo.removeClass has been moved to dojo/_base/html.
+In dojo 1.7, dojo.removeClass has been kept in dojo/_base/html as a compatibility of dojo version before, it is a alias of cls.remove in dojo/dom-class.
 
 .. code-block :: javascript
 
@@ -41,7 +41,7 @@ In dojo 1.7, dojo.removeClass has been moved to dojo/_base/html.
       dojo.removeClass("someNode", "firstClass"); 
   });
 
-It's recommend to use cls.remove in dojo 1.7.
+It's recommended to use cls.remove in dojo 1.7.
 
 .. code-block :: javascript
 
