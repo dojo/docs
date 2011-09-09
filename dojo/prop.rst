@@ -3,10 +3,6 @@
 dojo.prop
 ===============
 
-:Status: Draft
-:Version: 1.0
-:Available: since 1.0
-
 .. contents::
    :depth: 2
 
@@ -41,8 +37,7 @@ when used as a getter, the value of the requested property or null if that attri
 
 Dojo 1.7 (AMD)
 --------------
-
-In dojo 1.7, this API has been moved to dojo/_base/html.
+In dojo 1.7, this API has been kept in dojo/_base/html as a compatibility of dojo version before.
 
 .. code-block :: javascript
  :linenos:
@@ -55,7 +50,7 @@ In dojo 1.7, this API has been moved to dojo/_base/html.
      dojo.prop("nodeId", "tabIndex", 3);
   });
 
-It's recommend to use prop.get and prop.set in dojo 1.7.
+It's recommended to use prop.get and prop.set in dojo 1.7.
 
 .. code-block :: javascript
  :linenos:
