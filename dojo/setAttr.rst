@@ -16,7 +16,7 @@ Introduction
 ``dojo.setAttr()`` is a companion function for `dojo.attr <dojo/attr>`_. It handles normalized setting of attributes on DOM Nodes. When passing functions as values, note that they will not be directly assigned to slots on the node, but rather the default behavior will be removed and the new behavior will be added
 using `dojo.connect()`, meaning that event handler properties will be normalized and that some caveats with regards to non-standard behaviors for onsubmit apply. Namely that you should cancel form submission using `dojo.stopEvent()` on the passed event object instead of returning a boolean value from the handler itself. It returns the DOM node.
 
-Since 1.7 it is a alias of attr.set in dojo/dom-attr.
+Since 1.7 it is an alias of attr.set in dojo/dom-attr.
 
 =====
 Usage
