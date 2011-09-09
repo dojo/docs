@@ -38,7 +38,7 @@ In dojo 1.7, dojo.destroy has been kept in dojo/_base/html as a compatibility of
     });
   </script>
 
-It's recommend to use ctr.destroy in dojo 1.7.
+It's recommended to use ctr.destroy in dojo 1.7.
 
 .. code-block :: javascript
  :linenos:
