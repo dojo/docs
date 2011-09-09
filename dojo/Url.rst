@@ -12,7 +12,30 @@ Note: Actually I would like to close http://bugs.dojotoolkit.org/ticket/6175 and
 
 Basics
 -------
+Dojo 1.7(AMD)
+-------------
+.. codeviewer::
+  
+   <script type="text/javascript">
+	require(["dojo/_base/url","dojo/dom"],function(url,dom){
+		dojo.ready(function(){
+			dom.byId("scheme").innerHTML =	  (new url("http://localhost:8080/home/")).scheme
+			dom.byId("host").innerHTML =	  (new url("http://localhost:8080/home/")).host
+			dom.byId("path").innerHTML =	  (new url("http://localhost:8080/home/")).path
+			dom.byId("authority").innerHTML = (new url("http://localhost:8080/home/")).authority
+		});
+		
+	});
+    </script>
+    <body class="tundra">
+		<div id="scheme"></div><br/>
+		<div id="host"></div><br/>
+		<div id="path"></div><br/>
+		<div id="authority"></div><br/>			
+    </body>
 
+Dojo <1.7
+---------
 .. codeviewer::
   
   <style type="text/css">
