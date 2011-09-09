@@ -45,7 +45,7 @@ Examples
 
 Dojo 1.7 (AMD)
 --------------
-In dojo 1.7, dojo.hasAttr has been moved to dojo/_base/html.
+In dojo 1.7, dojo.hasAttr has been kept in dojo/_base/html as a compatibility of dojo version before, it is a alias of attr.has in dojo/dom-attr.
 
 .. code-block :: javascript
 
@@ -53,7 +53,7 @@ In dojo 1.7, dojo.hasAttr has been moved to dojo/_base/html.
       dojo.hasAttr("nodeId", "foo");
   });
 
-It's recommend to use attr.has in dojo 1.7.
+It's recommended to use attr.has in dojo 1.7.
 
 .. code-block :: javascript
 
