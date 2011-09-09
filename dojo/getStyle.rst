@@ -53,7 +53,7 @@ In dojo 1.7, dojo.getStyle has been kept in dojo/_base/html as a compatibility o
       dojo.getStyle("thinger", "opacity"); // 1 by default
   });
 
-It's recommend to use style.get in dojo 1.7.
+It's recommended to use style.get in dojo 1.7.
 
 .. code-block :: javascript
 
