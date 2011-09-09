@@ -42,7 +42,7 @@ value
 
 Dojo 1.7 (AMD)
 --------------
-In dojo 1.7, dojo.attr has been moved to dojo/_base/html.
+In dojo 1.7, dojo.attr has been kept in dojo/_base/html as a compatibility of dojo version before.
 
 .. code-block :: javascript
 
