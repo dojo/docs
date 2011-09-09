@@ -27,7 +27,7 @@ Usage is simple and straightforward, you pass the form node or the string id of 
 Dojo 1.7 (AMD)
 --------------
 
-In dojo 1.7, dojo.formToObject has been kept in dojo/_base/xhr as a compatibility of dojo version before, it is a alias of domForm.toObject in dojo/dom-form.
+In dojo 1.7, dojo.formToObject has been kept in dojo/_base/xhr as a compatibility of dojo version before, it is an alias of domForm.toObject in dojo/dom-form.
 
 .. code-block :: javascript
  :linenos:
