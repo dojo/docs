@@ -24,7 +24,7 @@ It returns ``true`` if the node has the class, and ``false`` otherwise.
 
 Dojo 1.7 (AMD)
 --------------
-In dojo 1.7, dojo.hasClass has been moved to dojo/_base/html.
+In dojo 1.7, dojo.hasClass has been kept in dojo/_base/html as a compatibility of dojo version before, it is a alias of cls.contains in dojo/dom-class.
 
 .. code-block :: javascript
 
@@ -33,7 +33,7 @@ In dojo 1.7, dojo.hasClass has been moved to dojo/_base/html.
       if(dojo.hasClass("someNode","aSillyClassName")){ ... }
   });
 
-It's recommend to use cls.contains in dojo 1.7.
+It's recommended to use cls.contains in dojo 1.7.
 
 .. code-block :: javascript
 
