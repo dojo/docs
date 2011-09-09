@@ -72,7 +72,7 @@ In dojo 1.7, dojo.setStyle has been kept in dojo/_base/html as a compatibility o
       });
   });
 
-It's recommend to use style.get in dojo 1.7.
+It's recommended to use style.get in dojo 1.7.
 
 .. code-block :: javascript
 
