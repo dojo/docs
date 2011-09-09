@@ -59,6 +59,7 @@ Usage
 =====
 
 .. code-block :: javascript
+
   // Dojo 1.7 (AMD)
   require(["dojo/_base/connect"], function(connect) {
     var foo = connect.connectPublisher(topic, obj, event);
@@ -98,7 +99,6 @@ Programmatic example
  </script>
 
 
-========
 See also
 ========
 
