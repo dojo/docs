@@ -64,7 +64,7 @@ Usage
 Dojo 1.7 (AMD)
 --------------
 
-In dojo 1.7, dojo.create has been moved to dojo/_base/html.
+In dojo 1.7, dojo.place has been kept in dojo/_base/html as a compatible of dojo version before, it is a alias of ctr.place in dojo/dom.
 
 .. code-block :: javascript
 
@@ -73,7 +73,7 @@ In dojo 1.7, dojo.create has been moved to dojo/_base/html.
        dojo.place(node, refNode, "first");
   });
 
-It's recommend to use dom-construct place in dojo 1.7.
+It's recommend to use ctr.place in dojo 1.7.
 
 .. code-block :: javascript
 
