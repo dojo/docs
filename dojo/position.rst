@@ -30,8 +30,7 @@ Usage
 
 Dojo 1.7 (AMD)
 --------------
-
-In dojo 1.7, this API has been moved to dojo/_base/html and is the alias of geom.position in dojo/dom-geometry.
+In dojo 1.7, dojo.coords has been kept in dojo/_base/html as a compatibility of dojo version before, it is an alias of geom.position in dojo/dom-geometry.
 
 .. code-block :: javascript
  :linenos:
@@ -40,7 +39,7 @@ In dojo 1.7, this API has been moved to dojo/_base/html and is the alias of geom
      var obj = dojo.position(node);
   });
 
-It's recommend to use geom.position in dojo 1.7.
+It's recommended to use geom.position in dojo 1.7.
 
 .. code-block :: javascript
  :linenos:
