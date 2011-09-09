@@ -18,7 +18,7 @@ Usage
 Dojo 1.7 (AMD)
 --------------
 
-In dojo 1.7, dojo.byId has been kept in dojo/_base/html as a compatible of dojo version before, it is a alias of dom.byId in dojo/dom.
+In dojo 1.7, dojo.byId has been kept in dojo/_base/html as a compatible of dojo version before, it is an alias of dom.byId in dojo/dom.
 
 .. code-block :: javascript
 
