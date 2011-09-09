@@ -18,7 +18,7 @@ Usage
 Dojo 1.7 (AMD)
 --------------
 
-In dojo 1.7, dojo.byId has been moved to dojo/_base/html.
+In dojo 1.7, dojo.byId has been kept in dojo/_base/html as a compatible of dojo version before, it is a alias of dom.byId in dojo/dom.
 
 .. code-block :: javascript
 
@@ -27,7 +27,7 @@ In dojo 1.7, dojo.byId has been moved to dojo/_base/html.
       var node = dojo.byId("someNode");
   });
 
-It's recommend to use dom.byId replace dojo.byId.
+It's recommend to use dom.byId to replace dojo.byId.
 
 .. code-block :: javascript
 
