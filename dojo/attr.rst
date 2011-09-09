@@ -53,7 +53,7 @@ In dojo 1.7, dojo.attr has been kept in dojo/_base/html as a compatibility of do
       dojo.attr(node, "id", "myId");
   });
 
-It's recommend to use `attr.get <dojo/getAttr>`_, `attr.set <dojo/setAttr>`_ to replace dojo.attr.
+It's recommended to use `attr.get <dojo/getAttr>`_, `attr.set <dojo/setAttr>`_ to replace dojo.attr.
 
 .. code-block :: javascript
 
