@@ -39,7 +39,7 @@ In dojo 1.7, dojo.empty has been kept in dojo/_base/html as a compatibility of d
     });
   </script>
 
-It's recommend to use ctr.empty in dojo 1.7.
+It's recommended to use ctr.empty in dojo 1.7.
 
 .. code-block :: javascript
  :linenos:
