@@ -3,8 +3,6 @@
 dojo.getStyle
 =============
 
-:Available: since V1.2
-
 .. contents::
    :depth: 2
 
@@ -18,7 +16,7 @@ Introduction
 ``dojo.getStyle()`` is a companion function for `dojo.style <dojo/style>`_. It gets the style value uses the computed style for the node, so the value
 will be a calculated value, not just the immediate node.style value. Also when getting values, use specific style names, like "borderBottomWidth" instead of "border" since compound values like "border" are not necessarily reflected as expected. If you want to get node dimensions, use `dojo.marginBox()`, `dojo.contentBox()` or `dojo.position()`..
 
-Since 1.7 it will be replaced by style.get in dojo/dom-style.
+Since 1.7 it is a alias of style.get in dojo/dom-style.
 
 
 =====
@@ -43,7 +41,7 @@ Examples
 
 Dojo 1.7 (AMD)
 --------------
-In dojo 1.7, dojo.getStyle has been moved to dojo/_base/html.
+In dojo 1.7, dojo.getStyle has been kept in dojo/_base/html as a compatibility of dojo version before, it is a alias of style.get in dojo/dom-style.
 
 .. code-block :: javascript
 
