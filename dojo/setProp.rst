@@ -18,7 +18,7 @@ Handles normalized setting of properties on DOM nodes.
 
 When passing functions as values, note that they will not be directly assigned to slots on the node, but rather the default behavior will be removed and the new behavior will be added using `dojo.connect()`, meaning that event handler properties will be normalized and that some caveats with regards to non-standard behaviors for onsubmit apply. Namely that you should cancel form submission using `dojo.stopEvent()` on the passed event object instead of returning a boolean value from the handler itself. 
 
-Since 1.7 it will be replaced by prop.set in dojo/dom-prop.
+Since 1.7 it is an alias of prop.set in dojo/dom-prop.
 
 =====
 Usage
@@ -43,8 +43,7 @@ This API will return the DOM node.
 ========
 Examples
 ========
-
-In dojo 1.7, dojo.getProp has been moved to dojo/_base/html.
+In dojo 1.7, this API has been kept in dojo/_base/html as a compatibility of dojo version before, it is an alias of prop.set in dojo/dom-prop.
 
 Dojo 1.7 (AMD)
 --------------
@@ -80,7 +79,7 @@ Dojo 1.7 (AMD)
       dojo.style("someNode", obj); 
   });
 
-It's recommend to use prop.set in dojo 1.7.
+It's recommended to use prop.set in dojo 1.7.
 
 .. code-block :: javascript
 
