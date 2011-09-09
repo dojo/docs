@@ -40,7 +40,7 @@ Examples
 
 Dojo 1.7 (AMD)
 --------------
-In dojo 1.7, dojo.removeAttr has been moved to dojo/_base/html.
+In dojo 1.7, dojo.removeAttr has been kept in dojo/_base/html as a compatibility of dojo version before, it is a alias of attr.remove in dojo/dom-attr.
 
 .. code-block :: javascript
 
@@ -48,7 +48,7 @@ In dojo 1.7, dojo.removeAttr has been moved to dojo/_base/html.
       dojo.removeAttr("model", "disabled");
   });
 
-It's recommend to use attr.remove in dojo 1.7.
+It's recommended to use attr.remove in dojo 1.7.
 
 .. code-block :: javascript
 
