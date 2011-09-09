@@ -27,6 +27,13 @@ To subscribe a function to a channel:
 .. code-block :: javascript
  :linenos:
 
+  // Dojo 1.7 (AMD)
+  require(["dojo/_base/connect"], function(connect) {
+    connect.subscribe("/foo/bar/baz", function(data){
+      console.log("i got", data);
+    });
+  });
+  // Dojo < 1.7
   dojo.subscribe("/foo/bar/baz", function(data){
      console.log("i got", data);
   });
@@ -36,6 +43,11 @@ To trigger that function, publish some data on the same channel:
 .. code-block :: javascript
  :linenos:
 
+  // Dojo 1.7 (AMD)
+  require(["dojo/_base/connect"], function(connect) {
+    connect.publish("/foo/bar/baz", [{ some:"object data" }]);
+  });
+  // Dojo < 1.7
   dojo.publish("/foo/bar/baz", [{ some:"object data" }]);
 
 The channel name can be any string you choose:
@@ -43,6 +55,13 @@ The channel name can be any string you choose:
 .. code-block :: javascript
  :linenos:
 
+  // Dojo 1.7 (AMD)
+  require(["dojo/_base/connect"], function(connect) {
+    connect.subscribe("foo-bar", function(data){ /* handle */ });
+    connect.subscribe("bar", function(data){ /* handle */ });
+    connect.subscribe("/foo/bar", function(data){ /* handle */ });
+  });
+  // Dojo < 1.7
   dojo.subscribe("foo-bar", function(data){ /* handle */ });
   dojo.subscribe("bar", function(data){ /* handle */ });
   dojo.subscribe("/foo/bar", function(data){ /* handle */ });
@@ -57,6 +76,11 @@ Dojo Topics do ``not`` support `globbing`, or mixing of channel names based on w
 .. code-block :: javascript
  :linenos:
 
+  // Dojo 1.7 (AMD)
+  require(["dojo/_base/connect"], function(connect) {
+    connect.subscribe("/foo/*", function(data){ /* handle */ });
+  });
+  // Dojo < 1.7
   dojo.subscribe("/foo/*", function(data){ /* handle */ });
 
 While this works when using `cometd <dojox/cometd>`_'s dojox.cometd.subscribe function, it is not practical to do on the client side. Only fully named channels are supported. 
@@ -83,6 +107,14 @@ To execute an anonymous function in the scope of `obj`:
 .. code-block :: javascript
  :linenos: 
 
+  // Dojo 1.7 (AMD)
+  require(["dojo/_base/connect"], function(connect) {
+    connect.subscribe("/foo/bar", obj, function(data){ 
+      // here 'this' refers to the obj instance
+      this.member = "published";
+    });
+  });
+  // Dojo < 1.7
   dojo.subscribe("/foo/bar", obj, function(data){ 
       // here 'this' refers to the obj instance
       this.member = "published";
@@ -93,6 +125,11 @@ Alternately, you can pass a named function instead of an anonymous function with
 .. code-block :: javascript
  :linenos:
 
+  // Dojo 1.7 (AMD)
+  require(["dojo/_base/connect"], function(connect) {
+    connect.subscribe("/foo/bar", obj, "anon");
+  });
+  // Dojo < 1.7
   dojo.subscribe("/foo/bar", obj, "anon");
 
 This will execute `obj.anon()` in the scope of `obj`, passing in whatever data the accompanying `dojo.publish <dojo/publish>`_ call sent.
