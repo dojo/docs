@@ -122,7 +122,7 @@ emit function
 
 The on.emit function provides a normalized mechanism for dispatching events. This method will dispatch an event using the native event facilities when available, and will emulate these facilities otherwise. The emit function takes three arguments (the first two closely mirror the on function):
 
-* target - This is the target object (typically a DOM node) that will be the source of the event. The target object may be a host object with it's own event capabilities (like DOM elements or the window), or it may be a plain JavaScript object. This argument is optional, and if omitted the event is published on publish/subscribe hub.
+* target - This is the target object (a DOM node or other event emitting object) that will be the source of the event. The target object may be a host object with it's own event capabilities (like DOM elements or the window), or it may be a JavaScript object with an on() method.
 * eventType - This is the name of the event type to be dispatched (like "select"). This event may be a standard event (like "click") or a custom event (like "finished").
 * eventProperties - This is an object with the properties of the event to be dispatched. Generally you should align your properties with W3C standards. Two properties are of particular importance:
 
@@ -177,27 +177,6 @@ Dojo provides a centralize hub for publishing and subscribing to global messages
   ...
   on.emit("some/topic", "hi there", "additional arguments"); // publish a message
 
-
-Evented Base Class
-------------------
-
-The on module also provides an Evented property that is a class that can be used as a base class or mixin for JavaScript classes that have their own events. The Evented class provides two methods, on(eventType, listener) and emit(eventType, eventObject) which correspond to on() and on.emit() with the target being the instance object. For example, we could create a class:
-
-.. code-block :: javascript
-
-  var MyComponent = dojo.declare([on.Evented], {
-    startup: function(){
-	  // once we are done with startup, fire the "ready" event
-      this.emit("ready", {});
-    }
-  });
-
-  component = new MyComponent();
-  component.on("ready", function(){
-    // this will be called when the "ready" event is emitted
-    ...
-  });
-  component.startup();
 
 Converting from dojo.connect
 ----------------------------
