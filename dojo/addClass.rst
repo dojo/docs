@@ -24,7 +24,7 @@ Space-separated classes and arrays are supported since 1.4.
 
 Dojo 1.7 (AMD)
 --------------
-In dojo 1.7, dojo.addClass has been kept in dojo/_base/html as a compatibility of dojo version before, it is a alias of cls.add in dojo/dom-class.
+In dojo 1.7, dojo.addClass has been kept in dojo/_base/html as a compatibility of dojo version before, it is an alias of cls.add in dojo/dom-class.
 
 .. code-block :: javascript
 
