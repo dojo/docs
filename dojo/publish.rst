@@ -30,6 +30,13 @@ Listen to a channel named "foobar" for data:
 .. code-block :: javascript
  :linenos:
 
+  // Dojo 1.7 (AMD)
+  require(["dojo/_base/connect"], function(connect) {
+    connect.subscribe("foobar", function(message){
+      console.log("I got: ", message);
+    });
+  });
+  // Dojo < 1.7
   dojo.subscribe("foobar", function(message){
       console.log("I got: ", message);
   });
@@ -39,6 +46,13 @@ To publish information to that channel:
 .. code-block :: javascript
  :linenos:
   
+  // Dojo 1.7 (AMD)
+  require(["dojo/_base/connect"], function(connect) {
+    connect.publish("foobar", [{ 
+      item:"one", another:"item", anObject:{ deeper:"data" }
+    }]);
+  });
+  // Dojo < 1.7
   dojo.publish("foobar", [{ 
      item:"one", another:"item", anObject:{ deeper:"data" }
   }]);
@@ -53,6 +67,14 @@ Subscribe returns a handle to later be used for disconnecting a subscription, mu
 .. code-block :: javascript
  :linenos:
 
+  // Dojo 1.7 (AMD)
+  require(["dojo/_base/connect"], function(connect) {
+    var handle = connect.subscribe("/foo/bar", function(message){ 
+      // only runs once in this case:
+      connect.unsubscribe(handle);
+    });
+  });
+  // Dojo < 1.7
   var handle = dojo.subscribe("/foo/bar", function(message){ 
       // only runs once in this case:
       dojo.unsubscribe(handle);
@@ -73,6 +95,14 @@ Several `Dijit widgets <dijit/index>`_ use publish to alert the user (and other 
 .. code-block :: javascript
  :linenos:
 
+  // Dojo 1.7 (AMD)
+  require(["dojo/_base/connect"], function(connect) {
+    var id = "myTabs";
+    connect.subscribe(id + "-addChild", function(child){
+      // child is the new pane being added to the tabs with id="myTabs"
+    });
+  });
+  // Dojo < 1.7
   var id = "myTabs";
   dojo.subscribe(id + "-addChild", function(child){
      // child is the new pane being added to the tabs with id="myTabs"
