@@ -3,8 +3,6 @@
 dojo.getAttr
 ============
 
-:Available: since V1.2
-
 .. contents::
    :depth: 2
 
@@ -17,8 +15,7 @@ Introduction
 
 ``dojo.getAttr()`` is a companion function for `dojo.attr <dojo/attr>`_. It handles normalized getting of attributes on DOM Nodes and return the value of the requested attribute or null if that attribute does not have a specified or default value.
 
-Since 1.7 it will be replaced by attr.get in dojo/dom-attr.
-
+Since 1.7 it is a alias of attr.get in dojo/dom-attr.
 
 =====
 Usage
@@ -42,7 +39,7 @@ Examples
 
 Dojo 1.7 (AMD)
 --------------
-In dojo 1.7, dojo.getAttr has been moved to dojo/_base/html.
+In dojo 1.7, dojo.getAttr has been kept in dojo/_base/html as a compatibility of dojo version before, it is a alias of attr.get in dojo/dom-attr.
 
 .. code-block :: javascript
 
