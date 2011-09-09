@@ -41,6 +41,11 @@ Usage
 
 .. code-block :: javascript
   
+  // Dojo 1.7 (AMD)
+  require(["dojo/_base/connect"], function(connect) {
+    connect.connect(obj, event, context, method, dontFix);
+  });
+  // Dojo < 1.7
   dojo.connect(obj, event, context, method, dontFix);
 
 =========  ===============  ==================================================
@@ -57,6 +62,43 @@ dontFix    Boolean          Optional. If obj is a DOM node, set dontFix to true 
 ========
 Examples
 ========
+
+Dojo 1.7 (AMD)
+--------------
+
+.. code-block :: javascript
+
+	require(["dojo/_base/connect"], function(connect) {
+		// When obj.onchange(), do ui.update():
+		connect.connect(obj, "onchange", ui, "update");
+		connect.connect(obj, "onchange", ui, ui.update); // same
+
+		// Using return value for disconnect:
+		var link = connect.connect(obj, "onchange", ui, "update");
+		...
+		connect.disconnect(link);
+
+		// When onglobalevent executes, watcher.handler is invoked:
+		connect.connect(null, "onglobalevent", watcher, "handler");
+
+		// When ob.onCustomEvent executes, customEventHandler is invoked:
+		connect.connect(ob, "onCustomEvent", null, "customEventHandler");
+		connect.connect(ob, "onCustomEvent", "customEventHandler"); // same
+
+		// When ob.onCustomEvent executes, customEventHandler is invoked
+		// with the same scope (this):
+		connect.connect(ob, "onCustomEvent", null, customEventHandler);
+		connect.connect(ob, "onCustomEvent", customEventHandler); // same
+
+		// When globalEvent executes, globalHandler is invoked
+		// with the same scope (this):
+		connect.connect(null, "globalEvent", null, globalHandler);
+		connect.connect("globalEvent", globalHandler); // same
+	});
+
+
+Dojo < 1.7
+----------
 
 .. code-block :: javascript
 
