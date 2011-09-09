@@ -43,7 +43,7 @@ Examples
 
 Dojo 1.7 (AMD)
 --------------
-In dojo 1.7, dojo.setAttr has been kept in dojo/_base/html as a compatibility of dojo version before, it is a alias of attr.set in dojo/dom-attr.
+In dojo 1.7, dojo.setAttr has been kept in dojo/_base/html as a compatibility of dojo version before, it is an alias of attr.set in dojo/dom-attr.
 
 .. code-block :: javascript
 
