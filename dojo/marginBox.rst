@@ -33,8 +33,7 @@ Usage
 
 Dojo 1.7 (AMD)
 --------------
-
-In dojo 1.7, this API has been moved to dojo/_base/html.
+In dojo 1.7, dojo.coords has been kept in dojo/_base/html as a compatibility of dojo version before.
 
 .. code-block :: javascript
  :linenos:
@@ -60,7 +59,7 @@ It is also can use `dojo.getMarginBox <dojo.getMarginBox>`_ and `dojo.setMarginB
      dojo.setMarginBox(domNode, {w: 300, h: 400});
   });
 
-It's recommend to use geom.getMarginBox and geom.setMarginBox in dojo 1.7.
+It's recommended to use geom.getMarginBox and geom.setMarginBox in dojo 1.7.
 
 .. code-block :: javascript
  :linenos:
