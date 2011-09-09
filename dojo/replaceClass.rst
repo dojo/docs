@@ -3,9 +3,6 @@
 dojo.replaceClass
 =================
 
-:Project owner: Eugene Lazutkin
-:Available: since V0.9
-
 .. contents::
    :depth: 2
 
@@ -29,7 +26,7 @@ The function takes up to three arguments:
 
 Dojo 1.7 (AMD)
 --------------
-In dojo 1.7, dojo.removeClass has been moved to dojo/_base/html.
+In dojo 1.7, dojo.replaceClass has been kept in dojo/_base/html as a compatibility of dojo version before, it is a alias of cls.replace in dojo/dom-class.
 
 .. code-block :: javascript
 
@@ -37,7 +34,7 @@ In dojo 1.7, dojo.removeClass has been moved to dojo/_base/html.
       dojo.replaceClass("someNode", "add1 add2", "remove1 remove2"); 
   });
 
-It's recommend to use cls.replace in dojo 1.7.
+It's recommended to use cls.replace in dojo 1.7.
 
 .. code-block :: javascript
 
