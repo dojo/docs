@@ -27,7 +27,7 @@ In dojo 1.7, dojo.byId has been kept in dojo/_base/html as a compatible of dojo 
       var node = dojo.byId("someNode");
   });
 
-It's recommend to use dom.byId to replace dojo.byId.
+It's recommended to use dom.byId to replace dojo.byId.
 
 .. code-block :: javascript
 
