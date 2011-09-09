@@ -72,7 +72,7 @@ The function returns a DOM node it created with ``tag`` or the first argument, i
 Dojo 1.7 (AMD)
 --------------
 
-In dojo 1.7, dojo.create has been moved to dojo/_base/html.
+In dojo 1.7, dojo.create has been kept in dojo/_base/html as a compatible of dojo version before, it is a alias of ctr.create in dojo/dom.
 
 .. code-block :: javascript
 
