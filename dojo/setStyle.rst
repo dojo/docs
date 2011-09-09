@@ -3,8 +3,6 @@
 dojo.setStyle
 =============
 
-:Available: since V1.2
-
 .. contents::
    :depth: 2
 
@@ -17,8 +15,7 @@ Introduction
 
 ``dojo.setStyle()`` is a companion function for `dojo.style <dojo/style>`_. It sets styles on a node.
 
-Since 1.7 it will be replaced by style.set in dojo/dom-style.
-
+Since 1.7 it is a alias of style.set in dojo/dom-style.
 
 =====
 Usage
@@ -45,7 +42,7 @@ Examples
 
 Dojo 1.7 (AMD)
 --------------
-In dojo 1.7, dojo.getStyle has been moved to dojo/_base/html.
+In dojo 1.7, dojo.setStyle has been kept in dojo/_base/html as a compatibility of dojo version before, it is a alias of style.set in dojo/dom-style.
 
 .. code-block :: javascript
 
