@@ -162,7 +162,7 @@ Destroy all nodes in a list by reference
 See also
 ========
 
-* `dojo.empty <dojo/empty>`_
+* `dojo.place <dojo/place>`_
 * `dojo.create <dojo/create>`_
 * `dojo.empty <dojo/empty>`_
 * `DOM Utilities <quickstart/dom>`_
