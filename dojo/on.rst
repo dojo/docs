@@ -10,7 +10,7 @@ dojo/on
 .. contents::
   :depth: 2
 
-The dojo/on module is a general-purpose event handler for DOM nodes, providing normalized event listening and event dispatching functionality. This module is designed to be lightweight and fast, based on modern browsers' event model. 
+The dojo/on module is a general-purpose event handler for DOM nodes and other event emitting objects, providing normalized event listening and event dispatching functionality. This module is designed to be lightweight and fast, based on modern browsers' event model. 
 
 ===========
 dojo/on API
@@ -24,8 +24,7 @@ The module's value is an on function that can be directly called to add an event
 
 The following parameters should be provided to the on function:
 
-* target - This is the target object (typically a DOM node) that will be the source of the events. The target object may be a host object with it's own event capabilities (like DOM elements or the window), or it may be a plain JavaScript object. This argument is optional, and if omitted, on() will events on the window if that event is available there, or on the publish/subscribe hub.
-* eventType - This is the name of the event to be listening for (like "click"). This may include a (CSS) selector to specify the target nodes to listen for.
+* target - This is the target object (a DOM node or other event emitting object) that will be the source of the events. The target object may be a host object with it's own event capabilities (like DOM elements or the window), or it may be an event emitting JavaScript object (like Dijits). * eventType - This is the name of the event to be listening for (like "click"). This may include a (CSS) selector to specify the target nodes to listen for.
 * listener - This is the function that will be called when this event takes place. The listener function will be called with 'this' as the target object (or the element targeted by the selector in the case of event delegation) and the first and only argument will be the event. The event object is normalized to have the important standard properties and methods of a W3C event (target properties, preventDefault(), stopPropagation()).
 
 The basic usage looks like:
@@ -202,4 +201,4 @@ The on module also provides an Evented property that is a class that can be used
 
 Converting from dojo.connect
 ----------------------------
-dojo/on can replace dojo.connect when connect is used for connecting to DOM nodes.  If you're connecting to normal JS objects and functions, use dojo/aspect instead.  Also, note that event names may need to be changed to remove "on" from the names and lower-case the remaining event names used with dojo.connect.
+dojo/on can replace dojo.connect when connect is used for connecting to DOM nodes and event emitting objects (see the dojo/Evented page for more information). If you're connecting to a plain method, use dojo/aspect instead.  Also, note that some event emitting objects, like dijits, have their own event naming conventions and may need to be changed to remove "on" from the names and lower-case the remaining event names used with dojo.connect for some event emitting objects like dijits.
