@@ -3,8 +3,6 @@
 dojo.getProp
 =============
 
-:Available: since V1.2
-
 .. contents::
    :depth: 2
 
@@ -16,7 +14,7 @@ Introduction
 
 Handles normalized getting of properties on DOM nodes. 
 
-Since 1.7 it will be replaced by prop.get in dojo/dom-prop.
+Since 1.7 it is an alias of prop.get in dojo/dom-prop.
 
 =====
 Usage
@@ -40,7 +38,7 @@ Examples
 
 Dojo 1.7 (AMD)
 --------------
-In dojo 1.7, dojo.getProp has been moved to dojo/_base/html.
+In dojo 1.7, this API has been kept in dojo/_base/html as a compatibility of dojo version before, it is an alias of prop.get in dojo/dom-prop.
 
 .. code-block :: javascript
 
@@ -52,7 +50,7 @@ In dojo 1.7, dojo.getProp has been moved to dojo/_base/html.
       dojo.getProp("nodeId", "foo"); 
   });
 
-It's recommend to use prop.get in dojo 1.7.
+It's recommended to use prop.get in dojo 1.7.
 
 .. code-block :: javascript
 
