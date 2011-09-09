@@ -17,12 +17,15 @@ Dojo 1.7(AMD)
 .. codeviewer::
   
    <script type="text/javascript">
-	require(["dojo/_base/url","dojo/dom"],function(url,dom){
-		dojo.ready(function(){
-			dom.byId("scheme").innerHTML =	  (new url("http://localhost:8080/home/")).scheme
-			dom.byId("host").innerHTML =	  (new url("http://localhost:8080/home/")).host
-			dom.byId("path").innerHTML =	  (new url("http://localhost:8080/home/")).path
-			dom.byId("authority").innerHTML = (new url("http://localhost:8080/home/")).authority
+	require(["dojo/_base/url","dojo/dom","dojo/ready"],function(url,dom,ready){
+		ready(function(){
+			dom.byId("scheme").innerHTML =	  (new url("http://localhost:8080/home/")).scheme //  'http'
+                        dom.byId("port").innerHTML =	  (new url("http://localhost:8080/home/")).scheme //  '8080'
+			dom.byId("host").innerHTML =	  (new url("http://localhost:8080/home/")).host// 'localhost'
+                        dom.byId("user").innerHTML =	  (new url("http://localhost:8080/home/")).user //  'username'
+                        dom.byId("pwd").innerHTML =	  (new url("http://localhost:8080/home/")).password //  'pwd'
+			dom.byId("path").innerHTML =	  (new url("http://localhost:8080/home/")).path // '/home/'
+			dom.byId("authority").innerHTML = (new url("http://localhost:8080/home/")).authority // 'localhost:8080'
 		});
 		
 	});
@@ -31,7 +34,10 @@ Dojo 1.7(AMD)
 		<div id="scheme"></div><br/>
 		<div id="host"></div><br/>
 		<div id="path"></div><br/>
-		<div id="authority"></div><br/>			
+		<div id="authority"></div><br/>	
+                <div id="port"></div><br/>
+                <div id="user"></div><br/>	
+                <div id="pwd"></div>				
     </body>
 
 Dojo <1.7
