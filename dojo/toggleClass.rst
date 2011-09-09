@@ -38,7 +38,7 @@ In dojo 1.7, dojo.toggleClass has been kept in dojo/_base/html as a compatibilit
       dojo.toggleClass("someNode", "hovered"); 
   });
 
-It's recommend to use cls.toggle in dojo 1.7.
+It's recommended to use cls.toggle in dojo 1.7.
 
 .. code-block :: javascript
 
