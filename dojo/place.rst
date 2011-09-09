@@ -73,7 +73,7 @@ In dojo 1.7, dojo.place has been kept in dojo/_base/html as a compatibility of d
        dojo.place(node, refNode, "first");
   });
 
-It's recommend to use ctr.place in dojo 1.7.
+It's recommended to use ctr.place in dojo 1.7.
 
 .. code-block :: javascript
 
