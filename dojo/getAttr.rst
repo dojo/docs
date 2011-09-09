@@ -51,7 +51,7 @@ In dojo 1.7, dojo.getAttr has been kept in dojo/_base/html as a compatibility of
       dojo.getAttr("nodeId", "foo");
   });
 
-It's recommend to use attr.get in dojo 1.7.
+It's recommended to use attr.get in dojo 1.7.
 
 .. code-block :: javascript
 
