@@ -81,7 +81,7 @@ In dojo 1.7, dojo.create has been kept in dojo/_base/html as a compatible of doj
       var node = dojo.create("div");
   });
 
-It's recommend to use dom-construct create in dojo 1.7.
+It's recommend to use ctr.create in dojo 1.7.
 
 .. code-block :: javascript
 
