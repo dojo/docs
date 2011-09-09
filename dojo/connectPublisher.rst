@@ -18,6 +18,29 @@ Introduction
 
 dojo.connectPublisher is an automation of this common form:
 
+Dojo 1.7 (AMD)
+--------------
+.. code-block :: javascript
+  
+  require(["dojo/_base/connect"], function(connect) {
+    connect.connect(myObject, "myEvent", function(){
+      connect.publish("/some/topic/name", arguments);
+    });
+  });
+  
+
+Which becomes:
+
+.. code-block :: javascript
+  
+  require("dojo/_base/connect", function(connect) {
+    connect.connectPublisher("/some/topic/name", myObject, "myEvent");
+  });
+
+
+Dojo < 1.7
+----------
+
 .. code-block :: javascript
   
   dojo.connect(myObject, "myEvent", function(){
@@ -36,7 +59,11 @@ Usage
 =====
 
 .. code-block :: javascript
-  
+  // Dojo 1.7 (AMD)
+  require(["dojo/_base/connect"], function(connect) {
+    var foo = connect.connectPublisher(topic, obj, event);
+  });
+  // Dojo < 1.7
   var foo = dojo.connectPublisher(topic, obj, event);
 
 
@@ -62,6 +89,11 @@ Programmatic example
  :linenos:
 
  <script type="text/javascript">
+   // Dojo 1.7 (AMD)
+   require(["dojo/_base/connect"], function(connect) {
+      connect.connectPublisher("/ajax/start", dojo, "xhrGet");
+   });
+   // Dojo < 1.7
    dojo.connectPublisher("/ajax/start", dojo, "xhrGet");
  </script>
 
