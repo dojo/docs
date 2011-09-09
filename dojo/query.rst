@@ -69,10 +69,10 @@ Dojo 1.7 (AMD)
 
 .. code-block :: javascript
 
-  require("dojo/query", function($){  // Note, $ or any other variable name can be used
+  require("dojo/query", function(query){  // Note, query or any other variable name can be used
 
     // find and dump contents of every element in the page with the class "blueButton" assigned
-    $(".blueButton").forEach(function(node, index, arr){
+    query(".blueButton").forEach(function(node, index, arr){
       console.debug(node.innerHTML);
     });
 
