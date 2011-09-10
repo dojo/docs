@@ -31,9 +31,10 @@ The Evented class provides two methods, on(eventType, listener) and emit(eventTy
     component = new MyComponent();
     component.on("ready", function(){
       // this will be called when the "ready" event is emitted
-      ...
+      // ...
     });
     component.startup();
+  });
 
 ========================
 Event Handler Properties
