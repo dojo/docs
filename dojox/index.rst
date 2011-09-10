@@ -64,7 +64,7 @@ These sections cover the available projects shipped with the Dojo Toolkit:
 
   * `dojox.color.Palette <dojox/color/Palette>`_
 
-    A color palette generator and handler (used extensively in `dojox.charting <dojox/charting>`_
+    A color palette generator and handler (used extensively in `dojox.charting <dojox/charting>`_)
 
 * `dojox.cometd <dojox/cometd>`_
 
