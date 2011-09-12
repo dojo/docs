@@ -92,6 +92,8 @@ To listen for double clicks on the document and clicks on buttons with myClass c
 
 Note that event delegation will only work on events that bubble. Most DOM events do bubble, but there are a few exceptions. The "mouseenter" and "mouseleave" events do not bubble, but "mouseover" and "mouseout" are the bubbling counterparts. The "focus" and "blur" events do not bubble, but dojo/on normalizes "focusin" and "focusout" as bubbling equivalents. Also, "scroll" events don't bubble.
 
+Also note that dojo/query must be loaded for event delegation to work. The dojo/query module is part of Dojo base and therefore is normally loaded unless you are doing a baseless application and dojo/query hasn't been incldued.
+
 Extension Events
 ----------------
 
