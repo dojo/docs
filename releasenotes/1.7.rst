@@ -197,6 +197,10 @@ Please refer to `dojo/gesture doc(TODO) <dojo/gesture>`_ for more details.
 Dijit
 =====
 
+_WidgetBase
+-----------
+getParent() method added to _WidgetBase.   It will find the parent of any widget, regardless of whether or not the parent has the isContainer flag set.   The isContainer flag is no longer being used.
+
 _TemplatedMixin, _WidgetsInTemplateMixin
 ----------------------------------------
 A new mixin called _TemplatedMixin has been added.  It's lighter weight than _Templated and supports templated widgets which *don't* have widgets in templates.  New widgets should be built using _TemplatedMixin.   Additionally, widgets that need the widgetsInTemplate functionality should also mixin _WidgetsInTemplateMixin.
