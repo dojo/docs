@@ -12,8 +12,10 @@ Gets or sets a property on an HTML element.
 ============
 Introduction
 ============
-  Handles normalized getting and setting of properties on DOM Nodes. If 2 arguments are passed, and a the second argument is a string, acts as a getter. If a third argument is passed, or if the second argument is a map of attributes, acts as a setter.
-  When passing functions as values, note that they will not be directly assigned to slots on the node, but rather the default behavior will be removed and the new behavior will be added using `dojo.connect()`, meaning that event handler properties will be normalized and that some caveats with regards to non-standard behaviors for onsubmit apply. Namely that you should cancel form submission using `dojo.stopEvent()` on the passed event object instead of returning a boolean value from the handler itself.
+Handles normalized getting and setting of properties on DOM Nodes. If 2 arguments are passed, and a the second argument is a string, acts as a getter. If a third argument is passed, or if the second argument is a map of attributes, acts as a setter.
+When passing functions as values, note that they will not be directly assigned to slots on the node, but rather the default behavior will be removed and the new behavior will be added using `dojo.connect()`, meaning that event handler properties will be normalized and that some caveats with regards to non-standard behaviors for onsubmit apply. Namely that you should cancel form submission using `dojo.stopEvent()` on the passed event object instead of returning a boolean value from the handler itself.
+
+Since dojo 1.7, this API has been kept in dojo/_base/html as a compatibility of dojo version before. It's recommended to use prop.get, prop.set to replace this API.
 
 =====
 Usage
@@ -37,7 +39,6 @@ when used as a getter, the value of the requested property or null if that attri
 
 Dojo 1.7 (AMD)
 --------------
-In dojo 1.7, this API has been kept in dojo/_base/html as a compatibility of dojo version before.
 
 .. code-block :: javascript
  :linenos:
