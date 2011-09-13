@@ -105,6 +105,24 @@ Language Utilities (dojo/_base/lang)
 
   Simple templates with parameterized substitutions.
 
+* `dojo.mixin <dojo/mixin>`_
+
+  Mixes one object into another. Can be used as a shallow copy
+
+* `dojo.extend <dojo/extend>`_
+
+* `dojo.delegate <dojo/delegate>`_
+
+  Delegate an Object (beget)
+
+* `dojo.getObject <dojo/getObject>`_
+
+  Get a property from a dot-separated string, such as "A.B.C"
+
+* `dojo.setObject <dojo/setObject>`_
+
+  Set a property from a dot-separated string, such as "A.B.C"
+
 HTML Utility (dojo/_base/html)
 ------------------------------
 * `dojo/_base/html <dojo/_base/html>`_
@@ -269,8 +287,8 @@ Package System
 
 * `dojo.moduleUrl <dojo/moduleUrl>`_
 
-JSON Tools
-----------
+JSON Tools (dojo/_base/json)
+----------------------------
 
 * `dojo.fromJson <dojo/fromJson>`_
 
@@ -283,31 +301,13 @@ JSON Tools
 Objects / OO Tools
 ------------------
 
-* `dojo.mixin <dojo/mixin>`_
-
-  Mixes one object into another. Can be used as a shallow copy
-
 * `dojo.declare <dojo/declare>`_
 
   Creates a constructor using a compact notation for inheritance and prototype extension
 
-* `dojo.extend <dojo/extend>`_
-
 * `dojo.exists <dojo/exists>`_
 
   Determine if an object supports a given method
-
-* `dojo.delegate <dojo/delegate>`_
-
-  Delegate an Object (beget)
-
-* `dojo.getObject <dojo/getObject>`_
-
-  Get a property from a dot-separated string, such as "A.B.C"
-
-* `dojo.setObject <dojo/setObject>`_
-
-  Set a property from a dot-separated string, such as "A.B.C"
 
 * `dojo.objectToQuery <dojo/objectToQuery>`_
 
