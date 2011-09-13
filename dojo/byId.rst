@@ -11,7 +11,7 @@ dojo.byId
 
 This is a simple alias to ''document.getElementById'', which not only is shorter to write, but fortunately works in all browsers. It turns a domNode reference to some Node byId, or the same node reference if passed a domNode. 
 
-In dojo 1.7, dojo.byId has been kept in dojo/_base/html as a compatibility of dojo version before, it is an alias of dom.byId in dojo/dom.
+Since dojo 1.7, dojo.byId has been kept in dojo/_base/html as a compatibility of dojo version before, it is an alias of dom.byId in dojo/dom.
 
 =====
 Usage
