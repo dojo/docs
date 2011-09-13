@@ -97,10 +97,6 @@ Language Utilities (dojo/_base/lang)
 
   Checks if the parameter is a built-in function
 
-
-String Utilities
-----------------
-
 * `dojo.trim <dojo/trim>`_
 
   Trim whitespace from a String
