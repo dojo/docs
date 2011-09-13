@@ -24,8 +24,8 @@ Configuring Dojo (dojo/_base/config)
 
   Possibility to override certain global settings that control how the framework operates
 
-Array utilities
----------------
+Array utilities (dojo/_base/array)
+----------------------------------
 
 Details on dojo.every, dojo.filter, dojo.forEach, dojo.indexOf, dojo.lastIndexOf, dojo.map, and dojo.some. See the `Array QuickStart <quickstart/arrays>`_ for an overview.
 
