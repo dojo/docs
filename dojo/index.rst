@@ -285,6 +285,12 @@ from 1.7 + dojo/dom module collects following part of dojo APIs
 
     Sets a property on an HTML element.
 
+HTML Utility (dojo/_base/html)
+------------------------------
+* `dojo/_base/html <dojo/_base/html>`_
+
+  **dojo/_base/html** module contains basic DOM & HTML handling functions for backward compatibility purpose.
+
 Deferred Utility (dojo/_base/Deferred)
 --------------------------------------
 * `dojo.Deferred <dojo/Deferred>`_
