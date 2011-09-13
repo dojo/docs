@@ -18,7 +18,7 @@ Introduction
 
 dojo.empty safely removes all children of the node.
 
-In dojo 1.7, dojo.empty has been kept in dojo/_base/html as a compatibility of dojo version before, it is an alias of ctr.empty in dojo/dom.
+Since dojo 1.7, dojo.empty has been kept in dojo/_base/html as a compatibility of dojo version before, it is an alias of ctr.empty in dojo/dom.
 
 =====
 Usage
