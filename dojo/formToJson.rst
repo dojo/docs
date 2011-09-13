@@ -20,6 +20,8 @@ This function is one of many helpers used by the dojo Xhr subsystem for handling
 
 You can refer to the `dojo.formToObject <dojo/formToObject>`_ documentation for more details.
 
+Since dojo 1.7, dojo.formToJson has been kept in dojo/_base/xhr as a compatibility of dojo version before, it is an alias of domForm.toJson in dojo/dom-form.
+
 =====
 Usage
 =====
@@ -28,8 +30,6 @@ Usage is simple and straightforward, you pass the form node or the string id of 
 
 Dojo 1.7 (AMD)
 --------------
-
-In dojo 1.7, dojo.formToJson has been kept in dojo/_base/xhr as a compatibility of dojo version before, it is an alias of domForm.toJson in dojo/dom-form.
 
 .. code-block :: javascript
  :linenos:
