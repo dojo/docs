@@ -335,8 +335,8 @@ Effects
 
 * `dojo.fadeIn <dojo/fadeIn>`_
 
-Events
-------
+Connect (dojo/_base/connect)
+----------------------------
 
 * `dojo.connect <dojo/connect>`_
 
@@ -369,6 +369,9 @@ Events
 * `dojo.connectPublisher <dojo/connectPublisher>`_
 
   Ensure that everytime an event is called, a message is published on the topic.
+
+Event (dojo/_base/event)
+------------------------
 
 * `dojo._base.event <dojo/_base/event>`_
 
