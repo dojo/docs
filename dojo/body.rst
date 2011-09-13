@@ -27,8 +27,7 @@ Usage
 
 The most important item to remember is dojo.body is a function, and needs to be executed to get the value:
 
-Dojo 1.7 (AMD)
---------------
+[ Dojo 1.7 AMD ]
 
 .. code-block :: javascript
 
@@ -37,8 +36,7 @@ Dojo 1.7 (AMD)
   });
 
 
-Dojo < 1.7
-----------
+[ Dojo < 1.7 ]
 
 .. code-block :: javascript
 
@@ -53,8 +51,7 @@ This is an example, which is shorter, safer to write than:
 
 Actually using the `<body>` element is an exercise left to the developer. There are several utility functions in Dojo to do common tasks on DomNodes, and `<body>` is just another:
 
-Dojo 1.7 (AMD)
---------------
+[ Dojo 1.7 AMD ]
 
 .. code-block :: javascript
   
@@ -68,8 +65,7 @@ Dojo 1.7 (AMD)
   });
 
 
-Dojo < 1.7
-----------
+[ Dojo < 1.7 ]
 
 .. code-block :: javascript
   
