@@ -17,6 +17,7 @@ Introduction
 
 This function is one of many helpers used by the dojo Xhr subsystem for handling AJAX style requests. This particular function takes a HTML form node and converts the form elements into a JavaScript object of name/value pairs. Disabled form elements, buttons, elements with just an id attribute but no name attribute, and other non-valued HTML elements are skipped. The resulting object can then be processed however you like. Note that the form can contain dijit.form.* items.
 
+Since dojo 1.7, dojo.formToObject has been kept in dojo/_base/xhr as a compatibility of dojo version before, it is an alias of domForm.toObject in dojo/dom-form.
 
 =====
 Usage
@@ -26,8 +27,6 @@ Usage is simple and straightforward, you pass the form node or the string id of 
 
 Dojo 1.7 (AMD)
 --------------
-
-In dojo 1.7, dojo.formToObject has been kept in dojo/_base/xhr as a compatibility of dojo version before, it is an alias of domForm.toObject in dojo/dom-form.
 
 .. code-block :: javascript
  :linenos:
