@@ -20,6 +20,7 @@ This function is one of many helpers used by the dojo Xhr subsystem for handling
 
 This function is used internally by `dojo.formToObject <dojo/formToObject>`_ to convert each form field to a value.
 
+Since dojo 1.7, dojo.fieldToObject has been kept in dojo/_base/xhr as a compatibility of dojo version before, it is an alias of domForm.fieldToObject in dojo/dom-form.
 
 =====
 Usage
@@ -29,8 +30,6 @@ Pass the form field node or the string id of a form field node.  The function wi
 
 Dojo 1.7 (AMD)
 --------------
-
-In dojo 1.7, dojo.fieldToObject has been kept in dojo/_base/xhr as a compatibility of dojo version before, it is an alias of domForm.fieldToObject in dojo/dom-form.
 
 .. code-block :: javascript
  :linenos:
