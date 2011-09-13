@@ -14,7 +14,7 @@ Introduction
 
 Handles normalized getting of properties on DOM nodes. 
 
-Since 1.7 it is an alias of prop.get in dojo/dom-prop.
+Since dojo 1.7, this API has been kept in dojo/_base/html as a compatibility of dojo version before, it is an alias of prop.get in dojo/dom-prop.
 
 =====
 Usage
@@ -38,7 +38,6 @@ Examples
 
 Dojo 1.7 (AMD)
 --------------
-In dojo 1.7, this API has been kept in dojo/_base/html as a compatibility of dojo version before, it is an alias of prop.get in dojo/dom-prop.
 
 .. code-block :: javascript
 
