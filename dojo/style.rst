@@ -20,6 +20,7 @@ Accesses styles on a node. If 2 arguments are passed and the second argument is 
 
 See the Tips section below for caveats on getting style information, like when using a compound style value (like background or border), and getting node dimensions.
 
+Since dojo 1.7, dojo.style has been kept in dojo/_base/html as a compatibility of dojo version before, it's recommended to use style.get, style.set to replace this API.
 
 =====
 Usage
@@ -42,7 +43,6 @@ value
 
 Dojo 1.7 (AMD)
 --------------
-In dojo 1.7, dojo.style has been kept in dojo/_base/html as a compatibility of dojo version before.
 
 .. code-block :: javascript
 
